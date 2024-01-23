@@ -1,0 +1,233 @@
+(package nx/tactics/books/medieval
+ :libs (lib base :path nx/tactics/base))
+
+(func book : base/book
+ (book
+  :name "Medieval"
+  :image "Medieval-2-Total-War-Kingdoms-642.jpg"
+  :chaptermap
+   (chaptermap
+    "Medieval Overview"
+     (chapter
+      :name "Medieval Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: Medieval?"
+         (section
+          :name "Why Tactics: Medieval?")
+        "Medieval Land Warfare"
+         (section
+          :name "Medieval Land Warfare"
+          :summary
+           "* Infantry
+* Formations
+* Axemen
+* Polearms
+* Cavalry
+* Horse Archers
+* Armored Cavalry
+* Knights
+* Elephants
+* Chariots
+* Archers
+* Longbows
+* Crossbows
+* Siege
+* Ballista
+* Catapult
+* Fortifications")))
+    "Medieval Scenarios"
+     (chapter
+      :name "Medieval Scenarios"
+      :sectionmap
+       (sectionmap
+        "Medieval Events"
+         (section
+          :name "Medieval Events"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))))
+    "Medieval Items"
+     (chapter
+      :name "Medieval Items"
+      :sectionmap
+       (sectionmap
+        "Medieval Firearms"
+         (section
+          :name "Medieval Firearms"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))))))
+    "Medieval English"
+     (chapter
+      :name "Medieval English"
+      :sectionmap
+       (sectionmap
+        "Medieval English Infantry"
+         (section
+          :name "Medieval English Infantry"
+          :unitmap
+           (unitmap
+            "English Longbowman"
+             (unit
+              :name "English Longbowman")))))
+    "Medieval French"
+     (chapter
+      :name "Medieval French"
+      :sectionmap
+       (sectionmap
+        "Medieval French Infantry"
+         (section
+          :name "Medieval French Infantry"
+          :unitmap
+           (unitmap
+            "French Gendarme"
+             (unit
+              :name "French Gendarme"
+              :summary "Founded in 1400s."
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))))))
+    "Medieval German"
+     (chapter
+      :name "Medieval German")
+    "Medieval Spanish"
+     (chapter
+      :name "Medieval Spanish"))))

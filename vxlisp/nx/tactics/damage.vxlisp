@@ -1,0 +1,189 @@
+(package nx/tactics/damage
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Tactics Damage Decks")
+
+(type wound : struct
+ :traits [base/card]
+ :doc "Lasting Body Damage")
+
+(const breakdown : base/card
+ (base/card
+  :name "Breakdown")
+ :doc "Lasting Mind Damage")
+
+(const duress : base/card
+ (base/card
+  :name "Duress"
+  :titles "Doubt")
+ :doc "* Temporary Will Damage/Fear/Horror. Doing things against your beliefs causes Duress.
+       * While you have more Duress than Will, you are Shaken.
+       * Shaken: Cannot play odd [Defend] cards and your second action may only be [Recover]")
+
+(const fatigue : base/card
+ (base/card
+  :name "Fatigue")
+ :doc "* Temporary Body Damage. Hard work and strikes in combat cause Fatigue.
+       * While you have more Fatigue than [Body], you are Exhausted.
+       * Exhausted: Cannot play odd [Attack] cards and your second action may only be [Recover].")
+
+(const stagger : base/card
+ (base/card
+  :name "Stagger")
+ :doc "* Temporary Speed Damage/Restraint.
+       * While you have more Stagger than [Speed], you are Slowed.
+       * Slowed: [Move] actions are halved (rounded up).")
+
+(const stress : base/card
+ (base/card
+  :name "Stress")
+ :doc "* Temporary Mind Damage/Distraction/Surprise/Shock.
+       * While you have more Stress than [Mind], you are Stunned.
+       * Stunned: Cannot play odd [Focus] cards and your second action may only be [Recover].")
+
+(const trauma : base/card
+ :doc "Lasting Will Damage")
+
+(const irrationaldeck : base/deck
+ (base/deck
+  :name "Irrational"
+  :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
+  :summary "* S-Hack Blood/Gore/Dismember/Doubt
+            * H-Slash Blood/Slow
+            * C-Bash/Fatigue/Push
+            * D-Pierce/Shock/Stun/Pin/Disable/Stress")
+ :doc "Damage to the Mind")
+
+(const unwillingdeck : base/deck
+ (base/deck
+  :name "Unwilling"
+  :titles "Apathy, Cowed, Berserk, Broken, Depression, Servitude, Surly"
+  :summary "* S-Hack Blood/Gore/Dismember
+            * H-Slash Blood/Slow
+            * C-Bash/Fatigue/Push
+            * D-Pierce/Stun/Pin/Disable")
+ :doc "Damage to the Will")
+
+(const wounddeck : base/deck
+ (base/deck
+  :name "Wound Deck"
+  :summary "* S-Hack Blood/Gore/Dismember
+            * H-Slash Blood/Slow
+            * C-Bash/Fatigue/Push
+            * D-Stab/Pierce/Stun/Pin/Disable"
+  :cardlist
+   (base/cardlist
+    wound-j1
+    wound-j2
+    wound-ca
+    wound-da
+    wound-ha
+    wound-sa
+    wound-sk
+    wound-sq
+    wound-sj
+    wound-s5
+    wound-s4
+    wound-s3
+    wound-s2))
+ :doc "Physical Damage Deck")
+
+(const wound-j1 : wound
+ (wound
+  :name "Wild"
+  :doc "* Search the Deck for any card and play that instead.
+        * Shuffle Discards into Deck."))
+
+(const wound-j2 : wound
+ (wound
+  :name "Wild"
+  :doc "* Search the Discards for any card and play that instead or play the next card instead.
+        * Shuffle Discards into Deck."))
+
+(const wound-ca : wound
+ (wound
+  :name "Bash: Head"
+  :rank base/rank-ace
+  :suit base/suit-club
+  :doc "* 1 Damage: Head Ringing. [Stun]: 1.
+        * 2 Damage: Concussion. [Fatigue]: 1. [Push]: 1.
+        * 3 Damage: Skull Fracture. [Unconscious]. [Fatigue]: 2. [Push]: 1. [Knockdown]: 1.
+        * 4 Damage: Skull Crushed. [Dead]."))
+
+(const wound-da : wound
+ (wound
+  :name "Pierce: Head"
+  :rank base/rank-ace
+  :suit base/suit-diamond
+  :doc "* 1 Damage: Head Grazed. [Stun]: 1.
+        * 2 Damage: Pierced Throat. [Can't speak]. [Stun]: 1.
+        * 3 Damage: Blinded in one Eye. [Partly Blind]. [Stun]: 2. [Horror]: 1.
+        * 4 Damage: Skull Pierced. Dying."))
+
+(const wound-ha : wound
+ (wound
+  :name "Slash: Head"
+  :rank base/rank-ace
+  :suit base/suit-heart
+  :doc "* 1 Damage: Head Cut. [Bleeding]: 1.
+        * 2 Damage: Face Gash. [Horror]: 1. [Bleeding]: 1.
+        * 3 Damage: Throat Sliced Open. [Bleeding]: 3, [Horror]: 2.
+        * 4 Damage: Spine Severed. [Paralyzed]. [Horror]: 3. [Bleeding]: 2."))
+
+(const wound-sa : wound
+ (wound
+  :name "Hack: Head/Neck/Face/Skull"
+  :rank base/rank-ace
+  :suit base/suit-spade
+  :doc "1 Damage: Deflected off Skull. [Slow]: 1.
+        2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
+        3 Damage: Neck Fracture. [Immobilized]. [Slow]: 2. [Bleeding]: 1.
+        4 Damage: Head Severed. [Dead]."))
+
+(const wound-sk : wound
+ (wound
+  :doc "Hack: Upper Chest/Upper Back/Shoulders/Ribs"))
+
+(const wound-sq : wound
+ (wound
+  :doc "Hack: Lower Chest/Middle Back/Lungs/Heart"))
+
+(const wound-sj : wound
+ (wound
+  :doc "Hack: Abdomen/Lower Back"))
+
+(const wound-s10 : wound
+ (wound
+  :doc "Hack: Hips/Groin"))
+
+(const wound-s9 : wound
+ (wound
+  :doc "Hack: Right Upper Arm/Elbow"))
+
+(const wound-s8 : wound
+ (wound
+  :doc "Hack: Left Upper Arm/Elbow"))
+
+(const wound-s7 : wound
+ (wound
+  :doc "Hack: Right Lower Arm/Wrist/Hand"))
+
+(const wound-s6 : wound
+ (wound
+  :doc "Hack: Left Lower Arm/Wrist/Hand"))
+
+(const wound-s5 : wound
+ (wound
+  :doc "Hack: Right Upper Leg/Thigh/Knee"))
+
+(const wound-s4 : wound
+ (wound
+  :doc "Hack: Left Upper Leg/Thigh/Knee"))
+
+(const wound-s3 : base/damage
+ (base/damage
+  :doc "Hack: Right Lower Leg/Shin/Ankle/Foot"))
+
+(const wound-s2 : wound
+ (wound
+  :doc "Hack: Left Lower Leg/Shin/Ankle/Foot"))
+

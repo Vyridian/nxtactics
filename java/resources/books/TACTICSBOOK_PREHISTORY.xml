@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc name="Prehistory">
+<chapter name="Prehistory Overview">
+	<section name="Why Tactics: Prehistory?">
+	</section>
+</chapter>
+<chapter name="Prehistoric Creatures">
+	<section name="Dinosaurs">
+		<unit name="Allosaurus" />
+		<unit name="Ankylosaur" />
+		<unit name="Brontosaur (Apatosaurus)" />
+		<unit name="Protoceratops" />
+		<unit name="Stegosaurus" />
+		<unit name="Triceratops" />
+		<unit name="Velociraptor">
+			<summary>Turkey sized carnivore</summary>
+			<skill name="Natural Weaponry">
+				<ability name="Jaws of Death" />
+			</skill>
+		</unit>
+		<unit name="Tyrannosaurus Rex">
+			<skill name="Natural Weaponry">
+				<ability name="Jaws of Death" />
+				<ability name="Swallow Whole" />
+			</skill>
+		</unit>
+	</section>
+	<section name="Prehistoric Avian Creatures">
+		<unit name="Pterodactyl" />
+	</section>
+	<section name="Prehistoric Insects">
+		<unit name="Giant Dragonfly" />
+		<unit name="Giant Mosquito" />
+	</section>
+	<section name="Prehistoric Marine Creatures">
+		<unit name="Giant Gar" />
+		<unit name="Giant Turtle" />
+		<unit name="Megaladon">
+			<summary>70 ft shark.  Highly developed killing machine kills with no remorse, no pity, no feeling of satisfaction.  Their only apparent emotion is [[Bloodlust]].</summary>
+			<skill name="Natural Weaponry">
+				<ability name="Jaws of Death" />
+				<ability name="Swallow Whole" />
+			</skill>
+		</unit>
+		<unit name="Plesiosaur" />
+	</section>
+	<section name="Prehistoric Mammals">
+		<unit name="Megatherium">
+			<summary>Elephant-sized ground sloth</summary>
+		</unit>
+		<unit name="Sabrelion" />
+		<unit name="Sabretooth Tiger" />
+		<unit name="Woolly Mammoth" />
+	</section>
+	<section name="Primitive Man">
+		<unit name="Hunter/Gatherer" />
+	</section>
+</chapter>
+</doc>

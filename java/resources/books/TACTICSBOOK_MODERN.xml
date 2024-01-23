@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc name="Modern" image="Modern.jpg">
+<chapter name="Modern Overview">
+	<section name="Modern Naval Warfare">
+		<summary>
+			* Aircraft Carriers
+			* Destroyers
+			* Cruisers
+			* Torpedo Boats
+			* Radar
+			* Naval Cannons
+			* Stealth Fighters
+			* Unmanned Naval Vehicles
+			* Nuclear Submarines
+			* Attack Submarines
+		</summary>
+	</section>
+	<section name="Modern Aerial Warfare">
+		<summary>
+			* Jet Planes
+			* Stealth Fighters
+			* Unmanned Aerial Vehicles (UAV)
+			* Air Cavalry
+			* Flying Fortress
+			* Landing Strips
+			* Aircraft Carriers
+			* Machine Guns
+			* Strafing
+			* Tank Killing
+			* Stealth Bombing
+			* Strategic Bombing
+			* Nuclear Bombing
+			* Cruise Missiles
+			* Fuel Air Explosives
+			* Intercontinental Ballistic Missiles (ICBM)
+		</summary>
+	</section>
+</chapter>
+<chapter name="Cold War">
+	<section name="American Aircraft">
+		<unit name="A-10 Warthog" classification="Lt. Aircraft">
+			<skill name="Gunnery" level="4">
+				<item name="30mm GAU-8 Avenger" />
+			</skill>
+		</unit>
+		<unit name="AH-1 Cobra" classification="Lt. Aircraft" crew="2" mass="4tons" length="13m" height="4m" speed="350kph" range="570km" image="Modern/American_Helicopter_Cobra.png">
+			<summary>
+				2x 7.62mm Miniguns
+				2x 7-round 70mm Rocket Pods
+				20mm XM195 Vulcan Cannon
+			</summary>
+		</unit>
+		<unit name="Candy Bomber" classification="Hvy. Aircraft" />
+		<unit name="UH-1 Iroquois (Huey)" classification="Lt. Aircraft" crew="1+14" mass="4tons" length="17m" width="3m" height="4m" speed="200kph" image="Modern/American_Helicopter_Huey.png">
+			<summary>
+				2x 7.62mm M60 Machine Gun
+				2x 7-round 70mm Rocket Pods
+			</summary>
+		</unit>
+		<unit name="SR-71 Blackbird" classification="Hvy. Aircraft" image="Modern/American_SpyPlane_SR71Blackbird.png">
+		</unit>
+	</section>
+	<section name="American Ground Vehicles">
+		<unit name="M46 Patton">
+			<summary>
+				* An improved Pershing sometimes called Pershing II, was used extensively in Korean War.
+				* 90mm Cannon
+			</summary>
+			<skill name="Gunnery" level="4">
+			</skill>
+		</unit>
+		<unit name="M48 Patton" mass="50tons">
+			<summary>
+				* A completely redesigned Pershing based Vietnam Era Tank
+4 Gunnery
+105mm Cannon
+Armor
+120mm
+.50 cal MG
+7.62mm MG
+			</summary>
+			<skill name="Gunnery" level="4">
+			</skill>
+		</unit>
+	</section>
+	<section name="American Missles">
+		<item name="ICBM" />
+		<item name="Polaris Submarine Missile" />
+	</section>
+	<section name="British Ground Vehicles">
+		<unit name="QF 20 Pounder" />
+	</section>
+</chapter>
+<chapter name="Modern Ground Vehicles">
+	<section name="Modern Cycles">
+	</section>
+	<section name="Modern Cars">
+		<unit name="Compact" image="Modern/Civilian_Compact.png" />
+		<unit name="Luxury Sedan" />
+		<unit name="Minivan" image="Modern/Civilian_Minivan.png" />
+		<unit name="Sedan" image="Modern/Civilian_Sedan.png" />
+		<unit name="Sports Car" image="Modern/Civilian_SportsCar.png" />
+		<unit name="Subcompact">
+			<titles>Econobox</titles>
+		</unit>
+		<unit name="Station Wagon" image="Modern/Civilian_StationWagon.png" />
+	</section>
+	<section name="Modern Trucks">
+		<unit name="Armored Car">
+			<summary>
+				* RWD. 200 hp engine [20], 20 gallon tank [4], driver, gunner, SR 6, TS 80, AC 4 (max 8), 16 mpg @65.
+				FP Armor: F30, L30, R30, B30, T30, U20. Cargo 200 cf. Max load 2000 lb. $70,000, 8500 lb.
+			</summary>
+		</unit>
+		<unit name="HummVee" />
+		<unit name="Jeep" />
+		<unit name="Land Cruiser" />
+		<unit name="Pickup Truck" image="Modern/Civilian_PickupTruck.png">
+			<summary>
+				* Same as Sport Utility except: two to three passengers. Cargo 160 cf. Max load 1000-3000 lb. $20,000 3300 lb.
+			</summary>
+		</unit>
+		<unit name="Sport Utility" image="Modern/Civilian_SUV.png">
+			<summary>
+				* RWD or AWD with around 180 hp, two- or four-door with two to eight passengers.  SR 6, TS 110, AC 6 (max 10), 18 mpg@65. Cargo 20-70 cf. Max load 500-1000 lb. $30,000 3500 lb.
+			</summary>
+		</unit>
+		<unit name="Van" />
+	</section>
+	<section name="Modern Heavy Vehicles">
+		<summary>
+			150% Cost, 150% Load, 75% Speed, -1 Handling
+		</summary>
+		<unit name="Bus">
+			<titles>School Bus</titles>
+			<summary>
+			</summary>
+		</unit>
+		<unit name="Bus, Luxury">
+			<titles>Charter Bus</titles>
+			<summary>
+			</summary>
+		</unit>
+		<unit name="Backhoe">
+		</unit>
+		<unit name="Bobcat Loader">
+		</unit>
+		<unit name="Bulldozer">
+		</unit>
+		<unit name="Camper">
+		</unit>
+		<unit name="Cargo Truck">
+		</unit>
+		<unit name="Construction Crane">
+		</unit>
+		<unit name="Dump Truck">
+		</unit>
+		<unit name="Garbage Truck">
+		</unit>
+		<unit name="Giant Dump Truck">
+		</unit>
+		<unit name="Giant Shovel">
+		</unit>
+		<unit name="Recreational Vehicle (RV)">
+		</unit>
+		<unit name="Tractor Trailer">
+			<summary>
+				* 200 gallon tank, driver, 2 passengers. SR 5.75, TS 125, AC 3 (max 6), 12 mpg@65. No Armor.
+				Cargo 5000 cf. Max load 30 tons. $300,000, 10 tons.  Tractor trailers use two overlapping vehicle counters.
+			</summary>
+		</unit>
+	</section>
+	<section name="Modern Police Vehicles">
+		<unit name="Police Cruiser" />
+		<unit name="SWAT Truck" />
+	</section>
+	<section name="Modern Military Vehicles">
+		<summary>
+* Amphibious Vehicles
+* Artillery
+** Light Tank
+** Heavy Tank
+*** Tracked. 2000 hp supercharged engine [70], 120 gallon self-sealing armored tank [20], driver, commander, 2 gunners, 120 mm tank gun [15] in turret (50), MG50 [4] in turret (50), SS [3] front and back (5|5), targeting computer. SR 2, TS 50, AC 3 (max 20), 1 mpg@50. Military-grade Armor: F500, L350, R350, B300, T140, U170. Cargo 10 cf. Max load 4000 lb. $5 million, 40 tons. Each tread has 80 hits. The 120 mm cannon does 25d +
+30 damage, and has a to-hit of 13, but requires one round to reload.
+* Hovertank
+		</summary>
+		<unit name="Armored Personal Carrier (APC)">
+			<summary>
+				* Wheeled. 500 hp engine, 60 gallon selfsealing tank, driver, gunner, MG50 also in turret (50), SS [3] back (5),
+				SR 2, TS 50, AC 3 (max 20), 3 mpg@50. Militarygrade Armor: F100, L80, R80, B70, T40, U50.  Cargo 10 soldiers with
+				full gear.  Max load 2000 lb. $250,000, 10 tons.
+			</summary>
+		</unit>
+	</section>
+	<section name="Modern Trailers">
+	</section>
+	<section name="Modern Hovercraft">
+	</section>
+	<section name="Modern Trains">
+		<summary>
+			* 150% Cost, 200% Load
+			* With a maximum AC of less than one and silly amounts of weight, a train does not stop for anything.  When a
+			steadily moving train collides with a vehicle it does as much damage as the vehicle can take: even a tank would be
+			completely shattered if a train struck it.  A train is very hard to destroy, also... it would derail before
+			actually turning into rubble.
+		</summary>
+		<unit name="Armored Boxcar" />
+		<unit name="Automobile Cargo Car" />
+		<unit name="Boxcar" />
+		<unit name="Caboose" />
+		<unit name="Dining Car" />
+		<unit name="Flatbed Car" />
+		<unit name="Hand Cart" />
+		<unit name="Locomotive" />
+		<unit name="Monorail" />
+		<unit name="Passenger Car" />
+		<unit name="Sleeping Car" />
+		<unit name="Streetcar" />
+		<unit name="Tanker Car" />
+		<unit name="Tram" />
+		<unit name="Weapon Mount Car" />
+	</section>
+	<section name="Modern Snowcraft">
+		<summary>
+			* 75% Load, on Snow no Terrain Penalty and 150% Speed, off Snow +1 Terrain Penalty.
+			* Icecraft - On Ice no Terrain Penalty and 200% Speed, off Ice cannot move.
+		</summary>
+		<item name="Iceskates">
+			<summary>
+				* Personal, Unpowered, Icecraft
+			</summary>
+		</item>
+		<item name="Ice sailboat">
+			<summary>
+				* Medium, Sail, Icecraft
+			</summary>
+		</item>
+		<item name="Skis">
+			<summary>
+				* Personal, Unpowered, Snowcraft
+			</summary>
+		</item>
+		<item name="Snowboard">
+			<summary>
+				* Personal, Unpowered, Snowcraft
+			</summary>
+		</item>
+		<item name="Snowshoes">
+			<summary>
+				* Personal, Unpowered, Snowcraft
+			</summary>
+		</item>
+		<unit name="Dog Sled">
+			<summary>
+				* Unpowered, Offroad, Snowcraft
+			</summary>
+		</unit>
+		<unit name="Snowmobile">
+			<summary>
+				* Offroad, Snowcraft
+			</summary>
+		</unit>
+	</section>
+</chapter>
+<chapter name="The Abyss">
+	<section name="Abyss Units">
+		<unit name="Construction Submarine" />
+		<unit name="Big Geek" />
+		<unit name="Little Geek" />
+		<unit name="Navy Seal" />
+	</section>
+</chapter>
+<chapter name="Modern Space">
+	<section name="Modern Space Units">
+		<unit name="Astronaut" />
+		<unit name="International Space Station" />
+		<unit name="Space Shuttle" />
+	</section>
+</chapter>
+<chapter name="Modern Cops and Robbers">
+	<section name="Modern Government">
+		<unit name="Administrator">
+		</unit>
+		<unit name="ATF Agent" />
+		<unit name="Congressman">
+		</unit>
+		<unit name="DEA Agent" />
+		<unit name="Diplomat">
+			<skill name="Communications">
+				<ability name="Negotiation" />
+				<ability name="Politics" />
+			</skill>
+		</unit>
+		<unit name="FBI Agent" />
+		<unit name="Monarch">
+		</unit>
+		<unit name="Noble">
+			<skill name="Influence">
+			</skill>
+		</unit>
+		<unit name="Senator">
+		</unit>
+	</section>
+	<section name="Modern Police">
+		<unit name="Police Officer">
+			<titles>Beat Cop, Pig (derogatory), Thin Blue Line</titles>
+		</unit>
+		<unit name="Detective" />
+		<unit name="Forensics Investigator" />
+		<unit name="Internal Affair Agent" />
+		<unit name="S.W.A.T." />
+	</section>
+	<section name="Modern Criminals">
+		<unit name="Armed Robber" />
+		<unit name="Informant" />
+		<unit name="Purse Snatcher" />
+		<unit name="Serial Killer" />
+	</section>
+	<section name="Modern Crime Gangs">
+		<unit name="Mafia" />
+		<unit name="Tong Gangs">
+			<summary>Tongs are local street gangs.</summary>
+		</unit>
+		<unit name="Triads">
+			<summary>
+				The Triads are like the [Yakuza] offering protection to the locals.  This protection normally comes in the form of crushing the competition on the triad's businesses.  Unlike the [Yakuza], the triads deal in slavery and are more open in their illegal dealings.  Enforcement is very brutal.
+			</summary>
+		</unit>
+		<unit name="Yakuza">
+			<summary>
+				Besides weapons and drugs, the Yakuza are the neighborhood protection in many areas and do so far more efficiently than the police. Contrary to the attitudes protrayed in Hollywood, the Yakuza make justice swift and fair for the people they deal with. It has done this way for longer than the United States has been around. The Yakuza is not about random violence and mayhem. It is about order and discipline. Of course, many of the younger members have cast aside traditions and have become violent thugs. Like the Triads, the Yakuza was originally a response to the feudal lords when those who were not samurai had no rights or safety.
+			</summary>
+		</unit>
+	</section>
+</chapter>
+<chapter name="Modern Mercenaries">
+	<reference>
+		* Blackrock
+		* Millenium's End
+	</reference>
+	<summary>
+		Mercenaries
+		Smuggling
+		Soldiers of Fortune
+		VIP Bodyguards
+	</summary>
+	<section name="Black Eagle Security">
+		<summary>
+			* Black Eagle is a large security firm offering 'specialists for hire'. They maintain a strong reputation for effectiveness, discipline, and discretion. Their fees are high, but they are the gold standard when dealing with critical situations on a moment's notice.
+			* Black Eagle is based in Atlanta, Georgia. It maintains branch facilities in Miami, Dubai, the Phillipines, and South Africa.
+			* Black Eagle provides contract security teams to guard embassies for major countries. They also can be engaged for
+			deniable covert actions including: smash and grab, target removal, and cyber espianoge.
+			* Black Eagle is very careful to maintain deniability in all of its activities. It does not have business cards or
+			letter-head or logos. Its personnel are all independent contractors who are always paid by the job, in cash. There is 	always a risk that Black Eagle personnel will be captured, killed, or imprisoned. Black Eagle values loyalty above all
+			else and will go to great lengths to prove itself when its own people get in trouble.
+			* The true secret to Black Eagle's success is its information network. The company maintains a large database of 'persons of interest' along with psychological profiles and potential future value. Whenever possible, Black Eagle will trade favors instead of cash. They proactively offer help to key individuals who are in trouble, so they can count on those people for help in the future. Black Eagle has influence among numerous politicians, lobbyists, lawyers, judges, military personnel, police, prison guards, prisoners, criminal informants, as well as numerous ordinary people who serve as their eyes and ears on the street.
+		</summary>
+	</section>
+</chapter>
+<chapter name="The Prisoner">
+	<reference>
+		* Where am I? You are at the village. Who do you work for?  That would be telling. What do you want? Information. You won't get it. By hook or by crook, we will. Who are you?  I am number 2. Who is number 1? You are number 6. I am not a number. I am a free man. Ha ha ha ha. - The Prisoner
+		* Be seeing you. - The Prisoner
+	</reference>
+</chapter>
+<chapter name="Special Ops">
+	<summary>
+		Special Ops
+		Black Ops
+		Deniable Insurgencies
+		Impossible Missions
+		Hostage Rescue
+	</summary>
+</chapter>
+<chapter name="Modern Spies">
+	<section name="Spy Units">
+		<unit name="CIA Agent" />
+		<unit name="NSA Agent" />
+		<unit name="Terrorist" />
+		<unit name="Aaron Jorgenson">
+			<summary>
+				* Wealthy Norwegian shipping magnate with subsidiaries in petroleum products, trucking, and pharmaceuticals.
+				* He is an ultra-conservative and has served several terms in public office.
+				* He was married and divorced (his wife died of natural causes soon after the divorce).
+				* He has no heirs or family.
+				* At 56, he is also dying of an inoperable brain tumor.
+				* His greatest possessions are his fabulous collection of artwork in his luxurious mansion.
+				* Personality - Mr. Jorgenson is an arrogant and selfish man. He is a self-made man and believes that the strong deserve to take what they can and that the weak deserve their lot. He idolizes men of action, especially his Viking ancestors. With only a short time left to live, he has dedicated his fortune to a spectacular plan that would make him a modern day Viking.
+			</summary>
+		</unit>
+		<unit name="James Bond">
+			<titles>007</titles>
+			<summary>
+				* Mr. Bond, you persist in defying my efforts to provide an amusing death for you. - Hugo Drax, Moonraker
+				* Do you expect me to talk. No, Mr. Bond. I expect you to die. - Auric Goldfinger and James Bond, Goldfinger
+			</summary>
+		</unit>
+	</section>
+</chapter>
+<chapter name="Modern Sports">
+	<section name="Soccer">
+		<rule name="Soccer Goal" image="Units/Modern/Soccer_Goal.png" />
+		<item name="Soccer Ball" image="Modern/Soccer_Ball.png" />
+		<item name="Soccer Player (Blue)" image="Modern/Soccer_PlayerBlue.png" />
+		<item name="Soccer Player (Red)" image="Modern/Soccer_PlayerRed.png" />
+	</section>
+	<section name="Football">
+		<rule name="Football Field" image="Units/Modern/Football_Field.jpg" />
+		<unit name="Linebacker (Blue)" image="Modern/Football_LinebackerBlue.png" />
+		<unit name="Linebacker (Red)" image="Modern/Football_LinebackerRed.png" />
+		<unit name="Quarterback (Blue)" image="Modern/Football_QuarterbackBlue.png" />
+		<unit name="Quarterback (Red)" image="Modern/Football_QuarterbackRed.png" />
+		<unit name="Receiver (Blue)" image="Modern/Football_ReceiverBlue.png" />
+		<unit name="Receiver (Red)" image="Modern/Football_ReceiverRed.png" />
+	</section>
+	<section name="Underground Sports">
+		<unit name="Pit Fighter" />
+		<unit name="Rollerball Player" />
+		<unit name="Street Fighter" />
+	</section>
+	<section name="Other Sports">
+		<unit name="Baseball Player" />
+		<unit name="Boxer" />
+		<unit name="Hockey Player" />
+		<unit name="Ping Pong Player" />
+	</section>
+	<section name="Modern Scenarios">
+		<scenario name="Boxing Match" />
+		<scenario name="Soccer Game" />
+	</section>
+</chapter>
+<chapter name="Modern Warfare">
+	<section name="Modern America">
+		<reference>
+			* I'm going to make it up for all of the Sunday Times. I am going to make it up for all of the nusery rhymes. They never really wanted to tell the truth. I'm so tired of you America. ... Tell me, do you really think you go to hell for having loved? Tell me, enough of thinking everything that you've done is good. I really need to know. After soaking the body of Jesus Christ in blood. I 'm so tired of America. ... You took advantage of a world that loved you well. I'm going to a town that has already been burnt down. I'm so tired of you America - Rufus Wainwright, Going To a Town
+		</reference>
+	</section>
+	<section name="Modern American Aircraft">
+		<unit name="Advanced Tactical Fighter" />
+		<unit name="B-1 Bomber" />
+		<unit name="B-2 Stealth Bomber" />
+		<unit name="Predator UAV" />
+		<unit name="Stealth Fighter" />
+		<unit name="SH-60 Seahawk Helicopter" />
+		<unit name="Blackhawk Helicopter" />
+		<unit name="Apache Helicopter" />
+		<unit name="C-5 Galaxy" />
+		<unit name="C-17 Globemaster III" />
+		<unit name="BGM-109 Tomahawk Cruise Missile">
+			<summary>
+				* Conventional: 1,000 lb (450 kg) Bullpup, or submunitions dispenser with BLU-97/B Combined Effects Bomb, or a 200 kiloton of TNT (840 terajoule) W80 nuclear device (inactivated per SALT)
+			</summary>
+		</unit>
+	</section>
+	<section name="Modern American Ground Vehicles">
+		<unit name="M1A2 Abrams Tank" mass="70tons" speed="72kph">
+			<summary>
+				Turbine Engine: takes any fuel, typically Jet Fuel, starting the engine consumes nearly 11 gallons of fuel and it emits a jet blast behind it. Can survive multiple hits from the most powerful tank munitions including 120mm DU APFSDS and anti-tank missiles. Its own weapons are unable to penetrate front or side armor even at close range in friendly fire incidents.
+
+				4 Gunnery
+				120mm smoothbore: APFSDS, HEAT, Anti-Personnel
+				.50 MG, 2 x 7.62mm MG
+				Smoke Grenades, Smoke Screen
+				Armor
+				610mm Composite DU, 1500mm vs HEAT, 950mm vs APDS Front
+				Missile Countermeasures
+			</summary>
+			<skill name="Gunnery" level="4">
+			</skill>
+		</unit>
+		<unit name="M2A2 Bradley AFV" speed="66kph" mass="33tons">
+			<summary>
+				25mm Chain Gun, 900 rounds, APDS, HEI
+				7.62mm MG, 2200 rounds
+				TOWII Missiles
+				Smoke Grenades, Smoke Screen
+			</summary>
+			<skill name="Gunnery" level="4">
+			</skill>
+		</unit>
+		<unit name="Patriot Missile System" />
+	</section>
+	<section name="American Naval Vessels">
+		<unit name="Ticonderoga Missile Cruiser">
+			<summary>
+				* Aegis Combat System
+				2 x 61 cell Mk41 vertical launch systems
+				122 x RIM-66 SM-2, RIM-162 ESSM, BGM-109 Tomahawk, or RUM-139 VL-Asroc
+				8 x RGM-84 Harpoon missiles
+				2 x Mark 45 5in / 54cal lightweight gun
+				2 x 25mm
+				24 x .50cal (12.7mm) gun
+				2 x Phalanx CIWS
+				2 x Mk32 12.75in (324mm) triple torpedo tubes
+			</summary>
+		</unit>
+	</section>
+	<section name="Modern British Ground Vehicles">
+		<unit name="Challenger 2">
+			<summary>
+				Comparable to the M1 Abrams, though it uses a diesel engine.
+				One near Basra survived being hit by 70 RPGs.
+				105mm L7 Gun
+			</summary>
+		</unit>
+	</section>
+	<section name="Modern German Ground Vehicles">
+		<unit name="Leopard 2A6">
+			<summary>
+				Comparable to the M1 Abrams, it carries a heavier gun and uses a diesel engine which increases reliability.
+			</summary>
+		</unit>
+	</section>
+	<section name="Modern Israeli Ground Vehicles">
+		<unit name="Merkava Mark IV" />
+	</section>
+	<section name="Modern African Ground Vehicles">
+		<unit name="Technical" />
+	</section>
+</chapter>
+</doc>

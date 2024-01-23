@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc name="Pulp Fiction">
+<chapter name="Pulp Fiction Overview">
+	<section name="Why Tactics: Pulp Fiction?">
+	</section>
+</chapter>
+<chapter name="Action/Adventure">
+	<section name="Government Units">
+		<unit name="Government Agent">
+			<summary>
+				We have top men working on it now.  Who?  Top... men. - Raiders of the Lost Ark
+			</summary>
+		</unit>
+	</section>
+	<section name="Treasure Hunters">
+		<unit name="Indiana Jones" image="PulpFiction/IndianaJones.png">
+			<skill name="Melee">
+				<item name="Bullwhip" />
+			</skill>
+			<skill name="Firearms">
+			</skill>
+			<skill name="Knowledge">
+				<ability name="Antiquities" />
+				<ability name="Archeology" />
+				<ability name="Ancient History" />
+				<ability name="Religious Studies" />
+			</skill>
+		</unit>
+		<unit name="Lara Croft" image="PulpFiction/LaraCroft.png">
+			<skill name="Firearms">
+			</skill>
+			<skill name="Influence">
+			</skill>
+		</unit>
+	</section>
+</chapter>
+<chapter name="Flash Gordon">
+</chapter>
+<chapter name="Hardboiled Detective">
+</chapter>
+<chapter name="John Carter on Mars">
+</chapter>
+<chapter name="Land of the Lost">
+	<item name="Pylon" />
+	<item name="Skylon" />
+	<unit name="Enik" />
+	<unit name="Pakuni" />
+	<unit name="Sleestak" />
+</chapter>
+<chapter name="Lost Continent">
+</chapter>
+<chapter name="True Grit / Crime">
+</chapter>
+<chapter name="War of the Worlds">
+</chapter>
+</doc>

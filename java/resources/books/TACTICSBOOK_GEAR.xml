@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc name="Gear">
+<chapter name="Gear Overview">
+	<section name="Why Tactics: Gear?">
+		<summary>
+		</summary>
+	</section>
+</chapter>
+<chapter name="Gear Construction">
+</chapter>
+<chapter name="Gear Items">
+	<section name="Alchemical Devices">
+		<item name="Alembic" />
+		<item name="Aludel">
+			<summary>
+				* The philosophical vase of the alchemist.
+			</summary>
+		</item>
+		<item name="Athanor">
+			<summary>
+				* The philosophical furnace of the alchemist.
+			</summary>
+		</item>
+		<item name="Bellows" />
+		<item name="Blowtube" />
+		<item name="Brazier" />
+		<item name="Cadeucus" />
+		<item name="Calcinator" />
+		<item name="Censer" />
+		<item name="Crucible" />
+		<item name="Glassware" />
+		<item name="Hourglass" />
+		<item name="Inkwell" />
+		<item name="Mortar and Pestle" />
+		<item name="Piping" />
+		<item name="Quill Pen" />
+		<item name="Retort" />
+		<item name="Scrying Glass" />
+		<item name="Tongs" />
+		<item name="Vial" />
+	</section>
+	<section name="Poisons">
+		<item name="Narcotic Poison" />
+		<item name="Paralytic Poison" />
+	</section>
+	<section name="Alchemical Substance">
+		<item name="Alkahest">
+		    <titles>Alchahest, Universal Solvent</titles>
+		    <summary>
+				* The universal solvent, having the power to dissolve every substance into its
+				constituent elemental parts.  It cannot dissolve anything that is absolutely
+				pure.
+			</summary>
+		</item>
+		<item name="Aphrodisiac" />
+		<item name="Aqua Fortis">
+			<titles>Strong Water</titles>
+			<summary>
+				Nitric acid.  Easier to make, lesser version of Aqua Regia.
+			</summary>
+		</item>
+		<item name="Aqua Regia">
+			<titles>Royal Water</titles>
+			<summary>
+				* Highly corrosive acid made from Nitric and Hydrochloric acid.  It is one of the few reagents that dissolves gold
+				and platinum.
+			</summary>
+		</item>
+		<item name="Aqua Vitae">
+			<titles>Elixir of Vitality, Water of Life</titles>
+			<summary>
+				* Magical liquid used to create artificial life, particularly the Homonculus.
+			</summary>
+		</item>
+		<item name="Amber Crystal" />
+		<item name="Antidote: Amnesia" />
+		<item name="Antidote: Blindness" />
+		<item name="Antidote: Burns" />
+		<item name="Antidote: Curse" />
+		<item name="Antidote: Deafness" />
+		<item name="Antidote: Disease" />
+		<item name="Antidote: Fear" />
+		<item name="Antidote: Insanity" />
+		<item name="Antidote: Paralysis" />
+		<item name="Antidote: Poison" />
+		<item name="Devilroot Powder">
+		</item>
+		<item name="Dipilatory" />
+		<item name="Dream Essence">
+			<summary>
+				* The elusive essence from which dreams are made.  It is gathered from a subject and
+				then distilled into a liquid.
+				* The effects last for 2-8 hours and are very intense.
+				* Effects vary by color:
+				** Purple - Passion, Romance
+				** Blue - Poignancy
+				** Red - Violent Emotions
+				** Silver - Imagination, Flights of Fancy
+				** Gold - Prophetic Visions
+				** Rainbow - Unpredictable
+				** Black - Nightmares
+			</summary>
+		</item>
+		<item name="Elixir of Clarity">
+			<summary>
+				* [Effect]: [+1 Mind]
+			</summary>
+		</item>
+		<item name="Elixir of Healing" />
+		<item name="Elixir of Life">
+			<summary>
+				* [Effect]: Extends lifespan by 10 years. Each use of this Elixir increases the difficulty of the next use.
+			</summary>
+		</item>
+		<item name="Elixir of Regrowth">
+			<summary>
+				* Effect: Drop into a coma and heals damage including repairing/regrowing damaged organs or
+				limbs.
+			</summary>
+		</item>
+		<item name="Elixir of Strength">
+			<summary>
+				* [Effect]: [+1 Body]
+			</summary>
+		</item>
+		<item name="Essense of Longing">
+			<titles>Perfume of Attraction</titles>
+		</item>
+		<item name="Essential Quicksilver">
+		    <summary>
+		        A magically animate liquid metal used in the crafting of enchanted weapons.
+		    </summary>
+		</item>
+		<item name="Glowball">
+			<summary>
+				* A glass ball that will radiate light like a torch for [Level] hours without
+				requiring air.
+			</summary>
+		</item>
+		<item name="Homonculyte" />
+		<item name="Ice Crystals">
+			<summary>
+				Intense cold captured into powdery crystal form.
+			</summary>
+		</item>
+		<item name="Incense of Conjuration">
+			<summary>
+				* [Action]: Burn for +1 [Conjuration] for the next 5 turns.
+			</summary>
+		</item>
+		<item name="Incense of Divination">
+			<summary>
+				* [Action]: Burn for +1 [Divination] for the next 5 turns.
+			</summary>
+		</item>
+		<item name="Incense of Dreaming">
+			<summary>
+				* [Action]: Burn for +1 [Dreaming] for the next 5 turns.
+			</summary>
+		</item>
+		<item name="Incense of Shamanism">
+			<summary>
+				* [Action]: Burn for +1 [Shamanism] for the next 5 turns.
+			</summary>
+		</item>
+		<item name="Lightning in a Bottle">
+		</item>
+		<item name="Lyrium Potion">
+			<titles>Radium</titles>
+			<summary>
+				* Natural Lyrium is a white, radioactive dust extracted from Uranium mines.
+				* Lyrium Ore - Direct contact with lyrium ore produces nausea, blistering of the skin,
+				and dementia.
+				* Lyrium Potions - Lyrium dust can be mixed into a potion that bestows resistance to
+				magic to those who use it regularly. However, Lyrium is extremely physically and
+				psychologically addictive not unlike heroin.
+				* Chantry Templars are all required to take Lyrium regularly. The addictive qualities of
+				Lyrium ensure that the Templars remain under Chantry control.
+				* History - It is thought that Lyrium is created from Ley Lines (Dragon Lines) traveling
+				through the earth.
+				* [Passive]: +1 [Defense] vs. any magical effect and -1 [Action] when using any magical
+				effect.
+			</summary>
+		</item>
+		<item name="Makeup of Beauty" />
+		<item name="Mandrake Powder">
+		</item>
+		<item name="Oil of Slipperiness" />
+		<item name="Panacea" />
+		<item name="Philosopher's Stone">
+			<titles>Magnum Opus, Great Work, Stone of the Philosopher, Variable Mercury</titles>
+			<summary>
+				* A legendary alchemical substance said to be capable of turning base metals
+				such as lead into gold (chrysopoeia) or silver. It was also sometimes believed
+				to be an elixir of life, useful for rejuvenation and possibly for achieving
+				immortality. For many centuries, it was the most sought-after goal in alchemy.
+				The philosophers' stone is the central symbol of alchemy, symbolizing
+				perfection at its finest, enlightenment, and heavenly bliss. Efforts to
+				discover the philosophers' stone were known as the Magnum Opus ('Great Work').
+				* The first component of the philosopher's stone is Prima Materia: 'the first
+				matter of the stone is the very same with the first matter of all things.'
+			</summary>
+		</item>
+		<item name="Philtre of Courage">
+			<summary>
+				* [Effect]: [+1 Spirit]
+			</summary>
+		</item>
+		<item name="Philtre of Fear">
+			<summary>
+				* [Effect]: [-1 Spirit]
+			</summary>
+		</item>
+		<item name="Philtre of Hate">
+		</item>
+		<item name="Philtre of Loyalty">
+		</item>
+		<item name="Philtre of Love">
+			<titles>Love Potion, Potion of Passion</titles>
+			<reference>Love Potion #9</reference>
+		</item>
+		<item name="Philtre of Mirth">
+		</item>
+		<item name="Philtre of Sorrow">
+		</item>
+		<item name="Philtre of Trechery">
+		</item>
+		<item name="Philtre of Violence">
+			<titles>Berserk Potion</titles>
+		</item>
+		<item name="Potion of Fire Resistance">
+			<summary>
+				* Effect: +1 [Defense] vs. [Fire].
+			</summary>
+		</item>
+		<item name="Potion of Grounding">
+			<summary>
+				* Effect: +1 [Defense] vs. [Electricity].
+			</summary>
+		</item>
+		<item name="Potion of Healing">
+			<summary>
+			</summary>
+		</item>
+		<item name="Potion of Regeneration">
+			<summary>
+			</summary>
+		</item>
+		<item name="Potion of Restoration">
+			<summary>
+			</summary>
+		</item>
+		<item name="Potion of Strength">
+			<summary>
+			</summary>
+		</item>
+		<item name="Potion of Venom">
+			<summary>
+				* Effect: Body becomes a deadly storehouse of caustic venoms.  The blood,
+				sweat, tears, and spit are all deadly weapons.  User is immune to its own
+				effects and is also resistant to all poison, acid, and disease.
+			</summary>
+		</item>
+		<item name="Potion of Warmth">
+			<summary>
+				* Effect: +1 [Defense] vs. [Cold].
+			</summary>
+		</item>
+		<item name="Potion of Water Breathing">
+			<summary>
+			</summary>
+		</item>
+		<item name="Prima Materia">
+			<titles>Aether, Akasha, Ether, Proteus, Quintessence</titles>
+			<summary>
+				* The primitive formless base of all matter, the primal substance that may be
+				changed into any other matter.
+			</summary>
+		</item>
+		<item name="Rare Earths">
+			<titles>Antimony, Cinnabar, Pitchblend, various salts, and metal oxides</titles>
+			<summary>
+				* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the
+				innate powers of other ingredients.
+			</summary>
+		</item>
+		<item name="Sleeping Potion">
+		    <titles>Soporific</titles>
+			<reference>Sleeping Beauty</reference>
+		</item>
+		<item name="Smokestick">
+			<summary>
+				* An alchemically treated wooden stick that creates thick, opaque smoke when
+				ignited.
+			</summary>
+		</item>
+		<item name="Soulstone">
+		</item>
+		<item name="Soverign Glue">
+		    <titles>Universal Adhesive</titles>
+		</item>
+		<item name="Storm Crystals">
+		</item>
+		<item name="Thunderstone">
+			<summary>
+				* A stone that emits a deafening sound when it is first struck againsts a
+				hard surface.
+			</summary>
+		</item>
+		<item name="Tindertwig">
+			<reference>A match</reference>
+			<summary>
+				* A sulfurous substance that ignites when rubbed against a rough surface.
+			</summary>
+		</item>
+	</section>
+	<section name="Artifacts">
+		<item name="Icy Manipulator">
+			<summary>
+				* [Action]: Roll vs. [Mind]. If successful, target loses its next [Action].
+			</summary>
+		</item>
+		<item name="Zuran Orb">
+			<reference>
+				* I will go to any length to achieve my goal. Eternal life is worth any sacrifice.
+				- Zur the Enchanter, Magic the Gathering
+			</reference>
+			<summary>
+				* [Action]: -1 [Spirit] permanently. -2 Damage, -1 Critical, -10 Age.
+			</summary>
+		</item>
+	</section>
+	<section name="Artwork">
+		<item name="Bronze Sculpture" />
+		<item name="Calligraphed Scroll" />
+		<item name="Carving" />
+		<item name="Cave Drawing" />
+		<item name="Ceramic Vase" />
+		<item name="Clay Pot" />
+		<item name="Goblet" />
+		<item name="Fine China" />
+		<item name="Iron Sculpture" />
+		<item name="Oriental Carpet" />
+		<item name="Landscape Painting" />
+		<item name="Marble Sculpture" />
+		<item name="Painted Fan" />
+		<item name="Painted Folding Screen" />
+		<item name="Painted Scroll" />
+		<item name="Portrait Painting" />
+		<item name="Scrimshaw" />
+		<item name="Silver Bowl" />
+		<item name="Silver Cup" />
+		<item name="Silver Plate" />
+		<item name="Silverware" />
+		<item name="Still Life Painting" />
+		<item name="Stone Sculpture" />
+		<item name="Wooden Sculpture" />
+	</section>
+	<section name="Book Types">
+		<titles>Book, Musings, Notes, Scroll, Writings</titles>
+		<item name="Almanac" />
+		<item name="Atlas of Maps" />
+		<item name="Biography" />
+		<item name="Book of Shadows">
+			<summary>
+				A private journal, history or core religious text kept by practitioners.
+			</summary>
+		</item>
+		<item name="Codex" />
+		<item name="Encyclopedia" />
+		<item name="Fragments" />
+		<item name="Grimoire">
+			<summary>
+				A set of rules for doing something and is a journal kept by practitioners containing
+				information and contributions relevant to their specific field of study.
+			</summary>
+		</item>
+		<item name="Manual" />
+		<item name="Memoir" />
+		<item name="Poems" />
+		<item name="Spellbook" />
+		<item name="Tome" />
+	</section>
+	<section name="Books, Unique">
+		<item name="Book of Enoch" />
+		<item name="Book of the Law" />
+		<item name="Charge of the Goddess" />
+		<item name="I Ching" />
+		<item name="Lemegeton Clavicula Salomonis">
+			<titles>The Lesser Key of Solomon</titles>
+		</item>
+		<item name="Liber Legis" />
+		<item name="Liber Null" />
+		<item name="Malleus Maleficarum">
+			<titles>The Hammer of Witches, Hexenhammer</titles>
+			<summary>
+				One of the most famous medieval treatises on witches.
+			</summary>
+		</item>
+		<item name="Tabula Rasa">
+			<summary>
+				* A unique blank stone tablet of unknown origin vaguely connected to the legends of the River Lethe.
+				* If a person writes a description of a memory on the tablet, then the text will slowly fade from
+				the tablet and as it does the memory will also permanently fade from the user's mind. This item can
+				be used to remove trauma as well as reset unwanted skills and abilities.
+			</summary>
+		</item>
+		<item name="Wiccan Rede" />
+	</section>
+	<section name="Clothing">
+		<item name="Bracers" />
+		<item name="Circlet" />
+		<item name="Cloak" />
+		<item name="Collar" />
+		<item name="Coronal" />
+		<item name="Headdress" />
+		<item name="Leggings" />
+		<item name="Mantle" />
+		<item name="Mask" />
+		<item name="Rainment" />
+		<item name="Robe" />
+		<item name="Torque" />
+	</section>
+	<section name="Drugs">
+		<reference>
+			* We had two bags of grass, seventy-five pellets of mescaline, five sheets of high-powered blotter acid, a saltshaker
+			half-full of cocaine, and a whole galaxy of multi-colored uppers, downers, screamers, laughers... Also, a quart of
+			tequila, a quart of rum, a case of beer, a pint of raw ether, and two dozen amyls...The only thing that really worried
+			me was the ether.  There is nothing in the world more helpless and irresponsible and depraved than a man in the depths
+			of an ether binge, and I knew we'd get into that rotten stuff pretty soon. - Raoul Duke, Fear and Loathing in Las
+			Vegas
+		</reference>
+		<item name="Amphetamine">
+			<titles>Crank, Speed, Uppers</titles>
+		</item>
+		<item name="Anesthetic" />
+		<item name="Anti-Fungal" />
+		<item name="Anti-Parasitic" />
+		<item name="Antiseptic" />
+		<item name="Atropine" />
+		<item name="Birth Control" />
+		<item name="Cocaine" />
+		<item name="Crack Cocaine" />
+		<item name="Depresant">
+			<titles>Downers</titles>
+		</item>
+		<item name="Ecstasy">
+			<titles>XTC</titles>
+		</item>
+		<item name="Fertility Drug" />
+		<item name="Hallucinogen" />
+		<item name="Hashish" />
+		<item name="Heroin" />
+		<item name="LSD">
+			<titles>Acid</titles>
+		</item>
+		<item name="Marijuana" />
+		<item name="Mescaline">
+			<summary>
+				* Derived from the [Peyote] Plant
+			</summary>
+		</item>
+		<item name="Morphine" />
+		<item name="Sedative" />
+		<item name="Steroid" />
+		<item name="Stimulant" />
+		<item name="Tranquilizer" />
+	</section>
+	<section name="Food and Drink">
+		<item name="Ale" />
+		<item name="Beer" />
+		<item name="Blossom Wine" />
+		<item name="Grog" />
+		<item name="Fire Ale" />
+		<item name="Mead">
+			<summary>Fermented Honey</summary>
+		</item>
+		<item name="Mushroom Ale" />
+		<item name="Nectar" />
+		<item name="Whiskey" />
+		<item name="Wine" />
+		<item name="Vinesap" />
+		<item name="Vodka" />
+	</section>
+	<section name="Jewelry">
+		<item name="Amulet" />
+		<item name="Anklet" />
+		<item name="Bracelet" />
+		<item name="Brooch">
+			<titles>Decorative Pin</titles>
+		</item>
+		<item name="Cameo" />
+		<item name="Earring" />
+		<item name="Ingot" />
+		<item name="Medallion" />
+		<item name="Necklace" />
+		<item name="Pendant" />
+		<item name="Ring" />
+		<item name="Tiara" />
+		<item name="Torc" />
+		<item name="Valknut">
+			<titles>Knot of the Fallen Warriors</titles>
+			<summary>
+				* Purpose - The valknut pendant is a magical symbol for warrior types. The Valknut pendant is used by those who swear allegiance to Odin in both life and death and want to fight alongside the gods during Ragnarok. When a valknut is found, Odin is also near. This is true for engravings of the valknut as well as for those who decide to wear Odin’s symbol.
+				* Description - Valknut literally translates into 'the knot of the fallen warriors.' This symbol is also strongly connected to the deceased as is apparent in its linguistic meaning. The symbol itself represents the 9 worlds of existence. It is created through the fierce binding of three triangles. The Valknut also has the power over both life and death, as it weaves both into a knot.
+			</summary>
+		</item>
+	</section>
+	<section name="Materials">
+		<item name="Animal Hide" />
+		<item name="Brass" />
+		<item name="Bronze" />
+		<item name="Ceramic" />
+		<item name="Clay" />
+		<item name="Gauze" />
+		<item name="Glass" />
+		<item name="Gossamer" />
+		<item name="Ice" />
+		<item name="Iron" />
+		<item name="Linen" />
+		<item name="Obsidian" />
+		<item name="Quartz" />
+		<item name="Snow" />
+		<item name="Soil" />
+		<item name="Stone" />
+		<item name="Water" />
+		<item name="Wind" />
+		<item name="Wood" />
+	</section>
+	<section name="Mechanisms">
+		<item name="Secret Compartment" />
+		<item name="Secret Door" />
+	</section>
+	<section name="Precious Materials">
+		<item name="Amber" />
+		<item name="Amethyst" />
+		<item name="Blue Diamond" />
+		<item name="Copper" />
+		<item name="Diamond" />
+		<item name="Electrum">
+			<titles>White Gold</titles>
+			<reference>
+				* Electrum is a naturally occurring alloy of gold and silver, with trace amounts of
+				copper and other metals.
+				* The color of electrum is pale yellow or yellowish-white.
+				* It is usually a good conductor of electricity.
+				* Electrum is much better for coinage than gold, mostly because it is harder and more
+				durable.
+			</reference>
+		</item>
+		<item name="Emerald" />
+		<item name="Gold" />
+		<item name="Moonstone" />
+		<item name="Onyx" />
+		<item name="Pearl" />
+		<item name="Rose Gold">
+			<titles>Red Gold</titles>
+			<reference>
+				* Rose gold is a gold and copper alloy.  The higher the copper content the redder the
+				color.
+			</reference>
+		</item>
+		<item name="Ruby" />
+		<item name="Sapphire" />
+		<item name="Silver">
+			<reference>
+				* Silver is a brilliant white metal with a luster that can take a high degree of polish.
+				* It is very ductile and malleable (slightly harder than gold).
+				* It has the highest electrical conductivity of all metals, even higher than copper
+				* Among metals, pure silver has the highest thermal conductivity (only the non-metal
+				diamond's is higher), whitest color, and the highest optical reflectivity.
+				* Jewellery and silverware are traditionally made from Sterling silver (Standard silver) an
+				alloy of 92.5 % silver with 7.5% copper.  Sterling silver is harder than pure silver,
+				and has a lower melting point.
+				* It has certain antimicrobial activity.  Dilute solutions of silver nitrate can be used
+				as disinfectants.  Silver-ions and silver compounds show a toxic effect on some
+				bacteria, viruses, algae and fungi.  Its germicidal effects make silver utensils valued,
+				and increase its value as jewelry.  The exact process of silver's germicidal effect is
+				still not well understood.
+				* The name of the United Kingdom monetary unit 'pound' originally had the value of one
+				troy pound of sterling silver.
+				* The words for 'silver' and 'money' are the same in at least 14 languages.
+				* Hippocrates, the father of modern medicine, wrote that silver had beneficial healing
+				and anti-disease properties, and the Phoenicians used to store water, wine, and vinegar
+				in silver bottles to prevent spoiling.  In the early 1900s people would put silver
+				dollars in milk bottles to prolong the milk's freshness.
+				* Silver was believed to be a repellent against vampires; also, mirrors were originally
+				polished silver, and as such, vampires allegedly cannot be seen in them because they
+				have no soul) and it was also believed that a werewolf, in his bestial form, could only
+				be killed by a weapon or bullet made of silver.  This has given rise to the term 'silver
+				bullet', which is used to describe things that very effectively deal with one specific
+				problem.
+			</reference>
+		</item>
+		<item name="Tiger's Eye" />
+	</section>
+	<section name="Fantastic Precious Materials">
+		<item name="Adamant">
+		    <summary>
+		        * Requires: 10 carats of powdered blue diamonds and 1 pound of silver to create
+		        1 pound of Adamant.
+		    </summary>
+		</item>
+		<item name="Black Diamond" />
+		<item name="Mithril">
+			<titles>Elven Steel, Titanium Steel</titles>
+			<summary>
+				* A steel alloy that is as strong as steel with only half the weight.  It is extremely
+				difficult to forge even for master smiths, so it is extremely rare and valuable.
+			</summary>
+		</item>
+		<item name="Orichalcum">
+			<reference>
+				* A legendary metal mentioned in several ancient writings, most notably the
+				story of Atlantis.
+			</reference>
+		</item>
+	</section>
+	<section name="Religious Items">
+		<item name="Holy Water">
+			<summary>
+				* Holy Water consists of water with salt added that has been blessed in a ritual. Both water and salt are symbol of cleansing and disinfecting.
+			</summary>
+		</item>
+	</section>
+	<section name="Musical Instruments">
+		<item name="Banjo" />
+		<item name="Bells" />
+		<item name="Chime" />
+		<item name="Drums" />
+		<item name="Drums, Koto" />
+		<item name="Drums, Timpani" />
+		<item name="Gong" />
+		<item name="Guitar" />
+		<item name="Guitar, 12 String" />
+		<item name="Guitar, Electric" />
+		<item name="Flute" />
+		<item name="Flute, Pan" />
+		<item name="Harmonica" />
+		<item name="Harp" />
+		<item name="Harpsicord" />
+		<item name="Horn" />
+		<item name="Horn, French" />
+		<item name="Juiceharp" />
+		<item name="Lute" />
+		<item name="Mandolin" />
+		<item name="Piano" />
+		<item name="Pipes" />
+		<item name="Recorder" />
+		<item name="Sitar" />
+		<item name="Tambour" />
+		<item name="Trombone" />
+		<item name="Trumpet" />
+		<item name="Violin" />
+	</section>
+	<section name="Powders">
+		<item name="Amnesia Powder">
+			<titles>Powder of Forgetfulness</titles>
+		</item>
+		<item name="Blinding Powder">
+			<summary>
+				Temporarily Blind a target.
+			</summary>
+		</item>
+		<item name="Confusing Powder" />
+		<item name="Dust of Disappearing Trail">
+			<summary>
+				* Resettles an area to make it appear as if no one has been there in a long
+				time.
+			</summary>
+		</item>
+		<item name="Dust of Dryness">
+			<summary>
+				* Evaporates water on contact. Destroys up to level^2 liters of water.
+			</summary>
+		</item>
+		<item name="Exploding Powder" />
+		<item name="Flash Powder">
+			<summary>
+				* [Move]: Place a [Smoke] Terrain with 1 Duration Token on this unit's space.
+			</summary>
+		</item>
+		<item name="Freezing Powder" />
+		<item name="Hallucination Powder" />
+		<item name="Incendiary Powder">
+			<titles>Dragon's Breath</titles>
+		</item>
+		<item name="Iocaine Powder">
+			<titles>Arcenic Trioxide</titles>
+			<reference>
+				* What you do not smell is called iocane powder. It is odorless, tasteless, dissolves instantly in liquid,
+				and is among the more deadlier poisons known to man. - Man in Black
+				* Iocane comes from Australia, as everyone knows! And Australia is entirely peopled with criminals. - Vizzini
+			</reference>
+		</item>
+		<item name="Irritating Powder">
+			<titles>Itching Powder</titles>
+		</item>
+		<item name="Noxious Powder">
+			<titles>Powder of Nausea</titles>
+		</item>
+		<item name="Paralysing Powder">
+		</item>
+		<item name="Poison Powder" />
+		<item name="Powder of Desire">
+			<titles>Aphrodisiac Powder</titles>
+		</item>
+		<item name="Powder of False Death">
+			<summary>
+				* A more powerful version of Sleeping Powder, that simulates death.
+			</summary>
+		</item>
+		<item name="Powder of Fear" />
+		<item name="Powder of Rage" />
+		<item name="Sleeping Powder">
+			<titles>Morphius Powder</titles>
+		</item>
+		<item name="Smoke Powder" />
+		<item name="Vertigo Powder">
+		</item>
+	</section>
+	<section name="Ritual Items">
+		<summary>
+* holy oil, lamp, bell
+* [Dreamcatcher] - hung above the bed, is then used as a charm to protect sleeping children from nightmares.  &quot;Only good dreams would be allowed to filter through . . . Bad dreams would stay in the net, disappearing with the light of day.&quot;
+* Medicine Bag
+* Phylactery - An amulet to protect the wearer from harm, enclosing magical text, herbs, or relics.
+		</summary>
+		<item name="Athame">
+		    <titles>Swords</titles>
+			<summary>
+			    * Symbolizes Air, the Mental, and Masculinity.  Air appears as nothing, can
+			    only be felt with subtle senses and never gripped and commanded.
+				* A ritual dagger
+			</summary>
+			<reference>
+				As a masculine principle, it is often used in combination with the cup or Graal, as
+				feminine principle, and evokes the act of procreation, as symbol of universal
+				creativity.
+			</reference>
+		</item>
+		<item name="Graal">
+		 <titles>Cup, Grail</titles>
+			<summary>
+			    * Symbolizes Water, the Emotional, and Feminity.  The emotions are tidal like
+			    the the ocean, flowing like rivers and streams.
+				* As a feminie principle, it is often used in combination with the dagger or
+				Athame, as masculine principle, and evokes the act of procreation, as symbol
+				of universal creativity.
+			</summary>
+		</item>
+		<item name="Mummified Hand" />
+		<item name="Pentacle" image="Units/Equipment/Pentacle.jpg">
+			<titles>Disks, Endless Knot, Stone</titles>
+			<summary>
+			 * Symbolizes Earth and the Physical
+				An amulet used in magical evocation, generally made of parchment, paper or metal, on
+				which the symbol of a spirit or energy being evoked is drawn.  It is often worn around
+				the neck, or placed within the triangle of evocation.  Protective symbols may also be
+				included (sometimes on the reverse), a common one being the five-point Seal of Solomon.
+				The pentacle is always drawn in one continuous stroke, earning it the title the 'endless
+				knot'.
+			</summary>
+		</item>
+		<item name="Ritual Claw" />
+		<item name="Shrunken Head" />
+		<item name="Thurible">
+			<titles>Censer</titles>
+		</item>
+		<item name="Tool" />
+		<item name="Wand">
+		    <summary>
+		        Symbolizes Fire, Energy, and the Spirtual
+		    </summary>
+		</item>
+	</section>
+	<section name="Tools">
+		<item name="Astrolabe">
+			<summary>
+				* Astronomical computer for solving problems relating to time and the position of the Sun and stars in the sky.
+				To use an astrolabe, you adjust the moveable components to a specific date and time.  Once set, the entire sky,
+				both visible and invisible, is represented on the face of the instrument.  This allows a great many astronomical
+				problems to be solved in a very visual way.
+				* Typical uses of the astrolabe include finding the time during the day or night, finding the time of a celestial
+				event such as sunrise or sunset and as a handy reference of celestial positions.
+			</summary>
+		</item>
+		<item name="Compass" />
+		<item name="Jeweler's Loop" />
+		<item name="Key" />
+		<item name="Lodestone" />
+		<item name="Magifying Glass" />
+		<item name="Magifying Glasses" />
+		<item name="Magifying Lenses" />
+		<item name="Monicle" />
+		<item name="Pendulum" />
+		<item name="Prism" />
+		<item name="Scales" />
+		<item name="Sextant" />
+		<item name="Telescope">
+			<titles>Spy Glass</titles>
+		</item>
+		<item name="Weathervane" />
+		<item name="Whistle" />
+	</section>
+	<section name="Traps">
+		<item name="Caltrops" />
+		<item name="Nightengail Floor">
+			<titles>Uguisubari</titles>
+			<reference>Nijo Castle - Kyoto, Japan</reference>
+			<summary>
+				* Floors designed to make a chirping sound when walked upon assuring that none could sneak through the corridors
+				undetected.  Dry boards naturally creak under pressure, but these floors were designed so that the flooring nails
+				rubbed against a jacket or clamp, causing chirping noises.
+			</summary>
+		</item>
+		<item name="Pressure Plate" />
+		<item name="Tanglewire" />
+		<item name="Trapdoor" />
+		<item name="Tripwire" />
+	</section>
+	<section name="Vehicles">
+		<unit name="Airship" />
+		<unit name="Barge" />
+		<unit name="Coracle" />
+		<unit name="Duneship" />
+		<unit name="Ice Schooner" />
+		<unit name="Palanquin" />
+		<unit name="Skiff" />
+		<unit name="Wagon, Enclosed" />
+		<unit name="Wagon, Open" />
+	</section>
+	<section name="Unfiled Gear">
+		<summary>
+* Acid
+* Alabaster
+* Barricade
+* Blood
+* Cage
+* Chariot
+* Conch Horn
+* Fireworks
+* Trumpet
+* War Machine
+
+!Symbols
+* Banner
+* Coat of Arms
+* Crest
+* Crown
+* Fasces
+* Helix
+* Rod
+* Scepter
+* Signet
+* Standard
+* Thyrsus
+
+!Arcane Items
+* Airship
+* Armageddon Clock
+* Flying Carpet
+
+!Containers
+* Chest
+* Cauldron
+* Coffer
+* Goblet
+* Jar
+* Puzzle Box
+* Vat
+* Vessel
+
+!Technology
+* [Blinding Bulb]
+* [Phone Tap]]
+* [Shotgun Microphone]
+* [Sleepteacher]
+* [Subliminal Broadcaster]
+* [Surveillance Cameras]
+* [Telephoto Lens]
+		</summary>
+		<item name="Beast Claw" />
+		<item name="Tooth" />
+		<item name="Vampire Blood">
+			<summary>
+				* Black Token
+				* Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].
+				* [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.
+				* [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
+				* [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
+				* [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.
+			</summary>
+		</item>
+		<item name="Healing Salve" />
+		<item name="Lattice" />
+		<item name="Mirror" />
+		<item name="Matrix" />
+		<item name="Candle" />
+		<item name="Screen" />
+		<item name="Array" />
+	</section>
+</chapter>
+</doc>

@@ -1,0 +1,1105 @@
+(package nx/tactics/books/advanced_rules
+ :libs (lib base :path nx/tactics/base))
+
+(func book : base/book
+ (book
+  :name "Advanced Rules"
+  :image "AdvancedRules.jpg"
+  :chaptermap
+   (chaptermap
+    "Advanced Rules Overview"
+     (chapter
+      :name "Advanced Rules Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: Advanced Rules?"
+         (section
+          :name "Why Tactics: Advanced Rules?"
+          :summary "The Tactics:Basic Rules are sufficient for running a board game, but they lack detail when simulating a specific genre. The Tactics system is designed to allow different sets of rules to be plugged into the basic rules on an ala carte basis. This Advanced Rule book provides many of the optional rules necessary to increase realism or pseudo-realism. The other genre-based rule books will add rules that are specific to each genre.")
+        "Advanced Rules Strategies"
+         (section
+          :name "Advanced Rules Strategies"
+          :summary
+           "* Strike First - Units are immediately penalized for damage taken, so do unto others before they do unto you.
+* Maintain a Threat - The battlefield changes with each unit's move, so use pawns to control the map while saving powerful and valuable units until later in the Round.  If you are not careful your opponent will surround and eliminate your units that have already acted.
+* Hold the Line - Opportunity and Hold Off abilities are deadly and allow you to protect weaker units.
+* Use the Terrain - Cover and abilities linked to cover offer an outstanding defense that layers with normal defense. The difference is most pronounced with lesser units. Effective use of terrain will determine the victor in most battles.")))
+    "Advanced Tokens"
+     (chapter
+      :name "Advanced Tokens"
+      :sectionmap
+       (sectionmap
+        "Advanced White Tokens"
+         (section
+          :name "Advanced White Tokens"
+          :summary
+           "White tokens represent temporary conditions that will pass quickly.
+* [Activate]: Remove one White token."
+          :rulemap
+           (rulemap
+            :Fascination
+             (rule
+              :name "Fascination"
+              :summary
+               "* [Move]: If a unit has more Facination Tokens than Mind, then no Move.
+* [Action]: If a unit has more Facination Tokens than Mind, then no Action.")
+            :Faith
+             (rule
+              :name "Faith"
+              :image "Tokens/FaithToken.png")
+            :Peace
+             (rule
+              :name "Peace"
+              :image "Tokens/PeaceToken.png")
+            :Rage
+             (rule
+              :name "Rage"
+              :image "Tokens/RageToken.png"
+              :summary
+               "+1 Attack
+-1 Defense
+-1 All other Abilities that are not Attacks
+* Ignore 1 Retreat for each Rage")
+            :Slow
+             (rule
+              :name "Slow"
+              :image "Tokens/SlowToken.png"
+              :summary "* [Move]: [-1 Speed]"
+              :titles "Hold"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Strain
+             (rule
+              :name "Strain")))
+        "Advanced Black Tokens"
+         (section
+          :name "Advanced Black Tokens"
+          :rulemap
+           (rulemap
+            :Aging
+             (rule
+              :name "Aging"
+              :summary "* Reduces all Abilites and Life Span.")
+            :Blindness
+             (rule
+              :name "Blindness")
+            :Crippled
+             (rule
+              :name "Crippled"
+              :image "Tokens/CrippledToken.png"
+              :summary "-1 [Speed]"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Curse
+             (rule
+              :name "Curse"
+              :summary
+               "* [Anytime]: When unit gains a [Red Token] or a [Black Token], roll for each Curse Token.
+* For each [Hit], replace a Curse Token with a Token of any type just gained.")
+            :Depression
+             (rule
+              :name "Depression")
+            :Insanity
+             (rule
+              :name "Insanity")
+            :Petrified
+             (rule
+              :name "Petrified")
+            :Radiation
+             (rule
+              :name "Radiation"
+              :image "Tokens/RadiationToken.png")
+            :Shapeshift
+             (rule
+              :name "Shapeshift")))
+        "Advanced Red Tokens"
+         (section
+          :name "Advanced Red Tokens"
+          :summary
+           "* Red tokens represent conditions that can rapidly grow out of control.
+* [Activate]: Add one Stun token."
+          :rulemap
+           (rulemap
+            :Acid
+             (rule
+              :name "Acid"
+              :summary
+               "* May use a [Move] to remove an Acid Token.
+* [End of Turn] - Roll Acid Tokens.  Hits do Damage.  Remove an Acid Token.")))
+        "Green Tokens"
+         (section
+          :name "Green Tokens"
+          :summary "* Green Tokens represent conditions that generally grow worse over time."
+          :rulemap
+           (rulemap
+            :Disease
+             (rule
+              :name "Disease"
+              :image "Tokens/DiseaseToken.png"
+              :summary "Spreading, slow damage over time"
+              :titles "Diseased, Infected, Rabid, Sickly")
+            :Envy
+             (rule
+              :name "Envy")
+            :Fatigue
+             (rule
+              :name "Fatigue"
+              :summary
+               "-1 [Abilities]
+* Removed with rest")
+            :Greed
+             (rule
+              :name "Greed")
+            :Hunger
+             (rule
+              :name "Hunger"
+              :summary
+               "-1 [Abilities] per week without food
+* Removed after eating")
+            :Love
+             (rule
+              :name "Love")
+            :Lust
+             (rule
+              :name "Lust")
+            :Poison
+             (rule
+              :name "Poison"
+              :image "Tokens/PoisonToken.png")
+            :Suffocation
+             (rule
+              :name "Suffocation"
+              :summary
+               "-1 [Abilities]
++1 Suffocation per minute without air
+* Each Suffocation after 2 also add [Damage]
+* Remove 1 Suffocation each 10 minutes of breathing")
+            :Thrist
+             (rule
+              :name "Thrist"
+              :summary
+               "-1 [Abilities]
++1 Thirst per day without drink
+* Remove 1 Thirst each day with ample drinking")))
+        "Advanced Purple Tokens"
+         (section
+          :name "Advanced Purple Tokens"
+          :rulemap
+           (rulemap
+            :Ace
+             (rule
+              :name "Ace"
+              :image "Tokens/AceToken.png"
+              :summary
+               "* [Action]: [+1 Skill]
+* [Defense]: [+1 Defense]"
+              :titles "Elite"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Apathy
+             (rule
+              :name "Apathy"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Hidden
+             (rule
+              :name "Hidden"
+              :summary
+               "* [Action]: A unit with Hidden tokens is not actually at the location shown by its unit marker.
+* [Defense]: Any unit that can see the unit marker may spend an [Action] to attempt to attack or locate the unit. This is done by the unit secretly choosing the actual location of the unit up to the number of Hidden tokens away from the unit marker where the unit lies (note: the target location may not be passed a barrier that the unit could not cross with normal movement). The opponent then tries to guess both direction and distance. The unit then reveals its actual position and moves its unit marker there. If both are guessed, the unit is discovered and loses all Hidden tokens. If either is guessed, the unit loses 1 Hidden token. If the unit has no Hidden tokens, resolve the attack normally. If the unit has Hidden tokens then the unit remains hidden and any attack fails unless it is an area effect and the unit is the effect."
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Prepare
+             (rule
+              :name "Prepare"
+              :summary
+               "* [Action]: An item with Prepare may not be used until it has Prepare tokens equal to Prepare value.
+* [Action]: If unit does not move this [Turn], add a Prepare token to it.
+* Note: If the unit moves or takes a another action, then remove all Prepare tokens.")))))
+    "Advanced Rules"
+     (chapter
+      :name "Advanced Rules"
+      :sectionmap
+       (sectionmap
+        "Advanced Setup Rules"
+         (section
+          :name "Advanced Setup Rules"
+          :rulemap
+           (rulemap
+            :Campaigns
+             (rule
+              :name "Campaigns"
+              :summary
+               "* Starting a New Campaign
+* Creating Player Characters
+* Creating Plots
+* Conflict
+* Creating Scenarios
+* Continuing a Campaign")
+            "Randomized Scenarios"
+             (rule
+              :name "Randomized Scenarios"
+              :summary
+               "* Choose a Map - Any map, indoor or outdoor, square or hex map may be used. The scale must be approximately 1 inch=1.5 meters (5 feet).
+* Choose Starting Positions - Each side rolls 2d6.  From highest to lowest, each side chooses one of the starting positions (usually corners) of the map to start.
+* Deploy Teams - In the same order from highest to lowest each player deploys their teams up to 5 hexes from the edges of the map.")
+            "Recruit Teams"
+             (rule
+              :name "Recruit Teams"
+              :summary
+               "* Choose Recruitment Points for each Side.
+* Recruit units by spending these points using the [Double Down] rule.
+* Usually, only units from a single Faction may be purchased.")))
+        :Goals
+         (section
+          :name "Goals"
+          :rulemap
+           (rulemap
+            :Experience
+             (rule
+              :name "Experience"
+              :summary
+               "* Experience allows a unit to gain permanent ability increases.
+* Something major must be on the line, such that if the character fails he will incur a significant loss (e.g. a valuable item, his life). This is why characters seek out high stakes gambles and are not satisfied unless a great deal is on the line.
+* The character must face an opponent or difficulty no more than 1 level below his own or he must declare he is using the [Honor System].
+    * Minor Achievement - Gain an [Latent Ability] 2 levels below your highest level (minimum 1).
+    * Major Achievement - Gain a [Latent Skill] 2 levels below your highest level (minimum 1).")
+            "Latent Skill/Ability"
+             (rule
+              :name "Latent Skill/Ability"
+              :summary
+               "* Latent Skills and Abilities represent potential capabilities that have not yet expressed.
+* Like Skills, they have levels and may be combined and split.")
+            "Gain a Skill/Power, Ability/Specialty"
+             (rule
+              :name "Gain a Skill/Power, Ability/Specialty"
+              :summary
+               "* In order to gain a new ability, a user must perform research, practice, and experimentation.
+* Each week of practice and experimentation, the user may draw a Fate card.
+    ** If the Fate is a critical it is successful and may do EITHER of the following:
+    *** Gaining a Skill/Power - The user may convert a [Latent Skill] to a Skill or Power (if
+    allowed) of equal level.
+    *** Gaining an Ability/Specialty - The user may convert or [Latent Ability] into an
+    actual Ability or Specialty on an equal level.
+* Training Area/Laboratory - +1 Die if a dedicated training area with
+appropriate resources is available.
+* Assistants - Assistants reduce the difficulty of a task as well as allowing
+them to learn on the job. See [Followers].
+* Mentor - +1 Die if a mentor is available.
+* Experimentation - Trial and error can produce some fascinating or useless random results.
+* Invention - Permanent Devices and Enchantments can be created over time.
+** Cost - Great care and cost must be expended to obtain or create an item of
+sufficient quality to hold an enchantment.
+** Difficulty - Inventions may be created instead of acquiring a new ability.
+** Time")
+            "Honor System"
+             (rule
+              :name "Honor System"
+              :summary
+               "* Normally a character cannot gain experience from a foe more than 1 level
+below his own. If a character wants to gain experience against such a lower
+level foe, he must declare that he wants to compete 'On His Honor' using the
+Honor System.
+* The Honor System basically allows a character to metaphorically (or
+literally) fight an opponent with one hand tied behind his back.
+* The character must challenge the opponent to a 'fair fight'. The challenge
+makes the fight formal to any observers and places the character's honor
+squarely on the line.
+* The character must offer some special incentive if the opponent wins (e.g.
+a special treasure, his daughter's hand in marriage, safe passage for his
+opponents, not invading the Earth, his own head on a pike, etc.)
+* For the duration of the challenge, others must not interfere.
+* For the duration of the challenge, the character must refrain from using
+any skills that are more than 1 level higher than the opponent's defense.
+Further he must limit his own defense rolls to 1 more than the opponents
+skill.
+* If the opponent or his allies breaks these terms, the challenge is void.
+* If the character or his allies breaks these terms, it is a serious blow to
+the honor of the character and he immediately loses one level from one of his
+highest skills.
+* If the character wins the competition, he may gain experience normally
+against this opponent.")
+            :Study
+             (rule
+              :name "Study"
+              :summary
+               "* Books
+* Instruction
+* Time")
+            :Rewards
+             (rule
+              :name "Rewards"
+              :summary
+               "* Survival
+* Experience
+** +1 [Experience] for total or partial victory in the adventure.
+** +1 [Experience] for surviving life or death.
+** +1 [Experience] for the exceptional role playing and maintaining character concept.
+** +1 [Experience] for particularly heroic or infamous public actions (i.e. fame spread).
+** +1 [Experience] point toward a specific skill for training under a master 3 or more levels over your own.
+** +1 [Experience] point toward a specific skill after 1 month of experimentation. Experimentation requires
+expense commensurate with the level of the skill.
+* Treasure
+* Knowledge
+* Favor
+* Allies
+* Influence
+* Prestige
+* Patronage")
+            :Treasure
+             (rule
+              :name "Treasure"
+              :summary "A Treasure Roll is made when a random treasure is needed.")))
+        "Turn Sequence Rules"
+         (section
+          :name "Turn Sequence Rules"
+          :rulemap
+           (rulemap
+            "Take the Initiative"
+             (rule
+              :name "Take the Initiative")
+            "Simultaneous Movement"
+             (rule
+              :name "Simultaneous Movement"
+              :summary "* After initiative is determined, each player chooses a unit or formation to activate. Each unit is compared to determine the one with the highest movement. This number is the number of phases in this turn. Each unit may choose to move or act on any phase of the turn with their chosen unit. They may also choose to react with any other unit, but a reacting unit may only move or use an action not both.")))
+        "Action Rules"
+         (section
+          :name "Action Rules"
+          :rulemap
+           (rulemap
+            "Dramatic Clinch"
+             (rule
+              :name "Dramatic Clinch"
+              :summary
+               "* During Melee or Close Combat, if the [Defense Roll] exactly cancelled the [Attack Roll], the [Units]
+may enter a Clinch where they may speak to one another briefly without anyone overhearing.")
+            "Dramatic Effect"
+             (rule
+              :name "Dramatic Effect"
+              :summary
+               "* At the discretion of the other players, [Critical Hits] may be spent to describe a dramatic display
+of skill.  This has no game effect but add great flavor to the game.")
+            :Formation
+             (rule
+              :name "Formation"
+              :summary
+               "* [Move]: Use half [Speed] to add a formation token of the appropriate type.
+* [Damage]: If a unit takes 2 [Retreats], remove its formation token.
+* Note: A unit only have 1 formation at a time.")
+            "Limited Dice"
+             (rule
+              :name "Limited Dice"
+              :summary
+               "* Note: Limited and Synergy dice cancel each other in equals numbers so no roll may have both Synergy and Limited dice.
+* 1, 2, 3, 4, 5 = No Effect
+* 6 = Hit and roll a Critical Die")
+            "Multiple Actions"
+             (rule
+              :name "Multiple Actions"
+              :summary "If the [Unit] has multiple [Crew] members, then each member may use a DIFFERENT [Ability] this turn.")
+            "Synergy Dice"
+             (rule
+              :name "Synergy Dice"
+              :summary
+               "* Abilities that work together should be a benefit without breaking game balance.  Synergies allow skills and equipment to work together without unbalancing the game or requiring specific combinations of abilities to be effective.
+* Note: Limited and Synergy dice cancel each other in equals numbers so no roll may have both Synergy and Limited dice.
+* 1, 2, 3 = No Effect
+* 4, 5 = Hit
+* 6 = Hit and roll 2 Critical Dice")))
+        "Advanced Situational Rules"
+         (section
+          :name "Advanced Situational Rules"
+          :rulemap
+           (rulemap
+            "Off Handed"
+             (rule
+              :name "Off Handed"
+              :reference
+               "I admit it.  You are better than I am.  Then why are you smiling?  Because I know something you don't know...I am
+not left handed...There's something I ought to tell you...I am not left handed either. - Princess Bride"
+              :summary "* [Action]: -1 If an ability normally requires 2 hands to perform and only one hand is available.")
+            :Surprised
+             (rule
+              :name "Surprised"
+              :summary "If one or more units are Surprised, they lose their [Action] this [Turn] and lose half of their [Speed].")))
+        "Effect Rules"
+         (section
+          :name "Effect Rules"
+          :rulemap
+           (rulemap
+            :Cold
+             (rule
+              :name "Cold"
+              :summary "* [Critical Hits] may be used for [Slow Tokens]")
+            :Electricity
+             (rule
+              :name "Electricity"
+              :summary "* [Critical Hits] may be used to place 2 [Stun] each (or 2 [Damage] each if the target is [Mechanical])"
+              :titles "Electric Shock, Lightning")
+            :Flame
+             (rule
+              :name "Flame"
+              :summary "* [Critical Hits] may be used for [Fire Tokens]")
+            :Infection
+             (rule
+              :name "Infection")
+            "Internal Bleeding"
+             (rule
+              :name "Internal Bleeding")
+            "Permanent Disability"
+             (rule
+              :name "Permanent Disability"
+              :titles "Aneurysm, Brain Damage, Crippling, Nerve Damage, Paralysis, Stroke")
+            :Piercing
+             (rule
+              :name "Piercing"
+              :summary "* [Damage]: [Critical Hits] may be used to roll 2 more [Damage] dice each.")
+            :Slashing
+             (rule
+              :name "Slashing"
+              :summary "* [Damage]: [Critical Hits] may be used for [Bleeding Tokens].")
+            :Smoke
+             (rule
+              :name "Smoke")
+            :Resistant
+             (rule
+              :name "Resistant"
+              :summary "* Armor rolls are doubled on a [Unit] that is stuck by an attack to which it is resistant.  Minimum: 2 dice.")
+            "System Shock"
+             (rule
+              :name "System Shock"
+              :summary "* When the body sustains a significant amount of damage, the body goes into shock.")))
+        "Hit Location Rules"
+         (section
+          :name "Hit Location Rules"
+          :rulemap
+           (rulemap
+            "Hit Location"
+             (rule
+              :name "Hit Location"
+              :summary
+               "* People and machines are durable but complex and are generally easier to disable than destroy completely.
+* A player may choose any number of [Critical Hits] to spend on special effects based on [Hit Location].
+* Roll once on the following table for each [Critical Hits] spent:
+** 6 - Attacker Chooses Hit Location
+** 5 - [Hit Location - Head] or [Hit Location - Command]
+** 4 - [Hit Location - Arms] or [Hit Location - Weapons]
+** 3 - [Hit Location - Chest] or [Hit Location - Mission]
+** 2 - [Hit Location - Vitals] or [Hit Location - Special Systems]
+** 1 - [Hit Location - Legs] or [Hit Location - Movement]
+
+** 6 - Head
+** 5 - Far Arm (including shoulder)
+** 4 - Near Arm (including shoulder)
+** 3 - Vitals
+** 2 - Near Leg (including hip)
+** 1 - Far Leg (including hip)")
+            "Hit Location - Head"
+             (rule
+              :name "Hit Location - Head")
+            "Hit Location - Command"
+             (rule
+              :name "Hit Location - Command"
+              :summary
+               "* 6 - Command: Unit skips its next turn.
+* 5 - Crew: Half of crew in space killed
+* 4 - Passengers: Half of Passengers in space killed.
+* 3 - Life Support System: 1 Life support or climate control system is Reduced by 1/2.
+* 2 - Safety System: 1 Safety or escape system is disabled.  A second hit destroys it.
+* 1 - Electronics: 1 Sensor, computer, or communication system is disabled.  A second hit destroys it.")
+            "Hit Location - Arms"
+             (rule
+              :name "Hit Location - Arms")
+            "Hit Location - Weapons"
+             (rule
+              :name "Hit Location - Weapons"
+              :summary
+               "* 5-6 - Weapon: 1 Weapon damage is reduced by 1.
+* 3-4 - Arc of Fire: 1 weapon loses 1 arc of fire.
+* 1-2 - Magazine: 1 Weapon rolls Damage against own unit with 1/2 Armor Defense")
+            "Hit Location - Chest"
+             (rule
+              :name "Hit Location - Chest")
+            "Hit Location - Mission"
+             (rule
+              :name "Hit Location - Mission"
+              :summary
+               "* 4-6 - Armor: Armor Facing is reduced by 1.
+* 1-3 - Cargo: Half of Cargo in space destroyed.")
+            "Hit Location - Vitals"
+             (rule
+              :name "Hit Location - Vitals")
+            "Hit Location - Special Systems"
+             (rule
+              :name "Hit Location - Special Systems"
+              :summary
+               "* 4-6 - Special Equipment: 1 special system is disabled.  A second hit destroyes it.
+* 1-3 - Fire: Fire Token")
+            "Hit Location - Legs"
+             (rule
+              :name "Hit Location - Legs")
+            "Hit Location - Movement"
+             (rule
+              :name "Hit Location - Movement"
+              :summary
+               "* 6 - Engine: Acc and recharging reduced by 1/4.
+* 5 - Movement: Acc and Max Speed for 1 movement system reduced by 1/4 (minimum 1).  If it loses all Movement in the currently used Movement type, it will crash or sink as applicable.
+* 4 - Manueverability: -1 Facing changes per turn
+* 1-3 - Fuel/Reaction Mass: Range reduced by 1/4")))
+        "Damage Cards"
+         (section
+          :name "Damage Cards"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))))
+    :Genres
+     (chapter
+      :name "Genres"
+      :sectionmap
+       (sectionmap
+        "Carrier Command"
+         (section
+          :name "Carrier Command"
+          :summary
+           "Carrier Command is a set of rules for use with units that hold other units in a [Hanger].
+
+Common Actions
+* Enter or Exit Hanger - Move and Action (Unit): Place a unit from the [Hanger] on the [Flight Deck] OR from the [Flight Deck] to the [Hanger].
+Only 1 unit may be on the [Flight Deck] at any given moment and may be targetted normally there.
+* Launch or Land - Move and Action (Unit): Move a unit onto or off of the [Flight Deck].  If the carrier has a [Launch Catapult], a launching
+unit gains +2 movement.
+* Dive Bomb - Action: -4 Altitude and drop bombs attacking the top of the target creating [Fire] and damaging weapons, crew, and [Flight Deck].
+Normally only the target and opposing aircraft can [Interrupt] before the bombs are dropped.  Can only be performed from exactly +5 Altitude
+and with no [White Tokens].
+* Torpedo Bomb - Action: Drop torpedo attacking a side of the target below the water line creating [Flooding] and damaging [Speed].  Can only be
+performed from exactly +1 Altitude and with no [White Tokens].
+* Landing - Move and Action (Unit): Move a unit and place it on the [Flight Deck].  Only 1 unit may be on the [Flight Deck] at any given moment
+and may be targetted normally there.
+* Refuel or Reload - Move and Action (Unit): Any unit on the [Flight Deck] or in the [Hanger] may refuel OR reload weapons (changing weapons if
+desired).")
+        :RTS/4X
+         (section
+          :name "RTS/4X"
+          :summary
+           "4X:
+* eXplore
+* eXpand
+* eXploit
+* eXterminate"))))))

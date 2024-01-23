@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc name="Medieval" image="Medieval-2-Total-War-Kingdoms-642.jpg">
+<chapter name="Medieval Overview">
+	<section name="Why Tactics: Medieval?" />
+	<section name="Medieval Land Warfare">
+		<summary>
+			* Infantry
+			* Formations
+			* Axemen
+			* Polearms
+			* Cavalry
+			* Horse Archers
+			* Armored Cavalry
+			* Knights
+			* Elephants
+			* Chariots
+			* Archers
+			* Longbows
+			* Crossbows
+			* Siege
+			* Ballista
+			* Catapult
+			* Fortifications
+		</summary>
+	</section>
+</chapter>
+<chapter name="Medieval Scenarios">
+	<section name="Medieval Events">
+		<scenario name="Assassination">
+		</scenario>
+		<scenario name="Bandit Raid">
+			<reference>Seven Samurai</reference>
+		</scenario>
+		<scenario name="Battle">
+		</scenario>
+		<scenario name="Ceremony">
+		</scenario>
+		<scenario name="Contest">
+		</scenario>
+		<scenario name="Courier">
+		</scenario>
+		<scenario name="Deserters">
+		</scenario>
+		<scenario name="Duel">
+		</scenario>
+		<scenario name="Empty Battlefield">
+		</scenario>
+		<scenario name="Escort">
+		</scenario>
+		<scenario name="Fist Fight">
+		</scenario>
+		<scenario name="Highwaymen">
+		</scenario>
+		<scenario name="Hunt">
+		</scenario>
+		<scenario name="Noble Hunt">
+		</scenario>
+		<scenario name="Noble Party">
+			<reference>Cinderella</reference>
+		</scenario>
+		<scenario name="Peasant Demonstration">
+			<summary>
+				* Put down or support minor uprisings.
+			</summary>
+		</scenario>
+		<scenario name="Peasant Discontent">
+			<summary>
+				* Put down or support minor uprisings.
+			</summary>
+		</scenario>
+		<scenario name="Peasant Uprising">
+			<summary>
+				* Put down or support a major uprising.
+			</summary>
+		</scenario>
+		<scenario name="Quest">
+		</scenario>
+		<scenario name="Scouting Mission">
+		</scenario>
+		<scenario name="Spying">
+		</scenario>
+		<scenario name="Visiting Dignitary">
+		</scenario>
+	</section>
+</chapter>
+<chapter name="Medieval Items">
+	<section name="Medieval Firearms">
+		<item name="760mm Arquebus" muzzlevelocity="449m/s">
+			<summary>
+				In terms of accuracy, the arquebus was unable to match the accuracy of a bow in the hands of a highly-skilled archer. However, the arquebus had a faster rate of fire than the most powerful crossbow, had a shorter learning curve than a longbow, and was more powerful than either. An arquebusier could carry more ammunition and powder than a crossbowman or longbowman could with bolts or arrows. Once the methods were developed, powder and shot were relatively easy to mass-produce, while arrow making was a genuine craft requiring highly skilled labor. The weapon also had the added advantage of frightening enemies (and horses) with the noise. Wind can reduce the accuracy of archery, but has much less of an effect on an arquebusier. Perhaps most important, producing an effective arquebusier required much less training than producing an effective bowman.
+
+				As low-velocity firearms, they were used against enemies that were often partially or fully protected by steel-plate armour. Plate armour was standard in European combat from about 1400 until the middle of the 17th century. Good suits of plate would usually stop an arquebus ball at long range. It was a common practice to 'proof' (test) armour by firing a pistol or arquebus at a new breastplate. The small dent would be circled by engraving, to call attention to it. However, at close range, it was possible to pierce even the armor of knights and other heavy cavalry,
+			</summary>
+		</item>
+	</section>
+</chapter>
+<chapter name="Medieval English">
+	<section name="Medieval English Infantry">
+		<unit name="English Longbowman" />
+	</section>
+</chapter>
+<chapter name="Medieval French">
+	<section name="Medieval French Infantry">
+		<unit name="French Gendarme" classification="Hvy. Cavalry">
+			<summary>
+				Founded in 1400s.
+			</summary>
+		</unit>
+	</section>
+</chapter>
+<chapter name="Medieval German">
+</chapter>
+<chapter name="Medieval Spanish">
+</chapter>
+</doc>

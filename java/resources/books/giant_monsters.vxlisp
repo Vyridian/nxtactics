@@ -1,0 +1,669 @@
+(package nx/tactics/books/giant_monsters
+ :libs (lib base :path nx/tactics/base))
+
+(func book : base/book
+ (book
+  :name "Giant Monsters"
+  :image "GiantMonsters.jpg"
+  :chaptermap
+   (chaptermap
+    :Overview
+     (chapter
+      :name "Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics:Giant Monsters?"
+         (section
+          :name "Why Tactics:Giant Monsters?")))
+    :Daikaiju
+     (chapter
+      :name "Daikaiju"
+      :sectionmap
+       (sectionmap
+        "Human Forces"
+         (section
+          :name "Human Forces"
+          :unitmap
+           (unitmap
+            :Bombers
+             (unit
+              :name "Bombers")
+            :Helicopters
+             (unit
+              :name "Helicopters")
+            :Fighters
+             (unit
+              :name "Fighters"
+              :image "Modern/FighterToken.png")
+            :Tanks
+             (unit
+              :name "Tanks"
+              :image "Modern/TankToken.png")
+            "Mobile Missile Launchers"
+             (unit
+              :name "Mobile Missile Launchers"
+              :image "Modern/MobileMissileToken.png")
+            :Missiles
+             (unit
+              :name "Missiles"
+              :image "Modern/MissilesToken.png")
+            "Dimension Tide"
+             (unit
+              :name "Dimension Tide"
+              :image "Daikaiju/DimensionTide.png"
+              :summary
+               "* Creates a dimensional hole the size of a building.  For the next few seconds, all matter nearby is sucked into
+the hole (presumably never to return).  No one knows where the matter goes, but it is known that after the
+dimension tide passed a dimensional disturbance remained through which a creature passed onto our world.")
+            "Type 66 Maser Cannon"
+             (unit
+              :name "Type 66 Maser Cannon"
+              :image "Daikaiju/MaserCannonToken.png"
+              :mass "80tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2))))))
+            "Super X"
+             (unit
+              :name "Super X"
+              :image "Daikaiju/SuperXToken.png"
+              :summary
+               "* Flight at mach 1
+* Cadmium Missiles
+* Laser Cannons
+* equipped with a wide variety of missiles
+* heat resistant layer"
+              :mass "150tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2))))))
+            "Super X-II"
+             (unit
+              :name "Super X-II"
+              :image "Daikaiju/SuperX2.png")
+            "Super X-III"
+             (unit
+              :name "Super X-III"
+              :image "Daikaiju/SuperX3Token.png"
+              :summary "Flight at mach 1.7; can fire a Freezer Beam; equipped with Cadmium Missiles; heat resistant layer"
+              :mass "220tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2))))))))
+        "Allied Monsters"
+         (section
+          :name "Allied Monsters"
+          :unitmap
+           (unitmap
+            :Gamera
+             (unit
+              :name "Gamera"
+              :image "Daikaiju/GameraToken.png"
+              :summary
+               "* Flight at Mach 3.5 using rockets contained in limbs
+* Plasma fireballs
+* Elbow claws
+* Can open plates in his chest and fire a Mana Blast
+* Can swim at 180 knots
+* Burrowing ability
+* Able to absorb and manipulate fire
+* Can draw more power by establishing a link with a human host
+* Orign - Believed to be over 150 million years old and created by an ancient civilization as a guardian of the Earth.
+* Armor - So tough that it survived the shock of a nuclear weapon."
+              :mass "120tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            "Mecha King Ghidorah"
+             (unit
+              :name "Mecha King Ghidorah"
+              :image "Daikaiju/MechaKingGhidorahToken.png"
+              :summary "Antigravity flight at mach 4; able to fire Gravity beams from its mouths on the left and right head; can fire a Laser Triple beam from the central head; equipped with Godzilla Capture Cables and the large Machine Hand restraint that can also discharge electricity"
+              :mass "80ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Mechagodzilla
+             (unit
+              :name "Mechagodzilla"
+              :image "Daikaiju/MechaGodzillaToken.png"
+              :summary "Flight at mach 2; Mega-Buster ray from mouth; paralysis missiles; Super Heat Shield NT-20, laser beam eyes; Plasma Grenade that fires energy absorbed by the Super Heat Shield; 'G-Crusher;' shock anchors and cables; dual Garuda shoulder mounted laser cannons"
+              :mass "150ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Mogera
+             (unit
+              :name "Mogera"
+              :image "Daikaiju/MogeraToken.png"
+              :summary "Flight at mach 1; can travel through space at mach 44; able to fire Plasma Laser Cannons from eyes; equipped with a rotating drill for a nose; able to fire a beam from its chest; can launch Spiral Grenade missiles from its hands; has treads under feet for faster movement on land; able to fire lasers from its two hands; can separate into the Star Falcon and Land Moguera"
+              :mass "160ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Mothra
+             (unit
+              :name "Mothra"
+              :image "Daikaiju/MothraToken.png"
+              :summary
+               "* Flight at mach 3
+* can travel through space
+* hurricane winds from wings
+* antenna ray-shooting beams
+* can release powder from her wings that will reflect energy attacks back on their source
+* able to conduct energy through its touch or release it as strands of lightning from her wings"
+              :mass "20ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            "Mothra, Larva"
+             (unit
+              :name "Mothra, Larva"
+              :image "Daikaiju/MothraLarvaeToken.png"
+              :summary "Web Attack"
+              :mass "15ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))))
+        "Enemy Monsters"
+         (section
+          :name "Enemy Monsters"
+          :unitmap
+           (unitmap
+            :Battra
+             (unit
+              :name "Battra"
+              :image "Daikaiju/BattraToken.png"
+              :summary "Flight at mach 3; can travel through space; hurricane winds from wings; able to shoot Prism beams from eyes; can conduct energy through its touch"
+              :mass "30ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            "Battra, Larva"
+             (unit
+              :name "Battra, Larva"
+              :image "Daikaiju/BattraLarvaeToken.png"
+              :summary "Burrowing ability; adept swimmer; able to shoot Prism beams from horn and eyes; body can generate energy pulses to attack others with its touch"
+              :mass "20ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Biollante
+             (unit
+              :name "Biollante"
+              :image "Daikaiju/Biollante.png")
+            :Destroyah
+             (unit
+              :name "Destroyah"
+              :image "Daikaiju/Destroyah.png")
+            :Godzilla
+             (unit
+              :name "Godzilla"
+              :image "Daikaiju/GodzillaToken.png"
+              :summary
+               "* Superheated atomic breath capable of devastating whole city blocks
+* Remarkably fast regenerative healing factor
+* Incredibly strong, even for his size
+* Able to swim at 40 knots
+* Though extremely powerful, possesses a few weaknesses: has an aversion to electricity, can be weakened by massive amounts of cadmium and other radiation-retardants"
+              :mass "60ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            :Gyaos
+             (unit
+              :name "Gyaos"
+              :image "Daikaiju/GyaosToken.png"
+              :summary
+               "* Flight at mach 4.2
+* Hurricane winds from wings
+* A shrill cry serves as an ultrasonic scalpel which amounts to approximately 3 million Hz, and can also cut
+through solid steel bards with a thickness of 30cm.
+* Can reproduce asexually
+* Gyoas easily adapts to its surroundings, growing exponentially in size.
+* Gyaos has one absolutely perfect pair of chromosomes.
+* Origin - Gyaos was the product of genetic engineering by a super-ancient civilization.
+* Vision - As a nocturnal creature, Gyaos avoids and dislikes light."
+              :mass "75tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2))))))
+            "King Ghidorah"
+             (unit
+              :name "King Ghidorah"
+              :image "Daikaiju/KingGhidorahToken.png"
+              :summary
+               "* Speed Mach 3
+* Able to fire Gravity beams from its mouths
+* hurricane winds from wings
+* constricting necks"
+              :mass "70ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Legion
+             (unit
+              :name "Legion"
+              :image "Daikaiju/LegionToken.png"
+              :reference "And he asked him, What is thy name? And he answered, saying, My name is Legion: for we are many. - New Testament - Mark 5:9"
+              :summary
+               "* Silicone-based life form with cell structure like transistors
+* Joints operate by pressurized gas.
+* Communicates via electromagnetic waves
+* Launches seeds into orbit by generating a high oxygen area and then detonating it.
+Flight at mach 1; sharp horn, which can open to fire a beam; horn generates a tremendous amount of heat after firing; can burrow and travel, underground, at a speed of 50 kilometers an hour; able to produce up to 100 Symbiotic Legion an hour; can create a magnetic force shield to protect the front of its body using the ten smaller legs near its head; if its horn is destroyed Legion can fire off strands of energy that are able to pierce and burn objects
+Eye: Legion can see electro-magnetic activity.
+Voice: The Legion Mother's microwave blast, which eminates from her huge tusks is powerful enough to vaporize a type-90 tank with one blow.
+Ovaries: Legion's ovaries house a hive of countless soldiers that can be ordered to attack instantly. It is estimated that she can reproduce approximately 100 soldiers every hour.
+Appendages: Legion's many appendages are used in both battle and burrowing; while they quickly assist in breaking up even the toughest earth, these deadly arms were seen puncturing Gamera's shell.
+Armored Exoskeleton: Made of a hard silicone-like resin, Legion's exo-skeleton is not only an insulator but protects her body from attacks.
+Interference wave-blast: Generated in the shape of a parabola, it acts as a shield. Legion was seen disabling the automatic targeting system of missles with this abilaity."
+              :mass "600tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            :Megaguirus
+             (unit
+              :name "Megaguirus"
+              :image "Daikaiju/MegaguirusToken.png"
+              :summary "Flight at mach 4; hurricane winds and sonic waves from wings; claws; stinger with the ability to drain power; claw tipped wings; able to use stinger to discharge a blast of energy comprised of its opponent's beam weapon which it absorbed; flight causes electronic disturbances"
+              :mass "12ktons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))))))
+    "Giant Robots"
+     (chapter
+      :name "Giant Robots"
+      :sectionmap
+       (sectionmap
+        "Allied Robots"
+         (section
+          :name "Allied Robots"
+          :unitmap
+           (unitmap
+            "Getter 1"
+             (unit
+              :name "Getter 1"
+              :image "Daikaiju/Getter_1.png"
+              :summary
+               "* Swimming: 18knots
+* Flight: Mach 2"
+              :mass "220tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Getter 2"
+             (unit
+              :name "Getter 2"
+              :image "Daikaiju/Getter_2.png"
+              :summary
+               "* Swimming: 18knots
+* Ground Speed: Mach 3!
+* Tunnelling: 300kph"
+              :mass "220tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Getter 3"
+             (unit
+              :name "Getter 3"
+              :image "Daikaiju/Getter_3.png"
+              :summary
+               "* Swimming: 28knots
+* Flight: Mach 3"
+              :mass "220tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Getter G Dragon"
+             (unit
+              :name "Getter G Dragon"
+              :image "Daikaiju/GetterG_Dragon.png"
+              :summary "* Flight: Mach 3.5"
+              :mass "330tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Getter G Liger"
+             (unit
+              :name "Getter G Liger"
+              :image "Daikaiju/GetterG_Liger.png"
+              :summary
+               "* Swimming: 18knots
+* Flight: Mach 2
+* Ground Speed: Mach 3!
+* Tunnelling: 800kph"
+              :mass "330tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Getter G Poseidon"
+             (unit
+              :name "Getter G Poseidon"
+              :image "Daikaiju/GetterG_Poseidon.png"
+              :mass "330tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Great Mazinger"
+             (unit
+              :name "Great Mazinger"
+              :image "Daikaiju/GreatMazinger.png"
+              :summary
+               "* Swimming: 25knots
+* Flight: Mach 4 (Mach 5 w/Great Booster)
+* Ceiling: 50km
+* Jump: 30m
+* Dive Depth: 8km"
+              :mass "32tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            :Grendizer
+             (unit
+              :name "Grendizer"
+              :image "Daikaiju/Grendizer.png")
+            "Mazinger Z"
+             (unit
+              :name "Mazinger Z"
+              :image "Daikaiju/MazingerZ.png"
+              :summary
+               "* Swimming: 20knots
+* Flight: Mach 3 w/Jet Scrander"
+              :mass "20tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            :Raideen
+             (unit
+              :name "Raideen"
+              :image "Daikaiju/Raideen.png"
+              :summary "Flight: Mach 10 in God Bird form"
+              :mass "350tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            :Voltron
+             (unit
+              :name "Voltron"
+              :image "Daikaiju/Voltron.png"
+              :mass "700tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))))))))))))

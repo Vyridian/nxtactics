@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc name="Age Of Sail">
+<chapter  name="Age of Sail Overview">
+	<section name="Why Tactics: Age of Sail?">
+		<summary>
+			The Age of Sail was the period in which international trade and naval warfare were dominated by sailing ships,
+			lasting from the 16th to the mid 19th century.  This is a significant period during which square-rigged sailing
+			ships carried European settlers to many parts of the world in one of the most expansive human migrations in
+			recorded history.
+		</summary>
+		<reference>http://www.thepirateking.com/historical/cannon_projectiles.htm</reference>
+	</section>
+	<section name="Age of Sail Land Warfare">
+		<summary>
+			* Infantry
+			* Cavalry
+			* Muskets
+			* Cannons
+			* Artillery
+			* High Ground
+		</summary>
+	</section>
+	<section name="Age of Sail Naval Warfare">
+		<summary>
+			* Wind
+			* Large Ships
+			* Small Ships
+			* Solid Shot
+			* Burning Shot
+			* Chain Shot
+			* Fortifications
+		</summary>
+	</section>
+</chapter>
+<chapter name="Age of Sail Weaponry">
+	<section name="Age of Sail Pistols">
+		<item name="20mm Dragon" muzzlevelocity="225m/s">
+			<reference>
+				The blunderbuss, and especially the shorter dragon, was typically issued to troops such as cavalry, who needed a
+				lightweight, easily handled firearm.  The dragon became so associated with cavalry and mounted infantry that the
+				term dragoon became synonymous with mounted infantry.
+			</reference>
+			<summary>
+				* A short, muzzle-loading, flintlock, hand shotgun
+			</summary>
+		</item>
+	</section>
+	<section name="Age of Sail Rifles">
+		<item name="12mm Carbine" muzzlevelocity="438m/s">
+			<summary>
+			Short musket
+			# Effective Range 60m
+			# Muskets could regularly penetrate Plate Armor
+			</summary>
+		</item>
+		<item name="18mm Musket" muzzlevelocity="320m/s">
+			<titles>Brown Bess</titles>
+			<reference>
+				The Brown Bess was used in the era of the expansion of the British Empire.  It was used for a hundred years with
+				incremental changes in its design.
+			</reference>
+			<summary>
+				# Effective Range 60m
+				# Muskets could regularly penetrate Plate Armor
+			</summary>
+		</item>
+		<item name="20mm Blunderbuss" muzzlevelocity="225m/s">
+			<reference>
+				A blunderbuss is a muzzle-loading firearm with a flared, trumpet-like barrel and is the predecessor to the
+				shotgun.  Most of these weapons are mid-sized, being smaller than most shoulder-fired arms, but larger than a
+				pistol.  The muzzle was flared not to increase the spread of the shot, but rather to funnel powder and shot into
+				the weapon, making it easier to reload on horseback or on a moving carriage.
+			</reference>
+		</item>
+	</section>
+	<section name="Age of Sail Cannons">
+		<item name="Chainshot" image="AgeOfSail/Cannon_Chainshot.jpg">
+			<summary>
+				* Does no damage.  All [Hits] are [Disabled Tokens].  All [Critical Hits] are [Crippled Tokens].
+			</summary>
+		</item>
+		<item name="Grapeshot" image="AgeOfSail/Cannon_Grapeshot.jpg">
+		</item>
+		<item name="Round shot" image="AgeOfSail/Cannon_Roundshot.jpg">
+		</item>
+		<item name="140mm Field Culverin" classification="Cannon" mass="2.2tons" length="4.5m" range="450m" muzzlevelocity="400m/s" image="AgeOfSail/Culverin.jpg">
+			<summary>
+				600,000J
+			</summary>
+		</item>
+		<item name="100mm Demi-culverin" classification="Cannon" mass="1.5tons" length="3.4m" range="300m" muzzlevelocity="487m/s" rof=".75/min" image="AgeOfSail/Demi-culverin.jpg">
+		</item>
+	</section>
+</chapter>
+<chapter name="Renaissance" />
+<chapter name="Golden Age of Sail">
+	<section name="Age of Sail Scenarios">
+		<scenario name="Pirates" />
+		<scenario name="Swashbucklers" />
+	</section>
+	<section name="Age of Sail Dutch">
+	</section>
+	<section name="Age of Sail British">
+		<unit name="British Musketeers" classification="Lt. Infantry" image="AgeOfSail/British_Musketeers.png">
+			<summary>
+				Musket Infantry
+			</summary>
+			<skill name="Firearms" level="3">
+				<item name="18mm Musket" />
+			</skill>
+		</unit>
+		<unit name="British Caravel" classification="Med. Naval Vessel" mass="150tons" length="25m" width="9m" speed="15kph" crew="20" image="AgeOfSail/BritishCaravel.png">
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="3">
+				<item name="100mm Demi-culverin" number="20" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="British Frigate" classification="Med. Naval Vessel" speed="20kph" image="AgeOfSail/BritishFrigate.png">
+			<reference>
+				A warship second only in size to the Ship-of-the-Line.  Frigates were three-masted with a raised forecastle
+				and quarterdeck.  They had anywhere from 24 to 38 guns on her deck.  They were faster than the
+				ship-of-the-lines and were used for escort purposes.  They were sometimes used to hunt pirates.  Only a few
+				pirates were ever in command of a frigate as most pirates would flee from a frigate.
+			</reference>
+			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+				<summary>
+					14 inches (360 mm/60mm RHA)
+				</summary>
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="British Man-O-War" classification="Hvy. Naval Vessel" mass="1000tons" image="AgeOfSail/BritishManOWar.png">
+			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+				<summary>
+					14 inches (360 mm/60mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="4">
+				<item name="100mm Demi-culverin" number="100" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="British Schooner" classification="Med. Naval Vessel" mass="80tons" length="18m" width="6m" image="AgeOfSail/BritishSchooner.png">
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="3">
+				<item name="100mm Demi-culverin" number="8" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="British Racing Galleon" classification="Lt. Naval Vessel">
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+	</section>
+	<section name="East India Company">
+	</section>
+	<section name="French">
+		<unit name="Napoleon Bonaparte" image="AgeOfSail/French_Napoleon.png">
+		</unit>
+		<unit name="French Musketeers" classification="Lt. Infantry" image="AgeOfSail/French_Musketeers.png">
+			<summary>
+				Musket Infantry
+			</summary>
+			<skill name="Firearms" level="3">
+				<item name="18mm Musket" />
+			</skill>
+		</unit>
+		<unit name="French Carabiners" classification="Lt. Cavalry">
+			<summary>
+				Light Cavalry carrying short Carbine rifles
+			</summary>
+			<skill name="Firearms" level="3">
+				<item name="12mm Carbine" />
+			</skill>
+		</unit>
+		<unit name="French Dragoons" classification="Med. Cavalry" image="AgeOfSail/French_Dragoons.png">
+			<summary>
+				Musket Cavalry intending to ride into battle and dismount to fire.
+			</summary>
+			<skill name="Firearms" level="3">
+				<item name="18mm Musket" />
+			</skill>
+		</unit>
+		<unit name="French Man-O-War" classification="Hvy. Naval Vessel" mass="1000tons">
+			<reference>
+				These ships were the heavy-guns of the fleet.  They resembled galleons in design, but had heavy fire-power.
+				Only the three major sea-powers of the time (Spain, England, and France) had many of these kind of ships.
+			</reference>
+			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+				<summary>
+					14 inches (360 mm/60mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="3">
+				<item name="100mm Demi-culverin" number="100" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="French Schooner" classification="Med. Naval Vessel" mass="80tons" length="18m" width="6m" image="AgeOfSail/FrenchSchooner.png">
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="3">
+				<ability name="Salvo" />
+				<item name="100mm Demi-culverin" number="8" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+	</section>
+	<section name="Pirates">
+		<summary>
+			The era of piracy in the Caribbean Sea began in the 17th century and died out in
+			the 1720s after the navies of the nations of Western Europe with colonies in the
+			Caribbean began combating pirates.
+		</summary>
+		<unit name="Pirate Crew" classification="Lt. Infantry" image="AgeOfSail/Pirate_Crew.png">
+			<summary>
+			</summary>
+			<skill name="Melee" level="3">
+				<item name="Cutlass" />
+				<item name="Dagger" />
+			</skill>
+			<skill name="Firearms" level="3">
+				<item name="20mm Dragon" />
+				<item name="20mm Blunderbuss" />
+			</skill>
+			<skill name="Gunnery" level="3">
+				<ability name="Salvo" />
+				<item name="100mm Demi-culverin" number="8" />
+			</skill>
+			<skill name="Seamanship" level="4">
+				<ability name="Boarding Party" />
+			</skill>
+		</unit>
+		<unit name="Pirate Caravel" classification="Med. Naval Vessel" mass="150tons" length="25m" width="9m" speed="15kph" crew="20" image="AgeOfSail/PirateCaravel.png">
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="3">
+				<ability name="Salvo" />
+				<item name="100mm Demi-culverin" number="20" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="Pirate Schooner" classification="Med. Naval Vessel" mass="80tons" length="18m" width="6m" image="AgeOfSail/PirateSchooner.png">
+			<reference>
+				The Schooner has a narrow hull, two masts and is less than 100 tons.  She is generally rigged with two large
+				sails.  She had a shallow draft which allowed her to remain in shallow coves waiting for her prey.  The
+				Schooner is very fast and large enough to carry a plentiful crew.  It was a favorite among both pirates and
+				smugglers.
+			</reference>
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="3">
+				<ability name="Salvo" />
+				<item name="100mm Demi-culverin" number="8" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="Pirate Sloop" classification="Lt. Naval Vessel" mass="100tons">
+			<reference>
+				The Sloop was fast, agile, and had a shallow draft.
+				Today's sailing Yacht is essentially a sloop.
+			</reference>
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="Pirate Brigantine">
+			<reference>
+				The brigantine was a small ship carrying both sails and oars.  It was a favorite of Mediterranean pirates
+				from whence it got its name Brigantine meaning Brigand Ship.  Later the ship referred to a two-masted sailing
+				ship with much greater sailing power.
+			</reference>
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+	</section>
+	<section name="Age of Sail Portuguese">
+		<unit name="Portuguese Caravel" classification="Med. Naval Vessel" mass="150tons" length="25m" width="9m" speed="15kph" crew="20">
+			<titles>Nina, Pinta</titles>
+			<reference>
+				A small ship meant for trading and used by the Spanish and Portuguese for exploration.  If has little cargo
+				capacity, but it with its shallow draft is able to move freely in shallow bays.
+			</reference>
+			<reference>
+				The Nina was actually named the Santa Clara.  Nina was a pun on its owner's name: Juan Nino.
+			</reference>
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="3">
+				<ability name="Salvo" />
+				<item name="100mm Demi-culverin" number="20" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="Portuguese Carrack" classification="Med. Naval Vessel" mass="300tons" length="25m" speed="10kph" crew="40">
+			<titles>Santa Maria</titles>
+			<reference>
+				All of Columbus' ships were second-hand (if not third or more) and were never meant for exploration.
+			</reference>
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+	</section>
+	<section name="Age of Sail Spanish">
+		<unit name="Silver Train">
+		</unit>
+		<unit name="Treasure Fleet" classification="Hvy. Naval Vessel">
+		</unit>
+		<unit name="Spanish Caravel" classification="Med. Naval Vessel" mass="150tons" length="25m" width="9m" speed="15kph" crew="20" image="AgeOfSail/SpanishCaravel.png">
+			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+				<summary>
+					7 inches (180 mm/30mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="3">
+				<ability name="Salvo" />
+				<item name="100mm Demi-culverin" number="20" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="Spanish Galleon" classification="Hvy. Naval Vessel" image="AgeOfSail/SpanishGalleon.png">
+			<reference>
+				Large ships meant for transporting cargo.  The Spanish treasure fleets were made of these ships.  Although
+				they were sluggish, they weren't the easy target you would expect for they could carry heavy cannon which
+				made attacking them difficult.  They had two to three decks.  Most had three masts.  Some galleons sported 4
+				masts but these were an exception to the rule.
+			</reference>
+			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+				<summary>
+					14 inches (360 mm/60mm RHA)
+				</summary>
+			</skill>
+		</unit>
+		<unit name="Spanish Man-O-War" mass="1000tons" classification="Hvy. Naval Vessel" image="AgeOfSail/SpanishManOWar.png">
+			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+				<summary>
+					14 inches (360 mm/60mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="4">
+				<ability name="Salvo" />
+				<item name="100mm Demi-culverin" number="100" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+		<unit name="Spanish Schooner" classification="Med. Naval Vessel" mass="80tons" length="18m" width="6m" image="AgeOfSail/SpanishSchooner.png">
+			<skill name="Gunnery" level="3">
+				<ability name="Salvo" />
+				<item name="100mm Demi-culverin" number="8" />
+			</skill>
+			<skill name="Seamanship" level="4">
+			</skill>
+		</unit>
+	</section>
+</chapter>
+<chapter name="American Revolution">
+	<section name="Age of Sail United States">
+		<unit name="American Frigate" classification="Hvy. Naval Vessel" mass="2200tons" length="62m" speed="24kph" image="AgeOfSail/AmericanFrigate.png">
+			<titles>USS Constitution, Old Ironsides</titles>
+			<skill name="Armor" front="88mm" side="88mm" back="88mm">
+				<summary>
+					21 inches (530 mm/88mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery">
+				<summary>
+					30 x 24-pounder (11 kg) long gun
+					20 x 32-pounder (15 kg) carronade
+					2 x 24-pounder (11 kg) bow chasers
+				</summary>
+				<ability name="Salvo" />
+			</skill>
+		</unit>
+	</section>
+</chapter>
+<chapter name="French Revolution" />
+<chapter name="Tokugawa Shogunate">
+	<section name="Tokugawa Prefecture">
+		<place name="Tokugawa Town">
+			<summary>
+				* The Daimyo chose to place his castle near a moderately-sized villiage.  He wanted the advantage of a town
+				without having more people than could be kept track of.  The Daimyo's presense has brought an influx of trade, and
+				the town is surprisingly wealthy.
+				* There is a cooper, a brewer, a courtesan house, an inn, a silk-maker, a woodworker, 2 woodcutters, 15 merchants,
+				20 fishermen, over 100 farmers, and about 15 vagrants.
+				* There are 2 police officers and many of the townspeople are in the reserve.
+				* In addition, the Daimyo personally supports 25 samurai, a swordsmith, an armorer, a fletcher, 2 carpenters, 2
+				advisors, a scupltor, a jeweler, 2 fine weavers, 2 painters, 2 scribes, and a mistress.
+			</summary>
+		</place>
+		<place name="Buddhist Temple">
+			<summary>
+				* A temple was established in the area long before the Daimyo located himself in the area.  The temple remains a
+				significant political power, and with their Sohei and Budoka, they could be more than an annoyance to the Daimyo.
+				* Besides the master, there are 4 senior priests (Gakusho) and 20 monks (12 Gakusho and 8 Budoka).  There are also
+				5 Sohei that act as guards and trainers.  The temple is supported by donations and tithes.
+				* Martial training is only allowed as it pertains to self-awareness.  Fighting people is a sin unless in the
+				protection of others.  Training has been a point of contention with the Daimyo, but the issue has died down.
+			</summary>
+		</place>
+		<unit name="Daimyo">
+			<titles>Kenji Ginichi</titles>
+			<summary>
+				* A gruff, no nonsense samurai.  He craved the power and pretige of this position, but now finds that life as a
+				Daimyo is sheltered and dull.
+				* He is convinced that there is a plot to take his life, though there is no evidence to support this.  He seems to
+				enjoy the challenge of defending himself against this threat.  He does fear dying dishonorably.  For this reason,
+				he has his food rigorously tested and his bedchambers inordinately guarded.  He tries to leave himself more open to
+				a direct attack, so he is often poorly guarded when he is armed.
+				* The Daimyo feels intellectually challenged by both the Temple Master and the Castellan.  He has become
+				increasingly interested in these mind games, and a good challenge is a sure way to the Daimyo's good favor.
+			</summary>
+		</unit>
+		<unit name="Daimyo's Wife">
+			<summary>
+				* Efficient, beautiful, and totally unimportant.  The Daimyo is not interested in her at all.  She is only a baby
+				machine to him (and not a very good one).  She does not aspire to higher station and is quite content with her
+				circle of friends from the villiage who visit often.
+			</summary>
+		</unit>
+		<unit name="Daimyo's Son">
+			<summary>
+				* A bored an somewhat obnoxious teenager.  He revels in the past exploits of his illustrious father and is horrified
+				by the inactive positon he is in now (a feeling shared by the Daimyo).  The idea of being a Daimyo (or a court
+				samural makes him ill.  He wants to be an adventurer or a a ronin.  He has studied with the samurai and budoka, but
+				he lacks incentive and discipline.  His most accomplished skill is distracting his guards so he can slip away.
+			</summary>
+		</unit>
+		<unit name="Castellan">
+			<summary>
+				* A classic samurai, dedicated and loyal.  His main duties are to keep the province running, but more importantly he
+				must protect the Daimyo and his family.  This last task has proven very difficult.  The Daimyo and his son have
+				proven very difficult to defend.  The Daimyo constantly reduces his guards, and his son tries to escape them.  The
+				castellan may not disobey the Daimyo, but he has prepared a long list of ways to manipulate the Daimyo into safer
+				courses of action.  When unable to control the Daimyo, he will send troops 'on patrol' in the Daimyo's area.  He
+				will delay or harry the Daimyo to make his movements less predictable.  The Daimyo is aware of these machinations
+				and enjoys outsmarting the castellan wherever possible.  So far, the castellan is easily winning this battle of
+				wits.
+			</summary>
+		</unit>
+		<unit name="Temple Master">
+			<summary>
+				* The temple master is a man of great diplomatic skill, and the Daimyo has found himself outmatched in all but
+				military issues.  The Daimyo often does not grant the master an audience until he has brushed up on the matter at
+				hand.
+			</summary>
+		</unit>
+		<unit name="Oyabun">
+			<summary>
+				* The head of the local Yakuza sees that the Daimyo is acting rather recklessly and is plotting an elaborate and
+				subtle scheme to take advantage of the situation.
+			</summary>
+		</unit>
+	</section>
+	<section name="Age of Sail Japan">
+		<unit name="Japanese Archer">
+		</unit>
+		<unit name="Japanese Daimyo">
+		</unit>
+		<unit name="Japanese Emperor">
+		</unit>
+		<unit name="Japanese Rifleman">
+		</unit>
+		<unit name="Japnese Samurai">
+		</unit>
+	</section>
+</chapter>
+</doc>

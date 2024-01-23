@@ -1,0 +1,39 @@
+(package vx/ui/ui
+ :doc "Universal Ui Element")
+
+(type layout : struct
+ :doc "Universal Layout")
+
+(type ui : struct
+ :properties [datamap   : anymap
+              rendered  : any
+              render-fn : any-render<-ui
+              uimap     : uimap
+              uistyle   : uistyle]
+ :doc "Universal UI Element")
+
+(const layout-app : layout)
+
+(const layout-background : layout)
+
+(const layout-navigation : layout)
+
+(const layout-split-horizontal : layout)
+
+(const layout-split-vertical : layout)
+
+(type uimap : map
+ :allowtypes [ui])
+
+(type uistyle : struct
+ :properties [layout : layout])
+
+(func any-render<-ui : any
+ [ui : ui]
+ :sideeffects "Alters UI"
+ :doc "Returns a rendered object from a UI Element.")
+
+(func anymap-render<-uimap : boolean
+ [uimap : uimap]
+ :sideeffects "Alters UI"
+ :doc "Renders a uimap and returns the map of rendered elements.")

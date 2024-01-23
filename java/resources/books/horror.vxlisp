@@ -1,0 +1,894 @@
+(package nx/tactics/books/horror
+ :libs (lib base :path nx/tactics/base))
+
+(func book : base/book
+ (book
+  :name "Horror"
+  :image "Cthulhu.jpg"
+  :chaptermap
+   (chaptermap
+    "Horror Overview"
+     (chapter
+      :name "Horror Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: Horror?"
+         (section
+          :name "Why Tactics: Horror?")))
+    "Call of Cthulhu"
+     (chapter
+      :name "Call of Cthulhu"
+      :reference "* Premise that common human laws and interests and emotions have no validity or significance in the vast cosmos-at-large... To achieve the essence of real externality, whether of space or time or dimension, one must forget that such things as organic life, good and evil, love and hate, and all such local attributes of a negligible and temporary race called mankind, have any existence at all."
+      :summary
+       "* Most of the intelligent Mythos creatures are masters of [Necromancy] and have long ago reanimated their physical bodies into part physical/part spiritual forms that humans would call [Undead].
+* Like [Undead], they exist partially in the [Spirit Realm], are immune to most hostile environments, and appear blurry in photograph and other recordings.
+* If their body is destroyed, their Spirit leaves the body and enters the [Spirit Realm] fully. Their bodies age will rapidly catch up to it usually causing it to deteriorate rapidly. Normally their spirit never returns to the physical world, but if they are powerful enough, they may find their way back through the Veil and even death may not stop them from returning."
+      :sectionmap
+       (sectionmap
+        "Mythos Places"
+         (section
+          :name "Mythos Places"
+          :sectionmap
+           (sectionmap
+            :Dreamlands
+             (section
+              :name "Dreamlands"
+              :reference
+               "* Dream Quest of Unknown Kadath
+* But some of us awake in the night with strange phantasms of enchanted hills and gardens, of fountains that sing in the sun, of golden cliffs overhanging murmuring seas, of plains that stretch down to sleeping cities of bronze and stone, and of shadowy companies of heroes that ride caparisoned white horses along the edges of thick forests; and then we know that we have looked back through the ivory gates into that world of wonder which was ours before we were wise and unhappy. - Celephais"
+              :summary
+               "* The Dreamlands is a vast [Dreamworld] that is a favorite of many Earth dreamers. Experienced dreamers are among the most powerful inhabitants of the Dreamlands and some become permanent residents after their physical deaths.
+* To reach the Dreamlands, a sleeper must find an unusual stairway in a conventional dream and walk down the Seventy Steps of Light Slumber to face the judgment of powerful gatekeepers named Nasht and Kaman-Tha. If judged worthy (that is, able to survive the dangers of the Dreamlands), the dreamer is allowed to descend the Seven Hundred Steps of Deeper Slumber and emerges in the Enchanted Wood.
+* When entering the Dreamlands this way, the person leaves his or her physical body safely in the waking world. If the dreamer is killed during his or her travels, the person's corporeal body will suffer only a shock. Sometimes, however, this can be fatal - dream death of this kind makes return to the Dreamlands impossible. Waking up causes a person's dream self to disappear; thus the individual may have difficulty recalling anything learned or experienced while asleep (similar to conventional dreaming). A dreamer who dies in the real world while his dream self is still alive may have the option of retiring to the Dreamlands for the remainder of his dream self's 'life.'
+* The Dreamlands can be entered in other ways, including physically. This usually requires passing through very dangerous areas of both the waking world and the Dreamlands. Consequently, real death becomes a risk. However, the visitor does receive the prolonged lifespan of a native of the Dreamlands, so the traveler's time there is no longer limited to the duration of a night's sleep on earth.
+* Time flows at a different rate in the Dreamlands - each hour on earth represents a week or more there. Consequently, a traveler can spend months in the Dreamlands during a single night's sleep on earth. Fortunately for dreamers, inhabitants of the Dreamlands are either long-lived or immortal, provided they avoid injury or disease.
+* Despite its accelerated time, the Dreamlands rarely experiences change.  Its geography, politics, and population remain fairly static.  Dreamers, however, can exert great change over the topography, such as by creating entire cities with accompanying populations.
+
+Geography
+* The West is the most well-known region of the Dreamlands and is probably the most inhabited as well. It is where dreamers emerge from the Steps of Deeper Slumber. The port of Dylath-Leen, the largest city of the Dreamlands, lies on its coast. The town of Ulthar, where no man may kill a cat, is also located here. Other important cities are Hlanith (a coastal jungle city) and Ilarnek (a desert trade capital). The land of Mnar and the ruins of Sarnath are found at the southern border. The Enchanted Wood of the zoogs is also found here. It joins the South.
+* The South is the southern coastal region of the continent shared by the West along with the islands of the Southern Sea, including the isle of Oriab, the largest. The South's land-locked regions and its coastal areas are known as the Fantastic Realms, because they contain nightmarish and sometimes incomprehensible zones. Otherwise, the islands of the Southern Sea are fairly normal.
+* The East is a continent that is largely uninhabited, except for Ooth-Nargai. The city of Celephais the capital of Ooth-Nargai and was created from whole cloth by its monarch King Kuranes, the greatest of all recorded dreamers. Beyond Ooth-Nargai are The Forbidden Lands, dangerous realms into which travel is interdicted.
+* The North is a cold, mountainous continent notorious for its Plateau of [Leng], a violent region shared by man-eating spiders and satyr-like beings known as the &quot;Men of Leng&quot;. The North also has a number of friendlier places, such as the city of Inganok, famous for its onyx quarries. The deepest reaches of the North are said to hold Unknown [[Kadath]], the home of the Great Ones.
+* The Underworld is a subterranean region that runs beneath the whole of the Dreamlands. Its principle inhabitants are ghouls, who can physically enter the waking world through crypts. The Underworld is also home to the gugs, monstrous giants banished from the surface for untold blasphemies. The Underworld's deepest realm is the Vale of Pnath, a dangerous lightless chasm inhabited by enormous unseen beasts called bholes. Bholes are likely the ancestors of the Dholes of Yaddith.
+* The Moon has a parallel in the Dreamlands and is inhabited by the dreaded moon-beasts, amorphous frog-like creatures allied with Nyarlathotep. Interestingly, it is possible for a ship to sail off the edge of the Dreamlands and travel through space to the moon.
+* Kadath - Kadath or Unknown Kadath is the dwelling place of the Great Ones. It is a gigantic castle found atop an immense cosmic mountain in the Cold Waste.  Kadath is the place where the dreamlands gods dwell, but it is inaccessible to mortals because the gods do not want to be bothered."
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidtagfound"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))))))
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        "Mythos Items"
+         (section
+          :name "Mythos Items"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        "Mythos Independent Races"
+         (section
+          :name "Mythos Independent Races"
+          :unitmap
+           (unitmap
+            "Colour Out of Space"
+             (unit
+              :name "Colour Out of Space"
+              :image "Cthulhu/ColourOutOfSpace.png"
+              :reference
+               "In terms of matter I suppose the thing Ammi described would be called a gas, but this gas obeyed the laws that
+are not of our cosmos ... This was no breath from the skies whose motions and dimensions our astronomers
+measure or deem too vast to measure.  It was just a colour out of space - a frightful messenger from unformed
+realms of infinity beyond all Nature as we know it. - The Colour Out of Space")
+            :Cthonian
+             (unit
+              :name "Cthonian"
+              :image "Cthulhu/Cthonian.png")
+            "Elder Thing"
+             (unit
+              :name "Elder Thing"
+              :image "Cthulhu/ElderThing.png"
+              :reference
+               "* The toughness of the things was almost incredible. Even the terrific pressure of the
+deepest sea bottoms appeared powerless to harm them. Very few seemed to die at all except
+for violence, and their burial places were very limited. - At the Mountains of Madness"
+              :summary
+               "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark
+green in color. The nervous system of the Elder Things is quite complex, with five-lobed
+brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest
+that they have senses other than sight, smell, touch, hearing, and taste. Elder Things
+reproduce through spores. They can derive nourishment from inorganic substances, but prefer
+to feed on organic life.")
+            "Flying Polyp"
+             (unit
+              :name "Flying Polyp"
+              :summary
+               "* The flying polyps came to Earth from space as conquerors about 750 million years ago.
+They built basalt cities with high windowless towers. When they attempted to colonize the
+oceans, the polyps were driven back by the Elder Things. Thereafter, they restricted
+their habitats to the surface world.
+* Their senses did not include sight, but what senses they had could penetrate all
+material obstructions. They were only partially matter, but still solid enough to affect
+and be stopped by normal materials; this additionally gave them resistance, if not
+outright invulnerability, to normal means of damage, though they could be destroyed by
+certain forms of electrical energy. Their minds were so strange that the Great Race of
+Yith could not perform psychic transfers with them.
+* They are able to levitate and fly despite lacking any visible means of doing so, and
+leave telltale massive footprints when on the ground. Their amorphous bodies can turn
+invisible at will, though this ability appears somewhat negated by whistling noises
+associated with them in general. In battle, their ability to control and direct powerful
+winds is put to use as a weapon.
+* When the Great Race of Yith came to Earth, they warred with the polyps and soon drove
+them underground with their advanced technology. The Great Race then sealed the entryways
+to the polyps' subterranean abode with trapdoors, which afterwards were diligently
+guarded. The polyps' cities were left abandoned, perhaps as a reminder of the horrors
+that dwelt below.
+* Eventually, the polyps rose up and almost exterminated the Great Race, afterwards
+returning to their subterranean haunts. Having no conception of light, the polyps seem
+content to remain there, annihilating the few intruders that chance upon them. The
+entrances to their dwellings are mostly deep within ancient ruins where there are great
+wells sealed over with stone.")
+            "Great Race of Yith"
+             (unit
+              :name "Great Race of Yith"
+              :image "Cthulhu/GreatRaceOfYith.png")
+            "Hound of Tindalos"
+             (unit
+              :name "Hound of Tindalos"
+              :image "Cthulhu/HoundOfTindalos.png"
+              :reference
+               "* All the evil in the universe was concentrated in their lean, hungry bodies.  Or had they bodies?  I saw them
+only for a moment, I cannot be certain. - Frank Belknap Long, The Hounds of Tindalos"
+              :summary
+               "* The Hounds of Tindalos dwell in the distant past of the earth, when normal life had not yet advanced past
+one-celled animals.  They are said to inhabit the angles of time, while other beings descend from curves.  The
+Hounds are thought to be immortal and are believed to lust after something in humankind and other normal life,
+and will follow victims through time and space to get it.
+* Their appearance is unknown because no characters who meet them survive long enough to give a description.  It
+is said that they have long, hollow tongues or proboscis to drain victims' body-fluids, and that they excrete a
+strange blue pus or ichor.
+* Though the Hounds are sometimes pictured as canine, it is not likely that they appear as such.  Their name
+refers more to the creatures' habits than their appearance.
+* Because of their relationship with the angles of time, they can materialize through any corner if it is fairly
+sharp—120 degress or less.  When a Hound is about to appear, it materializes first as smoke pouring from the
+corner, and finally the head emerges followed by the body.  It is said that once a human becomes known to one of
+these creatures, a Hound of Tindalos will pursue the victim through anything to reach its quarry.  A person risks
+attracting their attention by travelling through time.")
+            "Hunting Horror"
+             (unit
+              :name "Hunting Horror"
+              :image "Cthulhu/HuntingHorror.png")
+            :Mi-Go
+             (unit
+              :name "Mi-Go"
+              :image "Cthulhu/MiGo.png"
+              :reference "* Fact: Migoi or Mi-go (pronounced mey-goo) is a Tibetan name for the Yeti and translates as 'wild man'."
+              :summary
+               "* Mi-go are an alien race of fungus-like creatures, approximately man-sized, pinkish in color, with crustaceous
+bodies bearing vast pairs of membranous wings and several sets of articulate limbs.  The Mi-Go have a sort of
+convoluted ellipsoid where its head should be, covered with a multitude of very short antennae.
+* They have a colony on Pluto (i.e. Yuggoth) and have mining colonies in high mountains looking for rare minerals.
+* The Mi-go are not wholly native to our phyical universe.  Thus, they cannot eat food from Earth, and photographs
+of them are blurry and indistinct.  They can also fly unassisted through interstellar space at fantastic speeds.
+They dissolve shortly after death.
+* They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure
+minerals in remote locations.  Trespassers are usually eliminated, though they have been known to have human agents
+work on their behalf.
+* Mi-go have access to a number of advanced weapons.  The mist projector releases a cloud of frigid gas.  They have
+an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed.
+The armor will also weaken each day unless immersed in the proper nutrient bath.
+* The Mi-Go are advanced in the sphere of surgery.  With surgical alterations the Mi-Go are able to speak human
+languages, though their voice is buzzy and irritating.  They can also surgically move the brain of other species
+into metal cylinders for transportation to other worlds through space."
+              :titles "Fungi from Yuggoth")
+            :Shoggoth
+             (unit
+              :name "Shoggoth"
+              :image "Cthulhu/Shoggoth.png"
+              :reference
+               "This was the dream in which I saw a shoggoth for the first time, and the sight set me awake in a frenzy
+of screaming. - The Shadow Over Innsmouth")))
+        "Mythos Servitor Races"
+         (section
+          :name "Mythos Servitor Races"
+          :unitmap
+           (unitmap
+            "Dark Young of Shub-Niggurath"
+             (unit
+              :name "Dark Young of Shub-Niggurath"
+              :image "Cthulhu/DarkYoung.png"
+              :reference
+               "Something black in the road, something that wasn't a tree.  Something big and black and ropy, just
+squatting there, waiting, with ropy arms squirming and reaching ... It came crawling up the
+hillside ... and it was the black thing of my dreams ... that black, ropy, slime jelly tree-thing out of
+the woods.  It crawled up and it flowed up on its hoofs and mouths and snaky arms.")
+            :Nightgaunt
+             (unit
+              :name "Nightgaunt"
+              :image "Cthulhu/Nightgaunt.png"
+              :reference
+               "Shocking and uncouth black beings with smooth, oily, whale-like surfaces, unpleasant horns that curved inward
+toward each other, bat-wings whose beating made no sound, ugly prehensile paws, and barbed tails that
+lashed needlessly and disquietingly.  And worst of all, they never spoke or laughed, and never smiled
+because they had no faces at all to smile with, but only a suggestive blankness where a face ought to
+be.  All they ever did was clutch and fly and tickle; that was the way of night-gaunts. - The
+Dream-Quest of Unknown Kadath")
+            "Seed of Azathoth"
+             (unit
+              :name "Seed of Azathoth"
+              :summary
+               "* While the [Spawn of Azathoth] are the size of dwarf stars, the seeds of Azathoth
+are the size of small comets. They are periodically cast off from Spawns during
+major upheavals or impacts with other bodies. The Seeds do not direct themselves
+through space, but if one impacts a planetary body, it slowly burns its way to
+the core where it grows over millenia. Eventually, it matures to a full
+[Spawn of Azathoth] and shatters what remains of the planet into rubble.")
+            "Spawn of Azathoth"
+             (unit
+              :name "Spawn of Azathoth"
+              :summary
+               "* The massive Outer God Azathoth mindlessly casts off small parts of itself, the
+Spawn of Azathoth. Though small compared to Azathoth, these bodies are the size of
+small, brown dwarf stars. From Azathoth, they hurtle through time and space
+forever. Sometimes they pass near ordinary stellar systems and wreak havoc,
+colliding with worlds or suns, causing gravitational catastrophes, or raining its
+seeds ([Seed of Azathoth]) upon them."
+              :titles "Nemesis")
+            "Spawn of Cthulhu"
+             (unit
+              :name "Spawn of Cthulhu"
+              :image "Cthulhu/SpawnOfCthulhu.png")))
+        "Elder Gods"
+         (section
+          :name "Elder Gods"
+          :unitmap
+           (unitmap
+            :Nodens
+             (unit
+              :name "Nodens"
+              :image "Cthulhu/Nodens.png")
+            :Yibb-Tstll
+             (unit
+              :name "Yibb-Tstll"
+              :image "Cthulhu/Yibb-Tstll.jpg"
+              :summary
+               "* Yibb-Tsttl is an obscure entity said to lie at the center of time and space and
+is able to see all things in the universe at any time making it so wise that only
+the omnipotent Yog-Sothoth can surpass it in wisdom.
+* Appearance - Often envisioned as an immobile dark mass of tentacles with a
+deformed head, detatched eyes and large bat wings under which countless
+Nightgaunts suckle from innumerable breasts (heavily implying this monstrosity is
+either female or more likely a hermaphrodite). The mere sight of this creature
+can drive humans insane and even thinking too hard on the monstrous being is said
+to attract its malevolent intent.
+* The Black - Yibb-Tstll's blood is alien and can be utilised as a weapon known
+as 'The Black', which takes the form of black snowflakes that stick to a victim
+and smothers them. The Black is a separate entity that is called upon by
+sorcerors more that Yibb-Tstll itself.
+* Reversal - The touch of Yibb-Tstll causes the hideous reversal. Typically this
+change with kill the living or drive the sane mad, but like its name implies, it
+can also do the opposite."
+              :titles "The Patient One")))
+        "Great Old Ones"
+         (section
+          :name "Great Old Ones"
+          :reference
+           "Behind the Veil what gulfs of Time and Space?  What blinking mowing Shapes to blast the sight?  I shrink
+before a vague colossal Face...Born in the mad immensities of Night. - Robert E. Howard, An Open Window"
+          :unitmap
+           (unitmap
+            :Cthulhu
+             (unit
+              :name "Cthulhu"
+              :image "Cthulhu/Cthulhu.png"
+              :reference "Cthulhu is eponymous with the mythos. If you know nothing else of Lovecraft's body of works, you at least know the visage of this subterranean horror. Which is interesting, because he's relatively tame compared to the Outer Gods. Although he may be worshipped like a god by many, he isn't one. Not really. ... One might call him a priest. ... Since the dawn of man, these beings have been guiding the species through dreams and through psychic manipulation. Someday, when mankind has abandoned its morals and descended into madness, They will wake Cthulhu from his slumber, and he will raise the Old Ones from death and all the world will flame with a holocaust of ecstacy and freedom. ... Cthulhu is not oblivious or indifferent to mankind. He isn't even malevolent. He is Lovecraft's simple promise of evanescence. Nothing belongs to man. Not this world, not the home they've built on it, not even the human mind. It is the ultimate destiny of this species to unravel into primal chaos, as all Things must. To the sounds of their laughter and exultant shouts, all man has ever built will one day fade away. - Tale Foundry")
+            :Dagon
+             (unit
+              :name "Dagon"
+              :image "Cthulhu/Dagon.png"
+              :reference "* I cannot think of the deep sea without shuddering at the nameless things that may at this very moment be crawling and floundering on its slimy bed, worshipping their ancient stone idols and carving their own detestable likenesses on submarine obelisks of water-soaked granite. I dream of a day when they may rise above the billows to drag down in their reeking talons the remnants of puny, war-exhausted mankind—of a day when the land shall sink, and the dark ocean floor shall ascend amidst universal pandemonium. - Dagon")
+            "Hastur the Unspeakable"
+             (unit
+              :name "Hastur the Unspeakable"
+              :image "Cthulhu/Hastur.png"
+              :titles "The King in Yellow")
+            "Ithaqua the Windwalker"
+             (unit
+              :name "Ithaqua the Windwalker"
+              :image "Cthulhu/Ithaqua.png")))
+        "Outer Gods"
+         (section
+          :name "Outer Gods"
+          :unitmap
+           (unitmap
+            :Azathoth
+             (unit
+              :name "Azathoth"
+              :image "Cthulhu/Azathoth.png"
+              :reference
+               "This is about at close as Lovecraft's mythos ever come to establishing a
+creator deity. It was Azathoth who birthed the Darkness and the Nameless
+mists from which nearly all the other gods and deities sprang. It was he who
+created the universe and he who will one day be its destruction. ...
+know that Azathoth is neither malevolent nor benevolent - that he is entropy
+incarnate; a mindless, indiffernt force of pure chaos. The Blind, Idiot God.
+There is nothing to be gained from calling on him and literally everything
+to lose. ... He is the epitome of cosmic horror in the mythos, embodying the
+cold, indifference of the cosmos and the sheer insignificance of intelligent
+life. - Tale Foundry"
+              :summary
+               "* At the center of the universe, deep within a self-created abyss past time and space, dwells the blind idiot god Azathoth. Possessing True Immortality, Azathoth cannot be destroyed. The concept of death only exists within his dreams. Long ago, all was Azathoth. His dreams are all of existence and we are in his dreams. The mad piping attempts to keep Azathoth slumbering for when he wakes, all things will end and all will become Azathoth again.
+* Azathoth is perhaps the most powerful being in fiction."
+              :titles "Daemon Sultan, The Blind, Idiot God")
+            :Nyarlathotep
+             (unit
+              :name "Nyarlathotep"
+              :image "Cthulhu/Nyarlathotep.png"
+              :reference
+               "Nyarlathotep is nothing like the other Outer Gods. He travels by his own laws,
+into and out of the known cosmos, acting as a messenger to and from the Outer
+Gods. His strange personality, or perhaps the simple fact that he has a
+personality, baffles them. ... To lesser intelligences, he's a trickster,
+malevolent and cruel, bequeathing gifts of wisdom and power to those who seek
+it, and whom he knows cannot handle it. Where Nyarlathotep goes, madness
+follows. He is the Crawling Chaos, and as the only direct offspring of Azathoth,
+he revels in it. To Lovecraft, Nyarlathotep must have been a perfect
+manisfestation of his racism and xenophobia. He is not only the outside seeping
+in, but a malevolent, undetectable outside seeping in. - Tale Foundry"
+              :summary
+               "* Like the other Outer Gods, Nyarlathotep is a primal being of unimaginable power.
+Unlike the others, however, his power is knowledge and Nyarlathotep may be a
+creature entirely of the mind. Though he typically appears as a man, he has
+innumerable other forms and may be able to appear in any form he wishes. He seens
+to specifically target and toy with humanity by offering dangerous knowledge and
+observing the results. This is probably an overly simplistic view of his actions.
+Like the other Outer Gods, he is too grand a figure to care about humanity. More
+likely, he acts like Yog-Sothoth and simply appears as an avatar and provides
+Knowledge to those who seek him without regard to what we do with it. In this way,
+Nyarlathotep is like Prometheus providing fire to humanity. It is possible that
+Nyarlathotep is constantly offering knowledge, but we are generally unable to
+recognize it. Perhaps Nyarlathotep is the Muse behind all discoveries."
+              :titles "The Crawling Chaos")
+            :Shub-Niggurath
+             (unit
+              :name "Shub-Niggurath"
+              :image "Cthulhu/ShubNiggurath.png"
+              :reference
+               "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so
+tenuous in composition that its limbs vanish as quickly as they materialize,
+its very form dividing constantly into a surplus of smaller abominations that
+are either reabsorbed into its great form, or that escape to some hideous life
+elsewhere. Not the spitting image of a fertility goddess but this is as close
+as the mythos gets. Shub-Niggurath may well be the most widely revered amoung
+the outer gods, infuence reaching not only to the Greeks, Cretans, Egyptions,
+and some druids, but to races so far-flung across the cosmos as the Mi-go of
+Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new
+life, especially intelligent life, is held as a sacred act. Many humans derive
+joy and self-import from the notion that their kind was toild over by some
+kind of divine intelligence. Shub-Niggurath with her blind, indifferent,
+prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's
+affirmation that life itself is nothing extrodinary. - Tale Foundry"
+              :titles "The Black Goat of the Woods with a Thousand Young")
+            :Yog-Sothoth
+             (unit
+              :name "Yog-Sothoth"
+              :image "Cthulhu/YogSothoth.png"
+              :reference
+               "Locked away at the border of reality, there exists an intelligence. Rather, the
+intelligence. All of it. Yog-Sothoth holds the knowledge of all that is, all that
+was, and all that will be. ... For this reason, he is one of the most heavily
+worshipped entities among the Outer Gods. His name is frequently invoked during
+the rituals and incantations of those seeking hidden knowledge. And often, he
+answers. Sadly for the ones who call on him, the knowledge he grants almost always
+leads to madness and self-destruction. Not because Yog-Sothoth is evil or
+malevolent. He doesn't force anyone to turn the key or step through the gate. ...
+He is both the danger of knowledge and the inability of man to handle it. His role
+in the mythos mirrors Lovecraft's own self-taught obsession with the sciences as
+well as his acedemic failings. - Tale Foundry"
+              :titles "Beyond-One, The Key and the Gate, The Vortex")))
+        "Mythos Scenarios"
+         (section
+          :name "Mythos Scenarios"
+          :sectionmap
+           (sectionmap
+            "Seeds of Azathoth"
+             (section
+              :name "Seeds of Azathoth"
+              :summary
+               "* Nemesis - Since 1984, a theory attempts to explain the mass extinctions that occur
+every 27 million years. The theory submits that a brown dwarf star orbits our sun at
+95,000 AUs and every 27 million years it approaches close enough to rain comets throughout
+the solar system causing climate change, mass-extinctions, and similar catastrophes.
+* Seeds of Azathoth - Nemesis is, in reality, a Spawn of Azathoth that has clung to orbit
+around the Sun. Occasionally, pieces of Nemesis break free, falling into the solar
+system: the Seeds of Azathoth. Seeds that strike the Sun are destroyed, but if a seed
+strikes a planet, it can melt into the planet's core where it grows immensely, eventually
+forming a new Spawn which emerges from the broken planet like a snake from an egg. Our
+system's original fifth world was so parasitized. Its remnants compose the asteroid belt.
+* For millenia, human and other astronomers have seen in comets, 'hairy stars',
+approaching disaster and ill-fortune. In ancient texts, comets have been blamed for
+the revolt of the Shoggoths against the Elder Things, the doom of the dinosaurs, the
+fall of the empire of the Serpent People, the destruction of Hyperborea, the sinking of
+Atlantis, and even the two ages of chaos that struck early Egypt.
+* The most recent effect of Nemesis took place in central Siberia, June 30, 1908, when a
+tremendous explosion rocked the area for hundreds of miles. There was a pillar of fire
+and shock waves powerful enough to knock down horses 400 miles away."
+              :sectionmap
+               (sectionmap
+                "The Case of Phillip Baxter"
+                 (section
+                  :name "The Case of Phillip Baxter"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2))))))
+                "Search for the Seed"
+                 (section
+                  :name "Search for the Seed"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2))))))
+                "Death in St. Augustine"
+                 (section
+                  :name "Death in St. Augustine"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2))))))
+                "Investigating the Andamans"
+                 (section
+                  :name "Investigating the Andamans"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2))))))
+                "Ulthar and Beyond"
+                 (section
+                  :name "Ulthar and Beyond"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :severity 2))))))
+                "Nemesis: Spawn of Azathoth"
+                 (section
+                  :name "Nemesis: Spawn of Azathoth"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :severity 2)))))
+              :unitmap
+               (unitmap
+                "Julian Baxter"
+                 (unit
+                  :name "Julian Baxter"
+                  :summary
+                   "* Julian Baxter is a priest and brother of Phillip Baxter. He is confined to a
+wheelchair and is heavily dependent on his son Matthew. Before becoming a priest,
+Julian was educated as a psychotherapist. He has traveled the world on missions, but
+since becoming crippled he has returned to his home town.
+* Julian has a copy of the Book of Eibon in his library. It has a section
+where Eibon fortells the end of mankind with the coming of Nemesis. Eibon
+was obcessed with preventing man's destruction and spent the rest of his
+life developing a ritual call the Web of Fate that would supposedly save
+mankind when the time was right. Eibon claims that as Nemesis approaches,
+the Web of Fate will draw together seemingly unrelated events, defeat
+Nemesis, and create an eternal golden age for mankind. The reading clearly
+shows Eibon's progressive descent into madness.")
+                "Matthew Baxter"
+                 (unit
+                  :name "Matthew Baxter"
+                  :summary
+                   "* Matthew is the adopted, grown son of Julian Baxter. He is strong, but he is also
+mute and aeuteistic. This combination makes him appear simple, but he is actually
+quite competent. He is an avid dreamer where there is no trace of his aeutism. In
+dreams he is a city council member in Ultar. He can be a strong ally, but he must
+be approached in the Dreamlands, as it is impossible to gain his friendship in the
+real world.")
+                "Silas Patterson"
+                 (unit
+                  :name "Silas Patterson"
+                  :summary
+                   "* Silas is a friend of both Phillip and Julian Baxter, a past professor at Brown
+University, a former antrhopologist, and a member of the Tuesday Night Academy. He is
+quite fit considering his age.
+* Silas met Julian Baxter in the Congo in 1904 and became friends. In 1919, he met
+Cynthia Baxter, Julian's niece in the Andaman Islands. In 1920, he came to Providence
+where he met Phillip and joined the Tuesday Night Academy. Phillip soon after helped
+him get a teaching position at Brown.
+* Silas practices a form of cannibalism he learned in New Guinea at the instruction
+of a degenerate Tcho-Tcho priest. The ceremony involves eating the brains of a
+recently slain primate to gain extended life. This habit made him lose his job at
+Brown when it was discovered that he was stealing monkey corpse from the lab. He has
+since made an arrangement with a local undertaker with low moral character, Alvin
+Beswick. Silas told Beswick that he was performing brain research, but Beswick is
+just concerned with the money. Beswick allows him access to closed coffin corpses
+for a price. He was given access to Phillip's corpse and noticed the small bite marks
+on the scalp. While devouring the brain, Phillip suddenly lurched back to
+consciousness and thrased wilding before dying. Silas was terrified and is wracked
+with guilt over his friend's death. He is maintaining his sanity through denial, and
+if he is forced to confront what he has done, he will retreat inward and become
+catatonic and need to be institutionalized.
+* Silas is friendly, but he not only knows his role in Phillip's death but is
+reasonably sure that Cynthia was involved. He is planning to return to the Andaman
+Islands to investigate Cynthia's activities and also because it is getting hard to
+hide his youth in Providence.
+* In Sila's desk can be found notes for his next book, about cannibalism. The notes
+indicate that Silas is unbalanaced. In his files can be found the lease to a
+farmhouse.
+* Investigating the farmhouse, leads to the table where Phillip met his end. No
+attempt has been mde to cover up the crime.")))))))
+    "Kingdom of the Gods"
+     (chapter
+      :name "Kingdom of the Gods"
+      :sectionmap
+       (sectionmap
+        "Kingdom Undead"
+         (section
+          :name "Kingdom Undead"
+          :unitmap
+           (unitmap
+            "Kingdom Ghoul"
+             (unit
+              :name "Kingdom Ghoul"
+              :summary
+               "* Strengths:
+** Agility and endurance: In some scenes, they were able to bring down a full-size horse and nearly match the speed of one for short, sustained periods of time.
+** Short incubation period: It takes about 15 seconds to 1 minute for a victim to turn into an undead zombie. Making them effectively at multiplying and overwhelming urban centres. However, this can vary. One main character was able to resist the infection for over 2 minutes.
+** Durability: It has been observed that even if their internal organs are exposed or took a direct stab from a sword to their chest, this doesn't kill them.
+** Heightened sense of smell: A fresh drop of blood from an uninfected human can attract other infected bodies many meters away.
+* Weakness:
+** Decapitation: They're capable of taking damage that would be fatal to most men. It was found that decapitation or destruction of the head is the most effective in killing them.
+** Aversion to water bodies: It has been observed they will generally avoid travelling on water bodies. They have no ability to swim, and when they are pushed into deeper waters, they will immediately sink to the bottom.
+** Heat: They have been observed to immediately seek shelter when the day begins to break in order to escape the heat of direct sunlight. As a result, during spring or summer, they are only active during the day and hibernate at night.
+** Fire: Fire can be used to keep infected at bay.
+** Reduced vision: The milky eyes limits their vision to basic movements, so they rely on smell and hearing to hunt.
+** Blood: Blood can be used to distract or bait the zombies to behave in certain ways. Although dangerous, using fresh blood on rooftops is shown to be an effective means to lure zombies if needed."))
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))))))
+    "Night of the Living Dead"
+     (chapter
+      :name "Night of the Living Dead")
+    "Serial Killers"
+     (chapter
+      :name "Serial Killers"
+      :sectionmap
+       (sectionmap
+        :Freaks
+         (section
+          :name "Freaks"
+          :unitmap
+           (unitmap
+            "Backwoods Crazies"
+             (unit
+              :name "Backwoods Crazies"
+              :reference "* Deliverance, Hills Have Eyes, Texas Chainsaw Massacre")))
+        "Unstoppable Killer"
+         (section
+          :name "Unstoppable Killer"
+          :reference "* Friday the 13th, Nightmare on Elm Street")))
+    "Deadly Beasts"
+     (chapter
+      :name "Deadly Beasts"
+      :reference "* Jaws, Phase IV, Them"))))

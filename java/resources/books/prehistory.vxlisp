@@ -1,0 +1,132 @@
+(package nx/tactics/books/prehistory
+ :libs (lib base :path nx/tactics/base))
+
+(func book : base/book
+ (book
+  :name "Prehistory"
+  :chaptermap
+   (chaptermap
+    "Prehistory Overview"
+     (chapter
+      :name "Prehistory Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: Prehistory?"
+         (section
+          :name "Why Tactics: Prehistory?")))
+    "Prehistoric Creatures"
+     (chapter
+      :name "Prehistoric Creatures"
+      :sectionmap
+       (sectionmap
+        :Dinosaurs
+         (section
+          :name "Dinosaurs"
+          :unitmap
+           (unitmap
+            :Allosaurus
+             (unit
+              :name "Allosaurus")
+            :Ankylosaur
+             (unit
+              :name "Ankylosaur")
+            "Brontosaur (Apatosaurus)"
+             (unit
+              :name "Brontosaur (Apatosaurus)")
+            :Protoceratops
+             (unit
+              :name "Protoceratops")
+            :Stegosaurus
+             (unit
+              :name "Stegosaurus")
+            :Triceratops
+             (unit
+              :name "Triceratops")
+            :Velociraptor
+             (unit
+              :name "Velociraptor"
+              :summary "Turkey sized carnivore"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidtagfound"
+                  :severity 2))))
+            "Tyrannosaurus Rex"
+             (unit
+              :name "Tyrannosaurus Rex"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidtagfound"
+                  :severity 2))))))
+        "Prehistoric Avian Creatures"
+         (section
+          :name "Prehistoric Avian Creatures"
+          :unitmap
+           (unitmap
+            :Pterodactyl
+             (unit
+              :name "Pterodactyl")))
+        "Prehistoric Insects"
+         (section
+          :name "Prehistoric Insects"
+          :unitmap
+           (unitmap
+            "Giant Dragonfly"
+             (unit
+              :name "Giant Dragonfly")
+            "Giant Mosquito"
+             (unit
+              :name "Giant Mosquito")))
+        "Prehistoric Marine Creatures"
+         (section
+          :name "Prehistoric Marine Creatures"
+          :unitmap
+           (unitmap
+            "Giant Gar"
+             (unit
+              :name "Giant Gar")
+            "Giant Turtle"
+             (unit
+              :name "Giant Turtle")
+            :Megaladon
+             (unit
+              :name "Megaladon"
+              :summary "70 ft shark.  Highly developed killing machine kills with no remorse, no pity, no feeling of satisfaction.  Their only apparent emotion is [[Bloodlust]]."
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidtagfound"
+                  :severity 2))))
+            :Plesiosaur
+             (unit
+              :name "Plesiosaur")))
+        "Prehistoric Mammals"
+         (section
+          :name "Prehistoric Mammals"
+          :unitmap
+           (unitmap
+            :Megatherium
+             (unit
+              :name "Megatherium"
+              :summary "Elephant-sized ground sloth")
+            :Sabrelion
+             (unit
+              :name "Sabrelion")
+            "Sabretooth Tiger"
+             (unit
+              :name "Sabretooth Tiger")
+            "Woolly Mammoth"
+             (unit
+              :name "Woolly Mammoth")))
+        "Primitive Man"
+         (section
+          :name "Primitive Man"
+          :unitmap
+           (unitmap
+            :Hunter/Gatherer
+             (unit
+              :name "Hunter/Gatherer"))))))))

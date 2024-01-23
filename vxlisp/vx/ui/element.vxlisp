@@ -1,0 +1,23 @@
+(package vx/ui/element)
+
+(type element : struct
+ :properties [name  : string
+             style : style])
+
+(type orientation : struct
+ :properties [rotate-x : float
+              rotate-y : float
+              rotate-z : float])
+
+(type point : struct
+ :properties [x : float
+              y : float
+              z : float])
+
+(type pointlist : list
+ :allowtypes [point])
+
+(type style : struct
+ :properties [name        : string
+              pointlist   : pointlist
+              orientation : orientation])

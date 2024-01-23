@@ -1,0 +1,336 @@
+(package nx/tactics/books/magic
+ :libs (lib base :path nx/tactics/base))
+
+(func book : base/book
+ (book
+  :name "Magic"
+  :image "Magick.jpg"
+  :chaptermap
+   (chaptermap
+    "Magic Overview"
+     (chapter
+      :name "Magic Overview"
+      :summary
+       "* The Art
+
+Classifications
+* Abjuration - Protective Magic.  They create barriers, negate abilities, harm
+trespassers, or banish those who do not
+belong.  It includes Barriers and Wards.")
+    "Magical Skills"
+     (chapter
+      :name "Magical Skills"
+      :sectionmap
+       (sectionmap
+        "Magic Items"
+         (section
+          :name "Magic Items"
+          :summary
+           "* Magic Weapons ignore armor equal to their + value.
+* Magic Armor ignores damage equal to their + value.")
+        "Arcane Magic"
+         (section
+          :name "Arcane Magic"
+          :reference
+           "* Magic/Magick is not capable of producing 'miracles' or violating the physical laws of the universe (e.g., it cannot cause a solar eclipse), although it is theoretically possible to cause in any object any change of which that object is capable by nature - Aleister Crowley
+* Every intentional (Willed) act is a Magical act. - Aleister Crowley
+* Magick is the Science of understanding oneself and one's conditions. It is the Art of applying that 	understanding in action. - Aleister Crowley"
+          :summary
+           "* Those who pursue the arcane arts believe that by aligning their own minds to the patterns of reality, they may turn those patterns to their own ends.
+* Many believe that one must Awaken before being able to wield Magic.
+* Arcanists focus on the will of the individual to bend the world to their desires. This individual supremicist viewpoint is typically reflected in their egos as well."
+          :titles "Arcanist"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        "Black Magic"
+         (section
+          :name "Black Magic"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        :Thergy
+         (section
+          :name "Thergy"
+          :reference "* Pray, not for the gods, or the betterment of others, but for yourself - Rosaria, Genshin Impact"
+          :titles "Channelling, Miracle Working, White Magic"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        "Nature Magic"
+         (section
+          :name "Nature Magic"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        :Spiritualism
+         (section
+          :name "Spiritualism"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))))
+    "Magic Items"
+     (chapter
+      :name "Magic Items"
+      :sectionmap
+       (sectionmap
+        :Garb
+         (section
+          :name "Garb"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        "Miscellaneous Magic"
+         (section
+          :name "Miscellaneous Magic"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))))
+        "Magic Weapons"
+         (section
+          :name "Magic Weapons"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))))))))))

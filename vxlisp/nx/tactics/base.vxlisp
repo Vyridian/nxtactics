@@ -1,0 +1,331 @@
+(package nx/tactics/base
+ :doc "Tactics Base Types")
+
+(type ability : struct
+ :traits     [card])
+
+(type abilitymap : map
+ :allowtypes [ability])
+
+(type book : struct
+ :traits     [card]
+ :properties [chaptermap : chaptermap])
+
+(type bookmap : map
+ :allowtypes [book])
+
+(type card : struct
+ :properties [name        : string
+              image       : string
+              reference   : string
+              summary     : string
+              titles      : string
+              orientation : string])
+
+(type cardlist : list
+ :allowtypes [card])
+
+(type cardmap : map
+ :allowtypes [card])
+
+(type chapter : struct
+ :traits     [card]
+ :properties [sectionmap : sectionmap])
+
+(type chapterlist : list
+ :allowtypes [chapter])
+
+(type chaptermap : map
+ :allowtypes [chapter])
+
+(type damage : struct
+ :traits [card])
+
+(type damagelist : list
+ :allowtypes [damage])
+
+(type damagemap : map
+ :allowtypes [damage])
+
+(type deck : struct
+ :traits     [card]
+ :properties [cardmap : cardmap])
+
+(type deckmap : map
+ :traits     [card]
+ :allowtypes [deck])
+
+(type goal : struct
+ :properties [description : string
+              progress    : int
+              complete    : int
+              reward      : string]
+ :traits [card])
+
+(type item : struct
+ :traits     [card]
+ :properties [body            : rating
+              mind            : rating
+              will            : rating
+              speed           : rating
+              shadow          : rating
+              beast           : rating
+              mass            : string
+              rolemap         : rolemap
+              unitpowermap    : unitpowermap
+              unitskillmap    : unitskillmap
+              unitweaknessmap : unitweaknessmap])
+
+(type itemmap : map
+ :allowtypes [item])
+
+(type location : struct
+ :traits     [card]
+ :properties [locationmap : locationmap
+              unitmap     : unitmap])
+
+(type locationmap : map
+ :allowtypes [location])
+
+(type mind : struct
+ :traits [card]
+ :doc "The ability to use rational thought to do tasks. This is the opposite of the [Shadow].")
+
+(type modifier : struct
+ :traits [card])
+
+(type playingcard : struct
+ :properties [rank : rank
+              suit : suit])
+
+(type power : struct
+ :traits     [card]
+ :properties [abilitymap   : abilitymap
+              specialtymap : specialtymap])
+
+(type powermap : map
+ :allowtypes [power])
+
+(type rank : struct
+ :traits  [card])
+
+(type rating : struct
+ :traits     [card]
+ :properties [level : int :doc "Values: 2->10"
+              part  : int :doc "Values: 0->9"
+              scale : int :doc "Values: -x->x"]
+ :doc "Rating are displayed as level.part:scale.")
+
+(type role : struct)
+
+(type rolemap : map
+ :allowtypes [role])
+
+(type rule : struct
+ :traits     [card])
+
+(type rulemap : map
+ :allowtypes [rule])
+
+(type scenario : struct
+ :traits     [card])
+
+(type scenariomap : map
+ :allowtypes [scenario])
+
+(type section : struct
+ :traits     [card]
+ :properties [deckmap     : deckmap
+              itemmap     : itemmap
+              locationmap : locationmap
+              powermap    : powermap
+              rulemap     : rulemap
+              scenariomap : scenariomap
+              sectionmap  : sectionmap
+              skillmap    : skillmap
+              suitmap     : suitmap
+              unitmap     : unitmap
+              weaknessmap : weaknessmap])
+
+(type sectionmap : map
+ :allowtypes [section])
+
+(type skill : struct
+ :traits     [card]
+ :properties [rating       : rating
+              stat         : stat
+              abilitymap   : abilitymap
+              specialtymap : specialtymap])
+
+(type skillmap : map
+ :allowtypes [skill])
+
+(type specialty : struct
+ :traits     [card])
+
+(type specialtymap : map
+ :traits     [card]
+ :allowtypes [specialty])
+
+(type stat : struct
+ :traits [card])
+
+(type suit : struct
+ :traits [card])
+
+(type suitmap : map
+ :traits     [card]
+ :allowtypes [suit])
+
+(type threat : struct
+ :properties [description  : string
+              progress     : int
+              complete     : int
+              consequences : string]
+ :traits [card])
+
+(type unit : struct
+ :traits     [card]
+ :properties [body            : rating
+              mind            : rating
+              will            : rating
+              speed           : rating
+              shadow          : rating
+              beast           : rating
+              demeanor        : rating
+              nature          : rating
+              mass            : string
+              height          : string
+              length          : string
+              width           : string
+              damagelist      : damagelist
+              rolemap         : rolemap
+              unitpowermap    : unitpowermap
+              unitskillmap    : unitskillmap
+              unitweaknessmap : unitweaknessmap])
+
+(type unitability : struct)
+
+(type unitabilitymap : map
+ :allowtypes [unitability])
+
+(type unititem : struct)
+
+(type unititemmap : map
+ :allowtypes [unititem])
+
+(type unitmap : map
+ :allowtypes [unit])
+
+(type unitpower : struct
+ :properties [name         : string
+              level        : rating
+              power        : power
+              abilitymap   : unitabilitymap
+              itemmap      : unititemmap
+              specialtymap : unitspecialtymap])
+
+(type unitpowermap : map
+ :allowtypes [unitpower])
+
+(type unitskill : struct
+ :properties [name             : string
+              level            : rating
+              skill            : skill
+              unitabilitymap   : unitabilitymap
+              unititemmap      : unititemmap
+              unitspecialtymap : unitspecialtymap])
+
+(type unitskillmap : map
+ :allowtypes [unitskill])
+
+(type unitspecialty : struct)
+
+(type unitspecialtymap : map
+ :allowtypes [unitspecialty])
+
+(type unitweakness : struct
+ :traits [card])
+
+(type unitweaknessmap : map
+ :allowtypes [unitweakness])
+
+(type weakness : struct
+ :traits [card])
+
+(type weaknessmap : map
+ :allowtypes [weakness])
+
+(const rank-ace : rank)
+
+(const rank-king : rank)
+
+(const rank-queen : rank)
+
+(const rank-jack : rank)
+
+(const rank-10 : rank)
+
+(const rank-9 : rank)
+
+(const rank-8 : rank)
+
+(const rank-7 : rank)
+
+(const rank-6 : rank)
+
+(const rank-5 : rank)
+
+(const rank-4 : rank)
+
+(const rank-3 : rank)
+
+(const rank-2 : rank)
+
+(const rank-joker : rank)
+
+(const role-aoe : role)
+
+(const role-bosskiller : role)
+
+(const role-buffer : role)
+
+(const role-crowdcontrol : role)
+
+(const role-distracter : role)
+
+(const role-healer : role)
+
+(const role-sniper : role)
+
+(const role-tank : role)
+
+(const role-trapper : role)
+
+(const role-utility : role)
+
+(const stat-beast : stat
+ :doc "The ability to use wild rage or terror to lash out or flee. This is the opposite of the [Will].")
+
+(const stat-body : stat)
+
+(const stat-mind : stat)
+
+(const stat-shadow : stat
+ :doc "The ability to use rational thought to do selfish/impulsive acts. This is the opposite of the [Mind].")
+
+(const stat-will : stat)
+
+(const stat-speed : stat)
+
+(const suit-club : suit)
+
+(const suit-diamond : suit)
+
+(const suit-heart : suit)
+
+(const suit-spade : suit)
+
+(func rating<-mass : rating
+ [mass : string]
+ :doc "Return a rating from a mass.")

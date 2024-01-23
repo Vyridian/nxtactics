@@ -1,0 +1,1110 @@
+(package nx/tactics/books/age_of_sail
+ :libs (lib base :path nx/tactics/base))
+
+(func book : base/book
+ (book
+  :name "Age Of Sail"
+  :chaptermap
+   (chaptermap
+    "Age of Sail Overview"
+     (chapter
+      :name "Age of Sail Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: Age of Sail?"
+         (section
+          :name "Why Tactics: Age of Sail?"
+          :reference "http://www.thepirateking.com/historical/cannon_projectiles.htm"
+          :summary
+           "The Age of Sail was the period in which international trade and naval warfare were dominated by sailing ships,
+lasting from the 16th to the mid 19th century.  This is a significant period during which square-rigged sailing
+ships carried European settlers to many parts of the world in one of the most expansive human migrations in
+recorded history.")
+        "Age of Sail Land Warfare"
+         (section
+          :name "Age of Sail Land Warfare"
+          :summary
+           "* Infantry
+* Cavalry
+* Muskets
+* Cannons
+* Artillery
+* High Ground")
+        "Age of Sail Naval Warfare"
+         (section
+          :name "Age of Sail Naval Warfare"
+          :summary
+           "* Wind
+* Large Ships
+* Small Ships
+* Solid Shot
+* Burning Shot
+* Chain Shot
+* Fortifications")))
+    "Age of Sail Weaponry"
+     (chapter
+      :name "Age of Sail Weaponry"
+      :sectionmap
+       (sectionmap
+        "Age of Sail Pistols"
+         (section
+          :name "Age of Sail Pistols"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))))
+        "Age of Sail Rifles"
+         (section
+          :name "Age of Sail Rifles"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        "Age of Sail Cannons"
+         (section
+          :name "Age of Sail Cannons"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2)))
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))))
+    :Renaissance
+     (chapter
+      :name "Renaissance")
+    "Golden Age of Sail"
+     (chapter
+      :name "Golden Age of Sail"
+      :sectionmap
+       (sectionmap
+        "Age of Sail Scenarios"
+         (section
+          :name "Age of Sail Scenarios"
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        "Age of Sail Dutch"
+         (section
+          :name "Age of Sail Dutch")
+        "Age of Sail British"
+         (section
+          :name "Age of Sail British"
+          :unitmap
+           (unitmap
+            "British Musketeers"
+             (unit
+              :name "British Musketeers"
+              :image "AgeOfSail/British_Musketeers.png"
+              :summary "Musket Infantry"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "British Caravel"
+             (unit
+              :name "British Caravel"
+              :image "AgeOfSail/BritishCaravel.png"
+              :mass "150tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "British Frigate"
+             (unit
+              :name "British Frigate"
+              :image "AgeOfSail/BritishFrigate.png"
+              :reference
+               "A warship second only in size to the Ship-of-the-Line.  Frigates were three-masted with a raised forecastle
+and quarterdeck.  They had anywhere from 24 to 38 guns on her deck.  They were faster than the
+ship-of-the-lines and were used for escort purposes.  They were sometimes used to hunt pirates.  Only a few
+pirates were ever in command of a frigate as most pirates would flee from a frigate."
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "British Man-O-War"
+             (unit
+              :name "British Man-O-War"
+              :image "AgeOfSail/BritishManOWar.png"
+              :mass "1000tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "British Schooner"
+             (unit
+              :name "British Schooner"
+              :image "AgeOfSail/BritishSchooner.png"
+              :mass "80tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "British Racing Galleon"
+             (unit
+              :name "British Racing Galleon"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))))
+        "East India Company"
+         (section
+          :name "East India Company")
+        :French
+         (section
+          :name "French"
+          :unitmap
+           (unitmap
+            "Napoleon Bonaparte"
+             (unit
+              :name "Napoleon Bonaparte"
+              :image "AgeOfSail/French_Napoleon.png")
+            "French Musketeers"
+             (unit
+              :name "French Musketeers"
+              :image "AgeOfSail/French_Musketeers.png"
+              :summary "Musket Infantry"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "French Carabiners"
+             (unit
+              :name "French Carabiners"
+              :summary "Light Cavalry carrying short Carbine rifles"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "French Dragoons"
+             (unit
+              :name "French Dragoons"
+              :image "AgeOfSail/French_Dragoons.png"
+              :summary "Musket Cavalry intending to ride into battle and dismount to fire."
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "French Man-O-War"
+             (unit
+              :name "French Man-O-War"
+              :reference
+               "These ships were the heavy-guns of the fleet.  They resembled galleons in design, but had heavy fire-power.
+Only the three major sea-powers of the time (Spain, England, and France) had many of these kind of ships."
+              :mass "1000tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "French Schooner"
+             (unit
+              :name "French Schooner"
+              :image "AgeOfSail/FrenchSchooner.png"
+              :mass "80tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))))
+        :Pirates
+         (section
+          :name "Pirates"
+          :summary
+           "The era of piracy in the Caribbean Sea began in the 17th century and died out in
+the 1720s after the navies of the nations of Western Europe with colonies in the
+Caribbean began combating pirates."
+          :unitmap
+           (unitmap
+            "Pirate Crew"
+             (unit
+              :name "Pirate Crew"
+              :image "AgeOfSail/Pirate_Crew.png"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Pirate Caravel"
+             (unit
+              :name "Pirate Caravel"
+              :image "AgeOfSail/PirateCaravel.png"
+              :mass "150tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Pirate Schooner"
+             (unit
+              :name "Pirate Schooner"
+              :image "AgeOfSail/PirateSchooner.png"
+              :reference
+               "The Schooner has a narrow hull, two masts and is less than 100 tons.  She is generally rigged with two large
+sails.  She had a shallow draft which allowed her to remain in shallow coves waiting for her prey.  The
+Schooner is very fast and large enough to carry a plentiful crew.  It was a favorite among both pirates and
+smugglers."
+              :mass "80tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Pirate Sloop"
+             (unit
+              :name "Pirate Sloop"
+              :reference
+               "The Sloop was fast, agile, and had a shallow draft.
+Today's sailing Yacht is essentially a sloop."
+              :mass "100tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Pirate Brigantine"
+             (unit
+              :name "Pirate Brigantine"
+              :reference
+               "The brigantine was a small ship carrying both sails and oars.  It was a favorite of Mediterranean pirates
+from whence it got its name Brigantine meaning Brigand Ship.  Later the ship referred to a two-masted sailing
+ship with much greater sailing power."
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidtagfound"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))))
+        "Age of Sail Portuguese"
+         (section
+          :name "Age of Sail Portuguese"
+          :unitmap
+           (unitmap
+            "Portuguese Caravel"
+             (unit
+              :name "Portuguese Caravel"
+              :reference "The Nina was actually named the Santa Clara.  Nina was a pun on its owner's name: Juan Nino."
+              :titles "Nina, Pinta"
+              :mass "150tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Portuguese Carrack"
+             (unit
+              :name "Portuguese Carrack"
+              :reference "All of Columbus' ships were second-hand (if not third or more) and were never meant for exploration."
+              :titles "Santa Maria"
+              :mass "300tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))))
+        "Age of Sail Spanish"
+         (section
+          :name "Age of Sail Spanish"
+          :unitmap
+           (unitmap
+            "Silver Train"
+             (unit
+              :name "Silver Train")
+            "Treasure Fleet"
+             (unit
+              :name "Treasure Fleet"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))))
+            "Spanish Caravel"
+             (unit
+              :name "Spanish Caravel"
+              :image "AgeOfSail/SpanishCaravel.png"
+              :mass "150tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Spanish Galleon"
+             (unit
+              :name "Spanish Galleon"
+              :image "AgeOfSail/SpanishGalleon.png"
+              :reference
+               "Large ships meant for transporting cargo.  The Spanish treasure fleets were made of these ships.  Although
+they were sluggish, they weren't the easy target you would expect for they could carry heavy cannon which
+made attacking them difficult.  They had two to three decks.  Most had three masts.  Some galleons sported 4
+masts but these were an exception to the rule."
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Spanish Man-O-War"
+             (unit
+              :name "Spanish Man-O-War"
+              :image "AgeOfSail/SpanishManOWar.png"
+              :mass "1000tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))
+            "Spanish Schooner"
+             (unit
+              :name "Spanish Schooner"
+              :image "AgeOfSail/SpanishSchooner.png"
+              :mass "80tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))))))
+    "American Revolution"
+     (chapter
+      :name "American Revolution"
+      :sectionmap
+       (sectionmap
+        "Age of Sail United States"
+         (section
+          :name "Age of Sail United States"
+          :unitmap
+           (unitmap
+            "American Frigate"
+             (unit
+              :name "American Frigate"
+              :image "AgeOfSail/AmericanFrigate.png"
+              :titles "USS Constitution, Old Ironsides"
+              :mass "2200tons"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidproperty"
+                  :severity 2))
+               :msgblocks
+                (msgblocklist
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidproperty"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2)))
+                 (msgblock
+                  :msgs
+                   (msglist
+                    (msg
+                     :code ":invalidtagfound"
+                     :severity 2))))))))))
+    "French Revolution"
+     (chapter
+      :name "French Revolution")
+    "Tokugawa Shogunate"
+     (chapter
+      :name "Tokugawa Shogunate"
+      :sectionmap
+       (sectionmap
+        "Tokugawa Prefecture"
+         (section
+          :name "Tokugawa Prefecture"
+          :unitmap
+           (unitmap
+            :Daimyo
+             (unit
+              :name "Daimyo"
+              :summary
+               "* A gruff, no nonsense samurai.  He craved the power and pretige of this position, but now finds that life as a
+Daimyo is sheltered and dull.
+* He is convinced that there is a plot to take his life, though there is no evidence to support this.  He seems to
+enjoy the challenge of defending himself against this threat.  He does fear dying dishonorably.  For this reason,
+he has his food rigorously tested and his bedchambers inordinately guarded.  He tries to leave himself more open to
+a direct attack, so he is often poorly guarded when he is armed.
+* The Daimyo feels intellectually challenged by both the Temple Master and the Castellan.  He has become
+increasingly interested in these mind games, and a good challenge is a sure way to the Daimyo's good favor."
+              :titles "Kenji Ginichi")
+            "Daimyo's Wife"
+             (unit
+              :name "Daimyo's Wife"
+              :summary
+               "* Efficient, beautiful, and totally unimportant.  The Daimyo is not interested in her at all.  She is only a baby
+machine to him (and not a very good one).  She does not aspire to higher station and is quite content with her
+circle of friends from the villiage who visit often.")
+            "Daimyo's Son"
+             (unit
+              :name "Daimyo's Son"
+              :summary
+               "* A bored an somewhat obnoxious teenager.  He revels in the past exploits of his illustrious father and is horrified
+by the inactive positon he is in now (a feeling shared by the Daimyo).  The idea of being a Daimyo (or a court
+samural makes him ill.  He wants to be an adventurer or a a ronin.  He has studied with the samurai and budoka, but
+he lacks incentive and discipline.  His most accomplished skill is distracting his guards so he can slip away.")
+            :Castellan
+             (unit
+              :name "Castellan"
+              :summary
+               "* A classic samurai, dedicated and loyal.  His main duties are to keep the province running, but more importantly he
+must protect the Daimyo and his family.  This last task has proven very difficult.  The Daimyo and his son have
+proven very difficult to defend.  The Daimyo constantly reduces his guards, and his son tries to escape them.  The
+castellan may not disobey the Daimyo, but he has prepared a long list of ways to manipulate the Daimyo into safer
+courses of action.  When unable to control the Daimyo, he will send troops 'on patrol' in the Daimyo's area.  He
+will delay or harry the Daimyo to make his movements less predictable.  The Daimyo is aware of these machinations
+and enjoys outsmarting the castellan wherever possible.  So far, the castellan is easily winning this battle of
+wits.")
+            "Temple Master"
+             (unit
+              :name "Temple Master"
+              :summary
+               "* The temple master is a man of great diplomatic skill, and the Daimyo has found himself outmatched in all but
+military issues.  The Daimyo often does not grant the master an audience until he has brushed up on the matter at
+hand.")
+            :Oyabun
+             (unit
+              :name "Oyabun"
+              :summary
+               "* The head of the local Yakuza sees that the Daimyo is acting rather recklessly and is plotting an elaborate and
+subtle scheme to take advantage of the situation."))
+          (msgblock
+           :msgs
+            (msglist
+             (msg
+              :code ":invalidtagfound"
+              :severity 2))
+           :msgblocks
+            (msgblocklist
+             (msgblock
+              :msgs
+               (msglist
+                (msg
+                 :code ":invalidtagfound"
+                 :severity 2))))))
+        "Age of Sail Japan"
+         (section
+          :name "Age of Sail Japan"
+          :unitmap
+           (unitmap
+            "Japanese Archer"
+             (unit
+              :name "Japanese Archer")
+            "Japanese Daimyo"
+             (unit
+              :name "Japanese Daimyo")
+            "Japanese Emperor"
+             (unit
+              :name "Japanese Emperor")
+            "Japanese Rifleman"
+             (unit
+              :name "Japanese Rifleman")
+            "Japnese Samurai"
+             (unit
+              :name "Japnese Samurai"))))))))

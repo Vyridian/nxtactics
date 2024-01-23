@@ -1,0 +1,96 @@
+(package nx/tactics/books/gettingstarted
+ :libs (lib base :path nx/tactics/base)
+ :doc "")
+
+(const scenario-murin-a0 : base/scenario
+ (base/scenario
+  :summary
+   "* Prologue - You've been traveling for a while. Odd jobs here and there have kept you fed, but
+    no opportunity has paid off so far. Your funds are desperately low, and you have to consider
+    giving up a life on the road for something more stable, at least for a while.
+    * Setting - You've ended up among the Iron Cross Mountains. This used to be territory
+    enthusiastically protected by the Dwarves who lived below, but thing have been quiet for a few
+    years and human civilization is tentatively spreading into the area. There are said to be
+    numerous mines and jewels to be found in these mountains, but so far they are just stories.
+    You are currently traveling with a couple of religious aspirants and their fanatical followers.
+    They claim to follow the Sun God and must follow him during the day. For some reason the truly
+    feebleminded seem to gather together. Well, even if their beliefs are nonsense, their coin is
+    real at least.
+    * Plot Hooks - A young man (Jos Halslef) with a mule and cart approach from ahead. His clothes
+    are well made but worn, and he does not appear threatening. He engages the group, but soon
+    finds conversation with the aspirants to go nowhere. He suggests coming with him to Murinton."))
+
+(const scenario-murin-a1 : base/scenario
+ (base/scenario
+  :summary
+   "* Murin Vale - Murin Vale is a misty depression huddled between stout Murin-Lead Mountain
+    and the spiky Murin-Quartz Peak. A hundred years ago, this entire area was controlled by the
+    Murin Dwarf Clan who served the [Dwarven Underking] far down the [Deep Roads]. However, long ago,
+    the Dwarves withdrew without explanation. Murinton, their trading village, was adopted by
+    the human traders who no longer had their main trading partner.
+    * Plot Hooks - A rough trail leads through the wooded vale to a small abandoned town, though
+    smoke can be seen rising from its center."))
+
+(const scenario-murin-a2 : base/scenario
+ (base/scenario
+  :summary
+   "* Murinton - Within Murin Vale, at the base of Murin-Lead Mountain is the abandoned, Dwarven
+    village of Murinton. A small populated outpost lies at its center. The outpost is dominated by
+    the 20ft stone doors that lead into Murin-Lead Mountain. The massive doors are carved with
+    dwarven artwork and sealed tight from within. The only occupied buildings are a general store,
+    a smithy, a small grain mill, and some outlying farm houses. A winding stream runs down the
+    mountain and powers the mill.
+    * Personalities - Only 9 people live in this town though there is probably room for a hundred.
+    ** Jen Halslef - Jen Halslef heads the outpost, negotiates deals, and runs the smithy when
+    needed. She founded the town 2 years ago, taking advantage of the free property and safe
+    territory. Maintaining the town has been difficult with so little resources, so she remains
+    concerned for the town's future. Her smithy is dedicated to the god dwarven god Moradin, and
+    has carved tablets around the walls describing smithing and calling on the blessings of
+    Moradin. She was facinated and has been diligently following both to improve her smithing.
+    Unknown to her, Moradin was intrigued by a human female follower and has blessed her.
+    Skills: Tradeskills: 1 (Smithing), Channeling: 1 (Healing).
+    ** Jos Halslef - Jen's twin brother runs the general store, trades with other villages, and
+    keeps the books. The twins had brought a fair quantity of goods to start the town, but after
+    2 years resources are getting thin. Chicken, Bread, Jam, and Beer are the staple foods in town.
+    Jos brings a homemade short spear with him when he travels and is passable at its use.
+    Skills: Trade: 1 (Haggling), Melee: 1 (Spears).
+    ** Silas and Marge Defold - This older couple keep the grain mill down by the winding stream.
+    They mill the flour and brew beer.
+    ** Mera Searf and Vela Tram - These two women run a wheat farm and bake bread to the west of
+    the village.
+    ** Thom, Janice, and Gwen Folken - A young couple with their 12 year old daughter run a small
+    farm to the south. Thom hunts deer and rabbit which are plentiful in the nearby woods, while
+    Janice and Gwen raise chickens. Gwen also gathers various berries and makes tasty jams. When
+    food is sufficient, Thom with his woodsman's axe. Skills: Hunting: 1 (Snares), Ranged: 1 (Bows)
+    * Missing Persons - Yesterday morning, the old mill was found abandoned. The miller  and his
+    wife were nowhere to be found, but some of their flour, wheat and beer were clearly dragged
+    away, their living quarters were ransacked, and small blood stains were found. A search around
+    the surrounding area left no clues.
+    * Scouts - Recently a small band of [Darkling]s opened up a small ventilation tunnel from
+    the Deep Roads. Three goblins had been scouting the area at night when they came across the
+    mill. After some arguing, they broke in, captured the couple, searched the place for loot, and
+    dragged away what they could.
+    * Hidden Camp - They have a small camp hidden in the woods where they have tied up the couple
+    and are doing their best to drink all the beer they stole and torment their prisoners. They
+    intend to return to gather more loot.
+    * Vent Base - Five miles away is the vent where the darklings broke through from the Deep
+    Roads. An ambitious Hobgoblin leads the 3 Goblin Scouts, 2 Goblin Engineers, and a Bugbear
+    Hunter.
+    ** Goblin Engineers (Sgree, Dley) - The engineers are working to widen the vent.
+    Body 3:1, Mind 2:1, Will 2:1
+    Skills: Mining (1), Melee: 1 (Picks)
+    ** Goblin Scouts (Grot, Steg, Glel-Female) - The scouts are at the Hidden Camp.
+    Body 3:1, Mind 2:1, Will 2:1
+    Skills: Scouting: 1 (Survey), Close Combat: 1 (Knives)
+    ** Bugbear (Reegal) - The Bugbear alternates between hunting, eating, and lounging. Like the
+    Hobgoblin, the Bugbear is most interested in his own survival. If the battle goes against
+    them, he will just disappear into the woods.
+    Body 2:2, Mind 3:1, Will 4:1
+    Skills: [Melee]: 3 [Long Spear], [Hunting]: 2 [Tracking], [Stalking], [Survival]: 2
+    [Find Shelter], [Live off the Land].
+    ** Hobgoblin (Gemste) - The Hobgoblin is very pleased with her plan to use the ventilation
+    shaft and hopes to expand it sufficiently for a future raiding force that she hopes to lead.
+    Though, she is a skilled fighter, she has higher ambitions than an early grave and is quick
+    to parley if overwhelmed.
+    Body 8:1, Mind 6:1, Will 5:1
+    Skills: Melee: 3 (Swords), Armor: 2 (Scale), Leadership: 2 (Command)"))

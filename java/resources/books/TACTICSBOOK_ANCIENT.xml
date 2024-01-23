@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc name="Ancients" image="300_phalanx.jpg">
+<chapter name="Ancients Overview">
+	<section name="Why Tactics: Ancients?">
+		<summary>
+		</summary>
+	</section>
+	<section name="Ancients Land Warfare">
+		<summary>
+			* Infantry
+			* Formations
+			* Axemen
+			* Polearms
+			* Cavalry
+			* Horse Archers
+			* Armored Cavalry
+			* Elephants
+			* Chariots
+			* Archers
+			* Longbows
+			* Crossbows
+			* Siege
+			* Ballista
+			* Catapult
+			* Fortifications
+		</summary>
+	</section>
+	<section name="Ancients Naval Warfare">
+		<summary>
+			* Wind
+			* Large Ships
+			* Small Ships
+			* War Barge
+			* Ballista
+		</summary>
+	</section>
+</chapter>
+<chapter name="Ancients Scenarios">
+	<section name="Ancient Scenarios">
+		<scenario name="Flush Them Out">
+			<summary>
+				* 10 Turns
+			</summary>
+			<team name="Germanics">
+				<partialvictory>
+					<summary>Romans lose more units than Germanics.</summary>
+				</partialvictory>
+				<completevictory>
+					<summary>Half of Roman units are lost.</summary>
+				</completevictory>
+				<forces>
+					* 20 Levels of units
+				</forces>
+				<deploy>
+					1) Tactical Map
+					2) 6 Forest Terrain on Germanic side of map
+					3) Deploy units anywhere on Germanic side of map
+				</deploy>
+			</team>
+			<team name="Romans*">
+				<partialvictory>
+					<summary>Germanics lose more units than Romans.</summary>
+				</partialvictory>
+				<completevictory>
+					<summary>Half of Germanics are lost.</summary>
+				</completevictory>
+				<forces>
+					* 20 Levels of units
+				</forces>
+				<deploy>
+					1) Tactical Map
+					2) 3 Forest Terrain on Roman side of map.
+					3) Deploy units along Roman players edge of the map.
+				</deploy>
+			</team>
+		</scenario>
+		<scenario name="Roman Gladiators" />
+	</section>
+</chapter>
+<chapter name="Anglo/Saxons">
+	<section name="Anglo/Saxon Armies">
+	</section>
+</chapter>
+<chapter name="Carthaginians">
+	<section name="Carthaginian Armies">
+		<unit name="Carthaginian Elephant" mass="10tons" speed="40kph">
+		</unit>
+	</section>
+	<section name="Carhaginian Naval Vessels">
+		<item name="Carthaginian Quinquereme" />
+	</section>
+</chapter>
+<chapter name="Chinese Dynasty">
+</chapter>
+<chapter name="Egyptian Dynasty">
+	<section name="Egyptian Armies">
+		<unit name="Egyptian Archer" />
+		<unit name="Egyptian Charioteer" />
+	</section>
+</chapter>
+<chapter name="Germanic Tribes">
+	<section name="Germanic Armies">
+		<unit name="Free Spears" classification="Lt. Infantry" image="Germanics/GermanLevySpearmen.png">
+			<summary>
+				Free Spears are farmers and hunters.  According to Germanic tradition, as soon as these men receive their
+				spear and shield, they are 'free' adults.  Though lacking in the organized training of the warbands, they
+				are veterans of the ritualized tribal warfare of German tribes, and fight with a force and fury superior to
+				their neighbors militia.
+			</summary>
+			<skill name="Melee" level="3">
+				<item name="Spear" />
+			</skill>
+			<skill name="Armor" level="1">
+				<item name="Shield" />
+			</skill>
+			<skill name="Military" level="3">
+			</skill>
+		</unit>
+		<unit name="Youth Skirmishers" classification="Lt. Infantry" image="Germanics/GermanSkirmishers.png">
+			<summary>
+				Young skirmishers break up and harass enemy formations before the main battle lines meet, and act as a screen
+				for heavy troops, taking losses in order to increase the odds of survival of more valuable 'proven' warriors.
+				They must first prove themselves in battle in order to earn status.  Each warrior is armed with a bundle of
+				throwing spears, a slightly longer spear for melee and a stout ovular shield, but they do not wear armor,
+				being poor and of low status, but also choosing speed over protection.
+			</summary>
+			<skill name="Melee" level="3">
+				<item name="Spear" />
+				<item name="Javelin" rounds="5" />
+			</skill>
+			<skill name="Armor" level="1">
+				<item name="Shield" />
+			</skill>
+			<skill name="Military" level="3">
+				<ability name="Formation: Skirmish" />
+			</skill>
+			<skill name="Survival" level="2">
+				<ability name="Forestry" />
+			</skill>
+		</unit>
+		<unit name="Proven Spearmen" classification="Lt. Infantry" image="Germanics/GermanTrustedSpearmen.png">
+			<summary>
+				Proud and experienced, 'proven' warriors steeled by years of constant warfare and veterans of numerous
+				conflicts.  These men are hardened for battle and unlikely to flee from conflict, and are trained through
+				long experience to work in close or open formation, and even the shieldwall.
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Spear" />
+			</skill>
+			<skill name="Armor" level="2">
+				<item name="Leather Armor" />
+				<item name="Shield" />
+			</skill>
+			<skill name="Military" level="4">
+				<ability name="Formation: Shield Wall" />
+			</skill>
+		</unit>
+		<unit name="German Slayers" classification="Med. Infantry" image="Germanics/GermanSlayers.png">
+			<summary>
+				By shaping heavy boughs of oak and inserting bone spikes, these Cudgels can be used to maim both armored
+				and unarmored foes alike.  Cudgels are cheap, easy to make, and replaceable on campaign, while also being
+				able to smash or punch through armor.  Although this weapon may seem primitive to untrained eyes, against
+				armored opponents it is more effective than any other at their disposal.  These light armored club warriors
+				were recorded to have taken down units of the feared and notoriously lethal kataphraktoi.
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Cudgel" />
+			</skill>
+			<skill name="Armor" level="2">
+				<item name="Leather Armor" />
+				<item name="Shield" />
+			</skill>
+			<skill name="Military" level="4">
+			</skill>
+		</unit>
+		<unit name="German Shooters" classification="Lt. Infantry" image="Germanics/GermanShooters.png">
+			<summary>
+				Equipped to harass and break up enemy formations so more experienced and valuable melee warriors can finish
+				them.  Shooters are often untrained or uncapable warriors, but many are also excellect hunters.  They are
+				also armed with the spear and can act as light infantry, but they will not last long in melee.  In the woods,
+				their superior ambush skills can be put to best use.
+
+				Historically, Germanic bowmen on the battlefield were few in numbers, because weapons were status symbols,
+				and common multipurpose tools, such as the axe or bow were looked down upon.
+			</summary>
+			<skill name="Aim" level="3">
+				<item name="Composite Bow" />
+				<ability name="Flaming Arrow" />
+				<ability name="Arcing Fire" />
+			</skill>
+			<skill name="Melee" level="2">
+				<item name="Spear" />
+			</skill>
+			<skill name="Military" level="3">
+				<ability name="Formation: Skirmish" />
+			</skill>
+		</unit>
+		<unit name="Sword Possessors" classification="Lt. Infantry" image="Germanics/GermanSwordPossessors.png">
+			<summary>
+				Sword Possessors are well trained, experienced and armed with superior quality swords and javelins to
+				soften the enemy before their furious charge.
+
+				Historically, swords were not plentiful in Germanic lands because of the cost of iron, so those fierce and
+				valiant warriors carried their highly valued swords with pride.
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Broadsword" />
+			</skill>
+			<skill name="Aim" level="3">
+				<item name="Javelin" rounds="2" />
+			</skill>
+			<skill name="Armor" level="2">
+				<item name="Leather Armor" />
+				<item name="Shield" />
+			</skill>
+			<skill name="Military" level="4">
+				<ability name="Formation: Shield Wall" />
+			</skill>
+		</unit>
+		<unit name="Night Walkers" classification="Lt. Infantry" image="Germanics/GermanNightWalkers.png">
+			<summary>
+				Night-Walkers are unconventional warriors who specialize in ambush.  They display their zeal and ferocity
+				with the help of pitch and dye by blackening their shields and bodies.  They choose dark nights for their
+				battles and when the moment is right, they charge wildly, wide-eyed and screaming at their foes.  Any who
+				survive assaults by these maniacal warriors are convinced they are spirits sent from the otherworld.
+			</summary>
+			<skill name="Melee" level="3">
+				<item name="Spear" />
+				<item name="Javelin" rounds="2" />
+			</skill>
+			<skill name="Armor" level="2">
+				<item name="Leather Armor" />
+				<item name="Shield" />
+			</skill>
+			<skill name="Survival" level="2">
+				<ability name="Forestry" />
+			</skill>
+			<skill name="Intimidation" level="3">
+				<ability name="Terrorize" />
+			</skill>
+		</unit>
+		<unit name="Pike Fence" classification="Hvy. Infantry" image="Germanics/GermanPikeFence.png">
+			<summary>
+				The Pike Fence are hard-nosed, disciplined warriors that fight together in a
+				very dense formation, unlike most other Germanic warbands. They are trained in
+				the Shield Wall and are universally feared by cavalry.
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Pike" />
+			</skill>
+			<skill name="Armor" level="2">
+				<item name="Leather Armor" />
+				<item name="Shield" />
+			</skill>
+			<skill name="Military" level="4">
+				<ability name="Formation: Shield Wall" />
+			</skill>
+		</unit>
+		<unit name="Hearth Companions" classification="Hvy. Infantry" image="Germanics/GermanHearthCompanion.png">
+			<summary>
+				These are the Germanic tribes' best warriors. Germans respect their leader's
+				bravery, not their rank, and it is a disgrace for a leader to be surpassed in
+				bravery. They are wealthy, powerful men, fiercely loyal to their lord, often
+				heavily scarred by years of warfare. Their weapons and armor are the best. To
+				leave a battlefield alive while their lord lay dead meant a life of shame and
+				scorn. To defend and protect him, to assign one's own acts of heroism to his
+				credit-that's what is truly meant by allegiance.
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Broadsword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Chain Mail Armor" />
+				<item name="Shield" />
+			</skill>
+			<skill name="Military" level="5">
+				<ability name="Formation: Shield Wall" />
+			</skill>
+			<skill name="Command" level="3">
+				<ability name="Chain of Command" />
+				<ability name="Rally" />
+			</skill>
+		</unit>
+		<unit name="Germanic Riders" classification="Lt. Cavalry" image="Germanics/GermanRiders.png">
+			<summary>
+				Riders ride small, poor quality horses, though they are excellent light cavalry.  Like many Germanic warriors,
+				however, they can lack battle-discipline and be over-keen to enter battle for glory.
+
+				They were mostly armed with shield and spear and were supported by fast-moving light infantry - this light
+				cavalry combined with light infantry allowed great tactical speed and versatility on the battlefield.
+
+				Historically, Germanic tribes did not frequently use cavalry, however, some tribes were known for their
+				cavalry and many peoples praised the good quality of Germanic cavalry.  Though their horses were not
+				exceptional, Germanic horsemen could still maneuver very well and operated as a unit, rather than as an
+				unorganized band.
+			</summary>
+			<skill name="Melee" level="3">
+				<item name="Spear" />
+			</skill>
+			<skill name="Armor" level="2">
+				<item name="Leather Armor" />
+				<item name="Shield" />
+			</skill>
+			<skill name="Riding" level="4">
+				<ability name="Charge" />
+				<ability name="Run Down" />
+			</skill>
+			<skill name="Military" level="4">
+			</skill>
+		</unit>
+		<unit name="Germ. Companion Cavalry" classification="Hvy. Cavalry" image="Germanics/GermanCompanionCavalry.png">
+			<summary>
+				The Companion Cavalry are extremely wealthy and powerful men, but still fiercely loyal to their lord who
+				provides them the finest warhorses and wargear at his disposal.
+
+				They can be used most effectively as shock troops whose charges can break the enemy line and destory their
+				flanks, but they are also useful for overrunning heavy infantry and slaughtering lighter cavalry.
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Lance" />
+				<item name="Cavalry Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Scalemail" />
+				<item name="Shield" />
+			</skill>
+			<skill name="Riding" level="4">
+				<ability name="Charge" />
+			</skill>
+			<skill name="Military" level="5">
+			</skill>
+			<skill name="Command" level="3">
+				<ability name="Chain of Command" />
+				<ability name="Rally" />
+			</skill>
+		</unit>
+	</section>
+</chapter>
+<chapter name="Greek City States">
+	<section name="Greek Armies">
+		<unit name="Greek Hoplite" classification="Hvy. Infantry" image="Greeks/GreekHopliteToken.png">
+			<skill name="Melee" level="4">
+				<item name="Pike" />
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Laminated Armor" />
+				<item name="Tower Shield" />
+			</skill>
+			<skill name="Military" level="4">
+				<ability name="Formation: Phalanx" />
+				<ability name="Formation: Shield Wall" />
+			</skill>
+		</unit>
+		<unit name="Spartan Hoplite" classification="Hvy. Infantry" image="Greeks/GreekSpartanToken.png">
+			<skill name="Melee" level="5">
+				<item name="Pike" />
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Breast Plate" />
+				<item name="Tower Shield" />
+			</skill>
+			<skill name="Military" level="5">
+				<ability name="Formation: Phalanx" />
+				<ability name="Formation: Shield Wall" />
+			</skill>
+			<skill name="Command" level="2">
+				<ability name="Chain of Command" />
+			</skill>
+			<reference>
+				* From the age of seven onwards, Spartan males were trained for a life of warfare.  They were taught iron
+				discipline, and almost programmed to forget about their individuality.
+				* The strenuous training and comradeship engendered between Spartans made them ideally suited to hoplite warfare
+				which required high levels of discipline and selflessness.
+			</reference>
+		</unit>
+		<unit name="Greek General" classification="Med. Infantry" image="Greeks/GreekGeneralToken.png">
+			<skill name="Melee" level="4">
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Breast Plate" />
+				<item name="Tower Shield" />
+			</skill>
+			<skill name="Military" level="4">
+				<ability name="Formation: Phalanx" />
+				<ability name="Formation: Shield Wall" />
+			</skill>
+			<skill name="Command" level="4">
+				<ability name="Chain of Command" />
+				<ability name="Rally" />
+			</skill>
+		</unit>
+		<unit name="Thracian Peltast" classification="Lt. Infantry">
+			<skill name="Melee" level="3">
+				<item name="Javelin" rounds="5" />
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="1">
+				<item name="Round Shield" />
+			</skill>
+			<skill name="Military" level="3">
+				<ability name="Formation: Skirmish" />
+			</skill>
+			<reference>
+				* When faced by hoplites peltasts operated by throwing javelins at short range.  If the hoplites charged they
+				would flee.  As they carried considerably lighter equipment than the hoplites they were usually able to evade
+				successfully especially in difficult terrain.
+				* Peltasts were usually deployed on the flanks of the phalanx providing a link with any cavalry.
+			</reference>
+		</unit>
+		<unit name="Greek Cavalry" classification="Hvy. Cavalry">
+			<skill name="Melee" level="3">
+				<item name="Lance" />
+				<item name="Cavalry Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Chain Mail Armor" />
+			</skill>
+			<skill name="Riding" level="3">
+				<ability name="Charge" />
+			</skill>
+			<skill name="Military" level="3">
+			</skill>
+			<reference>
+				The utility of the Greek Citizen Cavalry was small on account of their heavy armor.
+			</reference>
+		</unit>
+		<unit name="Greek Cataphracts" classification="Hvy. Cavalry">
+			<skill name="Melee" level="4">
+				<item name="Lance" />
+				<item name="Cavalry Sword" />
+			</skill>
+			<skill name="Armor" level="4">
+				<item name="Scalemail" />
+				<item name="Tower Shield" />
+				<item name="Scale Barding" />
+			</skill>
+			<skill name="Riding" level="4">
+				<ability name="Charge" />
+			</skill>
+			<skill name="Military" level="4">
+			</skill>
+			<skill name="Command" level="4">
+				<ability name="Chain of Command" />
+			</skill>
+		</unit>
+		<unit name="Greek Philosopher" />
+		<unit name="Greek Senator" />
+		<unit name="Greek Wrestler" />
+	</section>
+	<section name="Greek Naval Vessels">
+		<item name="Greek Galley" />
+		<item name="Greek Trireme" />
+		<item name="Greek Quinquereme" />
+	</section>
+</chapter>
+<chapter name="Macedon">
+	<section name="Macedonian Armies">
+		<unit name="Macedonian Prodromoi Cavalry" classification="Lt. Cavalry">
+			<skill name="Melee" level="4">
+				<item name="Javelin" />
+				<item name="Cavalry Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Leather Armor" />
+				<item name="Round Shield" />
+			</skill>
+			<skill name="Riding" level="4">
+				<ability name="Charge" />
+			</skill>
+			<skill name="Military" level="4">
+				<ability name="Formation: Skirmish" />
+			</skill>
+			<reference>
+				The utility of the Greek Citizen Cavalry was small on account of their heavy armor.
+			</reference>
+		</unit>
+		<unit name="Macedonian Companion Cavalry" classification="Hvy. Cavalry">
+			<skill name="Melee" level="4">
+				<item name="Lance" />
+				<item name="Cavalry Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Scalemail" />
+				<item name="Tower Shield" />
+			</skill>
+			<skill name="Riding" level="4">
+				<ability name="Charge" />
+			</skill>
+			<skill name="Military" level="4">
+			</skill>
+		</unit>
+	</section>
+	<section name="Macedonian Naval Vessels">
+		<item name="Macedonian Galley" />
+		<item name="Macedonian Trireme" />
+	</section>
+</chapter>
+<chapter name="Norsemen">
+	<section name="Viking Armies">
+		<unit name="Viking Axeman">
+			<skill name="Frenzy">
+				<ability name="Berserker" />
+			</skill>
+		</unit>
+		<unit name="Viking Swordsman" />
+	</section>
+	<section name="Viking Naval Vessels">
+		<item name="Viking War Galley" />
+	</section>
+</chapter>
+<chapter name="Persians">
+	<section name="Persian Armies">
+		<unit name="Persian Lt. Cavalry" />
+		<unit name="Persian Horse Archer" />
+		<unit name="Persian Scythed Chariot" />
+	</section>
+</chapter>
+<chapter name="Roman Empire">
+	<section name="Legionnaries">
+		<summary>
+			Roman Legions were the official fighting force of the empire and were divided in the following way:
+
+			* Each Legion consisted of 4800 men
+			* Each Legion was divided into 10 cohorts of 480 legionaries
+			* Each Cohort was divided into 6 centuries of 80 men each.  The 6 centuries were: Forward Hastati, Rear Hastati,
+			Forward Pricipes, Rear Pricipes, Forward Triarii, and Rear Triarii.
+			* Each Century was divided into 10 octets of 8 men.  Soldiers of an octet shared a tent, and were rewarded or
+			punished together.  If one member acted dishonorably in battle, that contubernium would suffer
+			decimation, whereby the group would be required to draw straws, the soldier unlucky enough to draw the short straw
+			then being stoned to death by the others.
+		</summary>
+		<unit name="Hastati" classification="Hvy. Infantry" image="Romans/RomanLegionaireToken.png">
+			<summary>
+				These were the first line of the Roman heavy infantry and were made up of the relatively young
+				(inexperienced), but wealthier citizens.  The Hastati were the primary engaging force of the
+				legion and always met the enemy first in melee combat. If things went badly, or they simply needed
+				to rest and regroup, the Hastati would roll behind the Princeps.
+			</summary>
+			<skill name="Melee" level="3">
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Aim" level="2">
+				<item name="Javelin" rounds="2" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Legionary Shield" />
+				<item name="Bronze Armor" />
+			</skill>
+			<skill name="Military" level="3">
+				<ability name="Formation: Shield Wall" />
+				<ability name="Formation: Testudo" />
+			</skill>
+		</unit>
+		<unit name="Princeps" classification="Hvy. Infantry" image="Romans/RomanPrincepToken.png">
+			<summary>
+				The elite of the legion, in the prime of their careers for age and experience, and constituted the
+				wealthier class.  It was simply the obligation of the Princeps to win the battle.  First they would
+				act in relief of the Hastati, but then would carry the fight in earnest.  It was a successful tactic,
+				wearing down the enemy with good, but not your best forces, than hitting with your best men right in
+				the middle of the fight.
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Aim" level="3">
+				<item name="Pilum" rounds="2" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Legionary Shield" />
+				<item name="Chain Mail Armor" />
+			</skill>
+			<skill name="Military" level="4">
+				<ability name="Formation: Shield Wall" />
+				<ability name="Formation: Testudo" />
+			</skill>
+		</unit>
+		<unit name="Triarii" classification="Hvy. Infantry" image="Romans/RomanLegionaire2Token.png">
+			<summary>
+				Though the triarii were similarly armored as the Hastatii and Princeps, they played a much different
+				role and were more akin to the Greek hoplites than Roman heavy infantry.  The Triarii were the oldest
+				and very experienced of the Roman army, and their job was to defend against disaster as a last resort,
+				or to shock the enemy with a different look at the right moment.  If the heavy infantry were pushed
+				back, the Triarii would charge forward with their spears, hopefully with the effect of shocking the
+				enemy and allowing the Princeps and Hastati time to regroup.  They were used as a last resort, and the
+				Latin expression 'ad triarios redisse', or it has come to the triarii, became a general phrase meaning
+				that something was in a desperate situation.
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Pike" />
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Legionary Shield" />
+				<item name="Chain Mail Armor" />
+			</skill>
+			<skill name="Military" level="5">
+				<ability name="Formation: Phalanx" />
+				<ability name="Formation: Shield Wall" />
+				<ability name="Formation: Testudo" />
+			</skill>
+		</unit>
+		<unit name="Centurion" classification="Med. Infantry" image="Romans/RomanCenturionToken.png">
+			<summary>
+				Each Centurion commanded the 80 men in a single century (Forward Hastati, etc).
+			</summary>
+			<skill name="Melee" level="4">
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Legionary Shield" />
+				<item name="Chain Mail Armor" />
+			</skill>
+			<skill name="Military" level="4">
+				<ability name="Formation: Phalanx" />
+				<ability name="Formation: Shield Wall" />
+				<ability name="Formation: Testudo" />
+			</skill>
+			<skill name="Command" level="4">
+				<ability name="Chain of Command" />
+				<ability name="Rally" />
+			</skill>
+		</unit>
+		<unit name="Praetorian Guard" classification="Hvy. Infantry">
+			<summary>
+				Initially, the guard for a general, the title was later used for the Emperor's personal army.  These men were
+				handpicked from the legions and represent the best warriors in Rome.
+			</summary>
+			<skill name="Melee" level="5">
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Aim" level="4">
+				<item name="Pilum" rounds="2" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Legionary Shield" />
+				<item name="Chain Mail Armor" />
+			</skill>
+			<skill name="Military" level="5">
+				<ability name="Formation: Phalanx" />
+				<ability name="Formation: Shield Wall" />
+				<ability name="Formation: Testudo" />
+			</skill>
+		</unit>
+		<unit name="Velites" classification="Lt. Infantry" image="Romans/RomanVeliteToken.png">
+			<summary>
+				The poorest citizen class allowed to serve, these units were lightly armed skirmishers who were
+				deployed en masse on the battlefield in front of the heavier infantry lines, but moved back beyond
+				the Hastati after discharging their javelins as the enemy approached. The Velites were also an
+				important part of defense against war elephants.  Using their greater mobility, due to lighter
+				armament, Velites could avoid elephant charges and flank them.
+			</summary>
+			<skill name="Aim" level="3">
+				<item name="Pilum" rounds="6" />
+				<ability name="Barbed Javelin" />
+				<ability name="Shield Snare" />
+			</skill>
+			<skill name="Melee" level="2">
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="1">
+				<item name="Breast Plate" />
+			</skill>
+			<skill name="Military" level="2">
+				<ability name="Formation: Skirmish" />
+			</skill>
+		</unit>
+		<unit name="Equites Legionis" classification="Hvy. Cavalry" image="Romans/RomanHeavyCavalryToken.png">
+			<summary>
+				The Republican cavalry was designed for speed of movement, and were similarly equipped to the Hastati.  Their
+				duty was to provide scouting and potential fast moving support to weakening parts of a battle line.  At times
+				the cavalry could be used to turn a flank or deliver a shock at the right moment, but their limited number
+				generally made their capabilities limited.  As the Romans were not considered great natural horsemen, the great
+				effectiveness of cavalry in the Roman army didn't come until the inclusion of various auxilia cavalry like that
+				of the Gauls and Germanics.
+			</summary>
+			<skill name="Melee" level="3">
+				<item name="Lance" />
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="3">
+				<item name="Legionary Shield" />
+				<item name="Bronze Armor" />
+			</skill>
+			<skill name="Military" level="3">
+			</skill>
+			<skill name="Riding" level="2">
+				<ability name="Run Down" />
+			</skill>
+		</unit>
+	</section>
+	<section name="Auxilia">
+		<summary>
+			Roman Auxilia are support troops and specialized units.  By the 2nd century, the auxilia contained the same number of
+			infantry as the legions and in addition provided almost all the Roman army's cavalry and more specialised troops
+			(especially light cavalry and archers).  The auxilia thus represented three-fifths of Rome's regular land forces.
+			Like their legionary counterparts, auxiliary recruits were mostly volunteers, not conscripts, but unlike the legion
+			the auxilia accepted non-Romans (which represented 90% of the empire).
+		</summary>
+		<unit name="Cohors Peditata" classification="Hvy. Infantry" image="Romans/RomanAuxiliaToken.png">
+			<summary>
+				Most auxiliary cohortes contained heavy infantry similar to legionaries.
+			</summary>
+			<skill name="Aim" level="2">
+				<item name="Javelin" rounds="2" />
+			</skill>
+			<skill name="Melee" level="3">
+				<item name="Short Sword" />
+			</skill>
+			<skill name="Armor" level="2">
+				<item name="Legionary Shield" />
+				<item name="Chain Mail Shirt" />
+			</skill>
+			<skill name="Military" level="2">
+			</skill>
+		</unit>
+		<unit name="Cohortes Sagittariorum" classification="Lt. Infantry" image="Romans/RomanArcherAuxiliaToken.png">
+			<summary>
+				Most Sagittarii were from Syria.
+			</summary>
+			<skill name="Armor" level="2">
+				<item name="Bronze Armor" />
+			</skill>
+			<skill name="Aim" level="3">
+				<item name="Composite Bow" />
+				<ability name="Flaming Arrow" />
+				<ability name="Arcing Fire" />
+			</skill>
+			<skill name="Military" level="3">
+				<ability name="Formation: Skirmish" />
+			</skill>
+		</unit>
+		<unit name="Funditores" classification="Lt. Infantry">
+			<summary>
+				Slingers wore no armor.
+			</summary>
+			<skill name="Aim" level="3">
+				<item name="Sling" />
+			</skill>
+			<skill name="Military" level="3">
+				<ability name="Formation: Skirmish" />
+			</skill>
+		</unit>
+		<unit name="Eques Alaris" classification="Lt. Cavalry" image="Romans/RomanLightCavalryToken.png">
+			<summary>
+				Auxiliary Cavalryman
+			</summary>
+			<skill name="Melee" level="3">
+				<item name="Spear" />
+			</skill>
+			<skill name="Riding" level="4">
+				<ability name="Run Down" />
+			</skill>
+			<skill name="Military" level="2">
+			</skill>
+		</unit>
+		<unit name="Alae Sagittariorum" classification="Lt. Cavalry">
+			<summary>
+				* Mounted Archers
+			</summary>
+			<skill name="Armor" level="1">
+				<item name="Leather Armor" />
+			</skill>
+			<skill name="Riding" level="2">
+				<ability name="Horse Archery" />
+			</skill>
+			<skill name="Aim" level="3">
+				<item name="Composite Bow" />
+				<ability name="Arcing Fire" />
+			</skill>
+			<skill name="Military" level="3">
+				<ability name="Formation: Skirmish" />
+			</skill>
+		</unit>
+		<unit name="Cataphractarii" classification="Hvy. Cavalry">
+			<skill name="Melee" level="4">
+				<item name="Lance" />
+				<item name="Cavalry Sword" />
+			</skill>
+			<skill name="Armor" level="4">
+				<item name="Scalemail" />
+				<item name="Tower Shield" />
+				<item name="Scale Barding" />
+			</skill>
+			<skill name="Riding" level="4">
+				<ability name="Charge" />
+			</skill>
+			<skill name="Military" level="4">
+			</skill>
+			<skill name="Command" level="4">
+				<ability name="Chain of Command" />
+			</skill>
+		</unit>
+		<unit name="Roman Charioteer" classification="Hvy. Cavalry" image="Romans/RomanCharioteer.png" />
+	</section>
+	<section name="Civilians">
+		<unit name="Roman Gladiator" image="Romans/RomanGladiatorToken.png">
+			<skill name="Close Combat" level="4">
+			</skill>
+			<skill name="Melee" level="3">
+			</skill>
+			<skill name="Armor" level="1">
+				<item name="Round Shield" />
+			</skill>
+		</unit>
+		<unit name="Roman Senator" />
+		<unit name="Roman Slave" />
+		<unit name="Roman Slaver" />
+	</section>
+	<section name="Roman Naval Vessels">
+		<item name="Roman Galley" />
+		<item name="Roman Trireme" />
+		<item name="Roman Quinquereme" />
+	</section>
+</chapter>
+<chapter name="Unfiled Ancient">
+	<summary>
+Examples of Play
+Romans vs. Greeks
+Combat Example:
+
+Combat Cards:
+Surprise
+Use when:
+	Opponent must be unaware
+Effects:
+	+4 Attack
+	Opponent can only defend
+
+Hold Off
+Use when:
+	Longer Reach
+	In Melee Combat
+	Not in Close Combat
+Effects:
+	First Strike
+	+2 Attack
+	+4 Damage Vs Charge
+	Opponent cannot move into Close Combat if you hit.
+
+Charge:
+Effect:
+Use when:
+	Not in Melee Combat
+Effect:
+	Full Move Attack
+	+2 Damage
+	Moves into Close Combat
+
+Guard:
+Effect:
+	+2 Defense
+	All hits taken are shield hits
+
+Example:
+Human attacks the Orc in the open.
+The Orc has longer reach an chooses Hold Off.
+The Human is wary of the spear and plays Guard and Close Combat.
+
+Round 1:
+Orc roll: 12 + 9 Spear + 2 Hold Off = 23
+Human roll: 9 + 8 Sword + 2 Guard - 1 Encumberance = 18
+
+Orc scores a hit for 5 + 3 Spear = 8 Damage
+
+Guard makes the damage a shield hit.
+Determine hit location.
+8 (Piercing) - 3 (Shield) - 3 (Armor) = 2 (Piercing) Wound.
+
+Body reduces by 2 to 10 not enough to change bonus.
+
+The successful Hold Off means the Human's Close Combat Movement fails.
+	</summary>
+</chapter>
+</doc>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc name="Age of Steam" image="WildWest.jpg">
+<chapter name="Age of Steam Overview">
+	<section name="Why Tactics: Age of Steam?">
+	</section>
+  <section name="Age of Steam Personal Combat">
+		<summary>
+			* Dueling
+			* Civil War
+			* Cowboys
+			* Indians
+			* Bandits
+			* Cattle Rustlers
+			* Marksman
+		</summary>
+	</section>
+	<section name="Age of Steam Land Warfare">
+		<summary>
+			* Infantry
+			* Cavalry
+			* Pistols
+			* Rifles
+			* Cannons
+			* Artillery
+			* Gatling Guns
+			* Trains
+		</summary>
+	</section>
+	<section name="Age of Steam Naval Warfare">
+		<summary>
+			* Wind
+			* Large Ships
+			* Small Ships
+			* Solid Shot
+			* Burning Shot
+			* Chain Shot
+		</summary>
+	</section>
+</chapter>
+<chapter name="Age of Steam Equipment">
+	<section name="Age of Steam Weaponry">
+		<item name=".45 Colt Peacemaker" classification="Pistol" rounds="6" range="30m" modifiers="Bleeding" image="Western/Colt1873.jpg">
+			<summary>
+				Single action, revolver
+			</summary>
+			<reference>
+				US Army issue from 1873-1892 and used by other notables like Wyatt Earp and Bat Masterson.  Wyatt Earp's
+				fictional Colt Buntline was supposed to be a long barrel version of the Colt Peacemaker.
+			</reference>
+		</item>
+		<item name=".45 Smith&amp;Wesson Schofield" classification="Pistol" rounds="6" range="30m" modifiers="Bleeding" image="Western/Schofield1869.jpg">
+			<summary>
+				Single action, revolver
+			</summary>
+			<reference>
+				US Cavalry and Army issue circa 1870 and used by Jesse James, Theodore Roosevelt, Virgil Earp, and Billy the Kid.
+				Replaced by the Colt .45 because of different .45 caliber rounds.
+			</reference>
+			<reference>
+				Just meat and potatoes.  Me and Jesse James think it's the best handgun in the world. - Kid, The Quick and the Dead.
+			</reference>
+		</item>
+		<item name=".41 Remington Derringer" classification="Pistol" rounds="2" range="16m" modifiers="Bleeding" image="Western/Derringer.jpg">
+			<summary>
+				Rimfire, single action
+			</summary>
+			<reference>
+				The classic Remington design is still popular; a Remington pattern derringer in .38 Special is still smaller than
+				the most compact .25 ACP semiautomatic, and provides far superior terminal ballistic performance in its two shots
+				than the .25 ACP does with six or seven.
+			</reference>
+		</item>
+		<item name=".44 Winchester Model 1873" classification="Rifle" mass="4.3kg" length="125.2cm" muzzlevelocity="379m/s" range="100m" image="Western/Winchester1873.jpg">
+			<summary>
+				Lever action, repeating
+			</summary>
+			<reference>
+				The Winchester is among the earliest repeating rifles, and has become synonymous with lever-action firearms.
+				Known as 'The Gun that Won the West' for its immense popularity at that time.
+			</reference>
+		</item>
+		<item name="12g Winchester Model 1887" classification="Shotgun" rounds="5" range="30m" mass="3.6kg" length="1m" modifiers="Scattershot, Bleeding">
+			<summary>
+				Level action
+			</summary>
+			<reference>
+				Considered the first truly successful repeating shotgun
+			</reference>
+		</item>
+		<item name=".50 Gatling Gun" classification="Hvy. MG" range="100m" modifiers="Auto, Bleeding" image="Western/GatlingGun1876.jpg.jpg">
+		</item>
+		<item name="Napoleon Cannon" classification="Cannon" range="250m" modifiers="Blast, Indirect Fire" image="Western/CivilWarCannon.jpg">
+			<summary>
+				Smoothbore, muzzle-loading, 12-pounder
+			</summary>
+		</item>
+	</section>
+	<section name="Steam Age Vehicles">
+		<unit name="Horseless  Carriage" />
+		<unit name="Mailplane Biplane" />
+		<unit name="Ocean Liner">
+			<titles>Liner, Steam Liner</titles>
+		</unit>
+		<unit name="Stagecoach" />
+		<unit name="Steam Ferry" />
+		<unit name="Steam Train Boxcar" />
+		<unit name="Steam Train Caboose" />
+		<unit name="Steam Train Coach" />
+		<unit name="Steam Train Locomotive" />
+		<unit name="Steam Train Private Coach" />
+		<unit name="Steamboat" />
+		<unit name="Tramp Freighter" />
+		<unit name="Zepplin">
+			<titles>Dirigible</titles>
+		</unit>
+	</section>
+</chapter>
+<chapter name="Steam Age Maps">
+	<section name="Steam Age Terrain">
+		<rule name="Mine" />
+		<rule name="Tumbleweed" />
+		<rule name="Western Town" />
+	</section>
+</chapter>
+<chapter name="Civil War">
+	<section name="Civil War Scenarios">
+		<scenario name="Civil War Battle" />
+		<scenario name="Ironclads">
+			<summary>
+				The first battle between ironclads happened on 9 March 1862, as the armored Monitor was deployed to protect the
+				Union's wooden fleet from the ironclad ram Virginia and other Confederate warships.  In this engagement, the
+				two ironclads repeatedly tried to ram one another while shells bounced off their armor.  The battle attracted
+				attention worldwide, making it clear that the wooden warship was now out of date, with the ironclads destroying
+				them easily.
+			</summary>
+		</scenario>
+	</section>
+	<section name="Confederate Army">
+		<unit name="Confederate Cannon">
+		</unit>
+		<unit name="Confederate Conscript" />
+		<unit name="Confederate Gatling Gunner" />
+		<unit name="Confederate Medic" />
+		<unit name="Confederate Officer" />
+		<unit name="Confederate Veteran" />
+	</section>
+	<section name="Confederate Navy">
+		<unit name="Merrimack" classification="Hvy. Naval Vessel" mass="4500tons" length="84m" speed="17kph" crew="320">
+			<titles>CSS Virginia</titles>
+			<skill name="Armor" front="200mm" side="200mm" back="200mm">
+				<summary>
+					100mm iron over 610mm of wood (102mm RHA)
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="4">
+				<summary>
+					2 x 7 inch (178mm) rifles
+					2 x 6 inch (152mm) rifles
+					6 x 9 inch (229mm) Dahlgren smoothbores
+					2 x 12-pounder (5kg) howitzers
+				</summary>
+			</skill>
+		</unit>
+	</section>
+	<section name="Union Army">
+		<unit name="Union Cannon" />
+		<unit name="Union Conscript" />
+		<unit name="Union Gatling Gunner" />
+		<unit name="Union Medic" />
+		<unit name="Union Officer" />
+		<unit name="Union Veteran" />
+	</section>
+	<section name="Union Navy">
+		<unit name="USS Monitor" classification="Hvy. Naval Vessel" mass="1000tons" length="52m" speed="15kph" crew="59">
+			<skill name="Armor" front="200mm" side="200mm" back="200mm" top="25mm">
+				<summary>
+					200mm iron turret, 25mm deck, 125mm hull belt
+				</summary>
+			</skill>
+			<skill name="Gunnery" level="4">
+				<summary>
+					2 x 11 in (280mm) Dahlgren smoothbores, turret
+				</summary>
+			</skill>
+		</unit>
+	</section>
+</chapter>
+<chapter name="Victorian England">
+	<summary>
+	</summary>
+	<section name="Victoraian Characters">
+		<unit name="Dr. John Watson">
+		</unit>
+		<unit name="Herbert George Wells">
+		</unit>
+		<unit name="Jack the Ripper">
+		</unit>
+		<unit name="Sherlock Holmes">
+			<reference>
+				* Watson: What made like this?
+				* Sherlock: Oh, dear Watson. Nothing made me ... I made me.
+			</reference>
+		</unit>
+	</section>
+</chapter>
+<chapter name="Wild West">
+	<section name="Western Scenarios">
+		<scenario name="Western Gunfight">
+			<summary>
+				Setup
+				Grassland Map
+				Personal Scale
+				Player 1 begins with a Gunslinger deployed anywhere on the map.
+				Player 2 begins with a US Marshall deployed within 10 spaces of Gunslinger.
+				Both Players' units are standing still with pistols holstered.
+				Gunslinger has the initiative.
+				Special Rules
+				Shoot From the Hip
+				Hit Location
+			</summary>
+		</scenario>
+	</section>
+	<section name="Steam Age Outlaws">
+		<unit name="Bandito" classification="Lt. Infantry" image="Western/BanditoToken.png">
+			<skill name="Firearms" level="4">
+				<item name=".45 Smith&amp;Wesson Schofield" />
+			</skill>
+			<skill name="Evasion" level="3">
+			</skill>
+			<skill name="Survival" level="3" />
+			<reference>
+				You think you're better than I am?  Where we came from, if one did not want to die of poverty, one became a
+				priest or a bandit! ...You became a priest because you were... too much of a coward to do what I do! - Tuco. The
+				Good, the Bad, and the Ugly.
+			</reference>
+		</unit>
+		<unit name="Gunslinger" classification="Lt. Infantry" image="Western/GunslingerToken.png">
+			<skill name="Firearms" level="4">
+				<item name=".45 Smith&amp;Wesson Schofield" />
+				<ability name="Fast Draw" />
+			</skill>
+			<skill name="Evasion" level="3">
+			</skill>
+			<skill name="Crime" level="3">
+				<ability name="Armed Robbery" />
+				<ability name="Rustling" />
+			</skill>
+		</unit>
+		<unit name="Man with No Name" classification="Lt. Infantry" image="Western/ManWithNoNameToken.png">
+			<skill name="Firearms" level="6">
+				<item name=".45 Colt Peacemaker" />
+				<item name=".44 Winchester Model 1873" />
+				<ability name="Fast Draw" />
+				<ability name="Sniper" />
+			</skill>
+			<skill name="Evasion" level="5">
+			</skill>
+			<reference>
+				* [to Tuco] Tut, tut. Such ingratitude after all the times I saved your life. - Blondie, The Good, the Bad, and
+				the Ugly
+				* There are two kinds of people in the world...Those who have a loaded gun and those who dig. You dig! - Blondie,
+				The Good, the Bad, and the Ugly
+			</reference>
+		</unit>
+		<unit name="Professional Killer" classification="Lt. Infantry" image="Western/ProfessionalKiller.png">
+			<skill name="Firearms" level="5">
+				<item name=".45 Smith&amp;Wesson Schofield" />
+				<ability name="Fast Draw" />
+			</skill>
+			<skill name="Intimidation" level="4">
+			</skill>
+			<skill name="Evasion" level="4">
+			</skill>
+			<reference>
+				He paid me a thousand.  I think his idea was that I kill you.  But you know, the pity is when I'm paid, I always
+				follow my job through. - Angel Eyes, The Good, the Bad, and the Ugly
+			</reference>
+		</unit>
+	</section>
+	<section name="Steam Age Lawmen">
+		<unit name="Deputy" />
+		<unit name="Sheriff" />
+		<unit name="US Marshall">
+			<skill name="Firearms" level="5">
+				<item name=".45 Colt Peacemaker" />
+				<ability name="Fast Draw" />
+			</skill>
+			<skill name="Law" level="4">
+			</skill>
+			<skill name="Evasion" level="4">
+			</skill>
+		</unit>
+	</section>
+	<section name="Steam Age Indians">
+		<unit name="Sioux Gunfighter" image="Western/IndianAxe.jpg">
+			<reference>
+				Spotted Horse cannot be killed by a bullet! - Spotted Horse, The Quick and the Dead
+			</reference>
+		</unit>
+	</section>
+	<section name="Steam Age Townsfolk">
+		<unit name="Chinese Monk">
+			<reference>I seek not to know the answers, but to understand the questions. - Kwai Chang Caine, Kung Fu TV Series</reference>
+		</unit>
+		<unit name="Chinese Rail worker" />
+		<unit name="Cowboy" />
+		<unit name="Dentist" />
+		<unit name="Farmer" />
+		<unit name="General Store Owner" />
+		<unit name="Judge" />
+		<unit name="Preacher" />
+		<unit name="Saloon Barkeep" />
+		<unit name="Undertaker" />
+		<unit name="Whore with a Heart of Gold" />
+	</section>
+	<section name="Steam Age Travelers">
+		<unit name="Carpet Bagger" />
+		<unit name="Gambler">
+			<summary>
+				This is a very special pack.  See, I put an ace in every time I kill a man.  (The deck is all aces) - Ace, The Quick and the Dead
+			</summary>
+		</unit>
+		<unit name="Prospector" />
+		<unit name="Snake Oil Salesman" />
+	</section>
+	<section name="Steam Age Tycoons">
+		<unit name="Banker" />
+		<unit name="Land Baron">
+			<reference>
+				All I hear from you...is how poor you are; how you can't afford my taxes.  Yet somehow, you managed to find the
+				money to hire a gunfighter to kill me.  If ya got so much money, I'm just gonna have to take some more. - John
+				Herod,  The Quick and the Dead
+			</reference>
+			<skill name="Intimidation" level="5">
+			</skill>
+			<skill name="Firearms" level="4">
+				<item name=".45 Colt Peacemaker" />
+			</skill>
+			<skill name="Evasion" level="4">
+			</skill>
+		</unit>
+		<unit name="Oil Baron" />
+		<unit name="Railroad Tycoon" />
+	</section>
+</chapter>
+<chapter name="Examples of Play">
+	<section name="Western Gunfight">
+		<summary>
+			Round 1 - Turn 1
+			Initiative
+			Gunslinger player starts with the initiative, but the Marshall wants to 'Take the Initiative'
+			Each Player rolls 2 dice.
+			+1 for the player who currently holds initiative.
+			+1 for highest skill.
+			-1 if most Damaged or Stunned.
+			A tie means simultaneous actions.
+			Gunslinger rolls 6 + 1 (holds initiative) = 7.
+			Marshall rolls 8.  Marshall takes the initiative.
+			Move
+			Marshall is within range of his weapon, so chooses not to move to get the best chance to hit.
+			Action
+			Fast Draw - Marshall is in weapon range and chooses to use Fast Draw to draw his weapon and fire.
+			Attack - Fast Draw was a Free Action and Marshall chooses to fire.  He uses his Handgun Skill and any modifiers to determine attack dice.  5 (Handguns) +1 (Accuracy) - 1 (Hip Shoot) = 6 Dice
+			Marshall rolls 6 dice and gets 1 (miss), 2 (miss), 2 (miss), 3 (miss), 5 (hit), and 6 (hit and bonus die).  He rolls the bonus die and gets another 6 (critical hit and bonus die).  He rolls the bonus die and gets a 3 (flag).
+			Marshall's total roll is 1 hit, 1 critical, and a flag.
+			Defense
+			Gunslinger now rolls dice equal to appropriate defense:  4 Body = 4 Dice
+			Gunslinger rolls 3 dice and gets 1 (miss), 3 (miss), 5 (hit), and 6 (hit and bonus die).  He rolls the bonus die and gets a 4 (critical hit).
+			Gunslinger's  total is 2 hits and 1 critical.
+			Gunslinger's 1 hit cancels one of  Marshall's hits and his 1 critical hit cancels one of Marshall's critical hits.  This leaves Marshall with only a single flag,  Gunslinger had rolled a second hit, but since it can only cancel other hits, it has no effect.
+			Effects
+			Flags - Gunslinger gains a Flag Token and must retreat one space for each flag.  He therefore retreats 1 space away from Marshall.
+			Attack Damage - Since no damage was rolled, Marshall's turn is over.
+			Round 1 - Turn 2
+			Initiative
+			Gunslinger player regains the initiative.  Marshall has already taken a turn and cannot do so again this round.
+			White Tokens - After initiative is determined, Gunslinger must remove a White Token if any.  He removes the Flag token.
+			Move
+			Gunslinger was forced to back by the Flag but is still in his weapon's range, so he will not take an attack penalty.  However, if he moves closer he will take a penalty for moving, so he opts to stay still and fire.
+			Action
+			Fast Draw - Gunslinger also uses Fast Draw to draw and fire.
+			Attack - He uses his Handgun Skill and any modifiers to determine attack dice.  5 (Handguns) +1 (Accuracy)  -1 (Hip Shoot) = 5 Dice.
+			Gunslinger rolls 5 dice and gets 1 (miss), 3 (miss), 4 (hit), 5 (hit), and 5 (hit).  His total roll is 3 hits.  Nice.
+			Defense
+			Marshall now rolls dice equal to appropriate defense.  4 Body = 4 Dice.
+			Marshall rolls 4 dice and gets 1 (miss), 1 (miss), 3 (miss), and 4 (hit).
+			Marshall's total is 1 hit.
+			Marshall cancels 1 of Gunslinger's hits.  This leaves Gunslinger with 2 hits.
+			Effects
+			Damage Rating - Since Gunslinger rolled at least 1 hit or critical hit (he scored 2), he checks the damage rating of his Schofield .45.  Its damage rating is 4.  If Gunslinger had rolled less than 4 dice, the Schofield would allow him to roll the difference in additional damage dice.  However, Gunslinger rolled 4 dice already, so he receives no additional dice.
+			Hits - The first hit is converted to a Stun Token.
+			Damage - All subsequent hits are converted to Damage Tokens.
+			Damage Summary - 1 Stun Token and 1 Damage Token.
+			Hit Location - Since we are using Hit Location and did some form of damage, roll 2 dice.  The first determines side of the body: 1-2 is left side, 3-4 is center, and 5-6 is right side.  The second die determines height on the body: 1-2 is low, 3-4 is middle, 5-6 is high.  Marshall rolls 6 (right), 2 (low): Right Shin/Foot.  The 1 Damage Token is therefore on Marshall's Right Shin.  This will limit his movement.
+			Turn End
+			Round End - Since all units have acted, the round ends.
+			Round 2 - Turn 1
+			Initiative
+			Marshall has the initiative since Gunslinger player ended with the initiative, but Gunslinger predictably wants to 'Take the Initiative' back.  Marshall desperately needs to win initiative to recover a bit from the last hit.
+			Each Player rolls 2 dice.
+			+1 for the player who currently holds initiative.
+			+1 for highest skill.
+			-1 if most Damaged or Stunned.
+			A tie means simultaneous actions.
+			Marshall rolls 4 + 1 (holds initiative) -1 (most Damaged) = 4.
+			Gunslinger rolls 8 and takes the initiative.  Gunslinger grins.
+			White Tokens - Gunslinger has no White Tokens.
+			Move
+			Gunslinger presses his advantage and stays and fires hoping to finish this battle.
+			Action
+			Since their guns are already drawn, neither unit needs to fire from the hip anymore.
+			Attack - Gunslinger determines attack dice.  5 (Handguns) +1 (Accuracy)  = 6 Dice.
+			Gunslinger rolls 6 dice and gets 1 (miss), 1 (miss), 3 (miss), 5 (hit), 5 (hit), and 6 (hit and bonus die).  He rolls the bonus and gets 1 (flag).  His total roll is 3 hits and a flag.  Looking good.
+			Defense
+			Marshall now rolls dice equal to appropriate defense.  4 Body -1 (Damage) -1 (Stun) = 2 Dice.  Need some good rolls about now.
+			Marshall rolls 2 dice and gets 1 (miss) and 1 (miss).  Nothing.
+			Marshall is hit dead-on by the Gunslinger.
+			Effects
+			Damage Rating - Since Gunslinger rolled at least 1 hit or critical hit (he scored 3), he checks the damage rating of his Schofield .45.  Its damage rating is 4 is not more than his 6 dice rolled so no additional dice.
+			Hits - The first hit is converted to a Stun Token.
+			Damage - All subsequent hits are converted to Damage Tokens.
+			Damage Summary - 1 Stun Token and 2 Damage Tokens.
+			Hit Location - Since we are using Hit Location and did some form of damage, roll 2 dice.  The first determines side of the body: 1-2 is left side, 3-4 is center, and 5-6 is right side.  The second die determines height on the body: 1-2 is low, 3-4 is middle, 5-6 is high.  Marshall rolls 2 (left), 4 (center): Left Thigh.  The 2 Damage Tokens are therefore on Marshall's Left Thigh.  This will limit his movement even more.
+			Damage Total - 2 Stun Tokens and 3 Damage Tokens (1 on Right Shin, 2 on Left Thigh).  The total of -5 is greater than the Marshall's 4 Body, so he drops to the ground.
+			Round 2 - Turn 2
+			Initiative
+			Marshall has the initiative since Gunslinger has already acted this round.
+			White Tokens - Marshall removes a  White Token if any.  He removes 1 of the Stun tokens.
+			Move
+			Marshall is prone and has no Move left to even crawl (Move 4 - 1 (Stun) - 3 (Damage)).
+			Action
+			Marshall could attack with 5 (Handguns) + 1 (Accuracy) - 1 (Stun) - 3 (Damage) = 2 Dice, but he has no dice to defend next turn, he is Prone (+1) and Helpless (+1) for a total of 8 Gunslinger Dice against his own 0 Dice.  What's more the gunslinger doesn't have a scratch on him.
+			The duel is clearly over, and the Marshall drops his gun and begs for his life.
+		</summary>
+	</section>
+</chapter>
+</doc>
