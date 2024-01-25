@@ -1,7 +1,7 @@
 (package nx/tactics/books/land,_sea_and_air
  :libs (lib base :path nx/tactics/base))
 
-(func book : base/book
+(func tacticsbook : base/book
  (book
   :name "Land, Sea and Air"
   :image "LandSeaAndAir.jpg"
@@ -20,309 +20,6 @@
       :name "Land Sea and Air Unit Types"
       :sectionmap
        (sectionmap
-        "Land Units"
-         (section
-          :name "Land Units"
-          :summary
-           "* [Land Map]
-* [Standard Scale]
-
-Hierarchy
-* Fireteam - 4-5 infantry led by a Lance Corporal or Sergeant
-* Squad - 2+ Fireteams (8-16) led by a Corporal or Staff Sergeant
-* Platoon - 2+ Squads (25-60) led by a Warrant Officer or Lieutenant
-* Company - 2-8 Platoons (70-250) led by a Major
-* Battalion - 2-6 Companies (300-1000) led by a Lieutenant Colonel
-* Regiment - 2+ Battalions (2000-3000) led by a Colonel
-* Brigade - 2+ Regiments (3000-5000) led by a Brigadier
-* Division - 2-4 Brigades (10,000-20,000) led by a Major General
-* Corps - 2+ Divisions (30,000-50,000) led by a Lieutenant General
-* Army - 2+ Corps (50,000-60,000) led by a General
-* Army Group - 2+ Armies (100,000+) led by a General or a Field Marshal
-* Theater / Front - 10+ Army Groups (1,000,000+) led by a General or Field Marshal"
-          :sectionmap
-           (sectionmap
-            "Modern Land Vehicles"
-             (section
-              :name "Modern Land Vehicles"
-              :unitmap
-               (unitmap
-                :Motorcycle
-                 (unit
-                  :name "Motorcycle")))))
-        "Naval Vessels"
-         (section
-          :name "Naval Vessels"
-          :summary "200% Load, 75% Speed, -1 Handling"
-          :sectionmap
-           (sectionmap
-            "Archaic Naval Vessels"
-             (section
-              :name "Archaic Naval Vessels"
-              :summary
-               "* [Ocean Map]
-* [Standard Scale]
-
-Hierarchy
-* Flotilla - A small number of non-capital vessels, usually of the same or similar types led by a Flotilla Admiral or a
-Commodore.
-* Squadron - A small number of vessels including capital ships led by a Rear Admiral or a Commodore.
-* Task Group - 2 Squadrons led by a Rear Admiral
-* Task Force / Battlefleet - 2 Task Groups led by a Vice Admiral
-* Fleet - 2 Task Forces led by an Admiral
-* Navy / Admiralty - 2 Fleets led by a Fleet Admiral"
-              :rulemap
-               (rulemap
-                :Broadside
-                 (rule
-                  :name "Broadside"
-                  :image "Rules/Images/Broadside.png"
-                  :summary
-                   "* Archaic ships mount large guns on each side of the ship and must turn sideways to attack targets.  All attacks
-from such guns may only fire directly at 90 degrees from the front of the ship."))
-              :unitmap
-               (unitmap
-                :Canoe
-                 (unit
-                  :name "Canoe"
-                  :summary "* Mini, Stripped, Unpowered")
-                :Catamaran
-                 (unit
-                  :name "Catamaran")
-                "Deep Sea Explorer Submarine"
-                 (unit
-                  :name "Deep Sea Explorer Submarine")
-                :Dinghy
-                 (unit
-                  :name "Dinghy")
-                "Fishing Boat"
-                 (unit
-                  :name "Fishing Boat"
-                  :summary "* Medium, Stripped, Sail")
-                :Frigate
-                 (unit
-                  :name "Frigate")
-                :Galley
-                 (unit
-                  :name "Galley")
-                :Galleon
-                 (unit
-                  :name "Galleon")
-                :Kayak
-                 (unit
-                  :name "Kayak"
-                  :summary "* Mini, Sport, Stripped, Unpowered")
-                "Merchant Ship"
-                 (unit
-                  :name "Merchant Ship")
-                :Minisub
-                 (unit
-                  :name "Minisub")
-                :Outrigger
-                 (unit
-                  :name "Outrigger")
-                :Rowboat
-                 (unit
-                  :name "Rowboat"
-                  :summary "* Light, Stripped, Unpowered")
-                "War Barge"
-                 (unit
-                  :name "War Barge")))
-            "Modern Civilian Vessels"
-             (section
-              :name "Modern Civilian Vessels"
-              :unitmap
-               (unitmap
-                "Cruise Liner"
-                 (unit
-                  :name "Cruise Liner")
-                "Hydrofoil Passenger Ship"
-                 (unit
-                  :name "Hydrofoil Passenger Ship")
-                "Jet Ski"
-                 (unit
-                  :name "Jet Ski"
-                  :summary "* Light, Sport")
-                :Runabout
-                 (unit
-                  :name "Runabout")
-                :Sunfish
-                 (unit
-                  :name "Sunfish"
-                  :summary "* Light, Sport, Stripped")
-                :Surfboard
-                 (unit
-                  :name "Surfboard"
-                  :summary "* Personal, Sport, Stripped, Unpowered")
-                "Tanker Ship"
-                 (unit
-                  :name "Tanker Ship")
-                "Tramp Steamer"
-                 (unit
-                  :name "Tramp Steamer")
-                "Transport Ship"
-                 (unit
-                  :name "Transport Ship")
-                "Super Tanker"
-                 (unit
-                  :name "Super Tanker")
-                "Swamp Buggy"
-                 (unit
-                  :name "Swamp Buggy")
-                "Windsurf Board"
-                 (unit
-                  :name "Windsurf Board"
-                  :summary "* Personal, Sport, Stripped, Sail")
-                :Yacht
-                 (unit
-                  :name "Yacht")))
-            "Modern Military Vessels"
-             (section
-              :name "Modern Military Vessels"
-              :unitmap
-               (unitmap
-                "Aircraft Carrier"
-                 (unit
-                  :name "Aircraft Carrier")
-                "Battleship Class"
-                 (unit
-                  :name "Battleship Class")
-                :Cruiser
-                 (unit
-                  :name "Cruiser")
-                :Destroyer
-                 (unit
-                  :name "Destroyer")
-                :Dreadnought
-                 (unit
-                  :name "Dreadnought")
-                :Gunboat
-                 (unit
-                  :name "Gunboat")
-                "Hunter Killer Submarine"
-                 (unit
-                  :name "Hunter Killer Submarine")
-                "Nuclear Submarine"
-                 (unit
-                  :name "Nuclear Submarine")
-                "Torpedo Boat"
-                 (unit
-                  :name "Torpedo Boat")))))
-        :Aircraft
-         (section
-          :name "Aircraft"
-          :summary
-           "Hierarchy
-* Flight - 4-6 Aircraft led by a Captain or Flight Lieutenant
-* Squadron - 3-4 Flights (7-16 Aircraft) led by a Lieutenant Colonel or a Squadron Leader
-* Wing - 3-4 Squadrons (17-48  Aircraft) led by a Wing Commander
-* Air Wing - 2+ Wings (48-100  Aircraft) led by a Brigadier or a a Air Commodore"
-          :rulemap
-           (rulemap
-            "Stall Speed"
-             (rule
-              :name "Stall Speed"))
-          :sectionmap
-           (sectionmap
-            "Unmanned Aerial Vehicles (UAV)"
-             (section
-              :name "Unmanned Aerial Vehicles (UAV)")
-            "Personal Aircraft"
-             (section
-              :name "Personal Aircraft"
-              :unitmap
-               (unitmap
-                :Parachute
-                 (unit
-                  :name "Parachute")
-                :Hanglider
-                 (unit
-                  :name "Hanglider")
-                "Jet Pack"
-                 (unit
-                  :name "Jet Pack")
-                :Sailplane
-                 (unit
-                  :name "Sailplane"
-                  :titles "Civilian Glider")
-                :Ultralight
-                 (unit
-                  :name "Ultralight")))
-            :Helicopters
-             (section
-              :name "Helicopters"
-              :unitmap
-               (unitmap
-                :Gyroplane
-                 (unit
-                  :name "Gyroplane")
-                "Mini Copter"
-                 (unit
-                  :name "Mini Copter")
-                "Civilian Helicopter"
-                 (unit
-                  :name "Civilian Helicopter")
-                "Attack Helicopter"
-                 (unit
-                  :name "Attack Helicopter")
-                "Cargo Copter"
-                 (unit
-                  :name "Cargo Copter")))
-            "Prop Planes"
-             (section
-              :name "Prop Planes"
-              :unitmap
-               (unitmap
-                :Bi-Plane
-                 (unit
-                  :name "Bi-Plane")
-                "Cargo Transport, Prop"
-                 (unit
-                  :name "Cargo Transport, Prop")
-                "Fighter, Prop"
-                 (unit
-                  :name "Fighter, Prop")
-                "Flying Fortress"
-                 (unit
-                  :name "Flying Fortress")
-                :Osprey
-                 (unit
-                  :name "Osprey")
-                "Piper Cub"
-                 (unit
-                  :name "Piper Cub")
-                "Turbojet Plane"
-                 (unit
-                  :name "Turbojet Plane")))
-            "Jet Planes"
-             (section
-              :name "Jet Planes"
-              :unitmap
-               (unitmap
-                "Private Jet"
-                 (unit
-                  :name "Private Jet")
-                "Commercial Airliner"
-                 (unit
-                  :name "Commercial Airliner")
-                "Cargo Transport, Jet"
-                 (unit
-                  :name "Cargo Transport, Jet")
-                :Harrier
-                 (unit
-                  :name "Harrier")
-                "Interceptor, Jet"
-                 (unit
-                  :name "Interceptor, Jet")
-                "Tank Buster"
-                 (unit
-                  :name "Tank Buster")
-                :Bomber
-                 (unit
-                  :name "Bomber")
-                "Strategic Bomber"
-                 (unit
-                  :name "Strategic Bomber")))))
         "Strategic Movement"
          (section
           :name "Strategic Movement")))
@@ -331,50 +28,6 @@ from such guns may only fire directly at 90 degrees from the front of the ship."
       :name "Land Sea and Air Rules"
       :sectionmap
        (sectionmap
-        "Large Unit Rules"
-         (section
-          :name "Large Unit Rules"
-          :rulemap
-           (rulemap
-            "Large Units"
-             (rule
-              :name "Large Units"
-              :summary
-               "* [Action]: Vehicles with multiple crew members that take up more than 1 space, may take 1 Action per space.
-It must, however, perform all Actions at the same time before further Movement.")
-            "Huge Units"
-             (rule
-              :name "Huge Units")))
-        "Land Sea and Air Movement"
-         (section
-          :name "Land Sea and Air Movement"
-          :rulemap
-           (rulemap
-            :Acceleration
-             (rule
-              :name "Acceleration")
-            "Movement - Large Unit"
-             (rule
-              :name "Movement - Large Unit"
-              :image "Rules/Images/MoveLarge.png")
-            "Movement - Huge Unit"
-             (rule
-              :name "Movement - Huge Unit"
-              :image "Rules/Images/MoveHuge.png")
-            :Collisions
-             (rule
-              :name "Collisions"
-              :reference "Ramming Speed! - D-Day, Animal House")
-            "Movement Range"
-             (rule
-              :name "Movement Range")
-            "Turn Radius"
-             (rule
-              :name "Turn Radius"
-              :summary
-               "* Normally a unit can turn whenever it wants, but a unit moving at high speed or a unit that is not particularly
-agile will only be able to turn after moving a certain number of spaces.  The number of spaces a unit must move to
-turn is the turn radius.")))
         "Vehicle Construction"
          (section
           :name "Vehicle Construction"
@@ -790,83 +443,6 @@ lower) is in miles per gallon and is equal to: Mileage = (9000 / (hp + (weight /
       :name "Land, Sea and Air Terrain"
       :sectionmap
        (sectionmap
-        "Terrain, Buildings"
-         (section
-          :name "Terrain, Buildings"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
         "Terrain, Natural"
          (section
           :name "Terrain, Natural"
@@ -875,6 +451,10 @@ lower) is in miles per gallon and is equal to: Mileage = (9000 / (hp + (weight /
             (msglist
              (msg
               :code ":invalidtagfound"
+              :detail
+               (anymap
+                :type nx/tactics/base/section
+                :tag "terrain")
               :severity 2))
            :msgblocks
             (msgblocklist
@@ -883,113 +463,156 @@ lower) is in miles per gallon and is equal to: Mileage = (9000 / (hp + (weight /
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2)))
              (msgblock
               :msgs
                (msglist
                 (msg
                  :code ":invalidtagfound"
+                 :detail
+                  (anymap
+                   :type nx/tactics/base/section
+                   :tag "terrain")
                  :severity 2))))))))
     :Maps
      (chapter
       :name "Maps"
       :sectionmap
        (sectionmap
-        :Maps
-         (section
-          :name "Maps"
-          :rulemap
-           (rulemap
-            "Air Map"
-             (rule
-              :name "Air Map")
-            "Ocean Map"
-             (rule
-              :name "Ocean Map")
-            "Swamp Map"
-             (rule
-              :name "Swamp Map")
-            "Underwater Map"
-             (rule
-              :name "Underwater Map")))
         :Terrain
          (section
           :name "Terrain"

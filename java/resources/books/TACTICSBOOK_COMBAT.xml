@@ -675,7 +675,7 @@ Such a weapon would have a selector switch for each mode. And it might have a 'c
 </chapter>
 <chapter name="Skills">
 	<section name="Combat Skills">
-		<skill name="Armor" stat="Body">
+		<skill name="Defend" stat="Body">
 			<titles>Armorer, Defender, Shield Bearer, Shield Warden, Warder</titles>
 			<specialty name="Medium Armor">
 			</specialty>
@@ -683,36 +683,12 @@ Such a weapon would have a selector switch for each mode. And it might have a 'c
 			</specialty>
 			<specialty name="Shields">
 			</specialty>
-			<ability name="Ablative Armor">
-				<summary>
-					* Armor that vaporizes when hit decreasing damage but also damaging the armor.
-					* Ignore the first point of [Damage] and reduce [Armor] (on that facing) instead.
-				</summary>
-			</ability>
 			<ability name="Armorsmithing">
 				<summary>
 					* The ability to repair, improve, or even create armor.
 				</summary>
 			</ability>
 			<ability name="Counterattack" />
-			<ability name="Hardened vs. Energy">
-				<summary>
-					* [Damage]: [+2 Armor] if attack is an [Energy Weapon]
-					* Only 1 Hardened vs. ability may be taken
-				</summary>
-			</ability>
-			<ability name="Hardened vs. Fire">
-				<summary>
-					* [Damage]: [+2 Armor] if attack produces [Fire] tokens
-					* Only 1 Hardened vs. ability may be taken
-				</summary>
-			</ability>
-			<ability name="Hardened vs. Projectiles">
-				<summary>
-					* [Damage]: [+2 Armor] if attack is a [Projectile]
-					* Only 1 Hardened vs. ability may be taken
-				</summary>
-			</ability>
 			<ability name="High Block">
 				<summary>
 					-1 Speed

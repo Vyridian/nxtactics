@@ -1,7 +1,7 @@
 (package nx/tactics/books/medieval
  :libs (lib base :path nx/tactics/base))
 
-(func book : base/book
+(func tacticsbook : base/book
  (book
   :name "Medieval"
   :image "Medieval-2-Total-War-Kingdoms-642.jpg"
@@ -12,9 +12,6 @@
       :name "Medieval Overview"
       :sectionmap
        (sectionmap
-        "Why Tactics: Medieval?"
-         (section
-          :name "Why Tactics: Medieval?")
         "Medieval Land Warfare"
          (section
           :name "Medieval Land Warfare"
@@ -44,140 +41,79 @@
         "Medieval Events"
          (section
           :name "Medieval Events"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))))
+          :scenariomap
+           (scenariomap
+            :Assassination
+             (scenario
+              :name "Assassination")
+            "Bandit Raid"
+             (scenario
+              :name "Bandit Raid"
+              :reference "Seven Samurai")
+            :Battle
+             (scenario
+              :name "Battle")
+            :Ceremony
+             (scenario
+              :name "Ceremony")
+            :Contest
+             (scenario
+              :name "Contest")
+            :Courier
+             (scenario
+              :name "Courier")
+            :Deserters
+             (scenario
+              :name "Deserters")
+            :Duel
+             (scenario
+              :name "Duel")
+            "Empty Battlefield"
+             (scenario
+              :name "Empty Battlefield")
+            :Escort
+             (scenario
+              :name "Escort")
+            "Fist Fight"
+             (scenario
+              :name "Fist Fight")
+            :Highwaymen
+             (scenario
+              :name "Highwaymen")
+            :Hunt
+             (scenario
+              :name "Hunt")
+            "Noble Hunt"
+             (scenario
+              :name "Noble Hunt")
+            "Noble Party"
+             (scenario
+              :name "Noble Party"
+              :reference "Cinderella")
+            "Peasant Demonstration"
+             (scenario
+              :name "Peasant Demonstration"
+              :summary "* Put down or support minor uprisings.")
+            "Peasant Discontent"
+             (scenario
+              :name "Peasant Discontent"
+              :summary "* Put down or support minor uprisings.")
+            "Peasant Uprising"
+             (scenario
+              :name "Peasant Uprising"
+              :summary "* Put down or support a major uprising.")
+            :Quest
+             (scenario
+              :name "Quest")
+            "Scouting Mission"
+             (scenario
+              :name "Scouting Mission")
+            :Spying
+             (scenario
+              :name "Spying")
+            "Visiting Dignitary"
+             (scenario
+              :name "Visiting Dignitary")))))
     "Medieval Items"
      (chapter
       :name "Medieval Items"
@@ -191,6 +127,10 @@
             (msglist
              (msg
               :code ":invalidtagfound"
+              :detail
+               (anymap
+                :type nx/tactics/base/section
+                :tag "item")
               :severity 2))))))
     "Medieval English"
      (chapter
@@ -224,6 +164,11 @@
                 (msglist
                  (msg
                   :code ":invalidproperty"
+                  :detail
+                   (anymap
+                    :type nx/tactics/base/unit
+                    :prop "classification"
+                    :value "Hvy. Cavalry")
                   :severity 2))))))))
     "Medieval German"
      (chapter

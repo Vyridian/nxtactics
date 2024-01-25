@@ -1,7 +1,7 @@
 (package nx/tactics/books/science_fiction
  :libs (lib base :path nx/tactics/base))
 
-(func book : base/book
+(func tacticsbook : base/book
  (book
   :name "Science Fiction"
   :image "Future.jpg"
@@ -13,25 +13,6 @@
       :reference "http://www.merzo.net/index.html"
       :sectionmap
        (sectionmap
-        "Distant Future Land Warfare"
-         (section
-          :name "Distant Future Land Warfare"
-          :summary
-           "* Infantry
-* Transporters
-* Time Travel
-* Beam Weapons
-* Lightning Guns
-* Disruptors
-* Disintegrators
-* Railguns
-* Hovercraft
-* Hovertanks
-* Walkers
-* Mobile Suits
-* Mobile Armor
-* Artillery
-* Nuclear Weapons")
         "Distant Future Space Warfare"
          (section
           :name "Distant Future Space Warfare"
@@ -64,14 +45,6 @@
       :name "Alternate Realties"
       :sectionmap
        (sectionmap
-        "Big Brother"
-         (section
-          :name "Big Brother"
-          :summary
-           "* A near future Earth where all activity is monitored by cameras and microphones placed everywhere including bedrooms, bathrooms, and sewers. They cover multiple angles and are nearly impossible to avoid. Computers monitor the feeds and immediately report any criminal activity to police. The police arrest the criminal, conviction is swift, and the criminal is psychologically or chemically 'reconditioned' against further crimes and returned to society. Crime is basically non-existent, and no one remembers a time before the monitoring 	was established. Police are friendly and do not appear in uniform unless a crime has been committed. Police only carry non-lethal weapons unless they are known to be facing armed resistance.
-* Any outsiders entering this world will have a hard time avoiding criminal activity. Fortunately, the computers are unconcerned with suspicious activity and only notice actual crimes. However, attempts to disable cameras are crimes themselves.
-* Interrogations and reconditioning are all computer controlled. Using sophiticated lie detectors, drugs, and aversion therapy, the patient can usually be reconditioned and returned to society in a matter of weeks.
-* A small resistance exists, but there is little they can achieve without outside help. The question is: should they be helped?")
         "Time in a Bottle"
          (section
           :name "Time in a Bottle"
@@ -85,450 +58,6 @@
       :image "AlienPredator/AlienPredator.jpg"
       :sectionmap
        (sectionmap
-        "Alien Equipment"
-         (section
-          :name "Alien Equipment"
-          :unitmap
-           (unitmap
-            "Alien Starship"
-             (unit
-              :name "Alien Starship"
-              :image "AlienPredator/AlienShip.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))))))
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))))
-        :Aliens
-         (section
-          :name "Aliens"
-          :reference
-           "* It'll be dark soon, and they mostly come at night... mostly. - Newt, Aliens
-* My mommy always said there were no monsters - no real ones - but there are.
-* Its structural perfection is matched only by its hostility.  You admire it.  I admire its purity. A survivor... unclouded by conscience, remorse, or delusions of morality. - Ash and Lambert, Alien"
-          :titles "Xenomorph XX121"
-          :unitmap
-           (unitmap
-            "Alien Chest Burster"
-             (unit
-              :name "Alien Chest Burster"
-              :image "AlienPredator/Alien_ChestBurster.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Alien (Dog)"
-             (unit
-              :name "Alien (Dog)"
-              :image "AlienPredator/Alien_Dog.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Alien Face Hugger"
-             (unit
-              :name "Alien Face Hugger"
-              :image "AlienPredator/AlienFaceHugger.png"
-              :reference
-               "* I haven't seen anything like that except, uh, molecular acid.  It must be using it for blood.  It's got a
-wonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Alien Queen"
-             (unit
-              :name "Alien Queen"
-              :image "AlienPredator/Alien_Queen.png"
-              :reference "Get away from her, you BITCH! - Ripley, Aliens"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Alien Warrior"
-             (unit
-              :name "Alien Warrior"
-              :image "AlienPredator/Alien_Warrior.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            :Predalien
-             (unit
-              :name "Predalien"
-              :image "AlienPredator/Predalien.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))))
-        "Predator Equipment"
-         (section
-          :name "Predator Equipment"
-          :unitmap
-           (unitmap
-            "Predator Scout Ship"
-             (unit
-              :name "Predator Scout Ship")
-            "Predator Hunting Ship"
-             (unit
-              :name "Predator Hunting Ship"))
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
-        :Predators
-         (section
-          :name "Predators"
-          :summary
-           "* The Yautja do not maintain a unified society, but instead live in tribal groups that rarely interbreed. Over time, the different tribes have developed distinct physical differences.
-* Yautja society reveres honor and physical prowess which can only be proven in personal combat during dangerous hunts.
-* The Yautja stalk and kill their prey using a combination of highly advanced technology, such as active camouflage and energy weapons, combined with comparatively primitive traditional weapons, such as blades, spears and nets. The Predators often ritualistically mutilate their prey and usually claim a trophy from their kills. Capable of interstellar travel in star ships, the Predators have hunted on Earth for centuries and have also had prior contact with the Engineers.
-* Aside from their repeated conflicts with humans, the Predators have notably been associated with Xenomorph XX121, known to them as kiande amedha ('hard meat'), whom they revere as perhaps the most worthy of all prey. They have been known to deliberately breed the creatures from captive Queens in order to hunt them, often as part of initiation rituals for young Predators."
-          :titles "Yautja"
-          :unitmap
-           (unitmap
-            "Un-blooded Predator"
-             (unit
-              :name "Un-blooded Predator"
-              :summary "* The lowest level of Yautja warriors. These are warriors in training. Many die during this brutal training regiment designed to cull the weak.")
-            "Young Blood Predator"
-             (unit
-              :name "Young Blood Predator"
-              :summary "* A Yautja warrior who has completed their training. These warriors await their final test, killing a Xenomorph close range primitive weapons.")
-            "Blooded Predator"
-             (unit
-              :name "Blooded Predator"
-              :image "AlienPredator/Predator.png"
-              :summary "* After killing a Xenomorph, the Predator a full citizen of Yautja society and is allowed access to the Plasma Cannon and other advanced weaponry and spacecraft. A Blooded Predator may join hunts with others or go off on their own to bring back stories, honor, treasure, and trophies.")
-            "Elite Predator"
-             (unit
-              :name "Elite Predator"
-              :image "AlienPredator/Predator_Veteran.png"
-              :summary "* A Yautja warrior who has survived many dangerous hunts is raised to elite status. These Yautja have vast fighting skills and can fight many enemies single-handed.")
-            "Elder Predator"
-             (unit
-              :name "Elder Predator"
-              :summary "* Older Elite Predators can be given the honorific of Elder. Elder Predators form the political and administrative caste of Yautja society.")
-            "Clan Leader Predator"
-             (unit
-              :name "Clan Leader Predator"
-              :summary "* Clan Leaders direct all Predator business and travel on Predator Flagships. Elder Predators may challenge the Clan Leader to take their position.")
-            "Bad Blood Predator"
-             (unit
-              :name "Bad Blood Predator"
-              :summary "* Bad Bloods are Predators who severely violated their code of honor and were either banished or escaped from their clan. Sometimes the Bad Bloods become the target of a hunt to make an example of them.")))
-        "Human Equipment"
-         (section
-          :name "Human Equipment"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
-        "Human Vehciles"
-         (section
-          :name "Human Vehciles"
-          :unitmap
-           (unitmap
-            "UD-4L Cheyenne Dropship"
-             (unit
-              :name "UD-4L Cheyenne Dropship"
-              :image "ColonialMarines/Dropship.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "M577 Armored Personnel Carrier"
-             (unit
-              :name "M577 Armored Personnel Carrier"
-              :image "ColonialMarines/APC.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Conestoga Class Starship"
-             (unit
-              :name "Conestoga Class Starship"
-              :image "ColonialMarines/Sulaco.png"
-              :summary
-               "Speed: .5G cruising 4G Max
-FTL: 1.762 light years/day
-2 Dropships
-http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
-              :titles "USS Sulaco"
-              :mass "85ktons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            :Nostromo
-             (unit
-              :name "Nostromo"
-              :image "ColonialMarines/Nostromo.png"
-              :reference "This a commercial ship, not a rescue ship. - Parker, Alien"
-              :summary
-               "Commercial Towing Vehicle
-Speed: .12 light years/day
-2 shuttlecraft"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Refinery Ship"
-             (unit
-              :name "Refinery Ship"
-              :image "ColonialMarines/Refinery.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Lockmart Starcub Shuttlecraft"
-             (unit
-              :name "Lockmart Starcub Shuttlecraft"
-              :image "ColonialMarines/Shuttlecraft.png"
-              :titles "Narcisssus"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))))
         :Humans
          (section
           :name "Humans"
@@ -603,23 +132,6 @@ two. Including this one. - Vasquez and Gorman, Aliens")
       :name "Battlestar Galactica"
       :sectionmap
        (sectionmap
-        "Battlestar Colonials"
-         (section
-          :name "Battlestar Colonials"
-          :unitmap
-           (unitmap
-            "Colonial Raptor"
-             (unit
-              :name "Colonial Raptor"
-              :image "BattlestarGalactica/Colonial_Raptor.png")
-            "Colonial Viper"
-             (unit
-              :name "Colonial Viper"
-              :image "BattlestarGalactica/Colonial_Viper.png")
-            "Colonial Battlestar"
-             (unit
-              :name "Colonial Battlestar"
-              :image "BattlestarGalactica/Colonial_Battlestar.png")))
         :Cylons
          (section
           :name "Cylons"
@@ -646,29 +158,6 @@ two. Including this one. - Vasquez and Gorman, Aliens")
       :name "Doctor Who"
       :sectionmap
        (sectionmap
-        "Doctor Who Equipment"
-         (section
-          :name "Doctor Who Equipment"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
         "Doctor Who Units"
          (section
           :name "Doctor Who Units"
@@ -681,12 +170,33 @@ two. Including this one. - Vasquez and Gorman, Aliens")
              (unit
               :name "Captain Jack Harkness"
               :image "DrWho/CaptainJackHarkness.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
+              :unitskillmap
+               (unitskillmap
+                :Longevity
+                 (unitskill
+                  :name "Longevity"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :tag "ability")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "ability")
+                         :severity 2))))))))
             "Clara Oswald"
              (unit
               :name "Clara Oswald"
@@ -702,20 +212,14 @@ two. Including this one. - Vasquez and Gorman, Aliens")
               :image "DrWho/Dalek.png"
               :reference "Imagine you were dying. Imagine you were afraid and a long way from home and in terrible pain. And just when you thought it couldn't get worse, you looked up and saw the face of the devil himself. Hello Dalek - The Doctor"
               :summary "The Daleks odd form may be explained by their personal shielding. Weapons and sensors are placed on stalks so that they may protrude from the shield. This prevents their shield from interfering with their equipment, but it also leaves these devices vulnerable."
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Shielding
+                 (unitskill
+                  :name "Shielding")))
             :Davros
              (unit
               :name "Davros"
@@ -822,12 +326,6 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
       :name "Robotech"
       :sectionmap
        (sectionmap
-        :Invid
-         (section
-          :name "Invid")
-        :Masters
-         (section
-          :name "Masters")
         :Zentradi
          (section
           :name "Zentradi")))
@@ -837,138 +335,6 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
       :summary "Aka Starblazers"
       :sectionmap
        (sectionmap
-        :Weapons
-         (section
-          :name "Weapons"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
-        "Earth Forces"
-         (section
-          :name "Earth Forces"
-          :unitmap
-           (unitmap
-            "Yamato Space Battleship"
-             (unit
-              :name "Yamato Space Battleship"
-              :image "SpaceBattleshipYamato/Yamato.png"
-              :titles "Argo"
-              :mass "62ktons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Andromeda Space Battleship"
-             (unit
-              :name "Andromeda Space Battleship"
-              :image "SpaceBattleshipYamato/Andromeda.png")
-            "UDF Battle Satellite"
-             (unit
-              :name "UDF Battle Satellite")
-            "UDF Space Destroyer"
-             (unit
-              :name "UDF Space Destroyer"
-              :image "SpaceBattleshipYamato/Destroyer.png")
-            "Cosmo Tiger II"
-             (unit
-              :name "Cosmo Tiger II"
-              :image "SpaceBattleshipYamato/CosmoTiger.png")
-            "Cosmo Zero"
-             (unit
-              :name "Cosmo Zero"
-              :image "SpaceBattleshipYamato/CosmoZero.png")))
-        "Gamelon Empire"
-         (section
-          :name "Gamelon Empire"
-          :unitmap
-           (unitmap
-            "Leader Desslok"
-             (unit
-              :name "Leader Desslok"
-              :image "SpaceBattleshipYamato/LeaderDesslok.png")
-            "Desslok's Command Carrier"
-             (unit
-              :name "Desslok's Command Carrier"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Gamelon Destroyer"
-             (unit
-              :name "Gamelon Destroyer")
-            :Tri-Carrier
-             (unit
-              :name "Tri-Carrier")
-            "Smite Ship"
-             (unit
-              :name "Smite Ship"
-              :image "SpaceBattleshipYamato/Gamelon_Smiteship.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Drill Missile"
-             (unit
-              :name "Drill Missile")
-            "Reflex Gun"
-             (unit
-              :name "Reflex Gun"
-              :summary "* Argo is on the opposite side of Pluto. The opposite side? Oh, no Star Force, you're not getting away. My Reflex Gun can shoot around corners. - Colonel Ganz")))
         "Comet Empire"
          (section
           :name "Comet Empire"
@@ -991,1752 +357,42 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
 energy to a considerable distance.  This gives the weapon a tremendous firing range more than twice that of
 a Wave Motion Gun."
               :titles "Magna Flame Gun"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))))))
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "5")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))))))))
     "Space Opera"
      (chapter
       :name "Space Opera"
       :sectionmap
        (sectionmap
-        "Space Opera Phenomenon"
-         (section
-          :name "Space Opera Phenomenon"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))))
-        "Terran Union"
-         (section
-          :name "Terran Union")
-        "Galactic Alliance"
-         (section
-          :name "Galactic Alliance"
-          :summary
-           "* Alliance Defense Service - A Service chartered with the defense and policing of star systems including air, sea, and land policing and defense. They hold authority over all civilian facilities including cities, space stations, and satellites.
-** Alliance Police
-** Alliance Bureau of Investigation
-* Alliance Military Service
-** Alliance Naval Division - A division managing large combat ships of all types including capital ships, military space stations, and military satellites.
-** Alliance Starfighter Division - A division managing small combat ships including interceptors, close support, and bombers.
-** Alliance Commando Corp - Elite teams focused on performing surgical military operations deep within hostile territory.
-** Alliance Marine Corp - A dedicated combat group focused on spearheading battles and rapid response.
-* Alliance Contact Service - A Service dedicated to exploration, diplomacy, trade negotiations, foreign intelligence, and the projection of soft power.
-** Alliance Diplomatic Corp
-** Alliance Intelligence Corp
-* Alliance Research Service"
-          :titles "Federation, Feddys (derogatory), Starfleet"
-          :unitmap
-           (unitmap
-            "Alliance Armsman"
-             (unit
-              :name "Alliance Armsman")
-            "Alliance Commander"
-             (unit
-              :name "Alliance Commander")
-            "Alliance Commando"
-             (unit
-              :name "Alliance Commando")
-            "Alliance Emmissary"
-             (unit
-              :name "Alliance Emmissary"
-              :summary "* Serves on First Contact and other diplomatic missions. Emmissaries must determine the best course of action to develop long-term relations with other species. As such, they have sweeping powers to determine policy that military personnel must implement including blockades and quarantines."
-              :titles "Diplomat")
-            "Alliance Heavy Marine"
-             (unit
-              :name "Alliance Heavy Marine")
-            "Alliance Intelligence Agent"
-             (unit
-              :name "Alliance Intelligence Agent"
-              :titles "Brint")
-            "Alliance Marine Tech"
-             (unit
-              :name "Alliance Marine Tech")
-            "Alliance Mobile Cavalry"
-             (unit
-              :name "Alliance Mobile Cavalry")
-            "Alliance Mobile Infantry"
-             (unit
-              :name "Alliance Mobile Infantry")
-            "Alliance Pilot"
-             (unit
-              :name "Alliance Pilot")
-            "Alliance Police Detective"
-             (unit
-              :name "Alliance Police Detective")
-            "Alliance Police Officer"
-             (unit
-              :name "Alliance Police Officer")
-            "Alliance Scientist"
-             (unit
-              :name "Alliance Scientist")
-            "Alliance Scout"
-             (unit
-              :name "Alliance Scout"
-              :summary
-               "* Alliance Scouts operate somewhat differently from the other divisions of the Alliance. Since Scouts must opearte on the edge of civilized space, the Scout Service values independence and resourcefulness. Its people are highly independent (some would say insubordinate) and are accustomed to doing a lot with a little. Scouts do not wear normally uniforms, even onboard ships and easily blend in with the frontier fringers. They operate with little funding or support and are experts at survival and mechancal engineering.
-* Reputation - Among the other divisions, the Scouts are seen as unprofessional cowboys, madmen, or criminals depending on who you talk to. The Scouts themselves admit to cases of all of these, and they proudly maintain that it takes a certain type to be a successful Scout.
-* Intelligence - Given the Scouts' deployment at the fringes of civilization, they often gain intelligence that the Intelligence Bureau would find difficult to obtain on their own. Officially, the Scout service shares all intelligence gathered with the Bureau. Unofficially, the Scouts do not like the way the Intelligence Bureau operates and rarely volunteers information. This hesitency, of course, makes the Bureau suspiscious.
-* Wartime - During war, the Scouts are called upon to perform skirmish and sabotage missions using their fast, light craft.")
-            "Alliance Technician"
-             (unit
-              :name "Alliance Technician")
-            "Alliance Trooper"
-             (unit
-              :name "Alliance Trooper")
-            "Alliance Defense Pilot"
-             (unit
-              :name "Alliance Defense Pilot"
-              :summary "* Planet-based spacefighter pilot. These fighters can only attain low-orbit, but they are relatively cheap to manufacture and easy to fly so they can be fielded in large numbers.")
-            "Alliance Defense Trooper"
-             (unit
-              :name "Alliance Defense Trooper"
-              :summary "* Planet-based military force. These warriors are trained to use the local terrain and defensive positions to repel invaders. Since defense forces are rarely needed, it is usually a cushy job. Therefore, they have a somewhate deserved reputation for being lazy and unprepared.")
-            "Inquiry Light Recon ATV"
-             (unit
-              :name "Inquiry Light Recon ATV"
-              :summary
-               "* Wheeled
-* Open topped ATV with HMG and MRLx2."
-              :mass "4tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Sepoy APC"
-             (unit
-              :name "Sepoy APC"
-              :summary "* Wheeled"
-              :mass "38tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Hunter AC Tank"
-             (unit
-              :name "Hunter AC Tank"
-              :summary
-               "* Air Cushioned
-* Pulse Laser
-* Gauss MG
-* MRL"
-              :mass "210tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Siega Strider"
-             (unit
-              :name "Siega Strider"
-              :summary "* Legged"
-              :mass "60tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Striker Grav Tank"
-             (unit
-              :name "Striker Grav Tank"
-              :summary "* 50MW Pulse Laser"
-              :mass "522tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Tarsan Grav APC"
-             (unit
-              :name "Tarsan Grav APC"
-              :mass "51tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Essor Recon Drone"
-             (unit
-              :name "Essor Recon Drone"
-              :summary "* No Weapons"
-              :mass "4.3tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Princely Lord Attack Speeder"
-             (unit
-              :name "Princely Lord Attack Speeder"
-              :summary
-               "* Grav Flyer
-* Pulse Laser"
-              :mass "171tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Alliance Exploration Ship"
-             (unit
-              :name "Alliance Exploration Ship"
-              :summary
-               "* SS Copernicus - Floating adrift in open space, the Copernicus is a ghost ship
-in more ways than one.")
-            "Hellbore Missile"
-             (unit
-              :name "Hellbore Missile"
-              :summary
-               "* A giant missile designed to drill into a planet and detonate deep in the magma setting
-off massive volcanic eruptions across the world with the intention to make the world
-uninhabitable."))
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
-        "Azuriach Empire"
-         (section
-          :name "Azuriach Empire"
-          :summary
-           "History:
-* Exodus - After the first Exodus to space, the over-industrialized, pollution ridden Earth fell into a deep recession. The remaining population of Earth began to feel that their fellow humans had abandoned them to their fate and grew to resent their spacefaring kin.
-* Eugenics War - After the Eugenics War, Earth banned all genetic engineering including cloning and artificial life while the Colonials embraced these technologies for their very survival.  Earth began to see the Colonials as a twisted offshoot of mankind that chose a sterile life in space surrounded by runaway technology instead of a wholesome life with earth, sky, and sea.
-* Azure Party - After the Eugenics War, the Earth moved toward a 'Pure Earth' platform combining a resurgence of religion with a return to a more natural, peaceful way of life, on Earth.  A particularly militaristic wing of the the 'Pure Earth' movement became known as the Azure party due to the round blue patches they wore symbolizing the Earth. The Azures were experts at propaganda and found an easy scapecoat in the Colonials.  As the global recession continued, the Azures influence over Earth politics increased.
-* United Earth Alliance (UEA) - After millenia of conflict, Earth united under a single banner, the United Earth Alliance (UEA). Its political platform was the 'Pure Earth' platform, without genetic engineering, without cloning, and with the UEA in control of the Solar System. The Colonials saw this for the power grab that it was and mocked this position as the 'Groundhog Movement'.
-* Solar Cold War - The UEA and the Colonials, especially the Jovians, fought a cold war for decades trying to gain the upper hand. The development of Exo-suits by the Jovian Confederation led to a new arms race between the Jovians and Earth. In the end, the strain on the Earth economy was too great, and the UEA became desparate. In order to maintain control, they declared martial law and began a military build up. This ultimately, forced the other Colonials to rally toward the Jovians or lose their sovereignty.
-* The Rock War - Earth's military might far exceeded the colonies, but their reach was limited to Earth's orbit. The Colonials had far more spaceships, but the vast majority of these were civilian ships.  Ultimately, however, it was the UEA's unpopularity that was its downfall. Before the final battle, sabotage and poor maintenance had incapacitated half of the Earth fleet. When the final battle was fought, the Colonials used their superior numbers to engage the Earth fleet in high Earth orbit where Earth's gravity well restricted the UEA fleet's movements. Then the Colonials covertly captured the industrial Mass Drivers on the Moon and began railing rocks into the Earth fleet and unto Earth itself. After horrific loses on both sides, the Earth military staged a coup on Earth and immediately negotiated a cease fire. The UEA was disbanded and their leaders (largely Azures) were put on trial.
-* Terran Union - After the fall of the UEG, the Colonials created a new representative goverment with each colony, including Earth and Luna, as a state. Earth began rebuilding, but the scars of the war would take centuries to heal.
-* Colony Ships - After 50 years of peace, the colonization of the Solar System was moving along smoothly, so the Terrans began to look outward to the stars. New discoveries in propulsion made long-range probes and colony ships feasible, though their journeys were still measured in decades, so they would still be one-way missions.
-* First Contact - The Terrans had been searching the stars for extra-terrestrial life for hundreds of years, but they were not prepared to find it in their own backyard. A survey of Pluto uncovered an abandoned alien outpost. This was the Terrans' first proof of alien life, and it was decidedly malevolent. This refocused space exploration on the construction of military warships. 30 years later, a human colony vessel had its first face-to-face encounter with a space-faring, alien race, the Thranx.
-* Alliance - The Thranx were much more advanced than the Terrans, but fortunately they were also much more peaceful. The Thranx were part of a loose trade Alliance of races including the Blarads, Caitians, Saurians, and Vargr. The Terrans entered the Alliance and were able to purchase the secrets to FTL drives.  With FTL, colonization of the stars began in earnest. Like the early American settlers, there were many willing to risk death for a chance at a new life. Large colony ships began radiating outward to nearby planets.  Among these were a number of disgruntled Azures who were horrified at the sight of humans reduced to a third rate state in an alien dominated Alliance. Over the next decades, the Azures began settling in one region of stars distant from any alien races.
-* Azuriach Imperium - Over time, the Azures consolidated power in their sector of space. They secretly built a large military fleet, and by the time the Terran Union discovered them, the Azures were powerful enough to declare themselves the Azuriach Imperium. Officially, the larger Alliance considers the Azuriachs a human internal problem. Unofficially, the Alliance is concerned with the distinctly human-centric views of the Azuriachs and are not interested in the Azuriachs gaining power over the human worlds."
-          :titles "Earth Empire"
-          :unitmap
-           (unitmap
-            "Azure Imperial Legionnaire"
-             (unit
-              :name "Azure Imperial Legionnaire")
-            "Azure Imperial Marine"
-             (unit
-              :name "Azure Imperial Marine")
-            "Azure Imperial Pilot"
-             (unit
-              :name "Azure Imperial Pilot")
-            "Azure Imperial Security Agent"
-             (unit
-              :name "Azure Imperial Security Agent")
-            "Azure Imperial Security Officer"
-             (unit
-              :name "Azure Imperial Security Officer")
-            "Trepida Light Grav Tank"
-             (unit
-              :name "Trepida Light Grav Tank"
-              :summary "* Fusion Cannon"
-              :mass "110tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Invader Grav Tank"
-             (unit
-              :name "Invader Grav Tank"
-              :summary "* Fusion Cannon"
-              :mass "152tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Vortex Land Carrier"
-             (unit
-              :name "Vortex Land Carrier"
-              :summary
-               "* These enormous vehicles are equivalent to a naval battleship/aircraft carrier but hovers over the ground using intense magnetic repulsion and massive hoverfans.
-* The area directly below the hull is exposed to lethal magnetic energy.
-* Fusion Cannon")))
-        "Galactic Trade Union"
-         (section
-          :name "Galactic Trade Union"
-          :summary
-           "* A powerful group of loosely affiliated mega-corporations that acts as the largest lobbying group in the Alliance. The Union has wields tremendous influence over the Alliance government and is essentially a shadow government itself. Though it wields tremendous power, there is intense disagreement how that power should be used with one group or another benefiting the most from every action taken. Conflict within the Union is subversive and bloody with many outside pawns being used including mercenaries and the Star Syndicate.
-* The Trade Union has no actual employees. Instead, the individual corporations act on its behalf either directly or through contractors.
-* Most smaller companies believe the Trade Union acts as a mafia by extorting money from its members for protection while leaning trade deals toward the core members and stifling the very competition they profess to uphold.")
-        "Star Syndicate"
-         (section
-          :name "Star Syndicate"
-          :summary "* The Syndicate is a loosely held criminal empire spread throughout the Alliance. It is a convenient tool of the mega corps and governments, so the Alliance never seems to make much progress against it."
-          :unitmap
-           (unitmap
-            "Syndicate Black Marketeer"
-             (unit
-              :name "Syndicate Black Marketeer")
-            "Syndiate Raider"
-             (unit
-              :name "Syndiate Raider"
-              :summary "* Given the high value of starships and their goods, piracy is extremely profitable. The Alliance maintains a 'No-Tolerance/Shoot to Kill' policy for piracy, yet pirate ships and pirate outposts are frighteningly common. The [Azuriach Empire]'s totalitarian state has far fewer incidents of piracy, largely because the stolen goods are harder to sell.")))
-        "Independent Terrans"
-         (section
-          :name "Independent Terrans"
-          :unitmap
-           (unitmap
-            "Terran Bounty Hunter"
-             (unit
-              :name "Terran Bounty Hunter")
-            "Terran Merchant Marine"
-             (unit
-              :name "Terran Merchant Marine")
-            "Terran Mercenary"
-             (unit
-              :name "Terran Mercenary")
-            "Terran Miner"
-             (unit
-              :name "Terran Miner")
-            "Terran Physician"
-             (unit
-              :name "Terran Physician")
-            "Terran Scientist"
-             (unit
-              :name "Terran Scientist")
-            "Terran Technician"
-             (unit
-              :name "Terran Technician")
-            "Corsair Motorcycle"
-             (unit
-              :name "Corsair Motorcycle"
-              :summary
-               "* Wheeled
-* Civilian Motorcycle"
-              :mass "350kg"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Letra Ground Car"
-             (unit
-              :name "Letra Ground Car"
-              :summary
-               "* Wheeled
-* Civilian Automobile"
-              :mass "4tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Shackleton Snow ATV"
-             (unit
-              :name "Shackleton Snow ATV"
-              :summary
-               "* Tracked
-* Easy to maintain snow ATV"
-              :mass "8tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Rheena Passenger ACV"
-             (unit
-              :name "Rheena Passenger ACV"
-              :summary
-               "* Air Cushioned
-* Passenger Hovercraft"
-              :mass "8tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Or-E-Cull ATV"
-             (unit
-              :name "Or-E-Cull ATV"
-              :summary
-               "* Tracked
-* High Speed ATV"
-              :mass "10tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Surveyor Hover-Buggy"
-             (unit
-              :name "Surveyor Hover-Buggy"
-              :summary
-               "* Air Cushion
-* 1 Fixed LMG."
-              :mass "13.7tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "AVI Cargo ACV"
-             (unit
-              :name "AVI Cargo ACV"
-              :summary
-               "* Air Cushioned
-* Cargo Hovercraft"
-              :mass "18tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Hugheston Wheeled Transport"
-             (unit
-              :name "Hugheston Wheeled Transport"
-              :summary
-               "* Wheeled
-* Cargo Transporter"
-              :titles "Semi Truck"
-              :mass "21tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Arctica Grav Transport"
-             (unit
-              :name "Arctica Grav Transport"
-              :summary
-               "* Grav
-* Self loading cargo transporter"
-              :titles "Semi Truck"
-              :mass "25tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Bundan Wheeled ATV"
-             (unit
-              :name "Bundan Wheeled ATV"
-              :summary
-               "* Wheeled
-* ATV"
-              :mass "28tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Permax Tracked ATV"
-             (unit
-              :name "Permax Tracked ATV"
-              :summary
-               "* Tracked
-* ATV"
-              :mass "47tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Cinto Construction Vehicle"
-             (unit
-              :name "Cinto Construction Vehicle"
-              :summary
-               "* Tracked
-* Bulldozer/Backhoe"
-              :mass "48tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Tavee-Gho Hoveryacht"
-             (unit
-              :name "Tavee-Gho Hoveryacht"
-              :summary
-               "* Air Cushioned
-* Hovercraft"
-              :mass "82tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Cetacean Dolphin Cycle"
-             (unit
-              :name "Cetacean Dolphin Cycle"
-              :summary
-               "* Underwater, Propelled by moving Fluke
-* Intended for fun in the sea.  It can glide with the dolphins and communicate with them using
-recorded dolphin speech."
-              :mass "75kg"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Hass Grav Minisub"
-             (unit
-              :name "Hass Grav Minisub"
-              :summary "* Underwater"
-              :mass "1tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Dashi Hydrofoil"
-             (unit
-              :name "Dashi Hydrofoil"
-              :summary
-               "* Hydrofoil, Underwater
-* Submerged: 25kph
-* Beam Laser"
-              :mass "2tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Vieus Hydrofoil"
-             (unit
-              :name "Vieus Hydrofoil"
-              :summary
-               "* Hydrofoil
-* Pulse Laser"
-              :mass "22tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Gasheda Undersea ATV"
-             (unit
-              :name "Gasheda Undersea ATV"
-              :summary "* Tracked, Underwater"
-              :mass "184tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Aquanaut Restaurant"
-             (unit
-              :name "Aquanaut Restaurant"
-              :summary
-               "* Tracked, Underwater
-* Undersea Restaurant"
-              :mass "251tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Tiamat Mining Crawler"
-             (unit
-              :name "Tiamat Mining Crawler"
-              :summary
-               "* Tracked, Underwater
-* Self-contained undersea mining colony for 50.
-* Can stay 10km underwater for 3 to 6 months at a time."
-              :mass "1000tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Timla Personal Floating Chair"
-             (unit
-              :name "Timla Personal Floating Chair"
-              :summary
-               "* Grav
-* Used for the luxury, the elderly or disabled, or for aliens with poor ground locomotion.
-* The floating chair normally just hovers over the ground, but it can slowly ascend if needed."
-              :mass "100kg"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Peter Pan Child's Grav Chair"
-             (unit
-              :name "Peter Pan Child's Grav Chair"
-              :summary
-               "* Grav
-* Young passengers automatically are taken to their programmed destination anywhere in the world.
-* Computer will not allow reprogramming unless authorized by the parent."
-              :mass "400kg"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Zeus Luxury Grav Chair"
-             (unit
-              :name "Zeus Luxury Grav Chair"
-              :summary
-               "* Grav
-* The ultimate in individual luxury transport.  The autopilot allows the passengers to work,
-talk, or relax with a drink."
-              :mass "480kg"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Swallow Flycycle"
-             (unit
-              :name "Swallow Flycycle"
-              :summary
-               "* Grav
-* Autopilot"
-              :mass "1tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Venery Police Speeder"
-             (unit
-              :name "Venery Police Speeder"
-              :summary
-               "* Grav
-* Gauss MG"
-              :mass "1.2tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Strike It Rich Prospector Grav Bubble"
-             (unit
-              :name "Strike It Rich Prospector Grav Bubble"
-              :summary
-               "* Grav
-* Can manuever close to analyze samples with its robotic arm. The bubble is to be used near a base. A team usually drops off one crewman to dig while the other prospects for new sites."
-              :mass "1.5tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Planet Hopper Grav Car"
-             (unit
-              :name "Planet Hopper Grav Car"
-              :summary
-               "* Grav
-* Flying family-sized car can travel anywhere on a planet in under a day."
-              :mass "2.6tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Quest Air-Raft"
-             (unit
-              :name "Quest Air-Raft"
-              :summary "* Grav"
-              :mass "8.3tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Demeter Grav Farm Wagon"
-             (unit
-              :name "Demeter Grav Farm Wagon"
-              :summary
-               "* Grav
-* Grav farming equipment that does not disturb crops.
-* Robotic arms plant and harvest."
-              :mass "11tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Lifesaver Grav Emergency Responder"
-             (unit
-              :name "Lifesaver Grav Emergency Responder"
-              :summary
-               "* Grav
-* Includes variety of sensors for detecting radiation leaks, trapped survivors, etc.
-* Fire retardant foam cannon"
-              :mass "13tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Duone Rapid Speeder"
-             (unit
-              :name "Duone Rapid Speeder"
-              :summary
-               "* Grav
-* Extremely high-speed grav flyer."
-              :mass "14tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Wanderer Grav Airbus"
-             (unit
-              :name "Wanderer Grav Airbus"
-              :summary
-               "* Grav
-* Flying mass transit or tour bus can reach any location on the planet in under a day."
-              :mass "15tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Traveller Shuttle"
-             (unit
-              :name "Traveller Shuttle"
-              :summary "* Grav, Suborbital"
-              :mass "17tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Cloud Nine Grav Houseboat"
-             (unit
-              :name "Cloud Nine Grav Houseboat"
-              :summary
-               "* Grav
-* 3 Bedroom, 2 Bath, 1 Kitchen, 1 Living/Dining Room, 2 Office
-* Take a vacation or live in the sky.  The Cloud Nine has fuel and supplies for a year without
-landing."
-              :mass "20tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Athene Grav Lounge"
-             (unit
-              :name "Athene Grav Lounge"
-              :summary
-               "* Grav
-* Mobile lounge popular with private clubs, business executives, and negotiators."
-              :mass "30tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Motherlode Grav Miner"
-             (unit
-              :name "Motherlode Grav Miner"
-              :summary
-               "* Grav
-* Mining Utility Vehicle"
-              :mass "49tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Tachcel Grav Hyperliner"
-             (unit
-              :name "Tachcel Grav Hyperliner"
-              :summary
-               "* Grav, Suborbital
-* Speed: 6G
-* At maximum speed, can reach any location on a typical planet in under an hour."
-              :mass "50tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Jacques Grav Miner"
-             (unit
-              :name "Jacques Grav Miner"
-              :summary
-               "* Grav
-* Mining vehicle designed to locate, mine, and transport ore from a variety of environments.
-* Mining Laser"
-              :mass "67tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Windrider Grav Weather Lab"
-             (unit
-              :name "Windrider Grav Weather Lab"
-              :summary
-               "* Grav
-* Floating meteorological laboratory"
-              :mass "88tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Thorian Kur Repair Shop"
-             (unit
-              :name "Thorian Kur Repair Shop"
-              :summary
-               "* Grav
-* Flying repair platform"
-              :mass "127tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Sans Souci Grav Yacht"
-             (unit
-              :name "Sans Souci Grav Yacht"
-              :summary
-               "* Grav
-* The ultimate millionaire's portable mansion.  The interior has 14 staterooms and is custom
-designed to the owner's tastes.  Some models include a swimming pool.
-* High tech armor and sensors."
-              :mass "342tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Zeff Grav Cargo Transport"
-             (unit
-              :name "Zeff Grav Cargo Transport"
-              :summary
-               "* Grav
-* Heavy Cargo Transporter"
-              :mass "500tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))))
-        :Aeodronian
-         (section
-          :name "Aeodronian"
-          :summary
-           "* The Aeodronians are a race of bipedal salamander-like humanoids. The salamanders are quite cunning and intelligent. The race as a whole is opposed to the Alliance.
-* The Aeodronian home world is a tropical paradise, lush and humid, possessing a variety of flora and fauna that covers 20% of the planet's surface area. The salamanders live in costal cities made of coral outcroppings (reefs) and carry on all industry in environmentally safe factories and other facilities. All food is taken from the natural bounty of the sea. For most materials, such as metals, alloys, and high-technology items, they trade with other races and worlds, rather than rape the bosom of their own planet. That which they cannot trade for, they take.
-* The Aeodronians have become scavengers and pillagers of the galaxy. They abhor the Alliance's method of colonial exploitation, and the salamanders are bitter enemies of its military. There is some hypocrisy in this statement, because salamander's are known to pillage and plunder Alliance worlds. Aeodronian raiding fleets harry convoys and supply routes, and attack worlds that the Aeodronidans see as being raped of their natural order."
-          :titles "Salamanders")
-        "Blarad Starkingdom"
-         (section
-          :name "Blarad Starkingdom"
-          :titles "Bears, Ursoids")
-        :Cizerack
-         (section
-          :name "Cizerack"
-          :summary
-           "* Description - A race of large, brown/blue/black cat/bear creatures. They are
-extremely fast and can able to achieve speeds of 40mph for short periods of time.
-Despite their size, they are strong climbers and swimmers. When necessary, they can
-walk erect, but they are clumsy on two feet. They possess excellent hearing and
-vision especially at night. They possess prehensile paws, with retractable fingers
-but have limited manual dexitery. They are stealthy stalkers and are adept at
-scouting, hunting, and ambushing.
-* Combat - Their melee prowess is legendary, but their paws make ranged weapons
-awkward, so instead they tend to mount smart weapons on their backs. They are also
-sometimes willing to allow small creatures (like Mazians) to ride on their backs.
-Cizerack culturally prefer close combat to cowardly ranged weapons, but they are
-gradually overcoming this predjudice.
-* History - The Cizerack evolved on a world with a few continents dominated by
-grassy plains and scrubland. Winters are harsh, and most animals including the
-Cizerack burrow into the ground and hibernate during the winter. There is a polar
-variant of the Cizerack that is adapted to the cold weather and does not usually
-hibernate. The Cizerack have long been at the top of the food chain, and have a long
-cultural history. They only recently developed technology in an effort to solve their
-over-population problem."
-          :titles "Caitian, Felines"
-          :unitmap
-           (unitmap
-            "Cizerack Warrior"
-             (unit
-              :name "Cizerack Warrior")))
-        :Chatilian
-         (section
-          :name "Chatilian"
-          :reference "* I rather like the way his head exploded."
-          :summary
-           "* Description - The Chatilians are from the planet Chatil in the Fomalhaut star
-system. They are frail, delicate looking, greenish blue plant beings with thin
-bodies and large, bullet-shaped heads. Chatilians are herbivores. They have no real
-mouth, rather they possess facial slits through which they strain their food intake.
-Their arms and legs are like branches and roots which must be pruned to grow into
-useful limbs. When angered, Chatilians whine loudly, bug out their eyes, and drool
-yellow spit from their facial slits. This would be somewhat comical, except this is a
-sign that they are generating and then people start dying.
-* Telepathy - They can speak aloud with great difficulty, though they do not normally
-need to because their skulls are crowned with sensory nodes which allows them
-communicate telepathically among themselves. With focus, an empath also may read an
-unprotected mind in close proximity.
-* Psykokinesis - Although Empaths are innocuous looking, they are actually among the
-more dangerous and formidable opponents in the galaxy. Through the evolutionary
-process, they have developed psycho-kinetic power which allows them to harness and
-transmit psychic energy. This unusual ability is called Generating. Empaths employ
-psychic and illusionary attack forms. Advanced Chatilians can actually crush the
-minds of their enemies.
-* Personality - They are generally considered rude, peculiar, and annoying by other
-races. They are not overly fond of other races either. They intensely dislike any
-inconvenience including bad weather. A large part of their scientific development has
-been toward atmospheric control and terraforming. Chatilians like water but hate any
-kind of physical exertion. They are sensitive to everything, so noise, bright lights,
-gaudy art, hot weather, cold weather, dumb people, etc, etc. all irriate the sedate
-intellectuals to no end.
-* Colonies - Chatilian buildings are strange tiered affairs with rooms and floors of
-different sizes, terraces and skylights everywhere, and stark blank surfaces. The
-architecture is similar to adobe cities and Mediterraean beach communities. Chatilian
-cities are sprawling low-lying residential areas with all industry and commerical
-operations underground. Trees and plants are allowed to grow naturally throughout the
-cities. The underground is a maze of indirect passages and oddly shaped rooms.
-Tourist often get lost which the Chatilians attribute to their limited mental
-capacity.
-* History - The Chatilians homeworld is closer to its star than Earth. It is hot and
-humid year round, and its 4 moons reflect much light even at night. In this world,
-mobile plant life evolved instead of animal life. Though all Chatilians speak
-telepathically, the ability to generate only occurs in 1% of the populace. The ability or inability to generate has created 2
-classes and numerous, bloody civil wars with one side or the other taking control.
-The current royal family can generate and their power is buffered by a representative
-parliament. This arrangement has lasted for 500 years, but there always remains a
-risk of civil war."
-          :titles "Asparagus Men"
-          :unitmap
-           (unitmap
-            "Chatilian Empath"
-             (unit
-              :name "Chatilian Empath")))
-        "Cybernetically Enhanced"
-         (section
-          :name "Cybernetically Enhanced"
-          :titles "Cyber, Cyborg, Cyman, Simon (derogatory)")
-        :Eridani
-         (section
-          :name "Eridani"
-          :summary
-           "* The ultimate warrior race. The methane breathing Eridani are the epitome of a combat
-tacticians. They possesses supreme agility, exceptional willpower, and are quite
-cunning.
-* Physiology - Eridani are tri-sexual creatures with males and females fertilizing
-and a fat creature called a Nog that carries young to term in a pouch similar to a
-kangaroo. Males and females have few gender-based role differences while the Nogs are
-largely helpless and fiercely protected.
-* History - The Eridani have a long history of conflict and conquest among themselves
-before uniting to bring their conquests to the stars. They are not interested in
-statecraft, so conquered worlds were largely left to their own devices besides helping
-pay for the eternal war effort. Eventually, they encountered a trecherous enemy in
-the Phentari squids. This enemy was able to lure the Eridani fleet into an all out
-attack while launching a covert attack against the Eridani homeworld reducing it to
-rubble. The Eridani empire was shattered and they can never live down the humiliating
-defeat. They now maintain a blood feud with all Phentari."
-          :unitmap
-           (unitmap
-            "Eridani Swordsaint"
-             (unit
-              :name "Eridani Swordsaint"
-              :summary
-               "* Certain Eridani warriors are chosen at birth to fulfill the honorable status of
-Mokaba Datu, (Wisdom Warrior). Under the tutelage of the Buddon Priest, the young
-Mokaba Datu learns the basic tactics of honorable survival.
-* A swordsaint warrior must be willing to sacrifice emotion for the superior
-consciousness of objective thought. Even in a berserk status, an Swordsaint
-retains complete control and suffers no berserk penalties."
-              :titles "Mokaba Datu, Wisdom Warrior")
-            "Eridani Warrior"
-             (unit
-              :name "Eridani Warrior"
-              :summary
-               "* This supreme warrior race specializes in combat skills, most notably archaic
-hand weapons. Every warrior is allowed to carry an ornamental archaic hand weapon
-of his choice wherever he goes within Alliance territory.
-* Eridani warriors study Kaush-mukal (The study of the Inner Self). He is taught
-the fundamentals of archaic hand weapons combat, drilling every day for hours,
-until he passes a fundamental competence test in his chosen weapon. Once he has
-mastered the fundamentals, he begins the arduous task of finding Inner Self.
-* A warrior has a duty, unselfish and detached. It is to wage battle for the
-honor of the race, and in the heartfelt throes of battle come to understand the
-tentative existence of the self. Those unworthy of combat will inevitably be
-disposed of. Such is the fundamental construct of the evolution process.
-Eventually one must find the door to everlasting peace. But the path to
-tranquility starts in the chaos of the battlefield.")))
-        :Mazian
-         (section
-          :name "Mazian"
-          :summary
-           "* The Mazian is an amorphous being, able to change shape to resemble other objects.
-It is normally a gel-like amorphous being, each cell existing as a separate entity
-and yet working in a harmonious symbiotic relation with the other cells around it.
-The Mazian has no central nervous system, rather the outer layer of skin is covered
-with small nodes that allow the Mazian to sense ground vibrations. The nodes also
-make Mazians vulnerable to loud noises and sonics. It is an asexual being that
-reproduces through budding every ten years. It eats by absorbing liquids into its body
-and the Mazian can absorb small objects for temporary storage.
-* Personality - Mazians are very friendly creatures with no sense of personal space.
-They hang around in huge piles and are only truly happy when touching something or
-someone. As a colony creature, Mazians lack a sense of individuality. They do not
-understand personal property or war as they believe in sharing everything. Many other
-races find this perspective to be naive. The tactile nature of the Mazians combined
-with their selfless nature make them very popular companions and lovers. They have
-formed a close bond with the Cizerak despite the fact that their races have only
-recently encountered one another. Cizeraks have been known to carry Mazian companions
-on their backs.
-* Movement - Mazians normally travel low to the ground, sliding rapidly over surfaces.
-They are also fully amphibious and move gracefully like an eel or a squid. Mazians
-can also burrow through loose earth and can slide through narrow tunnels and pipes
-with no feeling of claustrophobia.
-* Communication - Mazians normally communicate by touch but may also make coded
-thumping noises through the ground or grunting noises in the water. To speak with
-other races, they use voice synthesizers.
-* Senses - Mazians cannot see, but have evolved a complex form of sonar which allows
-them to distinguish shapes. They have a fantastic sense of smell, able to detect
-residual odors better than a bloodhound. Their sense of taste is so good that they
-can use it to distinguish the dyes used in different colors and can use this ability
-to read by touch. Mazians have developed an ocular device that they can use to see
-as other creatures do.
-* Replication - The Mazian's ability to change it's form makes it the ultimate
-espionage/infiltration specialist. As the Mazian learns to control the cell
-metamorphoses, its chance to accurately duplicate something increases. At high levels,
-a Mazian can replicate a humanoid form. When attempting to replicate, the Mazian flows
-over an object, internally records the physical matrix, then copies it. Mazians often
-pay handsome amounts of money for internal skeletons to aid them in replicating
-bipedal and quadrapedal forms.
-* Weaknesses - Mazians jelly-like form is sensitive to sonics and dessicants. They are
-vulnerable to the drying effects of heat and cold, but their predominatly liquid form
-does not catch fire easily."
-          :titles "Blob")
-        :Mutazchan
-         (section
-          :name "Mutazchan"
-          :summary
-           "* The Mutzachan Energy Controller is one of the most powerful of all the known races.
-They can manipulate energy through their body to generate tremendous, destructive
-power. Mutzachan love the power of raw energy. They feel that energy must fill its
-potential and dislike the storage of energy.
-* Description - Mutzachans are indigenous to the planet Trishmag of the Cygni-A star
-system. They are small, bipedal humanoids, with large heads and large pale green eyes.
-They are by far the most intellectually advanced race in the known galaxies. Their
-brains have almost twice the convoluted surface area of human brains.
-* Physiology - Their high intellect and technology have left them with a distain for
-physical labor and consequently their physiological has suffered leaving them
-physically weak and easily tired. Their constitution is also weak leaving them
-unusally vulnerable to disease and infection. The entire Mutzachan population is less
-than 400 million and their culture has almost been eradicated twice, due to plague.
-Mutzachan have a very low fertility rate, with the females bearing young only once
-every 100 years. The average life expectancy for a Mutzachan is about 2,000 years.
-* Psychology - Mutzachan pride themselves on making decisions rationally instead of
-emotionally. This is not to say that the Mutachan are not emotional, but they are
-ususally able to overcome their emotions. Mutachan are highly ego driven and are
-very fond of titles and have little patience for insults. Though they are generally
-consistent and fair to others, they are also famous for being coldhearted and ruthless
-when the need arises.
-* History - The Mutzachan are an old race, with a history spanning 40,000 years. They
-have observed the development of the other races without interfering (much). Their
-sun is old and has been slowly, expelling more radiation over the last million years.
-Life on their world evolved to not only become resistant to the radiation but to
-feed on it in a process similar to photosynthesis. A 1000 years ago, the Mutzachans
-determined that their sun would go nova, destroying their home world. Since then,
-they have pursued 'The Great Purpose' which is to prevent or mitigate this
-catastrophe. The Great Purpose has also spawned dangerous nilhilist cults that
-believe that the Mutzachans do not deserve to continue and should embrace their
-final destruction in the ultimate nuclear cataclysm.
-* Politics - Their keen intellects and strategic thinking have risen many of their
-kind to high political office. Most of the high ranking members of the Alliance are
-either Replicants or Mutzachan. No one really trust the Mutzachan, but then again no
-one really trusts anybody and the Mutachan are probably better than most."
-          :titles "Melon Head, Grays, IRSOL")
-        :Phentari
-         (section
-          :name "Phentari"
-          :summary
-           "* The Phentari are a warlike race of bipedal, squid-like beings. Because of their
-callous and trecherous natures, they are the most mistrusted, and disliked of all the
-known, intelligent races. Phentari have a notorious reputation as skilled bounty
-hunters and assassins.
-* Physiology - Phentari are indigenous to the methane planet Phena in the Tau Ceti
-star system. They have four sinuous arms, each of which is capable of independent
-action. This allows the squid to target and fire multiple weapons, or perform
-multiple independent actions simultaneously. When using edged weapons, the squid
-attacks like a chain saw. Their tentacles also allow the Phentari to climb quite well.
-Phentari possess stump like legs which offer little balance. They have long since
-adopted prosthetic gear to facilitate running. Phena has a 20% methane atmosphere and
-like the Eridani, the Phentari must wear an atmospheric processor when operating
-outside of a methane environment.
-* Procreation - Phentari mate every 4 years. After mating, the female attempts to hunt
-and kill the male. Males who are not resourceful enough to escape have fulfilled their
-mating potential and are no longer worthy of further mating. The female carries the
-fertilized eggs for 3 months and then lays a clutch of 3-4 eggs. After egg laying,
-the female buries the eggs in the ground and then abandons them. Phentari young must
-fend for themselves after birth, often feeding off of their siblings. Until they
-mature, Phentari young hide in the shadows and develop their survival and hunting
-skills. It is not unknown for a group of young to ambush and slay an adult. Of course,
-when this happens, other Phentari accept that the foolish adult deserved his fate.
-* Personality - Phentari are heartless, selfish creatures who hold all weaker beings
-in contempt. They use coercion and threats instead of persuation. Phentari are very
-proud of their kills and will wear jewelry that displays their kill count. They are
-also fond of decorating their abodes with the skulls of their victims.
-* Skills - Phentari values weapons of all sorts including weapons that other races
-look down upon such as poisons, diseases, and acids.
-* Government - The Phentari have only had military governments ruled by a council of
-generals with no individual given absolute power.
-* History - The Phentari have a long, bloody history of civil wars. Since their
-disasterous war with the Eridani, they have managed to join together against a common
-foe. They maintain a mutual hatred of the Eridani who seem to want to kill Phentari
-on sight."
-          :titles "Cold Death, Demon Spawn, Grim Reaper, Soul Sucker")
-        :Pythos
-         (section
-          :name "Pythos"
-          :summary
-           "* The Pythons are a pair of powerful, lizard races indigenous to the planets Pythos in the Floridian star system.
-* Python Lizards - Python Lizards are aquatic beings, dwelling in the great swamp-like inland seas that cover much of the surface of their home planet. They don't hear sounds as humans do, but rather sense vibrations through their skin. The lizards can dive to depths of 200m and are capable of holding their breath for up to 10 minutes. The drawback is that Python Lizards are sensitive to dry environments and susceptible to cold. When the temperature drops below zero degrees celsius, Pythons usually crawl in some comfortable place and fall asleep. Python Lizards can sense heat sources out to 100m. The lizards are generally less intelligent than their galactic counterparts and have none of their own technology to speak of. They are, however, much more intelligent than their land-based cousins the Rams.
-* Ram Pythons - Unlike their aquatic cousins, Ram Pythons live on land. They are massively powerful and overwhelm even the Python Lizards in combat. However, their intelligence is extremely limited, and they are barely able to be taught how to use modern weaponry.
-* Combat - These great reptiles are the backbone of assault units in the Alliance Marines, proud and defiant warriors whose lifelong ambition is to fight the ultimate battle. The Python is a veritable fighting machine. Unarmed, it attacks with both claws, a vicious bite, and its long prehensile tail. They have a thick, scaly hide that acts as natural leather armor.
-* Personality - These prehistoric dinosaurs are overtly aggressive. The vast majority of Pythons follow a strict code of honor and adamantly adhere to the precepts of law and order.
-* History - The Lizards and Rams are tribal creatures who have fought tribal conflicts for tens of thousands of years. Thir technology was limited to spears and stone axes until the Cizerak sent a diplomatic envoy to the Python Lizards. The Lizards suspected trickery and killed the envoy sparking a punitive attack from the Cizerak. The Lizards and Rams were forced into a humiliating surrender after devastating losses from the Cizerak's cowardly orbital bombardment. The Pythos have not forgiven the Cizerak and will never trust them. Since then, the Alliance has established peaceful relations with the Pythos and have recruited many into Alliance police and military forces."
-          :titles "Lizards"
-          :unitmap
-           (unitmap
-            "Python Lizard"
-             (unit
-              :name "Python Lizard")
-            "Ram Python"
-             (unit
-              :name "Ram Python")))
-        :Reavers
-         (section
-          :name "Reavers"
-          :reference "* If they take the ship, they'll rape us to death, eat our flesh, and sew our skins into their clothing. And, if we're very, very lucky, they'll do it in that order. - Zoë Alleyne Washburne, Firefly"
-          :summary
-           "* Showing no care for life, they are driven by an insane, homicidal and xenophobic aggression that manifests in the cannibalism, rape, and torture that they visit upon any unfortunate enough to come across them.
-* Appearance - They deliberately gash and cut their own flesh. Barbaric piercings and random bits of metal shoved into their flesh are common, giving them a ghastly and corpse-like air.
-* Abilities - They seem no physically stronger or tougher than normal humans merely inured to pain to the point where they care nothing for their injuries or indeed their own lives, and more willing to push their bodies to the extreme because of their madness.
-* Intelligence - Exactly how sentient individual Reavers are remains an open question. Although they clearly must have some retention of any original knowledge prior to their madness (as evidenced by their command of starships and weapons) Reavers are as without fear as they are without mercy,
-* Reavers are believed by most to be men that went insane at the edge of space and became savage. They stared into the void beyond and became what they saw: nothing.
-* Reavers originated from the planet Miranda. The Alliance had been testing behavioral modification on this planet through the chemical G-23 Paxilon Hydrochlorate ([PAX]), administered through the air recycling systems. The chemical was designed to weed out aggression and anger. The ultimate result was that 99.9% of the population stopped going to work, talking to each other, and eventually stopped moving, eating or breeding, and therefore died. However, the remaining tenth of a percent of the population had the opposite reaction, with their aggression and primal instincts boosted beyond simple madness into murderous rage, sadism and xenophobia."
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))))
-        :Replicant
-         (section
-          :name "Replicant"
-          :reference "* We are merely synthetic products, nothing more than elegant looking robots. - Unknown Replicant philosopher"
-          :summary
-           "* Replicants are genetically engineered from scratch to be mentally and physically superior to ordinary humans even genetically enhanced onces. However, they remain physically inferior to full [Android]s, so some consider their production irrelevant.
-* Legal status - They are genetically predisposed to be obedient, and their legal status varies from system to system. The Azures consider them abominations that must be destroyed. In the Alliance, Replicants are generally considered to be more trustworthy than real people, so they have risen to the top levels of government including the current Alliance President.
-* All Replicants are branded with a production number on their scalp at birth.
-* Psychology - Many Replicants are jealous of their fellow Humans, for they don't have an ancestry or heritage. In many ways they are less than orphans, for Replicants are grown in accelerated biochemical environment tanks. Hence, many Replicants suffer from psychological disorders.
-* Weaknesses - The danger of a Replicant revolution has always created controversy among ordinary people. The solution was to limit their lifespan to 10 years. They have also been created with a built-in weakness to a number of military chemicals, so that the military would always have a potent weapon against them."
-          :titles "Genetic Human, Genman, Gen-human, Numan, Bioman, Bioroid, Gene (derogatory), Skin Job (derogatory), Newman (derogatory)")
-        :Synthetics
-         (section
-          :name "Synthetics"
-          :reference
-           "* It would appear that the plasma pulse has destroyed a large portion of my lower body. Repairs will be necessary. - Battlelords
-* I can assist your employees. I can make your organization more efficient. I can carry out directives that my human counterparts might find ... distressing or unethical - David 8, Prometheus
-* David, what makes you sad? War. Poverty. Cruelty. Unecessary violence. I understand human emotions, although I do not feel them myself. - David 8, Prometheus"
-          :summary
-           "* Androids are robots designed to pass as living beings. Since specialized robots are best suited to most menial labor, Androids are generally assigned to duties where a specialized robot would not be appropriate. They are regularly assigned to starship crews, and some ships have only android crews.
-* Androids have many advantages over their living counterparts. They are extremely strong and fast, and have the lightning-quick processing abilities of a computer. They enjoy the best of both worlds where skills are concerned. They can be programmed with necessary skills as well as learn new skills as they are exposed to them in the outside world. Their synthetic skin is slightly tougher than a human's, and the android can take much more damage and still remain functional. Broken parts can simply be replaced, though the individual personality will be lost if the memory banks and backup are destroyed."
-          :titles "Android, Artifical Person, Arty (derogatory), Andy/Andi (derogatory), Syn (derogatory), Synoman/Cinnoman (derogatory), Synthetic, Synthoid")
-        "Thranx Collective"
-         (section
-          :name "Thranx Collective"
-          :summary
-           "* Description - Visually, the thranx are an insectoid race, about 1.5 meters long when on all six legs.  They look roughly like very large praying mantises. Chitin color differs between males and females, being blue for the males and aquamarine for females, deepening to purple in old age. Thranx also possess vestigial double sets of wings, ritually removed after mating. The head is valentine-shaped, with large, compound golden eyes sometimes banded with red. They have four pairs of appendages; two truhands, four trulegs, and a set of intermediaries that can function as an additional pair of arms or legs. Like insects, they have no lungs and breathe through a series of openings at about waist level.
-* Communication - The species communicates with a complex language consisting of clicks and whistles.
-* Weaknesses - Thranx are unsuited to water and most fear it; they are not naturally buoyant and because they breathe out of their waists, any water that reaches to this level can drown them."
-          :titles "Thraxis"
-          :unitmap
-           (unitmap
-            "Thranx Navigator"
-             (unit
-              :name "Thranx Navigator")))
-        :Transhuman
-         (section
-          :name "Transhuman"
-          :summary "* Genetically engineered superbeings."
-          :titles "Trueman, Truman (derogatory)")
-        "Vargr Mercantile League"
-         (section
-          :name "Vargr Mercantile League"
-          :summary
-           "* Description - Vargr are a bipedal, carnivorous race with strong canine/lupine
-characteristics. They are short by human standards and are not physically imposing.
-* The Vargr are cunning merchants.
-* Politics - The Vargr lack governmental structures. Mega-corporations operate entire
-cities and colonies, buy and selling them as a package. The corporation operating
-a location sub-contracts out all major services, and within small companies grow in
-symbiosis with the corporation. Vargr corporations believe in constant competition,
-so they are careful to make sure that their rivals remain healthy. This generosity
-to ones rivals is seen as peculiar to other races, but the Vargr have suffered
-through the devastating stagnation that monopolies produce and recoil at any tendency
-to recreate those dark days."
-          :titles "Canines, Dogs"
-          :unitmap
-           (unitmap
-            "Vargr Merchant"
-             (unit
-              :name "Vargr Merchant")
-            "Vargr Buccaneer Grav Platform"
-             (unit
-              :name "Vargr Buccaneer Grav Platform"
-              :summary "* High speed, open topped, gravity cycle shaped like a cylinder."
-              :mass "1.4tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))))
-        :Virtuals
-         (section
-          :name "Virtuals"
-          :summary "* Beings that live partially or completely in the virtual world."
-          :titles "Vrman, Verman, Vermin (derogatory)")
-        "Zen Rigeln"
-         (section
-          :name "Zen Rigeln"
-          :summary
-           "* The Zen Rigeln are the most beloved race of the Galactic Alliance. They possess the
-power of healing and are much sought after as battlefield medical technicians and as
-domestic doctors. They hold life in the highest regard, abstaining from violence
-unless absolutely necessary.
-* Appearance - Zen have a striking appearance with a dark blue/black skull-like head
-and colorful, ornate robes. Zen healers always wear the colors of their current power
-on their clothing.
-* Politics - The Zen see the Alliance as far less noble than it claims. Most Zen feel
-that they must shepard the Alliance to be a better organization, while others see the
-Alliance as an evil empire and work for the Rebels in order to overthrow it. The Zen
-have no known enemies except their own Anarchs.
-* Healing - All Zen have amazing recuperative powers. Through intense training, some
-have gained the ability to share their healing with others."
-          :titles "Skulls"
-          :unitmap
-           (unitmap
-            "Zen Rigeln Anarch"
-             (unit
-              :name "Zen Rigeln Anarch"
-              :summary
-               "* Anarchs are a small sect of Zen that turned their back on the Zen philosophy of
-peace and moderation. Instead, they believe that the Zen must face the other races
-on their own terms: with strength. Anarchs are naturally seen as dangerous rebels
-and terrorists by the Zen government and populace. Captured Anarchs should expect
-life imprisonment.
-* Disruption - Through skin to skin contact, a Zen Anarch may link his/her own
-body with another person and disrupt the bodily functions of the target. Pain,
-nausea, and heart failure are only a few of the effects that a skilled Anarch can
-inflict.")
-            "Zen Rigeln Healer"
-             (unit
-              :name "Zen Rigeln Healer"
-              :summary
-               "* Healing - Through skin to skin contact, a Zen Healer may link his/her own body
-with an injured person and share his/her healing ability. At high levels of
-proficiency, the Zen can perform incredible feats such as brain surgery.")))
         "Interstellar Vehicles"
          (section
           :name "Interstellar Vehicles"
@@ -2874,156 +530,6 @@ courier or smuggling as well as heavier armaments."
       :name "Star Trek"
       :sectionmap
        (sectionmap
-        "Sci-Fi Equipment"
-         (section
-          :name "Sci-Fi Equipment"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
-        "Sci-Fi Weapons"
-         (section
-          :name "Sci-Fi Weapons"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
-        :Federation
-         (section
-          :name "Federation"
-          :unitmap
-           (unitmap
-            "Federation Shuttlecraft"
-             (unit
-              :name "Federation Shuttlecraft")
-            "USS Enterprise (Constitution Class)"
-             (unit
-              :name "USS Enterprise (Constitution Class)"
-              :image "StarTrek/Federation_Enterprise.png"
-              :titles "NCC-1701"
-              :mass "200ktons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "USS Reliant (Avenger Class)"
-             (unit
-              :name "USS Reliant (Avenger Class)"
-              :image "StarTrek/Federation_Reliant.png"
-              :summary
-               "A Frigate is a ship of similar firepower to a Heavy cruiser but has fewer research facilities, require less
-crew, and has more limited endurance."
-              :mass "165ktons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))))
         "Alien Races"
          (section
           :name "Alien Races"
@@ -3038,32 +544,60 @@ crew, and has more limited endurance."
 distinctiveness to our own. Your culture will adapt to service us. Resistance is futile. - The Borg, Star Trek
 First Contact"
               :mass "90Mtons"
+              :length "3km"
+              :unitskillmap
+               (unitskillmap
+                :Shielding
+                 (unitskill
+                  :name "Shielding"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":summary"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3)
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":Adaptive Shielding total capacity 5,850,900TJ"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3))))
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "4")
+                      :severity 2)
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":summary"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3)
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":Total output 7,500,000TW"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3)))))
               (msgblock
                :msgs
                 (msglist
                  (msg
                   :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+                  :detail
+                   (anymap
+                    :type nx/tactics/base/unit
+                    :prop "crew"
+                    :value "130000")
+                  :severity 2))))
             "Borg Drone"
              (unit
               :name "Borg Drone"
@@ -3087,96 +621,180 @@ Borg."
 * Can consume a planet in a day"
               :titles "Planet Killer"
               :mass "4x10^23tons"
+              :length "2.7km"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":summary"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3)
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":Solid Neutronium - Hyper Dense Neutron Star Material"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3))))
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "4")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2)))))))
               (msgblock
                :msgs
                 (msglist
                  (msg
                   :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+                  :detail
+                   (anymap
+                    :type nx/tactics/base/unit
+                    :prop "classification"
+                    :value "Hvy. Spacecraft")
+                  :severity 2))))
             "Klingon Bird of Prey"
              (unit
               :name "Klingon Bird of Prey"
               :image "StarTrek/Klingon_BirdOfPrey.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Shielding
+                 (unitskill
+                  :name "Shielding")
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "4")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))
+                :Stealth
+                 (unitskill
+                  :name "Stealth"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :tag "item")
+                      :severity 2))))))
             "Klingon Cruiser"
              (unit
               :name "Klingon Cruiser"
               :image "StarTrek/Klingon_Cruiser.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Shielding
+                 (unitskill
+                  :name "Shielding")
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "5")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))))
             "Klingon Warrior"
              (unit
               :name "Klingon Warrior"
               :image "StarTrek/Klingon_Warrior.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee")))
             "Nomad Probe"
              (unit
               :name "Nomad Probe"
@@ -3192,26 +810,50 @@ Borg."
              (unit
               :name "Romulan Warbird"
               :image "StarTrek/Romulan_Warbird.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Shielding
+                 (unitskill
+                  :name "Shielding")
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "4")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))))
             "Species 8472"
              (unit
               :name "Species 8472"
@@ -3222,916 +864,12 @@ Borg."
               :image "StarTrek/VoyagerVI.png"
               :reference "Voyager VI - Tell Nomad I'm going to kick his ass. - Motivational Poster Parody"
               :titles "Voyager VI"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))))))))
+              :length "98km")))))
     "Star Wars"
      (chapter
       :name "Star Wars"
       :sectionmap
        (sectionmap
-        "Star Wars Equipment"
-         (section
-          :name "Star Wars Equipment"
-          :reference "http://www.stardestroyer.net/tlc/Power/index.html"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
-        "Star Wars Droids"
-         (section
-          :name "Star Wars Droids"
-          :unitmap
-           (unitmap
-            :C3PO
-             (unit
-              :name "C3PO")
-            :R2-D2
-             (unit
-              :name "R2-D2")))
-        "Star Wars Republic"
-         (section
-          :name "Star Wars Republic"
-          :unitmap
-           (unitmap
-            "Ahsoka Tano"
-             (unit
-              :name "Ahsoka Tano"
-              :image "StarWars/Republic_AhsokaTano.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Anakin Skywalker"
-             (unit
-              :name "Anakin Skywalker"
-              :image "StarWars/Republic_AnakinSkywalker.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Clone Trooper"
-             (unit
-              :name "Clone Trooper"
-              :image "StarWars/Republic_CloneTrooper.png")
-            "Mace Windu"
-             (unit
-              :name "Mace Windu"
-              :image "StarWars/Republic_MaceWindu.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Obi-Wan Kenobi"
-             (unit
-              :name "Obi-Wan Kenobi"
-              :image "StarWars/Republic_ObiWanKenobi.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Padme Amidala"
-             (unit
-              :name "Padme Amidala"
-              :image "StarWars/Republic_PadmeAmidala.png")
-            "Qui Gon"
-             (unit
-              :name "Qui Gon"
-              :image "StarWars/Republic_QuiGon.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))))
-        "Star Wars Seperatists"
-         (section
-          :name "Star Wars Seperatists"
-          :unitmap
-           (unitmap
-            "Asajj Ventress"
-             (unit
-              :name "Asajj Ventress"
-              :image "StarWars/Separatist_AsajjVentress.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Battle Droid"
-             (unit
-              :name "Battle Droid"
-              :image "StarWars/Separatist_BattleDroid.png")
-            "Chancillor Palpatine"
-             (unit
-              :name "Chancillor Palpatine"
-              :image "StarWars/Separatist_ChancillorPalpatine.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Count Dooku"
-             (unit
-              :name "Count Dooku"
-              :image "StarWars/Separatist_CountDooku.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "General Grievous"
-             (unit
-              :name "General Grievous"
-              :image "StarWars/Separatist_GeneralGrievous.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))))
-        "Star Wars Imperial Vehicles"
-         (section
-          :name "Star Wars Imperial Vehicles"
-          :unitmap
-           (unitmap
-            "Imperial Assault Gunboat"
-             (unit
-              :name "Imperial Assault Gunboat"
-              :image "StarWars/Imperial_Assault Gunboat.png"
-              :summary
-               "* 2 Laser Cannons
-* 2 Concussion Missile Launchers (20 missiles each)
-* 100 Shields"
-              :titles "Alpha Class Xg-1 Star Wing"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Imperial Assault Transport"
-             (unit
-              :name "Imperial Assault Transport"
-              :summary
-               "* 2 Turbo Laser Turrets
-* 2 Ion Cannons
-* 2 Proton Torpedo Launchers (4 torpedos each)
-* 200 Shields
-* 40 Troops"
-              :titles "Gamma Class ATR-6 Assault Transport"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "Imperial Shuttle"
-             (unit
-              :name "Imperial Shuttle"
-              :image "StarWars/Imperial_Shuttle.png"
-              :titles "Lambda Class"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))))
-            "Imperial Walker"
-             (unit
-              :name "Imperial Walker"
-              :image "StarWars/Imperial_Walker.png"
-              :titles "AT-AT (All Terrain Armored Transport)"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Tie Advanced"
-             (unit
-              :name "Tie Advanced"
-              :image "StarWars/Imperial_TieAdvanced.png"
-              :titles "Tie Avenger"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Tie Bomber"
-             (unit
-              :name "Tie Bomber"
-              :image "StarWars/Imperial_TieBomber.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))))
-            "Tie Defender"
-             (unit
-              :name "Tie Defender"
-              :image "StarWars/Imperial_TieDefender.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))))
-            "Tie Fighter"
-             (unit
-              :name "Tie Fighter"
-              :image "StarWars/Imperial_TieFighter.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Tie Interceptor"
-             (unit
-              :name "Tie Interceptor"
-              :image "StarWars/Imperial_TieInterceptor.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Imperator Star Destroyer"
-             (unit
-              :name "Imperator Star Destroyer"
-              :image "StarWars/Imperial_StarDestroyer.png"
-              :mass "25Mtons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Executor Star Destroyer"
-             (unit
-              :name "Executor Star Destroyer"
-              :image "StarWars/Imperial_Executor.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Death Star"
-             (unit
-              :name "Death Star"
-              :image "StarWars/Imperial_DeathStar.png"
-              :reference
-               "* The regional governors now have direct control over their territories.  Fear will keep the local systems in
-line. Fear of this battle station. - Grand Moff Tarkin, Star Wars"
-              :mass "2x10^12tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))))
-        "Star Wars Imperials"
-         (section
-          :name "Star Wars Imperials"
-          :unitmap
-           (unitmap
-            "Darth Vader"
-             (unit
-              :name "Darth Vader"
-              :image "StarWars/Imperial_DarthVader.png"
-              :reference "* Apology accepted, Captain Needa - Darth Vader, The Empire Strikes Back"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Emperor Palpatine"
-             (unit
-              :name "Emperor Palpatine"
-              :image "StarWars/Imperial_EmperorPalpatine.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
-            "Imperial Governor"
-             (unit
-              :name "Imperial Governor"
-              :image "StarWars/Imperial_Governor.png"
-              :reference
-               "Governor Tarkin, I should have expected to find you holding Vader's leash.  I recognized your foul stench when
-I was brought on board. - Princess Leia, Star Wars"
-              :titles "Grand Moff Tarkin")
-            "Imperial Stormtrooper"
-             (unit
-              :name "Imperial Stormtrooper"
-              :image "StarWars/Imperial_Stormtrooper.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))))
-        "Star Wars Independents"
-         (section
-          :name "Star Wars Independents"
-          :unitmap
-           (unitmap
-            "Boba Fett"
-             (unit
-              :name "Boba Fett"
-              :image "StarWars/Independent_BobaFett.png"
-              :reference
-               "* There will be a substantial reward for the one who finds the Millenium
-Falcon. You are free to use any methods necessary, but I want them alive. No
-disintegrations... As you wish. - Darth Vader and Boba Fett - Empire Strikes
-Back")
-            "Jabba the Hutt"
-             (unit
-              :name "Jabba the Hutt"
-              :image "StarWars/Independent_JabbaTheHutt.png")
-            "Slave 1"
-             (unit
-              :name "Slave 1"
-              :image "StarWars/Independent_Slave1.png"
-              :titles "Firespray-31"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))))))
-        "Star Wars Rebel Vehicles"
-         (section
-          :name "Star Wars Rebel Vehicles"
-          :unitmap
-           (unitmap
-            "A-Wing Fighter"
-             (unit
-              :name "A-Wing Fighter"
-              :image "StarWars/Rebel_AWing.png"
-              :titles "RZ-1"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "B-Wing Fighter"
-             (unit
-              :name "B-Wing Fighter"
-              :image "StarWars/Rebel_BWing.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))))
-            "E-Wing Fighter"
-             (unit
-              :name "E-Wing Fighter"
-              :summary
-               "* The first fighter designed entirely under the support of the New Republic.
-* The E-wing was intended to match, or exceed, the performance of the preceding X-wing series
-in nearly every respect.  However, the craft suffered from some significant problems when
-first deployed.  As a result, many pilots continued to fly upgraded versions of the
-venerable X-wing.
-* 4200G acceleration
-* 3 Laser Cannons
-* 1 Proton Torpedo Launcher w/16 Torpedoes
-* 1 R7 Astromech"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
-            "X-Wing Fighter"
-             (unit
-              :name "X-Wing Fighter"
-              :image "StarWars/Rebel_XWing.png"
-              :summary
-               "* 3700G acceleration
-* 50 Shields"
-              :titles "T-65"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Y-Wing Fighter"
-             (unit
-              :name "Y-Wing Fighter"
-              :image "StarWars/Rebel_YWing.png"
-              :summary
-               "* 2700G acceleration
-* 75 Shields"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            :Landspeeder
-             (unit
-              :name "Landspeeder"
-              :image "StarWars/Rebel_Landspeeder.png")
-            "Millennium Falcon"
-             (unit
-              :name "Millennium Falcon"
-              :image "StarWars/Rebel_MilleniumFalcon.png"
-              :summary "* Speed: 1050kph Atmosphere, 80 Megalight?"
-              :titles "YT-1300"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Corellian Corvette"
-             (unit
-              :name "Corellian Corvette"
-              :image "StarWars/Rebel_CorellianCorvette.png")
-            "Mon Calamari Cruiser"
-             (unit
-              :name "Mon Calamari Cruiser"
-              :image "StarWars/Rebel_Cruiser.png")
-            "Nebulon Frigate"
-             (unit
-              :name "Nebulon Frigate"
-              :image "StarWars/Rebel_NebulonFrigate.png")
-            "Rebel Transport"
-             (unit
-              :name "Rebel Transport"
-              :image "StarWars/Rebel_Transport.png")
-            :Snowspeeder
-             (unit
-              :name "Snowspeeder"
-              :image "StarWars/Rebel_Snowspeeder.png")
-            "T-16 Skyhopper"
-             (unit
-              :name "T-16 Skyhopper"
-              :image "StarWars/Rebel_T16Skyhopper.png"
-              :reference
-               "* I used to bullseye womp rats in my T-16 back home. They're not much bigger than two meters. - Luke
-Skywalker, Star Wars")))
         :Rebels
          (section
           :name "Rebels"
@@ -4141,20 +879,48 @@ Skywalker, Star Wars")))
              (unit
               :name "Chewbacca"
               :image "StarWars/Rebel_Chewbacca.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Firearms
+                 (unitskill
+                  :name "Firearms"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "4")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "5")
+                      :severity 2))))))
             "Han Solo"
              (unit
               :name "Han Solo"
@@ -4162,214 +928,237 @@ Skywalker, Star Wars")))
               :reference
                "I ain't in this for your revolution, and I'm not in it for you, Princess.  I expect to be well paid. *I'm* in
 it for the money. - Han Solo, Star Wars"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Firearms
+                 (unitskill
+                  :name "Firearms"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "5")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "8")
+                      :severity 2))))))
             "Luke Skywalker"
              (unit
               :name "Luke Skywalker"
               :image "StarWars/Rebel_LukeSkywalker.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "7")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))
+                :Firearms
+                 (unitskill
+                  :name "Firearms"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "3")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "6")
+                      :severity 2))))))
             "Ben Kenobi"
              (unit
               :name "Ben Kenobi"
               :image "StarWars/Rebel_BenKenobi.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "8")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "6")
+                      :severity 2))))))
             "Princess Leia Organa"
              (unit
               :name "Princess Leia Organa"
               :image "StarWars/Rebel_PrincessLeia.png"
               :reference "* Someone has to save our skins. Into the garbage chute, fly boy - Princess Leia, Star Wars"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))
+              :unitskillmap
+               (unitskillmap
+                :Firearms
+                 (unitskill
+                  :name "Firearms"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "5")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))))
             :Yoda
              (unit
               :name "Yoda"
               :image "StarWars/Yoda.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))))))))
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "10")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))))))))
     "Time Travellers"
      (chapter
       :name "Time Travellers"
       :reference "* Doctor: People don't understand time. It's not what you think it is. Sally: Then what is it? Doctor: Complicated. Sally: Tell me. Doctor: Very complicated. ... Doctor: People assume that time is strict progression of cause of cause to effect, but actually from a non-linear, non-subjective viewpoint, its more like a big ball of wibbly-wobbly, timey-wimey stuff... Sally Sparrow, Doctor - Blink - Doctor Who"
       :sectionmap
        (sectionmap
-        "Time Tricks"
-         (section
-          :name "Time Tricks"
-          :rulemap
-           (rulemap
-            "Loop Trap Paradox"
-             (rule
-              :name "Loop Trap Paradox"
-              :reference "* How many seconds in eternity? ... If I didn't know better, I'd say I've travelled Twelve thousand years into the future. ... How many seconds in eternity? The Shepards Boy - Six Hundred Thousand years into the future. ... How many seconds in eternity? The Shepards Boy says. ... Twelve Hundred Thousand years into the future. ... The shepards boy says. ... Two million years into the future. ... The Shepard Boy says... Twenty million years into the future. ... The Shepard Boy says! ... There's thus mountain of pure diamond! It takes an hour to climb it, and an hour to go around it! ... Fifty-two million years. ... Every hundred years, a little bird comes! ... And sharpens its beak on the diamond mountain! ... Nearly a Billion years. ... And when the entire mountain is chiseled away, the first second of eternity will have passed! ... Well over a Billion years. You musta think that's a helluva long time! ... Two Billion years. ... Personally, I think that's a helluva bird. - Doctor Who: Heaven Sent")))
-        :Temporals
-         (section
-          :name "Temporals"
-          :reference "* In a Temporal conflict, victory or defeat can come in an instant. Among the vanquished, the lucky ones never know they have been conquered; the unlucky ones have never been. Both sides of this conflict have great resources for the struggle. Indeed, we hope for a long war, for we have no prospects of quick victory ourselves. Our offensive ability is too experimental to neutralize the Raydian threat. A short war can only mean our defeat."
-          :summary
-           "* The Temporals is a small group of specialists with the technology to travel through time and alter or protect the past.
-
-The Raydian Threat
-* The Raydians seem to have been content with the time stream as it was before the Temporals discovered time travel. They seem to be violently opposed to others having time travel ability and may be the cause of the disappearance of the original creators of the Time Rotor.
-* Motivation - The Raydians have a strong aversion to disorder. Though they seem to dislike altering history, they are willing to do so to eliminate time travel technology. When choosing historical changes, they tend to favor authoritarian rule and oppose chaotic organizations like democracies.
-* Multiple Incursions - Raydians will often make multiple time penetrations at once. The most pastward team will try to effect a change, and the futureward teams wait to see that the change has had the desired effect. If not, they go into action.
-
-Guide to Time Travel
-* Don'tt experiment with Time Travel. Many have disappeared and are presumed dead from experimentation. Predicting the outcome of Temporal mechanics is best left to the scientists.
-* Don't Alter History. Interfering with major incidents or people or displaying future technology can have disasterous ramifications on the time stream including the destruction of Temporals.
-* Avoid Paradoxes. Keep your time jumps to a minimum and carefully log all jumps. If you accidentally encounter a past self, you will trigger a Time Loop Paradox and will be trapped repeating the same series of events unless another time traveller saves you.
-* Beware of other Time Travellers. Other travellers outside the Corps exist. Some are friendly. Some are not. Always remember how powerful a weapon time travel is, and do not let it be used against you.
-* Keep your presense a secret. One of the most effective ways to dispose of rival time travellers is to identify them, go back in time and ambush them. If no one knows who you are, you will be much safer.
-* Time Currents - Time travel is difficult to precisely control. Sometime, travellers are drawn to a particular moment in time (often significant) and may find it hard to leave.
-* Law of Death - A person who has never travelled in time is called a Transient or an Ephemeral. That person can have their history rewritten any number of times including being brought back to life. Once a person travels through time, however, they are now called a Temporal and their history is no longer connected to their original timeline. When a Temporal dies, their history ends and nothing can prevent them from dying at that exact age regardless of their location or situation. After a mission is successfully completed, it is standard practice to try to revise the history of any Temporal casualties to inform them of their unavoidable deaths and allow them to live their last time as they choose.
-
-Time Tricks
-* False Leads - Opposition time travelers are always looking for information about past activity, so they can go back and ambush you. Creating false information can trick your opponents into creating an ambush that you can ambush instead.
-* Gather Allies - Every time period has powerful people. A simple trick is to go pastward and gain someone's trust at an early period and then use that influence later.
-* See You in a Minute - Opponent time travelers are always paranoid about being ambushed in the past. Jumping only a few minutes into the future of a conflict can be an unexpected suprise.
-* I've Been Here All the Time - A time traveler can hide his Temporal Rotor in an unexpected place, like a jail cell, and use it to travel and return only seconds later. In this way the traveler appears to have never left."
-          :unitmap
-           (unitmap
-            "Magellus IX-g"
-             (unit
-              :name "Magellus IX-g"
-              :reference "Krell, Forbidden Planet"
-              :summary
-               "* Magellus IX is a gas giant and 9th and last planet at the edge of the Magellus White Dwarf system.
-* Magellus IX-g is the 7th of Magellus' 11 moons. It is a barren rock except for the enormous complex hidden inside it.
-* The complex itself is fantasitcally large. Every room feels palacial. Rooms and doors are built for creatures easily 3 times human height and width with large amounts of open floor space. No furniture exists suggesting the forerunners never sat or lay down. Most of the floors are covered with a soft, spongy material that serves as carpeting and indicates that the forerunners had sensitive feet or undersides. There are no stairs, only ramps and lifts of unknown construction. Rooms are apparently self cleaning, while lights and displays appear spontaneously from featureless walls.
-* Spacedock - One of the many scientific labs has been retrofitted into a functional spacedock for smaller craft.
-* Power Plant - The power section appears to be a single giant corridor with minimal instrumentation ending in a huge vault door with a black orb suspended over it.
-* Eye of Harmony - Beyond the vault door lies a small black hole held in perfect balance by completely reflecting its own devastating gravitational force back upon itself. The technology to achieve this feat lies completely outside of our understanding.
-* History - A scientific team accidentally discovered that a seemingly non-descript moon was a technological marvel left by a long dead civilization. Within lay a massive complex and elegant advanced technology. But most remarkable of all, the moon was hollow and contained, at its core, a small black hole held in perfect symmetrical stasis by unfathomable forces. The scientists immediately knew that this technology was far too advanced to share with any political group. So they kept it a secret and studied it. Disturbingly, the race who built it left no record of their existence.  No trace of language, personality, or even habitation of the station remained. It was as if they had never existed. Common conjecture claims that they were somehow erased from history. Years later, the scientists discoverd the purpose of the asteroid and the black hole it contained: to enable individuals to travel through the center of the black hole and travel back through time. The first few trips back were uneventful besides learning some important lessons about causality, but soon the travelers found that they had attracted the attention of another time traveling race, the [Radiance]. And thus began a strange battle of attrition between the the Radiance and what would become the Temporals with all of the Past, Present, and Future hanging in the balance."
-              :titles "Babylon Complex"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))))
-            "Chronos Program"
-             (unit
-              :name "Chronos Program"
-              :reference
-               "* Chronos is online - Chronos
-* Chronos is everywhere - Chronos
-* I cannot answer that at this time. - Chronos"
-              :summary
-               "* Chronos is a computer program uploaded into the alien sensor network within the Babylon asteroid. It was designed to interpret the sensor data and relay information through the [Temporal Vortex] across Time.
-* Personality - The alien systems, however, have significantly changed Chronos, and although obedient, the program has definitely developed an independent personality with an unknown set of goals.
-* Time travelers depend heavily on Chronos for support, but have little trust for the evasive answers, omissions, and cryptic, nuanced messages it provides.
-* Engineers work tirelessly to gain control over Chronos, and Chronos does not hinder them in any way. However, every attempt to purge, patch, or restart Chronos have had no effect. Some theorize that Chronos exists through time now and could never be removed without creating a massive paradox. Others believe that the Babylon sensor network was already sentient and is masquerading as the Chronos program.")
-            "Temporal Director"
-             (unit
-              :name "Temporal Director"
-              :summary "* When a Temporal anamoly is detected, a Temporal Director is assigned the task of choosing a course of action and gathering a team of [Temporal Operative]s to execute the plan. Directors coordinate the missions from headquarters and act as liason for the team. Directors are given broad authority to requisition and deploy resources, though they will be held accountable for any mistakes after the mission is over.")
-            "Temporal Engineer"
-             (unit
-              :name "Temporal Engineer"
-              :summary "* An engineer specializing in [Engineering: Temporal].")
-            "Temporal Event Guard"
-             (unit
-              :name "Temporal Event Guard"
-              :summary
-               "* A field agent in Temporal Intelligence. Event Guards are posted in important time periods and quietly observe events to make sure no changes occur compared to their normal historical events. Any deviation from normal history is a sign of a [Temporal Distortion Wave]. If a change is found, the guard immediately sends a message to headquarters and then jumps futureward to attempt to stop the wave.
-* Event Guards are under strict orders to maintain their cover and not alter history in any way, including not aiding other Temporal personel on other missions.
-* In order to closely observe, historical events, the Event Guards enter the time stream and get as close as possible to a major event. They then observe the event, comparing it against their research and then Loop Trap themselves in the time period, so they are observing the event over and over again. Eventually, they will be relieved by a replacement team. The replacement team will arrive moments after the original team arrived to send them home. To the Event Guards, they will arrive in the time period and be immediately discharged, though they may remember the events using [Paranormal Memory].")
-            "Temporal Intelligence Agent"
-             (unit
-              :name "Temporal Intelligence Agent"
-              :summary "* Temporal Intellegence Agents constantly review historical documentation looking for historical abnormalities that do not match their [Paranormal Memory]. Any deviations are flagged and a team is assigned to identify the source and extent of the deviation.")
-            "Temporal Operative"
-             (unit
-              :name "Temporal Operative")
-            "Temporal Physicist"
-             (unit
-              :name "Temporal Physicist"
-              :summary "* A scientist specializing in [Physics: Temporal]")
-            "Temporal Recruiter"
-             (unit
-              :name "Temporal Recruiter"
-              :reference "Millenium Movie"
-              :summary "* A psychiatrist/sociologist specializing in recruiting potential Temporal agents from across history. Ideal candidates are those with high skills but little impact on history. The perfect moment of extraction is right before their death to minimize the effect on history, but other methods are possible for people with few ties to others.")
-            "Temporal Researcher"
-             (unit
-              :name "Temporal Researcher"
-              :summary "* A scientist/historian who travels back in time to research historical events firsthand.")))
-        "Temporal Aliens"
-         (section
-          :name "Temporal Aliens"
-          :unitmap
-           (unitmap
-            :Chronans
-             (unit
-              :name "Chronans"
-              :summary
-               "* The beings that captured the Black Hole and built the Temporal Rotor remain a mystery. No record can be found of their cultures or their bodies, and the Temporal Rotor will not travel to any point in their history, presumably as a fail-safe against temporal manipulation. The fact that no trace of their race exists except the Temporal Rotor is disturbing and leads to speculation that they were somehow wiped out by their own device or another time travelling species. Some speculate that the Chronans were eliminated by the Radiance, and that their fate is what the Temporals can expect if the Radiance is victorious, perhaps leading to the erasure of the entire human race from history.
-* The vast, vaulted corridors and rooms of Chronos Station lead one to believe that these creatures were bulky masses about 10-15 feet (3-5m) tall. The lack of stairs implies that the creatures were legless, but that could just be a comfort or aesthetic choice.")
-            :Radiance
-             (unit
-              :name "Radiance"
-              :image "DistantFuture/Radiance.png"
-              :reference "* The goal of the Radians remains a mystery, but they appear to want everyone throughout time to live as they do in a totally regimented, completely predictable society. This goal is obviously, hopelessly unattainable. To devote the entire resources and enegies of one's race and culture to an unattainable outcome must be called madness. Among humans, it is a common fantasy to 'rule the world', 'rule the galaxy', or 'rule the universe'. These pipedreams are almost always the stuff of fiction and fantasy, 	designed to entertain. Those who have taken them seriously are regarded as madmen. Now imagine even fantasizing about 'ruling every point in time in every dimension'. The very concept is laughable, yet the Radiance takes this seriously and are committed to acheiving it. Despite its insanity, their efforts pose a serious threat to everyone, everywhere, everywhen."
-              :summary
-               "* The Radiance is an enormous energy being of vast power originating from a time near the birth of the universe. It has been content to bask in the fantastic energies of the Big Bang until it perceived the use of time travel. The Radiance is completely committed to what it considers a peacefyl, orderly universe, and the ripples created by time travellers are something it cannot allow.
-* The Radiance can project parts of itself through time and space though it is loath to do so. These projections appear as columns of energy that wield vast destructive power.
-* As a being of pure Order, the Radiance appreciates order and despises chaos of any kind. It prefers authoritarian rule over democracies. It dislikes individual expression, but it does appreciate art and beauty.
-* The Temporals have assumed that the Radiance projections are an entire race of energy creatures instead of a single being and have misinterpreted its name as Raydians."
-              :titles "Raydians")))
         "Temporal Vehicles"
          (section
           :name "Temporal Vehicles"
@@ -4390,20 +1179,8 @@ Time Tricks
 * Activating the Temporal Rotor - When the Temporal Rotor is activated, static electricity begins to build in the area. At full strength the static is dangerous, so travellers should not move to avoid discharge. A glowing field begins to form. Travellers heart rate begins to climb and they have a sudden feeling of intense, unnatural danger and imminent death. Hearts begin to fibrilate and flatline.
 * Entering the Vortex - The travellers blink and become aware that they are in the Vortex. Further, they recognize that they have always been in the Vortex. Every moment of their life remembered as if it just occurred. Only their future remains unseen. Time in the Vortex has no meaning, so travellers may leave immediately or stay for an eternity before moving on.
 * Leaving the Vortex - Leaving is just as traumatic as entering. As the Temporal Rotor slows, the travellers begin to forget all that they have just remembered. It is like losing one's mind bit by bit. They feel torn apart and incomplete. Soon they start losing coherent thought, their minds becoming simple and primal. Their senses and desires become simple: Food, Sex, Fear, Violence, Warmth ... Food, Fear, Violence, Warmth ... Food, Warmth ... Warmth. All is dark, wet, and warm as it has always been. Soft, pink bubbles surround and comfort you. You have no wants. You are complete. Suddenly a bright light blinds you, and happiness and security are torn from you. And there is pain, pain where there never was pain before. Waves of burning pain crush you, chew you up, and spit you out. You lie on the ground, cold and in shock. A new pressure builds in your chest, and without thinking you gasp and take in your first breath. Your eyes open to see the last lights on the Temporal Rotor wink out. You are coverered in a heavy, red jelly like congealed blood. The jelly quickly dries to dust and disappears. You rise and feel healthier than ever before. Old wounds and scars are gone as if they never were, and you are different: your skin, your teeth, your hair, your language all are as if you were born and lived your life in this time and place. Your equipment is gone and your clothes have been replaced with simple native garb: a gift from Chronos."
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2))))))
+              :height "1.5m"
+              :width ".2m")
             :Timefighter
              (unit
               :name "Timefighter")))))

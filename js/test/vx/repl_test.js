@@ -6,7 +6,6 @@ import vx_test from "../../src/vx/test.js"
 import vx_collection from "../../src/vx/collection.js"
 import vx_type from "../../src/vx/type.js"
 import vx_data_textblock from "../../src/vx/data/textblock.js"
-import  from "../../src/.js"
 
 export default class vx_repl_test {
 

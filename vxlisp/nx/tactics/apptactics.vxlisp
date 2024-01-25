@@ -42,6 +42,7 @@
  :doc "The default function for app main execution. Arguments come from the command line.")
 
 /*
+
 (func main-nx : string
  [args : anylist :...]
  (let
@@ -58,7 +59,7 @@
  (let
   [book : base/book := (bl/book-read<-bookname
                         "TACTICSBOOK_CORE")]
- (string<-any book))
+  (string<-any book))
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
 

@@ -4,7 +4,6 @@ import vx_data_file from "../../../src/vx/data/file.js"
 import vx_core from "../../../src/vx/core.js"
 import vx_test from "../../../src/vx/test.js"
 import vx_data_textblock from "../../../src/vx/data/textblock.js"
-import  from "../../../src/.js"
 
 export default class vx_data_file_test {
 

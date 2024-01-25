@@ -1,6 +1,10 @@
 cls
 set currentfolder=%cd%
-..\vxlisp\vxlispruntime\vxlisp_win64.exe doc srcjs testjs :path %currentfolder%/vxlisp > %currentfolder%\run.log
-rem cd ../vxlisp/golang
-rem go run . doc srcjs testjs :path %currentfolder%/vxlisp > %currentfolder%\run.log
+set options=doc srcjs testjs
+set pipe=
+rem set pipe=> %currentfolder%\run.log
+rem set runable=..\vxlisp\vxlispruntime\vxlisp_win64.exe
+set runable=go run .
+cd ../vxlisp/golang
+%runable% %options% :path %currentfolder%/vxlisp %pipe%
 cd %currentfolder%

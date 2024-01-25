@@ -1,12 +1,1042 @@
 'strict mode'
 
-import  from "../.js"
-import  from "../.js"
-import  from "../.js"
 
 
 export default class vx_core {
 
+  // vx_any_from_map_start_reduce(any-1, map-2, any-1, any<-any-key-value)
+  static vx_any_from_map_start_reduce(generic_any_1, map, start, fn_reduce) {
+    let output = vx_core.f_empty(generic_any_1)
+    output = start
+    const fn = fn_reduce['vx_value']
+    if (fn) {
+      const mapval = map['vx_value']
+      for (let key in mapval) {
+        const value = mapval[key]
+        output = fn(output, key, value)
+      }
+    }
+    return output
+  }
+
+  // vx_boolean_from_string_ends(string, string)
+  static vx_boolean_from_string_ends(text, ends) {
+    return text.endsWith(ends)
+  }
+
+  // vx_boolean_from_string_find(string, string)
+  static vx_boolean_from_string_find(text, find) {
+    return text.includes(find)
+  }
+
+  // vx_boolean_from_string_starts(string, string)
+  static vx_boolean_from_string_starts(text, starts) {
+    return text.startsWith(starts);
+  }
+
+  static vx_empty(type) {
+    const typedef = vx_core.f_typedef_from_type(type)
+    const pkgname = typedef['vx_value'].pkgname
+    const typename = typedef['vx_value'].name
+    const global = vx_core.c_global
+    const globalvalue = global['vx_value']
+    const pkgmap = globalvalue['packagemap']
+    const mappkg = pkgmap['vx_value']
+    const pkg = mappkg[pkgname]
+    const emptymap = pkg['vx_value']['emptymap']
+    const output = emptymap['vx_value'][typename]
+    return output
+  }
+
+  static vx_eq(val1, val2) {
+    const native1 = vx_core.f_native_from_any(val1)
+    const native2 = vx_core.f_native_from_any(val2)
+    let output = true
+    if (val1 === val2) {
+    } else if (native1 === native2) {
+    } else {
+      const typename = typeof native1
+      switch (typename) {
+      case 'number':
+        if (isNaN(native1) && isNaN(native2)) {
+        } else {
+          output = false
+        }
+        break
+      case 'boolean':
+      case 'string':
+        output = false
+        break
+      default:
+        const type1 = vx_core.f_type_from_any(val1)
+        const type2 = vx_core.f_type_from_any(val2)
+        const extends1 = vx_core.f_extends_from_typedef(type1)
+        const extends2 = vx_core.f_extends_from_typedef(type2)
+        if (type1 != type2) {
+          output = false
+        } else if (extends1 != extends2) {
+          output = false
+        } else {
+          const sval1 = vx_core.vx_string_from_any(val1)
+          const sval2 = vx_core.vx_string_from_any(val2)
+          if (sval1 != sval2) {
+            output = false
+          }
+        }
+        break
+      }
+    }
+    return output
+  }
+
+  static vx_float_from_string(text) {
+   let output = 0
+   output = parseFloat(text)
+   return output
+  }
+
+  // vx_global_package_set(package)
+  static vx_global_package_set(pkg) {
+    const global = vx_core.c_global
+    let globalvalue = global['vx_value']
+    if (globalvalue == undefined) {
+      globalvalue = {}
+      global['vx_value'] = globalvalue
+    }
+    const pkgname = pkg['vx_value']['name']
+    let mappackage = {}
+    let packagemap = globalvalue['packagemap']
+    if (packagemap == undefined) {
+      mappackage[pkgname] = pkg
+      packagemap = vx_core.vx_new_map(vx_core.t_packagemap, mappackage)
+      globalvalue['packagemap'] = packagemap
+    } else {
+      mappackage = packagemap['vx_value']
+      mappackage[pkgname] = pkg
+    }
+  }
+
+  // vx_is_float(any)
+  static vx_is_float(value) {
+    let output = false
+    const typename = vx_core.f_typename_from_any(value)
+    switch (typename) {
+    case 'vx/core/int':
+      output = true
+      break
+    case 'vx/core/number':
+      if (parseInt(value) == value) {
+        output = true
+      }
+      break
+    case 'vx/core/string':
+      const floatval = parseFloat(value)
+      if (!isNaN(floatval)) {
+        output = true
+      }
+      break
+    }
+    return output
+  }
+
+  // vx_is_int(any)
+  static vx_is_int(value) {
+    let output = false
+    switch (value) {
+    case vx_core.c_infinity:
+    case vx_core.c_neginfinity:
+    case vx_core.c_notanumber:
+      output = true
+      break
+    default:
+      const typename = vx_core.f_typename_from_any(value)
+      switch (typename) {
+      case 'vx/core/int':
+        output = true
+        break
+      case 'vx/core/number':
+        if (parseInt(value) == value) {
+          output = true
+        }
+        break
+      case 'vx/core/string':
+        switch (value) {
+        case 'notanumber':
+        case 'infinity':
+        case 'neginfinity':
+          output = true
+          break
+        default:
+          const parseint = parseInt(value)
+          if (Number.isNaN(parseint)) {
+          } else if (parseInt(value) == parseFloat(value)) {
+            output = true
+          }
+          break
+        }
+        break
+      }
+      break
+    }
+    return output
+  }
+
+  static vx_list_from_map_fn(generic_list_1, valuemap, fn_any_from_key_value) {
+    let output = vx_core.f_empty(generic_list_1)
+    const fn = fn_any_from_key_value['vx_value']
+    if (fn) {
+      const entries = Object.entries(valuemap['vx_value'])
+      const values = entries.map(fn)
+      output = vx_core.f_new(generic_list_1, ...values)
+    }
+    return output
+  }
+
+  static vx_map_from_map_fn(generic_map_1, valuemap, fn_any_from_key_value) {
+    let output = vx_core.f_empty(generic_map_1)
+    const fn = fn_any_from_key_value['vx_value']
+    if (fn) {
+      const entries = Object.entries(valuemap['vx_value'])
+      const values = []
+      for (const [key, value] of entries) {
+        const chgvalue = fn([key, value])
+        values.push(key)
+        values.push(chgvalue)
+      }
+      output = vx_core.f_new(generic_map_1, ...values)
+    }
+    return output
+  }
+
+  static vx_new(type, values) {
+    let output
+    if (values.length == 1) {
+      // check if anylist passed as the only value
+      const val1 = values[0]
+      const val1typedef = val1['vx_type']
+      if (val1typedef == undefined) {
+      } else if (val1typedef == vx_core.t_anylist) {
+        values = val1
+      }
+    }
+    const typedef = vx_core.f_typedef_from_any(type)
+    const copy = type
+    let msgblock = vx_core.e_msgblock
+    let isfirst = true
+    switch (typedef) {
+    case vx_core.t_boolean:
+      output = false
+      if (type == vx_core.t_boolean) {
+      } else if ((typeof copy) == 'boolean') {
+        output = copy
+      } else {
+        output = copy['vx_value']
+        const msgblockcopy = copy['vx_msgblock']
+        if (msgblockcopy != undefined) {
+          msgblock = msgblockcopy
+        }
+      }
+      values.map(value => {
+        switch (typeof value) {
+        case 'boolean':
+          if (isfirst) {
+            isfirst = false
+            output = value
+          } else {
+            output = output && value
+          }
+          break
+        default:
+          const valuetype = vx_core.f_typedef_from_any(value)
+          switch (valuetype) {
+          case vx_core.t_boolean:
+            value = value['vx_value']
+            if (isfirst) {
+              isfirst = false
+              output = value
+            } else {
+              output = output && value
+            }
+            break
+          case vx_core.t_msgblock:
+            msgblock = value
+            break
+          case vx_core.t_msg:
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, value)
+            break
+          default:
+            const typename = vx_core.f_typename_from_typedef(typedef)
+            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+            break
+          }
+          break
+        }
+      })
+      if (msgblock != vx_core.e_msgblock) {
+        output = {
+          vx_type: typedef,
+          vx_value: output,
+          vx_msgblock: msgblock
+        }
+      }
+      break
+    case vx_core.t_int:
+      output = 0
+      if (type == vx_core.t_int) {
+      } else if ((typeof copy) == 'number') {
+        output = copy
+      } else {
+        output = copy['vx_value']
+        const msgblockcopy = copy['vx_msgblock']
+        if (msgblockcopy != undefined) {
+          msgblock = msgblockcopy
+        }
+      }
+      values.map(value => {
+        switch (typeof value) {
+        case 'number':
+          if (isfirst) {
+            isfirst = false
+            output = value
+          } else {
+            output += value
+          }
+          break
+        case 'string':
+          value = parseFloat(value)
+          if (isfirst) {
+            isfirst = false
+            output = value
+          } else {
+            output += value
+          }
+          break
+        default:
+          const valuetype = vx_core.f_type_from_any(value)
+          switch (valuetype) {
+          case vx_core.t_int:
+            value = value['vx_value']
+            if (isfirst) {
+              isfirst = false
+              output = value
+            } else {
+              output = output + value
+            }
+            break
+          case vx_core.t_float:
+            value = value['vx_value']
+            if (isfirst) {
+              isfirst = false
+              output = value
+            } else {
+              output += value
+            }
+            break
+          case vx_core.t_string:
+            value = parseFloat(value)
+            if (isfirst) {
+              isfirst = false
+              output = value
+            } else {
+              output += value
+            }
+            break
+          case vx_core.t_msgblock:
+            msgblock = value
+            break
+          case vx_core.t_msg:
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, value)
+            break
+          default:
+            const typename = vx_core.f_typename_from_typedef(typedef)
+            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+            break
+          }
+          break
+        }
+      })
+      output = Math.round(output)
+      if (msgblock != vx_core.e_msgblock) {
+        output = {
+          vx_type: typedef,
+          vx_value: output,
+          vx_msgblock: msgblock
+        }
+      }
+      break
+    case vx_core.t_float:
+      output = 0.0
+      if (type == vx_core.t_float) {
+      } else if ((typeof copy) == 'number') {
+        output = copy
+      } else {
+        output = copy['vx_value']
+        const msgblockcopy = copy['vx_msgblock']
+        if (msgblockcopy != undefined) {
+          msgblock = msgblockcopy
+        }
+      }
+      values.map(value => {
+        switch (typeof value) {
+        case 'number':
+          if (isfirst) {
+            isfirst = false
+            output = value
+          } else {
+            output += value
+          }
+          break
+        case 'string':
+          value = parseFloat(value)
+          if (isfirst) {
+            isfirst = false
+            output = value
+          } else {
+            output += value
+          }
+          break
+        default:
+          const valuetype = vx_core.f_type_from_any(value)
+          switch (valuetype) {
+          case vx_core.t_int:
+          case vx_core.t_float:
+            value = value['vx_value']
+            if (isfirst) {
+              isfirst = false
+              output = value
+            } else {
+              output += value
+            }
+            break
+          case vx_core.t_string:
+            value = parseFloat(value['vx_value'])
+            if (isfirst) {
+              isfirst = false
+              output = value
+            } else {
+              output += value
+            }
+            break
+          case vx_core.t_msgblock:
+            msgblock = value
+            break
+          case vx_core.t_msg:
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, value)
+            break
+          default:
+            const typename = vx_core.f_typename_from_typedef(typedef)
+            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+            break
+          }
+        }
+      })
+      if (msgblock != vx_core.e_msgblock) {
+        output = {
+          vx_type: typedef,
+          vx_value: output,
+          vx_msgblock: msgblock
+        }
+      }
+      break
+    case vx_core.t_string:
+      output = ''
+      if (type == vx_core.t_string) {
+      } else if ((typeof copy) == 'string') {
+        output = copy
+      } else {
+        output = copy['vx_value']
+        const msgblockcopy = copy['vx_msgblock']
+        if (msgblockcopy != undefined) {
+          msgblock = msgblockcopy
+        }
+      }
+      values.map(value => {
+        switch (typeof value) {
+        case 'boolean':
+          if (value) {
+            output += 'true'
+          } else {
+            output += 'false'
+          }
+          break
+        case 'number':
+        case 'string':
+          output += '' + value
+          break
+        default:
+          const valuetype = vx_core.f_typedef_from_any(value)
+          switch (valuetype) {
+          case vx_core.t_int:
+          case vx_core.t_float:
+            output += '' + value
+            break
+          case vx_core.t_string:
+            output += value
+            break
+          case vx_core.t_msgblock:
+            msgblock = value
+            break
+          case vx_core.t_msg:
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, value)
+            break
+          default:
+            const typename = vx_core.f_typename_from_typedef(typedef)
+            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+            break
+          }
+          break
+        }
+      })
+      if (msgblock != vx_core.e_msgblock) {
+        output = {
+          vx_type: typedef,
+          vx_value: output,
+          vx_msgblock: msgblock
+        }
+      }
+      break
+    default:
+      let allowany = false
+      let allowtypes = []
+      let key = ''
+      let propmap = {}
+      const extend = vx_core.f_extends_from_typedef(typedef)
+      switch (extend) {
+      case ':func':
+        // output = vx_core.f_mempool-getvalue()
+        let fn = null
+        const empty = vx_core.f_empty(typedef)
+        if (type == typedef) {
+        } else {
+          fn = copy['vx_value']
+          const msgblockcopy = copy['vx_msgblock']
+          if (msgblockcopy != undefined) {
+            msgblock = msgblockcopy
+          }
+        }
+        values.map(value => {
+          if (value == empty) {
+          } else if ((typeof value) == 'function') {
+            fn = value
+          } else {
+            const valuetype = vx_core.f_type_from_any(value)
+            if (value == valuetype) {
+              fn = valuetype['vx_value']['fn']
+            } else {
+              switch (valuetype) {
+              case vx_core.t_msgblock:
+                msgblock = value
+                break
+              case vx_core.t_msg:
+                msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, value)
+                break
+              default:
+                const typename = vx_core.f_typename_from_typedef(typedef)
+                const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+                msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+                break
+              }
+            }
+          }
+        })
+        if ((fn != null) || (msgblock != vx_core.e_msgblock)) {
+          output = {}
+          output['vx_type'] = typedef
+          if (fn != null) {
+            output['vx_value'] = fn
+          }
+          if (msgblock != vx_core.e_msgblock) {
+            output['vx_msgblock'] = msgblock
+          }
+        } else {
+          output = empty
+        }
+        break
+      case ':list':
+        // output = vx_core.f_mempool-getvalue()
+        let listvals = []
+        if (type == typedef) {
+        } else {
+          listvals = copy.slice()
+          const msgblockcopy = copy['vx_msgblock']
+          if (msgblockcopy != undefined) {
+            msgblock = msgblockcopy
+          }
+        }
+        allowtypes = vx_core.f_allowtypes_from_typedef(typedef)
+        if (allowtypes.includes(vx_core.t_any)) {
+          allowany = true
+        }
+        values.map(value => {
+          const valuetype = vx_core.f_type_from_any(value)
+          let isfound = false
+          if (typedef == valuetype) {
+            listvals.push(...value)
+            isfound = true
+          } else if (allowany) {
+            listvals.push(value)
+            isfound = true
+          } else if (allowtypes.includes(valuetype)) {
+            listvals.push(value)
+            isfound = true
+          } else {
+            switch (valuetype) {
+            case vx_core.t_msgblock:
+              msgblock = value
+              isfound = true
+              break
+            case vx_core.t_msg:
+              msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, value)
+              isfound = true
+              break
+            default:
+              const valuetraits = vx_core.f_traits_from_typedef(valuetype)
+              const intersection = allowtypes.filter(function(n) {
+                return valuetraits.indexOf(n) > -1
+              })
+              if (intersection.length > 0) {
+                listvals.push(value)
+                isfound = true
+              }
+              break
+            }
+          }
+          if (!isfound) {
+            const typename = vx_core.f_typename_from_typedef(typedef)
+            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+          }
+        })
+        if ((listvals.length > 0) || (msgblock != vx_core.e_msgblock)) {
+          output = listvals
+          output['vx_type'] = typedef
+          if (msgblock != vx_core.e_msgblock) {
+            output['vx_msgblock'] = msgblock
+          }
+        } else {
+          output = vx_core.f_empty(typedef)
+        }
+        break
+      case ':map':
+        if (type != typedef) {
+          propmap = Object.assign({}, copy['vx_value'])
+          const msgblockcopy = copy['vx_msgblock']
+          if (msgblockcopy != undefined) {
+            msgblock = msgblockcopy
+          }
+        }
+        allowtypes = vx_core.f_allowtypes_from_typedef(typedef)
+        if (allowtypes.includes(vx_core.t_any)) {
+          allowany = true
+        }
+        values.map(value => {
+          const valuetype = vx_core.f_type_from_any(value)
+          if (key == '') {
+            switch (valuetype) {
+            case vx_core.t_string:
+              if ((typeof value) == 'string') {
+                key = value
+              } else {
+                key = value['vx_value']
+              }
+              if (key.startsWith(':')) {
+                key = key.substring(1)
+              }
+              break
+            case vx_core.t_msgblock:
+              msgblock = value
+              break
+            case vx_core.t_msg:
+              msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, value)
+              break
+            default:
+              const typename = vx_core.f_typename_from_typedef(typedef)
+              const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + vx_core.vx_string_from_any(value) + ') - Invalid Key')
+              msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+              break
+            }
+          } else {
+            if (vx_core.f_is_empty(value)) {
+              delete propmap[key]
+            } else if (allowany) {
+              propmap[key] = value
+            } else if (allowtypes.includes(valuetype)) {
+              propmap[key] = value
+            } else {
+              const valuetraits = vx_core.f_traits_from_typedef(valuetype)
+              const intersection = allowtypes.filter(function(n) {
+                return valuetraits.indexOf(n) > -1
+              })
+              if (intersection.length > 0) {
+                propmap[key] = value
+              } else {
+                const typename = vx_core.f_typename_from_typedef(typedef)
+                const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + key + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Key Value')
+                msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+              }
+            }
+            key = ''
+          }
+        })
+        // output = vx_core.f_mempool-getvalue()
+        if ((Object.keys(propmap).length > 0) || (msgblock != vx_core.e_msgblock)) {
+          output = {
+            vx_type: typedef,
+            vx_value: propmap
+          }
+          if (msgblock != vx_core.e_msgblock) {
+            output['vx_msgblock'] = msgblock
+          }
+        } else {
+          output = vx_core.f_empty(typedef)
+        }
+        break
+      case ':struct':
+        switch (typedef) {
+        case vx_core.t_msgblock:
+        case type:
+          break
+        default:
+          propmap = Object.assign({}, copy['vx_value'])
+          const msgblockcopy = copy['vx_msgblock']
+          if (msgblockcopy != undefined) {
+            msgblock = msgblockcopy
+          }
+          break
+        }
+        if (values.length > 0) {
+          const properties = vx_core.f_properties_from_typedef(typedef)
+          const lastprop = vx_core.f_proplast_from_typedef(typedef)
+          const validkeys = Object.keys(properties)
+          let lastpropname = ''
+          let lasttype = null
+          let lastallowtypes = []
+          const ismulti = lastprop['multi']
+          if (ismulti) {
+            lastpropname = lastprop['name']
+            lasttype = lastprop['type']
+            lastallowtypes = vx_core.f_allowtypes_from_typedef(lasttype)
+          }
+          let testkey = ''
+          values.map(value => {
+            const valuetype = vx_core.f_type_from_any(value)
+            if (key == '') {
+              switch (valuetype) {
+              case vx_core.t_string:
+                if ((typeof value) == 'string') {
+                  testkey = value
+                } else {
+                  testkey = value['vx_value']
+                }
+                if (testkey.startsWith(':')) {
+                  testkey = testkey.substring(1)
+                }
+                if (validkeys.includes(testkey)) {
+                  key = testkey
+                } else {
+                  const typename = vx_core.f_typename_from_typedef(typedef)
+                  const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + vx_core.vx_string_from_any(value) + ') - Invalid Key')
+                  msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+                }
+                break
+              case vx_core.t_msgblock:
+                switch (typedef) {
+                case vx_core.t_msg:
+                  // invalid msg cannot contain msgblock
+                  break
+                case vx_core.t_msgblock:
+                  if (value == vx_core.e_msgblock) {
+                  } else if (msgblock == vx_core.e_msgblock) {
+                    msgblock = value
+                    propmap = Object.assign({}, value['vx_value'])
+                  } else {
+                    let msgblocks = propmap['msgblocks']
+                    if (msgblocks == undefined) {
+                      msgblocks = [value]
+                      msgblocks['vx_type'] = vx_core.t_msgblocklist
+                    } else {
+                      msgblocks.push(value)
+                    }
+                    propmap['msgblocks'] = msgblocks
+                  }
+                  break
+                default:
+                  msgblock = vx_core.f_msgblock_from_msgblock_msgblock(msgblock, value)
+                  break
+                }
+                break
+              case vx_core.t_msg:
+                switch (typedef) {
+                case vx_core.t_msg:
+                  // invalid msg cannot contain msg
+                  break
+                case vx_core.t_msgblock:
+                  let msgs = propmap['msgs']
+                  if (msgs == undefined) {
+                    msgs = [value]
+                    msgs['vx_type'] = vx_core.t_msglist
+                  } else {
+                    msgs.push(value)
+                  }
+                  propmap['msgs'] = msgs
+                  break
+                default:
+                  msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, value)
+                  break
+                }
+                break
+              default:
+                let isfound = false
+                if (!ismulti) {
+                } else if (lasttype == vx_core.t_any) {
+                  isfound = true
+                } else if (lasttype == valuetype) {
+                  isfound = true
+                } else if (lastallowtypes.length > 0) {
+                  if (lastallowtypes.includes(valuetype)) {
+                    isfound = true
+                  } else {
+                    const valuetraits = vx_core.f_traits_from_typedef(valuetype)
+                    const intersection = lastallowtypes.filter(function(n) {
+                      return valuetraits.indexOf(n) > -1
+                    })
+                    if (intersection.length > 0) {
+                      isfound = true
+                    }
+                  }
+                }
+                if (isfound) {
+                  let lastpropvalue = propmap[lastpropname]
+                  if (lastpropvalue == undefined) {
+                    lastpropvalue = []
+                    lastpropvalue['vx_type'] = lasttype
+                    propmap[lastpropname] = lastpropvalue
+                  }
+                  if (lasttype == valuetype) {
+                    lastpropvalue.push(...value)
+                  } else {
+                    lastpropvalue.push(value)
+                  }
+                } else {
+                  const typename = vx_core.f_typename_from_typedef(typedef)
+                  const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + vx_core.vx_string_from_any(value) + ') - Invalid Key')
+                  msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+                }
+                break
+              }
+            } else {
+              const property = properties[key]
+              const propertytype = property['type']
+              if (value !== false && value !== 0 && value !== "" && vx_core.f_is_empty_1(value)) {
+                delete propmap[key]
+              } else if (propertytype == vx_core.t_any) {
+                propmap[key] = value
+              } else if (propertytype == valuetype) {
+                propmap[key] = value
+              } else {
+                const typename = vx_core.f_typename_from_typedef(typedef)
+                const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + key + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Key Value')
+                msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
+              }
+              key = ''
+            }
+          })
+        }
+        // output = vx_core.f_mempool-getvalue()
+        if ((Object.keys(propmap).length > 0) || (msgblock != vx_core.e_msgblock)) {
+          output = {
+            vx_type: typedef,
+            vx_value: propmap
+          }
+          if (msgblock == vx_core.e_msgblock) {
+          } else if (typedef == vx_core.t_msgblock) {
+          } else {
+            output['vx_msgblock'] = msgblock
+          }
+        } else {
+          output = vx_core.f_empty(typedef)
+        }
+        break
+      }
+      break
+    }
+    return output
+  }
+
+  static vx_new_list(type, listvalue) {
+    const output = listvalue.slice()
+    output['vx_type'] = type
+    return output
+  }
+
+  static vx_new_map(type, mapvalue) {
+    const output = {
+      vx_type: type,
+      vx_value: mapvalue
+    }
+    return output
+  }
+
+  static vx_new_struct(type, mapvalue) {
+    const output = {
+      vx_type: type,
+      vx_value: mapvalue
+    }
+    return output
+  }
+
+  static vx_string_from_any(value) {
+    const output = vx_core.vx_string_from_any_indent(value, 0, false)
+    return output
+  }
+
+  static vx_string_from_any_indent(value, indent, linefeed) {
+    let output = ''
+    const indenttext = ' '.repeat(indent)
+		let text = ''
+    const typedef = vx_core.f_typedef_from_any(value)
+    if (indent > 50) {
+      text = 'Error: Max Depth Exceeded'
+    } else if (value == null) {
+      text = 'null'
+    } else if (value == typedef) {
+      text = vx_core.f_typename_from_typedef(typedef)
+    } else if (value['vx_constdef']) {
+      const constdef = value['vx_constdef']
+      const constpkg = constdef['pkgname']
+      const constname = constdef['name']
+      if (constpkg == 'vx/core') {
+        text = constname
+      } else {
+        text = constpkg + '/' + constname
+      }
+    } else {
+      switch (typedef) {
+      case vx_core.t_boolean:
+        if (value == true) {
+          text = 'true'
+        } else {
+          text = 'false'
+        }
+        break
+      case vx_core.t_decimal:
+        text = '' + value
+        break
+      case vx_core.t_float:
+        text = '' + value
+        if (text.endsWith('.0')) {
+          text = text.substring(0, text.length() - 2)
+        }
+        break
+      case vx_core.t_int:
+        if (value == vx_core.c_notanumber) {
+          text = 'notanumber'
+        } else if (value == vx_core.c_infinity) {
+          text = 'infinity'
+        } else if (value == vx_core.c_neginfinity) {
+          text = 'neginfinity'
+        } else {
+          text = '' + value
+        }
+        break
+      case vx_core.t_string:
+        text = value.replaceAll("\"", "\\\"")
+        text = '\"' + text + '\"'
+        break
+      default:
+        const typedefname = typedef['vx_value']['name']
+        const extend = vx_core.f_extends_from_typedef(typedef)
+        const indent1 = indent + 1
+        const indent2 = indent + 2
+        switch (extend) {
+        case ':list':
+          for (const valsub of value) {
+            const valtext = vx_core.vx_string_from_any_indent(valsub, indent1, linefeed)
+            text += '\n ' + indenttext + valtext
+          }
+          if (value['vx_msgblock'] != null) {
+            const msgtext = vx_core.vx_string_from_any_indent(value['vx_msgblock'], indent, linefeed)
+            text += '\n ' + indenttext + msgtext
+          }
+          text = '(' + typedefname + text + ')'
+          break
+        case ':map':
+        case ':struct':
+          const valmap = value['vx_value']
+          let validkeys
+          switch (extend) {
+          case ':map':
+            validkeys = Object.keys(valmap)
+            break
+          case ':struct':
+            const properties = vx_core.f_properties_from_typedef(typedef)
+            validkeys = Object.keys(properties)
+            break
+          }
+          for (let key of validkeys) {
+            const valsub = valmap[key]
+            if (valsub) {
+              if (!key.startsWith(':')) {
+                key = ':' + key
+              }
+              let valtext = vx_core.vx_string_from_any_indent(valsub, indent2, linefeed)
+              if (valtext.indexOf('\n') >= 0) {
+                valtext = '\n  ' + indenttext + valtext
+              } else {
+                valtext = ' ' + valtext
+              }
+              text += '\n' + indenttext + ' ' + key + valtext
+            }
+          }
+          if (value['vx_msgblock'] != null) {
+            const msgtext = vx_core.vx_string_from_any_indent(value['vx_msgblock'], indent1, linefeed)
+            text += '\n ' + indenttext + msgtext
+          }
+          text = '(' + typedefname + text + ')'
+          break
+        case ':func':
+          text = typedefname
+          if (value['vx_msgblock'] != null) {
+            const msgtext = vx_core.vx_string_from_any_indent(value['vx_msgblock'], indent1, linefeed)
+            text += '\n ' + indenttext + msgtext
+          }
+          text = '(' + text + ')'
+          break
+        }
+        break
+      }
+    }
+    output = text
+    return output
+  }
+
+  // vx_string_from_string_find_replace(string, string, string)
+  static vx_string_from_string_find_replace(text, find, replace) {
+    const output = text.replaceAll(find, replace);
+    return output;
+  }
+
+  static vx_string_from_string_start_end(text, start, end) {
+    let output = ""
+    const maxlen = text.length
+    if (end < 0) {
+     end += maxlen
+    }
+    if (start < 1) {
+    } else if (start > end) {
+    } else if (start > maxlen) {
+    } else {
+      if (end > maxlen) {
+        end = maxlen
+      }
+      output = text.substring(start - 1, end)
+    }
+    return output
+  }
 
   /**
    * type: any
@@ -28,8 +1058,15 @@ export default class vx_core {
 
   /**
    * type: anylist
+   * A list of any
    */
   static t_anylist = {}
+
+  /**
+   * type: anymap
+   * A map of any
+   */
+  static t_anymap = {}
 
   /**
    * type: anytype
@@ -662,7 +1699,7 @@ export default class vx_core {
   static f_multiply_2(...nums) {
     let output = vx_core.e_int
     nums = vx_core.f_new(vx_core.t_intlist, ...nums)
-    output = vx_core.f_any_from_list_reduce(
+    output = vx_core.f_any_from_list_start_reduce(
       {"any-1": vx_core.t_int, "any-2": vx_core.t_int, "list-2": vx_core.t_intlist},
       nums,
       1,
@@ -685,7 +1722,7 @@ export default class vx_core {
   static f_multiply_3(...nums) {
     let output = vx_core.e_number
     nums = vx_core.f_new(vx_core.t_numberlist, ...nums)
-    output = vx_core.f_any_from_list_reduce(
+    output = vx_core.f_any_from_list_start_reduce(
       {"any-1": vx_core.t_number, "any-2": vx_core.t_number, "list-2": vx_core.t_numberlist},
       nums,
       1,
@@ -742,7 +1779,7 @@ export default class vx_core {
   static f_plus_2(...nums) {
     let output = vx_core.e_int
     nums = vx_core.f_new(vx_core.t_intlist, ...nums)
-    output = vx_core.f_any_from_list_reduce(
+    output = vx_core.f_any_from_list_start_reduce(
       {"any-1": vx_core.t_int, "any-2": vx_core.t_int, "list-2": vx_core.t_intlist},
       nums,
       0,
@@ -765,7 +1802,7 @@ export default class vx_core {
   static f_plus_3(...nums) {
     let output = vx_core.e_number
     nums = vx_core.f_new(vx_core.t_numberlist, ...nums)
-    output = vx_core.f_any_from_list_reduce(
+    output = vx_core.f_any_from_list_start_reduce(
       {"any-1": vx_core.t_number, "any-2": vx_core.t_number, "list-2": vx_core.t_numberlist},
       nums,
       0,
@@ -838,7 +1875,7 @@ export default class vx_core {
   static f_minus_2(...nums) {
     let output = vx_core.e_int
     nums = vx_core.f_new(vx_core.t_intlist, ...nums)
-    output = vx_core.f_any_from_list_reduce(
+    output = vx_core.f_any_from_list_start_reduce(
       {"any-1": vx_core.t_int, "any-2": vx_core.t_int, "list-2": vx_core.t_intlist},
       nums,
       0,
@@ -861,7 +1898,7 @@ export default class vx_core {
   static f_minus_3(...nums) {
     let output = vx_core.e_number
     nums = vx_core.f_new(vx_core.t_numberlist, ...nums)
-    output = vx_core.f_any_from_list_reduce(
+    output = vx_core.f_any_from_list_start_reduce(
       {"any-1": vx_core.t_number, "any-2": vx_core.t_number, "list-2": vx_core.t_numberlist},
       nums,
       0,
@@ -963,7 +2000,7 @@ export default class vx_core {
   static f_lt_1(...values) {
     let output = vx_core.e_boolean
     values = vx_core.f_new(vx_core.t_anylist, ...values)
-    output = vx_core.f_any_from_list_reduce_next(
+    output = vx_core.f_any_from_list_start_reduce_next(
       {"any-1": vx_core.t_boolean, "any-2": vx_core.t_any, "list-2": vx_core.t_anylist},
       values,
       true,
@@ -1086,7 +2123,7 @@ export default class vx_core {
   static f_eq_1(...values) {
     let output = vx_core.e_boolean
     values = vx_core.f_new(vx_core.t_anylist, ...values)
-    output = vx_core.f_any_from_list_reduce_next(
+    output = vx_core.f_any_from_list_start_reduce_next(
       {"any-1": vx_core.t_boolean, "any-2": vx_core.t_any, "list-2": vx_core.t_anylist},
       values,
       false,
@@ -1156,7 +2193,7 @@ export default class vx_core {
   static f_gt_1(...values) {
     let output = vx_core.e_boolean
     values = vx_core.f_new(vx_core.t_anylist, ...values)
-    output = vx_core.f_any_from_list_reduce_next(
+    output = vx_core.f_any_from_list_start_reduce_next(
       {"any-1": vx_core.t_boolean, "any-2": vx_core.t_any, "list-2": vx_core.t_anylist},
       values,
       true,
@@ -1303,7 +2340,7 @@ export default class vx_core {
         vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_any_from_list({"any-1": vx_core.t_boolean, "list-1": vx_core.t_booleanlist}, values, 1)})
       ),
       vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_any_from_list_reduce_next(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_any_from_list_start_reduce_next(
           {"any-1": vx_core.t_boolean, "any-2": vx_core.t_boolean, "list-2": vx_core.t_booleanlist},
           values,
           true,
@@ -1386,6 +2423,25 @@ export default class vx_core {
   static async f_any_from_any_context_async(generic, context, value) {
     const generic_any_1 = generic["any-1"]
     let output = Promise.resolve(vx_core.f_empty(generic_any_1))
+    return output
+  }
+
+  /**
+   * @function any_from_any_key_value
+   * Generic Function returning Generic any-1 from a any-1, a key, and a value.
+   * @param  {typemap} generic
+   * @param  {any} current
+   * @param  {string} key
+   * @param  {any} value
+   * @return {any-1}
+   */
+  static t_any_from_any_key_value = {}
+  static e_any_from_any_key_value = {vx_type: vx_core.t_any_from_any_key_value}
+
+  // (func any<-any-key-value)
+  static f_any_from_any_key_value(generic, current, key, value) {
+    const generic_any_1 = generic["any-1"]
+    let output = vx_core.f_empty(generic_any_1)
     return output
   }
 
@@ -1498,7 +2554,7 @@ export default class vx_core {
   }
 
   /**
-   * @function any_from_list_reduce
+   * @function any_from_list_start_reduce
    * Returns a val from a list reduce operation
    * @param  {typemap} generic
    * @param  {list} list
@@ -1506,11 +2562,11 @@ export default class vx_core {
    * @param  {any_from_reduce} fn_reduce
    * @return {any-1}
    */
-  static t_any_from_list_reduce = {}
-  static e_any_from_list_reduce = {vx_type: vx_core.t_any_from_list_reduce}
+  static t_any_from_list_start_reduce = {}
+  static e_any_from_list_start_reduce = {vx_type: vx_core.t_any_from_list_start_reduce}
 
-  // (func any<-list-reduce)
-  static f_any_from_list_reduce(generic, list, valstart, fn_reduce) {
+  // (func any<-list-start-reduce)
+  static f_any_from_list_start_reduce(generic, list, valstart, fn_reduce) {
     const generic_any_1 = generic["any-1"]
     let output = vx_core.f_empty(generic_any_1)
     output = output = valstart
@@ -1524,7 +2580,7 @@ export default class vx_core {
   }
 
   /**
-   * @function any_from_list_reduce_next
+   * @function any_from_list_start_reduce_next
    * Returns a val from a list reduce operation
    * @param  {typemap} generic
    * @param  {list} list
@@ -1532,11 +2588,11 @@ export default class vx_core {
    * @param  {any_from_reduce_next} fn_reduce_next
    * @return {any-1}
    */
-  static t_any_from_list_reduce_next = {}
-  static e_any_from_list_reduce_next = {vx_type: vx_core.t_any_from_list_reduce_next}
+  static t_any_from_list_start_reduce_next = {}
+  static e_any_from_list_start_reduce_next = {vx_type: vx_core.t_any_from_list_start_reduce_next}
 
-  // (func any<-list-reduce-next)
-  static f_any_from_list_reduce_next(generic, list, valstart, fn_reduce_next) {
+  // (func any<-list-start-reduce-next)
+  static f_any_from_list_start_reduce_next(generic, list, valstart, fn_reduce_next) {
     const generic_any_1 = generic["any-1"]
     let output = vx_core.f_empty(generic_any_1)
     output = output = valstart
@@ -1579,6 +2635,26 @@ export default class vx_core {
     if (val != undefined) {
       output = val
     }
+    return output
+  }
+
+  /**
+   * @function any_from_map_start_reduce
+   * Returns a value by reducing each element of a map.
+   * @param  {typemap} generic
+   * @param  {map} map
+   * @param  {any} start
+   * @param  {any_from_any_key_value} fn_reduce
+   * @return {any-1}
+   */
+  static t_any_from_map_start_reduce = {}
+  static e_any_from_map_start_reduce = {vx_type: vx_core.t_any_from_map_start_reduce}
+
+  // (func any<-map-start-reduce)
+  static f_any_from_map_start_reduce(generic, map, start, fn_reduce) {
+    const generic_any_1 = generic["any-1"]
+    let output = vx_core.f_empty(generic_any_1)
+    output = vx_core.vx_any_from_map_start_reduce(generic_any_1, map, start, fn_reduce)
     return output
   }
 
@@ -2912,6 +3988,8 @@ export default class vx_core {
       vx_core.t_msg,
       ":code",
       code,
+      ":detail",
+      detail,
       ":severity",
       vx_core.c_msg_error
     )
@@ -3138,7 +4216,7 @@ export default class vx_core {
   static f_or_1(...values) {
     let output = vx_core.e_boolean
     values = vx_core.f_new(vx_core.t_booleanlist, ...values)
-    output = vx_core.f_any_from_list_reduce_next(
+    output = vx_core.f_any_from_list_start_reduce_next(
       {"any-1": vx_core.t_boolean, "any-2": vx_core.t_boolean, "list-2": vx_core.t_booleanlist},
       values,
       false,
@@ -3536,7 +4614,26 @@ export default class vx_core {
   }
 
   /**
+   * @function string_from_string_find_replace
+   * Returns a string with all instances of find replaced by replace.
+   * @param  {string} text
+   * @param  {string} find
+   * @param  {string} replace
+   * @return {string}
+   */
+  static t_string_from_string_find_replace = {}
+  static e_string_from_string_find_replace = {vx_type: vx_core.t_string_from_string_find_replace}
+
+  // (func string<-string-find-replace)
+  static f_string_from_string_find_replace(text, find, replace) {
+    let output = vx_core.e_string
+    output = vx_core.vx_string_from_string_find_replace(text, find, replace)
+    return output
+  }
+
+  /**
    * @function switch
+   * Returns a value based on a logical switch
    * @param  {typemap} generic
    * @param  {any} val
    * @param  {thenelselist} ... thenelselist
@@ -3593,6 +4690,7 @@ export default class vx_core {
 
   /**
    * @function then
+   * Returns a thenelse struct from a given condition function and value function
    * @param  {boolean_from_func} fn_cond
    * @param  {any_from_func} fn_any
    * @return {thenelse}
@@ -3682,6 +4780,7 @@ export default class vx_core {
 
   /**
    * @function typedef_from_any
+   * Gets the typedef of a given value
    * @param  {any} val
    * @return {typedef}
    */
@@ -3699,6 +4798,7 @@ export default class vx_core {
 
   /**
    * @function typedef_from_type
+   * Gets the typedef of a given type
    * @param  {any} val
    * @return {typedef}
    */
@@ -3714,7 +4814,7 @@ export default class vx_core {
 
   /**
    * @function typename_from_any
-   * Gets the type of a given value
+   * Gets the typename of a given value
    * @param  {any} value
    * @return {string}
    */
@@ -3814,6 +4914,7 @@ export default class vx_core {
   static e_any_async_from_func = {}
   static e_any_from_anylist = []
   static e_anylist = []
+  static e_anymap = {}
   static e_anytype = {}
   static e_arg = {}
   static e_arglist = []
@@ -3906,6 +5007,7 @@ export default class vx_core {
       "any-async<-func": vx_core.e_any_async_from_func,
       "any<-anylist": vx_core.e_any_from_anylist,
       "anylist": vx_core.e_anylist,
+      "anymap": vx_core.e_anymap,
       "anytype": vx_core.e_anytype,
       "arg": vx_core.e_arg,
       "arglist": vx_core.e_arglist,
@@ -4017,15 +5119,17 @@ export default class vx_core {
       "any<-any-async": vx_core.e_any_from_any_async,
       "any<-any-context": vx_core.e_any_from_any_context,
       "any<-any-context-async": vx_core.e_any_from_any_context_async,
+      "any<-any-key-value": vx_core.e_any_from_any_key_value,
       "any<-func": vx_core.e_any_from_func,
       "any<-func-async": vx_core.e_any_from_func_async,
       "any<-int": vx_core.e_any_from_int,
       "any<-key-value": vx_core.e_any_from_key_value,
       "any<-key-value-async": vx_core.e_any_from_key_value_async,
       "any<-list": vx_core.e_any_from_list,
-      "any<-list-reduce": vx_core.e_any_from_list_reduce,
-      "any<-list-reduce-next": vx_core.e_any_from_list_reduce_next,
+      "any<-list-start-reduce": vx_core.e_any_from_list_start_reduce,
+      "any<-list-start-reduce-next": vx_core.e_any_from_list_start_reduce_next,
       "any<-map": vx_core.e_any_from_map,
+      "any<-map-start-reduce": vx_core.e_any_from_map_start_reduce,
       "any<-none": vx_core.e_any_from_none,
       "any<-none-async": vx_core.e_any_from_none_async,
       "any<-reduce": vx_core.e_any_from_reduce,
@@ -4121,6 +5225,7 @@ export default class vx_core {
       "string<-any": vx_core.e_string_from_any,
       "string<-any-indent": vx_core.e_string_from_any_indent,
       "string<-func": vx_core.e_string_from_func,
+      "string<-string-find-replace": vx_core.e_string_from_string_find_replace,
       "switch": vx_core.e_switch,
       "then": vx_core.e_then,
       "traits<-typedef": vx_core.e_traits_from_typedef,
@@ -4177,15 +5282,17 @@ export default class vx_core {
       "any<-any-async": vx_core.t_any_from_any_async,
       "any<-any-context": vx_core.t_any_from_any_context,
       "any<-any-context-async": vx_core.t_any_from_any_context_async,
+      "any<-any-key-value": vx_core.t_any_from_any_key_value,
       "any<-func": vx_core.t_any_from_func,
       "any<-func-async": vx_core.t_any_from_func_async,
       "any<-int": vx_core.t_any_from_int,
       "any<-key-value": vx_core.t_any_from_key_value,
       "any<-key-value-async": vx_core.t_any_from_key_value_async,
       "any<-list": vx_core.t_any_from_list,
-      "any<-list-reduce": vx_core.t_any_from_list_reduce,
-      "any<-list-reduce-next": vx_core.t_any_from_list_reduce_next,
+      "any<-list-start-reduce": vx_core.t_any_from_list_start_reduce,
+      "any<-list-start-reduce-next": vx_core.t_any_from_list_start_reduce_next,
       "any<-map": vx_core.t_any_from_map,
+      "any<-map-start-reduce": vx_core.t_any_from_map_start_reduce,
       "any<-none": vx_core.t_any_from_none,
       "any<-none-async": vx_core.t_any_from_none_async,
       "any<-reduce": vx_core.t_any_from_reduce,
@@ -4281,6 +5388,7 @@ export default class vx_core {
       "string<-any": vx_core.t_string_from_any,
       "string<-any-indent": vx_core.t_string_from_any_indent,
       "string<-func": vx_core.t_string_from_func,
+      "string<-string-find-replace": vx_core.t_string_from_string_find_replace,
       "switch": vx_core.t_switch,
       "then": vx_core.t_then,
       "traits<-typedef": vx_core.t_traits_from_typedef,
@@ -4298,6 +5406,7 @@ export default class vx_core {
       "any-async<-func": vx_core.t_any_async_from_func,
       "any<-anylist": vx_core.t_any_from_anylist,
       "anylist": vx_core.t_anylist,
+      "anymap": vx_core.t_anymap,
       "anytype": vx_core.t_anytype,
       "arg": vx_core.t_arg,
       "arglist": vx_core.t_arglist,
@@ -4449,6 +5558,25 @@ export default class vx_core {
       proplast      : {}
     }
     vx_core.e_anylist['vx_type'] = vx_core.t_anylist
+
+    // (type anymap)
+    vx_core.t_anymap['vx_type'] = vx_core.t_type
+    vx_core.t_anymap['vx_value'] = {
+      name          : "anymap",
+      pkgname       : "vx/core",
+      extends       : ":map",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [vx_core.t_any],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    vx_core.e_anymap['vx_type'] = vx_core.t_anymap
+    vx_core.e_anymap['vx_value'] = {}
 
     // (type anytype)
     vx_core.t_anytype['vx_type'] = vx_core.t_type
@@ -6979,6 +8107,25 @@ export default class vx_core {
       fn            : vx_core.f_any_from_any_context_async
     }
 
+    // (func any<-any-key-value)
+    vx_core.t_any_from_any_key_value['vx_type'] = vx_core.t_type
+    vx_core.t_any_from_any_key_value['vx_value'] = {
+      name          : "any<-any-key-value",
+      pkgname       : "vx/core",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_core.f_any_from_any_key_value
+    }
+
     // (func any<-func)
     vx_core.t_any_from_func['vx_type'] = vx_core.t_type
     vx_core.t_any_from_func['vx_value'] = {
@@ -7093,10 +8240,10 @@ export default class vx_core {
       fn            : vx_core.f_any_from_list
     }
 
-    // (func any<-list-reduce)
-    vx_core.t_any_from_list_reduce['vx_type'] = vx_core.t_type
-    vx_core.t_any_from_list_reduce['vx_value'] = {
-      name          : "any<-list-reduce",
+    // (func any<-list-start-reduce)
+    vx_core.t_any_from_list_start_reduce['vx_type'] = vx_core.t_type
+    vx_core.t_any_from_list_start_reduce['vx_value'] = {
+      name          : "any<-list-start-reduce",
       pkgname       : "vx/core",
       extends       : ":func",
       idx           : 0,
@@ -7109,13 +8256,13 @@ export default class vx_core {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : vx_core.f_any_from_list_reduce
+      fn            : vx_core.f_any_from_list_start_reduce
     }
 
-    // (func any<-list-reduce-next)
-    vx_core.t_any_from_list_reduce_next['vx_type'] = vx_core.t_type
-    vx_core.t_any_from_list_reduce_next['vx_value'] = {
-      name          : "any<-list-reduce-next",
+    // (func any<-list-start-reduce-next)
+    vx_core.t_any_from_list_start_reduce_next['vx_type'] = vx_core.t_type
+    vx_core.t_any_from_list_start_reduce_next['vx_value'] = {
+      name          : "any<-list-start-reduce-next",
       pkgname       : "vx/core",
       extends       : ":func",
       idx           : 0,
@@ -7128,7 +8275,7 @@ export default class vx_core {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : vx_core.f_any_from_list_reduce_next
+      fn            : vx_core.f_any_from_list_start_reduce_next
     }
 
     // (func any<-map)
@@ -7148,6 +8295,25 @@ export default class vx_core {
       properties    : [],
       proplast      : {},
       fn            : vx_core.f_any_from_map
+    }
+
+    // (func any<-map-start-reduce)
+    vx_core.t_any_from_map_start_reduce['vx_type'] = vx_core.t_type
+    vx_core.t_any_from_map_start_reduce['vx_value'] = {
+      name          : "any<-map-start-reduce",
+      pkgname       : "vx/core",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_core.f_any_from_map_start_reduce
     }
 
     // (func any<-none)
@@ -8953,6 +10119,25 @@ export default class vx_core {
       properties    : [],
       proplast      : {},
       fn            : vx_core.f_string_from_func
+    }
+
+    // (func string<-string-find-replace)
+    vx_core.t_string_from_string_find_replace['vx_type'] = vx_core.t_type
+    vx_core.t_string_from_string_find_replace['vx_value'] = {
+      name          : "string<-string-find-replace",
+      pkgname       : "vx/core",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_core.f_string_from_string_find_replace
     }
 
     // (func switch)

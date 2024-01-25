@@ -1,7 +1,7 @@
 (package nx/tactics/books/pulp_fiction
  :libs (lib base :path nx/tactics/base))
 
-(func book : base/book
+(func tacticsbook : base/book
  (book
   :name "Pulp Fiction"
   :chaptermap
@@ -19,15 +19,6 @@
       :name "Action/Adventure"
       :sectionmap
        (sectionmap
-        "Government Units"
-         (section
-          :name "Government Units"
-          :unitmap
-           (unitmap
-            "Government Agent"
-             (unit
-              :name "Government Agent"
-              :summary "We have top men working on it now.  Who?  Top... men. - Raiders of the Lost Ark")))
         "Treasure Hunters"
          (section
           :name "Treasure Hunters"
@@ -37,44 +28,81 @@
              (unit
               :name "Indiana Jones"
               :image "PulpFiction/IndianaJones.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :tag "item")
+                      :severity 2))))
+                :Firearms
+                 (unitskill
+                  :name "Firearms")
+                :Knowledge
+                 (unitskill
+                  :name "Knowledge"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidtagfound"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :tag "ability")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "ability")
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "ability")
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "ability")
+                         :severity 2))))))))
             "Lara Croft"
              (unit
               :name "Lara Croft"
               :image "PulpFiction/LaraCroft.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))))))
+              :unitskillmap
+               (unitskillmap
+                :Firearms
+                 (unitskill
+                  :name "Firearms")
+                :Influence
+                 (unitskill
+                  :name "Influence")))))))
     "Flash Gordon"
      (chapter
       :name "Flash Gordon")
@@ -92,6 +120,10 @@
         (msglist
          (msg
           :code ":invalidtagfound"
+          :detail
+           (anymap
+            :type nx/tactics/base/chapter
+            :tag "item")
           :severity 2))
        :msgblocks
         (msgblocklist
@@ -100,24 +132,40 @@
            (msglist
             (msg
              :code ":invalidtagfound"
+             :detail
+              (anymap
+               :type nx/tactics/base/chapter
+               :tag "item")
              :severity 2)))
          (msgblock
           :msgs
            (msglist
             (msg
              :code ":invalidtagfound"
+             :detail
+              (anymap
+               :type nx/tactics/base/chapter
+               :tag "unit")
              :severity 2)))
          (msgblock
           :msgs
            (msglist
             (msg
              :code ":invalidtagfound"
+             :detail
+              (anymap
+               :type nx/tactics/base/chapter
+               :tag "unit")
              :severity 2)))
          (msgblock
           :msgs
            (msglist
             (msg
              :code ":invalidtagfound"
+             :detail
+              (anymap
+               :type nx/tactics/base/chapter
+               :tag "unit")
              :severity 2))))))
     "Lost Continent"
      (chapter

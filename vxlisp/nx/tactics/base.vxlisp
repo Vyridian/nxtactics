@@ -2,7 +2,7 @@
  :doc "Tactics Base Types")
 
 (type ability : struct
- :traits     [card])
+ :traits [card])
 
 (type abilitymap : map
  :allowtypes [ability])

@@ -24,13 +24,13 @@ export default class nx_tactics_damage_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/damage", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 19), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 5, ":tests", 1, ":total", 19), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 27), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 35, ":tests", 10, ":total", 28), 
       "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 19), 
-      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 28), 
+      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1)
     )
   }
 
@@ -40,30 +40,39 @@ export default class nx_tactics_damage_test {
       "testpkg", "nx/tactics/damage",
       "typemap",
         vx_core.f_new(
-          vx_core.t_intmap
+          vx_core.t_intmap,
+          "wound", 0
         ),
       "constmap",
         vx_core.f_new(
           vx_core.t_intmap,
-          "physical-ca", 0,
-          "physical-da", 0,
-          "physical-ha", 0,
-          "physical-j1", 0,
-          "physical-j2", 0,
-          "physical-s10", 0,
-          "physical-s2", 0,
-          "physical-s3", 0,
-          "physical-s4", 0,
-          "physical-s5", 0,
-          "physical-s6", 0,
-          "physical-s7", 0,
-          "physical-s8", 0,
-          "physical-s9", 0,
-          "physical-sa", 0,
-          "physical-sj", 0,
-          "physical-sk", 0,
-          "physical-sq", 0,
-          "physicaldamagedeck", 0
+          "breakdown", 0,
+          "duress", 0,
+          "fatigue", 0,
+          "irrationaldeck", 0,
+          "stagger", 0,
+          "stress", 0,
+          "trauma", 0,
+          "unwillingdeck", 0,
+          "wound-ca", 0,
+          "wound-da", 0,
+          "wound-ha", 0,
+          "wound-j1", 0,
+          "wound-j2", 0,
+          "wound-s10", 0,
+          "wound-s2", 0,
+          "wound-s3", 0,
+          "wound-s4", 0,
+          "wound-s5", 0,
+          "wound-s6", 0,
+          "wound-s7", 0,
+          "wound-s8", 0,
+          "wound-s9", 0,
+          "wound-sa", 0,
+          "wound-sj", 0,
+          "wound-sk", 0,
+          "wound-sq", 0,
+          "wounddeck", 0
         ),
       "funcmap",
         vx_core.f_new(

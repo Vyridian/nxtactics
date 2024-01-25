@@ -17653,6 +17653,159 @@ ab
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
+     :casename "ability<-ability-stringmap"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/ability
+  :name "name"
+  :image "image")
+ (ability<-ability-stringmap
+  (empty base/ability)
+  (stringmap
+   :name "name"
+   :image "image")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (ability
+            :name "name"
+            :image "image")
+          :actual
+           (ability
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "ability<-ability-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/ability
+  :titles "titles")
+ (ability<-ability-xmlchild
+  (empty base/ability)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (ability
+            :titles "titles")
+          :actual
+           (ability
+            :titles "titles")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "ability<-xml"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/ability
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (ability<-xml
+  (xml/xml
+   :tag "ability"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (ability
+            :name "name"
+            :image "image"
+            :reference "reference"
+            :titles "titles")
+          :actual
+           (ability
+            :name "name"
+            :image "image"
+            :reference "reference"
+            :titles "titles")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "book<-book-key-value"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/book
+  :name "nm")
+ (book<-book-key-value
+  (empty base/book)
+  "name"
+  "nm"))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (book
+            :name "nm")
+          :actual
+           (book
+            :name "nm")))
+       (testdescribe
+        :describename
+         "(test
+ (base/book
+  :name "image")
+ (book<-book-key-value
+  (empty base/book)
+  "name"
+  "image"))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (book
+            :name "image")
+          :actual
+           (book
+            :name "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
      :casename "book<-book-stringmap"
      :describelist
       (testdescribelist
@@ -17660,25 +17813,153 @@ ab
         :describename
          "(test
  (base/book
-  :name "bookname"
-  :image "bookimage")
+  :name "name"
+  :image "image")
  (book<-book-stringmap
   (empty base/book)
   (stringmap
-   :name "bookname"
-   :image "bookimage")))"
+   :name "name"
+   :image "image")))"
         :testresult
          (testresult
           :code ":eq"
           :passfail true
           :expected
            (book
-            :name "bookname"
-            :image "bookimage")
+            :name "name"
+            :image "image")
           :actual
            (book
-            :name "bookname"
-            :image "bookimage")))))
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "book<-book-xml"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/book
+  :name "name1")
+ (book<-book-xml
+  (empty base/book)
+  (xml/xml
+   :tag "doc"
+   :propmap
+    (stringmap
+     :name "name1"))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (book
+            :name "name1")
+          :actual
+           (book
+            :name "name1")))
+       (testdescribe
+        :describename
+         "(test
+ (empty base/book)
+ (book<-book-xml
+  (empty base/book)
+  (xml/xml
+   :tag "?xml")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true))
+       (testdescribe
+        :describename
+         "(test
+ (base/book
+  :name "name1"
+  (msgblock
+   (msg
+    :code ":duplicatetagfound"
+    :detail
+     (anymap
+      :type nx/tactics/base/book
+      :tag "doc")
+      :severity 2)))
+ (book<-book-xml
+  (base/book
+   :name "name1")
+  (xml/xml
+   :tag "doc")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (book
+            :name "name1"
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":duplicatetagfound"
+                :detail
+                 (anymap
+                  :type nx/tactics/base/book
+                  :tag "doc")
+                :severity 2))))
+          :actual
+           (book
+            :name "name1"
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":duplicatetagfound"
+                :detail
+                 (anymap
+                  :type nx/tactics/base/book
+                  :tag "doc")
+                :severity 2))))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "book<-book-xmlchapter"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/book
+  :chaptermap
+   (base/chaptermap
+    :chapter1
+     (base/chapter
+      :name "chapter1")))
+ (book<-book-xmlchapter
+  (empty base/book)
+  (xml/xml
+   :tag "chapter"
+   :propmap
+    (stringmap
+     :name "chapter1"))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (book
+            :chaptermap
+             (chaptermap
+              :chapter1
+               (chapter
+                :name "chapter1")))
+          :actual
+           (book
+            :chaptermap
+             (chaptermap
+              :chapter1
+               (chapter
+                :name "chapter1")))))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -17707,7 +17988,41 @@ ab
             :titles "titles")
           :actual
            (book
-            :titles "titles")))))
+            :titles "titles")))
+       (testdescribe
+        :describename
+         "(test
+ (base/book
+  :chaptermap
+   (base/chaptermap
+    :chapter1
+     (base/chapter
+      :name "chapter1")))
+ (book<-book-xmlchild
+  (empty base/book)
+  (xml/xml
+   :tag "chapter"
+   :propmap
+    (stringmap
+     :name "chapter1"))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (book
+            :chaptermap
+             (chaptermap
+              :chapter1
+               (chapter
+                :name "chapter1")))
+          :actual
+           (book
+            :chaptermap
+             (chaptermap
+              :chapter1
+               (chapter
+                :name "chapter1")))))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -17718,22 +18033,54 @@ ab
         :describename
          "(test
  (base/book
-  :name "name"
-  :image "image"
-  :titles "titles"
-  :reference "reference"
+  :name "name1")
+ (book<-xml
+  (xml/xml
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "?xml")
+     (xml/xml
+      :tag "doc"
+      :propmap
+       (stringmap
+        :name "name1"))))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (book
+            :name "name1")
+          :actual
+           (book
+            :name "name1")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "book<-xmldoc"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/book
+  :name "name1"
+  :image "image1"
+  :titles "titles1"
+  :reference "reference1"
   :chaptermap
    (base/chaptermap
     :chapter1
      (base/chapter
       :name "chapter1")))
- (book<-xml
+ (book<-xmldoc
   (xml/xml
-   :tag "book"
+   :tag "doc"
    :propmap
     (stringmap
-     :name "name"
-     :image "image")
+     :name "name1"
+     :image "image1")
    :children
     (xml/xmllist
      (xml/xml
@@ -17741,13 +18088,13 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "titles")))
+         :text "titles1")))
      (xml/xml
       :tag "reference"
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))
+         :text "reference1")))
      (xml/xml
       :tag "chapter"
       :propmap
@@ -17759,10 +18106,10 @@ ab
           :passfail true
           :expected
            (book
-            :name "name"
-            :image "image"
-            :reference "reference"
-            :titles "titles"
+            :name "name1"
+            :image "image1"
+            :reference "reference1"
+            :titles "titles1"
             :chaptermap
              (chaptermap
               :chapter1
@@ -17770,15 +18117,45 @@ ab
                 :name "chapter1")))
           :actual
            (book
-            :name "name"
-            :image "image"
-            :reference "reference"
-            :titles "titles"
+            :name "name1"
+            :image "image1"
+            :reference "reference1"
+            :titles "titles1"
             :chaptermap
              (chaptermap
               :chapter1
                (chapter
                 :name "chapter1")))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "book<-xmllist"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/book
+  :name "name1")
+ (book<-xmllist
+  (xml/xmllist
+   (xml/xml
+    :tag "?xml")
+   (xml/xml
+    :tag "doc"
+    :propmap
+     (stringmap
+      :name "name1")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (book
+            :name "name1")
+          :actual
+           (book
+            :name "name1")))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -17911,6 +18288,155 @@ ab
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
+     :casename "power<-power-stringmap"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/power
+  :name "name"
+  :image "image")
+ (power<-power-stringmap
+  (empty base/power)
+  (stringmap
+   :name "name"
+   :image "image")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (power
+            :name "name"
+            :image "image")
+          :actual
+           (power
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "power<-power-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/power
+  :titles "titles")
+ (power<-power-xmlchild
+  (empty base/power)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (power
+            :titles "titles")
+          :actual
+           (power
+            :titles "titles")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "power<-xml"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/power
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference"
+  :abilitymap
+   (base/abilitymap
+    :ability1
+     (base/ability
+      :name "ability1"))
+  :specialtymap
+   (base/specialtymap
+    :specialty1
+     (base/specialty
+      :name "specialty1")))
+ (power<-xml
+  (xml/xml
+   :tag "power"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))
+     (xml/xml
+      :tag "ability"
+      :propmap
+       (stringmap
+        :name "ability1"))
+     (xml/xml
+      :tag "specialty"
+      :propmap
+       (stringmap
+        :name "specialty1"))))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (power
+            :name "name"
+            :image "image"
+            :reference "reference"
+            :titles "titles"
+            :abilitymap
+             (abilitymap
+              :ability1
+               (ability
+                :name "ability1"))
+            :specialtymap
+             (specialtymap
+              :specialty1
+               (specialty
+                :name "specialty1")))
+          :actual
+           (power
+            :name "name"
+            :image "image"
+            :reference "reference"
+            :titles "titles"
+            :abilitymap
+             (abilitymap
+              :ability1
+               (ability
+                :name "ability1"))
+            :specialtymap
+             (specialtymap
+              :specialty1
+               (specialty
+                :name "specialty1")))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
      :casename "rule<-rule-stringmap"
      :describelist
       (testdescribelist
@@ -18031,11 +18557,26 @@ ab
   :image "image"
   :titles "titles"
   :reference "reference"
+  :powermap
+   (base/powermap
+    :power1
+     (base/power
+      :name "power1"))
+  :scenariomap
+   (base/scenariomap
+    :scenario1
+     (base/scenario
+      :name "scenario1"))
   :sectionmap
    (base/sectionmap
     :section1
      (base/section
-      :name "section1")))
+      :name "section1"))
+  :skillmap
+   (base/skillmap
+    :skill1
+     (base/skill
+      :name "skill1")))
  (section<-xml
   (xml/xml
    :tag "section"
@@ -18058,10 +18599,25 @@ ab
         (xml/xml
          :text "reference")))
      (xml/xml
+      :tag "power"
+      :propmap
+       (stringmap
+        :name "power1"))
+     (xml/xml
+      :tag "scenario"
+      :propmap
+       (stringmap
+        :name "scenario1"))
+     (xml/xml
       :tag "section"
       :propmap
        (stringmap
-        :name "section1"))))))"
+        :name "section1"))
+     (xml/xml
+      :tag "skill"
+      :propmap
+       (stringmap
+        :name "skill1"))))))"
         :testresult
          (testresult
           :code ":eq"
@@ -18072,22 +18628,281 @@ ab
             :image "image"
             :reference "reference"
             :titles "titles"
+            :powermap
+             (powermap
+              :power1
+               (power
+                :name "power1"))
+            :scenariomap
+             (scenariomap
+              :scenario1
+               (scenario
+                :name "scenario1"))
             :sectionmap
              (sectionmap
               :section1
                (section
-                :name "section1")))
+                :name "section1"))
+            :skillmap
+             (skillmap
+              :skill1
+               (skill
+                :name "skill1")))
           :actual
            (section
             :name "name"
             :image "image"
             :reference "reference"
             :titles "titles"
+            :powermap
+             (powermap
+              :power1
+               (power
+                :name "power1"))
+            :scenariomap
+             (scenariomap
+              :scenario1
+               (scenario
+                :name "scenario1"))
             :sectionmap
              (sectionmap
               :section1
                (section
-                :name "section1")))))))
+                :name "section1"))
+            :skillmap
+             (skillmap
+              :skill1
+               (skill
+                :name "skill1")))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "skill<-skill-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/skill
+  :titles "titles")
+ (skill<-skill-xmlchild
+  (empty base/skill)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (skill
+            :titles "titles")
+          :actual
+           (skill
+            :titles "titles")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "skill<-xml"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/skill
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference"
+  :abilitymap
+   (base/abilitymap
+    :ability1
+     (base/ability
+      :name "ability1"))
+  :specialtymap
+   (base/specialtymap
+    :specialty1
+     (base/specialty
+      :name "specialty1")))
+ (skill<-xml
+  (xml/xml
+   :tag "skill"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))
+     (xml/xml
+      :tag "ability"
+      :propmap
+       (stringmap
+        :name "ability1"))
+     (xml/xml
+      :tag "specialty"
+      :propmap
+       (stringmap
+        :name "specialty1"))))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (skill
+            :name "name"
+            :image "image"
+            :reference "reference"
+            :titles "titles"
+            :abilitymap
+             (abilitymap
+              :ability1
+               (ability
+                :name "ability1"))
+            :specialtymap
+             (specialtymap
+              :specialty1
+               (specialty
+                :name "specialty1")))
+          :actual
+           (skill
+            :name "name"
+            :image "image"
+            :reference "reference"
+            :titles "titles"
+            :abilitymap
+             (abilitymap
+              :ability1
+               (ability
+                :name "ability1"))
+            :specialtymap
+             (specialtymap
+              :specialty1
+               (specialty
+                :name "specialty1")))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "specialty<-specialty-stringmap"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/specialty
+  :name "name"
+  :image "image")
+ (specialty<-specialty-stringmap
+  (empty base/specialty)
+  (stringmap
+   :name "name"
+   :image "image")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (specialty
+            :name "name"
+            :image "image")
+          :actual
+           (specialty
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "specialty<-specialty-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/specialty
+  :titles "titles")
+ (specialty<-specialty-xmlchild
+  (empty base/specialty)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (specialty
+            :titles "titles")
+          :actual
+           (specialty
+            :titles "titles")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "specialty<-xml"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/specialty
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (specialty<-xml
+  (xml/xml
+   :tag "specialty"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (specialty
+            :name "name"
+            :image "image"
+            :reference "reference"
+            :titles "titles")
+          :actual
+           (specialty
+            :name "name"
+            :image "image"
+            :reference "reference"
+            :titles "titles")))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -18220,15 +19035,19 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :ability<-ability-key-value 0
+      :ability<-ability-stringmap 1
+      :ability<-ability-xmlchild 1
+      :ability<-xml 1
       :book-read<-bookname 0
-      :book<-book-key-value 0
+      :book<-book-key-value 2
       :book<-book-stringmap 1
-      :book<-book-xml 0
-      :book<-book-xmlchapter 0
-      :book<-book-xmlchild 1
+      :book<-book-xml 3
+      :book<-book-xmlchapter 1
+      :book<-book-xmlchild 2
       :book<-xml 1
-      :book<-xmllist 0
-      :book<-xmltop 0
+      :book<-xmldoc 1
+      :book<-xmllist 1
       :boolean-write<-book 0
       :boolean-write<-booknames 0
       :chapter<-chapter-key-value 0
@@ -18239,6 +19058,12 @@ ab
       :file-read<-bookname 0
       :file-write<-book 0
       :modifier<-xml 0
+      :power<-power-key-value 0
+      :power<-power-stringmap 1
+      :power<-power-xmlability 0
+      :power<-power-xmlchild 1
+      :power<-power-xmlspecialty 0
+      :power<-xml 1
       :rule<-rule-key-value 0
       :rule<-rule-stringmap 1
       :rule<-rule-xmlchild 1
@@ -18250,11 +19075,23 @@ ab
       :section<-section-key-value 0
       :section<-section-stringmap 0
       :section<-section-xmlchild 0
+      :section<-section-xmlpower 0
       :section<-section-xmlrule 0
       :section<-section-xmlscenario 0
       :section<-section-xmlsection 0
+      :section<-section-xmlskill 0
       :section<-section-xmlunit 0
       :section<-xml 1
+      :skill<-skill-key-value 0
+      :skill<-skill-stringmap 0
+      :skill<-skill-xmlability 0
+      :skill<-skill-xmlchild 1
+      :skill<-skill-xmlspecialty 0
+      :skill<-xml 1
+      :specialty<-specialty-key-value 0
+      :specialty<-specialty-stringmap 1
+      :specialty<-specialty-xmlchild 1
+      :specialty<-xml 1
       :string-read<-bookname 0
       :string-vxlisp<-book 0
       :string-writename<-book 0
@@ -18280,12 +19117,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 53)
+      :total 75)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 53)
+      :total 75)
     :constnums
      (testcoveragenums
       :pct 100
@@ -18293,20 +19130,20 @@ ab
       :total 0)
     :docnums
      (testcoveragenums
-      :pct 88
-      :tests 47
-      :total 53)
+      :pct 92
+      :tests 69
+      :total 75)
     :funcnums
      (testcoveragenums
-      :pct 24
-      :tests 13
-      :total 53)
+      :pct 38
+      :tests 29
+      :total 75)
     :testpkg "nx/tactics/books/bookloader"
     :totalnums
      (testcoveragenums
-      :pct 24
-      :tests 13
-      :total 53)
+      :pct 38
+      :tests 29
+      :total 75)
     :typenums
      (testcoveragenums
       :pct 100

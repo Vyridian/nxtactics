@@ -39801,7 +39801,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "24% 13/53")
+                  :text "38% 29/75")
                  (p
                   :style
                    (style
@@ -39825,7 +39825,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "24% 13/53")
+                  :text "38% 29/75")
                  (p
                   :style
                    (style
@@ -39833,7 +39833,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "88% 47/53")
+                  :text "92% 69/75")
                  (p
                   :style
                    (style
@@ -39841,7 +39841,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "0% 0/53")
+                  :text "0% 0/75")
                  (p
                   :style
                    (style
@@ -39849,7 +39849,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "0% 0/53"))
+                  :text "0% 0/75"))
                :nodes
                 (divchildlist
                  (div
@@ -39860,6 +39860,470 @@ ab
                       (tbody
                        :nodes
                         (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "ability<-ability-stringmap")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/ability
+  :name "name"
+  :image "image")
+ (ability<-ability-stringmap
+  (empty base/ability)
+  (stringmap
+   :name "name"
+   :image "image")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(ability
+ :name "name"
+ :image "image")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(ability
+ :name "name"
+ :image "image")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "ability<-ability-xmlchild")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/ability
+  :titles "titles")
+ (ability<-ability-xmlchild
+  (empty base/ability)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(ability
+ :titles "titles")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(ability
+ :titles "titles")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "ability<-xml")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/ability
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (ability<-xml
+  (xml/xml
+   :tag "ability"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(ability
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(ability
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-book-key-value")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/book
+  :name "nm")
+ (book<-book-key-value
+  (empty base/book)
+  "name"
+  "nm"))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "nm")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "nm")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-book-key-value")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/book
+  :name "image")
+ (book<-book-key-value
+  (empty base/book)
+  "name"
+  "image"))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "image")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "image")")))))
                          (tr
                           :nodes
                            (tdlist
@@ -39909,13 +40373,13 @@ ab
                                 :text
                                  "(test
  (base/book
-  :name "bookname"
-  :image "bookimage")
+  :name "name"
+  :image "image")
  (book<-book-stringmap
   (empty base/book)
   (stringmap
-   :name "bookname"
-   :image "bookimage")))")))
+   :name "name"
+   :image "image")))")))
                             (td
                              :nodes
                               (divchildlist
@@ -39931,8 +40395,8 @@ ab
                                     :white-space "pre"))
                                 :text
                                  "(book
- :name "bookname"
- :image "bookimage")")))
+ :name "name"
+ :image "image")")))
                             (td
                              :nodes
                               (divchildlist
@@ -39948,8 +40412,394 @@ ab
                                     :white-space "pre"))
                                 :text
                                  "(book
- :name "bookname"
- :image "bookimage")")))))
+ :name "name"
+ :image "image")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-book-xml")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/book
+  :name "name1")
+ (book<-book-xml
+  (empty base/book)
+  (xml/xml
+   :tag "doc"
+   :propmap
+    (stringmap
+     :name "name1"))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-book-xml")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (empty base/book)
+ (book<-book-xml
+  (empty base/book)
+  (xml/xml
+   :tag "?xml")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "(book)")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "(book)")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-book-xml")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/book
+  :name "name1"
+  (msgblock
+   (msg
+    :code ":duplicatetagfound"
+    :detail
+     (anymap
+      :type nx/tactics/base/book
+      :tag "doc")
+      :severity 2)))
+ (book<-book-xml
+  (base/book
+   :name "name1")
+  (xml/xml
+   :tag "doc")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1"
+ (msgblock
+  :msgs
+   (msglist
+    (msg
+     :code ":duplicatetagfound"
+     :detail
+      (anymap
+       :type nx/tactics/base/book
+       :tag "doc")
+     :severity 2))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1"
+ (msgblock
+  :msgs
+   (msglist
+    (msg
+     :code ":duplicatetagfound"
+     :detail
+      (anymap
+       :type nx/tactics/base/book
+       :tag "doc")
+     :severity 2))))")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-book-xmlchapter")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/book
+  :chaptermap
+   (base/chaptermap
+    :chapter1
+     (base/chapter
+      :name "chapter1")))
+ (book<-book-xmlchapter
+  (empty base/book)
+  (xml/xml
+   :tag "chapter"
+   :propmap
+    (stringmap
+     :name "chapter1"))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :chaptermap
+  (chaptermap
+   :chapter1
+    (chapter
+     :name "chapter1")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :chaptermap
+  (chaptermap
+   :chapter1
+    (chapter
+     :name "chapter1")))")))))
                          (tr
                           :nodes
                            (tdlist
@@ -40072,7 +40922,7 @@ ab
                                     :unicode-bidi "embed"
                                     :font-family "monospace"
                                     :white-space "pre"))
-                                :text "book<-xml")))
+                                :text "book<-book-xmlchild")))
                             (td
                              :nodes
                               (divchildlist
@@ -40089,41 +40939,18 @@ ab
                                 :text
                                  "(test
  (base/book
-  :name "name"
-  :image "image"
-  :titles "titles"
-  :reference "reference"
   :chaptermap
    (base/chaptermap
     :chapter1
      (base/chapter
       :name "chapter1")))
- (book<-xml
+ (book<-book-xmlchild
+  (empty base/book)
   (xml/xml
-   :tag "book"
+   :tag "chapter"
    :propmap
     (stringmap
-     :name "name"
-     :image "image")
-   :children
-    (xml/xmllist
-     (xml/xml
-      :tag "titles"
-      :children
-       (xml/xmllist
-        (xml/xml
-         :text "titles")))
-     (xml/xml
-      :tag "reference"
-      :children
-       (xml/xmllist
-        (xml/xml
-         :text "reference")))
-     (xml/xml
-      :tag "chapter"
-      :propmap
-       (stringmap
-        :name "chapter1"))))))")))
+     :name "chapter1"))))")))
                             (td
                              :nodes
                               (divchildlist
@@ -40139,10 +40966,6 @@ ab
                                     :white-space "pre"))
                                 :text
                                  "(book
- :name "name"
- :image "image"
- :reference "reference"
- :titles "titles"
  :chaptermap
   (chaptermap
    :chapter1
@@ -40163,15 +40986,327 @@ ab
                                     :white-space "pre"))
                                 :text
                                  "(book
- :name "name"
- :image "image"
- :reference "reference"
- :titles "titles"
  :chaptermap
   (chaptermap
    :chapter1
     (chapter
      :name "chapter1")))")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-xml")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/book
+  :name "name1")
+ (book<-xml
+  (xml/xml
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "?xml")
+     (xml/xml
+      :tag "doc"
+      :propmap
+       (stringmap
+        :name "name1"))))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-xmldoc")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/book
+  :name "name1"
+  :image "image1"
+  :titles "titles1"
+  :reference "reference1"
+  :chaptermap
+   (base/chaptermap
+    :chapter1
+     (base/chapter
+      :name "chapter1")))
+ (book<-xmldoc
+  (xml/xml
+   :tag "doc"
+   :propmap
+    (stringmap
+     :name "name1"
+     :image "image1")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles1")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference1")))
+     (xml/xml
+      :tag "chapter"
+      :propmap
+       (stringmap
+        :name "chapter1"))))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1"
+ :image "image1"
+ :reference "reference1"
+ :titles "titles1"
+ :chaptermap
+  (chaptermap
+   :chapter1
+    (chapter
+     :name "chapter1")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1"
+ :image "image1"
+ :reference "reference1"
+ :titles "titles1"
+ :chaptermap
+  (chaptermap
+   :chapter1
+    (chapter
+     :name "chapter1")))")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "book<-xmllist")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/book
+  :name "name1")
+ (book<-xmllist
+  (xml/xmllist
+   (xml/xml
+    :tag "?xml")
+   (xml/xml
+    :tag "doc"
+    :propmap
+     (stringmap
+      :name "name1")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(book
+ :name "name1")")))))
                          (tr
                           :nodes
                            (tdlist
@@ -40484,6 +41619,338 @@ ab
    :section1
     (section
      :name "section1")))")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "power<-power-stringmap")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/power
+  :name "name"
+  :image "image")
+ (power<-power-stringmap
+  (empty base/power)
+  (stringmap
+   :name "name"
+   :image "image")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(power
+ :name "name"
+ :image "image")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(power
+ :name "name"
+ :image "image")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "power<-power-xmlchild")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/power
+  :titles "titles")
+ (power<-power-xmlchild
+  (empty base/power)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(power
+ :titles "titles")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(power
+ :titles "titles")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "power<-xml")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/power
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference"
+  :abilitymap
+   (base/abilitymap
+    :ability1
+     (base/ability
+      :name "ability1"))
+  :specialtymap
+   (base/specialtymap
+    :specialty1
+     (base/specialty
+      :name "specialty1")))
+ (power<-xml
+  (xml/xml
+   :tag "power"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))
+     (xml/xml
+      :tag "ability"
+      :propmap
+       (stringmap
+        :name "ability1"))
+     (xml/xml
+      :tag "specialty"
+      :propmap
+       (stringmap
+        :name "specialty1"))))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(power
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles"
+ :abilitymap
+  (abilitymap
+   :ability1
+    (ability
+     :name "ability1"))
+ :specialtymap
+  (specialtymap
+   :specialty1
+    (specialty
+     :name "specialty1")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(power
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles"
+ :abilitymap
+  (abilitymap
+   :ability1
+    (ability
+     :name "ability1"))
+ :specialtymap
+  (specialtymap
+   :specialty1
+    (specialty
+     :name "specialty1")))")))))
                          (tr
                           :nodes
                            (tdlist
@@ -40829,11 +42296,26 @@ ab
   :image "image"
   :titles "titles"
   :reference "reference"
+  :powermap
+   (base/powermap
+    :power1
+     (base/power
+      :name "power1"))
+  :scenariomap
+   (base/scenariomap
+    :scenario1
+     (base/scenario
+      :name "scenario1"))
   :sectionmap
    (base/sectionmap
     :section1
      (base/section
-      :name "section1")))
+      :name "section1"))
+  :skillmap
+   (base/skillmap
+    :skill1
+     (base/skill
+      :name "skill1")))
  (section<-xml
   (xml/xml
    :tag "section"
@@ -40856,10 +42338,25 @@ ab
         (xml/xml
          :text "reference")))
      (xml/xml
+      :tag "power"
+      :propmap
+       (stringmap
+        :name "power1"))
+     (xml/xml
+      :tag "scenario"
+      :propmap
+       (stringmap
+        :name "scenario1"))
+     (xml/xml
       :tag "section"
       :propmap
        (stringmap
-        :name "section1"))))))")))
+        :name "section1"))
+     (xml/xml
+      :tag "skill"
+      :propmap
+       (stringmap
+        :name "skill1"))))))")))
                             (td
                              :nodes
                               (divchildlist
@@ -40879,11 +42376,26 @@ ab
  :image "image"
  :reference "reference"
  :titles "titles"
+ :powermap
+  (powermap
+   :power1
+    (power
+     :name "power1"))
+ :scenariomap
+  (scenariomap
+   :scenario1
+    (scenario
+     :name "scenario1"))
  :sectionmap
   (sectionmap
    :section1
     (section
-     :name "section1")))")))
+     :name "section1"))
+ :skillmap
+  (skillmap
+   :skill1
+    (skill
+     :name "skill1")))")))
                             (td
                              :nodes
                               (divchildlist
@@ -40903,11 +42415,560 @@ ab
  :image "image"
  :reference "reference"
  :titles "titles"
+ :powermap
+  (powermap
+   :power1
+    (power
+     :name "power1"))
+ :scenariomap
+  (scenariomap
+   :scenario1
+    (scenario
+     :name "scenario1"))
  :sectionmap
   (sectionmap
    :section1
     (section
-     :name "section1")))")))))
+     :name "section1"))
+ :skillmap
+  (skillmap
+   :skill1
+    (skill
+     :name "skill1")))")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "skill<-skill-xmlchild")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/skill
+  :titles "titles")
+ (skill<-skill-xmlchild
+  (empty base/skill)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(skill
+ :titles "titles")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(skill
+ :titles "titles")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "skill<-xml")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/skill
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference"
+  :abilitymap
+   (base/abilitymap
+    :ability1
+     (base/ability
+      :name "ability1"))
+  :specialtymap
+   (base/specialtymap
+    :specialty1
+     (base/specialty
+      :name "specialty1")))
+ (skill<-xml
+  (xml/xml
+   :tag "skill"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))
+     (xml/xml
+      :tag "ability"
+      :propmap
+       (stringmap
+        :name "ability1"))
+     (xml/xml
+      :tag "specialty"
+      :propmap
+       (stringmap
+        :name "specialty1"))))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(skill
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles"
+ :abilitymap
+  (abilitymap
+   :ability1
+    (ability
+     :name "ability1"))
+ :specialtymap
+  (specialtymap
+   :specialty1
+    (specialty
+     :name "specialty1")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(skill
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles"
+ :abilitymap
+  (abilitymap
+   :ability1
+    (ability
+     :name "ability1"))
+ :specialtymap
+  (specialtymap
+   :specialty1
+    (specialty
+     :name "specialty1")))")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "specialty<-specialty-stringmap")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/specialty
+  :name "name"
+  :image "image")
+ (specialty<-specialty-stringmap
+  (empty base/specialty)
+  (stringmap
+   :name "name"
+   :image "image")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(specialty
+ :name "name"
+ :image "image")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(specialty
+ :name "name"
+ :image "image")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "specialty<-specialty-xmlchild")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/specialty
+  :titles "titles")
+ (specialty<-specialty-xmlchild
+  (empty base/specialty)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(specialty
+ :titles "titles")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(specialty
+ :titles "titles")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "specialty<-xml")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/specialty
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (specialty<-xml
+  (xml/xml
+   :tag "specialty"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(specialty
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(specialty
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles")")))))
                          (tr
                           :nodes
                            (tdlist

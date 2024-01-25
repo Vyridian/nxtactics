@@ -3,171 +3,104 @@
        (lib fil  :path vx/data/file)
        (lib typ  :path vx/type)
        (lib xml  :path vx/data/xml)
- :doc "")
+ :doc "Book loading tools")
 
-(func book-read<-bookname : base/book
- [bookname : string]
- (let : base/book
-  [xml : xml/xml := (xml-read<-bookname
-                     bookname)]
-  (book<-xmltop
-   xml))
- :context
- :doc "Returns a book by loading the given Xml filename.")
-
-(func book<-book-key-value : base/book
- [current : base/book
+(func ability<-ability-key-value : base/ability
+ [current : base/ability
   key     : string
   value   : string]
- (switch : base/book
+ (switch : base/ability
   key
-  (case "name"
-   (copy current
-    :name value))
-  (case "image"
-   (copy current
-    :image value))
   (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
   (else
    (copy current
     (msg<-error
      :invalidproperty
      (anymap
-      :type  base/book
+      :type  base/ability
       :prop  key
       :value value)))))
- :doc "Returns a modified book from a key value.")
+ :doc "Returns a modified ability from a key value.")
 
-(func book<-book-stringmap : base/book
- [book    : base/book
+(func ability<-ability-stringmap : base/ability
+ [ability : base/ability
   propmap : stringmap]
- (any<-map-start-reduce : base/book
+ (any<-map-start-reduce : base/ability
   propmap
-  book
-  book<-book-key-value)
+  ability
+  ability<-ability-key-value)
  :test (test
-        (base/book
-         :name "bookname"
-         :image "bookimage")
-        (book<-book-stringmap
-         (empty base/book)
+        (base/ability
+         :name "name"
+         :image "image")
+        (ability<-ability-stringmap
+         (empty base/ability)
          (stringmap
-          :name "bookname"
-          :image "bookimage")))
- :doc "Returns a new book from a propmap.")
+          :name "name"
+          :image "image")))
+ :doc "Returns a new ability from a propmap.")
 
-(func book<-book-xml : base/book
- [current : base/book
-  child   : xml/xml]
- (switch : base/book
-  (:tag child)
-  (case "xmlcomment" current)
-  (case "?xml" current)
-  (case "" current)
-  (case "doc"
-   (if : base/book
-    (then
-     (!-empty current)
-     (copy current
-      (msg<-error
-       :duplicatetagfound
-       (anymap
-        :type base/book
-        :tag "doc"))))
-    (else
-     (book<-book-xmlchild
-      current
-      child))))
-  (else
-   (copy current
-    (msg<-error
-     :invalidtagfound
-     (anymap
-      :type base/book
-      :tag (:tag child))))))
- :doc "Returns an altered book based on xml child.")
-
-(func book<-book-xmlchapter : base/book
- [book : base/book
-  xml  : xml/xml]
- (let : base/book
-  [chapter    : base/chapter    := (chapter<-xml
-                                    xml)
-   name       : string          := (:name chapter)
-   chaptermap : base/chaptermap := (:chaptermap book)
-   chgmap     : base/chaptermap := (copy chaptermap
-                                    name chapter)]
-  (copy book
-   :chaptermap chgmap))
- :doc "Returns an altered book based on xmlchapter.")
-
-(func book<-book-xmlchild : base/book
- [bk    : base/book
+(func ability<-ability-xmlchild : base/ability
+ [abl   : base/ability
   child : xml/xml]
- (switch : base/book
+ (switch : base/ability
   (:tag child)
-  (case "reference"
-   (copy bk
-    :reference (xml/string-first<-xml
-                child)))
-  (case "summary"
-   (copy bk
-    :summary (xml/string-first<-xml
-              child)))
-  (case "titles"
-   (copy bk
-    :titles (xml/string-first<-xml
-              child)))
-  (case "" bk)
-  (case "chapter"
-   (book<-book-xmlchapter
-    bk
-    child))
+  (case "" abl)
+  (case
+   (list
+    "reference"
+    "summary"
+    "titles")
+   (copy abl
+    (:tag child)
+    (xml/string-first<-xml
+     child)))
   (else
-   (copy bk
+   (copy abl
     (msg<-error
      :invalidtagfound
      (anymap
-      :type base/book
+      :type base/ability
       :tag (:tag child))))))
  :test (test
-        (base/book
+        (base/ability
          :titles "titles")
-        (book<-book-xmlchild
-         (empty base/book)
+        (ability<-ability-xmlchild
+         (empty base/ability)
          (xml/xml
           :tag "titles"
           :children
            (xml/xmllist
             (xml/xml
              :text "titles")))))
- :doc "Returns a modified book based on a given child Xml.")
+ :doc "Returns a modified ability based on a given child xml.")
 
-(func book<-xml : base/book
+(func ability<-xml : base/ability
  [xml : xml/xml]
- (let : base/book
-  [propmap : stringmap := (:propmap xml)
-   booknew : base/book := (book<-book-stringmap
-                           (empty base/book)
-                           propmap)]
-  (any<-list-start-reduce : base/book
+ (let : base/ability
+  [propmap  : stringmap    := (:propmap xml)
+   ability  : base/ability := (ability<-ability-stringmap
+                               (empty base/ability)
+                               propmap)]
+  (any<-list-start-reduce : base/ability
    (:children xml)
-   booknew
-   book<-book-xmlchild))
+   ability
+   ability<-ability-xmlchild))
  :test (test
-        (base/book
+        (base/ability
          :name "name"
          :image "image"
          :titles "titles"
-         :reference "reference"
-         :chaptermap
-          (base/chaptermap
-           :chapter1
-            (base/chapter
-             :name "chapter1")))
-        (book<-xml
+         :reference "reference")
+        (ability<-xml
          (xml/xml
-          :tag "book"
+          :tag "ability"
           :propmap
            (stringmap
             :name "name"
@@ -185,13 +118,281 @@
              :children
               (xml/xmllist
                (xml/xml
-                :text "reference")))
+                :text "reference")))))))
+ :doc "Returns a ability from a given xml.")
+
+(func book<-book-key-value : base/book
+ [current : base/book
+  key     : string
+  value   : string]
+ (switch : base/book
+  key
+  (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
+  (else
+   (copy current
+    (msg<-error
+     :invalidproperty
+     (anymap
+      :type  base/book
+      :prop  key
+      :value value)))))
+ :test (test
+        (base/book
+         :name "nm")
+        (book<-book-key-value
+         (empty base/book)
+         "name"
+         "nm"))
+       (test
+        (base/book
+         :name "image")
+        (book<-book-key-value
+         (empty base/book)
+         "name"
+         "image"))
+ :doc "Returns a modified book from a key value.")
+
+(func book<-book-stringmap : base/book
+ [book    : base/book
+  propmap : stringmap]
+ (any<-map-start-reduce : base/book
+  propmap
+  book
+  book<-book-key-value)
+ :test (test
+        (base/book
+         :name "name"
+         :image "image")
+        (book<-book-stringmap
+         (empty base/book)
+         (stringmap
+          :name "name"
+          :image "image")))
+ :doc "Returns a new book from a propmap.")
+
+(func book<-book-xml : base/book
+ [current : base/book
+  child   : xml/xml]
+ (let : base/book
+  [tag : string := (:tag child)]
+  (switch : base/book
+   tag
+   (case "" current)
+   (case "!--" current)
+   (case "?xml" current)
+   (case "doc"
+    (if : base/book
+     (then
+      (is-empty current)
+      (book<-xmldoc
+       child))
+     (else
+      (copy current
+       (msg<-error
+        :duplicatetagfound
+        (anymap
+         :type base/book
+         :tag tag))))))
+   (else
+    (copy current
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/book
+       :tag tag))))))
+ :test (test
+        (base/book
+         :name "name1")
+        (book<-book-xml
+         (empty base/book)
+         (xml/xml
+          :tag "doc"
+          :propmap
+           (stringmap
+            :name "name1"))))
+       (test
+        (empty base/book)
+        (book<-book-xml
+         (empty base/book)
+         (xml/xml
+          :tag "?xml")))
+       (test
+        (base/book
+         :name "name1"
+         (msgblock
+          (msg
+           :code ":duplicatetagfound"
+           :detail
+            (anymap
+             :type nx/tactics/base/book
+             :tag "doc")
+             :severity 2)))
+        (book<-book-xml
+         (base/book
+          :name "name1")
+         (xml/xml
+          :tag "doc")))
+ :doc "Returns an altered book based on xml child.")
+
+(func book<-book-xmlchapter : base/book
+ [book : base/book
+  xml  : xml/xml]
+ (let : base/book
+  [chapter : base/chapter    := (chapter<-xml
+                                 xml)
+   name    : string          := (:name chapter)
+   origmap : base/chaptermap := (:chaptermap book)
+   chgmap  : base/chaptermap := (copy origmap
+                                 name chapter)]
+  (copy book
+   :chaptermap chgmap))
+ :test (test
+        (base/book
+         :chaptermap
+          (base/chaptermap
+           :chapter1
+            (base/chapter
+             :name "chapter1")))
+        (book<-book-xmlchapter
+         (empty base/book)
+         (xml/xml
+          :tag "chapter"
+          :propmap
+           (stringmap
+            :name "chapter1"))))
+ :doc "Returns an altered book based on xmlchapter.")
+
+(func book<-book-xmlchild : base/book
+ [book  : base/book
+  child : xml/xml]
+ (let : base/book
+  [tag : string := (:tag child)]
+  (switch : base/book
+   tag
+   (case "" book)
+   (case
+    (list
+     "reference"
+     "summary"
+     "titles")
+    (copy book
+     tag
+     (xml/string-first<-xml
+      child)))
+   (case "chapter"
+    (book<-book-xmlchapter
+     book
+     child))
+   (else
+    (copy book
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/book
+       :tag tag))))))
+ :test (test
+        (base/book
+         :titles "titles")
+        (book<-book-xmlchild
+         (empty base/book)
+         (xml/xml
+          :tag "titles"
+          :children
+           (xml/xmllist
+            (xml/xml
+             :text "titles")))))
+       (test
+        (base/book
+         :chaptermap
+          (base/chaptermap
+           :chapter1
+            (base/chapter
+             :name "chapter1")))
+        (book<-book-xmlchild
+         (empty base/book)
+         (xml/xml
+          :tag "chapter"
+          :propmap
+           (stringmap
+            :name "chapter1"))))
+ :doc "Returns a modified book based on a given child xml.")
+
+(func book<-xml : base/book
+ [xml : xml/xml]
+ (book<-xmllist
+  (:children xml))
+ :test (test
+        (base/book
+         :name "name1")
+        (book<-xml
+         (xml/xml
+          :children
+           (xml/xmllist
+            (xml/xml
+             :tag "?xml")
+            (xml/xml
+             :tag "doc"
+             :propmap
+              (stringmap
+               :name "name1"))))))
+ :doc "Returns a book from a given top level xml.")
+
+(func book<-xmldoc : base/book
+ [xml : xml/xml]
+ (let : base/book
+  [propmap  : stringmap := (:propmap xml)
+   children : xmllist   := (:children xml)
+   book     : base/book := (book<-book-stringmap
+                            (empty base/book)
+                            propmap)]
+  (any<-list-start-reduce : base/book
+   children
+   book
+   book<-book-xmlchild))
+ :test (test
+        (base/book
+         :name "name1"
+         :image "image1"
+         :titles "titles1"
+         :reference "reference1"
+         :chaptermap
+          (base/chaptermap
+           :chapter1
+            (base/chapter
+             :name "chapter1")))
+        (book<-xmldoc
+         (xml/xml
+          :tag "doc"
+          :propmap
+           (stringmap
+            :name "name1"
+            :image "image1")
+          :children
+           (xml/xmllist
+            (xml/xml
+             :tag "titles"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "titles1")))
+            (xml/xml
+             :tag "reference"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "reference1")))
             (xml/xml
              :tag "chapter"
              :propmap
               (stringmap
                :name "chapter1"))))))
- :doc "Returns a book from a given Xml.")
+ :doc "Returns a book from a given xml.")
 
 (func book<-xmllist : base/book
  [xmllist : xml/xmllist]
@@ -199,13 +400,19 @@
   xmllist
   (empty base/book)
   book<-book-xml)
- :doc "Returns a book from a given Xml.")
-
-(func book<-xmltop : base/book
- [xmltop : xml/xml]
- (book<-xmllist
-  (:children xmltop))
- :doc "Returns a book from a given top level Xml.")
+ :test (test
+        (base/book
+         :name "name1")
+        (book<-xmllist
+         (xml/xmllist
+          (xml/xml
+           :tag "?xml")
+          (xml/xml
+           :tag "doc"
+           :propmap
+            (stringmap
+             :name "name1")))))
+ :doc "Returns a book from a given xml.")
 
 (func boolean-write<-book : boolean
  [book : base/book]
@@ -219,6 +426,16 @@
    text))
  :context
  :doc "Returns boolean after writing book as a file.")
+
+(func book-read<-bookname : base/book
+ [bookname : string]
+ (let : base/book
+  [xml : xml/xml := (xml-read<-bookname
+                     bookname)]
+  (book<-xml
+   xml))
+ :context
+ :doc "Returns a book by loading the given Xml filename.")
 
 (func boolean-write<-booknames : boolean
  [booknames : stringlist]
@@ -242,13 +459,13 @@
   value   : string]
  (switch : base/chapter
   key
-  (case "name"
-   (copy current
-    :name value))
-  (case "image"
-   (copy current
-    :image value))
   (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
   (else
    (copy current
     (msg<-error
@@ -282,23 +499,20 @@
   child   : xml/xml]
  (switch : base/chapter
   (:tag child)
-  (case "reference"
+  (case "" chapter)
+  (case
+   (list
+    "reference"
+    "summary"
+    "titles")
    (copy chapter
-    :reference (xml/string-first<-xml
-                child)))
-  (case "summary"
-   (copy chapter
-    :summary (xml/string-first<-xml
-              child)))
-  (case "titles"
-   (copy chapter
-    :titles (xml/string-first<-xml
-              child)))
+    (:tag child)
+    (xml/string-first<-xml
+     child)))
   (case "section"
    (chapter<-chapter-xmlsection
     chapter
     child))
-  (case "" chapter)
   (else
    (copy chapter
     (msg<-error
@@ -407,19 +621,196 @@
 
 (func modifier<-xml : base/modifier)
 
+(func power<-power-key-value : base/power
+ [current : base/power
+  key     : string
+  value   : string]
+ (switch : base/power
+  key
+  (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
+  (else
+   (copy current
+    (msg<-error
+     :invalidproperty
+     (anymap
+      :type  base/power
+      :prop  key
+      :value value)))))
+ :doc "Returns a modified power from a key value.")
+
+(func power<-power-stringmap : base/power
+ [power   : base/power
+  propmap : stringmap]
+ (any<-map-start-reduce : base/power
+  propmap
+  power
+  power<-power-key-value)
+ :test (test
+        (base/power
+         :name "name"
+         :image "image")
+        (power<-power-stringmap
+         (empty base/power)
+         (stringmap
+          :name "name"
+          :image "image")))
+ :doc "Returns a new power from a propmap.")
+
+(func power<-power-xmlchild : base/power
+ [power : base/power
+  child : xml/xml]
+ (let : base/power
+  [tag : string := (:tag child)]
+  (switch : base/power
+   tag
+   (case "" power)
+   (case
+    (list
+     "reference"
+     "summary"
+     "titles")
+    (copy power
+     tag
+     (xml/string-first<-xml
+      child)))
+   (case "ability"
+    (power<-power-xmlability
+     power
+     child))
+   (case "specialty"
+    (power<-power-xmlspecialty
+     power
+     child))
+   (else
+    (copy power
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/power
+       :tag tag))))))
+ :test (test
+        (base/power
+         :titles "titles")
+        (power<-power-xmlchild
+         (empty base/power)
+         (xml/xml
+          :tag "titles"
+          :children
+           (xml/xmllist
+            (xml/xml
+             :text "titles")))))
+ :doc "Returns a modified power based on a given child xml.")
+
+(func power<-xml : base/power
+ [xml : xml/xml]
+ (let : base/power
+  [propmap  : stringmap  := (:propmap xml)
+   children : xmllist    := (:children xml)
+   power    : base/power := (power<-power-stringmap
+                             (empty base/power)
+                             propmap)]
+  (any<-list-start-reduce : base/power
+   children
+   power
+   power<-power-xmlchild))
+ :test (test
+        (base/power
+         :name "name"
+         :image "image"
+         :titles "titles"
+         :reference "reference"
+         :abilitymap
+          (base/abilitymap
+           :ability1
+            (base/ability
+             :name "ability1"))
+         :specialtymap
+          (base/specialtymap
+           :specialty1
+            (base/specialty
+             :name "specialty1")))
+        (power<-xml
+         (xml/xml
+          :tag "power"
+          :propmap
+           (stringmap
+            :name "name"
+            :image "image")
+          :children
+           (xml/xmllist
+            (xml/xml
+             :tag "titles"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "titles")))
+            (xml/xml
+             :tag "reference"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "reference")))
+            (xml/xml
+             :tag "ability"
+             :propmap
+              (stringmap
+               :name "ability1"))
+            (xml/xml
+             :tag "specialty"
+             :propmap
+              (stringmap
+               :name "specialty1"))))))
+ :doc "Returns a power from a given Xml.")
+
+(func power<-power-xmlability : base/power
+ [power      : base/power
+  xmlability : xml/xml]
+ (let : base/power
+  [ability : base/ability    := (ability<-xml
+                                 xmlability)
+   name    : string          := (:name ability)
+   origmap : base/abilitymap := (:abilitymap power)
+   chgmap  : base/abilitymap := (copy origmap
+                                 name
+                                 ability)]
+  (copy power
+   :abilitymap chgmap))
+ :doc "Return a power with new ability added to abilitymap")
+
+(func power<-power-xmlspecialty : base/power
+ [power        : base/power
+  xmlspecialty : xml/xml]
+ (let : base/power
+  [specialty : base/specialty    := (specialty<-xml
+                                     xmlspecialty)
+   name      : string            := (:name specialty)
+   origmap   : base/specialtymap := (:specialtymap power)
+   chgmap    : base/specialtymap := (copy origmap
+                                     name
+                                     specialty)]
+  (copy power
+   :specialtymap chgmap))
+ :doc "Return a power with new specialty added to specialtymap")
+
 (func rule<-rule-key-value : base/rule
  [current : base/rule
   key     : string
   value   : string]
  (switch : base/rule
   key
-  (case "name"
-   (copy current
-    :name value))
-  (case "image"
-   (copy current
-    :image value))
   (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
   (else
    (copy current
     (msg<-error
@@ -453,19 +844,16 @@
   child : xml/xml]
  (switch : base/rule
   (:tag child)
-  (case "reference"
-   (copy rule
-    :reference (xml/string-first<-xml
-                child)))
-  (case "summary"
-   (copy rule
-    :summary (xml/string-first<-xml
-              child)))
-  (case "titles"
-   (copy rule
-    :titles (xml/string-first<-xml
-              child)))
   (case "" rule)
+  (case
+   (list
+    "reference"
+    "summary"
+    "titles")
+   (copy rule
+    (:tag child)
+    (xml/string-first<-xml
+     child)))
   (else
    (copy rule
     (msg<-error
@@ -497,7 +885,7 @@
    (:children xml)
    rul
    rule<-rule-xmlchild))
- :doc "Returns a rule from a given Xml.")
+ :doc "Returns a rule from a given xml.")
 
 (func scenario<-scenario-key-value : base/scenario
  [current : base/scenario
@@ -505,13 +893,13 @@
   value   : string]
  (switch : base/scenario
   key
-  (case "name"
-   (copy current
-    :name value))
-  (case "image"
-   (copy current
-    :image value))
   (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
   (else
    (copy current
     (msg<-error
@@ -536,19 +924,16 @@
   child    : xml/xml]
  (switch : base/scenario
   (:tag child)
-  (case "reference"
-   (copy scenario
-    :reference (xml/string-first<-xml
-                child)))
-  (case "summary"
-   (copy scenario
-    :summary (xml/string-first<-xml
-              child)))
-  (case "titles"
-   (copy scenario
-    :titles (xml/string-first<-xml
-              child)))
   (case "" scenario)
+  (case
+   (list
+    "reference"
+    "summary"
+    "titles")
+   (copy scenario
+    (:tag child)
+    (xml/string-first<-xml
+     child)))
   (else
    (copy scenario
     (msg<-error
@@ -604,13 +989,13 @@
   value   : string]
  (switch : base/section
   key
-  (case "name"
-   (copy current
-    :name value))
-  (case "image"
-   (copy current
-    :image value))
   (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
   (else
    (copy current
     (msg<-error
@@ -633,41 +1018,67 @@
 (func section<-section-xmlchild : base/section
  [section : base/section
   child   : xml/xml]
- (switch : base/section
-  (:tag child)
-  (case "reference"
-   (copy section
-    :reference (xml/string-first<-xml
-                child)))
-  (case "summary"
-   (copy section
-    :summary (xml/string-first<-xml
-              child)))
-  (case "titles"
-   (copy section
-    :titles (xml/string-first<-xml
-              child)))
-  (case "rule"
-   (section<-section-xmlrule
-    section
-    child))
-  (case "section"
-   (section<-section-xmlsection
-    section
-    child))
-  (case "unit"
-   (section<-section-xmlunit
-    section
-    child))
-  (case "" section)
-  (else
-   (copy section
-    (msg<-error
-     :invalidtagfound
-     (anymap
-      :type base/chapter
-      :tag (:tag child))))))
+ (let : base/section
+  [tag : string := (:tag child)]
+  (switch : base/section
+   tag
+   (case "" section)
+   (case
+    (list
+     "reference"
+     "summary"
+     "titles")
+    (copy section
+     tag
+     (xml/string-first<-xml
+      child)))
+   (case "power"
+    (section<-section-xmlpower
+     section
+     child))
+   (case "rule"
+    (section<-section-xmlrule
+     section
+     child))
+   (case "scenario"
+    (section<-section-xmlscenario
+     section
+     child))
+   (case "section"
+    (section<-section-xmlsection
+     section
+     child))
+   (case "skill"
+    (section<-section-xmlskill
+     section
+     child))
+   (case "unit"
+    (section<-section-xmlunit
+     section
+     child))
+   (else
+    (copy section
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/section
+       :tag tag))))))
  :doc "Returns a modified section based on a given child Xml.")
+
+(func section<-section-xmlpower : base/section
+ [section  : base/section
+  xmlpower : xml/xml]
+ (let : base/section
+  [power   : base/power    := (power<-xml
+                               xmlpower)
+   name    : string        := (:name power)
+   origmap : base/powermap := (:powermap section)
+   chgmap  : base/powermap := (copy origmap
+                               name
+                               power)]
+  (copy section
+   :powermap chgmap))
+ :doc "Return a section with new power added to powermap")
 
 (func section<-section-xmlrule : base/section
  [section    : base/section
@@ -714,6 +1125,21 @@
    :sectionmap chgmap))
  :doc "Return a section with new section added to sectionmap")
 
+(func section<-section-xmlskill : base/section
+ [section  : base/section
+  xmlskill : xml/xml]
+ (let : base/section
+  [skill   : base/skill    := (skill<-xml
+                               xmlskill)
+   name    : string        := (:name skill)
+   origmap : base/skillmap := (:skillmap section)
+   chgmap  : base/skillmap := (copy origmap
+                               name
+                               skill)]
+  (copy section
+   :skillmap chgmap))
+ :doc "Return a section with new skill added to skillmap")
+
 (func section<-section-xmlunit : base/section
  [section : base/section
   xmlunit : xml/xml]
@@ -732,13 +1158,14 @@
 (func section<-xml : base/section
  [xml : xml/xml]
  (let : base/section
-  [propmap : stringmap    := (:propmap xml)
-   sect    : base/section := (section<-section-stringmap
-                              (empty base/section)
-                              propmap)]
+  [propmap  : stringmap    := (:propmap  xml)
+   children : xml/xmllist  := (:children xml)
+   section  : base/section := (section<-section-stringmap
+                               (empty base/section)
+                               propmap)]
   (any<-list-start-reduce : base/section
-   (:children xml)
-   sect
+   children
+   section
    section<-section-xmlchild))
  :test (test
         (base/section
@@ -746,11 +1173,26 @@
          :image "image"
          :titles "titles"
          :reference "reference"
+         :powermap
+          (base/powermap
+           :power1
+            (base/power
+             :name "power1"))
+         :scenariomap
+          (base/scenariomap
+           :scenario1
+            (base/scenario
+             :name "scenario1"))
          :sectionmap
           (base/sectionmap
            :section1
             (base/section
-             :name "section1")))
+             :name "section1"))
+         :skillmap
+          (base/skillmap
+           :skill1
+            (base/skill
+             :name "skill1")))
         (section<-xml
          (xml/xml
           :tag "section"
@@ -773,11 +1215,309 @@
                (xml/xml
                 :text "reference")))
             (xml/xml
+             :tag "power"
+             :propmap
+              (stringmap
+               :name "power1"))
+            (xml/xml
+             :tag "scenario"
+             :propmap
+              (stringmap
+               :name "scenario1"))
+            (xml/xml
              :tag "section"
              :propmap
               (stringmap
-               :name "section1"))))))
+               :name "section1"))
+            (xml/xml
+             :tag "skill"
+             :propmap
+              (stringmap
+               :name "skill1"))))))
  :doc "Returns a section from a given Xml.")
+
+(func skill<-skill-key-value : base/skill
+ [current : base/skill
+  key     : string
+  value   : string]
+ (switch : base/skill
+  key
+  (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
+  (else
+   (copy current
+    (msg<-error
+     :invalidproperty
+     (anymap
+      :type  base/skill
+      :prop  key
+      :value value)))))
+ :doc "Returns a modified skill from a key value.")
+
+(func skill<-skill-stringmap : base/skill
+ [skill : base/skill
+  propmap : stringmap]
+ (any<-map-start-reduce : base/skill
+  propmap
+  skill
+  skill<-skill-key-value)
+ :doc "Returns a new skill from a propmap.")
+
+(func skill<-skill-xmlchild : base/skill
+ [skill : base/skill
+  child : xml/xml]
+ (let : base/skill
+  [tag : string := (:tag child)]
+  (switch : base/skill
+   tag
+   (case "" skill)
+   (case
+    (list
+     "reference"
+     "summary"
+     "titles")
+    (copy skill
+     tag
+     (xml/string-first<-xml
+     child)))
+   (case "ability"
+    (skill<-skill-xmlability
+     skill
+     child))
+   (case "specialty"
+    (skill<-skill-xmlspecialty
+     skill
+     child))
+   (else
+    (copy skill
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/skill
+       :tag tag))))))
+ :test (test
+        (base/skill
+         :titles "titles")
+        (skill<-skill-xmlchild
+         (empty base/skill)
+         (xml/xml
+          :tag "titles"
+          :children
+           (xml/xmllist
+            (xml/xml
+             :text "titles")))))
+ :doc "Returns a modified skill based on a given child Xml.")
+
+(func skill<-skill-xmlability : base/skill
+ [skill      : base/skill
+  xmlability : xml/xml]
+ (let : base/skill
+  [ability : base/ability    := (ability<-xml
+                                 xmlability)
+   name    : string          := (:name ability)
+   origmap : base/abilitymap := (:abilitymap skill)
+   chgmap  : base/abilitymap := (copy origmap
+                                 name
+                                 ability)]
+  (copy skill
+   :abilitymap chgmap))
+ :doc "Return a skill with new ability added to abilitymap")
+
+(func skill<-skill-xmlspecialty : base/skill
+ [skill        : base/skill
+  xmlspecialty : xml/xml]
+ (let : base/skill
+  [specialty : base/specialty    := (specialty<-xml
+                                     xmlspecialty)
+   name      : string            := (:name specialty)
+   origmap   : base/specialtymap := (:specialtymap skill)
+   chgmap    : base/specialtymap := (copy origmap
+                                     name
+                                     specialty)]
+  (copy skill
+   :specialtymap chgmap))
+ :doc "Return a skill with new specialty added to specialtymap")
+
+(func skill<-xml : base/skill
+ [xml : xml/xml]
+ (let : base/skill
+  [propmap : stringmap  := (:propmap xml)
+   skl     : base/skill := (skill<-skill-stringmap
+                            (empty base/skill)
+                            propmap)]
+  (any<-list-start-reduce : base/skill
+   (:children xml)
+   skl
+   skill<-skill-xmlchild))
+ :test (test
+        (base/skill
+         :name "name"
+         :image "image"
+         :titles "titles"
+         :reference "reference"
+         :abilitymap
+          (base/abilitymap
+           :ability1
+            (base/ability
+             :name "ability1"))
+         :specialtymap
+          (base/specialtymap
+           :specialty1
+            (base/specialty
+             :name "specialty1")))
+        (skill<-xml
+         (xml/xml
+          :tag "skill"
+          :propmap
+           (stringmap
+            :name "name"
+            :image "image")
+          :children
+           (xml/xmllist
+            (xml/xml
+             :tag "titles"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "titles")))
+            (xml/xml
+             :tag "reference"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "reference")))
+            (xml/xml
+             :tag "ability"
+             :propmap
+              (stringmap
+               :name "ability1"))
+            (xml/xml
+             :tag "specialty"
+             :propmap
+              (stringmap
+               :name "specialty1"))))))
+ :doc "Returns a skill from a given xml.")
+
+(func specialty<-specialty-key-value : base/specialty
+ [current : base/specialty
+  key     : string
+  value   : string]
+ (switch : base/specialty
+  key
+  (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
+  (else
+   (copy current
+    (msg<-error
+     :invalidproperty
+     (anymap
+      :type  base/specialty
+      :prop  key
+      :value value)))))
+ :doc "Returns a modified specialty from a key value.")
+
+(func specialty<-specialty-stringmap : base/specialty
+ [specialty : base/specialty
+  propmap   : stringmap]
+ (any<-map-start-reduce : base/specialty
+  propmap
+  specialty
+  specialty<-specialty-key-value)
+ :test (test
+        (base/specialty
+         :name "name"
+         :image "image")
+        (specialty<-specialty-stringmap
+         (empty base/specialty)
+         (stringmap
+          :name "name"
+          :image "image")))
+ :doc "Returns a new specialty from a propmap.")
+
+(func specialty<-specialty-xmlchild : base/specialty
+ [specialty : base/specialty
+  child     : xml/xml]
+ (switch : base/specialty
+  (:tag child)
+  (case "" specialty)
+  (case
+   (list
+    "reference"
+    "summary"
+    "titles")
+   (copy specialty
+    (:tag child)
+    (xml/string-first<-xml
+     child)))
+  (else
+   (copy specialty
+    (msg<-error
+     :invalidtagfound
+     (anymap
+      :type base/specialty
+      :tag (:tag child))))))
+ :test (test
+        (base/specialty
+         :titles "titles")
+        (specialty<-specialty-xmlchild
+         (empty base/specialty)
+         (xml/xml
+          :tag "titles"
+          :children
+           (xml/xmllist
+            (xml/xml
+             :text "titles")))))
+ :doc "Returns a modified specialty based on a given child xml.")
+
+(func specialty<-xml : base/specialty
+ [xml : xml/xml]
+ (let : base/specialty
+  [propmap : stringmap      := (:propmap xml)
+   spc     : base/specialty := (specialty<-specialty-stringmap
+                                (empty base/specialty)
+                                propmap)]
+  (any<-list-start-reduce : base/specialty
+   (:children xml)
+   spc
+   specialty<-specialty-xmlchild))
+ :test (test
+        (base/specialty
+         :name "name"
+         :image "image"
+         :titles "titles"
+         :reference "reference")
+        (specialty<-xml
+         (xml/xml
+          :tag "specialty"
+          :propmap
+           (stringmap
+            :name "name"
+            :image "image")
+          :children
+           (xml/xmllist
+            (xml/xml
+             :tag "titles"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "titles")))
+            (xml/xml
+             :tag "reference"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "reference")))))))
+ :doc "Returns a specialty from a given xml.")
 
 (func string-read<-bookname : string
  [bookname : string]
@@ -820,33 +1560,19 @@
  (switch : base/unit
   key
   (case "" current)
-  (case "name"
+  (case
+   (list
+    "name"
+    "image"
+    "body"
+    "height"
+    "length"
+    "mass"
+    "mind"
+    "width"
+    "will")
    (copy current
-    :name value))
-  (case "image"
-   (copy current
-    :image value))
-  (case "body"
-   (copy current
-    :body value))
-  (case "height"
-   (copy current
-    :height value))
-  (case "length"
-   (copy current
-    :length value))
-  (case "mass"
-   (copy current
-    :mass value))
-  (case "mind"
-   (copy current
-    :mind value))
-  (case "width"
-   (copy current
-    :width value))
-  (case "will"
-   (copy current
-    :mind value))
+    key value))
   (else
    (copy current
     (msg<-error
@@ -881,18 +1607,15 @@
  (switch : base/unit
   (:tag child)
   (case "" unit)
-  (case "reference"
+  (case
+   (list
+    "reference"
+    "summary"
+    "titles")
    (copy unit
-    :reference (xml/string-first<-xml
-                child)))
-  (case "summary"
-   (copy unit
-    :summary (xml/string-first<-xml
-              child)))
-  (case "titles"
-   (copy unit
-    :titles (xml/string-first<-xml
-              child)))
+    (:tag child)
+    (xml/string-first<-xml
+    child)))
   (case "power"
    (unit<-unit-xmlpower
     unit
@@ -1029,12 +1752,12 @@
  (switch : base/unitskill
   key
   (case "" current)
-  (case "name"
+  (case
+   (list
+    "name"
+    "image")
    (copy current
-    :name value))
-  (case "image"
-   (copy current
-    :image value))
+    key value))
   (else
    (copy current
     (msg<-error
@@ -1060,13 +1783,15 @@
  (switch : base/unitskill
   (:tag child)
   (case "" unitskill)
-  (case (stringlist
-         "reference"
-         "summary"
-         "titles")
+  (case
+   (list
+    "reference"
+    "summary"
+    "titles")
    (copy unitskill
-    (:tag child) (xml/string-first<-xml
-                  child)))
+    (:tag child)
+    (xml/string-first<-xml
+     child)))
   (else
    (copy unitskill
     (msg<-error

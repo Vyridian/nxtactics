@@ -6,6 +6,129 @@ import vx_type from "../vx/type.js"
 
 export default class vx_collection {
 
+  static vx_any_from_for_until_loop_max(generic_any_1, start, fn_until, fn_loop, max) {
+    let output = start
+    let iscontinue = true
+    let icount = 0
+    const fnuntil = fn_until['vx_value']
+    const fnloop = fn_loop['vx_value']
+    while (iscontinue) {
+      if (icount >= max) {
+        iscontinue = false
+      } else {
+        icount += 1
+        output = fnloop(output)
+        iscontinue = !fnuntil(output)
+      }
+    }
+    return output
+  }
+
+  static vx_any_from_for_while_loop_max(generic_any_1, start, fn_while, fn_loop, max) {
+    let output = start
+    let iscontinue = true
+    let icount = 0
+    const fnwhile = fn_while['vx_value']
+    const fnloop = fn_loop['vx_value']
+    while (iscontinue) {
+      if (icount >= max) {
+        iscontinue = false
+      } else {
+        icount += 1;
+        iscontinue = fnwhile(output)
+        if (iscontinue) {
+          output = fnloop(output)
+        }
+      }
+    }
+    return output
+  }
+
+  static vx_list_from_for_end_loop(generic_list_1, start, end, fn_loop) {
+    let output = vx_core.vx_empty(generic_list_1)
+    let listvals = []
+    const fnloop = fn_loop['vx_value']
+    if (start <= end) {
+      for (let i = start; i <= end; i++) {
+        let val = fnloop(i)
+        listvals.push(val)
+      }
+    } else {
+      for (let i = start; i >= end; i--) {
+        let val = fnloop(i)
+        listvals.push(val)
+      }
+    }
+    if (listvals.length > 0) {
+      output = vx_core.vx_new(generic_list_1, listvals)
+    }
+    return output
+  }
+
+  static vx_list_from_for_while_loop_max(generic_list_1, start, fn_while, fn_loop, max) {
+    let output = vx_core.vx_empty(generic_list_1)
+    let listvals = []
+    let iscontinue = true
+    let icount = 0
+    const fnwhile = fn_while['vx_value']
+    const fnloop = fn_loop['vx_value']
+    let work = start
+    while (iscontinue) {
+      if (icount >= max) {
+        iscontinue = false
+      } else {
+        iscontinue = !fnwhile(work)
+        if (iscontinue) {
+          icount += 1
+          work = fnloop(work)
+          listvals.push(work)
+        }
+      }
+    }
+    if (listvals.length > 0) {
+      output = vx_core.vx_new(generic_list_1, listvals)
+    }
+    return output
+  }
+
+  static vx_list_from_list_filter(generic_list_1, vallist, fn_filter) {
+    let output = vx_core.vx_empty(generic_list_1)
+    const fn = fn_filter['vx_value']
+    if (fn) {
+      const items = []
+      vallist.forEach(val => {
+        const newval = fn(val)
+        if (!vx_core.f_is_empty_1(newval)) {
+          items.push(newval)
+        }
+      })
+      //const type = vx_core.f_type_from_any(output)
+      output = vx_core.f_new(generic_list_1, ...items)
+    }
+    return output
+  }
+
+  static vx_list_from_list_start_end(generic_list_1, values, start, end) {
+    let output = vx_core.vx_empty(generic_list_1)
+    const maxlen = values.length
+    if (end < 0) {
+     end += maxlen
+    }
+    if (start < 1) {
+    } else if (start > end) {
+    } else if (start > maxlen) {
+    } else {
+      if (end > maxlen) {
+        end = maxlen
+      }
+      output = values.slice(start - 1, end)
+      const typ = values['vx_type']
+      if (typ) {
+        output['vx_type'] = typ
+      }
+    }
+    return output
+  }
   /**
    * @function any_from_for_until_loop
    * Returns a value using an until loop. Maximum 1000 times.
@@ -22,7 +145,7 @@ export default class vx_collection {
   static f_any_from_for_until_loop(generic, start, fn_until, fn_loop) {
     const generic_any_1 = generic["any-1"]
     let output = vx_core.f_empty(generic_any_1)
-    output = vx_collection.f_any_from_for_until_loop_max({"any-1": vx_core.t_any}, start, fn_until, fn_loop, 1000)
+    output = vx_collection.f_any_from_for_until_loop_max({"any-1": vx_core.t_any}, start, fn_until, fn_loop, 10000)
     return output
   }
 

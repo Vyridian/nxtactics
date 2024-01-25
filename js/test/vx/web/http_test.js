@@ -6,7 +6,6 @@ import vx_test from "../../../src/vx/test.js"
 import vx_data_csv from "../../../src/vx/data/csv.js"
 import vx_data_textblock from "../../../src/vx/data/textblock.js"
 import vx_data_xml from "../../../src/vx/data/xml.js"
-import  from "../../../src/.js"
 
 export default class vx_web_http_test {
 

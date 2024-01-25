@@ -5,6 +5,73 @@ import vx_core from "../vx/core.js"
 
 export default class vx_type {
 
+  // vx_int_from_string_find(string, string)
+  static vx_int_from_string_find(text, find) {
+    return text.indexOf(find) + 1
+  }
+
+  // vx_int_from_string_findlast(string, string)
+  static vx_int_from_string_findlast(text, findlast) {
+    return text.lastIndexOf(findlast) + 1
+  }
+
+  // vx_int_from_string_findkeyword(string, string)
+  static vx_int_from_string_findkeyword(text, find) {
+    let output = -1
+    if (text != "") {
+      switch (find) {
+      case ":nonwhitespace":
+        const wschars1 = [" ", "\n", "\r", "\t"]
+        let ilen = text.length
+        for (let i = 0; i < ilen; i++) {
+          const char = text.charAt(i)
+          if (!wschars1.includes(char)) {
+            output = i
+            break
+          }
+        }
+        break
+      case ":whitespace":
+        const wschars2 = [" ", "\n", "\r", "\t"]
+        for (let char of wschars2) {
+          const pos = text.indexOf(char)
+          if (pos < 0) {
+          } else if (output < 0) {
+           output = pos
+          } else if (pos < output) {
+           output = pos
+          }
+        }
+        break
+      default:
+        output = text.indexOf(find)
+        break
+      }
+    }
+    output += 1
+    return output
+  }
+
+  static vx_string_lowercase(text) {
+    let output = text.toLowerCase()
+    return output
+  }
+
+  static vx_string_trim(text) {
+    let output = text.trim()
+    return output
+  }
+
+  static vx_string_uppercase(text) {
+    let output = text.toUpperCase()
+    return output
+  }
+
+  static vx_stringlist_from_string_split(text, delim) {
+    const liststring = text.split(delim)
+    const output = vx_core.f_new(vx_core.t_stringlist, ...liststring)
+    return output
+  }
   /**
    * @function allowtypenames_from_type
    * Get the name of a given type
@@ -107,7 +174,7 @@ export default class vx_type {
   // (func int<-string-find)
   static f_int_from_string_find(text, find) {
     let output = vx_core.e_int
-    output = vx_core.vx_int_from_string_find(text, find) + 1
+    output = vx_type.vx_int_from_string_find(text, find)
     return output
   }
 
@@ -141,7 +208,7 @@ export default class vx_type {
   // (func int<-string-findlast)
   static f_int_from_string_findlast(text, findlast) {
     let output = vx_core.e_int
-    output = vx_core.vx_int_from_string_findlast(text, findlast) + 1
+    output = vx_type.vx_int_from_string_findlast(text, findlast)
     return output
   }
 
@@ -259,7 +326,7 @@ export default class vx_type {
   // (func is-type<-any-typelist)
   static f_is_type_from_any_typelist(val, typelist) {
     let output = vx_core.e_boolean
-    output = vx_core.f_any_from_list_reduce(
+    output = vx_core.f_any_from_list_start_reduce(
       {"any-1": vx_core.t_boolean, "any-2": vx_core.t_any, "list-2": vx_core.t_typelist},
       typelist,
       false,
@@ -285,6 +352,104 @@ export default class vx_type {
   static f_length_from_string(text) {
     let output = vx_core.e_int
     output = text.length
+    return output
+  }
+
+  /**
+   * @function string_lowercase
+   * Returns lowercase version of string
+   * @param  {string} text
+   * @return {string}
+   */
+  static t_string_lowercase = {}
+  static e_string_lowercase = {vx_type: vx_type.t_string_lowercase}
+
+  // (func string-lowercase)
+  static f_string_lowercase(text) {
+    let output = vx_core.e_string
+    output = vx_type.vx_string_lowercase(text)
+    return output
+  }
+
+  /**
+   * @function string_outdent
+   * Returns a string replacing leading whitespace on all lines based on first line.
+   * @param  {string} text
+   * @return {string}
+   */
+  static t_string_outdent = {}
+  static e_string_outdent = {vx_type: vx_type.t_string_outdent}
+
+  // (func string-outdent)
+  static f_string_outdent(text) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const pos = vx_type.f_int_from_string_findkeyword(text, ":nonwhitespace")
+        return vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(0, pos)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return text})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
+              {"any-1": vx_core.t_string},
+              [],
+              vx_core.f_new(vx_core.t_any_from_func, () => {
+                const indent = vx_type.f_string_from_string_end(
+                  text,
+                  vx_core.f_minus1(pos)
+                )
+                const rest = vx_type.f_string_from_string_start(text, pos)
+                const linepos = vx_type.f_int_from_string_find(indent, "\n")
+                const outdent = vx_core.f_if_1(
+                  {"any-1": vx_core.t_string},
+                  vx_core.f_eq(0, linepos),
+                  "",
+                  "\n"
+                )
+                return vx_core.f_string_from_string_find_replace(rest, indent, outdent)
+              })
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function string_trim
+   * Trims whitespace from the front and back of text
+   * @param  {string} text
+   * @return {string}
+   */
+  static t_string_trim = {}
+  static e_string_trim = {vx_type: vx_type.t_string_trim}
+
+  // (func string-trim)
+  static f_string_trim(text) {
+    let output = vx_core.e_string
+    output = vx_type.vx_string_trim(text)
+    return output
+  }
+
+  /**
+   * @function string_uppercase
+   * Returns uppercase version of string
+   * @param  {string} text
+   * @return {string}
+   */
+  static t_string_uppercase = {}
+  static e_string_uppercase = {vx_type: vx_type.t_string_uppercase}
+
+  // (func string-uppercase)
+  static f_string_uppercase(text) {
+    let output = vx_core.e_string
+    output = vx_type.vx_string_uppercase(text)
     return output
   }
 
@@ -490,6 +655,10 @@ export default class vx_type {
       "is-type": vx_type.e_is_type,
       "is-type<-any-typelist": vx_type.e_is_type_from_any_typelist,
       "length<-string": vx_type.e_length_from_string,
+      "string-lowercase": vx_type.e_string_lowercase,
+      "string-outdent": vx_type.e_string_outdent,
+      "string-trim": vx_type.e_string_trim,
+      "string-uppercase": vx_type.e_string_uppercase,
       "string<-int": vx_type.e_string_from_int,
       "string<-string-end": vx_type.e_string_from_string_end,
       "string<-string-start": vx_type.e_string_from_string_start,
@@ -516,6 +685,10 @@ export default class vx_type {
       "is-type": vx_type.t_is_type,
       "is-type<-any-typelist": vx_type.t_is_type_from_any_typelist,
       "length<-string": vx_type.t_length_from_string,
+      "string-lowercase": vx_type.t_string_lowercase,
+      "string-outdent": vx_type.t_string_outdent,
+      "string-trim": vx_type.t_string_trim,
+      "string-uppercase": vx_type.t_string_uppercase,
       "string<-int": vx_type.t_string_from_int,
       "string<-string-end": vx_type.t_string_from_string_end,
       "string<-string-start": vx_type.t_string_from_string_start,
@@ -821,6 +994,82 @@ export default class vx_type {
       properties    : [],
       proplast      : {},
       fn            : vx_type.f_length_from_string
+    }
+
+    // (func string-lowercase)
+    vx_type.t_string_lowercase['vx_type'] = vx_core.t_type
+    vx_type.t_string_lowercase['vx_value'] = {
+      name          : "string-lowercase",
+      pkgname       : "vx/type",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_type.f_string_lowercase
+    }
+
+    // (func string-outdent)
+    vx_type.t_string_outdent['vx_type'] = vx_core.t_type
+    vx_type.t_string_outdent['vx_value'] = {
+      name          : "string-outdent",
+      pkgname       : "vx/type",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_type.f_string_outdent
+    }
+
+    // (func string-trim)
+    vx_type.t_string_trim['vx_type'] = vx_core.t_type
+    vx_type.t_string_trim['vx_value'] = {
+      name          : "string-trim",
+      pkgname       : "vx/type",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_type.f_string_trim
+    }
+
+    // (func string-uppercase)
+    vx_type.t_string_uppercase['vx_type'] = vx_core.t_type
+    vx_type.t_string_uppercase['vx_value'] = {
+      name          : "string-uppercase",
+      pkgname       : "vx/type",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_type.f_string_uppercase
     }
 
     // (func string<-int)

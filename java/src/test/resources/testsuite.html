@@ -18310,13 +18310,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/bookloader</p>
-              <p class="coveragenums">24% 13/53</p>
+              <p class="coveragenums">38% 29/75</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">24% 13/53</p>
-              <p class="coveragenums">88% 47/53</p>
-              <p class="coveragenums">0% 0/53</p>
-              <p class="coveragenums">0% 0/53</p>
+              <p class="coveragenums">38% 29/75</p>
+              <p class="coveragenums">92% 69/75</p>
+              <p class="coveragenums">0% 0/75</p>
+              <p class="coveragenums">0% 0/75</p>
             </summary>
             <div>
               <table>
@@ -18345,28 +18345,331 @@ ab
                       <p class="passflag">Pass</p>
                     </td>
                     <td>
+                      <p class="preformatted">ability&lt;-ability-stringmap</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/ability
+  :name "name"
+  :image "image")
+ (ability&lt;-ability-stringmap
+  (empty base/ability)
+  (stringmap
+   :name "name"
+   :image "image")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(ability
+ :name "name"
+ :image "image")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(ability
+ :name "name"
+ :image "image")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">ability&lt;-ability-xmlchild</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/ability
+  :titles "titles")
+ (ability&lt;-ability-xmlchild
+  (empty base/ability)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(ability
+ :titles "titles")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(ability
+ :titles "titles")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">ability&lt;-xml</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/ability
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (ability&lt;-xml
+  (xml/xml
+   :tag "ability"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(ability
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(ability
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-book-key-value</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/book
+  :name "nm")
+ (book&lt;-book-key-value
+  (empty base/book)
+  "name"
+  "nm"))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "nm")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "nm")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-book-key-value</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/book
+  :name "image")
+ (book&lt;-book-key-value
+  (empty base/book)
+  "name"
+  "image"))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "image")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "image")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
                       <p class="preformatted">book&lt;-book-stringmap</p>
                     </td>
                     <td>
                       <p class="preformatted">(test
  (base/book
-  :name "bookname"
-  :image "bookimage")
+  :name "name"
+  :image "image")
  (book&lt;-book-stringmap
   (empty base/book)
   (stringmap
-   :name "bookname"
-   :image "bookimage")))</p>
+   :name "name"
+   :image "image")))</p>
                     </td>
                     <td>
                       <p class="preformatted">(book
- :name "bookname"
- :image "bookimage")</p>
+ :name "name"
+ :image "image")</p>
                     </td>
                     <td>
                       <p class="preformatted">(book
- :name "bookname"
- :image "bookimage")</p>
+ :name "name"
+ :image "image")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-book-xml</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/book
+  :name "name1")
+ (book&lt;-book-xml
+  (empty base/book)
+  (xml/xml
+   :tag "doc"
+   :propmap
+    (stringmap
+     :name "name1"))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "name1")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "name1")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-book-xml</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (empty base/book)
+ (book&lt;-book-xml
+  (empty base/book)
+  (xml/xml
+   :tag "?xml")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book)</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book)</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-book-xml</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/book
+  :name "name1"
+  (msgblock
+   (msg
+    :code ":duplicatetagfound"
+    :detail
+     (anymap
+      :type nx/tactics/base/book
+      :tag "doc")
+      :severity 2)))
+ (book&lt;-book-xml
+  (base/book
+   :name "name1")
+  (xml/xml
+   :tag "doc")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "name1"
+ (msgblock
+  :msgs
+   (msglist
+    (msg
+     :code ":duplicatetagfound"
+     :detail
+      (anymap
+       :type nx/tactics/base/book
+       :tag "doc")
+     :severity 2))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "name1"
+ (msgblock
+  :msgs
+   (msglist
+    (msg
+     :code ":duplicatetagfound"
+     :detail
+      (anymap
+       :type nx/tactics/base/book
+       :tag "doc")
+     :severity 2))))</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-book-xmlchapter</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/book
+  :chaptermap
+   (base/chaptermap
+    :chapter1
+     (base/chapter
+      :name "chapter1")))
+ (book&lt;-book-xmlchapter
+  (empty base/book)
+  (xml/xml
+   :tag "chapter"
+   :propmap
+    (stringmap
+     :name "chapter1"))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :chaptermap
+  (chaptermap
+   :chapter1
+    (chapter
+     :name "chapter1")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :chaptermap
+  (chaptermap
+   :chapter1
+    (chapter
+     :name "chapter1")))</p>
                     </td>
                   </tr>
                   <tr>
@@ -18403,27 +18706,99 @@ ab
                       <p class="passflag">Pass</p>
                     </td>
                     <td>
-                      <p class="preformatted">book&lt;-xml</p>
+                      <p class="preformatted">book&lt;-book-xmlchild</p>
                     </td>
                     <td>
                       <p class="preformatted">(test
  (base/book
-  :name "name"
-  :image "image"
-  :titles "titles"
-  :reference "reference"
   :chaptermap
    (base/chaptermap
     :chapter1
      (base/chapter
       :name "chapter1")))
- (book&lt;-xml
+ (book&lt;-book-xmlchild
+  (empty base/book)
   (xml/xml
-   :tag "book"
+   :tag "chapter"
    :propmap
     (stringmap
-     :name "name"
-     :image "image")
+     :name "chapter1"))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :chaptermap
+  (chaptermap
+   :chapter1
+    (chapter
+     :name "chapter1")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :chaptermap
+  (chaptermap
+   :chapter1
+    (chapter
+     :name "chapter1")))</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-xml</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/book
+  :name "name1")
+ (book&lt;-xml
+  (xml/xml
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "?xml")
+     (xml/xml
+      :tag "doc"
+      :propmap
+       (stringmap
+        :name "name1"))))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "name1")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "name1")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-xmldoc</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/book
+  :name "name1"
+  :image "image1"
+  :titles "titles1"
+  :reference "reference1"
+  :chaptermap
+   (base/chaptermap
+    :chapter1
+     (base/chapter
+      :name "chapter1")))
+ (book&lt;-xmldoc
+  (xml/xml
+   :tag "doc"
+   :propmap
+    (stringmap
+     :name "name1"
+     :image "image1")
    :children
     (xml/xmllist
      (xml/xml
@@ -18431,13 +18806,13 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "titles")))
+         :text "titles1")))
      (xml/xml
       :tag "reference"
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))
+         :text "reference1")))
      (xml/xml
       :tag "chapter"
       :propmap
@@ -18446,10 +18821,10 @@ ab
                     </td>
                     <td>
                       <p class="preformatted">(book
- :name "name"
- :image "image"
- :reference "reference"
- :titles "titles"
+ :name "name1"
+ :image "image1"
+ :reference "reference1"
+ :titles "titles1"
  :chaptermap
   (chaptermap
    :chapter1
@@ -18458,15 +18833,45 @@ ab
                     </td>
                     <td>
                       <p class="preformatted">(book
- :name "name"
- :image "image"
- :reference "reference"
- :titles "titles"
+ :name "name1"
+ :image "image1"
+ :reference "reference1"
+ :titles "titles1"
  :chaptermap
   (chaptermap
    :chapter1
     (chapter
      :name "chapter1")))</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">book&lt;-xmllist</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/book
+  :name "name1")
+ (book&lt;-xmllist
+  (xml/xmllist
+   (xml/xml
+    :tag "?xml")
+   (xml/xml
+    :tag "doc"
+    :propmap
+     (stringmap
+      :name "name1")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "name1")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(book
+ :name "name1")</p>
                     </td>
                   </tr>
                   <tr>
@@ -18603,6 +19008,155 @@ ab
                       <p class="passflag">Pass</p>
                     </td>
                     <td>
+                      <p class="preformatted">power&lt;-power-stringmap</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/power
+  :name "name"
+  :image "image")
+ (power&lt;-power-stringmap
+  (empty base/power)
+  (stringmap
+   :name "name"
+   :image "image")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(power
+ :name "name"
+ :image "image")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(power
+ :name "name"
+ :image "image")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">power&lt;-power-xmlchild</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/power
+  :titles "titles")
+ (power&lt;-power-xmlchild
+  (empty base/power)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(power
+ :titles "titles")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(power
+ :titles "titles")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">power&lt;-xml</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/power
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference"
+  :abilitymap
+   (base/abilitymap
+    :ability1
+     (base/ability
+      :name "ability1"))
+  :specialtymap
+   (base/specialtymap
+    :specialty1
+     (base/specialty
+      :name "specialty1")))
+ (power&lt;-xml
+  (xml/xml
+   :tag "power"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))
+     (xml/xml
+      :tag "ability"
+      :propmap
+       (stringmap
+        :name "ability1"))
+     (xml/xml
+      :tag "specialty"
+      :propmap
+       (stringmap
+        :name "specialty1"))))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(power
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles"
+ :abilitymap
+  (abilitymap
+   :ability1
+    (ability
+     :name "ability1"))
+ :specialtymap
+  (specialtymap
+   :specialty1
+    (specialty
+     :name "specialty1")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(power
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles"
+ :abilitymap
+  (abilitymap
+   :ability1
+    (ability
+     :name "ability1"))
+ :specialtymap
+  (specialtymap
+   :specialty1
+    (specialty
+     :name "specialty1")))</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
                       <p class="preformatted">rule&lt;-rule-stringmap</p>
                     </td>
                     <td>
@@ -18721,11 +19275,26 @@ ab
   :image "image"
   :titles "titles"
   :reference "reference"
+  :powermap
+   (base/powermap
+    :power1
+     (base/power
+      :name "power1"))
+  :scenariomap
+   (base/scenariomap
+    :scenario1
+     (base/scenario
+      :name "scenario1"))
   :sectionmap
    (base/sectionmap
     :section1
      (base/section
-      :name "section1")))
+      :name "section1"))
+  :skillmap
+   (base/skillmap
+    :skill1
+     (base/skill
+      :name "skill1")))
  (section&lt;-xml
   (xml/xml
    :tag "section"
@@ -18748,10 +19317,25 @@ ab
         (xml/xml
          :text "reference")))
      (xml/xml
+      :tag "power"
+      :propmap
+       (stringmap
+        :name "power1"))
+     (xml/xml
+      :tag "scenario"
+      :propmap
+       (stringmap
+        :name "scenario1"))
+     (xml/xml
       :tag "section"
       :propmap
        (stringmap
-        :name "section1"))))))</p>
+        :name "section1"))
+     (xml/xml
+      :tag "skill"
+      :propmap
+       (stringmap
+        :name "skill1"))))))</p>
                     </td>
                     <td>
                       <p class="preformatted">(section
@@ -18759,11 +19343,26 @@ ab
  :image "image"
  :reference "reference"
  :titles "titles"
+ :powermap
+  (powermap
+   :power1
+    (power
+     :name "power1"))
+ :scenariomap
+  (scenariomap
+   :scenario1
+    (scenario
+     :name "scenario1"))
  :sectionmap
   (sectionmap
    :section1
     (section
-     :name "section1")))</p>
+     :name "section1"))
+ :skillmap
+  (skillmap
+   :skill1
+    (skill
+     :name "skill1")))</p>
                     </td>
                     <td>
                       <p class="preformatted">(section
@@ -18771,11 +19370,255 @@ ab
  :image "image"
  :reference "reference"
  :titles "titles"
+ :powermap
+  (powermap
+   :power1
+    (power
+     :name "power1"))
+ :scenariomap
+  (scenariomap
+   :scenario1
+    (scenario
+     :name "scenario1"))
  :sectionmap
   (sectionmap
    :section1
     (section
-     :name "section1")))</p>
+     :name "section1"))
+ :skillmap
+  (skillmap
+   :skill1
+    (skill
+     :name "skill1")))</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">skill&lt;-skill-xmlchild</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/skill
+  :titles "titles")
+ (skill&lt;-skill-xmlchild
+  (empty base/skill)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(skill
+ :titles "titles")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(skill
+ :titles "titles")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">skill&lt;-xml</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/skill
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference"
+  :abilitymap
+   (base/abilitymap
+    :ability1
+     (base/ability
+      :name "ability1"))
+  :specialtymap
+   (base/specialtymap
+    :specialty1
+     (base/specialty
+      :name "specialty1")))
+ (skill&lt;-xml
+  (xml/xml
+   :tag "skill"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))
+     (xml/xml
+      :tag "ability"
+      :propmap
+       (stringmap
+        :name "ability1"))
+     (xml/xml
+      :tag "specialty"
+      :propmap
+       (stringmap
+        :name "specialty1"))))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(skill
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles"
+ :abilitymap
+  (abilitymap
+   :ability1
+    (ability
+     :name "ability1"))
+ :specialtymap
+  (specialtymap
+   :specialty1
+    (specialty
+     :name "specialty1")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(skill
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles"
+ :abilitymap
+  (abilitymap
+   :ability1
+    (ability
+     :name "ability1"))
+ :specialtymap
+  (specialtymap
+   :specialty1
+    (specialty
+     :name "specialty1")))</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">specialty&lt;-specialty-stringmap</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/specialty
+  :name "name"
+  :image "image")
+ (specialty&lt;-specialty-stringmap
+  (empty base/specialty)
+  (stringmap
+   :name "name"
+   :image "image")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(specialty
+ :name "name"
+ :image "image")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(specialty
+ :name "name"
+ :image "image")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">specialty&lt;-specialty-xmlchild</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/specialty
+  :titles "titles")
+ (specialty&lt;-specialty-xmlchild
+  (empty base/specialty)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(specialty
+ :titles "titles")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(specialty
+ :titles "titles")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">specialty&lt;-xml</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/specialty
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (specialty&lt;-xml
+  (xml/xml
+   :tag "specialty"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(specialty
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(specialty
+ :name "name"
+ :image "image"
+ :reference "reference"
+ :titles "titles")</p>
                     </td>
                   </tr>
                   <tr>

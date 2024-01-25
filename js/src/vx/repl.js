@@ -4,7 +4,6 @@ import vx_core from "../vx/core.js"
 import vx_collection from "../vx/collection.js"
 import vx_type from "../vx/type.js"
 import vx_data_textblock from "../vx/data/textblock.js"
-import  from "../.js"
 
 
 export default class vx_repl {

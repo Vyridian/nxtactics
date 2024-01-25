@@ -2021,6 +2021,18 @@
 					* Detects severe damage to the wearer and automatically takes action to reduce shock and maintain suit integrity (sealing leaks or amputating if necessary).
 				</summary>
 			</ability>
+			<ability name="Ablative Armor">
+				<summary>
+					* Armor that vaporizes when hit decreasing damage but also damaging the armor.
+					* Ignore the first point of [Damage] and reduce [Armor] (on that facing) instead.
+				</summary>
+			</ability>
+			<ability name="Hardened vs. Energy">
+				<summary>
+					* [Damage]: [+2 Armor] if attack is an [Energy Weapon]
+					* Only 1 Hardened vs. ability may be taken
+				</summary>
+			</ability>
 			<ability name="Body Flares">
 				<summary>
 					* Detects and distracts heat seaking missiles,
@@ -2060,7 +2072,20 @@
 			</ability>
 			<ability name="Grappling Hoist">
 				<summary>
-					* A grappling dart that is fired into stone or hooked onto any uneven surface. The attached winch can then pull the wearer to the target or vis versa depending on relative weight. This can be used for climbing or towing. The darts can be recovered and reused, but they are often not recoverable. 2 replacement darts are included.
+					* A grappling dart that is fired into stone or hooked onto any uneven surface. The attached winch can then pull the wearer to the target or vis versa depending on relative weight. This can be used for 
+     climbing or towing. The darts can be recovered and reused, but they are often not recoverable. 2 replacement darts are included.
+				</summary>
+			</ability>
+			<ability name="Hardened vs. Fire">
+				<summary>
+					* [Damage]: [+2 Armor] if attack produces [Fire] tokens
+					* Only 1 Hardened vs. ability may be taken
+				</summary>
+			</ability>
+			<ability name="Hardened vs. Projectiles">
+				<summary>
+					* [Damage]: [+2 Armor] if attack is a [Projectile]
+					* Only 1 Hardened vs. ability may be taken
 				</summary>
 			</ability>
 			<ability name="Infrared Dampener">

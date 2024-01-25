@@ -1,7 +1,7 @@
 (package nx/tactics/books/age_of_steam
  :libs (lib base :path nx/tactics/base))
 
-(func book : base/book
+(func tacticsbook : base/book
  (book
   :name "Age of Steam"
   :image "WildWest.jpg"
@@ -12,32 +12,6 @@
       :name "Age of Steam Overview"
       :sectionmap
        (sectionmap
-        "Why Tactics: Age of Steam?"
-         (section
-          :name "Why Tactics: Age of Steam?")
-        "Age of Steam Personal Combat"
-         (section
-          :name "Age of Steam Personal Combat"
-          :summary
-           "* Dueling
-* Civil War
-* Cowboys
-* Indians
-* Bandits
-* Cattle Rustlers
-* Marksman")
-        "Age of Steam Land Warfare"
-         (section
-          :name "Age of Steam Land Warfare"
-          :summary
-           "* Infantry
-* Cavalry
-* Pistols
-* Rifles
-* Cannons
-* Artillery
-* Gatling Guns
-* Trains")
         "Age of Steam Naval Warfare"
          (section
           :name "Age of Steam Naval Warfare"
@@ -53,53 +27,6 @@
       :name "Age of Steam Equipment"
       :sectionmap
        (sectionmap
-        "Age of Steam Weaponry"
-         (section
-          :name "Age of Steam Weaponry"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
         "Steam Age Vehicles"
          (section
           :name "Steam Age Vehicles"
@@ -170,117 +97,6 @@
       :name "Civil War"
       :sectionmap
        (sectionmap
-        "Civil War Scenarios"
-         (section
-          :name "Civil War Scenarios"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :severity 2))))))
-        "Confederate Army"
-         (section
-          :name "Confederate Army"
-          :unitmap
-           (unitmap
-            "Confederate Cannon"
-             (unit
-              :name "Confederate Cannon")
-            "Confederate Conscript"
-             (unit
-              :name "Confederate Conscript")
-            "Confederate Gatling Gunner"
-             (unit
-              :name "Confederate Gatling Gunner")
-            "Confederate Medic"
-             (unit
-              :name "Confederate Medic")
-            "Confederate Officer"
-             (unit
-              :name "Confederate Officer")
-            "Confederate Veteran"
-             (unit
-              :name "Confederate Veteran")))
-        "Confederate Navy"
-         (section
-          :name "Confederate Navy"
-          :unitmap
-           (unitmap
-            :Merrimack
-             (unit
-              :name "Merrimack"
-              :titles "CSS Virginia"
-              :mass "4500tons"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))))
-        "Union Army"
-         (section
-          :name "Union Army"
-          :unitmap
-           (unitmap
-            "Union Cannon"
-             (unit
-              :name "Union Cannon")
-            "Union Conscript"
-             (unit
-              :name "Union Conscript")
-            "Union Gatling Gunner"
-             (unit
-              :name "Union Gatling Gunner")
-            "Union Medic"
-             (unit
-              :name "Union Medic")
-            "Union Officer"
-             (unit
-              :name "Union Officer")
-            "Union Veteran"
-             (unit
-              :name "Union Veteran")))
         "Union Navy"
          (section
           :name "Union Navy"
@@ -290,11 +106,102 @@
              (unit
               :name "USS Monitor"
               :mass "1000tons"
+              :length "52m"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "front"
+                        :value "200mm")
+                      :severity 2)
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":summary"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3)
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":200mm iron turret, 25mm deck, 125mm hull belt"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidproperty"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :prop "side"
+                           :value "200mm")
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidproperty"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :prop "back"
+                           :value "200mm")
+                         :severity 2)))
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidproperty"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :prop "top"
+                           :value "25mm")
+                         :severity 2))))))
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "4")
+                      :severity 2)
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":summary"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3)
+                     (msg
+                      :code ":invalidkey"
+                      :detail ":2 x 11 in (280mm) Dahlgren smoothbores, turret"
+                      :path "nx/tactics/base/unitskill"
+                      :severity 3)))))
               (msgblock
                :msgs
                 (msglist
                  (msg
                   :code ":invalidproperty"
+                  :detail
+                   (anymap
+                    :type nx/tactics/base/unit
+                    :prop "classification"
+                    :value "Hvy. Naval Vessel")
                   :severity 2))
                :msgblocks
                 (msgblocklist
@@ -303,30 +210,22 @@
                    (msglist
                     (msg
                      :code ":invalidproperty"
+                     :detail
+                      (anymap
+                       :type nx/tactics/base/unit
+                       :prop "speed"
+                       :value "15kph")
                      :severity 2)))
                  (msgblock
                   :msgs
                    (msglist
                     (msg
                      :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
+                     :detail
+                      (anymap
+                       :type nx/tactics/base/unit
+                       :prop "crew"
+                       :value "59")
                      :severity 2))))))))))
     "Victorian England"
      (chapter
@@ -358,247 +257,6 @@
       :name "Wild West"
       :sectionmap
        (sectionmap
-        "Western Scenarios"
-         (section
-          :name "Western Scenarios"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :severity 2))))
-        "Steam Age Outlaws"
-         (section
-          :name "Steam Age Outlaws"
-          :unitmap
-           (unitmap
-            :Bandito
-             (unit
-              :name "Bandito"
-              :image "Western/BanditoToken.png"
-              :reference
-               "You think you're better than I am?  Where we came from, if one did not want to die of poverty, one became a
-priest or a bandit! ...You became a priest because you were... too much of a coward to do what I do! - Tuco. The
-Good, the Bad, and the Ugly."
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            :Gunslinger
-             (unit
-              :name "Gunslinger"
-              :image "Western/GunslingerToken.png"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Man with No Name"
-             (unit
-              :name "Man with No Name"
-              :image "Western/ManWithNoNameToken.png"
-              :reference
-               "* [to Tuco] Tut, tut. Such ingratitude after all the times I saved your life. - Blondie, The Good, the Bad, and
-the Ugly
-* There are two kinds of people in the world...Those who have a loaded gun and those who dig. You dig! - Blondie,
-The Good, the Bad, and the Ugly"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
-            "Professional Killer"
-             (unit
-              :name "Professional Killer"
-              :image "Western/ProfessionalKiller.png"
-              :reference
-               "He paid me a thousand.  I think his idea was that I kill you.  But you know, the pity is when I'm paid, I always
-follow my job through. - Angel Eyes, The Good, the Bad, and the Ugly"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))))
-        "Steam Age Lawmen"
-         (section
-          :name "Steam Age Lawmen"
-          :unitmap
-           (unitmap
-            :Deputy
-             (unit
-              :name "Deputy")
-            :Sheriff
-             (unit
-              :name "Sheriff")
-            "US Marshall"
-             (unit
-              :name "US Marshall"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))))
-        "Steam Age Indians"
-         (section
-          :name "Steam Age Indians"
-          :unitmap
-           (unitmap
-            "Sioux Gunfighter"
-             (unit
-              :name "Sioux Gunfighter"
-              :image "Western/IndianAxe.jpg"
-              :reference "Spotted Horse cannot be killed by a bullet! - Spotted Horse, The Quick and the Dead")))
-        "Steam Age Townsfolk"
-         (section
-          :name "Steam Age Townsfolk"
-          :unitmap
-           (unitmap
-            "Chinese Monk"
-             (unit
-              :name "Chinese Monk"
-              :reference "I seek not to know the answers, but to understand the questions. - Kwai Chang Caine, Kung Fu TV Series")
-            "Chinese Rail worker"
-             (unit
-              :name "Chinese Rail worker")
-            :Cowboy
-             (unit
-              :name "Cowboy")
-            :Dentist
-             (unit
-              :name "Dentist")
-            :Farmer
-             (unit
-              :name "Farmer")
-            "General Store Owner"
-             (unit
-              :name "General Store Owner")
-            :Judge
-             (unit
-              :name "Judge")
-            :Preacher
-             (unit
-              :name "Preacher")
-            "Saloon Barkeep"
-             (unit
-              :name "Saloon Barkeep")
-            :Undertaker
-             (unit
-              :name "Undertaker")
-            "Whore with a Heart of Gold"
-             (unit
-              :name "Whore with a Heart of Gold")))
-        "Steam Age Travelers"
-         (section
-          :name "Steam Age Travelers"
-          :unitmap
-           (unitmap
-            "Carpet Bagger"
-             (unit
-              :name "Carpet Bagger")
-            :Gambler
-             (unit
-              :name "Gambler"
-              :summary "This is a very special pack.  See, I put an ace in every time I kill a man.  (The deck is all aces) - Ace, The Quick and the Dead")
-            :Prospector
-             (unit
-              :name "Prospector")
-            "Snake Oil Salesman"
-             (unit
-              :name "Snake Oil Salesman")))
         "Steam Age Tycoons"
          (section
           :name "Steam Age Tycoons"
@@ -614,26 +272,62 @@ follow my job through. - Angel Eyes, The Good, the Bad, and the Ugly"
                "All I hear from you...is how poor you are; how you can't afford my taxes.  Yet somehow, you managed to find the
 money to hire a gunfighter to kill me.  If ya got so much money, I'm just gonna have to take some more. - John
 Herod,  The Quick and the Dead"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidtagfound"
-                     :severity 2))))))
+              :unitskillmap
+               (unitskillmap
+                :Intimidation
+                 (unitskill
+                  :name "Intimidation"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "5")
+                      :severity 2))))
+                :Firearms
+                 (unitskill
+                  :name "Firearms"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "4")
+                      :severity 2))
+                   :msgblocks
+                    (msgblocklist
+                     (msgblock
+                      :msgs
+                       (msglist
+                        (msg
+                         :code ":invalidtagfound"
+                         :detail
+                          (anymap
+                           :type nx/tactics/base/unitskill
+                           :tag "item")
+                         :severity 2))))))
+                :Evasion
+                 (unitskill
+                  :name "Evasion"
+                  (msgblock
+                   :msgs
+                    (msglist
+                     (msg
+                      :code ":invalidproperty"
+                      :detail
+                       (anymap
+                        :type nx/tactics/base/unitskill
+                        :prop "level"
+                        :value "4")
+                      :severity 2))))))
             "Oil Baron"
              (unit
               :name "Oil Baron")
