@@ -56,6 +56,28 @@
           :summary
            "* 75% Load, on Snow no Terrain Penalty and 150% Speed, off Snow +1 Terrain Penalty.
 * Icecraft - On Ice no Terrain Penalty and 200% Speed, off Ice cannot move."
+          :itemmap
+           (itemmap
+            :Iceskates
+             (item
+              :name "Iceskates"
+              :summary "* Personal, Unpowered, Icecraft")
+            "Ice sailboat"
+             (item
+              :name "Ice sailboat"
+              :summary "* Medium, Sail, Icecraft")
+            :Skis
+             (item
+              :name "Skis"
+              :summary "* Personal, Unpowered, Snowcraft")
+            :Snowboard
+             (item
+              :name "Snowboard"
+              :summary "* Personal, Unpowered, Snowcraft")
+            :Snowshoes
+             (item
+              :name "Snowshoes"
+              :summary "* Personal, Unpowered, Snowcraft"))
           :unitmap
            (unitmap
             "Dog Sled"
@@ -65,59 +87,7 @@
             :Snowmobile
              (unit
               :name "Snowmobile"
-              :summary "* Offroad, Snowcraft"))
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "item")
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2))))))))
+              :summary "* Offroad, Snowcraft")))))
     "The Abyss"
      (chapter
       :name "The Abyss"

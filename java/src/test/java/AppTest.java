@@ -28,7 +28,16 @@ import com.vxlisp.nx.tactics.ApptacticsTest;
 import com.vxlisp.nx.tactics.BaseTest;
 import com.vxlisp.nx.tactics.books.Age_of_steamTest;
 import com.vxlisp.nx.tactics.books.BookloaderTest;
+import com.vxlisp.nx.tactics.books.CharactersTest;
+import com.vxlisp.nx.tactics.books.GearTest;
 import com.vxlisp.nx.tactics.books.GettingstartedTest;
+import com.vxlisp.nx.tactics.books.HorrorTest;
+import com.vxlisp.nx.tactics.books.MedievalTest;
+import com.vxlisp.nx.tactics.books.Modern_fantasyTest;
+import com.vxlisp.nx.tactics.books.PrehistoryTest;
+import com.vxlisp.nx.tactics.books.Pulp_fictionTest;
+import com.vxlisp.nx.tactics.books.Space_and_timeTest;
+import com.vxlisp.nx.tactics.books.SuperheroesTest;
 import com.vxlisp.nx.tactics.DamageTest;
 import com.vxlisp.vx.ui.AppuiTest;
 import com.vxlisp.vx.ui.BackgroundTest;
@@ -270,9 +279,81 @@ public final class AppTest {
 
 
   @Test
+  @DisplayName("nx/tactics/books/characters")
+  void test_nx_tactics_books_characters() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = CharactersTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/gear")
+  void test_nx_tactics_books_gear() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = GearTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
   @DisplayName("nx/tactics/books/gettingstarted")
   void test_nx_tactics_books_gettingstarted() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = GettingstartedTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/horror")
+  void test_nx_tactics_books_horror() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = HorrorTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/medieval")
+  void test_nx_tactics_books_medieval() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = MedievalTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/modern_fantasy")
+  void test_nx_tactics_books_modern_fantasy() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Modern_fantasyTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/prehistory")
+  void test_nx_tactics_books_prehistory() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = PrehistoryTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/pulp_fiction")
+  void test_nx_tactics_books_pulp_fiction() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Pulp_fictionTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/space_and_time")
+  void test_nx_tactics_books_space_and_time() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Space_and_timeTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/superheroes")
+  void test_nx_tactics_books_superheroes() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = SuperheroesTest.test_package(context);
 	  TestLib.run_testpackage_async(testpackage);
   }
 
@@ -396,7 +477,16 @@ public final class AppTest {
     BaseTest.test_package(context),
     Age_of_steamTest.test_package(context),
     BookloaderTest.test_package(context),
+    CharactersTest.test_package(context),
+    GearTest.test_package(context),
     GettingstartedTest.test_package(context),
+    HorrorTest.test_package(context),
+    MedievalTest.test_package(context),
+    Modern_fantasyTest.test_package(context),
+    PrehistoryTest.test_package(context),
+    Pulp_fictionTest.test_package(context),
+    Space_and_timeTest.test_package(context),
+    SuperheroesTest.test_package(context),
     DamageTest.test_package(context),
     AppuiTest.test_package(context),
     BackgroundTest.test_package(context),

@@ -41,11 +41,13 @@
 <chapter name="John Carter on Mars">
 </chapter>
 <chapter name="Land of the Lost">
-	<item name="Pylon" />
-	<item name="Skylon" />
-	<unit name="Enik" />
-	<unit name="Pakuni" />
-	<unit name="Sleestak" />
+ <section name="Land of the Lost Units">
+	 <unit name="Pylon" />
+	 <unit name="Skylon" />
+	 <unit name="Enik" />
+	 <unit name="Pakuni" />
+	 <unit name="Sleestak" />
+ </section>
 </chapter>
 <chapter name="Lost Continent">
 </chapter>

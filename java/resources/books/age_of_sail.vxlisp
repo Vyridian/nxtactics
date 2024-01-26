@@ -30,58 +30,41 @@
         "Age of Sail Cannons"
          (section
           :name "Age of Sail Cannons"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "item")
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2))))))))
+          :itemmap
+           (itemmap
+            :Chainshot
+             (item
+              :name "Chainshot"
+              :image "AgeOfSail/Cannon_Chainshot.jpg"
+              :summary "* Does no damage.  All [Hits] are [Disabled Tokens].  All [Critical Hits] are [Crippled Tokens].")
+            :Grapeshot
+             (item
+              :name "Grapeshot"
+              :image "AgeOfSail/Cannon_Grapeshot.jpg")
+            "Round shot"
+             (item
+              :name "Round shot"
+              :image "AgeOfSail/Cannon_Roundshot.jpg")
+            "140mm Field Culverin"
+             (item
+              :name "140mm Field Culverin"
+              :image "AgeOfSail/Culverin.jpg"
+              :summary "600,000J"
+              :classification "Cannon"
+              :length "4.5m"
+              :mass "2.2tons"
+              :muzzlevelocity "400m/s"
+              :range "450m")
+            "100mm Demi-culverin"
+             (item
+              :name "100mm Demi-culverin"
+              :image "AgeOfSail/Demi-culverin.jpg"
+              :classification "Cannon"
+              :length "3.4m"
+              :mass "1.5tons"
+              :muzzlevelocity "487m/s"
+              :range "300m"
+              :rof ".75/min")))))
     :Renaissance
      (chapter
       :name "Renaissance")
@@ -101,124 +84,58 @@
             "Treasure Fleet"
              (unit
               :name "Treasure Fleet"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Hvy. Naval Vessel")
-                  :severity 2))))
+              :classification "Hvy. Naval Vessel")
             "Spanish Caravel"
              (unit
               :name "Spanish Caravel"
               :image "AgeOfSail/SpanishCaravel.png"
+              :speed "15kph"
+              :classification "Med. Naval Vessel"
               :mass "150tons"
               :length "25m"
               :width "9m"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor"
+                  :front "30mm"
+                  :back "30mm"
+                  :side "30mm"
                   (msgblock
                    :msgs
                     (msglist
                      (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "front"
-                        :value "30mm")
-                      :severity 2)
-                     (msg
                       :code ":invalidkey"
                       :detail ":summary"
-                      :path "nx/tactics/base/unitskill"
+                      :path "nx/tactics/base/unitpower"
                       :severity 3)
                      (msg
                       :code ":invalidkey"
                       :detail ":7 inches (180 mm/30mm RHA)"
-                      :path "nx/tactics/base/unitskill"
-                      :severity 3))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "side"
-                           :value "30mm")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "back"
-                           :value "30mm")
-                         :severity 2))))))
+                      :path "nx/tactics/base/unitpower"
+                      :severity 3)))))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "3")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "ability")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Salvo
+                     (unitability
+                      :name "Salvo"))
+                  :unititemmap
+                   (unititemmap
+                    "100mm Demi-culverin"
+                     (unititem
+                      :name "100mm Demi-culverin"
+                      :number "20")))
                 :Seamanship
                  (unitskill
                   :name "Seamanship"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2)))))
+                  :level "4"))
               (msgblock
                :msgs
                 (msglist
@@ -227,33 +144,9 @@
                   :detail
                    (anymap
                     :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Med. Naval Vessel")
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :detail
-                      (anymap
-                       :type nx/tactics/base/unit
-                       :prop "speed"
-                       :value "15kph")
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :detail
-                      (anymap
-                       :type nx/tactics/base/unit
-                       :prop "crew"
-                       :value "20")
-                     :severity 2))))))
+                    :prop "crew"
+                    :value "20")
+                  :severity 2))))
             "Spanish Galleon"
              (unit
               :name "Spanish Galleon"
@@ -263,187 +156,81 @@
 they were sluggish, they weren't the easy target you would expect for they could carry heavy cannon which
 made attacking them difficult.  They had two to three decks.  Most had three masts.  Some galleons sported 4
 masts but these were an exception to the rule."
-              :unitskillmap
-               (unitskillmap
+              :classification "Hvy. Naval Vessel"
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor"
+                  :front "60mm"
+                  :back "60mm"
+                  :side "60mm"
                   (msgblock
                    :msgs
                     (msglist
                      (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "front"
-                        :value "60mm")
-                      :severity 2)
-                     (msg
                       :code ":invalidkey"
                       :detail ":summary"
-                      :path "nx/tactics/base/unitskill"
+                      :path "nx/tactics/base/unitpower"
                       :severity 3)
                      (msg
                       :code ":invalidkey"
                       :detail ":14 inches (360 mm/60mm RHA)"
-                      :path "nx/tactics/base/unitskill"
-                      :severity 3))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "side"
-                           :value "60mm")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "back"
-                           :value "60mm")
-                         :severity 2)))))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Hvy. Naval Vessel")
-                  :severity 2))))
+                      :path "nx/tactics/base/unitpower"
+                      :severity 3))))))
             "Spanish Man-O-War"
              (unit
               :name "Spanish Man-O-War"
               :image "AgeOfSail/SpanishManOWar.png"
+              :classification "Hvy. Naval Vessel"
               :mass "1000tons"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor"
+                  :front "60mm"
+                  :back "60mm"
+                  :side "60mm"
                   (msgblock
                    :msgs
                     (msglist
                      (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "front"
-                        :value "60mm")
-                      :severity 2)
-                     (msg
                       :code ":invalidkey"
                       :detail ":summary"
-                      :path "nx/tactics/base/unitskill"
+                      :path "nx/tactics/base/unitpower"
                       :severity 3)
                      (msg
                       :code ":invalidkey"
                       :detail ":14 inches (360 mm/60mm RHA)"
-                      :path "nx/tactics/base/unitskill"
-                      :severity 3))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "side"
-                           :value "60mm")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "back"
-                           :value "60mm")
-                         :severity 2))))))
+                      :path "nx/tactics/base/unitpower"
+                      :severity 3)))))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "ability")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "4"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Salvo
+                     (unitability
+                      :name "Salvo"))
+                  :unititemmap
+                   (unititemmap
+                    "100mm Demi-culverin"
+                     (unititem
+                      :name "100mm Demi-culverin"
+                      :number "100")))
                 :Seamanship
                  (unitskill
                   :name "Seamanship"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Hvy. Naval Vessel")
-                  :severity 2))))
+                  :level "4")))
             "Spanish Schooner"
              (unit
               :name "Spanish Schooner"
               :image "AgeOfSail/SpanishSchooner.png"
+              :classification "Med. Naval Vessel"
               :mass "80tons"
               :length "18m"
               :width "6m"
@@ -452,64 +239,22 @@ masts but these were an exception to the rule."
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "3")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "ability")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Salvo
+                     (unitability
+                      :name "Salvo"))
+                  :unititemmap
+                   (unititemmap
+                    "100mm Demi-culverin"
+                     (unititem
+                      :name "100mm Demi-culverin"
+                      :number "8")))
                 :Seamanship
                  (unitskill
                   :name "Seamanship"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Med. Naval Vessel")
-                  :severity 2))))))))
+                  :level "4")))))))
     "American Revolution"
      (chapter
       :name "American Revolution"
@@ -525,61 +270,41 @@ masts but these were an exception to the rule."
               :name "American Frigate"
               :image "AgeOfSail/AmericanFrigate.png"
               :titles "USS Constitution, Old Ironsides"
+              :speed "24kph"
+              :classification "Hvy. Naval Vessel"
               :mass "2200tons"
               :length "62m"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor"
+                  :front "88mm"
+                  :back "88mm"
+                  :side "88mm"
                   (msgblock
                    :msgs
                     (msglist
                      (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "front"
-                        :value "88mm")
-                      :severity 2)
-                     (msg
                       :code ":invalidkey"
                       :detail ":summary"
-                      :path "nx/tactics/base/unitskill"
+                      :path "nx/tactics/base/unitpower"
                       :severity 3)
                      (msg
                       :code ":invalidkey"
                       :detail ":21 inches (530 mm/88mm RHA)"
-                      :path "nx/tactics/base/unitskill"
-                      :severity 3))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "side"
-                           :value "88mm")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "back"
-                           :value "88mm")
-                         :severity 2))))))
+                      :path "nx/tactics/base/unitpower"
+                      :severity 3)))))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Salvo
+                     (unitability
+                      :name "Salvo"))
                   (msgblock
                    :msgs
                     (msglist
@@ -595,43 +320,7 @@ masts but these were an exception to the rule."
 20 x 32-pounder (15 kg) carronade
 2 x 24-pounder (11 kg) bow chasers"
                       :path "nx/tactics/base/unitskill"
-                      :severity 3))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "ability")
-                         :severity 2)))))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Hvy. Naval Vessel")
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :detail
-                      (anymap
-                       :type nx/tactics/base/unit
-                       :prop "speed"
-                       :value "24kph")
-                     :severity 2))))))))))
+                      :severity 3))))))))))
     "French Revolution"
      (chapter
       :name "French Revolution")

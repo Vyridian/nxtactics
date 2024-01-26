@@ -168,10 +168,10 @@
 		<unit name="Jaguar" />
 		<unit name="Leopard">
 			<titles>Panther, King Leopard - a [Large] Leopard with distinctive patterns of spots.</titles>
-			<skill name="Natural Weaponry" level="4">
+			<power name="Natural Weaponry" level="4">
 				<ability name="Neck Bite" />
 				<ability name="Pounce" />
-			</skill>
+			</power>
 			<skill name="Stealth" level="4">
 				<ability name="Sneak" />
 				<ability name="Stalk" />
@@ -353,19 +353,19 @@
 	</section>
 	<section name="Sharks">
 		<unit name="Great White Shark">
-			<skill name="Natural Weaponry">
+			<power name="Natural Weaponry">
 				<ability name="Jaws of Death" />
-			</skill>
-			<skill name="Senses">
+			</power>
+			<power name="Senses">
 				<ability name="Blood Scent" />
 				<ability name="Electromagnetic Vision" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Tiger Shark">
-			<skill name="Senses">
+			<power name="Senses">
 				<ability name="Blood Scent" />
 				<ability name="Electromagnetic Vision" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Other Marine">
@@ -404,9 +404,9 @@
 	</section>
 	<section name="Snakes">
 		<unit name="Anaconda">
-			<skill name="Natural Weaponry">
+			<power name="Natural Weaponry">
 				<ability name="Swallow Whole" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Asp">
 			<reference>Asps. Very dangerous. You go first. - Raiders of the Lost Ark</reference>
@@ -1136,19 +1136,19 @@ Yucca -- Transmutation, Protection, Purification
 			    * She is the only known Claymore to have taken the flesh and blood of a fellow Claymore rather than that of a Yoma, making her a 3/4 human and 1/4 Yoma, as opposed to 1/2 human and 1/2 Yoma. As such, she was considered weak and was given the last rank of 47.
 			    * Yoki Aura Detection - Like Teresa, Clare has the ability to see Yoki auras. This allows her to predict Yoki attacks against her and avoid them. The more powerful the Yoki enemy the easier it is to predict their actions.
 			</summary>
-			<skill name="Demon Soul">
+			<power name="Demon Soul">
 				<ability name="Demonic Defense" />
 				<ability name="Demonic Perception" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Miria">
 			<titles>Phantom Miria</titles>
 			<reference>
 			</reference>
-			<skill name="Demon Soul" />
-			<skill name="Hyper Speed">
+			<power name="Demon Soul" />
+			<power name="Hyper Speed">
 				<ability name="After Image" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Organization, The">
 			<summary>
@@ -1163,10 +1163,10 @@ Yucca -- Transmutation, Protection, Purification
 				* Skills - Teresa is so skillful, that she rarely activates her Yoki power to fight opponents.
 			    * Yoki Aura Detection - Like Clare who has taken her flesh, Teresa has the ability to see Yoki auras. This allows her to predict Yoki attacks against her and avoid them. The more powerful the Yoki enemy the easier it is to predict their actions.
 			</summary>
-			<skill name="Demon Soul">
+			<power name="Demon Soul">
 				<ability name="Demonic Defense" />
 				<ability name="Demonic Perception" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Yoma">
 			<summary>
@@ -1532,8 +1532,8 @@ Yucca -- Transmutation, Protection, Purification
 			</summary>
 			<skill name="Communications" />
 			<skill name="Espionage" />
-			<skill name="Illusion" />
 			<skill name="Persuasion" />
+			<power name="Illusion" />
 		</unit>
 		<unit name="Redcap">
 			<summary>
@@ -1542,9 +1542,9 @@ Yucca -- Transmutation, Protection, Purification
 				* Redcaps are fierce in combat and use their flat teeth to deliver hideous, crushing wounds. They have a special ability to be able to eat enormous quantities of almost anything.
 				* Redcaps are said to murder travelers who stray into their homes and dye their hats with their victims' blood (from which they get their name).
 			</summary>
-			<skill name="Natural Weaponry">
+			<power name="Natural Weaponry">
 				<ability name="Jaws of Death" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Satyr">
 			<titles>Faun</titles>
@@ -1556,10 +1556,10 @@ Yucca -- Transmutation, Protection, Purification
 				* Personality - Satyrs are roguish fae. They speak in riddles and satisfy every lust with abandon. They have little restraint and will act impulsively most of the time. They are shamelessly forward, have fantastic stamina, and are notorious lovers of wine, women, music, drinking, wrestling, bragging, and are ready for every physical pleasure. They roam to the music of pipes and love to dance with the [Nymph]s (with whom they are obsessed, and whom they often pursue). Rarely they will go on raids into villages for women and booty.
 				* Passion's Curse - Being impulsive, Satyrs are subject to rapid mood swings especially when drunk and
 			</summary>
-			<skill name="Natural Weaponry">
+			<power name="Natural Weaponry">
 				<ability name="Bull Rush" />
-			</skill>
-			<skill name="Aim">
+			</power>
+			<skill name="Ranged">
 				<item name="Short Bow" />
 			</skill>
 			<skill name="Performance">
@@ -1752,15 +1752,15 @@ Yucca -- Transmutation, Protection, Purification
 			<reference>
 				* I don't believe I require a menu. - Tahm Kench, Runeterra
 			</reference>
-			<skill name="Natural Weaponry">
+			<power name="Natural Weaponry">
 				<ability name="Swallow Whole" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Poison Krokan">
-			<skill name="Venomous" />
+			<power name="Venomous" />
 		</unit>
 		<unit name="Krokan Chemist">
-			<skill name="Alchemy" />
+			<power name="Alchemy" />
 		</unit>
 		<unit name="Krokan Shaman" />
 		<unit name="Krokan Skirmisher" />
@@ -2175,9 +2175,9 @@ Yucca -- Transmutation, Protection, Purification
 				* Lightning Immunity
 				* If forged into armor, their scales absorb electricity while their hide protects the wearer from that same electricity. Scales can also be used as alchemical batteries and magical focuses.
 			</summary>
-			<skill name="Electric Powers">
+			<power name="Electricity">
 				<ability name="Absorb Electricity" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Underdragon">
 			<titles>Corpse Dragon, Skeletal Dragon, Necrodragon, Undead Dragon, Zombie Dragon</titles>
@@ -2226,8 +2226,8 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* Greater Air Elementals are enormous creatures that can fill the sky. They appear as cloudbanks or can be completely invisible depending on their mood. They have complete mastery over the Air, can perform any Air Power at maximum ability and can cancel any other being attempting to use Air.
 			</summary>
-			<skill name="Air" level="20">
-			</skill>
+			<power name="Air" level="20">
+			</power>
 		</unit>
 		<unit name="Jinn">
 			<titles>Djinn</titles>
@@ -2252,8 +2252,8 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* Greater Earth Elementals are enormous creatures that can appear as a mountain or a range of hills. They have complete mastery over the Earth, can perform any Earth Power at maximum ability and can cancel any other being attempting to use Earth.
 			</summary>
-			<skill name="Earth Powers" level="20">
-			</skill>
+			<power name="Earth" level="20">
+			</power>
 		</unit>
 		<unit name="Earth Gnome">
 		</unit>
@@ -2282,8 +2282,8 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* Greater Fire Elementals are enormous creatures that can appear as a lava pit or a forest fire. They have complete mastery over the Fire, can perform any Fire Power at maximum ability and can cancel any other being attempting to use Fire.
 			</summary>
-			<skill name="Fire Powers" level="20">
-			</skill>
+			<power name="Fire" level="20">
+			</power>
 		</unit>
 		<unit name="Flame Salamander">
 			<titles>Lava Lizard</titles>
@@ -2343,8 +2343,8 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* Greater Water Elementals are enormous creatures that can appear as a lake, a whirlpool, or a tidal wave. They have complete mastery over the Water, can perform any Water Power at maximum ability and can cancel any other being attempting to use Fire.
 			</summary>
-			<skill name="Water Powers" level="20">
-			</skill>
+			<power name="Water" level="20">
+			</power>
 		</unit>
 		<unit name="Water Sprite">
 		</unit>
@@ -2948,7 +2948,7 @@ Yucca -- Transmutation, Protection, Purification
 			* The largest of gnolls can grow to the size of an ogre.
 		</summary>
 		<unit name="Gnoll Axeman" image="Fantasy/Gnoll_Axeman.png">
-			<skill name="Armor">
+			<skill name="Defense">
 				<item name="Shield" />
 			</skill>
 			<skill name="Melee">
@@ -2959,7 +2959,7 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* Gnoll leadership is determined through intimidation and power. Gnoll leaders are usually the largest and strongest of their breed. Like bull walruses they maintain a harem of brides, so the position is coveted by upstarts. Challenges to a Chief's rule are usually not fatal, but the loser must put himself at the mercy of the victor. A good leader is expected to accept the subservient gesture, but some victors will commit a political faux pas to permanently remove a rival.
 			</summary>
-			<skill name="Armor">
+			<skill name="Defense">
 				<item name="Shield" />
 			</skill>
 			<skill name="Melee" level="7">
@@ -2967,7 +2967,7 @@ Yucca -- Transmutation, Protection, Purification
 			</skill>
 		</unit>
 		<unit name="Gnoll Pikeman">
-			<skill name="Armor">
+			<skill name="Defense">
 				<item name="Shield" />
 			</skill>
 			<skill name="Melee">
@@ -2975,7 +2975,7 @@ Yucca -- Transmutation, Protection, Purification
 			</skill>
 		</unit>
 		<unit name="Gnoll Skirmisher">
-			<skill name="Aim">
+			<skill name="Ranged">
 				<item name="Javelin" />
 			</skill>
 			<skill name="Hunting">
@@ -2983,7 +2983,7 @@ Yucca -- Transmutation, Protection, Purification
 			</skill>
 		</unit>
 		<unit name="Gnoll Slaver">
-			<skill name="Aim">
+			<skill name="Ranged">
 				<item name="Net" />
 				<item name="Whip" />
 			</skill>
@@ -3011,8 +3011,7 @@ Yucca -- Transmutation, Protection, Purification
 			<titles>Goblin Balloonisht, Goblin Flyer, Goblin Kite Rider</titles>
 		</unit>
 		<unit name="Goblin Artillerist">
-			<skill name="Military" level="3">
-				<specialty name="Siegecraft" />
+			<skill name="Siegecraft" level="3">
 				<item name="Ballista" />
 				<item name="Catapult" />
 			</skill>
@@ -3024,7 +3023,7 @@ Yucca -- Transmutation, Protection, Purification
 		<unit name="Goblin Champion" />
 		<unit name="Goblin Chirurgeon" />
 		<unit name="Goblin Hunter">
-			<skill name="Aim" level="2">
+			<skill name="Ranged" level="2">
 				<item name="Short Bow" />
 			</skill>
 		</unit>
@@ -3034,13 +3033,12 @@ Yucca -- Transmutation, Protection, Purification
 			<skill name="Mechanics" level="4">
 				<ability name="Mining" />
 			</skill>
-			<skill name="Military" level="2">
-				<specialty name="Siegecraft" />
+			<skill name="Siegecraft" level="2">
 				<ability name="Sapping" />
 			</skill>
 		</unit>
 		<unit name="Goblin Raider" image="Fantasy/Goblin_Raider.png">
-			<skill name="Aim" level="2">
+			<skill name="Ranged" level="2">
 				<item name="Javelin" />
 			</skill>
 			<skill name="Hunting" level="3">
@@ -3051,7 +3049,7 @@ Yucca -- Transmutation, Protection, Purification
 			</skill>
 		</unit>
 		<unit name="Goblin Scout" image="Fantasy/Goblin_Scout.png">
-			<skill name="Aim" level="2">
+			<skill name="Ranged" level="2">
 				<item name="Short Bow" />
 			</skill>
 			<skill name="Hunting" level="3">
@@ -3062,8 +3060,10 @@ Yucca -- Transmutation, Protection, Purification
 		<unit name="Goblin Shaman" />
 		<unit name="Goblin Soothsayer" />
 		<unit name="Goblin Tinker">
-			<skill name="Artifice" level="3">
+			<skill name="Mechanics" level="3">
 			</skill>
+			<power name="Artifice" level="3">
+			</power>
 		</unit>
 		<unit name="Goblin War Drummer" />
 	</section>
@@ -3105,7 +3105,7 @@ Yucca -- Transmutation, Protection, Purification
 			* Units - Scout, Spy, Light Spearmen, Light Wolf Cavalry
 		</summary>
 		<unit name="Kobold Slinger">
-			<skill name="Aim" level="1">
+			<skill name="Ranged" level="1">
 			</skill>
 			<skill name="Military" level="1">
 			</skill>
@@ -3292,9 +3292,9 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* It is said to resemble a cape buffalo, with its head always pointing downwards due to its great weight. Its stare or breath could either turn people into stone, or kill them.
 			</summary>
-			<skill name="Body Control">
+			<power name="Transform Other">
 				<ability name="Petrification" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Chimera" image="Fantasy/Chimera.png" />
 		<unit name="Chonchon" />
@@ -3312,12 +3312,12 @@ Yucca -- Transmutation, Protection, Purification
 		</unit>
 		<unit name="Gorgon" image="Fantasy/Medusa.png">
 			<titles>Medusa</titles>
-			<skill name="Aim">
+			<skill name="Ranged">
 				<item name="Short Bow" />
 			</skill>
-			<skill name="Body Control">
+			<power name="Transform Other">
 				<ability name="Petrification" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Hippogriff" />
 		<unit name="Hydra" />
@@ -3465,10 +3465,10 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* Able to fly, the Werecrows make terrific scouts and spies.  Their overwhelming curiousity is matched only by their tendency to gossip.
 			</summary>
-			<skill name="Natural Weaponry">
+			<power name="Natural Weaponry">
 				<ability name="Feather Blades" />
 				<ability name="Feather Knives" />
-			</skill>
+			</power>
 			<skill name="Hunting">
 				<ability name="Scouting" />
 			</skill>
@@ -3478,14 +3478,14 @@ Yucca -- Transmutation, Protection, Purification
 		</unit>
 		<unit name="Werespider">
 			<titles>Anasi, Arachne, Kumo</titles>
-			<skill name="Illusion">
+			<power name="Illusion">
 				<ability name="Dazzling Beauty" />
 				<ability name="Mirror Image" />
-			</skill>
-			<skill name="Venomous">
+			</power>
+			<power name="Venomous">
 				<ability name="Poison Bite" />
 				<ability name="Poison Spit" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Werewolf" image="ModernFantasy/Lycanthrope_Werewolf.png">
 			<titles>French/Old English: Loup-garou, Japanese: Ookami otoko</titles>
@@ -3529,7 +3529,7 @@ Yucca -- Transmutation, Protection, Purification
 			<skill name="Close Combat" level="6">
 				<specialty name="Grappling" />
 			</skill>
-			<skill name="Fire Powers" />
+			<power name="Fire" />
 		</unit>
 		<unit name="Dhampyr">
 			<summary>
@@ -3567,7 +3567,7 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily through themselves into raging fires. Death by fire is the only way to free their spirits and end their torment.
 			</summary>
-			<skill name="Cold" />
+			<power name="Cold" />
 		</unit>
 		<unit name="Ghost Ship">
 			<titles>Chaos Fleet, Skeleton Crew</titles>
@@ -3588,19 +3588,19 @@ Yucca -- Transmutation, Protection, Purification
 				* Morale - High
 				* Units - Mob
 			</summary>
-			<skill name="Natural Weaponry" level="3" />
-			<skill name="Special Ability" level="2">
+			<power name="Natural Weaponry" level="3" />
+			<power name="Special Ability" level="2">
 				<ability name="Cannibal" />
 				<ability name="Savage" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Lich" image="Fantasy/Lich.png">
 			<summary>
 				* A lich is a powerful animated corpse created by [Necromancy] through the use of [Lich Form]. The necromaner curses itself to a horrific undead existence in exchange for eternal 'life'. The lich retains most of the abilities of its former life and gains some additional undead powers as well.
 				* Because of their solitary nature, a lich cannot gain social skills nor increase their existing skills. Further these skills have a tendency to degrade the longer the lich exists.
 			</summary>
-			<skill name="Natural Weaponry" />
-			<skill name="Necromancy" />
+			<power name="Natural Weaponry" />
+			<power name="Necromancy" />
 		</unit>
 		<unit name="Mummy">
 			<reference>The Mummy</reference>
@@ -3608,9 +3608,9 @@ Yucca -- Transmutation, Protection, Purification
 				* Created by Ancient Arcane ritual, Mummies are extremely powerful and exceptionally difficult to destroy.
 				* Mummies regain Spirit by sucking the life from their victims through thier mouths, leaving only a descicated husk.
 			</summary>
-			<skill name="Necromancy">
+			<power name="Longevity">
 				<ability name="Reanimation" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Night Terror">
 			<titles>Night Hag</titles>
@@ -3654,42 +3654,42 @@ Yucca -- Transmutation, Protection, Purification
 			<skill name="Melee" level="6">
 				<item name="Longsword" />
 			</skill>
-			<skill name="Armor" level="4">
+			<skill name="Defense" level="4">
 				<item name="Plate Mail" />
 				<item name="Round Shield" />
 			</skill>
-			<skill name="Special Ability">
+			<skill name="Riding" />
+			<power name="Special Ability">
 				<ability name="Savage" />
 				<ability name="Skeletal" />
-			</skill>
-			<skill name="Riding" />
+			</power>
 		</unit>
 		<unit name="Skeleton">
 			<skill name="Melee" level="3">
 				<item name="Longsword" />
 			</skill>
-			<skill name="Armor" level="1">
+			<skill name="Defense" level="1">
 				<item name="Round Shield" />
 			</skill>
-			<skill name="Special Ability">
+			<power name="Special Ability">
 				<ability name="Mindless" />
 				<ability name="Savage" />
 				<ability name="Skeletal" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Skeleton Warrior">
 			<skill name="Melee" level="5">
 				<item name="Longsword" />
 			</skill>
-			<skill name="Armor" level="3">
+			<skill name="Defense" level="3">
 				<item name="Breast Plate" />
 				<item name="Round Shield" />
 			</skill>
-			<skill name="Special Ability">
+			<power name="Special Ability">
 				<ability name="Mindless" />
 				<ability name="Savage" />
 				<ability name="Skeletal" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Slayer Dead">
 			<titles>Murderous Dead, War Dead</titles>
@@ -3722,11 +3722,11 @@ Yucca -- Transmutation, Protection, Purification
 				* They act irrationally and attack all living creatures with no sense of self preservation.
 				* They have +2 Body, but because the do not protect themselves they suffer 2x criticals.
 			</summary>
-			<skill name="Natural Weaponry" level="2" />
-			<skill name="Special Ability">
+			<power name="Natural Weaponry" level="2" />
+			<power name="Special Ability">
 				<ability name="Mindless" />
 				<ability name="Savage" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Noncorporeal Undead">
@@ -3849,31 +3849,33 @@ Yucca -- Transmutation, Protection, Purification
 			<titles>Neophyte, Elder, Prince, Sheriff</titles>
 			<unit name="Brujah">
 				<titles>Bully, Bruiser</titles>
-				<skill name="Vampirism" />
-				<skill name="Strength" />
+				<power name="Vampirism" />
+				<power name="Strength" />
 			</unit>
 			<unit name="Gangrel">
 				<titles>Animal, Protector</titles>
-				<skill name="Vampirism" />
-				<skill name="Animalism" />
+				<power name="Vampirism" />
+				<power name="Animalism" />
 			</unit>
 			<unit name="Malkavian">
-				<titles>Jester, Maniac, Nutcase, Prankster, Psychotic</titles>
+				<titles>
+     Jester, Maniac, Nutcase, Prankster, Psychotic
+    </titles>
 				<summary>
 					* Cursed by Madness
 					* Malkalv - The philosophic, antedeluvian sire of their clan. When he was destroyed with the First City. his childer began to gain the signature Madness. Some say his spirit continues through his blood and connects his childer. Others propose the preposterous notion that Malkav was a an embraced Angel.
 					* Kinship - Unlike other tribes, the Malkavians have a natural understanding and kinship toward each other. It is rare that they outright betray one another.
 				</summary>
-				<skill name="Vampirism" />
-				<skill name="Dominiation" />
-				<skill name="Senses" />
-				<skill name="Madness" />
+				<power name="Vampirism" />
+				<power name="Dominiation" />
+				<power name="Senses" />
+				<power name="Madness" />
 				<skill name="Stealth" />
 			</unit>
 			<unit name="Nosferatu">
 				<titles>Sewer Rat</titles>
-				<skill name="Vampirism" />
-				<skill name="Invisibility" />
+				<power name="Vampirism" />
+				<power name="Invisibility" />
 				<skill name="Stealth" />
 			</unit>
 			<unit name="Toreador">
@@ -3889,10 +3891,10 @@ Yucca -- Transmutation, Protection, Purification
 					* Founder - It is said that the Clan's founder, Arikel was a mortal painter and/or sculptress and twin sister of Malkav in the First City. Famed throughout the lands for her work, after her Embrace she painted a mural on which the past, present and future of Kindred society was depicted. When Caine saw a terrible future for his race, he cursed her with the affliction that affects Toreador today – the art that she loved most dearly would now be her obsession and distraction above all things.
 					* Weakness - Fascination
 				</summary>
-				<skill name="Vampirism" />
-				<skill name="Quickness" />
-				<skill name="Senses" />
-				<skill name="Presence" />
+				<power name="Vampirism" />
+				<power name="Quickness" />
+				<power name="Senses" />
+				<power name="Presence" />
 			</unit>
 			<unit name="Tremere" image="ModernFantasy/Vampire_Tremere.png">
 				<titles>Blood Sorcerer, Broken Clan, Pyramid, Usurpers, Warlock, Witch</titles>
@@ -3900,21 +3902,21 @@ Yucca -- Transmutation, Protection, Purification
 					* The Tremere is the second youngest clan having appeared in the Dark Ages.
 					* History - The Tremere began as House Tremere, mages of the Order of Hermes named for their leader and founder, Tremere. At the end of the first millennium, the members of House Tremere realized the Hermetic arts were failing and found its immortality potions no longer working. House Tremere undertook numerous experiments, but it was Goratrix who devised a solution in his investigation of vampires. In 1022, Goratrix invited Tremere and six of the founder's closest advisers to participate in the completed ritual, which promised true immortality. Whether Goratrix knew what would happen is known only by him and, perhaps, Tremere, but at the completion of the ritual the participants fell unconscious and were reborn as vampires, their avatars destroyed and magical abilities lost. The mages had gained their immortality but lost the power they lived for. In time, the Tzimisce made war against House Tremere in retribution for the Fiends that had been made part of Goratrix's experiments. The Order of Hermes also became suspicious of diabolical practices being performed by the increasingly secretive House. In 1037 Tremere gathered the seven newly-made Cainites and forced the blood bond upon them. He then declared to them that House Tremere would be restructured with a new pyramid hierarchy, placing himself at the top as Primus of House and clan Tremere and his seven closest followers forming the Inner Council of Seven directly under him. They would slowly begin Embracing the rest of the House, with each initiate being bound to the Inner Council to ensure their loyalty. In time, all members of House Tremere would die or become vampires. While Tremere and Etrius pursued their own research throughout Europe in converting the hermetic arts into Thaumaturgy, Goratrix once again returned to his laboratories with his apprentices at hand. After years of experimentation on captured Tzimisce, Nosferatu, and Gangrel, he succeeded in creating a Gargoyle in 1121, and by 1125 the hybrids were serving as shock troops against the Fiends. Nevertheless, the Tremere found themselves third-class citizens among the undead. Whatever boldness Tremere had shown in entering the night was ignored by the staunchly traditionalist clans, and they were often forced from cities by princes who did not look kindly on their presumption. As he and Etrius rapidly acquired more vampiric lore they discovered the history of Caine and the Antediluvians, as well as the benefits of diablerie. Seeking to establish themselves as a clan proper, the Tremere sought a clan founder to diablerize and settled on Saulot, the enigmatic founder of the Salubri clan. In 1133, Tremere and the Inner Council discovered Saulot's tomb in the Anatolian desert. Tremere diablerized the Antediluvian and promptly entered torpor, leaving the Inner Council to lead the clan and destroy the remaining Salubri. As with everything else that the Tremere had done to this point, the result was a mixed blessing. The Tremere were entrenched in many Cainite courts, their services as mages making them indispensable to princes across Europe. They were now accepted as one of the Low Clans, albeit considered usurpers, distrusted warlocks, and known diablerists. In the early years of the 21st century, the Intellegence agencies of the United States managed to gain access to SchreckNet and gained firsthand knowledge of the existence of a race of undead bloodsuckers that were spread in all corners of the world. Sharing their knowledge with other intelligence agencies, the united secret services contacted the Vatican, whom they knew to have experience fighting the undead. After years of careful research, the Second Inquisition had targeted Vienna as the 'capital of vampires' and prepared a strike against their headquarters. In 2008, a united USSOCOM and Vatican ESOG force stormed the Vienna Chantry of Clan Tremere and destroyed it, blaming it to an ISIS terror attack to the public. London, Las Vegas, Paris, and Marseilles were largely cleared of vampiric activity, with numerous captured vampires being placed in black sites and experimented upon to discover their weaknesses. The Inner Council of Seven were slain and their Blood Bonds shattered. Since then the once monolithic Tremere structure has completely fallen apart.
 				</summary>
-				<skill name="Vampirism" />
-				<skill name="Blood Magic" />
+				<power name="Vampirism" />
+				<power name="Blood Magic" />
 			</unit>
 			<unit name="Ventrue">
 				<titles>Bluebloods, Manipulator, Know-it-all</titles>
-				<skill name="Vampirism" />
-				<skill name="Domination" />
-				<skill name="Toughness" />
+				<power name="Vampirism" />
+				<power name="Domination" />
+				<power name="Toughness" />
 				<skill name="Influence" />
 			</unit>
 		</section>
 		<section name="Vampires, Sabbat">
 			<unit name="Lasombra" image="ModernFantasy/Vampire_Lasombra.png">
 				<titles>Dark Priest</titles>
-				<skill name="Vampirism" />
+				<power name="Vampirism" />
 				<skill name="Influence" />
 			</unit>
 			<unit name="Tzimisce" image="ModernFantasy/Vampire_Tzimisce.png">
@@ -3932,15 +3934,15 @@ Yucca -- Transmutation, Protection, Purification
 					* The Tzimisce's extensive use of Fleshcraft upon themselves, their servants, and their foes, have made them the most bizarre and alien of the Vampire clans. Fortunately, they are solitary by nature preferring isolated locale to practice their horrid techniques on their hapless prey.
 					* Examples: Backroom Surgeon, Carny Folk, Dracula, Inquisitor, Kali, Mortician, Nazi Scientist, Tatoo Artist, Toturer, Vivisectionist
 				</summary>
-				<skill name="Vampirism" />
-				<skill name="Fleshcraft" />
+				<power name="Vampirism" />
+				<power name="Fleshcraft" />
 				<skill name="Intimidation" />
 			</unit>
 		</section>
 		<section name="Vampires, Independent">
 			<unit name="Kuei-Jin" />
 			<unit name="Setite">
-				<skill name="Vampirism" />
+				<power name="Vampirism" />
 			</unit>
 		</section>
 	</section>

@@ -115,29 +115,12 @@ plague and we are the cure. - Agent Smith")))))
                 "Close Combat"
                  (unitskill
                   :name "Close Combat"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "8")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "specialty")
-                         :severity 2))))))))
+                  :level "8"
+                  :unitspecialtymap
+                   (unitspecialtymap
+                    :Boxing
+                     (unitspecialty
+                      :name "Boxing")))))
             "M. Bison"
              (unit
               :name "M. Bison"
@@ -150,17 +133,7 @@ this time may be a good time to pray to Him!"
                 "Close Combat"
                  (unitskill
                   :name "Close Combat"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "9")
-                      :severity 2))))))
+                  :level "9")))
             :Sagat
              (unit
               :name "Sagat"
@@ -170,39 +143,17 @@ this time may be a good time to pray to Him!"
                 "Close Combat"
                  (unitskill
                   :name "Close Combat"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "8")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "specialty")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "ability")
-                         :severity 2))))))))
+                  :level "8"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Knee Strike"
+                     (unitability
+                      :name "Knee Strike"))
+                  :unitspecialtymap
+                   (unitspecialtymap
+                    "Muay Thai"
+                     (unitspecialty
+                      :name "Muay Thai")))))
             :Vega
              (unit
               :name "Vega"
@@ -212,29 +163,12 @@ this time may be a good time to pray to Him!"
                 "Close Combat"
                  (unitskill
                   :name "Close Combat"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "8")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "specialty")
-                         :severity 2))))))))))))
+                  :level "8"
+                  :unitspecialtymap
+                   (unitspecialtymap
+                    :Ninjutsu
+                     (unitspecialty
+                      :name "Ninjutsu")))))))))
     "World of Darkness"
      (chapter
       :name "World of Darkness"

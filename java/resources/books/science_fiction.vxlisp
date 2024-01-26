@@ -170,33 +170,19 @@ two. Including this one. - Vasquez and Gorman, Aliens")
              (unit
               :name "Captain Jack Harkness"
               :image "DrWho/CaptainJackHarkness.png"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Longevity
-                 (unitskill
+                 (unitpower
                   :name "Longevity"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidtagfound"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :tag "ability")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "ability")
-                         :severity 2))))))))
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Eternal Youth"
+                     (unitability
+                      :name "Eternal Youth")
+                    "True Immortality"
+                     (unitability
+                      :name "True Immortality")))))
             "Clara Oswald"
              (unit
               :name "Clara Oswald"
@@ -212,13 +198,13 @@ two. Including this one. - Vasquez and Gorman, Aliens")
               :image "DrWho/Dalek.png"
               :reference "Imagine you were dying. Imagine you were afraid and a long way from home and in terrible pain. And just when you thought it couldn't get worse, you looked up and saw the face of the devil himself. Hello Dalek - The Doctor"
               :summary "The Daleks odd form may be explained by their personal shielding. Weapons and sensors are placed on stalks so that they may protrude from the shield. This prevents their shield from interfering with their equipment, but it also leaves these devices vulnerable."
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor")
                 :Shielding
-                 (unitskill
+                 (unitpower
                   :name "Shielding")))
             :Davros
              (unit
@@ -357,37 +343,22 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
 energy to a considerable distance.  This gives the weapon a tremendous firing range more than twice that of
 a Wave Motion Gun."
               :titles "Magna Flame Gun"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"))
               :unitskillmap
                (unitskillmap
-                :Armor
-                 (unitskill
-                  :name "Armor")
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))))))))
+                  :level "5"
+                  :unititemmap
+                   (unititemmap
+                    "Magna Flame Gun"
+                     (unititem
+                      :name "Magna Flame Gun")))))))))
     "Space Opera"
      (chapter
       :name "Space Opera"
@@ -545,10 +516,10 @@ distinctiveness to our own. Your culture will adapt to service us. Resistance is
 First Contact"
               :mass "90Mtons"
               :length "3km"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Shielding
-                 (unitskill
+                 (unitpower
                   :name "Shielding"
                   (msgblock
                    :msgs
@@ -556,27 +527,22 @@ First Contact"
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
-                      :path "nx/tactics/base/unitskill"
+                      :path "nx/tactics/base/unitpower"
                       :severity 3)
                      (msg
                       :code ":invalidkey"
                       :detail ":Adaptive Shielding total capacity 5,850,900TJ"
-                      :path "nx/tactics/base/unitskill"
-                      :severity 3))))
+                      :path "nx/tactics/base/unitpower"
+                      :severity 3)))))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "4"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -620,12 +586,13 @@ Borg."
 * Dampening Field
 * Can consume a planet in a day"
               :titles "Planet Killer"
+              :classification "Hvy. Spacecraft"
               :mass "4x10^23tons"
               :length "2.7km"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor"
                   (msgblock
                    :msgs
@@ -633,159 +600,90 @@ Borg."
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
-                      :path "nx/tactics/base/unitskill"
+                      :path "nx/tactics/base/unitpower"
                       :severity 3)
                      (msg
                       :code ":invalidkey"
                       :detail ":Solid Neutronium - Hyper Dense Neutron Star Material"
-                      :path "nx/tactics/base/unitskill"
-                      :severity 3))))
+                      :path "nx/tactics/base/unitpower"
+                      :severity 3)))))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2)))))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Hvy. Spacecraft")
-                  :severity 2))))
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "Anti-Proton Beam"
+                     (unititem
+                      :name "Anti-Proton Beam")))))
             "Klingon Bird of Prey"
              (unit
               :name "Klingon Bird of Prey"
               :image "StarTrek/Klingon_BirdOfPrey.png"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor")
                 :Shielding
-                 (unitskill
+                 (unitpower
                   :name "Shielding")
+                :Weaponry
+                 (unitpower
+                  :name "Weaponry"
+                  :unititemmap
+                   (unititemmap
+                    "Disruptor Bank"
+                     (unititem
+                      :name "Disruptor Bank")
+                    "Photon Torpedo"
+                     (unititem
+                      :name "Photon Torpedo")))
+                :Invisibility
+                 (unitpower
+                  :name "Invisibility"
+                  :unititemmap
+                   (unititemmap
+                    "Cloaking Device"
+                     (unititem
+                      :name "Cloaking Device"))))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
-                :Stealth
-                 (unitskill
-                  :name "Stealth"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidtagfound"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :tag "item")
-                      :severity 2))))))
+                  :level "4")))
             "Klingon Cruiser"
              (unit
               :name "Klingon Cruiser"
               :image "StarTrek/Klingon_Cruiser.png"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor")
                 :Shielding
-                 (unitskill
+                 (unitpower
                   :name "Shielding")
+                :Weaponry
+                 (unitpower
+                  :name "Weaponry"
+                  :unititemmap
+                   (unititemmap
+                    "Disruptor Bank"
+                     (unititem
+                      :name "Disruptor Bank")
+                    "Photon Torpedo"
+                     (unititem
+                      :name "Photon Torpedo"))))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))))
+                  :level "5")))
             "Klingon Warrior"
              (unit
               :name "Klingon Warrior"
@@ -810,50 +708,28 @@ Borg."
              (unit
               :name "Romulan Warbird"
               :image "StarTrek/Romulan_Warbird.png"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor")
                 :Shielding
-                 (unitskill
-                  :name "Shielding")
+                 (unitpower
+                  :name "Shielding"))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))))
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "Disruptor Bank"
+                     (unititem
+                      :name "Disruptor Bank")
+                    "Photon Torpedo"
+                     (unititem
+                      :name "Photon Torpedo")))))
             "Species 8472"
              (unit
               :name "Species 8472"
@@ -884,43 +760,16 @@ Borg."
                 :Firearms
                  (unitskill
                   :name "Firearms"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "Blaster Rifle"
+                     (unititem
+                      :name "Blaster Rifle")))
                 :Piloting
                  (unitskill
                   :name "Piloting"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2))))))
+                  :level "5")))
             "Han Solo"
              (unit
               :name "Han Solo"
@@ -933,43 +782,16 @@ it for the money. - Han Solo, Star Wars"
                 :Firearms
                  (unitskill
                   :name "Firearms"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "5"
+                  :unititemmap
+                   (unititemmap
+                    "Blaster Pistol"
+                     (unititem
+                      :name "Blaster Pistol")))
                 :Piloting
                  (unitskill
                   :name "Piloting"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "8")
-                      :severity 2))))))
+                  :level "8")))
             "Luke Skywalker"
              (unit
               :name "Luke Skywalker"
@@ -979,69 +801,25 @@ it for the money. - Han Solo, Star Wars"
                 :Melee
                  (unitskill
                   :name "Melee"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "7")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "7"
+                  :unititemmap
+                   (unititemmap
+                    :Lightsaber
+                     (unititem
+                      :name "Lightsaber")))
                 :Firearms
                  (unitskill
                   :name "Firearms"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "3")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "3"
+                  :unititemmap
+                   (unititemmap
+                    "Blaster Pistol"
+                     (unititem
+                      :name "Blaster Pistol")))
                 :Piloting
                  (unitskill
                   :name "Piloting"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "6")
-                      :severity 2))))))
+                  :level "6")))
             "Ben Kenobi"
              (unit
               :name "Ben Kenobi"
@@ -1051,43 +829,16 @@ it for the money. - Han Solo, Star Wars"
                 :Melee
                  (unitskill
                   :name "Melee"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "8")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "8"
+                  :unititemmap
+                   (unititemmap
+                    :Lightsaber
+                     (unititem
+                      :name "Lightsaber")))
                 :Piloting
                  (unitskill
                   :name "Piloting"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "6")
-                      :severity 2))))))
+                  :level "6")))
             "Princess Leia Organa"
              (unit
               :name "Princess Leia Organa"
@@ -1098,29 +849,12 @@ it for the money. - Han Solo, Star Wars"
                 :Firearms
                  (unitskill
                   :name "Firearms"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))))
+                  :level "5"
+                  :unititemmap
+                   (unititemmap
+                    "Blaster Pistol"
+                     (unititem
+                      :name "Blaster Pistol")))))
             :Yoda
              (unit
               :name "Yoda"
@@ -1130,29 +864,12 @@ it for the money. - Han Solo, Star Wars"
                 :Melee
                  (unitskill
                   :name "Melee"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "10")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))))))))
+                  :level "10"
+                  :unititemmap
+                   (unititemmap
+                    :Lightsaber
+                     (unititem
+                      :name "Lightsaber")))))))))
     "Time Travellers"
      (chapter
       :name "Time Travellers"

@@ -143,7 +143,7 @@
 			<summary>
 				Half-Elven Thief
 			</summary>
-			<skill name="Armor" level="5">
+			<skill name="Defense" level="5">
 				<item name="Leather Armor" />
 			</skill>
 			<skill name="Melee" level="7">
@@ -151,7 +151,7 @@
 				<item name="Longsword" />
 				<item name="Dagger" />
 			</skill>
-			<skill name="Aim" level="7">
+			<skill name="Ranged" level="7">
 				<item name="Composite Bow" />
 			</skill>
 			<skill name="Mechanics" level="9">
@@ -169,11 +169,13 @@
 			<skill name="Melee" level="5">
 				<item name="Quarterstaff" />
 			</skill>
-			<skill name="Aim" level="5">
+			<skill name="Ranged" level="5">
 				<item name="Dart" />
 			</skill>
-			<skill name="Wizardry" level="11">
+			<skill name="Physical Powers" level="10">
 			</skill>
+			<power name="Wizardry" level="11">
+			</power>
 		</unit>
 		<unit name="Hetman Undrig">
 			<summary>
@@ -182,7 +184,7 @@
 				* Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.
 				* The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote.
 			</summary>
-			<skill name="Armor" level="5">
+			<skill name="Defense" level="5">
 				<item name="Leather Armor" />
 				<item name="Shield" />
 			</skill>
@@ -200,10 +202,10 @@
 				<item name="Longsword" />
 				<item name="Hand Axe" />
 			</skill>
-			<skill name="Aim" level="7">
+			<skill name="Ranged" level="7">
 				<item name="Longbow" />
 			</skill>
-			<skill name="Armor">
+			<skill name="Defense">
 				<item name="Chain Mail Armor" />
 				<item name="Shield" />
 			</skill>
@@ -213,10 +215,9 @@
 				* Half-Elven Bard
 				* Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.
 				* Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).
-				* History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather
-				awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure.
+				* History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure.
 			</summary>
-			<skill name="Armor" level="6">
+			<skill name="Defense" level="6">
 				<item name="Chain Mail Armor" />
 				<item name="Leather Armor" />
 				<item name="Round Shield" />
@@ -242,14 +243,16 @@
 					</summary>
 				</item>
 			</skill>
-			<skill name="Aim" level="7">
+			<skill name="Ranged" level="7">
 				<item name="Composite Bow" />
 				<item name="Throwing Knife" />
 			</skill>
-			<skill name="Empathy" level="12">
+			<skill name="Psychic Powers" level="10">
+			</skill>
+			<power name="Empathy" level="12">
 				<ability name="Demoralize" />
 				<ability name="Inspiration" />
-			</skill>
+			</power>
 			<skill name="Performance" level="12">
 				<specialty name="Music" />
 				<ability name="Storytelling" />
@@ -257,13 +260,6 @@
 				<item name="Rebec" />
 				<item name="Horn" />
 				<item name="Pipes" />
-			</skill>
-			<skill name="Assassination" level="5">
-				<ability name="Poisoned Arrow" />
-				<ability name="Poisoned Blade" />
-				<ability name="Poisoned Dust" />
-				<ability name="Prepare Poison" />
-				<item name="Narcotic Poison" />
 			</skill>
 			<skill name="Deception" level="6">
 				<specialty name="Trickery" />
@@ -277,13 +273,15 @@
 			</skill>
 			<skill name="Stealth" level="9">
 				<ability name="Backstab" />
+				<ability name="Hide in Shadows" />
+				<ability name="Move Silently" />
 			</skill>
 		</unit>
 		<unit name="Sarak Ishimar" image="Fantasy/SarakIshimar.png">
 			<summary>
 				Human Cleric
 			</summary>
-			<skill name="Armor" level="8">
+			<skill name="Defense" level="8">
 				<item name="Plate Mail" />
 				<item name="Shield" />
 			</skill>
@@ -292,16 +290,18 @@
 				<item name="Morningstar" />
 				<item name="Holy Water Sprinkler" />
 			</skill>
-			<skill name="Faith" level="8">
+			<skill name="Physical Powers" level="8">
 			</skill>
-			<skill name="Invocation" level="10">
-			</skill>
+			<power name="Faith" level="8">
+			</power>
+			<power name="Invocation" level="10">
+			</power>
 		</unit>
 		<unit name="Stam Domindor" image="Fantasy/Stam.png">
 			<summary>
 				Dwarven Warrior
 			</summary>
-			<skill name="Armor" level="10">
+			<skill name="Defense" level="10">
 				<item name="Plate Mail" />
 				<item name="Shield" />
 			</skill>
@@ -309,7 +309,7 @@
 				<item name="Longsword" />
 				<item name="Battle Axe" />
 			</skill>
-			<skill name="Aim" level="7">
+			<skill name="Ranged" level="7">
 				<item name="Short Bow" />
 			</skill>
 		</unit>
@@ -349,19 +349,19 @@
 					<summary>Ravage</summary>
 				</item>
 			</skill>
-			<skill name="Conviction" level="10">
-			</skill>
+			<power name="Conviction" level="10">
+			</power>
 		</unit>
 		<unit name="Sarani Kalea">
 			<titles>Princess Kalea, High Priestess of Kali</titles>
 			<summary>
 				Human Priestess
 			</summary>
-			<skill name="Conviction">
-			</skill>
-			<skill name="Invocation" level="16">
+			<power name="Conviction">
+			</power>
+			<power name="Invocation" level="16">
 				<ability name="Aspecting" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 </chapter>
@@ -2091,9 +2091,6 @@
 			</summary>
 		</place>
 	</section>
-<!--
-<row title="Nephilim" />
--->
 	<section name="Higher Realms">
 		<titles>Over Realms</titles>
 		<place name="Celestial Realm">

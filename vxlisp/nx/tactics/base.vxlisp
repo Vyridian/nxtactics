@@ -70,11 +70,14 @@
               speed           : rating
               shadow          : rating
               beast           : rating
+              classification  : string
+              length          : string
               mass            : string
+              muzzlevelocity  : string
+              range           : string
+              rof             : string
               rolemap         : rolemap
-              unitpowermap    : unitpowermap
-              unitskillmap    : unitskillmap
-              unitweaknessmap : unitweaknessmap])
+              value           : string])
 
 (type itemmap : map
  :allowtypes [item])
@@ -122,6 +125,7 @@
  :allowtypes [role])
 
 (type rule : struct
+ :properties [classification : string]
  :traits     [card])
 
 (type rulemap : map
@@ -186,17 +190,19 @@
 
 (type unit : struct
  :traits     [card]
- :properties [body            : rating
-              mind            : rating
-              will            : rating
-              speed           : rating
-              shadow          : rating
-              beast           : rating
-              demeanor        : rating
-              nature          : rating
+ :properties [body            : string
+              mind            : string
+              will            : string
+              speed           : string
+              shadow          : string
+              beast           : string
+              demeanor        : string
+              nature          : string
+              classification  : string
               mass            : string
               height          : string
               length          : string
+              value           : string
               width           : string
               damagelist      : damagelist
               rolemap         : rolemap
@@ -204,12 +210,19 @@
               unitskillmap    : unitskillmap
               unitweaknessmap : unitweaknessmap])
 
-(type unitability : struct)
+(type unitability : struct
+ :properties [name  : string
+              image : string])
 
 (type unitabilitymap : map
  :allowtypes [unitability])
 
-(type unititem : struct)
+(type unititem : struct
+ :properties [name   : string
+              image  : string
+              facing : string
+              number : string
+              value  : string])
 
 (type unititemmap : map
  :allowtypes [unititem])
@@ -218,19 +231,25 @@
  :allowtypes [unit])
 
 (type unitpower : struct
- :properties [name         : string
-              level        : rating
-              power        : power
-              abilitymap   : unitabilitymap
-              itemmap      : unititemmap
-              specialtymap : unitspecialtymap])
+ :properties [name             : string
+              level            : string
+              power            : power
+              front            : string
+              back             : string
+              over             : string
+              under            : string
+              side             : string
+              strength         : string
+              unitabilitymap   : unitabilitymap
+              unititemmap      : unititemmap
+              unitspecialtymap : unitspecialtymap])
 
 (type unitpowermap : map
  :allowtypes [unitpower])
 
 (type unitskill : struct
  :properties [name             : string
-              level            : rating
+              level            : string
               skill            : skill
               unitabilitymap   : unitabilitymap
               unititemmap      : unititemmap
@@ -239,7 +258,9 @@
 (type unitskillmap : map
  :allowtypes [unitskill])
 
-(type unitspecialty : struct)
+(type unitspecialty : struct
+ :properties [name  : string
+              image : string])
 
 (type unitspecialtymap : map
  :allowtypes [unitspecialty])

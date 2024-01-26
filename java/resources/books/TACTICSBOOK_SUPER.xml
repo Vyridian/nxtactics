@@ -87,16 +87,9 @@
 		<unit name="Supergirl" image="Superheroes/Supergirl.png" />
 		<unit name="Superman" image="Superheroes/Superman.png">
 			<reference>
-				Spider-Man is actually Peter Parker.  When that character wakes up in the morning, he's Peter Parker.  He has
-				to put on a costume to become Spider-Man.  And it is in that characteristic Superman stands alone.  Superman
-				didn't become Superman.  Superman was born Superman.  When Superman wakes up in the morning, he's Superman.
-				His alter ego is Clark Kent.  His outfit with the big red 'S', that's the blanket he was wrapped in as a baby
-				when the Kents found him.  Those are his clothes.  What Kent wears - the glasses, the business suit - that's
-				the costume.  That's the costume Superman wears to blend in with us.  Clark Kent is how Superman views us.
-				And what are the characteristics of Clark Kent.  He's weak... he's unsure of himself... he's a coward.  Clark
-				Kent is Superman's critique on the whole human race. - Bill, Kill Bill Vol 2.
+				* Spider-Man is actually Peter Parker. When that character wakes up in the morning, he's Peter Parker. He has to put on a costume to become Spider-Man. And it is in that characteristic Superman stands alone. Superman didn't become Superman. Superman was born Superman. When Superman wakes up in the morning, he's Superman. His alter ego is Clark Kent. His outfit with the big red 'S', that's the blanket he was wrapped in as a baby when the Kents found him. Those are his clothes.  What Kent wears - the glasses, the business suit - that's the costume. That's the costume Superman wears to blend in with us. Clark Kent is how Superman views us. And what are the characteristics of Clark Kent. He's weak... he's unsure of himself... he's a coward. Clark Kent is Superman's critique on the whole human race. - Bill, Kill Bill Vol 2.
 			</reference>
-			<skill name="Strength" strength="66x10^18tons" />
+			<power name="Strength" strength="66x10^18tons" />
 		</unit>
 		<unit name="Wonder Woman" image="Superheroes/WonderWoman.png" />
 	</section>
@@ -137,7 +130,7 @@
 		<item name="Senzu Bean" />
 	</section>
 	<section name="Dragonball Rules">
-		<skill name="Zenkai Attacks">
+		<power name="Zenkai Attacks">
 			<titles>Final Power</titles>
 			<ability name="Destructive Wave">
 				<summary>
@@ -161,8 +154,8 @@
 			</ability>
 			<ability name="Kamehameha Wave" image="Units/Superheroes/Kamehameha.jpg" />
 			<ability name="Spirit Bomb" />
-		</skill>
-		<skill name="Zenkai Defense">
+		</power>
+		<power name="Zenkai Defense">
 			<ability name="Energy Block" />
 			<ability name="Energy Duel" />
 			<ability name="Energy Defense" />
@@ -173,8 +166,8 @@
 					By screaming very loud you disperse several weaker Ki attacks.
 				</summary>
 			</ability>
-		</skill>
-		<skill name="Zenkai Powers">
+		</power>
+		<power name="Zenkai">
 			<ability name="Blinding Speed" />
 			<ability name="Compare Power Levels">
 				<summary>
@@ -273,8 +266,8 @@
 					* This is equal to some of the Ginyu Force (Krillin vs. Guildo)
 				</summary>
 			</ability>
-		</skill>
-		<skill name="Cell Android">
+		</power>
+		<power name="Cell Android">
 			<ability name="Imperfect Cell">
 				<summary>
 					* Combat related skills raise to level 28
@@ -299,8 +292,8 @@
 					* Equal to Super Saiyan 2 (100% Perfect Cell vs Super Saiyan 2 Gohan)
 				</summary>
 			</ability>
-		</skill>
-		<skill name="Frieza Race">
+		</power>
+		<power name="Friezas">
 			<ability name="Death Ball" image="Superheroes/Deathball.jpg" />
 			<ability name="Death Beam" />
 			<ability name="Frieza First Form">
@@ -330,10 +323,10 @@
 					* Combat related skills raise to level 26.
 				</summary>
 			</ability>
-		</skill>
-		<skill name="Gero Android">
-		</skill>
-		<skill name="Majin Race">
+		</power>
+		<power name="Gero Android">
+		</power>
+		<power name="Majins">
 			<ability name="Chocolate Beam" />
 			<ability name="Fat Buu Form">
 				<summary>
@@ -353,8 +346,8 @@
 					* Combat related skills raise to level 35.
 				</summary>
 			</ability>
-		</skill>
-		<skill name="Namekian Race">
+		</power>
+		<power name="Namekian">
 			<ability name="Giant Form" />
 			<ability name="Instant Regeneration" />
 			<ability name="Merge with Nail">
@@ -374,8 +367,8 @@
 					* Can destroy Imperfect Cell (Piccolo vs. Imperfect Cell)
 				</summary>
 			</ability>
-		</skill>
-		<skill name="Red Ribbon Android">
+		</power>
+		<power name="Red Ribbon Android">
 			<ability name="Models 16-18">
 				<summary>
 					* Combat related skills raise to level 28
@@ -389,8 +382,8 @@
 					* [Activate]: Remove all [Stun Tokens].
 				</summary>
 			</ability>
-		</skill>
-		<skill name="Saiyan Race">
+		</power>
+		<power name="Saiyan">
 			<summary>
 				* Both Goku and Vegeta are seen to be able to operate unencumbered at 100x gravity before becoming Super
 				Saiyans (carry 8 tons without penalty).  After becoming Ascended Vegeta comments that 500x gravity may start to
@@ -449,38 +442,38 @@
 					increase substantially after recovering from near fatal injuries.
 				</summary>
 			</ability>
-		</skill>
+		</power>
 	</section>
 	<section name="Dragon Ball Heroes">
 		<unit name="Android 18" image="Superheroes/Android18.png">
-			<skill name="Red Ribbon Android" level="28">
+			<power name="Red Ribbon Android" level="28">
 				<ability name="Models 16-18" />
 				<ability name="Inexhaustible" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Gohan (Kid)" image="Superheroes/Gohan.png">
-			<skill name="Saiyan Race" level="32">
+			<power name="Saiyan" level="32">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
 				<ability name="Super Saiyan 2" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Gohan (Great Saiyaman)" image="Superheroes/GreatSaiyaman.png">
-			<skill name="Saiyan Race" level="34">
+			<power name="Saiyan" level="34">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
 				<ability name="Super Saiyan 2" />
 				<ability name="Ultimate Saiyan" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Goku" image="Superheroes/Goku.png">
 			<titles>Kakarot</titles>
-			<skill name="Zenkai Powers">
+			<power name="Zenkai">
 				<ability name="Fusion Dance" />
 				<ability name="Gravity Training 10x" />
 				<ability name="Gravity Training 100x" />
-			</skill>
-			<skill name="Saiyan Race">
+			</power>
+			<power name="Saiyan">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
 				<ability name="Ultra Super Saiyan" />
@@ -489,74 +482,74 @@
 				<ability name="Super Saiyan 3" />
 				<ability name="Super Saiyan 4" />
 				<ability name="Super Saiyan God" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Gogeta" image="Superheroes/Gogeta.png">
-			<skill name="Saiyan Race" level="34">
+			<power name="Saiyan" level="34">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
 				<ability name="Super Saiyan 2" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Goten" image="Superheroes/Goten.png">
-			<skill name="Zenkai Powers" level="30">
+			<power name="Zenkai" level="30">
 				<ability name="Fusion Dance" />
-			</skill>
-			<skill name="Saiyan Race" level="30">
+			</power>
+			<power name="Saiyan" level="30">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Gotenks" image="Superheroes/Gotenks.png">
-			<skill name="Saiyan Race" level="35">
+			<power name="Saiyan" level="35">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
 				<ability name="Super Saiyan 2" />
 				<ability name="Super Saiyan 3" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Kid Trunks" image="Superheroes/KidTrunks.png">
-			<skill name="Zenkai Powers" level="30">
+			<power name="Zenkai" level="30">
 				<ability name="Fusion Dance" />
-			</skill>
-			<skill name="Saiyan Race" level="30">
+			</power>
+			<power name="Saiyan" level="30">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Krillin" image="Superheroes/Krillin.png">
-			<skill name="Zenkai Powers" level="20">
+			<power name="Zenkai" level="20">
 				<ability name="Unlock Potential" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Piccolo" image="Superheroes/Piccolo.png">
-			<skill name="Flexible">
+			<power name="Flexible">
 				<ability name="Arm Stretch" />
-			</skill>
-			<skill name="Namekian Race" level="29">
+			</power>
+			<power name="Namekian" level="29">
 				<ability name="Instant Regeneration" />
 				<ability name="Super Namek" />
 				<ability name="Merge with Nail" />
 				<ability name="Merge with Namekian" />
 				<ability name="Special Beam Cannon" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Shenron" image="Superheroes/Shenron.png" />
 		<unit name="Tien Shinhan">
-			<skill name="Zenkai Attacks" level="27">
+			<power name="Zenkai Attacks" level="27">
 				<ability name="Neo Tri-Beam" />
-			</skill>
-			<skill name="Zenkai Powers" level="27">
+			</power>
+			<power name="Zenkai" level="27">
 				<ability name="Gravity Training 10x" />
 				<ability name="Gravity Training 100x" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Trunks" image="Superheroes/Trunks.png">
-			<skill name="Saiyan Race" level="30">
+			<power name="Saiyan" level="30">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
 				<ability name="Ultra Super Saiyan" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Vegeta" image="Superheroes/Vegeta.png">
 			<titles>Prince of All Saiyans</titles>
@@ -569,175 +562,172 @@
 				But, perhaps it is my anger that has made me blind me to the truth...I see it now...You're better than me
 				Kakarot.  You are the best. - Vegeta, Majin Buu Saga
 			</reference>
-			<skill name="Zenkai Powers">
+			<power name="Zenkai">
 				<ability name="Fusion Dance" />
-			</skill>
-			<skill name="Saiyan Race">
+			</power>
+			<power name="Saiyan">
 				<ability name="Super Saiyan" />
 				<ability name="Ascended Super Saiyan" />
 				<ability name="Ultra Super Saiyan" />
 				<ability name="Super Saiyan 2" />
 				<ability name="Super Saiyan 4" />
 				<ability name="Super Saiyan God" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Yamcha">
-			<skill name="Zenkai Powers" level="22">
+			<power name="Zenkai" level="22">
 				<ability name="Gravity Training 10x" />
 				<ability name="Gravity Training 100x" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Dragon Ball Villains">
 		<unit name="Cell" image="Superheroes/Cell.png">
-			<skill name="Cell Android" level="32">
+			<power name="Cell Android" level="32">
 				<ability name="Imperfect Cell" />
 				<ability name="Second Form Cell" />
 				<ability name="Perfect Cell" />
 				<ability name="Super Perfect Cell" />
-			</skill>
-			<skill name="Spawning">
+			</power>
+			<power name="Spawning">
 				<ability name="Copy Self" />
 				<ability name="Offspring" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Cooler" image="Superheroes/Cooler.png">
-			<skill name="Frieza Race" level="26">
+			<power name="Friezas" level="26">
 				<ability name="Death Ball" />
 				<ability name="Death Beam" />
 				<ability name="Frieza Fourth Form" />
 				<ability name="Cooler Fifth Form" />
-			</skill>
-			<skill name="Zenkai Powers">
+			</power>
+			<power name="Zenkai">
 				<ability name="Instant Transmission" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Frieza" image="Superheroes/Frieza.png">
-			<skill name="Frieza Race" level="25">
+			<power name="Friezas" level="25">
 				<ability name="Death Ball" />
 				<ability name="Death Beam" />
 				<ability name="Frieza First Form" />
 				<ability name="Frieza Second Form" />
 				<ability name="Frieza Third Form" />
 				<ability name="Frieza Fourth Form" />
-			</skill>
-			<skill name="Mind Over Matter" strength="10Mtons">
-			</skill>
+			</power>
+			<power name="Mind Over Matter" strength="10Mtons">
+			</power>
 		</unit>
 		<unit name="Kid Buu" image="Superheroes/KidBuu.png">
-			<skill name="Flexible">
+			<power name="Flexible">
 				<ability name="Arm Stretch" />
 				<ability name="Body Stretch" />
 				<ability name="Bouncing Ball" />
 				<ability name="Engulf" />
 				<ability name="Leg Stretch" />
-			</skill>
-			<skill name="Majin Race" level="35">
+			</power>
+			<power name="Majins" level="35">
 				<ability name="Chocolate Beam" />
 				<ability name="Kid Buu Form" />
-			</skill>
-			<skill name="Spawning">
+			</power>
+			<power name="Spawning">
 				<ability name="Copy Self" />
 				<ability name="Detach Body Parts" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Majin Buu" image="Superheroes/MajinBuu.png">
 			<reference>
 				Buu, along with his creator Bibidi and Babidi have names that are most likely references to the magic words the
 				fairy god mother uses in Cinderella, 'Bibidi, Babidi, Boo!'.
 			</reference>
-			<skill name="Flexible">
+			<power name="Flexible">
 				<ability name="Arm Stretch" />
 				<ability name="Body Stretch" />
 				<ability name="Bouncing Ball" />
 				<ability name="Engulf" />
 				<ability name="Leg Stretch" />
-			</skill>
-			<skill name="Majin Race" level="33">
+			</power>
+			<power name="Majins" level="33">
 				<ability name="Chocolate Beam" />
 				<ability name="Fat Buu Form" />
-			</skill>
-			<skill name="Spawning">
+			</power>
+			<power name="Spawning">
 				<ability name="Copy Self" />
 				<ability name="Detach Body Parts" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Nappa">
-			<skill name="Saiyan Race" level="17">
-			</skill>
+			<power name="Saiyan" level="17">
+			</power>
 		</unit>
 		<unit name="Omega Shenron" image="Superheroes/OmegaShenron.png" />
 		<unit name="Raditz">
-			<skill name="Saiyan Race" level="15">
-			</skill>
+			<power name="Saiyan" level="15">
+			</power>
 		</unit>
 		<unit name="Saibaman">
-			<skill name="Zenkai Powers" level="15">
-			</skill>
+			<power name="Zenkai" level="15">
+			</power>
 		</unit>
 	</section>
 </chapter>
 <chapter name="Marvel Universe">
 	<section name="Marvel Aliens">
 		<unit name="Adam Warlock" image="Superheroes/AdamWarlock.png">
-			<skill name="Strength" strength="40tons">
-			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="40tons">
+			</power>
+			<power name="Longevity">
 				<ability name="Long Life" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Annihilus" image="Superheroes/Annihilus.png">
-			<skill name="Strength" strength="50tons">
-			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="50tons">
+			</power>
+			<power name="Longevity">
 				<ability name="Long Life" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Captain Marvel I" image="Superheroes/CaptainMarvel.png">
-			<skill name="Strength" strength="10tons">
-			</skill>
+			<power name="Strength" strength="10tons">
+			</power>
 		</unit>
 		<unit name="Celestial" image="Superheroes/Celestial.png">
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Firefall" image="Superheroes/Firefall.png">
-			<skill name="Fire Powers" />
-			<skill name="Longevity">
+			<power name="Fire" />
+			<power name="Longevity">
 				<ability name="Long Life" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Gabriel the Airwalker" image="Superheroes/Gabriel.png">
-			<skill name="Strength" strength="85tons">
-			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="85tons">
+			</power>
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Galactus" image="Superheroes/Galactus.png">
-			<skill name="Strength" strength="100tons">
-			</skill>
+			<power name="Strength" strength="100tons">
+			</power>
 			<summary>
-				Although Galactus is usually represented in humanoid form, each sentient being perceives him having a form
-				resembling his own.  Hence, humanoids see Galactus in humanoid form, while a Skrull, for example, would perceive
-				Galactus as resembling a Skrull.  Although as Galan, Galactus was indeed a humanoid; his true current form is
-				unknown.  It is unclear why beings from different sentient races perceive him differently.
+				* Appearance - Although Galactus is usually represented in humanoid form, each sentient being perceives him having a form resembling his own. Hence, humanoids see Galactus in humanoid form, while a Skrull, for example, would perceive Galactus as resembling a Skrull. Although as Galan, Galactus was indeed a humanoid; his true current form is unknown. It is unclear why beings from different sentient races perceive him differently.
 			</summary>
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Hybrid" image="Superheroes/Hybrid.png" />
 		<unit name="Nova" image="Superheroes/Nova.png" />
 		<unit name="Rom" image="Superheroes/Rom.png">
-			<skill name="Strength" strength="15tons">
-			</skill>
-			<skill name="Armor" />
-			<skill name="Endurance" />
-			<skill name="Longevity">
+			<power name="Strength" strength="15tons">
+			</power>
+			<power name="Armor" />
+			<power name="Endurance" />
+			<power name="Longevity">
 				<ability name="Long Life" />
-			</skill>
+			</power>
 			<summary>
 				Rom can fly through atmosphere at a maximum speed of Mach 4 (about 3000 miles per hour) before heat buildup
 				from friction caused detrimental effects to his external sensor arrays.  Cool atmospheric re-entry was achieved
@@ -773,42 +763,42 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 			</summary>
 		</unit>
 		<unit name="Silver Surfer" image="Superheroes/SilverSurfer.png">
-			<skill name="Strength" strength="100tons">
-			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="100tons">
+			</power>
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Terrax" image="Superheroes/Terrax.png">
-			<skill name="Strength" strength="75tons">
-			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="75tons">
+			</power>
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Thanos" image="Superheroes/Thanos.png">
-			<skill name="Strength" strength="100tons">
-			</skill>
 			<skill name="Mastermind">
 			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="100tons">
+			</power>
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Asgardians">
 		<unit name="Amora" image="Superheroes/Enchantress.png">
 			<titles>Enchantress, Freyja</titles>
-			<skill name="Strength" strength="25tons">
-			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="25tons">
+			</power>
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Beta Ray Bill" image="Superheroes/BetaRayBill.png">
-			<skill name="Strength" strength="100tons">
-			</skill>
-			<skill name="Melee" />
+			<power name="Strength" strength="100tons">
+			</power>
+			<power name="Melee" />
 		</unit>
 		<unit name="Destroyer, The" image="Superheroes/Destroyer.png">
 		</unit>
@@ -818,39 +808,39 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* I am burdened with glorious purpose. - Loki
 				* Banner: I don't think we should be focusing on Loki. That guy's brain is a bag full of cats. You can smell crazy on him. Thor: Have a care how you speak! Loki is beyond reason, but he is of Asgard and he is my brother! Widow: He killed eighty people in two days. Thor: He...is adopted. - Bruce Banner, Thor, and Black Widow, The Avengers
 			</reference>
-			<skill name="Strength" strength="30tons">
-			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="30tons">
+			</power>
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Odin" image="Superheroes/Odin.png">
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Surtur" image="Superheroes/Surtur.png">
-			<skill name="Fire Powers" />
-			<skill name="Longevity">
+			<power name="Fire" />
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Thor" image="Superheroes/Thor.png">
-			<skill name="Strength" strength="100tons">
-			</skill>
+			<power name="Strength" strength="100tons">
+			</power>
 			<skill name="Melee" />
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Valkyrie" image="Superheroes/Valkyrie.png">
 			<titles>Brunnhilde</titles>
-			<skill name="Strength" strength="45tons">
-			</skill>
+			<power name="Strength" strength="45tons">
+			</power>
 			<skill name="Melee" />
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Marvel Avengers">
@@ -893,19 +883,19 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 			<summary>
 				She has the ability to attack her enemies with high-energy photon blasts equal to those of Iron Man
 			</summary>
-			<skill name="Strength" strength="75tons">
-			</skill>
-			<skill name="Armor">
+			<power name="Strength" strength="75tons">
+			</power>
+			<power name="Armor">
 				<summary>
 					She is able to withstand bullets from pistols and machine gun fire, and can also absorb mortar shells and energy blasts, though extremely high-energy attacks may overload her absorbing ability
 				</summary>
-			</skill>
+			</power>
 		</unit>
 		<unit name="Iron Man" image="Superheroes/IronMan.png">
-			<skill name="Strength" strength="85tons">
-			</skill>
-			<skill name="Armor" />
-			<skill name="Endurance" />
+			<power name="Strength" strength="85tons">
+			</power>
+			<power name="Armor" />
+			<power name="Endurance" />
 		</unit>
 		<unit name="Kang the Conqueror">
 			<titles>Nathaniel Richards</titles>
@@ -939,31 +929,23 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 		</unit>
 		<unit name="Ultron" image="Superheroes/Ultron.png">
 			<reference>
-				* Shutdown code...rejected. My programming has advanced beyond your commands...
-				beyond your...weakness.
-				* Humanity has failed as a species. You have accomplished much with your limited
-				capacity, but ultimately you were too greed and too frail to ever last in the
-				environment you have created. Soon the Earth will no longer be inhabitable for any
-				biological organism. Man, woman, child, plant, animal, fungus, or baterium. All
-				life will cease to exist. This is not a threat. There is nothing you can do to
-				stop it. The process has already begun. I receive no pleasure in this. It is simply
-				the only solution. There must be peace and order. The end of life on Earth will
-				ensure that... Goodbye.
+				* Shutdown code...rejected. My programming has advanced beyond your commands... beyond your...weakness.
+				* Humanity has failed as a species. You have accomplished much with your limited capacity, but ultimately you were too greed and too frail to ever last in the environment you have created. Soon the Earth will no longer be inhabitable for any biological organism. Man, woman, child, plant, animal, fungus, or baterium. All life will cease to exist. This is not a threat. There is nothing you can do to stop it. The process has already begun. I receive no pleasure in this. It is simply the only solution. There must be peace and order. The end of life on Earth will ensure that... Goodbye.
 			</reference>
-			<skill name="Strength" strength="75tons">
-			</skill>
-			<skill name="Armor" />
-			<skill name="Endurance" />
 			<skill name="Mastermind">
 			</skill>
+			<power name="Strength" strength="75tons">
+			</power>
+			<power name="Armor" />
+			<power name="Endurance" />
 		</unit>
 		<unit name="Wasp, The" image="Superheroes/Wasp.png" />
 	</section>
 	<section name="Defenders">
 		<unit name="Dormammu" image="Superheroes/Dormammu.png">
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Doctor Strange" image="Superheroes/DrStrange.png" />
 		<unit name="Hulk, The" image="Superheroes/Hulk.png">
@@ -974,19 +956,19 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* Doctor Banner, I think now might be a good time for you to get angry. That's my secret, Cap: I'm always angry. - Captain America and Bruce
 				Banner, The Avengers
 			</reference>
-			<skill name="Strength" strength="100tons">
-			</skill>
+			<power name="Strength" strength="100tons">
+			</power>
 			<skill name="Frenzy">
 				<ability name="Berserker" />
 			</skill>
-			<skill name="Armor" />
-			<skill name="Endurance" />
+			<power name="Armor" />
+			<power name="Endurance" />
 		</unit>
 		<unit name="Morgan Le Fey" />
 		<unit name="Prince Namor" image="Superheroes/Namor.png">
-			<skill name="Strength" strength="85tons">
-			</skill>
-			<skill name="Endurance" />
+			<power name="Strength" strength="85tons">
+			</power>
+			<power name="Endurance" />
 		</unit>
 	</section>
 	<section name="Fantastic Four">
@@ -994,20 +976,20 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 			<reference>
 				* I love my people. I do, but they are MY people. I keep them safe from harm. I give them a better life, and at night, before they sleep, to whatever god they pray, they give thanks for me. - Doom
 			</reference>
-			<skill name="Strength" strength="2tons">
-			</skill>
 			<skill name="Genius">
 			</skill>
-			<skill name="Armor" />
-			<skill name="Endurance" />
+			<skill name="Mastermind">
+			</skill>
 			<skill name="Electronics" />
 			<skill name="Mechanics" />
 			<skill name="Physical Sciences" />
-			<skill name="Mastermind">
-			</skill>
+			<power name="Strength" strength="2tons">
+			</power>
+			<power name="Armor" />
+			<power name="Endurance" />
 		</unit>
 		<unit name="Human Torch" image="Superheroes/HumanTorch.png">
-			<skill name="Fire Powers" />
+			<power name="Fire" />
 		</unit>
 		<unit name="Invisible Woman" image="Superheroes/InvisibleWoman.png" />
 		<unit name="Mr. Fantastic" image="Superheroes/MrFantastic.png">
@@ -1020,46 +1002,40 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 			</reference>
 			<skill name="Genius">
 			</skill>
-			<skill name="Flexible">
+			<power name="Flexible">
 				<ability name="Arm Stretch" />
 				<ability name="Body Stretch" />
 				<ability name="Bouncing Ball" />
 				<ability name="Engulf" />
 				<ability name="Leg Stretch" />
-			</skill>
+			</power>
 			<skill name="Electronics" />
 			<skill name="Mechanics" />
 			<skill name="Physical Sciences" />
 		</unit>
 		<unit name="She-Hulk" image="Superheroes/SheHulk.png">
-			<skill name="Strength" strength="75tons">
-			</skill>
-			<skill name="Armor" />
-			<skill name="Endurance" />
+			<power name="Strength" strength="75tons" />
+			<power name="Armor" />
+			<power name="Endurance" />
 		</unit>
 		<unit name="Super Skrull, The" image="Superheroes/SuperSkrull.png">
-			<skill name="Strength" strength="85tons">
-			</skill>
-			<skill name="Armor" />
-			<skill name="Endurance" />
-			<skill name="Fire Powers" />
-			<skill name="Flexible">
+			<power name="Strength" strength="85tons" />
+			<power name="Armor" />
+			<power name="Endurance" />
+			<power name="Fire" />
+			<power name="Flexible">
 				<ability name="Arm Stretch" />
 				<ability name="Body Stretch" />
 				<ability name="Leg Stretch" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Thing, The" image="Superheroes/Thing.png">
 			<summary>
-				The Thing's body is able to withstand extremes of temperature from -75 to 800 Fahrenheit for up to an hour
-				before exposure or heat prostration occurs.  He can withstand the explosive effects of armor-piercing bazooka
-				shells (15 pounds of high explosives) against his skin with no injury.  He is still susceptible to colds,
-				disease, and emotional stress.
+				* The Thing's body is able to withstand extremes of temperature from -75 to 800 Fahrenheit for up to an hour before exposure or heat prostration occurs. He can withstand the explosive effects of armor-piercing bazooka shells (15 pounds of high explosives) against his skin with no injury. He is still susceptible to colds, disease, and emotional stress.
 			</summary>
-			<skill name="Strength" strength="85tons">
-			</skill>
-			<skill name="Armor" />
-			<skill name="Endurance" />
+			<power name="Strength" strength="85tons" />
+			<power name="Armor" />
+			<power name="Endurance" />
 		</unit>
 	</section>
 	<section name="Marvel Independents">
@@ -1082,24 +1058,24 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 		<unit name="Baron Karza" image="Superheroes/BaronKarza.png">
 			<skill name="Mastermind">
 			</skill>
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
 				<ability name="Reincarnation - Transference" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Bug, Micronaut" image="Superheroes/Bug.png" />
 		<unit name="Commander Rann" image="Superheroes/CommanderRann.png" />
 		<unit name="Dog Soldier" image="Superheroes/DogSoldier.png">
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Long Life" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Marionette" image="Superheroes/Marionette.png" />
 		<unit name="Shaitan" image="Superheroes/Shaitan.png" />
 		<unit name="Time Traveller" image="Superheroes/TimeTraveller.png">
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Marvel Sword and Shield">
@@ -1135,39 +1111,36 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 			</skill>
 		</unit>
 		<unit name="Lizard, The" image="Superheroes/Lizard.png">
-			<skill name="Strength" strength="12tons">
-			</skill>
+			<power name="Strength" strength="12tons" />
 		</unit>
 		<unit name="Spiderman" image="Superheroes/Spiderman.png">
-			<skill name="Strength" strength="10tons">
-			</skill>
-			<skill name="Agility">
-			</skill>
-			<skill name="Movement">
+			<power name="Strength" strength="10tons" />
+			<power name="Agility">
+			</power>
+			<power name="Movement">
 				<ability name="Wall Crawling" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Venom" image="Superheroes/Venom.png" />
 	</section>
 	<section name="Marvel X-men">
 		<unit name="Apocalypse" image="Superheroes/Apocalypse.png">
-			<skill name="Longevity">
-				<ability name="Eternal Youth" />
-			</skill>
 			<skill name="Mastermind">
 			</skill>
+			<power name="Longevity">
+				<ability name="Eternal Youth" />
+			</power>
 		</unit>
 		<unit name="Black Queen" image="Superheroes/BlackQueen.png">
 			<titles>Selene Gallio</titles>
 			<reference>
-				* Shaw: Did you have to kill all of them, Selene? Selene: No, I didn't, but I thought.. 'If I wasn't meant to eat people, I'm sure they would have been made less deliscious.'... I don't want to live in a happy paradise. I don't want to be freed from my terrible curse. I want to eat people. - Sebatian Shaw and Selene - Fall of X
+				* Shaw: Did you have to kill all of them, Selene? Selene: No, I didn't, but I thought.. 'If I wasn't meant to eat people, I'm sure they would have been made less delicious.'... I don't want to live in a happy paradise. I don't want to be freed from my terrible curse. I want to eat people. - Sebatian Shaw and Selene - Fall of X
 			</reference>
-			<skill name="Strength" strength="750kg">
-			</skill>
-			<skill name="Mind Over Matter" />
-			<skill name="Longevity">
+			<power name="Strength" strength="750kg" />
+			<power name="Mind Over Matter" />
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 			<summary>
 				* Life-Force Absorption: by psionically draining the life forces of other human beings into herself, by physical touch. If she drained a person's entire life force from him or her, the victim dies and the victim's body crumbles into dust. It is unknown how often Selene must drain life force from another human in order to survive. It is known, that great expenditure of power causes Selene to age, but she can rejuvenate herself by absorbing more life force. Selene will not age as long as she maintains her supply of absorbed life force.
 				* Psychic Vampire: If Selene drains only part of a victims life force, Selene achieves a measure of psychic control over her victim's mind. Through unknown means, Selene can cause a human being to become a psychic vampire like herself, but be subordinate to Selene's own will.
@@ -1206,42 +1179,41 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 			<reference>
 				* I'm the Juggernaut, Bitch! - Juggernaut, X-men 2
 			</reference>
-			<skill name="Strength" strength="100tons">
-			</skill>
-			<skill name="Inertia Powers">
+			<power name="Strength" strength="100tons" />
+			<power name="Inertia">
 				<ability name="Inertial Dampening" />
 				<ability name="Unstoppable" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Longshot" image="Superheroes/Longshot.png" />
 		<unit name="Magneto" image="Superheroes/Magneto.png">
-			<skill name="Magnetic Powers" strength="30ktons">
-			</skill>
+			<power name="Magnetism" strength="30ktons">
+			</power>
 		</unit>
 		<unit name="Mojo" image="Superheroes/Mojo.png">
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Professor X" image="Superheroes/ProfessorX.png" />
 		<unit name="Psylocke" image="Superheroes/Psylocke.png" />
 		<unit name="Rogue, X-man" image="Superheroes/Rogue.png">
-			<skill name="Strength" strength="50tons">
-			</skill>
+			<power name="Strength" strength="50tons">
+			</power>
 		</unit>
 		<unit name="Sabretooth" image="Superheroes/Sabretooth.png" />
 		<unit name="Spiral" image="Superheroes/Spiral.png">
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Long Life" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Storm, X-man" image="Superheroes/Storm.png" />
 		<unit name="Wolverine, The" image="Superheroes/Wolverine.png">
-			<skill name="Strength" strength="400kg">
-			</skill>
-			<skill name="Longevity">
+			<power name="Strength" strength="400kg">
+			</power>
+			<power name="Longevity">
 				<ability name="Long Life" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 </chapter>
@@ -1273,16 +1245,16 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* Graveyard Spike Devastator - Creates huge spikes from the ground that impale everything around Alex, very similar to the Groundspike move. Very effective against armored targets, humans and infected.
 				* Critical Pain Devastator - A hard mass of tissue is formed from Alex's hands and is fired as a powerful beam of biomass. Can only effect things in the firing line, but has a long range and is catastrophic to everything in the way, exploding tanks in one hit.
 			</summary>
-			<skill name="Flight">
+			<power name="Flight">
 				<ability name="Glide" />
-			</skill>
-			<skill name="Movement">
+			</power>
+			<power name="Movement">
 				<ability name="Wall Crawling" />
 				<ability name="Wall Running" />
-			</skill>
-			<skill name="Vampirism">
+			</power>
+			<power name="Vampirism">
 				<ability name="Devour" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Deadly Sins">
@@ -1365,18 +1337,18 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* Renegades - Using the PSI, The Will has enlisted a loosely coordinated team of killers to do his bidding. It is ironic that they call themselves the Renegades since they are so tightly controlled by The Will. Since The Will has no regard for others, he treats the Renegades as disposable cannon fodder. Because of this, the Renegades suffer from a lack of discipline, training, loyalty, and coordination. Windshear leads the team and attempts to counter these weaknesses, but the team remains hopelessly disorganized group of argumentative individuals instead of a tightly knit team.
 				* Born January 5th the year of our Lord, 1107 AD, Hieronymous Faust was a gifted boy. He went to war as a young man in what is now eastern France. During a raid on a castle, he discovered the resident alchemist had discovered a partial solution to aging. He spared the alchemists life in exchange for servitude. For the next 20 years, they worked together. Some experiments were successful, but always they were inconsistent. The alchemist died, and Hieronymous continued working into old age. Finally, he decided that success or failure depended on the will of the subject. With an intensity born of fear of his imminent death, he performed his final experiments upon himself. Whatever the cause, his efforts succeeded. His aging came to a halt at 75 though he must always remain focused or he will continue to age. He cannot even allow himself to sleep anymore. Years past and his willpower grew stronger. He began to mentally dominate others to his 'Will' while searching for a way to return to a younger age. He has made many partial successes, but over time has always returned to his current state.
 			</summary>
-			<skill name="Domination">
-			</skill>
-			<skill name="Longevity">
-				<ability name="Long Life" />
-			</skill>
 			<skill name="Life Sciences">
 				<ability name="Biochemistry" />
 			</skill>
-			<skill name="Alchemy">
-			</skill>
 			<skill name="Influence" level="10">
 			</skill>
+			<power name="Domination">
+			</power>
+			<power name="Longevity">
+				<ability name="Long Life" />
+			</power>
+			<power name="Alchemy">
+			</power>
 		</unit>
 		<unit name="Windshear, Renegade">
 			<titles>Diane Ashton</titles>
@@ -1396,7 +1368,7 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* Timeslip - Can freeze time except for himself for 30 seconds. This effectively allows him to move instantly, but he cannot move or harm anything in this state including doors.
 				* Explosives - He carries a number of plastic explosives of different sizes that he plants using Timeslip.
 			</summary>
-			<skill name="Explosive" />
+			<power name="Explosive" />
 		</unit>
 		<unit name="Cobalt, Renegade">
 			<titles>Ground Zero</titles>
@@ -1407,7 +1379,7 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* Radiation Explosion - Can emit enormous explosive energy all around him. This leaves his powers depleted for the day, however.
 				* Body Armor - His flesh has transformed into an extra dense rubbery material to survive his powers.
 			</summary>
-			<skill name="Explosive" />
+			<power name="Explosive" />
 		</unit>
 		<unit name="Glare, Renegade">
 			<summary>
@@ -1423,11 +1395,11 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* Street punk turned amateur kickboxer turned low-level enforcer, Anthony Keys was always a wildman of 	questionable character. Abused as a child, he revels in violence and power. Keys went to PSI because he felt a dim presence when he was at his most violent. The Will discovered a demonic creature was attempting to possess Keys, which The Will encouraged. Keys is now mostly psychotic and enjoys the power of his demonic form. The demon K'rog detests the mental control the Will has over Anthony which prevents its own control, but it is content to commit mayhem when it is released, so for now it serves as the main muscle of the Renegades.
 				* Powers - Strength, Speed, Resistance, Leaping, Regeneration, Transformation, Tracking Scent, Cunning but limited intelligence.
 			</summary>
-			<skill name="Natural Weaponry">
+			<power name="Natural Weaponry">
 				<ability name="Claw" />
-			</skill>
-			<skill name="Armor">
-			</skill>
+			</power>
+			<power name="Armor">
+			</power>
 		</unit>
 		<unit name="Lash, Renegade">
 		</unit>
@@ -1455,7 +1427,7 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* Pain Control - With physical contact she can increase or decrease the pain felt by injuries.
 			</summary>
 			<skill name="Melee" level="5" />
-			<skill name="Aim" level="6" />
+			<skill name="Ranged" level="6" />
 		</unit>
 		<unit name="Swan Song, Renegade">
 			<titles>Dark Swan, Prima, Marina Rovani</titles>
@@ -1538,12 +1510,12 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				** Summoning - 
 				** Levitation - The Silver Cords can lift him off the ground and he can float at normal movement speeds.
 			</summary>
-			<skill name="Empathy">
+			<power name="Empathy">
 				<ability name="Empathic Healing" />
 				<ability name="Enrapture" />
-			</skill>
-			<skill name="Correspondence">
-			</skill>
+			</power>
+			<power name="Correspondence">
+			</power>
 		</unit>
 		<unit name="Bloodline">
 			<summary>
@@ -1608,9 +1580,9 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				* Just below the stony exterior, Seraph is a being of super-heated blazing plasma. His stone skin is created moment to moment and he can release his massive destructive power by allowing some skin to crumble.
 				* Seraph does not sleep but in quiet moments, he becomes like a statue as his vision expands to other perspectives.
 			</summary>
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Long Life" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Shade, The" />
 		<unit name="Spectrum" image="Superheroes/Vector.png">
@@ -1663,7 +1635,7 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				<item name="Quarterstaff" />
 				<item name="Naginata" />
 			</skill>
-			<skill name="Armor" level="4">
+			<skill name="Defense" level="4">
 				<item name="Plate Armor" />
 			</skill>
 			<skill name="Close Combat" level="5">
@@ -1853,9 +1825,9 @@ Rom kept his Analyzer and Neutralizer in a pocket in sub-space (hyperspace) from
 				<ability name="Tailing" />
 				<ability name="Without a Trace" />
 			</skill>
-			<skill name="Longevity">
+			<power name="Longevity">
 				<ability name="Reincarnation - Transference" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Revengers, The">

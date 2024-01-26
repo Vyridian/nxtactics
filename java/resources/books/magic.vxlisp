@@ -465,16 +465,7 @@ belong.  It includes Barriers and Wards.")
                    "* Create a figure representing the target. The target can be a being, a vehicle, a building, etc. The figure can be a doll, a wax figurine, an Origami, a sculpture, a drawing, or any other image created by hand by the caster. In addition, the Effigy must have some item linking it to the target. This can be a possession, a hair, a body part, etc. The more significant the better.
 * Spells may then be cast upon the figure as if the figure was at 4 spaces range regardless of actual distance or line of sight. This ability can create any number of effects, but it cannot actually cause physical damage. All Body damage becomes [Stun] if the target cannot take anymore [Stun], the excess is ignored.
 * The ability level of any Spells cast are [Limited] by the skill with which the Effigy is created and the significance of the item linked to the Effigy."
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidtagfound"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/ability
-                        :tag "title")
-                      :severity 2))))
+                  :titles "Straw Man")
                 :Fetish
                  (ability
                   :name "Fetish"
@@ -569,85 +560,35 @@ belong.  It includes Barriers and Wards.")
         "Magic Weapons"
          (section
           :name "Magic Weapons"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "item")
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))))))))))
+          :itemmap
+           (itemmap
+            "Ascalan Lance"
+             (item
+              :name "Ascalan Lance"
+              :reference "* The lance (or in some versions of the story, sword) that Saint George used to slay the dragon, named after the city Ashkelon."
+              :titles "Dragon Slayer Lance")
+            :Firebrand
+             (item
+              :name "Firebrand"
+              :titles "Flame Tongue")
+            :Frostbrand
+             (item
+              :name "Frostbrand")
+            :Moonblade
+             (item
+              :name "Moonblade"
+              :titles "A silver sword that is as hard as steel")
+            "Poseidon's Net"
+             (item
+              :name "Poseidon's Net")
+            "Poseidon's Trident"
+             (item
+              :name "Poseidon's Trident")
+            :Runestaff
+             (item
+              :name "Runestaff"
+              :summary "* A staff with one or more Runes incribed upon it.")
+            :Runesword
+             (item
+              :name "Runesword"
+              :summary "* A sword with one or more Runes incribed upon it."))))))))

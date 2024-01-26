@@ -105,83 +105,41 @@
             "USS Monitor"
              (unit
               :name "USS Monitor"
+              :speed "15kph"
+              :classification "Hvy. Naval Vessel"
               :mass "1000tons"
               :length "52m"
-              :unitskillmap
-               (unitskillmap
+              :unitpowermap
+               (unitpowermap
                 :Armor
-                 (unitskill
+                 (unitpower
                   :name "Armor"
+                  :front "200mm"
+                  :back "200mm"
+                  :over "25mm"
+                  :side "200mm"
                   (msgblock
                    :msgs
                     (msglist
                      (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "front"
-                        :value "200mm")
-                      :severity 2)
-                     (msg
                       :code ":invalidkey"
                       :detail ":summary"
-                      :path "nx/tactics/base/unitskill"
+                      :path "nx/tactics/base/unitpower"
                       :severity 3)
                      (msg
                       :code ":invalidkey"
                       :detail ":200mm iron turret, 25mm deck, 125mm hull belt"
-                      :path "nx/tactics/base/unitskill"
-                      :severity 3))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "side"
-                           :value "200mm")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "back"
-                           :value "200mm")
-                         :severity 2)))
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidproperty"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :prop "top"
-                           :value "25mm")
-                         :severity 2))))))
+                      :path "nx/tactics/base/unitpower"
+                      :severity 3)))))
+              :unitskillmap
+               (unitskillmap
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "4"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -200,33 +158,9 @@
                   :detail
                    (anymap
                     :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Hvy. Naval Vessel")
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :detail
-                      (anymap
-                       :type nx/tactics/base/unit
-                       :prop "speed"
-                       :value "15kph")
-                     :severity 2)))
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :detail
-                      (anymap
-                       :type nx/tactics/base/unit
-                       :prop "crew"
-                       :value "59")
-                     :severity 2))))))))))
+                    :prop "crew"
+                    :value "59")
+                  :severity 2))))))))
     "Victorian England"
      (chapter
       :name "Victorian England"
@@ -277,57 +211,20 @@ Herod,  The Quick and the Dead"
                 :Intimidation
                  (unitskill
                   :name "Intimidation"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2))))
+                  :level "5")
                 :Firearms
                  (unitskill
                   :name "Firearms"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "item")
-                         :severity 2))))))
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    ".45 Colt Peacemaker"
+                     (unititem
+                      :name ".45 Colt Peacemaker")))
                 :Evasion
                  (unitskill
                   :name "Evasion"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "4")
-                      :severity 2))))))
+                  :level "4")))
             "Oil Baron"
              (unit
               :name "Oil Baron")

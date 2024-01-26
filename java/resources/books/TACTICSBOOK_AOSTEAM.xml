@@ -147,11 +147,11 @@
 	<section name="Confederate Navy">
 		<unit name="Merrimack" classification="Hvy. Naval Vessel" mass="4500tons" length="84m" speed="17kph" crew="320">
 			<titles>CSS Virginia</titles>
-			<skill name="Armor" front="200mm" side="200mm" back="200mm">
+			<power name="Armor" front="200mm" side="200mm" back="200mm">
 				<summary>
 					100mm iron over 610mm of wood (102mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="4">
 				<summary>
 					2 x 7 inch (178mm) rifles
@@ -172,11 +172,11 @@
 	</section>
 	<section name="Union Navy">
 		<unit name="USS Monitor" classification="Hvy. Naval Vessel" mass="1000tons" length="52m" speed="15kph" crew="59">
-			<skill name="Armor" front="200mm" side="200mm" back="200mm" top="25mm">
+			<power name="Armor" front="200mm" side="200mm" back="200mm" over="25mm">
 				<summary>
 					200mm iron turret, 25mm deck, 125mm hull belt
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="4">
 				<summary>
 					2 x 11 in (280mm) Dahlgren smoothbores, turret

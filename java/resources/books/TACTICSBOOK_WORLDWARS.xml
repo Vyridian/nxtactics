@@ -2943,8 +2943,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				As part of the deception plan that drew German attention away from Normandy, inflatable rubber Shermans were
 				deployed in Kent with plywood artillery.
 			</reference>
-			<skill name="Armor" front="75mm" back="30mm" side="50mm" over="30mm" under="30mm">
-			</skill>
+			<power name="Armor" front="75mm" back="30mm" side="50mm" over="30mm" under="30mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm M3 L/40 Cannon" facing="Turret" />
 				<item name=".50 cal M2HB MG" facing="F" />
@@ -2953,7 +2952,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="M4A4 Sherman Crab" mass="30tons" speed="40kph" range="193km" crew="5" classification="Med. Tank" image="WWIIAmerican/TankMed_ShermanCrabToken.png">
-			<skill name="Armor" front="65mm" />
+			<power name="Armor" front="65mm" />
 			<skill name="Gunnery" level="3">
 				<item name="75mm M3 L/40 Cannon" facing="Turret" />
 				<item name=".50 cal M2HB MG" facing="F" />
@@ -2968,7 +2967,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="T34 Sherman Calliope" mass="30tons" speed="40kph" range="193km" crew="5" classification="Med. Tank" image="WWIIAmerican/TankMed_T-34Calliope_M4Token.png">
-			<skill name="Armor" front="65mm" />
+			<power name="Armor" front="65mm" />
 			<skill name="Gunnery" level="3">
 				<item name="75mm M3 L/40 Cannon" facing="F" />
 				<item name=".30-06 M1919A4 MG" number="2" facing="F, L" />
@@ -2979,8 +2978,8 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</skill>
 		</unit>
 		<unit name="M4A3E8 Sherman Easy Eight" mass="30tons" speed="48kph" range="193km" crew="5" classification="Med. Tank" image="WWIIAmerican/TankMed_M4A3E8_EasyEightToken.png">
-			<skill name="Armor" front="65mm">
-			</skill>
+			<power name="Armor" front="65mm">
+			</power>
 			<skill name="Gunnery" level="4">
 				<item name="76mm M1 Cannon" facing="Turret" />
 				<item name=".50 cal M2HB MG" facing="F" />
@@ -2995,8 +2994,8 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="M26 Pershing" classification="Hvy. Tank" mass="41.7tons" length="6.3m" crew="5" speed="40kph" range="160km" image="WWIIAmerican/TankHvy_M26_PershingToken.png">
-			<skill name="Armor" front="110mm" under="25mm">
-			</skill>
+			<power name="Armor" front="110mm" under="25mm">
+			</power>
 			<skill name="Gunnery" level="4">
 				<item name="90mm M1 Cannon" facing="Turret" rounds="70" />
 				<item name=".50 cal M2HB MG" facing="F" rounds="550" />
@@ -3009,7 +3008,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="M3 Lee" classification="Med. Tank" mass="24tons" length="5.6m" crew="7" speed="40kph" range="193km" image="WWIIAmerican/TankMed_M3LeeToken.png">
-			<skill name="Armor" front="51mm" />
+			<power name="Armor" front="51mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm M3 L/40 Cannon" facing="F" rounds="46" />
 				<item name="37mm M3 Cannon" facing="Turret" rounds="178" />
@@ -3023,7 +3022,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="M5 Stuart" classification="Lt. Tank" mass="14.7tons" length="4.5m" crew="5" speed="30kph" range="120km" image="WWIIAmerican/TankLt_M5A1_StuartToken.png">
-			<skill name="Armor" front="51mm" />
+			<power name="Armor" front="51mm" />
 			<skill name="Gunnery" level="4">
 				<item name="37mm M3 Cannon" facing="Turret" />
 				<item name=".30-06 M1919A4 MG" facing="Turret, Pintle, Pintle, FL, FR" />
@@ -3037,7 +3036,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="M24 Chaffee" classification="Lt. Tank" mass="18.4tons" length="5m" crew="5" speed="56kph" range="161km" image="WWIIAmerican/TankLt_M24ChaffeeToken.png">
-			<skill name="Armor" front="25mm Sloped" top="9mm" />
+			<power name="Armor" front="25mm Sloped" over="9mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm M3 L/40 Cannon" facing="Turret" rounds="48" />
 				<item name=".50 cal M2HB MG" facing="F" rounds="440" />
@@ -3061,7 +3060,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				The turret was not powered and the crew was required to hand-crank the turret, taking approximately two
 				minutes to rotate 360 degrees.
 			</reference>
-			<skill name="Armor" front="57mm" under="9mm" top="0mm" />
+			<power name="Armor" front="57mm" under="9mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76mm M7 Cannon" facing="Turret" rounds="54" />
 				<item name=".50 cal M2HB MG" facing="Pintle" rounds="300" />
@@ -3070,7 +3069,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</skill>
 		</unit>
 		<unit name="M18 Hellcat" classification="Tank Destroyer" mass="17.7tons" length="5.3m" crew="5" speed="88kph" range="168km" image="WWIIAmerican/TD_M18_HellcatToken.png">
-			<skill name="Armor" front="25mm" top="0mm" />
+			<power name="Armor" front="25mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76mm M1 Cannon" facing="Turret" />
 				<item name=".50 cal M2HB MG" facing="Pintle" />
@@ -3082,7 +3081,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="M36 Jackson" classification="Tank Destroyer" mass="29tons" length="7.5m" crew="5" speed="42kph" range="240km" image="WWIIAmerican/TD_M36JacksonToken.png">
-			<skill name="Armor" front="108mm" under="9mm" top="0mm" />
+			<power name="Armor" front="108mm" under="9mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="90mm M1 Cannon" facing="Turret" rounds="47" />
 				<item name=".50 cal M2HB MG" facing="Pintle" rounds="1000" />
@@ -3095,7 +3094,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="M7 Priest" classification="Artillery" mass="23tons" length="6m" crew="7" speed="39kph" range="193km" image="WWIIAmerican/SPG_M7_PriestToken.png">
-			<skill name="Armor" front="51mm" />
+			<power name="Armor" front="51mm" />
 			<skill name="Gunnery" level="4">
 				<item name="105mm M101 Howitzer" facing="F" rounds="69" />
 				<item name=".50 cal M2HB MG" facing="Turret" rounds="300" />
@@ -3111,7 +3110,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="57mm M1 Artillery" classification="Artillery" mass="1.1tons" length="2.8m" speed="0kph" crew="6" image="WWIIAmerican/Artillery_57mmM1Token.png">
-			<skill name="Armor" front="20mm" back="0mm" top="0mm" side="0mm" under="0mm" />
+			<power name="Armor" front="20mm" back="0mm" over="0mm" side="0mm" under="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="57mm M1 Cannon" facing="F" />
 				<ability name="Indirect Fire" />
@@ -3124,7 +3123,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				They were the US's primary anti-aircraft guns from just prior to the opening of WWII into the 1950s when
 				most AAA was replaced by missile systems.
 			</reference>
-			<skill name="Armor" front="20mm" back="0mm" top="0mm" side="0mm" under="0mm" />
+			<power name="Armor" front="20mm" back="0mm" over="0mm" side="0mm" under="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="90mm M1 Cannon" facing="F" />
 				<ability name="Indirect Fire" />
@@ -3154,7 +3153,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* May carry 2.3 tons instead of passengers
 				* Water Speed: 10kph, Water Range: 93km
 			</summary>
-			<skill name="Armor" front="3mm" back="3mm" top="0mm" side="3mm" under="0mm" />
+			<power name="Armor" front="3mm" back="3mm" over="0mm" side="3mm" under="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="Pintle" />
 			</skill>
@@ -3169,7 +3168,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>
 				Production continued throughout the war, resulting in 18,621 LVTs delivered
 			</reference>
-			<skill name="Armor" front="13mm" top="0mm" />
+			<power name="Armor" front="13mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FL, FR" />
 				<item name=".30-06 M1919A4 MG" facing="FL, FR" />
@@ -3179,7 +3178,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</skill>
 		</unit>
 		<unit name="M3A1 Half-track" classification="Med. Vehicle" mass="9.3tons" length="6.2m" crew="3+10" speed="64kph" range="280km" image="WWIIAmerican/HalfTrack_M3Token.png">
-			<skill name="Armor" front="12mm" top="0mm" />
+			<power name="Armor" front="12mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="Pintle" />
 				<item name=".30-06 M1919A4 MG" facing="L, R" />
@@ -3187,7 +3186,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="M3 Scout Car" classification="Car" mass="5.7tons" length="5.6m" crew="1+7" speed="81kph" range="403km" image="WWIIAmerican/Car_M3ScoutCarToken.png">
-			<skill name="Armor" front="13mm" top="0mm" />
+			<power name="Armor" front="13mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="B" />
 				<item name=".30-06 M1919A4 MG" facing="L, R" />
@@ -3196,7 +3195,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>Lend Lease from US</reference>
 		</unit>
 		<unit name="Willys MB/Ford GPW Jeep" classification="Car" mass="1ton" length="3.3m" width="1.6m" height="1.8m" crew="1+3" speed="100kph" image="WWIIAmerican/Truck_M151_Mutt_JeepToken.png">
-			<skill name="Armor" front="5mm" side="0mm" top="0mm" />
+			<power name="Armor" front="5mm" side="0mm" over="0mm" />
 			<skill name="Military" level="3">
 			</skill>
 			<reference>
@@ -3210,7 +3209,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="GMC CCKW 2 1/2 Ton Truck" classification="Truck" mass="5tons" length="4m" crew="1+20" speed="90kph" range="400mi" image="WWIIAmerican/Truck_CCKWToken.png">
-			<skill name="Armor" front="5mm" />
+			<power name="Armor" front="5mm" />
 			<skill name="Military" level="3">
 			</skill>
 			<reference>
@@ -3218,14 +3217,14 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Medical Truck" classification="Truck" mass="5tons" length="4m" crew="1+5" speed="90kph" range="400mi" image="WWIIAmerican/Truck_DWC-54_MedicToken.png">
-			<skill name="Armor" front="5mm" />
+			<power name="Armor" front="5mm" />
 			<skill name="Military" level="3">
 			</skill>
 		</unit>
 	</section>
 	<section name="WWII American Aircraft">
 		<unit name="F4F Wildcat" classification="Lt. Aircraft" mass="3.6tons" length="8.8m" crew="1" speed="515kph" range="1240km" image="WWIIAmerican/Fighter_F4F_WildcatToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" number="6" facing="FF" />
 				<item name="250lb Bomb" facing="Ux2" />
@@ -3235,7 +3234,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="SBD Dauntless" classification="Lt. Aircraft" mass="4.8tons" length="10m" crew="2" speed="410kph" range="1240km" image="WWIIAmerican/DiveBomber_Douglas_SBDToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FFx2" />
 				<item name=".30-06 M1919A4 MG" facing="Bx2" />
@@ -3256,7 +3255,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				extreme cold.  He simply flew up and chopped off the Ki-45's tail with the big propeller of the Corsair.  Despite
 				missing five inches off the end of his propeller blades, he managed to land safely.
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FFx4" />
 				<item name="5in HVAR Rocket" facing="FFx4" />
@@ -3268,7 +3267,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="P-35 Seversky" classification="Lt. Aircraft" mass="2.7tons" length="8.2m" width="11m" height="3m" speed="496kph" range="1530km" crew="1" image="WWIIAmerican/Fighter_P-35SeverskyToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FFx4" />
 				<item name="350lb Bomb" facing="U" />
@@ -3286,7 +3285,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				roll was too slow for it to excel as a dogfighter.  The P-38 was the only American fighter aircraft in production
 				throughout American involvement in the war.
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm Hispano Autocannon" facing="FF" rounds="150" />
 				<item name=".50 cal M2HB MG" facing="FFx4" />
@@ -3300,7 +3299,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="P-40E Curtiss Warhawk" classification="Lt. Aircraft" mass="3.7tons" length="11.4m" crew="1" speed="580kph" range="1100km" image="WWIIAmerican/Fighter_P-40_WarhawkToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FFx6" />
 				<item name="250lb Bomb" facing="Ux9" />
@@ -3309,7 +3308,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="P-40 Flying Tigers" classification="Lt. Aircraft" mass="3.7tons" length="11.4m" crew="1" speed="580kph" range="1100km" image="WWIIAmerican/Fighter_P-40_ChineseFlyingTigersToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FFx6" />
 				<item name="250lb Bomb" facing="Ux9" />
@@ -3339,7 +3338,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>
 				 A modern-day counterpart in that role, the A-10 Thunderbolt II, takes its name from the P-47.
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FFx8" />
 				<item name="500lb Bomb" facing="Ux2" />
@@ -3349,7 +3348,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="P-51 Mustang" classification="Lt. Aircraft" mass="4.2tons" length="10m" width="11.3m" height="4.2m" speed="703kph" range="2755km" crew="1" image="WWIIAmerican/Fighter_P-51Mustang_FrenesiToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FFx6" />
 				<item name="1000lb Bomb" facing="FFx2" />
@@ -3370,7 +3369,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<summary>
 				* Bombs could be substituted for depth charges or torpedoes
 			</summary>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="L, R" />
 				<item name=".30-06 M1919A4 MG" facing="Fx2, B" />
@@ -3385,7 +3384,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				itself.  With the ability to return home despite extensive battle damage, its durability, especially
 				in belly-landings and ditchings, quickly took on mythic proportions.
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="Fx2, Bx2, Lx2, Rx2, Tx2, T, Ux2" />
 				<item name="1000lb Bomb" facing="Ux8" />
@@ -3398,7 +3397,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				Produced in greater numbers than any other American combat aircraft of WWII and still holds the
 				record as the most produced U.S. military aircraft.
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="Fx2, Bx2, L, R, Tx2, Ux2" />
 				<item name="1000lb Bomb" facing="Ux8" />
@@ -3414,7 +3413,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				atomic bombs that destroyed Hiroshima and Nagasaki.  Unlike many other WWII-era bombers, the B-29 remained in
 				service long after the war ended
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="Fx2, Bx2, Lx2, Rx2, Tx2, Ux2" />
 				<item name="1000lb Bomb" facing="FFx9" />
@@ -3426,7 +3425,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 	<section name="WWII American Naval Vessels">
 		<unit name="Yorktown Class Carrier" classification="Hvy. Naval Vessel" mass="20ktons" length="230m" crew="2200" speed="60kph" range="23200km" image="WWIIAmerican/Carrier_Yorktown.png">
 			<titles>Enterprise, Hornet, Yorktown</titles>
-			<skill name="Armor" front="100mm" top="40mm" />
+			<power name="Armor" front="100mm" over="40mm" />
 			<skill name="Gunnery" level="4">
 				<item name="127mm 5in/38cal Autocannon" number="8" />
 				<item name="28mm 1.1in Quad Cannon" number="5" />
@@ -3450,7 +3449,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				hardest fought ships on the US Navy during the war.  They would have three of the top four most decorated ships
 				in the US Navy in World War II.
 			</reference>
-			<skill name="Armor" front="125mm" side="125mm" back="125mm" top="55mm" under="125mm" />
+			<power name="Armor" front="125mm" side="125mm" back="125mm" over="55mm" under="125mm" />
 			<skill name="Gunnery" level="4">
 				<item name="203mm 8in/55cal Cannon" number="9" facing="FTurretx3, FTurretx3, BTurretx3" />
 				<item name="127mm 5in/38cal Autocannon" number="8" />
@@ -3465,7 +3464,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* Designed originally as flotilla leaders but which ended up gaining recognition as effective anti-aircraft
 				cruisers.
 			</reference>
-			<skill name="Armor" front="55mm" side="85mm" back="55mm" top="32mm" under="55mm" />
+			<power name="Armor" front="55mm" side="85mm" back="55mm" over="32mm" under="55mm" />
 			<skill name="Gunnery" level="4">
 				<item name="127mm 5in/38cal Autocannon" number="16" />
 				<item name="28mm 1.1in Quad Cannon" number="9" />
@@ -3480,7 +3479,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				Benson class destroyers and were often referred to as the BENSON/GLEAVES class.
 				* The 1954 movie The Caine Mutiny was filmed on the Gleaves Destroyer USS Doyle.
 			</reference>
-			<skill name="Armor" />
+			<power name="Armor" />
 			<skill name="Gunnery" level="4">
 				<item name="127mm 5in/38cal Autocannon" number="5" />
 				<item name=".50 cal M2HB MG" number="6" />
@@ -3509,7 +3508,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* After the war, PT-109 became famous as the ship John F. Kennedy commanded.
 				* Though often said to be made of plywood, they were actually made of two layers of 1 inch thick mahogany.
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" under="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" under="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm Oerlikon Autocannon" number="1" />
 				<item name=".50 cal M2HB MG" number="4" facing="Lx2, Rx2" />
@@ -3528,7 +3527,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				1 3 inch/50 DP
 				2 40mm
 			</summary>
-			<skill name="Armor" />
+			<power name="Armor" />
 			<skill name="Gunnery" level="4">
 				<item name="127mm 5in/38cal Autocannon" number="1" />
 				<item name="20mm Oerlikon Autocannon" number="6" />
@@ -3815,7 +3814,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 	</section>
 	<section name="WWII British Vehicles">
 		<unit name="Churchill A22F MkVII" classification="Hvy. Tank" mass="38.5tons" length="7.3m" crew="5" speed="20kph" range="90km" image="WWIIBritish/TankHvy_ChurchillMkVIIToken.png">
-			<skill name="Armor" front="152mm" under="16mm" />
+			<power name="Armor" front="152mm" under="16mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm QF Cannon" facing="Turret" />
 				<item name="7.92mm Besa MG" facing="Turret, F" />
@@ -3831,7 +3830,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Churchill Crocodile" classification="Hvy. Tank" mass="38.5tons" length="7.3m" crew="5" speed="20kph" range="90km" image="WWIIBritish/TankHvy_ChurchillCrocToken.png">
-			<skill name="Armor" front="152mm" under="16mm" />
+			<power name="Armor" front="152mm" under="16mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm QF Cannon" facing="Turret" />
 				<item name="Flamethrower Portable No2" facing="F" />
@@ -3840,7 +3839,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Comet A34" classification="Med. Tank" mass="33.5tons" length="6.6m" crew="5" speed="50kph" range="250km" image="WWIIBritish/TankMed_CometToken.png">
-			<skill name="Armor" front="102mm" />
+			<power name="Armor" front="102mm" />
 			<skill name="Gunnery" level="4">
 				<item name="77mm HV Cannon" facing="Turret" />
 				<item name="7.92mm Besa MG" number="2" />
@@ -3848,7 +3847,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Cromwell A27M" classification="Med. Tank" mass="28tons" length="6.3m" crew="5" speed="51kph" range="280km" image="WWIIBritish/TankMed_CromwellToken.png">
-			<skill name="Armor" front="76mm" />
+			<power name="Armor" front="76mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm QF Cannon" facing="Turret" />
 				<item name="7.92mm Besa MG" number="2" />
@@ -3859,7 +3858,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Matilda A12" classification="Med. Tank" mass="27tons" length="6m" crew="4" speed="24kph" range="257km" image="WWIIBritish/TankLt_MkIIMatildaToken.png">
-			<skill name="Armor" front="78mm" />
+			<power name="Armor" front="78mm" />
 			<skill name="Gunnery" level="4">
 				<item name="40mm QF 2 Pounder Cannon" facing="Turret" />
 				<item name="7.92mm Besa MG" rounds="2925" />
@@ -3872,7 +3871,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Sherman Firefly" classification="Med. Tank" mass="36tons" speed="40kph" range="193km" crew="4" image="WWIIBritish/TankMed_M4FireflyToken.png">
-			<skill name="Armor" front="65mm" />
+			<power name="Armor" front="65mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76mm QF 17 Pounder Cannon" facing="Turret" rounds="77" />
 				<item name=".50 cal M2HB MG" facing="Pintle" />
@@ -3885,7 +3884,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="M3 Grant" classification="Med. Tank" mass="24tons" length="5.6m" crew="6" speed="40kph" range="193km" image="WWIIBritish/TankMed_M3GrantToken.png">
-			<skill name="Armor" front="51mm" />
+			<power name="Armor" front="51mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm M3 L/40 Cannon" facing="F" rounds="46" />
 				<item name="37mm M3 Cannon" facing="Turret" rounds="178" />
@@ -3899,7 +3898,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Valentine" classification="Lt. Tank" mass="16.5tons" length="5.4m" crew="4" speed="24kph" range="145km" image="WWIIBritish/TankLt_ValentineToken.png">
-			<skill name="Armor" front="65mm" side="45mm" under="8mm" />
+			<power name="Armor" front="65mm" side="45mm" under="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="57mm QF 6 Pounder Cannon" facing="Turret" />
 			</skill>
@@ -3907,7 +3906,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>Most Produced British Tank</reference>
 		</unit>
 		<unit name="Crusader A15" classification="Lt. Tank" mass="20tons" length="6m" crew="5" speed="42kph" range="322km" image="WWIIBritish/TankLt_CrusaderlToken.png">
-			<skill name="Armor" front="51mm" />
+			<power name="Armor" front="51mm" />
 			<skill name="Gunnery" level="4">
 				<item name="57mm QF 6 Pounder Cannon" facing="Turret" rounds="65" />
 				<item name="7.92mm Besa MG" number="2" rounds="5000" />
@@ -3920,7 +3919,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Archer" classification="Tank Destroyer" mass="15tons" length="6.7m" crew="4" speed="32kph" range="140km" image="WWIIBritish/TD_ArcherToken.png">
-			<skill name="Armor" front="60mm" top="0mm" under="14mm" />
+			<power name="Armor" front="60mm" over="0mm" under="14mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76mm QF 17 Pounder Cannon" facing="FR" />
 				<item name=".303 Bren Light MG" facing="Pintle" />
@@ -3933,7 +3932,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="17pdr SP Achilles" classification="Tank Destroyer" mass="30tons" length="6m" crew="5" speed="51kph" range="300km" image="WWIIBritish/TD_AchillesToken.png">
-			<skill name="Armor" front="57mm" under="9mm" />
+			<power name="Armor" front="57mm" under="9mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76mm QF 17 Pounder Cannon" facing="Turret" rounds="54" />
 				<item name=".50 cal M2HB MG" facing="Pintle" rounds="300" />
@@ -3956,7 +3955,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</skill>
 		</unit>
 		<unit name="Humber Mk IV" classification="Med. Vehicle" mass="7tons" length="4.6m" crew="3" speed="72kph" range="400km" image="WWIIBritish/Car_HumberToken.png">
-			<skill name="Armor" front="15mm" />
+			<power name="Armor" front="15mm" />
 			<skill name="Gunnery" level="4">
 				<item name="37mm M3 Cannon" facing="Turret" />
 				<item name="7.92mm Besa MG" facing="Pintle" />
@@ -3983,7 +3982,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>
 				One of the most outstanding fighter aircraft of WWII
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".303 Vickers MG" facing="FFx8" />
 				<item name="250lb Bomb" facing="Ux2" />
@@ -3995,7 +3994,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>
 				* Although largely overshadowed by the Supermarine Spitfire, the aircraft became renowned during the Battle of Britain.
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm Hispano Autocannon" facing="FFx4" />
 				<item name="250lb Bomb" facing="Ux2" />
@@ -4004,7 +4003,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Hawker Tempest" classification="Lt. Aircraft" mass="5.2tons" length="10.2m" crew="1" speed="695kph" range="1190km" image="WWIIBritish/Fighter_TempestToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm Hispano Autocannon" facing="FFx4" />
 				<item name="500lb Bomb" facing="Ux2" />
@@ -4013,7 +4012,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="P-40 Curtiss Tomahawk" classification="Lt. Aircraft" mass="3.7tons" length="11.4m" crew="1" speed="580kph" range="1100km" image="WWIIBritish/Fighter_TomahawkToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="FFx6" />
 				<item name="250lb Bomb" facing="Ux9" />
@@ -4033,7 +4032,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				The most famous and most successful of the Second World War night bombers, delivering 608,612 tons of
 				bombs in 156,000 sorties.
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".303 Vickers MG" number="8" facing="FTurret, UTurret, BTurret" />
 				<item name="4000lb Blockbuster Bomb" />
@@ -4043,7 +4042,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="Fairey Swordfish" classification="Lt. Aircraft" mass="3.5tons" length="10.8m" speed="224kph" range="879km" crew="3" image="WWIIBritish/TorpedoBomberFaireySwordfishToken.png">
-			<skill name="Armor" front="3mm" />
+			<power name="Armor" front="3mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".303 Vickers MG" number="2" facing="FF, BTurret" />
 				<item name="60lb RP-3 Rockets" number="8" facing="FF" />
@@ -4132,8 +4131,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 		<unit name="Renault R40" classification="Lt. Tank">
 		</unit>
 		<unit name="French M4 Sherman" mass="30tons" speed="38kph" range="193km" crew="5" classification="Med. Tank" image="WWIIFrench/TankMed_M4A3_Sherman.png">
-			<skill name="Armor" front="65mm">
-			</skill>
+			<power name="Armor" front="65mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm M3 L/40 Cannon" facing="Turret" />
 				<item name=".50 cal M2HB MG" facing="F" />
@@ -4142,7 +4140,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="French M10 Wolverine" classification="Tank Destroyer" mass="30tons" length="6m" crew="5" speed="51kph" range="300km" image="WWIIFrench/TD_M10_Wolverine.png">
-			<skill name="Armor" front="57mm" under="9mm" top="0mm" />
+			<power name="Armor" front="57mm" under="9mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76mm M7 Cannon" facing="Turret" rounds="54" />
 				<item name=".50 cal M2HB MG" facing="Pintle" rounds="300" />
@@ -4153,7 +4151,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 	</section>
 	<section name="WWII French Aircraft">
 		<unit name="Free French Spitfire" classification="Lt. Aircraft" mass="3tons" length="9m" crew="1" speed="605kph" range="760km" image="WWIIFrench/SupermarineSpitfire_Mk_IXToken.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".303 Vickers MG" facing="FFx8" />
 				<item name="250lb Bomb" facing="Ux2" />
@@ -4490,7 +4488,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 	</section>
 	<section name="WWII German Vehicles">
 		<unit name="Panzer III Ausf L" classification="Lt. Tank" mass="22tons" length="5.5m" width="2.9m" height="2.5m" speed="40kph" range="155km" crew="5" image="WWIIGerman/TankLt_PzkpfwIII_DesertToken.png">
-			<skill name="Armor" front="70mm" back="50mm" side="30mm" top="10mm" under="5mm" />
+			<power name="Armor" front="70mm" back="50mm" side="30mm" over="10mm" under="5mm" />
 			<skill name="Gunnery" level="4">
 				<item name="50mm KwK 39 L/60 Cannon" facing="Turret" />
 				<item name="7.92mm MG34 MG" facing="Turret, F" />
@@ -4498,7 +4496,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Flammpanzer III Ausf M" classification="Lt. Tank" mass="22tons" length="5.5m" width="2.9m" height="2.5m" speed="40kph" range="155km" crew="5" image="WWIIGerman/TankLt_FlammpanzerIIIToken.png">
-			<skill name="Armor" front="70mm" back="50mm" side="30mm" top="10mm" under="5mm" />
+			<power name="Armor" front="70mm" back="50mm" side="30mm" over="10mm" under="5mm" />
 			<skill name="Gunnery" level="4">
 				<item name="Flammenwerfer 35 Flamethrower" facing="Turret" />
 				<item name="7.92mm MG34 MG" facing="Turret, F" />
@@ -4506,7 +4504,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Panzer IV Ausf H" classification="Med. Tank" mass="25tons" length="7m" crew="5" speed="42kph" range="200km" image="WWIIGerman/TankMed_PanzerPzkpfwIV_Token.png">
-			<skill name="Armor" front="80mm" />
+			<power name="Armor" front="80mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm KwK 40 L/48 Cannon" facing="Turret" rounds="87" />
 				<item name="7.92mm MG34 MG" facing="Turret, F" />
@@ -4517,7 +4515,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Panther Ausf G" classification="Med. Tank" mass="43tons" speedland="46kph" range="250km" crew="5" image="WWIIGerman/TankMed_PantherToken.png">
-			<skill name="Armor" front="80mm Sloped" back="45mm" side="50mm" top="30mm" under="30mm" />
+			<power name="Armor" front="80mm Sloped" back="45mm" side="50mm" over="30mm" under="30mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm KwK 42 L/70 Cannon" facing="Turret" />
 				<item name="7.92mm MG34 MG" facing="F, Turret" />
@@ -4526,8 +4524,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>Ernst Barkmann in a lone Panther knocked out nine Shermans halting an American advance.</reference>
 		</unit>
 		<unit name="Tiger Ausf E" classification="Hvy. Tank" mass="57tons" length="8.5m" crew="5" speed="38kph" range="150km" image="WWIIGerman/TankHvy_TigerToken.png">
-			<skill name="Armor" front="100mm" back="25mm" side="80mm" over="40mm" under="40mm">
-			</skill>
+			<power name="Armor" front="100mm" back="25mm" side="80mm" over="40mm" under="40mm" />
 			<skill name="Gunnery" level="4">
 				<item name="88mm KwK 36 L/56 Cannon" facing="Turret" rounds="92" />
 				<item name="7.92mm MG34 MG" facing="F, Turret" rounds="4800" />
@@ -4539,7 +4536,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Tiger II Ausf B" classification="Hvy. Tank" mass="68tons" length="7.6m" crew="5" speed="41kph" range="170km" image="WWIIGerman/TankHvy_PzkpfwVIb_Porsche_KingTigerToken.png">
-			<skill name="Armor" front="150mm" back="80mm" side="80mm" top="40mm" under="40mm" />
+			<power name="Armor" front="150mm" back="80mm" side="80mm" over="40mm" under="40mm" />
 			<skill name="Gunnery" level="4">
 				<item name="88mm KwK 43 L/71 Cannon" facing="Turret" rounds="84" />
 				<item name="7.92mm MG34 MG" facing="F, Turret" rounds="4800" />
@@ -4556,7 +4553,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Marder II" classification="Tank Destroyer" mass="11tons" length="6.4m" crew="3" speed="40kph" range="190km" image="WWIIGerman/TD_MarderIIToken.png">
-			<skill name="Armor" front="35mm" side="15mm" back="0mm" top="0mm" />
+			<power name="Armor" front="35mm" side="15mm" back="0mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm KwK 40 L/48 Cannon" facing="F" rounds="37" />
 			</skill>
@@ -4566,7 +4563,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="StuG III" classification="Tank Destroyer" mass="24tons" length="6.9m" crew="4" speed="40kph" range="155km" image="WWIIGerman/TD_StugIIIToken.png">
-			<skill name="Armor" front="80mm" />
+			<power name="Armor" front="80mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm KwK 40 L/48 Cannon" facing="F" rounds="54" />
 				<item name="7.92mm MG34 MG" facing="F" rounds="600" />
@@ -4577,7 +4574,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="JapdPanzer 38 Hetzer" classification="Tank Destroyer" mass="15tons" length="6m" speed="42kph" range="177km" image="WWIIGerman/TD_HetzerToken.png">
-			<skill name="Armor" front="60mm Sloped" />
+			<power name="Armor" front="60mm Sloped" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm KwK 39 L/48 Cannon" facing="F" rounds="41" />
 				<item name="7.92mm MG34 MG" facing="Pintle" rounds="1200" />
@@ -4589,7 +4586,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="JagdPanther" classification="Tank Destroyer" mass="45.5tons" length="10m" crew="5" speed="46kph" range="160km" image="WWIIGerman/TD_JagdPantherToken.png">
-			<skill name="Armor" front="80mm Sloped" side="50mm" top="30mm" back="45mm" />
+			<power name="Armor" front="80mm Sloped" side="50mm" over="30mm" back="45mm" />
 			<skill name="Gunnery" level="4">
 				<item name="88mm KwK 43 L/71 Cannon" facing="F" rounds="57" />
 				<item name="7.92mm MG34 MG" facing="F" rounds="600" />
@@ -4604,7 +4601,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Panzerjager Tiger Elefant" mass="65tons" speed="30kph" classification="Tank Destroyer" image="WWIIGerman/TD_PanzerjagerTigerElefantToken.png">
-			<skill name="Armor" front="200mm" />
+			<power name="Armor" front="200mm" />
 			<skill name="Gunnery" level="4">
 				<item name="88mm KwK 43 L/71 Cannon" facing="F" />
 				<item name="7.92mm MG34 MG" />
@@ -4615,7 +4612,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</reference>
 		</unit>
 		<unit name="Nashorn" classification="Tank Destroyer" mass="24tons" speed="42kph" range="235km" image="WWIIGerman/TD_NashornToken.png">
-			<skill name="Armor" front="30mm" top="0mm" />
+			<power name="Armor" front="30mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="88mm KwK 43 L/71 Cannon" facing="F" />
 				<item name="7.92mm MG34 MG" />
@@ -4626,7 +4623,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>
 				* Fire support based on Panzer IV
 			</reference>
-			<skill name="Armor" front="100mm" />
+			<power name="Armor" front="100mm" />
 			<skill name="Gunnery" level="4">
 				<item name="150mm StuH 43 L/12 Cannon" facing="F" />
 				<item name="7.92mm MG34 MG" number="2" facing="F, Pintle" rounds="600" />
@@ -4641,7 +4638,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 * 380mm Naval Mortar
 * 90mm KbK 39 Antipersonnel weapon
 			</summary>
-			<skill name="Armor" front="150mm" />
+			<power name="Armor" front="150mm" />
 			<skill name="Gunnery" level="4">
 				<item name="7.92mm MG34 MG" />
 				<ability name="Indirect Fire" />
@@ -4653,7 +4650,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				SPG based on Panzer II.  Proved so successful that Hitler ordered all Panzer II production to be
 				reserved for the Wespe alone, dropping other projects such as the Marder II.
 			</reference>
-			<skill name="Armor" front="30mm" />
+			<power name="Armor" front="30mm" />
 			<skill name="Gunnery" level="4">
 				<item name="105mm leFH 18 Howitzer" rounds="32" />
 				<ability name="Indirect Fire" />
@@ -4661,7 +4658,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Panzerwerfer 42" classification="Med. Vehicle" mass="13.5tons" length="7m" width="2.5m" height="2m" speed="27kph" range="300km" crew="2" image="WWIIGerman/RocketLauncher_Panzerwerfer42Token.png">
-			<skill name="Armor" front="15mm" side="12mm" back="8mm" top="6mm" under="6mm" />
+			<power name="Armor" front="15mm" side="12mm" back="8mm" over="6mm" under="6mm" />
 			<skill name="Gunnery" level="4">
 				<item name="150 mm Rocket Launcher" number="10" rounds="42" />
 				<ability name="Indirect Fire" />
@@ -4705,7 +4702,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="Halftrack Sdkfz 251" classification="Med. Vehicle" mass="7.8tons" length="5.8m" width="2.1m" height="1.8m" speed="52kph" range="500km" crew="2+10" image="WWIIGerman/Halftrack_Sdkfz_250Token.png">
-			<skill name="Armor" front="15mm" />
+			<power name="Armor" front="15mm" />
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Mercedes L300" classification="Truck" image="WWIIGerman/Truck_Mercedes_L3000Token.png">
@@ -4733,7 +4730,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				time with 352 official victories, Gerhard Barkhorn with 301 victories, and Günther Rall with 275 victories.
 				Hartmann refused to fly any other combat aircraft throughout the war.
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="13mm MG131 MG" facing="FFx2" />
 				<item name="20mm MG151/20 Cannon" facing="FF" />
@@ -4749,7 +4746,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* Compared to the Bf 109, the Fw 190 was a 'workhorse', employed in and proved suitable for a wide variety of
 				roles, including ground attack, night fighter-bomber, long-range bomber escort, and night-fighter.
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name="13mm MG131 MG" number="2" facing="FFx2" />
 				<item name="20mm MG151/20 Cannon" number="4" facing="FFx4" />
@@ -4758,7 +4755,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Messerschmitt Bf 110" classification="Lt. Aircraft" mass="7.8tons" length="12.3m" width="16.3m" height="3.3m" crew="2" speed="595kph" range="900km" image="WWIIGerman/FighterBomber_BF-110Token.png">
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm MG151/20 Cannon" number="2" facing="FFx2" rounds="750" />
 				<item name="7.92mm MG17 MG" number="4" facing="FFx4" rounds="4000" />
@@ -4771,7 +4768,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>
 				* World's First Turbojet Fighter
 			</reference>
-			<skill name="Armor" front="10mm" side="10mm" back="10mm" top="10mm" />
+			<power name="Armor" front="10mm" side="10mm" back="10mm" over="10mm" />
 			<skill name="Gunnery" level="4">
 				<item name="30mm MK 108 Cannon" number="4" facing="FFx4" />
 				<item name="R4M Hurricane Rocket" number="24" facing="FFx24" rounds="24" />
@@ -4786,7 +4783,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* This troubled aircraft was the only heavy bomber built in large numbers by Germany in WWII.  It was nicknamed
 				Luftwaffe's lighter or the 'Flaming Coffin' due to the engines' tendency to catch fire,
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name="7.92mm MG81Z MG" number="3" facing="FF, UTurretx2" rounds="1700" />
 				<item name="20mm MG151/20 Cannon" number="2" facing="BTurretx2" />
@@ -4801,7 +4798,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				was used almost entirely in the reconnaissance role, but in its few uses as a bomber it proved to be nearly
 				impossible to intercept.
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm MG151/20 Cannon" number="2" facing="BTurretx2" />
 				<item name="1000lb Bomb" rounds="14" />
@@ -4814,7 +4811,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<summary>
 				* Seaplance
 			</summary>
-			<skill name="Armor" front="10mm" side="10mm" back="10mm" top="10mm" />
+			<power name="Armor" front="10mm" side="10mm" back="10mm" over="10mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm MG151/20 Cannon" number="1" facing="FF" />
 				<item name="7.92mm MG81Z MG" number="2" facing="LTurret, RTurret" />
@@ -4833,7 +4830,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				May 1941, sank the HMS Hood, flagship and pride of the Royal Navy in 11 minutes.  In response, Winston
 				Churchill issued the order to 'Sink the Bismarck', spurring a relentless pursuit by the Royal Navy.
 			</reference>
-			<skill name="Armor" front="320mm" side="320mm" back="320mm" top="120mm" />
+			<power name="Armor" front="320mm" side="320mm" back="320mm" over="120mm" />
 			<skill name="Gunnery">
 				<summary>
 					8 × 380 mm/L52 SK C/34 (15 in)(4×2)
@@ -4938,7 +4935,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				encounter.  However, due to lack of suitable medium tanks, it was often employed in a combat role, for which it
 				was unsuited.
 			</reference>
-			<skill name="Armor" front="40mm" under="6mm" />
+			<power name="Armor" front="40mm" under="6mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm Breda M35 Autocannon" rounds="296" facing="Turret" />
 				<item name="8mm Breda M37 MG" rounds="1560" number="1" facing="Pintle" />
@@ -4946,7 +4943,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Carro Armato M13/40" classification="Lt. Tank" mass="14tons" length="5m" width="2.2m" height="2.4m" speed="32kph" range="200km" crew="4" image="WWIIItalian/TankLt_M13CarroArmatoToken.png">
-			<skill name="Armor" front="42mm" side="25mm" top="15mm" under="6mm" />
+			<power name="Armor" front="42mm" side="25mm" over="15mm" under="6mm" />
 			<skill name="Gunnery" level="4">
 				<item name="47mm Cannone da 47/32 M35" rounds="104" facing="Turret" />
 				<item name="8mm Breda M37 MG" number="4" facing="Turret, Fx2, Pintle" />
@@ -4954,7 +4951,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="4" />
 		</unit>
 		<unit name="Semovente 47/32" classification="Tank Destroyer" mass="6.4tons" length="3.8m" width="2m" height="1.6m" speed="42kph" range="200km" crew="3" image="WWIIItalian/TD_Semovente47.png">
-			<skill name="Armor" front="30mm" top="0mm" />
+			<power name="Armor" front="30mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name="47mm Cannone da 47/32 M35" rounds="70" facing="FF" />
 				<item name="8mm Breda M37 MG" number="1" facing="Pintle" />
@@ -4967,7 +4964,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				artillery instead of a pure assault gun. Though their role was divisional artillery, they could fire as indirect
 				support, and if necessary, also act as an assault gun and anti-tank vehicle.
 			</reference>
-			<skill name="Armor" front="50mm" />
+			<power name="Armor" front="50mm" />
 			<skill name="Gunnery" level="4">
 				<item name="75mm Obice da 75/18 M34" rounds="44" facing="FF" />
 				<item name="8mm Breda M37 MG" number="1" facing="Pintle" />
@@ -4981,7 +4978,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* In Africa, Italian pilots flying the G.50 managed to shoot down the faster and better armed Hurricane fighter.
 				* In the hands of expert pilots, the Fiat G.50 could score multiple kills in a single action
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="12.7mm Breda-SAFAT MG" number="2" facing="FF" />
 			</skill>
@@ -4996,7 +4993,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				Allied fighters.  The Fiat CR.42 was the last of the Fiat biplane fighters to enter frontline service
 				as a fighter, and represented the epitome of the type.
 			</summary>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="12.7mm Breda-SAFAT MG" number="2" facing="FF" rounds="400" />
 			</skill>
@@ -5010,7 +5007,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				important aircraft of the Regia Aeronautica from 1935 to 1944, and adapted to second line duties in
 				performing a wide range of tasks.
 			</summary>
-			<skill name="Armor" front="3mm" />
+			<power name="Armor" front="3mm" />
 			<skill name="Gunnery" level="4">
 				<item name="7.7mm Breda-SAFAT MG" number="6" />
 				<item name="250kg Bomb" number="8" />
@@ -5190,7 +5187,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				One key to the Japanese success in Malaya was the unexpected presence of their tanks in wet jungle
 				terrain where the British did not believe tanks could be used.
 			</reference>
-			<skill name="Armor" front="10mm" />
+			<power name="Armor" front="10mm" />
 			<skill name="Gunnery" level="4">
 				<item name="37mm Type 94 Cannon" facing="Turret" />
 				<item name="7.7mm Type 97 MG" facing="F, Pintle" />
@@ -5199,7 +5196,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</skill>
 		</unit>
 		<unit name="Type 97 Chi-Ha" classification="Med. Tank" mass="16tons" length="5.5m" crew="4" speed="38kph" range="210km" image="WWIIJapanese/TankMed_Type97ChiHa.png">
-			<skill name="Armor" front="33mm" side="9mm" />
+			<power name="Armor" front="33mm" side="9mm" />
 			<skill name="Gunnery" level="4">
 				<item name="57mm Type 97 Cannon" facing="Turret" />
 				<item name="7.7mm Type 97 MG" facing="F, BTurret" />
@@ -5210,7 +5207,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 	</section>
 	<section name="WWII Japanese Aircraft">
 		<unit name="J2M Raiden Fighter" classification="Lt. Aircraft" mass="3.5tons" length="9.7m" width="10.8m" height="3.8m" speed="612kph" range="560km" crew="1" image="WWIIJapanese/Fighter_J2M3_Raiden_Token.png">
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm Type 99 Cannon" number="4" facing="FFx4" />
 				<item name="60kg Bomb" number="2" facing="Ux2" />
@@ -5227,7 +5224,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				Allied pilots.  Excellent maneuverability and very long range made it one of the finest fighters of its era.  By
 				1943, the allies produced more powerful fighters and the A6M became obsolete.
 			</reference>
-			<skill name="Armor" front="4mm" />
+			<power name="Armor" front="4mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm Type 99 Cannon" number="2" facing="FFx2" />
 				<item name="7.7mm Type 97 MG" number="2" facing="FFx2" />
@@ -5243,7 +5240,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* High performance but little armor
 				* Torpedo may be replaced with 3x 250kg Bombs or 6x 60kg Bombs
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="7.7mm Type 97 MG" number="3" facing="FFx2, BTurret" />
 				<item name="Torpedo Type 91" />
@@ -5259,7 +5256,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* Able to survive as a fighter
 				* Could replace 250kg Bomb with 2x 60kg Bombs
 			</reference>
-			<skill name="Armor" front="8mm" side="8mm" back="8mm" top="8mm" />
+			<power name="Armor" front="8mm" side="8mm" back="8mm" over="8mm" />
 			<skill name="Gunnery" level="4">
 				<item name="7.7mm Type 97 MG" facing="FFx2, BTurret" />
 				<item name="250kg Bomb" number="1" />
@@ -5288,7 +5285,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>
 				This floatplane was developed from the A6M Zero for supporting amphibian operations and defending remote bases.
 			</reference>
-			<skill name="Armor" front="4mm" />
+			<power name="Armor" front="4mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm Type 99 Cannon" number="2" facing="FFx2" />
 				<item name="7.7mm Type 97 MG" number="2" facing="FFx2" />
@@ -5306,7 +5303,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<summary>
 				Akagi carried - 21 Zeros, 21 Vals, and 21 Kates
 			</summary>
-			<skill name="Armor" front="152mm" side="152mm" back="152mm" top="152mm" under="152mm" />
+			<power name="Armor" front="152mm" side="152mm" back="152mm" over="152mm" under="152mm" />
 			<skill name="Gunnery" level="4">
 				<item name="200mm/50 Naval Artillery" number="1" />
 				<item name="127mm/45 Cannon" number="16" />
@@ -5326,7 +5323,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 		</unit>
 		<unit name="Soryu Class Fast Carrier" classification="Hvy. Naval Vessel" mass="19.5ktons" length="222m" width="21m" speed="64kph" range="14000km" crew="1103" image="WWIIJapanese/Carrier_Hiryu.png">
 			<titles>Hiryu, Soryu</titles>
-			<skill name="Armor" front="45mm" side="45mm" back="45mm" top="25mm" under="45mm" />
+			<power name="Armor" front="45mm" side="45mm" back="45mm" over="25mm" under="45mm" />
 			<skill name="Gunnery" level="4">
 				<item name="127mm/45 Cannon" number="12" />
 				<item name="25mm Type 96 Autocannon" number="26" />
@@ -5350,7 +5347,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				The Japanese destroyers were bigger, more powerfully armed, and faster than anything that any other fleet
 				possessed.
 			</reference>
-			<skill name="Armor" front="10mm" side="10mm" back="10mm" top="10mm" under="10mm" />
+			<power name="Armor" front="10mm" side="10mm" back="10mm" over="10mm" under="10mm" />
 			<skill name="Gunnery" level="4">
 				<item name="127mm/45 Cannon" number="6" />
 				<item name="13mm Type 93 AA" number="2" />
@@ -5363,7 +5360,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</skill>
 		</unit>
 		<unit name="Agano Class Light Cruiser" classification="Med. Naval Vessel" mass="7.6ktons" length="162m" width="15.2m" speed="67kph" range="11000km" crew="726" image="WWIIJapanese/CruiserLt_Noshiro_Token.png">
-			<skill name="Armor" front="60mm" side="60mm" under="60mm" top="20mm" />
+			<power name="Armor" front="60mm" side="60mm" under="60mm" over="20mm" />
 			<skill name="Gunnery" level="4">
 				<item name="155mm/60 Naval Artillery" number="6" />
 				<item name="76mm/60 Type 98 Cannon" number="4" />
@@ -5382,7 +5379,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</skill>
 		</unit>
 		<unit name="Tone Class Hvy. Cruiser" classification="Hvy. Naval Vessel" mass="11ktons" length="189m" width="19m" speed="67kph" range="1852km" crew="874" image="WWIIJapanese/CruiserHvy_Furutaka_Token.png">
-			<skill name="Armor" front="100mm" side="100mm" under="100mm" top="35mm" />
+			<power name="Armor" front="100mm" side="100mm" under="100mm" over="35mm" />
 			<skill name="Gunnery" level="4">
 				<item name="200mm/50 Naval Artillery" number="8" />
 				<item name="127mm/45 Cannon" number="8" />
@@ -5405,7 +5402,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* Largest battleships ever built with largest naval guns ever.  Yamato sank after 8 bombs and 13 torpedos caused
 				her magazine to explode.
 			</reference>
-			<skill name="Armor" front="650mm" side="410mm" top="200mm" />
+			<power name="Armor" front="650mm" side="410mm" over="200mm" />
 			<skill name="Gunnery" level="4">
 				<item name="460mm/45 Naval Artillery" number="9" />
 				<item name="155mm/60 Naval Artillery" number="6" />
@@ -5424,7 +5421,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			</skill>
 		</unit>
 		<unit name="Otori Class Torpedo Boat" classification="Lt. Naval Vessel" mass="960tons" length="88.5m" width="8.2m" speed="56kph" range="7400km" crew="129" image="WWIIJapanese/TorpedoBoat_MitsubishiT14_Token.png">
-			<skill name="Armor" />
+			<power name="Armor" />
 			<skill name="Gunnery" level="4">
 				<item name="127mm/45 Cannon" number="2" />
 				<item name="Torpedo Type 93 Long Lance" number="3" facing="FFx3" />
@@ -5450,7 +5447,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				tower, launched by a catapult.
 				* A submarine could be equipped with 3-6 Kaiten torpedoes on the deck, but this limited dive depth.
 			</reference>
-			<skill name="Armor" />
+			<power name="Armor" />
 			<skill name="Gunnery" level="4">
 				<item name="Torpedo Type 95" number="6" rounds="17" facing="FFx6" />
 				<item name="127mm/45 Cannon" number="1" />
@@ -5471,7 +5468,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				* 15kph Submerged
 				* 80m Test Depth
 			</reference>
-			<skill name="Armor" />
+			<power name="Armor" />
 			<skill name="Gunnery" level="4">
 				<item name="Torpedo Type 95" number="6" rounds="12" facing="FFx6" />
 				<item name="127mm/45 Cannon" number="1" />
@@ -5625,7 +5622,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				Politcal pressure came to halt production of the T-34.  This pressure was from the developer of the
 				KV-1 and IS-2 tanks which were in competition with the T-34.
 			</reference>
-			<skill name="Armor" front="60mm Sloped" back="45mm" side="45mm" over="20mm" under="20mm" />
+			<power name="Armor" front="60mm Sloped" back="45mm" side="45mm" over="20mm" under="20mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76.2mm F-34 Cannon" facing="Turret" rounds="77" />
 				<item name="7.62mm Degtyaryov LMG" facing="F, Pintle" />
@@ -5633,7 +5630,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="T-34/85" classification="Med. Tank" mass="32tons" length="6.7m" crew="5" speed="53kph" range="360km" image="WWIIRussian/TankMed_T34-85Token.png">
-			<skill name="Armor" front="90mm Sloped" under="20mm" />
+			<power name="Armor" front="90mm Sloped" under="20mm" />
 			<skill name="Gunnery" level="4">
 				<item name="85mm ZiS-S-53 Cannon" facing="Turret" rounds="60" />
 				<item name="7.62mm Degtyaryov LMG" facing="F, Pintle" />
@@ -5641,7 +5638,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="OT-34 85mm" classification="Med. Tank" mass="32tons" length="6.7m" crew="5" speed="53kph" range="360km" image="WWIIRussian/TankMed_T34-85Token.png">
-			<skill name="Armor" front="90mm Sloped" under="20mm" />
+			<power name="Armor" front="90mm Sloped" under="20mm" />
 			<skill name="Gunnery" level="4">
 				<item name="85mm ZiS-S-53 Cannon" facing="Turret" rounds="60" />
 				<item name="ROKS Flamethrower" facing="F" />
@@ -5650,7 +5647,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="KV-1" classification="Hvy. Tank" mass="45tons" length="6.7m" crew="5" speed="28kph" range="250km" image="WWIIRussian/TankHvy_KV1Token.png">
-			<skill name="Armor" front="130mm" under="20mm" />
+			<power name="Armor" front="130mm" under="20mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76.2mm F-34 Cannon" facing="Turret" />
 				<item name="7.62mm Degtyaryov LMG" number="4" />
@@ -5658,7 +5655,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="KV-2" classification="Hvy. Tank" mass="53tons" length="6.8m" crew="5" speed="25.6kph" range="140km" image="WWIIRussian/TankHvy_KV-2Token.png">
-			<skill name="Armor" front="110mm" />
+			<power name="Armor" front="110mm" />
 			<skill name="Gunnery" level="4">
 				<item name="152mm M-10 Howitzer" facing="Turret" />
 				<item name="7.62mm Degtyaryov LMG" number="2" />
@@ -5671,7 +5668,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				the German Panther tank.  When it didn't penetrate, it would often knock the turret right off a tank.
 				It was, however, slow to reload firing only 2/minute.
 			</reference>
-			<skill name="Armor" front="160mm Sloped" under="30mm" />
+			<power name="Armor" front="160mm Sloped" under="30mm" />
 			<skill name="Gunnery" level="4">
 				<item name="122mm A-19 Cannon" facing="Turret" rounds="28" />
 				<item name="7.62mm Degtyaryov LMG" number="2" />
@@ -5680,21 +5677,21 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="SU-76" classification="Tank Destroyer" mass="10.2tons" length="5m" crew="4" speed="45kph" range="320km" image="WWIIRussian/SPG_SU76MToken.png">
-			<skill name="Armor" front="35mm" side="16mm" />
+			<power name="Armor" front="35mm" side="16mm" />
 			<skill name="Gunnery" level="4">
 				<item name="76.2mm ZiS-3Sh Cannon" facing="F" />
 			</skill>
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="SU-85" classification="Tank Destroyer" mass="29.6tons" length="6.1m" crew="4" speed="55kph" range="400km" image="WWIIRussian/SPG_SU-85Token.png">
-			<skill name="Armor" front="45mm" />
+			<power name="Armor" front="45mm" />
 			<skill name="Gunnery" level="4">
 				<item name="85mm D-5T Cannon" facing="F" />
 			</skill>
 			<skill name="Military" level="3" />
 		</unit>
 		<unit name="SU-100" classification="Tank Destroyer" mass="31.6tons" length="9.5m" crew="4" speed="48kph" range="320km" image="WWIIRussian/SPG_SU-100Token.png">
-			<skill name="Armor" front="75mm" side="45mm" top="20mm" />
+			<power name="Armor" front="75mm" side="45mm" over="20mm" />
 			<skill name="Gunnery" level="4">
 				<item name="100mm D-10S Cannon" facing="F" />
 			</skill>
@@ -5704,7 +5701,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 			<reference>
 				Even a Tiger was once heavily damaged by SU-122 assault guns firing high-explosive shells.
 			</reference>
-			<skill name="Armor" front="45mm" />
+			<power name="Armor" front="45mm" />
 			<skill name="Gunnery" level="4">
 				<item name="100mm D-10S Cannon" facing="F" />
 				<ability name="Indirect Fire" />
@@ -5736,7 +5733,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 		</unit>
 		<unit name="Soviet M3 Scout Car" classification="Car" mass="5.7tons" length="5.6m" crew="1+7" speed="81kph" range="403km" image="WWIIRussian/Car_M3ScoutCarToken.png">
 			<reference>Lend Lease from US</reference>
-			<skill name="Armor" front="13mm" top="0mm" />
+			<power name="Armor" front="13mm" over="0mm" />
 			<skill name="Gunnery" level="4">
 				<item name=".50 cal M2HB MG" facing="B" />
 				<item name=".30-06 M1919A4 MG" facing="L, R" />
@@ -5760,7 +5757,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				This is the highest score ever gained by any pilot with any
 				U.S.-made aircraft.
 			</reference>
-			<skill name="Armor" front="13mm" side="13mm" back="13mm" top="13mm" />
+			<power name="Armor" front="13mm" side="13mm" back="13mm" over="13mm" />
 			<skill name="Gunnery" level="4">
 				<item name="37mm M4 Cannon" facing="FF" rounds="30" />
 				<item name=".50 cal M2HB MG" number="2" facing="FFx2" rounds="400" />
@@ -5775,7 +5772,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 				compartment. Consequently, pilots ignored orders and frequently flew with their
 				canopies open.
 			</reference>
-			<skill name="Armor" front="10mm" side="10mm" back="10mm" top="10mm" />
+			<power name="Armor" front="10mm" side="10mm" back="10mm" over="10mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm ShVAK Cannon" facing="FFx2" rounds="120" />
 				<item name="100kg Bomb" facing="Ux2" />
@@ -5785,7 +5782,7 @@ In the battle, both sides lost numerous warships in two extremely destructive ni
 		</unit>
 		<unit name="Yakovlev Yak-9" classification="Lt. Aircraft" mass="3.2tons" length="8.6m" width="9.7m" height="3m" speed="672kph" range="675km" crew="1">
 			<reference>The most numerous Soviet fighter of the war</reference>
-			<skill name="Armor" front="10mm" side="10mm" back="10mm" top="10mm" />
+			<power name="Armor" front="10mm" side="10mm" back="10mm" over="10mm" />
 			<skill name="Gunnery" level="4">
 				<item name="20mm ShVAK Cannon" facing="FF" rounds="120" />
 				<item name="12.7mm UBS MG" number="1" facing="FF" rounds="200" />

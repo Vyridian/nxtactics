@@ -2026,7 +2026,7 @@
 				</summary>
 			</ability>
 			<ability name="Effigy">
-				<title>Straw Man</title>
+				<titles>Straw Man</titles>
 				<reference>Poppet, Voodoo Doll</reference>
 				<summary>
 					* Create a figure representing the target. The target can be a being, a vehicle, a building, etc. The figure can be a doll, a wax figurine, an Origami, a sculpture, a drawing, or any other image created by hand by the caster. In addition, the Effigy must have some item linking it to the target. This can be a possession, a hair, a body part, etc. The more significant the better.

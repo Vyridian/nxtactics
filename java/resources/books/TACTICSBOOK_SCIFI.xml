@@ -87,39 +87,39 @@
 			* Its structural perfection is matched only by its hostility.  You admire it.  I admire its purity. A survivor... unclouded by conscience, remorse, or delusions of morality. - Ash and Lambert, Alien
 		</reference>
 		<unit name="Alien Chest Burster" image="AlienPredator/Alien_ChestBurster.png">
-			<skill name="Acidic">
+			<power name="Acidic">
 				<ability name="Acid Blood" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Alien (Dog)" image="AlienPredator/Alien_Dog.png">
-			<skill name="Acidic">
+			<power name="Acidic">
 				<ability name="Acid Blood" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Alien Face Hugger" image="AlienPredator/AlienFaceHugger.png">
 			<reference>
 				* I haven't seen anything like that except, uh, molecular acid.  It must be using it for blood.  It's got a
 				wonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien
 			</reference>
-			<skill name="Acidic">
+			<power name="Acidic">
 				<ability name="Acid Blood" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Alien Queen" image="AlienPredator/Alien_Queen.png">
 			<reference>Get away from her, you BITCH! - Ripley, Aliens</reference>
-			<skill name="Acidic">
+			<power name="Acidic">
 				<ability name="Acid Blood" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Alien Warrior" image="AlienPredator/Alien_Warrior.png">
-			<skill name="Acidic">
+			<power name="Acidic">
 				<ability name="Acid Blood" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Predalien" image="AlienPredator/Predalien.png">
-			<skill name="Acidic">
+			<power name="Acidic">
 				<ability name="Acid Blood" />
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Predator Equipment">
@@ -218,12 +218,12 @@
 				2 Dropships
 				http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm
 			</summary>
-			<skill name="Armor">
+			<power name="Armor">
 				<summary>
 					* The Conestogas skin consists of a laminated layer of insulators, alloy micro meteor shielding, composite armors, and aerogel layers. This provides only limited protection against Kinetic weapons (the best defense against those is high-mass armor, untenable on a starship), but it does provide excellent protection against directed energy weapons.
 					* Overlying all of this are layers of Radar Absorbent Material, and a dark grey paint, in order to keep both the ships radar and optical signature as low as possible. In addition to this the ship has a radar jamming system for ECM, and the computer systems are designed with double hardened systems to prevent either jamming or EMP from damaging the ships system or any systems of equipment inside the ship.
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery">
 				<summary>
 					* Its main anti-ship weapons are eight Long Lance missiles, providing it with a good long range punch. These missiles are almost small starships in their capabilities and sensor systems, and are currently the main anti-ship system of both the Colonial Marine Corps and the Navy. Backing up these weapons are two Neutral Particle Beam cannons. These large weapons are mounted along the main hull, and can only fire in a forward arc. Although they do not provide the ship with a Hard Kill capability, they can be used to disrupt a enemies electronics at huge ranges. For close range weapons there are two laser cannons located on either side of the ship. These cannons provide close in defense against missiles, mines, and the odd fighter. For some additional close in Hard Kill capabilities there are two rail guns on the ship, one on top, and the other on the bottom of the main hull. Firing a combination of both kinetic penetrators (essentially tungsten darts) which can punch holes through almost any armor, and kinetic penetrator incendiary (tungsten tipped darts designed to vaporize AFTER impact), these weapons have a reasonable rate of fire, and can do quite a lot of damage to other ships.
@@ -231,11 +231,11 @@
 					* For orbital bombardment the ship has a ventral launcher filled with eighty re-entry vehicles. These can carry a variety of warheads, including nuclear payloads. Such ordnance can only be used when the ship receives the orders to do so from its Captain, or from a Marine Major or personnel higher in rank than that.
 				</summary>
 			</skill>
-			<skill name="Hanger">
+			<power name="Hanger">
 				<summary>
 					20ktons Cargo
 				</summary>
-			</skill>
+			</power>
 		</unit>
 		<unit name="Nostromo" length="244m" width="165m" height="72m" image="ColonialMarines/Nostromo.png">
 			<summary>
@@ -339,11 +339,11 @@
 	<section name="Doctor Who Units">
 		<unit name="Amy Pond">
 		</unit>
-	    <unit name="Captain Jack Harkness" image="DrWho/CaptainJackHarkness.png">
-			<skill name="Longevity">
+	 <unit name="Captain Jack Harkness" image="DrWho/CaptainJackHarkness.png">
+			<power name="Longevity">
 				<ability name="Eternal Youth" />
 				<ability name="True Immortality" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Clara Oswald">
 			<reference>
@@ -371,10 +371,10 @@
 			<summary>
 				The Daleks odd form may be explained by their personal shielding. Weapons and sensors are placed on stalks so that they may protrude from the shield. This prevents their shield from interfering with their equipment, but it also leaves these devices vulnerable.
 			</summary>
-			<skill name="Armor">
-			</skill>
-			<skill name="Shielding">
-			</skill>
+			<power name="Armor">
+			</power>
+			<power name="Shielding">
+			</power>
 		</unit>
 		<unit name="Davros" image="DrWho/Davros.png">
 			<reference>
@@ -492,7 +492,7 @@
 	<section name="Earth Forces">
 		<unit name="Yamato Space Battleship" mass="62ktons" length="263m" image="SpaceBattleshipYamato/Yamato.png">
 			<titles>Argo</titles>
-			<skill name="Armor" />
+			<power name="Armor" />
 			<skill name="Gunnery" level="5">
 				<item name="Shock Cannon" />
 				<item name="Pulse Laser" />
@@ -541,7 +541,7 @@
 				energy to a considerable distance.  This gives the weapon a tremendous firing range more than twice that of
 				a Wave Motion Gun.
 			</summary>
-			<skill name="Armor" />
+			<power name="Armor" />
 			<skill name="Gunnery" level="5">
 				<item name="Magna Flame Gun" />
 			</skill>
@@ -1617,10 +1617,10 @@
 		<unit name="Federation Shuttlecraft" />
 		<unit name="USS Enterprise (Constitution Class)" mass="200ktons" length="304m" classification="Hvy. Spacecraft" image="StarTrek/Federation_Enterprise.png">
 			<titles>NCC-1701</titles>
-			<skill name="Armor">
-			</skill>
-			<skill name="Shielding">
-			</skill>
+			<power name="Armor">
+			</power>
+			<power name="Shielding">
+			</power>
 			<skill name="Gunnery" level="5">
 				<item name="Phaser Array" />
 				<item name="Photon Torpedo" />
@@ -1631,10 +1631,10 @@
 				A Frigate is a ship of similar firepower to a Heavy cruiser but has fewer research facilities, require less
 				crew, and has more limited endurance.
 			</summary>
-			<skill name="Armor">
-			</skill>
-			<skill name="Shielding">
-			</skill>
+			<power name="Armor">
+			</power>
+			<power name="Shielding">
+			</power>
 			<skill name="Gunnery" level="4">
 				<item name="Phaser Array" />
 				<item name="Photon Torpedo" facing="Fx2, Bx2" />
@@ -1648,11 +1648,11 @@
 				distinctiveness to our own. Your culture will adapt to service us. Resistance is futile. - The Borg, Star Trek
 				First Contact
 			</reference>
-			<skill name="Shielding">
+			<power name="Shielding">
 				<summary>
 					Adaptive Shielding total capacity 5,850,900TJ
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="4">
 				<summary>
 					Total output 7,500,000TW
@@ -1690,37 +1690,39 @@
 				* Dampening Field
 				* Can consume a planet in a day
 			</summary>
-			<skill name="Armor">
+			<power name="Armor">
 				<summary>
 					Solid Neutronium - Hyper Dense Neutron Star Material
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="4">
 				<item name="Anti-Proton Beam" />
 			</skill>
 		</unit>
 		<unit name="Klingon Bird of Prey" image="StarTrek/Klingon_BirdOfPrey.png">
-			<skill name="Armor">
-			</skill>
-			<skill name="Shielding">
-			</skill>
-			<skill name="Gunnery" level="4">
+			<power name="Armor">
+			</power>
+			<power name="Shielding">
+			</power>
+			<power name="Weaponry">
 				<item name="Disruptor Bank" />
 				<item name="Photon Torpedo" />
-			</skill>
-			<skill name="Stealth">
+   </power>
+			<skill name="Gunnery" level="4" />
+			<power name="Invisibility">
 				<item name="Cloaking Device" />
-			</skill>
+			</power>
 		</unit>
 		<unit name="Klingon Cruiser" image="StarTrek/Klingon_Cruiser.png">
-			<skill name="Armor">
-			</skill>
-			<skill name="Shielding">
-			</skill>
-			<skill name="Gunnery" level="5">
+			<power name="Armor">
+			</power>
+			<power name="Shielding">
+			</power>
+			<power name="Weaponry">
 				<item name="Disruptor Bank" />
 				<item name="Photon Torpedo" />
-			</skill>
+			</power>
+			<skill name="Gunnery" level="5" />
 		</unit>
 		<unit name="Klingon Warrior" image="StarTrek/Klingon_Warrior.png">
 			<skill name="Melee">
@@ -1735,10 +1737,10 @@
 		<unit name="Romulan Centurion" image="StarTrek/Romulan_Centurion.png">
 		</unit>
 		<unit name="Romulan Warbird" image="StarTrek/Romulan_Warbird.png">
-			<skill name="Armor">
-			</skill>
-			<skill name="Shielding">
-			</skill>
+			<power name="Armor">
+			</power>
+			<power name="Shielding">
+			</power>
 			<skill name="Gunnery" level="4">
 				<item name="Disruptor Bank" />
 				<item name="Photon Torpedo" />
@@ -1914,10 +1916,10 @@
 			</skill>
 		</unit>
 		<unit name="Imperator Star Destroyer" classification="Hvy. Spacecraft" mass="25Mtons" length="1600m" crew="34,285" image="StarWars/Imperial_StarDestroyer.png">
-			<skill name="Armor" level="26">
-			</skill>
-			<skill name="Shielding" level="26">
-			</skill>
+			<power name="Armor" level="26">
+			</power>
+			<power name="Shielding" level="26">
+			</power>
 			<skill name="Gunnery" level="4">
 				<summary>
 					Mega Turbo-laser Cannon Mounts (6)
@@ -1932,7 +1934,7 @@
 				<item name="Turbolaser Turret" number="9" />
 				<item name="Heavy Turbolaser Turret" number="8" />
 			</skill>
-			<skill name="Hanger">
+			<power name="Hanger">
 				<summary>
 					* 48 Standard Tie Fighters (4 Squadrons)
 					* 12 Tie Interceptors (1 Squadron)
@@ -1944,15 +1946,15 @@
 					* 20 AT-AT Walkers
 					* 30 AT-ST Walkers
 				</summary>
-			</skill>
+			</power>
 		</unit>
 		<unit name="Executor Star Destroyer" classification="Hvy. Spacecraft" length="17km" image="StarWars/Imperial_Executor.png">
 			<summary>
 			</summary>
-			<skill name="Armor" level="29">
-			</skill>
-			<skill name="Shielding" level="29">
-			</skill>
+			<power name="Armor" level="29">
+			</power>
+			<power name="Shielding" level="29">
+			</power>
 			<skill name="Gunnery" level="4">
 				<summary>
 					* 250 concussion missle tubes
@@ -1962,7 +1964,7 @@
 				<item name="Turbolaser Turret" number="250" />
 				<item name="Heavy Turbolaser Turret" number="250" />
 			</skill>
-			<skill name="Hanger">
+			<power name="Hanger">
 				<summary>
 					* 4 squadrons of TIE-fighters
 					* 4 squadrons of TIE-interceptors
@@ -1971,18 +1973,18 @@
 					* 25 AT-ATs
 					* 50 AT-STs
 				</summary>
-			</skill>
+			</power>
 		</unit>
 		<unit name="Death Star" classification="Hvy. Spacecraft" mass="2x10^12tons" length="160km" crew="323k+400k Droids" image="StarWars/Imperial_DeathStar.png">
 			<reference>
 				* The regional governors now have direct control over their territories.  Fear will keep the local systems in
 				line. Fear of this battle station. - Grand Moff Tarkin, Star Wars
 			</reference>
-			<skill name="Armor" level="30">
-			</skill>
-			<skill name="Shielding" level="30">
-			</skill>
-			<skill name="Hanger">
+			<power name="Armor" level="30">
+			</power>
+			<power name="Shielding" level="30">
+			</power>
+			<power name="Hanger">
 				<summary>
 					* 7200 TIE Fighters (600 Squadrons)
 					* 4 Cruisers
@@ -1995,7 +1997,7 @@
 					* 1,400 Repulsorcraft
 					* 355 Floating Fortesses
 				</summary>
-			</skill>
+			</power>
 		</unit>
 	</section>
 	<section name="Star Wars Imperials">
@@ -2091,8 +2093,8 @@
 				<item name="Ion Cannon" facing="Turretx2"  />
 				<item name="Proton Torpedo" facing="Fx2" />
 			</skill>
-			<skill name="Armor" />
-			<skill name="Shielding" />
+			<power name="Armor" />
+			<power name="Shielding" />
 		</unit>
 		<unit name="Landspeeder" image="StarWars/Rebel_Landspeeder.png" />
 		<unit name="Millennium Falcon" classification="Med. Spacecraft" length="35m" width="26m" height="8m" speed="1050kph" crew="4+6" image="StarWars/Rebel_MilleniumFalcon.png">
@@ -2103,8 +2105,8 @@
 			<skill name="Gunnery" level="4">
 				<item name="Turbolaser" facing="Turretx4, Turretx4" />
 			</skill>
-			<skill name="Armor" />
-			<skill name="Shielding" />
+			<power name="Armor" />
+			<power name="Shielding" />
 		</unit>
 		<unit name="Corellian Corvette" image="StarWars/Rebel_CorellianCorvette.png" />
 		<unit name="Mon Calamari Cruiser" image="StarWars/Rebel_Cruiser.png" />

@@ -2300,6 +2300,576 @@ public final class BookloaderTest {
     return output;
   }
 
+  static Test.Type_testcase f_unitability_from_unitability_stringmap(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unitability<-unitability-stringmap",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unitability\n  :name \"name\"\n  :image \"image\")\n (unitability<-unitability-stringmap\n  (empty base/unitability)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unitability,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":name"),
+                  Core.vx_new_string("name"),
+                  Core.vx_new_string(":image"),
+                  Core.vx_new_string("image")
+                )
+              ),
+              Bookloader.f_unitability_from_unitability_stringmap(
+                Core.f_empty(
+                  Base.t_unitability
+                ),
+                Core.f_new(
+                  Core.t_stringmap,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":name"),
+                    Core.vx_new_string("name"),
+                    Core.vx_new_string(":image"),
+                    Core.vx_new_string("image")
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unitability_from_unitability_xmlchild(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unitability<-unitability-xmlchild",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unitability\n  :titles \"titles\")\n (unitability<-unitability-xmlchild\n  (empty base/unitability)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unitability,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":titles"),
+                  Core.vx_new_string("titles")
+                )
+              ),
+              Bookloader.f_unitability_from_unitability_xmlchild(
+                Core.f_empty(
+                  Base.t_unitability
+                ),
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("titles"),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":text"),
+                            Core.vx_new_string("titles")
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unitability_from_xml(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unitability<-xml",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unitability\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (unitability<-xml\n  (xml/xml\n   :tag \"unitability\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unitability,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":name"),
+                  Core.vx_new_string("name"),
+                  Core.vx_new_string(":image"),
+                  Core.vx_new_string("image"),
+                  Core.vx_new_string(":titles"),
+                  Core.vx_new_string("titles"),
+                  Core.vx_new_string(":reference"),
+                  Core.vx_new_string("reference")
+                )
+              ),
+              Bookloader.f_unitability_from_xml(
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("unitability"),
+                    Core.vx_new_string(":propmap"),
+                    Core.f_new(
+                      Core.t_stringmap,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":name"),
+                        Core.vx_new_string("name"),
+                        Core.vx_new_string(":image"),
+                        Core.vx_new_string("image")
+                      )
+                    ),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":tag"),
+                            Core.vx_new_string("titles"),
+                            Core.vx_new_string(":children"),
+                            Core.f_new(
+                              Xml.t_xmllist,
+                              Core.t_anylist.vx_new(
+                                Core.f_new(
+                                  Xml.t_xml,
+                                  Core.t_anylist.vx_new(
+                                    Core.vx_new_string(":text"),
+                                    Core.vx_new_string("titles")
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        ),
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":tag"),
+                            Core.vx_new_string("reference"),
+                            Core.vx_new_string(":children"),
+                            Core.f_new(
+                              Xml.t_xmllist,
+                              Core.t_anylist.vx_new(
+                                Core.f_new(
+                                  Xml.t_xml,
+                                  Core.t_anylist.vx_new(
+                                    Core.vx_new_string(":text"),
+                                    Core.vx_new_string("reference")
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unititem_from_unititem_stringmap(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unititem<-unititem-stringmap",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unititem\n  :name \"name\"\n  :image \"image\")\n (unititem<-unititem-stringmap\n  (empty base/unititem)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unititem,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":name"),
+                  Core.vx_new_string("name"),
+                  Core.vx_new_string(":image"),
+                  Core.vx_new_string("image")
+                )
+              ),
+              Bookloader.f_unititem_from_unititem_stringmap(
+                Core.f_empty(
+                  Base.t_unititem
+                ),
+                Core.f_new(
+                  Core.t_stringmap,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":name"),
+                    Core.vx_new_string("name"),
+                    Core.vx_new_string(":image"),
+                    Core.vx_new_string("image")
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unititem_from_unititem_xmlchild(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unititem<-unititem-xmlchild",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unititem\n  :titles \"titles\")\n (unititem<-unititem-xmlchild\n  (empty base/unititem)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unititem,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":titles"),
+                  Core.vx_new_string("titles")
+                )
+              ),
+              Bookloader.f_unititem_from_unititem_xmlchild(
+                Core.f_empty(
+                  Base.t_unititem
+                ),
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("titles"),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":text"),
+                            Core.vx_new_string("titles")
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unititem_from_xml(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unititem<-xml",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unititem\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (unititem<-xml\n  (xml/xml\n   :tag \"unititem\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unititem,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":name"),
+                  Core.vx_new_string("name"),
+                  Core.vx_new_string(":image"),
+                  Core.vx_new_string("image"),
+                  Core.vx_new_string(":titles"),
+                  Core.vx_new_string("titles"),
+                  Core.vx_new_string(":reference"),
+                  Core.vx_new_string("reference")
+                )
+              ),
+              Bookloader.f_unititem_from_xml(
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("unititem"),
+                    Core.vx_new_string(":propmap"),
+                    Core.f_new(
+                      Core.t_stringmap,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":name"),
+                        Core.vx_new_string("name"),
+                        Core.vx_new_string(":image"),
+                        Core.vx_new_string("image")
+                      )
+                    ),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":tag"),
+                            Core.vx_new_string("titles"),
+                            Core.vx_new_string(":children"),
+                            Core.f_new(
+                              Xml.t_xmllist,
+                              Core.t_anylist.vx_new(
+                                Core.f_new(
+                                  Xml.t_xml,
+                                  Core.t_anylist.vx_new(
+                                    Core.vx_new_string(":text"),
+                                    Core.vx_new_string("titles")
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        ),
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":tag"),
+                            Core.vx_new_string("reference"),
+                            Core.vx_new_string(":children"),
+                            Core.f_new(
+                              Xml.t_xmllist,
+                              Core.t_anylist.vx_new(
+                                Core.f_new(
+                                  Xml.t_xml,
+                                  Core.t_anylist.vx_new(
+                                    Core.vx_new_string(":text"),
+                                    Core.vx_new_string("reference")
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unitspecialty_from_unitspecialty_stringmap(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unitspecialty<-unitspecialty-stringmap",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unitspecialty\n  :name \"name\"\n  :image \"image\")\n (unitspecialty<-unitspecialty-stringmap\n  (empty base/unitspecialty)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unitspecialty,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":name"),
+                  Core.vx_new_string("name"),
+                  Core.vx_new_string(":image"),
+                  Core.vx_new_string("image")
+                )
+              ),
+              Bookloader.f_unitspecialty_from_unitspecialty_stringmap(
+                Core.f_empty(
+                  Base.t_unitspecialty
+                ),
+                Core.f_new(
+                  Core.t_stringmap,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":name"),
+                    Core.vx_new_string("name"),
+                    Core.vx_new_string(":image"),
+                    Core.vx_new_string("image")
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unitspecialty_from_unitspecialty_xmlchild(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unitspecialty<-unitspecialty-xmlchild",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unitspecialty\n  :titles \"titles\")\n (unitspecialty<-unitspecialty-xmlchild\n  (empty base/unitspecialty)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unitspecialty,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":titles"),
+                  Core.vx_new_string("titles")
+                )
+              ),
+              Bookloader.f_unitspecialty_from_unitspecialty_xmlchild(
+                Core.f_empty(
+                  Base.t_unitspecialty
+                ),
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("titles"),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":text"),
+                            Core.vx_new_string("titles")
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unitspecialty_from_xml(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unitspecialty<-xml",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unitspecialty\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (unitspecialty<-xml\n  (xml/xml\n   :tag \"unitspecialty\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unitspecialty,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":name"),
+                  Core.vx_new_string("name"),
+                  Core.vx_new_string(":image"),
+                  Core.vx_new_string("image"),
+                  Core.vx_new_string(":titles"),
+                  Core.vx_new_string("titles"),
+                  Core.vx_new_string(":reference"),
+                  Core.vx_new_string("reference")
+                )
+              ),
+              Bookloader.f_unitspecialty_from_xml(
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("unitspecialty"),
+                    Core.vx_new_string(":propmap"),
+                    Core.f_new(
+                      Core.t_stringmap,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":name"),
+                        Core.vx_new_string("name"),
+                        Core.vx_new_string(":image"),
+                        Core.vx_new_string("image")
+                      )
+                    ),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":tag"),
+                            Core.vx_new_string("titles"),
+                            Core.vx_new_string(":children"),
+                            Core.f_new(
+                              Xml.t_xmllist,
+                              Core.t_anylist.vx_new(
+                                Core.f_new(
+                                  Xml.t_xml,
+                                  Core.t_anylist.vx_new(
+                                    Core.vx_new_string(":text"),
+                                    Core.vx_new_string("titles")
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        ),
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":tag"),
+                            Core.vx_new_string("reference"),
+                            Core.vx_new_string(":children"),
+                            Core.f_new(
+                              Xml.t_xmllist,
+                              Core.t_anylist.vx_new(
+                                Core.f_new(
+                                  Xml.t_xml,
+                                  Core.t_anylist.vx_new(
+                                    Core.vx_new_string(":text"),
+                                    Core.vx_new_string("reference")
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
   public static Test.Type_testcaselist test_cases(final Core.Type_context context) {
     List<Core.Type_any> arraylisttestcase = new ArrayList<>(Arrays.asList(
       BookloaderTest.f_ability_from_ability_stringmap(context),
@@ -2330,7 +2900,16 @@ public final class BookloaderTest {
       BookloaderTest.f_specialty_from_xml(context),
       BookloaderTest.f_unit_from_unit_stringmap(context),
       BookloaderTest.f_unit_from_unit_xmlchild(context),
-      BookloaderTest.f_unit_from_xml(context)
+      BookloaderTest.f_unit_from_xml(context),
+      BookloaderTest.f_unitability_from_unitability_stringmap(context),
+      BookloaderTest.f_unitability_from_unitability_xmlchild(context),
+      BookloaderTest.f_unitability_from_xml(context),
+      BookloaderTest.f_unititem_from_unititem_stringmap(context),
+      BookloaderTest.f_unititem_from_unititem_xmlchild(context),
+      BookloaderTest.f_unititem_from_xml(context),
+      BookloaderTest.f_unitspecialty_from_unitspecialty_stringmap(context),
+      BookloaderTest.f_unitspecialty_from_unitspecialty_xmlchild(context),
+      BookloaderTest.f_unitspecialty_from_xml(context)
     ));
     Test.Type_testcaselist output = Test.t_testcaselist.vx_new(arraylisttestcase);
     return output;
@@ -2340,11 +2919,11 @@ public final class BookloaderTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/bookloader", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 92, ":tests", 69, ":total", 75), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 38, ":tests", 29, ":total", 75), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 75), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 75), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 38, ":tests", 29, ":total", 75), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 87, ":tests", 93, ":total", 106), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 35, ":tests", 38, ":total", 106), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 106), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 106), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 35, ":tests", 38, ":total", 106), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -2381,6 +2960,14 @@ public final class BookloaderTest {
         ":chapter<-xml", 1,
         ":file-read<-bookname", 0,
         ":file-write<-book", 0,
+        ":item<-item-key-value", 0,
+        ":item<-item-stringmap", 0,
+        ":item<-item-xmlchild", 0,
+        ":item<-xml", 0,
+        ":location<-location-key-value", 0,
+        ":location<-location-stringmap", 0,
+        ":location<-location-xmlchild", 0,
+        ":location<-xml", 0,
         ":modifier<-xml", 0,
         ":power<-power-key-value", 0,
         ":power<-power-stringmap", 1,
@@ -2399,6 +2986,8 @@ public final class BookloaderTest {
         ":section<-section-key-value", 0,
         ":section<-section-stringmap", 0,
         ":section<-section-xmlchild", 0,
+        ":section<-section-xmlitem", 0,
+        ":section<-section-xmllocation", 0,
         ":section<-section-xmlpower", 0,
         ":section<-section-xmlrule", 0,
         ":section<-section-xmlscenario", 0,
@@ -2426,11 +3015,32 @@ public final class BookloaderTest {
         ":unit<-unit-xmlskill", 0,
         ":unit<-unit-xmlweakness", 0,
         ":unit<-xml", 1,
+        ":unitability<-unitability-key-value", 0,
+        ":unitability<-unitability-stringmap", 1,
+        ":unitability<-unitability-xmlchild", 1,
+        ":unitability<-xml", 1,
+        ":unititem<-unititem-key-value", 0,
+        ":unititem<-unititem-stringmap", 1,
+        ":unititem<-unititem-xmlchild", 1,
+        ":unititem<-xml", 1,
+        ":unitpower<-unitpower-key-value", 0,
+        ":unitpower<-unitpower-stringmap", 0,
+        ":unitpower<-unitpower-xmlability", 0,
+        ":unitpower<-unitpower-xmlchild", 0,
+        ":unitpower<-unitpower-xmlitem", 0,
+        ":unitpower<-unitpower-xmlspecialty", 0,
         ":unitpower<-xml", 0,
         ":unitskill<-unitskill-key-value", 0,
         ":unitskill<-unitskill-stringmap", 0,
+        ":unitskill<-unitskill-xmlability", 0,
         ":unitskill<-unitskill-xmlchild", 0,
+        ":unitskill<-unitskill-xmlitem", 0,
+        ":unitskill<-unitskill-xmlspecialty", 0,
         ":unitskill<-xml", 0,
+        ":unitspecialty<-unitspecialty-key-value", 0,
+        ":unitspecialty<-unitspecialty-stringmap", 1,
+        ":unitspecialty<-unitspecialty-xmlchild", 1,
+        ":unitspecialty<-xml", 1,
         ":unitweakness<-xml", 0,
         ":weakness<-xml", 0,
         ":xml-read<-bookname", 0

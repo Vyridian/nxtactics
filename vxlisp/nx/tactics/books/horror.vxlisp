@@ -1988,6 +1988,17 @@ attempt has been mde to cover up the crime.")))))))
         "Kingdom Undead"
          (section
           :name "Kingdom Undead"
+          :itemmap
+           (itemmap
+            "Resurrection Herb"
+             (item
+              :name "Resurrection Herb"
+              :summary
+               "* This rare herb is believed to return the dead to life. Actually, it is the tiny worm eggs that grow on the plant that infect the host and turn them into a zombie.
+* Infection - The worms can infect a living host if worms, their eggs, or infected flesh are eaten (even cooking is not a guarantee of safety) or the worms transfer via an ghoul bite. A recently deceased host may also be infected if the eggs are injected directly into the brain.
+* Transformation - Once infected the worms rapidly multiply by division and move through the body. Once fully infected, the worms act as replacement nervous system, stimulating the cells and retarding cell death. The worms stimulate the primitive sections of the brain to cause it to seek more hosts for the worms. The When they first activate the body, its movements are jerky and extreme, but the body quickly adapts and becomes quite agile over time.
+* Pack - The worms are a colony creature and are aware of nearby worms in infected creatures. They, therefore, do not attack other infecteds and tend to collect together in groups.
+* Intelligence Level - Though they are savagely murderous and largely fearless, they do retain an animalistic survival instinct and take shelter and avoid fire and heat which would kill their worms."))
           :unitmap
            (unitmap
             "Kingdom Ghoul"
@@ -2005,17 +2016,7 @@ attempt has been mde to cover up the crime.")))))))
 ** Heat: They have been observed to immediately seek shelter when the day begins to break in order to escape the heat of direct sunlight. As a result, during spring or summer, they are only active during the day and hibernate at night.
 ** Fire: Fire can be used to keep infected at bay.
 ** Reduced vision: The milky eyes limits their vision to basic movements, so they rely on smell and hearing to hunt.
-** Blood: Blood can be used to distract or bait the zombies to behave in certain ways. Although dangerous, using fresh blood on rooftops is shown to be an effective means to lure zombies if needed."))
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "item")
-              :severity 2))))))
+** Blood: Blood can be used to distract or bait the zombies to behave in certain ways. Although dangerous, using fresh blood on rooftops is shown to be an effective means to lure zombies if needed.")))))
     "Night of the Living Dead"
      (chapter
       :name "Night of the Living Dead")

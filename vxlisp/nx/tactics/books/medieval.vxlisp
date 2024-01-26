@@ -122,16 +122,16 @@
         "Medieval Firearms"
          (section
           :name "Medieval Firearms"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "item")
-              :severity 2))))))
+          :itemmap
+           (itemmap
+            "760mm Arquebus"
+             (item
+              :name "760mm Arquebus"
+              :summary
+               "In terms of accuracy, the arquebus was unable to match the accuracy of a bow in the hands of a highly-skilled archer. However, the arquebus had a faster rate of fire than the most powerful crossbow, had a shorter learning curve than a longbow, and was more powerful than either. An arquebusier could carry more ammunition and powder than a crossbowman or longbowman could with bolts or arrows. Once the methods were developed, powder and shot were relatively easy to mass-produce, while arrow making was a genuine craft requiring highly skilled labor. The weapon also had the added advantage of frightening enemies (and horses) with the noise. Wind can reduce the accuracy of archery, but has much less of an effect on an arquebusier. Perhaps most important, producing an effective arquebusier required much less training than producing an effective bowman.
+
+As low-velocity firearms, they were used against enemies that were often partially or fully protected by steel-plate armour. Plate armour was standard in European combat from about 1400 until the middle of the 17th century. Good suits of plate would usually stop an arquebus ball at long range. It was a common practice to 'proof' (test) armour by firing a pistol or arquebus at a new breastplate. The small dent would be circled by engraving, to call attention to it. However, at close range, it was possible to pierce even the armor of knights and other heavy cavalry,"
+              :muzzlevelocity "449m/s")))))
     "Medieval English"
      (chapter
       :name "Medieval English"
@@ -159,17 +159,7 @@
              (unit
               :name "French Gendarme"
               :summary "Founded in 1400s."
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "classification"
-                    :value "Hvy. Cavalry")
-                  :severity 2))))))))
+              :classification "Hvy. Cavalry")))))
     "Medieval German"
      (chapter
       :name "Medieval German")

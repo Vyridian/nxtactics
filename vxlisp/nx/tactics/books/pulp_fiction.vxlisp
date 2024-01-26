@@ -1,0 +1,115 @@
+(package nx/tactics/books/pulp_fiction
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Pulp Fiction"
+  :chaptermap
+   (chaptermap
+    "Pulp Fiction Overview"
+     (chapter
+      :name "Pulp Fiction Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: Pulp Fiction?"
+         (section
+          :name "Why Tactics: Pulp Fiction?")))
+    :Action/Adventure
+     (chapter
+      :name "Action/Adventure"
+      :sectionmap
+       (sectionmap
+        "Treasure Hunters"
+         (section
+          :name "Treasure Hunters"
+          :unitmap
+           (unitmap
+            "Indiana Jones"
+             (unit
+              :name "Indiana Jones"
+              :image "PulpFiction/IndianaJones.png"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :unititemmap
+                   (unititemmap
+                    :Bullwhip
+                     (unititem
+                      :name "Bullwhip")))
+                :Firearms
+                 (unitskill
+                  :name "Firearms")
+                :Knowledge
+                 (unitskill
+                  :name "Knowledge"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Antiquities
+                     (unitability
+                      :name "Antiquities")
+                    :Archeology
+                     (unitability
+                      :name "Archeology")
+                    "Ancient History"
+                     (unitability
+                      :name "Ancient History")
+                    "Religious Studies"
+                     (unitability
+                      :name "Religious Studies")))))
+            "Lara Croft"
+             (unit
+              :name "Lara Croft"
+              :image "PulpFiction/LaraCroft.png"
+              :unitskillmap
+               (unitskillmap
+                :Firearms
+                 (unitskill
+                  :name "Firearms")
+                :Influence
+                 (unitskill
+                  :name "Influence")))))))
+    "Flash Gordon"
+     (chapter
+      :name "Flash Gordon")
+    "Hardboiled Detective"
+     (chapter
+      :name "Hardboiled Detective")
+    "John Carter on Mars"
+     (chapter
+      :name "John Carter on Mars")
+    "Land of the Lost"
+     (chapter
+      :name "Land of the Lost"
+      :sectionmap
+       (sectionmap
+        "Land of the Lost Units"
+         (section
+          :name "Land of the Lost Units"
+          :unitmap
+           (unitmap
+            :Pylon
+             (unit
+              :name "Pylon")
+            :Skylon
+             (unit
+              :name "Skylon")
+            :Enik
+             (unit
+              :name "Enik")
+            :Pakuni
+             (unit
+              :name "Pakuni")
+            :Sleestak
+             (unit
+              :name "Sleestak")))))
+    "Lost Continent"
+     (chapter
+      :name "Lost Continent")
+    "True Grit / Crime"
+     (chapter
+      :name "True Grit / Crime")
+    "War of the Worlds"
+     (chapter
+      :name "War of the Worlds"))))

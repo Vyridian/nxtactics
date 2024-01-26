@@ -110,11 +110,11 @@
 			</skill>
 		</unit>
 		<unit name="British Caravel" classification="Med. Naval Vessel" mass="150tons" length="25m" width="9m" speed="15kph" crew="20" image="AgeOfSail/BritishCaravel.png">
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="3">
 				<item name="100mm Demi-culverin" number="20" />
 			</skill>
@@ -128,20 +128,20 @@
 				ship-of-the-lines and were used for escort purposes.  They were sometimes used to hunt pirates.  Only a few
 				pirates were ever in command of a frigate as most pirates would flee from a frigate.
 			</reference>
-			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+			<power name="Armor" front="60mm" side="60mm" back="60mm">
 				<summary>
 					14 inches (360 mm/60mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Seamanship" level="4">
 			</skill>
 		</unit>
 		<unit name="British Man-O-War" classification="Hvy. Naval Vessel" mass="1000tons" image="AgeOfSail/BritishManOWar.png">
-			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+			<power name="Armor" front="60mm" side="60mm" back="60mm">
 				<summary>
 					14 inches (360 mm/60mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="4">
 				<item name="100mm Demi-culverin" number="100" />
 			</skill>
@@ -149,11 +149,11 @@
 			</skill>
 		</unit>
 		<unit name="British Schooner" classification="Med. Naval Vessel" mass="80tons" length="18m" width="6m" image="AgeOfSail/BritishSchooner.png">
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="3">
 				<item name="100mm Demi-culverin" number="8" />
 			</skill>
@@ -161,11 +161,11 @@
 			</skill>
 		</unit>
 		<unit name="British Racing Galleon" classification="Lt. Naval Vessel">
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Seamanship" level="4">
 			</skill>
 		</unit>
@@ -204,11 +204,11 @@
 				These ships were the heavy-guns of the fleet.  They resembled galleons in design, but had heavy fire-power.
 				Only the three major sea-powers of the time (Spain, England, and France) had many of these kind of ships.
 			</reference>
-			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+			<power name="Armor" front="60mm" side="60mm" back="60mm">
 				<summary>
 					14 inches (360 mm/60mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="3">
 				<item name="100mm Demi-culverin" number="100" />
 			</skill>
@@ -216,11 +216,11 @@
 			</skill>
 		</unit>
 		<unit name="French Schooner" classification="Med. Naval Vessel" mass="80tons" length="18m" width="6m" image="AgeOfSail/FrenchSchooner.png">
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="3">
 				<ability name="Salvo" />
 				<item name="100mm Demi-culverin" number="8" />
@@ -255,11 +255,11 @@
 			</skill>
 		</unit>
 		<unit name="Pirate Caravel" classification="Med. Naval Vessel" mass="150tons" length="25m" width="9m" speed="15kph" crew="20" image="AgeOfSail/PirateCaravel.png">
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="3">
 				<ability name="Salvo" />
 				<item name="100mm Demi-culverin" number="20" />
@@ -274,11 +274,11 @@
 				Schooner is very fast and large enough to carry a plentiful crew.  It was a favorite among both pirates and
 				smugglers.
 			</reference>
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="3">
 				<ability name="Salvo" />
 				<item name="100mm Demi-culverin" number="8" />
@@ -291,11 +291,11 @@
 				The Sloop was fast, agile, and had a shallow draft.
 				Today's sailing Yacht is essentially a sloop.
 			</reference>
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Seamanship" level="4">
 			</skill>
 		</unit>
@@ -305,11 +305,11 @@
 				from whence it got its name Brigantine meaning Brigand Ship.  Later the ship referred to a two-masted sailing
 				ship with much greater sailing power.
 			</reference>
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Seamanship" level="4">
 			</skill>
 		</unit>
@@ -324,11 +324,11 @@
 			<reference>
 				The Nina was actually named the Santa Clara.  Nina was a pun on its owner's name: Juan Nino.
 			</reference>
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="3">
 				<ability name="Salvo" />
 				<item name="100mm Demi-culverin" number="20" />
@@ -341,11 +341,11 @@
 			<reference>
 				All of Columbus' ships were second-hand (if not third or more) and were never meant for exploration.
 			</reference>
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Seamanship" level="4">
 			</skill>
 		</unit>
@@ -356,11 +356,11 @@
 		<unit name="Treasure Fleet" classification="Hvy. Naval Vessel">
 		</unit>
 		<unit name="Spanish Caravel" classification="Med. Naval Vessel" mass="150tons" length="25m" width="9m" speed="15kph" crew="20" image="AgeOfSail/SpanishCaravel.png">
-			<skill name="Armor" front="30mm" side="30mm" back="30mm">
+			<power name="Armor" front="30mm" side="30mm" back="30mm">
 				<summary>
 					7 inches (180 mm/30mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="3">
 				<ability name="Salvo" />
 				<item name="100mm Demi-culverin" number="20" />
@@ -375,18 +375,18 @@
 				made attacking them difficult.  They had two to three decks.  Most had three masts.  Some galleons sported 4
 				masts but these were an exception to the rule.
 			</reference>
-			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+			<power name="Armor" front="60mm" side="60mm" back="60mm">
 				<summary>
 					14 inches (360 mm/60mm RHA)
 				</summary>
-			</skill>
+			</power>
 		</unit>
 		<unit name="Spanish Man-O-War" mass="1000tons" classification="Hvy. Naval Vessel" image="AgeOfSail/SpanishManOWar.png">
-			<skill name="Armor" front="60mm" side="60mm" back="60mm">
+			<power name="Armor" front="60mm" side="60mm" back="60mm">
 				<summary>
 					14 inches (360 mm/60mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery" level="4">
 				<ability name="Salvo" />
 				<item name="100mm Demi-culverin" number="100" />
@@ -408,11 +408,11 @@
 	<section name="Age of Sail United States">
 		<unit name="American Frigate" classification="Hvy. Naval Vessel" mass="2200tons" length="62m" speed="24kph" image="AgeOfSail/AmericanFrigate.png">
 			<titles>USS Constitution, Old Ironsides</titles>
-			<skill name="Armor" front="88mm" side="88mm" back="88mm">
+			<power name="Armor" front="88mm" side="88mm" back="88mm">
 				<summary>
 					21 inches (530 mm/88mm RHA)
 				</summary>
-			</skill>
+			</power>
 			<skill name="Gunnery">
 				<summary>
 					30 x 24-pounder (11 kg) long gun

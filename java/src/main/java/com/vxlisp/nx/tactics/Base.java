@@ -4145,11 +4145,14 @@ public final class Base {
     public Base.Type_rating speed();
     public Base.Type_rating shadow();
     public Base.Type_rating beast();
+    public Core.Type_string classification();
+    public Core.Type_string length();
     public Core.Type_string mass();
+    public Core.Type_string muzzlevelocity();
+    public Core.Type_string range();
+    public Core.Type_string rof();
     public Base.Type_rolemap rolemap();
-    public Base.Type_unitpowermap unitpowermap();
-    public Base.Type_unitskillmap unitskillmap();
-    public Base.Type_unitweaknessmap unitweaknessmap();
+    public Core.Type_string value();
   }
 
   public static class Class_item extends Core.Class_base implements Type_item {
@@ -4238,11 +4241,46 @@ public final class Base {
       return this.vx_p_beast == null ? Base.e_rating : this.vx_p_beast;
     }
 
+    protected Core.Type_string vx_p_classification;
+
+    @Override
+    public Core.Type_string classification() {
+      return this.vx_p_classification == null ? Core.e_string : this.vx_p_classification;
+    }
+
+    protected Core.Type_string vx_p_length;
+
+    @Override
+    public Core.Type_string length() {
+      return this.vx_p_length == null ? Core.e_string : this.vx_p_length;
+    }
+
     protected Core.Type_string vx_p_mass;
 
     @Override
     public Core.Type_string mass() {
       return this.vx_p_mass == null ? Core.e_string : this.vx_p_mass;
+    }
+
+    protected Core.Type_string vx_p_muzzlevelocity;
+
+    @Override
+    public Core.Type_string muzzlevelocity() {
+      return this.vx_p_muzzlevelocity == null ? Core.e_string : this.vx_p_muzzlevelocity;
+    }
+
+    protected Core.Type_string vx_p_range;
+
+    @Override
+    public Core.Type_string range() {
+      return this.vx_p_range == null ? Core.e_string : this.vx_p_range;
+    }
+
+    protected Core.Type_string vx_p_rof;
+
+    @Override
+    public Core.Type_string rof() {
+      return this.vx_p_rof == null ? Core.e_string : this.vx_p_rof;
     }
 
     protected Base.Type_rolemap vx_p_rolemap;
@@ -4252,25 +4290,11 @@ public final class Base {
       return this.vx_p_rolemap == null ? Base.e_rolemap : this.vx_p_rolemap;
     }
 
-    protected Base.Type_unitpowermap vx_p_unitpowermap;
+    protected Core.Type_string vx_p_value;
 
     @Override
-    public Base.Type_unitpowermap unitpowermap() {
-      return this.vx_p_unitpowermap == null ? Base.e_unitpowermap : this.vx_p_unitpowermap;
-    }
-
-    protected Base.Type_unitskillmap vx_p_unitskillmap;
-
-    @Override
-    public Base.Type_unitskillmap unitskillmap() {
-      return this.vx_p_unitskillmap == null ? Base.e_unitskillmap : this.vx_p_unitskillmap;
-    }
-
-    protected Base.Type_unitweaknessmap vx_p_unitweaknessmap;
-
-    @Override
-    public Base.Type_unitweaknessmap unitweaknessmap() {
-      return this.vx_p_unitweaknessmap == null ? Base.e_unitweaknessmap : this.vx_p_unitweaknessmap;
+    public Core.Type_string value() {
+      return this.vx_p_value == null ? Core.e_string : this.vx_p_value;
     }
 
     @Override
@@ -4314,20 +4338,29 @@ public final class Base {
       case ":beast":
         output = this.beast();
         break;
+      case ":classification":
+        output = this.classification();
+        break;
+      case ":length":
+        output = this.length();
+        break;
       case ":mass":
         output = this.mass();
+        break;
+      case ":muzzlevelocity":
+        output = this.muzzlevelocity();
+        break;
+      case ":range":
+        output = this.range();
+        break;
+      case ":rof":
+        output = this.rof();
         break;
       case ":rolemap":
         output = this.rolemap();
         break;
-      case ":unitpowermap":
-        output = this.unitpowermap();
-        break;
-      case ":unitskillmap":
-        output = this.unitskillmap();
-        break;
-      case ":unitweaknessmap":
-        output = this.unitweaknessmap();
+      case ":value":
+        output = this.value();
         break;
       }
       return output;
@@ -4348,11 +4381,14 @@ public final class Base {
       output.put(":speed", this.speed());
       output.put(":shadow", this.shadow());
       output.put(":beast", this.beast());
+      output.put(":classification", this.classification());
+      output.put(":length", this.length());
       output.put(":mass", this.mass());
+      output.put(":muzzlevelocity", this.muzzlevelocity());
+      output.put(":range", this.range());
+      output.put(":rof", this.rof());
       output.put(":rolemap", this.rolemap());
-      output.put(":unitpowermap", this.unitpowermap());
-      output.put(":unitskillmap", this.unitskillmap());
-      output.put(":unitweaknessmap", this.unitweaknessmap());
+      output.put(":value", this.value());
       return Core.immutablemap(output);
     }
 
@@ -4380,11 +4416,14 @@ public final class Base {
       Base.Type_rating vx_p_speed = val.speed();
       Base.Type_rating vx_p_shadow = val.shadow();
       Base.Type_rating vx_p_beast = val.beast();
+      Core.Type_string vx_p_classification = val.classification();
+      Core.Type_string vx_p_length = val.length();
       Core.Type_string vx_p_mass = val.mass();
+      Core.Type_string vx_p_muzzlevelocity = val.muzzlevelocity();
+      Core.Type_string vx_p_range = val.range();
+      Core.Type_string vx_p_rof = val.rof();
       Base.Type_rolemap vx_p_rolemap = val.rolemap();
-      Base.Type_unitpowermap vx_p_unitpowermap = val.unitpowermap();
-      Base.Type_unitskillmap vx_p_unitskillmap = val.unitskillmap();
-      Base.Type_unitweaknessmap vx_p_unitweaknessmap = val.unitweaknessmap();
+      Core.Type_string vx_p_value = val.value();
       ArrayList<String> validkeys = new ArrayList<>();
       validkeys.add(":name");
       validkeys.add(":image");
@@ -4398,11 +4437,14 @@ public final class Base {
       validkeys.add(":speed");
       validkeys.add(":shadow");
       validkeys.add(":beast");
+      validkeys.add(":classification");
+      validkeys.add(":length");
       validkeys.add(":mass");
+      validkeys.add(":muzzlevelocity");
+      validkeys.add(":range");
+      validkeys.add(":rof");
       validkeys.add(":rolemap");
-      validkeys.add(":unitpowermap");
-      validkeys.add(":unitskillmap");
-      validkeys.add(":unitweaknessmap");
+      validkeys.add(":value");
       String key = "";
       Core.Type_msg msg;
       for (Object valsub : vals) {
@@ -4703,6 +4745,52 @@ public final class Base {
               msgblock = msgblock.vx_copy(msg);
             }
             break;
+          case ":classification":
+            if (valsub == vx_p_classification) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_classification = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_classification = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("classification"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":length":
+            if (valsub == vx_p_length) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_length = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_length = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("length"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
           case ":mass":
             if (valsub == vx_p_mass) {
             } else if (valsub instanceof Core.Type_string) {
@@ -4720,6 +4808,75 @@ public final class Base {
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
               mapany.put("key", Core.vx_new_string("mass"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":muzzlevelocity":
+            if (valsub == vx_p_muzzlevelocity) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_muzzlevelocity = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_muzzlevelocity = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("muzzlevelocity"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":range":
+            if (valsub == vx_p_range) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_range = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_range = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("range"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":rof":
+            if (valsub == vx_p_rof) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_rof = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_rof = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("rof"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
@@ -4746,11 +4903,14 @@ public final class Base {
               msgblock = msgblock.vx_copy(msg);
             }
             break;
-          case ":unitpowermap":
-            if (valsub == vx_p_unitpowermap) {
-            } else if (valsub instanceof Base.Type_unitpowermap) {
+          case ":value":
+            if (valsub == vx_p_value) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_unitpowermap = (Base.Type_unitpowermap)valsub;
+              vx_p_value = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_value = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -4759,47 +4919,7 @@ public final class Base {
                 msgval = Core.vx_new_string(valsub.toString());
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
-              mapany.put("key", Core.vx_new_string("unitpowermap"));
-              mapany.put("value", msgval);
-              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
-              msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
-              msgblock = msgblock.vx_copy(msg);
-            }
-            break;
-          case ":unitskillmap":
-            if (valsub == vx_p_unitskillmap) {
-            } else if (valsub instanceof Base.Type_unitskillmap) {
-              ischanged = true;
-              vx_p_unitskillmap = (Base.Type_unitskillmap)valsub;
-            } else {
-              Core.Type_any msgval;
-              if (valsub instanceof Core.Type_any) {
-                msgval = (Core.Type_any)valsub;
-              } else {
-                msgval = Core.vx_new_string(valsub.toString());
-              }
-              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
-              mapany.put("key", Core.vx_new_string("unitskillmap"));
-              mapany.put("value", msgval);
-              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
-              msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
-              msgblock = msgblock.vx_copy(msg);
-            }
-            break;
-          case ":unitweaknessmap":
-            if (valsub == vx_p_unitweaknessmap) {
-            } else if (valsub instanceof Base.Type_unitweaknessmap) {
-              ischanged = true;
-              vx_p_unitweaknessmap = (Base.Type_unitweaknessmap)valsub;
-            } else {
-              Core.Type_any msgval;
-              if (valsub instanceof Core.Type_any) {
-                msgval = (Core.Type_any)valsub;
-              } else {
-                msgval = Core.vx_new_string(valsub.toString());
-              }
-              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
-              mapany.put("key", Core.vx_new_string("unitweaknessmap"));
+              mapany.put("key", Core.vx_new_string("value"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/item", ":invalidvalue", msgmap);
@@ -4828,11 +4948,14 @@ public final class Base {
         work.vx_p_speed = vx_p_speed;
         work.vx_p_shadow = vx_p_shadow;
         work.vx_p_beast = vx_p_beast;
+        work.vx_p_classification = vx_p_classification;
+        work.vx_p_length = vx_p_length;
         work.vx_p_mass = vx_p_mass;
+        work.vx_p_muzzlevelocity = vx_p_muzzlevelocity;
+        work.vx_p_range = vx_p_range;
+        work.vx_p_rof = vx_p_rof;
         work.vx_p_rolemap = vx_p_rolemap;
-        work.vx_p_unitpowermap = vx_p_unitpowermap;
-        work.vx_p_unitskillmap = vx_p_unitskillmap;
-        work.vx_p_unitweaknessmap = vx_p_unitweaknessmap;
+        work.vx_p_value = vx_p_value;
         if (msgblock != Core.e_msgblock) {
           work.vxmsgblock = msgblock;
         }
@@ -8210,6 +8333,7 @@ public final class Base {
     public Core.Type_string summary();
     public Core.Type_string titles();
     public Core.Type_string orientation();
+    public Core.Type_string classification();
   }
 
   public static class Class_rule extends Core.Class_base implements Type_rule {
@@ -8256,6 +8380,13 @@ public final class Base {
       return this.vx_p_orientation == null ? Core.e_string : this.vx_p_orientation;
     }
 
+    protected Core.Type_string vx_p_classification;
+
+    @Override
+    public Core.Type_string classification() {
+      return this.vx_p_classification == null ? Core.e_string : this.vx_p_classification;
+    }
+
     @Override
     public Core.Type_any vx_any(final Core.Type_string key) {
       Core.Type_any output = Core.e_any;
@@ -8279,6 +8410,9 @@ public final class Base {
       case ":orientation":
         output = this.orientation();
         break;
+      case ":classification":
+        output = this.classification();
+        break;
       }
       return output;
     }
@@ -8292,6 +8426,7 @@ public final class Base {
       output.put(":summary", this.summary());
       output.put(":titles", this.titles());
       output.put(":orientation", this.orientation());
+      output.put(":classification", this.classification());
       return Core.immutablemap(output);
     }
 
@@ -8313,6 +8448,7 @@ public final class Base {
       Core.Type_string vx_p_summary = val.summary();
       Core.Type_string vx_p_titles = val.titles();
       Core.Type_string vx_p_orientation = val.orientation();
+      Core.Type_string vx_p_classification = val.classification();
       ArrayList<String> validkeys = new ArrayList<>();
       validkeys.add(":name");
       validkeys.add(":image");
@@ -8320,6 +8456,7 @@ public final class Base {
       validkeys.add(":summary");
       validkeys.add(":titles");
       validkeys.add(":orientation");
+      validkeys.add(":classification");
       String key = "";
       Core.Type_msg msg;
       for (Object valsub : vals) {
@@ -8500,6 +8637,29 @@ public final class Base {
               msgblock = msgblock.vx_copy(msg);
             }
             break;
+          case ":classification":
+            if (valsub == vx_p_classification) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_classification = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_classification = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("classification"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/rule", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
           default:
             Core.Type_any msgval = Core.vx_new_string(key);
             msg = Core.vx_msg_from_error("nx/tactics/base/rule", ":invalidkey", msgval);
@@ -8516,6 +8676,7 @@ public final class Base {
         work.vx_p_summary = vx_p_summary;
         work.vx_p_titles = vx_p_titles;
         work.vx_p_orientation = vx_p_orientation;
+        work.vx_p_classification = vx_p_classification;
         if (msgblock != Core.e_msgblock) {
           work.vxmsgblock = msgblock;
         }
@@ -12725,17 +12886,19 @@ public final class Base {
     public Core.Type_string summary();
     public Core.Type_string titles();
     public Core.Type_string orientation();
-    public Base.Type_rating body();
-    public Base.Type_rating mind();
-    public Base.Type_rating will();
-    public Base.Type_rating speed();
-    public Base.Type_rating shadow();
-    public Base.Type_rating beast();
-    public Base.Type_rating demeanor();
-    public Base.Type_rating nature();
+    public Core.Type_string body();
+    public Core.Type_string mind();
+    public Core.Type_string will();
+    public Core.Type_string speed();
+    public Core.Type_string shadow();
+    public Core.Type_string beast();
+    public Core.Type_string demeanor();
+    public Core.Type_string nature();
+    public Core.Type_string classification();
     public Core.Type_string mass();
     public Core.Type_string height();
     public Core.Type_string length();
+    public Core.Type_string value();
     public Core.Type_string width();
     public Base.Type_damagelist damagelist();
     public Base.Type_rolemap rolemap();
@@ -12788,60 +12951,67 @@ public final class Base {
       return this.vx_p_orientation == null ? Core.e_string : this.vx_p_orientation;
     }
 
-    protected Base.Type_rating vx_p_body;
+    protected Core.Type_string vx_p_body;
 
     @Override
-    public Base.Type_rating body() {
-      return this.vx_p_body == null ? Base.e_rating : this.vx_p_body;
+    public Core.Type_string body() {
+      return this.vx_p_body == null ? Core.e_string : this.vx_p_body;
     }
 
-    protected Base.Type_rating vx_p_mind;
+    protected Core.Type_string vx_p_mind;
 
     @Override
-    public Base.Type_rating mind() {
-      return this.vx_p_mind == null ? Base.e_rating : this.vx_p_mind;
+    public Core.Type_string mind() {
+      return this.vx_p_mind == null ? Core.e_string : this.vx_p_mind;
     }
 
-    protected Base.Type_rating vx_p_will;
+    protected Core.Type_string vx_p_will;
 
     @Override
-    public Base.Type_rating will() {
-      return this.vx_p_will == null ? Base.e_rating : this.vx_p_will;
+    public Core.Type_string will() {
+      return this.vx_p_will == null ? Core.e_string : this.vx_p_will;
     }
 
-    protected Base.Type_rating vx_p_speed;
+    protected Core.Type_string vx_p_speed;
 
     @Override
-    public Base.Type_rating speed() {
-      return this.vx_p_speed == null ? Base.e_rating : this.vx_p_speed;
+    public Core.Type_string speed() {
+      return this.vx_p_speed == null ? Core.e_string : this.vx_p_speed;
     }
 
-    protected Base.Type_rating vx_p_shadow;
+    protected Core.Type_string vx_p_shadow;
 
     @Override
-    public Base.Type_rating shadow() {
-      return this.vx_p_shadow == null ? Base.e_rating : this.vx_p_shadow;
+    public Core.Type_string shadow() {
+      return this.vx_p_shadow == null ? Core.e_string : this.vx_p_shadow;
     }
 
-    protected Base.Type_rating vx_p_beast;
+    protected Core.Type_string vx_p_beast;
 
     @Override
-    public Base.Type_rating beast() {
-      return this.vx_p_beast == null ? Base.e_rating : this.vx_p_beast;
+    public Core.Type_string beast() {
+      return this.vx_p_beast == null ? Core.e_string : this.vx_p_beast;
     }
 
-    protected Base.Type_rating vx_p_demeanor;
+    protected Core.Type_string vx_p_demeanor;
 
     @Override
-    public Base.Type_rating demeanor() {
-      return this.vx_p_demeanor == null ? Base.e_rating : this.vx_p_demeanor;
+    public Core.Type_string demeanor() {
+      return this.vx_p_demeanor == null ? Core.e_string : this.vx_p_demeanor;
     }
 
-    protected Base.Type_rating vx_p_nature;
+    protected Core.Type_string vx_p_nature;
 
     @Override
-    public Base.Type_rating nature() {
-      return this.vx_p_nature == null ? Base.e_rating : this.vx_p_nature;
+    public Core.Type_string nature() {
+      return this.vx_p_nature == null ? Core.e_string : this.vx_p_nature;
+    }
+
+    protected Core.Type_string vx_p_classification;
+
+    @Override
+    public Core.Type_string classification() {
+      return this.vx_p_classification == null ? Core.e_string : this.vx_p_classification;
     }
 
     protected Core.Type_string vx_p_mass;
@@ -12863,6 +13033,13 @@ public final class Base {
     @Override
     public Core.Type_string length() {
       return this.vx_p_length == null ? Core.e_string : this.vx_p_length;
+    }
+
+    protected Core.Type_string vx_p_value;
+
+    @Override
+    public Core.Type_string value() {
+      return this.vx_p_value == null ? Core.e_string : this.vx_p_value;
     }
 
     protected Core.Type_string vx_p_width;
@@ -12954,6 +13131,9 @@ public final class Base {
       case ":nature":
         output = this.nature();
         break;
+      case ":classification":
+        output = this.classification();
+        break;
       case ":mass":
         output = this.mass();
         break;
@@ -12962,6 +13142,9 @@ public final class Base {
         break;
       case ":length":
         output = this.length();
+        break;
+      case ":value":
+        output = this.value();
         break;
       case ":width":
         output = this.width();
@@ -13002,9 +13185,11 @@ public final class Base {
       output.put(":beast", this.beast());
       output.put(":demeanor", this.demeanor());
       output.put(":nature", this.nature());
+      output.put(":classification", this.classification());
       output.put(":mass", this.mass());
       output.put(":height", this.height());
       output.put(":length", this.length());
+      output.put(":value", this.value());
       output.put(":width", this.width());
       output.put(":damagelist", this.damagelist());
       output.put(":rolemap", this.rolemap());
@@ -13032,17 +13217,19 @@ public final class Base {
       Core.Type_string vx_p_summary = val.summary();
       Core.Type_string vx_p_titles = val.titles();
       Core.Type_string vx_p_orientation = val.orientation();
-      Base.Type_rating vx_p_body = val.body();
-      Base.Type_rating vx_p_mind = val.mind();
-      Base.Type_rating vx_p_will = val.will();
-      Base.Type_rating vx_p_speed = val.speed();
-      Base.Type_rating vx_p_shadow = val.shadow();
-      Base.Type_rating vx_p_beast = val.beast();
-      Base.Type_rating vx_p_demeanor = val.demeanor();
-      Base.Type_rating vx_p_nature = val.nature();
+      Core.Type_string vx_p_body = val.body();
+      Core.Type_string vx_p_mind = val.mind();
+      Core.Type_string vx_p_will = val.will();
+      Core.Type_string vx_p_speed = val.speed();
+      Core.Type_string vx_p_shadow = val.shadow();
+      Core.Type_string vx_p_beast = val.beast();
+      Core.Type_string vx_p_demeanor = val.demeanor();
+      Core.Type_string vx_p_nature = val.nature();
+      Core.Type_string vx_p_classification = val.classification();
       Core.Type_string vx_p_mass = val.mass();
       Core.Type_string vx_p_height = val.height();
       Core.Type_string vx_p_length = val.length();
+      Core.Type_string vx_p_value = val.value();
       Core.Type_string vx_p_width = val.width();
       Base.Type_damagelist vx_p_damagelist = val.damagelist();
       Base.Type_rolemap vx_p_rolemap = val.rolemap();
@@ -13064,9 +13251,11 @@ public final class Base {
       validkeys.add(":beast");
       validkeys.add(":demeanor");
       validkeys.add(":nature");
+      validkeys.add(":classification");
       validkeys.add(":mass");
       validkeys.add(":height");
       validkeys.add(":length");
+      validkeys.add(":value");
       validkeys.add(":width");
       validkeys.add(":damagelist");
       validkeys.add(":rolemap");
@@ -13255,9 +13444,12 @@ public final class Base {
             break;
           case ":body":
             if (valsub == vx_p_body) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_body = (Base.Type_rating)valsub;
+              vx_p_body = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_body = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -13275,9 +13467,12 @@ public final class Base {
             break;
           case ":mind":
             if (valsub == vx_p_mind) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_mind = (Base.Type_rating)valsub;
+              vx_p_mind = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_mind = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -13295,9 +13490,12 @@ public final class Base {
             break;
           case ":will":
             if (valsub == vx_p_will) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_will = (Base.Type_rating)valsub;
+              vx_p_will = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_will = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -13315,9 +13513,12 @@ public final class Base {
             break;
           case ":speed":
             if (valsub == vx_p_speed) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_speed = (Base.Type_rating)valsub;
+              vx_p_speed = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_speed = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -13335,9 +13536,12 @@ public final class Base {
             break;
           case ":shadow":
             if (valsub == vx_p_shadow) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_shadow = (Base.Type_rating)valsub;
+              vx_p_shadow = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_shadow = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -13355,9 +13559,12 @@ public final class Base {
             break;
           case ":beast":
             if (valsub == vx_p_beast) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_beast = (Base.Type_rating)valsub;
+              vx_p_beast = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_beast = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -13375,9 +13582,12 @@ public final class Base {
             break;
           case ":demeanor":
             if (valsub == vx_p_demeanor) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_demeanor = (Base.Type_rating)valsub;
+              vx_p_demeanor = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_demeanor = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -13395,9 +13605,12 @@ public final class Base {
             break;
           case ":nature":
             if (valsub == vx_p_nature) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_nature = (Base.Type_rating)valsub;
+              vx_p_nature = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_nature = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -13407,6 +13620,29 @@ public final class Base {
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
               mapany.put("key", Core.vx_new_string("nature"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unit", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":classification":
+            if (valsub == vx_p_classification) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_classification = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_classification = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("classification"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/unit", ":invalidvalue", msgmap);
@@ -13476,6 +13712,29 @@ public final class Base {
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
               mapany.put("key", Core.vx_new_string("length"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unit", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":value":
+            if (valsub == vx_p_value) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_value = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_value = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("value"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/unit", ":invalidvalue", msgmap);
@@ -13629,9 +13888,11 @@ public final class Base {
         work.vx_p_beast = vx_p_beast;
         work.vx_p_demeanor = vx_p_demeanor;
         work.vx_p_nature = vx_p_nature;
+        work.vx_p_classification = vx_p_classification;
         work.vx_p_mass = vx_p_mass;
         work.vx_p_height = vx_p_height;
         work.vx_p_length = vx_p_length;
+        work.vx_p_value = vx_p_value;
         work.vx_p_width = vx_p_width;
         work.vx_p_damagelist = vx_p_damagelist;
         work.vx_p_rolemap = vx_p_rolemap;
@@ -13682,15 +13943,37 @@ public final class Base {
     public Base.Type_unitability vx_copy(final Object... vals);
     public Base.Type_unitability vx_empty();
     public Base.Type_unitability vx_type();
+    public Core.Type_string name();
+    public Core.Type_string image();
   }
 
   public static class Class_unitability extends Core.Class_base implements Type_unitability {
+
+    protected Core.Type_string vx_p_name;
+
+    @Override
+    public Core.Type_string name() {
+      return this.vx_p_name == null ? Core.e_string : this.vx_p_name;
+    }
+
+    protected Core.Type_string vx_p_image;
+
+    @Override
+    public Core.Type_string image() {
+      return this.vx_p_image == null ? Core.e_string : this.vx_p_image;
+    }
 
     @Override
     public Core.Type_any vx_any(final Core.Type_string key) {
       Core.Type_any output = Core.e_any;
       String skey = key.vx_string();
       switch (skey) {
+      case ":name":
+        output = this.name();
+        break;
+      case ":image":
+        output = this.image();
+        break;
       }
       return output;
     }
@@ -13698,6 +13981,8 @@ public final class Base {
     @Override
     public Map<String, Core.Type_any> vx_map() {
       Map<String, Core.Type_any> output = new LinkedHashMap<>();
+      output.put(":name", this.name());
+      output.put(":image", this.image());
       return Core.immutablemap(output);
     }
 
@@ -13713,8 +13998,111 @@ public final class Base {
       if (this instanceof Core.vx_Type_const) {
         ischanged = true;
       }
+      Core.Type_string vx_p_name = val.name();
+      Core.Type_string vx_p_image = val.image();
+      ArrayList<String> validkeys = new ArrayList<>();
+      validkeys.add(":name");
+      validkeys.add(":image");
+      String key = "";
+      Core.Type_msg msg;
+      for (Object valsub : vals) {
+        if (valsub instanceof Core.Type_msgblock) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (valsub instanceof Core.Type_msg) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (key == "") {
+          boolean istestkey = false;
+          String testkey = "";
+          if (valsub instanceof Core.Type_string) {
+            Core.Type_string valstr = (Core.Type_string)valsub;
+            testkey = valstr.vx_string();
+            istestkey = true;
+          } else if (valsub instanceof String) {
+            testkey = (String)valsub;
+            istestkey = true;
+          } else {
+            Core.Type_any msgval;
+            if (valsub instanceof Core.Type_any) {
+              msgval = (Core.Type_any)valsub;
+            } else {
+              msgval = Core.vx_new_string(valsub.toString());
+            }
+            msg = Core.vx_msg_from_error("nx/tactics/base/unitability", ":invalidkeytype", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          if (istestkey) {
+            if (!testkey.startsWith(":")) {
+              testkey = ":" + testkey;
+            }
+            boolean isvalidkey = validkeys.contains(testkey);
+            if (isvalidkey) {
+              key = testkey;
+            } else {
+              Core.Type_any msgval = Core.vx_new_string(testkey);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitability", ":invalidkey", msgval);
+              msgblock = msgblock.vx_copy(msg);
+            }
+          }
+        } else {
+          switch (key) {
+          case ":name":
+            if (valsub == vx_p_name) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_name = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_name = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("name"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitability", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":image":
+            if (valsub == vx_p_image) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_image = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_image = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("image"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitability", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          default:
+            Core.Type_any msgval = Core.vx_new_string(key);
+            msg = Core.vx_msg_from_error("nx/tactics/base/unitability", ":invalidkey", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          key = "";
+        }
+      }
       if (ischanged || (msgblock != Core.e_msgblock)) {
         Class_unitability work = new Class_unitability();
+        work.vx_p_name = vx_p_name;
+        work.vx_p_image = vx_p_image;
         if (msgblock != Core.e_msgblock) {
           work.vxmsgblock = msgblock;
         }
@@ -13924,15 +14312,70 @@ public final class Base {
     public Base.Type_unititem vx_copy(final Object... vals);
     public Base.Type_unititem vx_empty();
     public Base.Type_unititem vx_type();
+    public Core.Type_string name();
+    public Core.Type_string image();
+    public Core.Type_string facing();
+    public Core.Type_string number();
+    public Core.Type_string value();
   }
 
   public static class Class_unititem extends Core.Class_base implements Type_unititem {
+
+    protected Core.Type_string vx_p_name;
+
+    @Override
+    public Core.Type_string name() {
+      return this.vx_p_name == null ? Core.e_string : this.vx_p_name;
+    }
+
+    protected Core.Type_string vx_p_image;
+
+    @Override
+    public Core.Type_string image() {
+      return this.vx_p_image == null ? Core.e_string : this.vx_p_image;
+    }
+
+    protected Core.Type_string vx_p_facing;
+
+    @Override
+    public Core.Type_string facing() {
+      return this.vx_p_facing == null ? Core.e_string : this.vx_p_facing;
+    }
+
+    protected Core.Type_string vx_p_number;
+
+    @Override
+    public Core.Type_string number() {
+      return this.vx_p_number == null ? Core.e_string : this.vx_p_number;
+    }
+
+    protected Core.Type_string vx_p_value;
+
+    @Override
+    public Core.Type_string value() {
+      return this.vx_p_value == null ? Core.e_string : this.vx_p_value;
+    }
 
     @Override
     public Core.Type_any vx_any(final Core.Type_string key) {
       Core.Type_any output = Core.e_any;
       String skey = key.vx_string();
       switch (skey) {
+      case ":name":
+        output = this.name();
+        break;
+      case ":image":
+        output = this.image();
+        break;
+      case ":facing":
+        output = this.facing();
+        break;
+      case ":number":
+        output = this.number();
+        break;
+      case ":value":
+        output = this.value();
+        break;
       }
       return output;
     }
@@ -13940,6 +14383,11 @@ public final class Base {
     @Override
     public Map<String, Core.Type_any> vx_map() {
       Map<String, Core.Type_any> output = new LinkedHashMap<>();
+      output.put(":name", this.name());
+      output.put(":image", this.image());
+      output.put(":facing", this.facing());
+      output.put(":number", this.number());
+      output.put(":value", this.value());
       return Core.immutablemap(output);
     }
 
@@ -13955,8 +14403,189 @@ public final class Base {
       if (this instanceof Core.vx_Type_const) {
         ischanged = true;
       }
+      Core.Type_string vx_p_name = val.name();
+      Core.Type_string vx_p_image = val.image();
+      Core.Type_string vx_p_facing = val.facing();
+      Core.Type_string vx_p_number = val.number();
+      Core.Type_string vx_p_value = val.value();
+      ArrayList<String> validkeys = new ArrayList<>();
+      validkeys.add(":name");
+      validkeys.add(":image");
+      validkeys.add(":facing");
+      validkeys.add(":number");
+      validkeys.add(":value");
+      String key = "";
+      Core.Type_msg msg;
+      for (Object valsub : vals) {
+        if (valsub instanceof Core.Type_msgblock) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (valsub instanceof Core.Type_msg) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (key == "") {
+          boolean istestkey = false;
+          String testkey = "";
+          if (valsub instanceof Core.Type_string) {
+            Core.Type_string valstr = (Core.Type_string)valsub;
+            testkey = valstr.vx_string();
+            istestkey = true;
+          } else if (valsub instanceof String) {
+            testkey = (String)valsub;
+            istestkey = true;
+          } else {
+            Core.Type_any msgval;
+            if (valsub instanceof Core.Type_any) {
+              msgval = (Core.Type_any)valsub;
+            } else {
+              msgval = Core.vx_new_string(valsub.toString());
+            }
+            msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidkeytype", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          if (istestkey) {
+            if (!testkey.startsWith(":")) {
+              testkey = ":" + testkey;
+            }
+            boolean isvalidkey = validkeys.contains(testkey);
+            if (isvalidkey) {
+              key = testkey;
+            } else {
+              Core.Type_any msgval = Core.vx_new_string(testkey);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidkey", msgval);
+              msgblock = msgblock.vx_copy(msg);
+            }
+          }
+        } else {
+          switch (key) {
+          case ":name":
+            if (valsub == vx_p_name) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_name = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_name = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("name"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":image":
+            if (valsub == vx_p_image) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_image = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_image = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("image"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":facing":
+            if (valsub == vx_p_facing) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_facing = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_facing = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("facing"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":number":
+            if (valsub == vx_p_number) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_number = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_number = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("number"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":value":
+            if (valsub == vx_p_value) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_value = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_value = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("value"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          default:
+            Core.Type_any msgval = Core.vx_new_string(key);
+            msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidkey", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          key = "";
+        }
+      }
       if (ischanged || (msgblock != Core.e_msgblock)) {
         Class_unititem work = new Class_unititem();
+        work.vx_p_name = vx_p_name;
+        work.vx_p_image = vx_p_image;
+        work.vx_p_facing = vx_p_facing;
+        work.vx_p_number = vx_p_number;
+        work.vx_p_value = vx_p_value;
         if (msgblock != Core.e_msgblock) {
           work.vxmsgblock = msgblock;
         }
@@ -14332,11 +14961,17 @@ public final class Base {
     public Base.Type_unitpower vx_empty();
     public Base.Type_unitpower vx_type();
     public Core.Type_string name();
-    public Base.Type_rating level();
+    public Core.Type_string level();
     public Base.Type_power power();
-    public Base.Type_unitabilitymap abilitymap();
-    public Base.Type_unititemmap itemmap();
-    public Base.Type_unitspecialtymap specialtymap();
+    public Core.Type_string front();
+    public Core.Type_string back();
+    public Core.Type_string over();
+    public Core.Type_string under();
+    public Core.Type_string side();
+    public Core.Type_string strength();
+    public Base.Type_unitabilitymap unitabilitymap();
+    public Base.Type_unititemmap unititemmap();
+    public Base.Type_unitspecialtymap unitspecialtymap();
   }
 
   public static class Class_unitpower extends Core.Class_base implements Type_unitpower {
@@ -14348,11 +14983,11 @@ public final class Base {
       return this.vx_p_name == null ? Core.e_string : this.vx_p_name;
     }
 
-    protected Base.Type_rating vx_p_level;
+    protected Core.Type_string vx_p_level;
 
     @Override
-    public Base.Type_rating level() {
-      return this.vx_p_level == null ? Base.e_rating : this.vx_p_level;
+    public Core.Type_string level() {
+      return this.vx_p_level == null ? Core.e_string : this.vx_p_level;
     }
 
     protected Base.Type_power vx_p_power;
@@ -14362,25 +14997,67 @@ public final class Base {
       return this.vx_p_power == null ? Base.e_power : this.vx_p_power;
     }
 
-    protected Base.Type_unitabilitymap vx_p_abilitymap;
+    protected Core.Type_string vx_p_front;
 
     @Override
-    public Base.Type_unitabilitymap abilitymap() {
-      return this.vx_p_abilitymap == null ? Base.e_unitabilitymap : this.vx_p_abilitymap;
+    public Core.Type_string front() {
+      return this.vx_p_front == null ? Core.e_string : this.vx_p_front;
     }
 
-    protected Base.Type_unititemmap vx_p_itemmap;
+    protected Core.Type_string vx_p_back;
 
     @Override
-    public Base.Type_unititemmap itemmap() {
-      return this.vx_p_itemmap == null ? Base.e_unititemmap : this.vx_p_itemmap;
+    public Core.Type_string back() {
+      return this.vx_p_back == null ? Core.e_string : this.vx_p_back;
     }
 
-    protected Base.Type_unitspecialtymap vx_p_specialtymap;
+    protected Core.Type_string vx_p_over;
 
     @Override
-    public Base.Type_unitspecialtymap specialtymap() {
-      return this.vx_p_specialtymap == null ? Base.e_unitspecialtymap : this.vx_p_specialtymap;
+    public Core.Type_string over() {
+      return this.vx_p_over == null ? Core.e_string : this.vx_p_over;
+    }
+
+    protected Core.Type_string vx_p_under;
+
+    @Override
+    public Core.Type_string under() {
+      return this.vx_p_under == null ? Core.e_string : this.vx_p_under;
+    }
+
+    protected Core.Type_string vx_p_side;
+
+    @Override
+    public Core.Type_string side() {
+      return this.vx_p_side == null ? Core.e_string : this.vx_p_side;
+    }
+
+    protected Core.Type_string vx_p_strength;
+
+    @Override
+    public Core.Type_string strength() {
+      return this.vx_p_strength == null ? Core.e_string : this.vx_p_strength;
+    }
+
+    protected Base.Type_unitabilitymap vx_p_unitabilitymap;
+
+    @Override
+    public Base.Type_unitabilitymap unitabilitymap() {
+      return this.vx_p_unitabilitymap == null ? Base.e_unitabilitymap : this.vx_p_unitabilitymap;
+    }
+
+    protected Base.Type_unititemmap vx_p_unititemmap;
+
+    @Override
+    public Base.Type_unititemmap unititemmap() {
+      return this.vx_p_unititemmap == null ? Base.e_unititemmap : this.vx_p_unititemmap;
+    }
+
+    protected Base.Type_unitspecialtymap vx_p_unitspecialtymap;
+
+    @Override
+    public Base.Type_unitspecialtymap unitspecialtymap() {
+      return this.vx_p_unitspecialtymap == null ? Base.e_unitspecialtymap : this.vx_p_unitspecialtymap;
     }
 
     @Override
@@ -14397,14 +15074,32 @@ public final class Base {
       case ":power":
         output = this.power();
         break;
-      case ":abilitymap":
-        output = this.abilitymap();
+      case ":front":
+        output = this.front();
         break;
-      case ":itemmap":
-        output = this.itemmap();
+      case ":back":
+        output = this.back();
         break;
-      case ":specialtymap":
-        output = this.specialtymap();
+      case ":over":
+        output = this.over();
+        break;
+      case ":under":
+        output = this.under();
+        break;
+      case ":side":
+        output = this.side();
+        break;
+      case ":strength":
+        output = this.strength();
+        break;
+      case ":unitabilitymap":
+        output = this.unitabilitymap();
+        break;
+      case ":unititemmap":
+        output = this.unititemmap();
+        break;
+      case ":unitspecialtymap":
+        output = this.unitspecialtymap();
         break;
       }
       return output;
@@ -14416,9 +15111,15 @@ public final class Base {
       output.put(":name", this.name());
       output.put(":level", this.level());
       output.put(":power", this.power());
-      output.put(":abilitymap", this.abilitymap());
-      output.put(":itemmap", this.itemmap());
-      output.put(":specialtymap", this.specialtymap());
+      output.put(":front", this.front());
+      output.put(":back", this.back());
+      output.put(":over", this.over());
+      output.put(":under", this.under());
+      output.put(":side", this.side());
+      output.put(":strength", this.strength());
+      output.put(":unitabilitymap", this.unitabilitymap());
+      output.put(":unititemmap", this.unititemmap());
+      output.put(":unitspecialtymap", this.unitspecialtymap());
       return Core.immutablemap(output);
     }
 
@@ -14435,18 +15136,30 @@ public final class Base {
         ischanged = true;
       }
       Core.Type_string vx_p_name = val.name();
-      Base.Type_rating vx_p_level = val.level();
+      Core.Type_string vx_p_level = val.level();
       Base.Type_power vx_p_power = val.power();
-      Base.Type_unitabilitymap vx_p_abilitymap = val.abilitymap();
-      Base.Type_unititemmap vx_p_itemmap = val.itemmap();
-      Base.Type_unitspecialtymap vx_p_specialtymap = val.specialtymap();
+      Core.Type_string vx_p_front = val.front();
+      Core.Type_string vx_p_back = val.back();
+      Core.Type_string vx_p_over = val.over();
+      Core.Type_string vx_p_under = val.under();
+      Core.Type_string vx_p_side = val.side();
+      Core.Type_string vx_p_strength = val.strength();
+      Base.Type_unitabilitymap vx_p_unitabilitymap = val.unitabilitymap();
+      Base.Type_unititemmap vx_p_unititemmap = val.unititemmap();
+      Base.Type_unitspecialtymap vx_p_unitspecialtymap = val.unitspecialtymap();
       ArrayList<String> validkeys = new ArrayList<>();
       validkeys.add(":name");
       validkeys.add(":level");
       validkeys.add(":power");
-      validkeys.add(":abilitymap");
-      validkeys.add(":itemmap");
-      validkeys.add(":specialtymap");
+      validkeys.add(":front");
+      validkeys.add(":back");
+      validkeys.add(":over");
+      validkeys.add(":under");
+      validkeys.add(":side");
+      validkeys.add(":strength");
+      validkeys.add(":unitabilitymap");
+      validkeys.add(":unititemmap");
+      validkeys.add(":unitspecialtymap");
       String key = "";
       Core.Type_msg msg;
       for (Object valsub : vals) {
@@ -14514,9 +15227,12 @@ public final class Base {
             break;
           case ":level":
             if (valsub == vx_p_level) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_level = (Base.Type_rating)valsub;
+              vx_p_level = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_level = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -14552,11 +15268,149 @@ public final class Base {
               msgblock = msgblock.vx_copy(msg);
             }
             break;
-          case ":abilitymap":
-            if (valsub == vx_p_abilitymap) {
+          case ":front":
+            if (valsub == vx_p_front) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_front = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_front = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("front"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":back":
+            if (valsub == vx_p_back) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_back = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_back = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("back"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":over":
+            if (valsub == vx_p_over) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_over = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_over = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("over"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":under":
+            if (valsub == vx_p_under) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_under = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_under = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("under"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":side":
+            if (valsub == vx_p_side) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_side = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_side = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("side"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":strength":
+            if (valsub == vx_p_strength) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_strength = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_strength = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("strength"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":unitabilitymap":
+            if (valsub == vx_p_unitabilitymap) {
             } else if (valsub instanceof Base.Type_unitabilitymap) {
               ischanged = true;
-              vx_p_abilitymap = (Base.Type_unitabilitymap)valsub;
+              vx_p_unitabilitymap = (Base.Type_unitabilitymap)valsub;
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -14565,18 +15419,18 @@ public final class Base {
                 msgval = Core.vx_new_string(valsub.toString());
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
-              mapany.put("key", Core.vx_new_string("abilitymap"));
+              mapany.put("key", Core.vx_new_string("unitabilitymap"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
               msgblock = msgblock.vx_copy(msg);
             }
             break;
-          case ":itemmap":
-            if (valsub == vx_p_itemmap) {
+          case ":unititemmap":
+            if (valsub == vx_p_unititemmap) {
             } else if (valsub instanceof Base.Type_unititemmap) {
               ischanged = true;
-              vx_p_itemmap = (Base.Type_unititemmap)valsub;
+              vx_p_unititemmap = (Base.Type_unititemmap)valsub;
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -14585,18 +15439,18 @@ public final class Base {
                 msgval = Core.vx_new_string(valsub.toString());
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
-              mapany.put("key", Core.vx_new_string("itemmap"));
+              mapany.put("key", Core.vx_new_string("unititemmap"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
               msgblock = msgblock.vx_copy(msg);
             }
             break;
-          case ":specialtymap":
-            if (valsub == vx_p_specialtymap) {
+          case ":unitspecialtymap":
+            if (valsub == vx_p_unitspecialtymap) {
             } else if (valsub instanceof Base.Type_unitspecialtymap) {
               ischanged = true;
-              vx_p_specialtymap = (Base.Type_unitspecialtymap)valsub;
+              vx_p_unitspecialtymap = (Base.Type_unitspecialtymap)valsub;
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -14605,7 +15459,7 @@ public final class Base {
                 msgval = Core.vx_new_string(valsub.toString());
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
-              mapany.put("key", Core.vx_new_string("specialtymap"));
+              mapany.put("key", Core.vx_new_string("unitspecialtymap"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
@@ -14625,9 +15479,15 @@ public final class Base {
         work.vx_p_name = vx_p_name;
         work.vx_p_level = vx_p_level;
         work.vx_p_power = vx_p_power;
-        work.vx_p_abilitymap = vx_p_abilitymap;
-        work.vx_p_itemmap = vx_p_itemmap;
-        work.vx_p_specialtymap = vx_p_specialtymap;
+        work.vx_p_front = vx_p_front;
+        work.vx_p_back = vx_p_back;
+        work.vx_p_over = vx_p_over;
+        work.vx_p_under = vx_p_under;
+        work.vx_p_side = vx_p_side;
+        work.vx_p_strength = vx_p_strength;
+        work.vx_p_unitabilitymap = vx_p_unitabilitymap;
+        work.vx_p_unititemmap = vx_p_unititemmap;
+        work.vx_p_unitspecialtymap = vx_p_unitspecialtymap;
         if (msgblock != Core.e_msgblock) {
           work.vxmsgblock = msgblock;
         }
@@ -14838,7 +15698,7 @@ public final class Base {
     public Base.Type_unitskill vx_empty();
     public Base.Type_unitskill vx_type();
     public Core.Type_string name();
-    public Base.Type_rating level();
+    public Core.Type_string level();
     public Base.Type_skill skill();
     public Base.Type_unitabilitymap unitabilitymap();
     public Base.Type_unititemmap unititemmap();
@@ -14854,11 +15714,11 @@ public final class Base {
       return this.vx_p_name == null ? Core.e_string : this.vx_p_name;
     }
 
-    protected Base.Type_rating vx_p_level;
+    protected Core.Type_string vx_p_level;
 
     @Override
-    public Base.Type_rating level() {
-      return this.vx_p_level == null ? Base.e_rating : this.vx_p_level;
+    public Core.Type_string level() {
+      return this.vx_p_level == null ? Core.e_string : this.vx_p_level;
     }
 
     protected Base.Type_skill vx_p_skill;
@@ -14941,7 +15801,7 @@ public final class Base {
         ischanged = true;
       }
       Core.Type_string vx_p_name = val.name();
-      Base.Type_rating vx_p_level = val.level();
+      Core.Type_string vx_p_level = val.level();
       Base.Type_skill vx_p_skill = val.skill();
       Base.Type_unitabilitymap vx_p_unitabilitymap = val.unitabilitymap();
       Base.Type_unititemmap vx_p_unititemmap = val.unititemmap();
@@ -15020,9 +15880,12 @@ public final class Base {
             break;
           case ":level":
             if (valsub == vx_p_level) {
-            } else if (valsub instanceof Base.Type_rating) {
+            } else if (valsub instanceof Core.Type_string) {
               ischanged = true;
-              vx_p_level = (Base.Type_rating)valsub;
+              vx_p_level = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_level = Core.t_string.vx_new(valsub);
             } else {
               Core.Type_any msgval;
               if (valsub instanceof Core.Type_any) {
@@ -15343,15 +16206,37 @@ public final class Base {
     public Base.Type_unitspecialty vx_copy(final Object... vals);
     public Base.Type_unitspecialty vx_empty();
     public Base.Type_unitspecialty vx_type();
+    public Core.Type_string name();
+    public Core.Type_string image();
   }
 
   public static class Class_unitspecialty extends Core.Class_base implements Type_unitspecialty {
+
+    protected Core.Type_string vx_p_name;
+
+    @Override
+    public Core.Type_string name() {
+      return this.vx_p_name == null ? Core.e_string : this.vx_p_name;
+    }
+
+    protected Core.Type_string vx_p_image;
+
+    @Override
+    public Core.Type_string image() {
+      return this.vx_p_image == null ? Core.e_string : this.vx_p_image;
+    }
 
     @Override
     public Core.Type_any vx_any(final Core.Type_string key) {
       Core.Type_any output = Core.e_any;
       String skey = key.vx_string();
       switch (skey) {
+      case ":name":
+        output = this.name();
+        break;
+      case ":image":
+        output = this.image();
+        break;
       }
       return output;
     }
@@ -15359,6 +16244,8 @@ public final class Base {
     @Override
     public Map<String, Core.Type_any> vx_map() {
       Map<String, Core.Type_any> output = new LinkedHashMap<>();
+      output.put(":name", this.name());
+      output.put(":image", this.image());
       return Core.immutablemap(output);
     }
 
@@ -15374,8 +16261,111 @@ public final class Base {
       if (this instanceof Core.vx_Type_const) {
         ischanged = true;
       }
+      Core.Type_string vx_p_name = val.name();
+      Core.Type_string vx_p_image = val.image();
+      ArrayList<String> validkeys = new ArrayList<>();
+      validkeys.add(":name");
+      validkeys.add(":image");
+      String key = "";
+      Core.Type_msg msg;
+      for (Object valsub : vals) {
+        if (valsub instanceof Core.Type_msgblock) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (valsub instanceof Core.Type_msg) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (key == "") {
+          boolean istestkey = false;
+          String testkey = "";
+          if (valsub instanceof Core.Type_string) {
+            Core.Type_string valstr = (Core.Type_string)valsub;
+            testkey = valstr.vx_string();
+            istestkey = true;
+          } else if (valsub instanceof String) {
+            testkey = (String)valsub;
+            istestkey = true;
+          } else {
+            Core.Type_any msgval;
+            if (valsub instanceof Core.Type_any) {
+              msgval = (Core.Type_any)valsub;
+            } else {
+              msgval = Core.vx_new_string(valsub.toString());
+            }
+            msg = Core.vx_msg_from_error("nx/tactics/base/unitspecialty", ":invalidkeytype", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          if (istestkey) {
+            if (!testkey.startsWith(":")) {
+              testkey = ":" + testkey;
+            }
+            boolean isvalidkey = validkeys.contains(testkey);
+            if (isvalidkey) {
+              key = testkey;
+            } else {
+              Core.Type_any msgval = Core.vx_new_string(testkey);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitspecialty", ":invalidkey", msgval);
+              msgblock = msgblock.vx_copy(msg);
+            }
+          }
+        } else {
+          switch (key) {
+          case ":name":
+            if (valsub == vx_p_name) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_name = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_name = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("name"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitspecialty", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":image":
+            if (valsub == vx_p_image) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_image = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_image = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("image"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitspecialty", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          default:
+            Core.Type_any msgval = Core.vx_new_string(key);
+            msg = Core.vx_msg_from_error("nx/tactics/base/unitspecialty", ":invalidkey", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          key = "";
+        }
+      }
       if (ischanged || (msgblock != Core.e_msgblock)) {
         Class_unitspecialty work = new Class_unitspecialty();
+        work.vx_p_name = vx_p_name;
+        work.vx_p_image = vx_p_image;
         if (msgblock != Core.e_msgblock) {
           work.vxmsgblock = msgblock;
         }

@@ -3038,108 +3038,48 @@ Those who dared to fight for their freedom. - Glass Fleet"
         "Early Firearms"
          (section
           :name "Early Firearms"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "item")
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2))))))))
+          :itemmap
+           (itemmap
+            "Matchlock Pistol"
+             (item
+              :name "Matchlock Pistol"
+              :summary "1400s")
+            "Matchlock Rifle"
+             (item
+              :name "Matchlock Rifle"
+              :summary "1400s")
+            "Wheellock Pistol"
+             (item
+              :name "Wheellock Pistol"
+              :summary "1500s")
+            "Wheellock Rifle"
+             (item
+              :name "Wheellock Rifle"
+              :summary "1500s")
+            "Flintlock Pistol"
+             (item
+              :name "Flintlock Pistol"
+              :summary "1600s")
+            "Flintlock Rifle"
+             (item
+              :name "Flintlock Rifle"
+              :summary "1600s")
+            "Dueling Pistol"
+             (item
+              :name "Dueling Pistol"
+              :summary "1770")
+            "Brown Bees Rifle"
+             (item
+              :name "Brown Bees Rifle"
+              :summary "1700s")
+            "Percussion Pistol"
+             (item
+              :name "Percussion Pistol"
+              :summary "1800s")
+            "Percussion Rifle"
+             (item
+              :name "Percussion Rifle"
+              :summary "1800s")))))
     "Modern Equipment"
      (chapter
       :name "Modern Equipment"
@@ -3148,208 +3088,68 @@ Those who dared to fight for their freedom. - Glass Fleet"
         "Weapons of Mass Destruction"
          (section
           :name "Weapons of Mass Destruction"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "item")
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2))))))))
+          :itemmap
+           (itemmap
+            "Agent Orange"
+             (item
+              :name "Agent Orange")
+            :Napalm
+             (item
+              :name "Napalm")
+            "Cluster Bomb"
+             (item
+              :name "Cluster Bomb")
+            "Smart Bomb"
+             (item
+              :name "Smart Bomb")
+            "Block Buster"
+             (item
+              :name "Block Buster")
+            "Bunker Buster"
+             (item
+              :name "Bunker Buster")
+            "Fuel Air Explosive"
+             (item
+              :name "Fuel Air Explosive")
+            "Naval Mine"
+             (item
+              :name "Naval Mine")
+            "Nuclear Bomb"
+             (item
+              :name "Nuclear Bomb")
+            "Fusion Bomb"
+             (item
+              :name "Fusion Bomb")
+            "Dirty Bomb"
+             (item
+              :name "Dirty Bomb")
+            "Nerve Gas Bomb"
+             (item
+              :name "Nerve Gas Bomb")
+            :MIRV
+             (item
+              :name "MIRV")
+            "Neutron Bomb"
+             (item
+              :name "Neutron Bomb")
+            "Plague Bomb"
+             (item
+              :name "Plague Bomb")
+            "Tactical Nuclear Bomb"
+             (item
+              :name "Tactical Nuclear Bomb")
+            "Tactical Nuclear Cruise Missile"
+             (item
+              :name "Tactical Nuclear Cruise Missile")
+            "Strategic Nuclear Bomb"
+             (item
+              :name "Strategic Nuclear Bomb")
+            "Nuclear Cruise Missile"
+             (item
+              :name "Nuclear Cruise Missile")
+            "Nuclear Ballistic Missile"
+             (item
+              :name "Nuclear Ballistic Missile")))))
     "Advanced Weaponry"
      (chapter
       :name "Advanced Weaponry"
@@ -3358,6 +3158,64 @@ Those who dared to fight for their freedom. - Glass Fleet"
         "Futuristic Weapons of Mass Destruction"
          (section
           :name "Futuristic Weapons of Mass Destruction"
+          :itemmap
+           (itemmap
+            "Spinal Nava Cannon"
+             (item
+              :name "Spinal Nava Cannon")
+            "Spinal Rail Gun"
+             (item
+              :name "Spinal Rail Gun")
+            "Spinal Wave Cannon"
+             (item
+              :name "Spinal Wave Cannon"
+              :summary
+               "* An enormously powerful energy cannon capable of enormous damage over a large
+area."
+              :titles "Death Star Cannon, Wave Motion Gun")
+            "Colony Drop"
+             (item
+              :name "Colony Drop"
+              :reference "Mobile Suit Gundam")
+            "Planet Bomb"
+             (item
+              :name "Planet Bomb"
+              :reference "Star Blazers, Starship Troopers"
+              :summary "* Asteroids or comets redirected to fall on a planet.")
+            "Plague Planet Bomb"
+             (item
+              :name "Plague Planet Bomb"
+              :summary "* An enormous, genocidal planet bomb that releases a series of infectious diseases to infect a population. Victims do not immediately show signs of infection to maximize the contagion and paranoia.")
+            "Rage Planet Bomb"
+             (item
+              :name "Rage Planet Bomb"
+              :summary "* An enormous, genocidal planet bomb that releases a series of parasites that turns infected creatures into rabid killers who spread the infection.")
+            "Famine Planet Bomb"
+             (item
+              :name "Famine Planet Bomb"
+              :summary "* An enormous, genocidal planet bomb that releases a series of diseases that attack the food harvest of a planet attempting to break the food chain and cause mass starvation or force compliance.")
+            "Pestilence Planet Bomb"
+             (item
+              :name "Pestilence Planet Bomb"
+              :summary "* An enormous, genocidal planet bomb that releases a series of parasites that infect insects, birds, and vermin. These creatures gain accelerated reproduction and high aggression to attack food supplies and the general population.")
+            "Terraforming Planet Bomb"
+             (item
+              :name "Terraforming Planet Bomb"
+              :reference "Genesis - Star Trek II")
+            "Hellbore Planet Bomb"
+             (item
+              :name "Hellbore Planet Bomb"
+              :summary "* A missile that detonates a series of shaped nuclear blasts to tunnel into a geological fault or a volcano where it attempts to cause a massive natural disaster.")
+            "Planet Buster"
+             (item
+              :name "Planet Buster"
+              :reference "Anti-Matter Missile - Star Blazers"
+              :summary "* A missile designed to be part of a massive bombardment to shatter a planet's crust and return it to a molten state. Already unstable planets may break up into rubble.")
+            "Starkiller Missile"
+             (item
+              :name "Starkiller Missile"
+              :reference "Sunshine"
+              :summary "* A missile designed to be part of a massive bombardment to disrupt the nuclear chain reaction in a star. This can result in massive solar flares, a cooling of the star, or cause the star to go nova depending on the age and size of the star."))
           :unitmap
            (unitmap
             "Star Mine"
@@ -3372,136 +3230,4 @@ Those who dared to fight for their freedom. - Glass Fleet"
             "Star Torpedo"
              (unit
               :name "Star Torpedo"
-              :summary "* Star Torpedoes carry Nuclear weapons (tactical or greater). In space, nuclear weapons produce no shockwave, just intense radiation. Even direct hits are not guaranteed to pierce the diamond hard ceramic armor of modern warships, so penetration is critical."))
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "item")
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "item")
-                 :severity 2)))))))))))
+              :summary "* Star Torpedoes carry Nuclear weapons (tactical or greater). In space, nuclear weapons produce no shockwave, just intense radiation. Even direct hits are not guaranteed to pierce the diamond hard ceramic armor of modern warships, so penetration is critical."))))))))

@@ -1,0 +1,114 @@
+(package nx/tactics/books/gear
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Gear"
+  :chaptermap
+   (chaptermap
+    "Gear Overview"
+     (chapter
+      :name "Gear Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: Gear?"
+         (section
+          :name "Why Tactics: Gear?")))
+    "Gear Construction"
+     (chapter
+      :name "Gear Construction")
+    "Gear Items"
+     (chapter
+      :name "Gear Items"
+      :sectionmap
+       (sectionmap
+        "Unfiled Gear"
+         (section
+          :name "Unfiled Gear"
+          :summary
+           "* Acid
+* Alabaster
+* Barricade
+* Blood
+* Cage
+* Chariot
+* Conch Horn
+* Fireworks
+* Trumpet
+* War Machine
+
+!Symbols
+* Banner
+* Coat of Arms
+* Crest
+* Crown
+* Fasces
+* Helix
+* Rod
+* Scepter
+* Signet
+* Standard
+* Thyrsus
+
+!Arcane Items
+* Airship
+* Armageddon Clock
+* Flying Carpet
+
+!Containers
+* Chest
+* Cauldron
+* Coffer
+* Goblet
+* Jar
+* Puzzle Box
+* Vat
+* Vessel
+
+!Technology
+* [Blinding Bulb]
+* [Phone Tap]]
+* [Shotgun Microphone]
+* [Sleepteacher]
+* [Subliminal Broadcaster]
+* [Surveillance Cameras]
+* [Telephoto Lens]"
+          :itemmap
+           (itemmap
+            "Beast Claw"
+             (item
+              :name "Beast Claw")
+            :Tooth
+             (item
+              :name "Tooth")
+            "Vampire Blood"
+             (item
+              :name "Vampire Blood"
+              :summary
+               "* Black Token
+* Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].
+* [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.
+* [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
+* [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
+* [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
+            "Healing Salve"
+             (item
+              :name "Healing Salve")
+            :Lattice
+             (item
+              :name "Lattice")
+            :Mirror
+             (item
+              :name "Mirror")
+            :Matrix
+             (item
+              :name "Matrix")
+            :Candle
+             (item
+              :name "Candle")
+            :Screen
+             (item
+              :name "Screen")
+            :Array
+             (item
+              :name "Array"))))))))

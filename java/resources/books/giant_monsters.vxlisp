@@ -64,28 +64,14 @@
                 "Radiation Powers"
                  (unitskill
                   :name "Radiation Powers"
-                  (msgblock
-                   :msgs
-                    (msglist
-                     (msg
-                      :code ":invalidtagfound"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :tag "ability")
-                      :severity 2))
-                   :msgblocks
-                    (msgblocklist
-                     (msgblock
-                      :msgs
-                       (msglist
-                        (msg
-                         :code ":invalidtagfound"
-                         :detail
-                          (anymap
-                           :type nx/tactics/base/unitskill
-                           :tag "ability")
-                         :severity 2))))))))
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Radiation Beam"
+                     (unitability
+                      :name "Radiation Beam")
+                    "Radiation Blast"
+                     (unitability
+                      :name "Radiation Blast")))))
             :Gyaos
              (unit
               :name "Gyaos"
@@ -157,6 +143,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
               :summary
                "* Swimming: 18knots
 * Flight: Mach 2"
+              :speed "420kph"
               :mass "220tons"
               :height "38m"
               :unitskillmap
@@ -164,17 +151,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Melee
                  (unitskill
                   :name "Melee"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -188,17 +168,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -210,18 +183,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                        ":* Getter Beam
 * Tomahawk Boomerang"
                       :path "nx/tactics/base/unitskill"
-                      :severity 3)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "speed"
-                    :value "420kph")
-                  :severity 2))))
+                      :severity 3))))))
             "Getter 2"
              (unit
               :name "Getter 2"
@@ -230,6 +192,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                "* Swimming: 18knots
 * Ground Speed: Mach 3!
 * Tunnelling: 300kph"
+              :speed "420kph"
               :mass "220tons"
               :height "38m"
               :unitskillmap
@@ -237,17 +200,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -259,18 +215,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                        ":* Getter Drill
 * Drill Missile"
                       :path "nx/tactics/base/unitskill"
-                      :severity 3)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "speed"
-                    :value "420kph")
-                  :severity 2))))
+                      :severity 3))))))
             "Getter 3"
              (unit
               :name "Getter 3"
@@ -278,6 +223,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
               :summary
                "* Swimming: 28knots
 * Flight: Mach 3"
+              :speed "150kph"
               :mass "220tons"
               :height "20m"
               :unitskillmap
@@ -285,17 +231,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -305,18 +244,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                       :code ":invalidkey"
                       :detail ":* Getter Missile"
                       :path "nx/tactics/base/unitskill"
-                      :severity 3)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "speed"
-                    :value "150kph")
-                  :severity 2))))
+                      :severity 3))))))
             "Getter G Dragon"
              (unit
               :name "Getter G Dragon"
@@ -329,17 +257,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Melee
                  (unitskill
                   :name "Melee"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -353,17 +274,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -392,17 +306,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Melee
                  (unitskill
                   :name "Melee"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -416,17 +323,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -448,17 +348,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -482,6 +375,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
 * Ceiling: 50km
 * Jump: 30m
 * Dive Depth: 8km"
+              :speed "450kph"
               :mass "32tons"
               :height "25m"
               :unitskillmap
@@ -489,17 +383,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Melee
                  (unitskill
                   :name "Melee"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -513,17 +400,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -540,18 +420,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
 * Breast Burn
 * Thunder Break"
                       :path "nx/tactics/base/unitskill"
-                      :severity 3)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "speed"
-                    :value "450kph")
-                  :severity 2))))
+                      :severity 3))))))
             :Grendizer
              (unit
               :name "Grendizer"
@@ -563,6 +432,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
               :summary
                "* Swimming: 20knots
 * Flight: Mach 3 w/Jet Scrander"
+              :speed "360kph"
               :mass "20tons"
               :height "18m"
               :unitskillmap
@@ -570,17 +440,10 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -612,18 +475,7 @@ Mazinger unleashes a blast of intense cold; this attack was alternately fired fr
 Finger Missile
 A rarely-used attack where Mazinger fires the last joint of its fingers as miniature missiles."
                       :path "nx/tactics/base/unitskill"
-                      :severity 3)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "speed"
-                    :value "360kph")
-                  :severity 2))))
+                      :severity 3))))))
             :Raideen
              (unit
               :name "Raideen"
@@ -652,17 +504,10 @@ A rarely-used attack where Mazinger fires the last joint of its fingers as minia
                 :Melee
                  (unitskill
                   :name "Melee"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -676,17 +521,10 @@ A rarely-used attack where Mazinger fires the last joint of its fingers as minia
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -710,17 +548,10 @@ A rarely-used attack where Mazinger fires the last joint of its fingers as minia
                 :Melee
                  (unitskill
                   :name "Melee"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"
@@ -734,17 +565,10 @@ A rarely-used attack where Mazinger fires the last joint of its fingers as minia
                 :Gunnery
                  (unitskill
                   :name "Gunnery"
+                  :level "5"
                   (msgblock
                    :msgs
                     (msglist
-                     (msg
-                      :code ":invalidproperty"
-                      :detail
-                       (anymap
-                        :type nx/tactics/base/unitskill
-                        :prop "level"
-                        :value "5")
-                      :severity 2)
                      (msg
                       :code ":invalidkey"
                       :detail ":summary"

@@ -19030,7 +19030,532 @@ ab
              (unitskillmap
               :skill1
                (unitskill
-                :name "skill1"))))))))
+                :name "skill1")))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unitability<-unitability-stringmap"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unitability
+  :name "name"
+  :image "image")
+ (unitability<-unitability-stringmap
+  (empty base/unitability)
+  (stringmap
+   :name "name"
+   :image "image")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unitability
+            :name "name"
+            :image "image")
+          :actual
+           (unitability
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unitability<-unitability-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unitability
+  :titles "titles")
+ (unitability<-unitability-xmlchild
+  (empty base/unitability)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unitability
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitability"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitability"
+                :severity 3))))
+          :actual
+           (unitability
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitability"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitability"
+                :severity 3))))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unitability<-xml"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unitability
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (unitability<-xml
+  (xml/xml
+   :tag "unitability"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unitability
+            :name "name"
+            :image "image"
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitability"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitability"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unitability"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unitability"
+                :severity 3))))
+          :actual
+           (unitability
+            :name "name"
+            :image "image"
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitability"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitability"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unitability"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unitability"
+                :severity 3))))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unititem<-unititem-stringmap"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unititem
+  :name "name"
+  :image "image")
+ (unititem<-unititem-stringmap
+  (empty base/unititem)
+  (stringmap
+   :name "name"
+   :image "image")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unititem
+            :name "name"
+            :image "image")
+          :actual
+           (unititem
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unititem<-unititem-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unititem
+  :titles "titles")
+ (unititem<-unititem-xmlchild
+  (empty base/unititem)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unititem
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unititem"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unititem"
+                :severity 3))))
+          :actual
+           (unititem
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unititem"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unititem"
+                :severity 3))))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unititem<-xml"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unititem
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (unititem<-xml
+  (xml/xml
+   :tag "unititem"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unititem
+            :name "name"
+            :image "image"
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unititem"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unititem"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unititem"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unititem"
+                :severity 3))))
+          :actual
+           (unititem
+            :name "name"
+            :image "image"
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unititem"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unititem"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unititem"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unititem"
+                :severity 3))))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unitspecialty<-unitspecialty-stringmap"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unitspecialty
+  :name "name"
+  :image "image")
+ (unitspecialty<-unitspecialty-stringmap
+  (empty base/unitspecialty)
+  (stringmap
+   :name "name"
+   :image "image")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unitspecialty
+            :name "name"
+            :image "image")
+          :actual
+           (unitspecialty
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unitspecialty<-unitspecialty-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unitspecialty
+  :titles "titles")
+ (unitspecialty<-unitspecialty-xmlchild
+  (empty base/unitspecialty)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unitspecialty
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3))))
+          :actual
+           (unitspecialty
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3))))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unitspecialty<-xml"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unitspecialty
+  :name "name"
+  :image "image"
+  :titles "titles"
+  :reference "reference")
+ (unitspecialty<-xml
+  (xml/xml
+   :tag "unitspecialty"
+   :propmap
+    (stringmap
+     :name "name"
+     :image "image")
+   :children
+    (xml/xmllist
+     (xml/xml
+      :tag "titles"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "titles")))
+     (xml/xml
+      :tag "reference"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "reference")))))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unitspecialty
+            :name "name"
+            :image "image"
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3))))
+          :actual
+           (unitspecialty
+            :name "name"
+            :image "image"
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":titles"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":reference"
+                :path "nx/tactics/base/unitspecialty"
+                :severity 3)))))))))
   :coveragedetail
    (testcoveragedetail
     :funcmap
@@ -19057,6 +19582,14 @@ ab
       :chapter<-xml 1
       :file-read<-bookname 0
       :file-write<-book 0
+      :item<-item-key-value 0
+      :item<-item-stringmap 0
+      :item<-item-xmlchild 0
+      :item<-xml 0
+      :location<-location-key-value 0
+      :location<-location-stringmap 0
+      :location<-location-xmlchild 0
+      :location<-xml 0
       :modifier<-xml 0
       :power<-power-key-value 0
       :power<-power-stringmap 1
@@ -19075,6 +19608,8 @@ ab
       :section<-section-key-value 0
       :section<-section-stringmap 0
       :section<-section-xmlchild 0
+      :section<-section-xmlitem 0
+      :section<-section-xmllocation 0
       :section<-section-xmlpower 0
       :section<-section-xmlrule 0
       :section<-section-xmlscenario 0
@@ -19102,11 +19637,32 @@ ab
       :unit<-unit-xmlskill 0
       :unit<-unit-xmlweakness 0
       :unit<-xml 1
+      :unitability<-unitability-key-value 0
+      :unitability<-unitability-stringmap 1
+      :unitability<-unitability-xmlchild 1
+      :unitability<-xml 1
+      :unititem<-unititem-key-value 0
+      :unititem<-unititem-stringmap 1
+      :unititem<-unititem-xmlchild 1
+      :unititem<-xml 1
+      :unitpower<-unitpower-key-value 0
+      :unitpower<-unitpower-stringmap 0
+      :unitpower<-unitpower-xmlability 0
+      :unitpower<-unitpower-xmlchild 0
+      :unitpower<-unitpower-xmlitem 0
+      :unitpower<-unitpower-xmlspecialty 0
       :unitpower<-xml 0
       :unitskill<-unitskill-key-value 0
       :unitskill<-unitskill-stringmap 0
+      :unitskill<-unitskill-xmlability 0
       :unitskill<-unitskill-xmlchild 0
+      :unitskill<-unitskill-xmlitem 0
+      :unitskill<-unitskill-xmlspecialty 0
       :unitskill<-xml 0
+      :unitspecialty<-unitspecialty-key-value 0
+      :unitspecialty<-unitspecialty-stringmap 1
+      :unitspecialty<-unitspecialty-xmlchild 1
+      :unitspecialty<-xml 1
       :unitweakness<-xml 0
       :weakness<-xml 0
       :xml-read<-bookname 0)
@@ -19117,12 +19673,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 75)
+      :total 106)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 75)
+      :total 106)
     :constnums
      (testcoveragenums
       :pct 100
@@ -19130,20 +19686,20 @@ ab
       :total 0)
     :docnums
      (testcoveragenums
-      :pct 92
-      :tests 69
-      :total 75)
+      :pct 87
+      :tests 93
+      :total 106)
     :funcnums
      (testcoveragenums
-      :pct 38
-      :tests 29
-      :total 75)
+      :pct 35
+      :tests 38
+      :total 106)
     :testpkg "nx/tactics/books/bookloader"
     :totalnums
      (testcoveragenums
-      :pct 38
-      :tests 29
-      :total 75)
+      :pct 35
+      :tests 38
+      :total 106)
     :typenums
      (testcoveragenums
       :pct 100
