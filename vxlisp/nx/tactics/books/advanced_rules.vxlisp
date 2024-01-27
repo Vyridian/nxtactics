@@ -1,0 +1,356 @@
+(package nx/tactics/books/advanced_rules
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Advanced Rules"
+  :image "AdvancedRules.jpg"
+  :chaptermap
+   (chaptermap
+    "Advanced Rules Overview"
+     (chapter
+      :name "Advanced Rules Overview"
+      :sectionmap
+       (sectionmap
+        "Advanced Rules Strategies"
+         (section
+          :name "Advanced Rules Strategies"
+          :summary
+           "* Strike First - Units are immediately penalized for damage taken, so do unto others before they do unto you.
+* Maintain a Threat - The battlefield changes with each unit's move, so use pawns to control the map while saving powerful and valuable units until later in the Round.  If you are not careful your opponent will surround and eliminate your units that have already acted.
+* Hold the Line - Opportunity and Hold Off abilities are deadly and allow you to protect weaker units.
+* Use the Terrain - Cover and abilities linked to cover offer an outstanding defense that layers with normal defense. The difference is most pronounced with lesser units. Effective use of terrain will determine the victor in most battles.")))
+    "Advanced Tokens"
+     (chapter
+      :name "Advanced Tokens"
+      :sectionmap
+       (sectionmap
+        "Advanced Purple Tokens"
+         (section
+          :name "Advanced Purple Tokens"
+          :rulemap
+           (rulemap
+            :Ace
+             (rule
+              :name "Ace"
+              :image "Tokens/AceToken.png"
+              :summary
+               "* [Action]: [+1 Skill]
+* [Defense]: [+1 Defense]"
+              :titles "Elite"
+              :classification "Purple Token")
+            :Apathy
+             (rule
+              :name "Apathy"
+              :classification "Purple Token")
+            :Hidden
+             (rule
+              :name "Hidden"
+              :summary
+               "* [Action]: A unit with Hidden tokens is not actually at the location shown by its unit marker.
+* [Defense]: Any unit that can see the unit marker may spend an [Action] to attempt to attack or locate the unit. This is done by the unit secretly choosing the actual location of the unit up to the number of Hidden tokens away from the unit marker where the unit lies (note: the target location may not be passed a barrier that the unit could not cross with normal movement). The opponent then tries to guess both direction and distance. The unit then reveals its actual position and moves its unit marker there. If both are guessed, the unit is discovered and loses all Hidden tokens. If either is guessed, the unit loses 1 Hidden token. If the unit has no Hidden tokens, resolve the attack normally. If the unit has Hidden tokens then the unit remains hidden and any attack fails unless it is an area effect and the unit is the effect."
+              :classification "Purple Token")
+            :Prepare
+             (rule
+              :name "Prepare"
+              :summary
+               "* [Action]: An item with Prepare may not be used until it has Prepare tokens equal to Prepare value.
+* [Action]: If unit does not move this [Turn], add a Prepare token to it.
+* Note: If the unit moves or takes a another action, then remove all Prepare tokens.")))))
+    "Advanced Rules"
+     (chapter
+      :name "Advanced Rules"
+      :sectionmap
+       (sectionmap
+        "Damage Cards"
+         (section
+          :name "Damage Cards"
+          :damagemap
+           (damagemap
+            :Damage
+             (damage
+              :name "Damage"
+              :summary
+               "* Effect: -1 [Body]
+* Duration: Permanent until healed.
+* Regular Damage with no side-effects.")
+            "Air Reserve Loss"
+             (damage
+              :name "Air Reserve Loss")
+            "Air Circulation Failure"
+             (damage
+              :name "Air Circulation Failure")
+            "Air Purification Failure"
+             (damage
+              :name "Air Purification Failure")
+            "Attitude Control Malfunction"
+             (damage
+              :name "Attitude Control Malfunction")
+            "Cargo Damage"
+             (damage
+              :name "Cargo Damage")
+            "Cargo Fire"
+             (damage
+              :name "Cargo Fire")
+            "Cargo Loss"
+             (damage
+              :name "Cargo Loss")
+            "Crew Casualties"
+             (damage
+              :name "Crew Casualties")
+            "Crew Quarters Fire"
+             (damage
+              :name "Crew Quarters Fire")
+            "Fire Suppression Failure"
+             (damage
+              :name "Fire Suppression Failure")
+            "Movement Impaired"
+             (damage
+              :name "Movement Impaired"
+              :summary
+               "* Effect: -25% [Move]
+* Duration: Permanent until unit spends an entire turn repairing.")
+            "Movement Crippled"
+             (damage
+              :name "Movement Crippled"
+              :summary
+               "* Effect: -25% [Move]
+* Duration: Permanent until healed.")
+            "Movement Control Failure"
+             (damage
+              :name "Movement Control Failure"
+              :summary "* Unit must move at full speed until repaired.")
+            "Artificial Gravity Malfunction"
+             (damage
+              :name "Artificial Gravity Malfunction")
+            "Bridge Damaged"
+             (damage
+              :name "Bridge Damaged")
+            "Bridge Explosion"
+             (damage
+              :name "Bridge Explosion")
+            "Bridge Fire"
+             (damage
+              :name "Bridge Fire")
+            "Bulkhead Collapse"
+             (damage
+              :name "Bulkhead Collapse")
+            "Cargo Hold Damaged"
+             (damage
+              :name "Cargo Hold Damaged")
+            "Cargo Hold Explosion"
+             (damage
+              :name "Cargo Hold Explosion")
+            "Cargo Hold Fire"
+             (damage
+              :name "Cargo Hold Fire")
+            "Central Computer Malfunction"
+             (damage
+              :name "Central Computer Malfunction")
+            "Central Computer Explosion"
+             (damage
+              :name "Central Computer Explosion")
+            "Central Computer Fire"
+             (damage
+              :name "Central Computer Fire")
+            "Command and Control Failure"
+             (damage
+              :name "Command and Control Failure")
+            "Communications Failure"
+             (damage
+              :name "Communications Failure"
+              :summary
+               "* Unit cannot communicate with other units.
+* In Game: Player may not speak. He/she may write rules questions to game master or opponents.")
+            "Crew Quarters Damaged"
+             (damage
+              :name "Crew Quarters Damaged")
+            "Damage Control Damaged"
+             (damage
+              :name "Damage Control Damaged")
+            "Engineering Damage"
+             (damage
+              :name "Engineering Damage")
+            "Fire Control System Malfunction"
+             (damage
+              :name "Fire Control System Malfunction")
+            "Flag Bridge Damaged"
+             (damage
+              :name "Flag Bridge Damaged"
+              :summary "* The Flag Bridge is used by senior executive officers to coordinate a fleet.")
+            "Food Stock Damaged"
+             (damage
+              :name "Food Stock Damaged")
+            "Fuel Explosion"
+             (damage
+              :name "Fuel Explosion")
+            "Fuel Fire"
+             (damage
+              :name "Fuel Fire")
+            "Fuel Loss"
+             (damage
+              :name "Fuel Loss")
+            "Helm Control Malfunction"
+             (damage
+              :name "Helm Control Malfunction")
+            "Helm Fire"
+             (damage
+              :name "Helm Fire")
+            "Hydroponics Damage"
+             (damage
+              :name "Hydroponics Damage")
+            "Inertial Dampener Malfunction"
+             (damage
+              :name "Inertial Dampener Malfunction")
+            "Intercommunications Failure"
+             (damage
+              :name "Intercommunications Failure"
+              :summary "* Unit cannot communicate within the vehicle except person to person. On large vehicles, this can be a localized failure.")
+            "Life Support Malfunction"
+             (damage
+              :name "Life Support Malfunction")
+            "Medical Bay Damage"
+             (damage
+              :name "Medical Bay Damage")
+            "Medical Bay Explosion"
+             (damage
+              :name "Medical Bay Explosion")
+            "Medical Bay Fire"
+             (damage
+              :name "Medical Bay Fire")
+            "Missile Launcher Explosion"
+             (damage
+              :name "Missile Launcher Explosion")
+            "Missile Launcher Malfunction"
+             (damage
+              :name "Missile Launcher Malfunction")
+            "Missile Magazine Explosion"
+             (damage
+              :name "Missile Magazine Explosion")
+            "Missile Magazine Fire"
+             (damage
+              :name "Missile Magazine Fire")
+            "Movement Malfunction"
+             (damage
+              :name "Movement Malfunction")
+            "Navigation Failure"
+             (damage
+              :name "Navigation Failure")
+            "Navigation Light Failure"
+             (damage
+              :name "Navigation Light Failure"
+              :summary "* The vehicles navigation/landing lights are not working across all spectrums. In combat, these lights are normally off anyway, but they make any landing or docking manuever much more perilous.")
+            "Passenger Quarters Explosion"
+             (damage
+              :name "Passenger Quarters Explosion")
+            "Passenger Quarters Fire"
+             (damage
+              :name "Passenger Quarters Fire")
+            "Power Control Failure"
+             (damage
+              :name "Power Control Failure")
+            "Power Plant Coolant Failure"
+             (damage
+              :name "Power Plant Coolant Failure")
+            "Power Plant Damage"
+             (damage
+              :name "Power Plant Damage")
+            "Power Plant Explosion"
+             (damage
+              :name "Power Plant Explosion")
+            "Power Plant Fire"
+             (damage
+              :name "Power Plant Fire")
+            "Power Failure"
+             (damage
+              :name "Power Failure")
+            "Propellent Loss"
+             (damage
+              :name "Propellent Loss")
+            "Remote Systems Malfunction"
+             (damage
+              :name "Remote Systems Malfunction"
+              :summary "* Command over drones is lost.")
+            "Secondary Bridge Explosion"
+             (damage
+              :name "Secondary Bridge Explosion")
+            "Secondary Bridge Fire"
+             (damage
+              :name "Secondary Bridge Fire")
+            "Secondary Bridge Malfunction"
+             (damage
+              :name "Secondary Bridge Malfunction")
+            "Sensor (Short Range) Malfunction"
+             (damage
+              :name "Sensor (Short Range) Malfunction")
+            "Sensor (Long Range) Malfunction"
+             (damage
+              :name "Sensor (Long Range) Malfunction")
+            "Shield Malfunction"
+             (damage
+              :name "Shield Malfunction")
+            "Spine Cracks"
+             (damage
+              :name "Spine Cracks")
+            "Steering Malfunction"
+             (damage
+              :name "Steering Malfunction"
+              :summary "* Unit can only perform 1 change in direction during a Move.")
+            "Structural Collapse"
+             (damage
+              :name "Structural Collapse")
+            "Target Aquisition Failure"
+             (damage
+              :name "Target Aquisition Failure")
+            "Temperature Control Failure"
+             (damage
+              :name "Temperature Control Failure")
+            "Turning Malfunction"
+             (damage
+              :name "Turning Malfunction"
+              :summary "* Unit cannot turn toward one side.")
+            "Transponder Failure"
+             (damage
+              :name "Transponder Failure"
+              :summary
+               "* The vehicle no longer identifies as friend of foe, so it appears as a potential enemy vehicle. In a heated exchange it may take friendly fire.
+* This can be as simple as a fallen flag on old navy ships."
+              :titles "IFF Damage, Not Running Colors")
+            "Water Reserve Loss"
+             (damage
+              :name "Water Reserve Loss")
+            "Weapon Magazine Explosion"
+             (damage
+              :name "Weapon Magazine Explosion")
+            "Weapon Magazine Fire"
+             (damage
+              :name "Weapon Magazine Fire")
+            "Weapon Malfunction"
+             (damage
+              :name "Weapon Malfunction")
+            "Weapon Explosion"
+             (damage
+              :name "Weapon Explosion")
+            "Weapon Fire"
+             (damage
+              :name "Weapon Fire")
+            "Weapon Power Failure"
+             (damage
+              :name "Weapon Power Failure")
+            "Weapon Traverse Malfunction"
+             (damage
+              :name "Weapon Traverse Malfunction")))))
+    :Genres
+     (chapter
+      :name "Genres"
+      :sectionmap
+       (sectionmap
+        :RTS/4X
+         (section
+          :name "RTS/4X"
+          :summary
+           "4X:
+* eXplore
+* eXpand
+* eXploit
+* eXterminate"))))))

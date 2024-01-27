@@ -1,0 +1,590 @@
+(package nx/tactics/books/magic
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Magic"
+  :image "Magick.jpg"
+  :chaptermap
+   (chaptermap
+    "Magic Overview"
+     (chapter
+      :name "Magic Overview"
+      :summary
+       "* The Art
+
+Classifications
+* Abjuration - Protective Magic.  They create barriers, negate abilities, harm
+trespassers, or banish those who do not
+belong.  It includes Barriers and Wards.")
+    "Magical Skills"
+     (chapter
+      :name "Magical Skills"
+      :sectionmap
+       (sectionmap
+        :Spiritualism
+         (section
+          :name "Spiritualism"
+          :powermap
+           (powermap
+            :Divination
+             (power
+              :name "Divination"
+              :reference
+               "* Casting: In various methods of divination, stones, cards, sticks and other objects are cast onto the ground or a special cloth so that an insight into the life patterns can be revealed.
+* Querent: In divination and ritual, the querent is the asker of questions.
+* Scrying: This is the area of divining by gazing into a reflecting surface."
+              :summary
+               "* Divination is the practice of discovering the unknown.  It can foresee the future, find hidden things, uncover lost lore, and reveal deception.
+* Practitioners may see the many roads to the future and may choose the path that favors themselves and hinders their foes.
+* Fortune telling is more interested in predicting future events.  Rather, divination tends to be more about discovering information.
+* It is an accepted truism within magick that divination is imperfect."
+              :titles "Augur, Diviner, Fortune Teller, Oracle, Prophet, Seer, Soothsayer, Visionary"
+              :abilitymap
+               (abilitymap
+                "All Seeing Eye"
+                 (ability
+                  :name "All Seeing Eye"
+                  :reference "The Eye of  Providence")
+                :Augury
+                 (ability
+                  :name "Augury")
+                :Cartomancy
+                 (ability
+                  :name "Cartomancy"
+                  :summary "* The art of reading the future through playing cards or tarot cards.")
+                :Clairaudience
+                 (ability
+                  :name "Clairaudience")
+                :Clairvoyance
+                 (ability
+                  :name "Clairvoyance")
+                :Dowsing
+                 (ability
+                  :name "Dowsing"
+                  :summary "* Through the use of a divining rod the user may detect desired items hidden underground below them.")
+                "Fortune Telling"
+                 (ability
+                  :name "Fortune Telling"
+                  :summary
+                   "* [Deploy]: Roll vs. target Spirit.  If you succeed, you receive +1 on all actions against him this encounter.
+* Casting - In various methods of divination, bones, stones, cards, sticks and other objects are cast onto the ground or a special cloth so that an insight into the life patterns can be revealed.
+* Bibliomancy - Reading random passages from a book, such as Liber Legis or the I Ching.
+* Tea Leaves
+* Tarot")
+                :Hallmark
+                 (ability
+                  :name "Hallmark"
+                  :summary "* Analyze a magical effect to learn information about its caster.")
+                :Kismet
+                 (ability
+                  :name "Kismet")
+                "Mirror of Truth"
+                 (ability
+                  :name "Mirror of Truth"
+                  :summary "* Enchant a reflective surface to show the true nature of the reflected scene. This reveals illusions, hidden things, and can even reveal the nature of those concealing terrible secrets.")
+                :Portent
+                 (ability
+                  :name "Portent"
+                  :summary "* Determine if a chosen course of action will tend to be beneficial to the user or not. How it might be beneficial is not known."
+                  :titles "Omen")
+                :Postcognition
+                 (ability
+                  :name "Postcognition")
+                :Precognition
+                 (ability
+                  :name "Precognition")
+                :Prediction
+                 (ability
+                  :name "Prediction")
+                :Premonition
+                 (ability
+                  :name "Premonition")
+                :Prophesy
+                 (ability
+                  :name "Prophesy")
+                :Providence
+                 (ability
+                  :name "Providence"
+                  :summary "* [Action]: Divine a time and place nearby that will be beneficial if the user goes there. The roll result is not known by the user, and the success determines the benefit.")
+                :Revelation
+                 (ability
+                  :name "Revelation")
+                :Foresight
+                 (ability
+                  :name "Foresight"
+                  :summary "* Foresight is a passive form of extra-sensory perception whereby a person spontaneously perceives information, in the form of vision, about future events before they happen.  It is distinguished from [Precognition] in that it is passive.")
+                "Twist of Fate"
+                 (ability
+                  :name "Twist of Fate")
+                :Visions
+                 (ability
+                  :name "Visions")
+                :Wyrding
+                 (ability
+                  :name "Wyrding"))
+              :specialtymap
+               (specialtymap
+                :Hepatomancy
+                 (specialty
+                  :name "Hepatomancy"
+                  :summary "* The art of divining the future through the examination of a creature's entrails.")
+                :Numerology
+                 (specialty
+                  :name "Numerology"
+                  :summary "* The art of divining the future through the examination of numbers and dates.")
+                :Osteomancy
+                 (specialty
+                  :name "Osteomancy"
+                  :summary "* The art of divining the future through decaying bones.")
+                "Rune Casting"
+                 (specialty
+                  :name "Rune Casting"
+                  :summary "* The art of divining the future through the throwing of small tiles with runes on them.")
+                :Scrying
+                 (specialty
+                  :name "Scrying"
+                  :summary "* This is the art of divining by gazing into a reflecting surface.")
+                :Tasseomancy
+                 (specialty
+                  :name "Tasseomancy"
+                  :summary "* Reading the patterns of tea leaves or coffee grounds left after the person drink it.")))
+            :Dreaming
+             (power
+              :name "Dreaming"
+              :reference "* I don't believe it.  That is why you fail.  Luke and Yoda - Empire Strikes Back"
+              :summary
+               "* This is the magical art of the [Fae].
+* Every child has a sense of wonder that comes with being new to the world. Adults must, of necessity, murder that special innocence in order to grow up.
+* When humanity turned its collective back on Dreaming, a terrible scourge of disbelief and negation smote the world. Hope, trust, and imagination were replaced with reason, pessimism, and scrutiny. By dismissing hope and faith, humanity avoids being hurt by its failure. Shutting out mystery and dreams anesthetizes fear, but deadens beauty as well and leads to apathy, callosuness, and close-mindedness. Though Banality is a mindless force, it is feared by the [Fae] more than any monster or villain. It is an enemy unlike anything the [Fae] have ever encountered, and they are largely helpless in its grasp.
+* Dreaming is never the same, so any Dreaming effect must be a uniquely crafted idea or it will automatically fail."
+              :titles "Glamour"
+              :abilitymap
+               (abilitymap
+                "As if in a Dream"
+                 (ability
+                  :name "As if in a Dream"
+                  :summary "* Confuse a target's senses to perceive a single thing incorrectly.")
+                "Concoct Dream Essence"
+                 (ability
+                  :name "Concoct Dream Essence"
+                  :summary "* Dreams caught with [Dreamcatching] can be contained in a bottle called [Dream Essence]. Opening the bottle releases the experience of the dream to all surrounding it.")
+                "Create Chimera"
+                 (ability
+                  :name "Create Chimera"
+                  :summary "A Chimera is an imaginary creation. It exists only to the user, though those with magical abilities, young children and the mentally impaired may see them. They only can affect those who can see them.")
+                "Down the Rabbit Hole"
+                 (ability
+                  :name "Down the Rabbit Hole"
+                  :summary
+                   "* [Requires]: A hole that leads somewhere unknown.
+* [Action]: By entering a hole, the Dreamer may travel to the [Spirit Realm].  If the Dreamer is a native of the [Spirit Realm], he may stay as long as he wants. If not, he will return to the real world after [Skill] hours as if waking from a dream.")
+                :Dreamcatching
+                 (ability
+                  :name "Dreamcatching")
+                :Dreamquest
+                 (ability
+                  :name "Dreamquest"
+                  :summary
+                   "* [Requires]: Sleeping
+* [Action]: While asleep, Spirit enters the [Spirit Realm].  The Spirit may travel as long as it wants, but whenever the Body awakens, the Spirit immediately returns.
+* [Death]: Spirit may permanently enter the [Spirit Realm].")
+                "Dream Effectively"
+                 (ability
+                  :name "Dream Effectively"
+                  :reference
+                   "* I was just thinking. Wouldn't it be funny if I wasn't the only one who could dream effectively? What if everybody could do it? And reality was being pulled out from under us all the time - and we didn't even know it? - George Orr, The Lathe of Heaven
+* Oh, my God... I just killed six billion people... - George Orr, The Lathe of Heaven")
+                "Dream Riding"
+                 (ability
+                  :name "Dream Riding"
+                  :summary "* Ability to enter another person's dream.")
+                "Dream Sight"
+                 (ability
+                  :name "Dream Sight")
+                "Dream Speak"
+                 (ability
+                  :name "Dream Speak"
+                  :summary "* Grants the ability to converse with things that cannot normally speak including plants, animals, and inanimate objects. Such beings have knowledge and personalities limited by their natures.")
+                "Dream Weaving"
+                 (ability
+                  :name "Dream Weaving"
+                  :reference "* She was shaping a world. She could envision the world, feel the spring of the earth beneath her bare feet, the warmth of the sun, the vibrant green of the grass, the hazy blue of distant mountains. 'Do you feel it?' 'Yes.' 'Then make it real.' She brought all of her will to paint all the details of the dream onto a new reality. She opened her eyes and gazed out upon the land she had already seen in her mind. It was so beautiful it took her breath away ... and failed to return it. She gasped as her lungs emptied and her vision faded to black ... 'A useful lesson. You forgot to breathe in the scents of your world that would indicate air. Remember even the smallest detail is crucial.' - Tales of Magick")
+                :Epiphany
+                 (ability
+                  :name "Epiphany"
+                  :summary "* A moment of ecstasy, delight, and intense revelation. During epiphanies, disparate things suddenly synchronize and make sense. Ephipanies often trigger major changes in personality or goals.")
+                "Eyes of a Child"
+                 (ability
+                  :name "Eyes of a Child"
+                  :summary "* All Chimera become visible to those you chose.")
+                "Fond Memories"
+                 (ability
+                  :name "Fond Memories"
+                  :reference "Eternal Sunshine of the Spotless Mind"
+                  :summary "* This ability makes every childhood dream and ambition real again. Every imaginary friend is remembered clearly and the happiest moments from youth return with the intensity of a first kiss and the excitement of Christmas. Then, suddenly, its over. In their absence, depression can crash down.  Truly fallen beings can become suicidal. The remembrance can be uplifting in the end, allowing one to relive the best moments of life.")
+                "Imaginary Friend"
+                 (ability
+                  :name "Imaginary Friend"
+                  :reference
+                   "* As I was walking up the stair, I met a man who wasn't there. He wasn't there again today. If only he would go away. - Children's Nursery Rhyme
+* Mother, do you remember when I was little, I had a friend, he was make-believe? No. Don't you remember? Only I could see him? No, I don't remember Drop Dead Fred at all. - Drop Dead Fred
+* Let's write something on the carpet... I know how about 'Mother SUCKS'. - Drop Dead Fred"
+                  :summary "Create a character with a distinct personality of your choice that only the target can see.")
+                "Living Nightmare"
+                 (ability
+                  :name "Living Nightmare"
+                  :summary "* A chimerical monster formed from nightmares or madness."
+                  :titles "Waking Nightmare")
+                "Nightmare Essence"
+                 (ability
+                  :name "Nightmare Essence"
+                  :summary "* Nightmares caught with [Dreamcatching] can be contained in a bottle. Opening the bottle releases the experience of the dream to all surrounding it. These can be used as grenades.")
+                "Pillow Fort"
+                 (ability
+                  :name "Pillow Fort"
+                  :summary
+                   "* By exercising one's imagination, a soft barrier can provide real defense but only for the Dreamer.
+* [Action]: Any material may be chosen to provide [Skill] defense for the user.")
+                :Rapture
+                 (ability
+                  :name "Rapture"
+                  :summary
+                   "* An extremely difficult and rare ability of self-discovery to create Glamour from oneself. Only at a moment of sudden self-realization can a Rapture be attained.
+* [Passive] - While in a Rapture, all [Critical] results generate [Glamour Token]s.")
+                :Ravaging
+                 (ability
+                  :name "Ravaging"
+                  :summary
+                   "* Drain creativity from a subject. The subject must be well known and a good knowledge of how the subject dreams is required. After that, the subject must simply be touched and he/she will experience a wave of depression and fear as the Glamour is drained from them.
+* [Action]: Touch the subject. Roll [Banality]. Gain +1 [Glamour Token] if any successes. If no [Glamour] is gained, both the user and subject gain +1 [Banality] instead.")
+                :Reverie
+                 (ability
+                  :name "Reverie"
+                  :summary
+                   "* Say or suggest things that inspire others to wonderful ideas and creations. This is a time-consuming process to discover they subtle things that inspire another to great works.
+* [Extended Action]: Inspire someone while they create.
+* [Action]: View a work of art created during Reverie. Gain +1 [Glamour Token]. A particular work of art may only grant this bonus once a year."
+                  :titles "Muse")
+                :Seeming
+                 (ability
+                  :name "Seeming"
+                  :summary "* Take on the appearance of another.")
+                "Shattered Dreams"
+                 (ability
+                  :name "Shattered Dreams")
+                "Wall of Wonders"
+                 (ability
+                  :name "Wall of Wonders"
+                  :summary "* A wall of dreams. Causes [Fascination] in those who view it.")))
+            :Enchantment
+             (power
+              :name "Enchantment"
+              :summary
+               "* Enchantment/Witchcraft focuses on enchantments that alter the fate of the target.
+* The deities of Witchcraft are embodiments of a life-force manifest in nature. The Goddess and God are seen as complementary polarities and this balance is seen in nature. They are sometimes symbolised as the Sun and Moon, and from her lunar associations the Goddess becomes a Triple Goddess with aspects of Maiden, Mother, and Crone. Some hold the Goddess to be pre-eminent, since she contains and conceives all. The God is the spark of life and inspiration within her, simultaneously her lover and her child."
+              :titles "Abjuration, Beguiler, Enchanter, Enchantress, Entrancer, Hexer, Warlock, Witch, Witchcraft, Witchdoctor"
+              :abilitymap
+               (abilitymap
+                "Barren Loins"
+                 (ability
+                  :name "Barren Loins"
+                  :summary "* Target cannot conceive a child while under this curse.")
+                :Charm
+                 (ability
+                  :name "Charm"
+                  :summary
+                   "* The opposite of [Malediction]. Charm reduces the severity of negative effects.
+* [Requires]: Target cannot have any [Charm] Tokens.
+* [Action]: Roll vs. Spirit and add a Black [Charm] Token for each [Hit]."
+                  :titles "Warding Sign")
+                "Death Ward"
+                 (ability
+                  :name "Death Ward"
+                  :summary "* Provides increased defense against undead beings.")
+                "Evil Eye"
+                 (ability
+                  :name "Evil Eye"
+                  :summary "* Reduces Spirit")
+                "Fertile Loins"
+                 (ability
+                  :name "Fertile Loins"
+                  :summary "* Next intercourse will have doubled chance to conceive a child, if possible.")
+                :Haste
+                 (ability
+                  :name "Haste"
+                  :summary
+                   "* [Effect]: +1 Move
+* [Target]: [Area]
+* [Duration]: [Hits]")
+                "Inscribe Rune"
+                 (ability
+                  :name "Inscribe Rune"
+                  :summary "* Allows the permanent addition of magical properties to an item.")
+                "Inscribe Symbol"
+                 (ability
+                  :name "Inscribe Symbol"
+                  :summary "* Allows the temporary addition of magical properties to an item, portal, or area.")
+                :Malediction
+                 (ability
+                  :name "Malediction"
+                  :summary
+                   "* The opposite of [Charm]. Malediction increases the severity of negative effects.
+* [Action]: Roll vs. Spirit and add a Black [Curse] Token for each [Hit].")
+                "Magic Ward"
+                 (ability
+                  :name "Magic Ward"
+                  :summary "* Provides increased defense against magical creatures.")
+                "Mental Ward"
+                 (ability
+                  :name "Mental Ward"
+                  :summary "* Provides increased defense against mental attacks.")
+                "Metal Ward"
+                 (ability
+                  :name "Metal Ward"
+                  :summary "* Provides increased defense against predominately metal weapons.")
+                "Nature Ward"
+                 (ability
+                  :name "Nature Ward"
+                  :summary "* Provides increased defense against Animals, and weather.")
+                :Palsy
+                 (ability
+                  :name "Palsy"
+                  :summary "* Reduces Move")
+                :Pox
+                 (ability
+                  :name "Pox"
+                  :summary "* Reduces Social Skills")
+                "Rule of Three"
+                 (ability
+                  :name "Rule of Three"
+                  :reference "* Ever mind the Rule of Three, three times what thou givest returns to thee, this lesson well, thou must learn, thee only gets what thou dost earn."
+                  :summary "* Whatever energy a person puts out into the world, be it positive or negative, will be returned to that person three times.")
+                :Safekeep
+                 (ability
+                  :name "Safekeep"
+                  :summary "* [Action]: Enchant an item to prevent loss or theft. Any effect that would remove, loose, or damage the item must roll vs. Safekeep or fail in addition to any other checks.")
+                :Slow
+                 (ability
+                  :name "Slow"
+                  :summary
+                   "* [Effect]: -1 Move
+* [Target]: [Area]
+* [Duration]: [Hits]")
+                "Spirit Ward"
+                 (ability
+                  :name "Spirit Ward"
+                  :summary "* Provides increased defense against spirit beings and attack against [Spirit].")
+                "Stone Ward"
+                 (ability
+                  :name "Stone Ward"
+                  :summary "* Provides increased defense against predominately stone weapons.")
+                :Weaken
+                 (ability
+                  :name "Weaken"
+                  :summary "* Reduces Body")
+                "Wood Ward"
+                 (ability
+                  :name "Wood Ward"
+                  :summary "* Provides increased defense against predominately wooden weapons.")))
+            :Shamanism
+             (power
+              :name "Shamanism"
+              :titles "Shaman, Spirit Caller, Witch Doctor"
+              :abilitymap
+               (abilitymap
+                "Call Spirits"
+                 (ability
+                  :name "Call Spirits")
+                "Control Spirit"
+                 (ability
+                  :name "Control Spirit")
+                :Reincarnate
+                 (ability
+                  :name "Reincarnate"
+                  :summary "* Similar to [Resurrect], this ability allows a being to return to life in a new body if this ritual is performed soon after death. The reincarnated being will be physically different from the original, potentially different age, abilities, gender, race, or species. The being will have most of its original memories, but will often have a substantially different personality. If any [Successes] are made, the reincarnation succeeds and the character must be created again with significant differences and will appear in a location consistent with its new identity. The new character is built at a level equal to it original level or the reincarnate skill level whichever is lower. If the reincarnate skill level is lower than 10, the reincarnated being will be -10% younger than before for each level below 10.")
+                "Second Sight"
+                 (ability
+                  :name "Second Sight"
+                  :reference "* I've got electric light, and I've got second sight.  I've got amazing...powers...of observation.  And that is how I know...When I try to get through...On the telephone to you...There will be nobody home. - Pink Floyd, Nobody Home"
+                  :summary "* Second sight is the ability to see the spiritual essence of beings. It quickly identifies the living from the unliving and can detect disease both phyiscal and mental.")
+                "Spirit Guide"
+                 (ability
+                  :name "Spirit Guide")
+                "Spiritual Affinity"
+                 (ability
+                  :name "Spiritual Affinity"
+                  :summary "* Death: Enter the Spirit Realm")
+                :Totem
+                 (ability
+                  :name "Totem")
+                "Vision Quest"
+                 (ability
+                  :name "Vision Quest")))
+            :Sympathy
+             (power
+              :name "Sympathy"
+              :reference "* Synchronicity is a phenomenon where people interpret two seemingly unrelated experiences as being meaningfully intertwined."
+              :summary
+               "* Sympathetic magic is using a symbol to represent the thing you want to affect with your magic. Whatever you do to the symbol, you do to the target. The object and the thing it represents are 'in sympathy'; they are aligned. Sympathetic magic is a useful idea because often, your target is something non-physical, or something you can’t otherwise interact with directly. You could banish negative thoughts directly, but it’s easier to tie them to something physical by writing them down and then burning the paper. As the paper burns, so does the negativity. Correspondences are related to this. For example, different-colored candles represent different desires (like green for money, red for love, black for banishment, etc.) and as the candle burns down, your spell is cast. Wearing different stones or crystals can attract luck or success to you.   
+				* Cursed Energy - Cursed energy is born from negative emotions such as grief and anger. These negative feelings are common in human society so almost everyone possesses cursed energy. Cursed Energy can be controlled and focused to perform various magical feats.
+				* Cursed Spirit - Cursed Spirits are apparitions manifested entirely from cursed energy. Even their bodies are composed of cursed energy, making cursed spirits invisible to non-sorcerers. The emission of cursed energy from humans collects like sediment until a cursed spirit is born from the collective negative energy. Cursed Spirits born with strong feelings directed toward a certain aspect are especially strong. The stronger humanity's fear and anger is directed at cursing a certain aspect of the world, like natural disasters, the more powerful Curse Spirits spawned from those negative sentiments will be.
+				* Law of Similarity - Like produces like. An effect resembles its cause.
+				* Law of Contact/Contagion - Things which have once been in contact with each other continue to act on each other at a distance."
+              :titles "Correspondence, Curses, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor"
+              :abilitymap
+               (abilitymap
+                "Black Vise"
+                 (ability
+                  :name "Black Vise"
+                  :summary "* Target must use a special [Ability] each [Turn] or take a [Stun].")
+                "Breath of Life"
+                 (ability
+                  :name "Breath of Life"
+                  :summary "* Create an [Animated] creature."
+                  :titles "Cursed Corpse")
+                "Cursed Sight"
+                 (ability
+                  :name "Cursed Sight"
+                  :summary "* Curses and Cursed Spirits are normally invisibile, but this ability allows them to be seen.")
+                "Cursed Tool"
+                 (ability
+                  :name "Cursed Tool")
+                "Cursed Weapon"
+                 (ability
+                  :name "Cursed Weapon"
+                  :summary "* Cursed Item - Items can also be infused with Curse Energy including such as cursed tools, cursed objects, and cursed corpses.")
+                "Dominant Possession"
+                 (ability
+                  :name "Dominant Possession"
+                  :summary "* After defeating a target in mental combat, the user possesses the body of the target. The user keeps his Mind and Will stats and uses the target's Body."
+                  :titles "Skinriding")
+                :Effigy
+                 (ability
+                  :name "Effigy"
+                  :reference "Poppet, Voodoo Doll"
+                  :summary
+                   "* Create a figure representing the target. The target can be a being, a vehicle, a building, etc. The figure can be a doll, a wax figurine, an Origami, a sculpture, a drawing, or any other image created by hand by the caster. In addition, the Effigy must have some item linking it to the target. This can be a possession, a hair, a body part, etc. The more significant the better.
+* Spells may then be cast upon the figure as if the figure was at 4 spaces range regardless of actual distance or line of sight. This ability can create any number of effects, but it cannot actually cause physical damage. All Body damage becomes [Stun] if the target cannot take anymore [Stun], the excess is ignored.
+* The ability level of any Spells cast are [Limited] by the skill with which the Effigy is created and the significance of the item linked to the Effigy."
+                  :titles "Straw Man")
+                :Fetish
+                 (ability
+                  :name "Fetish"
+                  :summary
+                   "* A fetish is a small object that can be used to bind a spirit. The item must be unique and may be found or created.
+* [Action]: If you killed an extradimensional creatures last turn, you may capture the spirit of that creature in the Fetish.
+* [Action]: Release the spirit in the fetish to perform one task that turn. The spirit must perform the task if it is able though it does so under duress and may twist the intentions or deceive the user. Regardless of outcome, the spirit is released and will disappear.")
+                :Figurine
+                 (ability
+                  :name "Figurine"
+                  :summary "* A miniature of a small creature grows into a full size version.")
+                "Iron Maiden"
+                 (ability
+                  :name "Iron Maiden"
+                  :summary "* Target takes 1 Stun Token for each point of combat damage it inflicts."
+                  :titles "Thorns")
+                :Juju
+                 (ability
+                  :name "Juju"
+                  :summary
+                   "* The most horrific of fetishes, the shrunken head permanently holds the spirit of the slain person in an undead limbo. A shrunken head may only be created immediately after the user directly slays a person. After that a gruesome series of rituals over the next week mummifies the head and binds the spirit to the head.
+* [Action]: Once per day, for 1 hour, the user may speak to the head and the head will telepathically respond. The head is effectively a prisoner of the user, and the user may interrogate or torment the head as he sees fit. The head cannot remain silent, but it does not have to be helpful or truthful."
+                  :titles "Shrunken Head, Tsantsa")
+                "Life-like Art"
+                 (ability
+                  :name "Life-like Art")
+                "Life-like Tattoo"
+                 (ability
+                  :name "Life-like Tattoo")
+                "Living Tool"
+                 (ability
+                  :name "Living Tool"
+                  :summary
+                   "* Animates a small tool which makes the next skill easier.
+* [Requires]: A simple tool with no moving parts.
+* [Action]: On the next action the tool may be used at [+1 Skill].")
+                "Living Weapon"
+                 (ability
+                  :name "Living Weapon"
+                  :summary
+                   "* Animates a melee weapon which makes the next attack easier.
+* [Requires]: A melee weapon with no moving parts.
+* [Action]: On the next action the weapon may be used at [+1 Skill].")
+                :Miniature
+                 (ability
+                  :name "Miniature"
+                  :summary "* A miniature of a simple item grows into a full size version.")
+                :Puppeteer
+                 (ability
+                  :name "Puppeteer"
+                  :summary "* When this unit acts the target unit must perform the same actions.")
+                :Rack
+                 (ability
+                  :name "Rack"
+                  :summary "* Each time Target uses a special [Ability] it takes a [Stun].")
+                :Serendipity
+                 (ability
+                  :name "Serendipity")
+                "Spirit Bottle"
+                 (ability
+                  :name "Spirit Bottle"
+                  :summary "* Create a bottle, mirror, or vase that captures and holds the Spirit of a being. If the being's body dies, the spirit continues to exist in the bottle. The spirit may mentally communicate with anyone touching the bottle.")
+                "Spirit Link"
+                 (ability
+                  :name "Spirit Link"
+                  :summary "* Create a bond with target. Each time it does damage to a target, remove 1 white token from yourself.")
+                "Subtle Possession"
+                 (ability
+                  :name "Subtle Possession"
+                  :summary "* The user's spirit secretly enters the body of the target. The user acts as a manipulative inner voice to the target.")
+                "Sympathetic Bond"
+                 (ability
+                  :name "Sympathetic Bond"
+                  :summary
+                   "* [Action]: Bond with a willing unit.
+* [Action]: Transmit an emotion to a bonded unit.")
+                "True Name"
+                 (ability
+                  :name "True Name"
+                  :summary "* If the user knows the True Name of his subject, he gains +1 [Synchonicity] against that subject.")))))))
+    "Magic Items"
+     (chapter
+      :name "Magic Items"
+      :sectionmap
+       (sectionmap
+        "Magic Weapons"
+         (section
+          :name "Magic Weapons"
+          :itemmap
+           (itemmap
+            "Ascalan Lance"
+             (item
+              :name "Ascalan Lance"
+              :reference "* The lance (or in some versions of the story, sword) that Saint George used to slay the dragon, named after the city Ashkelon."
+              :titles "Dragon Slayer Lance")
+            :Firebrand
+             (item
+              :name "Firebrand"
+              :titles "Flame Tongue")
+            :Frostbrand
+             (item
+              :name "Frostbrand")
+            :Moonblade
+             (item
+              :name "Moonblade"
+              :titles "A silver sword that is as hard as steel")
+            "Poseidon's Net"
+             (item
+              :name "Poseidon's Net")
+            "Poseidon's Trident"
+             (item
+              :name "Poseidon's Trident")
+            :Runestaff
+             (item
+              :name "Runestaff"
+              :summary "* A staff with one or more Runes incribed upon it.")
+            :Runesword
+             (item
+              :name "Runesword"
+              :summary "* A sword with one or more Runes incribed upon it."))))))))

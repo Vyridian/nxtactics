@@ -1,0 +1,233 @@
+(package nx/tactics/books/fantasy
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Fantasy"
+  :image "DaveDormanEasternTerritories.jpg"
+  :chaptermap
+   (chaptermap
+    "Fantasy Overview"
+     (chapter
+      :name "Fantasy Overview"
+      :sectionmap
+       (sectionmap
+        "Elder Tongue"
+         (section
+          :name "Elder Tongue"
+          :summary
+           "Prefixes
+* Alf - Elf
+* Dverg - Dwarf
+* Hel - Dead
+* Jotun - Giant
+* Man - Human
+* Muspel - Fire
+* Nifl - Mist
+* Svart - Dark
+* Yo - Demonic
+Suffixes
+* Ar - Race
+* Heim - Home
+* Ki - Soul
+* Ma - Creature
+* Traum - Dream
+Words
+* Alfar - Elvish Race
+* Albtraum - Elf Dream (Nightmare)
+* Alfheim - Land of Elves
+* Dvergar - Dwarven Race
+* Helar - Restless Dead
+* Helheim - Land of the dead
+* Manar - Human Race
+* Manheim - Land of Men
+* Muspelheim - Land of Fire
+* Niflheim - Land of Ice
+* Svartalfheim - Land of Dark Elves
+* Yoki - Demon Soul
+* Yoma - Demon")))
+    "Genshin Impact"
+     (chapter
+      :name "Genshin Impact"
+      :sectionmap
+       (sectionmap
+        :Archons
+         (section
+          :name "Archons"
+          :unitmap
+           (unitmap
+            :Furina
+             (unit
+              :name "Furina"
+              :titles "Focolor")
+            :Nahida
+             (unit
+              :name "Nahida")
+            "Raiden Shogun"
+             (unit
+              :name "Raiden Shogun"
+              :summary
+               "* The Raiden Shogun is the current Electro Archon. There are actually 3 versions of the Shogun that look almost identical: The twin sisters Ei and Makoto, and the artificial duplicate called the Puppet.
+* Makoto (Baal) - Makoto and Ei shared the title of Electro Archon, pretending to be a single being. Makoto was the diplomat and Ei was the warrior. Ei carried a sword, but she was not known to be a great warrior. Her electro powers were her main ability. Makoto died during the battle of Khaenri'ah.
+* Ei (Baalzebub) - Ei considered herself to be Makoto's shadow and mostly served as her muscle. After Makoto's death, she constructed the Puppet, tranfered her spirit into her sword, and mostly allowed the puppet to rule in her stead. Ei is divinely skilled in combat.
+* Puppet - The puppet is an advanced alchemical creation with power and combat ability perfectly equal to Ei in every way. Generally, the puppet is the only version of the Shogun that anyone sees. Even when Ei is in control, she is controlling the puppet, since she no longer has her own physical form.
+* Feats of Power
+** Musou no Hitotachi - A supposedly unblockable sword attack from the Shogun that is her supreme attack.
+** She easily defeats the traveller and nearly kills them.
+** She easily executes Signora and incinerates her.
+** She slew the god Orobashi and split the islands apart. Residual Electro still makes this area dangerous over 2000 years later.
+** She creates a perpetual storm around Inazuma for years.
+** She states that she can casually stop storms across the world to let people sleep."
+              :titles "Baal, Baalzebub, Ei, Makoto, Puppet, Shadow")
+            :Venti
+             (unit
+              :name "Venti"
+              :summary
+               "* Barbados splits the mountains in Mondstadt with a divine wind and sends entire mountains flying to become the Golden Apple Archepelego.
+* Barbados is easily considered to be the weakest of the Archons."
+              :titles "Barbados")
+            "Zhong Li"
+             (unit
+              :name "Zhong Li"
+              :summary "* Zhong Li dominated the Archon War."
+              :titles "Morax, Rex Lapis")))))
+    "God of War"
+     (chapter
+      :name "God of War"
+      :sectionmap
+       (sectionmap
+        "God of War Units"
+         (section
+          :name "God of War Units"
+          :unitmap
+           (unitmap
+            :Kratos
+             (unit
+              :name "Kratos"
+              :image "Fantasy/Kratos.png")))))
+    "Lord of the Rings"
+     (chapter
+      :name "Lord of the Rings"
+      :sectionmap
+       (sectionmap
+        "Lord of the Rings Units"
+         (section
+          :name "Lord of the Rings Units"
+          :unitmap
+           (unitmap
+            :Galadriel
+             (unit
+              :name "Galadriel"
+              :reference
+               "* If you ask it of me, I will give you the One Ring. You offer it to me
+freely? I do not deny that my heart has greatly desired this. In the
+place of a Dark Lord you would have a Queen! Not dark but beautiful and
+terrible as the Dawn! Treacherous as the Seas! Stronger than the
+foundations of the Earth! All shall love me and despair! ... I passed
+the test. I shall diminish, and go to the west, and remain Galadriel.
+- Frodo and Galadriel - Lord of the Rings")))))
+    "Nexus Fantasy Characters"
+     (chapter
+      :name "Nexus Fantasy Characters"
+      :sectionmap
+       (sectionmap
+        "Nexus Fantasy Actors"
+         (section
+          :name "Nexus Fantasy Actors"
+          :unitmap
+           (unitmap
+            "Antios Teron"
+             (unit
+              :name "Antios Teron"
+              :summary
+               "* Human Spy
+* Antios is a spy for Lord Aramel.
+* He is currently disguised as a mercenary for hire while travelling through the Imperium to assess their defenses. He has been authorized to assassinate any high ranking politician he should encounter to disrupt
+local politics. His mission has no time limit, and he is periodically scried by Lord Aramel's wizards.
+* He is a convincing actor who can play most parts well. He is particularly ruthless about his identity and will silence any who might compromise him or his mission."
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "5"
+                  :unititemmap
+                   (unititemmap
+                    "Broad Sword"
+                     (unititem
+                      :name "Broad Sword")))
+                :Espionage
+                 (unitskill
+                  :name "Espionage"
+                  :level "5")))
+            :Blackguard
+             (unit
+              :name "Blackguard"
+              :summary
+               "* An elite mercenary cadre organized by Hetman Undrig.
+* Their base is a small, walled town dedicated to their needs.
+* The Dragoons are a loose group. Decisions and leaders are chosen by majority vote. Power can change at anytime (including during combat).
+* Dragoons pay no dues nor is there direct pay. The Dragoons make money by hiring out as mercenaries.  They charge double normal rates, but are reknowned for their excellent training and equipment. Dragoons take great pride in their high status and react poorly to those who do not recognize their talent.
+* Dragoons are trained professionals in their jobs and recognize the need for discretion. They care little for whether a job is legal or not, and the Dragoons are known for possessing certain 'subtle' skills that make covert missions possible. They do not, however, enjoy excessive risk and are not above abandoning very dangerous missions."
+              :titles "Black Dragoon")
+            "Charn Aramel"
+             (unit
+              :name "Charn Aramel"
+              :summary "Human Dread Knight"
+              :titles "Nighthook, Lord Aramel"
+              :unitpowermap
+               (unitpowermap
+                (msgblock
+                 :msgs
+                  (msglist
+                   (msg
+                    :code ":keyexpected"
+                    :path "nx/tactics/base/unitpowermap"
+                    :severity 3))))
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "16"
+                  :unititemmap
+                   (unititemmap
+                    "Great Sword"
+                     (unititem
+                      :name "Great Sword"
+                      (msgblock
+                       :msgs
+                        (msglist
+                         (msg
+                          :code ":invalidkey"
+                          :detail ":summary"
+                          :path "nx/tactics/base/unititem"
+                          :severity 3)
+                         (msg
+                          :code ":invalidkey"
+                          :detail ":Ravage"
+                          :path "nx/tactics/base/unititem"
+                          :severity 3))))))))
+            "Sarani Kalea"
+             (unit
+              :name "Sarani Kalea"
+              :summary "Human Priestess"
+              :titles "Princess Kalea, High Priestess of Kali"
+              :unitpowermap
+               (unitpowermap
+                (msgblock
+                 :msgs
+                  (msglist
+                   (msg
+                    :code ":keyexpected"
+                    :path "nx/tactics/base/unitpowermap"
+                    :severity 3))
+                 :msgblocks
+                  (msgblocklist
+                   (msgblock
+                    :msgs
+                     (msglist
+                      (msg
+                       :code ":keyexpected"
+                       :path "nx/tactics/base/unitpowermap"
+                       :severity 3))))))))))))))
