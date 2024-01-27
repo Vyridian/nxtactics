@@ -514,6 +514,7 @@ courier or smuggling as well as heavier armaments."
                "We are the Borg. Lower your shields and surrender your ships.  We will add your biological and technological
 distinctiveness to our own. Your culture will adapt to service us. Resistance is futile. - The Borg, Star Trek
 First Contact"
+              :crew "130000"
               :mass "90Mtons"
               :length "3km"
               :unitpowermap
@@ -552,18 +553,7 @@ First Contact"
                       :code ":invalidkey"
                       :detail ":Total output 7,500,000TW"
                       :path "nx/tactics/base/unitskill"
-                      :severity 3)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "crew"
-                    :value "130000")
-                  :severity 2))))
+                      :severity 3))))))
             "Borg Drone"
              (unit
               :name "Borg Drone"

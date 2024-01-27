@@ -26,16 +26,23 @@ import com.vxlisp.vx.web.HttpTest;
 import com.vxlisp.nx.crypto.CryptosheetTest;
 import com.vxlisp.nx.tactics.ApptacticsTest;
 import com.vxlisp.nx.tactics.BaseTest;
-import com.vxlisp.nx.tactics.books.Age_of_steamTest;
+import com.vxlisp.nx.tactics.books.Advanced_rulesTest;
+import com.vxlisp.nx.tactics.books.BestiaryTest;
 import com.vxlisp.nx.tactics.books.BookloaderTest;
 import com.vxlisp.nx.tactics.books.CharactersTest;
+import com.vxlisp.nx.tactics.books.CombatTest;
+import com.vxlisp.nx.tactics.books.Core_rulesTest;
 import com.vxlisp.nx.tactics.books.GearTest;
 import com.vxlisp.nx.tactics.books.GettingstartedTest;
 import com.vxlisp.nx.tactics.books.HorrorTest;
+import com.vxlisp.nx.tactics.books.Land_sea_and_airTest;
+import com.vxlisp.nx.tactics.books.MagicTest;
 import com.vxlisp.nx.tactics.books.MedievalTest;
+import com.vxlisp.nx.tactics.books.ModernTest;
 import com.vxlisp.nx.tactics.books.Modern_fantasyTest;
 import com.vxlisp.nx.tactics.books.PrehistoryTest;
 import com.vxlisp.nx.tactics.books.Pulp_fictionTest;
+import com.vxlisp.nx.tactics.books.SkillsTest;
 import com.vxlisp.nx.tactics.books.Space_and_timeTest;
 import com.vxlisp.nx.tactics.books.SuperheroesTest;
 import com.vxlisp.nx.tactics.DamageTest;
@@ -263,9 +270,17 @@ public final class AppTest {
 
 
   @Test
-  @DisplayName("nx/tactics/books/age_of_steam")
-  void test_nx_tactics_books_age_of_steam() {
-	  com.vxlisp.vx.Test.Type_testpackage testpackage = Age_of_steamTest.test_package(context);
+  @DisplayName("nx/tactics/books/advanced_rules")
+  void test_nx_tactics_books_advanced_rules() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Advanced_rulesTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/bestiary")
+  void test_nx_tactics_books_bestiary() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = BestiaryTest.test_package(context);
 	  TestLib.run_testpackage_async(testpackage);
   }
 
@@ -282,6 +297,22 @@ public final class AppTest {
   @DisplayName("nx/tactics/books/characters")
   void test_nx_tactics_books_characters() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = CharactersTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/combat")
+  void test_nx_tactics_books_combat() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = CombatTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/core_rules")
+  void test_nx_tactics_books_core_rules() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Core_rulesTest.test_package(context);
 	  TestLib.run_testpackage_async(testpackage);
   }
 
@@ -311,9 +342,33 @@ public final class AppTest {
 
 
   @Test
+  @DisplayName("nx/tactics/books/land_sea_and_air")
+  void test_nx_tactics_books_land_sea_and_air() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Land_sea_and_airTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/magic")
+  void test_nx_tactics_books_magic() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = MagicTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
   @DisplayName("nx/tactics/books/medieval")
   void test_nx_tactics_books_medieval() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = MedievalTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/modern")
+  void test_nx_tactics_books_modern() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = ModernTest.test_package(context);
 	  TestLib.run_testpackage_async(testpackage);
   }
 
@@ -338,6 +393,14 @@ public final class AppTest {
   @DisplayName("nx/tactics/books/pulp_fiction")
   void test_nx_tactics_books_pulp_fiction() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = Pulp_fictionTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/skills")
+  void test_nx_tactics_books_skills() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = SkillsTest.test_package(context);
 	  TestLib.run_testpackage_async(testpackage);
   }
 
@@ -475,16 +538,23 @@ public final class AppTest {
     CryptosheetTest.test_package(context),
     ApptacticsTest.test_package(context),
     BaseTest.test_package(context),
-    Age_of_steamTest.test_package(context),
+    Advanced_rulesTest.test_package(context),
+    BestiaryTest.test_package(context),
     BookloaderTest.test_package(context),
     CharactersTest.test_package(context),
+    CombatTest.test_package(context),
+    Core_rulesTest.test_package(context),
     GearTest.test_package(context),
     GettingstartedTest.test_package(context),
     HorrorTest.test_package(context),
+    Land_sea_and_airTest.test_package(context),
+    MagicTest.test_package(context),
     MedievalTest.test_package(context),
+    ModernTest.test_package(context),
     Modern_fantasyTest.test_package(context),
     PrehistoryTest.test_package(context),
     Pulp_fictionTest.test_package(context),
+    SkillsTest.test_package(context),
     Space_and_timeTest.test_package(context),
     SuperheroesTest.test_package(context),
     DamageTest.test_package(context),

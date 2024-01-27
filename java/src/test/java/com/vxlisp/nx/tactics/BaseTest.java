@@ -20,12 +20,12 @@ public final class BaseTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/base", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 34), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 5, ":tests", 5, ":total", 94), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 5, ":tests", 5, ":total", 96), 
       ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
       ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
       ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 94), 
-      ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 59)
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 96), 
+      ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 61)
     );
   }
 
@@ -75,6 +75,8 @@ public final class BaseTest {
         ":stat", 0,
         ":suit", 0,
         ":suitmap", 0,
+        ":terrain", 0,
+        ":terrainmap", 0,
         ":threat", 0,
         ":unit", 0,
         ":unitability", 0,

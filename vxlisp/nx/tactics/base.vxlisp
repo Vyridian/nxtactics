@@ -73,6 +73,7 @@
               classification  : string
               length          : string
               mass            : string
+              modifiers       : string
               muzzlevelocity  : string
               range           : string
               rof             : string
@@ -103,7 +104,8 @@
 
 (type power : struct
  :traits     [card]
- :properties [abilitymap   : abilitymap
+ :properties [stat         : string
+              abilitymap   : abilitymap
               specialtymap : specialtymap])
 
 (type powermap : map
@@ -139,7 +141,8 @@
 
 (type section : struct
  :traits     [card]
- :properties [deckmap     : deckmap
+ :properties [damagemap   : damagemap
+              deckmap     : deckmap
               itemmap     : itemmap
               locationmap : locationmap
               powermap    : powermap
@@ -148,6 +151,7 @@
               sectionmap  : sectionmap
               skillmap    : skillmap
               suitmap     : suitmap
+              terrainmap  : terrainmap
               unitmap     : unitmap
               weaknessmap : weaknessmap])
 
@@ -156,8 +160,7 @@
 
 (type skill : struct
  :traits     [card]
- :properties [rating       : rating
-              stat         : stat
+ :properties [stat         : string
               abilitymap   : abilitymap
               specialtymap : specialtymap])
 
@@ -181,6 +184,12 @@
  :traits     [card]
  :allowtypes [suit])
 
+(type terrain : struct
+ :traits     [card])
+
+(type terrainmap : map
+ :allowtypes [terrain])
+
 (type threat : struct
  :properties [description  : string
               progress     : int
@@ -199,6 +208,7 @@
               demeanor        : string
               nature          : string
               classification  : string
+              crew            : string
               mass            : string
               height          : string
               length          : string

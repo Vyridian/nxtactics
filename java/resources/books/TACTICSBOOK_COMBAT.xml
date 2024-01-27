@@ -1539,33 +1539,35 @@ x +1DMG vs. Crouching.
 			<specialty name="Kicks">
 			</specialty>
 			<specialty name="Grappling">
-				<ability name="Atomic Drop" />
-				<ability name="Air Throw" />
-				<ability name="Backbreaker" />
-				<ability name="Backroll Throw" />
-				<ability name="Bear Hug" />
-				<ability name="Choke Hold" />
-				<ability name="Fighting Hold" />
-				<ability name="Grappling Defense" />
-				<ability name="Ground Fighting" />
-				<ability name="Headlock" />
-				<ability name="Hip Throw" />
-				<ability name="Hold" />
-				<ability name="Hook Hold" />
-				<ability name="Iron Claw" />
-				<ability name="Joint Lock" />
-				<ability name="Knee Bash" />
-				<ability name="Neck Break" />
-				<ability name="Nelson" />
-				<ability name="Piledriver" />
-				<ability name="Pin" />
-				<ability name="Reversal" />
-				<ability name="Shoulder Throw" />
-				<ability name="Sleeper Hold" />
-				<ability name="Suplex" />
-				<ability name="Tackle" />
-				<ability name="Take Down" />
-				<ability name="Thigh Press" />
+    <summary>
+				 * Atomic Drop
+     * Air Throw
+     * Backbreaker
+     * Backroll Throw
+     * Bear Hug
+     * Choke Hold
+     * Fighting Hold
+     * Grappling Defense
+     * Ground Fighting
+     * Headlock
+     * Hip Throw
+     * Hold
+     * Hook Hold
+     * Iron Claw
+     * Joint Lock
+     * Knee Bash
+     * Neck Break
+     * Nelson
+     * Piledriver
+     * Pin
+     * Reversal
+     * Shoulder Throw
+     * Sleeper Hold
+     * Suplex
+     * Tackle
+     * Take Down
+     * Thigh Press
+    </summary>
 			</specialty>
 			<specialty name="Aikido">
 				<titles>Aikijutsu</titles>
@@ -4163,55 +4165,55 @@ x +1DMG vs. Crouching.
 				* Star Torpedoes carry Nuclear weapons (tactical or greater). In space, nuclear weapons produce no shockwave, just intense radiation. Even direct hits are not guaranteed to pierce the diamond hard ceramic armor of modern warships, so penetration is critical.
 			</summary>
 		</unit>
-		<item name="Colony Drop">
+		<unit name="Colony Drop">
 			<reference>Mobile Suit Gundam</reference>
-		</item>
-		<item name="Planet Bomb">
+		</unit>
+		<unit name="Planet Bomb">
 			<reference>Star Blazers, Starship Troopers</reference>
 			<summary>
 				* Asteroids or comets redirected to fall on a planet.
 			</summary>
-		</item>
-		<item name="Plague Planet Bomb">
+		</unit>
+		<unit name="Plague Planet Bomb">
 			<summary>
 				* An enormous, genocidal planet bomb that releases a series of infectious diseases to infect a population. Victims do not immediately show signs of infection to maximize the contagion and paranoia.
 			</summary>
-		</item>
-		<item name="Rage Planet Bomb">
+		</unit>
+		<unit name="Rage Planet Bomb">
 			<summary>
 				* An enormous, genocidal planet bomb that releases a series of parasites that turns infected creatures into rabid killers who spread the infection.
 			</summary>
-		</item>
-		<item name="Famine Planet Bomb">
+		</unit>
+		<unit name="Famine Planet Bomb">
 			<summary>
 				* An enormous, genocidal planet bomb that releases a series of diseases that attack the food harvest of a planet attempting to break the food chain and cause mass starvation or force compliance.
 			</summary>
-		</item>
-		<item name="Pestilence Planet Bomb">
+		</unit>
+		<unit name="Pestilence Planet Bomb">
 			<summary>
 				* An enormous, genocidal planet bomb that releases a series of parasites that infect insects, birds, and vermin. These creatures gain accelerated reproduction and high aggression to attack food supplies and the general population.
 			</summary>
-		</item>
-		<item name="Terraforming Planet Bomb">
+		</unit>
+		<unit name="Terraforming Planet Bomb">
 			<reference>Genesis - Star Trek II</reference>
-		</item>
-		<item name="Hellbore Planet Bomb">
+		</unit>
+		<unit name="Hellbore Planet Bomb">
 			<summary>
 				* A missile that detonates a series of shaped nuclear blasts to tunnel into a geological fault or a volcano where it attempts to cause a massive natural disaster.
 			</summary>
-		</item>
-		<item name="Planet Buster">
+		</unit>
+		<unit name="Planet Buster">
 			<reference>Anti-Matter Missile - Star Blazers</reference>
 			<summary>
 				* A missile designed to be part of a massive bombardment to shatter a planet's crust and return it to a molten state. Already unstable planets may break up into rubble.
 			</summary>
-		</item>
-		<item name="Starkiller Missile">
+		</unit>
+		<unit name="Starkiller Missile">
 			<reference>Sunshine</reference>
 			<summary>
 				* A missile designed to be part of a massive bombardment to disrupt the nuclear chain reaction in a star. This can result in massive solar flares, a cooling of the star, or cause the star to go nova depending on the age and size of the star.
 			</summary>
-		</item>
+		</unit>
 	</section>
 </chapter>
 </doc>

@@ -232,7 +232,6 @@
 					* Treasure Hunting represents experience in the dangerous and profitable world of lost tombs and ancient relics. Rare relics hold high presitge and are usually sold (in the form of a finders fee) to museaums, governments or private collectors. Raiding tombs is a fairly lawless and perilous activity to start with, and such high value items tend to attract disreputable characters of all kinds. As a result, treasure hunters often end their careers in unfortunate accidents.
 					* +1 while researching or navigating inside a crypt or tomb.
 				</summary>
-				</summary>
 			</specialty>
 			<specialty name="Vampire Hunter" />
 			<specialty name="Werewof Hunter" />
@@ -1209,7 +1208,7 @@
 			<titles>Commerce</titles>
 			<reference>
 				* Did they get you to trade? Your heroes for ghosts? Hot ashes for trees? Hot air for a cool breeze? Cold comfort for change? Did you exchange? A walk-on part in the war. For a leading role in a cage? - Pink Floyd, Wish you were here
-			</refernce>
+			</reference>
 			<ability name="Accounting">
 				<titles>Accountant, Actuary, Clerk</titles>
 			</ability>

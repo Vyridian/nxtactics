@@ -65,838 +65,281 @@
         "Damage Cards"
          (section
           :name "Damage Cards"
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/section
-                :tag "damage")
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2)))
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/section
-                   :tag "damage")
-                 :severity 2))))))))
+          :damagemap
+           (damagemap
+            :Damage
+             (damage
+              :name "Damage"
+              :summary
+               "* Effect: -1 [Body]
+* Duration: Permanent until healed.
+* Regular Damage with no side-effects.")
+            "Air Reserve Loss"
+             (damage
+              :name "Air Reserve Loss")
+            "Air Circulation Failure"
+             (damage
+              :name "Air Circulation Failure")
+            "Air Purification Failure"
+             (damage
+              :name "Air Purification Failure")
+            "Attitude Control Malfunction"
+             (damage
+              :name "Attitude Control Malfunction")
+            "Cargo Damage"
+             (damage
+              :name "Cargo Damage")
+            "Cargo Fire"
+             (damage
+              :name "Cargo Fire")
+            "Cargo Loss"
+             (damage
+              :name "Cargo Loss")
+            "Crew Casualties"
+             (damage
+              :name "Crew Casualties")
+            "Crew Quarters Fire"
+             (damage
+              :name "Crew Quarters Fire")
+            "Fire Suppression Failure"
+             (damage
+              :name "Fire Suppression Failure")
+            "Movement Impaired"
+             (damage
+              :name "Movement Impaired"
+              :summary
+               "* Effect: -25% [Move]
+* Duration: Permanent until unit spends an entire turn repairing.")
+            "Movement Crippled"
+             (damage
+              :name "Movement Crippled"
+              :summary
+               "* Effect: -25% [Move]
+* Duration: Permanent until healed.")
+            "Movement Control Failure"
+             (damage
+              :name "Movement Control Failure"
+              :summary "* Unit must move at full speed until repaired.")
+            "Artificial Gravity Malfunction"
+             (damage
+              :name "Artificial Gravity Malfunction")
+            "Bridge Damaged"
+             (damage
+              :name "Bridge Damaged")
+            "Bridge Explosion"
+             (damage
+              :name "Bridge Explosion")
+            "Bridge Fire"
+             (damage
+              :name "Bridge Fire")
+            "Bulkhead Collapse"
+             (damage
+              :name "Bulkhead Collapse")
+            "Cargo Hold Damaged"
+             (damage
+              :name "Cargo Hold Damaged")
+            "Cargo Hold Explosion"
+             (damage
+              :name "Cargo Hold Explosion")
+            "Cargo Hold Fire"
+             (damage
+              :name "Cargo Hold Fire")
+            "Central Computer Malfunction"
+             (damage
+              :name "Central Computer Malfunction")
+            "Central Computer Explosion"
+             (damage
+              :name "Central Computer Explosion")
+            "Central Computer Fire"
+             (damage
+              :name "Central Computer Fire")
+            "Command and Control Failure"
+             (damage
+              :name "Command and Control Failure")
+            "Communications Failure"
+             (damage
+              :name "Communications Failure"
+              :summary
+               "* Unit cannot communicate with other units.
+* In Game: Player may not speak. He/she may write rules questions to game master or opponents.")
+            "Crew Quarters Damaged"
+             (damage
+              :name "Crew Quarters Damaged")
+            "Damage Control Damaged"
+             (damage
+              :name "Damage Control Damaged")
+            "Engineering Damage"
+             (damage
+              :name "Engineering Damage")
+            "Fire Control System Malfunction"
+             (damage
+              :name "Fire Control System Malfunction")
+            "Flag Bridge Damaged"
+             (damage
+              :name "Flag Bridge Damaged"
+              :summary "* The Flag Bridge is used by senior executive officers to coordinate a fleet.")
+            "Food Stock Damaged"
+             (damage
+              :name "Food Stock Damaged")
+            "Fuel Explosion"
+             (damage
+              :name "Fuel Explosion")
+            "Fuel Fire"
+             (damage
+              :name "Fuel Fire")
+            "Fuel Loss"
+             (damage
+              :name "Fuel Loss")
+            "Helm Control Malfunction"
+             (damage
+              :name "Helm Control Malfunction")
+            "Helm Fire"
+             (damage
+              :name "Helm Fire")
+            "Hydroponics Damage"
+             (damage
+              :name "Hydroponics Damage")
+            "Inertial Dampener Malfunction"
+             (damage
+              :name "Inertial Dampener Malfunction")
+            "Intercommunications Failure"
+             (damage
+              :name "Intercommunications Failure"
+              :summary "* Unit cannot communicate within the vehicle except person to person. On large vehicles, this can be a localized failure.")
+            "Life Support Malfunction"
+             (damage
+              :name "Life Support Malfunction")
+            "Medical Bay Damage"
+             (damage
+              :name "Medical Bay Damage")
+            "Medical Bay Explosion"
+             (damage
+              :name "Medical Bay Explosion")
+            "Medical Bay Fire"
+             (damage
+              :name "Medical Bay Fire")
+            "Missile Launcher Explosion"
+             (damage
+              :name "Missile Launcher Explosion")
+            "Missile Launcher Malfunction"
+             (damage
+              :name "Missile Launcher Malfunction")
+            "Missile Magazine Explosion"
+             (damage
+              :name "Missile Magazine Explosion")
+            "Missile Magazine Fire"
+             (damage
+              :name "Missile Magazine Fire")
+            "Movement Malfunction"
+             (damage
+              :name "Movement Malfunction")
+            "Navigation Failure"
+             (damage
+              :name "Navigation Failure")
+            "Navigation Light Failure"
+             (damage
+              :name "Navigation Light Failure"
+              :summary "* The vehicles navigation/landing lights are not working across all spectrums. In combat, these lights are normally off anyway, but they make any landing or docking manuever much more perilous.")
+            "Passenger Quarters Explosion"
+             (damage
+              :name "Passenger Quarters Explosion")
+            "Passenger Quarters Fire"
+             (damage
+              :name "Passenger Quarters Fire")
+            "Power Control Failure"
+             (damage
+              :name "Power Control Failure")
+            "Power Plant Coolant Failure"
+             (damage
+              :name "Power Plant Coolant Failure")
+            "Power Plant Damage"
+             (damage
+              :name "Power Plant Damage")
+            "Power Plant Explosion"
+             (damage
+              :name "Power Plant Explosion")
+            "Power Plant Fire"
+             (damage
+              :name "Power Plant Fire")
+            "Power Failure"
+             (damage
+              :name "Power Failure")
+            "Propellent Loss"
+             (damage
+              :name "Propellent Loss")
+            "Remote Systems Malfunction"
+             (damage
+              :name "Remote Systems Malfunction"
+              :summary "* Command over drones is lost.")
+            "Secondary Bridge Explosion"
+             (damage
+              :name "Secondary Bridge Explosion")
+            "Secondary Bridge Fire"
+             (damage
+              :name "Secondary Bridge Fire")
+            "Secondary Bridge Malfunction"
+             (damage
+              :name "Secondary Bridge Malfunction")
+            "Sensor (Short Range) Malfunction"
+             (damage
+              :name "Sensor (Short Range) Malfunction")
+            "Sensor (Long Range) Malfunction"
+             (damage
+              :name "Sensor (Long Range) Malfunction")
+            "Shield Malfunction"
+             (damage
+              :name "Shield Malfunction")
+            "Spine Cracks"
+             (damage
+              :name "Spine Cracks")
+            "Steering Malfunction"
+             (damage
+              :name "Steering Malfunction"
+              :summary "* Unit can only perform 1 change in direction during a Move.")
+            "Structural Collapse"
+             (damage
+              :name "Structural Collapse")
+            "Target Aquisition Failure"
+             (damage
+              :name "Target Aquisition Failure")
+            "Temperature Control Failure"
+             (damage
+              :name "Temperature Control Failure")
+            "Turning Malfunction"
+             (damage
+              :name "Turning Malfunction"
+              :summary "* Unit cannot turn toward one side.")
+            "Transponder Failure"
+             (damage
+              :name "Transponder Failure"
+              :summary
+               "* The vehicle no longer identifies as friend of foe, so it appears as a potential enemy vehicle. In a heated exchange it may take friendly fire.
+* This can be as simple as a fallen flag on old navy ships."
+              :titles "IFF Damage, Not Running Colors")
+            "Water Reserve Loss"
+             (damage
+              :name "Water Reserve Loss")
+            "Weapon Magazine Explosion"
+             (damage
+              :name "Weapon Magazine Explosion")
+            "Weapon Magazine Fire"
+             (damage
+              :name "Weapon Magazine Fire")
+            "Weapon Malfunction"
+             (damage
+              :name "Weapon Malfunction")
+            "Weapon Explosion"
+             (damage
+              :name "Weapon Explosion")
+            "Weapon Fire"
+             (damage
+              :name "Weapon Fire")
+            "Weapon Power Failure"
+             (damage
+              :name "Weapon Power Failure")
+            "Weapon Traverse Malfunction"
+             (damage
+              :name "Weapon Traverse Malfunction")))))
     :Genres
      (chapter
       :name "Genres"

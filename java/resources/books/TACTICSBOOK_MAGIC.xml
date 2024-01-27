@@ -42,10 +42,10 @@
 			</ability>
 			<ability name="Animate Homunculus" />
 			<ability name="Animate Statue">
-				<references>
+				<reference>
 					* Terra Cotta Warriors
 					* Kali - The Golden Voyage of Sinbad
-				</references>
+				</reference>
 			</ability>
 			<ability name="Ashes to Ashes">
 				<summary>
@@ -503,11 +503,6 @@
 			<ability name="Summon Item">
 				<summary>
 					* A single item may be attuned to a summoning.  Later that item may be summoned to the owner's hand.
-				</summary>
-			</ability>
-			<ability name="True Name">
-				<summary>
-					* If the user knows the True Name of his subject, he gains +1 [Sorcery] against that subject.
 				</summary>
 			</ability>
 		</power>
@@ -1985,12 +1980,15 @@
 			<ability name="Totem" />
 			<ability name="Vision Quest" />
 		</power>
-		<power name="Synchronicity">
-			<titles>Correspondence, Curses, Sympathetic Magic, Voodoo, Witch man, Witchdoctor</titles>
-			<references>
+		<power name="Sympathy">
+			<titles>
+    Correspondence, Curses, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor
+   </titles>
+			<reference>
 				* Synchronicity is a phenomenon where people interpret two seemingly unrelated experiences as being meaningfully intertwined.
-			</references>
+			</reference>
 			<summary>
+    * Sympathetic magic is using a symbol to represent the thing you want to affect with your magic. Whatever you do to the symbol, you do to the target. The object and the thing it represents are 'in sympathy'; they are aligned. Sympathetic magic is a useful idea because often, your target is something non-physical, or something you can’t otherwise interact with directly. You could banish negative thoughts directly, but it’s easier to tie them to something physical by writing them down and then burning the paper. As the paper burns, so does the negativity. Correspondences are related to this. For example, different-colored candles represent different desires (like green for money, red for love, black for banishment, etc.) and as the candle burns down, your spell is cast. Wearing different stones or crystals can attract luck or success to you.   
 				* Cursed Energy - Cursed energy is born from negative emotions such as grief and anger. These negative feelings are common in human society so almost everyone possesses cursed energy. Cursed Energy can be controlled and focused to perform various magical feats.
 				* Cursed Spirit - Cursed Spirits are apparitions manifested entirely from cursed energy. Even their bodies are composed of cursed energy, making cursed spirits invisible to non-sorcerers. The emission of cursed energy from humans collects like sediment until a cursed spirit is born from the collective negative energy. Cursed Spirits born with strong feelings directed toward a certain aspect are especially strong. The stronger humanity's fear and anger is directed at cursing a certain aspect of the world, like natural disasters, the more powerful Curse Spirits spawned from those negative sentiments will be.
 				* Law of Similarity - Like produces like. An effect resembles its cause.
@@ -2111,6 +2109,11 @@
 				<summary>
 					* [Action]: Bond with a willing unit.
 					* [Action]: Transmit an emotion to a bonded unit.
+				</summary>
+			</ability>
+			<ability name="True Name">
+				<summary>
+					* If the user knows the True Name of his subject, he gains +1 [Synchonicity] against that subject.
 				</summary>
 			</ability>
 		</power>

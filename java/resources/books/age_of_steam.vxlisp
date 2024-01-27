@@ -107,6 +107,7 @@
               :name "USS Monitor"
               :speed "15kph"
               :classification "Hvy. Naval Vessel"
+              :crew "59"
               :mass "1000tons"
               :length "52m"
               :unitpowermap
@@ -149,18 +150,7 @@
                       :code ":invalidkey"
                       :detail ":2 x 11 in (280mm) Dahlgren smoothbores, turret"
                       :path "nx/tactics/base/unitskill"
-                      :severity 3)))))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "crew"
-                    :value "59")
-                  :severity 2))))))))
+                      :severity 3))))))))))
     "Victorian England"
      (chapter
       :name "Victorian England"

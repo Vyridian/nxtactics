@@ -2332,6 +2332,484 @@ public final class Bookloader {
   }
 
   /**
+   * @function damage_from_damage_key_value
+   * Returns a modified damage from a key value.
+   * @param  {damage} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {damage}
+   * (func damage<-damage-key-value)
+   */
+  public static interface Func_damage_from_damage_key_value extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_damage vx_damage_from_damage_key_value(final Base.Type_damage current, final Core.Type_string key, final Core.Type_string value);
+  }
+
+  public static class Class_damage_from_damage_key_value extends Core.Class_base implements Func_damage_from_damage_key_value {
+
+    @Override
+    public Func_damage_from_damage_key_value vx_new(Object... vals) {
+      Class_damage_from_damage_key_value output = new Class_damage_from_damage_key_value();
+      return output;
+    }
+
+    @Override
+    public Func_damage_from_damage_key_value vx_copy(Object... vals) {
+      Class_damage_from_damage_key_value output = new Class_damage_from_damage_key_value();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "damage<-damage-key-value", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "damage", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_damage_from_damage_key_value vx_empty() {return e_damage_from_damage_key_value;}
+    @Override
+    public Func_damage_from_damage_key_value vx_type() {return t_damage_from_damage_key_value;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_damage current = Core.f_any_from_any(Base.t_damage, arglist.vx_any(Core.vx_new_int(0)));
+      Core.Type_string key = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(1)));
+      Core.Type_string value = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(2)));
+      output = Bookloader.f_damage_from_damage_key_value(current, key, value);
+      return output;
+    }
+
+    @Override
+    public Base.Type_damage vx_damage_from_damage_key_value(final Base.Type_damage current, final Core.Type_string key, final Core.Type_string value) {
+      return Bookloader.f_damage_from_damage_key_value(current, key, value);
+    }
+
+  }
+
+  public static final Func_damage_from_damage_key_value e_damage_from_damage_key_value = new Bookloader.Class_damage_from_damage_key_value();
+  public static final Func_damage_from_damage_key_value t_damage_from_damage_key_value = new Bookloader.Class_damage_from_damage_key_value();
+
+  public static Base.Type_damage f_damage_from_damage_key_value(final Base.Type_damage current, final Core.Type_string key, final Core.Type_string value) {
+    Base.Type_damage output = Base.e_damage;
+    output = Core.f_switch(
+      Base.t_damage,
+      key,
+      Core.t_thenelselist.vx_new(
+        Core.f_case_1(
+          Core.vx_new_string(""),
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return current;
+          })
+        ),
+        Core.f_case(
+          Core.f_new(
+            Core.t_list,
+            Core.t_anylist.vx_new(
+              Core.vx_new_string("name"),
+              Core.vx_new_string("image"),
+              Core.vx_new_string("classification")
+            )
+          ),
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return Core.f_copy(
+              current,
+              Core.t_anylist.vx_new(
+                  key,
+                  value
+              )
+            );
+          })
+        ),
+        Core.f_else(
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return Core.f_copy(
+              current,
+              Core.t_anylist.vx_new(
+                  Core.f_msg_from_error_1(
+                    Core.vx_new_string(":invalidproperty"),
+                    Core.f_new(
+                      Core.t_anymap,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":type"),
+                        Base.t_damage,
+                        Core.vx_new_string(":prop"),
+                        key,
+                        Core.vx_new_string(":value"),
+                        value
+                      )
+                    )
+                  )
+              )
+            );
+          })
+        )
+      )
+    );
+    return output;
+  }
+
+  /**
+   * @function damage_from_damage_stringmap
+   * Returns a damage from a propmap.
+   * @param  {damage} damage
+   * @param  {stringmap} propmap
+   * @return {damage}
+   * (func damage<-damage-stringmap)
+   */
+  public static interface Func_damage_from_damage_stringmap extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_damage vx_damage_from_damage_stringmap(final Base.Type_damage damage, final Core.Type_stringmap propmap);
+  }
+
+  public static class Class_damage_from_damage_stringmap extends Core.Class_base implements Func_damage_from_damage_stringmap {
+
+    @Override
+    public Func_damage_from_damage_stringmap vx_new(Object... vals) {
+      Class_damage_from_damage_stringmap output = new Class_damage_from_damage_stringmap();
+      return output;
+    }
+
+    @Override
+    public Func_damage_from_damage_stringmap vx_copy(Object... vals) {
+      Class_damage_from_damage_stringmap output = new Class_damage_from_damage_stringmap();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "damage<-damage-stringmap", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "damage", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_damage_from_damage_stringmap vx_empty() {return e_damage_from_damage_stringmap;}
+    @Override
+    public Func_damage_from_damage_stringmap vx_type() {return t_damage_from_damage_stringmap;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_damage damage = Core.f_any_from_any(Base.t_damage, arglist.vx_any(Core.vx_new_int(0)));
+      Core.Type_stringmap propmap = Core.f_any_from_any(Core.t_stringmap, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_damage_from_damage_stringmap(damage, propmap);
+      return output;
+    }
+
+    @Override
+    public Base.Type_damage vx_damage_from_damage_stringmap(final Base.Type_damage damage, final Core.Type_stringmap propmap) {
+      return Bookloader.f_damage_from_damage_stringmap(damage, propmap);
+    }
+
+  }
+
+  public static final Func_damage_from_damage_stringmap e_damage_from_damage_stringmap = new Bookloader.Class_damage_from_damage_stringmap();
+  public static final Func_damage_from_damage_stringmap t_damage_from_damage_stringmap = new Bookloader.Class_damage_from_damage_stringmap();
+
+  public static Base.Type_damage f_damage_from_damage_stringmap(final Base.Type_damage damage, final Core.Type_stringmap propmap) {
+    Base.Type_damage output = Base.e_damage;
+    output = Core.f_any_from_map_start_reduce(
+      Base.t_damage,
+      propmap,
+      damage,
+      Core.t_any_from_any_key_value.vx_fn_new((Core.Type_any current_lmb_any, Core.Type_string key_lmb, Core.Type_any value_lmb_any) -> {
+        Base.Type_damage current_lmb = Core.f_any_from_any(Base.t_damage, current_lmb_any);
+        Core.Type_string value_lmb = Core.f_any_from_any(Core.t_string, value_lmb_any);
+        Core.Type_any output_1 = Bookloader.f_damage_from_damage_key_value(current_lmb, key_lmb, value_lmb);
+        return output_1;
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function damage_from_damage_xmlchild
+   * Returns a modified damage based on a given child Xml.
+   * @param  {damage} damage
+   * @param  {xml} child
+   * @return {damage}
+   * (func damage<-damage-xmlchild)
+   */
+  public static interface Func_damage_from_damage_xmlchild extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_damage vx_damage_from_damage_xmlchild(final Base.Type_damage damage, final Xml.Type_xml child);
+  }
+
+  public static class Class_damage_from_damage_xmlchild extends Core.Class_base implements Func_damage_from_damage_xmlchild {
+
+    @Override
+    public Func_damage_from_damage_xmlchild vx_new(Object... vals) {
+      Class_damage_from_damage_xmlchild output = new Class_damage_from_damage_xmlchild();
+      return output;
+    }
+
+    @Override
+    public Func_damage_from_damage_xmlchild vx_copy(Object... vals) {
+      Class_damage_from_damage_xmlchild output = new Class_damage_from_damage_xmlchild();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "damage<-damage-xmlchild", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "damage", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_damage_from_damage_xmlchild vx_empty() {return e_damage_from_damage_xmlchild;}
+    @Override
+    public Func_damage_from_damage_xmlchild vx_type() {return t_damage_from_damage_xmlchild;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_damage damage = Core.f_any_from_any(Base.t_damage, arglist.vx_any(Core.vx_new_int(0)));
+      Xml.Type_xml child = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_damage_from_damage_xmlchild(damage, child);
+      return output;
+    }
+
+    @Override
+    public Base.Type_damage vx_damage_from_damage_xmlchild(final Base.Type_damage damage, final Xml.Type_xml child) {
+      return Bookloader.f_damage_from_damage_xmlchild(damage, child);
+    }
+
+  }
+
+  public static final Func_damage_from_damage_xmlchild e_damage_from_damage_xmlchild = new Bookloader.Class_damage_from_damage_xmlchild();
+  public static final Func_damage_from_damage_xmlchild t_damage_from_damage_xmlchild = new Bookloader.Class_damage_from_damage_xmlchild();
+
+  public static Base.Type_damage f_damage_from_damage_xmlchild(final Base.Type_damage damage, final Xml.Type_xml child) {
+    Base.Type_damage output = Base.e_damage;
+    output = Core.f_let(
+      Base.t_damage,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_string tag = child.tag();
+        return Core.f_switch(
+          Base.t_damage,
+          tag,
+          Core.t_thenelselist.vx_new(
+            Core.f_case_1(
+              Core.vx_new_string(""),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return damage;
+              })
+            ),
+            Core.f_case(
+              Core.f_new(
+                Core.t_list,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string("reference"),
+                  Core.vx_new_string("summary"),
+                  Core.vx_new_string("titles")
+                )
+              ),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Core.f_copy(
+                  damage,
+                  Core.t_anylist.vx_new(
+                      tag,
+                      Xml.f_string_first_from_xml(child)
+                  )
+                );
+              })
+            ),
+            Core.f_else(
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Core.f_copy(
+                  damage,
+                  Core.t_anylist.vx_new(
+                      Core.f_msg_from_error_1(
+                        Core.vx_new_string(":invalidtagfound"),
+                        Core.f_new(
+                          Core.t_anymap,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":type"),
+                            Base.t_damage,
+                            Core.vx_new_string(":tag"),
+                            tag
+                          )
+                        )
+                      )
+                  )
+                );
+              })
+            )
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function damage_from_xml
+   * Returns a damage from a given xml.
+   * @param  {xml} xml
+   * @return {damage}
+   * (func damage<-xml)
+   */
+  public static interface Func_damage_from_xml extends Core.Func_any_from_any {
+    public Base.Type_damage vx_damage_from_xml(final Xml.Type_xml xml);
+  }
+
+  public static class Class_damage_from_xml extends Core.Class_base implements Func_damage_from_xml {
+
+    @Override
+    public Func_damage_from_xml vx_new(Object... vals) {
+      Class_damage_from_xml output = new Class_damage_from_xml();
+      return output;
+    }
+
+    @Override
+    public Func_damage_from_xml vx_copy(Object... vals) {
+      Class_damage_from_xml output = new Class_damage_from_xml();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "damage<-xml", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "damage", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_damage_from_xml vx_empty() {return e_damage_from_xml;}
+    @Override
+    public Func_damage_from_xml vx_type() {return t_damage_from_xml;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Xml.Type_xml inputval = (Xml.Type_xml)value;
+      Core.Type_any outputval = Bookloader.f_damage_from_xml(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Xml.Type_xml xml = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(0)));
+      output = Bookloader.f_damage_from_xml(xml);
+      return output;
+    }
+
+    @Override
+    public Base.Type_damage vx_damage_from_xml(final Xml.Type_xml xml) {
+      return Bookloader.f_damage_from_xml(xml);
+    }
+
+  }
+
+  public static final Func_damage_from_xml e_damage_from_xml = new Bookloader.Class_damage_from_xml();
+  public static final Func_damage_from_xml t_damage_from_xml = new Bookloader.Class_damage_from_xml();
+
+  public static Base.Type_damage f_damage_from_xml(final Xml.Type_xml xml) {
+    Base.Type_damage output = Base.e_damage;
+    output = Core.f_let(
+      Base.t_damage,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_stringmap propmap = xml.propmap();
+        final Base.Type_damage damage = Bookloader.f_damage_from_damage_stringmap(
+          Core.f_empty(
+            Base.t_damage
+          ),
+          propmap
+        );
+        return Core.f_any_from_list_start_reduce(
+          Base.t_damage,
+          xml.children(),
+          damage,
+          Core.t_any_from_reduce.vx_fn_new((Core.Type_any damage_lmb_any, Core.Type_any child_lmb_any) -> {
+            Base.Type_damage damage_lmb = Core.f_any_from_any(Base.t_damage, damage_lmb_any);
+            Xml.Type_xml child_lmb = Core.f_any_from_any(Xml.t_xml, child_lmb_any);
+            Core.Type_any output_1 = Bookloader.f_damage_from_damage_xmlchild(damage_lmb, child_lmb);
+            return output_1;
+          })
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
    * @function file_read_from_bookname
    * Returns a file from a bookname.
    * @param  {string} bookname
@@ -3676,7 +4154,8 @@ public final class Bookloader {
             Core.t_list,
             Core.t_anylist.vx_new(
               Core.vx_new_string("name"),
-              Core.vx_new_string("image")
+              Core.vx_new_string("image"),
+              Core.vx_new_string("stat")
             )
           ),
           Core.t_any_from_func.vx_fn_new(() -> {
@@ -4733,7 +5212,7 @@ public final class Bookloader {
       Base.t_rule,
       Core.t_any_from_func.vx_fn_new(() -> {
         final Core.Type_stringmap propmap = xml.propmap();
-        final Base.Type_rule rul = Bookloader.f_rule_from_rule_stringmap(
+        final Base.Type_rule rule = Bookloader.f_rule_from_rule_stringmap(
           Core.f_empty(
             Base.t_rule
           ),
@@ -4742,7 +5221,7 @@ public final class Bookloader {
         return Core.f_any_from_list_start_reduce(
           Base.t_rule,
           xml.children(),
-          rul,
+          rule,
           Core.t_any_from_reduce.vx_fn_new((Core.Type_any rule_lmb_any, Core.Type_any child_lmb_any) -> {
             Base.Type_rule rule_lmb = Core.f_any_from_any(Base.t_rule, rule_lmb_any);
             Xml.Type_xml child_lmb = Core.f_any_from_any(Xml.t_xml, child_lmb_any);
@@ -5569,6 +6048,12 @@ public final class Bookloader {
               })
             ),
             Core.f_case_1(
+              Core.vx_new_string("damage"),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Bookloader.f_section_from_section_xmldamage(section, child);
+              })
+            ),
+            Core.f_case_1(
               Core.vx_new_string("item"),
               Core.t_any_from_func.vx_fn_new(() -> {
                 return Bookloader.f_section_from_section_xmlitem(section, child);
@@ -5611,6 +6096,12 @@ public final class Bookloader {
               })
             ),
             Core.f_case_1(
+              Core.vx_new_string("terrain"),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Bookloader.f_section_from_section_xmlterrain(section, child);
+              })
+            ),
+            Core.f_case_1(
               Core.vx_new_string("unit"),
               Core.t_any_from_func.vx_fn_new(() -> {
                 return Bookloader.f_section_from_section_xmlunit(section, child);
@@ -5637,6 +6128,108 @@ public final class Bookloader {
                 );
               })
             )
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function section_from_section_xmldamage
+   * Return a section with new damage added to damagemap
+   * @param  {section} section
+   * @param  {xml} xmldamage
+   * @return {section}
+   * (func section<-section-xmldamage)
+   */
+  public static interface Func_section_from_section_xmldamage extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_section vx_section_from_section_xmldamage(final Base.Type_section section, final Xml.Type_xml xmldamage);
+  }
+
+  public static class Class_section_from_section_xmldamage extends Core.Class_base implements Func_section_from_section_xmldamage {
+
+    @Override
+    public Func_section_from_section_xmldamage vx_new(Object... vals) {
+      Class_section_from_section_xmldamage output = new Class_section_from_section_xmldamage();
+      return output;
+    }
+
+    @Override
+    public Func_section_from_section_xmldamage vx_copy(Object... vals) {
+      Class_section_from_section_xmldamage output = new Class_section_from_section_xmldamage();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "section<-section-xmldamage", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "section", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_section_from_section_xmldamage vx_empty() {return e_section_from_section_xmldamage;}
+    @Override
+    public Func_section_from_section_xmldamage vx_type() {return t_section_from_section_xmldamage;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_section section = Core.f_any_from_any(Base.t_section, arglist.vx_any(Core.vx_new_int(0)));
+      Xml.Type_xml xmldamage = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_section_from_section_xmldamage(section, xmldamage);
+      return output;
+    }
+
+    @Override
+    public Base.Type_section vx_section_from_section_xmldamage(final Base.Type_section section, final Xml.Type_xml xmldamage) {
+      return Bookloader.f_section_from_section_xmldamage(section, xmldamage);
+    }
+
+  }
+
+  public static final Func_section_from_section_xmldamage e_section_from_section_xmldamage = new Bookloader.Class_section_from_section_xmldamage();
+  public static final Func_section_from_section_xmldamage t_section_from_section_xmldamage = new Bookloader.Class_section_from_section_xmldamage();
+
+  public static Base.Type_section f_section_from_section_xmldamage(final Base.Type_section section, final Xml.Type_xml xmldamage) {
+    Base.Type_section output = Base.e_section;
+    output = Core.f_let(
+      Base.t_section,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Base.Type_damage current = Bookloader.f_damage_from_xml(xmldamage);
+        final Core.Type_string name = current.name();
+        final Base.Type_damagemap origmap = section.damagemap();
+        final Base.Type_damagemap chgmap = Core.f_copy(
+          origmap,
+          Core.t_anylist.vx_new(
+              name,
+              current
+          )
+        );
+        return Core.f_copy(
+          section,
+          Core.t_anylist.vx_new(
+            Core.vx_new_string(":damagemap"),
+            chgmap
           )
         );
       })
@@ -6359,6 +6952,108 @@ public final class Bookloader {
   }
 
   /**
+   * @function section_from_section_xmlterrain
+   * Return a section with new terrain added to terrainmap
+   * @param  {section} section
+   * @param  {xml} xmlterrain
+   * @return {section}
+   * (func section<-section-xmlterrain)
+   */
+  public static interface Func_section_from_section_xmlterrain extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_section vx_section_from_section_xmlterrain(final Base.Type_section section, final Xml.Type_xml xmlterrain);
+  }
+
+  public static class Class_section_from_section_xmlterrain extends Core.Class_base implements Func_section_from_section_xmlterrain {
+
+    @Override
+    public Func_section_from_section_xmlterrain vx_new(Object... vals) {
+      Class_section_from_section_xmlterrain output = new Class_section_from_section_xmlterrain();
+      return output;
+    }
+
+    @Override
+    public Func_section_from_section_xmlterrain vx_copy(Object... vals) {
+      Class_section_from_section_xmlterrain output = new Class_section_from_section_xmlterrain();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "section<-section-xmlterrain", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "section", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_section_from_section_xmlterrain vx_empty() {return e_section_from_section_xmlterrain;}
+    @Override
+    public Func_section_from_section_xmlterrain vx_type() {return t_section_from_section_xmlterrain;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_section section = Core.f_any_from_any(Base.t_section, arglist.vx_any(Core.vx_new_int(0)));
+      Xml.Type_xml xmlterrain = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_section_from_section_xmlterrain(section, xmlterrain);
+      return output;
+    }
+
+    @Override
+    public Base.Type_section vx_section_from_section_xmlterrain(final Base.Type_section section, final Xml.Type_xml xmlterrain) {
+      return Bookloader.f_section_from_section_xmlterrain(section, xmlterrain);
+    }
+
+  }
+
+  public static final Func_section_from_section_xmlterrain e_section_from_section_xmlterrain = new Bookloader.Class_section_from_section_xmlterrain();
+  public static final Func_section_from_section_xmlterrain t_section_from_section_xmlterrain = new Bookloader.Class_section_from_section_xmlterrain();
+
+  public static Base.Type_section f_section_from_section_xmlterrain(final Base.Type_section section, final Xml.Type_xml xmlterrain) {
+    Base.Type_section output = Base.e_section;
+    output = Core.f_let(
+      Base.t_section,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Base.Type_terrain current = Bookloader.f_terrain_from_xml(xmlterrain);
+        final Core.Type_string name = current.name();
+        final Base.Type_terrainmap origmap = section.terrainmap();
+        final Base.Type_terrainmap chgmap = Core.f_copy(
+          origmap,
+          Core.t_anylist.vx_new(
+              name,
+              current
+          )
+        );
+        return Core.f_copy(
+          section,
+          Core.t_anylist.vx_new(
+            Core.vx_new_string(":terrainmap"),
+            chgmap
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
    * @function section_from_section_xmlunit
    * Return a section with new unit added to unitmap
    * @param  {section} section
@@ -6668,7 +7363,8 @@ public final class Bookloader {
             Core.t_list,
             Core.t_anylist.vx_new(
               Core.vx_new_string("name"),
-              Core.vx_new_string("image")
+              Core.vx_new_string("image"),
+              Core.vx_new_string("stat")
             )
           ),
           Core.t_any_from_func.vx_fn_new(() -> {
@@ -7245,7 +7941,7 @@ public final class Bookloader {
       Base.t_skill,
       Core.t_any_from_func.vx_fn_new(() -> {
         final Core.Type_stringmap propmap = xml.propmap();
-        final Base.Type_skill skl = Bookloader.f_skill_from_skill_stringmap(
+        final Base.Type_skill skill = Bookloader.f_skill_from_skill_stringmap(
           Core.f_empty(
             Base.t_skill
           ),
@@ -7254,7 +7950,7 @@ public final class Bookloader {
         return Core.f_any_from_list_start_reduce(
           Base.t_skill,
           xml.children(),
-          skl,
+          skill,
           Core.t_any_from_reduce.vx_fn_new((Core.Type_any skill_lmb_any, Core.Type_any child_lmb_any) -> {
             Base.Type_skill skill_lmb = Core.f_any_from_any(Base.t_skill, skill_lmb_any);
             Xml.Type_xml child_lmb = Core.f_any_from_any(Xml.t_xml, child_lmb_any);
@@ -8051,6 +8747,484 @@ public final class Bookloader {
   }
 
   /**
+   * @function terrain_from_terrain_key_value
+   * Returns a modified terrain from a key value.
+   * @param  {terrain} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {terrain}
+   * (func terrain<-terrain-key-value)
+   */
+  public static interface Func_terrain_from_terrain_key_value extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_terrain vx_terrain_from_terrain_key_value(final Base.Type_terrain current, final Core.Type_string key, final Core.Type_string value);
+  }
+
+  public static class Class_terrain_from_terrain_key_value extends Core.Class_base implements Func_terrain_from_terrain_key_value {
+
+    @Override
+    public Func_terrain_from_terrain_key_value vx_new(Object... vals) {
+      Class_terrain_from_terrain_key_value output = new Class_terrain_from_terrain_key_value();
+      return output;
+    }
+
+    @Override
+    public Func_terrain_from_terrain_key_value vx_copy(Object... vals) {
+      Class_terrain_from_terrain_key_value output = new Class_terrain_from_terrain_key_value();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "terrain<-terrain-key-value", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "terrain", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_terrain_from_terrain_key_value vx_empty() {return e_terrain_from_terrain_key_value;}
+    @Override
+    public Func_terrain_from_terrain_key_value vx_type() {return t_terrain_from_terrain_key_value;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_terrain current = Core.f_any_from_any(Base.t_terrain, arglist.vx_any(Core.vx_new_int(0)));
+      Core.Type_string key = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(1)));
+      Core.Type_string value = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(2)));
+      output = Bookloader.f_terrain_from_terrain_key_value(current, key, value);
+      return output;
+    }
+
+    @Override
+    public Base.Type_terrain vx_terrain_from_terrain_key_value(final Base.Type_terrain current, final Core.Type_string key, final Core.Type_string value) {
+      return Bookloader.f_terrain_from_terrain_key_value(current, key, value);
+    }
+
+  }
+
+  public static final Func_terrain_from_terrain_key_value e_terrain_from_terrain_key_value = new Bookloader.Class_terrain_from_terrain_key_value();
+  public static final Func_terrain_from_terrain_key_value t_terrain_from_terrain_key_value = new Bookloader.Class_terrain_from_terrain_key_value();
+
+  public static Base.Type_terrain f_terrain_from_terrain_key_value(final Base.Type_terrain current, final Core.Type_string key, final Core.Type_string value) {
+    Base.Type_terrain output = Base.e_terrain;
+    output = Core.f_switch(
+      Base.t_terrain,
+      key,
+      Core.t_thenelselist.vx_new(
+        Core.f_case_1(
+          Core.vx_new_string(""),
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return current;
+          })
+        ),
+        Core.f_case(
+          Core.f_new(
+            Core.t_list,
+            Core.t_anylist.vx_new(
+              Core.vx_new_string("name"),
+              Core.vx_new_string("image")
+            )
+          ),
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return Core.f_copy(
+              current,
+              Core.t_anylist.vx_new(
+                  key,
+                  value
+              )
+            );
+          })
+        ),
+        Core.f_else(
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return Core.f_copy(
+              current,
+              Core.t_anylist.vx_new(
+                  Core.f_msg_from_error_1(
+                    Core.vx_new_string(":invalidproperty"),
+                    Core.f_new(
+                      Core.t_anymap,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":type"),
+                        Base.t_terrain,
+                        Core.vx_new_string(":prop"),
+                        key,
+                        Core.vx_new_string(":value"),
+                        value
+                      )
+                    )
+                  )
+              )
+            );
+          })
+        )
+      )
+    );
+    return output;
+  }
+
+  /**
+   * @function terrain_from_terrain_stringmap
+   * Returns a terrain from a propmap.
+   * @param  {terrain} terrain
+   * @param  {stringmap} propmap
+   * @return {terrain}
+   * (func terrain<-terrain-stringmap)
+   */
+  public static interface Func_terrain_from_terrain_stringmap extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_terrain vx_terrain_from_terrain_stringmap(final Base.Type_terrain terrain, final Core.Type_stringmap propmap);
+  }
+
+  public static class Class_terrain_from_terrain_stringmap extends Core.Class_base implements Func_terrain_from_terrain_stringmap {
+
+    @Override
+    public Func_terrain_from_terrain_stringmap vx_new(Object... vals) {
+      Class_terrain_from_terrain_stringmap output = new Class_terrain_from_terrain_stringmap();
+      return output;
+    }
+
+    @Override
+    public Func_terrain_from_terrain_stringmap vx_copy(Object... vals) {
+      Class_terrain_from_terrain_stringmap output = new Class_terrain_from_terrain_stringmap();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "terrain<-terrain-stringmap", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "terrain", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_terrain_from_terrain_stringmap vx_empty() {return e_terrain_from_terrain_stringmap;}
+    @Override
+    public Func_terrain_from_terrain_stringmap vx_type() {return t_terrain_from_terrain_stringmap;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_terrain terrain = Core.f_any_from_any(Base.t_terrain, arglist.vx_any(Core.vx_new_int(0)));
+      Core.Type_stringmap propmap = Core.f_any_from_any(Core.t_stringmap, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_terrain_from_terrain_stringmap(terrain, propmap);
+      return output;
+    }
+
+    @Override
+    public Base.Type_terrain vx_terrain_from_terrain_stringmap(final Base.Type_terrain terrain, final Core.Type_stringmap propmap) {
+      return Bookloader.f_terrain_from_terrain_stringmap(terrain, propmap);
+    }
+
+  }
+
+  public static final Func_terrain_from_terrain_stringmap e_terrain_from_terrain_stringmap = new Bookloader.Class_terrain_from_terrain_stringmap();
+  public static final Func_terrain_from_terrain_stringmap t_terrain_from_terrain_stringmap = new Bookloader.Class_terrain_from_terrain_stringmap();
+
+  public static Base.Type_terrain f_terrain_from_terrain_stringmap(final Base.Type_terrain terrain, final Core.Type_stringmap propmap) {
+    Base.Type_terrain output = Base.e_terrain;
+    output = Core.f_any_from_map_start_reduce(
+      Base.t_terrain,
+      propmap,
+      terrain,
+      Core.t_any_from_any_key_value.vx_fn_new((Core.Type_any current_lmb_any, Core.Type_string key_lmb, Core.Type_any value_lmb_any) -> {
+        Base.Type_terrain current_lmb = Core.f_any_from_any(Base.t_terrain, current_lmb_any);
+        Core.Type_string value_lmb = Core.f_any_from_any(Core.t_string, value_lmb_any);
+        Core.Type_any output_1 = Bookloader.f_terrain_from_terrain_key_value(current_lmb, key_lmb, value_lmb);
+        return output_1;
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function terrain_from_terrain_xmlchild
+   * Returns a modified terrain based on a given child Xml.
+   * @param  {terrain} terrain
+   * @param  {xml} child
+   * @return {terrain}
+   * (func terrain<-terrain-xmlchild)
+   */
+  public static interface Func_terrain_from_terrain_xmlchild extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_terrain vx_terrain_from_terrain_xmlchild(final Base.Type_terrain terrain, final Xml.Type_xml child);
+  }
+
+  public static class Class_terrain_from_terrain_xmlchild extends Core.Class_base implements Func_terrain_from_terrain_xmlchild {
+
+    @Override
+    public Func_terrain_from_terrain_xmlchild vx_new(Object... vals) {
+      Class_terrain_from_terrain_xmlchild output = new Class_terrain_from_terrain_xmlchild();
+      return output;
+    }
+
+    @Override
+    public Func_terrain_from_terrain_xmlchild vx_copy(Object... vals) {
+      Class_terrain_from_terrain_xmlchild output = new Class_terrain_from_terrain_xmlchild();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "terrain<-terrain-xmlchild", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "terrain", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_terrain_from_terrain_xmlchild vx_empty() {return e_terrain_from_terrain_xmlchild;}
+    @Override
+    public Func_terrain_from_terrain_xmlchild vx_type() {return t_terrain_from_terrain_xmlchild;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_terrain terrain = Core.f_any_from_any(Base.t_terrain, arglist.vx_any(Core.vx_new_int(0)));
+      Xml.Type_xml child = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_terrain_from_terrain_xmlchild(terrain, child);
+      return output;
+    }
+
+    @Override
+    public Base.Type_terrain vx_terrain_from_terrain_xmlchild(final Base.Type_terrain terrain, final Xml.Type_xml child) {
+      return Bookloader.f_terrain_from_terrain_xmlchild(terrain, child);
+    }
+
+  }
+
+  public static final Func_terrain_from_terrain_xmlchild e_terrain_from_terrain_xmlchild = new Bookloader.Class_terrain_from_terrain_xmlchild();
+  public static final Func_terrain_from_terrain_xmlchild t_terrain_from_terrain_xmlchild = new Bookloader.Class_terrain_from_terrain_xmlchild();
+
+  public static Base.Type_terrain f_terrain_from_terrain_xmlchild(final Base.Type_terrain terrain, final Xml.Type_xml child) {
+    Base.Type_terrain output = Base.e_terrain;
+    output = Core.f_let(
+      Base.t_terrain,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_string tag = child.tag();
+        return Core.f_switch(
+          Base.t_terrain,
+          tag,
+          Core.t_thenelselist.vx_new(
+            Core.f_case_1(
+              Core.vx_new_string(""),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return terrain;
+              })
+            ),
+            Core.f_case(
+              Core.f_new(
+                Core.t_list,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string("reference"),
+                  Core.vx_new_string("summary"),
+                  Core.vx_new_string("titles"),
+                  Core.vx_new_string("classification")
+                )
+              ),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Core.f_copy(
+                  terrain,
+                  Core.t_anylist.vx_new(
+                      tag,
+                      Xml.f_string_first_from_xml(child)
+                  )
+                );
+              })
+            ),
+            Core.f_else(
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Core.f_copy(
+                  terrain,
+                  Core.t_anylist.vx_new(
+                      Core.f_msg_from_error_1(
+                        Core.vx_new_string(":invalidtagfound"),
+                        Core.f_new(
+                          Core.t_anymap,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":type"),
+                            Base.t_terrain,
+                            Core.vx_new_string(":tag"),
+                            tag
+                          )
+                        )
+                      )
+                  )
+                );
+              })
+            )
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function terrain_from_xml
+   * Returns a terrain from a given xml.
+   * @param  {xml} xml
+   * @return {terrain}
+   * (func terrain<-xml)
+   */
+  public static interface Func_terrain_from_xml extends Core.Func_any_from_any {
+    public Base.Type_terrain vx_terrain_from_xml(final Xml.Type_xml xml);
+  }
+
+  public static class Class_terrain_from_xml extends Core.Class_base implements Func_terrain_from_xml {
+
+    @Override
+    public Func_terrain_from_xml vx_new(Object... vals) {
+      Class_terrain_from_xml output = new Class_terrain_from_xml();
+      return output;
+    }
+
+    @Override
+    public Func_terrain_from_xml vx_copy(Object... vals) {
+      Class_terrain_from_xml output = new Class_terrain_from_xml();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "terrain<-xml", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "terrain", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_terrain_from_xml vx_empty() {return e_terrain_from_xml;}
+    @Override
+    public Func_terrain_from_xml vx_type() {return t_terrain_from_xml;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Xml.Type_xml inputval = (Xml.Type_xml)value;
+      Core.Type_any outputval = Bookloader.f_terrain_from_xml(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Xml.Type_xml xml = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(0)));
+      output = Bookloader.f_terrain_from_xml(xml);
+      return output;
+    }
+
+    @Override
+    public Base.Type_terrain vx_terrain_from_xml(final Xml.Type_xml xml) {
+      return Bookloader.f_terrain_from_xml(xml);
+    }
+
+  }
+
+  public static final Func_terrain_from_xml e_terrain_from_xml = new Bookloader.Class_terrain_from_xml();
+  public static final Func_terrain_from_xml t_terrain_from_xml = new Bookloader.Class_terrain_from_xml();
+
+  public static Base.Type_terrain f_terrain_from_xml(final Xml.Type_xml xml) {
+    Base.Type_terrain output = Base.e_terrain;
+    output = Core.f_let(
+      Base.t_terrain,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_stringmap propmap = xml.propmap();
+        final Base.Type_terrain terrain = Bookloader.f_terrain_from_terrain_stringmap(
+          Core.f_empty(
+            Base.t_terrain
+          ),
+          propmap
+        );
+        return Core.f_any_from_list_start_reduce(
+          Base.t_terrain,
+          xml.children(),
+          terrain,
+          Core.t_any_from_reduce.vx_fn_new((Core.Type_any terrain_lmb_any, Core.Type_any child_lmb_any) -> {
+            Base.Type_terrain terrain_lmb = Core.f_any_from_any(Base.t_terrain, terrain_lmb_any);
+            Xml.Type_xml child_lmb = Core.f_any_from_any(Xml.t_xml, child_lmb_any);
+            Core.Type_any output_1 = Bookloader.f_terrain_from_terrain_xmlchild(terrain_lmb, child_lmb);
+            return output_1;
+          })
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
    * @function unit_from_unit_key_value
    * Returns a modified unit from a key value.
    * @param  {unit} current
@@ -8146,6 +9320,7 @@ public final class Bookloader {
               Core.vx_new_string("name"),
               Core.vx_new_string("image"),
               Core.vx_new_string("classification"),
+              Core.vx_new_string("crew"),
               Core.vx_new_string("body"),
               Core.vx_new_string("height"),
               Core.vx_new_string("length"),
@@ -9432,6 +10607,7 @@ public final class Bookloader {
             Core.t_anylist.vx_new(
               Core.vx_new_string("name"),
               Core.vx_new_string("image"),
+              Core.vx_new_string("modifiers"),
               Core.vx_new_string("number")
             )
           ),
@@ -12196,6 +13372,10 @@ public final class Bookloader {
     mapfunc.put("chapter<-chapter-xmlchild", Bookloader.t_chapter_from_chapter_xmlchild);
     mapfunc.put("chapter<-chapter-xmlsection", Bookloader.t_chapter_from_chapter_xmlsection);
     mapfunc.put("chapter<-xml", Bookloader.t_chapter_from_xml);
+    mapfunc.put("damage<-damage-key-value", Bookloader.t_damage_from_damage_key_value);
+    mapfunc.put("damage<-damage-stringmap", Bookloader.t_damage_from_damage_stringmap);
+    mapfunc.put("damage<-damage-xmlchild", Bookloader.t_damage_from_damage_xmlchild);
+    mapfunc.put("damage<-xml", Bookloader.t_damage_from_xml);
     mapfunc.put("file-read<-bookname", Bookloader.t_file_read_from_bookname);
     mapfunc.put("file-write<-book", Bookloader.t_file_write_from_book);
     mapfunc.put("item<-item-key-value", Bookloader.t_item_from_item_key_value);
@@ -12224,6 +13404,7 @@ public final class Bookloader {
     mapfunc.put("section<-section-key-value", Bookloader.t_section_from_section_key_value);
     mapfunc.put("section<-section-stringmap", Bookloader.t_section_from_section_stringmap);
     mapfunc.put("section<-section-xmlchild", Bookloader.t_section_from_section_xmlchild);
+    mapfunc.put("section<-section-xmldamage", Bookloader.t_section_from_section_xmldamage);
     mapfunc.put("section<-section-xmlitem", Bookloader.t_section_from_section_xmlitem);
     mapfunc.put("section<-section-xmllocation", Bookloader.t_section_from_section_xmllocation);
     mapfunc.put("section<-section-xmlpower", Bookloader.t_section_from_section_xmlpower);
@@ -12231,6 +13412,7 @@ public final class Bookloader {
     mapfunc.put("section<-section-xmlscenario", Bookloader.t_section_from_section_xmlscenario);
     mapfunc.put("section<-section-xmlsection", Bookloader.t_section_from_section_xmlsection);
     mapfunc.put("section<-section-xmlskill", Bookloader.t_section_from_section_xmlskill);
+    mapfunc.put("section<-section-xmlterrain", Bookloader.t_section_from_section_xmlterrain);
     mapfunc.put("section<-section-xmlunit", Bookloader.t_section_from_section_xmlunit);
     mapfunc.put("section<-xml", Bookloader.t_section_from_xml);
     mapfunc.put("skill<-skill-key-value", Bookloader.t_skill_from_skill_key_value);
@@ -12246,6 +13428,10 @@ public final class Bookloader {
     mapfunc.put("string-read<-bookname", Bookloader.t_string_read_from_bookname);
     mapfunc.put("string-vxlisp<-book", Bookloader.t_string_vxlisp_from_book);
     mapfunc.put("string-writename<-book", Bookloader.t_string_writename_from_book);
+    mapfunc.put("terrain<-terrain-key-value", Bookloader.t_terrain_from_terrain_key_value);
+    mapfunc.put("terrain<-terrain-stringmap", Bookloader.t_terrain_from_terrain_stringmap);
+    mapfunc.put("terrain<-terrain-xmlchild", Bookloader.t_terrain_from_terrain_xmlchild);
+    mapfunc.put("terrain<-xml", Bookloader.t_terrain_from_xml);
     mapfunc.put("unit<-unit-key-value", Bookloader.t_unit_from_unit_key_value);
     mapfunc.put("unit<-unit-stringmap", Bookloader.t_unit_from_unit_stringmap);
     mapfunc.put("unit<-unit-xmlchild", Bookloader.t_unit_from_unit_xmlchild);

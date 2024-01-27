@@ -541,20 +541,10 @@ for many years with minor upgrades.
 * 2 Laser Turrets"
               :speed ".6g"
               :classification "Hvy. Spacecraft"
+              :crew "60"
               :mass "5500tons"
               :length "208m"
-              :width "80m"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "crew"
-                    :value "60")
-                  :severity 2))))
+              :width "80m")
             "Lucifer Cybersat"
              (unit
               :name "Lucifer Cybersat"
@@ -714,6 +704,7 @@ Suits, so it carries more interceptors than Mechs.
 * 6 Interceptors
 * 4 Mech Suits"
               :classification "Hvy. Spacecraft"
+              :crew "200"
               :mass "30ktons"
               :length "325m"
               :width "200m"
@@ -727,20 +718,7 @@ Suits, so it carries more interceptors than Mechs.
                     :type nx/tactics/base/unit
                     :prop "speedspace"
                     :value ".5g")
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :detail
-                      (anymap
-                       :type nx/tactics/base/unit
-                       :prop "crew"
-                       :value "200")
-                     :severity 2))))))
+                  :severity 2))))
             "Tengu Escort Carrier"
              (unit
               :name "Tengu Escort Carrier"
@@ -753,6 +731,7 @@ policing. It has extensive supplies but lacks firepower.
 * 2 Fighters
 * 2 Catapults"
               :classification "Hvy. Spacecraft"
+              :crew "24"
               :mass "25ktons"
               :length "250m"
               :width "38m"
@@ -766,20 +745,7 @@ policing. It has extensive supplies but lacks firepower.
                     :type nx/tactics/base/unit
                     :prop "speedspace"
                     :value ".5g")
-                  :severity 2))
-               :msgblocks
-                (msgblocklist
-                 (msgblock
-                  :msgs
-                   (msglist
-                    (msg
-                     :code ":invalidproperty"
-                     :detail
-                      (anymap
-                       :type nx/tactics/base/unit
-                       :prop "crew"
-                       :value "24")
-                     :severity 2))))))
+                  :severity 2))))
             "Wyvern Mech Suit"
              (unit
               :name "Wyvern Mech Suit"

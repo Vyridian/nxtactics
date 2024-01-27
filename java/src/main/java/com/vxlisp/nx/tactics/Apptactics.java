@@ -211,21 +211,15 @@ public final class Apptactics {
         final Core.Type_stringlist booknames = Core.f_new(
           Core.t_stringlist,
           Core.t_anylist.vx_new(
-              Core.vx_new_string("TACTICSBOOK_ADVANCED"),
               Core.vx_new_string("TACTICSBOOK_ANCIENT"),
               Core.vx_new_string("TACTICSBOOK_AOSAIL"),
               Core.vx_new_string("TACTICSBOOK_AOSTEAM"),
-              Core.vx_new_string("TACTICSBOOK_BESTIARY"),
-              Core.vx_new_string("TACTICSBOOK_COMBAT"),
               Core.vx_new_string("TACTICSBOOK_FANTASY"),
               Core.vx_new_string("TACTICSBOOK_GIANT"),
               Core.vx_new_string("TACTICSBOOK_HIGHTECH"),
-              Core.vx_new_string("TACTICSBOOK_LANDSEA"),
               Core.vx_new_string("TACTICSBOOK_MAGIC"),
-              Core.vx_new_string("TACTICSBOOK_MODERN"),
               Core.vx_new_string("TACTICSBOOK_POWERS"),
               Core.vx_new_string("TACTICSBOOK_SCIFI"),
-              Core.vx_new_string("TACTICSBOOK_SKILLS"),
               Core.vx_new_string("TACTICSBOOK_WORLDWARS")
           )
         );

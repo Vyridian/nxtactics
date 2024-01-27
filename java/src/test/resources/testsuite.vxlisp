@@ -17543,6 +17543,8 @@ ab
       :stat 0
       :suit 0
       :suitmap 0
+      :terrain 0
+      :terrainmap 0
       :threat 0
       :unit 0
       :unitability 0
@@ -17581,7 +17583,7 @@ ab
      (testcoveragenums
       :pct 5
       :tests 5
-      :total 94)
+      :total 96)
     :funcnums
      (testcoveragenums
       :pct 0
@@ -17592,12 +17594,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 94)
+      :total 96)
     :typenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 59))
+      :total 61))
   :passfail true
   :testpkg "nx/tactics/base")
  (testpackage
@@ -17605,8 +17607,8 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
-      :bk 0)
-    :testpkg "nx/tactics/books/age_of_steam")
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/advanced_rules")
   :coveragesummary
    (testcoveragesummary
     :bigospacenums
@@ -17634,7 +17636,7 @@ ab
       :pct 0
       :tests 0
       :total 1)
-    :testpkg "nx/tactics/books/age_of_steam"
+    :testpkg "nx/tactics/books/advanced_rules"
     :totalnums
      (testcoveragenums
       :pct 0
@@ -17646,7 +17648,54 @@ ab
       :tests 0
       :total 0))
   :passfail true
-  :testpkg "nx/tactics/books/age_of_steam")
+  :testpkg "nx/tactics/books/advanced_rules")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/bestiary")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/bestiary"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/bestiary")
  (testpackage
   :caselist
    (testcaselist
@@ -18288,6 +18337,64 @@ ab
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
+     :casename "damage<-damage-stringmap"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/damage
+  :name  "name"
+  :image "image")
+ (damage<-damage-stringmap
+  (empty base/damage)
+  (stringmap
+   :name  "name"
+   :image "image")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (damage
+            :name "name"
+            :image "image")
+          :actual
+           (damage
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "damage<-damage-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/damage
+  :titles "titles")
+ (damage<-damage-xmlchild
+  (empty base/damage)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (damage
+            :titles "titles")
+          :actual
+           (damage
+            :titles "titles")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
      :casename "power<-power-stringmap"
      :describelist
       (testdescribelist
@@ -18906,6 +19013,64 @@ ab
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
+     :casename "terrain<-terrain-stringmap"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/terrain
+  :name  "name"
+  :image "image")
+ (terrain<-terrain-stringmap
+  (empty base/terrain)
+  (stringmap
+   :name  "name"
+   :image "image")))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (terrain
+            :name "name"
+            :image "image")
+          :actual
+           (terrain
+            :name "name"
+            :image "image")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "terrain<-terrain-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/terrain
+  :titles "titles")
+ (terrain<-terrain-xmlchild
+  (empty base/terrain)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (terrain
+            :titles "titles")
+          :actual
+           (terrain
+            :titles "titles")))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
      :casename "unit<-unit-stringmap"
      :describelist
       (testdescribelist
@@ -19384,6 +19549,112 @@ ab
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
+     :casename "unitpower<-unitpower-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unitpower
+  :summary "summary1")
+ (unitpower<-unitpower-xmlchild
+  (empty base/unitpower)
+  (xml/xml
+   :tag "summary"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "summary1")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unitpower
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":summary"
+                :path "nx/tactics/base/unitpower"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":summary1"
+                :path "nx/tactics/base/unitpower"
+                :severity 3))))
+          :actual
+           (unitpower
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":summary"
+                :path "nx/tactics/base/unitpower"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":summary1"
+                :path "nx/tactics/base/unitpower"
+                :severity 3))))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
+     :casename "unitskill<-unitskill-xmlchild"
+     :describelist
+      (testdescribelist
+       (testdescribe
+        :describename
+         "(test
+ (base/unitskill
+  :summary "summary1")
+ (unitskill<-unitskill-xmlchild
+  (empty base/unitskill)
+  (xml/xml
+   :tag "summary"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "summary1")))))"
+        :testresult
+         (testresult
+          :code ":eq"
+          :passfail true
+          :expected
+           (unitskill
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":summary"
+                :path "nx/tactics/base/unitskill"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":summary1"
+                :path "nx/tactics/base/unitskill"
+                :severity 3))))
+          :actual
+           (unitskill
+            (msgblock
+             :msgs
+              (msglist
+               (msg
+                :code ":invalidkey"
+                :detail ":summary"
+                :path "nx/tactics/base/unitskill"
+                :severity 3)
+               (msg
+                :code ":invalidkey"
+                :detail ":summary1"
+                :path "nx/tactics/base/unitskill"
+                :severity 3))))))))
+    (testcase
+     :passfail true
+     :testpkg "nx/tactics/books/bookloader"
      :casename "unitspecialty<-unitspecialty-stringmap"
      :describelist
       (testdescribelist
@@ -19580,6 +19851,10 @@ ab
       :chapter<-chapter-xmlchild 1
       :chapter<-chapter-xmlsection 0
       :chapter<-xml 1
+      :damage<-damage-key-value 0
+      :damage<-damage-stringmap 1
+      :damage<-damage-xmlchild 1
+      :damage<-xml 0
       :file-read<-bookname 0
       :file-write<-book 0
       :item<-item-key-value 0
@@ -19608,6 +19883,7 @@ ab
       :section<-section-key-value 0
       :section<-section-stringmap 0
       :section<-section-xmlchild 0
+      :section<-section-xmldamage 0
       :section<-section-xmlitem 0
       :section<-section-xmllocation 0
       :section<-section-xmlpower 0
@@ -19615,6 +19891,7 @@ ab
       :section<-section-xmlscenario 0
       :section<-section-xmlsection 0
       :section<-section-xmlskill 0
+      :section<-section-xmlterrain 0
       :section<-section-xmlunit 0
       :section<-xml 1
       :skill<-skill-key-value 0
@@ -19630,6 +19907,10 @@ ab
       :string-read<-bookname 0
       :string-vxlisp<-book 0
       :string-writename<-book 0
+      :terrain<-terrain-key-value 0
+      :terrain<-terrain-stringmap 1
+      :terrain<-terrain-xmlchild 1
+      :terrain<-xml 0
       :unit<-unit-key-value 0
       :unit<-unit-stringmap 1
       :unit<-unit-xmlchild 1
@@ -19648,14 +19929,14 @@ ab
       :unitpower<-unitpower-key-value 0
       :unitpower<-unitpower-stringmap 0
       :unitpower<-unitpower-xmlability 0
-      :unitpower<-unitpower-xmlchild 0
+      :unitpower<-unitpower-xmlchild 1
       :unitpower<-unitpower-xmlitem 0
       :unitpower<-unitpower-xmlspecialty 0
       :unitpower<-xml 0
       :unitskill<-unitskill-key-value 0
       :unitskill<-unitskill-stringmap 0
       :unitskill<-unitskill-xmlability 0
-      :unitskill<-unitskill-xmlchild 0
+      :unitskill<-unitskill-xmlchild 1
       :unitskill<-unitskill-xmlitem 0
       :unitskill<-unitskill-xmlspecialty 0
       :unitskill<-xml 0
@@ -19673,12 +19954,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 106)
+      :total 116)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 106)
+      :total 116)
     :constnums
      (testcoveragenums
       :pct 100
@@ -19686,20 +19967,20 @@ ab
       :total 0)
     :docnums
      (testcoveragenums
-      :pct 87
-      :tests 93
-      :total 106)
+      :pct 88
+      :tests 103
+      :total 116)
     :funcnums
      (testcoveragenums
-      :pct 35
-      :tests 38
-      :total 106)
+      :pct 37
+      :tests 44
+      :total 116)
     :testpkg "nx/tactics/books/bookloader"
     :totalnums
      (testcoveragenums
-      :pct 35
-      :tests 38
-      :total 106)
+      :pct 37
+      :tests 44
+      :total 116)
     :typenums
      (testcoveragenums
       :pct 100
@@ -19707,6 +19988,194 @@ ab
       :total 0))
   :passfail true
   :testpkg "nx/tactics/books/bookloader")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/characters")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/characters"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/characters")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/combat")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/combat"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/combat")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/core_rules")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/core_rules"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/core_rules")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/gear")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/gear"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/gear")
  (testpackage
   :coveragedetail
    (testcoveragedetail
@@ -19756,6 +20225,523 @@ ab
       :total 0))
   :passfail true
   :testpkg "nx/tactics/books/gettingstarted")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/horror")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/horror"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/horror")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/land_sea_and_air")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/land_sea_and_air"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/land_sea_and_air")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/magic")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/magic"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/magic")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/medieval")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/medieval"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/medieval")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/modern")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/modern"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/modern")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/modern_fantasy")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/modern_fantasy"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/modern_fantasy")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/prehistory")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/prehistory"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/prehistory")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/pulp_fiction")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/pulp_fiction"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/pulp_fiction")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/skills")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/skills"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/skills")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/space_and_time")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/space_and_time"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/space_and_time")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/superheroes")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/superheroes"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/superheroes")
  (testpackage
   :coveragedetail
    (testcoveragedetail

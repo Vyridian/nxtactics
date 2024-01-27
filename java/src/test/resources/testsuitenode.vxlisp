@@ -6,6 +6,30 @@
     (headchildlist
      (meta
       :charset "utf-8")
+     (meta
+      (msgblock
+       :msgs
+        (msglist
+         (msg
+          :code ":invalidkey"
+          :detail ":name"
+          :path "vx/web/html/meta"
+          :severity 3)
+         (msg
+          :code ":invalidkey"
+          :detail ":viewport"
+          :path "vx/web/html/meta"
+          :severity 3)
+         (msg
+          :code ":invalidkey"
+          :detail ":content"
+          :path "vx/web/html/meta"
+          :severity 3)
+         (msg
+          :code ":invalidkey"
+          :detail ":width=device-width, initial-scale=1.0"
+          :path "vx/web/html/meta"
+          :severity 3))))
      (title
       :text "Test Suite")
      vx/test/stylesheet-test))
@@ -39555,7 +39579,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "0% 0/94")
+                  :text "0% 0/96")
                  (p
                   :style
                    (style
@@ -39563,7 +39587,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "0% 0/59")
+                  :text "0% 0/61")
                  (p
                   :style
                    (style
@@ -39587,7 +39611,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "5% 5/94")
+                  :text "5% 5/96")
                  (p
                   :style
                    (style
@@ -39670,7 +39694,130 @@ ab
                      (propmap
                       :font-weight "bold"
                       :width "180px"))
-                  :text "nx/tactics/books/age_of_steam")
+                  :text "nx/tactics/books/advanced_rules")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/bestiary")
                  (p
                   :style
                    (style
@@ -39801,7 +39948,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "35% 38/106")
+                  :text "37% 44/116")
                  (p
                   :style
                    (style
@@ -39825,7 +39972,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "35% 38/106")
+                  :text "37% 44/116")
                  (p
                   :style
                    (style
@@ -39833,7 +39980,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "87% 93/106")
+                  :text "88% 103/116")
                  (p
                   :style
                    (style
@@ -39841,7 +39988,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "0% 0/106")
+                  :text "0% 0/116")
                  (p
                   :style
                    (style
@@ -39849,7 +39996,7 @@ ab
                     :props
                      (propmap
                       :width "90px"))
-                  :text "0% 0/106"))
+                  :text "0% 0/116"))
                :nodes
                 (divchildlist
                  (div
@@ -41651,6 +41798,186 @@ ab
                                     :unicode-bidi "embed"
                                     :font-family "monospace"
                                     :white-space "pre"))
+                                :text "damage<-damage-stringmap")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/damage
+  :name  "name"
+  :image "image")
+ (damage<-damage-stringmap
+  (empty base/damage)
+  (stringmap
+   :name  "name"
+   :image "image")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(damage
+ :name "name"
+ :image "image")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(damage
+ :name "name"
+ :image "image")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "damage<-damage-xmlchild")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/damage
+  :titles "titles")
+ (damage<-damage-xmlchild
+  (empty base/damage)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(damage
+ :titles "titles")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(damage
+ :titles "titles")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
                                 :text "power<-power-stringmap")))
                             (td
                              :nodes
@@ -43001,6 +43328,186 @@ ab
                                     :unicode-bidi "embed"
                                     :font-family "monospace"
                                     :white-space "pre"))
+                                :text "terrain<-terrain-stringmap")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/terrain
+  :name  "name"
+  :image "image")
+ (terrain<-terrain-stringmap
+  (empty base/terrain)
+  (stringmap
+   :name  "name"
+   :image "image")))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(terrain
+ :name "name"
+ :image "image")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(terrain
+ :name "name"
+ :image "image")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "terrain<-terrain-xmlchild")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/terrain
+  :titles "titles")
+ (terrain<-terrain-xmlchild
+  (empty base/terrain)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(terrain
+ :titles "titles")")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(terrain
+ :titles "titles")")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
                                 :text "unit<-unit-stringmap")))
                             (td
                              :nodes
@@ -44028,6 +44535,234 @@ ab
                                     :unicode-bidi "embed"
                                     :font-family "monospace"
                                     :white-space "pre"))
+                                :text "unitpower<-unitpower-xmlchild")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/unitpower
+  :summary "summary1")
+ (unitpower<-unitpower-xmlchild
+  (empty base/unitpower)
+  (xml/xml
+   :tag "summary"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "summary1")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(unitpower
+ (msgblock
+  :msgs
+   (msglist
+    (msg
+     :code ":invalidkey"
+     :detail ":summary"
+     :path "nx/tactics/base/unitpower"
+     :severity 3)
+    (msg
+     :code ":invalidkey"
+     :detail ":summary1"
+     :path "nx/tactics/base/unitpower"
+     :severity 3))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(unitpower
+ (msgblock
+  :msgs
+   (msglist
+    (msg
+     :code ":invalidkey"
+     :detail ":summary"
+     :path "nx/tactics/base/unitpower"
+     :severity 3)
+    (msg
+     :code ":invalidkey"
+     :detail ":summary1"
+     :path "nx/tactics/base/unitpower"
+     :severity 3))))")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text "unitskill<-unitskill-xmlchild")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(test
+ (base/unitskill
+  :summary "summary1")
+ (unitskill<-unitskill-xmlchild
+  (empty base/unitskill)
+  (xml/xml
+   :tag "summary"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "summary1")))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(unitskill
+ (msgblock
+  :msgs
+   (msglist
+    (msg
+     :code ":invalidkey"
+     :detail ":summary"
+     :path "nx/tactics/base/unitskill"
+     :severity 3)
+    (msg
+     :code ":invalidkey"
+     :detail ":summary1"
+     :path "nx/tactics/base/unitskill"
+     :severity 3))))")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
+                                :text
+                                 "(unitskill
+ (msgblock
+  :msgs
+   (msglist
+    (msg
+     :code ":invalidkey"
+     :detail ":summary"
+     :path "nx/tactics/base/unitskill"
+     :severity 3)
+    (msg
+     :code ":invalidkey"
+     :detail ":summary1"
+     :path "nx/tactics/base/unitskill"
+     :severity 3))))")))))
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".passflag"
+                                  :props
+                                   (propmap
+                                    :background-color "green"
+                                    :color "white"
+                                    :padding-left "4px"
+                                    :padding-right "4px"
+                                    :padding-top "1px"
+                                    :padding-bottom "1px"))
+                                :text "Pass")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :style
+                                 (style
+                                  :name ".preformatted"
+                                  :props
+                                   (propmap
+                                    :display "block"
+                                    :unicode-bidi "embed"
+                                    :font-family "monospace"
+                                    :white-space "pre"))
                                 :text "unitspecialty<-unitspecialty-stringmap")))
                             (td
                              :nodes
@@ -44413,6 +45148,498 @@ ab
                      (propmap
                       :font-weight "bold"
                       :width "180px"))
+                  :text "nx/tactics/books/characters")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/combat")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/core_rules")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/gear")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
                   :text "nx/tactics/books/gettingstarted")
                  (p
                   :style
@@ -44470,6 +45697,1359 @@ ab
                      (propmap
                       :width "90px"))
                   :text "100% 0/0"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/horror")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/land_sea_and_air")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/magic")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/medieval")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/modern")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/modern_fantasy")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/prehistory")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/pulp_fiction")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/skills")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/space_and_time")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
+               :nodes
+                (divchildlist
+                 (div
+                  :nodes
+                   (divchildlist
+                    (table
+                     :tbody (tbody)
+                     :thead
+                      (thead
+                       :nodes
+                        (trlist
+                         (tr
+                          :nodes
+                           (tdlist
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Pass?")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Name")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Test")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Expected")))
+                            (td
+                             :nodes
+                              (divchildlist
+                               (p
+                                :text "Actual"))))))))))))))
+           (div
+            :nodes
+             (divchildlist
+              (details
+               :summary
+                (divchildlist
+                 (p
+                  :style
+                   (style
+                    :name ".passflag"
+                    :props
+                     (propmap
+                      :background-color "green"
+                      :color "white"
+                      :padding-left "4px"
+                      :padding-right "4px"
+                      :padding-top "1px"
+                      :padding-bottom "1px"))
+                  :text "Pass")
+                 (p
+                  :style
+                   (style
+                    :name ".pkgname"
+                    :props
+                     (propmap
+                      :font-weight "bold"
+                      :width "180px"))
+                  :text "nx/tactics/books/superheroes")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "100% 0/0")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1")
+                 (p
+                  :style
+                   (style
+                    :name ".coveragenums"
+                    :props
+                     (propmap
+                      :width "90px"))
+                  :text "0% 0/1"))
                :nodes
                 (divchildlist
                  (div

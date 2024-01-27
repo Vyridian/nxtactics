@@ -602,6 +602,98 @@
                :name "section1"))))))
  :doc "Returns a chapter from a given Xml.")
 
+(func damage<-damage-key-value : base/damage
+ [current : base/damage
+  key     : string
+  value   : string]
+ (switch : base/damage
+  key
+  (case "" current)
+  (case
+   (list
+    "name"
+    "image"
+    "classification")
+   (copy current
+    key value))
+  (else
+   (copy current
+    (msg<-error
+     :invalidproperty
+     (anymap
+      :type  base/damage
+      :prop  key
+      :value value)))))
+ :doc "Returns a modified damage from a key value.")
+
+(func damage<-damage-stringmap : base/damage
+ [damage  : base/damage
+  propmap : stringmap]
+ (any<-map-start-reduce : base/damage
+  propmap
+  damage
+  damage<-damage-key-value)
+ :test (test
+        (base/damage
+         :name  "name"
+         :image "image")
+        (damage<-damage-stringmap
+         (empty base/damage)
+         (stringmap
+          :name  "name"
+          :image "image")))
+ :doc "Returns a damage from a propmap.")
+
+(func damage<-damage-xmlchild : base/damage
+ [damage  : base/damage
+  child   : xml/xml]
+ (let : base/damage
+  [tag : string := (:tag child)]
+  (switch : base/damage
+   tag
+   (case "" damage)
+   (case
+    (list
+     "reference"
+     "summary"
+     "titles")
+    (copy damage
+     tag
+     (xml/string-first<-xml
+      child)))
+   (else
+    (copy damage
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/damage
+       :tag tag))))))
+ :test (test
+        (base/damage
+         :titles "titles")
+        (damage<-damage-xmlchild
+         (empty base/damage)
+         (xml/xml
+          :tag "titles"
+          :children
+           (xml/xmllist
+            (xml/xml
+             :text "titles")))))
+ :doc "Returns a modified damage based on a given child Xml.")
+
+(func damage<-xml : base/damage
+ [xml : xml/xml]
+ (let : base/damage
+  [propmap : stringmap   := (:propmap xml)
+   damage  : base/damage := (damage<-damage-stringmap
+                              (empty base/damage)
+                              propmap)]
+  (any<-list-start-reduce : base/damage
+   (:children xml)
+   damage
+   damage<-damage-xmlchild))
+ :doc "Returns a damage from a given xml.")
+
 (func file-read<-bookname : fil/file
  [bookname : string]
  (fil/file
@@ -783,7 +875,8 @@
   (case
    (list
     "name"
-    "image")
+    "image"
+    "stat")
    (copy current
     key value))
   (else
@@ -1034,12 +1127,12 @@
  [xml : xml/xml]
  (let : base/rule
   [propmap : stringmap := (:propmap xml)
-   rul     : base/rule := (rule<-rule-stringmap
+   rule    : base/rule := (rule<-rule-stringmap
                            (empty base/rule)
                            propmap)]
   (any<-list-start-reduce : base/rule
    (:children xml)
-   rul
+   rule
    rule<-rule-xmlchild))
  :doc "Returns a rule from a given xml.")
 
@@ -1190,6 +1283,10 @@
      tag
      (xml/string-first<-xml
       child)))
+   (case "damage"
+    (section<-section-xmldamage
+     section
+     child))
    (case "item"
     (section<-section-xmlitem
      section
@@ -1218,6 +1315,10 @@
     (section<-section-xmlskill
      section
      child))
+   (case "terrain"
+    (section<-section-xmlterrain
+     section
+     child))
    (case "unit"
     (section<-section-xmlunit
      section
@@ -1230,6 +1331,21 @@
        :type base/section
        :tag tag))))))
  :doc "Returns a modified section based on a given child Xml.")
+
+(func section<-section-xmldamage : base/section
+ [section   : base/section
+  xmldamage : xml/xml]
+ (let : base/section
+  [current : base/damage    := (damage<-xml
+                                xmldamage)
+   name    : string         := (:name current)
+   origmap : base/damagemap := (:damagemap section)
+   chgmap  : base/damagemap := (copy origmap
+                                name
+                                current)]
+  (copy section
+   :damagemap chgmap))
+ :doc "Return a section with new damage added to damagemap")
 
 (func section<-section-xmlitem : base/section
  [section : base/section
@@ -1335,6 +1451,21 @@
   (copy section
    :skillmap chgmap))
  :doc "Return a section with new skill added to skillmap")
+
+(func section<-section-xmlterrain : base/section
+ [section    : base/section
+  xmlterrain : xml/xml]
+ (let : base/section
+  [current : base/terrain    := (terrain<-xml
+                                 xmlterrain)
+   name    : string          := (:name current)
+   origmap : base/terrainmap := (:terrainmap section)
+   chgmap  : base/terrainmap := (copy origmap
+                                 name
+                                 current)]
+  (copy section
+   :terrainmap chgmap))
+ :doc "Return a section with new terrain added to terrainmap")
 
 (func section<-section-xmlunit : base/section
  [section : base/section
@@ -1442,7 +1573,8 @@
   (case
    (list
     "name"
-    "image")
+    "image"
+    "stat")
    (copy current
     key value))
   (else
@@ -1543,12 +1675,12 @@
  [xml : xml/xml]
  (let : base/skill
   [propmap : stringmap  := (:propmap xml)
-   skl     : base/skill := (skill<-skill-stringmap
+   skill   : base/skill := (skill<-skill-stringmap
                             (empty base/skill)
                             propmap)]
   (any<-list-start-reduce : base/skill
    (:children xml)
-   skl
+   skill
    skill<-skill-xmlchild))
  :test (test
         (base/skill
@@ -1759,6 +1891,98 @@
   comma)
  :doc "Returns the write filename from a book")
 
+(func terrain<-terrain-key-value : base/terrain
+ [current : base/terrain
+  key     : string
+  value   : string]
+ (switch : base/terrain
+  key
+  (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
+  (else
+   (copy current
+    (msg<-error
+     :invalidproperty
+     (anymap
+      :type  base/terrain
+      :prop  key
+      :value value)))))
+ :doc "Returns a modified terrain from a key value.")
+
+(func terrain<-terrain-stringmap : base/terrain
+ [terrain : base/terrain
+  propmap : stringmap]
+ (any<-map-start-reduce : base/terrain
+  propmap
+  terrain
+  terrain<-terrain-key-value)
+ :test (test
+        (base/terrain
+         :name  "name"
+         :image "image")
+        (terrain<-terrain-stringmap
+         (empty base/terrain)
+         (stringmap
+          :name  "name"
+          :image "image")))
+ :doc "Returns a terrain from a propmap.")
+
+(func terrain<-terrain-xmlchild : base/terrain
+ [terrain : base/terrain
+  child   : xml/xml]
+ (let : base/terrain
+  [tag : string := (:tag child)]
+  (switch : base/terrain
+   tag
+   (case "" terrain)
+   (case
+    (list
+     "reference"
+     "summary"
+     "titles"
+     "classification")
+    (copy terrain
+     tag
+     (xml/string-first<-xml
+      child)))
+   (else
+    (copy terrain
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/terrain
+       :tag tag))))))
+ :test (test
+        (base/terrain
+         :titles "titles")
+        (terrain<-terrain-xmlchild
+         (empty base/terrain)
+         (xml/xml
+          :tag "titles"
+          :children
+           (xml/xmllist
+            (xml/xml
+             :text "titles")))))
+ :doc "Returns a modified terrain based on a given child Xml.")
+
+(func terrain<-xml : base/terrain
+ [xml : xml/xml]
+ (let : base/terrain
+  [propmap : stringmap    := (:propmap xml)
+   terrain : base/terrain := (terrain<-terrain-stringmap
+                              (empty base/terrain)
+                              propmap)]
+  (any<-list-start-reduce : base/terrain
+   (:children xml)
+   terrain
+   terrain<-terrain-xmlchild))
+ :doc "Returns a terrain from a given xml.")
+
 (func unit<-unit-key-value : base/unit
  [current : base/unit
   key     : string
@@ -1771,6 +1995,7 @@
     "name"
     "image"
     "classification"
+    "crew"
     "body"
     "height"
     "length"
@@ -2081,6 +2306,7 @@
    (list
     "name"
     "image"
+    "modifiers"
     "number")
    (copy current
     key value))
@@ -2280,6 +2506,17 @@
       (anymap
        :type base/unitpower
        :tag tag))))))
+ :test (test
+        (base/unitpower
+         :summary "summary1")
+        (unitpower<-unitpower-xmlchild
+         (empty base/unitpower)
+         (xml/xml
+          :tag "summary"
+          :children
+           (xml/xmllist
+            (xml/xml
+             :text "summary1")))))
  :doc "")
 
 (func unitpower<-unitpower-xmlitem : base/unitpower
@@ -2414,6 +2651,17 @@
       (anymap
        :type base/unitskill
        :tag tag))))))
+ :test (test
+        (base/unitskill
+         :summary "summary1")
+        (unitskill<-unitskill-xmlchild
+         (empty base/unitskill)
+         (xml/xml
+          :tag "summary"
+          :children
+           (xml/xmllist
+            (xml/xml
+             :text "summary1")))))
  :doc "")
 
 (func unitskill<-unitskill-xmlitem : base/unitskill

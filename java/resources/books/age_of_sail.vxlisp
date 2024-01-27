@@ -91,6 +91,7 @@
               :image "AgeOfSail/SpanishCaravel.png"
               :speed "15kph"
               :classification "Med. Naval Vessel"
+              :crew "20"
               :mass "150tons"
               :length "25m"
               :width "9m"
@@ -135,18 +136,7 @@
                 :Seamanship
                  (unitskill
                   :name "Seamanship"
-                  :level "4"))
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidproperty"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/unit
-                    :prop "crew"
-                    :value "20")
-                  :severity 2))))
+                  :level "4")))
             "Spanish Galleon"
              (unit
               :name "Spanish Galleon"

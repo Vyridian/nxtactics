@@ -1034,6 +1034,99 @@ public final class BookloaderTest {
     return output;
   }
 
+  static Test.Type_testcase f_damage_from_damage_stringmap(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "damage<-damage-stringmap",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/damage\n  :name  \"name\"\n  :image \"image\")\n (damage<-damage-stringmap\n  (empty base/damage)\n  (stringmap\n   :name  \"name\"\n   :image \"image\")))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_damage,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":name"),
+                  Core.vx_new_string("name"),
+                  Core.vx_new_string(":image"),
+                  Core.vx_new_string("image")
+                )
+              ),
+              Bookloader.f_damage_from_damage_stringmap(
+                Core.f_empty(
+                  Base.t_damage
+                ),
+                Core.f_new(
+                  Core.t_stringmap,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":name"),
+                    Core.vx_new_string("name"),
+                    Core.vx_new_string(":image"),
+                    Core.vx_new_string("image")
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_damage_from_damage_xmlchild(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "damage<-damage-xmlchild",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/damage\n  :titles \"titles\")\n (damage<-damage-xmlchild\n  (empty base/damage)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_damage,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":titles"),
+                  Core.vx_new_string("titles")
+                )
+              ),
+              Bookloader.f_damage_from_damage_xmlchild(
+                Core.f_empty(
+                  Base.t_damage
+                ),
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("titles"),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":text"),
+                            Core.vx_new_string("titles")
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
   static Test.Type_testcase f_power_from_power_stringmap(final Core.Type_context context) {
     Test.Type_testcase output = Test.t_testcase.vx_new(
       ":passfail", false,
@@ -2081,6 +2174,99 @@ public final class BookloaderTest {
     return output;
   }
 
+  static Test.Type_testcase f_terrain_from_terrain_stringmap(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "terrain<-terrain-stringmap",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/terrain\n  :name  \"name\"\n  :image \"image\")\n (terrain<-terrain-stringmap\n  (empty base/terrain)\n  (stringmap\n   :name  \"name\"\n   :image \"image\")))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_terrain,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":name"),
+                  Core.vx_new_string("name"),
+                  Core.vx_new_string(":image"),
+                  Core.vx_new_string("image")
+                )
+              ),
+              Bookloader.f_terrain_from_terrain_stringmap(
+                Core.f_empty(
+                  Base.t_terrain
+                ),
+                Core.f_new(
+                  Core.t_stringmap,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":name"),
+                    Core.vx_new_string("name"),
+                    Core.vx_new_string(":image"),
+                    Core.vx_new_string("image")
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_terrain_from_terrain_xmlchild(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "terrain<-terrain-xmlchild",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/terrain\n  :titles \"titles\")\n (terrain<-terrain-xmlchild\n  (empty base/terrain)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_terrain,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":titles"),
+                  Core.vx_new_string("titles")
+                )
+              ),
+              Bookloader.f_terrain_from_terrain_xmlchild(
+                Core.f_empty(
+                  Base.t_terrain
+                ),
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("titles"),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":text"),
+                            Core.vx_new_string("titles")
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
   static Test.Type_testcase f_unit_from_unit_stringmap(final Core.Type_context context) {
     Test.Type_testcase output = Test.t_testcase.vx_new(
       ":passfail", false,
@@ -2680,6 +2866,108 @@ public final class BookloaderTest {
     return output;
   }
 
+  static Test.Type_testcase f_unitpower_from_unitpower_xmlchild(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unitpower<-unitpower-xmlchild",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unitpower\n  :summary \"summary1\")\n (unitpower<-unitpower-xmlchild\n  (empty base/unitpower)\n  (xml/xml\n   :tag \"summary\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"summary1\")))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unitpower,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":summary"),
+                  Core.vx_new_string("summary1")
+                )
+              ),
+              Bookloader.f_unitpower_from_unitpower_xmlchild(
+                Core.f_empty(
+                  Base.t_unitpower
+                ),
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("summary"),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":text"),
+                            Core.vx_new_string("summary1")
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
+  static Test.Type_testcase f_unitskill_from_unitskill_xmlchild(final Core.Type_context context) {
+    Test.Type_testcase output = Test.t_testcase.vx_new(
+      ":passfail", false,
+      ":testpkg", "nx/tactics/books/bookloader",
+      ":casename", "unitskill<-unitskill-xmlchild",
+      ":describelist",
+      Test.t_testdescribelist.vx_new(
+        Test.t_testdescribe.vx_new(
+          ":describename", "(test\n (base/unitskill\n  :summary \"summary1\")\n (unitskill<-unitskill-xmlchild\n  (empty base/unitskill)\n  (xml/xml\n   :tag \"summary\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"summary1\")))))",
+          ":testresult",
+            Test.f_test(
+              context,
+              Core.f_new(
+                Base.t_unitskill,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string(":summary"),
+                  Core.vx_new_string("summary1")
+                )
+              ),
+              Bookloader.f_unitskill_from_unitskill_xmlchild(
+                Core.f_empty(
+                  Base.t_unitskill
+                ),
+                Core.f_new(
+                  Xml.t_xml,
+                  Core.t_anylist.vx_new(
+                    Core.vx_new_string(":tag"),
+                    Core.vx_new_string("summary"),
+                    Core.vx_new_string(":children"),
+                    Core.f_new(
+                      Xml.t_xmllist,
+                      Core.t_anylist.vx_new(
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":text"),
+                            Core.vx_new_string("summary1")
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+        )
+      )
+    );
+    return output;
+  }
+
   static Test.Type_testcase f_unitspecialty_from_unitspecialty_stringmap(final Core.Type_context context) {
     Test.Type_testcase output = Test.t_testcase.vx_new(
       ":passfail", false,
@@ -2886,6 +3174,8 @@ public final class BookloaderTest {
       BookloaderTest.f_chapter_from_chapter_stringmap(context),
       BookloaderTest.f_chapter_from_chapter_xmlchild(context),
       BookloaderTest.f_chapter_from_xml(context),
+      BookloaderTest.f_damage_from_damage_stringmap(context),
+      BookloaderTest.f_damage_from_damage_xmlchild(context),
       BookloaderTest.f_power_from_power_stringmap(context),
       BookloaderTest.f_power_from_power_xmlchild(context),
       BookloaderTest.f_power_from_xml(context),
@@ -2898,6 +3188,8 @@ public final class BookloaderTest {
       BookloaderTest.f_specialty_from_specialty_stringmap(context),
       BookloaderTest.f_specialty_from_specialty_xmlchild(context),
       BookloaderTest.f_specialty_from_xml(context),
+      BookloaderTest.f_terrain_from_terrain_stringmap(context),
+      BookloaderTest.f_terrain_from_terrain_xmlchild(context),
       BookloaderTest.f_unit_from_unit_stringmap(context),
       BookloaderTest.f_unit_from_unit_xmlchild(context),
       BookloaderTest.f_unit_from_xml(context),
@@ -2907,6 +3199,8 @@ public final class BookloaderTest {
       BookloaderTest.f_unititem_from_unititem_stringmap(context),
       BookloaderTest.f_unititem_from_unititem_xmlchild(context),
       BookloaderTest.f_unititem_from_xml(context),
+      BookloaderTest.f_unitpower_from_unitpower_xmlchild(context),
+      BookloaderTest.f_unitskill_from_unitskill_xmlchild(context),
       BookloaderTest.f_unitspecialty_from_unitspecialty_stringmap(context),
       BookloaderTest.f_unitspecialty_from_unitspecialty_xmlchild(context),
       BookloaderTest.f_unitspecialty_from_xml(context)
@@ -2919,11 +3213,11 @@ public final class BookloaderTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/bookloader", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 87, ":tests", 93, ":total", 106), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 35, ":tests", 38, ":total", 106), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 106), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 106), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 35, ":tests", 38, ":total", 106), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 88, ":tests", 103, ":total", 116), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 37, ":tests", 44, ":total", 116), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 116), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 116), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 37, ":tests", 44, ":total", 116), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -2958,6 +3252,10 @@ public final class BookloaderTest {
         ":chapter<-chapter-xmlchild", 1,
         ":chapter<-chapter-xmlsection", 0,
         ":chapter<-xml", 1,
+        ":damage<-damage-key-value", 0,
+        ":damage<-damage-stringmap", 1,
+        ":damage<-damage-xmlchild", 1,
+        ":damage<-xml", 0,
         ":file-read<-bookname", 0,
         ":file-write<-book", 0,
         ":item<-item-key-value", 0,
@@ -2986,6 +3284,7 @@ public final class BookloaderTest {
         ":section<-section-key-value", 0,
         ":section<-section-stringmap", 0,
         ":section<-section-xmlchild", 0,
+        ":section<-section-xmldamage", 0,
         ":section<-section-xmlitem", 0,
         ":section<-section-xmllocation", 0,
         ":section<-section-xmlpower", 0,
@@ -2993,6 +3292,7 @@ public final class BookloaderTest {
         ":section<-section-xmlscenario", 0,
         ":section<-section-xmlsection", 0,
         ":section<-section-xmlskill", 0,
+        ":section<-section-xmlterrain", 0,
         ":section<-section-xmlunit", 0,
         ":section<-xml", 1,
         ":skill<-skill-key-value", 0,
@@ -3008,6 +3308,10 @@ public final class BookloaderTest {
         ":string-read<-bookname", 0,
         ":string-vxlisp<-book", 0,
         ":string-writename<-book", 0,
+        ":terrain<-terrain-key-value", 0,
+        ":terrain<-terrain-stringmap", 1,
+        ":terrain<-terrain-xmlchild", 1,
+        ":terrain<-xml", 0,
         ":unit<-unit-key-value", 0,
         ":unit<-unit-stringmap", 1,
         ":unit<-unit-xmlchild", 1,
@@ -3026,14 +3330,14 @@ public final class BookloaderTest {
         ":unitpower<-unitpower-key-value", 0,
         ":unitpower<-unitpower-stringmap", 0,
         ":unitpower<-unitpower-xmlability", 0,
-        ":unitpower<-unitpower-xmlchild", 0,
+        ":unitpower<-unitpower-xmlchild", 1,
         ":unitpower<-unitpower-xmlitem", 0,
         ":unitpower<-unitpower-xmlspecialty", 0,
         ":unitpower<-xml", 0,
         ":unitskill<-unitskill-key-value", 0,
         ":unitskill<-unitskill-stringmap", 0,
         ":unitskill<-unitskill-xmlability", 0,
-        ":unitskill<-unitskill-xmlchild", 0,
+        ":unitskill<-unitskill-xmlchild", 1,
         ":unitskill<-unitskill-xmlitem", 0,
         ":unitskill<-unitskill-xmlspecialty", 0,
         ":unitskill<-xml", 0,

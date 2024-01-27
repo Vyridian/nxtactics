@@ -10,28 +10,28 @@
  (let
   [booknames : stringlist := (stringlist
                               //"TACTICSBOOK_CORE"
-                              "TACTICSBOOK_ADVANCED"
+                              //"TACTICSBOOK_ADVANCED"
                               "TACTICSBOOK_ANCIENT"
                               "TACTICSBOOK_AOSAIL"
                               "TACTICSBOOK_AOSTEAM"
                               //"TACTICSBOOK_BESTIARY"
                               //"TACTICSBOOK_CHARS"
-                              "TACTICSBOOK_COMBAT"
+                              //"TACTICSBOOK_COMBAT"
                               "TACTICSBOOK_FANTASY"
                               //"TACTICSBOOK_GEAR"
                               "TACTICSBOOK_GIANT"
                               "TACTICSBOOK_HIGHTECH"
                               //"TACTICSBOOK_HORROR"
-                              "TACTICSBOOK_LANDSEA"
+                              //"TACTICSBOOK_LANDSEA"
                               "TACTICSBOOK_MAGIC"
                               //"TACTICSBOOK_MEDIEVAL"
                               //"TACTICSBOOK_MFANTASY"
-                              "TACTICSBOOK_MODERN"
+                              //"TACTICSBOOK_MODERN"
                               "TACTICSBOOK_POWERS"
                               //"TACTICSBOOK_PREHISTORY"
                               //"TACTICSBOOK_PULP"
                               "TACTICSBOOK_SCIFI"
-                              "TACTICSBOOK_SKILLS"
+                              //"TACTICSBOOK_SKILLS"
                               //"TACTICSBOOK_SPACE"
                               //"TACTICSBOOK_SUPER"
                               "TACTICSBOOK_WORLDWARS")
@@ -47,7 +47,7 @@
  [args : anylist :...]
  (let
   [book : base/book := (bl/book-read<-bookname
-                        "TACTICSBOOK_CORE")
+                        "TACTICSBOOK_WORLDWARS")
    done : boolean   := (bl/boolean-write<-book
                         book)]
   (string<-any done))
@@ -67,19 +67,18 @@
  [args : anylist :...]
  (let
   [xml : xml/xml := (bl/xml-read<-bookname
-                     "TACTICSBOOK_BESTIARY")]
+                     "TACTICSBOOK_SKILLS")]
  (string<-any xml))
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
-*/
 
-/*
 (func main-nx : string
  [args : anylist :...]
  (bl/string-read<-bookname
   "TACTICSBOOK_BESTIARY")
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
+
 */
 
 (func context-nx : context
