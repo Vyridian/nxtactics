@@ -1,0 +1,293 @@
+(package nx/tactics/books/age_of_steam
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Age of Steam"
+  :image "WildWest.jpg"
+  :chaptermap
+   (chaptermap
+    "Age of Steam Overview"
+     (chapter
+      :name "Age of Steam Overview"
+      :sectionmap
+       (sectionmap
+        "Age of Steam Naval Warfare"
+         (section
+          :name "Age of Steam Naval Warfare"
+          :summary
+           "* Wind
+* Large Ships
+* Small Ships
+* Solid Shot
+* Burning Shot
+* Chain Shot")))
+    "Age of Steam Equipment"
+     (chapter
+      :name "Age of Steam Equipment"
+      :sectionmap
+       (sectionmap
+        "Steam Age Vehicles"
+         (section
+          :name "Steam Age Vehicles"
+          :unitmap
+           (unitmap
+            "Horseless  Carriage"
+             (unit
+              :name "Horseless  Carriage")
+            "Mailplane Biplane"
+             (unit
+              :name "Mailplane Biplane")
+            "Ocean Liner"
+             (unit
+              :name "Ocean Liner"
+              :titles "Liner, Steam Liner")
+            :Stagecoach
+             (unit
+              :name "Stagecoach")
+            "Steam Ferry"
+             (unit
+              :name "Steam Ferry")
+            "Steam Train Boxcar"
+             (unit
+              :name "Steam Train Boxcar")
+            "Steam Train Caboose"
+             (unit
+              :name "Steam Train Caboose")
+            "Steam Train Coach"
+             (unit
+              :name "Steam Train Coach")
+            "Steam Train Locomotive"
+             (unit
+              :name "Steam Train Locomotive")
+            "Steam Train Private Coach"
+             (unit
+              :name "Steam Train Private Coach")
+            :Steamboat
+             (unit
+              :name "Steamboat")
+            "Tramp Freighter"
+             (unit
+              :name "Tramp Freighter")
+            :Zepplin
+             (unit
+              :name "Zepplin"
+              :titles "Dirigible")))))
+    "Steam Age Maps"
+     (chapter
+      :name "Steam Age Maps"
+      :sectionmap
+       (sectionmap
+        "Steam Age Terrain"
+         (section
+          :name "Steam Age Terrain"
+          :rulemap
+           (rulemap
+            :Mine
+             (rule
+              :name "Mine")
+            :Tumbleweed
+             (rule
+              :name "Tumbleweed")
+            "Western Town"
+             (rule
+              :name "Western Town")))))
+    "Civil War"
+     (chapter
+      :name "Civil War"
+      :sectionmap
+       (sectionmap
+        "Union Navy"
+         (section
+          :name "Union Navy"
+          :unitmap
+           (unitmap
+            "USS Monitor"
+             (unit
+              :name "USS Monitor"
+              :speed "15kph"
+              :classification "Hvy. Naval Vessel"
+              :crew "59"
+              :mass "1000tons"
+              :length "52m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :summary "200mm iron turret, 25mm deck, 125mm hull belt"
+                  :front "200mm"
+                  :back "200mm"
+                  :over "25mm"
+                  :side "200mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :summary "2 x 11 in (280mm) Dahlgren smoothbores, turret"
+                  :level "4")))))))
+    "Victorian England"
+     (chapter
+      :name "Victorian England"
+      :sectionmap
+       (sectionmap
+        "Victoraian Characters"
+         (section
+          :name "Victoraian Characters"
+          :unitmap
+           (unitmap
+            "Dr. John Watson"
+             (unit
+              :name "Dr. John Watson")
+            "Herbert George Wells"
+             (unit
+              :name "Herbert George Wells")
+            "Jack the Ripper"
+             (unit
+              :name "Jack the Ripper")
+            "Sherlock Holmes"
+             (unit
+              :name "Sherlock Holmes"
+              :reference
+               "* Watson: What made like this?
+* Sherlock: Oh, dear Watson. Nothing made me ... I made me.")))))
+    "Wild West"
+     (chapter
+      :name "Wild West"
+      :sectionmap
+       (sectionmap
+        "Steam Age Tycoons"
+         (section
+          :name "Steam Age Tycoons"
+          :unitmap
+           (unitmap
+            :Banker
+             (unit
+              :name "Banker")
+            "Land Baron"
+             (unit
+              :name "Land Baron"
+              :reference
+               "All I hear from you...is how poor you are; how you can't afford my taxes.  Yet somehow, you managed to find the
+money to hire a gunfighter to kill me.  If ya got so much money, I'm just gonna have to take some more. - John
+Herod,  The Quick and the Dead"
+              :unitskillmap
+               (unitskillmap
+                :Intimidation
+                 (unitskill
+                  :name "Intimidation"
+                  :level "5")
+                :Firearms
+                 (unitskill
+                  :name "Firearms"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    ".45 Colt Peacemaker"
+                     (unititem
+                      :name ".45 Colt Peacemaker")))
+                :Evasion
+                 (unitskill
+                  :name "Evasion"
+                  :level "4")))
+            "Oil Baron"
+             (unit
+              :name "Oil Baron")
+            "Railroad Tycoon"
+             (unit
+              :name "Railroad Tycoon")))))
+    "Examples of Play"
+     (chapter
+      :name "Examples of Play"
+      :sectionmap
+       (sectionmap
+        "Western Gunfight"
+         (section
+          :name "Western Gunfight"
+          :summary
+           "Round 1 - Turn 1
+Initiative
+Gunslinger player starts with the initiative, but the Marshall wants to 'Take the Initiative'
+Each Player rolls 2 dice.
++1 for the player who currently holds initiative.
++1 for highest skill.
+-1 if most Damaged or Stunned.
+A tie means simultaneous actions.
+Gunslinger rolls 6 + 1 (holds initiative) = 7.
+Marshall rolls 8.  Marshall takes the initiative.
+Move
+Marshall is within range of his weapon, so chooses not to move to get the best chance to hit.
+Action
+Fast Draw - Marshall is in weapon range and chooses to use Fast Draw to draw his weapon and fire.
+Attack - Fast Draw was a Free Action and Marshall chooses to fire.  He uses his Handgun Skill and any modifiers to determine attack dice.  5 (Handguns) +1 (Accuracy) - 1 (Hip Shoot) = 6 Dice
+Marshall rolls 6 dice and gets 1 (miss), 2 (miss), 2 (miss), 3 (miss), 5 (hit), and 6 (hit and bonus die).  He rolls the bonus die and gets another 6 (critical hit and bonus die).  He rolls the bonus die and gets a 3 (flag).
+Marshall's total roll is 1 hit, 1 critical, and a flag.
+Defense
+Gunslinger now rolls dice equal to appropriate defense:  4 Body = 4 Dice
+Gunslinger rolls 3 dice and gets 1 (miss), 3 (miss), 5 (hit), and 6 (hit and bonus die).  He rolls the bonus die and gets a 4 (critical hit).
+Gunslinger's  total is 2 hits and 1 critical.
+Gunslinger's 1 hit cancels one of  Marshall's hits and his 1 critical hit cancels one of Marshall's critical hits.  This leaves Marshall with only a single flag,  Gunslinger had rolled a second hit, but since it can only cancel other hits, it has no effect.
+Effects
+Flags - Gunslinger gains a Flag Token and must retreat one space for each flag.  He therefore retreats 1 space away from Marshall.
+Attack Damage - Since no damage was rolled, Marshall's turn is over.
+Round 1 - Turn 2
+Initiative
+Gunslinger player regains the initiative.  Marshall has already taken a turn and cannot do so again this round.
+White Tokens - After initiative is determined, Gunslinger must remove a White Token if any.  He removes the Flag token.
+Move
+Gunslinger was forced to back by the Flag but is still in his weapon's range, so he will not take an attack penalty.  However, if he moves closer he will take a penalty for moving, so he opts to stay still and fire.
+Action
+Fast Draw - Gunslinger also uses Fast Draw to draw and fire.
+Attack - He uses his Handgun Skill and any modifiers to determine attack dice.  5 (Handguns) +1 (Accuracy)  -1 (Hip Shoot) = 5 Dice.
+Gunslinger rolls 5 dice and gets 1 (miss), 3 (miss), 4 (hit), 5 (hit), and 5 (hit).  His total roll is 3 hits.  Nice.
+Defense
+Marshall now rolls dice equal to appropriate defense.  4 Body = 4 Dice.
+Marshall rolls 4 dice and gets 1 (miss), 1 (miss), 3 (miss), and 4 (hit).
+Marshall's total is 1 hit.
+Marshall cancels 1 of Gunslinger's hits.  This leaves Gunslinger with 2 hits.
+Effects
+Damage Rating - Since Gunslinger rolled at least 1 hit or critical hit (he scored 2), he checks the damage rating of his Schofield .45.  Its damage rating is 4.  If Gunslinger had rolled less than 4 dice, the Schofield would allow him to roll the difference in additional damage dice.  However, Gunslinger rolled 4 dice already, so he receives no additional dice.
+Hits - The first hit is converted to a Stun Token.
+Damage - All subsequent hits are converted to Damage Tokens.
+Damage Summary - 1 Stun Token and 1 Damage Token.
+Hit Location - Since we are using Hit Location and did some form of damage, roll 2 dice.  The first determines side of the body: 1-2 is left side, 3-4 is center, and 5-6 is right side.  The second die determines height on the body: 1-2 is low, 3-4 is middle, 5-6 is high.  Marshall rolls 6 (right), 2 (low): Right Shin/Foot.  The 1 Damage Token is therefore on Marshall's Right Shin.  This will limit his movement.
+Turn End
+Round End - Since all units have acted, the round ends.
+Round 2 - Turn 1
+Initiative
+Marshall has the initiative since Gunslinger player ended with the initiative, but Gunslinger predictably wants to 'Take the Initiative' back.  Marshall desperately needs to win initiative to recover a bit from the last hit.
+Each Player rolls 2 dice.
++1 for the player who currently holds initiative.
++1 for highest skill.
+-1 if most Damaged or Stunned.
+A tie means simultaneous actions.
+Marshall rolls 4 + 1 (holds initiative) -1 (most Damaged) = 4.
+Gunslinger rolls 8 and takes the initiative.  Gunslinger grins.
+White Tokens - Gunslinger has no White Tokens.
+Move
+Gunslinger presses his advantage and stays and fires hoping to finish this battle.
+Action
+Since their guns are already drawn, neither unit needs to fire from the hip anymore.
+Attack - Gunslinger determines attack dice.  5 (Handguns) +1 (Accuracy)  = 6 Dice.
+Gunslinger rolls 6 dice and gets 1 (miss), 1 (miss), 3 (miss), 5 (hit), 5 (hit), and 6 (hit and bonus die).  He rolls the bonus and gets 1 (flag).  His total roll is 3 hits and a flag.  Looking good.
+Defense
+Marshall now rolls dice equal to appropriate defense.  4 Body -1 (Damage) -1 (Stun) = 2 Dice.  Need some good rolls about now.
+Marshall rolls 2 dice and gets 1 (miss) and 1 (miss).  Nothing.
+Marshall is hit dead-on by the Gunslinger.
+Effects
+Damage Rating - Since Gunslinger rolled at least 1 hit or critical hit (he scored 3), he checks the damage rating of his Schofield .45.  Its damage rating is 4 is not more than his 6 dice rolled so no additional dice.
+Hits - The first hit is converted to a Stun Token.
+Damage - All subsequent hits are converted to Damage Tokens.
+Damage Summary - 1 Stun Token and 2 Damage Tokens.
+Hit Location - Since we are using Hit Location and did some form of damage, roll 2 dice.  The first determines side of the body: 1-2 is left side, 3-4 is center, and 5-6 is right side.  The second die determines height on the body: 1-2 is low, 3-4 is middle, 5-6 is high.  Marshall rolls 2 (left), 4 (center): Left Thigh.  The 2 Damage Tokens are therefore on Marshall's Left Thigh.  This will limit his movement even more.
+Damage Total - 2 Stun Tokens and 3 Damage Tokens (1 on Right Shin, 2 on Left Thigh).  The total of -5 is greater than the Marshall's 4 Body, so he drops to the ground.
+Round 2 - Turn 2
+Initiative
+Marshall has the initiative since Gunslinger has already acted this round.
+White Tokens - Marshall removes a  White Token if any.  He removes 1 of the Stun tokens.
+Move
+Marshall is prone and has no Move left to even crawl (Move 4 - 1 (Stun) - 3 (Damage)).
+Action
+Marshall could attack with 5 (Handguns) + 1 (Accuracy) - 1 (Stun) - 3 (Damage) = 2 Dice, but he has no dice to defend next turn, he is Prone (+1) and Helpless (+1) for a total of 8 Gunslinger Dice against his own 0 Dice.  What's more the gunslinger doesn't have a scratch on him.
+The duel is clearly over, and the Marshall drops his gun and begs for his life."))))))

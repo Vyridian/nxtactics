@@ -8,25 +8,25 @@ import com.vxlisp.nx.tactics.*;
 public final class Age_of_steam {
 
   /**
-   * @function bk
+   * @function tacticsbook
    * @return {book}
-   * (func bk)
+   * (func tacticsbook)
    */
-  public static interface Func_bk extends Core.Type_func, Core.Type_replfunc {
-    public Base.Type_book vx_bk();
+  public static interface Func_tacticsbook extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_book vx_tacticsbook();
   }
 
-  public static class Class_bk extends Core.Class_base implements Func_bk {
+  public static class Class_tacticsbook extends Core.Class_base implements Func_tacticsbook {
 
     @Override
-    public Func_bk vx_new(Object... vals) {
-      Class_bk output = new Class_bk();
+    public Func_tacticsbook vx_new(Object... vals) {
+      Class_tacticsbook output = new Class_tacticsbook();
       return output;
     }
 
     @Override
-    public Func_bk vx_copy(Object... vals) {
-      Class_bk output = new Class_bk();
+    public Func_tacticsbook vx_copy(Object... vals) {
+      Class_tacticsbook output = new Class_tacticsbook();
       return output;
     }
 
@@ -37,7 +37,7 @@ public final class Age_of_steam {
     public Core.Type_funcdef vx_funcdef() {
       return Core.funcdef_new(
         "nx/tactics/books/age_of_steam", // pkgname
-        "bk", // name
+        "tacticsbook", // name
         0, // idx
         false, // async
         Core.typedef_new(
@@ -57,27 +57,27 @@ public final class Age_of_steam {
     }
 
     @Override
-    public Func_bk vx_empty() {return e_bk;}
+    public Func_tacticsbook vx_empty() {return e_tacticsbook;}
     @Override
-    public Func_bk vx_type() {return t_bk;}
+    public Func_tacticsbook vx_type() {return t_tacticsbook;}
 
     public Core.Type_any vx_repl(Core.Type_anylist arglist) {
       Core.Type_any output = Core.e_any;
-      output = Age_of_steam.f_bk();
+      output = Age_of_steam.f_tacticsbook();
       return output;
     }
 
     @Override
-    public Base.Type_book vx_bk() {
-      return Age_of_steam.f_bk();
+    public Base.Type_book vx_tacticsbook() {
+      return Age_of_steam.f_tacticsbook();
     }
 
   }
 
-  public static final Func_bk e_bk = new Age_of_steam.Class_bk();
-  public static final Func_bk t_bk = new Age_of_steam.Class_bk();
+  public static final Func_tacticsbook e_tacticsbook = new Age_of_steam.Class_tacticsbook();
+  public static final Func_tacticsbook t_tacticsbook = new Age_of_steam.Class_tacticsbook();
 
-  public static Base.Type_book f_bk() {
+  public static Base.Type_book f_tacticsbook() {
     Base.Type_book output = Base.e_book;
     output = Core.f_new(
       Base.t_book,
@@ -100,34 +100,6 @@ public final class Age_of_steam {
                 Core.f_new(
                   Base.t_sectionmap,
                   Core.t_anylist.vx_new(
-                    Core.vx_new_string("Why Tactics: Age of Steam?"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Why Tactics: Age of Steam?")
-                      )
-                    ),
-                    Core.vx_new_string("Age of Steam Personal Combat"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Age of Steam Personal Combat"),
-                        Core.vx_new_string(":summary"),
-                        Core.vx_new_string("* Dueling\n* Civil War\n* Cowboys\n* Indians\n* Bandits\n* Cattle Rustlers\n* Marksman")
-                      )
-                    ),
-                    Core.vx_new_string("Age of Steam Land Warfare"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Age of Steam Land Warfare"),
-                        Core.vx_new_string(":summary"),
-                        Core.vx_new_string("* Infantry\n* Cavalry\n* Pistols\n* Rifles\n* Cannons\n* Artillery\n* Gatling Guns\n* Trains")
-                      )
-                    ),
                     Core.vx_new_string("Age of Steam Naval Warfare"),
                     Core.f_new(
                       Base.t_section,
@@ -152,160 +124,6 @@ public final class Age_of_steam {
                 Core.f_new(
                   Base.t_sectionmap,
                   Core.t_anylist.vx_new(
-                    Core.vx_new_string("Age of Steam Weaponry"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Age of Steam Weaponry"),
-                        Core.f_new(
-                          Core.t_msgblock,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string(":msgs"),
-                            Core.f_new(
-                              Core.t_msglist,
-                              Core.t_anylist.vx_new(
-                                Core.f_new(
-                                  Core.t_msg,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":code"),
-                                    Core.vx_new_string(":invalidtagfound"),
-                                    Core.vx_new_string(":severity"),
-                                    Core.vx_new_int(2)
-                                  )
-                                )
-                              )
-                            ),
-                            Core.vx_new_string(":msgblocks"),
-                            Core.f_new(
-                              Core.t_msgblocklist,
-                              Core.t_anylist.vx_new(
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                ),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                ),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                ),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                ),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                ),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
                     Core.vx_new_string("Steam Age Vehicles"),
                     Core.f_new(
                       Base.t_section,
@@ -494,336 +312,6 @@ public final class Age_of_steam {
                 Core.f_new(
                   Base.t_sectionmap,
                   Core.t_anylist.vx_new(
-                    Core.vx_new_string("Civil War Scenarios"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Civil War Scenarios"),
-                        Core.f_new(
-                          Core.t_msgblock,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string(":msgs"),
-                            Core.f_new(
-                              Core.t_msglist,
-                              Core.t_anylist.vx_new(
-                                Core.f_new(
-                                  Core.t_msg,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":code"),
-                                    Core.vx_new_string(":invalidtagfound"),
-                                    Core.vx_new_string(":severity"),
-                                    Core.vx_new_int(2)
-                                  )
-                                )
-                              )
-                            ),
-                            Core.vx_new_string(":msgblocks"),
-                            Core.f_new(
-                              Core.t_msgblocklist,
-                              Core.t_anylist.vx_new(
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    Core.vx_new_string("Confederate Army"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Confederate Army"),
-                        Core.vx_new_string(":unitmap"),
-                        Core.f_new(
-                          Base.t_unitmap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string("Confederate Cannon"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Confederate Cannon")
-                              )
-                            ),
-                            Core.vx_new_string("Confederate Conscript"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Confederate Conscript")
-                              )
-                            ),
-                            Core.vx_new_string("Confederate Gatling Gunner"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Confederate Gatling Gunner")
-                              )
-                            ),
-                            Core.vx_new_string("Confederate Medic"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Confederate Medic")
-                              )
-                            ),
-                            Core.vx_new_string("Confederate Officer"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Confederate Officer")
-                              )
-                            ),
-                            Core.vx_new_string("Confederate Veteran"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Confederate Veteran")
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    Core.vx_new_string("Confederate Navy"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Confederate Navy"),
-                        Core.vx_new_string(":unitmap"),
-                        Core.f_new(
-                          Base.t_unitmap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string(":Merrimack"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Merrimack"),
-                                Core.vx_new_string(":titles"),
-                                Core.vx_new_string("CSS Virginia"),
-                                Core.vx_new_string(":mass"),
-                                Core.vx_new_string("4500tons"),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidproperty"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    ),
-                                    Core.vx_new_string(":msgblocks"),
-                                    Core.f_new(
-                                      Core.t_msgblocklist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidproperty"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidproperty"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidproperty"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    Core.vx_new_string("Union Army"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Union Army"),
-                        Core.vx_new_string(":unitmap"),
-                        Core.f_new(
-                          Base.t_unitmap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string("Union Cannon"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Union Cannon")
-                              )
-                            ),
-                            Core.vx_new_string("Union Conscript"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Union Conscript")
-                              )
-                            ),
-                            Core.vx_new_string("Union Gatling Gunner"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Union Gatling Gunner")
-                              )
-                            ),
-                            Core.vx_new_string("Union Medic"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Union Medic")
-                              )
-                            ),
-                            Core.vx_new_string("Union Officer"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Union Officer")
-                              )
-                            ),
-                            Core.vx_new_string("Union Veteran"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Union Veteran")
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
                     Core.vx_new_string("Union Navy"),
                     Core.f_new(
                       Base.t_section,
@@ -840,130 +328,54 @@ public final class Age_of_steam {
                               Core.t_anylist.vx_new(
                                 Core.vx_new_string(":name"),
                                 Core.vx_new_string("USS Monitor"),
+                                Core.vx_new_string(":speed"),
+                                Core.vx_new_string("15kph"),
+                                Core.vx_new_string(":classification"),
+                                Core.vx_new_string("Hvy. Naval Vessel"),
+                                Core.vx_new_string(":crew"),
+                                Core.vx_new_string("59"),
                                 Core.vx_new_string(":mass"),
                                 Core.vx_new_string("1000tons"),
+                                Core.vx_new_string(":length"),
+                                Core.vx_new_string("52m"),
+                                Core.vx_new_string(":unitpowermap"),
                                 Core.f_new(
-                                  Core.t_msgblock,
+                                  Base.t_unitpowermap,
                                   Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
+                                    Core.vx_new_string(":Armor"),
                                     Core.f_new(
-                                      Core.t_msglist,
+                                      Base.t_unitpower,
                                       Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidproperty"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
+                                        Core.vx_new_string(":name"),
+                                        Core.vx_new_string("Armor"),
+                                        Core.vx_new_string(":summary"),
+                                        Core.vx_new_string("200mm iron turret, 25mm deck, 125mm hull belt"),
+                                        Core.vx_new_string(":front"),
+                                        Core.vx_new_string("200mm"),
+                                        Core.vx_new_string(":back"),
+                                        Core.vx_new_string("200mm"),
+                                        Core.vx_new_string(":over"),
+                                        Core.vx_new_string("25mm"),
+                                        Core.vx_new_string(":side"),
+                                        Core.vx_new_string("200mm")
                                       )
-                                    ),
-                                    Core.vx_new_string(":msgblocks"),
+                                    )
+                                  )
+                                ),
+                                Core.vx_new_string(":unitskillmap"),
+                                Core.f_new(
+                                  Base.t_unitskillmap,
+                                  Core.t_anylist.vx_new(
+                                    Core.vx_new_string(":Gunnery"),
                                     Core.f_new(
-                                      Core.t_msgblocklist,
+                                      Base.t_unitskill,
                                       Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidproperty"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidproperty"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidproperty"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        )
+                                        Core.vx_new_string(":name"),
+                                        Core.vx_new_string("Gunnery"),
+                                        Core.vx_new_string(":summary"),
+                                        Core.vx_new_string("2 x 11 in (280mm) Dahlgren smoothbores, turret"),
+                                        Core.vx_new_string(":level"),
+                                        Core.vx_new_string("4")
                                       )
                                     )
                                   )
@@ -1050,700 +462,6 @@ public final class Age_of_steam {
                 Core.f_new(
                   Base.t_sectionmap,
                   Core.t_anylist.vx_new(
-                    Core.vx_new_string("Western Scenarios"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Western Scenarios"),
-                        Core.f_new(
-                          Core.t_msgblock,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string(":msgs"),
-                            Core.f_new(
-                              Core.t_msglist,
-                              Core.t_anylist.vx_new(
-                                Core.f_new(
-                                  Core.t_msg,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":code"),
-                                    Core.vx_new_string(":invalidtagfound"),
-                                    Core.vx_new_string(":severity"),
-                                    Core.vx_new_int(2)
-                                  )
-                                )
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    Core.vx_new_string("Steam Age Outlaws"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Steam Age Outlaws"),
-                        Core.vx_new_string(":unitmap"),
-                        Core.f_new(
-                          Base.t_unitmap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string(":Bandito"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Bandito"),
-                                Core.vx_new_string(":image"),
-                                Core.vx_new_string("Western/BanditoToken.png"),
-                                Core.vx_new_string(":reference"),
-                                Core.vx_new_string("You think you're better than I am?  Where we came from, if one did not want to die of poverty, one became a\npriest or a bandit! ...You became a priest because you were... too much of a coward to do what I do! - Tuco. The\nGood, the Bad, and the Ugly."),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidproperty"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    ),
-                                    Core.vx_new_string(":msgblocks"),
-                                    Core.f_new(
-                                      Core.t_msgblocklist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            ),
-                            Core.vx_new_string(":Gunslinger"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Gunslinger"),
-                                Core.vx_new_string(":image"),
-                                Core.vx_new_string("Western/GunslingerToken.png"),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidproperty"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    ),
-                                    Core.vx_new_string(":msgblocks"),
-                                    Core.f_new(
-                                      Core.t_msgblocklist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            ),
-                            Core.vx_new_string("Man with No Name"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Man with No Name"),
-                                Core.vx_new_string(":image"),
-                                Core.vx_new_string("Western/ManWithNoNameToken.png"),
-                                Core.vx_new_string(":reference"),
-                                Core.vx_new_string("* [to Tuco] Tut, tut. Such ingratitude after all the times I saved your life. - Blondie, The Good, the Bad, and\nthe Ugly\n* There are two kinds of people in the world...Those who have a loaded gun and those who dig. You dig! - Blondie,\nThe Good, the Bad, and the Ugly"),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidproperty"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    ),
-                                    Core.vx_new_string(":msgblocks"),
-                                    Core.f_new(
-                                      Core.t_msgblocklist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            ),
-                            Core.vx_new_string("Professional Killer"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Professional Killer"),
-                                Core.vx_new_string(":image"),
-                                Core.vx_new_string("Western/ProfessionalKiller.png"),
-                                Core.vx_new_string(":reference"),
-                                Core.vx_new_string("He paid me a thousand.  I think his idea was that I kill you.  But you know, the pity is when I'm paid, I always\nfollow my job through. - Angel Eyes, The Good, the Bad, and the Ugly"),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidproperty"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    ),
-                                    Core.vx_new_string(":msgblocks"),
-                                    Core.f_new(
-                                      Core.t_msgblocklist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    Core.vx_new_string("Steam Age Lawmen"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Steam Age Lawmen"),
-                        Core.vx_new_string(":unitmap"),
-                        Core.f_new(
-                          Base.t_unitmap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string(":Deputy"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Deputy")
-                              )
-                            ),
-                            Core.vx_new_string(":Sheriff"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Sheriff")
-                              )
-                            ),
-                            Core.vx_new_string("US Marshall"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("US Marshall"),
-                                Core.f_new(
-                                  Core.t_msgblock,
-                                  Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
-                                    Core.f_new(
-                                      Core.t_msglist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msg,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
-                                          )
-                                        )
-                                      )
-                                    ),
-                                    Core.vx_new_string(":msgblocks"),
-                                    Core.f_new(
-                                      Core.t_msgblocklist,
-                                      Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    Core.vx_new_string("Steam Age Indians"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Steam Age Indians"),
-                        Core.vx_new_string(":unitmap"),
-                        Core.f_new(
-                          Base.t_unitmap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string("Sioux Gunfighter"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Sioux Gunfighter"),
-                                Core.vx_new_string(":image"),
-                                Core.vx_new_string("Western/IndianAxe.jpg"),
-                                Core.vx_new_string(":reference"),
-                                Core.vx_new_string("Spotted Horse cannot be killed by a bullet! - Spotted Horse, The Quick and the Dead")
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    Core.vx_new_string("Steam Age Townsfolk"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Steam Age Townsfolk"),
-                        Core.vx_new_string(":unitmap"),
-                        Core.f_new(
-                          Base.t_unitmap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string("Chinese Monk"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Chinese Monk"),
-                                Core.vx_new_string(":reference"),
-                                Core.vx_new_string("I seek not to know the answers, but to understand the questions. - Kwai Chang Caine, Kung Fu TV Series")
-                              )
-                            ),
-                            Core.vx_new_string("Chinese Rail worker"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Chinese Rail worker")
-                              )
-                            ),
-                            Core.vx_new_string(":Cowboy"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Cowboy")
-                              )
-                            ),
-                            Core.vx_new_string(":Dentist"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Dentist")
-                              )
-                            ),
-                            Core.vx_new_string(":Farmer"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Farmer")
-                              )
-                            ),
-                            Core.vx_new_string("General Store Owner"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("General Store Owner")
-                              )
-                            ),
-                            Core.vx_new_string(":Judge"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Judge")
-                              )
-                            ),
-                            Core.vx_new_string(":Preacher"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Preacher")
-                              )
-                            ),
-                            Core.vx_new_string("Saloon Barkeep"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Saloon Barkeep")
-                              )
-                            ),
-                            Core.vx_new_string(":Undertaker"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Undertaker")
-                              )
-                            ),
-                            Core.vx_new_string("Whore with a Heart of Gold"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Whore with a Heart of Gold")
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
-                    Core.vx_new_string("Steam Age Travelers"),
-                    Core.f_new(
-                      Base.t_section,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Steam Age Travelers"),
-                        Core.vx_new_string(":unitmap"),
-                        Core.f_new(
-                          Base.t_unitmap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string("Carpet Bagger"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Carpet Bagger")
-                              )
-                            ),
-                            Core.vx_new_string(":Gambler"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Gambler"),
-                                Core.vx_new_string(":summary"),
-                                Core.vx_new_string("This is a very special pack.  See, I put an ace in every time I kill a man.  (The deck is all aces) - Ace, The Quick and the Dead")
-                              )
-                            ),
-                            Core.vx_new_string(":Prospector"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Prospector")
-                              )
-                            ),
-                            Core.vx_new_string("Snake Oil Salesman"),
-                            Core.f_new(
-                              Base.t_unit,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Snake Oil Salesman")
-                              )
-                            )
-                          )
-                        )
-                      )
-                    ),
                     Core.vx_new_string("Steam Age Tycoons"),
                     Core.f_new(
                       Base.t_section,
@@ -1770,68 +488,52 @@ public final class Age_of_steam {
                                 Core.vx_new_string("Land Baron"),
                                 Core.vx_new_string(":reference"),
                                 Core.vx_new_string("All I hear from you...is how poor you are; how you can't afford my taxes.  Yet somehow, you managed to find the\nmoney to hire a gunfighter to kill me.  If ya got so much money, I'm just gonna have to take some more. - John\nHerod,  The Quick and the Dead"),
+                                Core.vx_new_string(":unitskillmap"),
                                 Core.f_new(
-                                  Core.t_msgblock,
+                                  Base.t_unitskillmap,
                                   Core.t_anylist.vx_new(
-                                    Core.vx_new_string(":msgs"),
+                                    Core.vx_new_string(":Intimidation"),
                                     Core.f_new(
-                                      Core.t_msglist,
+                                      Base.t_unitskill,
                                       Core.t_anylist.vx_new(
+                                        Core.vx_new_string(":name"),
+                                        Core.vx_new_string("Intimidation"),
+                                        Core.vx_new_string(":level"),
+                                        Core.vx_new_string("5")
+                                      )
+                                    ),
+                                    Core.vx_new_string(":Firearms"),
+                                    Core.f_new(
+                                      Base.t_unitskill,
+                                      Core.t_anylist.vx_new(
+                                        Core.vx_new_string(":name"),
+                                        Core.vx_new_string("Firearms"),
+                                        Core.vx_new_string(":level"),
+                                        Core.vx_new_string("4"),
+                                        Core.vx_new_string(":unititemmap"),
                                         Core.f_new(
-                                          Core.t_msg,
+                                          Base.t_unititemmap,
                                           Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":code"),
-                                            Core.vx_new_string(":invalidtagfound"),
-                                            Core.vx_new_string(":severity"),
-                                            Core.vx_new_int(2)
+                                            Core.vx_new_string(".45 Colt Peacemaker"),
+                                            Core.f_new(
+                                              Base.t_unititem,
+                                              Core.t_anylist.vx_new(
+                                                Core.vx_new_string(":name"),
+                                                Core.vx_new_string(".45 Colt Peacemaker")
+                                              )
+                                            )
                                           )
                                         )
                                       )
                                     ),
-                                    Core.vx_new_string(":msgblocks"),
+                                    Core.vx_new_string(":Evasion"),
                                     Core.f_new(
-                                      Core.t_msgblocklist,
+                                      Base.t_unitskill,
                                       Core.t_anylist.vx_new(
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        ),
-                                        Core.f_new(
-                                          Core.t_msgblock,
-                                          Core.t_anylist.vx_new(
-                                            Core.vx_new_string(":msgs"),
-                                            Core.f_new(
-                                              Core.t_msglist,
-                                              Core.t_anylist.vx_new(
-                                                Core.f_new(
-                                                  Core.t_msg,
-                                                  Core.t_anylist.vx_new(
-                                                    Core.vx_new_string(":code"),
-                                                    Core.vx_new_string(":invalidtagfound"),
-                                                    Core.vx_new_string(":severity"),
-                                                    Core.vx_new_int(2)
-                                                  )
-                                                )
-                                              )
-                                            )
-                                          )
-                                        )
+                                        Core.vx_new_string(":name"),
+                                        Core.vx_new_string("Evasion"),
+                                        Core.vx_new_string(":level"),
+                                        Core.vx_new_string("4")
                                       )
                                     )
                                   )
@@ -1898,7 +600,7 @@ public final class Age_of_steam {
     Map<String, Core.Type_any> maptype = new LinkedHashMap<>();
     Map<String, Core.Type_any> mapconst = new LinkedHashMap<>();
     Map<String, Core.Type_func> mapfunc = new LinkedHashMap<>();
-    mapfunc.put("bk", Age_of_steam.t_bk);
+    mapfunc.put("tacticsbook", Age_of_steam.t_tacticsbook);
     Core.vx_global_package_set("nx/tactics/books/age_of_steam", maptype, mapconst, mapfunc);
   }
 

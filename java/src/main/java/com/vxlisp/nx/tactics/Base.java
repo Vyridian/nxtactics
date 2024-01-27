@@ -14980,13 +14980,17 @@ public final class Base {
    * type: unititem
    * (type unititem)
    */
-  public interface Type_unititem extends Core.Type_struct {
+  public interface Type_unititem extends Core.Type_struct, Base.Type_card {
     public Base.Type_unititem vx_new(final Object... vals);
     public Base.Type_unititem vx_copy(final Object... vals);
     public Base.Type_unititem vx_empty();
     public Base.Type_unititem vx_type();
     public Core.Type_string name();
     public Core.Type_string image();
+    public Core.Type_string reference();
+    public Core.Type_string summary();
+    public Core.Type_string titles();
+    public Core.Type_string orientation();
     public Core.Type_string facing();
     public Core.Type_string number();
     public Core.Type_string value();
@@ -15006,6 +15010,34 @@ public final class Base {
     @Override
     public Core.Type_string image() {
       return this.vx_p_image == null ? Core.e_string : this.vx_p_image;
+    }
+
+    protected Core.Type_string vx_p_reference;
+
+    @Override
+    public Core.Type_string reference() {
+      return this.vx_p_reference == null ? Core.e_string : this.vx_p_reference;
+    }
+
+    protected Core.Type_string vx_p_summary;
+
+    @Override
+    public Core.Type_string summary() {
+      return this.vx_p_summary == null ? Core.e_string : this.vx_p_summary;
+    }
+
+    protected Core.Type_string vx_p_titles;
+
+    @Override
+    public Core.Type_string titles() {
+      return this.vx_p_titles == null ? Core.e_string : this.vx_p_titles;
+    }
+
+    protected Core.Type_string vx_p_orientation;
+
+    @Override
+    public Core.Type_string orientation() {
+      return this.vx_p_orientation == null ? Core.e_string : this.vx_p_orientation;
     }
 
     protected Core.Type_string vx_p_facing;
@@ -15040,6 +15072,18 @@ public final class Base {
       case ":image":
         output = this.image();
         break;
+      case ":reference":
+        output = this.reference();
+        break;
+      case ":summary":
+        output = this.summary();
+        break;
+      case ":titles":
+        output = this.titles();
+        break;
+      case ":orientation":
+        output = this.orientation();
+        break;
       case ":facing":
         output = this.facing();
         break;
@@ -15058,6 +15102,10 @@ public final class Base {
       Map<String, Core.Type_any> output = new LinkedHashMap<>();
       output.put(":name", this.name());
       output.put(":image", this.image());
+      output.put(":reference", this.reference());
+      output.put(":summary", this.summary());
+      output.put(":titles", this.titles());
+      output.put(":orientation", this.orientation());
       output.put(":facing", this.facing());
       output.put(":number", this.number());
       output.put(":value", this.value());
@@ -15078,12 +15126,20 @@ public final class Base {
       }
       Core.Type_string vx_p_name = val.name();
       Core.Type_string vx_p_image = val.image();
+      Core.Type_string vx_p_reference = val.reference();
+      Core.Type_string vx_p_summary = val.summary();
+      Core.Type_string vx_p_titles = val.titles();
+      Core.Type_string vx_p_orientation = val.orientation();
       Core.Type_string vx_p_facing = val.facing();
       Core.Type_string vx_p_number = val.number();
       Core.Type_string vx_p_value = val.value();
       ArrayList<String> validkeys = new ArrayList<>();
       validkeys.add(":name");
       validkeys.add(":image");
+      validkeys.add(":reference");
+      validkeys.add(":summary");
+      validkeys.add(":titles");
+      validkeys.add(":orientation");
       validkeys.add(":facing");
       validkeys.add(":number");
       validkeys.add(":value");
@@ -15175,6 +15231,98 @@ public final class Base {
               msgblock = msgblock.vx_copy(msg);
             }
             break;
+          case ":reference":
+            if (valsub == vx_p_reference) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_reference = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_reference = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("reference"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":summary":
+            if (valsub == vx_p_summary) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_summary = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_summary = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("summary"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":titles":
+            if (valsub == vx_p_titles) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_titles = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_titles = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("titles"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":orientation":
+            if (valsub == vx_p_orientation) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_orientation = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_orientation = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("orientation"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unititem", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
           case ":facing":
             if (valsub == vx_p_facing) {
             } else if (valsub instanceof Core.Type_string) {
@@ -15256,6 +15404,10 @@ public final class Base {
         Class_unititem work = new Class_unititem();
         work.vx_p_name = vx_p_name;
         work.vx_p_image = vx_p_image;
+        work.vx_p_reference = vx_p_reference;
+        work.vx_p_summary = vx_p_summary;
+        work.vx_p_titles = vx_p_titles;
+        work.vx_p_orientation = vx_p_orientation;
         work.vx_p_facing = vx_p_facing;
         work.vx_p_number = vx_p_number;
         work.vx_p_value = vx_p_value;
@@ -15278,7 +15430,7 @@ public final class Base {
         "nx/tactics/base", // pkgname
         "unititem", // name
         ":struct", // extends
-        Core.e_typelist, // traits
+        Core.t_typelist.vx_new(Base.t_card), // traits
         Core.e_typelist, // allowtypes
         Core.e_typelist, // disallowtypes
         Core.e_funclist, // allowfuncs
@@ -15628,12 +15780,17 @@ public final class Base {
    * type: unitpower
    * (type unitpower)
    */
-  public interface Type_unitpower extends Core.Type_struct {
+  public interface Type_unitpower extends Core.Type_struct, Base.Type_card {
     public Base.Type_unitpower vx_new(final Object... vals);
     public Base.Type_unitpower vx_copy(final Object... vals);
     public Base.Type_unitpower vx_empty();
     public Base.Type_unitpower vx_type();
     public Core.Type_string name();
+    public Core.Type_string image();
+    public Core.Type_string reference();
+    public Core.Type_string summary();
+    public Core.Type_string titles();
+    public Core.Type_string orientation();
     public Core.Type_string level();
     public Base.Type_power power();
     public Core.Type_string front();
@@ -15654,6 +15811,41 @@ public final class Base {
     @Override
     public Core.Type_string name() {
       return this.vx_p_name == null ? Core.e_string : this.vx_p_name;
+    }
+
+    protected Core.Type_string vx_p_image;
+
+    @Override
+    public Core.Type_string image() {
+      return this.vx_p_image == null ? Core.e_string : this.vx_p_image;
+    }
+
+    protected Core.Type_string vx_p_reference;
+
+    @Override
+    public Core.Type_string reference() {
+      return this.vx_p_reference == null ? Core.e_string : this.vx_p_reference;
+    }
+
+    protected Core.Type_string vx_p_summary;
+
+    @Override
+    public Core.Type_string summary() {
+      return this.vx_p_summary == null ? Core.e_string : this.vx_p_summary;
+    }
+
+    protected Core.Type_string vx_p_titles;
+
+    @Override
+    public Core.Type_string titles() {
+      return this.vx_p_titles == null ? Core.e_string : this.vx_p_titles;
+    }
+
+    protected Core.Type_string vx_p_orientation;
+
+    @Override
+    public Core.Type_string orientation() {
+      return this.vx_p_orientation == null ? Core.e_string : this.vx_p_orientation;
     }
 
     protected Core.Type_string vx_p_level;
@@ -15741,6 +15933,21 @@ public final class Base {
       case ":name":
         output = this.name();
         break;
+      case ":image":
+        output = this.image();
+        break;
+      case ":reference":
+        output = this.reference();
+        break;
+      case ":summary":
+        output = this.summary();
+        break;
+      case ":titles":
+        output = this.titles();
+        break;
+      case ":orientation":
+        output = this.orientation();
+        break;
       case ":level":
         output = this.level();
         break;
@@ -15782,6 +15989,11 @@ public final class Base {
     public Map<String, Core.Type_any> vx_map() {
       Map<String, Core.Type_any> output = new LinkedHashMap<>();
       output.put(":name", this.name());
+      output.put(":image", this.image());
+      output.put(":reference", this.reference());
+      output.put(":summary", this.summary());
+      output.put(":titles", this.titles());
+      output.put(":orientation", this.orientation());
       output.put(":level", this.level());
       output.put(":power", this.power());
       output.put(":front", this.front());
@@ -15809,6 +16021,11 @@ public final class Base {
         ischanged = true;
       }
       Core.Type_string vx_p_name = val.name();
+      Core.Type_string vx_p_image = val.image();
+      Core.Type_string vx_p_reference = val.reference();
+      Core.Type_string vx_p_summary = val.summary();
+      Core.Type_string vx_p_titles = val.titles();
+      Core.Type_string vx_p_orientation = val.orientation();
       Core.Type_string vx_p_level = val.level();
       Base.Type_power vx_p_power = val.power();
       Core.Type_string vx_p_front = val.front();
@@ -15822,6 +16039,11 @@ public final class Base {
       Base.Type_unitspecialtymap vx_p_unitspecialtymap = val.unitspecialtymap();
       ArrayList<String> validkeys = new ArrayList<>();
       validkeys.add(":name");
+      validkeys.add(":image");
+      validkeys.add(":reference");
+      validkeys.add(":summary");
+      validkeys.add(":titles");
+      validkeys.add(":orientation");
       validkeys.add(":level");
       validkeys.add(":power");
       validkeys.add(":front");
@@ -15892,6 +16114,121 @@ public final class Base {
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
               mapany.put("key", Core.vx_new_string("name"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":image":
+            if (valsub == vx_p_image) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_image = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_image = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("image"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":reference":
+            if (valsub == vx_p_reference) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_reference = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_reference = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("reference"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":summary":
+            if (valsub == vx_p_summary) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_summary = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_summary = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("summary"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":titles":
+            if (valsub == vx_p_titles) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_titles = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_titles = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("titles"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":orientation":
+            if (valsub == vx_p_orientation) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_orientation = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_orientation = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("orientation"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/unitpower", ":invalidvalue", msgmap);
@@ -16150,6 +16487,11 @@ public final class Base {
       if (ischanged || (msgblock != Core.e_msgblock)) {
         Class_unitpower work = new Class_unitpower();
         work.vx_p_name = vx_p_name;
+        work.vx_p_image = vx_p_image;
+        work.vx_p_reference = vx_p_reference;
+        work.vx_p_summary = vx_p_summary;
+        work.vx_p_titles = vx_p_titles;
+        work.vx_p_orientation = vx_p_orientation;
         work.vx_p_level = vx_p_level;
         work.vx_p_power = vx_p_power;
         work.vx_p_front = vx_p_front;
@@ -16180,7 +16522,7 @@ public final class Base {
         "nx/tactics/base", // pkgname
         "unitpower", // name
         ":struct", // extends
-        Core.e_typelist, // traits
+        Core.t_typelist.vx_new(Base.t_card), // traits
         Core.e_typelist, // allowtypes
         Core.e_typelist, // disallowtypes
         Core.e_funclist, // allowfuncs
@@ -16365,12 +16707,17 @@ public final class Base {
    * type: unitskill
    * (type unitskill)
    */
-  public interface Type_unitskill extends Core.Type_struct {
+  public interface Type_unitskill extends Core.Type_struct, Base.Type_card {
     public Base.Type_unitskill vx_new(final Object... vals);
     public Base.Type_unitskill vx_copy(final Object... vals);
     public Base.Type_unitskill vx_empty();
     public Base.Type_unitskill vx_type();
     public Core.Type_string name();
+    public Core.Type_string image();
+    public Core.Type_string reference();
+    public Core.Type_string summary();
+    public Core.Type_string titles();
+    public Core.Type_string orientation();
     public Core.Type_string level();
     public Base.Type_skill skill();
     public Base.Type_unitabilitymap unitabilitymap();
@@ -16385,6 +16732,41 @@ public final class Base {
     @Override
     public Core.Type_string name() {
       return this.vx_p_name == null ? Core.e_string : this.vx_p_name;
+    }
+
+    protected Core.Type_string vx_p_image;
+
+    @Override
+    public Core.Type_string image() {
+      return this.vx_p_image == null ? Core.e_string : this.vx_p_image;
+    }
+
+    protected Core.Type_string vx_p_reference;
+
+    @Override
+    public Core.Type_string reference() {
+      return this.vx_p_reference == null ? Core.e_string : this.vx_p_reference;
+    }
+
+    protected Core.Type_string vx_p_summary;
+
+    @Override
+    public Core.Type_string summary() {
+      return this.vx_p_summary == null ? Core.e_string : this.vx_p_summary;
+    }
+
+    protected Core.Type_string vx_p_titles;
+
+    @Override
+    public Core.Type_string titles() {
+      return this.vx_p_titles == null ? Core.e_string : this.vx_p_titles;
+    }
+
+    protected Core.Type_string vx_p_orientation;
+
+    @Override
+    public Core.Type_string orientation() {
+      return this.vx_p_orientation == null ? Core.e_string : this.vx_p_orientation;
     }
 
     protected Core.Type_string vx_p_level;
@@ -16430,6 +16812,21 @@ public final class Base {
       case ":name":
         output = this.name();
         break;
+      case ":image":
+        output = this.image();
+        break;
+      case ":reference":
+        output = this.reference();
+        break;
+      case ":summary":
+        output = this.summary();
+        break;
+      case ":titles":
+        output = this.titles();
+        break;
+      case ":orientation":
+        output = this.orientation();
+        break;
       case ":level":
         output = this.level();
         break;
@@ -16453,6 +16850,11 @@ public final class Base {
     public Map<String, Core.Type_any> vx_map() {
       Map<String, Core.Type_any> output = new LinkedHashMap<>();
       output.put(":name", this.name());
+      output.put(":image", this.image());
+      output.put(":reference", this.reference());
+      output.put(":summary", this.summary());
+      output.put(":titles", this.titles());
+      output.put(":orientation", this.orientation());
       output.put(":level", this.level());
       output.put(":skill", this.skill());
       output.put(":unitabilitymap", this.unitabilitymap());
@@ -16474,6 +16876,11 @@ public final class Base {
         ischanged = true;
       }
       Core.Type_string vx_p_name = val.name();
+      Core.Type_string vx_p_image = val.image();
+      Core.Type_string vx_p_reference = val.reference();
+      Core.Type_string vx_p_summary = val.summary();
+      Core.Type_string vx_p_titles = val.titles();
+      Core.Type_string vx_p_orientation = val.orientation();
       Core.Type_string vx_p_level = val.level();
       Base.Type_skill vx_p_skill = val.skill();
       Base.Type_unitabilitymap vx_p_unitabilitymap = val.unitabilitymap();
@@ -16481,6 +16888,11 @@ public final class Base {
       Base.Type_unitspecialtymap vx_p_unitspecialtymap = val.unitspecialtymap();
       ArrayList<String> validkeys = new ArrayList<>();
       validkeys.add(":name");
+      validkeys.add(":image");
+      validkeys.add(":reference");
+      validkeys.add(":summary");
+      validkeys.add(":titles");
+      validkeys.add(":orientation");
       validkeys.add(":level");
       validkeys.add(":skill");
       validkeys.add(":unitabilitymap");
@@ -16545,6 +16957,121 @@ public final class Base {
               }
               Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
               mapany.put("key", Core.vx_new_string("name"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitskill", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":image":
+            if (valsub == vx_p_image) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_image = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_image = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("image"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitskill", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":reference":
+            if (valsub == vx_p_reference) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_reference = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_reference = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("reference"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitskill", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":summary":
+            if (valsub == vx_p_summary) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_summary = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_summary = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("summary"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitskill", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":titles":
+            if (valsub == vx_p_titles) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_titles = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_titles = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("titles"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/unitskill", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":orientation":
+            if (valsub == vx_p_orientation) {
+            } else if (valsub instanceof Core.Type_string) {
+              ischanged = true;
+              vx_p_orientation = (Core.Type_string)valsub;
+            } else if (valsub instanceof String) {
+              ischanged = true;
+              vx_p_orientation = Core.t_string.vx_new(valsub);
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("orientation"));
               mapany.put("value", msgval);
               Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
               msg = Core.vx_msg_from_error("nx/tactics/base/unitskill", ":invalidvalue", msgmap);
@@ -16665,6 +17192,11 @@ public final class Base {
       if (ischanged || (msgblock != Core.e_msgblock)) {
         Class_unitskill work = new Class_unitskill();
         work.vx_p_name = vx_p_name;
+        work.vx_p_image = vx_p_image;
+        work.vx_p_reference = vx_p_reference;
+        work.vx_p_summary = vx_p_summary;
+        work.vx_p_titles = vx_p_titles;
+        work.vx_p_orientation = vx_p_orientation;
         work.vx_p_level = vx_p_level;
         work.vx_p_skill = vx_p_skill;
         work.vx_p_unitabilitymap = vx_p_unitabilitymap;
@@ -16689,7 +17221,7 @@ public final class Base {
         "nx/tactics/base", // pkgname
         "unitskill", // name
         ":struct", // extends
-        Core.e_typelist, // traits
+        Core.t_typelist.vx_new(Base.t_card), // traits
         Core.e_typelist, // allowtypes
         Core.e_typelist, // disallowtypes
         Core.e_funclist, // allowfuncs

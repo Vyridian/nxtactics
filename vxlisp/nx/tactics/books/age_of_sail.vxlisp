@@ -1,0 +1,281 @@
+(package nx/tactics/books/age_of_sail
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Age Of Sail"
+  :chaptermap
+   (chaptermap
+    "Age of Sail Overview"
+     (chapter
+      :name "Age of Sail Overview"
+      :sectionmap
+       (sectionmap
+        "Age of Sail Naval Warfare"
+         (section
+          :name "Age of Sail Naval Warfare"
+          :summary
+           "* Wind
+* Large Ships
+* Small Ships
+* Solid Shot
+* Burning Shot
+* Chain Shot
+* Fortifications")))
+    "Age of Sail Weaponry"
+     (chapter
+      :name "Age of Sail Weaponry"
+      :sectionmap
+       (sectionmap
+        "Age of Sail Cannons"
+         (section
+          :name "Age of Sail Cannons"
+          :itemmap
+           (itemmap
+            :Chainshot
+             (item
+              :name "Chainshot"
+              :image "AgeOfSail/Cannon_Chainshot.jpg"
+              :summary "* Does no damage.  All [Hits] are [Disabled Tokens].  All [Critical Hits] are [Crippled Tokens].")
+            :Grapeshot
+             (item
+              :name "Grapeshot"
+              :image "AgeOfSail/Cannon_Grapeshot.jpg")
+            "Round shot"
+             (item
+              :name "Round shot"
+              :image "AgeOfSail/Cannon_Roundshot.jpg")
+            "140mm Field Culverin"
+             (item
+              :name "140mm Field Culverin"
+              :image "AgeOfSail/Culverin.jpg"
+              :summary "600,000J"
+              :classification "Cannon"
+              :length "4.5m"
+              :mass "2.2tons"
+              :muzzlevelocity "400m/s"
+              :range "450m")
+            "100mm Demi-culverin"
+             (item
+              :name "100mm Demi-culverin"
+              :image "AgeOfSail/Demi-culverin.jpg"
+              :classification "Cannon"
+              :length "3.4m"
+              :mass "1.5tons"
+              :muzzlevelocity "487m/s"
+              :range "300m"
+              :rof ".75/min")))))
+    :Renaissance
+     (chapter
+      :name "Renaissance")
+    "Golden Age of Sail"
+     (chapter
+      :name "Golden Age of Sail"
+      :sectionmap
+       (sectionmap
+        "Age of Sail Spanish"
+         (section
+          :name "Age of Sail Spanish"
+          :unitmap
+           (unitmap
+            "Silver Train"
+             (unit
+              :name "Silver Train")
+            "Treasure Fleet"
+             (unit
+              :name "Treasure Fleet"
+              :classification "Hvy. Naval Vessel")
+            "Spanish Caravel"
+             (unit
+              :name "Spanish Caravel"
+              :image "AgeOfSail/SpanishCaravel.png"
+              :speed "15kph"
+              :classification "Med. Naval Vessel"
+              :crew "20"
+              :mass "150tons"
+              :length "25m"
+              :width "9m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :summary "7 inches (180 mm/30mm RHA)"
+                  :front "30mm"
+                  :back "30mm"
+                  :side "30mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Salvo
+                     (unitability
+                      :name "Salvo"))
+                  :unititemmap
+                   (unititemmap
+                    "100mm Demi-culverin"
+                     (unititem
+                      :name "100mm Demi-culverin"
+                      :number "20")))
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")))
+            "Spanish Galleon"
+             (unit
+              :name "Spanish Galleon"
+              :image "AgeOfSail/SpanishGalleon.png"
+              :reference
+               "Large ships meant for transporting cargo.  The Spanish treasure fleets were made of these ships.  Although
+they were sluggish, they weren't the easy target you would expect for they could carry heavy cannon which
+made attacking them difficult.  They had two to three decks.  Most had three masts.  Some galleons sported 4
+masts but these were an exception to the rule."
+              :classification "Hvy. Naval Vessel"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :summary "14 inches (360 mm/60mm RHA)"
+                  :front "60mm"
+                  :back "60mm"
+                  :side "60mm")))
+            "Spanish Man-O-War"
+             (unit
+              :name "Spanish Man-O-War"
+              :image "AgeOfSail/SpanishManOWar.png"
+              :classification "Hvy. Naval Vessel"
+              :mass "1000tons"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :summary "14 inches (360 mm/60mm RHA)"
+                  :front "60mm"
+                  :back "60mm"
+                  :side "60mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Salvo
+                     (unitability
+                      :name "Salvo"))
+                  :unititemmap
+                   (unititemmap
+                    "100mm Demi-culverin"
+                     (unititem
+                      :name "100mm Demi-culverin"
+                      :number "100")))
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")))
+            "Spanish Schooner"
+             (unit
+              :name "Spanish Schooner"
+              :image "AgeOfSail/SpanishSchooner.png"
+              :classification "Med. Naval Vessel"
+              :mass "80tons"
+              :length "18m"
+              :width "6m"
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Salvo
+                     (unitability
+                      :name "Salvo"))
+                  :unititemmap
+                   (unititemmap
+                    "100mm Demi-culverin"
+                     (unititem
+                      :name "100mm Demi-culverin"
+                      :number "8")))
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")))))))
+    "American Revolution"
+     (chapter
+      :name "American Revolution"
+      :sectionmap
+       (sectionmap
+        "Age of Sail United States"
+         (section
+          :name "Age of Sail United States"
+          :unitmap
+           (unitmap
+            "American Frigate"
+             (unit
+              :name "American Frigate"
+              :image "AgeOfSail/AmericanFrigate.png"
+              :titles "USS Constitution, Old Ironsides"
+              :speed "24kph"
+              :classification "Hvy. Naval Vessel"
+              :mass "2200tons"
+              :length "62m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :summary "21 inches (530 mm/88mm RHA)"
+                  :front "88mm"
+                  :back "88mm"
+                  :side "88mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :summary
+                   "30 x 24-pounder (11 kg) long gun
+20 x 32-pounder (15 kg) carronade
+2 x 24-pounder (11 kg) bow chasers"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Salvo
+                     (unitability
+                      :name "Salvo")))))))))
+    "French Revolution"
+     (chapter
+      :name "French Revolution")
+    "Tokugawa Shogunate"
+     (chapter
+      :name "Tokugawa Shogunate"
+      :sectionmap
+       (sectionmap
+        "Age of Sail Japan"
+         (section
+          :name "Age of Sail Japan"
+          :unitmap
+           (unitmap
+            "Japanese Archer"
+             (unit
+              :name "Japanese Archer")
+            "Japanese Daimyo"
+             (unit
+              :name "Japanese Daimyo")
+            "Japanese Emperor"
+             (unit
+              :name "Japanese Emperor")
+            "Japanese Rifleman"
+             (unit
+              :name "Japanese Rifleman")
+            "Japnese Samurai"
+             (unit
+              :name "Japnese Samurai"))))))))

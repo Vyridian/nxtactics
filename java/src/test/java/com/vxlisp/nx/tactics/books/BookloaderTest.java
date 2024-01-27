@@ -2726,7 +2726,7 @@ public final class BookloaderTest {
       ":describelist",
       Test.t_testdescribelist.vx_new(
         Test.t_testdescribe.vx_new(
-          ":describename", "(test\n (base/unititem\n  :titles \"titles\")\n (unititem<-unititem-xmlchild\n  (empty base/unititem)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+          ":describename", "(test\n (base/unititem\n  :titles \"titles1\")\n (unititem<-unititem-xmlchild\n  (empty base/unititem)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles1\")))))",
           ":testresult",
             Test.f_test(
               context,
@@ -2734,7 +2734,7 @@ public final class BookloaderTest {
                 Base.t_unititem,
                 Core.t_anylist.vx_new(
                   Core.vx_new_string(":titles"),
-                  Core.vx_new_string("titles")
+                  Core.vx_new_string("titles1")
                 )
               ),
               Bookloader.f_unititem_from_unititem_xmlchild(
@@ -2754,7 +2754,7 @@ public final class BookloaderTest {
                           Xml.t_xml,
                           Core.t_anylist.vx_new(
                             Core.vx_new_string(":text"),
-                            Core.vx_new_string("titles")
+                            Core.vx_new_string("titles1")
                           )
                         )
                       )
@@ -2777,7 +2777,7 @@ public final class BookloaderTest {
       ":describelist",
       Test.t_testdescribelist.vx_new(
         Test.t_testdescribe.vx_new(
-          ":describename", "(test\n (base/unititem\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (unititem<-xml\n  (xml/xml\n   :tag \"unititem\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+          ":describename", "(test\n (base/unititem\n  :name \"name1\"\n  :image \"image1\"\n  :titles \"titles1\"\n  :reference \"reference1\"\n  :summary \"summary1\")\n (unititem<-xml\n  (xml/xml\n   :tag \"unititem\"\n   :propmap\n    (stringmap\n     :name \"name1\"\n     :image \"image1\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles1\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference1\")))\n     (xml/xml\n      :tag \"summary\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"summary1\")))))))",
           ":testresult",
             Test.f_test(
               context,
@@ -2785,13 +2785,15 @@ public final class BookloaderTest {
                 Base.t_unititem,
                 Core.t_anylist.vx_new(
                   Core.vx_new_string(":name"),
-                  Core.vx_new_string("name"),
+                  Core.vx_new_string("name1"),
                   Core.vx_new_string(":image"),
-                  Core.vx_new_string("image"),
+                  Core.vx_new_string("image1"),
                   Core.vx_new_string(":titles"),
-                  Core.vx_new_string("titles"),
+                  Core.vx_new_string("titles1"),
                   Core.vx_new_string(":reference"),
-                  Core.vx_new_string("reference")
+                  Core.vx_new_string("reference1"),
+                  Core.vx_new_string(":summary"),
+                  Core.vx_new_string("summary1")
                 )
               ),
               Bookloader.f_unititem_from_xml(
@@ -2805,9 +2807,9 @@ public final class BookloaderTest {
                       Core.t_stringmap,
                       Core.t_anylist.vx_new(
                         Core.vx_new_string(":name"),
-                        Core.vx_new_string("name"),
+                        Core.vx_new_string("name1"),
                         Core.vx_new_string(":image"),
-                        Core.vx_new_string("image")
+                        Core.vx_new_string("image1")
                       )
                     ),
                     Core.vx_new_string(":children"),
@@ -2827,7 +2829,7 @@ public final class BookloaderTest {
                                   Xml.t_xml,
                                   Core.t_anylist.vx_new(
                                     Core.vx_new_string(":text"),
-                                    Core.vx_new_string("titles")
+                                    Core.vx_new_string("titles1")
                                   )
                                 )
                               )
@@ -2847,7 +2849,27 @@ public final class BookloaderTest {
                                   Xml.t_xml,
                                   Core.t_anylist.vx_new(
                                     Core.vx_new_string(":text"),
-                                    Core.vx_new_string("reference")
+                                    Core.vx_new_string("reference1")
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        ),
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":tag"),
+                            Core.vx_new_string("summary"),
+                            Core.vx_new_string(":children"),
+                            Core.f_new(
+                              Xml.t_xmllist,
+                              Core.t_anylist.vx_new(
+                                Core.f_new(
+                                  Xml.t_xml,
+                                  Core.t_anylist.vx_new(
+                                    Core.vx_new_string(":text"),
+                                    Core.vx_new_string("summary1")
                                   )
                                 )
                               )

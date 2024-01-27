@@ -2364,7 +2364,7 @@
        :tag tag))))))
  :test (test
         (base/unititem
-         :titles "titles")
+         :titles "titles1")
         (unititem<-unititem-xmlchild
          (empty base/unititem)
          (xml/xml
@@ -2372,33 +2372,35 @@
           :children
            (xml/xmllist
             (xml/xml
-             :text "titles")))))
+             :text "titles1")))))
  :doc "Returns a modified unititem based on a given child xml.")
 
 (func unititem<-xml : base/unititem
  [xml : xml/xml]
  (let : base/unititem
-  [propmap  : stringmap    := (:propmap xml)
-   unititem  : base/unititem := (unititem<-unititem-stringmap
-                               (empty base/unititem)
-                               propmap)]
+  [propmap  : stringmap     := (:propmap xml)
+   children : xml/xmllist   := (:children xml)
+   unititem : base/unititem := (unititem<-unititem-stringmap
+                                (empty base/unititem)
+                                propmap)]
   (any<-list-start-reduce : base/unititem
-   (:children xml)
+   children
    unititem
    unititem<-unititem-xmlchild))
  :test (test
         (base/unititem
-         :name "name"
-         :image "image"
-         :titles "titles"
-         :reference "reference")
+         :name "name1"
+         :image "image1"
+         :titles "titles1"
+         :reference "reference1"
+         :summary "summary1")
         (unititem<-xml
          (xml/xml
           :tag "unititem"
           :propmap
            (stringmap
-            :name "name"
-            :image "image")
+            :name "name1"
+            :image "image1")
           :children
            (xml/xmllist
             (xml/xml
@@ -2406,13 +2408,19 @@
              :children
               (xml/xmllist
                (xml/xml
-                :text "titles")))
+                :text "titles1")))
             (xml/xml
              :tag "reference"
              :children
               (xml/xmllist
                (xml/xml
-                :text "reference")))))))
+                :text "reference1")))
+            (xml/xml
+             :tag "summary"
+             :children
+              (xml/xmllist
+               (xml/xml
+                :text "summary1")))))))
  :doc "Returns a unititem from a given xml.")
 
 (func unitpower<-unitpower-key-value : base/unitpower

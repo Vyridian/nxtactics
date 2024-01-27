@@ -10553,7 +10553,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unititem", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -10689,7 +10689,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unititem", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -10780,7 +10780,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unititem", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -10917,7 +10917,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unititem", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -10969,6 +10969,7 @@ public final class Bookloader {
       Base.t_unititem,
       Core.t_any_from_func.vx_fn_new(() -> {
         final Core.Type_stringmap propmap = xml.propmap();
+        final Xml.Type_xmllist children = xml.children();
         final Base.Type_unititem unititem = Bookloader.f_unititem_from_unititem_stringmap(
           Core.f_empty(
             Base.t_unititem
@@ -10977,7 +10978,7 @@ public final class Bookloader {
         );
         return Core.f_any_from_list_start_reduce(
           Base.t_unititem,
-          xml.children(),
+          children,
           unititem,
           Core.t_any_from_reduce.vx_fn_new((Core.Type_any unititem_lmb_any, Core.Type_any child_lmb_any) -> {
             Base.Type_unititem unititem_lmb = Core.f_any_from_any(Base.t_unititem, unititem_lmb_any);
@@ -11032,7 +11033,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitpower", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -11174,7 +11175,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitpower", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -11264,7 +11265,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitpower", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -11365,7 +11366,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitpower", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -11520,7 +11521,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitpower", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -11621,7 +11622,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitpower", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -11721,7 +11722,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitpower", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -11836,7 +11837,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitskill", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -11976,7 +11977,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitskill", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -12066,7 +12067,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitskill", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -12167,7 +12168,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitskill", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -12322,7 +12323,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitskill", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -12423,7 +12424,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitskill", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs
@@ -12523,7 +12524,7 @@ public final class Bookloader {
           "nx/tactics/base", // pkgname
           "unitskill", // name
           ":struct", // extends
-          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_card), // traits
           Core.e_typelist, // allowtypes
           Core.e_typelist, // disallowtypes
           Core.e_funclist, // allowfuncs

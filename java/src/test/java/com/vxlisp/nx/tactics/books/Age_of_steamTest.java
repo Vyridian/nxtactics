@@ -40,7 +40,7 @@ public final class Age_of_steamTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
-        ":bk", 0
+        ":tacticsbook", 0
       )
     );
   }

@@ -17655,6 +17655,100 @@ ab
     :funcmap
      (intmap
       :tacticsbook 0)
+    :testpkg "nx/tactics/books/age_of_sail")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/age_of_sail"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/age_of_sail")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/age_of_steam")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/age_of_steam"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/age_of_steam")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
     :testpkg "nx/tactics/books/bestiary")
   :coveragesummary
    (testcoveragesummary
@@ -19410,7 +19504,7 @@ ab
         :describename
          "(test
  (base/unititem
-  :titles "titles")
+  :titles "titles1")
  (unititem<-unititem-xmlchild
   (empty base/unititem)
   (xml/xml
@@ -19418,41 +19512,17 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles1")))))"
         :testresult
          (testresult
           :code ":eq"
           :passfail true
           :expected
            (unititem
-            (msgblock
-             :msgs
-              (msglist
-               (msg
-                :code ":invalidkey"
-                :detail ":titles"
-                :path "nx/tactics/base/unititem"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":titles"
-                :path "nx/tactics/base/unititem"
-                :severity 3))))
+            :titles "titles1")
           :actual
            (unititem
-            (msgblock
-             :msgs
-              (msglist
-               (msg
-                :code ":invalidkey"
-                :detail ":titles"
-                :path "nx/tactics/base/unititem"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":titles"
-                :path "nx/tactics/base/unititem"
-                :severity 3))))))))
+            :titles "titles1")))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -19463,17 +19533,18 @@ ab
         :describename
          "(test
  (base/unititem
-  :name "name"
-  :image "image"
-  :titles "titles"
-  :reference "reference")
+  :name "name1"
+  :image "image1"
+  :titles "titles1"
+  :reference "reference1"
+  :summary "summary1")
  (unititem<-xml
   (xml/xml
    :tag "unititem"
    :propmap
     (stringmap
-     :name "name"
-     :image "image")
+     :name "name1"
+     :image "image1")
    :children
     (xml/xmllist
      (xml/xml
@@ -19481,71 +19552,37 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "titles")))
+         :text "titles1")))
      (xml/xml
       :tag "reference"
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))))))"
+         :text "reference1")))
+     (xml/xml
+      :tag "summary"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "summary1")))))))"
         :testresult
          (testresult
           :code ":eq"
           :passfail true
           :expected
            (unititem
-            :name "name"
-            :image "image"
-            (msgblock
-             :msgs
-              (msglist
-               (msg
-                :code ":invalidkey"
-                :detail ":titles"
-                :path "nx/tactics/base/unititem"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":titles"
-                :path "nx/tactics/base/unititem"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":reference"
-                :path "nx/tactics/base/unititem"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":reference"
-                :path "nx/tactics/base/unititem"
-                :severity 3))))
+            :name "name1"
+            :image "image1"
+            :reference "reference1"
+            :summary "summary1"
+            :titles "titles1")
           :actual
            (unititem
-            :name "name"
-            :image "image"
-            (msgblock
-             :msgs
-              (msglist
-               (msg
-                :code ":invalidkey"
-                :detail ":titles"
-                :path "nx/tactics/base/unititem"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":titles"
-                :path "nx/tactics/base/unititem"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":reference"
-                :path "nx/tactics/base/unititem"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":reference"
-                :path "nx/tactics/base/unititem"
-                :severity 3))))))))
+            :name "name1"
+            :image "image1"
+            :reference "reference1"
+            :summary "summary1"
+            :titles "titles1")))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -19571,34 +19608,10 @@ ab
           :passfail true
           :expected
            (unitpower
-            (msgblock
-             :msgs
-              (msglist
-               (msg
-                :code ":invalidkey"
-                :detail ":summary"
-                :path "nx/tactics/base/unitpower"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":summary1"
-                :path "nx/tactics/base/unitpower"
-                :severity 3))))
+            :summary "summary1")
           :actual
            (unitpower
-            (msgblock
-             :msgs
-              (msglist
-               (msg
-                :code ":invalidkey"
-                :detail ":summary"
-                :path "nx/tactics/base/unitpower"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":summary1"
-                :path "nx/tactics/base/unitpower"
-                :severity 3))))))))
+            :summary "summary1")))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -19624,34 +19637,10 @@ ab
           :passfail true
           :expected
            (unitskill
-            (msgblock
-             :msgs
-              (msglist
-               (msg
-                :code ":invalidkey"
-                :detail ":summary"
-                :path "nx/tactics/base/unitskill"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":summary1"
-                :path "nx/tactics/base/unitskill"
-                :severity 3))))
+            :summary "summary1")
           :actual
            (unitskill
-            (msgblock
-             :msgs
-              (msglist
-               (msg
-                :code ":invalidkey"
-                :detail ":summary"
-                :path "nx/tactics/base/unitskill"
-                :severity 3)
-               (msg
-                :code ":invalidkey"
-                :detail ":summary1"
-                :path "nx/tactics/base/unitskill"
-                :severity 3))))))))
+            :summary "summary1")))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -20231,6 +20220,53 @@ ab
     :funcmap
      (intmap
       :tacticsbook 0)
+    :testpkg "nx/tactics/books/giant_monsters")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/giant_monsters"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/giant_monsters")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
     :testpkg "nx/tactics/books/horror")
   :coveragesummary
    (testcoveragesummary
@@ -20601,6 +20637,53 @@ ab
       :total 0))
   :passfail true
   :testpkg "nx/tactics/books/pulp_fiction")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/science_fiction")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/science_fiction"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/science_fiction")
  (testpackage
   :coveragedetail
    (testcoveragedetail

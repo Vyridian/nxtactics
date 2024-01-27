@@ -27,6 +27,8 @@ import com.vxlisp.nx.crypto.CryptosheetTest;
 import com.vxlisp.nx.tactics.ApptacticsTest;
 import com.vxlisp.nx.tactics.BaseTest;
 import com.vxlisp.nx.tactics.books.Advanced_rulesTest;
+import com.vxlisp.nx.tactics.books.Age_of_sailTest;
+import com.vxlisp.nx.tactics.books.Age_of_steamTest;
 import com.vxlisp.nx.tactics.books.BestiaryTest;
 import com.vxlisp.nx.tactics.books.BookloaderTest;
 import com.vxlisp.nx.tactics.books.CharactersTest;
@@ -34,6 +36,7 @@ import com.vxlisp.nx.tactics.books.CombatTest;
 import com.vxlisp.nx.tactics.books.Core_rulesTest;
 import com.vxlisp.nx.tactics.books.GearTest;
 import com.vxlisp.nx.tactics.books.GettingstartedTest;
+import com.vxlisp.nx.tactics.books.Giant_monstersTest;
 import com.vxlisp.nx.tactics.books.HorrorTest;
 import com.vxlisp.nx.tactics.books.Land_sea_and_airTest;
 import com.vxlisp.nx.tactics.books.MagicTest;
@@ -42,6 +45,7 @@ import com.vxlisp.nx.tactics.books.ModernTest;
 import com.vxlisp.nx.tactics.books.Modern_fantasyTest;
 import com.vxlisp.nx.tactics.books.PrehistoryTest;
 import com.vxlisp.nx.tactics.books.Pulp_fictionTest;
+import com.vxlisp.nx.tactics.books.Science_fictionTest;
 import com.vxlisp.nx.tactics.books.SkillsTest;
 import com.vxlisp.nx.tactics.books.Space_and_timeTest;
 import com.vxlisp.nx.tactics.books.SuperheroesTest;
@@ -278,6 +282,22 @@ public final class AppTest {
 
 
   @Test
+  @DisplayName("nx/tactics/books/age_of_sail")
+  void test_nx_tactics_books_age_of_sail() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Age_of_sailTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/age_of_steam")
+  void test_nx_tactics_books_age_of_steam() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Age_of_steamTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
   @DisplayName("nx/tactics/books/bestiary")
   void test_nx_tactics_books_bestiary() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = BestiaryTest.test_package(context);
@@ -329,6 +349,14 @@ public final class AppTest {
   @DisplayName("nx/tactics/books/gettingstarted")
   void test_nx_tactics_books_gettingstarted() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = GettingstartedTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/giant_monsters")
+  void test_nx_tactics_books_giant_monsters() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Giant_monstersTest.test_package(context);
 	  TestLib.run_testpackage_async(testpackage);
   }
 
@@ -393,6 +421,14 @@ public final class AppTest {
   @DisplayName("nx/tactics/books/pulp_fiction")
   void test_nx_tactics_books_pulp_fiction() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = Pulp_fictionTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("nx/tactics/books/science_fiction")
+  void test_nx_tactics_books_science_fiction() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = Science_fictionTest.test_package(context);
 	  TestLib.run_testpackage_async(testpackage);
   }
 
@@ -539,6 +575,8 @@ public final class AppTest {
     ApptacticsTest.test_package(context),
     BaseTest.test_package(context),
     Advanced_rulesTest.test_package(context),
+    Age_of_sailTest.test_package(context),
+    Age_of_steamTest.test_package(context),
     BestiaryTest.test_package(context),
     BookloaderTest.test_package(context),
     CharactersTest.test_package(context),
@@ -546,6 +584,7 @@ public final class AppTest {
     Core_rulesTest.test_package(context),
     GearTest.test_package(context),
     GettingstartedTest.test_package(context),
+    Giant_monstersTest.test_package(context),
     HorrorTest.test_package(context),
     Land_sea_and_airTest.test_package(context),
     MagicTest.test_package(context),
@@ -554,6 +593,7 @@ public final class AppTest {
     Modern_fantasyTest.test_package(context),
     PrehistoryTest.test_package(context),
     Pulp_fictionTest.test_package(context),
+    Science_fictionTest.test_package(context),
     SkillsTest.test_package(context),
     Space_and_timeTest.test_package(context),
     SuperheroesTest.test_package(context),

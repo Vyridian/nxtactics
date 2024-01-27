@@ -228,11 +228,10 @@
  :allowtypes [unitability])
 
 (type unititem : struct
- :properties [name   : string
-              image  : string
-              facing : string
+ :properties [facing : string
               number : string
-              value  : string])
+              value  : string]
+ :traits [card])
 
 (type unititemmap : map
  :allowtypes [unititem])
@@ -241,8 +240,7 @@
  :allowtypes [unit])
 
 (type unitpower : struct
- :properties [name             : string
-              level            : string
+ :properties [level            : string
               power            : power
               front            : string
               back             : string
@@ -252,18 +250,19 @@
               strength         : string
               unitabilitymap   : unitabilitymap
               unititemmap      : unititemmap
-              unitspecialtymap : unitspecialtymap])
+              unitspecialtymap : unitspecialtymap]
+ :traits [card])
 
 (type unitpowermap : map
  :allowtypes [unitpower])
 
 (type unitskill : struct
- :properties [name             : string
-              level            : string
+ :properties [level            : string
               skill            : skill
               unitabilitymap   : unitabilitymap
               unititemmap      : unititemmap
-              unitspecialtymap : unitspecialtymap])
+              unitspecialtymap : unitspecialtymap]
+ :traits [card])
 
 (type unitskillmap : map
  :allowtypes [unitskill])
