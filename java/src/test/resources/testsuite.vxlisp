@@ -13303,8 +13303,15 @@
  (xml
   :tag "doc"
   (msg
-   :severity 2
-   :text "Invalid Xml Close tag: /wrong"))
+   :code ":invalidxmlclosetag"
+   :detail
+    (anymap
+     :tag "/wrong"
+     :startpos 0
+     :endpos 0
+     :line 0
+     :column 0)
+   :severity 2))
  (xml-close<-xml-textblock
   (xml
    :tag "doc")
@@ -13321,8 +13328,15 @@
              :msgs
               (msglist
                (msg
-                :severity 2
-                :text "Invalid Xml Close tag: /wrong"))))
+                :code ":invalidxmlclosetag"
+                :detail
+                 (anymap
+                  :tag "/wrong"
+                  :startpos 0
+                  :endpos 0
+                  :line 0
+                  :column 0)
+                :severity 2))))
           :actual
            (xml
             :tag "doc"
@@ -13330,8 +13344,15 @@
              :msgs
               (msglist
                (msg
-                :severity 2
-                :text "Invalid Xml Close tag: /wrong"))))))
+                :code ":invalidxmlclosetag"
+                :detail
+                 (anymap
+                  :tag "/wrong"
+                  :startpos 0
+                  :endpos 0
+                  :line 0
+                  :column 0)
+                :severity 2))))))
        (testdescribe
         :describename
          "(test
@@ -17523,6 +17544,7 @@ ab
       :locationmap 0
       :mind 0
       :modifier 0
+      :modifiermap 0
       :playingcard 0
       :power 0
       :powermap 0
@@ -17543,6 +17565,8 @@ ab
       :stat 0
       :suit 0
       :suitmap 0
+      :team 0
+      :teammap 0
       :terrain 0
       :terrainmap 0
       :threat 0
@@ -17583,7 +17607,7 @@ ab
      (testcoveragenums
       :pct 5
       :tests 5
-      :total 96)
+      :total 99)
     :funcnums
      (testcoveragenums
       :pct 0
@@ -17594,12 +17618,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 96)
+      :total 99)
     :typenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 61))
+      :total 64))
   :passfail true
   :testpkg "nx/tactics/base")
  (testpackage
@@ -17743,6 +17767,53 @@ ab
       :total 0))
   :passfail true
   :testpkg "nx/tactics/books/age_of_steam")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/ancients")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/ancients"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/ancients")
  (testpackage
   :coveragedetail
    (testcoveragedetail
@@ -19854,6 +19925,9 @@ ab
       :location<-location-stringmap 0
       :location<-location-xmlchild 0
       :location<-xml 0
+      :modifier<-modifier-key-value 0
+      :modifier<-modifier-stringmap 0
+      :modifier<-modifier-xmlchild 0
       :modifier<-xml 0
       :power<-power-key-value 0
       :power<-power-stringmap 1
@@ -19868,6 +19942,7 @@ ab
       :scenario<-scenario-key-value 0
       :scenario<-scenario-stringmap 0
       :scenario<-scenario-xmlchild 0
+      :scenario<-scenario-xmlteam 0
       :scenario<-xml 1
       :section<-section-key-value 0
       :section<-section-stringmap 0
@@ -19875,6 +19950,7 @@ ab
       :section<-section-xmldamage 0
       :section<-section-xmlitem 0
       :section<-section-xmllocation 0
+      :section<-section-xmlmodifier 0
       :section<-section-xmlpower 0
       :section<-section-xmlrule 0
       :section<-section-xmlscenario 0
@@ -19896,6 +19972,10 @@ ab
       :string-read<-bookname 0
       :string-vxlisp<-book 0
       :string-writename<-book 0
+      :team<-team-key-value 0
+      :team<-team-stringmap 0
+      :team<-team-xmlchild 0
+      :team<-xml 0
       :terrain<-terrain-key-value 0
       :terrain<-terrain-stringmap 1
       :terrain<-terrain-xmlchild 1
@@ -19943,12 +20023,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 116)
+      :total 125)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 116)
+      :total 125)
     :constnums
      (testcoveragenums
       :pct 100
@@ -19956,20 +20036,20 @@ ab
       :total 0)
     :docnums
      (testcoveragenums
-      :pct 88
-      :tests 103
-      :total 116)
+      :pct 90
+      :tests 113
+      :total 125)
     :funcnums
      (testcoveragenums
-      :pct 37
+      :pct 35
       :tests 44
-      :total 116)
+      :total 125)
     :testpkg "nx/tactics/books/bookloader"
     :totalnums
      (testcoveragenums
-      :pct 37
+      :pct 35
       :tests 44
-      :total 116)
+      :total 125)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20124,6 +20204,53 @@ ab
     :funcmap
      (intmap
       :tacticsbook 0)
+    :testpkg "nx/tactics/books/fantasy")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/fantasy"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/fantasy")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
     :testpkg "nx/tactics/books/gear")
   :coveragesummary
    (testcoveragesummary
@@ -20261,6 +20388,53 @@ ab
       :total 0))
   :passfail true
   :testpkg "nx/tactics/books/giant_monsters")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/high_technology")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/high_technology"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/high_technology")
  (testpackage
   :coveragedetail
    (testcoveragedetail
@@ -20543,6 +20717,53 @@ ab
       :total 0))
   :passfail true
   :testpkg "nx/tactics/books/modern_fantasy")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/powers")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "nx/tactics/books/powers"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/powers")
  (testpackage
   :coveragedetail
    (testcoveragedetail

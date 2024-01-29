@@ -43,10 +43,10 @@
 			</summary>
 			<team name="Germanics">
 				<partialvictory>
-					<summary>Romans lose more units than Germanics.</summary>
+					Romans lose more units than Germanics.
 				</partialvictory>
 				<completevictory>
-					<summary>Half of Roman units are lost.</summary>
+					Half of Roman units are lost.
 				</completevictory>
 				<forces>
 					* 20 Levels of units
@@ -59,10 +59,10 @@
 			</team>
 			<team name="Romans*">
 				<partialvictory>
-					<summary>Germanics lose more units than Romans.</summary>
+					Germanics lose more units than Romans.
 				</partialvictory>
 				<completevictory>
-					<summary>Half of Germanics are lost.</summary>
+					Half of Germanics are lost.
 				</completevictory>
 				<forces>
 					* 20 Levels of units

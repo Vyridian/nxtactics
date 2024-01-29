@@ -208,17 +208,8 @@ public final class Apptactics {
     output = Core.f_let(
       Core.t_string,
       Core.t_any_from_func.vx_fn_new(() -> {
-        final Core.Type_stringlist booknames = Core.f_new(
-          Core.t_stringlist,
-          Core.t_anylist.vx_new(
-              Core.vx_new_string("TACTICSBOOK_ANCIENT"),
-              Core.vx_new_string("TACTICSBOOK_FANTASY"),
-              Core.vx_new_string("TACTICSBOOK_HIGHTECH"),
-              Core.vx_new_string("TACTICSBOOK_POWERS"),
-              Core.vx_new_string("TACTICSBOOK_WORLDWARS")
-          )
-        );
-        final Core.Type_boolean done = Bookloader.f_boolean_write_from_booknames(context, booknames);
+        final Base.Type_book book = Bookloader.f_book_read_from_bookname(context, Core.vx_new_string("TACTICSBOOK_WORLDWARS"));
+        final Core.Type_boolean done = Bookloader.f_boolean_write_from_book(context, book);
         return Core.f_string_from_any(done);
       })
     );

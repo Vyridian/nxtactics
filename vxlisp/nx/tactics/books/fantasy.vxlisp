@@ -1,0 +1,553 @@
+(package nx/tactics/books/fantasy
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Fantasy"
+  :image "DaveDormanEasternTerritories.jpg"
+  :chaptermap
+   (chaptermap
+    "Fantasy Overview"
+     (chapter
+      :name "Fantasy Overview"
+      :sectionmap
+       (sectionmap
+        "Elder Tongue"
+         (section
+          :name "Elder Tongue"
+          :summary
+           "Prefixes
+* Alf - Elf
+* Dverg - Dwarf
+* Hel - Dead
+* Jotun - Giant
+* Man - Human
+* Muspel - Fire
+* Nifl - Mist
+* Svart - Dark
+* Yo - Demonic
+Suffixes
+* Ar - Race
+* Heim - Home
+* Ki - Soul
+* Ma - Creature
+* Traum - Dream
+Words
+* Alfar - Elvish Race
+* Albtraum - Elf Dream (Nightmare)
+* Alfheim - Land of Elves
+* Dvergar - Dwarven Race
+* Helar - Restless Dead
+* Helheim - Land of the dead
+* Manar - Human Race
+* Manheim - Land of Men
+* Muspelheim - Land of Fire
+* Niflheim - Land of Ice
+* Svartalfheim - Land of Dark Elves
+* Yoki - Demon Soul
+* Yoma - Demon")))
+    "Genshin Impact"
+     (chapter
+      :name "Genshin Impact"
+      :sectionmap
+       (sectionmap
+        :Archons
+         (section
+          :name "Archons"
+          :unitmap
+           (unitmap
+            :Furina
+             (unit
+              :name "Furina"
+              :titles "Focolor")
+            :Nahida
+             (unit
+              :name "Nahida")
+            "Raiden Shogun"
+             (unit
+              :name "Raiden Shogun"
+              :summary
+               "* The Raiden Shogun is the current Electro Archon. There are actually 3 versions of the Shogun that look almost identical: The twin sisters Ei and Makoto, and the artificial duplicate called the Puppet.
+* Makoto (Baal) - Makoto and Ei shared the title of Electro Archon, pretending to be a single being. Makoto was the diplomat and Ei was the warrior. Ei carried a sword, but she was not known to be a great warrior. Her electro powers were her main ability. Makoto died during the battle of Khaenri'ah.
+* Ei (Baalzebub) - Ei considered herself to be Makoto's shadow and mostly served as her muscle. After Makoto's death, she constructed the Puppet, tranfered her spirit into her sword, and mostly allowed the puppet to rule in her stead. Ei is divinely skilled in combat.
+* Puppet - The puppet is an advanced alchemical creation with power and combat ability perfectly equal to Ei in every way. Generally, the puppet is the only version of the Shogun that anyone sees. Even when Ei is in control, she is controlling the puppet, since she no longer has her own physical form.
+* Feats of Power
+** Musou no Hitotachi - A supposedly unblockable sword attack from the Shogun that is her supreme attack.
+** She easily defeats the traveller and nearly kills them.
+** She easily executes Signora and incinerates her.
+** She slew the god Orobashi and split the islands apart. Residual Electro still makes this area dangerous over 2000 years later.
+** She creates a perpetual storm around Inazuma for years.
+** She states that she can casually stop storms across the world to let people sleep."
+              :titles "Baal, Baalzebub, Ei, Makoto, Puppet, Shadow")
+            :Venti
+             (unit
+              :name "Venti"
+              :summary
+               "* Barbados splits the mountains in Mondstadt with a divine wind and sends entire mountains flying to become the Golden Apple Archepelego.
+* Barbados is easily considered to be the weakest of the Archons."
+              :titles "Barbados")
+            "Zhong Li"
+             (unit
+              :name "Zhong Li"
+              :summary "* Zhong Li dominated the Archon War."
+              :titles "Morax, Rex Lapis")))))
+    "God of War"
+     (chapter
+      :name "God of War"
+      :sectionmap
+       (sectionmap
+        "God of War Units"
+         (section
+          :name "God of War Units"
+          :unitmap
+           (unitmap
+            :Kratos
+             (unit
+              :name "Kratos"
+              :image "Fantasy/Kratos.png")))))
+    "Lord of the Rings"
+     (chapter
+      :name "Lord of the Rings"
+      :sectionmap
+       (sectionmap
+        "Lord of the Rings Units"
+         (section
+          :name "Lord of the Rings Units"
+          :unitmap
+           (unitmap
+            :Galadriel
+             (unit
+              :name "Galadriel"
+              :reference
+               "* If you ask it of me, I will give you the One Ring. You offer it to me
+freely? I do not deny that my heart has greatly desired this. In the
+place of a Dark Lord you would have a Queen! Not dark but beautiful and
+terrible as the Dawn! Treacherous as the Seas! Stronger than the
+foundations of the Earth! All shall love me and despair! ... I passed
+the test. I shall diminish, and go to the west, and remain Galadriel.
+- Frodo and Galadriel - Lord of the Rings")))))
+    "Nexus Fantasy Characters"
+     (chapter
+      :name "Nexus Fantasy Characters"
+      :sectionmap
+       (sectionmap
+        "Nexus Fantasy Actors"
+         (section
+          :name "Nexus Fantasy Actors"
+          :unitmap
+           (unitmap
+            "Antios Teron"
+             (unit
+              :name "Antios Teron"
+              :summary
+               "* Human Spy
+* Antios is a spy for Lord Aramel.
+* He is currently disguised as a mercenary for hire while travelling through the Imperium to assess their defenses. He has been authorized to assassinate any high ranking politician he should encounter to disrupt
+local politics. His mission has no time limit, and he is periodically scried by Lord Aramel's wizards.
+* He is a convincing actor who can play most parts well. He is particularly ruthless about his identity and will silence any who might compromise him or his mission."
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "5"
+                  :unititemmap
+                   (unititemmap
+                    "Broad Sword"
+                     (unititem
+                      :name "Broad Sword")))
+                :Espionage
+                 (unitskill
+                  :name "Espionage"
+                  :level "5")))
+            :Blackguard
+             (unit
+              :name "Blackguard"
+              :summary
+               "* An elite mercenary cadre organized by Hetman Undrig.
+* Their base is a small, walled town dedicated to their needs.
+* The Dragoons are a loose group. Decisions and leaders are chosen by majority vote. Power can change at anytime (including during combat).
+* Dragoons pay no dues nor is there direct pay. The Dragoons make money by hiring out as mercenaries.  They charge double normal rates, but are reknowned for their excellent training and equipment. Dragoons take great pride in their high status and react poorly to those who do not recognize their talent.
+* Dragoons are trained professionals in their jobs and recognize the need for discretion. They care little for whether a job is legal or not, and the Dragoons are known for possessing certain 'subtle' skills that make covert missions possible. They do not, however, enjoy excessive risk and are not above abandoning very dangerous missions."
+              :titles "Black Dragoon")
+            "Charn Aramel"
+             (unit
+              :name "Charn Aramel"
+              :summary "Human Dread Knight"
+              :titles "Nighthook, Lord Aramel"
+              :unitpowermap
+               (unitpowermap
+                :Conviction
+                 (unitpower
+                  :name "Conviction"
+                  :level "10"))
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "16"
+                  :unititemmap
+                   (unititemmap
+                    "Great Sword"
+                     (unititem
+                      :name "Great Sword"
+                      :summary "Ravage")))
+                "Psychic Powers"
+                 (unitskill
+                  :name "Psychic Powers"
+                  :level "10")))
+            "Sarani Kalea"
+             (unit
+              :name "Sarani Kalea"
+              :summary "Human Priestess"
+              :titles "Princess Kalea, High Priestess of Kali"
+              :unitpowermap
+               (unitpowermap
+                :Conviction
+                 (unitpower
+                  :name "Conviction"
+                  :level "12")
+                :Invocation
+                 (unitpower
+                  :name "Invocation"
+                  :level "16"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Aspecting
+                     (unitability
+                      :name "Aspecting"))))
+              :unitskillmap
+               (unitskillmap
+                "Mental Powers"
+                 (unitskill
+                  :name "Mental Powers"
+                  :level "12")
+                "Psychic Powers"
+                 (unitskill
+                  :name "Psychic Powers"
+                  :level "12")))))))
+    "Material Realm"
+     (chapter
+      :name "Material Realm"
+      :summary
+       "* Those places we can measure and understand.
+* The universe of Nexus Fantasy is different from the real world. The world is called Ur and the stars are all different planes of existence separated by the void of space and the Ether.
+* The Material Realm is described by coordinates for +x, +y, +z, +t (length, height, width, time)
+* Aeur - The sky (Aeurfolk)
+* Fyur - Flame (Fyurfolk)
+* Mur - The oceans (Murfolk, Murmen)
+* Ur - The land (Urfolk, Urmen)
+* The Primes"
+      :titles "Areth, Archea, Gaia, Koltho, Material Realm, Middle Earth, Middle Kingdom, Middle Realm, Midgard, Mortal Realm, Mother Earth"
+      :sectionmap
+       (sectionmap
+        :Azteka
+         (section
+          :name "Azteka")
+        :Maya
+         (section
+          :name "Maya")
+        :Mandragora
+         (section
+          :name "Mandragora"
+          :summary
+           "* Mandragora is named for the unusual sentient plant-life, the Mandragore, who live here.
+* Mandragores - About three feet high and vaguely man-like, they are roughly humanoid in form with gnarled root-like limbs and leafy 'hair'. Their eyes are like dark knots and their mouths are like the twisted hollow of a tree. The Mandragore usually stand rooted and immobile during the day as they soak in sunlight. During this time, they are well camoflaged among the other plant-life. At night, they move about tending their chores and looking for trespassers who they attempt to capture with nets of vines and grasses. Their unfortunate victims are bound and buried alive as fertilizer.
+* Abilities - The Mandragore are weak fighters who rely on surprise and numbers to battle large foes."
+          :unitmap
+           (unitmap
+            "Mandragore Herbalist"
+             (unit
+              :name "Mandragore Herbalist"
+              :unitpowermap
+               (unitpowermap
+                :Naturalism
+                 (unitpower
+                  :name "Naturalism"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Warp Wood"
+                     (unitability
+                      :name "Warp Wood"))))
+              :unitskillmap
+               (unitskillmap
+                "Physical Weakness"
+                 (unitskill
+                  :name "Physical Weakness"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Vulnerable to Fire"
+                     (unitability
+                      :name "Vulnerable to Fire")))))))
+        :Wilderlands
+         (section
+          :name "Wilderlands"
+          :reference "* Americas"
+          :locationmap
+           (locationmap
+            "Aberrant Rainforest"
+             (location
+              :name "Aberrant Rainforest"
+              :summary
+               "* The Aberrant Rainforest is a weird and grotesque jungle the freakish origins of which are attributed to a magical mishap of unparalleled proportions.
+* All manner of rare and exotic vegetation can be found here, though nothing that grows here is as nature intended. The plants and trees appear heedless of natural law, growing to immense proportions or becoming gnarled and twisted in form. From the underbrush, animate tentrils of tanglewood reach out to ensnare the incautious. Among the reports of talking Mang trees, giant species of slugs and scavenger slimes, and strange insect-reptile hybrids are tales of intelligent plant creatures.
+* Murky streams flow uphill, stagnant ponds move slowly across the land, and the ground itself seems to pulse as if it were alive.
+* Because many varieties of unique and valuable herbs grow throughout the forest, visitors are not unknown.")
+            "Lost Sea"
+             (location
+              :name "Lost Sea"
+              :reference "Salt Flats"
+              :summary "* Deep within the Wilderlands is a flat wasteland known as the Lost Sea. This area appears to be a dry seabed littered with the ancient skeletons of giant aquatic monsters. The area gets little rain and is layered in salt from the former sea, so nothing lives here. It is said that the wrecks of ancient ships can be found in isolated places potentially carrying treasures from ancient civilizations.")
+            "Lost World"
+             (location
+              :name "Lost World"
+              :reference "The Land that Time Forgot"
+              :summary
+               "* Deep within the Wilderland jungles is a towering ridge of a massive caldera formed
+by an ancient volcano. Within the caldera is a large expanse of jungle cut off from
+the outside world for millions of years. Numerous creatures though to be extinct still
+survive in this safe haven."
+              :titles "Pangaea")
+            "Salt Flats"
+             (location
+              :name "Salt Flats")
+            "Sea of Glass"
+             (location
+              :name "Sea of Glass"
+              :summary
+               "* The sea of glass is a vast expanse of mostly flat glass. The sea was presumably
+formed by a massive firestorm detonating over a sandy desert, but no cause had been
+discovered. Travelling over the glass is similar to travelling over ice though the
+glass is much harder and the weather is very hot. The glass creates a blinding glare
+when the Sun is at the right angle, and the surface can seem like a giant frying pan
+under the noonday Sun."))
+          :sectionmap
+           (sectionmap
+            :Azteka
+             (section
+              :name "Azteka")
+            :Maya
+             (section
+              :name "Maya")
+            :Mandragora
+             (section
+              :name "Mandragora"
+              :summary
+               "* Mandragora is named for the unusual sentient plant-life, the Mandragore, who live here.
+* Mandragores - About three feet high and vaguely man-like, they are roughly humanoid in form with gnarled root-like limbs and leafy 'hair'. Their eyes are like dark knots and their mouths are like the twisted hollow of a tree. The Mandragore usually stand rooted and immobile during the day as they soak in sunlight. During this time, they are well camoflaged among the other plant-life. At night, they move about tending their chores and looking for trespassers who they attempt to capture with nets of vines and grasses. Their unfortunate victims are bound and buried alive as fertilizer.
+* Abilities - The Mandragore are weak fighters who rely on surprise and numbers to battle large foes."
+              :unitmap
+               (unitmap
+                "Mandragore Herbalist"
+                 (unit
+                  :name "Mandragore Herbalist"
+                  :unitpowermap
+                   (unitpowermap
+                    :Naturalism
+                     (unitpower
+                      :name "Naturalism"
+                      :unitabilitymap
+                       (unitabilitymap
+                        "Warp Wood"
+                         (unitability
+                          :name "Warp Wood"))))
+                  :unitskillmap
+                   (unitskillmap
+                    "Physical Weakness"
+                     (unitskill
+                      :name "Physical Weakness"
+                      :unitabilitymap
+                       (unitabilitymap
+                        "Vulnerable to Fire"
+                         (unitability
+                          :name "Vulnerable to Fire")))))))))))
+    "Realms Beyond"
+     (chapter
+      :name "Realms Beyond"
+      :reference "* Reality is just your mind collapsing under what it doesn't understand, silly. - Zoe, Runeterra"
+      :summary
+       "* The realms beyond our mortal existence.
+* It is the origin of our souls, dreams, and imagination. It is also the home of spirits and demons.
+* All of the different realms are like closely packed soap bubbles. Where the bubbles touch, realms touch, and the presense of those realms can be felt.
+* The Realms Beyond are described by coordinates for +/-x, +/-y, +/-z, +/-t, +/-i (length, height, width, time, imaginary)
+* Realm Types:
+** Universe: +x, +y, +z, +t, 0i
+** Positive Planes: +x, +y, +z, +t, +i
+*** Hyperspace is when you travel through the Positive Planes: +i
+** Void -x, +y, -z, -t, +i
+** Antiverse: -x, -y, -z, +t, 0i
+** Limbo +x, -y, -z, +t, -i
+** Negative Planes +x, +y, +z, +t, -i
+*** Umbra/Subspace connects the Negative Planes -i
+** Temporal Realms +/-x, +/-y, +/-z, +/-t, 0i"
+      :titles "Multiverse, Realties, Realms"
+      :sectionmap
+       (sectionmap
+        :Pandemonium
+         (section
+          :name "Pandemonium"
+          :reference "* Dante's Inferno"
+          :summary "* Pandemonium (literally the Place of All Demons), the capital of Hell, the High Capital, of Satan and his Peers, built by the fallen angels at the suggestion of Mammon. The demons built it in about an hour, but it far surpassed all human palaces or dwellings. It was also reputed to be made of solid gold."
+          :titles "Pandaemonium, Place of All Demons"
+          :locationmap
+           (locationmap
+            "Council-Chamber of Pandæmonium"
+             (location
+              :name "Council-Chamber of Pandæmonium"
+              :summary "* The Stygian Council debates here.")))
+        :Phyrexia
+         (section
+          :name "Phyrexia"
+          :reference
+           "* We must improve! We must evolve! - Victor, Runeterra
+* Metal is perfection. - Victor, Runeterra"
+          :unitmap
+           (unitmap
+            :Yawgmoth
+             (unit
+              :name "Yawgmoth"
+              :titles "Father of Machines, Ineffable")))
+        "Outer Realms"
+         (section
+          :name "Outer Realms"
+          :reference "Event Horizon"
+          :summary
+           "* These are the various part of the Spirit Realm where demons live. It is unclear whether these worlds are in distant parts of our dimension or in other dimensions entirely. They are certainly so distant that only dimensional travel can reach them.
+* Physics are often radically different from our own which often is sanity threatening."
+          :titles "Abyssal Realms, Chaos Realms, Demon Realms, Hells"
+          :locationmap
+           (locationmap
+            "Hell of Being Cut to Pieces"
+             (location
+              :name "Hell of Being Cut to Pieces"
+              :summary
+               "* Souls who arrive here fall into a sea of razor-sharp blades that spin and cut sinners to shreds.
+* Souls - The domain is a place for those who make a living by violence.")
+            "Hell of Being Skinned Alive"
+             (location
+              :name "Hell of Being Skinned Alive"
+              :summary
+               "* If there is a worse place, no one has yet found it. At a glance it appear as a desert world, but it is infinitely worse. The winds have sculpted the rocks and mesas into horrifying shapes. Those who can see through the sandstorms can see demonic forms torturing souls, but their screams are covered by the winds.
+* The howling winds that forever whip across the red sands are enough to strip flesh from bone. Shards of glass and metal blown on these sonic-velocity winds can penetrate tank armor.
+* The winds frequently become funnel clouds sucking sand and souls miles up before letting them plummet onto the jagged rocks below.
+* The constant motion of wind and sand builds up electric charge, and victims are regularly subjected to bolts of lightning.
+* At first, the winds only flay only the body, but the worst is yet to come. Once flesh and muscle fall from the bones, the very essence of his being begins peeling off, layer by layer to be carried off in the winds. The only peace is when the winds subside, and the flayed bodies regenerate in these precious seconds. But once the pain begins to subside, the winds start howling again...
+* Souls trapped here are often those who hoarded and abused power. Such individuals are tormented after death by having everything ripped from them.
+* Tou Mu - The Yama King, Tou Mu, watches from her enormous upside-down palace high in orbit. Those that the Iron Empress takes note of are drawn up by the winds to the cold silent vacuum above. There she expresses her dissatisfaction personally.
+* Silent Stronghold - Her orbiting palace is where her allies stay, but as Tou Mu is paranoid, the crystal of this place renders unguarded thought into sound which echoes throughout the palace.
+* Sinister Fortress - One of the few structures on the surface of this hell, this iron fortress courses with the lightning that constantly strikes it. On the outer walls are lashed the bodies of those that Tou Mu has taken a special interst. Here they are constantly torn by winds and struck by lightning. The Iron Empress has never removed a victim from the wall since the first traitor was lashed there.")
+            "Hell of Boiling Oil"
+             (location
+              :name "Hell of Boiling Oil"
+              :summary
+               "* The name of this hell is a misnomer. The hell is not filled with boiling oil, but rather with rendered human fat. Gobbets of charred and burning fat float atop the ocean of thick, bubbling grease. A dark gray froth of overcooked scum floats to the surface in places.
+* The atmosphere is hazy with brown smoke and a fine mist of grease. The stench is intolerable. Individuals who manage to survive vomit uncontrollably. Those few who manage to leave this realm never entirely rid themselves of the smell.
+* This hell is the place of torment for the gluttonous. Corpulent executives and rotund bureaucrats are haunted by the excesses of their lives.
+* Ruler - This realm is ruled by Hluh, an island-sized, gelatinous, bright red jellyfish with sharp-toothed sucker mouths on each tentacle.
+* Devils - The devils of this have no names, no faces, and no sense of self. They realm resemble chitinous tapeworms or gigantic water striders that skim acoss the surface of the boiling sea.")
+            "Hell of Burrowing Maggots"
+             (location
+              :name "Hell of Burrowing Maggots"
+              :summary
+               "* A quick glance reveals this place to be a vast plain of white sand. There is no sun, but the overcast sky is not dark. The sand, however, is crawling. The stench of decay staggers any so unfortunate as to need to breathe.
+* Souls - This is a place of torment for sinners who have met their end by disease including radiation poisoning, cancer, and biological warfare. Boils and tumors grow enormous here and hang from the body and attract the maggots. Within days a soul can feel her skin crawl. Everywhere the worm-ridden souls cry out, tearing at their skin, and vainly trying to escape the worms that are eating them alive.
+* Ruler - Rangda, the Mistress of Pestilence rules here.
+* Demons - Maggots grow larger as they age. The largest of them are the size of a whale.
+* The Great Beast - What appears to be a large white mountain is actually an enormous carcass of an unknown beast. The maggots have been devouring it since the hell was created, and it appears it will take an eternity to complete the job. What the beast is is unknown. Some believe it is tied to creation and the the universe will cease when it is comsumed. A foolish mage once studied it from a distance, but days later he returned screaming gibberish and only said two coherent words before he took his own life: 'It moved.'")
+            "Hell of Seven Burning Seas"
+             (location
+              :name "Hell of Seven Burning Seas"
+              :summary
+               "* If would be hard to chose a worse fate, burning or drowning. Those souls doomed to this hell do both. They may stay above water and have their garments burst into flame or submerge and boil themselves.
+* Souls - This hell houses sinners whose crimes involve the water. Pirates, polluters, mutineers, and murderers who drowned their victims are drawn here.
+* Ruler - No one has seen the Empress of Pearls who is rumored to live at the greatest depths of the Great Trench where no other creature can survive. Some believe she is a great 'devil-fish' that can cause tsunamis.
+* Devils - Devil crabs, devil sharks, and devil squid are some of the horrors that populate the depths.")
+            "Hell of Upside-Down Sinners"
+             (location
+              :name "Hell of Upside-Down Sinners"
+              :summary
+               "* This domain defies description. This is either the cleverest of the Yomi realms or the maddest hell devised by the sickest of minds. Time and space are inverted. Sensation and thought are twisted. Minutes pass like an eternity and millenia rush by in a blink of an eye. In this hell, the strong perish and the weak survive. That which is dull cuts while sharp objects bring comfort.
+* Souls - Recent arrivals are often driven mad as they begin to see odors, smell sounds, and hear sights. Emotions too become jumbled. Souls begin to hate those who helped them and love those who have done them wrong. They fear the helpless and refuse to flee certain destruction. Skills and powers do not work correctly here. The stronger the ability the more ineffectual it is.
+* Ruler - No one knows what inconceivable creature would create such a realm.")
+            "Hell: Kakuri, The Night Realm"
+             (location
+              :name "Hell: Kakuri, The Night Realm"
+              :summary
+               "* There is no end to the darkness in the Night Realm. There is no sun, no stars. The winds are bitterly cold, bearing dagger-sharp ice crystals. Facing into the wind is blinding. Fires flicker and die in the winds, but any light attracts the tormented and Shikome alike. The terrain is rocky and frozen black crystal that leech the energy of those who rest on them. Meadows and tree exist, but they are covered with dark crytal blades that tear at passersby.
+* Kakuri is the hell of those who have lost their honor. The land is therefore the anti-thesis of honor. There are no great battles, no great challenges, no bragging enemies. There is no duty, no honor, and no way to escape. There are no flesh eating devils, no pits of burning oil, no grand ministries of torment. In a land without hope, there don't need to be.
+* Ruler: Emma-o, perhaps the greatest of the Yama-kings.
+* Shikome: Beautiful, cold, female devils that delight in speeding their victims to despair. They are subtle and can appear as tormented souls or as friends or lovers. Whatever their form, they will drain the [Spirit] from their victims leaving them to wander in hopelessness and despair.
+* Kyuden No Kakuri - The Castle of Kakuri is the stronghold of Emma-o.  It is situated at the top of an unassailable peak. The castle has elaborate obsidian walls and are a testament to his vanity and conceit.
+* Cave of Maidens - One of Emma-o's favored traps, the caves appear an oasis from the icy torment and occasionally a way out of Yomi. Edible fungi, shelter, and pretty prisoners can be found in the caves. The prisoners will dote on the visitors, but they will suddenly accuse them of theft, rape, murder, or worse. The visitors are beaten and driven from the caves. The power of the Shikome lets them trick their victims again and again with the lure of false hope. Amazingly, there is actually a chance that a cave is actually an exit from the Hell, the ultimate lure for lost souls.")
+            "Hell: Pit of Iron and Salt"
+             (location
+              :name "Hell: Pit of Iron and Salt"
+              :summary
+               "* The Pit is a vast salt mine with seemingly no bottom. Iron citadels dot the inside of the pit, so the pit resembles a great gaping maw with the citadels resembling teeth. The landscape is unchanging and sterile. It is not a place of shock or disgust, but a hell of quiet oppression.
+* Souls - Those who labor here do so in the false hope that through hard work they will eventually be relieved of their suffering. They search for treasure they will never find beneath the lashes of cruel overseers.  Cuts and lashes are inflamed by the salt everywhere.
+* Ruler - Yama-king Wu Hua lives at the the bottom of the pit in a great iron city surrounded by six enormous barbed spires on which hundreds of bodies are impaled. Sputtering greenish fires can be seen from a distance that hint at grotesque rituals and obscene torments, but what exactly goes on inside is unknown.
+* Iron Citadels - The citadels are places of decadence and depravity. The souls are intermittently rotated from the mines to the citadel to act as slaves. Most mine workers view the change as desirable, but every soul chosen learns that this is not the case. In reality, the souls are treated worse here than anywhere else in the domain. Their suffering is more valuable to Wu Hua because it is so much more 'personal'.")
+            "Hell: Wicked City"
+             (location
+              :name "Hell: Wicked City"
+              :summary
+               "* Wicked City is a place of endless urban blight stretching to the horizon in all directions. The perpetually overcast air is dark and thick with acrid vapors and burning smog. The stench of urine, vomit, blood, and excrement blows out of every alley. The streets and buildings are packed with the souls who mindlessly slave away in inescapable agonies and the power-mad demons who torment them.
+* Souls - This hell is the destination of those who have fallen into the corruption, isolation, and anoymity of urban life. Politicians, artists, criminals, wage slaves, executive, and police are pulled into the sweat shops and dark streets of this doomed megalopolis. The souls are worked beyond their limits, and when they falter or fail the foremen arrive instantly to punish them for their incompetence. Their routine jobs continue day after day with no hope of improving their lot, and their pitiful wages allow them to almost support themselves. Those that fail to keep up are laughed out of their offices and become the homeless of Wicked City, available for demons and embittered salary drones to beat, torture, or set ablaze. There are no safe places in Wicked City. Every coworker could be a demon. Even the doomed may betray each other for advancement. It is a place where the worst elements of greed and capitalism meet.
+* Ruler - The Yama-king Mikaboshi rules this realm from the Mikaboshi Tower. The tower is a hideous tower of blackened steel and glass whose peak disappears into the clouds. Mikaboshi's executives administer Wicked City from this lofty tower, and Mikaboshi himself is often linked directly into the tower's strange devices allowing him to see, hear, and feel any part of Wicked City.
+* Undercity - The twisted spires are built atop the crumbling temples and castles of eras past. The cities are built upon cities upon cities, and the farther down one goes, the more monstrous the demonic inhabitants. Some creatures have not seen the sky in centuries. What these monsters have become is unknown, but no one who has entered the abandoned tunnels and subways has returned sane (if they return at all).
+* Feng Shui - The Yama-king Mikaboshi wants all those who see his city to understand his grand vision of a hellish metropolis. He undermines the known and comfortable trapping of the daily world to increase his subjects' feelings of dread and suffering, and his power over them. The feng shui of the Wicked city is beyond negative, bordering on the impossible. The entire landscape assaults the Chi of the city's victims. 'Poison Arrows' point everywhere, spiraling in directions that cause veritgo from the merest glance. Disharmony saps the will and impedes rational thought.
+* Gates - It is possible to travel to Wicked City from many of the worst urban hellholes in the mortal world. In these places of corruption and anguish, the [Veil] is weak. The door also swings both ways and denizens of this hell sometimes travel to the mortal realm in search of new souls."))
+          :sectionmap
+           (sectionmap
+            :Pandemonium
+             (section
+              :name "Pandemonium"
+              :reference "* Dante's Inferno"
+              :summary "* Pandemonium (literally the Place of All Demons), the capital of Hell, the High Capital, of Satan and his Peers, built by the fallen angels at the suggestion of Mammon. The demons built it in about an hour, but it far surpassed all human palaces or dwellings. It was also reputed to be made of solid gold."
+              :titles "Pandaemonium, Place of All Demons"
+              :locationmap
+               (locationmap
+                "Council-Chamber of Pandæmonium"
+                 (location
+                  :name "Council-Chamber of Pandæmonium"
+                  :summary "* The Stygian Council debates here.")))
+            :Phyrexia
+             (section
+              :name "Phyrexia"
+              :reference
+               "* We must improve! We must evolve! - Victor, Runeterra
+* Metal is perfection. - Victor, Runeterra"
+              :unitmap
+               (unitmap
+                :Yawgmoth
+                 (unit
+                  :name "Yawgmoth"
+                  :titles "Father of Machines, Ineffable")))))))
+    "Story Ideas"
+     (chapter
+      :name "Story Ideas"
+      :summary
+       "* Accompany zealots on a pilgrimage to holy places.
+* Participate in a Witch Hunt in the forests.
+* Protect an individual of status from the assassin's guild.
+* Go on patrol with Knife Fighters
+* Sail to obtain concubines, either legally or illicitly. Be wary of the creatures and brutish males, to say nothing of the subtle charms of the concubines themselves.
+* Join the desert scouts in raids against the Black Mystics.
+* Commission tomb raiders to unearth ancient sarcophagi.
+* Sail the far seas in search of adventure, braving corsairs, cannibals, sea serpents, and the black hulled vessels of the Necromancers.
+* Mine green crystal from the Sea of Glass.
+* Visit Sactuary the safe haven of thieves and scoundels.
+* Prowl the jungles looking for rare herbs and black diamonds.
+* Rescue a captive of the Witchmen who keep shrunken heads as grisly trophies.
+* Visit the Ice Castles of the north and fight side by side against the Ice Giants.
+* Trade with the Sea Nomads of Oceanus, a city that floats freely on the water.
+* Take a windship to the isle of Phantas and visit the Cabal Magicus, home of the Phantasian Dream Merchants.
+* Travel to the Jade Empire and visit the capital Tian called the Golden City for good reason.
+* Hire a guide and search for the buried city of Necron where legend has it an entire city and its populace were once interred.
+* Visit the magical fair, a gala festival attended by magicians, wizards, and charaltans from across the continent. Engage in a duel for wagers with a reknowned spell caster or haggle for potions, powders, and other rare items.
+* Negotiate a deal with a Zuran moneylender to finance an expedition in return for a cut of the profits.
+* Attend the Festival of the Bizarre where individuals display oddities and compete in the contest for the title of 'Most Bizarre'.
+* Accompany a Wizard Hunter on a quest of revenge.
+* Partake in the 'Night of Fools' when all laws are suspended for a single evening.
+* Help locate a suitable applicant for the Battle of Champions or enter the competition yourself."))))

@@ -1,0 +1,796 @@
+(package nx/tactics/books/ancients
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Ancients"
+  :image "300_phalanx.jpg"
+  :chaptermap
+   (chaptermap
+    "Ancients Overview"
+     (chapter
+      :name "Ancients Overview"
+      :sectionmap
+       (sectionmap
+        "Ancients Naval Warfare"
+         (section
+          :name "Ancients Naval Warfare"
+          :summary
+           "* Wind
+* Large Ships
+* Small Ships
+* War Barge
+* Ballista")))
+    "Ancients Scenarios"
+     (chapter
+      :name "Ancients Scenarios"
+      :sectionmap
+       (sectionmap
+        "Ancient Scenarios"
+         (section
+          :name "Ancient Scenarios"
+          :scenariomap
+           (scenariomap
+            "Flush Them Out"
+             (scenario
+              :name "Flush Them Out"
+              :summary "* 10 Turns"
+              :teammap
+               (teammap
+                :Germanics
+                 (team
+                  :name "Germanics"
+                  :completevictory "Half of Roman units are lost."
+                  :deploy
+                   "1) Tactical Map
+2) 6 Forest Terrain on Germanic side of map
+3) Deploy units anywhere on Germanic side of map"
+                  :forces "* 20 Levels of units"
+                  :partialvictory "Romans lose more units than Germanics.")
+                :Romans*
+                 (team
+                  :name "Romans*"
+                  :completevictory "Half of Germanics are lost."
+                  :deploy
+                   "1) Tactical Map
+2) 3 Forest Terrain on Roman side of map.
+3) Deploy units along Roman players edge of the map."
+                  :forces "* 20 Levels of units"
+                  :partialvictory "Germanics lose more units than Romans.")))
+            "Roman Gladiators"
+             (scenario
+              :name "Roman Gladiators")))))
+    :Anglo/Saxons
+     (chapter
+      :name "Anglo/Saxons"
+      :sectionmap
+       (sectionmap
+        "Anglo/Saxon Armies"
+         (section
+          :name "Anglo/Saxon Armies")))
+    :Carthaginians
+     (chapter
+      :name "Carthaginians"
+      :sectionmap
+       (sectionmap
+        "Carhaginian Naval Vessels"
+         (section
+          :name "Carhaginian Naval Vessels"
+          :itemmap
+           (itemmap
+            "Carthaginian Quinquereme"
+             (item
+              :name "Carthaginian Quinquereme")))))
+    "Chinese Dynasty"
+     (chapter
+      :name "Chinese Dynasty")
+    "Egyptian Dynasty"
+     (chapter
+      :name "Egyptian Dynasty"
+      :sectionmap
+       (sectionmap
+        "Egyptian Armies"
+         (section
+          :name "Egyptian Armies"
+          :unitmap
+           (unitmap
+            "Egyptian Archer"
+             (unit
+              :name "Egyptian Archer")
+            "Egyptian Charioteer"
+             (unit
+              :name "Egyptian Charioteer")))))
+    "Germanic Tribes"
+     (chapter
+      :name "Germanic Tribes"
+      :sectionmap
+       (sectionmap
+        "Germanic Armies"
+         (section
+          :name "Germanic Armies"
+          :unitmap
+           (unitmap
+            "Free Spears"
+             (unit
+              :name "Free Spears"
+              :image "Germanics/GermanLevySpearmen.png"
+              :summary
+               "Free Spears are farmers and hunters.  According to Germanic tradition, as soon as these men receive their
+spear and shield, they are 'free' adults.  Though lacking in the organized training of the warbands, they
+are veterans of the ritualized tribal warfare of German tribes, and fight with a force and fury superior to
+their neighbors militia."
+              :classification "Lt. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "3"
+                  :unititemmap
+                   (unititemmap
+                    :Spear
+                     (unititem
+                      :name "Spear")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "1"
+                  :unititemmap
+                   (unititemmap
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "3")))
+            "Youth Skirmishers"
+             (unit
+              :name "Youth Skirmishers"
+              :image "Germanics/GermanSkirmishers.png"
+              :summary
+               "Young skirmishers break up and harass enemy formations before the main battle lines meet, and act as a screen
+for heavy troops, taking losses in order to increase the odds of survival of more valuable 'proven' warriors.
+They must first prove themselves in battle in order to earn status.  Each warrior is armed with a bundle of
+throwing spears, a slightly longer spear for melee and a stout ovular shield, but they do not wear armor,
+being poor and of low status, but also choosing speed over protection."
+              :classification "Lt. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "3"
+                  :unititemmap
+                   (unititemmap
+                    :Spear
+                     (unititem
+                      :name "Spear")
+                    :Javelin
+                     (unititem
+                      :name "Javelin"
+                      :rounds "5")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "1"
+                  :unititemmap
+                   (unititemmap
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Formation: Skirmish"
+                     (unitability
+                      :name "Formation: Skirmish")))
+                :Survival
+                 (unitskill
+                  :name "Survival"
+                  :level "2"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Forestry
+                     (unitability
+                      :name "Forestry")))))
+            "Proven Spearmen"
+             (unit
+              :name "Proven Spearmen"
+              :image "Germanics/GermanTrustedSpearmen.png"
+              :summary
+               "Proud and experienced, 'proven' warriors steeled by years of constant warfare and veterans of numerous
+conflicts.  These men are hardened for battle and unlikely to flee from conflict, and are trained through
+long experience to work in close or open formation, and even the shieldwall."
+              :classification "Lt. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    :Spear
+                     (unititem
+                      :name "Spear")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "2"
+                  :unititemmap
+                   (unititemmap
+                    "Leather Armor"
+                     (unititem
+                      :name "Leather Armor")
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Formation: Shield Wall"
+                     (unitability
+                      :name "Formation: Shield Wall")))))
+            "German Slayers"
+             (unit
+              :name "German Slayers"
+              :image "Germanics/GermanSlayers.png"
+              :summary
+               "By shaping heavy boughs of oak and inserting bone spikes, these Cudgels can be used to maim both armored
+and unarmored foes alike.  Cudgels are cheap, easy to make, and replaceable on campaign, while also being
+able to smash or punch through armor.  Although this weapon may seem primitive to untrained eyes, against
+armored opponents it is more effective than any other at their disposal.  These light armored club warriors
+were recorded to have taken down units of the feared and notoriously lethal kataphraktoi."
+              :classification "Med. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    :Cudgel
+                     (unititem
+                      :name "Cudgel")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "2"
+                  :unititemmap
+                   (unititemmap
+                    "Leather Armor"
+                     (unititem
+                      :name "Leather Armor")
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "German Shooters"
+             (unit
+              :name "German Shooters"
+              :image "Germanics/GermanShooters.png"
+              :summary
+               "Equipped to harass and break up enemy formations so more experienced and valuable melee warriors can finish
+them.  Shooters are often untrained or uncapable warriors, but many are also excellect hunters.  They are
+also armed with the spear and can act as light infantry, but they will not last long in melee.  In the woods,
+their superior ambush skills can be put to best use.
+
+Historically, Germanic bowmen on the battlefield were few in numbers, because weapons were status symbols,
+and common multipurpose tools, such as the axe or bow were looked down upon."
+              :classification "Lt. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Aim
+                 (unitskill
+                  :name "Aim"
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Flaming Arrow"
+                     (unitability
+                      :name "Flaming Arrow")
+                    "Arcing Fire"
+                     (unitability
+                      :name "Arcing Fire"))
+                  :unititemmap
+                   (unititemmap
+                    "Composite Bow"
+                     (unititem
+                      :name "Composite Bow")))
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "2"
+                  :unititemmap
+                   (unititemmap
+                    :Spear
+                     (unititem
+                      :name "Spear")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Formation: Skirmish"
+                     (unitability
+                      :name "Formation: Skirmish")))))
+            "Sword Possessors"
+             (unit
+              :name "Sword Possessors"
+              :image "Germanics/GermanSwordPossessors.png"
+              :summary
+               "Sword Possessors are well trained, experienced and armed with superior quality swords and javelins to
+soften the enemy before their furious charge.
+
+Historically, swords were not plentiful in Germanic lands because of the cost of iron, so those fierce and
+valiant warriors carried their highly valued swords with pride."
+              :classification "Lt. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    :Broadsword
+                     (unititem
+                      :name "Broadsword")))
+                :Aim
+                 (unitskill
+                  :name "Aim"
+                  :level "3"
+                  :unititemmap
+                   (unititemmap
+                    :Javelin
+                     (unititem
+                      :name "Javelin"
+                      :rounds "2")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "2"
+                  :unititemmap
+                   (unititemmap
+                    "Leather Armor"
+                     (unititem
+                      :name "Leather Armor")
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Formation: Shield Wall"
+                     (unitability
+                      :name "Formation: Shield Wall")))))
+            "Night Walkers"
+             (unit
+              :name "Night Walkers"
+              :image "Germanics/GermanNightWalkers.png"
+              :summary
+               "Night-Walkers are unconventional warriors who specialize in ambush.  They display their zeal and ferocity
+with the help of pitch and dye by blackening their shields and bodies.  They choose dark nights for their
+battles and when the moment is right, they charge wildly, wide-eyed and screaming at their foes.  Any who
+survive assaults by these maniacal warriors are convinced they are spirits sent from the otherworld."
+              :classification "Lt. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "3"
+                  :unititemmap
+                   (unititemmap
+                    :Spear
+                     (unititem
+                      :name "Spear")
+                    :Javelin
+                     (unititem
+                      :name "Javelin"
+                      :rounds "2")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "2"
+                  :unititemmap
+                   (unititemmap
+                    "Leather Armor"
+                     (unititem
+                      :name "Leather Armor")
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Survival
+                 (unitskill
+                  :name "Survival"
+                  :level "2"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Forestry
+                     (unitability
+                      :name "Forestry")))
+                :Intimidation
+                 (unitskill
+                  :name "Intimidation"
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Terrorize
+                     (unitability
+                      :name "Terrorize")))))
+            "Pike Fence"
+             (unit
+              :name "Pike Fence"
+              :image "Germanics/GermanPikeFence.png"
+              :summary
+               "The Pike Fence are hard-nosed, disciplined warriors that fight together in a
+very dense formation, unlike most other Germanic warbands. They are trained in
+the Shield Wall and are universally feared by cavalry."
+              :classification "Hvy. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    :Pike
+                     (unititem
+                      :name "Pike")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "2"
+                  :unititemmap
+                   (unititemmap
+                    "Leather Armor"
+                     (unititem
+                      :name "Leather Armor")
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Formation: Shield Wall"
+                     (unitability
+                      :name "Formation: Shield Wall")))))
+            "Hearth Companions"
+             (unit
+              :name "Hearth Companions"
+              :image "Germanics/GermanHearthCompanion.png"
+              :summary
+               "These are the Germanic tribes' best warriors. Germans respect their leader's
+bravery, not their rank, and it is a disgrace for a leader to be surpassed in
+bravery. They are wealthy, powerful men, fiercely loyal to their lord, often
+heavily scarred by years of warfare. Their weapons and armor are the best. To
+leave a battlefield alive while their lord lay dead meant a life of shame and
+scorn. To defend and protect him, to assign one's own acts of heroism to his
+credit-that's what is truly meant by allegiance."
+              :classification "Hvy. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    :Broadsword
+                     (unititem
+                      :name "Broadsword")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "3"
+                  :unititemmap
+                   (unititemmap
+                    "Chain Mail Armor"
+                     (unititem
+                      :name "Chain Mail Armor")
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "5"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Formation: Shield Wall"
+                     (unitability
+                      :name "Formation: Shield Wall")))
+                :Command
+                 (unitskill
+                  :name "Command"
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Chain of Command"
+                     (unitability
+                      :name "Chain of Command")
+                    :Rally
+                     (unitability
+                      :name "Rally")))))
+            "Germanic Riders"
+             (unit
+              :name "Germanic Riders"
+              :image "Germanics/GermanRiders.png"
+              :summary
+               "Riders ride small, poor quality horses, though they are excellent light cavalry.  Like many Germanic warriors,
+however, they can lack battle-discipline and be over-keen to enter battle for glory.
+
+They were mostly armed with shield and spear and were supported by fast-moving light infantry - this light
+cavalry combined with light infantry allowed great tactical speed and versatility on the battlefield.
+
+Historically, Germanic tribes did not frequently use cavalry, however, some tribes were known for their
+cavalry and many peoples praised the good quality of Germanic cavalry.  Though their horses were not
+exceptional, Germanic horsemen could still maneuver very well and operated as a unit, rather than as an
+unorganized band."
+              :classification "Lt. Cavalry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "3"
+                  :unititemmap
+                   (unititemmap
+                    :Spear
+                     (unititem
+                      :name "Spear")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "2"
+                  :unititemmap
+                   (unititemmap
+                    "Leather Armor"
+                     (unititem
+                      :name "Leather Armor")
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Riding
+                 (unitskill
+                  :name "Riding"
+                  :level "4"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Charge
+                     (unitability
+                      :name "Charge")
+                    "Run Down"
+                     (unitability
+                      :name "Run Down")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Germ. Companion Cavalry"
+             (unit
+              :name "Germ. Companion Cavalry"
+              :image "Germanics/GermanCompanionCavalry.png"
+              :summary
+               "The Companion Cavalry are extremely wealthy and powerful men, but still fiercely loyal to their lord who
+provides them the finest warhorses and wargear at his disposal.
+
+They can be used most effectively as shock troops whose charges can break the enemy line and destory their
+flanks, but they are also useful for overrunning heavy infantry and slaughtering lighter cavalry."
+              :classification "Hvy. Cavalry"
+              :unitskillmap
+               (unitskillmap
+                :Melee
+                 (unitskill
+                  :name "Melee"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    :Lance
+                     (unititem
+                      :name "Lance")
+                    "Cavalry Sword"
+                     (unititem
+                      :name "Cavalry Sword")))
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :level "3"
+                  :unititemmap
+                   (unititemmap
+                    :Scalemail
+                     (unititem
+                      :name "Scalemail")
+                    :Shield
+                     (unititem
+                      :name "Shield")))
+                :Riding
+                 (unitskill
+                  :name "Riding"
+                  :level "4"
+                  :unitabilitymap
+                   (unitabilitymap
+                    :Charge
+                     (unitability
+                      :name "Charge")))
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "5")
+                :Command
+                 (unitskill
+                  :name "Command"
+                  :level "3"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Chain of Command"
+                     (unitability
+                      :name "Chain of Command")
+                    :Rally
+                     (unitability
+                      :name "Rally")))))))))
+    "Greek City States"
+     (chapter
+      :name "Greek City States"
+      :sectionmap
+       (sectionmap
+        "Greek Naval Vessels"
+         (section
+          :name "Greek Naval Vessels"
+          :itemmap
+           (itemmap
+            "Greek Galley"
+             (item
+              :name "Greek Galley")
+            "Greek Trireme"
+             (item
+              :name "Greek Trireme")
+            "Greek Quinquereme"
+             (item
+              :name "Greek Quinquereme")))))
+    :Macedon
+     (chapter
+      :name "Macedon"
+      :sectionmap
+       (sectionmap
+        "Macedonian Naval Vessels"
+         (section
+          :name "Macedonian Naval Vessels"
+          :itemmap
+           (itemmap
+            "Macedonian Galley"
+             (item
+              :name "Macedonian Galley")
+            "Macedonian Trireme"
+             (item
+              :name "Macedonian Trireme")))))
+    :Norsemen
+     (chapter
+      :name "Norsemen"
+      :sectionmap
+       (sectionmap
+        "Viking Naval Vessels"
+         (section
+          :name "Viking Naval Vessels"
+          :itemmap
+           (itemmap
+            "Viking War Galley"
+             (item
+              :name "Viking War Galley")))))
+    :Persians
+     (chapter
+      :name "Persians"
+      :sectionmap
+       (sectionmap
+        "Persian Armies"
+         (section
+          :name "Persian Armies"
+          :unitmap
+           (unitmap
+            "Persian Lt. Cavalry"
+             (unit
+              :name "Persian Lt. Cavalry")
+            "Persian Horse Archer"
+             (unit
+              :name "Persian Horse Archer")
+            "Persian Scythed Chariot"
+             (unit
+              :name "Persian Scythed Chariot")))))
+    "Roman Empire"
+     (chapter
+      :name "Roman Empire"
+      :sectionmap
+       (sectionmap
+        "Roman Naval Vessels"
+         (section
+          :name "Roman Naval Vessels"
+          :itemmap
+           (itemmap
+            "Roman Galley"
+             (item
+              :name "Roman Galley")
+            "Roman Trireme"
+             (item
+              :name "Roman Trireme")
+            "Roman Quinquereme"
+             (item
+              :name "Roman Quinquereme")))))
+    "Unfiled Ancient"
+     (chapter
+      :name "Unfiled Ancient"
+      :summary
+       "Examples of Play
+Romans vs. Greeks
+Combat Example:
+
+Combat Cards:
+Surprise
+Use when:
+	Opponent must be unaware
+Effects:
+	+4 Attack
+	Opponent can only defend
+
+Hold Off
+Use when:
+	Longer Reach
+	In Melee Combat
+	Not in Close Combat
+Effects:
+	First Strike
+	+2 Attack
+	+4 Damage Vs Charge
+	Opponent cannot move into Close Combat if you hit.
+
+Charge:
+Effect:
+Use when:
+	Not in Melee Combat
+Effect:
+	Full Move Attack
+	+2 Damage
+	Moves into Close Combat
+
+Guard:
+Effect:
+	+2 Defense
+	All hits taken are shield hits
+
+Example:
+Human attacks the Orc in the open.
+The Orc has longer reach an chooses Hold Off.
+The Human is wary of the spear and plays Guard and Close Combat.
+
+Round 1:
+Orc roll: 12 + 9 Spear + 2 Hold Off = 23
+Human roll: 9 + 8 Sword + 2 Guard - 1 Encumberance = 18
+
+Orc scores a hit for 5 + 3 Spear = 8 Damage
+
+Guard makes the damage a shield hit.
+Determine hit location.
+8 (Piercing) - 3 (Shield) - 3 (Armor) = 2 (Piercing) Wound.
+
+Body reduces by 2 to 10 not enough to change bonus.
+
+The successful Hold Off means the Human's Close Combat Movement fails."))))

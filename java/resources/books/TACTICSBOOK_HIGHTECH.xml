@@ -21,10 +21,10 @@
 			</summary>
 			<team name="Escort">
 				<partialvictory>
-					<summary>Prevent enemy from taking any of the shipment.</summary>
+					Prevent enemy from taking any of the shipment.
 				</partialvictory>
 				<completevictory>
-					<summary>$1000/each if cargo delivered intact.</summary>
+					$1000/each if cargo delivered intact.
 				</completevictory>
 				<forces>
 					* 1 Tractor-trailer
@@ -33,10 +33,10 @@
 			</team>
 			<team name="Interceptors">
 				<partialvictory>
-					<summary>Capture any of the shipment.</summary>
+					Capture any of the shipment.
 				</partialvictory>
 				<completevictory>
-					<summary>Capture the entire shipment.</summary>
+					Capture the entire shipment.
 				</completevictory>
 				<forces>
 					* 1 Van
@@ -67,10 +67,10 @@
 			</summary>
 			<team name="Thieves">
 				<partialvictory>
-					<summary>Take at least half of the shipment.</summary>
+					Take at least half of the shipment.
 				</partialvictory>
 				<completevictory>
-					<summary>Capture the whole shipment.</summary>
+					Capture the whole shipment.
 				</completevictory>
 				<forces>
 					* 10 Thieves
@@ -80,10 +80,10 @@
 			</team>
 			<team name="Guards">
 				<partialvictory>
-					<summary>Protect at least half of the shipment.</summary>
+					Protect at least half of the shipment.
 				</partialvictory>
 				<completevictory>
-					<summary>Protect the entire shipment.</summary>
+					Protect the entire shipment.
 				</completevictory>
 				<forces>
 					* 10 Armed and Armored Guards

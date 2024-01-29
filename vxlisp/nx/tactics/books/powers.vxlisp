@@ -1,0 +1,126 @@
+(package nx/tactics/books/powers
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "Powers"
+  :image "Powers.jpg"
+  :chaptermap
+   (chaptermap
+    "Powers Overview"
+     (chapter
+      :name "Powers Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: Powers?"
+         (section
+          :name "Why Tactics: Powers?")))
+    "Special Modifiers"
+     (chapter
+      :name "Special Modifiers"
+      :sectionmap
+       (sectionmap
+        "Power Weaknesses"
+         (section
+          :name "Power Weaknesses"
+          :modifiermap
+           (modifiermap
+            :Activation
+             (modifier
+              :name "Activation"
+              :summary "* Activating the ability requires more than just desire")
+            "Always On"
+             (modifier
+              :name "Always On"
+              :summary "* Ability may not be turned off")
+            :Annoying
+             (modifier
+              :name "Annoying"
+              :summary "* Tiny things that make using the ability frustrating.")
+            "Communications Broadcast Only"
+             (modifier
+              :name "Communications Broadcast Only")
+            "Communications None"
+             (modifier
+              :name "Communications None")
+            "Communications Receive Only"
+             (modifier
+              :name "Communications Receive Only")
+            "Conditional Use"
+             (modifier
+              :name "Conditional Use"
+              :summary "* Ability may only be used under specific circumstances")
+            "Energy Discharge"
+             (modifier
+              :name "Energy Discharge"
+              :summary "Cannot completely contain own energies and must allow them to leak out regularly. At low levels this just draws attention, but at higher levels becomes dangerous.")
+            "Focus Item"
+             (modifier
+              :name "Focus Item")
+            "Glider Only"
+             (modifier
+              :name "Glider Only")
+            :Inefficient
+             (modifier
+              :name "Inefficient"
+              :summary "* Uses excessive energy.")
+            :Internalize
+             (modifier
+              :name "Internalize")
+            "Large Sensor Profile"
+             (modifier
+              :name "Large Sensor Profile")
+            "Limited Uses"
+             (modifier
+              :name "Limited Uses")
+            :Overheats
+             (modifier
+              :name "Overheats")
+            :Overloads
+             (modifier
+              :name "Overloads")
+            "Poor Climb Angle"
+             (modifier
+              :name "Poor Climb Angle")
+            "Poor Ceiling"
+             (modifier
+              :name "Poor Ceiling")
+            "Poor Towing Capacity"
+             (modifier
+              :name "Poor Towing Capacity")
+            "Power Fluxuation"
+             (modifier
+              :name "Power Fluxuation"
+              :summary "Cannot completely control power level. At random, power use may be higher or lower than expected. High level powers may not be able to be turned off or may not turn on when needed.")
+            "Power Hungry"
+             (modifier
+              :name "Power Hungry"
+              :summary "* Requires extra turns of inactivity to use.")
+            "Power Manifestation"
+             (modifier
+              :name "Power Manifestation"
+              :summary "When powers are used, a visual or audible manifestation appears. The higher the power level the more obvious the manifestation.")
+            "Requires Airstrip"
+             (modifier
+              :name "Requires Airstrip")
+            "Sensor Dependent"
+             (modifier
+              :name "Sensor Dependent"
+              :summary "* Blind without Sensors")
+            "Traceable Emmissions"
+             (modifier
+              :name "Traceable Emmissions")))))
+    "Special Powers"
+     (chapter
+      :name "Special Powers"
+      :sectionmap
+       (sectionmap
+        :Miscellaneous
+         (section
+          :name "Miscellaneous"
+          :powermap
+           (powermap
+            "Computer Control"
+             (power
+              :name "Computer Control"
+              :summary "Gives ability to control computers like Computer Science."))))))))

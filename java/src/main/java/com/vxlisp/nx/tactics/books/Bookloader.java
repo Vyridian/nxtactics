@@ -3121,11 +3121,22 @@ public final class Bookloader {
               Core.vx_new_string("name"),
               Core.vx_new_string("image"),
               Core.vx_new_string("classification"),
+              Core.vx_new_string("crew"),
+              Core.vx_new_string("energy"),
+              Core.vx_new_string("explosive"),
+              Core.vx_new_string("height"),
               Core.vx_new_string("length"),
               Core.vx_new_string("mass"),
+              Core.vx_new_string("modifiers"),
               Core.vx_new_string("muzzlevelocity"),
               Core.vx_new_string("range"),
-              Core.vx_new_string("rof")
+              Core.vx_new_string("rof"),
+              Core.vx_new_string("rounds"),
+              Core.vx_new_string("speedair"),
+              Core.vx_new_string("speedland"),
+              Core.vx_new_string("speedspace"),
+              Core.vx_new_string("speedwater"),
+              Core.vx_new_string("width")
             )
           ),
           Core.t_any_from_func.vx_fn_new(() -> {
@@ -3986,12 +3997,378 @@ public final class Bookloader {
   }
 
   /**
+   * @function modifier_from_modifier_key_value
+   * Returns a modified modifier from a key value.
+   * @param  {modifier} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {modifier}
+   * (func modifier<-modifier-key-value)
+   */
+  public static interface Func_modifier_from_modifier_key_value extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_modifier vx_modifier_from_modifier_key_value(final Base.Type_modifier current, final Core.Type_string key, final Core.Type_string value);
+  }
+
+  public static class Class_modifier_from_modifier_key_value extends Core.Class_base implements Func_modifier_from_modifier_key_value {
+
+    @Override
+    public Func_modifier_from_modifier_key_value vx_new(Object... vals) {
+      Class_modifier_from_modifier_key_value output = new Class_modifier_from_modifier_key_value();
+      return output;
+    }
+
+    @Override
+    public Func_modifier_from_modifier_key_value vx_copy(Object... vals) {
+      Class_modifier_from_modifier_key_value output = new Class_modifier_from_modifier_key_value();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "modifier<-modifier-key-value", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "modifier", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_modifier_from_modifier_key_value vx_empty() {return e_modifier_from_modifier_key_value;}
+    @Override
+    public Func_modifier_from_modifier_key_value vx_type() {return t_modifier_from_modifier_key_value;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_modifier current = Core.f_any_from_any(Base.t_modifier, arglist.vx_any(Core.vx_new_int(0)));
+      Core.Type_string key = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(1)));
+      Core.Type_string value = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(2)));
+      output = Bookloader.f_modifier_from_modifier_key_value(current, key, value);
+      return output;
+    }
+
+    @Override
+    public Base.Type_modifier vx_modifier_from_modifier_key_value(final Base.Type_modifier current, final Core.Type_string key, final Core.Type_string value) {
+      return Bookloader.f_modifier_from_modifier_key_value(current, key, value);
+    }
+
+  }
+
+  public static final Func_modifier_from_modifier_key_value e_modifier_from_modifier_key_value = new Bookloader.Class_modifier_from_modifier_key_value();
+  public static final Func_modifier_from_modifier_key_value t_modifier_from_modifier_key_value = new Bookloader.Class_modifier_from_modifier_key_value();
+
+  public static Base.Type_modifier f_modifier_from_modifier_key_value(final Base.Type_modifier current, final Core.Type_string key, final Core.Type_string value) {
+    Base.Type_modifier output = Base.e_modifier;
+    output = Core.f_switch(
+      Base.t_modifier,
+      key,
+      Core.t_thenelselist.vx_new(
+        Core.f_case_1(
+          Core.vx_new_string(""),
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return current;
+          })
+        ),
+        Core.f_case(
+          Core.f_new(
+            Core.t_list,
+            Core.t_anylist.vx_new(
+              Core.vx_new_string("name"),
+              Core.vx_new_string("image")
+            )
+          ),
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return Core.f_copy(
+              current,
+              Core.t_anylist.vx_new(
+                  key,
+                  value
+              )
+            );
+          })
+        ),
+        Core.f_else(
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return Core.f_copy(
+              current,
+              Core.t_anylist.vx_new(
+                  Core.f_msg_from_error_1(
+                    Core.vx_new_string(":invalidproperty"),
+                    Core.f_new(
+                      Core.t_anymap,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":type"),
+                        Base.t_modifier,
+                        Core.vx_new_string(":prop"),
+                        key,
+                        Core.vx_new_string(":value"),
+                        value
+                      )
+                    )
+                  )
+              )
+            );
+          })
+        )
+      )
+    );
+    return output;
+  }
+
+  /**
+   * @function modifier_from_modifier_stringmap
+   * Returns a modifier from a propmap.
+   * @param  {modifier} modifier
+   * @param  {stringmap} propmap
+   * @return {modifier}
+   * (func modifier<-modifier-stringmap)
+   */
+  public static interface Func_modifier_from_modifier_stringmap extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_modifier vx_modifier_from_modifier_stringmap(final Base.Type_modifier modifier, final Core.Type_stringmap propmap);
+  }
+
+  public static class Class_modifier_from_modifier_stringmap extends Core.Class_base implements Func_modifier_from_modifier_stringmap {
+
+    @Override
+    public Func_modifier_from_modifier_stringmap vx_new(Object... vals) {
+      Class_modifier_from_modifier_stringmap output = new Class_modifier_from_modifier_stringmap();
+      return output;
+    }
+
+    @Override
+    public Func_modifier_from_modifier_stringmap vx_copy(Object... vals) {
+      Class_modifier_from_modifier_stringmap output = new Class_modifier_from_modifier_stringmap();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "modifier<-modifier-stringmap", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "modifier", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_modifier_from_modifier_stringmap vx_empty() {return e_modifier_from_modifier_stringmap;}
+    @Override
+    public Func_modifier_from_modifier_stringmap vx_type() {return t_modifier_from_modifier_stringmap;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_modifier modifier = Core.f_any_from_any(Base.t_modifier, arglist.vx_any(Core.vx_new_int(0)));
+      Core.Type_stringmap propmap = Core.f_any_from_any(Core.t_stringmap, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_modifier_from_modifier_stringmap(modifier, propmap);
+      return output;
+    }
+
+    @Override
+    public Base.Type_modifier vx_modifier_from_modifier_stringmap(final Base.Type_modifier modifier, final Core.Type_stringmap propmap) {
+      return Bookloader.f_modifier_from_modifier_stringmap(modifier, propmap);
+    }
+
+  }
+
+  public static final Func_modifier_from_modifier_stringmap e_modifier_from_modifier_stringmap = new Bookloader.Class_modifier_from_modifier_stringmap();
+  public static final Func_modifier_from_modifier_stringmap t_modifier_from_modifier_stringmap = new Bookloader.Class_modifier_from_modifier_stringmap();
+
+  public static Base.Type_modifier f_modifier_from_modifier_stringmap(final Base.Type_modifier modifier, final Core.Type_stringmap propmap) {
+    Base.Type_modifier output = Base.e_modifier;
+    output = Core.f_any_from_map_start_reduce(
+      Base.t_modifier,
+      propmap,
+      modifier,
+      Core.t_any_from_any_key_value.vx_fn_new((Core.Type_any current_lmb_any, Core.Type_string key_lmb, Core.Type_any value_lmb_any) -> {
+        Base.Type_modifier current_lmb = Core.f_any_from_any(Base.t_modifier, current_lmb_any);
+        Core.Type_string value_lmb = Core.f_any_from_any(Core.t_string, value_lmb_any);
+        Core.Type_any output_1 = Bookloader.f_modifier_from_modifier_key_value(current_lmb, key_lmb, value_lmb);
+        return output_1;
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function modifier_from_modifier_xmlchild
+   * Returns a modified modifier based on a given child xml.
+   * @param  {modifier} modifier
+   * @param  {xml} child
+   * @return {modifier}
+   * (func modifier<-modifier-xmlchild)
+   */
+  public static interface Func_modifier_from_modifier_xmlchild extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_modifier vx_modifier_from_modifier_xmlchild(final Base.Type_modifier modifier, final Xml.Type_xml child);
+  }
+
+  public static class Class_modifier_from_modifier_xmlchild extends Core.Class_base implements Func_modifier_from_modifier_xmlchild {
+
+    @Override
+    public Func_modifier_from_modifier_xmlchild vx_new(Object... vals) {
+      Class_modifier_from_modifier_xmlchild output = new Class_modifier_from_modifier_xmlchild();
+      return output;
+    }
+
+    @Override
+    public Func_modifier_from_modifier_xmlchild vx_copy(Object... vals) {
+      Class_modifier_from_modifier_xmlchild output = new Class_modifier_from_modifier_xmlchild();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "modifier<-modifier-xmlchild", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "modifier", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_modifier_from_modifier_xmlchild vx_empty() {return e_modifier_from_modifier_xmlchild;}
+    @Override
+    public Func_modifier_from_modifier_xmlchild vx_type() {return t_modifier_from_modifier_xmlchild;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_modifier modifier = Core.f_any_from_any(Base.t_modifier, arglist.vx_any(Core.vx_new_int(0)));
+      Xml.Type_xml child = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_modifier_from_modifier_xmlchild(modifier, child);
+      return output;
+    }
+
+    @Override
+    public Base.Type_modifier vx_modifier_from_modifier_xmlchild(final Base.Type_modifier modifier, final Xml.Type_xml child) {
+      return Bookloader.f_modifier_from_modifier_xmlchild(modifier, child);
+    }
+
+  }
+
+  public static final Func_modifier_from_modifier_xmlchild e_modifier_from_modifier_xmlchild = new Bookloader.Class_modifier_from_modifier_xmlchild();
+  public static final Func_modifier_from_modifier_xmlchild t_modifier_from_modifier_xmlchild = new Bookloader.Class_modifier_from_modifier_xmlchild();
+
+  public static Base.Type_modifier f_modifier_from_modifier_xmlchild(final Base.Type_modifier modifier, final Xml.Type_xml child) {
+    Base.Type_modifier output = Base.e_modifier;
+    output = Core.f_let(
+      Base.t_modifier,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_string tag = child.tag();
+        return Core.f_switch(
+          Base.t_modifier,
+          tag,
+          Core.t_thenelselist.vx_new(
+            Core.f_case_1(
+              Core.vx_new_string(""),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return modifier;
+              })
+            ),
+            Core.f_case(
+              Core.f_new(
+                Core.t_list,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string("reference"),
+                  Core.vx_new_string("summary"),
+                  Core.vx_new_string("titles")
+                )
+              ),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Core.f_copy(
+                  modifier,
+                  Core.t_anylist.vx_new(
+                      tag,
+                      Xml.f_string_first_from_xml(child)
+                  )
+                );
+              })
+            ),
+            Core.f_else(
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Core.f_copy(
+                  modifier,
+                  Core.t_anylist.vx_new(
+                      Core.f_msg_from_error_1(
+                        Core.vx_new_string(":invalidtagfound"),
+                        Core.f_new(
+                          Core.t_anymap,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":type"),
+                            Base.t_modifier,
+                            Core.vx_new_string(":tag"),
+                            tag
+                          )
+                        )
+                      )
+                  )
+                );
+              })
+            )
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
    * @function modifier_from_xml
+   * Returns a modifier from a given xml.
+   * @param  {xml} xml
    * @return {modifier}
    * (func modifier<-xml)
    */
-  public static interface Func_modifier_from_xml extends Core.Type_func, Core.Type_replfunc {
-    public Base.Type_modifier vx_modifier_from_xml();
+  public static interface Func_modifier_from_xml extends Core.Func_any_from_any {
+    public Base.Type_modifier vx_modifier_from_xml(final Xml.Type_xml xml);
   }
 
   public static class Class_modifier_from_xml extends Core.Class_base implements Func_modifier_from_xml {
@@ -4039,15 +4416,28 @@ public final class Bookloader {
     @Override
     public Func_modifier_from_xml vx_type() {return t_modifier_from_xml;}
 
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Xml.Type_xml inputval = (Xml.Type_xml)value;
+      Core.Type_any outputval = Bookloader.f_modifier_from_xml(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
     public Core.Type_any vx_repl(Core.Type_anylist arglist) {
       Core.Type_any output = Core.e_any;
-      output = Bookloader.f_modifier_from_xml();
+      Xml.Type_xml xml = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(0)));
+      output = Bookloader.f_modifier_from_xml(xml);
       return output;
     }
 
     @Override
-    public Base.Type_modifier vx_modifier_from_xml() {
-      return Bookloader.f_modifier_from_xml();
+    public Base.Type_modifier vx_modifier_from_xml(final Xml.Type_xml xml) {
+      return Bookloader.f_modifier_from_xml(xml);
     }
 
   }
@@ -4055,8 +4445,31 @@ public final class Bookloader {
   public static final Func_modifier_from_xml e_modifier_from_xml = new Bookloader.Class_modifier_from_xml();
   public static final Func_modifier_from_xml t_modifier_from_xml = new Bookloader.Class_modifier_from_xml();
 
-  public static Base.Type_modifier f_modifier_from_xml() {
+  public static Base.Type_modifier f_modifier_from_xml(final Xml.Type_xml xml) {
     Base.Type_modifier output = Base.e_modifier;
+    output = Core.f_let(
+      Base.t_modifier,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_stringmap propmap = xml.propmap();
+        final Base.Type_modifier modifier = Bookloader.f_modifier_from_modifier_stringmap(
+          Core.f_empty(
+            Base.t_modifier
+          ),
+          propmap
+        );
+        return Core.f_any_from_list_start_reduce(
+          Base.t_modifier,
+          xml.children(),
+          modifier,
+          Core.t_any_from_reduce.vx_fn_new((Core.Type_any modifier_lmb_any, Core.Type_any child_lmb_any) -> {
+            Base.Type_modifier modifier_lmb = Core.f_any_from_any(Base.t_modifier, modifier_lmb_any);
+            Xml.Type_xml child_lmb = Core.f_any_from_any(Xml.t_xml, child_lmb_any);
+            Core.Type_any output_1 = Bookloader.f_modifier_from_modifier_xmlchild(modifier_lmb, child_lmb);
+            return output_1;
+          })
+        );
+      })
+    );
     return output;
   }
 
@@ -5570,6 +5983,12 @@ public final class Bookloader {
                 );
               })
             ),
+            Core.f_case_1(
+              Core.vx_new_string("team"),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Bookloader.f_scenario_from_scenario_xmlteam(scenario, child);
+              })
+            ),
             Core.f_else(
               Core.t_any_from_func.vx_fn_new(() -> {
                 return Core.f_copy(
@@ -5591,6 +6010,108 @@ public final class Bookloader {
                 );
               })
             )
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function scenario_from_scenario_xmlteam
+   * Return a scenario with new team added to teammap
+   * @param  {scenario} scenario
+   * @param  {xml} xmlteam
+   * @return {scenario}
+   * (func scenario<-scenario-xmlteam)
+   */
+  public static interface Func_scenario_from_scenario_xmlteam extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_scenario vx_scenario_from_scenario_xmlteam(final Base.Type_scenario scenario, final Xml.Type_xml xmlteam);
+  }
+
+  public static class Class_scenario_from_scenario_xmlteam extends Core.Class_base implements Func_scenario_from_scenario_xmlteam {
+
+    @Override
+    public Func_scenario_from_scenario_xmlteam vx_new(Object... vals) {
+      Class_scenario_from_scenario_xmlteam output = new Class_scenario_from_scenario_xmlteam();
+      return output;
+    }
+
+    @Override
+    public Func_scenario_from_scenario_xmlteam vx_copy(Object... vals) {
+      Class_scenario_from_scenario_xmlteam output = new Class_scenario_from_scenario_xmlteam();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "scenario<-scenario-xmlteam", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "scenario", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_scenario_from_scenario_xmlteam vx_empty() {return e_scenario_from_scenario_xmlteam;}
+    @Override
+    public Func_scenario_from_scenario_xmlteam vx_type() {return t_scenario_from_scenario_xmlteam;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_scenario scenario = Core.f_any_from_any(Base.t_scenario, arglist.vx_any(Core.vx_new_int(0)));
+      Xml.Type_xml xmlteam = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_scenario_from_scenario_xmlteam(scenario, xmlteam);
+      return output;
+    }
+
+    @Override
+    public Base.Type_scenario vx_scenario_from_scenario_xmlteam(final Base.Type_scenario scenario, final Xml.Type_xml xmlteam) {
+      return Bookloader.f_scenario_from_scenario_xmlteam(scenario, xmlteam);
+    }
+
+  }
+
+  public static final Func_scenario_from_scenario_xmlteam e_scenario_from_scenario_xmlteam = new Bookloader.Class_scenario_from_scenario_xmlteam();
+  public static final Func_scenario_from_scenario_xmlteam t_scenario_from_scenario_xmlteam = new Bookloader.Class_scenario_from_scenario_xmlteam();
+
+  public static Base.Type_scenario f_scenario_from_scenario_xmlteam(final Base.Type_scenario scenario, final Xml.Type_xml xmlteam) {
+    Base.Type_scenario output = Base.e_scenario;
+    output = Core.f_let(
+      Base.t_scenario,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Base.Type_team current = Bookloader.f_team_from_xml(xmlteam);
+        final Core.Type_string name = current.name();
+        final Base.Type_teammap origmap = scenario.teammap();
+        final Base.Type_teammap chgmap = Core.f_copy(
+          origmap,
+          Core.t_anylist.vx_new(
+              name,
+              current
+          )
+        );
+        return Core.f_copy(
+          scenario,
+          Core.t_anylist.vx_new(
+            Core.vx_new_string(":teammap"),
+            chgmap
           )
         );
       })
@@ -5689,7 +6210,7 @@ public final class Bookloader {
       Base.t_scenario,
       Core.t_any_from_func.vx_fn_new(() -> {
         final Core.Type_stringmap propmap = xml.propmap();
-        final Base.Type_scenario scen = Bookloader.f_scenario_from_scenario_stringmap(
+        final Base.Type_scenario scenario = Bookloader.f_scenario_from_scenario_stringmap(
           Core.f_empty(
             Base.t_scenario
           ),
@@ -5698,7 +6219,7 @@ public final class Bookloader {
         return Core.f_any_from_list_start_reduce(
           Base.t_scenario,
           xml.children(),
-          scen,
+          scenario,
           Core.t_any_from_reduce.vx_fn_new((Core.Type_any scenario_lmb_any, Core.Type_any child_lmb_any) -> {
             Base.Type_scenario scenario_lmb = Core.f_any_from_any(Base.t_scenario, scenario_lmb_any);
             Xml.Type_xml child_lmb = Core.f_any_from_any(Xml.t_xml, child_lmb_any);
@@ -6057,6 +6578,12 @@ public final class Bookloader {
               Core.vx_new_string("item"),
               Core.t_any_from_func.vx_fn_new(() -> {
                 return Bookloader.f_section_from_section_xmlitem(section, child);
+              })
+            ),
+            Core.f_case_1(
+              Core.vx_new_string("modifier"),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Bookloader.f_section_from_section_xmlmodifier(section, child);
               })
             ),
             Core.f_case_1(
@@ -6433,6 +6960,108 @@ public final class Bookloader {
           section,
           Core.t_anylist.vx_new(
             Core.vx_new_string(":locationmap"),
+            chgmap
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function section_from_section_xmlmodifier
+   * Return a section with new modifier added to modifiermap
+   * @param  {section} section
+   * @param  {xml} xmlmodifier
+   * @return {section}
+   * (func section<-section-xmlmodifier)
+   */
+  public static interface Func_section_from_section_xmlmodifier extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_section vx_section_from_section_xmlmodifier(final Base.Type_section section, final Xml.Type_xml xmlmodifier);
+  }
+
+  public static class Class_section_from_section_xmlmodifier extends Core.Class_base implements Func_section_from_section_xmlmodifier {
+
+    @Override
+    public Func_section_from_section_xmlmodifier vx_new(Object... vals) {
+      Class_section_from_section_xmlmodifier output = new Class_section_from_section_xmlmodifier();
+      return output;
+    }
+
+    @Override
+    public Func_section_from_section_xmlmodifier vx_copy(Object... vals) {
+      Class_section_from_section_xmlmodifier output = new Class_section_from_section_xmlmodifier();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "section<-section-xmlmodifier", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "section", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_section_from_section_xmlmodifier vx_empty() {return e_section_from_section_xmlmodifier;}
+    @Override
+    public Func_section_from_section_xmlmodifier vx_type() {return t_section_from_section_xmlmodifier;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_section section = Core.f_any_from_any(Base.t_section, arglist.vx_any(Core.vx_new_int(0)));
+      Xml.Type_xml xmlmodifier = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_section_from_section_xmlmodifier(section, xmlmodifier);
+      return output;
+    }
+
+    @Override
+    public Base.Type_section vx_section_from_section_xmlmodifier(final Base.Type_section section, final Xml.Type_xml xmlmodifier) {
+      return Bookloader.f_section_from_section_xmlmodifier(section, xmlmodifier);
+    }
+
+  }
+
+  public static final Func_section_from_section_xmlmodifier e_section_from_section_xmlmodifier = new Bookloader.Class_section_from_section_xmlmodifier();
+  public static final Func_section_from_section_xmlmodifier t_section_from_section_xmlmodifier = new Bookloader.Class_section_from_section_xmlmodifier();
+
+  public static Base.Type_section f_section_from_section_xmlmodifier(final Base.Type_section section, final Xml.Type_xml xmlmodifier) {
+    Base.Type_section output = Base.e_section;
+    output = Core.f_let(
+      Base.t_section,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Base.Type_modifier modifier = Bookloader.f_modifier_from_xml(xmlmodifier);
+        final Core.Type_string name = modifier.name();
+        final Base.Type_modifiermap origmap = section.modifiermap();
+        final Base.Type_modifiermap chgmap = Core.f_copy(
+          origmap,
+          Core.t_anylist.vx_new(
+              name,
+              modifier
+          )
+        );
+        return Core.f_copy(
+          section,
+          Core.t_anylist.vx_new(
+            Core.vx_new_string(":modifiermap"),
             chgmap
           )
         );
@@ -8747,6 +9376,487 @@ public final class Bookloader {
   }
 
   /**
+   * @function team_from_team_key_value
+   * Returns a modified team from a key value.
+   * @param  {team} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {team}
+   * (func team<-team-key-value)
+   */
+  public static interface Func_team_from_team_key_value extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_team vx_team_from_team_key_value(final Base.Type_team current, final Core.Type_string key, final Core.Type_string value);
+  }
+
+  public static class Class_team_from_team_key_value extends Core.Class_base implements Func_team_from_team_key_value {
+
+    @Override
+    public Func_team_from_team_key_value vx_new(Object... vals) {
+      Class_team_from_team_key_value output = new Class_team_from_team_key_value();
+      return output;
+    }
+
+    @Override
+    public Func_team_from_team_key_value vx_copy(Object... vals) {
+      Class_team_from_team_key_value output = new Class_team_from_team_key_value();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "team<-team-key-value", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "team", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_team_from_team_key_value vx_empty() {return e_team_from_team_key_value;}
+    @Override
+    public Func_team_from_team_key_value vx_type() {return t_team_from_team_key_value;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_team current = Core.f_any_from_any(Base.t_team, arglist.vx_any(Core.vx_new_int(0)));
+      Core.Type_string key = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(1)));
+      Core.Type_string value = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(2)));
+      output = Bookloader.f_team_from_team_key_value(current, key, value);
+      return output;
+    }
+
+    @Override
+    public Base.Type_team vx_team_from_team_key_value(final Base.Type_team current, final Core.Type_string key, final Core.Type_string value) {
+      return Bookloader.f_team_from_team_key_value(current, key, value);
+    }
+
+  }
+
+  public static final Func_team_from_team_key_value e_team_from_team_key_value = new Bookloader.Class_team_from_team_key_value();
+  public static final Func_team_from_team_key_value t_team_from_team_key_value = new Bookloader.Class_team_from_team_key_value();
+
+  public static Base.Type_team f_team_from_team_key_value(final Base.Type_team current, final Core.Type_string key, final Core.Type_string value) {
+    Base.Type_team output = Base.e_team;
+    output = Core.f_switch(
+      Base.t_team,
+      key,
+      Core.t_thenelselist.vx_new(
+        Core.f_case_1(
+          Core.vx_new_string(""),
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return current;
+          })
+        ),
+        Core.f_case(
+          Core.f_new(
+            Core.t_list,
+            Core.t_anylist.vx_new(
+              Core.vx_new_string("name"),
+              Core.vx_new_string("image")
+            )
+          ),
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return Core.f_copy(
+              current,
+              Core.t_anylist.vx_new(
+                  key,
+                  value
+              )
+            );
+          })
+        ),
+        Core.f_else(
+          Core.t_any_from_func.vx_fn_new(() -> {
+            return Core.f_copy(
+              current,
+              Core.t_anylist.vx_new(
+                  Core.f_msg_from_error_1(
+                    Core.vx_new_string(":invalidproperty"),
+                    Core.f_new(
+                      Core.t_anymap,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":type"),
+                        Base.t_team,
+                        Core.vx_new_string(":prop"),
+                        key,
+                        Core.vx_new_string(":value"),
+                        value
+                      )
+                    )
+                  )
+              )
+            );
+          })
+        )
+      )
+    );
+    return output;
+  }
+
+  /**
+   * @function team_from_team_stringmap
+   * Returns a team from a propmap.
+   * @param  {team} team
+   * @param  {stringmap} propmap
+   * @return {team}
+   * (func team<-team-stringmap)
+   */
+  public static interface Func_team_from_team_stringmap extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_team vx_team_from_team_stringmap(final Base.Type_team team, final Core.Type_stringmap propmap);
+  }
+
+  public static class Class_team_from_team_stringmap extends Core.Class_base implements Func_team_from_team_stringmap {
+
+    @Override
+    public Func_team_from_team_stringmap vx_new(Object... vals) {
+      Class_team_from_team_stringmap output = new Class_team_from_team_stringmap();
+      return output;
+    }
+
+    @Override
+    public Func_team_from_team_stringmap vx_copy(Object... vals) {
+      Class_team_from_team_stringmap output = new Class_team_from_team_stringmap();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "team<-team-stringmap", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "team", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_team_from_team_stringmap vx_empty() {return e_team_from_team_stringmap;}
+    @Override
+    public Func_team_from_team_stringmap vx_type() {return t_team_from_team_stringmap;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_team team = Core.f_any_from_any(Base.t_team, arglist.vx_any(Core.vx_new_int(0)));
+      Core.Type_stringmap propmap = Core.f_any_from_any(Core.t_stringmap, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_team_from_team_stringmap(team, propmap);
+      return output;
+    }
+
+    @Override
+    public Base.Type_team vx_team_from_team_stringmap(final Base.Type_team team, final Core.Type_stringmap propmap) {
+      return Bookloader.f_team_from_team_stringmap(team, propmap);
+    }
+
+  }
+
+  public static final Func_team_from_team_stringmap e_team_from_team_stringmap = new Bookloader.Class_team_from_team_stringmap();
+  public static final Func_team_from_team_stringmap t_team_from_team_stringmap = new Bookloader.Class_team_from_team_stringmap();
+
+  public static Base.Type_team f_team_from_team_stringmap(final Base.Type_team team, final Core.Type_stringmap propmap) {
+    Base.Type_team output = Base.e_team;
+    output = Core.f_any_from_map_start_reduce(
+      Base.t_team,
+      propmap,
+      team,
+      Core.t_any_from_any_key_value.vx_fn_new((Core.Type_any current_lmb_any, Core.Type_string key_lmb, Core.Type_any value_lmb_any) -> {
+        Base.Type_team current_lmb = Core.f_any_from_any(Base.t_team, current_lmb_any);
+        Core.Type_string value_lmb = Core.f_any_from_any(Core.t_string, value_lmb_any);
+        Core.Type_any output_1 = Bookloader.f_team_from_team_key_value(current_lmb, key_lmb, value_lmb);
+        return output_1;
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function team_from_team_xmlchild
+   * Returns a modified team based on a given child xml.
+   * @param  {team} team
+   * @param  {xml} child
+   * @return {team}
+   * (func team<-team-xmlchild)
+   */
+  public static interface Func_team_from_team_xmlchild extends Core.Type_func, Core.Type_replfunc {
+    public Base.Type_team vx_team_from_team_xmlchild(final Base.Type_team team, final Xml.Type_xml child);
+  }
+
+  public static class Class_team_from_team_xmlchild extends Core.Class_base implements Func_team_from_team_xmlchild {
+
+    @Override
+    public Func_team_from_team_xmlchild vx_new(Object... vals) {
+      Class_team_from_team_xmlchild output = new Class_team_from_team_xmlchild();
+      return output;
+    }
+
+    @Override
+    public Func_team_from_team_xmlchild vx_copy(Object... vals) {
+      Class_team_from_team_xmlchild output = new Class_team_from_team_xmlchild();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "team<-team-xmlchild", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "team", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_team_from_team_xmlchild vx_empty() {return e_team_from_team_xmlchild;}
+    @Override
+    public Func_team_from_team_xmlchild vx_type() {return t_team_from_team_xmlchild;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_team team = Core.f_any_from_any(Base.t_team, arglist.vx_any(Core.vx_new_int(0)));
+      Xml.Type_xml child = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(1)));
+      output = Bookloader.f_team_from_team_xmlchild(team, child);
+      return output;
+    }
+
+    @Override
+    public Base.Type_team vx_team_from_team_xmlchild(final Base.Type_team team, final Xml.Type_xml child) {
+      return Bookloader.f_team_from_team_xmlchild(team, child);
+    }
+
+  }
+
+  public static final Func_team_from_team_xmlchild e_team_from_team_xmlchild = new Bookloader.Class_team_from_team_xmlchild();
+  public static final Func_team_from_team_xmlchild t_team_from_team_xmlchild = new Bookloader.Class_team_from_team_xmlchild();
+
+  public static Base.Type_team f_team_from_team_xmlchild(final Base.Type_team team, final Xml.Type_xml child) {
+    Base.Type_team output = Base.e_team;
+    output = Core.f_let(
+      Base.t_team,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_string tag = child.tag();
+        return Core.f_switch(
+          Base.t_team,
+          tag,
+          Core.t_thenelselist.vx_new(
+            Core.f_case_1(
+              Core.vx_new_string(""),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return team;
+              })
+            ),
+            Core.f_case(
+              Core.f_new(
+                Core.t_list,
+                Core.t_anylist.vx_new(
+                  Core.vx_new_string("reference"),
+                  Core.vx_new_string("summary"),
+                  Core.vx_new_string("titles"),
+                  Core.vx_new_string("completevictory"),
+                  Core.vx_new_string("deploy"),
+                  Core.vx_new_string("forces"),
+                  Core.vx_new_string("partialvictory")
+                )
+              ),
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Core.f_copy(
+                  team,
+                  Core.t_anylist.vx_new(
+                      tag,
+                      Xml.f_string_first_from_xml(child)
+                  )
+                );
+              })
+            ),
+            Core.f_else(
+              Core.t_any_from_func.vx_fn_new(() -> {
+                return Core.f_copy(
+                  team,
+                  Core.t_anylist.vx_new(
+                      Core.f_msg_from_error_1(
+                        Core.vx_new_string(":invalidtagfound"),
+                        Core.f_new(
+                          Core.t_anymap,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":type"),
+                            Base.t_team,
+                            Core.vx_new_string(":tag"),
+                            tag
+                          )
+                        )
+                      )
+                  )
+                );
+              })
+            )
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function team_from_xml
+   * Returns a team from a given xml.
+   * @param  {xml} xml
+   * @return {team}
+   * (func team<-xml)
+   */
+  public static interface Func_team_from_xml extends Core.Func_any_from_any {
+    public Base.Type_team vx_team_from_xml(final Xml.Type_xml xml);
+  }
+
+  public static class Class_team_from_xml extends Core.Class_base implements Func_team_from_xml {
+
+    @Override
+    public Func_team_from_xml vx_new(Object... vals) {
+      Class_team_from_xml output = new Class_team_from_xml();
+      return output;
+    }
+
+    @Override
+    public Func_team_from_xml vx_copy(Object... vals) {
+      Class_team_from_xml output = new Class_team_from_xml();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "team<-xml", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "team", // name
+          ":struct", // extends
+          Core.t_typelist.vx_new(Base.t_card), // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_team_from_xml vx_empty() {return e_team_from_xml;}
+    @Override
+    public Func_team_from_xml vx_type() {return t_team_from_xml;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Xml.Type_xml inputval = (Xml.Type_xml)value;
+      Core.Type_any outputval = Bookloader.f_team_from_xml(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Xml.Type_xml xml = Core.f_any_from_any(Xml.t_xml, arglist.vx_any(Core.vx_new_int(0)));
+      output = Bookloader.f_team_from_xml(xml);
+      return output;
+    }
+
+    @Override
+    public Base.Type_team vx_team_from_xml(final Xml.Type_xml xml) {
+      return Bookloader.f_team_from_xml(xml);
+    }
+
+  }
+
+  public static final Func_team_from_xml e_team_from_xml = new Bookloader.Class_team_from_xml();
+  public static final Func_team_from_xml t_team_from_xml = new Bookloader.Class_team_from_xml();
+
+  public static Base.Type_team f_team_from_xml(final Xml.Type_xml xml) {
+    Base.Type_team output = Base.e_team;
+    output = Core.f_let(
+      Base.t_team,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_stringmap propmap = xml.propmap();
+        final Base.Type_team team = Bookloader.f_team_from_team_stringmap(
+          Core.f_empty(
+            Base.t_team
+          ),
+          propmap
+        );
+        return Core.f_any_from_list_start_reduce(
+          Base.t_team,
+          xml.children(),
+          team,
+          Core.t_any_from_reduce.vx_fn_new((Core.Type_any team_lmb_any, Core.Type_any child_lmb_any) -> {
+            Base.Type_team team_lmb = Core.f_any_from_any(Base.t_team, team_lmb_any);
+            Xml.Type_xml child_lmb = Core.f_any_from_any(Xml.t_xml, child_lmb_any);
+            Core.Type_any output_1 = Bookloader.f_team_from_team_xmlchild(team_lmb, child_lmb);
+            return output_1;
+          })
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
    * @function terrain_from_terrain_key_value
    * Returns a modified terrain from a key value.
    * @param  {terrain} current
@@ -9326,7 +10436,12 @@ public final class Bookloader {
               Core.vx_new_string("length"),
               Core.vx_new_string("mass"),
               Core.vx_new_string("mind"),
+              Core.vx_new_string("range"),
               Core.vx_new_string("speed"),
+              Core.vx_new_string("speedair"),
+              Core.vx_new_string("speedland"),
+              Core.vx_new_string("speedspace"),
+              Core.vx_new_string("speedwater"),
               Core.vx_new_string("width"),
               Core.vx_new_string("will")
             )
@@ -10607,8 +11722,10 @@ public final class Bookloader {
             Core.t_anylist.vx_new(
               Core.vx_new_string("name"),
               Core.vx_new_string("image"),
+              Core.vx_new_string("facing"),
               Core.vx_new_string("modifiers"),
-              Core.vx_new_string("number")
+              Core.vx_new_string("number"),
+              Core.vx_new_string("rounds")
             )
           ),
           Core.t_any_from_func.vx_fn_new(() -> {
@@ -13387,6 +14504,9 @@ public final class Bookloader {
     mapfunc.put("location<-location-stringmap", Bookloader.t_location_from_location_stringmap);
     mapfunc.put("location<-location-xmlchild", Bookloader.t_location_from_location_xmlchild);
     mapfunc.put("location<-xml", Bookloader.t_location_from_xml);
+    mapfunc.put("modifier<-modifier-key-value", Bookloader.t_modifier_from_modifier_key_value);
+    mapfunc.put("modifier<-modifier-stringmap", Bookloader.t_modifier_from_modifier_stringmap);
+    mapfunc.put("modifier<-modifier-xmlchild", Bookloader.t_modifier_from_modifier_xmlchild);
     mapfunc.put("modifier<-xml", Bookloader.t_modifier_from_xml);
     mapfunc.put("power<-power-key-value", Bookloader.t_power_from_power_key_value);
     mapfunc.put("power<-power-stringmap", Bookloader.t_power_from_power_stringmap);
@@ -13401,6 +14521,7 @@ public final class Bookloader {
     mapfunc.put("scenario<-scenario-key-value", Bookloader.t_scenario_from_scenario_key_value);
     mapfunc.put("scenario<-scenario-stringmap", Bookloader.t_scenario_from_scenario_stringmap);
     mapfunc.put("scenario<-scenario-xmlchild", Bookloader.t_scenario_from_scenario_xmlchild);
+    mapfunc.put("scenario<-scenario-xmlteam", Bookloader.t_scenario_from_scenario_xmlteam);
     mapfunc.put("scenario<-xml", Bookloader.t_scenario_from_xml);
     mapfunc.put("section<-section-key-value", Bookloader.t_section_from_section_key_value);
     mapfunc.put("section<-section-stringmap", Bookloader.t_section_from_section_stringmap);
@@ -13408,6 +14529,7 @@ public final class Bookloader {
     mapfunc.put("section<-section-xmldamage", Bookloader.t_section_from_section_xmldamage);
     mapfunc.put("section<-section-xmlitem", Bookloader.t_section_from_section_xmlitem);
     mapfunc.put("section<-section-xmllocation", Bookloader.t_section_from_section_xmllocation);
+    mapfunc.put("section<-section-xmlmodifier", Bookloader.t_section_from_section_xmlmodifier);
     mapfunc.put("section<-section-xmlpower", Bookloader.t_section_from_section_xmlpower);
     mapfunc.put("section<-section-xmlrule", Bookloader.t_section_from_section_xmlrule);
     mapfunc.put("section<-section-xmlscenario", Bookloader.t_section_from_section_xmlscenario);
@@ -13429,6 +14551,10 @@ public final class Bookloader {
     mapfunc.put("string-read<-bookname", Bookloader.t_string_read_from_bookname);
     mapfunc.put("string-vxlisp<-book", Bookloader.t_string_vxlisp_from_book);
     mapfunc.put("string-writename<-book", Bookloader.t_string_writename_from_book);
+    mapfunc.put("team<-team-key-value", Bookloader.t_team_from_team_key_value);
+    mapfunc.put("team<-team-stringmap", Bookloader.t_team_from_team_stringmap);
+    mapfunc.put("team<-team-xmlchild", Bookloader.t_team_from_team_xmlchild);
+    mapfunc.put("team<-xml", Bookloader.t_team_from_xml);
     mapfunc.put("terrain<-terrain-key-value", Bookloader.t_terrain_from_terrain_key_value);
     mapfunc.put("terrain<-terrain-stringmap", Bookloader.t_terrain_from_terrain_stringmap);
     mapfunc.put("terrain<-terrain-xmlchild", Bookloader.t_terrain_from_terrain_xmlchild);

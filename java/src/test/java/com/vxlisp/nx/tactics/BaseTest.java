@@ -20,12 +20,12 @@ public final class BaseTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/base", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 34), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 5, ":tests", 5, ":total", 96), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 5, ":tests", 5, ":total", 99), 
       ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
       ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
       ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 96), 
-      ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 61)
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 99), 
+      ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 64)
     );
   }
 
@@ -55,6 +55,7 @@ public final class BaseTest {
         ":locationmap", 0,
         ":mind", 0,
         ":modifier", 0,
+        ":modifiermap", 0,
         ":playingcard", 0,
         ":power", 0,
         ":powermap", 0,
@@ -75,6 +76,8 @@ public final class BaseTest {
         ":stat", 0,
         ":suit", 0,
         ":suitmap", 0,
+        ":team", 0,
+        ":teammap", 0,
         ":terrain", 0,
         ":terrainmap", 0,
         ":threat", 0,

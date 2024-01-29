@@ -1,0 +1,1017 @@
+(package nx/tactics/books/high_technology
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "High Technology"
+  :image "HighTech.jpg"
+  :chaptermap
+   (chaptermap
+    "High Tech Overview"
+     (chapter
+      :name "High Tech Overview"
+      :sectionmap
+       (sectionmap
+        "Why Tactics: High Technology?"
+         (section
+          :name "Why Tactics: High Technology?")))
+    "Cyberpunk Campaign"
+     (chapter
+      :name "Cyberpunk Campaign"
+      :sectionmap
+       (sectionmap
+        "Car Wars"
+         (section
+          :name "Car Wars"
+          :scenariomap
+           (scenariomap
+            "Escort Duty"
+             (scenario
+              :name "Escort Duty"
+              :summary
+               "* An Agricorp has commissioned some independents to covertly escort an unmarked tractor-trailer 1900 miles from
+their site in La Jolla to a USDA facility near Nashville, TN.
+* A rival has sent its own independents to get their hands on the cargo.
+* Note: The cargo/escort is a decoy for the real shipment."
+              :teammap
+               (teammap
+                :Escort
+                 (team
+                  :name "Escort"
+                  :completevictory "$1000/each if cargo delivered intact."
+                  :forces
+                   "* 1 Tractor-trailer
+* 2 Sedans"
+                  :partialvictory "Prevent enemy from taking any of the shipment.")
+                :Interceptors
+                 (team
+                  :name "Interceptors"
+                  :completevictory "Capture the entire shipment."
+                  :forces
+                   "* 1 Van
+* 3 Sedans"
+                  :partialvictory "Capture any of the shipment.")))
+            "Safe House"
+             (scenario
+              :name "Safe House"
+              :summary
+               "* A small-time fixer has evidence of the identity of a cyber serial killer, the Night City Stalker.  Two news
+organizations are bidding on the deal, but the loser contacted the Stalker out of spite.")
+            "Toxic Spill"
+             (scenario
+              :name "Toxic Spill"
+              :summary
+               "* While guarding a 200 person Nomad camp, the well drill discovers a hidden toxic waste dump.  Alarms alert the
+dumping company that their little secret has been discovered, so they send a team to 'clean up' the problem.
+* The whole Nomad camp must evacuate 3 miles to town before they are silenced, unfortunately they do not have
+enough vehicles to do it in one trip.")
+            "The Heist"
+             (scenario
+              :name "The Heist"
+              :summary
+               "* In a winter storm, a shipment of Palladium is diverted to a small warehouse in a corporate park.  It will not
+be moved until the weather turns, so it is a perfect opportunity to break in and steal the goods.
+* During the storm, the skies are dangerous, and even the roads are fairly dicey.  Snowmobile are certainly an
+option."
+              :teammap
+               (teammap
+                :Thieves
+                 (team
+                  :name "Thieves"
+                  :completevictory "Capture the whole shipment."
+                  :forces
+                   "* 10 Thieves
+* 5 Snowmobiles
+* 3 Sedans"
+                  :partialvictory "Take at least half of the shipment.")
+                :Guards
+                 (team
+                  :name "Guards"
+                  :completevictory "Protect the entire shipment."
+                  :forces
+                   "* 10 Armed and Armored Guards
+* 10 Unarmored, sleeping Guards
+* 5 Sedans
+* 2 Helicopters"
+                  :partialvictory "Protect at least half of the shipment.")))))))
+    "High Tech Rules"
+     (chapter
+      :name "High Tech Rules"
+      :sectionmap
+       (sectionmap
+        :Cyberspace
+         (section
+          :name "Cyberspace"
+          :summary
+           "* A huge, interconnected series of computer networks, software systems, and virtual realities that form a continuous
+digital universe of nearly infinite scope.
+* Interface programs sort through this information and produce a virtual world tailored to the user's desire.  The
+most common interface is that of digital cities that mirror their real world equivalents, but display computer
+systems, data blocks, and information pathways instead of buildings, people, and highways.
+* Nodes - Nodes in Cyberspace are locations in Cyberspace.  Nodes include Telecom lines, Satellite Uplinks,
+Firewalls, Security Cameras, Remote Controls, Databases, and Virtual Realities.  Different Nodes usually require
+valid security or payment to use.  Nodes can also hold nasty surprises including alarms and defense programs.
+* Movement - Distances are insignificant in Cyberspace.  Instead, movement is measured in tasks.  Any program can
+perform a number of tasks each turn equal to [Netrunning] skill.  Each node entered in Cyberspace is a task.
+Performing any [Action] at a node is also a task."
+          :titles "The Digital Web, The Net, The Network, World Wide Web, The Web")))
+    "High Tech Equipment"
+     (chapter
+      :name "High Tech Equipment"
+      :sectionmap
+       (sectionmap
+        "Body Armor"
+         (section
+          :name "Body Armor"
+          :unitmap
+           (unitmap
+            "Stealth Suit"
+             (unit
+              :name "Stealth Suit"
+              :reference "* Nuclear launch detected... - Starcraft"
+              :titles "Ghost Special Operative")
+            "Powered Body Armor"
+             (unit
+              :name "Powered Body Armor"
+              :summary "* Heavy Body Armor"
+              :titles "Hard Suit")))))
+    "High Tech Spacecraft"
+     (chapter
+      :name "High Tech Spacecraft"
+      :summary
+       "* Interplanetary travel is a common reality in the 23rd century.
+
+* Types - Spaceships are mostly cargo and ore mining ships, followed by gas tankers.
+
+* Prismatic Armor - Modern ships have a very thick ablative skin composed of a honeycomb of diamond nano-fibers filled with a highly refractive, radiation and impact absorbing ceramic compound. This armor has a number of beneficial qualities. It deflects energy in random directions which provides radiation resistance, stealth, and energy weapon defense. It fragments and ablates under energy weapon and kinetic impact which shatters incoming	micro-meteors and high speed weaponry and distributes the incoming energy in all directions to prevent penetration. The ablating particles also carry away excess heat in a similar way to evaporation. The resultant particles become a cloud of anti-energy aresol. Any impact strong enough to penetrate the armor will liquify the surrounding armor which quickly solidifies and helps to seal hull breaches.
+
+* Deflectors - Most long-range ships are equipped with a deflector array. The array is composed of a wide bank of closely spaced ionizing lasers and particle beams. The lasers ionize the particles and form a strong magnetic force down the length of the beam. Small objects headed toward the ship are ionized by the beams and then redirected away by the magnetic field. Point defense lasers are used for larger particles as well as incoming missiles.
+
+* Propulsion - Propulsion spaceward (outward from the Sun) is often provided by massive Stellasers that reflect and concentrate solar radiation into a 'tight' beam similar to a laser. Ships have depolyable solar sails to capture this energy for propulsion and recharging batteries. These sails can even be used to slowly tack inward. Some cargo ships use particularly large sails to slowly sail the solar wind to reduce costs. Most ships rely on powerful nuclear thrusters for sunward (toward the Sun) travel to accelerate the ship at up to 1g. When possible the ship will accelerate for half the voyage, turn around, and then decelerate for the rest of the trip.
+
+* Gravity - Except for short periods of weightlessness midway through the trip, the passengers feel gravity during the trip. Up is toward the nose and down is toward the engines. The internal organization of a ship is very similar to a skyscraper. For fuel and reaction mass reasons, the ship may need to travel at slower speeds (and lower gravity) or coast at zero gravity midway through the trip. For this reason, large ships are often equipped with rotating decks to simulate gravity for the crew.
+
+* Reentry - Spaceships are generally too heavy and not equipped to survive a landing on anything larger than a small moon. Landing on something as massive as the Earth's Moon is possible, but achieving orbit again requires a powerful Laser Lifter system like the one on Luna.
+
+* Travel Costs
+** Planet to orbital station skyhooks travel daily and cost 200-300 credits one-way.
+** Orbital to moon travel twice weekly and cost 600 credits one-way.
+** Interplanetary trips are like cruises. They travel weekly and cost 20,000-30,000 credits
+one-way.
+
+* Safety - Inner ship walls are covered with pillowy-soft panels of 'Space Gel'. This viscous fluid provides a combination of heat insulation, impact padding, radiation shielding, shrapnel absorption, and depressurization protection. Space Gel exposed to freezing temperatures will immediately harden into a very durable solid. If the hull is breached, damaged panels will leak Space Gel. Any gel that touches an area near the breach will instantly freeze, gradually plugging the leak."
+      :sectionmap
+       (sectionmap
+        "High Tech Satellites"
+         (section
+          :name "High Tech Satellites"
+          :unitmap
+           (unitmap
+            "Communication Satellite"
+             (unit
+              :name "Communication Satellite")
+            "Damocles Orbital Laser"
+             (unit
+              :name "Damocles Orbital Laser"
+              :image "HighTech/DamoclesSatellite.jpg"
+              :summary
+               "* Orbital Laser Platform designed for strategic strikes against land targets. May also be used agaist
+large orbital targets or for asteroid defense.")
+            "EMP Satellite"
+             (unit
+              :name "EMP Satellite"
+              :reference
+               "* What's it going to be, Plissken? Them or us? I shut down the third world, you win they lose. I shut
+down America, they win, you lose. The more things change, the more they stay the same. - Snake Plissken,
+Escape from LA"
+              :titles "Goldeneye")
+            "Hunter Killer Satellite"
+             (unit
+              :name "Hunter Killer Satellite"
+              :summary
+               "* A combat ready satellite often masquerading as a peaceful version. Hunter Satellites act like UAV's
+quietly patrolling until their weaponry is needed, then they are disposable."
+              :titles "Battle Satellite")
+            "Orbital Skyhook Satellite"
+             (unit
+              :name "Orbital Skyhook Satellite"
+              :summary "* Large rotating satellite in low orbit. Its purpose is to drop its kilometers long tether to dock with a [Suborbital Shuttle] and use its momentum to fling the shuttle into higher orbit. A few of these Skyhooks at different orbits can pull a shuttle all the way into high orbit. Pulling up shuttles gradually degrades the satellite's orbit, but fortunately, the same system can be used in reverse to slow orbital craft without using fuel which returns lost momentum to the Skyhook.")
+            "Solar Reflector Satellite"
+             (unit
+              :name "Solar Reflector Satellite"
+              :summary "* These are massive, lightweight solar mirrors that can be focused for variouse purposes. They can focus light for solar farms, generate light for long nights like on the moon, generate thrust by light pressure and by heating ablative drives.")))))
+    "High Tech Aircraft"
+     (chapter
+      :name "High Tech Aircraft"
+      :sectionmap
+       (sectionmap
+        "High Tech Military Aircraft"
+         (section
+          :name "High Tech Military Aircraft"
+          :unitmap
+           (unitmap
+            "Valkyrie Air Cavalry"
+             (unit
+              :name "Valkyrie Air Cavalry"
+              :classification "Lt. Aircraft")
+            "Aurora Transatmospheric Fighter"
+             (unit
+              :name "Aurora Transatmospheric Fighter"
+              :summary
+               "* A sleek, shuttle-like jet with speeds of Mach 5. A nuclear engine, stealth armor, full environmental containment, and a virtual or direct neural link make this one-man craft the deadliest thing in the skies.
+* It carries twin 30mm autocannons, a plasma cannon, 16 air-to-air missiles, and 2 fuel air explosives for ground targets."
+              :classification "Lt. Aircraft")))))
+    "High Tech Heavy Armor"
+     (chapter
+      :name "High Tech Heavy Armor"
+      :sectionmap
+       (sectionmap
+        "High Tech Land Vehicles"
+         (section
+          :name "High Tech Land Vehicles"
+          :unitmap
+           (unitmap
+            "Hover Tank"
+             (unit
+              :name "Hover Tank")
+            "Light Walker"
+             (unit
+              :name "Light Walker")
+            "Heavy Walker"
+             (unit
+              :name "Heavy Walker")))))
+    "Space Colonies"
+     (chapter
+      :name "Space Colonies"
+      :sectionmap
+       (sectionmap
+        "Saturn Colonies"
+         (section
+          :name "Saturn Colonies"
+          :summary
+           "* With the exception of Titan, the outer planets are too remote and unimportant
+to ever be colonized. Jupiter provides an unlimited supply of gas resources, so
+Saturn, Uranus, and Neptune have little to offer."
+          :locationmap
+           (locationmap
+            "Titan Research Station"
+             (location
+              :name "Titan Research Station"
+              :summary
+               "* A small, permanent research colony has been erected on Titan to study its
+unique atmosphere and geology. The hope was to discover evidence of primitive
+life, but no life has yet to be discovered.")))))
+    "Car Wars"
+     (chapter
+      :name "Car Wars")
+    :Cyberpunk
+     (chapter
+      :name "Cyberpunk"
+      :summary
+       "* The year is 2151.
+
+Things are pretty bad on planet Earth:
+* Global Warming - The build up of smothering greenhouse effect gases has resulted in the complete melting of the Arctic
+ice cap as well as much of the Antartic ice cap.  Coastal areas have been inundated and global temperatures continue to
+rise, a new record every year.
+* Resource Depletion - As the climate changed, desperate farmers overfarmed their land, increasing erosion and therefore
+food prices.  Fossil fuels became increasingly scarce and given the ongoing climate problems, ecologically unsuitable.
+* Overpopulation -
+* Economic Collapse -
+
+Things are slightly better in space:
+* Orbital Stations - For the last hundred years, large space colonies have been constructed at the five Lagrange points
+around Earth.  Relative to Earth, the Orbital stations are gleaming paradises of corporate efficiency.  Corporate
+interests are certainly strong on the Orbital colonies, and the Orbitals increasingly chafe at Earth's taxation of their
+goods and the high tariffs on imports.
+* Luna - Huge moon bases dot the lunar surface.  With its low gravity and limitless lunar rock, the Moon is the natural
+construction center for most Orbital facilities and spaceships.  Surface and underground mining operations go around the
+clock.  Enormous massdrivers propel the material into Earth orbit.
+* Mercury - Solar stations on Mercury provide limitless power while the molten
+surface provides limitless ore. Though the surface is hellish and survival is
+difficult, Mercury provides wealth beyond imagining to those able to survive.
+The population is 90% male with most residents on a 6 year work contract. After
+the contract they usually return to wherever they came from with enough money to
+buy a house and start a family. Like a military veteran, Mercury companies also
+offer generous benefits for the rest of the contractor's life or generous death
+benefits to their family if they don't survive. Despite extensive safety systems,
+the fatatlity rate remains 1 in 20 even among these hardy folk. Politically,
+Mercury is extremely independent and has little patience for the affairs of the
+other planets.
+* Venus
+* Mars
+* Asteroid Belt - Though Luna provides a steady supply of material to the colonies, whole Asteroids can be ferried from
+the Asteroid Belt to create instant colonies.  Further, the valuable minerals in an asteroid are easier to detect and
+mine than in either Lunar or Terrestrial mines.  The Asteroid field is large, however, so a whole crop of freelance
+prospectors have travelled to the Asteroid Belt in a high-tech gold-rush.
+* Jupiter
+* Saturn
+
+* Cryomax - Maximum security prison where prisoners are stored in partial cryonic suspension to maximize space.
+** Reference - Demolition Man
+* Crystal - Liquid crystal computer matrix"
+      :sectionmap
+       (sectionmap
+        :Sprawls
+         (section
+          :name "Sprawls"
+          :titles "Dirtboys, Dirtgirls"
+          :unitmap
+           (unitmap
+            "Bounty Hunter"
+             (unit
+              :name "Bounty Hunter")
+            "Cyber Psycho"
+             (unit
+              :name "Cyber Psycho"
+              :summary "* Buttonhead - someone addicted to artificially stimulating the pleasure centers of the brain."
+              :titles "Buttonhead")
+            :Enforcer
+             (unit
+              :name "Enforcer")
+            :Fixer
+             (unit
+              :name "Fixer"
+              :summary
+               "* Fixers buy and sell information, goods, and services.
+* Some of their services merely require the right connections.  Others are not quite legal."
+              :titles "Bookie, Executive Secretary, Gobetween, Information Broker, Negotiator, Organizer, Producer, Roadie, Thirdman")
+            "Gang Member"
+             (unit
+              :name "Gang Member")
+            :Netrunner
+             (unit
+              :name "Netrunner"
+              :summary
+               "* Outlaw computer jocks or hackers.  Some people do it for the glory; most do it for the money.  Information is
+power in the modern world and all the information is somewhere on the Net.  Further, the modern world is a marvel
+of automation, so a clever person may turn that automation to his own uses."
+              :titles "Crystaljock, Hacker")
+            :Nomad
+             (unit
+              :name "Nomad"
+              :summary
+               "* Deltajock - A pilot of delta-winged smuggling craft
+* Panzerjock - A driver of armored smuggling hovercraft"
+              :titles "Deltajock, Gypsy, Linerunner, Panzerjock, Road Warrior, Smuggler")
+            :Rocker
+             (unit
+              :name "Rocker"
+              :summary
+               "* Zonedancing - Dancing turned into a dominance game.  A dancer attempts to persuade other dancers in his zone to
+conform to his movements using charisma, talent or violence."
+              :titles "Bard")
+            :Solo
+             (unit
+              :name "Solo"
+              :reference "* I don't want to walk this Earth if I gotta do it solo...so...low. - Iyaz, Solo"
+              :titles "Assassin, Hit Man")
+            :Tech
+             (unit
+              :name "Tech"
+              :titles "Cybertech")))))
+    "Jovian Chronicles"
+     (chapter
+      :name "Jovian Chronicles"
+      :sectionmap
+       (sectionmap
+        :UEA
+         (section
+          :name "UEA"
+          :titles "United Earth Alliance"
+          :unitmap
+           (unitmap
+            "UEA Commando"
+             (unit
+              :name "UEA Commando"
+              :classification "Lt. Infantry")
+            "UEA Marine"
+             (unit
+              :name "UEA Marine"
+              :summary
+               "* Standard issue for all regular infantry and covert ops personnel.
+* High Impact Plastics with reinforced joints.
+* Enhanced Sensory gear and Comm System
+* HUD Targeting
+* Optional Backpacks with custom gear"
+              :classification "Lt. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")))
+            "UEA Mobile Infantry"
+             (unit
+              :name "UEA Mobile Infantry"
+              :summary
+               "* Standard issue for assault and special forces personnel.
+* Hardened Crystalline Lattice Ceramic Compounds
+* Elaborate Sensory and Comm System
+* HUD Targeting with Smart Weapon links
+
+Powerful Backpack package including:
+* Ion thrusters
+* Heat Sink
+* Mini Fusion Plant
+* Y-rack gernade launcher (optional I-rack or micro turret)
+* Weapons can be powered from plant
+* Environmental Independence
+* Flamethrowers and Thrusters in arms and legs
+* Stealth options available"
+              :classification "Hvy. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")))
+            "UEA Mobile Assault Infantry"
+             (unit
+              :name "UEA Mobile Assault Infantry"
+              :summary
+               "* Form is vaguely humanoid
+* Armor is extremely heavy and hardened
+* Weapons are built in and smart
+* Power Assist and Hand to Hand Weaponry make few obstacles a barrier
+
+Weapon Packages
+* When standing still the armor is considered a fixed weapon platform.
+* Heavy Machine Guns
+* Light Autocannon
+* Multiple Missile Launchers
+
+Backpack Package
+* Large Fusion Plant
+* Improved Heat Sink
+* Thrusters are extremely powerful
+* Wheels in legs for fast road movement
+* Speed and Maneuverability in open terrain are the trademarks of these types.
+* They are clumsy and overly destructive in tight quarters.
+* These models are purely Assault/Scorched Earth types similar to miniature tanks."
+              :classification "Hvy. Infantry"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")))
+            "UEA Pilot"
+             (unit
+              :name "UEA Pilot")
+            "UEA Mecha Pilot"
+             (unit
+              :name "UEA Mecha Pilot")
+            "UEA Tech"
+             (unit
+              :name "UEA Tech")
+            "Cerberus Mech Suit"
+             (unit
+              :name "Cerberus Mech Suit"
+              :summary
+               "* The Cerberus is the first cutting edge Mobile Suit design from the UEA.
+* The name Cerberus comes from the large ECM pods on each shoulder which
+continually scan in all directions giving the appearance of 3 heads.
+* The Cerberus is designed as a hit-and-run unit, so it very fast and
+manueverable but has limited endurance by design. It is only available
+to commanders and elite pilots.
+* 30mm Massdriver with Depleted Uranium/Tungsten rounds. 20 shots.
+* Linked 20mm Vulcan Autocannons in the head.
+* 1 Plasma Lance
+* 1 Mech Combat Knife"
+              :classification "Lt. Spacecraft"
+              :mass "63tons"
+              :height "17m"
+              :speedland "36kph"
+              :speedspace "1.8g"
+              :width "15m")
+            "Dragonstriker Mech Armor"
+             (unit
+              :name "Dragonstriker Mech Armor"
+              :image "JovianChronicles/DragonstrikerToken.png"
+              :summary
+               "* Mechs are designed to battle other mechs and perhaps cripple enemy capital ships.
+The Dragonstriker is a unique prototype designed to attack enemy capital ships and
+installations directly. It is a massive mech, towering over other mechs and carrying
+formidable weapons to battle both capital ship and other mechs.
+* The Dragonstriker has a detachable booster that provides extra acceleration and range.
+The booster also houses the 2 Medium Laser cannons for strafing enemy capital ships.
+* 4 Heavy Anti-Ship Beam Cannon
+* 2 Medium Anti-Ship Laser Cannon (2 linked under for strafing attacks, mounted to booster)
+* 6 30mm Vulcan Autocannon (4 linked forward, 2 linked rear in head)
+* 4 Heavy Anti-Ship Missile (4 forward)
+* 2 Anti-Missile Laser Turret (1 forward, 1 rear)"
+              :titles "CXE-01"
+              :classification "Lt. Spacecraft"
+              :mass "110tons"
+              :height "24m")
+            "Hachiman Destroyer"
+             (unit
+              :name "Hachiman Destroyer"
+              :summary
+               "* The Hachiman is the workhorse of the UEA navy. They have been produced
+for many years with minor upgrades.
+* 1 Point Defense System
+* 6 Railcannon Turrets
+* 2 Missile Bays
+* 2 Laser Turrets"
+              :speed ".6g"
+              :classification "Hvy. Spacecraft"
+              :crew "60"
+              :mass "5500tons"
+              :length "208m"
+              :width "80m")
+            "Lucifer Cybersat"
+             (unit
+              :name "Lucifer Cybersat"
+              :summary
+               "* The Lucifer’s designed for one purpose - to ambush and kill enemy warships.  Its
+sophisticated Stealth systems allow it to hide and its strong electronic warfare suite
+prevents its prey from calling for help.  Powerful thrusters allow it to accelerate at
+incredible speeds, and a cluster of six small linked particle cannons and two large
+ones allow it to inflict massive damage very quickly.
+* Armor - Despite the advanced technology, its armor is quite thin for its size, and
+in a stand-up fight, it will almost certainly lose. The only questions are how to
+force it into a stand-up fight and how many of its attackers it can take with it.
+* Particle Cannons - The combined power of the dual particle cannons are equal to a
+spaceship's main gun. They have separate fusion engines just to recharge its capacitors,
+but it still takes 30 seconds between firings.
+* Particle Array - The 6 smaller particle cannons are designed for rapid fire against
+fast moving targets and are used between firing of the main guns.
+* Claws - Its claws are independent wire-guided drones armed with small energy weapons
+to deal with enemy interceptors. The claws are very fast and agile, but not very tough.
+They can replenish their fuel reserves by docking with the Lucifer.
+* Speed - The drones will almost never use their full top speed, and the Lucifer will
+make every effort to conserve its remass.  For long-range travel, it won’t boost at
+more than 0.4 or 0.6 Gs except in short bursts.  Much of its time will be spent
+drifting along a medium-traffic orbit.
+* Stealth - The Lucifer carries an advanced ECM/stealth package that allows it to
+sneak up on enemies and attempt to cripple them while scrambling any distress calls.
+
+ECM(6, 10km), Stealth (6);
+Quantity	Name	Type	Arc	ACC	DM	BR	ROF	Perks + Flaws	Ammo
+1	Particle Cannon Cluster	E	F	+0	x12	4	+4	Hw,Red;AD(2),HEAT	Unl.
+2	Mega Particle Cannon	E	F	-1	x30	7	-1	Red,Hw;AD(2),HEAT;Link	Unl."
+              :titles "CXS-01B, Automated Experimental Terror Raider"
+              :classification "Lt. Spacecraft"
+              :mass "95tons"
+              :height "18.8m"
+              :speedspace "4g"
+              :unitskillmap
+               (unitskillmap
+                "Mission Section"
+                 (unitskill
+                  :name "Mission Section"
+                  :unitspecialtymap
+                   (unitspecialtymap
+                    "Stealth Vessel"
+                     (unitspecialty
+                      :name "Stealth Vessel")))))
+            "Lucifer Claw Drone"
+             (unit
+              :name "Lucifer Claw Drone"
+              :summary
+               "Armor:	10/20/30
+*Miscellaneous Threat Value (MTV): -
+Crew:	Computer 1 (Dumb, Level 2) (2 actions)
+
+Accessories: Autopilot; Arm: Manipulator Arm (R5, Can Punch); Armor: HEAT Resistant(5); Communications (-2, 2km);
+Hostile Environment Protection: Radiation (4), Vacuum, Extreme Cold; Sensors(+0, 2km); Vulnerable to Haywire;
+Quantity	Name	Type	Arc	ACC	DM	BR	ROF	Perks + Flaws	Ammo
+1	Laser Cannon	E	FF	+1	x10	5	+0	Red;AD(1),HEAT	Unl.
+1	Plasma Lance	E	F	+0	x15	M	+0	AC,Red;HEAT	Unl."
+              :classification "Lt. Spacecraft"
+              :mass "3tons"
+              :speedspace "5g")
+            "Siren Space Interceptor"
+             (unit
+              :name "Siren Space Interceptor"
+              :summary
+               "* The Siren Fighter is the standard medium range interceptor spaceship
+used by the UEA. It is faster than any other short range space craft in the
+Solar System, but without high mobility verniers it is outclassed by Mobile
+Suits. It is ideally suited for patrolling and policing the space lanes.
+* The Siren can be launched from Earth using a booster rocket making it even more
+practical for Earth defense.
+* 2 Medium Railguns
+* 6 Medium Missiles
+* 4 Light Missiles"
+              :classification "Lt. Spacecraft"
+              :mass "40tons"
+              :length "14m"
+              :speedspace "3.5g"
+              :width "12m")
+            "Syreen Mech Suit"
+             (unit
+              :name "Syreen Mech Suit"
+              :image "JovianChronicles/SyreenToken.png"
+              :summary
+               "* The Syreen Suit is a Siren space fighter retrofitted into a Mech Suit. It was hastily
+constructed when the first conflict with the Jovians displayed the dominant mobility of
+the Jovian Mech Suits.
+* As an efficient and cheap design, it can be fielded in large numbers. However, it does
+not compare well to the new Mech Suits that it is meant to face, so casualties are high.
+* The Syreen can be launched from Earth using a booster rocket making it even more
+practical for Earth defense.
+* 2 Heavy Missiles
+* 6 Medium Missiles
+* 4 Light Missiles
+* Point defense laser system
+* 2 Crude manipulator arms for close combat.
+* The command variant includes a powerful ECM pod."
+              :classification "Lt. Spacecraft"
+              :mass "52tons"
+              :height "17.2m"
+              :speedspace "3g"
+              :width "17.5m")
+            "Poseidon Battlecruiser"
+             (unit
+              :name "Poseidon Battlecruiser"
+              :summary
+               "* The Poseidon Class Battlecruiser is the top of the line UEA warship. It
+gets its name from the two rotating living sections that give the ship the
+appearance of a trident.
+* The Poseidon outclasses any other warship from any faction and is a
+menancing presense. It was, however, designed before the advent of Mech
+Suits, so it carries more interceptors than Mechs.
+* Point Defense System
+* 4 Particle Accelerator Batteries
+* 4 Railcannon Batteries
+* 6 Interceptors
+* 4 Mech Suits"
+              :classification "Hvy. Spacecraft"
+              :crew "200"
+              :mass "30ktons"
+              :length "325m"
+              :speedspace ".5g"
+              :width "200m")
+            "Tengu Escort Carrier"
+             (unit
+              :name "Tengu Escort Carrier"
+              :summary
+               "* The Tengu is a long range craft designed for limited engagements and
+policing. It has extensive supplies but lacks firepower.
+* 1 Point Defense System
+* 2 Missile Bays
+* 2 Mech Suits
+* 2 Fighters
+* 2 Catapults"
+              :classification "Hvy. Spacecraft"
+              :crew "24"
+              :mass "25ktons"
+              :length "250m"
+              :speedspace ".5g"
+              :width "38m")
+            "Wyvern Mech Suit"
+             (unit
+              :name "Wyvern Mech Suit"
+              :image "JovianChronicles/WyvernToken.png"
+              :summary
+               "* The Wyveern is the first and most numerous of the UEA Mech Suits.
+Though a copy of the Martial Federation Defender, it is a sturdy,
+reliable and most importantly mass-produceable design. Its primary
+limitation is the lack of energy weapons which limits its combat
+endurance before it needs to be rearmed.
+* 1 Hyperbazooka
+* 2 Massdriver Machineguns
+* 2 Self guided Missiles"
+              :speed "1.4g"
+              :mass "55tons"
+              :height "17m"
+              :length "4m"
+              :speedair "2.4mach"
+              :speedland "36kph"
+              :width "14m")))))
+    "Mobile Suit Gundam Equipment"
+     (chapter
+      :name "Mobile Suit Gundam Equipment"
+      :sectionmap
+       (sectionmap
+        "Gundam Equipment"
+         (section
+          :name "Gundam Equipment"
+          :summary "* Energy rating for MW weapons assumes a 3 second burst."
+          :itemmap
+           (itemmap
+            "Titanium Composite"
+             (item
+              :name "Titanium Composite"
+              :summary "This is the state of the art armor plate before the discovery of Gundarium Alpha which completely eclipses it.")
+            "Gundarium Alpha"
+             (item
+              :name "Gundarium Alpha"
+              :summary
+               "Originally called Luna Titanium, it was renamed after the success of the RX-78 Gundam built from it.
+A super high-tensile alloy originally known as Luna Titanium.  Originally intended for use inside thermonuclear
+reactors, this alloy's superb strength, durability, heat resistance and radiation-absorbing properties make it
+an ideal material for mobile suit armor."
+              :titles "Gundarium, Luna Titanium")
+            "Gundarium Gamma"
+             (item
+              :name "Gundarium Gamma")
+            "60mm Vulcan Cannon"
+             (item
+              :name "60mm Vulcan Cannon"
+              :reference "Stats based on 57mm Bofors Naval Gun"
+              :titles "VCU-505EX-Gry/Ver.009 (Titans) / VCU-505EX-V*B/Ver.012 (AEUG)"
+              :classification "Cannon"
+              :modifiers "Auto"
+              :muzzlevelocity "1000m/s"
+              :range "8.5km"
+              :rof "220/min")
+            "100mm Machine Gun"
+             (item
+              :name "100mm Machine Gun"
+              :titles "NF-GMG-Type.37"
+              :classification "Cannon"
+              :modifiers "Auto"
+              :muzzlevelocity "600m/s")
+            "120mm Machine Gun"
+             (item
+              :name "120mm Machine Gun"
+              :classification "Cannon"
+              :modifiers "Auto"
+              :muzzlevelocity "600m/s"
+              :rounds "100")
+            "180mm Recoilless Cannon"
+             (item
+              :name "180mm Recoilless Cannon"
+              :titles "NFHI-GMCa-type.09"
+              :classification "Cannon"
+              :muzzlevelocity "300m/s")
+            "240mm Recoilless Cannon"
+             (item
+              :name "240mm Recoilless Cannon"
+              :classification "Cannon"
+              :muzzlevelocity "300m/s")
+            "280mm Bazooka"
+             (item
+              :name "280mm Bazooka"
+              :classification "Hvy. Rocket Launcher"
+              :modifiers "HE"
+              :muzzlevelocity "120m/s"
+              :rounds "4")
+            "360mm Hyper Bazooka"
+             (item
+              :name "360mm Hyper Bazooka"
+              :summary "* Capable of destroying a GM in a single hit."
+              :titles "H&amp;L-GB05R (Zeon) / H-Baz-85-Gry/Ver.045 (Titans) / H-Baz-87-A*E/Ver.004 (AEUG)"
+              :classification "Hvy. Rocket Launcher"
+              :modifiers "HE"
+              :muzzlevelocity "120m/s"
+              :rounds "10")
+            "380mm Hyper Bazooka"
+             (item
+              :name "380mm Hyper Bazooka"
+              :titles "BLASH-XHB-L-03/N-STD"
+              :classification "Hvy. Rocket Launcher"
+              :modifiers "HE"
+              :muzzlevelocity "120m/s"
+              :rounds "5")
+            "Clay Bazooka"
+             (item
+              :name "Clay Bazooka"
+              :image "Gundam/ClayBazooka.jpg"
+              :classification "Hvy. Rocket Launcher"
+              :modifiers "HE"
+              :muzzlevelocity "120m/s")
+            ".4MW Beam Saber"
+             (item
+              :name ".4MW Beam Saber"
+              :titles "XB-G-1048L (Titans) / A*E-Br*G-Sc-L (AEUG)"
+              :classification "Hvy. Melee"
+              :energy "1.2MJ"
+              :modifiers "Energy")
+            ".65MW Beam Saber"
+             (item
+              :name ".65MW Beam Saber"
+              :classification "Hvy. Melee"
+              :energy "1.95MJ"
+              :modifiers "Energy")
+            "1.3MW Beam Gun"
+             (item
+              :name "1.3MW Beam Gun"
+              :classification "Cannon"
+              :energy "3.9MJ"
+              :modifiers "Energy")
+            "1.3MW Funnel"
+             (item
+              :name "1.3MW Funnel"
+              :classification "Cannon"
+              :energy "3.9MJ"
+              :modifiers "Energy")
+            "1.9MW Beam Rifle"
+             (item
+              :name "1.9MW Beam Rifle"
+              :summary "Powered by rechargeable energy cap"
+              :titles "BOWA-BR-S-85-C2"
+              :classification "Cannon"
+              :energy "5.7MJ"
+              :modifiers "Energy")
+            "2.2MW Beam Pistol"
+             (item
+              :name "2.2MW Beam Pistol"
+              :summary "Powered by rechargeable energy cap"
+              :classification "Cannon"
+              :energy "6.6MJ"
+              :modifiers "Energy")
+            "2.2MW Funnel"
+             (item
+              :name "2.2MW Funnel"
+              :classification "Hvy. MG"
+              :energy "6.6MJ"
+              :modifiers "Energy")
+            "2.6MW Beam Rifle"
+             (item
+              :name "2.6MW Beam Rifle"
+              :summary "Powered by rechargeable energy cap"
+              :titles "BOWA*XBR-M-86-C2 (Titans), A*E-Br*XBR-87-C (AEUG)"
+              :classification "Cannon"
+              :energy "7.8MJ"
+              :modifiers "Energy")
+            "2.8MW Beam Rifle"
+             (item
+              :name "2.8MW Beam Rifle"
+              :summary "Powered by rechargeable energy cap"
+              :classification "Cannon"
+              :energy "8.4MJ"
+              :modifiers "Energy")
+            "5.7MW Beam Rifle"
+             (item
+              :name "5.7MW Beam Rifle"
+              :image "Gundam/ZetaBeamRifle.jpg"
+              :summary "Powered by replaceable e-pac, doubles as large beam saber"
+              :classification "Cannon"
+              :energy "17.1MJ"
+              :modifiers "Energy")
+            "8.3MW Hyper Mega Launcher"
+             (item
+              :name "8.3MW Hyper Mega Launcher"
+              :summary "Powered by replaceable e-pac, doubles as large beam saber"
+              :classification "Cannon"
+              :energy "24.9MJ"
+              :modifiers "Energy")
+            "19.5MW Mega Particle Gun"
+             (item
+              :name "19.5MW Mega Particle Gun"
+              :classification "Cannon"
+              :energy "58.5MJ"
+              :modifiers "Energy")))))
+    "Mobile Suit Gundam Units"
+     (chapter
+      :name "Mobile Suit Gundam Units"
+      :sectionmap
+       (sectionmap
+        "Neo Zion"
+         (section
+          :name "Neo Zion"
+          :unitmap
+           (unitmap
+            :Alpha-Azieru
+             (unit
+              :name "Alpha-Azieru"
+              :image "Gundam/AlphaAzieru.png"
+              :summary
+               "Speed: 8.29 G
+				* 2 x external propellant tank, ejectable, mounted on main body
+Fixed armaments: 2 x wire-guided psycommu mega arm, each mounts 5 x beam gun, fire-linked, power rated at 12.6 MW each"
+              :titles "NZ-333"
+              :classification "Med. Spacecraft"
+              :mass "267.4tons"
+              :height "58.4m"
+              :length "108m"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Hardened vs. Projectiles"
+                     (unitability
+                      :name "Hardened vs. Projectiles")))
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "6"
+                  :unititemmap
+                   (unititemmap
+                    "19.5 MW Mega Particle Gun"
+                     (unititem
+                      :name "19.5 MW Mega Particle Gun"
+                      :facing "Turret")
+                    "2.2MW Funnel"
+                     (unititem
+                      :name "2.2MW Funnel"
+                      :number "9")
+                    "60mm Vulcan Cannon"
+                     (unititem
+                      :name "60mm Vulcan Cannon"
+                      :facing "Turretx4"
+                      :number "4")))))
+            :Sazabi
+             (unit
+              :name "Sazabi"
+              :image "Gundam/NuGundam.png"
+              :titles "MSN-04"
+              :classification "Lt. Spacecraft"
+              :mass "30.5tons"
+              :height "25m"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor"
+                  :unitabilitymap
+                   (unitabilitymap
+                    "Hardened vs. Projectiles"
+                     (unitability
+                      :name "Hardened vs. Projectiles")))))))))
+    :Terminator
+     (chapter
+      :name "Terminator"
+      :sectionmap
+       (sectionmap
+        "Terminator Units"
+         (section
+          :name "Terminator Units"
+          :unitmap
+           (unitmap
+            "Terminator T-800"
+             (unit
+              :name "Terminator T-800"
+              :image "Terminator/T800.png"
+              :mass "200kg"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Strength
+                 (unitskill
+                  :name "Strength")))
+            "Terminator T-1000"
+             (unit
+              :name "Terminator T-1000"
+              :image "Terminator/T1000.png"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Strength
+                 (unitskill
+                  :name "Strength")
+                "Natural Weaponry"
+                 (unitskill
+                  :name "Natural Weaponry")
+                :Flexible
+                 (unitskill
+                  :name "Flexible")))
+            "Terminator T-X"
+             (unit
+              :name "Terminator T-X"
+              :image "Terminator/TX.png"
+              :summary
+               "* The T-X is designed to not only terminate humans but rogue Terminators
+reprogrammed by the Resistance. It is a composite of the T-800 and T-1000,
+a solid endoskeleton covered with polymimetic liquid metal alloy, allowing
+it to take the shape of any humanoid it touches. The T-X endoskeleton
+contains many powerful weapons making it considerably more deadly than
+previous versions."
+              :mass "150kg"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery")
+                :Strength
+                 (unitskill
+                  :name "Strength")
+                "Natural Weaponry"
+                 (unitskill
+                  :name "Natural Weaponry")))
+            "Terminator Hunter Killer"
+             (unit
+              :name "Terminator Hunter Killer"
+              :image "Terminator/HunterKiller.png"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery")))
+            "Terminator Tank"
+             (unit
+              :name "Terminator Tank"
+              :image "Terminator/HKTank.png"
+              :unitskillmap
+               (unitskillmap
+                :Armor
+                 (unitskill
+                  :name "Armor")
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"))))))))))

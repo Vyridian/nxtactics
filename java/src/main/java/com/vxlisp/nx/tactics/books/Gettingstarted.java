@@ -49,6 +49,7 @@ public final class Gettingstarted {
       output.vx_p_summary = val.summary();
       output.vx_p_titles = val.titles();
       output.vx_p_orientation = val.orientation();
+      output.vx_p_teammap = val.teammap();
     }
 
 
@@ -98,6 +99,7 @@ public final class Gettingstarted {
       output.vx_p_summary = val.summary();
       output.vx_p_titles = val.titles();
       output.vx_p_orientation = val.orientation();
+      output.vx_p_teammap = val.teammap();
     }
 
 
@@ -147,6 +149,7 @@ public final class Gettingstarted {
       output.vx_p_summary = val.summary();
       output.vx_p_titles = val.titles();
       output.vx_p_orientation = val.orientation();
+      output.vx_p_teammap = val.teammap();
     }
 
 

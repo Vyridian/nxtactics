@@ -1,0 +1,2181 @@
+(package nx/tactics/books/world_wars
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (book
+  :name "World Wars"
+  :image "WorldWars.jpg"
+  :chaptermap
+   (chaptermap
+    "World Wars Overview"
+     (chapter
+      :name "World Wars Overview"
+      :sectionmap
+       (sectionmap
+        "WWII Aerial Warfare"
+         (section
+          :name "WWII Aerial Warfare"
+          :summary
+           "* Prop Planes
+* Jet Planes
+* Landing Strips
+* Aircraft Carriers
+* Machine Guns
+* Strafing
+* Tank Killing
+* Dive Bombing
+* Flying Fortress
+* Torpedo Bombing
+* Carpet Bombing
+* Strategic Bombing")))
+    "WWI Campaign"
+     (chapter
+      :name "WWI Campaign"
+      :sectionmap
+       (sectionmap
+        "WWI Scenarios"
+         (section
+          :name "WWI Scenarios"
+          :scenariomap
+           (scenariomap
+            "Battle of Verdun, 1916"
+             (scenario
+              :name "Battle of Verdun, 1916"
+              :reference "The battlefield with the highest density of dead per square yard."
+              :summary
+               "* The Battle of Verdun was a ten month long ordeal between the French and German armies and is considered one of the most brutal events of WWI. Both the French and German armies suffered incredibly with an estimated 540,000 French and 430,000 German casualties and no strategic advantages were gained for either side.
+* In the years preceding World War I, Germany became Europe's leading industrial power. France felt increasingly threatened by German industrialization. As a response to the German threat of invasion, France built a continuous line of sunken forts from the Swiss frontier to the French city of Verdun making Verdun a vital strong point.
+* The German attack began on February 21, 1916 with an intense artillery bombardment of the forts surrounding Verdun. The French army retreated to predetermined positions while the German army pounded through the French lines.
+* Although three French forts near Verdun had capitulated to German forces, Verdun itself remained undefeated.
+* By April 1916, the French Air Force had secured the sky over Verdun, which would help the French to successfully defend the area. The British attack and a Russian offensive in the east forced the German army to transfer troops away from Verdun.
+* By December 1916, the French had advanced to their February 1916 lines, their original position. No new advantage had been gained for either side.")
+            "Battles of the Marne, 1914, 1918"
+             (scenario
+              :name "Battles of the Marne, 1914, 1918"
+              :summary
+               "* On September 4, 1914, the rapid advances of the German army through Belgium and northern France caused panic in the French army and troops were rushed from Paris in taxis to halt the advance. Combined with the BEF (British Expeditionary Force) the Germans were eventually halted and the War settled into the familiar defensive series of entrenchment's.
+* Ironically, by the end of May, 1918, the Germans had again reached the Marne after the enormous successes of Ludendorff's offensives of that year. The intervening four years had cost hundreds of thousands of lives and the armies were still, literally, exactly where they had started.")
+            "Battles of Ypres, 1914, 1915, 1917"
+             (scenario
+              :name "Battles of Ypres, 1914, 1915, 1917"
+              :summary
+               "* There were in fact three battles fought around the Ypres salient during the War.
+* The first, in 1914 was an attempt by the BEF to halt the rapid advances made by the Germans.
+* The second, in 1915, was notable for the first use of poison gas by the Germans.
+* However, it is the long-planned offensive of July 31, 1917, that holds the most significance. Here, a combination of over-ambitious aims, appalling weather conditions, and misguided persistence by Haig led to horrific losses. By the time the offensive was called off total casualties for both sides had been approximately 250,000. The horrors of the battle, in which men drowned in liquid mud has become synonymous with the images of the War.")
+            "Battle of the Somme, 1916"
+             (scenario
+              :name "Battle of the Somme, 1916"
+              :summary
+               "* At 0730 hours on the 1st July, 1916, after a week long artillery bombardment launched the now infamous 'Big Push' attack across the river Somme. The British intended to breakthrough the German defenses in a matter of hours.
+* The mistrust that High Command had of the so-called 'New Armies' manifested itself in the orders to the troops to keep uniformed lines and to march towards the enemy across no-man's land. This, coupled with the failure of the artillery bombardment to dislodge much of the German wire, or to destroy their machine-gun posts, led to one of the biggest slaughters in military history.
+* After the first day, with a gain of only 1.5km, the British had suffered 57,470 casualties. Despite this, Haig pressed on with the attack until November 19th of the same year. For the meager achievements, total losses on the British and Imperial side numbered 419,654 with German casualties between 450,000 and 680,000. When the offensive was eventually called off the British were still 3 miles short of Bapaume and Serre, part of their first-day objectives.")
+            "Battle of Cambrai, 1917"
+             (scenario
+              :name "Battle of Cambrai, 1917"
+              :summary "On November 20, 1917, the British launched the first full-scale offensive that was designed exclusively to accommodate the British secret weapon, the tank (so-called because when the first shipment came from England they were described as water tanks to maintain secrecy). A surprise artillery barrage started the offensive and 476 tanks, packed tightly for a mass attack moved against the German lines. Supported by infantry the gains were dramatic, breaching the almost impregnable Hindenberg line to depths of 4-5 miles in some places. However, these gains seemed to surprise British High Command equally as much as the Germans, and the following cavalry failed to take advantage. Nevertheless, Cambrai demonstrated how a well-thought out attack, combining tanks en masse with surprise, could be used to break the trench deadlock.")))))
+    "WWII Overview"
+     (chapter
+      :name "WWII Overview"
+      :sectionmap
+       (sectionmap
+        "Turning Points of the War"
+         (section
+          :name "Turning Points of the War"
+          :summary
+           "* While the unconditional surrender of German armed forces represented a resounding Allied success, in retrospect, it is clear that particular factors and choices strongly affected the pace and course of the campaign.
+* D-Day - The Allied deception as to where the D-Day landings would take place was very successful, with the majority of the German command convinced the landings would take place at Calais. The Germans underestimated Allied willingness to risk an amphibious assault over a route longer than the shortest path across the English Channel.
+* Hedgerows - While the Allies meticulously planned the D-Day landings, they failed to assess the countryside immediately beyond the beaches, which resulted in the Germans very successfully using the hedgerow country as a system of natural defensive works that took the Allies two months to clear at a staggering cost in infantry casualties. Historians have also asserted the U.S. Army should have landed on the eastern end of the Normandy beaches and formed the northern wing of Allied forces in Northwest Europe because the mobility of American forces could have been better used in the more open terrain and most direct route to Berlin that the northern approach offered. As it was, the pre-invasion basing of troops in England determined the arrangement of the landing forces.
+* Underestimation - While the Germans had reason to occasionally doubt Allied military proficiency, it is clear the Germans too often underestimated Allied competency. This habit of underestimation led to the rejection of any notion that the Allies might have broken German military ciphers, most famously the Enigma code. The ability to monitor German military communications was an Allied strategic asset of the highest order. Less dramatically, the Germans often underestimated Allied troop proficiency, a habit that resulted in occasional sharp defeats for overconfident German units.
+* Manpower - The German ability to form a cohesive defensive line after the disaster their forces endured in Normandy was due almost entirely to the ability of the German Ersatzheer (Replacement Army) to quickly deploy large numbers of new troops. These inexperienced troops were paired with seasoned cadres who swiftly transformed the replacements into combat units. Thus, while the Allies took large numbers of German prisoners during their advance from Normandy to the German border, they  underestimated the ability of the Germans to reconstitute their forces under very disadvantageous circumstances. The Allies also seriously underestimated the infantry casualties their forces would suffer in Northwestern Europe. Shortages of American manpower were strongly aggravated by a tendency to attack head-on regardless of circumstances, a habit that was particularly in evidence during the months of fighting in the Huertgen Forest. The Allied logistical crisis that dominated their operations from September through December had the further pernicious effect of limiting the number of divisions in England that could be moved onto the continent to reinforce the front, since the Allies were only able to supply a limited number of divisions east of the Seine River. After the Allies mastered the logistical crisis, the Americans diverted divisions bound for the Pacific Theater to Europe in a belated realization that more divisions were needed for operations in Europe.
+* German Strategic Errors - While the Germans achieved strategic surprise with their offensive in the Ardennes, the Panzer divisions that had been so painstakingly rebuilt could have been more profitably used to defend the Siegfried Line and the Rhineland, or perhaps, in the defense of Berlin against the Red Army. The German thrust failed to shatter their enemies' alliance and cost Germany high casualties and equipment losses it could ill-afford. This folly was repeated in Alsace in January, but with the added disadvantage this time that the Allies were expecting the attack.
+* American Strategic Errors - Upon breaking out of Normandy in August, the Americans committed two armored divisions to operations in Brittany when armored units were direly needed for the pursuit of the German army across France. While the port of Brest, France was ultimately captured by the Americans, it consumed operations for an entire month and ultimately did little for the Allied effort because the Germans so thoroughly destroyed the port before it was captured. Out of fear that two wings of their forces might collide, the Allies failed to definitively close the Falaise Gap in August, allowing trapped German forces an escape route to the east. Experienced German leadership cadres evaded Allied forces and were available to reconstitute a cohesive front line along the Siegfried Line.
+* Antwerp - Although British forces conducted a brilliant pursuit across northern France that resulted in the liberation of the critically important port of Antwerp in early September, they failed to promptly clear the Scheldt Estuary of Germans. The Germans immediately grasped the significance of the Scheldt Estuary and moved in troops to conduct a lengthy defense. The port of Antwerp could not be used until November 28, and strongly contributed to the lengthy logistical crisis that hamstrung Allied operations for four months.
+* Operation Market-Garden was a double failure in the sense that the resources used for it would have been more profitably committed to clearing the Scheldt Estuary instead of carving out an extended salient that did nothing but extend an already over-extended Allied front line.
+* Siegfreid Line - Despite grave shortages of riflemen, American operations in front of the Siegfried Line, particularly in U.S. First Army's area, were characterized by bloody frontal assaults. Stubbornness and misplaced notions that the U.S. Army could not allow itself to abandon unprofitable operations saw five infantry divisions shredded in the Huertgen Forest fighting, with the attack being abandoned only in December after the Germans attacked into the Ardennes. The concentration of divisions in the Huertgen Forest also forced a corresponding lack of concentration along the Ardennes front, with the result that only four U.S. divisions were initially available to parry a 26 division German offensive.
+* Eisenhower - When, in November, the Allies enjoyed significant success in 6th Army Group's area, General Eisenhower refused to reinforce the success and even forbade his commanders in the south to attempt to assault across the Rhine in the area of Strasbourg while the German defenses were in shambles. This lack of bold enterprise was a by-product of General Eisenhower's decision to conduct limited-objective attacks on a broad front even though the Allies lacked a sufficient number of divisions to both man a broad front and concentrate enough combat power in chosen areas to achieve breakthroughs. When American troops reached the Elbe River in mid-April, General Eisenhower unilaterally decided that Berlin was no longer a significant military objective. He knew that Berlin would be deep within the Soviet zone of post-war Germany and saw no reason to fight for land that would have to be given to the Soviets after the war. Eisenhower pointed out to Patton that it was of no military strategic value and would take up a lot of resources to occupy and asked Patton 'Who would want it?' Patton replied 'I think history will answer that question for you.' Unswayed by Patton, Simpson or even Churchill, Eisenhower ordered U.S. forces to halt along the Elbe and Mulde rivers. Thus, these spearheads were practically immobilized while the war raged on for three more weeks.
+* Bradley - Simultaneously, General Bradley considered the Germans trapped in the Ruhr Pocket to be the most significant threat and committed surprisingly large numbers of U.S. troops to collapse (as opposed to containing) the pocket instead of reinforcing his troops at the Elbe River. As a consequence of Eisenhower's decision, the British 21st Army Group was ordered to drive northeast in the direction of Hamburg instead of proceeding due east in the direction of Berlin.
+* Propaganda - The Allies proved curiously gullible about German propaganda claiming the existence of a 'National Redoubt' in the Alpine hinterlands of Bavaria and Austria. Fearing a large-scale last stand by the Nazis in this so-called redoubt, General Eisenhower directed no less than three field armies to clear southern Germany at a time when the largest groups of German forces stood to the east, not the south, of General Eisenhower's troops. Fortunately for the Allies, the German Army of April 1945 was in no position to exploit troop concentrations and movements of questionable merit.
+* Thus, while the Allies enjoyed a great victory, on occasion their prosecution of the campaign afforded their German adversaries opportunities that prolonged the fighting unnecessarily.")))
+    "WWII Western Front"
+     (chapter
+      :name "WWII Western Front"
+      :sectionmap
+       (sectionmap
+        "Invasion of Germany"
+         (section
+          :name "Invasion of Germany"
+          :summary
+           "* Hitler would not allow Field Marshal Gerd von Rundstedt to withdraw East behind the Rhine arguing that it would only delay the inevitable fight. Hitler ordered him to fight where his forces stood. By the time the water had subsided and the U.S. Army was able to cross the Roer on February 23, other Allied forces were also close to the Rhine's west bank. Rundstedt's divisions which had remained on the west bank of the Rhine were cut to pieces in the battle of the Rhineland and 290,000 men were taken prisoner.
+* On May 7 1944, Eisenhower took the unconditional surrender of all German forces to the western Allies and the Soviet Union.")))
+    "WWII Eastern Front"
+     (chapter
+      :name "WWII Eastern Front"
+      :sectionmap
+       (sectionmap
+        "Battle of Berlin"
+         (section
+          :name "Battle of Berlin"
+          :summary
+           "* Two Soviet Fronts attacked Berlin from the east and south, while a third overran German forces positioned north of Berlin.
+* The battle of Berlin lasted from late April 1945 until early May and was one of the bloodiest battles in history. Before the battle was over, German dictator Adolf Hitler and many of his followers committed suicide.")))
+    "WWII North African Theatre"
+     (chapter
+      :name "WWII North African Theatre"
+      :summary
+       "* On August 8, 1940, Benito Mussolini, anxious to link Libya with Italian East Africa and to capture the Suez Canal and the Arabian oilfields, ordered the invasion of Egypt. Italian forces invaded Egypt from their base in Cyrenaica, Libya. This invasion was repulsed later in the year during Operation Compass.
+* Initially the Commonwealth forces, under General Archibald Wavell, fought a successful campaign in the desert west of Egypt. While the fighting was taking place in Libya, Axis forces attacked Greece. General Wavell was ordered to halt his advance against the Italian Army in Libya and send troops to Greece. He disagreed with this decision but followed his orders.
+* The Allies were unable to stop Greece falling to the Axis forces and before they could retake the initiative in the western desert the German Afrika Korps led by Erwin Rommel had entered the theatre.
+  * It would not be until early in 1943, after another year and a half of hard fighting and mixed fortunes, that the Axis forces would be finally driven out of Libya.
+* On November 8, 1942, the U.S. had entered the war beginning with amphibious landing in northwest Africa, codenamed Operation Torch, under the Supreme Allied Commander General Dwight D. Eisenhower."
+      :sectionmap
+       (sectionmap
+        "Aftermath of Tunisia"
+         (section
+          :name "Aftermath of Tunisia"
+          :summary
+           "* According to historian Williamson A. Murray 'The decision to reinforce North Africa was one of the worst of Hitler's blunder: admittedly, it kept the Mediterranean closed for six more months, with a negative impact on the Allied shipping situation, but it placed some of Germany's best troops in an indefensible position from which, like Stalingrad, there would be no escape. Moreover Hitler committed the Luftwaffe to fight a battle of attrition under unfavorable conditions, and it suffered losses that it could not afford.'
+* The Axis's desperate gamble had only slowed the inevitable, and the US loss at Kasserine may, paradoxically, have been the best thing that could have happened to them.
+   * With North Africa now in Allied hands, plans quickly turned to the invasion of Sicily, and Italy after it.")))
+    "WWII East African Theatre"
+     (chapter
+      :name "WWII East African Theatre"
+      :summary
+       "* The battles of this campaign were fought between the forces of the British Empire, the British Commonwealth of Nations, and the forces of the Italian Empire.
+* The Commonwealth forces included troops from the Sudan, British Somaliland, British East Africa, the Indian Empire, South Africa, Northern Rhodesia, Southern Rhodesia, Nyasaland, and British West Africa (Nigeria, Gold Coast, Sierra Leone, and the Gambia). There was even a small commando unit from the British Mandate of Palestine. In addition to the British and Commonwealth forces, there were Ethiopian irregular forces, Free French forces, and Free Belgian forces.
+* In November 1940, the British and Commonwealth forces received an incredible intelligence advantage. The government code and cypher school broke the high grade cypher of the Italian Royal Army in East Africa. Later, during the same month, the replacement cypher for the Italian Royal Air Force was broken.
+  * From this point on, the commanders knew Italian plans as soon as they were issued."
+      :sectionmap
+       (sectionmap
+        "Amba Alagi"
+         (section
+          :name "Amba Alagi"
+          :summary
+           "* The Italians decided to make their final defense area around the 12,000 foot high mountain, Amba Alagi. They drove galleries into the solid rock to protect their troops and to hold ample ammunition and stores. In this mountain fortress, the defenders, under command of Amedeo, Duke of Aosta, thought themselves to be impregnable.
+* The 7000 Italian troops were faced by 9000 British troops and 20000 Ethiopian irregulars. A final assault was planned for 15 May, but a fortuitous artillery shell hit an Italian fuel dump and ruptured a vessel containing oil which flowed into the remaining drinking water of the Italian defenders. The lack of drinkable water then forced the Italians to surrender.
+* On 18 May, Amedeo, Duke of Aosta surrendered his embattled forces at Amba Alagi and received full military honors. While the Duke of Aosta faced defeat in East Africa, his brother, the Duke of Spoleto was being made the King of Croatia after the successful invasion of Yugoslavia. The Duke of Aosta had endured the last months of fighting while suffering a severe attack of malaria (and died of TBC and malaria a few months later).")))
+    "WWII Middle East Theatre"
+     (chapter
+      :name "WWII Middle East Theatre"
+      :summary "* Although Southwest Asia was destined to remain a strategic backwater for the duration of World War II, in late 1941 and early 1942 the Allies were not certain that it would remain so. Before the turning points of the Battle of Stalingrad (June 1942 to February, 1943) and the Second Battle of El Alamein (October to November 1942), the fear was that the Germans might attack the area either through Turkey, or via Cyprus into Lebanon; or through defeating of the British in Egypt. If the anticipated attack came through Turkey or Lebanon, then not only could the Axis Powers threaten British controlled Egypt and the strategically important Suez Canal, it would also allow the Germans an alternative route to attack the Soviet Union from Southwest Asia north through the USSR's southern frontiers. In the slightly longer term the British feared independent regimes in the region as well as the possibility that the German might follow in Alexander the Great's footsteps and attack British controlled India from Persia in the west as Japan simultaneously attacked India from the east through Burma."
+      :sectionmap
+       (sectionmap
+        "Anglo-Soviet Invasion of Iran"
+         (section
+          :name "Anglo-Soviet Invasion of Iran"
+          :summary
+           "* On August 25, 1941, Britain and Russia launched an invasion of the neutral nation of Iran. The British feared that the Anglo-Iranian Oil Company might fall into German hands. The refinery produced 8 million tons of oil and was a crucial part of the Allied war effort. For the Russians, Iran was a country of extreme strategic importance. The Germans were steadily advancing through the Soviet Union and there were few ways for the Allies to get desperately needed American Lend-Lease supplies to the Soviets. With increasing German submarine attacks, as well as heavy ice floes and the coastal ice cap fast rendering convoys to Arkhangelsk impossible, the Trans-Iranian Railway seemed a very attractive route to transport supplies up from the Persian Gulf. The two Allied nations applied pressure on
+Iran and the Shah but this led only to increased tensions and pro-German rallies in Tehran. The Shah refused to expel the many German nationals residing in Iran, and denied the use of the railway to the Allies. These conditions prompted Britain and Russia to invade.
+* Franklin Roosevelt reassured the Shah by claiming that the British and Soviets had no designs on the itegrity of Iran. However, the Soviets would later back separatist states in the north, while the U.S. and UK would later support the overthrow of the popular and democratically elected Iranian Prime Minister in 1953.
+* With this crucial supply route now open to the Soviet Union the Persian Corridor was opened and would provide a massive flow of supplies (over 5 million tons of war materiel) to the Soviets primarily, but also the British in the Middle East.")))
+    "WWII Mediterranean Theatre"
+     (chapter
+      :name "WWII Mediterranean Theatre"
+      :sectionmap
+       (sectionmap
+        "Advance to Northern Italy"
+         (section
+          :name "Advance to Northern Italy"
+          :summary
+           "* After the capture of Rome and the Normandy Invasion in June many experienced American and French units, the equivalent of a total of 7 divisions, were pulled out of Italy during the summer of 1944 to participate in Operation Dragoon, the Allied invasion in the south of France.
+* Churchill had hoped that a breakthrough in the autumn of 1944 would open the way for the Allied armies to advance to Vienna and Hungary to forestall the Russians advancing into Eastern Europe. Churchill's proposal had been strongly opposed by the US Chiefs of Staff who understood its importance to British post-war interests in the region but did not feel it aligned with prevailing overall Allied war priorities.
+* Continuation of the Allied offensive in early 1945 was made impractical by the poor winter weather (making armoured manoeuver and exploitation of overwhelming air superiority impossible).
+* On April 9, 1945, the Allies' final offensive commenced with massive aerial and artillery bombardments.
+* As April came to an end, the Axis forces in Italy, retreating on all fronts and having lost most of its fighting powers, was left with little option but surrender.")))
+    "WWII Pacific Theatre"
+     (chapter
+      :name "WWII Pacific Theatre"
+      :sectionmap
+       (sectionmap
+        "Atomic bombings of Hiroshima and Nagasaki"
+         (section
+          :name "Atomic bombings of Hiroshima and Nagasaki"
+          :summary
+           "* On August 6, 1945, after six months of intense firebombing of 67 other Japanese cities, the nuclear weapon 'Little Boy' was dropped on the city of Hiroshima.
+* On August 9, 1945, the nuclear bomb 'Fat Man' was dropped over Nagasaki.
+* These are to date the only attacks with nuclear weapons in the history of warfare. The bombs killed as many as 140,000 people in Hiroshima and 80,000 in Nagasaki by the end of 1945, roughly half on the days of the bombings.
+* Since then, thousands more have died from injuries or illness attributed to exposure to radiation. In both cities, the overwhelming majority of the dead were civilians.
+* Six days after the detonation over Nagasaki, on August 15, Japan announced its surrender to the Allied Powers, ending the Pacific War and therefore World War II. Germany had surrendered on May 7.
+* The bombings led, in part, to post-war Japan forbidding itself from nuclear armament.")))
+    "WWI British Forces"
+     (chapter
+      :name "WWI British Forces"
+      :sectionmap
+       (sectionmap
+        "WWI British Infantry"
+         (section
+          :name "WWI British Infantry"
+          :unitmap
+           (unitmap
+            :Doughboy
+             (unit
+              :name "Doughboy")
+            "Vickers Machine Gunner"
+             (unit
+              :name "Vickers Machine Gunner")
+            "Sopwith Camel"
+             (unit
+              :name "Sopwith Camel")))))
+    "WWI French Forces"
+     (chapter
+      :name "WWI French Forces"
+      :sectionmap
+       (sectionmap
+        "WWI French Vehicles"
+         (section
+          :name "WWI French Vehicles"
+          :unitmap
+           (unitmap
+            "Renault FT 17"
+             (unit
+              :name "Renault FT 17"
+              :reference "* Among the most revolutionary and influential tank designs in history. The FT 17 was the first tank with an armament in a fully rotating turret, and its configuration with the turret on top, engine in the back and the driver in front became the conventional one, repeated in most tanks until today; at the time it was a revolutionary innovation, causing armour historian Steven Zaloga to describe the type as 'the world's first modern tank.' The tank was widely used by the French and the Americans (who, as mentioned, were lent 514) in the latter stages of World War I, after 31 May 1918. The tank was cheap and well-suited for mass production. Indeed, the very production was made a weapon in itself: a goal was set of 12,260 to be produced (4,440 of which in the USA) before the end of 1919.This prospect was one of several factors which drove the German High Command to its decision to launch the massive all-or-nothing offensives in the spring of 1918, which in turn weakened their army so that it collapsed in the summer. FT 17 tanks were also used in the Second World War, among others in Poland, Finland, France and Kingdom of Yugoslavia, although they were completely obsolete by then.")))))
+    "WWI German Forces"
+     (chapter
+      :name "WWI German Forces"
+      :sectionmap
+       (sectionmap
+        "WWI French German Vehicles"
+         (section
+          :name "WWI French German Vehicles"
+          :unitmap
+           (unitmap
+            :Folker
+             (unit
+              :name "Folker"
+              :reference "* Of all the aces the war produced none compared to the greatest flyer of all, Manfred Richtofen 'The Red Baron'. To this day his name remains a legend that is better known to most than even the war that created him.")))))
+    "WWII Equipment"
+     (chapter
+      :name "WWII Equipment"
+      :sectionmap
+       (sectionmap
+        "WWII Explosives"
+         (section
+          :name "WWII Explosives"
+          :itemmap
+           (itemmap
+            "30kg Bomb"
+             (item
+              :name "30kg Bomb"
+              :classification "Bomb"
+              :explosive "30kg")
+            "60kg Bomb"
+             (item
+              :name "60kg Bomb"
+              :classification "Bomb"
+              :explosive "60kg")
+            "100kg Bomb"
+             (item
+              :name "100kg Bomb"
+              :classification "Bomb"
+              :explosive "100kg")
+            "250lb Bomb"
+             (item
+              :name "250lb Bomb"
+              :classification "Bomb"
+              :explosive "110kg")
+            "350lb Bomb"
+             (item
+              :name "350lb Bomb"
+              :classification "Bomb"
+              :explosive "159kg")
+            "500lb Bomb"
+             (item
+              :name "500lb Bomb"
+              :reference "* P-47 pilots frequently carried two 500-pound (227 kg) bombs, using skip bombing techniques for difficult targets (skipping bombs into railroad tunnels to destroy hidden enemy locomotives or tanks was a favorite tactic); a near miss was sufficient to knock a tank on its side, blow off a track or turret, or cause serious damage to tracks, suspension, and turret mechanisms, frequently causing the vehicle to be abandoned by its crew."
+              :classification "Bomb"
+              :explosive "225kg")
+            "250kg Bomb"
+             (item
+              :name "250kg Bomb"
+              :classification "Bomb"
+              :explosive "250kg")
+            "600lb Depth Charge"
+             (item
+              :name "600lb Depth Charge"
+              :reference
+               "* Although the explosions of the standard United States 600-pound (270 kg) Mark 4 or Mark 7 depth charge used in World War II were nerve-wracking to the target, an undamaged U-boat's pressure hull would not rupture unless the charge detonated closer than about five meters. Placing the weapon within this range was entirely a matter of chance and quite unlikely as the target maneuvered evasively during the attack. Most U-boats sunk by depth charges were destroyed by damage accumulated from a long barrage rather than by a single carefully-aimed attack. Many survived hundreds of depth charge detonations over a period of many hours.
+* The depth charge causes damage by both the initial shock wave and by the subsequent reverberating shock waves that have a tendency to bend a submarine back and forth cause a hull breach.
+* A 100kg of TNT depth charge would have a kill radius of 3-4m. Higher payloads only increase this by a few meters because the effect decreases with the distance cubed. The killing range is also greater with larger submarines. It is doubtful a midget submarine with a titanium hull could be destroyed by anything less than a direct hit."
+              :classification "Bomb"
+              :explosive "270kg")
+            "1000lb Bomb"
+             (item
+              :name "1000lb Bomb"
+              :classification "Bomb"
+              :explosive "454kg")
+            "1200kg Bomb"
+             (item
+              :name "1200kg Bomb"
+              :classification "Bomb"
+              :explosive "1200kg")
+            :Mine
+             (item
+              :name "Mine"
+              :classification "Bomb")
+            :Torpedo
+             (item
+              :name "Torpedo"
+              :image "WWII/Torpedo.png"
+              :classification "Torpedo")))))
+    "WWII American Equipment"
+     (chapter
+      :name "WWII American Equipment"
+      :sectionmap
+       (sectionmap
+        "WWII American Explosives"
+         (section
+          :name "WWII American Explosives"
+          :itemmap
+           (itemmap
+            "Mk 2 Grenade"
+             (item
+              :name "Mk 2 Grenade"
+              :image "WWIIAmerican/Grenade_MK2.jpg"
+              :reference "* At least 5 people have thrown themselves on hand grenades and lived."
+              :summary "* It had a fatality radius of 5m, a blast radius of 13.7m, and fragments can disperse to 213m."
+              :classification "Bomb"
+              :explosive ".057kg"
+              :mass ".6kg"
+              :modifiers "Anti-Personnel, Area"
+              :range "30m")
+            "Demolition Pack"
+             (item
+              :name "Demolition Pack"
+              :classification "Bomb"
+              :modifiers "+1 Prepare")
+            "4.6in Rockets"
+             (item
+              :name "4.6in Rockets"
+              :classification "Missile")
+            "5in HVAR Rocket"
+             (item
+              :name "5in HVAR Rocket"
+              :image "WWIIAmerican/Rocket_HVAR.jpg"
+              :summary
+               "* High-Velocity Aircraft Rocket, aka Holy Moses. About 1 million HVAR rockets were produced before the end of the war. It had a steel-cased warhead and could penetrate 38mm of armor and 1.2m of reinforced concrete.
+* Trials against Panthers showed that they could penetrate all but front armor, but even in clusters of 8 could only hit a stationary tank 4% of the time.
+* Tank casualties to rockets were very low."
+              :classification "Missile"
+              :explosive "21kg"
+              :mass "40kg"
+              :modifiers "HE, AP"
+              :range "4.5km"
+              :speedair "1530kph")
+            "Mark 14 Torpedo"
+             (item
+              :name "Mark 14 Torpedo"
+              :reference
+               "The Mark 14 had four major flaws.
+* It tended to run about 10 feet deeper than set.
+* The magnetic exploder often caused premature firing.
+* The contact exploder often failed to fire the warhead.
+* It tended to run 'circular', failing to straighten, thus returning back to strike the firing ship."
+              :classification "Torpedo"
+              :explosive "292kg"
+              :length "6.25m"
+              :mass "1490kg"
+              :range "8km"
+              :speedwater "85kph")
+            "Atomic Bomb"
+             (item
+              :name "Atomic Bomb"
+              :summary
+               "* Little Boy - Hiroshima 13kton/63TJ
+* Fat Man - Nagasaki 20kton/84TJ"
+              :classification "Bomb")))))
+    "WWII American Units"
+     (chapter
+      :name "WWII American Units"
+      :sectionmap
+       (sectionmap
+        "WWII American Strategic Forces"
+         (section
+          :name "WWII American Strategic Forces"
+          :unitmap
+           (unitmap
+            "WWII American Light Infantry"
+             (unit
+              :name "WWII American Light Infantry"
+              :summary "* 50% SMG (-1), 25% M1 (-2), 25% Bazooka (-2)"
+              :classification "Lt. Infantry")
+            "WWII American Med. Infantry"
+             (unit
+              :name "WWII American Med. Infantry"
+              :summary "* 50% M1 (-1), 25% Bazooka (-2), 25% MG (-2)"
+              :classification "Med. Infantry")
+            "WWII American Heavy Infantry"
+             (unit
+              :name "WWII American Heavy Infantry"
+              :summary "* 50% MG (-1), 50% Bazooka (-1)"
+              :classification "Hvy. Infantry")))))
+    "WWII British Equipment"
+     (chapter
+      :name "WWII British Equipment"
+      :sectionmap
+       (sectionmap
+        "WWII British Weapons"
+         (section
+          :name "WWII British Weapons"
+          :itemmap
+           (itemmap
+            ".38 Enfield MkII Revolver"
+             (item
+              :name ".38 Enfield MkII Revolver"
+              :classification "Pistol")
+            "9mm Sten SMG"
+             (item
+              :name "9mm Sten SMG"
+              :image "WWIIBritish/SMG_Sten.jpg"
+              :classification "Lt. MG"
+              :modifiers "Auto")
+            ".303 Lee-Enfield SMLE Rifle"
+             (item
+              :name ".303 Lee-Enfield SMLE Rifle"
+              :image "WWIIBritish/SMLE_Mk_III.jpg"
+              :reference "* The current world record for aimed bolt-action fire was set in 1914 placing 38 rounds into a 12 inch wide target at 300 yards in one minute."
+              :titles "Short Magazine Lee Enfield (SMLE)"
+              :classification "Rifle")
+            ".303 Lee-Enfield No 4 Rifle"
+             (item
+              :name ".303 Lee-Enfield No 4 Rifle"
+              :reference "* Mass production version of earlier .303 Lee-Enfield rifles."
+              :classification "Rifle")
+            "Flamethrower Portable No2"
+             (item
+              :name "Flamethrower Portable No2"
+              :classification "Flamethrower"
+              :mass "29kg"
+              :modifiers "Fire, Auto"
+              :range "25m")
+            ".303 Bren Light MG"
+             (item
+              :name ".303 Bren Light MG"
+              :summary "* Clip-fed, air-cooled .303 cal (7.7mm) machine gun"
+              :classification "Lt. MG"
+              :crew "2"
+              :modifiers "Auto"
+              :rof "500/min"
+              :rounds "30")
+            ".303 Vickers MG"
+             (item
+              :name ".303 Vickers MG"
+              :reference "* In one action, ten Vickers guns fired continuously for twelve hours. They fired a million rounds between them, using 100 new barrels, without a single breakdown. It was this absolute foolproof reliability which endeared the Vickers to every British soldier who ever fired one."
+              :summary "* Belt-fed, water-cooled .303 cal (7.7mm) machine gun. Required 6-8 men to operate."
+              :classification "Hvy. MG"
+              :crew "6"
+              :modifiers "Auto")
+            "7.92mm Besa MG"
+             (item
+              :name "7.92mm Besa MG"
+              :summary "* Belt-fed, air-cooled 7.92mm machine gun"
+              :classification "Hvy. MG"
+              :modifiers "Auto"
+              :rof "500/min")
+            :PIAT
+             (item
+              :name "PIAT"
+              :image "WWIIBritish/Rocket_PIAT.jpg"
+              :summary
+               "* HEAT Rocket
+* Penetrate 75mm at 30 degrees or 102mm at 90 degrees.
+* The PIAT was an unusual infantry anti-tank weapon. It was comparatively quiet and smokeless, with no backblast.
+* Unlike the American bazooka or German Panzerfaust and Panzerschreck, it could be fired from an enclosed space, and would not give away its position as soon as the weapon was fired. However, it was more cumbersome than its counterparts, violent to fire, and in many circumstances it could be difficult to reload.
+* An attachment that allowed the PIAT to fire 2 inch mortar shells was produced in limited numbers."
+              :classification "Missile"
+              :length ".99m"
+              :mass "15kg"
+              :modifiers "HEAT"
+              :range "100m")
+            "40mm QF 2 Pounder Cannon"
+             (item
+              :name "40mm QF 2 Pounder Cannon"
+              :classification "Cannon"
+              :modifiers "AP")
+            "57mm QF 6 Pounder Cannon"
+             (item
+              :name "57mm QF 6 Pounder Cannon"
+              :reference "* Although 17 Pounder guns were rushed to North Africa to combat the Tiger tank, it was in fact a 6-pdr, which claimed the first Tiger 'kill'"
+              :classification "Cannon"
+              :modifiers "AP"
+              :range "4600m")
+            "75mm QF Cannon"
+             (item
+              :name "75mm QF Cannon"
+              :classification "Cannon"
+              :modifiers "AP")
+            "76mm QF 17 Pounder Cannon"
+             (item
+              :name "76mm QF 17 Pounder Cannon"
+              :image "WWIIBritish/Artillery_17pdr.gif"
+              :reference "76.2mm Cannon penetrates 115mm at 1000m"
+              :classification "Cannon"
+              :modifiers "AP"
+              :muzzlevelocity "883m/s")
+            "77mm HV Cannon"
+             (item
+              :name "77mm HV Cannon"
+              :summary
+               "* The 77mm HV was based on the 17-pounder. It had a lower muzzle velocity than the 17-pounder, but the
+ammunition was much more compact and more easily stored and handled within the confines of a tank."
+              :classification "Cannon"
+              :modifiers "AP")
+            "Mills Bomb Grenade"
+             (item
+              :name "Mills Bomb Grenade"
+              :reference
+               "* The Mills was a defensive grenade: after throwing the user had to take cover immediately. A competent thrower could manage 30m with reasonable accuracy, but the grenade could throw lethal fragments further than this.
+* The 36M remained in service in some parts of the world such as India and Pakistan where it was manufactured until the early 1980s. That the Mills bomb remained in use for so many years says much about its effectiveness."
+              :classification "Bomb"
+              :length ".09m"
+              :mass ".76kg"
+              :modifiers "Anti-Personnel"
+              :range "30m")
+            "No 74 Sticky Bomb"
+             (item
+              :name "No 74 Sticky Bomb"
+              :image "WWIIBritish/Grenade_StickyBomb.jpg"
+              :reference
+               "* While practicing a bomber got his bomb stuck to his trouser leg. A quick thinking mate whipped the trousers off and got rid of them and the bomb. The trousers were in a bit of a mess after though I think they were a bit of a mess prior to the explosion.
+* Even when not used, the glass was easily cracked in transit. The filling, nitroglycerin, was sensitive to shock too. Consequently, although possibly effective, the sticky bomb was never popular.
+* In the movie Saving Private Ryan, Tom Hanks' character uses improvised sticky bombs against Tiger I heavy tanks,"
+              :classification "Bomb"
+              :explosive ".6"
+              :length ".24m"
+              :mass "1kg"
+              :modifiers "HE"
+              :range "20m")
+            "No 82 Gammon Bomb"
+             (item
+              :name "No 82 Gammon Bomb"
+              :reference
+               "* Developed as a replacement for the temperamental and highly dangerous sticky bomb grenade.
+* Unlike conventional grenades, it was flexible in the amount and type of munition. For anti-personnel use, a small amount of plastic explosive, along with shrapnel-like projectiles if available, would be placed in the bag. Against armored targets, the bag could be filled completely with explosive.
+* The bag would be flung and the detonator would fire on impact.
+* Gammon bombs were primarily issued to special forces such as paratroopers who were issued plastic explosive routinely. These units found the Gammon bomb to be particularly useful due to its small size and weight when unfilled, as well as its adaptability."
+              :classification "Bomb"
+              :explosive ".9"
+              :mass "1.2kg"
+              :modifiers "AP"
+              :range "20m")
+            "60lb RP-3 Rockets"
+             (item
+              :name "60lb RP-3 Rockets"
+              :classification "Missile"
+              :explosive "28kg"
+              :length "1.4m"
+              :mass "21kg"
+              :modifiers "AP, HE"
+              :range "1.6km"
+              :speedair "1900kph")
+            "4000lb Blockbuster Bomb"
+             (item
+              :name "4000lb Blockbuster Bomb"
+              :summary "* The term Blockbuster (aka Cookie) was originally a name coined by the press and referred to a bomb which had enough explosive power to destroy an entire city block. The High Capacity design was a cylinder full of explosives, unaerodynamic, and without find. Accuracy was not important, however, as these bombs were designed for blowing the tiles off the roofs of buildings so that the smaller 4 lb incendiary bombs could reach the building interiors. These bombs were only used by the RAF, being too big to fit in the bomb bays of other countries aircraft. In addition to the 4000lb version there were also 8000lb and 12000lb versions constructed from multiple 4000lb sections."
+              :classification "Bomb"
+              :explosive "1360kg"
+              :mass "1800kg")
+            "Earthquake Bomb"
+             (item
+              :name "Earthquake Bomb"
+              :reference "* In an attack on the U-boat pens at Farge two Grand Slams went through the 15 ft (4.5 m) reinforced concrete hardening - equalling or exceeding the best current penetration specifications."
+              :summary "* The Earthquake bombs were designed not to strike a target directly, but to impact beside it, penetrate under it, and create a 'camouflet' or large buried cavern at the same time as delivering a shock wave through the target's foundations. The target then collapses into the hole, no matter how hardened it may be. The bombs had strong casings because they needed to travel through rock rather than reinforced concrete, though they could perform equally well against hardened surfaces."
+              :titles "Grand Slam"
+              :classification "Bomb"
+              :mass "10tons")))))
+    "WWII British Units"
+     (chapter
+      :name "WWII British Units"
+      :sectionmap
+       (sectionmap
+        "WWII British Naval Vessels"
+         (section
+          :name "WWII British Naval Vessels"
+          :unitmap
+           (unitmap
+            "British Destroyer"
+             (unit
+              :name "British Destroyer"
+              :classification "Med. Naval Vessel")
+            "HMS Hood Battlecruiser"
+             (unit
+              :name "HMS Hood Battlecruiser"
+              :summary
+               "Armament: 8 x 15in (381mm) (4x2),
+14 x 4in (102mm) (7x2)
+24 x 2-pdr pom pom (40mm) (3x8)
+20 x 0.5in (12.7mm) (5x4) guns
+5 x 20 barrel Unrotated Projectile mounts
+4 x 21in (533mm) torpedo tubes, above water"
+              :classification "Hvy. Naval Vessel"
+              :crew "1418"
+              :range "10000km"
+              :speedwater "54kph")
+            "King George V Class Battleship"
+             (unit
+              :name "King George V Class Battleship"
+              :summary
+               "Speed: 28.0 knots (1941 trials) Range: 5400+nm at 18knots (11.9 tons/hour fuel burn)
+Armament: 10 x 14inch (356mm) mk VII guns
+16 x 5.25inch (133mm) guns
+64 x 2pounder pom-pom (40mm) Armour: Main belt: 14.7in (374mm)
+lower belt: 5.4in (137mm)
+Aircraft carried: 4 Supermarine Walrus seaplanes, 1 double-ended catapult"
+              :crew "1500")
+            "HMS Ark Royal Carrier"
+             (unit
+              :name "HMS Ark Royal Carrier"
+              :summary
+               "Armament: 16 x 4.5 inch (114 mm) guns (8 x 2)
+48 x 2 pounder (1.5 in) Pom-poms (6 x 8)
+32 x .50 calibre (12.7 mm) machine guns (8 x 4) Armour: 4.5 inches (110 mm) belt
+3.5 in (89mm) deck over boiler rooms and magazines
+Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
+              :crew "1600"
+              :range "14100km"
+              :speedwater "57kph")))))
+    "WWII French Equipment"
+     (chapter
+      :name "WWII French Equipment"
+      :sectionmap
+       (sectionmap
+        "WWII French Weapons"
+         (section
+          :name "WWII French Weapons"
+          :itemmap
+           (itemmap
+            "7.5mm MAS-36"
+             (item
+              :name "7.5mm MAS-36"
+              :image "WWIIFrench/Rifle_MAS36.jpg"
+              :summary "7.5mm Bolt-action Rifle"
+              :classification "Rifle")
+            "7.65mm MAS-38"
+             (item
+              :name "7.65mm MAS-38"
+              :image "WWIIFrench/SMG_MAS_38.jpg"
+              :reference "* On April 28, 1945, was used by Italian partisans to shoot the former dictator Benito Mussolini."
+              :summary "7.65mm SMG"
+              :classification "Lt. MG"
+              :modifiers "Auto")))))
+    "WWII French Units"
+     (chapter
+      :name "WWII French Units"
+      :sectionmap
+       (sectionmap
+        "WWII French Aircraft"
+         (section
+          :name "WWII French Aircraft"
+          :unitmap
+           (unitmap
+            "Free French Spitfire"
+             (unit
+              :name "Free French Spitfire"
+              :image "WWIIFrench/SupermarineSpitfire_Mk_IXToken.png"
+              :classification "Lt. Aircraft"
+              :crew "1"
+              :mass "3tons"
+              :length "9m"
+              :range "760km"
+              :speedair "605kph"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "8mm"
+                  :back "8mm"
+                  :over "8mm"
+                  :side "8mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    ".303 Vickers MG"
+                     (unititem
+                      :name ".303 Vickers MG"
+                      :facing "FFx8")
+                    "250lb Bomb"
+                     (unititem
+                      :name "250lb Bomb"
+                      :facing "Ux2")))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))))))
+    "WWII German Equipment"
+     (chapter
+      :name "WWII German Equipment"
+      :sectionmap
+       (sectionmap
+        "WWII German Weapons"
+         (section
+          :name "WWII German Weapons"
+          :itemmap
+           (itemmap
+            ".32 Mauser Hsc"
+             (item
+              :name ".32 Mauser Hsc"
+              :image "WWIIGerman/Pistol_Mauser_HSc.jpg"
+              :reference
+               "* Military personnel of all ranks not issued sidearms often purchased HSc pistols in the commercial
+marketplace and carried them into the field."
+              :summary ".32 cal Pistol"
+              :classification "Pistol"
+              :length ".15m"
+              :mass ".7kg"
+              :muzzlevelocity "282m/s")
+            "9mm Luger P08"
+             (item
+              :name "9mm Luger P08"
+              :image "WWIIGerman/DWM_4_inch_Navy_Luger_859.jpg"
+              :reference "* The usual German sidearm in both world wars."
+              :summary "9mm Pistol"
+              :classification "Pistol"
+              :muzzlevelocity "390m/s")
+            "9mm MP40 SMG"
+             (item
+              :name "9mm MP40 SMG"
+              :image "WWIIGerman/SMG_MP40.jpg"
+              :classification "Lt. MG"
+              :modifiers "Auto"
+              :muzzlevelocity "380m/s"
+              :range "100m"
+              :rof "500/min")
+            "7.92mm Karabiner 98k"
+             (item
+              :name "7.92mm Karabiner 98k"
+              :reference "* Standard German infantry rifle"
+              :summary "7.92mm Bolt-action Rifle"
+              :classification "Rifle"
+              :range "500m")
+            "Flammenwerfer 35 Flamethrower"
+             (item
+              :name "Flammenwerfer 35 Flamethrower"
+              :classification "Flamethrower"
+              :crew "1"
+              :mass "35kg"
+              :modifiers "Fire, Auto"
+              :range "25m")
+            "7.92mm FG42 Light MG"
+             (item
+              :name "7.92mm FG42 Light MG"
+              :reference "* The FG42 was developed specifically for the use by paratroopers, who wanted a suitable gun after their experiences in the invasion of Crete."
+              :classification "Lt. MG"
+              :modifiers "Auto, +1 Prepare")
+            "7.92mm MG17 MG"
+             (item
+              :name "7.92mm MG17 MG"
+              :image "WWIIGerman/MG_MG17.jpg"
+              :reference "* A mainstay fixed machine gun in German built aircraft."
+              :classification "Med. MG"
+              :length "1175mm"
+              :mass "10.2kg"
+              :modifiers "Auto"
+              :muzzlevelocity "855m/s"
+              :rof "1200/min")
+            "7.92mm MG34 MG"
+             (item
+              :name "7.92mm MG34 MG"
+              :image "WWIIGerman/MG_MG34.jpg"
+              :classification "Med. MG"
+              :length "1219mm"
+              :mass "12.1kg"
+              :modifiers "Auto"
+              :muzzlevelocity "765m/s")
+            "7.92mm MG81Z MG"
+             (item
+              :name "7.92mm MG81Z MG"
+              :image "WWIIGerman/MG_MG81.jpg"
+              :reference "* An aircraft mounted derivative of the successful MG34 infantry machine gun."
+              :classification "Med. MG"
+              :length "915mm"
+              :mass "12.9kg"
+              :modifiers "Auto"
+              :muzzlevelocity "705m/s"
+              :rof "1500/min")
+            "13mm MG131 MG"
+             (item
+              :name "13mm MG131 MG"
+              :image "WWIIGerman/MG_13mm_MG131.jpg"
+              :reference "* Under the doctrine of WWII German infantry tactics, the squad machine gun is the center of operation and the rest of the squad will maneuver and try to achieve its objective under the cover of the squad machine gun fire."
+              :classification "Hvy. MG"
+              :length "1140m"
+              :mass "16.6kg"
+              :muzzlevelocity "750m/s"
+              :range "1800m"
+              :rounds "900/min")
+            "20mm MG151/20 Cannon"
+             (item
+              :name "20mm MG151/20 Cannon"
+              :reference "* On the Fw190, it was found that it took an average of twenty 20 mm hits to shoot down a typical four engined bomber."
+              :classification "Cannon"
+              :muzzlevelocity "800m/s"
+              :rof "750/min")
+            "30mm MK 108 Cannon"
+             (item
+              :name "30mm MK 108 Cannon"
+              :image "WWIIGerman/Cannon_MK108.jpg"
+              :reference "* The 30 mm MK 108 cannon could bring down a bomber with an average of one to three hits, but the ammunition was heavy (limiting the amount of ammo carried) and its low muzzle velocity meant it became inaccurate at 1000m."
+              :classification "Cannon"
+              :length "1m"
+              :mass "58kg"
+              :modifiers "Auto"
+              :muzzlevelocity "540m/s"
+              :range "1000m"
+              :rof "650/min")
+            "R4M Hurricane Rocket"
+             (item
+              :name "R4M Hurricane Rocket"
+              :reference "* The first practical anti-aircraft rocket. After the war the R4M served as the pattern for a number of similar systems, used by almost all interceptor aircraft during the 1940s and '50s. The R4M used a large warhead of 55mm with 520g explosive charge, nearly guaranteeing a kill with one hit. A battery typically consisted of two groups of 12 rockets and when all 24 were fired at once they would fill an area about 15 by 30 m at 1000 m, dense enough that one was almost certain to hit its target. Two warheads were available for the R4M, the common PB-3 with a 0.4 kg charge for anti-aircraft use and the larger shaped charge, similar in construction to the Panzerschreck, the Panzerblitz II (PB-2), for anti-tank use."
+              :titles "Orkan"
+              :classification "Missile"
+              :length "812mm"
+              :mass "3.2kg"
+              :modifiers "HE, AP"
+              :muzzlevelocity "525m/s"
+              :range "1000m"
+              :rounds "1")
+            "40mm Bofors L/60 Cannon"
+             (item
+              :name "40mm Bofors L/60 Cannon"
+              :classification "Cannon"
+              :modifiers "Auto, HE"
+              :muzzlevelocity "881m/s"
+              :rof "120/min")
+            "50mm PaK 38 L/60 Cannon"
+             (item
+              :name "50mm PaK 38 L/60 Cannon"
+              :reference "* The PaK 38 was one of the few early guns capable of effectively penetrating the 45 mm armor of the formidable T-34."
+              :classification "Cannon"
+              :modifiers "HE, AP")
+            "50mm KwK 39 L/60 Cannon"
+             (item
+              :name "50mm KwK 39 L/60 Cannon"
+              :classification "Cannon"
+              :modifiers "HE, AP"
+              :muzzlevelocity "800m/s")
+            "75mm KwK 39 L/48 Cannon"
+             (item
+              :name "75mm KwK 39 L/48 Cannon"
+              :classification "Cannon"
+              :modifiers "HE, AP"
+              :muzzlevelocity "750m/s")
+            "75mm KwK 40 L/48 Cannon"
+             (item
+              :name "75mm KwK 40 L/48 Cannon"
+              :classification "Cannon"
+              :modifiers "HE, AP"
+              :muzzlevelocity "792m/s"
+              :range "1.8km")
+            "75mm KwK 42 L/70 Cannon"
+             (item
+              :name "75mm KwK 42 L/70 Cannon"
+              :classification "Cannon"
+              :length "5.2m"
+              :mass "1ton"
+              :modifiers "HE, AP"
+              :muzzlevelocity "925m/s"
+              :range "2km direct, 10km indirect")
+            "88mm KwK 36 L/56 Cannon"
+             (item
+              :name "88mm KwK 36 L/56 Cannon"
+              :classification "Cannon"
+              :modifiers "HE, AP"
+              :muzzlevelocity "773m/s"
+              :range "2km")
+            "88mm KwK 43 L/71 Cannon"
+             (item
+              :name "88mm KwK 43 L/71 Cannon"
+              :classification "Cannon"
+              :modifiers "HE, AP"
+              :muzzlevelocity "1000m/s"
+              :range "4km")
+            "105mm leFH 18 Howitzer"
+             (item
+              :name "105mm leFH 18 Howitzer"
+              :classification "Artillery"
+              :explosive "1.38kg"
+              :modifiers "HE"
+              :muzzlevelocity "470m/s"
+              :range "10.6km"
+              :rof "5/min")
+            "150mm StuH 43 L/12 Cannon"
+             (item
+              :name "150mm StuH 43 L/12 Cannon"
+              :summary "Penetrates 160mm at any range"
+              :classification "Cannon"
+              :modifiers "HE"
+              :muzzlevelocity "240m/s"
+              :range "4.3km"
+              :rof "1.5/min")
+            "Model 24 Grenade"
+             (item
+              :name "Model 24 Grenade"
+              :image "WWIIGerman/Grenade_Model24.jpg"
+              :reference "* It featured an explosive charge encased in a metal can and mounted on a wooden shaft for throwing. It became one of the most easily recognized of all small arms, and synonymous with the German soldier."
+              :titles "Potato Masher"
+              :classification "Bomb"
+              :explosive ".17kg"
+              :length ".35m"
+              :mass ".6kg"
+              :modifiers "Anti-Personnel"
+              :range "40m")
+            :Panzerfaust
+             (item
+              :name "Panzerfaust"
+              :image "WWIIGerman/Rocket_Panzerfaust.jpg"
+              :reference "* The weapon proved to be particularly deadly to Allied armored vehicles, especially in urban combat where the short lines of sight allowed the weapon to be used at close range."
+              :summary "* Disposable HEAT Rocket penetrates 200mm at 60m"
+              :titles "Tank Fist"
+              :classification "Missile"
+              :explosive ".8kg"
+              :length "1m"
+              :mass "6.25kg"
+              :modifiers "HEAT"
+              :range "60m"
+              :rounds "1")
+            :Panzerschreck
+             (item
+              :name "Panzerschreck"
+              :reference "* When handled by well-trained crews, this weapon became the bane of Allied armored units, who frequently attempted to add improvised protection to their tanks, e.g. sandbags, spare track units, logs and so on. Most of this make-shift protection had little actual effect."
+              :summary "* Disposable HEAT Rocket penetrates 200mm at 60m"
+              :titles "Tank Terror, Stove Pipe"
+              :classification "Missile"
+              :explosive ".66kg"
+              :length ".16m"
+              :mass "11kg"
+              :modifiers "HEAT"
+              :range "150m")
+            "120mm GrW 42 Mortar"
+             (item
+              :name "120mm GrW 42 Mortar"
+              :classification "Artillery"
+              :explosive "15.6 kg"
+              :modifiers "Indirect, HE")
+            "150mm Rocket Launcher"
+             (item
+              :name "150mm Rocket Launcher"
+              :reference
+               "* These offered the opportunity to deliver large quantities of poison gas or smoke simultaneously.
+* Almost five and a half million 15 cm rockets and six thousand launchers were manufactured over the course of the war."
+              :classification "Missile"
+              :explosive "50kg"
+              :mass "1.1tons"
+              :modifiers "HE"
+              :muzzlevelocity "145m/s"
+              :rounds "6")
+            "V2 Rocket"
+             (item
+              :name "V2 Rocket"
+              :image "WWIIGerman/Rocket_V2.jpg"
+              :reference
+               "* The rocket was the world's first long-range missile and first human artifact to achieve sub-orbital spaceflight. It was the progenitor of all modern rockets, including those used by the United States and Soviet Union space programs, who gained access to the scientists and designs.
+* They not only took a toll of 9 thousand casualties. They also had a devastating psychological effect for unlike the buzzbomb it would attack without warning, and it could not be intercepted by fighter aircraft or anti-aircraft artillery.
+* Hitler was probably not impressed with the weapon but was impressed by the enthusiasm of its developers and needed a 'wonder weapon' to maintain German morale."
+              :titles "Vengence 2"
+              :classification "Missile"
+              :explosive "980kg"
+              :length "14m"
+              :mass "6.5tons"
+              :range "320km"
+              :rounds "1"
+              :speedair "5760kph"
+              :width "1.65m")))))
+    "WWII German Units"
+     (chapter
+      :name "WWII German Units"
+      :sectionmap
+       (sectionmap
+        "WWII German Naval Vessels"
+         (section
+          :name "WWII German Naval Vessels"
+          :unitmap
+           (unitmap
+            "Bismarck Class Battleship"
+             (unit
+              :name "Bismarck Class Battleship"
+              :image "WWIIGerman/Battleship_Bismarck.png"
+              :reference
+               "* 40% by weight dedicated to armor. More than the Yamato's 33%
+* May 1941, sank the HMS Hood, flagship and pride of the Royal Navy in 11 minutes. In response, Winston Churchill issued the order to 'Sink the Bismarck', spurring a relentless pursuit by the Royal Navy."
+              :titles "Bismarck, Tirpitz"
+              :classification "Hvy. Naval Vessel"
+              :crew "2092"
+              :mass "50ktons"
+              :length "251m"
+              :speedwater "56kph"
+              :width "36m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "320mm"
+                  :back "320mm"
+                  :over "120mm"
+                  :side "320mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :summary
+                   "8 x 380 mm/L52 SK C/34 (15 in)(4x2)
+12 x 150 mm/L55 SK-C/28 (5.9 in)(6x2)
+16 x 105 mm/L65 SK-C/37 / SK-C/33 (4.1 in)(8x2)
+16 x 37 mm/L83 SK-C/30 (1.5 in)
+12 x 20 mm/L65 MG C/30 (0.79 in)
+8 x 20 mm/L65 MG C/32 (8x4) (0.79 in)")
+                :Hanger
+                 (unitskill
+                  :name "Hanger"
+                  :summary "* 4xArado Ar 196 A-3, with 1 double-ended catapult")))
+            "U-Boot Type VII"
+             (unit
+              :name "U-Boot Type VII"
+              :image "WWIIGerman/Submarine_VIIC_UboatToken.png"
+              :reference "* By the end of the war, almost 3,000 Allied ships (175 warships; the rest were merchant ships) were sunk by U-boat torpedoes."
+              :classification "Submarine")
+            "Elektroboot XXI"
+             (unit
+              :name "Elektroboot XXI"
+              :image "WWIIGerman/Submarine_XXIIIToken.png"
+              :classification "Submarine")))))
+    "WWII Italian Units"
+     (chapter
+      :name "WWII Italian Units"
+      :sectionmap
+       (sectionmap
+        "WWII Italian Aircraft"
+         (section
+          :name "WWII Italian Aircraft"
+          :unitmap
+           (unitmap
+            "Fiat G50"
+             (unit
+              :name "Fiat G50"
+              :image "WWIIItalian/Fighter_Fiat_G50Token.png"
+              :reference
+               "* In Africa, Italian pilots flying the G.50 managed to shoot down the faster and better armed Hurricane fighter.
+* In the hands of expert pilots, the Fiat G.50 could score multiple kills in a single action"
+              :classification "Lt. Aircraft"
+              :crew "1"
+              :mass "2.7tons"
+              :height "3m"
+              :length "7.8m"
+              :range "670km"
+              :speedair "484kph"
+              :width "11m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "8mm"
+                  :back "8mm"
+                  :over "8mm"
+                  :side "8mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "12.7mm Breda-SAFAT MG"
+                     (unititem
+                      :name "12.7mm Breda-SAFAT MG"
+                      :facing "FF"
+                      :number "2")))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Fiat CR.42 Falco"
+             (unit
+              :name "Fiat CR.42 Falco"
+              :summary "* The primary fighter of the Italian Air Force at the outbreak of the war. Although outdated by monoplane fighters, it still acquitted itself well in North Africa until the advent of more advanced Allied fighters. The Fiat CR.42 was the last of the Fiat biplane fighters to enter frontline service as a fighter, and represented the epitome of the type."
+              :titles "Falcon"
+              :classification "Lt. Aircraft"
+              :crew "1"
+              :mass "2.3tons"
+              :height "3.6m"
+              :length "8.25m"
+              :range "780km"
+              :speedair "441kph"
+              :width "9.7m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "8mm"
+                  :back "8mm"
+                  :over "8mm"
+                  :side "8mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "12.7mm Breda-SAFAT MG"
+                     (unititem
+                      :name "12.7mm Breda-SAFAT MG"
+                      :facing "FF"
+                      :number "2"
+                      :rounds "400")))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Savoia-Marchetti SM.81"
+             (unit
+              :name "Savoia-Marchetti SM.81"
+              :summary
+               "* Bomber
+* Despite being too slow to remain competitive as a bomber, it was one of the most flexible, reliable and important aircraft of the Regia Aeronautica from 1935 to 1944, and adapted to second line duties in performing a wide range of tasks."
+              :classification "Hvy. Aircraft"
+              :crew "6"
+              :mass "10.5tons"
+              :height "4.3m"
+              :length "18.3m"
+              :range "1500km"
+              :speedair "347kph"
+              :width "24m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "3mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "7.7mm Breda-SAFAT MG"
+                     (unititem
+                      :name "7.7mm Breda-SAFAT MG"
+                      :number "6")
+                    "250kg Bomb"
+                     (unititem
+                      :name "250kg Bomb"
+                      :number "8")))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))))))
+    "WWII Japanese Equipment"
+     (chapter
+      :name "WWII Japanese Equipment"
+      :sectionmap
+       (sectionmap
+        "WWII Japanese Weapons"
+         (section
+          :name "WWII Japanese Weapons"
+          :itemmap
+           (itemmap
+            "8mm Type 94"
+             (item
+              :name "8mm Type 94"
+              :reference "* The gun became notorious for a design flaw that allowed it to be fired with a round in the chamber by pressing a projecting sear on the side of the receiver. The gun was a commercial failure, and is frequently described as the 'worst service pistol ever issued'"
+              :summary "8mm Semiautomatic Pistol"
+              :classification "Pistol")
+            "6.5mm Type 97"
+             (item
+              :name "6.5mm Type 97"
+              :summary "Bolt Action Sniper Rifle"
+              :classification "Rifle")
+            "7.7mm Type 99"
+             (item
+              :name "7.7mm Type 99"
+              :image "WWIIJapanese/Rifle_ArisakaType99.jpg"
+              :reference "* As a bolt action rifle, the Type 99 was a very solid weapon, but was completely outclassed by the semi-automatic rifles deployed by the Allies."
+              :summary "Bolt Action Rifle"
+              :classification "Rifle")
+            "6.5mm Type 96 LMG"
+             (item
+              :name "6.5mm Type 96 LMG"
+              :classification "Lt. MG"
+              :modifiers "Auto, +1 Prepare")
+            "7.7mm Type 97 MG"
+             (item
+              :name "7.7mm Type 97 MG"
+              :classification "Lt. MG"
+              :modifiers "Auto, +1 Prepare")
+            "Type 93 Flamethrower"
+             (item
+              :name "Type 93 Flamethrower"
+              :classification "Flamethrower"
+              :crew "2"
+              :mass "26kg"
+              :modifiers "Fire, Auto"
+              :range "20m")
+            "13mm Type 93 AA"
+             (item
+              :name "13mm Type 93 AA"
+              :classification "Hvy. MG"
+              :length "1.4m"
+              :mass "42kg"
+              :muzzlevelocity "805m/s"
+              :rof "250/min")
+            "20mm Type 99 Cannon"
+             (item
+              :name "20mm Type 99 Cannon"
+              :image "WWIIJapanese/Cannon_20mmType99.jpg"
+              :classification "Cannon"
+              :length "1.3m"
+              :mass "23kg"
+              :modifiers "Auto"
+              :muzzlevelocity "600m/s"
+              :rof "520/min")
+            "25mm Type 96 Autocannon"
+             (item
+              :name "25mm Type 96 Autocannon"
+              :image "WWIIJapanese/Autocannon_25mmType96.jpg"
+              :reference "* The Type 96 was the standard medium antiaircraft weapon of the Imperial Japanese Navy, and was used on virtually every warship in combat in World War II. It was also used in land bases in the Japanese Empire and in the Japanese overseas combat fronts."
+              :classification "Cannon"
+              :crew "3"
+              :length "1.5m"
+              :mass "785kg"
+              :modifiers "Auto"
+              :muzzlevelocity "900m/s"
+              :range "6.8km"
+              :rof "110/min")
+            "37mm Type 94 Cannon"
+             (item
+              :name "37mm Type 94 Cannon"
+              :classification "Cannon"
+              :modifiers "AP, HE")
+            "57mm Type 97 Cannon"
+             (item
+              :name "57mm Type 97 Cannon"
+              :classification "Cannon"
+              :modifiers "AP, HE")
+            "76mm/60 Type 98 Cannon"
+             (item
+              :name "76mm/60 Type 98 Cannon"
+              :classification "Cannon"
+              :length "4.7m"
+              :mass "1.3tons"
+              :muzzlevelocity "910m/s"
+              :rof "25")
+            "127mm/45 Cannon"
+             (item
+              :name "127mm/45 Cannon"
+              :image "WWIIJapanese/Cannon_127mm45.jpg"
+              :classification "Cannon"
+              :length "5.5m"
+              :mass "3.1tons"
+              :muzzlevelocity "825m/s"
+              :rof "5/min")
+            "155mm/60 Naval Artillery"
+             (item
+              :name "155mm/60 Naval Artillery"
+              :classification "Cannon"
+              :length "9.6m"
+              :mass "12.5tons"
+              :muzzlevelocity "920m/s"
+              :rof "5/min")
+            "200mm/50 Naval Artillery"
+             (item
+              :name "200mm/50 Naval Artillery"
+              :classification "Cannon"
+              :length "10m"
+              :mass "18tons"
+              :muzzlevelocity "835m/s"
+              :range "29km"
+              :rof "4/min")
+            "460mm/45 Naval Artillery"
+             (item
+              :name "460mm/45 Naval Artillery"
+              :reference "* The 460mm / 18.1 in gun fired 1.36 ton shells."
+              :classification "Cannon"
+              :length "21m"
+              :mass "164tons"
+              :muzzlevelocity "780m/s"
+              :range "42km"
+              :rof "2/min")
+            "Torpedo Type 91"
+             (item
+              :name "Torpedo Type 91"
+              :image "WWIIJapanese/Torpedo_Type91.jpg"
+              :summary "* Aerial Torpedo"
+              :classification "Torpedo"
+              :explosive "235kg"
+              :length "5.2m"
+              :mass ".85tons"
+              :range "2km"
+              :speedwater "78kph")
+            "Torpedo Type 93 Long Lance"
+             (item
+              :name "Torpedo Type 93 Long Lance"
+              :image "WWIIJapanese/Torpedo_Type93LongLance.jpg"
+              :reference "* Japanese destroyers and cruisers were able to launch their torpedoes from about 20 km at the unsuspecting Allied warships. The Allied warships were expecting enemy torpedoes to be fired at less than 10 km, their own torpedo range. The Allies believed these torpedoes had been fired from Japanese submarines. The capabilities of the Type 93 went mostly unrecognized by the Allies until one was captured intact in 1943."
+              :classification "Torpedo"
+              :explosive "490kg"
+              :length "9m"
+              :mass "2.8tons"
+              :range "22km"
+              :speedwater "90kph")
+            "Torpedo Type 95"
+             (item
+              :name "Torpedo Type 95"
+              :reference
+               "* Based on the formidable Type 93 Long Lance, the Type 95 was the fasted torpedo in use by any navy at the time.
+* It is 3x the range of the American Mark 14 with the same speed.
+* Its warhead was the largest of any submarine torpedo and second only to the Type 93 surface torpedo.
+* Some have claimed this to be the best torpedo of WWII."
+              :classification "Torpedo"
+              :explosive "405kg"
+              :range "9km"
+              :speedwater "92kph")
+            "Kaiten Kamikaze Torpedo"
+             (item
+              :name "Kaiten Kamikaze Torpedo"
+              :reference
+               "* Early designs allowed the pilot to escape after the final acceleration toward the target, although whether this could have been done successfully is doubtful. There is no record of any pilot attempting to escape or intending to do so, and this provision was dropped from later production.
+* Kaiten attacks resulted in sinking only two American vessels with the loss of 162 American lives, in comparison to 106 kaiten pilots who lost their lives."
+              :classification "Torpedo"
+              :explosive "1.4tons"
+              :length "15m"
+              :mass "8.3tons"
+              :range "78km"
+              :speedwater "56kph")))))
+    "WWII Japanese Units"
+     (chapter
+      :name "WWII Japanese Units"
+      :sectionmap
+       (sectionmap
+        "WWII Japanese Naval Vessels"
+         (section
+          :name "WWII Japanese Naval Vessels"
+          :unitmap
+           (unitmap
+            "Kaga Class Converted Carrier"
+             (unit
+              :name "Kaga Class Converted Carrier"
+              :image "WWIIJapanese/Carrier_KagaToken.png"
+              :summary "Akagi carried - 21 Zeros, 21 Vals, and 21 Kates"
+              :titles "Kaga, Akagi"
+              :classification "Hvy. Naval Vessel"
+              :crew "2016"
+              :mass "38.8ktons"
+              :length "247m"
+              :range "18520km"
+              :speedwater "52kph"
+              :width "32m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "152mm"
+                  :back "152mm"
+                  :over "152mm"
+                  :under "152mm"
+                  :side "152mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "200mm/50 Naval Artillery"
+                     (unititem
+                      :name "200mm/50 Naval Artillery"
+                      :number "1")
+                    "127mm/45 Cannon"
+                     (unititem
+                      :name "127mm/45 Cannon"
+                      :number "16")
+                    "25mm Type 96 Autocannon"
+                     (unititem
+                      :name "25mm Type 96 Autocannon"
+                      :number "22")))
+                :Hanger
+                 (unitskill
+                  :name "Hanger"
+                  :summary
+                   "* 18 A6M Zero Naval Fighter
+* 37 D3A Val Dive Bomber
+* 37 B5N Kate Torpedo Bomber")
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Soryu Class Fast Carrier"
+             (unit
+              :name "Soryu Class Fast Carrier"
+              :image "WWIIJapanese/Carrier_Hiryu.png"
+              :titles "Hiryu, Soryu"
+              :classification "Hvy. Naval Vessel"
+              :crew "1103"
+              :mass "19.5ktons"
+              :length "222m"
+              :range "14000km"
+              :speedwater "64kph"
+              :width "21m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "45mm"
+                  :back "45mm"
+                  :over "25mm"
+                  :under "45mm"
+                  :side "45mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "127mm/45 Cannon"
+                     (unititem
+                      :name "127mm/45 Cannon"
+                      :number "12")
+                    "25mm Type 96 Autocannon"
+                     (unititem
+                      :name "25mm Type 96 Autocannon"
+                      :number "26")
+                    "13mm Type 93 AA"
+                     (unititem
+                      :name "13mm Type 93 AA"
+                      :number "15")))
+                :Hanger
+                 (unitskill
+                  :name "Hanger"
+                  :summary
+                   "* 18 A6M Zero Naval Fighter
+* 18 D3A Val Dive Bomber
+* 18 B5N Kate Torpedo Bomber")
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Fubuki Class Destroyer"
+             (unit
+              :name "Fubuki Class Destroyer"
+              :image "WWIIJapanese/Destroyer_Akatsuki_Token.png"
+              :reference "* Has been called 'the world's first modern destroyer.' It set a new standard for destroyers around the world. The Japanese destroyers were bigger, more powerfully armed, and faster than anything that any other fleet possessed."
+              :classification "Med. Naval Vessel"
+              :crew "219"
+              :mass "2ktons"
+              :length "118m"
+              :range "9200km"
+              :speedwater "70kph"
+              :width "10m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "10mm"
+                  :back "10mm"
+                  :over "10mm"
+                  :under "10mm"
+                  :side "10mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "127mm/45 Cannon"
+                     (unititem
+                      :name "127mm/45 Cannon"
+                      :number "6")
+                    "13mm Type 93 AA"
+                     (unititem
+                      :name "13mm Type 93 AA"
+                      :number "2")
+                    "Torpedo Type 93 Long Lance"
+                     (unititem
+                      :name "Torpedo Type 93 Long Lance"
+                      :facing "FTurretx3, Tx3, BTurretx3"
+                      :number "18")
+                    "600lb Depth Charge"
+                     (unititem
+                      :name "600lb Depth Charge"
+                      :number "18")))
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Agano Class Light Cruiser"
+             (unit
+              :name "Agano Class Light Cruiser"
+              :image "WWIIJapanese/CruiserLt_Noshiro_Token.png"
+              :classification "Med. Naval Vessel"
+              :crew "726"
+              :mass "7.6ktons"
+              :length "162m"
+              :range "11000km"
+              :speedwater "67kph"
+              :width "15.2m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "60mm"
+                  :over "20mm"
+                  :under "60mm"
+                  :side "60mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "155mm/60 Naval Artillery"
+                     (unititem
+                      :name "155mm/60 Naval Artillery"
+                      :number "6")
+                    "76mm/60 Type 98 Cannon"
+                     (unititem
+                      :name "76mm/60 Type 98 Cannon"
+                      :number "4")
+                    "25mm Type 96 Autocannon"
+                     (unititem
+                      :name "25mm Type 96 Autocannon"
+                      :number "32")
+                    "Torpedo Type 93 Long Lance"
+                     (unititem
+                      :name "Torpedo Type 93 Long Lance"
+                      :facing "FFx8"
+                      :number "8")
+                    "600lb Depth Charge"
+                     (unititem
+                      :name "600lb Depth Charge"
+                      :number "16")))
+                :Hanger
+                 (unitskill
+                  :name "Hanger"
+                  :summary "* 2 A6M2 Rufe Seaplane")
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Tone Class Hvy. Cruiser"
+             (unit
+              :name "Tone Class Hvy. Cruiser"
+              :image "WWIIJapanese/CruiserHvy_Furutaka_Token.png"
+              :classification "Hvy. Naval Vessel"
+              :crew "874"
+              :mass "11ktons"
+              :length "189m"
+              :range "1852km"
+              :speedwater "67kph"
+              :width "19m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "100mm"
+                  :over "35mm"
+                  :under "100mm"
+                  :side "100mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "200mm/50 Naval Artillery"
+                     (unititem
+                      :name "200mm/50 Naval Artillery"
+                      :number "8")
+                    "127mm/45 Cannon"
+                     (unititem
+                      :name "127mm/45 Cannon"
+                      :number "8")
+                    "25mm Type 96 Autocannon"
+                     (unititem
+                      :name "25mm Type 96 Autocannon"
+                      :number "12")
+                    "Torpedo Type 93 Long Lance"
+                     (unititem
+                      :name "Torpedo Type 93 Long Lance"
+                      :facing "FFx12"
+                      :number "12")
+                    "600lb Depth Charge"
+                     (unititem
+                      :name "600lb Depth Charge"
+                      :number "16")))
+                :Hanger
+                 (unitskill
+                  :name "Hanger"
+                  :summary "* 6 A6M2 Rufe Seaplane")
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Yamato Class Battleship"
+             (unit
+              :name "Yamato Class Battleship"
+              :image "WWIIJapanese/Battleship_YamatoToken.png"
+              :reference "* Largest battleships ever built with largest naval guns ever. Yamato sank after 8 bombs and 13 torpedos caused her magazine to explode."
+              :classification "Hvy. Naval Vessel"
+              :crew "2767"
+              :mass "72ktons"
+              :length "263m"
+              :range "13000km"
+              :speedwater "50kph"
+              :width "39m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "650mm"
+                  :over "200mm"
+                  :side "410mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "460mm/45 Naval Artillery"
+                     (unititem
+                      :name "460mm/45 Naval Artillery"
+                      :number "9")
+                    "155mm/60 Naval Artillery"
+                     (unititem
+                      :name "155mm/60 Naval Artillery"
+                      :number "6")
+                    "127mm/45 Cannon"
+                     (unititem
+                      :name "127mm/45 Cannon"
+                      :number "12")
+                    "25mm Type 96 Autocannon"
+                     (unititem
+                      :name "25mm Type 96 Autocannon"
+                      :number "24")
+                    "13mm Type 93 AA"
+                     (unititem
+                      :name "13mm Type 93 AA"
+                      :number "13")))
+                :Hanger
+                 (unitskill
+                  :name "Hanger"
+                  :summary "* 7 A6M2 Rufe Seaplane")
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Otori Class Torpedo Boat"
+             (unit
+              :name "Otori Class Torpedo Boat"
+              :image "WWIIJapanese/TorpedoBoat_MitsubishiT14_Token.png"
+              :classification "Lt. Naval Vessel"
+              :crew "129"
+              :mass "960tons"
+              :length "88.5m"
+              :range "7400km"
+              :speedwater "56kph"
+              :width "8.2m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "127mm/45 Cannon"
+                     (unititem
+                      :name "127mm/45 Cannon"
+                      :number "2")
+                    "Torpedo Type 93 Long Lance"
+                     (unititem
+                      :name "Torpedo Type 93 Long Lance"
+                      :facing "FFx3"
+                      :number "3")
+                    "25mm Type 96 Autocannon"
+                     (unititem
+                      :name "25mm Type 96 Autocannon"
+                      :number "11")
+                    "600lb Depth Charge"
+                     (unititem
+                      :name "600lb Depth Charge"
+                      :number "48")))
+                :Hanger
+                 (unitskill
+                  :name "Hanger"
+                  :summary "* 7 A6M2 Rufe Seaplane")
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "B1 Type Submarine Carrier"
+             (unit
+              :name "B1 Type Submarine Carrier"
+              :image "WWIIJapanese/Submarine_I29Token.png"
+              :reference
+               "* 15kph Submerged
+* 100m Test Depth
+* Fast, very long ranged, and carried a single Yokosuka E14Y seaplane, located in a hangar in front of the conning tower, launched by a catapult.
+* A submarine could be equipped with 3-6 Kaiten torpedoes on the deck, but this limited dive depth."
+              :titles "I-15 Series"
+              :classification "Submarine"
+              :crew "94"
+              :mass "3654tons"
+              :length "108m"
+              :range "26000km"
+              :speedwater "44kph"
+              :width "9.3m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "Torpedo Type 95"
+                     (unititem
+                      :name "Torpedo Type 95"
+                      :facing "FFx6"
+                      :number "6"
+                      :rounds "17")
+                    "127mm/45 Cannon"
+                     (unititem
+                      :name "127mm/45 Cannon"
+                      :number "1")
+                    "Kaiten Kamikaze Torpedo"
+                     (unititem
+                      :name "Kaiten Kamikaze Torpedo"
+                      :number "4")))
+                :Hanger
+                 (unitskill
+                  :name "Hanger"
+                  :summary "* Yokosuka E14Y seaplane")
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))
+            "Kaidai VII Submarine"
+             (unit
+              :name "Kaidai VII Submarine"
+              :reference
+               "* 15kph Submerged
+* 80m Test Depth"
+              :classification "Submarine"
+              :crew "86"
+              :mass "2.6ktons"
+              :length "105m"
+              :range "15000km"
+              :speedwater "43kph"
+              :width "8.25m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "Torpedo Type 95"
+                     (unititem
+                      :name "Torpedo Type 95"
+                      :facing "FFx6"
+                      :number "6"
+                      :rounds "12")
+                    "127mm/45 Cannon"
+                     (unititem
+                      :name "127mm/45 Cannon"
+                      :number "1")
+                    "25mm Type 96 Autocannon"
+                     (unititem
+                      :name "25mm Type 96 Autocannon"
+                      :number "2")))
+                :Seamanship
+                 (unitskill
+                  :name "Seamanship"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "4")))))))
+    "WWII Soviet Equipment"
+     (chapter
+      :name "WWII Soviet Equipment"
+      :sectionmap
+       (sectionmap
+        "WWII Soviet Weapons"
+         (section
+          :name "WWII Soviet Weapons"
+          :itemmap
+           (itemmap
+            "7.62mm Tokarev"
+             (item
+              :name "7.62mm Tokarev"
+              :image "WWIIRussian/Pistol_Tokarev.jpg"
+              :classification "Pistol")
+            "7.62mm SVT-40"
+             (item
+              :name "7.62mm SVT-40"
+              :image "WWIIRussian/Rifle_SVT40.jpg"
+              :summary "7.62mm Semiautomatic Rifle"
+              :classification "Rifle")
+            "7.62mm Mosin-Nagant"
+             (item
+              :name "7.62mm Mosin-Nagant"
+              :image "WWIIRussian/Rifle_MosinNagantM1891.jpg"
+              :summary "7.62mm Bolt-action Rifle"
+              :classification "Rifle")
+            "7.62mm PPSh-41 SMG"
+             (item
+              :name "7.62mm PPSh-41 SMG"
+              :image "WWIIRussian/SMG_PPSh41.jpg"
+              :classification "Lt. MG"
+              :modifiers "Auto"
+              :range "200m")
+            "ROKS Flamethrower"
+             (item
+              :name "ROKS Flamethrower"
+              :classification "Flamethrower"
+              :crew "1"
+              :mass "22kg"
+              :modifiers "Fire, Auto"
+              :range "25m")
+            "7.62mm Degtyaryov LMG"
+             (item
+              :name "7.62mm Degtyaryov LMG"
+              :classification "Med. MG"
+              :modifiers "Auto, +1 Prepare")
+            "12.7mm DShK MG"
+             (item
+              :name "12.7mm DShK MG"
+              :classification "Hvy. MG"
+              :length "1.6m"
+              :mass "34kg"
+              :modifiers "Auto"
+              :rof "600/min")
+            "12.7mm UBS MG"
+             (item
+              :name "12.7mm UBS MG"
+              :reference
+               "* Used by the vast majority of Soviet military aircraft
+* It's rate of fire was nearly twice that of the comparable M2 Browning machine gun."
+              :classification "Hvy. MG"
+              :mass "21.5kg"
+              :muzzlevelocity "825m/s"
+              :rof "1000/min")
+            "20mm ShVAK Cannon"
+             (item
+              :name "20mm ShVAK Cannon"
+              :classification "Cannon"
+              :length "1679mm"
+              :mass "40kg"
+              :modifiers "Auto, HE, AP"
+              :muzzlevelocity "775m/s"
+              :rof "750/min")
+            "76.2mm F-34 Cannon"
+             (item
+              :name "76.2mm F-34 Cannon"
+              :classification "Cannon"
+              :modifiers "AP, HE")
+            "76.2mm ZiS-3Sh Cannon"
+             (item
+              :name "76.2mm ZiS-3Sh Cannon"
+              :classification "Cannon"
+              :modifiers "AP, HE")
+            "85mm D-5T Cannon"
+             (item
+              :name "85mm D-5T Cannon"
+              :classification "Cannon"
+              :modifiers "AP, HE")
+            "85mm ZiS-S-53 Cannon"
+             (item
+              :name "85mm ZiS-S-53 Cannon"
+              :classification "Cannon"
+              :modifiers "AP, HE")
+            "100mm D-10S Cannon"
+             (item
+              :name "100mm D-10S Cannon"
+              :classification "Cannon"
+              :modifiers "AP, HE")
+            "122mm A-19 Cannon"
+             (item
+              :name "122mm A-19 Cannon"
+              :classification "Cannon"
+              :muzzlevelocity "806m/s"
+              :rof "2/min")
+            "122mm M-30 Howitzer"
+             (item
+              :name "122mm M-30 Howitzer"
+              :summary "* M-30 howitzers were primarily employed for indirect fire against enemy personnel. It was also used against field fortifications, clearing minefields and breaching barbed wire. Fragments created by the explosion could penetrate up to 20 mm of armour."
+              :classification "Cannon"
+              :modifiers "Indirect, HE")
+            "152mm M-10 Howitzer"
+             (item
+              :name "152mm M-10 Howitzer"
+              :classification "Cannon"
+              :modifiers "HE")
+            "120mm M1938 Mortar"
+             (item
+              :name "120mm M1938 Mortar"
+              :classification "Artillery"
+              :modifiers "HE")
+            "133mm M-13 Rocket"
+             (item
+              :name "133mm M-13 Rocket"
+              :summary "* Warhead is 22kg"
+              :classification "Missile"
+              :length "1.8m"
+              :mass "42kg"
+              :range "5.4km")))))
+    "WWII Soviet Units"
+     (chapter
+      :name "WWII Soviet Units"
+      :sectionmap
+       (sectionmap
+        "WWII Soviet Aircraft"
+         (section
+          :name "WWII Soviet Aircraft"
+          :unitmap
+           (unitmap
+            "P-39 Airacobra"
+             (unit
+              :name "P-39 Airacobra"
+              :image "WWIIRussian/Fighter_P39Airacobra.png"
+              :reference
+               "* Lend Lease from US
+				* The low-speed, low-altitude turning nature of most air combat on the Russian Front suited the P-39's strengths: sturdy construction, reliable radio gear, and adequate firepower. The second-highest 				scoring Allied ace, Aleksandr Pokryshkin, flew the P-39. His unofficial score stands at nearly 60 Luftwaffe aircraft. His wingman, Grigori Rechkalov, scored 57 victories with the P-39. This is the highest score ever gained by any pilot with any U.S.-made aircraft."
+              :classification "Lt. Aircraft"
+              :crew "1"
+              :mass "3.8tons"
+              :height "3.8m"
+              :length "9.2m"
+              :range "840km"
+              :speedair "605kph"
+              :width "10.4m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "13mm"
+                  :back "13mm"
+                  :over "13mm"
+                  :side "13mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "37mm M4 Cannon"
+                     (unititem
+                      :name "37mm M4 Cannon"
+                      :facing "FF"
+                      :rounds "30")
+                    ".50 cal M2HB MG"
+                     (unititem
+                      :name ".50 cal M2HB MG"
+                      :facing "FFx2"
+                      :number "2"
+                      :rounds "400")
+                    ".30-06 M1919A4 MG"
+                     (unititem
+                      :name ".30-06 M1919A4 MG"
+                      :facing "FFx4"
+                      :number "4"
+                      :rounds "600")))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "3")))
+            "Lavochkin La-5"
+             (unit
+              :name "Lavochkin La-5"
+              :reference "* Exhaust gas often entered in the cockpit due to poor insulation of the engine compartment. Consequently, pilots ignored orders and frequently flew with their canopies open."
+              :classification "Lt. Aircraft"
+              :crew "1"
+              :mass "3.3tons"
+              :height "2.5m"
+              :length "8.7m"
+              :range "765km"
+              :speedair "648kph"
+              :width "9.8m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "10mm"
+                  :back "10mm"
+                  :over "10mm"
+                  :side "10mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "20mm ShVAK Cannon"
+                     (unititem
+                      :name "20mm ShVAK Cannon"
+                      :facing "FFx2"
+                      :rounds "120")
+                    "100kg Bomb"
+                     (unititem
+                      :name "100kg Bomb"
+                      :facing "Ux2")))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "3")))
+            "Yakovlev Yak-9"
+             (unit
+              :name "Yakovlev Yak-9"
+              :reference "* The most numerous Soviet fighter of the war"
+              :classification "Lt. Aircraft"
+              :crew "1"
+              :mass "3.2tons"
+              :height "3m"
+              :length "8.6m"
+              :range "675km"
+              :speedair "672kph"
+              :width "9.7m"
+              :unitpowermap
+               (unitpowermap
+                :Armor
+                 (unitpower
+                  :name "Armor"
+                  :front "10mm"
+                  :back "10mm"
+                  :over "10mm"
+                  :side "10mm"))
+              :unitskillmap
+               (unitskillmap
+                :Gunnery
+                 (unitskill
+                  :name "Gunnery"
+                  :level "4"
+                  :unititemmap
+                   (unititemmap
+                    "20mm ShVAK Cannon"
+                     (unititem
+                      :name "20mm ShVAK Cannon"
+                      :facing "FF"
+                      :rounds "120")
+                    "12.7mm UBS MG"
+                     (unititem
+                      :name "12.7mm UBS MG"
+                      :facing "FF"
+                      :number "1"
+                      :rounds "200")))
+                :Piloting
+                 (unitskill
+                  :name "Piloting"
+                  :level "4")
+                :Military
+                 (unitskill
+                  :name "Military"
+                  :level "3"))))))))))

@@ -71,6 +71,10 @@
               shadow          : rating
               beast           : rating
               classification  : string
+              crew            : string
+              energy          : string
+              explosive       : string
+              height          : string
               length          : string
               mass            : string
               modifiers       : string
@@ -78,7 +82,13 @@
               range           : string
               rof             : string
               rolemap         : rolemap
-              value           : string])
+              rounds          : string
+              speedair        : string
+              speedland       : string
+              speedspace      : string
+              speedwater      : string
+              value           : string
+              width           : string])
 
 (type itemmap : map
  :allowtypes [item])
@@ -97,6 +107,9 @@
 
 (type modifier : struct
  :traits [card])
+
+(type modifiermap : map
+ :allowtypes [modifier])
 
 (type playingcard : struct
  :properties [rank : rank
@@ -134,6 +147,7 @@
  :allowtypes [rule])
 
 (type scenario : struct
+ :properties [teammap : teammap]
  :traits     [card])
 
 (type scenariomap : map
@@ -145,6 +159,7 @@
               deckmap     : deckmap
               itemmap     : itemmap
               locationmap : locationmap
+              modifiermap : modifiermap
               powermap    : powermap
               rulemap     : rulemap
               scenariomap : scenariomap
@@ -181,11 +196,20 @@
  :traits [card])
 
 (type suitmap : map
- :traits     [card]
  :allowtypes [suit])
 
+(type team : struct
+ :properties [completevictory : string
+              deploy          : string
+              forces          : string
+              partialvictory  : string]
+ :traits [card])
+
+(type teammap : map
+ :allowtypes [team])
+
 (type terrain : struct
- :traits     [card])
+ :traits [card])
 
 (type terrainmap : map
  :allowtypes [terrain])
@@ -212,6 +236,11 @@
               mass            : string
               height          : string
               length          : string
+              range           : string
+              speedair        : string
+              speedland       : string
+              speedspace      : string
+              speedwater      : string
               value           : string
               width           : string
               damagelist      : damagelist
@@ -230,6 +259,7 @@
 (type unititem : struct
  :properties [facing : string
               number : string
+              rounds : string
               value  : string]
  :traits [card])
 

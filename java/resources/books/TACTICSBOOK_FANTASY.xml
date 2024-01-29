@@ -349,6 +349,8 @@
 					<summary>Ravage</summary>
 				</item>
 			</skill>
+			<skill name="Psychic Powers" level="10">
+			</skill>
 			<power name="Conviction" level="10">
 			</power>
 		</unit>
@@ -357,7 +359,11 @@
 			<summary>
 				Human Priestess
 			</summary>
-			<power name="Conviction">
+			<skill name="Mental Powers" level="12">
+			</skill>
+			<skill name="Psychic Powers" level="12">
+			</skill>
+			<power name="Conviction" level="12">
 			</power>
 			<power name="Invocation" level="16">
 				<ability name="Aspecting" />
@@ -534,10 +540,13 @@
 					* They create shrunken heads from their victims and wear them as jujus. It is said that they can capture a person's soul and control their body like a mindless zombie.
 					* Some have trained Death's Head Vipers as pets and wear them as bracelets.
 				</summary>
-				<skill name="Correspondence" />
-				<skill name="Enchantment" />
-				<skill name="Naturalism" />
-				<skill name="Animal Handling" />
+				<power name="Sympathy" />
+				<power name="Enchantment" />
+				<power name="Naturalism" />
+				<power name="Madness" />
+				<skill name="Animal Handling">
+     <ability name="Snake Charming" />
+    </skill>
 			</unit>
 			<unit name="Death's Head Viper">
 				<titles>Wrist Viper</titles>
@@ -693,7 +702,7 @@
 				</summary>
 			</unit>
 			<unit name="Donblas">
-				<titles>Justice Bringer</title>
+				<titles>Justice Bringer</titles>
 				<reference>
 					* It was as if some enormous sun, thousands of times larger than earth's, had sent a ray of light pulsing through the cosmos, defying the flimsy barriers of Time and Space... the majestic Lords of Law, their earthly forms so beautiful that they challenged Elric's sanity... Leading them came Donblas, the Justic Maker, a smile upon his perfect lips. He carried a slender sword in his right hand, a sword that was straight and sharp and like a beam of light itself. - Stormbringer
 				</reference>
@@ -1734,9 +1743,9 @@
 				* Abilities - The Mandragore are weak fighters who rely on surprise and numbers to battle large foes.
 			</summary>
 			<unit name="Mandragore Herbalist">
-				<skill name="Naturalism">
+				<power name="Naturalism">
 					<ability name="Warp Wood" />
-				</skill>
+				</power>
 				<skill name="Physical Weakness">
 					<ability name="Vulnerable to Fire" />
 				</skill>
@@ -2146,7 +2155,7 @@
 		</place>
 	</section>
 	<section name="Lower Realms">
-		<titles>Under Realms</tiltes>
+		<titles>Under Realms</titles>
 		<summary>
 			* Those places closest to the very beginning and the final end of the universe.
 		</summary>

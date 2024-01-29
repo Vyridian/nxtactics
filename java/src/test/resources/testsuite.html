@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Suite</title>
     <style>
       body {
@@ -14016,8 +14017,15 @@
  (xml
   :tag "doc"
   (msg
-   :severity 2
-   :text "Invalid Xml Close tag: /wrong"))
+   :code ":invalidxmlclosetag"
+   :detail
+    (anymap
+     :tag "/wrong"
+     :startpos 0
+     :endpos 0
+     :line 0
+     :column 0)
+   :severity 2))
  (xml-close&lt;-xml-textblock
   (xml
    :tag "doc")
@@ -14031,8 +14039,15 @@
   :msgs
    (msglist
     (msg
-     :severity 2
-     :text "Invalid Xml Close tag: /wrong"))))</p>
+     :code ":invalidxmlclosetag"
+     :detail
+      (anymap
+       :tag "/wrong"
+       :startpos 0
+       :endpos 0
+       :line 0
+       :column 0)
+     :severity 2))))</p>
                     </td>
                     <td>
                       <p class="preformatted">(xml
@@ -14041,8 +14056,15 @@
   :msgs
    (msglist
     (msg
-     :severity 2
-     :text "Invalid Xml Close tag: /wrong"))))</p>
+     :code ":invalidxmlclosetag"
+     :detail
+      (anymap
+       :tag "/wrong"
+       :startpos 0
+       :endpos 0
+       :line 0
+       :column 0)
+     :severity 2))))</p>
                     </td>
                   </tr>
                   <tr>
@@ -18232,11 +18254,89 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/base</p>
-              <p class="coveragenums">0% 0/94</p>
-              <p class="coveragenums">0% 0/59</p>
+              <p class="coveragenums">0% 0/99</p>
+              <p class="coveragenums">0% 0/64</p>
               <p class="coveragenums">0% 0/34</p>
               <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">5% 5/94</p>
+              <p class="coveragenums">5% 5/99</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/advanced_rules</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/age_of_sail</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
               <p class="coveragenums">0% 0/1</p>
               <p class="coveragenums">0% 0/1</p>
             </summary>
@@ -18309,14 +18409,92 @@ ab
           <details>
             <summary>
               <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/ancients</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/bestiary</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/bookloader</p>
-              <p class="coveragenums">35% 38/106</p>
+              <p class="coveragenums">35% 44/125</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">35% 38/106</p>
-              <p class="coveragenums">87% 93/106</p>
-              <p class="coveragenums">0% 0/106</p>
-              <p class="coveragenums">0% 0/106</p>
+              <p class="coveragenums">35% 44/125</p>
+              <p class="coveragenums">90% 113/125</p>
+              <p class="coveragenums">0% 0/125</p>
+              <p class="coveragenums">0% 0/125</p>
             </summary>
             <div>
               <table>
@@ -19008,6 +19186,64 @@ ab
                       <p class="passflag">Pass</p>
                     </td>
                     <td>
+                      <p class="preformatted">damage&lt;-damage-stringmap</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/damage
+  :name  "name"
+  :image "image")
+ (damage&lt;-damage-stringmap
+  (empty base/damage)
+  (stringmap
+   :name  "name"
+   :image "image")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(damage
+ :name "name"
+ :image "image")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(damage
+ :name "name"
+ :image "image")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">damage&lt;-damage-xmlchild</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/damage
+  :titles "titles")
+ (damage&lt;-damage-xmlchild
+  (empty base/damage)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(damage
+ :titles "titles")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(damage
+ :titles "titles")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
                       <p class="preformatted">power&lt;-power-stringmap</p>
                     </td>
                     <td>
@@ -19626,6 +19862,64 @@ ab
                       <p class="passflag">Pass</p>
                     </td>
                     <td>
+                      <p class="preformatted">terrain&lt;-terrain-stringmap</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/terrain
+  :name  "name"
+  :image "image")
+ (terrain&lt;-terrain-stringmap
+  (empty base/terrain)
+  (stringmap
+   :name  "name"
+   :image "image")))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(terrain
+ :name "name"
+ :image "image")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(terrain
+ :name "name"
+ :image "image")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">terrain&lt;-terrain-xmlchild</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/terrain
+  :titles "titles")
+ (terrain&lt;-terrain-xmlchild
+  (empty base/terrain)
+  (xml/xml
+   :tag "titles"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "titles")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(terrain
+ :titles "titles")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(terrain
+ :titles "titles")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
                       <p class="preformatted">unit&lt;-unit-stringmap</p>
                     </td>
                     <td>
@@ -19963,7 +20257,7 @@ ab
                     <td>
                       <p class="preformatted">(test
  (base/unititem
-  :titles "titles")
+  :titles "titles1")
  (unititem&lt;-unititem-xmlchild
   (empty base/unititem)
   (xml/xml
@@ -19971,39 +20265,15 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))</p>
+      :text "titles1")))))</p>
                     </td>
                     <td>
                       <p class="preformatted">(unititem
- (msgblock
-  :msgs
-   (msglist
-    (msg
-     :code ":invalidkey"
-     :detail ":titles"
-     :path "nx/tactics/base/unititem"
-     :severity 3)
-    (msg
-     :code ":invalidkey"
-     :detail ":titles"
-     :path "nx/tactics/base/unititem"
-     :severity 3))))</p>
+ :titles "titles1")</p>
                     </td>
                     <td>
                       <p class="preformatted">(unititem
- (msgblock
-  :msgs
-   (msglist
-    (msg
-     :code ":invalidkey"
-     :detail ":titles"
-     :path "nx/tactics/base/unititem"
-     :severity 3)
-    (msg
-     :code ":invalidkey"
-     :detail ":titles"
-     :path "nx/tactics/base/unititem"
-     :severity 3))))</p>
+ :titles "titles1")</p>
                     </td>
                   </tr>
                   <tr>
@@ -20016,17 +20286,18 @@ ab
                     <td>
                       <p class="preformatted">(test
  (base/unititem
-  :name "name"
-  :image "image"
-  :titles "titles"
-  :reference "reference")
+  :name "name1"
+  :image "image1"
+  :titles "titles1"
+  :reference "reference1"
+  :summary "summary1")
  (unititem&lt;-xml
   (xml/xml
    :tag "unititem"
    :propmap
     (stringmap
-     :name "name"
-     :image "image")
+     :name "name1"
+     :image "image1")
    :children
     (xml/xmllist
      (xml/xml
@@ -20034,69 +20305,93 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "titles")))
+         :text "titles1")))
      (xml/xml
       :tag "reference"
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))))))</p>
+         :text "reference1")))
+     (xml/xml
+      :tag "summary"
+      :children
+       (xml/xmllist
+        (xml/xml
+         :text "summary1")))))))</p>
                     </td>
                     <td>
                       <p class="preformatted">(unititem
- :name "name"
- :image "image"
- (msgblock
-  :msgs
-   (msglist
-    (msg
-     :code ":invalidkey"
-     :detail ":titles"
-     :path "nx/tactics/base/unititem"
-     :severity 3)
-    (msg
-     :code ":invalidkey"
-     :detail ":titles"
-     :path "nx/tactics/base/unititem"
-     :severity 3)
-    (msg
-     :code ":invalidkey"
-     :detail ":reference"
-     :path "nx/tactics/base/unititem"
-     :severity 3)
-    (msg
-     :code ":invalidkey"
-     :detail ":reference"
-     :path "nx/tactics/base/unititem"
-     :severity 3))))</p>
+ :name "name1"
+ :image "image1"
+ :reference "reference1"
+ :summary "summary1"
+ :titles "titles1")</p>
                     </td>
                     <td>
                       <p class="preformatted">(unititem
- :name "name"
- :image "image"
- (msgblock
-  :msgs
-   (msglist
-    (msg
-     :code ":invalidkey"
-     :detail ":titles"
-     :path "nx/tactics/base/unititem"
-     :severity 3)
-    (msg
-     :code ":invalidkey"
-     :detail ":titles"
-     :path "nx/tactics/base/unititem"
-     :severity 3)
-    (msg
-     :code ":invalidkey"
-     :detail ":reference"
-     :path "nx/tactics/base/unititem"
-     :severity 3)
-    (msg
-     :code ":invalidkey"
-     :detail ":reference"
-     :path "nx/tactics/base/unititem"
-     :severity 3))))</p>
+ :name "name1"
+ :image "image1"
+ :reference "reference1"
+ :summary "summary1"
+ :titles "titles1")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">unitpower&lt;-unitpower-xmlchild</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/unitpower
+  :summary "summary1")
+ (unitpower&lt;-unitpower-xmlchild
+  (empty base/unitpower)
+  (xml/xml
+   :tag "summary"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "summary1")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(unitpower
+ :summary "summary1")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(unitpower
+ :summary "summary1")</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="passflag">Pass</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">unitskill&lt;-unitskill-xmlchild</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(test
+ (base/unitskill
+  :summary "summary1")
+ (unitskill&lt;-unitskill-xmlchild
+  (empty base/unitskill)
+  (xml/xml
+   :tag "summary"
+   :children
+    (xml/xmllist
+     (xml/xml
+      :text "summary1")))))</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(unitskill
+ :summary "summary1")</p>
+                    </td>
+                    <td>
+                      <p class="preformatted">(unitskill
+ :summary "summary1")</p>
                     </td>
                   </tr>
                   <tr>
@@ -20283,6 +20578,201 @@ ab
           <details>
             <summary>
               <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/characters</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/combat</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/core_rules</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/fantasy</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/gear</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/gettingstarted</p>
               <p class="coveragenums">0% 0/3</p>
               <p class="coveragenums">100% 0/0</p>
@@ -20291,6 +20781,591 @@ ab
               <p class="coveragenums">0% 0/3</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/giant_monsters</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/high_technology</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/horror</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/land_sea_and_air</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/magic</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/medieval</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/modern</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/modern_fantasy</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/powers</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/prehistory</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/pulp_fiction</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/science_fiction</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/skills</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/space_and_time</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/superheroes</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
             </summary>
             <div>
               <table>

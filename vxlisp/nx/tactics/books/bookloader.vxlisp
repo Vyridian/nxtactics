@@ -727,11 +727,22 @@
     "name"
     "image"
     "classification"
+    "crew"
+    "energy"
+    "explosive"
+    "height"
     "length"
     "mass"
+    "modifiers"
     "muzzlevelocity"
     "range"
-    "rof")
+    "rof"
+    "rounds"
+    "speedair"
+    "speedland"
+    "speedspace"
+    "speedwater"
+    "width")
    (copy current
     key value))
   (else
@@ -863,7 +874,76 @@
    location<-location-xmlchild))
  :doc "Returns a location from a given xml.")
 
-(func modifier<-xml : base/modifier)
+(func modifier<-modifier-key-value : base/modifier
+ [current : base/modifier
+  key     : string
+  value   : string]
+ (switch : base/modifier
+  key
+  (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
+  (else
+   (copy current
+    (msg<-error
+     :invalidproperty
+     (anymap
+      :type  base/modifier
+      :prop  key
+      :value value)))))
+ :doc "Returns a modified modifier from a key value.")
+
+(func modifier<-modifier-stringmap : base/modifier
+ [modifier : base/modifier
+  propmap  : stringmap]
+ (any<-map-start-reduce : base/modifier
+  propmap
+  modifier
+  modifier<-modifier-key-value)
+ :doc "Returns a modifier from a propmap.")
+
+(func modifier<-modifier-xmlchild : base/modifier
+ [modifier : base/modifier
+  child    : xml/xml]
+ (let : base/modifier
+  [tag : string := (:tag child)]
+  (switch : base/modifier
+   tag
+   (case "" modifier)
+   (case
+    (list
+     "reference"
+     "summary"
+     "titles")
+    (copy modifier
+     tag
+     (xml/string-first<-xml
+      child)))
+   (else
+    (copy modifier
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/modifier
+       :tag tag))))))
+ :doc "Returns a modified modifier based on a given child xml.")
+
+(func modifier<-xml : base/modifier
+ [xml : xml/xml]
+ (let : base/modifier
+  [propmap  : stringmap     := (:propmap xml)
+   modifier : base/modifier := (modifier<-modifier-stringmap
+                                (empty base/modifier)
+                                propmap)]
+  (any<-list-start-reduce : base/modifier
+   (:children xml)
+   modifier
+   modifier<-modifier-xmlchild))
+ :doc "Returns a modifier from a given xml.")
 
 (func power<-power-key-value : base/power
  [current : base/power
@@ -1185,6 +1265,10 @@
      tag
      (xml/string-first<-xml
       child)))
+   (case "team"
+    (scenario<-scenario-xmlteam
+     scenario
+     child))
    (else
     (copy scenario
      (msg<-error
@@ -1194,16 +1278,31 @@
        :tag tag))))))
  :doc "Returns a modified scenario based on a given child Xml.")
 
+(func scenario<-scenario-xmlteam : base/scenario
+ [scenario : base/scenario
+  xmlteam  : xml/xml]
+ (let : base/scenario
+  [current : base/team    := (team<-xml
+                              xmlteam)
+   name    : string       := (:name current)
+   origmap : base/teammap := (:teammap scenario)
+   chgmap  : base/teammap := (copy origmap
+                              name
+                              current)]
+  (copy scenario
+   :teammap chgmap))
+ :doc "Return a scenario with new team added to teammap")
+
 (func scenario<-xml : base/scenario
  [xml : xml/xml]
  (let : base/scenario
-  [propmap : stringmap     := (:propmap xml)
-   scen    : base/scenario := (scenario<-scenario-stringmap
-                               (empty base/scenario)
-                               propmap)]
+  [propmap  : stringmap     := (:propmap xml)
+   scenario : base/scenario := (scenario<-scenario-stringmap
+                                (empty base/scenario)
+                                propmap)]
   (any<-list-start-reduce : base/scenario
    (:children xml)
-   scen
+   scenario
    scenario<-scenario-xmlchild))
  :test (test
         (base/scenario
@@ -1291,6 +1390,10 @@
     (section<-section-xmlitem
      section
      child))
+   (case "modifier"
+    (section<-section-xmlmodifier
+     section
+     child))
    (case "place"
     (section<-section-xmllocation
      section
@@ -1376,6 +1479,21 @@
   (copy section
    :locationmap chgmap))
  :doc "Return a section with new location added to locationmap")
+
+(func section<-section-xmlmodifier : base/section
+ [section     : base/section
+  xmlmodifier : xml/xml]
+ (let : base/section
+  [modifier : base/modifier    := (modifier<-xml
+                                   xmlmodifier)
+   name     : string           := (:name modifier)
+   origmap  : base/modifiermap := (:modifiermap section)
+   chgmap   : base/modifiermap := (copy origmap
+                                   name
+                                   modifier)]
+  (copy section
+   :modifiermap chgmap))
+ :doc "Return a section with new modifier added to modifiermap")
 
 (func section<-section-xmlpower : base/section
  [section  : base/section
@@ -1891,6 +2009,81 @@
   comma)
  :doc "Returns the write filename from a book")
 
+(func team<-team-key-value : base/team
+ [current : base/team
+  key     : string
+  value   : string]
+ (switch : base/team
+  key
+  (case "" current)
+  (case
+   (list
+    "name"
+    "image")
+   (copy current
+    key value))
+  (else
+   (copy current
+    (msg<-error
+     :invalidproperty
+     (anymap
+      :type  base/team
+      :prop  key
+      :value value)))))
+ :doc "Returns a modified team from a key value.")
+
+(func team<-team-stringmap : base/team
+ [team     : base/team
+  propmap  : stringmap]
+ (any<-map-start-reduce : base/team
+  propmap
+  team
+  team<-team-key-value)
+ :doc "Returns a team from a propmap.")
+
+(func team<-team-xmlchild : base/team
+ [team  : base/team
+  child : xml/xml]
+ (let : base/team
+  [tag : string := (:tag child)]
+  (switch : base/team
+   tag
+   (case "" team)
+   (case
+    (list
+     "reference"
+     "summary"
+     "titles"
+     "completevictory"
+     "deploy"
+     "forces"
+     "partialvictory")
+    (copy team
+     tag
+     (xml/string-first<-xml
+      child)))
+   (else
+    (copy team
+     (msg<-error
+      :invalidtagfound
+      (anymap
+       :type base/team
+       :tag tag))))))
+ :doc "Returns a modified team based on a given child xml.")
+
+(func team<-xml : base/team
+ [xml : xml/xml]
+ (let : base/team
+  [propmap : stringmap := (:propmap xml)
+   team    : base/team := (team<-team-stringmap
+                           (empty base/team)
+                           propmap)]
+  (any<-list-start-reduce : base/team
+   (:children xml)
+   team
+   team<-team-xmlchild))
+ :doc "Returns a team from a given xml.")
+
 (func terrain<-terrain-key-value : base/terrain
  [current : base/terrain
   key     : string
@@ -2001,7 +2194,12 @@
     "length"
     "mass"
     "mind"
+    "range"
     "speed"
+    "speedair"
+    "speedland"
+    "speedspace"
+    "speedwater"
     "width"
     "will")
    (copy current
@@ -2306,8 +2504,10 @@
    (list
     "name"
     "image"
+    "facing"
     "modifiers"
-    "number")
+    "number"
+    "rounds")
    (copy current
     key value))
   (else
