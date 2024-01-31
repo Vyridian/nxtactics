@@ -637,7 +637,12 @@ public final class Core {
       }
     } else if (value instanceof Core.Type_string) {
       Core.Type_string valstring = Core.f_any_from_any(Core.t_string, value);
-      String sval = "\"" + valstring.vx_string() + "\"";
+      String sval = valstring.vx_string();
+      if (sval.indexOf("\"") < 0) {
+        sval = "\"" + sval + "\"";
+      } else {
+        sval = "`" + sval + "`";
+      }
       if (valstring.vx_msgblock() != null) {
         String msgtext = Core.vx_string_from_any_indent(valstring.vx_msgblock(), indent, linefeed);
         output  = "\n" + indenttext + "(string";

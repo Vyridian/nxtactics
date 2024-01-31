@@ -5,6 +5,7 @@ import java.util.Map;
 import com.vxlisp.vx.*;
 import com.vxlisp.nx.tactics.books.*;
 import com.vxlisp.vx.data.*;
+import com.vxlisp.vx.ui.*;
 
 public final class Apptactics {
 
@@ -208,8 +209,38 @@ public final class Apptactics {
     output = Core.f_let(
       Core.t_string,
       Core.t_any_from_func.vx_fn_new(() -> {
-        final Base.Type_book book = Bookloader.f_book_read_from_bookname(context, Core.vx_new_string("TACTICSBOOK_WORLDWARS"));
-        final Core.Type_boolean done = Bookloader.f_boolean_write_from_book(context, book);
+        final Core.Type_stringlist booknames = Core.f_new(
+          Core.t_stringlist,
+          Core.t_anylist.vx_new(
+              Core.vx_new_string("TACTICSBOOK_CORE"),
+              Core.vx_new_string("TACTICSBOOK_ADVANCED"),
+              Core.vx_new_string("TACTICSBOOK_ANCIENT"),
+              Core.vx_new_string("TACTICSBOOK_AOSAIL"),
+              Core.vx_new_string("TACTICSBOOK_AOSTEAM"),
+              Core.vx_new_string("TACTICSBOOK_BESTIARY"),
+              Core.vx_new_string("TACTICSBOOK_CHARS"),
+              Core.vx_new_string("TACTICSBOOK_COMBAT"),
+              Core.vx_new_string("TACTICSBOOK_FANTASY"),
+              Core.vx_new_string("TACTICSBOOK_GEAR"),
+              Core.vx_new_string("TACTICSBOOK_GIANT"),
+              Core.vx_new_string("TACTICSBOOK_HIGHTECH"),
+              Core.vx_new_string("TACTICSBOOK_HORROR"),
+              Core.vx_new_string("TACTICSBOOK_LANDSEA"),
+              Core.vx_new_string("TACTICSBOOK_MAGIC"),
+              Core.vx_new_string("TACTICSBOOK_MEDIEVAL"),
+              Core.vx_new_string("TACTICSBOOK_MFANTASY"),
+              Core.vx_new_string("TACTICSBOOK_MODERN"),
+              Core.vx_new_string("TACTICSBOOK_POWERS"),
+              Core.vx_new_string("TACTICSBOOK_PREHISTORY"),
+              Core.vx_new_string("TACTICSBOOK_PULP"),
+              Core.vx_new_string("TACTICSBOOK_SCIFI"),
+              Core.vx_new_string("TACTICSBOOK_SKILLS"),
+              Core.vx_new_string("TACTICSBOOK_SPACE"),
+              Core.vx_new_string("TACTICSBOOK_SUPER"),
+              Core.vx_new_string("TACTICSBOOK_WORLDWARS")
+          )
+        );
+        final Core.Type_boolean done = Bookloader.f_boolean_write_from_booknames(context, booknames);
         return Core.f_string_from_any(done);
       })
     );

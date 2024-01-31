@@ -2,42 +2,398 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
- (book
+ (base/book
   :name "Land, Sea and Air"
   :image "LandSeaAndAir.jpg"
   :chaptermap
-   (chaptermap
-    "Land, Sea and Air Overview"
-     (chapter
-      :name "Land, Sea and Air Overview"
+   (base/chaptermap
+    "Land, Sea and Air Overview" (chapter_land_sea_and_air_overview)
+    "Land Sea and Air Unit Types" (chapter_land_sea_and_air_unit_types)
+    "Land Sea and Air Rules" (chapter_land_sea_and_air_rules)
+    "Land, Sea and Air Terrain" (chapter_land_sea_and_air_terrain)
+    "Maps" (chapter_maps)
+   )))
+
+(func chapter_land_sea_and_air_overview : base/chapter
+ (chapter
+  :name "Land, Sea and Air Overview"
+  :sectionmap
+   (sectionmap
+    "Why Tactics:Land, Sea and Air?"
+     (section
+      :name "Why Tactics:Land, Sea and Air?"))))
+
+(func chapter_land_sea_and_air_unit_types : base/chapter
+ (chapter
+  :name "Land Sea and Air Unit Types"
+  :sectionmap
+   (sectionmap
+    "Land Units"
+     (section
+      :name "Land Units"
+      :summary
+       "* [Land Map]
+* [Standard Scale]
+
+Hierarchy
+* Fireteam - 4-5 infantry led by a Lance Corporal or Sergeant
+* Squad - 2+ Fireteams (8-16) led by a Corporal or Staff Sergeant
+* Platoon - 2+ Squads (25-60) led by a Warrant Officer or Lieutenant
+* Company - 2-8 Platoons (70-250) led by a Major
+* Battalion - 2-6 Companies (300-1000) led by a Lieutenant Colonel
+* Regiment - 2+ Battalions (2000-3000) led by a Colonel
+* Brigade - 2+ Regiments (3000-5000) led by a Brigadier
+* Division - 2-4 Brigades (10,000-20,000) led by a Major General
+* Corps - 2+ Divisions (30,000-50,000) led by a Lieutenant General
+* Army - 2+ Corps (50,000-60,000) led by a General
+* Army Group - 2+ Armies (100,000+) led by a General or a Field Marshal
+* Theater / Front - 10+ Army Groups (1,000,000+) led by a General or Field Marshal"
       :sectionmap
        (sectionmap
-        "Why Tactics:Land, Sea and Air?"
+        "Modern Land Vehicles"
          (section
-          :name "Why Tactics:Land, Sea and Air?")))
-    "Land Sea and Air Unit Types"
-     (chapter
-      :name "Land Sea and Air Unit Types"
+          :name "Modern Land Vehicles"
+          :unitmap
+           (unitmap
+            :Motorcycle
+             (unit
+              :name "Motorcycle")))))
+    "Naval Vessels"
+     (section
+      :name "Naval Vessels"
+      :summary "200% Load, 75% Speed, -1 Handling"
       :sectionmap
        (sectionmap
-        "Strategic Movement"
+        "Archaic Naval Vessels"
          (section
-          :name "Strategic Movement")))
-    "Land Sea and Air Rules"
-     (chapter
-      :name "Land Sea and Air Rules"
-      :sectionmap
-       (sectionmap
-        "Vehicle Construction"
-         (section
-          :name "Vehicle Construction"
+          :name "Archaic Naval Vessels"
+          :summary
+           "* [Ocean Map]
+* [Standard Scale]
+
+Hierarchy
+* Flotilla - A small number of non-capital vessels, usually of the same or similar types led by a Flotilla Admiral or a
+Commodore.
+* Squadron - A small number of vessels including capital ships led by a Rear Admiral or a Commodore.
+* Task Group - 2 Squadrons led by a Rear Admiral
+* Task Force / Battlefleet - 2 Task Groups led by a Vice Admiral
+* Fleet - 2 Task Forces led by an Admiral
+* Navy / Admiralty - 2 Fleets led by a Fleet Admiral"
           :rulemap
            (rulemap
-            "Choose Vehicle Type"
+            :Broadside
              (rule
-              :name "Choose Vehicle Type"
+              :name "Broadside"
+              :image "Rules/Images/Broadside.png"
               :summary
-               "* Cycle
+               "* Archaic ships mount large guns on each side of the ship and must turn sideways to attack targets.  All attacks
+from such guns may only fire directly at 90 degrees from the front of the ship."))
+          :unitmap
+           (unitmap
+            :Canoe
+             (unit
+              :name "Canoe"
+              :summary "* Mini, Stripped, Unpowered")
+            :Catamaran
+             (unit
+              :name "Catamaran")
+            "Deep Sea Explorer Submarine"
+             (unit
+              :name "Deep Sea Explorer Submarine")
+            :Dinghy
+             (unit
+              :name "Dinghy")
+            "Fishing Boat"
+             (unit
+              :name "Fishing Boat"
+              :summary "* Medium, Stripped, Sail")
+            :Frigate
+             (unit
+              :name "Frigate")
+            :Galley
+             (unit
+              :name "Galley")
+            :Galleon
+             (unit
+              :name "Galleon")
+            :Kayak
+             (unit
+              :name "Kayak"
+              :summary "* Mini, Sport, Stripped, Unpowered")
+            "Merchant Ship"
+             (unit
+              :name "Merchant Ship")
+            :Minisub
+             (unit
+              :name "Minisub")
+            :Outrigger
+             (unit
+              :name "Outrigger")
+            :Rowboat
+             (unit
+              :name "Rowboat"
+              :summary "* Light, Stripped, Unpowered")
+            "War Barge"
+             (unit
+              :name "War Barge")))
+        "Modern Civilian Vessels"
+         (section
+          :name "Modern Civilian Vessels"
+          :unitmap
+           (unitmap
+            "Cruise Liner"
+             (unit
+              :name "Cruise Liner")
+            "Hydrofoil Passenger Ship"
+             (unit
+              :name "Hydrofoil Passenger Ship")
+            "Jet Ski"
+             (unit
+              :name "Jet Ski"
+              :summary "* Light, Sport")
+            :Runabout
+             (unit
+              :name "Runabout")
+            :Sunfish
+             (unit
+              :name "Sunfish"
+              :summary "* Light, Sport, Stripped")
+            :Surfboard
+             (unit
+              :name "Surfboard"
+              :summary "* Personal, Sport, Stripped, Unpowered")
+            "Tanker Ship"
+             (unit
+              :name "Tanker Ship")
+            "Tramp Steamer"
+             (unit
+              :name "Tramp Steamer")
+            "Transport Ship"
+             (unit
+              :name "Transport Ship")
+            "Super Tanker"
+             (unit
+              :name "Super Tanker")
+            "Swamp Buggy"
+             (unit
+              :name "Swamp Buggy")
+            "Windsurf Board"
+             (unit
+              :name "Windsurf Board"
+              :summary "* Personal, Sport, Stripped, Sail")
+            :Yacht
+             (unit
+              :name "Yacht")))
+        "Modern Military Vessels"
+         (section
+          :name "Modern Military Vessels"
+          :unitmap
+           (unitmap
+            "Aircraft Carrier"
+             (unit
+              :name "Aircraft Carrier")
+            "Battleship Class"
+             (unit
+              :name "Battleship Class")
+            :Cruiser
+             (unit
+              :name "Cruiser")
+            :Destroyer
+             (unit
+              :name "Destroyer")
+            :Dreadnought
+             (unit
+              :name "Dreadnought")
+            :Gunboat
+             (unit
+              :name "Gunboat")
+            "Hunter Killer Submarine"
+             (unit
+              :name "Hunter Killer Submarine")
+            "Nuclear Submarine"
+             (unit
+              :name "Nuclear Submarine")
+            "Torpedo Boat"
+             (unit
+              :name "Torpedo Boat")))))
+    :Aircraft
+     (section
+      :name "Aircraft"
+      :summary
+       "Hierarchy
+* Flight - 4-6 Aircraft led by a Captain or Flight Lieutenant
+* Squadron - 3-4 Flights (7-16 Aircraft) led by a Lieutenant Colonel or a Squadron Leader
+* Wing - 3-4 Squadrons (17-48  Aircraft) led by a Wing Commander
+* Air Wing - 2+ Wings (48-100  Aircraft) led by a Brigadier or a a Air Commodore"
+      :rulemap
+       (rulemap
+        "Stall Speed"
+         (rule
+          :name "Stall Speed"))
+      :sectionmap
+       (sectionmap
+        "Unmanned Aerial Vehicles (UAV)"
+         (section
+          :name "Unmanned Aerial Vehicles (UAV)")
+        "Personal Aircraft"
+         (section
+          :name "Personal Aircraft"
+          :unitmap
+           (unitmap
+            :Parachute
+             (unit
+              :name "Parachute")
+            :Hanglider
+             (unit
+              :name "Hanglider")
+            "Jet Pack"
+             (unit
+              :name "Jet Pack")
+            :Sailplane
+             (unit
+              :name "Sailplane"
+              :titles "Civilian Glider")
+            :Ultralight
+             (unit
+              :name "Ultralight")))
+        :Helicopters
+         (section
+          :name "Helicopters"
+          :unitmap
+           (unitmap
+            :Gyroplane
+             (unit
+              :name "Gyroplane")
+            "Mini Copter"
+             (unit
+              :name "Mini Copter")
+            "Civilian Helicopter"
+             (unit
+              :name "Civilian Helicopter")
+            "Attack Helicopter"
+             (unit
+              :name "Attack Helicopter")
+            "Cargo Copter"
+             (unit
+              :name "Cargo Copter")))
+        "Prop Planes"
+         (section
+          :name "Prop Planes"
+          :unitmap
+           (unitmap
+            :Bi-Plane
+             (unit
+              :name "Bi-Plane")
+            "Cargo Transport, Prop"
+             (unit
+              :name "Cargo Transport, Prop")
+            "Fighter, Prop"
+             (unit
+              :name "Fighter, Prop")
+            "Flying Fortress"
+             (unit
+              :name "Flying Fortress")
+            :Osprey
+             (unit
+              :name "Osprey")
+            "Piper Cub"
+             (unit
+              :name "Piper Cub")
+            "Turbojet Plane"
+             (unit
+              :name "Turbojet Plane")))
+        "Jet Planes"
+         (section
+          :name "Jet Planes"
+          :unitmap
+           (unitmap
+            "Private Jet"
+             (unit
+              :name "Private Jet")
+            "Commercial Airliner"
+             (unit
+              :name "Commercial Airliner")
+            "Cargo Transport, Jet"
+             (unit
+              :name "Cargo Transport, Jet")
+            :Harrier
+             (unit
+              :name "Harrier")
+            "Interceptor, Jet"
+             (unit
+              :name "Interceptor, Jet")
+            "Tank Buster"
+             (unit
+              :name "Tank Buster")
+            :Bomber
+             (unit
+              :name "Bomber")
+            "Strategic Bomber"
+             (unit
+              :name "Strategic Bomber")))))
+    "Strategic Movement"
+     (section
+      :name "Strategic Movement"))))
+
+(func chapter_land_sea_and_air_rules : base/chapter
+ (chapter
+  :name "Land Sea and Air Rules"
+  :sectionmap
+   (sectionmap
+    "Large Unit Rules"
+     (section
+      :name "Large Unit Rules"
+      :rulemap
+       (rulemap
+        "Large Units"
+         (rule
+          :name "Large Units"
+          :summary
+           "* [Action]: Vehicles with multiple crew members that take up more than 1 space, may take 1 Action per space.
+It must, however, perform all Actions at the same time before further Movement.")
+        "Huge Units"
+         (rule
+          :name "Huge Units")))
+    "Land Sea and Air Movement"
+     (section
+      :name "Land Sea and Air Movement"
+      :rulemap
+       (rulemap
+        :Acceleration
+         (rule
+          :name "Acceleration")
+        "Movement - Large Unit"
+         (rule
+          :name "Movement - Large Unit"
+          :image "Rules/Images/MoveLarge.png")
+        "Movement - Huge Unit"
+         (rule
+          :name "Movement - Huge Unit"
+          :image "Rules/Images/MoveHuge.png")
+        :Collisions
+         (rule
+          :name "Collisions"
+          :reference "Ramming Speed! - D-Day, Animal House")
+        "Movement Range"
+         (rule
+          :name "Movement Range")
+        "Turn Radius"
+         (rule
+          :name "Turn Radius"
+          :summary
+           "* Normally a unit can turn whenever it wants, but a unit moving at high speed or a unit that is not particularly
+agile will only be able to turn after moving a certain number of spaces.  The number of spaces a unit must move to
+turn is the turn radius.")))
+    "Vehicle Construction"
+     (section
+      :name "Vehicle Construction"
+      :rulemap
+       (rulemap
+        "Choose Vehicle Type"
+         (rule
+          :name "Choose Vehicle Type"
+          :summary
+           "* Cycle
 * Car
 * Truck
 * Bus/RV
@@ -110,11 +466,11 @@ Cars
 ** Station Wagon
 ** Luxury Car
 ** Mini Van")
-            "Choose Frame"
-             (rule
-              :name "Choose Frame"
-              :summary
-               "* [Personal Frame] - Passengers can only be carried as cargo.
+        "Choose Frame"
+         (rule
+          :name "Choose Frame"
+          :summary
+           "* [Personal Frame] - Passengers can only be carried as cargo.
 * [Mini Frame]
 * [Light Frame]
 * [Medium Frame]
@@ -150,14 +506,14 @@ Cars
 	* The Utility option has one purpose: cheaper is better. Utility bodies are 30% cheaper, add .25 to SR, and subtract 15% from their final top speed and mileage.
 	* The Sport Utility option adds aerodynamic streamlining to a heavier, cheaper frame. A Sport Utility body costs 60% more, adds 10% to final top
 	speed and mileage, but adds .25 to SR.")
-            "Choose Mass"
-             (rule
-              :name "Choose Mass")
-            "Choose Engine(s)"
-             (rule
-              :name "Choose Engine(s)"
-              :summary
-               "** [[Unpowered]]
+        "Choose Mass"
+         (rule
+          :name "Choose Mass")
+        "Choose Engine(s)"
+         (rule
+          :name "Choose Engine(s)"
+          :summary
+           "** [[Unpowered]]
 ** [[Wood Burning Engine]]
 ** [[Coal Fired Engine]] - 35% Efficiency, 30 MJ/kg
 ** [[Battery Powered]] - 85% Efficiency
@@ -182,11 +538,11 @@ Cars
 	* Engine Rebuild - Also known as &quot;blueprinting&quot;. The engine has been taken apart and re-assembled to within the most exacting tolerances, and certain production items replaced with high performance alternatives. +20mph top speed, minor option.
 	* Fuel Injection - An advanced system which replaces the carburettor, giving a significant boost to performance. It is not possible to fit a Fuel Injection system and a Multicarb into the same vehicle. +20mph top speed +10mph Acc 2 minor options.
 	* Multicarb - A multi-barrelled carburettor designed to give superior performance over the standard single barrelled carb. It is not possible to fit a Multicarb and a Fuel Injection system into the same vehicle. +20mph, minor option.")
-            "Choose Travel Modes"
-             (rule
-              :name "Choose Travel Modes"
-              :summary
-               "** Land
+        "Choose Travel Modes"
+         (rule
+          :name "Choose Travel Modes"
+          :summary
+           "** Land
 *** Wheeled
 *** Tracked
 *** Walker
@@ -230,11 +586,11 @@ Cars
 	* Rear wheel drive (RWD) is the standard drivetrain that comes with a vehicle design.
 	* Front wheel drive (FWD) is a drivetrain option that reduces final body cost and weight by 15%. FWD adds .25 to SR.
 	* All wheel drive (AWD) is a drivetrain option that increases final body cost by 100% and weight by 10%. +2HC on ice, oil, wet roads or offroad.")
-            "Choose Maneuverability"
-             (rule
-              :name "Choose Maneuverability"
-              :summary
-               "* Human Interface - Physical skills in a vehicle are generally limited by how closely the
+        "Choose Maneuverability"
+         (rule
+          :name "Choose Maneuverability"
+          :summary
+           "* Human Interface - Physical skills in a vehicle are generally limited by how closely the
 vehicle matches the human body unless a particular piece of hardware is installed to enable the
 specific skill.
 ** Land
@@ -254,22 +610,22 @@ specific skill.
 	* Racing - For 175% of the body cost the suspension may be upgraded to Racing, with complete body stiffening, automatic camber adjustment, and computer controlled shocks. Racing suspension decreases SR by one.
 	* Off Road Suspension - Heavy duty suspension with a higher than usual ground clearance. Allows vehicle to pass Rough Terrain without penalty and to pass through Punishing Terrain.
 	* Computer Assisted Suspension - An electronic system which monitors and adjusts the suspension in order to give a smoother, more stable ride. +1 HC minor option, destroyable.")
-            "Choose Fuel and Range"
-             (rule
-              :name "Choose Fuel and Range"
-              :summary
-               "** External Fuel Tanks
+        "Choose Fuel and Range"
+         (rule
+          :name "Choose Fuel and Range"
+          :summary
+           "** External Fuel Tanks
 ** Propellant / Reaction Mass (spacecraft)
 	* Gas Tank - $10 per gallon, weighs 7 lb (full) per gallon. Gas costs $2 a gallon. If a car runs out of gasoline (or a car's gasoline tank or engine is destroyed) the car may not accelerate and automatically decelerates by 5 mph per second.
 	* Armored Gas Tank - $15 per gallon, weighs 12 lb (full) per gallon.
 	* Self-sealing Gas Tank - $20 per gallon, weighs
 	 10 lb (full) per gallon.  Self-sealing gasoline tanks cannot explode when hit, but can explode when the vehicle is on fire.
 	* Self-sealing Armored Gas Tank - $40 per gallon, weighs 15 lb (full) per gallon. Self-sealing armored gasoline tanks cannot explode.")
-            "Choose Mission Specific"
-             (rule
-              :name "Choose Mission Specific"
-              :summary
-               "** Cargo Bay
+        "Choose Mission Specific"
+         (rule
+          :name "Choose Mission Specific"
+          :summary
+           "** Cargo Bay
 ** Decoys
 ** ECM/EW
 ** Hanger Bay
@@ -282,11 +638,11 @@ specific skill.
 	* Hidden Cargo Space - Up to half the cargo space in the vehicle is in hidden compartments. Handy in the event of &quot;Imperial Entanglements&quot;. Minor option, destroyable
 	* Flatbed - Cargo space designated as a &quot;flatbed&quot; is exposed to the open air, but can carry twice the normal load.
 	* Another vehicle may be put into cargo space, if the vehicle's Maximum Cargo Load is great enough.  Any car placed in cargo of another car exits via the standard cargo access (usually the back), and suffers a Turn III in doing so.")
-            "Choose Armor"
-             (rule
-              :name "Choose Armor"
-              :summary
-               "** Command Armor
+        "Choose Armor"
+         (rule
+          :name "Choose Armor"
+          :summary
+           "** Command Armor
 ** Radiation Shielding
 	!Armor
 	* Armor is applied to the six sides: Front, Left, Right, Back, Top, and Under.  Armor for vehicles is spaced in layers of sheets 1/4&quot;-1&quot; apart and consists of a standard ablative carbon-reinforced plastic. This material is light and very strong, and can be shaped into any form, however it's ablative attribute has it's limitations.
@@ -296,11 +652,11 @@ specific skill.
 	* Options: Fireproof armor (FP) - Costs twice as much as regular armor but prevents the car from catching on fire, unless the armor becomes breached.
 	* Laser Reflective (LR) Armor - Costs 3 times as much as normal armor but cuts all damage from lasers in half (unless the side hit is breached).
 	* The combination of LR and FP armor (LRFP) costs 5 times as much as regular.")
-            "Choose Weapons"
-             (rule
-              :name "Choose Weapons"
-              :summary
-               "!Aimed Weapons
+        "Choose Weapons"
+         (rule
+          :name "Choose Weapons"
+          :summary
+           "!Aimed Weapons
 All aimed weapons come standard with a heavy transversal mounting, and an autoloader, allowing a high-degree arc of fire and an uninterrupted ammunition supply. This in turn makes them very versatile and powerful yet much bigger and heavier than normal.
 Aimed weapons can be mounted on the front, back, right, or left side of the car. Armed weapons may also be mounted in a turret on the top of the body.
 * Arcs of fire
@@ -366,11 +722,11 @@ Dropped weapons can only be mounted on the back or sides of a car.  A dropped we
 * Paint Sprayer (PS) - 2 hits, $500, 75 lb, 10 cf. Causes a 5 yard-radius paint cloud when fired. Ammo costs $100, 30 lb, and has 8 shots per cf. Paint dissipates in 3 seconds. Normal smoke penalty to 23 shoot through and if a car touches it treat that car as if it was night for the rest of the game. If already at night double the nighttime penalty.
 * Smokescreen (SS) - 4 hits, $400, 60 lb, 10 cf. Causes a 5 yard-radius smoke cloud when fired. Ammo costs $50, 20 lb, and has 9 shots per cf. Smoke dissipates in 10 seconds, whether or not a car drives close to it.
 * Spike Dropper (SD) - 3 hits, $750, 100 lb, 5 cf. Drops a 2 yard-radius cluster of spiked caltrops when fired. When a car goes over a cluster of these spikes, each wheel takes 1d-3 damage. Ammo costs $100, 20 lb, and has 10 seconds of ammo per cf.")
-            "Choose Extra Equipment"
-             (rule
-              :name "Choose Extra Equipment"
-              :summary
-               "Listed here are several options that may be built into a Q-car design. More may be added to this list by the players if they wish, however all players present must agree on the addition.
+        "Choose Extra Equipment"
+         (rule
+          :name "Choose Extra Equipment"
+          :summary
+           "Listed here are several options that may be built into a Q-car design. More may be added to this list by the players if they wish, however all players present must agree on the addition.
 * Airfoils - Airdam in the front and/or a Spoiler in the back.  +Handling Synergy.  Destroyable.  Costs 20% of final body cost and weighs 3% of final body weight each.
 * Active Suspension - $4000, 100 lb. A sophisticated electronic system controls the suspension to subtract .25 from the SR of a car.
 * Antilock Brakes - $1000, 10 lb. An advanced engineering system which prevents wheels from locking up when braking suddenly. +10 Dec, destroyable.
@@ -416,11 +772,11 @@ Exotic (EX) - $60, 1 lb, 0.06 cf.
 Motorcycles only have two wheels with (bike cf / 10) hits each, and may not have spares. Weapons may only be mounted on the front or back. No turrets or convertible tops are allowed, but all other accessories may be mounted, including wheel and suspension upgrades. Basic SR for bikes is 5, and all bikes have RWD.
 Bikes only have three armor facings: front, back, and under. The other sides are considered unarmored. Anytime a bike takes damage from the back, a roll of 1 or 2 on one die means the damage bypasses the rear armor. A bike adds +1 to all it's Table Two rolls (see below). Motorcycles are -3 to target. Passengers may fire a hand weapon in any direction.
 ** Cowling - A large aerodynamic cowling at the front. This both increases the bike's top speed, and offers protection to the rider from shots to the front. +10mph top speed, rider counts as Partially Exposed to shots from the front, minor option, destroyable.")
-            "Finishing the Design"
-             (rule
-              :name "Finishing the Design"
-              :summary
-               "Here is where the final calculations are made concerning a vehicles performance and statistics.
+        "Finishing the Design"
+         (rule
+          :name "Finishing the Design"
+          :summary
+           "Here is where the final calculations are made concerning a vehicles performance and statistics.
 A vehicle's Design Top Speed is found by using the formula:
 Design Top Speed
  = ((engine hp x 3150) / car weight) + 30.
@@ -437,44 +793,108 @@ Final Top Speed = Design Top Speed x (1 - ((AC x 5) / 100))
 Once we have decided on an acceleration of 7, we can determine the final top speed. (7 x 5) = 35, divided by
 100 = 0.35. (1 - 0.35) = 0.65... 218.62 x 0.65 = 142 mph. Plus 10% for a sport body puts that up to 156 mph. Not bad at all.
 Once the final TS is calculated, add the percentages for accessories and body style, if so equipped. Mileage at 65 mph (or top speed, if
-lower) is in miles per gallon and is equal to: Mileage = (9000 / (hp + (weight / 20)))")))))
-    "Land, Sea and Air Terrain"
-     (chapter
-      :name "Land, Sea and Air Terrain"
-      :sectionmap
-       (sectionmap
-        "Terrain, Natural"
-         (section
-          :name "Terrain, Natural"
-          :terrainmap
-           (terrainmap
-            "Broken Ground"
-             (terrain
-              :name "Broken Ground")
-            :Burning
-             (terrain
-              :name "Burning")
-            :Cave
-             (terrain
-              :name "Cave"
-              :titles "Cavern")
-            :Desert
-             (terrain
-              :name "Desert"
-              :summary
-               "* +2 [Terrain Penalty]
+lower) is in miles per gallon and is equal to: Mileage = (9000 / (hp + (weight / 20)))"))))))
+
+(func chapter_land_sea_and_air_terrain : base/chapter
+ (chapter
+  :name "Land, Sea and Air Terrain"
+  :sectionmap
+   (sectionmap
+    "Terrain, Buildings"
+     (section
+      :name "Terrain, Buildings"
+      :terrainmap
+       (terrainmap
+        "Air Field"
+         (terrain
+          :name "Air Field"
+          :summary
+           "* May [Deploy] Aircraft
+* Repairs Aircraft
+* Required to extend Aircraft Range")
+        :Barracks
+         (terrain
+          :name "Barracks"
+          :summary "* May [Deploy] Soldiers")
+        :Bunker
+         (terrain
+          :name "Bunker"
+          :summary
+           "* A small stone or concrete building.
+* Gains [Armor] of stone/concrete except at [Point Blank Range].
++1 [Defense]")
+        :Dock
+         (terrain
+          :name "Dock"
+          :summary "* Required to extend Naval Supply Lines")
+        "Field Headquarters"
+         (terrain
+          :name "Field Headquarters")
+        "Field Hospital"
+         (terrain
+          :name "Field Hospital"
+          :summary
+           "* May [Deploy] Infantry with [Medicine] Skill
+* Heals Soldiers")
+        "Fuel Depot"
+         (terrain
+          :name "Fuel Depot"
+          :summary "* Required to extend Vehicle Supply Lines")
+        "Motor Pool"
+         (terrain
+          :name "Motor Pool"
+          :summary
+           "* May [Deploy] land Vehicles
+* Repairs land Vehicles")
+        :Passageway
+         (terrain
+          :name "Passageway"
+          :titles "Corridor")
+        :Room
+         (terrain
+          :name "Room")
+        :Shipyard
+         (terrain
+          :name "Shipyard"
+          :summary
+           "* May [Deploy] Ships
+* Repairs Ships")
+        "Supply Depot"
+         (terrain
+          :name "Supply Depot"
+          :summary "* Required to extend Soldier Supply Lines")))
+    "Terrain, Natural"
+     (section
+      :name "Terrain, Natural"
+      :terrainmap
+       (terrainmap
+        "Broken Ground"
+         (terrain
+          :name "Broken Ground")
+        :Burning
+         (terrain
+          :name "Burning")
+        :Cave
+         (terrain
+          :name "Cave"
+          :titles "Cavern")
+        :Desert
+         (terrain
+          :name "Desert"
+          :summary
+           "* +2 [Terrain Penalty]
 * +1 [Fatigue]/Turn
 * +1 [Thirst]/Hour
 * [Heat Wave]
 * [Mirage]")
-            :Ice
-             (terrain
-              :name "Ice")
-            :Jungle
-             (terrain
-              :name "Jungle"
-              :summary
-               "* Flora - Native peoples are well versed in finding food from their jungle environment but for
+        :Ice
+         (terrain
+          :name "Ice")
+        :Jungle
+         (terrain
+          :name "Jungle"
+          :summary
+           "* Flora - Native peoples are well versed in finding food from their jungle environment but for
 the inexperienced there are many poisonous or harmful plants.  Vines and creepers should never
 be grasped and pulled by the naked hand as many have sharp thorns, or can spilt into extremely
 sharp fibres, which can cause deep lacerations.  Bamboo can split to form sharp stakes when
@@ -517,56 +937,74 @@ entering the body.  Psychologically the jungles constant wall of green and low l
 beneath the canopy can seriously affect motivation and the sounds of the nocturnal animals
 can also be disturbing for those unused to them.  All this said many native peoples around the
 world have learned to adapt and even thrive in such conditions.")
-            :Lava
-             (terrain
-              :name "Lava")
-            "Open Water"
-             (terrain
-              :name "Open Water")
-            :Plains
-             (terrain
-              :name "Plains")
-            :Quicksand
-             (terrain
-              :name "Quicksand")
-            :Sand
-             (terrain
-              :name "Sand")
-            :Scrubland
-             (terrain
-              :name "Scrubland")
-            :Steppeland
-             (terrain
-              :name "Steppeland")
-            :Snow
-             (terrain
-              :name "Snow")
-            :Swamp
-             (terrain
-              :name "Swamp"
-              :summary "* Bog Fen Murk")
-            :Whitewater
-             (terrain
-              :name "Whitewater")))))
+        :Lava
+         (terrain
+          :name "Lava")
+        "Open Water"
+         (terrain
+          :name "Open Water")
+        :Plains
+         (terrain
+          :name "Plains")
+        :Quicksand
+         (terrain
+          :name "Quicksand")
+        :Sand
+         (terrain
+          :name "Sand")
+        :Scrubland
+         (terrain
+          :name "Scrubland")
+        :Steppeland
+         (terrain
+          :name "Steppeland")
+        :Snow
+         (terrain
+          :name "Snow")
+        :Swamp
+         (terrain
+          :name "Swamp"
+          :summary "* Bog Fen Murk")
+        :Whitewater
+         (terrain
+          :name "Whitewater"))))))
+
+(func chapter_maps : base/chapter
+ (chapter
+  :name "Maps"
+  :sectionmap
+   (sectionmap
     :Maps
-     (chapter
+     (section
       :name "Maps"
-      :sectionmap
-       (sectionmap
-        :Terrain
-         (section
-          :name "Terrain"
-          :rulemap
-           (rulemap
-            :Cave
-             (rule
-              :name "Cave"
-              :summary "[Hazard]: Cave in.")
-            :Jungle
-             (rule
-              :name "Jungle"
-              :summary "[Hazard]: Difficulty starts at 2 for a sparse, mostly safe jungle.")
-            :Snow
-             (rule
-              :name "Snow"
-              :summary "[Hazard]: Avalanche."))))))))
+      :rulemap
+       (rulemap
+        "Air Map"
+         (rule
+          :name "Air Map")
+        "Ocean Map"
+         (rule
+          :name "Ocean Map")
+        "Swamp Map"
+         (rule
+          :name "Swamp Map")
+        "Underwater Map"
+         (rule
+          :name "Underwater Map")))
+    :Terrain
+     (section
+      :name "Terrain"
+      :rulemap
+       (rulemap
+        :Cave
+         (rule
+          :name "Cave"
+          :summary "[Hazard]: Cave in.")
+        :Jungle
+         (rule
+          :name "Jungle"
+          :summary "[Hazard]: Difficulty starts at 2 for a sparse, mostly safe jungle.")
+        :Snow
+         (rule
+          :name "Snow"
+          :summary "[Hazard]: Avalanche."))))))

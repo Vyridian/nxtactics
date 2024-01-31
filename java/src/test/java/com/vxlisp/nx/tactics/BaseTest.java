@@ -20,12 +20,12 @@ public final class BaseTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/base", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 34), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 5, ":tests", 5, ":total", 99), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 99), 
-      ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 64)
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 6, ":tests", 7, ":total", 104), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 4), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 4), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 4), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 104), 
+      ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 66)
     );
   }
 
@@ -36,6 +36,7 @@ public final class BaseTest {
         ":ability", 0,
         ":abilitymap", 0,
         ":book", 0,
+        ":booklist", 0,
         ":bookmap", 0,
         ":card", 0,
         ":cardlist", 0,
@@ -76,6 +77,7 @@ public final class BaseTest {
         ":stat", 0,
         ":suit", 0,
         ":suitmap", 0,
+        ":tactics", 0,
         ":team", 0,
         ":teammap", 0,
         ":terrain", 0,
@@ -135,7 +137,10 @@ public final class BaseTest {
         ":suit-spade", 0
       ),
       ":funcmap", Core.t_intmap.vx_new(
-        ":rating<-mass", 0
+        ":bookmap<-booklist", 0,
+        ":name<-chapter", 0,
+        ":rating<-mass", 0,
+        ":tactics<-booklist", 0
       )
     );
   }

@@ -30,14 +30,41 @@ import vx_web_http_test from "./vx/web/http_test.js"
 import nx_crypto_cryptosheet_test from "./nx/crypto/cryptosheet_test.js"
 import nx_tactics_apptactics_test from "./nx/tactics/apptactics_test.js"
 import nx_tactics_base_test from "./nx/tactics/base_test.js"
+import nx_tactics_books_advanced_rules_test from "./nx/tactics/books/advanced_rules_test.js"
+import nx_tactics_books_age_of_sail_test from "./nx/tactics/books/age_of_sail_test.js"
 import nx_tactics_books_age_of_steam_test from "./nx/tactics/books/age_of_steam_test.js"
+import nx_tactics_books_ancients_test from "./nx/tactics/books/ancients_test.js"
+import nx_tactics_books_bestiary_test from "./nx/tactics/books/bestiary_test.js"
 import nx_tactics_books_bookloader_test from "./nx/tactics/books/bookloader_test.js"
+import nx_tactics_books_characters_test from "./nx/tactics/books/characters_test.js"
+import nx_tactics_books_combat_test from "./nx/tactics/books/combat_test.js"
+import nx_tactics_books_core_rules_test from "./nx/tactics/books/core_rules_test.js"
+import nx_tactics_books_fantasy_test from "./nx/tactics/books/fantasy_test.js"
+import nx_tactics_books_gear_test from "./nx/tactics/books/gear_test.js"
 import nx_tactics_books_gettingstarted_test from "./nx/tactics/books/gettingstarted_test.js"
+import nx_tactics_books_giant_monsters_test from "./nx/tactics/books/giant_monsters_test.js"
+import nx_tactics_books_high_technology_test from "./nx/tactics/books/high_technology_test.js"
+import nx_tactics_books_horror_test from "./nx/tactics/books/horror_test.js"
+import nx_tactics_books_land_sea_and_air_test from "./nx/tactics/books/land_sea_and_air_test.js"
+import nx_tactics_books_magic_test from "./nx/tactics/books/magic_test.js"
+import nx_tactics_books_medieval_test from "./nx/tactics/books/medieval_test.js"
+import nx_tactics_books_modern_test from "./nx/tactics/books/modern_test.js"
+import nx_tactics_books_modern_fantasy_test from "./nx/tactics/books/modern_fantasy_test.js"
+import nx_tactics_books_powers_test from "./nx/tactics/books/powers_test.js"
+import nx_tactics_books_prehistory_test from "./nx/tactics/books/prehistory_test.js"
+import nx_tactics_books_pulp_fiction_test from "./nx/tactics/books/pulp_fiction_test.js"
+import nx_tactics_books_science_fiction_test from "./nx/tactics/books/science_fiction_test.js"
+import nx_tactics_books_skills_test from "./nx/tactics/books/skills_test.js"
+import nx_tactics_books_space_and_time_test from "./nx/tactics/books/space_and_time_test.js"
+import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_test.js"
+import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
 import nx_tactics_damage_test from "./nx/tactics/damage_test.js"
+import nx_tactics_uitactics_test from "./nx/tactics/uitactics_test.js"
 import vx_ui_appui_test from "./vx/ui/appui_test.js"
 import vx_ui_background_test from "./vx/ui/background_test.js"
 import vx_ui_element_test from "./vx/ui/element_test.js"
 import vx_ui_flow_test from "./vx/ui/flow_test.js"
+import vx_ui_html_uihtml_test from "./vx/ui/html/uihtml_test.js"
 import vx_ui_image_test from "./vx/ui/image_test.js"
 import vx_ui_navigation_test from "./vx/ui/navigation_test.js"
 import vx_ui_scrollbar_test from "./vx/ui/scrollbar_test.js"
@@ -87,14 +114,41 @@ export default class app_test {
       nx_crypto_cryptosheet_test.test_package(context),
       nx_tactics_apptactics_test.test_package(context),
       nx_tactics_base_test.test_package(context),
+      nx_tactics_books_advanced_rules_test.test_package(context),
+      nx_tactics_books_age_of_sail_test.test_package(context),
       nx_tactics_books_age_of_steam_test.test_package(context),
+      nx_tactics_books_ancients_test.test_package(context),
+      nx_tactics_books_bestiary_test.test_package(context),
       nx_tactics_books_bookloader_test.test_package(context),
+      nx_tactics_books_characters_test.test_package(context),
+      nx_tactics_books_combat_test.test_package(context),
+      nx_tactics_books_core_rules_test.test_package(context),
+      nx_tactics_books_fantasy_test.test_package(context),
+      nx_tactics_books_gear_test.test_package(context),
       nx_tactics_books_gettingstarted_test.test_package(context),
+      nx_tactics_books_giant_monsters_test.test_package(context),
+      nx_tactics_books_high_technology_test.test_package(context),
+      nx_tactics_books_horror_test.test_package(context),
+      nx_tactics_books_land_sea_and_air_test.test_package(context),
+      nx_tactics_books_magic_test.test_package(context),
+      nx_tactics_books_medieval_test.test_package(context),
+      nx_tactics_books_modern_test.test_package(context),
+      nx_tactics_books_modern_fantasy_test.test_package(context),
+      nx_tactics_books_powers_test.test_package(context),
+      nx_tactics_books_prehistory_test.test_package(context),
+      nx_tactics_books_pulp_fiction_test.test_package(context),
+      nx_tactics_books_science_fiction_test.test_package(context),
+      nx_tactics_books_skills_test.test_package(context),
+      nx_tactics_books_space_and_time_test.test_package(context),
+      nx_tactics_books_superheroes_test.test_package(context),
+      nx_tactics_books_world_wars_test.test_package(context),
       nx_tactics_damage_test.test_package(context),
+      nx_tactics_uitactics_test.test_package(context),
       vx_ui_appui_test.test_package(context),
       vx_ui_background_test.test_package(context),
       vx_ui_element_test.test_package(context),
       vx_ui_flow_test.test_package(context),
+      vx_ui_html_uihtml_test.test_package(context),
       vx_ui_image_test.test_package(context),
       vx_ui_navigation_test.test_package(context),
       vx_ui_scrollbar_test.test_package(context),

@@ -23,13 +23,13 @@ export default class vx_ui_ui_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "vx/ui/ui", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 36, ":tests", 4, ":total", 11), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 16), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 33, ":tests", 9, ":total", 27), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 4), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 11), 
-      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 4)
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 27), 
+      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 7)
     )
   }
 
@@ -40,25 +40,41 @@ export default class vx_ui_ui_test {
       "typemap",
         vx_core.f_new(
           vx_core.t_intmap,
-          "layout", 0,
+          "render", 0,
+          "renderer", 0,
+          "rendermap", 0,
           "ui", 0,
+          "uilayout", 0,
           "uimap", 0,
           "uistyle", 0
         ),
       "constmap",
         vx_core.f_new(
           vx_core.t_intmap,
-          "layout-app", 0,
-          "layout-background", 0,
-          "layout-navigation", 0,
-          "layout-split-horizontal", 0,
-          "layout-split-vertical", 0
+          "uilayout-app", 0,
+          "uilayout-background", 0,
+          "uilayout-combobox", 0,
+          "uilayout-flow-horizontal", 0,
+          "uilayout-flow-vertical", 0,
+          "uilayout-image", 0,
+          "uilayout-navigation", 0,
+          "uilayout-panel", 0,
+          "uilayout-parallax", 0,
+          "uilayout-scrollbox", 0,
+          "uilayout-scrollbox-horizontal", 0,
+          "uilayout-scrollbox-vertical", 0,
+          "uilayout-split-horizontal", 0,
+          "uilayout-split-vertical", 0,
+          "uilayout-text", 0,
+          "uilayout-textentry", 0
         ),
       "funcmap",
         vx_core.f_new(
           vx_core.t_intmap,
-          "any-render<-ui", 0,
-          "anymap-render<-uimap", 0
+          "render<-ui", 0,
+          "render<-ui-orig", 0,
+          "rendermap<-uimap", 0,
+          "ui-render<-ui-orig", 0
         )
     )
   }

@@ -21,11 +21,11 @@ public final class AncientsTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/ancients", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 14), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 14), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 14), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 14), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 14), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -40,6 +40,19 @@ public final class AncientsTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":chapter_ancients_overview", 0,
+        ":chapter_ancients_scenarios", 0,
+        ":chapter_anglo_saxons", 0,
+        ":chapter_carthaginians", 0,
+        ":chapter_chinese_dynasty", 0,
+        ":chapter_egyptian_dynasty", 0,
+        ":chapter_germanic_tribes", 0,
+        ":chapter_greek_city_states", 0,
+        ":chapter_macedon", 0,
+        ":chapter_norsemen", 0,
+        ":chapter_persians", 0,
+        ":chapter_roman_empire", 0,
+        ":chapter_unfiled_ancient", 0,
         ":tacticsbook", 0
       )
     );

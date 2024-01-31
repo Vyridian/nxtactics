@@ -21,11 +21,11 @@ public final class Land_sea_and_airTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/land_sea_and_air", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 6), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 6), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 6), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 6), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 6), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -40,6 +40,11 @@ public final class Land_sea_and_airTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":chapter_land_sea_and_air_overview", 0,
+        ":chapter_land_sea_and_air_rules", 0,
+        ":chapter_land_sea_and_air_terrain", 0,
+        ":chapter_land_sea_and_air_unit_types", 0,
+        ":chapter_maps", 0,
         ":tacticsbook", 0
       )
     );

@@ -55,10 +55,12 @@ import com.vxlisp.nx.tactics.books.Space_and_timeTest;
 import com.vxlisp.nx.tactics.books.SuperheroesTest;
 import com.vxlisp.nx.tactics.books.World_warsTest;
 import com.vxlisp.nx.tactics.DamageTest;
+import com.vxlisp.nx.tactics.UitacticsTest;
 import com.vxlisp.vx.ui.AppuiTest;
 import com.vxlisp.vx.ui.BackgroundTest;
 import com.vxlisp.vx.ui.ElementTest;
 import com.vxlisp.vx.ui.FlowTest;
+import com.vxlisp.vx.ui.html.UihtmlTest;
 import com.vxlisp.vx.ui.ImageTest;
 import com.vxlisp.vx.ui.NavigationTest;
 import com.vxlisp.vx.ui.ScrollbarTest;
@@ -511,6 +513,14 @@ public final class AppTest {
 
 
   @Test
+  @DisplayName("nx/tactics/uitactics")
+  void test_nx_tactics_uitactics() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = UitacticsTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
   @DisplayName("vx/ui/appui")
   void test_vx_ui_appui() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = AppuiTest.test_package(context);
@@ -538,6 +548,14 @@ public final class AppTest {
   @DisplayName("vx/ui/flow")
   void test_vx_ui_flow() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = FlowTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
+  @DisplayName("vx/ui/html/uihtml")
+  void test_vx_ui_html_uihtml() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = UihtmlTest.test_package(context);
 	  TestLib.run_testpackage_async(testpackage);
   }
 
@@ -648,10 +666,12 @@ public final class AppTest {
     SuperheroesTest.test_package(context),
     World_warsTest.test_package(context),
     DamageTest.test_package(context),
+    UitacticsTest.test_package(context),
     AppuiTest.test_package(context),
     BackgroundTest.test_package(context),
     ElementTest.test_package(context),
     FlowTest.test_package(context),
+    UihtmlTest.test_package(context),
     ImageTest.test_package(context),
     NavigationTest.test_package(context),
     ScrollbarTest.test_package(context),

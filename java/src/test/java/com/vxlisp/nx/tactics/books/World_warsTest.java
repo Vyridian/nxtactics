@@ -21,11 +21,11 @@ public final class World_warsTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/world_wars", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 28), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 28), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 28), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 28), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 28), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -40,6 +40,33 @@ public final class World_warsTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":chapter_world_wars_overview", 0,
+        ":chapter_wwi_british_forces", 0,
+        ":chapter_wwi_campaign", 0,
+        ":chapter_wwi_french_forces", 0,
+        ":chapter_wwi_german_forces", 0,
+        ":chapter_wwii_american_equipment", 0,
+        ":chapter_wwii_american_units", 0,
+        ":chapter_wwii_british_equipment", 0,
+        ":chapter_wwii_british_units", 0,
+        ":chapter_wwii_east_african_theatre", 0,
+        ":chapter_wwii_eastern_front", 0,
+        ":chapter_wwii_equipment", 0,
+        ":chapter_wwii_french_equipment", 0,
+        ":chapter_wwii_french_units", 0,
+        ":chapter_wwii_german_equipment", 0,
+        ":chapter_wwii_german_units", 0,
+        ":chapter_wwii_italian_units", 0,
+        ":chapter_wwii_japanese_equipment", 0,
+        ":chapter_wwii_japanese_units", 0,
+        ":chapter_wwii_mediterranean_theatre", 0,
+        ":chapter_wwii_middle_east_theatre", 0,
+        ":chapter_wwii_north_african_theatre", 0,
+        ":chapter_wwii_overview", 0,
+        ":chapter_wwii_pacific_theatre", 0,
+        ":chapter_wwii_soviet_equipment", 0,
+        ":chapter_wwii_soviet_units", 0,
+        ":chapter_wwii_western_front", 0,
         ":tacticsbook", 0
       )
     );

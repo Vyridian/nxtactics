@@ -923,6 +923,131 @@ public final class Base {
   public static final Type_book t_book = new Class_book();
 
   /**
+   * type: booklist
+   * (type booklist)
+   */
+  public interface Type_booklist extends Core.Type_list {
+    public Base.Type_booklist vx_new(final Object... vals);
+    public Base.Type_booklist vx_copy(final Object... vals);
+    public Base.Type_booklist vx_empty();
+    public Base.Type_booklist vx_type();
+    public List<Base.Type_book> vx_listbook();
+    public Base.Type_book vx_book(final Core.Type_int index);
+  }
+
+  public static class Class_booklist extends Core.Class_base implements Type_booklist {
+
+    protected List<Base.Type_book> vx_p_list = Core.immutablelist(new ArrayList<Base.Type_book>());
+
+    @Override
+    public List<Core.Type_any> vx_list() {return Core.immutablelist(new ArrayList<Core.Type_any>(this.vx_p_list));}
+
+    @Override
+    public Base.Type_book vx_book(final Core.Type_int index) {
+      Base.Type_book output = Base.e_book;
+      Class_booklist list = this;
+      int iindex = index.vx_int();
+      List<Base.Type_book> listval = list.vx_p_list;
+      if (iindex < listval.size()) {
+        output = listval.get(iindex);
+      }
+      return output;
+    }
+
+    @Override
+    public List<Base.Type_book> vx_listbook() {return vx_p_list;}
+
+    @Override
+    public Core.Type_any vx_any(final Core.Type_int index) {
+      return this.vx_book(index);
+    }
+
+    @Override
+    public Type_booklist vx_new(final Object... vals) {return e_booklist.vx_copy(vals);}
+
+    @Override
+    public Type_booklist vx_copy(final Object... vals) {
+      Type_booklist output = this;
+      boolean ischanged = false;
+      Class_booklist val = this;
+      Core.Type_msgblock msgblock = Core.t_msgblock.vx_msgblock_from_copy_arrayval(val, vals);
+      if (this instanceof Core.vx_Type_const) {
+        ischanged = true;
+      }
+      List<Base.Type_book> listval = new ArrayList<>(val.vx_listbook());
+      Core.Type_msg msg;
+      for (Object valsub : vals) {
+        if (valsub instanceof Core.Type_msgblock) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (valsub instanceof Core.Type_msg) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (valsub instanceof Base.Type_book) {
+          ischanged = true;
+          listval.add((Base.Type_book)valsub);
+        } else if (valsub instanceof Base.Type_book) {
+          ischanged = true;
+          listval.add((Base.Type_book)valsub);
+        } else if (valsub instanceof Type_booklist) {
+          Type_booklist multi = (Type_booklist)valsub;
+          ischanged = true;
+          listval.addAll(multi.vx_listbook());
+        } else if (valsub instanceof List) {
+          List<?> listunknown = (List<?>)valsub;
+          for (Object item : listunknown) {
+            if (item instanceof Base.Type_book) {
+              Base.Type_book valitem = (Base.Type_book)item;
+              ischanged = true;
+              listval.add(valitem);
+            }
+          }
+        } else if (valsub instanceof Core.Type_any) {
+          Core.Type_any anysub = (Core.Type_any)valsub;
+          msg = Core.vx_msg_from_error("nx/tactics/base/booklist", ":invalidtype", anysub);
+          msgblock = msgblock.vx_copy(msg);
+        } else {
+          msg = Core.vx_msg_from_error("nx/tactics/base/booklist", ":invalidtype", Core.vx_new_string(valsub.toString()));
+          msgblock = msgblock.vx_copy(msg);
+        }
+      }
+      if (ischanged || (msgblock != Core.e_msgblock)) {
+        Class_booklist work = new Class_booklist();
+        work.vx_p_list = Core.immutablelist(listval);
+        if (msgblock != Core.e_msgblock) {
+          work.vxmsgblock = msgblock;
+        }
+        output = work;
+      }
+      return output;
+    }
+
+    @Override
+    public Type_booklist vx_empty() {return e_booklist;}
+    @Override
+    public Type_booklist vx_type() {return t_booklist;}
+
+    @Override
+    public Core.Type_typedef vx_typedef() {
+      return Core.typedef_new(
+        "nx/tactics/base", // pkgname
+        "booklist", // name
+        ":list", // extends
+        Core.e_typelist, // traits
+        Core.t_typelist.vx_new(Base.t_book), // allowtypes
+        Core.e_typelist, // disallowtypes
+        Core.e_funclist, // allowfuncs
+        Core.e_funclist, // disallowfuncs
+        Core.e_anylist, // allowvalues
+        Core.e_anylist, // disallowvalues
+        Core.e_argmap // properties
+      );
+    }
+
+  }
+
+  public static final Type_booklist e_booklist = new Class_booklist();
+  public static final Type_booklist t_booklist = new Class_booklist();
+
+  /**
    * type: bookmap
    * (type bookmap)
    */
@@ -13093,6 +13218,379 @@ public final class Base {
   public static final Type_suitmap t_suitmap = new Class_suitmap();
 
   /**
+   * type: tactics
+   * (type tactics)
+   */
+  public interface Type_tactics extends Core.Type_struct {
+    public Base.Type_tactics vx_new(final Object... vals);
+    public Base.Type_tactics vx_copy(final Object... vals);
+    public Base.Type_tactics vx_empty();
+    public Base.Type_tactics vx_type();
+    public Base.Type_bookmap bookmap();
+    public Base.Type_abilitymap abilitymap();
+    public Base.Type_cardmap cardmap();
+    public Base.Type_itemmap itemmap();
+    public Base.Type_powermap powermap();
+    public Base.Type_skillmap skillmap();
+    public Base.Type_unitmap unitmap();
+  }
+
+  public static class Class_tactics extends Core.Class_base implements Type_tactics {
+
+    protected Base.Type_bookmap vx_p_bookmap;
+
+    @Override
+    public Base.Type_bookmap bookmap() {
+      return this.vx_p_bookmap == null ? Base.e_bookmap : this.vx_p_bookmap;
+    }
+
+    protected Base.Type_abilitymap vx_p_abilitymap;
+
+    @Override
+    public Base.Type_abilitymap abilitymap() {
+      return this.vx_p_abilitymap == null ? Base.e_abilitymap : this.vx_p_abilitymap;
+    }
+
+    protected Base.Type_cardmap vx_p_cardmap;
+
+    @Override
+    public Base.Type_cardmap cardmap() {
+      return this.vx_p_cardmap == null ? Base.e_cardmap : this.vx_p_cardmap;
+    }
+
+    protected Base.Type_itemmap vx_p_itemmap;
+
+    @Override
+    public Base.Type_itemmap itemmap() {
+      return this.vx_p_itemmap == null ? Base.e_itemmap : this.vx_p_itemmap;
+    }
+
+    protected Base.Type_powermap vx_p_powermap;
+
+    @Override
+    public Base.Type_powermap powermap() {
+      return this.vx_p_powermap == null ? Base.e_powermap : this.vx_p_powermap;
+    }
+
+    protected Base.Type_skillmap vx_p_skillmap;
+
+    @Override
+    public Base.Type_skillmap skillmap() {
+      return this.vx_p_skillmap == null ? Base.e_skillmap : this.vx_p_skillmap;
+    }
+
+    protected Base.Type_unitmap vx_p_unitmap;
+
+    @Override
+    public Base.Type_unitmap unitmap() {
+      return this.vx_p_unitmap == null ? Base.e_unitmap : this.vx_p_unitmap;
+    }
+
+    @Override
+    public Core.Type_any vx_any(final Core.Type_string key) {
+      Core.Type_any output = Core.e_any;
+      String skey = key.vx_string();
+      switch (skey) {
+      case ":bookmap":
+        output = this.bookmap();
+        break;
+      case ":abilitymap":
+        output = this.abilitymap();
+        break;
+      case ":cardmap":
+        output = this.cardmap();
+        break;
+      case ":itemmap":
+        output = this.itemmap();
+        break;
+      case ":powermap":
+        output = this.powermap();
+        break;
+      case ":skillmap":
+        output = this.skillmap();
+        break;
+      case ":unitmap":
+        output = this.unitmap();
+        break;
+      }
+      return output;
+    }
+
+    @Override
+    public Map<String, Core.Type_any> vx_map() {
+      Map<String, Core.Type_any> output = new LinkedHashMap<>();
+      output.put(":bookmap", this.bookmap());
+      output.put(":abilitymap", this.abilitymap());
+      output.put(":cardmap", this.cardmap());
+      output.put(":itemmap", this.itemmap());
+      output.put(":powermap", this.powermap());
+      output.put(":skillmap", this.skillmap());
+      output.put(":unitmap", this.unitmap());
+      return Core.immutablemap(output);
+    }
+
+    @Override
+    public Type_tactics vx_new(final Object... vals) {return e_tactics.vx_copy(vals);}
+
+    @Override
+    public Type_tactics vx_copy(final Object... vals) {
+      Type_tactics output = this;
+      boolean ischanged = false;
+      Class_tactics val = this;
+      Core.Type_msgblock msgblock = Core.t_msgblock.vx_msgblock_from_copy_arrayval(val, vals);
+      if (this instanceof Core.vx_Type_const) {
+        ischanged = true;
+      }
+      Base.Type_bookmap vx_p_bookmap = val.bookmap();
+      Base.Type_abilitymap vx_p_abilitymap = val.abilitymap();
+      Base.Type_cardmap vx_p_cardmap = val.cardmap();
+      Base.Type_itemmap vx_p_itemmap = val.itemmap();
+      Base.Type_powermap vx_p_powermap = val.powermap();
+      Base.Type_skillmap vx_p_skillmap = val.skillmap();
+      Base.Type_unitmap vx_p_unitmap = val.unitmap();
+      ArrayList<String> validkeys = new ArrayList<>();
+      validkeys.add(":bookmap");
+      validkeys.add(":abilitymap");
+      validkeys.add(":cardmap");
+      validkeys.add(":itemmap");
+      validkeys.add(":powermap");
+      validkeys.add(":skillmap");
+      validkeys.add(":unitmap");
+      String key = "";
+      Core.Type_msg msg;
+      for (Object valsub : vals) {
+        if (valsub instanceof Core.Type_msgblock) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (valsub instanceof Core.Type_msg) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (key == "") {
+          boolean istestkey = false;
+          String testkey = "";
+          if (valsub instanceof Core.Type_string) {
+            Core.Type_string valstr = (Core.Type_string)valsub;
+            testkey = valstr.vx_string();
+            istestkey = true;
+          } else if (valsub instanceof String) {
+            testkey = (String)valsub;
+            istestkey = true;
+          } else {
+            Core.Type_any msgval;
+            if (valsub instanceof Core.Type_any) {
+              msgval = (Core.Type_any)valsub;
+            } else {
+              msgval = Core.vx_new_string(valsub.toString());
+            }
+            msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidkeytype", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          if (istestkey) {
+            if (!testkey.startsWith(":")) {
+              testkey = ":" + testkey;
+            }
+            boolean isvalidkey = validkeys.contains(testkey);
+            if (isvalidkey) {
+              key = testkey;
+            } else {
+              Core.Type_any msgval = Core.vx_new_string(testkey);
+              msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidkey", msgval);
+              msgblock = msgblock.vx_copy(msg);
+            }
+          }
+        } else {
+          switch (key) {
+          case ":bookmap":
+            if (valsub == vx_p_bookmap) {
+            } else if (valsub instanceof Base.Type_bookmap) {
+              ischanged = true;
+              vx_p_bookmap = (Base.Type_bookmap)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("bookmap"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":abilitymap":
+            if (valsub == vx_p_abilitymap) {
+            } else if (valsub instanceof Base.Type_abilitymap) {
+              ischanged = true;
+              vx_p_abilitymap = (Base.Type_abilitymap)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("abilitymap"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":cardmap":
+            if (valsub == vx_p_cardmap) {
+            } else if (valsub instanceof Base.Type_cardmap) {
+              ischanged = true;
+              vx_p_cardmap = (Base.Type_cardmap)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("cardmap"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":itemmap":
+            if (valsub == vx_p_itemmap) {
+            } else if (valsub instanceof Base.Type_itemmap) {
+              ischanged = true;
+              vx_p_itemmap = (Base.Type_itemmap)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("itemmap"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":powermap":
+            if (valsub == vx_p_powermap) {
+            } else if (valsub instanceof Base.Type_powermap) {
+              ischanged = true;
+              vx_p_powermap = (Base.Type_powermap)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("powermap"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":skillmap":
+            if (valsub == vx_p_skillmap) {
+            } else if (valsub instanceof Base.Type_skillmap) {
+              ischanged = true;
+              vx_p_skillmap = (Base.Type_skillmap)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("skillmap"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          case ":unitmap":
+            if (valsub == vx_p_unitmap) {
+            } else if (valsub instanceof Base.Type_unitmap) {
+              ischanged = true;
+              vx_p_unitmap = (Base.Type_unitmap)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("unitmap"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          default:
+            Core.Type_any msgval = Core.vx_new_string(key);
+            msg = Core.vx_msg_from_error("nx/tactics/base/tactics", ":invalidkey", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          key = "";
+        }
+      }
+      if (ischanged || (msgblock != Core.e_msgblock)) {
+        Class_tactics work = new Class_tactics();
+        work.vx_p_bookmap = vx_p_bookmap;
+        work.vx_p_abilitymap = vx_p_abilitymap;
+        work.vx_p_cardmap = vx_p_cardmap;
+        work.vx_p_itemmap = vx_p_itemmap;
+        work.vx_p_powermap = vx_p_powermap;
+        work.vx_p_skillmap = vx_p_skillmap;
+        work.vx_p_unitmap = vx_p_unitmap;
+        if (msgblock != Core.e_msgblock) {
+          work.vxmsgblock = msgblock;
+        }
+        output = work;
+      }
+      return output;
+    }
+
+    @Override
+    public Type_tactics vx_empty() {return e_tactics;}
+    @Override
+    public Type_tactics vx_type() {return t_tactics;}
+
+    @Override
+    public Core.Type_typedef vx_typedef() {
+      return Core.typedef_new(
+        "nx/tactics/base", // pkgname
+        "tactics", // name
+        ":struct", // extends
+        Core.e_typelist, // traits
+        Core.e_typelist, // allowtypes
+        Core.e_typelist, // disallowtypes
+        Core.e_funclist, // allowfuncs
+        Core.e_funclist, // disallowfuncs
+        Core.e_anylist, // allowvalues
+        Core.e_anylist, // disallowvalues
+        Core.e_argmap // properties
+      );
+    }
+
+  }
+
+  public static final Type_tactics e_tactics = new Class_tactics();
+  public static final Type_tactics t_tactics = new Class_tactics();
+
+  /**
    * type: team
    * (type team)
    */
@@ -21555,6 +22053,195 @@ public final class Base {
   public static final Const_suit_spade c_suit_spade = new Const_suit_spade();
 
   /**
+   * @function bookmap_from_booklist
+   * Returns a bookmap of all books.
+   * @param  {booklist} booklist
+   * @return {bookmap}
+   * (func bookmap<-booklist)
+   */
+  public static interface Func_bookmap_from_booklist extends Core.Func_any_from_any {
+    public Base.Type_bookmap vx_bookmap_from_booklist(final Base.Type_booklist booklist);
+  }
+
+  public static class Class_bookmap_from_booklist extends Core.Class_base implements Func_bookmap_from_booklist {
+
+    @Override
+    public Func_bookmap_from_booklist vx_new(Object... vals) {
+      Class_bookmap_from_booklist output = new Class_bookmap_from_booklist();
+      return output;
+    }
+
+    @Override
+    public Func_bookmap_from_booklist vx_copy(Object... vals) {
+      Class_bookmap_from_booklist output = new Class_bookmap_from_booklist();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/base", // pkgname
+        "bookmap<-booklist", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "bookmap", // name
+          ":map", // extends
+          Core.e_typelist, // traits
+          Core.t_typelist.vx_new(Base.t_book), // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_bookmap_from_booklist vx_empty() {return e_bookmap_from_booklist;}
+    @Override
+    public Func_bookmap_from_booklist vx_type() {return t_bookmap_from_booklist;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Base.Type_booklist inputval = (Base.Type_booklist)value;
+      Core.Type_any outputval = Base.f_bookmap_from_booklist(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_booklist booklist = Core.f_any_from_any(Base.t_booklist, arglist.vx_any(Core.vx_new_int(0)));
+      output = Base.f_bookmap_from_booklist(booklist);
+      return output;
+    }
+
+    @Override
+    public Base.Type_bookmap vx_bookmap_from_booklist(final Base.Type_booklist booklist) {
+      return Base.f_bookmap_from_booklist(booklist);
+    }
+
+  }
+
+  public static final Func_bookmap_from_booklist e_bookmap_from_booklist = new Base.Class_bookmap_from_booklist();
+  public static final Func_bookmap_from_booklist t_bookmap_from_booklist = new Base.Class_bookmap_from_booklist();
+
+  public static Base.Type_bookmap f_bookmap_from_booklist(final Base.Type_booklist booklist) {
+    Base.Type_bookmap output = Base.e_bookmap;
+    output = Core.f_map_from_list(
+      Base.t_bookmap,
+      booklist,
+      Core.t_any_from_any.vx_fn_new((book_any) -> {
+        Base.Type_book book = Core.f_any_from_any(Base.t_book, book_any);
+        return 
+          book.name();
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function name_from_chapter
+   * @param  {chapter} chapter
+   * @return {string}
+   * (func name<-chapter)
+   */
+  public static interface Func_name_from_chapter extends Core.Func_any_from_any {
+    public Core.Type_string vx_name_from_chapter(final Base.Type_chapter chapter);
+  }
+
+  public static class Class_name_from_chapter extends Core.Class_base implements Func_name_from_chapter {
+
+    @Override
+    public Func_name_from_chapter vx_new(Object... vals) {
+      Class_name_from_chapter output = new Class_name_from_chapter();
+      return output;
+    }
+
+    @Override
+    public Func_name_from_chapter vx_copy(Object... vals) {
+      Class_name_from_chapter output = new Class_name_from_chapter();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/base", // pkgname
+        "name<-chapter", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/core", // pkgname
+          "string", // name
+          ":string", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_name_from_chapter vx_empty() {return e_name_from_chapter;}
+    @Override
+    public Func_name_from_chapter vx_type() {return t_name_from_chapter;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Base.Type_chapter inputval = (Base.Type_chapter)value;
+      Core.Type_any outputval = Base.f_name_from_chapter(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_chapter chapter = Core.f_any_from_any(Base.t_chapter, arglist.vx_any(Core.vx_new_int(0)));
+      output = Base.f_name_from_chapter(chapter);
+      return output;
+    }
+
+    @Override
+    public Core.Type_string vx_name_from_chapter(final Base.Type_chapter chapter) {
+      return Base.f_name_from_chapter(chapter);
+    }
+
+  }
+
+  public static final Func_name_from_chapter e_name_from_chapter = new Base.Class_name_from_chapter();
+  public static final Func_name_from_chapter t_name_from_chapter = new Base.Class_name_from_chapter();
+
+  public static Core.Type_string f_name_from_chapter(final Base.Type_chapter chapter) {
+    Core.Type_string output = Core.e_string;
+    output = chapter.name();
+    return output;
+  }
+
+  /**
    * @function rating_from_mass
    * Return a rating from a mass.
    * @param  {string} mass
@@ -21644,6 +22331,109 @@ public final class Base {
     return output;
   }
 
+  /**
+   * @function tactics_from_booklist
+   * Return a ready tactics from a bookmap.
+   * @param  {booklist} booklist
+   * @return {tactics}
+   * (func tactics<-booklist)
+   */
+  public static interface Func_tactics_from_booklist extends Core.Func_any_from_any {
+    public Base.Type_tactics vx_tactics_from_booklist(final Base.Type_booklist booklist);
+  }
+
+  public static class Class_tactics_from_booklist extends Core.Class_base implements Func_tactics_from_booklist {
+
+    @Override
+    public Func_tactics_from_booklist vx_new(Object... vals) {
+      Class_tactics_from_booklist output = new Class_tactics_from_booklist();
+      return output;
+    }
+
+    @Override
+    public Func_tactics_from_booklist vx_copy(Object... vals) {
+      Class_tactics_from_booklist output = new Class_tactics_from_booklist();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/base", // pkgname
+        "tactics<-booklist", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "nx/tactics/base", // pkgname
+          "tactics", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_tactics_from_booklist vx_empty() {return e_tactics_from_booklist;}
+    @Override
+    public Func_tactics_from_booklist vx_type() {return t_tactics_from_booklist;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Base.Type_booklist inputval = (Base.Type_booklist)value;
+      Core.Type_any outputval = Base.f_tactics_from_booklist(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_booklist booklist = Core.f_any_from_any(Base.t_booklist, arglist.vx_any(Core.vx_new_int(0)));
+      output = Base.f_tactics_from_booklist(booklist);
+      return output;
+    }
+
+    @Override
+    public Base.Type_tactics vx_tactics_from_booklist(final Base.Type_booklist booklist) {
+      return Base.f_tactics_from_booklist(booklist);
+    }
+
+  }
+
+  public static final Func_tactics_from_booklist e_tactics_from_booklist = new Base.Class_tactics_from_booklist();
+  public static final Func_tactics_from_booklist t_tactics_from_booklist = new Base.Class_tactics_from_booklist();
+
+  public static Base.Type_tactics f_tactics_from_booklist(final Base.Type_booklist booklist) {
+    Base.Type_tactics output = Base.e_tactics;
+    output = Core.f_let(
+      Base.t_tactics,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Base.Type_bookmap bookmap = Base.f_bookmap_from_booklist(booklist);
+        return Core.f_new(
+          Base.t_tactics,
+          Core.t_anylist.vx_new(
+            Core.vx_new_string(":bookmap"),
+            bookmap
+          )
+        );
+      })
+    );
+    return output;
+  }
+
 
   static {
     Const_rank_10.const_new(c_rank_10);
@@ -21686,6 +22476,7 @@ public final class Base {
     maptype.put("ability", Base.t_ability);
     maptype.put("abilitymap", Base.t_abilitymap);
     maptype.put("book", Base.t_book);
+    maptype.put("booklist", Base.t_booklist);
     maptype.put("bookmap", Base.t_bookmap);
     maptype.put("card", Base.t_card);
     maptype.put("cardlist", Base.t_cardlist);
@@ -21726,6 +22517,7 @@ public final class Base {
     maptype.put("stat", Base.t_stat);
     maptype.put("suit", Base.t_suit);
     maptype.put("suitmap", Base.t_suitmap);
+    maptype.put("tactics", Base.t_tactics);
     maptype.put("team", Base.t_team);
     maptype.put("teammap", Base.t_teammap);
     maptype.put("terrain", Base.t_terrain);
@@ -21781,7 +22573,10 @@ public final class Base {
     mapconst.put("suit-diamond", Base.c_suit_diamond);
     mapconst.put("suit-heart", Base.c_suit_heart);
     mapconst.put("suit-spade", Base.c_suit_spade);
+    mapfunc.put("bookmap<-booklist", Base.t_bookmap_from_booklist);
+    mapfunc.put("name<-chapter", Base.t_name_from_chapter);
     mapfunc.put("rating<-mass", Base.t_rating_from_mass);
+    mapfunc.put("tactics<-booklist", Base.t_tactics_from_booklist);
     Core.vx_global_package_set("nx/tactics/base", maptype, mapconst, mapfunc);
   }
 

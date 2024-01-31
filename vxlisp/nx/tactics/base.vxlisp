@@ -11,6 +11,9 @@
  :traits     [card]
  :properties [chaptermap : chaptermap])
 
+(type booklist : list
+ :allowtypes [book])
+
 (type bookmap : map
  :allowtypes [book])
 
@@ -197,6 +200,15 @@
 
 (type suitmap : map
  :allowtypes [suit])
+
+(type tactics : struct
+ :properties [bookmap : bookmap
+              abilitymap : abilitymap
+              cardmap    : cardmap
+              itemmap    : itemmap
+              powermap   : powermap
+              skillmap   : skillmap
+              unitmap    : unitmap])
 
 (type team : struct
  :properties [completevictory : string
@@ -385,6 +397,28 @@
 (const suit-heart : suit)
 
 (const suit-spade : suit)
+
+(func bookmap<-booklist : bookmap
+ [booklist : booklist]
+ (map<-list : bookmap
+  booklist
+  (fn : string
+   [book : book]
+   (:name book)))
+ :doc "Returns a bookmap of all books.")
+
+(func name<-chapter : string
+ [chapter : chapter]
+ (:name chapter))
+
+(func tactics<-booklist : tactics
+ [booklist : booklist]
+ (let : tactics
+  [bookmap : bookmap := (bookmap<-booklist
+                         booklist)]
+  (tactics
+   :bookmap bookmap))
+ :doc "Return a ready tactics from a bookmap.")
 
 (func rating<-mass : rating
  [mass : string]

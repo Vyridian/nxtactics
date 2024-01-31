@@ -48,6 +48,36 @@ export default class vx_data_xml {
   static c_delimxmlequal = {vx_type: vx_data_textblock.t_delim, vx_constdef: {pkgname: 'vx/data/xml', name: 'delimxmlequal'}}
 
   /**
+   * @function string_decodexml_from_string
+   * Returns string decoded from xml encoding
+   * @param  {string} text
+   * @return {string}
+   */
+  static t_string_decodexml_from_string = {}
+  static e_string_decodexml_from_string = {vx_type: vx_data_xml.t_string_decodexml_from_string}
+
+  // (func string-decodexml<-string)
+  static f_string_decodexml_from_string(text) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const lt = vx_core.f_string_from_string_find_replace(text, "&lt;", "<")
+        const gt = vx_core.f_string_from_string_find_replace(text, "&gt;", ">")
+        const amp = vx_core.f_string_from_string_find_replace(gt, "&amp;", "&")
+        const result = vx_core.f_string_from_string_find_replace(
+          text,
+          vx_core.c_quote,
+          "\\\""
+        )
+        return result
+      })
+    )
+    return output
+  }
+
+  /**
    * @function string_first_from_xml
    * Returns string from first child's text.
    * @param  {xml} xml
@@ -66,7 +96,8 @@ export default class vx_data_xml {
         const children = vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children")
         const first = vx_core.f_any_from_list({"any-1": vx_data_xml.t_xml, "list-1": vx_data_xml.t_xmllist}, children, 1)
         const text = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, first, ":text")
-        const outdent = vx_type.f_string_outdent(text)
+        const decode = vx_data_xml.f_string_decodexml_from_string(text)
+        const outdent = vx_type.f_string_outdent(decode)
         const trim = vx_type.f_string_trim(outdent)
         return trim
       })
@@ -202,11 +233,20 @@ export default class vx_data_xml {
           vx_core.f_else(
             vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
               xmlarg,
-              vx_core.f_msg_from_error(
+              vx_core.f_msg_from_error_1(
+                ":invalidxmlclosetag",
                 vx_core.f_new(
-                  vx_core.t_string,
-                  "Invalid Xml Close tag: ",
-                  text
+                  vx_core.t_anymap,
+                  ":tag",
+                  text,
+                  ":startpos",
+                  vx_core.f_any_from_struct({"any-1": vx_core.t_int, "struct-2": vx_data_textblock.t_textblock}, tb, ":startpos"),
+                  ":endpos",
+                  vx_core.f_any_from_struct({"any-1": vx_core.t_int, "struct-2": vx_data_textblock.t_textblock}, tb, ":endpos"),
+                  ":line",
+                  vx_core.f_any_from_struct({"any-1": vx_core.t_int, "struct-2": vx_data_textblock.t_textblock}, tb, ":line"),
+                  ":column",
+                  vx_core.f_any_from_struct({"any-1": vx_core.t_int, "struct-2": vx_data_textblock.t_textblock}, tb, ":column")
                 )
               )
             )})
@@ -299,8 +339,7 @@ export default class vx_data_xml {
       {"any-1": vx_data_xml.t_xml, "any-2": vx_data_textblock.t_textblock, "list-2": vx_data_textblock.t_textblocklist},
       textblocklist,
       xmlarg,
-      vx_core.f_new(vx_core.t_any_from_reduce, (reduce, current) => 
-        vx_data_xml.f_xml_parse_from_xml_textblock(reduce, current))
+      vx_core.f_new(vx_core.t_any_from_reduce, vx_data_xml.t_xml_parse_from_xml_textblock)
     )
     return output
   }
@@ -520,8 +559,13 @@ export default class vx_data_xml {
   // (func xml<-string)
   static f_xml_from_string(text) {
     let output = vx_data_xml.e_xml
-    output = vx_data_xml.f_xml_from_textblock(
-      vx_data_xml.f_textblock_xml_from_string(text)
+    output = vx_core.f_let(
+      {"any-1": vx_data_xml.t_xml},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tb = vx_data_xml.f_textblock_xml_from_string(text)
+        return vx_data_xml.f_xml_from_textblock(tb)
+      })
     )
     return output
   }
@@ -564,6 +608,7 @@ export default class vx_data_xml {
       "xml": vx_data_xml.e_xml,
       "xmllist": vx_data_xml.e_xmllist,
       "xmlpropmap": vx_data_xml.e_xmlpropmap,
+      "string-decodexml<-string": vx_data_xml.e_string_decodexml_from_string,
       "string-first<-xml": vx_data_xml.e_string_first_from_xml,
       "textblock-xml<-string": vx_data_xml.e_textblock_xml_from_string,
       "xml-angle<-xml-textblock": vx_data_xml.e_xml_angle_from_xml_textblock,
@@ -579,6 +624,7 @@ export default class vx_data_xml {
       "xml<-textblock": vx_data_xml.e_xml_from_textblock
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "string-decodexml<-string": vx_data_xml.t_string_decodexml_from_string,
       "string-first<-xml": vx_data_xml.t_string_first_from_xml,
       "textblock-xml<-string": vx_data_xml.t_textblock_xml_from_string,
       "xml-angle<-xml-textblock": vx_data_xml.t_xml_angle_from_xml_textblock,
@@ -749,6 +795,25 @@ export default class vx_data_xml {
       ":starttext",
       "="
     ))
+
+    // (func string-decodexml<-string)
+    vx_data_xml.t_string_decodexml_from_string['vx_type'] = vx_core.t_type
+    vx_data_xml.t_string_decodexml_from_string['vx_value'] = {
+      name          : "string-decodexml<-string",
+      pkgname       : "vx/data/xml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_data_xml.f_string_decodexml_from_string
+    }
 
     // (func string-first<-xml)
     vx_data_xml.t_string_first_from_xml['vx_type'] = vx_core.t_type

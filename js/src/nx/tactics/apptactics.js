@@ -5,6 +5,9 @@ import nx_tactics_base from "../../nx/tactics/base.js"
 import nx_tactics_books_bookloader from "../../nx/tactics/books/bookloader.js"
 import vx_data_file from "../../vx/data/file.js"
 import vx_data_xml from "../../vx/data/xml.js"
+import nx_tactics_books_advanced_rules from "../../nx/tactics/books/advanced_rules.js"
+import vx_ui_ui from "../../vx/ui/ui.js"
+import nx_tactics_uitactics from "../../nx/tactics/uitactics.js"
 
 
 export default class nx_tactics_apptactics {
@@ -55,8 +58,37 @@ export default class nx_tactics_apptactics {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const book = nx_tactics_books_bookloader.f_book_read_from_bookname(context, "TACTICSBOOK_CORE")
-        return vx_core.f_string_from_any(book)
+        const booknames = vx_core.f_new(
+          vx_core.t_stringlist,
+          "TACTICSBOOK_CORE",
+          "TACTICSBOOK_ADVANCED",
+          "TACTICSBOOK_ANCIENT",
+          "TACTICSBOOK_AOSAIL",
+          "TACTICSBOOK_AOSTEAM",
+          "TACTICSBOOK_BESTIARY",
+          "TACTICSBOOK_CHARS",
+          "TACTICSBOOK_COMBAT",
+          "TACTICSBOOK_FANTASY",
+          "TACTICSBOOK_GEAR",
+          "TACTICSBOOK_GIANT",
+          "TACTICSBOOK_HIGHTECH",
+          "TACTICSBOOK_HORROR",
+          "TACTICSBOOK_LANDSEA",
+          "TACTICSBOOK_MAGIC",
+          "TACTICSBOOK_MEDIEVAL",
+          "TACTICSBOOK_MFANTASY",
+          "TACTICSBOOK_MODERN",
+          "TACTICSBOOK_POWERS",
+          "TACTICSBOOK_PREHISTORY",
+          "TACTICSBOOK_PULP",
+          "TACTICSBOOK_SCIFI",
+          "TACTICSBOOK_SKILLS",
+          "TACTICSBOOK_SPACE",
+          "TACTICSBOOK_SUPER",
+          "TACTICSBOOK_WORLDWARS"
+        )
+        const done = nx_tactics_books_bookloader.f_boolean_write_from_booknames(context, booknames)
+        return vx_core.f_string_from_any(done)
       })
     )
     return output

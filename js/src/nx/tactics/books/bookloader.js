@@ -81,7 +81,7 @@ export default class nx_tactics_books_bookloader {
   /**
    * @function ability_from_ability_xmlchild
    * Returns a modified ability based on a given child xml.
-   * @param  {ability} abl
+   * @param  {ability} ability
    * @param  {xml} child
    * @return {ability}
    */
@@ -89,40 +89,47 @@ export default class nx_tactics_books_bookloader {
   static e_ability_from_ability_xmlchild = {vx_type: nx_tactics_books_bookloader.t_ability_from_ability_xmlchild}
 
   // (func ability<-ability-xmlchild)
-  static f_ability_from_ability_xmlchild(abl, child) {
+  static f_ability_from_ability_xmlchild(ability, child) {
     let output = nx_tactics_base.e_ability
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_ability, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return abl})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          abl,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          abl,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_ability, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return ability})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_ability,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              ability,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              ability,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_ability,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
     )
     return output
   }
@@ -178,7 +185,7 @@ export default class nx_tactics_books_bookloader {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const xml = nx_tactics_books_bookloader.f_xml_read_from_bookname(context, bookname)
-        return nx_tactics_books_bookloader.f_book_from_xmltop(xml)
+        return nx_tactics_books_bookloader.f_book_from_xml(xml)
       })
     )
     return output
@@ -270,18 +277,22 @@ export default class nx_tactics_books_bookloader {
       {"any-1": nx_tactics_base.t_book, "any-2": vx_core.t_string},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const tag = vx_core.f_log_1({"any-1": vx_core.t_string}, "vx/core/any<-struct", vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"))
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
         return vx_core.f_switch(
           {"any-1": nx_tactics_base.t_book, "any-2": vx_core.t_string},
           tag,
           vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+          vx_core.f_case_1("!--", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
           vx_core.f_case_1("?xml", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
           vx_core.f_case_1(
             "doc",
             vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_if_2(
               {"any-1": nx_tactics_base.t_book},
               vx_core.f_then(
-                vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty_1(current)}),
+                vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(current)}),
+                vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_book_from_xmldoc(child)})
+              ),
+              vx_core.f_else(
                 vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
                   current,
                   vx_core.f_msg_from_error_1(
@@ -295,9 +306,6 @@ export default class nx_tactics_books_bookloader {
                     )
                   )
                 )})
-              ),
-              vx_core.f_else(
-                vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_book_from_book_xmlchild(current, child)})
               )
             )})
           ),
@@ -342,11 +350,7 @@ export default class nx_tactics_books_bookloader {
         const chapter = nx_tactics_books_bookloader.f_chapter_from_xml(xml)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_chapter}, chapter, ":name")
         const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_chaptermap, "struct-2": nx_tactics_base.t_book}, book, ":chaptermap")
-        const chgmap = vx_core.f_copy(
-          nx_tactics_base.t_chaptermap,
-          name,
-          chapter
-        )
+        const chgmap = vx_core.f_copy(origmap, name, chapter)
         return vx_core.f_copy(book, ":chaptermap", chgmap)
       })
     )
@@ -415,7 +419,7 @@ export default class nx_tactics_books_bookloader {
 
   /**
    * @function book_from_xml
-   * Returns a book from a given xml.
+   * Returns a book from a given top level xml.
    * @param  {xml} xml
    * @return {book}
    */
@@ -424,6 +428,24 @@ export default class nx_tactics_books_bookloader {
 
   // (func book<-xml)
   static f_book_from_xml(xml) {
+    let output = nx_tactics_base.e_book
+    output = nx_tactics_books_bookloader.f_book_from_xmllist(
+      vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children")
+    )
+    return output
+  }
+
+  /**
+   * @function book_from_xmldoc
+   * Returns a book from a given xml.
+   * @param  {xml} xml
+   * @return {book}
+   */
+  static t_book_from_xmldoc = {}
+  static e_book_from_xmldoc = {vx_type: nx_tactics_books_bookloader.t_book_from_xmldoc}
+
+  // (func book<-xmldoc)
+  static f_book_from_xmldoc(xml) {
     let output = nx_tactics_base.e_book
     output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_book, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
@@ -467,24 +489,6 @@ export default class nx_tactics_books_bookloader {
         nx_tactics_base.t_book
       ),
       vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_book_from_book_xml)
-    )
-    return output
-  }
-
-  /**
-   * @function book_from_xmltop
-   * Returns a book from a given top level xml.
-   * @param  {xml} xmltop
-   * @return {book}
-   */
-  static t_book_from_xmltop = {}
-  static e_book_from_xmltop = {vx_type: nx_tactics_books_bookloader.t_book_from_xmltop}
-
-  // (func book<-xmltop)
-  static f_book_from_xmltop(xmltop) {
-    let output = nx_tactics_base.e_book
-    output = nx_tactics_books_bookloader.f_book_from_xmllist(
-      vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xmltop, ":children")
     )
     return output
   }
@@ -630,42 +634,49 @@ export default class nx_tactics_books_bookloader {
   // (func chapter<-chapter-xmlchild)
   static f_chapter_from_chapter_xmlchild(chapter, child) {
     let output = nx_tactics_base.e_chapter
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_chapter, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return chapter})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          chapter,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_case_1(
-        "section",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_chapter_from_chapter_xmlsection(chapter, child)})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          chapter,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_chapter, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return chapter})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_chapter,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              chapter,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_case_1(
+            "section",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_chapter_from_chapter_xmlsection(chapter, child)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              chapter,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_chapter,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
     )
     return output
   }
@@ -689,8 +700,8 @@ export default class nx_tactics_books_bookloader {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const section = nx_tactics_books_bookloader.f_section_from_xml(xmlsection)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_section}, section, ":name")
-        const sectionmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_sectionmap, "struct-2": nx_tactics_base.t_section}, section, ":sectionmap")
-        const chgmap = vx_core.f_copy(sectionmap, name, section)
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_sectionmap, "struct-2": nx_tactics_base.t_chapter}, chapter, ":sectionmap")
+        const chgmap = vx_core.f_copy(origmap, name, section)
         return vx_core.f_copy(chapter, ":sectionmap", chgmap)
       })
     )
@@ -725,6 +736,166 @@ export default class nx_tactics_books_bookloader {
           vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
           chap,
           vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_chapter_from_chapter_xmlchild)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function damage_from_damage_key_value
+   * Returns a modified damage from a key value.
+   * @param  {damage} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {damage}
+   */
+  static t_damage_from_damage_key_value = {}
+  static e_damage_from_damage_key_value = {vx_type: nx_tactics_books_bookloader.t_damage_from_damage_key_value}
+
+  // (func damage<-damage-key-value)
+  static f_damage_from_damage_key_value(current, key, value) {
+    let output = nx_tactics_base.e_damage
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_damage, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image",
+          "classification"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_damage,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function damage_from_damage_stringmap
+   * Returns a damage from a propmap.
+   * @param  {damage} damage
+   * @param  {stringmap} propmap
+   * @return {damage}
+   */
+  static t_damage_from_damage_stringmap = {}
+  static e_damage_from_damage_stringmap = {vx_type: nx_tactics_books_bookloader.t_damage_from_damage_stringmap}
+
+  // (func damage<-damage-stringmap)
+  static f_damage_from_damage_stringmap(damage, propmap) {
+    let output = nx_tactics_base.e_damage
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      damage,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_damage_from_damage_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function damage_from_damage_xmlchild
+   * Returns a modified damage based on a given child Xml.
+   * @param  {damage} damage
+   * @param  {xml} child
+   * @return {damage}
+   */
+  static t_damage_from_damage_xmlchild = {}
+  static e_damage_from_damage_xmlchild = {vx_type: nx_tactics_books_bookloader.t_damage_from_damage_xmlchild}
+
+  // (func damage<-damage-xmlchild)
+  static f_damage_from_damage_xmlchild(damage, child) {
+    let output = nx_tactics_base.e_damage
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_damage, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_damage, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return damage})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              damage,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              damage,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_damage,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function damage_from_xml
+   * Returns a damage from a given xml.
+   * @param  {xml} xml
+   * @return {damage}
+   */
+  static t_damage_from_xml = {}
+  static e_damage_from_xml = {vx_type: nx_tactics_books_bookloader.t_damage_from_xml}
+
+  // (func damage<-xml)
+  static f_damage_from_xml(xml) {
+    let output = nx_tactics_base.e_damage
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_damage, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const damage = nx_tactics_books_bookloader.f_damage_from_damage_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_damage
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_damage, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          damage,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_damage_from_damage_xmlchild)
         )
       })
     )
@@ -773,7 +944,8 @@ export default class nx_tactics_books_bookloader {
       {"any-1": vx_data_file.t_file},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const bookname = nx_tactics_books_bookloader.f_string_writename_from_book(book)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":name")
+        const bookname = nx_tactics_books_bookloader.f_string_writename_from_string(name)
         return vx_core.f_new(
           vx_data_file.t_file,
           ":path",
@@ -791,15 +963,496 @@ export default class nx_tactics_books_bookloader {
   }
 
   /**
+   * @function item_from_item_key_value
+   * Returns a modified item from a key value.
+   * @param  {item} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {item}
+   */
+  static t_item_from_item_key_value = {}
+  static e_item_from_item_key_value = {vx_type: nx_tactics_books_bookloader.t_item_from_item_key_value}
+
+  // (func item<-item-key-value)
+  static f_item_from_item_key_value(current, key, value) {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_item, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image",
+          "classification",
+          "crew",
+          "energy",
+          "explosive",
+          "height",
+          "length",
+          "mass",
+          "modifiers",
+          "muzzlevelocity",
+          "range",
+          "rof",
+          "rounds",
+          "speedair",
+          "speedland",
+          "speedspace",
+          "speedwater",
+          "width"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_item,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function item_from_item_stringmap
+   * Returns a new item from a propmap.
+   * @param  {item} item
+   * @param  {stringmap} propmap
+   * @return {item}
+   */
+  static t_item_from_item_stringmap = {}
+  static e_item_from_item_stringmap = {vx_type: nx_tactics_books_bookloader.t_item_from_item_stringmap}
+
+  // (func item<-item-stringmap)
+  static f_item_from_item_stringmap(item, propmap) {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      item,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_item_from_item_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function item_from_item_xmlchild
+   * Returns a modified item based on a given child xml.
+   * @param  {item} item
+   * @param  {xml} child
+   * @return {item}
+   */
+  static t_item_from_item_xmlchild = {}
+  static e_item_from_item_xmlchild = {vx_type: nx_tactics_books_bookloader.t_item_from_item_xmlchild}
+
+  // (func item<-item-xmlchild)
+  static f_item_from_item_xmlchild(item, child) {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_item, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_item, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return item})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              item,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              item,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_item,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function item_from_xml
+   * Returns a item from a given xml.
+   * @param  {xml} xml
+   * @return {item}
+   */
+  static t_item_from_xml = {}
+  static e_item_from_xml = {vx_type: nx_tactics_books_bookloader.t_item_from_xml}
+
+  // (func item<-xml)
+  static f_item_from_xml(xml) {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_item, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const item = nx_tactics_books_bookloader.f_item_from_item_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_item
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_item, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          item,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_item_from_item_xmlchild)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function location_from_location_key_value
+   * Returns a modified location from a key value.
+   * @param  {location} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {location}
+   */
+  static t_location_from_location_key_value = {}
+  static e_location_from_location_key_value = {vx_type: nx_tactics_books_bookloader.t_location_from_location_key_value}
+
+  // (func location<-location-key-value)
+  static f_location_from_location_key_value(current, key, value) {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_location, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_location,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function location_from_location_stringmap
+   * Returns a location from a propmap.
+   * @param  {location} location
+   * @param  {stringmap} propmap
+   * @return {location}
+   */
+  static t_location_from_location_stringmap = {}
+  static e_location_from_location_stringmap = {vx_type: nx_tactics_books_bookloader.t_location_from_location_stringmap}
+
+  // (func location<-location-stringmap)
+  static f_location_from_location_stringmap(location, propmap) {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      location,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_location_from_location_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function location_from_location_xmlchild
+   * Returns a modified location based on a given child Xml.
+   * @param  {location} location
+   * @param  {xml} child
+   * @return {location}
+   */
+  static t_location_from_location_xmlchild = {}
+  static e_location_from_location_xmlchild = {vx_type: nx_tactics_books_bookloader.t_location_from_location_xmlchild}
+
+  // (func location<-location-xmlchild)
+  static f_location_from_location_xmlchild(location, child) {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_location, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_location, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return location})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              location,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              location,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_location,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function location_from_xml
+   * Returns a location from a given xml.
+   * @param  {xml} xml
+   * @return {location}
+   */
+  static t_location_from_xml = {}
+  static e_location_from_xml = {vx_type: nx_tactics_books_bookloader.t_location_from_xml}
+
+  // (func location<-xml)
+  static f_location_from_xml(xml) {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_location, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const location = nx_tactics_books_bookloader.f_location_from_location_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_location
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_location, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          location,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_location_from_location_xmlchild)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function modifier_from_modifier_key_value
+   * Returns a modified modifier from a key value.
+   * @param  {modifier} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {modifier}
+   */
+  static t_modifier_from_modifier_key_value = {}
+  static e_modifier_from_modifier_key_value = {vx_type: nx_tactics_books_bookloader.t_modifier_from_modifier_key_value}
+
+  // (func modifier<-modifier-key-value)
+  static f_modifier_from_modifier_key_value(current, key, value) {
+    let output = nx_tactics_base.e_modifier
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_modifier, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_modifier,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function modifier_from_modifier_stringmap
+   * Returns a modifier from a propmap.
+   * @param  {modifier} modifier
+   * @param  {stringmap} propmap
+   * @return {modifier}
+   */
+  static t_modifier_from_modifier_stringmap = {}
+  static e_modifier_from_modifier_stringmap = {vx_type: nx_tactics_books_bookloader.t_modifier_from_modifier_stringmap}
+
+  // (func modifier<-modifier-stringmap)
+  static f_modifier_from_modifier_stringmap(modifier, propmap) {
+    let output = nx_tactics_base.e_modifier
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      modifier,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_modifier_from_modifier_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function modifier_from_modifier_xmlchild
+   * Returns a modified modifier based on a given child xml.
+   * @param  {modifier} modifier
+   * @param  {xml} child
+   * @return {modifier}
+   */
+  static t_modifier_from_modifier_xmlchild = {}
+  static e_modifier_from_modifier_xmlchild = {vx_type: nx_tactics_books_bookloader.t_modifier_from_modifier_xmlchild}
+
+  // (func modifier<-modifier-xmlchild)
+  static f_modifier_from_modifier_xmlchild(modifier, child) {
+    let output = nx_tactics_base.e_modifier
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_modifier, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_modifier, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return modifier})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              modifier,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              modifier,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_modifier,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
    * @function modifier_from_xml
+   * Returns a modifier from a given xml.
+   * @param  {xml} xml
    * @return {modifier}
    */
   static t_modifier_from_xml = {}
   static e_modifier_from_xml = {vx_type: nx_tactics_books_bookloader.t_modifier_from_xml}
 
   // (func modifier<-xml)
-  static f_modifier_from_xml() {
+  static f_modifier_from_xml(xml) {
     let output = nx_tactics_base.e_modifier
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_modifier, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const modifier = nx_tactics_books_bookloader.f_modifier_from_modifier_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_modifier
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_modifier, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          modifier,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_modifier_from_modifier_xmlchild)
+        )
+      })
+    )
     return output
   }
 
@@ -825,7 +1478,8 @@ export default class nx_tactics_books_bookloader {
         vx_core.f_new(
           vx_core.t_list,
           "name",
-          "image"
+          "image",
+          "stat"
         ),
         vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
       ),
@@ -873,6 +1527,33 @@ export default class nx_tactics_books_bookloader {
   }
 
   /**
+   * @function power_from_power_xmlability
+   * Return a power with new ability added to abilitymap
+   * @param  {power} power
+   * @param  {xml} xmlability
+   * @return {power}
+   */
+  static t_power_from_power_xmlability = {}
+  static e_power_from_power_xmlability = {vx_type: nx_tactics_books_bookloader.t_power_from_power_xmlability}
+
+  // (func power<-power-xmlability)
+  static f_power_from_power_xmlability(power, xmlability) {
+    let output = nx_tactics_base.e_power
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_power},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const ability = nx_tactics_books_bookloader.f_ability_from_xml(xmlability)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_ability}, ability, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_power}, power, ":abilitymap")
+        const chgmap = vx_core.f_copy(origmap, name, ability)
+        return vx_core.f_copy(power, ":abilitymap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function power_from_power_xmlchild
    * Returns a modified power based on a given child xml.
    * @param  {power} power
@@ -907,6 +1588,14 @@ export default class nx_tactics_books_bookloader {
               vx_data_xml.f_string_first_from_xml(child)
             )})
           ),
+          vx_core.f_case_1(
+            "ability",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_power_from_power_xmlability(power, child)})
+          ),
+          vx_core.f_case_1(
+            "specialty",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_power_from_power_xmlspecialty(power, child)})
+          ),
           vx_core.f_else(
             vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
               power,
@@ -923,6 +1612,33 @@ export default class nx_tactics_books_bookloader {
             )})
           )
         )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function power_from_power_xmlspecialty
+   * Return a power with new specialty added to specialtymap
+   * @param  {power} power
+   * @param  {xml} xmlspecialty
+   * @return {power}
+   */
+  static t_power_from_power_xmlspecialty = {}
+  static e_power_from_power_xmlspecialty = {vx_type: nx_tactics_books_bookloader.t_power_from_power_xmlspecialty}
+
+  // (func power<-power-xmlspecialty)
+  static f_power_from_power_xmlspecialty(power, xmlspecialty) {
+    let output = nx_tactics_base.e_power
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_power},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const specialty = nx_tactics_books_bookloader.f_specialty_from_xml(xmlspecialty)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_specialty}, specialty, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_power}, power, ":specialtymap")
+        const chgmap = vx_core.f_copy(origmap, name, specialty)
+        return vx_core.f_copy(power, ":specialtymap", chgmap)
       })
     )
     return output
@@ -985,9 +1701,10 @@ export default class nx_tactics_books_bookloader {
         vx_core.f_new(
           vx_core.t_list,
           "name",
-          "image"
+          "image",
+          "classification"
         ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, ":name", value)})
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
       ),
       vx_core.f_else(
         vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
@@ -1045,38 +1762,46 @@ export default class nx_tactics_books_bookloader {
   // (func rule<-rule-xmlchild)
   static f_rule_from_rule_xmlchild(rule, child) {
     let output = nx_tactics_base.e_rule
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_rule, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return rule})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          rule,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          rule,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_rule, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return rule})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_rule,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles",
+              "classification"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              rule,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              rule,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_rule,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
     )
     return output
   }
@@ -1098,7 +1823,7 @@ export default class nx_tactics_books_bookloader {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
-        const rul = nx_tactics_books_bookloader.f_rule_from_rule_stringmap(
+        const rule = nx_tactics_books_bookloader.f_rule_from_rule_stringmap(
           vx_core.f_empty(
             nx_tactics_base.t_rule
           ),
@@ -1107,7 +1832,7 @@ export default class nx_tactics_books_bookloader {
         return vx_core.f_any_from_list_start_reduce(
           {"any-1": nx_tactics_base.t_rule, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
           vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
-          rul,
+          rule,
           vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_rule_from_rule_xmlchild)
         )
       })
@@ -1197,45 +1922,83 @@ export default class nx_tactics_books_bookloader {
   // (func scenario<-scenario-xmlchild)
   static f_scenario_from_scenario_xmlchild(scenario, child) {
     let output = nx_tactics_base.e_scenario
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_scenario, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return scenario})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          scenario,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          scenario,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_scenario, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return scenario})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_scenario,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              scenario,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_case_1(
+            "team",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_scenario_from_scenario_xmlteam(scenario, child)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              scenario,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_scenario,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function scenario_from_scenario_xmlteam
+   * Return a scenario with new team added to teammap
+   * @param  {scenario} scenario
+   * @param  {xml} xmlteam
+   * @return {scenario}
+   */
+  static t_scenario_from_scenario_xmlteam = {}
+  static e_scenario_from_scenario_xmlteam = {vx_type: nx_tactics_books_bookloader.t_scenario_from_scenario_xmlteam}
+
+  // (func scenario<-scenario-xmlteam)
+  static f_scenario_from_scenario_xmlteam(scenario, xmlteam) {
+    let output = nx_tactics_base.e_scenario
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_scenario},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const current = nx_tactics_books_bookloader.f_team_from_xml(xmlteam)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_team}, current, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_teammap, "struct-2": nx_tactics_base.t_scenario}, scenario, ":teammap")
+        const chgmap = vx_core.f_copy(origmap, name, current)
+        return vx_core.f_copy(scenario, ":teammap", chgmap)
+      })
     )
     return output
   }
 
   /**
    * @function scenario_from_xml
-   * Returns a scenario from a given Xml.
+   * Returns a scenario from a given xml.
    * @param  {xml} xml
    * @return {scenario}
    */
@@ -1250,7 +2013,7 @@ export default class nx_tactics_books_bookloader {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
-        const scen = nx_tactics_books_bookloader.f_scenario_from_scenario_stringmap(
+        const scenario = nx_tactics_books_bookloader.f_scenario_from_scenario_stringmap(
           vx_core.f_empty(
             nx_tactics_base.t_scenario
           ),
@@ -1259,7 +2022,7 @@ export default class nx_tactics_books_bookloader {
         return vx_core.f_any_from_list_start_reduce(
           {"any-1": nx_tactics_base.t_scenario, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
           vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
-          scen,
+          scenario,
           vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_scenario_from_scenario_xmlchild)
         )
       })
@@ -1349,58 +2112,197 @@ export default class nx_tactics_books_bookloader {
   // (func section<-section-xmlchild)
   static f_section_from_section_xmlchild(section, child) {
     let output = nx_tactics_base.e_section
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_section, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return section})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          section,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_case_1(
-        "power",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlpower(section, child)})
-      ),
-      vx_core.f_case_1(
-        "rule",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlrule(section, child)})
-      ),
-      vx_core.f_case_1(
-        "section",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlsection(section, child)})
-      ),
-      vx_core.f_case_1(
-        "skill",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlskill(section, child)})
-      ),
-      vx_core.f_case_1(
-        "unit",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlunit(section, child)})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          section,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_section, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return section})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_chapter,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              section,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_case_1(
+            "damage",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmldamage(section, child)})
+          ),
+          vx_core.f_case_1(
+            "item",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlitem(section, child)})
+          ),
+          vx_core.f_case_1(
+            "modifier",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlmodifier(section, child)})
+          ),
+          vx_core.f_case_1(
+            "place",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmllocation(section, child)})
+          ),
+          vx_core.f_case_1(
+            "power",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlpower(section, child)})
+          ),
+          vx_core.f_case_1(
+            "rule",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlrule(section, child)})
+          ),
+          vx_core.f_case_1(
+            "scenario",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlscenario(section, child)})
+          ),
+          vx_core.f_case_1(
+            "section",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlsection(section, child)})
+          ),
+          vx_core.f_case_1(
+            "skill",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlskill(section, child)})
+          ),
+          vx_core.f_case_1(
+            "terrain",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlterrain(section, child)})
+          ),
+          vx_core.f_case_1(
+            "unit",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_section_from_section_xmlunit(section, child)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              section,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_section,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function section_from_section_xmldamage
+   * Return a section with new damage added to damagemap
+   * @param  {section} section
+   * @param  {xml} xmldamage
+   * @return {section}
+   */
+  static t_section_from_section_xmldamage = {}
+  static e_section_from_section_xmldamage = {vx_type: nx_tactics_books_bookloader.t_section_from_section_xmldamage}
+
+  // (func section<-section-xmldamage)
+  static f_section_from_section_xmldamage(section, xmldamage) {
+    let output = nx_tactics_base.e_section
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_section},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const current = nx_tactics_books_bookloader.f_damage_from_xml(xmldamage)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_damage}, current, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_damagemap, "struct-2": nx_tactics_base.t_section}, section, ":damagemap")
+        const chgmap = vx_core.f_copy(origmap, name, current)
+        return vx_core.f_copy(section, ":damagemap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function section_from_section_xmlitem
+   * Return a section with new item added to itemmap
+   * @param  {section} section
+   * @param  {xml} xmlitem
+   * @return {section}
+   */
+  static t_section_from_section_xmlitem = {}
+  static e_section_from_section_xmlitem = {vx_type: nx_tactics_books_bookloader.t_section_from_section_xmlitem}
+
+  // (func section<-section-xmlitem)
+  static f_section_from_section_xmlitem(section, xmlitem) {
+    let output = nx_tactics_base.e_section
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_section},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const item = nx_tactics_books_bookloader.f_item_from_xml(xmlitem)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_itemmap, "struct-2": nx_tactics_base.t_section}, section, ":itemmap")
+        const chgmap = vx_core.f_copy(origmap, name, item)
+        return vx_core.f_copy(section, ":itemmap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function section_from_section_xmllocation
+   * Return a section with new location added to locationmap
+   * @param  {section} section
+   * @param  {xml} xmllocation
+   * @return {section}
+   */
+  static t_section_from_section_xmllocation = {}
+  static e_section_from_section_xmllocation = {vx_type: nx_tactics_books_bookloader.t_section_from_section_xmllocation}
+
+  // (func section<-section-xmllocation)
+  static f_section_from_section_xmllocation(section, xmllocation) {
+    let output = nx_tactics_base.e_section
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_section},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const location = nx_tactics_books_bookloader.f_location_from_xml(xmllocation)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_location}, location, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_locationmap, "struct-2": nx_tactics_base.t_section}, section, ":locationmap")
+        const chgmap = vx_core.f_copy(origmap, name, location)
+        return vx_core.f_copy(section, ":locationmap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function section_from_section_xmlmodifier
+   * Return a section with new modifier added to modifiermap
+   * @param  {section} section
+   * @param  {xml} xmlmodifier
+   * @return {section}
+   */
+  static t_section_from_section_xmlmodifier = {}
+  static e_section_from_section_xmlmodifier = {vx_type: nx_tactics_books_bookloader.t_section_from_section_xmlmodifier}
+
+  // (func section<-section-xmlmodifier)
+  static f_section_from_section_xmlmodifier(section, xmlmodifier) {
+    let output = nx_tactics_base.e_section
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_section},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const modifier = nx_tactics_books_bookloader.f_modifier_from_xml(xmlmodifier)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_modifier}, modifier, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_modifiermap, "struct-2": nx_tactics_base.t_section}, section, ":modifiermap")
+        const chgmap = vx_core.f_copy(origmap, name, modifier)
+        return vx_core.f_copy(section, ":modifiermap", chgmap)
+      })
     )
     return output
   }
@@ -1425,11 +2327,7 @@ export default class nx_tactics_books_bookloader {
         const power = nx_tactics_books_bookloader.f_power_from_xml(xmlpower)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_power}, power, ":name")
         const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_powermap, "struct-2": nx_tactics_base.t_section}, section, ":powermap")
-        const chgmap = vx_core.f_copy(
-          origmap,
-          name,
-          nx_tactics_base.t_skill
-        )
+        const chgmap = vx_core.f_copy(origmap, name, power)
         return vx_core.f_copy(section, ":powermap", chgmap)
       })
     )
@@ -1455,8 +2353,8 @@ export default class nx_tactics_books_bookloader {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const rule = nx_tactics_books_bookloader.f_rule_from_xml(xmlrule)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_rule}, rule, ":name")
-        const rulemap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_rulemap, "struct-2": nx_tactics_base.t_section}, section, ":rulemap")
-        const chgmap = vx_core.f_copy(rulemap, name, rule)
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_rulemap, "struct-2": nx_tactics_base.t_section}, section, ":rulemap")
+        const chgmap = vx_core.f_copy(origmap, name, rule)
         return vx_core.f_copy(section, ":rulemap", chgmap)
       })
     )
@@ -1482,8 +2380,8 @@ export default class nx_tactics_books_bookloader {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const scenario = nx_tactics_books_bookloader.f_scenario_from_xml(xmlscenario)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_scenario}, scenario, ":name")
-        const scenariomap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_scenariomap, "struct-2": nx_tactics_base.t_section}, section, ":scenariomap")
-        const chgmap = vx_core.f_copy(scenariomap, name, scenario)
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_scenariomap, "struct-2": nx_tactics_base.t_section}, section, ":scenariomap")
+        const chgmap = vx_core.f_copy(origmap, name, scenario)
         return vx_core.f_copy(section, ":scenariomap", chgmap)
       })
     )
@@ -1509,8 +2407,8 @@ export default class nx_tactics_books_bookloader {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const subsect = nx_tactics_books_bookloader.f_section_from_xml(xmlsection)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_section}, subsect, ":name")
-        const sectionmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_sectionmap, "struct-2": nx_tactics_base.t_section}, section, ":sectionmap")
-        const chgmap = vx_core.f_copy(sectionmap, name, subsect)
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_sectionmap, "struct-2": nx_tactics_base.t_section}, section, ":sectionmap")
+        const chgmap = vx_core.f_copy(origmap, name, subsect)
         return vx_core.f_copy(section, ":sectionmap", chgmap)
       })
     )
@@ -1545,6 +2443,33 @@ export default class nx_tactics_books_bookloader {
   }
 
   /**
+   * @function section_from_section_xmlterrain
+   * Return a section with new terrain added to terrainmap
+   * @param  {section} section
+   * @param  {xml} xmlterrain
+   * @return {section}
+   */
+  static t_section_from_section_xmlterrain = {}
+  static e_section_from_section_xmlterrain = {vx_type: nx_tactics_books_bookloader.t_section_from_section_xmlterrain}
+
+  // (func section<-section-xmlterrain)
+  static f_section_from_section_xmlterrain(section, xmlterrain) {
+    let output = nx_tactics_base.e_section
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_section},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const current = nx_tactics_books_bookloader.f_terrain_from_xml(xmlterrain)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_terrain}, current, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_terrainmap, "struct-2": nx_tactics_base.t_section}, section, ":terrainmap")
+        const chgmap = vx_core.f_copy(origmap, name, current)
+        return vx_core.f_copy(section, ":terrainmap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function section_from_section_xmlunit
    * Return a section with new unit added to unitmap
    * @param  {section} section
@@ -1563,8 +2488,8 @@ export default class nx_tactics_books_bookloader {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const unit = nx_tactics_books_bookloader.f_unit_from_xml(xmlunit)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":name")
-        const unitmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitmap, "struct-2": nx_tactics_base.t_section}, section, ":unitmap")
-        const chgmap = vx_core.f_copy(unitmap, name, unit)
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitmap, "struct-2": nx_tactics_base.t_section}, section, ":unitmap")
+        const chgmap = vx_core.f_copy(origmap, name, unit)
         return vx_core.f_copy(section, ":unitmap", chgmap)
       })
     )
@@ -1588,7 +2513,8 @@ export default class nx_tactics_books_bookloader {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
-        const sect = nx_tactics_books_bookloader.f_section_from_section_stringmap(
+        const children = vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children")
+        const section = nx_tactics_books_bookloader.f_section_from_section_stringmap(
           vx_core.f_empty(
             nx_tactics_base.t_section
           ),
@@ -1596,8 +2522,8 @@ export default class nx_tactics_books_bookloader {
         )
         return vx_core.f_any_from_list_start_reduce(
           {"any-1": nx_tactics_base.t_section, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
-          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
-          sect,
+          children,
+          section,
           vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_section_from_section_xmlchild)
         )
       })
@@ -1627,7 +2553,8 @@ export default class nx_tactics_books_bookloader {
         vx_core.f_new(
           vx_core.t_list,
           "name",
-          "image"
+          "image",
+          "stat"
         ),
         vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
       ),
@@ -1714,46 +2641,53 @@ export default class nx_tactics_books_bookloader {
   // (func skill<-skill-xmlchild)
   static f_skill_from_skill_xmlchild(skill, child) {
     let output = nx_tactics_base.e_skill
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_skill, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return skill})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          skill,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_case_1(
-        "ability",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_skill_from_skill_xmlability(skill, child)})
-      ),
-      vx_core.f_case_1(
-        "specialty",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_skill_from_skill_xmlspecialty(skill, child)})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          skill,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_skill, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return skill})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_skill,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              skill,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_case_1(
+            "ability",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_skill_from_skill_xmlability(skill, child)})
+          ),
+          vx_core.f_case_1(
+            "specialty",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_skill_from_skill_xmlspecialty(skill, child)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              skill,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_skill,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
     )
     return output
   }
@@ -1802,7 +2736,7 @@ export default class nx_tactics_books_bookloader {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
-        const skl = nx_tactics_books_bookloader.f_skill_from_skill_stringmap(
+        const skill = nx_tactics_books_bookloader.f_skill_from_skill_stringmap(
           vx_core.f_empty(
             nx_tactics_base.t_skill
           ),
@@ -1811,7 +2745,7 @@ export default class nx_tactics_books_bookloader {
         return vx_core.f_any_from_list_start_reduce(
           {"any-1": nx_tactics_base.t_skill, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
           vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
-          skl,
+          skill,
           vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_skill_from_skill_xmlchild)
         )
       })
@@ -1901,38 +2835,45 @@ export default class nx_tactics_books_bookloader {
   // (func specialty<-specialty-xmlchild)
   static f_specialty_from_specialty_xmlchild(specialty, child) {
     let output = nx_tactics_base.e_specialty
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_specialty, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return specialty})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          specialty,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          specialty,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_specialty, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return specialty})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_specialty,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              specialty,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              specialty,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_specialty,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
     )
     return output
   }
@@ -1991,6 +2932,44 @@ export default class nx_tactics_books_bookloader {
   }
 
   /**
+   * @function string_vxlisp_header_from_chaptermap
+   * Returns a vxlisp string from a chaptermap.
+   * @param  {chaptermap} chaptermap
+   * @return {string}
+   */
+  static t_string_vxlisp_header_from_chaptermap = {}
+  static e_string_vxlisp_header_from_chaptermap = {vx_type: nx_tactics_books_bookloader.t_string_vxlisp_header_from_chaptermap}
+
+  // (func string-vxlisp-header<-chaptermap)
+  static f_string_vxlisp_header_from_chaptermap(chaptermap) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const chapters = vx_core.f_list_from_map(
+          {"any-1": vx_core.t_string, "any-2": nx_tactics_base.t_chapter, "list-1": vx_core.t_stringlist, "map-2": nx_tactics_base.t_chaptermap},
+          chaptermap,
+          vx_core.f_new(vx_core.t_any_from_key_value, ([key, val]) => 
+            vx_core.f_new(
+              vx_core.t_string,
+              vx_core.c_newline,
+              "    ",
+              vx_core.c_quote,
+              key,
+              vx_core.c_quote,
+              " (chapter_",
+              nx_tactics_books_bookloader.f_string_writename_from_string(key),
+              ")"
+            ))
+        )
+        return vx_type.f_string_from_stringlist_join(chapters, "")
+      })
+    )
+    return output
+  }
+
+  /**
    * @function string_vxlisp_from_book
    * Returns a vxlisp string from a book.
    * @param  {book} book
@@ -2006,17 +2985,117 @@ export default class nx_tactics_books_bookloader {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const name = nx_tactics_books_bookloader.f_string_writename_from_book(book)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":name")
+        const chaptermap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_chaptermap, "struct-2": nx_tactics_base.t_book}, book, ":chaptermap")
+        const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":image")
+        const reference = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":reference")
+        const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":summary")
+        const titles = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":titles")
+        const schaptermap = nx_tactics_books_bookloader.f_string_vxlisp_header_from_chaptermap(chaptermap)
+        const schapters = nx_tactics_books_bookloader.f_string_vxlisp_from_chaptermap(chaptermap)
+        const simage = vx_core.f_switch(
+          {"any-1": vx_core.t_string, "any-2": vx_core.t_string},
+          image,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return ""})),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_core.t_string,
+              "\n  :image ",
+              vx_core.f_string_from_any(image)
+            )})
+          )
+        )
+        const sreference = vx_core.f_switch(
+          {"any-1": vx_core.t_string, "any-2": vx_core.t_string},
+          reference,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return ""})),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_core.t_string,
+              "\n  :reference ",
+              vx_core.f_string_from_any(reference)
+            )})
+          )
+        )
+        const ssummary = vx_core.f_switch(
+          {"any-1": vx_core.t_string, "any-2": vx_core.t_string},
+          summary,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return ""})),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_core.t_string,
+              "\n  :summary ",
+              vx_core.f_string_from_any(summary)
+            )})
+          )
+        )
+        const stitles = vx_core.f_switch(
+          {"any-1": vx_core.t_string, "any-2": vx_core.t_string},
+          titles,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return ""})),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_core.t_string,
+              "\n  :titles ",
+              vx_core.f_string_from_any(titles)
+            )})
+          )
+        )
+        const bookname = nx_tactics_books_bookloader.f_string_writename_from_string(name)
+        return vx_core.f_new(
+          vx_core.t_string,
+          "(package nx/tactics/books/",
+          bookname,
+          "\n :libs (lib base :path nx/tactics/base))",
+          "\n",
+          "\n(func tacticsbook : base/book",
+          "\n (base/book",
+          "\n  :name ",
+          vx_core.f_string_from_any(name),
+          simage,
+          stitles,
+          sreference,
+          ssummary,
+          "\n  :chaptermap",
+          "\n   (base/chaptermap",
+          schaptermap,
+          "\n   ))",
+          ")\n",
+          schapters
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function string_vxlisp_from_chapter
+   * Returns a vxlisp string from a chapter.
+   * @param  {chapter} chapter
+   * @return {string}
+   */
+  static t_string_vxlisp_from_chapter = {}
+  static e_string_vxlisp_from_chapter = {vx_type: nx_tactics_books_bookloader.t_string_vxlisp_from_chapter}
+
+  // (func string-vxlisp<-chapter)
+  static f_string_vxlisp_from_chapter(chapter) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_chapter}, chapter, ":name")
+        const chnm = nx_tactics_books_bookloader.f_string_writename_from_string(name)
         const text = vx_core.f_string_from_any_indent(
-          book,
+          chapter,
           1,
           false
         )
         return vx_core.f_new(
           vx_core.t_string,
-          "(package nx/tactics/books/",
-          name,
-          "\n :libs (lib base :path nx/tactics/base))\n\n(func tacticsbook : base/book\n ",
+          "(func chapter_",
+          chnm,
+          " : base/chapter\n",
           text,
           ")\n"
         )
@@ -2026,23 +3105,407 @@ export default class nx_tactics_books_bookloader {
   }
 
   /**
-   * @function string_writename_from_book
-   * Returns the write filename from a book
-   * @param  {book} book
+   * @function string_vxlisp_from_chaptermap
+   * Returns a vxlisp string from a chaptermap.
+   * @param  {chaptermap} chaptermap
    * @return {string}
    */
-  static t_string_writename_from_book = {}
-  static e_string_writename_from_book = {vx_type: nx_tactics_books_bookloader.t_string_writename_from_book}
+  static t_string_vxlisp_from_chaptermap = {}
+  static e_string_vxlisp_from_chaptermap = {vx_type: nx_tactics_books_bookloader.t_string_vxlisp_from_chaptermap}
 
-  // (func string-writename<-book)
-  static f_string_writename_from_book(book) {
+  // (func string-vxlisp<-chaptermap)
+  static f_string_vxlisp_from_chaptermap(chaptermap) {
     let output = vx_core.e_string
-    output = vx_core.f_string_from_string_find_replace(
-      vx_type.f_string_lowercase(
-        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":name")
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const chapters = vx_core.f_list_from_map(
+          {"any-1": nx_tactics_base.t_chapter, "any-2": nx_tactics_base.t_chapter, "list-1": nx_tactics_base.t_chapterlist, "map-2": nx_tactics_base.t_chaptermap},
+          chaptermap,
+          vx_core.f_new(vx_core.t_any_from_key_value, ([key, val]) => val)
+        )
+        const schapters = vx_core.f_list_from_list(
+          {"any-1": vx_core.t_string, "any-2": nx_tactics_base.t_chapter, "list-1": vx_core.t_stringlist, "list-2": nx_tactics_base.t_chapterlist},
+          chapters,
+          vx_core.f_new(vx_core.t_any_from_any, (chapt) => 
+            vx_core.f_let(
+              {"any-1": vx_core.t_string},
+              [],
+              vx_core.f_new(vx_core.t_any_from_func, () => {
+                const name = nx_tactics_base.f_name_from_chapter(chapt)
+                const schnm = nx_tactics_books_bookloader.f_string_writename_from_string(name)
+                const text = vx_core.f_string_from_any_indent(
+                  chapt,
+                  1,
+                  true
+                )
+                return vx_core.f_new(
+                  vx_core.t_string,
+                  "\n(func chapter_",
+                  schnm,
+                  " : base/chapter\n ",
+                  text,
+                  ")"
+                )
+              })
+            ))
+        )
+        return vx_type.f_string_from_stringlist_join(
+          schapters,
+          vx_core.c_newline
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function string_writename_from_string
+   * Returns the write filename from a book
+   * @param  {string} name
+   * @return {string}
+   */
+  static t_string_writename_from_string = {}
+  static e_string_writename_from_string = {vx_type: nx_tactics_books_bookloader.t_string_writename_from_string}
+
+  // (func string-writename<-string)
+  static f_string_writename_from_string(name) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const lower = vx_type.f_string_lowercase(name)
+        const space = vx_core.f_string_from_string_find_replace(lower, " ", "_")
+        const comma = vx_core.f_string_from_string_find_replace(space, ",", "")
+        const apos = vx_core.f_string_from_string_find_replace(comma, "'", "")
+        const slash = vx_core.f_string_from_string_find_replace(apos, "/", "_")
+        return slash
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function team_from_team_key_value
+   * Returns a modified team from a key value.
+   * @param  {team} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {team}
+   */
+  static t_team_from_team_key_value = {}
+  static e_team_from_team_key_value = {vx_type: nx_tactics_books_bookloader.t_team_from_team_key_value}
+
+  // (func team<-team-key-value)
+  static f_team_from_team_key_value(current, key, value) {
+    let output = nx_tactics_base.e_team
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_team, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
       ),
-      " ",
-      "_"
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_team,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function team_from_team_stringmap
+   * Returns a team from a propmap.
+   * @param  {team} team
+   * @param  {stringmap} propmap
+   * @return {team}
+   */
+  static t_team_from_team_stringmap = {}
+  static e_team_from_team_stringmap = {vx_type: nx_tactics_books_bookloader.t_team_from_team_stringmap}
+
+  // (func team<-team-stringmap)
+  static f_team_from_team_stringmap(team, propmap) {
+    let output = nx_tactics_base.e_team
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      team,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_team_from_team_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function team_from_team_xmlchild
+   * Returns a modified team based on a given child xml.
+   * @param  {team} team
+   * @param  {xml} child
+   * @return {team}
+   */
+  static t_team_from_team_xmlchild = {}
+  static e_team_from_team_xmlchild = {vx_type: nx_tactics_books_bookloader.t_team_from_team_xmlchild}
+
+  // (func team<-team-xmlchild)
+  static f_team_from_team_xmlchild(team, child) {
+    let output = nx_tactics_base.e_team
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_team, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_team, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return team})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles",
+              "completevictory",
+              "deploy",
+              "forces",
+              "partialvictory"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              team,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              team,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_team,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function team_from_xml
+   * Returns a team from a given xml.
+   * @param  {xml} xml
+   * @return {team}
+   */
+  static t_team_from_xml = {}
+  static e_team_from_xml = {vx_type: nx_tactics_books_bookloader.t_team_from_xml}
+
+  // (func team<-xml)
+  static f_team_from_xml(xml) {
+    let output = nx_tactics_base.e_team
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_team, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const team = nx_tactics_books_bookloader.f_team_from_team_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_team
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_team, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          team,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_team_from_team_xmlchild)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function terrain_from_terrain_key_value
+   * Returns a modified terrain from a key value.
+   * @param  {terrain} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {terrain}
+   */
+  static t_terrain_from_terrain_key_value = {}
+  static e_terrain_from_terrain_key_value = {vx_type: nx_tactics_books_bookloader.t_terrain_from_terrain_key_value}
+
+  // (func terrain<-terrain-key-value)
+  static f_terrain_from_terrain_key_value(current, key, value) {
+    let output = nx_tactics_base.e_terrain
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_terrain, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_terrain,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function terrain_from_terrain_stringmap
+   * Returns a terrain from a propmap.
+   * @param  {terrain} terrain
+   * @param  {stringmap} propmap
+   * @return {terrain}
+   */
+  static t_terrain_from_terrain_stringmap = {}
+  static e_terrain_from_terrain_stringmap = {vx_type: nx_tactics_books_bookloader.t_terrain_from_terrain_stringmap}
+
+  // (func terrain<-terrain-stringmap)
+  static f_terrain_from_terrain_stringmap(terrain, propmap) {
+    let output = nx_tactics_base.e_terrain
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      terrain,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_terrain_from_terrain_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function terrain_from_terrain_xmlchild
+   * Returns a modified terrain based on a given child Xml.
+   * @param  {terrain} terrain
+   * @param  {xml} child
+   * @return {terrain}
+   */
+  static t_terrain_from_terrain_xmlchild = {}
+  static e_terrain_from_terrain_xmlchild = {vx_type: nx_tactics_books_bookloader.t_terrain_from_terrain_xmlchild}
+
+  // (func terrain<-terrain-xmlchild)
+  static f_terrain_from_terrain_xmlchild(terrain, child) {
+    let output = nx_tactics_base.e_terrain
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_terrain, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_terrain, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return terrain})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles",
+              "classification"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              terrain,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              terrain,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_terrain,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function terrain_from_xml
+   * Returns a terrain from a given xml.
+   * @param  {xml} xml
+   * @return {terrain}
+   */
+  static t_terrain_from_xml = {}
+  static e_terrain_from_xml = {vx_type: nx_tactics_books_bookloader.t_terrain_from_xml}
+
+  // (func terrain<-xml)
+  static f_terrain_from_xml(xml) {
+    let output = nx_tactics_base.e_terrain
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_terrain, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const terrain = nx_tactics_books_bookloader.f_terrain_from_terrain_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_terrain
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_terrain, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          terrain,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_terrain_from_terrain_xmlchild)
+        )
+      })
     )
     return output
   }
@@ -2070,11 +3533,19 @@ export default class nx_tactics_books_bookloader {
           vx_core.t_list,
           "name",
           "image",
+          "classification",
+          "crew",
           "body",
           "height",
           "length",
           "mass",
           "mind",
+          "range",
+          "speed",
+          "speedair",
+          "speedland",
+          "speedspace",
+          "speedwater",
           "width",
           "will"
         ),
@@ -2136,50 +3607,57 @@ export default class nx_tactics_books_bookloader {
   // (func unit<-unit-xmlchild)
   static f_unit_from_unit_xmlchild(unit, child) {
     let output = nx_tactics_base.e_unit
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_unit, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return unit})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          unit,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_case_1(
-        "power",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unit_from_unit_xmlpower(unit, child)})
-      ),
-      vx_core.f_case_1(
-        "skill",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unit_from_unit_xmlskill(unit, child)})
-      ),
-      vx_core.f_case_1(
-        "weakness",
-        vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unit_from_unit_xmlweakness(unit, child)})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          unit,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_unit, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return unit})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_unit,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unit,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_case_1(
+            "power",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unit_from_unit_xmlpower(unit, child)})
+          ),
+          vx_core.f_case_1(
+            "skill",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unit_from_unit_xmlskill(unit, child)})
+          ),
+          vx_core.f_case_1(
+            "weakness",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unit_from_unit_xmlweakness(unit, child)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unit,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_unit,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
     )
     return output
   }
@@ -2203,8 +3681,8 @@ export default class nx_tactics_books_bookloader {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const unitpower = nx_tactics_books_bookloader.f_unitpower_from_xml(xmlpower)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":name")
-        const unitpowermap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitpowermap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitpowermap")
-        const chgmap = vx_core.f_copy(unitpowermap, name, unitpower)
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitpowermap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitpowermap")
+        const chgmap = vx_core.f_copy(origmap, name, unitpower)
         return vx_core.f_copy(unit, ":unitpowermap", chgmap)
       })
     )
@@ -2230,8 +3708,12 @@ export default class nx_tactics_books_bookloader {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const unitskill = nx_tactics_books_bookloader.f_unitskill_from_xml(xmlskill)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitskill}, unitskill, ":name")
-        const unitskillmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitskillmap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitskillmap")
-        const chgmap = vx_core.f_copy(unitskillmap, name, unitskill)
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitskillmap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitskillmap")
+        const chgmap = vx_core.f_copy(
+          nx_tactics_base.t_unitskillmap,
+          name,
+          unitskill
+        )
         return vx_core.f_copy(unit, ":unitskillmap", chgmap)
       })
     )
@@ -2257,8 +3739,8 @@ export default class nx_tactics_books_bookloader {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const unitweakness = nx_tactics_books_bookloader.f_unitweakness_from_xml(xmlweakness)
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitweakness}, unitweakness, ":name")
-        const unitweaknessmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitweaknessmap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitweaknessmap")
-        const chgmap = vx_core.f_copy(unitweaknessmap, name, unitweakness)
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitweaknessmap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitweaknessmap")
+        const chgmap = vx_core.f_copy(origmap, name, unitweakness)
         return vx_core.f_copy(unit, ":unitweaknessmap", chgmap)
       })
     )
@@ -2267,7 +3749,7 @@ export default class nx_tactics_books_bookloader {
 
   /**
    * @function unit_from_xml
-   * Returns a unit from a given Xml.
+   * Returns a unit from a given xml.
    * @param  {xml} xml
    * @return {unit}
    */
@@ -2300,6 +3782,551 @@ export default class nx_tactics_books_bookloader {
   }
 
   /**
+   * @function unitability_from_unitability_key_value
+   * Returns a modified unitability from a key value.
+   * @param  {unitability} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {unitability}
+   */
+  static t_unitability_from_unitability_key_value = {}
+  static e_unitability_from_unitability_key_value = {vx_type: nx_tactics_books_bookloader.t_unitability_from_unitability_key_value}
+
+  // (func unitability<-unitability-key-value)
+  static f_unitability_from_unitability_key_value(current, key, value) {
+    let output = nx_tactics_base.e_unitability
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_unitability, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_unitability,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unitability_from_unitability_stringmap
+   * Returns a new unitability from a propmap.
+   * @param  {unitability} unitability
+   * @param  {stringmap} propmap
+   * @return {unitability}
+   */
+  static t_unitability_from_unitability_stringmap = {}
+  static e_unitability_from_unitability_stringmap = {vx_type: nx_tactics_books_bookloader.t_unitability_from_unitability_stringmap}
+
+  // (func unitability<-unitability-stringmap)
+  static f_unitability_from_unitability_stringmap(unitability, propmap) {
+    let output = nx_tactics_base.e_unitability
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      unitability,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_unitability_from_unitability_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function unitability_from_unitability_xmlchild
+   * Returns a modified unitability based on a given child xml.
+   * @param  {unitability} unitability
+   * @param  {xml} child
+   * @return {unitability}
+   */
+  static t_unitability_from_unitability_xmlchild = {}
+  static e_unitability_from_unitability_xmlchild = {vx_type: nx_tactics_books_bookloader.t_unitability_from_unitability_xmlchild}
+
+  // (func unitability<-unitability-xmlchild)
+  static f_unitability_from_unitability_xmlchild(unitability, child) {
+    let output = nx_tactics_base.e_unitability
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitability, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_unitability, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return unitability})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unitability,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unitability,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_unitability,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitability_from_xml
+   * Returns a unitability from a given xml.
+   * @param  {xml} xml
+   * @return {unitability}
+   */
+  static t_unitability_from_xml = {}
+  static e_unitability_from_xml = {vx_type: nx_tactics_books_bookloader.t_unitability_from_xml}
+
+  // (func unitability<-xml)
+  static f_unitability_from_xml(xml) {
+    let output = nx_tactics_base.e_unitability
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitability, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const unitability = nx_tactics_books_bookloader.f_unitability_from_unitability_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_unitability
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_unitability, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          unitability,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_unitability_from_unitability_xmlchild)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unititem_from_unititem_key_value
+   * Returns a modified unititem from a key value.
+   * @param  {unititem} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {unititem}
+   */
+  static t_unititem_from_unititem_key_value = {}
+  static e_unititem_from_unititem_key_value = {vx_type: nx_tactics_books_bookloader.t_unititem_from_unititem_key_value}
+
+  // (func unititem<-unititem-key-value)
+  static f_unititem_from_unititem_key_value(current, key, value) {
+    let output = nx_tactics_base.e_unititem
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_unititem, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image",
+          "facing",
+          "modifiers",
+          "number",
+          "rounds"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_unititem,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unititem_from_unititem_stringmap
+   * Returns a new unititem from a propmap.
+   * @param  {unititem} unititem
+   * @param  {stringmap} propmap
+   * @return {unititem}
+   */
+  static t_unititem_from_unititem_stringmap = {}
+  static e_unititem_from_unititem_stringmap = {vx_type: nx_tactics_books_bookloader.t_unititem_from_unititem_stringmap}
+
+  // (func unititem<-unititem-stringmap)
+  static f_unititem_from_unititem_stringmap(unititem, propmap) {
+    let output = nx_tactics_base.e_unititem
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      unititem,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_unititem_from_unititem_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function unititem_from_unititem_xmlchild
+   * Returns a modified unititem based on a given child xml.
+   * @param  {unititem} unititem
+   * @param  {xml} child
+   * @return {unititem}
+   */
+  static t_unititem_from_unititem_xmlchild = {}
+  static e_unititem_from_unititem_xmlchild = {vx_type: nx_tactics_books_bookloader.t_unititem_from_unititem_xmlchild}
+
+  // (func unititem<-unititem-xmlchild)
+  static f_unititem_from_unititem_xmlchild(unititem, child) {
+    let output = nx_tactics_base.e_unititem
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unititem, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_unititem, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return unititem})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unititem,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unititem,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_unititem,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unititem_from_xml
+   * Returns a unititem from a given xml.
+   * @param  {xml} xml
+   * @return {unititem}
+   */
+  static t_unititem_from_xml = {}
+  static e_unititem_from_xml = {vx_type: nx_tactics_books_bookloader.t_unititem_from_xml}
+
+  // (func unititem<-xml)
+  static f_unititem_from_xml(xml) {
+    let output = nx_tactics_base.e_unititem
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unititem, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const children = vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children")
+        const unititem = nx_tactics_books_bookloader.f_unititem_from_unititem_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_unititem
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_unititem, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          children,
+          unititem,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_unititem_from_unititem_xmlchild)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitpower_from_unitpower_key_value
+   * Returns a modified unitpower from a key value.
+   * @param  {unitpower} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {unitpower}
+   */
+  static t_unitpower_from_unitpower_key_value = {}
+  static e_unitpower_from_unitpower_key_value = {vx_type: nx_tactics_books_bookloader.t_unitpower_from_unitpower_key_value}
+
+  // (func unitpower<-unitpower-key-value)
+  static f_unitpower_from_unitpower_key_value(current, key, value) {
+    let output = nx_tactics_base.e_unitpower
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_unitpower, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image",
+          "back",
+          "bottom",
+          "front",
+          "level",
+          "over",
+          "side",
+          "strength",
+          "under"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_unitpower,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unitpower_from_unitpower_stringmap
+   * Returns a new unitpower from a propmap.
+   * @param  {unitpower} unitpower
+   * @param  {stringmap} propmap
+   * @return {unitpower}
+   */
+  static t_unitpower_from_unitpower_stringmap = {}
+  static e_unitpower_from_unitpower_stringmap = {vx_type: nx_tactics_books_bookloader.t_unitpower_from_unitpower_stringmap}
+
+  // (func unitpower<-unitpower-stringmap)
+  static f_unitpower_from_unitpower_stringmap(unitpower, propmap) {
+    let output = nx_tactics_base.e_unitpower
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      unitpower,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_unitpower_from_unitpower_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function unitpower_from_unitpower_xmlability
+   * @param  {unitpower} unitpower
+   * @param  {xml} xmlability
+   * @return {unitpower}
+   */
+  static t_unitpower_from_unitpower_xmlability = {}
+  static e_unitpower_from_unitpower_xmlability = {vx_type: nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlability}
+
+  // (func unitpower<-unitpower-xmlability)
+  static f_unitpower_from_unitpower_xmlability(unitpower, xmlability) {
+    let output = nx_tactics_base.e_unitpower
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitpower},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const ability = nx_tactics_books_bookloader.f_unitability_from_xml(xmlability)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitability}, ability, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitabilitymap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unitabilitymap")
+        const chgmap = vx_core.f_copy(origmap, name, ability)
+        return vx_core.f_copy(unitpower, ":unitabilitymap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitpower_from_unitpower_xmlchild
+   * @param  {unitpower} unitpower
+   * @param  {xml} child
+   * @return {unitpower}
+   */
+  static t_unitpower_from_unitpower_xmlchild = {}
+  static e_unitpower_from_unitpower_xmlchild = {vx_type: nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlchild}
+
+  // (func unitpower<-unitpower-xmlchild)
+  static f_unitpower_from_unitpower_xmlchild(unitpower, child) {
+    let output = nx_tactics_base.e_unitpower
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitpower, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_unitpower, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return unitpower})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unitpower,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_case_1(
+            "ability",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unitpower_from_unitpower_xmlability(unitpower, child)})
+          ),
+          vx_core.f_case_1(
+            "item",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unitpower_from_unitpower_xmlitem(unitpower, child)})
+          ),
+          vx_core.f_case_1(
+            "specialty",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unitpower_from_unitpower_xmlspecialty(unitpower, child)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unitpower,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_unitpower,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitpower_from_unitpower_xmlitem
+   * @param  {unitpower} unitpower
+   * @param  {xml} xmlitem
+   * @return {unitpower}
+   */
+  static t_unitpower_from_unitpower_xmlitem = {}
+  static e_unitpower_from_unitpower_xmlitem = {vx_type: nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlitem}
+
+  // (func unitpower<-unitpower-xmlitem)
+  static f_unitpower_from_unitpower_xmlitem(unitpower, xmlitem) {
+    let output = nx_tactics_base.e_unitpower
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitpower},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const item = nx_tactics_books_bookloader.f_unititem_from_xml(xmlitem)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unititem}, item, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unititemmap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unititemmap")
+        const chgmap = vx_core.f_copy(origmap, name, item)
+        return vx_core.f_copy(unitpower, ":unititemmap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitpower_from_unitpower_xmlspecialty
+   * @param  {unitpower} unitpower
+   * @param  {xml} xmlspecialty
+   * @return {unitpower}
+   */
+  static t_unitpower_from_unitpower_xmlspecialty = {}
+  static e_unitpower_from_unitpower_xmlspecialty = {vx_type: nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlspecialty}
+
+  // (func unitpower<-unitpower-xmlspecialty)
+  static f_unitpower_from_unitpower_xmlspecialty(unitpower, xmlspecialty) {
+    let output = nx_tactics_base.e_unitpower
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitpower},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const specialty = nx_tactics_books_bookloader.f_unitspecialty_from_xml(xmlspecialty)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitspecialty}, specialty, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitspecialtymap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unitspecialtymap")
+        const chgmap = vx_core.f_copy(origmap, name, specialty)
+        return vx_core.f_copy(unitpower, ":unitspecialtymap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function unitpower_from_xml
    * @param  {xml} xml
    * @return {unitpower}
@@ -2310,6 +4337,25 @@ export default class nx_tactics_books_bookloader {
   // (func unitpower<-xml)
   static f_unitpower_from_xml(xml) {
     let output = nx_tactics_base.e_unitpower
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitpower, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const unitpower = nx_tactics_books_bookloader.f_unitpower_from_unitpower_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_unitpower
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_unitpower, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          unitpower,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlchild)
+        )
+      })
+    )
     return output
   }
 
@@ -2335,7 +4381,13 @@ export default class nx_tactics_books_bookloader {
         vx_core.f_new(
           vx_core.t_list,
           "name",
-          "image"
+          "image",
+          "back",
+          "bottom",
+          "front",
+          "level",
+          "side",
+          "top"
         ),
         vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
       ),
@@ -2383,6 +4435,32 @@ export default class nx_tactics_books_bookloader {
   }
 
   /**
+   * @function unitskill_from_unitskill_xmlability
+   * @param  {unitskill} unitskill
+   * @param  {xml} xmlability
+   * @return {unitskill}
+   */
+  static t_unitskill_from_unitskill_xmlability = {}
+  static e_unitskill_from_unitskill_xmlability = {vx_type: nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlability}
+
+  // (func unitskill<-unitskill-xmlability)
+  static f_unitskill_from_unitskill_xmlability(unitskill, xmlability) {
+    let output = nx_tactics_base.e_unitskill
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitskill},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const ability = nx_tactics_books_bookloader.f_unitability_from_xml(xmlability)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitability}, ability, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitabilitymap, "struct-2": nx_tactics_base.t_unitskill}, unitskill, ":unitabilitymap")
+        const chgmap = vx_core.f_copy(origmap, name, ability)
+        return vx_core.f_copy(unitskill, ":unitabilitymap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function unitskill_from_unitskill_xmlchild
    * @param  {unitskill} unitskill
    * @param  {xml} child
@@ -2394,38 +4472,109 @@ export default class nx_tactics_books_bookloader {
   // (func unitskill<-unitskill-xmlchild)
   static f_unitskill_from_unitskill_xmlchild(unitskill, child) {
     let output = nx_tactics_base.e_unitskill
-    output = vx_core.f_switch(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_unitskill, "any-2": vx_core.t_string},
-      vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return unitskill})),
-      vx_core.f_case(
-        vx_core.f_new(
-          vx_core.t_list,
-          "reference",
-          "summary",
-          "titles"
-        ),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          unitskill,
-          vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag"),
-          vx_data_xml.f_string_first_from_xml(child)
-        )})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-          unitskill,
-          vx_core.f_msg_from_error_1(
-            ":invalidtagfound",
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_unitskill, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return unitskill})),
+          vx_core.f_case(
             vx_core.f_new(
-              vx_core.t_anymap,
-              ":type",
-              nx_tactics_base.t_unitskill,
-              ":tag",
-              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
-            )
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unitskill,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_case_1(
+            "ability",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unitskill_from_unitskill_xmlability(unitskill, child)})
+          ),
+          vx_core.f_case_1(
+            "item",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unitskill_from_unitskill_xmlitem(unitskill, child)})
+          ),
+          vx_core.f_case_1(
+            "specialty",
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_books_bookloader.f_unitskill_from_unitskill_xmlspecialty(unitskill, child)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unitskill,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_unitskill,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
           )
-        )})
-      )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitskill_from_unitskill_xmlitem
+   * @param  {unitskill} unitskill
+   * @param  {xml} xmlitem
+   * @return {unitskill}
+   */
+  static t_unitskill_from_unitskill_xmlitem = {}
+  static e_unitskill_from_unitskill_xmlitem = {vx_type: nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlitem}
+
+  // (func unitskill<-unitskill-xmlitem)
+  static f_unitskill_from_unitskill_xmlitem(unitskill, xmlitem) {
+    let output = nx_tactics_base.e_unitskill
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitskill},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const item = nx_tactics_books_bookloader.f_unititem_from_xml(xmlitem)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unititem}, item, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unititemmap, "struct-2": nx_tactics_base.t_unitskill}, unitskill, ":unititemmap")
+        const chgmap = vx_core.f_copy(origmap, name, item)
+        return vx_core.f_copy(unitskill, ":unititemmap", chgmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitskill_from_unitskill_xmlspecialty
+   * @param  {unitskill} unitskill
+   * @param  {xml} xmlspecialty
+   * @return {unitskill}
+   */
+  static t_unitskill_from_unitskill_xmlspecialty = {}
+  static e_unitskill_from_unitskill_xmlspecialty = {vx_type: nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlspecialty}
+
+  // (func unitskill<-unitskill-xmlspecialty)
+  static f_unitskill_from_unitskill_xmlspecialty(unitskill, xmlspecialty) {
+    let output = nx_tactics_base.e_unitskill
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitskill},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const specialty = nx_tactics_books_bookloader.f_unitspecialty_from_xml(xmlspecialty)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitspecialty}, specialty, ":name")
+        const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitspecialtymap, "struct-2": nx_tactics_base.t_unitskill}, unitskill, ":unitspecialtymap")
+        const chgmap = vx_core.f_copy(origmap, name, specialty)
+        return vx_core.f_copy(unitskill, ":unitspecialtymap", chgmap)
+      })
     )
     return output
   }
@@ -2446,7 +4595,7 @@ export default class nx_tactics_books_bookloader {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
-        const untskl = nx_tactics_books_bookloader.f_unitskill_from_unitskill_stringmap(
+        const unitskill = nx_tactics_books_bookloader.f_unitskill_from_unitskill_stringmap(
           vx_core.f_empty(
             nx_tactics_base.t_unitskill
           ),
@@ -2455,8 +4604,167 @@ export default class nx_tactics_books_bookloader {
         return vx_core.f_any_from_list_start_reduce(
           {"any-1": nx_tactics_base.t_unitskill, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
           vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
-          untskl,
+          unitskill,
           vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlchild)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitspecialty_from_unitspecialty_key_value
+   * Returns a modified unitspecialty from a key value.
+   * @param  {unitspecialty} current
+   * @param  {string} key
+   * @param  {string} value
+   * @return {unitspecialty}
+   */
+  static t_unitspecialty_from_unitspecialty_key_value = {}
+  static e_unitspecialty_from_unitspecialty_key_value = {vx_type: nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_key_value}
+
+  // (func unitspecialty<-unitspecialty-key-value)
+  static f_unitspecialty_from_unitspecialty_key_value(current, key, value) {
+    let output = nx_tactics_base.e_unitspecialty
+    output = vx_core.f_switch(
+      {"any-1": nx_tactics_base.t_unitspecialty, "any-2": vx_core.t_string},
+      key,
+      vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return current})),
+      vx_core.f_case(
+        vx_core.f_new(
+          vx_core.t_list,
+          "name",
+          "image"
+        ),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(current, key, value)})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+          current,
+          vx_core.f_msg_from_error_1(
+            ":invalidproperty",
+            vx_core.f_new(
+              vx_core.t_anymap,
+              ":type",
+              nx_tactics_base.t_unitspecialty,
+              ":prop",
+              key,
+              ":value",
+              value
+            )
+          )
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unitspecialty_from_unitspecialty_stringmap
+   * Returns a new unitspecialty from a propmap.
+   * @param  {unitspecialty} unitspecialty
+   * @param  {stringmap} propmap
+   * @return {unitspecialty}
+   */
+  static t_unitspecialty_from_unitspecialty_stringmap = {}
+  static e_unitspecialty_from_unitspecialty_stringmap = {vx_type: nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_stringmap}
+
+  // (func unitspecialty<-unitspecialty-stringmap)
+  static f_unitspecialty_from_unitspecialty_stringmap(unitspecialty, propmap) {
+    let output = nx_tactics_base.e_unitspecialty
+    output = vx_core.f_any_from_map_start_reduce(
+      {"any-1": vx_core.t_string, "map-1": vx_core.t_stringmap},
+      propmap,
+      unitspecialty,
+      vx_core.f_new(vx_core.t_any_from_any_key_value, nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_key_value)
+    )
+    return output
+  }
+
+  /**
+   * @function unitspecialty_from_unitspecialty_xmlchild
+   * Returns a modified unitspecialty based on a given child xml.
+   * @param  {unitspecialty} unitspecialty
+   * @param  {xml} child
+   * @return {unitspecialty}
+   */
+  static t_unitspecialty_from_unitspecialty_xmlchild = {}
+  static e_unitspecialty_from_unitspecialty_xmlchild = {vx_type: nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_xmlchild}
+
+  // (func unitspecialty<-unitspecialty-xmlchild)
+  static f_unitspecialty_from_unitspecialty_xmlchild(unitspecialty, child) {
+    let output = nx_tactics_base.e_unitspecialty
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitspecialty, "any-2": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const tag = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_data_xml.t_xml}, child, ":tag")
+        return vx_core.f_switch(
+          {"any-1": nx_tactics_base.t_unitspecialty, "any-2": vx_core.t_string},
+          tag,
+          vx_core.f_case_1("", vx_core.f_new(vx_core.t_any_from_func, () => {return unitspecialty})),
+          vx_core.f_case(
+            vx_core.f_new(
+              vx_core.t_list,
+              "reference",
+              "summary",
+              "titles"
+            ),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unitspecialty,
+              tag,
+              vx_data_xml.f_string_first_from_xml(child)
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+              unitspecialty,
+              vx_core.f_msg_from_error_1(
+                ":invalidtagfound",
+                vx_core.f_new(
+                  vx_core.t_anymap,
+                  ":type",
+                  nx_tactics_base.t_unitspecialty,
+                  ":tag",
+                  tag
+                )
+              )
+            )})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unitspecialty_from_xml
+   * Returns a unitspecialty from a given xml.
+   * @param  {xml} xml
+   * @return {unitspecialty}
+   */
+  static t_unitspecialty_from_xml = {}
+  static e_unitspecialty_from_xml = {vx_type: nx_tactics_books_bookloader.t_unitspecialty_from_xml}
+
+  // (func unitspecialty<-xml)
+  static f_unitspecialty_from_xml(xml) {
+    let output = nx_tactics_base.e_unitspecialty
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unitspecialty, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const propmap = vx_core.f_any_from_struct({"any-1": vx_core.t_stringmap, "struct-2": vx_data_xml.t_xml}, xml, ":propmap")
+        const unitspecialty = nx_tactics_books_bookloader.f_unitspecialty_from_unitspecialty_stringmap(
+          vx_core.f_empty(
+            nx_tactics_base.t_unitspecialty
+          ),
+          propmap
+        )
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_unitspecialty, "any-2": vx_data_xml.t_xml, "list-2": vx_data_xml.t_xmllist},
+          vx_core.f_any_from_struct({"any-1": vx_data_xml.t_xmllist, "struct-2": vx_data_xml.t_xml}, xml, ":children"),
+          unitspecialty,
+          vx_core.f_new(vx_core.t_any_from_reduce, nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_xmlchild)
         )
       })
     )
@@ -2529,8 +4837,8 @@ export default class nx_tactics_books_bookloader {
       "book<-book-xmlchapter": nx_tactics_books_bookloader.e_book_from_book_xmlchapter,
       "book<-book-xmlchild": nx_tactics_books_bookloader.e_book_from_book_xmlchild,
       "book<-xml": nx_tactics_books_bookloader.e_book_from_xml,
+      "book<-xmldoc": nx_tactics_books_bookloader.e_book_from_xmldoc,
       "book<-xmllist": nx_tactics_books_bookloader.e_book_from_xmllist,
-      "book<-xmltop": nx_tactics_books_bookloader.e_book_from_xmltop,
       "boolean-write<-book": nx_tactics_books_bookloader.e_boolean_write_from_book,
       "boolean-write<-booknames": nx_tactics_books_bookloader.e_boolean_write_from_booknames,
       "chapter<-chapter-key-value": nx_tactics_books_bookloader.e_chapter_from_chapter_key_value,
@@ -2538,12 +4846,29 @@ export default class nx_tactics_books_bookloader {
       "chapter<-chapter-xmlchild": nx_tactics_books_bookloader.e_chapter_from_chapter_xmlchild,
       "chapter<-chapter-xmlsection": nx_tactics_books_bookloader.e_chapter_from_chapter_xmlsection,
       "chapter<-xml": nx_tactics_books_bookloader.e_chapter_from_xml,
+      "damage<-damage-key-value": nx_tactics_books_bookloader.e_damage_from_damage_key_value,
+      "damage<-damage-stringmap": nx_tactics_books_bookloader.e_damage_from_damage_stringmap,
+      "damage<-damage-xmlchild": nx_tactics_books_bookloader.e_damage_from_damage_xmlchild,
+      "damage<-xml": nx_tactics_books_bookloader.e_damage_from_xml,
       "file-read<-bookname": nx_tactics_books_bookloader.e_file_read_from_bookname,
       "file-write<-book": nx_tactics_books_bookloader.e_file_write_from_book,
+      "item<-item-key-value": nx_tactics_books_bookloader.e_item_from_item_key_value,
+      "item<-item-stringmap": nx_tactics_books_bookloader.e_item_from_item_stringmap,
+      "item<-item-xmlchild": nx_tactics_books_bookloader.e_item_from_item_xmlchild,
+      "item<-xml": nx_tactics_books_bookloader.e_item_from_xml,
+      "location<-location-key-value": nx_tactics_books_bookloader.e_location_from_location_key_value,
+      "location<-location-stringmap": nx_tactics_books_bookloader.e_location_from_location_stringmap,
+      "location<-location-xmlchild": nx_tactics_books_bookloader.e_location_from_location_xmlchild,
+      "location<-xml": nx_tactics_books_bookloader.e_location_from_xml,
+      "modifier<-modifier-key-value": nx_tactics_books_bookloader.e_modifier_from_modifier_key_value,
+      "modifier<-modifier-stringmap": nx_tactics_books_bookloader.e_modifier_from_modifier_stringmap,
+      "modifier<-modifier-xmlchild": nx_tactics_books_bookloader.e_modifier_from_modifier_xmlchild,
       "modifier<-xml": nx_tactics_books_bookloader.e_modifier_from_xml,
       "power<-power-key-value": nx_tactics_books_bookloader.e_power_from_power_key_value,
       "power<-power-stringmap": nx_tactics_books_bookloader.e_power_from_power_stringmap,
+      "power<-power-xmlability": nx_tactics_books_bookloader.e_power_from_power_xmlability,
       "power<-power-xmlchild": nx_tactics_books_bookloader.e_power_from_power_xmlchild,
+      "power<-power-xmlspecialty": nx_tactics_books_bookloader.e_power_from_power_xmlspecialty,
       "power<-xml": nx_tactics_books_bookloader.e_power_from_xml,
       "rule<-rule-key-value": nx_tactics_books_bookloader.e_rule_from_rule_key_value,
       "rule<-rule-stringmap": nx_tactics_books_bookloader.e_rule_from_rule_stringmap,
@@ -2552,15 +4877,21 @@ export default class nx_tactics_books_bookloader {
       "scenario<-scenario-key-value": nx_tactics_books_bookloader.e_scenario_from_scenario_key_value,
       "scenario<-scenario-stringmap": nx_tactics_books_bookloader.e_scenario_from_scenario_stringmap,
       "scenario<-scenario-xmlchild": nx_tactics_books_bookloader.e_scenario_from_scenario_xmlchild,
+      "scenario<-scenario-xmlteam": nx_tactics_books_bookloader.e_scenario_from_scenario_xmlteam,
       "scenario<-xml": nx_tactics_books_bookloader.e_scenario_from_xml,
       "section<-section-key-value": nx_tactics_books_bookloader.e_section_from_section_key_value,
       "section<-section-stringmap": nx_tactics_books_bookloader.e_section_from_section_stringmap,
       "section<-section-xmlchild": nx_tactics_books_bookloader.e_section_from_section_xmlchild,
+      "section<-section-xmldamage": nx_tactics_books_bookloader.e_section_from_section_xmldamage,
+      "section<-section-xmlitem": nx_tactics_books_bookloader.e_section_from_section_xmlitem,
+      "section<-section-xmllocation": nx_tactics_books_bookloader.e_section_from_section_xmllocation,
+      "section<-section-xmlmodifier": nx_tactics_books_bookloader.e_section_from_section_xmlmodifier,
       "section<-section-xmlpower": nx_tactics_books_bookloader.e_section_from_section_xmlpower,
       "section<-section-xmlrule": nx_tactics_books_bookloader.e_section_from_section_xmlrule,
       "section<-section-xmlscenario": nx_tactics_books_bookloader.e_section_from_section_xmlscenario,
       "section<-section-xmlsection": nx_tactics_books_bookloader.e_section_from_section_xmlsection,
       "section<-section-xmlskill": nx_tactics_books_bookloader.e_section_from_section_xmlskill,
+      "section<-section-xmlterrain": nx_tactics_books_bookloader.e_section_from_section_xmlterrain,
       "section<-section-xmlunit": nx_tactics_books_bookloader.e_section_from_section_xmlunit,
       "section<-xml": nx_tactics_books_bookloader.e_section_from_xml,
       "skill<-skill-key-value": nx_tactics_books_bookloader.e_skill_from_skill_key_value,
@@ -2574,8 +4905,19 @@ export default class nx_tactics_books_bookloader {
       "specialty<-specialty-xmlchild": nx_tactics_books_bookloader.e_specialty_from_specialty_xmlchild,
       "specialty<-xml": nx_tactics_books_bookloader.e_specialty_from_xml,
       "string-read<-bookname": nx_tactics_books_bookloader.e_string_read_from_bookname,
+      "string-vxlisp-header<-chaptermap": nx_tactics_books_bookloader.e_string_vxlisp_header_from_chaptermap,
       "string-vxlisp<-book": nx_tactics_books_bookloader.e_string_vxlisp_from_book,
-      "string-writename<-book": nx_tactics_books_bookloader.e_string_writename_from_book,
+      "string-vxlisp<-chapter": nx_tactics_books_bookloader.e_string_vxlisp_from_chapter,
+      "string-vxlisp<-chaptermap": nx_tactics_books_bookloader.e_string_vxlisp_from_chaptermap,
+      "string-writename<-string": nx_tactics_books_bookloader.e_string_writename_from_string,
+      "team<-team-key-value": nx_tactics_books_bookloader.e_team_from_team_key_value,
+      "team<-team-stringmap": nx_tactics_books_bookloader.e_team_from_team_stringmap,
+      "team<-team-xmlchild": nx_tactics_books_bookloader.e_team_from_team_xmlchild,
+      "team<-xml": nx_tactics_books_bookloader.e_team_from_xml,
+      "terrain<-terrain-key-value": nx_tactics_books_bookloader.e_terrain_from_terrain_key_value,
+      "terrain<-terrain-stringmap": nx_tactics_books_bookloader.e_terrain_from_terrain_stringmap,
+      "terrain<-terrain-xmlchild": nx_tactics_books_bookloader.e_terrain_from_terrain_xmlchild,
+      "terrain<-xml": nx_tactics_books_bookloader.e_terrain_from_xml,
       "unit<-unit-key-value": nx_tactics_books_bookloader.e_unit_from_unit_key_value,
       "unit<-unit-stringmap": nx_tactics_books_bookloader.e_unit_from_unit_stringmap,
       "unit<-unit-xmlchild": nx_tactics_books_bookloader.e_unit_from_unit_xmlchild,
@@ -2583,11 +4925,32 @@ export default class nx_tactics_books_bookloader {
       "unit<-unit-xmlskill": nx_tactics_books_bookloader.e_unit_from_unit_xmlskill,
       "unit<-unit-xmlweakness": nx_tactics_books_bookloader.e_unit_from_unit_xmlweakness,
       "unit<-xml": nx_tactics_books_bookloader.e_unit_from_xml,
+      "unitability<-unitability-key-value": nx_tactics_books_bookloader.e_unitability_from_unitability_key_value,
+      "unitability<-unitability-stringmap": nx_tactics_books_bookloader.e_unitability_from_unitability_stringmap,
+      "unitability<-unitability-xmlchild": nx_tactics_books_bookloader.e_unitability_from_unitability_xmlchild,
+      "unitability<-xml": nx_tactics_books_bookloader.e_unitability_from_xml,
+      "unititem<-unititem-key-value": nx_tactics_books_bookloader.e_unititem_from_unititem_key_value,
+      "unititem<-unititem-stringmap": nx_tactics_books_bookloader.e_unititem_from_unititem_stringmap,
+      "unititem<-unititem-xmlchild": nx_tactics_books_bookloader.e_unititem_from_unititem_xmlchild,
+      "unititem<-xml": nx_tactics_books_bookloader.e_unititem_from_xml,
+      "unitpower<-unitpower-key-value": nx_tactics_books_bookloader.e_unitpower_from_unitpower_key_value,
+      "unitpower<-unitpower-stringmap": nx_tactics_books_bookloader.e_unitpower_from_unitpower_stringmap,
+      "unitpower<-unitpower-xmlability": nx_tactics_books_bookloader.e_unitpower_from_unitpower_xmlability,
+      "unitpower<-unitpower-xmlchild": nx_tactics_books_bookloader.e_unitpower_from_unitpower_xmlchild,
+      "unitpower<-unitpower-xmlitem": nx_tactics_books_bookloader.e_unitpower_from_unitpower_xmlitem,
+      "unitpower<-unitpower-xmlspecialty": nx_tactics_books_bookloader.e_unitpower_from_unitpower_xmlspecialty,
       "unitpower<-xml": nx_tactics_books_bookloader.e_unitpower_from_xml,
       "unitskill<-unitskill-key-value": nx_tactics_books_bookloader.e_unitskill_from_unitskill_key_value,
       "unitskill<-unitskill-stringmap": nx_tactics_books_bookloader.e_unitskill_from_unitskill_stringmap,
+      "unitskill<-unitskill-xmlability": nx_tactics_books_bookloader.e_unitskill_from_unitskill_xmlability,
       "unitskill<-unitskill-xmlchild": nx_tactics_books_bookloader.e_unitskill_from_unitskill_xmlchild,
+      "unitskill<-unitskill-xmlitem": nx_tactics_books_bookloader.e_unitskill_from_unitskill_xmlitem,
+      "unitskill<-unitskill-xmlspecialty": nx_tactics_books_bookloader.e_unitskill_from_unitskill_xmlspecialty,
       "unitskill<-xml": nx_tactics_books_bookloader.e_unitskill_from_xml,
+      "unitspecialty<-unitspecialty-key-value": nx_tactics_books_bookloader.e_unitspecialty_from_unitspecialty_key_value,
+      "unitspecialty<-unitspecialty-stringmap": nx_tactics_books_bookloader.e_unitspecialty_from_unitspecialty_stringmap,
+      "unitspecialty<-unitspecialty-xmlchild": nx_tactics_books_bookloader.e_unitspecialty_from_unitspecialty_xmlchild,
+      "unitspecialty<-xml": nx_tactics_books_bookloader.e_unitspecialty_from_xml,
       "unitweakness<-xml": nx_tactics_books_bookloader.e_unitweakness_from_xml,
       "weakness<-xml": nx_tactics_books_bookloader.e_weakness_from_xml,
       "xml-read<-bookname": nx_tactics_books_bookloader.e_xml_read_from_bookname
@@ -2604,8 +4967,8 @@ export default class nx_tactics_books_bookloader {
       "book<-book-xmlchapter": nx_tactics_books_bookloader.t_book_from_book_xmlchapter,
       "book<-book-xmlchild": nx_tactics_books_bookloader.t_book_from_book_xmlchild,
       "book<-xml": nx_tactics_books_bookloader.t_book_from_xml,
+      "book<-xmldoc": nx_tactics_books_bookloader.t_book_from_xmldoc,
       "book<-xmllist": nx_tactics_books_bookloader.t_book_from_xmllist,
-      "book<-xmltop": nx_tactics_books_bookloader.t_book_from_xmltop,
       "boolean-write<-book": nx_tactics_books_bookloader.t_boolean_write_from_book,
       "boolean-write<-booknames": nx_tactics_books_bookloader.t_boolean_write_from_booknames,
       "chapter<-chapter-key-value": nx_tactics_books_bookloader.t_chapter_from_chapter_key_value,
@@ -2613,12 +4976,29 @@ export default class nx_tactics_books_bookloader {
       "chapter<-chapter-xmlchild": nx_tactics_books_bookloader.t_chapter_from_chapter_xmlchild,
       "chapter<-chapter-xmlsection": nx_tactics_books_bookloader.t_chapter_from_chapter_xmlsection,
       "chapter<-xml": nx_tactics_books_bookloader.t_chapter_from_xml,
+      "damage<-damage-key-value": nx_tactics_books_bookloader.t_damage_from_damage_key_value,
+      "damage<-damage-stringmap": nx_tactics_books_bookloader.t_damage_from_damage_stringmap,
+      "damage<-damage-xmlchild": nx_tactics_books_bookloader.t_damage_from_damage_xmlchild,
+      "damage<-xml": nx_tactics_books_bookloader.t_damage_from_xml,
       "file-read<-bookname": nx_tactics_books_bookloader.t_file_read_from_bookname,
       "file-write<-book": nx_tactics_books_bookloader.t_file_write_from_book,
+      "item<-item-key-value": nx_tactics_books_bookloader.t_item_from_item_key_value,
+      "item<-item-stringmap": nx_tactics_books_bookloader.t_item_from_item_stringmap,
+      "item<-item-xmlchild": nx_tactics_books_bookloader.t_item_from_item_xmlchild,
+      "item<-xml": nx_tactics_books_bookloader.t_item_from_xml,
+      "location<-location-key-value": nx_tactics_books_bookloader.t_location_from_location_key_value,
+      "location<-location-stringmap": nx_tactics_books_bookloader.t_location_from_location_stringmap,
+      "location<-location-xmlchild": nx_tactics_books_bookloader.t_location_from_location_xmlchild,
+      "location<-xml": nx_tactics_books_bookloader.t_location_from_xml,
+      "modifier<-modifier-key-value": nx_tactics_books_bookloader.t_modifier_from_modifier_key_value,
+      "modifier<-modifier-stringmap": nx_tactics_books_bookloader.t_modifier_from_modifier_stringmap,
+      "modifier<-modifier-xmlchild": nx_tactics_books_bookloader.t_modifier_from_modifier_xmlchild,
       "modifier<-xml": nx_tactics_books_bookloader.t_modifier_from_xml,
       "power<-power-key-value": nx_tactics_books_bookloader.t_power_from_power_key_value,
       "power<-power-stringmap": nx_tactics_books_bookloader.t_power_from_power_stringmap,
+      "power<-power-xmlability": nx_tactics_books_bookloader.t_power_from_power_xmlability,
       "power<-power-xmlchild": nx_tactics_books_bookloader.t_power_from_power_xmlchild,
+      "power<-power-xmlspecialty": nx_tactics_books_bookloader.t_power_from_power_xmlspecialty,
       "power<-xml": nx_tactics_books_bookloader.t_power_from_xml,
       "rule<-rule-key-value": nx_tactics_books_bookloader.t_rule_from_rule_key_value,
       "rule<-rule-stringmap": nx_tactics_books_bookloader.t_rule_from_rule_stringmap,
@@ -2627,15 +5007,21 @@ export default class nx_tactics_books_bookloader {
       "scenario<-scenario-key-value": nx_tactics_books_bookloader.t_scenario_from_scenario_key_value,
       "scenario<-scenario-stringmap": nx_tactics_books_bookloader.t_scenario_from_scenario_stringmap,
       "scenario<-scenario-xmlchild": nx_tactics_books_bookloader.t_scenario_from_scenario_xmlchild,
+      "scenario<-scenario-xmlteam": nx_tactics_books_bookloader.t_scenario_from_scenario_xmlteam,
       "scenario<-xml": nx_tactics_books_bookloader.t_scenario_from_xml,
       "section<-section-key-value": nx_tactics_books_bookloader.t_section_from_section_key_value,
       "section<-section-stringmap": nx_tactics_books_bookloader.t_section_from_section_stringmap,
       "section<-section-xmlchild": nx_tactics_books_bookloader.t_section_from_section_xmlchild,
+      "section<-section-xmldamage": nx_tactics_books_bookloader.t_section_from_section_xmldamage,
+      "section<-section-xmlitem": nx_tactics_books_bookloader.t_section_from_section_xmlitem,
+      "section<-section-xmllocation": nx_tactics_books_bookloader.t_section_from_section_xmllocation,
+      "section<-section-xmlmodifier": nx_tactics_books_bookloader.t_section_from_section_xmlmodifier,
       "section<-section-xmlpower": nx_tactics_books_bookloader.t_section_from_section_xmlpower,
       "section<-section-xmlrule": nx_tactics_books_bookloader.t_section_from_section_xmlrule,
       "section<-section-xmlscenario": nx_tactics_books_bookloader.t_section_from_section_xmlscenario,
       "section<-section-xmlsection": nx_tactics_books_bookloader.t_section_from_section_xmlsection,
       "section<-section-xmlskill": nx_tactics_books_bookloader.t_section_from_section_xmlskill,
+      "section<-section-xmlterrain": nx_tactics_books_bookloader.t_section_from_section_xmlterrain,
       "section<-section-xmlunit": nx_tactics_books_bookloader.t_section_from_section_xmlunit,
       "section<-xml": nx_tactics_books_bookloader.t_section_from_xml,
       "skill<-skill-key-value": nx_tactics_books_bookloader.t_skill_from_skill_key_value,
@@ -2649,8 +5035,19 @@ export default class nx_tactics_books_bookloader {
       "specialty<-specialty-xmlchild": nx_tactics_books_bookloader.t_specialty_from_specialty_xmlchild,
       "specialty<-xml": nx_tactics_books_bookloader.t_specialty_from_xml,
       "string-read<-bookname": nx_tactics_books_bookloader.t_string_read_from_bookname,
+      "string-vxlisp-header<-chaptermap": nx_tactics_books_bookloader.t_string_vxlisp_header_from_chaptermap,
       "string-vxlisp<-book": nx_tactics_books_bookloader.t_string_vxlisp_from_book,
-      "string-writename<-book": nx_tactics_books_bookloader.t_string_writename_from_book,
+      "string-vxlisp<-chapter": nx_tactics_books_bookloader.t_string_vxlisp_from_chapter,
+      "string-vxlisp<-chaptermap": nx_tactics_books_bookloader.t_string_vxlisp_from_chaptermap,
+      "string-writename<-string": nx_tactics_books_bookloader.t_string_writename_from_string,
+      "team<-team-key-value": nx_tactics_books_bookloader.t_team_from_team_key_value,
+      "team<-team-stringmap": nx_tactics_books_bookloader.t_team_from_team_stringmap,
+      "team<-team-xmlchild": nx_tactics_books_bookloader.t_team_from_team_xmlchild,
+      "team<-xml": nx_tactics_books_bookloader.t_team_from_xml,
+      "terrain<-terrain-key-value": nx_tactics_books_bookloader.t_terrain_from_terrain_key_value,
+      "terrain<-terrain-stringmap": nx_tactics_books_bookloader.t_terrain_from_terrain_stringmap,
+      "terrain<-terrain-xmlchild": nx_tactics_books_bookloader.t_terrain_from_terrain_xmlchild,
+      "terrain<-xml": nx_tactics_books_bookloader.t_terrain_from_xml,
       "unit<-unit-key-value": nx_tactics_books_bookloader.t_unit_from_unit_key_value,
       "unit<-unit-stringmap": nx_tactics_books_bookloader.t_unit_from_unit_stringmap,
       "unit<-unit-xmlchild": nx_tactics_books_bookloader.t_unit_from_unit_xmlchild,
@@ -2658,11 +5055,32 @@ export default class nx_tactics_books_bookloader {
       "unit<-unit-xmlskill": nx_tactics_books_bookloader.t_unit_from_unit_xmlskill,
       "unit<-unit-xmlweakness": nx_tactics_books_bookloader.t_unit_from_unit_xmlweakness,
       "unit<-xml": nx_tactics_books_bookloader.t_unit_from_xml,
+      "unitability<-unitability-key-value": nx_tactics_books_bookloader.t_unitability_from_unitability_key_value,
+      "unitability<-unitability-stringmap": nx_tactics_books_bookloader.t_unitability_from_unitability_stringmap,
+      "unitability<-unitability-xmlchild": nx_tactics_books_bookloader.t_unitability_from_unitability_xmlchild,
+      "unitability<-xml": nx_tactics_books_bookloader.t_unitability_from_xml,
+      "unititem<-unititem-key-value": nx_tactics_books_bookloader.t_unititem_from_unititem_key_value,
+      "unititem<-unititem-stringmap": nx_tactics_books_bookloader.t_unititem_from_unititem_stringmap,
+      "unititem<-unititem-xmlchild": nx_tactics_books_bookloader.t_unititem_from_unititem_xmlchild,
+      "unititem<-xml": nx_tactics_books_bookloader.t_unititem_from_xml,
+      "unitpower<-unitpower-key-value": nx_tactics_books_bookloader.t_unitpower_from_unitpower_key_value,
+      "unitpower<-unitpower-stringmap": nx_tactics_books_bookloader.t_unitpower_from_unitpower_stringmap,
+      "unitpower<-unitpower-xmlability": nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlability,
+      "unitpower<-unitpower-xmlchild": nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlchild,
+      "unitpower<-unitpower-xmlitem": nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlitem,
+      "unitpower<-unitpower-xmlspecialty": nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlspecialty,
       "unitpower<-xml": nx_tactics_books_bookloader.t_unitpower_from_xml,
       "unitskill<-unitskill-key-value": nx_tactics_books_bookloader.t_unitskill_from_unitskill_key_value,
       "unitskill<-unitskill-stringmap": nx_tactics_books_bookloader.t_unitskill_from_unitskill_stringmap,
+      "unitskill<-unitskill-xmlability": nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlability,
       "unitskill<-unitskill-xmlchild": nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlchild,
+      "unitskill<-unitskill-xmlitem": nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlitem,
+      "unitskill<-unitskill-xmlspecialty": nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlspecialty,
       "unitskill<-xml": nx_tactics_books_bookloader.t_unitskill_from_xml,
+      "unitspecialty<-unitspecialty-key-value": nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_key_value,
+      "unitspecialty<-unitspecialty-stringmap": nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_stringmap,
+      "unitspecialty<-unitspecialty-xmlchild": nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_xmlchild,
+      "unitspecialty<-xml": nx_tactics_books_bookloader.t_unitspecialty_from_xml,
       "unitweakness<-xml": nx_tactics_books_bookloader.t_unitweakness_from_xml,
       "weakness<-xml": nx_tactics_books_bookloader.t_weakness_from_xml,
       "xml-read<-bookname": nx_tactics_books_bookloader.t_xml_read_from_bookname
@@ -2888,6 +5306,25 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_book_from_xml
     }
 
+    // (func book<-xmldoc)
+    nx_tactics_books_bookloader.t_book_from_xmldoc['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_book_from_xmldoc['vx_value'] = {
+      name          : "book<-xmldoc",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_book_from_xmldoc
+    }
+
     // (func book<-xmllist)
     nx_tactics_books_bookloader.t_book_from_xmllist['vx_type'] = vx_core.t_type
     nx_tactics_books_bookloader.t_book_from_xmllist['vx_value'] = {
@@ -2905,25 +5342,6 @@ export default class nx_tactics_books_bookloader {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_bookloader.f_book_from_xmllist
-    }
-
-    // (func book<-xmltop)
-    nx_tactics_books_bookloader.t_book_from_xmltop['vx_type'] = vx_core.t_type
-    nx_tactics_books_bookloader.t_book_from_xmltop['vx_value'] = {
-      name          : "book<-xmltop",
-      pkgname       : "nx/tactics/books/bookloader",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_books_bookloader.f_book_from_xmltop
     }
 
     // (func boolean-write<-book)
@@ -3059,6 +5477,82 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_chapter_from_xml
     }
 
+    // (func damage<-damage-key-value)
+    nx_tactics_books_bookloader.t_damage_from_damage_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_damage_from_damage_key_value['vx_value'] = {
+      name          : "damage<-damage-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_damage_from_damage_key_value
+    }
+
+    // (func damage<-damage-stringmap)
+    nx_tactics_books_bookloader.t_damage_from_damage_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_damage_from_damage_stringmap['vx_value'] = {
+      name          : "damage<-damage-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_damage_from_damage_stringmap
+    }
+
+    // (func damage<-damage-xmlchild)
+    nx_tactics_books_bookloader.t_damage_from_damage_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_damage_from_damage_xmlchild['vx_value'] = {
+      name          : "damage<-damage-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_damage_from_damage_xmlchild
+    }
+
+    // (func damage<-xml)
+    nx_tactics_books_bookloader.t_damage_from_xml['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_damage_from_xml['vx_value'] = {
+      name          : "damage<-xml",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_damage_from_xml
+    }
+
     // (func file-read<-bookname)
     nx_tactics_books_bookloader.t_file_read_from_bookname['vx_type'] = vx_core.t_type
     nx_tactics_books_bookloader.t_file_read_from_bookname['vx_value'] = {
@@ -3095,6 +5589,215 @@ export default class nx_tactics_books_bookloader {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_bookloader.f_file_write_from_book
+    }
+
+    // (func item<-item-key-value)
+    nx_tactics_books_bookloader.t_item_from_item_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_item_from_item_key_value['vx_value'] = {
+      name          : "item<-item-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_item_from_item_key_value
+    }
+
+    // (func item<-item-stringmap)
+    nx_tactics_books_bookloader.t_item_from_item_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_item_from_item_stringmap['vx_value'] = {
+      name          : "item<-item-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_item_from_item_stringmap
+    }
+
+    // (func item<-item-xmlchild)
+    nx_tactics_books_bookloader.t_item_from_item_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_item_from_item_xmlchild['vx_value'] = {
+      name          : "item<-item-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_item_from_item_xmlchild
+    }
+
+    // (func item<-xml)
+    nx_tactics_books_bookloader.t_item_from_xml['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_item_from_xml['vx_value'] = {
+      name          : "item<-xml",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_item_from_xml
+    }
+
+    // (func location<-location-key-value)
+    nx_tactics_books_bookloader.t_location_from_location_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_location_from_location_key_value['vx_value'] = {
+      name          : "location<-location-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_location_from_location_key_value
+    }
+
+    // (func location<-location-stringmap)
+    nx_tactics_books_bookloader.t_location_from_location_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_location_from_location_stringmap['vx_value'] = {
+      name          : "location<-location-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_location_from_location_stringmap
+    }
+
+    // (func location<-location-xmlchild)
+    nx_tactics_books_bookloader.t_location_from_location_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_location_from_location_xmlchild['vx_value'] = {
+      name          : "location<-location-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_location_from_location_xmlchild
+    }
+
+    // (func location<-xml)
+    nx_tactics_books_bookloader.t_location_from_xml['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_location_from_xml['vx_value'] = {
+      name          : "location<-xml",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_location_from_xml
+    }
+
+    // (func modifier<-modifier-key-value)
+    nx_tactics_books_bookloader.t_modifier_from_modifier_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_modifier_from_modifier_key_value['vx_value'] = {
+      name          : "modifier<-modifier-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_modifier_from_modifier_key_value
+    }
+
+    // (func modifier<-modifier-stringmap)
+    nx_tactics_books_bookloader.t_modifier_from_modifier_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_modifier_from_modifier_stringmap['vx_value'] = {
+      name          : "modifier<-modifier-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_modifier_from_modifier_stringmap
+    }
+
+    // (func modifier<-modifier-xmlchild)
+    nx_tactics_books_bookloader.t_modifier_from_modifier_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_modifier_from_modifier_xmlchild['vx_value'] = {
+      name          : "modifier<-modifier-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_modifier_from_modifier_xmlchild
     }
 
     // (func modifier<-xml)
@@ -3154,6 +5857,25 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_power_from_power_stringmap
     }
 
+    // (func power<-power-xmlability)
+    nx_tactics_books_bookloader.t_power_from_power_xmlability['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_power_from_power_xmlability['vx_value'] = {
+      name          : "power<-power-xmlability",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_power_from_power_xmlability
+    }
+
     // (func power<-power-xmlchild)
     nx_tactics_books_bookloader.t_power_from_power_xmlchild['vx_type'] = vx_core.t_type
     nx_tactics_books_bookloader.t_power_from_power_xmlchild['vx_value'] = {
@@ -3171,6 +5893,25 @@ export default class nx_tactics_books_bookloader {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_bookloader.f_power_from_power_xmlchild
+    }
+
+    // (func power<-power-xmlspecialty)
+    nx_tactics_books_bookloader.t_power_from_power_xmlspecialty['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_power_from_power_xmlspecialty['vx_value'] = {
+      name          : "power<-power-xmlspecialty",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_power_from_power_xmlspecialty
     }
 
     // (func power<-xml)
@@ -3325,6 +6066,25 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_scenario_from_scenario_xmlchild
     }
 
+    // (func scenario<-scenario-xmlteam)
+    nx_tactics_books_bookloader.t_scenario_from_scenario_xmlteam['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_scenario_from_scenario_xmlteam['vx_value'] = {
+      name          : "scenario<-scenario-xmlteam",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_scenario_from_scenario_xmlteam
+    }
+
     // (func scenario<-xml)
     nx_tactics_books_bookloader.t_scenario_from_xml['vx_type'] = vx_core.t_type
     nx_tactics_books_bookloader.t_scenario_from_xml['vx_value'] = {
@@ -3399,6 +6159,82 @@ export default class nx_tactics_books_bookloader {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_bookloader.f_section_from_section_xmlchild
+    }
+
+    // (func section<-section-xmldamage)
+    nx_tactics_books_bookloader.t_section_from_section_xmldamage['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_section_from_section_xmldamage['vx_value'] = {
+      name          : "section<-section-xmldamage",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_section_from_section_xmldamage
+    }
+
+    // (func section<-section-xmlitem)
+    nx_tactics_books_bookloader.t_section_from_section_xmlitem['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_section_from_section_xmlitem['vx_value'] = {
+      name          : "section<-section-xmlitem",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_section_from_section_xmlitem
+    }
+
+    // (func section<-section-xmllocation)
+    nx_tactics_books_bookloader.t_section_from_section_xmllocation['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_section_from_section_xmllocation['vx_value'] = {
+      name          : "section<-section-xmllocation",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_section_from_section_xmllocation
+    }
+
+    // (func section<-section-xmlmodifier)
+    nx_tactics_books_bookloader.t_section_from_section_xmlmodifier['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_section_from_section_xmlmodifier['vx_value'] = {
+      name          : "section<-section-xmlmodifier",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_section_from_section_xmlmodifier
     }
 
     // (func section<-section-xmlpower)
@@ -3494,6 +6330,25 @@ export default class nx_tactics_books_bookloader {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_bookloader.f_section_from_section_xmlskill
+    }
+
+    // (func section<-section-xmlterrain)
+    nx_tactics_books_bookloader.t_section_from_section_xmlterrain['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_section_from_section_xmlterrain['vx_value'] = {
+      name          : "section<-section-xmlterrain",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_section_from_section_xmlterrain
     }
 
     // (func section<-section-xmlunit)
@@ -3743,6 +6598,25 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_string_read_from_bookname
     }
 
+    // (func string-vxlisp-header<-chaptermap)
+    nx_tactics_books_bookloader.t_string_vxlisp_header_from_chaptermap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_string_vxlisp_header_from_chaptermap['vx_value'] = {
+      name          : "string-vxlisp-header<-chaptermap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_string_vxlisp_header_from_chaptermap
+    }
+
     // (func string-vxlisp<-book)
     nx_tactics_books_bookloader.t_string_vxlisp_from_book['vx_type'] = vx_core.t_type
     nx_tactics_books_bookloader.t_string_vxlisp_from_book['vx_value'] = {
@@ -3762,10 +6636,10 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_string_vxlisp_from_book
     }
 
-    // (func string-writename<-book)
-    nx_tactics_books_bookloader.t_string_writename_from_book['vx_type'] = vx_core.t_type
-    nx_tactics_books_bookloader.t_string_writename_from_book['vx_value'] = {
-      name          : "string-writename<-book",
+    // (func string-vxlisp<-chapter)
+    nx_tactics_books_bookloader.t_string_vxlisp_from_chapter['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_string_vxlisp_from_chapter['vx_value'] = {
+      name          : "string-vxlisp<-chapter",
       pkgname       : "nx/tactics/books/bookloader",
       extends       : ":func",
       idx           : 0,
@@ -3778,7 +6652,197 @@ export default class nx_tactics_books_bookloader {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_bookloader.f_string_writename_from_book
+      fn            : nx_tactics_books_bookloader.f_string_vxlisp_from_chapter
+    }
+
+    // (func string-vxlisp<-chaptermap)
+    nx_tactics_books_bookloader.t_string_vxlisp_from_chaptermap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_string_vxlisp_from_chaptermap['vx_value'] = {
+      name          : "string-vxlisp<-chaptermap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_string_vxlisp_from_chaptermap
+    }
+
+    // (func string-writename<-string)
+    nx_tactics_books_bookloader.t_string_writename_from_string['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_string_writename_from_string['vx_value'] = {
+      name          : "string-writename<-string",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_string_writename_from_string
+    }
+
+    // (func team<-team-key-value)
+    nx_tactics_books_bookloader.t_team_from_team_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_team_from_team_key_value['vx_value'] = {
+      name          : "team<-team-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_team_from_team_key_value
+    }
+
+    // (func team<-team-stringmap)
+    nx_tactics_books_bookloader.t_team_from_team_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_team_from_team_stringmap['vx_value'] = {
+      name          : "team<-team-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_team_from_team_stringmap
+    }
+
+    // (func team<-team-xmlchild)
+    nx_tactics_books_bookloader.t_team_from_team_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_team_from_team_xmlchild['vx_value'] = {
+      name          : "team<-team-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_team_from_team_xmlchild
+    }
+
+    // (func team<-xml)
+    nx_tactics_books_bookloader.t_team_from_xml['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_team_from_xml['vx_value'] = {
+      name          : "team<-xml",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_team_from_xml
+    }
+
+    // (func terrain<-terrain-key-value)
+    nx_tactics_books_bookloader.t_terrain_from_terrain_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_terrain_from_terrain_key_value['vx_value'] = {
+      name          : "terrain<-terrain-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_terrain_from_terrain_key_value
+    }
+
+    // (func terrain<-terrain-stringmap)
+    nx_tactics_books_bookloader.t_terrain_from_terrain_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_terrain_from_terrain_stringmap['vx_value'] = {
+      name          : "terrain<-terrain-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_terrain_from_terrain_stringmap
+    }
+
+    // (func terrain<-terrain-xmlchild)
+    nx_tactics_books_bookloader.t_terrain_from_terrain_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_terrain_from_terrain_xmlchild['vx_value'] = {
+      name          : "terrain<-terrain-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_terrain_from_terrain_xmlchild
+    }
+
+    // (func terrain<-xml)
+    nx_tactics_books_bookloader.t_terrain_from_xml['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_terrain_from_xml['vx_value'] = {
+      name          : "terrain<-xml",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_terrain_from_xml
     }
 
     // (func unit<-unit-key-value)
@@ -3914,6 +6978,272 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_unit_from_xml
     }
 
+    // (func unitability<-unitability-key-value)
+    nx_tactics_books_bookloader.t_unitability_from_unitability_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitability_from_unitability_key_value['vx_value'] = {
+      name          : "unitability<-unitability-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitability_from_unitability_key_value
+    }
+
+    // (func unitability<-unitability-stringmap)
+    nx_tactics_books_bookloader.t_unitability_from_unitability_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitability_from_unitability_stringmap['vx_value'] = {
+      name          : "unitability<-unitability-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitability_from_unitability_stringmap
+    }
+
+    // (func unitability<-unitability-xmlchild)
+    nx_tactics_books_bookloader.t_unitability_from_unitability_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitability_from_unitability_xmlchild['vx_value'] = {
+      name          : "unitability<-unitability-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitability_from_unitability_xmlchild
+    }
+
+    // (func unitability<-xml)
+    nx_tactics_books_bookloader.t_unitability_from_xml['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitability_from_xml['vx_value'] = {
+      name          : "unitability<-xml",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitability_from_xml
+    }
+
+    // (func unititem<-unititem-key-value)
+    nx_tactics_books_bookloader.t_unititem_from_unititem_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unititem_from_unititem_key_value['vx_value'] = {
+      name          : "unititem<-unititem-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unititem_from_unititem_key_value
+    }
+
+    // (func unititem<-unititem-stringmap)
+    nx_tactics_books_bookloader.t_unititem_from_unititem_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unititem_from_unititem_stringmap['vx_value'] = {
+      name          : "unititem<-unititem-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unititem_from_unititem_stringmap
+    }
+
+    // (func unititem<-unititem-xmlchild)
+    nx_tactics_books_bookloader.t_unititem_from_unititem_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unititem_from_unititem_xmlchild['vx_value'] = {
+      name          : "unititem<-unititem-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unititem_from_unititem_xmlchild
+    }
+
+    // (func unititem<-xml)
+    nx_tactics_books_bookloader.t_unititem_from_xml['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unititem_from_xml['vx_value'] = {
+      name          : "unititem<-xml",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unititem_from_xml
+    }
+
+    // (func unitpower<-unitpower-key-value)
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_key_value['vx_value'] = {
+      name          : "unitpower<-unitpower-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitpower_from_unitpower_key_value
+    }
+
+    // (func unitpower<-unitpower-stringmap)
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_stringmap['vx_value'] = {
+      name          : "unitpower<-unitpower-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitpower_from_unitpower_stringmap
+    }
+
+    // (func unitpower<-unitpower-xmlability)
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlability['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlability['vx_value'] = {
+      name          : "unitpower<-unitpower-xmlability",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitpower_from_unitpower_xmlability
+    }
+
+    // (func unitpower<-unitpower-xmlchild)
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlchild['vx_value'] = {
+      name          : "unitpower<-unitpower-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitpower_from_unitpower_xmlchild
+    }
+
+    // (func unitpower<-unitpower-xmlitem)
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlitem['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlitem['vx_value'] = {
+      name          : "unitpower<-unitpower-xmlitem",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitpower_from_unitpower_xmlitem
+    }
+
+    // (func unitpower<-unitpower-xmlspecialty)
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlspecialty['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitpower_from_unitpower_xmlspecialty['vx_value'] = {
+      name          : "unitpower<-unitpower-xmlspecialty",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitpower_from_unitpower_xmlspecialty
+    }
+
     // (func unitpower<-xml)
     nx_tactics_books_bookloader.t_unitpower_from_xml['vx_type'] = vx_core.t_type
     nx_tactics_books_bookloader.t_unitpower_from_xml['vx_value'] = {
@@ -3971,6 +7301,25 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_unitskill_from_unitskill_stringmap
     }
 
+    // (func unitskill<-unitskill-xmlability)
+    nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlability['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlability['vx_value'] = {
+      name          : "unitskill<-unitskill-xmlability",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitskill_from_unitskill_xmlability
+    }
+
     // (func unitskill<-unitskill-xmlchild)
     nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlchild['vx_type'] = vx_core.t_type
     nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlchild['vx_value'] = {
@@ -3990,6 +7339,44 @@ export default class nx_tactics_books_bookloader {
       fn            : nx_tactics_books_bookloader.f_unitskill_from_unitskill_xmlchild
     }
 
+    // (func unitskill<-unitskill-xmlitem)
+    nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlitem['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlitem['vx_value'] = {
+      name          : "unitskill<-unitskill-xmlitem",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitskill_from_unitskill_xmlitem
+    }
+
+    // (func unitskill<-unitskill-xmlspecialty)
+    nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlspecialty['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitskill_from_unitskill_xmlspecialty['vx_value'] = {
+      name          : "unitskill<-unitskill-xmlspecialty",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitskill_from_unitskill_xmlspecialty
+    }
+
     // (func unitskill<-xml)
     nx_tactics_books_bookloader.t_unitskill_from_xml['vx_type'] = vx_core.t_type
     nx_tactics_books_bookloader.t_unitskill_from_xml['vx_value'] = {
@@ -4007,6 +7394,82 @@ export default class nx_tactics_books_bookloader {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_books_bookloader.f_unitskill_from_xml
+    }
+
+    // (func unitspecialty<-unitspecialty-key-value)
+    nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_key_value['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_key_value['vx_value'] = {
+      name          : "unitspecialty<-unitspecialty-key-value",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitspecialty_from_unitspecialty_key_value
+    }
+
+    // (func unitspecialty<-unitspecialty-stringmap)
+    nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_stringmap['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_stringmap['vx_value'] = {
+      name          : "unitspecialty<-unitspecialty-stringmap",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitspecialty_from_unitspecialty_stringmap
+    }
+
+    // (func unitspecialty<-unitspecialty-xmlchild)
+    nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_xmlchild['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitspecialty_from_unitspecialty_xmlchild['vx_value'] = {
+      name          : "unitspecialty<-unitspecialty-xmlchild",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitspecialty_from_unitspecialty_xmlchild
+    }
+
+    // (func unitspecialty<-xml)
+    nx_tactics_books_bookloader.t_unitspecialty_from_xml['vx_type'] = vx_core.t_type
+    nx_tactics_books_bookloader.t_unitspecialty_from_xml['vx_value'] = {
+      name          : "unitspecialty<-xml",
+      pkgname       : "nx/tactics/books/bookloader",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_books_bookloader.f_unitspecialty_from_xml
     }
 
     // (func unitweakness<-xml)

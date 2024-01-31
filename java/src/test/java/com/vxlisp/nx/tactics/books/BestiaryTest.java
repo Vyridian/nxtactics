@@ -21,11 +21,11 @@ public final class BestiaryTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/bestiary", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 23), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 23), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 23), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 23), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 23), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -40,6 +40,28 @@ public final class BestiaryTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":chapter_amphibians", 0,
+        ":chapter_arthropods", 0,
+        ":chapter_avians", 0,
+        ":chapter_beastmen", 0,
+        ":chapter_bestiary_overview", 0,
+        ":chapter_constructs", 0,
+        ":chapter_darkling", 0,
+        ":chapter_dragons", 0,
+        ":chapter_elementals", 0,
+        ":chapter_extra-dimensional", 0,
+        ":chapter_giant_races", 0,
+        ":chapter_humanoids", 0,
+        ":chapter_humanoids_fantastic", 0,
+        ":chapter_mammals_marsupials", 0,
+        ":chapter_marine_creatures", 0,
+        ":chapter_microorganisms", 0,
+        ":chapter_mythical_beasts", 0,
+        ":chapter_plants", 0,
+        ":chapter_reptiles", 0,
+        ":chapter_shapeshifters", 0,
+        ":chapter_undead_creatures", 0,
+        ":chapter_underground_creatures", 0,
         ":tacticsbook", 0
       )
     );

@@ -1837,7 +1837,8 @@
  (stringmap
   :a "1"
   :b "2")
- (copy (stringmap :a "1")
+ (copy
+  (stringmap :a "1")
   :b "2"))</p>
                     </td>
                     <td>
@@ -2820,10 +2821,10 @@
                       <p class="preformatted">(test "\"a\"" (string&lt;-any "a"))</p>
                     </td>
                     <td>
-                      <p class="preformatted">""a""</p>
+                      <p class="preformatted">`"a"`</p>
                     </td>
                     <td>
-                      <p class="preformatted">""a""</p>
+                      <p class="preformatted">`"a"`</p>
                     </td>
                   </tr>
                   <tr>
@@ -2842,16 +2843,16 @@
  (string&lt;-any (stringlist "a" "b" "c")))</p>
                     </td>
                     <td>
-                      <p class="preformatted">"(stringlist
+                      <p class="preformatted">`(stringlist
  "a"
  "b"
- "c")"</p>
+ "c")`</p>
                     </td>
                     <td>
-                      <p class="preformatted">"(stringlist
+                      <p class="preformatted">`(stringlist
  "a"
  "b"
- "c")"</p>
+ "c")`</p>
                     </td>
                   </tr>
                   <tr>
@@ -2869,14 +2870,14 @@
  (string&lt;-any (stringmap :a "1" :b "2")))</p>
                     </td>
                     <td>
-                      <p class="preformatted">"(stringmap
+                      <p class="preformatted">`(stringmap
  :a "1"
- :b "2")"</p>
+ :b "2")`</p>
                     </td>
                     <td>
-                      <p class="preformatted">"(stringmap
+                      <p class="preformatted">`(stringmap
  :a "1"
- :b "2")"</p>
+ :b "2")`</p>
                     </td>
                   </tr>
                   <tr>
@@ -3159,21 +3160,21 @@
                     <td>
                       <p class="preformatted">(textblock
  :text
-  ""a","b"
-1,"2""
+  `"a","b"
+1,"2"`
  :startpos 1
  :endpos 13
  :children
   (textblocklist
    (textblock
-    :text ""a""
+    :text `"a"`
     :startpos 1
     :endpos 3
     :delim
      (delim
       :name "delimquote"
-      :starttext """
-      :endtext """)
+      :starttext `"`
+      :endtext `"`)
     :children
      (textblocklist
       (textblock
@@ -3189,14 +3190,14 @@
       :name "delimcomma"
       :starttext ","))
    (textblock
-    :text ""b""
+    :text `"b"`
     :startpos 5
     :endpos 7
     :delim
      (delim
       :name "delimquote"
-      :starttext """
-      :endtext """)
+      :starttext `"`
+      :endtext `"`)
     :children
      (textblocklist
       (textblock
@@ -3228,14 +3229,14 @@
       :name "delimcomma"
       :starttext ","))
    (textblock
-    :text ""2""
+    :text `"2"`
     :startpos 11
     :endpos 13
     :delim
      (delim
       :name "delimquote"
-      :starttext """
-      :endtext """)
+      :starttext `"`
+      :endtext `"`)
     :children
      (textblocklist
       (textblock
@@ -3246,21 +3247,21 @@
                     <td>
                       <p class="preformatted">(textblock
  :text
-  ""a","b"
-1,"2""
+  `"a","b"
+1,"2"`
  :startpos 1
  :endpos 13
  :children
   (textblocklist
    (textblock
-    :text ""a""
+    :text `"a"`
     :startpos 1
     :endpos 3
     :delim
      (delim
       :name "delimquote"
-      :starttext """
-      :endtext """)
+      :starttext `"`
+      :endtext `"`)
     :children
      (textblocklist
       (textblock
@@ -3276,14 +3277,14 @@
       :name "delimcomma"
       :starttext ","))
    (textblock
-    :text ""b""
+    :text `"b"`
     :startpos 5
     :endpos 7
     :delim
      (delim
       :name "delimquote"
-      :starttext """
-      :endtext """)
+      :starttext `"`
+      :endtext `"`)
     :children
      (textblocklist
       (textblock
@@ -3315,14 +3316,14 @@
       :name "delimcomma"
       :starttext ","))
    (textblock
-    :text ""2""
+    :text `"2"`
     :startpos 11
     :endpos 13
     :delim
      (delim
       :name "delimquote"
-      :starttext """
-      :endtext """)
+      :starttext `"`
+      :endtext `"`)
     :children
      (textblocklist
       (textblock
@@ -4872,8 +4873,8 @@
                     <td>
                       <p class="preformatted">(textblock
  :text
-  ""b"
-1,"2""
+  `"b"
+1,"2"`
  :startpos 5
  :endpos 13
  :delim
@@ -4886,21 +4887,21 @@
  :parent
   (textblock
    :text
-    ""a","b"
-1,"2""
+    `"a","b"
+1,"2"`
    :startpos 1
    :endpos 13
    :children
     (textblocklist
      (textblock
-      :text ""a""
+      :text `"a"`
       :startpos 1
       :endpos 3
       :delim
        (delim
         :name "delimquote"
-        :starttext """
-        :endtext """)
+        :starttext `"`
+        :endtext `"`)
       :children
        (textblocklist
         (textblock
@@ -4919,8 +4920,8 @@
                     <td>
                       <p class="preformatted">(textblock
  :text
-  ""b"
-1,"2""
+  `"b"
+1,"2"`
  :startpos 5
  :endpos 13
  :delim
@@ -4933,21 +4934,21 @@
  :parent
   (textblock
    :text
-    ""a","b"
-1,"2""
+    `"a","b"
+1,"2"`
    :startpos 1
    :endpos 13
    :children
     (textblocklist
      (textblock
-      :text ""a""
+      :text `"a"`
       :startpos 1
       :endpos 3
       :delim
        (delim
         :name "delimquote"
-        :starttext """
-        :endtext """)
+        :starttext `"`
+        :endtext `"`)
       :children
        (textblocklist
         (textblock
@@ -13131,13 +13132,13 @@
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">vx/data/xml</p>
-              <p class="coveragenums">50% 10/20</p>
+              <p class="coveragenums">47% 10/21</p>
               <p class="coveragenums">0% 0/3</p>
               <p class="coveragenums">0% 0/4</p>
-              <p class="coveragenums">76% 10/13</p>
-              <p class="coveragenums">65% 13/20</p>
-              <p class="coveragenums">0% 0/13</p>
-              <p class="coveragenums">0% 0/13</p>
+              <p class="coveragenums">71% 10/14</p>
+              <p class="coveragenums">66% 14/21</p>
+              <p class="coveragenums">0% 0/14</p>
+              <p class="coveragenums">0% 0/14</p>
             </summary>
             <div>
               <table>
@@ -13373,11 +13374,11 @@
                     <td>
                       <p class="preformatted">(textblock
  :text
-  "&lt;doc&gt;
+  `&lt;doc&gt;
   &lt;tag1&gt;
     &lt;tag2 prop1="val1" prop2="val2" /&gt;
   &lt;/tag1&gt;
-&lt;/doc&gt;"
+&lt;/doc&gt;`
  :startpos 1
  :endpos 70
  :children
@@ -13425,7 +13426,7 @@
     :startpos 15
     :endpos 19)
    (textblock
-    :text "&lt;tag2 prop1="val1" prop2="val2" /&gt;"
+    :text `&lt;tag2 prop1="val1" prop2="val2" /&gt;`
     :startpos 20
     :endpos 53
     :delim
@@ -13460,14 +13461,14 @@
          :name "delimxmlequal"
          :starttext "="))
       (textblock
-       :text ""val1""
+       :text `"val1"`
        :startpos 32
        :endpos 37
        :delim
         (delim
          :name "delimquote"
-         :starttext """
-         :endtext """)
+         :starttext `"`
+         :endtext `"`)
        :children
         (textblocklist
          (textblock
@@ -13495,14 +13496,14 @@
          :name "delimxmlequal"
          :starttext "="))
       (textblock
-       :text ""val2""
+       :text `"val2"`
        :startpos 45
        :endpos 50
        :delim
         (delim
          :name "delimquote"
-         :starttext """
-         :endtext """)
+         :starttext `"`
+         :endtext `"`)
        :children
         (textblocklist
          (textblock
@@ -13567,11 +13568,11 @@
                     <td>
                       <p class="preformatted">(textblock
  :text
-  "&lt;doc&gt;
+  `&lt;doc&gt;
   &lt;tag1&gt;
     &lt;tag2 prop1="val1" prop2="val2" /&gt;
   &lt;/tag1&gt;
-&lt;/doc&gt;"
+&lt;/doc&gt;`
  :startpos 1
  :endpos 70
  :children
@@ -13619,7 +13620,7 @@
     :startpos 15
     :endpos 19)
    (textblock
-    :text "&lt;tag2 prop1="val1" prop2="val2" /&gt;"
+    :text `&lt;tag2 prop1="val1" prop2="val2" /&gt;`
     :startpos 20
     :endpos 53
     :delim
@@ -13654,14 +13655,14 @@
          :name "delimxmlequal"
          :starttext "="))
       (textblock
-       :text ""val1""
+       :text `"val1"`
        :startpos 32
        :endpos 37
        :delim
         (delim
          :name "delimquote"
-         :starttext """
-         :endtext """)
+         :starttext `"`
+         :endtext `"`)
        :children
         (textblocklist
          (textblock
@@ -13689,14 +13690,14 @@
          :name "delimxmlequal"
          :starttext "="))
       (textblock
-       :text ""val2""
+       :text `"val2"`
        :startpos 45
        :endpos 50
        :delim
         (delim
          :name "delimquote"
-         :starttext """
-         :endtext """)
+         :starttext `"`
+         :endtext `"`)
        :children
         (textblocklist
          (textblock
@@ -17970,10 +17971,10 @@ ab
   (div :id "myid") 0))</p>
                     </td>
                     <td>
-                      <p class="preformatted">"&lt;div id="myid"&gt;&lt;/div&gt;"</p>
+                      <p class="preformatted">`&lt;div id="myid"&gt;&lt;/div&gt;`</p>
                     </td>
                     <td>
-                      <p class="preformatted">"&lt;div id="myid"&gt;&lt;/div&gt;"</p>
+                      <p class="preformatted">`&lt;div id="myid"&gt;&lt;/div&gt;`</p>
                     </td>
                   </tr>
                   <tr>
@@ -18043,10 +18044,10 @@ ab
  (string&lt;-meta-indent (meta :charset "utf-8") 0))</p>
                     </td>
                     <td>
-                      <p class="preformatted">"&lt;meta charset="utf-8" /&gt;"</p>
+                      <p class="preformatted">`&lt;meta charset="utf-8" /&gt;`</p>
                     </td>
                     <td>
-                      <p class="preformatted">"&lt;meta charset="utf-8" /&gt;"</p>
+                      <p class="preformatted">`&lt;meta charset="utf-8" /&gt;`</p>
                     </td>
                   </tr>
                   <tr>
@@ -18082,10 +18083,10 @@ ab
   (p :id "myid" :text "data") 0))</p>
                     </td>
                     <td>
-                      <p class="preformatted">"&lt;p id="myid"&gt;data&lt;/p&gt;"</p>
+                      <p class="preformatted">`&lt;p id="myid"&gt;data&lt;/p&gt;`</p>
                     </td>
                     <td>
-                      <p class="preformatted">"&lt;p id="myid"&gt;data&lt;/p&gt;"</p>
+                      <p class="preformatted">`&lt;p id="myid"&gt;data&lt;/p&gt;`</p>
                     </td>
                   </tr>
                 </tbody>
@@ -18254,13 +18255,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/base</p>
-              <p class="coveragenums">0% 0/99</p>
-              <p class="coveragenums">0% 0/64</p>
+              <p class="coveragenums">0% 0/104</p>
+              <p class="coveragenums">0% 0/66</p>
               <p class="coveragenums">0% 0/34</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">5% 5/99</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">6% 7/104</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
             </summary>
             <div>
               <table>
@@ -18293,13 +18294,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/advanced_rules</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/5</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/5</p>
+              <p class="coveragenums">0% 0/5</p>
+              <p class="coveragenums">0% 0/5</p>
+              <p class="coveragenums">0% 0/5</p>
             </summary>
             <div>
               <table>
@@ -18332,13 +18333,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/age_of_sail</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
             </summary>
             <div>
               <table>
@@ -18371,13 +18372,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/age_of_steam</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
             </summary>
             <div>
               <table>
@@ -18410,13 +18411,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/ancients</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/14</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/14</p>
+              <p class="coveragenums">0% 0/14</p>
+              <p class="coveragenums">0% 0/14</p>
+              <p class="coveragenums">0% 0/14</p>
             </summary>
             <div>
               <table>
@@ -18449,13 +18450,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/bestiary</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/23</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/23</p>
+              <p class="coveragenums">0% 0/23</p>
+              <p class="coveragenums">0% 0/23</p>
+              <p class="coveragenums">0% 0/23</p>
             </summary>
             <div>
               <table>
@@ -18488,13 +18489,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/bookloader</p>
-              <p class="coveragenums">35% 44/125</p>
+              <p class="coveragenums">34% 44/128</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">35% 44/125</p>
-              <p class="coveragenums">90% 113/125</p>
-              <p class="coveragenums">0% 0/125</p>
-              <p class="coveragenums">0% 0/125</p>
+              <p class="coveragenums">34% 44/128</p>
+              <p class="coveragenums">90% 116/128</p>
+              <p class="coveragenums">0% 0/128</p>
+              <p class="coveragenums">0% 0/128</p>
             </summary>
             <div>
               <table>
@@ -19128,7 +19129,10 @@ ab
    (base/sectionmap
     :section1
      (base/section
-      :name "section1")))
+      :name "section1")
+    :section2
+     (base/section
+      :name "section2")))
  (chapter&lt;-xml
   (xml/xml
    :tag "chapter"
@@ -19154,7 +19158,12 @@ ab
       :tag "section"
       :propmap
        (stringmap
-        :name "section1"))))))</p>
+        :name "section1"))
+     (xml/xml
+      :tag "section"
+      :propmap
+       (stringmap
+        :name "section2"))))))</p>
                     </td>
                     <td>
                       <p class="preformatted">(chapter
@@ -19166,7 +19175,10 @@ ab
   (sectionmap
    :section1
     (section
-     :name "section1")))</p>
+     :name "section1")
+   :section2
+    (section
+     :name "section2")))</p>
                     </td>
                     <td>
                       <p class="preformatted">(chapter
@@ -19178,7 +19190,10 @@ ab
   (sectionmap
    :section1
     (section
-     :name "section1")))</p>
+     :name "section1")
+   :section2
+    (section
+     :name "section2")))</p>
                     </td>
                   </tr>
                   <tr>
@@ -20579,13 +20594,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/characters</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
             </summary>
             <div>
               <table>
@@ -20618,13 +20633,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/combat</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
             </summary>
             <div>
               <table>
@@ -20657,13 +20672,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/core_rules</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/7</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
             </summary>
             <div>
               <table>
@@ -20696,13 +20711,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/fantasy</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/9</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/9</p>
+              <p class="coveragenums">0% 0/9</p>
+              <p class="coveragenums">0% 0/9</p>
+              <p class="coveragenums">0% 0/9</p>
             </summary>
             <div>
               <table>
@@ -20735,13 +20750,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/gear</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/4</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
             </summary>
             <div>
               <table>
@@ -20813,13 +20828,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/giant_monsters</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/4</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
             </summary>
             <div>
               <table>
@@ -20852,13 +20867,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/high_technology</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/15</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/15</p>
+              <p class="coveragenums">0% 0/15</p>
+              <p class="coveragenums">0% 0/15</p>
+              <p class="coveragenums">0% 0/15</p>
             </summary>
             <div>
               <table>
@@ -20891,13 +20906,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/horror</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/7</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
             </summary>
             <div>
               <table>
@@ -20930,13 +20945,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/land_sea_and_air</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/6</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/6</p>
+              <p class="coveragenums">0% 0/6</p>
+              <p class="coveragenums">0% 0/6</p>
+              <p class="coveragenums">0% 0/6</p>
             </summary>
             <div>
               <table>
@@ -20969,13 +20984,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/magic</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/4</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
             </summary>
             <div>
               <table>
@@ -21008,13 +21023,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/medieval</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
             </summary>
             <div>
               <table>
@@ -21047,13 +21062,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/modern</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/13</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/13</p>
+              <p class="coveragenums">0% 0/13</p>
+              <p class="coveragenums">0% 0/13</p>
+              <p class="coveragenums">0% 0/13</p>
             </summary>
             <div>
               <table>
@@ -21086,13 +21101,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/modern_fantasy</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
+              <p class="coveragenums">0% 0/8</p>
             </summary>
             <div>
               <table>
@@ -21125,13 +21140,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/powers</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/13</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/13</p>
+              <p class="coveragenums">0% 0/13</p>
+              <p class="coveragenums">0% 0/13</p>
+              <p class="coveragenums">0% 0/13</p>
             </summary>
             <div>
               <table>
@@ -21164,13 +21179,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/prehistory</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/3</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/3</p>
+              <p class="coveragenums">0% 0/3</p>
+              <p class="coveragenums">0% 0/3</p>
+              <p class="coveragenums">0% 0/3</p>
             </summary>
             <div>
               <table>
@@ -21203,13 +21218,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/pulp_fiction</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/10</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/10</p>
+              <p class="coveragenums">0% 0/10</p>
+              <p class="coveragenums">0% 0/10</p>
+              <p class="coveragenums">0% 0/10</p>
             </summary>
             <div>
               <table>
@@ -21242,13 +21257,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/science_fiction</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/14</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/14</p>
+              <p class="coveragenums">0% 0/14</p>
+              <p class="coveragenums">0% 0/14</p>
+              <p class="coveragenums">0% 0/14</p>
             </summary>
             <div>
               <table>
@@ -21281,13 +21296,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/skills</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/3</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/3</p>
+              <p class="coveragenums">0% 0/3</p>
+              <p class="coveragenums">0% 0/3</p>
+              <p class="coveragenums">0% 0/3</p>
             </summary>
             <div>
               <table>
@@ -21320,13 +21335,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/space_and_time</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/6</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/6</p>
+              <p class="coveragenums">0% 0/6</p>
+              <p class="coveragenums">0% 0/6</p>
+              <p class="coveragenums">0% 0/6</p>
             </summary>
             <div>
               <table>
@@ -21359,13 +21374,52 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">nx/tactics/books/superheroes</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/7</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
-              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/7</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/books/world_wars</p>
+              <p class="coveragenums">0% 0/28</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/28</p>
+              <p class="coveragenums">0% 0/28</p>
+              <p class="coveragenums">0% 0/28</p>
+              <p class="coveragenums">0% 0/28</p>
             </summary>
             <div>
               <table>
@@ -21405,6 +21459,45 @@ ab
               <p class="coveragenums">35% 10/28</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">nx/tactics/uitactics</p>
+              <p class="coveragenums">0% 0/16</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">100% 0/0</p>
+              <p class="coveragenums">0% 0/16</p>
+              <p class="coveragenums">25% 4/16</p>
+              <p class="coveragenums">0% 0/16</p>
+              <p class="coveragenums">0% 0/16</p>
             </summary>
             <div>
               <table>
@@ -21561,6 +21654,45 @@ ab
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
               <p class="coveragenums">100% 0/0</p>
+            </summary>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Pass?</p>
+                    </td>
+                    <td>
+                      <p>Name</p>
+                    </td>
+                    <td>
+                      <p>Test</p>
+                    </td>
+                    <td>
+                      <p>Expected</p>
+                    </td>
+                    <td>
+                      <p>Actual</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary>
+              <p class="passflag">Pass</p>
+              <p class="pkgname">vx/ui/html/uihtml</p>
+              <p class="coveragenums">0% 0/3</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">100% 3/3</p>
+              <p class="coveragenums">0% 0/1</p>
+              <p class="coveragenums">0% 0/1</p>
             </summary>
             <div>
               <table>
@@ -21788,13 +21920,13 @@ ab
             <summary>
               <p class="passflag">Pass</p>
               <p class="pkgname">vx/ui/ui</p>
-              <p class="coveragenums">0% 0/11</p>
+              <p class="coveragenums">0% 0/27</p>
+              <p class="coveragenums">0% 0/7</p>
+              <p class="coveragenums">0% 0/16</p>
               <p class="coveragenums">0% 0/4</p>
-              <p class="coveragenums">0% 0/5</p>
-              <p class="coveragenums">0% 0/2</p>
-              <p class="coveragenums">36% 4/11</p>
-              <p class="coveragenums">0% 0/2</p>
-              <p class="coveragenums">0% 0/2</p>
+              <p class="coveragenums">33% 9/27</p>
+              <p class="coveragenums">0% 0/4</p>
+              <p class="coveragenums">0% 0/4</p>
             </summary>
             <div>
               <table>

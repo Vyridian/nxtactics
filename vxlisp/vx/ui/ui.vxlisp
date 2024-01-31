@@ -1,39 +1,142 @@
 (package vx/ui/ui
  :doc "Universal Ui Element")
 
-(type layout : struct
- :doc "Universal Layout")
+(type render : struct
+ :doc "Universal Rendered UI")
+
+(type rendermap : map
+ :allowtypes [render]
+ :doc "Map of render")
+
+(type renderer : struct
+ :properties [fn-render : render<-ui-orig]
+ :doc "Universal Renderer")
 
 (type ui : struct
- :properties [datamap   : anymap
-              rendered  : any
-              render-fn : any-render<-ui
+ :properties [data      : any
+              path      : string
+              render    : render
+              renderer  : renderer
+              uid       : string
+              uilayout  : uilayout
               uimap     : uimap
               uistyle   : uistyle]
  :doc "Universal UI Element")
 
-(const layout-app : layout)
+(type uilayout : struct
+ :doc "Universal Layout")
 
-(const layout-background : layout)
+(type uistyle : struct
+ :doc "Universal Style")
 
-(const layout-navigation : layout)
+(const uilayout-app : uilayout)
 
-(const layout-split-horizontal : layout)
+(const uilayout-background : uilayout)
 
-(const layout-split-vertical : layout)
+(const uilayout-combobox : uilayout)
+
+(const uilayout-flow-horizontal : uilayout)
+
+(const uilayout-flow-vertical : uilayout)
+
+(const uilayout-image : uilayout)
+
+(const uilayout-navigation : uilayout)
+
+(const uilayout-panel : uilayout)
+
+(const uilayout-parallax : uilayout)
+
+(const uilayout-scrollbox : uilayout)
+
+(const uilayout-scrollbox-horizontal : uilayout)
+
+(const uilayout-scrollbox-vertical : uilayout)
+
+(const uilayout-split-horizontal : uilayout)
+
+(const uilayout-split-vertical : uilayout)
+
+(const uilayout-text : uilayout)
+
+(const uilayout-textentry : uilayout)
 
 (type uimap : map
  :allowtypes [ui])
 
-(type uistyle : struct
- :properties [layout : layout])
+(type uistyle : struct)
 
-(func any-render<-ui : any
- [ui : ui]
- :sideeffects "Alters UI"
+/*
+
+(func render<-fn-render-ui-orig : render
+ [fn-render : render<-ui-orig
+  uichg     : ui
+  uiorig    : ui]
+ (fn-render
+  uichg
+  uiorig))
+
+(func render<-renderer-ui-orig : render
+ [renderer : renderer
+  uichg    : ui
+  uiorig   : ui]
+ (let : render
+  [fn-render : render<-ui-orig := (:fn-render renderer)
+   renderchg : render          := (fn-render
+                                   uichg
+                                   uiorig)]
+  renderchg)
+ :doc "")
+*/
+
+(func render<-ui : render
+ [uichg : ui]
+ (render<-ui-orig
+  uichg
+  (empty ui))
+ :sideeffects "Alters UX"
  :doc "Returns a rendered object from a UI Element.")
 
-(func anymap-render<-uimap : boolean
+(func render<-ui-orig : render
+ [uichg  : ui
+  uiorig : ui]
+ (if : render
+  (then
+   (== uichg uiorig)
+   uiorig)
+  (else
+   (let : render
+    [renderer   : renderer := (:renderer ui)
+     renderchg  : render   := (empty render)
+/*
+     renderchg  : render   := (render<-renderer-ui-orig
+                               renderer
+                               uichg
+                               uiorig)
+*/
+]
+    renderchg)))
+ :sideeffects "Alters UX"
+ :doc "Returns a rendered object from a UI Element.")
+
+(func ui-render<-ui-orig : ui
+ [uichg  : ui
+  uiorig : ui]
+ (if : ui
+  (then
+   (== uichg uiorig)
+   uiorig)
+  (else
+   (let : ui
+    [rndr : render := (render<-ui-orig
+                       uichg
+                       uiorig)]
+    (copy uichg
+     :render render))))
+ :sideeffects "Alters UX"
+ :doc "Returns a rendered object from a UI Element.")
+
+(func rendermap<-uimap : rendermap
  [uimap : uimap]
- :sideeffects "Alters UI"
- :doc "Renders a uimap and returns the map of rendered elements.")
+ :sideeffects "Alters User Interface"
+ :doc "Renders a uimap and returns a rendermap.")

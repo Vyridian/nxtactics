@@ -21,11 +21,11 @@ public final class Pulp_fictionTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/pulp_fiction", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 10), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 10), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 10), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 10), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 10), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -40,6 +40,15 @@ public final class Pulp_fictionTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":chapter_action_adventure", 0,
+        ":chapter_flash_gordon", 0,
+        ":chapter_hardboiled_detective", 0,
+        ":chapter_john_carter_on_mars", 0,
+        ":chapter_land_of_the_lost", 0,
+        ":chapter_lost_continent", 0,
+        ":chapter_pulp_fiction_overview", 0,
+        ":chapter_true_grit___crime", 0,
+        ":chapter_war_of_the_worlds", 0,
         ":tacticsbook", 0
       )
     );

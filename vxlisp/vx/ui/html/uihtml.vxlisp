@@ -1,0 +1,17 @@
+(package vx/ui/html/uihtml
+ :libs (lib ui :path vx/ui/ui))
+
+(type renderer-html : struct
+ :traits [ui/renderer]
+ :doc "Html specific renderer")
+
+(const renderer-app : renderer-html
+ (renderer-html
+  :fn-render render-app<-ui-orig)
+ :doc "Html App Renderer")
+
+(func render-app<-ui-orig : render
+ [ui   : ui
+  orig : ui]
+ :sideeffects "Alters UX"
+ :doc "Returns a rendered object from a UI Element.")

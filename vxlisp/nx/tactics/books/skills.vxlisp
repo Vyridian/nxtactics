@@ -2,1242 +2,2895 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
- (book
+ (base/book
   :name "Skills"
   :image "Skill.jpg"
   :chaptermap
-   (chaptermap
-    "Skills Overview"
-     (chapter
-      :name "Skills Overview"
+   (base/chaptermap
+    "Skills Overview" (chapter_skills_overview)
+    "Skill Types" (chapter_skill_types)
+   )))
+
+(func chapter_skills_overview : base/chapter
+ (chapter
+  :name "Skills Overview"
+  :sectionmap
+   (sectionmap
+    "Why Tactics: Skills?"
+     (section
+      :name "Why Tactics: Skills?"
       :sectionmap
        (sectionmap
         "Extraordinary Skills"
          (section
           :name "Extraordinary Skills"
-          :reference "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono , Hell's Paradise")
-        "Why Tactics: Skills?"
-         (section
-          :name "Why Tactics: Skills?"
-          :sectionmap
-           (sectionmap
-            "Extraordinary Skills"
-             (section
-              :name "Extraordinary Skills"
-              :reference "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono , Hell's Paradise")))))
-    "Skill Types"
-     (chapter
-      :name "Skill Types"
-      :sectionmap
-       (sectionmap
-        "Social Skills"
-         (section
-          :name "Social Skills"
-          :skillmap
-           (skillmap
-            :Art
-             (skill
-              :name "Art"
-              :reference "* Art requires a certain... cruelty. - Jhin, Runeterra"
-              :titles "Artist, Artisan"
-              :stat "Spirit"
-              :abilitymap
-               (abilitymap
-                "Art Imitates Life"
-                 (ability
-                  :name "Art Imitates Life"
-                  :reference "Dorian Gray"
-                  :summary "Artwork become real")
-                :Calligraphy
-                 (ability
-                  :name "Calligraphy")
-                :Crafts
-                 (ability
-                  :name "Crafts")
-                :Drawing
-                 (ability
-                  :name "Drawing")
-                :Painting
-                 (ability
-                  :name "Painting")
-                :Photoshopping
-                 (ability
-                  :name "Photoshopping"
-                  :summary "* Modify an image to improve or mislead.")
-                :Sculpture
-                 (ability
-                  :name "Sculpture")))
-            :Business
-             (skill
-              :name "Business"
-              :reference "* Did they get you to trade? Your heroes for ghosts? Hot ashes for trees? Hot air for a cool breeze? Cold comfort for change? Did you exchange? A walk-on part in the war. For a leading role in a cage? - Pink Floyd, Wish you were here"
-              :titles "Commerce"
-              :abilitymap
-               (abilitymap
-                :Accounting
-                 (ability
-                  :name "Accounting"
-                  :titles "Accountant, Actuary, Clerk")
-                :Advertising
-                 (ability
-                  :name "Advertising"
-                  :titles "Marketing Representative")
-                :Appraise
-                 (ability
-                  :name "Appraise"
-                  :summary "* Determine the value of an item in the current market.")
-                :Bargain
-                 (ability
-                  :name "Bargain"
-                  :summary "* Ability that Limits any attempt to buy or sell goods at their actual worth."
-                  :titles "Haggler, Merchant")
-                :Barter
-                 (ability
-                  :name "Barter"
-                  :summary "* Ability that Limits any attempt to buy or sell goods at their actual worth.")
-                "Business Management"
-                 (ability
-                  :name "Business Management")
-                :Distribution
-                 (ability
-                  :name "Distribution")
-                :Economics
-                 (ability
-                  :name "Economics"
-                  :reference "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Economics: Supply and Demand. That's it. - Father Guido Sarducci, Five Minute University")
-                :Finance
-                 (ability
-                  :name "Finance")
-                :Marketing
-                 (ability
-                  :name "Marketing")
-                :Procure
-                 (ability
-                  :name "Procure"
-                  :summary "The ability to find rare, exotic or illegal items for sale or trade."
-                  :titles "Procurer")
-                :Sales
-                 (ability
-                  :name "Sales"
-                  :reference "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Business is: You buy something, you sell it for more - Father Guido Sarducci, Five Minute University"
-                  :titles "Carpetbagger, Peddler, Salesman")
-                :Speculate
-                 (ability
-                  :name "Speculate")
-                "Trade Routes"
-                 (ability
-                  :name "Trade Routes")
-                "Trade Union"
-                 (ability
-                  :name "Trade Union")))
-            :Communications
-             (skill
-              :name "Communications"
-              :abilitymap
-               (abilitymap
-                :Appearance
-                 (ability
-                  :name "Appearance"
-                  :summary "* Expert on personal grooming, cosmetics, and hairstyling.")
-                :Carousing
-                 (ability
-                  :name "Carousing")
-                "Detect Lie"
-                 (ability
-                  :name "Detect Lie")
-                :Drinking
-                 (ability
-                  :name "Drinking")
-                :Drugs
-                 (ability
-                  :name "Drugs")
-                :Etiquette
-                 (ability
-                  :name "Etiquette")
-                :Fashion
-                 (ability
-                  :name "Fashion"
-                  :summary "* Knows current fashions and what clothing with make the best impact.")
-                :Fiction
-                 (ability
-                  :name "Fiction"
-                  :summary "* Can author, critique, interpret, and detect fiction.")
-                "Go Viral"
-                 (ability
-                  :name "Go Viral"
-                  :summary "* Create an interesting message popular enough to be passed around.")
-                :Gossip
-                 (ability
-                  :name "Gossip"
-                  :summary "* The single best way to get information, but, given it source, may not be reliable.")
-                :Interview
-                 (ability
-                  :name "Interview"
-                  :titles "Interviewer, Reporter")
-                :Journalism
-                 (ability
-                  :name "Journalism"
-                  :titles "Journalist, Media, Reporter")
-                :Literacy
-                 (ability
-                  :name "Literacy"
-                  :summary
-                   "* Can read and write
+          :reference "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono , Hell's Paradise"))))))
+
+(func chapter_skill_types : base/chapter
+ (chapter
+  :name "Skill Types"
+  :sectionmap
+   (sectionmap
+    "Physical Skills"
+     (section
+      :name "Physical Skills"
+      :skillmap
+       (skillmap
+        "Animal Handling"
+         (skill
+          :name "Animal Handling"
+          :summary
+           "* Deploy: Deploy trained animals with total level equal to skill.
+* Each week, one animal may be trained one trick."
+          :titles "Animal Trainer, Breeder, Driver, Herder, Horse Whisperer, Houndmaster, Shepherd, Zoologist"
+          :abilitymap
+           (abilitymap
+            :Falconry
+             (ability
+              :name "Falconry")
+            :Herding
+             (ability
+              :name "Herding"
+              :titles "Cowboy, Pig Farmer, Rancher, Shepherd")
+            :Husbandry
+             (ability
+              :name "Husbandry")
+            "Stare Down"
+             (ability
+              :name "Stare Down")
+            "Guard Training"
+             (ability
+              :name "Guard Training")
+            :Retrieve
+             (ability
+              :name "Retrieve")
+            "Seeing Eye Training"
+             (ability
+              :name "Seeing Eye Training")
+            "Snake Charming"
+             (ability
+              :name "Snake Charming")
+            "Train Dog"
+             (ability
+              :name "Train Dog")
+            "Train Elephant"
+             (ability
+              :name "Train Elephant")
+            "Train Horse"
+             (ability
+              :name "Train Horse")
+            "War Training"
+             (ability
+              :name "War Training")))
+        :Assassination
+         (skill
+          :name "Assassination"
+          :reference
+           "Was it so easy?  Was it so simple?  You just pushed and death came?  Nothing spiritual about it...They just stopped
+talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows"
+          :titles "Assassin, Blackguard, Ninja, Shinobi"
+          :stat "Shadow"
+          :abilitymap
+           (abilitymap
+            "Harvest Poison"
+             (ability
+              :name "Harvest Poison")
+            "Kiss of Death"
+             (ability
+              :name "Kiss of Death")
+            "Poisoned Arrow"
+             (ability
+              :name "Poisoned Arrow")
+            "Poisoned Blade"
+             (ability
+              :name "Poisoned Blade")
+            "Poisoned Dust"
+             (ability
+              :name "Poisoned Dust")
+            :Poisoning
+             (ability
+              :name "Poisoning")
+            "Poison Tolerance"
+             (ability
+              :name "Poison Tolerance"
+              :reference
+               "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an
+immunity to iocane powder. - Princess Bride")
+            "Prepare Acid"
+             (ability
+              :name "Prepare Acid")
+            "Prepare Anti-Coagulant"
+             (ability
+              :name "Prepare Anti-Coagulant"
+              :summary "* Create an Anti-Coagulant Poison. A target with Anti-Coagulant cannot easily stop [Bleeding].")
+            "Prepare Antidote"
+             (ability
+              :name "Prepare Antidote"
+              :summary "* Skilled in antidote creation.  Can create an antidote for any Poison user can brew.")
+            "Prepare Poison"
+             (ability
+              :name "Prepare Poison")))
+        :Athletics
+         (skill
+          :name "Athletics"
+          :stat "Body"
+          :abilitymap
+           (abilitymap
+            :Balance
+             (ability
+              :name "Balance"
+              :summary
+               "* User has extensive experience balancing under difficult circumstances.
+* [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled,
+balance is maintained. Movement is at half speed while balancing, but
+additional [Hits] or [Criticals] improve movement speed by 10% each up to
+full speed.")
+            :Backflip
+             (ability
+              :name "Backflip"
+              :summary
+               "+1 Initiative
++0 Speed (Can only move backward, ignores terrain movement penalties)
+* A showy move that allows the unit to move directly backward without turning.")
+            "Body Building"
+             (ability
+              :name "Body Building"
+              :summary
+               "* Character is distinctly powerful looking.
+* [Passive]: Unit may reroll any failed attempt to lift, push, or pull an
+object.")
+            :Breakfall
+             (ability
+              :name "Breakfall"
+              :summary
+               "* Reduces Critical Hits to Hits from impacts during Knockback,
+Knockdown, or Falling
+* [Reaction]")
+            :Contortion
+             (ability
+              :name "Contortion")
+            "Escape Artistry"
+             (ability
+              :name "Escape Artistry")
+            "Freestyle Running"
+             (ability
+              :name "Freestyle Running"
+              :summary "* [Action]: Ignore 1 [Hazard] from each space of [Forest], [Broken Ground], [Jungle], [Swamp], or [Obstacle].")
+            :Gymnastics
+             (ability
+              :name "Gymnastics")
+            "High Jump"
+             (ability
+              :name "High Jump")
+            "Ice Climbing"
+             (ability
+              :name "Ice Climbing")
+            :Kippup
+             (ability
+              :name "Kippup"
+              :summary "* [Move]: Change from [Prone] to [Standing].")
+            "Leap Attack"
+             (ability
+              :name "Leap Attack")
+            "Long Jump"
+             (ability
+              :name "Long Jump")
+            :Marathon
+             (ability
+              :name "Marathon")
+            "Pole Vault"
+             (ability
+              :name "Pole Vault")
+            :Rappelling
+             (ability
+              :name "Rappelling")
+            "Rock Climbing"
+             (ability
+              :name "Rock Climbing")
+            "SCUBA Diving"
+             (ability
+              :name "SCUBA Diving")
+            :Skateboarding
+             (ability
+              :name "Skateboarding")
+            :Skating
+             (ability
+              :name "Skating")
+            :Skydiving
+             (ability
+              :name "Skydiving")
+            :Sledding
+             (ability
+              :name "Sledding")
+            :Slide
+             (ability
+              :name "Slide"
+              :summary "* Move at full speed under low obstacles like tables or overhangs.")
+            :Snorkeling
+             (ability
+              :name "Snorkeling")
+            :Snowboarding
+             (ability
+              :name "Snowboarding")
+            :Skiing
+             (ability
+              :name "Skiing")
+            :Sports
+             (ability
+              :name "Sports")
+            :Swimming
+             (ability
+              :name "Swimming")
+            "Swimming, Cold Water"
+             (ability
+              :name "Swimming, Cold Water")
+            "Swimming, Distance"
+             (ability
+              :name "Swimming, Distance")
+            "Team Acrobatics"
+             (ability
+              :name "Team Acrobatics"
+              :summary
+               "* Allows a number of people with this ability to work together to form
+human pyramids, human ladders, etc.")
+            :Tightrope
+             (ability
+              :name "Tightrope")
+            :Throw
+             (ability
+              :name "Throw")
+            "Tree Climbing"
+             (ability
+              :name "Tree Climbing"
+              :summary "[Action]: Climb a tree. Hammocks and seats can be built with enough time and equipment.")
+            :Tumbling
+             (ability
+              :name "Tumbling")
+            :Vault
+             (ability
+              :name "Vault"
+              :summary
+               "* Move over a low obstacle with no reduction in speed.
+* [Action]: Move and ignore up to Level in movement penalties this turn from
+fences, barricades, and other low obstacles.")
+            "Wall Climbing"
+             (ability
+              :name "Wall Climbing")
+            "Wall Spring"
+             (ability
+              :name "Wall Spring")
+            "Zero G"
+             (ability
+              :name "Zero G"))
+          :specialtymap
+           (specialtymap
+            :Acrobatics
+             (specialty
+              :name "Acrobatics"
+              :summary
+               "* Balance
+* Breakfall
+* Contortion
+* Escape Artistry
+* Gymnastics
+* High Jump
+* Kippup
+* Long Jump
+* Tightrope
+* Throw
+* Tumbling
+* Wall Spring
+* Zero G"
+              :titles "Acrobat, Contortionist, Escape Artist, Jester"
+              (msgblock
+               :msgs
+                (msglist
+                 (msg
+                  :code ":invalidtagfound"
+                  :detail
+                   (anymap
+                    :type nx/tactics/base/specialty
+                    :tag "ability")
+                  :severity 2))))
+            :Climbing
+             (specialty
+              :name "Climbing"
+              :summary
+               "* Ice Climbing
+* Rappelling
+* Rock Climbing
+* Tree Climbing
+* Wall Climbing")))
+        :Hunting
+         (skill
+          :name "Hunting"
+          :reference "* Royal Huntsman - Sleeping Beauty"
+          :titles "Forward Observer, Gamekeeper, Hunter, Huntress, Huntsman, Huntmaster, Lookout, Mage Hunter, Master Huntsman, Master of the Hunt, Poacher, Ranger, Royal Huntsman, Scout, Sentinel, Stalker, Tracer, Tracker, Watchman"
+          :abilitymap
+           (abilitymap
+            "Call of the Hunt"
+             (ability
+              :name "Call of the Hunt")
+            "Cull the Herd"
+             (ability
+              :name "Cull the Herd")
+            :Deadfall
+             (ability
+              :name "Deadfall")
+            "Field Dressing"
+             (ability
+              :name "Field Dressing")
+            :Fishing
+             (ability
+              :name "Fishing"
+              :summary "* Catch enough fish to eat. Similar to Foraging."
+              :titles "Fisherman")
+            :Lure
+             (ability
+              :name "Lure"
+              :reference "Everquest Pulling")
+            :Scouting
+             (ability
+              :name "Scouting"
+              :titles "Reconnaissance")
+            :Snare
+             (ability
+              :name "Snare")
+            "There is No Escape"
+             (ability
+              :name "There is No Escape"
+              :reference "* Raiden Shogun, Genshin Impact")
+            :Track
+             (ability
+              :name "Track"))
+          :specialtymap
+           (specialtymap
+            "Bounty Hunter"
+             (specialty
+              :name "Bounty Hunter"
+              :reference
+               "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and
+liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway"
+              :summary
+               "* Bounty Hunting represents experience in stalking and capturing a target in an urban setting. This is traditionally done for money and can be quite profitable.
+* Bounties are placed on people for whom the law lacks the resources or inclination to pursue.
+* Bounties are placed by insurance companies, bail bondsmen, armies, the F.B.I., and individuals.
+* The reward can be paid for information, the capture of the target in a reasonably uninjured state, or even dead or alive.
+* The reward obviously needs to be commensurate with the difficulty or no one will take it. Capturing is harder than killing, so captures gain a bonus.")
+            "Demon Hunter"
+             (specialty
+              :name "Demon Hunter")
+            "Devil Hunter"
+             (specialty
+              :name "Devil Hunter")
+            "Mage Hunter"
+             (specialty
+              :name "Mage Hunter")
+            :Trapper
+             (specialty
+              :name "Trapper")
+            "Treasure Hunter"
+             (specialty
+              :name "Treasure Hunter"
+              :reference
+               "* Indiana Jones
+* Lara Croft"
+              :summary
+               "* Treasure Hunting represents experience in the dangerous and profitable world of lost tombs and ancient relics. Rare relics hold high presitge and are usually sold (in the form of a finders fee) to museaums, governments or private collectors. Raiding tombs is a fairly lawless and perilous activity to start with, and such high value items tend to attract disreputable characters of all kinds. As a result, treasure hunters often end their careers in unfortunate accidents.
+* +1 while researching or navigating inside a crypt or tomb."
+              :titles "Tomb Raider, Treasure Seeker")
+            "Vampire Hunter"
+             (specialty
+              :name "Vampire Hunter")
+            "Werewof Hunter"
+             (specialty
+              :name "Werewof Hunter")
+            "Witch Hunter"
+             (specialty
+              :name "Witch Hunter")))
+        :Rage
+         (skill
+          :name "Rage"
+          :titles "Berserker, Marauder, Wildman"
+          :stat "Beast"
+          :abilitymap
+           (abilitymap
+            :Berserker
+             (ability
+              :name "Berserker")
+            :Frenzy
+             (ability
+              :name "Frenzy")
+            :Fury
+             (ability
+              :name "Fury")
+            :Hatred
+             (ability
+              :name "Hatred"
+              :summary "* Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
+            :Howl
+             (ability
+              :name "Howl")
+            :Taunt
+             (ability
+              :name "Taunt"
+              :reference "* Kirk: We tried it once your way, Khan, are you game for a rematch? Khan, I'm laughing at the 'superior intellect.' Khan: Full impulse power! Joachim: No, sir! You have Genesis! You can have whatever... Khan: FULL POWER! DAMN YOU! - Star Trek II: The Wrath of Khan"
+              :summary
+               "* Dishonor opponent's mother.
+* Roll vs. Mind. If successful, opponent must attack you."
+              :titles "Goad")
+            :Vengeance
+             (ability
+              :name "Vengeance"
+              :reference
+               "* More names off the list, more names on it. - Pyke, Runeterra
+* She opened a book and a box of tools. Sunny came home with a mission... Sunny came home with a list of names. She didn't believe in transcendence. 'It's time for a few small repairs.' she said. Sunny came home with a Vengence. - Shawn Colvin, Sunny Came Home")
+            :Warcry
+             (ability
+              :name "Warcry")))
+        :Survival
+         (skill
+          :name "Survival"
+          :summary
+           "Common Survival Abilities
+* [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or
+Survival roll.
+* [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty
+versus Body + Survival or gain Black [Exhaustion] Tokens."
+          :titles
+           "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Seeker, Sentry, Survivalist, Trailblazer, Traveller,
+Wanderer, Wayfarer"
+          :stat "Defense"
+          :abilitymap
+           (abilitymap
+            "Cold Weather Survival"
+             (ability
+              :name "Cold Weather Survival"
+              :summary "* Hazards - Blizzard, Avalanche, Frostbite")
+            "Dead Reckoning"
+             (ability
+              :name "Dead Reckoning"
+              :summary "* Estimate current position and movement.")
+            "Desert Survival"
+             (ability
+              :name "Desert Survival"
+              :titles "Desert Bandit, Desert Dweller, Desert Fox, Desert Nomad, Dune Raider, Dune Rider")
+            "Detect Hollow Rock"
+             (ability
+              :name "Detect Hollow Rock"
+              :summary "* Detect trap doors, secret doors, and unstable rocks.")
+            :Foraging
+             (ability
+              :name "Foraging"
+              :summary
+               "* [Action]: This ability can be used to forage for 1 man day of food and water for each [Hit]. Such food will
+typically be disgusting to those unaccustomed to the local cuisine, but it will sustain.  Excess food only
+lasts for 1 additional day before going bad.  Excess water can be transfered to containers if any, otherwise it
+cannot be carried.  [Critical Hit]s provide a particularly tasty, convenient, or useful source of nutrition
+(e.g. water in bamboo that can be carried, food that will last another day or more).")
+            :Forestry
+             (ability
+              :name "Forestry"
+              :reference "Tin Man"
+              :summary
+               "* This ability is used to avoid or mitigate the common hazards encountered while delving into
+the forest.  This can also be used to avoid the attention of random predators.
+* [Requires]: Unit must be a [Light Unit]
+* [Move]: Ignore movement penalty for 2 [Forest] spaces
+* [Action]: [+1 Stealth] in [Woods]
+* [Defense]: [+1 Defense] vs Ranged in [Woods]"
+              :titles "Forest Lord, Logger, Lumberjack, Pathcutter, Ranger, Warden, Woodcutter, Woodsman")
+            "High Altitude Survival"
+             (ability
+              :name "High Altitude Survival")
+            "Jungle Survival"
+             (ability
+              :name "Jungle Survival"
+              :reference "Tarzan"
+              :summary
+               "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle.  This
+can also be used to avoid the attention of random predators.
+* [Requires]: Unit must be a [Light Unit]
+* [Move]: Ignore movement penalty for 1 [Jungle] space
+* [Action]: [+1 Stealth] in [Jungle]
+* [Defense]: [+1 Defense] vs Ranged in [Jungle]"
+              :titles "Jungle Dweller, Lord of the Jungle")
+            "Motion Sense"
+             (ability
+              :name "Motion Sense"
+              :summary "* Detect air movements and faint sounds to detect moving things even when they are around corners or in the dark.")
+            "Swamp Survival"
+             (ability
+              :name "Swamp Survival"
+              :summary
+               "* This ability is used to avoid or mitigate the common hazards encountered while delving into
+swampland.  This can also be used to avoid the attention of random predators.
+* [Requires]: Unit must be a [Light Unit]
+* [Move]: Ignore movement penalty for 1 [Swamp] space
+* [Action]: [+1 Stealth] in [Swamp]
+* [Defense]: [+1 Defense] vs Ranged in [Swamp]"
+              :titles "Murk Dweller, Murk Lord, Swamp Lord, Swamp Knight, Swamp Thing")
+            "Underground Survival"
+             (ability
+              :name "Underground Survival"))
+          :specialtymap
+           (specialtymap
+            :Caving
+             (specialty
+              :name "Caving"
+              :summary
+               "* Dead Reckoning
+* Detect Hollow Rock
+* Mining
+* Motion Sense
+* Sapping
+* Underground Survival"
+              :titles "Miner, Prospector, Sapper, Spelunker, Underminer")))
+        :Tradeskills
+         (skill
+          :name "Tradeskills"
+          :reference "* Tradesman"
+          :stat "None"
+          :abilitymap
+           (abilitymap
+            :Administration
+             (ability
+              :name "Administration"
+              :titles "Administrator, Secretary")
+            :Agriculture
+             (ability
+              :name "Agriculture"
+              :summary "* Grow Crop"
+              :titles "Farmer, Gardener")
+            :Architecture
+             (ability
+              :name "Architecture"
+              :summary
+               "* [Extended Action]: Design a structure. The size and quality of the
+structure are limited by level.
+* [Action]: Determine weaknesses of a structure."
+              :titles "Architect")
+            :Blacksmithing
+             (ability
+              :name "Blacksmithing"
+              :titles "Blacksmith")
+            :Brewing
+             (ability
+              :name "Brewing"
+              :summary
+               "* Brew Beer
+* Brew Hard Liquor
+* Brew Mead
+* Brew Wine"
+              :titles "Brewer, Vintner")
+            :Carpentry
+             (ability
+              :name "Carpentry"
+              :titles "Carpenter")
+            :Cleaning
+             (ability
+              :name "Cleaning"
+              :titles "Maid")
+            :Cobbling
+             (ability
+              :name "Cobbling"
+              :summary "* Make Shoes"
+              :titles "Cobbler")
+            :Cooking
+             (ability
+              :name "Cooking"
+              :summary "* Prepare Recipe"
+              :titles "Chef, Cook")
+            :Cooping
+             (ability
+              :name "Cooping"
+              :summary "* Make Sealable Barrel"
+              :titles "Cooper")
+            :Glassblowing
+             (ability
+              :name "Glassblowing"
+              :summary
+               "* Blow Bottle
+* Blow Glass Decoration")
+            :Jewelsmithing
+             (ability
+              :name "Jewelsmithing"
+              :summary
+               "* Gemcutting
+* Fashion Jewelry"
+              :titles "Gemcutter, Jeweler")
+            :Laboring
+             (ability
+              :name "Laboring"
+              :titles "Laborer, Worker")
+            :Landscaping
+             (ability
+              :name "Landscaping"
+              :summary
+               "* Grow Bonsai
+* Grow Flowers
+* Grow Hedges
+* Grow Hedge Maze
+* Grow Trees"
+              :titles "Groundskeeper, Landscaper, Lawnboy")
+            :Leatherworking
+             (ability
+              :name "Leatherworking"
+              :summary
+               "* Fashion Leather Goods
+* Flay Skins"
+              :titles "Tanner")
+            :Livestock
+             (ability
+              :name "Livestock")
+            :Logging
+             (ability
+              :name "Logging")
+            :Metalworking
+             (ability
+              :name "Metalworking"
+              :titles "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith")
+            :Plumbing
+             (ability
+              :name "Plumbing"
+              :titles "Plumber")
+            :Porting
+             (ability
+              :name "Porting"
+              :summary
+               "* Bear Litter
+* Port Boat"
+              :titles "Bearer, Porter")
+            :Pottery
+             (ability
+              :name "Pottery"
+              :titles "Potter")
+            :Servant
+             (ability
+              :name "Servant"
+              :titles "Butler, Footman, Lady in Waiting")
+            :Sewing
+             (ability
+              :name "Sewing"
+              :summary
+               "* Crochet
+* Embroidery
+* Fashion Clothing
+* Needlepoint
+* Repair Cloth"
+              :titles "Dressmaker, Seamstress")
+            :Stagecraft
+             (ability
+              :name "Stagecraft"
+              :summary "* The technical aspects of theatrical production, which include scenic design, stage machinery, lighting, sound, costume design, and makeup."
+              :titles "Stagehand")
+            :Weaponsmith
+             (ability
+              :name "Weaponsmith"
+              :summary
+               "* The ability to repair, improve, or even create weapons.
+* [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits."
+              :titles "Bladesmith, Swordsmith")
+            :Woodworking
+             (ability
+              :name "Woodworking"
+              :summary "The process of building, making or carving something using wood."
+              :titles "Carver, Whittler, Woodworker")))))
+    "Transportation Skills"
+     (section
+      :name "Transportation Skills"
+      :skillmap
+       (skillmap
+        :Driving
+         (skill
+          :name "Driving"
+          :titles "Driver, Trucker"
+          :abilitymap
+           (abilitymap
+            "Bootlegger Reverse"
+             (ability
+              :name "Bootlegger Reverse")
+            :Drift
+             (ability
+              :name "Drift")
+            :Swerve
+             (ability
+              :name "Swerve")
+            "3 Point Turn"
+             (ability
+              :name "3 Point Turn")
+            "Parallel Parking"
+             (ability
+              :name "Parallel Parking"))
+          :specialtymap
+           (specialtymap
+            :Motorcycles
+             (specialty
+              :name "Motorcycles")
+            :Trucks
+             (specialty
+              :name "Trucks")
+            "Construction Vehicles"
+             (specialty
+              :name "Construction Vehicles")))
+        :Piloting
+         (skill
+          :name "Piloting"
+          :summary
+           "* The Jink and Barrel Roll maneuvers simply make it harder for the plane to be hit.
+* The Half Loop, Wingover, and Falling Leaf are all attempts to loose an enemy that's tailing you.
+* The Loop, Immelman, and Retournment are all attempts to both loose a tail, abd to end up tailing that foe
+yourself.
+* When a 'dogged' plane attempts a maneuver to escape his tail the pilot needs to succeed in the maneuver.  If he
+fails his roll, then he's still being tailed, if he succeeds, then the tailing pilot gets to attempt the same
+maneuver (as a 'free' action at full dice pool) - if the 'tail' matches or exceeds the successes rolled by the
+target plane's pilot, then the tail is maintained for another turn.
+* When a dogged plane attempts a 'reversal' maneuver the effects are the same, except that if the tailing plane
+scores less successes than the target plane, the roles are reversed."
+          :titles "Aviator, Pilot, Sky Captain, Sky Knight, Sky Marshall, Wing Commander, Wingman"
+          :abilitymap
+           (abilitymap
+            "Barn Storming"
+             (ability
+              :name "Barn Storming"
+              :summary
+               "* Low altitude flying that uses ground cover to block line of sight.  Naturally, this manuever
+can be extremely dangerous."
+              :titles "Nape of the Earth")
+            "Barrel Roll"
+             (ability
+              :name "Barrel Roll"
+              :reference "* Do a barrel roll! - Peppy Hare, Star Fox 64"
+              :summary "The pilot rolls the plane over sideways and 'corkscrews' through the air.")
+            "Cobra maneuver"
+             (ability
+              :name "Cobra maneuver"
+              :summary "* A dramatic and demanding maneuver in which an airplane flying at a moderate speed abruptly raises its nose momentarily to a vertical and slightly past vertical attitude, causing an extremely high angle of attack and momentarily stalling the plane, making a full-body air brake before dropping back to normal position, during which the aircraft does not change effective altitude."
+              :titles "Dynamic deceleration")
+            "Carrier Landing"
+             (ability
+              :name "Carrier Landing")
+            "Circle of Death"
+             (ability
+              :name "Circle of Death"
+              :summary
+               "A Russian WWII maneuver when attacking ground forces that attacks the column from the rear, then circles
+around to make repeated rear attacks until all weapons were expended.")
+            "Close Air Support"
+             (ability
+              :name "Close Air Support")
+            "Dive Bombing"
+             (ability
+              :name "Dive Bombing"
+              :summary "High speed attack from high altitude.  Increases movement speed and damage of physical attacks.")
+            "Falling Leaf"
+             (ability
+              :name "Falling Leaf"
+              :summary
+               "The pilot deliberately stalls, sending it into a spinning fall, only to restart the engine and
+level off.")
+            "Fly Out of the Sun"
+             (ability
+              :name "Fly Out of the Sun"
+              :summary "If the sun is behind, allows a surprise attack.")
+            "Flyby Attack"
+             (ability
+              :name "Flyby Attack")
+            "Flying Mount"
+             (ability
+              :name "Flying Mount"
+              :summary
+               "* When riding a mount that can fly, a unit must have experience riding that particular mount.
+* Examples: Dragon, Flying Carpet, Giant Eagle, Giant Wasp, Griffin, Hippogriff, Pegasus, Roc")
+            "Half Loop"
+             (ability
+              :name "Half Loop"
+              :summary
+               "The pilot pulls up and over, as if he was going to loop the aircraft, but adds a half-roll to right the plane
+at the top of the loop to continue level flight in the opposite direction to that which he started.")
+            "Immelmann Turn"
+             (ability
+              :name "Immelmann Turn"
+              :summary
+               "The Immelmann turn has become one of the most popular airshow maneuvers in the world.  However, the aerobatic
+maneuver is altogether different from the WWI Immelmann turn (See Wingover) and is of little use in modern
+dogfighting."
+              :titles "Roll Off the Top")
+            :Jink
+             (ability
+              :name "Jink"
+              :summary
+               "* Yawing his plane from side to side, the pilot attempts to throw-off the aim of enemy gunners.
+* [Action]: [+1 Defense] until this unit's next turn.")
+            :Levitating
+             (ability
+              :name "Levitating"
+              :summary "* If a unit uses powers to fly, the unit must gain this ability of fly at a penalty.")
+            :Loop
+             (ability
+              :name "Loop"
+              :summary
+               "* The pilot pulls the plane up and over in a complete circle, ending up in the same position and facing that he
+started.")
+            "Pull Out of a Dive"
+             (ability
+              :name "Pull Out of a Dive")
+            "Remote Piloting"
+             (ability
+              :name "Remote Piloting")
+            "Split S"
+             (ability
+              :name "Split S"
+              :summary
+               "A diving maneuver mostly used to disengage.  The pilot half-rolls his aircraft inverted and executes a
+descending half-loop, resulting in level flight in the exact opposite direction at a lower altitude."
+              :titles "Reverse Immelmann")
+            :Strafe
+             (ability
+              :name "Strafe")
+            "Strategic Bombing"
+             (ability
+              :name "Strategic Bombing")
+            :Tail
+             (ability
+              :name "Tail")
+            "Torpedo Bomb"
+             (ability
+              :name "Torpedo Bomb"
+              :summary "Fly [Nape of the Earth] and drop a torpedo or other payload.")
+            "Wing Over"
+             (ability
+              :name "Wing Over"
+              :reference
+               "Performed by an experienced flyer, this maneuver can surprise a pursuer by quickly reversing on them.  If you
+have the distance lead in a chase, you can use this to convert from a defensive posture to an offensive one.
+The trick is not to get shot up when you are reversing."
+              :titles "Immelmann Turn, Retournment")
+            "Winged Flight"
+             (ability
+              :name "Winged Flight"
+              :summary
+               "* If the unit has wings, it must have this ability or fly at a penalty.
+* If the unit grew up with wings, this ability is assumed."))
+          :specialtymap
+           (specialtymap
+            "Civilian Airplanes"
+             (specialty
+              :name "Civilian Airplanes")
+            "Commercial Airplanes"
+             (specialty
+              :name "Commercial Airplanes")
+            :Helicopters
+             (specialty
+              :name "Helicopters")))
+        :Riding
+         (skill
+          :name "Riding"
+          :summary
+           "* Level 1: Ride a horse
+* Level 2: Ride a Lt. Warhorse
+* Level 3: Ride a Med. Warhorse
+* Level 4: Ride a Hvy. Warhorse
+* Note: Riding a flying mount requires [Flying]"
+          :titles "Caravan Driver, Cavalry, Driver, Dragoon, Horseman, Knight, Lancer, Outrider, Rider"
+          :abilitymap
+           (abilitymap
+            "Catabatan Circle"
+             (ability
+              :name "Catabatan Circle"
+              :summary
+               "* [Formation]
+* High Dodge and Concentrated firepower")
+            :Charge
+             (ability
+              :name "Charge"
+              :reference "* We'll use the old ways...speed of horse! - Arthur, Excalibur"
+              :summary
+               "* [Requires]: Unit must have moved at least 4 spaces in a straight line.
+* [Action]: Melee Attack costs no [Speed].
+* [Attack], [Damage]: Any [Critical Hits] may be [Morale Tokens]")
+            "Drive Carriage"
+             (ability
+              :name "Drive Carriage")
+            "Drive Cart"
+             (ability
+              :name "Drive Cart")
+            "Horse Archery"
+             (ability
+              :name "Horse Archery")
+            "Run Down"
+             (ability
+              :name "Run Down"
+              :summary
+               "* [Damage]: +1 Damage when attacking from the rear.
+* [Attack], [Damage]: Any [Critical Hits] may be [Retreats]")
+            "Steed Trample"
+             (ability
+              :name "Steed Trample")))
+        :Seamanship
+         (skill
+          :name "Seamanship"
+          :summary
+           "The art of operating a ship or boat including specialised skills such as: navigation and international maritime
+law; weather, meteorology and forecasting; watchstanding; ship-handling and small boat handling; operation of deck
+equipment, anchors and cables; ropework and line handling; communications; sailing; engines; execution of
+evolutions such as towing; cargo handling equipment, dangerous cargoes and cargo storage; dealing with
+emergencies; survival at sea and search and rescue; fire fighting.
+
+The degree of knowledge needed within these areas is dependent upon the nature of the work.  However, the practice
+of good seamanship should be the goal of all."
+          :titles "Admiral, Capitan, Commodore, First Officer, Navigator, Pirate, Sailor, Seaman, Ship's Mate"
+          :abilitymap
+           (abilitymap
+            "Boarding Party"
+             (ability
+              :name "Boarding Party"
+              :summary "* When a ship touches a dock or another ship, it is very unstable and must be secured for 1 round before anyone may move across. With this ability, the unit may step, jump, or even swing to the other side immediately. A skill roll must still be made, but a failed roll simply wastes a turn.")
+            "Marine Survival"
+             (ability
+              :name "Marine Survival"
+              :summary "* Open Water, Whitewater")
+            "Merchant Marine"
+             (ability
+              :name "Merchant Marine"
+              :summary "Civilian Merchants operating private vessels are considered naval auxilliary and may be called into service to deliver troops and supplies for the military.")
+            :Navigation
+             (ability
+              :name "Navigation"
+              :summary
+               "* More than just finding a vessel's present location, safe navigation includes predicting future location, route planning and collision avoidance.
+* [Extended Action]: When determining actual travel time by sea, roll vs the difficulty of the journey. -1% travel time x [Hits] rolled. -2% travel time x [Critical Hits] rolled.")
+            :Planing
+             (ability
+              :name "Planing"
+              :summary "* Planing describes the state in which the hull of a waterborne craft is lifting up higher up to the point where it merely skims across the water, rather than moving through it.")
+            :Ramming
+             (ability
+              :name "Ramming")
+            :Righting
+             (ability
+              :name "Righting"
+              :summary
+               "The act of reversing a capsized vessel is called righting.
+
+If a capsized vessel has sufficient flotation to prevent sinking, it may recover on its own if the stability is such that it is not stable inverted.
+
+Small dinghies frequently capsize in the normal course of use and are occasionally deliberately capsized as it can be the fastest means of draining water from the boat.
+
+In a storm, even large vessels may be rolled by being hit broadside by a large wave. This is normally catastrophic for larger ships.")
+            :Sailing
+             (ability
+              :name "Sailing"
+              :summary "This includes maneuvers such as heaving to, jibe, reefing, and tacking.")
+            "Trade Winds"
+             (ability
+              :name "Trade Winds"
+              :summary "Faster travel when piloting commercial sailing vessels.")))
+        "Starship Piloting"
+         (skill
+          :name "Starship Piloting"
+          :abilitymap
+           (abilitymap
+            :Astronavigation
+             (ability
+              :name "Astronavigation")
+            "Astronavigation - FTL"
+             (ability
+              :name "Astronavigation - FTL")
+            "Astronavigation - Jump Drive"
+             (ability
+              :name "Astronavigation - Jump Drive")
+            "Combat Orbital Piloting"
+             (ability
+              :name "Combat Orbital Piloting")
+            "Combat Space Piloting"
+             (ability
+              :name "Combat Space Piloting")
+            "Orbital Piloting"
+             (ability
+              :name "Orbital Piloting")))))
+    "Academic Skills"
+     (section
+      :name "Academic Skills"
+      :skillmap
+       (skillmap
+        :Computers
+         (skill
+          :name "Computers"
+          :abilitymap
+           (abilitymap
+            "AI Programming"
+             (ability
+              :name "AI Programming"
+              :summary
+               "* Artificial Intelligences may be given skills if the designer also
+possesses that skill. AI skill rolls are not open-ended.")
+            "Computer Engineering"
+             (ability
+              :name "Computer Engineering")
+            "Computer Programming"
+             (ability
+              :name "Computer Programming")
+            "Computer Virus"
+             (ability
+              :name "Computer Virus")
+            "Edit Recording"
+             (ability
+              :name "Edit Recording"
+              :summary "* Modify a recording to mislead the viewer.")
+            :Encryption
+             (ability
+              :name "Encryption")
+            "False Images"
+             (ability
+              :name "False Images")
+            "Garbage In / Garbage Out"
+             (ability
+              :name "Garbage In / Garbage Out")
+            "Ghost in the Machine"
+             (ability
+              :name "Ghost in the Machine"
+              :summary
+               "* By digitizing one's personality at the moment of death, a person can gain a semblance of
+immortality.  A new program is created that is an replica of the original.  Successes
+determine how close a copy it is to the original.  10 successes is a perfect copy.")
+            :Hacking
+             (ability
+              :name "Hacking")
+            :Override
+             (ability
+              :name "Override"
+              :reference "* Joachim: Our shields are dropping. Khan: Then raise them! Joachim: I can't! Khan: The override. Where's the override? - Joachim, Khan - Star Trek II: The Wrath of Khan")
+            "Remote Access"
+             (ability
+              :name "Remote Access")
+            :Reprogram
+             (ability
+              :name "Reprogram")
+            :Telecommute
+             (ability
+              :name "Telecommute")))
+        :Electronics
+         (skill
+          :name "Electronics"
+          :reference "Reverse the polarity of the neutron flow - Doctor Who"
+          :abilitymap
+           (abilitymap
+            "Air Traffic Control"
+             (ability
+              :name "Air Traffic Control")
+            :Blackout
+             (ability
+              :name "Blackout")
+            "Boost Power Output"
+             (ability
+              :name "Boost Power Output")
+            "Communication Systems"
+             (ability
+              :name "Communication Systems")
+            "Cybernetic Systems"
+             (ability
+              :name "Cybernetic Systems")
+            "Detection Systems"
+             (ability
+              :name "Detection Systems")
+            "Disable Electronics"
+             (ability
+              :name "Disable Electronics")
+            "Disrupt Guidance Systems"
+             (ability
+              :name "Disrupt Guidance Systems")
+            "Electrical Overload"
+             (ability
+              :name "Electrical Overload"
+              :summary
+               "* Burn out a small part of a system. The system becomes unusable until
+the fault is found and corrected.")
+            "Electronic Bypass"
+             (ability
+              :name "Electronic Bypass")
+            "Gravitic Systems"
+             (ability
+              :name "Gravitic Systems")
+            "Jam Communications"
+             (ability
+              :name "Jam Communications")
+            "Power Systems"
+             (ability
+              :name "Power Systems")
+            "Robotic Systems"
+             (ability
+              :name "Robotic Systems")
+            "Repair Electrical System"
+             (ability
+              :name "Repair Electrical System")
+            "Shield Technologies"
+             (ability
+              :name "Shield Technologies")
+            "Short Circuit"
+             (ability
+              :name "Short Circuit")))
+        :Investigation
+         (skill
+          :name "Investigation"
+          :summary "* Investigation is the ability to uncover hidden or lost information. Though it allows the user to rapidly find information, it does not provide the ability to use that information. Other skills or allies would be needed beyond the basics."
+          :titles "Archivist, Crime Scene Investigator, Detective, Inspector, Investigative Reporter, Librarian, Researcher"
+          :abilitymap
+           (abilitymap
+            :Decipher
+             (ability
+              :name "Decipher"
+              :summary "* Detect and decode hidden messages.")
+            "Connect the Dots"
+             (ability
+              :name "Connect the Dots")
+            "Crack the Case"
+             (ability
+              :name "Crack the Case")
+            "Criminal Research"
+             (ability
+              :name "Criminal Research")
+            "Data Collection"
+             (ability
+              :name "Data Collection")
+            "Delve Too Deep"
+             (ability
+              :name "Delve Too Deep")
+            "Desperate Search"
+             (ability
+              :name "Desperate Search")
+            "Dig Deep"
+             (ability
+              :name "Dig Deep")
+            "Financial Research"
+             (ability
+              :name "Financial Research")
+            "Find Traces"
+             (ability
+              :name "Find Traces")
+            "Forbidden Knowledge"
+             (ability
+              :name "Forbidden Knowledge")
+            "Forensic Research"
+             (ability
+              :name "Forensic Research")
+            "Historical Research"
+             (ability
+              :name "Historical Research")
+            "Inquiring Mind"
+             (ability
+              :name "Inquiring Mind")
+            "Medical Research"
+             (ability
+              :name "Medical Research")
+            "Occult Research"
+             (ability
+              :name "Occult Research")
+            :Ransack
+             (ability
+              :name "Ransack")
+            "Scene of the Crime"
+             (ability
+              :name "Scene of the Crime")
+            "Search for the Truth"
+             (ability
+              :name "Search for the Truth")
+            "Working a Hunch"
+             (ability
+              :name "Working a Hunch")))
+        :Knowledge
+         (skill
+          :name "Knowledge"
+          :abilitymap
+           (abilitymap
+            "Ancient History"
+             (ability
+              :name "Ancient History")
+            :Antiquities
+             (ability
+              :name "Antiquities"
+              :summary "* The study and valuation of unique objects throughout history.")
+            :Archeology
+             (ability
+              :name "Archeology"
+              :summary "* The study and reclamation of ancient relics and remains."
+              :titles "Archeologist, Paleontology, Paleontologist")
+            "Current Events"
+             (ability
+              :name "Current Events")
+            :Geography
+             (ability
+              :name "Geography")
+            "Military History"
+             (ability
+              :name "Military History")
+            "Movie Trivia"
+             (ability
+              :name "Movie Trivia"
+              :summary
+               "* Each topic must be taken separately.
+* Any knowledge rolls in the given field are at +2.
+* Character has a high chance to remember any detail in the given topic.  This is similar to eidetic memory.")
+            "Music Trivia"
+             (ability
+              :name "Music Trivia"
+              :summary
+               "* Each topic must be taken separately.
+* Any knowledge rolls in the given field are at +2.
+* Character has a high chance to remember any detail in the given topic.  This is similar to eidetic memory.")
+            "Mythology and Legend"
+             (ability
+              :name "Mythology and Legend")
+            "National History"
+             (ability
+              :name "National History")
+            "Religious Studies"
+             (ability
+              :name "Religious Studies")
+            "Sports Trivia"
+             (ability
+              :name "Sports Trivia")
+            "World History"
+             (ability
+              :name "World History"))
+          :specialtymap
+           (specialtymap
+            :History
+             (specialty
+              :name "History")
+            :Trivia
+             (specialty
+              :name "Trivia")))
+        :Mechanics
+         (skill
+          :name "Mechanics"
+          :titles "Locksmith, Tinker, Tinsmith, Watchmaker"
+          :abilitymap
+           (abilitymap
+            :Clockmaking
+             (ability
+              :name "Clockmaking")
+            :Decontaminate
+             (ability
+              :name "Decontaminate")
+            :Demolition
+             (ability
+              :name "Demolition")
+            "Engineering: Aeronautical"
+             (ability
+              :name "Engineering: Aeronautical")
+            "Engineering: Armor"
+             (ability
+              :name "Engineering: Armor"
+              :titles "Armorer")
+            "Engineering: Civil"
+             (ability
+              :name "Engineering: Civil"
+              :titles "Construction")
+            "Engineering: Cybernetic"
+             (ability
+              :name "Engineering: Cybernetic")
+            "Engineering: Hydraulic"
+             (ability
+              :name "Engineering: Hydraulic")
+            "Engineering: Optics"
+             (ability
+              :name "Engineering: Optics")
+            "Engineering: Nuclear"
+             (ability
+              :name "Engineering: Nuclear")
+            "Engineering: Robotic"
+             (ability
+              :name "Engineering: Robotic")
+            "Engineering: Rocket and Reaction Engines"
+             (ability
+              :name "Engineering: Rocket and Reaction Engines")
+            "Engineering: Siege"
+             (ability
+              :name "Engineering: Siege")
+            "Engineering: Star Drive"
+             (ability
+              :name "Engineering: Star Drive")
+            "Engineering: Temporal"
+             (ability
+              :name "Engineering: Temporal")
+            "Engineering: Vehicular"
+             (ability
+              :name "Engineering: Vehicular")
+            "Engineering: Weaponry"
+             (ability
+              :name "Engineering: Weaponry"
+              :titles "Gunsmithing")
+            :Fortification
+             (ability
+              :name "Fortification")
+            "Kit Bash"
+             (ability
+              :name "Kit Bash")
+            "Lock Construction"
+             (ability
+              :name "Lock Construction")
+            "Lock Picking"
+             (ability
+              :name "Lock Picking")
+            "Mechanical Maintenance"
+             (ability
+              :name "Mechanical Maintenance")
+            "Mechanical Repair"
+             (ability
+              :name "Mechanical Repair")
+            "Mechanism Construction"
+             (ability
+              :name "Mechanism Construction"
+              :summary "* See [Equipment: Mechanisms]")
+            "Mechanism Deactivation"
+             (ability
+              :name "Mechanism Deactivation")
+            "Mechanism Detection"
+             (ability
+              :name "Mechanism Detection")
+            :Mining
+             (ability
+              :name "Mining")
+            :Salvage
+             (ability
+              :name "Salvage")
+            "Trap Detection"
+             (ability
+              :name "Trap Detection")
+            "Trap Disarming"
+             (ability
+              :name "Trap Disarming")
+            "Trap Laying"
+             (ability
+              :name "Trap Laying"
+              :summary "* See [Equipment: Traps]")
+            :Welding
+             (ability
+              :name "Welding")))
+        :Medicine
+         (skill
+          :name "Medicine"
+          :titles "Caregiver, Caretaker, Dentist, Doctor, EMT, Medic, Medical Examiner, Nurse, Physician, Surgeon"
+          :stat "Mind"
+          :abilitymap
+           (abilitymap
+            :Anatomy
+             (ability
+              :name "Anatomy")
+            :Dentistry
+             (ability
+              :name "Dentistry")
+            :Diagnose
+             (ability
+              :name "Diagnose")
+            "Emergency Treatment"
+             (ability
+              :name "Emergency Treatment")
+            "First Aid"
+             (ability
+              :name "First Aid")
+            :Immunology
+             (ability
+              :name "Immunology")
+            :Leeching
+             (ability
+              :name "Leeching")
+            "Medical Practice"
+             (ability
+              :name "Medical Practice")
+            :Nursing
+             (ability
+              :name "Nursing")
+            :Pharmacy
+             (ability
+              :name "Pharmacy"
+              :titles "Pharmacist, Pharmacy Technician")
+            :Physiology
+             (ability
+              :name "Physiology")
+            :Surgery
+             (ability
+              :name "Surgery")
+            "Surgery: Brain"
+             (ability
+              :name "Surgery: Brain")
+            "Surgery: Cosmetic"
+             (ability
+              :name "Surgery: Cosmetic")
+            "Surgery: Cybernetic"
+             (ability
+              :name "Surgery: Cybernetic")
+            "Surgery: Nerve"
+             (ability
+              :name "Surgery: Nerve")
+            "Treat Disease"
+             (ability
+              :name "Treat Disease")
+            "Treat Injury"
+             (ability
+              :name "Treat Injury")
+            "Treat Poison"
+             (ability
+              :name "Treat Poison")
+            "Treat Radiation"
+             (ability
+              :name "Treat Radiation")
+            "Veterinary Medicine"
+             (ability
+              :name "Veterinary Medicine")))
+        "Life Sciences"
+         (skill
+          :name "Life Sciences"
+          :reference
+           "* See [Equipment: Drugs]
+* See [Flora and Fauna: Plants]"
+          :titles "Life Scientist"
+          :stat "Mind"
+          :abilitymap
+           (abilitymap
+            :Biochemistry
+             (ability
+              :name "Biochemistry"
+              :titles "Biochemist")
+            :Biology
+             (ability
+              :name "Biology"
+              :titles "Biologist")
+            "Biology, Molecular"
+             (ability
+              :name "Biology, Molecular"
+              :titles "Molecular Biologist")
+            "Biology, Xeno"
+             (ability
+              :name "Biology, Xeno")
+            :Botony
+             (ability
+              :name "Botony"
+              :summary
+               "* Analyze/Identify Plant
+* Locate Plant
+* Harvest Plant
+* Cultivate Plant Strain"
+              :titles "Botonist, Herbalist, Horticulturalist")
+            :Cloning
+             (ability
+              :name "Cloning")
+            :Cryogenics
+             (ability
+              :name "Cryogenics"
+              :summary "Hidden in ice for a century, to walk the Earth again. Lord have mercy on the frozen man. - James Taylor, The Frozen Man")
+            :Cultivate
+             (ability
+              :name "Cultivate"
+              :summary "* Grow any plant, fungus, or bacteria that you have studied.")
+            "Enhance Drug"
+             (ability
+              :name "Enhance Drug"
+              :summary "* Increase the effect that an existing drug or treatment will have.")
+            "Gene Bank"
+             (ability
+              :name "Gene Bank")
+            "Gene Splicing"
+             (ability
+              :name "Gene Splicing"
+              :summary "* Grow new creatures that have characteristics taken from others.")
+            "Gene Therapy"
+             (ability
+              :name "Gene Therapy")
+            "Gene Sequencing"
+             (ability
+              :name "Gene Sequencing"
+              :summary "* By gathering a sample of a biological organism and studying it, the researcher can discover every detail of its abilities and biological mechanics.")
+            "Genetic Screening"
+             (ability
+              :name "Genetic Screening")
+            :Genetics
+             (ability
+              :name "Genetics"
+              :titles "Geneticist")
+            "Genetic Engineering"
+             (ability
+              :name "Genetic Engineering")
+            :Ecology
+             (ability
+              :name "Ecology"
+              :summary "Ecology is the interdisciplinary scientific study of the interactions between organisms and their environment.")
+            :Homeopathy
+             (ability
+              :name "Homeopathy")
+            "Lab Work"
+             (ability
+              :name "Lab Work"
+              :titles "Wet Science")
+            :Pathology
+             (ability
+              :name "Pathology"
+              :summary "* Analyze/Identify Disease")
+            :Pharmacology
+             (ability
+              :name "Pharmacology"
+              :summary "* Create/Develop Drug"
+              :titles "Pharmacist, Pharmacologist")
+            "Prepare Anti-Bacterial"
+             (ability
+              :name "Prepare Anti-Bacterial")
+            "Prepare Anti-Fungal"
+             (ability
+              :name "Prepare Anti-Fungal")
+            "Prepare Anti-Parasitic"
+             (ability
+              :name "Prepare Anti-Parasitic")
+            "Prepare Anti-Toxin"
+             (ability
+              :name "Prepare Anti-Toxin")
+            "Prepare Anti-Viral"
+             (ability
+              :name "Prepare Anti-Viral")
+            "Prepare Balm"
+             (ability
+              :name "Prepare Balm")
+            "Prepare Herbal Remedy"
+             (ability
+              :name "Prepare Herbal Remedy")
+            "Prepare Panacea"
+             (ability
+              :name "Prepare Panacea"
+              :summary "* Cure bacteria, virus, fungal, or parasitic infestation.")
+            "Prepare Pigments"
+             (ability
+              :name "Prepare Pigments")
+            "Prepare Poultice"
+             (ability
+              :name "Prepare Poultice")
+            "Prepare Spices"
+             (ability
+              :name "Prepare Spices")
+            "Prepare Vaccine"
+             (ability
+              :name "Prepare Vaccine")
+            :Zoology
+             (ability
+              :name "Zoology"
+              :summary
+               "* Analyze/Identify Animal
+* Locate Animal"
+              :titles "Zoologist")))
+        "Physical Sciences"
+         (skill
+          :name "Physical Sciences"
+          :reference "* Personally, I liked the university. They gave us money and facilities, we didn't have to produce anything! You've never been out of college! You don't know what it's like out there! I've worked in the private sector. They expect results. - Ghostbusters"
+          :summary "* Scientists believe that by studying a thing, one can learn its patterns and gain mastery over it."
+          :titles "Sage, Scholar, Scientist"
+          :stat "Mind"
+          :abilitymap
+           (abilitymap
+            "Analyze Substance"
+             (ability
+              :name "Analyze Substance"
+              :summary
+               "* [Requires]: Must have abilities corresponding to the substance being analyzed (e.g. Geology for rocks, Metallurgy for metals, etc.).
+* [Extended Action]: Run a series of tests on a substance to determine its make up.")
+            :Astronomy
+             (ability
+              :name "Astronomy")
+            :Astrophysics
+             (ability
+              :name "Astrophysics")
+            :Cartography
+             (ability
+              :name "Cartography"
+              :summary
+               "* [Action]: Accurately map the surrounding area.
+* [Action]: Locate anomalies in maps, including errors, forgeries, and potentially hidden areas."
+              :titles "Cartographer, Map Maker")
+            :Chemistry
+             (ability
+              :name "Chemistry")
+            :Geology
+             (ability
+              :name "Geology"
+              :titles "Mineralolgy, Vulcanism")
+            :Experimentation
+             (ability
+              :name "Experimentation")
+            :Mathematics
+             (ability
+              :name "Mathematics"
+              :titles "Algebra, Geometric, Probability, Trigonometry")
+            "Mathematics: Advanced"
+             (ability
+              :name "Mathematics: Advanced"
+              :reference
+               "* Differential Calculus - The definition, properties, and applications of the derivative of a function. The process of finding the derivative is called differentiation.
+* Integral Calculus - The definitions, properties, and applications of two related concepts, the indefinite integral and the definite integral. The process of finding the value of an integral is called integration.
+* Calculus is used in every branch of the physical sciences, actuarial science, computer science, statistics, engineering, economics, business, medicine, demography, and in other fields wherever a problem can be mathematically modeled and an optimal solution is desired.
+* Physics makes particular use of calculus; all concepts in classical mechanics are interrelated through calculus. The mass of an object of known density, the moment of inertia of objects, as well as the total energy of an object within a conservative field can be found by the use of calculus.
+* Electricity and Magnetism - Calculus can be used to find the total flux of electromagnetic fields. A more historical example of the use of calculus in physics is Newton's second law of motion, it expressly uses the term 'rate of change' which refers to the derivative.
+* Medicine - Calculus can be used to find the optimal branching angle of a blood vessel so as to maximize flow.
+* Economics - Calculus allows for the determination of maximal profit by providing a way to easily calculate both marginal cost and marginal revenue."
+              :titles "Differential Calculus, Integral Calculus, Limits and Infintesimals, Linear Algebra")
+            :Metallurgy
+             (ability
+              :name "Metallurgy")
+            :Meteorology
+             (ability
+              :name "Meteorology")
+            :Planetology
+             (ability
+              :name "Planetology")
+            "Publish or Perish"
+             (ability
+              :name "Publish or Perish"
+              :summary "* Ability to create academic papers that increase Fame.")
+            :Optics
+             (ability
+              :name "Optics")
+            "Physics: Dimensional"
+             (ability
+              :name "Physics: Dimensional")
+            "Physics: Electromagnetic"
+             (ability
+              :name "Physics: Electromagnetic")
+            "Physics: Fluid Dynamics"
+             (ability
+              :name "Physics: Fluid Dynamics")
+            "Physics: Forces"
+             (ability
+              :name "Physics: Forces")
+            "Physics: Newtonian"
+             (ability
+              :name "Physics: Newtonian")
+            "Physics: Nuclear"
+             (ability
+              :name "Physics: Nuclear"
+              :reference "* You said crossing the streams was bad!  Cross the streams...  You're gonna endanger us, you're gonna endanger our client - the nice lady, who paid us in advance, before she became a dog...Not necessarily. There's definitely a *very slim* chance we'll survive. I love this plan!  I'm excited to be a part of it!  LET'S DO IT! - Ghostbusters")
+            "Physics: Quantum"
+             (ability
+              :name "Physics: Quantum")
+            "Physics: Temporal"
+             (ability
+              :name "Physics: Temporal"
+              :reference "* The future is not set. There's no fate but what we make for ourselves. - Reece, The Terminator")
+            "Physics: Thermodynamics"
+             (ability
+              :name "Physics: Thermodynamics")
+            "Quick Study"
+             (ability
+              :name "Quick Study"
+              :reference "I know Kung Fu. - Neo, The Matrix"
+              :summary "* Cram to learn a low level skill very quickly. The skill doesn't last long, but often it doesn't have to.")
+            :Study
+             (ability
+              :name "Study")))))
+    "Social Skills"
+     (section
+      :name "Social Skills"
+      :skillmap
+       (skillmap
+        :Art
+         (skill
+          :name "Art"
+          :reference "* Art requires a certain... cruelty. - Jhin, Runeterra"
+          :titles "Artist, Artisan"
+          :stat "Spirit"
+          :abilitymap
+           (abilitymap
+            "Art Imitates Life"
+             (ability
+              :name "Art Imitates Life"
+              :reference "Dorian Gray"
+              :summary "Artwork become real")
+            :Calligraphy
+             (ability
+              :name "Calligraphy")
+            :Crafts
+             (ability
+              :name "Crafts")
+            :Drawing
+             (ability
+              :name "Drawing")
+            :Painting
+             (ability
+              :name "Painting")
+            :Photoshopping
+             (ability
+              :name "Photoshopping"
+              :summary "* Modify an image to improve or mislead.")
+            :Sculpture
+             (ability
+              :name "Sculpture")))
+        :Business
+         (skill
+          :name "Business"
+          :reference "* Did they get you to trade? Your heroes for ghosts? Hot ashes for trees? Hot air for a cool breeze? Cold comfort for change? Did you exchange? A walk-on part in the war. For a leading role in a cage? - Pink Floyd, Wish you were here"
+          :titles "Commerce"
+          :abilitymap
+           (abilitymap
+            :Accounting
+             (ability
+              :name "Accounting"
+              :titles "Accountant, Actuary, Clerk")
+            :Advertising
+             (ability
+              :name "Advertising"
+              :titles "Marketing Representative")
+            :Appraise
+             (ability
+              :name "Appraise"
+              :summary "* Determine the value of an item in the current market.")
+            :Bargain
+             (ability
+              :name "Bargain"
+              :summary "* Ability that Limits any attempt to buy or sell goods at their actual worth."
+              :titles "Haggler, Merchant")
+            :Barter
+             (ability
+              :name "Barter"
+              :summary "* Ability that Limits any attempt to buy or sell goods at their actual worth.")
+            "Business Management"
+             (ability
+              :name "Business Management")
+            :Distribution
+             (ability
+              :name "Distribution")
+            :Economics
+             (ability
+              :name "Economics"
+              :reference "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Economics: Supply and Demand. That's it. - Father Guido Sarducci, Five Minute University")
+            :Finance
+             (ability
+              :name "Finance")
+            :Marketing
+             (ability
+              :name "Marketing")
+            :Procure
+             (ability
+              :name "Procure"
+              :summary "The ability to find rare, exotic or illegal items for sale or trade."
+              :titles "Procurer")
+            :Sales
+             (ability
+              :name "Sales"
+              :reference "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Business is: You buy something, you sell it for more - Father Guido Sarducci, Five Minute University"
+              :titles "Carpetbagger, Peddler, Salesman")
+            :Speculate
+             (ability
+              :name "Speculate")
+            "Trade Routes"
+             (ability
+              :name "Trade Routes")
+            "Trade Union"
+             (ability
+              :name "Trade Union")))
+        :Communications
+         (skill
+          :name "Communications"
+          :abilitymap
+           (abilitymap
+            :Appearance
+             (ability
+              :name "Appearance"
+              :summary "* Expert on personal grooming, cosmetics, and hairstyling.")
+            :Carousing
+             (ability
+              :name "Carousing")
+            "Detect Lie"
+             (ability
+              :name "Detect Lie")
+            :Drinking
+             (ability
+              :name "Drinking")
+            :Drugs
+             (ability
+              :name "Drugs")
+            :Etiquette
+             (ability
+              :name "Etiquette")
+            :Fashion
+             (ability
+              :name "Fashion"
+              :summary "* Knows current fashions and what clothing with make the best impact.")
+            :Fiction
+             (ability
+              :name "Fiction"
+              :summary "* Can author, critique, interpret, and detect fiction.")
+            "Go Viral"
+             (ability
+              :name "Go Viral"
+              :summary "* Create an interesting message popular enough to be passed around.")
+            :Gossip
+             (ability
+              :name "Gossip"
+              :summary "* The single best way to get information, but, given it source, may not be reliable.")
+            :Interview
+             (ability
+              :name "Interview"
+              :titles "Interviewer, Reporter")
+            :Journalism
+             (ability
+              :name "Journalism"
+              :titles "Journalist, Media, Reporter")
+            :Literacy
+             (ability
+              :name "Literacy"
+              :summary
+               "* Can read and write
 * This ability is assumed in modern characters from 1st and 2nd world nations")
-                "Motivational Speaking"
-                 (ability
-                  :name "Motivational Speaking"
-                  :reference "* My name is Matt Foley and I am a motivational speaker... First off, I am thirty-five years old, I am divorced, and I live in a van down by the river... Well I'm here to tell you, that you're probably going to find out, as you go out there, that you're not going to amount to jack squat! You're going to end up eating a steady diet of government cheese and living in a van down by the river! - Matt Foley, SNL"
-                  :titles "Motivational Speaker")
-                :Negotiation
-                 (ability
-                  :name "Negotiation"
-                  :titles "Advisor, Arbiter, Diplomat, Emissary, Envoy, Legate, Negotiator")
-                :Photography
-                 (ability
-                  :name "Photography"
-                  :titles "Photographer")
-                :Poetry
-                 (ability
-                  :name "Poetry"
-                  :summary "Can author any type of poetry"
-                  :titles "Poet")
-                :Politics
-                 (ability
-                  :name "Politics")
-                :Recruiting
-                 (ability
-                  :name "Recruiting"
-                  :titles "Casting Director, Hiring Manager, Recruiter")
-                :Scribe
-                 (ability
-                  :name "Scribe"
-                  :summary "* Can copy writings exactly")
-                :Sincerity
-                 (ability
-                  :name "Sincerity"
-                  :summary
-                   "* Helps convince others when you are being truthful.
+            "Motivational Speaking"
+             (ability
+              :name "Motivational Speaking"
+              :reference "* My name is Matt Foley and I am a motivational speaker... First off, I am thirty-five years old, I am divorced, and I live in a van down by the river... Well I'm here to tell you, that you're probably going to find out, as you go out there, that you're not going to amount to jack squat! You're going to end up eating a steady diet of government cheese and living in a van down by the river! - Matt Foley, SNL"
+              :titles "Motivational Speaker")
+            :Negotiation
+             (ability
+              :name "Negotiation"
+              :titles "Advisor, Arbiter, Diplomat, Emissary, Envoy, Legate, Negotiator")
+            :Photography
+             (ability
+              :name "Photography"
+              :titles "Photographer")
+            :Poetry
+             (ability
+              :name "Poetry"
+              :summary "Can author any type of poetry"
+              :titles "Poet")
+            :Politics
+             (ability
+              :name "Politics")
+            :Recruiting
+             (ability
+              :name "Recruiting"
+              :titles "Casting Director, Hiring Manager, Recruiter")
+            :Scribe
+             (ability
+              :name "Scribe"
+              :summary "* Can copy writings exactly")
+            :Sincerity
+             (ability
+              :name "Sincerity"
+              :summary
+               "* Helps convince others when you are being truthful.
 * Helps improve long term relationships by increasing trust.
 * Limitation - May only be used when you truly believe that your are correct.")
-                "Small Talk"
-                 (ability
-                  :name "Small Talk"
-                  :titles "The Gift of Gab")
-                :Streetwise
-                 (ability
-                  :name "Streetwise"
-                  :summary "* [Action]: Gain knowledge where a good or service can be found in a city including black market goods or services.")
-                :Translator
-                 (ability
-                  :name "Translator"
-                  :summary "* Can translate immediately")
-                "Trash Talk"
-                 (ability
-                  :name "Trash Talk"
-                  :reference "* What's the matter Agent Scary Lips? You're Scary Lips tasting my hairy shit? You tasting Doug Wilson's World Famous beef stew? How's it going down, its kinda spicy right? You guys are so fucked right now, all I can think about is your wife and a horse. - Doug Wilson, Weeds"
-                  :titles "Put Down")
-                :Videography
-                 (ability
-                  :name "Videography"
-                  :titles "Cameraman, Videographer")
-                "Video Production"
-                 (ability
-                  :name "Video Production"
-                  :titles "Director, Producer")
-                "Wise Words"
-                 (ability
-                  :name "Wise Words"
-                  :summary "* Apply personal life experiences to help others understand themselves.")
-                :Cantonese
-                 (ability
-                  :name "Cantonese")
-                :English
-                 (ability
-                  :name "English")
-                :French
-                 (ability
-                  :name "French")
-                :German
-                 (ability
-                  :name "German")
-                :Greek
-                 (ability
-                  :name "Greek")
-                :Italian
-                 (ability
-                  :name "Italian")
-                :Latin
-                 (ability
-                  :name "Latin")
-                :Mandarin
-                 (ability
-                  :name "Mandarin")
-                "Olde English"
-                 (ability
-                  :name "Olde English")
-                :Portuguese
-                 (ability
-                  :name "Portuguese")
-                :Russian
-                 (ability
-                  :name "Russian")
-                "Sign Language"
-                 (ability
-                  :name "Sign Language")
-                :Spanish
-                 (ability
-                  :name "Spanish"))
-              :specialtymap
-               (specialtymap
-                :Linguistics
-                 (specialty
-                  :name "Linguistics"
-                  :reference "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor"
-                  :summary
-                   "* Philosophy - The 'common tongue' concept is boring and unrealistic.
+            "Small Talk"
+             (ability
+              :name "Small Talk"
+              :titles "The Gift of Gab")
+            :Streetwise
+             (ability
+              :name "Streetwise"
+              :summary "* [Action]: Gain knowledge where a good or service can be found in a city including black market goods or services.")
+            :Translator
+             (ability
+              :name "Translator"
+              :summary "* Can translate immediately")
+            "Trash Talk"
+             (ability
+              :name "Trash Talk"
+              :reference "* What's the matter Agent Scary Lips? You're Scary Lips tasting my hairy shit? You tasting Doug Wilson's World Famous beef stew? How's it going down, its kinda spicy right? You guys are so fucked right now, all I can think about is your wife and a horse. - Doug Wilson, Weeds"
+              :titles "Put Down")
+            :Videography
+             (ability
+              :name "Videography"
+              :titles "Cameraman, Videographer")
+            "Video Production"
+             (ability
+              :name "Video Production"
+              :titles "Director, Producer")
+            "Wise Words"
+             (ability
+              :name "Wise Words"
+              :summary "* Apply personal life experiences to help others understand themselves.")
+            :Cantonese
+             (ability
+              :name "Cantonese")
+            :English
+             (ability
+              :name "English")
+            :French
+             (ability
+              :name "French")
+            :German
+             (ability
+              :name "German")
+            :Greek
+             (ability
+              :name "Greek")
+            :Italian
+             (ability
+              :name "Italian")
+            :Latin
+             (ability
+              :name "Latin")
+            :Mandarin
+             (ability
+              :name "Mandarin")
+            "Olde English"
+             (ability
+              :name "Olde English")
+            :Portuguese
+             (ability
+              :name "Portuguese")
+            :Russian
+             (ability
+              :name "Russian")
+            "Sign Language"
+             (ability
+              :name "Sign Language")
+            :Spanish
+             (ability
+              :name "Spanish"))
+          :specialtymap
+           (specialtymap
+            :Linguistics
+             (specialty
+              :name "Linguistics"
+              :reference "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor"
+              :summary
+               "* Philosophy - The 'common tongue' concept is boring and unrealistic.
 * Simulate the limitations of language by reducing usable vocabulary. This can be done by limiting a conversation to 2, 3, 4, or 5 letter words depending on the fluency of those involved. Having a conversation using only 2 letter words is going to require a fair amount of hand gesturing or drawing to get a point across. If a person is overhearing a conversation, bleep out the big words and let them guess at the missing words.")
-                :Writing
-                 (specialty
-                  :name "Writing")))
-            :Crime
-             (skill
-              :name "Crime"
-              :titles "Bandit, Brigand, Crime Boss, Crook, Cutthroat, Highwayman, Pimp, Yakuza, Yakuza - Oyabun"
-              :stat "Shadow"
-              :abilitymap
-               (abilitymap
-                "Armed Robbery"
-                 (ability
-                  :name "Armed Robbery")
-                :Blackmail
-                 (ability
-                  :name "Blackmail")
-                :Bribery
-                 (ability
-                  :name "Bribery")
-                "Crime Syndicate"
-                 (ability
-                  :name "Crime Syndicate")
-                "Crime Wave"
-                 (ability
-                  :name "Crime Wave")
-                "Criminal Mastermind"
-                 (ability
-                  :name "Criminal Mastermind")
-                :Extortion
-                 (ability
-                  :name "Extortion")
-                "Fence Goods"
-                 (ability
-                  :name "Fence Goods")
-                :Kidnapping
-                 (ability
-                  :name "Kidnapping")
-                "Mafia Connections"
-                 (ability
-                  :name "Mafia Connections")
-                :Pimping
-                 (ability
-                  :name "Pimping")
-                :Piracy
-                 (ability
-                  :name "Piracy"
-                  :summary "* Armed robbery of large shipments of goods without damaging the merchandise.")
-                :Prostitution
-                 (ability
-                  :name "Prostitution")
-                :Rustling
-                 (ability
-                  :name "Rustling"
-                  :summary "* Stealing and selling livestock")
-                :Waylay
-                 (ability
-                  :name "Waylay")))
-            :Deception
-             (skill
-              :name "Deception"
-              :reference "* I whisper Truth, into Lies... - Leblanc, Runeterra"
-              :titles "Chicanery, Legerdemain"
-              :stat "Shadow"
-              :abilitymap
-               (abilitymap
-                :Burglary
-                 (ability
-                  :name "Burglary")
-                "Con Artist"
-                 (ability
-                  :name "Con Artist")
-                "Confidence Game"
-                 (ability
-                  :name "Confidence Game"
-                  :titles "Con Artist, Swindler")
-                :Decoy
-                 (ability
-                  :name "Decoy"
-                  :summary
-                   "* Create a decoy to mislead.
+            :Writing
+             (specialty
+              :name "Writing")))
+        :Crime
+         (skill
+          :name "Crime"
+          :titles "Bandit, Brigand, Crime Boss, Crook, Cutthroat, Highwayman, Pimp, Yakuza, Yakuza - Oyabun"
+          :stat "Shadow"
+          :abilitymap
+           (abilitymap
+            "Armed Robbery"
+             (ability
+              :name "Armed Robbery")
+            :Blackmail
+             (ability
+              :name "Blackmail")
+            :Bribery
+             (ability
+              :name "Bribery")
+            "Crime Syndicate"
+             (ability
+              :name "Crime Syndicate")
+            "Crime Wave"
+             (ability
+              :name "Crime Wave")
+            "Criminal Mastermind"
+             (ability
+              :name "Criminal Mastermind")
+            :Extortion
+             (ability
+              :name "Extortion")
+            "Fence Goods"
+             (ability
+              :name "Fence Goods")
+            :Kidnapping
+             (ability
+              :name "Kidnapping")
+            "Mafia Connections"
+             (ability
+              :name "Mafia Connections")
+            :Pimping
+             (ability
+              :name "Pimping")
+            :Piracy
+             (ability
+              :name "Piracy"
+              :summary "* Armed robbery of large shipments of goods without damaging the merchandise.")
+            :Prostitution
+             (ability
+              :name "Prostitution")
+            :Rustling
+             (ability
+              :name "Rustling"
+              :summary "* Stealing and selling livestock")
+            :Waylay
+             (ability
+              :name "Waylay")))
+        :Deception
+         (skill
+          :name "Deception"
+          :reference "* I whisper Truth, into Lies... - Leblanc, Runeterra"
+          :titles "Chicanery, Legerdemain"
+          :stat "Shadow"
+          :abilitymap
+           (abilitymap
+            :Burglary
+             (ability
+              :name "Burglary")
+            "Con Artist"
+             (ability
+              :name "Con Artist")
+            "Confidence Game"
+             (ability
+              :name "Confidence Game"
+              :titles "Con Artist, Swindler")
+            :Decoy
+             (ability
+              :name "Decoy"
+              :summary
+               "* Create a decoy to mislead.
 * [Move]: Remove this unit from play and place 1 Decoy Token and 1 Decoy Unit Token on this unit's space. Both decoys may act normally during the Action phase, but any action but movement will dispel the decoys.  Both decoys defend as the original unit. If either unit is Hit, both decoys are dispelled. The decoys last until the next turn or until dispelled.")
-                "Detect Trap"
-                 (ability
-                  :name "Detect Trap")
-                :Distraction
-                 (ability
-                  :name "Distraction"
-                  :titles "Throw Dirt")
-                :Escape
-                 (ability
-                  :name "Escape"
-                  :reference "* The chain in those handcuffs is high-tensile steel. It'd take you ten minutes to hack through it with this. Now, if you're lucky, you could hack through your ankle in five minutes. Go."
-                  :summary "* The ability comes from extensive practice escaping from various bonds and confinements. At higher abilities, the user can dislocate joints to slither out of bonds."
-                  :titles "Escape Artist")
-                "Evade Pursuit"
-                 (ability
-                  :name "Evade Pursuit"
-                  :summary "* Ability to correctly evaluate the opponent's pursuit style and outwit the pursuer.")
-                :Forgery
-                 (ability
-                  :name "Forgery"
-                  :summary
-                   "* The ability to forge money or documents. This ability is also used while creating money to prevent forgery.
+            "Detect Trap"
+             (ability
+              :name "Detect Trap")
+            :Distraction
+             (ability
+              :name "Distraction"
+              :titles "Throw Dirt")
+            :Escape
+             (ability
+              :name "Escape"
+              :reference "* The chain in those handcuffs is high-tensile steel. It'd take you ten minutes to hack through it with this. Now, if you're lucky, you could hack through your ankle in five minutes. Go."
+              :summary "* The ability comes from extensive practice escaping from various bonds and confinements. At higher abilities, the user can dislocate joints to slither out of bonds."
+              :titles "Escape Artist")
+            "Evade Pursuit"
+             (ability
+              :name "Evade Pursuit"
+              :summary "* Ability to correctly evaluate the opponent's pursuit style and outwit the pursuer.")
+            :Forgery
+             (ability
+              :name "Forgery"
+              :summary
+               "* The ability to forge money or documents. This ability is also used while creating money to prevent forgery.
 * [Extended Action]: Roll vs. object quality or anti-forgery level. Any [Hits] allow a forgery that can pass at a distance. The more [Hits] and [Criticals] rolled, the more indistinquishable from the original. High level forgeries are works of art unto themselves.")
-                :Gambling
-                 (ability
-                  :name "Gambling"
-                  :titles "Gambler, High Roller")
-                "Honor Among Thieves"
-                 (ability
-                  :name "Honor Among Thieves")
-                :Misdirection
-                 (ability
-                  :name "Misdirection")
-                "Pick Pockets"
-                 (ability
-                  :name "Pick Pockets")
-                "Sleight of Hand"
-                 (ability
-                  :name "Sleight of Hand"
-                  :summary "* Hide a small object in hand without being noticed."
-                  :titles "Legerdemain")
-                :Smuggling
-                 (ability
-                  :name "Smuggling")
-                "Stage Magic"
-                 (ability
-                  :name "Stage Magic")
-                "Thieves Guild Codes"
-                 (ability
-                  :name "Thieves Guild Codes"
-                  :summary "Thieves must conceal their illegal conversations and the guilds have developed a shifting series of hand signals, marks, and code words to communicate simple concepts without arising suspiscion.")
-                "Use Blinding Powder"
-                 (ability
-                  :name "Use Blinding Powder")
-                "Use Flash Powder"
-                 (ability
-                  :name "Use Flash Powder")
-                "Use Irritating Powder"
-                 (ability
-                  :name "Use Irritating Powder")
-                "Use Sleeping Powder"
-                 (ability
-                  :name "Use Sleeping Powder")
-                :Vanish
-                 (ability
-                  :name "Vanish")
-                :Ventriloquism
-                 (ability
-                  :name "Ventriloquism"))
-              :specialtymap
-               (specialtymap
-                :Thievery
-                 (specialty
-                  :name "Thievery"
-                  :reference "This is where Forrestall cashed in.  A friend of yours?  A competitor... he was good. He was very good. - Indiana Jones, Raiders of the Lost Ark"
-                  :summary "* Burglary, Escape, Fence Goods, Honor Among Thieves, Pick Pockets, Smuggling, Thieves Guild Codes"
-                  :titles "Burglar, Cutpurse, Footpad, Nezumi kozo, Pick Pocket, Smuggler, Thief")
-                :Trickery
-                 (specialty
-                  :name "Trickery"
-                  :summary "* Blinding Powder, Confidence Game, Decoy, Distraction, Flash Powder, Gambling, Irritating Powder, Misdirection, Sleight of Hand, Stage Magic, Swindling, Vanish, Ventriloquism"
-                  :titles "Blackguard, Caitiff, Charlatan, Con Artist, Delinquent, Gambler, Knave, Ne'er do well, Ninja, Rapscallion, Renegade, Riffraff, Rogue, Scoundrel, Scalawag, Stage Magician, Swashbuckler, Swindler, Trickster")))
-            :Espionage
-             (skill
-              :name "Espionage"
-              :titles "Covert Ops, Infiltrator, Informer, Spy, Traitor"
-              :stat "Shadow"
-              :abilitymap
-               (abilitymap
-                :Counterintelligence
-                 (ability
-                  :name "Counterintelligence")
-                "Cyber Intelligence"
-                 (ability
-                  :name "Cyber Intelligence"
-                  :summary "* Intelligence gathered from computer networks."
-                  :titles "CYBINT, DNINT, Digital Network Intelligence")
-                :Eavesdrop
-                 (ability
-                  :name "Eavesdrop"
-                  :summary "* Listen in to conversations without being detected.")
-                :Infiltrate
-                 (ability
-                  :name "Infiltrate"
-                  :summary
-                   "* [Defense] - Mind
+            :Gambling
+             (ability
+              :name "Gambling"
+              :titles "Gambler, High Roller")
+            "Honor Among Thieves"
+             (ability
+              :name "Honor Among Thieves")
+            :Misdirection
+             (ability
+              :name "Misdirection")
+            "Pick Pockets"
+             (ability
+              :name "Pick Pockets")
+            "Sleight of Hand"
+             (ability
+              :name "Sleight of Hand"
+              :summary "* Hide a small object in hand without being noticed."
+              :titles "Legerdemain")
+            :Smuggling
+             (ability
+              :name "Smuggling")
+            "Stage Magic"
+             (ability
+              :name "Stage Magic")
+            "Thieves Guild Codes"
+             (ability
+              :name "Thieves Guild Codes"
+              :summary "Thieves must conceal their illegal conversations and the guilds have developed a shifting series of hand signals, marks, and code words to communicate simple concepts without arising suspiscion.")
+            "Use Blinding Powder"
+             (ability
+              :name "Use Blinding Powder")
+            "Use Flash Powder"
+             (ability
+              :name "Use Flash Powder")
+            "Use Irritating Powder"
+             (ability
+              :name "Use Irritating Powder")
+            "Use Sleeping Powder"
+             (ability
+              :name "Use Sleeping Powder")
+            :Vanish
+             (ability
+              :name "Vanish")
+            :Ventriloquism
+             (ability
+              :name "Ventriloquism"))
+          :specialtymap
+           (specialtymap
+            :Thievery
+             (specialty
+              :name "Thievery"
+              :reference "This is where Forrestall cashed in.  A friend of yours?  A competitor... he was good. He was very good. - Indiana Jones, Raiders of the Lost Ark"
+              :summary "* Burglary, Escape, Fence Goods, Honor Among Thieves, Pick Pockets, Smuggling, Thieves Guild Codes"
+              :titles "Burglar, Cutpurse, Footpad, Nezumi kozo, Pick Pocket, Smuggler, Thief")
+            :Trickery
+             (specialty
+              :name "Trickery"
+              :summary "* Blinding Powder, Confidence Game, Decoy, Distraction, Flash Powder, Gambling, Irritating Powder, Misdirection, Sleight of Hand, Stage Magic, Swindling, Vanish, Ventriloquism"
+              :titles "Blackguard, Caitiff, Charlatan, Con Artist, Delinquent, Gambler, Knave, Ne'er do well, Ninja, Rapscallion, Renegade, Riffraff, Rogue, Scoundrel, Scalawag, Stage Magician, Swashbuckler, Swindler, Trickster")))
+        :Espionage
+         (skill
+          :name "Espionage"
+          :titles "Covert Ops, Infiltrator, Informer, Spy, Traitor"
+          :stat "Shadow"
+          :abilitymap
+           (abilitymap
+            :Counterintelligence
+             (ability
+              :name "Counterintelligence")
+            "Cyber Intelligence"
+             (ability
+              :name "Cyber Intelligence"
+              :summary "* Intelligence gathered from computer networks."
+              :titles "CYBINT, DNINT, Digital Network Intelligence")
+            :Eavesdrop
+             (ability
+              :name "Eavesdrop"
+              :summary "* Listen in to conversations without being detected.")
+            :Infiltrate
+             (ability
+              :name "Infiltrate"
+              :summary
+               "* [Defense] - Mind
 * [Deploy] - Deploy this unit in waiting area.
 * [Action] - Replace any non-unique unit with this unit.")
-                "Geospatial Intelligence"
-                 (ability
-                  :name "Geospatial Intelligence"
-                  :summary
-                   "* Intelligence gathered from satellite, aerial photography, mapping.
+            "Geospatial Intelligence"
+             (ability
+              :name "Geospatial Intelligence"
+              :summary
+               "* Intelligence gathered from satellite, aerial photography, mapping.
 * Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
-                  :titles "GEOINT, IMINT, Imagery Intelligence")
-                "Human Intelligence"
-                 (ability
-                  :name "Human Intelligence"
-                  :summary
-                   "* Intelligence gathered from a person on the ground.
+              :titles "GEOINT, IMINT, Imagery Intelligence")
+            "Human Intelligence"
+             (ability
+              :name "Human Intelligence"
+              :summary
+               "* Intelligence gathered from a person on the ground.
 * Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
-                  :titles "HUMINT")
-                "Intelligence Network"
-                 (ability
-                  :name "Intelligence Network"
-                  :reference "If you thought there was some secret cell somewhere working Al Qaedia. Then I want you to know you're wrong. This it it. There is no working group coming to the rescue. There is nobody else hidden on some other floor. There is just us... and we are failing!... They murdered 3000 of our citizens..in cold-blood and they have slaughtered our forward deploy. And what the fuck have we done about it, huh? What have we done?!  We have 20 leadership names. We have only eliminated 4 of them. I want targets. Do your fucking jobs. Bring me people to kill. - Zero Dark Thirty")
-                "Lip Reading"
-                 (ability
-                  :name "Lip Reading"
-                  :summary "* Attempt to understand what is being said without the benefit of hearing. The more [Hits] rolled, the more accurate the interpretation.")
-                "Measurement and Signals"
-                 (ability
-                  :name "Measurement and Signals"
-                  :summary "* Intelligence gathered from the signatures (distinctive characteristics) of fixed or dynamic target sources. This includes radar, acoustic, nuclear, chemical, and biological intelligence."
-                  :titles "MASINT")
-                :Misdirection
-                 (ability
-                  :name "Misdirection"
-                  :reference "* Smoke and Mirrors... Classic Misdirection - Leblanc, Runeterra")
-                "Open Source Intelligence"
-                 (ability
-                  :name "Open Source Intelligence"
-                  :summary "* Intelligence gathered from open sources."
-                  :titles "OSINT")
-                :Propaganda
-                 (ability
-                  :name "Propaganda")
-                "Quick Change"
-                 (ability
-                  :name "Quick Change")
-                :Sabotage
-                 (ability
-                  :name "Sabotage"
-                  :titles "Saboteur")
-                "Signals Intelligence"
-                 (ability
-                  :name "Signals Intelligence"
-                  :reference "* Quiller"
-                  :summary "* Intelligence gathered from interception of signals."
-                  :titles "SIGINT, Signals")
-                :Subversion
-                 (ability
-                  :name "Subversion")
-                "Technical Intelligence"
-                 (ability
-                  :name "Technical Intelligence"
-                  :summary "* Intelligence gathered from analysis of weapons and equipment."
-                  :titles "TECHINT")
-                "Whispering Campaign"
-                 (ability
-                  :name "Whispering Campaign")))
-            :Faith
-             (skill
-              :name "Faith"
-              :reference
-               "The argument goes something like this: 'I refuse to prove that I exist,' says God, 'for proof denies faith, and
+              :titles "HUMINT")
+            "Intelligence Network"
+             (ability
+              :name "Intelligence Network"
+              :reference "If you thought there was some secret cell somewhere working Al Qaedia. Then I want you to know you're wrong. This it it. There is no working group coming to the rescue. There is nobody else hidden on some other floor. There is just us... and we are failing!... They murdered 3000 of our citizens..in cold-blood and they have slaughtered our forward deploy. And what the fuck have we done about it, huh? What have we done?!  We have 20 leadership names. We have only eliminated 4 of them. I want targets. Do your fucking jobs. Bring me people to kill. - Zero Dark Thirty")
+            "Lip Reading"
+             (ability
+              :name "Lip Reading"
+              :summary "* Attempt to understand what is being said without the benefit of hearing. The more [Hits] rolled, the more accurate the interpretation.")
+            "Measurement and Signals"
+             (ability
+              :name "Measurement and Signals"
+              :summary "* Intelligence gathered from the signatures (distinctive characteristics) of fixed or dynamic target sources. This includes radar, acoustic, nuclear, chemical, and biological intelligence."
+              :titles "MASINT")
+            :Misdirection
+             (ability
+              :name "Misdirection"
+              :reference "* Smoke and Mirrors... Classic Misdirection - Leblanc, Runeterra")
+            "Open Source Intelligence"
+             (ability
+              :name "Open Source Intelligence"
+              :summary "* Intelligence gathered from open sources."
+              :titles "OSINT")
+            :Propaganda
+             (ability
+              :name "Propaganda")
+            "Quick Change"
+             (ability
+              :name "Quick Change")
+            :Sabotage
+             (ability
+              :name "Sabotage"
+              :titles "Saboteur")
+            "Signals Intelligence"
+             (ability
+              :name "Signals Intelligence"
+              :reference "* Quiller"
+              :summary "* Intelligence gathered from interception of signals."
+              :titles "SIGINT, Signals")
+            :Subversion
+             (ability
+              :name "Subversion")
+            "Technical Intelligence"
+             (ability
+              :name "Technical Intelligence"
+              :summary "* Intelligence gathered from analysis of weapons and equipment."
+              :titles "TECHINT")
+            "Whispering Campaign"
+             (ability
+              :name "Whispering Campaign")))
+        :Faith
+         (skill
+          :name "Faith"
+          :reference
+           "The argument goes something like this: 'I refuse to prove that I exist,' says God, 'for proof denies faith, and
 without faith I am nothing.'  'But,' says Man, 'The Babel fish is a dead giveaway, isn't it?  It could not have
 evolved by chance.  It proves you exist, and so therefore, by your own arguments, you don't. QED.' - Hitchhiker's
 Guide to the Galaxy"
-              :titles
-               "Abbot, Absolver, Archbishop, Bishop, Cardinal, Cleric, Ceremonial Guard, Gakusho, Missionary, Paladin, Priest, Redeemer,
+          :titles
+           "Abbot, Absolver, Archbishop, Bishop, Cardinal, Cleric, Ceremonial Guard, Gakusho, Missionary, Paladin, Priest, Redeemer,
 Sin	Eater, Theologist, Theurge, Theurgy"
-              :abilitymap
-               (abilitymap
-                :Absolution
-                 (ability
-                  :name "Absolution")
-                :Affirmation
-                 (ability
-                  :name "Affirmation"
-                  :summary
-                   "An affirmation is a statement designed to have a positive effect on the conscious mind when
+          :abilitymap
+           (abilitymap
+            :Absolution
+             (ability
+              :name "Absolution")
+            :Affirmation
+             (ability
+              :name "Affirmation"
+              :summary
+               "An affirmation is a statement designed to have a positive effect on the conscious mind when
 repeated at frequent intervals throughout meditation ritual spells.")
-                :Atonement
-                 (ability
-                  :name "Atonement")
-                :Blessing
-                 (ability
-                  :name "Blessing"
-                  :summary
-                   "* A simple incantation with a variety of subtle effects.
+            :Atonement
+             (ability
+              :name "Atonement")
+            :Blessing
+             (ability
+              :name "Blessing"
+              :summary
+               "* A simple incantation with a variety of subtle effects.
 * [Action]: Touch. Target gains a new Blessing Token (max 1).  At any time, the target may
 remove the token and gain +1 on any Defense roll.
 * [Duration]: up to 1 day/level.")
-                :Chant
-                 (ability
-                  :name "Chant"
-                  :summary "* Aura: All Allies with same Religion within level spaces receive +1 on Defense rolls.")
-                :Confession
-                 (ability
-                  :name "Confession")
-                :Consecration
-                 (ability
-                  :name "Consecration"
-                  :summary
-                   "* To consecrate is to solemnly dedicate or devote something or someone to a sacred purpose, to
+            :Chant
+             (ability
+              :name "Chant"
+              :summary "* Aura: All Allies with same Religion within level spaces receive +1 on Defense rolls.")
+            :Confession
+             (ability
+              :name "Confession")
+            :Consecration
+             (ability
+              :name "Consecration"
+              :summary
+               "* To consecrate is to solemnly dedicate or devote something or someone to a sacred purpose, to
 cleanse and protect.")
-                :Contemplation
-                 (ability
-                  :name "Contemplation"
-                  :summary
-                   "* Contemplation is a focused and disiplined form of contemplation or reflecting, whereby one is
+            :Contemplation
+             (ability
+              :name "Contemplation"
+              :summary
+               "* Contemplation is a focused and disiplined form of contemplation or reflecting, whereby one is
 able to alter an emotional state and to receive self-insight.")
-                :Conversion
-                 (ability
-                  :name "Conversion")
-                :Dedication
-                 (ability
-                  :name "Dedication"
-                  :summary
-                   "* [Death]: Unit enters specified Deity's realm.  It is not substantiated that this ability
+            :Conversion
+             (ability
+              :name "Conversion")
+            :Dedication
+             (ability
+              :name "Dedication"
+              :summary
+               "* [Death]: Unit enters specified Deity's realm.  It is not substantiated that this ability
 actually works.  Those who have crossed over are changed and may not and will not return.")
-                :Drumming
-                 (ability
-                  :name "Drumming"
-                  :summary
-                   "* Drumming is literally pounding on a surface.  This is used to raise power and to change
+            :Drumming
+             (ability
+              :name "Drumming"
+              :summary
+               "* Drumming is literally pounding on a surface.  This is used to raise power and to change
 emotional states.")
-                :Excommunication
-                 (ability
-                  :name "Excommunication")
-                :Initiation
-                 (ability
-                  :name "Initiation"
-                  :summary
-                   "* Used to describe the profound spiritual experience that occurs when one's unity with Deity
+            :Excommunication
+             (ability
+              :name "Excommunication")
+            :Initiation
+             (ability
+              :name "Initiation"
+              :summary
+               "* Used to describe the profound spiritual experience that occurs when one's unity with Deity
 and the Universe is realised; when one is welcomed as a fully-fledged member of a particular
 group; and the celebration of a successful ritual.")
-                :Marriage
-                 (ability
-                  :name "Marriage")
-                :Mass
-                 (ability
-                  :name "Mass")
-                :Namegiving
-                 (ability
-                  :name "Namegiving")
-                :Ordainment
-                 (ability
-                  :name "Ordainment")
-                :Redemption
-                 (ability
-                  :name "Redemption")
-                :Sacrament
-                 (ability
-                  :name "Sacrament")
-                :Salvation
-                 (ability
-                  :name "Salvation")
-                :Sanctify
-                 (ability
-                  :name "Sanctify")
-                "Sin Eating"
-                 (ability
-                  :name "Sin Eating"
-                  :summary
-                   "* A willing subject may describe his dark desires, the Sin Eater then
+            :Marriage
+             (ability
+              :name "Marriage")
+            :Mass
+             (ability
+              :name "Mass")
+            :Namegiving
+             (ability
+              :name "Namegiving")
+            :Ordainment
+             (ability
+              :name "Ordainment")
+            :Redemption
+             (ability
+              :name "Redemption")
+            :Sacrament
+             (ability
+              :name "Sacrament")
+            :Salvation
+             (ability
+              :name "Salvation")
+            :Sanctify
+             (ability
+              :name "Sanctify")
+            "Sin Eating"
+             (ability
+              :name "Sin Eating"
+              :summary
+               "* A willing subject may describe his dark desires, the Sin Eater then
 repeats the description replacing references to the subject with himself.
 After the ritual is complete, the subject will not feel the urges so
 strongly. Instead the Sin Eater will feel those emotions. If he acts on
 them, even symbolically, his [Shadow] gains power. If he can resolve them,
 he gains experience.")))
-            :Influence
-             (skill
-              :name "Influence"
-              :reference
-               "* Many men, of course, became extremely rich, and this was perfectly natural and nothing to be ashamed of
+        :Influence
+         (skill
+          :name "Influence"
+          :reference
+           "* Many men, of course, became extremely rich, and this was perfectly natural and nothing to be ashamed of
 because no one was really poor, at least no one worth speaking of. - Hitchhiker's Guide to the Galaxy"
-              :titles
-               "Aristocrat, Baron, Baroness, Baronet, Celebrity, Count, Countess, Daimyo, Dame, Duchess, Duke, Emperor,
+          :titles
+           "Aristocrat, Baron, Baroness, Baronet, Celebrity, Count, Countess, Daimyo, Dame, Duchess, Duke, Emperor,
 Empress, King, Knight, Lord, Marchioness, Marquis, Matriarch, Monarch, Patriarch, Pontif, Prince, Princess,
 Queen, Regina, Sire, Sovereign, Star"
-              :abilitymap
-               (abilitymap
-                "Black Market Ties"
-                 (ability
-                  :name "Black Market Ties")
-                :Boon
-                 (ability
-                  :name "Boon")
-                :Business
-                 (ability
-                  :name "Business")
-                "Carte Blanche"
-                 (ability
-                  :name "Carte Blanche"
-                  :titles "Blank Check")
-                "Corporate Ties"
-                 (ability
-                  :name "Corporate Ties")
-                "Entertainment Ties"
-                 (ability
-                  :name "Entertainment Ties")
-                :Fame
-                 (ability
-                  :name "Fame"
-                  :summary
-                   "* Your reputation precedes you. People are drawn to the famous and will often do extraordinary things
+          :abilitymap
+           (abilitymap
+            "Black Market Ties"
+             (ability
+              :name "Black Market Ties")
+            :Boon
+             (ability
+              :name "Boon")
+            :Business
+             (ability
+              :name "Business")
+            "Carte Blanche"
+             (ability
+              :name "Carte Blanche"
+              :titles "Blank Check")
+            "Corporate Ties"
+             (ability
+              :name "Corporate Ties")
+            "Entertainment Ties"
+             (ability
+              :name "Entertainment Ties")
+            :Fame
+             (ability
+              :name "Fame"
+              :summary
+               "* Your reputation precedes you. People are drawn to the famous and will often do extraordinary things
 to be near them.
 * [Synergy]: [Seduction]
 * [Action]: Leverage your fame to gain minor free goods or services including upgraded lodging, free
 meals, audience with nobles, etc.")
-                "Family Ties"
-                 (ability
-                  :name "Family Ties")
-                :Fortune
-                 (ability
-                  :name "Fortune")
-                :Followers
-                 (ability
-                  :name "Followers"
-                  :titles "Acolyte, Apprentice, Retinue, Servant, Serf, Shieldbearer")
-                "Friends in High Places"
-                 (ability
-                  :name "Friends in High Places"
-                  :reference "* I'm telling you this guy is protected from up on high by the Prince of Darkness. - Jeff Rabin, Usual Suspects")
-                :Infamy
-                 (ability
-                  :name "Infamy"
-                  :summary
-                   "* Your dark reputation precedes you. People are intrigued by the infamous and will often do extraordinary
+            "Family Ties"
+             (ability
+              :name "Family Ties")
+            :Fortune
+             (ability
+              :name "Fortune")
+            :Followers
+             (ability
+              :name "Followers"
+              :titles "Acolyte, Apprentice, Retinue, Servant, Serf, Shieldbearer")
+            "Friends in High Places"
+             (ability
+              :name "Friends in High Places"
+              :reference "* I'm telling you this guy is protected from up on high by the Prince of Darkness. - Jeff Rabin, Usual Suspects")
+            :Infamy
+             (ability
+              :name "Infamy"
+              :summary
+               "* Your dark reputation precedes you. People are intrigued by the infamous and will often do extraordinary
 things in fear and facination of them.
 * [Synergy]: [Intimidation]
 * [Action]: Leverage your infamy to gain minor free goods or services including upgraded lodging, free
 meals, etc.")
-                :Intrigue
-                 (ability
-                  :name "Intrigue")
-                :Investing
-                 (ability
-                  :name "Investing")
-                "Judicial Ties"
-                 (ability
-                  :name "Judicial Ties")
-                "Law Enforcement Ties"
-                 (ability
-                  :name "Law Enforcement Ties")
-                "License to Kill"
-                 (ability
-                  :name "License to Kill")
-                :Mansion
-                 (ability
-                  :name "Mansion")
-                "Media Ties"
-                 (ability
-                  :name "Media Ties")
-                "Night Club"
-                 (ability
-                  :name "Night Club")
-                "Noble Birth"
-                 (ability
-                  :name "Noble Birth")
-                "Official Title"
-                 (ability
-                  :name "Official Title")
-                "Political Ties"
-                 (ability
-                  :name "Political Ties"
-                  :titles "Ambassador, Minister, Politician, Senator")
-                "Religious Ties"
-                 (ability
-                  :name "Religious Ties")
-                "Train Follower"
-                 (ability
-                  :name "Train Follower")
-                "Underworld Ties"
-                 (ability
-                  :name "Underworld Ties")
-                :Windfall
-                 (ability
-                  :name "Windfall"))
-              :specialtymap
-               (specialtymap
-                :Nobility
-                 (specialty
-                  :name "Nobility"
-                  :titles "Noble Lineage")
-                :Royalty
-                 (specialty
-                  :name "Royalty"
-                  :titles "Royal Lineage")))
-            :Intimidation
-             (skill
-              :name "Intimidation"
-              :reference
-               "* I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain. - Bene Gesserit Litany, Dune
+            :Intrigue
+             (ability
+              :name "Intrigue")
+            :Investing
+             (ability
+              :name "Investing")
+            "Judicial Ties"
+             (ability
+              :name "Judicial Ties")
+            "Law Enforcement Ties"
+             (ability
+              :name "Law Enforcement Ties")
+            "License to Kill"
+             (ability
+              :name "License to Kill")
+            :Mansion
+             (ability
+              :name "Mansion")
+            "Media Ties"
+             (ability
+              :name "Media Ties")
+            "Night Club"
+             (ability
+              :name "Night Club")
+            "Noble Birth"
+             (ability
+              :name "Noble Birth")
+            "Official Title"
+             (ability
+              :name "Official Title")
+            "Political Ties"
+             (ability
+              :name "Political Ties"
+              :titles "Ambassador, Minister, Politician, Senator")
+            "Religious Ties"
+             (ability
+              :name "Religious Ties")
+            "Train Follower"
+             (ability
+              :name "Train Follower")
+            "Underworld Ties"
+             (ability
+              :name "Underworld Ties")
+            :Windfall
+             (ability
+              :name "Windfall"))
+          :specialtymap
+           (specialtymap
+            :Nobility
+             (specialty
+              :name "Nobility"
+              :titles "Noble Lineage")
+            :Royalty
+             (specialty
+              :name "Royalty"
+              :titles "Royal Lineage")))
+        :Intimidation
+         (skill
+          :name "Intimidation"
+          :reference
+           "* I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain. - Bene Gesserit Litany, Dune
 * They tell him they want his territory: all his business. Soze looks over the faces of his family, then he showed these men of will what will really was. He tells him he would rather see his family dead, than live another day after this. ... He waits until his wife and kids are in the ground, and then he goes after the rest of the mob. He kills their kids. He kills their wives. He kills their parents and their parents friends. He burns down the houses they live in and the stores they work in. He kills people who owe them money. And like that, he's gone. - Verbal Kint, Usual Suspects"
-              :titles "Demagogue, Enforcer, Fearmonger, Overseer, Pimp, Slave Lord, Slaver, Tormentor, Torturer"
-              :stat "Shadow"
-              :abilitymap
-               (abilitymap
-                :Coercion
-                 (ability
-                  :name "Coercion"
-                  :reference "* The boat will be ready for you on Friday. If I see you or any of your friends before then, Miss. Finneran will find herself the victim of a most gruesome violation before she dies. As will your father, Mr. Hockney, and your Uncle Randall in Arizona, Mr. Kint. I might only castrate Mr. McManus's nephew, David. Do I make myself clear? - Kobayashi, Usual Suspects")
-                "Death March"
-                 (ability
-                  :name "Death March"
-                  :summary "* Increase movement of allies within level spaces. Sustained use of this ability runs the risk of injuring or killing some allies.")
-                :Duress
-                 (ability
-                  :name "Duress")
-                :Enslave
-                 (ability
-                  :name "Enslave"
-                  :reference "Did you know that pain causes the formation of the strongest chemical bonds in the mammalian brain?  Whip a dog, and it keeps coming back... At first it will hope that you'll stop, but after a while, it won't even know the difference. But you already know all about that don't you?... Time melted away into the pain... Finally something clicked over in his head and reality rushed back in around him, clearer and sharper than ever before... Staring he made out faces. Faces not unlike his own reflection he had seen only an eternity ago. Faces distended in howling agony... eyes welling with tears of blood, eyes that all turned toward Her, crying in admiration. - Mage: The Book of Madness")
-                "Grip of Fear"
-                 (ability
-                  :name "Grip of Fear"
-                  :reference "* It was Keyser Soze, Agent Kujan. I mean the Devil himself. How do you shoot the devil in the back? What if you miss? - Verbal, Usual Suspects")
-                :Interrogate
-                 (ability
-                  :name "Interrogate"
-                  :reference
-                   "* I'm gonna ask you one more goddamn time, and if you still 'respectfully refuse,' I'm callin' the Bear Jew over here, and he's gonna take that big-ole bat of his, and he's gonna beat you to death with it. Now take your wiener schnitzel lickin' finger and point out on this map what I want to know...We got a German here who wants to die for his country! Oblige him! - Lt. Aldo Raine, Inglourious Basterds
+          :titles "Demagogue, Enforcer, Fearmonger, Overseer, Pimp, Slave Lord, Slaver, Tormentor, Torturer"
+          :stat "Shadow"
+          :abilitymap
+           (abilitymap
+            :Coercion
+             (ability
+              :name "Coercion"
+              :reference "* The boat will be ready for you on Friday. If I see you or any of your friends before then, Miss. Finneran will find herself the victim of a most gruesome violation before she dies. As will your father, Mr. Hockney, and your Uncle Randall in Arizona, Mr. Kint. I might only castrate Mr. McManus's nephew, David. Do I make myself clear? - Kobayashi, Usual Suspects")
+            "Death March"
+             (ability
+              :name "Death March"
+              :summary "* Increase movement of allies within level spaces. Sustained use of this ability runs the risk of injuring or killing some allies.")
+            :Duress
+             (ability
+              :name "Duress")
+            :Enslave
+             (ability
+              :name "Enslave"
+              :reference "Did you know that pain causes the formation of the strongest chemical bonds in the mammalian brain?  Whip a dog, and it keeps coming back... At first it will hope that you'll stop, but after a while, it won't even know the difference. But you already know all about that don't you?... Time melted away into the pain... Finally something clicked over in his head and reality rushed back in around him, clearer and sharper than ever before... Staring he made out faces. Faces not unlike his own reflection he had seen only an eternity ago. Faces distended in howling agony... eyes welling with tears of blood, eyes that all turned toward Her, crying in admiration. - Mage: The Book of Madness")
+            "Grip of Fear"
+             (ability
+              :name "Grip of Fear"
+              :reference "* It was Keyser Soze, Agent Kujan. I mean the Devil himself. How do you shoot the devil in the back? What if you miss? - Verbal, Usual Suspects")
+            :Interrogate
+             (ability
+              :name "Interrogate"
+              :reference
+               "* I'm gonna ask you one more goddamn time, and if you still 'respectfully refuse,' I'm callin' the Bear Jew over here, and he's gonna take that big-ole bat of his, and he's gonna beat you to death with it. Now take your wiener schnitzel lickin' finger and point out on this map what I want to know...We got a German here who wants to die for his country! Oblige him! - Lt. Aldo Raine, Inglourious Basterds
 * You don't need that. I'll tell you everything. Yes...I know you will. - Raiders of the Lost Ark")
-                :Intimidate
-                 (ability
-                  :name "Intimidate"
-                  :reference
-                   "* Your timing is impeccable. Pity you were all they sent... The Fatui would do well to update their intelligence concerning me. Ah, but of course, that would require one of you to return in one piece. - Ayato, Genshin Impact
+            :Intimidate
+             (ability
+              :name "Intimidate"
+              :reference
+               "* Your timing is impeccable. Pity you were all they sent... The Fatui would do well to update their intelligence concerning me. Ah, but of course, that would require one of you to return in one piece. - Ayato, Genshin Impact
 * ...to the death. No. To the pain. I don't think I'm quite familiar with that phrase. ... To the pain means the first thing you will lose will be your feet below the ankles. Then your hands at the wrists. Next your nose. ...And then my ears, I understand let's get on with it. WRONG. Your ears you keep and I'll tell you why. So that every shriek of every child at seeing your hideousness will be yours to cherish. Every babe that weeps at your approach, every woman who cries out, 'Dear God! What is that THING?,' will echo in your perfect ears. That is what to the pain means. It means I leave you in anguish, wallowing in freakish misery ... forever. ...I think you're bluffing. It's possible, Pig, I might be bluffing. It's conceivable, you miserable, vomitous mass, that I'm only lying here because I lack the strength to stand. But, then again... perhaps I have the strength after all. - Princess Bride"
-                  :summary "* A form of bluffing")
-                "Reign of Terror"
-                 (ability
-                  :name "Reign of Terror"
-                  :summary "* Use to rally troops")
-                :Terrorize
-                 (ability
-                  :name "Terrorize"
-                  :summary "* [Attack]: Any [Critical Hits] may be [Retreats]")
-                :Torment
-                 (ability
-                  :name "Torment")
-                :Torture
-                 (ability
-                  :name "Torture"
-                  :reference "* Your cries of agony, where will they not reach?  Where on Citaeron will they not re-echo?  No man living will meet a doom more terrible than yours. - Sophocles, Oedipus Rex")))
-            :Law
-             (skill
-              :name "Law"
-              :titles "Bailiff, Constable, Executioner, Judge, Lawbringer, Lawyer, Litigant, Magistrate, Peace Officer, Peacekeeper, Police Officer"
-              :stat "Mind"
-              :abilitymap
-               (abilitymap
-                :Authority
-                 (ability
-                  :name "Authority")
-                "Blind Justice"
-                 (ability
-                  :name "Blind Justice")
-                "Call In Backup"
-                 (ability
-                  :name "Call In Backup"
-                  :summary "Bring me everyone.  What do you mean 'everyone'?  E-V-E-R-Y-O-N-E! - Stansfield and Benny - Leon the Professional")
-                :Condemn
-                 (ability
-                  :name "Condemn")
-                :Confiscate
-                 (ability
-                  :name "Confiscate")
-                "Crime and Punishment"
-                 (ability
-                  :name "Crime and Punishment")
-                "Crowd Control"
-                 (ability
-                  :name "Crowd Control")
-                "Detective Work"
-                 (ability
-                  :name "Detective Work"
-                  :reference "* To a cop the explanation is never that complicated. It's always simple. There's no mystery to the street, no arch criminal behind it all. If you got a dead body and you think his brother did it, you're gonna find out you're right. - Verbal, Usual Suspects")
-                :Dragnet
-                 (ability
-                  :name "Dragnet"
-                  :reference "* Our fugitive has been on the run for ninety minutes. Average foot speed over uneven ground barring injuries is 4 miles-per-hour. That gives us a radius of six miles. What I want from each and every one of you is a hard-target search of every gas station, residence, warehouse, farmhouse, henhouse, outhouse and doghouse in that area. - The Fugitive"
-                  :summary "* Search a large area for a fugitive.")
-                :Exile
-                 (ability
-                  :name "Exile")
-                :Exonerate
-                 (ability
-                  :name "Exonerate")
-                :Judgment
-                 (ability
-                  :name "Judgment"
-                  :reference "* I am the law! - Judge Dredd")
-                :Precedent
-                 (ability
-                  :name "Precedent")
-                :Prosecute
-                 (ability
-                  :name "Prosecute")
-                "Scales of Justice"
-                 (ability
-                  :name "Scales of Justice")
-                :Shakedown
-                 (ability
-                  :name "Shakedown"
-                  :reference "* How many times you been in a lineup? It's always you and four dummies. PD are paying homeless guys $10 a head half the time. And there's no way they'd line five felons in the same row. No way - Keaton, Usual Suspects")
-                :Trial
-                 (ability
-                  :name "Trial")))
-            :Performance
-             (skill
-              :name "Performance"
-              :reference "* Ahh, the denouement. - Jhin, Runeterra"
-              :titles "Entertainer, Performer, Jester, Juggler"
-              :stat "Spirit"
-              :abilitymap
-               (abilitymap
-                :Allure
-                 (ability
-                  :name "Allure")
-                :Amplify
-                 (ability
-                  :name "Amplify"
-                  :reference "These go to eleven. - This is Spinal Tap"
-                  :summary "* A performer must be able to be heard. This ability maximizes the acoustics available and allows the performer's message to be heard.")
-                :Ballad
-                 (ability
-                  :name "Ballad")
-                "Ballroom Dance"
-                 (ability
-                  :name "Ballroom Dance")
-                "Break Dance"
-                 (ability
-                  :name "Break Dance")
-                :Calm
-                 (ability
-                  :name "Calm"
-                  :titles "Pacify, Soothe the Savage")
-                "Captivating Song"
-                 (ability
-                  :name "Captivating Song"
-                  :summary "* For each success, the targets Move is reduced by 1.")
-                :Comedy
-                 (ability
-                  :name "Comedy"
-                  :titles "Clown, Comedian, Mime, Jester")
-                :Crescendo
-                 (ability
-                  :name "Crescendo")
-                :Dirge
-                 (ability
-                  :name "Dirge"
-                  :summary
-                   "* Opponents in Radius are cloaked in despair.
+              :summary "* A form of bluffing")
+            "Reign of Terror"
+             (ability
+              :name "Reign of Terror"
+              :summary "* Use to rally troops")
+            :Terrorize
+             (ability
+              :name "Terrorize"
+              :summary "* [Attack]: Any [Critical Hits] may be [Retreats]")
+            :Torment
+             (ability
+              :name "Torment")
+            :Torture
+             (ability
+              :name "Torture"
+              :reference "* Your cries of agony, where will they not reach?  Where on Citaeron will they not re-echo?  No man living will meet a doom more terrible than yours. - Sophocles, Oedipus Rex")))
+        :Law
+         (skill
+          :name "Law"
+          :titles "Bailiff, Constable, Executioner, Judge, Lawbringer, Lawyer, Litigant, Magistrate, Peace Officer, Peacekeeper, Police Officer"
+          :stat "Mind"
+          :abilitymap
+           (abilitymap
+            :Authority
+             (ability
+              :name "Authority")
+            "Blind Justice"
+             (ability
+              :name "Blind Justice")
+            "Call In Backup"
+             (ability
+              :name "Call In Backup"
+              :summary "Bring me everyone.  What do you mean 'everyone'?  E-V-E-R-Y-O-N-E! - Stansfield and Benny - Leon the Professional")
+            :Condemn
+             (ability
+              :name "Condemn")
+            :Confiscate
+             (ability
+              :name "Confiscate")
+            "Crime and Punishment"
+             (ability
+              :name "Crime and Punishment")
+            "Crowd Control"
+             (ability
+              :name "Crowd Control")
+            "Detective Work"
+             (ability
+              :name "Detective Work"
+              :reference "* To a cop the explanation is never that complicated. It's always simple. There's no mystery to the street, no arch criminal behind it all. If you got a dead body and you think his brother did it, you're gonna find out you're right. - Verbal, Usual Suspects")
+            :Dragnet
+             (ability
+              :name "Dragnet"
+              :reference "* Our fugitive has been on the run for ninety minutes. Average foot speed over uneven ground barring injuries is 4 miles-per-hour. That gives us a radius of six miles. What I want from each and every one of you is a hard-target search of every gas station, residence, warehouse, farmhouse, henhouse, outhouse and doghouse in that area. - The Fugitive"
+              :summary "* Search a large area for a fugitive.")
+            :Exile
+             (ability
+              :name "Exile")
+            :Exonerate
+             (ability
+              :name "Exonerate")
+            :Judgment
+             (ability
+              :name "Judgment"
+              :reference "* I am the law! - Judge Dredd")
+            :Precedent
+             (ability
+              :name "Precedent")
+            :Prosecute
+             (ability
+              :name "Prosecute")
+            "Scales of Justice"
+             (ability
+              :name "Scales of Justice")
+            :Shakedown
+             (ability
+              :name "Shakedown"
+              :reference "* How many times you been in a lineup? It's always you and four dummies. PD are paying homeless guys $10 a head half the time. And there's no way they'd line five felons in the same row. No way - Keaton, Usual Suspects")
+            :Trial
+             (ability
+              :name "Trial")))
+        :Performance
+         (skill
+          :name "Performance"
+          :reference "* Ahh, the denouement. - Jhin, Runeterra"
+          :titles "Entertainer, Performer, Jester, Juggler"
+          :stat "Spirit"
+          :abilitymap
+           (abilitymap
+            :Allure
+             (ability
+              :name "Allure")
+            :Amplify
+             (ability
+              :name "Amplify"
+              :reference "These go to eleven. - This is Spinal Tap"
+              :summary "* A performer must be able to be heard. This ability maximizes the acoustics available and allows the performer's message to be heard.")
+            :Ballad
+             (ability
+              :name "Ballad")
+            "Ballroom Dance"
+             (ability
+              :name "Ballroom Dance")
+            "Break Dance"
+             (ability
+              :name "Break Dance")
+            :Calm
+             (ability
+              :name "Calm"
+              :titles "Pacify, Soothe the Savage")
+            "Captivating Song"
+             (ability
+              :name "Captivating Song"
+              :summary "* For each success, the targets Move is reduced by 1.")
+            :Comedy
+             (ability
+              :name "Comedy"
+              :titles "Clown, Comedian, Mime, Jester")
+            :Crescendo
+             (ability
+              :name "Crescendo")
+            :Dirge
+             (ability
+              :name "Dirge"
+              :summary
+               "* Opponents in Radius are cloaked in despair.
 * [Passive]
 * [Continuous]: [Retreats] are increased by 1 for all opponents within the radius."
-                  :titles "Demoralize, Song of Fear")
-                :Discord
-                 (ability
-                  :name "Discord"
-                  :summary
-                   "* A sudden sound that disrupts the natural flow of existing sounds.
+              :titles "Demoralize, Song of Fear")
+            :Discord
+             (ability
+              :name "Discord"
+              :summary
+               "* A sudden sound that disrupts the natural flow of existing sounds.
 * The secret to this skill is to pick the most inappropriate sound at the most inappropriate time.
 * The result is extremely distracting and will cancel other effects based on sound including other Communication abilities."
-                  :titles "Cacaphony")
-                :Disguise
-                 (ability
-                  :name "Disguise")
-                :Fanfare
-                 (ability
-                  :name "Fanfare"
-                  :summary "* A cheering audience increases an entertrainer's power.")
-                "Gabriel's Horn"
-                 (ability
-                  :name "Gabriel's Horn"
-                  :summary
-                   "* [Requires]: Horn
+              :titles "Cacaphony")
+            :Disguise
+             (ability
+              :name "Disguise")
+            :Fanfare
+             (ability
+              :name "Fanfare"
+              :summary "* A cheering audience increases an entertrainer's power.")
+            "Gabriel's Horn"
+             (ability
+              :name "Gabriel's Horn"
+              :summary
+               "* [Requires]: Horn
 * Damages Walls of any kind")
-                :Harmonize
-                 (ability
-                  :name "Harmonize")
-                :Heartstrings
-                 (ability
-                  :name "Heartstrings"
-                  :reference "* Strumming my pain with his fingers. Singing my life with his words. Killing me softly with his song. Killing me softly with his song telling my whole life with his song. - The Fugees, Killing Me Softly")
-                "Hip Hop Dance"
-                 (ability
-                  :name "Hip Hop Dance")
-                :Imitation
-                 (ability
-                  :name "Imitation")
-                :Impersonation
-                 (ability
-                  :name "Impersonation")
-                :Incite
-                 (ability
-                  :name "Incite")
-                :Inspiration
-                 (ability
-                  :name "Inspiration"
-                  :summary
-                   "* Allies in Radius are Continuously inspired to greater feats by this ability.
+            :Harmonize
+             (ability
+              :name "Harmonize")
+            :Heartstrings
+             (ability
+              :name "Heartstrings"
+              :reference "* Strumming my pain with his fingers. Singing my life with his words. Killing me softly with his song. Killing me softly with his song telling my whole life with his song. - The Fugees, Killing Me Softly")
+            "Hip Hop Dance"
+             (ability
+              :name "Hip Hop Dance")
+            :Imitation
+             (ability
+              :name "Imitation")
+            :Impersonation
+             (ability
+              :name "Impersonation")
+            :Incite
+             (ability
+              :name "Incite")
+            :Inspiration
+             (ability
+              :name "Inspiration"
+              :summary
+               "* Allies in Radius are Continuously inspired to greater feats by this ability.
 * [Passive]
 * [Continuous]: [Retreats] are reduced by 1 for all allies within the radius.")
-                :Juggling
-                 (ability
-                  :name "Juggling"
-                  :summary
-                   "* Besides juggling objects, this ability allows the user to catch objects.
+            :Juggling
+             (ability
+              :name "Juggling"
+              :summary
+               "* Besides juggling objects, this ability allows the user to catch objects.
 * [Reaction]: When an object is thrown at a space within one space of the user, roll vs. the [Attack], the object is caught if any [Hits] are scored. Further, the user may immediately throw the object using [Juggling] level as attack value.")
-                :Lullaby
-                 (ability
-                  :name "Lullaby")
-                "Performance Art"
-                 (ability
-                  :name "Performance Art"
-                  :reference "Cirque de Soleil")
-                "Pole Dance"
-                 (ability
-                  :name "Pole Dance")
-                :Requiem
-                 (ability
-                  :name "Requiem")
-                "Salsa Dance"
-                 (ability
-                  :name "Salsa Dance")
-                :Satirize
-                 (ability
-                  :name "Satirize")
-                :Serenade
-                 (ability
-                  :name "Serenade")
-                :Sexpertise
-                 (ability
-                  :name "Sexpertise"
-                  :reference "* If you don't like the company, let's just do it you and me...you and me...or three...or four, on the floor. - Britney Spears, Three")
-                :Silence
-                 (ability
-                  :name "Silence")
-                "Siren Song"
-                 (ability
-                  :name "Siren Song"
-                  :summary "* [Action]: For each success, during its turn, the target must use half of its [Move] to approach the singer.")
-                :Speeches
-                 (ability
-                  :name "Speeches")
-                :Song
-                 (ability
-                  :name "Song")
-                :Storytelling
-                 (ability
-                  :name "Storytelling"
-                  :titles "Storyteller")
-                :Style
-                 (ability
-                  :name "Style")
-                :Tango
-                 (ability
-                  :name "Tango")
-                :Waltz
-                 (ability
-                  :name "Waltz")
-                "War Song"
-                 (ability
-                  :name "War Song"
-                  :reference "Battle Hymn, Glorious Anthem")
-                "Work Song"
-                 (ability
-                  :name "Work Song"))
-              :specialtymap
-               (specialtymap
-                :Courtesan
-                 (specialty
-                  :name "Courtesan"
-                  :reference "* Madame Kaji: We've been servicing the road-weary crotches of every man here to pay obeisance to your new family. You need service only one, freshly washed. Akemi: You don't understand. Madame Kaji: That he's a beast. He's weak. He's a man. All men are weak. The ones who act beastly are weakest. They penetrate women and think that makes them powerful. Really, their pricks are fragile. Exposed. You saw it yourself. They want to be diapered, spanked, and breastfed, then strut away like they conquered an army. Nurture his weakness. Be his strength, and he'll worship you. Akemi: I, don't know if I can. Madame Kaji: Stop running to and from men, and decide what you want for your fucking self. Akemi: I want to be in control of my life. Madame Kaji: Then take control of his, Princess - Madame Kaji and Akemi, Blue Eye Samurai"
-                  :summary "* A prostitute, especially one whose clients are members of a royal court or of high social standing.")
-                :Dance
-                 (specialty
-                  :name "Dance"
-                  :summary "Ballroom Dance, Break Dance, Hip Hop Dance, Pole Dance, Salsa Dance, Tango, Waltz")
-                :Music
-                 (specialty
-                  :name "Music"
-                  :summary
-                   "* Song, Musical Instrument
+            :Lullaby
+             (ability
+              :name "Lullaby")
+            "Performance Art"
+             (ability
+              :name "Performance Art"
+              :reference "Cirque de Soleil")
+            "Pole Dance"
+             (ability
+              :name "Pole Dance")
+            :Requiem
+             (ability
+              :name "Requiem")
+            "Salsa Dance"
+             (ability
+              :name "Salsa Dance")
+            :Satirize
+             (ability
+              :name "Satirize")
+            :Serenade
+             (ability
+              :name "Serenade")
+            :Sexpertise
+             (ability
+              :name "Sexpertise"
+              :reference "* If you don't like the company, let's just do it you and me...you and me...or three...or four, on the floor. - Britney Spears, Three")
+            :Silence
+             (ability
+              :name "Silence")
+            "Siren Song"
+             (ability
+              :name "Siren Song"
+              :summary "* [Action]: For each success, during its turn, the target must use half of its [Move] to approach the singer.")
+            :Speeches
+             (ability
+              :name "Speeches")
+            :Song
+             (ability
+              :name "Song")
+            :Storytelling
+             (ability
+              :name "Storytelling"
+              :titles "Storyteller")
+            :Style
+             (ability
+              :name "Style")
+            :Tango
+             (ability
+              :name "Tango")
+            :Waltz
+             (ability
+              :name "Waltz")
+            "War Song"
+             (ability
+              :name "War Song"
+              :reference "Battle Hymn, Glorious Anthem")
+            "Work Song"
+             (ability
+              :name "Work Song"))
+          :specialtymap
+           (specialtymap
+            :Courtesan
+             (specialty
+              :name "Courtesan"
+              :reference "* Madame Kaji: We've been servicing the road-weary crotches of every man here to pay obeisance to your new family. You need service only one, freshly washed. Akemi: You don't understand. Madame Kaji: That he's a beast. He's weak. He's a man. All men are weak. The ones who act beastly are weakest. They penetrate women and think that makes them powerful. Really, their pricks are fragile. Exposed. You saw it yourself. They want to be diapered, spanked, and breastfed, then strut away like they conquered an army. Nurture his weakness. Be his strength, and he'll worship you. Akemi: I, don't know if I can. Madame Kaji: Stop running to and from men, and decide what you want for your fucking self. Akemi: I want to be in control of my life. Madame Kaji: Then take control of his, Princess - Madame Kaji and Akemi, Blue Eye Samurai"
+              :summary "* A prostitute, especially one whose clients are members of a royal court or of high social standing.")
+            :Dance
+             (specialty
+              :name "Dance"
+              :summary "Ballroom Dance, Break Dance, Hip Hop Dance, Pole Dance, Salsa Dance, Tango, Waltz")
+            :Music
+             (specialty
+              :name "Music"
+              :summary
+               "* Song, Musical Instrument
 * The power of music lies in its ability to tell truths that we willing listen to even if they are unpleasant.
 * See Equipment for Musical Instruments
 * Musical Instruments may be used with any performance power to increase any Range or Radius by 1 Space."
-                  :titles "Bard, Classical, Drummer, Guitarist, Harpist, Hip-Hop, Jazz, Lyrist, Minstrel, Musician, Piper, Pop, Rap, Rhapsode, Rock, Skald, Troubadour")
-                :Acting
-                 (specialty
-                  :name "Acting"
-                  :reference "* Acting! - Master Thespian, Saturday Night Live"
-                  :titles "Drama Queen, Master Thespian, Theater Brat, Thespian")))
-            :Persuasion
-             (skill
-              :name "Persuasion"
-              :titles "Fast Talker, Silver Tongue Devil, Smooth Operator"
-              :abilitymap
-               (abilitymap
-                :Bluff
-                 (ability
-                  :name "Bluff")
-                :Credibility
-                 (ability
-                  :name "Credibility"
-                  :summary "* The ability to convince large groups of people that you are telling the truth.")
-                :Debate
-                 (ability
-                  :name "Debate")
-                "Fast Talk"
-                 (ability
-                  :name "Fast Talk")
-                :Lying
-                 (ability
-                  :name "Lying"
-                  :titles "Fibbing")
-                :Manipulation
-                 (ability
-                  :name "Manipulation")
-                :Pickup
-                 (ability
-                  :name "Pickup")
-                :Seduction
-                 (ability
-                  :name "Seduction"
-                  :reference
-                   "* But what of all those sweet words you spoke in private?  Oh that's just what we call pillow talk, baby, that's all. - Ash, Army of Darkness
+              :titles "Bard, Classical, Drummer, Guitarist, Harpist, Hip-Hop, Jazz, Lyrist, Minstrel, Musician, Piper, Pop, Rap, Rhapsode, Rock, Skald, Troubadour")
+            :Acting
+             (specialty
+              :name "Acting"
+              :reference "* Acting! - Master Thespian, Saturday Night Live"
+              :titles "Drama Queen, Master Thespian, Theater Brat, Thespian")))
+        :Persuasion
+         (skill
+          :name "Persuasion"
+          :titles "Fast Talker, Silver Tongue Devil, Smooth Operator"
+          :abilitymap
+           (abilitymap
+            :Bluff
+             (ability
+              :name "Bluff")
+            :Credibility
+             (ability
+              :name "Credibility"
+              :summary "* The ability to convince large groups of people that you are telling the truth.")
+            :Debate
+             (ability
+              :name "Debate")
+            "Fast Talk"
+             (ability
+              :name "Fast Talk")
+            :Lying
+             (ability
+              :name "Lying"
+              :titles "Fibbing")
+            :Manipulation
+             (ability
+              :name "Manipulation")
+            :Pickup
+             (ability
+              :name "Pickup")
+            :Seduction
+             (ability
+              :name "Seduction"
+              :reference
+               "* But what of all those sweet words you spoke in private?  Oh that's just what we call pillow talk, baby, that's all. - Ash, Army of Darkness
 * But you don't understand. That men are weak? 
 * Guess I must be dumb. She had a pocket full of horses, trojan and some of them used... I guess I should have closed my eyes when you drove me to the pace where your horses run free. Cause I felt a little ill when I saw all the pictures of the jockeys that were there before me. Believe it or not, I started to worry. I wondered if I had enough class. But it was Saturday night, I guess that makes it alright. And you say, Baby have you got enough gas? Oh, Yeah! - Prince, Little Red Corvette"
-                  :titles "Femme Fatale, Vamp")
-                "Silver Tongue"
-                 (ability
-                  :name "Silver Tongue")
-                "Swords to Plowshares"
-                 (ability
-                  :name "Swords to Plowshares"
-                  :summary "* Sincerly convince a rival to choose peace over conflict.")))
-            "Social Sciences"
-             (skill
-              :name "Social Sciences"
-              :abilitymap
-               (abilitymap
-                :Anthropology
-                 (ability
-                  :name "Anthropology"
-                  :summary "* The study of cultures, customs, habits, race, tribes, gangs, and other group affliations and interactions.")
-                "Breaking Point"
-                 (ability
-                  :name "Breaking Point"
-                  :summary "* Determine psychological weaknesses (phobias, addictions, obsessions, etc.)")
-                "Determine Motivation"
-                 (ability
-                  :name "Determine Motivation")
-                :Philosophy
-                 (ability
-                  :name "Philosophy")
-                :Profile
-                 (ability
-                  :name "Profile")
-                :Psychoanalyze
-                 (ability
-                  :name "Psychoanalyze")
-                :Psychology
-                 (ability
-                  :name "Psychology")
-                :Sociology
-                 (ability
-                  :name "Sociology")
-                :Teaching
-                 (ability
-                  :name "Teaching"
-                  :reference "* The true master is an eternal student. - Master Yi, Runeterra"
-                  :titles "Educator")
-                :Theology
-                 (ability
-                  :name "Theology"
-                  :summary "* Knowledge about the history, customs, and objects of religions. Though the focus is on a particular religion, Theology includes some understanding of all religions.")))
-            :Stealth
-             (skill
-              :name "Stealth"
-              :titles "Stalker"
-              :stat "Body"
-              :abilitymap
-               (abilitymap
-                :Ambush
-                 (ability
-                  :name "Ambush")
-                :Backstab
-                 (ability
-                  :name "Backstab"
-                  :summary
-                   "* [Action]: Gain [+1 Synergy] when [Flanking] target in Close Combat.
+              :titles "Femme Fatale, Vamp")
+            "Silver Tongue"
+             (ability
+              :name "Silver Tongue")
+            "Swords to Plowshares"
+             (ability
+              :name "Swords to Plowshares"
+              :summary "* Sincerly convince a rival to choose peace over conflict.")))
+        "Social Sciences"
+         (skill
+          :name "Social Sciences"
+          :abilitymap
+           (abilitymap
+            :Anthropology
+             (ability
+              :name "Anthropology"
+              :summary "* The study of cultures, customs, habits, race, tribes, gangs, and other group affliations and interactions.")
+            "Breaking Point"
+             (ability
+              :name "Breaking Point"
+              :summary "* Determine psychological weaknesses (phobias, addictions, obsessions, etc.)")
+            "Determine Motivation"
+             (ability
+              :name "Determine Motivation")
+            :Philosophy
+             (ability
+              :name "Philosophy")
+            :Profile
+             (ability
+              :name "Profile")
+            :Psychoanalyze
+             (ability
+              :name "Psychoanalyze")
+            :Psychology
+             (ability
+              :name "Psychology")
+            :Sociology
+             (ability
+              :name "Sociology")
+            :Teaching
+             (ability
+              :name "Teaching"
+              :reference "* The true master is an eternal student. - Master Yi, Runeterra"
+              :titles "Educator")
+            :Theology
+             (ability
+              :name "Theology"
+              :summary "* Knowledge about the history, customs, and objects of religions. Though the focus is on a particular religion, Theology includes some understanding of all religions.")))
+        :Stealth
+         (skill
+          :name "Stealth"
+          :titles "Stalker"
+          :stat "Body"
+          :abilitymap
+           (abilitymap
+            :Ambush
+             (ability
+              :name "Ambush")
+            :Backstab
+             (ability
+              :name "Backstab"
+              :summary
+               "* [Action]: Gain [+1 Synergy] when [Flanking] target in Close Combat.
 * [Action]: Gain [+1 Synergy] per [Level] when in the target's Blind Spot in Close Combat."
-                  :titles "Back Biter, Back Stabber, Opportunist, Traitor")
-                "Blend into the Crowd"
-                 (ability
-                  :name "Blend into the Crowd"
-                  :summary
-                   "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
+              :titles "Back Biter, Back Stabber, Opportunist, Traitor")
+            "Blend into the Crowd"
+             (ability
+              :name "Blend into the Crowd"
+              :summary
+               "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
 * [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
-                :Camouflage
-                 (ability
-                  :name "Camouflage"
-                  :summary
-                   "* [Continuous]: While active, unit is hidden.
+            :Camouflage
+             (ability
+              :name "Camouflage"
+              :summary
+               "* [Continuous]: While active, unit is hidden.
 * [Defense]: +1 Defense in [Terrain].
 * [Roll]: Skill - Move this turn.
 * [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
-                "Cloak and Dagger"
-                 (ability
-                  :name "Cloak and Dagger"
-                  :summary "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
-                :Hide
-                 (ability
-                  :name "Hide"
-                  :summary "* Find a hiding place in an area where you will not normally be detected.")
-                :Seek
-                 (ability
-                  :name "Seek"
-                  :summary "* Discover the location of someone using [Stealth]."
-                  :titles "Detect Stealth")
-                :Sneak
-                 (ability
-                  :name "Sneak"
-                  :summary "* Move silently")
-                "Sneak Attack"
-                 (ability
-                  :name "Sneak Attack"
-                  :titles "Suprise Attack")
-                :Stalk
-                 (ability
-                  :name "Stalk"
-                  :summary
-                   "* The ability to move carefully to avoid detection.
+            "Cloak and Dagger"
+             (ability
+              :name "Cloak and Dagger"
+              :summary "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
+            :Hide
+             (ability
+              :name "Hide"
+              :summary "* Find a hiding place in an area where you will not normally be detected.")
+            :Seek
+             (ability
+              :name "Seek"
+              :summary "* Discover the location of someone using [Stealth]."
+              :titles "Detect Stealth")
+            :Sneak
+             (ability
+              :name "Sneak"
+              :summary "* Move silently")
+            "Sneak Attack"
+             (ability
+              :name "Sneak Attack"
+              :titles "Suprise Attack")
+            :Stalk
+             (ability
+              :name "Stalk"
+              :summary
+               "* The ability to move carefully to avoid detection.
 * [Requires]: No other action may be performed this turn.
 * [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
-                "Strike and Fade"
-                 (ability
-                  :name "Strike and Fade"
-                  :summary
-                   "* [Requires]: No other action may be performed this turn.
+            "Strike and Fade"
+             (ability
+              :name "Strike and Fade"
+              :summary
+               "* [Requires]: No other action may be performed this turn.
 * [Attack]: After this attack, if you have sufficient Move remaining, move 1 space.")
-                :Tailing
-                 (ability
-                  :name "Tailing"
-                  :summary "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed.")
-                "Without a Trace"
-                 (ability
-                  :name "Without a Trace"))))))))))
+            :Tailing
+             (ability
+              :name "Tailing"
+              :summary "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed.")
+            "Without a Trace"
+             (ability
+              :name "Without a Trace"))))))))

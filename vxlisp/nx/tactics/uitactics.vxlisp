@@ -1,0 +1,63 @@
+(package nx/tactics/uitactics
+ :libs (lib base :path nx/tactics/base)
+       (lib ui   :path vx/ui/ui)
+ :doc "Tactics UI")
+
+(func ui-app : ui/ui
+ (let : ui/ui
+  [background : ui/ui    := (ui-app-background)
+   home       : ui/ui    := (ui-app-home)
+   nav        : ui/ui    := (ui-app-nav)
+   navbar     : ui/ui    := (ui-app-navbar)
+   parallax   : ui/ui    := (ui-app-parallax)
+   status     : ui/ui    := (ui-app-status)
+   uimap      : ui/uimap := (ui/uimap
+                             :background background
+                             :home       home
+                             :nav        nav
+                             :navbar     navbar
+                             :parallax   parallax)]
+  (ui/ui
+   :uilayout ui/uilayout-app
+   :uimap uimap
+   :uistyle (ui-app-style)))
+ :doc "Returns the template for the app ui.")
+
+(func ui-app<-tactics : ui/ui
+ [tactics : base/tactics]
+ (let : ui/ui
+  [appui : ui/ui := (ui-app)]
+  (copy appui
+   :data tactics))
+ :doc "")
+
+(func ui-app-background : ui/ui)
+
+(func ui-app-home : ui/ui)
+
+(func ui-app-nav : ui/ui)
+
+(func ui-app-navbar : ui/ui)
+
+(func ui-app-parallax : ui/ui)
+
+(func ui-app-status : ui/ui)
+
+(func ui-app-style : ui/uistyle
+ :doc "Returns the style for app ui.")
+
+(func ui-unit : ui
+ :doc "Returns the template for a unit ui.")
+
+(func ui-unit-background : ui/ui)
+
+(func ui-unit-header : ui/ui)
+
+(func ui-unit-flavor : ui/ui)
+
+(func ui-unit-skillpower : ui/ui)
+
+(func ui-unit-stat : ui/ui)
+
+(func ui-unit-style : ui/uistyle
+ :doc "Returns the style for unit ui.")

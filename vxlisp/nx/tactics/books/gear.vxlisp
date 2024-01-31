@@ -2,31 +2,1391 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
- (book
+ (base/book
   :name "Gear"
   :chaptermap
-   (chaptermap
-    "Gear Overview"
-     (chapter
-      :name "Gear Overview"
-      :sectionmap
-       (sectionmap
-        "Why Tactics: Gear?"
-         (section
-          :name "Why Tactics: Gear?")))
-    "Gear Construction"
-     (chapter
-      :name "Gear Construction")
-    "Gear Items"
-     (chapter
-      :name "Gear Items"
-      :sectionmap
-       (sectionmap
-        "Unfiled Gear"
-         (section
-          :name "Unfiled Gear"
+   (base/chaptermap
+    "Gear Overview" (chapter_gear_overview)
+    "Gear Construction" (chapter_gear_construction)
+    "Gear Items" (chapter_gear_items)
+   )))
+
+(func chapter_gear_overview : base/chapter
+ (chapter
+  :name "Gear Overview"
+  :sectionmap
+   (sectionmap
+    "Why Tactics: Gear?"
+     (section
+      :name "Why Tactics: Gear?"))))
+
+(func chapter_gear_construction : base/chapter
+ (chapter
+  :name "Gear Construction"))
+
+(func chapter_gear_items : base/chapter
+ (chapter
+  :name "Gear Items"
+  :sectionmap
+   (sectionmap
+    "Alchemical Devices"
+     (section
+      :name "Alchemical Devices"
+      :itemmap
+       (itemmap
+        :Alembic
+         (item
+          :name "Alembic")
+        :Aludel
+         (item
+          :name "Aludel"
+          :summary "* The philosophical vase of the alchemist.")
+        :Athanor
+         (item
+          :name "Athanor"
+          :summary "* The philosophical furnace of the alchemist.")
+        :Bellows
+         (item
+          :name "Bellows")
+        :Blowtube
+         (item
+          :name "Blowtube")
+        :Brazier
+         (item
+          :name "Brazier")
+        :Cadeucus
+         (item
+          :name "Cadeucus")
+        :Calcinator
+         (item
+          :name "Calcinator")
+        :Censer
+         (item
+          :name "Censer")
+        :Crucible
+         (item
+          :name "Crucible")
+        :Glassware
+         (item
+          :name "Glassware")
+        :Hourglass
+         (item
+          :name "Hourglass")
+        :Inkwell
+         (item
+          :name "Inkwell")
+        "Mortar and Pestle"
+         (item
+          :name "Mortar and Pestle")
+        :Piping
+         (item
+          :name "Piping")
+        "Quill Pen"
+         (item
+          :name "Quill Pen")
+        :Retort
+         (item
+          :name "Retort")
+        "Scrying Glass"
+         (item
+          :name "Scrying Glass")
+        :Tongs
+         (item
+          :name "Tongs")
+        :Vial
+         (item
+          :name "Vial")))
+    :Poisons
+     (section
+      :name "Poisons"
+      :itemmap
+       (itemmap
+        "Narcotic Poison"
+         (item
+          :name "Narcotic Poison")
+        "Paralytic Poison"
+         (item
+          :name "Paralytic Poison")))
+    "Alchemical Substance"
+     (section
+      :name "Alchemical Substance"
+      :itemmap
+       (itemmap
+        :Alkahest
+         (item
+          :name "Alkahest"
           :summary
-           "* Acid
+           "* The universal solvent, having the power to dissolve every substance into its
+constituent elemental parts.  It cannot dissolve anything that is absolutely
+pure."
+          :titles "Alchahest, Universal Solvent")
+        :Aphrodisiac
+         (item
+          :name "Aphrodisiac")
+        "Aqua Fortis"
+         (item
+          :name "Aqua Fortis"
+          :summary "Nitric acid.  Easier to make, lesser version of Aqua Regia."
+          :titles "Strong Water")
+        "Aqua Regia"
+         (item
+          :name "Aqua Regia"
+          :summary
+           "* Highly corrosive acid made from Nitric and Hydrochloric acid.  It is one of the few reagents that dissolves gold
+and platinum."
+          :titles "Royal Water")
+        "Aqua Vitae"
+         (item
+          :name "Aqua Vitae"
+          :summary "* Magical liquid used to create artificial life, particularly the Homonculus."
+          :titles "Elixir of Vitality, Water of Life")
+        "Amber Crystal"
+         (item
+          :name "Amber Crystal")
+        "Antidote: Amnesia"
+         (item
+          :name "Antidote: Amnesia")
+        "Antidote: Blindness"
+         (item
+          :name "Antidote: Blindness")
+        "Antidote: Burns"
+         (item
+          :name "Antidote: Burns")
+        "Antidote: Curse"
+         (item
+          :name "Antidote: Curse")
+        "Antidote: Deafness"
+         (item
+          :name "Antidote: Deafness")
+        "Antidote: Disease"
+         (item
+          :name "Antidote: Disease")
+        "Antidote: Fear"
+         (item
+          :name "Antidote: Fear")
+        "Antidote: Insanity"
+         (item
+          :name "Antidote: Insanity")
+        "Antidote: Paralysis"
+         (item
+          :name "Antidote: Paralysis")
+        "Antidote: Poison"
+         (item
+          :name "Antidote: Poison")
+        "Devilroot Powder"
+         (item
+          :name "Devilroot Powder")
+        :Dipilatory
+         (item
+          :name "Dipilatory")
+        "Dream Essence"
+         (item
+          :name "Dream Essence"
+          :summary
+           "* The elusive essence from which dreams are made.  It is gathered from a subject and
+then distilled into a liquid.
+* The effects last for 2-8 hours and are very intense.
+* Effects vary by color:
+** Purple - Passion, Romance
+** Blue - Poignancy
+** Red - Violent Emotions
+** Silver - Imagination, Flights of Fancy
+** Gold - Prophetic Visions
+** Rainbow - Unpredictable
+** Black - Nightmares")
+        "Elixir of Clarity"
+         (item
+          :name "Elixir of Clarity"
+          :summary "* [Effect]: [+1 Mind]")
+        "Elixir of Healing"
+         (item
+          :name "Elixir of Healing")
+        "Elixir of Life"
+         (item
+          :name "Elixir of Life"
+          :summary "* [Effect]: Extends lifespan by 10 years. Each use of this Elixir increases the difficulty of the next use.")
+        "Elixir of Regrowth"
+         (item
+          :name "Elixir of Regrowth"
+          :summary
+           "* Effect: Drop into a coma and heals damage including repairing/regrowing damaged organs or
+limbs.")
+        "Elixir of Strength"
+         (item
+          :name "Elixir of Strength"
+          :summary "* [Effect]: [+1 Body]")
+        "Essense of Longing"
+         (item
+          :name "Essense of Longing"
+          :titles "Perfume of Attraction")
+        "Essential Quicksilver"
+         (item
+          :name "Essential Quicksilver"
+          :summary "A magically animate liquid metal used in the crafting of enchanted weapons.")
+        :Glowball
+         (item
+          :name "Glowball"
+          :summary
+           "* A glass ball that will radiate light like a torch for [Level] hours without
+requiring air.")
+        :Homonculyte
+         (item
+          :name "Homonculyte")
+        "Ice Crystals"
+         (item
+          :name "Ice Crystals"
+          :summary "Intense cold captured into powdery crystal form.")
+        "Incense of Conjuration"
+         (item
+          :name "Incense of Conjuration"
+          :summary "* [Action]: Burn for +1 [Conjuration] for the next 5 turns.")
+        "Incense of Divination"
+         (item
+          :name "Incense of Divination"
+          :summary "* [Action]: Burn for +1 [Divination] for the next 5 turns.")
+        "Incense of Dreaming"
+         (item
+          :name "Incense of Dreaming"
+          :summary "* [Action]: Burn for +1 [Dreaming] for the next 5 turns.")
+        "Incense of Shamanism"
+         (item
+          :name "Incense of Shamanism"
+          :summary "* [Action]: Burn for +1 [Shamanism] for the next 5 turns.")
+        "Lightning in a Bottle"
+         (item
+          :name "Lightning in a Bottle")
+        "Lyrium Potion"
+         (item
+          :name "Lyrium Potion"
+          :summary
+           "* Natural Lyrium is a white, radioactive dust extracted from Uranium mines.
+* Lyrium Ore - Direct contact with lyrium ore produces nausea, blistering of the skin,
+and dementia.
+* Lyrium Potions - Lyrium dust can be mixed into a potion that bestows resistance to
+magic to those who use it regularly. However, Lyrium is extremely physically and
+psychologically addictive not unlike heroin.
+* Chantry Templars are all required to take Lyrium regularly. The addictive qualities of
+Lyrium ensure that the Templars remain under Chantry control.
+* History - It is thought that Lyrium is created from Ley Lines (Dragon Lines) traveling
+through the earth.
+* [Passive]: +1 [Defense] vs. any magical effect and -1 [Action] when using any magical
+effect."
+          :titles "Radium")
+        "Makeup of Beauty"
+         (item
+          :name "Makeup of Beauty")
+        "Mandrake Powder"
+         (item
+          :name "Mandrake Powder")
+        "Oil of Slipperiness"
+         (item
+          :name "Oil of Slipperiness")
+        :Panacea
+         (item
+          :name "Panacea")
+        "Philosopher's Stone"
+         (item
+          :name "Philosopher's Stone"
+          :summary
+           "* A legendary alchemical substance said to be capable of turning base metals
+such as lead into gold (chrysopoeia) or silver. It was also sometimes believed
+to be an elixir of life, useful for rejuvenation and possibly for achieving
+immortality. For many centuries, it was the most sought-after goal in alchemy.
+The philosophers' stone is the central symbol of alchemy, symbolizing
+perfection at its finest, enlightenment, and heavenly bliss. Efforts to
+discover the philosophers' stone were known as the Magnum Opus ('Great Work').
+* The first component of the philosopher's stone is Prima Materia: 'the first
+matter of the stone is the very same with the first matter of all things.'"
+          :titles "Magnum Opus, Great Work, Stone of the Philosopher, Variable Mercury")
+        "Philtre of Courage"
+         (item
+          :name "Philtre of Courage"
+          :summary "* [Effect]: [+1 Spirit]")
+        "Philtre of Fear"
+         (item
+          :name "Philtre of Fear"
+          :summary "* [Effect]: [-1 Spirit]")
+        "Philtre of Hate"
+         (item
+          :name "Philtre of Hate")
+        "Philtre of Loyalty"
+         (item
+          :name "Philtre of Loyalty")
+        "Philtre of Love"
+         (item
+          :name "Philtre of Love"
+          :reference "Love Potion #9"
+          :titles "Love Potion, Potion of Passion")
+        "Philtre of Mirth"
+         (item
+          :name "Philtre of Mirth")
+        "Philtre of Sorrow"
+         (item
+          :name "Philtre of Sorrow")
+        "Philtre of Trechery"
+         (item
+          :name "Philtre of Trechery")
+        "Philtre of Violence"
+         (item
+          :name "Philtre of Violence"
+          :titles "Berserk Potion")
+        "Potion of Fire Resistance"
+         (item
+          :name "Potion of Fire Resistance"
+          :summary "* Effect: +1 [Defense] vs. [Fire].")
+        "Potion of Grounding"
+         (item
+          :name "Potion of Grounding"
+          :summary "* Effect: +1 [Defense] vs. [Electricity].")
+        "Potion of Healing"
+         (item
+          :name "Potion of Healing")
+        "Potion of Regeneration"
+         (item
+          :name "Potion of Regeneration")
+        "Potion of Restoration"
+         (item
+          :name "Potion of Restoration")
+        "Potion of Strength"
+         (item
+          :name "Potion of Strength")
+        "Potion of Venom"
+         (item
+          :name "Potion of Venom"
+          :summary
+           "* Effect: Body becomes a deadly storehouse of caustic venoms.  The blood,
+sweat, tears, and spit are all deadly weapons.  User is immune to its own
+effects and is also resistant to all poison, acid, and disease.")
+        "Potion of Warmth"
+         (item
+          :name "Potion of Warmth"
+          :summary "* Effect: +1 [Defense] vs. [Cold].")
+        "Potion of Water Breathing"
+         (item
+          :name "Potion of Water Breathing")
+        "Prima Materia"
+         (item
+          :name "Prima Materia"
+          :summary
+           "* The primitive formless base of all matter, the primal substance that may be
+changed into any other matter."
+          :titles "Aether, Akasha, Ether, Proteus, Quintessence")
+        "Rare Earths"
+         (item
+          :name "Rare Earths"
+          :summary
+           "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the
+innate powers of other ingredients."
+          :titles "Antimony, Cinnabar, Pitchblend, various salts, and metal oxides")
+        "Sleeping Potion"
+         (item
+          :name "Sleeping Potion"
+          :reference "Sleeping Beauty"
+          :titles "Soporific")
+        :Smokestick
+         (item
+          :name "Smokestick"
+          :summary
+           "* An alchemically treated wooden stick that creates thick, opaque smoke when
+ignited.")
+        :Soulstone
+         (item
+          :name "Soulstone")
+        "Soverign Glue"
+         (item
+          :name "Soverign Glue"
+          :titles "Universal Adhesive")
+        "Storm Crystals"
+         (item
+          :name "Storm Crystals")
+        :Thunderstone
+         (item
+          :name "Thunderstone"
+          :summary
+           "* A stone that emits a deafening sound when it is first struck againsts a
+hard surface.")
+        :Tindertwig
+         (item
+          :name "Tindertwig"
+          :reference "A match"
+          :summary "* A sulfurous substance that ignites when rubbed against a rough surface.")))
+    :Artifacts
+     (section
+      :name "Artifacts"
+      :itemmap
+       (itemmap
+        "Icy Manipulator"
+         (item
+          :name "Icy Manipulator"
+          :summary "* [Action]: Roll vs. [Mind]. If successful, target loses its next [Action].")
+        "Zuran Orb"
+         (item
+          :name "Zuran Orb"
+          :reference
+           "* I will go to any length to achieve my goal. Eternal life is worth any sacrifice.
+- Zur the Enchanter, Magic the Gathering"
+          :summary "* [Action]: -1 [Spirit] permanently. -2 Damage, -1 Critical, -10 Age.")))
+    :Artwork
+     (section
+      :name "Artwork"
+      :itemmap
+       (itemmap
+        "Bronze Sculpture"
+         (item
+          :name "Bronze Sculpture")
+        "Calligraphed Scroll"
+         (item
+          :name "Calligraphed Scroll")
+        :Carving
+         (item
+          :name "Carving")
+        "Cave Drawing"
+         (item
+          :name "Cave Drawing")
+        "Ceramic Vase"
+         (item
+          :name "Ceramic Vase")
+        "Clay Pot"
+         (item
+          :name "Clay Pot")
+        :Goblet
+         (item
+          :name "Goblet")
+        "Fine China"
+         (item
+          :name "Fine China")
+        "Iron Sculpture"
+         (item
+          :name "Iron Sculpture")
+        "Oriental Carpet"
+         (item
+          :name "Oriental Carpet")
+        "Landscape Painting"
+         (item
+          :name "Landscape Painting")
+        "Marble Sculpture"
+         (item
+          :name "Marble Sculpture")
+        "Painted Fan"
+         (item
+          :name "Painted Fan")
+        "Painted Folding Screen"
+         (item
+          :name "Painted Folding Screen")
+        "Painted Scroll"
+         (item
+          :name "Painted Scroll")
+        "Portrait Painting"
+         (item
+          :name "Portrait Painting")
+        :Scrimshaw
+         (item
+          :name "Scrimshaw")
+        "Silver Bowl"
+         (item
+          :name "Silver Bowl")
+        "Silver Cup"
+         (item
+          :name "Silver Cup")
+        "Silver Plate"
+         (item
+          :name "Silver Plate")
+        :Silverware
+         (item
+          :name "Silverware")
+        "Still Life Painting"
+         (item
+          :name "Still Life Painting")
+        "Stone Sculpture"
+         (item
+          :name "Stone Sculpture")
+        "Wooden Sculpture"
+         (item
+          :name "Wooden Sculpture")))
+    "Book Types"
+     (section
+      :name "Book Types"
+      :titles "Book, Musings, Notes, Scroll, Writings"
+      :itemmap
+       (itemmap
+        :Almanac
+         (item
+          :name "Almanac")
+        "Atlas of Maps"
+         (item
+          :name "Atlas of Maps")
+        :Biography
+         (item
+          :name "Biography")
+        "Book of Shadows"
+         (item
+          :name "Book of Shadows"
+          :summary "A private journal, history or core religious text kept by practitioners.")
+        :Codex
+         (item
+          :name "Codex")
+        :Encyclopedia
+         (item
+          :name "Encyclopedia")
+        :Fragments
+         (item
+          :name "Fragments")
+        :Grimoire
+         (item
+          :name "Grimoire"
+          :summary
+           "A set of rules for doing something and is a journal kept by practitioners containing
+information and contributions relevant to their specific field of study.")
+        :Manual
+         (item
+          :name "Manual")
+        :Memoir
+         (item
+          :name "Memoir")
+        :Poems
+         (item
+          :name "Poems")
+        :Spellbook
+         (item
+          :name "Spellbook")
+        :Tome
+         (item
+          :name "Tome")))
+    "Books, Unique"
+     (section
+      :name "Books, Unique"
+      :itemmap
+       (itemmap
+        "Book of Enoch"
+         (item
+          :name "Book of Enoch")
+        "Book of the Law"
+         (item
+          :name "Book of the Law")
+        "Charge of the Goddess"
+         (item
+          :name "Charge of the Goddess")
+        "I Ching"
+         (item
+          :name "I Ching")
+        "Lemegeton Clavicula Salomonis"
+         (item
+          :name "Lemegeton Clavicula Salomonis"
+          :titles "The Lesser Key of Solomon")
+        "Liber Legis"
+         (item
+          :name "Liber Legis")
+        "Liber Null"
+         (item
+          :name "Liber Null")
+        "Malleus Maleficarum"
+         (item
+          :name "Malleus Maleficarum"
+          :summary "One of the most famous medieval treatises on witches."
+          :titles "The Hammer of Witches, Hexenhammer")
+        "Tabula Rasa"
+         (item
+          :name "Tabula Rasa"
+          :summary
+           "* A unique blank stone tablet of unknown origin vaguely connected to the legends of the River Lethe.
+* If a person writes a description of a memory on the tablet, then the text will slowly fade from
+the tablet and as it does the memory will also permanently fade from the user's mind. This item can
+be used to remove trauma as well as reset unwanted skills and abilities.")
+        "Wiccan Rede"
+         (item
+          :name "Wiccan Rede")))
+    :Clothing
+     (section
+      :name "Clothing"
+      :itemmap
+       (itemmap
+        :Bracers
+         (item
+          :name "Bracers")
+        :Circlet
+         (item
+          :name "Circlet")
+        :Cloak
+         (item
+          :name "Cloak")
+        :Collar
+         (item
+          :name "Collar")
+        :Coronal
+         (item
+          :name "Coronal")
+        :Headdress
+         (item
+          :name "Headdress")
+        :Leggings
+         (item
+          :name "Leggings")
+        :Mantle
+         (item
+          :name "Mantle")
+        :Mask
+         (item
+          :name "Mask")
+        :Rainment
+         (item
+          :name "Rainment")
+        :Robe
+         (item
+          :name "Robe")
+        :Torque
+         (item
+          :name "Torque")))
+    :Drugs
+     (section
+      :name "Drugs"
+      :reference
+       "* We had two bags of grass, seventy-five pellets of mescaline, five sheets of high-powered blotter acid, a saltshaker
+half-full of cocaine, and a whole galaxy of multi-colored uppers, downers, screamers, laughers... Also, a quart of
+tequila, a quart of rum, a case of beer, a pint of raw ether, and two dozen amyls...The only thing that really worried
+me was the ether.  There is nothing in the world more helpless and irresponsible and depraved than a man in the depths
+of an ether binge, and I knew we'd get into that rotten stuff pretty soon. - Raoul Duke, Fear and Loathing in Las
+Vegas"
+      :itemmap
+       (itemmap
+        :Amphetamine
+         (item
+          :name "Amphetamine"
+          :titles "Crank, Speed, Uppers")
+        :Anesthetic
+         (item
+          :name "Anesthetic")
+        :Anti-Fungal
+         (item
+          :name "Anti-Fungal")
+        :Anti-Parasitic
+         (item
+          :name "Anti-Parasitic")
+        :Antiseptic
+         (item
+          :name "Antiseptic")
+        :Atropine
+         (item
+          :name "Atropine")
+        "Birth Control"
+         (item
+          :name "Birth Control")
+        :Cocaine
+         (item
+          :name "Cocaine")
+        "Crack Cocaine"
+         (item
+          :name "Crack Cocaine")
+        :Depresant
+         (item
+          :name "Depresant"
+          :titles "Downers")
+        :Ecstasy
+         (item
+          :name "Ecstasy"
+          :titles "XTC")
+        "Fertility Drug"
+         (item
+          :name "Fertility Drug")
+        :Hallucinogen
+         (item
+          :name "Hallucinogen")
+        :Hashish
+         (item
+          :name "Hashish")
+        :Heroin
+         (item
+          :name "Heroin")
+        :LSD
+         (item
+          :name "LSD"
+          :titles "Acid")
+        :Marijuana
+         (item
+          :name "Marijuana")
+        :Mescaline
+         (item
+          :name "Mescaline"
+          :summary "* Derived from the [Peyote] Plant")
+        :Morphine
+         (item
+          :name "Morphine")
+        :Sedative
+         (item
+          :name "Sedative")
+        :Steroid
+         (item
+          :name "Steroid")
+        :Stimulant
+         (item
+          :name "Stimulant")
+        :Tranquilizer
+         (item
+          :name "Tranquilizer")))
+    "Food and Drink"
+     (section
+      :name "Food and Drink"
+      :itemmap
+       (itemmap
+        :Ale
+         (item
+          :name "Ale")
+        :Beer
+         (item
+          :name "Beer")
+        "Blossom Wine"
+         (item
+          :name "Blossom Wine")
+        :Grog
+         (item
+          :name "Grog")
+        "Fire Ale"
+         (item
+          :name "Fire Ale")
+        :Mead
+         (item
+          :name "Mead"
+          :summary "Fermented Honey")
+        "Mushroom Ale"
+         (item
+          :name "Mushroom Ale")
+        :Nectar
+         (item
+          :name "Nectar")
+        :Whiskey
+         (item
+          :name "Whiskey")
+        :Wine
+         (item
+          :name "Wine")
+        :Vinesap
+         (item
+          :name "Vinesap")
+        :Vodka
+         (item
+          :name "Vodka")))
+    :Jewelry
+     (section
+      :name "Jewelry"
+      :itemmap
+       (itemmap
+        :Amulet
+         (item
+          :name "Amulet")
+        :Anklet
+         (item
+          :name "Anklet")
+        :Bracelet
+         (item
+          :name "Bracelet")
+        :Brooch
+         (item
+          :name "Brooch"
+          :titles "Decorative Pin")
+        :Cameo
+         (item
+          :name "Cameo")
+        :Earring
+         (item
+          :name "Earring")
+        :Ingot
+         (item
+          :name "Ingot")
+        :Medallion
+         (item
+          :name "Medallion")
+        :Necklace
+         (item
+          :name "Necklace")
+        :Pendant
+         (item
+          :name "Pendant")
+        :Ring
+         (item
+          :name "Ring")
+        :Tiara
+         (item
+          :name "Tiara")
+        :Torc
+         (item
+          :name "Torc")
+        :Valknut
+         (item
+          :name "Valknut"
+          :summary
+           "* Purpose - The valknut pendant is a magical symbol for warrior types. The Valknut pendant is used by those who swear allegiance to Odin in both life and death and want to fight alongside the gods during Ragnarok. When a valknut is found, Odin is also near. This is true for engravings of the valknut as well as for those who decide to wear Odin’s symbol.
+* Description - Valknut literally translates into 'the knot of the fallen warriors.' This symbol is also strongly connected to the deceased as is apparent in its linguistic meaning. The symbol itself represents the 9 worlds of existence. It is created through the fierce binding of three triangles. The Valknut also has the power over both life and death, as it weaves both into a knot."
+          :titles "Knot of the Fallen Warriors")))
+    :Materials
+     (section
+      :name "Materials"
+      :itemmap
+       (itemmap
+        "Animal Hide"
+         (item
+          :name "Animal Hide")
+        :Brass
+         (item
+          :name "Brass")
+        :Bronze
+         (item
+          :name "Bronze")
+        :Ceramic
+         (item
+          :name "Ceramic")
+        :Clay
+         (item
+          :name "Clay")
+        :Gauze
+         (item
+          :name "Gauze")
+        :Glass
+         (item
+          :name "Glass")
+        :Gossamer
+         (item
+          :name "Gossamer")
+        :Ice
+         (item
+          :name "Ice")
+        :Iron
+         (item
+          :name "Iron")
+        :Linen
+         (item
+          :name "Linen")
+        :Obsidian
+         (item
+          :name "Obsidian")
+        :Quartz
+         (item
+          :name "Quartz")
+        :Snow
+         (item
+          :name "Snow")
+        :Soil
+         (item
+          :name "Soil")
+        :Stone
+         (item
+          :name "Stone")
+        :Water
+         (item
+          :name "Water")
+        :Wind
+         (item
+          :name "Wind")
+        :Wood
+         (item
+          :name "Wood")))
+    :Mechanisms
+     (section
+      :name "Mechanisms"
+      :itemmap
+       (itemmap
+        "Secret Compartment"
+         (item
+          :name "Secret Compartment")
+        "Secret Door"
+         (item
+          :name "Secret Door")))
+    "Precious Materials"
+     (section
+      :name "Precious Materials"
+      :itemmap
+       (itemmap
+        :Amber
+         (item
+          :name "Amber")
+        :Amethyst
+         (item
+          :name "Amethyst")
+        "Blue Diamond"
+         (item
+          :name "Blue Diamond")
+        :Copper
+         (item
+          :name "Copper")
+        :Diamond
+         (item
+          :name "Diamond")
+        :Electrum
+         (item
+          :name "Electrum"
+          :reference
+           "* Electrum is a naturally occurring alloy of gold and silver, with trace amounts of
+copper and other metals.
+* The color of electrum is pale yellow or yellowish-white.
+* It is usually a good conductor of electricity.
+* Electrum is much better for coinage than gold, mostly because it is harder and more
+durable."
+          :titles "White Gold")
+        :Emerald
+         (item
+          :name "Emerald")
+        :Gold
+         (item
+          :name "Gold")
+        :Moonstone
+         (item
+          :name "Moonstone")
+        :Onyx
+         (item
+          :name "Onyx")
+        :Pearl
+         (item
+          :name "Pearl")
+        "Rose Gold"
+         (item
+          :name "Rose Gold"
+          :reference
+           "* Rose gold is a gold and copper alloy.  The higher the copper content the redder the
+color."
+          :titles "Red Gold")
+        :Ruby
+         (item
+          :name "Ruby")
+        :Sapphire
+         (item
+          :name "Sapphire")
+        :Silver
+         (item
+          :name "Silver"
+          :reference
+           "* Silver is a brilliant white metal with a luster that can take a high degree of polish.
+* It is very ductile and malleable (slightly harder than gold).
+* It has the highest electrical conductivity of all metals, even higher than copper
+* Among metals, pure silver has the highest thermal conductivity (only the non-metal
+diamond's is higher), whitest color, and the highest optical reflectivity.
+* Jewellery and silverware are traditionally made from Sterling silver (Standard silver) an
+alloy of 92.5 % silver with 7.5% copper.  Sterling silver is harder than pure silver,
+and has a lower melting point.
+* It has certain antimicrobial activity.  Dilute solutions of silver nitrate can be used
+as disinfectants.  Silver-ions and silver compounds show a toxic effect on some
+bacteria, viruses, algae and fungi.  Its germicidal effects make silver utensils valued,
+and increase its value as jewelry.  The exact process of silver's germicidal effect is
+still not well understood.
+* The name of the United Kingdom monetary unit 'pound' originally had the value of one
+troy pound of sterling silver.
+* The words for 'silver' and 'money' are the same in at least 14 languages.
+* Hippocrates, the father of modern medicine, wrote that silver had beneficial healing
+and anti-disease properties, and the Phoenicians used to store water, wine, and vinegar
+in silver bottles to prevent spoiling.  In the early 1900s people would put silver
+dollars in milk bottles to prolong the milk's freshness.
+* Silver was believed to be a repellent against vampires; also, mirrors were originally
+polished silver, and as such, vampires allegedly cannot be seen in them because they
+have no soul) and it was also believed that a werewolf, in his bestial form, could only
+be killed by a weapon or bullet made of silver.  This has given rise to the term 'silver
+bullet', which is used to describe things that very effectively deal with one specific
+problem.")
+        "Tiger's Eye"
+         (item
+          :name "Tiger's Eye")))
+    "Fantastic Precious Materials"
+     (section
+      :name "Fantastic Precious Materials"
+      :itemmap
+       (itemmap
+        :Adamant
+         (item
+          :name "Adamant"
+          :summary
+           "* Requires: 10 carats of powdered blue diamonds and 1 pound of silver to create
+1 pound of Adamant.")
+        "Black Diamond"
+         (item
+          :name "Black Diamond")
+        :Mithril
+         (item
+          :name "Mithril"
+          :summary
+           "* A steel alloy that is as strong as steel with only half the weight.  It is extremely
+difficult to forge even for master smiths, so it is extremely rare and valuable."
+          :titles "Elven Steel, Titanium Steel")
+        :Orichalcum
+         (item
+          :name "Orichalcum"
+          :reference
+           "* A legendary metal mentioned in several ancient writings, most notably the
+story of Atlantis.")))
+    "Religious Items"
+     (section
+      :name "Religious Items"
+      :itemmap
+       (itemmap
+        "Holy Water"
+         (item
+          :name "Holy Water"
+          :summary "* Holy Water consists of water with salt added that has been blessed in a ritual. Both water and salt are symbol of cleansing and disinfecting.")))
+    "Musical Instruments"
+     (section
+      :name "Musical Instruments"
+      :itemmap
+       (itemmap
+        :Banjo
+         (item
+          :name "Banjo")
+        :Bells
+         (item
+          :name "Bells")
+        :Chime
+         (item
+          :name "Chime")
+        :Drums
+         (item
+          :name "Drums")
+        "Drums, Koto"
+         (item
+          :name "Drums, Koto")
+        "Drums, Timpani"
+         (item
+          :name "Drums, Timpani")
+        :Gong
+         (item
+          :name "Gong")
+        :Guitar
+         (item
+          :name "Guitar")
+        "Guitar, 12 String"
+         (item
+          :name "Guitar, 12 String")
+        "Guitar, Electric"
+         (item
+          :name "Guitar, Electric")
+        :Flute
+         (item
+          :name "Flute")
+        "Flute, Pan"
+         (item
+          :name "Flute, Pan")
+        :Harmonica
+         (item
+          :name "Harmonica")
+        :Harp
+         (item
+          :name "Harp")
+        :Harpsicord
+         (item
+          :name "Harpsicord")
+        :Horn
+         (item
+          :name "Horn")
+        "Horn, French"
+         (item
+          :name "Horn, French")
+        :Juiceharp
+         (item
+          :name "Juiceharp")
+        :Lute
+         (item
+          :name "Lute")
+        :Mandolin
+         (item
+          :name "Mandolin")
+        :Piano
+         (item
+          :name "Piano")
+        :Pipes
+         (item
+          :name "Pipes")
+        :Recorder
+         (item
+          :name "Recorder")
+        :Sitar
+         (item
+          :name "Sitar")
+        :Tambour
+         (item
+          :name "Tambour")
+        :Trombone
+         (item
+          :name "Trombone")
+        :Trumpet
+         (item
+          :name "Trumpet")
+        :Violin
+         (item
+          :name "Violin")))
+    :Powders
+     (section
+      :name "Powders"
+      :itemmap
+       (itemmap
+        "Amnesia Powder"
+         (item
+          :name "Amnesia Powder"
+          :titles "Powder of Forgetfulness")
+        "Blinding Powder"
+         (item
+          :name "Blinding Powder"
+          :summary "Temporarily Blind a target.")
+        "Confusing Powder"
+         (item
+          :name "Confusing Powder")
+        "Dust of Disappearing Trail"
+         (item
+          :name "Dust of Disappearing Trail"
+          :summary
+           "* Resettles an area to make it appear as if no one has been there in a long
+time.")
+        "Dust of Dryness"
+         (item
+          :name "Dust of Dryness"
+          :summary "* Evaporates water on contact. Destroys up to level^2 liters of water.")
+        "Exploding Powder"
+         (item
+          :name "Exploding Powder")
+        "Flash Powder"
+         (item
+          :name "Flash Powder"
+          :summary "* [Move]: Place a [Smoke] Terrain with 1 Duration Token on this unit's space.")
+        "Freezing Powder"
+         (item
+          :name "Freezing Powder")
+        "Hallucination Powder"
+         (item
+          :name "Hallucination Powder")
+        "Incendiary Powder"
+         (item
+          :name "Incendiary Powder"
+          :titles "Dragon's Breath")
+        "Iocaine Powder"
+         (item
+          :name "Iocaine Powder"
+          :reference
+           "* What you do not smell is called iocane powder. It is odorless, tasteless, dissolves instantly in liquid,
+and is among the more deadlier poisons known to man. - Man in Black
+* Iocane comes from Australia, as everyone knows! And Australia is entirely peopled with criminals. - Vizzini"
+          :titles "Arcenic Trioxide")
+        "Irritating Powder"
+         (item
+          :name "Irritating Powder"
+          :titles "Itching Powder")
+        "Noxious Powder"
+         (item
+          :name "Noxious Powder"
+          :titles "Powder of Nausea")
+        "Paralysing Powder"
+         (item
+          :name "Paralysing Powder")
+        "Poison Powder"
+         (item
+          :name "Poison Powder")
+        "Powder of Desire"
+         (item
+          :name "Powder of Desire"
+          :titles "Aphrodisiac Powder")
+        "Powder of False Death"
+         (item
+          :name "Powder of False Death"
+          :summary "* A more powerful version of Sleeping Powder, that simulates death.")
+        "Powder of Fear"
+         (item
+          :name "Powder of Fear")
+        "Powder of Rage"
+         (item
+          :name "Powder of Rage")
+        "Sleeping Powder"
+         (item
+          :name "Sleeping Powder"
+          :titles "Morphius Powder")
+        "Smoke Powder"
+         (item
+          :name "Smoke Powder")
+        "Vertigo Powder"
+         (item
+          :name "Vertigo Powder")))
+    "Ritual Items"
+     (section
+      :name "Ritual Items"
+      :summary
+       "* holy oil, lamp, bell
+* [Dreamcatcher] - hung above the bed, is then used as a charm to protect sleeping children from nightmares.  &quot;Only good dreams would be allowed to filter through . . . Bad dreams would stay in the net, disappearing with the light of day.&quot;
+* Medicine Bag
+* Phylactery - An amulet to protect the wearer from harm, enclosing magical text, herbs, or relics."
+      :itemmap
+       (itemmap
+        :Athame
+         (item
+          :name "Athame"
+          :reference
+           "As a masculine principle, it is often used in combination with the cup or Graal, as
+feminine principle, and evokes the act of procreation, as symbol of universal
+creativity."
+          :summary
+           "* Symbolizes Air, the Mental, and Masculinity.  Air appears as nothing, can
+only be felt with subtle senses and never gripped and commanded.
+				* A ritual dagger"
+          :titles "Swords")
+        :Graal
+         (item
+          :name "Graal"
+          :summary
+           "* Symbolizes Water, the Emotional, and Feminity.  The emotions are tidal like
+the the ocean, flowing like rivers and streams.
+				* As a feminie principle, it is often used in combination with the dagger or
+				Athame, as masculine principle, and evokes the act of procreation, as symbol
+				of universal creativity."
+          :titles "Cup, Grail")
+        "Mummified Hand"
+         (item
+          :name "Mummified Hand")
+        :Pentacle
+         (item
+          :name "Pentacle"
+          :image "Units/Equipment/Pentacle.jpg"
+          :summary
+           "* Symbolizes Earth and the Physical
+				An amulet used in magical evocation, generally made of parchment, paper or metal, on
+				which the symbol of a spirit or energy being evoked is drawn.  It is often worn around
+				the neck, or placed within the triangle of evocation.  Protective symbols may also be
+				included (sometimes on the reverse), a common one being the five-point Seal of Solomon.
+				The pentacle is always drawn in one continuous stroke, earning it the title the 'endless
+				knot'."
+          :titles "Disks, Endless Knot, Stone")
+        "Ritual Claw"
+         (item
+          :name "Ritual Claw")
+        "Shrunken Head"
+         (item
+          :name "Shrunken Head")
+        :Thurible
+         (item
+          :name "Thurible"
+          :titles "Censer")
+        :Tool
+         (item
+          :name "Tool")
+        :Wand
+         (item
+          :name "Wand"
+          :summary "Symbolizes Fire, Energy, and the Spirtual")))
+    :Tools
+     (section
+      :name "Tools"
+      :itemmap
+       (itemmap
+        :Astrolabe
+         (item
+          :name "Astrolabe"
+          :summary
+           "* Astronomical computer for solving problems relating to time and the position of the Sun and stars in the sky.
+To use an astrolabe, you adjust the moveable components to a specific date and time.  Once set, the entire sky,
+both visible and invisible, is represented on the face of the instrument.  This allows a great many astronomical
+problems to be solved in a very visual way.
+* Typical uses of the astrolabe include finding the time during the day or night, finding the time of a celestial
+event such as sunrise or sunset and as a handy reference of celestial positions.")
+        :Compass
+         (item
+          :name "Compass")
+        "Jeweler's Loop"
+         (item
+          :name "Jeweler's Loop")
+        :Key
+         (item
+          :name "Key")
+        :Lodestone
+         (item
+          :name "Lodestone")
+        "Magifying Glass"
+         (item
+          :name "Magifying Glass")
+        "Magifying Glasses"
+         (item
+          :name "Magifying Glasses")
+        "Magifying Lenses"
+         (item
+          :name "Magifying Lenses")
+        :Monicle
+         (item
+          :name "Monicle")
+        :Pendulum
+         (item
+          :name "Pendulum")
+        :Prism
+         (item
+          :name "Prism")
+        :Scales
+         (item
+          :name "Scales")
+        :Sextant
+         (item
+          :name "Sextant")
+        :Telescope
+         (item
+          :name "Telescope"
+          :titles "Spy Glass")
+        :Weathervane
+         (item
+          :name "Weathervane")
+        :Whistle
+         (item
+          :name "Whistle")))
+    :Traps
+     (section
+      :name "Traps"
+      :itemmap
+       (itemmap
+        :Caltrops
+         (item
+          :name "Caltrops")
+        "Nightengail Floor"
+         (item
+          :name "Nightengail Floor"
+          :reference "Nijo Castle - Kyoto, Japan"
+          :summary
+           "* Floors designed to make a chirping sound when walked upon assuring that none could sneak through the corridors
+undetected.  Dry boards naturally creak under pressure, but these floors were designed so that the flooring nails
+rubbed against a jacket or clamp, causing chirping noises."
+          :titles "Uguisubari")
+        "Pressure Plate"
+         (item
+          :name "Pressure Plate")
+        :Tanglewire
+         (item
+          :name "Tanglewire")
+        :Trapdoor
+         (item
+          :name "Trapdoor")
+        :Tripwire
+         (item
+          :name "Tripwire")))
+    :Vehicles
+     (section
+      :name "Vehicles"
+      :unitmap
+       (unitmap
+        :Airship
+         (unit
+          :name "Airship")
+        :Barge
+         (unit
+          :name "Barge")
+        :Coracle
+         (unit
+          :name "Coracle")
+        :Duneship
+         (unit
+          :name "Duneship")
+        "Ice Schooner"
+         (unit
+          :name "Ice Schooner")
+        :Palanquin
+         (unit
+          :name "Palanquin")
+        :Skiff
+         (unit
+          :name "Skiff")
+        "Wagon, Enclosed"
+         (unit
+          :name "Wagon, Enclosed")
+        "Wagon, Open"
+         (unit
+          :name "Wagon, Open")))
+    "Unfiled Gear"
+     (section
+      :name "Unfiled Gear"
+      :summary
+       "* Acid
 * Alabaster
 * Barricade
 * Blood
@@ -73,42 +1433,42 @@
 * [Subliminal Broadcaster]
 * [Surveillance Cameras]
 * [Telephoto Lens]"
-          :itemmap
-           (itemmap
-            "Beast Claw"
-             (item
-              :name "Beast Claw")
-            :Tooth
-             (item
-              :name "Tooth")
-            "Vampire Blood"
-             (item
-              :name "Vampire Blood"
-              :summary
-               "* Black Token
+      :itemmap
+       (itemmap
+        "Beast Claw"
+         (item
+          :name "Beast Claw")
+        :Tooth
+         (item
+          :name "Tooth")
+        "Vampire Blood"
+         (item
+          :name "Vampire Blood"
+          :summary
+           "* Black Token
 * Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].
 * [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.
 * [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
 * [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
 * [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
-            "Healing Salve"
-             (item
-              :name "Healing Salve")
-            :Lattice
-             (item
-              :name "Lattice")
-            :Mirror
-             (item
-              :name "Mirror")
-            :Matrix
-             (item
-              :name "Matrix")
-            :Candle
-             (item
-              :name "Candle")
-            :Screen
-             (item
-              :name "Screen")
-            :Array
-             (item
-              :name "Array"))))))))
+        "Healing Salve"
+         (item
+          :name "Healing Salve")
+        :Lattice
+         (item
+          :name "Lattice")
+        :Mirror
+         (item
+          :name "Mirror")
+        :Matrix
+         (item
+          :name "Matrix")
+        :Candle
+         (item
+          :name "Candle")
+        :Screen
+         (item
+          :name "Screen")
+        :Array
+         (item
+          :name "Array"))))))

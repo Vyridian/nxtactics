@@ -2,211 +2,590 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
- (book
+ (base/book
   :name "Age of Steam"
   :image "WildWest.jpg"
   :chaptermap
-   (chaptermap
-    "Age of Steam Overview"
-     (chapter
-      :name "Age of Steam Overview"
-      :sectionmap
-       (sectionmap
-        "Age of Steam Naval Warfare"
-         (section
-          :name "Age of Steam Naval Warfare"
-          :summary
-           "* Wind
+   (base/chaptermap
+    "Age of Steam Overview" (chapter_age_of_steam_overview)
+    "Age of Steam Equipment" (chapter_age_of_steam_equipment)
+    "Steam Age Maps" (chapter_steam_age_maps)
+    "Civil War" (chapter_civil_war)
+    "Victorian England" (chapter_victorian_england)
+    "Wild West" (chapter_wild_west)
+    "Examples of Play" (chapter_examples_of_play)
+   )))
+
+(func chapter_age_of_steam_overview : base/chapter
+ (chapter
+  :name "Age of Steam Overview"
+  :sectionmap
+   (sectionmap
+    "Why Tactics: Age of Steam?"
+     (section
+      :name "Why Tactics: Age of Steam?")
+    "Age of Steam Personal Combat"
+     (section
+      :name "Age of Steam Personal Combat"
+      :summary
+       "* Dueling
+* Civil War
+* Cowboys
+* Indians
+* Bandits
+* Cattle Rustlers
+* Marksman")
+    "Age of Steam Land Warfare"
+     (section
+      :name "Age of Steam Land Warfare"
+      :summary
+       "* Infantry
+* Cavalry
+* Pistols
+* Rifles
+* Cannons
+* Artillery
+* Gatling Guns
+* Trains")
+    "Age of Steam Naval Warfare"
+     (section
+      :name "Age of Steam Naval Warfare"
+      :summary
+       "* Wind
 * Large Ships
 * Small Ships
 * Solid Shot
 * Burning Shot
-* Chain Shot")))
-    "Age of Steam Equipment"
-     (chapter
-      :name "Age of Steam Equipment"
-      :sectionmap
-       (sectionmap
-        "Steam Age Vehicles"
-         (section
-          :name "Steam Age Vehicles"
-          :unitmap
-           (unitmap
-            "Horseless  Carriage"
-             (unit
-              :name "Horseless  Carriage")
-            "Mailplane Biplane"
-             (unit
-              :name "Mailplane Biplane")
-            "Ocean Liner"
-             (unit
-              :name "Ocean Liner"
-              :titles "Liner, Steam Liner")
-            :Stagecoach
-             (unit
-              :name "Stagecoach")
-            "Steam Ferry"
-             (unit
-              :name "Steam Ferry")
-            "Steam Train Boxcar"
-             (unit
-              :name "Steam Train Boxcar")
-            "Steam Train Caboose"
-             (unit
-              :name "Steam Train Caboose")
-            "Steam Train Coach"
-             (unit
-              :name "Steam Train Coach")
-            "Steam Train Locomotive"
-             (unit
-              :name "Steam Train Locomotive")
-            "Steam Train Private Coach"
-             (unit
-              :name "Steam Train Private Coach")
-            :Steamboat
-             (unit
-              :name "Steamboat")
-            "Tramp Freighter"
-             (unit
-              :name "Tramp Freighter")
-            :Zepplin
-             (unit
-              :name "Zepplin"
-              :titles "Dirigible")))))
-    "Steam Age Maps"
-     (chapter
-      :name "Steam Age Maps"
-      :sectionmap
-       (sectionmap
-        "Steam Age Terrain"
-         (section
-          :name "Steam Age Terrain"
-          :rulemap
-           (rulemap
-            :Mine
-             (rule
-              :name "Mine")
-            :Tumbleweed
-             (rule
-              :name "Tumbleweed")
-            "Western Town"
-             (rule
-              :name "Western Town")))))
-    "Civil War"
-     (chapter
-      :name "Civil War"
-      :sectionmap
-       (sectionmap
-        "Union Navy"
-         (section
-          :name "Union Navy"
-          :unitmap
-           (unitmap
-            "USS Monitor"
-             (unit
-              :name "USS Monitor"
-              :speed "15kph"
-              :classification "Hvy. Naval Vessel"
-              :crew "59"
-              :mass "1000tons"
-              :length "52m"
-              :unitpowermap
-               (unitpowermap
-                :Armor
-                 (unitpower
-                  :name "Armor"
-                  :summary "200mm iron turret, 25mm deck, 125mm hull belt"
-                  :front "200mm"
-                  :back "200mm"
-                  :over "25mm"
-                  :side "200mm"))
-              :unitskillmap
-               (unitskillmap
-                :Gunnery
-                 (unitskill
-                  :name "Gunnery"
-                  :summary "2 x 11 in (280mm) Dahlgren smoothbores, turret"
-                  :level "4")))))))
-    "Victorian England"
-     (chapter
-      :name "Victorian England"
-      :sectionmap
-       (sectionmap
-        "Victoraian Characters"
-         (section
-          :name "Victoraian Characters"
-          :unitmap
-           (unitmap
-            "Dr. John Watson"
-             (unit
-              :name "Dr. John Watson")
-            "Herbert George Wells"
-             (unit
-              :name "Herbert George Wells")
-            "Jack the Ripper"
-             (unit
-              :name "Jack the Ripper")
-            "Sherlock Holmes"
-             (unit
-              :name "Sherlock Holmes"
-              :reference
-               "* Watson: What made like this?
-* Sherlock: Oh, dear Watson. Nothing made me ... I made me.")))))
-    "Wild West"
-     (chapter
-      :name "Wild West"
-      :sectionmap
-       (sectionmap
-        "Steam Age Tycoons"
-         (section
-          :name "Steam Age Tycoons"
-          :unitmap
-           (unitmap
-            :Banker
-             (unit
-              :name "Banker")
-            "Land Baron"
-             (unit
-              :name "Land Baron"
-              :reference
-               "All I hear from you...is how poor you are; how you can't afford my taxes.  Yet somehow, you managed to find the
-money to hire a gunfighter to kill me.  If ya got so much money, I'm just gonna have to take some more. - John
-Herod,  The Quick and the Dead"
-              :unitskillmap
-               (unitskillmap
-                :Intimidation
-                 (unitskill
-                  :name "Intimidation"
-                  :level "5")
-                :Firearms
-                 (unitskill
-                  :name "Firearms"
-                  :level "4"
-                  :unititemmap
-                   (unititemmap
-                    ".45 Colt Peacemaker"
-                     (unititem
-                      :name ".45 Colt Peacemaker")))
-                :Evasion
-                 (unitskill
-                  :name "Evasion"
-                  :level "4")))
-            "Oil Baron"
-             (unit
-              :name "Oil Baron")
-            "Railroad Tycoon"
-             (unit
-              :name "Railroad Tycoon")))))
-    "Examples of Play"
-     (chapter
-      :name "Examples of Play"
-      :sectionmap
-       (sectionmap
+* Chain Shot"))))
+
+(func chapter_age_of_steam_equipment : base/chapter
+ (chapter
+  :name "Age of Steam Equipment"
+  :sectionmap
+   (sectionmap
+    "Age of Steam Weaponry"
+     (section
+      :name "Age of Steam Weaponry"
+      :itemmap
+       (itemmap
+        ".45 Colt Peacemaker"
+         (item
+          :name ".45 Colt Peacemaker"
+          :image "Western/Colt1873.jpg"
+          :reference
+           "US Army issue from 1873-1892 and used by other notables like Wyatt Earp and Bat Masterson.  Wyatt Earp's
+fictional Colt Buntline was supposed to be a long barrel version of the Colt Peacemaker."
+          :summary "Single action, revolver"
+          :classification "Pistol"
+          :modifiers "Bleeding"
+          :range "30m"
+          :rounds "6")
+        ".45 Smith&amp;Wesson Schofield"
+         (item
+          :name ".45 Smith&amp;Wesson Schofield"
+          :image "Western/Schofield1869.jpg"
+          :reference "Just meat and potatoes.  Me and Jesse James think it's the best handgun in the world. - Kid, The Quick and the Dead."
+          :summary "Single action, revolver"
+          :classification "Pistol"
+          :modifiers "Bleeding"
+          :range "30m"
+          :rounds "6")
+        ".41 Remington Derringer"
+         (item
+          :name ".41 Remington Derringer"
+          :image "Western/Derringer.jpg"
+          :reference
+           "The classic Remington design is still popular; a Remington pattern derringer in .38 Special is still smaller than
+the most compact .25 ACP semiautomatic, and provides far superior terminal ballistic performance in its two shots
+than the .25 ACP does with six or seven."
+          :summary "Rimfire, single action"
+          :classification "Pistol"
+          :modifiers "Bleeding"
+          :range "16m"
+          :rounds "2")
+        ".44 Winchester Model 1873"
+         (item
+          :name ".44 Winchester Model 1873"
+          :image "Western/Winchester1873.jpg"
+          :reference
+           "The Winchester is among the earliest repeating rifles, and has become synonymous with lever-action firearms.
+Known as 'The Gun that Won the West' for its immense popularity at that time."
+          :summary "Lever action, repeating"
+          :classification "Rifle"
+          :length "125.2cm"
+          :mass "4.3kg"
+          :muzzlevelocity "379m/s"
+          :range "100m")
+        "12g Winchester Model 1887"
+         (item
+          :name "12g Winchester Model 1887"
+          :reference "Considered the first truly successful repeating shotgun"
+          :summary "Level action"
+          :classification "Shotgun"
+          :length "1m"
+          :mass "3.6kg"
+          :modifiers "Scattershot, Bleeding"
+          :range "30m"
+          :rounds "5")
+        ".50 Gatling Gun"
+         (item
+          :name ".50 Gatling Gun"
+          :image "Western/GatlingGun1876.jpg.jpg"
+          :classification "Hvy. MG"
+          :modifiers "Auto, Bleeding"
+          :range "100m")
+        "Napoleon Cannon"
+         (item
+          :name "Napoleon Cannon"
+          :image "Western/CivilWarCannon.jpg"
+          :summary "Smoothbore, muzzle-loading, 12-pounder"
+          :classification "Cannon"
+          :modifiers "Blast, Indirect Fire"
+          :range "250m")))
+    "Steam Age Vehicles"
+     (section
+      :name "Steam Age Vehicles"
+      :unitmap
+       (unitmap
+        "Horseless  Carriage"
+         (unit
+          :name "Horseless  Carriage")
+        "Mailplane Biplane"
+         (unit
+          :name "Mailplane Biplane")
+        "Ocean Liner"
+         (unit
+          :name "Ocean Liner"
+          :titles "Liner, Steam Liner")
+        :Stagecoach
+         (unit
+          :name "Stagecoach")
+        "Steam Ferry"
+         (unit
+          :name "Steam Ferry")
+        "Steam Train Boxcar"
+         (unit
+          :name "Steam Train Boxcar")
+        "Steam Train Caboose"
+         (unit
+          :name "Steam Train Caboose")
+        "Steam Train Coach"
+         (unit
+          :name "Steam Train Coach")
+        "Steam Train Locomotive"
+         (unit
+          :name "Steam Train Locomotive")
+        "Steam Train Private Coach"
+         (unit
+          :name "Steam Train Private Coach")
+        :Steamboat
+         (unit
+          :name "Steamboat")
+        "Tramp Freighter"
+         (unit
+          :name "Tramp Freighter")
+        :Zepplin
+         (unit
+          :name "Zepplin"
+          :titles "Dirigible"))))))
+
+(func chapter_steam_age_maps : base/chapter
+ (chapter
+  :name "Steam Age Maps"
+  :sectionmap
+   (sectionmap
+    "Steam Age Terrain"
+     (section
+      :name "Steam Age Terrain"
+      :rulemap
+       (rulemap
+        :Mine
+         (rule
+          :name "Mine")
+        :Tumbleweed
+         (rule
+          :name "Tumbleweed")
+        "Western Town"
+         (rule
+          :name "Western Town"))))))
+
+(func chapter_civil_war : base/chapter
+ (chapter
+  :name "Civil War"
+  :sectionmap
+   (sectionmap
+    "Civil War Scenarios"
+     (section
+      :name "Civil War Scenarios"
+      :scenariomap
+       (scenariomap
+        "Civil War Battle"
+         (scenario
+          :name "Civil War Battle")
+        :Ironclads
+         (scenario
+          :name "Ironclads"
+          :summary
+           "The first battle between ironclads happened on 9 March 1862, as the armored Monitor was deployed to protect the
+Union's wooden fleet from the ironclad ram Virginia and other Confederate warships.  In this engagement, the
+two ironclads repeatedly tried to ram one another while shells bounced off their armor.  The battle attracted
+attention worldwide, making it clear that the wooden warship was now out of date, with the ironclads destroying
+them easily.")))
+    "Confederate Army"
+     (section
+      :name "Confederate Army"
+      :unitmap
+       (unitmap
+        "Confederate Cannon"
+         (unit
+          :name "Confederate Cannon")
+        "Confederate Conscript"
+         (unit
+          :name "Confederate Conscript")
+        "Confederate Gatling Gunner"
+         (unit
+          :name "Confederate Gatling Gunner")
+        "Confederate Medic"
+         (unit
+          :name "Confederate Medic")
+        "Confederate Officer"
+         (unit
+          :name "Confederate Officer")
+        "Confederate Veteran"
+         (unit
+          :name "Confederate Veteran")))
+    "Confederate Navy"
+     (section
+      :name "Confederate Navy"
+      :unitmap
+       (unitmap
+        :Merrimack
+         (unit
+          :name "Merrimack"
+          :titles "CSS Virginia"
+          :speed "17kph"
+          :classification "Hvy. Naval Vessel"
+          :crew "320"
+          :mass "4500tons"
+          :length "84m"
+          :unitpowermap
+           (unitpowermap
+            :Armor
+             (unitpower
+              :name "Armor"
+              :summary "100mm iron over 610mm of wood (102mm RHA)"
+              :front "200mm"
+              :back "200mm"
+              :side "200mm"))
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :summary
+               "2 x 7 inch (178mm) rifles
+2 x 6 inch (152mm) rifles
+6 x 9 inch (229mm) Dahlgren smoothbores
+2 x 12-pounder (5kg) howitzers"
+              :level "4")))))
+    "Union Army"
+     (section
+      :name "Union Army"
+      :unitmap
+       (unitmap
+        "Union Cannon"
+         (unit
+          :name "Union Cannon")
+        "Union Conscript"
+         (unit
+          :name "Union Conscript")
+        "Union Gatling Gunner"
+         (unit
+          :name "Union Gatling Gunner")
+        "Union Medic"
+         (unit
+          :name "Union Medic")
+        "Union Officer"
+         (unit
+          :name "Union Officer")
+        "Union Veteran"
+         (unit
+          :name "Union Veteran")))
+    "Union Navy"
+     (section
+      :name "Union Navy"
+      :unitmap
+       (unitmap
+        "USS Monitor"
+         (unit
+          :name "USS Monitor"
+          :speed "15kph"
+          :classification "Hvy. Naval Vessel"
+          :crew "59"
+          :mass "1000tons"
+          :length "52m"
+          :unitpowermap
+           (unitpowermap
+            :Armor
+             (unitpower
+              :name "Armor"
+              :summary "200mm iron turret, 25mm deck, 125mm hull belt"
+              :front "200mm"
+              :back "200mm"
+              :over "25mm"
+              :side "200mm"))
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :summary "2 x 11 in (280mm) Dahlgren smoothbores, turret"
+              :level "4"))))))))
+
+(func chapter_victorian_england : base/chapter
+ (chapter
+  :name "Victorian England"
+  :sectionmap
+   (sectionmap
+    "Victoraian Characters"
+     (section
+      :name "Victoraian Characters"
+      :unitmap
+       (unitmap
+        "Dr. John Watson"
+         (unit
+          :name "Dr. John Watson")
+        "Herbert George Wells"
+         (unit
+          :name "Herbert George Wells")
+        "Jack the Ripper"
+         (unit
+          :name "Jack the Ripper")
+        "Sherlock Holmes"
+         (unit
+          :name "Sherlock Holmes"
+          :reference
+           "* Watson: What made like this?
+* Sherlock: Oh, dear Watson. Nothing made me ... I made me."))))))
+
+(func chapter_wild_west : base/chapter
+ (chapter
+  :name "Wild West"
+  :sectionmap
+   (sectionmap
+    "Western Scenarios"
+     (section
+      :name "Western Scenarios"
+      :scenariomap
+       (scenariomap
         "Western Gunfight"
-         (section
+         (scenario
           :name "Western Gunfight"
           :summary
-           "Round 1 - Turn 1
+           "Setup
+Grassland Map
+Personal Scale
+Player 1 begins with a Gunslinger deployed anywhere on the map.
+Player 2 begins with a US Marshall deployed within 10 spaces of Gunslinger.
+Both Players' units are standing still with pistols holstered.
+Gunslinger has the initiative.
+Special Rules
+Shoot From the Hip
+Hit Location")))
+    "Steam Age Outlaws"
+     (section
+      :name "Steam Age Outlaws"
+      :unitmap
+       (unitmap
+        :Bandito
+         (unit
+          :name "Bandito"
+          :image "Western/BanditoToken.png"
+          :reference
+           "You think you're better than I am?  Where we came from, if one did not want to die of poverty, one became a
+priest or a bandit! ...You became a priest because you were... too much of a coward to do what I do! - Tuco. The
+Good, the Bad, and the Ugly."
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Survival
+             (unitskill
+              :name "Survival"
+              :level "3")))
+        :Gunslinger
+         (unit
+          :name "Gunslinger"
+          :image "Western/GunslingerToken.png"
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Crime
+             (unitskill
+              :name "Crime"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Armed Robbery"
+                 (unitability
+                  :name "Armed Robbery")
+                :Rustling
+                 (unitability
+                  :name "Rustling")))))
+        "Man with No Name"
+         (unit
+          :name "Man with No Name"
+          :image "Western/ManWithNoNameToken.png"
+          :reference
+           "* [to Tuco] Tut, tut. Such ingratitude after all the times I saved your life. - Blondie, The Good, the Bad, and
+the Ugly
+* There are two kinds of people in the world...Those who have a loaded gun and those who dig. You dig! - Blondie,
+The Good, the Bad, and the Ugly"
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Evasion
+             (unitskill
+              :name "Evasion"
+              :level "5")))
+        "Professional Killer"
+         (unit
+          :name "Professional Killer"
+          :image "Western/ProfessionalKiller.png"
+          :reference
+           "He paid me a thousand.  I think his idea was that I kill you.  But you know, the pity is when I'm paid, I always
+follow my job through. - Angel Eyes, The Good, the Bad, and the Ugly"
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Evasion
+             (unitskill
+              :name "Evasion"
+              :level "4")))))
+    "Steam Age Lawmen"
+     (section
+      :name "Steam Age Lawmen"
+      :unitmap
+       (unitmap
+        :Deputy
+         (unit
+          :name "Deputy")
+        :Sheriff
+         (unit
+          :name "Sheriff")
+        "US Marshall"
+         (unit
+          :name "US Marshall"
+          :unitskillmap
+           (unitskillmap
+            :Evasion
+             (unitskill
+              :name "Evasion"
+              :level "4")))))
+    "Steam Age Indians"
+     (section
+      :name "Steam Age Indians"
+      :unitmap
+       (unitmap
+        "Sioux Gunfighter"
+         (unit
+          :name "Sioux Gunfighter"
+          :image "Western/IndianAxe.jpg"
+          :reference "Spotted Horse cannot be killed by a bullet! - Spotted Horse, The Quick and the Dead")))
+    "Steam Age Townsfolk"
+     (section
+      :name "Steam Age Townsfolk"
+      :unitmap
+       (unitmap
+        "Chinese Monk"
+         (unit
+          :name "Chinese Monk"
+          :reference "I seek not to know the answers, but to understand the questions. - Kwai Chang Caine, Kung Fu TV Series")
+        "Chinese Rail worker"
+         (unit
+          :name "Chinese Rail worker")
+        :Cowboy
+         (unit
+          :name "Cowboy")
+        :Dentist
+         (unit
+          :name "Dentist")
+        :Farmer
+         (unit
+          :name "Farmer")
+        "General Store Owner"
+         (unit
+          :name "General Store Owner")
+        :Judge
+         (unit
+          :name "Judge")
+        :Preacher
+         (unit
+          :name "Preacher")
+        "Saloon Barkeep"
+         (unit
+          :name "Saloon Barkeep")
+        :Undertaker
+         (unit
+          :name "Undertaker")
+        "Whore with a Heart of Gold"
+         (unit
+          :name "Whore with a Heart of Gold")))
+    "Steam Age Travelers"
+     (section
+      :name "Steam Age Travelers"
+      :unitmap
+       (unitmap
+        "Carpet Bagger"
+         (unit
+          :name "Carpet Bagger")
+        :Gambler
+         (unit
+          :name "Gambler"
+          :summary "This is a very special pack.  See, I put an ace in every time I kill a man.  (The deck is all aces) - Ace, The Quick and the Dead")
+        :Prospector
+         (unit
+          :name "Prospector")
+        "Snake Oil Salesman"
+         (unit
+          :name "Snake Oil Salesman")))
+    "Steam Age Tycoons"
+     (section
+      :name "Steam Age Tycoons"
+      :unitmap
+       (unitmap
+        :Banker
+         (unit
+          :name "Banker")
+        "Land Baron"
+         (unit
+          :name "Land Baron"
+          :reference
+           "All I hear from you...is how poor you are; how you can't afford my taxes.  Yet somehow, you managed to find the
+money to hire a gunfighter to kill me.  If ya got so much money, I'm just gonna have to take some more. - John
+Herod,  The Quick and the Dead"
+          :unitskillmap
+           (unitskillmap
+            :Evasion
+             (unitskill
+              :name "Evasion"
+              :level "4")))
+        "Oil Baron"
+         (unit
+          :name "Oil Baron")
+        "Railroad Tycoon"
+         (unit
+          :name "Railroad Tycoon"))))))
+
+(func chapter_examples_of_play : base/chapter
+ (chapter
+  :name "Examples of Play"
+  :sectionmap
+   (sectionmap
+    "Western Gunfight"
+     (section
+      :name "Western Gunfight"
+      :summary
+       "Round 1 - Turn 1
 Initiative
 Gunslinger player starts with the initiative, but the Marshall wants to 'Take the Initiative'
 Each Player rolls 2 dice.
@@ -290,4 +669,4 @@ Move
 Marshall is prone and has no Move left to even crawl (Move 4 - 1 (Stun) - 3 (Damage)).
 Action
 Marshall could attack with 5 (Handguns) + 1 (Accuracy) - 1 (Stun) - 3 (Damage) = 2 Dice, but he has no dice to defend next turn, he is Prone (+1) and Helpless (+1) for a total of 8 Gunslinger Dice against his own 0 Dice.  What's more the gunslinger doesn't have a scratch on him.
-The duel is clearly over, and the Marshall drops his gun and begs for his life."))))))
+The duel is clearly over, and the Marshall drops his gun and begs for his life."))))

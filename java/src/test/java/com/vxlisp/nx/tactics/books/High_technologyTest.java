@@ -21,11 +21,11 @@ public final class High_technologyTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/high_technology", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 15), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 15), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 15), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 15), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 15), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -40,6 +40,20 @@ public final class High_technologyTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":chapter_car_wars", 0,
+        ":chapter_cyberpunk", 0,
+        ":chapter_cyberpunk_campaign", 0,
+        ":chapter_high_tech_aircraft", 0,
+        ":chapter_high_tech_equipment", 0,
+        ":chapter_high_tech_heavy_armor", 0,
+        ":chapter_high_tech_overview", 0,
+        ":chapter_high_tech_rules", 0,
+        ":chapter_high_tech_spacecraft", 0,
+        ":chapter_jovian_chronicles", 0,
+        ":chapter_mobile_suit_gundam_equipment", 0,
+        ":chapter_mobile_suit_gundam_units", 0,
+        ":chapter_space_colonies", 0,
+        ":chapter_terminator", 0,
         ":tacticsbook", 0
       )
     );

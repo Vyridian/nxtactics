@@ -118,13 +118,13 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringlist
   "a" "b" "c")
  (list<-list-end
   (stringlist
    "a" "b" "c" "d")
-  3))"
+  3))`
         :testresult
          (testresult
           :code ":eq"
@@ -147,7 +147,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringlist
   "a1" "b1" "c1" "d1")
  (list<-list-filter : stringlist
@@ -158,7 +158,7 @@
    (if
     (then
      (is-string val)
-     (string val "1"))))))"
+     (string val "1"))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -183,13 +183,13 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (list
   "a" 1 "b" "c")
  (list<-list-filtertypes : list
   (list
    "a" 1 "b" "c" 4.5)
-  string int))"
+  string int))`
         :testresult
          (testresult
           :code ":eq"
@@ -214,13 +214,13 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringlist
   "b" "c" "d")
  (list<-list-start
   (stringlist
    "a" "b" "c" "d")
-  2))"
+  2))`
         :testresult
          (testresult
           :code ":eq"
@@ -243,13 +243,13 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringlist
   "b" "c")
  (list<-list-start-end
   (stringlist
    "a" "b" "c" "d")
-  2 3))"
+  2 3))`
         :testresult
          (testresult
           :code ":eq"
@@ -391,7 +391,7 @@
           :expected true
           :actual true))
        (testdescribe
-        :describename "(test-true  (is-int "4"))"
+        :describename `(test-true  (is-int "4"))`
         :testresult
          (testresult
           :code ":true"
@@ -423,7 +423,7 @@
           :expected true
           :actual true))
        (testdescribe
-        :describename "(test-false (is-int "a"))"
+        :describename `(test-false (is-int "a"))`
         :testresult
          (testresult
           :code ":false"
@@ -445,7 +445,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test "a" (string "a"))"
+        :describename `(test "a" (string "a"))`
         :testresult
          (testresult
           :code ":eq"
@@ -453,7 +453,7 @@
           :expected "a"
           :actual "a"))
        (testdescribe
-        :describename "(test "ab" (string "a" "b"))"
+        :describename `(test "ab" (string "a" "b"))`
         :testresult
          (testresult
           :code ":eq"
@@ -525,7 +525,7 @@
           :expected true
           :actual false))
        (testdescribe
-        :describename "(test-ne "a" "b")"
+        :describename `(test-ne "a" "b")`
         :testresult
          (testresult
           :code ":ne"
@@ -806,8 +806,8 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-true
- (< "b" "d" "z"))"
+         `(test-true
+ (< "b" "d" "z"))`
         :testresult
          (testresult
           :code ":true"
@@ -881,7 +881,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test-true (<= "b" "d" "z"))"
+        :describename `(test-true (<= "b" "d" "z"))`
         :testresult
          (testresult
           :code ":true"
@@ -911,7 +911,7 @@
           :expected true
           :actual true))
        (testdescribe
-        :describename "(test-true (= "a" "a"))"
+        :describename `(test-true (= "a" "a"))`
         :testresult
          (testresult
           :code ":true"
@@ -920,10 +920,10 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (=
   (stringlist "a" "b" "c")
-  (new stringlist "a" "b" "c")))"
+  (new stringlist "a" "b" "c")))`
         :testresult
          (testresult
           :code ":true"
@@ -932,10 +932,10 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (=
   (stringmap :a "1" :b "2")
-  (new stringmap :a "1" :b "2")))"
+  (new stringmap :a "1" :b "2")))`
         :testresult
          (testresult
           :code ":true"
@@ -971,7 +971,7 @@
           :expected true
           :actual true))
        (testdescribe
-        :describename "(test-true (== "" ""))"
+        :describename `(test-true (== "" ""))`
         :testresult
          (testresult
           :code ":true"
@@ -999,7 +999,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test-true (> "z" "y" "b"))"
+        :describename `(test-true (> "z" "y" "b"))`
         :testresult
          (testresult
           :code ":true"
@@ -1027,7 +1027,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test-true (>= "z" "b" "b"))"
+        :describename `(test-true (>= "z" "b" "b"))`
         :testresult
          (testresult
           :code ":true"
@@ -1094,11 +1094,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "b"
  (any<-list
   (list "a" "b" "c")
-  2))"
+  2))`
         :testresult
          (testresult
           :code ":eq"
@@ -1107,9 +1107,9 @@
           :actual "b"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "b"
- (:2 (stringlist "a" "b" "c")))"
+ (:2 (stringlist "a" "b" "c")))`
         :testresult
          (testresult
           :code ":eq"
@@ -1147,14 +1147,14 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "v2"
  (any<-map
   (map
    :a "v1"
    :b "v2"
    :c "v3")
-  :b))"
+  :b))`
         :testresult
          (testresult
           :code ":eq"
@@ -1169,7 +1169,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "xayb"
  (any<-map-start-reduce
   (stringmap
@@ -1182,7 +1182,7 @@
     value   : any]
    (copy current
     value
-    key))))"
+    key))))`
         :testresult
          (testresult
           :code ":eq"
@@ -1204,7 +1204,7 @@
           :expected 1
           :actual 1))
        (testdescribe
-        :describename "(test 1 (compare "z" "a"))"
+        :describename `(test 1 (compare "z" "a"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1218,7 +1218,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test-true  (contains "abcde" "cd"))"
+        :describename `(test-true  (contains "abcde" "cd"))`
         :testresult
          (testresult
           :code ":true"
@@ -1226,7 +1226,7 @@
           :expected true
           :actual true))
        (testdescribe
-        :describename "(test-false (contains "abcde" "dc"))"
+        :describename `(test-false (contains "abcde" "dc"))`
         :testresult
          (testresult
           :code ":false"
@@ -1241,8 +1241,8 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
- (contains (stringlist "1" "2" "3") "2"))"
+         `(test-true
+ (contains (stringlist "1" "2" "3") "2"))`
         :testresult
          (testresult
           :code ":true"
@@ -1261,8 +1261,8 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-false
- (contains (list 1 "2" 3) 2))"
+         `(test-false
+ (contains (list 1 "2" 3) 2))`
         :testresult
          (testresult
           :code ":false"
@@ -1277,12 +1277,13 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringmap
   :a "1"
   :b "2")
- (copy (stringmap :a "1")
-  :b "2"))"
+ (copy
+  (stringmap :a "1")
+  :b "2"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1302,7 +1303,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test ""     (empty string))"
+        :describename `(test ""     (empty string))`
         :testresult
          (testresult
           :code ":eq"
@@ -1327,10 +1328,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "b"
  (first<-list
-  (stringlist "b" "c")))"
+  (stringlist "b" "c")))`
         :testresult
          (testresult
           :code ":eq"
@@ -1345,11 +1346,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "b"
  (first<-list-any<-any
   (list nothing "b" "c")
-  resolve))"
+  resolve))`
         :testresult
          (testresult
           :code ":eq"
@@ -1364,10 +1365,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (float 2.3)
  (float<-string
-  "2.3"))"
+  "2.3"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1382,9 +1383,9 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "a"
- (if (= 2 2) "a"))"
+ (if (= 2 2) "a"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1393,11 +1394,11 @@
           :actual "a"))
        (testdescribe
         :describename
-         "(test
+         `(test
  ""
  (if : string
   (= 1 2)
-  "a"))"
+  "a"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1410,12 +1411,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "a"
  (if
   (= 2 2)
   "a"
-  "b"))"
+  "b"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1424,12 +1425,12 @@
           :actual "a"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "b"
  (if
   (= 1 2)
   "a"
-  "b"))"
+  "b"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1462,7 +1463,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test 4 (int<-string "4"))"
+        :describename `(test 4 (int<-string "4"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1470,7 +1471,7 @@
           :expected 4
           :actual 4))
        (testdescribe
-        :describename "(test 5 (int<-string "5.4"))"
+        :describename `(test 5 (int<-string "5.4"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1478,7 +1479,7 @@
           :expected 5
           :actual 5))
        (testdescribe
-        :describename "(test 5 (int<-string "5.9"))"
+        :describename `(test 5 (int<-string "5.9"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1486,7 +1487,7 @@
           :expected 5
           :actual 5))
        (testdescribe
-        :describename "(test notanumber  (int<-string "notanumber"))"
+        :describename `(test notanumber  (int<-string "notanumber"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1494,7 +1495,7 @@
           :expected notanumber
           :actual notanumber))
        (testdescribe
-        :describename "(test infinity    (int<-string "infinity"))"
+        :describename `(test infinity    (int<-string "infinity"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1502,7 +1503,7 @@
           :expected infinity
           :actual infinity))
        (testdescribe
-        :describename "(test neginfinity (int<-string "neginfinity"))"
+        :describename `(test neginfinity (int<-string "neginfinity"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1516,7 +1517,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test-true (is-empty ""))"
+        :describename `(test-true (is-empty ""))`
         :testresult
          (testresult
           :code ":true"
@@ -1557,8 +1558,8 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-true
- (is-int "2"))"
+         `(test-true
+ (is-int "2"))`
         :testresult
          (testresult
           :code ":true"
@@ -1577,8 +1578,8 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-true
- (is-int "infinity"))"
+         `(test-true
+ (is-int "infinity"))`
         :testresult
          (testresult
           :code ":true"
@@ -1608,7 +1609,7 @@
           :expected true
           :actual true))
        (testdescribe
-        :describename "(test-false (is-number "a"))"
+        :describename `(test-false (is-number "a"))`
         :testresult
          (testresult
           :code ":false"
@@ -1622,7 +1623,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test "c" (last<-list (list "b" "c")))"
+        :describename `(test "c" (last<-list (list "b" "c")))`
         :testresult
          (testresult
           :code ":eq"
@@ -1636,7 +1637,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test 3 (length<-list (stringlist "a" "b" "c")))"
+        :describename `(test 3 (length<-list (stringlist "a" "b" "c")))`
         :testresult
          (testresult
           :code ":eq"
@@ -1671,14 +1672,14 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringlist "a1" "b2")
  (list<-map : stringlist
   (stringmap "a" "1" "b" "2")
   (fn : string
    [key : string
     val : string]
-   (string key val))))"
+   (string key val))))`
         :testresult
          (testresult
           :code ":eq"
@@ -1699,7 +1700,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringmap
   "keya" "a"
   "keyb" "b")
@@ -1707,7 +1708,7 @@
   (stringlist "a" "b")
   (fn : string
    [val : string]
-   (string "key" val))))"
+   (string "key" val))))`
         :testresult
          (testresult
           :code ":eq"
@@ -1728,7 +1729,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringmap
   :a "a1"
   :b "b2")
@@ -1739,7 +1740,7 @@
   (fn : string
    [key : string
     val : string]
-   (string key val))))"
+   (string key val))))`
         :testresult
          (testresult
           :code ":eq"
@@ -1783,7 +1784,7 @@
           :expected 5.4
           :actual 5.4))
        (testdescribe
-        :describename "(test "a" (new string "a"))"
+        :describename `(test "a" (new string "a"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1792,9 +1793,9 @@
           :actual "a"))
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringlist "a" "b" "c")
- (new stringlist "a" "b" "c"))"
+ (new stringlist "a" "b" "c"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1811,9 +1812,9 @@
             "c")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringmap :a "1" :b "2")
- (new stringmap :a "1" :b "2"))"
+ (new stringmap :a "1" :b "2"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1885,7 +1886,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test "a" (resolve "a"))"
+        :describename `(test "a" (resolve "a"))`
         :testresult
          (testresult
           :code ":eq"
@@ -1927,7 +1928,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test "abab" (string-repeat "ab" 2))"
+        :describename `(test "abab" (string-repeat "ab" 2))`
         :testresult
          (testresult
           :code ":eq"
@@ -1941,7 +1942,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test "true"  (string<-any true))"
+        :describename `(test "true"  (string<-any true))`
         :testresult
          (testresult
           :code ":eq"
@@ -1949,7 +1950,7 @@
           :expected "true"
           :actual "true"))
        (testdescribe
-        :describename "(test "4"     (string<-any 4))"
+        :describename `(test "4"     (string<-any 4))`
         :testresult
          (testresult
           :code ":eq"
@@ -1957,7 +1958,7 @@
           :expected "4"
           :actual "4"))
        (testdescribe
-        :describename "(test "5.4"   (string<-any 5.4))"
+        :describename `(test "5.4"   (string<-any 5.4))`
         :testresult
          (testresult
           :code ":eq"
@@ -1965,54 +1966,54 @@
           :expected "5.4"
           :actual "5.4"))
        (testdescribe
-        :describename "(test "\"a\"" (string<-any "a"))"
+        :describename `(test "\"a\"" (string<-any "a"))`
         :testresult
          (testresult
           :code ":eq"
           :passfail true
-          :expected ""a""
-          :actual ""a""))
+          :expected `"a"`
+          :actual `"a"`))
        (testdescribe
         :describename
-         "(test
+         `(test
  "(stringlist
    \"a\"
    \"b\"
    \"c\")"
- (string<-any (stringlist "a" "b" "c")))"
+ (string<-any (stringlist "a" "b" "c")))`
         :testresult
          (testresult
           :code ":eq"
           :passfail true
           :expected
-           "(stringlist
+           `(stringlist
  "a"
  "b"
- "c")"
+ "c")`
           :actual
-           "(stringlist
+           `(stringlist
  "a"
  "b"
- "c")"))
+ "c")`))
        (testdescribe
         :describename
-         "(test
+         `(test
  "(stringmap
    :a \"1\"
    :b \"2\")"
- (string<-any (stringmap :a "1" :b "2")))"
+ (string<-any (stringmap :a "1" :b "2")))`
         :testresult
          (testresult
           :code ":eq"
           :passfail true
           :expected
-           "(stringmap
+           `(stringmap
  :a "1"
- :b "2")"
+ :b "2")`
           :actual
-           "(stringmap
+           `(stringmap
  :a "1"
- :b "2")"))))
+ :b "2")`))))
     (testcase
      :passfail true
      :testpkg "vx/core"
@@ -2021,12 +2022,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "a!b!c"
  (string<-string-find-replace
   "axybxyc"
   "xy"
-  "!"))"
+  "!"))`
         :testresult
          (testresult
           :code ":eq"
@@ -2041,11 +2042,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test 1
+         `(test 1
  (switch : int
   "d"
   (case (list "b" "c" "d") 1)
-  (else 2)))"
+  (else 2)))`
         :testresult
          (testresult
           :code ":eq"
@@ -2082,9 +2083,9 @@
           :actual vx/core/int))
        (testdescribe
         :describename
-         "(test
+         `(test
  string
- (type<-any "a"))"
+ (type<-any "a"))`
         :testresult
          (testresult
           :code ":eq"
@@ -2098,7 +2099,7 @@
      :describelist
       (testdescribelist
        (testdescribe
-        :describename "(test "vx/core/boolean" (typename<-any false))"
+        :describename `(test "vx/core/boolean" (typename<-any false))`
         :testresult
          (testresult
           :code ":eq"
@@ -2106,7 +2107,7 @@
           :expected "vx/core/boolean"
           :actual "vx/core/boolean"))
        (testdescribe
-        :describename "(test "vx/core/int"     (typename<-any 5))"
+        :describename `(test "vx/core/int"     (typename<-any 5))`
         :testresult
          (testresult
           :code ":eq"
@@ -2114,7 +2115,7 @@
           :expected "vx/core/int"
           :actual "vx/core/int"))
        (testdescribe
-        :describename "(test "vx/core/string"  (typename<-any "a"))"
+        :describename `(test "vx/core/string"  (typename<-any "a"))`
         :testresult
          (testresult
           :code ":eq"
@@ -2429,7 +2430,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (tb/textblock
   :text
 `"a","b"
@@ -2505,7 +2506,7 @@
         :endpos 12)))))
  (textblock-csv<-string
   `"a","b"
-1,"2"`))"
+1,"2"`))`
         :testresult
          (testresult
           :code ":eq"
@@ -2513,21 +2514,21 @@
           :expected
            (textblock
             :text
-             ""a","b"
-1,"2""
+             `"a","b"
+1,"2"`
             :startpos 1
             :endpos 13
             :children
              (textblocklist
               (textblock
-               :text ""a""
+               :text `"a"`
                :startpos 1
                :endpos 3
                :delim
                 (delim
                  :name "delimquote"
-                 :starttext """
-                 :endtext """)
+                 :starttext `"`
+                 :endtext `"`)
                :children
                 (textblocklist
                  (textblock
@@ -2543,14 +2544,14 @@
                  :name "delimcomma"
                  :starttext ","))
               (textblock
-               :text ""b""
+               :text `"b"`
                :startpos 5
                :endpos 7
                :delim
                 (delim
                  :name "delimquote"
-                 :starttext """
-                 :endtext """)
+                 :starttext `"`
+                 :endtext `"`)
                :children
                 (textblocklist
                  (textblock
@@ -2582,14 +2583,14 @@
                  :name "delimcomma"
                  :starttext ","))
               (textblock
-               :text ""2""
+               :text `"2"`
                :startpos 11
                :endpos 13
                :delim
                 (delim
                  :name "delimquote"
-                 :starttext """
-                 :endtext """)
+                 :starttext `"`
+                 :endtext `"`)
                :children
                 (textblocklist
                  (textblock
@@ -2599,21 +2600,21 @@
           :actual
            (textblock
             :text
-             ""a","b"
-1,"2""
+             `"a","b"
+1,"2"`
             :startpos 1
             :endpos 13
             :children
              (textblocklist
               (textblock
-               :text ""a""
+               :text `"a"`
                :startpos 1
                :endpos 3
                :delim
                 (delim
                  :name "delimquote"
-                 :starttext """
-                 :endtext """)
+                 :starttext `"`
+                 :endtext `"`)
                :children
                 (textblocklist
                  (textblock
@@ -2629,14 +2630,14 @@
                  :name "delimcomma"
                  :starttext ","))
               (textblock
-               :text ""b""
+               :text `"b"`
                :startpos 5
                :endpos 7
                :delim
                 (delim
                  :name "delimquote"
-                 :starttext """
-                 :endtext """)
+                 :starttext `"`
+                 :endtext `"`)
                :children
                 (textblocklist
                  (textblock
@@ -2668,14 +2669,14 @@
                  :name "delimcomma"
                  :starttext ","))
               (textblock
-               :text ""2""
+               :text `"2"`
                :startpos 11
                :endpos 13
                :delim
                 (delim
                  :name "delimquote"
-                 :starttext """
-                 :endtext """)
+                 :starttext `"`
+                 :endtext `"`)
                :children
                 (textblocklist
                  (textblock
@@ -2811,11 +2812,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (boolean-exists<-file
   (file
    :name "boolean_exists_from_file.txt"
-   :path "src/test/resources/vx")))"
+   :path "src/test/resources/vx")))`
         :testresult
          (testresult
           :code ":true"
@@ -2830,12 +2831,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (boolean-write<-file-string
   (file
    :name "boolean_write_from_file_string.txt"
    :path "src/test/resources/vx")
-  "writetext"))"
+  "writetext"))`
         :testresult
          (testresult
           :code ":true"
@@ -2850,7 +2851,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (file
   :name "string_read_from_file.txt"
   :path "src/test/resources/vx"
@@ -2858,7 +2859,7 @@
  (file-read<-file
   (file
    :name "string_read_from_file.txt"
-   :path "src/test/resources/vx")))"
+   :path "src/test/resources/vx")))`
         :testresult
          (testresult
           :code ":eq"
@@ -2881,12 +2882,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "testdata"
  (string-read<-file
   (file
    :name "string_read_from_file.txt"
-   :path "src/test/resources/vx")))"
+   :path "src/test/resources/vx")))`
         :testresult
          (testresult
           :code ":eq"
@@ -3090,14 +3091,14 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (copy delimcomma
   :pos 2)
  (delim-first<-string-delimlist
   "a, b"
   (delimlist
    delimspace
-   delimcomma)))"
+   delimcomma)))`
         :testresult
          (testresult
           :code ":eq"
@@ -3120,12 +3121,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (copy delimcomma
   :pos 2)
  (delim-pos<-string-delim
   "a,b"
-  delimcomma))"
+  delimcomma))`
         :testresult
          (testresult
           :code ":eq"
@@ -3148,7 +3149,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (delimlist
   (copy delimspace
    :pos 3)
@@ -3158,7 +3159,7 @@
   "a, b"
   (delimlist
    delimspace
-   delimcomma)))"
+   delimcomma)))`
         :testresult
          (testresult
           :code ":eq"
@@ -3193,7 +3194,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringlist
   "a" "b")
  (stringlist<-textblocklist
@@ -3201,7 +3202,7 @@
    (textblock
     :text "a")
    (textblock
-    :text "b"))))"
+    :text "b"))))`
         :testresult
          (testresult
           :code ":eq"
@@ -3222,11 +3223,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "a"
  (text<-textblock
   (textblock
-   :text "a")))"
+   :text "a")))`
         :testresult
          (testresult
           :code ":eq"
@@ -3241,7 +3242,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "<a"
   :startpos 1
@@ -3300,7 +3301,7 @@
       (textblock
        :text "<a"
        :startpos 1
-       :endpos 2)))))"
+       :endpos 2)))))`
         :testresult
          (testresult
           :code ":eq"
@@ -3393,7 +3394,7 @@
                 :severity 2))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text ","
   :startpos 4
@@ -3489,7 +3490,7 @@
             (textblock
              :text "<{a,b},{c d}>"
              :startpos 1
-             :endpos 13))))))))"
+             :endpos 13))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -3608,7 +3609,7 @@
                    :endpos 3)))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text ",{c d}>"
   :startpos 7
@@ -3708,7 +3709,7 @@
           :endpos 4
           :delim
            (copy delimcomma
-            :pos 0))))))))"
+            :pos 0))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -3827,7 +3828,7 @@
                     :endpos 5))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :startpos 14
   :endpos 14
@@ -3986,7 +3987,7 @@
            (textblock
             :text "d"
             :startpos 11
-            :endpos 11)))))))))"
+            :endpos 11)))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -4167,7 +4168,7 @@
                        :endpos 11))))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text
    "\"b\"
@@ -4259,7 +4260,7 @@
            (textblock
             :text "a"
             :startpos 2
-            :endpos 2)))))))))"
+            :endpos 2)))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -4267,8 +4268,8 @@
           :expected
            (textblock
             :text
-             ""b"
-1,"2""
+             `"b"
+1,"2"`
             :startpos 5
             :endpos 13
             :delim
@@ -4281,21 +4282,21 @@
             :parent
              (textblock
               :text
-               ""a","b"
-1,"2""
+               `"a","b"
+1,"2"`
               :startpos 1
               :endpos 13
               :children
                (textblocklist
                 (textblock
-                 :text ""a""
+                 :text `"a"`
                  :startpos 1
                  :endpos 3
                  :delim
                   (delim
                    :name "delimquote"
-                   :starttext """
-                   :endtext """)
+                   :starttext `"`
+                   :endtext `"`)
                  :children
                   (textblocklist
                    (textblock
@@ -4313,8 +4314,8 @@
           :actual
            (textblock
             :text
-             ""b"
-1,"2""
+             `"b"
+1,"2"`
             :startpos 5
             :endpos 13
             :delim
@@ -4327,21 +4328,21 @@
             :parent
              (textblock
               :text
-               ""a","b"
-1,"2""
+               `"a","b"
+1,"2"`
               :startpos 1
               :endpos 13
               :children
                (textblocklist
                 (textblock
-                 :text ""a""
+                 :text `"a"`
                  :startpos 1
                  :endpos 3
                  :delim
                   (delim
                    :name "delimquote"
-                   :starttext """
-                   :endtext """)
+                   :starttext `"`
+                   :endtext `"`)
                  :children
                   (textblocklist
                    (textblock
@@ -4364,7 +4365,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "<{a,b},{c d}>"
   :startpos 1
@@ -4378,7 +4379,7 @@
  (textblock-init
   (textblock
    :text "<{a,b},{c d}>"
-   :delim delimtest1)))"
+   :delim delimtest1)))`
         :testresult
          (testresult
           :code ":eq"
@@ -4413,7 +4414,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "<{a,b},{c d}>"
   :startpos 1
@@ -4487,7 +4488,7 @@
  (textblock-parse
   (textblock
    :text "<{a,b},{c d}>"
-   :delim delimtest1)))"
+   :delim delimtest1)))`
         :testresult
          (testresult
           :code ":eq"
@@ -4660,7 +4661,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "<a"
   :startpos 1
@@ -4719,7 +4720,7 @@
       (textblock
        :text "<a"
        :startpos 1
-       :endpos 2)))))"
+       :endpos 2)))))`
         :testresult
          (testresult
           :code ":eq"
@@ -4812,7 +4813,7 @@
                 :severity 2))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "<{a,b},{c d}>"
   :startpos 1
@@ -4826,7 +4827,7 @@
  (textblock-parse-one
   (textblock
    :text "<{a,b},{c d}>"
-   :delim delimtest1)))"
+   :delim delimtest1)))`
         :testresult
          (testresult
           :code ":eq"
@@ -4855,7 +4856,7 @@
               :endpos 13))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "{a,b},{c d}>"
   :startpos 2
@@ -4889,7 +4890,7 @@
     (textblock
      :text "<{a,b},{c d}>"
      :startpos 1
-     :endpos 13))))"
+     :endpos 13))))`
         :testresult
          (testresult
           :code ":eq"
@@ -4952,7 +4953,7 @@
                 :endpos 13)))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "a,b},{c d}>"
   :startpos 3
@@ -5010,7 +5011,7 @@
       (textblock
        :text "<{a,b},{c d}>"
        :startpos 1
-       :endpos 13)))))"
+       :endpos 13)))))`
         :testresult
          (testresult
           :code ":eq"
@@ -5103,7 +5104,7 @@
                   :endpos 13))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "a"
   :startpos 3
@@ -5185,7 +5186,7 @@
         (textblock
          :text "<{a,b},{c d}>"
          :startpos 1
-         :endpos 13))))))"
+         :endpos 13))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -5306,7 +5307,7 @@
                       :endpos 13))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text ","
   :startpos 4
@@ -5402,7 +5403,7 @@
             (textblock
              :text "<{a,b},{c d}>"
              :startpos 1
-             :endpos 13))))))))"
+             :endpos 13))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -5525,7 +5526,7 @@
                    :endpos 3)))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "b},{c d}>"
   :startpos 5
@@ -5621,7 +5622,7 @@
          (textblock
           :text "a"
           :startpos 3
-          :endpos 3)))))))"
+          :endpos 3)))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -5742,7 +5743,7 @@
                    :starttext ",")))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "b"
   :startpos 5
@@ -5840,7 +5841,7 @@
         :endpos 4
         :delim
          (copy delimcomma
-          :pos 0)))))))"
+          :pos 0)))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -5963,7 +5964,7 @@
                      :starttext ","))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text ",{c d}>"
   :startpos 7
@@ -6063,7 +6064,7 @@
           :endpos 4
           :delim
            (copy delimcomma
-            :pos 0))))))))"
+            :pos 0))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -6184,7 +6185,7 @@
                     :endpos 5))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :startpos 7
   :endpos 7
@@ -6295,7 +6296,7 @@
           (textblock
            :text "b"
            :startpos 5
-           :endpos 5))))))))"
+           :endpos 5))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -6442,7 +6443,7 @@
                         :endpos 5))))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text ","
   :startpos 7
@@ -6561,7 +6562,7 @@
               (textblock
                :text "b"
                :startpos 5
-               :endpos 5))))))))))"
+               :endpos 5))))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -6700,7 +6701,7 @@
                       :endpos 5)))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "{c d}>"
   :startpos 8
@@ -6814,7 +6815,7 @@
             (textblock
              :text "b"
              :startpos 5
-             :endpos 5)))))))))"
+             :endpos 5)))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -6951,7 +6952,7 @@
                    :starttext ",")))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "c d}>"
   :startpos 9
@@ -7075,7 +7076,7 @@
         :endpos 7
         :delim
          (copy delimcomma
-          :pos 0)))))))"
+          :pos 0)))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -7242,7 +7243,7 @@
                      :starttext ","))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "c"
   :startpos 9
@@ -7390,7 +7391,7 @@
             :endpos 7
             :delim
              (copy delimcomma
-              :pos 0))))))))"
+              :pos 0))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -7585,7 +7586,7 @@
                          :starttext ","))))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text " "
   :startpos 10
@@ -7747,7 +7748,7 @@
               :endpos 7
               :delim
                (copy delimcomma
-                :pos 0))))))))))"
+                :pos 0))))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -7944,7 +7945,7 @@
                    :endpos 9)))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "d}>"
   :startpos 11
@@ -8109,7 +8110,7 @@
          (textblock
           :text "c"
           :startpos 9
-          :endpos 9)))))))"
+          :endpos 9)))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -8304,7 +8305,7 @@
                    :starttext ":whitespace")))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "d"
   :startpos 11
@@ -8471,7 +8472,7 @@
         :endpos 10
         :delim
          (copy delimwhitespace
-          :pos 0)))))))"
+          :pos 0)))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -8668,7 +8669,7 @@
                      :starttext ":whitespace"))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text ">"
   :startpos 13
@@ -8832,7 +8833,7 @@
                :endpos 10
                :delim
                 (copy delimwhitespace
-                 :pos 0))))))))"
+                 :pos 0))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -9023,7 +9024,7 @@
                     :endpos 11))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :startpos 13
   :endpos 13
@@ -9185,7 +9186,7 @@
           (textblock
            :text "d"
            :startpos 11
-           :endpos 11))))))))"
+           :endpos 11))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -9374,7 +9375,7 @@
                       :endpos 11)))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :startpos 14
   :endpos 14
@@ -9533,7 +9534,7 @@
            (textblock
             :text "d"
             :startpos 11
-            :endpos 11)))))))))"
+            :endpos 11)))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -9714,7 +9715,7 @@
                        :endpos 11))))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "<{a,b},{c d}>"
   :startpos 1
@@ -9862,7 +9863,7 @@
             (textblock
              :text "d"
              :startpos 11
-             :endpos 11))))))))))"
+             :endpos 11))))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -10029,7 +10030,7 @@
                      :endpos 11)))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "<{a,b},{c d}>"
   :startpos 1
@@ -10170,7 +10171,7 @@
            (textblock
             :text "d"
             :startpos 11
-            :endpos 11)))))))))"
+            :endpos 11)))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -10343,7 +10344,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "a"
   :startpos 1
@@ -10352,7 +10353,7 @@
   "a,b"
   (delim
    :pos 2)
-  0))"
+  0))`
         :testresult
          (testresult
           :code ":eq"
@@ -10375,7 +10376,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text ",b"
   :startpos 2
@@ -10386,7 +10387,7 @@
   "a,b"
   (copy delimcomma
    :pos 2)
-  0))"
+  0))`
         :testresult
          (testresult
           :code ":eq"
@@ -10411,7 +10412,7 @@
               :pos 2))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "<b>c"
   :startpos 2
@@ -10431,7 +10432,7 @@
    :delimlist
     (delimlist
      delimbracketcurly))
-  0))"
+  0))`
         :testresult
          (testresult
           :code ":eq"
@@ -10478,7 +10479,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "b"
   :startpos 5
@@ -10579,7 +10580,7 @@
         :endpos 4
         :delim
          (copy delimcomma
-          :pos 0)))))))"
+          :pos 0)))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -10702,7 +10703,7 @@
                      :starttext ","))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :startpos 13
   :endpos 13
@@ -10867,7 +10868,7 @@
           (textblock
            :text "d"
            :startpos 11
-           :endpos 11))))))))"
+           :endpos 11))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -11062,7 +11063,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "c}"
   :startpos 4
@@ -11101,7 +11102,7 @@
     (textblock
      :text "ab{c}"
      :startpos 1
-     :endpos 5))))"
+     :endpos 5))))`
         :testresult
          (testresult
           :code ":eq"
@@ -11168,7 +11169,7 @@
                    :endpos 2)))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "{a,b},{c d}>"
   :startpos 2
@@ -11204,7 +11205,7 @@
     (textblock
      :text "<{a,b},{c d}>"
      :startpos 1
-     :endpos 13))))"
+     :endpos 13))))`
         :testresult
          (testresult
           :code ":eq"
@@ -11267,7 +11268,7 @@
                 :endpos 13)))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "a,b},{c d}>"
   :startpos 3
@@ -11327,7 +11328,7 @@
       (textblock
        :text "<{a,b},{c d}>"
        :startpos 1
-       :endpos 13)))))"
+       :endpos 13)))))`
         :testresult
          (testresult
           :code ":eq"
@@ -11424,7 +11425,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "a"
   :startpos 3
@@ -11508,7 +11509,7 @@
         (textblock
          :text "<{a,b},{c d}>"
          :startpos 1
-         :endpos 13))))))"
+         :endpos 13))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -11625,7 +11626,7 @@
                       :endpos 13))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :startpos 7
   :endpos 7
@@ -11738,7 +11739,7 @@
           (textblock
            :text "b"
            :startpos 5
-           :endpos 5))))))))"
+           :endpos 5))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -11883,7 +11884,7 @@
                         :endpos 5))))))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "c"
   :startpos 9
@@ -12033,7 +12034,7 @@
             :endpos 7
             :delim
              (copy delimcomma
-              :pos 0))))))))"
+              :pos 0))))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -12234,7 +12235,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblock
   :text "a"
   :startpos 0
@@ -12242,7 +12243,7 @@
   :delim delimcomma)
  (textblock<-string-delim
   "a"
-  delimcomma))"
+  delimcomma))`
         :testresult
          (testresult
           :code ":eq"
@@ -12265,7 +12266,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (textblocklist
   (textblock
    :text "+")
@@ -12291,7 +12292,7 @@
       :pos 0))
    (textblock
     :text "3"))
-  delimwhitespace))"
+  delimwhitespace))`
         :testresult
          (testresult
           :code ":eq"
@@ -12481,14 +12482,14 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "text"
  (string-first<-xml
   (xml
    :children
     (xmllist
      (xml
-      :text "text")))))"
+      :text "text")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -12503,7 +12504,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (tb/textblock
   :text
    "<doc>
@@ -12678,7 +12679,7 @@
      <tag1>
        <tag2 prop1=\"val1\" prop2=\"val2\" />
      </tag1>
-   </doc>"))"
+   </doc>"))`
         :testresult
          (testresult
           :code ":eq"
@@ -12686,11 +12687,11 @@
           :expected
            (textblock
             :text
-             "<doc>
+             `<doc>
   <tag1>
     <tag2 prop1="val1" prop2="val2" />
   </tag1>
-</doc>"
+</doc>`
             :startpos 1
             :endpos 70
             :children
@@ -12738,7 +12739,7 @@
                :startpos 15
                :endpos 19)
               (textblock
-               :text "<tag2 prop1="val1" prop2="val2" />"
+               :text `<tag2 prop1="val1" prop2="val2" />`
                :startpos 20
                :endpos 53
                :delim
@@ -12773,14 +12774,14 @@
                     :name "delimxmlequal"
                     :starttext "="))
                  (textblock
-                  :text ""val1""
+                  :text `"val1"`
                   :startpos 32
                   :endpos 37
                   :delim
                    (delim
                     :name "delimquote"
-                    :starttext """
-                    :endtext """)
+                    :starttext `"`
+                    :endtext `"`)
                   :children
                    (textblocklist
                     (textblock
@@ -12808,14 +12809,14 @@
                     :name "delimxmlequal"
                     :starttext "="))
                  (textblock
-                  :text ""val2""
+                  :text `"val2"`
                   :startpos 45
                   :endpos 50
                   :delim
                    (delim
                     :name "delimquote"
-                    :starttext """
-                    :endtext """)
+                    :starttext `"`
+                    :endtext `"`)
                   :children
                    (textblocklist
                     (textblock
@@ -12879,11 +12880,11 @@
           :actual
            (textblock
             :text
-             "<doc>
+             `<doc>
   <tag1>
     <tag2 prop1="val1" prop2="val2" />
   </tag1>
-</doc>"
+</doc>`
             :startpos 1
             :endpos 70
             :children
@@ -12931,7 +12932,7 @@
                :startpos 15
                :endpos 19)
               (textblock
-               :text "<tag2 prop1="val1" prop2="val2" />"
+               :text `<tag2 prop1="val1" prop2="val2" />`
                :startpos 20
                :endpos 53
                :delim
@@ -12966,14 +12967,14 @@
                     :name "delimxmlequal"
                     :starttext "="))
                  (textblock
-                  :text ""val1""
+                  :text `"val1"`
                   :startpos 32
                   :endpos 37
                   :delim
                    (delim
                     :name "delimquote"
-                    :starttext """
-                    :endtext """)
+                    :starttext `"`
+                    :endtext `"`)
                   :children
                    (textblocklist
                     (textblock
@@ -13001,14 +13002,14 @@
                     :name "delimxmlequal"
                     :starttext "="))
                  (textblock
-                  :text ""val2""
+                  :text `"val2"`
                   :startpos 45
                   :endpos 50
                   :delim
                    (delim
                     :name "delimquote"
-                    :starttext """
-                    :endtext """)
+                    :starttext `"`
+                    :endtext `"`)
                   :children
                    (textblocklist
                     (textblock
@@ -13095,7 +13096,7 @@
             :tag ":notag")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc")
  (xml-angle<-xml-textblock
@@ -13112,7 +13113,7 @@
      (tb/textblock
       :text "doc"
       :startpos 2
-      :endpos 4)))))"
+      :endpos 4)))))`
         :testresult
          (testresult
           :code ":eq"
@@ -13125,7 +13126,7 @@
             :tag "doc")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "tag1"
   :children
@@ -13224,7 +13225,7 @@
       (tb/textblock
        :text "/"
        :startpos 52
-       :endpos 52)))))"
+       :endpos 52)))))`
         :testresult
          (testresult
           :code ":eq"
@@ -13259,14 +13260,14 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc")
  (xml-close<-xml-textblock
   (xml
    :tag "doc")
   (tb/textblock
-   :text "/")))"
+   :text "/")))`
         :testresult
          (testresult
           :code ":eq"
@@ -13279,14 +13280,14 @@
             :tag "doc")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc")
  (xml-close<-xml-textblock
   (xml
    :tag "doc")
   (tb/textblock
-   :text "</doc>")))"
+   :text "</doc>")))`
         :testresult
          (testresult
           :code ":eq"
@@ -13299,7 +13300,7 @@
             :tag "doc")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc"
   (msg
@@ -13316,7 +13317,7 @@
   (xml
    :tag "doc")
   (tb/textblock
-   :text "/wrong")))"
+   :text "/wrong")))`
         :testresult
          (testresult
           :code ":eq"
@@ -13355,7 +13356,7 @@
                 :severity 2))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "top"
   :children
@@ -13369,7 +13370,7 @@
     (xml
      :tag "top"))
   (tb/textblock
-   :text "/")))"
+   :text "/")))`
         :testresult
          (testresult
           :code ":eq"
@@ -13396,7 +13397,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc")
  (xml-parse<-xml-textblock
@@ -13409,7 +13410,7 @@
    :children
     (tb/textblocklist
      (tb/textblock
-      :text "doc")))))"
+      :text "doc")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -13422,7 +13423,7 @@
             :tag "doc")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc")
  (xml-parse<-xml-textblock
@@ -13433,7 +13434,7 @@
   "
    :delim
     (copy tb/delimwhitespace
-     :pos 0))))"
+     :pos 0))))`
         :testresult
          (testresult
           :code ":eq"
@@ -13446,7 +13447,7 @@
             :tag "doc")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "tag1"
   :parent
@@ -13463,7 +13464,7 @@
    :children
     (tb/textblocklist
      (tb/textblock
-      :text "tag1")))))"
+      :text "tag1")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -13482,7 +13483,7 @@
               :tag "doc"))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "tag1"
   :children
@@ -13559,7 +13560,7 @@
         (copy tb/delimwhitespace
          :pos 0))
       (tb/textblock
-       :text "/")))))"
+       :text "/")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -13594,7 +13595,7 @@
               :tag "doc"))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc"
   :children
@@ -13631,7 +13632,7 @@
    :children
     (tb/textblocklist
      (tb/textblock
-      :text "/tag1")))))"
+      :text "/tag1")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -13674,7 +13675,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc"
   :children
@@ -13861,7 +13862,7 @@
       (tb/textblock
        :text "/doc"
        :startpos 66
-       :endpos 69))))))"
+       :endpos 69))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -13904,7 +13905,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc"
   :children
@@ -13974,7 +13975,7 @@
      (copy tb/delimwhitespace
       :pos 0))
    (tb/textblock
-    :text "/"))))"
+    :text "/"))))`
         :testresult
          (testresult
           :code ":eq"
@@ -14009,14 +14010,14 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "tag1")
  (xml-property<-xml-textblock
   (xml
    :tag ":notag")
   (tb/textblock
-   :text "tag1")))"
+   :text "tag1")))`
         :testresult
          (testresult
           :code ":eq"
@@ -14029,7 +14030,7 @@
             :tag "tag1")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "tag1"
   :prop "prop1")
@@ -14037,7 +14038,7 @@
   (xml
    :tag "tag1")
   (tb/textblock
-   :text "prop1")))"
+   :text "prop1")))`
         :testresult
          (testresult
           :code ":eq"
@@ -14052,7 +14053,7 @@
             :prop "prop1")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "tag1"
   :propmap
@@ -14069,7 +14070,7 @@
    :children
     (tb/textblocklist
      (tb/textblock
-      :text "val1")))))"
+      :text "val1")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -14094,13 +14095,13 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :text "text1")
  (xml-text<-xml-textblock
   (empty xml)
   (tb/textblock
-   :text "text1")))"
+   :text "text1")))`
         :testresult
          (testresult
           :code ":eq"
@@ -14113,7 +14114,7 @@
             :text "text1")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc"
   :children
@@ -14124,7 +14125,7 @@
   (xml
    :tag "doc")
   (tb/textblock
-   :text "text1")))"
+   :text "text1")))`
         :testresult
          (testresult
           :code ":eq"
@@ -14151,7 +14152,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (xml
   :tag "doc"
   :children
@@ -14347,7 +14348,7 @@
         (tb/textblock
          :text "/doc"
          :startpos 66
-         :endpos 69)))))))"
+         :endpos 69)))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -14392,6 +14393,7 @@
       :delimxmlequal 0)
     :funcmap
      (intmap
+      :string-decodexml<-string 0
       :string-first<-xml 1
       :textblock-xml<-string 1
       :xml-angle<-xml-textblock 3
@@ -14417,12 +14419,12 @@
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 13)
+      :total 14)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 13)
+      :total 14)
     :constnums
      (testcoveragenums
       :pct 0
@@ -14430,20 +14432,20 @@
       :total 4)
     :docnums
      (testcoveragenums
-      :pct 65
-      :tests 13
-      :total 20)
+      :pct 66
+      :tests 14
+      :total 21)
     :funcnums
      (testcoveragenums
-      :pct 76
+      :pct 71
       :tests 10
-      :total 13)
+      :total 14)
     :testpkg "vx/data/xml"
     :totalnums
      (testcoveragenums
-      :pct 50
+      :pct 47
       :tests 10
-      :total 20)
+      :total 21)
     :typenums
      (testcoveragenums
       :pct 0
@@ -14516,12 +14518,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  5
  (any<-macro : int
   "(+ "
   (- 7 5)
-  " 3)"))"
+  " 3)"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14536,7 +14538,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "HelloWorld"
  (any<-repl
   (repl
@@ -14545,7 +14547,7 @@
     (repllist
      (repl :val "Hello")
      (repl :val "World")
-    ))))"
+    ))))`
         :testresult
          (testresult
           :code ":eq"
@@ -14577,10 +14579,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  5
  (any<-script
-  "(+ 2 3)"))"
+  "(+ 2 3)"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14595,10 +14597,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  infinity
  (const<-string
-  "infinity"))"
+  "infinity"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14607,10 +14609,10 @@
           :actual infinity))
        (testdescribe
         :describename
-         "(test
+         `(test
  tb/delimcomma
  (const<-string
-  "vx/data/textblock/delimcomma"))"
+  "vx/data/textblock/delimcomma"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14625,12 +14627,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :val 2)
  (repl-empty<-textblock-argmap
   (tb/textblock
    :text "2")
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14643,12 +14645,12 @@
             :val 2)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :type +)
  (repl-empty<-textblock-argmap
   (tb/textblock
    :text "+")
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14661,7 +14663,7 @@
             :type vx/core/+)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :val 2)
  (repl-empty<-textblock-argmap
   (tb/textblock
@@ -14670,7 +14672,7 @@
     (tb/textblocklist
      (tb/textblock
       :text "2")))
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14683,7 +14685,7 @@
             :val 2)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   (msg<-error "Empty delim cannot have more than one child."))
  (repl-empty<-textblock-argmap
@@ -14695,7 +14697,7 @@
       :text "2")
      (tb/textblock
       :text "3")))
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14724,7 +14726,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :type vx/core/+
   :repllist
@@ -14758,7 +14760,7 @@
         :pos 0))
      (tb/textblock
       :text "3")))
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14789,7 +14791,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :type vx/core/+
   :repllist
@@ -14801,7 +14803,7 @@
  (repl<-macro
   "(+ "
   (- 7 5)
-  " 3)"))"
+  " 3)"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14832,11 +14834,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :val 2)
  (repl<-script
-  "2"))"
+  "2"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14849,11 +14851,11 @@
             :val 2)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :val infinity)
  (repl<-script
-  "infinity"))"
+  "infinity"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14866,11 +14868,11 @@
             :val infinity)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :type +)
  (repl<-script
-  "+"))"
+  "+"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14883,7 +14885,7 @@
             :type vx/core/+)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :type +
   :repllist
@@ -14893,7 +14895,7 @@
     (repl
      :val 3)))
  (repl<-script
-  "(+ 2 3)"))"
+  "(+ 2 3)"))`
         :testresult
          (testresult
           :code ":eq"
@@ -14924,11 +14926,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :val "Hello")
  (repl<-string-argmap
   `"Hello"`
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14941,12 +14943,12 @@
             :val "Hello")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :val 2)
  (repl<-string-argmap
   "2"
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14959,11 +14961,11 @@
             :val 2)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :val 2.3)
  (repl<-string-argmap
   "2.3"
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14976,12 +14978,12 @@
             :val 2.3)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :val infinity)
  (repl<-string-argmap
   "infinity"
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -14994,12 +14996,12 @@
             :val infinity)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :val tb/delimcomma)
  (repl<-string-argmap
   "vx/data/textblock/delimcomma"
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -15012,11 +15014,11 @@
             :val vx/data/textblock/delimcomma)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :type string)
  (repl<-string-argmap
   "string"
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -15029,11 +15031,11 @@
             :type vx/core/string)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :type +)
  (repl<-string-argmap
   "+"
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -15052,11 +15054,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :val 2)
  (repl<-textblock
   (tb/textblock
-   :text "2")))"
+   :text "2")))`
         :testresult
          (testresult
           :code ":eq"
@@ -15069,11 +15071,11 @@
             :val 2)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :type +)
  (repl<-textblock
   (tb/textblock
-   :text "+")))"
+   :text "+")))`
         :testresult
          (testresult
           :code ":eq"
@@ -15086,11 +15088,11 @@
             :type vx/core/+)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :type +)
  (repl<-textblock
   (tb/textblock
-   :text "+")))"
+   :text "+")))`
         :testresult
          (testresult
           :code ":eq"
@@ -15103,7 +15105,7 @@
             :type vx/core/+)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :type +
   :repllist
@@ -15134,7 +15136,7 @@
        (copy tb/delimwhitespace
         :pos 0))
      (tb/textblock
-      :text "3")))))"
+      :text "3")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -15159,7 +15161,7 @@
                :val 3)))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :type +
   :repllist
@@ -15194,7 +15196,7 @@
           (copy tb/delimwhitespace
            :pos 0))
         (tb/textblock
-         :text "3")))))))"
+         :text "3")))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -15225,12 +15227,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :val 2)
  (repl<-textblock-argmap
   (tb/textblock
    :text "2")
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -15243,12 +15245,12 @@
             :val 2)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl :type +)
  (repl<-textblock-argmap
   (tb/textblock
    :text "+")
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -15261,7 +15263,7 @@
             :type vx/core/+)))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :type +
   :repllist
@@ -15293,7 +15295,7 @@
         :pos 0))
      (tb/textblock
       :text "3")))
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -15318,7 +15320,7 @@
                :val 3)))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (repl
   :type +
   :repllist
@@ -15354,7 +15356,7 @@
            :pos 0))
         (tb/textblock
          :text "3")))))
-  (empty argmap)))"
+  (empty argmap)))`
         :testresult
          (testresult
           :code ":eq"
@@ -15385,7 +15387,7 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (tb/textblock
   :text "infinity"
   :startpos 1
@@ -15400,7 +15402,7 @@
      (delim
       :name "delimvxlisp"))))
  (textblock<-script
-  "infinity"))"
+  "infinity"))`
         :testresult
          (testresult
           :code ":eq"
@@ -15435,7 +15437,7 @@
                  :name "delimvxlisp"))))))
        (testdescribe
         :describename
-         "(test
+         `(test
  (tb/textblock
   :text "(+ 2 3)"
   :startpos 1
@@ -15479,7 +15481,7 @@
         :startpos 6
         :endpos 6)))))
  (textblock<-script
-  "(+ 2 3)"))"
+  "(+ 2 3)"))`
         :testresult
          (testresult
           :code ":eq"
@@ -15584,10 +15586,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  string
  (typefunc<-string
-  "string"))"
+  "string"))`
         :testresult
          (testresult
           :code ":eq"
@@ -15596,10 +15598,10 @@
           :actual vx/core/string))
        (testdescribe
         :describename
-         "(test
+         `(test
  +
  (typefunc<-string
-  "+"))"
+  "+"))`
         :testresult
          (testresult
           :code ":eq"
@@ -15832,11 +15834,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (boolean-exists<-file
   (file
    :name "testsuite.vxlisp"
-   :path "src/test/resources")))"
+   :path "src/test/resources")))`
         :testresult
          (testresult
           :code ":true"
@@ -15851,11 +15853,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (boolean-exists<-file
   (file
    :name "testsuite.html"
-   :path "src/test/resources")))"
+   :path "src/test/resources")))`
         :testresult
          (testresult
           :code ":true"
@@ -15870,11 +15872,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (boolean-exists<-file
   (file
    :name "testsuitenode.vxlisp"
-   :path "src/test/resources")))"
+   :path "src/test/resources")))`
         :testresult
          (testresult
           :code ":true"
@@ -15987,9 +15989,9 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "!NotFound!"
- (translate "!NotFound!"))"
+ (translate "!NotFound!"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16004,12 +16006,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "Repl Type Not Found"
  (translate
   (msg
    :path "vx/repl/repl/repl<-string-argmap"
-   :code "repltypenotfound")))"
+   :code "repltypenotfound")))`
         :testresult
          (testresult
           :code ":eq"
@@ -16024,14 +16026,14 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "Hola"
  (translate<-translation-string
   (translation
    :wordmap
     (stringmap
      "Hello" "Hola"))
-  "Hello"))"
+  "Hello"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16105,12 +16107,12 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "Hola"
  (trn/translate<-translationmap-name-string
   (translationmap-all)
   "es"
-  "Hello"))"
+  "Hello"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16175,11 +16177,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "Hello"
  (trn/translate<-translation-string
   (translation-en)
-  "Hello"))"
+  "Hello"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16247,11 +16249,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "Hola"
  (trn/translate<-translation-string
   (translation-es)
-  "Hello"))"
+  "Hello"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16316,10 +16318,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (boolean<-string-ends
   "abcd"
-  "cd"))"
+  "cd"))`
         :testresult
          (testresult
           :code ":true"
@@ -16334,10 +16336,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (boolean<-string-starts
   "abcd"
-  "ab"))"
+  "ab"))`
         :testresult
          (testresult
           :code ":true"
@@ -16352,11 +16354,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  3
  (int<-string-find
   "abcdcdg"
-  "cd"))"
+  "cd"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16371,11 +16373,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  3
  (int<-string-findkeyword
   "ab	cdefg"
-  ":whitespace"))"
+  ":whitespace"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16384,12 +16386,12 @@
           :actual 3))
        (testdescribe
         :describename
-         "(test
+         `(test
  5
  (int<-string-findkeyword
   " 	
 ab"
-  ":nonwhitespace"))"
+  ":nonwhitespace"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16404,11 +16406,11 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  5
  (int<-string-findlast
   "abcdcdg"
-  "cd"))"
+  "cd"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16423,8 +16425,8 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test-true
- (is-string ""))"
+         `(test-true
+ (is-string ""))`
         :testresult
          (testresult
           :code ":true"
@@ -16433,8 +16435,8 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-true
- (is-string "a"))"
+         `(test-true
+ (is-string "a"))`
         :testresult
          (testresult
           :code ":true"
@@ -16479,8 +16481,8 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-true
- (is-type "a" string))"
+         `(test-true
+ (is-type "a" string))`
         :testresult
          (testresult
           :code ":true"
@@ -16527,10 +16529,10 @@
           :actual true))
        (testdescribe
         :describename
-         "(test-true
+         `(test-true
  (is-type<-any-typelist
   "a"
-  (typelist number string)))"
+  (typelist number string)))`
         :testresult
          (testresult
           :code ":true"
@@ -16569,9 +16571,9 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  4
- (length<-string "abcd"))"
+ (length<-string "abcd"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16580,9 +16582,9 @@
           :actual 4))
        (testdescribe
         :describename
-         "(test
+         `(test
  0
- (length<-string ""))"
+ (length<-string ""))`
         :testresult
          (testresult
           :code ":eq"
@@ -16595,10 +16597,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "abc"
  (string-lowercase
-  "AbC"))"
+  "AbC"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16613,10 +16615,10 @@
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "ab"
  (string-outdent
-  "ab"))"
+  "ab"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16625,13 +16627,13 @@
           :actual "ab"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "a
 b"
  (string-outdent
   "
  a
- b"))"
+ b"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16650,12 +16652,12 @@ b"))))
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "ab"
  (string-trim
   " 	
 ab
-	 "))"
+	 "))`
         :testresult
          (testresult
           :code ":eq"
@@ -16670,10 +16672,10 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "ABC"
  (string-uppercase
-  "aBc"))"
+  "aBc"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16688,9 +16690,9 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "4"
- (string<-int 4))"
+ (string<-int 4))`
         :testresult
          (testresult
           :code ":eq"
@@ -16699,9 +16701,9 @@ ab
           :actual "4"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "51"
- (string<-int 51))"
+ (string<-int 51))`
         :testresult
          (testresult
           :code ":eq"
@@ -16710,9 +16712,9 @@ ab
           :actual "51"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "notanumber"
- (string<-int notanumber))"
+ (string<-int notanumber))`
         :testresult
          (testresult
           :code ":eq"
@@ -16721,9 +16723,9 @@ ab
           :actual "notanumber"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "infinity"
- (string<-int infinity))"
+ (string<-int infinity))`
         :testresult
          (testresult
           :code ":eq"
@@ -16732,9 +16734,9 @@ ab
           :actual "infinity"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "neginfinity"
- (string<-int neginfinity))"
+ (string<-int neginfinity))`
         :testresult
          (testresult
           :code ":eq"
@@ -16749,11 +16751,11 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "abc"
  (string<-string-end
   "abcd"
-  3))"
+  3))`
         :testresult
          (testresult
           :code ":eq"
@@ -16762,11 +16764,11 @@ ab
           :actual "abc"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "ab"
  (string<-string-end
   "abcd"
-  2))"
+  2))`
         :testresult
          (testresult
           :code ":eq"
@@ -16781,11 +16783,11 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "abcd"
  (string<-string-start
   "abcd"
-  1))"
+  1))`
         :testresult
          (testresult
           :code ":eq"
@@ -16794,11 +16796,11 @@ ab
           :actual "abcd"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "bcd"
  (string<-string-start
   "abcd"
-  2))"
+  2))`
         :testresult
          (testresult
           :code ":eq"
@@ -16813,12 +16815,12 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "abc"
  (string<-string-start-end
   "abcd"
   1
-  3))"
+  3))`
         :testresult
          (testresult
           :code ":eq"
@@ -16827,12 +16829,12 @@ ab
           :actual "abc"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "bc"
  (string<-string-start-end
   "abcd"
   2
-  3))"
+  3))`
         :testresult
          (testresult
           :code ":eq"
@@ -16841,24 +16843,24 @@ ab
           :actual "bc"))
        (testdescribe
         :describename
-         "(test
+         `(test
  ""
  (string<-string-start-end
   "abcd"
   5
-  6))"
+  6))`
         :testresult
          (testresult
           :code ":eq"
           :passfail true))
        (testdescribe
         :describename
-         "(test
+         `(test
  "bcd"
  (string<-string-start-end
   "abcd"
   2
-  5))"
+  5))`
         :testresult
          (testresult
           :code ":eq"
@@ -16867,12 +16869,12 @@ ab
           :actual "bcd"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "bc"
  (string<-string-start-end
   "abcd"
   2
-  -1))"
+  -1))`
         :testresult
          (testresult
           :code ":eq"
@@ -16887,11 +16889,11 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "a$b$c"
  (string<-stringlist-join
   (stringlist "a" "b" "c")
-  "$"))"
+  "$"))`
         :testresult
          (testresult
           :code ":eq"
@@ -16906,11 +16908,11 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (stringlist "a" "b" "c")
  (stringlist<-string-split
   "a$b$c"
-  "$"))"
+  "$"))`
         :testresult
          (testresult
           :code ":eq"
@@ -17009,9 +17011,9 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "<body></body>"
- (string<-body-indent (body) 0))"
+ (string<-body-indent (body) 0))`
         :testresult
          (testresult
           :code ":eq"
@@ -17020,11 +17022,11 @@ ab
           :actual "<body></body>"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "<body>
   <div></div>
 </body>"
- (string<-body-indent (body (div)) 0))"
+ (string<-body-indent (body (div)) 0))`
         :testresult
          (testresult
           :code ":eq"
@@ -17045,9 +17047,9 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "<div></div>"
- (string<-div-indent (div) 0))"
+ (string<-div-indent (div) 0))`
         :testresult
          (testresult
           :code ":eq"
@@ -17056,16 +17058,16 @@ ab
           :actual "<div></div>"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "<div id=\"myid\"></div>"
  (string<-div-indent
-  (div :id "myid") 0))"
+  (div :id "myid") 0))`
         :testresult
          (testresult
           :code ":eq"
           :passfail true
-          :expected "<div id="myid"></div>"
-          :actual "<div id="myid"></div>"))))
+          :expected `<div id="myid"></div>`
+          :actual `<div id="myid"></div>`))))
     (testcase
      :passfail true
      :testpkg "vx/web/html"
@@ -17074,9 +17076,9 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "<head></head>"
- (string<-head-indent (head) 0))"
+ (string<-head-indent (head) 0))`
         :testresult
          (testresult
           :code ":eq"
@@ -17091,7 +17093,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "<!DOCTYPE html>
 <html>
   <head></head>
@@ -17099,7 +17101,7 @@ ab
   <footer></footer>
 </html>"
  (string<-html
-  (html :head (head) :body (body))))"
+  (html :head (head) :body (body))))`
         :testresult
          (testresult
           :code ":eq"
@@ -17126,15 +17128,15 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "<meta charset=\"utf-8\" />"
- (string<-meta-indent (meta :charset "utf-8") 0))"
+ (string<-meta-indent (meta :charset "utf-8") 0))`
         :testresult
          (testresult
           :code ":eq"
           :passfail true
-          :expected "<meta charset="utf-8" />"
-          :actual "<meta charset="utf-8" />"))))
+          :expected `<meta charset="utf-8" />`
+          :actual `<meta charset="utf-8" />`))))
     (testcase
      :passfail true
      :testpkg "vx/web/html"
@@ -17143,9 +17145,9 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  "<p>data</p>"
- (string<-p-indent (p :text "data") 0))"
+ (string<-p-indent (p :text "data") 0))`
         :testresult
          (testresult
           :code ":eq"
@@ -17154,16 +17156,16 @@ ab
           :actual "<p>data</p>"))
        (testdescribe
         :describename
-         "(test
+         `(test
  "<p id=\"myid\">data</p>"
  (string<-p-indent
-  (p :id "myid" :text "data") 0))"
+  (p :id "myid" :text "data") 0))`
         :testresult
          (testresult
           :code ":eq"
           :passfail true
-          :expected "<p id="myid">data</p>"
-          :actual "<p id="myid">data</p>")))))
+          :expected `<p id="myid">data</p>`
+          :actual `<p id="myid">data</p>`)))))
   :coveragedetail
    (testcoveragedetail
     :funcmap
@@ -17518,13 +17520,17 @@ ab
       :suit-spade 0)
     :funcmap
      (intmap
-      :rating<-mass 0)
+      :bookmap<-booklist 0
+      :name<-chapter 0
+      :rating<-mass 0
+      :tactics<-booklist 0)
     :testpkg "nx/tactics/base"
     :typemap
      (intmap
       :ability 0
       :abilitymap 0
       :book 0
+      :booklist 0
       :bookmap 0
       :card 0
       :cardlist 0
@@ -17565,6 +17571,7 @@ ab
       :stat 0
       :suit 0
       :suitmap 0
+      :tactics 0
       :team 0
       :teammap 0
       :terrain 0
@@ -17592,12 +17599,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :constnums
      (testcoveragenums
       :pct 0
@@ -17605,25 +17612,25 @@ ab
       :total 34)
     :docnums
      (testcoveragenums
-      :pct 5
-      :tests 5
-      :total 99)
+      :pct 6
+      :tests 7
+      :total 104)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :testpkg "nx/tactics/base"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 99)
+      :total 104)
     :typenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 64))
+      :total 66))
   :passfail true
   :testpkg "nx/tactics/base")
  (testpackage
@@ -17631,6 +17638,10 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_advanced_rules 0
+      :chapter_advanced_rules_overview 0
+      :chapter_advanced_tokens 0
+      :chapter_genres 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/advanced_rules")
   :coveragesummary
@@ -17639,12 +17650,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 5)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 5)
     :constnums
      (testcoveragenums
       :pct 100
@@ -17654,18 +17665,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 5)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 5)
     :testpkg "nx/tactics/books/advanced_rules"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 5)
     :typenums
      (testcoveragenums
       :pct 100
@@ -17678,6 +17689,13 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_age_of_sail_overview 0
+      :chapter_age_of_sail_weaponry 0
+      :chapter_american_revolution 0
+      :chapter_french_revolution 0
+      :chapter_golden_age_of_sail 0
+      :chapter_renaissance 0
+      :chapter_tokugawa_shogunate 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/age_of_sail")
   :coveragesummary
@@ -17686,12 +17704,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :constnums
      (testcoveragenums
       :pct 100
@@ -17701,18 +17719,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :testpkg "nx/tactics/books/age_of_sail"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :typenums
      (testcoveragenums
       :pct 100
@@ -17725,6 +17743,13 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_age_of_steam_equipment 0
+      :chapter_age_of_steam_overview 0
+      :chapter_civil_war 0
+      :chapter_examples_of_play 0
+      :chapter_steam_age_maps 0
+      :chapter_victorian_england 0
+      :chapter_wild_west 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/age_of_steam")
   :coveragesummary
@@ -17733,12 +17758,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :constnums
      (testcoveragenums
       :pct 100
@@ -17748,18 +17773,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :testpkg "nx/tactics/books/age_of_steam"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :typenums
      (testcoveragenums
       :pct 100
@@ -17772,6 +17797,19 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_ancients_overview 0
+      :chapter_ancients_scenarios 0
+      :chapter_anglo_saxons 0
+      :chapter_carthaginians 0
+      :chapter_chinese_dynasty 0
+      :chapter_egyptian_dynasty 0
+      :chapter_germanic_tribes 0
+      :chapter_greek_city_states 0
+      :chapter_macedon 0
+      :chapter_norsemen 0
+      :chapter_persians 0
+      :chapter_roman_empire 0
+      :chapter_unfiled_ancient 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/ancients")
   :coveragesummary
@@ -17780,12 +17818,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :constnums
      (testcoveragenums
       :pct 100
@@ -17795,18 +17833,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :testpkg "nx/tactics/books/ancients"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :typenums
      (testcoveragenums
       :pct 100
@@ -17819,6 +17857,28 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_amphibians 0
+      :chapter_arthropods 0
+      :chapter_avians 0
+      :chapter_beastmen 0
+      :chapter_bestiary_overview 0
+      :chapter_constructs 0
+      :chapter_darkling 0
+      :chapter_dragons 0
+      :chapter_elementals 0
+      :chapter_extra-dimensional 0
+      :chapter_giant_races 0
+      :chapter_humanoids 0
+      :chapter_humanoids_fantastic 0
+      :chapter_mammals_marsupials 0
+      :chapter_marine_creatures 0
+      :chapter_microorganisms 0
+      :chapter_mythical_beasts 0
+      :chapter_plants 0
+      :chapter_reptiles 0
+      :chapter_shapeshifters 0
+      :chapter_undead_creatures 0
+      :chapter_underground_creatures 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/bestiary")
   :coveragesummary
@@ -17827,12 +17887,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 23)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 23)
     :constnums
      (testcoveragenums
       :pct 100
@@ -17842,18 +17902,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 23)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 23)
     :testpkg "nx/tactics/books/bestiary"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 23)
     :typenums
      (testcoveragenums
       :pct 100
@@ -17872,7 +17932,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/ability
   :name "name"
   :image "image")
@@ -17880,7 +17940,7 @@ ab
   (empty base/ability)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -17901,7 +17961,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/ability
   :titles "titles")
  (ability<-ability-xmlchild
@@ -17911,7 +17971,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -17930,7 +17990,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/ability
   :name "name"
   :image "image"
@@ -17956,7 +18016,7 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))))))"
+         :text "reference")))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -17981,13 +18041,13 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :name "nm")
  (book<-book-key-value
   (empty base/book)
   "name"
-  "nm"))"
+  "nm"))`
         :testresult
          (testresult
           :code ":eq"
@@ -18000,13 +18060,13 @@ ab
             :name "nm")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :name "image")
  (book<-book-key-value
   (empty base/book)
   "name"
-  "image"))"
+  "image"))`
         :testresult
          (testresult
           :code ":eq"
@@ -18025,7 +18085,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :name "name"
   :image "image")
@@ -18033,7 +18093,7 @@ ab
   (empty base/book)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -18054,7 +18114,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :name "name1")
  (book<-book-xml
@@ -18063,7 +18123,7 @@ ab
    :tag "doc"
    :propmap
     (stringmap
-     :name "name1"))))"
+     :name "name1"))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18076,19 +18136,19 @@ ab
             :name "name1")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (empty base/book)
  (book<-book-xml
   (empty base/book)
   (xml/xml
-   :tag "?xml")))"
+   :tag "?xml")))`
         :testresult
          (testresult
           :code ":eq"
           :passfail true))
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :name "name1"
   (msgblock
@@ -18103,7 +18163,7 @@ ab
   (base/book
    :name "name1")
   (xml/xml
-   :tag "doc")))"
+   :tag "doc")))`
         :testresult
          (testresult
           :code ":eq"
@@ -18142,7 +18202,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :chaptermap
    (base/chaptermap
@@ -18155,7 +18215,7 @@ ab
    :tag "chapter"
    :propmap
     (stringmap
-     :name "chapter1"))))"
+     :name "chapter1"))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18182,7 +18242,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :titles "titles")
  (book<-book-xmlchild
@@ -18192,7 +18252,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18205,7 +18265,7 @@ ab
             :titles "titles")))
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :chaptermap
    (base/chaptermap
@@ -18218,7 +18278,7 @@ ab
    :tag "chapter"
    :propmap
     (stringmap
-     :name "chapter1"))))"
+     :name "chapter1"))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18245,7 +18305,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :name "name1")
  (book<-xml
@@ -18258,7 +18318,7 @@ ab
       :tag "doc"
       :propmap
        (stringmap
-        :name "name1"))))))"
+        :name "name1"))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18277,7 +18337,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :name "name1"
   :image "image1"
@@ -18313,7 +18373,7 @@ ab
       :tag "chapter"
       :propmap
        (stringmap
-        :name "chapter1"))))))"
+        :name "chapter1"))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18348,7 +18408,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/book
   :name "name1")
  (book<-xmllist
@@ -18359,7 +18419,7 @@ ab
     :tag "doc"
     :propmap
      (stringmap
-      :name "name1")))))"
+      :name "name1")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18378,7 +18438,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/chapter
   :name "name"
   :image "image")
@@ -18386,7 +18446,7 @@ ab
   (empty base/chapter)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -18407,7 +18467,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/chapter
   :titles "titles")
  (chapter<-chapter-xmlchild
@@ -18417,7 +18477,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18436,7 +18496,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/chapter
   :name "name"
   :image "image"
@@ -18446,7 +18506,10 @@ ab
    (base/sectionmap
     :section1
      (base/section
-      :name "section1")))
+      :name "section1")
+    :section2
+     (base/section
+      :name "section2")))
  (chapter<-xml
   (xml/xml
    :tag "chapter"
@@ -18472,7 +18535,12 @@ ab
       :tag "section"
       :propmap
        (stringmap
-        :name "section1"))))))"
+        :name "section1"))
+     (xml/xml
+      :tag "section"
+      :propmap
+       (stringmap
+        :name "section2"))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18487,7 +18555,10 @@ ab
              (sectionmap
               :section1
                (section
-                :name "section1")))
+                :name "section1")
+              :section2
+               (section
+                :name "section2")))
           :actual
            (chapter
             :name "name"
@@ -18498,7 +18569,10 @@ ab
              (sectionmap
               :section1
                (section
-                :name "section1")))))))
+                :name "section1")
+              :section2
+               (section
+                :name "section2")))))))
     (testcase
      :passfail true
      :testpkg "nx/tactics/books/bookloader"
@@ -18507,7 +18581,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/damage
   :name  "name"
   :image "image")
@@ -18515,7 +18589,7 @@ ab
   (empty base/damage)
   (stringmap
    :name  "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -18536,7 +18610,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/damage
   :titles "titles")
  (damage<-damage-xmlchild
@@ -18546,7 +18620,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18565,7 +18639,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/power
   :name "name"
   :image "image")
@@ -18573,7 +18647,7 @@ ab
   (empty base/power)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -18594,7 +18668,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/power
   :titles "titles")
  (power<-power-xmlchild
@@ -18604,7 +18678,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18623,7 +18697,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/power
   :name "name"
   :image "image"
@@ -18669,7 +18743,7 @@ ab
       :tag "specialty"
       :propmap
        (stringmap
-        :name "specialty1"))))))"
+        :name "specialty1"))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18714,7 +18788,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/rule
   :name  "name"
   :image "image")
@@ -18722,7 +18796,7 @@ ab
   (empty base/rule)
   (stringmap
    :name  "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -18743,7 +18817,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/rule
   :titles "titles")
  (rule<-rule-xmlchild
@@ -18753,7 +18827,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18772,7 +18846,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/scenario
   :name "name"
   :image "image"
@@ -18798,7 +18872,7 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))))))"
+         :text "reference")))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18823,7 +18897,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/section
   :name "name"
   :image "image"
@@ -18889,7 +18963,7 @@ ab
       :tag "skill"
       :propmap
        (stringmap
-        :name "skill1"))))))"
+        :name "skill1"))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18954,7 +19028,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/skill
   :titles "titles")
  (skill<-skill-xmlchild
@@ -18964,7 +19038,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -18983,7 +19057,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/skill
   :name "name"
   :image "image"
@@ -19029,7 +19103,7 @@ ab
       :tag "specialty"
       :propmap
        (stringmap
-        :name "specialty1"))))))"
+        :name "specialty1"))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19074,7 +19148,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/specialty
   :name "name"
   :image "image")
@@ -19082,7 +19156,7 @@ ab
   (empty base/specialty)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -19103,7 +19177,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/specialty
   :titles "titles")
  (specialty<-specialty-xmlchild
@@ -19113,7 +19187,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19132,7 +19206,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/specialty
   :name "name"
   :image "image"
@@ -19158,7 +19232,7 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))))))"
+         :text "reference")))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19183,7 +19257,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/terrain
   :name  "name"
   :image "image")
@@ -19191,7 +19265,7 @@ ab
   (empty base/terrain)
   (stringmap
    :name  "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -19212,7 +19286,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/terrain
   :titles "titles")
  (terrain<-terrain-xmlchild
@@ -19222,7 +19296,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19241,7 +19315,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unit
   :name "name"
   :image "image")
@@ -19249,7 +19323,7 @@ ab
   (empty base/unit)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -19270,7 +19344,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unit
   :titles "titles")
  (unit<-unit-xmlchild
@@ -19280,7 +19354,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19299,7 +19373,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unit
   :name "name"
   :image "image"
@@ -19334,7 +19408,7 @@ ab
       :tag "skill"
       :propmap
        (stringmap
-        :name "skill1"))))))"
+        :name "skill1"))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19369,7 +19443,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unitability
   :name "name"
   :image "image")
@@ -19377,7 +19451,7 @@ ab
   (empty base/unitability)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -19398,7 +19472,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unitability
   :titles "titles")
  (unitability<-unitability-xmlchild
@@ -19408,7 +19482,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19451,7 +19525,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unitability
   :name "name"
   :image "image"
@@ -19477,7 +19551,7 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))))))"
+         :text "reference")))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19544,7 +19618,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unititem
   :name "name"
   :image "image")
@@ -19552,7 +19626,7 @@ ab
   (empty base/unititem)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -19573,7 +19647,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unititem
   :titles "titles1")
  (unititem<-unititem-xmlchild
@@ -19583,7 +19657,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles1")))))"
+      :text "titles1")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19602,7 +19676,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unititem
   :name "name1"
   :image "image1"
@@ -19635,7 +19709,7 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "summary1")))))))"
+         :text "summary1")))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19662,7 +19736,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unitpower
   :summary "summary1")
  (unitpower<-unitpower-xmlchild
@@ -19672,7 +19746,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "summary1")))))"
+      :text "summary1")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19691,7 +19765,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unitskill
   :summary "summary1")
  (unitskill<-unitskill-xmlchild
@@ -19701,7 +19775,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "summary1")))))"
+      :text "summary1")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19720,7 +19794,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unitspecialty
   :name "name"
   :image "image")
@@ -19728,7 +19802,7 @@ ab
   (empty base/unitspecialty)
   (stringmap
    :name "name"
-   :image "image")))"
+   :image "image")))`
         :testresult
          (testresult
           :code ":eq"
@@ -19749,7 +19823,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unitspecialty
   :titles "titles")
  (unitspecialty<-unitspecialty-xmlchild
@@ -19759,7 +19833,7 @@ ab
    :children
     (xml/xmllist
      (xml/xml
-      :text "titles")))))"
+      :text "titles")))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19802,7 +19876,7 @@ ab
       (testdescribelist
        (testdescribe
         :describename
-         "(test
+         `(test
  (base/unitspecialty
   :name "name"
   :image "image"
@@ -19828,7 +19902,7 @@ ab
       :children
        (xml/xmllist
         (xml/xml
-         :text "reference")))))))"
+         :text "reference")))))))`
         :testresult
          (testresult
           :code ":eq"
@@ -19970,8 +20044,11 @@ ab
       :specialty<-specialty-xmlchild 1
       :specialty<-xml 1
       :string-read<-bookname 0
+      :string-vxlisp-header<-chaptermap 0
       :string-vxlisp<-book 0
-      :string-writename<-book 0
+      :string-vxlisp<-chapter 0
+      :string-vxlisp<-chaptermap 0
+      :string-writename<-string 0
       :team<-team-key-value 0
       :team<-team-stringmap 0
       :team<-team-xmlchild 0
@@ -20023,12 +20100,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 125)
+      :total 128)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 125)
+      :total 128)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20037,19 +20114,19 @@ ab
     :docnums
      (testcoveragenums
       :pct 90
-      :tests 113
-      :total 125)
+      :tests 116
+      :total 128)
     :funcnums
      (testcoveragenums
-      :pct 35
+      :pct 34
       :tests 44
-      :total 125)
+      :total 128)
     :testpkg "nx/tactics/books/bookloader"
     :totalnums
      (testcoveragenums
-      :pct 35
+      :pct 34
       :tests 44
-      :total 125)
+      :total 128)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20062,6 +20139,13 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_cast 0
+      :chapter_character_archetypes 0
+      :chapter_characters_overview 0
+      :chapter_creating_characters 0
+      :chapter_props 0
+      :chapter_sets 0
+      :chapter_storytelling 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/characters")
   :coveragesummary
@@ -20070,12 +20154,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20085,18 +20169,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :testpkg "nx/tactics/books/characters"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20109,6 +20193,13 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_advanced_weaponry 0
+      :chapter_combat_overview 0
+      :chapter_early_weaponry 0
+      :chapter_example_of_play 0
+      :chapter_modern_equipment 0
+      :chapter_rules 0
+      :chapter_skills 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/combat")
   :coveragesummary
@@ -20117,12 +20208,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20132,18 +20223,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :testpkg "nx/tactics/books/combat"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20156,6 +20247,12 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_common_rules 0
+      :chapter_core_maps 0
+      :chapter_core_overview 0
+      :chapter_core_scenarios 0
+      :chapter_lets_play 0
+      :chapter_tokens 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/core_rules")
   :coveragesummary
@@ -20164,12 +20261,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20179,18 +20276,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :testpkg "nx/tactics/books/core_rules"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20203,6 +20300,14 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_fantasy_overview 0
+      :chapter_genshin_impact 0
+      :chapter_god_of_war 0
+      :chapter_lord_of_the_rings 0
+      :chapter_material_realm 0
+      :chapter_nexus_fantasy_characters 0
+      :chapter_realms_beyond 0
+      :chapter_story_ideas 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/fantasy")
   :coveragesummary
@@ -20211,12 +20316,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 9)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 9)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20226,18 +20331,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 9)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 9)
     :testpkg "nx/tactics/books/fantasy"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 9)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20250,6 +20355,9 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_gear_construction 0
+      :chapter_gear_items 0
+      :chapter_gear_overview 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/gear")
   :coveragesummary
@@ -20258,12 +20366,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20273,18 +20381,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :testpkg "nx/tactics/books/gear"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20346,6 +20454,9 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_daikaiju 0
+      :chapter_giant_robots 0
+      :chapter_overview 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/giant_monsters")
   :coveragesummary
@@ -20354,12 +20465,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20369,18 +20480,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :testpkg "nx/tactics/books/giant_monsters"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20393,6 +20504,20 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_car_wars 0
+      :chapter_cyberpunk 0
+      :chapter_cyberpunk_campaign 0
+      :chapter_high_tech_aircraft 0
+      :chapter_high_tech_equipment 0
+      :chapter_high_tech_heavy_armor 0
+      :chapter_high_tech_overview 0
+      :chapter_high_tech_rules 0
+      :chapter_high_tech_spacecraft 0
+      :chapter_jovian_chronicles 0
+      :chapter_mobile_suit_gundam_equipment 0
+      :chapter_mobile_suit_gundam_units 0
+      :chapter_space_colonies 0
+      :chapter_terminator 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/high_technology")
   :coveragesummary
@@ -20401,12 +20526,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 15)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 15)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20416,18 +20541,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 15)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 15)
     :testpkg "nx/tactics/books/high_technology"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 15)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20440,6 +20565,12 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_call_of_cthulhu 0
+      :chapter_deadly_beasts 0
+      :chapter_horror_overview 0
+      :chapter_kingdom_of_the_gods 0
+      :chapter_night_of_the_living_dead 0
+      :chapter_serial_killers 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/horror")
   :coveragesummary
@@ -20448,12 +20579,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20463,18 +20594,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :testpkg "nx/tactics/books/horror"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20487,6 +20618,11 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_land_sea_and_air_overview 0
+      :chapter_land_sea_and_air_rules 0
+      :chapter_land_sea_and_air_terrain 0
+      :chapter_land_sea_and_air_unit_types 0
+      :chapter_maps 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/land_sea_and_air")
   :coveragesummary
@@ -20495,12 +20631,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20510,18 +20646,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :testpkg "nx/tactics/books/land_sea_and_air"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20534,6 +20670,9 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_magic_items 0
+      :chapter_magic_overview 0
+      :chapter_magical_skills 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/magic")
   :coveragesummary
@@ -20542,12 +20681,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20557,18 +20696,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :testpkg "nx/tactics/books/magic"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 4)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20581,6 +20720,13 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_medieval_english 0
+      :chapter_medieval_french 0
+      :chapter_medieval_german 0
+      :chapter_medieval_items 0
+      :chapter_medieval_overview 0
+      :chapter_medieval_scenarios 0
+      :chapter_medieval_spanish 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/medieval")
   :coveragesummary
@@ -20589,12 +20735,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20604,18 +20750,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :testpkg "nx/tactics/books/medieval"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20628,6 +20774,18 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_cold_war 0
+      :chapter_modern_cops_and_robbers 0
+      :chapter_modern_ground_vehicles 0
+      :chapter_modern_mercenaries 0
+      :chapter_modern_overview 0
+      :chapter_modern_space 0
+      :chapter_modern_spies 0
+      :chapter_modern_sports 0
+      :chapter_modern_warfare 0
+      :chapter_special_ops 0
+      :chapter_the_abyss 0
+      :chapter_the_prisoner 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/modern")
   :coveragesummary
@@ -20636,12 +20794,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20651,18 +20809,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :testpkg "nx/tactics/books/modern"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20675,6 +20833,13 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_buffy_the_vampire_slayer 0
+      :chapter_chronicles_of_amber 0
+      :chapter_kengan_ashura 0
+      :chapter_matrix_the 0
+      :chapter_modern_fantasy_overview 0
+      :chapter_street_fighter 0
+      :chapter_world_of_darkness 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/modern_fantasy")
   :coveragesummary
@@ -20683,12 +20848,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20698,18 +20863,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :testpkg "nx/tactics/books/modern_fantasy"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 8)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20722,6 +20887,18 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_alteration_powers 0
+      :chapter_body_powers 0
+      :chapter_energy_and_forces 0
+      :chapter_enhancement_powers 0
+      :chapter_equipment_powers 0
+      :chapter_godlike_powers 0
+      :chapter_mental_powers_and_weaknesses 0
+      :chapter_movement_powers 0
+      :chapter_physical_powers_and_weaknesses 0
+      :chapter_powers_overview 0
+      :chapter_special_modifiers 0
+      :chapter_strength_and_weaknesses 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/powers")
   :coveragesummary
@@ -20730,12 +20907,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20745,18 +20922,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :testpkg "nx/tactics/books/powers"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 13)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20769,6 +20946,8 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_prehistoric_creatures 0
+      :chapter_prehistory_overview 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/prehistory")
   :coveragesummary
@@ -20777,12 +20956,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20792,18 +20971,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :testpkg "nx/tactics/books/prehistory"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20816,6 +20995,15 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_action_adventure 0
+      :chapter_flash_gordon 0
+      :chapter_hardboiled_detective 0
+      :chapter_john_carter_on_mars 0
+      :chapter_land_of_the_lost 0
+      :chapter_lost_continent 0
+      :chapter_pulp_fiction_overview 0
+      :chapter_true_grit___crime 0
+      :chapter_war_of_the_worlds 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/pulp_fiction")
   :coveragesummary
@@ -20824,12 +21012,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 10)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 10)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20839,18 +21027,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 10)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 10)
     :testpkg "nx/tactics/books/pulp_fiction"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 10)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20863,6 +21051,19 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_alien___predator 0
+      :chapter_alternate_realties 0
+      :chapter_archetypes 0
+      :chapter_battlestar_galactica 0
+      :chapter_doctor_who 0
+      :chapter_robotech 0
+      :chapter_science_fiction_overview 0
+      :chapter_space_cruiser_yamato 0
+      :chapter_space_opera 0
+      :chapter_star_trek 0
+      :chapter_star_wars 0
+      :chapter_time_travellers 0
+      :chapter_unique_aliens 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/science_fiction")
   :coveragesummary
@@ -20871,12 +21072,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20886,18 +21087,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :testpkg "nx/tactics/books/science_fiction"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 14)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20910,6 +21111,8 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_skill_types 0
+      :chapter_skills_overview 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/skills")
   :coveragesummary
@@ -20918,12 +21121,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20933,18 +21136,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :testpkg "nx/tactics/books/skills"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 3)
     :typenums
      (testcoveragenums
       :pct 100
@@ -20957,6 +21160,11 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_dimensional_travel 0
+      :chapter_space 0
+      :chapter_space_and_time_overview 0
+      :chapter_space_travel 0
+      :chapter_time_travel 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/space_and_time")
   :coveragesummary
@@ -20965,12 +21173,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :constnums
      (testcoveragenums
       :pct 100
@@ -20980,18 +21188,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :testpkg "nx/tactics/books/space_and_time"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 6)
     :typenums
      (testcoveragenums
       :pct 100
@@ -21004,6 +21212,12 @@ ab
    (testcoveragedetail
     :funcmap
      (intmap
+      :chapter_dc_universe 0
+      :chapter_dragonball_z 0
+      :chapter_marvel_universe 0
+      :chapter_original_groups 0
+      :chapter_superhero_characters 0
+      :chapter_superheroes_overview 0
       :tacticsbook 0)
     :testpkg "nx/tactics/books/superheroes")
   :coveragesummary
@@ -21012,12 +21226,12 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :constnums
      (testcoveragenums
       :pct 100
@@ -21027,18 +21241,18 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :testpkg "nx/tactics/books/superheroes"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 1)
+      :total 7)
     :typenums
      (testcoveragenums
       :pct 100
@@ -21046,6 +21260,80 @@ ab
       :total 0))
   :passfail true
   :testpkg "nx/tactics/books/superheroes")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :chapter_world_wars_overview 0
+      :chapter_wwi_british_forces 0
+      :chapter_wwi_campaign 0
+      :chapter_wwi_french_forces 0
+      :chapter_wwi_german_forces 0
+      :chapter_wwii_american_equipment 0
+      :chapter_wwii_american_units 0
+      :chapter_wwii_british_equipment 0
+      :chapter_wwii_british_units 0
+      :chapter_wwii_east_african_theatre 0
+      :chapter_wwii_eastern_front 0
+      :chapter_wwii_equipment 0
+      :chapter_wwii_french_equipment 0
+      :chapter_wwii_french_units 0
+      :chapter_wwii_german_equipment 0
+      :chapter_wwii_german_units 0
+      :chapter_wwii_italian_units 0
+      :chapter_wwii_japanese_equipment 0
+      :chapter_wwii_japanese_units 0
+      :chapter_wwii_mediterranean_theatre 0
+      :chapter_wwii_middle_east_theatre 0
+      :chapter_wwii_north_african_theatre 0
+      :chapter_wwii_overview 0
+      :chapter_wwii_pacific_theatre 0
+      :chapter_wwii_soviet_equipment 0
+      :chapter_wwii_soviet_units 0
+      :chapter_wwii_western_front 0
+      :tacticsbook 0)
+    :testpkg "nx/tactics/books/world_wars")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 28)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 28)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 28)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 28)
+    :testpkg "nx/tactics/books/world_wars"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 28)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/books/world_wars")
  (testpackage
   :coveragedetail
    (testcoveragedetail
@@ -21122,6 +21410,68 @@ ab
       :total 1))
   :passfail true
   :testpkg "nx/tactics/damage")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :funcmap
+     (intmap
+      :ui-app 0
+      :ui-app-background 0
+      :ui-app-home 0
+      :ui-app-nav 0
+      :ui-app-navbar 0
+      :ui-app-parallax 0
+      :ui-app-status 0
+      :ui-app-style 0
+      :ui-app<-tactics 0
+      :ui-unit 0
+      :ui-unit-background 0
+      :ui-unit-flavor 0
+      :ui-unit-header 0
+      :ui-unit-skillpower 0
+      :ui-unit-stat 0
+      :ui-unit-style 0)
+    :testpkg "nx/tactics/uitactics")
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 16)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 16)
+    :constnums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0)
+    :docnums
+     (testcoveragenums
+      :pct 25
+      :tests 4
+      :total 16)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 16)
+    :testpkg "nx/tactics/uitactics"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 16)
+    :typenums
+     (testcoveragenums
+      :pct 100
+      :tests 0
+      :total 0))
+  :passfail true
+  :testpkg "nx/tactics/uitactics")
  (testpackage
   :coveragedetail
    (testcoveragedetail
@@ -21305,6 +21655,59 @@ ab
       :total 0))
   :passfail true
   :testpkg "vx/ui/flow")
+ (testpackage
+  :coveragedetail
+   (testcoveragedetail
+    :constmap
+     (intmap
+      :renderer-app 0)
+    :funcmap
+     (intmap
+      :render-app<-ui-orig 0)
+    :testpkg "vx/ui/html/uihtml"
+    :typemap
+     (intmap
+      :renderer-html 0))
+  :coveragesummary
+   (testcoveragesummary
+    :bigospacenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :bigotimenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :constnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :docnums
+     (testcoveragenums
+      :pct 100
+      :tests 3
+      :total 3)
+    :funcnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1)
+    :testpkg "vx/ui/html/uihtml"
+    :totalnums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 3)
+    :typenums
+     (testcoveragenums
+      :pct 0
+      :tests 0
+      :total 1))
+  :passfail true
+  :testpkg "vx/ui/html/uihtml")
  (testpackage
   :coveragedetail
    (testcoveragedetail
@@ -21530,20 +21933,36 @@ ab
    (testcoveragedetail
     :constmap
      (intmap
-      :layout-app 0
-      :layout-background 0
-      :layout-navigation 0
-      :layout-split-horizontal 0
-      :layout-split-vertical 0)
+      :uilayout-app 0
+      :uilayout-background 0
+      :uilayout-combobox 0
+      :uilayout-flow-horizontal 0
+      :uilayout-flow-vertical 0
+      :uilayout-image 0
+      :uilayout-navigation 0
+      :uilayout-panel 0
+      :uilayout-parallax 0
+      :uilayout-scrollbox 0
+      :uilayout-scrollbox-horizontal 0
+      :uilayout-scrollbox-vertical 0
+      :uilayout-split-horizontal 0
+      :uilayout-split-vertical 0
+      :uilayout-text 0
+      :uilayout-textentry 0)
     :funcmap
      (intmap
-      :any-render<-ui 0
-      :anymap-render<-uimap 0)
+      :render<-ui 0
+      :render<-ui-orig 0
+      :rendermap<-uimap 0
+      :ui-render<-ui-orig 0)
     :testpkg "vx/ui/ui"
     :typemap
      (intmap
-      :layout 0
+      :render 0
+      :renderer 0
+      :rendermap 0
       :ui 0
+      :uilayout 0
       :uimap 0
       :uistyle 0))
   :coveragesummary
@@ -21552,37 +21971,37 @@ ab
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 2)
+      :total 4)
     :bigotimenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 2)
+      :total 4)
     :constnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 5)
+      :total 16)
     :docnums
      (testcoveragenums
-      :pct 36
-      :tests 4
-      :total 11)
+      :pct 33
+      :tests 9
+      :total 27)
     :funcnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 2)
+      :total 4)
     :testpkg "vx/ui/ui"
     :totalnums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 11)
+      :total 27)
     :typenums
      (testcoveragenums
       :pct 0
       :tests 0
-      :total 4))
+      :total 7))
   :passfail true
   :testpkg "vx/ui/ui"))

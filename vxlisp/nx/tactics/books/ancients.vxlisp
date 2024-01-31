@@ -2,542 +2,363 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
- (book
+ (base/book
   :name "Ancients"
   :image "300_phalanx.jpg"
   :chaptermap
-   (chaptermap
-    "Ancients Overview"
-     (chapter
-      :name "Ancients Overview"
-      :sectionmap
-       (sectionmap
-        "Ancients Naval Warfare"
-         (section
-          :name "Ancients Naval Warfare"
-          :summary
-           "* Wind
+   (base/chaptermap
+    "Ancients Overview" (chapter_ancients_overview)
+    "Ancients Scenarios" (chapter_ancients_scenarios)
+    "Anglo/Saxons" (chapter_anglo_saxons)
+    "Carthaginians" (chapter_carthaginians)
+    "Chinese Dynasty" (chapter_chinese_dynasty)
+    "Egyptian Dynasty" (chapter_egyptian_dynasty)
+    "Germanic Tribes" (chapter_germanic_tribes)
+    "Greek City States" (chapter_greek_city_states)
+    "Macedon" (chapter_macedon)
+    "Norsemen" (chapter_norsemen)
+    "Persians" (chapter_persians)
+    "Roman Empire" (chapter_roman_empire)
+    "Unfiled Ancient" (chapter_unfiled_ancient)
+   )))
+
+(func chapter_ancients_overview : base/chapter
+ (chapter
+  :name "Ancients Overview"
+  :sectionmap
+   (sectionmap
+    "Why Tactics: Ancients?"
+     (section
+      :name "Why Tactics: Ancients?")
+    "Ancients Land Warfare"
+     (section
+      :name "Ancients Land Warfare"
+      :summary
+       "* Infantry
+* Formations
+* Axemen
+* Polearms
+* Cavalry
+* Horse Archers
+* Armored Cavalry
+* Elephants
+* Chariots
+* Archers
+* Longbows
+* Crossbows
+* Siege
+* Ballista
+* Catapult
+* Fortifications")
+    "Ancients Naval Warfare"
+     (section
+      :name "Ancients Naval Warfare"
+      :summary
+       "* Wind
 * Large Ships
 * Small Ships
 * War Barge
-* Ballista")))
-    "Ancients Scenarios"
-     (chapter
-      :name "Ancients Scenarios"
-      :sectionmap
-       (sectionmap
-        "Ancient Scenarios"
-         (section
-          :name "Ancient Scenarios"
-          :scenariomap
-           (scenariomap
-            "Flush Them Out"
-             (scenario
-              :name "Flush Them Out"
-              :summary "* 10 Turns"
-              :teammap
-               (teammap
-                :Germanics
-                 (team
-                  :name "Germanics"
-                  :completevictory "Half of Roman units are lost."
-                  :deploy
-                   "1) Tactical Map
+* Ballista"))))
+
+(func chapter_ancients_scenarios : base/chapter
+ (chapter
+  :name "Ancients Scenarios"
+  :sectionmap
+   (sectionmap
+    "Ancient Scenarios"
+     (section
+      :name "Ancient Scenarios"
+      :scenariomap
+       (scenariomap
+        "Flush Them Out"
+         (scenario
+          :name "Flush Them Out"
+          :summary "* 10 Turns"
+          :teammap
+           (teammap
+            :Germanics
+             (team
+              :name "Germanics"
+              :completevictory "Half of Roman units are lost."
+              :deploy
+               "1) Tactical Map
 2) 6 Forest Terrain on Germanic side of map
 3) Deploy units anywhere on Germanic side of map"
-                  :forces "* 20 Levels of units"
-                  :partialvictory "Romans lose more units than Germanics.")
-                :Romans*
-                 (team
-                  :name "Romans*"
-                  :completevictory "Half of Germanics are lost."
-                  :deploy
-                   "1) Tactical Map
+              :forces "* 20 Levels of units"
+              :partialvictory "Romans lose more units than Germanics.")
+            :Romans*
+             (team
+              :name "Romans*"
+              :completevictory "Half of Germanics are lost."
+              :deploy
+               "1) Tactical Map
 2) 3 Forest Terrain on Roman side of map.
 3) Deploy units along Roman players edge of the map."
-                  :forces "* 20 Levels of units"
-                  :partialvictory "Germanics lose more units than Romans.")))
-            "Roman Gladiators"
-             (scenario
-              :name "Roman Gladiators")))))
-    :Anglo/Saxons
-     (chapter
-      :name "Anglo/Saxons"
-      :sectionmap
-       (sectionmap
-        "Anglo/Saxon Armies"
-         (section
-          :name "Anglo/Saxon Armies")))
-    :Carthaginians
-     (chapter
-      :name "Carthaginians"
-      :sectionmap
-       (sectionmap
-        "Carhaginian Naval Vessels"
-         (section
-          :name "Carhaginian Naval Vessels"
-          :itemmap
-           (itemmap
-            "Carthaginian Quinquereme"
-             (item
-              :name "Carthaginian Quinquereme")))))
-    "Chinese Dynasty"
-     (chapter
-      :name "Chinese Dynasty")
-    "Egyptian Dynasty"
-     (chapter
-      :name "Egyptian Dynasty"
-      :sectionmap
-       (sectionmap
-        "Egyptian Armies"
-         (section
-          :name "Egyptian Armies"
-          :unitmap
-           (unitmap
-            "Egyptian Archer"
-             (unit
-              :name "Egyptian Archer")
-            "Egyptian Charioteer"
-             (unit
-              :name "Egyptian Charioteer")))))
-    "Germanic Tribes"
-     (chapter
-      :name "Germanic Tribes"
-      :sectionmap
-       (sectionmap
-        "Germanic Armies"
-         (section
-          :name "Germanic Armies"
-          :unitmap
-           (unitmap
-            "Free Spears"
-             (unit
-              :name "Free Spears"
-              :image "Germanics/GermanLevySpearmen.png"
-              :summary
-               "Free Spears are farmers and hunters.  According to Germanic tradition, as soon as these men receive their
+              :forces "* 20 Levels of units"
+              :partialvictory "Germanics lose more units than Romans.")))
+        "Roman Gladiators"
+         (scenario
+          :name "Roman Gladiators"))))))
+
+(func chapter_anglo_saxons : base/chapter
+ (chapter
+  :name "Anglo/Saxons"
+  :sectionmap
+   (sectionmap
+    "Anglo/Saxon Armies"
+     (section
+      :name "Anglo/Saxon Armies"))))
+
+(func chapter_carthaginians : base/chapter
+ (chapter
+  :name "Carthaginians"
+  :sectionmap
+   (sectionmap
+    "Carthaginian Armies"
+     (section
+      :name "Carthaginian Armies"
+      :unitmap
+       (unitmap
+        "Carthaginian Elephant"
+         (unit
+          :name "Carthaginian Elephant"
+          :speed "40kph"
+          :mass "10tons")))
+    "Carhaginian Naval Vessels"
+     (section
+      :name "Carhaginian Naval Vessels"
+      :itemmap
+       (itemmap
+        "Carthaginian Quinquereme"
+         (item
+          :name "Carthaginian Quinquereme"))))))
+
+(func chapter_chinese_dynasty : base/chapter
+ (chapter
+  :name "Chinese Dynasty"))
+
+(func chapter_egyptian_dynasty : base/chapter
+ (chapter
+  :name "Egyptian Dynasty"
+  :sectionmap
+   (sectionmap
+    "Egyptian Armies"
+     (section
+      :name "Egyptian Armies"
+      :unitmap
+       (unitmap
+        "Egyptian Archer"
+         (unit
+          :name "Egyptian Archer")
+        "Egyptian Charioteer"
+         (unit
+          :name "Egyptian Charioteer"))))))
+
+(func chapter_germanic_tribes : base/chapter
+ (chapter
+  :name "Germanic Tribes"
+  :sectionmap
+   (sectionmap
+    "Germanic Armies"
+     (section
+      :name "Germanic Armies"
+      :unitmap
+       (unitmap
+        "Free Spears"
+         (unit
+          :name "Free Spears"
+          :image "Germanics/GermanLevySpearmen.png"
+          :summary
+           "Free Spears are farmers and hunters.  According to Germanic tradition, as soon as these men receive their
 spear and shield, they are 'free' adults.  Though lacking in the organized training of the warbands, they
 are veterans of the ritualized tribal warfare of German tribes, and fight with a force and fury superior to
 their neighbors militia."
-              :classification "Lt. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "3"
-                  :unititemmap
-                   (unititemmap
-                    :Spear
-                     (unititem
-                      :name "Spear")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "1"
-                  :unititemmap
-                   (unititemmap
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "3")))
-            "Youth Skirmishers"
-             (unit
-              :name "Youth Skirmishers"
-              :image "Germanics/GermanSkirmishers.png"
-              :summary
-               "Young skirmishers break up and harass enemy formations before the main battle lines meet, and act as a screen
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "3")))
+        "Youth Skirmishers"
+         (unit
+          :name "Youth Skirmishers"
+          :image "Germanics/GermanSkirmishers.png"
+          :summary
+           "Young skirmishers break up and harass enemy formations before the main battle lines meet, and act as a screen
 for heavy troops, taking losses in order to increase the odds of survival of more valuable 'proven' warriors.
 They must first prove themselves in battle in order to earn status.  Each warrior is armed with a bundle of
 throwing spears, a slightly longer spear for melee and a stout ovular shield, but they do not wear armor,
 being poor and of low status, but also choosing speed over protection."
-              :classification "Lt. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "3"
-                  :unititemmap
-                   (unititemmap
-                    :Spear
-                     (unititem
-                      :name "Spear")
-                    :Javelin
-                     (unititem
-                      :name "Javelin"
-                      :rounds "5")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "1"
-                  :unititemmap
-                   (unititemmap
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "3"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Formation: Skirmish"
-                     (unitability
-                      :name "Formation: Skirmish")))
-                :Survival
-                 (unitskill
-                  :name "Survival"
-                  :level "2"
-                  :unitabilitymap
-                   (unitabilitymap
-                    :Forestry
-                     (unitability
-                      :name "Forestry")))))
-            "Proven Spearmen"
-             (unit
-              :name "Proven Spearmen"
-              :image "Germanics/GermanTrustedSpearmen.png"
-              :summary
-               "Proud and experienced, 'proven' warriors steeled by years of constant warfare and veterans of numerous
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Survival
+             (unitskill
+              :name "Survival"
+              :level "2"
+              :unitabilitymap
+               (unitabilitymap
+                :Forestry
+                 (unitability
+                  :name "Forestry")))))
+        "Proven Spearmen"
+         (unit
+          :name "Proven Spearmen"
+          :image "Germanics/GermanTrustedSpearmen.png"
+          :summary
+           "Proud and experienced, 'proven' warriors steeled by years of constant warfare and veterans of numerous
 conflicts.  These men are hardened for battle and unlikely to flee from conflict, and are trained through
 long experience to work in close or open formation, and even the shieldwall."
-              :classification "Lt. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "4"
-                  :unititemmap
-                   (unititemmap
-                    :Spear
-                     (unititem
-                      :name "Spear")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "2"
-                  :unititemmap
-                   (unititemmap
-                    "Leather Armor"
-                     (unititem
-                      :name "Leather Armor")
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "4"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Formation: Shield Wall"
-                     (unitability
-                      :name "Formation: Shield Wall")))))
-            "German Slayers"
-             (unit
-              :name "German Slayers"
-              :image "Germanics/GermanSlayers.png"
-              :summary
-               "By shaping heavy boughs of oak and inserting bone spikes, these Cudgels can be used to maim both armored
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Shield Wall"
+                 (unitability
+                  :name "Formation: Shield Wall")))))
+        "German Slayers"
+         (unit
+          :name "German Slayers"
+          :image "Germanics/GermanSlayers.png"
+          :summary
+           "By shaping heavy boughs of oak and inserting bone spikes, these Cudgels can be used to maim both armored
 and unarmored foes alike.  Cudgels are cheap, easy to make, and replaceable on campaign, while also being
 able to smash or punch through armor.  Although this weapon may seem primitive to untrained eyes, against
 armored opponents it is more effective than any other at their disposal.  These light armored club warriors
 were recorded to have taken down units of the feared and notoriously lethal kataphraktoi."
-              :classification "Med. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "4"
-                  :unititemmap
-                   (unititemmap
-                    :Cudgel
-                     (unititem
-                      :name "Cudgel")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "2"
-                  :unititemmap
-                   (unititemmap
-                    "Leather Armor"
-                     (unititem
-                      :name "Leather Armor")
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "4")))
-            "German Shooters"
-             (unit
-              :name "German Shooters"
-              :image "Germanics/GermanShooters.png"
-              :summary
-               "Equipped to harass and break up enemy formations so more experienced and valuable melee warriors can finish
+          :classification "Med. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4")))
+        "German Shooters"
+         (unit
+          :name "German Shooters"
+          :image "Germanics/GermanShooters.png"
+          :summary
+           "Equipped to harass and break up enemy formations so more experienced and valuable melee warriors can finish
 them.  Shooters are often untrained or uncapable warriors, but many are also excellect hunters.  They are
 also armed with the spear and can act as light infantry, but they will not last long in melee.  In the woods,
 their superior ambush skills can be put to best use.
 
 Historically, Germanic bowmen on the battlefield were few in numbers, because weapons were status symbols,
 and common multipurpose tools, such as the axe or bow were looked down upon."
-              :classification "Lt. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Aim
-                 (unitskill
-                  :name "Aim"
-                  :level "3"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Flaming Arrow"
-                     (unitability
-                      :name "Flaming Arrow")
-                    "Arcing Fire"
-                     (unitability
-                      :name "Arcing Fire"))
-                  :unititemmap
-                   (unititemmap
-                    "Composite Bow"
-                     (unititem
-                      :name "Composite Bow")))
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "2"
-                  :unititemmap
-                   (unititemmap
-                    :Spear
-                     (unititem
-                      :name "Spear")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "3"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Formation: Skirmish"
-                     (unitability
-                      :name "Formation: Skirmish")))))
-            "Sword Possessors"
-             (unit
-              :name "Sword Possessors"
-              :image "Germanics/GermanSwordPossessors.png"
-              :summary
-               "Sword Possessors are well trained, experienced and armed with superior quality swords and javelins to
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Skirmish"
+                 (unitability
+                  :name "Formation: Skirmish")))))
+        "Sword Possessors"
+         (unit
+          :name "Sword Possessors"
+          :image "Germanics/GermanSwordPossessors.png"
+          :summary
+           "Sword Possessors are well trained, experienced and armed with superior quality swords and javelins to
 soften the enemy before their furious charge.
 
 Historically, swords were not plentiful in Germanic lands because of the cost of iron, so those fierce and
 valiant warriors carried their highly valued swords with pride."
-              :classification "Lt. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "4"
-                  :unititemmap
-                   (unititemmap
-                    :Broadsword
-                     (unititem
-                      :name "Broadsword")))
-                :Aim
-                 (unitskill
-                  :name "Aim"
-                  :level "3"
-                  :unititemmap
-                   (unititemmap
-                    :Javelin
-                     (unititem
-                      :name "Javelin"
-                      :rounds "2")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "2"
-                  :unititemmap
-                   (unititemmap
-                    "Leather Armor"
-                     (unititem
-                      :name "Leather Armor")
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "4"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Formation: Shield Wall"
-                     (unitability
-                      :name "Formation: Shield Wall")))))
-            "Night Walkers"
-             (unit
-              :name "Night Walkers"
-              :image "Germanics/GermanNightWalkers.png"
-              :summary
-               "Night-Walkers are unconventional warriors who specialize in ambush.  They display their zeal and ferocity
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Shield Wall"
+                 (unitability
+                  :name "Formation: Shield Wall")))))
+        "Night Walkers"
+         (unit
+          :name "Night Walkers"
+          :image "Germanics/GermanNightWalkers.png"
+          :summary
+           "Night-Walkers are unconventional warriors who specialize in ambush.  They display their zeal and ferocity
 with the help of pitch and dye by blackening their shields and bodies.  They choose dark nights for their
 battles and when the moment is right, they charge wildly, wide-eyed and screaming at their foes.  Any who
 survive assaults by these maniacal warriors are convinced they are spirits sent from the otherworld."
-              :classification "Lt. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "3"
-                  :unititemmap
-                   (unititemmap
-                    :Spear
-                     (unititem
-                      :name "Spear")
-                    :Javelin
-                     (unititem
-                      :name "Javelin"
-                      :rounds "2")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "2"
-                  :unititemmap
-                   (unititemmap
-                    "Leather Armor"
-                     (unititem
-                      :name "Leather Armor")
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Survival
-                 (unitskill
-                  :name "Survival"
-                  :level "2"
-                  :unitabilitymap
-                   (unitabilitymap
-                    :Forestry
-                     (unitability
-                      :name "Forestry")))
-                :Intimidation
-                 (unitskill
-                  :name "Intimidation"
-                  :level "3"
-                  :unitabilitymap
-                   (unitabilitymap
-                    :Terrorize
-                     (unitability
-                      :name "Terrorize")))))
-            "Pike Fence"
-             (unit
-              :name "Pike Fence"
-              :image "Germanics/GermanPikeFence.png"
-              :summary
-               "The Pike Fence are hard-nosed, disciplined warriors that fight together in a
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Intimidation
+             (unitskill
+              :name "Intimidation"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                :Terrorize
+                 (unitability
+                  :name "Terrorize")))))
+        "Pike Fence"
+         (unit
+          :name "Pike Fence"
+          :image "Germanics/GermanPikeFence.png"
+          :summary
+           "The Pike Fence are hard-nosed, disciplined warriors that fight together in a
 very dense formation, unlike most other Germanic warbands. They are trained in
 the Shield Wall and are universally feared by cavalry."
-              :classification "Hvy. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "4"
-                  :unititemmap
-                   (unititemmap
-                    :Pike
-                     (unititem
-                      :name "Pike")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "2"
-                  :unititemmap
-                   (unititemmap
-                    "Leather Armor"
-                     (unititem
-                      :name "Leather Armor")
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "4"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Formation: Shield Wall"
-                     (unitability
-                      :name "Formation: Shield Wall")))))
-            "Hearth Companions"
-             (unit
-              :name "Hearth Companions"
-              :image "Germanics/GermanHearthCompanion.png"
-              :summary
-               "These are the Germanic tribes' best warriors. Germans respect their leader's
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Shield Wall"
+                 (unitability
+                  :name "Formation: Shield Wall")))))
+        "Hearth Companions"
+         (unit
+          :name "Hearth Companions"
+          :image "Germanics/GermanHearthCompanion.png"
+          :summary
+           "These are the Germanic tribes' best warriors. Germans respect their leader's
 bravery, not their rank, and it is a disgrace for a leader to be surpassed in
 bravery. They are wealthy, powerful men, fiercely loyal to their lord, often
 heavily scarred by years of warfare. Their weapons and armor are the best. To
 leave a battlefield alive while their lord lay dead meant a life of shame and
 scorn. To defend and protect him, to assign one's own acts of heroism to his
 credit-that's what is truly meant by allegiance."
-              :classification "Hvy. Infantry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "4"
-                  :unititemmap
-                   (unititemmap
-                    :Broadsword
-                     (unititem
-                      :name "Broadsword")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "3"
-                  :unititemmap
-                   (unititemmap
-                    "Chain Mail Armor"
-                     (unititem
-                      :name "Chain Mail Armor")
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "5"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Formation: Shield Wall"
-                     (unitability
-                      :name "Formation: Shield Wall")))
-                :Command
-                 (unitskill
-                  :name "Command"
-                  :level "3"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Chain of Command"
-                     (unitability
-                      :name "Chain of Command")
-                    :Rally
-                     (unitability
-                      :name "Rally")))))
-            "Germanic Riders"
-             (unit
-              :name "Germanic Riders"
-              :image "Germanics/GermanRiders.png"
-              :summary
-               "Riders ride small, poor quality horses, though they are excellent light cavalry.  Like many Germanic warriors,
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Command
+             (unitskill
+              :name "Command"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Chain of Command"
+                 (unitability
+                  :name "Chain of Command")
+                :Rally
+                 (unitability
+                  :name "Rally")))))
+        "Germanic Riders"
+         (unit
+          :name "Germanic Riders"
+          :image "Germanics/GermanRiders.png"
+          :summary
+           "Riders ride small, poor quality horses, though they are excellent light cavalry.  Like many Germanic warriors,
 however, they can lack battle-discipline and be over-keen to enter battle for glory.
 
 They were mostly armed with shield and spear and were supported by fast-moving light infantry - this light
@@ -547,199 +368,624 @@ Historically, Germanic tribes did not frequently use cavalry, however, some trib
 cavalry and many peoples praised the good quality of Germanic cavalry.  Though their horses were not
 exceptional, Germanic horsemen could still maneuver very well and operated as a unit, rather than as an
 unorganized band."
-              :classification "Lt. Cavalry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "3"
-                  :unititemmap
-                   (unititemmap
-                    :Spear
-                     (unititem
-                      :name "Spear")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "2"
-                  :unititemmap
-                   (unititemmap
-                    "Leather Armor"
-                     (unititem
-                      :name "Leather Armor")
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Riding
-                 (unitskill
-                  :name "Riding"
-                  :level "4"
-                  :unitabilitymap
-                   (unitabilitymap
-                    :Charge
-                     (unitability
-                      :name "Charge")
-                    "Run Down"
-                     (unitability
-                      :name "Run Down")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "4")))
-            "Germ. Companion Cavalry"
-             (unit
-              :name "Germ. Companion Cavalry"
-              :image "Germanics/GermanCompanionCavalry.png"
-              :summary
-               "The Companion Cavalry are extremely wealthy and powerful men, but still fiercely loyal to their lord who
+          :classification "Lt. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4")))
+        "Germ. Companion Cavalry"
+         (unit
+          :name "Germ. Companion Cavalry"
+          :image "Germanics/GermanCompanionCavalry.png"
+          :summary
+           "The Companion Cavalry are extremely wealthy and powerful men, but still fiercely loyal to their lord who
 provides them the finest warhorses and wargear at his disposal.
 
 They can be used most effectively as shock troops whose charges can break the enemy line and destory their
 flanks, but they are also useful for overrunning heavy infantry and slaughtering lighter cavalry."
-              :classification "Hvy. Cavalry"
-              :unitskillmap
-               (unitskillmap
-                :Melee
-                 (unitskill
-                  :name "Melee"
-                  :level "4"
-                  :unititemmap
-                   (unititemmap
-                    :Lance
-                     (unititem
-                      :name "Lance")
-                    "Cavalry Sword"
-                     (unititem
-                      :name "Cavalry Sword")))
-                :Armor
-                 (unitskill
-                  :name "Armor"
-                  :level "3"
-                  :unititemmap
-                   (unititemmap
-                    :Scalemail
-                     (unititem
-                      :name "Scalemail")
-                    :Shield
-                     (unititem
-                      :name "Shield")))
-                :Riding
-                 (unitskill
-                  :name "Riding"
-                  :level "4"
-                  :unitabilitymap
-                   (unitabilitymap
-                    :Charge
-                     (unitability
-                      :name "Charge")))
-                :Military
-                 (unitskill
-                  :name "Military"
-                  :level "5")
-                :Command
-                 (unitskill
-                  :name "Command"
-                  :level "3"
-                  :unitabilitymap
-                   (unitabilitymap
-                    "Chain of Command"
-                     (unitability
-                      :name "Chain of Command")
-                    :Rally
-                     (unitability
-                      :name "Rally")))))))))
-    "Greek City States"
-     (chapter
-      :name "Greek City States"
-      :sectionmap
-       (sectionmap
-        "Greek Naval Vessels"
-         (section
-          :name "Greek Naval Vessels"
-          :itemmap
-           (itemmap
-            "Greek Galley"
-             (item
-              :name "Greek Galley")
-            "Greek Trireme"
-             (item
-              :name "Greek Trireme")
-            "Greek Quinquereme"
-             (item
-              :name "Greek Quinquereme")))))
-    :Macedon
-     (chapter
-      :name "Macedon"
-      :sectionmap
-       (sectionmap
-        "Macedonian Naval Vessels"
-         (section
-          :name "Macedonian Naval Vessels"
-          :itemmap
-           (itemmap
-            "Macedonian Galley"
-             (item
-              :name "Macedonian Galley")
-            "Macedonian Trireme"
-             (item
-              :name "Macedonian Trireme")))))
-    :Norsemen
-     (chapter
-      :name "Norsemen"
-      :sectionmap
-       (sectionmap
-        "Viking Naval Vessels"
-         (section
-          :name "Viking Naval Vessels"
-          :itemmap
-           (itemmap
-            "Viking War Galley"
-             (item
-              :name "Viking War Galley")))))
-    :Persians
-     (chapter
-      :name "Persians"
-      :sectionmap
-       (sectionmap
-        "Persian Armies"
-         (section
-          :name "Persian Armies"
-          :unitmap
-           (unitmap
-            "Persian Lt. Cavalry"
-             (unit
-              :name "Persian Lt. Cavalry")
-            "Persian Horse Archer"
-             (unit
-              :name "Persian Horse Archer")
-            "Persian Scythed Chariot"
-             (unit
-              :name "Persian Scythed Chariot")))))
-    "Roman Empire"
-     (chapter
-      :name "Roman Empire"
-      :sectionmap
-       (sectionmap
-        "Roman Naval Vessels"
-         (section
-          :name "Roman Naval Vessels"
-          :itemmap
-           (itemmap
-            "Roman Galley"
-             (item
-              :name "Roman Galley")
-            "Roman Trireme"
-             (item
-              :name "Roman Trireme")
-            "Roman Quinquereme"
-             (item
-              :name "Roman Quinquereme")))))
-    "Unfiled Ancient"
-     (chapter
-      :name "Unfiled Ancient"
+          :classification "Hvy. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Command
+             (unitskill
+              :name "Command"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Chain of Command"
+                 (unitability
+                  :name "Chain of Command")
+                :Rally
+                 (unitability
+                  :name "Rally"))))))))))
+
+(func chapter_greek_city_states : base/chapter
+ (chapter
+  :name "Greek City States"
+  :sectionmap
+   (sectionmap
+    "Greek Armies"
+     (section
+      :name "Greek Armies"
+      :unitmap
+       (unitmap
+        "Greek Hoplite"
+         (unit
+          :name "Greek Hoplite"
+          :image "Greeks/GreekHopliteToken.png"
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Phalanx"
+                 (unitability
+                  :name "Formation: Phalanx")
+                "Formation: Shield Wall"
+                 (unitability
+                  :name "Formation: Shield Wall")))))
+        "Spartan Hoplite"
+         (unit
+          :name "Spartan Hoplite"
+          :image "Greeks/GreekSpartanToken.png"
+          :reference
+           "* From the age of seven onwards, Spartan males were trained for a life of warfare.  They were taught iron
+discipline, and almost programmed to forget about their individuality.
+* The strenuous training and comradeship engendered between Spartans made them ideally suited to hoplite warfare
+which required high levels of discipline and selflessness."
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Command
+             (unitskill
+              :name "Command"
+              :level "2"
+              :unitabilitymap
+               (unitabilitymap
+                "Chain of Command"
+                 (unitability
+                  :name "Chain of Command")))))
+        "Greek General"
+         (unit
+          :name "Greek General"
+          :image "Greeks/GreekGeneralToken.png"
+          :classification "Med. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Command
+             (unitskill
+              :name "Command"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Chain of Command"
+                 (unitability
+                  :name "Chain of Command")
+                :Rally
+                 (unitability
+                  :name "Rally")))))
+        "Thracian Peltast"
+         (unit
+          :name "Thracian Peltast"
+          :reference
+           "* When faced by hoplites peltasts operated by throwing javelins at short range.  If the hoplites charged they
+would flee.  As they carried considerably lighter equipment than the hoplites they were usually able to evade
+successfully especially in difficult terrain.
+* Peltasts were usually deployed on the flanks of the phalanx providing a link with any cavalry."
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Skirmish"
+                 (unitability
+                  :name "Formation: Skirmish")))))
+        "Greek Cavalry"
+         (unit
+          :name "Greek Cavalry"
+          :reference "The utility of the Greek Citizen Cavalry was small on account of their heavy armor."
+          :classification "Hvy. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "3")))
+        "Greek Cataphracts"
+         (unit
+          :name "Greek Cataphracts"
+          :classification "Hvy. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Command
+             (unitskill
+              :name "Command"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Chain of Command"
+                 (unitability
+                  :name "Chain of Command")))))
+        "Greek Philosopher"
+         (unit
+          :name "Greek Philosopher")
+        "Greek Senator"
+         (unit
+          :name "Greek Senator")
+        "Greek Wrestler"
+         (unit
+          :name "Greek Wrestler")))
+    "Greek Naval Vessels"
+     (section
+      :name "Greek Naval Vessels"
+      :itemmap
+       (itemmap
+        "Greek Galley"
+         (item
+          :name "Greek Galley")
+        "Greek Trireme"
+         (item
+          :name "Greek Trireme")
+        "Greek Quinquereme"
+         (item
+          :name "Greek Quinquereme"))))))
+
+(func chapter_macedon : base/chapter
+ (chapter
+  :name "Macedon"
+  :sectionmap
+   (sectionmap
+    "Macedonian Armies"
+     (section
+      :name "Macedonian Armies"
+      :unitmap
+       (unitmap
+        "Macedonian Prodromoi Cavalry"
+         (unit
+          :name "Macedonian Prodromoi Cavalry"
+          :reference "The utility of the Greek Citizen Cavalry was small on account of their heavy armor."
+          :classification "Lt. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Skirmish"
+                 (unitability
+                  :name "Formation: Skirmish")))))
+        "Macedonian Companion Cavalry"
+         (unit
+          :name "Macedonian Companion Cavalry"
+          :classification "Hvy. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4")))))
+    "Macedonian Naval Vessels"
+     (section
+      :name "Macedonian Naval Vessels"
+      :itemmap
+       (itemmap
+        "Macedonian Galley"
+         (item
+          :name "Macedonian Galley")
+        "Macedonian Trireme"
+         (item
+          :name "Macedonian Trireme"))))))
+
+(func chapter_norsemen : base/chapter
+ (chapter
+  :name "Norsemen"
+  :sectionmap
+   (sectionmap
+    "Viking Armies"
+     (section
+      :name "Viking Armies"
+      :unitmap
+       (unitmap
+        "Viking Axeman"
+         (unit
+          :name "Viking Axeman"
+          :unitskillmap
+           (unitskillmap
+            :Frenzy
+             (unitskill
+              :name "Frenzy"
+              :unitabilitymap
+               (unitabilitymap
+                :Berserker
+                 (unitability
+                  :name "Berserker")))))
+        "Viking Swordsman"
+         (unit
+          :name "Viking Swordsman")))
+    "Viking Naval Vessels"
+     (section
+      :name "Viking Naval Vessels"
+      :itemmap
+       (itemmap
+        "Viking War Galley"
+         (item
+          :name "Viking War Galley"))))))
+
+(func chapter_persians : base/chapter
+ (chapter
+  :name "Persians"
+  :sectionmap
+   (sectionmap
+    "Persian Armies"
+     (section
+      :name "Persian Armies"
+      :unitmap
+       (unitmap
+        "Persian Lt. Cavalry"
+         (unit
+          :name "Persian Lt. Cavalry")
+        "Persian Horse Archer"
+         (unit
+          :name "Persian Horse Archer")
+        "Persian Scythed Chariot"
+         (unit
+          :name "Persian Scythed Chariot"))))))
+
+(func chapter_roman_empire : base/chapter
+ (chapter
+  :name "Roman Empire"
+  :sectionmap
+   (sectionmap
+    :Legionnaries
+     (section
+      :name "Legionnaries"
       :summary
-       "Examples of Play
+       "Roman Legions were the official fighting force of the empire and were divided in the following way:
+
+* Each Legion consisted of 4800 men
+* Each Legion was divided into 10 cohorts of 480 legionaries
+* Each Cohort was divided into 6 centuries of 80 men each.  The 6 centuries were: Forward Hastati, Rear Hastati,
+Forward Pricipes, Rear Pricipes, Forward Triarii, and Rear Triarii.
+* Each Century was divided into 10 octets of 8 men.  Soldiers of an octet shared a tent, and were rewarded or
+punished together.  If one member acted dishonorably in battle, that contubernium would suffer
+decimation, whereby the group would be required to draw straws, the soldier unlucky enough to draw the short straw
+then being stoned to death by the others."
+      :unitmap
+       (unitmap
+        :Hastati
+         (unit
+          :name "Hastati"
+          :image "Romans/RomanLegionaireToken.png"
+          :summary
+           "These were the first line of the Roman heavy infantry and were made up of the relatively young
+(inexperienced), but wealthier citizens.  The Hastati were the primary engaging force of the
+legion and always met the enemy first in melee combat. If things went badly, or they simply needed
+to rest and regroup, the Hastati would roll behind the Princeps."
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Shield Wall"
+                 (unitability
+                  :name "Formation: Shield Wall")
+                "Formation: Testudo"
+                 (unitability
+                  :name "Formation: Testudo")))))
+        :Princeps
+         (unit
+          :name "Princeps"
+          :image "Romans/RomanPrincepToken.png"
+          :summary
+           "The elite of the legion, in the prime of their careers for age and experience, and constituted the
+wealthier class.  It was simply the obligation of the Princeps to win the battle.  First they would
+act in relief of the Hastati, but then would carry the fight in earnest.  It was a successful tactic,
+wearing down the enemy with good, but not your best forces, than hitting with your best men right in
+the middle of the fight."
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Shield Wall"
+                 (unitability
+                  :name "Formation: Shield Wall")
+                "Formation: Testudo"
+                 (unitability
+                  :name "Formation: Testudo")))))
+        :Triarii
+         (unit
+          :name "Triarii"
+          :image "Romans/RomanLegionaire2Token.png"
+          :summary
+           "Though the triarii were similarly armored as the Hastatii and Princeps, they played a much different
+role and were more akin to the Greek hoplites than Roman heavy infantry.  The Triarii were the oldest
+and very experienced of the Roman army, and their job was to defend against disaster as a last resort,
+or to shock the enemy with a different look at the right moment.  If the heavy infantry were pushed
+back, the Triarii would charge forward with their spears, hopefully with the effect of shocking the
+enemy and allowing the Princeps and Hastati time to regroup.  They were used as a last resort, and the
+Latin expression 'ad triarios redisse', or it has come to the triarii, became a general phrase meaning
+that something was in a desperate situation."
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "5"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Phalanx"
+                 (unitability
+                  :name "Formation: Phalanx")
+                "Formation: Shield Wall"
+                 (unitability
+                  :name "Formation: Shield Wall")
+                "Formation: Testudo"
+                 (unitability
+                  :name "Formation: Testudo")))))
+        :Centurion
+         (unit
+          :name "Centurion"
+          :image "Romans/RomanCenturionToken.png"
+          :summary "Each Centurion commanded the 80 men in a single century (Forward Hastati, etc)."
+          :classification "Med. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Command
+             (unitskill
+              :name "Command"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Chain of Command"
+                 (unitability
+                  :name "Chain of Command")
+                :Rally
+                 (unitability
+                  :name "Rally")))))
+        "Praetorian Guard"
+         (unit
+          :name "Praetorian Guard"
+          :summary
+           "Initially, the guard for a general, the title was later used for the Emperor's personal army.  These men were
+handpicked from the legions and represent the best warriors in Rome."
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "5"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Phalanx"
+                 (unitability
+                  :name "Formation: Phalanx")
+                "Formation: Shield Wall"
+                 (unitability
+                  :name "Formation: Shield Wall")
+                "Formation: Testudo"
+                 (unitability
+                  :name "Formation: Testudo")))))
+        :Velites
+         (unit
+          :name "Velites"
+          :image "Romans/RomanVeliteToken.png"
+          :summary
+           "The poorest citizen class allowed to serve, these units were lightly armed skirmishers who were
+deployed en masse on the battlefield in front of the heavier infantry lines, but moved back beyond
+the Hastati after discharging their javelins as the enemy approached. The Velites were also an
+important part of defense against war elephants.  Using their greater mobility, due to lighter
+armament, Velites could avoid elephant charges and flank them."
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "2"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Skirmish"
+                 (unitability
+                  :name "Formation: Skirmish")))))
+        "Equites Legionis"
+         (unit
+          :name "Equites Legionis"
+          :image "Romans/RomanHeavyCavalryToken.png"
+          :summary
+           "The Republican cavalry was designed for speed of movement, and were similarly equipped to the Hastati.  Their
+duty was to provide scouting and potential fast moving support to weakening parts of a battle line.  At times
+the cavalry could be used to turn a flank or deliver a shock at the right moment, but their limited number
+generally made their capabilities limited.  As the Romans were not considered great natural horsemen, the great
+effectiveness of cavalry in the Roman army didn't come until the inclusion of various auxilia cavalry like that
+of the Gauls and Germanics."
+          :classification "Hvy. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Riding
+             (unitskill
+              :name "Riding"
+              :level "2"
+              :unitabilitymap
+               (unitabilitymap
+                "Run Down"
+                 (unitability
+                  :name "Run Down")))))))
+    :Auxilia
+     (section
+      :name "Auxilia"
+      :summary
+       "Roman Auxilia are support troops and specialized units.  By the 2nd century, the auxilia contained the same number of
+infantry as the legions and in addition provided almost all the Roman army's cavalry and more specialised troops
+(especially light cavalry and archers).  The auxilia thus represented three-fifths of Rome's regular land forces.
+Like their legionary counterparts, auxiliary recruits were mostly volunteers, not conscripts, but unlike the legion
+the auxilia accepted non-Romans (which represented 90% of the empire)."
+      :unitmap
+       (unitmap
+        "Cohors Peditata"
+         (unit
+          :name "Cohors Peditata"
+          :image "Romans/RomanAuxiliaToken.png"
+          :summary "Most auxiliary cohortes contained heavy infantry similar to legionaries."
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "2")))
+        "Cohortes Sagittariorum"
+         (unit
+          :name "Cohortes Sagittariorum"
+          :image "Romans/RomanArcherAuxiliaToken.png"
+          :summary "Most Sagittarii were from Syria."
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Skirmish"
+                 (unitability
+                  :name "Formation: Skirmish")))))
+        :Funditores
+         (unit
+          :name "Funditores"
+          :summary "Slingers wore no armor."
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Skirmish"
+                 (unitability
+                  :name "Formation: Skirmish")))))
+        "Eques Alaris"
+         (unit
+          :name "Eques Alaris"
+          :image "Romans/RomanLightCavalryToken.png"
+          :summary "Auxiliary Cavalryman"
+          :classification "Lt. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "2")))
+        "Alae Sagittariorum"
+         (unit
+          :name "Alae Sagittariorum"
+          :summary "* Mounted Archers"
+          :classification "Lt. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Military
+             (unitskill
+              :name "Military"
+              :level "3"
+              :unitabilitymap
+               (unitabilitymap
+                "Formation: Skirmish"
+                 (unitability
+                  :name "Formation: Skirmish")))))
+        :Cataphractarii
+         (unit
+          :name "Cataphractarii"
+          :classification "Hvy. Cavalry"
+          :unitskillmap
+           (unitskillmap
+            :Command
+             (unitskill
+              :name "Command"
+              :level "4"
+              :unitabilitymap
+               (unitabilitymap
+                "Chain of Command"
+                 (unitability
+                  :name "Chain of Command")))))
+        "Roman Charioteer"
+         (unit
+          :name "Roman Charioteer"
+          :image "Romans/RomanCharioteer.png"
+          :classification "Hvy. Cavalry")))
+    :Civilians
+     (section
+      :name "Civilians"
+      :unitmap
+       (unitmap
+        "Roman Gladiator"
+         (unit
+          :name "Roman Gladiator"
+          :image "Romans/RomanGladiatorToken.png"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :level "1"
+              :unititemmap
+               (unititemmap
+                "Round Shield"
+                 (unititem
+                  :name "Round Shield")))))
+        "Roman Senator"
+         (unit
+          :name "Roman Senator")
+        "Roman Slave"
+         (unit
+          :name "Roman Slave")
+        "Roman Slaver"
+         (unit
+          :name "Roman Slaver")))
+    "Roman Naval Vessels"
+     (section
+      :name "Roman Naval Vessels"
+      :itemmap
+       (itemmap
+        "Roman Galley"
+         (item
+          :name "Roman Galley")
+        "Roman Trireme"
+         (item
+          :name "Roman Trireme")
+        "Roman Quinquereme"
+         (item
+          :name "Roman Quinquereme"))))))
+
+(func chapter_unfiled_ancient : base/chapter
+ (chapter
+  :name "Unfiled Ancient"
+  :summary
+   "Examples of Play
 Romans vs. Greeks
 Combat Example:
 
@@ -793,4 +1039,4 @@ Determine hit location.
 
 Body reduces by 2 to 10 not enough to change bonus.
 
-The successful Hold Off means the Human's Close Combat Movement fails."))))
+The successful Hold Off means the Human's Close Combat Movement fails."))

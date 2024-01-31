@@ -2198,9 +2198,9 @@ public final class Bookloader {
       Core.t_any_from_func.vx_fn_new(() -> {
         final Base.Type_section section = Bookloader.f_section_from_xml(xmlsection);
         final Core.Type_string name = section.name();
-        final Base.Type_sectionmap sectionmap = section.sectionmap();
+        final Base.Type_sectionmap origmap = chapter.sectionmap();
         final Base.Type_sectionmap chgmap = Core.f_copy(
-          sectionmap,
+          origmap,
           Core.t_anylist.vx_new(
               name,
               section
@@ -3004,7 +3004,8 @@ public final class Bookloader {
     output = Core.f_let(
       File.t_file,
       Core.t_any_from_func.vx_fn_new(() -> {
-        final Core.Type_string bookname = Bookloader.f_string_writename_from_book(book);
+        final Core.Type_string name = book.name();
+        final Core.Type_string bookname = Bookloader.f_string_writename_from_string(name);
         return Core.f_new(
           File.t_file,
           Core.t_anylist.vx_new(
@@ -7254,9 +7255,9 @@ public final class Bookloader {
       Core.t_any_from_func.vx_fn_new(() -> {
         final Base.Type_rule rule = Bookloader.f_rule_from_xml(xmlrule);
         final Core.Type_string name = rule.name();
-        final Base.Type_rulemap rulemap = section.rulemap();
+        final Base.Type_rulemap origmap = section.rulemap();
         final Base.Type_rulemap chgmap = Core.f_copy(
-          rulemap,
+          origmap,
           Core.t_anylist.vx_new(
               name,
               rule
@@ -7356,9 +7357,9 @@ public final class Bookloader {
       Core.t_any_from_func.vx_fn_new(() -> {
         final Base.Type_scenario scenario = Bookloader.f_scenario_from_xml(xmlscenario);
         final Core.Type_string name = scenario.name();
-        final Base.Type_scenariomap scenariomap = section.scenariomap();
+        final Base.Type_scenariomap origmap = section.scenariomap();
         final Base.Type_scenariomap chgmap = Core.f_copy(
-          scenariomap,
+          origmap,
           Core.t_anylist.vx_new(
               name,
               scenario
@@ -7458,9 +7459,9 @@ public final class Bookloader {
       Core.t_any_from_func.vx_fn_new(() -> {
         final Base.Type_section subsect = Bookloader.f_section_from_xml(xmlsection);
         final Core.Type_string name = subsect.name();
-        final Base.Type_sectionmap sectionmap = section.sectionmap();
+        final Base.Type_sectionmap origmap = section.sectionmap();
         final Base.Type_sectionmap chgmap = Core.f_copy(
-          sectionmap,
+          origmap,
           Core.t_anylist.vx_new(
               name,
               subsect
@@ -7764,9 +7765,9 @@ public final class Bookloader {
       Core.t_any_from_func.vx_fn_new(() -> {
         final Base.Type_unit unit = Bookloader.f_unit_from_xml(xmlunit);
         final Core.Type_string name = unit.name();
-        final Base.Type_unitmap unitmap = section.unitmap();
+        final Base.Type_unitmap origmap = section.unitmap();
         final Base.Type_unitmap chgmap = Core.f_copy(
-          unitmap,
+          origmap,
           Core.t_anylist.vx_new(
               name,
               unit
@@ -9165,6 +9166,124 @@ public final class Bookloader {
   }
 
   /**
+   * @function string_vxlisp_header_from_chaptermap
+   * Returns a vxlisp string from a chaptermap.
+   * @param  {chaptermap} chaptermap
+   * @return {string}
+   * (func string-vxlisp-header<-chaptermap)
+   */
+  public static interface Func_string_vxlisp_header_from_chaptermap extends Core.Func_any_from_any {
+    public Core.Type_string vx_string_vxlisp_header_from_chaptermap(final Base.Type_chaptermap chaptermap);
+  }
+
+  public static class Class_string_vxlisp_header_from_chaptermap extends Core.Class_base implements Func_string_vxlisp_header_from_chaptermap {
+
+    @Override
+    public Func_string_vxlisp_header_from_chaptermap vx_new(Object... vals) {
+      Class_string_vxlisp_header_from_chaptermap output = new Class_string_vxlisp_header_from_chaptermap();
+      return output;
+    }
+
+    @Override
+    public Func_string_vxlisp_header_from_chaptermap vx_copy(Object... vals) {
+      Class_string_vxlisp_header_from_chaptermap output = new Class_string_vxlisp_header_from_chaptermap();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "string-vxlisp-header<-chaptermap", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/core", // pkgname
+          "string", // name
+          ":string", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_string_vxlisp_header_from_chaptermap vx_empty() {return e_string_vxlisp_header_from_chaptermap;}
+    @Override
+    public Func_string_vxlisp_header_from_chaptermap vx_type() {return t_string_vxlisp_header_from_chaptermap;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Base.Type_chaptermap inputval = (Base.Type_chaptermap)value;
+      Core.Type_any outputval = Bookloader.f_string_vxlisp_header_from_chaptermap(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_chaptermap chaptermap = Core.f_any_from_any(Base.t_chaptermap, arglist.vx_any(Core.vx_new_int(0)));
+      output = Bookloader.f_string_vxlisp_header_from_chaptermap(chaptermap);
+      return output;
+    }
+
+    @Override
+    public Core.Type_string vx_string_vxlisp_header_from_chaptermap(final Base.Type_chaptermap chaptermap) {
+      return Bookloader.f_string_vxlisp_header_from_chaptermap(chaptermap);
+    }
+
+  }
+
+  public static final Func_string_vxlisp_header_from_chaptermap e_string_vxlisp_header_from_chaptermap = new Bookloader.Class_string_vxlisp_header_from_chaptermap();
+  public static final Func_string_vxlisp_header_from_chaptermap t_string_vxlisp_header_from_chaptermap = new Bookloader.Class_string_vxlisp_header_from_chaptermap();
+
+  public static Core.Type_string f_string_vxlisp_header_from_chaptermap(final Base.Type_chaptermap chaptermap) {
+    Core.Type_string output = Core.e_string;
+    output = Core.f_let(
+      Core.t_string,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_stringlist chapters = Core.f_list_from_map(
+          Core.t_stringlist,
+          chaptermap,
+          Core.t_any_from_key_value.vx_fn_new((key_any, val_any) -> {
+            Core.Type_string key = Core.f_any_from_any(Core.t_string, key_any);
+            Base.Type_chapter val = Core.f_any_from_any(Base.t_chapter, val_any);
+            return 
+                Core.f_new(
+                  Core.t_string,
+                  Core.t_anylist.vx_new(
+                    Core.c_newline,
+                    Core.vx_new_string("    "),
+                    Core.c_quote,
+                    key,
+                    Core.c_quote,
+                    Core.vx_new_string(" (chapter_"),
+                    Bookloader.f_string_writename_from_string(key),
+                    Core.vx_new_string(")")
+                  )
+                );
+          })
+        );
+        return Type.f_string_from_stringlist_join(chapters, Core.vx_new_string(""));
+      })
+    );
+    return output;
+  }
+
+  /**
    * @function string_vxlisp_from_book
    * Returns a vxlisp string from a book.
    * @param  {book} book
@@ -9254,20 +9373,128 @@ public final class Bookloader {
     output = Core.f_let(
       Core.t_string,
       Core.t_any_from_func.vx_fn_new(() -> {
-        final Core.Type_string name = Bookloader.f_string_writename_from_book(book);
-        final Core.Type_string text = Core.f_string_from_any_indent(
-          book,
-          Core.vx_new_int(1),
-          Core.vx_new_boolean(false)
+        final Core.Type_string name = book.name();
+        final Base.Type_chaptermap chaptermap = book.chaptermap();
+        final Core.Type_string image = book.image();
+        final Core.Type_string reference = book.reference();
+        final Core.Type_string summary = book.summary();
+        final Core.Type_string titles = book.titles();
+        final Core.Type_string schaptermap = Bookloader.f_string_vxlisp_header_from_chaptermap(chaptermap);
+        final Core.Type_string schapters = Bookloader.f_string_vxlisp_from_chaptermap(chaptermap);
+        final Core.Type_string simage = Core.f_switch(
+          Core.t_string,
+          image,
+          Core.t_thenelselist.vx_new(
+              Core.f_case_1(
+                Core.vx_new_string(""),
+                Core.t_any_from_func.vx_fn_new(() -> {
+                  return Core.vx_new_string("");
+                })
+              ),
+              Core.f_else(
+                Core.t_any_from_func.vx_fn_new(() -> {
+                  return Core.f_new(
+                    Core.t_string,
+                    Core.t_anylist.vx_new(
+                        Core.vx_new_string("\n  :image "),
+                        Core.f_string_from_any(image)
+                    )
+                  );
+                })
+              )
+          )
         );
+        final Core.Type_string sreference = Core.f_switch(
+          Core.t_string,
+          reference,
+          Core.t_thenelselist.vx_new(
+              Core.f_case_1(
+                Core.vx_new_string(""),
+                Core.t_any_from_func.vx_fn_new(() -> {
+                  return Core.vx_new_string("");
+                })
+              ),
+              Core.f_else(
+                Core.t_any_from_func.vx_fn_new(() -> {
+                  return Core.f_new(
+                    Core.t_string,
+                    Core.t_anylist.vx_new(
+                        Core.vx_new_string("\n  :reference "),
+                        Core.f_string_from_any(reference)
+                    )
+                  );
+                })
+              )
+          )
+        );
+        final Core.Type_string ssummary = Core.f_switch(
+          Core.t_string,
+          summary,
+          Core.t_thenelselist.vx_new(
+              Core.f_case_1(
+                Core.vx_new_string(""),
+                Core.t_any_from_func.vx_fn_new(() -> {
+                  return Core.vx_new_string("");
+                })
+              ),
+              Core.f_else(
+                Core.t_any_from_func.vx_fn_new(() -> {
+                  return Core.f_new(
+                    Core.t_string,
+                    Core.t_anylist.vx_new(
+                        Core.vx_new_string("\n  :summary "),
+                        Core.f_string_from_any(summary)
+                    )
+                  );
+                })
+              )
+          )
+        );
+        final Core.Type_string stitles = Core.f_switch(
+          Core.t_string,
+          titles,
+          Core.t_thenelselist.vx_new(
+              Core.f_case_1(
+                Core.vx_new_string(""),
+                Core.t_any_from_func.vx_fn_new(() -> {
+                  return Core.vx_new_string("");
+                })
+              ),
+              Core.f_else(
+                Core.t_any_from_func.vx_fn_new(() -> {
+                  return Core.f_new(
+                    Core.t_string,
+                    Core.t_anylist.vx_new(
+                        Core.vx_new_string("\n  :titles "),
+                        Core.f_string_from_any(titles)
+                    )
+                  );
+                })
+              )
+          )
+        );
+        final Core.Type_string bookname = Bookloader.f_string_writename_from_string(name);
         return Core.f_new(
           Core.t_string,
           Core.t_anylist.vx_new(
             Core.vx_new_string("(package nx/tactics/books/"),
-            name,
-            Core.vx_new_string("\n :libs (lib base :path nx/tactics/base))\n\n(func tacticsbook : base/book\n "),
-            text,
-            Core.vx_new_string(")\n")
+            bookname,
+            Core.vx_new_string("\n :libs (lib base :path nx/tactics/base))"),
+            Core.vx_new_string("\n"),
+            Core.vx_new_string("\n(func tacticsbook : base/book"),
+            Core.vx_new_string("\n (base/book"),
+            Core.vx_new_string("\n  :name "),
+            Core.f_string_from_any(name),
+            simage,
+            stitles,
+            sreference,
+            ssummary,
+            Core.vx_new_string("\n  :chaptermap"),
+            Core.vx_new_string("\n   (base/chaptermap"),
+            schaptermap,
+            Core.vx_new_string("\n   ))"),
+            Core.vx_new_string(")\n"),
+            schapters
           )
         );
       })
@@ -9276,27 +9503,27 @@ public final class Bookloader {
   }
 
   /**
-   * @function string_writename_from_book
-   * Returns the write filename from a book
-   * @param  {book} book
+   * @function string_vxlisp_from_chapter
+   * Returns a vxlisp string from a chapter.
+   * @param  {chapter} chapter
    * @return {string}
-   * (func string-writename<-book)
+   * (func string-vxlisp<-chapter)
    */
-  public static interface Func_string_writename_from_book extends Core.Func_any_from_any {
-    public Core.Type_string vx_string_writename_from_book(final Base.Type_book book);
+  public static interface Func_string_vxlisp_from_chapter extends Core.Func_any_from_any {
+    public Core.Type_string vx_string_vxlisp_from_chapter(final Base.Type_chapter chapter);
   }
 
-  public static class Class_string_writename_from_book extends Core.Class_base implements Func_string_writename_from_book {
+  public static class Class_string_vxlisp_from_chapter extends Core.Class_base implements Func_string_vxlisp_from_chapter {
 
     @Override
-    public Func_string_writename_from_book vx_new(Object... vals) {
-      Class_string_writename_from_book output = new Class_string_writename_from_book();
+    public Func_string_vxlisp_from_chapter vx_new(Object... vals) {
+      Class_string_vxlisp_from_chapter output = new Class_string_vxlisp_from_chapter();
       return output;
     }
 
     @Override
-    public Func_string_writename_from_book vx_copy(Object... vals) {
-      Class_string_writename_from_book output = new Class_string_writename_from_book();
+    public Func_string_vxlisp_from_chapter vx_copy(Object... vals) {
+      Class_string_vxlisp_from_chapter output = new Class_string_vxlisp_from_chapter();
       return output;
     }
 
@@ -9307,7 +9534,7 @@ public final class Bookloader {
     public Core.Type_funcdef vx_funcdef() {
       return Core.funcdef_new(
         "nx/tactics/books/bookloader", // pkgname
-        "string-writename<-book", // name
+        "string-vxlisp<-chapter", // name
         0, // idx
         false, // async
         Core.typedef_new(
@@ -9327,9 +9554,9 @@ public final class Bookloader {
     }
 
     @Override
-    public Func_string_writename_from_book vx_empty() {return e_string_writename_from_book;}
+    public Func_string_vxlisp_from_chapter vx_empty() {return e_string_vxlisp_from_chapter;}
     @Override
-    public Func_string_writename_from_book vx_type() {return t_string_writename_from_book;}
+    public Func_string_vxlisp_from_chapter vx_type() {return t_string_vxlisp_from_chapter;}
 
     @Override
     public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
@@ -9337,39 +9564,290 @@ public final class Bookloader {
     @Override
     public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
       T output = Core.f_empty(generic_any_1);
-      Base.Type_book inputval = (Base.Type_book)value;
-      Core.Type_any outputval = Bookloader.f_string_writename_from_book(inputval);
+      Base.Type_chapter inputval = (Base.Type_chapter)value;
+      Core.Type_any outputval = Bookloader.f_string_vxlisp_from_chapter(inputval);
       output = Core.f_any_from_any(generic_any_1, outputval);
       return output;
     }
 
     public Core.Type_any vx_repl(Core.Type_anylist arglist) {
       Core.Type_any output = Core.e_any;
-      Base.Type_book book = Core.f_any_from_any(Base.t_book, arglist.vx_any(Core.vx_new_int(0)));
-      output = Bookloader.f_string_writename_from_book(book);
+      Base.Type_chapter chapter = Core.f_any_from_any(Base.t_chapter, arglist.vx_any(Core.vx_new_int(0)));
+      output = Bookloader.f_string_vxlisp_from_chapter(chapter);
       return output;
     }
 
     @Override
-    public Core.Type_string vx_string_writename_from_book(final Base.Type_book book) {
-      return Bookloader.f_string_writename_from_book(book);
+    public Core.Type_string vx_string_vxlisp_from_chapter(final Base.Type_chapter chapter) {
+      return Bookloader.f_string_vxlisp_from_chapter(chapter);
     }
 
   }
 
-  public static final Func_string_writename_from_book e_string_writename_from_book = new Bookloader.Class_string_writename_from_book();
-  public static final Func_string_writename_from_book t_string_writename_from_book = new Bookloader.Class_string_writename_from_book();
+  public static final Func_string_vxlisp_from_chapter e_string_vxlisp_from_chapter = new Bookloader.Class_string_vxlisp_from_chapter();
+  public static final Func_string_vxlisp_from_chapter t_string_vxlisp_from_chapter = new Bookloader.Class_string_vxlisp_from_chapter();
 
-  public static Core.Type_string f_string_writename_from_book(final Base.Type_book book) {
+  public static Core.Type_string f_string_vxlisp_from_chapter(final Base.Type_chapter chapter) {
     Core.Type_string output = Core.e_string;
     output = Core.f_let(
       Core.t_string,
       Core.t_any_from_func.vx_fn_new(() -> {
-        final Core.Type_string name = book.name();
+        final Core.Type_string name = chapter.name();
+        final Core.Type_string chnm = Bookloader.f_string_writename_from_string(name);
+        final Core.Type_string text = Core.f_string_from_any_indent(
+          chapter,
+          Core.vx_new_int(1),
+          Core.vx_new_boolean(false)
+        );
+        return Core.f_new(
+          Core.t_string,
+          Core.t_anylist.vx_new(
+            Core.vx_new_string("(func chapter_"),
+            chnm,
+            Core.vx_new_string(" : base/chapter\n"),
+            text,
+            Core.vx_new_string(")\n")
+          )
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function string_vxlisp_from_chaptermap
+   * Returns a vxlisp string from a chaptermap.
+   * @param  {chaptermap} chaptermap
+   * @return {string}
+   * (func string-vxlisp<-chaptermap)
+   */
+  public static interface Func_string_vxlisp_from_chaptermap extends Core.Func_any_from_any {
+    public Core.Type_string vx_string_vxlisp_from_chaptermap(final Base.Type_chaptermap chaptermap);
+  }
+
+  public static class Class_string_vxlisp_from_chaptermap extends Core.Class_base implements Func_string_vxlisp_from_chaptermap {
+
+    @Override
+    public Func_string_vxlisp_from_chaptermap vx_new(Object... vals) {
+      Class_string_vxlisp_from_chaptermap output = new Class_string_vxlisp_from_chaptermap();
+      return output;
+    }
+
+    @Override
+    public Func_string_vxlisp_from_chaptermap vx_copy(Object... vals) {
+      Class_string_vxlisp_from_chaptermap output = new Class_string_vxlisp_from_chaptermap();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "string-vxlisp<-chaptermap", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/core", // pkgname
+          "string", // name
+          ":string", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_string_vxlisp_from_chaptermap vx_empty() {return e_string_vxlisp_from_chaptermap;}
+    @Override
+    public Func_string_vxlisp_from_chaptermap vx_type() {return t_string_vxlisp_from_chaptermap;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Base.Type_chaptermap inputval = (Base.Type_chaptermap)value;
+      Core.Type_any outputval = Bookloader.f_string_vxlisp_from_chaptermap(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Base.Type_chaptermap chaptermap = Core.f_any_from_any(Base.t_chaptermap, arglist.vx_any(Core.vx_new_int(0)));
+      output = Bookloader.f_string_vxlisp_from_chaptermap(chaptermap);
+      return output;
+    }
+
+    @Override
+    public Core.Type_string vx_string_vxlisp_from_chaptermap(final Base.Type_chaptermap chaptermap) {
+      return Bookloader.f_string_vxlisp_from_chaptermap(chaptermap);
+    }
+
+  }
+
+  public static final Func_string_vxlisp_from_chaptermap e_string_vxlisp_from_chaptermap = new Bookloader.Class_string_vxlisp_from_chaptermap();
+  public static final Func_string_vxlisp_from_chaptermap t_string_vxlisp_from_chaptermap = new Bookloader.Class_string_vxlisp_from_chaptermap();
+
+  public static Core.Type_string f_string_vxlisp_from_chaptermap(final Base.Type_chaptermap chaptermap) {
+    Core.Type_string output = Core.e_string;
+    output = Core.f_let(
+      Core.t_string,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Base.Type_chapterlist chapters = Core.f_list_from_map(
+          Base.t_chapterlist,
+          chaptermap,
+          Core.t_any_from_key_value.vx_fn_new((key_any, val_any) -> {
+            Core.Type_string key = Core.f_any_from_any(Core.t_string, key_any);
+            Base.Type_chapter val = Core.f_any_from_any(Base.t_chapter, val_any);
+            return val;
+          })
+        );
+        final Core.Type_stringlist schapters = Core.f_list_from_list(
+          Core.t_stringlist,
+          chapters,
+          Core.t_any_from_any.vx_fn_new((chapt_any) -> {
+            Base.Type_chapter chapt = Core.f_any_from_any(Base.t_chapter, chapt_any);
+            return 
+                Core.f_let(
+                  Core.t_string,
+                  Core.t_any_from_func.vx_fn_new(() -> {
+                    final Core.Type_string name = Base.f_name_from_chapter(chapt);
+                    final Core.Type_string schnm = Bookloader.f_string_writename_from_string(name);
+                    final Core.Type_string text = Core.f_string_from_any_indent(
+                      chapt,
+                      Core.vx_new_int(1),
+                      Core.vx_new_boolean(true)
+                    );
+                    return Core.f_new(
+                      Core.t_string,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string("\n(func chapter_"),
+                        schnm,
+                        Core.vx_new_string(" : base/chapter\n "),
+                        text,
+                        Core.vx_new_string(")")
+                      )
+                    );
+                  })
+                );
+          })
+        );
+        return Type.f_string_from_stringlist_join(
+          schapters,
+          Core.c_newline
+        );
+      })
+    );
+    return output;
+  }
+
+  /**
+   * @function string_writename_from_string
+   * Returns the write filename from a book
+   * @param  {string} name
+   * @return {string}
+   * (func string-writename<-string)
+   */
+  public static interface Func_string_writename_from_string extends Core.Func_any_from_any {
+    public Core.Type_string vx_string_writename_from_string(final Core.Type_string name);
+  }
+
+  public static class Class_string_writename_from_string extends Core.Class_base implements Func_string_writename_from_string {
+
+    @Override
+    public Func_string_writename_from_string vx_new(Object... vals) {
+      Class_string_writename_from_string output = new Class_string_writename_from_string();
+      return output;
+    }
+
+    @Override
+    public Func_string_writename_from_string vx_copy(Object... vals) {
+      Class_string_writename_from_string output = new Class_string_writename_from_string();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/books/bookloader", // pkgname
+        "string-writename<-string", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/core", // pkgname
+          "string", // name
+          ":string", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_string_writename_from_string vx_empty() {return e_string_writename_from_string;}
+    @Override
+    public Func_string_writename_from_string vx_type() {return t_string_writename_from_string;}
+
+    @Override
+    public Core.Func_any_from_any vx_fn_new(Core.Class_any_from_any.IFn fn) {return Core.e_any_from_any;}
+
+    @Override
+    public <T extends Core.Type_any, U extends Core.Type_any> T vx_any_from_any(final T generic_any_1, final U value) {
+      T output = Core.f_empty(generic_any_1);
+      Core.Type_string inputval = (Core.Type_string)value;
+      Core.Type_any outputval = Bookloader.f_string_writename_from_string(inputval);
+      output = Core.f_any_from_any(generic_any_1, outputval);
+      return output;
+    }
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Core.Type_string name = Core.f_any_from_any(Core.t_string, arglist.vx_any(Core.vx_new_int(0)));
+      output = Bookloader.f_string_writename_from_string(name);
+      return output;
+    }
+
+    @Override
+    public Core.Type_string vx_string_writename_from_string(final Core.Type_string name) {
+      return Bookloader.f_string_writename_from_string(name);
+    }
+
+  }
+
+  public static final Func_string_writename_from_string e_string_writename_from_string = new Bookloader.Class_string_writename_from_string();
+  public static final Func_string_writename_from_string t_string_writename_from_string = new Bookloader.Class_string_writename_from_string();
+
+  public static Core.Type_string f_string_writename_from_string(final Core.Type_string name) {
+    Core.Type_string output = Core.e_string;
+    output = Core.f_let(
+      Core.t_string,
+      Core.t_any_from_func.vx_fn_new(() -> {
         final Core.Type_string lower = Type.f_string_lowercase(name);
         final Core.Type_string space = Core.f_string_from_string_find_replace(lower, Core.vx_new_string(" "), Core.vx_new_string("_"));
         final Core.Type_string comma = Core.f_string_from_string_find_replace(space, Core.vx_new_string(","), Core.vx_new_string(""));
-        return comma;
+        final Core.Type_string apos = Core.f_string_from_string_find_replace(comma, Core.vx_new_string("'"), Core.vx_new_string(""));
+        final Core.Type_string slash = Core.f_string_from_string_find_replace(apos, Core.vx_new_string("/"), Core.vx_new_string("_"));
+        return slash;
       })
     );
     return output;
@@ -10813,9 +11291,9 @@ public final class Bookloader {
       Core.t_any_from_func.vx_fn_new(() -> {
         final Base.Type_unitpower unitpower = Bookloader.f_unitpower_from_xml(xmlpower);
         final Core.Type_string name = unitpower.name();
-        final Base.Type_unitpowermap unitpowermap = unit.unitpowermap();
+        final Base.Type_unitpowermap origmap = unit.unitpowermap();
         final Base.Type_unitpowermap chgmap = Core.f_copy(
-          unitpowermap,
+          origmap,
           Core.t_anylist.vx_new(
               name,
               unitpower
@@ -10915,9 +11393,9 @@ public final class Bookloader {
       Core.t_any_from_func.vx_fn_new(() -> {
         final Base.Type_unitskill unitskill = Bookloader.f_unitskill_from_xml(xmlskill);
         final Core.Type_string name = unitskill.name();
-        final Base.Type_unitskillmap unitskillmap = unit.unitskillmap();
+        final Base.Type_unitskillmap origmap = unit.unitskillmap();
         final Base.Type_unitskillmap chgmap = Core.f_copy(
-          unitskillmap,
+          Base.t_unitskillmap,
           Core.t_anylist.vx_new(
               name,
               unitskill
@@ -11017,9 +11495,9 @@ public final class Bookloader {
       Core.t_any_from_func.vx_fn_new(() -> {
         final Base.Type_unitweakness unitweakness = Bookloader.f_unitweakness_from_xml(xmlweakness);
         final Core.Type_string name = unitweakness.name();
-        final Base.Type_unitweaknessmap unitweaknessmap = unit.unitweaknessmap();
+        final Base.Type_unitweaknessmap origmap = unit.unitweaknessmap();
         final Base.Type_unitweaknessmap chgmap = Core.f_copy(
-          unitweaknessmap,
+          origmap,
           Core.t_anylist.vx_new(
               name,
               unitweakness
@@ -14549,8 +15027,11 @@ public final class Bookloader {
     mapfunc.put("specialty<-specialty-xmlchild", Bookloader.t_specialty_from_specialty_xmlchild);
     mapfunc.put("specialty<-xml", Bookloader.t_specialty_from_xml);
     mapfunc.put("string-read<-bookname", Bookloader.t_string_read_from_bookname);
+    mapfunc.put("string-vxlisp-header<-chaptermap", Bookloader.t_string_vxlisp_header_from_chaptermap);
     mapfunc.put("string-vxlisp<-book", Bookloader.t_string_vxlisp_from_book);
-    mapfunc.put("string-writename<-book", Bookloader.t_string_writename_from_book);
+    mapfunc.put("string-vxlisp<-chapter", Bookloader.t_string_vxlisp_from_chapter);
+    mapfunc.put("string-vxlisp<-chaptermap", Bookloader.t_string_vxlisp_from_chaptermap);
+    mapfunc.put("string-writename<-string", Bookloader.t_string_writename_from_string);
     mapfunc.put("team<-team-key-value", Bookloader.t_team_from_team_key_value);
     mapfunc.put("team<-team-stringmap", Bookloader.t_team_from_team_stringmap);
     mapfunc.put("team<-team-xmlchild", Bookloader.t_team_from_team_xmlchild);

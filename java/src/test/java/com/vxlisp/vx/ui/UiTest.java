@@ -19,13 +19,13 @@ public final class UiTest {
   public static Test.Type_testcoveragesummary test_coveragesummary() {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "vx/ui/ui", 
-      ":constnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 5), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 36, ":tests", 4, ":total", 11), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 2), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 2), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 2), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 11), 
-      ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 4)
+      ":constnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 16), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 33, ":tests", 9, ":total", 27), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 4), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 4), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 4), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 27), 
+      ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 7)
     );
   }
 
@@ -33,21 +33,37 @@ public final class UiTest {
     return Test.t_testcoveragedetail.vx_new(
       ":testpkg", "vx/ui/ui",
       ":typemap", Core.t_intmap.vx_new(
-        ":layout", 0,
+        ":render", 0,
+        ":renderer", 0,
+        ":rendermap", 0,
         ":ui", 0,
+        ":uilayout", 0,
         ":uimap", 0,
         ":uistyle", 0
       ),
       ":constmap", Core.t_intmap.vx_new(
-        ":layout-app", 0,
-        ":layout-background", 0,
-        ":layout-navigation", 0,
-        ":layout-split-horizontal", 0,
-        ":layout-split-vertical", 0
+        ":uilayout-app", 0,
+        ":uilayout-background", 0,
+        ":uilayout-combobox", 0,
+        ":uilayout-flow-horizontal", 0,
+        ":uilayout-flow-vertical", 0,
+        ":uilayout-image", 0,
+        ":uilayout-navigation", 0,
+        ":uilayout-panel", 0,
+        ":uilayout-parallax", 0,
+        ":uilayout-scrollbox", 0,
+        ":uilayout-scrollbox-horizontal", 0,
+        ":uilayout-scrollbox-vertical", 0,
+        ":uilayout-split-horizontal", 0,
+        ":uilayout-split-vertical", 0,
+        ":uilayout-text", 0,
+        ":uilayout-textentry", 0
       ),
       ":funcmap", Core.t_intmap.vx_new(
-        ":any-render<-ui", 0,
-        ":anymap-render<-uimap", 0
+        ":render<-ui", 0,
+        ":render<-ui-orig", 0,
+        ":rendermap<-uimap", 0,
+        ":ui-render<-ui-orig", 0
       )
     );
   }

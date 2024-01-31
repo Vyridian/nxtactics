@@ -27,11 +27,11 @@ export default class vx_data_xml_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "vx/data/xml", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 4), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 65, ":tests", 13, ":total", 20), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 76, ":tests", 10, ":total", 13), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 66, ":tests", 14, ":total", 21), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 71, ":tests", 10, ":total", 14), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 50, ":tests", 10, ":total", 20), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 47, ":tests", 10, ":total", 21), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3)
     )
   }
@@ -58,6 +58,7 @@ export default class vx_data_xml_test {
       "funcmap",
         vx_core.f_new(
           vx_core.t_intmap,
+          "string-decodexml<-string", 0,
           "string-first<-xml", 1,
           "textblock-xml<-string", 1,
           "xml-angle<-xml-textblock", 3,
@@ -847,7 +848,7 @@ export default class vx_data_xml_test {
           ),
           vx_core.f_new(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (xml\n  :tag \"doc\"\n  (msg\n   :severity 2\n   :text \"Invalid Xml Close tag: /wrong\"))\n (xml-close<-xml-textblock\n  (xml\n   :tag \"doc\")\n  (tb/textblock\n   :text \"/wrong\")))",
+            ":describename", "(test\n (xml\n  :tag \"doc\"\n  (msg\n   :code \":invalidxmlclosetag\"\n   :detail\n    (anymap\n     :tag \"/wrong\"\n     :startpos 0\n     :endpos 0\n     :line 0\n     :column 0)\n   :severity 2))\n (xml-close<-xml-textblock\n  (xml\n   :tag \"doc\")\n  (tb/textblock\n   :text \"/wrong\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -857,10 +858,24 @@ export default class vx_data_xml_test {
                 "doc",
                 vx_core.f_new(
                   vx_core.t_msg,
+                  ":code",
+                  ":invalidxmlclosetag",
+                  ":detail",
+                  vx_core.f_new(
+                    vx_core.t_anymap,
+                    ":tag",
+                    "/wrong",
+                    ":startpos",
+                    0,
+                    ":endpos",
+                    0,
+                    ":line",
+                    0,
+                    ":column",
+                    0
+                  ),
                   ":severity",
-                  2,
-                  ":text",
-                  "Invalid Xml Close tag: /wrong"
+                  2
                 )
               ),
               vx_data_xml.f_xml_close_from_xml_textblock(

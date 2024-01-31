@@ -2,21 +2,49 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
- (book
+ (base/book
   :name "Modern"
   :image "Modern.jpg"
   :chaptermap
-   (chaptermap
-    "Modern Overview"
-     (chapter
-      :name "Modern Overview"
-      :sectionmap
-       (sectionmap
-        "Modern Aerial Warfare"
-         (section
-          :name "Modern Aerial Warfare"
-          :summary
-           "* Jet Planes
+   (base/chaptermap
+    "Modern Overview" (chapter_modern_overview)
+    "Cold War" (chapter_cold_war)
+    "Modern Ground Vehicles" (chapter_modern_ground_vehicles)
+    "The Abyss" (chapter_the_abyss)
+    "Modern Space" (chapter_modern_space)
+    "Modern Cops and Robbers" (chapter_modern_cops_and_robbers)
+    "Modern Mercenaries" (chapter_modern_mercenaries)
+    "The Prisoner" (chapter_the_prisoner)
+    "Special Ops" (chapter_special_ops)
+    "Modern Spies" (chapter_modern_spies)
+    "Modern Sports" (chapter_modern_sports)
+    "Modern Warfare" (chapter_modern_warfare)
+   )))
+
+(func chapter_modern_overview : base/chapter
+ (chapter
+  :name "Modern Overview"
+  :sectionmap
+   (sectionmap
+    "Modern Naval Warfare"
+     (section
+      :name "Modern Naval Warfare"
+      :summary
+       "* Aircraft Carriers
+* Destroyers
+* Cruisers
+* Torpedo Boats
+* Radar
+* Naval Cannons
+* Stealth Fighters
+* Unmanned Naval Vehicles
+* Nuclear Submarines
+* Attack Submarines")
+    "Modern Aerial Warfare"
+     (section
+      :name "Modern Aerial Warfare"
+      :summary
+       "* Jet Planes
 * Stealth Fighters
 * Unmanned Aerial Vehicles (UAV)
 * Air Cavalry
@@ -31,232 +59,873 @@
 * Nuclear Bombing
 * Cruise Missiles
 * Fuel Air Explosives
-* Intercontinental Ballistic Missiles (ICBM)")))
-    "Cold War"
-     (chapter
-      :name "Cold War"
-      :sectionmap
-       (sectionmap
-        "British Ground Vehicles"
-         (section
-          :name "British Ground Vehicles"
-          :unitmap
-           (unitmap
-            "QF 20 Pounder"
-             (unit
-              :name "QF 20 Pounder")))))
-    "Modern Ground Vehicles"
-     (chapter
-      :name "Modern Ground Vehicles"
-      :sectionmap
-       (sectionmap
-        "Modern Snowcraft"
-         (section
-          :name "Modern Snowcraft"
+* Intercontinental Ballistic Missiles (ICBM)"))))
+
+(func chapter_cold_war : base/chapter
+ (chapter
+  :name "Cold War"
+  :sectionmap
+   (sectionmap
+    "American Aircraft"
+     (section
+      :name "American Aircraft"
+      :unitmap
+       (unitmap
+        "A-10 Warthog"
+         (unit
+          :name "A-10 Warthog"
+          :classification "Lt. Aircraft"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4"
+              :unititemmap
+               (unititemmap
+                "30mm GAU-8 Avenger"
+                 (unititem
+                  :name "30mm GAU-8 Avenger")))))
+        "AH-1 Cobra"
+         (unit
+          :name "AH-1 Cobra"
+          :image "Modern/American_Helicopter_Cobra.png"
           :summary
-           "* 75% Load, on Snow no Terrain Penalty and 150% Speed, off Snow +1 Terrain Penalty.
-* Icecraft - On Ice no Terrain Penalty and 200% Speed, off Ice cannot move."
-          :itemmap
-           (itemmap
-            :Iceskates
-             (item
-              :name "Iceskates"
-              :summary "* Personal, Unpowered, Icecraft")
-            "Ice sailboat"
-             (item
-              :name "Ice sailboat"
-              :summary "* Medium, Sail, Icecraft")
-            :Skis
-             (item
-              :name "Skis"
-              :summary "* Personal, Unpowered, Snowcraft")
-            :Snowboard
-             (item
-              :name "Snowboard"
-              :summary "* Personal, Unpowered, Snowcraft")
-            :Snowshoes
-             (item
-              :name "Snowshoes"
-              :summary "* Personal, Unpowered, Snowcraft"))
-          :unitmap
-           (unitmap
-            "Dog Sled"
-             (unit
-              :name "Dog Sled"
-              :summary "* Unpowered, Offroad, Snowcraft")
-            :Snowmobile
-             (unit
-              :name "Snowmobile"
-              :summary "* Offroad, Snowcraft")))))
-    "The Abyss"
-     (chapter
-      :name "The Abyss"
-      :sectionmap
-       (sectionmap
-        "Abyss Units"
-         (section
-          :name "Abyss Units"
-          :unitmap
-           (unitmap
-            "Construction Submarine"
-             (unit
-              :name "Construction Submarine")
-            "Big Geek"
-             (unit
-              :name "Big Geek")
-            "Little Geek"
-             (unit
-              :name "Little Geek")
-            "Navy Seal"
-             (unit
-              :name "Navy Seal")))))
-    "Modern Space"
-     (chapter
-      :name "Modern Space"
-      :sectionmap
-       (sectionmap
-        "Modern Space Units"
-         (section
-          :name "Modern Space Units"
-          :unitmap
-           (unitmap
-            :Astronaut
-             (unit
-              :name "Astronaut")
-            "International Space Station"
-             (unit
-              :name "International Space Station")
-            "Space Shuttle"
-             (unit
-              :name "Space Shuttle")))))
-    "Modern Cops and Robbers"
-     (chapter
-      :name "Modern Cops and Robbers"
-      :sectionmap
-       (sectionmap
-        "Modern Crime Gangs"
-         (section
-          :name "Modern Crime Gangs"
-          :unitmap
-           (unitmap
-            :Mafia
-             (unit
-              :name "Mafia")
-            "Tong Gangs"
-             (unit
-              :name "Tong Gangs"
-              :summary "Tongs are local street gangs.")
-            :Triads
-             (unit
-              :name "Triads"
-              :summary "The Triads are like the [Yakuza] offering protection to the locals.  This protection normally comes in the form of crushing the competition on the triad's businesses.  Unlike the [Yakuza], the triads deal in slavery and are more open in their illegal dealings.  Enforcement is very brutal.")
-            :Yakuza
-             (unit
-              :name "Yakuza"
-              :summary "Besides weapons and drugs, the Yakuza are the neighborhood protection in many areas and do so far more efficiently than the police. Contrary to the attitudes protrayed in Hollywood, the Yakuza make justice swift and fair for the people they deal with. It has done this way for longer than the United States has been around. The Yakuza is not about random violence and mayhem. It is about order and discipline. Of course, many of the younger members have cast aside traditions and have become violent thugs. Like the Triads, the Yakuza was originally a response to the feudal lords when those who were not samurai had no rights or safety.")))))
-    "Modern Mercenaries"
-     (chapter
-      :name "Modern Mercenaries"
-      :reference
-       "* Blackrock
-* Millenium's End"
+           "2x 7.62mm Miniguns
+2x 7-round 70mm Rocket Pods
+20mm XM195 Vulcan Cannon"
+          :speed "350kph"
+          :classification "Lt. Aircraft"
+          :crew "2"
+          :mass "4tons"
+          :height "4m"
+          :length "13m"
+          :range "570km")
+        "Candy Bomber"
+         (unit
+          :name "Candy Bomber"
+          :classification "Hvy. Aircraft")
+        "UH-1 Iroquois (Huey)"
+         (unit
+          :name "UH-1 Iroquois (Huey)"
+          :image "Modern/American_Helicopter_Huey.png"
+          :summary
+           "2x 7.62mm M60 Machine Gun
+2x 7-round 70mm Rocket Pods"
+          :speed "200kph"
+          :classification "Lt. Aircraft"
+          :crew "1+14"
+          :mass "4tons"
+          :height "4m"
+          :length "17m"
+          :width "3m")
+        "SR-71 Blackbird"
+         (unit
+          :name "SR-71 Blackbird"
+          :image "Modern/American_SpyPlane_SR71Blackbird.png"
+          :classification "Hvy. Aircraft")))
+    "American Ground Vehicles"
+     (section
+      :name "American Ground Vehicles"
+      :unitmap
+       (unitmap
+        "M46 Patton"
+         (unit
+          :name "M46 Patton"
+          :summary
+           "* An improved Pershing sometimes called Pershing II, was used extensively in Korean War.
+* 90mm Cannon"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4")))
+        "M48 Patton"
+         (unit
+          :name "M48 Patton"
+          :summary
+           "* A completely redesigned Pershing based Vietnam Era Tank
+4 Gunnery
+105mm Cannon
+Armor
+120mm
+.50 cal MG
+7.62mm MG"
+          :mass "50tons"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4")))))
+    "American Missles"
+     (section
+      :name "American Missles"
+      :itemmap
+       (itemmap
+        :ICBM
+         (item
+          :name "ICBM")
+        "Polaris Submarine Missile"
+         (item
+          :name "Polaris Submarine Missile")))
+    "British Ground Vehicles"
+     (section
+      :name "British Ground Vehicles"
+      :unitmap
+       (unitmap
+        "QF 20 Pounder"
+         (unit
+          :name "QF 20 Pounder"))))))
+
+(func chapter_modern_ground_vehicles : base/chapter
+ (chapter
+  :name "Modern Ground Vehicles"
+  :sectionmap
+   (sectionmap
+    "Modern Cycles"
+     (section
+      :name "Modern Cycles")
+    "Modern Cars"
+     (section
+      :name "Modern Cars"
+      :unitmap
+       (unitmap
+        :Compact
+         (unit
+          :name "Compact"
+          :image "Modern/Civilian_Compact.png")
+        "Luxury Sedan"
+         (unit
+          :name "Luxury Sedan")
+        :Minivan
+         (unit
+          :name "Minivan"
+          :image "Modern/Civilian_Minivan.png")
+        :Sedan
+         (unit
+          :name "Sedan"
+          :image "Modern/Civilian_Sedan.png")
+        "Sports Car"
+         (unit
+          :name "Sports Car"
+          :image "Modern/Civilian_SportsCar.png")
+        :Subcompact
+         (unit
+          :name "Subcompact"
+          :titles "Econobox")
+        "Station Wagon"
+         (unit
+          :name "Station Wagon"
+          :image "Modern/Civilian_StationWagon.png")))
+    "Modern Trucks"
+     (section
+      :name "Modern Trucks"
+      :unitmap
+       (unitmap
+        "Armored Car"
+         (unit
+          :name "Armored Car"
+          :summary
+           "* RWD. 200 hp engine [20], 20 gallon tank [4], driver, gunner, SR 6, TS 80, AC 4 (max 8), 16 mpg @65.
+FP Armor: F30, L30, R30, B30, T30, U20. Cargo 200 cf. Max load 2000 lb. $70,000, 8500 lb.")
+        :HummVee
+         (unit
+          :name "HummVee")
+        :Jeep
+         (unit
+          :name "Jeep")
+        "Land Cruiser"
+         (unit
+          :name "Land Cruiser")
+        "Pickup Truck"
+         (unit
+          :name "Pickup Truck"
+          :image "Modern/Civilian_PickupTruck.png"
+          :summary "* Same as Sport Utility except: two to three passengers. Cargo 160 cf. Max load 1000-3000 lb. $20,000 3300 lb.")
+        "Sport Utility"
+         (unit
+          :name "Sport Utility"
+          :image "Modern/Civilian_SUV.png"
+          :summary "* RWD or AWD with around 180 hp, two- or four-door with two to eight passengers.  SR 6, TS 110, AC 6 (max 10), 18 mpg@65. Cargo 20-70 cf. Max load 500-1000 lb. $30,000 3500 lb.")
+        :Van
+         (unit
+          :name "Van")))
+    "Modern Heavy Vehicles"
+     (section
+      :name "Modern Heavy Vehicles"
+      :summary "150% Cost, 150% Load, 75% Speed, -1 Handling"
+      :unitmap
+       (unitmap
+        :Bus
+         (unit
+          :name "Bus"
+          :titles "School Bus")
+        "Bus, Luxury"
+         (unit
+          :name "Bus, Luxury"
+          :titles "Charter Bus")
+        :Backhoe
+         (unit
+          :name "Backhoe")
+        "Bobcat Loader"
+         (unit
+          :name "Bobcat Loader")
+        :Bulldozer
+         (unit
+          :name "Bulldozer")
+        :Camper
+         (unit
+          :name "Camper")
+        "Cargo Truck"
+         (unit
+          :name "Cargo Truck")
+        "Construction Crane"
+         (unit
+          :name "Construction Crane")
+        "Dump Truck"
+         (unit
+          :name "Dump Truck")
+        "Garbage Truck"
+         (unit
+          :name "Garbage Truck")
+        "Giant Dump Truck"
+         (unit
+          :name "Giant Dump Truck")
+        "Giant Shovel"
+         (unit
+          :name "Giant Shovel")
+        "Recreational Vehicle (RV)"
+         (unit
+          :name "Recreational Vehicle (RV)")
+        "Tractor Trailer"
+         (unit
+          :name "Tractor Trailer"
+          :summary
+           "* 200 gallon tank, driver, 2 passengers. SR 5.75, TS 125, AC 3 (max 6), 12 mpg@65. No Armor.
+Cargo 5000 cf. Max load 30 tons. $300,000, 10 tons.  Tractor trailers use two overlapping vehicle counters.")))
+    "Modern Police Vehicles"
+     (section
+      :name "Modern Police Vehicles"
+      :unitmap
+       (unitmap
+        "Police Cruiser"
+         (unit
+          :name "Police Cruiser")
+        "SWAT Truck"
+         (unit
+          :name "SWAT Truck")))
+    "Modern Military Vehicles"
+     (section
+      :name "Modern Military Vehicles"
       :summary
-       "Mercenaries
+       "* Amphibious Vehicles
+* Artillery
+** Light Tank
+** Heavy Tank
+*** Tracked. 2000 hp supercharged engine [70], 120 gallon self-sealing armored tank [20], driver, commander, 2 gunners, 120 mm tank gun [15] in turret (50), MG50 [4] in turret (50), SS [3] front and back (5|5), targeting computer. SR 2, TS 50, AC 3 (max 20), 1 mpg@50. Military-grade Armor: F500, L350, R350, B300, T140, U170. Cargo 10 cf. Max load 4000 lb. $5 million, 40 tons. Each tread has 80 hits. The 120 mm cannon does 25d +
+30 damage, and has a to-hit of 13, but requires one round to reload.
+* Hovertank"
+      :unitmap
+       (unitmap
+        "Armored Personal Carrier (APC)"
+         (unit
+          :name "Armored Personal Carrier (APC)"
+          :summary
+           "* Wheeled. 500 hp engine, 60 gallon selfsealing tank, driver, gunner, MG50 also in turret (50), SS [3] back (5),
+SR 2, TS 50, AC 3 (max 20), 3 mpg@50. Militarygrade Armor: F100, L80, R80, B70, T40, U50.  Cargo 10 soldiers with
+full gear.  Max load 2000 lb. $250,000, 10 tons.")))
+    "Modern Trailers"
+     (section
+      :name "Modern Trailers")
+    "Modern Hovercraft"
+     (section
+      :name "Modern Hovercraft")
+    "Modern Trains"
+     (section
+      :name "Modern Trains"
+      :summary
+       "* 150% Cost, 200% Load
+* With a maximum AC of less than one and silly amounts of weight, a train does not stop for anything.  When a
+steadily moving train collides with a vehicle it does as much damage as the vehicle can take: even a tank would be
+completely shattered if a train struck it.  A train is very hard to destroy, also... it would derail before
+actually turning into rubble."
+      :unitmap
+       (unitmap
+        "Armored Boxcar"
+         (unit
+          :name "Armored Boxcar")
+        "Automobile Cargo Car"
+         (unit
+          :name "Automobile Cargo Car")
+        :Boxcar
+         (unit
+          :name "Boxcar")
+        :Caboose
+         (unit
+          :name "Caboose")
+        "Dining Car"
+         (unit
+          :name "Dining Car")
+        "Flatbed Car"
+         (unit
+          :name "Flatbed Car")
+        "Hand Cart"
+         (unit
+          :name "Hand Cart")
+        :Locomotive
+         (unit
+          :name "Locomotive")
+        :Monorail
+         (unit
+          :name "Monorail")
+        "Passenger Car"
+         (unit
+          :name "Passenger Car")
+        "Sleeping Car"
+         (unit
+          :name "Sleeping Car")
+        :Streetcar
+         (unit
+          :name "Streetcar")
+        "Tanker Car"
+         (unit
+          :name "Tanker Car")
+        :Tram
+         (unit
+          :name "Tram")
+        "Weapon Mount Car"
+         (unit
+          :name "Weapon Mount Car")))
+    "Modern Snowcraft"
+     (section
+      :name "Modern Snowcraft"
+      :summary
+       "* 75% Load, on Snow no Terrain Penalty and 150% Speed, off Snow +1 Terrain Penalty.
+* Icecraft - On Ice no Terrain Penalty and 200% Speed, off Ice cannot move."
+      :itemmap
+       (itemmap
+        :Iceskates
+         (item
+          :name "Iceskates"
+          :summary "* Personal, Unpowered, Icecraft")
+        "Ice sailboat"
+         (item
+          :name "Ice sailboat"
+          :summary "* Medium, Sail, Icecraft")
+        :Skis
+         (item
+          :name "Skis"
+          :summary "* Personal, Unpowered, Snowcraft")
+        :Snowboard
+         (item
+          :name "Snowboard"
+          :summary "* Personal, Unpowered, Snowcraft")
+        :Snowshoes
+         (item
+          :name "Snowshoes"
+          :summary "* Personal, Unpowered, Snowcraft"))
+      :unitmap
+       (unitmap
+        "Dog Sled"
+         (unit
+          :name "Dog Sled"
+          :summary "* Unpowered, Offroad, Snowcraft")
+        :Snowmobile
+         (unit
+          :name "Snowmobile"
+          :summary "* Offroad, Snowcraft"))))))
+
+(func chapter_the_abyss : base/chapter
+ (chapter
+  :name "The Abyss"
+  :sectionmap
+   (sectionmap
+    "Abyss Units"
+     (section
+      :name "Abyss Units"
+      :unitmap
+       (unitmap
+        "Construction Submarine"
+         (unit
+          :name "Construction Submarine")
+        "Big Geek"
+         (unit
+          :name "Big Geek")
+        "Little Geek"
+         (unit
+          :name "Little Geek")
+        "Navy Seal"
+         (unit
+          :name "Navy Seal"))))))
+
+(func chapter_modern_space : base/chapter
+ (chapter
+  :name "Modern Space"
+  :sectionmap
+   (sectionmap
+    "Modern Space Units"
+     (section
+      :name "Modern Space Units"
+      :unitmap
+       (unitmap
+        :Astronaut
+         (unit
+          :name "Astronaut")
+        "International Space Station"
+         (unit
+          :name "International Space Station")
+        "Space Shuttle"
+         (unit
+          :name "Space Shuttle"))))))
+
+(func chapter_modern_cops_and_robbers : base/chapter
+ (chapter
+  :name "Modern Cops and Robbers"
+  :sectionmap
+   (sectionmap
+    "Modern Government"
+     (section
+      :name "Modern Government"
+      :unitmap
+       (unitmap
+        :Administrator
+         (unit
+          :name "Administrator")
+        "ATF Agent"
+         (unit
+          :name "ATF Agent")
+        :Congressman
+         (unit
+          :name "Congressman")
+        "DEA Agent"
+         (unit
+          :name "DEA Agent")
+        :Diplomat
+         (unit
+          :name "Diplomat"
+          :unitskillmap
+           (unitskillmap
+            :Communications
+             (unitskill
+              :name "Communications"
+              :unitabilitymap
+               (unitabilitymap
+                :Negotiation
+                 (unitability
+                  :name "Negotiation")
+                :Politics
+                 (unitability
+                  :name "Politics")))))
+        "FBI Agent"
+         (unit
+          :name "FBI Agent")
+        :Monarch
+         (unit
+          :name "Monarch")
+        :Noble
+         (unit
+          :name "Noble"
+          :unitskillmap
+           (unitskillmap
+            :Influence
+             (unitskill
+              :name "Influence")))
+        :Senator
+         (unit
+          :name "Senator")))
+    "Modern Police"
+     (section
+      :name "Modern Police"
+      :unitmap
+       (unitmap
+        "Police Officer"
+         (unit
+          :name "Police Officer"
+          :titles "Beat Cop, Pig (derogatory), Thin Blue Line")
+        :Detective
+         (unit
+          :name "Detective")
+        "Forensics Investigator"
+         (unit
+          :name "Forensics Investigator")
+        "Internal Affair Agent"
+         (unit
+          :name "Internal Affair Agent")
+        :S.W.A.T.
+         (unit
+          :name "S.W.A.T.")))
+    "Modern Criminals"
+     (section
+      :name "Modern Criminals"
+      :unitmap
+       (unitmap
+        "Armed Robber"
+         (unit
+          :name "Armed Robber")
+        :Informant
+         (unit
+          :name "Informant")
+        "Purse Snatcher"
+         (unit
+          :name "Purse Snatcher")
+        "Serial Killer"
+         (unit
+          :name "Serial Killer")))
+    "Modern Crime Gangs"
+     (section
+      :name "Modern Crime Gangs"
+      :unitmap
+       (unitmap
+        :Mafia
+         (unit
+          :name "Mafia")
+        "Tong Gangs"
+         (unit
+          :name "Tong Gangs"
+          :summary "Tongs are local street gangs.")
+        :Triads
+         (unit
+          :name "Triads"
+          :summary "The Triads are like the [Yakuza] offering protection to the locals.  This protection normally comes in the form of crushing the competition on the triad's businesses.  Unlike the [Yakuza], the triads deal in slavery and are more open in their illegal dealings.  Enforcement is very brutal.")
+        :Yakuza
+         (unit
+          :name "Yakuza"
+          :summary "Besides weapons and drugs, the Yakuza are the neighborhood protection in many areas and do so far more efficiently than the police. Contrary to the attitudes protrayed in Hollywood, the Yakuza make justice swift and fair for the people they deal with. It has done this way for longer than the United States has been around. The Yakuza is not about random violence and mayhem. It is about order and discipline. Of course, many of the younger members have cast aside traditions and have become violent thugs. Like the Triads, the Yakuza was originally a response to the feudal lords when those who were not samurai had no rights or safety."))))))
+
+(func chapter_modern_mercenaries : base/chapter
+ (chapter
+  :name "Modern Mercenaries"
+  :reference
+   "* Blackrock
+* Millenium's End"
+  :summary
+   "Mercenaries
 Smuggling
 Soldiers of Fortune
 VIP Bodyguards"
-      :sectionmap
-       (sectionmap
-        "Black Eagle Security"
-         (section
-          :name "Black Eagle Security"
-          :summary
-           "* Black Eagle is a large security firm offering 'specialists for hire'. They maintain a strong reputation for effectiveness, discipline, and discretion. Their fees are high, but they are the gold standard when dealing with critical situations on a moment's notice.
+  :sectionmap
+   (sectionmap
+    "Black Eagle Security"
+     (section
+      :name "Black Eagle Security"
+      :summary
+       "* Black Eagle is a large security firm offering 'specialists for hire'. They maintain a strong reputation for effectiveness, discipline, and discretion. Their fees are high, but they are the gold standard when dealing with critical situations on a moment's notice.
 * Black Eagle is based in Atlanta, Georgia. It maintains branch facilities in Miami, Dubai, the Phillipines, and South Africa.
 * Black Eagle provides contract security teams to guard embassies for major countries. They also can be engaged for
 deniable covert actions including: smash and grab, target removal, and cyber espianoge.
 * Black Eagle is very careful to maintain deniability in all of its activities. It does not have business cards or
 letter-head or logos. Its personnel are all independent contractors who are always paid by the job, in cash. There is 	always a risk that Black Eagle personnel will be captured, killed, or imprisoned. Black Eagle values loyalty above all
 else and will go to great lengths to prove itself when its own people get in trouble.
-* The true secret to Black Eagle's success is its information network. The company maintains a large database of 'persons of interest' along with psychological profiles and potential future value. Whenever possible, Black Eagle will trade favors instead of cash. They proactively offer help to key individuals who are in trouble, so they can count on those people for help in the future. Black Eagle has influence among numerous politicians, lobbyists, lawyers, judges, military personnel, police, prison guards, prisoners, criminal informants, as well as numerous ordinary people who serve as their eyes and ears on the street.")))
-    "The Prisoner"
-     (chapter
-      :name "The Prisoner"
-      :reference
-       "* Where am I? You are at the village. Who do you work for?  That would be telling. What do you want? Information. You won't get it. By hook or by crook, we will. Who are you?  I am number 2. Who is number 1? You are number 6. I am not a number. I am a free man. Ha ha ha ha. - The Prisoner
-* Be seeing you. - The Prisoner")
-    "Special Ops"
-     (chapter
-      :name "Special Ops"
-      :summary
-       "Special Ops
+* The true secret to Black Eagle's success is its information network. The company maintains a large database of 'persons of interest' along with psychological profiles and potential future value. Whenever possible, Black Eagle will trade favors instead of cash. They proactively offer help to key individuals who are in trouble, so they can count on those people for help in the future. Black Eagle has influence among numerous politicians, lobbyists, lawyers, judges, military personnel, police, prison guards, prisoners, criminal informants, as well as numerous ordinary people who serve as their eyes and ears on the street."))))
+
+(func chapter_the_prisoner : base/chapter
+ (chapter
+  :name "The Prisoner"
+  :reference
+   "* Where am I? You are at the village. Who do you work for?  That would be telling. What do you want? Information. You won't get it. By hook or by crook, we will. Who are you?  I am number 2. Who is number 1? You are number 6. I am not a number. I am a free man. Ha ha ha ha. - The Prisoner
+* Be seeing you. - The Prisoner"))
+
+(func chapter_special_ops : base/chapter
+ (chapter
+  :name "Special Ops"
+  :summary
+   "Special Ops
 Black Ops
 Deniable Insurgencies
 Impossible Missions
-Hostage Rescue")
-    "Modern Spies"
-     (chapter
-      :name "Modern Spies"
-      :sectionmap
-       (sectionmap
-        "Spy Units"
-         (section
-          :name "Spy Units"
-          :unitmap
-           (unitmap
-            "CIA Agent"
-             (unit
-              :name "CIA Agent")
-            "NSA Agent"
-             (unit
-              :name "NSA Agent")
-            :Terrorist
-             (unit
-              :name "Terrorist")
-            "Aaron Jorgenson"
-             (unit
-              :name "Aaron Jorgenson"
-              :summary
-               "* Wealthy Norwegian shipping magnate with subsidiaries in petroleum products, trucking, and pharmaceuticals.
+Hostage Rescue"))
+
+(func chapter_modern_spies : base/chapter
+ (chapter
+  :name "Modern Spies"
+  :sectionmap
+   (sectionmap
+    "Spy Units"
+     (section
+      :name "Spy Units"
+      :unitmap
+       (unitmap
+        "CIA Agent"
+         (unit
+          :name "CIA Agent")
+        "NSA Agent"
+         (unit
+          :name "NSA Agent")
+        :Terrorist
+         (unit
+          :name "Terrorist")
+        "Aaron Jorgenson"
+         (unit
+          :name "Aaron Jorgenson"
+          :summary
+           "* Wealthy Norwegian shipping magnate with subsidiaries in petroleum products, trucking, and pharmaceuticals.
 * He is an ultra-conservative and has served several terms in public office.
 * He was married and divorced (his wife died of natural causes soon after the divorce).
 * He has no heirs or family.
 * At 56, he is also dying of an inoperable brain tumor.
 * His greatest possessions are his fabulous collection of artwork in his luxurious mansion.
 * Personality - Mr. Jorgenson is an arrogant and selfish man. He is a self-made man and believes that the strong deserve to take what they can and that the weak deserve their lot. He idolizes men of action, especially his Viking ancestors. With only a short time left to live, he has dedicated his fortune to a spectacular plan that would make him a modern day Viking.")
-            "James Bond"
-             (unit
-              :name "James Bond"
-              :summary
-               "* Mr. Bond, you persist in defying my efforts to provide an amusing death for you. - Hugo Drax, Moonraker
+        "James Bond"
+         (unit
+          :name "James Bond"
+          :summary
+           "* Mr. Bond, you persist in defying my efforts to provide an amusing death for you. - Hugo Drax, Moonraker
 * Do you expect me to talk. No, Mr. Bond. I expect you to die. - Auric Goldfinger and James Bond, Goldfinger"
-              :titles "007")))))
-    "Modern Sports"
-     (chapter
-      :name "Modern Sports"
-      :sectionmap
-       (sectionmap
-        "Modern Scenarios"
-         (section
-          :name "Modern Scenarios"
-          :scenariomap
-           (scenariomap
-            "Boxing Match"
-             (scenario
-              :name "Boxing Match")
-            "Soccer Game"
-             (scenario
-              :name "Soccer Game")))))
-    "Modern Warfare"
-     (chapter
-      :name "Modern Warfare"
-      :sectionmap
-       (sectionmap
-        "Modern African Ground Vehicles"
-         (section
-          :name "Modern African Ground Vehicles"
-          :unitmap
-           (unitmap
-            :Technical
-             (unit
-              :name "Technical"))))))))
+          :titles "007"))))))
+
+(func chapter_modern_sports : base/chapter
+ (chapter
+  :name "Modern Sports"
+  :sectionmap
+   (sectionmap
+    :Soccer
+     (section
+      :name "Soccer"
+      :itemmap
+       (itemmap
+        "Soccer Ball"
+         (item
+          :name "Soccer Ball"
+          :image "Modern/Soccer_Ball.png")
+        "Soccer Player (Blue)"
+         (item
+          :name "Soccer Player (Blue)"
+          :image "Modern/Soccer_PlayerBlue.png")
+        "Soccer Player (Red)"
+         (item
+          :name "Soccer Player (Red)"
+          :image "Modern/Soccer_PlayerRed.png"))
+      :rulemap
+       (rulemap
+        "Soccer Goal"
+         (rule
+          :name "Soccer Goal"
+          :image "Units/Modern/Soccer_Goal.png")))
+    :Football
+     (section
+      :name "Football"
+      :rulemap
+       (rulemap
+        "Football Field"
+         (rule
+          :name "Football Field"
+          :image "Units/Modern/Football_Field.jpg"))
+      :unitmap
+       (unitmap
+        "Linebacker (Blue)"
+         (unit
+          :name "Linebacker (Blue)"
+          :image "Modern/Football_LinebackerBlue.png")
+        "Linebacker (Red)"
+         (unit
+          :name "Linebacker (Red)"
+          :image "Modern/Football_LinebackerRed.png")
+        "Quarterback (Blue)"
+         (unit
+          :name "Quarterback (Blue)"
+          :image "Modern/Football_QuarterbackBlue.png")
+        "Quarterback (Red)"
+         (unit
+          :name "Quarterback (Red)"
+          :image "Modern/Football_QuarterbackRed.png")
+        "Receiver (Blue)"
+         (unit
+          :name "Receiver (Blue)"
+          :image "Modern/Football_ReceiverBlue.png")
+        "Receiver (Red)"
+         (unit
+          :name "Receiver (Red)"
+          :image "Modern/Football_ReceiverRed.png")))
+    "Underground Sports"
+     (section
+      :name "Underground Sports"
+      :unitmap
+       (unitmap
+        "Pit Fighter"
+         (unit
+          :name "Pit Fighter")
+        "Rollerball Player"
+         (unit
+          :name "Rollerball Player")
+        "Street Fighter"
+         (unit
+          :name "Street Fighter")))
+    "Other Sports"
+     (section
+      :name "Other Sports"
+      :unitmap
+       (unitmap
+        "Baseball Player"
+         (unit
+          :name "Baseball Player")
+        :Boxer
+         (unit
+          :name "Boxer")
+        "Hockey Player"
+         (unit
+          :name "Hockey Player")
+        "Ping Pong Player"
+         (unit
+          :name "Ping Pong Player")))
+    "Modern Scenarios"
+     (section
+      :name "Modern Scenarios"
+      :scenariomap
+       (scenariomap
+        "Boxing Match"
+         (scenario
+          :name "Boxing Match")
+        "Soccer Game"
+         (scenario
+          :name "Soccer Game"))))))
+
+(func chapter_modern_warfare : base/chapter
+ (chapter
+  :name "Modern Warfare"
+  :sectionmap
+   (sectionmap
+    "Modern America"
+     (section
+      :name "Modern America"
+      :reference "* I'm going to make it up for all of the Sunday Times. I am going to make it up for all of the nusery rhymes. They never really wanted to tell the truth. I'm so tired of you America. ... Tell me, do you really think you go to hell for having loved? Tell me, enough of thinking everything that you've done is good. I really need to know. After soaking the body of Jesus Christ in blood. I 'm so tired of America. ... You took advantage of a world that loved you well. I'm going to a town that has already been burnt down. I'm so tired of you America - Rufus Wainwright, Going To a Town")
+    "Modern American Aircraft"
+     (section
+      :name "Modern American Aircraft"
+      :unitmap
+       (unitmap
+        "Advanced Tactical Fighter"
+         (unit
+          :name "Advanced Tactical Fighter")
+        "B-1 Bomber"
+         (unit
+          :name "B-1 Bomber")
+        "B-2 Stealth Bomber"
+         (unit
+          :name "B-2 Stealth Bomber")
+        "Predator UAV"
+         (unit
+          :name "Predator UAV")
+        "Stealth Fighter"
+         (unit
+          :name "Stealth Fighter")
+        "SH-60 Seahawk Helicopter"
+         (unit
+          :name "SH-60 Seahawk Helicopter")
+        "Blackhawk Helicopter"
+         (unit
+          :name "Blackhawk Helicopter")
+        "Apache Helicopter"
+         (unit
+          :name "Apache Helicopter")
+        "C-5 Galaxy"
+         (unit
+          :name "C-5 Galaxy")
+        "C-17 Globemaster III"
+         (unit
+          :name "C-17 Globemaster III")
+        "BGM-109 Tomahawk Cruise Missile"
+         (unit
+          :name "BGM-109 Tomahawk Cruise Missile"
+          :summary "* Conventional: 1,000 lb (450 kg) Bullpup, or submunitions dispenser with BLU-97/B Combined Effects Bomb, or a 200 kiloton of TNT (840 terajoule) W80 nuclear device (inactivated per SALT)")))
+    "Modern American Ground Vehicles"
+     (section
+      :name "Modern American Ground Vehicles"
+      :unitmap
+       (unitmap
+        "M1A2 Abrams Tank"
+         (unit
+          :name "M1A2 Abrams Tank"
+          :summary
+           "Turbine Engine: takes any fuel, typically Jet Fuel, starting the engine consumes nearly 11 gallons of fuel and it emits a jet blast behind it. Can survive multiple hits from the most powerful tank munitions including 120mm DU APFSDS and anti-tank missiles. Its own weapons are unable to penetrate front or side armor even at close range in friendly fire incidents.
+
+4 Gunnery
+120mm smoothbore: APFSDS, HEAT, Anti-Personnel
+.50 MG, 2 x 7.62mm MG
+Smoke Grenades, Smoke Screen
+Armor
+610mm Composite DU, 1500mm vs HEAT, 950mm vs APDS Front
+Missile Countermeasures"
+          :speed "72kph"
+          :mass "70tons"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4")))
+        "M2A2 Bradley AFV"
+         (unit
+          :name "M2A2 Bradley AFV"
+          :summary
+           "25mm Chain Gun, 900 rounds, APDS, HEI
+7.62mm MG, 2200 rounds
+TOWII Missiles
+Smoke Grenades, Smoke Screen"
+          :speed "66kph"
+          :mass "33tons"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4")))
+        "Patriot Missile System"
+         (unit
+          :name "Patriot Missile System")))
+    "American Naval Vessels"
+     (section
+      :name "American Naval Vessels"
+      :unitmap
+       (unitmap
+        "Ticonderoga Missile Cruiser"
+         (unit
+          :name "Ticonderoga Missile Cruiser"
+          :summary
+           "* Aegis Combat System
+2 x 61 cell Mk41 vertical launch systems
+122 x RIM-66 SM-2, RIM-162 ESSM, BGM-109 Tomahawk, or RUM-139 VL-Asroc
+8 x RGM-84 Harpoon missiles
+2 x Mark 45 5in / 54cal lightweight gun
+2 x 25mm
+24 x .50cal (12.7mm) gun
+2 x Phalanx CIWS
+2 x Mk32 12.75in (324mm) triple torpedo tubes")))
+    "Modern British Ground Vehicles"
+     (section
+      :name "Modern British Ground Vehicles"
+      :unitmap
+       (unitmap
+        "Challenger 2"
+         (unit
+          :name "Challenger 2"
+          :summary
+           "Comparable to the M1 Abrams, though it uses a diesel engine.
+One near Basra survived being hit by 70 RPGs.
+105mm L7 Gun")))
+    "Modern German Ground Vehicles"
+     (section
+      :name "Modern German Ground Vehicles"
+      :unitmap
+       (unitmap
+        "Leopard 2A6"
+         (unit
+          :name "Leopard 2A6"
+          :summary "Comparable to the M1 Abrams, it carries a heavier gun and uses a diesel engine which increases reliability.")))
+    "Modern Israeli Ground Vehicles"
+     (section
+      :name "Modern Israeli Ground Vehicles"
+      :unitmap
+       (unitmap
+        "Merkava Mark IV"
+         (unit
+          :name "Merkava Mark IV")))
+    "Modern African Ground Vehicles"
+     (section
+      :name "Modern African Ground Vehicles"
+      :unitmap
+       (unitmap
+        :Technical
+         (unit
+          :name "Technical"))))))

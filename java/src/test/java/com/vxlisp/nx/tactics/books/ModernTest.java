@@ -21,11 +21,11 @@ public final class ModernTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/modern", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -40,6 +40,18 @@ public final class ModernTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":chapter_cold_war", 0,
+        ":chapter_modern_cops_and_robbers", 0,
+        ":chapter_modern_ground_vehicles", 0,
+        ":chapter_modern_mercenaries", 0,
+        ":chapter_modern_overview", 0,
+        ":chapter_modern_space", 0,
+        ":chapter_modern_spies", 0,
+        ":chapter_modern_sports", 0,
+        ":chapter_modern_warfare", 0,
+        ":chapter_special_ops", 0,
+        ":chapter_the_abyss", 0,
+        ":chapter_the_prisoner", 0,
         ":tacticsbook", 0
       )
     );

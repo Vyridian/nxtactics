@@ -21,11 +21,11 @@ public final class PowersTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/powers", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 13), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -40,6 +40,18 @@ public final class PowersTest {
   
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":chapter_alteration_powers", 0,
+        ":chapter_body_powers", 0,
+        ":chapter_energy_and_forces", 0,
+        ":chapter_enhancement_powers", 0,
+        ":chapter_equipment_powers", 0,
+        ":chapter_godlike_powers", 0,
+        ":chapter_mental_powers_and_weaknesses", 0,
+        ":chapter_movement_powers", 0,
+        ":chapter_physical_powers_and_weaknesses", 0,
+        ":chapter_powers_overview", 0,
+        ":chapter_special_modifiers", 0,
+        ":chapter_strength_and_weaknesses", 0,
         ":tacticsbook", 0
       )
     );

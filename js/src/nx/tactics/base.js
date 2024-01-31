@@ -22,6 +22,11 @@ export default class nx_tactics_base {
   static t_book = {}
 
   /**
+   * type: booklist
+   */
+  static t_booklist = {}
+
+  /**
    * type: bookmap
    */
   static t_bookmap = {}
@@ -116,6 +121,11 @@ export default class nx_tactics_base {
    * type: modifier
    */
   static t_modifier = {}
+
+  /**
+   * type: modifiermap
+   */
+  static t_modifiermap = {}
 
   /**
    * type: playingcard
@@ -217,6 +227,31 @@ export default class nx_tactics_base {
    * type: suitmap
    */
   static t_suitmap = {}
+
+  /**
+   * type: tactics
+   */
+  static t_tactics = {}
+
+  /**
+   * type: team
+   */
+  static t_team = {}
+
+  /**
+   * type: teammap
+   */
+  static t_teammap = {}
+
+  /**
+   * type: terrain
+   */
+  static t_terrain = {}
+
+  /**
+   * type: terrainmap
+   */
+  static t_terrainmap = {}
 
   /**
    * type: threat
@@ -509,6 +544,42 @@ export default class nx_tactics_base {
   static c_suit_spade = {vx_type: nx_tactics_base.t_suit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'suit-spade'}}
 
   /**
+   * @function bookmap_from_booklist
+   * Returns a bookmap of all books.
+   * @param  {booklist} booklist
+   * @return {bookmap}
+   */
+  static t_bookmap_from_booklist = {}
+  static e_bookmap_from_booklist = {vx_type: nx_tactics_base.t_bookmap_from_booklist}
+
+  // (func bookmap<-booklist)
+  static f_bookmap_from_booklist(booklist) {
+    let output = nx_tactics_base.e_bookmap
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_book, "any-2": nx_tactics_base.t_book, "list-2": nx_tactics_base.t_booklist, "map-1": nx_tactics_base.t_bookmap, "struct-2": nx_tactics_base.t_book},
+      booklist,
+      vx_core.f_new(vx_core.t_any_from_any, (book) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":name"))
+    )
+    return output
+  }
+
+  /**
+   * @function name_from_chapter
+   * @param  {chapter} chapter
+   * @return {string}
+   */
+  static t_name_from_chapter = {}
+  static e_name_from_chapter = {vx_type: nx_tactics_base.t_name_from_chapter}
+
+  // (func name<-chapter)
+  static f_name_from_chapter(chapter) {
+    let output = vx_core.e_string
+    output = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_chapter}, chapter, ":name")
+    return output
+  }
+
+  /**
    * @function rating_from_mass
    * Return a rating from a mass.
    * @param  {string} mass
@@ -523,10 +594,38 @@ export default class nx_tactics_base {
     return output
   }
 
+  /**
+   * @function tactics_from_booklist
+   * Return a ready tactics from a bookmap.
+   * @param  {booklist} booklist
+   * @return {tactics}
+   */
+  static t_tactics_from_booklist = {}
+  static e_tactics_from_booklist = {vx_type: nx_tactics_base.t_tactics_from_booklist}
+
+  // (func tactics<-booklist)
+  static f_tactics_from_booklist(booklist) {
+    let output = nx_tactics_base.e_tactics
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_tactics},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const bookmap = nx_tactics_base.f_bookmap_from_booklist(booklist)
+        return vx_core.f_new(
+          nx_tactics_base.t_tactics,
+          ":bookmap",
+          bookmap
+        )
+      })
+    )
+    return output
+  }
+
   // empty types
   static e_ability = {}
   static e_abilitymap = {}
   static e_book = {}
+  static e_booklist = []
   static e_bookmap = {}
   static e_card = {}
   static e_cardlist = []
@@ -546,6 +645,7 @@ export default class nx_tactics_base {
   static e_locationmap = {}
   static e_mind = {}
   static e_modifier = {}
+  static e_modifiermap = {}
   static e_playingcard = {}
   static e_power = {}
   static e_powermap = {}
@@ -566,6 +666,11 @@ export default class nx_tactics_base {
   static e_stat = {}
   static e_suit = {}
   static e_suitmap = {}
+  static e_tactics = {}
+  static e_team = {}
+  static e_teammap = {}
+  static e_terrain = {}
+  static e_terrainmap = {}
   static e_threat = {}
   static e_unit = {}
   static e_unitability = {}
@@ -626,6 +731,7 @@ export default class nx_tactics_base {
       "ability": nx_tactics_base.e_ability,
       "abilitymap": nx_tactics_base.e_abilitymap,
       "book": nx_tactics_base.e_book,
+      "booklist": nx_tactics_base.e_booklist,
       "bookmap": nx_tactics_base.e_bookmap,
       "card": nx_tactics_base.e_card,
       "cardlist": nx_tactics_base.e_cardlist,
@@ -645,6 +751,7 @@ export default class nx_tactics_base {
       "locationmap": nx_tactics_base.e_locationmap,
       "mind": nx_tactics_base.e_mind,
       "modifier": nx_tactics_base.e_modifier,
+      "modifiermap": nx_tactics_base.e_modifiermap,
       "playingcard": nx_tactics_base.e_playingcard,
       "power": nx_tactics_base.e_power,
       "powermap": nx_tactics_base.e_powermap,
@@ -665,6 +772,11 @@ export default class nx_tactics_base {
       "stat": nx_tactics_base.e_stat,
       "suit": nx_tactics_base.e_suit,
       "suitmap": nx_tactics_base.e_suitmap,
+      "tactics": nx_tactics_base.e_tactics,
+      "team": nx_tactics_base.e_team,
+      "teammap": nx_tactics_base.e_teammap,
+      "terrain": nx_tactics_base.e_terrain,
+      "terrainmap": nx_tactics_base.e_terrainmap,
       "threat": nx_tactics_base.e_threat,
       "unit": nx_tactics_base.e_unit,
       "unitability": nx_tactics_base.e_unitability,
@@ -682,15 +794,22 @@ export default class nx_tactics_base {
       "unitweaknessmap": nx_tactics_base.e_unitweaknessmap,
       "weakness": nx_tactics_base.e_weakness,
       "weaknessmap": nx_tactics_base.e_weaknessmap,
-      "rating<-mass": nx_tactics_base.e_rating_from_mass
+      "bookmap<-booklist": nx_tactics_base.e_bookmap_from_booklist,
+      "name<-chapter": nx_tactics_base.e_name_from_chapter,
+      "rating<-mass": nx_tactics_base.e_rating_from_mass,
+      "tactics<-booklist": nx_tactics_base.e_tactics_from_booklist
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "rating<-mass": nx_tactics_base.t_rating_from_mass
+      "bookmap<-booklist": nx_tactics_base.t_bookmap_from_booklist,
+      "name<-chapter": nx_tactics_base.t_name_from_chapter,
+      "rating<-mass": nx_tactics_base.t_rating_from_mass,
+      "tactics<-booklist": nx_tactics_base.t_tactics_from_booklist
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       "ability": nx_tactics_base.t_ability,
       "abilitymap": nx_tactics_base.t_abilitymap,
       "book": nx_tactics_base.t_book,
+      "booklist": nx_tactics_base.t_booklist,
       "bookmap": nx_tactics_base.t_bookmap,
       "card": nx_tactics_base.t_card,
       "cardlist": nx_tactics_base.t_cardlist,
@@ -710,6 +829,7 @@ export default class nx_tactics_base {
       "locationmap": nx_tactics_base.t_locationmap,
       "mind": nx_tactics_base.t_mind,
       "modifier": nx_tactics_base.t_modifier,
+      "modifiermap": nx_tactics_base.t_modifiermap,
       "playingcard": nx_tactics_base.t_playingcard,
       "power": nx_tactics_base.t_power,
       "powermap": nx_tactics_base.t_powermap,
@@ -730,6 +850,11 @@ export default class nx_tactics_base {
       "stat": nx_tactics_base.t_stat,
       "suit": nx_tactics_base.t_suit,
       "suitmap": nx_tactics_base.t_suitmap,
+      "tactics": nx_tactics_base.t_tactics,
+      "team": nx_tactics_base.t_team,
+      "teammap": nx_tactics_base.t_teammap,
+      "terrain": nx_tactics_base.t_terrain,
+      "terrainmap": nx_tactics_base.t_terrainmap,
       "threat": nx_tactics_base.t_threat,
       "unit": nx_tactics_base.t_unit,
       "unitability": nx_tactics_base.t_unitability,
@@ -888,6 +1013,24 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_book['vx_type'] = nx_tactics_base.t_book
     nx_tactics_base.e_book['vx_value'] = {}
+
+    // (type booklist)
+    nx_tactics_base.t_booklist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_booklist['vx_value'] = {
+      name          : "booklist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_book],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_booklist['vx_type'] = nx_tactics_base.t_booklist
 
     // (type bookmap)
     nx_tactics_base.t_bookmap['vx_type'] = vx_core.t_type
@@ -1447,8 +1590,58 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_rating,
           "multi": false
         },
+        "classification": {
+          "name" : "classification",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "crew": {
+          "name" : "crew",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "energy": {
+          "name" : "energy",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "explosive": {
+          "name" : "explosive",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "height": {
+          "name" : "height",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "length": {
+          "name" : "length",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "mass": {
           "name" : "mass",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "modifiers": {
+          "name" : "modifiers",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "muzzlevelocity": {
+          "name" : "muzzlevelocity",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "range": {
+          "name" : "range",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rof": {
+          "name" : "rof",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -1457,25 +1650,45 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_rolemap,
           "multi": false
         },
-        "unitpowermap": {
-          "name" : "unitpowermap",
-          "type" : nx_tactics_base.t_unitpowermap,
+        "rounds": {
+          "name" : "rounds",
+          "type" : vx_core.t_string,
           "multi": false
         },
-        "unitskillmap": {
-          "name" : "unitskillmap",
-          "type" : nx_tactics_base.t_unitskillmap,
+        "speedair": {
+          "name" : "speedair",
+          "type" : vx_core.t_string,
           "multi": false
         },
-        "unitweaknessmap": {
-          "name" : "unitweaknessmap",
-          "type" : nx_tactics_base.t_unitweaknessmap,
+        "speedland": {
+          "name" : "speedland",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "speedspace": {
+          "name" : "speedspace",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "speedwater": {
+          "name" : "speedwater",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "value": {
+          "name" : "value",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "width": {
+          "name" : "width",
+          "type" : vx_core.t_string,
           "multi": false
         }
       },
       proplast      : {
-        "name" : "unitweaknessmap",
-        "type" : nx_tactics_base.t_unitweaknessmap,
+        "name" : "width",
+        "type" : vx_core.t_string,
         "multi": false
       }
     }
@@ -1692,6 +1905,25 @@ export default class nx_tactics_base {
     nx_tactics_base.e_modifier['vx_type'] = nx_tactics_base.t_modifier
     nx_tactics_base.e_modifier['vx_value'] = {}
 
+    // (type modifiermap)
+    nx_tactics_base.t_modifiermap['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_modifiermap['vx_value'] = {
+      name          : "modifiermap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":map",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_modifier],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_modifiermap['vx_type'] = nx_tactics_base.t_modifiermap
+    nx_tactics_base.e_modifiermap['vx_value'] = {}
+
     // (type playingcard)
     nx_tactics_base.t_playingcard['vx_type'] = vx_core.t_type
     nx_tactics_base.t_playingcard['vx_value'] = {
@@ -1767,6 +1999,11 @@ export default class nx_tactics_base {
         },
         "orientation": {
           "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "stat": {
+          "name" : "stat",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -2013,10 +2250,15 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "classification": {
+          "name" : "classification",
+          "type" : vx_core.t_string,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
+        "name" : "classification",
         "type" : vx_core.t_string,
         "multi": false
       }
@@ -2086,11 +2328,16 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "teammap": {
+          "name" : "teammap",
+          "type" : nx_tactics_base.t_teammap,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "teammap",
+        "type" : nx_tactics_base.t_teammap,
         "multi": false
       }
     }
@@ -2160,6 +2407,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "damagemap": {
+          "name" : "damagemap",
+          "type" : nx_tactics_base.t_damagemap,
+          "multi": false
+        },
         "deckmap": {
           "name" : "deckmap",
           "type" : nx_tactics_base.t_deckmap,
@@ -2173,6 +2425,11 @@ export default class nx_tactics_base {
         "locationmap": {
           "name" : "locationmap",
           "type" : nx_tactics_base.t_locationmap,
+          "multi": false
+        },
+        "modifiermap": {
+          "name" : "modifiermap",
+          "type" : nx_tactics_base.t_modifiermap,
           "multi": false
         },
         "powermap": {
@@ -2203,6 +2460,11 @@ export default class nx_tactics_base {
         "suitmap": {
           "name" : "suitmap",
           "type" : nx_tactics_base.t_suitmap,
+          "multi": false
+        },
+        "terrainmap": {
+          "name" : "terrainmap",
+          "type" : nx_tactics_base.t_terrainmap,
           "multi": false
         },
         "unitmap": {
@@ -2288,14 +2550,9 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
-        "rating": {
-          "name" : "rating",
-          "type" : nx_tactics_base.t_rating,
-          "multi": false
-        },
         "stat": {
           "name" : "stat",
-          "type" : nx_tactics_base.t_stat,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "abilitymap": {
@@ -2565,6 +2822,177 @@ export default class nx_tactics_base {
       disallowtypes : [],
       allowvalues   : [],
       disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_suitmap['vx_type'] = nx_tactics_base.t_suitmap
+    nx_tactics_base.e_suitmap['vx_value'] = {}
+
+    // (type tactics)
+    nx_tactics_base.t_tactics['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_tactics['vx_value'] = {
+      name          : "tactics",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {
+        "bookmap": {
+          "name" : "bookmap",
+          "type" : nx_tactics_base.t_bookmap,
+          "multi": false
+        },
+        "abilitymap": {
+          "name" : "abilitymap",
+          "type" : nx_tactics_base.t_abilitymap,
+          "multi": false
+        },
+        "cardmap": {
+          "name" : "cardmap",
+          "type" : nx_tactics_base.t_cardmap,
+          "multi": false
+        },
+        "itemmap": {
+          "name" : "itemmap",
+          "type" : nx_tactics_base.t_itemmap,
+          "multi": false
+        },
+        "powermap": {
+          "name" : "powermap",
+          "type" : nx_tactics_base.t_powermap,
+          "multi": false
+        },
+        "skillmap": {
+          "name" : "skillmap",
+          "type" : nx_tactics_base.t_skillmap,
+          "multi": false
+        },
+        "unitmap": {
+          "name" : "unitmap",
+          "type" : nx_tactics_base.t_unitmap,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "unitmap",
+        "type" : nx_tactics_base.t_unitmap,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_tactics['vx_type'] = nx_tactics_base.t_tactics
+    nx_tactics_base.e_tactics['vx_value'] = {}
+
+    // (type team)
+    nx_tactics_base.t_team['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_team['vx_value'] = {
+      name          : "team",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "completevictory": {
+          "name" : "completevictory",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "deploy": {
+          "name" : "deploy",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "forces": {
+          "name" : "forces",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "partialvictory": {
+          "name" : "partialvictory",
+          "type" : vx_core.t_string,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "partialvictory",
+        "type" : vx_core.t_string,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_team['vx_type'] = nx_tactics_base.t_team
+    nx_tactics_base.e_team['vx_value'] = {}
+
+    // (type teammap)
+    nx_tactics_base.t_teammap['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_teammap['vx_value'] = {
+      name          : "teammap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":map",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_team],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_teammap['vx_type'] = nx_tactics_base.t_teammap
+    nx_tactics_base.e_teammap['vx_value'] = {}
+
+    // (type terrain)
+    nx_tactics_base.t_terrain['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_terrain['vx_value'] = {
+      name          : "terrain",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
       traits        : [nx_tactics_base.t_card],
       properties    : {
         "name": {
@@ -2604,8 +3032,27 @@ export default class nx_tactics_base {
         "multi": false
       }
     }
-    nx_tactics_base.e_suitmap['vx_type'] = nx_tactics_base.t_suitmap
-    nx_tactics_base.e_suitmap['vx_value'] = {}
+    nx_tactics_base.e_terrain['vx_type'] = nx_tactics_base.t_terrain
+    nx_tactics_base.e_terrain['vx_value'] = {}
+
+    // (type terrainmap)
+    nx_tactics_base.t_terrainmap['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_terrainmap['vx_value'] = {
+      name          : "terrainmap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":map",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_terrain],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_terrainmap['vx_type'] = nx_tactics_base.t_terrainmap
+    nx_tactics_base.e_terrainmap['vx_value'] = {}
 
     // (type threat)
     nx_tactics_base.t_threat['vx_type'] = vx_core.t_type
@@ -2727,42 +3174,52 @@ export default class nx_tactics_base {
         },
         "body": {
           "name" : "body",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "mind": {
           "name" : "mind",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "will": {
           "name" : "will",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "speed": {
           "name" : "speed",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "shadow": {
           "name" : "shadow",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "beast": {
           "name" : "beast",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "demeanor": {
           "name" : "demeanor",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "nature": {
           "name" : "nature",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "classification": {
+          "name" : "classification",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "crew": {
+          "name" : "crew",
+          "type" : vx_core.t_string,
           "multi": false
         },
         "mass": {
@@ -2777,6 +3234,36 @@ export default class nx_tactics_base {
         },
         "length": {
           "name" : "length",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "range": {
+          "name" : "range",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "speedair": {
+          "name" : "speedair",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "speedland": {
+          "name" : "speedland",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "speedspace": {
+          "name" : "speedspace",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "speedwater": {
+          "name" : "speedwater",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "value": {
+          "name" : "value",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -2833,8 +3320,23 @@ export default class nx_tactics_base {
       allowvalues   : [],
       disallowvalues: [],
       traits        : [],
-      properties    : {},
-      proplast      : {}
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "image",
+        "type" : vx_core.t_string,
+        "multi": false
+      }
     }
     nx_tactics_base.e_unitability['vx_type'] = nx_tactics_base.t_unitability
     nx_tactics_base.e_unitability['vx_value'] = {}
@@ -2870,9 +3372,64 @@ export default class nx_tactics_base {
       disallowtypes : [],
       allowvalues   : [],
       disallowvalues: [],
-      traits        : [],
-      properties    : {},
-      proplast      : {}
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "facing": {
+          "name" : "facing",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "number": {
+          "name" : "number",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rounds": {
+          "name" : "rounds",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "value": {
+          "name" : "value",
+          "type" : vx_core.t_string,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "value",
+        "type" : vx_core.t_string,
+        "multi": false
+      }
     }
     nx_tactics_base.e_unititem['vx_type'] = nx_tactics_base.t_unititem
     nx_tactics_base.e_unititem['vx_value'] = {}
@@ -2927,16 +3484,41 @@ export default class nx_tactics_base {
       disallowtypes : [],
       allowvalues   : [],
       disallowvalues: [],
-      traits        : [],
+      traits        : [nx_tactics_base.t_card],
       properties    : {
         "name": {
           "name" : "name",
           "type" : vx_core.t_string,
           "multi": false
         },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "level": {
           "name" : "level",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "power": {
@@ -2944,24 +3526,54 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_power,
           "multi": false
         },
-        "abilitymap": {
-          "name" : "abilitymap",
+        "front": {
+          "name" : "front",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "back": {
+          "name" : "back",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "over": {
+          "name" : "over",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "under": {
+          "name" : "under",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "side": {
+          "name" : "side",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "strength": {
+          "name" : "strength",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "unitabilitymap": {
+          "name" : "unitabilitymap",
           "type" : nx_tactics_base.t_unitabilitymap,
           "multi": false
         },
-        "itemmap": {
-          "name" : "itemmap",
+        "unititemmap": {
+          "name" : "unititemmap",
           "type" : nx_tactics_base.t_unititemmap,
           "multi": false
         },
-        "specialtymap": {
-          "name" : "specialtymap",
+        "unitspecialtymap": {
+          "name" : "unitspecialtymap",
           "type" : nx_tactics_base.t_unitspecialtymap,
           "multi": false
         }
       },
       proplast      : {
-        "name" : "specialtymap",
+        "name" : "unitspecialtymap",
         "type" : nx_tactics_base.t_unitspecialtymap,
         "multi": false
       }
@@ -3000,16 +3612,41 @@ export default class nx_tactics_base {
       disallowtypes : [],
       allowvalues   : [],
       disallowvalues: [],
-      traits        : [],
+      traits        : [nx_tactics_base.t_card],
       properties    : {
         "name": {
           "name" : "name",
           "type" : vx_core.t_string,
           "multi": false
         },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "level": {
           "name" : "level",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "skill": {
@@ -3074,8 +3711,23 @@ export default class nx_tactics_base {
       allowvalues   : [],
       disallowvalues: [],
       traits        : [],
-      properties    : {},
-      proplast      : {}
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "image",
+        "type" : vx_core.t_string,
+        "multi": false
+      }
     }
     nx_tactics_base.e_unitspecialty['vx_type'] = nx_tactics_base.t_unitspecialty
     nx_tactics_base.e_unitspecialty['vx_value'] = {}
@@ -3365,6 +4017,44 @@ export default class nx_tactics_base {
       
     })
 
+    // (func bookmap<-booklist)
+    nx_tactics_base.t_bookmap_from_booklist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_bookmap_from_booklist['vx_value'] = {
+      name          : "bookmap<-booklist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_bookmap_from_booklist
+    }
+
+    // (func name<-chapter)
+    nx_tactics_base.t_name_from_chapter['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_name_from_chapter['vx_value'] = {
+      name          : "name<-chapter",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_name_from_chapter
+    }
+
     // (func rating<-mass)
     nx_tactics_base.t_rating_from_mass['vx_type'] = vx_core.t_type
     nx_tactics_base.t_rating_from_mass['vx_value'] = {
@@ -3382,6 +4072,25 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_rating_from_mass
+    }
+
+    // (func tactics<-booklist)
+    nx_tactics_base.t_tactics_from_booklist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_tactics_from_booklist['vx_value'] = {
+      name          : "tactics<-booklist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_tactics_from_booklist
     }
 
   }

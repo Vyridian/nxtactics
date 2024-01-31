@@ -541,13 +541,13 @@
  [chapter    : base/chapter
   xmlsection : xml/xml]
  (let : base/chapter
-  [section    : base/section    := (section<-xml
-                                    xmlsection)
-   name       : string          := (:name section)
-   sectionmap : base/sectionmap := (:sectionmap section)
-   chgmap     : base/sectionmap := (copy sectionmap
-                                    name
-                                    section)]
+  [section : base/section    := (section<-xml
+                                 xmlsection)
+   name    : string          := (:name section)
+   origmap : base/sectionmap := (:sectionmap chapter)
+   chgmap  : base/sectionmap := (copy origmap
+                                 name
+                                 section)]
   (copy chapter
    :sectionmap chgmap))
  :doc "Return a chapter with new section added to sectionmap")
@@ -573,7 +573,10 @@
           (base/sectionmap
            :section1
             (base/section
-             :name "section1")))
+             :name "section1")
+           :section2
+            (base/section
+             :name "section2")))
         (chapter<-xml
          (xml/xml
           :tag "chapter"
@@ -599,7 +602,12 @@
              :tag "section"
              :propmap
               (stringmap
-               :name "section1"))))))
+               :name "section1"))
+            (xml/xml
+             :tag "section"
+             :propmap
+              (stringmap
+               :name "section2"))))))
  :doc "Returns a chapter from a given Xml.")
 
 (func damage<-damage-key-value : base/damage
@@ -706,8 +714,9 @@
 (func file-write<-book : fil/file
  [book : base/book]
  (let : fil/file
-  [bookname : string := (string-writename<-book
-                         book)]
+  [name     : string := (:name book)
+   bookname : string := (string-writename<-string
+                         name)]
   (fil/file
    :path "resources/books"
    :name (string
@@ -1517,8 +1526,8 @@
   [rule    : base/rule    := (rule<-xml
                               xmlrule)
    name    : string       := (:name rule)
-   rulemap : base/rulemap := (:rulemap section)
-   chgmap  : base/rulemap := (copy rulemap
+   origmap : base/rulemap := (:rulemap section)
+   chgmap  : base/rulemap := (copy origmap
                               name
                               rule)]
   (copy section
@@ -1529,13 +1538,13 @@
  [section     : base/section
   xmlscenario : xml/xml]
  (let : base/section
-  [scenario    : base/scenario    := (scenario<-xml
-                                      xmlscenario)
-   name        : string           := (:name scenario)
-   scenariomap : base/scenariomap := (:scenariomap section)
-   chgmap      : base/scenariomap := (copy scenariomap
-                                      name
-                                      scenario)]
+  [scenario : base/scenario    := (scenario<-xml
+                                   xmlscenario)
+   name     : string           := (:name scenario)
+   origmap  : base/scenariomap := (:scenariomap section)
+   chgmap   : base/scenariomap := (copy origmap
+                                   name
+                                   scenario)]
   (copy section
    :scenariomap chgmap))
  :doc "Return a section with new scenario added to scenariomap")
@@ -1544,13 +1553,13 @@
  [section    : base/section
   xmlsection : xml/xml]
  (let : base/section
-  [subsect    : base/section    := (section<-xml
-                                    xmlsection)
-   name       : string          := (:name subsect)
-   sectionmap : base/sectionmap := (:sectionmap section)
-   chgmap     : base/sectionmap := (copy sectionmap
-                                    name
-                                    subsect)]
+  [subsect : base/section    := (section<-xml
+                                 xmlsection)
+   name    : string          := (:name subsect)
+   origmap : base/sectionmap := (:sectionmap section)
+   chgmap  : base/sectionmap := (copy origmap
+                                 name
+                                 subsect)]
   (copy section
    :sectionmap chgmap))
  :doc "Return a section with new section added to sectionmap")
@@ -1592,8 +1601,8 @@
   [unit    : base/unit    := (unit<-xml
                               xmlunit)
    name    : string       := (:name unit)
-   unitmap : base/unitmap := (:unitmap section)
-   chgmap  : base/unitmap := (copy unitmap
+   origmap : base/unitmap := (:unitmap section)
+   chgmap  : base/unitmap := (copy origmap
                               name
                               unit)]
   (copy section
@@ -1975,28 +1984,148 @@
  :context
  :doc "Returns text from a file with bookname.")
 
-(func string-vxlisp<-book : string
- [book : base/book]
+(func string-vxlisp<-chapter : string
+ [chapter : base/chapter]
  (let : string
-  [name : string := (bl/string-writename<-book
-                     book)
+  [name : string := (:name chapter)
+   chnm : string := (string-writename<-string
+                     name)
    text : string := (string<-any-indent
-                     book
+                     chapter
                      1
                      false)]
    (string
-    "(package nx/tactics/books/"
-    name
-    "\n :libs (lib base :path nx/tactics/base))\n\n(func tacticsbook : base/book\n "
+    "(func chapter_"
+    chnm
+    " : base/chapter\n"
     text
     ")\n"))
- :doc "Returns a vxlisp string from a book.")
+ :doc "Returns a vxlisp string from a chapter.")
 
-(func string-writename<-book : string
+(func string-vxlisp<-chaptermap : string
+ [chaptermap : base/chaptermap]
+ (let : string
+  [chapters  : base/chapterlist := (list<-map : chapterlist
+                                    chaptermap
+                                    (fn : chapter
+                                     [key : string
+                                      val : base/chapter]
+                                     val))
+   schapters : stringlist := (list<-list : stringlist
+                              chapters
+                              (fn : string
+                               [chapt : base/chapter]
+                               (let : string
+                                [name  : string := (base/name<-chapter
+                                                    chapt) // FIXME
+                                 schnm : string := (string-writename<-string
+                                                    name)
+                                 text  : string := (string<-any-indent
+                                                    chapt
+                                                    1
+                                                    true)]
+                                 (string
+                                  "\n(func chapter_"
+                                  schnm
+                                  " : base/chapter\n "
+                                  text
+                                  ")"))))]
+   (string<-stringlist-join
+    schapters
+    newline))
+ :doc "Returns a vxlisp string from a chaptermap.")
+
+(func string-vxlisp-header<-chaptermap : string
+ [chaptermap : base/chaptermap]
+ (let : string
+  [chapters  : stringlist := (list<-map : stringlist
+                              chaptermap
+                              (fn : string
+                               [key : string
+                                val : base/chapter]
+                               (string
+                                newline
+                                "    "
+                                quote
+                                key
+                                quote
+                                " (chapter_"
+                                (string-writename<-string
+                                 key)
+                                ")")))]
+   (string<-stringlist-join
+    chapters
+    ""))
+ :doc "Returns a vxlisp string from a chaptermap.")
+
+(func string-vxlisp<-book : string
  [book : base/book]
  (let : string
-  [name  : string := (:name book)
-   lower : string := (typ/string-lowercase
+  [name        : string := (:name book)
+   chaptermap  : base/chaptermap := (:chaptermap book)
+   image       : string := (:image book)
+   reference   : string := (:reference book)
+   summary     : string := (:summary book)
+   titles      : string := (:titles book)
+   schaptermap : string := (string-vxlisp-header<-chaptermap
+                            chaptermap)
+   schapters   : string := (string-vxlisp<-chaptermap
+                            chaptermap)
+   simage      : string := (switch : string
+                            image
+                            (case "" "")
+                            (else
+                             (string
+                              "\n  :image "
+                              (string<-any image))))
+   sreference  : string := (switch : string
+                            reference
+                            (case "" "")
+                            (else
+                             (string
+                              "\n  :reference "
+                              (string<-any reference))))
+   ssummary    : string := (switch : string
+                            summary
+                            (case "" "")
+                            (else
+                             (string
+                              "\n  :summary "
+                              (string<-any summary))))
+   stitles     : string := (switch : string
+                            titles
+                            (case "" "")
+                            (else
+                             (string
+                              "\n  :titles "
+                              (string<-any titles))))
+   bookname    : string := (string-writename<-string
+                            name)]
+   (string
+    "(package nx/tactics/books/"
+    bookname
+    "\n :libs (lib base :path nx/tactics/base))"
+    "\n"
+    "\n(func tacticsbook : base/book"
+    "\n (base/book"
+    "\n  :name "
+    (string<-any name)
+    simage
+    stitles
+    sreference
+    ssummary
+    "\n  :chaptermap"
+    "\n   (base/chaptermap"
+    schaptermap
+    "\n   ))"
+    ")\n"
+    schapters))
+ :doc "Returns a vxlisp string from a book.")
+
+(func string-writename<-string : string
+ [name : string]
+ (let : string
+  [lower : string := (typ/string-lowercase
                       name)
    space : string := (string<-string-find-replace
                       lower
@@ -2005,8 +2134,16 @@
    comma : string := (string<-string-find-replace
                       space
                       ","
-                      "")]
-  comma)
+                      "")
+   apos  : string := (string<-string-find-replace
+                      comma
+                      "'"
+                      "")
+   slash : string := (string<-string-find-replace
+                      apos
+                      "/"
+                      "_")]
+  slash)
  :doc "Returns the write filename from a book")
 
 (func team<-team-key-value : base/team
@@ -2285,13 +2422,13 @@
  [unit     : base/unit
   xmlpower : xml/xml]
  (let : base/unit
-  [unitpower    : base/unitpower    := (unitpower<-xml
-                                        xmlpower)
-   name         : string            := (:name unitpower)
-   unitpowermap : base/unitpowermap := (:unitpowermap unit)
-   chgmap       : base/unitpowermap := (copy unitpowermap
-                                        name
-                                        unitpower)]
+  [unitpower : base/unitpower    := (unitpower<-xml
+                                     xmlpower)
+   name      : string            := (:name unitpower)
+   origmap   : base/unitpowermap := (:unitpowermap unit)
+   chgmap    : base/unitpowermap := (copy origmap
+                                     name
+                                     unitpower)]
   (copy unit
    :unitpowermap chgmap))
  :doc "Return a unit with new unit added to unitpowermap")
@@ -2300,13 +2437,13 @@
  [unit     : base/unit
   xmlskill : xml/xml]
  (let : base/unit
-  [unitskill    : base/unitskill    := (unitskill<-xml
-                                        xmlskill)
-   name         : string            := (:name unitskill)
-   unitskillmap : base/unitskillmap := (:unitskillmap unit)
-   chgmap       : base/unitskillmap := (copy unitskillmap
-                                        name
-                                        unitskill)]
+  [unitskill : base/unitskill    := (unitskill<-xml
+                                     xmlskill)
+   name      : string            := (:name unitskill)
+   origmap   : base/unitskillmap := (:unitskillmap unit)
+   chgmap    : base/unitskillmap := (copy unitskillmap
+                                     name
+                                     unitskill)]
   (copy unit
    :unitskillmap chgmap))
  :doc "Return a unit with new unitskill added to unitskillmap")
@@ -2315,13 +2452,13 @@
  [unit        : base/unit
   xmlweakness : xml/xml]
  (let : base/unit
-  [unitweakness    : base/unitweakness    := (unitweakness<-xml
-                                              xmlweakness)
-   name            : string               := (:name unitweakness)
-   unitweaknessmap : base/unitweaknessmap := (:unitweaknessmap unit)
-   chgmap          : base/unitweaknessmap := (copy unitweaknessmap
-                                              name
-                                              unitweakness)]
+  [unitweakness : base/unitweakness    := (unitweakness<-xml
+                                           xmlweakness)
+   name         : string               := (:name unitweakness)
+   origmap      : base/unitweaknessmap := (:unitweaknessmap unit)
+   chgmap       : base/unitweaknessmap := (copy origmap
+                                           name
+                                           unitweakness)]
   (copy unit
    :unitweaknessmap chgmap))
  :doc "Return a unit with new unitweakness added to unitweaknessmap")

@@ -217,7 +217,7 @@
 		<modifier name="Traceable Emmissions" />
 	</section>
 </chapter>
-<chapter name="Special Powers">
+<chapter name="Equipment Powers">
 	<section name="Item Powers">
 		<power name="Quality Item">
 			<summary>
@@ -727,6 +727,8 @@
 			<ability name="Tool Arm" />
 		</power>
 	</section>
+</chapter>
+<chapter name="Strength and Weaknesses">
 	<section name="Special Skills">
 		<power name="Special Ability">
 			<ability name="Cannibal">
@@ -773,165 +775,8 @@
 			<ability name="Tainted">
 			</ability>
 		</power>
-		<power name="Mental Weakness">
-			<summary>
-				* Note: Mental Weaknesses may be physical in nature, but they are grouped here because they effect mental function.
-			</summary>
-			<ability name="Addle Minded">
-				<titles>Absent Minded, Addle Minded, Airhead</titles>
-				<summary>
-					* Tendency to forget to do things or misplace things.  The missed things may be trival, important, or critical.
-				</summary>
-			</ability>
-			<ability name="Addiction">
-			</ability>
-			<ability name="Alien Thoughts" />
-			<ability name="Amnesia">
-				<reference>
-					* Memento
-				</reference>
-				<summary>
-					* Unit has strange lapses of memory. It may forget generally known facts, friends, family, or own identity.
-				</summary>
-			</ability>
-			<ability name="Anxious" />
-			<ability name="Bipolar">
-				<titles>Manic Depressive</titles>
-				<summary>
-					* Prone to fits of erratic up moods and severe depression. May be moody, lie around and mope, risk life and limb, or even suicidal.
-				</summary>
-			</ability>
-			<ability name="Bloodthirsty">
-				<summary>
-					* Must attack Bleeding Enemies first. May attack Bleeding Allies if a Spirit roll fails.
-				</summary>
-			</ability>
-			<ability name="Brainwashed" />
-			<ability name="Catatonia" />
-			<ability name="Compulsive Liar" />
-			<ability name="Cleptomania" />
-			<ability name="Cyberpsychosis">
-				<reference>
-					* Something happens when you start to add metal and plastic to people. They start to change. And it isn't pretty - Cyberpunk RPG
-				</reference>
-				<summary>
-					* A psychotic aberration suffered by excessive users of cyberware. It begins as a sense of loss for the portions of the body replaced with unfeeling machinery. Later it manifests as a Overconfidence and detachment from other people (sometimes in favor of machines). Extreme cases lead to more serious derangements such as: Martyr Syndrome, Megalomania, Delusions of Grandear, Inferiority Complex, and Messiah Complex.
-				</summary>
-			</ability>
-			<ability name="Delusional">
-				<titles>Free-form Delusion, Schizoid Embelism</titles>
-				<reference>
-					* The walls of reality will come crashing down. One minute you'll be the savior of the rebel cause.  The next thing you know you'll be Cohagen's busom buddy. You'll even have fantasies of alien civilizations, as you requested, but in the end, back on Earth, you'll be lobotomized! - Dr. Edgemar, Total Recall
-				</reference>
-				<summary>
-					* Believe things that are not real.  May hear voices or see things.
-				</summary>
-			</ability>
-			<ability name="Flashbacks" />
-			<ability name="Frightened">
-				<titles>Cowardly</titles>
-				<summary>
-					* Lacks nerve, especially in combat.  May freeze or flee.
-				</summary>
-			</ability>
-			<ability name="Hallucinations" />
-			<ability name="Homicidal" />
-			<ability name="Inferiority Complex" />
-			<ability name="Intolerant" />
-			<ability name="Manic" />
-			<ability name="Martyr Syndrome" />
-			<ability name="Masochism">
-				<summary>
-					* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse.
-				</summary>
-			</ability>
-			<ability name="Megalomania">
-				<titles>Delusions of Grandeur, Messiah Complex</titles>
-				<summary>
-					* A specific form of delusion that you are more important than you are. May believe you are destined for greatness, a Messiah, or even God.
-				</summary>
-			</ability>
-			<ability name="Mental Decay">
-				<titles>Alzheimers</titles>
-			</ability>
-			<ability name="Multiple Personalities">
-				<reference>Sybil</reference>
-				<summary>
-					* More than one distinct personality. Personalities may change under stress or randomly.  Personalities may like, dislike, or be oblivious to each other. Some may be dangerous to self or others.
-				</summary>
-			</ability>
-			<ability name="Narssicist" />
-			<ability name="Nightmares" />
-			<ability name="Obsessed">
-				<summary>
-					* Focused on a single person or object and will talk about it all the time. May risk embarrassment, financial loss, or bodily harm to pursue it.
-				</summary>
-			</ability>
-			<ability name="Obsessive Compulsive">
-				<titles>OCD</titles>
-				<summary>
-					* Compulsively performs trivial activities.
-				</summary>
-			</ability>
-			<ability name="Overcompensating">
-				<summary>
-					* Constantly attempt to draw attention away from preceived flaw.
-				</summary>
-			</ability>
-			<ability name="Overconfidence" />
-			<ability name="Paranoia">
-				<reference>Just because you're paranoid doesn't mean they aren't after you. - Catch 22</reference>
-				<summary>
-					* Belief that enemies are everywhere. May rant endlessly about the conspiracy, compulsively work on defenses, risk everything to stop them.
-				</summary>
-			</ability>
-			<ability name="Phobia">
-				<summary>
-					* Unreasoning fear of some common thing. Fear of dogs, heights, sounds, or colors. May feel discomfort, paralyzing fear, beserk fear, or catatonia.
-				</summary>
-			</ability>
-			<ability name="Post Traumatic Stress Disorder" />
-			<ability name="Pyromania" />
-			<ability name="Robophobia">
-				<titles>Grimwade's Syndrome, Uncanny Valley</titles>
-				<reference>
-					* Uncanny Valley - The theory that as a robot is made more humanlike in its appearance and motion, the emotional response from a human being to the robot will become increasingly positive, until a point is reached beyond which the response quickly becomes that of strong revulsion. However, as the appearance and motion continue to become less distinguishable from a human being, the emotional response becomes positive once more.
-					* This area of repulsive response aroused by a robot with appearance and motion between a 'barely human' and 'fully human' entity is called the uncanny valley. The name captures the idea that a robot which is 'almost human' will seem overly strange and corpselike.
-					* Not robots...walking dead.  They pretend we control them...but really... - Doctor Who, The Robots of Death
-					* The name 'Grimwade's Syndrome' was an in-joke reference to production assistant Peter Grimwade who had bemoaned the fact that the stories on which he was assigned to work almost always involved robots. - Doctor Who, The Robots of Death
-				</reference>
-				<summary>
-					* Fear of Robots
-				</summary>
-			</ability>
-			<ability name="Refuses to Kill" />
-			<ability name="Sadistic" />
-			<ability name="Sex Crazed">
-				<titles>Cassonova, Heartbreaker, Lady Killer, Libertine, Lothario, Romeo, Sex Addict</titles>
-			</ability>
-			<ability name="Shy">
-				<summary>
-					* Hate dealing with others.  Avoid interactions with new people.  May need to retreat from others.
-				</summary>
-			</ability>
-			<ability name="Sociopath" />
-			<ability name="Stubborn">
-				<summary>
-					* Will not give in or compromise.  May risk embarrassment, financial loss, or injury to prove you're right.
-				</summary>
-			</ability>
-			<ability name="Tempermental">
-				<titles>Bad Tempered, Hot Tempered</titles>
-				<reference>
-					* What do we have? Sea Bass. Riiiight? They are mutated Sea Bass. Really. Are they ill-tempered.  Absolutely. Well that's a start. - Dr. Evil and Number 2 - Austin Powers
-				</reference>
-				<summary>
-					* Constantly irritable. When temper flares will risk embarrassment, financial loss, incarceration, or life and limb.
-				</summary>
-			</ability>
-			<ability name="Unreasoning Hatred" />
-			<ability name="Vengeful" />
-		</power>
+ </section>
+ <section name="Weaknesses">
 		<power name="Physical Weakness">
 			<titles>Aberrations, Inhumanity, The Price of Power, Taint</titles>
 			<summary>
@@ -1126,6 +971,8 @@
 			<ability name="Haunted" />
 		</power>
 	</section>
+</chapter>
+<chapter name="Mental Powers and Weaknesses">
 	<section name="Mental Powers">
 		<power name="Domination">
 			<titles>Dominator, Master, Puppet Master, Puppeteer</titles>
@@ -1674,322 +1521,476 @@
 				</reference>
 			</ability>
 		</power>
-	</section>
-	<section name="Movement Powers">
-		<section name="Land Sea and Air Travel">
-			<power name="Flight" image="Rules/Images/MoveFlight.png">
-				<ability name="Afterburner">
-				</ability>
-				<ability name="Air Droppable" />
-				<ability name="Airlift">
-					<summary>
-						* Ability to pick up and drop cargo or [Airlift Ready] vehicles without landing.
-					</summary>
-				</ability>
-				<ability name="Atmospheric" />
-				<ability name="Diving Attack" />
-				<ability name="Glide">
-					<titles>Glider, Parachute</titles>
-					<summary>
-					</summary>
-				</ability>
-				<ability name="Levitate">
-					<summary>
-						* Levitate is a slow form of movement with a maximum speed of just half a normal Move. Levitating is very stable, silent, can move in any direction, and requires no concentration. Levitating causes no noise or movement related penalties and can avoid most terrain penalties as well.
-					</summary>
-				</ability>
-				<ability name="Lighter Than Air" />
-				<ability name="Nape of Earth Flight" />
-				<ability name="Orbital" />
-				<ability name="Reentry System">
-					<titles>Ballute</titles>
-					<summary>
-						* A heat shield (either inflatable or built in) for atmospheric reentry.
-					</summary>
-				</ability>
-				<ability name="Rocket Engine" />
-				<ability name="Stratospheric Flight" />
-				<ability name="Supersonic Flight" />
-				<ability name="Trans-atmospheric Flight" />
-				<ability name="VTOL">
-					<summary>
-						* Hovering units may [Move] backwards.
-						* Hovering units may use [Vector Movement] rule.
-					</summary>
-				</ability>
-			</power>
-			<power name="Ground Movement">
-				<ability name="2-Legged">
-					<summary>
-					</summary>
-				</ability>
-				<ability name="3-Legged">
-					<summary>
-					</summary>
-				</ability>
-				<ability name="4-Legged">
-					<summary>
-					</summary>
-				</ability>
-				<ability name="6-Legged">
-					<summary>
-					</summary>
-				</ability>
-				<ability name="8-Legged">
-					<summary>
-					</summary>
-				</ability>
-				<ability name="Hover">
-					<summary>
-						* Hovering allows full movement speed over any flat terrain without actually touching the surface. Ground, Water, Sand, Ice, generally cause no penalty, but turning is difficult and imprecise especially at high speeds.
-						* Hovering units may [Move] backwards.
-						* Hovering units may use [Vector Movement] rule.
-					</summary>
-				</ability>
-				<ability name="Jump Jets" />
-				<ability name="Off Roading" />
-				<ability name="Snowcraft">
-					<summary>
-						* Off Snow +1 Terrain Penalty.
-					</summary>
-				</ability>
-				<ability name="Tracked">
-					<summary>
-					</summary>
-				</ability>
-				<ability name="Tunnelling">
-				</ability>
-				<ability name="Turbo Booster">
-				    <titles>Boost, Nitro, Turbo, Turbo Charger</titles>
-				</ability>
-				<ability name="Wheeled">
-					<summary>
-					</summary>
-				</ability>
-			</power>
-			<power name="Water Movement">
-				<ability name="Hydrofoil">
-					<summary>
-					</summary>
-				</ability>
-				<ability name="Sailed" image="Maps/Windsock.png">
-					<reference>
-						Estimated 18ft Skiff speeds at 20mph winds:
-						0 (180deg), 16mph (150deg), 26mph (120deg), 31mph (90deg), 32mph (60deg), 27mph (30deg), 19mph (0deg)
-
-						Estimated ice yacht speeds at 30mph winds:
-						0 (180deg), 95mph (150deg), 144mph (120deg), 165mph (90deg), 155mph (60deg), 115mph (30deg), 30mph (0deg)
-					</reference>
-					<summary>
-						* Wind direction has an effect on all vehicles but it is most pronounced on sailing vessels.
-						* [Setup] - Point Windsock in direction of the wind.  If wind direction is not already determined, roll a die
-						to randomize the wind direction.
-						* [Move] - [-1 Speed] when starting the turn against the wind at an angle.
-						* [Move] - [-2 Speed] when starting the turn directly against the wind.
-
-						Sailing speed is based on Wind speed, direction, angle of motion and vessel
-						size.
-						* Same direction as wind (Running Downwind): Max Speed = Wind Speed
-						* 30 degrees off direction (Broad Reach): Max Speed = Wind Speed * 1.3 (* 4 on ice)
-						* 60 degrees off direction (Broad Reach): Max Speed = Wind Speed * 1.5 (* 5 on ice)
-						* 90 degrees off direction (Beam Reach): Max Speed = Wind Speed * 1.4  (* 5.5 on ice)
-						* 120 degrees off direction (Close Reach): Max Speed = Wind Speed * 1.2 (* 4.8 on ice)
-						* 150 degrees off direction (Close Hauled): Max Speed = Wind Speed * .7 (* 4 on ice)
-						* 180 degrees (Head To Wind or In Irons): Max Speed = 0
-
-						Over distance, sailboats average speed over distance is further limited by their length at waterline:
-						* This is estimated to be about 1.34 x the square root of the waterline length.
-						* For a 144 ft sailboat at the waterline, the square root is 12, and the boat will probably not exceed
-						12 x 1.34, or about 16 knots/18mph/30kph.
-						* A 100 footer should do 13.4 knots/15mph/25kph.
-						* A 30 footer should do 7.34 knots/8mph/13kph.
-						* A 16 footer should do 5.36 knots/6mph/10kph.
-					</summary>
-				</ability>
-				<ability name="Submersible">
-					<summary>
-					</summary>
-				</ability>
-			</power>
-		</section>
-		<section name="Space Travel">
-			<power name="Space Movement">
-				<ability name="Chemical Rockets">
-				</ability>
-				<ability name="Impulse Drive">
-					<titles>Impulse, Ripple Drive, Wave Drive</titles>
-					<summary>
-						* The Impulse Drive is a drive system based upon the concept that repeated energy releases at the same harmonic frequency will cause small ripples in the fabric of space.
-						* By rhythmic repetition, the Drive can cause an action/reaction effect against the fabric of space itself, therefore no longer needing reaction mass to travel large distances.
-						* Further, the ripples in space cause space itself to slightly change orientation on each wave. Anything crossing a wave will suffer minor disruption. Light, lasers, radio waves, radiation, and relativistic particles are increasingly scattered as they strike each wave effectively dispersing them.
-
-						This spatial effect has a number of implications on space travel:
-						* High energy radiation becomes unfocused effectively creating radiation shielding proportionate to the distance from the source.
-						* Energy weapons, relativistic particle weapons, and railguns become unfocused and scattered effectively increasing the armor of the vessel proportionate to the distance of the weapon.
-						* At long distances, the energy detected by radar and other detection devices (even telescopes) become diffused. This effectively provides the vessel with increased stealth proportionate to the distance of the detector.
-						* At closer distances, microcircuitry becomes prone to failure and damage. This makes computer chips, the foundation of modern computer science, next to useless. Therefore, computer systems must be turned off when the wave drive is active. Piloting, weaponry, and navigation must therefore be performed manually with limited automation.
-					</summary>
-				</ability>
-				<ability name="Ion Drive">
-				</ability>
-				<ability name="Nuclear Rockets">
-				</ability>
-				<ability name="Reaction Mass" />
-				<ability name="Subspace Drive">
-					<reference>
-						* Comet Empire Subspace Attack Submarine
-					</reference>
-					<summary>
-						* By creating a minor fold in space, a unit may drop almost completely out of normal space while maintaining a small window through which it may still interact with normal space.
-					</summary>
-				</ability>
-				<ability name="Torch Drive">
-					<titles>TISA, Trans-Gravitic, Interphased, Sub-Light Anamoly Drive</titles>
-					<summary>
-						* This drive creates a tight gravity well around the ship dropping it partially out of normal space. Because the ship is no longer in normal space, it does not actually move. What does move is the interface between normal space and the ship. Speed and direction are adjusted by controlling the depth and shape of the field.
-						* There are a number of distinct advantages to this drive system. Because the ship in not moving, it is not subject to inertia or problems incurred at relativistic speeds.
-						* Combat with the Torch drive is unique for several reasons. The occupants are not subject to the enormous stress of maneuvering at relativistic speeds. Conventional weapons have greatly reduced effect because only damage that crosses the interface has any effect on the ship.
-						* Weaknesses - The Torch drive must also maintain a protective gravity bubble to defend against its own gravity well. Weapons designed to disrupt the Torch drive have a strong effect by making the ship more vulnerable to damage, by reducing its speed, by subjecting it to increased stress from travelling at relativistic speeds, and by exposing it to its own gravity well.
-					</summary>
-				</ability>
-				<ability name="Rocket Booster">
-				    <titles>Boost, Turbo Booster</titles>
-				</ability>
-				<ability name="Vernier Thruster">
-					<titles>Apogee Motor</titles>
-				</ability>
-			</power>
-			<power name="Interstellar Movement">
-				<ability name="Hyperdrive" image="Units/SpaceAndTime/Hyperspace.jpg">
-					<titles>
-						FTL Drive, Gravity Drive, Gravity Lens, Subspace Drive, T-Drive, Tachyon Drive, Warp Drive
-					</titles>
-					<summary>
-						* Faster than light travel can be accomplished by warping space into a Wormhole/Black hole, dropping out of normal space and travelling through the parallel universe called Hyperspace/Tachyon Space where physical laws are not bound by the relationship between mass and the speed of light, and finally returning to normal space by creating another space warp.
-						* Hyperspace/Tachyon Space - Tachyon Space, like other dimensions is at right angles to our existing 3 dimension. In Hyperspace, time and distance have different meanings, all particles are tachyons, and the speed of light is an absolute minimum speed instead of a maximum. Travelling through Hyperspace is exceptionally hazardous. In fact, any deviation from the calculated route cause the corridor to collapse leaving one stranded in Hyperpace forever with no way to calculate a return.
-						* Calculating a Route - Once a destination is chosen, complex calculations must be performed to calculate a direct route from the current location to the destination through the shifting reality of Hyperspace. A successful route will be a 'straight' line through Hyperspace. Proximity to a gravity well makes these calculations next to impossible. Typically, all ship computer resources are required for this calculation and the larger the ship fewer the available routes and therefore the greater the complexity. Ships may only enter and exit hyperspace at the edge of a solar system and must use conventional sub light drives within the system. A day or more at sub-light speed is therefore required to reach or leave a planet in an inner solar system. Route calculation time is roughly light years x tons / 10secs (e.g. 4 light years x 100 tons / 10 = 40sec.
-						* Hyperspace Corridor - Once calculated, the ship must meet the speed defined by the calculation while modulating the Hyperdrive energy signature to match the bridge to Hyperspace. If all goes well, the vast energies in Tachyon Space will form a corridor directly to the destination. Errors in any of the steps usually involve intense gravitional shearing forces that will at best cause damage to the Hyperdrive and leave the traveller stranded in deep space, or worse, Hyperspace.
-						* Travel in Hyperspace - Hyperspace travel is typically a boring affair. The Hyperspace corridor carries the ship to its destination, so no manuevering is needed. The time spent in Hyperspace varies, but is usually proportional to the distance. Transit time is roughly 2 hours per light year travelled (e.g. 4 light years x 2 = 8hours)
-						* Tachyon Doppler Effect - When the Hyperspace Corridor is created, both ends of the corridor will start leaking Tachyons which can be detected by sensitive instruments. The amount of Tachyons increases with the size of the ship, the distance travelled and the closer the time of arrival.
-						* Tachyon Relay Network - Satellites at the edge of stellar systems use Hyperspace Corridors to beam tranmissions through Hyperspace to their opposites in other systesm. Since these communications have negligible mass, the calculations are nearly instantaneous though the same transit times apply.
-						* History - Imaginary Space, I-Space - While studying fusion plant efficiency using various algorithms, a surprising discovery was made: very rarely and seemingly at random, the plant would produce a tiny tachyon burst. After decades of study, a pattern began to emerge along with a shocking discovery: only algorithms using imaginary numbers could trigger a burst and a small amount of particles were actually disappearing during the event. Where the particles were going became the primary focus of astrophysics from then on. Eventually a hypothesis gathered momentum. The particles were leaving real space and traveling along trajectories plotted through so called imaginary space. This implied that the destination of the particles could be predicted. After much trial and error another breakthrough: a second tachyon burst moments after the first and many kilometers away. The particles had returned. Faster than light travel was possible. The implications for communications were immediately obvious, but could something larger make the trip? Research was slow because increased mass meant increased complexity. The power and computational needs were high but not unachievable. Only a decade later the first successful test craft made the trip. A decade later commercial hyperdrives became available. A decade later they were affordable on even modest starships. 
-					</summary>
-				</ability>
-			</power>
-		</section>
-		<section name="Time and Dimension Travel">
-			<power name="Jump Drive" image="Units/SpaceAndTime/Wormhole.jpg">
-				<titles>Gate Drive, Stargate, Wave Motion Engine, Wormhole</titles>
+		<power name="Mental Weakness">
+			<summary>
+				* Note: Mental Weaknesses may be physical in nature, but they are grouped here because they effect mental function.
+			</summary>
+			<ability name="Addle Minded">
+				<titles>Absent Minded, Addle Minded, Airhead</titles>
+				<summary>
+					* Tendency to forget to do things or misplace things.  The missed things may be trival, important, or critical.
+				</summary>
+			</ability>
+			<ability name="Addiction">
+			</ability>
+			<ability name="Alien Thoughts" />
+			<ability name="Amnesia">
 				<reference>
-					* I created the Event Horizon to reach the stars, but she's gone much, much farther than that. She tore a hole in our universe, a gateway to another dimension. A dimension of pure chaos. Pure... evil. When she crossed over, she was just a ship. But when she came back... she was alive! - Dr. Weir, Event Horizon
+					* Memento
 				</reference>
 				<summary>
-					* Jump Drives generate energy pulses in the ship's drive to create ripples in the fabric of space.  Each pulse must be precisely timed to the apex of each ripple to create an increasing harmonic wave (the 'Wave Motion' effect). Eventually, the energy of the occillation becomes too great, a tear in space is produced, and the starship falls in.
+					* Unit has strange lapses of memory. It may forget generally known facts, friends, family, or own identity.
 				</summary>
-				<ability name="Strategic Warp Jump">
-					<summary>
-						* A ship with a Warp Engine may perform a strategic warp jump and instantly remove itself from combat, returning to the strategic map.
-						* A unit already on the strategic map may move [Skill] spaces on the strategic map.
-						* [Requires]: The unit must cease maneuvering and must perform this ability for 3 consecutive turns.
-						* [Action]: On the second consecutive action, the unit immediately removes all Vector tokens and moves the unit to any other space on the map.
-					</summary>
-				</ability>
-				<ability name="Tactical Warp Jump">
-					<summary>
-						* A ship with a Warp Engine may perform a tactical warp jump and instantly transport from any space on the map to any other.
-						* [Requires]: The unit must cease maneuvering and must perform this ability for 2 consecutive turns.
-						* [Action]: On the second consecutive action, the unit immediately removes all Vector tokens and moves the unit to any other space on the map.
-					</summary>
-				</ability>
-			</power>
-			<power name="Teleportation">
-				<titles>Instant Transmission, Teleporter, Transporter</titles>
+			</ability>
+			<ability name="Anxious" />
+			<ability name="Bipolar">
+				<titles>Manic Depressive</titles>
 				<summary>
+					* Prone to fits of erratic up moods and severe depression. May be moody, lie around and mope, risk life and limb, or even suicidal.
 				</summary>
-				<ability name="Teleport Away">
-					<titles>Smite</titles>
-					<summary>
-						* Teleport an object/objects to a precisely known location.
-						* Level determines size of object/objects and distance.
-						* Tricks: Teleporting mines, bombs, fighters, drill missiles.
-					</summary>
-				</ability>
-				<ability name="Teleport Self">
-				</ability>
-				<ability name="Teleport Toward">
-					<reference>Beam me up Scotty</reference>
-					<summary>
-						* Teleport an object/objects that you know the exact location of to your location.
-						* Level determines size of object/objects and distance.
-					</summary>
-				</ability>
-			</power>
-			<power name="Dimensional Travel">
+			</ability>
+			<ability name="Bloodthirsty">
+				<summary>
+					* Must attack Bleeding Enemies first. May attack Bleeding Allies if a Spirit roll fails.
+				</summary>
+			</ability>
+			<ability name="Brainwashed" />
+			<ability name="Catatonia" />
+			<ability name="Compulsive Liar" />
+			<ability name="Cleptomania" />
+			<ability name="Cyberpsychosis">
 				<reference>
-					* I reject your reality and substitute my own. - Adam Savage, Mythbusters
+					* Something happens when you start to add metal and plastic to people. They start to change. And it isn't pretty - Cyberpunk RPG
 				</reference>
-				<ability name="Dimension Drop">
-					<summary>
-						* Send a small object through a dimensional portal and immediately close it again. This is most practical for sending messages or explosives.
-					</summary>
-				</ability>
-				<ability name="Dimensional Interference">
-					<summary>
-						* Create an area that is more difficult to use dimensional or teleporting abilities.
-					</summary>
-				</ability>
-				<ability name="Dimensional Portal">
-					<titles>Gate</titles>
-				</ability>
-				<ability name="Dimensional Teleport">
-					<summary>
-						* Move rapidly from one location to another by creating a wormhole between the locations.
-					</summary>
-				</ability>
-				<ability name="Dimension Trace">
-					<summary>
-						* Detect the origin of a Teleporter, Dimensional Portal, or an [Outsider].
-					</summary>
-				</ability>
-				<ability name="Dimension Track">
-					<summary>
-						* Track the destination of someone who recently travelled using Teleport or Dimensional Travel. Also can be used to track an [Outsider] as if the user had [Tracking].
-					</summary>
-				</ability>
-				<ability name="Dimensional Trap">
-					<summary>
-						* Open a Dimensional Portal that opens when a target enters the area, draws them through, and then closes behind.
-					</summary>
-				</ability>
-				<ability name="Dimensional Walk">
-					<summary>
-						* Move rapidly over terrain by quickly phasing in and out of the current space.
-					</summary>
-				</ability>
-			</power>
-			<power name="Time Travel" image="Units/SpaceAndTime/Vortex.jpg">
-				<titles>Chronos, Eye of Harmony, Yog-Sothoth</titles>
 				<summary>
-					* The Vortex is a point of null space-time. It is a tunnel through which one can escape the bounds of space-time.
-					* Here time and distance have no meaning. Travelers through the Vortex have no sense of their own body, but have a strong sense that they have been in the Vortex forever. Some suggest that this may actually be true.
-					* Entering the Vortex is like dying. Leaving is like being born. Some suggest that this birth and death cycle is the reason why only living things may be brought through the Vortex.
+					* A psychotic aberration suffered by excessive users of cyberware. It begins as a sense of loss for the portions of the body replaced with unfeeling machinery. Later it manifests as a Overconfidence and detachment from other people (sometimes in favor of machines). Extreme cases lead to more serious derangements such as: Martyr Syndrome, Megalomania, Delusions of Grandear, Inferiority Complex, and Messiah Complex.
 				</summary>
-				<ability name="Freeze Time">
-				</ability>
-				<ability name="Reverse Time">
-					<summary>
-						* Rewind recent events within the surrounding area and possibly choose a different [Action].
-					</summary>
-				</ability>
-				<ability name="Rewind">
-				</ability>
-				<ability name="Slow Time">
-				</ability>
-				<ability name="Time Shift">
-				</ability>
-			</power>
-		</section>
+			</ability>
+			<ability name="Delusional">
+				<titles>Free-form Delusion, Schizoid Embelism</titles>
+				<reference>
+					* The walls of reality will come crashing down. One minute you'll be the savior of the rebel cause.  The next thing you know you'll be Cohagen's busom buddy. You'll even have fantasies of alien civilizations, as you requested, but in the end, back on Earth, you'll be lobotomized! - Dr. Edgemar, Total Recall
+				</reference>
+				<summary>
+					* Believe things that are not real.  May hear voices or see things.
+				</summary>
+			</ability>
+			<ability name="Flashbacks" />
+			<ability name="Frightened">
+				<titles>Cowardly</titles>
+				<summary>
+					* Lacks nerve, especially in combat.  May freeze or flee.
+				</summary>
+			</ability>
+			<ability name="Hallucinations" />
+			<ability name="Homicidal" />
+			<ability name="Inferiority Complex" />
+			<ability name="Intolerant" />
+			<ability name="Manic" />
+			<ability name="Martyr Syndrome" />
+			<ability name="Masochism">
+				<summary>
+					* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse.
+				</summary>
+			</ability>
+			<ability name="Megalomania">
+				<titles>Delusions of Grandeur, Messiah Complex</titles>
+				<summary>
+					* A specific form of delusion that you are more important than you are. May believe you are destined for greatness, a Messiah, or even God.
+				</summary>
+			</ability>
+			<ability name="Mental Decay">
+				<titles>Alzheimers</titles>
+			</ability>
+			<ability name="Multiple Personalities">
+				<reference>Sybil</reference>
+				<summary>
+					* More than one distinct personality. Personalities may change under stress or randomly.  Personalities may like, dislike, or be oblivious to each other. Some may be dangerous to self or others.
+				</summary>
+			</ability>
+			<ability name="Narssicist" />
+			<ability name="Nightmares" />
+			<ability name="Obsessed">
+				<summary>
+					* Focused on a single person or object and will talk about it all the time. May risk embarrassment, financial loss, or bodily harm to pursue it.
+				</summary>
+			</ability>
+			<ability name="Obsessive Compulsive">
+				<titles>OCD</titles>
+				<summary>
+					* Compulsively performs trivial activities.
+				</summary>
+			</ability>
+			<ability name="Overcompensating">
+				<summary>
+					* Constantly attempt to draw attention away from preceived flaw.
+				</summary>
+			</ability>
+			<ability name="Overconfidence" />
+			<ability name="Paranoia">
+				<reference>Just because you're paranoid doesn't mean they aren't after you. - Catch 22</reference>
+				<summary>
+					* Belief that enemies are everywhere. May rant endlessly about the conspiracy, compulsively work on defenses, risk everything to stop them.
+				</summary>
+			</ability>
+			<ability name="Phobia">
+				<summary>
+					* Unreasoning fear of some common thing. Fear of dogs, heights, sounds, or colors. May feel discomfort, paralyzing fear, beserk fear, or catatonia.
+				</summary>
+			</ability>
+			<ability name="Post Traumatic Stress Disorder" />
+			<ability name="Pyromania" />
+			<ability name="Robophobia">
+				<titles>Grimwade's Syndrome, Uncanny Valley</titles>
+				<reference>
+					* Uncanny Valley - The theory that as a robot is made more humanlike in its appearance and motion, the emotional response from a human being to the robot will become increasingly positive, until a point is reached beyond which the response quickly becomes that of strong revulsion. However, as the appearance and motion continue to become less distinguishable from a human being, the emotional response becomes positive once more.
+					* This area of repulsive response aroused by a robot with appearance and motion between a 'barely human' and 'fully human' entity is called the uncanny valley. The name captures the idea that a robot which is 'almost human' will seem overly strange and corpselike.
+					* Not robots...walking dead.  They pretend we control them...but really... - Doctor Who, The Robots of Death
+					* The name 'Grimwade's Syndrome' was an in-joke reference to production assistant Peter Grimwade who had bemoaned the fact that the stories on which he was assigned to work almost always involved robots. - Doctor Who, The Robots of Death
+				</reference>
+				<summary>
+					* Fear of Robots
+				</summary>
+			</ability>
+			<ability name="Refuses to Kill" />
+			<ability name="Sadistic" />
+			<ability name="Sex Crazed">
+				<titles>Cassonova, Heartbreaker, Lady Killer, Libertine, Lothario, Romeo, Sex Addict</titles>
+			</ability>
+			<ability name="Shy">
+				<summary>
+					* Hate dealing with others.  Avoid interactions with new people.  May need to retreat from others.
+				</summary>
+			</ability>
+			<ability name="Sociopath" />
+			<ability name="Stubborn">
+				<summary>
+					* Will not give in or compromise.  May risk embarrassment, financial loss, or injury to prove you're right.
+				</summary>
+			</ability>
+			<ability name="Tempermental">
+				<titles>Bad Tempered, Hot Tempered</titles>
+				<reference>
+					* What do we have? Sea Bass. Riiiight? They are mutated Sea Bass. Really. Are they ill-tempered.  Absolutely. Well that's a start. - Dr. Evil and Number 2 - Austin Powers
+				</reference>
+				<summary>
+					* Constantly irritable. When temper flares will risk embarrassment, financial loss, incarceration, or life and limb.
+				</summary>
+			</ability>
+			<ability name="Unreasoning Hatred" />
+			<ability name="Vengeful" />
+		</power>
 	</section>
+</chapter>
+<chapter name="Movement Powers">
+	<section name="Travel">
+		<power name="Flight" image="Rules/Images/MoveFlight.png">
+			<ability name="Afterburner">
+			</ability>
+			<ability name="Air Droppable" />
+			<ability name="Airlift">
+				<summary>
+					* Ability to pick up and drop cargo or [Airlift Ready] vehicles without landing.
+				</summary>
+			</ability>
+			<ability name="Atmospheric" />
+			<ability name="Diving Attack" />
+			<ability name="Glide">
+				<titles>Glider, Parachute</titles>
+				<summary>
+				</summary>
+			</ability>
+			<ability name="Levitate">
+				<summary>
+					* Levitate is a slow form of movement with a maximum speed of just half a normal Move. Levitating is very stable, silent, can move in any direction, and requires no concentration. Levitating causes no noise or movement related penalties and can avoid most terrain penalties as well.
+				</summary>
+			</ability>
+			<ability name="Lighter Than Air" />
+			<ability name="Nape of Earth Flight" />
+			<ability name="Orbital" />
+			<ability name="Reentry System">
+				<titles>Ballute</titles>
+				<summary>
+					* A heat shield (either inflatable or built in) for atmospheric reentry.
+				</summary>
+			</ability>
+			<ability name="Rocket Engine" />
+			<ability name="Stratospheric Flight" />
+			<ability name="Supersonic Flight" />
+			<ability name="Trans-atmospheric Flight" />
+			<ability name="VTOL">
+				<summary>
+					* Hovering units may [Move] backwards.
+					* Hovering units may use [Vector Movement] rule.
+				</summary>
+			</ability>
+		</power>
+		<power name="Ground Movement">
+			<ability name="2-Legged">
+				<summary>
+				</summary>
+			</ability>
+			<ability name="3-Legged">
+				<summary>
+				</summary>
+			</ability>
+			<ability name="4-Legged">
+				<summary>
+				</summary>
+			</ability>
+			<ability name="6-Legged">
+				<summary>
+				</summary>
+			</ability>
+			<ability name="8-Legged">
+				<summary>
+				</summary>
+			</ability>
+			<ability name="Hover">
+				<summary>
+					* Hovering allows full movement speed over any flat terrain without actually touching the surface. Ground, Water, Sand, Ice, generally cause no penalty, but turning is difficult and imprecise especially at high speeds.
+					* Hovering units may [Move] backwards.
+					* Hovering units may use [Vector Movement] rule.
+				</summary>
+			</ability>
+			<ability name="Jump Jets" />
+			<ability name="Off Roading" />
+			<ability name="Snowcraft">
+				<summary>
+					* Off Snow +1 Terrain Penalty.
+				</summary>
+			</ability>
+			<ability name="Tracked">
+				<summary>
+				</summary>
+			</ability>
+			<ability name="Tunnelling">
+			</ability>
+			<ability name="Turbo Booster">
+	    <titles>Boost, Nitro, Turbo, Turbo Charger</titles>
+			</ability>
+			<ability name="Wheeled">
+				<summary>
+				</summary>
+			</ability>
+		</power>
+		<power name="Water Movement">
+			<ability name="Hydrofoil">
+				<summary>
+				</summary>
+			</ability>
+			<ability name="Sailed" image="Maps/Windsock.png">
+				<reference>
+					Estimated 18ft Skiff speeds at 20mph winds:
+					0 (180deg), 16mph (150deg), 26mph (120deg), 31mph (90deg), 32mph (60deg), 27mph (30deg), 19mph (0deg)
+
+					Estimated ice yacht speeds at 30mph winds:
+					0 (180deg), 95mph (150deg), 144mph (120deg), 165mph (90deg), 155mph (60deg), 115mph (30deg), 30mph (0deg)
+				</reference>
+				<summary>
+					* Wind direction has an effect on all vehicles but it is most pronounced on sailing vessels.
+					* [Setup] - Point Windsock in direction of the wind.  If wind direction is not already determined, roll a die to randomize the wind direction.
+					* [Move] - [-1 Speed] when starting the turn against the wind at an angle.
+					* [Move] - [-2 Speed] when starting the turn directly against the wind.
+
+					* Sailing speed is based on Wind speed, direction, angle of motion and vesselsize.
+					* Same direction as wind (Running Downwind): Max Speed = Wind Speed
+					* 30 degrees off direction (Broad Reach): Max Speed = Wind Speed * 1.3 (* 4 on ice)
+					* 60 degrees off direction (Broad Reach): Max Speed = Wind Speed * 1.5 (* 5 on ice)
+					* 90 degrees off direction (Beam Reach): Max Speed = Wind Speed * 1.4  (* 5.5 on ice)
+					* 120 degrees off direction (Close Reach): Max Speed = Wind Speed * 1.2 (* 4.8 on ice)
+					* 150 degrees off direction (Close Hauled): Max Speed = Wind Speed * .7 (* 4 on ice)
+					* 180 degrees (Head To Wind or In Irons): Max Speed = 0
+
+					* Over distance, sailboats average speed over distance is further limited by their length at waterline:
+					* This is estimated to be about 1.34 x the square root of the waterline length.
+					* For a 144 ft sailboat at the waterline, the square root is 12, and the boat will probably not exceed 12 x 1.34, or about 16 knots/18mph/30kph.
+					* A 100 footer should do 13.4 knots/15mph/25kph.
+					* A 30 footer should do 7.34 knots/8mph/13kph.
+					* A 16 footer should do 5.36 knots/6mph/10kph.
+				</summary>
+			</ability>
+			<ability name="Submersible">
+				<summary>
+				</summary>
+			</ability>
+		</power>
+		<power name="Space Movement">
+			<ability name="Chemical Rockets">
+			</ability>
+			<ability name="Impulse Drive">
+				<titles>Impulse, Ripple Drive, Wave Drive</titles>
+				<summary>
+					* The Impulse Drive is a drive system based upon the concept that repeated energy releases at the same harmonic frequency will cause small ripples in the fabric of space.
+					* By rhythmic repetition, the Drive can cause an action/reaction effect against the fabric of space itself, therefore no longer needing reaction mass to travel large distances.
+					* Further, the ripples in space cause space itself to slightly change orientation on each wave. Anything crossing a wave will suffer minor disruption. Light, lasers, radio waves, radiation, and relativistic particles are increasingly scattered as they strike each wave effectively dispersing them.
+
+					* This spatial effect has a number of implications on space travel:
+					* High energy radiation becomes unfocused effectively creating radiation shielding proportionate to the distance from the source.
+					* Energy weapons, relativistic particle weapons, and railguns become unfocused and scattered effectively increasing the armor of the vessel proportionate to the distance of the weapon.
+					* At long distances, the energy detected by radar and other detection devices (even telescopes) become diffused. This effectively provides the vessel with increased stealth proportionate to the distance of the detector.
+					* At closer distances, microcircuitry becomes prone to failure and damage. This makes computer chips, the foundation of modern computer science, next to useless. Therefore, computer systems must be turned off when the wave drive is active. Piloting, weaponry, and navigation must therefore be performed manually with limited automation.
+				</summary>
+			</ability>
+			<ability name="Ion Drive">
+			</ability>
+			<ability name="Nuclear Rockets">
+			</ability>
+			<ability name="Reaction Mass" />
+			<ability name="Subspace Drive">
+				<reference>
+					* Comet Empire Subspace Attack Submarine
+				</reference>
+				<summary>
+					* By creating a minor fold in space, a unit may drop almost completely out of normal space while maintaining a small window through which it may still interact with normal space.
+				</summary>
+			</ability>
+			<ability name="Torch Drive">
+				<titles>TISA, Trans-Gravitic, Interphased, Sub-Light Anamoly Drive</titles>
+				<summary>
+					* This drive creates a tight gravity well around the ship dropping it partially out of normal space. Because the ship is no longer in normal space, it does not actually move. What does move is the interface between normal space and the ship. Speed and direction are adjusted by controlling the depth and shape of the field.
+					* There are a number of distinct advantages to this drive system. Because the ship in not moving, it is not subject to inertia or problems incurred at relativistic speeds.
+					* Combat with the Torch drive is unique for several reasons. The occupants are not subject to the enormous stress of maneuvering at relativistic speeds. Conventional weapons have greatly reduced effect because only damage that crosses the interface has any effect on the ship.
+					* Weaknesses - The Torch drive must also maintain a protective gravity bubble to defend against its own gravity well. Weapons designed to disrupt the Torch drive have a strong effect by making the ship more vulnerable to damage, by reducing its speed, by subjecting it to increased stress from travelling at relativistic speeds, and by exposing it to its own gravity well.
+				</summary>
+			</ability>
+			<ability name="Rocket Booster">
+			 <titles>Boost, Turbo Booster</titles>
+			</ability>
+			<ability name="Vernier Thruster">
+				<titles>Apogee Motor</titles>
+			</ability>
+		</power>
+		<power name="Interstellar Movement">
+			<ability name="Hyperdrive" image="Units/SpaceAndTime/Hyperspace.jpg">
+				<titles>
+					FTL Drive, Gravity Drive, Gravity Lens, Subspace Drive, T-Drive, Tachyon Drive, Warp Drive
+				</titles>
+				<summary>
+					* Faster than light travel can be accomplished by warping space into a Wormhole/Black hole, dropping out of normal space and travelling through the parallel universe called Hyperspace/Tachyon Space where physical laws are not bound by the relationship between mass and the speed of light, and finally returning to normal space by creating another space warp.
+					* Hyperspace/Tachyon Space - Tachyon Space, like other dimensions is at right angles to our existing 3 dimension. In Hyperspace, time and distance have different meanings, all particles are tachyons, and the speed of light is an absolute minimum speed instead of a maximum. Travelling through Hyperspace is exceptionally hazardous. In fact, any deviation from the calculated route cause the corridor to collapse leaving one stranded in Hyperpace forever with no way to calculate a return.
+					* Calculating a Route - Once a destination is chosen, complex calculations must be performed to calculate a direct route from the current location to the destination through the shifting reality of Hyperspace. A successful route will be a 'straight' line through Hyperspace. Proximity to a gravity well makes these calculations next to impossible. Typically, all ship computer resources are required for this calculation and the larger the ship fewer the available routes and therefore the greater the complexity. Ships may only enter and exit hyperspace at the edge of a solar system and must use conventional sub light drives within the system. A day or more at sub-light speed is therefore required to reach or leave a planet in an inner solar system. Route calculation time is roughly light years x tons / 10secs e.g. 4 light years x 100 tons / 10 = 40sec.
+					* Hyperspace Corridor - Once calculated, the ship must meet the speed defined by the calculation while modulating the Hyperdrive energy signature to match the bridge to Hyperspace. If all goes well, the vast energies in Tachyon Space will form a corridor directly to the destination. Errors in any of the steps usually involve intense gravitional shearing forces that will at best cause damage to the Hyperdrive and leave the traveller stranded in deep space, or worse, Hyperspace.
+					* Travel in Hyperspace - Hyperspace travel is typically a boring affair. The Hyperspace corridor carries the ship to its destination, so no manuevering is needed. The time spent in Hyperspace varies, but is usually proportional to the distance. Transit time is roughly 2 hours per light year travelled (e.g. 4 light years x 2 = 8hours)
+					* Tachyon Doppler Effect - When the Hyperspace Corridor is created, both ends of the corridor will start leaking Tachyons which can be detected by sensitive instruments. The amount of Tachyons increases with the size of the ship, the distance travelled and the closer the time of arrival.
+					* Tachyon Relay Network - Satellites at the edge of stellar systems use Hyperspace Corridors to beam tranmissions through Hyperspace to their opposites in other systesm. Since these communications have negligible mass, the calculations are nearly instantaneous though the same transit times apply.
+					* History - Imaginary Space, I-Space - While studying fusion plant efficiency using various algorithms, a surprising discovery was made: very rarely and seemingly at random, the plant would produce a tiny tachyon burst. After decades of study, a pattern began to emerge along with a shocking discovery: only algorithms using imaginary numbers could trigger a burst and a small amount of particles were actually disappearing during the event. Where the particles were going became the primary focus of astrophysics from then on. Eventually a hypothesis gathered momentum. The particles were leaving real space and traveling along trajectories plotted through so called imaginary space. This implied that the destination of the particles could be predicted. After much trial and error another breakthrough: a second tachyon burst moments after the first and many kilometers away. The particles had returned. Faster than light travel was possible. The implications for communications were immediately obvious, but could something larger make the trip? Research was slow because increased mass meant increased complexity. The power and computational needs were high but not unachievable. Only a decade later the first successful test craft made the trip. A decade later commercial hyperdrives became available. A decade later they were affordable on even modest starships. 
+				</summary>
+			</ability>
+		</power>
+		<power name="Jump Drive" image="Units/SpaceAndTime/Wormhole.jpg">
+			<titles>Gate Drive, Stargate, Wave Motion Engine, Wormhole</titles>
+			<reference>
+				* I created the Event Horizon to reach the stars, but she's gone much, much farther than that. She tore a hole in our universe, a gateway to another dimension. A dimension of pure chaos. Pure... evil. When she crossed over, she was just a ship. But when she came back... she was alive! - Dr. Weir, Event Horizon
+			</reference>
+			<summary>
+				* Jump Drives generate energy pulses in the ship's drive to create ripples in the fabric of space.  Each pulse must be precisely timed to the apex of each ripple to create an increasing harmonic wave (the 'Wave Motion' effect). Eventually, the energy of the occillation becomes too great, a tear in space is produced, and the starship falls in.
+			</summary>
+			<ability name="Strategic Warp Jump">
+				<summary>
+					* A ship with a Warp Engine may perform a strategic warp jump and instantly remove itself from combat, returning to the strategic map.
+					* A unit already on the strategic map may move [Skill] spaces on the strategic map.
+					* [Requires]: The unit must cease maneuvering and must perform this ability for 3 consecutive turns.
+					* [Action]: On the second consecutive action, the unit immediately removes all Vector tokens and moves the unit to any other space on the map.
+				</summary>
+			</ability>
+			<ability name="Tactical Warp Jump">
+				<summary>
+					* A ship with a Warp Engine may perform a tactical warp jump and instantly transport from any space on the map to any other.
+					* [Requires]: The unit must cease maneuvering and must perform this ability for 2 consecutive turns.
+					* [Action]: On the second consecutive action, the unit immediately removes all Vector tokens and moves the unit to any other space on the map.
+				</summary>
+			</ability>
+		</power>
+		<power name="Teleportation">
+			<titles>Instant Transmission, Teleporter, Transporter</titles>
+			<summary>
+			</summary>
+			<ability name="Teleport Away">
+				<titles>Smite</titles>
+				<summary>
+					* Teleport an object/objects to a precisely known location.
+					* Level determines size of object/objects and distance.
+					* Tricks: Teleporting mines, bombs, fighters, drill missiles.
+				</summary>
+			</ability>
+			<ability name="Teleport Self">
+			</ability>
+			<ability name="Teleport Toward">
+				<reference>Beam me up Scotty</reference>
+				<summary>
+					* Teleport an object/objects that you know the exact location of to your location.
+					* Level determines size of object/objects and distance.
+				</summary>
+			</ability>
+		</power>
+		<power name="Dimensional Travel">
+			<reference>
+				* I reject your reality and substitute my own. - Adam Savage, Mythbusters
+			</reference>
+			<ability name="Dimension Drop">
+				<summary>
+					* Send a small object through a dimensional portal and immediately close it again. This is most practical for sending messages or explosives.
+				</summary>
+			</ability>
+			<ability name="Dimensional Interference">
+				<summary>
+					* Create an area that is more difficult to use dimensional or teleporting abilities.
+				</summary>
+			</ability>
+			<ability name="Dimensional Portal">
+				<titles>Gate</titles>
+			</ability>
+			<ability name="Dimensional Teleport">
+				<summary>
+					* Move rapidly from one location to another by creating a wormhole between the locations.
+				</summary>
+			</ability>
+			<ability name="Dimension Trace">
+				<summary>
+					* Detect the origin of a Teleporter, Dimensional Portal, or an [Outsider].
+				</summary>
+			</ability>
+			<ability name="Dimension Track">
+				<summary>
+					* Track the destination of someone who recently travelled using Teleport or Dimensional Travel. Also can be used to track an [Outsider] as if the user had [Tracking].
+				</summary>
+			</ability>
+			<ability name="Dimensional Trap">
+				<summary>
+					* Open a Dimensional Portal that opens when a target enters the area, draws them through, and then closes behind.
+				</summary>
+			</ability>
+			<ability name="Dimensional Walk">
+				<summary>
+					* Move rapidly over terrain by quickly phasing in and out of the current space.
+				</summary>
+			</ability>
+		</power>
+		<power name="Time Travel" image="Units/SpaceAndTime/Vortex.jpg">
+			<titles>Chronos, Eye of Harmony, Yog-Sothoth</titles>
+			<summary>
+				* The Vortex is a point of null space-time. It is a tunnel through which one can escape the bounds of space-time.
+				* Here time and distance have no meaning. Travelers through the Vortex have no sense of their own body, but have a strong sense that they have been in the Vortex forever. Some suggest that this may actually be true.
+				* Entering the Vortex is like dying. Leaving is like being born. Some suggest that this birth and death cycle is the reason why only living things may be brought through the Vortex.
+			</summary>
+			<ability name="Freeze Time">
+			</ability>
+			<ability name="Reverse Time">
+				<summary>
+					* Rewind recent events within the surrounding area and possibly choose a different [Action].
+				</summary>
+			</ability>
+			<ability name="Rewind">
+			</ability>
+			<ability name="Slow Time">
+			</ability>
+			<ability name="Time Shift">
+			</ability>
+		</power>
+	</section>
+</chapter>
+<chapter name="Physical Powers and Weaknesses">
 	<section name="Physical Powers">
 		<power name="Agility" stat="Body" />
 		<power name="Appearance">
@@ -2420,6 +2421,8 @@
 			<ability name="Thunderclap" />
 		</power>
 	</section>
+</chapter>
+<chapter name="Body Powers">
 	<section name="Alteration Powers">
 		<power name="Adaptation">
 			<summary>
@@ -2551,9 +2554,9 @@
 			</ability>
 			<ability name="Long Life" />
 			<ability name="Reincarnation">
-			    <reference>
-			        * Doctor Who
-			    </reference>
+	   <reference>
+	     * Doctor Who
+	   </reference>
 			</ability>
 			<ability name="Reincarnation - Transference" />
 			<ability name="True Immortality" />
@@ -3249,7 +3252,9 @@
 			<ability name="Zombie Program" />
 		</power>
 	</section>
-	<section name="Energy and Forces">
+</chapter>
+<chapter name="Energy and Forces">
+	<section name="Elements">
 		<power name="Air">
 			<titles>
 				Aeromancer. Storm Lord, Storm Shaman, Weather Witch, Wind Rider, Wind Walker
@@ -3514,20 +3519,8 @@
 			<ability name="Icy Prison" />
 			<ability name="Snowblind" />
 		</power>
-		<power name="Dimensional">
-			<ability name="Faster than Light" />
-			<ability name="Gate" />
-			<ability name="Identify Dimension">
-				<summary>
-					* Ability to gain knowledge of the current dimension or the home dimension of an object or being from another dimension.
-				</summary>
-			</ability>
-			<ability name="Teleport">
-				<titles>Teleportation, Translocation</titles>
-			</ability>
-			<ability name="Warp" />
-			<ability name="Waypoint" />
-		</power>
+ </section>
+ <section name="Forces">
 		<power name="Earth">
 			<titles>Earth Lord, Earth Master, Geomancer</titles>
 			<summary>
@@ -3701,17 +3694,6 @@
 			</ability>
 			<ability name="Resist Electricity" />
 		</power>
-		<power name="Energy Manipulation">
-			<ability name="Control Energy">
-				<summary>
-					* [Reaction]: Redirect an energy effect to another target.
-				</summary>
-			</ability>
-			<ability name="Energy Absorption" />
-			<ability name="Energy Drain" />
-			<ability name="Energy Vampire" />
-		</power>
-		<power name="Explosive" />
 		<power name="Fire">
 			<titles>
 				Arsonist, Fire Lord, Firebomber, Firestarter, Firewalker, Pyrokinetic, Pyromancer, Pyromaniac, Volcanist
@@ -3835,6 +3817,135 @@
 				</summary>
 			</ability>
 		</power>
+		<power name="Water">
+			<titles>Aquamancer, Hydromancer, Wave Rider</titles>
+			<reference>
+				* Davy Jones Locker
+				* The power of water is its ability to change shape. - Genshin Impact
+			</reference>
+			<summary>
+				* Adaptable, Adjustable, Easy-going, Empathic, Flexible, Fluid, Patient, Serene, Versatile, Wrathful
+				* Water is the element of change. Water elementalists must be adaptable, fluid, and flexible in their attitude (though not arbitrary). They are generally patient and empathetic, but they are also known for the intensity of their wrath. Their flexiblitity is often reflected in their sexuality.
+				* Symbol - Blue Teardop
+				* Water is the source of life and after Air it is the thing that we need most urgently to survive. Pure, unspoiled water can bestow many amazing benefits and has been the rise and fall of many empires. Of course, water can also be the source of a quick death.
+				* Though Water washes away impurities, it does so by taking them unto itself and Water always remembers.
+			</summary>
+			<specialty name="Hydromancy">
+				<summary>
+					* Hydro is the magical version of Water.
+					* Hydro effects can be sustained without a source, but they can also be canceled by counter-magic.
+					* Hydro reacts with Pyro to produce the [Vaporize] effect.
+					* Hydro reacts with Cryo to produce the [Freeze] effect.
+					* Hydro reacts with Geo to produce the [Quagmire] effect.
+					* Hydro reacts with Electro to produce the [Electrocharged] effect.
+					* Hydro reacts with Aero to produce the [Fog] effect.
+				</summary>
+			</specialty>
+			<ability name="Air Bubble" />
+			<ability name="Call Water">
+				<titles>Flashflood</titles>
+			</ability>
+			<ability name="Control Water">
+				<summary>
+					* [Reaction]: Redirect a water effect to another target.
+				</summary>
+			</ability>
+			<ability name="Extinguish" />
+			<ability name="Fountain of Youth" />
+			<ability name="Liquify">
+				<summary>
+					* Any solid becomes a liquid.
+				</summary>
+			</ability>
+			<ability name="Part Water" />
+			<ability name="Purify Water" />
+			<ability name="Ride the Wave">
+				<summary>
+					* Slide on water
+				</summary>
+			</ability>
+			<ability name="Scrying Pool">
+				<summary>
+					* Look at your reflection in any pool of water, drop something in, and when the ripples recede you may see the current reflection from any other body of water that you have seen your reflection in.
+				</summary>
+			</ability>
+			<ability name="Summon Current">
+				<summary>
+					* Summons a small living water flow in moving water. Water elementals love nothing more than pushing things around.
+				</summary>
+			</ability>
+			<ability name="Summon Undine" />
+			<ability name="Tides">
+				<summary>
+					* Raise or lower water level.
+				</summary>
+			</ability>
+			<ability name="Tsunami" />
+			<ability name="Undertow">
+				<summary>
+					* Creates a strong downward current that can suck things downward.
+				</summary>
+			</ability>
+			<ability name="Wall of Water">
+				<summary>
+					* [Effect]: [Wall] of Water
+					* [Requires]: May only be cast in water.
+					* [Anytime]: Turbulence strikes any surface or underwater unit that crosses it.
+				</summary>
+			</ability>
+			<ability name="Water Breathing">
+			</ability>
+			<ability name="Water Form">
+				<titles>Liquifiy</titles>
+				<summary>
+					* [Requires]: Douse body in at least a bucket of water.
+					* [Continuous]: May make [Strike] and [Grab] Water Close Combat attacks at Level. Gain attributes of Water as well as [Water Breathing] and [Walk on Water]. [Pierce Resistance], [Slash Resisteance], [Fire Resistance], [Impact Vulnerable], [Heat Vulnerable], [Electric Vulnerable].
+				</summary>
+			</ability>
+			<ability name="Water Spout" />
+			<ability name="Water Walk">
+				<summary>
+					* Move on or under water as if it were solid ground of any desired slope.
+				</summary>
+			</ability>
+			<ability name="Waters of Life" />
+			<ability name="Watery Grave" />
+			<ability name="Wave">
+				<summary>
+					Intensifies existing waves or creates new waves.
+				</summary>
+			</ability>
+			<ability name="Wave Ride" />
+			<ability name="Whirlpool" />
+			<ability name="Wishing Well" />
+		</power>
+ </section>
+ <section name="Energy and Forces">
+		<power name="Energy Manipulation">
+			<ability name="Control Energy">
+				<summary>
+					* [Reaction]: Redirect an energy effect to another target.
+				</summary>
+			</ability>
+			<ability name="Energy Absorption" />
+			<ability name="Energy Drain" />
+			<ability name="Energy Vampire" />
+		</power>
+		<power name="Dimensional">
+			<ability name="Faster than Light" />
+			<ability name="Gate" />
+			<ability name="Identify Dimension">
+				<summary>
+					* Ability to gain knowledge of the current dimension or the home dimension of an object or being from another dimension.
+				</summary>
+			</ability>
+			<ability name="Teleport">
+				<titles>Teleportation, Translocation</titles>
+			</ability>
+			<ability name="Warp" />
+			<ability name="Waypoint" />
+		</power>
+		<power name="Explosive" />
 		<power name="Forces">
 			<ability name="Control Force">
 				<summary>
@@ -3966,113 +4077,12 @@
 		<power name="Vibration">
 			<titles>Tremors</titles>
 		</power>
-		<power name="Water">
-			<titles>Aquamancer, Hydromancer, Wave Rider</titles>
-			<reference>
-				* Davy Jones Locker
-				* The power of water is its ability to change shape. - Genshin Impact
-			</reference>
-			<summary>
-				* Adaptable, Adjustable, Easy-going, Empathic, Flexible, Fluid, Patient, Serene, Versatile, Wrathful
-				* Water is the element of change. Water elementalists must be adaptable, fluid, and flexible in their attitude (though not arbitrary). They are generally patient and empathetic, but they are also known for the intensity of their wrath. Their flexiblitity is often reflected in their sexuality.
-				* Symbol - Blue Teardop
-				* Water is the source of life and after Air it is the thing that we need most urgently to survive. Pure, unspoiled water can bestow many amazing benefits and has been the rise and fall of many empires. Of course, water can also be the source of a quick death.
-				* Though Water washes away impurities, it does so by taking them unto itself and Water always remembers.
-			</summary>
-			<specialty name="Hydromancy">
-				<summary>
-					* Hydro is the magical version of Water.
-					* Hydro effects can be sustained without a source, but they can also be canceled by counter-magic.
-					* Hydro reacts with Pyro to produce the [Vaporize] effect.
-					* Hydro reacts with Cryo to produce the [Freeze] effect.
-					* Hydro reacts with Geo to produce the [Quagmire] effect.
-					* Hydro reacts with Electro to produce the [Electrocharged] effect.
-					* Hydro reacts with Aero to produce the [Fog] effect.
-				</summary>
-			</specialty>
-			<ability name="Air Bubble" />
-			<ability name="Call Water">
-				<titles>Flashflood</titles>
-			</ability>
-			<ability name="Control Water">
-				<summary>
-					* [Reaction]: Redirect a water effect to another target.
-				</summary>
-			</ability>
-			<ability name="Extinguish" />
-			<ability name="Fountain of Youth" />
-			<ability name="Liquify">
-				<summary>
-					* Any solid becomes a liquid.
-				</summary>
-			</ability>
-			<ability name="Part Water" />
-			<ability name="Purify Water" />
-			<ability name="Ride the Wave">
-				<summary>
-					* Slide on water
-				</summary>
-			</ability>
-			<ability name="Scrying Pool">
-				<summary>
-					* Look at your reflection in any pool of water, drop something in, and when the ripples recede you may see the current reflection from any other body of water that you have seen your reflection in.
-				</summary>
-			</ability>
-			<ability name="Summon Current">
-				<summary>
-					* Summons a small living water flow in moving water. Water elementals love nothing more than pushing things around.
-				</summary>
-			</ability>
-			<ability name="Summon Undine" />
-			<ability name="Tides">
-				<summary>
-					* Raise or lower water level.
-				</summary>
-			</ability>
-			<ability name="Tsunami" />
-			<ability name="Undertow">
-				<summary>
-					* Creates a strong downward current that can suck things downward.
-				</summary>
-			</ability>
-			<ability name="Wall of Water">
-				<summary>
-					* [Effect]: [Wall] of Water
-					* [Requires]: May only be cast in water.
-					* [Anytime]: Turbulence strikes any surface or underwater unit that crosses it.
-				</summary>
-			</ability>
-			<ability name="Water Breathing">
-			</ability>
-			<ability name="Water Form">
-				<titles>Liquifiy</titles>
-				<summary>
-					* [Requires]: Douse body in at least a bucket of water.
-					* [Continuous]: May make [Strike] and [Grab] Water Close Combat attacks at Level. Gain attributes of Water as well as [Water Breathing] and [Walk on Water]. [Pierce Resistance], [Slash Resisteance], [Fire Resistance], [Impact Vulnerable], [Heat Vulnerable], [Electric Vulnerable].
-				</summary>
-			</ability>
-			<ability name="Water Spout" />
-			<ability name="Water Walk">
-				<summary>
-					* Move on or under water as if it were solid ground of any desired slope.
-				</summary>
-			</ability>
-			<ability name="Waters of Life" />
-			<ability name="Watery Grave" />
-			<ability name="Wave">
-				<summary>
-					Intensifies existing waves or creates new waves.
-				</summary>
-			</ability>
-			<ability name="Wave Ride" />
-			<ability name="Whirlpool" />
-			<ability name="Wishing Well" />
-		</power>
 	</section>
-	<section name="Enhancement Powers">
-		<power name="Charm">
-			<ability name="Commanding Presense" />
-		</power>
+</chapter>
+<chapter name="Enhancement Powers">
+	<section name="Physical Enhancement">
+ </section>
+	<section name="Mental Enhancement">
 		<power name="Genius" stat="Mind">
 			<titles>Genius, Prodigy, Savant, Super Genius</titles>
 			<ability name="Analyze Weakness" />
@@ -4088,7 +4098,14 @@
 			<ability name="Speed Reading" />
 			<ability name="Tactical Genius" />
 		</power>
+ </section>
+	<section name="Psychic Enhancement">
+		<power name="Charm">
+			<ability name="Commanding Presense" />
+		</power>
 	</section>
+</chapter>
+<chapter name="Alteration Powers">
 	<section name="Material Control">
 		<power name="Atomic Control">
 			<ability name="Disintegrate">
@@ -4107,7 +4124,7 @@
 		<power name="Density Control">
 		</power>
 		<power name="Transfiguration">
-			<titles>Vissisitude</titles>
+			<titles>Fleshcrafting, Vissisitude</titles>
 			<summary>
 				* The ability to transform others.
 			</summary>
@@ -4156,7 +4173,9 @@
 		<power name="Power Theft" />
 		<power name="Power Vampire" />
 	</section>
-	<section name="Godlike Beings">
+</chapter>
+<chapter name="Godlike Powers">
+	<section name="Primal Powers">
 		<titles>Primal Order</titles>
 		<power name="Primal Force">
 			<titles>

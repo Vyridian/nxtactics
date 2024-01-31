@@ -25,11 +25,11 @@ export default class nx_tactics_books_age_of_steam_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/books/age_of_steam", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 8), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 8), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 8), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -49,7 +49,14 @@ export default class nx_tactics_books_age_of_steam_test {
       "funcmap",
         vx_core.f_new(
           vx_core.t_intmap,
-          "bk", 0
+          "chapter_age_of_steam_equipment", 0,
+          "chapter_age_of_steam_overview", 0,
+          "chapter_civil_war", 0,
+          "chapter_examples_of_play", 0,
+          "chapter_steam_age_maps", 0,
+          "chapter_victorian_england", 0,
+          "chapter_wild_west", 0,
+          "tacticsbook", 0
         )
     )
   }

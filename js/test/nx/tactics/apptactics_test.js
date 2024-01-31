@@ -7,6 +7,9 @@ import nx_tactics_base from "../../../src/nx/tactics/base.js"
 import nx_tactics_books_bookloader from "../../../src/nx/tactics/books/bookloader.js"
 import vx_data_file from "../../../src/vx/data/file.js"
 import vx_data_xml from "../../../src/vx/data/xml.js"
+import nx_tactics_books_advanced_rules from "../../../src/nx/tactics/books/advanced_rules.js"
+import vx_ui_ui from "../../../src/vx/ui/ui.js"
+import nx_tactics_uitactics from "../../../src/nx/tactics/uitactics.js"
 
 export default class nx_tactics_apptactics_test {
 

@@ -916,7 +916,7 @@ public final class BookloaderTest {
       ":describelist",
       Test.t_testdescribelist.vx_new(
         Test.t_testdescribe.vx_new(
-          ":describename", "(test\n (base/chapter\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :sectionmap\n   (base/sectionmap\n    :section1\n     (base/section\n      :name \"section1\")))\n (chapter<-xml\n  (xml/xml\n   :tag \"chapter\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section1\"))))))",
+          ":describename", "(test\n (base/chapter\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :sectionmap\n   (base/sectionmap\n    :section1\n     (base/section\n      :name \"section1\")\n    :section2\n     (base/section\n      :name \"section2\")))\n (chapter<-xml\n  (xml/xml\n   :tag \"chapter\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section1\"))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section2\"))))))",
           ":testresult",
             Test.f_test(
               context,
@@ -941,6 +941,14 @@ public final class BookloaderTest {
                         Core.t_anylist.vx_new(
                           Core.vx_new_string(":name"),
                           Core.vx_new_string("section1")
+                        )
+                      ),
+                      Core.vx_new_string(":section2"),
+                      Core.f_new(
+                        Base.t_section,
+                        Core.t_anylist.vx_new(
+                          Core.vx_new_string(":name"),
+                          Core.vx_new_string("section2")
                         )
                       )
                     )
@@ -1018,6 +1026,21 @@ public final class BookloaderTest {
                               Core.t_anylist.vx_new(
                                 Core.vx_new_string(":name"),
                                 Core.vx_new_string("section1")
+                              )
+                            )
+                          )
+                        ),
+                        Core.f_new(
+                          Xml.t_xml,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":tag"),
+                            Core.vx_new_string("section"),
+                            Core.vx_new_string(":propmap"),
+                            Core.f_new(
+                              Core.t_stringmap,
+                              Core.t_anylist.vx_new(
+                                Core.vx_new_string(":name"),
+                                Core.vx_new_string("section2")
                               )
                             )
                           )
@@ -3235,11 +3258,11 @@ public final class BookloaderTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/books/bookloader", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 90, ":tests", 113, ":total", 125), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 35, ":tests", 44, ":total", 125), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 125), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 125), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 35, ":tests", 44, ":total", 125), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 90, ":tests", 116, ":total", 128), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 34, ":tests", 44, ":total", 128), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 128), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 128), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 34, ":tests", 44, ":total", 128), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -3333,8 +3356,11 @@ public final class BookloaderTest {
         ":specialty<-specialty-xmlchild", 1,
         ":specialty<-xml", 1,
         ":string-read<-bookname", 0,
+        ":string-vxlisp-header<-chaptermap", 0,
         ":string-vxlisp<-book", 0,
-        ":string-writename<-book", 0,
+        ":string-vxlisp<-chapter", 0,
+        ":string-vxlisp<-chaptermap", 0,
+        ":string-writename<-string", 0,
         ":team<-team-key-value", 0,
         ":team<-team-stringmap", 0,
         ":team<-team-xmlchild", 0,
