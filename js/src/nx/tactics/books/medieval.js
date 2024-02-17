@@ -10,8 +10,12 @@ export default class nx_tactics_books_medieval {
    * @function chapter_medieval_english
    * @return {chapter}
    */
-  static t_chapter_medieval_english = {}
-  static e_chapter_medieval_english = {vx_type: nx_tactics_books_medieval.t_chapter_medieval_english}
+  static t_chapter_medieval_english = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_medieval_english = {
+    vx_type: nx_tactics_books_medieval.t_chapter_medieval_english
+  }
 
   // (func chapter_medieval_english)
   static f_chapter_medieval_english() {
@@ -48,8 +52,12 @@ export default class nx_tactics_books_medieval {
    * @function chapter_medieval_french
    * @return {chapter}
    */
-  static t_chapter_medieval_french = {}
-  static e_chapter_medieval_french = {vx_type: nx_tactics_books_medieval.t_chapter_medieval_french}
+  static t_chapter_medieval_french = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_medieval_french = {
+    vx_type: nx_tactics_books_medieval.t_chapter_medieval_french
+  }
 
   // (func chapter_medieval_french)
   static f_chapter_medieval_french() {
@@ -90,8 +98,12 @@ export default class nx_tactics_books_medieval {
    * @function chapter_medieval_german
    * @return {chapter}
    */
-  static t_chapter_medieval_german = {}
-  static e_chapter_medieval_german = {vx_type: nx_tactics_books_medieval.t_chapter_medieval_german}
+  static t_chapter_medieval_german = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_medieval_german = {
+    vx_type: nx_tactics_books_medieval.t_chapter_medieval_german
+  }
 
   // (func chapter_medieval_german)
   static f_chapter_medieval_german() {
@@ -108,8 +120,12 @@ export default class nx_tactics_books_medieval {
    * @function chapter_medieval_items
    * @return {chapter}
    */
-  static t_chapter_medieval_items = {}
-  static e_chapter_medieval_items = {vx_type: nx_tactics_books_medieval.t_chapter_medieval_items}
+  static t_chapter_medieval_items = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_medieval_items = {
+    vx_type: nx_tactics_books_medieval.t_chapter_medieval_items
+  }
 
   // (func chapter_medieval_items)
   static f_chapter_medieval_items() {
@@ -150,8 +166,12 @@ export default class nx_tactics_books_medieval {
    * @function chapter_medieval_overview
    * @return {chapter}
    */
-  static t_chapter_medieval_overview = {}
-  static e_chapter_medieval_overview = {vx_type: nx_tactics_books_medieval.t_chapter_medieval_overview}
+  static t_chapter_medieval_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_medieval_overview = {
+    vx_type: nx_tactics_books_medieval.t_chapter_medieval_overview
+  }
 
   // (func chapter_medieval_overview)
   static f_chapter_medieval_overview() {
@@ -186,8 +206,12 @@ export default class nx_tactics_books_medieval {
    * @function chapter_medieval_scenarios
    * @return {chapter}
    */
-  static t_chapter_medieval_scenarios = {}
-  static e_chapter_medieval_scenarios = {vx_type: nx_tactics_books_medieval.t_chapter_medieval_scenarios}
+  static t_chapter_medieval_scenarios = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_medieval_scenarios = {
+    vx_type: nx_tactics_books_medieval.t_chapter_medieval_scenarios
+  }
 
   // (func chapter_medieval_scenarios)
   static f_chapter_medieval_scenarios() {
@@ -360,8 +384,12 @@ export default class nx_tactics_books_medieval {
    * @function chapter_medieval_spanish
    * @return {chapter}
    */
-  static t_chapter_medieval_spanish = {}
-  static e_chapter_medieval_spanish = {vx_type: nx_tactics_books_medieval.t_chapter_medieval_spanish}
+  static t_chapter_medieval_spanish = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_medieval_spanish = {
+    vx_type: nx_tactics_books_medieval.t_chapter_medieval_spanish
+  }
 
   // (func chapter_medieval_spanish)
   static f_chapter_medieval_spanish() {
@@ -378,8 +406,12 @@ export default class nx_tactics_books_medieval {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_medieval.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_medieval.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -412,7 +444,6 @@ export default class nx_tactics_books_medieval {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -452,7 +483,6 @@ export default class nx_tactics_books_medieval {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_medieval_english)
-    nx_tactics_books_medieval.t_chapter_medieval_english['vx_type'] = vx_core.t_type
     nx_tactics_books_medieval.t_chapter_medieval_english['vx_value'] = {
       name          : "chapter_medieval_english",
       pkgname       : "nx/tactics/books/medieval",
@@ -471,7 +501,6 @@ export default class nx_tactics_books_medieval {
     }
 
     // (func chapter_medieval_french)
-    nx_tactics_books_medieval.t_chapter_medieval_french['vx_type'] = vx_core.t_type
     nx_tactics_books_medieval.t_chapter_medieval_french['vx_value'] = {
       name          : "chapter_medieval_french",
       pkgname       : "nx/tactics/books/medieval",
@@ -490,7 +519,6 @@ export default class nx_tactics_books_medieval {
     }
 
     // (func chapter_medieval_german)
-    nx_tactics_books_medieval.t_chapter_medieval_german['vx_type'] = vx_core.t_type
     nx_tactics_books_medieval.t_chapter_medieval_german['vx_value'] = {
       name          : "chapter_medieval_german",
       pkgname       : "nx/tactics/books/medieval",
@@ -509,7 +537,6 @@ export default class nx_tactics_books_medieval {
     }
 
     // (func chapter_medieval_items)
-    nx_tactics_books_medieval.t_chapter_medieval_items['vx_type'] = vx_core.t_type
     nx_tactics_books_medieval.t_chapter_medieval_items['vx_value'] = {
       name          : "chapter_medieval_items",
       pkgname       : "nx/tactics/books/medieval",
@@ -528,7 +555,6 @@ export default class nx_tactics_books_medieval {
     }
 
     // (func chapter_medieval_overview)
-    nx_tactics_books_medieval.t_chapter_medieval_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_medieval.t_chapter_medieval_overview['vx_value'] = {
       name          : "chapter_medieval_overview",
       pkgname       : "nx/tactics/books/medieval",
@@ -547,7 +573,6 @@ export default class nx_tactics_books_medieval {
     }
 
     // (func chapter_medieval_scenarios)
-    nx_tactics_books_medieval.t_chapter_medieval_scenarios['vx_type'] = vx_core.t_type
     nx_tactics_books_medieval.t_chapter_medieval_scenarios['vx_value'] = {
       name          : "chapter_medieval_scenarios",
       pkgname       : "nx/tactics/books/medieval",
@@ -566,7 +591,6 @@ export default class nx_tactics_books_medieval {
     }
 
     // (func chapter_medieval_spanish)
-    nx_tactics_books_medieval.t_chapter_medieval_spanish['vx_type'] = vx_core.t_type
     nx_tactics_books_medieval.t_chapter_medieval_spanish['vx_value'] = {
       name          : "chapter_medieval_spanish",
       pkgname       : "nx/tactics/books/medieval",
@@ -585,7 +609,6 @@ export default class nx_tactics_books_medieval {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_medieval.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_medieval.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/medieval",

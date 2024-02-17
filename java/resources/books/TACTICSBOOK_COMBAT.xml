@@ -2218,10 +2218,10 @@ x +1DMG vs. Crouching.
 					* [Success]: Opponent gains a [Broken Defense Token] for each [Hit]
 				</summary>
 			</ability>
-			<ability name="Block">
+			<ability name="Body Climb">
 				<summary>
-					* [Requires]: Can only be used vs Melee or Close Combat toward the left front or right front. May be used with or without a weapon.
-					* [Reaction]: +1 Defense.
+					* [Requires]: [Melee] or [Close Combat] vs an enemy of larger scale.
+     * [Damage]: If the hit location is [Q], [K], or [A], Climb the target's body and do +1 Damage.
 				</summary>
 			</ability>
 			<ability name="Deflect">

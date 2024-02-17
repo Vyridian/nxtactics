@@ -1,12 +1,30 @@
 (package nx/tactics/apptactics
- :libs (lib base :path nx/tactics/base)
-       (lib bl   :path nx/tactics/books/bookloader)
-       (lib fil  :path vx/data/file)
-       (lib xml  :path vx/data/xml)
-       (lib adv  :path nx/tactics/books/advanced_rules)
-       (lib ui   :path vx/ui/ui)
-       (lib uitx :path nx/tactics/uitactics)
+ :libs (lib base   :path nx/tactics/base)
+       (lib bl     :path nx/tactics/books/bookloader)
+       (lib fil    :path vx/data/file)
+       (lib xml    :path vx/data/xml)
+       (lib adv    :path nx/tactics/books/advanced_rules)
+       (lib ui     :path vx/ui/ui)
+       (lib uihtml :path vx/ui/html/uihtml)
+       (lib uitx   :path nx/tactics/uitactics)
  :doc "Main App for NxTactics")
+
+(func string-render-html : string
+ (let
+  [uiapp  : ui/ui := (ui-app)
+   uihtml : ui/ui := (uihtml/ui-renderer<-ui
+                      uiapp)
+   uirend : ui/ui := (ui/ui-render<-ui
+                      uihtml)]
+  "")
+ :doc "")
+
+(func main-nx : string
+ [args : anylist :...]
+ (string-render-html)
+ :context
+ :doc "The default function for app main execution. Arguments come from the command line.")
+
 
 /*
 
@@ -24,8 +42,6 @@
   "")
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
-
-*/
 
 (func main-nx : string
  [args : anylist :...]
@@ -63,8 +79,6 @@
   (string<-any done))
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
-
-/*
 
 (func main-nx : string
  [args : anylist :...]

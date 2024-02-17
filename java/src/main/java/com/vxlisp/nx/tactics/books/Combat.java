@@ -10478,14 +10478,14 @@ public final class Combat {
                                 Core.vx_new_string("* [Requires]: [Parry], May only be used against swords, knives or polearms.\n* [Reaction]: -2\n* [Success]: Opponent gains a [Broken Defense Token] for each [Hit]")
                               )
                             ),
-                            Core.vx_new_string(":Block"),
+                            Core.vx_new_string("Body Climb"),
                             Core.f_new(
                               Base.t_ability,
                               Core.t_anylist.vx_new(
                                 Core.vx_new_string(":name"),
-                                Core.vx_new_string("Block"),
+                                Core.vx_new_string("Body Climb"),
                                 Core.vx_new_string(":summary"),
-                                Core.vx_new_string("* [Requires]: Can only be used vs Melee or Close Combat toward the left front or right front. May be used with or without a weapon.\n* [Reaction]: +1 Defense.")
+                                Core.vx_new_string("* [Requires]: [Melee] or [Close Combat] vs an enemy of larger scale.\n* [Damage]: If the hit location is [Q], [K], or [A], Climb the target's body and do +1 Damage.")
                               )
                             ),
                             Core.vx_new_string(":Deflect"),

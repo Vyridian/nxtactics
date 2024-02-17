@@ -10,8 +10,12 @@ export default class nx_tactics_books_age_of_steam {
    * @function chapter_age_of_steam_equipment
    * @return {chapter}
    */
-  static t_chapter_age_of_steam_equipment = {}
-  static e_chapter_age_of_steam_equipment = {vx_type: nx_tactics_books_age_of_steam.t_chapter_age_of_steam_equipment}
+  static t_chapter_age_of_steam_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_age_of_steam_equipment = {
+    vx_type: nx_tactics_books_age_of_steam.t_chapter_age_of_steam_equipment
+  }
 
   // (func chapter_age_of_steam_equipment)
   static f_chapter_age_of_steam_equipment() {
@@ -268,8 +272,12 @@ export default class nx_tactics_books_age_of_steam {
    * @function chapter_age_of_steam_overview
    * @return {chapter}
    */
-  static t_chapter_age_of_steam_overview = {}
-  static e_chapter_age_of_steam_overview = {vx_type: nx_tactics_books_age_of_steam.t_chapter_age_of_steam_overview}
+  static t_chapter_age_of_steam_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_age_of_steam_overview = {
+    vx_type: nx_tactics_books_age_of_steam.t_chapter_age_of_steam_overview
+  }
 
   // (func chapter_age_of_steam_overview)
   static f_chapter_age_of_steam_overview() {
@@ -320,8 +328,12 @@ export default class nx_tactics_books_age_of_steam {
    * @function chapter_civil_war
    * @return {chapter}
    */
-  static t_chapter_civil_war = {}
-  static e_chapter_civil_war = {vx_type: nx_tactics_books_age_of_steam.t_chapter_civil_war}
+  static t_chapter_civil_war = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_civil_war = {
+    vx_type: nx_tactics_books_age_of_steam.t_chapter_civil_war
+  }
 
   // (func chapter_civil_war)
   static f_chapter_civil_war() {
@@ -578,8 +590,12 @@ export default class nx_tactics_books_age_of_steam {
    * @function chapter_examples_of_play
    * @return {chapter}
    */
-  static t_chapter_examples_of_play = {}
-  static e_chapter_examples_of_play = {vx_type: nx_tactics_books_age_of_steam.t_chapter_examples_of_play}
+  static t_chapter_examples_of_play = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_examples_of_play = {
+    vx_type: nx_tactics_books_age_of_steam.t_chapter_examples_of_play
+  }
 
   // (func chapter_examples_of_play)
   static f_chapter_examples_of_play() {
@@ -608,8 +624,12 @@ export default class nx_tactics_books_age_of_steam {
    * @function chapter_steam_age_maps
    * @return {chapter}
    */
-  static t_chapter_steam_age_maps = {}
-  static e_chapter_steam_age_maps = {vx_type: nx_tactics_books_age_of_steam.t_chapter_steam_age_maps}
+  static t_chapter_steam_age_maps = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_steam_age_maps = {
+    vx_type: nx_tactics_books_age_of_steam.t_chapter_steam_age_maps
+  }
 
   // (func chapter_steam_age_maps)
   static f_chapter_steam_age_maps() {
@@ -658,8 +678,12 @@ export default class nx_tactics_books_age_of_steam {
    * @function chapter_victorian_england
    * @return {chapter}
    */
-  static t_chapter_victorian_england = {}
-  static e_chapter_victorian_england = {vx_type: nx_tactics_books_age_of_steam.t_chapter_victorian_england}
+  static t_chapter_victorian_england = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_victorian_england = {
+    vx_type: nx_tactics_books_age_of_steam.t_chapter_victorian_england
+  }
 
   // (func chapter_victorian_england)
   static f_chapter_victorian_england() {
@@ -716,8 +740,12 @@ export default class nx_tactics_books_age_of_steam {
    * @function chapter_wild_west
    * @return {chapter}
    */
-  static t_chapter_wild_west = {}
-  static e_chapter_wild_west = {vx_type: nx_tactics_books_age_of_steam.t_chapter_wild_west}
+  static t_chapter_wild_west = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wild_west = {
+    vx_type: nx_tactics_books_age_of_steam.t_chapter_wild_west
+  }
 
   // (func chapter_wild_west)
   static f_chapter_wild_west() {
@@ -1098,8 +1126,12 @@ export default class nx_tactics_books_age_of_steam {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_age_of_steam.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_age_of_steam.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1132,7 +1164,6 @@ export default class nx_tactics_books_age_of_steam {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1172,7 +1203,6 @@ export default class nx_tactics_books_age_of_steam {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_age_of_steam_equipment)
-    nx_tactics_books_age_of_steam.t_chapter_age_of_steam_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_steam.t_chapter_age_of_steam_equipment['vx_value'] = {
       name          : "chapter_age_of_steam_equipment",
       pkgname       : "nx/tactics/books/age_of_steam",
@@ -1191,7 +1221,6 @@ export default class nx_tactics_books_age_of_steam {
     }
 
     // (func chapter_age_of_steam_overview)
-    nx_tactics_books_age_of_steam.t_chapter_age_of_steam_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_steam.t_chapter_age_of_steam_overview['vx_value'] = {
       name          : "chapter_age_of_steam_overview",
       pkgname       : "nx/tactics/books/age_of_steam",
@@ -1210,7 +1239,6 @@ export default class nx_tactics_books_age_of_steam {
     }
 
     // (func chapter_civil_war)
-    nx_tactics_books_age_of_steam.t_chapter_civil_war['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_steam.t_chapter_civil_war['vx_value'] = {
       name          : "chapter_civil_war",
       pkgname       : "nx/tactics/books/age_of_steam",
@@ -1229,7 +1257,6 @@ export default class nx_tactics_books_age_of_steam {
     }
 
     // (func chapter_examples_of_play)
-    nx_tactics_books_age_of_steam.t_chapter_examples_of_play['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_steam.t_chapter_examples_of_play['vx_value'] = {
       name          : "chapter_examples_of_play",
       pkgname       : "nx/tactics/books/age_of_steam",
@@ -1248,7 +1275,6 @@ export default class nx_tactics_books_age_of_steam {
     }
 
     // (func chapter_steam_age_maps)
-    nx_tactics_books_age_of_steam.t_chapter_steam_age_maps['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_steam.t_chapter_steam_age_maps['vx_value'] = {
       name          : "chapter_steam_age_maps",
       pkgname       : "nx/tactics/books/age_of_steam",
@@ -1267,7 +1293,6 @@ export default class nx_tactics_books_age_of_steam {
     }
 
     // (func chapter_victorian_england)
-    nx_tactics_books_age_of_steam.t_chapter_victorian_england['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_steam.t_chapter_victorian_england['vx_value'] = {
       name          : "chapter_victorian_england",
       pkgname       : "nx/tactics/books/age_of_steam",
@@ -1286,7 +1311,6 @@ export default class nx_tactics_books_age_of_steam {
     }
 
     // (func chapter_wild_west)
-    nx_tactics_books_age_of_steam.t_chapter_wild_west['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_steam.t_chapter_wild_west['vx_value'] = {
       name          : "chapter_wild_west",
       pkgname       : "nx/tactics/books/age_of_steam",
@@ -1305,7 +1329,6 @@ export default class nx_tactics_books_age_of_steam {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_age_of_steam.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_steam.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/age_of_steam",

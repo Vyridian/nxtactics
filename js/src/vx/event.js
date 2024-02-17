@@ -11,6 +11,21 @@ export default class vx_event {
    * Generic event
    */
   static t_event = {}
+  static e_event = {vx_type: vx_event.t_event}
+
+  /**
+   * type: eventmap
+   * Map of event
+   */
+  static t_eventmap = {}
+  static e_eventmap = {vx_type: vx_event.t_eventmap}
+  /**
+   * Constant: event-change
+   * Change Event
+   * {event}
+   */
+  static c_event_change = {vx_type: vx_event.t_event, vx_constdef: {pkgname: 'vx/event', name: 'event-change'}}
+
   /**
    * Constant: event-click
    * Click Event
@@ -33,8 +48,12 @@ export default class vx_event {
    * @param  {any} to
    * @return {any-1}
    */
-  static t_any_from_from_to = {}
-  static e_any_from_from_to = {vx_type: vx_event.t_any_from_from_to}
+  static t_any_from_from_to = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_from_to = {
+    vx_type: vx_event.t_any_from_from_to
+  }
 
   // (func any<-from-to)
   static f_any_from_from_to(generic, from, to) {
@@ -43,24 +62,25 @@ export default class vx_event {
     return output
   }
 
-  // empty types
-  static e_event = {}
 
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
+      "event-change": vx_event.c_event_change,
       "event-click": vx_event.c_event_click,
       "event-move": vx_event.c_event_move
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "event": vx_event.e_event,
+      "eventmap": vx_event.e_eventmap,
       "any<-from-to": vx_event.e_any_from_from_to
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "any<-from-to": vx_event.t_any_from_from_to
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
-      "event": vx_event.t_event
+      "event": vx_event.t_event,
+      "eventmap": vx_event.t_eventmap
     })
     const pkg = vx_core.vx_new_struct(vx_core.t_package, {
       "name": "vx/event",
@@ -120,22 +140,26 @@ export default class vx_event {
     vx_event.e_event['vx_type'] = vx_event.t_event
     vx_event.e_event['vx_value'] = {}
 
-    // (const event-click)
-    Object.assign(vx_event.c_event_click, vx_core.f_new(
-      vx_event.t_event,
-      ":name",
-      ":click"
-    ))
-
-    // (const event-move)
-    Object.assign(vx_event.c_event_move, vx_core.f_new(
-      vx_event.t_event,
-      ":name",
-      ":move"
-    ))
+    // (type eventmap)
+    vx_event.t_eventmap['vx_type'] = vx_core.t_type
+    vx_event.t_eventmap['vx_value'] = {
+      name          : "eventmap",
+      pkgname       : "vx/event",
+      extends       : ":map",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [vx_event.t_event],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    vx_event.e_eventmap['vx_type'] = vx_event.t_eventmap
+    vx_event.e_eventmap['vx_value'] = {}
 
     // (func any<-from-to)
-    vx_event.t_any_from_from_to['vx_type'] = vx_core.t_type
     vx_event.t_any_from_from_to['vx_value'] = {
       name          : "any<-from-to",
       pkgname       : "vx/event",
@@ -152,6 +176,27 @@ export default class vx_event {
       proplast      : {},
       fn            : vx_event.f_any_from_from_to
     }
+
+    // (const event-change)
+    Object.assign(vx_event.c_event_change, vx_core.f_new(
+      vx_event.t_event,
+      ":name",
+      ":change"
+    ))
+
+    // (const event-click)
+    Object.assign(vx_event.c_event_click, vx_core.f_new(
+      vx_event.t_event,
+      ":name",
+      ":click"
+    ))
+
+    // (const event-move)
+    Object.assign(vx_event.c_event_move, vx_core.f_new(
+      vx_event.t_event,
+      ":name",
+      ":move"
+    ))
 
   }
 }

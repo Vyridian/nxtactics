@@ -2128,9 +2128,9 @@ When I'm laid to my rest - Don Quixote, The Impossible Dream"
              (ability
               :name "Inscribe Rune"
               :summary "* Allows the permanent addition of magical properties to an item.")
-            "Inscribe Symbol"
+            "Inscribe Sigil"
              (ability
-              :name "Inscribe Symbol"
+              :name "Inscribe Sigil"
               :summary "* Allows the temporary addition of magical properties to an item, portal, or area.")
             :Malediction
              (ability

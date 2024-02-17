@@ -10,32 +10,31 @@ export default class vx_ui_element {
    * type: element
    */
   static t_element = {}
+  static e_element = {vx_type: vx_ui_element.t_element}
 
   /**
    * type: orientation
    */
   static t_orientation = {}
+  static e_orientation = {vx_type: vx_ui_element.t_orientation}
 
   /**
    * type: point
    */
   static t_point = {}
+  static e_point = {vx_type: vx_ui_element.t_point}
 
   /**
    * type: pointlist
    */
   static t_pointlist = {}
+  static e_pointlist = vx_core.vx_new_list(vx_ui_element.t_pointlist, [])
 
   /**
    * type: style
    */
   static t_style = {}
-  // empty types
-  static e_element = {}
-  static e_orientation = {}
-  static e_point = {}
-  static e_pointlist = []
-  static e_style = {}
+  static e_style = {vx_type: vx_ui_element.t_style}
 
 
   static {

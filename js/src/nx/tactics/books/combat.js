@@ -10,8 +10,12 @@ export default class nx_tactics_books_combat {
    * @function chapter_advanced_weaponry
    * @return {chapter}
    */
-  static t_chapter_advanced_weaponry = {}
-  static e_chapter_advanced_weaponry = {vx_type: nx_tactics_books_combat.t_chapter_advanced_weaponry}
+  static t_chapter_advanced_weaponry = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_advanced_weaponry = {
+    vx_type: nx_tactics_books_combat.t_chapter_advanced_weaponry
+  }
 
   // (func chapter_advanced_weaponry)
   static f_chapter_advanced_weaponry() {
@@ -582,8 +586,12 @@ export default class nx_tactics_books_combat {
    * @function chapter_combat_overview
    * @return {chapter}
    */
-  static t_chapter_combat_overview = {}
-  static e_chapter_combat_overview = {vx_type: nx_tactics_books_combat.t_chapter_combat_overview}
+  static t_chapter_combat_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_combat_overview = {
+    vx_type: nx_tactics_books_combat.t_chapter_combat_overview
+  }
 
   // (func chapter_combat_overview)
   static f_chapter_combat_overview() {
@@ -628,8 +636,12 @@ export default class nx_tactics_books_combat {
    * @function chapter_early_weaponry
    * @return {chapter}
    */
-  static t_chapter_early_weaponry = {}
-  static e_chapter_early_weaponry = {vx_type: nx_tactics_books_combat.t_chapter_early_weaponry}
+  static t_chapter_early_weaponry = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_early_weaponry = {
+    vx_type: nx_tactics_books_combat.t_chapter_early_weaponry
+  }
 
   // (func chapter_early_weaponry)
   static f_chapter_early_weaponry() {
@@ -2898,8 +2910,12 @@ export default class nx_tactics_books_combat {
    * @function chapter_example_of_play
    * @return {chapter}
    */
-  static t_chapter_example_of_play = {}
-  static e_chapter_example_of_play = {vx_type: nx_tactics_books_combat.t_chapter_example_of_play}
+  static t_chapter_example_of_play = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_example_of_play = {
+    vx_type: nx_tactics_books_combat.t_chapter_example_of_play
+  }
 
   // (func chapter_example_of_play)
   static f_chapter_example_of_play() {
@@ -2926,8 +2942,12 @@ export default class nx_tactics_books_combat {
    * @function chapter_modern_equipment
    * @return {chapter}
    */
-  static t_chapter_modern_equipment = {}
-  static e_chapter_modern_equipment = {vx_type: nx_tactics_books_combat.t_chapter_modern_equipment}
+  static t_chapter_modern_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_equipment = {
+    vx_type: nx_tactics_books_combat.t_chapter_modern_equipment
+  }
 
   // (func chapter_modern_equipment)
   static f_chapter_modern_equipment() {
@@ -4176,8 +4196,12 @@ export default class nx_tactics_books_combat {
    * @function chapter_rules
    * @return {chapter}
    */
-  static t_chapter_rules = {}
-  static e_chapter_rules = {vx_type: nx_tactics_books_combat.t_chapter_rules}
+  static t_chapter_rules = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_rules = {
+    vx_type: nx_tactics_books_combat.t_chapter_rules
+  }
 
   // (func chapter_rules)
   static f_chapter_rules() {
@@ -6482,8 +6506,12 @@ export default class nx_tactics_books_combat {
    * @function chapter_skills
    * @return {chapter}
    */
-  static t_chapter_skills = {}
-  static e_chapter_skills = {vx_type: nx_tactics_books_combat.t_chapter_skills}
+  static t_chapter_skills = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_skills = {
+    vx_type: nx_tactics_books_combat.t_chapter_skills
+  }
 
   // (func chapter_skills)
   static f_chapter_skills() {
@@ -7799,13 +7827,13 @@ export default class nx_tactics_books_combat {
                   ":summary",
                   "* [Requires]: [Parry], May only be used against swords, knives or polearms.\n* [Reaction]: -2\n* [Success]: Opponent gains a [Broken Defense Token] for each [Hit]"
                 ),
-                ":Block",
+                "Body Climb",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
-                  "Block",
+                  "Body Climb",
                   ":summary",
-                  "* [Requires]: Can only be used vs Melee or Close Combat toward the left front or right front. May be used with or without a weapon.\n* [Reaction]: +1 Defense."
+                  "* [Requires]: [Melee] or [Close Combat] vs an enemy of larger scale.\n* [Damage]: If the hit location is [Q], [K], or [A], Climb the target's body and do +1 Damage."
                 ),
                 ":Deflect",
                 vx_core.f_new(
@@ -9348,8 +9376,12 @@ export default class nx_tactics_books_combat {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_combat.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_combat.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -9382,7 +9414,6 @@ export default class nx_tactics_books_combat {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -9422,7 +9453,6 @@ export default class nx_tactics_books_combat {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_advanced_weaponry)
-    nx_tactics_books_combat.t_chapter_advanced_weaponry['vx_type'] = vx_core.t_type
     nx_tactics_books_combat.t_chapter_advanced_weaponry['vx_value'] = {
       name          : "chapter_advanced_weaponry",
       pkgname       : "nx/tactics/books/combat",
@@ -9441,7 +9471,6 @@ export default class nx_tactics_books_combat {
     }
 
     // (func chapter_combat_overview)
-    nx_tactics_books_combat.t_chapter_combat_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_combat.t_chapter_combat_overview['vx_value'] = {
       name          : "chapter_combat_overview",
       pkgname       : "nx/tactics/books/combat",
@@ -9460,7 +9489,6 @@ export default class nx_tactics_books_combat {
     }
 
     // (func chapter_early_weaponry)
-    nx_tactics_books_combat.t_chapter_early_weaponry['vx_type'] = vx_core.t_type
     nx_tactics_books_combat.t_chapter_early_weaponry['vx_value'] = {
       name          : "chapter_early_weaponry",
       pkgname       : "nx/tactics/books/combat",
@@ -9479,7 +9507,6 @@ export default class nx_tactics_books_combat {
     }
 
     // (func chapter_example_of_play)
-    nx_tactics_books_combat.t_chapter_example_of_play['vx_type'] = vx_core.t_type
     nx_tactics_books_combat.t_chapter_example_of_play['vx_value'] = {
       name          : "chapter_example_of_play",
       pkgname       : "nx/tactics/books/combat",
@@ -9498,7 +9525,6 @@ export default class nx_tactics_books_combat {
     }
 
     // (func chapter_modern_equipment)
-    nx_tactics_books_combat.t_chapter_modern_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_combat.t_chapter_modern_equipment['vx_value'] = {
       name          : "chapter_modern_equipment",
       pkgname       : "nx/tactics/books/combat",
@@ -9517,7 +9543,6 @@ export default class nx_tactics_books_combat {
     }
 
     // (func chapter_rules)
-    nx_tactics_books_combat.t_chapter_rules['vx_type'] = vx_core.t_type
     nx_tactics_books_combat.t_chapter_rules['vx_value'] = {
       name          : "chapter_rules",
       pkgname       : "nx/tactics/books/combat",
@@ -9536,7 +9561,6 @@ export default class nx_tactics_books_combat {
     }
 
     // (func chapter_skills)
-    nx_tactics_books_combat.t_chapter_skills['vx_type'] = vx_core.t_type
     nx_tactics_books_combat.t_chapter_skills['vx_value'] = {
       name          : "chapter_skills",
       pkgname       : "nx/tactics/books/combat",
@@ -9555,7 +9579,6 @@ export default class nx_tactics_books_combat {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_combat.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_combat.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/combat",

@@ -68,6 +68,7 @@ import vx_ui_html_uihtml_test from "./vx/ui/html/uihtml_test.js"
 import vx_ui_image_test from "./vx/ui/image_test.js"
 import vx_ui_navigation_test from "./vx/ui/navigation_test.js"
 import vx_ui_scrollbar_test from "./vx/ui/scrollbar_test.js"
+import vx_ui_svg_uisvg_test from "./vx/ui/svg/uisvg_test.js"
 import vx_ui_text_test from "./vx/ui/text_test.js"
 import vx_ui_textentry_test from "./vx/ui/textentry_test.js"
 import vx_ui_ui_test from "./vx/ui/ui_test.js"
@@ -152,6 +153,7 @@ export default class app_test {
       vx_ui_image_test.test_package(context),
       vx_ui_navigation_test.test_package(context),
       vx_ui_scrollbar_test.test_package(context),
+      vx_ui_svg_uisvg_test.test_package(context),
       vx_ui_text_test.test_package(context),
       vx_ui_textentry_test.test_package(context),
       vx_ui_ui_test.test_package(context)

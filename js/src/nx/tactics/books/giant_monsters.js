@@ -10,8 +10,12 @@ export default class nx_tactics_books_giant_monsters {
    * @function chapter_daikaiju
    * @return {chapter}
    */
-  static t_chapter_daikaiju = {}
-  static e_chapter_daikaiju = {vx_type: nx_tactics_books_giant_monsters.t_chapter_daikaiju}
+  static t_chapter_daikaiju = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_daikaiju = {
+    vx_type: nx_tactics_books_giant_monsters.t_chapter_daikaiju
+  }
 
   // (func chapter_daikaiju)
   static f_chapter_daikaiju() {
@@ -400,8 +404,12 @@ export default class nx_tactics_books_giant_monsters {
    * @function chapter_giant_robots
    * @return {chapter}
    */
-  static t_chapter_giant_robots = {}
-  static e_chapter_giant_robots = {vx_type: nx_tactics_books_giant_monsters.t_chapter_giant_robots}
+  static t_chapter_giant_robots = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_giant_robots = {
+    vx_type: nx_tactics_books_giant_monsters.t_chapter_giant_robots
+  }
 
   // (func chapter_giant_robots)
   static f_chapter_giant_robots() {
@@ -726,8 +734,12 @@ export default class nx_tactics_books_giant_monsters {
    * @function chapter_overview
    * @return {chapter}
    */
-  static t_chapter_overview = {}
-  static e_chapter_overview = {vx_type: nx_tactics_books_giant_monsters.t_chapter_overview}
+  static t_chapter_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_overview = {
+    vx_type: nx_tactics_books_giant_monsters.t_chapter_overview
+  }
 
   // (func chapter_overview)
   static f_chapter_overview() {
@@ -754,8 +766,12 @@ export default class nx_tactics_books_giant_monsters {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_giant_monsters.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_giant_monsters.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -780,7 +796,6 @@ export default class nx_tactics_books_giant_monsters {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -812,7 +827,6 @@ export default class nx_tactics_books_giant_monsters {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_daikaiju)
-    nx_tactics_books_giant_monsters.t_chapter_daikaiju['vx_type'] = vx_core.t_type
     nx_tactics_books_giant_monsters.t_chapter_daikaiju['vx_value'] = {
       name          : "chapter_daikaiju",
       pkgname       : "nx/tactics/books/giant_monsters",
@@ -831,7 +845,6 @@ export default class nx_tactics_books_giant_monsters {
     }
 
     // (func chapter_giant_robots)
-    nx_tactics_books_giant_monsters.t_chapter_giant_robots['vx_type'] = vx_core.t_type
     nx_tactics_books_giant_monsters.t_chapter_giant_robots['vx_value'] = {
       name          : "chapter_giant_robots",
       pkgname       : "nx/tactics/books/giant_monsters",
@@ -850,7 +863,6 @@ export default class nx_tactics_books_giant_monsters {
     }
 
     // (func chapter_overview)
-    nx_tactics_books_giant_monsters.t_chapter_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_giant_monsters.t_chapter_overview['vx_value'] = {
       name          : "chapter_overview",
       pkgname       : "nx/tactics/books/giant_monsters",
@@ -869,7 +881,6 @@ export default class nx_tactics_books_giant_monsters {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_giant_monsters.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_giant_monsters.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/giant_monsters",

@@ -24,7 +24,6 @@ export default class nx_tactics_books_gettingstarted {
    */
   static c_scenario_murin_a2 = {vx_type: nx_tactics_base.t_scenario, vx_constdef: {pkgname: 'nx/tactics/books/gettingstarted', name: 'scenario-murin-a2'}}
 
-  // empty types
 
 
   static {

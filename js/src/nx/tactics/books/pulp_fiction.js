@@ -10,8 +10,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_action_adventure
    * @return {chapter}
    */
-  static t_chapter_action_adventure = {}
-  static e_chapter_action_adventure = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_action_adventure}
+  static t_chapter_action_adventure = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_action_adventure = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_action_adventure
+  }
 
   // (func chapter_action_adventure)
   static f_chapter_action_adventure() {
@@ -124,8 +128,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_flash_gordon
    * @return {chapter}
    */
-  static t_chapter_flash_gordon = {}
-  static e_chapter_flash_gordon = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_flash_gordon}
+  static t_chapter_flash_gordon = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_flash_gordon = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_flash_gordon
+  }
 
   // (func chapter_flash_gordon)
   static f_chapter_flash_gordon() {
@@ -142,8 +150,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_hardboiled_detective
    * @return {chapter}
    */
-  static t_chapter_hardboiled_detective = {}
-  static e_chapter_hardboiled_detective = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_hardboiled_detective}
+  static t_chapter_hardboiled_detective = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_hardboiled_detective = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_hardboiled_detective
+  }
 
   // (func chapter_hardboiled_detective)
   static f_chapter_hardboiled_detective() {
@@ -160,8 +172,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_john_carter_on_mars
    * @return {chapter}
    */
-  static t_chapter_john_carter_on_mars = {}
-  static e_chapter_john_carter_on_mars = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_john_carter_on_mars}
+  static t_chapter_john_carter_on_mars = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_john_carter_on_mars = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_john_carter_on_mars
+  }
 
   // (func chapter_john_carter_on_mars)
   static f_chapter_john_carter_on_mars() {
@@ -178,8 +194,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_land_of_the_lost
    * @return {chapter}
    */
-  static t_chapter_land_of_the_lost = {}
-  static e_chapter_land_of_the_lost = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_land_of_the_lost}
+  static t_chapter_land_of_the_lost = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_land_of_the_lost = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_land_of_the_lost
+  }
 
   // (func chapter_land_of_the_lost)
   static f_chapter_land_of_the_lost() {
@@ -240,8 +260,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_lost_continent
    * @return {chapter}
    */
-  static t_chapter_lost_continent = {}
-  static e_chapter_lost_continent = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_lost_continent}
+  static t_chapter_lost_continent = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_lost_continent = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_lost_continent
+  }
 
   // (func chapter_lost_continent)
   static f_chapter_lost_continent() {
@@ -258,8 +282,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_pulp_fiction_overview
    * @return {chapter}
    */
-  static t_chapter_pulp_fiction_overview = {}
-  static e_chapter_pulp_fiction_overview = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_pulp_fiction_overview}
+  static t_chapter_pulp_fiction_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_pulp_fiction_overview = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_pulp_fiction_overview
+  }
 
   // (func chapter_pulp_fiction_overview)
   static f_chapter_pulp_fiction_overview() {
@@ -286,8 +314,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_true_grit___crime
    * @return {chapter}
    */
-  static t_chapter_true_grit___crime = {}
-  static e_chapter_true_grit___crime = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_true_grit___crime}
+  static t_chapter_true_grit___crime = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_true_grit___crime = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_true_grit___crime
+  }
 
   // (func chapter_true_grit___crime)
   static f_chapter_true_grit___crime() {
@@ -304,8 +336,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function chapter_war_of_the_worlds
    * @return {chapter}
    */
-  static t_chapter_war_of_the_worlds = {}
-  static e_chapter_war_of_the_worlds = {vx_type: nx_tactics_books_pulp_fiction.t_chapter_war_of_the_worlds}
+  static t_chapter_war_of_the_worlds = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_war_of_the_worlds = {
+    vx_type: nx_tactics_books_pulp_fiction.t_chapter_war_of_the_worlds
+  }
 
   // (func chapter_war_of_the_worlds)
   static f_chapter_war_of_the_worlds() {
@@ -322,8 +358,12 @@ export default class nx_tactics_books_pulp_fiction {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_pulp_fiction.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_pulp_fiction.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -358,7 +398,6 @@ export default class nx_tactics_books_pulp_fiction {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -402,7 +441,6 @@ export default class nx_tactics_books_pulp_fiction {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_action_adventure)
-    nx_tactics_books_pulp_fiction.t_chapter_action_adventure['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_action_adventure['vx_value'] = {
       name          : "chapter_action_adventure",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -421,7 +459,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func chapter_flash_gordon)
-    nx_tactics_books_pulp_fiction.t_chapter_flash_gordon['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_flash_gordon['vx_value'] = {
       name          : "chapter_flash_gordon",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -440,7 +477,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func chapter_hardboiled_detective)
-    nx_tactics_books_pulp_fiction.t_chapter_hardboiled_detective['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_hardboiled_detective['vx_value'] = {
       name          : "chapter_hardboiled_detective",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -459,7 +495,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func chapter_john_carter_on_mars)
-    nx_tactics_books_pulp_fiction.t_chapter_john_carter_on_mars['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_john_carter_on_mars['vx_value'] = {
       name          : "chapter_john_carter_on_mars",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -478,7 +513,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func chapter_land_of_the_lost)
-    nx_tactics_books_pulp_fiction.t_chapter_land_of_the_lost['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_land_of_the_lost['vx_value'] = {
       name          : "chapter_land_of_the_lost",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -497,7 +531,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func chapter_lost_continent)
-    nx_tactics_books_pulp_fiction.t_chapter_lost_continent['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_lost_continent['vx_value'] = {
       name          : "chapter_lost_continent",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -516,7 +549,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func chapter_pulp_fiction_overview)
-    nx_tactics_books_pulp_fiction.t_chapter_pulp_fiction_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_pulp_fiction_overview['vx_value'] = {
       name          : "chapter_pulp_fiction_overview",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -535,7 +567,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func chapter_true_grit___crime)
-    nx_tactics_books_pulp_fiction.t_chapter_true_grit___crime['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_true_grit___crime['vx_value'] = {
       name          : "chapter_true_grit___crime",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -554,7 +585,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func chapter_war_of_the_worlds)
-    nx_tactics_books_pulp_fiction.t_chapter_war_of_the_worlds['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_chapter_war_of_the_worlds['vx_value'] = {
       name          : "chapter_war_of_the_worlds",
       pkgname       : "nx/tactics/books/pulp_fiction",
@@ -573,7 +603,6 @@ export default class nx_tactics_books_pulp_fiction {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_pulp_fiction.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_pulp_fiction.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/pulp_fiction",

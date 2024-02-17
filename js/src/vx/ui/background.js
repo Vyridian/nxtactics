@@ -5,7 +5,6 @@ import vx_core from "../../vx/core.js"
 
 export default class vx_ui_background {
 
-  // empty types
 
 
   static {

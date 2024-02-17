@@ -10,8 +10,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_alien___predator
    * @return {chapter}
    */
-  static t_chapter_alien___predator = {}
-  static e_chapter_alien___predator = {vx_type: nx_tactics_books_science_fiction.t_chapter_alien___predator}
+  static t_chapter_alien___predator = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_alien___predator = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_alien___predator
+  }
 
   // (func chapter_alien___predator)
   static f_chapter_alien___predator() {
@@ -748,8 +752,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_alternate_realties
    * @return {chapter}
    */
-  static t_chapter_alternate_realties = {}
-  static e_chapter_alternate_realties = {vx_type: nx_tactics_books_science_fiction.t_chapter_alternate_realties}
+  static t_chapter_alternate_realties = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_alternate_realties = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_alternate_realties
+  }
 
   // (func chapter_alternate_realties)
   static f_chapter_alternate_realties() {
@@ -788,8 +796,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_archetypes
    * @return {chapter}
    */
-  static t_chapter_archetypes = {}
-  static e_chapter_archetypes = {vx_type: nx_tactics_books_science_fiction.t_chapter_archetypes}
+  static t_chapter_archetypes = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_archetypes = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_archetypes
+  }
 
   // (func chapter_archetypes)
   static f_chapter_archetypes() {
@@ -808,8 +820,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_battlestar_galactica
    * @return {chapter}
    */
-  static t_chapter_battlestar_galactica = {}
-  static e_chapter_battlestar_galactica = {vx_type: nx_tactics_books_science_fiction.t_chapter_battlestar_galactica}
+  static t_chapter_battlestar_galactica = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_battlestar_galactica = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_battlestar_galactica
+  }
 
   // (func chapter_battlestar_galactica)
   static f_chapter_battlestar_galactica() {
@@ -906,8 +922,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_doctor_who
    * @return {chapter}
    */
-  static t_chapter_doctor_who = {}
-  static e_chapter_doctor_who = {vx_type: nx_tactics_books_science_fiction.t_chapter_doctor_who}
+  static t_chapter_doctor_who = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_doctor_who = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_doctor_who
+  }
 
   // (func chapter_doctor_who)
   static f_chapter_doctor_who() {
@@ -1170,8 +1190,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_robotech
    * @return {chapter}
    */
-  static t_chapter_robotech = {}
-  static e_chapter_robotech = {vx_type: nx_tactics_books_science_fiction.t_chapter_robotech}
+  static t_chapter_robotech = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_robotech = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_robotech
+  }
 
   // (func chapter_robotech)
   static f_chapter_robotech() {
@@ -1210,8 +1234,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_science_fiction_overview
    * @return {chapter}
    */
-  static t_chapter_science_fiction_overview = {}
-  static e_chapter_science_fiction_overview = {vx_type: nx_tactics_books_science_fiction.t_chapter_science_fiction_overview}
+  static t_chapter_science_fiction_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_science_fiction_overview = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_science_fiction_overview
+  }
 
   // (func chapter_science_fiction_overview)
   static f_chapter_science_fiction_overview() {
@@ -1250,8 +1278,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_space_cruiser_yamato
    * @return {chapter}
    */
-  static t_chapter_space_cruiser_yamato = {}
-  static e_chapter_space_cruiser_yamato = {vx_type: nx_tactics_books_science_fiction.t_chapter_space_cruiser_yamato}
+  static t_chapter_space_cruiser_yamato = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_space_cruiser_yamato = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_space_cruiser_yamato
+  }
 
   // (func chapter_space_cruiser_yamato)
   static f_chapter_space_cruiser_yamato() {
@@ -1604,8 +1636,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_space_opera
    * @return {chapter}
    */
-  static t_chapter_space_opera = {}
-  static e_chapter_space_opera = {vx_type: nx_tactics_books_science_fiction.t_chapter_space_opera}
+  static t_chapter_space_opera = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_space_opera = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_space_opera
+  }
 
   // (func chapter_space_opera)
   static f_chapter_space_opera() {
@@ -3126,8 +3162,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_star_trek
    * @return {chapter}
    */
-  static t_chapter_star_trek = {}
-  static e_chapter_star_trek = {vx_type: nx_tactics_books_science_fiction.t_chapter_star_trek}
+  static t_chapter_star_trek = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_star_trek = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_star_trek
+  }
 
   // (func chapter_star_trek)
   static f_chapter_star_trek() {
@@ -3750,8 +3790,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_star_wars
    * @return {chapter}
    */
-  static t_chapter_star_wars = {}
-  static e_chapter_star_wars = {vx_type: nx_tactics_books_science_fiction.t_chapter_star_wars}
+  static t_chapter_star_wars = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_star_wars = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_star_wars
+  }
 
   // (func chapter_star_wars)
   static f_chapter_star_wars() {
@@ -5274,8 +5318,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_time_travellers
    * @return {chapter}
    */
-  static t_chapter_time_travellers = {}
-  static e_chapter_time_travellers = {vx_type: nx_tactics_books_science_fiction.t_chapter_time_travellers}
+  static t_chapter_time_travellers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_time_travellers = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_time_travellers
+  }
 
   // (func chapter_time_travellers)
   static f_chapter_time_travellers() {
@@ -5482,8 +5530,12 @@ export default class nx_tactics_books_science_fiction {
    * @function chapter_unique_aliens
    * @return {chapter}
    */
-  static t_chapter_unique_aliens = {}
-  static e_chapter_unique_aliens = {vx_type: nx_tactics_books_science_fiction.t_chapter_unique_aliens}
+  static t_chapter_unique_aliens = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_unique_aliens = {
+    vx_type: nx_tactics_books_science_fiction.t_chapter_unique_aliens
+  }
 
   // (func chapter_unique_aliens)
   static f_chapter_unique_aliens() {
@@ -5542,8 +5594,12 @@ export default class nx_tactics_books_science_fiction {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_science_fiction.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_science_fiction.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -5588,7 +5644,6 @@ export default class nx_tactics_books_science_fiction {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -5640,7 +5695,6 @@ export default class nx_tactics_books_science_fiction {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_alien___predator)
-    nx_tactics_books_science_fiction.t_chapter_alien___predator['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_alien___predator['vx_value'] = {
       name          : "chapter_alien___predator",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5659,7 +5713,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_alternate_realties)
-    nx_tactics_books_science_fiction.t_chapter_alternate_realties['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_alternate_realties['vx_value'] = {
       name          : "chapter_alternate_realties",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5678,7 +5731,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_archetypes)
-    nx_tactics_books_science_fiction.t_chapter_archetypes['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_archetypes['vx_value'] = {
       name          : "chapter_archetypes",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5697,7 +5749,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_battlestar_galactica)
-    nx_tactics_books_science_fiction.t_chapter_battlestar_galactica['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_battlestar_galactica['vx_value'] = {
       name          : "chapter_battlestar_galactica",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5716,7 +5767,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_doctor_who)
-    nx_tactics_books_science_fiction.t_chapter_doctor_who['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_doctor_who['vx_value'] = {
       name          : "chapter_doctor_who",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5735,7 +5785,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_robotech)
-    nx_tactics_books_science_fiction.t_chapter_robotech['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_robotech['vx_value'] = {
       name          : "chapter_robotech",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5754,7 +5803,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_science_fiction_overview)
-    nx_tactics_books_science_fiction.t_chapter_science_fiction_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_science_fiction_overview['vx_value'] = {
       name          : "chapter_science_fiction_overview",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5773,7 +5821,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_space_cruiser_yamato)
-    nx_tactics_books_science_fiction.t_chapter_space_cruiser_yamato['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_space_cruiser_yamato['vx_value'] = {
       name          : "chapter_space_cruiser_yamato",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5792,7 +5839,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_space_opera)
-    nx_tactics_books_science_fiction.t_chapter_space_opera['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_space_opera['vx_value'] = {
       name          : "chapter_space_opera",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5811,7 +5857,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_star_trek)
-    nx_tactics_books_science_fiction.t_chapter_star_trek['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_star_trek['vx_value'] = {
       name          : "chapter_star_trek",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5830,7 +5875,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_star_wars)
-    nx_tactics_books_science_fiction.t_chapter_star_wars['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_star_wars['vx_value'] = {
       name          : "chapter_star_wars",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5849,7 +5893,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_time_travellers)
-    nx_tactics_books_science_fiction.t_chapter_time_travellers['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_time_travellers['vx_value'] = {
       name          : "chapter_time_travellers",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5868,7 +5911,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func chapter_unique_aliens)
-    nx_tactics_books_science_fiction.t_chapter_unique_aliens['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_chapter_unique_aliens['vx_value'] = {
       name          : "chapter_unique_aliens",
       pkgname       : "nx/tactics/books/science_fiction",
@@ -5887,7 +5929,6 @@ export default class nx_tactics_books_science_fiction {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_science_fiction.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_science_fiction.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/science_fiction",

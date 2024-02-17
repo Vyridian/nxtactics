@@ -432,9 +432,9 @@ public final class Ui {
     public Ui.Type_render render();
     public Ui.Type_renderer renderer();
     public Core.Type_string uid();
-    public Ui.Type_uilayout uilayout();
     public Ui.Type_uimap uimap();
     public Ui.Type_uistyle uistyle();
+    public Ui.Type_uistylesheet uistylesheet();
   }
 
   public static class Class_ui extends Core.Class_base implements Type_ui {
@@ -474,13 +474,6 @@ public final class Ui {
       return this.vx_p_uid == null ? Core.e_string : this.vx_p_uid;
     }
 
-    protected Ui.Type_uilayout vx_p_uilayout;
-
-    @Override
-    public Ui.Type_uilayout uilayout() {
-      return this.vx_p_uilayout == null ? Ui.e_uilayout : this.vx_p_uilayout;
-    }
-
     protected Ui.Type_uimap vx_p_uimap;
 
     @Override
@@ -493,6 +486,13 @@ public final class Ui {
     @Override
     public Ui.Type_uistyle uistyle() {
       return this.vx_p_uistyle == null ? Ui.e_uistyle : this.vx_p_uistyle;
+    }
+
+    protected Ui.Type_uistylesheet vx_p_uistylesheet;
+
+    @Override
+    public Ui.Type_uistylesheet uistylesheet() {
+      return this.vx_p_uistylesheet == null ? Ui.e_uistylesheet : this.vx_p_uistylesheet;
     }
 
     @Override
@@ -515,14 +515,14 @@ public final class Ui {
       case ":uid":
         output = this.uid();
         break;
-      case ":uilayout":
-        output = this.uilayout();
-        break;
       case ":uimap":
         output = this.uimap();
         break;
       case ":uistyle":
         output = this.uistyle();
+        break;
+      case ":uistylesheet":
+        output = this.uistylesheet();
         break;
       }
       return output;
@@ -536,9 +536,9 @@ public final class Ui {
       output.put(":render", this.render());
       output.put(":renderer", this.renderer());
       output.put(":uid", this.uid());
-      output.put(":uilayout", this.uilayout());
       output.put(":uimap", this.uimap());
       output.put(":uistyle", this.uistyle());
+      output.put(":uistylesheet", this.uistylesheet());
       return Core.immutablemap(output);
     }
 
@@ -559,18 +559,18 @@ public final class Ui {
       Ui.Type_render vx_p_render = val.render();
       Ui.Type_renderer vx_p_renderer = val.renderer();
       Core.Type_string vx_p_uid = val.uid();
-      Ui.Type_uilayout vx_p_uilayout = val.uilayout();
       Ui.Type_uimap vx_p_uimap = val.uimap();
       Ui.Type_uistyle vx_p_uistyle = val.uistyle();
+      Ui.Type_uistylesheet vx_p_uistylesheet = val.uistylesheet();
       ArrayList<String> validkeys = new ArrayList<>();
       validkeys.add(":data");
       validkeys.add(":path");
       validkeys.add(":render");
       validkeys.add(":renderer");
       validkeys.add(":uid");
-      validkeys.add(":uilayout");
       validkeys.add(":uimap");
       validkeys.add(":uistyle");
+      validkeys.add(":uistylesheet");
       String key = "";
       Core.Type_msg msg;
       for (Object valsub : vals) {
@@ -719,26 +719,6 @@ public final class Ui {
               msgblock = msgblock.vx_copy(msg);
             }
             break;
-          case ":uilayout":
-            if (valsub == vx_p_uilayout) {
-            } else if (valsub instanceof Ui.Type_uilayout) {
-              ischanged = true;
-              vx_p_uilayout = (Ui.Type_uilayout)valsub;
-            } else {
-              Core.Type_any msgval;
-              if (valsub instanceof Core.Type_any) {
-                msgval = (Core.Type_any)valsub;
-              } else {
-                msgval = Core.vx_new_string(valsub.toString());
-              }
-              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
-              mapany.put("key", Core.vx_new_string("uilayout"));
-              mapany.put("value", msgval);
-              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
-              msg = Core.vx_msg_from_error("vx/ui/ui/ui", ":invalidvalue", msgmap);
-              msgblock = msgblock.vx_copy(msg);
-            }
-            break;
           case ":uimap":
             if (valsub == vx_p_uimap) {
             } else if (valsub instanceof Ui.Type_uimap) {
@@ -779,6 +759,26 @@ public final class Ui {
               msgblock = msgblock.vx_copy(msg);
             }
             break;
+          case ":uistylesheet":
+            if (valsub == vx_p_uistylesheet) {
+            } else if (valsub instanceof Ui.Type_uistylesheet) {
+              ischanged = true;
+              vx_p_uistylesheet = (Ui.Type_uistylesheet)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("uistylesheet"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("vx/ui/ui/ui", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
           default:
             Core.Type_any msgval = Core.vx_new_string(key);
             msg = Core.vx_msg_from_error("vx/ui/ui/ui", ":invalidkey", msgval);
@@ -794,9 +794,9 @@ public final class Ui {
         work.vx_p_render = vx_p_render;
         work.vx_p_renderer = vx_p_renderer;
         work.vx_p_uid = vx_p_uid;
-        work.vx_p_uilayout = vx_p_uilayout;
         work.vx_p_uimap = vx_p_uimap;
         work.vx_p_uistyle = vx_p_uistyle;
+        work.vx_p_uistylesheet = vx_p_uistylesheet;
         if (msgblock != Core.e_msgblock) {
           work.vxmsgblock = msgblock;
         }
@@ -1153,6 +1153,336 @@ public final class Ui {
   public static final Type_uistyle t_uistyle = new Class_uistyle();
 
   /**
+   * type: uistylemap
+   * Universal Stylemap
+   * (type uistylemap)
+   */
+  public interface Type_uistylemap extends Core.Type_map {
+    public Ui.Type_uistylemap vx_new(final Object... vals);
+    public Ui.Type_uistylemap vx_copy(final Object... vals);
+    public Ui.Type_uistylemap vx_empty();
+    public Ui.Type_uistylemap vx_type();
+    public Map<String, Ui.Type_uistyle> vx_mapuistyle();
+    public Ui.Type_uistyle vx_uistyle(final Core.Type_string key);
+  }
+
+  public static class Class_uistylemap extends Core.Class_base implements Type_uistylemap {
+
+    protected Map<String, Ui.Type_uistyle> vx_p_map = Core.immutablemap(new LinkedHashMap<String, Ui.Type_uistyle>());
+
+    @Override
+    public Map<String, Core.Type_any> vx_map() {return Core.immutablemap(new LinkedHashMap<String, Core.Type_any>(this.vx_p_map));}
+
+    @Override
+    public Ui.Type_uistyle vx_uistyle(final Core.Type_string key) {
+      Ui.Type_uistyle output = Ui.e_uistyle;
+      Class_uistylemap map = this;
+      String skey = key.vx_string();
+      Map<String, Ui.Type_uistyle> mapval = map.vx_p_map;
+      output = mapval.getOrDefault(skey, Ui.e_uistyle);
+      return output;
+    }
+
+    @Override
+    public Map<String, Ui.Type_uistyle> vx_mapuistyle() {return vx_p_map;}
+
+    @Override
+    public Core.Type_any vx_any(final Core.Type_string key) {
+      return this.vx_uistyle(key);
+    }
+
+    @Override
+    public Type_uistylemap vx_new_from_map(final Map<String, Core.Type_any> mapval) {
+      Class_uistylemap output = new Class_uistylemap();
+      Core.Type_msgblock msgblock = Core.e_msgblock;
+      Map<String, Ui.Type_uistyle> map = new LinkedHashMap<>();
+      Set<String> keys = mapval.keySet();
+      for (String key : keys) {
+        Core.Type_any val = mapval.get(key);
+        if (val instanceof Ui.Type_uistyle) {
+          Ui.Type_uistyle castval = (Ui.Type_uistyle)val;
+          map.put(key, castval);
+        } else {
+          Core.Type_msg msg = Core.vx_msg_from_error("vx/ui/ui/uistylemap", ":invalidvalue", val);
+          msgblock = Core.t_msgblock.vx_copy(msgblock, msg);
+        }
+      }
+      output.vx_p_map = Core.immutablemap(map);
+      if (msgblock != Core.e_msgblock) {
+        output.vxmsgblock = msgblock;
+      }
+      return output;
+    }
+
+    @Override
+    public Type_uistylemap vx_new(final Object... vals) {return e_uistylemap.vx_copy(vals);}
+
+    @Override
+    public Type_uistylemap vx_copy(final Object... vals) {
+      Type_uistylemap output = this;
+      boolean ischanged = false;
+      Class_uistylemap val = this;
+      Core.Type_msgblock msgblock = Core.t_msgblock.vx_msgblock_from_copy_arrayval(val, vals);
+      if (this instanceof Core.vx_Type_const) {
+        ischanged = true;
+      }
+      Map<String, Ui.Type_uistyle> mapval = new LinkedHashMap<>(val.vx_mapuistyle());
+      Core.Type_msg msg;
+      String key = "";
+      for (Object valsub : vals) {
+        if (valsub instanceof Core.Type_msgblock) {
+          msgblock = Core.t_msgblock.vx_copy(msgblock, valsub);
+        } else if (valsub instanceof Core.Type_msg) {
+          msgblock = Core.t_msgblock.vx_copy(msgblock, valsub);
+        } else if (key.equals("")) {
+          if (valsub instanceof Core.Type_string) {
+            Core.Type_string valstring = (Core.Type_string)valsub;
+            key = valstring.vx_string();
+          } else if (valsub instanceof String) {
+            key = (String)valsub;
+          } else {
+            Core.Type_any msgval;
+            if (valsub instanceof Core.Type_any) {
+              msgval = (Core.Type_any)valsub;
+            } else {
+              msgval = Core.vx_new_string(valsub.toString());
+            }
+            msg = Core.vx_msg_from_error("vx/ui/ui/uistylemap", ":keyexpected", msgval);
+            msgblock = Core.t_msgblock.vx_copy(msgblock, msg);
+          }
+        } else {
+          Ui.Type_uistyle valany = null;
+          if (valsub instanceof Ui.Type_uistyle) {
+            valany = (Ui.Type_uistyle)valsub;
+          } else if (valsub instanceof Ui.Type_uistyle) {
+            valany = (Ui.Type_uistyle)valsub;
+          } else {
+            Core.Type_any msgval;
+            if (valsub instanceof Core.Type_any) {
+              msgval = (Core.Type_any)valsub;
+            } else {
+              msgval = Core.vx_new_string(valsub.toString());
+            }
+            Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+            mapany.put("key", Core.vx_new_string(key));
+            mapany.put("value", msgval);
+            Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+            msg = Core.vx_msg_from_error("vx/ui/ui/uistylemap", ":invalidkeyvalue", msgmap);
+            msgblock = Core.t_msgblock.vx_copy(msgblock, msg);
+          }
+          if (valany != null) {
+            ischanged = true;
+            if (key.startsWith(":")) {
+              key = key.substring(1);
+            }
+            mapval.put(key, valany);
+            key = "";
+          }
+        }
+      }
+      if (ischanged || (msgblock != Core.e_msgblock)) {
+        Class_uistylemap work = new Class_uistylemap();
+        work.vx_p_map = Core.immutablemap(mapval);
+        if (msgblock != Core.e_msgblock) {
+          work.vxmsgblock = msgblock;
+        }
+        output = work;
+      }
+      return output;
+    }
+
+    @Override
+    public Type_uistylemap vx_empty() {return e_uistylemap;}
+    @Override
+    public Type_uistylemap vx_type() {return t_uistylemap;}
+
+    @Override
+    public Core.Type_typedef vx_typedef() {
+      return Core.typedef_new(
+        "vx/ui/ui", // pkgname
+        "uistylemap", // name
+        ":map", // extends
+        Core.e_typelist, // traits
+        Core.t_typelist.vx_new(Ui.t_uistyle), // allowtypes
+        Core.e_typelist, // disallowtypes
+        Core.e_funclist, // allowfuncs
+        Core.e_funclist, // disallowfuncs
+        Core.e_anylist, // allowvalues
+        Core.e_anylist, // disallowvalues
+        Core.e_argmap // properties
+      );
+    }
+
+  }
+
+  public static final Type_uistylemap e_uistylemap = new Class_uistylemap();
+  public static final Type_uistylemap t_uistylemap = new Class_uistylemap();
+
+  /**
+   * type: uistylesheet
+   * Universal Stylesheet
+   * (type uistylesheet)
+   */
+  public interface Type_uistylesheet extends Core.Type_struct {
+    public Ui.Type_uistylesheet vx_new(final Object... vals);
+    public Ui.Type_uistylesheet vx_copy(final Object... vals);
+    public Ui.Type_uistylesheet vx_empty();
+    public Ui.Type_uistylesheet vx_type();
+    public Ui.Type_uistylemap uistylemap();
+  }
+
+  public static class Class_uistylesheet extends Core.Class_base implements Type_uistylesheet {
+
+    protected Ui.Type_uistylemap vx_p_uistylemap;
+
+    @Override
+    public Ui.Type_uistylemap uistylemap() {
+      return this.vx_p_uistylemap == null ? Ui.e_uistylemap : this.vx_p_uistylemap;
+    }
+
+    @Override
+    public Core.Type_any vx_any(final Core.Type_string key) {
+      Core.Type_any output = Core.e_any;
+      String skey = key.vx_string();
+      switch (skey) {
+      case ":uistylemap":
+        output = this.uistylemap();
+        break;
+      }
+      return output;
+    }
+
+    @Override
+    public Map<String, Core.Type_any> vx_map() {
+      Map<String, Core.Type_any> output = new LinkedHashMap<>();
+      output.put(":uistylemap", this.uistylemap());
+      return Core.immutablemap(output);
+    }
+
+    @Override
+    public Type_uistylesheet vx_new(final Object... vals) {return e_uistylesheet.vx_copy(vals);}
+
+    @Override
+    public Type_uistylesheet vx_copy(final Object... vals) {
+      Type_uistylesheet output = this;
+      boolean ischanged = false;
+      Class_uistylesheet val = this;
+      Core.Type_msgblock msgblock = Core.t_msgblock.vx_msgblock_from_copy_arrayval(val, vals);
+      if (this instanceof Core.vx_Type_const) {
+        ischanged = true;
+      }
+      Ui.Type_uistylemap vx_p_uistylemap = val.uistylemap();
+      ArrayList<String> validkeys = new ArrayList<>();
+      validkeys.add(":uistylemap");
+      String key = "";
+      Core.Type_msg msg;
+      for (Object valsub : vals) {
+        if (valsub instanceof Core.Type_msgblock) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (valsub instanceof Core.Type_msg) {
+          msgblock = msgblock.vx_copy(valsub);
+        } else if (key == "") {
+          boolean istestkey = false;
+          String testkey = "";
+          if (valsub instanceof Core.Type_string) {
+            Core.Type_string valstr = (Core.Type_string)valsub;
+            testkey = valstr.vx_string();
+            istestkey = true;
+          } else if (valsub instanceof String) {
+            testkey = (String)valsub;
+            istestkey = true;
+          } else {
+            Core.Type_any msgval;
+            if (valsub instanceof Core.Type_any) {
+              msgval = (Core.Type_any)valsub;
+            } else {
+              msgval = Core.vx_new_string(valsub.toString());
+            }
+            msg = Core.vx_msg_from_error("vx/ui/ui/uistylesheet", ":invalidkeytype", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          if (istestkey) {
+            if (!testkey.startsWith(":")) {
+              testkey = ":" + testkey;
+            }
+            boolean isvalidkey = validkeys.contains(testkey);
+            if (isvalidkey) {
+              key = testkey;
+            } else {
+              Core.Type_any msgval = Core.vx_new_string(testkey);
+              msg = Core.vx_msg_from_error("vx/ui/ui/uistylesheet", ":invalidkey", msgval);
+              msgblock = msgblock.vx_copy(msg);
+            }
+          }
+        } else {
+          switch (key) {
+          case ":uistylemap":
+            if (valsub == vx_p_uistylemap) {
+            } else if (valsub instanceof Ui.Type_uistylemap) {
+              ischanged = true;
+              vx_p_uistylemap = (Ui.Type_uistylemap)valsub;
+            } else {
+              Core.Type_any msgval;
+              if (valsub instanceof Core.Type_any) {
+                msgval = (Core.Type_any)valsub;
+              } else {
+                msgval = Core.vx_new_string(valsub.toString());
+              }
+              Map<String, Core.Type_any> mapany = new LinkedHashMap<>();
+              mapany.put("key", Core.vx_new_string("uistylemap"));
+              mapany.put("value", msgval);
+              Core.Type_map msgmap = Core.t_anymap.vx_new_from_map(mapany);
+              msg = Core.vx_msg_from_error("vx/ui/ui/uistylesheet", ":invalidvalue", msgmap);
+              msgblock = msgblock.vx_copy(msg);
+            }
+            break;
+          default:
+            Core.Type_any msgval = Core.vx_new_string(key);
+            msg = Core.vx_msg_from_error("vx/ui/ui/uistylesheet", ":invalidkey", msgval);
+            msgblock = msgblock.vx_copy(msg);
+          }
+          key = "";
+        }
+      }
+      if (ischanged || (msgblock != Core.e_msgblock)) {
+        Class_uistylesheet work = new Class_uistylesheet();
+        work.vx_p_uistylemap = vx_p_uistylemap;
+        if (msgblock != Core.e_msgblock) {
+          work.vxmsgblock = msgblock;
+        }
+        output = work;
+      }
+      return output;
+    }
+
+    @Override
+    public Type_uistylesheet vx_empty() {return e_uistylesheet;}
+    @Override
+    public Type_uistylesheet vx_type() {return t_uistylesheet;}
+
+    @Override
+    public Core.Type_typedef vx_typedef() {
+      return Core.typedef_new(
+        "vx/ui/ui", // pkgname
+        "uistylesheet", // name
+        ":struct", // extends
+        Core.e_typelist, // traits
+        Core.e_typelist, // allowtypes
+        Core.e_typelist, // disallowtypes
+        Core.e_funclist, // allowfuncs
+        Core.e_funclist, // disallowfuncs
+        Core.e_anylist, // allowvalues
+        Core.e_anylist, // disallowvalues
+        Core.e_argmap // properties
+      );
+    }
+
+  }
+
+  public static final Type_uistylesheet e_uistylesheet = new Class_uistylesheet();
+  public static final Type_uistylesheet t_uistylesheet = new Class_uistylesheet();
+
+  /**
    * Constant: uilayout-app
    * {uilayout}
    */
@@ -1369,16 +1699,16 @@ public final class Ui {
 
 
   /**
-   * Constant: uilayout-navigation
+   * Constant: uilayout-maxpanel
    * {uilayout}
    */
-  public static class Const_uilayout_navigation extends Ui.Class_uilayout implements Core.vx_Type_const {
+  public static class Const_uilayout_maxpanel extends Ui.Class_uilayout implements Core.vx_Type_const {
 
     @Override
     public Core.Type_constdef vx_constdef() {
       return Core.constdef_new(
         "vx/ui/ui", // pkgname
-        "uilayout-navigation", // name
+        "uilayout-maxpanel", // name
         Core.typedef_new(
           "vx/ui/ui", // pkgname
           "uilayout", // name
@@ -1395,13 +1725,157 @@ public final class Ui {
       );
     }
 
-    public static void const_new(Const_uilayout_navigation output) {
+    public static void const_new(Const_uilayout_maxpanel output) {
     }
 
 
   }
 
-  public static final Const_uilayout_navigation c_uilayout_navigation = new Const_uilayout_navigation();
+  public static final Const_uilayout_maxpanel c_uilayout_maxpanel = new Const_uilayout_maxpanel();
+
+
+  /**
+   * Constant: uilayout-menubar
+   * {uilayout}
+   */
+  public static class Const_uilayout_menubar extends Ui.Class_uilayout implements Core.vx_Type_const {
+
+    @Override
+    public Core.Type_constdef vx_constdef() {
+      return Core.constdef_new(
+        "vx/ui/ui", // pkgname
+        "uilayout-menubar", // name
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "uilayout", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        )
+      );
+    }
+
+    public static void const_new(Const_uilayout_menubar output) {
+    }
+
+
+  }
+
+  public static final Const_uilayout_menubar c_uilayout_menubar = new Const_uilayout_menubar();
+
+
+  /**
+   * Constant: uilayout-menudrawer
+   * {uilayout}
+   */
+  public static class Const_uilayout_menudrawer extends Ui.Class_uilayout implements Core.vx_Type_const {
+
+    @Override
+    public Core.Type_constdef vx_constdef() {
+      return Core.constdef_new(
+        "vx/ui/ui", // pkgname
+        "uilayout-menudrawer", // name
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "uilayout", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        )
+      );
+    }
+
+    public static void const_new(Const_uilayout_menudrawer output) {
+    }
+
+
+  }
+
+  public static final Const_uilayout_menudrawer c_uilayout_menudrawer = new Const_uilayout_menudrawer();
+
+
+  /**
+   * Constant: uilayout-navbar
+   * {uilayout}
+   */
+  public static class Const_uilayout_navbar extends Ui.Class_uilayout implements Core.vx_Type_const {
+
+    @Override
+    public Core.Type_constdef vx_constdef() {
+      return Core.constdef_new(
+        "vx/ui/ui", // pkgname
+        "uilayout-navbar", // name
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "uilayout", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        )
+      );
+    }
+
+    public static void const_new(Const_uilayout_navbar output) {
+    }
+
+
+  }
+
+  public static final Const_uilayout_navbar c_uilayout_navbar = new Const_uilayout_navbar();
+
+
+  /**
+   * Constant: uilayout-navdrawer
+   * {uilayout}
+   */
+  public static class Const_uilayout_navdrawer extends Ui.Class_uilayout implements Core.vx_Type_const {
+
+    @Override
+    public Core.Type_constdef vx_constdef() {
+      return Core.constdef_new(
+        "vx/ui/ui", // pkgname
+        "uilayout-navdrawer", // name
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "uilayout", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        )
+      );
+    }
+
+    public static void const_new(Const_uilayout_navdrawer output) {
+    }
+
+
+  }
+
+  public static final Const_uilayout_navdrawer c_uilayout_navdrawer = new Const_uilayout_navdrawer();
 
 
   /**
@@ -1657,6 +2131,78 @@ public final class Ui {
 
 
   /**
+   * Constant: uilayout-statusbar
+   * {uilayout}
+   */
+  public static class Const_uilayout_statusbar extends Ui.Class_uilayout implements Core.vx_Type_const {
+
+    @Override
+    public Core.Type_constdef vx_constdef() {
+      return Core.constdef_new(
+        "vx/ui/ui", // pkgname
+        "uilayout-statusbar", // name
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "uilayout", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        )
+      );
+    }
+
+    public static void const_new(Const_uilayout_statusbar output) {
+    }
+
+
+  }
+
+  public static final Const_uilayout_statusbar c_uilayout_statusbar = new Const_uilayout_statusbar();
+
+
+  /**
+   * Constant: uilayout-statusdrawer
+   * {uilayout}
+   */
+  public static class Const_uilayout_statusdrawer extends Ui.Class_uilayout implements Core.vx_Type_const {
+
+    @Override
+    public Core.Type_constdef vx_constdef() {
+      return Core.constdef_new(
+        "vx/ui/ui", // pkgname
+        "uilayout-statusdrawer", // name
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "uilayout", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        )
+      );
+    }
+
+    public static void const_new(Const_uilayout_statusdrawer output) {
+    }
+
+
+  }
+
+  public static final Const_uilayout_statusdrawer c_uilayout_statusdrawer = new Const_uilayout_statusdrawer();
+
+
+  /**
    * Constant: uilayout-text
    * {uilayout}
    */
@@ -1726,6 +2272,177 @@ public final class Ui {
   }
 
   public static final Const_uilayout_textentry c_uilayout_textentry = new Const_uilayout_textentry();
+
+  /**
+   * @function render_from_fn_render_ui_orig
+   * @param  {render<-ui-orig} fn-render
+   * @param  {ui} uichg
+   * @param  {ui} uiorig
+   * @return {render}
+   * (func render<-fn-render-ui-orig)
+   */
+  public static interface Func_render_from_fn_render_ui_orig extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_render vx_render_from_fn_render_ui_orig(final Ui.Func_render_from_ui_orig fn_render, final Ui.Type_ui uichg, final Ui.Type_ui uiorig);
+  }
+
+  public static class Class_render_from_fn_render_ui_orig extends Core.Class_base implements Func_render_from_fn_render_ui_orig {
+
+    @Override
+    public Func_render_from_fn_render_ui_orig vx_new(Object... vals) {
+      Class_render_from_fn_render_ui_orig output = new Class_render_from_fn_render_ui_orig();
+      return output;
+    }
+
+    @Override
+    public Func_render_from_fn_render_ui_orig vx_copy(Object... vals) {
+      Class_render_from_fn_render_ui_orig output = new Class_render_from_fn_render_ui_orig();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "vx/ui/ui", // pkgname
+        "render<-fn-render-ui-orig", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "render", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_render_from_fn_render_ui_orig vx_empty() {return e_render_from_fn_render_ui_orig;}
+    @Override
+    public Func_render_from_fn_render_ui_orig vx_type() {return t_render_from_fn_render_ui_orig;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Ui.Func_render_from_ui_orig fn_render = Core.f_any_from_any(Ui.t_render_from_ui_orig, arglist.vx_any(Core.vx_new_int(0)));
+      Ui.Type_ui uichg = Core.f_any_from_any(Ui.t_ui, arglist.vx_any(Core.vx_new_int(1)));
+      Ui.Type_ui uiorig = Core.f_any_from_any(Ui.t_ui, arglist.vx_any(Core.vx_new_int(2)));
+      output = Ui.f_render_from_fn_render_ui_orig(fn_render, uichg, uiorig);
+      return output;
+    }
+
+    @Override
+    public Ui.Type_render vx_render_from_fn_render_ui_orig(final Ui.Func_render_from_ui_orig fn_render, final Ui.Type_ui uichg, final Ui.Type_ui uiorig) {
+      return Ui.f_render_from_fn_render_ui_orig(fn_render, uichg, uiorig);
+    }
+
+  }
+
+  public static final Func_render_from_fn_render_ui_orig e_render_from_fn_render_ui_orig = new Ui.Class_render_from_fn_render_ui_orig();
+  public static final Func_render_from_fn_render_ui_orig t_render_from_fn_render_ui_orig = new Ui.Class_render_from_fn_render_ui_orig();
+
+  public static Ui.Type_render f_render_from_fn_render_ui_orig(final Ui.Func_render_from_ui_orig fn_render, final Ui.Type_ui uichg, final Ui.Type_ui uiorig) {
+    Ui.Type_render output = Ui.e_render;
+    output = Core.vx_any_from_func(Ui.t_render, fn_render, uichg, uiorig);
+    return output;
+  }
+
+  /**
+   * @function render_from_renderer_ui_orig
+   * @param  {renderer} renderer
+   * @param  {ui} uichg
+   * @param  {ui} uiorig
+   * @return {render}
+   * (func render<-renderer-ui-orig)
+   */
+  public static interface Func_render_from_renderer_ui_orig extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_render vx_render_from_renderer_ui_orig(final Ui.Type_renderer renderer, final Ui.Type_ui uichg, final Ui.Type_ui uiorig);
+  }
+
+  public static class Class_render_from_renderer_ui_orig extends Core.Class_base implements Func_render_from_renderer_ui_orig {
+
+    @Override
+    public Func_render_from_renderer_ui_orig vx_new(Object... vals) {
+      Class_render_from_renderer_ui_orig output = new Class_render_from_renderer_ui_orig();
+      return output;
+    }
+
+    @Override
+    public Func_render_from_renderer_ui_orig vx_copy(Object... vals) {
+      Class_render_from_renderer_ui_orig output = new Class_render_from_renderer_ui_orig();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "vx/ui/ui", // pkgname
+        "render<-renderer-ui-orig", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "render", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_render_from_renderer_ui_orig vx_empty() {return e_render_from_renderer_ui_orig;}
+    @Override
+    public Func_render_from_renderer_ui_orig vx_type() {return t_render_from_renderer_ui_orig;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Ui.Type_renderer renderer = Core.f_any_from_any(Ui.t_renderer, arglist.vx_any(Core.vx_new_int(0)));
+      Ui.Type_ui uichg = Core.f_any_from_any(Ui.t_ui, arglist.vx_any(Core.vx_new_int(1)));
+      Ui.Type_ui uiorig = Core.f_any_from_any(Ui.t_ui, arglist.vx_any(Core.vx_new_int(2)));
+      output = Ui.f_render_from_renderer_ui_orig(renderer, uichg, uiorig);
+      return output;
+    }
+
+    @Override
+    public Ui.Type_render vx_render_from_renderer_ui_orig(final Ui.Type_renderer renderer, final Ui.Type_ui uichg, final Ui.Type_ui uiorig) {
+      return Ui.f_render_from_renderer_ui_orig(renderer, uichg, uiorig);
+    }
+
+  }
+
+  public static final Func_render_from_renderer_ui_orig e_render_from_renderer_ui_orig = new Ui.Class_render_from_renderer_ui_orig();
+  public static final Func_render_from_renderer_ui_orig t_render_from_renderer_ui_orig = new Ui.Class_render_from_renderer_ui_orig();
+
+  public static Ui.Type_render f_render_from_renderer_ui_orig(final Ui.Type_renderer renderer, final Ui.Type_ui uichg, final Ui.Type_ui uiorig) {
+    Ui.Type_render output = Ui.e_render;
+    output = Core.f_let(
+      Ui.t_render,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Ui.Func_render_from_ui_orig fn_render = renderer.fn_render();
+        final Ui.Type_render renderchg = Core.vx_any_from_func(Ui.t_render, fn_render, uichg, uiorig);
+        return renderchg;
+      })
+    );
+    return output;
+  }
 
   /**
    * @function render_from_ui
@@ -2138,7 +2855,11 @@ public final class Ui {
     Const_uilayout_flow_horizontal.const_new(c_uilayout_flow_horizontal);
     Const_uilayout_flow_vertical.const_new(c_uilayout_flow_vertical);
     Const_uilayout_image.const_new(c_uilayout_image);
-    Const_uilayout_navigation.const_new(c_uilayout_navigation);
+    Const_uilayout_maxpanel.const_new(c_uilayout_maxpanel);
+    Const_uilayout_menubar.const_new(c_uilayout_menubar);
+    Const_uilayout_menudrawer.const_new(c_uilayout_menudrawer);
+    Const_uilayout_navbar.const_new(c_uilayout_navbar);
+    Const_uilayout_navdrawer.const_new(c_uilayout_navdrawer);
     Const_uilayout_panel.const_new(c_uilayout_panel);
     Const_uilayout_parallax.const_new(c_uilayout_parallax);
     Const_uilayout_scrollbox.const_new(c_uilayout_scrollbox);
@@ -2146,6 +2867,8 @@ public final class Ui {
     Const_uilayout_scrollbox_vertical.const_new(c_uilayout_scrollbox_vertical);
     Const_uilayout_split_horizontal.const_new(c_uilayout_split_horizontal);
     Const_uilayout_split_vertical.const_new(c_uilayout_split_vertical);
+    Const_uilayout_statusbar.const_new(c_uilayout_statusbar);
+    Const_uilayout_statusdrawer.const_new(c_uilayout_statusdrawer);
     Const_uilayout_text.const_new(c_uilayout_text);
     Const_uilayout_textentry.const_new(c_uilayout_textentry);
     Map<String, Core.Type_any> maptype = new LinkedHashMap<>();
@@ -2158,13 +2881,19 @@ public final class Ui {
     maptype.put("uilayout", Ui.t_uilayout);
     maptype.put("uimap", Ui.t_uimap);
     maptype.put("uistyle", Ui.t_uistyle);
+    maptype.put("uistylemap", Ui.t_uistylemap);
+    maptype.put("uistylesheet", Ui.t_uistylesheet);
     mapconst.put("uilayout-app", Ui.c_uilayout_app);
     mapconst.put("uilayout-background", Ui.c_uilayout_background);
     mapconst.put("uilayout-combobox", Ui.c_uilayout_combobox);
     mapconst.put("uilayout-flow-horizontal", Ui.c_uilayout_flow_horizontal);
     mapconst.put("uilayout-flow-vertical", Ui.c_uilayout_flow_vertical);
     mapconst.put("uilayout-image", Ui.c_uilayout_image);
-    mapconst.put("uilayout-navigation", Ui.c_uilayout_navigation);
+    mapconst.put("uilayout-maxpanel", Ui.c_uilayout_maxpanel);
+    mapconst.put("uilayout-menubar", Ui.c_uilayout_menubar);
+    mapconst.put("uilayout-menudrawer", Ui.c_uilayout_menudrawer);
+    mapconst.put("uilayout-navbar", Ui.c_uilayout_navbar);
+    mapconst.put("uilayout-navdrawer", Ui.c_uilayout_navdrawer);
     mapconst.put("uilayout-panel", Ui.c_uilayout_panel);
     mapconst.put("uilayout-parallax", Ui.c_uilayout_parallax);
     mapconst.put("uilayout-scrollbox", Ui.c_uilayout_scrollbox);
@@ -2172,8 +2901,12 @@ public final class Ui {
     mapconst.put("uilayout-scrollbox-vertical", Ui.c_uilayout_scrollbox_vertical);
     mapconst.put("uilayout-split-horizontal", Ui.c_uilayout_split_horizontal);
     mapconst.put("uilayout-split-vertical", Ui.c_uilayout_split_vertical);
+    mapconst.put("uilayout-statusbar", Ui.c_uilayout_statusbar);
+    mapconst.put("uilayout-statusdrawer", Ui.c_uilayout_statusdrawer);
     mapconst.put("uilayout-text", Ui.c_uilayout_text);
     mapconst.put("uilayout-textentry", Ui.c_uilayout_textentry);
+    mapfunc.put("render<-fn-render-ui-orig", Ui.t_render_from_fn_render_ui_orig);
+    mapfunc.put("render<-renderer-ui-orig", Ui.t_render_from_renderer_ui_orig);
     mapfunc.put("render<-ui", Ui.t_render_from_ui);
     mapfunc.put("render<-ui-orig", Ui.t_render_from_ui_orig);
     mapfunc.put("rendermap<-uimap", Ui.t_rendermap_from_uimap);

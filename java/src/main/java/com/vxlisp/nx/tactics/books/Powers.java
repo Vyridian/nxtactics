@@ -8836,6 +8836,16 @@ public final class Powers {
                                 Core.vx_new_string("Simulacrum")
                               )
                             ),
+                            Core.vx_new_string("Sleight of Mind"),
+                            Core.f_new(
+                              Base.t_ability,
+                              Core.t_anylist.vx_new(
+                                Core.vx_new_string(":name"),
+                                Core.vx_new_string("Sleight of Mind"),
+                                Core.vx_new_string(":summary"),
+                                Core.vx_new_string("* [Slow] [Even] [Mind]: +1 [Stress]. Create a distraction.")
+                              )
+                            ),
                             Core.vx_new_string("Smoke and Mirrors"),
                             Core.f_new(
                               Base.t_ability,

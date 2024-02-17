@@ -1205,6 +1205,11 @@
 			</ability>
 			<ability name="Shimmer" />
 			<ability name="Simulacrum" />
+   <ability name="Slight of Mind">
+    <summary>
+     * [Slow] [Even] [Mind]: +1 [Stress]. Create a distraction.
+    </summary>
+   </ability>
 			<ability name="Smoke and Mirrors" />
 			<ability name="Taste of Ambrosia" />
 			<ability name="Taste of Ashes" />

@@ -10,8 +10,12 @@ export default class nx_tactics_books_superheroes {
    * @function chapter_dc_universe
    * @return {chapter}
    */
-  static t_chapter_dc_universe = {}
-  static e_chapter_dc_universe = {vx_type: nx_tactics_books_superheroes.t_chapter_dc_universe}
+  static t_chapter_dc_universe = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_dc_universe = {
+    vx_type: nx_tactics_books_superheroes.t_chapter_dc_universe
+  }
 
   // (func chapter_dc_universe)
   static f_chapter_dc_universe() {
@@ -196,8 +200,12 @@ export default class nx_tactics_books_superheroes {
    * @function chapter_dragonball_z
    * @return {chapter}
    */
-  static t_chapter_dragonball_z = {}
-  static e_chapter_dragonball_z = {vx_type: nx_tactics_books_superheroes.t_chapter_dragonball_z}
+  static t_chapter_dragonball_z = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_dragonball_z = {
+    vx_type: nx_tactics_books_superheroes.t_chapter_dragonball_z
+  }
 
   // (func chapter_dragonball_z)
   static f_chapter_dragonball_z() {
@@ -2172,8 +2180,12 @@ export default class nx_tactics_books_superheroes {
    * @function chapter_marvel_universe
    * @return {chapter}
    */
-  static t_chapter_marvel_universe = {}
-  static e_chapter_marvel_universe = {vx_type: nx_tactics_books_superheroes.t_chapter_marvel_universe}
+  static t_chapter_marvel_universe = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_marvel_universe = {
+    vx_type: nx_tactics_books_superheroes.t_chapter_marvel_universe
+  }
 
   // (func chapter_marvel_universe)
   static f_chapter_marvel_universe() {
@@ -4204,8 +4216,12 @@ export default class nx_tactics_books_superheroes {
    * @function chapter_original_groups
    * @return {chapter}
    */
-  static t_chapter_original_groups = {}
-  static e_chapter_original_groups = {vx_type: nx_tactics_books_superheroes.t_chapter_original_groups}
+  static t_chapter_original_groups = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_original_groups = {
+    vx_type: nx_tactics_books_superheroes.t_chapter_original_groups
+  }
 
   // (func chapter_original_groups)
   static f_chapter_original_groups() {
@@ -5204,8 +5220,12 @@ export default class nx_tactics_books_superheroes {
    * @function chapter_superhero_characters
    * @return {chapter}
    */
-  static t_chapter_superhero_characters = {}
-  static e_chapter_superhero_characters = {vx_type: nx_tactics_books_superheroes.t_chapter_superhero_characters}
+  static t_chapter_superhero_characters = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_superhero_characters = {
+    vx_type: nx_tactics_books_superheroes.t_chapter_superhero_characters
+  }
 
   // (func chapter_superhero_characters)
   static f_chapter_superhero_characters() {
@@ -5278,8 +5298,12 @@ export default class nx_tactics_books_superheroes {
    * @function chapter_superheroes_overview
    * @return {chapter}
    */
-  static t_chapter_superheroes_overview = {}
-  static e_chapter_superheroes_overview = {vx_type: nx_tactics_books_superheroes.t_chapter_superheroes_overview}
+  static t_chapter_superheroes_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_superheroes_overview = {
+    vx_type: nx_tactics_books_superheroes.t_chapter_superheroes_overview
+  }
 
   // (func chapter_superheroes_overview)
   static f_chapter_superheroes_overview() {
@@ -5306,8 +5330,12 @@ export default class nx_tactics_books_superheroes {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_superheroes.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_superheroes.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -5338,7 +5366,6 @@ export default class nx_tactics_books_superheroes {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -5376,7 +5403,6 @@ export default class nx_tactics_books_superheroes {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_dc_universe)
-    nx_tactics_books_superheroes.t_chapter_dc_universe['vx_type'] = vx_core.t_type
     nx_tactics_books_superheroes.t_chapter_dc_universe['vx_value'] = {
       name          : "chapter_dc_universe",
       pkgname       : "nx/tactics/books/superheroes",
@@ -5395,7 +5421,6 @@ export default class nx_tactics_books_superheroes {
     }
 
     // (func chapter_dragonball_z)
-    nx_tactics_books_superheroes.t_chapter_dragonball_z['vx_type'] = vx_core.t_type
     nx_tactics_books_superheroes.t_chapter_dragonball_z['vx_value'] = {
       name          : "chapter_dragonball_z",
       pkgname       : "nx/tactics/books/superheroes",
@@ -5414,7 +5439,6 @@ export default class nx_tactics_books_superheroes {
     }
 
     // (func chapter_marvel_universe)
-    nx_tactics_books_superheroes.t_chapter_marvel_universe['vx_type'] = vx_core.t_type
     nx_tactics_books_superheroes.t_chapter_marvel_universe['vx_value'] = {
       name          : "chapter_marvel_universe",
       pkgname       : "nx/tactics/books/superheroes",
@@ -5433,7 +5457,6 @@ export default class nx_tactics_books_superheroes {
     }
 
     // (func chapter_original_groups)
-    nx_tactics_books_superheroes.t_chapter_original_groups['vx_type'] = vx_core.t_type
     nx_tactics_books_superheroes.t_chapter_original_groups['vx_value'] = {
       name          : "chapter_original_groups",
       pkgname       : "nx/tactics/books/superheroes",
@@ -5452,7 +5475,6 @@ export default class nx_tactics_books_superheroes {
     }
 
     // (func chapter_superhero_characters)
-    nx_tactics_books_superheroes.t_chapter_superhero_characters['vx_type'] = vx_core.t_type
     nx_tactics_books_superheroes.t_chapter_superhero_characters['vx_value'] = {
       name          : "chapter_superhero_characters",
       pkgname       : "nx/tactics/books/superheroes",
@@ -5471,7 +5493,6 @@ export default class nx_tactics_books_superheroes {
     }
 
     // (func chapter_superheroes_overview)
-    nx_tactics_books_superheroes.t_chapter_superheroes_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_superheroes.t_chapter_superheroes_overview['vx_value'] = {
       name          : "chapter_superheroes_overview",
       pkgname       : "nx/tactics/books/superheroes",
@@ -5490,7 +5511,6 @@ export default class nx_tactics_books_superheroes {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_superheroes.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_superheroes.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/superheroes",

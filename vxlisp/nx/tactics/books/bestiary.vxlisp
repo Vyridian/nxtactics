@@ -4788,6 +4788,21 @@ Types
                 :Grappling
                  (unitspecialty
                   :name "Grappling")))))
+        "Dead of Night"
+         (unit
+          :name "Dead of Night"
+          :summary "* The Night Dead are reanimated corpses of thoses who have died in terror in darkness. They are desperate for light but their darkness powers consume light making normal light sources produce a fraction of their normal illumination. Magical light will expose them and stun them. Bathing in light is the only way to free their spirits and end their torment.")
+        "Dead of Winter"
+         (unit
+          :name "Dead of Winter"
+          :reference "* I know what it means to freeze to death, To lose a little life with every breath, To say goodbye to life on earth, And come around again, Lord have mercy on the frozen man - James Taylor, Frozen Man"
+          :summary "* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily throw themselves into raging fires. Death by fire is the only way to free their spirits and end their torment."
+          :titles "The Frigid, Frozen Dead, Frozen Man, Ice Man, Snowman"
+          :unitpowermap
+           (unitpowermap
+            :Cold
+             (unitpower
+              :name "Cold")))
         :Dhampyr
          (unit
           :name "Dhampyr"
@@ -4812,17 +4827,6 @@ Types
           :reference "* The Ring"
           :summary "* The Drowned are the spirits of those who have died by drowning. They are completely fixated on their drowning death and are compelled to reenact the experience with others."
           :titles "Drowner, Kappa")
-        "Frozen Dead"
-         (unit
-          :name "Frozen Dead"
-          :reference "* I know what it means to freeze to death, To lose a little life with every breath, To say goodbye to life on earth, And come around again, Lord have mercy on the frozen man - James Taylor, Frozen Man"
-          :summary "* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily through themselves into raging fires. Death by fire is the only way to free their spirits and end their torment."
-          :titles "The Frigid, Frozen Man, Ice Man, Snowman"
-          :unitpowermap
-           (unitpowermap
-            :Cold
-             (unitpower
-              :name "Cold")))
         "Ghost Ship"
          (unit
           :name "Ghost Ship"

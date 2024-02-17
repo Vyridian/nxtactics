@@ -10,8 +10,12 @@ export default class nx_tactics_books_prehistory {
    * @function chapter_prehistoric_creatures
    * @return {chapter}
    */
-  static t_chapter_prehistoric_creatures = {}
-  static e_chapter_prehistoric_creatures = {vx_type: nx_tactics_books_prehistory.t_chapter_prehistoric_creatures}
+  static t_chapter_prehistoric_creatures = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_prehistoric_creatures = {
+    vx_type: nx_tactics_books_prehistory.t_chapter_prehistoric_creatures
+  }
 
   // (func chapter_prehistoric_creatures)
   static f_chapter_prehistoric_creatures() {
@@ -290,8 +294,12 @@ export default class nx_tactics_books_prehistory {
    * @function chapter_prehistory_overview
    * @return {chapter}
    */
-  static t_chapter_prehistory_overview = {}
-  static e_chapter_prehistory_overview = {vx_type: nx_tactics_books_prehistory.t_chapter_prehistory_overview}
+  static t_chapter_prehistory_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_prehistory_overview = {
+    vx_type: nx_tactics_books_prehistory.t_chapter_prehistory_overview
+  }
 
   // (func chapter_prehistory_overview)
   static f_chapter_prehistory_overview() {
@@ -318,8 +326,12 @@ export default class nx_tactics_books_prehistory {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_prehistory.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_prehistory.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -340,7 +352,6 @@ export default class nx_tactics_books_prehistory {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -370,7 +381,6 @@ export default class nx_tactics_books_prehistory {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_prehistoric_creatures)
-    nx_tactics_books_prehistory.t_chapter_prehistoric_creatures['vx_type'] = vx_core.t_type
     nx_tactics_books_prehistory.t_chapter_prehistoric_creatures['vx_value'] = {
       name          : "chapter_prehistoric_creatures",
       pkgname       : "nx/tactics/books/prehistory",
@@ -389,7 +399,6 @@ export default class nx_tactics_books_prehistory {
     }
 
     // (func chapter_prehistory_overview)
-    nx_tactics_books_prehistory.t_chapter_prehistory_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_prehistory.t_chapter_prehistory_overview['vx_value'] = {
       name          : "chapter_prehistory_overview",
       pkgname       : "nx/tactics/books/prehistory",
@@ -408,7 +417,6 @@ export default class nx_tactics_books_prehistory {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_prehistory.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_prehistory.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/prehistory",

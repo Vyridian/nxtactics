@@ -10,8 +10,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_amphibians
    * @return {chapter}
    */
-  static t_chapter_amphibians = {}
-  static e_chapter_amphibians = {vx_type: nx_tactics_books_bestiary.t_chapter_amphibians}
+  static t_chapter_amphibians = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_amphibians = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_amphibians
+  }
 
   // (func chapter_amphibians)
   static f_chapter_amphibians() {
@@ -88,8 +92,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_arthropods
    * @return {chapter}
    */
-  static t_chapter_arthropods = {}
-  static e_chapter_arthropods = {vx_type: nx_tactics_books_bestiary.t_chapter_arthropods}
+  static t_chapter_arthropods = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_arthropods = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_arthropods
+  }
 
   // (func chapter_arthropods)
   static f_chapter_arthropods() {
@@ -504,8 +512,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_avians
    * @return {chapter}
    */
-  static t_chapter_avians = {}
-  static e_chapter_avians = {vx_type: nx_tactics_books_bestiary.t_chapter_avians}
+  static t_chapter_avians = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_avians = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_avians
+  }
 
   // (func chapter_avians)
   static f_chapter_avians() {
@@ -658,8 +670,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_beastmen
    * @return {chapter}
    */
-  static t_chapter_beastmen = {}
-  static e_chapter_beastmen = {vx_type: nx_tactics_books_bestiary.t_chapter_beastmen}
+  static t_chapter_beastmen = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_beastmen = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_beastmen
+  }
 
   // (func chapter_beastmen)
   static f_chapter_beastmen() {
@@ -1070,8 +1086,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_bestiary_overview
    * @return {chapter}
    */
-  static t_chapter_bestiary_overview = {}
-  static e_chapter_bestiary_overview = {vx_type: nx_tactics_books_bestiary.t_chapter_bestiary_overview}
+  static t_chapter_bestiary_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_bestiary_overview = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_bestiary_overview
+  }
 
   // (func chapter_bestiary_overview)
   static f_chapter_bestiary_overview() {
@@ -1098,8 +1118,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_constructs
    * @return {chapter}
    */
-  static t_chapter_constructs = {}
-  static e_chapter_constructs = {vx_type: nx_tactics_books_bestiary.t_chapter_constructs}
+  static t_chapter_constructs = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_constructs = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_constructs
+  }
 
   // (func chapter_constructs)
   static f_chapter_constructs() {
@@ -1494,8 +1518,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_darkling
    * @return {chapter}
    */
-  static t_chapter_darkling = {}
-  static e_chapter_darkling = {vx_type: nx_tactics_books_bestiary.t_chapter_darkling}
+  static t_chapter_darkling = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_darkling = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_darkling
+  }
 
   // (func chapter_darkling)
   static f_chapter_darkling() {
@@ -2198,8 +2226,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_dragons
    * @return {chapter}
    */
-  static t_chapter_dragons = {}
-  static e_chapter_dragons = {vx_type: nx_tactics_books_bestiary.t_chapter_dragons}
+  static t_chapter_dragons = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_dragons = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_dragons
+  }
 
   // (func chapter_dragons)
   static f_chapter_dragons() {
@@ -2484,8 +2516,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_elementals
    * @return {chapter}
    */
-  static t_chapter_elementals = {}
-  static e_chapter_elementals = {vx_type: nx_tactics_books_bestiary.t_chapter_elementals}
+  static t_chapter_elementals = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_elementals = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_elementals
+  }
 
   // (func chapter_elementals)
   static f_chapter_elementals() {
@@ -2832,8 +2868,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_extra_dimensional
    * @return {chapter}
    */
-  static t_chapter_extra_dimensional = {}
-  static e_chapter_extra_dimensional = {vx_type: nx_tactics_books_bestiary.t_chapter_extra_dimensional}
+  static t_chapter_extra_dimensional = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_extra_dimensional = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_extra_dimensional
+  }
 
   // (func chapter_extra-dimensional)
   static f_chapter_extra_dimensional() {
@@ -3848,8 +3888,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_giant_races
    * @return {chapter}
    */
-  static t_chapter_giant_races = {}
-  static e_chapter_giant_races = {vx_type: nx_tactics_books_bestiary.t_chapter_giant_races}
+  static t_chapter_giant_races = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_giant_races = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_giant_races
+  }
 
   // (func chapter_giant_races)
   static f_chapter_giant_races() {
@@ -4092,8 +4136,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_humanoids
    * @return {chapter}
    */
-  static t_chapter_humanoids = {}
-  static e_chapter_humanoids = {vx_type: nx_tactics_books_bestiary.t_chapter_humanoids}
+  static t_chapter_humanoids = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_humanoids = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_humanoids
+  }
 
   // (func chapter_humanoids)
   static f_chapter_humanoids() {
@@ -4150,8 +4198,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_humanoids_fantastic
    * @return {chapter}
    */
-  static t_chapter_humanoids_fantastic = {}
-  static e_chapter_humanoids_fantastic = {vx_type: nx_tactics_books_bestiary.t_chapter_humanoids_fantastic}
+  static t_chapter_humanoids_fantastic = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_humanoids_fantastic = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_humanoids_fantastic
+  }
 
   // (func chapter_humanoids_fantastic)
   static f_chapter_humanoids_fantastic() {
@@ -4982,8 +5034,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_mammals_marsupials
    * @return {chapter}
    */
-  static t_chapter_mammals_marsupials = {}
-  static e_chapter_mammals_marsupials = {vx_type: nx_tactics_books_bestiary.t_chapter_mammals_marsupials}
+  static t_chapter_mammals_marsupials = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_mammals_marsupials = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_mammals_marsupials
+  }
 
   // (func chapter_mammals_marsupials)
   static f_chapter_mammals_marsupials() {
@@ -5744,8 +5800,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_marine_creatures
    * @return {chapter}
    */
-  static t_chapter_marine_creatures = {}
-  static e_chapter_marine_creatures = {vx_type: nx_tactics_books_bestiary.t_chapter_marine_creatures}
+  static t_chapter_marine_creatures = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_marine_creatures = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_marine_creatures
+  }
 
   // (func chapter_marine_creatures)
   static f_chapter_marine_creatures() {
@@ -6110,8 +6170,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_microorganisms
    * @return {chapter}
    */
-  static t_chapter_microorganisms = {}
-  static e_chapter_microorganisms = {vx_type: nx_tactics_books_bestiary.t_chapter_microorganisms}
+  static t_chapter_microorganisms = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_microorganisms = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_microorganisms
+  }
 
   // (func chapter_microorganisms)
   static f_chapter_microorganisms() {
@@ -6214,8 +6278,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_mythical_beasts
    * @return {chapter}
    */
-  static t_chapter_mythical_beasts = {}
-  static e_chapter_mythical_beasts = {vx_type: nx_tactics_books_bestiary.t_chapter_mythical_beasts}
+  static t_chapter_mythical_beasts = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_mythical_beasts = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_mythical_beasts
+  }
 
   // (func chapter_mythical_beasts)
   static f_chapter_mythical_beasts() {
@@ -6612,8 +6680,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_plants
    * @return {chapter}
    */
-  static t_chapter_plants = {}
-  static e_chapter_plants = {vx_type: nx_tactics_books_bestiary.t_chapter_plants}
+  static t_chapter_plants = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_plants = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_plants
+  }
 
   // (func chapter_plants)
   static f_chapter_plants() {
@@ -7028,8 +7100,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_reptiles
    * @return {chapter}
    */
-  static t_chapter_reptiles = {}
-  static e_chapter_reptiles = {vx_type: nx_tactics_books_bestiary.t_chapter_reptiles}
+  static t_chapter_reptiles = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_reptiles = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_reptiles
+  }
 
   // (func chapter_reptiles)
   static f_chapter_reptiles() {
@@ -7264,8 +7340,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_shapeshifters
    * @return {chapter}
    */
-  static t_chapter_shapeshifters = {}
-  static e_chapter_shapeshifters = {vx_type: nx_tactics_books_bestiary.t_chapter_shapeshifters}
+  static t_chapter_shapeshifters = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_shapeshifters = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_shapeshifters
+  }
 
   // (func chapter_shapeshifters)
   static f_chapter_shapeshifters() {
@@ -7468,8 +7548,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_undead_creatures
    * @return {chapter}
    */
-  static t_chapter_undead_creatures = {}
-  static e_chapter_undead_creatures = {vx_type: nx_tactics_books_bestiary.t_chapter_undead_creatures}
+  static t_chapter_undead_creatures = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_undead_creatures = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_undead_creatures
+  }
 
   // (func chapter_undead_creatures)
   static f_chapter_undead_creatures() {
@@ -7545,6 +7629,36 @@ export default class nx_tactics_books_bestiary {
                 )
               )
             ),
+            "Dead of Night",
+            vx_core.f_new(
+              nx_tactics_base.t_unit,
+              ":name",
+              "Dead of Night",
+              ":summary",
+              "* The Night Dead are reanimated corpses of thoses who have died in terror in darkness. They are desperate for light but their darkness powers consume light making normal light sources produce a fraction of their normal illumination. Magical light will expose them and stun them. Bathing in light is the only way to free their spirits and end their torment."
+            ),
+            "Dead of Winter",
+            vx_core.f_new(
+              nx_tactics_base.t_unit,
+              ":name",
+              "Dead of Winter",
+              ":reference",
+              "* I know what it means to freeze to death, To lose a little life with every breath, To say goodbye to life on earth, And come around again, Lord have mercy on the frozen man - James Taylor, Frozen Man",
+              ":summary",
+              "* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily throw themselves into raging fires. Death by fire is the only way to free their spirits and end their torment.",
+              ":titles",
+              "The Frigid, Frozen Dead, Frozen Man, Ice Man, Snowman",
+              ":unitpowermap",
+              vx_core.f_new(
+                nx_tactics_base.t_unitpowermap,
+                ":Cold",
+                vx_core.f_new(
+                  nx_tactics_base.t_unitpower,
+                  ":name",
+                  "Cold"
+                )
+              )
+            ),
             ":Dhampyr",
             vx_core.f_new(
               nx_tactics_base.t_unit,
@@ -7566,28 +7680,6 @@ export default class nx_tactics_books_bestiary {
               "* The Drowned are the spirits of those who have died by drowning. They are completely fixated on their drowning death and are compelled to reenact the experience with others.",
               ":titles",
               "Drowner, Kappa"
-            ),
-            "Frozen Dead",
-            vx_core.f_new(
-              nx_tactics_base.t_unit,
-              ":name",
-              "Frozen Dead",
-              ":reference",
-              "* I know what it means to freeze to death, To lose a little life with every breath, To say goodbye to life on earth, And come around again, Lord have mercy on the frozen man - James Taylor, Frozen Man",
-              ":summary",
-              "* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily through themselves into raging fires. Death by fire is the only way to free their spirits and end their torment.",
-              ":titles",
-              "The Frigid, Frozen Man, Ice Man, Snowman",
-              ":unitpowermap",
-              vx_core.f_new(
-                nx_tactics_base.t_unitpowermap,
-                ":Cold",
-                vx_core.f_new(
-                  nx_tactics_base.t_unitpower,
-                  ":name",
-                  "Cold"
-                )
-              )
             ),
             "Ghost Ship",
             vx_core.f_new(
@@ -8526,8 +8618,12 @@ export default class nx_tactics_books_bestiary {
    * @function chapter_underground_creatures
    * @return {chapter}
    */
-  static t_chapter_underground_creatures = {}
-  static e_chapter_underground_creatures = {vx_type: nx_tactics_books_bestiary.t_chapter_underground_creatures}
+  static t_chapter_underground_creatures = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_underground_creatures = {
+    vx_type: nx_tactics_books_bestiary.t_chapter_underground_creatures
+  }
 
   // (func chapter_underground_creatures)
   static f_chapter_underground_creatures() {
@@ -8642,8 +8738,12 @@ export default class nx_tactics_books_bestiary {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_bestiary.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_bestiary.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -8706,7 +8806,6 @@ export default class nx_tactics_books_bestiary {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -8776,7 +8875,6 @@ export default class nx_tactics_books_bestiary {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_amphibians)
-    nx_tactics_books_bestiary.t_chapter_amphibians['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_amphibians['vx_value'] = {
       name          : "chapter_amphibians",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8795,7 +8893,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_arthropods)
-    nx_tactics_books_bestiary.t_chapter_arthropods['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_arthropods['vx_value'] = {
       name          : "chapter_arthropods",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8814,7 +8911,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_avians)
-    nx_tactics_books_bestiary.t_chapter_avians['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_avians['vx_value'] = {
       name          : "chapter_avians",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8833,7 +8929,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_beastmen)
-    nx_tactics_books_bestiary.t_chapter_beastmen['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_beastmen['vx_value'] = {
       name          : "chapter_beastmen",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8852,7 +8947,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_bestiary_overview)
-    nx_tactics_books_bestiary.t_chapter_bestiary_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_bestiary_overview['vx_value'] = {
       name          : "chapter_bestiary_overview",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8871,7 +8965,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_constructs)
-    nx_tactics_books_bestiary.t_chapter_constructs['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_constructs['vx_value'] = {
       name          : "chapter_constructs",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8890,7 +8983,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_darkling)
-    nx_tactics_books_bestiary.t_chapter_darkling['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_darkling['vx_value'] = {
       name          : "chapter_darkling",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8909,7 +9001,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_dragons)
-    nx_tactics_books_bestiary.t_chapter_dragons['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_dragons['vx_value'] = {
       name          : "chapter_dragons",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8928,7 +9019,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_elementals)
-    nx_tactics_books_bestiary.t_chapter_elementals['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_elementals['vx_value'] = {
       name          : "chapter_elementals",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8947,7 +9037,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_extra-dimensional)
-    nx_tactics_books_bestiary.t_chapter_extra_dimensional['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_extra_dimensional['vx_value'] = {
       name          : "chapter_extra-dimensional",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8966,7 +9055,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_giant_races)
-    nx_tactics_books_bestiary.t_chapter_giant_races['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_giant_races['vx_value'] = {
       name          : "chapter_giant_races",
       pkgname       : "nx/tactics/books/bestiary",
@@ -8985,7 +9073,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_humanoids)
-    nx_tactics_books_bestiary.t_chapter_humanoids['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_humanoids['vx_value'] = {
       name          : "chapter_humanoids",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9004,7 +9091,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_humanoids_fantastic)
-    nx_tactics_books_bestiary.t_chapter_humanoids_fantastic['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_humanoids_fantastic['vx_value'] = {
       name          : "chapter_humanoids_fantastic",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9023,7 +9109,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_mammals_marsupials)
-    nx_tactics_books_bestiary.t_chapter_mammals_marsupials['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_mammals_marsupials['vx_value'] = {
       name          : "chapter_mammals_marsupials",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9042,7 +9127,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_marine_creatures)
-    nx_tactics_books_bestiary.t_chapter_marine_creatures['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_marine_creatures['vx_value'] = {
       name          : "chapter_marine_creatures",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9061,7 +9145,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_microorganisms)
-    nx_tactics_books_bestiary.t_chapter_microorganisms['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_microorganisms['vx_value'] = {
       name          : "chapter_microorganisms",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9080,7 +9163,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_mythical_beasts)
-    nx_tactics_books_bestiary.t_chapter_mythical_beasts['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_mythical_beasts['vx_value'] = {
       name          : "chapter_mythical_beasts",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9099,7 +9181,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_plants)
-    nx_tactics_books_bestiary.t_chapter_plants['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_plants['vx_value'] = {
       name          : "chapter_plants",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9118,7 +9199,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_reptiles)
-    nx_tactics_books_bestiary.t_chapter_reptiles['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_reptiles['vx_value'] = {
       name          : "chapter_reptiles",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9137,7 +9217,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_shapeshifters)
-    nx_tactics_books_bestiary.t_chapter_shapeshifters['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_shapeshifters['vx_value'] = {
       name          : "chapter_shapeshifters",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9156,7 +9235,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_undead_creatures)
-    nx_tactics_books_bestiary.t_chapter_undead_creatures['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_undead_creatures['vx_value'] = {
       name          : "chapter_undead_creatures",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9175,7 +9253,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func chapter_underground_creatures)
-    nx_tactics_books_bestiary.t_chapter_underground_creatures['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_chapter_underground_creatures['vx_value'] = {
       name          : "chapter_underground_creatures",
       pkgname       : "nx/tactics/books/bestiary",
@@ -9194,7 +9271,6 @@ export default class nx_tactics_books_bestiary {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_bestiary.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_bestiary.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/bestiary",

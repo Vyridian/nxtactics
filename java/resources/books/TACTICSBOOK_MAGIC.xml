@@ -1872,7 +1872,7 @@
 					* Allows the permanent addition of magical properties to an item.
 				</summary>
 			</ability>
-			<ability name="Inscribe Symbol">
+			<ability name="Inscribe Sigil">
 				<summary>
 					* Allows the temporary addition of magical properties to an item, portal, or area.
 				</summary>

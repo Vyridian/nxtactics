@@ -7,6 +7,7 @@ import vx_data_file from "../../vx/data/file.js"
 import vx_data_xml from "../../vx/data/xml.js"
 import nx_tactics_books_advanced_rules from "../../nx/tactics/books/advanced_rules.js"
 import vx_ui_ui from "../../vx/ui/ui.js"
+import vx_ui_html_uihtml from "../../vx/ui/html/uihtml.js"
 import nx_tactics_uitactics from "../../nx/tactics/uitactics.js"
 
 
@@ -18,8 +19,12 @@ export default class nx_tactics_apptactics {
    * @param  {anylist} ... args
    * @return {context}
    */
-  static t_context_nx = {}
-  static e_context_nx = {vx_type: nx_tactics_apptactics.t_context_nx}
+  static t_context_nx = {
+    vx_type: vx_core.t_type
+  }
+  static e_context_nx = {
+    vx_type: nx_tactics_apptactics.t_context_nx
+  }
 
   // (func context-nx)
   static f_context_nx(...args) {
@@ -47,50 +52,18 @@ export default class nx_tactics_apptactics {
    * @param  {anylist} ... args
    * @return {string}
    */
-  static t_main_nx = {}
-  static e_main_nx = {vx_type: nx_tactics_apptactics.t_main_nx}
+  static t_main_nx = {
+    vx_type: vx_core.t_type
+  }
+  static e_main_nx = {
+    vx_type: nx_tactics_apptactics.t_main_nx
+  }
 
   // (func main-nx)
   static f_main_nx(context, ...args) {
     let output = vx_core.e_string
     args = vx_core.f_new(vx_core.t_anylist, ...args)
-    output = vx_core.f_let(
-      {"any-1": vx_core.t_string},
-      [],
-      vx_core.f_new(vx_core.t_any_from_func, () => {
-        const booknames = vx_core.f_new(
-          vx_core.t_stringlist,
-          "TACTICSBOOK_CORE",
-          "TACTICSBOOK_ADVANCED",
-          "TACTICSBOOK_ANCIENT",
-          "TACTICSBOOK_AOSAIL",
-          "TACTICSBOOK_AOSTEAM",
-          "TACTICSBOOK_BESTIARY",
-          "TACTICSBOOK_CHARS",
-          "TACTICSBOOK_COMBAT",
-          "TACTICSBOOK_FANTASY",
-          "TACTICSBOOK_GEAR",
-          "TACTICSBOOK_GIANT",
-          "TACTICSBOOK_HIGHTECH",
-          "TACTICSBOOK_HORROR",
-          "TACTICSBOOK_LANDSEA",
-          "TACTICSBOOK_MAGIC",
-          "TACTICSBOOK_MEDIEVAL",
-          "TACTICSBOOK_MFANTASY",
-          "TACTICSBOOK_MODERN",
-          "TACTICSBOOK_POWERS",
-          "TACTICSBOOK_PREHISTORY",
-          "TACTICSBOOK_PULP",
-          "TACTICSBOOK_SCIFI",
-          "TACTICSBOOK_SKILLS",
-          "TACTICSBOOK_SPACE",
-          "TACTICSBOOK_SUPER",
-          "TACTICSBOOK_WORLDWARS"
-        )
-        const done = nx_tactics_books_bookloader.f_boolean_write_from_booknames(context, booknames)
-        return vx_core.f_string_from_any(done)
-      })
-    )
+    output = nx_tactics_apptactics.f_string_render_html()
     return output
   }
 
@@ -99,8 +72,12 @@ export default class nx_tactics_apptactics {
    * Returns the security for execution.
    * @return {security}
    */
-  static t_security_nx = {}
-  static e_security_nx = {vx_type: nx_tactics_apptactics.t_security_nx}
+  static t_security_nx = {
+    vx_type: vx_core.t_type
+  }
+  static e_security_nx = {
+    vx_type: nx_tactics_apptactics.t_security_nx
+  }
 
   // (func security-nx)
   static f_security_nx() {
@@ -119,7 +96,33 @@ export default class nx_tactics_apptactics {
     return output
   }
 
-  // empty types
+  /**
+   * @function string_render_html
+   * @return {string}
+   */
+  static t_string_render_html = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_render_html = {
+    vx_type: nx_tactics_apptactics.t_string_render_html
+  }
+
+  // (func string-render-html)
+  static f_string_render_html() {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uiapp = nx_tactics_uitactics.f_ui_app()
+        const uihtml = vx_ui_html_uihtml.f_ui_renderer_from_ui(uiapp)
+        const uirend = vx_ui_ui.f_ui_render_from_ui(uihtml)
+        return ""
+      })
+    )
+    return output
+  }
+
 
 
   static {
@@ -129,12 +132,14 @@ export default class nx_tactics_apptactics {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "context-nx": nx_tactics_apptactics.e_context_nx,
       "main-nx": nx_tactics_apptactics.e_main_nx,
-      "security-nx": nx_tactics_apptactics.e_security_nx
+      "security-nx": nx_tactics_apptactics.e_security_nx,
+      "string-render-html": nx_tactics_apptactics.e_string_render_html
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "context-nx": nx_tactics_apptactics.t_context_nx,
       "main-nx": nx_tactics_apptactics.t_main_nx,
-      "security-nx": nx_tactics_apptactics.t_security_nx
+      "security-nx": nx_tactics_apptactics.t_security_nx,
+      "string-render-html": nx_tactics_apptactics.t_string_render_html
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -149,7 +154,6 @@ export default class nx_tactics_apptactics {
     vx_core.vx_global_package_set(pkg)
 
     // (func context-nx)
-    nx_tactics_apptactics.t_context_nx['vx_type'] = vx_core.t_type
     nx_tactics_apptactics.t_context_nx['vx_value'] = {
       name          : "context-nx",
       pkgname       : "nx/tactics/apptactics",
@@ -168,7 +172,6 @@ export default class nx_tactics_apptactics {
     }
 
     // (func main-nx)
-    nx_tactics_apptactics.t_main_nx['vx_type'] = vx_core.t_type
     nx_tactics_apptactics.t_main_nx['vx_value'] = {
       name          : "main-nx",
       pkgname       : "nx/tactics/apptactics",
@@ -187,7 +190,6 @@ export default class nx_tactics_apptactics {
     }
 
     // (func security-nx)
-    nx_tactics_apptactics.t_security_nx['vx_type'] = vx_core.t_type
     nx_tactics_apptactics.t_security_nx['vx_value'] = {
       name          : "security-nx",
       pkgname       : "nx/tactics/apptactics",
@@ -203,6 +205,24 @@ export default class nx_tactics_apptactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_apptactics.f_security_nx
+    }
+
+    // (func string-render-html)
+    nx_tactics_apptactics.t_string_render_html['vx_value'] = {
+      name          : "string-render-html",
+      pkgname       : "nx/tactics/apptactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_apptactics.f_string_render_html
     }
 
   }

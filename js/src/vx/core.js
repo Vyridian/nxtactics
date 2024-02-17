@@ -4,6 +4,14 @@
 
 export default class vx_core {
 
+  // vx_any_from_func(generic_any_1, func, args...)
+  static vx_any_from_func(generic_any_1, func, ...args) {
+    const funcdef = func['vx_value']
+    const fn = funcdef['fn']
+    const output = fn.apply(null, args)
+    return output
+  }
+
   // vx_any_from_map_start_reduce(any-1, map-2, any-1, any<-any-key-value)
   static vx_any_from_map_start_reduce(generic_any_1, map, start, fn_reduce) {
     let output = vx_core.f_empty(generic_any_1)
@@ -266,7 +274,14 @@ export default class vx_core {
             break
           default:
             const typename = vx_core.f_typename_from_typedef(typedef)
-            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            const msg = vx_core.f_msg_from_error(
+              'vx/core/new',
+              'invalidvalue',
+              vx_core.vx_new_map(vx_core.t_anymap, {
+                type: type,
+                value: vx_core.vx_string_from_any(value)
+              })
+            )
             msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
             break
           }
@@ -350,7 +365,14 @@ export default class vx_core {
             break
           default:
             const typename = vx_core.f_typename_from_typedef(typedef)
-            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            const msg = vx_core.f_msg_from_error(
+              'vx/core/new',
+              'invalidvalue',
+              vx_core.vx_new_map(vx_core.t_anymap, {
+                type: type,
+                value: vx_core.vx_string_from_any(value)
+              })
+            )
             msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
             break
           }
@@ -427,7 +449,14 @@ export default class vx_core {
             break
           default:
             const typename = vx_core.f_typename_from_typedef(typedef)
-            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            const msg = vx_core.f_msg_from_error(
+              'vx/core/new',
+              'invalidvalue',
+              vx_core.vx_new_map(vx_core.t_anymap, {
+                type: type,
+                value: vx_core.vx_string_from_any(value)
+              })
+            )
             msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
             break
           }
@@ -484,7 +513,14 @@ export default class vx_core {
             break
           default:
             const typename = vx_core.f_typename_from_typedef(typedef)
-            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            const msg = vx_core.f_msg_from_error(
+              'vx/core/new',
+              'invalidvalue',
+              vx_core.vx_new_map(vx_core.t_anymap, {
+                type: type,
+                value: vx_core.vx_string_from_any(value)
+              })
+            )
             msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
             break
           }
@@ -536,7 +572,14 @@ export default class vx_core {
                 break
               default:
                 const typename = vx_core.f_typename_from_typedef(typedef)
-                const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+                const msg = vx_core.f_msg_from_error(
+                  'vx/core/new',
+                  'invalidvalue',
+                  vx_core.vx_new_map(vx_core.t_anymap, {
+                    type: type,
+                    value: vx_core.vx_string_from_any(value)
+                  })
+                )
                 msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
                 break
               }
@@ -607,7 +650,14 @@ export default class vx_core {
           }
           if (!isfound) {
             const typename = vx_core.f_typename_from_typedef(typedef)
-            const msg = vx_core.f_msg_from_error('(new ' + typename + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Value')
+            const msg = vx_core.f_msg_from_error(
+              'vx/core/new',
+              'invalidvalue',
+              vx_core.vx_new_map(vx_core.t_anymap, {
+                type: type,
+                value: vx_core.vx_string_from_any(value)
+              })
+            )
             msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
           }
         })
@@ -655,7 +705,14 @@ export default class vx_core {
               break
             default:
               const typename = vx_core.f_typename_from_typedef(typedef)
-              const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + vx_core.vx_string_from_any(value) + ') - Invalid Key')
+              const msg = vx_core.f_msg_from_error(
+                'vx/core/new',
+                'invalidkey',
+                vx_core.vx_new_map(vx_core.t_anymap, {
+                  type: type,
+                  key: vx_core.vx_string_from_any(value)
+                })
+              )
               msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
               break
             }
@@ -675,7 +732,15 @@ export default class vx_core {
                 propmap[key] = value
               } else {
                 const typename = vx_core.f_typename_from_typedef(typedef)
-                const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + key + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Key Value')
+                const msg = vx_core.f_msg_from_error(
+                  'vx/core/new',
+                  'invalidkeyvalue',
+                  vx_core.vx_new_map(vx_core.t_anymap, {
+                    type: type,
+                    key: key,
+                    value: vx_core.vx_string_from_any(value)
+                  })
+                )
                 msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
               }
             }
@@ -739,7 +804,14 @@ export default class vx_core {
                   key = testkey
                 } else {
                   const typename = vx_core.f_typename_from_typedef(typedef)
-                  const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + vx_core.vx_string_from_any(value) + ') - Invalid Key')
+                  const msg = vx_core.f_msg_from_error(
+                    'vx/core/new',
+                    'invalidkey',
+                    vx_core.vx_new_map(vx_core.t_anymap, {
+                      type: type,
+                      key: vx_core.vx_string_from_any(value)
+                    })
+                  )
                   msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
                 }
                 break
@@ -823,7 +895,14 @@ export default class vx_core {
                   }
                 } else {
                   const typename = vx_core.f_typename_from_typedef(typedef)
-                  const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + vx_core.vx_string_from_any(value) + ') - Invalid Key')
+                  const msg = vx_core.f_msg_from_error(
+                    'vx/core/new',
+                    'invalidkey',
+                    vx_core.vx_new_map(vx_core.t_anymap, {
+                      type: type,
+                      key: vx_core.vx_string_from_any(value)
+                    })
+                  )
                   msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
                 }
                 break
@@ -837,9 +916,19 @@ export default class vx_core {
                 propmap[key] = value
               } else if (propertytype == valuetype) {
                 propmap[key] = value
+              } else if ((propertytype.extends == ":func") == (valuetype.extends == ":func")) {
+                propmap[key] = value
               } else {
                 const typename = vx_core.f_typename_from_typedef(typedef)
-                const msg = vx_core.f_msg_from_error('(new ' + typename + ' :key ' + key + ' :value ' + vx_core.vx_string_from_any(value) + ') - Invalid Key Value')
+                const msg = vx_core.f_msg_from_error(
+                  'vx/core/new',
+                  'invalidkeyvalue',
+                  vx_core.vx_new_map(vx_core.t_anymap, {
+                    type: type,
+                    key: key,
+                    value: vx_core.vx_string_from_any(value)
+                  })
+                )
                 msgblock = vx_core.f_msgblock_from_msgblock_msg(msgblock, msg)
               }
               key = ''
@@ -1043,429 +1132,502 @@ export default class vx_core {
    * Any Value for Variant Type
    */
   static t_any = {}
+  static e_any = {vx_type: vx_core.t_any}
 
   /**
    * type: any-async<-func
    * A sync or async function that returns one value.
    */
   static t_any_async_from_func = {}
+  static e_any_async_from_func = {vx_type: vx_core.t_any_async_from_func}
 
   /**
    * type: any<-anylist
    * List of any<-any
    */
   static t_any_from_anylist = {}
+  static e_any_from_anylist = vx_core.vx_new_list(vx_core.t_any_from_anylist, [])
 
   /**
    * type: anylist
    * A list of any
    */
   static t_anylist = {}
+  static e_anylist = vx_core.vx_new_list(vx_core.t_anylist, [])
 
   /**
    * type: anymap
    * A map of any
    */
   static t_anymap = {}
+  static e_anymap = {vx_type: vx_core.t_anymap}
 
   /**
    * type: anytype
    * Any Type that allows any Type as a Value
    */
   static t_anytype = {}
+  static e_anytype = {vx_type: vx_core.t_anytype}
 
   /**
    * type: arg
    * A function argument
    */
   static t_arg = {}
+  static e_arg = {vx_type: vx_core.t_arg}
 
   /**
    * type: arglist
    * A list of arg
    */
   static t_arglist = {}
+  static e_arglist = vx_core.vx_new_list(vx_core.t_arglist, [])
 
   /**
    * type: argmap
    * A map of arg
    */
   static t_argmap = {}
+  static e_argmap = {vx_type: vx_core.t_argmap}
 
   /**
    * type: boolean
    * Standard Boolean Type
    */
   static t_boolean = {}
+  static e_boolean = false
 
   /**
    * type: booleanlist
    */
   static t_booleanlist = {}
+  static e_booleanlist = vx_core.vx_new_list(vx_core.t_booleanlist, [])
 
   /**
    * type: collection
    */
   static t_collection = {}
+  static e_collection = {vx_type: vx_core.t_collection}
 
   /**
    * type: compilelanguages
    */
   static t_compilelanguages = {}
+  static e_compilelanguages = {vx_type: vx_core.t_compilelanguages}
 
   /**
    * type: connect
    * General connect trait
    */
   static t_connect = {}
+  static e_connect = {vx_type: vx_core.t_connect}
 
   /**
    * type: connectlist
    * List of connect
    */
   static t_connectlist = {}
+  static e_connectlist = vx_core.vx_new_list(vx_core.t_connectlist, [])
 
   /**
    * type: connectmap
    * Map of connect
    */
   static t_connectmap = {}
+  static e_connectmap = {vx_type: vx_core.t_connectmap}
 
   /**
    * type: const
    * Original Constant Class.
    */
   static t_const = {}
+  static e_const = {vx_type: vx_core.t_const}
 
   /**
    * type: constdef
    * Const Definition Class for inspecting properties.
    */
   static t_constdef = {}
+  static e_constdef = {vx_type: vx_core.t_constdef}
 
   /**
    * type: constlist
    * List of Const.
    */
   static t_constlist = {}
+  static e_constlist = vx_core.vx_new_list(vx_core.t_constlist, [])
 
   /**
    * type: constmap
    * Map of Const.
    */
   static t_constmap = {}
+  static e_constmap = {vx_type: vx_core.t_constmap}
 
   /**
    * type: context
    * Context
    */
   static t_context = {}
+  static e_context = {vx_type: vx_core.t_context}
 
   /**
    * type: date
    * A simple UTC date.
    */
   static t_date = {}
+  static e_date = {vx_type: vx_core.t_date}
 
   /**
    * type: decimal
    * A clean version of float like Java BigDecimal.
    */
   static t_decimal = {}
+  static e_decimal = {vx_type: vx_core.t_decimal}
 
   /**
    * type: error
    * Error Type
    */
   static t_error = {}
+  static e_error = {vx_type: vx_core.t_error}
 
   /**
    * type: float
    * Standard Floating Point Number
    */
   static t_float = {}
+  static e_float = 0
 
   /**
    * type: func
    * Original Function Class.
    */
   static t_func = {}
+  static e_func = {vx_type: vx_core.t_func}
 
   /**
    * type: funcdef
    * Func Definition Class for inspecting properties.
    */
   static t_funcdef = {}
+  static e_funcdef = {vx_type: vx_core.t_funcdef}
 
   /**
    * type: funclist
    * List of Func.
    */
   static t_funclist = {}
+  static e_funclist = vx_core.vx_new_list(vx_core.t_funclist, [])
 
   /**
    * type: funcmap
    * Map of Func.
    */
   static t_funcmap = {}
+  static e_funcmap = {vx_type: vx_core.t_funcmap}
 
   /**
    * type: int
    * A simple integer.
    */
   static t_int = {}
+  static e_int = 0
 
   /**
    * type: intlist
    * A list of int.
    */
   static t_intlist = {}
+  static e_intlist = vx_core.vx_new_list(vx_core.t_intlist, [])
 
   /**
    * type: intmap
    * A map of int.
    */
   static t_intmap = {}
+  static e_intmap = {vx_type: vx_core.t_intmap}
 
   /**
    * type: list
    * A simple untyped list.
    */
   static t_list = {}
+  static e_list = vx_core.vx_new_list(vx_core.t_list, [])
 
   /**
    * type: listtype
    * A generic type that extends :list.
    */
   static t_listtype = {}
+  static e_listtype = {vx_type: vx_core.t_listtype}
 
   /**
    * type: locale
    * Localization data.
    */
   static t_locale = {}
+  static e_locale = {vx_type: vx_core.t_locale}
 
   /**
    * type: map
    * A simple untyped map.
    */
   static t_map = {}
+  static e_map = {vx_type: vx_core.t_map}
 
   /**
    * type: maptype
    * A generic type that extends :map.
    */
   static t_maptype = {}
+  static e_maptype = {vx_type: vx_core.t_maptype}
 
   /**
    * type: mempool
    * Memory Pool
    */
   static t_mempool = {}
+  static e_mempool = {vx_type: vx_core.t_mempool}
 
   /**
    * type: msg
    * Message Type for error handling
    */
   static t_msg = {}
+  static e_msg = {vx_type: vx_core.t_msg}
 
   /**
    * type: msgblock
    * Block of Messages
    */
   static t_msgblock = {}
+  static e_msgblock = {vx_type: vx_core.t_msgblock}
 
   /**
    * type: msgblocklist
    * List of Message Blocks
    */
   static t_msgblocklist = {}
+  static e_msgblocklist = vx_core.vx_new_list(vx_core.t_msgblocklist, [])
 
   /**
    * type: msglist
    * List of Messages
    */
   static t_msglist = {}
+  static e_msglist = vx_core.vx_new_list(vx_core.t_msglist, [])
 
   /**
    * type: none
    * No Type. No type is returned at all. e.g. Void
    */
   static t_none = {}
+  static e_none = {vx_type: vx_core.t_none}
 
   /**
    * type: notype
    * No Type that allows no Types as a Value
    */
   static t_notype = {}
+  static e_notype = {vx_type: vx_core.t_notype}
 
   /**
    * type: number
    * A generic number that could be int, float, or decimal.
    */
   static t_number = {}
+  static e_number = {vx_type: vx_core.t_number}
 
   /**
    * type: numberlist
    * A list of number.
    */
   static t_numberlist = {}
+  static e_numberlist = vx_core.vx_new_list(vx_core.t_numberlist, [])
 
   /**
    * type: numbermap
    * A map of number.
    */
   static t_numbermap = {}
+  static e_numbermap = {vx_type: vx_core.t_numbermap}
 
   /**
    * type: package
    * A package that store types, consts and funcs.
    */
   static t_package = {}
+  static e_package = {vx_type: vx_core.t_package}
 
   /**
    * type: packagemap
    */
   static t_packagemap = {}
+  static e_packagemap = {vx_type: vx_core.t_packagemap}
 
   /**
    * type: permission
    * Permission
    */
   static t_permission = {}
+  static e_permission = {vx_type: vx_core.t_permission}
 
   /**
    * type: permissionlist
    * List of Permission
    */
   static t_permissionlist = {}
+  static e_permissionlist = vx_core.vx_new_list(vx_core.t_permissionlist, [])
 
   /**
    * type: permissionmap
    * Map of Permission
    */
   static t_permissionmap = {}
+  static e_permissionmap = {vx_type: vx_core.t_permissionmap}
 
   /**
    * type: project
    * A project.
    */
   static t_project = {}
+  static e_project = {vx_type: vx_core.t_project}
 
   /**
    * type: security
    * Security rules
    */
   static t_security = {}
+  static e_security = {vx_type: vx_core.t_security}
 
   /**
    * type: session
    * Session
    */
   static t_session = {}
+  static e_session = {vx_type: vx_core.t_session}
 
   /**
    * type: setting
    * Settings
    */
   static t_setting = {}
+  static e_setting = {vx_type: vx_core.t_setting}
 
   /**
    * type: state
    */
   static t_state = {}
+  static e_state = {vx_type: vx_core.t_state}
 
   /**
    * type: statelistener
    */
   static t_statelistener = {}
+  static e_statelistener = {vx_type: vx_core.t_statelistener}
 
   /**
    * type: string
    * A simple string.
    */
   static t_string = {}
+  static e_string = ''
 
   /**
    * type: stringlist
    * A list of string.
    */
   static t_stringlist = {}
+  static e_stringlist = vx_core.vx_new_list(vx_core.t_stringlist, [])
 
   /**
    * type: stringmap
    * A map of string.
    */
   static t_stringmap = {}
+  static e_stringmap = {vx_type: vx_core.t_stringmap}
 
   /**
    * type: struct
    * Struct is the type of all structures/objects with properties.
    */
   static t_struct = {}
+  static e_struct = {vx_type: vx_core.t_struct}
 
   /**
    * type: thenelse
    */
   static t_thenelse = {}
+  static e_thenelse = {vx_type: vx_core.t_thenelse}
 
   /**
    * type: thenelselist
    */
   static t_thenelselist = {}
+  static e_thenelselist = vx_core.vx_new_list(vx_core.t_thenelselist, [])
 
   /**
    * type: translation
    * i18 language translation.
    */
   static t_translation = {}
+  static e_translation = {vx_type: vx_core.t_translation}
 
   /**
    * type: translationlist
    * i18 language translation list.
    */
   static t_translationlist = {}
+  static e_translationlist = vx_core.vx_new_list(vx_core.t_translationlist, [])
 
   /**
    * type: translationmap
    * i18 language translation map.
    */
   static t_translationmap = {}
+  static e_translationmap = {vx_type: vx_core.t_translationmap}
 
   /**
    * type: type
    * Original Type Class
    */
   static t_type = {}
+  static e_type = {vx_type: vx_core.t_type}
 
   /**
    * type: typedef
    * Type Definition Class for inspecting Type properties.
    */
   static t_typedef = {}
+  static e_typedef = {vx_type: vx_core.t_typedef}
 
   /**
    * type: typelist
    * List of Types
    */
   static t_typelist = {}
+  static e_typelist = vx_core.vx_new_list(vx_core.t_typelist, [])
 
   /**
    * type: typemap
    * Map of Any Type Class
    */
   static t_typemap = {}
+  static e_typemap = {vx_type: vx_core.t_typemap}
 
   /**
    * type: user
    * User Type
    */
   static t_user = {}
+  static e_user = {vx_type: vx_core.t_user}
 
   /**
    * type: value
    */
   static t_value = {}
+  static e_value = {vx_type: vx_core.t_value}
   /**
    * Constant: false
    * {boolean}
@@ -1568,8 +1730,12 @@ export default class vx_core {
    * @param  {boolean} val Thing to not
    * @return {boolean}
    */
-  static t_not = {}
-  static e_not = {vx_type: vx_core.t_not}
+  static t_not = {
+    vx_type: vx_core.t_type
+  }
+  static e_not = {
+    vx_type: vx_core.t_not
+  }
 
   // (func !)
   static f_not(val) {
@@ -1584,8 +1750,12 @@ export default class vx_core {
    * @param  {string} text
    * @return {boolean}
    */
-  static t_notempty = {}
-  static e_notempty = {vx_type: vx_core.t_notempty}
+  static t_notempty = {
+    vx_type: vx_core.t_type
+  }
+  static e_notempty = {
+    vx_type: vx_core.t_notempty
+  }
 
   // (func !-empty)
   static f_notempty(text) {
@@ -1602,8 +1772,12 @@ export default class vx_core {
    * @param  {any} val
    * @return {boolean}
    */
-  static t_notempty_1 = {}
-  static e_notempty_1 = {vx_type: vx_core.t_notempty_1}
+  static t_notempty_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_notempty_1 = {
+    vx_type: vx_core.t_notempty_1
+  }
 
   // (func !-empty)
   static f_notempty_1(val) {
@@ -1621,8 +1795,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {boolean}
    */
-  static t_ne = {}
-  static e_ne = {vx_type: vx_core.t_ne}
+  static t_ne = {
+    vx_type: vx_core.t_type
+  }
+  static e_ne = {
+    vx_type: vx_core.t_ne
+  }
 
   // (func !=)
   static f_ne(val1, val2) {
@@ -1640,8 +1818,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {boolean}
    */
-  static t_neqeq = {}
-  static e_neqeq = {vx_type: vx_core.t_neqeq}
+  static t_neqeq = {
+    vx_type: vx_core.t_type
+  }
+  static e_neqeq = {
+    vx_type: vx_core.t_neqeq
+  }
 
   // (func !==)
   static f_neqeq(val1, val2) {
@@ -1659,8 +1841,12 @@ export default class vx_core {
    * @param  {int} num2
    * @return {int}
    */
-  static t_multiply = {}
-  static e_multiply = {vx_type: vx_core.t_multiply}
+  static t_multiply = {
+    vx_type: vx_core.t_type
+  }
+  static e_multiply = {
+    vx_type: vx_core.t_multiply
+  }
 
   // (func *)
   static f_multiply(num1, num2) {
@@ -1676,8 +1862,12 @@ export default class vx_core {
    * @param  {number} num2
    * @return {number}
    */
-  static t_multiply_1 = {}
-  static e_multiply_1 = {vx_type: vx_core.t_multiply_1}
+  static t_multiply_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_multiply_1 = {
+    vx_type: vx_core.t_multiply_1
+  }
 
   // (func *)
   static f_multiply_1(num1, num2) {
@@ -1692,8 +1882,12 @@ export default class vx_core {
    * @param  {intlist} ... nums
    * @return {int}
    */
-  static t_multiply_2 = {}
-  static e_multiply_2 = {vx_type: vx_core.t_multiply_2}
+  static t_multiply_2 = {
+    vx_type: vx_core.t_type
+  }
+  static e_multiply_2 = {
+    vx_type: vx_core.t_multiply_2
+  }
 
   // (func *)
   static f_multiply_2(...nums) {
@@ -1715,8 +1909,12 @@ export default class vx_core {
    * @param  {numberlist} ... nums
    * @return {number}
    */
-  static t_multiply_3 = {}
-  static e_multiply_3 = {vx_type: vx_core.t_multiply_3}
+  static t_multiply_3 = {
+    vx_type: vx_core.t_type
+  }
+  static e_multiply_3 = {
+    vx_type: vx_core.t_multiply_3
+  }
 
   // (func *)
   static f_multiply_3(...nums) {
@@ -1739,8 +1937,12 @@ export default class vx_core {
    * @param  {int} num2
    * @return {int}
    */
-  static t_plus = {}
-  static e_plus = {vx_type: vx_core.t_plus}
+  static t_plus = {
+    vx_type: vx_core.t_type
+  }
+  static e_plus = {
+    vx_type: vx_core.t_plus
+  }
 
   // (func +)
   static f_plus(num1, num2) {
@@ -1756,8 +1958,12 @@ export default class vx_core {
    * @param  {number} num2
    * @return {number}
    */
-  static t_plus_1 = {}
-  static e_plus_1 = {vx_type: vx_core.t_plus_1}
+  static t_plus_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_plus_1 = {
+    vx_type: vx_core.t_plus_1
+  }
 
   // (func +)
   static f_plus_1(num1, num2) {
@@ -1772,8 +1978,12 @@ export default class vx_core {
    * @param  {intlist} ... nums
    * @return {int}
    */
-  static t_plus_2 = {}
-  static e_plus_2 = {vx_type: vx_core.t_plus_2}
+  static t_plus_2 = {
+    vx_type: vx_core.t_type
+  }
+  static e_plus_2 = {
+    vx_type: vx_core.t_plus_2
+  }
 
   // (func +)
   static f_plus_2(...nums) {
@@ -1795,8 +2005,12 @@ export default class vx_core {
    * @param  {numberlist} ... nums
    * @return {number}
    */
-  static t_plus_3 = {}
-  static e_plus_3 = {vx_type: vx_core.t_plus_3}
+  static t_plus_3 = {
+    vx_type: vx_core.t_type
+  }
+  static e_plus_3 = {
+    vx_type: vx_core.t_plus_3
+  }
 
   // (func +)
   static f_plus_3(...nums) {
@@ -1818,8 +2032,12 @@ export default class vx_core {
    * @param  {int} num
    * @return {int}
    */
-  static t_plus1 = {}
-  static e_plus1 = {vx_type: vx_core.t_plus1}
+  static t_plus1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_plus1 = {
+    vx_type: vx_core.t_plus1
+  }
 
   // (func +1)
   static f_plus1(num) {
@@ -1835,8 +2053,12 @@ export default class vx_core {
    * @param  {int} num2
    * @return {int}
    */
-  static t_minus = {}
-  static e_minus = {vx_type: vx_core.t_minus}
+  static t_minus = {
+    vx_type: vx_core.t_type
+  }
+  static e_minus = {
+    vx_type: vx_core.t_minus
+  }
 
   // (func -)
   static f_minus(num1, num2) {
@@ -1852,8 +2074,12 @@ export default class vx_core {
    * @param  {number} num2
    * @return {number}
    */
-  static t_minus_1 = {}
-  static e_minus_1 = {vx_type: vx_core.t_minus_1}
+  static t_minus_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_minus_1 = {
+    vx_type: vx_core.t_minus_1
+  }
 
   // (func -)
   static f_minus_1(num1, num2) {
@@ -1868,8 +2094,12 @@ export default class vx_core {
    * @param  {intlist} ... nums
    * @return {int}
    */
-  static t_minus_2 = {}
-  static e_minus_2 = {vx_type: vx_core.t_minus_2}
+  static t_minus_2 = {
+    vx_type: vx_core.t_type
+  }
+  static e_minus_2 = {
+    vx_type: vx_core.t_minus_2
+  }
 
   // (func -)
   static f_minus_2(...nums) {
@@ -1891,8 +2121,12 @@ export default class vx_core {
    * @param  {numberlist} ... nums
    * @return {number}
    */
-  static t_minus_3 = {}
-  static e_minus_3 = {vx_type: vx_core.t_minus_3}
+  static t_minus_3 = {
+    vx_type: vx_core.t_type
+  }
+  static e_minus_3 = {
+    vx_type: vx_core.t_minus_3
+  }
 
   // (func -)
   static f_minus_3(...nums) {
@@ -1914,8 +2148,12 @@ export default class vx_core {
    * @param  {int} num
    * @return {int}
    */
-  static t_minus1 = {}
-  static e_minus1 = {vx_type: vx_core.t_minus1}
+  static t_minus1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_minus1 = {
+    vx_type: vx_core.t_minus1
+  }
 
   // (func -1)
   static f_minus1(num) {
@@ -1932,8 +2170,12 @@ export default class vx_core {
    * @param  {anylist} ... params
    * @return {any}
    */
-  static t_dotmethod = {}
-  static e_dotmethod = {vx_type: vx_core.t_dotmethod}
+  static t_dotmethod = {
+    vx_type: vx_core.t_type
+  }
+  static e_dotmethod = {
+    vx_type: vx_core.t_dotmethod
+  }
 
   // (func .)
   static f_dotmethod(object, method, ...params) {
@@ -1950,8 +2192,12 @@ export default class vx_core {
    * @param  {number} num2
    * @return {number}
    */
-  static t_divide = {}
-  static e_divide = {vx_type: vx_core.t_divide}
+  static t_divide = {
+    vx_type: vx_core.t_type
+  }
+  static e_divide = {
+    vx_type: vx_core.t_divide
+  }
 
   // (func /)
   static f_divide(num1, num2) {
@@ -1967,8 +2213,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {boolean}
    */
-  static t_lt = {}
-  static e_lt = {vx_type: vx_core.t_lt}
+  static t_lt = {
+    vx_type: vx_core.t_type
+  }
+  static e_lt = {
+    vx_type: vx_core.t_lt
+  }
 
   // (func <)
   static f_lt(val1, val2) {
@@ -1993,8 +2243,12 @@ export default class vx_core {
    * @param  {anylist} ... values
    * @return {boolean}
    */
-  static t_lt_1 = {}
-  static e_lt_1 = {vx_type: vx_core.t_lt_1}
+  static t_lt_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_lt_1 = {
+    vx_type: vx_core.t_lt_1
+  }
 
   // (func <)
   static f_lt_1(...values) {
@@ -2023,8 +2277,12 @@ export default class vx_core {
    * @param  {any_from_anylist} ... fnlist
    * @return {any-1}
    */
-  static t_chainfirst = {}
-  static e_chainfirst = {vx_type: vx_core.t_chainfirst}
+  static t_chainfirst = {
+    vx_type: vx_core.t_type
+  }
+  static e_chainfirst = {
+    vx_type: vx_core.t_chainfirst
+  }
 
   // (func <-)
   static f_chainfirst(generic, value, ...fnlist) {
@@ -2044,8 +2302,12 @@ export default class vx_core {
    * @param  {any_from_anylist} ... fnlist
    * @return {any-1}
    */
-  static t_chainlast = {}
-  static e_chainlast = {vx_type: vx_core.t_chainlast}
+  static t_chainlast = {
+    vx_type: vx_core.t_type
+  }
+  static e_chainlast = {
+    vx_type: vx_core.t_chainlast
+  }
 
   // (func <<-)
   static f_chainlast(generic, value, ...fnlist) {
@@ -2062,8 +2324,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {boolean}
    */
-  static t_le = {}
-  static e_le = {vx_type: vx_core.t_le}
+  static t_le = {
+    vx_type: vx_core.t_type
+  }
+  static e_le = {
+    vx_type: vx_core.t_le
+  }
 
   // (func <=)
   static f_le(val1, val2) {
@@ -2080,8 +2346,12 @@ export default class vx_core {
    * @param  {anylist} ... args
    * @return {boolean}
    */
-  static t_le_1 = {}
-  static e_le_1 = {vx_type: vx_core.t_le_1}
+  static t_le_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_le_1 = {
+    vx_type: vx_core.t_le_1
+  }
 
   // (func <=)
   static f_le_1(...args) {
@@ -2100,8 +2370,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {boolean}
    */
-  static t_eq = {}
-  static e_eq = {vx_type: vx_core.t_eq}
+  static t_eq = {
+    vx_type: vx_core.t_type
+  }
+  static e_eq = {
+    vx_type: vx_core.t_eq
+  }
 
   // (func =)
   static f_eq(val1, val2) {
@@ -2116,8 +2390,12 @@ export default class vx_core {
    * @param  {anylist} ... values
    * @return {boolean}
    */
-  static t_eq_1 = {}
-  static e_eq_1 = {vx_type: vx_core.t_eq_1}
+  static t_eq_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_eq_1 = {
+    vx_type: vx_core.t_eq_1
+  }
 
   // (func =)
   static f_eq_1(...values) {
@@ -2143,8 +2421,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {boolean}
    */
-  static t_eqeq = {}
-  static e_eqeq = {vx_type: vx_core.t_eqeq}
+  static t_eqeq = {
+    vx_type: vx_core.t_type
+  }
+  static e_eqeq = {
+    vx_type: vx_core.t_eqeq
+  }
 
   // (func ==)
   static f_eqeq(val1, val2) {
@@ -2160,8 +2442,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {boolean}
    */
-  static t_gt = {}
-  static e_gt = {vx_type: vx_core.t_gt}
+  static t_gt = {
+    vx_type: vx_core.t_type
+  }
+  static e_gt = {
+    vx_type: vx_core.t_gt
+  }
 
   // (func >)
   static f_gt(val1, val2) {
@@ -2186,8 +2472,12 @@ export default class vx_core {
    * @param  {anylist} ... values
    * @return {boolean}
    */
-  static t_gt_1 = {}
-  static e_gt_1 = {vx_type: vx_core.t_gt_1}
+  static t_gt_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_gt_1 = {
+    vx_type: vx_core.t_gt_1
+  }
 
   // (func >)
   static f_gt_1(...values) {
@@ -2213,8 +2503,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {boolean}
    */
-  static t_ge = {}
-  static e_ge = {vx_type: vx_core.t_ge}
+  static t_ge = {
+    vx_type: vx_core.t_type
+  }
+  static e_ge = {
+    vx_type: vx_core.t_ge
+  }
 
   // (func >=)
   static f_ge(val1, val2) {
@@ -2231,8 +2525,12 @@ export default class vx_core {
    * @param  {anylist} ... args
    * @return {boolean}
    */
-  static t_ge_1 = {}
-  static e_ge_1 = {vx_type: vx_core.t_ge_1}
+  static t_ge_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_ge_1 = {
+    vx_type: vx_core.t_ge_1
+  }
 
   // (func >=)
   static f_ge_1(...args) {
@@ -2250,8 +2548,12 @@ export default class vx_core {
    * @param  {security} security
    * @return {funclist}
    */
-  static t_allowfuncs_from_security = {}
-  static e_allowfuncs_from_security = {vx_type: vx_core.t_allowfuncs_from_security}
+  static t_allowfuncs_from_security = {
+    vx_type: vx_core.t_type
+  }
+  static e_allowfuncs_from_security = {
+    vx_type: vx_core.t_allowfuncs_from_security
+  }
 
   // (func allowfuncs<-security)
   static f_allowfuncs_from_security(security) {
@@ -2266,8 +2568,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {stringlist}
    */
-  static t_allowtypenames_from_typedef = {}
-  static e_allowtypenames_from_typedef = {vx_type: vx_core.t_allowtypenames_from_typedef}
+  static t_allowtypenames_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_allowtypenames_from_typedef = {
+    vx_type: vx_core.t_allowtypenames_from_typedef
+  }
 
   // (func allowtypenames<-typedef)
   static f_allowtypenames_from_typedef(vtypedef) {
@@ -2284,8 +2590,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {typelist}
    */
-  static t_allowtypes_from_typedef = {}
-  static e_allowtypes_from_typedef = {vx_type: vx_core.t_allowtypes_from_typedef}
+  static t_allowtypes_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_allowtypes_from_typedef = {
+    vx_type: vx_core.t_allowtypes_from_typedef
+  }
 
   // (func allowtypes<-typedef)
   static f_allowtypes_from_typedef(vtypedef) {
@@ -2301,8 +2611,12 @@ export default class vx_core {
    * @param  {boolean} val2
    * @return {boolean}
    */
-  static t_and = {}
-  static e_and = {vx_type: vx_core.t_and}
+  static t_and = {
+    vx_type: vx_core.t_type
+  }
+  static e_and = {
+    vx_type: vx_core.t_and
+  }
 
   // (func and)
   static f_and(val1, val2) {
@@ -2321,8 +2635,12 @@ export default class vx_core {
    * @param  {booleanlist} ... values
    * @return {boolean}
    */
-  static t_and_1 = {}
-  static e_and_1 = {vx_type: vx_core.t_and_1}
+  static t_and_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_and_1 = {
+    vx_type: vx_core.t_and_1
+  }
 
   // (func and)
   static f_and_1(...values) {
@@ -2362,8 +2680,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any-1}
    */
-  static t_any_from_any = {}
-  static e_any_from_any = {vx_type: vx_core.t_any_from_any}
+  static t_any_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_any = {
+    vx_type: vx_core.t_any_from_any
+  }
 
   // (func any<-any)
   static f_any_from_any(generic, value) {
@@ -2381,8 +2703,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any-1}
    */
-  static t_any_from_any_async = {}
-  static e_any_from_any_async = {vx_type: vx_core.t_any_from_any_async}
+  static t_any_from_any_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_any_async = {
+    vx_type: vx_core.t_any_from_any_async
+  }
 
   // (func any<-any-async)
   static async f_any_from_any_async(generic, value) {
@@ -2398,8 +2724,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any-1}
    */
-  static t_any_from_any_context = {}
-  static e_any_from_any_context = {vx_type: vx_core.t_any_from_any_context}
+  static t_any_from_any_context = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_any_context = {
+    vx_type: vx_core.t_any_from_any_context
+  }
 
   // (func any<-any-context)
   static f_any_from_any_context(generic, context, value) {
@@ -2416,8 +2746,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any-1}
    */
-  static t_any_from_any_context_async = {}
-  static e_any_from_any_context_async = {vx_type: vx_core.t_any_from_any_context_async}
+  static t_any_from_any_context_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_any_context_async = {
+    vx_type: vx_core.t_any_from_any_context_async
+  }
 
   // (func any<-any-context-async)
   static async f_any_from_any_context_async(generic, context, value) {
@@ -2435,8 +2769,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any-1}
    */
-  static t_any_from_any_key_value = {}
-  static e_any_from_any_key_value = {vx_type: vx_core.t_any_from_any_key_value}
+  static t_any_from_any_key_value = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_any_key_value = {
+    vx_type: vx_core.t_any_from_any_key_value
+  }
 
   // (func any<-any-key-value)
   static f_any_from_any_key_value(generic, current, key, value) {
@@ -2451,8 +2789,12 @@ export default class vx_core {
    * @param  {typemap} generic
    * @return {any-1}
    */
-  static t_any_from_func = {}
-  static e_any_from_func = {vx_type: vx_core.t_any_from_func}
+  static t_any_from_func = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_func = {
+    vx_type: vx_core.t_any_from_func
+  }
 
   // (func any<-func)
   static f_any_from_func(generic) {
@@ -2468,8 +2810,12 @@ export default class vx_core {
    * @param  {typemap} generic
    * @return {any-1}
    */
-  static t_any_from_func_async = {}
-  static e_any_from_func_async = {vx_type: vx_core.t_any_from_func_async}
+  static t_any_from_func_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_func_async = {
+    vx_type: vx_core.t_any_from_func_async
+  }
 
   // (func any<-func-async)
   static async f_any_from_func_async(generic) {
@@ -2485,8 +2831,12 @@ export default class vx_core {
    * @param  {int} value
    * @return {any-1}
    */
-  static t_any_from_int = {}
-  static e_any_from_int = {vx_type: vx_core.t_any_from_int}
+  static t_any_from_int = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_int = {
+    vx_type: vx_core.t_any_from_int
+  }
 
   // (func any<-int)
   static f_any_from_int(generic, value) {
@@ -2503,8 +2853,12 @@ export default class vx_core {
    * @param  {any} val
    * @return {any-1}
    */
-  static t_any_from_key_value = {}
-  static e_any_from_key_value = {vx_type: vx_core.t_any_from_key_value}
+  static t_any_from_key_value = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_key_value = {
+    vx_type: vx_core.t_any_from_key_value
+  }
 
   // (func any<-key-value)
   static f_any_from_key_value(generic, key, val) {
@@ -2522,8 +2876,12 @@ export default class vx_core {
    * @param  {any} val
    * @return {any-1}
    */
-  static t_any_from_key_value_async = {}
-  static e_any_from_key_value_async = {vx_type: vx_core.t_any_from_key_value_async}
+  static t_any_from_key_value_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_key_value_async = {
+    vx_type: vx_core.t_any_from_key_value_async
+  }
 
   // (func any<-key-value-async)
   static async f_any_from_key_value_async(generic, key, val) {
@@ -2540,8 +2898,12 @@ export default class vx_core {
    * @param  {int} index
    * @return {any-1}
    */
-  static t_any_from_list = {}
-  static e_any_from_list = {vx_type: vx_core.t_any_from_list}
+  static t_any_from_list = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_list = {
+    vx_type: vx_core.t_any_from_list
+  }
 
   // (func any<-list)
   static f_any_from_list(generic, values, index) {
@@ -2562,8 +2924,12 @@ export default class vx_core {
    * @param  {any_from_reduce} fn_reduce
    * @return {any-1}
    */
-  static t_any_from_list_start_reduce = {}
-  static e_any_from_list_start_reduce = {vx_type: vx_core.t_any_from_list_start_reduce}
+  static t_any_from_list_start_reduce = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_list_start_reduce = {
+    vx_type: vx_core.t_any_from_list_start_reduce
+  }
 
   // (func any<-list-start-reduce)
   static f_any_from_list_start_reduce(generic, list, valstart, fn_reduce) {
@@ -2588,8 +2954,12 @@ export default class vx_core {
    * @param  {any_from_reduce_next} fn_reduce_next
    * @return {any-1}
    */
-  static t_any_from_list_start_reduce_next = {}
-  static e_any_from_list_start_reduce_next = {vx_type: vx_core.t_any_from_list_start_reduce_next}
+  static t_any_from_list_start_reduce_next = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_list_start_reduce_next = {
+    vx_type: vx_core.t_any_from_list_start_reduce_next
+  }
 
   // (func any<-list-start-reduce-next)
   static f_any_from_list_start_reduce_next(generic, list, valstart, fn_reduce_next) {
@@ -2620,8 +2990,12 @@ export default class vx_core {
    * @param  {string} key
    * @return {any-1}
    */
-  static t_any_from_map = {}
-  static e_any_from_map = {vx_type: vx_core.t_any_from_map}
+  static t_any_from_map = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_map = {
+    vx_type: vx_core.t_any_from_map
+  }
 
   // (func any<-map)
   static f_any_from_map(generic, valuemap, key) {
@@ -2647,8 +3021,12 @@ export default class vx_core {
    * @param  {any_from_any_key_value} fn_reduce
    * @return {any-1}
    */
-  static t_any_from_map_start_reduce = {}
-  static e_any_from_map_start_reduce = {vx_type: vx_core.t_any_from_map_start_reduce}
+  static t_any_from_map_start_reduce = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_map_start_reduce = {
+    vx_type: vx_core.t_any_from_map_start_reduce
+  }
 
   // (func any<-map-start-reduce)
   static f_any_from_map_start_reduce(generic, map, start, fn_reduce) {
@@ -2664,8 +3042,12 @@ export default class vx_core {
    * @param  {typemap} generic
    * @return {any-1}
    */
-  static t_any_from_none = {}
-  static e_any_from_none = {vx_type: vx_core.t_any_from_none}
+  static t_any_from_none = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_none = {
+    vx_type: vx_core.t_any_from_none
+  }
 
   // (func any<-none)
   static f_any_from_none(generic) {
@@ -2681,8 +3063,12 @@ export default class vx_core {
    * @param  {typemap} generic
    * @return {any-1}
    */
-  static t_any_from_none_async = {}
-  static e_any_from_none_async = {vx_type: vx_core.t_any_from_none_async}
+  static t_any_from_none_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_none_async = {
+    vx_type: vx_core.t_any_from_none_async
+  }
 
   // (func any<-none-async)
   static async f_any_from_none_async(generic) {
@@ -2698,8 +3084,12 @@ export default class vx_core {
    * @param  {any} item
    * @return {any-1}
    */
-  static t_any_from_reduce = {}
-  static e_any_from_reduce = {vx_type: vx_core.t_any_from_reduce}
+  static t_any_from_reduce = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_reduce = {
+    vx_type: vx_core.t_any_from_reduce
+  }
 
   // (func any<-reduce)
   static f_any_from_reduce(generic, result, item) {
@@ -2716,8 +3106,12 @@ export default class vx_core {
    * @param  {any} item
    * @return {any-1}
    */
-  static t_any_from_reduce_async = {}
-  static e_any_from_reduce_async = {vx_type: vx_core.t_any_from_reduce_async}
+  static t_any_from_reduce_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_reduce_async = {
+    vx_type: vx_core.t_any_from_reduce_async
+  }
 
   // (func any<-reduce-async)
   static async f_any_from_reduce_async(generic, result, item) {
@@ -2734,8 +3128,12 @@ export default class vx_core {
    * @param  {any} next
    * @return {any-1}
    */
-  static t_any_from_reduce_next = {}
-  static e_any_from_reduce_next = {vx_type: vx_core.t_any_from_reduce_next}
+  static t_any_from_reduce_next = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_reduce_next = {
+    vx_type: vx_core.t_any_from_reduce_next
+  }
 
   // (func any<-reduce-next)
   static f_any_from_reduce_next(generic, result, current, next) {
@@ -2753,8 +3151,12 @@ export default class vx_core {
    * @param  {any} next
    * @return {any-1}
    */
-  static t_any_from_reduce_next_async = {}
-  static e_any_from_reduce_next_async = {vx_type: vx_core.t_any_from_reduce_next_async}
+  static t_any_from_reduce_next_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_reduce_next_async = {
+    vx_type: vx_core.t_any_from_reduce_next_async
+  }
 
   // (func any<-reduce-next-async)
   static async f_any_from_reduce_next_async(generic, result, current, next) {
@@ -2771,8 +3173,12 @@ export default class vx_core {
    * @param  {string} key
    * @return {any-1}
    */
-  static t_any_from_struct = {}
-  static e_any_from_struct = {vx_type: vx_core.t_any_from_struct}
+  static t_any_from_struct = {
+    vx_type: vx_core.t_type
+  }
+  static e_any_from_struct = {
+    vx_type: vx_core.t_any_from_struct
+  }
 
   // (func any<-struct)
   static f_any_from_struct(generic, vstruct, key) {
@@ -2799,8 +3205,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any-1}
    */
-  static t_async = {}
-  static e_async = {vx_type: vx_core.t_async}
+  static t_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_async = {
+    vx_type: vx_core.t_async
+  }
 
   // (func async)
   static async f_async(generic, value) {
@@ -2816,8 +3226,12 @@ export default class vx_core {
    * @param  {func} func
    * @return {boolean}
    */
-  static t_boolean_permission_from_func = {}
-  static e_boolean_permission_from_func = {vx_type: vx_core.t_boolean_permission_from_func}
+  static t_boolean_permission_from_func = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_permission_from_func = {
+    vx_type: vx_core.t_boolean_permission_from_func
+  }
 
   // (func boolean-permission<-func)
   static f_boolean_permission_from_func(context, func) {
@@ -2837,8 +3251,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {boolean}
    */
-  static t_boolean_from_any = {}
-  static e_boolean_from_any = {vx_type: vx_core.t_boolean_from_any}
+  static t_boolean_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_from_any = {
+    vx_type: vx_core.t_boolean_from_any
+  }
 
   // (func boolean<-any)
   static f_boolean_from_any(value) {
@@ -2851,8 +3269,12 @@ export default class vx_core {
    * Function Type returning boolean with any parameters
    * @return {boolean}
    */
-  static t_boolean_from_func = {}
-  static e_boolean_from_func = {vx_type: vx_core.t_boolean_from_func}
+  static t_boolean_from_func = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_from_func = {
+    vx_type: vx_core.t_boolean_from_func
+  }
 
   // (func boolean<-func)
   static f_boolean_from_func() {
@@ -2865,8 +3287,12 @@ export default class vx_core {
    * Function Type returning boolean with no parameters
    * @return {boolean}
    */
-  static t_boolean_from_none = {}
-  static e_boolean_from_none = {vx_type: vx_core.t_boolean_from_none}
+  static t_boolean_from_none = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_from_none = {
+    vx_type: vx_core.t_boolean_from_none
+  }
 
   // (func boolean<-none)
   static f_boolean_from_none() {
@@ -2880,8 +3306,12 @@ export default class vx_core {
    * @param  {any_from_func} fn_any
    * @return {thenelse}
    */
-  static t_case = {}
-  static e_case = {vx_type: vx_core.t_case}
+  static t_case = {
+    vx_type: vx_core.t_type
+  }
+  static e_case = {
+    vx_type: vx_core.t_case
+  }
 
   // (func case)
   static f_case(values, fn_any) {
@@ -2904,8 +3334,12 @@ export default class vx_core {
    * @param  {any_from_func} fn_any
    * @return {thenelse}
    */
-  static t_case_1 = {}
-  static e_case_1 = {vx_type: vx_core.t_case_1}
+  static t_case_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_case_1 = {
+    vx_type: vx_core.t_case_1
+  }
 
   // (func case)
   static f_case_1(value, fn_any) {
@@ -2929,8 +3363,12 @@ export default class vx_core {
    * @param  {any} val2
    * @return {int}
    */
-  static t_compare = {}
-  static e_compare = {vx_type: vx_core.t_compare}
+  static t_compare = {
+    vx_type: vx_core.t_type
+  }
+  static e_compare = {
+    vx_type: vx_core.t_compare
+  }
 
   // (func compare)
   static f_compare(val1, val2) {
@@ -2952,8 +3390,12 @@ export default class vx_core {
    * @param  {string} find
    * @return {boolean}
    */
-  static t_contains = {}
-  static e_contains = {vx_type: vx_core.t_contains}
+  static t_contains = {
+    vx_type: vx_core.t_type
+  }
+  static e_contains = {
+    vx_type: vx_core.t_contains
+  }
 
   // (func contains)
   static f_contains(text, find) {
@@ -2969,8 +3411,12 @@ export default class vx_core {
    * @param  {any} find Any value
    * @return {boolean}
    */
-  static t_contains_1 = {}
-  static e_contains_1 = {vx_type: vx_core.t_contains_1}
+  static t_contains_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_contains_1 = {
+    vx_type: vx_core.t_contains_1
+  }
 
   // (func contains)
   static f_contains_1(values, find) {
@@ -2985,8 +3431,12 @@ export default class vx_core {
    * @param  {anylist} ... args
    * @return {context}
    */
-  static t_context_main = {}
-  static e_context_main = {vx_type: vx_core.t_context_main}
+  static t_context_main = {
+    vx_type: vx_core.t_type
+  }
+  static e_context_main = {
+    vx_type: vx_core.t_context_main
+  }
 
   // (func context-main)
   static f_context_main(...args) {
@@ -3005,8 +3455,12 @@ export default class vx_core {
    * @param  {anylist} ... values
    * @return {any-1}
    */
-  static t_copy = {}
-  static e_copy = {vx_type: vx_core.t_copy}
+  static t_copy = {
+    vx_type: vx_core.t_type
+  }
+  static e_copy = {
+    vx_type: vx_core.t_copy
+  }
 
   // (func copy)
   static f_copy(value, ...values) {
@@ -3020,8 +3474,12 @@ export default class vx_core {
    * @param  {any_from_func} fn_any
    * @return {thenelse}
    */
-  static t_else = {}
-  static e_else = {vx_type: vx_core.t_else}
+  static t_else = {
+    vx_type: vx_core.t_type
+  }
+  static e_else = {
+    vx_type: vx_core.t_else
+  }
 
   // (func else)
   static f_else(fn_any) {
@@ -3042,8 +3500,12 @@ export default class vx_core {
    * @param  {any} type
    * @return {any-1}
    */
-  static t_empty = {}
-  static e_empty = {vx_type: vx_core.t_empty}
+  static t_empty = {
+    vx_type: vx_core.t_type
+  }
+  static e_empty = {
+    vx_type: vx_core.t_empty
+  }
 
   // (func empty)
   static f_empty(type) {
@@ -3057,8 +3519,12 @@ export default class vx_core {
    * @param  {any} val
    * @return {string}
    */
-  static t_extends_from_any = {}
-  static e_extends_from_any = {vx_type: vx_core.t_extends_from_any}
+  static t_extends_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_extends_from_any = {
+    vx_type: vx_core.t_extends_from_any
+  }
 
   // (func extends<-any)
   static f_extends_from_any(val) {
@@ -3075,8 +3541,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {string}
    */
-  static t_extends_from_typedef = {}
-  static e_extends_from_typedef = {vx_type: vx_core.t_extends_from_typedef}
+  static t_extends_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_extends_from_typedef = {
+    vx_type: vx_core.t_extends_from_typedef
+  }
 
   // (func extends<-typedef)
   static f_extends_from_typedef(vtypedef) {
@@ -3092,8 +3562,12 @@ export default class vx_core {
    * @param  {list} values
    * @return {any-1}
    */
-  static t_first_from_list = {}
-  static e_first_from_list = {vx_type: vx_core.t_first_from_list}
+  static t_first_from_list = {
+    vx_type: vx_core.t_type
+  }
+  static e_first_from_list = {
+    vx_type: vx_core.t_first_from_list
+  }
 
   // (func first<-list)
   static f_first_from_list(generic, values) {
@@ -3111,8 +3585,12 @@ export default class vx_core {
    * @param  {any_from_any} fn_any_from_any
    * @return {any-1}
    */
-  static t_first_from_list_any_from_any = {}
-  static e_first_from_list_any_from_any = {vx_type: vx_core.t_first_from_list_any_from_any}
+  static t_first_from_list_any_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_first_from_list_any_from_any = {
+    vx_type: vx_core.t_first_from_list_any_from_any
+  }
 
   // (func first<-list-any<-any)
   static f_first_from_list_any_from_any(generic, values, fn_any_from_any) {
@@ -3137,8 +3615,12 @@ export default class vx_core {
    * @param  {string} text
    * @return {float}
    */
-  static t_float_from_string = {}
-  static e_float_from_string = {vx_type: vx_core.t_float_from_string}
+  static t_float_from_string = {
+    vx_type: vx_core.t_type
+  }
+  static e_float_from_string = {
+    vx_type: vx_core.t_float_from_string
+  }
 
   // (func float<-string)
   static f_float_from_string(text) {
@@ -3155,8 +3637,12 @@ export default class vx_core {
    * @param  {any_from_func} fn_any
    * @return {any-1}
    */
-  static t_fn = {}
-  static e_fn = {vx_type: vx_core.t_fn}
+  static t_fn = {
+    vx_type: vx_core.t_type
+  }
+  static e_fn = {
+    vx_type: vx_core.t_fn
+  }
 
   // (func fn)
   static f_fn(generic, params, fn_any) {
@@ -3170,8 +3656,12 @@ export default class vx_core {
    * @param  {func} val
    * @return {funcdef}
    */
-  static t_funcdef_from_func = {}
-  static e_funcdef_from_func = {vx_type: vx_core.t_funcdef_from_func}
+  static t_funcdef_from_func = {
+    vx_type: vx_core.t_type
+  }
+  static e_funcdef_from_func = {
+    vx_type: vx_core.t_funcdef_from_func
+  }
 
   // (func funcdef<-func)
   static f_funcdef_from_func(val) {
@@ -3185,8 +3675,12 @@ export default class vx_core {
    * @param  {funcdef} funcdef
    * @return {string}
    */
-  static t_funcname_from_funcdef = {}
-  static e_funcname_from_funcdef = {vx_type: vx_core.t_funcname_from_funcdef}
+  static t_funcname_from_funcdef = {
+    vx_type: vx_core.t_type
+  }
+  static e_funcname_from_funcdef = {
+    vx_type: vx_core.t_funcname_from_funcdef
+  }
 
   // (func funcname<-funcdef)
   static f_funcname_from_funcdef(funcdef) {
@@ -3208,8 +3702,12 @@ export default class vx_core {
    * @param  {any} then
    * @return {any-1}
    */
-  static t_if = {}
-  static e_if = {vx_type: vx_core.t_if}
+  static t_if = {
+    vx_type: vx_core.t_type
+  }
+  static e_if = {
+    vx_type: vx_core.t_if
+  }
 
   // (func if)
   static f_if(generic, clause, then) {
@@ -3230,8 +3728,12 @@ export default class vx_core {
    * @param  {any} elseval
    * @return {any-1}
    */
-  static t_if_1 = {}
-  static e_if_1 = {vx_type: vx_core.t_if_1}
+  static t_if_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_if_1 = {
+    vx_type: vx_core.t_if_1
+  }
 
   // (func if)
   static f_if_1(generic, clause, thenval, elseval) {
@@ -3252,8 +3754,12 @@ export default class vx_core {
    * @param  {thenelselist} ... thenelselist
    * @return {any-1}
    */
-  static t_if_2 = {}
-  static e_if_2 = {vx_type: vx_core.t_if_2}
+  static t_if_2 = {
+    vx_type: vx_core.t_type
+  }
+  static e_if_2 = {
+    vx_type: vx_core.t_if_2
+  }
 
   // (func if)
   static f_if_2(generic, ...thenelselist) {
@@ -3291,8 +3797,12 @@ export default class vx_core {
    * Function Type returning int with any parameters
    * @return {int}
    */
-  static t_int_from_func = {}
-  static e_int_from_func = {vx_type: vx_core.t_int_from_func}
+  static t_int_from_func = {
+    vx_type: vx_core.t_type
+  }
+  static e_int_from_func = {
+    vx_type: vx_core.t_int_from_func
+  }
 
   // (func int<-func)
   static f_int_from_func() {
@@ -3306,8 +3816,12 @@ export default class vx_core {
    * @param  {string} val
    * @return {int}
    */
-  static t_int_from_string = {}
-  static e_int_from_string = {vx_type: vx_core.t_int_from_string}
+  static t_int_from_string = {
+    vx_type: vx_core.t_type
+  }
+  static e_int_from_string = {
+    vx_type: vx_core.t_int_from_string
+  }
 
   // (func int<-string)
   static f_int_from_string(val) {
@@ -3340,8 +3854,12 @@ export default class vx_core {
    * @param  {string} text
    * @return {boolean}
    */
-  static t_is_empty = {}
-  static e_is_empty = {vx_type: vx_core.t_is_empty}
+  static t_is_empty = {
+    vx_type: vx_core.t_type
+  }
+  static e_is_empty = {
+    vx_type: vx_core.t_is_empty
+  }
 
   // (func is-empty)
   static f_is_empty(text) {
@@ -3358,8 +3876,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {boolean}
    */
-  static t_is_empty_1 = {}
-  static e_is_empty_1 = {vx_type: vx_core.t_is_empty_1}
+  static t_is_empty_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_is_empty_1 = {
+    vx_type: vx_core.t_is_empty_1
+  }
 
   // (func is-empty)
   static f_is_empty_1(value) {
@@ -3380,8 +3902,12 @@ export default class vx_core {
    * @param  {string} find
    * @return {boolean}
    */
-  static t_is_endswith = {}
-  static e_is_endswith = {vx_type: vx_core.t_is_endswith}
+  static t_is_endswith = {
+    vx_type: vx_core.t_type
+  }
+  static e_is_endswith = {
+    vx_type: vx_core.t_is_endswith
+  }
 
   // (func is-endswith)
   static f_is_endswith(text, find) {
@@ -3398,8 +3924,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {boolean}
    */
-  static t_is_float = {}
-  static e_is_float = {vx_type: vx_core.t_is_float}
+  static t_is_float = {
+    vx_type: vx_core.t_type
+  }
+  static e_is_float = {
+    vx_type: vx_core.t_is_float
+  }
 
   // (func is-float)
   static f_is_float(value) {
@@ -3414,8 +3944,12 @@ export default class vx_core {
    * @param  {any} val
    * @return {boolean}
    */
-  static t_is_func = {}
-  static e_is_func = {vx_type: vx_core.t_is_func}
+  static t_is_func = {
+    vx_type: vx_core.t_type
+  }
+  static e_is_func = {
+    vx_type: vx_core.t_is_func
+  }
 
   // (func is-func)
   static f_is_func(val) {
@@ -3433,8 +3967,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {boolean}
    */
-  static t_is_int = {}
-  static e_is_int = {vx_type: vx_core.t_is_int}
+  static t_is_int = {
+    vx_type: vx_core.t_type
+  }
+  static e_is_int = {
+    vx_type: vx_core.t_is_int
+  }
 
   // (func is-int)
   static f_is_int(value) {
@@ -3449,8 +3987,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {boolean}
    */
-  static t_is_number = {}
-  static e_is_number = {vx_type: vx_core.t_is_number}
+  static t_is_number = {
+    vx_type: vx_core.t_type
+  }
+  static e_is_number = {
+    vx_type: vx_core.t_is_number
+  }
 
   // (func is-number)
   static f_is_number(value) {
@@ -3481,8 +4023,12 @@ export default class vx_core {
    * @param  {permission} permission
    * @return {boolean}
    */
-  static t_is_pass_from_permission = {}
-  static e_is_pass_from_permission = {vx_type: vx_core.t_is_pass_from_permission}
+  static t_is_pass_from_permission = {
+    vx_type: vx_core.t_type
+  }
+  static e_is_pass_from_permission = {
+    vx_type: vx_core.t_is_pass_from_permission
+  }
 
   // (func is-pass<-permission)
   static f_is_pass_from_permission(context, permission) {
@@ -3506,8 +4052,12 @@ export default class vx_core {
    * @param  {list} values
    * @return {any-1}
    */
-  static t_last_from_list = {}
-  static e_last_from_list = {vx_type: vx_core.t_last_from_list}
+  static t_last_from_list = {
+    vx_type: vx_core.t_type
+  }
+  static e_last_from_list = {
+    vx_type: vx_core.t_last_from_list
+  }
 
   // (func last<-list)
   static f_last_from_list(generic, values) {
@@ -3530,8 +4080,12 @@ export default class vx_core {
    * @param  {list} values
    * @return {int}
    */
-  static t_length_from_list = {}
-  static e_length_from_list = {vx_type: vx_core.t_length_from_list}
+  static t_length_from_list = {
+    vx_type: vx_core.t_type
+  }
+  static e_length_from_list = {
+    vx_type: vx_core.t_length_from_list
+  }
 
   // (func length<-list)
   static f_length_from_list(values) {
@@ -3547,8 +4101,12 @@ export default class vx_core {
    * @param  {any_from_func} fn_any
    * @return {any-1}
    */
-  static t_let = {}
-  static e_let = {vx_type: vx_core.t_let}
+  static t_let = {
+    vx_type: vx_core.t_type
+  }
+  static e_let = {
+    vx_type: vx_core.t_let
+  }
 
   // (func let)
   static f_let(generic, args, fn_any) {
@@ -3570,8 +4128,12 @@ export default class vx_core {
    * @param  {any_from_func_async} fn_any_async
    * @return {any-1}
    */
-  static t_let_async = {}
-  static e_let_async = {vx_type: vx_core.t_let_async}
+  static t_let_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_let_async = {
+    vx_type: vx_core.t_let_async
+  }
 
   // (func let-async)
   static async f_let_async(generic, args, fn_any_async) {
@@ -3592,8 +4154,12 @@ export default class vx_core {
    * @param  {any_from_any} fn_any_from_any
    * @return {list-1}
    */
-  static t_list_join_from_list = {}
-  static e_list_join_from_list = {vx_type: vx_core.t_list_join_from_list}
+  static t_list_join_from_list = {
+    vx_type: vx_core.t_type
+  }
+  static e_list_join_from_list = {
+    vx_type: vx_core.t_list_join_from_list
+  }
 
   // (func list-join<-list)
   static f_list_join_from_list(generic, values, fn_any_from_any) {
@@ -3617,8 +4183,12 @@ export default class vx_core {
    * @param  {any_from_any} fn_any_from_any
    * @return {list-1}
    */
-  static t_list_from_list = {}
-  static e_list_from_list = {vx_type: vx_core.t_list_from_list}
+  static t_list_from_list = {
+    vx_type: vx_core.t_type
+  }
+  static e_list_from_list = {
+    vx_type: vx_core.t_list_from_list
+  }
 
   // (func list<-list)
   static f_list_from_list(generic, values, fn_any_from_any) {
@@ -3642,8 +4212,12 @@ export default class vx_core {
    * @param  {any_from_any_async} fn_any_from_any_async
    * @return {list-1}
    */
-  static t_list_from_list_async = {}
-  static e_list_from_list_async = {vx_type: vx_core.t_list_from_list_async}
+  static t_list_from_list_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_list_from_list_async = {
+    vx_type: vx_core.t_list_from_list_async
+  }
 
   // (func list<-list-async)
   static async f_list_from_list_async(generic, values, fn_any_from_any_async) {
@@ -3668,8 +4242,12 @@ export default class vx_core {
    * @param  {any_from_key_value} fn_any_from_key_value
    * @return {list-1}
    */
-  static t_list_from_map = {}
-  static e_list_from_map = {vx_type: vx_core.t_list_from_map}
+  static t_list_from_map = {
+    vx_type: vx_core.t_type
+  }
+  static e_list_from_map = {
+    vx_type: vx_core.t_list_from_map
+  }
 
   // (func list<-map)
   static f_list_from_map(generic, valuemap, fn_any_from_key_value) {
@@ -3688,8 +4266,12 @@ export default class vx_core {
    * @param  {any_from_key_value_async} fn_any_from_key_value_async
    * @return {list-1}
    */
-  static t_list_from_map_async = {}
-  static e_list_from_map_async = {vx_type: vx_core.t_list_from_map_async}
+  static t_list_from_map_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_list_from_map_async = {
+    vx_type: vx_core.t_list_from_map_async
+  }
 
   // (func list<-map-async)
   static async f_list_from_map_async(generic, valuemap, fn_any_from_key_value_async) {
@@ -3705,8 +4287,12 @@ export default class vx_core {
    * @param  {any} type
    * @return {any}
    */
-  static t_list_from_type = {}
-  static e_list_from_type = {vx_type: vx_core.t_list_from_type}
+  static t_list_from_type = {
+    vx_type: vx_core.t_type
+  }
+  static e_list_from_type = {
+    vx_type: vx_core.t_list_from_type
+  }
 
   // (func list<-type)
   static f_list_from_type(type) {
@@ -3722,8 +4308,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any}
    */
-  static t_log = {}
-  static e_log = {vx_type: vx_core.t_log}
+  static t_log = {
+    vx_type: vx_core.t_type
+  }
+  static e_log = {
+    vx_type: vx_core.t_log
+  }
 
   // (func log)
   static f_log(value) {
@@ -3742,8 +4332,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any-1}
    */
-  static t_log_1 = {}
-  static e_log_1 = {vx_type: vx_core.t_log_1}
+  static t_log_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_log_1 = {
+    vx_type: vx_core.t_log_1
+  }
 
   // (func log)
   static f_log_1(generic, text, value) {
@@ -3762,8 +4356,12 @@ export default class vx_core {
    * @param  {anylist} ... args
    * @return {string}
    */
-  static t_main = {}
-  static e_main = {vx_type: vx_core.t_main}
+  static t_main = {
+    vx_type: vx_core.t_type
+  }
+  static e_main = {
+    vx_type: vx_core.t_main
+  }
 
   // (func main)
   static f_main(...args) {
@@ -3784,8 +4382,12 @@ export default class vx_core {
    * @param  {any_from_any} fn_any_from_any
    * @return {map-1}
    */
-  static t_map_from_list = {}
-  static e_map_from_list = {vx_type: vx_core.t_map_from_list}
+  static t_map_from_list = {
+    vx_type: vx_core.t_type
+  }
+  static e_map_from_list = {
+    vx_type: vx_core.t_map_from_list
+  }
 
   // (func map<-list)
   static f_map_from_list(generic, vallist, fn_any_from_any) {
@@ -3815,8 +4417,12 @@ export default class vx_core {
    * @param  {any_from_key_value} fn_any_from_key_value
    * @return {map-1}
    */
-  static t_map_from_map = {}
-  static e_map_from_map = {vx_type: vx_core.t_map_from_map}
+  static t_map_from_map = {
+    vx_type: vx_core.t_type
+  }
+  static e_map_from_map = {
+    vx_type: vx_core.t_map_from_map
+  }
 
   // (func map<-map)
   static f_map_from_map(generic, valuemap, fn_any_from_key_value) {
@@ -3833,8 +4439,12 @@ export default class vx_core {
    * @param  {anylist} ... values
    * @return {none}
    */
-  static t_mempool_addref = {}
-  static e_mempool_addref = {vx_type: vx_core.t_mempool_addref}
+  static t_mempool_addref = {
+    vx_type: vx_core.t_type
+  }
+  static e_mempool_addref = {
+    vx_type: vx_core.t_mempool_addref
+  }
 
   // (func mempool-addref)
   static f_mempool_addref(...values) {
@@ -3853,8 +4463,12 @@ export default class vx_core {
    * @param  {value} value
    * @return {none}
    */
-  static t_mempool_release = {}
-  static e_mempool_release = {vx_type: vx_core.t_mempool_release}
+  static t_mempool_release = {
+    vx_type: vx_core.t_type
+  }
+  static e_mempool_release = {
+    vx_type: vx_core.t_mempool_release
+  }
 
   // (func mempool-release)
   static f_mempool_release(value) {
@@ -3874,8 +4488,12 @@ export default class vx_core {
    * @param  {anylist} ... values
    * @return {none}
    */
-  static t_mempool_removeref = {}
-  static e_mempool_removeref = {vx_type: vx_core.t_mempool_removeref}
+  static t_mempool_removeref = {
+    vx_type: vx_core.t_type
+  }
+  static e_mempool_removeref = {
+    vx_type: vx_core.t_mempool_removeref
+  }
 
   // (func mempool-removeref)
   static f_mempool_removeref(...values) {
@@ -3898,8 +4516,12 @@ export default class vx_core {
    * @param  {anylist} ... values
    * @return {none}
    */
-  static t_mempool_removerefchildren = {}
-  static e_mempool_removerefchildren = {vx_type: vx_core.t_mempool_removerefchildren}
+  static t_mempool_removerefchildren = {
+    vx_type: vx_core.t_type
+  }
+  static e_mempool_removerefchildren = {
+    vx_type: vx_core.t_mempool_removerefchildren
+  }
 
   // (func mempool-removerefchildren)
   static f_mempool_removerefchildren(...values) {
@@ -3925,8 +4547,12 @@ export default class vx_core {
    * Returns a recycled Value or creates a new one.
    * @return {value}
    */
-  static t_mempool_reserve = {}
-  static e_mempool_reserve = {vx_type: vx_core.t_mempool_reserve}
+  static t_mempool_reserve = {
+    vx_type: vx_core.t_type
+  }
+  static e_mempool_reserve = {
+    vx_type: vx_core.t_mempool_reserve
+  }
 
   // (func mempool-reserve)
   static f_mempool_reserve() {
@@ -3955,8 +4581,12 @@ export default class vx_core {
    * @param  {string} error
    * @return {msg}
    */
-  static t_msg_from_error = {}
-  static e_msg_from_error = {vx_type: vx_core.t_msg_from_error}
+  static t_msg_from_error = {
+    vx_type: vx_core.t_type
+  }
+  static e_msg_from_error = {
+    vx_type: vx_core.t_msg_from_error
+  }
 
   // (func msg<-error)
   static f_msg_from_error(error) {
@@ -3978,8 +4608,12 @@ export default class vx_core {
    * @param  {any} detail
    * @return {msg}
    */
-  static t_msg_from_error_1 = {}
-  static e_msg_from_error_1 = {vx_type: vx_core.t_msg_from_error_1}
+  static t_msg_from_error_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_msg_from_error_1 = {
+    vx_type: vx_core.t_msg_from_error_1
+  }
 
   // (func msg<-error)
   static f_msg_from_error_1(code, detail) {
@@ -4004,8 +4638,12 @@ export default class vx_core {
    * @param  {any} detail
    * @return {msg}
    */
-  static t_msg_from_error_2 = {}
-  static e_msg_from_error_2 = {vx_type: vx_core.t_msg_from_error_2}
+  static t_msg_from_error_2 = {
+    vx_type: vx_core.t_type
+  }
+  static e_msg_from_error_2 = {
+    vx_type: vx_core.t_msg_from_error_2
+  }
 
   // (func msg<-error)
   static f_msg_from_error_2(path, code, detail) {
@@ -4028,8 +4666,12 @@ export default class vx_core {
    * @param  {string} warning
    * @return {msg}
    */
-  static t_msg_from_warning = {}
-  static e_msg_from_warning = {vx_type: vx_core.t_msg_from_warning}
+  static t_msg_from_warning = {
+    vx_type: vx_core.t_type
+  }
+  static e_msg_from_warning = {
+    vx_type: vx_core.t_msg_from_warning
+  }
 
   // (func msg<-warning)
   static f_msg_from_warning(warning) {
@@ -4051,8 +4693,12 @@ export default class vx_core {
    * @param  {msg} addmsg
    * @return {msgblock}
    */
-  static t_msgblock_from_msgblock_msg = {}
-  static e_msgblock_from_msgblock_msg = {vx_type: vx_core.t_msgblock_from_msgblock_msg}
+  static t_msgblock_from_msgblock_msg = {
+    vx_type: vx_core.t_type
+  }
+  static e_msgblock_from_msgblock_msg = {
+    vx_type: vx_core.t_msgblock_from_msgblock_msg
+  }
 
   // (func msgblock<-msgblock-msg)
   static f_msgblock_from_msgblock_msg(origblock, addmsg) {
@@ -4068,8 +4714,12 @@ export default class vx_core {
    * @param  {msgblock} addblock
    * @return {msgblock}
    */
-  static t_msgblock_from_msgblock_msgblock = {}
-  static e_msgblock_from_msgblock_msgblock = {vx_type: vx_core.t_msgblock_from_msgblock_msgblock}
+  static t_msgblock_from_msgblock_msgblock = {
+    vx_type: vx_core.t_type
+  }
+  static e_msgblock_from_msgblock_msgblock = {
+    vx_type: vx_core.t_msgblock_from_msgblock_msgblock
+  }
 
   // (func msgblock<-msgblock-msgblock)
   static f_msgblock_from_msgblock_msgblock(origblock, addblock) {
@@ -4088,8 +4738,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {string}
    */
-  static t_name_from_typedef = {}
-  static e_name_from_typedef = {vx_type: vx_core.t_name_from_typedef}
+  static t_name_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_name_from_typedef = {
+    vx_type: vx_core.t_name_from_typedef
+  }
 
   // (func name<-typedef)
   static f_name_from_typedef(vtypedef) {
@@ -4105,8 +4759,12 @@ export default class vx_core {
    * @param  {anylist} ... clauses
    * @return {any-1}
    */
-  static t_native = {}
-  static e_native = {vx_type: vx_core.t_native}
+  static t_native = {
+    vx_type: vx_core.t_type
+  }
+  static e_native = {
+    vx_type: vx_core.t_native
+  }
 
   // (func native)
   static f_native(generic, ...clauses) {
@@ -4122,8 +4780,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any}
    */
-  static t_native_from_any = {}
-  static e_native_from_any = {vx_type: vx_core.t_native_from_any}
+  static t_native_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_native_from_any = {
+    vx_type: vx_core.t_native_from_any
+  }
 
   // (func native<-any)
   static f_native_from_any(value) {
@@ -4158,8 +4820,12 @@ export default class vx_core {
    * @param  {anylist} ... values
    * @return {any-1}
    */
-  static t_new = {}
-  static e_new = {vx_type: vx_core.t_new}
+  static t_new = {
+    vx_type: vx_core.t_type
+  }
+  static e_new = {
+    vx_type: vx_core.t_new
+  }
 
   // (func new)
   static f_new(type, ...values) {
@@ -4173,8 +4839,12 @@ export default class vx_core {
    * Function Type returning number with any parameters
    * @return {number}
    */
-  static t_number_from_func = {}
-  static e_number_from_func = {vx_type: vx_core.t_number_from_func}
+  static t_number_from_func = {
+    vx_type: vx_core.t_type
+  }
+  static e_number_from_func = {
+    vx_type: vx_core.t_number_from_func
+  }
 
   // (func number<-func)
   static f_number_from_func() {
@@ -4189,8 +4859,12 @@ export default class vx_core {
    * @param  {boolean} val2
    * @return {boolean}
    */
-  static t_or = {}
-  static e_or = {vx_type: vx_core.t_or}
+  static t_or = {
+    vx_type: vx_core.t_type
+  }
+  static e_or = {
+    vx_type: vx_core.t_or
+  }
 
   // (func or)
   static f_or(val1, val2) {
@@ -4209,8 +4883,12 @@ export default class vx_core {
    * @param  {booleanlist} ... values
    * @return {boolean}
    */
-  static t_or_1 = {}
-  static e_or_1 = {vx_type: vx_core.t_or_1}
+  static t_or_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_or_1 = {
+    vx_type: vx_core.t_or_1
+  }
 
   // (func or)
   static f_or_1(...values) {
@@ -4235,8 +4913,12 @@ export default class vx_core {
    * @param  {string} name
    * @return {package}
    */
-  static t_package_global_from_name = {}
-  static e_package_global_from_name = {vx_type: vx_core.t_package_global_from_name}
+  static t_package_global_from_name = {
+    vx_type: vx_core.t_type
+  }
+  static e_package_global_from_name = {
+    vx_type: vx_core.t_package_global_from_name
+  }
 
   // (func package-global<-name)
   static f_package_global_from_name(name) {
@@ -4259,8 +4941,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {string}
    */
-  static t_packagename_from_typedef = {}
-  static e_packagename_from_typedef = {vx_type: vx_core.t_packagename_from_typedef}
+  static t_packagename_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_packagename_from_typedef = {
+    vx_type: vx_core.t_packagename_from_typedef
+  }
 
   // (func packagename<-typedef)
   static f_packagename_from_typedef(vtypedef) {
@@ -4275,8 +4961,12 @@ export default class vx_core {
    * @param  {string} path
    * @return {string}
    */
-  static t_path_from_context_path = {}
-  static e_path_from_context_path = {vx_type: vx_core.t_path_from_context_path}
+  static t_path_from_context_path = {
+    vx_type: vx_core.t_type
+  }
+  static e_path_from_context_path = {
+    vx_type: vx_core.t_path_from_context_path
+  }
 
   // (func path<-context-path)
   static f_path_from_context_path(context, path) {
@@ -4295,8 +4985,12 @@ export default class vx_core {
    * @param  {string} path
    * @return {string}
    */
-  static t_path_from_setting_path = {}
-  static e_path_from_setting_path = {vx_type: vx_core.t_path_from_setting_path}
+  static t_path_from_setting_path = {
+    vx_type: vx_core.t_type
+  }
+  static e_path_from_setting_path = {
+    vx_type: vx_core.t_path_from_setting_path
+  }
 
   // (func path<-setting-path)
   static f_path_from_setting_path(session, path) {
@@ -4310,8 +5004,12 @@ export default class vx_core {
    * @param  {string} id
    * @return {permission}
    */
-  static t_permission_from_id_context = {}
-  static e_permission_from_id_context = {vx_type: vx_core.t_permission_from_id_context}
+  static t_permission_from_id_context = {
+    vx_type: vx_core.t_type
+  }
+  static e_permission_from_id_context = {
+    vx_type: vx_core.t_permission_from_id_context
+  }
 
   // (func permission<-id-context)
   static f_permission_from_id_context(context, id) {
@@ -4335,8 +5033,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {argmap}
    */
-  static t_properties_from_typedef = {}
-  static e_properties_from_typedef = {vx_type: vx_core.t_properties_from_typedef}
+  static t_properties_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_properties_from_typedef = {
+    vx_type: vx_core.t_properties_from_typedef
+  }
 
   // (func properties<-typedef)
   static f_properties_from_typedef(vtypedef) {
@@ -4351,8 +5053,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {arg}
    */
-  static t_proplast_from_typedef = {}
-  static e_proplast_from_typedef = {vx_type: vx_core.t_proplast_from_typedef}
+  static t_proplast_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_proplast_from_typedef = {
+    vx_type: vx_core.t_proplast_from_typedef
+  }
 
   // (func proplast<-typedef)
   static f_proplast_from_typedef(vtypedef) {
@@ -4367,8 +5073,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any-1}
    */
-  static t_resolve = {}
-  static e_resolve = {vx_type: vx_core.t_resolve}
+  static t_resolve = {
+    vx_type: vx_core.t_type
+  }
+  static e_resolve = {
+    vx_type: vx_core.t_resolve
+  }
 
   // (func resolve)
   static f_resolve(generic, value) {
@@ -4384,8 +5094,12 @@ export default class vx_core {
    * @param  {any_from_func} fn_any
    * @return {any-1}
    */
-  static t_resolve_1 = {}
-  static e_resolve_1 = {vx_type: vx_core.t_resolve_1}
+  static t_resolve_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_resolve_1 = {
+    vx_type: vx_core.t_resolve_1
+  }
 
   // (func resolve)
   static f_resolve_1(generic, fn_any) {
@@ -4414,8 +5128,12 @@ export default class vx_core {
    * @param  {any_from_func_async} fn_any
    * @return {any-1}
    */
-  static t_resolve_async = {}
-  static e_resolve_async = {vx_type: vx_core.t_resolve_async}
+  static t_resolve_async = {
+    vx_type: vx_core.t_type
+  }
+  static e_resolve_async = {
+    vx_type: vx_core.t_resolve_async
+  }
 
   // (func resolve-async)
   static async f_resolve_async(generic, fn_any) {
@@ -4444,8 +5162,12 @@ export default class vx_core {
    * @param  {list} ... clauses
    * @return {any-1}
    */
-  static t_resolve_first = {}
-  static e_resolve_first = {vx_type: vx_core.t_resolve_first}
+  static t_resolve_first = {
+    vx_type: vx_core.t_type
+  }
+  static e_resolve_first = {
+    vx_type: vx_core.t_resolve_first
+  }
 
   // (func resolve-first)
   static f_resolve_first(generic, ...clauses) {
@@ -4466,8 +5188,12 @@ export default class vx_core {
    * @param  {list} clauses
    * @return {list-1}
    */
-  static t_resolve_list = {}
-  static e_resolve_list = {vx_type: vx_core.t_resolve_list}
+  static t_resolve_list = {
+    vx_type: vx_core.t_type
+  }
+  static e_resolve_list = {
+    vx_type: vx_core.t_resolve_list
+  }
 
   // (func resolve-list)
   static f_resolve_list(generic, clauses) {
@@ -4487,8 +5213,12 @@ export default class vx_core {
    * Return security from the given context.
    * @return {security}
    */
-  static t_security_from_context = {}
-  static e_security_from_context = {vx_type: vx_core.t_security_from_context}
+  static t_security_from_context = {
+    vx_type: vx_core.t_type
+  }
+  static e_security_from_context = {
+    vx_type: vx_core.t_security_from_context
+  }
 
   // (func security<-context)
   static f_security_from_context(context) {
@@ -4505,8 +5235,12 @@ export default class vx_core {
    * @param  {user} user
    * @return {security}
    */
-  static t_security_from_user = {}
-  static e_security_from_user = {vx_type: vx_core.t_security_from_user}
+  static t_security_from_user = {
+    vx_type: vx_core.t_type
+  }
+  static e_security_from_user = {
+    vx_type: vx_core.t_security_from_user
+  }
 
   // (func security<-user)
   static f_security_from_user(user) {
@@ -4520,8 +5254,12 @@ export default class vx_core {
    * Returns session from a context
    * @return {session}
    */
-  static t_session_from_context = {}
-  static e_session_from_context = {vx_type: vx_core.t_session_from_context}
+  static t_session_from_context = {
+    vx_type: vx_core.t_type
+  }
+  static e_session_from_context = {
+    vx_type: vx_core.t_session_from_context
+  }
 
   // (func session<-context)
   static f_session_from_context(context) {
@@ -4535,8 +5273,12 @@ export default class vx_core {
    * Returns setting from a context
    * @return {setting}
    */
-  static t_setting_from_context = {}
-  static e_setting_from_context = {vx_type: vx_core.t_setting_from_context}
+  static t_setting_from_context = {
+    vx_type: vx_core.t_type
+  }
+  static e_setting_from_context = {
+    vx_type: vx_core.t_setting_from_context
+  }
 
   // (func setting<-context)
   static f_setting_from_context(context) {
@@ -4551,8 +5293,12 @@ export default class vx_core {
    * @param  {int} repeat
    * @return {string}
    */
-  static t_string_repeat = {}
-  static e_string_repeat = {vx_type: vx_core.t_string_repeat}
+  static t_string_repeat = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_repeat = {
+    vx_type: vx_core.t_string_repeat
+  }
 
   // (func string-repeat)
   static f_string_repeat(text, repeat) {
@@ -4567,8 +5313,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {string}
    */
-  static t_string_from_any = {}
-  static e_string_from_any = {vx_type: vx_core.t_string_from_any}
+  static t_string_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_from_any = {
+    vx_type: vx_core.t_string_from_any
+  }
 
   // (func string<-any)
   static f_string_from_any(value) {
@@ -4589,8 +5339,12 @@ export default class vx_core {
    * @param  {boolean} linefeed
    * @return {string}
    */
-  static t_string_from_any_indent = {}
-  static e_string_from_any_indent = {vx_type: vx_core.t_string_from_any_indent}
+  static t_string_from_any_indent = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_from_any_indent = {
+    vx_type: vx_core.t_string_from_any_indent
+  }
 
   // (func string<-any-indent)
   static f_string_from_any_indent(value, indent, linefeed) {
@@ -4604,8 +5358,12 @@ export default class vx_core {
    * Function Type returning string with any parameters
    * @return {string}
    */
-  static t_string_from_func = {}
-  static e_string_from_func = {vx_type: vx_core.t_string_from_func}
+  static t_string_from_func = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_from_func = {
+    vx_type: vx_core.t_string_from_func
+  }
 
   // (func string<-func)
   static f_string_from_func() {
@@ -4621,8 +5379,12 @@ export default class vx_core {
    * @param  {string} replace
    * @return {string}
    */
-  static t_string_from_string_find_replace = {}
-  static e_string_from_string_find_replace = {vx_type: vx_core.t_string_from_string_find_replace}
+  static t_string_from_string_find_replace = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_from_string_find_replace = {
+    vx_type: vx_core.t_string_from_string_find_replace
+  }
 
   // (func string<-string-find-replace)
   static f_string_from_string_find_replace(text, find, replace) {
@@ -4639,8 +5401,12 @@ export default class vx_core {
    * @param  {thenelselist} ... thenelselist
    * @return {any-1}
    */
-  static t_switch = {}
-  static e_switch = {vx_type: vx_core.t_switch}
+  static t_switch = {
+    vx_type: vx_core.t_type
+  }
+  static e_switch = {
+    vx_type: vx_core.t_switch
+  }
 
   // (func switch)
   static f_switch(generic, val, ...thenelselist) {
@@ -4695,8 +5461,12 @@ export default class vx_core {
    * @param  {any_from_func} fn_any
    * @return {thenelse}
    */
-  static t_then = {}
-  static e_then = {vx_type: vx_core.t_then}
+  static t_then = {
+    vx_type: vx_core.t_type
+  }
+  static e_then = {
+    vx_type: vx_core.t_then
+  }
 
   // (func then)
   static f_then(fn_cond, fn_any) {
@@ -4719,8 +5489,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {typelist}
    */
-  static t_traits_from_typedef = {}
-  static e_traits_from_typedef = {vx_type: vx_core.t_traits_from_typedef}
+  static t_traits_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_traits_from_typedef = {
+    vx_type: vx_core.t_traits_from_typedef
+  }
 
   // (func traits<-typedef)
   static f_traits_from_typedef(vtypedef) {
@@ -4735,8 +5509,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {any}
    */
-  static t_type_from_any = {}
-  static e_type_from_any = {vx_type: vx_core.t_type_from_any}
+  static t_type_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_type_from_any = {
+    vx_type: vx_core.t_type_from_any
+  }
 
   // (func type<-any)
   static f_type_from_any(value) {
@@ -4784,8 +5562,12 @@ export default class vx_core {
    * @param  {any} val
    * @return {typedef}
    */
-  static t_typedef_from_any = {}
-  static e_typedef_from_any = {vx_type: vx_core.t_typedef_from_any}
+  static t_typedef_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_typedef_from_any = {
+    vx_type: vx_core.t_typedef_from_any
+  }
 
   // (func typedef<-any)
   static f_typedef_from_any(val) {
@@ -4802,8 +5584,12 @@ export default class vx_core {
    * @param  {any} val
    * @return {typedef}
    */
-  static t_typedef_from_type = {}
-  static e_typedef_from_type = {vx_type: vx_core.t_typedef_from_type}
+  static t_typedef_from_type = {
+    vx_type: vx_core.t_type
+  }
+  static e_typedef_from_type = {
+    vx_type: vx_core.t_typedef_from_type
+  }
 
   // (func typedef<-type)
   static f_typedef_from_type(val) {
@@ -4818,8 +5604,12 @@ export default class vx_core {
    * @param  {any} value
    * @return {string}
    */
-  static t_typename_from_any = {}
-  static e_typename_from_any = {vx_type: vx_core.t_typename_from_any}
+  static t_typename_from_any = {
+    vx_type: vx_core.t_type
+  }
+  static e_typename_from_any = {
+    vx_type: vx_core.t_typename_from_any
+  }
 
   // (func typename<-any)
   static f_typename_from_any(value) {
@@ -4836,8 +5626,12 @@ export default class vx_core {
    * @param  {any} type
    * @return {string}
    */
-  static t_typename_from_type = {}
-  static e_typename_from_type = {vx_type: vx_core.t_typename_from_type}
+  static t_typename_from_type = {
+    vx_type: vx_core.t_type
+  }
+  static e_typename_from_type = {
+    vx_type: vx_core.t_typename_from_type
+  }
 
   // (func typename<-type)
   static f_typename_from_type(type) {
@@ -4854,8 +5648,12 @@ export default class vx_core {
    * @param  {typedef} vtypedef
    * @return {string}
    */
-  static t_typename_from_typedef = {}
-  static e_typename_from_typedef = {vx_type: vx_core.t_typename_from_typedef}
+  static t_typename_from_typedef = {
+    vx_type: vx_core.t_type
+  }
+  static e_typename_from_typedef = {
+    vx_type: vx_core.t_typename_from_typedef
+  }
 
   // (func typename<-typedef)
   static f_typename_from_typedef(vtypedef) {
@@ -4875,8 +5673,12 @@ export default class vx_core {
    * @param  {typelist} typelist
    * @return {stringlist}
    */
-  static t_typenames_from_typelist = {}
-  static e_typenames_from_typelist = {vx_type: vx_core.t_typenames_from_typelist}
+  static t_typenames_from_typelist = {
+    vx_type: vx_core.t_type
+  }
+  static e_typenames_from_typelist = {
+    vx_type: vx_core.t_typenames_from_typelist
+  }
 
   // (func typenames<-typelist)
   static f_typenames_from_typelist(typelist) {
@@ -4895,8 +5697,12 @@ export default class vx_core {
    * Returns the current user from context.
    * @return {user}
    */
-  static t_user_from_context = {}
-  static e_user_from_context = {vx_type: vx_core.t_user_from_context}
+  static t_user_from_context = {
+    vx_type: vx_core.t_type
+  }
+  static e_user_from_context = {
+    vx_type: vx_core.t_user_from_context
+  }
 
   // (func user<-context)
   static f_user_from_context(context) {
@@ -4909,80 +5715,6 @@ export default class vx_core {
     return output
   }
 
-  // empty types
-  static e_any = {}
-  static e_any_async_from_func = {}
-  static e_any_from_anylist = []
-  static e_anylist = []
-  static e_anymap = {}
-  static e_anytype = {}
-  static e_arg = {}
-  static e_arglist = []
-  static e_argmap = {}
-  static e_boolean = false
-  static e_booleanlist = []
-  static e_collection = {}
-  static e_compilelanguages = {}
-  static e_connect = {}
-  static e_connectlist = []
-  static e_connectmap = {}
-  static e_const = {}
-  static e_constdef = {}
-  static e_constlist = []
-  static e_constmap = {}
-  static e_context = {}
-  static e_date = {}
-  static e_decimal = {}
-  static e_error = {}
-  static e_float = 0
-  static e_func = {}
-  static e_funcdef = {}
-  static e_funclist = []
-  static e_funcmap = {}
-  static e_int = 0
-  static e_intlist = []
-  static e_intmap = {}
-  static e_list = []
-  static e_listtype = {}
-  static e_locale = {}
-  static e_map = {}
-  static e_maptype = {}
-  static e_mempool = {}
-  static e_msg = {}
-  static e_msgblock = {}
-  static e_msgblocklist = []
-  static e_msglist = []
-  static e_none = {}
-  static e_notype = {}
-  static e_number = {}
-  static e_numberlist = []
-  static e_numbermap = {}
-  static e_package = {}
-  static e_packagemap = {}
-  static e_permission = {}
-  static e_permissionlist = []
-  static e_permissionmap = {}
-  static e_project = {}
-  static e_security = {}
-  static e_session = {}
-  static e_setting = {}
-  static e_state = {}
-  static e_statelistener = {}
-  static e_string = ''
-  static e_stringlist = []
-  static e_stringmap = {}
-  static e_struct = {}
-  static e_thenelse = {}
-  static e_thenelselist = []
-  static e_translation = {}
-  static e_translationlist = []
-  static e_translationmap = {}
-  static e_type = {}
-  static e_typedef = {}
-  static e_typelist = []
-  static e_typemap = {}
-  static e_user = {}
-  static e_value = {}
 
 
   static {
@@ -7278,20 +8010,7 @@ export default class vx_core {
     vx_core.e_value['vx_type'] = vx_core.t_value
     vx_core.e_value['vx_value'] = {}
 
-    // (const global)
-    Object.assign(vx_core.c_global, {
-      
-    })
-
-    // (const mempool-active)
-    Object.assign(vx_core.c_mempool_active, {
-      "valuepool": {
-        "refs": 0
-      }
-    })
-
     // (func !)
-    vx_core.t_not['vx_type'] = vx_core.t_type
     vx_core.t_not['vx_value'] = {
       name          : "!",
       pkgname       : "vx/core",
@@ -7310,7 +8029,6 @@ export default class vx_core {
     }
 
     // (func !-empty)
-    vx_core.t_notempty['vx_type'] = vx_core.t_type
     vx_core.t_notempty['vx_value'] = {
       name          : "!-empty",
       pkgname       : "vx/core",
@@ -7329,7 +8047,6 @@ export default class vx_core {
     }
 
     // (func !-empty)
-    vx_core.t_notempty_1['vx_type'] = vx_core.t_type
     vx_core.t_notempty_1['vx_value'] = {
       name          : "!-empty",
       pkgname       : "vx/core",
@@ -7348,7 +8065,6 @@ export default class vx_core {
     }
 
     // (func !=)
-    vx_core.t_ne['vx_type'] = vx_core.t_type
     vx_core.t_ne['vx_value'] = {
       name          : "!=",
       pkgname       : "vx/core",
@@ -7367,7 +8083,6 @@ export default class vx_core {
     }
 
     // (func !==)
-    vx_core.t_neqeq['vx_type'] = vx_core.t_type
     vx_core.t_neqeq['vx_value'] = {
       name          : "!==",
       pkgname       : "vx/core",
@@ -7386,7 +8101,6 @@ export default class vx_core {
     }
 
     // (func *)
-    vx_core.t_multiply['vx_type'] = vx_core.t_type
     vx_core.t_multiply['vx_value'] = {
       name          : "*",
       pkgname       : "vx/core",
@@ -7405,7 +8119,6 @@ export default class vx_core {
     }
 
     // (func *)
-    vx_core.t_multiply_1['vx_type'] = vx_core.t_type
     vx_core.t_multiply_1['vx_value'] = {
       name          : "*",
       pkgname       : "vx/core",
@@ -7424,7 +8137,6 @@ export default class vx_core {
     }
 
     // (func *)
-    vx_core.t_multiply_2['vx_type'] = vx_core.t_type
     vx_core.t_multiply_2['vx_value'] = {
       name          : "*",
       pkgname       : "vx/core",
@@ -7443,7 +8155,6 @@ export default class vx_core {
     }
 
     // (func *)
-    vx_core.t_multiply_3['vx_type'] = vx_core.t_type
     vx_core.t_multiply_3['vx_value'] = {
       name          : "*",
       pkgname       : "vx/core",
@@ -7462,7 +8173,6 @@ export default class vx_core {
     }
 
     // (func +)
-    vx_core.t_plus['vx_type'] = vx_core.t_type
     vx_core.t_plus['vx_value'] = {
       name          : "+",
       pkgname       : "vx/core",
@@ -7481,7 +8191,6 @@ export default class vx_core {
     }
 
     // (func +)
-    vx_core.t_plus_1['vx_type'] = vx_core.t_type
     vx_core.t_plus_1['vx_value'] = {
       name          : "+",
       pkgname       : "vx/core",
@@ -7500,7 +8209,6 @@ export default class vx_core {
     }
 
     // (func +)
-    vx_core.t_plus_2['vx_type'] = vx_core.t_type
     vx_core.t_plus_2['vx_value'] = {
       name          : "+",
       pkgname       : "vx/core",
@@ -7519,7 +8227,6 @@ export default class vx_core {
     }
 
     // (func +)
-    vx_core.t_plus_3['vx_type'] = vx_core.t_type
     vx_core.t_plus_3['vx_value'] = {
       name          : "+",
       pkgname       : "vx/core",
@@ -7538,7 +8245,6 @@ export default class vx_core {
     }
 
     // (func +1)
-    vx_core.t_plus1['vx_type'] = vx_core.t_type
     vx_core.t_plus1['vx_value'] = {
       name          : "+1",
       pkgname       : "vx/core",
@@ -7557,7 +8263,6 @@ export default class vx_core {
     }
 
     // (func -)
-    vx_core.t_minus['vx_type'] = vx_core.t_type
     vx_core.t_minus['vx_value'] = {
       name          : "-",
       pkgname       : "vx/core",
@@ -7576,7 +8281,6 @@ export default class vx_core {
     }
 
     // (func -)
-    vx_core.t_minus_1['vx_type'] = vx_core.t_type
     vx_core.t_minus_1['vx_value'] = {
       name          : "-",
       pkgname       : "vx/core",
@@ -7595,7 +8299,6 @@ export default class vx_core {
     }
 
     // (func -)
-    vx_core.t_minus_2['vx_type'] = vx_core.t_type
     vx_core.t_minus_2['vx_value'] = {
       name          : "-",
       pkgname       : "vx/core",
@@ -7614,7 +8317,6 @@ export default class vx_core {
     }
 
     // (func -)
-    vx_core.t_minus_3['vx_type'] = vx_core.t_type
     vx_core.t_minus_3['vx_value'] = {
       name          : "-",
       pkgname       : "vx/core",
@@ -7633,7 +8335,6 @@ export default class vx_core {
     }
 
     // (func -1)
-    vx_core.t_minus1['vx_type'] = vx_core.t_type
     vx_core.t_minus1['vx_value'] = {
       name          : "-1",
       pkgname       : "vx/core",
@@ -7652,7 +8353,6 @@ export default class vx_core {
     }
 
     // (func .)
-    vx_core.t_dotmethod['vx_type'] = vx_core.t_type
     vx_core.t_dotmethod['vx_value'] = {
       name          : ".",
       pkgname       : "vx/core",
@@ -7671,7 +8371,6 @@ export default class vx_core {
     }
 
     // (func /)
-    vx_core.t_divide['vx_type'] = vx_core.t_type
     vx_core.t_divide['vx_value'] = {
       name          : "/",
       pkgname       : "vx/core",
@@ -7690,7 +8389,6 @@ export default class vx_core {
     }
 
     // (func <)
-    vx_core.t_lt['vx_type'] = vx_core.t_type
     vx_core.t_lt['vx_value'] = {
       name          : "<",
       pkgname       : "vx/core",
@@ -7709,7 +8407,6 @@ export default class vx_core {
     }
 
     // (func <)
-    vx_core.t_lt_1['vx_type'] = vx_core.t_type
     vx_core.t_lt_1['vx_value'] = {
       name          : "<",
       pkgname       : "vx/core",
@@ -7728,7 +8425,6 @@ export default class vx_core {
     }
 
     // (func <-)
-    vx_core.t_chainfirst['vx_type'] = vx_core.t_type
     vx_core.t_chainfirst['vx_value'] = {
       name          : "<-",
       pkgname       : "vx/core",
@@ -7747,7 +8443,6 @@ export default class vx_core {
     }
 
     // (func <<-)
-    vx_core.t_chainlast['vx_type'] = vx_core.t_type
     vx_core.t_chainlast['vx_value'] = {
       name          : "<<-",
       pkgname       : "vx/core",
@@ -7766,7 +8461,6 @@ export default class vx_core {
     }
 
     // (func <=)
-    vx_core.t_le['vx_type'] = vx_core.t_type
     vx_core.t_le['vx_value'] = {
       name          : "<=",
       pkgname       : "vx/core",
@@ -7785,7 +8479,6 @@ export default class vx_core {
     }
 
     // (func <=)
-    vx_core.t_le_1['vx_type'] = vx_core.t_type
     vx_core.t_le_1['vx_value'] = {
       name          : "<=",
       pkgname       : "vx/core",
@@ -7804,7 +8497,6 @@ export default class vx_core {
     }
 
     // (func =)
-    vx_core.t_eq['vx_type'] = vx_core.t_type
     vx_core.t_eq['vx_value'] = {
       name          : "=",
       pkgname       : "vx/core",
@@ -7823,7 +8515,6 @@ export default class vx_core {
     }
 
     // (func =)
-    vx_core.t_eq_1['vx_type'] = vx_core.t_type
     vx_core.t_eq_1['vx_value'] = {
       name          : "=",
       pkgname       : "vx/core",
@@ -7842,7 +8533,6 @@ export default class vx_core {
     }
 
     // (func ==)
-    vx_core.t_eqeq['vx_type'] = vx_core.t_type
     vx_core.t_eqeq['vx_value'] = {
       name          : "==",
       pkgname       : "vx/core",
@@ -7861,7 +8551,6 @@ export default class vx_core {
     }
 
     // (func >)
-    vx_core.t_gt['vx_type'] = vx_core.t_type
     vx_core.t_gt['vx_value'] = {
       name          : ">",
       pkgname       : "vx/core",
@@ -7880,7 +8569,6 @@ export default class vx_core {
     }
 
     // (func >)
-    vx_core.t_gt_1['vx_type'] = vx_core.t_type
     vx_core.t_gt_1['vx_value'] = {
       name          : ">",
       pkgname       : "vx/core",
@@ -7899,7 +8587,6 @@ export default class vx_core {
     }
 
     // (func >=)
-    vx_core.t_ge['vx_type'] = vx_core.t_type
     vx_core.t_ge['vx_value'] = {
       name          : ">=",
       pkgname       : "vx/core",
@@ -7918,7 +8605,6 @@ export default class vx_core {
     }
 
     // (func >=)
-    vx_core.t_ge_1['vx_type'] = vx_core.t_type
     vx_core.t_ge_1['vx_value'] = {
       name          : ">=",
       pkgname       : "vx/core",
@@ -7937,7 +8623,6 @@ export default class vx_core {
     }
 
     // (func allowfuncs<-security)
-    vx_core.t_allowfuncs_from_security['vx_type'] = vx_core.t_type
     vx_core.t_allowfuncs_from_security['vx_value'] = {
       name          : "allowfuncs<-security",
       pkgname       : "vx/core",
@@ -7956,7 +8641,6 @@ export default class vx_core {
     }
 
     // (func allowtypenames<-typedef)
-    vx_core.t_allowtypenames_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_allowtypenames_from_typedef['vx_value'] = {
       name          : "allowtypenames<-typedef",
       pkgname       : "vx/core",
@@ -7975,7 +8659,6 @@ export default class vx_core {
     }
 
     // (func allowtypes<-typedef)
-    vx_core.t_allowtypes_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_allowtypes_from_typedef['vx_value'] = {
       name          : "allowtypes<-typedef",
       pkgname       : "vx/core",
@@ -7994,7 +8677,6 @@ export default class vx_core {
     }
 
     // (func and)
-    vx_core.t_and['vx_type'] = vx_core.t_type
     vx_core.t_and['vx_value'] = {
       name          : "and",
       pkgname       : "vx/core",
@@ -8013,7 +8695,6 @@ export default class vx_core {
     }
 
     // (func and)
-    vx_core.t_and_1['vx_type'] = vx_core.t_type
     vx_core.t_and_1['vx_value'] = {
       name          : "and",
       pkgname       : "vx/core",
@@ -8032,7 +8713,6 @@ export default class vx_core {
     }
 
     // (func any<-any)
-    vx_core.t_any_from_any['vx_type'] = vx_core.t_type
     vx_core.t_any_from_any['vx_value'] = {
       name          : "any<-any",
       pkgname       : "vx/core",
@@ -8051,7 +8731,6 @@ export default class vx_core {
     }
 
     // (func any<-any-async)
-    vx_core.t_any_from_any_async['vx_type'] = vx_core.t_type
     vx_core.t_any_from_any_async['vx_value'] = {
       name          : "any<-any-async",
       pkgname       : "vx/core",
@@ -8070,7 +8749,6 @@ export default class vx_core {
     }
 
     // (func any<-any-context)
-    vx_core.t_any_from_any_context['vx_type'] = vx_core.t_type
     vx_core.t_any_from_any_context['vx_value'] = {
       name          : "any<-any-context",
       pkgname       : "vx/core",
@@ -8089,7 +8767,6 @@ export default class vx_core {
     }
 
     // (func any<-any-context-async)
-    vx_core.t_any_from_any_context_async['vx_type'] = vx_core.t_type
     vx_core.t_any_from_any_context_async['vx_value'] = {
       name          : "any<-any-context-async",
       pkgname       : "vx/core",
@@ -8108,7 +8785,6 @@ export default class vx_core {
     }
 
     // (func any<-any-key-value)
-    vx_core.t_any_from_any_key_value['vx_type'] = vx_core.t_type
     vx_core.t_any_from_any_key_value['vx_value'] = {
       name          : "any<-any-key-value",
       pkgname       : "vx/core",
@@ -8127,7 +8803,6 @@ export default class vx_core {
     }
 
     // (func any<-func)
-    vx_core.t_any_from_func['vx_type'] = vx_core.t_type
     vx_core.t_any_from_func['vx_value'] = {
       name          : "any<-func",
       pkgname       : "vx/core",
@@ -8146,7 +8821,6 @@ export default class vx_core {
     }
 
     // (func any<-func-async)
-    vx_core.t_any_from_func_async['vx_type'] = vx_core.t_type
     vx_core.t_any_from_func_async['vx_value'] = {
       name          : "any<-func-async",
       pkgname       : "vx/core",
@@ -8165,7 +8839,6 @@ export default class vx_core {
     }
 
     // (func any<-int)
-    vx_core.t_any_from_int['vx_type'] = vx_core.t_type
     vx_core.t_any_from_int['vx_value'] = {
       name          : "any<-int",
       pkgname       : "vx/core",
@@ -8184,7 +8857,6 @@ export default class vx_core {
     }
 
     // (func any<-key-value)
-    vx_core.t_any_from_key_value['vx_type'] = vx_core.t_type
     vx_core.t_any_from_key_value['vx_value'] = {
       name          : "any<-key-value",
       pkgname       : "vx/core",
@@ -8203,7 +8875,6 @@ export default class vx_core {
     }
 
     // (func any<-key-value-async)
-    vx_core.t_any_from_key_value_async['vx_type'] = vx_core.t_type
     vx_core.t_any_from_key_value_async['vx_value'] = {
       name          : "any<-key-value-async",
       pkgname       : "vx/core",
@@ -8222,7 +8893,6 @@ export default class vx_core {
     }
 
     // (func any<-list)
-    vx_core.t_any_from_list['vx_type'] = vx_core.t_type
     vx_core.t_any_from_list['vx_value'] = {
       name          : "any<-list",
       pkgname       : "vx/core",
@@ -8241,7 +8911,6 @@ export default class vx_core {
     }
 
     // (func any<-list-start-reduce)
-    vx_core.t_any_from_list_start_reduce['vx_type'] = vx_core.t_type
     vx_core.t_any_from_list_start_reduce['vx_value'] = {
       name          : "any<-list-start-reduce",
       pkgname       : "vx/core",
@@ -8260,7 +8929,6 @@ export default class vx_core {
     }
 
     // (func any<-list-start-reduce-next)
-    vx_core.t_any_from_list_start_reduce_next['vx_type'] = vx_core.t_type
     vx_core.t_any_from_list_start_reduce_next['vx_value'] = {
       name          : "any<-list-start-reduce-next",
       pkgname       : "vx/core",
@@ -8279,7 +8947,6 @@ export default class vx_core {
     }
 
     // (func any<-map)
-    vx_core.t_any_from_map['vx_type'] = vx_core.t_type
     vx_core.t_any_from_map['vx_value'] = {
       name          : "any<-map",
       pkgname       : "vx/core",
@@ -8298,7 +8965,6 @@ export default class vx_core {
     }
 
     // (func any<-map-start-reduce)
-    vx_core.t_any_from_map_start_reduce['vx_type'] = vx_core.t_type
     vx_core.t_any_from_map_start_reduce['vx_value'] = {
       name          : "any<-map-start-reduce",
       pkgname       : "vx/core",
@@ -8317,7 +8983,6 @@ export default class vx_core {
     }
 
     // (func any<-none)
-    vx_core.t_any_from_none['vx_type'] = vx_core.t_type
     vx_core.t_any_from_none['vx_value'] = {
       name          : "any<-none",
       pkgname       : "vx/core",
@@ -8336,7 +9001,6 @@ export default class vx_core {
     }
 
     // (func any<-none-async)
-    vx_core.t_any_from_none_async['vx_type'] = vx_core.t_type
     vx_core.t_any_from_none_async['vx_value'] = {
       name          : "any<-none-async",
       pkgname       : "vx/core",
@@ -8355,7 +9019,6 @@ export default class vx_core {
     }
 
     // (func any<-reduce)
-    vx_core.t_any_from_reduce['vx_type'] = vx_core.t_type
     vx_core.t_any_from_reduce['vx_value'] = {
       name          : "any<-reduce",
       pkgname       : "vx/core",
@@ -8374,7 +9037,6 @@ export default class vx_core {
     }
 
     // (func any<-reduce-async)
-    vx_core.t_any_from_reduce_async['vx_type'] = vx_core.t_type
     vx_core.t_any_from_reduce_async['vx_value'] = {
       name          : "any<-reduce-async",
       pkgname       : "vx/core",
@@ -8393,7 +9055,6 @@ export default class vx_core {
     }
 
     // (func any<-reduce-next)
-    vx_core.t_any_from_reduce_next['vx_type'] = vx_core.t_type
     vx_core.t_any_from_reduce_next['vx_value'] = {
       name          : "any<-reduce-next",
       pkgname       : "vx/core",
@@ -8412,7 +9073,6 @@ export default class vx_core {
     }
 
     // (func any<-reduce-next-async)
-    vx_core.t_any_from_reduce_next_async['vx_type'] = vx_core.t_type
     vx_core.t_any_from_reduce_next_async['vx_value'] = {
       name          : "any<-reduce-next-async",
       pkgname       : "vx/core",
@@ -8431,7 +9091,6 @@ export default class vx_core {
     }
 
     // (func any<-struct)
-    vx_core.t_any_from_struct['vx_type'] = vx_core.t_type
     vx_core.t_any_from_struct['vx_value'] = {
       name          : "any<-struct",
       pkgname       : "vx/core",
@@ -8450,7 +9109,6 @@ export default class vx_core {
     }
 
     // (func async)
-    vx_core.t_async['vx_type'] = vx_core.t_type
     vx_core.t_async['vx_value'] = {
       name          : "async",
       pkgname       : "vx/core",
@@ -8469,7 +9127,6 @@ export default class vx_core {
     }
 
     // (func boolean-permission<-func)
-    vx_core.t_boolean_permission_from_func['vx_type'] = vx_core.t_type
     vx_core.t_boolean_permission_from_func['vx_value'] = {
       name          : "boolean-permission<-func",
       pkgname       : "vx/core",
@@ -8488,7 +9145,6 @@ export default class vx_core {
     }
 
     // (func boolean<-any)
-    vx_core.t_boolean_from_any['vx_type'] = vx_core.t_type
     vx_core.t_boolean_from_any['vx_value'] = {
       name          : "boolean<-any",
       pkgname       : "vx/core",
@@ -8507,7 +9163,6 @@ export default class vx_core {
     }
 
     // (func boolean<-func)
-    vx_core.t_boolean_from_func['vx_type'] = vx_core.t_type
     vx_core.t_boolean_from_func['vx_value'] = {
       name          : "boolean<-func",
       pkgname       : "vx/core",
@@ -8526,7 +9181,6 @@ export default class vx_core {
     }
 
     // (func boolean<-none)
-    vx_core.t_boolean_from_none['vx_type'] = vx_core.t_type
     vx_core.t_boolean_from_none['vx_value'] = {
       name          : "boolean<-none",
       pkgname       : "vx/core",
@@ -8545,7 +9199,6 @@ export default class vx_core {
     }
 
     // (func case)
-    vx_core.t_case['vx_type'] = vx_core.t_type
     vx_core.t_case['vx_value'] = {
       name          : "case",
       pkgname       : "vx/core",
@@ -8564,7 +9217,6 @@ export default class vx_core {
     }
 
     // (func case)
-    vx_core.t_case_1['vx_type'] = vx_core.t_type
     vx_core.t_case_1['vx_value'] = {
       name          : "case",
       pkgname       : "vx/core",
@@ -8583,7 +9235,6 @@ export default class vx_core {
     }
 
     // (func compare)
-    vx_core.t_compare['vx_type'] = vx_core.t_type
     vx_core.t_compare['vx_value'] = {
       name          : "compare",
       pkgname       : "vx/core",
@@ -8602,7 +9253,6 @@ export default class vx_core {
     }
 
     // (func contains)
-    vx_core.t_contains['vx_type'] = vx_core.t_type
     vx_core.t_contains['vx_value'] = {
       name          : "contains",
       pkgname       : "vx/core",
@@ -8621,7 +9271,6 @@ export default class vx_core {
     }
 
     // (func contains)
-    vx_core.t_contains_1['vx_type'] = vx_core.t_type
     vx_core.t_contains_1['vx_value'] = {
       name          : "contains",
       pkgname       : "vx/core",
@@ -8640,7 +9289,6 @@ export default class vx_core {
     }
 
     // (func context-main)
-    vx_core.t_context_main['vx_type'] = vx_core.t_type
     vx_core.t_context_main['vx_value'] = {
       name          : "context-main",
       pkgname       : "vx/core",
@@ -8659,7 +9307,6 @@ export default class vx_core {
     }
 
     // (func copy)
-    vx_core.t_copy['vx_type'] = vx_core.t_type
     vx_core.t_copy['vx_value'] = {
       name          : "copy",
       pkgname       : "vx/core",
@@ -8678,7 +9325,6 @@ export default class vx_core {
     }
 
     // (func else)
-    vx_core.t_else['vx_type'] = vx_core.t_type
     vx_core.t_else['vx_value'] = {
       name          : "else",
       pkgname       : "vx/core",
@@ -8697,7 +9343,6 @@ export default class vx_core {
     }
 
     // (func empty)
-    vx_core.t_empty['vx_type'] = vx_core.t_type
     vx_core.t_empty['vx_value'] = {
       name          : "empty",
       pkgname       : "vx/core",
@@ -8716,7 +9361,6 @@ export default class vx_core {
     }
 
     // (func extends<-any)
-    vx_core.t_extends_from_any['vx_type'] = vx_core.t_type
     vx_core.t_extends_from_any['vx_value'] = {
       name          : "extends<-any",
       pkgname       : "vx/core",
@@ -8735,7 +9379,6 @@ export default class vx_core {
     }
 
     // (func extends<-typedef)
-    vx_core.t_extends_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_extends_from_typedef['vx_value'] = {
       name          : "extends<-typedef",
       pkgname       : "vx/core",
@@ -8754,7 +9397,6 @@ export default class vx_core {
     }
 
     // (func first<-list)
-    vx_core.t_first_from_list['vx_type'] = vx_core.t_type
     vx_core.t_first_from_list['vx_value'] = {
       name          : "first<-list",
       pkgname       : "vx/core",
@@ -8773,7 +9415,6 @@ export default class vx_core {
     }
 
     // (func first<-list-any<-any)
-    vx_core.t_first_from_list_any_from_any['vx_type'] = vx_core.t_type
     vx_core.t_first_from_list_any_from_any['vx_value'] = {
       name          : "first<-list-any<-any",
       pkgname       : "vx/core",
@@ -8792,7 +9433,6 @@ export default class vx_core {
     }
 
     // (func float<-string)
-    vx_core.t_float_from_string['vx_type'] = vx_core.t_type
     vx_core.t_float_from_string['vx_value'] = {
       name          : "float<-string",
       pkgname       : "vx/core",
@@ -8811,7 +9451,6 @@ export default class vx_core {
     }
 
     // (func fn)
-    vx_core.t_fn['vx_type'] = vx_core.t_type
     vx_core.t_fn['vx_value'] = {
       name          : "fn",
       pkgname       : "vx/core",
@@ -8830,7 +9469,6 @@ export default class vx_core {
     }
 
     // (func funcdef<-func)
-    vx_core.t_funcdef_from_func['vx_type'] = vx_core.t_type
     vx_core.t_funcdef_from_func['vx_value'] = {
       name          : "funcdef<-func",
       pkgname       : "vx/core",
@@ -8849,7 +9487,6 @@ export default class vx_core {
     }
 
     // (func funcname<-funcdef)
-    vx_core.t_funcname_from_funcdef['vx_type'] = vx_core.t_type
     vx_core.t_funcname_from_funcdef['vx_value'] = {
       name          : "funcname<-funcdef",
       pkgname       : "vx/core",
@@ -8868,7 +9505,6 @@ export default class vx_core {
     }
 
     // (func if)
-    vx_core.t_if['vx_type'] = vx_core.t_type
     vx_core.t_if['vx_value'] = {
       name          : "if",
       pkgname       : "vx/core",
@@ -8887,7 +9523,6 @@ export default class vx_core {
     }
 
     // (func if)
-    vx_core.t_if_1['vx_type'] = vx_core.t_type
     vx_core.t_if_1['vx_value'] = {
       name          : "if",
       pkgname       : "vx/core",
@@ -8906,7 +9541,6 @@ export default class vx_core {
     }
 
     // (func if)
-    vx_core.t_if_2['vx_type'] = vx_core.t_type
     vx_core.t_if_2['vx_value'] = {
       name          : "if",
       pkgname       : "vx/core",
@@ -8925,7 +9559,6 @@ export default class vx_core {
     }
 
     // (func int<-func)
-    vx_core.t_int_from_func['vx_type'] = vx_core.t_type
     vx_core.t_int_from_func['vx_value'] = {
       name          : "int<-func",
       pkgname       : "vx/core",
@@ -8944,7 +9577,6 @@ export default class vx_core {
     }
 
     // (func int<-string)
-    vx_core.t_int_from_string['vx_type'] = vx_core.t_type
     vx_core.t_int_from_string['vx_value'] = {
       name          : "int<-string",
       pkgname       : "vx/core",
@@ -8963,7 +9595,6 @@ export default class vx_core {
     }
 
     // (func is-empty)
-    vx_core.t_is_empty['vx_type'] = vx_core.t_type
     vx_core.t_is_empty['vx_value'] = {
       name          : "is-empty",
       pkgname       : "vx/core",
@@ -8982,7 +9613,6 @@ export default class vx_core {
     }
 
     // (func is-empty)
-    vx_core.t_is_empty_1['vx_type'] = vx_core.t_type
     vx_core.t_is_empty_1['vx_value'] = {
       name          : "is-empty",
       pkgname       : "vx/core",
@@ -9001,7 +9631,6 @@ export default class vx_core {
     }
 
     // (func is-endswith)
-    vx_core.t_is_endswith['vx_type'] = vx_core.t_type
     vx_core.t_is_endswith['vx_value'] = {
       name          : "is-endswith",
       pkgname       : "vx/core",
@@ -9020,7 +9649,6 @@ export default class vx_core {
     }
 
     // (func is-float)
-    vx_core.t_is_float['vx_type'] = vx_core.t_type
     vx_core.t_is_float['vx_value'] = {
       name          : "is-float",
       pkgname       : "vx/core",
@@ -9039,7 +9667,6 @@ export default class vx_core {
     }
 
     // (func is-func)
-    vx_core.t_is_func['vx_type'] = vx_core.t_type
     vx_core.t_is_func['vx_value'] = {
       name          : "is-func",
       pkgname       : "vx/core",
@@ -9058,7 +9685,6 @@ export default class vx_core {
     }
 
     // (func is-int)
-    vx_core.t_is_int['vx_type'] = vx_core.t_type
     vx_core.t_is_int['vx_value'] = {
       name          : "is-int",
       pkgname       : "vx/core",
@@ -9077,7 +9703,6 @@ export default class vx_core {
     }
 
     // (func is-number)
-    vx_core.t_is_number['vx_type'] = vx_core.t_type
     vx_core.t_is_number['vx_value'] = {
       name          : "is-number",
       pkgname       : "vx/core",
@@ -9096,7 +9721,6 @@ export default class vx_core {
     }
 
     // (func is-pass<-permission)
-    vx_core.t_is_pass_from_permission['vx_type'] = vx_core.t_type
     vx_core.t_is_pass_from_permission['vx_value'] = {
       name          : "is-pass<-permission",
       pkgname       : "vx/core",
@@ -9115,7 +9739,6 @@ export default class vx_core {
     }
 
     // (func last<-list)
-    vx_core.t_last_from_list['vx_type'] = vx_core.t_type
     vx_core.t_last_from_list['vx_value'] = {
       name          : "last<-list",
       pkgname       : "vx/core",
@@ -9134,7 +9757,6 @@ export default class vx_core {
     }
 
     // (func length<-list)
-    vx_core.t_length_from_list['vx_type'] = vx_core.t_type
     vx_core.t_length_from_list['vx_value'] = {
       name          : "length<-list",
       pkgname       : "vx/core",
@@ -9153,7 +9775,6 @@ export default class vx_core {
     }
 
     // (func let)
-    vx_core.t_let['vx_type'] = vx_core.t_type
     vx_core.t_let['vx_value'] = {
       name          : "let",
       pkgname       : "vx/core",
@@ -9172,7 +9793,6 @@ export default class vx_core {
     }
 
     // (func let-async)
-    vx_core.t_let_async['vx_type'] = vx_core.t_type
     vx_core.t_let_async['vx_value'] = {
       name          : "let-async",
       pkgname       : "vx/core",
@@ -9191,7 +9811,6 @@ export default class vx_core {
     }
 
     // (func list-join<-list)
-    vx_core.t_list_join_from_list['vx_type'] = vx_core.t_type
     vx_core.t_list_join_from_list['vx_value'] = {
       name          : "list-join<-list",
       pkgname       : "vx/core",
@@ -9210,7 +9829,6 @@ export default class vx_core {
     }
 
     // (func list<-list)
-    vx_core.t_list_from_list['vx_type'] = vx_core.t_type
     vx_core.t_list_from_list['vx_value'] = {
       name          : "list<-list",
       pkgname       : "vx/core",
@@ -9229,7 +9847,6 @@ export default class vx_core {
     }
 
     // (func list<-list-async)
-    vx_core.t_list_from_list_async['vx_type'] = vx_core.t_type
     vx_core.t_list_from_list_async['vx_value'] = {
       name          : "list<-list-async",
       pkgname       : "vx/core",
@@ -9248,7 +9865,6 @@ export default class vx_core {
     }
 
     // (func list<-map)
-    vx_core.t_list_from_map['vx_type'] = vx_core.t_type
     vx_core.t_list_from_map['vx_value'] = {
       name          : "list<-map",
       pkgname       : "vx/core",
@@ -9267,7 +9883,6 @@ export default class vx_core {
     }
 
     // (func list<-map-async)
-    vx_core.t_list_from_map_async['vx_type'] = vx_core.t_type
     vx_core.t_list_from_map_async['vx_value'] = {
       name          : "list<-map-async",
       pkgname       : "vx/core",
@@ -9286,7 +9901,6 @@ export default class vx_core {
     }
 
     // (func list<-type)
-    vx_core.t_list_from_type['vx_type'] = vx_core.t_type
     vx_core.t_list_from_type['vx_value'] = {
       name          : "list<-type",
       pkgname       : "vx/core",
@@ -9305,7 +9919,6 @@ export default class vx_core {
     }
 
     // (func log)
-    vx_core.t_log['vx_type'] = vx_core.t_type
     vx_core.t_log['vx_value'] = {
       name          : "log",
       pkgname       : "vx/core",
@@ -9324,7 +9937,6 @@ export default class vx_core {
     }
 
     // (func log)
-    vx_core.t_log_1['vx_type'] = vx_core.t_type
     vx_core.t_log_1['vx_value'] = {
       name          : "log",
       pkgname       : "vx/core",
@@ -9343,7 +9955,6 @@ export default class vx_core {
     }
 
     // (func main)
-    vx_core.t_main['vx_type'] = vx_core.t_type
     vx_core.t_main['vx_value'] = {
       name          : "main",
       pkgname       : "vx/core",
@@ -9362,7 +9973,6 @@ export default class vx_core {
     }
 
     // (func map<-list)
-    vx_core.t_map_from_list['vx_type'] = vx_core.t_type
     vx_core.t_map_from_list['vx_value'] = {
       name          : "map<-list",
       pkgname       : "vx/core",
@@ -9381,7 +9991,6 @@ export default class vx_core {
     }
 
     // (func map<-map)
-    vx_core.t_map_from_map['vx_type'] = vx_core.t_type
     vx_core.t_map_from_map['vx_value'] = {
       name          : "map<-map",
       pkgname       : "vx/core",
@@ -9400,7 +10009,6 @@ export default class vx_core {
     }
 
     // (func mempool-addref)
-    vx_core.t_mempool_addref['vx_type'] = vx_core.t_type
     vx_core.t_mempool_addref['vx_value'] = {
       name          : "mempool-addref",
       pkgname       : "vx/core",
@@ -9419,7 +10027,6 @@ export default class vx_core {
     }
 
     // (func mempool-release)
-    vx_core.t_mempool_release['vx_type'] = vx_core.t_type
     vx_core.t_mempool_release['vx_value'] = {
       name          : "mempool-release",
       pkgname       : "vx/core",
@@ -9438,7 +10045,6 @@ export default class vx_core {
     }
 
     // (func mempool-removeref)
-    vx_core.t_mempool_removeref['vx_type'] = vx_core.t_type
     vx_core.t_mempool_removeref['vx_value'] = {
       name          : "mempool-removeref",
       pkgname       : "vx/core",
@@ -9457,7 +10063,6 @@ export default class vx_core {
     }
 
     // (func mempool-removerefchildren)
-    vx_core.t_mempool_removerefchildren['vx_type'] = vx_core.t_type
     vx_core.t_mempool_removerefchildren['vx_value'] = {
       name          : "mempool-removerefchildren",
       pkgname       : "vx/core",
@@ -9476,7 +10081,6 @@ export default class vx_core {
     }
 
     // (func mempool-reserve)
-    vx_core.t_mempool_reserve['vx_type'] = vx_core.t_type
     vx_core.t_mempool_reserve['vx_value'] = {
       name          : "mempool-reserve",
       pkgname       : "vx/core",
@@ -9495,7 +10099,6 @@ export default class vx_core {
     }
 
     // (func msg<-error)
-    vx_core.t_msg_from_error['vx_type'] = vx_core.t_type
     vx_core.t_msg_from_error['vx_value'] = {
       name          : "msg<-error",
       pkgname       : "vx/core",
@@ -9514,7 +10117,6 @@ export default class vx_core {
     }
 
     // (func msg<-error)
-    vx_core.t_msg_from_error_1['vx_type'] = vx_core.t_type
     vx_core.t_msg_from_error_1['vx_value'] = {
       name          : "msg<-error",
       pkgname       : "vx/core",
@@ -9533,7 +10135,6 @@ export default class vx_core {
     }
 
     // (func msg<-error)
-    vx_core.t_msg_from_error_2['vx_type'] = vx_core.t_type
     vx_core.t_msg_from_error_2['vx_value'] = {
       name          : "msg<-error",
       pkgname       : "vx/core",
@@ -9552,7 +10153,6 @@ export default class vx_core {
     }
 
     // (func msg<-warning)
-    vx_core.t_msg_from_warning['vx_type'] = vx_core.t_type
     vx_core.t_msg_from_warning['vx_value'] = {
       name          : "msg<-warning",
       pkgname       : "vx/core",
@@ -9571,7 +10171,6 @@ export default class vx_core {
     }
 
     // (func msgblock<-msgblock-msg)
-    vx_core.t_msgblock_from_msgblock_msg['vx_type'] = vx_core.t_type
     vx_core.t_msgblock_from_msgblock_msg['vx_value'] = {
       name          : "msgblock<-msgblock-msg",
       pkgname       : "vx/core",
@@ -9590,7 +10189,6 @@ export default class vx_core {
     }
 
     // (func msgblock<-msgblock-msgblock)
-    vx_core.t_msgblock_from_msgblock_msgblock['vx_type'] = vx_core.t_type
     vx_core.t_msgblock_from_msgblock_msgblock['vx_value'] = {
       name          : "msgblock<-msgblock-msgblock",
       pkgname       : "vx/core",
@@ -9609,7 +10207,6 @@ export default class vx_core {
     }
 
     // (func name<-typedef)
-    vx_core.t_name_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_name_from_typedef['vx_value'] = {
       name          : "name<-typedef",
       pkgname       : "vx/core",
@@ -9628,7 +10225,6 @@ export default class vx_core {
     }
 
     // (func native)
-    vx_core.t_native['vx_type'] = vx_core.t_type
     vx_core.t_native['vx_value'] = {
       name          : "native",
       pkgname       : "vx/core",
@@ -9647,7 +10243,6 @@ export default class vx_core {
     }
 
     // (func native<-any)
-    vx_core.t_native_from_any['vx_type'] = vx_core.t_type
     vx_core.t_native_from_any['vx_value'] = {
       name          : "native<-any",
       pkgname       : "vx/core",
@@ -9666,7 +10261,6 @@ export default class vx_core {
     }
 
     // (func new)
-    vx_core.t_new['vx_type'] = vx_core.t_type
     vx_core.t_new['vx_value'] = {
       name          : "new",
       pkgname       : "vx/core",
@@ -9685,7 +10279,6 @@ export default class vx_core {
     }
 
     // (func number<-func)
-    vx_core.t_number_from_func['vx_type'] = vx_core.t_type
     vx_core.t_number_from_func['vx_value'] = {
       name          : "number<-func",
       pkgname       : "vx/core",
@@ -9704,7 +10297,6 @@ export default class vx_core {
     }
 
     // (func or)
-    vx_core.t_or['vx_type'] = vx_core.t_type
     vx_core.t_or['vx_value'] = {
       name          : "or",
       pkgname       : "vx/core",
@@ -9723,7 +10315,6 @@ export default class vx_core {
     }
 
     // (func or)
-    vx_core.t_or_1['vx_type'] = vx_core.t_type
     vx_core.t_or_1['vx_value'] = {
       name          : "or",
       pkgname       : "vx/core",
@@ -9742,7 +10333,6 @@ export default class vx_core {
     }
 
     // (func package-global<-name)
-    vx_core.t_package_global_from_name['vx_type'] = vx_core.t_type
     vx_core.t_package_global_from_name['vx_value'] = {
       name          : "package-global<-name",
       pkgname       : "vx/core",
@@ -9761,7 +10351,6 @@ export default class vx_core {
     }
 
     // (func packagename<-typedef)
-    vx_core.t_packagename_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_packagename_from_typedef['vx_value'] = {
       name          : "packagename<-typedef",
       pkgname       : "vx/core",
@@ -9780,7 +10369,6 @@ export default class vx_core {
     }
 
     // (func path<-context-path)
-    vx_core.t_path_from_context_path['vx_type'] = vx_core.t_type
     vx_core.t_path_from_context_path['vx_value'] = {
       name          : "path<-context-path",
       pkgname       : "vx/core",
@@ -9799,7 +10387,6 @@ export default class vx_core {
     }
 
     // (func path<-setting-path)
-    vx_core.t_path_from_setting_path['vx_type'] = vx_core.t_type
     vx_core.t_path_from_setting_path['vx_value'] = {
       name          : "path<-setting-path",
       pkgname       : "vx/core",
@@ -9818,7 +10405,6 @@ export default class vx_core {
     }
 
     // (func permission<-id-context)
-    vx_core.t_permission_from_id_context['vx_type'] = vx_core.t_type
     vx_core.t_permission_from_id_context['vx_value'] = {
       name          : "permission<-id-context",
       pkgname       : "vx/core",
@@ -9837,7 +10423,6 @@ export default class vx_core {
     }
 
     // (func properties<-typedef)
-    vx_core.t_properties_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_properties_from_typedef['vx_value'] = {
       name          : "properties<-typedef",
       pkgname       : "vx/core",
@@ -9856,7 +10441,6 @@ export default class vx_core {
     }
 
     // (func proplast<-typedef)
-    vx_core.t_proplast_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_proplast_from_typedef['vx_value'] = {
       name          : "proplast<-typedef",
       pkgname       : "vx/core",
@@ -9875,7 +10459,6 @@ export default class vx_core {
     }
 
     // (func resolve)
-    vx_core.t_resolve['vx_type'] = vx_core.t_type
     vx_core.t_resolve['vx_value'] = {
       name          : "resolve",
       pkgname       : "vx/core",
@@ -9894,7 +10477,6 @@ export default class vx_core {
     }
 
     // (func resolve)
-    vx_core.t_resolve_1['vx_type'] = vx_core.t_type
     vx_core.t_resolve_1['vx_value'] = {
       name          : "resolve",
       pkgname       : "vx/core",
@@ -9913,7 +10495,6 @@ export default class vx_core {
     }
 
     // (func resolve-async)
-    vx_core.t_resolve_async['vx_type'] = vx_core.t_type
     vx_core.t_resolve_async['vx_value'] = {
       name          : "resolve-async",
       pkgname       : "vx/core",
@@ -9932,7 +10513,6 @@ export default class vx_core {
     }
 
     // (func resolve-first)
-    vx_core.t_resolve_first['vx_type'] = vx_core.t_type
     vx_core.t_resolve_first['vx_value'] = {
       name          : "resolve-first",
       pkgname       : "vx/core",
@@ -9951,7 +10531,6 @@ export default class vx_core {
     }
 
     // (func resolve-list)
-    vx_core.t_resolve_list['vx_type'] = vx_core.t_type
     vx_core.t_resolve_list['vx_value'] = {
       name          : "resolve-list",
       pkgname       : "vx/core",
@@ -9970,7 +10549,6 @@ export default class vx_core {
     }
 
     // (func security<-context)
-    vx_core.t_security_from_context['vx_type'] = vx_core.t_type
     vx_core.t_security_from_context['vx_value'] = {
       name          : "security<-context",
       pkgname       : "vx/core",
@@ -9989,7 +10567,6 @@ export default class vx_core {
     }
 
     // (func security<-user)
-    vx_core.t_security_from_user['vx_type'] = vx_core.t_type
     vx_core.t_security_from_user['vx_value'] = {
       name          : "security<-user",
       pkgname       : "vx/core",
@@ -10008,7 +10585,6 @@ export default class vx_core {
     }
 
     // (func session<-context)
-    vx_core.t_session_from_context['vx_type'] = vx_core.t_type
     vx_core.t_session_from_context['vx_value'] = {
       name          : "session<-context",
       pkgname       : "vx/core",
@@ -10027,7 +10603,6 @@ export default class vx_core {
     }
 
     // (func setting<-context)
-    vx_core.t_setting_from_context['vx_type'] = vx_core.t_type
     vx_core.t_setting_from_context['vx_value'] = {
       name          : "setting<-context",
       pkgname       : "vx/core",
@@ -10046,7 +10621,6 @@ export default class vx_core {
     }
 
     // (func string-repeat)
-    vx_core.t_string_repeat['vx_type'] = vx_core.t_type
     vx_core.t_string_repeat['vx_value'] = {
       name          : "string-repeat",
       pkgname       : "vx/core",
@@ -10065,7 +10639,6 @@ export default class vx_core {
     }
 
     // (func string<-any)
-    vx_core.t_string_from_any['vx_type'] = vx_core.t_type
     vx_core.t_string_from_any['vx_value'] = {
       name          : "string<-any",
       pkgname       : "vx/core",
@@ -10084,7 +10657,6 @@ export default class vx_core {
     }
 
     // (func string<-any-indent)
-    vx_core.t_string_from_any_indent['vx_type'] = vx_core.t_type
     vx_core.t_string_from_any_indent['vx_value'] = {
       name          : "string<-any-indent",
       pkgname       : "vx/core",
@@ -10103,7 +10675,6 @@ export default class vx_core {
     }
 
     // (func string<-func)
-    vx_core.t_string_from_func['vx_type'] = vx_core.t_type
     vx_core.t_string_from_func['vx_value'] = {
       name          : "string<-func",
       pkgname       : "vx/core",
@@ -10122,7 +10693,6 @@ export default class vx_core {
     }
 
     // (func string<-string-find-replace)
-    vx_core.t_string_from_string_find_replace['vx_type'] = vx_core.t_type
     vx_core.t_string_from_string_find_replace['vx_value'] = {
       name          : "string<-string-find-replace",
       pkgname       : "vx/core",
@@ -10141,7 +10711,6 @@ export default class vx_core {
     }
 
     // (func switch)
-    vx_core.t_switch['vx_type'] = vx_core.t_type
     vx_core.t_switch['vx_value'] = {
       name          : "switch",
       pkgname       : "vx/core",
@@ -10160,7 +10729,6 @@ export default class vx_core {
     }
 
     // (func then)
-    vx_core.t_then['vx_type'] = vx_core.t_type
     vx_core.t_then['vx_value'] = {
       name          : "then",
       pkgname       : "vx/core",
@@ -10179,7 +10747,6 @@ export default class vx_core {
     }
 
     // (func traits<-typedef)
-    vx_core.t_traits_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_traits_from_typedef['vx_value'] = {
       name          : "traits<-typedef",
       pkgname       : "vx/core",
@@ -10198,7 +10765,6 @@ export default class vx_core {
     }
 
     // (func type<-any)
-    vx_core.t_type_from_any['vx_type'] = vx_core.t_type
     vx_core.t_type_from_any['vx_value'] = {
       name          : "type<-any",
       pkgname       : "vx/core",
@@ -10217,7 +10783,6 @@ export default class vx_core {
     }
 
     // (func typedef<-any)
-    vx_core.t_typedef_from_any['vx_type'] = vx_core.t_type
     vx_core.t_typedef_from_any['vx_value'] = {
       name          : "typedef<-any",
       pkgname       : "vx/core",
@@ -10236,7 +10801,6 @@ export default class vx_core {
     }
 
     // (func typedef<-type)
-    vx_core.t_typedef_from_type['vx_type'] = vx_core.t_type
     vx_core.t_typedef_from_type['vx_value'] = {
       name          : "typedef<-type",
       pkgname       : "vx/core",
@@ -10255,7 +10819,6 @@ export default class vx_core {
     }
 
     // (func typename<-any)
-    vx_core.t_typename_from_any['vx_type'] = vx_core.t_type
     vx_core.t_typename_from_any['vx_value'] = {
       name          : "typename<-any",
       pkgname       : "vx/core",
@@ -10274,7 +10837,6 @@ export default class vx_core {
     }
 
     // (func typename<-type)
-    vx_core.t_typename_from_type['vx_type'] = vx_core.t_type
     vx_core.t_typename_from_type['vx_value'] = {
       name          : "typename<-type",
       pkgname       : "vx/core",
@@ -10293,7 +10855,6 @@ export default class vx_core {
     }
 
     // (func typename<-typedef)
-    vx_core.t_typename_from_typedef['vx_type'] = vx_core.t_type
     vx_core.t_typename_from_typedef['vx_value'] = {
       name          : "typename<-typedef",
       pkgname       : "vx/core",
@@ -10312,7 +10873,6 @@ export default class vx_core {
     }
 
     // (func typenames<-typelist)
-    vx_core.t_typenames_from_typelist['vx_type'] = vx_core.t_type
     vx_core.t_typenames_from_typelist['vx_value'] = {
       name          : "typenames<-typelist",
       pkgname       : "vx/core",
@@ -10331,7 +10891,6 @@ export default class vx_core {
     }
 
     // (func user<-context)
-    vx_core.t_user_from_context['vx_type'] = vx_core.t_type
     vx_core.t_user_from_context['vx_value'] = {
       name          : "user<-context",
       pkgname       : "vx/core",
@@ -10348,6 +10907,18 @@ export default class vx_core {
       proplast      : {},
       fn            : vx_core.f_user_from_context
     }
+
+    // (const global)
+    Object.assign(vx_core.c_global, {
+      
+    })
+
+    // (const mempool-active)
+    Object.assign(vx_core.c_mempool_active, {
+      "valuepool": {
+        "refs": 0
+      }
+    })
 
   }
 }

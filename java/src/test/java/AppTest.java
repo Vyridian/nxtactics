@@ -64,6 +64,7 @@ import com.vxlisp.vx.ui.html.UihtmlTest;
 import com.vxlisp.vx.ui.ImageTest;
 import com.vxlisp.vx.ui.NavigationTest;
 import com.vxlisp.vx.ui.ScrollbarTest;
+import com.vxlisp.vx.ui.svg.UisvgTest;
 import com.vxlisp.vx.ui.TextTest;
 import com.vxlisp.vx.ui.TextentryTest;
 import com.vxlisp.vx.ui.UiTest;
@@ -585,6 +586,14 @@ public final class AppTest {
 
 
   @Test
+  @DisplayName("vx/ui/svg/uisvg")
+  void test_vx_ui_svg_uisvg() {
+	  com.vxlisp.vx.Test.Type_testpackage testpackage = UisvgTest.test_package(context);
+	  TestLib.run_testpackage_async(testpackage);
+  }
+
+
+  @Test
   @DisplayName("vx/ui/text")
   void test_vx_ui_text() {
 	  com.vxlisp.vx.Test.Type_testpackage testpackage = TextTest.test_package(context);
@@ -675,6 +684,7 @@ public final class AppTest {
     ImageTest.test_package(context),
     NavigationTest.test_package(context),
     ScrollbarTest.test_package(context),
+    UisvgTest.test_package(context),
     TextTest.test_package(context),
     TextentryTest.test_package(context),
     UiTest.test_package(context)

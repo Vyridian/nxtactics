@@ -10,8 +10,12 @@ export default class nx_tactics_books_gear {
    * @function chapter_gear_construction
    * @return {chapter}
    */
-  static t_chapter_gear_construction = {}
-  static e_chapter_gear_construction = {vx_type: nx_tactics_books_gear.t_chapter_gear_construction}
+  static t_chapter_gear_construction = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_gear_construction = {
+    vx_type: nx_tactics_books_gear.t_chapter_gear_construction
+  }
 
   // (func chapter_gear_construction)
   static f_chapter_gear_construction() {
@@ -28,8 +32,12 @@ export default class nx_tactics_books_gear {
    * @function chapter_gear_items
    * @return {chapter}
    */
-  static t_chapter_gear_items = {}
-  static e_chapter_gear_items = {vx_type: nx_tactics_books_gear.t_chapter_gear_items}
+  static t_chapter_gear_items = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_gear_items = {
+    vx_type: nx_tactics_books_gear.t_chapter_gear_items
+  }
 
   // (func chapter_gear_items)
   static f_chapter_gear_items() {
@@ -2542,8 +2550,12 @@ export default class nx_tactics_books_gear {
    * @function chapter_gear_overview
    * @return {chapter}
    */
-  static t_chapter_gear_overview = {}
-  static e_chapter_gear_overview = {vx_type: nx_tactics_books_gear.t_chapter_gear_overview}
+  static t_chapter_gear_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_gear_overview = {
+    vx_type: nx_tactics_books_gear.t_chapter_gear_overview
+  }
 
   // (func chapter_gear_overview)
   static f_chapter_gear_overview() {
@@ -2570,8 +2582,12 @@ export default class nx_tactics_books_gear {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_gear.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_gear.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -2594,7 +2610,6 @@ export default class nx_tactics_books_gear {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -2626,7 +2641,6 @@ export default class nx_tactics_books_gear {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_gear_construction)
-    nx_tactics_books_gear.t_chapter_gear_construction['vx_type'] = vx_core.t_type
     nx_tactics_books_gear.t_chapter_gear_construction['vx_value'] = {
       name          : "chapter_gear_construction",
       pkgname       : "nx/tactics/books/gear",
@@ -2645,7 +2659,6 @@ export default class nx_tactics_books_gear {
     }
 
     // (func chapter_gear_items)
-    nx_tactics_books_gear.t_chapter_gear_items['vx_type'] = vx_core.t_type
     nx_tactics_books_gear.t_chapter_gear_items['vx_value'] = {
       name          : "chapter_gear_items",
       pkgname       : "nx/tactics/books/gear",
@@ -2664,7 +2677,6 @@ export default class nx_tactics_books_gear {
     }
 
     // (func chapter_gear_overview)
-    nx_tactics_books_gear.t_chapter_gear_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_gear.t_chapter_gear_overview['vx_value'] = {
       name          : "chapter_gear_overview",
       pkgname       : "nx/tactics/books/gear",
@@ -2683,7 +2695,6 @@ export default class nx_tactics_books_gear {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_gear.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_gear.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/gear",

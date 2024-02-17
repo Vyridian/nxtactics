@@ -10,8 +10,12 @@ export default class nx_tactics_books_magic {
    * @function chapter_magic_items
    * @return {chapter}
    */
-  static t_chapter_magic_items = {}
-  static e_chapter_magic_items = {vx_type: nx_tactics_books_magic.t_chapter_magic_items}
+  static t_chapter_magic_items = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_magic_items = {
+    vx_type: nx_tactics_books_magic.t_chapter_magic_items
+  }
 
   // (func chapter_magic_items)
   static f_chapter_magic_items() {
@@ -140,8 +144,12 @@ export default class nx_tactics_books_magic {
    * @function chapter_magic_overview
    * @return {chapter}
    */
-  static t_chapter_magic_overview = {}
-  static e_chapter_magic_overview = {vx_type: nx_tactics_books_magic.t_chapter_magic_overview}
+  static t_chapter_magic_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_magic_overview = {
+    vx_type: nx_tactics_books_magic.t_chapter_magic_overview
+  }
 
   // (func chapter_magic_overview)
   static f_chapter_magic_overview() {
@@ -160,8 +168,12 @@ export default class nx_tactics_books_magic {
    * @function chapter_magical_skills
    * @return {chapter}
    */
-  static t_chapter_magical_skills = {}
-  static e_chapter_magical_skills = {vx_type: nx_tactics_books_magic.t_chapter_magical_skills}
+  static t_chapter_magical_skills = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_magical_skills = {
+    vx_type: nx_tactics_books_magic.t_chapter_magical_skills
+  }
 
   // (func chapter_magical_skills)
   static f_chapter_magical_skills() {
@@ -3827,11 +3839,11 @@ export default class nx_tactics_books_magic {
                   ":summary",
                   "* Allows the permanent addition of magical properties to an item."
                 ),
-                "Inscribe Symbol",
+                "Inscribe Sigil",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
-                  "Inscribe Symbol",
+                  "Inscribe Sigil",
                   ":summary",
                   "* Allows the temporary addition of magical properties to an item, portal, or area."
                 ),
@@ -4242,8 +4254,12 @@ export default class nx_tactics_books_magic {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_magic.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_magic.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -4268,7 +4284,6 @@ export default class nx_tactics_books_magic {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -4300,7 +4315,6 @@ export default class nx_tactics_books_magic {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_magic_items)
-    nx_tactics_books_magic.t_chapter_magic_items['vx_type'] = vx_core.t_type
     nx_tactics_books_magic.t_chapter_magic_items['vx_value'] = {
       name          : "chapter_magic_items",
       pkgname       : "nx/tactics/books/magic",
@@ -4319,7 +4333,6 @@ export default class nx_tactics_books_magic {
     }
 
     // (func chapter_magic_overview)
-    nx_tactics_books_magic.t_chapter_magic_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_magic.t_chapter_magic_overview['vx_value'] = {
       name          : "chapter_magic_overview",
       pkgname       : "nx/tactics/books/magic",
@@ -4338,7 +4351,6 @@ export default class nx_tactics_books_magic {
     }
 
     // (func chapter_magical_skills)
-    nx_tactics_books_magic.t_chapter_magical_skills['vx_type'] = vx_core.t_type
     nx_tactics_books_magic.t_chapter_magical_skills['vx_value'] = {
       name          : "chapter_magical_skills",
       pkgname       : "nx/tactics/books/magic",
@@ -4357,7 +4369,6 @@ export default class nx_tactics_books_magic {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_magic.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_magic.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/magic",

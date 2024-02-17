@@ -10,8 +10,12 @@ export default class nx_tactics_books_core_rules {
    * @function chapter_common_rules
    * @return {chapter}
    */
-  static t_chapter_common_rules = {}
-  static e_chapter_common_rules = {vx_type: nx_tactics_books_core_rules.t_chapter_common_rules}
+  static t_chapter_common_rules = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_common_rules = {
+    vx_type: nx_tactics_books_core_rules.t_chapter_common_rules
+  }
 
   // (func chapter_common_rules)
   static f_chapter_common_rules() {
@@ -558,8 +562,12 @@ export default class nx_tactics_books_core_rules {
    * @function chapter_core_maps
    * @return {chapter}
    */
-  static t_chapter_core_maps = {}
-  static e_chapter_core_maps = {vx_type: nx_tactics_books_core_rules.t_chapter_core_maps}
+  static t_chapter_core_maps = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_core_maps = {
+    vx_type: nx_tactics_books_core_rules.t_chapter_core_maps
+  }
 
   // (func chapter_core_maps)
   static f_chapter_core_maps() {
@@ -750,8 +758,12 @@ export default class nx_tactics_books_core_rules {
    * @function chapter_core_overview
    * @return {chapter}
    */
-  static t_chapter_core_overview = {}
-  static e_chapter_core_overview = {vx_type: nx_tactics_books_core_rules.t_chapter_core_overview}
+  static t_chapter_core_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_core_overview = {
+    vx_type: nx_tactics_books_core_rules.t_chapter_core_overview
+  }
 
   // (func chapter_core_overview)
   static f_chapter_core_overview() {
@@ -798,8 +810,12 @@ export default class nx_tactics_books_core_rules {
    * @function chapter_core_scenarios
    * @return {chapter}
    */
-  static t_chapter_core_scenarios = {}
-  static e_chapter_core_scenarios = {vx_type: nx_tactics_books_core_rules.t_chapter_core_scenarios}
+  static t_chapter_core_scenarios = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_core_scenarios = {
+    vx_type: nx_tactics_books_core_rules.t_chapter_core_scenarios
+  }
 
   // (func chapter_core_scenarios)
   static f_chapter_core_scenarios() {
@@ -894,8 +910,12 @@ export default class nx_tactics_books_core_rules {
    * @function chapter_lets_play
    * @return {chapter}
    */
-  static t_chapter_lets_play = {}
-  static e_chapter_lets_play = {vx_type: nx_tactics_books_core_rules.t_chapter_lets_play}
+  static t_chapter_lets_play = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_lets_play = {
+    vx_type: nx_tactics_books_core_rules.t_chapter_lets_play
+  }
 
   // (func chapter_lets_play)
   static f_chapter_lets_play() {
@@ -982,8 +1002,12 @@ export default class nx_tactics_books_core_rules {
    * @function chapter_tokens
    * @return {chapter}
    */
-  static t_chapter_tokens = {}
-  static e_chapter_tokens = {vx_type: nx_tactics_books_core_rules.t_chapter_tokens}
+  static t_chapter_tokens = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_tokens = {
+    vx_type: nx_tactics_books_core_rules.t_chapter_tokens
+  }
 
   // (func chapter_tokens)
   static f_chapter_tokens() {
@@ -1222,8 +1246,12 @@ export default class nx_tactics_books_core_rules {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_core_rules.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_core_rules.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1254,7 +1282,6 @@ export default class nx_tactics_books_core_rules {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1292,7 +1319,6 @@ export default class nx_tactics_books_core_rules {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_common_rules)
-    nx_tactics_books_core_rules.t_chapter_common_rules['vx_type'] = vx_core.t_type
     nx_tactics_books_core_rules.t_chapter_common_rules['vx_value'] = {
       name          : "chapter_common_rules",
       pkgname       : "nx/tactics/books/core_rules",
@@ -1311,7 +1337,6 @@ export default class nx_tactics_books_core_rules {
     }
 
     // (func chapter_core_maps)
-    nx_tactics_books_core_rules.t_chapter_core_maps['vx_type'] = vx_core.t_type
     nx_tactics_books_core_rules.t_chapter_core_maps['vx_value'] = {
       name          : "chapter_core_maps",
       pkgname       : "nx/tactics/books/core_rules",
@@ -1330,7 +1355,6 @@ export default class nx_tactics_books_core_rules {
     }
 
     // (func chapter_core_overview)
-    nx_tactics_books_core_rules.t_chapter_core_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_core_rules.t_chapter_core_overview['vx_value'] = {
       name          : "chapter_core_overview",
       pkgname       : "nx/tactics/books/core_rules",
@@ -1349,7 +1373,6 @@ export default class nx_tactics_books_core_rules {
     }
 
     // (func chapter_core_scenarios)
-    nx_tactics_books_core_rules.t_chapter_core_scenarios['vx_type'] = vx_core.t_type
     nx_tactics_books_core_rules.t_chapter_core_scenarios['vx_value'] = {
       name          : "chapter_core_scenarios",
       pkgname       : "nx/tactics/books/core_rules",
@@ -1368,7 +1391,6 @@ export default class nx_tactics_books_core_rules {
     }
 
     // (func chapter_lets_play)
-    nx_tactics_books_core_rules.t_chapter_lets_play['vx_type'] = vx_core.t_type
     nx_tactics_books_core_rules.t_chapter_lets_play['vx_value'] = {
       name          : "chapter_lets_play",
       pkgname       : "nx/tactics/books/core_rules",
@@ -1387,7 +1409,6 @@ export default class nx_tactics_books_core_rules {
     }
 
     // (func chapter_tokens)
-    nx_tactics_books_core_rules.t_chapter_tokens['vx_type'] = vx_core.t_type
     nx_tactics_books_core_rules.t_chapter_tokens['vx_value'] = {
       name          : "chapter_tokens",
       pkgname       : "nx/tactics/books/core_rules",
@@ -1406,7 +1427,6 @@ export default class nx_tactics_books_core_rules {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_core_rules.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_core_rules.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/core_rules",

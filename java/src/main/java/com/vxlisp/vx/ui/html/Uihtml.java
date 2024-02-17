@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import com.vxlisp.vx.*;
+import com.vxlisp.vx.web.*;
 import com.vxlisp.vx.ui.*;
 
 public final class Uihtml {
@@ -218,6 +219,88 @@ public final class Uihtml {
   public static final Const_renderer_app c_renderer_app = new Const_renderer_app();
 
   /**
+   * @function node_app_from_ui_orig
+   * @param  {ui} ui
+   * @param  {ui} orig
+   * @return {node}
+   * (func node-app<-ui-orig)
+   */
+  public static interface Func_node_app_from_ui_orig extends Core.Type_func, Core.Type_replfunc {
+    public Html.Type_node vx_node_app_from_ui_orig(final Ui.Type_ui ui, final Ui.Type_ui orig);
+  }
+
+  public static class Class_node_app_from_ui_orig extends Core.Class_base implements Func_node_app_from_ui_orig {
+
+    @Override
+    public Func_node_app_from_ui_orig vx_new(Object... vals) {
+      Class_node_app_from_ui_orig output = new Class_node_app_from_ui_orig();
+      return output;
+    }
+
+    @Override
+    public Func_node_app_from_ui_orig vx_copy(Object... vals) {
+      Class_node_app_from_ui_orig output = new Class_node_app_from_ui_orig();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "vx/ui/html/uihtml", // pkgname
+        "node-app<-ui-orig", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/web/html", // pkgname
+          "node", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_node_app_from_ui_orig vx_empty() {return e_node_app_from_ui_orig;}
+    @Override
+    public Func_node_app_from_ui_orig vx_type() {return t_node_app_from_ui_orig;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      Ui.Type_ui ui = Core.f_any_from_any(Ui.t_ui, arglist.vx_any(Core.vx_new_int(0)));
+      Ui.Type_ui orig = Core.f_any_from_any(Ui.t_ui, arglist.vx_any(Core.vx_new_int(1)));
+      output = Uihtml.f_node_app_from_ui_orig(ui, orig);
+      return output;
+    }
+
+    @Override
+    public Html.Type_node vx_node_app_from_ui_orig(final Ui.Type_ui ui, final Ui.Type_ui orig) {
+      return Uihtml.f_node_app_from_ui_orig(ui, orig);
+    }
+
+  }
+
+  public static final Func_node_app_from_ui_orig e_node_app_from_ui_orig = new Uihtml.Class_node_app_from_ui_orig();
+  public static final Func_node_app_from_ui_orig t_node_app_from_ui_orig = new Uihtml.Class_node_app_from_ui_orig();
+
+  public static Html.Type_node f_node_app_from_ui_orig(final Ui.Type_ui ui, final Ui.Type_ui orig) {
+    Html.Type_node output = Html.e_node;
+    output = Core.f_empty(
+      Html.t_div
+    );
+    return output;
+  }
+
+  /**
    * @function render_app_from_ui_orig
    * Returns a rendered object from a UI Element.
    * @param  {ui} ui
@@ -294,6 +377,17 @@ public final class Uihtml {
 
   public static Ui.Type_render f_render_app_from_ui_orig(final Ui.Type_ui ui, final Ui.Type_ui orig) {
     Ui.Type_render output = Ui.e_render;
+    output = Core.f_let(
+      Ui.t_render,
+      Core.t_any_from_func.vx_fn_new(() -> {
+        final Core.Type_string uid = ui.uid();
+        final Ui.Type_render render = ui.render();
+        final Html.Type_node node = Uihtml.f_node_app_from_ui_orig(ui, orig);
+        final Core.Type_string htmltext = Html.f_string_from_node_indent(node, Core.vx_new_int(2));
+        final Core.Type_boolean isdone = Htmldoc.f_boolean_write_from_id_htmltext(uid, htmltext);
+        return render;
+      })
+    );
     return output;
   }
 
@@ -305,6 +399,7 @@ public final class Uihtml {
     Map<String, Core.Type_func> mapfunc = new LinkedHashMap<>();
     maptype.put("renderer-html", Uihtml.t_renderer_html);
     mapconst.put("renderer-app", Uihtml.c_renderer_app);
+    mapfunc.put("node-app<-ui-orig", Uihtml.t_node_app_from_ui_orig);
     mapfunc.put("render-app<-ui-orig", Uihtml.t_render_app_from_ui_orig);
     Core.vx_global_package_set("vx/ui/html/uihtml", maptype, mapconst, mapfunc);
   }

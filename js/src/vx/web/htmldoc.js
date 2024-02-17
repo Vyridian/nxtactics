@@ -7,14 +7,43 @@ import vx_web_html from "../../vx/web/html.js"
 export default class vx_web_htmldoc {
 
   /**
+   * @function boolean_replace_from_id_htmltext
+   * Replaces an html node with given id and text.
+   * @param  {string} id
+   * @param  {string} htmltext
+   * @return {boolean}
+   */
+  static t_boolean_replace_from_id_htmltext = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_replace_from_id_htmltext = {
+    vx_type: vx_web_htmldoc.t_boolean_replace_from_id_htmltext
+  }
+
+  // (func boolean-replace<-id-htmltext)
+  static f_boolean_replace_from_id_htmltext(id, htmltext) {
+    let output = vx_core.e_boolean
+    const elem = document.getElementById(id)
+    if (elem != null) {
+      elem.outerHTML = htmltext
+      output = vx_core.c_true
+    }
+    return output
+  }
+
+  /**
    * @function boolean_write_from_id_htmltext
    * Writes to an html node with given id and text.
    * @param  {string} id
    * @param  {string} htmltext
    * @return {boolean}
    */
-  static t_boolean_write_from_id_htmltext = {}
-  static e_boolean_write_from_id_htmltext = {vx_type: vx_web_htmldoc.t_boolean_write_from_id_htmltext}
+  static t_boolean_write_from_id_htmltext = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_write_from_id_htmltext = {
+    vx_type: vx_web_htmldoc.t_boolean_write_from_id_htmltext
+  }
 
   // (func boolean-write<-id-htmltext)
   static f_boolean_write_from_id_htmltext(id, htmltext) {
@@ -34,8 +63,12 @@ export default class vx_web_htmldoc {
    * @param  {stylesheet} stylesheet
    * @return {boolean}
    */
-  static t_boolean_write_from_stylesheet = {}
-  static e_boolean_write_from_stylesheet = {vx_type: vx_web_htmldoc.t_boolean_write_from_stylesheet}
+  static t_boolean_write_from_stylesheet = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_write_from_stylesheet = {
+    vx_type: vx_web_htmldoc.t_boolean_write_from_stylesheet
+  }
 
   // (func boolean-write<-stylesheet)
   static async f_boolean_write_from_stylesheet(stylesheet) {
@@ -54,8 +87,12 @@ export default class vx_web_htmldoc {
    * @param  {string} id
    * @return {string}
    */
-  static t_string_from_id = {}
-  static e_string_from_id = {vx_type: vx_web_htmldoc.t_string_from_id}
+  static t_string_from_id = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_from_id = {
+    vx_type: vx_web_htmldoc.t_string_from_id
+  }
 
   // (func string<-id)
   static f_string_from_id(id) {
@@ -70,7 +107,6 @@ export default class vx_web_htmldoc {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -78,11 +114,13 @@ export default class vx_web_htmldoc {
       
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
+      "boolean-replace<-id-htmltext": vx_web_htmldoc.e_boolean_replace_from_id_htmltext,
       "boolean-write<-id-htmltext": vx_web_htmldoc.e_boolean_write_from_id_htmltext,
       "boolean-write<-stylesheet": vx_web_htmldoc.e_boolean_write_from_stylesheet,
       "string<-id": vx_web_htmldoc.e_string_from_id
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "boolean-replace<-id-htmltext": vx_web_htmldoc.t_boolean_replace_from_id_htmltext,
       "boolean-write<-id-htmltext": vx_web_htmldoc.t_boolean_write_from_id_htmltext,
       "boolean-write<-stylesheet": vx_web_htmldoc.t_boolean_write_from_stylesheet,
       "string<-id": vx_web_htmldoc.t_string_from_id
@@ -99,8 +137,25 @@ export default class vx_web_htmldoc {
     })
     vx_core.vx_global_package_set(pkg)
 
+    // (func boolean-replace<-id-htmltext)
+    vx_web_htmldoc.t_boolean_replace_from_id_htmltext['vx_value'] = {
+      name          : "boolean-replace<-id-htmltext",
+      pkgname       : "vx/web/htmldoc",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_web_htmldoc.f_boolean_replace_from_id_htmltext
+    }
+
     // (func boolean-write<-id-htmltext)
-    vx_web_htmldoc.t_boolean_write_from_id_htmltext['vx_type'] = vx_core.t_type
     vx_web_htmldoc.t_boolean_write_from_id_htmltext['vx_value'] = {
       name          : "boolean-write<-id-htmltext",
       pkgname       : "vx/web/htmldoc",
@@ -119,7 +174,6 @@ export default class vx_web_htmldoc {
     }
 
     // (func boolean-write<-stylesheet)
-    vx_web_htmldoc.t_boolean_write_from_stylesheet['vx_type'] = vx_core.t_type
     vx_web_htmldoc.t_boolean_write_from_stylesheet['vx_value'] = {
       name          : "boolean-write<-stylesheet",
       pkgname       : "vx/web/htmldoc",
@@ -138,7 +192,6 @@ export default class vx_web_htmldoc {
     }
 
     // (func string<-id)
-    vx_web_htmldoc.t_string_from_id['vx_type'] = vx_core.t_type
     vx_web_htmldoc.t_string_from_id['vx_value'] = {
       name          : "string<-id",
       pkgname       : "vx/web/htmldoc",

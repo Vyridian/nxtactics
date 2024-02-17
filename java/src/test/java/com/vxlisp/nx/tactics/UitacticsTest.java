@@ -21,11 +21,11 @@ public final class UitacticsTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "nx/tactics/uitactics", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 25, ":tests", 4, ":total", 16), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 16), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 16), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 16), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 16), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 22, ":tests", 5, ":total", 22), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 22), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 22), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 22), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 22), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 0, ":total", 0)
     );
   }
@@ -42,12 +42,18 @@ public final class UitacticsTest {
       ":funcmap", Core.t_intmap.vx_new(
         ":ui-app", 0,
         ":ui-app-background", 0,
-        ":ui-app-home", 0,
-        ":ui-app-nav", 0,
+        ":ui-app-main", 0,
+        ":ui-app-main-style", 0,
+        ":ui-app-menubar", 0,
+        ":ui-app-menudrawer", 0,
+        ":ui-app-msgbox", 0,
         ":ui-app-navbar", 0,
+        ":ui-app-navdrawer", 0,
         ":ui-app-parallax", 0,
-        ":ui-app-status", 0,
+        ":ui-app-statusbar", 0,
+        ":ui-app-statusdrawer", 0,
         ":ui-app-style", 0,
+        ":ui-app-stylesheet", 0,
         ":ui-app<-tactics", 0,
         ":ui-unit", 0,
         ":ui-unit-background", 0,

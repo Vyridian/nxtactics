@@ -10,8 +10,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_car_wars
    * @return {chapter}
    */
-  static t_chapter_car_wars = {}
-  static e_chapter_car_wars = {vx_type: nx_tactics_books_high_technology.t_chapter_car_wars}
+  static t_chapter_car_wars = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_car_wars = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_car_wars
+  }
 
   // (func chapter_car_wars)
   static f_chapter_car_wars() {
@@ -28,8 +32,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_cyberpunk
    * @return {chapter}
    */
-  static t_chapter_cyberpunk = {}
-  static e_chapter_cyberpunk = {vx_type: nx_tactics_books_high_technology.t_chapter_cyberpunk}
+  static t_chapter_cyberpunk = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_cyberpunk = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_cyberpunk
+  }
 
   // (func chapter_cyberpunk)
   static f_chapter_cyberpunk() {
@@ -354,8 +362,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_cyberpunk_campaign
    * @return {chapter}
    */
-  static t_chapter_cyberpunk_campaign = {}
-  static e_chapter_cyberpunk_campaign = {vx_type: nx_tactics_books_high_technology.t_chapter_cyberpunk_campaign}
+  static t_chapter_cyberpunk_campaign = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_cyberpunk_campaign = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_cyberpunk_campaign
+  }
 
   // (func chapter_cyberpunk_campaign)
   static f_chapter_cyberpunk_campaign() {
@@ -482,8 +494,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_high_tech_aircraft
    * @return {chapter}
    */
-  static t_chapter_high_tech_aircraft = {}
-  static e_chapter_high_tech_aircraft = {vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_aircraft}
+  static t_chapter_high_tech_aircraft = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_high_tech_aircraft = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_aircraft
+  }
 
   // (func chapter_high_tech_aircraft)
   static f_chapter_high_tech_aircraft() {
@@ -558,8 +574,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_high_tech_equipment
    * @return {chapter}
    */
-  static t_chapter_high_tech_equipment = {}
-  static e_chapter_high_tech_equipment = {vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_equipment}
+  static t_chapter_high_tech_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_high_tech_equipment = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_equipment
+  }
 
   // (func chapter_high_tech_equipment)
   static f_chapter_high_tech_equipment() {
@@ -902,8 +922,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_high_tech_heavy_armor
    * @return {chapter}
    */
-  static t_chapter_high_tech_heavy_armor = {}
-  static e_chapter_high_tech_heavy_armor = {vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_heavy_armor}
+  static t_chapter_high_tech_heavy_armor = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_high_tech_heavy_armor = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_heavy_armor
+  }
 
   // (func chapter_high_tech_heavy_armor)
   static f_chapter_high_tech_heavy_armor() {
@@ -984,8 +1008,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_high_tech_overview
    * @return {chapter}
    */
-  static t_chapter_high_tech_overview = {}
-  static e_chapter_high_tech_overview = {vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_overview}
+  static t_chapter_high_tech_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_high_tech_overview = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_overview
+  }
 
   // (func chapter_high_tech_overview)
   static f_chapter_high_tech_overview() {
@@ -1012,8 +1040,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_high_tech_rules
    * @return {chapter}
    */
-  static t_chapter_high_tech_rules = {}
-  static e_chapter_high_tech_rules = {vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_rules}
+  static t_chapter_high_tech_rules = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_high_tech_rules = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_rules
+  }
 
   // (func chapter_high_tech_rules)
   static f_chapter_high_tech_rules() {
@@ -1044,8 +1076,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_high_tech_spacecraft
    * @return {chapter}
    */
-  static t_chapter_high_tech_spacecraft = {}
-  static e_chapter_high_tech_spacecraft = {vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_spacecraft}
+  static t_chapter_high_tech_spacecraft = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_high_tech_spacecraft = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_high_tech_spacecraft
+  }
 
   // (func chapter_high_tech_spacecraft)
   static f_chapter_high_tech_spacecraft() {
@@ -1392,8 +1428,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_jovian_chronicles
    * @return {chapter}
    */
-  static t_chapter_jovian_chronicles = {}
-  static e_chapter_jovian_chronicles = {vx_type: nx_tactics_books_high_technology.t_chapter_jovian_chronicles}
+  static t_chapter_jovian_chronicles = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_jovian_chronicles = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_jovian_chronicles
+  }
 
   // (func chapter_jovian_chronicles)
   static f_chapter_jovian_chronicles() {
@@ -2366,8 +2406,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_mobile_suit_gundam_equipment
    * @return {chapter}
    */
-  static t_chapter_mobile_suit_gundam_equipment = {}
-  static e_chapter_mobile_suit_gundam_equipment = {vx_type: nx_tactics_books_high_technology.t_chapter_mobile_suit_gundam_equipment}
+  static t_chapter_mobile_suit_gundam_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_mobile_suit_gundam_equipment = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_mobile_suit_gundam_equipment
+  }
 
   // (func chapter_mobile_suit_gundam_equipment)
   static f_chapter_mobile_suit_gundam_equipment() {
@@ -2720,8 +2764,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_mobile_suit_gundam_units
    * @return {chapter}
    */
-  static t_chapter_mobile_suit_gundam_units = {}
-  static e_chapter_mobile_suit_gundam_units = {vx_type: nx_tactics_books_high_technology.t_chapter_mobile_suit_gundam_units}
+  static t_chapter_mobile_suit_gundam_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_mobile_suit_gundam_units = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_mobile_suit_gundam_units
+  }
 
   // (func chapter_mobile_suit_gundam_units)
   static f_chapter_mobile_suit_gundam_units() {
@@ -4692,8 +4740,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_space_colonies
    * @return {chapter}
    */
-  static t_chapter_space_colonies = {}
-  static e_chapter_space_colonies = {vx_type: nx_tactics_books_high_technology.t_chapter_space_colonies}
+  static t_chapter_space_colonies = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_space_colonies = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_space_colonies
+  }
 
   // (func chapter_space_colonies)
   static f_chapter_space_colonies() {
@@ -4946,8 +4998,12 @@ export default class nx_tactics_books_high_technology {
    * @function chapter_terminator
    * @return {chapter}
    */
-  static t_chapter_terminator = {}
-  static e_chapter_terminator = {vx_type: nx_tactics_books_high_technology.t_chapter_terminator}
+  static t_chapter_terminator = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_terminator = {
+    vx_type: nx_tactics_books_high_technology.t_chapter_terminator
+  }
 
   // (func chapter_terminator)
   static f_chapter_terminator() {
@@ -5074,8 +5130,12 @@ export default class nx_tactics_books_high_technology {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_high_technology.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_high_technology.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -5122,7 +5182,6 @@ export default class nx_tactics_books_high_technology {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -5176,7 +5235,6 @@ export default class nx_tactics_books_high_technology {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_car_wars)
-    nx_tactics_books_high_technology.t_chapter_car_wars['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_car_wars['vx_value'] = {
       name          : "chapter_car_wars",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5195,7 +5253,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_cyberpunk)
-    nx_tactics_books_high_technology.t_chapter_cyberpunk['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_cyberpunk['vx_value'] = {
       name          : "chapter_cyberpunk",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5214,7 +5271,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_cyberpunk_campaign)
-    nx_tactics_books_high_technology.t_chapter_cyberpunk_campaign['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_cyberpunk_campaign['vx_value'] = {
       name          : "chapter_cyberpunk_campaign",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5233,7 +5289,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_high_tech_aircraft)
-    nx_tactics_books_high_technology.t_chapter_high_tech_aircraft['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_high_tech_aircraft['vx_value'] = {
       name          : "chapter_high_tech_aircraft",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5252,7 +5307,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_high_tech_equipment)
-    nx_tactics_books_high_technology.t_chapter_high_tech_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_high_tech_equipment['vx_value'] = {
       name          : "chapter_high_tech_equipment",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5271,7 +5325,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_high_tech_heavy_armor)
-    nx_tactics_books_high_technology.t_chapter_high_tech_heavy_armor['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_high_tech_heavy_armor['vx_value'] = {
       name          : "chapter_high_tech_heavy_armor",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5290,7 +5343,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_high_tech_overview)
-    nx_tactics_books_high_technology.t_chapter_high_tech_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_high_tech_overview['vx_value'] = {
       name          : "chapter_high_tech_overview",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5309,7 +5361,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_high_tech_rules)
-    nx_tactics_books_high_technology.t_chapter_high_tech_rules['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_high_tech_rules['vx_value'] = {
       name          : "chapter_high_tech_rules",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5328,7 +5379,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_high_tech_spacecraft)
-    nx_tactics_books_high_technology.t_chapter_high_tech_spacecraft['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_high_tech_spacecraft['vx_value'] = {
       name          : "chapter_high_tech_spacecraft",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5347,7 +5397,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_jovian_chronicles)
-    nx_tactics_books_high_technology.t_chapter_jovian_chronicles['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_jovian_chronicles['vx_value'] = {
       name          : "chapter_jovian_chronicles",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5366,7 +5415,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_mobile_suit_gundam_equipment)
-    nx_tactics_books_high_technology.t_chapter_mobile_suit_gundam_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_mobile_suit_gundam_equipment['vx_value'] = {
       name          : "chapter_mobile_suit_gundam_equipment",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5385,7 +5433,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_mobile_suit_gundam_units)
-    nx_tactics_books_high_technology.t_chapter_mobile_suit_gundam_units['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_mobile_suit_gundam_units['vx_value'] = {
       name          : "chapter_mobile_suit_gundam_units",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5404,7 +5451,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_space_colonies)
-    nx_tactics_books_high_technology.t_chapter_space_colonies['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_space_colonies['vx_value'] = {
       name          : "chapter_space_colonies",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5423,7 +5469,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func chapter_terminator)
-    nx_tactics_books_high_technology.t_chapter_terminator['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_chapter_terminator['vx_value'] = {
       name          : "chapter_terminator",
       pkgname       : "nx/tactics/books/high_technology",
@@ -5442,7 +5487,6 @@ export default class nx_tactics_books_high_technology {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_high_technology.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_high_technology.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/high_technology",

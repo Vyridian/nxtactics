@@ -1541,6 +1541,10 @@ are destroyed, replace the final [Phantasm] with the unit.")
             :Simulacrum
              (ability
               :name "Simulacrum")
+            "Sleight of Mind"
+             (ability
+              :name "Sleight of Mind"
+              :summary "* [Slow] [Even] [Mind]: +1 [Stress]. Create a distraction.")
             "Smoke and Mirrors"
              (ability
               :name "Smoke and Mirrors")

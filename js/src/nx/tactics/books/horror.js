@@ -10,8 +10,12 @@ export default class nx_tactics_books_horror {
    * @function chapter_call_of_cthulhu
    * @return {chapter}
    */
-  static t_chapter_call_of_cthulhu = {}
-  static e_chapter_call_of_cthulhu = {vx_type: nx_tactics_books_horror.t_chapter_call_of_cthulhu}
+  static t_chapter_call_of_cthulhu = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_call_of_cthulhu = {
+    vx_type: nx_tactics_books_horror.t_chapter_call_of_cthulhu
+  }
 
   // (func chapter_call_of_cthulhu)
   static f_chapter_call_of_cthulhu() {
@@ -966,8 +970,12 @@ export default class nx_tactics_books_horror {
    * @function chapter_deadly_beasts
    * @return {chapter}
    */
-  static t_chapter_deadly_beasts = {}
-  static e_chapter_deadly_beasts = {vx_type: nx_tactics_books_horror.t_chapter_deadly_beasts}
+  static t_chapter_deadly_beasts = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_deadly_beasts = {
+    vx_type: nx_tactics_books_horror.t_chapter_deadly_beasts
+  }
 
   // (func chapter_deadly_beasts)
   static f_chapter_deadly_beasts() {
@@ -986,8 +994,12 @@ export default class nx_tactics_books_horror {
    * @function chapter_horror_overview
    * @return {chapter}
    */
-  static t_chapter_horror_overview = {}
-  static e_chapter_horror_overview = {vx_type: nx_tactics_books_horror.t_chapter_horror_overview}
+  static t_chapter_horror_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_horror_overview = {
+    vx_type: nx_tactics_books_horror.t_chapter_horror_overview
+  }
 
   // (func chapter_horror_overview)
   static f_chapter_horror_overview() {
@@ -1014,8 +1026,12 @@ export default class nx_tactics_books_horror {
    * @function chapter_kingdom_of_the_gods
    * @return {chapter}
    */
-  static t_chapter_kingdom_of_the_gods = {}
-  static e_chapter_kingdom_of_the_gods = {vx_type: nx_tactics_books_horror.t_chapter_kingdom_of_the_gods}
+  static t_chapter_kingdom_of_the_gods = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_kingdom_of_the_gods = {
+    vx_type: nx_tactics_books_horror.t_chapter_kingdom_of_the_gods
+  }
 
   // (func chapter_kingdom_of_the_gods)
   static f_chapter_kingdom_of_the_gods() {
@@ -1066,8 +1082,12 @@ export default class nx_tactics_books_horror {
    * @function chapter_night_of_the_living_dead
    * @return {chapter}
    */
-  static t_chapter_night_of_the_living_dead = {}
-  static e_chapter_night_of_the_living_dead = {vx_type: nx_tactics_books_horror.t_chapter_night_of_the_living_dead}
+  static t_chapter_night_of_the_living_dead = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_night_of_the_living_dead = {
+    vx_type: nx_tactics_books_horror.t_chapter_night_of_the_living_dead
+  }
 
   // (func chapter_night_of_the_living_dead)
   static f_chapter_night_of_the_living_dead() {
@@ -1084,8 +1104,12 @@ export default class nx_tactics_books_horror {
    * @function chapter_serial_killers
    * @return {chapter}
    */
-  static t_chapter_serial_killers = {}
-  static e_chapter_serial_killers = {vx_type: nx_tactics_books_horror.t_chapter_serial_killers}
+  static t_chapter_serial_killers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_serial_killers = {
+    vx_type: nx_tactics_books_horror.t_chapter_serial_killers
+  }
 
   // (func chapter_serial_killers)
   static f_chapter_serial_killers() {
@@ -1132,8 +1156,12 @@ export default class nx_tactics_books_horror {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_horror.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_horror.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1164,7 +1192,6 @@ export default class nx_tactics_books_horror {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1202,7 +1229,6 @@ export default class nx_tactics_books_horror {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_call_of_cthulhu)
-    nx_tactics_books_horror.t_chapter_call_of_cthulhu['vx_type'] = vx_core.t_type
     nx_tactics_books_horror.t_chapter_call_of_cthulhu['vx_value'] = {
       name          : "chapter_call_of_cthulhu",
       pkgname       : "nx/tactics/books/horror",
@@ -1221,7 +1247,6 @@ export default class nx_tactics_books_horror {
     }
 
     // (func chapter_deadly_beasts)
-    nx_tactics_books_horror.t_chapter_deadly_beasts['vx_type'] = vx_core.t_type
     nx_tactics_books_horror.t_chapter_deadly_beasts['vx_value'] = {
       name          : "chapter_deadly_beasts",
       pkgname       : "nx/tactics/books/horror",
@@ -1240,7 +1265,6 @@ export default class nx_tactics_books_horror {
     }
 
     // (func chapter_horror_overview)
-    nx_tactics_books_horror.t_chapter_horror_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_horror.t_chapter_horror_overview['vx_value'] = {
       name          : "chapter_horror_overview",
       pkgname       : "nx/tactics/books/horror",
@@ -1259,7 +1283,6 @@ export default class nx_tactics_books_horror {
     }
 
     // (func chapter_kingdom_of_the_gods)
-    nx_tactics_books_horror.t_chapter_kingdom_of_the_gods['vx_type'] = vx_core.t_type
     nx_tactics_books_horror.t_chapter_kingdom_of_the_gods['vx_value'] = {
       name          : "chapter_kingdom_of_the_gods",
       pkgname       : "nx/tactics/books/horror",
@@ -1278,7 +1301,6 @@ export default class nx_tactics_books_horror {
     }
 
     // (func chapter_night_of_the_living_dead)
-    nx_tactics_books_horror.t_chapter_night_of_the_living_dead['vx_type'] = vx_core.t_type
     nx_tactics_books_horror.t_chapter_night_of_the_living_dead['vx_value'] = {
       name          : "chapter_night_of_the_living_dead",
       pkgname       : "nx/tactics/books/horror",
@@ -1297,7 +1319,6 @@ export default class nx_tactics_books_horror {
     }
 
     // (func chapter_serial_killers)
-    nx_tactics_books_horror.t_chapter_serial_killers['vx_type'] = vx_core.t_type
     nx_tactics_books_horror.t_chapter_serial_killers['vx_value'] = {
       name          : "chapter_serial_killers",
       pkgname       : "nx/tactics/books/horror",
@@ -1316,7 +1337,6 @@ export default class nx_tactics_books_horror {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_horror.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_horror.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/horror",

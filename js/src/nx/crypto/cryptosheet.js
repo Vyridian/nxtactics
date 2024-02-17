@@ -5,7 +5,6 @@ import vx_core from "../../vx/core.js"
 
 export default class nx_crypto_cryptosheet {
 
-  // empty types
 
 
   static {

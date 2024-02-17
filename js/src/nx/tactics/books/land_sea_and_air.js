@@ -10,8 +10,12 @@ export default class nx_tactics_books_land_sea_and_air {
    * @function chapter_land_sea_and_air_overview
    * @return {chapter}
    */
-  static t_chapter_land_sea_and_air_overview = {}
-  static e_chapter_land_sea_and_air_overview = {vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_overview}
+  static t_chapter_land_sea_and_air_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_land_sea_and_air_overview = {
+    vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_overview
+  }
 
   // (func chapter_land_sea_and_air_overview)
   static f_chapter_land_sea_and_air_overview() {
@@ -38,8 +42,12 @@ export default class nx_tactics_books_land_sea_and_air {
    * @function chapter_land_sea_and_air_rules
    * @return {chapter}
    */
-  static t_chapter_land_sea_and_air_rules = {}
-  static e_chapter_land_sea_and_air_rules = {vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_rules}
+  static t_chapter_land_sea_and_air_rules = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_land_sea_and_air_rules = {
+    vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_rules
+  }
 
   // (func chapter_land_sea_and_air_rules)
   static f_chapter_land_sea_and_air_rules() {
@@ -242,8 +250,12 @@ export default class nx_tactics_books_land_sea_and_air {
    * @function chapter_land_sea_and_air_terrain
    * @return {chapter}
    */
-  static t_chapter_land_sea_and_air_terrain = {}
-  static e_chapter_land_sea_and_air_terrain = {vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_terrain}
+  static t_chapter_land_sea_and_air_terrain = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_land_sea_and_air_terrain = {
+    vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_terrain
+  }
 
   // (func chapter_land_sea_and_air_terrain)
   static f_chapter_land_sea_and_air_terrain() {
@@ -480,8 +492,12 @@ export default class nx_tactics_books_land_sea_and_air {
    * @function chapter_land_sea_and_air_unit_types
    * @return {chapter}
    */
-  static t_chapter_land_sea_and_air_unit_types = {}
-  static e_chapter_land_sea_and_air_unit_types = {vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_unit_types}
+  static t_chapter_land_sea_and_air_unit_types = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_land_sea_and_air_unit_types = {
+    vx_type: nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_unit_types
+  }
 
   // (func chapter_land_sea_and_air_unit_types)
   static f_chapter_land_sea_and_air_unit_types() {
@@ -1046,8 +1062,12 @@ export default class nx_tactics_books_land_sea_and_air {
    * @function chapter_maps
    * @return {chapter}
    */
-  static t_chapter_maps = {}
-  static e_chapter_maps = {vx_type: nx_tactics_books_land_sea_and_air.t_chapter_maps}
+  static t_chapter_maps = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_maps = {
+    vx_type: nx_tactics_books_land_sea_and_air.t_chapter_maps
+  }
 
   // (func chapter_maps)
   static f_chapter_maps() {
@@ -1136,8 +1156,12 @@ export default class nx_tactics_books_land_sea_and_air {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_land_sea_and_air.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_land_sea_and_air.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1166,7 +1190,6 @@ export default class nx_tactics_books_land_sea_and_air {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1202,7 +1225,6 @@ export default class nx_tactics_books_land_sea_and_air {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_land_sea_and_air_overview)
-    nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_overview['vx_value'] = {
       name          : "chapter_land_sea_and_air_overview",
       pkgname       : "nx/tactics/books/land_sea_and_air",
@@ -1221,7 +1243,6 @@ export default class nx_tactics_books_land_sea_and_air {
     }
 
     // (func chapter_land_sea_and_air_rules)
-    nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_rules['vx_type'] = vx_core.t_type
     nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_rules['vx_value'] = {
       name          : "chapter_land_sea_and_air_rules",
       pkgname       : "nx/tactics/books/land_sea_and_air",
@@ -1240,7 +1261,6 @@ export default class nx_tactics_books_land_sea_and_air {
     }
 
     // (func chapter_land_sea_and_air_terrain)
-    nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_terrain['vx_type'] = vx_core.t_type
     nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_terrain['vx_value'] = {
       name          : "chapter_land_sea_and_air_terrain",
       pkgname       : "nx/tactics/books/land_sea_and_air",
@@ -1259,7 +1279,6 @@ export default class nx_tactics_books_land_sea_and_air {
     }
 
     // (func chapter_land_sea_and_air_unit_types)
-    nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_unit_types['vx_type'] = vx_core.t_type
     nx_tactics_books_land_sea_and_air.t_chapter_land_sea_and_air_unit_types['vx_value'] = {
       name          : "chapter_land_sea_and_air_unit_types",
       pkgname       : "nx/tactics/books/land_sea_and_air",
@@ -1278,7 +1297,6 @@ export default class nx_tactics_books_land_sea_and_air {
     }
 
     // (func chapter_maps)
-    nx_tactics_books_land_sea_and_air.t_chapter_maps['vx_type'] = vx_core.t_type
     nx_tactics_books_land_sea_and_air.t_chapter_maps['vx_value'] = {
       name          : "chapter_maps",
       pkgname       : "nx/tactics/books/land_sea_and_air",
@@ -1297,7 +1315,6 @@ export default class nx_tactics_books_land_sea_and_air {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_land_sea_and_air.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_land_sea_and_air.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/land_sea_and_air",

@@ -10,8 +10,12 @@ export default class nx_tactics_books_space_and_time {
    * @function chapter_dimensional_travel
    * @return {chapter}
    */
-  static t_chapter_dimensional_travel = {}
-  static e_chapter_dimensional_travel = {vx_type: nx_tactics_books_space_and_time.t_chapter_dimensional_travel}
+  static t_chapter_dimensional_travel = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_dimensional_travel = {
+    vx_type: nx_tactics_books_space_and_time.t_chapter_dimensional_travel
+  }
 
   // (func chapter_dimensional_travel)
   static f_chapter_dimensional_travel() {
@@ -64,8 +68,12 @@ export default class nx_tactics_books_space_and_time {
    * @function chapter_space
    * @return {chapter}
    */
-  static t_chapter_space = {}
-  static e_chapter_space = {vx_type: nx_tactics_books_space_and_time.t_chapter_space}
+  static t_chapter_space = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_space = {
+    vx_type: nx_tactics_books_space_and_time.t_chapter_space
+  }
 
   // (func chapter_space)
   static f_chapter_space() {
@@ -1088,8 +1096,12 @@ export default class nx_tactics_books_space_and_time {
    * @function chapter_space_and_time_overview
    * @return {chapter}
    */
-  static t_chapter_space_and_time_overview = {}
-  static e_chapter_space_and_time_overview = {vx_type: nx_tactics_books_space_and_time.t_chapter_space_and_time_overview}
+  static t_chapter_space_and_time_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_space_and_time_overview = {
+    vx_type: nx_tactics_books_space_and_time.t_chapter_space_and_time_overview
+  }
 
   // (func chapter_space_and_time_overview)
   static f_chapter_space_and_time_overview() {
@@ -1118,8 +1130,12 @@ export default class nx_tactics_books_space_and_time {
    * @function chapter_space_travel
    * @return {chapter}
    */
-  static t_chapter_space_travel = {}
-  static e_chapter_space_travel = {vx_type: nx_tactics_books_space_and_time.t_chapter_space_travel}
+  static t_chapter_space_travel = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_space_travel = {
+    vx_type: nx_tactics_books_space_and_time.t_chapter_space_travel
+  }
 
   // (func chapter_space_travel)
   static f_chapter_space_travel() {
@@ -1202,8 +1218,12 @@ export default class nx_tactics_books_space_and_time {
    * @function chapter_time_travel
    * @return {chapter}
    */
-  static t_chapter_time_travel = {}
-  static e_chapter_time_travel = {vx_type: nx_tactics_books_space_and_time.t_chapter_time_travel}
+  static t_chapter_time_travel = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_time_travel = {
+    vx_type: nx_tactics_books_space_and_time.t_chapter_time_travel
+  }
 
   // (func chapter_time_travel)
   static f_chapter_time_travel() {
@@ -1342,8 +1362,12 @@ export default class nx_tactics_books_space_and_time {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_space_and_time.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_space_and_time.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1372,7 +1396,6 @@ export default class nx_tactics_books_space_and_time {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1408,7 +1431,6 @@ export default class nx_tactics_books_space_and_time {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_dimensional_travel)
-    nx_tactics_books_space_and_time.t_chapter_dimensional_travel['vx_type'] = vx_core.t_type
     nx_tactics_books_space_and_time.t_chapter_dimensional_travel['vx_value'] = {
       name          : "chapter_dimensional_travel",
       pkgname       : "nx/tactics/books/space_and_time",
@@ -1427,7 +1449,6 @@ export default class nx_tactics_books_space_and_time {
     }
 
     // (func chapter_space)
-    nx_tactics_books_space_and_time.t_chapter_space['vx_type'] = vx_core.t_type
     nx_tactics_books_space_and_time.t_chapter_space['vx_value'] = {
       name          : "chapter_space",
       pkgname       : "nx/tactics/books/space_and_time",
@@ -1446,7 +1467,6 @@ export default class nx_tactics_books_space_and_time {
     }
 
     // (func chapter_space_and_time_overview)
-    nx_tactics_books_space_and_time.t_chapter_space_and_time_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_space_and_time.t_chapter_space_and_time_overview['vx_value'] = {
       name          : "chapter_space_and_time_overview",
       pkgname       : "nx/tactics/books/space_and_time",
@@ -1465,7 +1485,6 @@ export default class nx_tactics_books_space_and_time {
     }
 
     // (func chapter_space_travel)
-    nx_tactics_books_space_and_time.t_chapter_space_travel['vx_type'] = vx_core.t_type
     nx_tactics_books_space_and_time.t_chapter_space_travel['vx_value'] = {
       name          : "chapter_space_travel",
       pkgname       : "nx/tactics/books/space_and_time",
@@ -1484,7 +1503,6 @@ export default class nx_tactics_books_space_and_time {
     }
 
     // (func chapter_time_travel)
-    nx_tactics_books_space_and_time.t_chapter_time_travel['vx_type'] = vx_core.t_type
     nx_tactics_books_space_and_time.t_chapter_time_travel['vx_value'] = {
       name          : "chapter_time_travel",
       pkgname       : "nx/tactics/books/space_and_time",
@@ -1503,7 +1521,6 @@ export default class nx_tactics_books_space_and_time {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_space_and_time.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_space_and_time.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/space_and_time",

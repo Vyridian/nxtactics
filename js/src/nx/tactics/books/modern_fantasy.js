@@ -10,8 +10,12 @@ export default class nx_tactics_books_modern_fantasy {
    * @function chapter_buffy_the_vampire_slayer
    * @return {chapter}
    */
-  static t_chapter_buffy_the_vampire_slayer = {}
-  static e_chapter_buffy_the_vampire_slayer = {vx_type: nx_tactics_books_modern_fantasy.t_chapter_buffy_the_vampire_slayer}
+  static t_chapter_buffy_the_vampire_slayer = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_buffy_the_vampire_slayer = {
+    vx_type: nx_tactics_books_modern_fantasy.t_chapter_buffy_the_vampire_slayer
+  }
 
   // (func chapter_buffy_the_vampire_slayer)
   static f_chapter_buffy_the_vampire_slayer() {
@@ -200,8 +204,12 @@ export default class nx_tactics_books_modern_fantasy {
    * @function chapter_chronicles_of_amber
    * @return {chapter}
    */
-  static t_chapter_chronicles_of_amber = {}
-  static e_chapter_chronicles_of_amber = {vx_type: nx_tactics_books_modern_fantasy.t_chapter_chronicles_of_amber}
+  static t_chapter_chronicles_of_amber = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_chronicles_of_amber = {
+    vx_type: nx_tactics_books_modern_fantasy.t_chapter_chronicles_of_amber
+  }
 
   // (func chapter_chronicles_of_amber)
   static f_chapter_chronicles_of_amber() {
@@ -218,8 +226,12 @@ export default class nx_tactics_books_modern_fantasy {
    * @function chapter_kengan_ashura
    * @return {chapter}
    */
-  static t_chapter_kengan_ashura = {}
-  static e_chapter_kengan_ashura = {vx_type: nx_tactics_books_modern_fantasy.t_chapter_kengan_ashura}
+  static t_chapter_kengan_ashura = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_kengan_ashura = {
+    vx_type: nx_tactics_books_modern_fantasy.t_chapter_kengan_ashura
+  }
 
   // (func chapter_kengan_ashura)
   static f_chapter_kengan_ashura() {
@@ -238,8 +250,12 @@ export default class nx_tactics_books_modern_fantasy {
    * @function chapter_matrix_the
    * @return {chapter}
    */
-  static t_chapter_matrix_the = {}
-  static e_chapter_matrix_the = {vx_type: nx_tactics_books_modern_fantasy.t_chapter_matrix_the}
+  static t_chapter_matrix_the = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_matrix_the = {
+    vx_type: nx_tactics_books_modern_fantasy.t_chapter_matrix_the
+  }
 
   // (func chapter_matrix_the)
   static f_chapter_matrix_the() {
@@ -286,8 +302,12 @@ export default class nx_tactics_books_modern_fantasy {
    * @function chapter_modern_fantasy_overview
    * @return {chapter}
    */
-  static t_chapter_modern_fantasy_overview = {}
-  static e_chapter_modern_fantasy_overview = {vx_type: nx_tactics_books_modern_fantasy.t_chapter_modern_fantasy_overview}
+  static t_chapter_modern_fantasy_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_fantasy_overview = {
+    vx_type: nx_tactics_books_modern_fantasy.t_chapter_modern_fantasy_overview
+  }
 
   // (func chapter_modern_fantasy_overview)
   static f_chapter_modern_fantasy_overview() {
@@ -314,8 +334,12 @@ export default class nx_tactics_books_modern_fantasy {
    * @function chapter_street_fighter
    * @return {chapter}
    */
-  static t_chapter_street_fighter = {}
-  static e_chapter_street_fighter = {vx_type: nx_tactics_books_modern_fantasy.t_chapter_street_fighter}
+  static t_chapter_street_fighter = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_street_fighter = {
+    vx_type: nx_tactics_books_modern_fantasy.t_chapter_street_fighter
+  }
 
   // (func chapter_street_fighter)
   static f_chapter_street_fighter() {
@@ -782,8 +806,12 @@ export default class nx_tactics_books_modern_fantasy {
    * @function chapter_world_of_darkness
    * @return {chapter}
    */
-  static t_chapter_world_of_darkness = {}
-  static e_chapter_world_of_darkness = {vx_type: nx_tactics_books_modern_fantasy.t_chapter_world_of_darkness}
+  static t_chapter_world_of_darkness = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_world_of_darkness = {
+    vx_type: nx_tactics_books_modern_fantasy.t_chapter_world_of_darkness
+  }
 
   // (func chapter_world_of_darkness)
   static f_chapter_world_of_darkness() {
@@ -1454,8 +1482,12 @@ export default class nx_tactics_books_modern_fantasy {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_modern_fantasy.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_modern_fantasy.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1488,7 +1520,6 @@ export default class nx_tactics_books_modern_fantasy {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1528,7 +1559,6 @@ export default class nx_tactics_books_modern_fantasy {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_buffy_the_vampire_slayer)
-    nx_tactics_books_modern_fantasy.t_chapter_buffy_the_vampire_slayer['vx_type'] = vx_core.t_type
     nx_tactics_books_modern_fantasy.t_chapter_buffy_the_vampire_slayer['vx_value'] = {
       name          : "chapter_buffy_the_vampire_slayer",
       pkgname       : "nx/tactics/books/modern_fantasy",
@@ -1547,7 +1577,6 @@ export default class nx_tactics_books_modern_fantasy {
     }
 
     // (func chapter_chronicles_of_amber)
-    nx_tactics_books_modern_fantasy.t_chapter_chronicles_of_amber['vx_type'] = vx_core.t_type
     nx_tactics_books_modern_fantasy.t_chapter_chronicles_of_amber['vx_value'] = {
       name          : "chapter_chronicles_of_amber",
       pkgname       : "nx/tactics/books/modern_fantasy",
@@ -1566,7 +1595,6 @@ export default class nx_tactics_books_modern_fantasy {
     }
 
     // (func chapter_kengan_ashura)
-    nx_tactics_books_modern_fantasy.t_chapter_kengan_ashura['vx_type'] = vx_core.t_type
     nx_tactics_books_modern_fantasy.t_chapter_kengan_ashura['vx_value'] = {
       name          : "chapter_kengan_ashura",
       pkgname       : "nx/tactics/books/modern_fantasy",
@@ -1585,7 +1613,6 @@ export default class nx_tactics_books_modern_fantasy {
     }
 
     // (func chapter_matrix_the)
-    nx_tactics_books_modern_fantasy.t_chapter_matrix_the['vx_type'] = vx_core.t_type
     nx_tactics_books_modern_fantasy.t_chapter_matrix_the['vx_value'] = {
       name          : "chapter_matrix_the",
       pkgname       : "nx/tactics/books/modern_fantasy",
@@ -1604,7 +1631,6 @@ export default class nx_tactics_books_modern_fantasy {
     }
 
     // (func chapter_modern_fantasy_overview)
-    nx_tactics_books_modern_fantasy.t_chapter_modern_fantasy_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_modern_fantasy.t_chapter_modern_fantasy_overview['vx_value'] = {
       name          : "chapter_modern_fantasy_overview",
       pkgname       : "nx/tactics/books/modern_fantasy",
@@ -1623,7 +1649,6 @@ export default class nx_tactics_books_modern_fantasy {
     }
 
     // (func chapter_street_fighter)
-    nx_tactics_books_modern_fantasy.t_chapter_street_fighter['vx_type'] = vx_core.t_type
     nx_tactics_books_modern_fantasy.t_chapter_street_fighter['vx_value'] = {
       name          : "chapter_street_fighter",
       pkgname       : "nx/tactics/books/modern_fantasy",
@@ -1642,7 +1667,6 @@ export default class nx_tactics_books_modern_fantasy {
     }
 
     // (func chapter_world_of_darkness)
-    nx_tactics_books_modern_fantasy.t_chapter_world_of_darkness['vx_type'] = vx_core.t_type
     nx_tactics_books_modern_fantasy.t_chapter_world_of_darkness['vx_value'] = {
       name          : "chapter_world_of_darkness",
       pkgname       : "nx/tactics/books/modern_fantasy",
@@ -1661,7 +1685,6 @@ export default class nx_tactics_books_modern_fantasy {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_modern_fantasy.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_modern_fantasy.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/modern_fantasy",

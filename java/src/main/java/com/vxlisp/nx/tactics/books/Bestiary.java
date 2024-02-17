@@ -11054,6 +11054,44 @@ public final class Bestiary {
                         )
                       )
                     ),
+                    Core.vx_new_string("Dead of Night"),
+                    Core.f_new(
+                      Base.t_unit,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":name"),
+                        Core.vx_new_string("Dead of Night"),
+                        Core.vx_new_string(":summary"),
+                        Core.vx_new_string("* The Night Dead are reanimated corpses of thoses who have died in terror in darkness. They are desperate for light but their darkness powers consume light making normal light sources produce a fraction of their normal illumination. Magical light will expose them and stun them. Bathing in light is the only way to free their spirits and end their torment.")
+                      )
+                    ),
+                    Core.vx_new_string("Dead of Winter"),
+                    Core.f_new(
+                      Base.t_unit,
+                      Core.t_anylist.vx_new(
+                        Core.vx_new_string(":name"),
+                        Core.vx_new_string("Dead of Winter"),
+                        Core.vx_new_string(":reference"),
+                        Core.vx_new_string("* I know what it means to freeze to death, To lose a little life with every breath, To say goodbye to life on earth, And come around again, Lord have mercy on the frozen man - James Taylor, Frozen Man"),
+                        Core.vx_new_string(":summary"),
+                        Core.vx_new_string("* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily throw themselves into raging fires. Death by fire is the only way to free their spirits and end their torment."),
+                        Core.vx_new_string(":titles"),
+                        Core.vx_new_string("The Frigid, Frozen Dead, Frozen Man, Ice Man, Snowman"),
+                        Core.vx_new_string(":unitpowermap"),
+                        Core.f_new(
+                          Base.t_unitpowermap,
+                          Core.t_anylist.vx_new(
+                            Core.vx_new_string(":Cold"),
+                            Core.f_new(
+                              Base.t_unitpower,
+                              Core.t_anylist.vx_new(
+                                Core.vx_new_string(":name"),
+                                Core.vx_new_string("Cold")
+                              )
+                            )
+                          )
+                        )
+                      )
+                    ),
                     Core.vx_new_string(":Dhampyr"),
                     Core.f_new(
                       Base.t_unit,
@@ -11078,34 +11116,6 @@ public final class Bestiary {
                         Core.vx_new_string("* The Drowned are the spirits of those who have died by drowning. They are completely fixated on their drowning death and are compelled to reenact the experience with others."),
                         Core.vx_new_string(":titles"),
                         Core.vx_new_string("Drowner, Kappa")
-                      )
-                    ),
-                    Core.vx_new_string("Frozen Dead"),
-                    Core.f_new(
-                      Base.t_unit,
-                      Core.t_anylist.vx_new(
-                        Core.vx_new_string(":name"),
-                        Core.vx_new_string("Frozen Dead"),
-                        Core.vx_new_string(":reference"),
-                        Core.vx_new_string("* I know what it means to freeze to death, To lose a little life with every breath, To say goodbye to life on earth, And come around again, Lord have mercy on the frozen man - James Taylor, Frozen Man"),
-                        Core.vx_new_string(":summary"),
-                        Core.vx_new_string("* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily through themselves into raging fires. Death by fire is the only way to free their spirits and end their torment."),
-                        Core.vx_new_string(":titles"),
-                        Core.vx_new_string("The Frigid, Frozen Man, Ice Man, Snowman"),
-                        Core.vx_new_string(":unitpowermap"),
-                        Core.f_new(
-                          Base.t_unitpowermap,
-                          Core.t_anylist.vx_new(
-                            Core.vx_new_string(":Cold"),
-                            Core.f_new(
-                              Base.t_unitpower,
-                              Core.t_anylist.vx_new(
-                                Core.vx_new_string(":name"),
-                                Core.vx_new_string("Cold")
-                              )
-                            )
-                          )
-                        )
                       )
                     ),
                     Core.vx_new_string("Ghost Ship"),

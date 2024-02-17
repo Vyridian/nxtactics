@@ -10,8 +10,12 @@ export default class nx_tactics_books_skills {
    * @function chapter_skill_types
    * @return {chapter}
    */
-  static t_chapter_skill_types = {}
-  static e_chapter_skill_types = {vx_type: nx_tactics_books_skills.t_chapter_skill_types}
+  static t_chapter_skill_types = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_skill_types = {
+    vx_type: nx_tactics_books_skills.t_chapter_skill_types
+  }
 
   // (func chapter_skill_types)
   static f_chapter_skill_types() {
@@ -5126,8 +5130,12 @@ export default class nx_tactics_books_skills {
    * @function chapter_skills_overview
    * @return {chapter}
    */
-  static t_chapter_skills_overview = {}
-  static e_chapter_skills_overview = {vx_type: nx_tactics_books_skills.t_chapter_skills_overview}
+  static t_chapter_skills_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_skills_overview = {
+    vx_type: nx_tactics_books_skills.t_chapter_skills_overview
+  }
 
   // (func chapter_skills_overview)
   static f_chapter_skills_overview() {
@@ -5166,8 +5174,12 @@ export default class nx_tactics_books_skills {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_skills.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_skills.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -5190,7 +5202,6 @@ export default class nx_tactics_books_skills {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -5220,7 +5231,6 @@ export default class nx_tactics_books_skills {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_skill_types)
-    nx_tactics_books_skills.t_chapter_skill_types['vx_type'] = vx_core.t_type
     nx_tactics_books_skills.t_chapter_skill_types['vx_value'] = {
       name          : "chapter_skill_types",
       pkgname       : "nx/tactics/books/skills",
@@ -5239,7 +5249,6 @@ export default class nx_tactics_books_skills {
     }
 
     // (func chapter_skills_overview)
-    nx_tactics_books_skills.t_chapter_skills_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_skills.t_chapter_skills_overview['vx_value'] = {
       name          : "chapter_skills_overview",
       pkgname       : "nx/tactics/books/skills",
@@ -5258,7 +5267,6 @@ export default class nx_tactics_books_skills {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_skills.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_skills.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/skills",

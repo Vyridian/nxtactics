@@ -10,8 +10,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_world_wars_overview
    * @return {chapter}
    */
-  static t_chapter_world_wars_overview = {}
-  static e_chapter_world_wars_overview = {vx_type: nx_tactics_books_world_wars.t_chapter_world_wars_overview}
+  static t_chapter_world_wars_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_world_wars_overview = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_world_wars_overview
+  }
 
   // (func chapter_world_wars_overview)
   static f_chapter_world_wars_overview() {
@@ -80,8 +84,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwi_british_forces
    * @return {chapter}
    */
-  static t_chapter_wwi_british_forces = {}
-  static e_chapter_wwi_british_forces = {vx_type: nx_tactics_books_world_wars.t_chapter_wwi_british_forces}
+  static t_chapter_wwi_british_forces = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwi_british_forces = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwi_british_forces
+  }
 
   // (func chapter_wwi_british_forces)
   static f_chapter_wwi_british_forces() {
@@ -130,8 +138,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwi_campaign
    * @return {chapter}
    */
-  static t_chapter_wwi_campaign = {}
-  static e_chapter_wwi_campaign = {vx_type: nx_tactics_books_world_wars.t_chapter_wwi_campaign}
+  static t_chapter_wwi_campaign = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwi_campaign = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwi_campaign
+  }
 
   // (func chapter_wwi_campaign)
   static f_chapter_wwi_campaign() {
@@ -212,8 +224,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwi_french_forces
    * @return {chapter}
    */
-  static t_chapter_wwi_french_forces = {}
-  static e_chapter_wwi_french_forces = {vx_type: nx_tactics_books_world_wars.t_chapter_wwi_french_forces}
+  static t_chapter_wwi_french_forces = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwi_french_forces = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwi_french_forces
+  }
 
   // (func chapter_wwi_french_forces)
   static f_chapter_wwi_french_forces() {
@@ -270,8 +286,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwi_german_forces
    * @return {chapter}
    */
-  static t_chapter_wwi_german_forces = {}
-  static e_chapter_wwi_german_forces = {vx_type: nx_tactics_books_world_wars.t_chapter_wwi_german_forces}
+  static t_chapter_wwi_german_forces = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwi_german_forces = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwi_german_forces
+  }
 
   // (func chapter_wwi_german_forces)
   static f_chapter_wwi_german_forces() {
@@ -310,8 +330,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_american_equipment
    * @return {chapter}
    */
-  static t_chapter_wwii_american_equipment = {}
-  static e_chapter_wwii_american_equipment = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_american_equipment}
+  static t_chapter_wwii_american_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_american_equipment = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_american_equipment
+  }
 
   // (func chapter_wwii_american_equipment)
   static f_chapter_wwii_american_equipment() {
@@ -890,8 +914,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_american_units
    * @return {chapter}
    */
-  static t_chapter_wwii_american_units = {}
-  static e_chapter_wwii_american_units = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_american_units}
+  static t_chapter_wwii_american_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_american_units = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_american_units
+  }
 
   // (func chapter_wwii_american_units)
   static f_chapter_wwii_american_units() {
@@ -3456,8 +3484,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_british_equipment
    * @return {chapter}
    */
-  static t_chapter_wwii_british_equipment = {}
-  static e_chapter_wwii_british_equipment = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_british_equipment}
+  static t_chapter_wwii_british_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_british_equipment = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_british_equipment
+  }
 
   // (func chapter_wwii_british_equipment)
   static f_chapter_wwii_british_equipment() {
@@ -3784,8 +3816,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_british_units
    * @return {chapter}
    */
-  static t_chapter_wwii_british_units = {}
-  static e_chapter_wwii_british_units = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_british_units}
+  static t_chapter_wwii_british_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_british_units = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_british_units
+  }
 
   // (func chapter_wwii_british_units)
   static f_chapter_wwii_british_units() {
@@ -5068,8 +5104,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_east_african_theatre
    * @return {chapter}
    */
-  static t_chapter_wwii_east_african_theatre = {}
-  static e_chapter_wwii_east_african_theatre = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_east_african_theatre}
+  static t_chapter_wwii_east_african_theatre = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_east_african_theatre = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_east_african_theatre
+  }
 
   // (func chapter_wwii_east_african_theatre)
   static f_chapter_wwii_east_african_theatre() {
@@ -5142,8 +5182,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_eastern_front
    * @return {chapter}
    */
-  static t_chapter_wwii_eastern_front = {}
-  static e_chapter_wwii_eastern_front = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_eastern_front}
+  static t_chapter_wwii_eastern_front = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_eastern_front = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_eastern_front
+  }
 
   // (func chapter_wwii_eastern_front)
   static f_chapter_wwii_eastern_front() {
@@ -5248,8 +5292,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_equipment
    * @return {chapter}
    */
-  static t_chapter_wwii_equipment = {}
-  static e_chapter_wwii_equipment = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_equipment}
+  static t_chapter_wwii_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_equipment = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_equipment
+  }
 
   // (func chapter_wwii_equipment)
   static f_chapter_wwii_equipment() {
@@ -5402,8 +5450,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_french_equipment
    * @return {chapter}
    */
-  static t_chapter_wwii_french_equipment = {}
-  static e_chapter_wwii_french_equipment = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_french_equipment}
+  static t_chapter_wwii_french_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_french_equipment = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_french_equipment
+  }
 
   // (func chapter_wwii_french_equipment)
   static f_chapter_wwii_french_equipment() {
@@ -5462,8 +5514,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_french_units
    * @return {chapter}
    */
-  static t_chapter_wwii_french_units = {}
-  static e_chapter_wwii_french_units = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_french_units}
+  static t_chapter_wwii_french_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_french_units = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_french_units
+  }
 
   // (func chapter_wwii_french_units)
   static f_chapter_wwii_french_units() {
@@ -5708,8 +5764,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_german_equipment
    * @return {chapter}
    */
-  static t_chapter_wwii_german_equipment = {}
-  static e_chapter_wwii_german_equipment = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_german_equipment}
+  static t_chapter_wwii_german_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_german_equipment = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_german_equipment
+  }
 
   // (func chapter_wwii_german_equipment)
   static f_chapter_wwii_german_equipment() {
@@ -6264,8 +6324,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_german_units
    * @return {chapter}
    */
-  static t_chapter_wwii_german_units = {}
-  static e_chapter_wwii_german_units = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_german_units}
+  static t_chapter_wwii_german_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_german_units = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_german_units
+  }
 
   // (func chapter_wwii_german_units)
   static f_chapter_wwii_german_units() {
@@ -8186,8 +8250,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_italian_units
    * @return {chapter}
    */
-  static t_chapter_wwii_italian_units = {}
-  static e_chapter_wwii_italian_units = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_italian_units}
+  static t_chapter_wwii_italian_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_italian_units = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_italian_units
+  }
 
   // (func chapter_wwii_italian_units)
   static f_chapter_wwii_italian_units() {
@@ -8820,8 +8888,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_japanese_equipment
    * @return {chapter}
    */
-  static t_chapter_wwii_japanese_equipment = {}
-  static e_chapter_wwii_japanese_equipment = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_japanese_equipment}
+  static t_chapter_wwii_japanese_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_japanese_equipment = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_japanese_equipment
+  }
 
   // (func chapter_wwii_japanese_equipment)
   static f_chapter_wwii_japanese_equipment() {
@@ -9174,8 +9246,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_japanese_units
    * @return {chapter}
    */
-  static t_chapter_wwii_japanese_units = {}
-  static e_chapter_wwii_japanese_units = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_japanese_units}
+  static t_chapter_wwii_japanese_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_japanese_units = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_japanese_units
+  }
 
   // (func chapter_wwii_japanese_units)
   static f_chapter_wwii_japanese_units() {
@@ -10288,8 +10364,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_mediterranean_theatre
    * @return {chapter}
    */
-  static t_chapter_wwii_mediterranean_theatre = {}
-  static e_chapter_wwii_mediterranean_theatre = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_mediterranean_theatre}
+  static t_chapter_wwii_mediterranean_theatre = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_mediterranean_theatre = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_mediterranean_theatre
+  }
 
   // (func chapter_wwii_mediterranean_theatre)
   static f_chapter_wwii_mediterranean_theatre() {
@@ -10410,8 +10490,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_middle_east_theatre
    * @return {chapter}
    */
-  static t_chapter_wwii_middle_east_theatre = {}
-  static e_chapter_wwii_middle_east_theatre = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_middle_east_theatre}
+  static t_chapter_wwii_middle_east_theatre = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_middle_east_theatre = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_middle_east_theatre
+  }
 
   // (func chapter_wwii_middle_east_theatre)
   static f_chapter_wwii_middle_east_theatre() {
@@ -10492,8 +10576,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_north_african_theatre
    * @return {chapter}
    */
-  static t_chapter_wwii_north_african_theatre = {}
-  static e_chapter_wwii_north_african_theatre = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_north_african_theatre}
+  static t_chapter_wwii_north_african_theatre = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_north_african_theatre = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_north_african_theatre
+  }
 
   // (func chapter_wwii_north_african_theatre)
   static f_chapter_wwii_north_african_theatre() {
@@ -10690,8 +10778,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_overview
    * @return {chapter}
    */
-  static t_chapter_wwii_overview = {}
-  static e_chapter_wwii_overview = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_overview}
+  static t_chapter_wwii_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_overview = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_overview
+  }
 
   // (func chapter_wwii_overview)
   static f_chapter_wwii_overview() {
@@ -10734,8 +10826,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_pacific_theatre
    * @return {chapter}
    */
-  static t_chapter_wwii_pacific_theatre = {}
-  static e_chapter_wwii_pacific_theatre = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_pacific_theatre}
+  static t_chapter_wwii_pacific_theatre = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_pacific_theatre = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_pacific_theatre
+  }
 
   // (func chapter_wwii_pacific_theatre)
   static f_chapter_wwii_pacific_theatre() {
@@ -11162,8 +11258,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_soviet_equipment
    * @return {chapter}
    */
-  static t_chapter_wwii_soviet_equipment = {}
-  static e_chapter_wwii_soviet_equipment = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_soviet_equipment}
+  static t_chapter_wwii_soviet_equipment = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_soviet_equipment = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_soviet_equipment
+  }
 
   // (func chapter_wwii_soviet_equipment)
   static f_chapter_wwii_soviet_equipment() {
@@ -11428,8 +11528,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_soviet_units
    * @return {chapter}
    */
-  static t_chapter_wwii_soviet_units = {}
-  static e_chapter_wwii_soviet_units = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_soviet_units}
+  static t_chapter_wwii_soviet_units = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_soviet_units = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_soviet_units
+  }
 
   // (func chapter_wwii_soviet_units)
   static f_chapter_wwii_soviet_units() {
@@ -12432,8 +12536,12 @@ export default class nx_tactics_books_world_wars {
    * @function chapter_wwii_western_front
    * @return {chapter}
    */
-  static t_chapter_wwii_western_front = {}
-  static e_chapter_wwii_western_front = {vx_type: nx_tactics_books_world_wars.t_chapter_wwii_western_front}
+  static t_chapter_wwii_western_front = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_wwii_western_front = {
+    vx_type: nx_tactics_books_world_wars.t_chapter_wwii_western_front
+  }
 
   // (func chapter_wwii_western_front)
   static f_chapter_wwii_western_front() {
@@ -12944,8 +13052,12 @@ export default class nx_tactics_books_world_wars {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_world_wars.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_world_wars.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -13018,7 +13130,6 @@ export default class nx_tactics_books_world_wars {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -13098,7 +13209,6 @@ export default class nx_tactics_books_world_wars {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_world_wars_overview)
-    nx_tactics_books_world_wars.t_chapter_world_wars_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_world_wars_overview['vx_value'] = {
       name          : "chapter_world_wars_overview",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13117,7 +13227,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwi_british_forces)
-    nx_tactics_books_world_wars.t_chapter_wwi_british_forces['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwi_british_forces['vx_value'] = {
       name          : "chapter_wwi_british_forces",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13136,7 +13245,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwi_campaign)
-    nx_tactics_books_world_wars.t_chapter_wwi_campaign['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwi_campaign['vx_value'] = {
       name          : "chapter_wwi_campaign",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13155,7 +13263,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwi_french_forces)
-    nx_tactics_books_world_wars.t_chapter_wwi_french_forces['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwi_french_forces['vx_value'] = {
       name          : "chapter_wwi_french_forces",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13174,7 +13281,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwi_german_forces)
-    nx_tactics_books_world_wars.t_chapter_wwi_german_forces['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwi_german_forces['vx_value'] = {
       name          : "chapter_wwi_german_forces",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13193,7 +13299,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_american_equipment)
-    nx_tactics_books_world_wars.t_chapter_wwii_american_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_american_equipment['vx_value'] = {
       name          : "chapter_wwii_american_equipment",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13212,7 +13317,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_american_units)
-    nx_tactics_books_world_wars.t_chapter_wwii_american_units['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_american_units['vx_value'] = {
       name          : "chapter_wwii_american_units",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13231,7 +13335,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_british_equipment)
-    nx_tactics_books_world_wars.t_chapter_wwii_british_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_british_equipment['vx_value'] = {
       name          : "chapter_wwii_british_equipment",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13250,7 +13353,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_british_units)
-    nx_tactics_books_world_wars.t_chapter_wwii_british_units['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_british_units['vx_value'] = {
       name          : "chapter_wwii_british_units",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13269,7 +13371,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_east_african_theatre)
-    nx_tactics_books_world_wars.t_chapter_wwii_east_african_theatre['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_east_african_theatre['vx_value'] = {
       name          : "chapter_wwii_east_african_theatre",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13288,7 +13389,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_eastern_front)
-    nx_tactics_books_world_wars.t_chapter_wwii_eastern_front['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_eastern_front['vx_value'] = {
       name          : "chapter_wwii_eastern_front",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13307,7 +13407,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_equipment)
-    nx_tactics_books_world_wars.t_chapter_wwii_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_equipment['vx_value'] = {
       name          : "chapter_wwii_equipment",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13326,7 +13425,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_french_equipment)
-    nx_tactics_books_world_wars.t_chapter_wwii_french_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_french_equipment['vx_value'] = {
       name          : "chapter_wwii_french_equipment",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13345,7 +13443,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_french_units)
-    nx_tactics_books_world_wars.t_chapter_wwii_french_units['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_french_units['vx_value'] = {
       name          : "chapter_wwii_french_units",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13364,7 +13461,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_german_equipment)
-    nx_tactics_books_world_wars.t_chapter_wwii_german_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_german_equipment['vx_value'] = {
       name          : "chapter_wwii_german_equipment",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13383,7 +13479,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_german_units)
-    nx_tactics_books_world_wars.t_chapter_wwii_german_units['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_german_units['vx_value'] = {
       name          : "chapter_wwii_german_units",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13402,7 +13497,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_italian_units)
-    nx_tactics_books_world_wars.t_chapter_wwii_italian_units['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_italian_units['vx_value'] = {
       name          : "chapter_wwii_italian_units",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13421,7 +13515,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_japanese_equipment)
-    nx_tactics_books_world_wars.t_chapter_wwii_japanese_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_japanese_equipment['vx_value'] = {
       name          : "chapter_wwii_japanese_equipment",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13440,7 +13533,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_japanese_units)
-    nx_tactics_books_world_wars.t_chapter_wwii_japanese_units['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_japanese_units['vx_value'] = {
       name          : "chapter_wwii_japanese_units",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13459,7 +13551,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_mediterranean_theatre)
-    nx_tactics_books_world_wars.t_chapter_wwii_mediterranean_theatre['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_mediterranean_theatre['vx_value'] = {
       name          : "chapter_wwii_mediterranean_theatre",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13478,7 +13569,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_middle_east_theatre)
-    nx_tactics_books_world_wars.t_chapter_wwii_middle_east_theatre['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_middle_east_theatre['vx_value'] = {
       name          : "chapter_wwii_middle_east_theatre",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13497,7 +13587,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_north_african_theatre)
-    nx_tactics_books_world_wars.t_chapter_wwii_north_african_theatre['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_north_african_theatre['vx_value'] = {
       name          : "chapter_wwii_north_african_theatre",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13516,7 +13605,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_overview)
-    nx_tactics_books_world_wars.t_chapter_wwii_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_overview['vx_value'] = {
       name          : "chapter_wwii_overview",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13535,7 +13623,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_pacific_theatre)
-    nx_tactics_books_world_wars.t_chapter_wwii_pacific_theatre['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_pacific_theatre['vx_value'] = {
       name          : "chapter_wwii_pacific_theatre",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13554,7 +13641,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_soviet_equipment)
-    nx_tactics_books_world_wars.t_chapter_wwii_soviet_equipment['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_soviet_equipment['vx_value'] = {
       name          : "chapter_wwii_soviet_equipment",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13573,7 +13659,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_soviet_units)
-    nx_tactics_books_world_wars.t_chapter_wwii_soviet_units['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_soviet_units['vx_value'] = {
       name          : "chapter_wwii_soviet_units",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13592,7 +13677,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func chapter_wwii_western_front)
-    nx_tactics_books_world_wars.t_chapter_wwii_western_front['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_chapter_wwii_western_front['vx_value'] = {
       name          : "chapter_wwii_western_front",
       pkgname       : "nx/tactics/books/world_wars",
@@ -13611,7 +13695,6 @@ export default class nx_tactics_books_world_wars {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_world_wars.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_world_wars.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/world_wars",

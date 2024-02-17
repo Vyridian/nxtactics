@@ -3531,6 +3531,21 @@ Yucca -- Transmutation, Protection, Purification
 			</skill>
 			<power name="Fire" />
 		</unit>
+  <unit name="Dead of Night">
+   <summary>
+    * The Night Dead are reanimated corpses of thoses who have died in terror in darkness. They are desperate for light but their darkness powers consume light making normal light sources produce a fraction of their normal illumination. Magical light will expose them and stun them. Bathing in light is the only way to free their spirits and end their torment.
+   </summary>
+  </unit>
+		<unit name="Dead of Winter">
+			<titles>The Frigid, Frozen Dead, Frozen Man, Ice Man, Snowman</titles>
+			<reference>
+				* I know what it means to freeze to death, To lose a little life with every breath, To say goodbye to life on earth, And come around again, Lord have mercy on the frozen man - James Taylor, Frozen Man
+			</reference>
+			<summary>
+				* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily throw themselves into raging fires. Death by fire is the only way to free their spirits and end their torment.
+			</summary>
+			<power name="Cold" />
+		</unit>
 		<unit name="Dhampyr">
 			<summary>
 				* Dhampyrs, can function both day and night, although they find sunlight uncomfortable.
@@ -3558,16 +3573,6 @@ Yucca -- Transmutation, Protection, Purification
 			<summary>
 				* The Drowned are the spirits of those who have died by drowning. They are completely fixated on their drowning death and are compelled to reenact the experience with others.
 			</summary>
-		</unit>
-		<unit name="Frozen Dead">
-			<titles>The Frigid, Frozen Man, Ice Man, Snowman</titles>
-			<reference>
-				* I know what it means to freeze to death, To lose a little life with every breath, To say goodbye to life on earth, And come around again, Lord have mercy on the frozen man - James Taylor, Frozen Man
-			</reference>
-			<summary>
-				* The Frozen Dead are reanimated corpses of thoses who have died by cold or exposure. They are desperate for warmth and seek the living to share an icy embrace. They radiate cold which will douse small fires around them. They are drawn to large heat sources and will happily through themselves into raging fires. Death by fire is the only way to free their spirits and end their torment.
-			</summary>
-			<power name="Cold" />
 		</unit>
 		<unit name="Ghost Ship">
 			<titles>Chaos Fleet, Skeleton Crew</titles>

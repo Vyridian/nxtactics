@@ -9,6 +9,7 @@ import vx_data_file from "../../../src/vx/data/file.js"
 import vx_data_xml from "../../../src/vx/data/xml.js"
 import nx_tactics_books_advanced_rules from "../../../src/nx/tactics/books/advanced_rules.js"
 import vx_ui_ui from "../../../src/vx/ui/ui.js"
+import vx_ui_html_uihtml from "../../../src/vx/ui/html/uihtml.js"
 import nx_tactics_uitactics from "../../../src/nx/tactics/uitactics.js"
 
 export default class nx_tactics_apptactics_test {
@@ -31,11 +32,11 @@ export default class nx_tactics_apptactics_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/apptactics", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 3, ":total", 3), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 75, ":tests", 3, ":total", 4), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 4), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 4), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -57,7 +58,8 @@ export default class nx_tactics_apptactics_test {
           vx_core.t_intmap,
           "context-nx", 0,
           "main-nx", 0,
-          "security-nx", 0
+          "security-nx", 0,
+          "string-render-html", 0
         )
     )
   }

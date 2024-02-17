@@ -12,6 +12,7 @@ export default class nx_tactics_damage {
    * Lasting Body Damage
    */
   static t_wound = {}
+  static e_wound = {vx_type: nx_tactics_damage.t_wound}
   /**
    * Constant: breakdown
    * Lasting Mind Damage
@@ -191,8 +192,6 @@ export default class nx_tactics_damage {
    */
   static c_wounddeck = {vx_type: nx_tactics_base.t_deck, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'wounddeck'}}
 
-  // empty types
-  static e_wound = {}
 
 
   static {

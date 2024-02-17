@@ -10,8 +10,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_ancients_overview
    * @return {chapter}
    */
-  static t_chapter_ancients_overview = {}
-  static e_chapter_ancients_overview = {vx_type: nx_tactics_books_ancients.t_chapter_ancients_overview}
+  static t_chapter_ancients_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_ancients_overview = {
+    vx_type: nx_tactics_books_ancients.t_chapter_ancients_overview
+  }
 
   // (func chapter_ancients_overview)
   static f_chapter_ancients_overview() {
@@ -54,8 +58,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_ancients_scenarios
    * @return {chapter}
    */
-  static t_chapter_ancients_scenarios = {}
-  static e_chapter_ancients_scenarios = {vx_type: nx_tactics_books_ancients.t_chapter_ancients_scenarios}
+  static t_chapter_ancients_scenarios = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_ancients_scenarios = {
+    vx_type: nx_tactics_books_ancients.t_chapter_ancients_scenarios
+  }
 
   // (func chapter_ancients_scenarios)
   static f_chapter_ancients_scenarios() {
@@ -132,8 +140,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_anglo_saxons
    * @return {chapter}
    */
-  static t_chapter_anglo_saxons = {}
-  static e_chapter_anglo_saxons = {vx_type: nx_tactics_books_ancients.t_chapter_anglo_saxons}
+  static t_chapter_anglo_saxons = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_anglo_saxons = {
+    vx_type: nx_tactics_books_ancients.t_chapter_anglo_saxons
+  }
 
   // (func chapter_anglo_saxons)
   static f_chapter_anglo_saxons() {
@@ -160,8 +172,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_carthaginians
    * @return {chapter}
    */
-  static t_chapter_carthaginians = {}
-  static e_chapter_carthaginians = {vx_type: nx_tactics_books_ancients.t_chapter_carthaginians}
+  static t_chapter_carthaginians = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_carthaginians = {
+    vx_type: nx_tactics_books_ancients.t_chapter_carthaginians
+  }
 
   // (func chapter_carthaginians)
   static f_chapter_carthaginians() {
@@ -218,8 +234,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_chinese_dynasty
    * @return {chapter}
    */
-  static t_chapter_chinese_dynasty = {}
-  static e_chapter_chinese_dynasty = {vx_type: nx_tactics_books_ancients.t_chapter_chinese_dynasty}
+  static t_chapter_chinese_dynasty = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_chinese_dynasty = {
+    vx_type: nx_tactics_books_ancients.t_chapter_chinese_dynasty
+  }
 
   // (func chapter_chinese_dynasty)
   static f_chapter_chinese_dynasty() {
@@ -236,8 +256,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_egyptian_dynasty
    * @return {chapter}
    */
-  static t_chapter_egyptian_dynasty = {}
-  static e_chapter_egyptian_dynasty = {vx_type: nx_tactics_books_ancients.t_chapter_egyptian_dynasty}
+  static t_chapter_egyptian_dynasty = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_egyptian_dynasty = {
+    vx_type: nx_tactics_books_ancients.t_chapter_egyptian_dynasty
+  }
 
   // (func chapter_egyptian_dynasty)
   static f_chapter_egyptian_dynasty() {
@@ -280,8 +304,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_germanic_tribes
    * @return {chapter}
    */
-  static t_chapter_germanic_tribes = {}
-  static e_chapter_germanic_tribes = {vx_type: nx_tactics_books_ancients.t_chapter_germanic_tribes}
+  static t_chapter_germanic_tribes = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_germanic_tribes = {
+    vx_type: nx_tactics_books_ancients.t_chapter_germanic_tribes
+  }
 
   // (func chapter_germanic_tribes)
   static f_chapter_germanic_tribes() {
@@ -668,8 +696,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_greek_city_states
    * @return {chapter}
    */
-  static t_chapter_greek_city_states = {}
-  static e_chapter_greek_city_states = {vx_type: nx_tactics_books_ancients.t_chapter_greek_city_states}
+  static t_chapter_greek_city_states = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_greek_city_states = {
+    vx_type: nx_tactics_books_ancients.t_chapter_greek_city_states
+  }
 
   // (func chapter_greek_city_states)
   static f_chapter_greek_city_states() {
@@ -940,8 +972,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_macedon
    * @return {chapter}
    */
-  static t_chapter_macedon = {}
-  static e_chapter_macedon = {vx_type: nx_tactics_books_ancients.t_chapter_macedon}
+  static t_chapter_macedon = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_macedon = {
+    vx_type: nx_tactics_books_ancients.t_chapter_macedon
+  }
 
   // (func chapter_macedon)
   static f_chapter_macedon() {
@@ -1046,8 +1082,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_norsemen
    * @return {chapter}
    */
-  static t_chapter_norsemen = {}
-  static e_chapter_norsemen = {vx_type: nx_tactics_books_ancients.t_chapter_norsemen}
+  static t_chapter_norsemen = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_norsemen = {
+    vx_type: nx_tactics_books_ancients.t_chapter_norsemen
+  }
 
   // (func chapter_norsemen)
   static f_chapter_norsemen() {
@@ -1126,8 +1166,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_persians
    * @return {chapter}
    */
-  static t_chapter_persians = {}
-  static e_chapter_persians = {vx_type: nx_tactics_books_ancients.t_chapter_persians}
+  static t_chapter_persians = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_persians = {
+    vx_type: nx_tactics_books_ancients.t_chapter_persians
+  }
 
   // (func chapter_persians)
   static f_chapter_persians() {
@@ -1176,8 +1220,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_roman_empire
    * @return {chapter}
    */
-  static t_chapter_roman_empire = {}
-  static e_chapter_roman_empire = {vx_type: nx_tactics_books_ancients.t_chapter_roman_empire}
+  static t_chapter_roman_empire = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_roman_empire = {
+    vx_type: nx_tactics_books_ancients.t_chapter_roman_empire
+  }
 
   // (func chapter_roman_empire)
   static f_chapter_roman_empire() {
@@ -1772,8 +1820,12 @@ export default class nx_tactics_books_ancients {
    * @function chapter_unfiled_ancient
    * @return {chapter}
    */
-  static t_chapter_unfiled_ancient = {}
-  static e_chapter_unfiled_ancient = {vx_type: nx_tactics_books_ancients.t_chapter_unfiled_ancient}
+  static t_chapter_unfiled_ancient = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_unfiled_ancient = {
+    vx_type: nx_tactics_books_ancients.t_chapter_unfiled_ancient
+  }
 
   // (func chapter_unfiled_ancient)
   static f_chapter_unfiled_ancient() {
@@ -1792,8 +1844,12 @@ export default class nx_tactics_books_ancients {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_ancients.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_ancients.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1838,7 +1894,6 @@ export default class nx_tactics_books_ancients {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1890,7 +1945,6 @@ export default class nx_tactics_books_ancients {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_ancients_overview)
-    nx_tactics_books_ancients.t_chapter_ancients_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_ancients_overview['vx_value'] = {
       name          : "chapter_ancients_overview",
       pkgname       : "nx/tactics/books/ancients",
@@ -1909,7 +1963,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_ancients_scenarios)
-    nx_tactics_books_ancients.t_chapter_ancients_scenarios['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_ancients_scenarios['vx_value'] = {
       name          : "chapter_ancients_scenarios",
       pkgname       : "nx/tactics/books/ancients",
@@ -1928,7 +1981,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_anglo_saxons)
-    nx_tactics_books_ancients.t_chapter_anglo_saxons['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_anglo_saxons['vx_value'] = {
       name          : "chapter_anglo_saxons",
       pkgname       : "nx/tactics/books/ancients",
@@ -1947,7 +1999,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_carthaginians)
-    nx_tactics_books_ancients.t_chapter_carthaginians['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_carthaginians['vx_value'] = {
       name          : "chapter_carthaginians",
       pkgname       : "nx/tactics/books/ancients",
@@ -1966,7 +2017,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_chinese_dynasty)
-    nx_tactics_books_ancients.t_chapter_chinese_dynasty['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_chinese_dynasty['vx_value'] = {
       name          : "chapter_chinese_dynasty",
       pkgname       : "nx/tactics/books/ancients",
@@ -1985,7 +2035,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_egyptian_dynasty)
-    nx_tactics_books_ancients.t_chapter_egyptian_dynasty['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_egyptian_dynasty['vx_value'] = {
       name          : "chapter_egyptian_dynasty",
       pkgname       : "nx/tactics/books/ancients",
@@ -2004,7 +2053,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_germanic_tribes)
-    nx_tactics_books_ancients.t_chapter_germanic_tribes['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_germanic_tribes['vx_value'] = {
       name          : "chapter_germanic_tribes",
       pkgname       : "nx/tactics/books/ancients",
@@ -2023,7 +2071,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_greek_city_states)
-    nx_tactics_books_ancients.t_chapter_greek_city_states['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_greek_city_states['vx_value'] = {
       name          : "chapter_greek_city_states",
       pkgname       : "nx/tactics/books/ancients",
@@ -2042,7 +2089,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_macedon)
-    nx_tactics_books_ancients.t_chapter_macedon['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_macedon['vx_value'] = {
       name          : "chapter_macedon",
       pkgname       : "nx/tactics/books/ancients",
@@ -2061,7 +2107,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_norsemen)
-    nx_tactics_books_ancients.t_chapter_norsemen['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_norsemen['vx_value'] = {
       name          : "chapter_norsemen",
       pkgname       : "nx/tactics/books/ancients",
@@ -2080,7 +2125,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_persians)
-    nx_tactics_books_ancients.t_chapter_persians['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_persians['vx_value'] = {
       name          : "chapter_persians",
       pkgname       : "nx/tactics/books/ancients",
@@ -2099,7 +2143,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_roman_empire)
-    nx_tactics_books_ancients.t_chapter_roman_empire['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_roman_empire['vx_value'] = {
       name          : "chapter_roman_empire",
       pkgname       : "nx/tactics/books/ancients",
@@ -2118,7 +2161,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func chapter_unfiled_ancient)
-    nx_tactics_books_ancients.t_chapter_unfiled_ancient['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_chapter_unfiled_ancient['vx_value'] = {
       name          : "chapter_unfiled_ancient",
       pkgname       : "nx/tactics/books/ancients",
@@ -2137,7 +2179,6 @@ export default class nx_tactics_books_ancients {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_ancients.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_ancients.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/ancients",

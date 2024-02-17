@@ -10,8 +10,12 @@ export default class nx_tactics_books_fantasy {
    * @function chapter_fantasy_overview
    * @return {chapter}
    */
-  static t_chapter_fantasy_overview = {}
-  static e_chapter_fantasy_overview = {vx_type: nx_tactics_books_fantasy.t_chapter_fantasy_overview}
+  static t_chapter_fantasy_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_fantasy_overview = {
+    vx_type: nx_tactics_books_fantasy.t_chapter_fantasy_overview
+  }
 
   // (func chapter_fantasy_overview)
   static f_chapter_fantasy_overview() {
@@ -70,8 +74,12 @@ export default class nx_tactics_books_fantasy {
    * @function chapter_genshin_impact
    * @return {chapter}
    */
-  static t_chapter_genshin_impact = {}
-  static e_chapter_genshin_impact = {vx_type: nx_tactics_books_fantasy.t_chapter_genshin_impact}
+  static t_chapter_genshin_impact = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_genshin_impact = {
+    vx_type: nx_tactics_books_fantasy.t_chapter_genshin_impact
+  }
 
   // (func chapter_genshin_impact)
   static f_chapter_genshin_impact() {
@@ -146,8 +154,12 @@ export default class nx_tactics_books_fantasy {
    * @function chapter_god_of_war
    * @return {chapter}
    */
-  static t_chapter_god_of_war = {}
-  static e_chapter_god_of_war = {vx_type: nx_tactics_books_fantasy.t_chapter_god_of_war}
+  static t_chapter_god_of_war = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_god_of_war = {
+    vx_type: nx_tactics_books_fantasy.t_chapter_god_of_war
+  }
 
   // (func chapter_god_of_war)
   static f_chapter_god_of_war() {
@@ -206,8 +218,12 @@ export default class nx_tactics_books_fantasy {
    * @function chapter_lord_of_the_rings
    * @return {chapter}
    */
-  static t_chapter_lord_of_the_rings = {}
-  static e_chapter_lord_of_the_rings = {vx_type: nx_tactics_books_fantasy.t_chapter_lord_of_the_rings}
+  static t_chapter_lord_of_the_rings = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_lord_of_the_rings = {
+    vx_type: nx_tactics_books_fantasy.t_chapter_lord_of_the_rings
+  }
 
   // (func chapter_lord_of_the_rings)
   static f_chapter_lord_of_the_rings() {
@@ -246,8 +262,12 @@ export default class nx_tactics_books_fantasy {
    * @function chapter_material_realm
    * @return {chapter}
    */
-  static t_chapter_material_realm = {}
-  static e_chapter_material_realm = {vx_type: nx_tactics_books_fantasy.t_chapter_material_realm}
+  static t_chapter_material_realm = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_material_realm = {
+    vx_type: nx_tactics_books_fantasy.t_chapter_material_realm
+  }
 
   // (func chapter_material_realm)
   static f_chapter_material_realm() {
@@ -3172,8 +3192,12 @@ export default class nx_tactics_books_fantasy {
    * @function chapter_nexus_fantasy_characters
    * @return {chapter}
    */
-  static t_chapter_nexus_fantasy_characters = {}
-  static e_chapter_nexus_fantasy_characters = {vx_type: nx_tactics_books_fantasy.t_chapter_nexus_fantasy_characters}
+  static t_chapter_nexus_fantasy_characters = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_nexus_fantasy_characters = {
+    vx_type: nx_tactics_books_fantasy.t_chapter_nexus_fantasy_characters
+  }
 
   // (func chapter_nexus_fantasy_characters)
   static f_chapter_nexus_fantasy_characters() {
@@ -3656,8 +3680,12 @@ export default class nx_tactics_books_fantasy {
    * @function chapter_realms_beyond
    * @return {chapter}
    */
-  static t_chapter_realms_beyond = {}
-  static e_chapter_realms_beyond = {vx_type: nx_tactics_books_fantasy.t_chapter_realms_beyond}
+  static t_chapter_realms_beyond = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_realms_beyond = {
+    vx_type: nx_tactics_books_fantasy.t_chapter_realms_beyond
+  }
 
   // (func chapter_realms_beyond)
   static f_chapter_realms_beyond() {
@@ -4550,8 +4578,12 @@ export default class nx_tactics_books_fantasy {
    * @function chapter_story_ideas
    * @return {chapter}
    */
-  static t_chapter_story_ideas = {}
-  static e_chapter_story_ideas = {vx_type: nx_tactics_books_fantasy.t_chapter_story_ideas}
+  static t_chapter_story_ideas = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_story_ideas = {
+    vx_type: nx_tactics_books_fantasy.t_chapter_story_ideas
+  }
 
   // (func chapter_story_ideas)
   static f_chapter_story_ideas() {
@@ -4570,8 +4602,12 @@ export default class nx_tactics_books_fantasy {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_fantasy.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_fantasy.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -4606,7 +4642,6 @@ export default class nx_tactics_books_fantasy {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -4648,7 +4683,6 @@ export default class nx_tactics_books_fantasy {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_fantasy_overview)
-    nx_tactics_books_fantasy.t_chapter_fantasy_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_chapter_fantasy_overview['vx_value'] = {
       name          : "chapter_fantasy_overview",
       pkgname       : "nx/tactics/books/fantasy",
@@ -4667,7 +4701,6 @@ export default class nx_tactics_books_fantasy {
     }
 
     // (func chapter_genshin_impact)
-    nx_tactics_books_fantasy.t_chapter_genshin_impact['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_chapter_genshin_impact['vx_value'] = {
       name          : "chapter_genshin_impact",
       pkgname       : "nx/tactics/books/fantasy",
@@ -4686,7 +4719,6 @@ export default class nx_tactics_books_fantasy {
     }
 
     // (func chapter_god_of_war)
-    nx_tactics_books_fantasy.t_chapter_god_of_war['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_chapter_god_of_war['vx_value'] = {
       name          : "chapter_god_of_war",
       pkgname       : "nx/tactics/books/fantasy",
@@ -4705,7 +4737,6 @@ export default class nx_tactics_books_fantasy {
     }
 
     // (func chapter_lord_of_the_rings)
-    nx_tactics_books_fantasy.t_chapter_lord_of_the_rings['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_chapter_lord_of_the_rings['vx_value'] = {
       name          : "chapter_lord_of_the_rings",
       pkgname       : "nx/tactics/books/fantasy",
@@ -4724,7 +4755,6 @@ export default class nx_tactics_books_fantasy {
     }
 
     // (func chapter_material_realm)
-    nx_tactics_books_fantasy.t_chapter_material_realm['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_chapter_material_realm['vx_value'] = {
       name          : "chapter_material_realm",
       pkgname       : "nx/tactics/books/fantasy",
@@ -4743,7 +4773,6 @@ export default class nx_tactics_books_fantasy {
     }
 
     // (func chapter_nexus_fantasy_characters)
-    nx_tactics_books_fantasy.t_chapter_nexus_fantasy_characters['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_chapter_nexus_fantasy_characters['vx_value'] = {
       name          : "chapter_nexus_fantasy_characters",
       pkgname       : "nx/tactics/books/fantasy",
@@ -4762,7 +4791,6 @@ export default class nx_tactics_books_fantasy {
     }
 
     // (func chapter_realms_beyond)
-    nx_tactics_books_fantasy.t_chapter_realms_beyond['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_chapter_realms_beyond['vx_value'] = {
       name          : "chapter_realms_beyond",
       pkgname       : "nx/tactics/books/fantasy",
@@ -4781,7 +4809,6 @@ export default class nx_tactics_books_fantasy {
     }
 
     // (func chapter_story_ideas)
-    nx_tactics_books_fantasy.t_chapter_story_ideas['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_chapter_story_ideas['vx_value'] = {
       name          : "chapter_story_ideas",
       pkgname       : "nx/tactics/books/fantasy",
@@ -4800,7 +4827,6 @@ export default class nx_tactics_books_fantasy {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_fantasy.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_fantasy.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/fantasy",

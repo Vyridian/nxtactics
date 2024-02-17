@@ -10,8 +10,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_alteration_powers
    * @return {chapter}
    */
-  static t_chapter_alteration_powers = {}
-  static e_chapter_alteration_powers = {vx_type: nx_tactics_books_powers.t_chapter_alteration_powers}
+  static t_chapter_alteration_powers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_alteration_powers = {
+    vx_type: nx_tactics_books_powers.t_chapter_alteration_powers
+  }
 
   // (func chapter_alteration_powers)
   static f_chapter_alteration_powers() {
@@ -222,8 +226,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_body_powers
    * @return {chapter}
    */
-  static t_chapter_body_powers = {}
-  static e_chapter_body_powers = {vx_type: nx_tactics_books_powers.t_chapter_body_powers}
+  static t_chapter_body_powers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_body_powers = {
+    vx_type: nx_tactics_books_powers.t_chapter_body_powers
+  }
 
   // (func chapter_body_powers)
   static f_chapter_body_powers() {
@@ -2564,8 +2572,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_energy_and_forces
    * @return {chapter}
    */
-  static t_chapter_energy_and_forces = {}
-  static e_chapter_energy_and_forces = {vx_type: nx_tactics_books_powers.t_chapter_energy_and_forces}
+  static t_chapter_energy_and_forces = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_energy_and_forces = {
+    vx_type: nx_tactics_books_powers.t_chapter_energy_and_forces
+  }
 
   // (func chapter_energy_and_forces)
   static f_chapter_energy_and_forces() {
@@ -4374,8 +4386,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_enhancement_powers
    * @return {chapter}
    */
-  static t_chapter_enhancement_powers = {}
-  static e_chapter_enhancement_powers = {vx_type: nx_tactics_books_powers.t_chapter_enhancement_powers}
+  static t_chapter_enhancement_powers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_enhancement_powers = {
+    vx_type: nx_tactics_books_powers.t_chapter_enhancement_powers
+  }
 
   // (func chapter_enhancement_powers)
   static f_chapter_enhancement_powers() {
@@ -4524,8 +4540,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_equipment_powers
    * @return {chapter}
    */
-  static t_chapter_equipment_powers = {}
-  static e_chapter_equipment_powers = {vx_type: nx_tactics_books_powers.t_chapter_equipment_powers}
+  static t_chapter_equipment_powers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_equipment_powers = {
+    vx_type: nx_tactics_books_powers.t_chapter_equipment_powers
+  }
 
   // (func chapter_equipment_powers)
   static f_chapter_equipment_powers() {
@@ -5680,8 +5700,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_godlike_powers
    * @return {chapter}
    */
-  static t_chapter_godlike_powers = {}
-  static e_chapter_godlike_powers = {vx_type: nx_tactics_books_powers.t_chapter_godlike_powers}
+  static t_chapter_godlike_powers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_godlike_powers = {
+    vx_type: nx_tactics_books_powers.t_chapter_godlike_powers
+  }
 
   // (func chapter_godlike_powers)
   static f_chapter_godlike_powers() {
@@ -5968,8 +5992,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_mental_powers_and_weaknesses
    * @return {chapter}
    */
-  static t_chapter_mental_powers_and_weaknesses = {}
-  static e_chapter_mental_powers_and_weaknesses = {vx_type: nx_tactics_books_powers.t_chapter_mental_powers_and_weaknesses}
+  static t_chapter_mental_powers_and_weaknesses = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_mental_powers_and_weaknesses = {
+    vx_type: nx_tactics_books_powers.t_chapter_mental_powers_and_weaknesses
+  }
 
   // (func chapter_mental_powers_and_weaknesses)
   static f_chapter_mental_powers_and_weaknesses() {
@@ -6482,6 +6510,14 @@ export default class nx_tactics_books_powers {
                   nx_tactics_base.t_ability,
                   ":name",
                   "Simulacrum"
+                ),
+                "Sleight of Mind",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Sleight of Mind",
+                  ":summary",
+                  "* [Slow] [Even] [Mind]: +1 [Stress]. Create a distraction."
                 ),
                 "Smoke and Mirrors",
                 vx_core.f_new(
@@ -7506,8 +7542,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_movement_powers
    * @return {chapter}
    */
-  static t_chapter_movement_powers = {}
-  static e_chapter_movement_powers = {vx_type: nx_tactics_books_powers.t_chapter_movement_powers}
+  static t_chapter_movement_powers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_movement_powers = {
+    vx_type: nx_tactics_books_powers.t_chapter_movement_powers
+  }
 
   // (func chapter_movement_powers)
   static f_chapter_movement_powers() {
@@ -8084,8 +8124,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_physical_powers_and_weaknesses
    * @return {chapter}
    */
-  static t_chapter_physical_powers_and_weaknesses = {}
-  static e_chapter_physical_powers_and_weaknesses = {vx_type: nx_tactics_books_powers.t_chapter_physical_powers_and_weaknesses}
+  static t_chapter_physical_powers_and_weaknesses = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_physical_powers_and_weaknesses = {
+    vx_type: nx_tactics_books_powers.t_chapter_physical_powers_and_weaknesses
+  }
 
   // (func chapter_physical_powers_and_weaknesses)
   static f_chapter_physical_powers_and_weaknesses() {
@@ -9064,8 +9108,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_powers_overview
    * @return {chapter}
    */
-  static t_chapter_powers_overview = {}
-  static e_chapter_powers_overview = {vx_type: nx_tactics_books_powers.t_chapter_powers_overview}
+  static t_chapter_powers_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_powers_overview = {
+    vx_type: nx_tactics_books_powers.t_chapter_powers_overview
+  }
 
   // (func chapter_powers_overview)
   static f_chapter_powers_overview() {
@@ -9092,8 +9140,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_special_modifiers
    * @return {chapter}
    */
-  static t_chapter_special_modifiers = {}
-  static e_chapter_special_modifiers = {vx_type: nx_tactics_books_powers.t_chapter_special_modifiers}
+  static t_chapter_special_modifiers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_special_modifiers = {
+    vx_type: nx_tactics_books_powers.t_chapter_special_modifiers
+  }
 
   // (func chapter_special_modifiers)
   static f_chapter_special_modifiers() {
@@ -9506,8 +9558,12 @@ export default class nx_tactics_books_powers {
    * @function chapter_strength_and_weaknesses
    * @return {chapter}
    */
-  static t_chapter_strength_and_weaknesses = {}
-  static e_chapter_strength_and_weaknesses = {vx_type: nx_tactics_books_powers.t_chapter_strength_and_weaknesses}
+  static t_chapter_strength_and_weaknesses = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_strength_and_weaknesses = {
+    vx_type: nx_tactics_books_powers.t_chapter_strength_and_weaknesses
+  }
 
   // (func chapter_strength_and_weaknesses)
   static f_chapter_strength_and_weaknesses() {
@@ -10142,8 +10198,12 @@ export default class nx_tactics_books_powers {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_powers.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_powers.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -10186,7 +10246,6 @@ export default class nx_tactics_books_powers {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -10236,7 +10295,6 @@ export default class nx_tactics_books_powers {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_alteration_powers)
-    nx_tactics_books_powers.t_chapter_alteration_powers['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_alteration_powers['vx_value'] = {
       name          : "chapter_alteration_powers",
       pkgname       : "nx/tactics/books/powers",
@@ -10255,7 +10313,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_body_powers)
-    nx_tactics_books_powers.t_chapter_body_powers['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_body_powers['vx_value'] = {
       name          : "chapter_body_powers",
       pkgname       : "nx/tactics/books/powers",
@@ -10274,7 +10331,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_energy_and_forces)
-    nx_tactics_books_powers.t_chapter_energy_and_forces['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_energy_and_forces['vx_value'] = {
       name          : "chapter_energy_and_forces",
       pkgname       : "nx/tactics/books/powers",
@@ -10293,7 +10349,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_enhancement_powers)
-    nx_tactics_books_powers.t_chapter_enhancement_powers['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_enhancement_powers['vx_value'] = {
       name          : "chapter_enhancement_powers",
       pkgname       : "nx/tactics/books/powers",
@@ -10312,7 +10367,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_equipment_powers)
-    nx_tactics_books_powers.t_chapter_equipment_powers['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_equipment_powers['vx_value'] = {
       name          : "chapter_equipment_powers",
       pkgname       : "nx/tactics/books/powers",
@@ -10331,7 +10385,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_godlike_powers)
-    nx_tactics_books_powers.t_chapter_godlike_powers['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_godlike_powers['vx_value'] = {
       name          : "chapter_godlike_powers",
       pkgname       : "nx/tactics/books/powers",
@@ -10350,7 +10403,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_mental_powers_and_weaknesses)
-    nx_tactics_books_powers.t_chapter_mental_powers_and_weaknesses['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_mental_powers_and_weaknesses['vx_value'] = {
       name          : "chapter_mental_powers_and_weaknesses",
       pkgname       : "nx/tactics/books/powers",
@@ -10369,7 +10421,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_movement_powers)
-    nx_tactics_books_powers.t_chapter_movement_powers['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_movement_powers['vx_value'] = {
       name          : "chapter_movement_powers",
       pkgname       : "nx/tactics/books/powers",
@@ -10388,7 +10439,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_physical_powers_and_weaknesses)
-    nx_tactics_books_powers.t_chapter_physical_powers_and_weaknesses['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_physical_powers_and_weaknesses['vx_value'] = {
       name          : "chapter_physical_powers_and_weaknesses",
       pkgname       : "nx/tactics/books/powers",
@@ -10407,7 +10457,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_powers_overview)
-    nx_tactics_books_powers.t_chapter_powers_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_powers_overview['vx_value'] = {
       name          : "chapter_powers_overview",
       pkgname       : "nx/tactics/books/powers",
@@ -10426,7 +10475,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_special_modifiers)
-    nx_tactics_books_powers.t_chapter_special_modifiers['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_special_modifiers['vx_value'] = {
       name          : "chapter_special_modifiers",
       pkgname       : "nx/tactics/books/powers",
@@ -10445,7 +10493,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func chapter_strength_and_weaknesses)
-    nx_tactics_books_powers.t_chapter_strength_and_weaknesses['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_chapter_strength_and_weaknesses['vx_value'] = {
       name          : "chapter_strength_and_weaknesses",
       pkgname       : "nx/tactics/books/powers",
@@ -10464,7 +10511,6 @@ export default class nx_tactics_books_powers {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_powers.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_powers.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/powers",

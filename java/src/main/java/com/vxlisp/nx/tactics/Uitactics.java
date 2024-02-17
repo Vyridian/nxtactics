@@ -84,24 +84,38 @@ public final class Uitactics {
       Ui.t_ui,
       Core.t_any_from_func.vx_fn_new(() -> {
         final Ui.Type_ui background = Uitactics.f_ui_app_background();
-        final Ui.Type_ui home = Uitactics.f_ui_app_home();
-        final Ui.Type_ui nav = Uitactics.f_ui_app_nav();
+        final Ui.Type_ui main = Uitactics.f_ui_app_main();
+        final Ui.Type_ui menubar = Uitactics.f_ui_app_menubar();
+        final Ui.Type_ui menudrawer = Uitactics.f_ui_app_menudrawer();
+        final Ui.Type_ui msgbox = Uitactics.f_ui_app_msgbox();
         final Ui.Type_ui navbar = Uitactics.f_ui_app_navbar();
+        final Ui.Type_ui navdrawer = Uitactics.f_ui_app_navdrawer();
         final Ui.Type_ui parallax = Uitactics.f_ui_app_parallax();
-        final Ui.Type_ui status = Uitactics.f_ui_app_status();
+        final Ui.Type_ui statusbar = Uitactics.f_ui_app_statusbar();
+        final Ui.Type_ui statusdrawer = Uitactics.f_ui_app_statusdrawer();
         final Ui.Type_uimap uimap = Core.f_new(
           Ui.t_uimap,
           Core.t_anylist.vx_new(
               Core.vx_new_string(":background"),
               background,
-              Core.vx_new_string(":home"),
-              home,
-              Core.vx_new_string(":nav"),
-              nav,
+              Core.vx_new_string(":main"),
+              main,
+              Core.vx_new_string(":menubar"),
+              menubar,
+              Core.vx_new_string(":menudrawer"),
+              menudrawer,
+              Core.vx_new_string(":msgbox"),
+              msgbox,
               Core.vx_new_string(":navbar"),
               navbar,
+              Core.vx_new_string(":navdrawer"),
+              navdrawer,
               Core.vx_new_string(":parallax"),
-              parallax
+              parallax,
+              Core.vx_new_string(":statusbar"),
+              statusbar,
+              Core.vx_new_string(":statusdrawer"),
+              statusdrawer
           )
         );
         return Core.f_new(
@@ -196,25 +210,25 @@ public final class Uitactics {
   }
 
   /**
-   * @function ui_app_home
+   * @function ui_app_main
    * @return {ui}
-   * (func ui-app-home)
+   * (func ui-app-main)
    */
-  public static interface Func_ui_app_home extends Core.Type_func, Core.Type_replfunc {
-    public Ui.Type_ui vx_ui_app_home();
+  public static interface Func_ui_app_main extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_ui vx_ui_app_main();
   }
 
-  public static class Class_ui_app_home extends Core.Class_base implements Func_ui_app_home {
+  public static class Class_ui_app_main extends Core.Class_base implements Func_ui_app_main {
 
     @Override
-    public Func_ui_app_home vx_new(Object... vals) {
-      Class_ui_app_home output = new Class_ui_app_home();
+    public Func_ui_app_main vx_new(Object... vals) {
+      Class_ui_app_main output = new Class_ui_app_main();
       return output;
     }
 
     @Override
-    public Func_ui_app_home vx_copy(Object... vals) {
-      Class_ui_app_home output = new Class_ui_app_home();
+    public Func_ui_app_main vx_copy(Object... vals) {
+      Class_ui_app_main output = new Class_ui_app_main();
       return output;
     }
 
@@ -225,7 +239,7 @@ public final class Uitactics {
     public Core.Type_funcdef vx_funcdef() {
       return Core.funcdef_new(
         "nx/tactics/uitactics", // pkgname
-        "ui-app-home", // name
+        "ui-app-main", // name
         0, // idx
         false, // async
         Core.typedef_new(
@@ -245,51 +259,215 @@ public final class Uitactics {
     }
 
     @Override
-    public Func_ui_app_home vx_empty() {return e_ui_app_home;}
+    public Func_ui_app_main vx_empty() {return e_ui_app_main;}
     @Override
-    public Func_ui_app_home vx_type() {return t_ui_app_home;}
+    public Func_ui_app_main vx_type() {return t_ui_app_main;}
 
     public Core.Type_any vx_repl(Core.Type_anylist arglist) {
       Core.Type_any output = Core.e_any;
-      output = Uitactics.f_ui_app_home();
+      output = Uitactics.f_ui_app_main();
       return output;
     }
 
     @Override
-    public Ui.Type_ui vx_ui_app_home() {
-      return Uitactics.f_ui_app_home();
+    public Ui.Type_ui vx_ui_app_main() {
+      return Uitactics.f_ui_app_main();
     }
 
   }
 
-  public static final Func_ui_app_home e_ui_app_home = new Uitactics.Class_ui_app_home();
-  public static final Func_ui_app_home t_ui_app_home = new Uitactics.Class_ui_app_home();
+  public static final Func_ui_app_main e_ui_app_main = new Uitactics.Class_ui_app_main();
+  public static final Func_ui_app_main t_ui_app_main = new Uitactics.Class_ui_app_main();
 
-  public static Ui.Type_ui f_ui_app_home() {
+  public static Ui.Type_ui f_ui_app_main() {
+    Ui.Type_ui output = Ui.e_ui;
+    output = Core.f_new(
+      Ui.t_ui,
+      Core.t_anylist.vx_new(
+        Core.vx_new_string(":uistyle"),
+        Uitactics.f_ui_app_main_style()
+      )
+    );
+    return output;
+  }
+
+  /**
+   * @function ui_app_main_style
+   * @return {uistyle}
+   * (func ui-app-main-style)
+   */
+  public static interface Func_ui_app_main_style extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_uistyle vx_ui_app_main_style();
+  }
+
+  public static class Class_ui_app_main_style extends Core.Class_base implements Func_ui_app_main_style {
+
+    @Override
+    public Func_ui_app_main_style vx_new(Object... vals) {
+      Class_ui_app_main_style output = new Class_ui_app_main_style();
+      return output;
+    }
+
+    @Override
+    public Func_ui_app_main_style vx_copy(Object... vals) {
+      Class_ui_app_main_style output = new Class_ui_app_main_style();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/uitactics", // pkgname
+        "ui-app-main-style", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "uistyle", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_ui_app_main_style vx_empty() {return e_ui_app_main_style;}
+    @Override
+    public Func_ui_app_main_style vx_type() {return t_ui_app_main_style;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      output = Uitactics.f_ui_app_main_style();
+      return output;
+    }
+
+    @Override
+    public Ui.Type_uistyle vx_ui_app_main_style() {
+      return Uitactics.f_ui_app_main_style();
+    }
+
+  }
+
+  public static final Func_ui_app_main_style e_ui_app_main_style = new Uitactics.Class_ui_app_main_style();
+  public static final Func_ui_app_main_style t_ui_app_main_style = new Uitactics.Class_ui_app_main_style();
+
+  public static Ui.Type_uistyle f_ui_app_main_style() {
+    Ui.Type_uistyle output = Ui.e_uistyle;
+    output = Core.f_new(
+      Ui.t_uistyle,
+      Core.t_anylist.vx_new(
+        Core.vx_new_string(":uilayout"),
+        Ui.c_uilayout_maxpanel
+      )
+    );
+    return output;
+  }
+
+  /**
+   * @function ui_app_menubar
+   * @return {ui}
+   * (func ui-app-menubar)
+   */
+  public static interface Func_ui_app_menubar extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_ui vx_ui_app_menubar();
+  }
+
+  public static class Class_ui_app_menubar extends Core.Class_base implements Func_ui_app_menubar {
+
+    @Override
+    public Func_ui_app_menubar vx_new(Object... vals) {
+      Class_ui_app_menubar output = new Class_ui_app_menubar();
+      return output;
+    }
+
+    @Override
+    public Func_ui_app_menubar vx_copy(Object... vals) {
+      Class_ui_app_menubar output = new Class_ui_app_menubar();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/uitactics", // pkgname
+        "ui-app-menubar", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "ui", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_ui_app_menubar vx_empty() {return e_ui_app_menubar;}
+    @Override
+    public Func_ui_app_menubar vx_type() {return t_ui_app_menubar;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      output = Uitactics.f_ui_app_menubar();
+      return output;
+    }
+
+    @Override
+    public Ui.Type_ui vx_ui_app_menubar() {
+      return Uitactics.f_ui_app_menubar();
+    }
+
+  }
+
+  public static final Func_ui_app_menubar e_ui_app_menubar = new Uitactics.Class_ui_app_menubar();
+  public static final Func_ui_app_menubar t_ui_app_menubar = new Uitactics.Class_ui_app_menubar();
+
+  public static Ui.Type_ui f_ui_app_menubar() {
     Ui.Type_ui output = Ui.e_ui;
     return output;
   }
 
   /**
-   * @function ui_app_nav
+   * @function ui_app_menudrawer
    * @return {ui}
-   * (func ui-app-nav)
+   * (func ui-app-menudrawer)
    */
-  public static interface Func_ui_app_nav extends Core.Type_func, Core.Type_replfunc {
-    public Ui.Type_ui vx_ui_app_nav();
+  public static interface Func_ui_app_menudrawer extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_ui vx_ui_app_menudrawer();
   }
 
-  public static class Class_ui_app_nav extends Core.Class_base implements Func_ui_app_nav {
+  public static class Class_ui_app_menudrawer extends Core.Class_base implements Func_ui_app_menudrawer {
 
     @Override
-    public Func_ui_app_nav vx_new(Object... vals) {
-      Class_ui_app_nav output = new Class_ui_app_nav();
+    public Func_ui_app_menudrawer vx_new(Object... vals) {
+      Class_ui_app_menudrawer output = new Class_ui_app_menudrawer();
       return output;
     }
 
     @Override
-    public Func_ui_app_nav vx_copy(Object... vals) {
-      Class_ui_app_nav output = new Class_ui_app_nav();
+    public Func_ui_app_menudrawer vx_copy(Object... vals) {
+      Class_ui_app_menudrawer output = new Class_ui_app_menudrawer();
       return output;
     }
 
@@ -300,7 +478,7 @@ public final class Uitactics {
     public Core.Type_funcdef vx_funcdef() {
       return Core.funcdef_new(
         "nx/tactics/uitactics", // pkgname
-        "ui-app-nav", // name
+        "ui-app-menudrawer", // name
         0, // idx
         false, // async
         Core.typedef_new(
@@ -320,27 +498,102 @@ public final class Uitactics {
     }
 
     @Override
-    public Func_ui_app_nav vx_empty() {return e_ui_app_nav;}
+    public Func_ui_app_menudrawer vx_empty() {return e_ui_app_menudrawer;}
     @Override
-    public Func_ui_app_nav vx_type() {return t_ui_app_nav;}
+    public Func_ui_app_menudrawer vx_type() {return t_ui_app_menudrawer;}
 
     public Core.Type_any vx_repl(Core.Type_anylist arglist) {
       Core.Type_any output = Core.e_any;
-      output = Uitactics.f_ui_app_nav();
+      output = Uitactics.f_ui_app_menudrawer();
       return output;
     }
 
     @Override
-    public Ui.Type_ui vx_ui_app_nav() {
-      return Uitactics.f_ui_app_nav();
+    public Ui.Type_ui vx_ui_app_menudrawer() {
+      return Uitactics.f_ui_app_menudrawer();
     }
 
   }
 
-  public static final Func_ui_app_nav e_ui_app_nav = new Uitactics.Class_ui_app_nav();
-  public static final Func_ui_app_nav t_ui_app_nav = new Uitactics.Class_ui_app_nav();
+  public static final Func_ui_app_menudrawer e_ui_app_menudrawer = new Uitactics.Class_ui_app_menudrawer();
+  public static final Func_ui_app_menudrawer t_ui_app_menudrawer = new Uitactics.Class_ui_app_menudrawer();
 
-  public static Ui.Type_ui f_ui_app_nav() {
+  public static Ui.Type_ui f_ui_app_menudrawer() {
+    Ui.Type_ui output = Ui.e_ui;
+    return output;
+  }
+
+  /**
+   * @function ui_app_msgbox
+   * @return {ui}
+   * (func ui-app-msgbox)
+   */
+  public static interface Func_ui_app_msgbox extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_ui vx_ui_app_msgbox();
+  }
+
+  public static class Class_ui_app_msgbox extends Core.Class_base implements Func_ui_app_msgbox {
+
+    @Override
+    public Func_ui_app_msgbox vx_new(Object... vals) {
+      Class_ui_app_msgbox output = new Class_ui_app_msgbox();
+      return output;
+    }
+
+    @Override
+    public Func_ui_app_msgbox vx_copy(Object... vals) {
+      Class_ui_app_msgbox output = new Class_ui_app_msgbox();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/uitactics", // pkgname
+        "ui-app-msgbox", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "ui", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_ui_app_msgbox vx_empty() {return e_ui_app_msgbox;}
+    @Override
+    public Func_ui_app_msgbox vx_type() {return t_ui_app_msgbox;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      output = Uitactics.f_ui_app_msgbox();
+      return output;
+    }
+
+    @Override
+    public Ui.Type_ui vx_ui_app_msgbox() {
+      return Uitactics.f_ui_app_msgbox();
+    }
+
+  }
+
+  public static final Func_ui_app_msgbox e_ui_app_msgbox = new Uitactics.Class_ui_app_msgbox();
+  public static final Func_ui_app_msgbox t_ui_app_msgbox = new Uitactics.Class_ui_app_msgbox();
+
+  public static Ui.Type_ui f_ui_app_msgbox() {
     Ui.Type_ui output = Ui.e_ui;
     return output;
   }
@@ -421,6 +674,81 @@ public final class Uitactics {
   }
 
   /**
+   * @function ui_app_navdrawer
+   * @return {ui}
+   * (func ui-app-navdrawer)
+   */
+  public static interface Func_ui_app_navdrawer extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_ui vx_ui_app_navdrawer();
+  }
+
+  public static class Class_ui_app_navdrawer extends Core.Class_base implements Func_ui_app_navdrawer {
+
+    @Override
+    public Func_ui_app_navdrawer vx_new(Object... vals) {
+      Class_ui_app_navdrawer output = new Class_ui_app_navdrawer();
+      return output;
+    }
+
+    @Override
+    public Func_ui_app_navdrawer vx_copy(Object... vals) {
+      Class_ui_app_navdrawer output = new Class_ui_app_navdrawer();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/uitactics", // pkgname
+        "ui-app-navdrawer", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "ui", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_ui_app_navdrawer vx_empty() {return e_ui_app_navdrawer;}
+    @Override
+    public Func_ui_app_navdrawer vx_type() {return t_ui_app_navdrawer;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      output = Uitactics.f_ui_app_navdrawer();
+      return output;
+    }
+
+    @Override
+    public Ui.Type_ui vx_ui_app_navdrawer() {
+      return Uitactics.f_ui_app_navdrawer();
+    }
+
+  }
+
+  public static final Func_ui_app_navdrawer e_ui_app_navdrawer = new Uitactics.Class_ui_app_navdrawer();
+  public static final Func_ui_app_navdrawer t_ui_app_navdrawer = new Uitactics.Class_ui_app_navdrawer();
+
+  public static Ui.Type_ui f_ui_app_navdrawer() {
+    Ui.Type_ui output = Ui.e_ui;
+    return output;
+  }
+
+  /**
    * @function ui_app_parallax
    * @return {ui}
    * (func ui-app-parallax)
@@ -496,25 +824,25 @@ public final class Uitactics {
   }
 
   /**
-   * @function ui_app_status
+   * @function ui_app_statusbar
    * @return {ui}
-   * (func ui-app-status)
+   * (func ui-app-statusbar)
    */
-  public static interface Func_ui_app_status extends Core.Type_func, Core.Type_replfunc {
-    public Ui.Type_ui vx_ui_app_status();
+  public static interface Func_ui_app_statusbar extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_ui vx_ui_app_statusbar();
   }
 
-  public static class Class_ui_app_status extends Core.Class_base implements Func_ui_app_status {
+  public static class Class_ui_app_statusbar extends Core.Class_base implements Func_ui_app_statusbar {
 
     @Override
-    public Func_ui_app_status vx_new(Object... vals) {
-      Class_ui_app_status output = new Class_ui_app_status();
+    public Func_ui_app_statusbar vx_new(Object... vals) {
+      Class_ui_app_statusbar output = new Class_ui_app_statusbar();
       return output;
     }
 
     @Override
-    public Func_ui_app_status vx_copy(Object... vals) {
-      Class_ui_app_status output = new Class_ui_app_status();
+    public Func_ui_app_statusbar vx_copy(Object... vals) {
+      Class_ui_app_statusbar output = new Class_ui_app_statusbar();
       return output;
     }
 
@@ -525,7 +853,7 @@ public final class Uitactics {
     public Core.Type_funcdef vx_funcdef() {
       return Core.funcdef_new(
         "nx/tactics/uitactics", // pkgname
-        "ui-app-status", // name
+        "ui-app-statusbar", // name
         0, // idx
         false, // async
         Core.typedef_new(
@@ -545,27 +873,102 @@ public final class Uitactics {
     }
 
     @Override
-    public Func_ui_app_status vx_empty() {return e_ui_app_status;}
+    public Func_ui_app_statusbar vx_empty() {return e_ui_app_statusbar;}
     @Override
-    public Func_ui_app_status vx_type() {return t_ui_app_status;}
+    public Func_ui_app_statusbar vx_type() {return t_ui_app_statusbar;}
 
     public Core.Type_any vx_repl(Core.Type_anylist arglist) {
       Core.Type_any output = Core.e_any;
-      output = Uitactics.f_ui_app_status();
+      output = Uitactics.f_ui_app_statusbar();
       return output;
     }
 
     @Override
-    public Ui.Type_ui vx_ui_app_status() {
-      return Uitactics.f_ui_app_status();
+    public Ui.Type_ui vx_ui_app_statusbar() {
+      return Uitactics.f_ui_app_statusbar();
     }
 
   }
 
-  public static final Func_ui_app_status e_ui_app_status = new Uitactics.Class_ui_app_status();
-  public static final Func_ui_app_status t_ui_app_status = new Uitactics.Class_ui_app_status();
+  public static final Func_ui_app_statusbar e_ui_app_statusbar = new Uitactics.Class_ui_app_statusbar();
+  public static final Func_ui_app_statusbar t_ui_app_statusbar = new Uitactics.Class_ui_app_statusbar();
 
-  public static Ui.Type_ui f_ui_app_status() {
+  public static Ui.Type_ui f_ui_app_statusbar() {
+    Ui.Type_ui output = Ui.e_ui;
+    return output;
+  }
+
+  /**
+   * @function ui_app_statusdrawer
+   * @return {ui}
+   * (func ui-app-statusdrawer)
+   */
+  public static interface Func_ui_app_statusdrawer extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_ui vx_ui_app_statusdrawer();
+  }
+
+  public static class Class_ui_app_statusdrawer extends Core.Class_base implements Func_ui_app_statusdrawer {
+
+    @Override
+    public Func_ui_app_statusdrawer vx_new(Object... vals) {
+      Class_ui_app_statusdrawer output = new Class_ui_app_statusdrawer();
+      return output;
+    }
+
+    @Override
+    public Func_ui_app_statusdrawer vx_copy(Object... vals) {
+      Class_ui_app_statusdrawer output = new Class_ui_app_statusdrawer();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/uitactics", // pkgname
+        "ui-app-statusdrawer", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "ui", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_ui_app_statusdrawer vx_empty() {return e_ui_app_statusdrawer;}
+    @Override
+    public Func_ui_app_statusdrawer vx_type() {return t_ui_app_statusdrawer;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      output = Uitactics.f_ui_app_statusdrawer();
+      return output;
+    }
+
+    @Override
+    public Ui.Type_ui vx_ui_app_statusdrawer() {
+      return Uitactics.f_ui_app_statusdrawer();
+    }
+
+  }
+
+  public static final Func_ui_app_statusdrawer e_ui_app_statusdrawer = new Uitactics.Class_ui_app_statusdrawer();
+  public static final Func_ui_app_statusdrawer t_ui_app_statusdrawer = new Uitactics.Class_ui_app_statusdrawer();
+
+  public static Ui.Type_ui f_ui_app_statusdrawer() {
     Ui.Type_ui output = Ui.e_ui;
     return output;
   }
@@ -643,6 +1046,82 @@ public final class Uitactics {
 
   public static Ui.Type_uistyle f_ui_app_style() {
     Ui.Type_uistyle output = Ui.e_uistyle;
+    return output;
+  }
+
+  /**
+   * @function ui_app_stylesheet
+   * Returns the stylesheet for app ui.
+   * @return {uistylesheet}
+   * (func ui-app-stylesheet)
+   */
+  public static interface Func_ui_app_stylesheet extends Core.Type_func, Core.Type_replfunc {
+    public Ui.Type_uistylesheet vx_ui_app_stylesheet();
+  }
+
+  public static class Class_ui_app_stylesheet extends Core.Class_base implements Func_ui_app_stylesheet {
+
+    @Override
+    public Func_ui_app_stylesheet vx_new(Object... vals) {
+      Class_ui_app_stylesheet output = new Class_ui_app_stylesheet();
+      return output;
+    }
+
+    @Override
+    public Func_ui_app_stylesheet vx_copy(Object... vals) {
+      Class_ui_app_stylesheet output = new Class_ui_app_stylesheet();
+      return output;
+    }
+
+    @Override
+    public Core.Type_typedef vx_typedef() {return Core.t_func.vx_typedef();}
+
+    @Override
+    public Core.Type_funcdef vx_funcdef() {
+      return Core.funcdef_new(
+        "nx/tactics/uitactics", // pkgname
+        "ui-app-stylesheet", // name
+        0, // idx
+        false, // async
+        Core.typedef_new(
+          "vx/ui/ui", // pkgname
+          "uistylesheet", // name
+          ":struct", // extends
+          Core.e_typelist, // traits
+          Core.e_typelist, // allowtypes
+          Core.e_typelist, // disallowtypes
+          Core.e_funclist, // allowfuncs
+          Core.e_funclist, // disallowfuncs
+          Core.e_anylist, // allowvalues
+          Core.e_anylist, // disallowvalues
+          Core.e_argmap // properties
+        ) // typedef
+      );
+    }
+
+    @Override
+    public Func_ui_app_stylesheet vx_empty() {return e_ui_app_stylesheet;}
+    @Override
+    public Func_ui_app_stylesheet vx_type() {return t_ui_app_stylesheet;}
+
+    public Core.Type_any vx_repl(Core.Type_anylist arglist) {
+      Core.Type_any output = Core.e_any;
+      output = Uitactics.f_ui_app_stylesheet();
+      return output;
+    }
+
+    @Override
+    public Ui.Type_uistylesheet vx_ui_app_stylesheet() {
+      return Uitactics.f_ui_app_stylesheet();
+    }
+
+  }
+
+  public static final Func_ui_app_stylesheet e_ui_app_stylesheet = new Uitactics.Class_ui_app_stylesheet();
+  public static final Func_ui_app_stylesheet t_ui_app_stylesheet = new Uitactics.Class_ui_app_stylesheet();
+
+  public static Ui.Type_uistylesheet f_ui_app_stylesheet() {
+    Ui.Type_uistylesheet output = Ui.e_uistylesheet;
     return output;
   }
 
@@ -1282,12 +1761,18 @@ public final class Uitactics {
     Map<String, Core.Type_func> mapfunc = new LinkedHashMap<>();
     mapfunc.put("ui-app", Uitactics.t_ui_app);
     mapfunc.put("ui-app-background", Uitactics.t_ui_app_background);
-    mapfunc.put("ui-app-home", Uitactics.t_ui_app_home);
-    mapfunc.put("ui-app-nav", Uitactics.t_ui_app_nav);
+    mapfunc.put("ui-app-main", Uitactics.t_ui_app_main);
+    mapfunc.put("ui-app-main-style", Uitactics.t_ui_app_main_style);
+    mapfunc.put("ui-app-menubar", Uitactics.t_ui_app_menubar);
+    mapfunc.put("ui-app-menudrawer", Uitactics.t_ui_app_menudrawer);
+    mapfunc.put("ui-app-msgbox", Uitactics.t_ui_app_msgbox);
     mapfunc.put("ui-app-navbar", Uitactics.t_ui_app_navbar);
+    mapfunc.put("ui-app-navdrawer", Uitactics.t_ui_app_navdrawer);
     mapfunc.put("ui-app-parallax", Uitactics.t_ui_app_parallax);
-    mapfunc.put("ui-app-status", Uitactics.t_ui_app_status);
+    mapfunc.put("ui-app-statusbar", Uitactics.t_ui_app_statusbar);
+    mapfunc.put("ui-app-statusdrawer", Uitactics.t_ui_app_statusdrawer);
     mapfunc.put("ui-app-style", Uitactics.t_ui_app_style);
+    mapfunc.put("ui-app-stylesheet", Uitactics.t_ui_app_stylesheet);
     mapfunc.put("ui-app<-tactics", Uitactics.t_ui_app_from_tactics);
     mapfunc.put("ui-unit", Uitactics.t_ui_unit);
     mapfunc.put("ui-unit-background", Uitactics.t_ui_unit_background);

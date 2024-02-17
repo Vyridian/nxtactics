@@ -10,8 +10,12 @@ export default class nx_tactics_books_age_of_sail {
    * @function chapter_age_of_sail_overview
    * @return {chapter}
    */
-  static t_chapter_age_of_sail_overview = {}
-  static e_chapter_age_of_sail_overview = {vx_type: nx_tactics_books_age_of_sail.t_chapter_age_of_sail_overview}
+  static t_chapter_age_of_sail_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_age_of_sail_overview = {
+    vx_type: nx_tactics_books_age_of_sail.t_chapter_age_of_sail_overview
+  }
 
   // (func chapter_age_of_sail_overview)
   static f_chapter_age_of_sail_overview() {
@@ -58,8 +62,12 @@ export default class nx_tactics_books_age_of_sail {
    * @function chapter_age_of_sail_weaponry
    * @return {chapter}
    */
-  static t_chapter_age_of_sail_weaponry = {}
-  static e_chapter_age_of_sail_weaponry = {vx_type: nx_tactics_books_age_of_sail.t_chapter_age_of_sail_weaponry}
+  static t_chapter_age_of_sail_weaponry = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_age_of_sail_weaponry = {
+    vx_type: nx_tactics_books_age_of_sail.t_chapter_age_of_sail_weaponry
+  }
 
   // (func chapter_age_of_sail_weaponry)
   static f_chapter_age_of_sail_weaponry() {
@@ -222,8 +230,12 @@ export default class nx_tactics_books_age_of_sail {
    * @function chapter_american_revolution
    * @return {chapter}
    */
-  static t_chapter_american_revolution = {}
-  static e_chapter_american_revolution = {vx_type: nx_tactics_books_age_of_sail.t_chapter_american_revolution}
+  static t_chapter_american_revolution = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_american_revolution = {
+    vx_type: nx_tactics_books_age_of_sail.t_chapter_american_revolution
+  }
 
   // (func chapter_american_revolution)
   static f_chapter_american_revolution() {
@@ -312,8 +324,12 @@ export default class nx_tactics_books_age_of_sail {
    * @function chapter_french_revolution
    * @return {chapter}
    */
-  static t_chapter_french_revolution = {}
-  static e_chapter_french_revolution = {vx_type: nx_tactics_books_age_of_sail.t_chapter_french_revolution}
+  static t_chapter_french_revolution = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_french_revolution = {
+    vx_type: nx_tactics_books_age_of_sail.t_chapter_french_revolution
+  }
 
   // (func chapter_french_revolution)
   static f_chapter_french_revolution() {
@@ -330,8 +346,12 @@ export default class nx_tactics_books_age_of_sail {
    * @function chapter_golden_age_of_sail
    * @return {chapter}
    */
-  static t_chapter_golden_age_of_sail = {}
-  static e_chapter_golden_age_of_sail = {vx_type: nx_tactics_books_age_of_sail.t_chapter_golden_age_of_sail}
+  static t_chapter_golden_age_of_sail = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_golden_age_of_sail = {
+    vx_type: nx_tactics_books_age_of_sail.t_chapter_golden_age_of_sail
+  }
 
   // (func chapter_golden_age_of_sail)
   static f_chapter_golden_age_of_sail() {
@@ -1364,8 +1384,12 @@ export default class nx_tactics_books_age_of_sail {
    * @function chapter_renaissance
    * @return {chapter}
    */
-  static t_chapter_renaissance = {}
-  static e_chapter_renaissance = {vx_type: nx_tactics_books_age_of_sail.t_chapter_renaissance}
+  static t_chapter_renaissance = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_renaissance = {
+    vx_type: nx_tactics_books_age_of_sail.t_chapter_renaissance
+  }
 
   // (func chapter_renaissance)
   static f_chapter_renaissance() {
@@ -1382,8 +1406,12 @@ export default class nx_tactics_books_age_of_sail {
    * @function chapter_tokugawa_shogunate
    * @return {chapter}
    */
-  static t_chapter_tokugawa_shogunate = {}
-  static e_chapter_tokugawa_shogunate = {vx_type: nx_tactics_books_age_of_sail.t_chapter_tokugawa_shogunate}
+  static t_chapter_tokugawa_shogunate = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_tokugawa_shogunate = {
+    vx_type: nx_tactics_books_age_of_sail.t_chapter_tokugawa_shogunate
+  }
 
   // (func chapter_tokugawa_shogunate)
   static f_chapter_tokugawa_shogunate() {
@@ -1524,8 +1552,12 @@ export default class nx_tactics_books_age_of_sail {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_age_of_sail.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_age_of_sail.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1556,7 +1588,6 @@ export default class nx_tactics_books_age_of_sail {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1596,7 +1627,6 @@ export default class nx_tactics_books_age_of_sail {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_age_of_sail_overview)
-    nx_tactics_books_age_of_sail.t_chapter_age_of_sail_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_sail.t_chapter_age_of_sail_overview['vx_value'] = {
       name          : "chapter_age_of_sail_overview",
       pkgname       : "nx/tactics/books/age_of_sail",
@@ -1615,7 +1645,6 @@ export default class nx_tactics_books_age_of_sail {
     }
 
     // (func chapter_age_of_sail_weaponry)
-    nx_tactics_books_age_of_sail.t_chapter_age_of_sail_weaponry['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_sail.t_chapter_age_of_sail_weaponry['vx_value'] = {
       name          : "chapter_age_of_sail_weaponry",
       pkgname       : "nx/tactics/books/age_of_sail",
@@ -1634,7 +1663,6 @@ export default class nx_tactics_books_age_of_sail {
     }
 
     // (func chapter_american_revolution)
-    nx_tactics_books_age_of_sail.t_chapter_american_revolution['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_sail.t_chapter_american_revolution['vx_value'] = {
       name          : "chapter_american_revolution",
       pkgname       : "nx/tactics/books/age_of_sail",
@@ -1653,7 +1681,6 @@ export default class nx_tactics_books_age_of_sail {
     }
 
     // (func chapter_french_revolution)
-    nx_tactics_books_age_of_sail.t_chapter_french_revolution['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_sail.t_chapter_french_revolution['vx_value'] = {
       name          : "chapter_french_revolution",
       pkgname       : "nx/tactics/books/age_of_sail",
@@ -1672,7 +1699,6 @@ export default class nx_tactics_books_age_of_sail {
     }
 
     // (func chapter_golden_age_of_sail)
-    nx_tactics_books_age_of_sail.t_chapter_golden_age_of_sail['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_sail.t_chapter_golden_age_of_sail['vx_value'] = {
       name          : "chapter_golden_age_of_sail",
       pkgname       : "nx/tactics/books/age_of_sail",
@@ -1691,7 +1717,6 @@ export default class nx_tactics_books_age_of_sail {
     }
 
     // (func chapter_renaissance)
-    nx_tactics_books_age_of_sail.t_chapter_renaissance['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_sail.t_chapter_renaissance['vx_value'] = {
       name          : "chapter_renaissance",
       pkgname       : "nx/tactics/books/age_of_sail",
@@ -1710,7 +1735,6 @@ export default class nx_tactics_books_age_of_sail {
     }
 
     // (func chapter_tokugawa_shogunate)
-    nx_tactics_books_age_of_sail.t_chapter_tokugawa_shogunate['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_sail.t_chapter_tokugawa_shogunate['vx_value'] = {
       name          : "chapter_tokugawa_shogunate",
       pkgname       : "nx/tactics/books/age_of_sail",
@@ -1729,7 +1753,6 @@ export default class nx_tactics_books_age_of_sail {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_age_of_sail.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_age_of_sail.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/age_of_sail",

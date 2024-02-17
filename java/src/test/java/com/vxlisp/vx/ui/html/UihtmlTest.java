@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 import com.vxlisp.vx.*;
+import com.vxlisp.vx.web.*;
 import com.vxlisp.vx.ui.*;
 
 public final class UihtmlTest {
@@ -21,11 +22,11 @@ public final class UihtmlTest {
     return Test.t_testcoveragesummary.vx_new(
       ":testpkg",   "vx/ui/html/uihtml", 
       ":constnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 100, ":tests", 3, ":total", 3), 
-      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1), 
-      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 3), 
+      ":docnums", Test.t_testcoveragenums.vx_new(":pct", 75, ":tests", 3, ":total", 4), 
+      ":funcnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 2), 
+      ":bigospacenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 2), 
+      ":bigotimenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 2), 
+      ":totalnums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 4), 
       ":typenums", Test.t_testcoveragenums.vx_new(":pct", 0, ":tests", 0, ":total", 1)
     );
   }
@@ -40,6 +41,7 @@ public final class UihtmlTest {
         ":renderer-app", 0
       ),
       ":funcmap", Core.t_intmap.vx_new(
+        ":node-app<-ui-orig", 0,
         ":render-app<-ui-orig", 0
       )
     );

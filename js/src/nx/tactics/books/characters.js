@@ -10,8 +10,12 @@ export default class nx_tactics_books_characters {
    * @function chapter_cast
    * @return {chapter}
    */
-  static t_chapter_cast = {}
-  static e_chapter_cast = {vx_type: nx_tactics_books_characters.t_chapter_cast}
+  static t_chapter_cast = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_cast = {
+    vx_type: nx_tactics_books_characters.t_chapter_cast
+  }
 
   // (func chapter_cast)
   static f_chapter_cast() {
@@ -48,8 +52,12 @@ export default class nx_tactics_books_characters {
    * @function chapter_character_archetypes
    * @return {chapter}
    */
-  static t_chapter_character_archetypes = {}
-  static e_chapter_character_archetypes = {vx_type: nx_tactics_books_characters.t_chapter_character_archetypes}
+  static t_chapter_character_archetypes = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_character_archetypes = {
+    vx_type: nx_tactics_books_characters.t_chapter_character_archetypes
+  }
 
   // (func chapter_character_archetypes)
   static f_chapter_character_archetypes() {
@@ -346,8 +354,12 @@ export default class nx_tactics_books_characters {
    * @function chapter_characters_overview
    * @return {chapter}
    */
-  static t_chapter_characters_overview = {}
-  static e_chapter_characters_overview = {vx_type: nx_tactics_books_characters.t_chapter_characters_overview}
+  static t_chapter_characters_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_characters_overview = {
+    vx_type: nx_tactics_books_characters.t_chapter_characters_overview
+  }
 
   // (func chapter_characters_overview)
   static f_chapter_characters_overview() {
@@ -374,8 +386,12 @@ export default class nx_tactics_books_characters {
    * @function chapter_creating_characters
    * @return {chapter}
    */
-  static t_chapter_creating_characters = {}
-  static e_chapter_creating_characters = {vx_type: nx_tactics_books_characters.t_chapter_creating_characters}
+  static t_chapter_creating_characters = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_creating_characters = {
+    vx_type: nx_tactics_books_characters.t_chapter_creating_characters
+  }
 
   // (func chapter_creating_characters)
   static f_chapter_creating_characters() {
@@ -548,8 +564,12 @@ export default class nx_tactics_books_characters {
    * @function chapter_props
    * @return {chapter}
    */
-  static t_chapter_props = {}
-  static e_chapter_props = {vx_type: nx_tactics_books_characters.t_chapter_props}
+  static t_chapter_props = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_props = {
+    vx_type: nx_tactics_books_characters.t_chapter_props
+  }
 
   // (func chapter_props)
   static f_chapter_props() {
@@ -566,8 +586,12 @@ export default class nx_tactics_books_characters {
    * @function chapter_sets
    * @return {chapter}
    */
-  static t_chapter_sets = {}
-  static e_chapter_sets = {vx_type: nx_tactics_books_characters.t_chapter_sets}
+  static t_chapter_sets = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_sets = {
+    vx_type: nx_tactics_books_characters.t_chapter_sets
+  }
 
   // (func chapter_sets)
   static f_chapter_sets() {
@@ -628,8 +652,12 @@ export default class nx_tactics_books_characters {
    * @function chapter_storytelling
    * @return {chapter}
    */
-  static t_chapter_storytelling = {}
-  static e_chapter_storytelling = {vx_type: nx_tactics_books_characters.t_chapter_storytelling}
+  static t_chapter_storytelling = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_storytelling = {
+    vx_type: nx_tactics_books_characters.t_chapter_storytelling
+  }
 
   // (func chapter_storytelling)
   static f_chapter_storytelling() {
@@ -1324,8 +1352,12 @@ export default class nx_tactics_books_characters {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_characters.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_characters.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1358,7 +1390,6 @@ export default class nx_tactics_books_characters {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1398,7 +1429,6 @@ export default class nx_tactics_books_characters {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_cast)
-    nx_tactics_books_characters.t_chapter_cast['vx_type'] = vx_core.t_type
     nx_tactics_books_characters.t_chapter_cast['vx_value'] = {
       name          : "chapter_cast",
       pkgname       : "nx/tactics/books/characters",
@@ -1417,7 +1447,6 @@ export default class nx_tactics_books_characters {
     }
 
     // (func chapter_character_archetypes)
-    nx_tactics_books_characters.t_chapter_character_archetypes['vx_type'] = vx_core.t_type
     nx_tactics_books_characters.t_chapter_character_archetypes['vx_value'] = {
       name          : "chapter_character_archetypes",
       pkgname       : "nx/tactics/books/characters",
@@ -1436,7 +1465,6 @@ export default class nx_tactics_books_characters {
     }
 
     // (func chapter_characters_overview)
-    nx_tactics_books_characters.t_chapter_characters_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_characters.t_chapter_characters_overview['vx_value'] = {
       name          : "chapter_characters_overview",
       pkgname       : "nx/tactics/books/characters",
@@ -1455,7 +1483,6 @@ export default class nx_tactics_books_characters {
     }
 
     // (func chapter_creating_characters)
-    nx_tactics_books_characters.t_chapter_creating_characters['vx_type'] = vx_core.t_type
     nx_tactics_books_characters.t_chapter_creating_characters['vx_value'] = {
       name          : "chapter_creating_characters",
       pkgname       : "nx/tactics/books/characters",
@@ -1474,7 +1501,6 @@ export default class nx_tactics_books_characters {
     }
 
     // (func chapter_props)
-    nx_tactics_books_characters.t_chapter_props['vx_type'] = vx_core.t_type
     nx_tactics_books_characters.t_chapter_props['vx_value'] = {
       name          : "chapter_props",
       pkgname       : "nx/tactics/books/characters",
@@ -1493,7 +1519,6 @@ export default class nx_tactics_books_characters {
     }
 
     // (func chapter_sets)
-    nx_tactics_books_characters.t_chapter_sets['vx_type'] = vx_core.t_type
     nx_tactics_books_characters.t_chapter_sets['vx_value'] = {
       name          : "chapter_sets",
       pkgname       : "nx/tactics/books/characters",
@@ -1512,7 +1537,6 @@ export default class nx_tactics_books_characters {
     }
 
     // (func chapter_storytelling)
-    nx_tactics_books_characters.t_chapter_storytelling['vx_type'] = vx_core.t_type
     nx_tactics_books_characters.t_chapter_storytelling['vx_value'] = {
       name          : "chapter_storytelling",
       pkgname       : "nx/tactics/books/characters",
@@ -1531,7 +1555,6 @@ export default class nx_tactics_books_characters {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_characters.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_characters.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/characters",

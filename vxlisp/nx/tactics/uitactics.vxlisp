@@ -5,22 +5,31 @@
 
 (func ui-app : ui/ui
  (let : ui/ui
-  [background : ui/ui    := (ui-app-background)
-   home       : ui/ui    := (ui-app-home)
-   nav        : ui/ui    := (ui-app-nav)
-   navbar     : ui/ui    := (ui-app-navbar)
-   parallax   : ui/ui    := (ui-app-parallax)
-   status     : ui/ui    := (ui-app-status)
-   uimap      : ui/uimap := (ui/uimap
-                             :background background
-                             :home       home
-                             :nav        nav
-                             :navbar     navbar
-                             :parallax   parallax)]
+  [background   : ui/ui    := (ui-app-background)
+   main         : ui/ui    := (ui-app-main)
+   menubar      : ui/ui    := (ui-app-menubar)
+   menudrawer   : ui/ui    := (ui-app-menudrawer)
+   msgbox       : ui/ui    := (ui-app-msgbox)
+   navbar       : ui/ui    := (ui-app-navbar)
+   navdrawer    : ui/ui    := (ui-app-navdrawer)
+   parallax     : ui/ui    := (ui-app-parallax)
+   statusbar    : ui/ui    := (ui-app-statusbar)
+   statusdrawer : ui/ui    := (ui-app-statusdrawer)
+   uimap        : ui/uimap := (ui/uimap
+                               :background   background
+                               :main         main
+                               :menubar      menubar
+                               :menudrawer   menudrawer
+                               :msgbox       msgbox
+                               :navbar       navbar
+                               :navdrawer    navdrawer
+                               :parallax     parallax
+                               :statusbar    statusbar
+                               :statusdrawer statusdrawer)]
   (ui/ui
-   :uilayout ui/uilayout-app
-   :uimap uimap
-   :uistyle (ui-app-style)))
+   :uid "app"
+   :style (ui-app-style)
+   :uimap uimap))
  :doc "Returns the template for the app ui.")
 
 (func ui-app<-tactics : ui/ui
@@ -31,20 +40,66 @@
    :data tactics))
  :doc "")
 
-(func ui-app-background : ui/ui)
+(func ui-app-background : ui/ui
+ (ui/ui
+  :uid "background"))
 
-(func ui-app-home : ui/ui)
+(func ui-app-home : ui/ui
+ (ui/ui
+  :uid "home"))
 
-(func ui-app-nav : ui/ui)
+(func ui-app-main : ui/ui
+ (ui/ui
+  :uid "main"
+  :uimap
+   (ui/uimap
+    :home
+     (ui-app-home))
+  :style (ui-app-main-style)))
 
-(func ui-app-navbar : ui/ui)
+(func ui-app-main-style : ui/style
+ (ui/style
+  :layout ui/layout-maxpanel))
 
-(func ui-app-parallax : ui/ui)
+(func ui-app-menubar : ui/ui
+ (ui/ui
+  :uid "menubar"))
 
-(func ui-app-status : ui/ui)
+(func ui-app-menudrawer : ui/ui
+ (ui/ui
+  :uid "menudrawer"))
 
-(func ui-app-style : ui/uistyle
+(func ui-app-msgbox : ui/ui
+ (ui/ui
+  :uid "msgbox"))
+
+(func ui-app-navbar : ui/ui
+ (ui/ui
+  :uid "navbar"))
+
+(func ui-app-navdrawer : ui/ui
+ (ui/ui
+  :uid "navdrawer"))
+
+(func ui-app-parallax : ui/ui
+ (ui/ui
+  :uid "parallax"))
+
+(func ui-app-statusbar : ui/ui
+ (ui/ui
+  :uid "statusbar"))
+
+(func ui-app-statusdrawer : ui/ui
+ (ui/ui
+  :uid "statusdrawer"))
+
+(func ui-app-style : ui/style
+ (ui/style
+  :layout ui/layout-app)
  :doc "Returns the style for app ui.")
+
+(func ui-app-stylesheet : ui/stylesheet
+ :doc "Returns the stylesheet for app ui.")
 
 (func ui-unit : ui
  :doc "Returns the template for a unit ui.")
@@ -59,5 +114,5 @@
 
 (func ui-unit-stat : ui/ui)
 
-(func ui-unit-style : ui/uistyle
+(func ui-unit-style : ui/style
  :doc "Returns the style for unit ui.")

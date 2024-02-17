@@ -10,8 +10,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_cold_war
    * @return {chapter}
    */
-  static t_chapter_cold_war = {}
-  static e_chapter_cold_war = {vx_type: nx_tactics_books_modern.t_chapter_cold_war}
+  static t_chapter_cold_war = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_cold_war = {
+    vx_type: nx_tactics_books_modern.t_chapter_cold_war
+  }
 
   // (func chapter_cold_war)
   static f_chapter_cold_war() {
@@ -228,8 +232,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_modern_cops_and_robbers
    * @return {chapter}
    */
-  static t_chapter_modern_cops_and_robbers = {}
-  static e_chapter_modern_cops_and_robbers = {vx_type: nx_tactics_books_modern.t_chapter_modern_cops_and_robbers}
+  static t_chapter_modern_cops_and_robbers = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_cops_and_robbers = {
+    vx_type: nx_tactics_books_modern.t_chapter_modern_cops_and_robbers
+  }
 
   // (func chapter_modern_cops_and_robbers)
   static f_chapter_modern_cops_and_robbers() {
@@ -466,8 +474,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_modern_ground_vehicles
    * @return {chapter}
    */
-  static t_chapter_modern_ground_vehicles = {}
-  static e_chapter_modern_ground_vehicles = {vx_type: nx_tactics_books_modern.t_chapter_modern_ground_vehicles}
+  static t_chapter_modern_ground_vehicles = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_ground_vehicles = {
+    vx_type: nx_tactics_books_modern.t_chapter_modern_ground_vehicles
+  }
 
   // (func chapter_modern_ground_vehicles)
   static f_chapter_modern_ground_vehicles() {
@@ -950,8 +962,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_modern_mercenaries
    * @return {chapter}
    */
-  static t_chapter_modern_mercenaries = {}
-  static e_chapter_modern_mercenaries = {vx_type: nx_tactics_books_modern.t_chapter_modern_mercenaries}
+  static t_chapter_modern_mercenaries = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_mercenaries = {
+    vx_type: nx_tactics_books_modern.t_chapter_modern_mercenaries
+  }
 
   // (func chapter_modern_mercenaries)
   static f_chapter_modern_mercenaries() {
@@ -984,8 +1000,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_modern_overview
    * @return {chapter}
    */
-  static t_chapter_modern_overview = {}
-  static e_chapter_modern_overview = {vx_type: nx_tactics_books_modern.t_chapter_modern_overview}
+  static t_chapter_modern_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_overview = {
+    vx_type: nx_tactics_books_modern.t_chapter_modern_overview
+  }
 
   // (func chapter_modern_overview)
   static f_chapter_modern_overview() {
@@ -1022,8 +1042,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_modern_space
    * @return {chapter}
    */
-  static t_chapter_modern_space = {}
-  static e_chapter_modern_space = {vx_type: nx_tactics_books_modern.t_chapter_modern_space}
+  static t_chapter_modern_space = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_space = {
+    vx_type: nx_tactics_books_modern.t_chapter_modern_space
+  }
 
   // (func chapter_modern_space)
   static f_chapter_modern_space() {
@@ -1072,8 +1096,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_modern_spies
    * @return {chapter}
    */
-  static t_chapter_modern_spies = {}
-  static e_chapter_modern_spies = {vx_type: nx_tactics_books_modern.t_chapter_modern_spies}
+  static t_chapter_modern_spies = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_spies = {
+    vx_type: nx_tactics_books_modern.t_chapter_modern_spies
+  }
 
   // (func chapter_modern_spies)
   static f_chapter_modern_spies() {
@@ -1140,8 +1168,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_modern_sports
    * @return {chapter}
    */
-  static t_chapter_modern_sports = {}
-  static e_chapter_modern_sports = {vx_type: nx_tactics_books_modern.t_chapter_modern_sports}
+  static t_chapter_modern_sports = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_sports = {
+    vx_type: nx_tactics_books_modern.t_chapter_modern_sports
+  }
 
   // (func chapter_modern_sports)
   static f_chapter_modern_sports() {
@@ -1362,8 +1394,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_modern_warfare
    * @return {chapter}
    */
-  static t_chapter_modern_warfare = {}
-  static e_chapter_modern_warfare = {vx_type: nx_tactics_books_modern.t_chapter_modern_warfare}
+  static t_chapter_modern_warfare = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_modern_warfare = {
+    vx_type: nx_tactics_books_modern.t_chapter_modern_warfare
+  }
 
   // (func chapter_modern_warfare)
   static f_chapter_modern_warfare() {
@@ -1620,8 +1656,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_special_ops
    * @return {chapter}
    */
-  static t_chapter_special_ops = {}
-  static e_chapter_special_ops = {vx_type: nx_tactics_books_modern.t_chapter_special_ops}
+  static t_chapter_special_ops = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_special_ops = {
+    vx_type: nx_tactics_books_modern.t_chapter_special_ops
+  }
 
   // (func chapter_special_ops)
   static f_chapter_special_ops() {
@@ -1640,8 +1680,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_the_abyss
    * @return {chapter}
    */
-  static t_chapter_the_abyss = {}
-  static e_chapter_the_abyss = {vx_type: nx_tactics_books_modern.t_chapter_the_abyss}
+  static t_chapter_the_abyss = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_the_abyss = {
+    vx_type: nx_tactics_books_modern.t_chapter_the_abyss
+  }
 
   // (func chapter_the_abyss)
   static f_chapter_the_abyss() {
@@ -1696,8 +1740,12 @@ export default class nx_tactics_books_modern {
    * @function chapter_the_prisoner
    * @return {chapter}
    */
-  static t_chapter_the_prisoner = {}
-  static e_chapter_the_prisoner = {vx_type: nx_tactics_books_modern.t_chapter_the_prisoner}
+  static t_chapter_the_prisoner = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_the_prisoner = {
+    vx_type: nx_tactics_books_modern.t_chapter_the_prisoner
+  }
 
   // (func chapter_the_prisoner)
   static f_chapter_the_prisoner() {
@@ -1716,8 +1764,12 @@ export default class nx_tactics_books_modern {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_modern.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_modern.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1760,7 +1812,6 @@ export default class nx_tactics_books_modern {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1810,7 +1861,6 @@ export default class nx_tactics_books_modern {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_cold_war)
-    nx_tactics_books_modern.t_chapter_cold_war['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_cold_war['vx_value'] = {
       name          : "chapter_cold_war",
       pkgname       : "nx/tactics/books/modern",
@@ -1829,7 +1879,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_modern_cops_and_robbers)
-    nx_tactics_books_modern.t_chapter_modern_cops_and_robbers['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_modern_cops_and_robbers['vx_value'] = {
       name          : "chapter_modern_cops_and_robbers",
       pkgname       : "nx/tactics/books/modern",
@@ -1848,7 +1897,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_modern_ground_vehicles)
-    nx_tactics_books_modern.t_chapter_modern_ground_vehicles['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_modern_ground_vehicles['vx_value'] = {
       name          : "chapter_modern_ground_vehicles",
       pkgname       : "nx/tactics/books/modern",
@@ -1867,7 +1915,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_modern_mercenaries)
-    nx_tactics_books_modern.t_chapter_modern_mercenaries['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_modern_mercenaries['vx_value'] = {
       name          : "chapter_modern_mercenaries",
       pkgname       : "nx/tactics/books/modern",
@@ -1886,7 +1933,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_modern_overview)
-    nx_tactics_books_modern.t_chapter_modern_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_modern_overview['vx_value'] = {
       name          : "chapter_modern_overview",
       pkgname       : "nx/tactics/books/modern",
@@ -1905,7 +1951,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_modern_space)
-    nx_tactics_books_modern.t_chapter_modern_space['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_modern_space['vx_value'] = {
       name          : "chapter_modern_space",
       pkgname       : "nx/tactics/books/modern",
@@ -1924,7 +1969,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_modern_spies)
-    nx_tactics_books_modern.t_chapter_modern_spies['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_modern_spies['vx_value'] = {
       name          : "chapter_modern_spies",
       pkgname       : "nx/tactics/books/modern",
@@ -1943,7 +1987,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_modern_sports)
-    nx_tactics_books_modern.t_chapter_modern_sports['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_modern_sports['vx_value'] = {
       name          : "chapter_modern_sports",
       pkgname       : "nx/tactics/books/modern",
@@ -1962,7 +2005,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_modern_warfare)
-    nx_tactics_books_modern.t_chapter_modern_warfare['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_modern_warfare['vx_value'] = {
       name          : "chapter_modern_warfare",
       pkgname       : "nx/tactics/books/modern",
@@ -1981,7 +2023,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_special_ops)
-    nx_tactics_books_modern.t_chapter_special_ops['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_special_ops['vx_value'] = {
       name          : "chapter_special_ops",
       pkgname       : "nx/tactics/books/modern",
@@ -2000,7 +2041,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_the_abyss)
-    nx_tactics_books_modern.t_chapter_the_abyss['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_the_abyss['vx_value'] = {
       name          : "chapter_the_abyss",
       pkgname       : "nx/tactics/books/modern",
@@ -2019,7 +2059,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func chapter_the_prisoner)
-    nx_tactics_books_modern.t_chapter_the_prisoner['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_chapter_the_prisoner['vx_value'] = {
       name          : "chapter_the_prisoner",
       pkgname       : "nx/tactics/books/modern",
@@ -2038,7 +2077,6 @@ export default class nx_tactics_books_modern {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_modern.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_modern.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/modern",

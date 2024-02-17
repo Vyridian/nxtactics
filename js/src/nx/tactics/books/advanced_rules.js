@@ -10,8 +10,12 @@ export default class nx_tactics_books_advanced_rules {
    * @function chapter_advanced_rules
    * @return {chapter}
    */
-  static t_chapter_advanced_rules = {}
-  static e_chapter_advanced_rules = {vx_type: nx_tactics_books_advanced_rules.t_chapter_advanced_rules}
+  static t_chapter_advanced_rules = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_advanced_rules = {
+    vx_type: nx_tactics_books_advanced_rules.t_chapter_advanced_rules
+  }
 
   // (func chapter_advanced_rules)
   static f_chapter_advanced_rules() {
@@ -958,8 +962,12 @@ export default class nx_tactics_books_advanced_rules {
    * @function chapter_advanced_rules_overview
    * @return {chapter}
    */
-  static t_chapter_advanced_rules_overview = {}
-  static e_chapter_advanced_rules_overview = {vx_type: nx_tactics_books_advanced_rules.t_chapter_advanced_rules_overview}
+  static t_chapter_advanced_rules_overview = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_advanced_rules_overview = {
+    vx_type: nx_tactics_books_advanced_rules.t_chapter_advanced_rules_overview
+  }
 
   // (func chapter_advanced_rules_overview)
   static f_chapter_advanced_rules_overview() {
@@ -996,8 +1004,12 @@ export default class nx_tactics_books_advanced_rules {
    * @function chapter_advanced_tokens
    * @return {chapter}
    */
-  static t_chapter_advanced_tokens = {}
-  static e_chapter_advanced_tokens = {vx_type: nx_tactics_books_advanced_rules.t_chapter_advanced_tokens}
+  static t_chapter_advanced_tokens = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_advanced_tokens = {
+    vx_type: nx_tactics_books_advanced_rules.t_chapter_advanced_tokens
+  }
 
   // (func chapter_advanced_tokens)
   static f_chapter_advanced_tokens() {
@@ -1318,8 +1330,12 @@ export default class nx_tactics_books_advanced_rules {
    * @function chapter_genres
    * @return {chapter}
    */
-  static t_chapter_genres = {}
-  static e_chapter_genres = {vx_type: nx_tactics_books_advanced_rules.t_chapter_genres}
+  static t_chapter_genres = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapter_genres = {
+    vx_type: nx_tactics_books_advanced_rules.t_chapter_genres
+  }
 
   // (func chapter_genres)
   static f_chapter_genres() {
@@ -1356,8 +1372,12 @@ export default class nx_tactics_books_advanced_rules {
    * @function tacticsbook
    * @return {book}
    */
-  static t_tacticsbook = {}
-  static e_tacticsbook = {vx_type: nx_tactics_books_advanced_rules.t_tacticsbook}
+  static t_tacticsbook = {
+    vx_type: vx_core.t_type
+  }
+  static e_tacticsbook = {
+    vx_type: nx_tactics_books_advanced_rules.t_tacticsbook
+  }
 
   // (func tacticsbook)
   static f_tacticsbook() {
@@ -1384,7 +1404,6 @@ export default class nx_tactics_books_advanced_rules {
     return output
   }
 
-  // empty types
 
 
   static {
@@ -1418,7 +1437,6 @@ export default class nx_tactics_books_advanced_rules {
     vx_core.vx_global_package_set(pkg)
 
     // (func chapter_advanced_rules)
-    nx_tactics_books_advanced_rules.t_chapter_advanced_rules['vx_type'] = vx_core.t_type
     nx_tactics_books_advanced_rules.t_chapter_advanced_rules['vx_value'] = {
       name          : "chapter_advanced_rules",
       pkgname       : "nx/tactics/books/advanced_rules",
@@ -1437,7 +1455,6 @@ export default class nx_tactics_books_advanced_rules {
     }
 
     // (func chapter_advanced_rules_overview)
-    nx_tactics_books_advanced_rules.t_chapter_advanced_rules_overview['vx_type'] = vx_core.t_type
     nx_tactics_books_advanced_rules.t_chapter_advanced_rules_overview['vx_value'] = {
       name          : "chapter_advanced_rules_overview",
       pkgname       : "nx/tactics/books/advanced_rules",
@@ -1456,7 +1473,6 @@ export default class nx_tactics_books_advanced_rules {
     }
 
     // (func chapter_advanced_tokens)
-    nx_tactics_books_advanced_rules.t_chapter_advanced_tokens['vx_type'] = vx_core.t_type
     nx_tactics_books_advanced_rules.t_chapter_advanced_tokens['vx_value'] = {
       name          : "chapter_advanced_tokens",
       pkgname       : "nx/tactics/books/advanced_rules",
@@ -1475,7 +1491,6 @@ export default class nx_tactics_books_advanced_rules {
     }
 
     // (func chapter_genres)
-    nx_tactics_books_advanced_rules.t_chapter_genres['vx_type'] = vx_core.t_type
     nx_tactics_books_advanced_rules.t_chapter_genres['vx_value'] = {
       name          : "chapter_genres",
       pkgname       : "nx/tactics/books/advanced_rules",
@@ -1494,7 +1509,6 @@ export default class nx_tactics_books_advanced_rules {
     }
 
     // (func tacticsbook)
-    nx_tactics_books_advanced_rules.t_tacticsbook['vx_type'] = vx_core.t_type
     nx_tactics_books_advanced_rules.t_tacticsbook['vx_value'] = {
       name          : "tacticsbook",
       pkgname       : "nx/tactics/books/advanced_rules",
