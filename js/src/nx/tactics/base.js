@@ -3345,10 +3345,20 @@ export default class nx_tactics_base {
           "name" : "image",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "image",
+        "name" : "reference",
         "type" : vx_core.t_string,
         "multi": false
       }
@@ -3736,10 +3746,20 @@ export default class nx_tactics_base {
           "name" : "image",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "image",
+        "name" : "reference",
         "type" : vx_core.t_string,
         "multi": false
       }

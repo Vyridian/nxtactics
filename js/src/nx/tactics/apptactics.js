@@ -47,7 +47,8 @@ export default class nx_tactics_apptactics {
   }
 
   /**
-   * @function main_nx
+   * 
+   * @async @function main_nx
    * The default function for app main execution. Arguments come from the command line.
    * @param  {anylist} ... args
    * @return {string}
@@ -60,10 +61,10 @@ export default class nx_tactics_apptactics {
   }
 
   // (func main-nx)
-  static f_main_nx(context, ...args) {
-    let output = vx_core.e_string
+  static async f_main_nx(context, ...args) {
+    let output = Promise.resolve(vx_core.e_string)
     args = vx_core.f_new(vx_core.t_anylist, ...args)
-    output = nx_tactics_apptactics.f_string_render_html()
+    output = await nx_tactics_apptactics.f_string_render_html()
     return output
   }
 
@@ -97,7 +98,8 @@ export default class nx_tactics_apptactics {
   }
 
   /**
-   * @function string_render_html
+   * 
+   * @async @function string_render_html
    * @return {string}
    */
   static t_string_render_html = {
@@ -108,15 +110,22 @@ export default class nx_tactics_apptactics {
   }
 
   // (func string-render-html)
-  static f_string_render_html() {
-    let output = vx_core.e_string
+  static async f_string_render_html() {
+    let output = Promise.resolve(vx_core.e_string)
     output = vx_core.f_let(
       {"any-1": vx_core.t_string},
       [],
-      vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uiapp = nx_tactics_uitactics.f_ui_app()
-        const uihtml = vx_ui_html_uihtml.f_ui_renderer_from_ui(uiapp)
-        const uirend = vx_ui_ui.f_ui_render_from_ui(uihtml)
+      vx_core.f_new(vx_core.t_any_from_func, async () => {
+        const uiengine = vx_core.f_new(
+          vx_ui_ui.t_uiengine,
+          ":layoutengine",
+          vx_ui_html_uihtml.c_layoutenginehtml,
+          ":stylesheet",
+          nx_tactics_uitactics.c_stylesheet_app,
+          ":ui",
+          nx_tactics_uitactics.f_ui_app()
+        )
+        const uienginerender = vx_ui_ui.f_uiengine_render(uiengine)
         return ""
       })
     )

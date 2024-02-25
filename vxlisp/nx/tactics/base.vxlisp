@@ -262,8 +262,10 @@
               unitweaknessmap : unitweaknessmap])
 
 (type unitability : struct
- :properties [name  : string
-              image : string])
+ :properties [name      : string
+              image     : string
+              titles    : string
+              reference : string])
 
 (type unitabilitymap : map
  :allowtypes [unitability])
@@ -310,8 +312,10 @@
  :allowtypes [unitskill])
 
 (type unitspecialty : struct
- :properties [name  : string
-              image : string])
+ :properties [name      : string
+              image     : string
+              titles    : string
+              reference : string])
 
 (type unitspecialtymap : map
  :allowtypes [unitspecialty])

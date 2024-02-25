@@ -11,17 +11,20 @@
 
 (func string-render-html : string
  (let
-  [uiapp  : ui/ui := (ui-app)
-   uihtml : ui/ui := (uihtml/ui-renderer<-ui
-                      uiapp)
-   uirend : ui/ui := (ui/ui-render<-ui
-                      uihtml)]
+  [uiengine       : ui/uiengine   := (ui/uiengine
+                                      :layoutengine uihtml/layoutenginehtml
+                                      :stylesheet   uitx/stylesheet-app
+                                      :ui           (uitx/ui-app))
+   uienginerender : ui/uiengine   := (ui/uiengine-render
+                                      uiengine)]
   "")
+ :async
  :doc "")
 
 (func main-nx : string
  [args : anylist :...]
  (string-render-html)
+ :async
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
 
