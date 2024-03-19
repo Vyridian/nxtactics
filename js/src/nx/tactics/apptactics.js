@@ -5,10 +5,10 @@ import nx_tactics_base from "../../nx/tactics/base.js"
 import nx_tactics_books_bookloader from "../../nx/tactics/books/bookloader.js"
 import vx_data_file from "../../vx/data/file.js"
 import vx_data_xml from "../../vx/data/xml.js"
-import nx_tactics_books_advanced_rules from "../../nx/tactics/books/advanced_rules.js"
+import nx_tactics_ui_stylesheet from "../../nx/tactics/ui/stylesheet.js"
 import vx_ui_ui from "../../vx/ui/ui.js"
 import vx_ui_html_uihtml from "../../vx/ui/html/uihtml.js"
-import nx_tactics_uitactics from "../../nx/tactics/uitactics.js"
+import nx_tactics_ui_uitactics from "../../nx/tactics/ui/uitactics.js"
 
 
 export default class nx_tactics_apptactics {
@@ -41,6 +41,20 @@ export default class nx_tactics_apptactics {
           ":security",
           nx_tactics_apptactics.f_security_nx()
         )
+      ),
+      ":state",
+      vx_core.f_new(
+        vx_core.t_state,
+        ":statelistenermap",
+        vx_core.f_new(
+          vx_core.t_statelistenermap,
+          ":initialized",
+          vx_core.f_new(
+            vx_core.t_statelistener,
+            ":name",
+            "initialized"
+          )
+        )
       )
     )
     return output
@@ -64,7 +78,7 @@ export default class nx_tactics_apptactics {
   static async f_main_nx(context, ...args) {
     let output = Promise.resolve(vx_core.e_string)
     args = vx_core.f_new(vx_core.t_anylist, ...args)
-    output = await nx_tactics_apptactics.f_string_render_html()
+    output = await nx_tactics_apptactics.f_string_render_html(context)
     return output
   }
 
@@ -110,22 +124,24 @@ export default class nx_tactics_apptactics {
   }
 
   // (func string-render-html)
-  static async f_string_render_html() {
+  static async f_string_render_html(context) {
     let output = Promise.resolve(vx_core.e_string)
     output = vx_core.f_let(
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new(vx_core.t_any_from_func, async () => {
+        const ctx = vx_ui_html_uihtml.f_context_write(context)
         const uiengine = vx_core.f_new(
           vx_ui_ui.t_uiengine,
           ":layoutengine",
           vx_ui_html_uihtml.c_layoutenginehtml,
           ":stylesheet",
-          nx_tactics_uitactics.c_stylesheet_app,
+          nx_tactics_ui_stylesheet.c_stylesheet_app,
           ":ui",
-          nx_tactics_uitactics.f_ui_app()
+          nx_tactics_ui_uitactics.f_ui_app()
         )
-        const uienginerender = vx_ui_ui.f_uiengine_render(uiengine)
+        const issetstate = vx_ui_ui.f_boolean_writestate_from_uiengine(context, uiengine)
+        const uienginerender = vx_ui_ui.f_uiengine_render(context, uiengine)
         return ""
       })
     )

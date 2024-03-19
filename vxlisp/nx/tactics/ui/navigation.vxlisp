@@ -1,0 +1,94 @@
+(package nx/tactics/ui/navigation
+ :libs (lib base   :path nx/tactics/base)
+       (lib styles :path nx/tactics/ui/stylesheet)
+       (lib ui     :path vx/ui/ui)
+ :doc "Tactics UI")
+
+(func boolean-navigate-back : boolean
+ (let : boolean
+  [navbar : ui/ui := (nav/ui-navbar)
+   main   : ui/ui := (nav/ui-main)
+   posselected : int :=
+    (nav/int-selected<-main
+     main)
+   poschg : int :=
+    (if : int :debug
+     (> posselected 1)
+     (-1 posselected))
+   navbarchg : ui/ui :=
+    (nav/ui-writeselected<-navbar-pos
+     navbar poschg)
+   mainchg : ui/ui :=
+    (nav/ui-writeselected<-main-pos
+     main poschg)]
+  (if : boolean
+   (> poschg 0)
+   true))
+ :context
+ :sideeffects "Alters uinavbar and uimain"
+ :doc "Navigate to the previous ui")
+
+(func ui-main : ui/ui
+ (ui/ui-readstate<-uid
+  "main")
+ :context
+ :doc "Returns the application main panel")
+
+(func ui-navbar : ui/ui
+ (ui/ui-readstate<-uid
+  "navbar")
+ :context
+ :doc "Returns the application navbar")
+
+(func ui-navbutton : ui/ui
+ (ui/ui
+  :uid "navbar-"
+  :parent "navbar"
+  :stylelist
+   (ui/stylelist
+    style-app-navbar-button
+    style-clickable)))
+
+(func ui-navbutton<-ui-parent-selected : ui/ui
+ [ui       : ui/ui
+  parent   : string
+  selected : boolean]
+ (let : ui/ui
+  [name : string  := (:name ui)
+   uid  : string  := (string parent "-" name)
+   navbutton : ui := (ui-navbutton)]
+  (copy navbutton
+   :uid    uid
+   :name   name
+   :parent parent
+   :selected selected
+   :stylelist
+    (ui/stylelist
+     style-app-navbar-button
+     style-clickable)))
+ :doc "Returns a navbar-button")
+
+(func int-selected<-main : int
+ [main : ui/ui]
+ (ui/int-selected<-ui main)
+ :doc "Returns the index of the currently selected main")
+
+(func ui-writeselected<-main-pos : ui/ui
+ [main : ui/ui
+  pos  : int]
+ (if : ui/ui
+  (then
+   (< pos 1)
+   main))
+ :context
+ :doc "")
+
+(func ui-writeselected<-navbar-pos : ui/ui
+ [navbar : ui/ui
+  pos    : int]
+ (if : ui/ui
+  (then
+   (< pos 1)
+   navbar))
+ :context
+ :doc "")

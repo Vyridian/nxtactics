@@ -1,4 +1,5 @@
 (package nx/tactics/base
+ :libs (lib coll :path vx/collection)
  :doc "Tactics Base Types")
 
 (type ability : struct
@@ -19,11 +20,14 @@
 
 (type card : struct
  :properties [name        : string
+              icon        : string
               image       : string
               reference   : string
               summary     : string
               titles      : string
-              orientation : string])
+              orientation : string
+              rank        : rank
+              suit        : suit])
 
 (type cardlist : list
  :allowtypes [card])
@@ -37,6 +41,9 @@
 
 (type chapterlist : list
  :allowtypes [chapter])
+
+(type chapterlistlist : list
+ :allowtypes [chapterlist])
 
 (type chaptermap : map
  :allowtypes [chapter])
@@ -57,6 +64,9 @@
 (type deckmap : map
  :traits     [card]
  :allowtypes [deck])
+
+(type fate : struct
+ :traits [card])
 
 (type goal : struct
  :properties [description : string
@@ -134,7 +144,7 @@
  :traits     [card]
  :properties [level : int :doc "Values: 2->10"
               part  : int :doc "Values: 0->9"
-              scale : int :doc "Values: -x->x"]
+              size  : int :doc "Values: -x->x"]
  :doc "Rating are displayed as level.part:scale.")
 
 (type role : struct)
@@ -173,6 +183,12 @@
               unitmap     : unitmap
               weaknessmap : weaknessmap])
 
+(type sectionlist : list
+ :allowtypes [section])
+
+(type sectionlistlist : list
+ :allowtypes [sectionlist])
+
 (type sectionmap : map
  :allowtypes [section])
 
@@ -182,8 +198,14 @@
               abilitymap   : abilitymap
               specialtymap : specialtymap])
 
+(type skilllist : list
+ :allowtypes [skill])
+
 (type skillmap : map
  :allowtypes [skill])
+
+(type skilllistlist : list
+ :allowtypes [skilllist])
 
 (type specialty : struct
  :traits     [card])
@@ -202,13 +224,17 @@
  :allowtypes [suit])
 
 (type tactics : struct
- :properties [bookmap : bookmap
-              abilitymap : abilitymap
-              cardmap    : cardmap
-              itemmap    : itemmap
-              powermap   : powermap
-              skillmap   : skillmap
-              unitmap    : unitmap])
+ :properties [bookmap     : bookmap
+              abilitymap  : abilitymap
+              cardmap     : cardmap
+              itemmap     : itemmap
+              locationmap : locationmap
+              powermap    : powermap
+              skillmap    : skillmap
+              unitmap     : unitmap])
+
+(type tarot : struct
+ :traits [card])
 
 (type team : struct
  :properties [completevictory : string
@@ -332,33 +358,75 @@
 (type weaknessmap : map
  :allowtypes [weakness])
 
-(const rank-ace : rank)
+(const rank-ace : rank
+ (rank
+  :name "Ace"
+  :titles "A"))
 
-(const rank-king : rank)
+(const rank-king : rank
+ (rank
+  :name "King"
+  :titles "K"))
 
-(const rank-queen : rank)
+(const rank-queen : rank
+ (rank
+  :name "Queen"
+  :titles "Q"))
 
-(const rank-jack : rank)
+(const rank-jack : rank
+ (rank
+  :name "Jack"
+  :titles "J"))
 
-(const rank-10 : rank)
+(const rank-ten : rank
+ (rank
+  :name "Ten"
+  :titles "10"))
 
-(const rank-9 : rank)
+(const rank-nine : rank
+ (rank
+  :name "Nine"
+  :titles "9"))
 
-(const rank-8 : rank)
+(const rank-eight : rank
+ (rank
+  :name "Eight"
+  :titles "8"))
 
-(const rank-7 : rank)
+(const rank-seven : rank
+ (rank
+  :name "Seven"
+  :titles "7"))
 
-(const rank-6 : rank)
+(const rank-six : rank
+ (rank
+  :name "Six"
+  :titles "6"))
 
-(const rank-5 : rank)
+(const rank-five : rank
+ (rank
+  :name "Five"
+  :titles "5"))
 
-(const rank-4 : rank)
+(const rank-four : rank
+ (rank
+  :name "Four"
+  :titles "4"))
 
-(const rank-3 : rank)
+(const rank-three : rank
+ (rank
+  :name "Three"
+  :titles "3"))
 
-(const rank-2 : rank)
+(const rank-two : rank
+ (rank
+  :name "Two"
+  :titles "2"))
 
-(const rank-joker : rank)
+(const rank-joker : rank
+ (rank
+  :name "Wild"
+  :titles "W"))
 
 (const role-aoe : role)
 
@@ -402,6 +470,10 @@
 
 (const suit-spade : suit)
 
+(const suit-black : suit)
+
+(const suit-red : suit)
+
 (func bookmap<-booklist : bookmap
  [booklist : booklist]
  (map<-list : bookmap
@@ -411,19 +483,340 @@
    (:name book)))
  :doc "Returns a bookmap of all books.")
 
+(func cardmap<-bookmap : cardmap
+ [bookmap : bookmap]
+ (map<-map : cardmap
+  bookmap
+  (fn : card
+   [key   : string
+    value : book]
+   (any<-any : card
+    value)))
+ :doc "Returns a cardmap from a given bookmap")
+
+(func cardmap<-cardlist : cardmap
+ [cardlist : cardlist]
+ (map<-list : cardmap
+  cardlist
+  (fn : string
+   [card : card]
+   (:name card))))
+
+(func chapterlist<-book : chapterlist
+ [book : book]
+ (let : chapterlist
+  [chaptermap : chaptermap := (:chaptermap book)]
+  (list<-map : chapterlist
+   chaptermap
+   (fn : chapter
+    [key   : string
+     value : chapter]
+    value)))
+ :doc "Returns a chapterlist from a given book")
+
+(func chapterlist<-booklist : chapterlist
+ [booklist : booklist]
+ (let : chapterlist
+  [chapterlistlist : chapterlistlist := (chapterlistlist<-booklist
+                                         booklist)]
+ (chapterlist<-chapterlistlist
+  chapterlistlist))
+ :doc "Returns a chapterlist from a given bookmap")
+
+(func chapterlist<-chapterlistlist : chapterlistlist
+ [chapterlistlist : chapterlistlist]
+ (list-join<-list : chapterlist
+  chapterlistlist)
+ :doc "Returns a chapterlist from a given chapterlistlist")
+
+(func chapterlistlist<-booklist : chapterlistlist
+ [booklist : booklist]
+ (list<-list : chapterlistlist
+  booklist
+  (fn : chapterlist
+   [book : book]
+   (chapterlist<-book : chapterlist
+    book)))
+ :doc "Returns a chapterlistlist from a given booklist")
+
+(func chaptermap<-chapterlist : chaptermap
+ [chapterlist : chapterlist]
+ (map<-list : chaptermap
+  chapterlist
+  (fn : chapter
+   [chapter : chapter]
+   (:name chapter)))
+ :doc "Returns a chaptermap from a given chapterlist")
+
 (func name<-chapter : string
  [chapter : chapter]
  (:name chapter))
 
-(func tactics<-booklist : tactics
- [booklist : booklist]
- (let : tactics
-  [bookmap : bookmap := (bookmap<-booklist
-                         booklist)]
-  (tactics
-   :bookmap bookmap))
- :doc "Return a ready tactics from a bookmap.")
-
 (func rating<-mass : rating
  [mass : string]
  :doc "Return a rating from a mass.")
+
+(func sectionlist<-chapter : sectionlist
+ [chapter : chapter]
+ (let : sectionlist
+  [sectionmap : sectionmap := (:sectionmap chapter)]
+  (sectionlist<-sectionmap
+   sectionmap))
+ :doc "Returns a list of all sections directly under the given chapter")
+
+(func sectionlist<-chapterlist : sectionlist
+ [chapterlist : chapterlist]
+ (let : sectionlist
+  [sectionlistlist : sectionlistlist := (sectionlistlist<-chapterlist
+                                         chapterlist)]
+  (sectionlist<-sectionlistlist
+   sectionlistlist))
+ :doc "Returns a list of all sections directly under the given chapterlist")
+
+(func sectionlist<-section : sectionlist
+ [section : section]
+ (let : sectionlist
+  [sectionmap : sectionmap := (:sectionmap section)]
+  (sectionlist<-sectionmap
+   sectionmap))
+ :doc "Returns a list of all sections including subsections")
+
+(func sectionlist<-sectionlistlist : sectionlist
+ [sectionlistlist : sectionlistlist]
+ (list-join<-list : sectionlist
+  sectionlistlist)
+ :doc "Returns a sectionlist from a given sectionlistlist")
+
+(func sectionlist<-sectionmap : sectionlist
+ [sectionmap : sectionmap]
+ (list<-map : sectionlist
+  sectionmap)
+ :doc "Returns a list of all sections including subsections")
+
+(func sectionlist-all<-chapterlist : sectionlist
+ [chapterlist : chapterlist]
+ (let : sectionlist
+  [sections : sectionlist := (sectionlist<-chapterlist
+                              chapterlist)]
+  (sectionlist-all<-sectionlist
+   sections))
+ :doc "Returns a list of all sections including subsections")
+
+(func sectionlist-all<-section : sectionlist
+ [section : section]
+ (let : sectionlist
+  [subsections : sectionlist := (sectionlist<-section section)]
+  (any<-list-start-reduce : sectionlist
+   subsections
+   (sectionlist section)
+   (fn : sectionlist
+    [total      : sectionlist
+     subsection : section]
+    (let : sectionlist
+     [subsubsections : sectionlist := (sectionlist-all<-section
+                                       subsection)]
+     (copy total
+      subsubsections)))))
+ :doc "Returns a list of all sections including subsections")
+
+(func sectionlist-all<-sectionlist : sectionlist
+ [sectionlist : sectionlist]
+ (let : sectionlist
+  [sectionlistlist : sectionlistlist := (sectionlistlist<-sectionlist
+                                         sectionlist)]
+  (list-join<-list : sectionlist
+   sectionlistlist))
+ :test (test
+        (sectionlist
+         (section
+          :name "a"
+          :sectionmap
+           (sectionmap
+            "a1"
+            (section
+             :name "a1")))
+         (section
+          :name "a1")
+         (section
+          :name "b"
+          :sectionmap
+           (sectionmap
+            "b1"
+            (section
+             :name "b1")))
+         (section
+          :name "b1"))
+        (sectionlist-all<-sectionlist
+         (sectionlist
+          (section
+           :name "a"
+           :sectionmap
+            (sectionmap
+             "a1"
+             (section
+              :name "a1")))
+          (section
+           :name "b"
+           :sectionmap
+            (sectionmap
+             "b1"
+             (section
+              :name "b1"))))))
+ :doc "Returns a list of all sections including subsections")
+
+(func sectionlistlist<-chapterlist : sectionlistlist
+ [chapterlist : chapterlist]
+ (list<-list : sectionlistlist
+  chapterlist
+  (fn : sectionlist
+   [chapter : chapter]
+   (sectionlist<-chapter
+    chapter)))
+ :doc "Returns a shallow sectionlistlist from a given chapterlist")
+
+(func sectionlistlist<-sectionlist : sectionlistlist
+ [sectionlist : sectionlist]
+ (list<-list : sectionlistlist
+  sectionlist
+  (fn : sectionlist
+   [section : section]
+   (let : sectionlist
+    [sublist : sectionlist := (sectionlist<-section
+                               section)]
+    (sectionlist
+     section
+     sublist))))
+ :test (test
+        (sectionlistlist
+         (sectionlist
+          (section
+           :name "a"
+           :sectionmap
+            (sectionmap
+             "a1"
+             (section
+              :name "a1")))
+          (section
+           :name "a1"))
+         (sectionlist
+          (section
+           :name "b"
+           :sectionmap
+            (sectionmap
+             "b1"
+             (section
+              :name "b1")))
+          (section
+           :name "b1")))
+        (sectionlistlist<-sectionlist
+         (sectionlist
+          (section
+           :name "a"
+           :sectionmap
+            (sectionmap
+             "a1"
+             (section
+              :name "a1")))
+          (section
+           :name "b"
+           :sectionmap
+            (sectionmap
+             "b1"
+             (section
+              :name "b1"))))))
+ :doc "Returns a shallow sectionlistlist from a given sectionlist")
+
+(func sectionmap<-sectionlist : sectionmap
+ [sectionlist : sectionlist]
+ (map<-list : sectionmap
+  sectionlist
+  (fn : section
+   [section : section]
+   (:name section)))
+ :doc "Returns a sectionmap from a given sectionlist")
+
+(func skilllist<-section : skilllist
+ [section : section]
+ (let : skilllist
+  [secname : string := (:name section)
+   sec     : section := (copy section
+                         :name secname)
+   skillmap : skillmap := (:skillmap section)]
+  (skilllist<-skillmap
+   skillmap))
+ :doc "Returns a skilllist from a given skilllistlist")
+
+(func skilllist<-sectionlist : skilllist
+ [sectionlist : sectionlist]
+ (let : skilllist
+  [skilllistlist : skilllistlist := (skilllistlist<-sectionlist
+                                     sectionlist)]
+  (skilllist<-skilllistlist
+   skilllistlist))
+ :doc "Returns a skilllist from a given skilllistlist")
+
+(func skilllist<-skilllistlist : skilllist
+ [skilllistlist : skilllistlist]
+ (list-join<-list : skilllist
+  skilllistlist)
+ :doc "Returns a skillmap from a given skilllist")
+
+(func skilllist<-skillmap : skilllist
+ [skillmap : skillmap]
+ (list<-map : skilllist
+  skillmap)
+ :doc "Returns a skillmap from a given skilllist")
+
+(func skilllistlist<-sectionlist : skilllistlist
+ [sections : sectionlist]
+ (list<-list : skilllistlist
+  sections
+  (fn : skilllist
+   [section : section]
+   (skilllist<-section
+    section)))
+ :doc "Returns a skilllistlist from a given sectionlist")
+
+(func skillmap<-skilllist : skillmap
+ [skilllist : skilllist]
+ (map<-list : skillmap
+  skilllist
+  (fn : skill
+   [skill : skill]
+   (:name skill)))
+ :doc "Returns a skillmap from a given skilllist")
+
+(func tactics<-booklist : tactics
+ [booklist : booklist]
+ (let : tactics
+  [bookmap     : bookmap     := (bookmap<-booklist
+                                 booklist)
+   chapterlist : chapterlist := (chapterlist<-booklist
+                                 booklist)
+   chaptermap  : chaptermap  := (chaptermap<-chapterlist
+                                 chapterlist)
+   sectionlist : sectionlist := (sectionlist-all<-chapterlist
+                                 chapterlist)
+   sectionmap  : sectionmap  := (sectionmap<-sectionlist
+                                 sectionlist)
+//   powerlist   : powerlist   := (powerlist<-sectionlist
+//                                 sectionlist)
+//   powermap    : powermap    := (powermap<-powerlist
+//                                 powerlist)
+   skilllist   : skilllist   := (skilllist<-sectionlist
+                                 sectionlist)
+   skillmap    : skillmap    := (skillmap<-skilllist
+                                 skilllist)
+//   unitlist    : unitlist    := (unitlist<-sectionlist
+//                                 sectionlist)
+//   unitmap     : unitmap     := (unitmap<-unitlist
+//                                 unitlist)
+]
+  (tactics
+   :bookmap    bookmap
+   :chaptermap chaptermap
+   :powermap   powermap
+   :sectionmap sectionmap
+   :skillmap   skillmap
+   :unitmap    unitmap))
+ :doc "Return a ready tactics from a bookmap.")

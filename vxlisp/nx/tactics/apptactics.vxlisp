@@ -3,23 +3,28 @@
        (lib bl     :path nx/tactics/books/bookloader)
        (lib fil    :path vx/data/file)
        (lib xml    :path vx/data/xml)
-       (lib adv    :path nx/tactics/books/advanced_rules)
+       (lib styles :path nx/tactics/ui/stylesheet)
        (lib ui     :path vx/ui/ui)
        (lib uihtml :path vx/ui/html/uihtml)
-       (lib uitx   :path nx/tactics/uitactics)
+       (lib uitx   :path nx/tactics/ui/uitactics)
  :doc "Main App for NxTactics")
 
-(func string-render-html : string
- (let
-  [uiengine       : ui/uiengine   := (ui/uiengine
-                                      :layoutengine uihtml/layoutenginehtml
-                                      :stylesheet   uitx/stylesheet-app
-                                      :ui           (uitx/ui-app))
-   uienginerender : ui/uiengine   := (ui/uiengine-render
-                                      uiengine)]
-  "")
- :async
- :doc "")
+(func context-nx : context
+ [args : anylist :...]
+ (context
+  :session
+   (session
+    :user
+     (user
+      :security (security-nx)))
+  :state
+   (state
+    :statelistenermap
+     (statelistenermap
+      :initialized
+       (statelistener
+        :name "initialized"))))
+ :doc "Returns the context for execution. Arguments come from the command line.")
 
 (func main-nx : string
  [args : anylist :...]
@@ -28,57 +33,73 @@
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
 
+(func security-nx : security
+ (security
+  :allowfuncs
+   (funclist
+    fil/boolean-write<-file-any
+    fil/boolean-write<-file-string
+    fil/file-read<-file
+    fil/string-read<-file))
+ :doc "Returns the security for execution.")
+
+(func string-render-html : string
+ (let
+  [ctx : context :=
+    (uihtml/context-write)
+   uiengine : ui/uiengine :=
+    (ui/uiengine
+     :layoutengine uihtml/layoutenginehtml
+     :stylesheet   styles/stylesheet-app
+     :ui           (uitx/ui-app))
+   issetstate : ui/uiengine :=
+    (ui/boolean-writestate<-uiengine
+     uiengine)
+   uienginerender : ui/uiengine :=
+    (ui/uiengine-render
+     uiengine)]
+  "")
+ :async
+ :context
+ :doc "")
 
 /*
 
 (func main-nx : string
  [args : anylist :...]
  (let
-  [booklist : base/booklist := (base/booklist
-                                (adv/tacticsbook))
-   tactics  : base/tactics  := (base/tactics<-booklist
-                                booklist)
-   ui       : ui/ui         := (uitx/ui-app<-tactics
-                                tactics)
-   render   : ui/render     := (ui/render<-ui
-                                ui)]
-  "")
- :context
- :doc "The default function for app main execution. Arguments come from the command line.")
-
-(func main-nx : string
- [args : anylist :...]
- (let
-  [booknames : stringlist := (stringlist
-                              "TACTICSBOOK_CORE"
-                              "TACTICSBOOK_ADVANCED"
-                              "TACTICSBOOK_ANCIENT"
-                              "TACTICSBOOK_AOSAIL"
-                              "TACTICSBOOK_AOSTEAM"
-                              "TACTICSBOOK_BESTIARY"
-                              "TACTICSBOOK_CHARS"
-                              "TACTICSBOOK_COMBAT"
-                              "TACTICSBOOK_FANTASY"
-                              "TACTICSBOOK_GEAR"
-                              "TACTICSBOOK_GIANT"
-                              "TACTICSBOOK_HIGHTECH"
-                              "TACTICSBOOK_HORROR"
-                              "TACTICSBOOK_LANDSEA"
-                              "TACTICSBOOK_MAGIC"
-                              "TACTICSBOOK_MEDIEVAL"
-                              "TACTICSBOOK_MFANTASY"
-                              "TACTICSBOOK_MODERN"
-                              "TACTICSBOOK_POWERS"
-                              "TACTICSBOOK_PREHISTORY"
-                              "TACTICSBOOK_PULP"
-                              "TACTICSBOOK_SCIFI"
-                              "TACTICSBOOK_SKILLS"
-                              "TACTICSBOOK_SPACE"
-                              "TACTICSBOOK_SUPER"
-                              "TACTICSBOOK_WORLDWARS"
-                             )
-   done     : boolean    := (bl/boolean-write<-booknames
-                             booknames)]
+  [booknames : stringlist :=
+    (stringlist
+     "TACTICSBOOK_CORE"
+     "TACTICSBOOK_ADVANCED"
+     "TACTICSBOOK_ANCIENT"
+     "TACTICSBOOK_AOSAIL"
+     "TACTICSBOOK_AOSTEAM"
+     "TACTICSBOOK_BESTIARY"
+     "TACTICSBOOK_CHARS"
+     "TACTICSBOOK_COMBAT"
+     "TACTICSBOOK_FANTASY"
+     "TACTICSBOOK_GEAR"
+     "TACTICSBOOK_GIANT"
+     "TACTICSBOOK_HIGHTECH"
+     "TACTICSBOOK_HORROR"
+     "TACTICSBOOK_LANDSEA"
+     "TACTICSBOOK_MAGIC"
+     "TACTICSBOOK_MEDIEVAL"
+     "TACTICSBOOK_MFANTASY"
+     "TACTICSBOOK_MODERN"
+     "TACTICSBOOK_POWERS"
+     "TACTICSBOOK_PREHISTORY"
+     "TACTICSBOOK_PULP"
+     "TACTICSBOOK_SCIFI"
+     "TACTICSBOOK_SKILLS"
+     "TACTICSBOOK_SPACE"
+     "TACTICSBOOK_SUPER"
+     "TACTICSBOOK_WORLDWARS"
+    )
+   done : boolean :=
+    (bl/boolean-write<-booknames
+     booknames)]
   (string<-any done))
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
@@ -86,10 +107,12 @@
 (func main-nx : string
  [args : anylist :...]
  (let
-  [book : base/book := (bl/book-read<-bookname
-                        "TACTICSBOOK_WORLDWARS")
-   done : boolean   := (bl/boolean-write<-book
-                        book)]
+  [book : base/book :=
+    (bl/book-read<-bookname
+     "TACTICSBOOK_WORLDWARS")
+   done : boolean :=
+    (bl/boolean-write<-book
+     book)]
   (string<-any done))
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
@@ -97,8 +120,9 @@
 (func main-nx : string
  [args : anylist :...]
  (let
-  [book : base/book := (bl/book-read<-bookname
-                        "TACTICSBOOK_CORE")]
+  [book : base/book :=
+   (bl/book-read<-bookname
+    "TACTICSBOOK_CORE")]
   (string<-any book))
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
@@ -106,8 +130,9 @@
 (func main-nx : string
  [args : anylist :...]
  (let
-  [xml : xml/xml := (bl/xml-read<-bookname
-                     "TACTICSBOOK_WORLDWARS")]
+  [xml : xml/xml :=
+   (bl/xml-read<-bookname
+    "TACTICSBOOK_WORLDWARS")]
  (string<-any xml))
  :context
  :doc "The default function for app main execution. Arguments come from the command line.")
@@ -120,23 +145,3 @@
  :doc "The default function for app main execution. Arguments come from the command line.")
 
 */
-
-(func context-nx : context
- [args : anylist :...]
- (context
-  :session
-   (session
-    :user
-     (user
-      :security (security-nx))))
- :doc "Returns the context for execution. Arguments come from the command line.")
-
-(func security-nx : security
- (security
-  :allowfuncs
-   (funclist
-    fil/boolean-write<-file-any
-    fil/boolean-write<-file-string
-    fil/file-read<-file
-    fil/string-read<-file))
- :doc "Returns the security for execution.")

@@ -1,0 +1,742 @@
+(package nx/tactics/ui/uitactics
+ :libs (lib base   :path nx/tactics/base)
+       (lib deck   :path nx/tactics/deck)
+       (lib event  :path vx/event)
+       (lib nav    :path nx/tactics/ui/navigation)
+       (lib styles :path nx/tactics/ui/stylesheet)
+       (lib type   :path vx/type)
+       (lib ui     :path vx/ui/ui)
+ :doc "Tactics UI")
+
+(const event-navbutton-back-click : event/event
+ (copy event/event-click
+  :event<-event event-navbutton-click<-event))
+
+(const event-navigate-card-click : event/event
+ (copy event/event-click
+  :event<-event event-navigate-card-click<-event))
+
+(func event-navbutton-click<-event : event/event
+ [event : event/event]
+ (let : event/event
+  [ischanged : boolean := (nav/boolean-navigate-back)]
+  event)
+ :context
+ :doc "Event handler for card clicks")
+
+(func event-navigate-card-click<-event : event/event
+ [event : event/event]
+ (let : event/event
+  [parent : string := "nav"
+   uifrom : ui/ui :=
+    (ui/ui-from<-event
+     event)
+   data : any := (:data uifrom)
+   uinav : ui/ui :=
+    (ui<-any-parent
+     data parent)
+   uichg : ui/ui :=
+    (ui-navigate<-ui
+     uinav)]
+  event)
+ :context
+ :doc "Event handler for card clicks")
+
+(const event-printbutton-click : event/event
+ (copy event/event-click
+  :event<-event event-printbutton-click<-event))
+
+(func event-printbutton-click<-event : event/event
+ [event : event/event]
+ (let : event/event
+  [uimain : ui/ui :=
+    (ui/ui-readstate<-uid
+     "main")
+   isprint : boolean :=
+    (ui/boolean-print
+     uimain)]
+  event)
+ :context
+ :doc "Event handler for card clicks")
+
+(const eventmap-app-home-card : event/eventmap
+ (event/eventmap<-eventlist
+  (event/eventlist
+   event-navigate-card-click))
+ :doc "Eventmap for app-home-card")
+
+(const eventmap-navbutton-back : event/eventmap
+ (event/eventmap<-eventlist
+  (event/eventlist
+   event-navbutton-back-click))
+ :doc "Eventmap for navbutton-back")
+
+(func string-display<-any : string
+ [value : any]
+ (let : string
+  [datatype : any :=
+    (type<-any value)
+   display : string :=
+    (if : string
+     (then
+      (== datatype base/book)
+      (string-display<-book
+       (any<-any : base/book
+        value)))
+     (then
+      (== datatype base/deck)
+      (string-display<-deck
+       (any<-any : base/deck
+        value)))
+     (then
+      (== datatype base/skill)
+       (string-display<-skill
+        (any<-any : base/skill
+         value))))]
+  display)
+ :doc "Returns display text from any")
+
+(func string-display<-book : string
+ [book : base/book]
+ (let : string
+  [chaptermap : base/chaptermap :=
+    (:chaptermap book)
+   names : stringlist :=
+    (list<-map : stringlist
+     chaptermap
+     (fn : string
+      [key   : string
+       value : base/chapter]
+      (:name value)))
+   display : string :=
+    (string<-stringlist-join
+     names
+     ", ")]
+  display)
+ :doc "Returns display text from a book")
+
+(func string-display<-deck : string
+ [deck : base/deck]
+ (let : string
+  [cardmap : base/cardmap :=
+    (:cardmap deck)
+   names : stringlist :=
+    (list<-map : stringlist
+     cardmap
+     (fn : string
+      [key   : string
+       value : base/card]
+      (:name value)))
+   display : string :=
+    (string<-stringlist-join
+     names
+     ", ")]
+  display)
+ :doc "Returns display text from a deck")
+
+(func string-display<-skill : string
+ [skill : base/skill]
+ (let : string
+  [specialtymap : base/specialtymap := (:specialtymap skill)
+   abilitymap   : base/abilitymap   := (:abilitymap skill)
+   specialnames : stringlist :=
+    (list<-map : stringlist
+     specialtymap
+     (fn : string
+      [key   : string
+       value : base/specialty]
+      (:name value)))
+   abilitynames : stringlist :=
+    (list<-map : stringlist
+     abilitymap
+     (fn : string
+      [key   : string
+       value : base/ability]
+      (:name value)))
+   appended : stringlist :=
+    (stringlist
+     specialnames
+     abilitynames)
+   display : string :=
+    (string<-stringlist-join
+     appended
+     ", ")]
+  display)
+ :doc "Returns display text from a skill")
+
+(func ui<-any-parent : ui/ui
+ [data   : any
+  parent : string]
+ (let : ui/ui
+  [datatype : any := (type<-any data)]
+  (if : ui/ui
+   (then
+    (== datatype base/unit)
+    (ui<-unit-parent
+     (any<-any : base/unit
+      data)
+     parent))
+   (then
+    (type/is-type datatype base/fate)
+    (ui<-fate-parent
+     (any<-any : base/fate
+      data)
+     parent))
+   (then
+    (type/is-type datatype base/card)
+    (ui<-card-parent
+     (any<-any : base/card
+      data)
+     parent))))
+ :doc "Returns a ui created from any value")
+
+(func ui<-card-parent : ui/ui
+ [card   : base/card
+  parent : string]
+ (let : ui/ui
+  [name : string := (:name card)
+   uid  : string := (string parent "-" name)
+   display : string :=
+    (string-display<-any
+     card)
+   labeltitle : string :=
+    (string uid "-title")
+   labeldisplay : string :=
+    (string uid "-display")
+   events : event/eventmap :=
+    (if : event/eventmap
+     (then
+      (= display "")
+      (empty eventmap))
+     (else
+      eventmap-app-home-card))
+   styles : ui/stylelist :=
+    (if : ui/stylelist
+     (then
+      (= display "")
+      (ui/stylelist
+       styles/style-card))
+     (else
+      (ui/stylelist
+       styles/style-card
+       styles/style-clickable)))]
+  (ui/ui
+   :uid  uid
+   :name name
+   :eventmap  events
+   :stylelist styles
+   :data card
+   :uimap
+    (ui/uimap<-uilist
+     (ui/uilist
+      (ui/ui
+       :uid labeltitle
+       :style styles/style-card-title
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data name)
+      (ui/ui
+       :uid labeldisplay
+       :style styles/style-card-display
+       :stylelist
+        (ui/stylelist
+         styles/style-text-area)
+       :data display)))))
+ :doc "Returns the a card ui.")
+
+(func ui<-fate-parent : ui/ui
+ [fate   : base/fate
+  parent : string]
+ (let : ui/ui
+  [name  : string    := (:name fate)
+   rank  : base/rank := (:rank fate)
+   suit  : base/suit := (:suit fate)
+   srank : string    := (:titles rank)
+   uid   : string    := (string parent "-" name)
+   display : string := (:summary fate)
+   labeldisplay : string := (string uid "-display")
+   labelrank1   : string := (string uid "-rank1")
+   labelrank2   : string := (string uid "-rank2")
+   labelsuit1   : string := (string uid "-suit1")
+   labelsuit2   : string := (string uid "-suit2")
+   labeltitle   : string := (string uid "-title")
+   suitstyle1 : ui/style :=
+    (switch : ui/style
+     suit
+     (case base/suit-black
+      styles/style-image-jester-black1)
+     (case base/suit-red
+      styles/style-image-jester-red1)
+     (case base/suit-diamond
+      styles/style-image-coin1)
+     (case base/suit-heart
+      styles/style-image-cup1)
+     (case base/suit-spade
+      styles/style-image-sword1)
+     (case base/suit-club
+      styles/style-image-wand1))
+   suitstyle2 : ui/style :=
+    (switch : ui/style
+     suit
+     (case base/suit-black
+      styles/style-image-jester-black2)
+     (case base/suit-red
+      styles/style-image-jester-red2)
+     (case base/suit-diamond
+      styles/style-image-coin2)
+     (case base/suit-heart
+      styles/style-image-cup2)
+     (case base/suit-spade
+      styles/style-image-sword2)
+     (case base/suit-club
+      styles/style-image-wand2))
+   styles : ui/stylelist :=
+    (if : ui/stylelist
+     (then
+      (= display "")
+      (ui/stylelist
+       styles/style-card))
+     (else
+      (ui/stylelist
+       styles/style-card
+       styles/style-clickable)))]
+  (ui/ui
+   :uid  uid
+   :name name
+   :stylelist styles
+   :data card
+   :uimap
+    (ui/uimap<-uilist
+     (ui/uilist
+      (ui/ui
+       :uid labelrank1
+       :style styles/style-card-rank
+       :stylelist
+        (ui/stylelist
+         styles/style-text-rank1)
+       :data srank)
+      (ui/ui
+       :uid labelrank2
+       :style styles/style-card-rank
+       :stylelist
+        (ui/stylelist
+         styles/style-text-rank2)
+       :data srank)
+      (ui/ui
+       :uid labelsuit1
+       :style styles/style-card-suit
+       :stylelist
+        (ui/stylelist
+         suitstyle1)
+       :data srank)
+      (ui/ui
+       :uid labelsuit2
+       :style styles/style-card-suit
+       :stylelist
+        (ui/stylelist
+         suitstyle2)
+       :data srank)
+      (ui/ui
+       :uid labeltitle
+       :style styles/style-card-title
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data name)
+      (ui/ui
+       :uid labeldisplay
+       :style styles/style-card-display
+       :stylelist
+        (ui/stylelist
+         styles/style-text-area)
+       :data display)))))
+ :doc "Returns the a card ui.")
+
+(func ui<-unit-parent : ui
+ [unit   : base/unit
+  parent : string]
+ :doc "Returns the template for a unit ui.")
+
+(func ui<-unit-background : ui/ui)
+
+(func ui<-unit-header : ui/ui)
+
+(func ui<-unit-flavor : ui/ui)
+
+(func ui<-unit-skillpower : ui/ui)
+
+(func ui<-unit-stat : ui/ui)
+
+(func ui-app : ui/ui
+ (let : ui/ui
+  [background   : ui/ui := (ui-app-background)
+   main         : ui/ui := (ui-app-main)
+   menubar      : ui/ui := (ui-app-menubar)
+   menudrawer   : ui/ui := (ui-app-menudrawer)
+   msgbox       : ui/ui := (ui-app-msgbox)
+   navbar       : ui/ui := (ui-app-navbar)
+   navdrawer    : ui/ui := (ui-app-navdrawer)
+   parallax     : ui/ui := (ui-app-parallax)
+   statusbar    : ui/ui := (ui-app-statusbar)
+   statusdrawer : ui/ui := (ui-app-statusdrawer)
+   titlebar     : ui/ui := (ui-app-titlebar)
+   uimap : ui/uimap :=
+    (ui/uimap
+     :background   background
+     :main         main
+     :menubar      menubar
+     :menudrawer   menudrawer
+     :msgbox       msgbox
+     :navbar       navbar
+     :navdrawer    navdrawer
+     :parallax     parallax
+     :statusbar    statusbar
+     :statusdrawer statusdrawer
+     :titlebar     titlebar)]
+  (ui/ui
+   :uid   "app"
+   :style style-app
+   :uimap uimap))
+ :doc "Returns the template for the app ui.")
+
+(func ui-app<-tactics : ui/ui
+ [tactics : base/tactics]
+ (let : ui/ui
+  [appui : ui/ui := (ui-app)]
+  (copy appui
+   :data tactics))
+ :doc "")
+
+(func ui-app-background : ui/ui
+ (ui/ui
+  :uid "app-background"
+  :stylelist
+   (ui/stylelist
+    style-app-background)))
+
+(func ui-app-home : ui/ui
+ (ui-nav<-deck-parent
+  (deck/deck-home)
+  "main")
+ :doc "App Home Panel")
+
+(func ui-app-main : ui/ui
+ (ui/ui
+  :uid "main"
+  :stylelist
+   (ui/stylelist
+    style-app-main)
+  :uimap
+   (ui/uimap<-uilist
+    (ui/uilist
+     (ui-app-home))))
+ :doc "")
+
+(func ui-app-menubar : ui/ui
+ (ui/ui
+  :uid "menubar"
+  :stylelist
+   (ui/stylelist
+    style-app-menubar)))
+
+(func ui-app-menudrawer : ui/ui
+ (ui/ui
+  :uid "menudrawer"
+  :stylelist
+   (ui/stylelist
+    style-app-menudrawer)))
+
+(func ui-app-msgbox : ui/ui
+ (ui/ui
+  :uid "msgbox"
+  :stylelist
+   (ui/stylelist
+    style-app-msgbox)))
+
+(func ui-app-navbar : ui/ui
+ (ui/ui
+  :uid "navbar"
+  :stylelist
+   (ui/stylelist
+    style-app-navbar)
+  :uimap
+   (ui/uimap<-uilist
+    (ui/uilist
+     (ui-navbutton-back)
+     (nav/ui-navbutton<-ui-parent-selected
+      (ui/ui
+       :name "Home")
+      "navbar"
+      true))))
+ :doc "Returns a new side navigation bar")
+
+(func ui-app-navdrawer : ui/ui
+ (ui/ui
+  :uid "navdrawer"
+  :stylelist
+   (ui/stylelist
+    style-app-navdrawer)))
+
+(func ui-app-parallax : ui/ui
+ (ui/ui
+  :uid "parallax"
+  :style style-app-parallax))
+
+(func ui-app-statusbar : ui/ui
+ (ui/ui
+  :uid   "statusbar"
+  :stylelist
+   (ui/stylelist
+    style-app-statusbar)))
+
+(func ui-app-statusdrawer : ui/ui
+ (ui/ui
+  :uid "statusdrawer"
+  :stylelist
+   (ui/stylelist
+    style-app-statusdrawer)))
+
+(func ui-app-titlebar : ui/ui
+ (ui/ui
+  :uid "titlebar"
+  :stylelist
+   (ui/stylelist
+    style-app-titlebar)
+  :uimap
+   (ui/uimap<-uilist
+    (ui/uilist
+     (ui-app-titlebar-print))))
+ :doc "")
+
+(func ui-app-titlebar-print : ui/ui
+ (ui/ui
+  :uid "titlebar-print"
+  :parent "titlebar"
+  :stylelist
+   (ui/stylelist
+    style-app-titlebar-print
+    style-clickable)
+  :eventmap
+   (event/eventmap<-eventlist
+    (event/eventlist
+     event-printbutton-click))))
+
+(func ui-nav<-any-parent : ui/ui
+ [data   : any
+  parent : string]
+ (if : ui/ui
+  (then
+   (is-empty data)
+   (empty ui))
+  (else
+   (let : ui/ui
+    [datatype : any := (type<-any data)]
+    (if : ui/ui
+     (then
+      (== datatype base/deck)
+      (ui-nav<-deck-parent
+       (any<-any : base/deck
+        data)
+       parent))
+     (then
+      (== datatype base/skill)
+       (ui-nav<-skill-parent
+        (any<-any : base/skill
+         data)
+        parent))))))
+ :doc "Returns a ui created from any value")
+
+(func ui-nav<-deck-parent : ui/ui
+ [deck   : base/deck
+  parent : string]
+ (let : ui/ui
+  [name    : string       := (:name deck)
+   uid     : string       := (string parent "-" name)
+   cardmap : base/cardmap := (:cardmap deck)
+   uimap : ui/uimap :=
+    (uimap<-cardmap-parent
+     cardmap uid)]
+  (ui/ui
+   :uid    uid
+   :parent parent
+   :stylelist
+    (ui/stylelist
+     style-deck)
+   :data  deck
+   :uimap uimap))
+ :doc "Returns the a deck ui.")
+
+(func ui-nav<-skill-parent : ui/ui
+ [skill  : base/skill
+  parent : string]
+ (let : ui/ui
+  [name  : string :=
+    (:name skill)
+   uid : string :=
+    (string parent "-" name)
+   specialtymap : base/specialtymap :=
+    (:specialtymap skill)
+   abilitymap : base/abilitymap :=
+    (:abilitymap skill)
+   cardmap1 : base/cardmap :=
+    (map<-map : base/cardmap specialtymap)
+   cardmap2 : base/cardmap :=
+    (map<-map : base/cardmap abilitymap)
+   cardmap3 : base/cardmap :=
+    (copy cardmap1 cardmap2)
+   uimap : ui/uimap :=
+    (uimap<-cardmap-parent
+     cardmap3
+     uid)]
+  (ui/ui
+   :uid    uid
+   :parent parent
+   :stylelist
+    (ui/stylelist
+     style-deck)
+   :data  skill
+   :uimap uimap))
+ :doc "Returns the a deck ui.")
+
+(func ui-navbutton-back : ui/ui
+ (let : ui/ui
+  [navbutton : ui/ui :=
+    (nav/ui-navbutton)
+   name : string := "Back"
+   uid1 : string := (:uid navbutton)
+   uid2 : string := (string uid1 name)
+   styles1 : ui/stylelist :=
+    (:stylelist navbutton)
+   styles2 : ui/stylelist :=
+    (copy styles1
+     styles/style-button-back)]
+  (copy navbutton
+   :uid uid2
+   :name name
+   :stylelist styles2
+   :eventmap eventmap-navbutton-back))
+ :doc "Returns the navigation back button")
+
+(func ui-navigate<-ui : ui/ui
+ [uiarg : ui/ui]
+ (if : ui/ui
+  (then
+   (!-empty uiarg)
+   (let : ui/ui
+    [navbar : ui := (nav/ui-navbar)
+     main   : ui := (nav/ui-main)
+     ui1 : ui :=
+      (ui-navigate<-ui-navbar
+       uiarg
+       navbar)
+     ui2 : ui :=
+      (ui-navigate<-ui-main
+       uiarg main)]
+    uiarg))
+  (else uiarg))
+ :context
+ :sideeffects "Alters uinavbar and uimain"
+ :doc "Navigate to the given ui")
+
+(func ui-navigate<-ui-main : ui/ui
+ [ui   : ui/ui
+  main : ui/ui]
+ (let : ui/ui
+  [uid      : string   := (:uid  ui)
+   data     : any      := (:data ui)
+   mainid   : string   := (:uid   main)
+   mainmap1 : ui/uimap := (:uimap main)
+   mainmap2 : ui/uimap :=
+    (map<-map : ui/uimap
+     mainmap1
+     (fn : ui/ui
+      [key   : string
+       value : ui/ui]
+      (if : ui/ui
+       (then
+        (= true (:hidden value))
+        (empty ui/ui))
+       (else
+        (copy value
+         :hidden true)))))
+   mainb1 : ui/ui :=
+    (ui-nav<-any-parent
+     data mainid)
+   mainb2 : ui/ui :=
+    (ui/ui-layout<-ui
+     mainb1)
+   mainmap3 : ui/uimap :=
+    (copy mainmap2
+     uid mainb2)
+   main2 : ui/ui :=
+    (ui/ui-writechildmap<-ui-childmap
+     main mainmap3)
+   main3 : ui/ui :=
+    (ui/ui-render
+     main2)]
+  main3)
+ :context
+ :sideeffects "Alters uinavbar and uimain"
+ :doc "Navigate to the given ui")
+
+(func ui-navigate<-ui-navbar : ui/ui
+ [ui     : ui/ui
+  navbar : ui/ui]
+ (let : ui/ui
+  [uid      : string := (:uid ui)
+   navbarid : string := (:uid navbar)
+   buttona1 : ui/ui :=
+    (ui/ui-selected<-ui
+     navbar)
+   buttona2 : ui/ui :=
+    (copy buttona1
+     :selected false)
+   uidbtnb : string :=
+    (string
+     "navbutton-"
+     uid)
+   buttonb1 : ui/ui :=
+    (ui/ui-child<-ui-uid
+     navbar uidbtnb)
+   buttonb2 : ui/ui :=
+    (if : ui/ui
+     (then
+      (!-empty buttonb1)
+      (copy buttonb1
+       :selected true))
+     (else
+      (nav/ui-navbutton<-ui-parent-selected
+       ui
+       navbarid
+       true)))
+   navbar2 : ui/ui :=
+    (ui/ui-writechild<-ui-child
+     navbar
+     buttona2)
+   navbar3 : ui/ui :=
+    (ui/ui-writechild<-ui-child
+     navbar2
+     buttonb2)
+   navbar4 : ui/ui :=
+    (ui/ui-layout<-ui
+     navbar3)
+   navbar5 : ui/ui :=
+    (ui/ui-render
+     navbar4)]
+  navbar5)
+ :context
+ :sideeffects "Alters uinavbar"
+ :doc "Navigate to the given ui")
+
+(func uimap<-cardmap-parent : ui/uimap
+ [cardmap : base/cardmap
+  parent  : string]
+ (map<-map : ui/uimap
+  cardmap
+  (fn : ui/ui
+   [key  : string
+    card : base/card]
+   (ui<-any-parent
+    card parent)))
+ :doc "")

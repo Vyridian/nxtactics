@@ -1,8 +1,10 @@
 'strict mode'
 
 import vx_core from "../../vx/core.js"
+import vx_collection from "../../vx/collection.js"
 import vx_event from "../../vx/event.js"
 import vx_data_file from "../../vx/data/file.js"
+import vx_state from "../../vx/state.js"
 
 
 export default class vx_ui_ui {
@@ -27,6 +29,62 @@ export default class vx_ui_ui {
    */
   static t_cursor_pointer = {}
   static e_cursor_pointer = {vx_type: vx_ui_ui.t_cursor_pointer}
+
+  /**
+   * type: font
+   * Univeral Font Type
+   */
+  static t_font = {}
+  static e_font = {vx_type: vx_ui_ui.t_font}
+
+  /**
+   * type: fontface
+   * Univeral Font Face Type
+   */
+  static t_fontface = {}
+  static e_fontface = {vx_type: vx_ui_ui.t_fontface}
+
+  /**
+   * type: fontfacelist
+   * List of fontface
+   */
+  static t_fontfacelist = {}
+  static e_fontfacelist = vx_core.vx_new_list(vx_ui_ui.t_fontfacelist, [])
+
+  /**
+   * type: fontfacemap
+   * Map of fontface
+   */
+  static t_fontfacemap = {}
+  static e_fontfacemap = {vx_type: vx_ui_ui.t_fontfacemap}
+
+  /**
+   * type: fontmap
+   * Map of font
+   */
+  static t_fontmap = {}
+  static e_fontmap = {vx_type: vx_ui_ui.t_fontmap}
+
+  /**
+   * type: fontstyle
+   * Univeral Font Style Type
+   */
+  static t_fontstyle = {}
+  static e_fontstyle = {vx_type: vx_ui_ui.t_fontstyle}
+
+  /**
+   * type: fontstylemap
+   * Map of fontstyle
+   */
+  static t_fontstylemap = {}
+  static e_fontstylemap = {vx_type: vx_ui_ui.t_fontstylemap}
+
+  /**
+   * type: image
+   * Univeral Image Type
+   */
+  static t_image = {}
+  static e_image = {vx_type: vx_ui_ui.t_image}
 
   /**
    * type: layout
@@ -76,20 +134,6 @@ export default class vx_ui_ui {
    */
   static t_pointstyle = {}
   static e_pointstyle = {vx_type: vx_ui_ui.t_pointstyle}
-
-  /**
-   * type: render
-   * Universal Rendered UI
-   */
-  static t_render = {}
-  static e_render = {vx_type: vx_ui_ui.t_render}
-
-  /**
-   * type: rendermap
-   * Map of render
-   */
-  static t_rendermap = {}
-  static e_rendermap = {vx_type: vx_ui_ui.t_rendermap}
 
   /**
    * type: style
@@ -166,6 +210,12 @@ export default class vx_ui_ui {
   static c_layout_background = {vx_type: vx_ui_ui.t_layout, vx_constdef: {pkgname: 'vx/ui/ui', name: 'layout-background'}}
 
   /**
+   * Constant: layout-button
+   * {layout}
+   */
+  static c_layout_button = {vx_type: vx_ui_ui.t_layout, vx_constdef: {pkgname: 'vx/ui/ui', name: 'layout-button'}}
+
+  /**
    * Constant: layout-combobox
    * {layout}
    */
@@ -182,6 +232,12 @@ export default class vx_ui_ui {
    * {layout}
    */
   static c_layout_flow_columns = {vx_type: vx_ui_ui.t_layout, vx_constdef: {pkgname: 'vx/ui/ui', name: 'layout-flow-columns'}}
+
+  /**
+   * Constant: layout-flow-item
+   * {layout}
+   */
+  static c_layout_flow_item = {vx_type: vx_ui_ui.t_layout, vx_constdef: {pkgname: 'vx/ui/ui', name: 'layout-flow-item'}}
 
   /**
    * Constant: layout-flow-rows
@@ -280,6 +336,12 @@ export default class vx_ui_ui {
   static c_layout_textentry = {vx_type: vx_ui_ui.t_layout, vx_constdef: {pkgname: 'vx/ui/ui', name: 'layout-textentry'}}
 
   /**
+   * Constant: layout-titlebar
+   * {layout}
+   */
+  static c_layout_titlebar = {vx_type: vx_ui_ui.t_layout, vx_constdef: {pkgname: 'vx/ui/ui', name: 'layout-titlebar'}}
+
+  /**
    * Constant: pin-bottom
    * {pin}
    */
@@ -346,6 +408,133 @@ export default class vx_ui_ui {
   static c_styletype_system = {vx_type: vx_ui_ui.t_styletype, vx_constdef: {pkgname: 'vx/ui/ui', name: 'styletype-system'}}
 
   /**
+   * @function boolean_print
+   * Create a print ready version of ui
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_print = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_print = {
+    vx_type: vx_ui_ui.t_boolean_print
+  }
+
+  // (func boolean-print)
+  static f_boolean_print(context, ui) {
+    let output = vx_core.e_boolean
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_boolean, "struct-2": vx_ui_ui.t_layoutengine},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const layoutengine = vx_ui_ui.f_layoutengine_readstate(context)
+        const fn_print = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_boolean_print, "struct-2": vx_ui_ui.t_layoutengine}, layoutengine, ":boolean-print")
+        return vx_core.vx_any_from_func(vx_core.t_boolean, fn_print, context, ui)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function boolean_writestate_from_ui
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_writestate_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_writestate_from_ui = {
+    vx_type: vx_ui_ui.t_boolean_writestate_from_ui
+  }
+
+  // (func boolean-writestate<-ui)
+  static f_boolean_writestate_from_ui(context, ui) {
+    let output = vx_core.e_boolean
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_boolean},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
+        return vx_state.f_boolean_writestate_from_mapname_name_value(context, ":uimap", uid, ui)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function boolean_writestate_from_uiengine
+   * Writes the uiengine to state
+   * @param  {uiengine} uiengine
+   * @return {boolean}
+   */
+  static t_boolean_writestate_from_uiengine = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_writestate_from_uiengine = {
+    vx_type: vx_ui_ui.t_boolean_writestate_from_uiengine
+  }
+
+  // (func boolean-writestate<-uiengine)
+  static f_boolean_writestate_from_uiengine(context, uiengine) {
+    let output = vx_core.e_boolean
+    output = vx_state.f_boolean_writestate_from_name_value(context, ":uiengine", uiengine)
+    return output
+  }
+
+  /**
+   * @function fontfacemap_from_fontfacelist
+   * Returns a fontfacemap from a fontfacelist
+   * @param  {fontfacelist} fontfacelist
+   * @return {fontfacemap}
+   */
+  static t_fontfacemap_from_fontfacelist = {
+    vx_type: vx_core.t_type
+  }
+  static e_fontfacemap_from_fontfacelist = {
+    vx_type: vx_ui_ui.t_fontfacemap_from_fontfacelist
+  }
+
+  // (func fontfacemap<-fontfacelist)
+  static f_fontfacemap_from_fontfacelist(fontfacelist) {
+    let output = vx_ui_ui.e_fontfacemap
+    output = vx_core.f_map_from_list(
+      {"any-1": vx_ui_ui.t_fontface, "any-2": vx_ui_ui.t_fontface, "list-2": vx_ui_ui.t_fontfacelist, "map-1": vx_ui_ui.t_fontfacemap, "struct-2": vx_ui_ui.t_fontface},
+      fontfacelist,
+      vx_core.f_new(vx_core.t_any_from_any, (fontface) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_fontface}, fontface, ":name"))
+    )
+    return output
+  }
+
+  /**
+   * @function int_selected_from_ui
+   * Returns the position of the currently selected subui
+   * @param  {ui} ui
+   * @return {int}
+   */
+  static t_int_selected_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_int_selected_from_ui = {
+    vx_type: vx_ui_ui.t_int_selected_from_ui
+  }
+
+  // (func int-selected<-ui)
+  static f_int_selected_from_ui(ui) {
+    let output = vx_core.e_int
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_int},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uid = vx_ui_ui.f_string_selected_from_ui(ui)
+        const uidlist = vx_ui_ui.f_stringlist_from_ui(ui)
+        return vx_collection.f_int_from_stringlist_find(uidlist, uid)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function layout_from_style
    * @param  {style} style
    * @return {layout}
@@ -365,8 +554,128 @@ export default class vx_ui_ui {
   }
 
   /**
+   * @function layout_from_ui
+   * Returns the layout from layoutengine that matches the ui
+   * @param  {ui} ui
+   * @return {layout}
+   */
+  static t_layout_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_layout_from_ui = {
+    vx_type: vx_ui_ui.t_layout_from_ui
+  }
+
+  // (func layout<-ui)
+  static f_layout_from_ui(context, ui) {
+    let output = vx_ui_ui.e_layout
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_layout},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const layoutengine = vx_ui_ui.f_layoutengine_readstate(context)
+        return vx_ui_ui.f_layout_from_ui_layoutengine(ui, layoutengine)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function layout_from_ui_layoutengine
+   * Returns the layout from layoutengine that matches the ui
+   * @param  {ui} ui
+   * @param  {layoutengine} layoutengine
+   * @return {layout}
+   */
+  static t_layout_from_ui_layoutengine = {
+    vx_type: vx_core.t_type
+  }
+  static e_layout_from_ui_layoutengine = {
+    vx_type: vx_ui_ui.t_layout_from_ui_layoutengine
+  }
+
+  // (func layout<-ui-layoutengine)
+  static f_layout_from_ui_layoutengine(ui, layoutengine) {
+    let output = vx_ui_ui.e_layout
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_layout},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const layoutmap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layoutmap, "struct-2": vx_ui_ui.t_layoutengine}, layoutengine, ":layoutmap")
+        const layoutelse = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layout, "struct-2": vx_ui_ui.t_layoutengine}, layoutengine, ":layoutelse")
+        return vx_ui_ui.f_layout_from_ui_layoutmap_else(ui, layoutmap, layoutelse)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function layout_from_ui_layoutmap_else
+   * Returns a layout from a given ui, layoutmap, and layoutelse
+   * @param  {ui} ui
+   * @param  {layoutmap} layoutmap
+   * @param  {layout} layoutelse
+   * @return {layout}
+   */
+  static t_layout_from_ui_layoutmap_else = {
+    vx_type: vx_core.t_type
+  }
+  static e_layout_from_ui_layoutmap_else = {
+    vx_type: vx_ui_ui.t_layout_from_ui_layoutmap_else
+  }
+
+  // (func layout<-ui-layoutmap-else)
+  static f_layout_from_ui_layoutmap_else(ui, layoutmap, layoutelse) {
+    let output = vx_ui_ui.e_layout
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_layout},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const style = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
+        const layout = vx_ui_ui.f_layout_from_style(style)
+        const layname = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_layout}, layout, ":name")
+        const layout1 = vx_core.f_any_from_map({"any-1": vx_ui_ui.t_layout, "map-1": vx_ui_ui.t_layoutmap}, layoutmap, layname)
+        const layout2 = vx_core.f_if_1(
+          {"any-1": vx_ui_ui.t_layout},
+          vx_core.f_notempty_1(layout1),
+          layout1,
+          layoutelse
+        )
+        return layout2
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function layoutengine_readstate
+   * Returns the current layoutengine from state
+   * @return {layoutengine}
+   */
+  static t_layoutengine_readstate = {
+    vx_type: vx_core.t_type
+  }
+  static e_layoutengine_readstate = {
+    vx_type: vx_ui_ui.t_layoutengine_readstate
+  }
+
+  // (func layoutengine-readstate)
+  static f_layoutengine_readstate(context) {
+    let output = vx_ui_ui.e_layoutengine
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_layoutengine, "struct-2": vx_ui_ui.t_uiengine},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uiengine = vx_ui_ui.f_uiengine_readstate(context)
+        return vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layoutengine, "struct-2": vx_ui_ui.t_uiengine}, uiengine, ":layoutengine")
+      })
+    )
+    return output
+  }
+
+  /**
    * @function layoutmap_from_layoutlist
-   * Returns an renderermap from an rendererlist
+   * Returns an layoutmap from an layoutlist
    * @param  {layoutlist} layoutlist
    * @return {layoutmap}
    */
@@ -385,6 +694,97 @@ export default class vx_ui_ui {
       layoutlist,
       vx_core.f_new(vx_core.t_any_from_any, (layout) => 
         vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_layout}, layout, ":name"))
+    )
+    return output
+  }
+
+  /**
+   * @function string_selected_from_ui
+   * @param  {ui} ui
+   * @return {string}
+   */
+  static t_string_selected_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_selected_from_ui = {
+    vx_type: vx_ui_ui.t_string_selected_from_ui
+  }
+
+  // (func string-selected<-ui)
+  static f_string_selected_from_ui(ui) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const selectedui = vx_ui_ui.f_ui_selected_from_ui(ui)
+        return vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, selectedui, ":uid")
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function stringlist_selected_from_ui
+   * Return a list of uid of the ui with selected=true
+   * @param  {ui} ui
+   * @return {stringlist}
+   */
+  static t_stringlist_selected_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_stringlist_selected_from_ui = {
+    vx_type: vx_ui_ui.t_stringlist_selected_from_ui
+  }
+
+  // (func stringlist-selected<-ui)
+  static f_stringlist_selected_from_ui(ui) {
+    let output = vx_core.e_stringlist
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_stringlist, "any-2": vx_ui_ui.t_ui, "list-1": vx_core.t_stringlist, "list-2": vx_ui_ui.t_uilist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+        const uilist = vx_ui_ui.f_uilist_from_uimap(uimap)
+        return vx_core.f_list_from_list_1(
+          {"any-1": vx_core.t_string, "any-2": vx_ui_ui.t_ui, "list-1": vx_core.t_stringlist, "list-2": vx_ui_ui.t_uilist},
+          uilist,
+          vx_core.f_new(vx_core.t_any_from_any, (item) => 
+            vx_core.f_if_1(
+              {"any-1": vx_core.t_string},
+              vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": vx_ui_ui.t_ui}, item, ":selected"),
+              vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, item, ":uid"),
+              ""
+            ))
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function stringlist_from_ui
+   * Return a list of uid of the ui with selected=true
+   * @param  {ui} ui
+   * @return {stringlist}
+   */
+  static t_stringlist_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_stringlist_from_ui = {
+    vx_type: vx_ui_ui.t_stringlist_from_ui
+  }
+
+  // (func stringlist<-ui)
+  static f_stringlist_from_ui(ui) {
+    let output = vx_core.e_stringlist
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_stringlist, "map-1": vx_ui_ui.t_uimap},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+        return vx_collection.f_stringlist_from_map(uimap)
+      })
     )
     return output
   }
@@ -414,6 +814,32 @@ export default class vx_ui_ui {
   }
 
   /**
+   * @function stylesheet_readstate
+   * Returns the current uiengine from state
+   * @return {stylesheet}
+   */
+  static t_stylesheet_readstate = {
+    vx_type: vx_core.t_type
+  }
+  static e_stylesheet_readstate = {
+    vx_type: vx_ui_ui.t_stylesheet_readstate
+  }
+
+  // (func stylesheet-readstate)
+  static f_stylesheet_readstate(context) {
+    let output = vx_ui_ui.e_stylesheet
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_stylesheet, "struct-2": vx_ui_ui.t_uiengine},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uiengine = vx_ui_ui.f_uiengine_readstate(context)
+        return vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_stylesheet, "struct-2": vx_ui_ui.t_uiengine}, uiengine, ":stylesheet")
+      })
+    )
+    return output
+  }
+
+  /**
    * @function stylesheet_render
    * Template for rendering stylesheet
    * @param  {stylesheet} stylesheetui
@@ -433,8 +859,119 @@ export default class vx_ui_ui {
   }
 
   /**
+   * @function ui_child_from_ui_uid
+   * Returns then named child from a ui.
+   * @param  {ui} ui
+   * @param  {string} uid
+   * @return {ui}
+   */
+  static t_ui_child_from_ui_uid = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_child_from_ui_uid = {
+    vx_type: vx_ui_ui.t_ui_child_from_ui_uid
+  }
+
+  // (func ui-child<-ui-uid)
+  static f_ui_child_from_ui_uid(ui, uid) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui, "map-1": vx_ui_ui.t_uimap},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const childmap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+        return vx_core.f_any_from_map({"any-1": vx_ui_ui.t_ui, "map-1": vx_ui_ui.t_uimap}, childmap, uid)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function ui_from_from_event
+   * Returns (:from event) cast as ui
+   * @param  {event} event
+   * @return {ui}
+   */
+  static t_ui_from_from_event = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_from_from_event = {
+    vx_type: vx_ui_ui.t_ui_from_from_event
+  }
+
+  // (func ui-from<-event)
+  static f_ui_from_from_event(context, event) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_event.t_event}, event, ":from")
+        return vx_ui_ui.f_ui_readstate_from_uid(context, uid)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function ui_layout_from_ui
+   * Returns a ui with a layout added to each ui.
+   * @param  {ui} ui
+   * @return {ui}
+   */
+  static t_ui_layout_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_layout_from_ui = {
+    vx_type: vx_ui_ui.t_ui_layout_from_ui
+  }
+
+  // (func ui-layout<-ui)
+  static f_ui_layout_from_ui(context, ui) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uiengine = vx_ui_ui.f_uiengine_readstate(context)
+        return vx_ui_ui.f_ui_layout_from_ui_uiengine(ui, uiengine)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function ui_layout_from_ui_layoutengine
+   * Returns a ui with a layout added to each ui.
+   * @param  {ui} ui
+   * @param  {layoutengine} layoutengine
+   * @return {ui}
+   */
+  static t_ui_layout_from_ui_layoutengine = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_layout_from_ui_layoutengine = {
+    vx_type: vx_ui_ui.t_ui_layout_from_ui_layoutengine
+  }
+
+  // (func ui-layout<-ui-layoutengine)
+  static f_ui_layout_from_ui_layoutengine(ui, layoutengine) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const layoutmap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layoutmap, "struct-2": vx_ui_ui.t_layoutengine}, layoutengine, ":layoutmap")
+        const layoutelse = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layout, "struct-2": vx_ui_ui.t_layoutengine}, layoutengine, ":layoutelse")
+        return vx_ui_ui.f_ui_layout_from_ui_layoutmap_else(ui, layoutmap, layoutelse)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function ui_layout_from_ui_layoutmap_else
-   * Returns a ui with a renderer added to each ui.
+   * Returns a ui with a layout added to each ui.
    * @param  {ui} ui
    * @param  {layoutmap} layoutmap
    * @param  {layout} layoutelse
@@ -454,21 +991,60 @@ export default class vx_ui_ui {
       {"any-1": vx_ui_ui.t_ui},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const style = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
         const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
-        const layout = vx_ui_ui.f_layout_from_style(style)
-        const layname = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_layout}, layout, ":name")
-        const renderer1 = vx_core.f_any_from_map({"any-1": vx_ui_ui.t_layout, "map-1": vx_ui_ui.t_layoutmap}, layoutmap, layname)
-        const renderer = vx_core.f_if_1(
-          {"any-1": vx_ui_ui.t_layout},
-          vx_core.f_notempty_1(renderer1),
-          renderer1,
-          layoutelse
-        )
-        const uimaprend = vx_ui_ui.f_uimap_layout_from_uimap_layoutmap_else(uimap, layoutmap, layoutelse)
-        return vx_core.f_copy(ui, ":renderer", renderer, ":uimap", uimaprend)
+        const layout1 = vx_ui_ui.f_layout_from_ui_layoutmap_else(ui, layoutmap, layoutelse)
+        const uimap2 = vx_ui_ui.f_uimap_layout_from_uimap_layoutmap_else(uimap, layoutmap, layoutelse)
+        return vx_core.f_copy(ui, ":layout", layout1, ":uimap", uimap2)
       })
     )
+    return output
+  }
+
+  /**
+   * @function ui_layout_from_ui_uiengine
+   * Returns a ui with a layout added to each ui.
+   * @param  {ui} ui
+   * @param  {uiengine} uiengine
+   * @return {ui}
+   */
+  static t_ui_layout_from_ui_uiengine = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_layout_from_ui_uiengine = {
+    vx_type: vx_ui_ui.t_ui_layout_from_ui_uiengine
+  }
+
+  // (func ui-layout<-ui-uiengine)
+  static f_ui_layout_from_ui_uiengine(ui, uiengine) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const layoutengine = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layoutengine, "struct-2": vx_ui_ui.t_uiengine}, uiengine, ":layoutengine")
+        return vx_ui_ui.f_ui_layout_from_ui_layoutengine(ui, layoutengine)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function ui_readstate_from_uid
+   * Returns the named ui from state
+   * @param  {string} uid
+   * @return {ui}
+   */
+  static t_ui_readstate_from_uid = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_readstate_from_uid = {
+    vx_type: vx_ui_ui.t_ui_readstate_from_uid
+  }
+
+  // (func ui-readstate<-uid)
+  static f_ui_readstate_from_uid(context, uid) {
+    let output = vx_ui_ui.e_ui
+    output = vx_state.f_any_readstate_from_mapname_name({"any-1": vx_ui_ui.t_ui}, context, ":uimap", uid)
     return output
   }
 
@@ -501,11 +1077,12 @@ export default class vx_ui_ui {
 
   /**
    * @function ui_render_from_fn_render_ui_orig_parent
+   * Returns a rendered ui
    * @param  {ui_render_from_ui_orig_parent} fn_render
    * @param  {ui} ui
    * @param  {ui} orig
    * @param  {ui} parent
-   * @return {render}
+   * @return {ui}
    */
   static t_ui_render_from_fn_render_ui_orig_parent = {
     vx_type: vx_core.t_type
@@ -516,8 +1093,8 @@ export default class vx_ui_ui {
 
   // (func ui-render<-fn-render-ui-orig-parent)
   static f_ui_render_from_fn_render_ui_orig_parent(fn_render, ui, orig, parent) {
-    let output = vx_ui_ui.e_render
-    output = vx_core.vx_any_from_func(vx_ui_ui.t_render, fn_render, ui, orig, parent)
+    let output = vx_ui_ui.e_ui
+    output = vx_core.vx_any_from_func(vx_ui_ui.t_ui, fn_render, ui, orig, parent)
     return output
   }
 
@@ -551,8 +1128,8 @@ export default class vx_ui_ui {
           [],
           vx_core.f_new(vx_core.t_any_from_func, () => {
             const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
-            const renderer = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layout, "struct-2": vx_ui_ui.t_ui}, ui, ":renderer")
-            const uiout = vx_ui_ui.f_ui_from_renderer_ui_orig_parent(renderer, ui, orig, parent)
+            const layout = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layout, "struct-2": vx_ui_ui.t_ui}, ui, ":layout")
+            const uiout = vx_ui_ui.f_ui_from_layout_ui_orig_parent(layout, ui, orig, parent)
             return uiout
           })
         )})
@@ -562,32 +1139,169 @@ export default class vx_ui_ui {
   }
 
   /**
-   * @function ui_from_renderer_ui_orig_parent
-   * @param  {layout} renderer
+   * @function ui_selected_from_ui
+   * Returns the ui of the first ui with selected=true
+   * @param  {ui} ui
+   * @return {ui}
+   */
+  static t_ui_selected_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_selected_from_ui = {
+    vx_type: vx_ui_ui.t_ui_selected_from_ui
+  }
+
+  // (func ui-selected<-ui)
+  static f_ui_selected_from_ui(ui) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uilist = vx_ui_ui.f_uilist_selected_from_ui(ui)
+        return vx_core.f_first_from_list({"any-1": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist}, uilist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function ui_writechild_from_ui_child
+   * Returns the given ui with the child added to uimap
+   * @param  {ui} ui
+   * @param  {ui} child
+   * @return {ui}
+   */
+  static t_ui_writechild_from_ui_child = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_writechild_from_ui_child = {
+    vx_type: vx_ui_ui.t_ui_writechild_from_ui_child
+  }
+
+  // (func ui-writechild<-ui-child)
+  static f_ui_writechild_from_ui_child(ui, child) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const childid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, child, ":uid")
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+        const write = vx_core.f_boolean_write_from_map_name_value(uimap, childid, child)
+        return ui
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function ui_writechildmap_from_ui_childmap
+   * Returns the given ui with the members of childmap added to uimap
+   * @param  {ui} ui
+   * @param  {uimap} childmap
+   * @return {ui}
+   */
+  static t_ui_writechildmap_from_ui_childmap = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_writechildmap_from_ui_childmap = {
+    vx_type: vx_ui_ui.t_ui_writechildmap_from_ui_childmap
+  }
+
+  // (func ui-writechildmap<-ui-childmap)
+  static f_ui_writechildmap_from_ui_childmap(ui, childmap) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const workmap = vx_core.f_map_from_map_1(
+          {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "map-1": vx_ui_ui.t_uimap, "map-2": vx_ui_ui.t_uimap},
+          childmap,
+          vx_core.f_new(vx_core.t_any_from_key_value, ([key, value]) => 
+            vx_ui_ui.f_ui_writechild_from_ui_child(ui, value))
+        )
+        return ui
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function ui_from_layout_ui_orig_parent
+   * @param  {layout} layout
    * @param  {ui} uiarg
    * @param  {ui} uiorig
    * @param  {ui} parent
    * @return {ui}
    */
-  static t_ui_from_renderer_ui_orig_parent = {
+  static t_ui_from_layout_ui_orig_parent = {
     vx_type: vx_core.t_type
   }
-  static e_ui_from_renderer_ui_orig_parent = {
-    vx_type: vx_ui_ui.t_ui_from_renderer_ui_orig_parent
+  static e_ui_from_layout_ui_orig_parent = {
+    vx_type: vx_ui_ui.t_ui_from_layout_ui_orig_parent
   }
 
-  // (func ui<-renderer-ui-orig-parent)
-  static f_ui_from_renderer_ui_orig_parent(renderer, uiarg, uiorig, parent) {
+  // (func ui<-layout-ui-orig-parent)
+  static f_ui_from_layout_ui_orig_parent(layout, uiarg, uiorig, parent) {
     let output = vx_ui_ui.e_ui
     output = vx_core.f_let(
       {"any-1": vx_ui_ui.t_ui, "struct-2": vx_ui_ui.t_layout},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const fn_layout = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_ui_render_from_ui_orig_parent, "struct-2": vx_ui_ui.t_layout}, renderer, ":fn-layout")
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_layout}, layout, ":name")
+        const fn_layout = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_ui_render_from_ui_orig_parent, "struct-2": vx_ui_ui.t_layout}, layout, ":fn-layout")
         const uichg = vx_core.vx_any_from_func(vx_ui_ui.t_ui, fn_layout, uiarg, uiorig, parent)
         return uichg
       })
     )
+    return output
+  }
+
+  /**
+   * @function uid_selected_from_ui
+   * Returns the uid of the first ui with selected=true
+   * @param  {ui} ui
+   * @return {string}
+   */
+  static t_uid_selected_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_uid_selected_from_ui = {
+    vx_type: vx_ui_ui.t_uid_selected_from_ui
+  }
+
+  // (func uid-selected<-ui)
+  static f_uid_selected_from_ui(ui) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uidlist = vx_ui_ui.f_stringlist_selected_from_ui(ui)
+        return vx_core.f_first_from_list({"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist}, uidlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function uiengine_readstate
+   * Returns the current uiengine from state
+   * @return {uiengine}
+   */
+  static t_uiengine_readstate = {
+    vx_type: vx_core.t_type
+  }
+  static e_uiengine_readstate = {
+    vx_type: vx_ui_ui.t_uiengine_readstate
+  }
+
+  // (func uiengine-readstate)
+  static f_uiengine_readstate(context) {
+    let output = vx_ui_ui.e_uiengine
+    output = vx_state.f_any_readstate_from_name({"any-1": vx_ui_ui.t_uiengine}, context, ":uiengine")
     return output
   }
 
@@ -605,7 +1319,7 @@ export default class vx_ui_ui {
   }
 
   // (func uiengine-render)
-  static f_uiengine_render(uiengine) {
+  static f_uiengine_render(context, uiengine) {
     let output = vx_ui_ui.e_uiengine
     output = vx_core.f_let(
       {"any-1": vx_ui_ui.t_uiengine, "struct-2": vx_ui_ui.t_layoutengine},
@@ -614,14 +1328,72 @@ export default class vx_ui_ui {
         const stylesheet = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_stylesheet, "struct-2": vx_ui_ui.t_uiengine}, uiengine, ":stylesheet")
         const ui = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_ui, "struct-2": vx_ui_ui.t_uiengine}, uiengine, ":ui")
         const layoutengine = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layoutengine, "struct-2": vx_ui_ui.t_uiengine}, uiengine, ":layoutengine")
-        const layoutmap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layoutmap, "struct-2": vx_ui_ui.t_layoutengine}, layoutengine, ":layoutmap")
-        const layoutelse = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layout, "struct-2": vx_ui_ui.t_layoutengine}, layoutengine, ":layoutelse")
         const stylesheetrender = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_stylesheet_render, "struct-2": vx_ui_ui.t_layoutengine}, layoutengine, ":stylesheetrender")
         const stylesheetrend = vx_core.vx_any_from_func(vx_ui_ui.t_stylesheet, stylesheetrender, stylesheet)
-        const uirenderer = vx_ui_ui.f_ui_layout_from_ui_layoutmap_else(ui, layoutmap, layoutelse)
+        const uirenderer = vx_ui_ui.f_ui_layout_from_ui_layoutengine(ui, layoutengine)
         const uirendered = vx_ui_ui.f_ui_render(uirenderer)
         return vx_core.f_copy(uiengine, ":ui", uirendered)
       })
+    )
+    return output
+  }
+
+  /**
+   * @function uilist_selected_from_ui
+   * Return a uilist of the ui with selected=true
+   * @param  {ui} uiarg
+   * @return {uilist}
+   */
+  static t_uilist_selected_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_uilist_selected_from_ui = {
+    vx_type: vx_ui_ui.t_uilist_selected_from_ui
+  }
+
+  // (func uilist-selected<-ui)
+  static f_uilist_selected_from_ui(uiarg) {
+    let output = vx_ui_ui.e_uilist
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_uilist, "any-2": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist, "list-2": vx_ui_ui.t_uilist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, uiarg, ":uimap")
+        const uilist = vx_ui_ui.f_uilist_from_uimap(uimap)
+        return vx_core.f_list_from_list_1(
+          {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist, "list-2": vx_ui_ui.t_uilist},
+          uilist,
+          vx_core.f_new(vx_core.t_any_from_any, (item) => 
+            vx_core.f_if(
+              {"any-1": vx_ui_ui.t_ui},
+              vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": vx_ui_ui.t_ui}, item, ":selected"),
+              item
+            ))
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function uilist_from_uimap
+   * @param  {uimap} uimap
+   * @return {uilist}
+   */
+  static t_uilist_from_uimap = {
+    vx_type: vx_core.t_type
+  }
+  static e_uilist_from_uimap = {
+    vx_type: vx_ui_ui.t_uilist_from_uimap
+  }
+
+  // (func uilist<-uimap)
+  static f_uilist_from_uimap(uimap) {
+    let output = vx_ui_ui.e_uilist
+    output = vx_core.f_list_from_map_1(
+      {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist, "map-2": vx_ui_ui.t_uimap},
+      uimap,
+      vx_core.f_new(vx_core.t_any_from_key_value, ([key, item]) => item)
     )
     return output
   }
@@ -644,7 +1416,7 @@ export default class vx_ui_ui {
   // (func uimap-layout<-uimap-layoutmap-else)
   static f_uimap_layout_from_uimap_layoutmap_else(uimap, layoutmap, layoutelse) {
     let output = vx_ui_ui.e_uimap
-    output = vx_core.f_map_from_map(
+    output = vx_core.f_map_from_map_1(
       {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "map-1": vx_ui_ui.t_uimap, "map-2": vx_ui_ui.t_uimap},
       uimap,
       vx_core.f_new(vx_core.t_any_from_key_value, ([key, ui]) => 
@@ -670,7 +1442,7 @@ export default class vx_ui_ui {
   // (func uimap-render<-uimap-parent)
   static f_uimap_render_from_uimap_parent(uimap, parent) {
     let output = vx_ui_ui.e_uimap
-    output = vx_core.f_map_from_map(
+    output = vx_core.f_map_from_map_1(
       {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "map-1": vx_ui_ui.t_uimap, "map-2": vx_ui_ui.t_uimap},
       uimap,
       vx_core.f_new(vx_core.t_any_from_key_value, ([key, val]) => 
@@ -735,9 +1507,11 @@ export default class vx_ui_ui {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
       "layout-app": vx_ui_ui.c_layout_app,
       "layout-background": vx_ui_ui.c_layout_background,
+      "layout-button": vx_ui_ui.c_layout_button,
       "layout-combobox": vx_ui_ui.c_layout_combobox,
       "layout-else": vx_ui_ui.c_layout_else,
       "layout-flow-columns": vx_ui_ui.c_layout_flow_columns,
+      "layout-flow-item": vx_ui_ui.c_layout_flow_item,
       "layout-flow-rows": vx_ui_ui.c_layout_flow_rows,
       "layout-image": vx_ui_ui.c_layout_image,
       "layout-label": vx_ui_ui.c_layout_label,
@@ -754,6 +1528,7 @@ export default class vx_ui_ui {
       "layout-statusdrawer": vx_ui_ui.c_layout_statusdrawer,
       "layout-text": vx_ui_ui.c_layout_text,
       "layout-textentry": vx_ui_ui.c_layout_textentry,
+      "layout-titlebar": vx_ui_ui.c_layout_titlebar,
       "pin-bottom": vx_ui_ui.c_pin_bottom,
       "pin-center": vx_ui_ui.c_pin_center,
       "pin-center-h": vx_ui_ui.c_pin_center_h,
@@ -770,6 +1545,14 @@ export default class vx_ui_ui {
       "bounds": vx_ui_ui.e_bounds,
       "cursor": vx_ui_ui.e_cursor,
       "cursor-pointer": vx_ui_ui.e_cursor_pointer,
+      "font": vx_ui_ui.e_font,
+      "fontface": vx_ui_ui.e_fontface,
+      "fontfacelist": vx_ui_ui.e_fontfacelist,
+      "fontfacemap": vx_ui_ui.e_fontfacemap,
+      "fontmap": vx_ui_ui.e_fontmap,
+      "fontstyle": vx_ui_ui.e_fontstyle,
+      "fontstylemap": vx_ui_ui.e_fontstylemap,
+      "image": vx_ui_ui.e_image,
       "layout": vx_ui_ui.e_layout,
       "layoutengine": vx_ui_ui.e_layoutengine,
       "layoutlist": vx_ui_ui.e_layoutlist,
@@ -777,8 +1560,6 @@ export default class vx_ui_ui {
       "pin": vx_ui_ui.e_pin,
       "point": vx_ui_ui.e_point,
       "pointstyle": vx_ui_ui.e_pointstyle,
-      "render": vx_ui_ui.e_render,
-      "rendermap": vx_ui_ui.e_rendermap,
       "style": vx_ui_ui.e_style,
       "stylelist": vx_ui_ui.e_stylelist,
       "stylemap": vx_ui_ui.e_stylemap,
@@ -788,32 +1569,84 @@ export default class vx_ui_ui {
       "uiengine": vx_ui_ui.e_uiengine,
       "uilist": vx_ui_ui.e_uilist,
       "uimap": vx_ui_ui.e_uimap,
+      "boolean-print": vx_ui_ui.e_boolean_print,
+      "boolean-writestate<-ui": vx_ui_ui.e_boolean_writestate_from_ui,
+      "boolean-writestate<-uiengine": vx_ui_ui.e_boolean_writestate_from_uiengine,
+      "fontfacemap<-fontfacelist": vx_ui_ui.e_fontfacemap_from_fontfacelist,
+      "int-selected<-ui": vx_ui_ui.e_int_selected_from_ui,
       "layout<-style": vx_ui_ui.e_layout_from_style,
+      "layout<-ui": vx_ui_ui.e_layout_from_ui,
+      "layout<-ui-layoutengine": vx_ui_ui.e_layout_from_ui_layoutengine,
+      "layout<-ui-layoutmap-else": vx_ui_ui.e_layout_from_ui_layoutmap_else,
+      "layoutengine-readstate": vx_ui_ui.e_layoutengine_readstate,
       "layoutmap<-layoutlist": vx_ui_ui.e_layoutmap_from_layoutlist,
+      "string-selected<-ui": vx_ui_ui.e_string_selected_from_ui,
+      "stringlist-selected<-ui": vx_ui_ui.e_stringlist_selected_from_ui,
+      "stringlist<-ui": vx_ui_ui.e_stringlist_from_ui,
       "stylemap<-stylelist": vx_ui_ui.e_stylemap_from_stylelist,
+      "stylesheet-readstate": vx_ui_ui.e_stylesheet_readstate,
       "stylesheet-render": vx_ui_ui.e_stylesheet_render,
+      "ui-child<-ui-uid": vx_ui_ui.e_ui_child_from_ui_uid,
+      "ui-from<-event": vx_ui_ui.e_ui_from_from_event,
+      "ui-layout<-ui": vx_ui_ui.e_ui_layout_from_ui,
+      "ui-layout<-ui-layoutengine": vx_ui_ui.e_ui_layout_from_ui_layoutengine,
       "ui-layout<-ui-layoutmap-else": vx_ui_ui.e_ui_layout_from_ui_layoutmap_else,
+      "ui-layout<-ui-uiengine": vx_ui_ui.e_ui_layout_from_ui_uiengine,
+      "ui-readstate<-uid": vx_ui_ui.e_ui_readstate_from_uid,
       "ui-render": vx_ui_ui.e_ui_render,
       "ui-render<-fn-render-ui-orig-parent": vx_ui_ui.e_ui_render_from_fn_render_ui_orig_parent,
       "ui-render<-ui-orig-parent": vx_ui_ui.e_ui_render_from_ui_orig_parent,
-      "ui<-renderer-ui-orig-parent": vx_ui_ui.e_ui_from_renderer_ui_orig_parent,
+      "ui-selected<-ui": vx_ui_ui.e_ui_selected_from_ui,
+      "ui-writechild<-ui-child": vx_ui_ui.e_ui_writechild_from_ui_child,
+      "ui-writechildmap<-ui-childmap": vx_ui_ui.e_ui_writechildmap_from_ui_childmap,
+      "ui<-layout-ui-orig-parent": vx_ui_ui.e_ui_from_layout_ui_orig_parent,
+      "uid-selected<-ui": vx_ui_ui.e_uid_selected_from_ui,
+      "uiengine-readstate": vx_ui_ui.e_uiengine_readstate,
       "uiengine-render": vx_ui_ui.e_uiengine_render,
+      "uilist-selected<-ui": vx_ui_ui.e_uilist_selected_from_ui,
+      "uilist<-uimap": vx_ui_ui.e_uilist_from_uimap,
       "uimap-layout<-uimap-layoutmap-else": vx_ui_ui.e_uimap_layout_from_uimap_layoutmap_else,
       "uimap-render<-uimap-parent": vx_ui_ui.e_uimap_render_from_uimap_parent,
       "uimap<-uilist": vx_ui_ui.e_uimap_from_uilist,
       "uimap<-uimap-data": vx_ui_ui.e_uimap_from_uimap_data
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "boolean-print": vx_ui_ui.t_boolean_print,
+      "boolean-writestate<-ui": vx_ui_ui.t_boolean_writestate_from_ui,
+      "boolean-writestate<-uiengine": vx_ui_ui.t_boolean_writestate_from_uiengine,
+      "fontfacemap<-fontfacelist": vx_ui_ui.t_fontfacemap_from_fontfacelist,
+      "int-selected<-ui": vx_ui_ui.t_int_selected_from_ui,
       "layout<-style": vx_ui_ui.t_layout_from_style,
+      "layout<-ui": vx_ui_ui.t_layout_from_ui,
+      "layout<-ui-layoutengine": vx_ui_ui.t_layout_from_ui_layoutengine,
+      "layout<-ui-layoutmap-else": vx_ui_ui.t_layout_from_ui_layoutmap_else,
+      "layoutengine-readstate": vx_ui_ui.t_layoutengine_readstate,
       "layoutmap<-layoutlist": vx_ui_ui.t_layoutmap_from_layoutlist,
+      "string-selected<-ui": vx_ui_ui.t_string_selected_from_ui,
+      "stringlist-selected<-ui": vx_ui_ui.t_stringlist_selected_from_ui,
+      "stringlist<-ui": vx_ui_ui.t_stringlist_from_ui,
       "stylemap<-stylelist": vx_ui_ui.t_stylemap_from_stylelist,
+      "stylesheet-readstate": vx_ui_ui.t_stylesheet_readstate,
       "stylesheet-render": vx_ui_ui.t_stylesheet_render,
+      "ui-child<-ui-uid": vx_ui_ui.t_ui_child_from_ui_uid,
+      "ui-from<-event": vx_ui_ui.t_ui_from_from_event,
+      "ui-layout<-ui": vx_ui_ui.t_ui_layout_from_ui,
+      "ui-layout<-ui-layoutengine": vx_ui_ui.t_ui_layout_from_ui_layoutengine,
       "ui-layout<-ui-layoutmap-else": vx_ui_ui.t_ui_layout_from_ui_layoutmap_else,
+      "ui-layout<-ui-uiengine": vx_ui_ui.t_ui_layout_from_ui_uiengine,
+      "ui-readstate<-uid": vx_ui_ui.t_ui_readstate_from_uid,
       "ui-render": vx_ui_ui.t_ui_render,
       "ui-render<-fn-render-ui-orig-parent": vx_ui_ui.t_ui_render_from_fn_render_ui_orig_parent,
       "ui-render<-ui-orig-parent": vx_ui_ui.t_ui_render_from_ui_orig_parent,
-      "ui<-renderer-ui-orig-parent": vx_ui_ui.t_ui_from_renderer_ui_orig_parent,
+      "ui-selected<-ui": vx_ui_ui.t_ui_selected_from_ui,
+      "ui-writechild<-ui-child": vx_ui_ui.t_ui_writechild_from_ui_child,
+      "ui-writechildmap<-ui-childmap": vx_ui_ui.t_ui_writechildmap_from_ui_childmap,
+      "ui<-layout-ui-orig-parent": vx_ui_ui.t_ui_from_layout_ui_orig_parent,
+      "uid-selected<-ui": vx_ui_ui.t_uid_selected_from_ui,
+      "uiengine-readstate": vx_ui_ui.t_uiengine_readstate,
       "uiengine-render": vx_ui_ui.t_uiengine_render,
+      "uilist-selected<-ui": vx_ui_ui.t_uilist_selected_from_ui,
+      "uilist<-uimap": vx_ui_ui.t_uilist_from_uimap,
       "uimap-layout<-uimap-layoutmap-else": vx_ui_ui.t_uimap_layout_from_uimap_layoutmap_else,
       "uimap-render<-uimap-parent": vx_ui_ui.t_uimap_render_from_uimap_parent,
       "uimap<-uilist": vx_ui_ui.t_uimap_from_uilist,
@@ -823,6 +1656,14 @@ export default class vx_ui_ui {
       "bounds": vx_ui_ui.t_bounds,
       "cursor": vx_ui_ui.t_cursor,
       "cursor-pointer": vx_ui_ui.t_cursor_pointer,
+      "font": vx_ui_ui.t_font,
+      "fontface": vx_ui_ui.t_fontface,
+      "fontfacelist": vx_ui_ui.t_fontfacelist,
+      "fontfacemap": vx_ui_ui.t_fontfacemap,
+      "fontmap": vx_ui_ui.t_fontmap,
+      "fontstyle": vx_ui_ui.t_fontstyle,
+      "fontstylemap": vx_ui_ui.t_fontstylemap,
+      "image": vx_ui_ui.t_image,
       "layout": vx_ui_ui.t_layout,
       "layoutengine": vx_ui_ui.t_layoutengine,
       "layoutlist": vx_ui_ui.t_layoutlist,
@@ -830,8 +1671,6 @@ export default class vx_ui_ui {
       "pin": vx_ui_ui.t_pin,
       "point": vx_ui_ui.t_point,
       "pointstyle": vx_ui_ui.t_pointstyle,
-      "render": vx_ui_ui.t_render,
-      "rendermap": vx_ui_ui.t_rendermap,
       "style": vx_ui_ui.t_style,
       "stylelist": vx_ui_ui.t_stylelist,
       "stylemap": vx_ui_ui.t_stylemap,
@@ -933,6 +1772,237 @@ export default class vx_ui_ui {
     vx_ui_ui.e_cursor_pointer['vx_type'] = vx_ui_ui.t_cursor_pointer
     vx_ui_ui.e_cursor_pointer['vx_value'] = {}
 
+    // (type font)
+    vx_ui_ui.t_font['vx_type'] = vx_core.t_type
+    vx_ui_ui.t_font['vx_value'] = {
+      name          : "font",
+      pkgname       : "vx/ui/ui",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "fontface": {
+          "name" : "fontface",
+          "type" : vx_ui_ui.t_fontface,
+          "multi": false
+        },
+        "fontsize": {
+          "name" : "fontsize",
+          "type" : vx_core.t_int,
+          "multi": false
+        },
+        "fontstyle": {
+          "name" : "fontstyle",
+          "type" : vx_ui_ui.t_fontstyle,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "fontstyle",
+        "type" : vx_ui_ui.t_fontstyle,
+        "multi": false
+      }
+    }
+    vx_ui_ui.e_font['vx_type'] = vx_ui_ui.t_font
+    vx_ui_ui.e_font['vx_value'] = {}
+
+    // (type fontface)
+    vx_ui_ui.t_fontface['vx_type'] = vx_core.t_type
+    vx_ui_ui.t_fontface['vx_value'] = {
+      name          : "fontface",
+      pkgname       : "vx/ui/ui",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "weight": {
+          "name" : "weight",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "unicode": {
+          "name" : "unicode",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "filelist": {
+          "name" : "filelist",
+          "type" : vx_data_file.t_filelist,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "filelist",
+        "type" : vx_data_file.t_filelist,
+        "multi": false
+      }
+    }
+    vx_ui_ui.e_fontface['vx_type'] = vx_ui_ui.t_fontface
+    vx_ui_ui.e_fontface['vx_value'] = {}
+
+    // (type fontfacelist)
+    vx_ui_ui.t_fontfacelist['vx_type'] = vx_core.t_type
+    vx_ui_ui.t_fontfacelist['vx_value'] = {
+      name          : "fontfacelist",
+      pkgname       : "vx/ui/ui",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [vx_ui_ui.t_fontface],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    vx_ui_ui.e_fontfacelist['vx_type'] = vx_ui_ui.t_fontfacelist
+
+    // (type fontfacemap)
+    vx_ui_ui.t_fontfacemap['vx_type'] = vx_core.t_type
+    vx_ui_ui.t_fontfacemap['vx_value'] = {
+      name          : "fontfacemap",
+      pkgname       : "vx/ui/ui",
+      extends       : ":map",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [vx_ui_ui.t_fontface],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    vx_ui_ui.e_fontfacemap['vx_type'] = vx_ui_ui.t_fontfacemap
+    vx_ui_ui.e_fontfacemap['vx_value'] = {}
+
+    // (type fontmap)
+    vx_ui_ui.t_fontmap['vx_type'] = vx_core.t_type
+    vx_ui_ui.t_fontmap['vx_value'] = {
+      name          : "fontmap",
+      pkgname       : "vx/ui/ui",
+      extends       : ":map",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [vx_ui_ui.t_font],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    vx_ui_ui.e_fontmap['vx_type'] = vx_ui_ui.t_fontmap
+    vx_ui_ui.e_fontmap['vx_value'] = {}
+
+    // (type fontstyle)
+    vx_ui_ui.t_fontstyle['vx_type'] = vx_core.t_type
+    vx_ui_ui.t_fontstyle['vx_value'] = {
+      name          : "fontstyle",
+      pkgname       : "vx/ui/ui",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "name",
+        "type" : vx_core.t_string,
+        "multi": false
+      }
+    }
+    vx_ui_ui.e_fontstyle['vx_type'] = vx_ui_ui.t_fontstyle
+    vx_ui_ui.e_fontstyle['vx_value'] = {}
+
+    // (type fontstylemap)
+    vx_ui_ui.t_fontstylemap['vx_type'] = vx_core.t_type
+    vx_ui_ui.t_fontstylemap['vx_value'] = {
+      name          : "fontstylemap",
+      pkgname       : "vx/ui/ui",
+      extends       : ":map",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [vx_ui_ui.t_fontstyle],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    vx_ui_ui.e_fontstylemap['vx_type'] = vx_ui_ui.t_fontstylemap
+    vx_ui_ui.e_fontstylemap['vx_value'] = {}
+
+    // (type image)
+    vx_ui_ui.t_image['vx_type'] = vx_core.t_type
+    vx_ui_ui.t_image['vx_value'] = {
+      name          : "image",
+      pkgname       : "vx/ui/ui",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "label": {
+          "name" : "label",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "file": {
+          "name" : "file",
+          "type" : vx_data_file.t_file,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "file",
+        "type" : vx_data_file.t_file,
+        "multi": false
+      }
+    }
+    vx_ui_ui.e_image['vx_type'] = vx_ui_ui.t_image
+    vx_ui_ui.e_image['vx_value'] = {}
+
     // (type layout)
     vx_ui_ui.t_layout['vx_type'] = vx_core.t_type
     vx_ui_ui.t_layout['vx_value'] = {
@@ -984,6 +2054,11 @@ export default class vx_ui_ui {
         "name": {
           "name" : "name",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "boolean-print": {
+          "name" : "boolean-print",
+          "type" : vx_ui_ui.t_boolean_print,
           "multi": false
         },
         "layoutmap": {
@@ -1155,44 +2230,6 @@ export default class vx_ui_ui {
     vx_ui_ui.e_pointstyle['vx_type'] = vx_ui_ui.t_pointstyle
     vx_ui_ui.e_pointstyle['vx_value'] = {}
 
-    // (type render)
-    vx_ui_ui.t_render['vx_type'] = vx_core.t_type
-    vx_ui_ui.t_render['vx_value'] = {
-      name          : "render",
-      pkgname       : "vx/ui/ui",
-      extends       : ":struct",
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : {},
-      proplast      : {}
-    }
-    vx_ui_ui.e_render['vx_type'] = vx_ui_ui.t_render
-    vx_ui_ui.e_render['vx_value'] = {}
-
-    // (type rendermap)
-    vx_ui_ui.t_rendermap['vx_type'] = vx_core.t_type
-    vx_ui_ui.t_rendermap['vx_value'] = {
-      name          : "rendermap",
-      pkgname       : "vx/ui/ui",
-      extends       : ":map",
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [vx_ui_ui.t_render],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : {},
-      proplast      : {}
-    }
-    vx_ui_ui.e_rendermap['vx_type'] = vx_ui_ui.t_rendermap
-    vx_ui_ui.e_rendermap['vx_value'] = {}
-
     // (type style)
     vx_ui_ui.t_style['vx_type'] = vx_core.t_type
     vx_ui_ui.t_style['vx_value'] = {
@@ -1237,9 +2274,19 @@ export default class vx_ui_ui {
           "type" : vx_ui_ui.t_cursor,
           "multi": false
         },
+        "font": {
+          "name" : "font",
+          "type" : vx_ui_ui.t_font,
+          "multi": false
+        },
+        "hidden": {
+          "name" : "hidden",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "image-background": {
           "name" : "image-background",
-          "type" : vx_data_file.t_file,
+          "type" : vx_ui_ui.t_image,
           "multi": false
         },
         "layout": {
@@ -1328,6 +2375,11 @@ export default class vx_ui_ui {
       disallowvalues: [],
       traits        : [],
       properties    : {
+        "fontfacemap": {
+          "name" : "fontfacemap",
+          "type" : vx_ui_ui.t_fontfacemap,
+          "multi": false
+        },
         "stylemap": {
           "name" : "stylemap",
           "type" : vx_ui_ui.t_stylemap,
@@ -1376,19 +2428,24 @@ export default class vx_ui_ui {
       disallowvalues: [],
       traits        : [],
       properties    : {
-        "data": {
-          "name" : "data",
-          "type" : vx_core.t_any,
+        "uid": {
+          "name" : "uid",
+          "type" : vx_core.t_string,
           "multi": false
         },
-        "eventmap": {
-          "name" : "eventmap",
-          "type" : vx_event.t_eventmap,
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
           "multi": false
         },
-        "fn-uimap-data": {
-          "name" : "fn-uimap-data",
-          "type" : vx_ui_ui.t_uimap_from_uimap_data,
+        "layout": {
+          "name" : "layout",
+          "type" : vx_ui_ui.t_layout,
+          "multi": false
+        },
+        "parent": {
+          "name" : "parent",
+          "type" : vx_core.t_string,
           "multi": false
         },
         "path": {
@@ -1396,14 +2453,19 @@ export default class vx_ui_ui {
           "type" : vx_core.t_string,
           "multi": false
         },
-        "render": {
-          "name" : "render",
-          "type" : vx_ui_ui.t_render,
+        "hidden": {
+          "name" : "hidden",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
-        "renderer": {
-          "name" : "renderer",
-          "type" : vx_ui_ui.t_layout,
+        "selected": {
+          "name" : "selected",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "selectmulti": {
+          "name" : "selectmulti",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "style": {
@@ -1416,14 +2478,14 @@ export default class vx_ui_ui {
           "type" : vx_ui_ui.t_stylelist,
           "multi": false
         },
-        "stylesheet": {
-          "name" : "stylesheet",
-          "type" : vx_ui_ui.t_stylesheet,
+        "eventmap": {
+          "name" : "eventmap",
+          "type" : vx_event.t_eventmap,
           "multi": false
         },
-        "uid": {
-          "name" : "uid",
-          "type" : vx_core.t_string,
+        "data": {
+          "name" : "data",
+          "type" : vx_core.t_any,
           "multi": false
         },
         "uimap": {
@@ -1522,6 +2584,96 @@ export default class vx_ui_ui {
     vx_ui_ui.e_uimap['vx_type'] = vx_ui_ui.t_uimap
     vx_ui_ui.e_uimap['vx_value'] = {}
 
+    // (func boolean-print)
+    vx_ui_ui.t_boolean_print['vx_value'] = {
+      name          : "boolean-print",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_boolean_print
+    }
+
+    // (func boolean-writestate<-ui)
+    vx_ui_ui.t_boolean_writestate_from_ui['vx_value'] = {
+      name          : "boolean-writestate<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_boolean_writestate_from_ui
+    }
+
+    // (func boolean-writestate<-uiengine)
+    vx_ui_ui.t_boolean_writestate_from_uiengine['vx_value'] = {
+      name          : "boolean-writestate<-uiengine",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_boolean_writestate_from_uiengine
+    }
+
+    // (func fontfacemap<-fontfacelist)
+    vx_ui_ui.t_fontfacemap_from_fontfacelist['vx_value'] = {
+      name          : "fontfacemap<-fontfacelist",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_fontfacemap_from_fontfacelist
+    }
+
+    // (func int-selected<-ui)
+    vx_ui_ui.t_int_selected_from_ui['vx_value'] = {
+      name          : "int-selected<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_int_selected_from_ui
+    }
+
     // (func layout<-style)
     vx_ui_ui.t_layout_from_style['vx_value'] = {
       name          : "layout<-style",
@@ -1538,6 +2690,78 @@ export default class vx_ui_ui {
       properties    : [],
       proplast      : {},
       fn            : vx_ui_ui.f_layout_from_style
+    }
+
+    // (func layout<-ui)
+    vx_ui_ui.t_layout_from_ui['vx_value'] = {
+      name          : "layout<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_layout_from_ui
+    }
+
+    // (func layout<-ui-layoutengine)
+    vx_ui_ui.t_layout_from_ui_layoutengine['vx_value'] = {
+      name          : "layout<-ui-layoutengine",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_layout_from_ui_layoutengine
+    }
+
+    // (func layout<-ui-layoutmap-else)
+    vx_ui_ui.t_layout_from_ui_layoutmap_else['vx_value'] = {
+      name          : "layout<-ui-layoutmap-else",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_layout_from_ui_layoutmap_else
+    }
+
+    // (func layoutengine-readstate)
+    vx_ui_ui.t_layoutengine_readstate['vx_value'] = {
+      name          : "layoutengine-readstate",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_layoutengine_readstate
     }
 
     // (func layoutmap<-layoutlist)
@@ -1558,6 +2782,60 @@ export default class vx_ui_ui {
       fn            : vx_ui_ui.f_layoutmap_from_layoutlist
     }
 
+    // (func string-selected<-ui)
+    vx_ui_ui.t_string_selected_from_ui['vx_value'] = {
+      name          : "string-selected<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_string_selected_from_ui
+    }
+
+    // (func stringlist-selected<-ui)
+    vx_ui_ui.t_stringlist_selected_from_ui['vx_value'] = {
+      name          : "stringlist-selected<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_stringlist_selected_from_ui
+    }
+
+    // (func stringlist<-ui)
+    vx_ui_ui.t_stringlist_from_ui['vx_value'] = {
+      name          : "stringlist<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_stringlist_from_ui
+    }
+
     // (func stylemap<-stylelist)
     vx_ui_ui.t_stylemap_from_stylelist['vx_value'] = {
       name          : "stylemap<-stylelist",
@@ -1574,6 +2852,24 @@ export default class vx_ui_ui {
       properties    : [],
       proplast      : {},
       fn            : vx_ui_ui.f_stylemap_from_stylelist
+    }
+
+    // (func stylesheet-readstate)
+    vx_ui_ui.t_stylesheet_readstate['vx_value'] = {
+      name          : "stylesheet-readstate",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_stylesheet_readstate
     }
 
     // (func stylesheet-render)
@@ -1594,6 +2890,78 @@ export default class vx_ui_ui {
       fn            : vx_ui_ui.f_stylesheet_render
     }
 
+    // (func ui-child<-ui-uid)
+    vx_ui_ui.t_ui_child_from_ui_uid['vx_value'] = {
+      name          : "ui-child<-ui-uid",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_child_from_ui_uid
+    }
+
+    // (func ui-from<-event)
+    vx_ui_ui.t_ui_from_from_event['vx_value'] = {
+      name          : "ui-from<-event",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_from_from_event
+    }
+
+    // (func ui-layout<-ui)
+    vx_ui_ui.t_ui_layout_from_ui['vx_value'] = {
+      name          : "ui-layout<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_layout_from_ui
+    }
+
+    // (func ui-layout<-ui-layoutengine)
+    vx_ui_ui.t_ui_layout_from_ui_layoutengine['vx_value'] = {
+      name          : "ui-layout<-ui-layoutengine",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_layout_from_ui_layoutengine
+    }
+
     // (func ui-layout<-ui-layoutmap-else)
     vx_ui_ui.t_ui_layout_from_ui_layoutmap_else['vx_value'] = {
       name          : "ui-layout<-ui-layoutmap-else",
@@ -1610,6 +2978,42 @@ export default class vx_ui_ui {
       properties    : [],
       proplast      : {},
       fn            : vx_ui_ui.f_ui_layout_from_ui_layoutmap_else
+    }
+
+    // (func ui-layout<-ui-uiengine)
+    vx_ui_ui.t_ui_layout_from_ui_uiengine['vx_value'] = {
+      name          : "ui-layout<-ui-uiengine",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_layout_from_ui_uiengine
+    }
+
+    // (func ui-readstate<-uid)
+    vx_ui_ui.t_ui_readstate_from_uid['vx_value'] = {
+      name          : "ui-readstate<-uid",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_readstate_from_uid
     }
 
     // (func ui-render)
@@ -1666,9 +3070,9 @@ export default class vx_ui_ui {
       fn            : vx_ui_ui.f_ui_render_from_ui_orig_parent
     }
 
-    // (func ui<-renderer-ui-orig-parent)
-    vx_ui_ui.t_ui_from_renderer_ui_orig_parent['vx_value'] = {
-      name          : "ui<-renderer-ui-orig-parent",
+    // (func ui-selected<-ui)
+    vx_ui_ui.t_ui_selected_from_ui['vx_value'] = {
+      name          : "ui-selected<-ui",
       pkgname       : "vx/ui/ui",
       extends       : ":func",
       idx           : 0,
@@ -1681,7 +3085,97 @@ export default class vx_ui_ui {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : vx_ui_ui.f_ui_from_renderer_ui_orig_parent
+      fn            : vx_ui_ui.f_ui_selected_from_ui
+    }
+
+    // (func ui-writechild<-ui-child)
+    vx_ui_ui.t_ui_writechild_from_ui_child['vx_value'] = {
+      name          : "ui-writechild<-ui-child",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_writechild_from_ui_child
+    }
+
+    // (func ui-writechildmap<-ui-childmap)
+    vx_ui_ui.t_ui_writechildmap_from_ui_childmap['vx_value'] = {
+      name          : "ui-writechildmap<-ui-childmap",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_writechildmap_from_ui_childmap
+    }
+
+    // (func ui<-layout-ui-orig-parent)
+    vx_ui_ui.t_ui_from_layout_ui_orig_parent['vx_value'] = {
+      name          : "ui<-layout-ui-orig-parent",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_from_layout_ui_orig_parent
+    }
+
+    // (func uid-selected<-ui)
+    vx_ui_ui.t_uid_selected_from_ui['vx_value'] = {
+      name          : "uid-selected<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_uid_selected_from_ui
+    }
+
+    // (func uiengine-readstate)
+    vx_ui_ui.t_uiengine_readstate['vx_value'] = {
+      name          : "uiengine-readstate",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_uiengine_readstate
     }
 
     // (func uiengine-render)
@@ -1700,6 +3194,42 @@ export default class vx_ui_ui {
       properties    : [],
       proplast      : {},
       fn            : vx_ui_ui.f_uiengine_render
+    }
+
+    // (func uilist-selected<-ui)
+    vx_ui_ui.t_uilist_selected_from_ui['vx_value'] = {
+      name          : "uilist-selected<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_uilist_selected_from_ui
+    }
+
+    // (func uilist<-uimap)
+    vx_ui_ui.t_uilist_from_uimap['vx_value'] = {
+      name          : "uilist<-uimap",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_uilist_from_uimap
     }
 
     // (func uimap-layout<-uimap-layoutmap-else)
@@ -1788,6 +3318,13 @@ export default class vx_ui_ui {
       "layout-background"
     ))
 
+    // (const layout-button)
+    Object.assign(vx_ui_ui.c_layout_button, vx_core.f_new(
+      vx_ui_ui.t_layout,
+      ":name",
+      "layout-button"
+    ))
+
     // (const layout-combobox)
     Object.assign(vx_ui_ui.c_layout_combobox, vx_core.f_new(
       vx_ui_ui.t_layout,
@@ -1807,6 +3344,13 @@ export default class vx_ui_ui {
       vx_ui_ui.t_layout,
       ":name",
       "layout-flow-columns"
+    ))
+
+    // (const layout-flow-item)
+    Object.assign(vx_ui_ui.c_layout_flow_item, vx_core.f_new(
+      vx_ui_ui.t_layout,
+      ":name",
+      "layout-flow-item"
     ))
 
     // (const layout-flow-rows)
@@ -1919,6 +3463,13 @@ export default class vx_ui_ui {
       vx_ui_ui.t_layout,
       ":name",
       "layout-textentry"
+    ))
+
+    // (const layout-titlebar)
+    Object.assign(vx_ui_ui.c_layout_titlebar, vx_core.f_new(
+      vx_ui_ui.t_layout,
+      ":name",
+      "layout-titlebar"
     ))
 
     // (const pin-bottom)

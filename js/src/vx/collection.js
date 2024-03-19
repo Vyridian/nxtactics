@@ -133,7 +133,7 @@ export default class vx_collection {
    * @function any_from_for_until_loop
    * Returns a value using an until loop. Maximum 10000 times.
    * @param  {typemap} generic
-   * @param  {any} start
+   * @param  {generic_any_1} start
    * @param  {boolean_from_any} fn_until
    * @param  {any_from_any} fn_loop
    * @return {any-1}
@@ -149,7 +149,7 @@ export default class vx_collection {
   static f_any_from_for_until_loop(generic, start, fn_until, fn_loop) {
     const generic_any_1 = generic["any-1"]
     let output = vx_core.f_empty(generic_any_1)
-    output = vx_collection.f_any_from_for_until_loop_max({"any-1": vx_core.t_any}, start, fn_until, fn_loop, 10000)
+    output = vx_collection.f_any_from_for_until_loop_max({"any-1": generic_any_1}, start, fn_until, fn_loop, 10000)
     return output
   }
 
@@ -165,7 +165,7 @@ export default class vx_collection {
    *     output = (fn-loop output)
    *     continue = (fn-until output)))
    * @param  {typemap} generic
-   * @param  {any} start
+   * @param  {generic_any_1} start
    * @param  {boolean_from_any} fn_until
    * @param  {any_from_any} fn_loop
    * @param  {int} max
@@ -190,7 +190,7 @@ export default class vx_collection {
    * @function any_from_for_while_loop
    * Returns a value using a while loop. Maximum 1000 times.
    * @param  {typemap} generic
-   * @param  {any} start
+   * @param  {generic_any_1} start
    * @param  {boolean_from_any} fn_while
    * @param  {any_from_any} fn_loop
    * @return {any-1}
@@ -206,7 +206,7 @@ export default class vx_collection {
   static f_any_from_for_while_loop(generic, start, fn_while, fn_loop) {
     const generic_any_1 = generic["any-1"]
     let output = vx_core.f_empty(generic_any_1)
-    output = vx_collection.f_any_from_for_while_loop_max({"any-1": vx_core.t_any}, start, fn_while, fn_loop, 1000)
+    output = vx_collection.f_any_from_for_while_loop_max({"any-1": generic_any_1}, start, fn_while, fn_loop, 1000)
     return output
   }
 
@@ -223,7 +223,7 @@ export default class vx_collection {
    *    count += 1
    *    output = (fn-loop output))))
    * @param  {typemap} generic
-   * @param  {any} start
+   * @param  {generic_any_1} start
    * @param  {boolean_from_any} fn_while
    * @param  {any_from_any} fn_loop
    * @param  {int} max
@@ -241,6 +241,77 @@ export default class vx_collection {
     const generic_any_1 = generic["any-1"]
     let output = vx_core.f_empty(generic_any_1)
     output = vx_collection.vx_any_from_for_while_loop_max(generic_any_1, start, fn_while, fn_loop, max)
+    return output
+  }
+
+  /**
+   * @function int_from_map_key
+   * Returns the position of key in any map.
+   * @param  {generic_map_1} map
+   * @param  {string} key
+   * @return {int}
+   */
+  static t_int_from_map_key = {
+    vx_type: vx_core.t_type
+  }
+  static e_int_from_map_key = {
+    vx_type: vx_collection.t_int_from_map_key
+  }
+
+  // (func int<-map-key)
+  static f_int_from_map_key(map, key) {
+    let output = vx_core.e_int
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_int},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const keys = vx_collection.f_stringlist_from_map(map)
+        return vx_collection.f_int_from_stringlist_find(keys, key)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function int_from_stringlist_find
+   * Returns the position (first position is 1) of find text in a stringlist.
+   * @param  {stringlist} stringlist
+   * @param  {string} find
+   * @return {int}
+   */
+  static t_int_from_stringlist_find = {
+    vx_type: vx_core.t_type
+  }
+  static e_int_from_stringlist_find = {
+    vx_type: vx_collection.t_int_from_stringlist_find
+  }
+
+  // (func int<-stringlist-find)
+  static f_int_from_stringlist_find(stringlist, find) {
+    let output = vx_core.e_int
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_int, "list-1": vx_core.t_intlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const poslist = vx_core.f_list_from_list_intany(
+          {"any-1": vx_core.t_int, "any-2": vx_core.t_string, "list-1": vx_core.t_intlist, "list-2": vx_core.t_stringlist},
+          stringlist,
+          vx_core.f_new(vx_core.t_any_from_int_any, (pos, value) => 
+            vx_core.f_if_1(
+              {"any-1": vx_core.t_int},
+              vx_core.f_eq(find, value),
+              pos,
+              0
+            ))
+        )
+        const gt0list = vx_collection.f_list_from_list_filter(
+          {"any-1": vx_core.t_int, "any-2": vx_core.t_int, "list-1": vx_core.t_intlist, "list-2": vx_core.t_intlist},
+          poslist,
+          vx_core.f_new(vx_core.t_any_from_any, (item) => item)
+        )
+        return vx_core.f_first_from_list({"any-1": vx_core.t_int, "list-1": vx_core.t_intlist}, gt0list)
+      })
+    )
     return output
   }
 
@@ -319,7 +390,6 @@ export default class vx_collection {
 
   // (func list<-for-end-loop)
   static f_list_from_for_end_loop(generic, start, end, fn_loop) {
-    const generic_any_1 = generic["any-1"]
     const generic_list_1 = generic["list-1"]
     let output = vx_core.f_empty(generic_list_1)
     output = vx_collection.vx_list_from_for_end_loop(generic_list_1, start, end, fn_loop)
@@ -330,7 +400,7 @@ export default class vx_collection {
    * @function list_from_for_while_loop
    * Returns a list of any-1 using a while loop. Max: 1000
    * @param  {typemap} generic
-   * @param  {any} start
+   * @param  {generic_any_1} start
    * @param  {boolean_from_any} fn_while
    * @param  {any_from_any} fn_loop
    * @return {list-1}
@@ -344,10 +414,9 @@ export default class vx_collection {
 
   // (func list<-for-while-loop)
   static f_list_from_for_while_loop(generic, start, fn_while, fn_loop) {
-    const generic_any_1 = generic["any-1"]
     const generic_list_1 = generic["list-1"]
     let output = vx_core.f_empty(generic_list_1)
-    output = vx_collection.f_list_from_for_while_loop_max({"any-1": vx_core.t_any, "list-1": vx_core.t_list}, start, fn_while, fn_loop, 1000)
+    output = vx_collection.f_list_from_for_while_loop_max({"list-1": generic_list_1}, start, fn_while, fn_loop, 1000)
     return output
   }
 
@@ -361,7 +430,7 @@ export default class vx_collection {
    * 5. if (= check true) output := (copy output value), Go to 3 (Maximum max times).
    * 6. else end.
    * @param  {typemap} generic
-   * @param  {any} start
+   * @param  {generic_any_1} start
    * @param  {boolean_from_any} fn_while
    * @param  {any_from_any} fn_loop
    * @param  {int} max
@@ -376,7 +445,6 @@ export default class vx_collection {
 
   // (func list<-for-while-loop-max)
   static f_list_from_for_while_loop_max(generic, start, fn_while, fn_loop, max) {
-    const generic_any_1 = generic["any-1"]
     const generic_list_1 = generic["list-1"]
     let output = vx_core.f_empty(generic_list_1)
     output = vx_collection.vx_list_from_for_while_loop_max(generic_list_1, start, fn_while, fn_loop, max)
@@ -387,7 +455,7 @@ export default class vx_collection {
    * @function list_from_list_end
    * Returns a sub list from positions 0 to end.
    * @param  {typemap} generic
-   * @param  {list} values
+   * @param  {generic_list_1} values
    * @param  {int} end
    * @return {list-1}
    */
@@ -400,10 +468,9 @@ export default class vx_collection {
 
   // (func list<-list-end)
   static f_list_from_list_end(generic, values, end) {
-    const generic_any_1 = generic["any-1"]
     const generic_list_1 = generic["list-1"]
     let output = vx_core.f_empty(generic_list_1)
-    output = vx_collection.f_list_from_list_start_end({"any-1": vx_core.t_any, "list-1": vx_core.t_list}, values, 1, end)
+    output = vx_collection.f_list_from_list_start_end({"list-1": generic_list_1}, values, 1, end)
     return output
   }
 
@@ -411,7 +478,7 @@ export default class vx_collection {
    * @function list_from_list_filter
    * Filter List to only include non-empty values
    * @param  {typemap} generic
-   * @param  {list} vallist
+   * @param  {generic_list_2} vallist
    * @param  {any_from_any} fn_filter
    * @return {list-1}
    */
@@ -424,7 +491,6 @@ export default class vx_collection {
 
   // (func list<-list-filter)
   static f_list_from_list_filter(generic, vallist, fn_filter) {
-    const generic_any_1 = generic["any-1"]
     const generic_list_1 = generic["list-1"]
     let output = vx_core.f_empty(generic_list_1)
     output = vx_collection.vx_list_from_list_filter(generic_list_1, vallist, fn_filter)
@@ -435,7 +501,7 @@ export default class vx_collection {
    * @function list_from_list_filtertypes
    * Filter List to only include matching types
    * @param  {typemap} generic
-   * @param  {list} vallist
+   * @param  {generic_list_2} vallist
    * @param  {typelist} ... filtertypes
    * @return {list-1}
    */
@@ -448,12 +514,11 @@ export default class vx_collection {
 
   // (func list<-list-filtertypes)
   static f_list_from_list_filtertypes(generic, vallist, ...filtertypes) {
-    const generic_any_1 = generic["any-1"]
     const generic_list_1 = generic["list-1"]
     let output = vx_core.f_empty(generic_list_1)
     filtertypes = vx_core.f_new(vx_core.t_typelist, ...filtertypes)
     output = vx_collection.f_list_from_list_filter(
-      {"any-1": vx_core.t_any, "list-1": vx_core.t_list},
+      {"any-1": vx_core.t_any, "list-1": generic_list_1},
       vallist,
       vx_core.f_new(vx_core.t_any_from_any, (val) => 
         vx_core.f_if(
@@ -469,7 +534,7 @@ export default class vx_collection {
    * @function list_from_list_start
    * Returns a sub list from start to list end.
    * @param  {typemap} generic
-   * @param  {list} values
+   * @param  {generic_list_1} values
    * @param  {int} start
    * @return {list-1}
    */
@@ -482,11 +547,10 @@ export default class vx_collection {
 
   // (func list<-list-start)
   static f_list_from_list_start(generic, values, start) {
-    const generic_any_1 = generic["any-1"]
     const generic_list_1 = generic["list-1"]
     let output = vx_core.f_empty(generic_list_1)
     output = vx_collection.f_list_from_list_start_end(
-      {"any-1": vx_core.t_any, "list-1": vx_core.t_list},
+      {"list-1": generic_list_1},
       values,
       start,
       vx_core.f_length_from_list(values)
@@ -498,7 +562,7 @@ export default class vx_collection {
    * @function list_from_list_start_end
    * Returns a list from another list
    * @param  {typemap} generic
-   * @param  {list} values
+   * @param  {generic_list_1} values
    * @param  {int} start
    * @param  {int} end
    * @return {list-1}
@@ -512,10 +576,33 @@ export default class vx_collection {
 
   // (func list<-list-start-end)
   static f_list_from_list_start_end(generic, values, start, end) {
-    const generic_any_1 = generic["any-1"]
     const generic_list_1 = generic["list-1"]
     let output = vx_core.f_empty(generic_list_1)
     output = vx_collection.vx_list_from_list_start_end(generic_list_1, values, start, end)
+    return output
+  }
+
+  /**
+   * @function stringlist_from_map
+   * Returns a stringlist of keys from any map.
+   * @param  {generic_map_1} map
+   * @return {stringlist}
+   */
+  static t_stringlist_from_map = {
+    vx_type: vx_core.t_type
+  }
+  static e_stringlist_from_map = {
+    vx_type: vx_collection.t_stringlist_from_map
+  }
+
+  // (func stringlist<-map)
+  static f_stringlist_from_map(map) {
+    let output = vx_core.e_stringlist
+    output = vx_core.f_list_from_map_1(
+      {"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist},
+      map,
+      vx_core.f_new(vx_core.t_any_from_key_value, ([key, value]) => key)
+    )
     return output
   }
 
@@ -530,6 +617,8 @@ export default class vx_collection {
       "any<-for-until-loop-max": vx_collection.e_any_from_for_until_loop_max,
       "any<-for-while-loop": vx_collection.e_any_from_for_while_loop,
       "any<-for-while-loop-max": vx_collection.e_any_from_for_while_loop_max,
+      "int<-map-key": vx_collection.e_int_from_map_key,
+      "int<-stringlist-find": vx_collection.e_int_from_stringlist_find,
       "is-list": vx_collection.e_is_list,
       "is-map": vx_collection.e_is_map,
       "list<-for-end-loop": vx_collection.e_list_from_for_end_loop,
@@ -539,13 +628,16 @@ export default class vx_collection {
       "list<-list-filter": vx_collection.e_list_from_list_filter,
       "list<-list-filtertypes": vx_collection.e_list_from_list_filtertypes,
       "list<-list-start": vx_collection.e_list_from_list_start,
-      "list<-list-start-end": vx_collection.e_list_from_list_start_end
+      "list<-list-start-end": vx_collection.e_list_from_list_start_end,
+      "stringlist<-map": vx_collection.e_stringlist_from_map
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "any<-for-until-loop": vx_collection.t_any_from_for_until_loop,
       "any<-for-until-loop-max": vx_collection.t_any_from_for_until_loop_max,
       "any<-for-while-loop": vx_collection.t_any_from_for_while_loop,
       "any<-for-while-loop-max": vx_collection.t_any_from_for_while_loop_max,
+      "int<-map-key": vx_collection.t_int_from_map_key,
+      "int<-stringlist-find": vx_collection.t_int_from_stringlist_find,
       "is-list": vx_collection.t_is_list,
       "is-map": vx_collection.t_is_map,
       "list<-for-end-loop": vx_collection.t_list_from_for_end_loop,
@@ -555,7 +647,8 @@ export default class vx_collection {
       "list<-list-filter": vx_collection.t_list_from_list_filter,
       "list<-list-filtertypes": vx_collection.t_list_from_list_filtertypes,
       "list<-list-start": vx_collection.t_list_from_list_start,
-      "list<-list-start-end": vx_collection.t_list_from_list_start_end
+      "list<-list-start-end": vx_collection.t_list_from_list_start_end,
+      "stringlist<-map": vx_collection.t_stringlist_from_map
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -639,6 +732,42 @@ export default class vx_collection {
       properties    : [],
       proplast      : {},
       fn            : vx_collection.f_any_from_for_while_loop_max
+    }
+
+    // (func int<-map-key)
+    vx_collection.t_int_from_map_key['vx_value'] = {
+      name          : "int<-map-key",
+      pkgname       : "vx/collection",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_collection.f_int_from_map_key
+    }
+
+    // (func int<-stringlist-find)
+    vx_collection.t_int_from_stringlist_find['vx_value'] = {
+      name          : "int<-stringlist-find",
+      pkgname       : "vx/collection",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_collection.f_int_from_stringlist_find
     }
 
     // (func is-list)
@@ -819,6 +948,24 @@ export default class vx_collection {
       properties    : [],
       proplast      : {},
       fn            : vx_collection.f_list_from_list_start_end
+    }
+
+    // (func stringlist<-map)
+    vx_collection.t_stringlist_from_map['vx_value'] = {
+      name          : "stringlist<-map",
+      pkgname       : "vx/collection",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_collection.f_stringlist_from_map
     }
 
   }

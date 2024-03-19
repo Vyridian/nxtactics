@@ -47,13 +47,14 @@ export default class nx_tactics_damage_test {
         vx_core.f_new(
           vx_core.t_intmap,
           "breakdown", 0,
-          "duress", 0,
+          "burden", 0,
+          "deck-disorder", 0,
+          "deck-trauma", 0,
+          "deck-wound", 0,
           "fatigue", 0,
-          "irrationaldeck", 0,
-          "stagger", 0,
+          "strain", 0,
           "stress", 0,
           "trauma", 0,
-          "unwillingdeck", 0,
           "wound-ca", 0,
           "wound-da", 0,
           "wound-ha", 0,
@@ -71,8 +72,7 @@ export default class nx_tactics_damage_test {
           "wound-sa", 0,
           "wound-sj", 0,
           "wound-sk", 0,
-          "wound-sq", 0,
-          "wounddeck", 0
+          "wound-sq", 0
         ),
       "funcmap",
         vx_core.f_new(

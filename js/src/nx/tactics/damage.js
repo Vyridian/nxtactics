@@ -21,44 +21,58 @@ export default class nx_tactics_damage {
   static c_breakdown = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'breakdown'}}
 
   /**
-   * Constant: duress
-   * * Temporary Will Damage/Fear/Horror. Doing things against your beliefs causes Duress.
-   * * While you have more Duress than Will, you are Shaken.
-   * * Shaken: Cannot play odd [Defend] cards and your second action may only be [Recover]
+   * Constant: burden
+   * * Temporary Movement Damage. Carrying loads, entanglement, or tissue damage cause Burden.
+   * * While you have more [Burden] than [Move], you are [Encumbered].
+   * * [Encumbered]: Cannot play [Counters] and [Move] actions are halved (rounded up).
    * {card}
    */
-  static c_duress = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'duress'}}
+  static c_burden = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'burden'}}
+
+  /**
+   * Constant: deck-disorder
+   * Damage to the Mind
+   * {deck}
+   */
+  static c_deck_disorder = {vx_type: nx_tactics_base.t_deck, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'deck-disorder'}}
+
+  /**
+   * Constant: deck-trauma
+   * Damage to the Will
+   * {deck}
+   */
+  static c_deck_trauma = {vx_type: nx_tactics_base.t_deck, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'deck-trauma'}}
+
+  /**
+   * Constant: deck-wound
+   * Physical Damage Deck
+   * {deck}
+   */
+  static c_deck_wound = {vx_type: nx_tactics_base.t_deck, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'deck-wound'}}
 
   /**
    * Constant: fatigue
    * * Temporary Body Damage. Hard work and strikes in combat cause Fatigue.
-   * * While you have more Fatigue than [Body], you are Exhausted.
-   * * Exhausted: Cannot play odd [Attack] cards and your second action may only be [Recover].
+   * * While you have more Fatigue than [Body], you are [Exhausted].
+   * * [Exhausted]: Cannot play odd [Attack] cards and your second action may only be [Recover].
    * {card}
    */
   static c_fatigue = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'fatigue'}}
 
   /**
-   * Constant: irrationaldeck
-   * Damage to the Mind
-   * {deck}
-   */
-  static c_irrationaldeck = {vx_type: nx_tactics_base.t_deck, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'irrationaldeck'}}
-
-  /**
-   * Constant: stagger
-   * * Temporary Speed Damage/Restraint.
-   * * While you have more Stagger than [Speed], you are Slowed.
-   * * Slowed: [Move] actions are halved (rounded up).
+   * Constant: strain
+   * * Temporary Mind Damage/Distraction/Surprise/Shock. Intense concentration, pressure, and multitasking causes Strain.
+   * * While you have more Strain than [Mind], you are [Confused].
+   * * [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover].
    * {card}
    */
-  static c_stagger = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'stagger'}}
+  static c_strain = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'strain'}}
 
   /**
    * Constant: stress
-   * * Temporary Mind Damage/Distraction/Surprise/Shock.
-   * * While you have more Stress than [Mind], you are Stunned.
-   * * Stunned: Cannot play odd [Focus] cards and your second action may only be [Recover].
+   * * Temporary Will Damage. Doing or facing things against your beliefs causes Stress.
+   * * While you have more Stress than [Will], you are [Shaken].
+   * * [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]
    * {card}
    */
   static c_stress = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'stress'}}
@@ -69,13 +83,6 @@ export default class nx_tactics_damage {
    * {card}
    */
   static c_trauma = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'trauma'}}
-
-  /**
-   * Constant: unwillingdeck
-   * Damage to the Will
-   * {deck}
-   */
-  static c_unwillingdeck = {vx_type: nx_tactics_base.t_deck, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'unwillingdeck'}}
 
   /**
    * Constant: wound-ca
@@ -185,25 +192,19 @@ export default class nx_tactics_damage {
    */
   static c_wound_sq = {vx_type: nx_tactics_damage.t_wound, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'wound-sq'}}
 
-  /**
-   * Constant: wounddeck
-   * Physical Damage Deck
-   * {deck}
-   */
-  static c_wounddeck = {vx_type: nx_tactics_base.t_deck, vx_constdef: {pkgname: 'nx/tactics/damage', name: 'wounddeck'}}
-
 
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
       "breakdown": nx_tactics_damage.c_breakdown,
-      "duress": nx_tactics_damage.c_duress,
+      "burden": nx_tactics_damage.c_burden,
+      "deck-disorder": nx_tactics_damage.c_deck_disorder,
+      "deck-trauma": nx_tactics_damage.c_deck_trauma,
+      "deck-wound": nx_tactics_damage.c_deck_wound,
       "fatigue": nx_tactics_damage.c_fatigue,
-      "irrationaldeck": nx_tactics_damage.c_irrationaldeck,
-      "stagger": nx_tactics_damage.c_stagger,
+      "strain": nx_tactics_damage.c_strain,
       "stress": nx_tactics_damage.c_stress,
       "trauma": nx_tactics_damage.c_trauma,
-      "unwillingdeck": nx_tactics_damage.c_unwillingdeck,
       "wound-ca": nx_tactics_damage.c_wound_ca,
       "wound-da": nx_tactics_damage.c_wound_da,
       "wound-ha": nx_tactics_damage.c_wound_ha,
@@ -221,8 +222,7 @@ export default class nx_tactics_damage {
       "wound-sa": nx_tactics_damage.c_wound_sa,
       "wound-sj": nx_tactics_damage.c_wound_sj,
       "wound-sk": nx_tactics_damage.c_wound_sk,
-      "wound-sq": nx_tactics_damage.c_wound_sq,
-      "wounddeck": nx_tactics_damage.c_wounddeck
+      "wound-sq": nx_tactics_damage.c_wound_sq
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "wound": nx_tactics_damage.e_wound
@@ -261,6 +261,11 @@ export default class nx_tactics_damage {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -285,11 +290,21 @@ export default class nx_tactics_damage {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -303,62 +318,123 @@ export default class nx_tactics_damage {
       "Breakdown"
     ))
 
-    // (const duress)
-    Object.assign(nx_tactics_damage.c_duress, vx_core.f_new(
+    // (const burden)
+    Object.assign(nx_tactics_damage.c_burden, vx_core.f_new(
       nx_tactics_base.t_card,
       ":name",
-      "Duress",
+      "Burden"
+    ))
+
+    // (const deck-disorder)
+    Object.assign(nx_tactics_damage.c_deck_disorder, vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Disorder",
       ":titles",
-      "Doubt"
+      "Crazed, Insane, Nonsensical, Obsessed, Unhinged",
+      ":summary",
+      "* S-Hack Blood/Gore/Dismember/Stress\n* H-Slash Blood/Burden\n* C-Bash/Fatigue/Push/Fatigue\n* D-Pierce/Shock/Stun/Pin/Disable/Strain"
+    ))
+
+    // (const deck-trauma)
+    Object.assign(nx_tactics_damage.c_deck_trauma, vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Trauma/Crisis",
+      ":titles",
+      "Apathy, Cowed, Berserk, Broken, Depression, Servitude, Surly",
+      ":summary",
+      "* S-Hack Blood/Gore/Dismember\n* H-Slash Blood/Slow\n* C-Bash/Fatigue/Push\n* D-Pierce/Stun/Pin/Disable"
+    ))
+
+    // (const deck-wound)
+    Object.assign(nx_tactics_damage.c_deck_wound, vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Wound",
+      ":summary",
+      "* S-Hack Blood/Gore/Dismember\n* H-Slash Blood/Slow\n* C-Bash/Fatigue/Push\n* D-Pierce/Stab/Stun/Pin/Disable",
+      ":cardlist",
+      vx_core.f_new(
+        nx_tactics_base.t_cardlist,
+        nx_tactics_damage.c_wound_j1,
+        nx_tactics_damage.c_wound_j2,
+        nx_tactics_damage.c_wound_ca,
+        nx_tactics_damage.c_wound_da,
+        nx_tactics_damage.c_wound_ha,
+        nx_tactics_damage.c_wound_sa,
+        nx_tactics_damage.c_wound_sk,
+        nx_tactics_damage.c_wound_sq,
+        nx_tactics_damage.c_wound_sj,
+        nx_tactics_damage.c_wound_s5,
+        nx_tactics_damage.c_wound_s4,
+        nx_tactics_damage.c_wound_s3,
+        nx_tactics_damage.c_wound_s2
+      )
     ))
 
     // (const fatigue)
     Object.assign(nx_tactics_damage.c_fatigue, vx_core.f_new(
       nx_tactics_base.t_card,
       ":name",
-      "Fatigue"
+      "Fatigue/Weaken/Exertion/Strain"
     ))
 
-    // (const irrationaldeck)
-    Object.assign(nx_tactics_damage.c_irrationaldeck, vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Irrational",
-      ":titles",
-      "Crazed, Insane, Nonsensical, Obsessed, Unhinged",
-      ":summary",
-      "* S-Hack Blood/Gore/Dismember/Doubt\n* H-Slash Blood/Slow\n* C-Bash/Fatigue/Push\n* D-Pierce/Shock/Stun/Pin/Disable/Stress"
-    ))
-
-    // (const stagger)
-    Object.assign(nx_tactics_damage.c_stagger, vx_core.f_new(
+    // (const strain)
+    Object.assign(nx_tactics_damage.c_strain, vx_core.f_new(
       nx_tactics_base.t_card,
       ":name",
-      "Stagger"
+      "Strain/Distraction"
     ))
 
     // (const stress)
     Object.assign(nx_tactics_damage.c_stress, vx_core.f_new(
       nx_tactics_base.t_card,
       ":name",
+      "Stress/Duress/Horror",
+      ":titles",
       "Stress"
     ))
 
     // (const trauma)
     Object.assign(nx_tactics_damage.c_trauma, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
-
-    // (const unwillingdeck)
-    Object.assign(nx_tactics_damage.c_unwillingdeck, vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Unwilling",
-      ":titles",
-      "Apathy, Cowed, Berserk, Broken, Depression, Servitude, Surly",
-      ":summary",
-      "* S-Hack Blood/Gore/Dismember\n* H-Slash Blood/Slow\n* C-Bash/Fatigue/Push\n* D-Pierce/Stun/Pin/Disable"
-    ))
 
     // (const wound-ca)
     Object.assign(nx_tactics_damage.c_wound_ca, vx_core.f_new(
@@ -512,32 +588,6 @@ export default class nx_tactics_damage {
       nx_tactics_damage.t_wound,
       ":doc",
       "Hack: Lower Chest/Middle Back/Lungs/Heart"
-    ))
-
-    // (const wounddeck)
-    Object.assign(nx_tactics_damage.c_wounddeck, vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Wound Deck",
-      ":summary",
-      "* S-Hack Blood/Gore/Dismember\n* H-Slash Blood/Slow\n* C-Bash/Fatigue/Push\n* D-Stab/Pierce/Stun/Pin/Disable",
-      ":cardlist",
-      vx_core.f_new(
-        nx_tactics_base.t_cardlist,
-        nx_tactics_damage.c_wound_j1,
-        nx_tactics_damage.c_wound_j2,
-        nx_tactics_damage.c_wound_ca,
-        nx_tactics_damage.c_wound_da,
-        nx_tactics_damage.c_wound_ha,
-        nx_tactics_damage.c_wound_sa,
-        nx_tactics_damage.c_wound_sk,
-        nx_tactics_damage.c_wound_sq,
-        nx_tactics_damage.c_wound_sj,
-        nx_tactics_damage.c_wound_s5,
-        nx_tactics_damage.c_wound_s4,
-        nx_tactics_damage.c_wound_s3,
-        nx_tactics_damage.c_wound_s2
-      )
     ))
 
   }

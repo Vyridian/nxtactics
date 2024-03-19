@@ -1502,66 +1502,6 @@ a crew member is exposed and may be targetted separately from the vehicle at -1.
       :name "Combat Skills"
       :skillmap
        (skillmap
-        :Defend
-         (skill
-          :name "Defend"
-          :titles "Armorer, Defender, Shield Bearer, Shield Warden, Warder"
-          :stat "Body"
-          :abilitymap
-           (abilitymap
-            :Armorsmithing
-             (ability
-              :name "Armorsmithing"
-              :summary "* The ability to repair, improve, or even create armor.")
-            :Counterattack
-             (ability
-              :name "Counterattack")
-            "High Block"
-             (ability
-              :name "High Block"
-              :summary
-               "-1 Speed
-+4 Defense vs. [High Attack]
-+1 Defense vs. other attacks")
-            "Low Block"
-             (ability
-              :name "Low Block"
-              :summary
-               "-1 Speed
-+4 Defense vs. [Low Attack]
-+1 Defense vs. other attacks")
-            "Powered Armor"
-             (ability
-              :name "Powered Armor")
-            "Shield Bash"
-             (ability
-              :name "Shield Bash")
-            "Shield Block"
-             (ability
-              :name "Shield Block"
-              :summary "* [Defend] [Damage]: Add Shield [Armor] to your [Armor].")
-            "Shield Charge"
-             (ability
-              :name "Shield Charge")
-            "Shield Guard"
-             (ability
-              :name "Shield Guard"
-              :summary "* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].")
-            "Shield Sacrifice"
-             (ability
-              :name "Shield Sacrifice"
-              :summary "* [Club] [Defend] [Damage]: The shield becomes the target of any [Overwhelm] damage."))
-          :specialtymap
-           (specialtymap
-            "Medium Armor"
-             (specialty
-              :name "Medium Armor")
-            "Heavy Armor"
-             (specialty
-              :name "Heavy Armor")
-            :Shields
-             (specialty
-              :name "Shields")))
         "Close Combat"
          (skill
           :name "Close Combat"
@@ -3070,6 +3010,66 @@ each separate combo.")
 * Mushin is achieved when a fighter feels no anger, fear or ego during combat, so the fighter is totally free to act and react towards an opponent without hesitation. At this point, a person relies not on what they think should be the next move, but what is felt intuitively.
 * A martial artist would likely have to train for many years to be capable of mushin. This allows time for combinations of movements and exchanges of techniques to be practiced repetitively many thousands of times, until they can be performed spontaneously, without conscious thought."
               :titles "Mushin")))
+        :Defense
+         (skill
+          :name "Defense"
+          :titles "Armorer, Defender, Shield Bearer, Shield Warden, Warder"
+          :stat "Body"
+          :abilitymap
+           (abilitymap
+            :Armorsmithing
+             (ability
+              :name "Armorsmithing"
+              :summary "* The ability to repair, improve, or even create armor.")
+            :Counterattack
+             (ability
+              :name "Counterattack")
+            "High Block"
+             (ability
+              :name "High Block"
+              :summary
+               "-1 Speed
++4 Defense vs. [High Attack]
++1 Defense vs. other attacks")
+            "Low Block"
+             (ability
+              :name "Low Block"
+              :summary
+               "-1 Speed
++4 Defense vs. [Low Attack]
++1 Defense vs. other attacks")
+            "Powered Armor"
+             (ability
+              :name "Powered Armor")
+            "Shield Bash"
+             (ability
+              :name "Shield Bash")
+            "Shield Block"
+             (ability
+              :name "Shield Block"
+              :summary "* [Defend] [Damage]: Add Shield [Armor] to your [Armor].")
+            "Shield Charge"
+             (ability
+              :name "Shield Charge")
+            "Shield Guard"
+             (ability
+              :name "Shield Guard"
+              :summary "* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].")
+            "Shield Sacrifice"
+             (ability
+              :name "Shield Sacrifice"
+              :summary "* [Club] [Defend] [Damage]: The shield becomes the target of any [Overwhelm] damage."))
+          :specialtymap
+           (specialtymap
+            "Medium Armor"
+             (specialty
+              :name "Medium Armor")
+            "Heavy Armor"
+             (specialty
+              :name "Heavy Armor")
+            :Shields
+             (specialty
+              :name "Shields")))
         :Evasion
          (skill
           :name "Evasion"

@@ -1,0 +1,1129 @@
+(package nx/tactics/decks/fate
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Tactics Fate Decks")
+
+(const fate-wildblack : base/fate
+ (base/fate
+  :name "Fool"
+  :rank base/rank-joker
+  :suit base/suit-black
+  :summary
+   "Wild:
+    * Win : Attack, Focus
+    * Loss: Defend, Evade, Counter
+    * Tie : Wild
+    * Hits: 0. Search or Reclaim 1.
+    * Shuffle: Discards into Deck."))
+
+(const fate-wildred : base/fate
+ (base/fate
+  :name "World"
+  :rank base/rank-joker
+  :suit base/suit-red
+  :summary
+   "Wild:
+    * Win : Attack, Focus
+    * Loss: Defend, Evade, Counter
+    * Tie : Wild
+    * Hits: 0. Search or Reclaim 1.
+    * Shuffle: Discards into Deck."))
+
+(const fate-ac : base/fate
+ (base/fate
+  :name "Devil"
+  :rank base/rank-ace
+  :suit base/suit-club
+  :summary
+   "Attack (Super)
+    * Win : Attack 2-K, Focus
+    * Loss: Defend, Evade, Counter, Wild
+    * Tie : Attack A
+    * Hits: 1
+    * Combo: 1 Hit/A
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-ad : base/fate
+ (base/fate
+  :name "Lust"
+  :rank base/rank-ace
+  :suit base/suit-diamond
+  :summary
+   "Focus (Super)
+    * Win : Focus 2-K, Defend, Evade, Counter
+    * Loss: Attack, Wild
+    * Tie : Focus A
+    * Hits: 1
+    * Combo: 1 Hit/A
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-ah : base/fate
+ (base/fate
+  :name "Lovers"
+  :rank base/rank-ace
+  :suit base/suit-heart
+  :summary
+   "Focus (Super)
+    * Win : Focus 2-K, Defend, Evade, Counter
+    * Loss: Attack, Wild
+    * Tie : Focus A
+    * Hits: 1
+    * Combo: 1 Hit/A
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-as : base/fate
+ (base/fate
+  :name "Death"
+  :rank base/rank-ace
+  :suit base/suit-spade
+  :summary
+   "Attack (Super)
+    * Win : Attack 2-K, Focus
+    * Loss: Defend, Evade, Counter, Wild
+    * Tie : Attack A
+    * Hits: 1
+    * Combo: 1 Hit/A
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-kc : base/fate
+ (base/fate
+  :name "Emperor"
+  :rank base/rank-king
+  :suit base/suit-club
+  :summary
+   "Attack (Special)
+    * Win : Attack 2-10, Focus
+    * Loss: Attack JQA, Defend, Evade, Counter, Wild
+    * Tie : Attack K
+    * Hits: 1
+    * Combo: 1 Hit/K (Max:2)
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-kd : base/fate
+ (base/fate
+  :name "Judgement"
+  :rank base/rank-king
+  :suit base/suit-diamond
+  :summary
+   "Focus (Special)
+    * Win : Focus 2-10, Defend, Evade, Counter
+    * Loss: Attack, Focus JQA, Wild
+    * Tie : Focus K
+    * Hits: 1
+    * Combo: 1 Hit/K (Max 2)
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-kh : base/fate
+ (base/fate
+  :name "Hierophant"
+  :rank base/rank-king
+  :suit base/suit-heart
+  :summary
+   "Focus (Special)
+    * Win : Focus 2-10, Defend, Evade, Counter
+    * Loss: Attack, Focus JQA, Wild
+    * Tie : Focus K
+    * Hits: 1
+    * Combo: 1 Hit/K (Max 2)
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-ks : base/fate
+ (base/fate
+  :name "Sun"
+  :rank base/rank-king
+  :suit base/suit-spade
+  :summary
+   "Attack (Special)
+    * Win : Attack 2-10, Focus
+    * Loss: Attack JQA, Defend, Evade, Counter, Wild
+    * Tie : Attack K
+    * Hits: 1
+    * Combo: 1 Hit/K (Max:2)
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-qc : base/fate
+ (base/fate
+  :name "Empress"
+  :rank base/rank-queen
+  :suit base/suit-club
+  :summary
+   "Attack (Special)
+    * Win : Attack 2-10 K, Focus
+    * Loss: Attack JA, Defend, Evade, Counter, Wild
+    * Tie : Attack Q
+    * Hits: 1
+    * Combo: 1 Hit/K (Max:2)
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-qd : base/fate
+ (base/fate
+  :name "Justice"
+  :rank base/rank-queen
+  :suit base/suit-diamond
+  :summary
+   "Focus (Special)
+    * Win : Focus 2-10 K, Defend, Evade, Counter
+    * Loss: Attack, Focus JA, Wild
+    * Tie : Focus Q
+    * Hits: 1
+    * Combo: 1 Hit/K (Max 1)
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-qh : base/fate
+ (base/fate
+  :name "Priestess"
+  :summary ""
+  :rank base/rank-queen
+  :suit base/suit-heart
+  :summary
+   "Focus (Special)
+    * Win : Focus 2-10 K, Defend, Evade, Counter
+    * Loss: Attack, Focus JA, Wild
+    * Tie : Focus Q
+    * Hits: 1
+    * Combo: 1 Hit/Q (Max 1)
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-qs : base/fate
+ (base/fate
+  :name "Moon"
+  :rank base/rank-queen
+  :suit base/suit-spade
+  :summary
+   "Attack (Special)
+    * Win : Attack 2-10 K, Focus
+    * Loss: Attack JA, Defend, Evade, Counter, Wild
+    * Tie : Attack Q
+    * Hits: 1
+    * Combo: 1 Hit/Q (Max:1)
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-jc : base/fate
+ (base/fate
+  :name "Magus"
+  :titles "Knight of Rods"
+  :rank base/rank-jack
+  :suit base/suit-club
+  :summary
+   "Attack (Special)
+    * Win : Attack 2-10 QK, Focus
+    * Loss: Attack A, Defend, Evade, Counter, Wild
+    * Tie : Attack J
+    * Hits: 1
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-jd : base/fate
+ (base/fate
+  :name "Hanged Man"
+  :titles "Prince of Coins"
+  :rank base/rank-jack
+  :suit base/suit-diamond
+  :summary
+   "Focus (Special)
+    * Win : Focus 2-10 QK, Defend, Evade, Counter
+    * Loss: Attack, Focus A, Wild
+    * Tie : Focus J
+    * Hits: 1
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-jh : base/fate
+ (base/fate
+  :name "Hermit"
+  :titles "Princess of Cups"
+  :rank base/rank-jack
+  :suit base/suit-heart
+  :summary
+   "Focus (Special)
+    * Win : Focus 2-10 QK, Defend, Evade, Counter
+    * Loss: Attack, Focus A, Wild
+    * Tie : Focus J
+    * Hits: 1
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-js : base/fate
+ (base/fate
+  :name "Star"
+  :titles "Lady of Swords"
+  :rank base/rank-jack
+  :suit base/suit-spade
+  :summary
+   "Attack (Special)
+    * Win : Attack 2-10 QK, Focus
+    * Loss: Attack A, Defend, Evade, Counter, Wild
+    * Tie : Attack J
+    * Hits: 1
+
+   - or -
+
+    Counter
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0. Immediately resolve an Attack or Focus"))
+
+(const fate-tc : base/fate
+ (base/fate
+  :name "Tower"
+  :titles "Ten of Rods"
+  :rank base/rank-ten
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Focus
+    * Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 10
+    * Hits: 1, Draw 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-td : base/fate
+ (base/fate
+  :name "Wheel of Fortune"
+  :titles "Ten of Coins"
+  :rank base/rank-ten
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Defend, Evade, Counter
+    * Lose: Attack, Focus 2-9 JQKA, Wild
+    * Tie : Focus 10
+    * Hits: 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-th : base/fate
+ (base/fate
+  :name "Art"
+  :titles "Ten of Cups"
+  :rank base/rank-ten
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Defend, Evade, Counter
+    * Lose: Attack, Focus 2-9 JQKA, Wild
+    * Tie : Focus 10
+    * Hits: 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-ts : base/fate
+ (base/fate
+  :name "Chariot"
+  :titles "Ten of Swords"
+  :rank base/rank-ten
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Focus
+    * Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 10
+    * Hits: 1, Draw 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-9c : base/fate
+ (base/fate
+  :name "Nine of Wands"
+  :rank base/rank-nine
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Attack 10, Focus
+    * Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 9
+    * Hits: .9, Draw 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-9d : base/fate
+ (base/fate
+  :name "Nine of Coins"
+  :rank base/rank-nine
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Focus 10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-9 JQKA, Wild
+    * Tie : Focus 9
+    * Hits: .9
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-9h : base/fate
+ (base/fate
+  :name "Nine of Cups"
+  :rank base/rank-nine
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Focus 10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-9 JQKA, Wild
+    * Tie : Focus 9
+    * Hits: .9
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-9s : base/fate
+ (base/fate
+  :name "Nine of Swords"
+  :rank base/rank-nine
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Attack 10, Focus
+    * Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 9
+    * Hits: .9, Draw 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-8c : base/fate
+ (base/fate
+  :name "Eight of Wands"
+  :rank base/rank-eight
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Attack 9-10, Focus
+    * Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 8
+    * Hits: .8, Draw 1
+    * Combo: 8-9-10 Hits: 2.7, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-8d : base/fate
+ (base/fate
+  :name "Eight of Coins"
+  :rank base/rank-eight
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Focus 9-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-7 JQKA, Wild
+    * Tie : Focus 8
+    * Hits: .8
+    * Combo: 8-9-10 Hits: 2.7, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-8h : base/fate
+ (base/fate
+  :name "Eight of Cups"
+  :rank base/rank-eight
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Focus 9-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-7 JQKA, Wild
+    * Tie : Focus 8
+    * Hits: .8
+    * Combo: 8-9-10 Hits: 2.7, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-8s : base/fate
+ (base/fate
+  :name "Eight of Swords"
+  :rank base/rank-eight
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Attack 9-10, Focus
+    * Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 8
+    * Hits: .8, Draw 1
+    * Combo: 8-9-10 Hits: 2.7, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-7c : base/fate
+ (base/fate
+  :name "Seven of Wands"
+  :rank base/rank-seven
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Attack 8-10, Focus
+    * Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 7
+    * Hits: .7, Draw 1
+    * Combo: 7-8-9, Hits: 2.4, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-7d : base/fate
+ (base/fate
+  :name "Seven of Coins"
+  :rank base/rank-seven
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Focus 8-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-6 JQKA, Wild
+    * Tie : Focus 7
+    * Hits: .7
+    * Combo: 7-8-9, Hits: 2.4, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-7h : base/fate
+ (base/fate
+  :name "Seven of Cups"
+  :rank base/rank-seven
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Focus 8-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-6 JQKA, Wild
+    * Tie : Focus 7
+    * Hits: .7
+    * Combo: 7-8-9, Hits: 2.4, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-7s : base/fate
+ (base/fate
+  :name "Seven of Swords"
+  :rank base/rank-seven
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Attack 8-10, Focus
+    * Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 7
+    * Hits: .7, Draw 1
+    * Combo: 7-8-9, Hits: 2.4, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-6c : base/fate
+ (base/fate
+  :name "Six of Wands"
+  :rank base/rank-six
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Attack 7-10, Focus
+    * Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 6
+    * Hits: .6, Draw 1
+    * Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-6d : base/fate
+ (base/fate
+  :name "Six of Coins"
+  :rank base/rank-six
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Focus 7-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-5 JQKA, Wild
+    * Tie : Focus 6
+    * Hits: .6
+    * Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-6h : base/fate
+ (base/fate
+  :name "Six of Cups"
+  :rank base/rank-six
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Focus 7-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-5 JQKA, Wild
+    * Tie : Focus 6
+    * Hits: .6
+    * Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-6s : base/fate
+ (base/fate
+  :name "Six of Swords"
+  :rank base/rank-six
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Attack 7-10, Focus
+    * Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 6
+    * Hits: .6, Draw 1
+    * Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-5c : base/fate
+ (base/fate
+  :name "Five of Wands"
+  :rank base/rank-five
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Attack 6-10, Focus
+    * Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 5
+    * Hits: .6, Draw 1
+    * Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-5d : base/fate
+ (base/fate
+  :name "Five of Coins"
+  :rank base/rank-five
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Focus 6-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-4 JQKA, Wild
+    * Tie : Focus 5
+    * Hits: .5
+    * Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-5h : base/fate
+ (base/fate
+  :name "Five of Cups"
+  :rank base/rank-five
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Focus 6-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-4 JQKA, Wild
+    * Tie : Focus 5
+    * Hits: .5
+    * Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-5s : base/fate
+ (base/fate
+  :name "Five of Swords"
+  :rank base/rank-five
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Attack 6-10, Focus
+    * Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 5
+    * Hits: .5, Draw 1
+    * Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-4c : base/fate
+ (base/fate
+  :name "Four of Wands"
+  :rank base/rank-four
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Attack 5-10, Focus
+    * Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 4
+    * Hits: .5, Draw 1
+    * Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-4d : base/fate
+ (base/fate
+  :name "Four of Coins"
+  :rank base/rank-four
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Focus 5-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-3 JQKA, Wild
+    * Tie : Focus 4
+    * Hits: .5
+    * Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-4h : base/fate
+ (base/fate
+  :name "Four of Cups"
+  :rank base/rank-four
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Focus 5-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2-3 JQKA, Wild
+    * Tie : Focus 4
+    * Hits: .4
+    * Combo: 4-5-6, Hits: 1.5, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-4s : base/fate
+ (base/fate
+  :name "Four of Swords"
+  :rank base/rank-four
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Attack 5-10, Focus
+    * Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 4
+    * Hits: .4, Draw 1
+    * Combo: 4-5-6, Hits: 1.5, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-3c : base/fate
+ (base/fate
+  :name "Three of Wands"
+  :rank base/rank-three
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Attack 4-10, Focus
+    * Lose: Attack 2 JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 3
+    * Hits: .3, Draw 1
+    * Combo: 3-4-5, Hits: 1.2, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-3d : base/fate
+ (base/fate
+  :name "Three of Coins"
+  :rank base/rank-three
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Focus 4-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2 JQKA, Wild
+    * Tie : Focus 3
+    * Hits: .3
+    * Combo: 3-4-5, Hits: 1.2, Draw or Reclaim 1.
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-3h : base/fate
+ (base/fate
+  :name "Three of Cups"
+  :rank base/rank-three
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Focus 4-10, Defend, Evade, Counter
+    * Lose: Attack, Focus 2 JQKA, Wild
+    * Tie : Focus 3
+    * Hits: .3
+    * Combo: 3-4-5, Hits: 1.2, Draw or Reclaim 1.
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-3s : base/fate
+ (base/fate
+  :name "Three of Swords"
+  :rank base/rank-three
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Attack 4-10, Focus
+    * Lose: Attack 2, Focus JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 3
+    * Hits: .3
+    * Combo: 3-4-5, Hits: 1.2, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-2c : base/fate
+ (base/fate
+  :name "Two of Wands"
+  :rank base/rank-two
+  :suit base/suit-club
+  :summary
+   "Attack (Normal)
+    * Win : Attack 3-10, Focus
+    * Lose: Attack JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 2
+    * Hits: .2, Draw 1
+    * Combo: 2-3-4, Hits: .9, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(const fate-2d : base/fate
+ (base/fate
+  :name "Two of Coins"
+  :rank base/rank-two
+  :suit base/suit-diamond
+  :summary
+   "Focus (Normal)
+    * Win : Focus 3-10, Defend, Evade, Counter
+    * Lose: Attack, Focus JQKA, Wild
+    * Tie : Focus 2
+    * Hits: .2
+    * Combo: 2-3-4, Hits: .9, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-2h : base/fate
+ (base/fate
+  :name "Two of Cups"
+  :rank base/rank-two
+  :suit base/suit-heart
+  :summary
+   "Focus (Normal)
+    * Win : Focus 3-10, Defend, Evade, Counter
+    * Lose: Attack, Focus JQKA, Wild
+    * Tie : Focus 2
+    * Hits: .2
+    * Combo: 2-3-4, Hits: .9, Draw or Reclaim 1
+
+   - or -
+
+    Evade
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Move"))
+
+(const fate-2s : base/fate
+ (base/fate
+  :name "Two of Swords"
+  :rank base/rank-two
+  :suit base/suit-spade
+  :summary
+   "Attack (Normal)
+    * Win : Attack 3-10, Focus
+    * Lose: Attack JQKA, Defend, Evade, Counter, Wild
+    * Tie : Attack 2
+    * Hits: .2, Draw 1
+    * Combo: 2-3-4, Hits: .9, Draw or Reclaim 1
+
+   - or -
+
+    Defend
+    * Win : Attack, Wild
+    * Loss: Focus, Defend, Evade, Counter
+    * Hits: 0, Draw 1"))
+
+(func deck-fate : base/deck
+ (base/deck
+  :name "Fate Deck"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     fate-wildblack
+     fate-wildred
+     fate-as
+     fate-ac
+     fate-ad
+     fate-ah
+     fate-ks
+     fate-kc
+     fate-kd
+     fate-kh
+     fate-qs
+     fate-qc
+     fate-qd
+     fate-qh
+     fate-js
+     fate-jc
+     fate-jd
+     fate-jh
+     fate-ts
+     fate-tc
+     fate-td
+     fate-th
+     fate-9s
+     fate-9c
+     fate-9d
+     fate-9h
+     fate-8s
+     fate-8c
+     fate-8d
+     fate-8h
+     fate-7s
+     fate-7c
+     fate-7d
+     fate-7h
+     fate-6s
+     fate-6c
+     fate-6d
+     fate-6h
+     fate-5s
+     fate-5c
+     fate-5d
+     fate-5h
+     fate-4s
+     fate-4c
+     fate-4d
+     fate-4h
+     fate-3s
+     fate-3c
+     fate-3d
+     fate-3h
+     fate-2s
+     fate-2c
+     fate-2d
+     fate-2h
+     )))
+ :doc "Fate Deck")

@@ -6531,114 +6531,6 @@ export default class nx_tactics_books_combat {
           ":skillmap",
           vx_core.f_new(
             nx_tactics_base.t_skillmap,
-            ":Defend",
-            vx_core.f_new(
-              nx_tactics_base.t_skill,
-              ":name",
-              "Defend",
-              ":titles",
-              "Armorer, Defender, Shield Bearer, Shield Warden, Warder",
-              ":stat",
-              "Body",
-              ":abilitymap",
-              vx_core.f_new(
-                nx_tactics_base.t_abilitymap,
-                ":Armorsmithing",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Armorsmithing",
-                  ":summary",
-                  "* The ability to repair, improve, or even create armor."
-                ),
-                ":Counterattack",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Counterattack"
-                ),
-                "High Block",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "High Block",
-                  ":summary",
-                  "-1 Speed\n+4 Defense vs. [High Attack]\n+1 Defense vs. other attacks"
-                ),
-                "Low Block",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Low Block",
-                  ":summary",
-                  "-1 Speed\n+4 Defense vs. [Low Attack]\n+1 Defense vs. other attacks"
-                ),
-                "Powered Armor",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Powered Armor"
-                ),
-                "Shield Bash",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Shield Bash"
-                ),
-                "Shield Block",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Shield Block",
-                  ":summary",
-                  "* [Defend] [Damage]: Add Shield [Armor] to your [Armor]."
-                ),
-                "Shield Charge",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Shield Charge"
-                ),
-                "Shield Guard",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Shield Guard",
-                  ":summary",
-                  "* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor]."
-                ),
-                "Shield Sacrifice",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Shield Sacrifice",
-                  ":summary",
-                  "* [Club] [Defend] [Damage]: The shield becomes the target of any [Overwhelm] damage."
-                )
-              ),
-              ":specialtymap",
-              vx_core.f_new(
-                nx_tactics_base.t_specialtymap,
-                "Medium Armor",
-                vx_core.f_new(
-                  nx_tactics_base.t_specialty,
-                  ":name",
-                  "Medium Armor"
-                ),
-                "Heavy Armor",
-                vx_core.f_new(
-                  nx_tactics_base.t_specialty,
-                  ":name",
-                  "Heavy Armor"
-                ),
-                ":Shields",
-                vx_core.f_new(
-                  nx_tactics_base.t_specialty,
-                  ":name",
-                  "Shields"
-                )
-              )
-            ),
             "Close Combat",
             vx_core.f_new(
               nx_tactics_base.t_skill,
@@ -7804,6 +7696,114 @@ export default class nx_tactics_books_combat {
                   "* A mind not fixed or occupied by thought or emotion and thus open to everything.\n* Mushin is achieved when a fighter feels no anger, fear or ego during combat, so the fighter is totally free to act and react towards an opponent without hesitation. At this point, a person relies not on what they think should be the next move, but what is felt intuitively.\n* A martial artist would likely have to train for many years to be capable of mushin. This allows time for combinations of movements and exchanges of techniques to be practiced repetitively many thousands of times, until they can be performed spontaneously, without conscious thought.",
                   ":titles",
                   "Mushin"
+                )
+              )
+            ),
+            ":Defense",
+            vx_core.f_new(
+              nx_tactics_base.t_skill,
+              ":name",
+              "Defense",
+              ":titles",
+              "Armorer, Defender, Shield Bearer, Shield Warden, Warder",
+              ":stat",
+              "Body",
+              ":abilitymap",
+              vx_core.f_new(
+                nx_tactics_base.t_abilitymap,
+                ":Armorsmithing",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Armorsmithing",
+                  ":summary",
+                  "* The ability to repair, improve, or even create armor."
+                ),
+                ":Counterattack",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Counterattack"
+                ),
+                "High Block",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "High Block",
+                  ":summary",
+                  "-1 Speed\n+4 Defense vs. [High Attack]\n+1 Defense vs. other attacks"
+                ),
+                "Low Block",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Low Block",
+                  ":summary",
+                  "-1 Speed\n+4 Defense vs. [Low Attack]\n+1 Defense vs. other attacks"
+                ),
+                "Powered Armor",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Powered Armor"
+                ),
+                "Shield Bash",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Shield Bash"
+                ),
+                "Shield Block",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Shield Block",
+                  ":summary",
+                  "* [Defend] [Damage]: Add Shield [Armor] to your [Armor]."
+                ),
+                "Shield Charge",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Shield Charge"
+                ),
+                "Shield Guard",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Shield Guard",
+                  ":summary",
+                  "* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor]."
+                ),
+                "Shield Sacrifice",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Shield Sacrifice",
+                  ":summary",
+                  "* [Club] [Defend] [Damage]: The shield becomes the target of any [Overwhelm] damage."
+                )
+              ),
+              ":specialtymap",
+              vx_core.f_new(
+                nx_tactics_base.t_specialtymap,
+                "Medium Armor",
+                vx_core.f_new(
+                  nx_tactics_base.t_specialty,
+                  ":name",
+                  "Medium Armor"
+                ),
+                "Heavy Armor",
+                vx_core.f_new(
+                  nx_tactics_base.t_specialty,
+                  ":name",
+                  "Heavy Armor"
+                ),
+                ":Shields",
+                vx_core.f_new(
+                  nx_tactics_base.t_specialty,
+                  ":name",
+                  "Shields"
                 )
               )
             ),

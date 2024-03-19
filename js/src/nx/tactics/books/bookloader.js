@@ -593,7 +593,7 @@ export default class nx_tactics_books_bookloader {
       {"any-1": vx_core.t_boolean},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const bools = vx_core.f_list_from_list(
+        const bools = vx_core.f_list_from_list_1(
           {"any-1": vx_core.t_boolean, "any-2": vx_core.t_string, "list-1": vx_core.t_booleanlist, "list-2": vx_core.t_stringlist},
           booknames,
           vx_core.f_new(vx_core.t_any_from_any, (bookname) => 
@@ -3267,7 +3267,7 @@ export default class nx_tactics_books_bookloader {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const chapters = vx_core.f_list_from_map(
+        const chapters = vx_core.f_list_from_map_1(
           {"any-1": vx_core.t_string, "any-2": nx_tactics_base.t_chapter, "list-1": vx_core.t_stringlist, "map-2": nx_tactics_base.t_chaptermap},
           chaptermap,
           vx_core.f_new(vx_core.t_any_from_key_value, ([key, val]) => 
@@ -3452,12 +3452,12 @@ export default class nx_tactics_books_bookloader {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const chapters = vx_core.f_list_from_map(
+        const chapters = vx_core.f_list_from_map_1(
           {"any-1": nx_tactics_base.t_chapter, "any-2": nx_tactics_base.t_chapter, "list-1": nx_tactics_base.t_chapterlist, "map-2": nx_tactics_base.t_chaptermap},
           chaptermap,
           vx_core.f_new(vx_core.t_any_from_key_value, ([key, val]) => val)
         )
-        const schapters = vx_core.f_list_from_list(
+        const schapters = vx_core.f_list_from_list_1(
           {"any-1": vx_core.t_string, "any-2": nx_tactics_base.t_chapter, "list-1": vx_core.t_stringlist, "list-2": nx_tactics_base.t_chapterlist},
           chapters,
           vx_core.f_new(vx_core.t_any_from_any, (chapt) => 

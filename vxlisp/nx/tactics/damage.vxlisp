@@ -11,51 +11,51 @@
   :name "Breakdown")
  :doc "Lasting Mind Damage")
 
-(const duress : base/card
+(const stress : base/card
  (base/card
-  :name "Duress"
-  :titles "Doubt")
- :doc "* Temporary Will Damage/Fear/Horror. Doing things against your beliefs causes Duress.
-       * While you have more Duress than Will, you are Shaken.
-       * Shaken: Cannot play odd [Defend] cards and your second action may only be [Recover]")
+  :name "Stress/Duress/Horror"
+  :titles "Stress")
+ :doc "* Temporary Will Damage. Doing or facing things against your beliefs causes Stress.
+       * While you have more Stress than [Will], you are [Shaken].
+       * [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]")
 
 (const fatigue : base/card
  (base/card
-  :name "Fatigue")
+  :name "Fatigue/Weaken/Exertion/Strain")
  :doc "* Temporary Body Damage. Hard work and strikes in combat cause Fatigue.
-       * While you have more Fatigue than [Body], you are Exhausted.
-       * Exhausted: Cannot play odd [Attack] cards and your second action may only be [Recover].")
+       * While you have more Fatigue than [Body], you are [Exhausted].
+       * [Exhausted]: Cannot play odd [Attack] cards and your second action may only be [Recover].")
 
-(const stagger : base/card
+(const burden : base/card
  (base/card
-  :name "Stagger")
- :doc "* Temporary Speed Damage/Restraint.
-       * While you have more Stagger than [Speed], you are Slowed.
-       * Slowed: [Move] actions are halved (rounded up).")
+  :name "Burden")
+ :doc "* Temporary Movement Damage. Carrying loads, entanglement, or tissue damage cause Burden.
+       * While you have more [Burden] than [Move], you are [Encumbered].
+       * [Encumbered]: Cannot play [Counters] and [Move] actions are halved (rounded up).")
 
-(const stress : base/card
+(const strain : base/card
  (base/card
-  :name "Stress")
- :doc "* Temporary Mind Damage/Distraction/Surprise/Shock.
-       * While you have more Stress than [Mind], you are Stunned.
-       * Stunned: Cannot play odd [Focus] cards and your second action may only be [Recover].")
+  :name "Strain/Distraction")
+ :doc "* Temporary Mind Damage/Distraction/Surprise/Shock. Intense concentration, pressure, and multitasking causes Strain.
+       * While you have more Strain than [Mind], you are [Confused].
+       * [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover].")
 
 (const trauma : base/card
  :doc "Lasting Will Damage")
 
-(const irrationaldeck : base/deck
+(const deck-disorder : base/deck
  (base/deck
-  :name "Irrational"
+  :name "Disorder"
   :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
-  :summary "* S-Hack Blood/Gore/Dismember/Doubt
-            * H-Slash Blood/Slow
-            * C-Bash/Fatigue/Push
-            * D-Pierce/Shock/Stun/Pin/Disable/Stress")
+  :summary "* S-Hack Blood/Gore/Dismember/Stress
+            * H-Slash Blood/Burden
+            * C-Bash/Fatigue/Push/Fatigue
+            * D-Pierce/Shock/Stun/Pin/Disable/Strain")
  :doc "Damage to the Mind")
 
-(const unwillingdeck : base/deck
+(const deck-trauma : base/deck
  (base/deck
-  :name "Unwilling"
+  :name "Trauma/Crisis"
   :titles "Apathy, Cowed, Berserk, Broken, Depression, Servitude, Surly"
   :summary "* S-Hack Blood/Gore/Dismember
             * H-Slash Blood/Slow
@@ -63,13 +63,13 @@
             * D-Pierce/Stun/Pin/Disable")
  :doc "Damage to the Will")
 
-(const wounddeck : base/deck
+(const deck-wound : base/deck
  (base/deck
-  :name "Wound Deck"
+  :name "Wound"
   :summary "* S-Hack Blood/Gore/Dismember
             * H-Slash Blood/Slow
             * C-Bash/Fatigue/Push
-            * D-Stab/Pierce/Stun/Pin/Disable"
+            * D-Pierce/Stab/Stun/Pin/Disable"
   :cardlist
    (base/cardlist
     wound-j1

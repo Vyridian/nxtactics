@@ -5,6 +5,11 @@ import vx_core from "../vx/core.js"
 
 export default class vx_type {
 
+  // vx_boolean_from_string_starts(string, string)
+  static vx_boolean_from_string_starts(text, starts) {
+    return vx_core.vx_boolean_from_string_starts(text, starts)
+  }
+
   // vx_int_from_string_find(string, string)
   static vx_int_from_string_find(text, find) {
     return text.indexOf(find) + 1
@@ -177,7 +182,7 @@ export default class vx_type {
   // (func boolean<-string-starts)
   static f_boolean_from_string_starts(text, starts) {
     let output = vx_core.e_boolean
-    output = vx_core.vx_boolean_from_string_starts(text, starts)
+    output = vx_type.vx_boolean_from_string_starts(text, starts)
     return output
   }
 
@@ -383,7 +388,7 @@ export default class vx_type {
   static f_is_type_from_any_typelist(val, typelist) {
     let output = vx_core.e_boolean
     output = vx_core.f_any_from_list_start_reduce(
-      {"any-1": vx_core.t_boolean, "any-2": vx_core.t_any, "list-2": vx_core.t_typelist},
+      {"any-1": vx_core.t_boolean, "list-2": vx_core.t_typelist},
       typelist,
       false,
       vx_core.f_new(vx_core.t_any_from_reduce, (result, type) => 

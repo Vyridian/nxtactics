@@ -1,0 +1,410 @@
+(package nx/tactics/decks/tarot
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Tactics tarot Decks")
+
+(const tarot-wildblack : base/tarot
+ (base/tarot
+  :name "Fool"
+  :rank base/rank-joker
+  :suit base/suit-black))
+
+(const tarot-wildred : base/tarot
+ (base/tarot
+  :name "World"
+  :rank base/rank-joker
+  :suit base/suit-red))
+
+(const tarot-ac : base/tarot
+ (base/tarot
+  :name "Devil"
+  :titles "Master of Rods"
+  :rank base/rank-ace
+  :suit base/suit-club))
+
+(const tarot-ad : base/tarot
+ (base/tarot
+  :name "Lust"
+  :titles "Master of Coins"
+  :rank base/rank-ace
+  :suit base/suit-club))
+
+(const tarot-ah : base/tarot
+ (base/tarot
+  :name "Lovers"
+  :titles "Master of Cups"
+  :rank base/rank-ace
+  :suit base/suit-heart))
+
+(const tarot-as : base/tarot
+ (base/tarot
+  :name "Death"
+  :titles "Master of Swords"
+  :rank base/rank-ace
+  :suit base/suit-spade))
+
+(const tarot-kc : base/tarot
+ (base/tarot
+  :name "Emperor"
+  :titles "King of Rods"
+  :rank base/rank-king
+  :suit base/suit-club))
+
+(const tarot-kd : base/tarot
+ (base/tarot
+  :name "Judgement"
+  :titles "King of Coins"
+  :rank base/rank-king
+  :suit base/suit-diamond))
+
+(const tarot-kh : base/tarot
+ (base/tarot
+  :name "Hierophant"
+  :titles "King of Cups"
+  :rank base/rank-king
+  :suit base/suit-heart))
+
+(const tarot-ks : base/tarot
+ (base/tarot
+  :name "Sun"
+  :titles "King of Swords"
+  :rank base/rank-king
+  :suit base/suit-spade))
+
+(const tarot-qc : base/tarot
+ (base/tarot
+  :name "Empress"
+  :titles "Queen of Rods"
+  :rank base/rank-queen
+  :suit base/suit-club))
+
+(const tarot-qd : base/tarot
+ (base/tarot
+  :name "Justice"
+  :titles "Queen of Coins"
+  :rank base/rank-queen
+  :suit base/suit-diamond))
+
+(const tarot-qh : base/tarot
+ (base/tarot
+  :name "Priestess"
+  :titles "Queen of Cups"
+  :rank base/rank-queen
+  :suit base/suit-heart))
+
+(const tarot-qs : base/tarot
+ (base/tarot
+  :name "Moon"
+  :titles "Queen of Swords"
+  :rank base/rank-queen
+  :suit base/suit-spade))
+
+(const tarot-jc : base/tarot
+ (base/tarot
+  :name "Magus"
+  :titles "Knight of Rods"
+  :rank base/rank-jack
+  :suit base/suit-club))
+
+(const tarot-jd : base/tarot
+ (base/tarot
+  :name "Hanged Man"
+  :titles "Prince of Coins"
+  :rank base/rank-jack
+  :suit base/suit-diamond))
+
+(const tarot-jh : base/tarot
+ (base/tarot
+  :name "Hermit"
+  :titles "Princess of Cups"
+  :rank base/rank-jack
+  :suit base/suit-heart))
+
+(const tarot-js : base/tarot
+ (base/tarot
+  :name "Star"
+  :titles "Lady of Swords"
+  :rank base/rank-jack
+  :suit base/suit-spade))
+
+(const tarot-tc : base/tarot
+ (base/tarot
+  :name "Tower"
+  :titles "Ten of Rods"
+  :rank base/rank-ten
+  :suit base/suit-club))
+
+(const tarot-td : base/tarot
+ (base/tarot
+  :name "Wheel of Fortune"
+  :titles "Ten of Coins"
+  :rank base/rank-ten
+  :suit base/suit-diamond))
+
+(const tarot-th : base/tarot
+ (base/tarot
+  :name "Art"
+  :titles "Ten of Cups"
+  :rank base/rank-ten
+  :suit base/suit-heart))
+
+(const tarot-ts : base/tarot
+ (base/tarot
+  :name "Chariot"
+  :titles "Ten of Swords"
+  :rank base/rank-ten
+  :suit base/suit-spade))
+
+(const tarot-9c : base/tarot
+ (base/tarot
+  :name "Nine of Rods"
+  :rank base/rank-nine
+  :suit base/suit-club))
+
+(const tarot-9d : base/tarot
+ (base/tarot
+  :name "Nine of Coins"
+  :rank base/rank-nine
+  :suit base/suit-diamond))
+
+(const tarot-9h : base/tarot
+ (base/tarot
+  :name "Nine of Cups"
+  :rank base/rank-nine
+  :suit base/suit-heart))
+
+(const tarot-9s : base/tarot
+ (base/tarot
+  :name "Nine of Swords"
+  :rank base/rank-nine
+  :suit base/suit-spade))
+
+(const tarot-8c : base/tarot
+ (base/tarot
+  :name "Eight of Rods"
+  :rank base/rank-eight
+  :suit base/suit-club))
+
+(const tarot-8d : base/tarot
+ (base/tarot
+  :name "Eight of Coins"
+  :rank base/rank-eight
+  :suit base/suit-diamond))
+
+(const tarot-8h : base/tarot
+ (base/tarot
+  :name "Eight of Cups"
+  :rank base/rank-eight
+  :suit base/suit-heart))
+
+(const tarot-8s : base/tarot
+ (base/tarot
+  :name "Eight of Swords"
+  :rank base/rank-eight
+  :suit base/suit-spade))
+
+(const tarot-7c : base/tarot
+ (base/tarot
+  :name "Seven of Rods"
+  :rank base/rank-seven
+  :suit base/suit-club))
+
+(const tarot-7d : base/tarot
+ (base/tarot
+  :name "Seven of Coins"
+  :rank base/rank-seven
+  :suit base/suit-diamond))
+
+(const tarot-7h : base/tarot
+ (base/tarot
+  :name "Seven of Cups"
+  :rank base/rank-seven
+  :suit base/suit-heart))
+
+(const tarot-7s : base/tarot
+ (base/tarot
+  :name "Seven of Swords"
+  :rank base/rank-seven
+  :suit base/suit-spade))
+
+(const tarot-6c : base/tarot
+ (base/tarot
+  :name "Six of Rods"
+  :rank base/rank-six
+  :suit base/suit-club))
+
+(const tarot-6d : base/tarot
+ (base/tarot
+  :name "Six of Coins"
+  :rank base/rank-six
+  :suit base/suit-diamond))
+
+(const tarot-6h : base/tarot
+ (base/tarot
+  :name "Six of Cups"
+  :rank base/rank-six
+  :suit base/suit-heart))
+
+(const tarot-6s : base/tarot
+ (base/tarot
+  :name "Six of Swords"
+  :rank base/rank-six
+  :suit base/suit-spade))
+
+(const tarot-5c : base/tarot
+ (base/tarot
+  :name "Five of Rods"
+  :rank base/rank-five
+  :suit base/suit-club))
+
+(const tarot-5d : base/tarot
+ (base/tarot
+  :name "Five of Coins"
+  :rank base/rank-five
+  :suit base/suit-diamond))
+
+(const tarot-5h : base/tarot
+ (base/tarot
+  :name "Five of Cups"
+  :rank base/rank-five
+  :suit base/suit-heart))
+
+(const tarot-5s : base/tarot
+ (base/tarot
+  :name "Five of Swords"
+  :rank base/rank-five
+  :suit base/suit-spade))
+
+(const tarot-4c : base/tarot
+ (base/tarot
+  :name "Four of Rods"
+  :rank base/rank-four
+  :suit base/suit-club))
+
+(const tarot-4d : base/tarot
+ (base/tarot
+  :name "Four of Coins"
+  :rank base/rank-four
+  :suit base/suit-diamond))
+
+(const tarot-4h : base/tarot
+ (base/tarot
+  :name "Four of Cups"
+  :rank base/rank-four
+  :suit base/suit-heart))
+
+(const tarot-4s : base/tarot
+ (base/tarot
+  :name "Four of Swords"
+  :rank base/rank-four
+  :suit base/suit-spade))
+
+(const tarot-3c : base/tarot
+ (base/tarot
+  :name "Three of Rods"
+  :rank base/rank-three
+  :suit base/suit-club))
+
+(const tarot-3d : base/tarot
+ (base/tarot
+  :name "Three of Coins"
+  :rank base/rank-three
+  :suit base/suit-diamond))
+
+(const tarot-3h : base/tarot
+ (base/tarot
+  :name "Three of Cups"
+  :rank base/rank-three
+  :suit base/suit-heart))
+
+(const tarot-3s : base/tarot
+ (base/tarot
+  :name "Three of Swords"
+  :rank base/rank-three
+  :suit base/suit-spade))
+
+(const tarot-2c : base/tarot
+ (base/tarot
+  :name "Two of Rods"
+  :rank base/rank-two
+  :suit base/suit-club))
+
+(const tarot-2d : base/tarot
+ (base/tarot
+  :name "Two of Coins"
+  :rank base/rank-two
+  :suit base/suit-diamond))
+
+(const tarot-2h : base/tarot
+ (base/tarot
+  :name "Two of Cups"
+  :rank base/rank-two
+  :suit base/suit-heart))
+
+(const tarot-2s : base/tarot
+ (base/tarot
+  :name "Two of Swords"
+  :rank base/rank-two
+  :suit base/suit-spade))
+
+(func deck-tarot : base/deck
+ (base/deck
+  :name "Tarot Deck"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     tarot-wildblack
+     tarot-wildred
+     tarot-as
+     tarot-ac
+     tarot-ad
+     tarot-ah
+     tarot-ks
+     tarot-kc
+     tarot-kd
+     tarot-kh
+     tarot-qs
+     tarot-qc
+     tarot-qd
+     tarot-qh
+     tarot-js
+     tarot-jc
+     tarot-jd
+     tarot-jh
+     tarot-ts
+     tarot-tc
+     tarot-td
+     tarot-th
+     tarot-9s
+     tarot-9c
+     tarot-9d
+     tarot-9h
+     tarot-8s
+     tarot-8c
+     tarot-8d
+     tarot-8h
+     tarot-7s
+     tarot-7c
+     tarot-7d
+     tarot-7h
+     tarot-6s
+     tarot-6c
+     tarot-6d
+     tarot-6h
+     tarot-5s
+     tarot-5c
+     tarot-5d
+     tarot-5h
+     tarot-4s
+     tarot-4c
+     tarot-4d
+     tarot-4h
+     tarot-3s
+     tarot-3c
+     tarot-3d
+     tarot-3h
+     tarot-2s
+     tarot-2c
+     tarot-2d
+     tarot-2h
+     )))
+ :doc "Tarot Deck")

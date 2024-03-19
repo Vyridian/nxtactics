@@ -3,8 +3,10 @@
 import vx_ui_ui from "../../../src/vx/ui/ui.js"
 import vx_core from "../../../src/vx/core.js"
 import vx_test from "../../../src/vx/test.js"
+import vx_collection from "../../../src/vx/collection.js"
 import vx_event from "../../../src/vx/event.js"
 import vx_data_file from "../../../src/vx/data/file.js"
+import vx_state from "../../../src/vx/state.js"
 
 export default class vx_ui_ui_test {
 
@@ -25,13 +27,13 @@ export default class vx_ui_ui_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "vx/ui/ui", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 32), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 41, ":tests", 28, ":total", 67), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 14), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 35), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 56, ":tests", 58, ":total", 102), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 40), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 67), 
-      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 21)
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 102), 
+      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 27)
     )
   }
 
@@ -45,6 +47,14 @@ export default class vx_ui_ui_test {
           "bounds", 0,
           "cursor", 0,
           "cursor-pointer", 0,
+          "font", 0,
+          "fontface", 0,
+          "fontfacelist", 0,
+          "fontfacemap", 0,
+          "fontmap", 0,
+          "fontstyle", 0,
+          "fontstylemap", 0,
+          "image", 0,
           "layout", 0,
           "layoutengine", 0,
           "layoutlist", 0,
@@ -52,8 +62,6 @@ export default class vx_ui_ui_test {
           "pin", 0,
           "point", 0,
           "pointstyle", 0,
-          "render", 0,
-          "rendermap", 0,
           "style", 0,
           "stylelist", 0,
           "stylemap", 0,
@@ -69,9 +77,11 @@ export default class vx_ui_ui_test {
           vx_core.t_intmap,
           "layout-app", 0,
           "layout-background", 0,
+          "layout-button", 0,
           "layout-combobox", 0,
           "layout-else", 0,
           "layout-flow-columns", 0,
+          "layout-flow-item", 0,
           "layout-flow-rows", 0,
           "layout-image", 0,
           "layout-label", 0,
@@ -88,6 +98,7 @@ export default class vx_ui_ui_test {
           "layout-statusdrawer", 0,
           "layout-text", 0,
           "layout-textentry", 0,
+          "layout-titlebar", 0,
           "pin-bottom", 0,
           "pin-center", 0,
           "pin-center-h", 0,
@@ -103,16 +114,42 @@ export default class vx_ui_ui_test {
       "funcmap",
         vx_core.f_new(
           vx_core.t_intmap,
+          "boolean-print", 0,
+          "boolean-writestate<-ui", 0,
+          "boolean-writestate<-uiengine", 0,
+          "fontfacemap<-fontfacelist", 0,
+          "int-selected<-ui", 0,
           "layout<-style", 0,
+          "layout<-ui", 0,
+          "layout<-ui-layoutengine", 0,
+          "layout<-ui-layoutmap-else", 0,
+          "layoutengine-readstate", 0,
           "layoutmap<-layoutlist", 0,
+          "string-selected<-ui", 0,
+          "stringlist-selected<-ui", 0,
+          "stringlist<-ui", 0,
           "stylemap<-stylelist", 0,
+          "stylesheet-readstate", 0,
           "stylesheet-render", 0,
+          "ui-child<-ui-uid", 0,
+          "ui-from<-event", 0,
+          "ui-layout<-ui", 0,
+          "ui-layout<-ui-layoutengine", 0,
           "ui-layout<-ui-layoutmap-else", 0,
+          "ui-layout<-ui-uiengine", 0,
+          "ui-readstate<-uid", 0,
           "ui-render", 0,
           "ui-render<-fn-render-ui-orig-parent", 0,
           "ui-render<-ui-orig-parent", 0,
-          "ui<-renderer-ui-orig-parent", 0,
+          "ui-selected<-ui", 0,
+          "ui-writechild<-ui-child", 0,
+          "ui-writechildmap<-ui-childmap", 0,
+          "ui<-layout-ui-orig-parent", 0,
+          "uid-selected<-ui", 0,
+          "uiengine-readstate", 0,
           "uiengine-render", 0,
+          "uilist-selected<-ui", 0,
+          "uilist<-uimap", 0,
           "uimap-layout<-uimap-layoutmap-else", 0,
           "uimap-render<-uimap-parent", 0,
           "uimap<-uilist", 0,

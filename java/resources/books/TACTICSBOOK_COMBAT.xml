@@ -675,53 +675,6 @@ Such a weapon would have a selector switch for each mode. And it might have a 'c
 </chapter>
 <chapter name="Skills">
 	<section name="Combat Skills">
-		<skill name="Defend" stat="Body">
-			<titles>Armorer, Defender, Shield Bearer, Shield Warden, Warder</titles>
-			<specialty name="Medium Armor">
-			</specialty>
-			<specialty name="Heavy Armor">
-			</specialty>
-			<specialty name="Shields">
-			</specialty>
-			<ability name="Armorsmithing">
-				<summary>
-					* The ability to repair, improve, or even create armor.
-				</summary>
-			</ability>
-			<ability name="Counterattack" />
-			<ability name="High Block">
-				<summary>
-					-1 Speed
-					+4 Defense vs. [High Attack]
-					+1 Defense vs. other attacks
-				</summary>
-			</ability>
-			<ability name="Low Block">
-				<summary>
-					-1 Speed
-					+4 Defense vs. [Low Attack]
-					+1 Defense vs. other attacks
-				</summary>
-			</ability>
-			<ability name="Powered Armor" />
-			<ability name="Shield Bash" />
-			<ability name="Shield Block">
-				<summary>
-					* [Defend] [Damage]: Add Shield [Armor] to your [Armor].
-				</summary>
-			</ability>
-			<ability name="Shield Charge" />
-			<ability name="Shield Guard">
-				<summary>
-					* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].
-				</summary>
-			</ability>
-			<ability name="Shield Sacrifice">
-				<summary>
-					* [Club] [Defend] [Damage]: The shield becomes the target of any [Overwhelm] damage.
-				</summary>
-			</ability>
-		</skill>
 		<skill name="Close Combat" stat="Body">
 			<titles>Brawler, Grappler, Hand-to-Hand, Infighter, Martial Artist, Wrestler</titles>
 			<reference>
@@ -2201,6 +2154,53 @@ x +1DMG vs. Crouching.
 				<reference>
 					The mind must always be in the state of 'flowing,' for when it stops anywhere that means the flow is interrupted...In the case of the swordsman, it means death.  When the swordsman stands against his opponent, he is not to think of the opponent, nor of himself, nor of his enemy's sword movements. ... When he strikes, it is not the man but the sword in the hand of the man's subconscious that strikes. - Zen Master Takuan Soho
 				</reference>
+			</ability>
+		</skill>
+		<skill name="Defense" stat="Body">
+			<titles>Armorer, Defender, Shield Bearer, Shield Warden, Warder</titles>
+			<specialty name="Medium Armor">
+			</specialty>
+			<specialty name="Heavy Armor">
+			</specialty>
+			<specialty name="Shields">
+			</specialty>
+			<ability name="Armorsmithing">
+				<summary>
+					* The ability to repair, improve, or even create armor.
+				</summary>
+			</ability>
+			<ability name="Counterattack" />
+			<ability name="High Block">
+				<summary>
+					-1 Speed
+					+4 Defense vs. [High Attack]
+					+1 Defense vs. other attacks
+				</summary>
+			</ability>
+			<ability name="Low Block">
+				<summary>
+					-1 Speed
+					+4 Defense vs. [Low Attack]
+					+1 Defense vs. other attacks
+				</summary>
+			</ability>
+			<ability name="Powered Armor" />
+			<ability name="Shield Bash" />
+			<ability name="Shield Block">
+				<summary>
+					* [Defend] [Damage]: Add Shield [Armor] to your [Armor].
+				</summary>
+			</ability>
+			<ability name="Shield Charge" />
+			<ability name="Shield Guard">
+				<summary>
+					* [Reaction] [Damage]: Before adjacent unit takes damage, discard a [Club] to add your Shield [Armor].
+				</summary>
+			</ability>
+			<ability name="Shield Sacrifice">
+				<summary>
+					* [Club] [Defend] [Damage]: The shield becomes the target of any [Overwhelm] damage.
+				</summary>
 			</ability>
 		</skill>
 		<skill name="Evasion" stat="Defense">

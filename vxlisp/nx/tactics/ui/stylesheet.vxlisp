@@ -1,0 +1,698 @@
+(package nx/tactics/ui/stylesheet
+ :libs (lib base  :path nx/tactics/base)
+       (lib deck  :path nx/tactics/deck)
+       (lib event :path vx/event)
+       (lib file  :path vx/data/file)
+       (lib ui    :path vx/ui/ui)
+ :doc "Tactics UI")
+
+(const font-header1 : ui/font
+ (ui/font
+  :name     "font-header1"
+  :fontface fontface1
+  :fontsize 100)
+ :doc "Returns Header1 Font")
+
+(const font-header2 : ui/font
+ (ui/font
+  :name     "font-header2"
+  :fontface fontface1
+  :fontsize 80)
+ :doc "Returns Header2 Font")
+
+(const font-label : ui/font
+ (ui/font
+  :name     "font-label"
+  :fontface fontface1
+  :fontsize 60)
+ :doc "Returns Label Font")
+
+(const font-rank : ui/font
+ (ui/font
+  :name     "font-rank"
+  :fontface fontface1
+  :fontsize 120)
+ :doc "Returns Normal text Font")
+
+(const font-text : ui/font
+ (ui/font
+  :name     "font-text"
+  :fontface fontface1
+  :fontsize 60)
+ :doc "Returns Normal text Font")
+
+(const font-textarea : ui/font
+ (ui/font
+  :name     "font-textarea"
+  :fontface fontface1
+  :fontsize 60)
+ :doc "Returns Textarea Font")
+
+(const font-title : ui/font
+ (ui/font
+  :name     "font-title"
+  :fontface fontface1
+  :fontsize 160)
+ :doc "Returns Title Font")
+
+(const fontface1 : ui/fontface
+ (ui/fontface
+  :name "El Messiri"
+  :weight "400 700"
+  :unicode "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;"
+  :filelist
+   (file/filelist
+    (file/file
+     :name "K2F0fZBRmr9vQ1pHEey6Mo2AAg.woff2"
+     :path "https://fonts.gstatic.com/s/elmessiri/v22")))
+ :doc "Returns Fontface1")
+
+(const fontface2 : ui/fontface
+ (ui/fontface
+  :name "Cormorant Upright"
+  :weight "300 400 500 600 700"
+  :unicode "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;"
+  :filelist
+   (file/filelist
+    (file/file
+     :name "VuJudM3I2Y35poFONtLdafkUCHw1y1N5piDrWdQ.woff2"
+     :path "https://fonts.gstatic.com/s/cormorantupright/v18")))
+ :doc "Returns Fontface2")
+
+(const fontface3 : ui/fontface
+ (ui/fontface
+  :name "Carattere"
+  :weight "400"
+  :unicode "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;"
+  :filelist
+   (file/filelist
+    (file/file
+     :name "4iCv6Kp1b9dXlgt_CkvjsGyN.woff2"
+     :path "https://fonts.gstatic.com/s/carattere/v7")))
+ :doc "Returns Fontface3")
+
+(const image-jester-black : ui/image
+ (ui/image
+  :file
+   (file/file
+    :name "icon-jester-black.svg"
+    :path "icons")))
+
+(const image-jester-red : ui/image
+ (ui/image
+  :file
+   (file/file
+    :name "icon-jester-red.svg"
+    :path "icons")))
+
+(const point-rank-pos1 : ui/point
+ (ui/point
+  :x 1
+  :y 0))
+
+(const point-rank-pos2 : ui/point
+ (ui/point
+  :x 57
+  :y 80))
+
+(const point-rank-size : ui/point
+ (ui/point
+  :x 6
+  :y 5))
+
+(const point-suit-pos1 : ui/point
+ (ui/point
+  :x 0
+  :y 6))
+
+(const point-suit-pos2 : ui/point
+ (ui/point
+  :x 56
+  :y 74))
+
+(const point-suit-size : ui/point
+ (ui/point
+  :x 6
+  :y 6))
+
+(const point-iconsize : ui/point
+ (ui/point
+  :x 6
+  :y 6))
+
+(const point-cardsize : ui/point
+ (ui/point
+  :x 63
+  :y 88))
+
+(const style-html : ui/style
+ (ui/style
+  :name          "html"
+  :styletype     styletype-system
+  :boundsmargin  (ui/bounds
+                  :left   0
+                  :right  0
+                  :top    0
+                  :bottom 0)
+  :boundspadding (ui/bounds
+                  :left   0
+                  :right  0
+                  :top    0
+                  :bottom 0)
+  :pin           ui/pin-expand)
+ :doc "Returns the style for app ui.")
+
+(const style-body : ui/style
+ (ui/style
+  :name          "body"
+  :styletype     styletype-system
+  :boundsmargin  (ui/bounds
+                  :left   0
+                  :right  0
+                  :top    0
+                  :bottom 0)
+  :boundspadding (ui/bounds
+                  :left   0
+                  :right  0
+                  :top    0
+                  :bottom 0)
+  :pin           ui/pin-expand)
+ :doc "Returns the style for app ui.")
+
+(const style-div : ui/style
+ (ui/style
+  :name          "div"
+  :styletype     styletype-system
+  :layout        ui/layout-flow-columns)
+ :doc "Returns the style for app ui.")
+
+(const style-app : ui/style
+ (ui/style
+  :color-background "B0E0E6"
+  :layout           ui/layout-app
+  :pin              ui/pin-expand)
+ :doc "Returns the style for app ui.")
+
+(const style-app-background : ui/style
+ (ui/style
+  :name      "style-app-background"
+  :type      ui/styletype-shared
+  :layout    ui/layout-background
+  :pin       ui/pin-center
+  :pointsize (ui/point
+              :x 1000
+              :y 1000))
+ :doc "Returns the style for app ui.")
+
+(const style-app-main : ui/style
+ (ui/style
+  :name      "style-app-main"
+  :type      ui/styletype-shared
+  :layout    ui/layout-main
+  :pin       ui/pin-center-v
+  :pointpos  (ui/point
+              :x 6
+              :y 12)
+  :pointsize (ui/point
+              :y 6))
+ :doc "")
+
+(const style-app-menubar : ui/style
+ (ui/style
+  :name             "style-app-menubar"
+  :type             ui/styletype-shared
+  :color-background "5E9CA0"
+  :layout           ui/layout-menubar
+  :pin              ui/pin-top
+  :pointsize        (ui/point
+                     :y 6))
+ :doc "")
+
+(const style-app-menudrawer : ui/style
+ (ui/style
+  :name   "style-app-menudrawer"
+  :type   ui/styletype-shared
+  :layout ui/layout-menudrawer)
+ :doc "")
+
+(const style-app-msgbox : ui/style
+ (ui/style
+  :name "style-app-msgbox"
+  :type ui/styletype-shared
+  :layout ui/layout-msgbox)
+ :doc "")
+
+(const style-app-navbar : ui/style
+ (ui/style
+  :name             "style-app-navbar"
+  :type             ui/styletype-shared
+  :color-background "90C5A9"
+  :layout           ui/layout-navbar
+  :pin              ui/pin-left
+  :pointpos         (ui/point
+                     :y 6)
+  :pointsize        (ui/point
+                     :x 6
+                     :y 6))
+ :doc "")
+
+(const style-app-navbar-button : ui/style
+ (ui/style
+  :name             "style-app-navbar-button"
+  :type             ui/styletype-shared
+  :color-background "A9C8FF"
+  :layout           ui/layout-button
+  :pointsize        point-iconsize)
+ :doc "")
+
+(const style-app-navdrawer : ui/style
+ (ui/style
+  :name "style-app-navdrawer"
+  :type ui/styletype-shared
+  :layout ui/layout-navdrawer)
+ :doc "")
+
+(const style-app-parallax : ui/style
+ (ui/style
+  :name   "style-app-parallax"
+  :type   ui/styletype-shared
+  :layout ui/layout-parallax)
+ :doc "")
+
+(const style-app-statusbar : ui/style
+ (ui/style
+  :name             "style-app-statusbar"
+  :type             ui/styletype-shared
+  :color-background "B6B6B6"
+  :layout           ui/layout-statusbar
+  :pin              ui/pin-bottom
+  :pointsize        (ui/point
+                     :y 6))
+ :doc "")
+
+(const style-app-statusdrawer : ui/style
+ (ui/style
+  :name "style-app-statusdrawer"
+  :type ui/styletype-shared
+  :layout ui/layout-statusdrawer)
+ :doc "")
+
+(const style-app-titlebar : ui/style
+ (ui/style
+  :name             "style-app-titlebar"
+  :type             ui/styletype-shared
+  :color-background "0000F0"
+  :layout           ui/layout-titlebar
+  :pin              ui/pin-top
+  :pointpos         (ui/point
+                     :x 6
+                     :y 6)
+  :pointsize        (ui/point
+                     :y 6))
+ :doc "")
+
+(const style-app-titlebar-print : ui/style
+ (ui/style
+  :name             "style-app-titlebar-print"
+  :type             ui/styletype-shared
+  :color-background "A9C8FF"
+  :layout           ui/layout-button
+  :pointsize        point-iconsize
+  :image-background (ui/image
+                     :name "image-button-print"
+                     :label "Print"
+                     :file
+                      (file/file
+                       :name "icon-printer.svg"
+                       :path "icons")))
+ :doc "")
+
+(const style-button-back : ui/style
+ (ui/style
+  :name             "style-button-back"
+  :type             ui/styletype-shared
+  :image-background (ui/image
+                     :name "image-button-back"
+                     :label "Back"
+                     :file
+                      (file/file
+                       :name "icon-backarrow.svg"
+                       :path "icons")))
+ :doc "")
+
+(const style-card : ui/style
+ (ui/style
+  :name             "style-card"
+  :type             ui/styletype-shared
+  :color-background "FFFFFF"
+  :layout           ui/layout-flow-item
+  :pointsize        point-cardsize)
+ :doc "")
+
+(const style-card-display : ui/style
+ (ui/style
+  :name "style-card-display"
+  :layout ui/layout-label
+  :pointpos (ui/point
+             :x 6
+             :y 6))
+ :doc "")
+
+(const style-card-rank : ui/style
+ (ui/style
+  :name "style-card-rank"
+  :layout ui/layout-label)
+ :doc "")
+
+(const style-card-suit : ui/style
+ (ui/style
+  :name "style-card-suit"
+  :layout ui/layout-image)
+ :doc "")
+
+(const style-card-title : ui/style
+ (ui/style
+  :name "style-card-title"
+  :layout ui/layout-label
+  :pointpos (ui/point
+             :x 20))
+ :doc "")
+
+(const style-clickable : ui/style
+ (ui/style
+  :name             "style-clickable"
+  :type             ui/styletype-shared
+  :styletype        styletype-shared
+  :cursor           ui/cursor-pointer
+  :color-hoverbkgrd "E0E0E0")
+ :doc "Returns the style for clickable class.")
+
+(const style-deck : ui/style
+ (ui/style
+  :name             "style-deck"
+  :type             ui/styletype-shared
+  :color-background "F0F0F0"
+  :layout ui/layout-flow-columns
+)
+ :doc "Returns the style for deck.")
+
+(const style-hidden : ui/style
+ (ui/style
+  :name    "style-hidden"
+  :type    ui/styletype-shared
+  :hidden  true)
+ :doc "")
+
+(const style-image-coin1 : ui/style
+ (ui/style
+  :name "style-image-coin1"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos1
+  :pointsize point-suit-size
+  :image-background
+   (ui/image
+    :name "image-coin1"
+    :label "Coins"
+    :file
+     (file/file
+      :name "icon-coin.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-image-coin2 : ui/style
+ (ui/style
+  :name "style-image-coin2"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos2
+  :pointsize point-suit-size
+  :image-background
+   (ui/image
+    :name "image-coin2"
+    :label "Coins"
+    :file
+     (file/file
+      :name "icon-coin.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-image-cup1 : ui/style
+ (ui/style
+  :name "style-image-cup1"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos1
+  :pointsize point-suit-size
+  :image-background
+   (ui/image
+    :name "image-cup1"
+    :label "Cups"
+    :file
+     (file/file
+      :name "icon-cup.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-image-cup2 : ui/style
+ (ui/style
+  :name "style-image-cup2"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos2
+  :pointsize point-suit-size
+  :image-background
+   (ui/image
+    :name "image-cup2"
+    :label "Cups"
+    :file
+     (file/file
+      :name "icon-cup.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-image-jester-black1 : ui/style
+ (ui/style
+  :name "style-image-jester-black1"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos1
+  :pointsize point-suit-size
+  :image-background image-jester-black)
+ :doc "")
+
+(const style-image-jester-black2 : ui/style
+ (ui/style
+  :name "style-image-jester-black2"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos2
+  :pointsize point-suit-size
+  :image-background image-jester-black)
+ :doc "")
+
+(const style-image-jester-red1 : ui/style
+ (ui/style
+  :name "style-image-jester-red1"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos1
+  :pointsize point-suit-size
+  :image-background image-jester-red)
+ :doc "")
+
+(const style-image-jester-red2 : ui/style
+ (ui/style
+  :name "style-image-jester-red2"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos2
+  :pointsize point-suit-size
+  :image-background image-jester-red)
+ :doc "")
+
+(const style-image-sword1 : ui/style
+ (ui/style
+  :name "style-image-sword1"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos1
+  :pointsize point-suit-size
+  :image-background
+   (ui/image
+    :name "image-sword1"
+    :label "Swords"
+    :file
+     (file/file
+      :name "icon-sword.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-image-sword2 : ui/style
+ (ui/style
+  :name "style-image-sword2"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos2
+  :pointsize point-suit-size
+  :image-background
+   (ui/image
+    :name "image-sword2"
+    :label "Swords"
+    :file
+     (file/file
+      :name "icon-sword.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-image-wand1 : ui/style
+ (ui/style
+  :name "style-image-wand1"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos1
+  :pointsize point-suit-size
+  :image-background
+   (ui/image
+    :name "image-wand1"
+    :label "Wands"
+    :file
+     (file/file
+      :name "icon-wand.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-image-wand2 : ui/style
+ (ui/style
+  :name "style-image-wand2"
+  :type ui/styletype-shared
+  :pointpos point-suit-pos2
+  :pointsize point-suit-size
+  :image-background
+   (ui/image
+    :name "image-wand1"
+    :label "Wands"
+    :file
+     (file/file
+      :name "icon-wand.svg"
+      :path "icons")))
+ :doc "")
+
+(const style-selected : ui/style
+ (ui/style
+  :name             "style-selected"
+  :type             ui/styletype-shared
+  :color-background "E2CCCC")
+ :doc "")
+
+(const style-text : ui/style
+ (ui/style
+  :name "style-text"
+  :type ui/styletype-shared
+  :font font-text)
+ :doc "Returns the style for text area")
+
+(const style-text-area : ui/style
+ (ui/style
+  :name  "style-text-area"
+  :type  ui/styletype-shared
+  :font  font-textarea)
+ :doc "Returns the style for text area")
+
+(const style-text-header1 : ui/style
+ (ui/style
+  :name  "style-text-header1"
+  :type  ui/styletype-shared
+  :font  font-header1)
+ :doc "Returns the style for header1 text")
+
+(const style-text-header2 : ui/style
+ (ui/style
+  :name   "style-text-header2"
+  :type   ui/styletype-shared
+  :layout ui/layout-label
+  :font   font-header2)
+ :doc "Returns the style for header2 text")
+
+(const style-text-label : ui/style
+ (ui/style
+  :name   "style-text-label"
+  :type   ui/styletype-shared
+  :layout ui/layout-label
+  :font   font-label)
+ :doc "Returns the style for label text")
+
+(const style-text-rank1 : ui/style
+ (ui/style
+  :name   "style-text-rank1"
+  :type   ui/styletype-shared
+  :layout ui/layout-label
+  :font   font-rank
+  :pointpos point-rank-pos1
+  :pointsize point-rank-size)
+ :doc "Returns the style for label text")
+
+(const style-text-rank2 : ui/style
+ (ui/style
+  :name   "style-text-rank2"
+  :type   ui/styletype-shared
+  :layout ui/layout-label
+  :font   font-rank
+  :pointpos point-rank-pos2
+  :pointsize point-rank-size)
+ :doc "Returns the style for label text")
+
+(const style-text-title : ui/style
+ (ui/style
+  :name   "style-text-title"
+  :type   ui/styletype-shared
+  :layout ui/layout-label
+  :font   font-title)
+ :doc "Returns the style for title text")
+
+(const style-unit : ui/style
+ :doc "Returns the style for unit ui.")
+
+(const stylesheet-app : ui/stylesheet
+ (ui/stylesheet
+  :fontfacemap
+   (ui/fontfacemap<-fontfacelist
+    (ui/fontfacelist
+     fontface1
+     fontface2
+     fontface3))
+  :stylemap
+   (ui/stylemap<-stylelist
+    (ui/stylelist
+     style-html
+     style-body
+     style-div
+     style-clickable
+     style-hidden
+     style-selected
+     style-app-background
+     style-app-main
+     style-app-menubar
+     style-app-menudrawer
+     style-app-msgbox
+     style-app-navbar
+     style-app-navbar-button
+     style-app-navdrawer
+     style-app-parallax
+     style-app-statusbar
+     style-app-statusdrawer
+     style-app-titlebar
+     style-app-titlebar-print
+     style-button-back
+     style-card
+     style-deck
+     style-image-coin1
+     style-image-coin2
+     style-image-cup1
+     style-image-cup2
+     style-image-jester-black1
+     style-image-jester-black2
+     style-image-jester-red1
+     style-image-jester-red2
+     style-image-sword1
+     style-image-sword2
+     style-image-wand1
+     style-image-wand2
+     style-text
+     style-text-area
+     style-text-header1
+     style-text-header2
+     style-text-label
+     style-text-rank1
+     style-text-rank2
+     style-text-title)))
+ :doc "Returns the stylesheet for this project")

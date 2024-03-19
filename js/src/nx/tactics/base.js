@@ -1,6 +1,7 @@
 'strict mode'
 
 import vx_core from "../../vx/core.js"
+import vx_collection from "../../vx/collection.js"
 
 
 export default class nx_tactics_base {
@@ -67,6 +68,12 @@ export default class nx_tactics_base {
   static e_chapterlist = vx_core.vx_new_list(nx_tactics_base.t_chapterlist, [])
 
   /**
+   * type: chapterlistlist
+   */
+  static t_chapterlistlist = {}
+  static e_chapterlistlist = vx_core.vx_new_list(nx_tactics_base.t_chapterlistlist, [])
+
+  /**
    * type: chaptermap
    */
   static t_chaptermap = {}
@@ -101,6 +108,12 @@ export default class nx_tactics_base {
    */
   static t_deckmap = {}
   static e_deckmap = {vx_type: nx_tactics_base.t_deckmap}
+
+  /**
+   * type: fate
+   */
+  static t_fate = {}
+  static e_fate = {vx_type: nx_tactics_base.t_fate}
 
   /**
    * type: goal
@@ -225,6 +238,18 @@ export default class nx_tactics_base {
   static e_section = {vx_type: nx_tactics_base.t_section}
 
   /**
+   * type: sectionlist
+   */
+  static t_sectionlist = {}
+  static e_sectionlist = vx_core.vx_new_list(nx_tactics_base.t_sectionlist, [])
+
+  /**
+   * type: sectionlistlist
+   */
+  static t_sectionlistlist = {}
+  static e_sectionlistlist = vx_core.vx_new_list(nx_tactics_base.t_sectionlistlist, [])
+
+  /**
    * type: sectionmap
    */
   static t_sectionmap = {}
@@ -235,6 +260,18 @@ export default class nx_tactics_base {
    */
   static t_skill = {}
   static e_skill = {vx_type: nx_tactics_base.t_skill}
+
+  /**
+   * type: skilllist
+   */
+  static t_skilllist = {}
+  static e_skilllist = vx_core.vx_new_list(nx_tactics_base.t_skilllist, [])
+
+  /**
+   * type: skilllistlist
+   */
+  static t_skilllistlist = {}
+  static e_skilllistlist = vx_core.vx_new_list(nx_tactics_base.t_skilllistlist, [])
 
   /**
    * type: skillmap
@@ -277,6 +314,12 @@ export default class nx_tactics_base {
    */
   static t_tactics = {}
   static e_tactics = {vx_type: nx_tactics_base.t_tactics}
+
+  /**
+   * type: tarot
+   */
+  static t_tarot = {}
+  static e_tarot = {vx_type: nx_tactics_base.t_tarot}
 
   /**
    * type: team
@@ -404,64 +447,28 @@ export default class nx_tactics_base {
   static t_weaknessmap = {}
   static e_weaknessmap = {vx_type: nx_tactics_base.t_weaknessmap}
   /**
-   * Constant: rank-10
-   * {rank}
-   */
-  static c_rank_10 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-10'}}
-
-  /**
-   * Constant: rank-2
-   * {rank}
-   */
-  static c_rank_2 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-2'}}
-
-  /**
-   * Constant: rank-3
-   * {rank}
-   */
-  static c_rank_3 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-3'}}
-
-  /**
-   * Constant: rank-4
-   * {rank}
-   */
-  static c_rank_4 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-4'}}
-
-  /**
-   * Constant: rank-5
-   * {rank}
-   */
-  static c_rank_5 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-5'}}
-
-  /**
-   * Constant: rank-6
-   * {rank}
-   */
-  static c_rank_6 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-6'}}
-
-  /**
-   * Constant: rank-7
-   * {rank}
-   */
-  static c_rank_7 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-7'}}
-
-  /**
-   * Constant: rank-8
-   * {rank}
-   */
-  static c_rank_8 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-8'}}
-
-  /**
-   * Constant: rank-9
-   * {rank}
-   */
-  static c_rank_9 = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-9'}}
-
-  /**
    * Constant: rank-ace
    * {rank}
    */
   static c_rank_ace = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-ace'}}
+
+  /**
+   * Constant: rank-eight
+   * {rank}
+   */
+  static c_rank_eight = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-eight'}}
+
+  /**
+   * Constant: rank-five
+   * {rank}
+   */
+  static c_rank_five = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-five'}}
+
+  /**
+   * Constant: rank-four
+   * {rank}
+   */
+  static c_rank_four = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-four'}}
 
   /**
    * Constant: rank-jack
@@ -482,10 +489,46 @@ export default class nx_tactics_base {
   static c_rank_king = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-king'}}
 
   /**
+   * Constant: rank-nine
+   * {rank}
+   */
+  static c_rank_nine = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-nine'}}
+
+  /**
    * Constant: rank-queen
    * {rank}
    */
   static c_rank_queen = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-queen'}}
+
+  /**
+   * Constant: rank-seven
+   * {rank}
+   */
+  static c_rank_seven = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-seven'}}
+
+  /**
+   * Constant: rank-six
+   * {rank}
+   */
+  static c_rank_six = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-six'}}
+
+  /**
+   * Constant: rank-ten
+   * {rank}
+   */
+  static c_rank_ten = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-ten'}}
+
+  /**
+   * Constant: rank-three
+   * {rank}
+   */
+  static c_rank_three = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-three'}}
+
+  /**
+   * Constant: rank-two
+   * {rank}
+   */
+  static c_rank_two = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-two'}}
 
   /**
    * Constant: role-aoe
@@ -586,6 +629,12 @@ export default class nx_tactics_base {
   static c_stat_will = {vx_type: nx_tactics_base.t_stat, vx_constdef: {pkgname: 'nx/tactics/base', name: 'stat-will'}}
 
   /**
+   * Constant: suit-black
+   * {suit}
+   */
+  static c_suit_black = {vx_type: nx_tactics_base.t_suit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'suit-black'}}
+
+  /**
    * Constant: suit-club
    * {suit}
    */
@@ -602,6 +651,12 @@ export default class nx_tactics_base {
    * {suit}
    */
   static c_suit_heart = {vx_type: nx_tactics_base.t_suit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'suit-heart'}}
+
+  /**
+   * Constant: suit-red
+   * {suit}
+   */
+  static c_suit_red = {vx_type: nx_tactics_base.t_suit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'suit-red'}}
 
   /**
    * Constant: suit-spade
@@ -630,6 +685,183 @@ export default class nx_tactics_base {
       booklist,
       vx_core.f_new(vx_core.t_any_from_any, (book) => 
         vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_book}, book, ":name"))
+    )
+    return output
+  }
+
+  /**
+   * @function cardmap_from_bookmap
+   * Returns a cardmap from a given bookmap
+   * @param  {bookmap} bookmap
+   * @return {cardmap}
+   */
+  static t_cardmap_from_bookmap = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardmap_from_bookmap = {
+    vx_type: nx_tactics_base.t_cardmap_from_bookmap
+  }
+
+  // (func cardmap<-bookmap)
+  static f_cardmap_from_bookmap(bookmap) {
+    let output = nx_tactics_base.e_cardmap
+    output = vx_core.f_map_from_map_1(
+      {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_book, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_bookmap},
+      bookmap,
+      vx_core.f_new(vx_core.t_any_from_key_value, ([key, value]) => 
+        vx_core.f_any_from_any({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_book}, value))
+    )
+    return output
+  }
+
+  /**
+   * @function cardmap_from_cardlist
+   * @param  {cardlist} cardlist
+   * @return {cardmap}
+   */
+  static t_cardmap_from_cardlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardmap_from_cardlist = {
+    vx_type: nx_tactics_base.t_cardmap_from_cardlist
+  }
+
+  // (func cardmap<-cardlist)
+  static f_cardmap_from_cardlist(cardlist) {
+    let output = nx_tactics_base.e_cardmap
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_card, "list-2": nx_tactics_base.t_cardlist, "map-1": nx_tactics_base.t_cardmap, "struct-2": nx_tactics_base.t_card},
+      cardlist,
+      vx_core.f_new(vx_core.t_any_from_any, (card) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name"))
+    )
+    return output
+  }
+
+  /**
+   * @function chapterlist_from_book
+   * Returns a chapterlist from a given book
+   * @param  {book} book
+   * @return {chapterlist}
+   */
+  static t_chapterlist_from_book = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapterlist_from_book = {
+    vx_type: nx_tactics_base.t_chapterlist_from_book
+  }
+
+  // (func chapterlist<-book)
+  static f_chapterlist_from_book(book) {
+    let output = nx_tactics_base.e_chapterlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_chapterlist, "any-2": nx_tactics_base.t_chapter, "list-1": nx_tactics_base.t_chapterlist, "map-2": nx_tactics_base.t_chaptermap},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const chaptermap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_chaptermap, "struct-2": nx_tactics_base.t_book}, book, ":chaptermap")
+        return vx_core.f_list_from_map_1(
+          {"any-1": nx_tactics_base.t_chapter, "any-2": nx_tactics_base.t_chapter, "list-1": nx_tactics_base.t_chapterlist, "map-2": nx_tactics_base.t_chaptermap},
+          chaptermap,
+          vx_core.f_new(vx_core.t_any_from_key_value, ([key, value]) => value)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function chapterlist_from_booklist
+   * Returns a chapterlist from a given bookmap
+   * @param  {booklist} booklist
+   * @return {chapterlist}
+   */
+  static t_chapterlist_from_booklist = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapterlist_from_booklist = {
+    vx_type: nx_tactics_base.t_chapterlist_from_booklist
+  }
+
+  // (func chapterlist<-booklist)
+  static f_chapterlist_from_booklist(booklist) {
+    let output = nx_tactics_base.e_chapterlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_chapterlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const chapterlistlist = nx_tactics_base.f_chapterlistlist_from_booklist(booklist)
+        return nx_tactics_base.f_chapterlist_from_chapterlistlist(chapterlistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function chapterlist_from_chapterlistlist
+   * Returns a chapterlist from a given chapterlistlist
+   * @param  {chapterlistlist} chapterlistlist
+   * @return {chapterlistlist}
+   */
+  static t_chapterlist_from_chapterlistlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapterlist_from_chapterlistlist = {
+    vx_type: nx_tactics_base.t_chapterlist_from_chapterlistlist
+  }
+
+  // (func chapterlist<-chapterlistlist)
+  static f_chapterlist_from_chapterlistlist(chapterlistlist) {
+    let output = nx_tactics_base.e_chapterlistlist
+    output = vx_core.f_list_join_from_list({"any-1": nx_tactics_base.t_chapter, "any-2": nx_tactics_base.t_chapterlist, "list-1": nx_tactics_base.t_chapterlist, "list-2": nx_tactics_base.t_chapterlistlist}, chapterlistlist)
+    return output
+  }
+
+  /**
+   * @function chapterlistlist_from_booklist
+   * Returns a chapterlistlist from a given booklist
+   * @param  {booklist} booklist
+   * @return {chapterlistlist}
+   */
+  static t_chapterlistlist_from_booklist = {
+    vx_type: vx_core.t_type
+  }
+  static e_chapterlistlist_from_booklist = {
+    vx_type: nx_tactics_base.t_chapterlistlist_from_booklist
+  }
+
+  // (func chapterlistlist<-booklist)
+  static f_chapterlistlist_from_booklist(booklist) {
+    let output = nx_tactics_base.e_chapterlistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_chapterlist, "any-2": nx_tactics_base.t_book, "list-1": nx_tactics_base.t_chapterlistlist, "list-2": nx_tactics_base.t_booklist},
+      booklist,
+      vx_core.f_new(vx_core.t_any_from_any, (book) => 
+        nx_tactics_base.f_chapterlist_from_book(book))
+    )
+    return output
+  }
+
+  /**
+   * @function chaptermap_from_chapterlist
+   * Returns a chaptermap from a given chapterlist
+   * @param  {chapterlist} chapterlist
+   * @return {chaptermap}
+   */
+  static t_chaptermap_from_chapterlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_chaptermap_from_chapterlist = {
+    vx_type: nx_tactics_base.t_chaptermap_from_chapterlist
+  }
+
+  // (func chaptermap<-chapterlist)
+  static f_chaptermap_from_chapterlist(chapterlist) {
+    let output = nx_tactics_base.e_chaptermap
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_chapter, "any-2": nx_tactics_base.t_chapter, "list-2": nx_tactics_base.t_chapterlist, "map-1": nx_tactics_base.t_chaptermap, "struct-2": nx_tactics_base.t_chapter},
+      chapterlist,
+      vx_core.f_new(vx_core.t_any_from_any, (chapter) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_chapter}, chapter, ":name"))
     )
     return output
   }
@@ -673,6 +905,456 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function sectionlist_all_from_chapterlist
+   * Returns a list of all sections including subsections
+   * @param  {chapterlist} chapterlist
+   * @return {sectionlist}
+   */
+  static t_sectionlist_all_from_chapterlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlist_all_from_chapterlist = {
+    vx_type: nx_tactics_base.t_sectionlist_all_from_chapterlist
+  }
+
+  // (func sectionlist-all<-chapterlist)
+  static f_sectionlist_all_from_chapterlist(chapterlist) {
+    let output = nx_tactics_base.e_sectionlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_sectionlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const sections = nx_tactics_base.f_sectionlist_from_chapterlist(chapterlist)
+        return nx_tactics_base.f_sectionlist_all_from_sectionlist(sections)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function sectionlist_all_from_section
+   * Returns a list of all sections including subsections
+   * @param  {section} section
+   * @return {sectionlist}
+   */
+  static t_sectionlist_all_from_section = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlist_all_from_section = {
+    vx_type: nx_tactics_base.t_sectionlist_all_from_section
+  }
+
+  // (func sectionlist-all<-section)
+  static f_sectionlist_all_from_section(section) {
+    let output = nx_tactics_base.e_sectionlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_sectionlist, "any-2": nx_tactics_base.t_section, "list-2": nx_tactics_base.t_sectionlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const subsections = nx_tactics_base.f_sectionlist_from_section(section)
+        return vx_core.f_any_from_list_start_reduce(
+          {"any-1": nx_tactics_base.t_sectionlist, "any-2": nx_tactics_base.t_section, "list-2": nx_tactics_base.t_sectionlist},
+          subsections,
+          vx_core.f_new(
+            nx_tactics_base.t_sectionlist,
+            section
+          ),
+          vx_core.f_new(vx_core.t_any_from_reduce, (total, subsection) => 
+            vx_core.f_let(
+              {"any-1": nx_tactics_base.t_sectionlist},
+              [],
+              vx_core.f_new(vx_core.t_any_from_func, () => {
+                const subsubsections = nx_tactics_base.f_sectionlist_all_from_section(subsection)
+                return vx_core.f_copy(total, subsubsections)
+              })
+            ))
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function sectionlist_all_from_sectionlist
+   * Returns a list of all sections including subsections
+   * @param  {sectionlist} sectionlist
+   * @return {sectionlist}
+   */
+  static t_sectionlist_all_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlist_all_from_sectionlist = {
+    vx_type: nx_tactics_base.t_sectionlist_all_from_sectionlist
+  }
+
+  // (func sectionlist-all<-sectionlist)
+  static f_sectionlist_all_from_sectionlist(sectionlist) {
+    let output = nx_tactics_base.e_sectionlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_sectionlist, "any-2": nx_tactics_base.t_sectionlist, "list-1": nx_tactics_base.t_sectionlist, "list-2": nx_tactics_base.t_sectionlistlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const sectionlistlist = nx_tactics_base.f_sectionlistlist_from_sectionlist(sectionlist)
+        return vx_core.f_list_join_from_list({"any-1": nx_tactics_base.t_section, "any-2": nx_tactics_base.t_sectionlist, "list-1": nx_tactics_base.t_sectionlist, "list-2": nx_tactics_base.t_sectionlistlist}, sectionlistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function sectionlist_from_chapter
+   * Returns a list of all sections directly under the given chapter
+   * @param  {chapter} chapter
+   * @return {sectionlist}
+   */
+  static t_sectionlist_from_chapter = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlist_from_chapter = {
+    vx_type: nx_tactics_base.t_sectionlist_from_chapter
+  }
+
+  // (func sectionlist<-chapter)
+  static f_sectionlist_from_chapter(chapter) {
+    let output = nx_tactics_base.e_sectionlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_sectionlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const sectionmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_sectionmap, "struct-2": nx_tactics_base.t_chapter}, chapter, ":sectionmap")
+        return nx_tactics_base.f_sectionlist_from_sectionmap(sectionmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function sectionlist_from_chapterlist
+   * Returns a list of all sections directly under the given chapterlist
+   * @param  {chapterlist} chapterlist
+   * @return {sectionlist}
+   */
+  static t_sectionlist_from_chapterlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlist_from_chapterlist = {
+    vx_type: nx_tactics_base.t_sectionlist_from_chapterlist
+  }
+
+  // (func sectionlist<-chapterlist)
+  static f_sectionlist_from_chapterlist(chapterlist) {
+    let output = nx_tactics_base.e_sectionlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_sectionlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const sectionlistlist = nx_tactics_base.f_sectionlistlist_from_chapterlist(chapterlist)
+        return nx_tactics_base.f_sectionlist_from_sectionlistlist(sectionlistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function sectionlist_from_section
+   * Returns a list of all sections including subsections
+   * @param  {section} section
+   * @return {sectionlist}
+   */
+  static t_sectionlist_from_section = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlist_from_section = {
+    vx_type: nx_tactics_base.t_sectionlist_from_section
+  }
+
+  // (func sectionlist<-section)
+  static f_sectionlist_from_section(section) {
+    let output = nx_tactics_base.e_sectionlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_sectionlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const sectionmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_sectionmap, "struct-2": nx_tactics_base.t_section}, section, ":sectionmap")
+        return nx_tactics_base.f_sectionlist_from_sectionmap(sectionmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function sectionlist_from_sectionlistlist
+   * Returns a sectionlist from a given sectionlistlist
+   * @param  {sectionlistlist} sectionlistlist
+   * @return {sectionlist}
+   */
+  static t_sectionlist_from_sectionlistlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlist_from_sectionlistlist = {
+    vx_type: nx_tactics_base.t_sectionlist_from_sectionlistlist
+  }
+
+  // (func sectionlist<-sectionlistlist)
+  static f_sectionlist_from_sectionlistlist(sectionlistlist) {
+    let output = nx_tactics_base.e_sectionlist
+    output = vx_core.f_list_join_from_list({"any-1": nx_tactics_base.t_section, "any-2": nx_tactics_base.t_sectionlist, "list-1": nx_tactics_base.t_sectionlist, "list-2": nx_tactics_base.t_sectionlistlist}, sectionlistlist)
+    return output
+  }
+
+  /**
+   * @function sectionlist_from_sectionmap
+   * Returns a list of all sections including subsections
+   * @param  {sectionmap} sectionmap
+   * @return {sectionlist}
+   */
+  static t_sectionlist_from_sectionmap = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlist_from_sectionmap = {
+    vx_type: nx_tactics_base.t_sectionlist_from_sectionmap
+  }
+
+  // (func sectionlist<-sectionmap)
+  static f_sectionlist_from_sectionmap(sectionmap) {
+    let output = nx_tactics_base.e_sectionlist
+    output = vx_core.f_list_from_map({"any-1": nx_tactics_base.t_section, "any-2": nx_tactics_base.t_section, "list-1": nx_tactics_base.t_sectionlist, "map-2": nx_tactics_base.t_sectionmap}, sectionmap)
+    return output
+  }
+
+  /**
+   * @function sectionlistlist_from_chapterlist
+   * Returns a shallow sectionlistlist from a given chapterlist
+   * @param  {chapterlist} chapterlist
+   * @return {sectionlistlist}
+   */
+  static t_sectionlistlist_from_chapterlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlistlist_from_chapterlist = {
+    vx_type: nx_tactics_base.t_sectionlistlist_from_chapterlist
+  }
+
+  // (func sectionlistlist<-chapterlist)
+  static f_sectionlistlist_from_chapterlist(chapterlist) {
+    let output = nx_tactics_base.e_sectionlistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_sectionlist, "any-2": nx_tactics_base.t_chapter, "list-1": nx_tactics_base.t_sectionlistlist, "list-2": nx_tactics_base.t_chapterlist},
+      chapterlist,
+      vx_core.f_new(vx_core.t_any_from_any, (chapter) => 
+        nx_tactics_base.f_sectionlist_from_chapter(chapter))
+    )
+    return output
+  }
+
+  /**
+   * @function sectionlistlist_from_sectionlist
+   * Returns a shallow sectionlistlist from a given sectionlist
+   * @param  {sectionlist} sectionlist
+   * @return {sectionlistlist}
+   */
+  static t_sectionlistlist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionlistlist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_sectionlistlist_from_sectionlist
+  }
+
+  // (func sectionlistlist<-sectionlist)
+  static f_sectionlistlist_from_sectionlist(sectionlist) {
+    let output = nx_tactics_base.e_sectionlistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_sectionlist, "any-2": nx_tactics_base.t_section, "list-1": nx_tactics_base.t_sectionlistlist, "list-2": nx_tactics_base.t_sectionlist},
+      sectionlist,
+      vx_core.f_new(vx_core.t_any_from_any, (section) => 
+        vx_core.f_let(
+          {"any-1": nx_tactics_base.t_sectionlist},
+          [],
+          vx_core.f_new(vx_core.t_any_from_func, () => {
+            const sublist = nx_tactics_base.f_sectionlist_from_section(section)
+            return vx_core.f_new(
+              nx_tactics_base.t_sectionlist,
+              section,
+              sublist
+            )
+          })
+        ))
+    )
+    return output
+  }
+
+  /**
+   * @function sectionmap_from_sectionlist
+   * Returns a sectionmap from a given sectionlist
+   * @param  {sectionlist} sectionlist
+   * @return {sectionmap}
+   */
+  static t_sectionmap_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_sectionmap_from_sectionlist = {
+    vx_type: nx_tactics_base.t_sectionmap_from_sectionlist
+  }
+
+  // (func sectionmap<-sectionlist)
+  static f_sectionmap_from_sectionlist(sectionlist) {
+    let output = nx_tactics_base.e_sectionmap
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_section, "any-2": nx_tactics_base.t_section, "list-2": nx_tactics_base.t_sectionlist, "map-1": nx_tactics_base.t_sectionmap, "struct-2": nx_tactics_base.t_section},
+      sectionlist,
+      vx_core.f_new(vx_core.t_any_from_any, (section) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_section}, section, ":name"))
+    )
+    return output
+  }
+
+  /**
+   * @function skilllist_from_section
+   * Returns a skilllist from a given skilllistlist
+   * @param  {section} section
+   * @return {skilllist}
+   */
+  static t_skilllist_from_section = {
+    vx_type: vx_core.t_type
+  }
+  static e_skilllist_from_section = {
+    vx_type: nx_tactics_base.t_skilllist_from_section
+  }
+
+  // (func skilllist<-section)
+  static f_skilllist_from_section(section) {
+    let output = nx_tactics_base.e_skilllist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_skilllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const secname = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_section}, section, ":name")
+        const sec = vx_core.f_copy(section, ":name", secname)
+        const skillmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_skillmap, "struct-2": nx_tactics_base.t_section}, section, ":skillmap")
+        return nx_tactics_base.f_skilllist_from_skillmap(skillmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function skilllist_from_sectionlist
+   * Returns a skilllist from a given skilllistlist
+   * @param  {sectionlist} sectionlist
+   * @return {skilllist}
+   */
+  static t_skilllist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_skilllist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_skilllist_from_sectionlist
+  }
+
+  // (func skilllist<-sectionlist)
+  static f_skilllist_from_sectionlist(sectionlist) {
+    let output = nx_tactics_base.e_skilllist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_skilllist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const skilllistlist = nx_tactics_base.f_skilllistlist_from_sectionlist(sectionlist)
+        return nx_tactics_base.f_skilllist_from_skilllistlist(skilllistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function skilllist_from_skilllistlist
+   * Returns a skillmap from a given skilllist
+   * @param  {skilllistlist} skilllistlist
+   * @return {skilllist}
+   */
+  static t_skilllist_from_skilllistlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_skilllist_from_skilllistlist = {
+    vx_type: nx_tactics_base.t_skilllist_from_skilllistlist
+  }
+
+  // (func skilllist<-skilllistlist)
+  static f_skilllist_from_skilllistlist(skilllistlist) {
+    let output = nx_tactics_base.e_skilllist
+    output = vx_core.f_list_join_from_list({"any-1": nx_tactics_base.t_skill, "any-2": nx_tactics_base.t_skilllist, "list-1": nx_tactics_base.t_skilllist, "list-2": nx_tactics_base.t_skilllistlist}, skilllistlist)
+    return output
+  }
+
+  /**
+   * @function skilllist_from_skillmap
+   * Returns a skillmap from a given skilllist
+   * @param  {skillmap} skillmap
+   * @return {skilllist}
+   */
+  static t_skilllist_from_skillmap = {
+    vx_type: vx_core.t_type
+  }
+  static e_skilllist_from_skillmap = {
+    vx_type: nx_tactics_base.t_skilllist_from_skillmap
+  }
+
+  // (func skilllist<-skillmap)
+  static f_skilllist_from_skillmap(skillmap) {
+    let output = nx_tactics_base.e_skilllist
+    output = vx_core.f_list_from_map({"any-1": nx_tactics_base.t_skill, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_skilllist, "map-2": nx_tactics_base.t_skillmap}, skillmap)
+    return output
+  }
+
+  /**
+   * @function skilllistlist_from_sectionlist
+   * Returns a skilllistlist from a given sectionlist
+   * @param  {sectionlist} sections
+   * @return {skilllistlist}
+   */
+  static t_skilllistlist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_skilllistlist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_skilllistlist_from_sectionlist
+  }
+
+  // (func skilllistlist<-sectionlist)
+  static f_skilllistlist_from_sectionlist(sections) {
+    let output = nx_tactics_base.e_skilllistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_skilllist, "any-2": nx_tactics_base.t_section, "list-1": nx_tactics_base.t_skilllistlist, "list-2": nx_tactics_base.t_sectionlist},
+      sections,
+      vx_core.f_new(vx_core.t_any_from_any, (section) => 
+        nx_tactics_base.f_skilllist_from_section(section))
+    )
+    return output
+  }
+
+  /**
+   * @function skillmap_from_skilllist
+   * Returns a skillmap from a given skilllist
+   * @param  {skilllist} skilllist
+   * @return {skillmap}
+   */
+  static t_skillmap_from_skilllist = {
+    vx_type: vx_core.t_type
+  }
+  static e_skillmap_from_skilllist = {
+    vx_type: nx_tactics_base.t_skillmap_from_skilllist
+  }
+
+  // (func skillmap<-skilllist)
+  static f_skillmap_from_skilllist(skilllist) {
+    let output = nx_tactics_base.e_skillmap
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_skill, "any-2": nx_tactics_base.t_skill, "list-2": nx_tactics_base.t_skilllist, "map-1": nx_tactics_base.t_skillmap, "struct-2": nx_tactics_base.t_skill},
+      skilllist,
+      vx_core.f_new(vx_core.t_any_from_any, (skill) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_skill}, skill, ":name"))
+    )
+    return output
+  }
+
+  /**
    * @function tactics_from_booklist
    * Return a ready tactics from a bookmap.
    * @param  {booklist} booklist
@@ -693,10 +1375,26 @@ export default class nx_tactics_base {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const bookmap = nx_tactics_base.f_bookmap_from_booklist(booklist)
+        const chapterlist = nx_tactics_base.f_chapterlist_from_booklist(booklist)
+        const chaptermap = nx_tactics_base.f_chaptermap_from_chapterlist(chapterlist)
+        const sectionlist = nx_tactics_base.f_sectionlist_all_from_chapterlist(chapterlist)
+        const sectionmap = nx_tactics_base.f_sectionmap_from_sectionlist(sectionlist)
+        const skilllist = nx_tactics_base.f_skilllist_from_sectionlist(sectionlist)
+        const skillmap = nx_tactics_base.f_skillmap_from_skilllist(skilllist)
         return vx_core.f_new(
           nx_tactics_base.t_tactics,
           ":bookmap",
-          bookmap
+          bookmap,
+          ":chaptermap",
+          chaptermap,
+          ":powermap",
+          nx_tactics_base.t_powermap,
+          ":sectionmap",
+          sectionmap,
+          ":skillmap",
+          skillmap,
+          ":unitmap",
+          nx_tactics_base.t_unitmap
         )
       })
     )
@@ -707,20 +1405,20 @@ export default class nx_tactics_base {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
-      "rank-10": nx_tactics_base.c_rank_10,
-      "rank-2": nx_tactics_base.c_rank_2,
-      "rank-3": nx_tactics_base.c_rank_3,
-      "rank-4": nx_tactics_base.c_rank_4,
-      "rank-5": nx_tactics_base.c_rank_5,
-      "rank-6": nx_tactics_base.c_rank_6,
-      "rank-7": nx_tactics_base.c_rank_7,
-      "rank-8": nx_tactics_base.c_rank_8,
-      "rank-9": nx_tactics_base.c_rank_9,
       "rank-ace": nx_tactics_base.c_rank_ace,
+      "rank-eight": nx_tactics_base.c_rank_eight,
+      "rank-five": nx_tactics_base.c_rank_five,
+      "rank-four": nx_tactics_base.c_rank_four,
       "rank-jack": nx_tactics_base.c_rank_jack,
       "rank-joker": nx_tactics_base.c_rank_joker,
       "rank-king": nx_tactics_base.c_rank_king,
+      "rank-nine": nx_tactics_base.c_rank_nine,
       "rank-queen": nx_tactics_base.c_rank_queen,
+      "rank-seven": nx_tactics_base.c_rank_seven,
+      "rank-six": nx_tactics_base.c_rank_six,
+      "rank-ten": nx_tactics_base.c_rank_ten,
+      "rank-three": nx_tactics_base.c_rank_three,
+      "rank-two": nx_tactics_base.c_rank_two,
       "role-aoe": nx_tactics_base.c_role_aoe,
       "role-bosskiller": nx_tactics_base.c_role_bosskiller,
       "role-buffer": nx_tactics_base.c_role_buffer,
@@ -737,9 +1435,11 @@ export default class nx_tactics_base {
       "stat-shadow": nx_tactics_base.c_stat_shadow,
       "stat-speed": nx_tactics_base.c_stat_speed,
       "stat-will": nx_tactics_base.c_stat_will,
+      "suit-black": nx_tactics_base.c_suit_black,
       "suit-club": nx_tactics_base.c_suit_club,
       "suit-diamond": nx_tactics_base.c_suit_diamond,
       "suit-heart": nx_tactics_base.c_suit_heart,
+      "suit-red": nx_tactics_base.c_suit_red,
       "suit-spade": nx_tactics_base.c_suit_spade
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
@@ -753,12 +1453,14 @@ export default class nx_tactics_base {
       "cardmap": nx_tactics_base.e_cardmap,
       "chapter": nx_tactics_base.e_chapter,
       "chapterlist": nx_tactics_base.e_chapterlist,
+      "chapterlistlist": nx_tactics_base.e_chapterlistlist,
       "chaptermap": nx_tactics_base.e_chaptermap,
       "damage": nx_tactics_base.e_damage,
       "damagelist": nx_tactics_base.e_damagelist,
       "damagemap": nx_tactics_base.e_damagemap,
       "deck": nx_tactics_base.e_deck,
       "deckmap": nx_tactics_base.e_deckmap,
+      "fate": nx_tactics_base.e_fate,
       "goal": nx_tactics_base.e_goal,
       "item": nx_tactics_base.e_item,
       "itemmap": nx_tactics_base.e_itemmap,
@@ -779,8 +1481,12 @@ export default class nx_tactics_base {
       "scenario": nx_tactics_base.e_scenario,
       "scenariomap": nx_tactics_base.e_scenariomap,
       "section": nx_tactics_base.e_section,
+      "sectionlist": nx_tactics_base.e_sectionlist,
+      "sectionlistlist": nx_tactics_base.e_sectionlistlist,
       "sectionmap": nx_tactics_base.e_sectionmap,
       "skill": nx_tactics_base.e_skill,
+      "skilllist": nx_tactics_base.e_skilllist,
+      "skilllistlist": nx_tactics_base.e_skilllistlist,
       "skillmap": nx_tactics_base.e_skillmap,
       "specialty": nx_tactics_base.e_specialty,
       "specialtymap": nx_tactics_base.e_specialtymap,
@@ -788,6 +1494,7 @@ export default class nx_tactics_base {
       "suit": nx_tactics_base.e_suit,
       "suitmap": nx_tactics_base.e_suitmap,
       "tactics": nx_tactics_base.e_tactics,
+      "tarot": nx_tactics_base.e_tarot,
       "team": nx_tactics_base.e_team,
       "teammap": nx_tactics_base.e_teammap,
       "terrain": nx_tactics_base.e_terrain,
@@ -810,14 +1517,62 @@ export default class nx_tactics_base {
       "weakness": nx_tactics_base.e_weakness,
       "weaknessmap": nx_tactics_base.e_weaknessmap,
       "bookmap<-booklist": nx_tactics_base.e_bookmap_from_booklist,
+      "cardmap<-bookmap": nx_tactics_base.e_cardmap_from_bookmap,
+      "cardmap<-cardlist": nx_tactics_base.e_cardmap_from_cardlist,
+      "chapterlist<-book": nx_tactics_base.e_chapterlist_from_book,
+      "chapterlist<-booklist": nx_tactics_base.e_chapterlist_from_booklist,
+      "chapterlist<-chapterlistlist": nx_tactics_base.e_chapterlist_from_chapterlistlist,
+      "chapterlistlist<-booklist": nx_tactics_base.e_chapterlistlist_from_booklist,
+      "chaptermap<-chapterlist": nx_tactics_base.e_chaptermap_from_chapterlist,
       "name<-chapter": nx_tactics_base.e_name_from_chapter,
       "rating<-mass": nx_tactics_base.e_rating_from_mass,
+      "sectionlist-all<-chapterlist": nx_tactics_base.e_sectionlist_all_from_chapterlist,
+      "sectionlist-all<-section": nx_tactics_base.e_sectionlist_all_from_section,
+      "sectionlist-all<-sectionlist": nx_tactics_base.e_sectionlist_all_from_sectionlist,
+      "sectionlist<-chapter": nx_tactics_base.e_sectionlist_from_chapter,
+      "sectionlist<-chapterlist": nx_tactics_base.e_sectionlist_from_chapterlist,
+      "sectionlist<-section": nx_tactics_base.e_sectionlist_from_section,
+      "sectionlist<-sectionlistlist": nx_tactics_base.e_sectionlist_from_sectionlistlist,
+      "sectionlist<-sectionmap": nx_tactics_base.e_sectionlist_from_sectionmap,
+      "sectionlistlist<-chapterlist": nx_tactics_base.e_sectionlistlist_from_chapterlist,
+      "sectionlistlist<-sectionlist": nx_tactics_base.e_sectionlistlist_from_sectionlist,
+      "sectionmap<-sectionlist": nx_tactics_base.e_sectionmap_from_sectionlist,
+      "skilllist<-section": nx_tactics_base.e_skilllist_from_section,
+      "skilllist<-sectionlist": nx_tactics_base.e_skilllist_from_sectionlist,
+      "skilllist<-skilllistlist": nx_tactics_base.e_skilllist_from_skilllistlist,
+      "skilllist<-skillmap": nx_tactics_base.e_skilllist_from_skillmap,
+      "skilllistlist<-sectionlist": nx_tactics_base.e_skilllistlist_from_sectionlist,
+      "skillmap<-skilllist": nx_tactics_base.e_skillmap_from_skilllist,
       "tactics<-booklist": nx_tactics_base.e_tactics_from_booklist
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "bookmap<-booklist": nx_tactics_base.t_bookmap_from_booklist,
+      "cardmap<-bookmap": nx_tactics_base.t_cardmap_from_bookmap,
+      "cardmap<-cardlist": nx_tactics_base.t_cardmap_from_cardlist,
+      "chapterlist<-book": nx_tactics_base.t_chapterlist_from_book,
+      "chapterlist<-booklist": nx_tactics_base.t_chapterlist_from_booklist,
+      "chapterlist<-chapterlistlist": nx_tactics_base.t_chapterlist_from_chapterlistlist,
+      "chapterlistlist<-booklist": nx_tactics_base.t_chapterlistlist_from_booklist,
+      "chaptermap<-chapterlist": nx_tactics_base.t_chaptermap_from_chapterlist,
       "name<-chapter": nx_tactics_base.t_name_from_chapter,
       "rating<-mass": nx_tactics_base.t_rating_from_mass,
+      "sectionlist-all<-chapterlist": nx_tactics_base.t_sectionlist_all_from_chapterlist,
+      "sectionlist-all<-section": nx_tactics_base.t_sectionlist_all_from_section,
+      "sectionlist-all<-sectionlist": nx_tactics_base.t_sectionlist_all_from_sectionlist,
+      "sectionlist<-chapter": nx_tactics_base.t_sectionlist_from_chapter,
+      "sectionlist<-chapterlist": nx_tactics_base.t_sectionlist_from_chapterlist,
+      "sectionlist<-section": nx_tactics_base.t_sectionlist_from_section,
+      "sectionlist<-sectionlistlist": nx_tactics_base.t_sectionlist_from_sectionlistlist,
+      "sectionlist<-sectionmap": nx_tactics_base.t_sectionlist_from_sectionmap,
+      "sectionlistlist<-chapterlist": nx_tactics_base.t_sectionlistlist_from_chapterlist,
+      "sectionlistlist<-sectionlist": nx_tactics_base.t_sectionlistlist_from_sectionlist,
+      "sectionmap<-sectionlist": nx_tactics_base.t_sectionmap_from_sectionlist,
+      "skilllist<-section": nx_tactics_base.t_skilllist_from_section,
+      "skilllist<-sectionlist": nx_tactics_base.t_skilllist_from_sectionlist,
+      "skilllist<-skilllistlist": nx_tactics_base.t_skilllist_from_skilllistlist,
+      "skilllist<-skillmap": nx_tactics_base.t_skilllist_from_skillmap,
+      "skilllistlist<-sectionlist": nx_tactics_base.t_skilllistlist_from_sectionlist,
+      "skillmap<-skilllist": nx_tactics_base.t_skillmap_from_skilllist,
       "tactics<-booklist": nx_tactics_base.t_tactics_from_booklist
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -831,12 +1586,14 @@ export default class nx_tactics_base {
       "cardmap": nx_tactics_base.t_cardmap,
       "chapter": nx_tactics_base.t_chapter,
       "chapterlist": nx_tactics_base.t_chapterlist,
+      "chapterlistlist": nx_tactics_base.t_chapterlistlist,
       "chaptermap": nx_tactics_base.t_chaptermap,
       "damage": nx_tactics_base.t_damage,
       "damagelist": nx_tactics_base.t_damagelist,
       "damagemap": nx_tactics_base.t_damagemap,
       "deck": nx_tactics_base.t_deck,
       "deckmap": nx_tactics_base.t_deckmap,
+      "fate": nx_tactics_base.t_fate,
       "goal": nx_tactics_base.t_goal,
       "item": nx_tactics_base.t_item,
       "itemmap": nx_tactics_base.t_itemmap,
@@ -857,8 +1614,12 @@ export default class nx_tactics_base {
       "scenario": nx_tactics_base.t_scenario,
       "scenariomap": nx_tactics_base.t_scenariomap,
       "section": nx_tactics_base.t_section,
+      "sectionlist": nx_tactics_base.t_sectionlist,
+      "sectionlistlist": nx_tactics_base.t_sectionlistlist,
       "sectionmap": nx_tactics_base.t_sectionmap,
       "skill": nx_tactics_base.t_skill,
+      "skilllist": nx_tactics_base.t_skilllist,
+      "skilllistlist": nx_tactics_base.t_skilllistlist,
       "skillmap": nx_tactics_base.t_skillmap,
       "specialty": nx_tactics_base.t_specialty,
       "specialtymap": nx_tactics_base.t_specialtymap,
@@ -866,6 +1627,7 @@ export default class nx_tactics_base {
       "suit": nx_tactics_base.t_suit,
       "suitmap": nx_tactics_base.t_suitmap,
       "tactics": nx_tactics_base.t_tactics,
+      "tarot": nx_tactics_base.t_tarot,
       "team": nx_tactics_base.t_team,
       "teammap": nx_tactics_base.t_teammap,
       "terrain": nx_tactics_base.t_terrain,
@@ -916,6 +1678,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -940,11 +1707,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -989,6 +1766,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1012,6 +1794,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "chaptermap": {
@@ -1085,6 +1877,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1109,11 +1906,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -1176,6 +1983,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1199,6 +2011,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "sectionmap": {
@@ -1233,6 +2055,24 @@ export default class nx_tactics_base {
       proplast      : {}
     }
     nx_tactics_base.e_chapterlist['vx_type'] = nx_tactics_base.t_chapterlist
+
+    // (type chapterlistlist)
+    nx_tactics_base.t_chapterlistlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_chapterlistlist['vx_value'] = {
+      name          : "chapterlistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_chapterlist],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_chapterlistlist['vx_type'] = nx_tactics_base.t_chapterlistlist
 
     // (type chaptermap)
     nx_tactics_base.t_chaptermap['vx_type'] = vx_core.t_type
@@ -1272,6 +2112,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1296,11 +2141,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -1363,6 +2218,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1386,6 +2246,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "cardmap": {
@@ -1422,6 +2292,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1446,16 +2321,95 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
     nx_tactics_base.e_deckmap['vx_type'] = nx_tactics_base.t_deckmap
     nx_tactics_base.e_deckmap['vx_value'] = {}
+
+    // (type fate)
+    nx_tactics_base.t_fate['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_fate['vx_value'] = {
+      name          : "fate",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_fate['vx_type'] = nx_tactics_base.t_fate
+    nx_tactics_base.e_fate['vx_value'] = {}
 
     // (type goal)
     nx_tactics_base.t_goal['vx_type'] = vx_core.t_type
@@ -1476,6 +2430,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1499,6 +2458,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "description": {
@@ -1550,6 +2519,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1573,6 +2547,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "body": {
@@ -1748,6 +2732,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1771,6 +2760,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "locationmap": {
@@ -1831,6 +2830,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1855,11 +2859,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -1885,6 +2899,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -1909,11 +2928,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -1992,6 +3021,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2015,6 +3049,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "stat": {
@@ -2080,6 +3124,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2104,11 +3153,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -2134,6 +3193,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2159,6 +3223,16 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        },
         "level": {
           "name" : "level",
           "type" : vx_core.t_int,
@@ -2169,14 +3243,14 @@ export default class nx_tactics_base {
           "type" : vx_core.t_int,
           "multi": false
         },
-        "scale": {
-          "name" : "scale",
+        "size": {
+          "name" : "size",
           "type" : vx_core.t_int,
           "multi": false
         }
       },
       proplast      : {
-        "name" : "scale",
+        "name" : "size",
         "type" : vx_core.t_int,
         "multi": false
       }
@@ -2241,6 +3315,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2264,6 +3343,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "classification": {
@@ -2319,6 +3408,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2342,6 +3436,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "teammap": {
@@ -2397,6 +3501,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2420,6 +3529,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "damagemap": {
@@ -2502,6 +3621,42 @@ export default class nx_tactics_base {
     nx_tactics_base.e_section['vx_type'] = nx_tactics_base.t_section
     nx_tactics_base.e_section['vx_value'] = {}
 
+    // (type sectionlist)
+    nx_tactics_base.t_sectionlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_sectionlist['vx_value'] = {
+      name          : "sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_section],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_sectionlist['vx_type'] = nx_tactics_base.t_sectionlist
+
+    // (type sectionlistlist)
+    nx_tactics_base.t_sectionlistlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_sectionlistlist['vx_value'] = {
+      name          : "sectionlistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_sectionlist],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_sectionlistlist['vx_type'] = nx_tactics_base.t_sectionlistlist
+
     // (type sectionmap)
     nx_tactics_base.t_sectionmap['vx_type'] = vx_core.t_type
     nx_tactics_base.t_sectionmap['vx_value'] = {
@@ -2540,6 +3695,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2563,6 +3723,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "stat": {
@@ -2589,6 +3759,42 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_skill['vx_type'] = nx_tactics_base.t_skill
     nx_tactics_base.e_skill['vx_value'] = {}
+
+    // (type skilllist)
+    nx_tactics_base.t_skilllist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_skilllist['vx_value'] = {
+      name          : "skilllist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_skill],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_skilllist['vx_type'] = nx_tactics_base.t_skilllist
+
+    // (type skilllistlist)
+    nx_tactics_base.t_skilllistlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_skilllistlist['vx_value'] = {
+      name          : "skilllistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_skilllist],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_skilllistlist['vx_type'] = nx_tactics_base.t_skilllistlist
 
     // (type skillmap)
     nx_tactics_base.t_skillmap['vx_type'] = vx_core.t_type
@@ -2628,6 +3834,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2652,11 +3863,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -2682,6 +3903,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2706,11 +3932,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -2736,6 +3972,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2760,11 +4001,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -2790,6 +4041,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -2814,11 +4070,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -2878,6 +4144,11 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_itemmap,
           "multi": false
         },
+        "locationmap": {
+          "name" : "locationmap",
+          "type" : nx_tactics_base.t_locationmap,
+          "multi": false
+        },
         "powermap": {
           "name" : "powermap",
           "type" : nx_tactics_base.t_powermap,
@@ -2903,10 +4174,10 @@ export default class nx_tactics_base {
     nx_tactics_base.e_tactics['vx_type'] = nx_tactics_base.t_tactics
     nx_tactics_base.e_tactics['vx_value'] = {}
 
-    // (type team)
-    nx_tactics_base.t_team['vx_type'] = vx_core.t_type
-    nx_tactics_base.t_team['vx_value'] = {
-      name          : "team",
+    // (type tarot)
+    nx_tactics_base.t_tarot['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_tarot['vx_value'] = {
+      name          : "tarot",
       pkgname       : "nx/tactics/base",
       extends       : ":struct",
       allowfuncs    : [],
@@ -2919,6 +4190,11 @@ export default class nx_tactics_base {
       properties    : {
         "name": {
           "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -2945,6 +4221,85 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_tarot['vx_type'] = nx_tactics_base.t_tarot
+    nx_tactics_base.e_tarot['vx_value'] = {}
+
+    // (type team)
+    nx_tactics_base.t_team['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_team['vx_value'] = {
+      name          : "team",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "completevictory": {
@@ -3015,6 +4370,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -3039,11 +4399,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -3088,6 +4458,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -3111,6 +4486,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "description": {
@@ -3162,6 +4547,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -3185,6 +4575,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "body": {
@@ -3404,6 +4804,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -3427,6 +4832,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "facing": {
@@ -3516,6 +4931,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -3539,6 +4959,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "level": {
@@ -3644,6 +5074,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -3667,6 +5102,16 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
           "multi": false
         },
         "level": {
@@ -3805,6 +5250,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -3829,11 +5279,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -3878,6 +5338,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
@@ -3902,11 +5367,21 @@ export default class nx_tactics_base {
           "name" : "orientation",
           "type" : vx_core.t_string,
           "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "orientation",
-        "type" : vx_core.t_string,
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
         "multi": false
       }
     }
@@ -3950,6 +5425,132 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_bookmap_from_booklist
     }
 
+    // (func cardmap<-bookmap)
+    nx_tactics_base.t_cardmap_from_bookmap['vx_value'] = {
+      name          : "cardmap<-bookmap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardmap_from_bookmap
+    }
+
+    // (func cardmap<-cardlist)
+    nx_tactics_base.t_cardmap_from_cardlist['vx_value'] = {
+      name          : "cardmap<-cardlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardmap_from_cardlist
+    }
+
+    // (func chapterlist<-book)
+    nx_tactics_base.t_chapterlist_from_book['vx_value'] = {
+      name          : "chapterlist<-book",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_chapterlist_from_book
+    }
+
+    // (func chapterlist<-booklist)
+    nx_tactics_base.t_chapterlist_from_booklist['vx_value'] = {
+      name          : "chapterlist<-booklist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_chapterlist_from_booklist
+    }
+
+    // (func chapterlist<-chapterlistlist)
+    nx_tactics_base.t_chapterlist_from_chapterlistlist['vx_value'] = {
+      name          : "chapterlist<-chapterlistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_chapterlist_from_chapterlistlist
+    }
+
+    // (func chapterlistlist<-booklist)
+    nx_tactics_base.t_chapterlistlist_from_booklist['vx_value'] = {
+      name          : "chapterlistlist<-booklist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_chapterlistlist_from_booklist
+    }
+
+    // (func chaptermap<-chapterlist)
+    nx_tactics_base.t_chaptermap_from_chapterlist['vx_value'] = {
+      name          : "chaptermap<-chapterlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_chaptermap_from_chapterlist
+    }
+
     // (func name<-chapter)
     nx_tactics_base.t_name_from_chapter['vx_value'] = {
       name          : "name<-chapter",
@@ -3986,6 +5587,312 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_rating_from_mass
     }
 
+    // (func sectionlist-all<-chapterlist)
+    nx_tactics_base.t_sectionlist_all_from_chapterlist['vx_value'] = {
+      name          : "sectionlist-all<-chapterlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlist_all_from_chapterlist
+    }
+
+    // (func sectionlist-all<-section)
+    nx_tactics_base.t_sectionlist_all_from_section['vx_value'] = {
+      name          : "sectionlist-all<-section",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlist_all_from_section
+    }
+
+    // (func sectionlist-all<-sectionlist)
+    nx_tactics_base.t_sectionlist_all_from_sectionlist['vx_value'] = {
+      name          : "sectionlist-all<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlist_all_from_sectionlist
+    }
+
+    // (func sectionlist<-chapter)
+    nx_tactics_base.t_sectionlist_from_chapter['vx_value'] = {
+      name          : "sectionlist<-chapter",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlist_from_chapter
+    }
+
+    // (func sectionlist<-chapterlist)
+    nx_tactics_base.t_sectionlist_from_chapterlist['vx_value'] = {
+      name          : "sectionlist<-chapterlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlist_from_chapterlist
+    }
+
+    // (func sectionlist<-section)
+    nx_tactics_base.t_sectionlist_from_section['vx_value'] = {
+      name          : "sectionlist<-section",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlist_from_section
+    }
+
+    // (func sectionlist<-sectionlistlist)
+    nx_tactics_base.t_sectionlist_from_sectionlistlist['vx_value'] = {
+      name          : "sectionlist<-sectionlistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlist_from_sectionlistlist
+    }
+
+    // (func sectionlist<-sectionmap)
+    nx_tactics_base.t_sectionlist_from_sectionmap['vx_value'] = {
+      name          : "sectionlist<-sectionmap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlist_from_sectionmap
+    }
+
+    // (func sectionlistlist<-chapterlist)
+    nx_tactics_base.t_sectionlistlist_from_chapterlist['vx_value'] = {
+      name          : "sectionlistlist<-chapterlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlistlist_from_chapterlist
+    }
+
+    // (func sectionlistlist<-sectionlist)
+    nx_tactics_base.t_sectionlistlist_from_sectionlist['vx_value'] = {
+      name          : "sectionlistlist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionlistlist_from_sectionlist
+    }
+
+    // (func sectionmap<-sectionlist)
+    nx_tactics_base.t_sectionmap_from_sectionlist['vx_value'] = {
+      name          : "sectionmap<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_sectionmap_from_sectionlist
+    }
+
+    // (func skilllist<-section)
+    nx_tactics_base.t_skilllist_from_section['vx_value'] = {
+      name          : "skilllist<-section",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_skilllist_from_section
+    }
+
+    // (func skilllist<-sectionlist)
+    nx_tactics_base.t_skilllist_from_sectionlist['vx_value'] = {
+      name          : "skilllist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_skilllist_from_sectionlist
+    }
+
+    // (func skilllist<-skilllistlist)
+    nx_tactics_base.t_skilllist_from_skilllistlist['vx_value'] = {
+      name          : "skilllist<-skilllistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_skilllist_from_skilllistlist
+    }
+
+    // (func skilllist<-skillmap)
+    nx_tactics_base.t_skilllist_from_skillmap['vx_value'] = {
+      name          : "skilllist<-skillmap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_skilllist_from_skillmap
+    }
+
+    // (func skilllistlist<-sectionlist)
+    nx_tactics_base.t_skilllistlist_from_sectionlist['vx_value'] = {
+      name          : "skilllistlist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_skilllistlist_from_sectionlist
+    }
+
+    // (func skillmap<-skilllist)
+    nx_tactics_base.t_skillmap_from_skilllist['vx_value'] = {
+      name          : "skillmap<-skilllist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_skillmap_from_skilllist
+    }
+
     // (func tactics<-booklist)
     nx_tactics_base.t_tactics_from_booklist['vx_value'] = {
       name          : "tactics<-booklist",
@@ -4004,124 +5911,610 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_tactics_from_booklist
     }
 
-    // (const rank-10)
-    Object.assign(nx_tactics_base.c_rank_10, {
-      
-    })
-
-    // (const rank-2)
-    Object.assign(nx_tactics_base.c_rank_2, {
-      
-    })
-
-    // (const rank-3)
-    Object.assign(nx_tactics_base.c_rank_3, {
-      
-    })
-
-    // (const rank-4)
-    Object.assign(nx_tactics_base.c_rank_4, {
-      
-    })
-
-    // (const rank-5)
-    Object.assign(nx_tactics_base.c_rank_5, {
-      
-    })
-
-    // (const rank-6)
-    Object.assign(nx_tactics_base.c_rank_6, {
-      
-    })
-
-    // (const rank-7)
-    Object.assign(nx_tactics_base.c_rank_7, {
-      
-    })
-
-    // (const rank-8)
-    Object.assign(nx_tactics_base.c_rank_8, {
-      
-    })
-
-    // (const rank-9)
-    Object.assign(nx_tactics_base.c_rank_9, {
-      
-    })
-
     // (const rank-ace)
-    Object.assign(nx_tactics_base.c_rank_ace, {
-      
-    })
+    Object.assign(nx_tactics_base.c_rank_ace, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Ace",
+      ":titles",
+      "A"
+    ))
+
+    // (const rank-eight)
+    Object.assign(nx_tactics_base.c_rank_eight, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Eight",
+      ":titles",
+      "8"
+    ))
+
+    // (const rank-five)
+    Object.assign(nx_tactics_base.c_rank_five, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Five",
+      ":titles",
+      "5"
+    ))
+
+    // (const rank-four)
+    Object.assign(nx_tactics_base.c_rank_four, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Four",
+      ":titles",
+      "4"
+    ))
 
     // (const rank-jack)
-    Object.assign(nx_tactics_base.c_rank_jack, {
-      
-    })
+    Object.assign(nx_tactics_base.c_rank_jack, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Jack",
+      ":titles",
+      "J"
+    ))
 
     // (const rank-joker)
-    Object.assign(nx_tactics_base.c_rank_joker, {
-      
-    })
+    Object.assign(nx_tactics_base.c_rank_joker, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Wild",
+      ":titles",
+      "W"
+    ))
 
     // (const rank-king)
-    Object.assign(nx_tactics_base.c_rank_king, {
-      
-    })
+    Object.assign(nx_tactics_base.c_rank_king, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "King",
+      ":titles",
+      "K"
+    ))
+
+    // (const rank-nine)
+    Object.assign(nx_tactics_base.c_rank_nine, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Nine",
+      ":titles",
+      "9"
+    ))
 
     // (const rank-queen)
-    Object.assign(nx_tactics_base.c_rank_queen, {
-      
-    })
+    Object.assign(nx_tactics_base.c_rank_queen, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Queen",
+      ":titles",
+      "Q"
+    ))
+
+    // (const rank-seven)
+    Object.assign(nx_tactics_base.c_rank_seven, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Seven",
+      ":titles",
+      "7"
+    ))
+
+    // (const rank-six)
+    Object.assign(nx_tactics_base.c_rank_six, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Six",
+      ":titles",
+      "6"
+    ))
+
+    // (const rank-ten)
+    Object.assign(nx_tactics_base.c_rank_ten, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Ten",
+      ":titles",
+      "10"
+    ))
+
+    // (const rank-three)
+    Object.assign(nx_tactics_base.c_rank_three, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Three",
+      ":titles",
+      "3"
+    ))
+
+    // (const rank-two)
+    Object.assign(nx_tactics_base.c_rank_two, vx_core.f_new(
+      nx_tactics_base.t_rank,
+      ":name",
+      "Two",
+      ":titles",
+      "2"
+    ))
 
     // (const stat-beast)
     Object.assign(nx_tactics_base.c_stat_beast, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const stat-body)
     Object.assign(nx_tactics_base.c_stat_body, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const stat-mind)
     Object.assign(nx_tactics_base.c_stat_mind, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const stat-shadow)
     Object.assign(nx_tactics_base.c_stat_shadow, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const stat-speed)
     Object.assign(nx_tactics_base.c_stat_speed, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const stat-will)
     Object.assign(nx_tactics_base.c_stat_will, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
+    })
+
+    // (const suit-black)
+    Object.assign(nx_tactics_base.c_suit_black, {
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const suit-club)
     Object.assign(nx_tactics_base.c_suit_club, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const suit-diamond)
     Object.assign(nx_tactics_base.c_suit_diamond, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const suit-heart)
     Object.assign(nx_tactics_base.c_suit_heart, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
+    })
+
+    // (const suit-red)
+    Object.assign(nx_tactics_base.c_suit_red, {
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
     // (const suit-spade)
     Object.assign(nx_tactics_base.c_suit_spade, {
-      
+      "rank": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "suit": {
+        "rank": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      }
     })
 
   }

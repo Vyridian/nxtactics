@@ -1,0 +1,7 @@
+(package nx/tactics/decks/starter
+ :libs (lib base   :path nx/tactics/base)
+ :doc  "Tactics Starter Decks")
+
+(func deck-starter : base/deck
+ (base/deck
+  :name "Starter"))
