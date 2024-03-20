@@ -2,8 +2,6 @@
 
 import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
-import nx_tactics_deck from "../../../nx/tactics/deck.js"
-import vx_event from "../../../vx/event.js"
 import vx_data_file from "../../../vx/data/file.js"
 import vx_ui_ui from "../../../vx/ui/ui.js"
 

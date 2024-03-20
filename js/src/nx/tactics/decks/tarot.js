@@ -348,7 +348,7 @@ export default class nx_tactics_decks_tarot {
     output = vx_core.f_new(
       nx_tactics_base.t_deck,
       ":name",
-      "Tarot Deck",
+      "Tarot",
       ":cardmap",
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(

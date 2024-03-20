@@ -348,7 +348,7 @@
 
 (func deck-tarot : base/deck
  (base/deck
-  :name "Tarot Deck"
+  :name "Tarot"
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist

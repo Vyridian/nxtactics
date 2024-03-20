@@ -6,6 +6,6 @@ It is also a test bed for new features for vxlisp. Obvious ones are UI and datab
 
 ## Links
 * [Main Application](html/runjs.html)
-* [Test Suite](html/testjs.html)
+* [Test Suite Js](html/testjs.html)
 * [API Documentation](doc/doc.html)
 * [Source Code](https://github.com/Vyridian/nxtactics)

@@ -47,7 +47,7 @@ import nx_tactics_books_skills_test from "./nx/tactics/books/skills_test.js"
 import nx_tactics_books_space_and_time_test from "./nx/tactics/books/space_and_time_test.js"
 import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_test.js"
 import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
-import nx_tactics_damage_test from "./nx/tactics/damage_test.js"
+import nx_tactics_decks_damage_test from "./nx/tactics/decks/damage_test.js"
 import nx_tactics_decks_fate_test from "./nx/tactics/decks/fate_test.js"
 import nx_tactics_decks_starter_test from "./nx/tactics/decks/starter_test.js"
 import nx_tactics_decks_tarot_test from "./nx/tactics/decks/tarot_test.js"
@@ -57,7 +57,7 @@ import vx_test_test from "./vx/test_test.js"
 import vx_ui_ui_test from "./vx/ui/ui_test.js"
 import vx_web_htmldoc_test from "./vx/web/htmldoc_test.js"
 import nx_tactics_books_bookloader_test from "./nx/tactics/books/bookloader_test.js"
-import nx_tactics_deck_test from "./nx/tactics/deck_test.js"
+import nx_tactics_decks_deck_test from "./nx/tactics/decks/deck_test.js"
 import nx_tactics_ui_stylesheet_test from "./nx/tactics/ui/stylesheet_test.js"
 import vx_data_csv_test from "./vx/data/csv_test.js"
 import vx_translate_test from "./vx/translate_test.js"
@@ -130,7 +130,7 @@ export default class app_test {
       nx_tactics_books_space_and_time_test.test_package(context),
       nx_tactics_books_superheroes_test.test_package(context),
       nx_tactics_books_world_wars_test.test_package(context),
-      nx_tactics_damage_test.test_package(context),
+      nx_tactics_decks_damage_test.test_package(context),
       nx_tactics_decks_fate_test.test_package(context),
       nx_tactics_decks_starter_test.test_package(context),
       nx_tactics_decks_tarot_test.test_package(context),
@@ -140,7 +140,7 @@ export default class app_test {
       vx_ui_ui_test.test_package(context),
       vx_web_htmldoc_test.test_package(context),
       nx_tactics_books_bookloader_test.test_package(context),
-      nx_tactics_deck_test.test_package(context),
+      nx_tactics_decks_deck_test.test_package(context),
       nx_tactics_ui_stylesheet_test.test_package(context),
       vx_data_csv_test.test_package(context),
       vx_translate_test.test_package(context),

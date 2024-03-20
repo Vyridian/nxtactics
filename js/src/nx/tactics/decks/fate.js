@@ -348,7 +348,7 @@ export default class nx_tactics_decks_fate {
     output = vx_core.f_new(
       nx_tactics_base.t_deck,
       ":name",
-      "Fate Deck",
+      "Fate",
       ":cardmap",
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(

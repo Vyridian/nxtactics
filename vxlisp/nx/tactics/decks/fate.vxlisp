@@ -1067,7 +1067,7 @@
 
 (func deck-fate : base/deck
  (base/deck
-  :name "Fate Deck"
+  :name "Fate"
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist

@@ -26,6 +26,7 @@
               summary     : string
               titles      : string
               orientation : string
+              ranksuit    : ranksuit
               rank        : rank
               suit        : suit])
 
@@ -74,6 +75,10 @@
               complete    : int
               reward      : string]
  :traits [card])
+
+(type imagecard : struct
+ :traits     [card]
+ :properties [origcard : card])
 
 (type item : struct
  :traits     [card]
@@ -138,7 +143,12 @@
  :allowtypes [power])
 
 (type rank : struct
- :traits  [card])
+ :traits [card])
+
+(type ranksuit : struct
+ :properties [rank : rank
+              suit : suit]
+ :traits [card])
 
 (type rating : struct
  :traits     [card]
@@ -358,6 +368,18 @@
 (type weaknessmap : map
  :allowtypes [weakness])
 
+(type wound : struct
+ :traits [card]
+ :doc "Lasting Body Damage")
+
+(type disorder : struct
+ :traits [card]
+ :doc "Lasting Mind Damage")
+
+(type trauma : struct
+ :traits [card]
+ :doc "Lasting Will Damage")
+
 (const rank-ace : rank
  (rank
   :name "Ace"
@@ -427,6 +449,276 @@
  (rank
   :name "Wild"
   :titles "W"))
+
+(const ranksuit-jokerblack : ranksuit
+ (ranksuit
+  :rank rank-joker
+  :suit suit-black))
+
+(const ranksuit-jokerred : ranksuit
+ (ranksuit
+  :rank rank-joker
+  :suit suit-red))
+
+(const ranksuit-ac : ranksuit
+ (ranksuit
+  :rank rank-ace
+  :suit suit-club))
+
+(const ranksuit-ad : ranksuit
+ (ranksuit
+  :rank rank-ace
+  :suit suit-diamond))
+
+(const ranksuit-ah : ranksuit
+ (ranksuit
+  :rank rank-ace
+  :suit suit-heart))
+
+(const ranksuit-as : ranksuit
+ (ranksuit
+  :rank rank-ace
+  :suit suit-spade))
+
+(const ranksuit-kc : ranksuit
+ (ranksuit
+  :rank rank-king
+  :suit suit-club))
+
+(const ranksuit-kd : ranksuit
+ (ranksuit
+  :rank rank-king
+  :suit suit-diamond))
+
+(const ranksuit-kh : ranksuit
+ (ranksuit
+  :rank rank-king
+  :suit suit-heart))
+
+(const ranksuit-ks : ranksuit
+ (ranksuit
+  :rank rank-king
+  :suit suit-spade))
+
+(const ranksuit-qc : ranksuit
+ (ranksuit
+  :rank rank-queen
+  :suit suit-club))
+
+(const ranksuit-qd : ranksuit
+ (ranksuit
+  :rank rank-queen
+  :suit suit-diamond))
+
+(const ranksuit-qh : ranksuit
+ (ranksuit
+  :rank rank-queen
+  :suit suit-heart))
+
+(const ranksuit-qs : ranksuit
+ (ranksuit
+  :rank rank-queen
+  :suit suit-spade))
+
+(const ranksuit-jc : ranksuit
+ (ranksuit
+  :rank rank-jack
+  :suit suit-club))
+
+(const ranksuit-jd : ranksuit
+ (ranksuit
+  :rank rank-jack
+  :suit suit-diamond))
+
+(const ranksuit-jh : ranksuit
+ (ranksuit
+  :rank rank-jack
+  :suit suit-heart))
+
+(const ranksuit-js : ranksuit
+ (ranksuit
+  :rank rank-jack
+  :suit suit-spade))
+
+(const ranksuit-tc : ranksuit
+ (ranksuit
+  :rank rank-ten
+  :suit suit-club))
+
+(const ranksuit-td : ranksuit
+ (ranksuit
+  :rank rank-ten
+  :suit suit-diamond))
+
+(const ranksuit-th : ranksuit
+ (ranksuit
+  :rank rank-ten
+  :suit suit-heart))
+
+(const ranksuit-ts : ranksuit
+ (ranksuit
+  :rank rank-ten
+  :suit suit-spade))
+
+(const ranksuit-9c : ranksuit
+ (ranksuit
+  :rank rank-nine
+  :suit suit-club))
+
+(const ranksuit-9d : ranksuit
+ (ranksuit
+  :rank rank-nine
+  :suit suit-diamond))
+
+(const ranksuit-9h : ranksuit
+ (ranksuit
+  :rank rank-nine
+  :suit suit-heart))
+
+(const ranksuit-9s : ranksuit
+ (ranksuit
+  :rank rank-nine
+  :suit suit-spade))
+
+(const ranksuit-8c : ranksuit
+ (ranksuit
+  :rank rank-ten
+  :suit suit-club))
+
+(const ranksuit-8d : ranksuit
+ (ranksuit
+  :rank rank-eight
+  :suit suit-diamond))
+
+(const ranksuit-8h : ranksuit
+ (ranksuit
+  :rank rank-eight
+  :suit suit-heart))
+
+(const ranksuit-7c : ranksuit
+ (ranksuit
+  :rank rank-seven
+  :suit suit-club))
+
+(const ranksuit-7d : ranksuit
+ (ranksuit
+  :rank rank-seven
+  :suit suit-diamond))
+
+(const ranksuit-7h : ranksuit
+ (ranksuit
+  :rank rank-seven
+  :suit suit-heart))
+
+(const ranksuit-7s : ranksuit
+ (ranksuit
+  :rank rank-seven
+  :suit suit-spade))
+
+(const ranksuit-6c : ranksuit
+ (ranksuit
+  :rank rank-six
+  :suit suit-club))
+
+(const ranksuit-6d : ranksuit
+ (ranksuit
+  :rank rank-six
+  :suit suit-diamond))
+
+(const ranksuit-6h : ranksuit
+ (ranksuit
+  :rank rank-six
+  :suit suit-heart))
+
+(const ranksuit-6s : ranksuit
+ (ranksuit
+  :rank rank-six
+  :suit suit-spade))
+
+(const ranksuit-5c : ranksuit
+ (ranksuit
+  :rank rank-five
+  :suit suit-club))
+
+(const ranksuit-5d : ranksuit
+ (ranksuit
+  :rank rank-five
+  :suit suit-diamond))
+
+(const ranksuit-5h : ranksuit
+ (ranksuit
+  :rank rank-five
+  :suit suit-heart))
+
+(const ranksuit-5s : ranksuit
+ (ranksuit
+  :rank rank-five
+  :suit suit-spade))
+
+(const ranksuit-4c : ranksuit
+ (ranksuit
+  :rank rank-four
+  :suit suit-club))
+
+(const ranksuit-4d : ranksuit
+ (ranksuit
+  :rank rank-four
+  :suit suit-diamond))
+
+(const ranksuit-4h : ranksuit
+ (ranksuit
+  :rank rank-four
+  :suit suit-heart))
+
+(const ranksuit-4s : ranksuit
+ (ranksuit
+  :rank rank-four
+  :suit suit-spade))
+
+(const ranksuit-3c : ranksuit
+ (ranksuit
+  :rank rank-three
+  :suit suit-club))
+
+(const ranksuit-3d : ranksuit
+ (ranksuit
+  :rank rank-three
+  :suit suit-diamond))
+
+(const ranksuit-3h : ranksuit
+ (ranksuit
+  :rank rank-three
+  :suit suit-heart))
+
+(const ranksuit-3s : ranksuit
+ (ranksuit
+  :rank rank-three
+  :suit suit-spade))
+
+(const ranksuit-2c : ranksuit
+ (ranksuit
+  :rank rank-two
+  :suit suit-club))
+
+(const ranksuit-2d : ranksuit
+ (ranksuit
+  :rank rank-two
+  :suit suit-diamond))
+
+(const ranksuit-2h : ranksuit
+ (ranksuit
+  :rank rank-two
+  :suit suit-heart))
+
+(const ranksuit-2s : ranksuit
+ (ranksuit
+  :rank rank-two
+  :suit suit-spade))
+
+(const ranksuit-8s : ranksuit
+ (ranksuit
+  :rank rank-eight
+  :suit suit-spade))
 
 (const role-aoe : role)
 

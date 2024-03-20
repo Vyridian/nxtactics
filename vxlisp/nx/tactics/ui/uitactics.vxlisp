@@ -1,6 +1,6 @@
 (package nx/tactics/ui/uitactics
  :libs (lib base   :path nx/tactics/base)
-       (lib deck   :path nx/tactics/deck)
+       (lib deck   :path nx/tactics/decks/deck)
        (lib event  :path vx/event)
        (lib nav    :path nx/tactics/ui/navigation)
        (lib styles :path nx/tactics/ui/stylesheet)
@@ -92,7 +92,16 @@
       (== datatype base/skill)
        (string-display<-skill
         (any<-any : base/skill
-         value))))]
+         value)))
+     (then
+      (is-type datatype base/card)
+      (let : string
+       [card : base/card :=
+         (any<-any : base/card
+          value)
+        summary : string :=
+         (:summary card)]
+       summary)))]
   display)
  :doc "Returns display text from any")
 
@@ -219,7 +228,13 @@
      (else
       (ui/stylelist
        styles/style-card
-       styles/style-clickable)))]
+       styles/style-clickable)))
+   ranksuit : base/ranksuit :=
+    (:ranksuit card)
+   uilistrs : ui/uilist :=
+    (uilist<-ranksuit-parent
+     ranksuit
+     uid)]
   (ui/ui
    :uid  uid
    :name name
@@ -229,6 +244,7 @@
    :uimap
     (ui/uimap<-uilist
      (ui/uilist
+      uilistrs
       (ui/ui
        :uid labeltitle
        :style styles/style-card-title
@@ -728,6 +744,96 @@
  :context
  :sideeffects "Alters uinavbar"
  :doc "Navigate to the given ui")
+
+(func uilist<-ranksuit-parent : ui/uilist
+ [ranksuitarg : base/ranksuit
+  parent      : string]
+ (if : ui/uilist
+  (then
+   (is-empty ranksuitarg)
+   (empty ranksuit))
+  (else
+   (let : ui/uilist
+    [rank : base/rank := (:rank ranksuitarg)
+     suit : base/suit := (:suit ranksuitarg)
+     labelrank1 : string :=
+      (string
+       parent
+       "-rank1")
+     labelrank2 : string :=
+      (string
+       parent
+       "-rank2")
+     labelsuit1 : string :=
+      (string
+       parent
+       "-suit1")
+     labelsuit2 : string :=
+      (string
+       parent
+       "-suit2")
+     srank : string := (:titles rank)
+     ssuit : string := (:titles suit)
+     suitstyle1 : ui/style :=
+      (switch : ui/style
+       suit
+       (case base/suit-black
+        styles/style-image-jester-black1)
+       (case base/suit-red
+        styles/style-image-jester-red1)
+       (case base/suit-diamond
+        styles/style-image-coin1)
+       (case base/suit-heart
+        styles/style-image-cup1)
+       (case base/suit-spade
+        styles/style-image-sword1)
+       (case base/suit-club
+        styles/style-image-wand1))
+     suitstyle2 : ui/style :=
+      (switch : ui/style
+       suit
+       (case base/suit-black
+        styles/style-image-jester-black2)
+       (case base/suit-red
+        styles/style-image-jester-red2)
+       (case base/suit-diamond
+        styles/style-image-coin2)
+       (case base/suit-heart
+        styles/style-image-cup2)
+       (case base/suit-spade
+        styles/style-image-sword2)
+       (case base/suit-club
+        styles/style-image-wand2))]
+    (ui/uilist
+     (ui/ui
+      :uid labelrank1
+      :style styles/style-card-rank
+      :stylelist
+       (ui/stylelist
+        styles/style-text-rank1)
+      :data srank)
+      (ui/ui
+       :uid labelrank2
+       :style styles/style-card-rank
+       :stylelist
+        (ui/stylelist
+         styles/style-text-rank2)
+       :data srank)
+      (ui/ui
+       :uid labelsuit1
+       :style styles/style-card-suit
+       :stylelist
+        (ui/stylelist
+         suitstyle1)
+       :data ssuit)
+      (ui/ui
+       :uid labelsuit2
+       :style styles/style-card-suit
+       :stylelist
+        (ui/stylelist
+         suitstyle2)
+       :data ssuit)))))
+ :doc "")
 
 (func uimap<-cardmap-parent : ui/uimap
  [cardmap : base/cardmap

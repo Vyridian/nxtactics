@@ -4,8 +4,6 @@ import nx_tactics_ui_stylesheet from "../../../../src/nx/tactics/ui/stylesheet.j
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
 import nx_tactics_base from "../../../../src/nx/tactics/base.js"
-import nx_tactics_deck from "../../../../src/nx/tactics/deck.js"
-import vx_event from "../../../../src/vx/event.js"
 import vx_data_file from "../../../../src/vx/data/file.js"
 import vx_ui_ui from "../../../../src/vx/ui/ui.js"
 

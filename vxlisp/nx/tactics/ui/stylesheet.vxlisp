@@ -1,9 +1,7 @@
 (package nx/tactics/ui/stylesheet
- :libs (lib base  :path nx/tactics/base)
-       (lib deck  :path nx/tactics/deck)
-       (lib event :path vx/event)
-       (lib file  :path vx/data/file)
-       (lib ui    :path vx/ui/ui)
+ :libs (lib base :path nx/tactics/base)
+       (lib file :path vx/data/file)
+       (lib ui   :path vx/ui/ui)
  :doc "Tactics UI")
 
 (const font-header1 : ui/font

@@ -110,6 +110,13 @@ export default class nx_tactics_base {
   static e_deckmap = {vx_type: nx_tactics_base.t_deckmap}
 
   /**
+   * type: disorder
+   * Lasting Mind Damage
+   */
+  static t_disorder = {}
+  static e_disorder = {vx_type: nx_tactics_base.t_disorder}
+
+  /**
    * type: fate
    */
   static t_fate = {}
@@ -120,6 +127,12 @@ export default class nx_tactics_base {
    */
   static t_goal = {}
   static e_goal = {vx_type: nx_tactics_base.t_goal}
+
+  /**
+   * type: imagecard
+   */
+  static t_imagecard = {}
+  static e_imagecard = {vx_type: nx_tactics_base.t_imagecard}
 
   /**
    * type: item
@@ -187,6 +200,12 @@ export default class nx_tactics_base {
    */
   static t_rank = {}
   static e_rank = {vx_type: nx_tactics_base.t_rank}
+
+  /**
+   * type: ranksuit
+   */
+  static t_ranksuit = {}
+  static e_ranksuit = {vx_type: nx_tactics_base.t_ranksuit}
 
   /**
    * type: rating
@@ -352,6 +371,13 @@ export default class nx_tactics_base {
   static e_threat = {vx_type: nx_tactics_base.t_threat}
 
   /**
+   * type: trauma
+   * Lasting Will Damage
+   */
+  static t_trauma = {}
+  static e_trauma = {vx_type: nx_tactics_base.t_trauma}
+
+  /**
    * type: unit
    */
   static t_unit = {}
@@ -446,6 +472,13 @@ export default class nx_tactics_base {
    */
   static t_weaknessmap = {}
   static e_weaknessmap = {vx_type: nx_tactics_base.t_weaknessmap}
+
+  /**
+   * type: wound
+   * Lasting Body Damage
+   */
+  static t_wound = {}
+  static e_wound = {vx_type: nx_tactics_base.t_wound}
   /**
    * Constant: rank-ace
    * {rank}
@@ -529,6 +562,330 @@ export default class nx_tactics_base {
    * {rank}
    */
   static c_rank_two = {vx_type: nx_tactics_base.t_rank, vx_constdef: {pkgname: 'nx/tactics/base', name: 'rank-two'}}
+
+  /**
+   * Constant: ranksuit-2c
+   * {ranksuit}
+   */
+  static c_ranksuit_2c = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-2c'}}
+
+  /**
+   * Constant: ranksuit-2d
+   * {ranksuit}
+   */
+  static c_ranksuit_2d = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-2d'}}
+
+  /**
+   * Constant: ranksuit-2h
+   * {ranksuit}
+   */
+  static c_ranksuit_2h = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-2h'}}
+
+  /**
+   * Constant: ranksuit-2s
+   * {ranksuit}
+   */
+  static c_ranksuit_2s = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-2s'}}
+
+  /**
+   * Constant: ranksuit-3c
+   * {ranksuit}
+   */
+  static c_ranksuit_3c = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-3c'}}
+
+  /**
+   * Constant: ranksuit-3d
+   * {ranksuit}
+   */
+  static c_ranksuit_3d = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-3d'}}
+
+  /**
+   * Constant: ranksuit-3h
+   * {ranksuit}
+   */
+  static c_ranksuit_3h = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-3h'}}
+
+  /**
+   * Constant: ranksuit-3s
+   * {ranksuit}
+   */
+  static c_ranksuit_3s = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-3s'}}
+
+  /**
+   * Constant: ranksuit-4c
+   * {ranksuit}
+   */
+  static c_ranksuit_4c = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-4c'}}
+
+  /**
+   * Constant: ranksuit-4d
+   * {ranksuit}
+   */
+  static c_ranksuit_4d = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-4d'}}
+
+  /**
+   * Constant: ranksuit-4h
+   * {ranksuit}
+   */
+  static c_ranksuit_4h = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-4h'}}
+
+  /**
+   * Constant: ranksuit-4s
+   * {ranksuit}
+   */
+  static c_ranksuit_4s = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-4s'}}
+
+  /**
+   * Constant: ranksuit-5c
+   * {ranksuit}
+   */
+  static c_ranksuit_5c = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-5c'}}
+
+  /**
+   * Constant: ranksuit-5d
+   * {ranksuit}
+   */
+  static c_ranksuit_5d = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-5d'}}
+
+  /**
+   * Constant: ranksuit-5h
+   * {ranksuit}
+   */
+  static c_ranksuit_5h = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-5h'}}
+
+  /**
+   * Constant: ranksuit-5s
+   * {ranksuit}
+   */
+  static c_ranksuit_5s = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-5s'}}
+
+  /**
+   * Constant: ranksuit-6c
+   * {ranksuit}
+   */
+  static c_ranksuit_6c = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-6c'}}
+
+  /**
+   * Constant: ranksuit-6d
+   * {ranksuit}
+   */
+  static c_ranksuit_6d = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-6d'}}
+
+  /**
+   * Constant: ranksuit-6h
+   * {ranksuit}
+   */
+  static c_ranksuit_6h = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-6h'}}
+
+  /**
+   * Constant: ranksuit-6s
+   * {ranksuit}
+   */
+  static c_ranksuit_6s = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-6s'}}
+
+  /**
+   * Constant: ranksuit-7c
+   * {ranksuit}
+   */
+  static c_ranksuit_7c = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-7c'}}
+
+  /**
+   * Constant: ranksuit-7d
+   * {ranksuit}
+   */
+  static c_ranksuit_7d = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-7d'}}
+
+  /**
+   * Constant: ranksuit-7h
+   * {ranksuit}
+   */
+  static c_ranksuit_7h = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-7h'}}
+
+  /**
+   * Constant: ranksuit-7s
+   * {ranksuit}
+   */
+  static c_ranksuit_7s = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-7s'}}
+
+  /**
+   * Constant: ranksuit-8c
+   * {ranksuit}
+   */
+  static c_ranksuit_8c = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-8c'}}
+
+  /**
+   * Constant: ranksuit-8d
+   * {ranksuit}
+   */
+  static c_ranksuit_8d = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-8d'}}
+
+  /**
+   * Constant: ranksuit-8h
+   * {ranksuit}
+   */
+  static c_ranksuit_8h = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-8h'}}
+
+  /**
+   * Constant: ranksuit-8s
+   * {ranksuit}
+   */
+  static c_ranksuit_8s = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-8s'}}
+
+  /**
+   * Constant: ranksuit-9c
+   * {ranksuit}
+   */
+  static c_ranksuit_9c = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-9c'}}
+
+  /**
+   * Constant: ranksuit-9d
+   * {ranksuit}
+   */
+  static c_ranksuit_9d = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-9d'}}
+
+  /**
+   * Constant: ranksuit-9h
+   * {ranksuit}
+   */
+  static c_ranksuit_9h = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-9h'}}
+
+  /**
+   * Constant: ranksuit-9s
+   * {ranksuit}
+   */
+  static c_ranksuit_9s = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-9s'}}
+
+  /**
+   * Constant: ranksuit-ac
+   * {ranksuit}
+   */
+  static c_ranksuit_ac = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-ac'}}
+
+  /**
+   * Constant: ranksuit-ad
+   * {ranksuit}
+   */
+  static c_ranksuit_ad = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-ad'}}
+
+  /**
+   * Constant: ranksuit-ah
+   * {ranksuit}
+   */
+  static c_ranksuit_ah = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-ah'}}
+
+  /**
+   * Constant: ranksuit-as
+   * {ranksuit}
+   */
+  static c_ranksuit_as = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-as'}}
+
+  /**
+   * Constant: ranksuit-jc
+   * {ranksuit}
+   */
+  static c_ranksuit_jc = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-jc'}}
+
+  /**
+   * Constant: ranksuit-jd
+   * {ranksuit}
+   */
+  static c_ranksuit_jd = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-jd'}}
+
+  /**
+   * Constant: ranksuit-jh
+   * {ranksuit}
+   */
+  static c_ranksuit_jh = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-jh'}}
+
+  /**
+   * Constant: ranksuit-jokerblack
+   * {ranksuit}
+   */
+  static c_ranksuit_jokerblack = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-jokerblack'}}
+
+  /**
+   * Constant: ranksuit-jokerred
+   * {ranksuit}
+   */
+  static c_ranksuit_jokerred = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-jokerred'}}
+
+  /**
+   * Constant: ranksuit-js
+   * {ranksuit}
+   */
+  static c_ranksuit_js = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-js'}}
+
+  /**
+   * Constant: ranksuit-kc
+   * {ranksuit}
+   */
+  static c_ranksuit_kc = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-kc'}}
+
+  /**
+   * Constant: ranksuit-kd
+   * {ranksuit}
+   */
+  static c_ranksuit_kd = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-kd'}}
+
+  /**
+   * Constant: ranksuit-kh
+   * {ranksuit}
+   */
+  static c_ranksuit_kh = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-kh'}}
+
+  /**
+   * Constant: ranksuit-ks
+   * {ranksuit}
+   */
+  static c_ranksuit_ks = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-ks'}}
+
+  /**
+   * Constant: ranksuit-qc
+   * {ranksuit}
+   */
+  static c_ranksuit_qc = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-qc'}}
+
+  /**
+   * Constant: ranksuit-qd
+   * {ranksuit}
+   */
+  static c_ranksuit_qd = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-qd'}}
+
+  /**
+   * Constant: ranksuit-qh
+   * {ranksuit}
+   */
+  static c_ranksuit_qh = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-qh'}}
+
+  /**
+   * Constant: ranksuit-qs
+   * {ranksuit}
+   */
+  static c_ranksuit_qs = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-qs'}}
+
+  /**
+   * Constant: ranksuit-tc
+   * {ranksuit}
+   */
+  static c_ranksuit_tc = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-tc'}}
+
+  /**
+   * Constant: ranksuit-td
+   * {ranksuit}
+   */
+  static c_ranksuit_td = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-td'}}
+
+  /**
+   * Constant: ranksuit-th
+   * {ranksuit}
+   */
+  static c_ranksuit_th = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-th'}}
+
+  /**
+   * Constant: ranksuit-ts
+   * {ranksuit}
+   */
+  static c_ranksuit_ts = {vx_type: nx_tactics_base.t_ranksuit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'ranksuit-ts'}}
 
   /**
    * Constant: role-aoe
@@ -1419,6 +1776,60 @@ export default class nx_tactics_base {
       "rank-ten": nx_tactics_base.c_rank_ten,
       "rank-three": nx_tactics_base.c_rank_three,
       "rank-two": nx_tactics_base.c_rank_two,
+      "ranksuit-2c": nx_tactics_base.c_ranksuit_2c,
+      "ranksuit-2d": nx_tactics_base.c_ranksuit_2d,
+      "ranksuit-2h": nx_tactics_base.c_ranksuit_2h,
+      "ranksuit-2s": nx_tactics_base.c_ranksuit_2s,
+      "ranksuit-3c": nx_tactics_base.c_ranksuit_3c,
+      "ranksuit-3d": nx_tactics_base.c_ranksuit_3d,
+      "ranksuit-3h": nx_tactics_base.c_ranksuit_3h,
+      "ranksuit-3s": nx_tactics_base.c_ranksuit_3s,
+      "ranksuit-4c": nx_tactics_base.c_ranksuit_4c,
+      "ranksuit-4d": nx_tactics_base.c_ranksuit_4d,
+      "ranksuit-4h": nx_tactics_base.c_ranksuit_4h,
+      "ranksuit-4s": nx_tactics_base.c_ranksuit_4s,
+      "ranksuit-5c": nx_tactics_base.c_ranksuit_5c,
+      "ranksuit-5d": nx_tactics_base.c_ranksuit_5d,
+      "ranksuit-5h": nx_tactics_base.c_ranksuit_5h,
+      "ranksuit-5s": nx_tactics_base.c_ranksuit_5s,
+      "ranksuit-6c": nx_tactics_base.c_ranksuit_6c,
+      "ranksuit-6d": nx_tactics_base.c_ranksuit_6d,
+      "ranksuit-6h": nx_tactics_base.c_ranksuit_6h,
+      "ranksuit-6s": nx_tactics_base.c_ranksuit_6s,
+      "ranksuit-7c": nx_tactics_base.c_ranksuit_7c,
+      "ranksuit-7d": nx_tactics_base.c_ranksuit_7d,
+      "ranksuit-7h": nx_tactics_base.c_ranksuit_7h,
+      "ranksuit-7s": nx_tactics_base.c_ranksuit_7s,
+      "ranksuit-8c": nx_tactics_base.c_ranksuit_8c,
+      "ranksuit-8d": nx_tactics_base.c_ranksuit_8d,
+      "ranksuit-8h": nx_tactics_base.c_ranksuit_8h,
+      "ranksuit-8s": nx_tactics_base.c_ranksuit_8s,
+      "ranksuit-9c": nx_tactics_base.c_ranksuit_9c,
+      "ranksuit-9d": nx_tactics_base.c_ranksuit_9d,
+      "ranksuit-9h": nx_tactics_base.c_ranksuit_9h,
+      "ranksuit-9s": nx_tactics_base.c_ranksuit_9s,
+      "ranksuit-ac": nx_tactics_base.c_ranksuit_ac,
+      "ranksuit-ad": nx_tactics_base.c_ranksuit_ad,
+      "ranksuit-ah": nx_tactics_base.c_ranksuit_ah,
+      "ranksuit-as": nx_tactics_base.c_ranksuit_as,
+      "ranksuit-jc": nx_tactics_base.c_ranksuit_jc,
+      "ranksuit-jd": nx_tactics_base.c_ranksuit_jd,
+      "ranksuit-jh": nx_tactics_base.c_ranksuit_jh,
+      "ranksuit-jokerblack": nx_tactics_base.c_ranksuit_jokerblack,
+      "ranksuit-jokerred": nx_tactics_base.c_ranksuit_jokerred,
+      "ranksuit-js": nx_tactics_base.c_ranksuit_js,
+      "ranksuit-kc": nx_tactics_base.c_ranksuit_kc,
+      "ranksuit-kd": nx_tactics_base.c_ranksuit_kd,
+      "ranksuit-kh": nx_tactics_base.c_ranksuit_kh,
+      "ranksuit-ks": nx_tactics_base.c_ranksuit_ks,
+      "ranksuit-qc": nx_tactics_base.c_ranksuit_qc,
+      "ranksuit-qd": nx_tactics_base.c_ranksuit_qd,
+      "ranksuit-qh": nx_tactics_base.c_ranksuit_qh,
+      "ranksuit-qs": nx_tactics_base.c_ranksuit_qs,
+      "ranksuit-tc": nx_tactics_base.c_ranksuit_tc,
+      "ranksuit-td": nx_tactics_base.c_ranksuit_td,
+      "ranksuit-th": nx_tactics_base.c_ranksuit_th,
+      "ranksuit-ts": nx_tactics_base.c_ranksuit_ts,
       "role-aoe": nx_tactics_base.c_role_aoe,
       "role-bosskiller": nx_tactics_base.c_role_bosskiller,
       "role-buffer": nx_tactics_base.c_role_buffer,
@@ -1460,8 +1871,10 @@ export default class nx_tactics_base {
       "damagemap": nx_tactics_base.e_damagemap,
       "deck": nx_tactics_base.e_deck,
       "deckmap": nx_tactics_base.e_deckmap,
+      "disorder": nx_tactics_base.e_disorder,
       "fate": nx_tactics_base.e_fate,
       "goal": nx_tactics_base.e_goal,
+      "imagecard": nx_tactics_base.e_imagecard,
       "item": nx_tactics_base.e_item,
       "itemmap": nx_tactics_base.e_itemmap,
       "location": nx_tactics_base.e_location,
@@ -1473,6 +1886,7 @@ export default class nx_tactics_base {
       "power": nx_tactics_base.e_power,
       "powermap": nx_tactics_base.e_powermap,
       "rank": nx_tactics_base.e_rank,
+      "ranksuit": nx_tactics_base.e_ranksuit,
       "rating": nx_tactics_base.e_rating,
       "role": nx_tactics_base.e_role,
       "rolemap": nx_tactics_base.e_rolemap,
@@ -1500,6 +1914,7 @@ export default class nx_tactics_base {
       "terrain": nx_tactics_base.e_terrain,
       "terrainmap": nx_tactics_base.e_terrainmap,
       "threat": nx_tactics_base.e_threat,
+      "trauma": nx_tactics_base.e_trauma,
       "unit": nx_tactics_base.e_unit,
       "unitability": nx_tactics_base.e_unitability,
       "unitabilitymap": nx_tactics_base.e_unitabilitymap,
@@ -1516,6 +1931,7 @@ export default class nx_tactics_base {
       "unitweaknessmap": nx_tactics_base.e_unitweaknessmap,
       "weakness": nx_tactics_base.e_weakness,
       "weaknessmap": nx_tactics_base.e_weaknessmap,
+      "wound": nx_tactics_base.e_wound,
       "bookmap<-booklist": nx_tactics_base.e_bookmap_from_booklist,
       "cardmap<-bookmap": nx_tactics_base.e_cardmap_from_bookmap,
       "cardmap<-cardlist": nx_tactics_base.e_cardmap_from_cardlist,
@@ -1593,8 +2009,10 @@ export default class nx_tactics_base {
       "damagemap": nx_tactics_base.t_damagemap,
       "deck": nx_tactics_base.t_deck,
       "deckmap": nx_tactics_base.t_deckmap,
+      "disorder": nx_tactics_base.t_disorder,
       "fate": nx_tactics_base.t_fate,
       "goal": nx_tactics_base.t_goal,
+      "imagecard": nx_tactics_base.t_imagecard,
       "item": nx_tactics_base.t_item,
       "itemmap": nx_tactics_base.t_itemmap,
       "location": nx_tactics_base.t_location,
@@ -1606,6 +2024,7 @@ export default class nx_tactics_base {
       "power": nx_tactics_base.t_power,
       "powermap": nx_tactics_base.t_powermap,
       "rank": nx_tactics_base.t_rank,
+      "ranksuit": nx_tactics_base.t_ranksuit,
       "rating": nx_tactics_base.t_rating,
       "role": nx_tactics_base.t_role,
       "rolemap": nx_tactics_base.t_rolemap,
@@ -1633,6 +2052,7 @@ export default class nx_tactics_base {
       "terrain": nx_tactics_base.t_terrain,
       "terrainmap": nx_tactics_base.t_terrainmap,
       "threat": nx_tactics_base.t_threat,
+      "trauma": nx_tactics_base.t_trauma,
       "unit": nx_tactics_base.t_unit,
       "unitability": nx_tactics_base.t_unitability,
       "unitabilitymap": nx_tactics_base.t_unitabilitymap,
@@ -1648,7 +2068,8 @@ export default class nx_tactics_base {
       "unitweakness": nx_tactics_base.t_unitweakness,
       "unitweaknessmap": nx_tactics_base.t_unitweaknessmap,
       "weakness": nx_tactics_base.t_weakness,
-      "weaknessmap": nx_tactics_base.t_weaknessmap
+      "weaknessmap": nx_tactics_base.t_weaknessmap,
+      "wound": nx_tactics_base.t_wound
     })
     const pkg = vx_core.vx_new_struct(vx_core.t_package, {
       "name": "nx/tactics/base",
@@ -1706,6 +2127,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -1794,6 +2220,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -1907,6 +2338,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -2011,6 +2447,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -2142,6 +2583,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -2248,6 +2694,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -2322,6 +2773,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -2341,6 +2797,80 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_deckmap['vx_type'] = nx_tactics_base.t_deckmap
     nx_tactics_base.e_deckmap['vx_value'] = {}
+
+    // (type disorder)
+    nx_tactics_base.t_disorder['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_disorder['vx_value'] = {
+      name          : "disorder",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_disorder['vx_type'] = nx_tactics_base.t_disorder
+    nx_tactics_base.e_disorder['vx_value'] = {}
 
     // (type fate)
     nx_tactics_base.t_fate['vx_type'] = vx_core.t_type
@@ -2389,6 +2919,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -2460,6 +2995,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -2499,6 +3039,85 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_goal['vx_type'] = nx_tactics_base.t_goal
     nx_tactics_base.e_goal['vx_value'] = {}
+
+    // (type imagecard)
+    nx_tactics_base.t_imagecard['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_imagecard['vx_value'] = {
+      name          : "imagecard",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        },
+        "origcard": {
+          "name" : "origcard",
+          "type" : nx_tactics_base.t_card,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "origcard",
+        "type" : nx_tactics_base.t_card,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_imagecard['vx_type'] = nx_tactics_base.t_imagecard
+    nx_tactics_base.e_imagecard['vx_value'] = {}
 
     // (type item)
     nx_tactics_base.t_item['vx_type'] = vx_core.t_type
@@ -2547,6 +3166,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -2762,6 +3386,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -2860,6 +3489,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -2927,6 +3561,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -3051,6 +3690,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -3154,6 +3798,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -3173,6 +3822,90 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_rank['vx_type'] = nx_tactics_base.t_rank
     nx_tactics_base.e_rank['vx_value'] = {}
+
+    // (type ranksuit)
+    nx_tactics_base.t_ranksuit['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_ranksuit['vx_value'] = {
+      name          : "ranksuit",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_ranksuit['vx_type'] = nx_tactics_base.t_ranksuit
+    nx_tactics_base.e_ranksuit['vx_value'] = {}
 
     // (type rating)
     nx_tactics_base.t_rating['vx_type'] = vx_core.t_type
@@ -3221,6 +3954,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -3345,6 +4083,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -3438,6 +4181,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -3529,6 +4277,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -3725,6 +4478,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -3864,6 +4622,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -3931,6 +4694,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -4002,6 +4770,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -4069,6 +4842,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -4223,6 +5001,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -4290,6 +5073,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -4400,6 +5188,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -4488,6 +5281,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -4527,6 +5325,80 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_threat['vx_type'] = nx_tactics_base.t_threat
     nx_tactics_base.e_threat['vx_value'] = {}
+
+    // (type trauma)
+    nx_tactics_base.t_trauma['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_trauma['vx_value'] = {
+      name          : "trauma",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_trauma['vx_type'] = nx_tactics_base.t_trauma
+    nx_tactics_base.e_trauma['vx_value'] = {}
 
     // (type unit)
     nx_tactics_base.t_unit['vx_type'] = vx_core.t_type
@@ -4575,6 +5447,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -4834,6 +5711,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -4959,6 +5841,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -5102,6 +5989,11 @@ export default class nx_tactics_base {
         "orientation": {
           "name" : "orientation",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
         "rank": {
@@ -5280,6 +6172,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -5368,6 +6265,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
         "rank": {
           "name" : "rank",
           "type" : nx_tactics_base.t_rank,
@@ -5406,6 +6308,80 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_weaknessmap['vx_type'] = nx_tactics_base.t_weaknessmap
     nx_tactics_base.e_weaknessmap['vx_value'] = {}
+
+    // (type wound)
+    nx_tactics_base.t_wound['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_wound['vx_value'] = {
+      name          : "wound",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        },
+        "rank": {
+          "name" : "rank",
+          "type" : nx_tactics_base.t_rank,
+          "multi": false
+        },
+        "suit": {
+          "name" : "suit",
+          "type" : nx_tactics_base.t_suit,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "suit",
+        "type" : nx_tactics_base.t_suit,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_wound['vx_type'] = nx_tactics_base.t_wound
+    nx_tactics_base.e_wound['vx_value'] = {}
 
     // (func bookmap<-booklist)
     nx_tactics_base.t_bookmap_from_booklist['vx_value'] = {
@@ -6037,10 +7013,516 @@ export default class nx_tactics_base {
       "2"
     ))
 
+    // (const ranksuit-2c)
+    Object.assign(nx_tactics_base.c_ranksuit_2c, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_two,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-2d)
+    Object.assign(nx_tactics_base.c_ranksuit_2d, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_two,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-2h)
+    Object.assign(nx_tactics_base.c_ranksuit_2h, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_two,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-2s)
+    Object.assign(nx_tactics_base.c_ranksuit_2s, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_two,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-3c)
+    Object.assign(nx_tactics_base.c_ranksuit_3c, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_three,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-3d)
+    Object.assign(nx_tactics_base.c_ranksuit_3d, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_three,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-3h)
+    Object.assign(nx_tactics_base.c_ranksuit_3h, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_three,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-3s)
+    Object.assign(nx_tactics_base.c_ranksuit_3s, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_three,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-4c)
+    Object.assign(nx_tactics_base.c_ranksuit_4c, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_four,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-4d)
+    Object.assign(nx_tactics_base.c_ranksuit_4d, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_four,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-4h)
+    Object.assign(nx_tactics_base.c_ranksuit_4h, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_four,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-4s)
+    Object.assign(nx_tactics_base.c_ranksuit_4s, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_four,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-5c)
+    Object.assign(nx_tactics_base.c_ranksuit_5c, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_five,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-5d)
+    Object.assign(nx_tactics_base.c_ranksuit_5d, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_five,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-5h)
+    Object.assign(nx_tactics_base.c_ranksuit_5h, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_five,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-5s)
+    Object.assign(nx_tactics_base.c_ranksuit_5s, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_five,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-6c)
+    Object.assign(nx_tactics_base.c_ranksuit_6c, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_six,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-6d)
+    Object.assign(nx_tactics_base.c_ranksuit_6d, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_six,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-6h)
+    Object.assign(nx_tactics_base.c_ranksuit_6h, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_six,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-6s)
+    Object.assign(nx_tactics_base.c_ranksuit_6s, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_six,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-7c)
+    Object.assign(nx_tactics_base.c_ranksuit_7c, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_seven,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-7d)
+    Object.assign(nx_tactics_base.c_ranksuit_7d, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_seven,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-7h)
+    Object.assign(nx_tactics_base.c_ranksuit_7h, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_seven,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-7s)
+    Object.assign(nx_tactics_base.c_ranksuit_7s, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_seven,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-8c)
+    Object.assign(nx_tactics_base.c_ranksuit_8c, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ten,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-8d)
+    Object.assign(nx_tactics_base.c_ranksuit_8d, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_eight,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-8h)
+    Object.assign(nx_tactics_base.c_ranksuit_8h, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_eight,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-8s)
+    Object.assign(nx_tactics_base.c_ranksuit_8s, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_eight,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-9c)
+    Object.assign(nx_tactics_base.c_ranksuit_9c, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_nine,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-9d)
+    Object.assign(nx_tactics_base.c_ranksuit_9d, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_nine,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-9h)
+    Object.assign(nx_tactics_base.c_ranksuit_9h, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_nine,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-9s)
+    Object.assign(nx_tactics_base.c_ranksuit_9s, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_nine,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-ac)
+    Object.assign(nx_tactics_base.c_ranksuit_ac, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ace,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-ad)
+    Object.assign(nx_tactics_base.c_ranksuit_ad, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ace,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-ah)
+    Object.assign(nx_tactics_base.c_ranksuit_ah, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ace,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-as)
+    Object.assign(nx_tactics_base.c_ranksuit_as, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ace,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-jc)
+    Object.assign(nx_tactics_base.c_ranksuit_jc, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_jack,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-jd)
+    Object.assign(nx_tactics_base.c_ranksuit_jd, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_jack,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-jh)
+    Object.assign(nx_tactics_base.c_ranksuit_jh, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_jack,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-jokerblack)
+    Object.assign(nx_tactics_base.c_ranksuit_jokerblack, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_joker,
+      ":suit",
+      nx_tactics_base.c_suit_black
+    ))
+
+    // (const ranksuit-jokerred)
+    Object.assign(nx_tactics_base.c_ranksuit_jokerred, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_joker,
+      ":suit",
+      nx_tactics_base.c_suit_red
+    ))
+
+    // (const ranksuit-js)
+    Object.assign(nx_tactics_base.c_ranksuit_js, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_jack,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-kc)
+    Object.assign(nx_tactics_base.c_ranksuit_kc, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_king,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-kd)
+    Object.assign(nx_tactics_base.c_ranksuit_kd, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_king,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-kh)
+    Object.assign(nx_tactics_base.c_ranksuit_kh, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_king,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-ks)
+    Object.assign(nx_tactics_base.c_ranksuit_ks, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_king,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-qc)
+    Object.assign(nx_tactics_base.c_ranksuit_qc, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_queen,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-qd)
+    Object.assign(nx_tactics_base.c_ranksuit_qd, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_queen,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-qh)
+    Object.assign(nx_tactics_base.c_ranksuit_qh, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_queen,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-qs)
+    Object.assign(nx_tactics_base.c_ranksuit_qs, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_queen,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
+    // (const ranksuit-tc)
+    Object.assign(nx_tactics_base.c_ranksuit_tc, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ten,
+      ":suit",
+      nx_tactics_base.c_suit_club
+    ))
+
+    // (const ranksuit-td)
+    Object.assign(nx_tactics_base.c_ranksuit_td, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ten,
+      ":suit",
+      nx_tactics_base.c_suit_diamond
+    ))
+
+    // (const ranksuit-th)
+    Object.assign(nx_tactics_base.c_ranksuit_th, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ten,
+      ":suit",
+      nx_tactics_base.c_suit_heart
+    ))
+
+    // (const ranksuit-ts)
+    Object.assign(nx_tactics_base.c_ranksuit_ts, vx_core.f_new(
+      nx_tactics_base.t_ranksuit,
+      ":rank",
+      nx_tactics_base.c_rank_ten,
+      ":suit",
+      nx_tactics_base.c_suit_spade
+    ))
+
     // (const stat-beast)
     Object.assign(nx_tactics_base.c_stat_beast, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6049,6 +7531,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6058,7 +7606,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6067,6 +7635,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6079,8 +7650,28 @@ export default class nx_tactics_base {
 
     // (const stat-body)
     Object.assign(nx_tactics_base.c_stat_body, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6089,6 +7680,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6098,7 +7755,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6107,6 +7784,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6119,8 +7799,28 @@ export default class nx_tactics_base {
 
     // (const stat-mind)
     Object.assign(nx_tactics_base.c_stat_mind, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6129,6 +7829,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6138,7 +7904,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6147,6 +7933,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6159,8 +7948,28 @@ export default class nx_tactics_base {
 
     // (const stat-shadow)
     Object.assign(nx_tactics_base.c_stat_shadow, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6169,6 +7978,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6178,7 +8053,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6187,6 +8082,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6199,8 +8097,28 @@ export default class nx_tactics_base {
 
     // (const stat-speed)
     Object.assign(nx_tactics_base.c_stat_speed, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6209,6 +8127,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6218,7 +8202,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6227,6 +8231,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6239,8 +8246,28 @@ export default class nx_tactics_base {
 
     // (const stat-will)
     Object.assign(nx_tactics_base.c_stat_will, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6249,6 +8276,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6258,7 +8351,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6267,6 +8380,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6279,8 +8395,28 @@ export default class nx_tactics_base {
 
     // (const suit-black)
     Object.assign(nx_tactics_base.c_suit_black, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6289,6 +8425,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6298,7 +8500,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6307,6 +8529,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6319,8 +8544,28 @@ export default class nx_tactics_base {
 
     // (const suit-club)
     Object.assign(nx_tactics_base.c_suit_club, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6329,6 +8574,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6338,7 +8649,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6347,6 +8678,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6359,8 +8693,28 @@ export default class nx_tactics_base {
 
     // (const suit-diamond)
     Object.assign(nx_tactics_base.c_suit_diamond, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6369,6 +8723,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6378,7 +8798,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6387,6 +8827,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6399,8 +8842,28 @@ export default class nx_tactics_base {
 
     // (const suit-heart)
     Object.assign(nx_tactics_base.c_suit_heart, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6409,6 +8872,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6418,7 +8947,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6427,6 +8976,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6439,8 +8991,28 @@ export default class nx_tactics_base {
 
     // (const suit-red)
     Object.assign(nx_tactics_base.c_suit_red, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6449,6 +9021,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6458,7 +9096,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6467,6 +9125,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6479,8 +9140,28 @@ export default class nx_tactics_base {
 
     // (const suit-spade)
     Object.assign(nx_tactics_base.c_suit_spade, {
-      "rank": {
+      "ranksuit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6489,6 +9170,72 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        }
+      },
+      "rank": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "rank": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
+        "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6498,7 +9245,27 @@ export default class nx_tactics_base {
         }
       },
       "suit": {
+        "ranksuit": {
+          "ranksuit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          },
+          "rank": {
+            
+          },
+          "suit": {
+            
+          }
+        },
         "rank": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },
@@ -6507,6 +9274,9 @@ export default class nx_tactics_base {
           }
         },
         "suit": {
+          "ranksuit": {
+            
+          },
           "rank": {
             
           },

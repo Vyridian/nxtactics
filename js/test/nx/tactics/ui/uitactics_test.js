@@ -4,7 +4,7 @@ import nx_tactics_ui_uitactics from "../../../../src/nx/tactics/ui/uitactics.js"
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
 import nx_tactics_base from "../../../../src/nx/tactics/base.js"
-import nx_tactics_deck from "../../../../src/nx/tactics/deck.js"
+import nx_tactics_decks_deck from "../../../../src/nx/tactics/decks/deck.js"
 import vx_event from "../../../../src/vx/event.js"
 import nx_tactics_ui_navigation from "../../../../src/nx/tactics/ui/navigation.js"
 import nx_tactics_ui_stylesheet from "../../../../src/nx/tactics/ui/stylesheet.js"
@@ -31,11 +31,11 @@ export default class nx_tactics_ui_uitactics_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/uitactics", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 52, ":tests", 23, ":total", 44), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 39), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 51, ":tests", 23, ":total", 45), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 40), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 44), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 45), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -98,6 +98,7 @@ export default class nx_tactics_ui_uitactics_test {
           "ui<-unit-parent", 0,
           "ui<-unit-skillpower", 0,
           "ui<-unit-stat", 0,
+          "uilist<-ranksuit-parent", 0,
           "uimap<-cardmap-parent", 0
         )
     )
