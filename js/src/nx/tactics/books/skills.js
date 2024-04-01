@@ -1569,11 +1569,11 @@ export default class nx_tactics_books_skills {
                 )
               )
             ),
-            "Starship Piloting",
+            "Starpiloting",
             vx_core.f_new(
               nx_tactics_base.t_skill,
               ":name",
-              "Starship Piloting",
+              "Starpiloting",
               ":abilitymap",
               vx_core.f_new(
                 nx_tactics_base.t_abilitymap,

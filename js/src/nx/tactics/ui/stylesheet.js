@@ -250,6 +250,24 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_card_display = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display'}}
 
   /**
+   * Constant: style-card-display2
+   * {style}
+   */
+  static c_style_card_display2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display2'}}
+
+  /**
+   * Constant: style-card-display3
+   * {style}
+   */
+  static c_style_card_display3 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display3'}}
+
+  /**
+   * Constant: style-card-display4
+   * {style}
+   */
+  static c_style_card_display4 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display4'}}
+
+  /**
    * Constant: style-card-rank
    * {style}
    */
@@ -387,13 +405,6 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_text = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-text'}}
 
   /**
-   * Constant: style-text-area
-   * Returns the style for text area
-   * {style}
-   */
-  static c_style_text_area = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-text-area'}}
-
-  /**
    * Constant: style-text-header1
    * Returns the style for header1 text
    * {style}
@@ -434,6 +445,13 @@ export default class nx_tactics_ui_stylesheet {
    * {style}
    */
   static c_style_text_title = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-text-title'}}
+
+  /**
+   * Constant: style-textarea
+   * Returns the style for text area
+   * {style}
+   */
+  static c_style_textarea = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-textarea'}}
 
   /**
    * Constant: style-unit
@@ -491,6 +509,9 @@ export default class nx_tactics_ui_stylesheet {
       "style-button-back": nx_tactics_ui_stylesheet.c_style_button_back,
       "style-card": nx_tactics_ui_stylesheet.c_style_card,
       "style-card-display": nx_tactics_ui_stylesheet.c_style_card_display,
+      "style-card-display2": nx_tactics_ui_stylesheet.c_style_card_display2,
+      "style-card-display3": nx_tactics_ui_stylesheet.c_style_card_display3,
+      "style-card-display4": nx_tactics_ui_stylesheet.c_style_card_display4,
       "style-card-rank": nx_tactics_ui_stylesheet.c_style_card_rank,
       "style-card-suit": nx_tactics_ui_stylesheet.c_style_card_suit,
       "style-card-title": nx_tactics_ui_stylesheet.c_style_card_title,
@@ -513,13 +534,13 @@ export default class nx_tactics_ui_stylesheet {
       "style-image-wand2": nx_tactics_ui_stylesheet.c_style_image_wand2,
       "style-selected": nx_tactics_ui_stylesheet.c_style_selected,
       "style-text": nx_tactics_ui_stylesheet.c_style_text,
-      "style-text-area": nx_tactics_ui_stylesheet.c_style_text_area,
       "style-text-header1": nx_tactics_ui_stylesheet.c_style_text_header1,
       "style-text-header2": nx_tactics_ui_stylesheet.c_style_text_header2,
       "style-text-label": nx_tactics_ui_stylesheet.c_style_text_label,
       "style-text-rank1": nx_tactics_ui_stylesheet.c_style_text_rank1,
       "style-text-rank2": nx_tactics_ui_stylesheet.c_style_text_rank2,
       "style-text-title": nx_tactics_ui_stylesheet.c_style_text_title,
+      "style-textarea": nx_tactics_ui_stylesheet.c_style_textarea,
       "style-unit": nx_tactics_ui_stylesheet.c_style_unit,
       "stylesheet-app": nx_tactics_ui_stylesheet.c_stylesheet_app
     })
@@ -604,7 +625,7 @@ export default class nx_tactics_ui_stylesheet {
       ":fontface",
       nx_tactics_ui_stylesheet.c_fontface1,
       ":fontsize",
-      60
+      65
     ))
 
     // (const font-title)
@@ -750,9 +771,9 @@ export default class nx_tactics_ui_stylesheet {
     Object.assign(nx_tactics_ui_stylesheet.c_point_rank_size, vx_core.f_new(
       vx_ui_ui.t_point,
       ":x",
-      6,
+      4,
       ":y",
-      5
+      6
     ))
 
     // (const point-suit-pos1)
@@ -1131,6 +1152,99 @@ export default class nx_tactics_ui_stylesheet {
         6,
         ":y",
         6
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        51
+      )
+    ))
+
+    // (const style-card-display2)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_card_display2, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-card-display2",
+      ":layout",
+      vx_ui_ui.c_layout_label,
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        61,
+        ":y",
+        12
+      ),
+      ":pointrotate",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        90
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        60
+      )
+    ))
+
+    // (const style-card-display3)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_card_display3, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-card-display3",
+      ":layout",
+      vx_ui_ui.c_layout_label,
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        55,
+        ":y",
+        80
+      ),
+      ":pointrotate",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        180
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        51
+      )
+    ))
+
+    // (const style-card-display4)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_card_display4, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-card-display4",
+      ":layout",
+      vx_ui_ui.c_layout_label,
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        1,
+        ":y",
+        71
+      ),
+      ":pointrotate",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        -90
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        58
       )
     ))
 
@@ -1159,11 +1273,19 @@ export default class nx_tactics_ui_stylesheet {
       "style-card-title",
       ":layout",
       vx_ui_ui.c_layout_label,
+      ":align",
+      vx_ui_ui.c_align_center,
       ":pointpos",
       vx_core.f_new(
         vx_ui_ui.t_point,
         ":x",
-        20
+        7
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        51
       )
     ))
 
@@ -1190,7 +1312,7 @@ export default class nx_tactics_ui_stylesheet {
       ":type",
       vx_ui_ui.c_styletype_shared,
       ":color-background",
-      "F0F0F0",
+      "C0C0C0",
       ":layout",
       vx_ui_ui.c_layout_flow_columns
     ))
@@ -1566,17 +1688,6 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_font_text
     ))
 
-    // (const style-text-area)
-    Object.assign(nx_tactics_ui_stylesheet.c_style_text_area, vx_core.f_new(
-      vx_ui_ui.t_style,
-      ":name",
-      "style-text-area",
-      ":type",
-      vx_ui_ui.c_styletype_shared,
-      ":font",
-      nx_tactics_ui_stylesheet.c_font_textarea
-    ))
-
     // (const style-text-header1)
     Object.assign(nx_tactics_ui_stylesheet.c_style_text_header1, vx_core.f_new(
       vx_ui_ui.t_style,
@@ -1623,6 +1734,8 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_styletype_shared,
       ":layout",
       vx_ui_ui.c_layout_label,
+      ":align",
+      vx_ui_ui.c_align_center,
       ":font",
       nx_tactics_ui_stylesheet.c_font_rank,
       ":pointpos",
@@ -1640,6 +1753,8 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_styletype_shared,
       ":layout",
       vx_ui_ui.c_layout_label,
+      ":align",
+      vx_ui_ui.c_align_center,
       ":font",
       nx_tactics_ui_stylesheet.c_font_rank,
       ":pointpos",
@@ -1659,6 +1774,17 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_layout_label,
       ":font",
       nx_tactics_ui_stylesheet.c_font_title
+    ))
+
+    // (const style-textarea)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_textarea, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-textarea",
+      ":type",
+      vx_ui_ui.c_styletype_shared,
+      ":font",
+      nx_tactics_ui_stylesheet.c_font_textarea
     ))
 
     // (const style-unit)
@@ -1699,6 +1825,14 @@ export default class nx_tactics_ui_stylesheet {
         
       },
       "pointpos": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "t": 0,
+        "i": 0,
+        "ispercent": false
+      },
+      "pointrotate": {
         "x": 0,
         "y": 0,
         "z": 0,
@@ -1767,7 +1901,7 @@ export default class nx_tactics_ui_stylesheet {
           nx_tactics_ui_stylesheet.c_style_image_wand1,
           nx_tactics_ui_stylesheet.c_style_image_wand2,
           nx_tactics_ui_stylesheet.c_style_text,
-          nx_tactics_ui_stylesheet.c_style_text_area,
+          nx_tactics_ui_stylesheet.c_style_textarea,
           nx_tactics_ui_stylesheet.c_style_text_header1,
           nx_tactics_ui_stylesheet.c_style_text_header2,
           nx_tactics_ui_stylesheet.c_style_text_label,

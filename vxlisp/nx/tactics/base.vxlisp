@@ -19,16 +19,19 @@
  :allowtypes [book])
 
 (type card : struct
- :properties [name        : string
+ :properties [id          : string
+              name        : string
               icon        : string
               image       : string
               reference   : string
               summary     : string
               titles      : string
               orientation : string
-              ranksuit    : ranksuit
-              rank        : rank
-              suit        : suit])
+              ranksuit    : ranksuit])
+
+(type cardimage : struct
+ :traits     [card]
+ :properties [origcard : card])
 
 (type cardlist : list
  :allowtypes [card])
@@ -50,7 +53,8 @@
  :allowtypes [chapter])
 
 (type damage : struct
- :traits [card])
+ :traits [card]
+ :doc "Lasting Body Damage")
 
 (type damagelist : list
  :allowtypes [damage])
@@ -76,16 +80,12 @@
               reward      : string]
  :traits [card])
 
-(type imagecard : struct
- :traits     [card]
- :properties [origcard : card])
-
 (type item : struct
  :traits     [card]
  :properties [body            : rating
               mind            : rating
               will            : rating
-              speed           : rating
+              move            : rating
               shadow          : rating
               beast           : rating
               classification  : string
@@ -101,6 +101,7 @@
               rof             : string
               rolemap         : rolemap
               rounds          : string
+              speed           : string
               speedair        : string
               speedland       : string
               speedspace      : string
@@ -154,8 +155,8 @@
  :traits     [card]
  :properties [level : int :doc "Values: 2->10"
               part  : int :doc "Values: 0->9"
-              size  : int :doc "Values: -x->x"]
- :doc "Rating are displayed as level.part:scale.")
+              scale : int :doc "Values: -x->x"]
+ :doc "Rating are displayed as level.partxscale. e.g. 3x1, 5.1x2")
 
 (type role : struct)
 
@@ -271,12 +272,12 @@
 
 (type unit : struct
  :traits     [card]
- :properties [body            : string
-              mind            : string
-              will            : string
-              speed           : string
-              shadow          : string
-              beast           : string
+ :properties [body            : rating
+              mind            : rating
+              will            : rating
+              move            : rating
+              shadow          : rating
+              beast           : rating
               demeanor        : string
               nature          : string
               classification  : string
@@ -285,6 +286,7 @@
               height          : string
               length          : string
               range           : string
+              speed           : string
               speedair        : string
               speedland       : string
               speedspace      : string
@@ -367,10 +369,6 @@
 
 (type weaknessmap : map
  :allowtypes [weakness])
-
-(type wound : struct
- :traits [card]
- :doc "Lasting Body Damage")
 
 (type disorder : struct
  :traits [card]
@@ -582,7 +580,7 @@
 
 (const ranksuit-8c : ranksuit
  (ranksuit
-  :rank rank-ten
+  :rank rank-eight
   :suit suit-club))
 
 (const ranksuit-8d : ranksuit
@@ -775,6 +773,21 @@
    (:name book)))
  :doc "Returns a bookmap of all books.")
 
+(func cardlist-copy<-card-num : cardlist
+ [card : card
+  num  : int]
+ (list<-for-end-loop
+  1
+  num
+  (fn : card
+   [pos : int]
+   (let : card
+    [id : string := (:id card)
+     chg : string := (string id "-" pos)]
+    (copy card
+     :id chg))))
+ :doc "Returns a cardlist by copying a card num times")
+
 (func cardmap<-bookmap : cardmap
  [bookmap : bookmap]
  (map<-map : cardmap
@@ -792,7 +805,24 @@
   cardlist
   (fn : string
    [card : card]
-   (:name card))))
+   (let : string
+    [id   : string := (:id card)
+     name : string := (:name card)]
+    (if : string
+     (!-empty id)
+     id
+     name)))))
+
+(func cardmap-copy<-card-num : cardmap
+ [card : card
+  num  : int]
+ (let : cardmap
+  [cardlist : cardlist :=
+   (cardlist-copy<-card-num
+    card num)]
+  (cardmap<-cardlist
+   cardlist))
+ :doc "Returns a cardmap by copying a card num times")
 
 (func chapterlist<-book : chapterlist
  [book : book]
@@ -839,6 +869,19 @@
    [chapter : chapter]
    (:name chapter)))
  :doc "Returns a chaptermap from a given chapterlist")
+
+(func cardimage<-card : cardimage
+ [card : card]
+ (let : cardimage
+  [name  : string := (:name card)
+   image : string := (:image card)
+   id : string := (string name "-image")]
+  (base/cardimage
+   :id id
+   :name name
+   :origcard card
+   :image image))
+ :doc "Returns a cardimage from a given card")
 
 (func name<-chapter : string
  [chapter : chapter]

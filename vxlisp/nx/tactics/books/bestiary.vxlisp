@@ -2431,7 +2431,7 @@ leadership role, they draw straws with the short straw forced to assume leadersh
      (section
       :name "Draconian"
       :summary
-       "* Draconians are a bulky reptilian race of humanoids that claim shared ancestrey with Greater Dragons. The Draconians are a very old race with a long hostility toward mammals of all kinds which they see as out of control vermin. They see no distinction between the races or cultures of men.
+       "* Draconians are a bulky reptilian race of humanoids that claim shared ancestry with Greater Dragons. The Draconians are a very old race with a long hostility toward mammals of all kinds which they see as out of control vermin. They see no distinction between the races or cultures of men.
 * Draconian Code - Draconians have always been a warrior race. They relish battle, but must always live by the Draconian Code of Honor which prevents them from acts of wanton destruction. The code requires them to spare the defenseless.
 * Draconian Law - Draconian law is particularly harsh: For example, any debtor whose status was lower than that of his creditor is forced into slavery. The death penalty is the punishment for even minor offenses. It is said that Drakon himself, when asked why he had fixed the punishment of death for most offences, answered that he considered these lesser crimes to deserve it, and he had no greater punishment for more important ones."
       :titles "Drakken"
@@ -2536,7 +2536,7 @@ leadership role, they draw straws with the short straw forced to assume leadersh
       :name "Naga"
       :summary
        "* The Naga are large serpent people resembling huge cobras with short arms. They stand about 5 feet high, but 2/3 of their length is in their tail behind them. Clans are named after the current clan leader and the Naga use clan name as a last name. Like their snake and crocodile brethren, they are slow moving and lazy except while hunting. Their fangs produce a mild venom, but its lack of potency is a point of embarrassment to the Naga. They prefer the spear as a weapon because they can use it as a walking staff to aid them when they are not waist deep in water (their natural habitat). They sleep with their eyes open which makes them seem to always be on the alert.
-* Maximum Body - 6"
+       * Maximum Body - 6"
       :titles "Lamia, Serpent People"
       :unitmap
        (unitmap
@@ -2909,10 +2909,12 @@ leadership role, they draw straws with the short straw forced to assume leadersh
     "Greater Dragons"
      (section
       :name "Greater Dragons"
-      :reference "Seven Deadly Sins: Greed"
+      :reference
+       "* Seven Deadly Sins: Greed
+        * Lee: Only I can endure the dragon's fury. Sol: We'll see about that, little man. Lee Sin and Aurelion Sol - Runeterra"
       :summary
        "* The greater dragons are apparently the last remnants of a ancient time before man when enormous monsters roamed the world. The greater dragons are immensely powerful, even more than their great size would indicate. Greater dragons are extremely rare and solitary. They all appear to be millenia old, and no young greater dragons have been observed. It is possible that there are no longer any mated pairs of dragons, so the ones observed may be the last of greater dragons.
-* They tend to live near ley lines (dragon lines) to accumulate magical energy. They further collect precious things to bask in their spiritual energy."
+       * They tend to live near ley lines (dragon lines) to accumulate magical energy. They further collect precious things to bask in their spiritual energy."
       :unitmap
        (unitmap
         "Celestial Dragon"
@@ -2926,7 +2928,7 @@ leadership role, they draw straws with the short straw forced to assume leadersh
           :name "Dragon Turtle"
           :reference
            "* Gamera
-* Lion Turtle - Avatar The Last Airbender"
+            * Lion Turtle - Avatar The Last Airbender"
           :summary
            "* Dragon Turtles are enormous turtles that live most of their lives at sea and are sometimes mistaken for small islands. They are extremely long lived and are among the most ancient creatures living. They will occasionally float on the surface so long that plants and even trees grow on them.
 * Steam Breath - They produce extreme heat inside their bodies that can be expelled as steam, a boiling geyser, or fire."
@@ -4401,7 +4403,7 @@ to ever-greater acts of violence and revenge.")
           :name "Typhon"
           :summary
            "* The enemy of Zeus
-* A vast grisly monster with a hundred snakelike heads that extends in serpentine coils from the waist down."))))))
+            * A vast grisly monster with a hundred snakelike heads that extends in serpentine coils from the waist down."))))))
 
 (func chapter_mythical_beasts : base/chapter
  (chapter
@@ -4546,8 +4548,8 @@ to ever-greater acts of violence and revenge.")
 * Sindbad observed that when a karkadann spears an elephant on its horn, the elephant’s fat runs into the rhino’s eyes and blinds it; a rukh will then swoop down and carry both combatants off to feed its chicks."
           :summary
            "* Appearance - Rukhs are monstrously large birds vaguely similar in a appearance to a vulture.
-* Feeding - Rukhs are uncontested predators capable of feeding on the largest and most dangerous land animals. They have a particular fondness for giant serpents, elephants, and karkadanns or rhinoceroses.
-* Intelligence - Rukhs also appear to have some degree of intelligence, using boulders to smash prey."
+           * Feeding - Rukhs are uncontested predators capable of feeding on the largest and most dangerous land animals. They have a particular fondness for giant serpents, elephants, and karkadanns or rhinoceroses.
+           * Intelligence - Rukhs also appear to have some degree of intelligence, using boulders to smash prey."
           :titles "Roc")
         "Roc Hatchling"
          (unit

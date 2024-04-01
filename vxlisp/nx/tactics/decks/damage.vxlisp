@@ -4,22 +4,36 @@
 
 (const fatigue : base/card
  (base/card
-  :name "Fatigue/Weaken/Exertion/Strain")
- :doc "* Temporary Body Damage. Hard work and strikes in combat cause Fatigue.
-       * While you have more Fatigue than [Body], you are [Exhausted].
-       * [Exhausted]: Cannot play odd [Attack] cards and your second action may only be [Recover].")
+  :id "fatigue"
+  :name "Damage"
+  :titles "Physical Damage/Fatigue/Weaken/Exertion"
+  :image "images/card-fatigue.svg"
+  :summary
+   "* Fatigue
+    * While you have more Fatigue than [Body], you are [Exhausted].
+    * [Exhausted]: Cannot play odd [Attack] cards and your second action may only be [Recover]."))
 
 (const slow : base/card
  (base/card
-  :name "Slow")
- :doc "* Temporary Movement Damage. Carrying loads, burden, entanglement, or tissue damage cause Burden.
-       * While you have more [Slow] than [Move], you are [Encumbered].
-       * [Encumbered]: Cannot play [Counters] and [Move] actions are halved (rounded up).")
+  :id "slow"
+  :name "Constraint"
+  :titles "Slow/Burden"
+  :image "images/card-slow.svg"
+  :summary
+    "* Slow
+     * While you have more Slow than [Move], you are Hobbled.
+     * Hobbled: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up)."))
 
 (const stress : base/card
  (base/card
-  :name "Stress"
-  :titles "Stress/Duress/Horror"
+  :id "stress"
+  :name "Trauma"
+  :titles "Emotional Trauma/Stress/Duress/Horror"
+  :image "images/card-stress.svg"
+  :summary
+   "* Stress
+    * While you have more [Stress] than [Will], you are [Shaken].
+    * [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]"
   :reference
    "Because love's such an old-fashioned word
     And love dares you to care for
@@ -27,631 +41,608 @@
     And love dares you to change our way of
     Caring about ourselves
     This is our last dance
-    This is ourselves under pressure - Queen and David Bowie, Under Pressure"
-  :summary
-   "* Temporary Will Damage. Doing or facing things against your beliefs causes Stress.
-    * While you have more Stress than [Will], you are [Shaken].
-    * [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]"))
+    This is ourselves under pressure - Queen and David Bowie, Under Pressure"))
 
 (const stun : base/card
  (base/card
-  :name "Stun"
+  :id "stun"
+  :name "Disorder"
+  :titles "Mental Damage/Strain/Distraction/Surprise/Shock"
+  :image "images/card-stun.svg"
   :summary
-   "* Temporary Mind Damage/Strain/Distraction/Surprise/Shock. Intense concentration, pressure, and multitasking causes Strain.
-    * While you have more Stun than [Mind], you are [Confused].
+   "* Stun
+    * While you have more [Stun] than [Mind], you are [Confused].
     * [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover]."))
 
-(const wound-wild-black : wound
- (base/wound
-  :name "Black Wild Wound"
+(const damage-wild-black : base/damage
+ (base/damage
+  :name "Damage: Deck"
   :ranksuit base/ranksuit-jokerblack
   :summary
-   "* Search the Deck for any card and play that instead.
-    * Shuffle Discards into Deck."))
+   "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
 
-(const wound-wild-red : wound
- (base/wound
-  :name "Red Wild Wound"
+(const damage-wild-red : base/damage
+ (base/damage
+  :name "Damage: Discard"
   :ranksuit base/ranksuit-jokerred
   :summary
-   "* Search the Discards for any card and play that instead or play the next card instead.
-    * Shuffle Discards into Deck."))
+   "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
 
-(const wound-ac : wound
- (base/wound
+(const damage-ac : base/damage
+ (base/damage
   :name "Bash: Head"
   :ranksuit base/ranksuit-ac
   :summary
-   "* 1 Damage: Head Ringing. [Stun]: 1.
-    * 2 Damage: Concussion. [Stun]: 1. [Push]: 1.
-    * 3 Damage: Skull Fracture. [Unconscious]. [Stun]: 1, [Fatigue]: 1. [Push]: 1. [Knockdown]: 1.
-    * 4 Damage: Skull Crushed. [Dead]."))
+   "Minor: Head Ringing. Stun:1
+    Moderate: Concussion. Stun:1 Push:1
+    Major: Skull Fracture. Unconscious. Stun:1 Fatigue:1 Push:1 Knockdown:1
+    Extreme: Skull Crushed. Dead."))
 
-(const wound-ad : wound
- (base/wound
+(const damage-ad : base/damage
+ (base/damage
   :name "Pierce: Head"
   :ranksuit base/ranksuit-ad
   :summary
-   "* 1 Damage: Head Grazed. [Stun]: 1.
-    * 2 Damage: Pierced Throat. [Can't speak]. [Stun]: 1, [Stress]: 1.
-    * 3 Damage: Blinded in one Eye. [Partly Blind]. [Stun]: 2. [Stress]: 1.
-    * 4 Damage: Skull Pierced. Dying."))
+   "Minor: Head Grazed. Stun:1
+    Moderate: Pierced Throat. Can't speak. Stun: 1, Stress:1
+    Major: Blinded in one Eye. Partly Blind. Stun:2 Stress:1
+    Extreme: Brain Pierced. Dying. Disorder:2"))
 
-(const wound-ah : wound
- (base/wound
+(const damage-ah : base/damage
+ (base/damage
   :name "Hack: Head"
   :ranksuit base/ranksuit-ah
   :summary
-   "* 1 Damage: Head Cut. [Bleeding]: 1.
-    * 2 Damage: Face Gash. [Stress]: 1. [Bleeding]: 1.
-    * 3 Damage: Throat Slashed. [Bleeding]: 2, [Stress]: 2.
-    * 4 Damage: Spine Severed. [Paralyzed]. [Stress]: 3. [Bleeding]: 2."))
+   "Minor: Head Graze. Stun:1
+    Moderate: Head Slash. Slow:1 Bleeding:1
+    Major: Neck Fracture. Immobilized. Slow:3 Bleeding:1
+    Extreme: Spine Severed. Paralyzed. Stress:3 Bleeding:2"))
 
-(const wound-as : wound
- (base/wound
+(const damage-as : base/damage
+ (base/damage
   :name "Slash: Head"
   :ranksuit base/ranksuit-as
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Beheaded. [Dead]."))
+   "Minor: Head Cut. Bleeding:1
+    Moderate: Face Gash. Stress:1 Bleeding:1
+    Major: Throat Slashed. Bleeding:3 Stress:2
+    Extreme: Beheaded. Dead."))
 
-(const wound-kc : wound
- (base/wound
+(const damage-kc : base/damage
+ (base/damage
   :name "Bash: Shoulders"
   :ranksuit base/ranksuit-kc
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead].")
+   "Minor: Shoulder Bruise. Fatigue:1
+    Moderate: Bruised Ribs. Slow:1 Fatigue:1 Push:1
+    Major: Broken Ribs. Hobbled. Slow:2 Push:1
+    Extreme: Rib Cage Collapse. Dead. Push:1")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
-(const wound-kd : wound
- (base/wound
+(const damage-kd : base/damage
+ (base/damage
   :name "Pierce: Shoulders"
   :ranksuit base/ranksuit-kd
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead].")
+   "Minor: Glance off Shoulder. Stun:1
+    Moderate: Pierced Shoulder. Stun:1 Bleeding:1
+    Major: Pierced Chest. Stun:2 Bleeding:2
+    Extreme: Pierced Throat. Bleeding:2 Stun:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
-(const wound-kh : wound
- (base/wound
+(const damage-kh : base/damage
+ (base/damage
   :name "Hack: Shoulders"
   :ranksuit base/ranksuit-kh
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead].")
+   "Minor: Chest Graze. Stress:1
+    Moderate: Chest Slash. Stress:1 Bleeding:1
+    Major: Bleeding in Chest Cavity. Stress:2 Bleeding:2
+    Extreme: Shoulder Cleaved. Dying. Bleeding:3 Stun:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
-(const wound-ks : wound
- (base/wound
+(const damage-ks : base/damage
+ (base/damage
   :name "Slash: Shoulders"
   :ranksuit base/ranksuit-ks
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead].")
+   "Minor: Shoulder Cut. Bleeding:1
+    Moderate: Shoulder Slash. Slow:1 Bleeding:1
+    Major: Throat Cut. Bleeding:2 Stress:2
+    Extreme: Throat Slashed. Bleeding:4 Stun:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
-(const wound-qc : wound
- (base/wound
+(const damage-qc : base/damage
+ (base/damage
   :name "Bash: Chest"
   :titles "Bash: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qc
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead].")
+   "Minor: Chest Bruise. Fatigue:1
+    Moderate: Wind Knocked Out. Slow:1 Fatigue:1 Push:1
+    Major: Heart Trauma. Slow:2 Stress:2 Push:1
+    Extreme: Heart Stopped. Dying. Push:1")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
-(const wound-qd : wound
- (base/wound
+(const damage-qd : base/damage
+ (base/damage
   :name "Pierce: Chest"
   :titles "Pierce: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qd
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead].")
+   "Minor: Chest Graze. Bleeding:1
+    Moderate: Chest Pierced. Stun:1 Bleeding:1
+    Major: Lung Punctured. Hobbled. Bleeding:2 Stun:2
+    Extreme: Heart Pierced. Dying. Bleeding:4 Stun:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
-(const wound-qh : wound
- (base/wound
+(const damage-qh : base/damage
+ (base/damage
   :name "Hack: Chest"
   :titles "Hack: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qh
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead].")
+   "Minor: Chest Cut. Bleeding:1
+    Moderate: Chest Slash. Bleeding:1 Push:1
+    Major: Collapsed Lung. Hobbled. Slow:2 Push:1
+    Extreme: Lungs Collapsed. Dying. Hobbled. Stress: 4")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
-(const wound-qs : wound
- (base/wound
+(const damage-qs : base/damage
+ (base/damage
   :name "Slash: Chest"
   :titles "Slash: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qs
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead].")
+   "Minor: Chest Cut. Bleeding:1
+    Moderate: Chest Slash. Slow:1 Bleeding:1
+    Major: Long Chest Slash. Slow:2 Bleeding:2
+    Extreme: Spine Severed. [Paralyzed]. Stress: 4")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
-(const wound-jc : wound
- (base/wound
+(const damage-jc : base/damage
+ (base/damage
   :name "Bash: Abdomen"
   :titles "Bash: Abdomen/Lower Back"
   :ranksuit base/ranksuit-jc
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Stomach Bruise. Push:1
+    Moderate: Diaphram Bruise. Slow:1 Fatigue:1
+    Major: Hip Fracture. Hobbled. Slow:3 Bleeding:1
+    Extreme: Crushed Hip. Immobilized. Bleeding:3 Stress:2"))
 
-(const wound-jd : wound
- (base/wound
+(const damage-jd : base/damage
+ (base/damage
   :name "Pierce: Abdomen"
   :titles "Pierce: Abdomen/Lower Back"
   :ranksuit base/ranksuit-jd
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Side Puncture. Bleeding:1
+    Moderate: Belly Puncture. Slow:1 Bleeding:1
+    Major: Liver Pierced. Bleeding:2 Slow:2
+    Extreme: Stomach Pierced. Hobbled. Bleeding:3 [Acid]:2"))
 
-(const wound-jh : wound
- (base/wound
+(const damage-jh : base/damage
+ (base/damage
   :name "Hack: Abdomen"
   :titles "Hack: Abdomen/Lower Back"
   :ranksuit base/ranksuit-jh
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Glance off Hip. Bleeding:1
+    Moderate: Stomach Cut. Bleeding:1 Stress: 1
+    Major: Kidney Bruise. Slow:2 Bleeding:1 Fatigue:1
+    Extreme: Renal Failure: Dying. Fatigue:3 Stress:2"))
 
-(const wound-js : wound
- (base/wound
+(const damage-js : base/damage
+ (base/damage
   :name "Slash: Abdomen"
   :titles "Slash: Abdomen/Lower Back"
   :ranksuit base/ranksuit-js
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Stomach Cut. Bleeding:1
+    Moderate: Head Slash. Slow:1 Bleeding:1
+    Major: Neck Fracture. Immobilized. Slow:3 Bleeding:1
+    Extreme: Disemboweled. Bleeding:4 Stress:2"))
 
-(const wound-tc : wound
- (base/wound
+(const damage-tc : base/damage
+ (base/damage
   :name "Bash: Vitals"
   :titles "Bash: Hips/Groin"
   :ranksuit base/ranksuit-tc
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Hip Bruise. Stun:1
+    Moderate: Genital Slam. Slow:1 Stun:1 Stress:1
+    Major: Kidney Rupture. Slow:2 Bleeding:1 Fatigue:1
+    Extreme: Hip Fracture: Hobbled. Slow:2 Fatigue:2"))
 
-(const wound-td : wound
- (base/wound
+(const damage-td : base/damage
+ (base/damage
   :name "Pierce: Vitals"
   :titles "Pierce: Hips/Groin"
   :ranksuit base/ranksuit-td
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Buttock Pierced. Bleeding:1
+    Moderate: Gut Pierced. Stun:1 Bleeding:1
+    Major: Partially Sterilized. Stress:2 Bleeding:2
+    Extreme: Intestines Pierced. Diseased:2 Slow:1 Bleeding:1"))
 
-(const wound-th : wound
- (base/wound
+(const damage-th : base/damage
+ (base/damage
   :name "Hack: Vitals"
   :titles "Hack: Hips/Groin"
   :ranksuit base/ranksuit-th
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Hip Graze. Bleeding:1
+    Moderate: Hip Gash. Stress:1 Bleeding:1
+    Major: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2
+    Extreme: Wide Groin Gash. Bleeding:4 Stress:2"))
 
-(const wound-ts : wound
- (base/wound
+(const damage-ts : base/damage
+ (base/damage
   :name "Slash: Vitals"
   :titles "Slash: Hips/Groin"
   :ranksuit base/ranksuit-ts
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Hip Graze. Bleeding:1
+    Moderate: Groin Slash. Slow:1 Bleeding:1
+    Major: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2
+    Extreme: Groin opened up. Bleeding:4 Stress:2"))
 
-(const wound-9c : wound
- (base/wound
+(const damage-9c : base/damage
+ (base/damage
   :name "Bash: Left Arm"
   :titles "Bash: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9c
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Arm Bruise. Push:1
+    Moderate: Arm Battered. Fatigue:1 Push:1
+    Major: Arm Fracture. Impaired. Stress:2 Fatigue:2
+    Extreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"))
 
-(const wound-9d : wound
- (base/wound
+(const damage-9d : base/damage
+ (base/damage
   :name "Pierce: Left Arm"
   :titles "Pierce: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9d
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Arm Graze. Stun:1
+    Moderate: Arm Numb. Stun:1 Bleeding:1
+    Major: Elbow Pierced. Impaired. Stun:3 Bleeding:1
+    Extreme: Artery Severed. Bleeding: 4 Stun:2"))
 
-(const wound-9h : wound
- (base/wound
+(const damage-9h : base/damage
+ (base/damage
   :name "Hack: Left Arm"
   :titles "Hack: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9h
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Arm Graze. Withdraw:1
+    Moderate: Arm Gash. Withdraw:1 Bleeding:1
+    Major: Deep Arm Gash. Impaired. Stress:2 Bleeding:2
+    Extreme: Elbow Severed. Impaired. Stun:2 Stress:2"))
 
-(const wound-9s : wound
- (base/wound
+(const damage-9s : base/damage
+ (base/damage
   :name "Slash: Left Arm"
   :titles "Slash: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9s
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Arm Cut. Bleeding:1
+    Moderate: Arm Slash. Slow:1 Bleeding:1
+    Major: Elbow Slash. Impaired. Slow:2 Bleeding:2
+    Extreme: Artery Severed. Bleeding: 4 Stress:2"))
 
-(const wound-8c : wound
- (base/wound
+(const damage-8c : base/damage
+ (base/damage
   :name "Bash: Right Arm"
   :titles "Bash: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8c
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Arm Bruise. Push:1
+    Moderate: Arm Battered. Fatigue:1 Push:1
+    Major: Arm Fracture. Impaired. Stress:2 Fatigue:2
+    Extreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"))
 
-(const wound-8d : wound
- (base/wound
+(const damage-8d : base/damage
+ (base/damage
   :name "Pierce: Right Arm"
   :titles "Pierce: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8d
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Arm Graze. Stun:1
+    Moderate: Arm Pierced. Stun:1 Bleeding:1
+    Major: Elbow Pierced. Impaired. Stun:3 Bleeding:1
+    Extreme: Artery Severed. Bleeding: 4 Stun:2"))
 
-(const wound-8h : wound
- (base/wound
+(const damage-8h : base/damage
+ (base/damage
   :name "Hack: Right Arm"
   :titles "Hack: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8h
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Arm Graze. Withdraw:1
+    Moderate: Arm Gash. Withdraw:1 Bleeding:1
+    Major: Deep Arm Gash. Impaired. Stress:2 Bleeding:2
+    Extreme: Elbow Severed. Impaired. Stun:2 Stress:2"))
 
-(const wound-8s : wound
- (base/wound
+(const damage-8s : base/damage
+ (base/damage
   :name "Slash: Right Arm"
   :titles "Slash: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8s
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Arm Cut. Bleeding:1
+    Moderate: Arm Slash. Slow:1 Bleeding:1
+    Major: Elbow Slash. Impaired. Slow:2 Bleeding:2
+    Extreme: Artery Severed. Bleeding: 4 Stress:2"))
 
-(const wound-7c : wound
- (base/wound
+(const damage-7c : base/damage
+ (base/damage
   :name "Bash: Left Hand"
   :titles "Bash: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7c
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Forearm Bruise. Fatigue:1
+    Moderate: Hand Numb. Drop:1 Stress:1 Stun:1
+    Major: Hand Fracture. Impaired. Stun:2 Fatigue:1
+    Extreme: Hand Shattered. Impaired. Stun:2 Stress:2"))
 
-(const wound-7d : wound
- (base/wound
+(const damage-7d : base/damage
+ (base/damage
   :name "Pierce: Left Hand"
   :titles "Pierce: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7d
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Forearm Graze. Stun:1
+    Moderate: Forearm Pierced. Stun:1 Bleeding:1
+    Major: Wrist Pierced. Impaired. Stun:1 Bleeding:2
+    Extreme: Artery Cut. Impaired. Stun:2 Bleeding:2"))
 
-(const wound-7h : wound
- (base/wound
+(const damage-7h : base/damage
+ (base/damage
   :name "Hack: Left Hand"
   :titles "Hack: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7h
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Forearm Graze. Withdraw:1
+    Moderate: Forearm Gash. Drop:1 Stress:1 Bleeding:1
+    Major: Hand Slash. Impaired. Stress:2 Bleeding:2
+    Extreme: Hand Mangled. Impaired. Bleeding:2 Stress:2"))
 
-(const wound-7s : wound
- (base/wound
+(const damage-7s : base/damage
+ (base/damage
   :name "Slash: Left Hand"
   :titles "Slash: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7s
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Forearm Cut. Bleeding:1
+    Moderate: Forearm Slash. Drop:1 Slow:1 Bleeding:1
+    Extreme: Artery Severed. Impaired. Bleeding:3 Stress:1
+    Extreme: Hand Severed. Impaired. Bleeding:2 Stress:2"))
 
-(const wound-6c : wound
- (base/wound
+(const damage-6c : base/damage
+ (base/damage
   :name "Bash: Right Hand"
   :titles "Bash: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6c
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Forearm Bruise. Fatigue:1
+    Moderate: Hand Numb. Drop:1 Stress:1 Stun:1
+    Major: Hand Fracture. Impaired. Stun:2 Fatigue:1
+    Extreme: Hand Shattered. Impaired. Stun:2 Stress:2"))
 
-(const wound-6d : wound
- (base/wound
+(const damage-6d : base/damage
+ (base/damage
   :name "Pierce: Right Hand"
   :titles "Pierce: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6d
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Forearm Graze. Stun:1
+    Moderate: Forearm Pierced. Stun:1 Bleeding:1
+    Major: Wrist Pierced. Impaired. Stun:1 Bleeding:2
+    Extreme: Artery Cut. Impaired. Stun:2 Bleeding:2"))
 
-(const wound-6h : wound
- (base/wound
+(const damage-6h : base/damage
+ (base/damage
   :name "Hack: Right Hand"
   :titles "Hack: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6h
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Forearm Graze. Withdraw:1
+    Moderate: Forearm Gash. Drop:1 Stress:1 Bleeding:1
+    Major: Hand Slash. Impaired. Stress:2 Bleeding:2
+    Extreme: Hand Mangled. Impaired. Bleeding:2 Stress:2"))
 
-(const wound-6s : wound
- (base/wound
+(const damage-6s : base/damage
+ (base/damage
   :name "Slash: Right Hand"
   :titles "Slash: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6s
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Forearm Cut. Bleeding:1
+    Moderate: Forearm Slash. Drop:1 Slow:1 Bleeding:1
+    Extreme: Artery Severed. Impaired. Bleeding:3 Stress:1
+    Extreme: Hand Severed. Impaired. Bleeding:2 Stress:2"))
 
-(const wound-5c : wound
- (base/wound
+(const damage-5c : base/damage
+ (base/damage
   :name "Bash: Left Leg"
   :titles "Bash: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5c
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Thigh Bruise. Fatigue:1
+    Moderate: Knee Damage. Slow:1 Fatigue:1
+    Major: Knee Fracture. Hobbled. Slow:2 Fatigue: 1
+    Extreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"))
 
-(const wound-5d : wound
- (base/wound
+(const damage-5d : base/damage
+ (base/damage
   :name "Pierce: Left Leg"
   :titles "Pierce: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5d
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Thigh Graze. Slow:1
+    Moderate: Thigh Pierced. Stress:1 Bleeding:1
+    Major: Knee Pierced. Hobbled. Slow:3 Bleeding:1
+    Extreme: Nerve Damage. Hobbled. Bleeding:2 Stress:2"))
 
-(const wound-5h : wound
- (base/wound
+(const damage-5h : base/damage
+ (base/damage
   :name "Hack: Left Leg"
   :titles "Hack: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5h
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Thigh Graze. Withdraw:1
+    Moderate: Thigh Slash. Withdraw:1 Bleeding:1
+    Major: Wide Thigh Gash. Slow:2 Bleeding:2
+    Extreme: Severed at Knee. Hobbled. Bleeding:2 Stress:2"))
 
-(const wound-5s : wound
- (base/wound
+(const damage-5s : base/damage
+ (base/damage
   :name "Slash: Left Leg"
   :titles "Slash: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5s
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Thigh Cut. Bleeding:1
+    Moderate: Thigh Slash. Scarred. Slow:1 Bleeding:1
+    Major: Hamstring Cut. Hobbled. Slow:2 Bleeding:2
+    Extreme: Artery Severed. Bleeding:4 Stress:2"))
 
-(const wound-4c : wound
- (base/wound
+(const damage-4c : base/damage
+ (base/damage
   :name "Bash: Right Leg"
   :titles "Bash: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4c
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Thigh Bruise. Fatigue:1
+    Moderate: Knee Damage. Slow:1 Fatigue:1
+    Major: Knee Fracture. Hobbled. Slow:2 Fatigue: 1
+    Extreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"))
 
-(const wound-4d : wound
- (base/wound
+(const damage-4d : base/damage
+ (base/damage
   :name "Pierce: Right Leg"
   :titles "Pierce: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4d
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Thigh Graze. Slow:1
+    Moderate: Thigh Pierced. Stress:1 Bleeding:1
+    Major: Knee Pierced. Hobbled. Slow:3 Bleeding:1
+    Extreme: Nerve Damage. Hobbled. Bleeding:2 Stress:2"))
 
-(const wound-4h : wound
- (base/wound
+(const damage-4h : base/damage
+ (base/damage
   :name "Hack: Right Leg"
   :titles "Hack: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4h
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Thigh Graze. Withdraw:1
+    Moderate: Thigh Cut. Withdraw:1 Bleeding:1
+    Major: Wide Thigh Gash. Slow:2 Bleeding:2
+    Extreme: Severed at Knee. Hobbled. Bleeding:2 Stress:2"))
 
-(const wound-4s : wound
- (base/wound
+(const damage-4s : base/damage
+ (base/damage
   :name "Slash: Right Leg"
   :titles "Slash: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4s
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Thigh Cut. Bleeding:1
+    Moderate: Thigh Slash. Scarred. Slow:1 Bleeding:1
+    Major: Hamstring Cut. Hobbled. Slow:2 Bleeding:2
+    Extreme: Artery Severed. Bleeding:4 Stress:2"))
 
-(const wound-3c : base/damage
+(const damage-3c : base/damage
  (base/damage
   :name "Bash: Left Foot"
   :titles "Bash: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3c
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Shin Bruised. Slow:1
+    Moderate: Foot Smash. Slow:1 Stress:1
+    Major: Ankle Fracture. Hobbled. Slow:2
+    Extreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"))
 
-(const wound-3d : base/damage
+(const damage-3d : base/damage
  (base/damage
   :name "Pierce: Left Foot"
   :titles "Pierce: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3d
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Ankle Graze. Slow:1
+    Moderate: Foot Slash. Slow:1 Bleeding:1
+    Major: Foot Pierced. Slow:3 Bleeding:1
+    Extreme: Ankle Useless. Hobbled. Bleeding:1"))
 
-(const wound-3h : base/damage
+(const damage-3h : base/damage
  (base/damage
   :name "Hack: Left Foot"
   :titles "Hack: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3h
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Ankle Grazed. Withdraw:1
+    Moderate: Ankle Gash. Withdraw:1 Bleeding:1
+    Major: 2 Toes Lost. Stress:2 Bleeding:1
+    Extreme: Foot Mangled. Hobbled. Stress:2 Bleeding:2"))
 
-(const wound-3s : base/damage
+(const damage-3s : base/damage
  (base/damage
   :name "Slash: Left Foot"
   :titles "Slash: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3s
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Head Severed. [Dead]."))
+   "Minor: Foot Cut. Bleeding:1
+    Moderate: Ankle Slash. Slow:1 Bleeding:1
+    Major: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
+    Extreme: Foot Severed. Hobbled. Bleeding:2"))
 
-(const wound-2c : wound
- (base/wound
+(const damage-2c : base/damage
+ (base/damage
   :name "Bash: Right Foot"
   :titles "Bash: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2c
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Foot Crushed. [Stress]: 2. [Lame]."))
+   "Minor: Shin Bruised. Slow:1
+    Moderate: Foot Smash. Slow:1 Stress:1
+    Major: Ankle Fracture. Hobbled. Slow:2
+    Extreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"))
 
-(const wound-2d : wound
- (base/wound
+(const damage-2d : base/damage
+ (base/damage
   :name "Pierce: Right Foot"
   :titles "Pierce: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2d
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Ankle Useless. [Bleeding] 1. [Lame]."))
+   "Minor: Ankle Graze. Slow:1
+    Moderate: Foot Slash. Slow:1 Bleeding:1
+    Major: Foot Pierced. Slow:3 Bleeding:1
+    Extreme: Ankle Useless. Hobbled. Bleeding:1"))
 
-(const wound-2h : wound
- (base/wound
+(const damage-2h : base/damage
+ (base/damage
   :name "Hack: Right Foot"
   :titles "Hack: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2h
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Foot Mangled. [Bleeding]: 2. [Lame]."))
+   "Minor: Ankle Grazed. Withdraw:1
+    Moderate: Ankle Gash. Withdraw:1 Bleeding:1
+    Major: 2 Toes Lost. Stress:2 Bleeding:1
+    Extreme: Foot Mangled. Hobbled. Stress:2 Bleeding:2"))
 
-(const wound-2s : wound
- (base/wound
+(const damage-2s : base/damage
+ (base/damage
   :name "Slash: Right Foot"
   :titles "Slash: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2s
   :summary
-   "* 1 Damage: Deflected off Skull. [Slow]: 1.
-    * 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.
-    * 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.
-    * 4 Damage: Foot Severed. [Bleeding]: 2. [Lame]."))
+   "Minor: Foot Cut. Bleeding:1
+    Moderate: Ankle Slash. Slow:1 Bleeding:1
+    Major: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
+    Extreme: Foot Severed. Hobbled. Bleeding:2"))
 
-(func deck-disorder : base/deck
+(func deck-damage : base/deck
  (base/deck
-  :name "Mental Disorder"
-  :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
-  :summary "* S-Hack Blood/Gore/Dismember/Stress
-            * H-Slash Blood/Burden
-            * C-Bash/Fatigue/Push/Fatigue
-            * D-Pierce/Shock/Stun/Pin/Disable/Strain")
- :doc "Damage to the Mind")
-
-(func deck-trauma : base/deck
- (base/deck
-  :name "Emotional Trauma"
-  :titles "Apathy, Cowed, Crisis, Berserk, Broken, Depression, Servitude, Surly"
-  :summary "* S-Hack Blood/Gore/Dismember
-            * H-Slash Blood/Slow
-            * C-Bash/Fatigue/Push
-            * D-Pierce/Stun/Pin/Disable")
- :doc "Damage to the Will")
-
-(func deck-wound : base/deck
- (base/deck
-  :name "Physical Damage"
+  :name "Damage"
   :summary "* S-Hack Blood/Gore/Dismember
             * H-Slash Blood/Slow
             * C-Bash/Fatigue/Push
@@ -659,58 +650,110 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     wound-wild-black
-     wound-wild-red
-     wound-ac
-     wound-ad
-     wound-ah
-     wound-as
-     wound-kc
-     wound-kd
-     wound-kh
-     wound-ks
-     wound-qc
-     wound-qd
-     wound-qh
-     wound-qs
-     wound-jc
-     wound-jd
-     wound-jh
-     wound-js
-     wound-tc
-     wound-td
-     wound-th
-     wound-ts
-     wound-9c
-     wound-9d
-     wound-9h
-     wound-9s
-     wound-8c
-     wound-8d
-     wound-8h
-     wound-8s
-     wound-7c
-     wound-7d
-     wound-7h
-     wound-7s
-     wound-6c
-     wound-6d
-     wound-6h
-     wound-6s
-     wound-5c
-     wound-5d
-     wound-5h
-     wound-5s
-     wound-4c
-     wound-4d
-     wound-4h
-     wound-4s
-     wound-3c
-     wound-3d
-     wound-3h
-     wound-3s
-     wound-2c
-     wound-2d
-     wound-2h
-     wound-2s)))
- :doc "Physical Damage Deck")
+     damage-wild-black
+     damage-wild-red
+     damage-ac
+     damage-ad
+     damage-ah
+     damage-as
+     damage-kc
+     damage-kd
+     damage-kh
+     damage-ks
+     damage-qc
+     damage-qd
+     damage-qh
+     damage-qs
+     damage-jc
+     damage-jd
+     damage-jh
+     damage-js
+     damage-tc
+     damage-td
+     damage-th
+     damage-ts
+     damage-9c
+     damage-9d
+     damage-9h
+     damage-9s
+     damage-8c
+     damage-8d
+     damage-8h
+     damage-8s
+     damage-7c
+     damage-7d
+     damage-7h
+     damage-7s
+     damage-6c
+     damage-6d
+     damage-6h
+     damage-6s
+     damage-5c
+     damage-5d
+     damage-5h
+     damage-5s
+     damage-4c
+     damage-4d
+     damage-4h
+     damage-4s
+     damage-3c
+     damage-3d
+     damage-3h
+     damage-3s
+     damage-2c
+     damage-2d
+     damage-2h
+     damage-2s)))
+ :doc "Damage Deck")
+
+(func deck-damageback : base/deck
+ (base/deck
+  :name "Damage Back"
+  :cardmap
+   (base/cardmap-copy<-card-num
+    fatigue 54))
+ :doc "Damage Card Back Deck")
+
+(func deck-disorder : base/deck
+ (base/deck
+  :name "Disorder"
+  :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
+  :summary "* S-Hack Blood/Gore/Dismember/Stress
+            * H-Slash Blood/Burden
+            * C-Bash/Fatigue/Push/Fatigue
+            * D-Pierce/Shock/Stun/Pin/Disable/Strain")
+ :doc "Damage to the Mind")
+
+(func deck-disorderback : base/deck
+ (base/deck
+  :name "Disorder Back"
+  :cardmap
+   (base/cardmap-copy<-card-num
+    stun 54))
+ :doc "Stun Card Back Deck")
+
+(func deck-trauma : base/deck
+ (base/deck
+  :name "Trauma"
+  :titles "Apathy, Cowed, Crisis, Berserk, Broken, Depression, Servitude, Surly"
+  :summary "* S-Hack Blood/Gore/Dismember
+            * H-Slash Blood/Slow
+            * C-Bash/Fatigue/Push
+            * D-Pierce/Stun/Pin/Disable")
+ :doc "Damage to the Will")
+
+(func deck-slow : base/deck
+ (base/deck
+  :name "Slow Back"
+  :cardmap
+   (base/cardmap-copy<-card-num
+    slow 54))
+ :doc "Slow Card Back Deck")
+
+(func deck-traumaback : base/deck
+ (base/deck
+  :name "Trauma Back"
+  :cardmap
+   (base/cardmap-copy<-card-num
+    stress 54))
+ :doc "Trauma Card Back Deck")

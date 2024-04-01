@@ -25,12 +25,12 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 16, ":tests", 33, ":total", 196), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 2, ":total", 28), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 18, ":tests", 36, ":total", 198), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 6, ":tests", 2, ":total", 31), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 196), 
-      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 78)
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 198), 
+      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 77)
     )
   }
 
@@ -47,6 +47,7 @@ export default class nx_tactics_base_test {
           "booklist", 0,
           "bookmap", 0,
           "card", 0,
+          "cardimage", 0,
           "cardlist", 0,
           "cardmap", 0,
           "chapter", 0,
@@ -61,7 +62,6 @@ export default class nx_tactics_base_test {
           "disorder", 0,
           "fate", 0,
           "goal", 0,
-          "imagecard", 0,
           "item", 0,
           "itemmap", 0,
           "location", 0,
@@ -117,8 +117,7 @@ export default class nx_tactics_base_test {
           "unitweakness", 0,
           "unitweaknessmap", 0,
           "weakness", 0,
-          "weaknessmap", 0,
-          "wound", 0
+          "weaknessmap", 0
         ),
       "constmap",
         vx_core.f_new(
@@ -218,6 +217,9 @@ export default class nx_tactics_base_test {
         vx_core.f_new(
           vx_core.t_intmap,
           "bookmap<-booklist", 0,
+          "cardimage<-card", 0,
+          "cardlist-copy<-card-num", 0,
+          "cardmap-copy<-card-num", 0,
           "cardmap<-bookmap", 0,
           "cardmap<-cardlist", 0,
           "chapterlist<-book", 0,

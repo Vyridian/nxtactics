@@ -26,12 +26,12 @@ export default class nx_tactics_ui_stylesheet_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/stylesheet", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 69), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 39, ":tests", 27, ":total", 69), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 72), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 27, ":total", 72), 
       "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 69), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 72), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -85,6 +85,9 @@ export default class nx_tactics_ui_stylesheet_test {
           "style-button-back", 0,
           "style-card", 0,
           "style-card-display", 0,
+          "style-card-display2", 0,
+          "style-card-display3", 0,
+          "style-card-display4", 0,
           "style-card-rank", 0,
           "style-card-suit", 0,
           "style-card-title", 0,
@@ -107,13 +110,13 @@ export default class nx_tactics_ui_stylesheet_test {
           "style-image-wand2", 0,
           "style-selected", 0,
           "style-text", 0,
-          "style-text-area", 0,
           "style-text-header1", 0,
           "style-text-header2", 0,
           "style-text-label", 0,
           "style-text-rank1", 0,
           "style-text-rank2", 0,
           "style-text-title", 0,
+          "style-textarea", 0,
           "style-unit", 0,
           "stylesheet-app", 0
         ),

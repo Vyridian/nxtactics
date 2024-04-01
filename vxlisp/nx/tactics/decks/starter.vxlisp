@@ -1,7 +1,261 @@
 (package nx/tactics/decks/starter
- :libs (lib base   :path nx/tactics/base)
+ :libs (lib base :path nx/tactics/base)
+       (lib typ  :path vx/type)
  :doc  "Tactics Starter Decks")
 
-(func deck-starter : base/deck
- (base/deck
-  :name "Starter"))
+(func card-characterguide : base/card
+ (base/card
+  :id "characterguide"
+  :name "Character Guide"))
+
+(func card-combatguide : base/card
+ (base/card
+  :id "combatguide"
+  :name "Combat Guide"
+  :summary
+   "* When a unit targets another with a damaging Skill/Power, then Combat begins.
+    * Each player chooses a Fate card from their hand or a random Fate from Shared Fate.
+    * Fate Cards are compared like Rock/Paper/Scissors.
+    * Order: Attack > Focus > Defend/Evade/Counter > Attack
+    * If both play Attack or Focus then compare by rank (lower is faster).
+    * Order: AJQK2-10
+    * If Tied, there is no result.
+    * If one player Wins, then resolve their result and apply Damage.
+    * Discard all card used (except Keep)"))
+
+(func card-damageguide : base/card
+ (base/card
+  :id "damageguide"
+  :name "Damage Guide"
+  :summary
+   "* Damage Types: Determine the [Damage Types] of the weapon.
+    * Reveal Damage: Reveal cards equal to [Hits].
+    * Separate Damage: Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).
+    * Hit Location: The top card from the matching pile is the Hit Location (or the mismatch pile if no matches). Move it aside and flip the Fatigue pile to its facedown side.
+    * Armor: Check [Armor] in the [Hit Location] and then the target reduces the Damage or Fatigue for each point of armor. The Hit Location can only be removed last.
+    * Fatigue: The target may take the Fatigue cards as long they have Body. Any remaining Fatigue are flipped faceup and added to the Damage pile.
+    * Damage: Count the Damage pile and apply the effect on the Hit Location card to the target.
+    * Cleanup: Discard other cards. Shuffle if a Wild was revealed."))
+
+(func card-fatelower : base/card
+ (base/card
+  :id "fatelower"
+  :name "Fate Lower"
+  :image "images/card-fate-lower.svg"))
+
+(func card-fateupper : base/card
+ (base/card
+  :id "fateupper"
+  :name "Fate Uppper"
+  :image "images/card-fate-upper.svg"))
+
+(func card-gameguide : base/card
+ (base/card
+  :id "gameguide"
+  :name "Game Guide"
+  :summary
+   "* Create [Characters] or [Factions] to play [Scenarios].
+    * Each [Scenario] contains various [Threats] and [Goals]
+    * Find them and use your [Skills] / [Powers] to complete them for [Rewards]
+    * Some [Rewards] are items, others allow you to increase your [Skills], [Powers], [Abilities], or [Specialties]"))
+
+(func card-levelingguide : base/card
+ (base/card
+  :id "levelingguide"
+  :name "Leveling Guide"))
+
+(func card-player-blue : base/card
+ [num : int]
+ (base/card
+  :id (string "player-blue-" num)
+  :name "Player"
+  :image "images/card-blue.svg"))
+
+(func card-player-green : base/card
+ [num : int]
+ (base/card
+  :id (string "player-green-" num)
+  :name "Player"
+  :image "images/card-green.svg"))
+
+(func card-player-red : base/card
+ [num : int]
+ (base/card
+  :id (string "player-red-" num)
+  :name "Player"
+  :image "images/card-red.svg"))
+
+(func card-player-yellow : base/card
+ [num : int]
+ (base/card
+  :id (string "player-yellow-" num)
+  :name "Player"
+  :image "images/card-yellow.svg"))
+
+(func card-setupguide : base/card
+ (base/card
+  :id "setupguide"
+  :name "Setup Guide"
+  :summary
+   "* Choose a Scenario and sort it in numerical order.
+    * Each [Player] chooses or creates the [Units] they will use.
+    * Each [Player] chooses a colored Starter Deck.
+    * Player [Turn Order] cards are shuffled together to create a [Turn Order] deck.
+    * Reveal the top card in the Scenario deck and follow its instructions."))
+
+(func card-skillguide : base/card
+ (base/card
+  :id "skillguide"
+  :name "Skill Guide"))
+
+(func card-turnguide : base/card
+ (base/card
+  :id "turnguide"
+  :name "Turn Guide"
+  :summary
+   "* Reveal: Reveal the top card from the [Turn Order] deck to determine the next active Player.
+    * Activate and Target: That [Player] chooses a Unit to Activate and announces a target.
+    * Reveal Again: Reveal the next card from the [Turn Order] deck. If none, got to Take Actions
+    * Activate and Target: The next Player MAY choose a Unit to Activate and announce a target that is not currently an active Player or a target. If so, repeat the Reveal Again step.
+    * Wait: OR the next player may Wait for the previous [Player] to finish.
+    * Take Actions: If a player Waited or there are no [Turn Order] cards remaining, the active Players may simultaneous Take Actions."))
+
+(func card-turnorder : base/card
+ (base/card
+  :id "turnorder"
+  :name "Turn Order"))
+
+(func card-unit-blue : base/card
+ [num : int]
+ (base/card
+  :id (string "unit-" num)
+  :name (string "Unit " num)
+  :image "images/card-blue.svg"))
+
+(func card-unit-green : base/card
+ [num : int]
+ (base/card
+  :id (string "unit-" num)
+  :name (string "Unit " num)
+  :image "images/card-green.svg"))
+
+(func card-unit-red : base/card
+ [num : int]
+ (base/card
+  :id (string "unit-" num)
+  :name (string "Unit " num)
+  :image "images/card-red.svg"))
+
+(func card-unit-yellow : base/card
+ [num : int]
+ (base/card
+  :id (string "unit-" num)
+  :name (string "Unit " num)
+  :image "images/card-yellow.svg"))
+
+(func deck-player : base/deck
+ (let : base/deck
+  [cardlist : base/cardlist :=
+    (base/cardlist
+     (card-gameguide)
+     (card-setupguide)
+     (card-turnguide)
+     (card-combatguide)
+     (card-damageguide)
+     (card-skillguide)
+     (card-characterguide)
+     (card-levelingguide)
+     (card-turnorder)
+     (card-fateupper)
+     (card-fatelower))
+   cardmap : base/cardmap :=
+    (base/cardmap<-cardlist
+     cardlist)]
+  (base/deck
+   :id "player"
+   :name "Player"
+   :cardmap cardmap)))
+
+(func deck-player-blue : base/deck
+ (let : base/deck
+  [cardlist : base/cardlist :=
+   (base/cardlist
+    (card-player-blue 1)
+    (card-player-blue 2)
+    (card-player-blue 3)
+    (card-player-blue 4)
+    (card-player-blue 5)
+    (card-unit-blue 1)
+    (card-unit-blue 2)
+    (card-unit-blue 3)
+    (card-unit-blue 4))
+   cardmap : base/cardmap :=
+    (base/cardmap<-cardlist
+     cardlist)]
+  (base/deck
+   :id "player-blue"
+   :name "Player Blue"
+   :cardmap cardmap)))
+
+(func deck-player-green : base/deck
+ (let : base/deck
+  [cardlist : base/cardlist :=
+   (base/cardlist
+    (card-player-green 1)
+    (card-player-green 2)
+    (card-player-green 3)
+    (card-player-green 4)
+    (card-player-green 5)
+    (card-unit-green 1)
+    (card-unit-green 2)
+    (card-unit-green 3)
+    (card-unit-green 4))
+   cardmap : base/cardmap :=
+    (base/cardmap<-cardlist
+     cardlist)]
+  (base/deck
+   :id "player-green"
+   :name "Player Green"
+   :cardmap cardmap)))
+
+(func deck-player-red : base/deck
+ (let : base/deck
+  [cardlist : base/cardlist :=
+   (base/cardlist
+    (card-player-red 1)
+    (card-player-red 2)
+    (card-player-red 3)
+    (card-player-red 4)
+    (card-player-red 5)
+    (card-unit-red 1)
+    (card-unit-red 2)
+    (card-unit-red 3)
+    (card-unit-red 4))
+   cardmap : base/cardmap :=
+    (base/cardmap<-cardlist
+     cardlist)]
+  (base/deck
+   :id "player-red"
+   :name "Player Red"
+   :cardmap cardmap)))
+
+(func deck-player-yellow : base/deck
+ (let : base/deck
+  [cardlist : base/cardlist :=
+   (base/cardlist
+    (card-player-yellow 1)
+    (card-player-yellow 2)
+    (card-player-yellow 3)
+    (card-player-yellow 4)
+    (card-player-yellow 5)
+    (card-unit-yellow 1)
+    (card-unit-yellow 2)
+    (card-unit-yellow 3)
+    (card-unit-yellow 4))
+   cardmap : base/cardmap :=
+    (base/cardmap<-cardlist
+     cardlist)]
+  (base/deck
+   :id "player-yellow"
+   :name "Player Yellow"
+   :cardmap cardmap)))

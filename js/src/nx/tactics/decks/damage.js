@@ -7,19 +7,345 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_damage {
 
   /**
+   * Constant: damage-2c
+   * {damage}
+   */
+  static c_damage_2c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-2c'}}
+
+  /**
+   * Constant: damage-2d
+   * {damage}
+   */
+  static c_damage_2d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-2d'}}
+
+  /**
+   * Constant: damage-2h
+   * {damage}
+   */
+  static c_damage_2h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-2h'}}
+
+  /**
+   * Constant: damage-2s
+   * {damage}
+   */
+  static c_damage_2s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-2s'}}
+
+  /**
+   * Constant: damage-3c
+   * {damage}
+   */
+  static c_damage_3c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-3c'}}
+
+  /**
+   * Constant: damage-3d
+   * {damage}
+   */
+  static c_damage_3d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-3d'}}
+
+  /**
+   * Constant: damage-3h
+   * {damage}
+   */
+  static c_damage_3h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-3h'}}
+
+  /**
+   * Constant: damage-3s
+   * {damage}
+   */
+  static c_damage_3s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-3s'}}
+
+  /**
+   * Constant: damage-4c
+   * {damage}
+   */
+  static c_damage_4c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-4c'}}
+
+  /**
+   * Constant: damage-4d
+   * {damage}
+   */
+  static c_damage_4d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-4d'}}
+
+  /**
+   * Constant: damage-4h
+   * {damage}
+   */
+  static c_damage_4h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-4h'}}
+
+  /**
+   * Constant: damage-4s
+   * {damage}
+   */
+  static c_damage_4s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-4s'}}
+
+  /**
+   * Constant: damage-5c
+   * {damage}
+   */
+  static c_damage_5c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-5c'}}
+
+  /**
+   * Constant: damage-5d
+   * {damage}
+   */
+  static c_damage_5d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-5d'}}
+
+  /**
+   * Constant: damage-5h
+   * {damage}
+   */
+  static c_damage_5h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-5h'}}
+
+  /**
+   * Constant: damage-5s
+   * {damage}
+   */
+  static c_damage_5s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-5s'}}
+
+  /**
+   * Constant: damage-6c
+   * {damage}
+   */
+  static c_damage_6c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-6c'}}
+
+  /**
+   * Constant: damage-6d
+   * {damage}
+   */
+  static c_damage_6d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-6d'}}
+
+  /**
+   * Constant: damage-6h
+   * {damage}
+   */
+  static c_damage_6h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-6h'}}
+
+  /**
+   * Constant: damage-6s
+   * {damage}
+   */
+  static c_damage_6s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-6s'}}
+
+  /**
+   * Constant: damage-7c
+   * {damage}
+   */
+  static c_damage_7c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-7c'}}
+
+  /**
+   * Constant: damage-7d
+   * {damage}
+   */
+  static c_damage_7d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-7d'}}
+
+  /**
+   * Constant: damage-7h
+   * {damage}
+   */
+  static c_damage_7h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-7h'}}
+
+  /**
+   * Constant: damage-7s
+   * {damage}
+   */
+  static c_damage_7s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-7s'}}
+
+  /**
+   * Constant: damage-8c
+   * {damage}
+   */
+  static c_damage_8c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-8c'}}
+
+  /**
+   * Constant: damage-8d
+   * {damage}
+   */
+  static c_damage_8d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-8d'}}
+
+  /**
+   * Constant: damage-8h
+   * {damage}
+   */
+  static c_damage_8h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-8h'}}
+
+  /**
+   * Constant: damage-8s
+   * {damage}
+   */
+  static c_damage_8s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-8s'}}
+
+  /**
+   * Constant: damage-9c
+   * {damage}
+   */
+  static c_damage_9c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-9c'}}
+
+  /**
+   * Constant: damage-9d
+   * {damage}
+   */
+  static c_damage_9d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-9d'}}
+
+  /**
+   * Constant: damage-9h
+   * {damage}
+   */
+  static c_damage_9h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-9h'}}
+
+  /**
+   * Constant: damage-9s
+   * {damage}
+   */
+  static c_damage_9s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-9s'}}
+
+  /**
+   * Constant: damage-ac
+   * {damage}
+   */
+  static c_damage_ac = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-ac'}}
+
+  /**
+   * Constant: damage-ad
+   * {damage}
+   */
+  static c_damage_ad = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-ad'}}
+
+  /**
+   * Constant: damage-ah
+   * {damage}
+   */
+  static c_damage_ah = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-ah'}}
+
+  /**
+   * Constant: damage-as
+   * {damage}
+   */
+  static c_damage_as = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-as'}}
+
+  /**
+   * Constant: damage-jc
+   * {damage}
+   */
+  static c_damage_jc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-jc'}}
+
+  /**
+   * Constant: damage-jd
+   * {damage}
+   */
+  static c_damage_jd = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-jd'}}
+
+  /**
+   * Constant: damage-jh
+   * {damage}
+   */
+  static c_damage_jh = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-jh'}}
+
+  /**
+   * Constant: damage-js
+   * {damage}
+   */
+  static c_damage_js = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-js'}}
+
+  /**
+   * Constant: damage-kc
+   * Hack: Upper Chest/Back/Shoulders/Ribs
+   * {damage}
+   */
+  static c_damage_kc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-kc'}}
+
+  /**
+   * Constant: damage-kd
+   * Hack: Upper Chest/Back/Shoulders/Ribs
+   * {damage}
+   */
+  static c_damage_kd = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-kd'}}
+
+  /**
+   * Constant: damage-kh
+   * Hack: Upper Chest/Back/Shoulders/Ribs
+   * {damage}
+   */
+  static c_damage_kh = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-kh'}}
+
+  /**
+   * Constant: damage-ks
+   * Hack: Upper Chest/Back/Shoulders/Ribs
+   * {damage}
+   */
+  static c_damage_ks = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-ks'}}
+
+  /**
+   * Constant: damage-qc
+   * Hack: Upper Chest/Back/Shoulders/Ribs
+   * {damage}
+   */
+  static c_damage_qc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-qc'}}
+
+  /**
+   * Constant: damage-qd
+   * Hack: Upper Chest/Back/Shoulders/Ribs
+   * {damage}
+   */
+  static c_damage_qd = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-qd'}}
+
+  /**
+   * Constant: damage-qh
+   * Hack: Upper Chest/Back/Shoulders/Ribs
+   * {damage}
+   */
+  static c_damage_qh = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-qh'}}
+
+  /**
+   * Constant: damage-qs
+   * Hack: Upper Chest/Back/Shoulders/Ribs
+   * {damage}
+   */
+  static c_damage_qs = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-qs'}}
+
+  /**
+   * Constant: damage-tc
+   * {damage}
+   */
+  static c_damage_tc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-tc'}}
+
+  /**
+   * Constant: damage-td
+   * {damage}
+   */
+  static c_damage_td = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-td'}}
+
+  /**
+   * Constant: damage-th
+   * {damage}
+   */
+  static c_damage_th = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-th'}}
+
+  /**
+   * Constant: damage-ts
+   * {damage}
+   */
+  static c_damage_ts = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-ts'}}
+
+  /**
+   * Constant: damage-wild-black
+   * {damage}
+   */
+  static c_damage_wild_black = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-wild-black'}}
+
+  /**
+   * Constant: damage-wild-red
+   * {damage}
+   */
+  static c_damage_wild_red = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-wild-red'}}
+
+  /**
    * Constant: fatigue
-   * * Temporary Body Damage. Hard work and strikes in combat cause Fatigue.
-   * * While you have more Fatigue than [Body], you are [Exhausted].
-   * * [Exhausted]: Cannot play odd [Attack] cards and your second action may only be [Recover].
    * {card}
    */
   static c_fatigue = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'fatigue'}}
 
   /**
    * Constant: slow
-   * * Temporary Movement Damage. Carrying loads, burden, entanglement, or tissue damage cause Burden.
-   * * While you have more [Slow] than [Move], you are [Encumbered].
-   * * [Encumbered]: Cannot play [Counters] and [Move] actions are halved (rounded up).
    * {card}
    */
   static c_slow = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'slow'}}
@@ -37,336 +363,117 @@ export default class nx_tactics_decks_damage {
   static c_stun = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'stun'}}
 
   /**
-   * Constant: wound-2c
-   * {wound}
+   * @function deck_damage
+   * Damage Deck
+   * @return {deck}
    */
-  static c_wound_2c = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-2c'}}
+  static t_deck_damage = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_damage = {
+    vx_type: nx_tactics_decks_damage.t_deck_damage
+  }
+
+  // (func deck-damage)
+  static f_deck_damage() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Damage",
+      ":summary",
+      "* S-Hack Blood/Gore/Dismember\n* H-Slash Blood/Slow\n* C-Bash/Fatigue/Push\n* D-Pierce/Stab/Stun/Pin/Disable",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_from_cardlist(
+        vx_core.f_new(
+          nx_tactics_base.t_cardlist,
+          nx_tactics_decks_damage.c_damage_wild_black,
+          nx_tactics_decks_damage.c_damage_wild_red,
+          nx_tactics_decks_damage.c_damage_ac,
+          nx_tactics_decks_damage.c_damage_ad,
+          nx_tactics_decks_damage.c_damage_ah,
+          nx_tactics_decks_damage.c_damage_as,
+          nx_tactics_decks_damage.c_damage_kc,
+          nx_tactics_decks_damage.c_damage_kd,
+          nx_tactics_decks_damage.c_damage_kh,
+          nx_tactics_decks_damage.c_damage_ks,
+          nx_tactics_decks_damage.c_damage_qc,
+          nx_tactics_decks_damage.c_damage_qd,
+          nx_tactics_decks_damage.c_damage_qh,
+          nx_tactics_decks_damage.c_damage_qs,
+          nx_tactics_decks_damage.c_damage_jc,
+          nx_tactics_decks_damage.c_damage_jd,
+          nx_tactics_decks_damage.c_damage_jh,
+          nx_tactics_decks_damage.c_damage_js,
+          nx_tactics_decks_damage.c_damage_tc,
+          nx_tactics_decks_damage.c_damage_td,
+          nx_tactics_decks_damage.c_damage_th,
+          nx_tactics_decks_damage.c_damage_ts,
+          nx_tactics_decks_damage.c_damage_9c,
+          nx_tactics_decks_damage.c_damage_9d,
+          nx_tactics_decks_damage.c_damage_9h,
+          nx_tactics_decks_damage.c_damage_9s,
+          nx_tactics_decks_damage.c_damage_8c,
+          nx_tactics_decks_damage.c_damage_8d,
+          nx_tactics_decks_damage.c_damage_8h,
+          nx_tactics_decks_damage.c_damage_8s,
+          nx_tactics_decks_damage.c_damage_7c,
+          nx_tactics_decks_damage.c_damage_7d,
+          nx_tactics_decks_damage.c_damage_7h,
+          nx_tactics_decks_damage.c_damage_7s,
+          nx_tactics_decks_damage.c_damage_6c,
+          nx_tactics_decks_damage.c_damage_6d,
+          nx_tactics_decks_damage.c_damage_6h,
+          nx_tactics_decks_damage.c_damage_6s,
+          nx_tactics_decks_damage.c_damage_5c,
+          nx_tactics_decks_damage.c_damage_5d,
+          nx_tactics_decks_damage.c_damage_5h,
+          nx_tactics_decks_damage.c_damage_5s,
+          nx_tactics_decks_damage.c_damage_4c,
+          nx_tactics_decks_damage.c_damage_4d,
+          nx_tactics_decks_damage.c_damage_4h,
+          nx_tactics_decks_damage.c_damage_4s,
+          nx_tactics_decks_damage.c_damage_3c,
+          nx_tactics_decks_damage.c_damage_3d,
+          nx_tactics_decks_damage.c_damage_3h,
+          nx_tactics_decks_damage.c_damage_3s,
+          nx_tactics_decks_damage.c_damage_2c,
+          nx_tactics_decks_damage.c_damage_2d,
+          nx_tactics_decks_damage.c_damage_2h,
+          nx_tactics_decks_damage.c_damage_2s
+        )
+      )
+    )
+    return output
+  }
 
   /**
-   * Constant: wound-2d
-   * {wound}
+   * @function deck_damageback
+   * Damage Card Back Deck
+   * @return {deck}
    */
-  static c_wound_2d = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-2d'}}
+  static t_deck_damageback = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_damageback = {
+    vx_type: nx_tactics_decks_damage.t_deck_damageback
+  }
 
-  /**
-   * Constant: wound-2h
-   * {wound}
-   */
-  static c_wound_2h = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-2h'}}
-
-  /**
-   * Constant: wound-2s
-   * {wound}
-   */
-  static c_wound_2s = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-2s'}}
-
-  /**
-   * Constant: wound-3c
-   * {damage}
-   */
-  static c_wound_3c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-3c'}}
-
-  /**
-   * Constant: wound-3d
-   * {damage}
-   */
-  static c_wound_3d = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-3d'}}
-
-  /**
-   * Constant: wound-3h
-   * {damage}
-   */
-  static c_wound_3h = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-3h'}}
-
-  /**
-   * Constant: wound-3s
-   * {damage}
-   */
-  static c_wound_3s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-3s'}}
-
-  /**
-   * Constant: wound-4c
-   * {wound}
-   */
-  static c_wound_4c = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-4c'}}
-
-  /**
-   * Constant: wound-4d
-   * {wound}
-   */
-  static c_wound_4d = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-4d'}}
-
-  /**
-   * Constant: wound-4h
-   * {wound}
-   */
-  static c_wound_4h = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-4h'}}
-
-  /**
-   * Constant: wound-4s
-   * {wound}
-   */
-  static c_wound_4s = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-4s'}}
-
-  /**
-   * Constant: wound-5c
-   * {wound}
-   */
-  static c_wound_5c = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-5c'}}
-
-  /**
-   * Constant: wound-5d
-   * {wound}
-   */
-  static c_wound_5d = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-5d'}}
-
-  /**
-   * Constant: wound-5h
-   * {wound}
-   */
-  static c_wound_5h = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-5h'}}
-
-  /**
-   * Constant: wound-5s
-   * {wound}
-   */
-  static c_wound_5s = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-5s'}}
-
-  /**
-   * Constant: wound-6c
-   * {wound}
-   */
-  static c_wound_6c = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-6c'}}
-
-  /**
-   * Constant: wound-6d
-   * {wound}
-   */
-  static c_wound_6d = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-6d'}}
-
-  /**
-   * Constant: wound-6h
-   * {wound}
-   */
-  static c_wound_6h = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-6h'}}
-
-  /**
-   * Constant: wound-6s
-   * {wound}
-   */
-  static c_wound_6s = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-6s'}}
-
-  /**
-   * Constant: wound-7c
-   * {wound}
-   */
-  static c_wound_7c = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-7c'}}
-
-  /**
-   * Constant: wound-7d
-   * {wound}
-   */
-  static c_wound_7d = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-7d'}}
-
-  /**
-   * Constant: wound-7h
-   * {wound}
-   */
-  static c_wound_7h = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-7h'}}
-
-  /**
-   * Constant: wound-7s
-   * {wound}
-   */
-  static c_wound_7s = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-7s'}}
-
-  /**
-   * Constant: wound-8c
-   * {wound}
-   */
-  static c_wound_8c = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-8c'}}
-
-  /**
-   * Constant: wound-8d
-   * {wound}
-   */
-  static c_wound_8d = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-8d'}}
-
-  /**
-   * Constant: wound-8h
-   * {wound}
-   */
-  static c_wound_8h = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-8h'}}
-
-  /**
-   * Constant: wound-8s
-   * {wound}
-   */
-  static c_wound_8s = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-8s'}}
-
-  /**
-   * Constant: wound-9c
-   * {wound}
-   */
-  static c_wound_9c = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-9c'}}
-
-  /**
-   * Constant: wound-9d
-   * {wound}
-   */
-  static c_wound_9d = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-9d'}}
-
-  /**
-   * Constant: wound-9h
-   * {wound}
-   */
-  static c_wound_9h = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-9h'}}
-
-  /**
-   * Constant: wound-9s
-   * {wound}
-   */
-  static c_wound_9s = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-9s'}}
-
-  /**
-   * Constant: wound-ac
-   * {wound}
-   */
-  static c_wound_ac = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-ac'}}
-
-  /**
-   * Constant: wound-ad
-   * {wound}
-   */
-  static c_wound_ad = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-ad'}}
-
-  /**
-   * Constant: wound-ah
-   * {wound}
-   */
-  static c_wound_ah = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-ah'}}
-
-  /**
-   * Constant: wound-as
-   * {wound}
-   */
-  static c_wound_as = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-as'}}
-
-  /**
-   * Constant: wound-jc
-   * {wound}
-   */
-  static c_wound_jc = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-jc'}}
-
-  /**
-   * Constant: wound-jd
-   * {wound}
-   */
-  static c_wound_jd = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-jd'}}
-
-  /**
-   * Constant: wound-jh
-   * {wound}
-   */
-  static c_wound_jh = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-jh'}}
-
-  /**
-   * Constant: wound-js
-   * {wound}
-   */
-  static c_wound_js = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-js'}}
-
-  /**
-   * Constant: wound-kc
-   * Hack: Upper Chest/Back/Shoulders/Ribs
-   * {wound}
-   */
-  static c_wound_kc = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-kc'}}
-
-  /**
-   * Constant: wound-kd
-   * Hack: Upper Chest/Back/Shoulders/Ribs
-   * {wound}
-   */
-  static c_wound_kd = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-kd'}}
-
-  /**
-   * Constant: wound-kh
-   * Hack: Upper Chest/Back/Shoulders/Ribs
-   * {wound}
-   */
-  static c_wound_kh = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-kh'}}
-
-  /**
-   * Constant: wound-ks
-   * Hack: Upper Chest/Back/Shoulders/Ribs
-   * {wound}
-   */
-  static c_wound_ks = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-ks'}}
-
-  /**
-   * Constant: wound-qc
-   * Hack: Upper Chest/Back/Shoulders/Ribs
-   * {wound}
-   */
-  static c_wound_qc = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-qc'}}
-
-  /**
-   * Constant: wound-qd
-   * Hack: Upper Chest/Back/Shoulders/Ribs
-   * {wound}
-   */
-  static c_wound_qd = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-qd'}}
-
-  /**
-   * Constant: wound-qh
-   * Hack: Upper Chest/Back/Shoulders/Ribs
-   * {wound}
-   */
-  static c_wound_qh = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-qh'}}
-
-  /**
-   * Constant: wound-qs
-   * Hack: Upper Chest/Back/Shoulders/Ribs
-   * {wound}
-   */
-  static c_wound_qs = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-qs'}}
-
-  /**
-   * Constant: wound-tc
-   * {wound}
-   */
-  static c_wound_tc = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-tc'}}
-
-  /**
-   * Constant: wound-td
-   * {wound}
-   */
-  static c_wound_td = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-td'}}
-
-  /**
-   * Constant: wound-th
-   * {wound}
-   */
-  static c_wound_th = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-th'}}
-
-  /**
-   * Constant: wound-ts
-   * {wound}
-   */
-  static c_wound_ts = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-ts'}}
-
-  /**
-   * Constant: wound-wild-black
-   * {wound}
-   */
-  static c_wound_wild_black = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-wild-black'}}
-
-  /**
-   * Constant: wound-wild-red
-   * {wound}
-   */
-  static c_wound_wild_red = {vx_type: nx_tactics_base.t_wound, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'wound-wild-red'}}
+  // (func deck-damageback)
+  static f_deck_damageback() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Damage Back",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_copy_from_card_num(
+        nx_tactics_decks_damage.c_fatigue,
+        54
+      )
+    )
+    return output
+  }
 
   /**
    * @function deck_disorder
@@ -386,11 +493,67 @@ export default class nx_tactics_decks_damage {
     output = vx_core.f_new(
       nx_tactics_base.t_deck,
       ":name",
-      "Mental Disorder",
+      "Disorder",
       ":titles",
       "Crazed, Insane, Nonsensical, Obsessed, Unhinged",
       ":summary",
       "* S-Hack Blood/Gore/Dismember/Stress\n* H-Slash Blood/Burden\n* C-Bash/Fatigue/Push/Fatigue\n* D-Pierce/Shock/Stun/Pin/Disable/Strain"
+    )
+    return output
+  }
+
+  /**
+   * @function deck_disorderback
+   * Stun Card Back Deck
+   * @return {deck}
+   */
+  static t_deck_disorderback = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_disorderback = {
+    vx_type: nx_tactics_decks_damage.t_deck_disorderback
+  }
+
+  // (func deck-disorderback)
+  static f_deck_disorderback() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Disorder Back",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_copy_from_card_num(
+        nx_tactics_decks_damage.c_stun,
+        54
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function deck_slow
+   * Slow Card Back Deck
+   * @return {deck}
+   */
+  static t_deck_slow = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_slow = {
+    vx_type: nx_tactics_decks_damage.t_deck_slow
+  }
+
+  // (func deck-slow)
+  static f_deck_slow() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Slow Back",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_copy_from_card_num(
+        nx_tactics_decks_damage.c_slow,
+        54
+      )
     )
     return output
   }
@@ -413,7 +576,7 @@ export default class nx_tactics_decks_damage {
     output = vx_core.f_new(
       nx_tactics_base.t_deck,
       ":name",
-      "Emotional Trauma",
+      "Trauma",
       ":titles",
       "Apathy, Cowed, Crisis, Berserk, Broken, Depression, Servitude, Surly",
       ":summary",
@@ -423,85 +586,28 @@ export default class nx_tactics_decks_damage {
   }
 
   /**
-   * @function deck_wound
-   * Physical Damage Deck
+   * @function deck_traumaback
+   * Trauma Card Back Deck
    * @return {deck}
    */
-  static t_deck_wound = {
+  static t_deck_traumaback = {
     vx_type: vx_core.t_type
   }
-  static e_deck_wound = {
-    vx_type: nx_tactics_decks_damage.t_deck_wound
+  static e_deck_traumaback = {
+    vx_type: nx_tactics_decks_damage.t_deck_traumaback
   }
 
-  // (func deck-wound)
-  static f_deck_wound() {
+  // (func deck-traumaback)
+  static f_deck_traumaback() {
     let output = nx_tactics_base.e_deck
     output = vx_core.f_new(
       nx_tactics_base.t_deck,
       ":name",
-      "Physical Damage",
-      ":summary",
-      "* S-Hack Blood/Gore/Dismember\n* H-Slash Blood/Slow\n* C-Bash/Fatigue/Push\n* D-Pierce/Stab/Stun/Pin/Disable",
+      "Trauma Back",
       ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        vx_core.f_new(
-          nx_tactics_base.t_cardlist,
-          nx_tactics_decks_damage.c_wound_wild_black,
-          nx_tactics_decks_damage.c_wound_wild_red,
-          nx_tactics_decks_damage.c_wound_ac,
-          nx_tactics_decks_damage.c_wound_ad,
-          nx_tactics_decks_damage.c_wound_ah,
-          nx_tactics_decks_damage.c_wound_as,
-          nx_tactics_decks_damage.c_wound_kc,
-          nx_tactics_decks_damage.c_wound_kd,
-          nx_tactics_decks_damage.c_wound_kh,
-          nx_tactics_decks_damage.c_wound_ks,
-          nx_tactics_decks_damage.c_wound_qc,
-          nx_tactics_decks_damage.c_wound_qd,
-          nx_tactics_decks_damage.c_wound_qh,
-          nx_tactics_decks_damage.c_wound_qs,
-          nx_tactics_decks_damage.c_wound_jc,
-          nx_tactics_decks_damage.c_wound_jd,
-          nx_tactics_decks_damage.c_wound_jh,
-          nx_tactics_decks_damage.c_wound_js,
-          nx_tactics_decks_damage.c_wound_tc,
-          nx_tactics_decks_damage.c_wound_td,
-          nx_tactics_decks_damage.c_wound_th,
-          nx_tactics_decks_damage.c_wound_ts,
-          nx_tactics_decks_damage.c_wound_9c,
-          nx_tactics_decks_damage.c_wound_9d,
-          nx_tactics_decks_damage.c_wound_9h,
-          nx_tactics_decks_damage.c_wound_9s,
-          nx_tactics_decks_damage.c_wound_8c,
-          nx_tactics_decks_damage.c_wound_8d,
-          nx_tactics_decks_damage.c_wound_8h,
-          nx_tactics_decks_damage.c_wound_8s,
-          nx_tactics_decks_damage.c_wound_7c,
-          nx_tactics_decks_damage.c_wound_7d,
-          nx_tactics_decks_damage.c_wound_7h,
-          nx_tactics_decks_damage.c_wound_7s,
-          nx_tactics_decks_damage.c_wound_6c,
-          nx_tactics_decks_damage.c_wound_6d,
-          nx_tactics_decks_damage.c_wound_6h,
-          nx_tactics_decks_damage.c_wound_6s,
-          nx_tactics_decks_damage.c_wound_5c,
-          nx_tactics_decks_damage.c_wound_5d,
-          nx_tactics_decks_damage.c_wound_5h,
-          nx_tactics_decks_damage.c_wound_5s,
-          nx_tactics_decks_damage.c_wound_4c,
-          nx_tactics_decks_damage.c_wound_4d,
-          nx_tactics_decks_damage.c_wound_4h,
-          nx_tactics_decks_damage.c_wound_4s,
-          nx_tactics_decks_damage.c_wound_3c,
-          nx_tactics_decks_damage.c_wound_3d,
-          nx_tactics_decks_damage.c_wound_3h,
-          nx_tactics_decks_damage.c_wound_3s,
-          nx_tactics_decks_damage.c_wound_2c,
-          nx_tactics_decks_damage.c_wound_2d,
-          nx_tactics_decks_damage.c_wound_2h,
-          nx_tactics_decks_damage.c_wound_2s
-        )
+      nx_tactics_base.f_cardmap_copy_from_card_num(
+        nx_tactics_decks_damage.c_stress,
+        54
       )
     )
     return output
@@ -511,74 +617,82 @@ export default class nx_tactics_decks_damage {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
+      "damage-2c": nx_tactics_decks_damage.c_damage_2c,
+      "damage-2d": nx_tactics_decks_damage.c_damage_2d,
+      "damage-2h": nx_tactics_decks_damage.c_damage_2h,
+      "damage-2s": nx_tactics_decks_damage.c_damage_2s,
+      "damage-3c": nx_tactics_decks_damage.c_damage_3c,
+      "damage-3d": nx_tactics_decks_damage.c_damage_3d,
+      "damage-3h": nx_tactics_decks_damage.c_damage_3h,
+      "damage-3s": nx_tactics_decks_damage.c_damage_3s,
+      "damage-4c": nx_tactics_decks_damage.c_damage_4c,
+      "damage-4d": nx_tactics_decks_damage.c_damage_4d,
+      "damage-4h": nx_tactics_decks_damage.c_damage_4h,
+      "damage-4s": nx_tactics_decks_damage.c_damage_4s,
+      "damage-5c": nx_tactics_decks_damage.c_damage_5c,
+      "damage-5d": nx_tactics_decks_damage.c_damage_5d,
+      "damage-5h": nx_tactics_decks_damage.c_damage_5h,
+      "damage-5s": nx_tactics_decks_damage.c_damage_5s,
+      "damage-6c": nx_tactics_decks_damage.c_damage_6c,
+      "damage-6d": nx_tactics_decks_damage.c_damage_6d,
+      "damage-6h": nx_tactics_decks_damage.c_damage_6h,
+      "damage-6s": nx_tactics_decks_damage.c_damage_6s,
+      "damage-7c": nx_tactics_decks_damage.c_damage_7c,
+      "damage-7d": nx_tactics_decks_damage.c_damage_7d,
+      "damage-7h": nx_tactics_decks_damage.c_damage_7h,
+      "damage-7s": nx_tactics_decks_damage.c_damage_7s,
+      "damage-8c": nx_tactics_decks_damage.c_damage_8c,
+      "damage-8d": nx_tactics_decks_damage.c_damage_8d,
+      "damage-8h": nx_tactics_decks_damage.c_damage_8h,
+      "damage-8s": nx_tactics_decks_damage.c_damage_8s,
+      "damage-9c": nx_tactics_decks_damage.c_damage_9c,
+      "damage-9d": nx_tactics_decks_damage.c_damage_9d,
+      "damage-9h": nx_tactics_decks_damage.c_damage_9h,
+      "damage-9s": nx_tactics_decks_damage.c_damage_9s,
+      "damage-ac": nx_tactics_decks_damage.c_damage_ac,
+      "damage-ad": nx_tactics_decks_damage.c_damage_ad,
+      "damage-ah": nx_tactics_decks_damage.c_damage_ah,
+      "damage-as": nx_tactics_decks_damage.c_damage_as,
+      "damage-jc": nx_tactics_decks_damage.c_damage_jc,
+      "damage-jd": nx_tactics_decks_damage.c_damage_jd,
+      "damage-jh": nx_tactics_decks_damage.c_damage_jh,
+      "damage-js": nx_tactics_decks_damage.c_damage_js,
+      "damage-kc": nx_tactics_decks_damage.c_damage_kc,
+      "damage-kd": nx_tactics_decks_damage.c_damage_kd,
+      "damage-kh": nx_tactics_decks_damage.c_damage_kh,
+      "damage-ks": nx_tactics_decks_damage.c_damage_ks,
+      "damage-qc": nx_tactics_decks_damage.c_damage_qc,
+      "damage-qd": nx_tactics_decks_damage.c_damage_qd,
+      "damage-qh": nx_tactics_decks_damage.c_damage_qh,
+      "damage-qs": nx_tactics_decks_damage.c_damage_qs,
+      "damage-tc": nx_tactics_decks_damage.c_damage_tc,
+      "damage-td": nx_tactics_decks_damage.c_damage_td,
+      "damage-th": nx_tactics_decks_damage.c_damage_th,
+      "damage-ts": nx_tactics_decks_damage.c_damage_ts,
+      "damage-wild-black": nx_tactics_decks_damage.c_damage_wild_black,
+      "damage-wild-red": nx_tactics_decks_damage.c_damage_wild_red,
       "fatigue": nx_tactics_decks_damage.c_fatigue,
       "slow": nx_tactics_decks_damage.c_slow,
       "stress": nx_tactics_decks_damage.c_stress,
-      "stun": nx_tactics_decks_damage.c_stun,
-      "wound-2c": nx_tactics_decks_damage.c_wound_2c,
-      "wound-2d": nx_tactics_decks_damage.c_wound_2d,
-      "wound-2h": nx_tactics_decks_damage.c_wound_2h,
-      "wound-2s": nx_tactics_decks_damage.c_wound_2s,
-      "wound-3c": nx_tactics_decks_damage.c_wound_3c,
-      "wound-3d": nx_tactics_decks_damage.c_wound_3d,
-      "wound-3h": nx_tactics_decks_damage.c_wound_3h,
-      "wound-3s": nx_tactics_decks_damage.c_wound_3s,
-      "wound-4c": nx_tactics_decks_damage.c_wound_4c,
-      "wound-4d": nx_tactics_decks_damage.c_wound_4d,
-      "wound-4h": nx_tactics_decks_damage.c_wound_4h,
-      "wound-4s": nx_tactics_decks_damage.c_wound_4s,
-      "wound-5c": nx_tactics_decks_damage.c_wound_5c,
-      "wound-5d": nx_tactics_decks_damage.c_wound_5d,
-      "wound-5h": nx_tactics_decks_damage.c_wound_5h,
-      "wound-5s": nx_tactics_decks_damage.c_wound_5s,
-      "wound-6c": nx_tactics_decks_damage.c_wound_6c,
-      "wound-6d": nx_tactics_decks_damage.c_wound_6d,
-      "wound-6h": nx_tactics_decks_damage.c_wound_6h,
-      "wound-6s": nx_tactics_decks_damage.c_wound_6s,
-      "wound-7c": nx_tactics_decks_damage.c_wound_7c,
-      "wound-7d": nx_tactics_decks_damage.c_wound_7d,
-      "wound-7h": nx_tactics_decks_damage.c_wound_7h,
-      "wound-7s": nx_tactics_decks_damage.c_wound_7s,
-      "wound-8c": nx_tactics_decks_damage.c_wound_8c,
-      "wound-8d": nx_tactics_decks_damage.c_wound_8d,
-      "wound-8h": nx_tactics_decks_damage.c_wound_8h,
-      "wound-8s": nx_tactics_decks_damage.c_wound_8s,
-      "wound-9c": nx_tactics_decks_damage.c_wound_9c,
-      "wound-9d": nx_tactics_decks_damage.c_wound_9d,
-      "wound-9h": nx_tactics_decks_damage.c_wound_9h,
-      "wound-9s": nx_tactics_decks_damage.c_wound_9s,
-      "wound-ac": nx_tactics_decks_damage.c_wound_ac,
-      "wound-ad": nx_tactics_decks_damage.c_wound_ad,
-      "wound-ah": nx_tactics_decks_damage.c_wound_ah,
-      "wound-as": nx_tactics_decks_damage.c_wound_as,
-      "wound-jc": nx_tactics_decks_damage.c_wound_jc,
-      "wound-jd": nx_tactics_decks_damage.c_wound_jd,
-      "wound-jh": nx_tactics_decks_damage.c_wound_jh,
-      "wound-js": nx_tactics_decks_damage.c_wound_js,
-      "wound-kc": nx_tactics_decks_damage.c_wound_kc,
-      "wound-kd": nx_tactics_decks_damage.c_wound_kd,
-      "wound-kh": nx_tactics_decks_damage.c_wound_kh,
-      "wound-ks": nx_tactics_decks_damage.c_wound_ks,
-      "wound-qc": nx_tactics_decks_damage.c_wound_qc,
-      "wound-qd": nx_tactics_decks_damage.c_wound_qd,
-      "wound-qh": nx_tactics_decks_damage.c_wound_qh,
-      "wound-qs": nx_tactics_decks_damage.c_wound_qs,
-      "wound-tc": nx_tactics_decks_damage.c_wound_tc,
-      "wound-td": nx_tactics_decks_damage.c_wound_td,
-      "wound-th": nx_tactics_decks_damage.c_wound_th,
-      "wound-ts": nx_tactics_decks_damage.c_wound_ts,
-      "wound-wild-black": nx_tactics_decks_damage.c_wound_wild_black,
-      "wound-wild-red": nx_tactics_decks_damage.c_wound_wild_red
+      "stun": nx_tactics_decks_damage.c_stun
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
+      "deck-damage": nx_tactics_decks_damage.e_deck_damage,
+      "deck-damageback": nx_tactics_decks_damage.e_deck_damageback,
       "deck-disorder": nx_tactics_decks_damage.e_deck_disorder,
+      "deck-disorderback": nx_tactics_decks_damage.e_deck_disorderback,
+      "deck-slow": nx_tactics_decks_damage.e_deck_slow,
       "deck-trauma": nx_tactics_decks_damage.e_deck_trauma,
-      "deck-wound": nx_tactics_decks_damage.e_deck_wound
+      "deck-traumaback": nx_tactics_decks_damage.e_deck_traumaback
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "deck-damage": nx_tactics_decks_damage.t_deck_damage,
+      "deck-damageback": nx_tactics_decks_damage.t_deck_damageback,
       "deck-disorder": nx_tactics_decks_damage.t_deck_disorder,
+      "deck-disorderback": nx_tactics_decks_damage.t_deck_disorderback,
+      "deck-slow": nx_tactics_decks_damage.t_deck_slow,
       "deck-trauma": nx_tactics_decks_damage.t_deck_trauma,
-      "deck-wound": nx_tactics_decks_damage.t_deck_wound
+      "deck-traumaback": nx_tactics_decks_damage.t_deck_traumaback
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -591,6 +705,42 @@ export default class nx_tactics_decks_damage {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
+
+    // (func deck-damage)
+    nx_tactics_decks_damage.t_deck_damage['vx_value'] = {
+      name          : "deck-damage",
+      pkgname       : "nx/tactics/decks/damage",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_damage.f_deck_damage
+    }
+
+    // (func deck-damageback)
+    nx_tactics_decks_damage.t_deck_damageback['vx_value'] = {
+      name          : "deck-damageback",
+      pkgname       : "nx/tactics/decks/damage",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_damage.f_deck_damageback
+    }
 
     // (func deck-disorder)
     nx_tactics_decks_damage.t_deck_disorder['vx_value'] = {
@@ -608,6 +758,42 @@ export default class nx_tactics_decks_damage {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_damage.f_deck_disorder
+    }
+
+    // (func deck-disorderback)
+    nx_tactics_decks_damage.t_deck_disorderback['vx_value'] = {
+      name          : "deck-disorderback",
+      pkgname       : "nx/tactics/decks/damage",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_damage.f_deck_disorderback
+    }
+
+    // (func deck-slow)
+    nx_tactics_decks_damage.t_deck_slow['vx_value'] = {
+      name          : "deck-slow",
+      pkgname       : "nx/tactics/decks/damage",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_damage.f_deck_slow
     }
 
     // (func deck-trauma)
@@ -628,9 +814,9 @@ export default class nx_tactics_decks_damage {
       fn            : nx_tactics_decks_damage.f_deck_trauma
     }
 
-    // (func deck-wound)
-    nx_tactics_decks_damage.t_deck_wound['vx_value'] = {
-      name          : "deck-wound",
+    // (func deck-traumaback)
+    nx_tactics_decks_damage.t_deck_traumaback['vx_value'] = {
+      name          : "deck-traumaback",
       pkgname       : "nx/tactics/decks/damage",
       extends       : ":func",
       idx           : 0,
@@ -643,48 +829,12 @@ export default class nx_tactics_decks_damage {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_damage.f_deck_wound
+      fn            : nx_tactics_decks_damage.f_deck_traumaback
     }
 
-    // (const fatigue)
-    Object.assign(nx_tactics_decks_damage.c_fatigue, vx_core.f_new(
-      nx_tactics_base.t_card,
-      ":name",
-      "Fatigue/Weaken/Exertion/Strain"
-    ))
-
-    // (const slow)
-    Object.assign(nx_tactics_decks_damage.c_slow, vx_core.f_new(
-      nx_tactics_base.t_card,
-      ":name",
-      "Slow"
-    ))
-
-    // (const stress)
-    Object.assign(nx_tactics_decks_damage.c_stress, vx_core.f_new(
-      nx_tactics_base.t_card,
-      ":name",
-      "Stress",
-      ":titles",
-      "Stress/Duress/Horror",
-      ":reference",
-      "Because love's such an old-fashioned word\nAnd love dares you to care for\nThe people on the edge of the night\nAnd love dares you to change our way of\nCaring about ourselves\nThis is our last dance\nThis is ourselves under pressure - Queen and David Bowie, Under Pressure",
-      ":summary",
-      "* Temporary Will Damage. Doing or facing things against your beliefs causes Stress.\n* While you have more Stress than [Will], you are [Shaken].\n* [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]"
-    ))
-
-    // (const stun)
-    Object.assign(nx_tactics_decks_damage.c_stun, vx_core.f_new(
-      nx_tactics_base.t_card,
-      ":name",
-      "Stun",
-      ":summary",
-      "* Temporary Mind Damage/Strain/Distraction/Surprise/Shock. Intense concentration, pressure, and multitasking causes Strain.\n* While you have more Stun than [Mind], you are [Confused].\n* [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover]."
-    ))
-
-    // (const wound-2c)
-    Object.assign(nx_tactics_decks_damage.c_wound_2c, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-2c)
+    Object.assign(nx_tactics_decks_damage.c_damage_2c, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Right Foot",
       ":titles",
@@ -692,12 +842,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Foot Crushed. [Stress]: 2. [Lame]."
+      "Minor: Shin Bruised. Slow:1\nModerate: Foot Smash. Slow:1 Stress:1\nMajor: Ankle Fracture. Hobbled. Slow:2\nExtreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"
     ))
 
-    // (const wound-2d)
-    Object.assign(nx_tactics_decks_damage.c_wound_2d, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-2d)
+    Object.assign(nx_tactics_decks_damage.c_damage_2d, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Right Foot",
       ":titles",
@@ -705,12 +855,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2d,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Ankle Useless. [Bleeding] 1. [Lame]."
+      "Minor: Ankle Graze. Slow:1\nModerate: Foot Slash. Slow:1 Bleeding:1\nMajor: Foot Pierced. Slow:3 Bleeding:1\nExtreme: Ankle Useless. Hobbled. Bleeding:1"
     ))
 
-    // (const wound-2h)
-    Object.assign(nx_tactics_decks_damage.c_wound_2h, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-2h)
+    Object.assign(nx_tactics_decks_damage.c_damage_2h, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Right Foot",
       ":titles",
@@ -718,12 +868,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Foot Mangled. [Bleeding]: 2. [Lame]."
+      "Minor: Ankle Grazed. Withdraw:1\nModerate: Ankle Gash. Withdraw:1 Bleeding:1\nMajor: 2 Toes Lost. Stress:2 Bleeding:1\nExtreme: Foot Mangled. Hobbled. Stress:2 Bleeding:2"
     ))
 
-    // (const wound-2s)
-    Object.assign(nx_tactics_decks_damage.c_wound_2s, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-2s)
+    Object.assign(nx_tactics_decks_damage.c_damage_2s, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Right Foot",
       ":titles",
@@ -731,11 +881,11 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Foot Severed. [Bleeding]: 2. [Lame]."
+      "Minor: Foot Cut. Bleeding:1\nModerate: Ankle Slash. Slow:1 Bleeding:1\nMajor: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1\nExtreme: Foot Severed. Hobbled. Bleeding:2"
     ))
 
-    // (const wound-3c)
-    Object.assign(nx_tactics_decks_damage.c_wound_3c, vx_core.f_new(
+    // (const damage-3c)
+    Object.assign(nx_tactics_decks_damage.c_damage_3c, vx_core.f_new(
       nx_tactics_base.t_damage,
       ":name",
       "Bash: Left Foot",
@@ -744,11 +894,11 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Shin Bruised. Slow:1\nModerate: Foot Smash. Slow:1 Stress:1\nMajor: Ankle Fracture. Hobbled. Slow:2\nExtreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"
     ))
 
-    // (const wound-3d)
-    Object.assign(nx_tactics_decks_damage.c_wound_3d, vx_core.f_new(
+    // (const damage-3d)
+    Object.assign(nx_tactics_decks_damage.c_damage_3d, vx_core.f_new(
       nx_tactics_base.t_damage,
       ":name",
       "Pierce: Left Foot",
@@ -757,11 +907,11 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3d,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Ankle Graze. Slow:1\nModerate: Foot Slash. Slow:1 Bleeding:1\nMajor: Foot Pierced. Slow:3 Bleeding:1\nExtreme: Ankle Useless. Hobbled. Bleeding:1"
     ))
 
-    // (const wound-3h)
-    Object.assign(nx_tactics_decks_damage.c_wound_3h, vx_core.f_new(
+    // (const damage-3h)
+    Object.assign(nx_tactics_decks_damage.c_damage_3h, vx_core.f_new(
       nx_tactics_base.t_damage,
       ":name",
       "Hack: Left Foot",
@@ -770,11 +920,11 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3h,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Ankle Grazed. Withdraw:1\nModerate: Ankle Gash. Withdraw:1 Bleeding:1\nMajor: 2 Toes Lost. Stress:2 Bleeding:1\nExtreme: Foot Mangled. Hobbled. Stress:2 Bleeding:2"
     ))
 
-    // (const wound-3s)
-    Object.assign(nx_tactics_decks_damage.c_wound_3s, vx_core.f_new(
+    // (const damage-3s)
+    Object.assign(nx_tactics_decks_damage.c_damage_3s, vx_core.f_new(
       nx_tactics_base.t_damage,
       ":name",
       "Slash: Left Foot",
@@ -783,12 +933,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Foot Cut. Bleeding:1\nModerate: Ankle Slash. Slow:1 Bleeding:1\nMajor: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1\nExtreme: Foot Severed. Hobbled. Bleeding:2"
     ))
 
-    // (const wound-4c)
-    Object.assign(nx_tactics_decks_damage.c_wound_4c, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-4c)
+    Object.assign(nx_tactics_decks_damage.c_damage_4c, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Right Leg",
       ":titles",
@@ -796,12 +946,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Thigh Bruise. Fatigue:1\nModerate: Knee Damage. Slow:1 Fatigue:1\nMajor: Knee Fracture. Hobbled. Slow:2 Fatigue: 1\nExtreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"
     ))
 
-    // (const wound-4d)
-    Object.assign(nx_tactics_decks_damage.c_wound_4d, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-4d)
+    Object.assign(nx_tactics_decks_damage.c_damage_4d, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Right Leg",
       ":titles",
@@ -809,12 +959,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4d,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Thigh Graze. Slow:1\nModerate: Thigh Pierced. Stress:1 Bleeding:1\nMajor: Knee Pierced. Hobbled. Slow:3 Bleeding:1\nExtreme: Nerve Damage. Hobbled. Bleeding:2 Stress:2"
     ))
 
-    // (const wound-4h)
-    Object.assign(nx_tactics_decks_damage.c_wound_4h, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-4h)
+    Object.assign(nx_tactics_decks_damage.c_damage_4h, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Right Leg",
       ":titles",
@@ -822,12 +972,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Thigh Graze. Withdraw:1\nModerate: Thigh Cut. Withdraw:1 Bleeding:1\nMajor: Wide Thigh Gash. Slow:2 Bleeding:2\nExtreme: Severed at Knee. Hobbled. Bleeding:2 Stress:2"
     ))
 
-    // (const wound-4s)
-    Object.assign(nx_tactics_decks_damage.c_wound_4s, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-4s)
+    Object.assign(nx_tactics_decks_damage.c_damage_4s, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Right Leg",
       ":titles",
@@ -835,12 +985,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Thigh Cut. Bleeding:1\nModerate: Thigh Slash. Scarred. Slow:1 Bleeding:1\nMajor: Hamstring Cut. Hobbled. Slow:2 Bleeding:2\nExtreme: Artery Severed. Bleeding:4 Stress:2"
     ))
 
-    // (const wound-5c)
-    Object.assign(nx_tactics_decks_damage.c_wound_5c, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-5c)
+    Object.assign(nx_tactics_decks_damage.c_damage_5c, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Left Leg",
       ":titles",
@@ -848,12 +998,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Thigh Bruise. Fatigue:1\nModerate: Knee Damage. Slow:1 Fatigue:1\nMajor: Knee Fracture. Hobbled. Slow:2 Fatigue: 1\nExtreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"
     ))
 
-    // (const wound-5d)
-    Object.assign(nx_tactics_decks_damage.c_wound_5d, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-5d)
+    Object.assign(nx_tactics_decks_damage.c_damage_5d, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Left Leg",
       ":titles",
@@ -861,12 +1011,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5d,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Thigh Graze. Slow:1\nModerate: Thigh Pierced. Stress:1 Bleeding:1\nMajor: Knee Pierced. Hobbled. Slow:3 Bleeding:1\nExtreme: Nerve Damage. Hobbled. Bleeding:2 Stress:2"
     ))
 
-    // (const wound-5h)
-    Object.assign(nx_tactics_decks_damage.c_wound_5h, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-5h)
+    Object.assign(nx_tactics_decks_damage.c_damage_5h, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Left Leg",
       ":titles",
@@ -874,12 +1024,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Thigh Graze. Withdraw:1\nModerate: Thigh Slash. Withdraw:1 Bleeding:1\nMajor: Wide Thigh Gash. Slow:2 Bleeding:2\nExtreme: Severed at Knee. Hobbled. Bleeding:2 Stress:2"
     ))
 
-    // (const wound-5s)
-    Object.assign(nx_tactics_decks_damage.c_wound_5s, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-5s)
+    Object.assign(nx_tactics_decks_damage.c_damage_5s, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Left Leg",
       ":titles",
@@ -887,12 +1037,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Thigh Cut. Bleeding:1\nModerate: Thigh Slash. Scarred. Slow:1 Bleeding:1\nMajor: Hamstring Cut. Hobbled. Slow:2 Bleeding:2\nExtreme: Artery Severed. Bleeding:4 Stress:2"
     ))
 
-    // (const wound-6c)
-    Object.assign(nx_tactics_decks_damage.c_wound_6c, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-6c)
+    Object.assign(nx_tactics_decks_damage.c_damage_6c, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Right Hand",
       ":titles",
@@ -900,12 +1050,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Forearm Bruise. Fatigue:1\nModerate: Hand Numb. Drop:1 Stress:1 Stun:1\nMajor: Hand Fracture. Impaired. Stun:2 Fatigue:1\nExtreme: Hand Shattered. Impaired. Stun:2 Stress:2"
     ))
 
-    // (const wound-6d)
-    Object.assign(nx_tactics_decks_damage.c_wound_6d, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-6d)
+    Object.assign(nx_tactics_decks_damage.c_damage_6d, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Right Hand",
       ":titles",
@@ -913,12 +1063,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6d,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Forearm Graze. Stun:1\nModerate: Forearm Pierced. Stun:1 Bleeding:1\nMajor: Wrist Pierced. Impaired. Stun:1 Bleeding:2\nExtreme: Artery Cut. Impaired. Stun:2 Bleeding:2"
     ))
 
-    // (const wound-6h)
-    Object.assign(nx_tactics_decks_damage.c_wound_6h, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-6h)
+    Object.assign(nx_tactics_decks_damage.c_damage_6h, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Right Hand",
       ":titles",
@@ -926,12 +1076,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Forearm Graze. Withdraw:1\nModerate: Forearm Gash. Drop:1 Stress:1 Bleeding:1\nMajor: Hand Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Hand Mangled. Impaired. Bleeding:2 Stress:2"
     ))
 
-    // (const wound-6s)
-    Object.assign(nx_tactics_decks_damage.c_wound_6s, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-6s)
+    Object.assign(nx_tactics_decks_damage.c_damage_6s, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Right Hand",
       ":titles",
@@ -939,12 +1089,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Forearm Cut. Bleeding:1\nModerate: Forearm Slash. Drop:1 Slow:1 Bleeding:1\nExtreme: Artery Severed. Impaired. Bleeding:3 Stress:1\nExtreme: Hand Severed. Impaired. Bleeding:2 Stress:2"
     ))
 
-    // (const wound-7c)
-    Object.assign(nx_tactics_decks_damage.c_wound_7c, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-7c)
+    Object.assign(nx_tactics_decks_damage.c_damage_7c, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Left Hand",
       ":titles",
@@ -952,12 +1102,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Forearm Bruise. Fatigue:1\nModerate: Hand Numb. Drop:1 Stress:1 Stun:1\nMajor: Hand Fracture. Impaired. Stun:2 Fatigue:1\nExtreme: Hand Shattered. Impaired. Stun:2 Stress:2"
     ))
 
-    // (const wound-7d)
-    Object.assign(nx_tactics_decks_damage.c_wound_7d, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-7d)
+    Object.assign(nx_tactics_decks_damage.c_damage_7d, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Left Hand",
       ":titles",
@@ -965,12 +1115,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7d,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Forearm Graze. Stun:1\nModerate: Forearm Pierced. Stun:1 Bleeding:1\nMajor: Wrist Pierced. Impaired. Stun:1 Bleeding:2\nExtreme: Artery Cut. Impaired. Stun:2 Bleeding:2"
     ))
 
-    // (const wound-7h)
-    Object.assign(nx_tactics_decks_damage.c_wound_7h, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-7h)
+    Object.assign(nx_tactics_decks_damage.c_damage_7h, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Left Hand",
       ":titles",
@@ -978,12 +1128,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Forearm Graze. Withdraw:1\nModerate: Forearm Gash. Drop:1 Stress:1 Bleeding:1\nMajor: Hand Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Hand Mangled. Impaired. Bleeding:2 Stress:2"
     ))
 
-    // (const wound-7s)
-    Object.assign(nx_tactics_decks_damage.c_wound_7s, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-7s)
+    Object.assign(nx_tactics_decks_damage.c_damage_7s, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Left Hand",
       ":titles",
@@ -991,12 +1141,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Forearm Cut. Bleeding:1\nModerate: Forearm Slash. Drop:1 Slow:1 Bleeding:1\nExtreme: Artery Severed. Impaired. Bleeding:3 Stress:1\nExtreme: Hand Severed. Impaired. Bleeding:2 Stress:2"
     ))
 
-    // (const wound-8c)
-    Object.assign(nx_tactics_decks_damage.c_wound_8c, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-8c)
+    Object.assign(nx_tactics_decks_damage.c_damage_8c, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Right Arm",
       ":titles",
@@ -1004,12 +1154,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Arm Bruise. Push:1\nModerate: Arm Battered. Fatigue:1 Push:1\nMajor: Arm Fracture. Impaired. Stress:2 Fatigue:2\nExtreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"
     ))
 
-    // (const wound-8d)
-    Object.assign(nx_tactics_decks_damage.c_wound_8d, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-8d)
+    Object.assign(nx_tactics_decks_damage.c_damage_8d, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Right Arm",
       ":titles",
@@ -1017,12 +1167,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8d,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Arm Graze. Stun:1\nModerate: Arm Pierced. Stun:1 Bleeding:1\nMajor: Elbow Pierced. Impaired. Stun:3 Bleeding:1\nExtreme: Artery Severed. Bleeding: 4 Stun:2"
     ))
 
-    // (const wound-8h)
-    Object.assign(nx_tactics_decks_damage.c_wound_8h, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-8h)
+    Object.assign(nx_tactics_decks_damage.c_damage_8h, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Right Arm",
       ":titles",
@@ -1030,12 +1180,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Arm Graze. Withdraw:1\nModerate: Arm Gash. Withdraw:1 Bleeding:1\nMajor: Deep Arm Gash. Impaired. Stress:2 Bleeding:2\nExtreme: Elbow Severed. Impaired. Stun:2 Stress:2"
     ))
 
-    // (const wound-8s)
-    Object.assign(nx_tactics_decks_damage.c_wound_8s, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-8s)
+    Object.assign(nx_tactics_decks_damage.c_damage_8s, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Right Arm",
       ":titles",
@@ -1043,12 +1193,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Arm Cut. Bleeding:1\nModerate: Arm Slash. Slow:1 Bleeding:1\nMajor: Elbow Slash. Impaired. Slow:2 Bleeding:2\nExtreme: Artery Severed. Bleeding: 4 Stress:2"
     ))
 
-    // (const wound-9c)
-    Object.assign(nx_tactics_decks_damage.c_wound_9c, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-9c)
+    Object.assign(nx_tactics_decks_damage.c_damage_9c, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Left Arm",
       ":titles",
@@ -1056,12 +1206,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Arm Bruise. Push:1\nModerate: Arm Battered. Fatigue:1 Push:1\nMajor: Arm Fracture. Impaired. Stress:2 Fatigue:2\nExtreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"
     ))
 
-    // (const wound-9d)
-    Object.assign(nx_tactics_decks_damage.c_wound_9d, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-9d)
+    Object.assign(nx_tactics_decks_damage.c_damage_9d, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Left Arm",
       ":titles",
@@ -1069,12 +1219,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9d,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Arm Graze. Stun:1\nModerate: Arm Numb. Stun:1 Bleeding:1\nMajor: Elbow Pierced. Impaired. Stun:3 Bleeding:1\nExtreme: Artery Severed. Bleeding: 4 Stun:2"
     ))
 
-    // (const wound-9h)
-    Object.assign(nx_tactics_decks_damage.c_wound_9h, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-9h)
+    Object.assign(nx_tactics_decks_damage.c_damage_9h, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Left Arm",
       ":titles",
@@ -1082,12 +1232,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Arm Graze. Withdraw:1\nModerate: Arm Gash. Withdraw:1 Bleeding:1\nMajor: Deep Arm Gash. Impaired. Stress:2 Bleeding:2\nExtreme: Elbow Severed. Impaired. Stun:2 Stress:2"
     ))
 
-    // (const wound-9s)
-    Object.assign(nx_tactics_decks_damage.c_wound_9s, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-9s)
+    Object.assign(nx_tactics_decks_damage.c_damage_9s, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Left Arm",
       ":titles",
@@ -1095,56 +1245,56 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Arm Cut. Bleeding:1\nModerate: Arm Slash. Slow:1 Bleeding:1\nMajor: Elbow Slash. Impaired. Slow:2 Bleeding:2\nExtreme: Artery Severed. Bleeding: 4 Stress:2"
     ))
 
-    // (const wound-ac)
-    Object.assign(nx_tactics_decks_damage.c_wound_ac, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-ac)
+    Object.assign(nx_tactics_decks_damage.c_damage_ac, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":summary",
-      "* 1 Damage: Head Ringing. [Stun]: 1.\n* 2 Damage: Concussion. [Stun]: 1. [Push]: 1.\n* 3 Damage: Skull Fracture. [Unconscious]. [Stun]: 1, [Fatigue]: 1. [Push]: 1. [Knockdown]: 1.\n* 4 Damage: Skull Crushed. [Dead]."
+      "Minor: Head Ringing. Stun:1\nModerate: Concussion. Stun:1 Push:1\nMajor: Skull Fracture. Unconscious. Stun:1 Fatigue:1 Push:1 Knockdown:1\nExtreme: Skull Crushed. Dead."
     ))
 
-    // (const wound-ad)
-    Object.assign(nx_tactics_decks_damage.c_wound_ad, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-ad)
+    Object.assign(nx_tactics_decks_damage.c_damage_ad, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":summary",
-      "* 1 Damage: Head Grazed. [Stun]: 1.\n* 2 Damage: Pierced Throat. [Can't speak]. [Stun]: 1, [Stress]: 1.\n* 3 Damage: Blinded in one Eye. [Partly Blind]. [Stun]: 2. [Stress]: 1.\n* 4 Damage: Skull Pierced. Dying."
+      "Minor: Head Grazed. Stun:1\nModerate: Pierced Throat. Can't speak. Stun: 1, Stress:1\nMajor: Blinded in one Eye. Partly Blind. Stun:2 Stress:1\nExtreme: Brain Pierced. Dying. Disorder:2"
     ))
 
-    // (const wound-ah)
-    Object.assign(nx_tactics_decks_damage.c_wound_ah, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-ah)
+    Object.assign(nx_tactics_decks_damage.c_damage_ah, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":summary",
-      "* 1 Damage: Head Cut. [Bleeding]: 1.\n* 2 Damage: Face Gash. [Stress]: 1. [Bleeding]: 1.\n* 3 Damage: Throat Slashed. [Bleeding]: 2, [Stress]: 2.\n* 4 Damage: Spine Severed. [Paralyzed]. [Stress]: 3. [Bleeding]: 2."
+      "Minor: Head Graze. Stun:1\nModerate: Head Slash. Slow:1 Bleeding:1\nMajor: Neck Fracture. Immobilized. Slow:3 Bleeding:1\nExtreme: Spine Severed. Paralyzed. Stress:3 Bleeding:2"
     ))
 
-    // (const wound-as)
-    Object.assign(nx_tactics_decks_damage.c_wound_as, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-as)
+    Object.assign(nx_tactics_decks_damage.c_damage_as, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Beheaded. [Dead]."
+      "Minor: Head Cut. Bleeding:1\nModerate: Face Gash. Stress:1 Bleeding:1\nMajor: Throat Slashed. Bleeding:3 Stress:2\nExtreme: Beheaded. Dead."
     ))
 
-    // (const wound-jc)
-    Object.assign(nx_tactics_decks_damage.c_wound_jc, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-jc)
+    Object.assign(nx_tactics_decks_damage.c_damage_jc, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Abdomen",
       ":titles",
@@ -1152,12 +1302,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Stomach Bruise. Push:1\nModerate: Diaphram Bruise. Slow:1 Fatigue:1\nMajor: Hip Fracture. Hobbled. Slow:3 Bleeding:1\nExtreme: Crushed Hip. Immobilized. Bleeding:3 Stress:2"
     ))
 
-    // (const wound-jd)
-    Object.assign(nx_tactics_decks_damage.c_wound_jd, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-jd)
+    Object.assign(nx_tactics_decks_damage.c_damage_jd, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Abdomen",
       ":titles",
@@ -1165,12 +1315,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jd,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Side Puncture. Bleeding:1\nModerate: Belly Puncture. Slow:1 Bleeding:1\nMajor: Liver Pierced. Bleeding:2 Slow:2\nExtreme: Stomach Pierced. Hobbled. Bleeding:3 [Acid]:2"
     ))
 
-    // (const wound-jh)
-    Object.assign(nx_tactics_decks_damage.c_wound_jh, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-jh)
+    Object.assign(nx_tactics_decks_damage.c_damage_jh, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Abdomen",
       ":titles",
@@ -1178,12 +1328,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jh,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Glance off Hip. Bleeding:1\nModerate: Stomach Cut. Bleeding:1 Stress: 1\nMajor: Kidney Bruise. Slow:2 Bleeding:1 Fatigue:1\nExtreme: Renal Failure: Dying. Fatigue:3 Stress:2"
     ))
 
-    // (const wound-js)
-    Object.assign(nx_tactics_decks_damage.c_wound_js, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-js)
+    Object.assign(nx_tactics_decks_damage.c_damage_js, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Abdomen",
       ":titles",
@@ -1191,56 +1341,56 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Stomach Cut. Bleeding:1\nModerate: Head Slash. Slow:1 Bleeding:1\nMajor: Neck Fracture. Immobilized. Slow:3 Bleeding:1\nExtreme: Disemboweled. Bleeding:4 Stress:2"
     ))
 
-    // (const wound-kc)
-    Object.assign(nx_tactics_decks_damage.c_wound_kc, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-kc)
+    Object.assign(nx_tactics_decks_damage.c_damage_kc, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Shoulder Bruise. Fatigue:1\nModerate: Bruised Ribs. Slow:1 Fatigue:1 Push:1\nMajor: Broken Ribs. Hobbled. Slow:2 Push:1\nExtreme: Rib Cage Collapse. Dead. Push:1"
     ))
 
-    // (const wound-kd)
-    Object.assign(nx_tactics_decks_damage.c_wound_kd, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-kd)
+    Object.assign(nx_tactics_decks_damage.c_damage_kd, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kd,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Glance off Shoulder. Stun:1\nModerate: Pierced Shoulder. Stun:1 Bleeding:1\nMajor: Pierced Chest. Stun:2 Bleeding:2\nExtreme: Pierced Throat. Bleeding:2 Stun:2"
     ))
 
-    // (const wound-kh)
-    Object.assign(nx_tactics_decks_damage.c_wound_kh, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-kh)
+    Object.assign(nx_tactics_decks_damage.c_damage_kh, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Chest Graze. Stress:1\nModerate: Chest Slash. Stress:1 Bleeding:1\nMajor: Bleeding in Chest Cavity. Stress:2 Bleeding:2\nExtreme: Shoulder Cleaved. Dying. Bleeding:3 Stun:2"
     ))
 
-    // (const wound-ks)
-    Object.assign(nx_tactics_decks_damage.c_wound_ks, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-ks)
+    Object.assign(nx_tactics_decks_damage.c_damage_ks, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Shoulder Cut. Bleeding:1\nModerate: Shoulder Slash. Slow:1 Bleeding:1\nMajor: Throat Cut. Bleeding:2 Stress:2\nExtreme: Throat Slashed. Bleeding:4 Stun:2"
     ))
 
-    // (const wound-qc)
-    Object.assign(nx_tactics_decks_damage.c_wound_qc, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-qc)
+    Object.assign(nx_tactics_decks_damage.c_damage_qc, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Chest",
       ":titles",
@@ -1248,12 +1398,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Chest Bruise. Fatigue:1\nModerate: Wind Knocked Out. Slow:1 Fatigue:1 Push:1\nMajor: Heart Trauma. Slow:2 Stress:2 Push:1\nExtreme: Heart Stopped. Dying. Push:1"
     ))
 
-    // (const wound-qd)
-    Object.assign(nx_tactics_decks_damage.c_wound_qd, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-qd)
+    Object.assign(nx_tactics_decks_damage.c_damage_qd, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Chest",
       ":titles",
@@ -1261,12 +1411,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Chest Graze. Bleeding:1\nModerate: Chest Pierced. Stun:1 Bleeding:1\nMajor: Lung Punctured. Hobbled. Bleeding:2 Stun:2\nExtreme: Heart Pierced. Dying. Bleeding:4 Stun:2"
     ))
 
-    // (const wound-qh)
-    Object.assign(nx_tactics_decks_damage.c_wound_qh, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-qh)
+    Object.assign(nx_tactics_decks_damage.c_damage_qh, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Chest",
       ":titles",
@@ -1274,12 +1424,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Chest Cut. Bleeding:1\nModerate: Chest Slash. Bleeding:1 Push:1\nMajor: Collapsed Lung. Hobbled. Slow:2 Push:1\nExtreme: Lungs Collapsed. Dying. Hobbled. Stress: 4"
     ))
 
-    // (const wound-qs)
-    Object.assign(nx_tactics_decks_damage.c_wound_qs, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-qs)
+    Object.assign(nx_tactics_decks_damage.c_damage_qs, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Chest",
       ":titles",
@@ -1287,12 +1437,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Chest Cut. Bleeding:1\nModerate: Chest Slash. Slow:1 Bleeding:1\nMajor: Long Chest Slash. Slow:2 Bleeding:2\nExtreme: Spine Severed. [Paralyzed]. Stress: 4"
     ))
 
-    // (const wound-tc)
-    Object.assign(nx_tactics_decks_damage.c_wound_tc, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-tc)
+    Object.assign(nx_tactics_decks_damage.c_damage_tc, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Bash: Vitals",
       ":titles",
@@ -1300,12 +1450,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Hip Bruise. Stun:1\nModerate: Genital Slam. Slow:1 Stun:1 Stress:1\nMajor: Kidney Rupture. Slow:2 Bleeding:1 Fatigue:1\nExtreme: Hip Fracture: Hobbled. Slow:2 Fatigue:2"
     ))
 
-    // (const wound-td)
-    Object.assign(nx_tactics_decks_damage.c_wound_td, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-td)
+    Object.assign(nx_tactics_decks_damage.c_damage_td, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Pierce: Vitals",
       ":titles",
@@ -1313,12 +1463,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_td,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Buttock Pierced. Bleeding:1\nModerate: Gut Pierced. Stun:1 Bleeding:1\nMajor: Partially Sterilized. Stress:2 Bleeding:2\nExtreme: Intestines Pierced. Diseased:2 Slow:1 Bleeding:1"
     ))
 
-    // (const wound-th)
-    Object.assign(nx_tactics_decks_damage.c_wound_th, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-th)
+    Object.assign(nx_tactics_decks_damage.c_damage_th, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Hack: Vitals",
       ":titles",
@@ -1326,12 +1476,12 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Hip Graze. Bleeding:1\nModerate: Hip Gash. Stress:1 Bleeding:1\nMajor: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2\nExtreme: Wide Groin Gash. Bleeding:4 Stress:2"
     ))
 
-    // (const wound-ts)
-    Object.assign(nx_tactics_decks_damage.c_wound_ts, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-ts)
+    Object.assign(nx_tactics_decks_damage.c_damage_ts, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
       "Slash: Vitals",
       ":titles",
@@ -1339,29 +1489,91 @@ export default class nx_tactics_decks_damage {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
       ":summary",
-      "* 1 Damage: Deflected off Skull. [Slow]: 1.\n* 2 Damage: Head Slash. [Slow]: 1. [Bleeding]: 1.\n* 3 Damage: Neck Fracture. [Immobilized]. [Slow]: 3. [Bleeding]: 1.\n* 4 Damage: Head Severed. [Dead]."
+      "Minor: Hip Graze. Bleeding:1\nModerate: Groin Slash. Slow:1 Bleeding:1\nMajor: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2\nExtreme: Groin opened up. Bleeding:4 Stress:2"
     ))
 
-    // (const wound-wild-black)
-    Object.assign(nx_tactics_decks_damage.c_wound_wild_black, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-wild-black)
+    Object.assign(nx_tactics_decks_damage.c_damage_wild_black, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
-      "Black Wild Wound",
+      "Damage: Deck",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerblack,
       ":summary",
-      "* Search the Deck for any card and play that instead.\n* Shuffle Discards into Deck."
+      "Search the Deck for any card and play it. Then Shuffle Discards into Deck."
     ))
 
-    // (const wound-wild-red)
-    Object.assign(nx_tactics_decks_damage.c_wound_wild_red, vx_core.f_new(
-      nx_tactics_base.t_wound,
+    // (const damage-wild-red)
+    Object.assign(nx_tactics_decks_damage.c_damage_wild_red, vx_core.f_new(
+      nx_tactics_base.t_damage,
       ":name",
-      "Red Wild Wound",
+      "Damage: Discard",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerred,
       ":summary",
-      "* Search the Discards for any card and play that instead or play the next card instead.\n* Shuffle Discards into Deck."
+      "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."
+    ))
+
+    // (const fatigue)
+    Object.assign(nx_tactics_decks_damage.c_fatigue, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "fatigue",
+      ":name",
+      "Damage",
+      ":titles",
+      "Physical Damage/Fatigue/Weaken/Exertion",
+      ":image",
+      "images/card-fatigue.svg",
+      ":summary",
+      "* Fatigue\n* While you have more Fatigue than [Body], you are [Exhausted].\n* [Exhausted]: Cannot play odd [Attack] cards and your second action may only be [Recover]."
+    ))
+
+    // (const slow)
+    Object.assign(nx_tactics_decks_damage.c_slow, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "slow",
+      ":name",
+      "Constraint",
+      ":titles",
+      "Slow/Burden",
+      ":image",
+      "images/card-slow.svg",
+      ":summary",
+      "* Slow\n* While you have more Slow than [Move], you are Hobbled.\n* Hobbled: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up)."
+    ))
+
+    // (const stress)
+    Object.assign(nx_tactics_decks_damage.c_stress, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "stress",
+      ":name",
+      "Trauma",
+      ":titles",
+      "Emotional Trauma/Stress/Duress/Horror",
+      ":image",
+      "images/card-stress.svg",
+      ":summary",
+      "* Stress\n* While you have more [Stress] than [Will], you are [Shaken].\n* [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]",
+      ":reference",
+      "Because love's such an old-fashioned word\nAnd love dares you to care for\nThe people on the edge of the night\nAnd love dares you to change our way of\nCaring about ourselves\nThis is our last dance\nThis is ourselves under pressure - Queen and David Bowie, Under Pressure"
+    ))
+
+    // (const stun)
+    Object.assign(nx_tactics_decks_damage.c_stun, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "stun",
+      ":name",
+      "Disorder",
+      ":titles",
+      "Mental Damage/Strain/Distraction/Surprise/Shock",
+      ":image",
+      "images/card-stun.svg",
+      ":summary",
+      "* Stun\n* While you have more [Stun] than [Mind], you are [Confused].\n* [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover]."
     ))
 
   }

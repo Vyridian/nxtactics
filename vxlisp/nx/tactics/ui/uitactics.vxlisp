@@ -2,6 +2,7 @@
  :libs (lib base   :path nx/tactics/base)
        (lib deck   :path nx/tactics/decks/deck)
        (lib event  :path vx/event)
+       (lib file   :path vx/data/file)
        (lib nav    :path nx/tactics/ui/navigation)
        (lib styles :path nx/tactics/ui/stylesheet)
        (lib type   :path vx/type)
@@ -180,18 +181,6 @@
   [datatype : any := (type<-any data)]
   (if : ui/ui
    (then
-    (== datatype base/unit)
-    (ui<-unit-parent
-     (any<-any : base/unit
-      data)
-     parent))
-   (then
-    (type/is-type datatype base/fate)
-    (ui<-fate-parent
-     (any<-any : base/fate
-      data)
-     parent))
-   (then
     (type/is-type datatype base/card)
     (ui<-card-parent
      (any<-any : base/card
@@ -199,19 +188,136 @@
      parent))))
  :doc "Returns a ui created from any value")
 
+(func uilist<-card-parent : ui/uilist
+ [card   : base/card
+  parent : string]
+ (let : ui/ui
+  [id   : string := (:id card)
+   name : string := (:name card)
+   datatype : any := (type<-any card)
+   isdisplay4 : boolean :=
+    (or
+     (== datatype base/damage)
+     (== datatype base/disorder)
+     (== datatype base/trauma))
+   id1 : string :=
+    (if : string
+     (!-empty id)
+     id
+     name)
+   uid : string :=
+    (string parent "-" id1)
+   display : string :=
+    (string-display<-any
+     card)
+   displaysplit : stringlist :=
+    (if : stringlist
+     (then isdisplay4
+      (type/stringlist<-string-split
+       display newline)))
+   display1 : string :=
+    (if : string
+     (then isdisplay4
+      (:1 displaysplit))
+     (else display))
+   uidtitle : string :=
+    (string uid "-title")
+   uititle : ui/ui :=
+    (ui/ui
+     :uid uidtitle
+     :style styles/style-card-title
+     :stylelist
+      (ui/stylelist
+       styles/style-text-header1)
+     :data name)
+   uiddisplay : string :=
+    (string uid "-display")
+   uidisplay : ui/ui :=
+    (ui/ui
+     :uid uiddisplay
+     :style styles/style-card-display
+     :stylelist
+      (ui/stylelist
+       styles/style-textarea)
+     :data display1)
+   ranksuit : base/ranksuit :=
+    (:ranksuit card)
+   uilistrs : ui/uilist :=
+    (uilist<-ranksuit-parent
+     ranksuit
+     uid)
+   uilistdam : ui/uilist :=
+    (if : ui/uilist
+     (then
+      isdisplay4
+      (let : ui/uilist
+       [uid2 : string := (string uid "-display2")
+        display2 : string := (:2 displaysplit)
+        uidisplay2 : ui/ui :=
+         (ui/ui
+          :uid uid2
+          :style styles/style-card-display2
+          :stylelist
+           (ui/stylelist
+            styles/style-textarea)
+          :data display2)
+        uid3 : string := (string uid "-display3")
+        display3 : string := (:3 displaysplit)
+        uidisplay3 : ui/ui :=
+         (ui/ui
+          :uid uid3
+          :style styles/style-card-display3
+          :stylelist
+           (ui/stylelist
+            styles/style-textarea)
+          :data display3)
+        uid4 : string := (string uid "-display4")
+        display4 : string := (:4 displaysplit)
+        uidisplay4 : ui/ui :=
+         (ui/ui
+          :uid uid4
+          :style styles/style-card-display4
+          :stylelist
+           (ui/stylelist
+            styles/style-textarea)
+          :data display4)]
+       (ui/uilist
+        uidisplay2
+        uidisplay3
+        uidisplay4))))]
+  (ui/uilist
+   uilistrs
+   uilistdam
+   uititle
+   uidisplay)))
+
 (func ui<-card-parent : ui/ui
  [card   : base/card
   parent : string]
  (let : ui/ui
-  [name : string := (:name card)
-   uid  : string := (string parent "-" name)
+  [id    : string := (:id card)
+   name  : string := (:name card)
+   image : string := (:image card)
    display : string :=
     (string-display<-any
      card)
-   labeltitle : string :=
-    (string uid "-title")
-   labeldisplay : string :=
-    (string uid "-display")
+   id1 : string :=
+    (if : string
+     (!-empty id)
+     id
+     name)
+   uid : string :=
+    (string parent "-" id1)
+   style : ui/style :=
+    (if : ui/style
+     (then
+      (!-empty image)
+      (ui/style
+       :image-background
+        (ui/image
+         :file
+          (file/file<-path
+           image)))))
    events : event/eventmap :=
     (if : event/eventmap
      (then
@@ -229,144 +335,19 @@
       (ui/stylelist
        styles/style-card
        styles/style-clickable)))
-   ranksuit : base/ranksuit :=
-    (:ranksuit card)
-   uilistrs : ui/uilist :=
-    (uilist<-ranksuit-parent
-     ranksuit
-     uid)]
+   uilist : ui/uilist :=
+    (uilist<-card-parent
+     card parent)]
   (ui/ui
    :uid  uid
    :name name
    :eventmap  events
+   :style style
    :stylelist styles
    :data card
    :uimap
     (ui/uimap<-uilist
-     (ui/uilist
-      uilistrs
-      (ui/ui
-       :uid labeltitle
-       :style styles/style-card-title
-       :stylelist
-        (ui/stylelist
-         styles/style-text-header1)
-       :data name)
-      (ui/ui
-       :uid labeldisplay
-       :style styles/style-card-display
-       :stylelist
-        (ui/stylelist
-         styles/style-text-area)
-       :data display)))))
- :doc "Returns the a card ui.")
-
-(func ui<-fate-parent : ui/ui
- [fate   : base/fate
-  parent : string]
- (let : ui/ui
-  [name  : string    := (:name fate)
-   rank  : base/rank := (:rank fate)
-   suit  : base/suit := (:suit fate)
-   srank : string    := (:titles rank)
-   uid   : string    := (string parent "-" name)
-   display : string := (:summary fate)
-   labeldisplay : string := (string uid "-display")
-   labelrank1   : string := (string uid "-rank1")
-   labelrank2   : string := (string uid "-rank2")
-   labelsuit1   : string := (string uid "-suit1")
-   labelsuit2   : string := (string uid "-suit2")
-   labeltitle   : string := (string uid "-title")
-   suitstyle1 : ui/style :=
-    (switch : ui/style
-     suit
-     (case base/suit-black
-      styles/style-image-jester-black1)
-     (case base/suit-red
-      styles/style-image-jester-red1)
-     (case base/suit-diamond
-      styles/style-image-coin1)
-     (case base/suit-heart
-      styles/style-image-cup1)
-     (case base/suit-spade
-      styles/style-image-sword1)
-     (case base/suit-club
-      styles/style-image-wand1))
-   suitstyle2 : ui/style :=
-    (switch : ui/style
-     suit
-     (case base/suit-black
-      styles/style-image-jester-black2)
-     (case base/suit-red
-      styles/style-image-jester-red2)
-     (case base/suit-diamond
-      styles/style-image-coin2)
-     (case base/suit-heart
-      styles/style-image-cup2)
-     (case base/suit-spade
-      styles/style-image-sword2)
-     (case base/suit-club
-      styles/style-image-wand2))
-   styles : ui/stylelist :=
-    (if : ui/stylelist
-     (then
-      (= display "")
-      (ui/stylelist
-       styles/style-card))
-     (else
-      (ui/stylelist
-       styles/style-card
-       styles/style-clickable)))]
-  (ui/ui
-   :uid  uid
-   :name name
-   :stylelist styles
-   :data card
-   :uimap
-    (ui/uimap<-uilist
-     (ui/uilist
-      (ui/ui
-       :uid labelrank1
-       :style styles/style-card-rank
-       :stylelist
-        (ui/stylelist
-         styles/style-text-rank1)
-       :data srank)
-      (ui/ui
-       :uid labelrank2
-       :style styles/style-card-rank
-       :stylelist
-        (ui/stylelist
-         styles/style-text-rank2)
-       :data srank)
-      (ui/ui
-       :uid labelsuit1
-       :style styles/style-card-suit
-       :stylelist
-        (ui/stylelist
-         suitstyle1)
-       :data srank)
-      (ui/ui
-       :uid labelsuit2
-       :style styles/style-card-suit
-       :stylelist
-        (ui/stylelist
-         suitstyle2)
-       :data srank)
-      (ui/ui
-       :uid labeltitle
-       :style styles/style-card-title
-       :stylelist
-        (ui/stylelist
-         styles/style-text-header1)
-       :data name)
-      (ui/ui
-       :uid labeldisplay
-       :style styles/style-card-display
-       :stylelist
-        (ui/stylelist
-         styles/style-text-area)
-       :data display)))))
+     uilist)))
  :doc "Returns the a card ui.")
 
 (func ui<-unit-parent : ui

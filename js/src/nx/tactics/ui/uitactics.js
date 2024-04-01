@@ -4,6 +4,7 @@ import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
 import nx_tactics_decks_deck from "../../../nx/tactics/decks/deck.js"
 import vx_event from "../../../vx/event.js"
+import vx_data_file from "../../../vx/data/file.js"
 import nx_tactics_ui_navigation from "../../../nx/tactics/ui/navigation.js"
 import nx_tactics_ui_stylesheet from "../../../nx/tactics/ui/stylesheet.js"
 import vx_type from "../../../vx/type.js"
@@ -1195,26 +1196,6 @@ export default class nx_tactics_ui_uitactics {
         return vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
-            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
-              datatype,
-              nx_tactics_base.t_unit
-            )}),
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_uitactics.f_ui_from_unit_parent(
-              vx_core.f_any_from_any({"any-1": nx_tactics_base.t_unit, "any-2": vx_core.t_any}, data),
-              parent
-            )})
-          ),
-          vx_core.f_then(
-            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_type.f_is_type(
-              datatype,
-              nx_tactics_base.t_fate
-            )}),
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_uitactics.f_ui_from_fate_parent(
-              vx_core.f_any_from_any({"any-1": nx_tactics_base.t_fate, "any-2": vx_core.t_any}, data),
-              parent
-            )})
-          ),
-          vx_core.f_then(
             vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_type.f_is_type(
               datatype,
               nx_tactics_base.t_card
@@ -1251,23 +1232,36 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_ui_ui.t_ui},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
+        const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":id")
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
+        const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":image")
+        const display = nx_tactics_ui_uitactics.f_string_display_from_any(card)
+        const id1 = vx_core.f_if_1(
+          {"any-1": vx_core.t_string},
+          vx_core.f_notempty(id),
+          id,
+          name
+        )
         const uid = vx_core.f_new(
           vx_core.t_string,
           parent,
           "-",
-          name
+          id1
         )
-        const display = nx_tactics_ui_uitactics.f_string_display_from_any(card)
-        const labeltitle = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "-title"
-        )
-        const labeldisplay = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "-display"
+        const style = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_style},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(image)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_style,
+              ":image-background",
+              vx_core.f_new(
+                vx_ui_ui.t_image,
+                ":file",
+                vx_data_file.f_file_from_path(image)
+              )
+            )})
+          )
         )
         const events = vx_core.f_if_2(
           {"any-1": vx_event.t_eventmap},
@@ -1298,8 +1292,7 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        const ranksuit = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_ranksuit, "struct-2": nx_tactics_base.t_card}, card, ":ranksuit")
-        const uilistrs = nx_tactics_ui_uitactics.f_uilist_from_ranksuit_parent(ranksuit, uid)
+        const uilist = nx_tactics_ui_uitactics.f_uilist_from_card_parent(card, parent)
         return vx_core.f_new(
           vx_ui_ui.t_ui,
           ":uid",
@@ -1308,286 +1301,14 @@ export default class nx_tactics_ui_uitactics {
           name,
           ":eventmap",
           events,
+          ":style",
+          style,
           ":stylelist",
           styles,
           ":data",
           card,
           ":uimap",
-          vx_ui_ui.f_uimap_from_uilist(
-            vx_core.f_new(
-              vx_ui_ui.t_uilist,
-              uilistrs,
-              vx_core.f_new(
-                vx_ui_ui.t_ui,
-                ":uid",
-                labeltitle,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_title,
-                ":stylelist",
-                vx_core.f_new(
-                  vx_ui_ui.t_stylelist,
-                  nx_tactics_ui_stylesheet.c_style_text_header1
-                ),
-                ":data",
-                name
-              ),
-              vx_core.f_new(
-                vx_ui_ui.t_ui,
-                ":uid",
-                labeldisplay,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_display,
-                ":stylelist",
-                vx_core.f_new(
-                  vx_ui_ui.t_stylelist,
-                  nx_tactics_ui_stylesheet.c_style_text_area
-                ),
-                ":data",
-                display
-              )
-            )
-          )
-        )
-      })
-    )
-    return output
-  }
-
-  /**
-   * @function ui_from_fate_parent
-   * Returns the a card ui.
-   * @param  {fate} fate
-   * @param  {string} parent
-   * @return {ui}
-   */
-  static t_ui_from_fate_parent = {
-    vx_type: vx_core.t_type
-  }
-  static e_ui_from_fate_parent = {
-    vx_type: nx_tactics_ui_uitactics.t_ui_from_fate_parent
-  }
-
-  // (func ui<-fate-parent)
-  static f_ui_from_fate_parent(fate, parent) {
-    let output = vx_ui_ui.e_ui
-    output = vx_core.f_let(
-      {"any-1": vx_ui_ui.t_ui},
-      [],
-      vx_core.f_new(vx_core.t_any_from_func, () => {
-        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_fate}, fate, ":name")
-        const rank = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_rank, "struct-2": nx_tactics_base.t_fate}, fate, ":rank")
-        const suit = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_suit, "struct-2": nx_tactics_base.t_fate}, fate, ":suit")
-        const srank = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_rank}, rank, ":titles")
-        const uid = vx_core.f_new(
-          vx_core.t_string,
-          parent,
-          "-",
-          name
-        )
-        const display = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_fate}, fate, ":summary")
-        const labeldisplay = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "-display"
-        )
-        const labelrank1 = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "-rank1"
-        )
-        const labelrank2 = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "-rank2"
-        )
-        const labelsuit1 = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "-suit1"
-        )
-        const labelsuit2 = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "-suit2"
-        )
-        const labeltitle = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "-title"
-        )
-        const suitstyle1 = vx_core.f_switch(
-          {"any-1": vx_ui_ui.t_style, "any-2": nx_tactics_base.t_suit},
-          suit,
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_black,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_jester_black1})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_red,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_jester_red1})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_diamond,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_coin1})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_heart,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_cup1})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_spade,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_sword1})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_club,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_wand1})
-          )
-        )
-        const suitstyle2 = vx_core.f_switch(
-          {"any-1": vx_ui_ui.t_style, "any-2": nx_tactics_base.t_suit},
-          suit,
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_black,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_jester_black2})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_red,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_jester_red2})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_diamond,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_coin2})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_heart,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_cup2})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_spade,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_sword2})
-          ),
-          vx_core.f_case_1(
-            nx_tactics_base.c_suit_club,
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_image_wand2})
-          )
-        )
-        const styles = vx_core.f_if_2(
-          {"any-1": vx_ui_ui.t_stylelist},
-          vx_core.f_then(
-            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(display, "")}),
-            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
-              vx_ui_ui.t_stylelist,
-              nx_tactics_ui_stylesheet.c_style_card
-            )})
-          ),
-          vx_core.f_else(
-            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
-              vx_ui_ui.t_stylelist,
-              nx_tactics_ui_stylesheet.c_style_card,
-              nx_tactics_ui_stylesheet.c_style_clickable
-            )})
-          )
-        )
-        return vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          uid,
-          ":name",
-          name,
-          ":stylelist",
-          styles,
-          ":data",
-          nx_tactics_base.t_card,
-          ":uimap",
-          vx_ui_ui.f_uimap_from_uilist(
-            vx_core.f_new(
-              vx_ui_ui.t_uilist,
-              vx_core.f_new(
-                vx_ui_ui.t_ui,
-                ":uid",
-                labelrank1,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_rank,
-                ":stylelist",
-                vx_core.f_new(
-                  vx_ui_ui.t_stylelist,
-                  nx_tactics_ui_stylesheet.c_style_text_rank1
-                ),
-                ":data",
-                srank
-              ),
-              vx_core.f_new(
-                vx_ui_ui.t_ui,
-                ":uid",
-                labelrank2,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_rank,
-                ":stylelist",
-                vx_core.f_new(
-                  vx_ui_ui.t_stylelist,
-                  nx_tactics_ui_stylesheet.c_style_text_rank2
-                ),
-                ":data",
-                srank
-              ),
-              vx_core.f_new(
-                vx_ui_ui.t_ui,
-                ":uid",
-                labelsuit1,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_suit,
-                ":stylelist",
-                vx_core.f_new(
-                  vx_ui_ui.t_stylelist,
-                  suitstyle1
-                ),
-                ":data",
-                srank
-              ),
-              vx_core.f_new(
-                vx_ui_ui.t_ui,
-                ":uid",
-                labelsuit2,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_suit,
-                ":stylelist",
-                vx_core.f_new(
-                  vx_ui_ui.t_stylelist,
-                  suitstyle2
-                ),
-                ":data",
-                srank
-              ),
-              vx_core.f_new(
-                vx_ui_ui.t_ui,
-                ":uid",
-                labeltitle,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_title,
-                ":stylelist",
-                vx_core.f_new(
-                  vx_ui_ui.t_stylelist,
-                  nx_tactics_ui_stylesheet.c_style_text_header1
-                ),
-                ":data",
-                name
-              ),
-              vx_core.f_new(
-                vx_ui_ui.t_ui,
-                ":uid",
-                labeldisplay,
-                ":style",
-                nx_tactics_ui_stylesheet.c_style_card_display,
-                ":stylelist",
-                vx_core.f_new(
-                  vx_ui_ui.t_stylelist,
-                  nx_tactics_ui_stylesheet.c_style_text_area
-                ),
-                ":data",
-                display
-              )
-            )
-          )
+          vx_ui_ui.f_uimap_from_uilist(uilist)
         )
       })
     )
@@ -1696,6 +1417,204 @@ export default class nx_tactics_ui_uitactics {
   // (func ui<-unit-stat)
   static f_ui_from_unit_stat() {
     let output = vx_ui_ui.e_ui
+    return output
+  }
+
+  /**
+   * @function uilist_from_card_parent
+   * @param  {card} card
+   * @param  {string} parent
+   * @return {uilist}
+   */
+  static t_uilist_from_card_parent = {
+    vx_type: vx_core.t_type
+  }
+  static e_uilist_from_card_parent = {
+    vx_type: nx_tactics_ui_uitactics.t_uilist_from_card_parent
+  }
+
+  // (func uilist<-card-parent)
+  static f_uilist_from_card_parent(card, parent) {
+    let output = vx_ui_ui.e_uilist
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":id")
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
+        const datatype = vx_core.f_type_from_any(card)
+        const isdisplay4 = vx_core.f_or_1(
+          vx_core.f_eqeq(
+            datatype,
+            nx_tactics_base.t_damage
+          ),
+          vx_core.f_eqeq(
+            datatype,
+            nx_tactics_base.t_disorder
+          ),
+          vx_core.f_eqeq(
+            datatype,
+            nx_tactics_base.t_trauma
+          )
+        )
+        const id1 = vx_core.f_if_1(
+          {"any-1": vx_core.t_string},
+          vx_core.f_notempty(id),
+          id,
+          name
+        )
+        const uid = vx_core.f_new(
+          vx_core.t_string,
+          parent,
+          "-",
+          id1
+        )
+        const display = nx_tactics_ui_uitactics.f_string_display_from_any(card)
+        const displaysplit = vx_core.f_if_2(
+          {"any-1": vx_core.t_stringlist},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return isdisplay4}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_type.f_stringlist_from_string_split(
+              display,
+              vx_core.c_newline
+            )})
+          )
+        )
+        const display1 = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return isdisplay4}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_any_from_list({"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist}, displaysplit, 1)})
+          ),
+          vx_core.f_else(vx_core.f_new(vx_core.t_any_from_func, () => {return display}))
+        )
+        const uidtitle = vx_core.f_new(
+          vx_core.t_string,
+          uid,
+          "-title"
+        )
+        const uititle = vx_core.f_new(
+          vx_ui_ui.t_ui,
+          ":uid",
+          uidtitle,
+          ":style",
+          nx_tactics_ui_stylesheet.c_style_card_title,
+          ":stylelist",
+          vx_core.f_new(
+            vx_ui_ui.t_stylelist,
+            nx_tactics_ui_stylesheet.c_style_text_header1
+          ),
+          ":data",
+          name
+        )
+        const uiddisplay = vx_core.f_new(
+          vx_core.t_string,
+          uid,
+          "-display"
+        )
+        const uidisplay = vx_core.f_new(
+          vx_ui_ui.t_ui,
+          ":uid",
+          uiddisplay,
+          ":style",
+          nx_tactics_ui_stylesheet.c_style_card_display,
+          ":stylelist",
+          vx_core.f_new(
+            vx_ui_ui.t_stylelist,
+            nx_tactics_ui_stylesheet.c_style_textarea
+          ),
+          ":data",
+          display1
+        )
+        const ranksuit = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_ranksuit, "struct-2": nx_tactics_base.t_card}, card, ":ranksuit")
+        const uilistrs = nx_tactics_ui_uitactics.f_uilist_from_ranksuit_parent(ranksuit, uid)
+        const uilistdam = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_uilist},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return isdisplay4}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
+              {"any-1": vx_ui_ui.t_uilist},
+              [],
+              vx_core.f_new(vx_core.t_any_from_func, () => {
+                const uid2 = vx_core.f_new(
+                  vx_core.t_string,
+                  uid,
+                  "-display2"
+                )
+                const display2 = vx_core.f_any_from_list({"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist}, displaysplit, 2)
+                const uidisplay2 = vx_core.f_new(
+                  vx_ui_ui.t_ui,
+                  ":uid",
+                  uid2,
+                  ":style",
+                  nx_tactics_ui_stylesheet.c_style_card_display2,
+                  ":stylelist",
+                  vx_core.f_new(
+                    vx_ui_ui.t_stylelist,
+                    nx_tactics_ui_stylesheet.c_style_textarea
+                  ),
+                  ":data",
+                  display2
+                )
+                const uid3 = vx_core.f_new(
+                  vx_core.t_string,
+                  uid,
+                  "-display3"
+                )
+                const display3 = vx_core.f_any_from_list({"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist}, displaysplit, 3)
+                const uidisplay3 = vx_core.f_new(
+                  vx_ui_ui.t_ui,
+                  ":uid",
+                  uid3,
+                  ":style",
+                  nx_tactics_ui_stylesheet.c_style_card_display3,
+                  ":stylelist",
+                  vx_core.f_new(
+                    vx_ui_ui.t_stylelist,
+                    nx_tactics_ui_stylesheet.c_style_textarea
+                  ),
+                  ":data",
+                  display3
+                )
+                const uid4 = vx_core.f_new(
+                  vx_core.t_string,
+                  uid,
+                  "-display4"
+                )
+                const display4 = vx_core.f_any_from_list({"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist}, displaysplit, 4)
+                const uidisplay4 = vx_core.f_new(
+                  vx_ui_ui.t_ui,
+                  ":uid",
+                  uid4,
+                  ":style",
+                  nx_tactics_ui_stylesheet.c_style_card_display4,
+                  ":stylelist",
+                  vx_core.f_new(
+                    vx_ui_ui.t_stylelist,
+                    nx_tactics_ui_stylesheet.c_style_textarea
+                  ),
+                  ":data",
+                  display4
+                )
+                return vx_core.f_new(
+                  vx_ui_ui.t_uilist,
+                  uidisplay2,
+                  uidisplay3,
+                  uidisplay4
+                )
+              })
+            )})
+          )
+        )
+        return vx_core.f_new(
+          vx_ui_ui.t_uilist,
+          uilistrs,
+          uilistdam,
+          uititle,
+          uidisplay
+        )
+      })
+    )
     return output
   }
 
@@ -1941,13 +1860,13 @@ export default class nx_tactics_ui_uitactics {
       "ui-navigate<-ui-navbar": nx_tactics_ui_uitactics.e_ui_navigate_from_ui_navbar,
       "ui<-any-parent": nx_tactics_ui_uitactics.e_ui_from_any_parent,
       "ui<-card-parent": nx_tactics_ui_uitactics.e_ui_from_card_parent,
-      "ui<-fate-parent": nx_tactics_ui_uitactics.e_ui_from_fate_parent,
       "ui<-unit-background": nx_tactics_ui_uitactics.e_ui_from_unit_background,
       "ui<-unit-flavor": nx_tactics_ui_uitactics.e_ui_from_unit_flavor,
       "ui<-unit-header": nx_tactics_ui_uitactics.e_ui_from_unit_header,
       "ui<-unit-parent": nx_tactics_ui_uitactics.e_ui_from_unit_parent,
       "ui<-unit-skillpower": nx_tactics_ui_uitactics.e_ui_from_unit_skillpower,
       "ui<-unit-stat": nx_tactics_ui_uitactics.e_ui_from_unit_stat,
+      "uilist<-card-parent": nx_tactics_ui_uitactics.e_uilist_from_card_parent,
       "uilist<-ranksuit-parent": nx_tactics_ui_uitactics.e_uilist_from_ranksuit_parent,
       "uimap<-cardmap-parent": nx_tactics_ui_uitactics.e_uimap_from_cardmap_parent
     })
@@ -1983,13 +1902,13 @@ export default class nx_tactics_ui_uitactics {
       "ui-navigate<-ui-navbar": nx_tactics_ui_uitactics.t_ui_navigate_from_ui_navbar,
       "ui<-any-parent": nx_tactics_ui_uitactics.t_ui_from_any_parent,
       "ui<-card-parent": nx_tactics_ui_uitactics.t_ui_from_card_parent,
-      "ui<-fate-parent": nx_tactics_ui_uitactics.t_ui_from_fate_parent,
       "ui<-unit-background": nx_tactics_ui_uitactics.t_ui_from_unit_background,
       "ui<-unit-flavor": nx_tactics_ui_uitactics.t_ui_from_unit_flavor,
       "ui<-unit-header": nx_tactics_ui_uitactics.t_ui_from_unit_header,
       "ui<-unit-parent": nx_tactics_ui_uitactics.t_ui_from_unit_parent,
       "ui<-unit-skillpower": nx_tactics_ui_uitactics.t_ui_from_unit_skillpower,
       "ui<-unit-stat": nx_tactics_ui_uitactics.t_ui_from_unit_stat,
+      "uilist<-card-parent": nx_tactics_ui_uitactics.t_uilist_from_card_parent,
       "uilist<-ranksuit-parent": nx_tactics_ui_uitactics.t_uilist_from_ranksuit_parent,
       "uimap<-cardmap-parent": nx_tactics_ui_uitactics.t_uimap_from_cardmap_parent
     })
@@ -2563,24 +2482,6 @@ export default class nx_tactics_ui_uitactics {
       fn            : nx_tactics_ui_uitactics.f_ui_from_card_parent
     }
 
-    // (func ui<-fate-parent)
-    nx_tactics_ui_uitactics.t_ui_from_fate_parent['vx_value'] = {
-      name          : "ui<-fate-parent",
-      pkgname       : "nx/tactics/ui/uitactics",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_ui_uitactics.f_ui_from_fate_parent
-    }
-
     // (func ui<-unit-background)
     nx_tactics_ui_uitactics.t_ui_from_unit_background['vx_value'] = {
       name          : "ui<-unit-background",
@@ -2687,6 +2588,24 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_ui_from_unit_stat
+    }
+
+    // (func uilist<-card-parent)
+    nx_tactics_ui_uitactics.t_uilist_from_card_parent['vx_value'] = {
+      name          : "uilist<-card-parent",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_uilist_from_card_parent
     }
 
     // (func uilist<-ranksuit-parent)

@@ -1,0 +1,63 @@
+(package nx/tactics/decks/scenario
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Tactics Scenario Decks")
+
+(func place-forest : base/location
+ (base/location
+  :name "Forest"
+  :image "images/cards/place-forest.png"))
+
+(func place-guardpost : base/location
+ (base/location
+  :name "Guardpost"
+  :image "images/cards/place-guardpost.png"))
+
+(func place-mountain : base/location
+ (base/location
+  :name "Mountain"
+  :image "images/cards/place-mountain.png"))
+
+(func place-stoneroad : base/location
+ (base/location
+  :name "Stone Road"
+  :image "images/cards/place-stoneroad.png"))
+
+(func unit-goblinscout : base/unit
+ (base/unit
+  :name "Goblin Scout"
+  :image "images/cards/unit-goblinscout.png"))
+
+(func unit-horse : base/unit
+ (base/unit
+  :name "Horse"
+  :image "images/cards/unit-horse.png"))
+
+(func unit-wilddog : base/unit
+ (base/unit
+  :name "Wild Dog"
+  :image "images/cards/unit-wilddog.png"))
+
+(func unit-woodencart : base/unit
+ (base/unit
+  :name "Wooden Cart"
+  :image "images/cards/unit-woodencart.png"))
+
+(func deck-murintrail : base/deck
+ (let : base/deck
+  [goblinscout   := (unit-goblinscout)
+   goblinscout-i := (base/cardimage<-card goblinscout)
+   horse   := (unit-horse)
+   horse-i := (base/cardimage<-card horse)]
+  (base/deck
+   :name "Murin Trail"
+   :cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      goblinscout
+      horse
+      (unit-wilddog)
+      (unit-woodencart)
+      (place-forest)
+      (place-guardpost)
+      (place-mountain)
+      (place-stoneroad))))))

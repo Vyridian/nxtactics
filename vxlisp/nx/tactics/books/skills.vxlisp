@@ -986,9 +986,9 @@ In a storm, even large vessels may be rolled by being hit broadside by a large w
              (ability
               :name "Trade Winds"
               :summary "Faster travel when piloting commercial sailing vessels.")))
-        "Starship Piloting"
+        "Starpiloting"
          (skill
-          :name "Starship Piloting"
+          :name "Starpiloting"
           :abilitymap
            (abilitymap
             :Astronavigation

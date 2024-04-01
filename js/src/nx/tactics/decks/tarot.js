@@ -512,11 +512,11 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_2c, vx_core.f_new(
       nx_tactics_base.t_tarot,
       ":name",
-      "Two of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_two,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Two of Wands",
+      ":titles",
+      "Outcast of Wands, Madman",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2c
     ))
 
     // (const tarot-2d)
@@ -524,10 +524,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Two of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_two,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":titles",
+      "Outcast of Coins, Beggar",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2d
     ))
 
     // (const tarot-2h)
@@ -535,10 +535,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Two of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_two,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":titles",
+      "Outcast of Cups, Prophet",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2h
     ))
 
     // (const tarot-2s)
@@ -546,21 +546,21 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Two of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_two,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":titles",
+      "Outcast of Swords, Brigand",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2s
     ))
 
     // (const tarot-3c)
     Object.assign(nx_tactics_decks_tarot.c_tarot_3c, vx_core.f_new(
       nx_tactics_base.t_tarot,
       ":name",
-      "Three of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_three,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Three of Wands",
+      ":titles",
+      "Farmer of Wands",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3c
     ))
 
     // (const tarot-3d)
@@ -568,10 +568,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Three of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_three,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":titles",
+      "Farmer of Coins",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3d
     ))
 
     // (const tarot-3h)
@@ -579,10 +579,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Three of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_three,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":titles",
+      "Farmer of Cups",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3h
     ))
 
     // (const tarot-3s)
@@ -590,21 +590,21 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Three of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_three,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":titles",
+      "Farmer of Swords",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3s
     ))
 
     // (const tarot-4c)
     Object.assign(nx_tactics_decks_tarot.c_tarot_4c, vx_core.f_new(
       nx_tactics_base.t_tarot,
       ":name",
-      "Four of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_four,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Four of Wands",
+      ":titles",
+      "Miner of Wands",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4c
     ))
 
     // (const tarot-4d)
@@ -612,10 +612,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Four of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_four,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":titles",
+      "Miner of Coins, Goldminer",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4d
     ))
 
     // (const tarot-4h)
@@ -623,10 +623,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Four of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_four,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":titles",
+      "Miner of Cups",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4h
     ))
 
     // (const tarot-4s)
@@ -634,21 +634,21 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Four of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_four,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":titles",
+      "Miner of Swords",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4s
     ))
 
     // (const tarot-5c)
     Object.assign(nx_tactics_decks_tarot.c_tarot_5c, vx_core.f_new(
       nx_tactics_base.t_tarot,
       ":name",
-      "Five of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_five,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Five of Wands",
+      ":titles",
+      "Merchant of Wands, Merchant of Wonders",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5c
     ))
 
     // (const tarot-5d)
@@ -656,10 +656,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Five of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_five,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":titles",
+      "Merchant of Coins, Bank",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5d
     ))
 
     // (const tarot-5h)
@@ -667,10 +667,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Five of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_five,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":titles",
+      "Merchant of Cups, Brothel",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5h
     ))
 
     // (const tarot-5s)
@@ -678,21 +678,21 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Five of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_five,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":titles",
+      "Merchant of Swords, Arms Dealer",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5s
     ))
 
     // (const tarot-6c)
     Object.assign(nx_tactics_decks_tarot.c_tarot_6c, vx_core.f_new(
       nx_tactics_base.t_tarot,
       ":name",
-      "Six of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_six,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Six of Wands",
+      ":titles",
+      "Craftsman of Wands",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6c
     ))
 
     // (const tarot-6d)
@@ -700,10 +700,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Six of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_six,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":titles",
+      "Craftsman of Coins",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6d
     ))
 
     // (const tarot-6h)
@@ -711,10 +711,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Six of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_six,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":titles",
+      "Craftsman of Cups",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6h
     ))
 
     // (const tarot-6s)
@@ -722,21 +722,21 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Six of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_six,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":titles",
+      "Craftsman of Swords, Swordsmith",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6s
     ))
 
     // (const tarot-7c)
     Object.assign(nx_tactics_decks_tarot.c_tarot_7c, vx_core.f_new(
       nx_tactics_base.t_tarot,
       ":name",
-      "Seven of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_seven,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Seven of Wands",
+      ":titles",
+      "Soldier of Wands",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7c
     ))
 
     // (const tarot-7d)
@@ -744,10 +744,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Seven of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_seven,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":titles",
+      "Soldier of Coins",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7d
     ))
 
     // (const tarot-7h)
@@ -755,10 +755,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Seven of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_seven,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":titles",
+      "Soldier of Cups",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7h
     ))
 
     // (const tarot-7s)
@@ -766,21 +766,21 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Seven of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_seven,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":titles",
+      "Soldier of Swords",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7s
     ))
 
     // (const tarot-8c)
     Object.assign(nx_tactics_decks_tarot.c_tarot_8c, vx_core.f_new(
       nx_tactics_base.t_tarot,
       ":name",
-      "Eight of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_eight,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Eight of Wands",
+      ":titles",
+      "Archer of Wands",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8c
     ))
 
     // (const tarot-8d)
@@ -788,10 +788,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Eight of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_eight,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":titles",
+      "Archer of Coins",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8d
     ))
 
     // (const tarot-8h)
@@ -799,10 +799,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Eight of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_eight,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":titles",
+      "Archer of Cups",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8h
     ))
 
     // (const tarot-8s)
@@ -810,21 +810,21 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Eight of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_eight,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":titles",
+      "Archer of Swords",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8s
     ))
 
     // (const tarot-9c)
     Object.assign(nx_tactics_decks_tarot.c_tarot_9c, vx_core.f_new(
       nx_tactics_base.t_tarot,
       ":name",
-      "Nine of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_nine,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Nine of Wands",
+      ":titles",
+      "Bishop of Wands",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9c
     ))
 
     // (const tarot-9d)
@@ -832,10 +832,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Nine of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_nine,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":titles",
+      "Bishop of Coins",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9d
     ))
 
     // (const tarot-9h)
@@ -843,10 +843,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Nine of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_nine,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":titles",
+      "Bishop of Cups",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9h
     ))
 
     // (const tarot-9s)
@@ -854,10 +854,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Nine of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_nine,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":titles",
+      "Bishop of Swords",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9s
     ))
 
     // (const tarot-ac)
@@ -866,11 +866,11 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Devil",
       ":titles",
-      "Master of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_ace,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Master of Wands",
+      ":image",
+      "images/cards/tarot-devil.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ac
     ))
 
     // (const tarot-ad)
@@ -880,10 +880,10 @@ export default class nx_tactics_decks_tarot {
       "Lust",
       ":titles",
       "Master of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_ace,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      ":image",
+      "images/cards/tarot-lust.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ad
     ))
 
     // (const tarot-ah)
@@ -893,10 +893,10 @@ export default class nx_tactics_decks_tarot {
       "Lovers",
       ":titles",
       "Master of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_ace,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":image",
+      "images/cards/tarot-lovers.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ah
     ))
 
     // (const tarot-as)
@@ -906,10 +906,10 @@ export default class nx_tactics_decks_tarot {
       "Death",
       ":titles",
       "Master of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_ace,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":image",
+      "images/cards/tarot-death.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_as
     ))
 
     // (const tarot-jc)
@@ -918,11 +918,11 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Magus",
       ":titles",
-      "Knight of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_jack,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Knight of Wands",
+      ":image",
+      "images/cards/tarot-magus.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jc
     ))
 
     // (const tarot-jd)
@@ -932,10 +932,10 @@ export default class nx_tactics_decks_tarot {
       "Hanged Man",
       ":titles",
       "Prince of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_jack,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":image",
+      "images/cards/tarot-hangedman.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jd
     ))
 
     // (const tarot-jh)
@@ -945,10 +945,10 @@ export default class nx_tactics_decks_tarot {
       "Hermit",
       ":titles",
       "Princess of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_jack,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":image",
+      "images/cards/tarot-hermit.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jh
     ))
 
     // (const tarot-js)
@@ -958,10 +958,10 @@ export default class nx_tactics_decks_tarot {
       "Star",
       ":titles",
       "Lady of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_jack,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":image",
+      "images/cards/tarot-star.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_js
     ))
 
     // (const tarot-kc)
@@ -970,11 +970,11 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Emperor",
       ":titles",
-      "King of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_king,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "King of Wands",
+      ":image",
+      "images/cards/tarot-emperor.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_kc
     ))
 
     // (const tarot-kd)
@@ -984,10 +984,10 @@ export default class nx_tactics_decks_tarot {
       "Judgement",
       ":titles",
       "King of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_king,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":image",
+      "images/cards/tarot-judgement.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_kd
     ))
 
     // (const tarot-kh)
@@ -997,10 +997,10 @@ export default class nx_tactics_decks_tarot {
       "Hierophant",
       ":titles",
       "King of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_king,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":image",
+      "images/cards/tarot-hierophant.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_kh
     ))
 
     // (const tarot-ks)
@@ -1010,10 +1010,10 @@ export default class nx_tactics_decks_tarot {
       "Sun",
       ":titles",
       "King of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_king,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":image",
+      "images/cards/tarot-sun.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ks
     ))
 
     // (const tarot-qc)
@@ -1022,11 +1022,11 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Empress",
       ":titles",
-      "Queen of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_queen,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Queen of Wands",
+      ":image",
+      "images/cards/tarot-empress.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qc
     ))
 
     // (const tarot-qd)
@@ -1036,10 +1036,10 @@ export default class nx_tactics_decks_tarot {
       "Justice",
       ":titles",
       "Queen of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_queen,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":image",
+      "images/cards/tarot-justice.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qd
     ))
 
     // (const tarot-qh)
@@ -1049,10 +1049,10 @@ export default class nx_tactics_decks_tarot {
       "Priestess",
       ":titles",
       "Queen of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_queen,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":image",
+      "images/cards/tarot-priestess.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qh
     ))
 
     // (const tarot-qs)
@@ -1062,10 +1062,10 @@ export default class nx_tactics_decks_tarot {
       "Moon",
       ":titles",
       "Queen of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_queen,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":image",
+      "images/cards/tarot-moon.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qs
     ))
 
     // (const tarot-tc)
@@ -1074,11 +1074,11 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Tower",
       ":titles",
-      "Ten of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_ten,
-      ":suit",
-      nx_tactics_base.c_suit_club
+      "Ten of Wands",
+      ":image",
+      "images/cards/tarot-tower.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_tc
     ))
 
     // (const tarot-td)
@@ -1088,10 +1088,10 @@ export default class nx_tactics_decks_tarot {
       "Wheel of Fortune",
       ":titles",
       "Ten of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_ten,
-      ":suit",
-      nx_tactics_base.c_suit_diamond
+      ":image",
+      "images/cards/tarot-wheeloffortune.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_td
     ))
 
     // (const tarot-th)
@@ -1101,10 +1101,10 @@ export default class nx_tactics_decks_tarot {
       "Art",
       ":titles",
       "Ten of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_ten,
-      ":suit",
-      nx_tactics_base.c_suit_heart
+      ":image",
+      "images/cards/tarot-art.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_th
     ))
 
     // (const tarot-ts)
@@ -1114,10 +1114,10 @@ export default class nx_tactics_decks_tarot {
       "Chariot",
       ":titles",
       "Ten of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_ten,
-      ":suit",
-      nx_tactics_base.c_suit_spade
+      ":image",
+      "images/cards/tarot-chariot.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ts
     ))
 
     // (const tarot-wildblack)
@@ -1125,10 +1125,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "Fool",
-      ":rank",
-      nx_tactics_base.c_rank_joker,
-      ":suit",
-      nx_tactics_base.c_suit_black
+      ":image",
+      "images/cards/tarot-fool.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jokerblack
     ))
 
     // (const tarot-wildred)
@@ -1136,10 +1136,10 @@ export default class nx_tactics_decks_tarot {
       nx_tactics_base.t_tarot,
       ":name",
       "World",
-      ":rank",
-      nx_tactics_base.c_rank_joker,
-      ":suit",
-      nx_tactics_base.c_suit_red
+      ":image",
+      "images/cards/tarot-world.png",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jokerred
     ))
 
   }

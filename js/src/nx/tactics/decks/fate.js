@@ -7,6 +7,30 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_fate {
 
   /**
+   * Constant: card-fate-blue
+   * {card}
+   */
+  static c_card_fate_blue = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-blue'}}
+
+  /**
+   * Constant: card-fate-green
+   * {card}
+   */
+  static c_card_fate_green = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-green'}}
+
+  /**
+   * Constant: card-fate-red
+   * {card}
+   */
+  static c_card_fate_red = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-red'}}
+
+  /**
+   * Constant: card-fate-yellow
+   * {card}
+   */
+  static c_card_fate_yellow = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-yellow'}}
+
+  /**
    * Constant: fate-2c
    * {fate}
    */
@@ -413,10 +437,134 @@ export default class nx_tactics_decks_fate {
     return output
   }
 
+  /**
+   * @function deck_fate_blue
+   * Fate Back Deck
+   * @return {deck}
+   */
+  static t_deck_fate_blue = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_fate_blue = {
+    vx_type: nx_tactics_decks_fate.t_deck_fate_blue
+  }
+
+  // (func deck-fate-blue)
+  static f_deck_fate_blue() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Fate Blue",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_from_cardlist(
+        nx_tactics_base.f_cardlist_copy_from_card_num(
+          nx_tactics_decks_fate.c_card_fate_blue,
+          54
+        )
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function deck_fate_green
+   * Fate Back Deck
+   * @return {deck}
+   */
+  static t_deck_fate_green = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_fate_green = {
+    vx_type: nx_tactics_decks_fate.t_deck_fate_green
+  }
+
+  // (func deck-fate-green)
+  static f_deck_fate_green() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Fate Green",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_from_cardlist(
+        nx_tactics_base.f_cardlist_copy_from_card_num(
+          nx_tactics_decks_fate.c_card_fate_green,
+          54
+        )
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function deck_fate_red
+   * Fate Back Deck
+   * @return {deck}
+   */
+  static t_deck_fate_red = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_fate_red = {
+    vx_type: nx_tactics_decks_fate.t_deck_fate_red
+  }
+
+  // (func deck-fate-red)
+  static f_deck_fate_red() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Fate Red",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_from_cardlist(
+        nx_tactics_base.f_cardlist_copy_from_card_num(
+          nx_tactics_decks_fate.c_card_fate_red,
+          54
+        )
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function deck_fate_yellow
+   * Fate Back Deck
+   * @return {deck}
+   */
+  static t_deck_fate_yellow = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_fate_yellow = {
+    vx_type: nx_tactics_decks_fate.t_deck_fate_yellow
+  }
+
+  // (func deck-fate-yellow)
+  static f_deck_fate_yellow() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Fate Yellow",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_from_cardlist(
+        nx_tactics_base.f_cardlist_copy_from_card_num(
+          nx_tactics_decks_fate.c_card_fate_yellow,
+          54
+        )
+      )
+    )
+    return output
+  }
+
 
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
+      "card-fate-blue": nx_tactics_decks_fate.c_card_fate_blue,
+      "card-fate-green": nx_tactics_decks_fate.c_card_fate_green,
+      "card-fate-red": nx_tactics_decks_fate.c_card_fate_red,
+      "card-fate-yellow": nx_tactics_decks_fate.c_card_fate_yellow,
       "fate-2c": nx_tactics_decks_fate.c_fate_2c,
       "fate-2d": nx_tactics_decks_fate.c_fate_2d,
       "fate-2h": nx_tactics_decks_fate.c_fate_2h,
@@ -473,10 +621,18 @@ export default class nx_tactics_decks_fate {
       "fate-wildred": nx_tactics_decks_fate.c_fate_wildred
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "deck-fate": nx_tactics_decks_fate.e_deck_fate
+      "deck-fate": nx_tactics_decks_fate.e_deck_fate,
+      "deck-fate-blue": nx_tactics_decks_fate.e_deck_fate_blue,
+      "deck-fate-green": nx_tactics_decks_fate.e_deck_fate_green,
+      "deck-fate-red": nx_tactics_decks_fate.e_deck_fate_red,
+      "deck-fate-yellow": nx_tactics_decks_fate.e_deck_fate_yellow
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "deck-fate": nx_tactics_decks_fate.t_deck_fate
+      "deck-fate": nx_tactics_decks_fate.t_deck_fate,
+      "deck-fate-blue": nx_tactics_decks_fate.t_deck_fate_blue,
+      "deck-fate-green": nx_tactics_decks_fate.t_deck_fate_green,
+      "deck-fate-red": nx_tactics_decks_fate.t_deck_fate_red,
+      "deck-fate-yellow": nx_tactics_decks_fate.t_deck_fate_yellow
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -508,17 +664,131 @@ export default class nx_tactics_decks_fate {
       fn            : nx_tactics_decks_fate.f_deck_fate
     }
 
+    // (func deck-fate-blue)
+    nx_tactics_decks_fate.t_deck_fate_blue['vx_value'] = {
+      name          : "deck-fate-blue",
+      pkgname       : "nx/tactics/decks/fate",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_fate.f_deck_fate_blue
+    }
+
+    // (func deck-fate-green)
+    nx_tactics_decks_fate.t_deck_fate_green['vx_value'] = {
+      name          : "deck-fate-green",
+      pkgname       : "nx/tactics/decks/fate",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_fate.f_deck_fate_green
+    }
+
+    // (func deck-fate-red)
+    nx_tactics_decks_fate.t_deck_fate_red['vx_value'] = {
+      name          : "deck-fate-red",
+      pkgname       : "nx/tactics/decks/fate",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_fate.f_deck_fate_red
+    }
+
+    // (func deck-fate-yellow)
+    nx_tactics_decks_fate.t_deck_fate_yellow['vx_value'] = {
+      name          : "deck-fate-yellow",
+      pkgname       : "nx/tactics/decks/fate",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_fate.f_deck_fate_yellow
+    }
+
+    // (const card-fate-blue)
+    Object.assign(nx_tactics_decks_fate.c_card_fate_blue, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-fate-blue",
+      ":name",
+      "Fate",
+      ":image",
+      "images/card-fate-blue.svg"
+    ))
+
+    // (const card-fate-green)
+    Object.assign(nx_tactics_decks_fate.c_card_fate_green, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-fate-green",
+      ":name",
+      "Fate",
+      ":image",
+      "images/card-fate-green.svg"
+    ))
+
+    // (const card-fate-red)
+    Object.assign(nx_tactics_decks_fate.c_card_fate_red, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-fate-red",
+      ":name",
+      "Fate",
+      ":image",
+      "images/card-fate-red.svg"
+    ))
+
+    // (const card-fate-yellow)
+    Object.assign(nx_tactics_decks_fate.c_card_fate_yellow, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-fate-yellow",
+      ":name",
+      "Fate",
+      ":image",
+      "images/card-fate-yellow.svg"
+    ))
+
     // (const fate-2c)
     Object.assign(nx_tactics_decks_fate.c_fate_2c, vx_core.f_new(
       nx_tactics_base.t_fate,
       ":name",
       "Two of Wands",
-      ":rank",
-      nx_tactics_base.c_rank_two,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2c,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 3-10, Focus\n* Lose: Attack JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 2\n* Hits: .2, Draw 1\n* Combo: 2-3-4, Hits: .9, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 3-10, Focus\n* Lose: Attack JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 2\n* Hits: 2, Draw 1\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-2d)
@@ -526,12 +796,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Two of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_two,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2d,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 3-10, Defend, Evade, Counter\n* Lose: Attack, Focus JQKA, Wild\n* Tie : Focus 2\n* Hits: .2\n* Combo: 2-3-4, Hits: .9, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 3-10, Defend, Evade, Counter\n* Lose: Attack, Focus JQKA, Wild\n* Tie : Focus 2\n* Hits: 2\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-2h)
@@ -539,12 +807,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Two of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_two,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2h,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 3-10, Defend, Evade, Counter\n* Lose: Attack, Focus JQKA, Wild\n* Tie : Focus 2\n* Hits: .2\n* Combo: 2-3-4, Hits: .9, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 3-10, Defend, Evade, Counter\n* Lose: Attack, Focus JQKA, Wild\n* Tie : Focus 2\n* Hits: 2\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-2s)
@@ -552,12 +818,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Two of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_two,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2s,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 3-10, Focus\n* Lose: Attack JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 2\n* Hits: .2, Draw 1\n* Combo: 2-3-4, Hits: .9, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 3-10, Focus\n* Lose: Attack JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 2\n* Hits: 2, Draw 1\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-3c)
@@ -565,12 +829,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Three of Wands",
-      ":rank",
-      nx_tactics_base.c_rank_three,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3c,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 4-10, Focus\n* Lose: Attack 2 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 3\n* Hits: .3, Draw 1\n* Combo: 3-4-5, Hits: 1.2, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 4-10, Focus\n* Lose: Attack 2 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 3\n* Hits: 3, Draw 1\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-3d)
@@ -578,12 +840,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Three of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_three,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3d,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 4-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2 JQKA, Wild\n* Tie : Focus 3\n* Hits: .3\n* Combo: 3-4-5, Hits: 1.2, Draw or Reclaim 1.\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 4-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2 JQKA, Wild\n* Tie : Focus 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-3h)
@@ -591,12 +851,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Three of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_three,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3h,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 4-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2 JQKA, Wild\n* Tie : Focus 3\n* Hits: .3\n* Combo: 3-4-5, Hits: 1.2, Draw or Reclaim 1.\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 4-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2 JQKA, Wild\n* Tie : Focus 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-3s)
@@ -604,12 +862,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Three of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_three,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3s,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 4-10, Focus\n* Lose: Attack 2, Focus JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 3\n* Hits: .3\n* Combo: 3-4-5, Hits: 1.2, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 4-10, Focus\n* Lose: Attack 2, Focus JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-4c)
@@ -617,12 +873,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Four of Wands",
-      ":rank",
-      nx_tactics_base.c_rank_four,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4c,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 5-10, Focus\n* Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 4\n* Hits: .5, Draw 1\n* Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 5-10, Focus\n* Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 4\n* Hits: 5, Draw 1\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-4d)
@@ -630,12 +884,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Four of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_four,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4d,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 5-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-3 JQKA, Wild\n* Tie : Focus 4\n* Hits: .5\n* Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 5-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-3 JQKA, Wild\n* Tie : Focus 4\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-4h)
@@ -643,12 +895,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Four of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_four,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4h,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 5-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-3 JQKA, Wild\n* Tie : Focus 4\n* Hits: .4\n* Combo: 4-5-6, Hits: 1.5, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 5-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-3 JQKA, Wild\n* Tie : Focus 4\n* Hits: 4\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-4s)
@@ -656,12 +906,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Four of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_four,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4s,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 5-10, Focus\n* Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 4\n* Hits: .4, Draw 1\n* Combo: 4-5-6, Hits: 1.5, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 5-10, Focus\n* Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 4\n* Hits: 4, Draw 1\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-5c)
@@ -669,12 +917,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Five of Wands",
-      ":rank",
-      nx_tactics_base.c_rank_five,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5c,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 6-10, Focus\n* Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 5\n* Hits: .6, Draw 1\n* Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 6-10, Focus\n* Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 5\n* Hits: 6, Draw 1\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-5d)
@@ -682,12 +928,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Five of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_five,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5d,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 6-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-4 JQKA, Wild\n* Tie : Focus 5\n* Hits: .5\n* Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 6-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-4 JQKA, Wild\n* Tie : Focus 5\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-5h)
@@ -695,12 +939,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Five of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_five,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5h,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 6-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-4 JQKA, Wild\n* Tie : Focus 5\n* Hits: .5\n* Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 6-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-4 JQKA, Wild\n* Tie : Focus 5\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-5s)
@@ -708,12 +950,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Five of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_five,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5s,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 6-10, Focus\n* Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 5\n* Hits: .5, Draw 1\n* Combo: 5-6-7, Hits: 1.8, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 6-10, Focus\n* Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 5\n* Hits: 5, Draw 1\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-6c)
@@ -721,12 +961,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Six of Wands",
-      ":rank",
-      nx_tactics_base.c_rank_six,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6c,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 7-10, Focus\n* Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 6\n* Hits: .6, Draw 1\n* Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 7-10, Focus\n* Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 6\n* Hits: 6, Draw 1\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-6d)
@@ -734,12 +972,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Six of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_six,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6d,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 7-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-5 JQKA, Wild\n* Tie : Focus 6\n* Hits: .6\n* Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 7-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-5 JQKA, Wild\n* Tie : Focus 6\n* Hits: 6\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-6h)
@@ -747,12 +983,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Six of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_six,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6h,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 7-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-5 JQKA, Wild\n* Tie : Focus 6\n* Hits: .6\n* Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 7-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-5 JQKA, Wild\n* Tie : Focus 6\n* Hits: 6\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-6s)
@@ -760,12 +994,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Six of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_six,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6s,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 7-10, Focus\n* Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 6\n* Hits: .6, Draw 1\n* Combo: 6-7-8, Hits: 2.1, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 7-10, Focus\n* Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 6\n* Hits: 6, Draw 1\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-7c)
@@ -773,12 +1005,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Seven of Wands",
-      ":rank",
-      nx_tactics_base.c_rank_seven,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7c,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 8-10, Focus\n* Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 7\n* Hits: .7, Draw 1\n* Combo: 7-8-9, Hits: 2.4, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 8-10, Focus\n* Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 7\n* Hits: 7, Draw 1\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-7d)
@@ -786,12 +1016,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Seven of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_seven,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7d,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 8-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-6 JQKA, Wild\n* Tie : Focus 7\n* Hits: .7\n* Combo: 7-8-9, Hits: 2.4, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 8-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-6 JQKA, Wild\n* Tie : Focus 7\n* Hits: 7\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-7h)
@@ -799,12 +1027,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Seven of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_seven,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7h,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 8-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-6 JQKA, Wild\n* Tie : Focus 7\n* Hits: .7\n* Combo: 7-8-9, Hits: 2.4, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 8-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-6 JQKA, Wild\n* Tie : Focus 7\n* Hits: 7\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-7s)
@@ -812,12 +1038,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Seven of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_seven,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7s,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 8-10, Focus\n* Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 7\n* Hits: .7, Draw 1\n* Combo: 7-8-9, Hits: 2.4, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 8-10, Focus\n* Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 7\n* Hits: 7, Draw 1\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-8c)
@@ -825,12 +1049,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Eight of Wands",
-      ":rank",
-      nx_tactics_base.c_rank_eight,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8c,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 9-10, Focus\n* Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 8\n* Hits: .8, Draw 1\n* Combo: 8-9-10 Hits: 2.7, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 9-10, Focus\n* Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 8\n* Hits: 8, Draw 1\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-8d)
@@ -838,12 +1060,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Eight of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_eight,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8d,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 9-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-7 JQKA, Wild\n* Tie : Focus 8\n* Hits: .8\n* Combo: 8-9-10 Hits: 2.7, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 9-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-7 JQKA, Wild\n* Tie : Focus 8\n* Hits: 8\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-8h)
@@ -851,12 +1071,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Eight of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_eight,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8h,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 9-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-7 JQKA, Wild\n* Tie : Focus 8\n* Hits: .8\n* Combo: 8-9-10 Hits: 2.7, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 9-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-7 JQKA, Wild\n* Tie : Focus 8\n* Hits: 8\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-8s)
@@ -864,12 +1082,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Eight of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_eight,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8s,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 9-10, Focus\n* Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 8\n* Hits: .8, Draw 1\n* Combo: 8-9-10 Hits: 2.7, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 9-10, Focus\n* Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 8\n* Hits: 8, Draw 1\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-9c)
@@ -877,12 +1093,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Nine of Wands",
-      ":rank",
-      nx_tactics_base.c_rank_nine,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9c,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 10, Focus\n* Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 9\n* Hits: .9, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 10, Focus\n* Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 9\n* Hits: 9, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-9d)
@@ -890,12 +1104,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Nine of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_nine,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9d,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 9\n* Hits: .9\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 9\n* Hits: 9\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-9h)
@@ -903,12 +1115,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Nine of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_nine,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9h,
       ":summary",
-      "Focus (Normal)\n* Win : Focus 10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 9\n* Hits: .9\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus 10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 9\n* Hits: 9\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-9s)
@@ -916,12 +1126,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Nine of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_nine,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9s,
       ":summary",
-      "Attack (Normal)\n* Win : Attack 10, Focus\n* Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 9\n* Hits: .9, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Attack 10, Focus\n* Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 9\n* Hits: 9, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-ac)
@@ -929,12 +1137,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Devil",
-      ":rank",
-      nx_tactics_base.c_rank_ace,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ac,
       ":summary",
-      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hits: 1\n* Combo: 1 Hit/A\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hits: 1\n* Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-ad)
@@ -942,12 +1148,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Lust",
-      ":rank",
-      nx_tactics_base.c_rank_ace,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ad,
       ":summary",
-      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 1\n* Combo: 1 Hit/A\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 1\n* Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-ah)
@@ -955,12 +1159,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Lovers",
-      ":rank",
-      nx_tactics_base.c_rank_ace,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ah,
       ":summary",
-      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 1\n* Combo: 1 Hit/A\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 1\n* Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-as)
@@ -968,12 +1170,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Death",
-      ":rank",
-      nx_tactics_base.c_rank_ace,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_as,
       ":summary",
-      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hits: 1\n* Combo: 1 Hit/A\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hits: 0\n* Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-jc)
@@ -983,10 +1183,8 @@ export default class nx_tactics_decks_fate {
       "Magus",
       ":titles",
       "Knight of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_jack,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jc,
       ":summary",
       "Attack (Special)\n* Win : Attack 2-10 QK, Focus\n* Loss: Attack A, Defend, Evade, Counter, Wild\n* Tie : Attack J\n* Hits: 1\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
@@ -998,10 +1196,8 @@ export default class nx_tactics_decks_fate {
       "Hanged Man",
       ":titles",
       "Prince of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_jack,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jd,
       ":summary",
       "Focus (Special)\n* Win : Focus 2-10 QK, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 1\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
@@ -1013,10 +1209,8 @@ export default class nx_tactics_decks_fate {
       "Hermit",
       ":titles",
       "Princess of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_jack,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jh,
       ":summary",
       "Focus (Special)\n* Win : Focus 2-10 QK, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 1\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
@@ -1028,10 +1222,8 @@ export default class nx_tactics_decks_fate {
       "Star",
       ":titles",
       "Lady of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_jack,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_js,
       ":summary",
       "Attack (Special)\n* Win : Attack 2-10 QK, Focus\n* Loss: Attack A, Defend, Evade, Counter, Wild\n* Tie : Attack J\n* Hits: 1\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
@@ -1041,12 +1233,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Emperor",
-      ":rank",
-      nx_tactics_base.c_rank_king,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_kc,
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 1\n* Combo: 1 Hit/K (Max:2)\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 1\n* Combo: KK Hits: 2 or KKK Hits: 3\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-kd)
@@ -1054,12 +1244,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Judgement",
-      ":rank",
-      nx_tactics_base.c_rank_king,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_kd,
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 1\n* Combo: 1 Hit/K (Max 2)\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 1\n* Combo: KK Hits: 2 or KKK Hits: 3\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-kh)
@@ -1067,12 +1255,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Hierophant",
-      ":rank",
-      nx_tactics_base.c_rank_king,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_kh,
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 1\n* Combo: 1 Hit/K (Max 2)\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 1\n* Combo: KK Hits: 2 or KKK Hits: 3\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-ks)
@@ -1080,12 +1266,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Sun",
-      ":rank",
-      nx_tactics_base.c_rank_king,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ks,
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 1\n* Combo: 1 Hit/K (Max:2)\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 1\n* Combo: KK Hits: 2 or KKK Hits: 3\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-qc)
@@ -1093,12 +1277,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Empress",
-      ":rank",
-      nx_tactics_base.c_rank_queen,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qc,
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 1\n* Combo: 1 Hit/K (Max:2)\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 1\n* Combo: QQ Hits: 2\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-qd)
@@ -1106,12 +1288,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Justice",
-      ":rank",
-      nx_tactics_base.c_rank_queen,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qd,
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 1\n* Combo: 1 Hit/K (Max 1)\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 1\n* Combo: QQ Hits: 2\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-qh)
@@ -1121,12 +1301,10 @@ export default class nx_tactics_decks_fate {
       "Priestess",
       ":summary",
       "",
-      ":rank",
-      nx_tactics_base.c_rank_queen,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qh,
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 1\n* Combo: 1 Hit/Q (Max 1)\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 1\n* Combo: QQ Hits: 2\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-qs)
@@ -1134,12 +1312,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Moon",
-      ":rank",
-      nx_tactics_base.c_rank_queen,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qs,
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 1\n* Combo: 1 Hit/Q (Max:1)\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 1\n* Combo: QQ Hits: 2\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-tc)
@@ -1149,12 +1325,10 @@ export default class nx_tactics_decks_fate {
       "Tower",
       ":titles",
       "Ten of Rods",
-      ":rank",
-      nx_tactics_base.c_rank_ten,
-      ":suit",
-      nx_tactics_base.c_suit_club,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_tc,
       ":summary",
-      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 1, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 1, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-td)
@@ -1164,10 +1338,8 @@ export default class nx_tactics_decks_fate {
       "Wheel of Fortune",
       ":titles",
       "Ten of Coins",
-      ":rank",
-      nx_tactics_base.c_rank_ten,
-      ":suit",
-      nx_tactics_base.c_suit_diamond,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_td,
       ":summary",
       "Focus (Normal)\n* Win : Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 10\n* Hits: 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
@@ -1179,10 +1351,8 @@ export default class nx_tactics_decks_fate {
       "Art",
       ":titles",
       "Ten of Cups",
-      ":rank",
-      nx_tactics_base.c_rank_ten,
-      ":suit",
-      nx_tactics_base.c_suit_heart,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_th,
       ":summary",
       "Focus (Normal)\n* Win : Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 10\n* Hits: 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
@@ -1194,12 +1364,10 @@ export default class nx_tactics_decks_fate {
       "Chariot",
       ":titles",
       "Ten of Swords",
-      ":rank",
-      nx_tactics_base.c_rank_ten,
-      ":suit",
-      nx_tactics_base.c_suit_spade,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ts,
       ":summary",
-      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 1, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Draw 1"
+      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 1, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep 1, Draw 1"
     ))
 
     // (const fate-wildblack)
@@ -1207,12 +1375,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "Fool",
-      ":rank",
-      nx_tactics_base.c_rank_joker,
-      ":suit",
-      nx_tactics_base.c_suit_black,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jokerblack,
       ":summary",
-      "Wild:\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck."
+      "Wild (Gold Burst):\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck.\n\n- or -\n\nCombo Breaker (Blue Burst):\n* When a Combo is performed on you, discard to cancel the Combo."
     ))
 
     // (const fate-wildred)
@@ -1220,12 +1386,10 @@ export default class nx_tactics_decks_fate {
       nx_tactics_base.t_fate,
       ":name",
       "World",
-      ":rank",
-      nx_tactics_base.c_rank_joker,
-      ":suit",
-      nx_tactics_base.c_suit_red,
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jokerred,
       ":summary",
-      "Wild:\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck."
+      "Wild (Gold Burst):\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck.\n\n- or -\n\nCombo Breaker (Blue Burst):\n* When a Combo is performed on you, discard to cancel the Combo."
     ))
 
   }

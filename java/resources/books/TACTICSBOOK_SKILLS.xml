@@ -769,7 +769,7 @@
 				</summary>
 			</ability>
 		</skill>
-		<skill name="Starship Piloting">
+		<skill name="Starpiloting">
 			<ability name="Astronavigation" />
 			<ability name="Astronavigation - FTL" />
 			<ability name="Astronavigation - Jump Drive" />
