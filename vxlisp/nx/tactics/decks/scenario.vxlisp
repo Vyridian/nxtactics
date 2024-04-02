@@ -2,45 +2,105 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Scenario Decks")
 
+(func place-blacksmith : base/location
+ (base/location
+  :name "Blacksmith"
+  :image "images/cards/place-blacksmith.svg"))
+
+(func place-campsite : base/location
+ (base/location
+  :name "Campsite"
+  :image "images/cards/place-campsite.svg"))
+
+(func place-cavemouth : base/location
+ (base/location
+  :name "Cave Mouth"
+  :image "images/cards/place-cavemouth.svg"))
+
+(func place-farmhouse : base/location
+ (base/location
+  :name "Farmhouse"
+  :image "images/cards/place-farmhouse.svg"))
+
+(func place-field : base/location
+ (base/location
+  :name "Field"
+  :image "images/cards/place-field.svg"))
+
 (func place-forest : base/location
  (base/location
   :name "Forest"
-  :image "images/cards/place-forest.png"))
+  :image "images/cards/place-forest.svg"))
 
 (func place-guardpost : base/location
  (base/location
   :name "Guardpost"
-  :image "images/cards/place-guardpost.png"))
+  :image "images/cards/place-guardpost.svg"))
+
+(func place-mill : base/location
+ (base/location
+  :name "Mill"
+  :image "images/cards/place-mill.svg"))
 
 (func place-mountain : base/location
  (base/location
   :name "Mountain"
-  :image "images/cards/place-mountain.png"))
+  :image "images/cards/place-mountain.svg"))
 
 (func place-stoneroad : base/location
  (base/location
   :name "Stone Road"
-  :image "images/cards/place-stoneroad.png"))
+  :image "images/cards/place-stoneroad.svg"))
+
+(func place-tavern : base/location
+ (base/location
+  :name "Tavern"
+  :image "images/cards/place-tavern.svg"))
+
+(func place-temple : base/location
+ (base/location
+  :name "Temple"
+  :image "images/cards/place-temple.svg"))
+
+(func place-tradingpost : base/location
+ (base/location
+  :name "Trading Post"
+  :image "images/cards/place-tradingpost.svg"))
 
 (func unit-goblinscout : base/unit
  (base/unit
   :name "Goblin Scout"
-  :image "images/cards/unit-goblinscout.png"))
+  :image "images/cards/unit-goblin-scout.svg"))
 
 (func unit-horse : base/unit
  (base/unit
   :name "Horse"
-  :image "images/cards/unit-horse.png"))
+  :image "images/cards/unit-horse.svg"))
+
+(func unit-jessaveer : base/unit
+ (base/unit
+  :name "Jess Aveer"
+  :image "images/cards/unit-jessaveer.svg"))
+
+(func unit-jonaveer : base/unit
+ (base/unit
+  :name "Jon Aveer"
+  :image "images/cards/unit-jonaveer.svg"))
 
 (func unit-wilddog : base/unit
  (base/unit
   :name "Wild Dog"
-  :image "images/cards/unit-wilddog.png"))
+  :image "images/cards/unit-wilddog.svg"))
 
 (func unit-woodencart : base/unit
  (base/unit
   :name "Wooden Cart"
-  :image "images/cards/unit-woodencart.png"))
+  :image "images/cards/unit-woodencart.svg"))
+
+(func unit-xeibhanower : base/unit
+ (base/unit
+  :name "Xeib Honower"
+  :image "images/cards/unit-xeibhanower.svg"))
 
 (func deck-murintrail : base/deck
  (let : base/deck
@@ -55,9 +115,22 @@
      (base/cardlist
       goblinscout
       horse
+      (unit-jessaveer)
+      (unit-jonaveer)
+      (unit-xeibhanower)
       (unit-wilddog)
       (unit-woodencart)
+      (place-field)
       (place-forest)
-      (place-guardpost)
       (place-mountain)
-      (place-stoneroad))))))
+      (place-blacksmith)
+      (place-campsite)
+      (place-cavemouth)
+      (place-farmhouse)
+      (place-guardpost)
+      (place-mill)
+      (place-stoneroad)
+      (place-tavern)
+      (place-temple)
+      (place-tradingpost)
+      )))))

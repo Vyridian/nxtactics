@@ -30,6 +30,7 @@
  (base/fate
   :name "Fool"
   :ranksuit base/ranksuit-jokerblack
+  :image "images/card-fate-joker.svg"
   :summary
    "Wild (Gold Burst):
     * Win : Attack, Focus
@@ -47,6 +48,7 @@
  (base/fate
   :name "World"
   :ranksuit base/ranksuit-jokerred
+  :image "images/card-fate-joker.svg"
   :summary
    "Wild (Gold Burst):
     * Win : Attack, Focus
@@ -64,6 +66,7 @@
  (base/fate
   :name "Devil"
   :ranksuit base/ranksuit-ac
+  :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Super)
     * Win : Attack 2-K, Focus
@@ -83,6 +86,7 @@
  (base/fate
   :name "Lust"
   :ranksuit base/ranksuit-ad
+  :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Super)
     * Win : Focus 2-K, Defend, Evade, Counter
@@ -102,6 +106,7 @@
  (base/fate
   :name "Lovers"
   :ranksuit base/ranksuit-ah
+  :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Super)
     * Win : Focus 2-K, Defend, Evade, Counter
@@ -121,6 +126,7 @@
  (base/fate
   :name "Death"
   :ranksuit base/ranksuit-as
+  :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Super)
     * Win : Attack 2-K, Focus
@@ -140,6 +146,7 @@
  (base/fate
   :name "Emperor"
   :ranksuit base/ranksuit-kc
+  :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
     * Win : Attack 2-10, Focus
@@ -159,6 +166,7 @@
  (base/fate
   :name "Judgement"
   :ranksuit base/ranksuit-kd
+  :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
     * Win : Focus 2-10, Defend, Evade, Counter
@@ -178,6 +186,7 @@
  (base/fate
   :name "Hierophant"
   :ranksuit base/ranksuit-kh
+  :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
     * Win : Focus 2-10, Defend, Evade, Counter
@@ -197,6 +206,7 @@
  (base/fate
   :name "Sun"
   :ranksuit base/ranksuit-ks
+  :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
     * Win : Attack 2-10, Focus
@@ -216,6 +226,7 @@
  (base/fate
   :name "Empress"
   :ranksuit base/ranksuit-qc
+  :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
     * Win : Attack 2-10 K, Focus
@@ -235,6 +246,7 @@
  (base/fate
   :name "Justice"
   :ranksuit base/ranksuit-qd
+  :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
     * Win : Focus 2-10 K, Defend, Evade, Counter
@@ -255,6 +267,7 @@
   :name "Priestess"
   :summary ""
   :ranksuit base/ranksuit-qh
+  :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
     * Win : Focus 2-10 K, Defend, Evade, Counter
@@ -274,6 +287,7 @@
  (base/fate
   :name "Moon"
   :ranksuit base/ranksuit-qs
+  :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
     * Win : Attack 2-10 K, Focus
@@ -294,6 +308,7 @@
   :name "Magus"
   :titles "Knight of Rods"
   :ranksuit base/ranksuit-jc
+  :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
     * Win : Attack 2-10 QK, Focus
@@ -313,6 +328,7 @@
   :name "Hanged Man"
   :titles "Prince of Coins"
   :ranksuit base/ranksuit-jd
+  :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
     * Win : Focus 2-10 QK, Defend, Evade, Counter
@@ -332,6 +348,7 @@
   :name "Hermit"
   :titles "Princess of Cups"
   :ranksuit base/ranksuit-jh
+  :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
     * Win : Focus 2-10 QK, Defend, Evade, Counter
@@ -351,6 +368,7 @@
   :name "Star"
   :titles "Lady of Swords"
   :ranksuit base/ranksuit-js
+  :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
     * Win : Attack 2-10 QK, Focus
@@ -370,6 +388,7 @@
   :name "Tower"
   :titles "Ten of Rods"
   :ranksuit base/ranksuit-tc
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Focus
@@ -382,13 +401,14 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-td : base/fate
  (base/fate
   :name "Wheel of Fortune"
   :titles "Ten of Coins"
   :ranksuit base/ranksuit-td
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Defend, Evade, Counter
@@ -408,6 +428,7 @@
   :name "Art"
   :titles "Ten of Cups"
   :ranksuit base/ranksuit-th
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Defend, Evade, Counter
@@ -427,6 +448,7 @@
   :name "Chariot"
   :titles "Ten of Swords"
   :ranksuit base/ranksuit-ts
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Focus
@@ -439,12 +461,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-9c : base/fate
  (base/fate
   :name "Nine of Wands"
   :ranksuit base/ranksuit-9c
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 10, Focus
@@ -457,12 +480,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-9d : base/fate
  (base/fate
   :name "Nine of Coins"
   :ranksuit base/ranksuit-9d
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 10, Defend, Evade, Counter
@@ -481,6 +505,7 @@
  (base/fate
   :name "Nine of Cups"
   :ranksuit base/ranksuit-9h
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 10, Defend, Evade, Counter
@@ -499,6 +524,7 @@
  (base/fate
   :name "Nine of Swords"
   :ranksuit base/ranksuit-9s
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 10, Focus
@@ -511,12 +537,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-8c : base/fate
  (base/fate
   :name "Eight of Wands"
   :ranksuit base/ranksuit-8c
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 9-10, Focus
@@ -530,12 +557,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-8d : base/fate
  (base/fate
   :name "Eight of Coins"
   :ranksuit base/ranksuit-8d
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 9-10, Defend, Evade, Counter
@@ -555,6 +583,7 @@
  (base/fate
   :name "Eight of Cups"
   :ranksuit base/ranksuit-8h
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 9-10, Defend, Evade, Counter
@@ -574,6 +603,7 @@
  (base/fate
   :name "Eight of Swords"
   :ranksuit base/ranksuit-8s
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 9-10, Focus
@@ -587,12 +617,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-7c : base/fate
  (base/fate
   :name "Seven of Wands"
   :ranksuit base/ranksuit-7c
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 8-10, Focus
@@ -606,12 +637,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-7d : base/fate
  (base/fate
   :name "Seven of Coins"
   :ranksuit base/ranksuit-7d
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 8-10, Defend, Evade, Counter
@@ -631,6 +663,7 @@
  (base/fate
   :name "Seven of Cups"
   :ranksuit base/ranksuit-7h
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 8-10, Defend, Evade, Counter
@@ -650,6 +683,7 @@
  (base/fate
   :name "Seven of Swords"
   :ranksuit base/ranksuit-7s
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 8-10, Focus
@@ -663,12 +697,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-6c : base/fate
  (base/fate
   :name "Six of Wands"
   :ranksuit base/ranksuit-6c
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 7-10, Focus
@@ -682,12 +717,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-6d : base/fate
  (base/fate
   :name "Six of Coins"
   :ranksuit base/ranksuit-6d
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 7-10, Defend, Evade, Counter
@@ -707,6 +743,7 @@
  (base/fate
   :name "Six of Cups"
   :ranksuit base/ranksuit-6h
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 7-10, Defend, Evade, Counter
@@ -726,6 +763,7 @@
  (base/fate
   :name "Six of Swords"
   :ranksuit base/ranksuit-6s
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 7-10, Focus
@@ -739,12 +777,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-5c : base/fate
  (base/fate
   :name "Five of Wands"
   :ranksuit base/ranksuit-5c
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 6-10, Focus
@@ -758,12 +797,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-5d : base/fate
  (base/fate
   :name "Five of Coins"
   :ranksuit base/ranksuit-5d
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 6-10, Defend, Evade, Counter
@@ -783,6 +823,7 @@
  (base/fate
   :name "Five of Cups"
   :ranksuit base/ranksuit-5h
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 6-10, Defend, Evade, Counter
@@ -802,6 +843,7 @@
  (base/fate
   :name "Five of Swords"
   :ranksuit base/ranksuit-5s
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 6-10, Focus
@@ -815,12 +857,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-4c : base/fate
  (base/fate
   :name "Four of Wands"
   :ranksuit base/ranksuit-4c
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 5-10, Focus
@@ -834,12 +877,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-4d : base/fate
  (base/fate
   :name "Four of Coins"
   :ranksuit base/ranksuit-4d
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 5-10, Defend, Evade, Counter
@@ -859,6 +903,7 @@
  (base/fate
   :name "Four of Cups"
   :ranksuit base/ranksuit-4h
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 5-10, Defend, Evade, Counter
@@ -878,6 +923,7 @@
  (base/fate
   :name "Four of Swords"
   :ranksuit base/ranksuit-4s
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 5-10, Focus
@@ -891,12 +937,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-3c : base/fate
  (base/fate
   :name "Three of Wands"
   :ranksuit base/ranksuit-3c
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 4-10, Focus
@@ -910,12 +957,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-3d : base/fate
  (base/fate
   :name "Three of Coins"
   :ranksuit base/ranksuit-3d
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 4-10, Defend, Evade, Counter
@@ -935,6 +983,7 @@
  (base/fate
   :name "Three of Cups"
   :ranksuit base/ranksuit-3h
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 4-10, Defend, Evade, Counter
@@ -954,6 +1003,7 @@
  (base/fate
   :name "Three of Swords"
   :ranksuit base/ranksuit-3s
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 4-10, Focus
@@ -967,12 +1017,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-2c : base/fate
  (base/fate
   :name "Two of Wands"
   :ranksuit base/ranksuit-2c
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 3-10, Focus
@@ -986,12 +1037,13 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (const fate-2d : base/fate
  (base/fate
   :name "Two of Coins"
   :ranksuit base/ranksuit-2d
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 3-10, Defend, Evade, Counter
@@ -1011,6 +1063,7 @@
  (base/fate
   :name "Two of Cups"
   :ranksuit base/ranksuit-2h
+  :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
     * Win : Focus 3-10, Defend, Evade, Counter
@@ -1030,6 +1083,7 @@
  (base/fate
   :name "Two of Swords"
   :ranksuit base/ranksuit-2s
+  :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
     * Win : Attack 3-10, Focus
@@ -1043,7 +1097,7 @@
     Defend
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep 1, Draw 1"))
+    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
 (func deck-fate : base/deck
  (base/deck

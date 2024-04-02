@@ -3,17 +3,12 @@
        (lib typ  :path vx/type)
  :doc  "Tactics Starter Decks")
 
-(func card-characterguide : base/card
+(func card-action-combat : base/card
  (base/card
-  :id "characterguide"
-  :name "Character Guide"))
-
-(func card-combatguide : base/card
- (base/card
-  :id "combatguide"
-  :name "Combat Guide"
+  :id "action-combat"
+  :name "Action: Combat"
   :summary
-   "* When a unit targets another with a damaging Skill/Power, then Combat begins.
+   "* Target a unit damaging Skill/Power.
     * Each player chooses a Fate card from their hand or a random Fate from Shared Fate.
     * Fate Cards are compared like Rock/Paper/Scissors.
     * Order: Attack > Focus > Defend/Evade/Counter > Attack
@@ -22,6 +17,28 @@
     * If Tied, there is no result.
     * If one player Wins, then resolve their result and apply Damage.
     * Discard all card used (except Keep)"))
+
+(func card-action-move : base/card
+ (base/card
+  :id "action-move"
+  :name "Action: Move"))
+
+(func card-action-recover : base/card
+ (base/card
+  :id "action-recover"
+  :name "Action: Recover"
+  :summary
+   "* Discard a [Fatigue], [Stun], [Stress], or [Slow]"))
+
+(func card-action-skill : base/card
+ (base/card
+  :id "action-skill"
+  :name "Action: Skill"))
+
+(func card-characterguide : base/card
+ (base/card
+  :id "characterguide"
+  :name "Character Guide"))
 
 (func card-damageguide : base/card
  (base/card
@@ -48,6 +65,14 @@
   :id "fateupper"
   :name "Fate Uppper"
   :image "images/card-fate-upper.svg"))
+
+(func card-free-action : base/card
+ (base/card
+  :id "free-action"
+  :name "Free Action"
+  :summary
+   "* Move: Take a [Fatigue] to [Move]:1.
+    * Opportunity Combat: If a Target moves through 2 spaces adjacent to a Unit, that Unit may spend a [Stun] to take a free [Action: Combat]."))
 
 (func card-gameguide : base/card
  (base/card
@@ -103,27 +128,27 @@
     * Player [Turn Order] cards are shuffled together to create a [Turn Order] deck.
     * Reveal the top card in the Scenario deck and follow its instructions."))
 
-(func card-skillguide : base/card
+(func card-turn-game : base/card
  (base/card
-  :id "skillguide"
-  :name "Skill Guide"))
-
-(func card-turnguide : base/card
- (base/card
-  :id "turnguide"
-  :name "Turn Guide"
+  :id "turn-game"
+  :name "Turn: Game"
   :summary
    "* Reveal: Reveal the top card from the [Turn Order] deck to determine the next active Player.
     * Activate and Target: That [Player] chooses a Unit to Activate and announces a target.
-    * Reveal Again: Reveal the next card from the [Turn Order] deck. If none, got to Take Actions
+    * Reveal Again: Reveal the next card from the [Turn Order] deck. If none, go to Player Turns
     * Activate and Target: The next Player MAY choose a Unit to Activate and announce a target that is not currently an active Player or a target. If so, repeat the Reveal Again step.
     * Wait: OR the next player may Wait for the previous [Player] to finish.
-    * Take Actions: If a player Waited or there are no [Turn Order] cards remaining, the active Players may simultaneous Take Actions."))
+    * Player Turns: If a player Waited or there are no [Turn Order] cards remaining, the active Players may simultaneously do [Turn: Player]."))
 
-(func card-turnorder : base/card
+(func card-turn-order : base/card
  (base/card
-  :id "turnorder"
+  :id "turn-order"
   :name "Turn Order"))
+
+(func card-turn-player : base/card
+ (base/card
+  :id "turn-player"
+  :name "Turn: Player"))
 
 (func card-unit-blue : base/card
  [num : int]
@@ -159,13 +184,17 @@
     (base/cardlist
      (card-gameguide)
      (card-setupguide)
-     (card-turnguide)
-     (card-combatguide)
+     (card-turn-game)
+     (card-turn-player)
+     (card-action-move)
+     (card-action-combat)
      (card-damageguide)
-     (card-skillguide)
+     (card-action-skill)
+     (card-action-recover)
+     (card-free-action)
      (card-characterguide)
      (card-levelingguide)
-     (card-turnorder)
+     (card-turn-order)
      (card-fateupper)
      (card-fatelower))
    cardmap : base/cardmap :=

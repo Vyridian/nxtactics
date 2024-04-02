@@ -38,16 +38,148 @@ export default class nx_tactics_decks_scenario {
               nx_tactics_base.t_cardlist,
               goblinscout,
               horse,
+              nx_tactics_decks_scenario.f_unit_jessaveer(),
+              nx_tactics_decks_scenario.f_unit_jonaveer(),
+              nx_tactics_decks_scenario.f_unit_xeibhanower(),
               nx_tactics_decks_scenario.f_unit_wilddog(),
               nx_tactics_decks_scenario.f_unit_woodencart(),
+              nx_tactics_decks_scenario.f_place_field(),
               nx_tactics_decks_scenario.f_place_forest(),
-              nx_tactics_decks_scenario.f_place_guardpost(),
               nx_tactics_decks_scenario.f_place_mountain(),
-              nx_tactics_decks_scenario.f_place_stoneroad()
+              nx_tactics_decks_scenario.f_place_blacksmith(),
+              nx_tactics_decks_scenario.f_place_campsite(),
+              nx_tactics_decks_scenario.f_place_cavemouth(),
+              nx_tactics_decks_scenario.f_place_farmhouse(),
+              nx_tactics_decks_scenario.f_place_guardpost(),
+              nx_tactics_decks_scenario.f_place_mill(),
+              nx_tactics_decks_scenario.f_place_stoneroad(),
+              nx_tactics_decks_scenario.f_place_tavern(),
+              nx_tactics_decks_scenario.f_place_temple(),
+              nx_tactics_decks_scenario.f_place_tradingpost()
             )
           )
         )
       })
+    )
+    return output
+  }
+
+  /**
+   * @function place_blacksmith
+   * @return {location}
+   */
+  static t_place_blacksmith = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_blacksmith = {
+    vx_type: nx_tactics_decks_scenario.t_place_blacksmith
+  }
+
+  // (func place-blacksmith)
+  static f_place_blacksmith() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Blacksmith",
+      ":image",
+      "images/cards/place-blacksmith.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_campsite
+   * @return {location}
+   */
+  static t_place_campsite = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_campsite = {
+    vx_type: nx_tactics_decks_scenario.t_place_campsite
+  }
+
+  // (func place-campsite)
+  static f_place_campsite() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Campsite",
+      ":image",
+      "images/cards/place-campsite.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_cavemouth
+   * @return {location}
+   */
+  static t_place_cavemouth = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_cavemouth = {
+    vx_type: nx_tactics_decks_scenario.t_place_cavemouth
+  }
+
+  // (func place-cavemouth)
+  static f_place_cavemouth() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Cave Mouth",
+      ":image",
+      "images/cards/place-cavemouth.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_farmhouse
+   * @return {location}
+   */
+  static t_place_farmhouse = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_farmhouse = {
+    vx_type: nx_tactics_decks_scenario.t_place_farmhouse
+  }
+
+  // (func place-farmhouse)
+  static f_place_farmhouse() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Farmhouse",
+      ":image",
+      "images/cards/place-farmhouse.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_field
+   * @return {location}
+   */
+  static t_place_field = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_field = {
+    vx_type: nx_tactics_decks_scenario.t_place_field
+  }
+
+  // (func place-field)
+  static f_place_field() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Field",
+      ":image",
+      "images/cards/place-field.svg"
     )
     return output
   }
@@ -71,7 +203,7 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Forest",
       ":image",
-      "images/cards/place-forest.png"
+      "images/cards/place-forest.svg"
     )
     return output
   }
@@ -95,7 +227,31 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Guardpost",
       ":image",
-      "images/cards/place-guardpost.png"
+      "images/cards/place-guardpost.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_mill
+   * @return {location}
+   */
+  static t_place_mill = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_mill = {
+    vx_type: nx_tactics_decks_scenario.t_place_mill
+  }
+
+  // (func place-mill)
+  static f_place_mill() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Mill",
+      ":image",
+      "images/cards/place-mill.svg"
     )
     return output
   }
@@ -119,7 +275,7 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Mountain",
       ":image",
-      "images/cards/place-mountain.png"
+      "images/cards/place-mountain.svg"
     )
     return output
   }
@@ -143,7 +299,79 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Stone Road",
       ":image",
-      "images/cards/place-stoneroad.png"
+      "images/cards/place-stoneroad.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_tavern
+   * @return {location}
+   */
+  static t_place_tavern = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_tavern = {
+    vx_type: nx_tactics_decks_scenario.t_place_tavern
+  }
+
+  // (func place-tavern)
+  static f_place_tavern() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Tavern",
+      ":image",
+      "images/cards/place-tavern.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_temple
+   * @return {location}
+   */
+  static t_place_temple = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_temple = {
+    vx_type: nx_tactics_decks_scenario.t_place_temple
+  }
+
+  // (func place-temple)
+  static f_place_temple() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Temple",
+      ":image",
+      "images/cards/place-temple.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_tradingpost
+   * @return {location}
+   */
+  static t_place_tradingpost = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_tradingpost = {
+    vx_type: nx_tactics_decks_scenario.t_place_tradingpost
+  }
+
+  // (func place-tradingpost)
+  static f_place_tradingpost() {
+    let output = nx_tactics_base.e_location
+    output = vx_core.f_new(
+      nx_tactics_base.t_location,
+      ":name",
+      "Trading Post",
+      ":image",
+      "images/cards/place-tradingpost.svg"
     )
     return output
   }
@@ -167,7 +395,7 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Goblin Scout",
       ":image",
-      "images/cards/unit-goblinscout.png"
+      "images/cards/unit-goblin-scout.svg"
     )
     return output
   }
@@ -191,7 +419,55 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Horse",
       ":image",
-      "images/cards/unit-horse.png"
+      "images/cards/unit-horse.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function unit_jessaveer
+   * @return {unit}
+   */
+  static t_unit_jessaveer = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_jessaveer = {
+    vx_type: nx_tactics_decks_scenario.t_unit_jessaveer
+  }
+
+  // (func unit-jessaveer)
+  static f_unit_jessaveer() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Jess Aveer",
+      ":image",
+      "images/cards/unit-jessaveer.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function unit_jonaveer
+   * @return {unit}
+   */
+  static t_unit_jonaveer = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_jonaveer = {
+    vx_type: nx_tactics_decks_scenario.t_unit_jonaveer
+  }
+
+  // (func unit-jonaveer)
+  static f_unit_jonaveer() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Jon Aveer",
+      ":image",
+      "images/cards/unit-jonaveer.svg"
     )
     return output
   }
@@ -215,7 +491,7 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Wild Dog",
       ":image",
-      "images/cards/unit-wilddog.png"
+      "images/cards/unit-wilddog.svg"
     )
     return output
   }
@@ -239,7 +515,31 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Wooden Cart",
       ":image",
-      "images/cards/unit-woodencart.png"
+      "images/cards/unit-woodencart.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function unit_xeibhanower
+   * @return {unit}
+   */
+  static t_unit_xeibhanower = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_xeibhanower = {
+    vx_type: nx_tactics_decks_scenario.t_unit_xeibhanower
+  }
+
+  // (func unit-xeibhanower)
+  static f_unit_xeibhanower() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Xeib Honower",
+      ":image",
+      "images/cards/unit-xeibhanower.svg"
     )
     return output
   }
@@ -252,25 +552,49 @@ export default class nx_tactics_decks_scenario {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-murintrail": nx_tactics_decks_scenario.e_deck_murintrail,
+      "place-blacksmith": nx_tactics_decks_scenario.e_place_blacksmith,
+      "place-campsite": nx_tactics_decks_scenario.e_place_campsite,
+      "place-cavemouth": nx_tactics_decks_scenario.e_place_cavemouth,
+      "place-farmhouse": nx_tactics_decks_scenario.e_place_farmhouse,
+      "place-field": nx_tactics_decks_scenario.e_place_field,
       "place-forest": nx_tactics_decks_scenario.e_place_forest,
       "place-guardpost": nx_tactics_decks_scenario.e_place_guardpost,
+      "place-mill": nx_tactics_decks_scenario.e_place_mill,
       "place-mountain": nx_tactics_decks_scenario.e_place_mountain,
       "place-stoneroad": nx_tactics_decks_scenario.e_place_stoneroad,
+      "place-tavern": nx_tactics_decks_scenario.e_place_tavern,
+      "place-temple": nx_tactics_decks_scenario.e_place_temple,
+      "place-tradingpost": nx_tactics_decks_scenario.e_place_tradingpost,
       "unit-goblinscout": nx_tactics_decks_scenario.e_unit_goblinscout,
       "unit-horse": nx_tactics_decks_scenario.e_unit_horse,
+      "unit-jessaveer": nx_tactics_decks_scenario.e_unit_jessaveer,
+      "unit-jonaveer": nx_tactics_decks_scenario.e_unit_jonaveer,
       "unit-wilddog": nx_tactics_decks_scenario.e_unit_wilddog,
-      "unit-woodencart": nx_tactics_decks_scenario.e_unit_woodencart
+      "unit-woodencart": nx_tactics_decks_scenario.e_unit_woodencart,
+      "unit-xeibhanower": nx_tactics_decks_scenario.e_unit_xeibhanower
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-murintrail": nx_tactics_decks_scenario.t_deck_murintrail,
+      "place-blacksmith": nx_tactics_decks_scenario.t_place_blacksmith,
+      "place-campsite": nx_tactics_decks_scenario.t_place_campsite,
+      "place-cavemouth": nx_tactics_decks_scenario.t_place_cavemouth,
+      "place-farmhouse": nx_tactics_decks_scenario.t_place_farmhouse,
+      "place-field": nx_tactics_decks_scenario.t_place_field,
       "place-forest": nx_tactics_decks_scenario.t_place_forest,
       "place-guardpost": nx_tactics_decks_scenario.t_place_guardpost,
+      "place-mill": nx_tactics_decks_scenario.t_place_mill,
       "place-mountain": nx_tactics_decks_scenario.t_place_mountain,
       "place-stoneroad": nx_tactics_decks_scenario.t_place_stoneroad,
+      "place-tavern": nx_tactics_decks_scenario.t_place_tavern,
+      "place-temple": nx_tactics_decks_scenario.t_place_temple,
+      "place-tradingpost": nx_tactics_decks_scenario.t_place_tradingpost,
       "unit-goblinscout": nx_tactics_decks_scenario.t_unit_goblinscout,
       "unit-horse": nx_tactics_decks_scenario.t_unit_horse,
+      "unit-jessaveer": nx_tactics_decks_scenario.t_unit_jessaveer,
+      "unit-jonaveer": nx_tactics_decks_scenario.t_unit_jonaveer,
       "unit-wilddog": nx_tactics_decks_scenario.t_unit_wilddog,
-      "unit-woodencart": nx_tactics_decks_scenario.t_unit_woodencart
+      "unit-woodencart": nx_tactics_decks_scenario.t_unit_woodencart,
+      "unit-xeibhanower": nx_tactics_decks_scenario.t_unit_xeibhanower
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -300,6 +624,96 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_deck_murintrail
+    }
+
+    // (func place-blacksmith)
+    nx_tactics_decks_scenario.t_place_blacksmith['vx_value'] = {
+      name          : "place-blacksmith",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_blacksmith
+    }
+
+    // (func place-campsite)
+    nx_tactics_decks_scenario.t_place_campsite['vx_value'] = {
+      name          : "place-campsite",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_campsite
+    }
+
+    // (func place-cavemouth)
+    nx_tactics_decks_scenario.t_place_cavemouth['vx_value'] = {
+      name          : "place-cavemouth",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_cavemouth
+    }
+
+    // (func place-farmhouse)
+    nx_tactics_decks_scenario.t_place_farmhouse['vx_value'] = {
+      name          : "place-farmhouse",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_farmhouse
+    }
+
+    // (func place-field)
+    nx_tactics_decks_scenario.t_place_field['vx_value'] = {
+      name          : "place-field",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_field
     }
 
     // (func place-forest)
@@ -338,6 +752,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_place_guardpost
     }
 
+    // (func place-mill)
+    nx_tactics_decks_scenario.t_place_mill['vx_value'] = {
+      name          : "place-mill",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_mill
+    }
+
     // (func place-mountain)
     nx_tactics_decks_scenario.t_place_mountain['vx_value'] = {
       name          : "place-mountain",
@@ -372,6 +804,60 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_place_stoneroad
+    }
+
+    // (func place-tavern)
+    nx_tactics_decks_scenario.t_place_tavern['vx_value'] = {
+      name          : "place-tavern",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_tavern
+    }
+
+    // (func place-temple)
+    nx_tactics_decks_scenario.t_place_temple['vx_value'] = {
+      name          : "place-temple",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_temple
+    }
+
+    // (func place-tradingpost)
+    nx_tactics_decks_scenario.t_place_tradingpost['vx_value'] = {
+      name          : "place-tradingpost",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_tradingpost
     }
 
     // (func unit-goblinscout)
@@ -410,6 +896,42 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_unit_horse
     }
 
+    // (func unit-jessaveer)
+    nx_tactics_decks_scenario.t_unit_jessaveer['vx_value'] = {
+      name          : "unit-jessaveer",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_jessaveer
+    }
+
+    // (func unit-jonaveer)
+    nx_tactics_decks_scenario.t_unit_jonaveer['vx_value'] = {
+      name          : "unit-jonaveer",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_jonaveer
+    }
+
     // (func unit-wilddog)
     nx_tactics_decks_scenario.t_unit_wilddog['vx_value'] = {
       name          : "unit-wilddog",
@@ -444,6 +966,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_unit_woodencart
+    }
+
+    // (func unit-xeibhanower)
+    nx_tactics_decks_scenario.t_unit_xeibhanower['vx_value'] = {
+      name          : "unit-xeibhanower",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_xeibhanower
     }
 
   }

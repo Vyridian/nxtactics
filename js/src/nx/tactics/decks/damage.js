@@ -841,6 +841,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Right Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
+      ":image",
+      "images/card-hitlocation-foot-right.svg",
       ":summary",
       "Minor: Shin Bruised. Slow:1\nModerate: Foot Smash. Slow:1 Stress:1\nMajor: Ankle Fracture. Hobbled. Slow:2\nExtreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"
     ))
@@ -854,6 +856,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Right Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2d,
+      ":image",
+      "images/card-hitlocation-foot-right.svg",
       ":summary",
       "Minor: Ankle Graze. Slow:1\nModerate: Foot Slash. Slow:1 Bleeding:1\nMajor: Foot Pierced. Slow:3 Bleeding:1\nExtreme: Ankle Useless. Hobbled. Bleeding:1"
     ))
@@ -867,6 +871,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Right Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
+      ":image",
+      "images/card-hitlocation-foot-right.svg",
       ":summary",
       "Minor: Ankle Grazed. Withdraw:1\nModerate: Ankle Gash. Withdraw:1 Bleeding:1\nMajor: 2 Toes Lost. Stress:2 Bleeding:1\nExtreme: Foot Mangled. Hobbled. Stress:2 Bleeding:2"
     ))
@@ -880,6 +886,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Right Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
+      ":image",
+      "images/card-hitlocation-foot-right.svg",
       ":summary",
       "Minor: Foot Cut. Bleeding:1\nModerate: Ankle Slash. Slow:1 Bleeding:1\nMajor: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1\nExtreme: Foot Severed. Hobbled. Bleeding:2"
     ))
@@ -893,6 +901,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
+      ":image",
+      "images/card-hitlocation-foot-left.svg",
       ":summary",
       "Minor: Shin Bruised. Slow:1\nModerate: Foot Smash. Slow:1 Stress:1\nMajor: Ankle Fracture. Hobbled. Slow:2\nExtreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"
     ))
@@ -906,6 +916,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3d,
+      ":image",
+      "images/card-hitlocation-foot-left.svg",
       ":summary",
       "Minor: Ankle Graze. Slow:1\nModerate: Foot Slash. Slow:1 Bleeding:1\nMajor: Foot Pierced. Slow:3 Bleeding:1\nExtreme: Ankle Useless. Hobbled. Bleeding:1"
     ))
@@ -919,6 +931,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3h,
+      ":image",
+      "images/card-hitlocation-foot-left.svg",
       ":summary",
       "Minor: Ankle Grazed. Withdraw:1\nModerate: Ankle Gash. Withdraw:1 Bleeding:1\nMajor: 2 Toes Lost. Stress:2 Bleeding:1\nExtreme: Foot Mangled. Hobbled. Stress:2 Bleeding:2"
     ))
@@ -932,6 +946,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Left Lower Leg/Shin/Ankle/Foot",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
+      ":image",
+      "images/card-hitlocation-foot-left.svg",
       ":summary",
       "Minor: Foot Cut. Bleeding:1\nModerate: Ankle Slash. Slow:1 Bleeding:1\nMajor: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1\nExtreme: Foot Severed. Hobbled. Bleeding:2"
     ))
@@ -945,6 +961,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Right Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
+      ":image",
+      "images/card-hitlocation-leg-right.svg",
       ":summary",
       "Minor: Thigh Bruise. Fatigue:1\nModerate: Knee Damage. Slow:1 Fatigue:1\nMajor: Knee Fracture. Hobbled. Slow:2 Fatigue: 1\nExtreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"
     ))
@@ -958,6 +976,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Right Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4d,
+      ":image",
+      "images/card-hitlocation-leg-right.svg",
       ":summary",
       "Minor: Thigh Graze. Slow:1\nModerate: Thigh Pierced. Stress:1 Bleeding:1\nMajor: Knee Pierced. Hobbled. Slow:3 Bleeding:1\nExtreme: Nerve Damage. Hobbled. Bleeding:2 Stress:2"
     ))
@@ -971,6 +991,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Right Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
+      ":image",
+      "images/card-hitlocation-leg-right.svg",
       ":summary",
       "Minor: Thigh Graze. Withdraw:1\nModerate: Thigh Cut. Withdraw:1 Bleeding:1\nMajor: Wide Thigh Gash. Slow:2 Bleeding:2\nExtreme: Severed at Knee. Hobbled. Bleeding:2 Stress:2"
     ))
@@ -984,6 +1006,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Right Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
+      ":image",
+      "images/card-hitlocation-leg-right.svg",
       ":summary",
       "Minor: Thigh Cut. Bleeding:1\nModerate: Thigh Slash. Scarred. Slow:1 Bleeding:1\nMajor: Hamstring Cut. Hobbled. Slow:2 Bleeding:2\nExtreme: Artery Severed. Bleeding:4 Stress:2"
     ))
@@ -997,6 +1021,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Left Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
+      ":image",
+      "images/card-hitlocation-leg-left.svg",
       ":summary",
       "Minor: Thigh Bruise. Fatigue:1\nModerate: Knee Damage. Slow:1 Fatigue:1\nMajor: Knee Fracture. Hobbled. Slow:2 Fatigue: 1\nExtreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"
     ))
@@ -1010,6 +1036,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Left Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5d,
+      ":image",
+      "images/card-hitlocation-leg-left.svg",
       ":summary",
       "Minor: Thigh Graze. Slow:1\nModerate: Thigh Pierced. Stress:1 Bleeding:1\nMajor: Knee Pierced. Hobbled. Slow:3 Bleeding:1\nExtreme: Nerve Damage. Hobbled. Bleeding:2 Stress:2"
     ))
@@ -1023,6 +1051,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Left Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
+      ":image",
+      "images/card-hitlocation-leg-left.svg",
       ":summary",
       "Minor: Thigh Graze. Withdraw:1\nModerate: Thigh Slash. Withdraw:1 Bleeding:1\nMajor: Wide Thigh Gash. Slow:2 Bleeding:2\nExtreme: Severed at Knee. Hobbled. Bleeding:2 Stress:2"
     ))
@@ -1036,6 +1066,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Left Upper Leg/Thigh/Knee",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
+      ":image",
+      "images/card-hitlocation-leg-left.svg",
       ":summary",
       "Minor: Thigh Cut. Bleeding:1\nModerate: Thigh Slash. Scarred. Slow:1 Bleeding:1\nMajor: Hamstring Cut. Hobbled. Slow:2 Bleeding:2\nExtreme: Artery Severed. Bleeding:4 Stress:2"
     ))
@@ -1049,6 +1081,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Right Lower Arm/Wrist/Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
+      ":image",
+      "images/card-hitlocation-hand-right.svg",
       ":summary",
       "Minor: Forearm Bruise. Fatigue:1\nModerate: Hand Numb. Drop:1 Stress:1 Stun:1\nMajor: Hand Fracture. Impaired. Stun:2 Fatigue:1\nExtreme: Hand Shattered. Impaired. Stun:2 Stress:2"
     ))
@@ -1062,6 +1096,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Right Lower Arm/Wrist/Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6d,
+      ":image",
+      "images/card-hitlocation-hand-right.svg",
       ":summary",
       "Minor: Forearm Graze. Stun:1\nModerate: Forearm Pierced. Stun:1 Bleeding:1\nMajor: Wrist Pierced. Impaired. Stun:1 Bleeding:2\nExtreme: Artery Cut. Impaired. Stun:2 Bleeding:2"
     ))
@@ -1075,6 +1111,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Right Lower Arm/Wrist/Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
+      ":image",
+      "images/card-hitlocation-hand-right.svg",
       ":summary",
       "Minor: Forearm Graze. Withdraw:1\nModerate: Forearm Gash. Drop:1 Stress:1 Bleeding:1\nMajor: Hand Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Hand Mangled. Impaired. Bleeding:2 Stress:2"
     ))
@@ -1088,6 +1126,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Right Lower Arm/Wrist/Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
+      ":image",
+      "images/card-hitlocation-hand-right.svg",
       ":summary",
       "Minor: Forearm Cut. Bleeding:1\nModerate: Forearm Slash. Drop:1 Slow:1 Bleeding:1\nExtreme: Artery Severed. Impaired. Bleeding:3 Stress:1\nExtreme: Hand Severed. Impaired. Bleeding:2 Stress:2"
     ))
@@ -1101,6 +1141,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Left Lower Arm/Wrist/Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
+      ":image",
+      "images/card-hitlocation-hand-left.svg",
       ":summary",
       "Minor: Forearm Bruise. Fatigue:1\nModerate: Hand Numb. Drop:1 Stress:1 Stun:1\nMajor: Hand Fracture. Impaired. Stun:2 Fatigue:1\nExtreme: Hand Shattered. Impaired. Stun:2 Stress:2"
     ))
@@ -1114,6 +1156,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Left Lower Arm/Wrist/Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7d,
+      ":image",
+      "images/card-hitlocation-hand-left.svg",
       ":summary",
       "Minor: Forearm Graze. Stun:1\nModerate: Forearm Pierced. Stun:1 Bleeding:1\nMajor: Wrist Pierced. Impaired. Stun:1 Bleeding:2\nExtreme: Artery Cut. Impaired. Stun:2 Bleeding:2"
     ))
@@ -1127,6 +1171,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Left Lower Arm/Wrist/Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
+      ":image",
+      "images/card-hitlocation-hand-left.svg",
       ":summary",
       "Minor: Forearm Graze. Withdraw:1\nModerate: Forearm Gash. Drop:1 Stress:1 Bleeding:1\nMajor: Hand Slash. Impaired. Stress:2 Bleeding:2\nExtreme: Hand Mangled. Impaired. Bleeding:2 Stress:2"
     ))
@@ -1140,6 +1186,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Left Lower Arm/Wrist/Hand",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
+      ":image",
+      "images/card-hitlocation-hand-left.svg",
       ":summary",
       "Minor: Forearm Cut. Bleeding:1\nModerate: Forearm Slash. Drop:1 Slow:1 Bleeding:1\nExtreme: Artery Severed. Impaired. Bleeding:3 Stress:1\nExtreme: Hand Severed. Impaired. Bleeding:2 Stress:2"
     ))
@@ -1153,6 +1201,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Right Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
+      ":image",
+      "images/card-hitlocation-arm-right.svg",
       ":summary",
       "Minor: Arm Bruise. Push:1\nModerate: Arm Battered. Fatigue:1 Push:1\nMajor: Arm Fracture. Impaired. Stress:2 Fatigue:2\nExtreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"
     ))
@@ -1166,6 +1216,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Right Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8d,
+      ":image",
+      "images/card-hitlocation-arm-right.svg",
       ":summary",
       "Minor: Arm Graze. Stun:1\nModerate: Arm Pierced. Stun:1 Bleeding:1\nMajor: Elbow Pierced. Impaired. Stun:3 Bleeding:1\nExtreme: Artery Severed. Bleeding: 4 Stun:2"
     ))
@@ -1179,6 +1231,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Right Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
+      ":image",
+      "images/card-hitlocation-arm-right.svg",
       ":summary",
       "Minor: Arm Graze. Withdraw:1\nModerate: Arm Gash. Withdraw:1 Bleeding:1\nMajor: Deep Arm Gash. Impaired. Stress:2 Bleeding:2\nExtreme: Elbow Severed. Impaired. Stun:2 Stress:2"
     ))
@@ -1192,6 +1246,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Right Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
+      ":image",
+      "images/card-hitlocation-arm-right.svg",
       ":summary",
       "Minor: Arm Cut. Bleeding:1\nModerate: Arm Slash. Slow:1 Bleeding:1\nMajor: Elbow Slash. Impaired. Slow:2 Bleeding:2\nExtreme: Artery Severed. Bleeding: 4 Stress:2"
     ))
@@ -1205,6 +1261,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Left Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
+      ":image",
+      "images/card-hitlocation-arm-left.svg",
       ":summary",
       "Minor: Arm Bruise. Push:1\nModerate: Arm Battered. Fatigue:1 Push:1\nMajor: Arm Fracture. Impaired. Stress:2 Fatigue:2\nExtreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"
     ))
@@ -1218,6 +1276,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Left Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9d,
+      ":image",
+      "images/card-hitlocation-arm-left.svg",
       ":summary",
       "Minor: Arm Graze. Stun:1\nModerate: Arm Numb. Stun:1 Bleeding:1\nMajor: Elbow Pierced. Impaired. Stun:3 Bleeding:1\nExtreme: Artery Severed. Bleeding: 4 Stun:2"
     ))
@@ -1231,6 +1291,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Left Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
+      ":image",
+      "images/card-hitlocation-arm-left.svg",
       ":summary",
       "Minor: Arm Graze. Withdraw:1\nModerate: Arm Gash. Withdraw:1 Bleeding:1\nMajor: Deep Arm Gash. Impaired. Stress:2 Bleeding:2\nExtreme: Elbow Severed. Impaired. Stun:2 Stress:2"
     ))
@@ -1244,6 +1306,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Left Upper Arm/Elbow",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
+      ":image",
+      "images/card-hitlocation-arm-left.svg",
       ":summary",
       "Minor: Arm Cut. Bleeding:1\nModerate: Arm Slash. Slow:1 Bleeding:1\nMajor: Elbow Slash. Impaired. Slow:2 Bleeding:2\nExtreme: Artery Severed. Bleeding: 4 Stress:2"
     ))
@@ -1255,6 +1319,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
+      ":image",
+      "images/card-hitlocation-head.svg",
       ":summary",
       "Minor: Head Ringing. Stun:1\nModerate: Concussion. Stun:1 Push:1\nMajor: Skull Fracture. Unconscious. Stun:1 Fatigue:1 Push:1 Knockdown:1\nExtreme: Skull Crushed. Dead."
     ))
@@ -1266,6 +1332,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
+      ":image",
+      "images/card-hitlocation-head.svg",
       ":summary",
       "Minor: Head Grazed. Stun:1\nModerate: Pierced Throat. Can't speak. Stun: 1, Stress:1\nMajor: Blinded in one Eye. Partly Blind. Stun:2 Stress:1\nExtreme: Brain Pierced. Dying. Disorder:2"
     ))
@@ -1277,6 +1345,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
+      ":image",
+      "images/card-hitlocation-head.svg",
       ":summary",
       "Minor: Head Graze. Stun:1\nModerate: Head Slash. Slow:1 Bleeding:1\nMajor: Neck Fracture. Immobilized. Slow:3 Bleeding:1\nExtreme: Spine Severed. Paralyzed. Stress:3 Bleeding:2"
     ))
@@ -1288,6 +1358,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Head",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
+      ":image",
+      "images/card-hitlocation-head.svg",
       ":summary",
       "Minor: Head Cut. Bleeding:1\nModerate: Face Gash. Stress:1 Bleeding:1\nMajor: Throat Slashed. Bleeding:3 Stress:2\nExtreme: Beheaded. Dead."
     ))
@@ -1301,6 +1373,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Abdomen/Lower Back",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
+      ":image",
+      "images/card-hitlocation-abdomen.svg",
       ":summary",
       "Minor: Stomach Bruise. Push:1\nModerate: Diaphram Bruise. Slow:1 Fatigue:1\nMajor: Hip Fracture. Hobbled. Slow:3 Bleeding:1\nExtreme: Crushed Hip. Immobilized. Bleeding:3 Stress:2"
     ))
@@ -1314,6 +1388,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Abdomen/Lower Back",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jd,
+      ":image",
+      "images/card-hitlocation-abdomen.svg",
       ":summary",
       "Minor: Side Puncture. Bleeding:1\nModerate: Belly Puncture. Slow:1 Bleeding:1\nMajor: Liver Pierced. Bleeding:2 Slow:2\nExtreme: Stomach Pierced. Hobbled. Bleeding:3 [Acid]:2"
     ))
@@ -1327,6 +1403,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Abdomen/Lower Back",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jh,
+      ":image",
+      "images/card-hitlocation-abdomen.svg",
       ":summary",
       "Minor: Glance off Hip. Bleeding:1\nModerate: Stomach Cut. Bleeding:1 Stress: 1\nMajor: Kidney Bruise. Slow:2 Bleeding:1 Fatigue:1\nExtreme: Renal Failure: Dying. Fatigue:3 Stress:2"
     ))
@@ -1340,6 +1418,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Abdomen/Lower Back",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
+      ":image",
+      "images/card-hitlocation-abdomen.svg",
       ":summary",
       "Minor: Stomach Cut. Bleeding:1\nModerate: Head Slash. Slow:1 Bleeding:1\nMajor: Neck Fracture. Immobilized. Slow:3 Bleeding:1\nExtreme: Disemboweled. Bleeding:4 Stress:2"
     ))
@@ -1351,6 +1431,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
+      ":image",
+      "images/card-hitlocation-shoulders.svg",
       ":summary",
       "Minor: Shoulder Bruise. Fatigue:1\nModerate: Bruised Ribs. Slow:1 Fatigue:1 Push:1\nMajor: Broken Ribs. Hobbled. Slow:2 Push:1\nExtreme: Rib Cage Collapse. Dead. Push:1"
     ))
@@ -1362,6 +1444,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kd,
+      ":image",
+      "images/card-hitlocation-shoulders.svg",
       ":summary",
       "Minor: Glance off Shoulder. Stun:1\nModerate: Pierced Shoulder. Stun:1 Bleeding:1\nMajor: Pierced Chest. Stun:2 Bleeding:2\nExtreme: Pierced Throat. Bleeding:2 Stun:2"
     ))
@@ -1373,6 +1457,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
+      ":image",
+      "images/card-hitlocation-shoulders.svg",
       ":summary",
       "Minor: Chest Graze. Stress:1\nModerate: Chest Slash. Stress:1 Bleeding:1\nMajor: Bleeding in Chest Cavity. Stress:2 Bleeding:2\nExtreme: Shoulder Cleaved. Dying. Bleeding:3 Stun:2"
     ))
@@ -1384,6 +1470,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Shoulders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
+      ":image",
+      "images/card-hitlocation-shoulders.svg",
       ":summary",
       "Minor: Shoulder Cut. Bleeding:1\nModerate: Shoulder Slash. Slow:1 Bleeding:1\nMajor: Throat Cut. Bleeding:2 Stress:2\nExtreme: Throat Slashed. Bleeding:4 Stun:2"
     ))
@@ -1397,6 +1485,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Middle Chest/Back/Lungs/Heart",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
+      ":image",
+      "images/card-hitlocation-chest.svg",
       ":summary",
       "Minor: Chest Bruise. Fatigue:1\nModerate: Wind Knocked Out. Slow:1 Fatigue:1 Push:1\nMajor: Heart Trauma. Slow:2 Stress:2 Push:1\nExtreme: Heart Stopped. Dying. Push:1"
     ))
@@ -1410,6 +1500,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Middle Chest/Back/Lungs/Heart",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
+      ":image",
+      "images/card-hitlocation-chest.svg",
       ":summary",
       "Minor: Chest Graze. Bleeding:1\nModerate: Chest Pierced. Stun:1 Bleeding:1\nMajor: Lung Punctured. Hobbled. Bleeding:2 Stun:2\nExtreme: Heart Pierced. Dying. Bleeding:4 Stun:2"
     ))
@@ -1423,6 +1515,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Middle Chest/Back/Lungs/Heart",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
+      ":image",
+      "images/card-hitlocation-chest.svg",
       ":summary",
       "Minor: Chest Cut. Bleeding:1\nModerate: Chest Slash. Bleeding:1 Push:1\nMajor: Collapsed Lung. Hobbled. Slow:2 Push:1\nExtreme: Lungs Collapsed. Dying. Hobbled. Stress: 4"
     ))
@@ -1436,6 +1530,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Middle Chest/Back/Lungs/Heart",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
+      ":image",
+      "images/card-hitlocation-chest.svg",
       ":summary",
       "Minor: Chest Cut. Bleeding:1\nModerate: Chest Slash. Slow:1 Bleeding:1\nMajor: Long Chest Slash. Slow:2 Bleeding:2\nExtreme: Spine Severed. [Paralyzed]. Stress: 4"
     ))
@@ -1449,6 +1545,8 @@ export default class nx_tactics_decks_damage {
       "Bash: Hips/Groin",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
+      ":image",
+      "images/card-hitlocation-vitals.svg",
       ":summary",
       "Minor: Hip Bruise. Stun:1\nModerate: Genital Slam. Slow:1 Stun:1 Stress:1\nMajor: Kidney Rupture. Slow:2 Bleeding:1 Fatigue:1\nExtreme: Hip Fracture: Hobbled. Slow:2 Fatigue:2"
     ))
@@ -1462,6 +1560,8 @@ export default class nx_tactics_decks_damage {
       "Pierce: Hips/Groin",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_td,
+      ":image",
+      "images/card-hitlocation-vitals.svg",
       ":summary",
       "Minor: Buttock Pierced. Bleeding:1\nModerate: Gut Pierced. Stun:1 Bleeding:1\nMajor: Partially Sterilized. Stress:2 Bleeding:2\nExtreme: Intestines Pierced. Diseased:2 Slow:1 Bleeding:1"
     ))
@@ -1475,6 +1575,8 @@ export default class nx_tactics_decks_damage {
       "Hack: Hips/Groin",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
+      ":image",
+      "images/card-hitlocation-vitals.svg",
       ":summary",
       "Minor: Hip Graze. Bleeding:1\nModerate: Hip Gash. Stress:1 Bleeding:1\nMajor: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2\nExtreme: Wide Groin Gash. Bleeding:4 Stress:2"
     ))
@@ -1488,6 +1590,8 @@ export default class nx_tactics_decks_damage {
       "Slash: Hips/Groin",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
+      ":image",
+      "images/card-hitlocation-vitals.svg",
       ":summary",
       "Minor: Hip Graze. Bleeding:1\nModerate: Groin Slash. Slow:1 Bleeding:1\nMajor: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2\nExtreme: Groin opened up. Bleeding:4 Stress:2"
     ))
@@ -1520,13 +1624,13 @@ export default class nx_tactics_decks_damage {
       ":id",
       "fatigue",
       ":name",
-      "Damage",
+      "Damage: Fatigue",
       ":titles",
       "Physical Damage/Fatigue/Weaken/Exertion",
       ":image",
       "images/card-fatigue.svg",
       ":summary",
-      "* Fatigue\n* While you have more Fatigue than [Body], you are [Exhausted].\n* [Exhausted]: Cannot play odd [Attack] cards and your second action may only be [Recover]."
+      "* If you have [Body]:0 then you are Exhausted. Any additional [Fatigue] is flipped to [Damage].\n* Exhausted: Cannot play odd [Attack] cards and your second action may only be [Recover]."
     ))
 
     // (const slow)
@@ -1535,13 +1639,13 @@ export default class nx_tactics_decks_damage {
       ":id",
       "slow",
       ":name",
-      "Constraint",
+      "Restraint: Slow",
       ":titles",
-      "Slow/Burden",
+      "Constraint/Burden",
       ":image",
       "images/card-slow.svg",
       ":summary",
-      "* Slow\n* While you have more Slow than [Move], you are Hobbled.\n* Hobbled: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up)."
+      "* If you have [Move]:0, you are Encumbered. Any additional [Slow] is flipped to [Restraint].\n* Encumbered: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up)."
     ))
 
     // (const stress)
@@ -1550,13 +1654,13 @@ export default class nx_tactics_decks_damage {
       ":id",
       "stress",
       ":name",
-      "Trauma",
+      "Trauma: Stress",
       ":titles",
       "Emotional Trauma/Stress/Duress/Horror",
       ":image",
       "images/card-stress.svg",
       ":summary",
-      "* Stress\n* While you have more [Stress] than [Will], you are [Shaken].\n* [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]",
+      "* If you have [Will]:0, you are [Shaken]. Any additional [Will] is flipped to [Trauma].\n* [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]",
       ":reference",
       "Because love's such an old-fashioned word\nAnd love dares you to care for\nThe people on the edge of the night\nAnd love dares you to change our way of\nCaring about ourselves\nThis is our last dance\nThis is ourselves under pressure - Queen and David Bowie, Under Pressure"
     ))
@@ -1567,13 +1671,13 @@ export default class nx_tactics_decks_damage {
       ":id",
       "stun",
       ":name",
-      "Disorder",
+      "Disorder: Stun",
       ":titles",
       "Mental Damage/Strain/Distraction/Surprise/Shock",
       ":image",
       "images/card-stun.svg",
       ":summary",
-      "* Stun\n* While you have more [Stun] than [Mind], you are [Confused].\n* [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover]."
+      "* If you have [Mind]:0, you are [Confused]. Any additional [Stun] is flipped to [Disorder].\n* [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover]."
     ))
 
   }

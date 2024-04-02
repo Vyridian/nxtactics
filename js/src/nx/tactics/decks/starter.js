@@ -8,6 +8,106 @@ import vx_type from "../../../vx/type.js"
 export default class nx_tactics_decks_starter {
 
   /**
+   * @function card_action_combat
+   * @return {card}
+   */
+  static t_card_action_combat = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_action_combat = {
+    vx_type: nx_tactics_decks_starter.t_card_action_combat
+  }
+
+  // (func card-action-combat)
+  static f_card_action_combat() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "action-combat",
+      ":name",
+      "Action: Combat",
+      ":summary",
+      "* Target a unit damaging Skill/Power.\n* Each player chooses a Fate card from their hand or a random Fate from Shared Fate.\n* Fate Cards are compared like Rock/Paper/Scissors.\n* Order: Attack > Focus > Defend/Evade/Counter > Attack\n* If both play Attack or Focus then compare by rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage.\n* Discard all card used (except Keep)"
+    )
+    return output
+  }
+
+  /**
+   * @function card_action_move
+   * @return {card}
+   */
+  static t_card_action_move = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_action_move = {
+    vx_type: nx_tactics_decks_starter.t_card_action_move
+  }
+
+  // (func card-action-move)
+  static f_card_action_move() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "action-move",
+      ":name",
+      "Action: Move"
+    )
+    return output
+  }
+
+  /**
+   * @function card_action_recover
+   * @return {card}
+   */
+  static t_card_action_recover = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_action_recover = {
+    vx_type: nx_tactics_decks_starter.t_card_action_recover
+  }
+
+  // (func card-action-recover)
+  static f_card_action_recover() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "action-recover",
+      ":name",
+      "Action: Recover",
+      ":summary",
+      "* Discard a [Fatigue], [Stun], [Stress], or [Slow]"
+    )
+    return output
+  }
+
+  /**
+   * @function card_action_skill
+   * @return {card}
+   */
+  static t_card_action_skill = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_action_skill = {
+    vx_type: nx_tactics_decks_starter.t_card_action_skill
+  }
+
+  // (func card-action-skill)
+  static f_card_action_skill() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "action-skill",
+      ":name",
+      "Action: Skill"
+    )
+    return output
+  }
+
+  /**
    * @function card_characterguide
    * @return {card}
    */
@@ -27,32 +127,6 @@ export default class nx_tactics_decks_starter {
       "characterguide",
       ":name",
       "Character Guide"
-    )
-    return output
-  }
-
-  /**
-   * @function card_combatguide
-   * @return {card}
-   */
-  static t_card_combatguide = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_combatguide = {
-    vx_type: nx_tactics_decks_starter.t_card_combatguide
-  }
-
-  // (func card-combatguide)
-  static f_card_combatguide() {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      nx_tactics_base.t_card,
-      ":id",
-      "combatguide",
-      ":name",
-      "Combat Guide",
-      ":summary",
-      "* When a unit targets another with a damaging Skill/Power, then Combat begins.\n* Each player chooses a Fate card from their hand or a random Fate from Shared Fate.\n* Fate Cards are compared like Rock/Paper/Scissors.\n* Order: Attack > Focus > Defend/Evade/Counter > Attack\n* If both play Attack or Focus then compare by rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage.\n* Discard all card used (except Keep)"
     )
     return output
   }
@@ -131,6 +205,32 @@ export default class nx_tactics_decks_starter {
       "Fate Uppper",
       ":image",
       "images/card-fate-upper.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function card_free_action
+   * @return {card}
+   */
+  static t_card_free_action = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_free_action = {
+    vx_type: nx_tactics_decks_starter.t_card_free_action
+  }
+
+  // (func card-free-action)
+  static f_card_free_action() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "free-action",
+      ":name",
+      "Free Action",
+      ":summary",
+      "* Move: Take a [Fatigue] to [Move]:1.\n* Opportunity Combat: If a Target moves through 2 spaces adjacent to a Unit, that Unit may spend a [Stun] to take a free [Action: Combat]."
     )
     return output
   }
@@ -336,75 +436,75 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
-   * @function card_skillguide
+   * @function card_turn_game
    * @return {card}
    */
-  static t_card_skillguide = {
+  static t_card_turn_game = {
     vx_type: vx_core.t_type
   }
-  static e_card_skillguide = {
-    vx_type: nx_tactics_decks_starter.t_card_skillguide
+  static e_card_turn_game = {
+    vx_type: nx_tactics_decks_starter.t_card_turn_game
   }
 
-  // (func card-skillguide)
-  static f_card_skillguide() {
+  // (func card-turn-game)
+  static f_card_turn_game() {
     let output = nx_tactics_base.e_card
     output = vx_core.f_new(
       nx_tactics_base.t_card,
       ":id",
-      "skillguide",
+      "turn-game",
       ":name",
-      "Skill Guide"
-    )
-    return output
-  }
-
-  /**
-   * @function card_turnguide
-   * @return {card}
-   */
-  static t_card_turnguide = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_turnguide = {
-    vx_type: nx_tactics_decks_starter.t_card_turnguide
-  }
-
-  // (func card-turnguide)
-  static f_card_turnguide() {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      nx_tactics_base.t_card,
-      ":id",
-      "turnguide",
-      ":name",
-      "Turn Guide",
+      "Turn: Game",
       ":summary",
-      "* Reveal: Reveal the top card from the [Turn Order] deck to determine the next active Player.\n* Activate and Target: That [Player] chooses a Unit to Activate and announces a target.\n* Reveal Again: Reveal the next card from the [Turn Order] deck. If none, got to Take Actions\n* Activate and Target: The next Player MAY choose a Unit to Activate and announce a target that is not currently an active Player or a target. If so, repeat the Reveal Again step.\n* Wait: OR the next player may Wait for the previous [Player] to finish.\n* Take Actions: If a player Waited or there are no [Turn Order] cards remaining, the active Players may simultaneous Take Actions."
+      "* Reveal: Reveal the top card from the [Turn Order] deck to determine the next active Player.\n* Activate and Target: That [Player] chooses a Unit to Activate and announces a target.\n* Reveal Again: Reveal the next card from the [Turn Order] deck. If none, go to Player Turns\n* Activate and Target: The next Player MAY choose a Unit to Activate and announce a target that is not currently an active Player or a target. If so, repeat the Reveal Again step.\n* Wait: OR the next player may Wait for the previous [Player] to finish.\n* Player Turns: If a player Waited or there are no [Turn Order] cards remaining, the active Players may simultaneously do [Turn: Player]."
     )
     return output
   }
 
   /**
-   * @function card_turnorder
+   * @function card_turn_order
    * @return {card}
    */
-  static t_card_turnorder = {
+  static t_card_turn_order = {
     vx_type: vx_core.t_type
   }
-  static e_card_turnorder = {
-    vx_type: nx_tactics_decks_starter.t_card_turnorder
+  static e_card_turn_order = {
+    vx_type: nx_tactics_decks_starter.t_card_turn_order
   }
 
-  // (func card-turnorder)
-  static f_card_turnorder() {
+  // (func card-turn-order)
+  static f_card_turn_order() {
     let output = nx_tactics_base.e_card
     output = vx_core.f_new(
       nx_tactics_base.t_card,
       ":id",
-      "turnorder",
+      "turn-order",
       ":name",
       "Turn Order"
+    )
+    return output
+  }
+
+  /**
+   * @function card_turn_player
+   * @return {card}
+   */
+  static t_card_turn_player = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_turn_player = {
+    vx_type: nx_tactics_decks_starter.t_card_turn_player
+  }
+
+  // (func card-turn-player)
+  static f_card_turn_player() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "turn-player",
+      ":name",
+      "Turn: Player"
     )
     return output
   }
@@ -571,13 +671,17 @@ export default class nx_tactics_decks_starter {
           nx_tactics_base.t_cardlist,
           nx_tactics_decks_starter.f_card_gameguide(),
           nx_tactics_decks_starter.f_card_setupguide(),
-          nx_tactics_decks_starter.f_card_turnguide(),
-          nx_tactics_decks_starter.f_card_combatguide(),
+          nx_tactics_decks_starter.f_card_turn_game(),
+          nx_tactics_decks_starter.f_card_turn_player(),
+          nx_tactics_decks_starter.f_card_action_move(),
+          nx_tactics_decks_starter.f_card_action_combat(),
           nx_tactics_decks_starter.f_card_damageguide(),
-          nx_tactics_decks_starter.f_card_skillguide(),
+          nx_tactics_decks_starter.f_card_action_skill(),
+          nx_tactics_decks_starter.f_card_action_recover(),
+          nx_tactics_decks_starter.f_card_free_action(),
           nx_tactics_decks_starter.f_card_characterguide(),
           nx_tactics_decks_starter.f_card_levelingguide(),
-          nx_tactics_decks_starter.f_card_turnorder(),
+          nx_tactics_decks_starter.f_card_turn_order(),
           nx_tactics_decks_starter.f_card_fateupper(),
           nx_tactics_decks_starter.f_card_fatelower()
         )
@@ -783,11 +887,15 @@ export default class nx_tactics_decks_starter {
       
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
+      "card-action-combat": nx_tactics_decks_starter.e_card_action_combat,
+      "card-action-move": nx_tactics_decks_starter.e_card_action_move,
+      "card-action-recover": nx_tactics_decks_starter.e_card_action_recover,
+      "card-action-skill": nx_tactics_decks_starter.e_card_action_skill,
       "card-characterguide": nx_tactics_decks_starter.e_card_characterguide,
-      "card-combatguide": nx_tactics_decks_starter.e_card_combatguide,
       "card-damageguide": nx_tactics_decks_starter.e_card_damageguide,
       "card-fatelower": nx_tactics_decks_starter.e_card_fatelower,
       "card-fateupper": nx_tactics_decks_starter.e_card_fateupper,
+      "card-free-action": nx_tactics_decks_starter.e_card_free_action,
       "card-gameguide": nx_tactics_decks_starter.e_card_gameguide,
       "card-levelingguide": nx_tactics_decks_starter.e_card_levelingguide,
       "card-player-blue": nx_tactics_decks_starter.e_card_player_blue,
@@ -795,9 +903,9 @@ export default class nx_tactics_decks_starter {
       "card-player-red": nx_tactics_decks_starter.e_card_player_red,
       "card-player-yellow": nx_tactics_decks_starter.e_card_player_yellow,
       "card-setupguide": nx_tactics_decks_starter.e_card_setupguide,
-      "card-skillguide": nx_tactics_decks_starter.e_card_skillguide,
-      "card-turnguide": nx_tactics_decks_starter.e_card_turnguide,
-      "card-turnorder": nx_tactics_decks_starter.e_card_turnorder,
+      "card-turn-game": nx_tactics_decks_starter.e_card_turn_game,
+      "card-turn-order": nx_tactics_decks_starter.e_card_turn_order,
+      "card-turn-player": nx_tactics_decks_starter.e_card_turn_player,
       "card-unit-blue": nx_tactics_decks_starter.e_card_unit_blue,
       "card-unit-green": nx_tactics_decks_starter.e_card_unit_green,
       "card-unit-red": nx_tactics_decks_starter.e_card_unit_red,
@@ -809,11 +917,15 @@ export default class nx_tactics_decks_starter {
       "deck-player-yellow": nx_tactics_decks_starter.e_deck_player_yellow
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "card-action-combat": nx_tactics_decks_starter.t_card_action_combat,
+      "card-action-move": nx_tactics_decks_starter.t_card_action_move,
+      "card-action-recover": nx_tactics_decks_starter.t_card_action_recover,
+      "card-action-skill": nx_tactics_decks_starter.t_card_action_skill,
       "card-characterguide": nx_tactics_decks_starter.t_card_characterguide,
-      "card-combatguide": nx_tactics_decks_starter.t_card_combatguide,
       "card-damageguide": nx_tactics_decks_starter.t_card_damageguide,
       "card-fatelower": nx_tactics_decks_starter.t_card_fatelower,
       "card-fateupper": nx_tactics_decks_starter.t_card_fateupper,
+      "card-free-action": nx_tactics_decks_starter.t_card_free_action,
       "card-gameguide": nx_tactics_decks_starter.t_card_gameguide,
       "card-levelingguide": nx_tactics_decks_starter.t_card_levelingguide,
       "card-player-blue": nx_tactics_decks_starter.t_card_player_blue,
@@ -821,9 +933,9 @@ export default class nx_tactics_decks_starter {
       "card-player-red": nx_tactics_decks_starter.t_card_player_red,
       "card-player-yellow": nx_tactics_decks_starter.t_card_player_yellow,
       "card-setupguide": nx_tactics_decks_starter.t_card_setupguide,
-      "card-skillguide": nx_tactics_decks_starter.t_card_skillguide,
-      "card-turnguide": nx_tactics_decks_starter.t_card_turnguide,
-      "card-turnorder": nx_tactics_decks_starter.t_card_turnorder,
+      "card-turn-game": nx_tactics_decks_starter.t_card_turn_game,
+      "card-turn-order": nx_tactics_decks_starter.t_card_turn_order,
+      "card-turn-player": nx_tactics_decks_starter.t_card_turn_player,
       "card-unit-blue": nx_tactics_decks_starter.t_card_unit_blue,
       "card-unit-green": nx_tactics_decks_starter.t_card_unit_green,
       "card-unit-red": nx_tactics_decks_starter.t_card_unit_red,
@@ -846,6 +958,78 @@ export default class nx_tactics_decks_starter {
     })
     vx_core.vx_global_package_set(pkg)
 
+    // (func card-action-combat)
+    nx_tactics_decks_starter.t_card_action_combat['vx_value'] = {
+      name          : "card-action-combat",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_action_combat
+    }
+
+    // (func card-action-move)
+    nx_tactics_decks_starter.t_card_action_move['vx_value'] = {
+      name          : "card-action-move",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_action_move
+    }
+
+    // (func card-action-recover)
+    nx_tactics_decks_starter.t_card_action_recover['vx_value'] = {
+      name          : "card-action-recover",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_action_recover
+    }
+
+    // (func card-action-skill)
+    nx_tactics_decks_starter.t_card_action_skill['vx_value'] = {
+      name          : "card-action-skill",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_action_skill
+    }
+
     // (func card-characterguide)
     nx_tactics_decks_starter.t_card_characterguide['vx_value'] = {
       name          : "card-characterguide",
@@ -862,24 +1046,6 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_characterguide
-    }
-
-    // (func card-combatguide)
-    nx_tactics_decks_starter.t_card_combatguide['vx_value'] = {
-      name          : "card-combatguide",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_combatguide
     }
 
     // (func card-damageguide)
@@ -934,6 +1100,24 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_fateupper
+    }
+
+    // (func card-free-action)
+    nx_tactics_decks_starter.t_card_free_action['vx_value'] = {
+      name          : "card-free-action",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_free_action
     }
 
     // (func card-gameguide)
@@ -1062,9 +1246,9 @@ export default class nx_tactics_decks_starter {
       fn            : nx_tactics_decks_starter.f_card_setupguide
     }
 
-    // (func card-skillguide)
-    nx_tactics_decks_starter.t_card_skillguide['vx_value'] = {
-      name          : "card-skillguide",
+    // (func card-turn-game)
+    nx_tactics_decks_starter.t_card_turn_game['vx_value'] = {
+      name          : "card-turn-game",
       pkgname       : "nx/tactics/decks/starter",
       extends       : ":func",
       idx           : 0,
@@ -1077,12 +1261,12 @@ export default class nx_tactics_decks_starter {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_skillguide
+      fn            : nx_tactics_decks_starter.f_card_turn_game
     }
 
-    // (func card-turnguide)
-    nx_tactics_decks_starter.t_card_turnguide['vx_value'] = {
-      name          : "card-turnguide",
+    // (func card-turn-order)
+    nx_tactics_decks_starter.t_card_turn_order['vx_value'] = {
+      name          : "card-turn-order",
       pkgname       : "nx/tactics/decks/starter",
       extends       : ":func",
       idx           : 0,
@@ -1095,12 +1279,12 @@ export default class nx_tactics_decks_starter {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_turnguide
+      fn            : nx_tactics_decks_starter.f_card_turn_order
     }
 
-    // (func card-turnorder)
-    nx_tactics_decks_starter.t_card_turnorder['vx_value'] = {
-      name          : "card-turnorder",
+    // (func card-turn-player)
+    nx_tactics_decks_starter.t_card_turn_player['vx_value'] = {
+      name          : "card-turn-player",
       pkgname       : "nx/tactics/decks/starter",
       extends       : ":func",
       idx           : 0,
@@ -1113,7 +1297,7 @@ export default class nx_tactics_decks_starter {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_turnorder
+      fn            : nx_tactics_decks_starter.f_card_turn_player
     }
 
     // (func card-unit-blue)

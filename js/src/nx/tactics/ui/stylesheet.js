@@ -625,7 +625,7 @@ export default class nx_tactics_ui_stylesheet {
       ":fontface",
       nx_tactics_ui_stylesheet.c_fontface1,
       ":fontsize",
-      65
+      70
     ))
 
     // (const font-title)

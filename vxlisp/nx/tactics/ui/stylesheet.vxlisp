@@ -43,7 +43,7 @@
  (ui/font
   :name     "font-textarea"
   :fontface fontface1
-  :fontsize 65)
+  :fontsize 70)
  :doc "Returns Textarea Font")
 
 (const font-title : ui/font
