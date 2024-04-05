@@ -5,7 +5,7 @@
    version="1.1"
    id="svg21"
    sodipodi:docname="card-fatigue.svg"
-   viewBox="0 0 975.48891 1362.5877"
+   viewBox="0 0 63 88"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.1450489"
-     inkscape:cx="69.429352"
-     inkscape:cy="75.105965"
+     inkscape:cx="113.96893"
+     inkscape:cy="259.37757"
      inkscape:window-width="1350"
      inkscape:window-height="1040"
      inkscape:window-x="58"
@@ -33,14 +33,15 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="svg21" />
   <rect
-     style="fill:#dfefe9;fill-opacity:1;stroke:#383838;stroke-width:0.15484;stroke-opacity:1;paint-order:markers fill stroke"
+     style="fill:#dfefe9;fill-opacity:1;stroke:#383838;stroke-width:0.010008;stroke-opacity:1;paint-order:markers fill stroke"
      id="rect132"
-     width="976.54572"
-     height="1358.5623"
-     x="-4.153985"
-     y="-1.9272612" />
+     width="62.989994"
+     height="87.98999"
+     x="0.0050041168"
+     y="0.0050041168" />
   <g
-     id="body">
+     id="body"
+     transform="scale(0.06442853)">
     <path
        fill="#37b2df"
        d="m 283.17389,596.49529 c 7.29878,0.33206 8.88162,-0.0804 16.00924,0.0851 0.24196,2.35569 0.33325,4.67189 0.92537,6.98158 0.21806,0.85086 0.4925,1.77406 0.99588,2.50285 l 16.01311,4.53618 4.00828,1.04672 c 1.93273,0.46715 3.81933,0.85727 5.56272,1.86704 2.18883,1.26767 3.9146,3.27912 5.0637,5.51213 1.77008,3.43983 1.78687,7.37701 2.35122,11.1269 l -11.04878,5.03231 -1.42198,0.67869 c -0.29486,0.12678 -0.63934,0.21975 -0.90678,0.39192 l -0.59345,3.61479 -1.32044,5.61984 -2.38781,8.10544 -3.20945,9.55447 c -1.97909,6.59701 -2.50721,13.63264 -1.22409,20.41476 0.87817,4.64136 2.58945,9.06653 4.01324,13.55455 -0.13414,0.19564 -0.56192,0.36106 -0.78083,0.47331 -1.10697,0.56509 -2.26054,1.03232 -3.43657,1.43319 -7.0731,2.41002 -14.30448,3.24558 -21.75211,3.10431 -8.13756,-0.15454 -16.27934,-1.50682 -23.6363,-5.12186 0.49613,-0.95869 0.87937,-2.02123 1.25632,-3.03428 l 1.8831,-5.71358 c 0.89796,-3.03667 1.66371,-6.12763 1.94359,-9.28991 0.87418,-9.87668 -3.30531,-19.13342 -6.39017,-28.24646 -1.3144,-3.88248 -2.30932,-7.96381 -3.19666,-11.96352 l -0.36234,-2.37887 c -1.65985,-0.59948 -3.27817,-1.56409 -4.86979,-2.33418 l -8.36781,-4.052 0.69873,-5.17419 c 0.85173,-5.06344 3.15536,-9.80089 8.12778,-11.8773 2.24013,-0.93552 4.81304,-1.44191 7.16087,-2.06228 l 11.29691,-3.18688 3.34118,-0.99709 c 0.80258,-0.24161 1.7562,-0.45013 2.43888,-0.93551 1.45398,-2.80425 1.72577,-6.15811 1.81524,-9.2682 z"
@@ -64,7 +65,7 @@
        style="fill:#6c858e;fill-opacity:1;stroke-width:0.120743" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:113.547px;font-family:Amiri;-inkscape-font-specification:'Amiri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.215296;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:113.547px;font-family:Amiri;-inkscape-font-specification:'Amiri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.215296;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        x="339.74225"
        y="684.15222"
        id="text1"><tspan
@@ -72,7 +73,7 @@
          id="tspan1"
          x="339.74225"
          y="684.15222"
-         style="stroke-width:0.215296">Body: -1</tspan></text>
+         style="stroke:none;stroke-width:0.215296">Body: -1</tspan></text>
     <path
        id="rect1"
        d="m 282.50527,648.92026 h 17.61435 l -5.26564,1.30119 -0.49288,12.72354 -7.11349,-0.0649 -0.0833,-12.65856 z"

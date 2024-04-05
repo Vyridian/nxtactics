@@ -315,14 +315,7 @@
   :type             ui/styletype-shared
   :color-background "A9C8FF"
   :layout           ui/layout-button
-  :pointsize        point-iconsize
-  :image-background (ui/image
-                     :name "image-button-print"
-                     :label "Print"
-                     :file
-                      (file/file
-                       :name "icon-printer.svg"
-                       :path "icons")))
+  :pointsize        point-iconsize)
  :doc "")
 
 (const style-button-back : ui/style
@@ -456,6 +449,23 @@
   :name    "style-hidden"
   :type    ui/styletype-shared
   :hidden  true)
+ :doc "")
+
+(const style-image-background : ui/style
+ (ui/style
+  :name "style-image-background"
+  :type ui/styletype-shared
+  :layout ui/layout-image
+  :pointpos
+   (ui/point
+    :x 0
+    :y 0
+    :pointtype ui/pointtype-absolute)
+  :pointsize
+   (ui/point
+    :x 100
+    :y 100
+    :pointtype ui/pointtype-percent))
  :doc "")
 
 (const style-image-coin1 : ui/style
@@ -732,6 +742,7 @@
      style-button-back
      style-card
      style-deck
+     style-image-background
      style-image-coin1
      style-image-coin2
      style-image-cup1

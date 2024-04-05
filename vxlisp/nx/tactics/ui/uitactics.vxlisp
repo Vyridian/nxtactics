@@ -308,16 +308,9 @@
      name)
    uid : string :=
     (string parent "-" id1)
-   style : ui/style :=
-    (if : ui/style
-     (then
-      (!-empty image)
-      (ui/style
-       :image-background
-        (ui/image
-         :file
-          (file/file<-path
-           image)))))
+   uiimage : ui/ui :=
+    (ui-image<-uid-path :debug
+     uid image)
    events : event/eventmap :=
     (if : event/eventmap
      (then
@@ -335,19 +328,22 @@
       (ui/stylelist
        styles/style-card
        styles/style-clickable)))
-   uilist : ui/uilist :=
+   uilist1 : ui/uilist :=
     (uilist<-card-parent
-     card parent)]
+     card parent)
+   uilist2 : ui/uilist :=
+    (ui/uilist
+     uiimage
+     uilist1)]
   (ui/ui
    :uid  uid
    :name name
    :eventmap  events
-   :style style
    :stylelist styles
    :data card
    :uimap
     (ui/uimap<-uilist
-     uilist)))
+     uilist2)))
  :doc "Returns the a card ui.")
 
 (func ui<-unit-parent : ui
@@ -510,6 +506,13 @@
  (ui/ui
   :uid "titlebar-print"
   :parent "titlebar"
+  :data
+   (file/file
+    :name "icon-printer.svg"
+    :path "icons")
+  :style
+   (ui/style
+    :layout ui/layout-image)
   :stylelist
    (ui/stylelist
     style-app-titlebar-print
@@ -518,6 +521,24 @@
    (event/eventmap<-eventlist
     (event/eventlist
      event-printbutton-click))))
+
+(func ui-image<-uid-path : ui/ui
+ [uid  : string
+  path : string]
+ (if : ui/ui
+  (then
+   (!-empty path)
+   (ui/ui
+    :uid (string uid "-imagebkgd")
+    :style
+     (ui/style
+      :layout layout-image)
+    :stylelist
+     (ui/stylelist
+      styles/style-image-background)
+    :data
+     (file/file<-path
+      path)))))
 
 (func ui-nav<-any-parent : ui/ui
  [data   : any
@@ -726,6 +747,44 @@
  :sideeffects "Alters uinavbar"
  :doc "Navigate to the given ui")
 
+(func ui-suit<-uid-rank-suit-pos : ui/ui
+ [uid  : string
+  rank : base/rank
+  suit : base/suit
+  pos  : int]
+ (let : ui/ui
+  [id : string :=
+    (string uid "-suit-" pos)
+   filename : string :=
+    (switch
+     suit
+     (case base/suit-club "icon-wand.svg")
+     (case base/suit-diamond "icon-coin.svg")
+     (case base/suit-heart "icon-cup.svg")
+     (case base/suit-spade "icon-sword.svg")
+     (case base/suit-black "icon-jester-black.svg")
+     (case base/suit-red "icon-jester-red.svg"))
+   pointpos : ui/point :=
+    (switch : ui/point
+     pos
+     (case 1
+      styles/point-suit-pos1)
+     (case 2
+      styles/point-suit-pos2))
+   style : ui/style :=
+    (ui/style
+     :layout ui/layout-image
+     :pointpos pointpos
+     :pointsize styles/point-suit-size)]
+   (ui/ui
+    :uid id
+    :style style
+    :data
+     (file/file
+      :name filename
+      :path "icons")))
+ :doc "")
+
 (func uilist<-ranksuit-parent : ui/uilist
  [ranksuitarg : base/ranksuit
   parent      : string]
@@ -755,6 +814,13 @@
        "-suit2")
      srank : string := (:titles rank)
      ssuit : string := (:titles suit)
+     uisuit1 : ui/ui :=
+      (ui-suit<-uid-rank-suit-pos
+       parent rank suit 1)
+     uisuit2 : ui/ui :=
+      (ui-suit<-uid-rank-suit-pos
+       parent rank suit 2)]
+/*
      suitstyle1 : ui/style :=
       (switch : ui/style
        suit
@@ -784,7 +850,8 @@
        (case base/suit-spade
         styles/style-image-sword2)
        (case base/suit-club
-        styles/style-image-wand2))]
+        styles/style-image-wand2))
+*/
     (ui/uilist
      (ui/ui
       :uid labelrank1
@@ -793,27 +860,32 @@
        (ui/stylelist
         styles/style-text-rank1)
       :data srank)
-      (ui/ui
-       :uid labelrank2
-       :style styles/style-card-rank
-       :stylelist
-        (ui/stylelist
-         styles/style-text-rank2)
-       :data srank)
-      (ui/ui
-       :uid labelsuit1
-       :style styles/style-card-suit
-       :stylelist
-        (ui/stylelist
-         suitstyle1)
-       :data ssuit)
-      (ui/ui
-       :uid labelsuit2
-       :style styles/style-card-suit
-       :stylelist
-        (ui/stylelist
-         suitstyle2)
-       :data ssuit)))))
+     (ui/ui
+      :uid labelrank2
+      :style styles/style-card-rank
+      :stylelist
+       (ui/stylelist
+        styles/style-text-rank2)
+      :data srank)
+     uisuit1
+     uisuit2
+/*
+     (ui/ui
+      :uid labelsuit1
+      :style styles/style-card-suit
+      :stylelist
+       (ui/stylelist
+        suitstyle1)
+      :data ssuit)
+     (ui/ui
+      :uid labelsuit2
+      :style styles/style-card-suit
+      :stylelist
+       (ui/stylelist
+        suitstyle2)
+      :data ssuit)
+*/
+      ))))
  :doc "")
 
 (func uimap<-cardmap-parent : ui/uimap

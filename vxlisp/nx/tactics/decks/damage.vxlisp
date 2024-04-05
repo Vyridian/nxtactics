@@ -54,6 +54,7 @@
  (base/damage
   :name "Damage: Deck"
   :ranksuit base/ranksuit-jokerblack
+  :image "images/card-hitlocation-jokerblack.svg"
   :summary
    "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
 
@@ -61,6 +62,7 @@
  (base/damage
   :name "Damage: Discard"
   :ranksuit base/ranksuit-jokerred
+  :image "images/card-hitlocation-jokerred.svg"
   :summary
    "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
 
@@ -216,7 +218,7 @@
   :image "images/card-hitlocation-abdomen.svg"
   :summary
    "Minor: Stomach Bruise. Push:1
-    Moderate: Diaphram Bruise. Slow:1 Fatigue:1
+    Moderate: Solar Plexus Bruise. Slow:1 Fatigue:1
     Major: Hip Fracture. Hobbled. Slow:3 Bleeding:1
     Extreme: Crushed Hip. Immobilized. Bleeding:3 Stress:2"))
 
@@ -241,7 +243,7 @@
   :summary
    "Minor: Glance off Hip. Bleeding:1
     Moderate: Stomach Cut. Bleeding:1 Stress: 1
-    Major: Kidney Bruise. Slow:2 Bleeding:1 Fatigue:1
+    Major: Kidney Damage. Slow:1 Bleeding:1 Fatigue:2
     Extreme: Renal Failure: Dying. Fatigue:3 Stress:2"))
 
 (const damage-js : base/damage
@@ -252,8 +254,8 @@
   :image "images/card-hitlocation-abdomen.svg"
   :summary
    "Minor: Stomach Cut. Bleeding:1
-    Moderate: Head Slash. Slow:1 Bleeding:1
-    Major: Neck Fracture. Immobilized. Slow:3 Bleeding:1
+    Moderate: Stomach Slash. Slow:1 Bleeding:1
+    Major: Stomach Gash. Slow:1 Bleeding:3
     Extreme: Disemboweled. Bleeding:4 Stress:2"))
 
 (const damage-tc : base/damage

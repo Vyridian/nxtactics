@@ -320,6 +320,12 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_html = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-html'}}
 
   /**
+   * Constant: style-image-background
+   * {style}
+   */
+  static c_style_image_background = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-background'}}
+
+  /**
    * Constant: style-image-coin1
    * {style}
    */
@@ -520,6 +526,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-div": nx_tactics_ui_stylesheet.c_style_div,
       "style-hidden": nx_tactics_ui_stylesheet.c_style_hidden,
       "style-html": nx_tactics_ui_stylesheet.c_style_html,
+      "style-image-background": nx_tactics_ui_stylesheet.c_style_image_background,
       "style-image-coin1": nx_tactics_ui_stylesheet.c_style_image_coin1,
       "style-image-coin2": nx_tactics_ui_stylesheet.c_style_image_coin2,
       "style-image-cup1": nx_tactics_ui_stylesheet.c_style_image_cup1,
@@ -1044,23 +1051,7 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_button,
       ":pointsize",
-      nx_tactics_ui_stylesheet.c_point_iconsize,
-      ":image-background",
-      vx_core.f_new(
-        vx_ui_ui.t_image,
-        ":name",
-        "image-button-print",
-        ":label",
-        "Print",
-        ":file",
-        vx_core.f_new(
-          vx_data_file.t_file,
-          ":name",
-          "icon-printer.svg",
-          ":path",
-          "icons"
-        )
-      )
+      nx_tactics_ui_stylesheet.c_point_iconsize
     ))
 
     // (const style-body)
@@ -1372,6 +1363,37 @@ export default class nx_tactics_ui_stylesheet {
       ),
       ":pin",
       vx_ui_ui.c_pin_expand
+    ))
+
+    // (const style-image-background)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_image_background, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-image-background",
+      ":type",
+      vx_ui_ui.c_styletype_shared,
+      ":layout",
+      vx_ui_ui.c_layout_image,
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        0,
+        ":y",
+        0,
+        ":pointtype",
+        vx_ui_ui.c_pointtype_absolute
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        100,
+        ":y",
+        100,
+        ":pointtype",
+        vx_ui_ui.c_pointtype_percent
+      )
     ))
 
     // (const style-image-coin1)
@@ -1829,24 +1851,21 @@ export default class nx_tactics_ui_stylesheet {
         "y": 0,
         "z": 0,
         "t": 0,
-        "i": 0,
-        "ispercent": false
+        "i": 0
       },
       "pointrotate": {
         "x": 0,
         "y": 0,
         "z": 0,
         "t": 0,
-        "i": 0,
-        "ispercent": false
+        "i": 0
       },
       "pointsize": {
         "x": 0,
         "y": 0,
         "z": 0,
         "t": 0,
-        "i": 0,
-        "ispercent": false
+        "i": 0
       }
     })
 
@@ -1888,6 +1907,7 @@ export default class nx_tactics_ui_stylesheet {
           nx_tactics_ui_stylesheet.c_style_button_back,
           nx_tactics_ui_stylesheet.c_style_card,
           nx_tactics_ui_stylesheet.c_style_deck,
+          nx_tactics_ui_stylesheet.c_style_image_background,
           nx_tactics_ui_stylesheet.c_style_image_coin1,
           nx_tactics_ui_stylesheet.c_style_image_coin2,
           nx_tactics_ui_stylesheet.c_style_image_cup1,

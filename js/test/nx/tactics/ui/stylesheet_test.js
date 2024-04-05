@@ -26,12 +26,12 @@ export default class nx_tactics_ui_stylesheet_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/stylesheet", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 72), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 27, ":total", 72), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 73), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 36, ":tests", 27, ":total", 73), 
       "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 72), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 73), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -96,6 +96,7 @@ export default class nx_tactics_ui_stylesheet_test {
           "style-div", 0,
           "style-hidden", 0,
           "style-html", 0,
+          "style-image-background", 0,
           "style-image-coin1", 0,
           "style-image-coin2", 0,
           "style-image-cup1", 0,
