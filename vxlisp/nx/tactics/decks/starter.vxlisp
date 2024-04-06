@@ -57,13 +57,13 @@
 (func card-fatelower : base/card
  (base/card
   :id "fatelower"
-  :name "Fate Lower"
+  :name "Fate: Inverted"
   :image "images/card-fate-lower.svg"))
 
 (func card-fateupper : base/card
  (base/card
   :id "fateupper"
-  :name "Fate Uppper"
+  :name "Fate: Dignified"
   :image "images/card-fate-upper.svg"))
 
 (func card-free-action : base/card

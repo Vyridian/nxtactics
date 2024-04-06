@@ -176,7 +176,7 @@ export default class nx_tactics_decks_starter {
       ":id",
       "fatelower",
       ":name",
-      "Fate Lower",
+      "Fate: Inverted",
       ":image",
       "images/card-fate-lower.svg"
     )
@@ -202,7 +202,7 @@ export default class nx_tactics_decks_starter {
       ":id",
       "fateupper",
       ":name",
-      "Fate Uppper",
+      "Fate: Dignified",
       ":image",
       "images/card-fate-upper.svg"
     )

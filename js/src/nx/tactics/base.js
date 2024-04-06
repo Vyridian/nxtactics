@@ -5466,6 +5466,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "age": {
+          "name" : "age",
+          "type" : vx_core.t_int,
+          "multi": false
+        },
         "classification": {
           "name" : "classification",
           "type" : vx_core.t_string,
@@ -5473,6 +5478,11 @@ export default class nx_tactics_base {
         },
         "crew": {
           "name" : "crew",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "gender": {
+          "name" : "gender",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -5488,6 +5498,11 @@ export default class nx_tactics_base {
         },
         "length": {
           "name" : "length",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "race": {
+          "name" : "race",
           "type" : vx_core.t_string,
           "multi": false
         },

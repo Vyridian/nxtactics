@@ -1393,6 +1393,7 @@ export default class nx_tactics_ui_uitactics {
         const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":id")
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
         const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":image")
+        const datatype = vx_core.f_type_from_any(card)
         const display = nx_tactics_ui_uitactics.f_string_display_from_any(card)
         const id1 = vx_core.f_if_1(
           {"any-1": vx_core.t_string},
@@ -1406,7 +1407,20 @@ export default class nx_tactics_ui_uitactics {
           "-",
           id1
         )
-        const uiimage = vx_core.f_log_1({"any-1": vx_ui_ui.t_ui}, "nx/tactics/ui/uitactics/ui<-card-parent/:value/let/:arg/fn-any/:value/ui-image<-uid-path", nx_tactics_ui_uitactics.f_ui_image_from_uid_path(uid, image))
+        const imgback = vx_core.f_switch(
+          {"any-1": vx_core.t_string, "any-2": vx_core.t_any},
+          datatype,
+          vx_core.f_case_1(
+            nx_tactics_base.t_item,
+            vx_core.f_new(vx_core.t_any_from_func, () => {return "images/card-item.svg"})
+          ),
+          vx_core.f_case_1(
+            nx_tactics_base.t_unit,
+            vx_core.f_new(vx_core.t_any_from_func, () => {return "images/card-unit.svg"})
+          ),
+          vx_core.f_else(vx_core.f_new(vx_core.t_any_from_func, () => {return image}))
+        )
+        const uiimage = nx_tactics_ui_uitactics.f_ui_image_from_uid_path(uid, imgback)
         const events = vx_core.f_if_2(
           {"any-1": vx_event.t_eventmap},
           vx_core.f_then(

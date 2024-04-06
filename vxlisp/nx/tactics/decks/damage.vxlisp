@@ -54,7 +54,7 @@
  (base/damage
   :name "Damage: Deck"
   :ranksuit base/ranksuit-jokerblack
-  :image "images/card-hitlocation-jokerblack.svg"
+  :image "images/card-hitlocation-jester-black.svg"
   :summary
    "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
 
@@ -62,7 +62,7 @@
  (base/damage
   :name "Damage: Discard"
   :ranksuit base/ranksuit-jokerred
-  :image "images/card-hitlocation-jokerred.svg"
+  :image "images/card-hitlocation-jester-red.svg"
   :summary
    "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
 

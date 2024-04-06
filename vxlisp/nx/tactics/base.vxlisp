@@ -280,11 +280,14 @@
               beast           : rating
               demeanor        : string
               nature          : string
+              age             : int
               classification  : string
               crew            : string
+              gender          : string
               mass            : string
               height          : string
               length          : string
+              race            : string
               range           : string
               speed           : string
               speedair        : string

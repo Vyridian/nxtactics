@@ -1376,7 +1376,7 @@ export default class nx_tactics_decks_damage {
       ":image",
       "images/card-hitlocation-abdomen.svg",
       ":summary",
-      "Minor: Stomach Bruise. Push:1\nModerate: Diaphram Bruise. Slow:1 Fatigue:1\nMajor: Hip Fracture. Hobbled. Slow:3 Bleeding:1\nExtreme: Crushed Hip. Immobilized. Bleeding:3 Stress:2"
+      "Minor: Stomach Bruise. Push:1\nModerate: Solar Plexus Bruise. Slow:1 Fatigue:1\nMajor: Hip Fracture. Hobbled. Slow:3 Bleeding:1\nExtreme: Crushed Hip. Immobilized. Bleeding:3 Stress:2"
     ))
 
     // (const damage-jd)
@@ -1406,7 +1406,7 @@ export default class nx_tactics_decks_damage {
       ":image",
       "images/card-hitlocation-abdomen.svg",
       ":summary",
-      "Minor: Glance off Hip. Bleeding:1\nModerate: Stomach Cut. Bleeding:1 Stress: 1\nMajor: Kidney Bruise. Slow:2 Bleeding:1 Fatigue:1\nExtreme: Renal Failure: Dying. Fatigue:3 Stress:2"
+      "Minor: Glance off Hip. Bleeding:1\nModerate: Stomach Cut. Bleeding:1 Stress: 1\nMajor: Kidney Damage. Slow:1 Bleeding:1 Fatigue:2\nExtreme: Renal Failure: Dying. Fatigue:3 Stress:2"
     ))
 
     // (const damage-js)
@@ -1421,7 +1421,7 @@ export default class nx_tactics_decks_damage {
       ":image",
       "images/card-hitlocation-abdomen.svg",
       ":summary",
-      "Minor: Stomach Cut. Bleeding:1\nModerate: Head Slash. Slow:1 Bleeding:1\nMajor: Neck Fracture. Immobilized. Slow:3 Bleeding:1\nExtreme: Disemboweled. Bleeding:4 Stress:2"
+      "Minor: Stomach Cut. Bleeding:1\nModerate: Stomach Slash. Slow:1 Bleeding:1\nMajor: Stomach Gash. Slow:1 Bleeding:3\nExtreme: Disemboweled. Bleeding:4 Stress:2"
     ))
 
     // (const damage-kc)
@@ -1603,6 +1603,8 @@ export default class nx_tactics_decks_damage {
       "Damage: Deck",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerblack,
+      ":image",
+      "images/card-hitlocation-jester-black.svg",
       ":summary",
       "Search the Deck for any card and play it. Then Shuffle Discards into Deck."
     ))
@@ -1614,6 +1616,8 @@ export default class nx_tactics_decks_damage {
       "Damage: Discard",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jokerred,
+      ":image",
+      "images/card-hitlocation-jester-red.svg",
       ":summary",
       "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."
     ))

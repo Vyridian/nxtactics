@@ -2,6 +2,92 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Scenario Decks")
 
+(func item-armor-leathercuirass : base/item
+ (base/item
+  :name "Leather Cuirass"
+  :image "images/cards/item-armor-leathercuirass.svg"
+  :summary
+   "* Leather Body Armor
+    * Hit Location: Shoulders, Chest, Abdomen, Vitals
+    * Armor:1x1
+    * Hardened vs. Slash"))
+
+(func item-barehanded : base/item
+ (base/item
+  :name "Bare Handed"
+  :image "images/cards/item-barehanded.svg"
+  :summary
+   "* Weapon: Close Combat
+    * Damage: Bash"))
+
+(func item-bowshort : base/item
+ (base/item
+  :name "Short Bow"
+  :image "images/cards/item-bowshort.svg"
+  :summary
+   "* Weapon: Two-handed Ranged
+    * Damage: Pierce Slash"))
+
+(func item-dagger : base/item
+ (base/item
+  :name "Dagger"
+  :image "images/cards/item-dagger.svg"
+  :summary
+   "* Weapon: One-handed Close Combat
+    * Damage: Pierce Slash
+    * Attack Speed:+1"))
+
+(func item-shieldbuckler : base/item
+ (base/item
+  :name "Buckler Shield"
+  :image "images/cards/item-shieldbuckler.svg"
+  :summary
+   "* Armor:1x1
+    * Hit Location: Left or Right Hand"))
+
+(func item-shieldheater : base/item
+ (base/item
+  :name "Heater Shield"
+  :image "images/cards/item-shieldheater.svg"
+  :summary
+   "* Armor:2x1
+    * Hit Location: Left or Right Hand"))
+
+(func item-shieldround : base/item
+ (base/item
+  :name "Round Shield"
+  :image "images/cards/item-shieldround.svg"
+  :summary
+   "* Armor:2x1
+    * Hit Location: Left or Right Hand"))
+
+(func item-spear : base/item
+ (base/item
+  :name "Spear"
+  :image "images/cards/item-spear.svg"
+  :summary
+   "* Weapon: Two-handed Melee
+    * Damage: Pierce Slash
+    * Armor:1x1
+    * Reach"))
+
+(func item-spearshort : base/item
+ (base/item
+  :name "Short Spear"
+  :image "images/cards/item-spearshort.svg"
+  :summary
+   "* Weapon: One-handed Melee
+    * Damage: Pierce Slash"))
+
+(func item-swordlong : base/item
+ (base/item
+  :name "Longsword"
+  :image "images/cards/item-swordlong.svg"
+  :summary
+   "* Weapon: One-handed Melee
+    * Damage: Pierce or Slash
+    * Armor:1x1"))
+
 (func place-blacksmith : base/location
  (base/location
   :name "Blacksmith"
@@ -70,7 +156,11 @@
 (func unit-goblinscout : base/unit
  (base/unit
   :name "Goblin Scout"
-  :image "images/cards/unit-goblin-scout.svg"))
+  :image "images/cards/unit-goblin-scout.svg"
+  :demeanor "Depraved"
+  :gender "Male"
+  :nature "Cowardly Envious"
+  :race "Goblin"))
 
 (func unit-horse : base/unit
  (base/unit
@@ -120,6 +210,16 @@
       (unit-xeibhanower)
       (unit-wilddog)
       (unit-woodencart)
+      (item-armor-leathercuirass)
+      (item-barehanded)
+      (item-bowshort)
+      (item-dagger)
+      (item-shieldbuckler)
+      (item-shieldheater)
+      (item-shieldround)
+      (item-spear)
+      (item-spearshort)
+      (item-swordlong)
       (place-field)
       (place-forest)
       (place-mountain)

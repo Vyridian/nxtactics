@@ -43,6 +43,16 @@ export default class nx_tactics_decks_scenario {
               nx_tactics_decks_scenario.f_unit_xeibhanower(),
               nx_tactics_decks_scenario.f_unit_wilddog(),
               nx_tactics_decks_scenario.f_unit_woodencart(),
+              nx_tactics_decks_scenario.f_item_armor_leathercuirass(),
+              nx_tactics_decks_scenario.f_item_barehanded(),
+              nx_tactics_decks_scenario.f_item_bowshort(),
+              nx_tactics_decks_scenario.f_item_dagger(),
+              nx_tactics_decks_scenario.f_item_shieldbuckler(),
+              nx_tactics_decks_scenario.f_item_shieldheater(),
+              nx_tactics_decks_scenario.f_item_shieldround(),
+              nx_tactics_decks_scenario.f_item_spear(),
+              nx_tactics_decks_scenario.f_item_spearshort(),
+              nx_tactics_decks_scenario.f_item_swordlong(),
               nx_tactics_decks_scenario.f_place_field(),
               nx_tactics_decks_scenario.f_place_forest(),
               nx_tactics_decks_scenario.f_place_mountain(),
@@ -60,6 +70,266 @@ export default class nx_tactics_decks_scenario {
           )
         )
       })
+    )
+    return output
+  }
+
+  /**
+   * @function item_armor_leathercuirass
+   * @return {item}
+   */
+  static t_item_armor_leathercuirass = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_armor_leathercuirass = {
+    vx_type: nx_tactics_decks_scenario.t_item_armor_leathercuirass
+  }
+
+  // (func item-armor-leathercuirass)
+  static f_item_armor_leathercuirass() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Leather Cuirass",
+      ":image",
+      "images/cards/item-armor-leathercuirass.svg",
+      ":summary",
+      "* Leather Body Armor\n* Hit Location: Shoulders, Chest, Abdomen, Vitals\n* Armor:1x1\n* Hardened vs. Slash"
+    )
+    return output
+  }
+
+  /**
+   * @function item_barehanded
+   * @return {item}
+   */
+  static t_item_barehanded = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_barehanded = {
+    vx_type: nx_tactics_decks_scenario.t_item_barehanded
+  }
+
+  // (func item-barehanded)
+  static f_item_barehanded() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Bare Handed",
+      ":image",
+      "images/cards/item-barehanded.svg",
+      ":summary",
+      "* Weapon: Close Combat\n* Damage: Bash"
+    )
+    return output
+  }
+
+  /**
+   * @function item_bowshort
+   * @return {item}
+   */
+  static t_item_bowshort = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_bowshort = {
+    vx_type: nx_tactics_decks_scenario.t_item_bowshort
+  }
+
+  // (func item-bowshort)
+  static f_item_bowshort() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Short Bow",
+      ":image",
+      "images/cards/item-bowshort.svg",
+      ":summary",
+      "* Weapon: Two-handed Ranged\n* Damage: Pierce Slash"
+    )
+    return output
+  }
+
+  /**
+   * @function item_dagger
+   * @return {item}
+   */
+  static t_item_dagger = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_dagger = {
+    vx_type: nx_tactics_decks_scenario.t_item_dagger
+  }
+
+  // (func item-dagger)
+  static f_item_dagger() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Dagger",
+      ":image",
+      "images/cards/item-dagger.svg",
+      ":summary",
+      "* Weapon: One-handed Close Combat\n* Damage: Pierce Slash\n* Attack Speed:+1"
+    )
+    return output
+  }
+
+  /**
+   * @function item_shieldbuckler
+   * @return {item}
+   */
+  static t_item_shieldbuckler = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_shieldbuckler = {
+    vx_type: nx_tactics_decks_scenario.t_item_shieldbuckler
+  }
+
+  // (func item-shieldbuckler)
+  static f_item_shieldbuckler() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Buckler Shield",
+      ":image",
+      "images/cards/item-shieldbuckler.svg",
+      ":summary",
+      "* Armor:1x1\n* Hit Location: Left or Right Hand"
+    )
+    return output
+  }
+
+  /**
+   * @function item_shieldheater
+   * @return {item}
+   */
+  static t_item_shieldheater = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_shieldheater = {
+    vx_type: nx_tactics_decks_scenario.t_item_shieldheater
+  }
+
+  // (func item-shieldheater)
+  static f_item_shieldheater() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Heater Shield",
+      ":image",
+      "images/cards/item-shieldheater.svg",
+      ":summary",
+      "* Armor:2x1\n* Hit Location: Left or Right Hand"
+    )
+    return output
+  }
+
+  /**
+   * @function item_shieldround
+   * @return {item}
+   */
+  static t_item_shieldround = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_shieldround = {
+    vx_type: nx_tactics_decks_scenario.t_item_shieldround
+  }
+
+  // (func item-shieldround)
+  static f_item_shieldround() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Round Shield",
+      ":image",
+      "images/cards/item-shieldround.svg",
+      ":summary",
+      "* Armor:2x1\n* Hit Location: Left or Right Hand"
+    )
+    return output
+  }
+
+  /**
+   * @function item_spear
+   * @return {item}
+   */
+  static t_item_spear = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_spear = {
+    vx_type: nx_tactics_decks_scenario.t_item_spear
+  }
+
+  // (func item-spear)
+  static f_item_spear() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Spear",
+      ":image",
+      "images/cards/item-spear.svg",
+      ":summary",
+      "* Weapon: Two-handed Melee\n* Damage: Pierce Slash\n* Armor:1x1\n* Reach"
+    )
+    return output
+  }
+
+  /**
+   * @function item_spearshort
+   * @return {item}
+   */
+  static t_item_spearshort = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_spearshort = {
+    vx_type: nx_tactics_decks_scenario.t_item_spearshort
+  }
+
+  // (func item-spearshort)
+  static f_item_spearshort() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Short Spear",
+      ":image",
+      "images/cards/item-spearshort.svg",
+      ":summary",
+      "* Weapon: One-handed Melee\n* Damage: Pierce Slash"
+    )
+    return output
+  }
+
+  /**
+   * @function item_swordlong
+   * @return {item}
+   */
+  static t_item_swordlong = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_swordlong = {
+    vx_type: nx_tactics_decks_scenario.t_item_swordlong
+  }
+
+  // (func item-swordlong)
+  static f_item_swordlong() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Longsword",
+      ":image",
+      "images/cards/item-swordlong.svg",
+      ":summary",
+      "* Weapon: One-handed Melee\n* Damage: Pierce or Slash\n* Armor:1x1"
     )
     return output
   }
@@ -395,7 +665,15 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Goblin Scout",
       ":image",
-      "images/cards/unit-goblin-scout.svg"
+      "images/cards/unit-goblin-scout.svg",
+      ":demeanor",
+      "Depraved",
+      ":gender",
+      "Male",
+      ":nature",
+      "Cowardly Envious",
+      ":race",
+      "Goblin"
     )
     return output
   }
@@ -552,6 +830,16 @@ export default class nx_tactics_decks_scenario {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-murintrail": nx_tactics_decks_scenario.e_deck_murintrail,
+      "item-armor-leathercuirass": nx_tactics_decks_scenario.e_item_armor_leathercuirass,
+      "item-barehanded": nx_tactics_decks_scenario.e_item_barehanded,
+      "item-bowshort": nx_tactics_decks_scenario.e_item_bowshort,
+      "item-dagger": nx_tactics_decks_scenario.e_item_dagger,
+      "item-shieldbuckler": nx_tactics_decks_scenario.e_item_shieldbuckler,
+      "item-shieldheater": nx_tactics_decks_scenario.e_item_shieldheater,
+      "item-shieldround": nx_tactics_decks_scenario.e_item_shieldround,
+      "item-spear": nx_tactics_decks_scenario.e_item_spear,
+      "item-spearshort": nx_tactics_decks_scenario.e_item_spearshort,
+      "item-swordlong": nx_tactics_decks_scenario.e_item_swordlong,
       "place-blacksmith": nx_tactics_decks_scenario.e_place_blacksmith,
       "place-campsite": nx_tactics_decks_scenario.e_place_campsite,
       "place-cavemouth": nx_tactics_decks_scenario.e_place_cavemouth,
@@ -575,6 +863,16 @@ export default class nx_tactics_decks_scenario {
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-murintrail": nx_tactics_decks_scenario.t_deck_murintrail,
+      "item-armor-leathercuirass": nx_tactics_decks_scenario.t_item_armor_leathercuirass,
+      "item-barehanded": nx_tactics_decks_scenario.t_item_barehanded,
+      "item-bowshort": nx_tactics_decks_scenario.t_item_bowshort,
+      "item-dagger": nx_tactics_decks_scenario.t_item_dagger,
+      "item-shieldbuckler": nx_tactics_decks_scenario.t_item_shieldbuckler,
+      "item-shieldheater": nx_tactics_decks_scenario.t_item_shieldheater,
+      "item-shieldround": nx_tactics_decks_scenario.t_item_shieldround,
+      "item-spear": nx_tactics_decks_scenario.t_item_spear,
+      "item-spearshort": nx_tactics_decks_scenario.t_item_spearshort,
+      "item-swordlong": nx_tactics_decks_scenario.t_item_swordlong,
       "place-blacksmith": nx_tactics_decks_scenario.t_place_blacksmith,
       "place-campsite": nx_tactics_decks_scenario.t_place_campsite,
       "place-cavemouth": nx_tactics_decks_scenario.t_place_cavemouth,
@@ -624,6 +922,186 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_deck_murintrail
+    }
+
+    // (func item-armor-leathercuirass)
+    nx_tactics_decks_scenario.t_item_armor_leathercuirass['vx_value'] = {
+      name          : "item-armor-leathercuirass",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_armor_leathercuirass
+    }
+
+    // (func item-barehanded)
+    nx_tactics_decks_scenario.t_item_barehanded['vx_value'] = {
+      name          : "item-barehanded",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_barehanded
+    }
+
+    // (func item-bowshort)
+    nx_tactics_decks_scenario.t_item_bowshort['vx_value'] = {
+      name          : "item-bowshort",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_bowshort
+    }
+
+    // (func item-dagger)
+    nx_tactics_decks_scenario.t_item_dagger['vx_value'] = {
+      name          : "item-dagger",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_dagger
+    }
+
+    // (func item-shieldbuckler)
+    nx_tactics_decks_scenario.t_item_shieldbuckler['vx_value'] = {
+      name          : "item-shieldbuckler",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_shieldbuckler
+    }
+
+    // (func item-shieldheater)
+    nx_tactics_decks_scenario.t_item_shieldheater['vx_value'] = {
+      name          : "item-shieldheater",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_shieldheater
+    }
+
+    // (func item-shieldround)
+    nx_tactics_decks_scenario.t_item_shieldround['vx_value'] = {
+      name          : "item-shieldround",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_shieldround
+    }
+
+    // (func item-spear)
+    nx_tactics_decks_scenario.t_item_spear['vx_value'] = {
+      name          : "item-spear",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_spear
+    }
+
+    // (func item-spearshort)
+    nx_tactics_decks_scenario.t_item_spearshort['vx_value'] = {
+      name          : "item-spearshort",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_spearshort
+    }
+
+    // (func item-swordlong)
+    nx_tactics_decks_scenario.t_item_swordlong['vx_value'] = {
+      name          : "item-swordlong",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_swordlong
     }
 
     // (func place-blacksmith)

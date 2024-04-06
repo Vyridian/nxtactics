@@ -298,6 +298,7 @@
   [id    : string := (:id card)
    name  : string := (:name card)
    image : string := (:image card)
+   datatype : any := (type<-any card)
    display : string :=
     (string-display<-any
      card)
@@ -308,9 +309,15 @@
      name)
    uid : string :=
     (string parent "-" id1)
+   imgback : string :=
+    (switch : string
+     datatype
+     (case base/item "images/card-item.svg")
+     (case base/unit "images/card-unit.svg")
+     (else image))
    uiimage : ui/ui :=
-    (ui-image<-uid-path :debug
-     uid image)
+    (ui-image<-uid-path
+     uid imgback)
    events : event/eventmap :=
     (if : event/eventmap
      (then
@@ -820,38 +827,6 @@
      uisuit2 : ui/ui :=
       (ui-suit<-uid-rank-suit-pos
        parent rank suit 2)]
-/*
-     suitstyle1 : ui/style :=
-      (switch : ui/style
-       suit
-       (case base/suit-black
-        styles/style-image-jester-black1)
-       (case base/suit-red
-        styles/style-image-jester-red1)
-       (case base/suit-diamond
-        styles/style-image-coin1)
-       (case base/suit-heart
-        styles/style-image-cup1)
-       (case base/suit-spade
-        styles/style-image-sword1)
-       (case base/suit-club
-        styles/style-image-wand1))
-     suitstyle2 : ui/style :=
-      (switch : ui/style
-       suit
-       (case base/suit-black
-        styles/style-image-jester-black2)
-       (case base/suit-red
-        styles/style-image-jester-red2)
-       (case base/suit-diamond
-        styles/style-image-coin2)
-       (case base/suit-heart
-        styles/style-image-cup2)
-       (case base/suit-spade
-        styles/style-image-sword2)
-       (case base/suit-club
-        styles/style-image-wand2))
-*/
     (ui/uilist
      (ui/ui
       :uid labelrank1
@@ -868,24 +843,7 @@
         styles/style-text-rank2)
       :data srank)
      uisuit1
-     uisuit2
-/*
-     (ui/ui
-      :uid labelsuit1
-      :style styles/style-card-suit
-      :stylelist
-       (ui/stylelist
-        suitstyle1)
-      :data ssuit)
-     (ui/ui
-      :uid labelsuit2
-      :style styles/style-card-suit
-      :stylelist
-       (ui/stylelist
-        suitstyle2)
-      :data ssuit)
-*/
-      ))))
+     uisuit2))))
  :doc "")
 
 (func uimap<-cardmap-parent : ui/uimap
