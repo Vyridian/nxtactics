@@ -29,6 +29,10 @@
               orientation : string
               ranksuit    : ranksuit])
 
+(type cardback : struct
+ :traits [card]
+ :doc "The back of a card. Title repeated on top and bottom.")
+
 (type cardimage : struct
  :traits     [card]
  :properties [origcard : card])
@@ -82,12 +86,12 @@
 
 (type item : struct
  :traits     [card]
- :properties [body            : rating
-              mind            : rating
-              will            : rating
-              move            : rating
-              shadow          : rating
-              beast           : rating
+ :properties [body            : string
+              mind            : string
+              will            : string
+              move            : string
+              shadow          : string
+              beast           : string
               classification  : string
               crew            : string
               energy          : string
@@ -272,12 +276,13 @@
 
 (type unit : struct
  :traits     [card]
- :properties [body            : rating
-              mind            : rating
-              will            : rating
-              move            : rating
-              shadow          : rating
-              beast           : rating
+ :properties [body            : string
+              mind            : string
+              will            : string
+              move            : string
+              shadow          : string
+              conscience      : string
+              beast           : string
               demeanor        : string
               nature          : string
               age             : int
@@ -889,10 +894,6 @@
 (func name<-chapter : string
  [chapter : chapter]
  (:name chapter))
-
-(func rating<-mass : rating
- [mass : string]
- :doc "Return a rating from a mass.")
 
 (func sectionlist<-chapter : sectionlist
  [chapter : chapter]

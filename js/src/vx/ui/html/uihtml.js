@@ -1057,6 +1057,8 @@ export default class vx_ui_html_uihtml {
         ":props",
         vx_core.f_new(
           vx_web_html.t_propmap,
+          ":border",
+          "0mm",
           ":margin",
           "0mm",
           ":padding",
@@ -1070,6 +1072,8 @@ export default class vx_ui_html_uihtml {
         ":props",
         vx_core.f_new(
           vx_web_html.t_propmap,
+          ":border",
+          "0mm",
           ":margin",
           "0mm",
           ":padding",
@@ -1083,12 +1087,31 @@ export default class vx_ui_html_uihtml {
         ":props",
         vx_core.f_new(
           vx_web_html.t_propmap,
+          ":border",
+          "0mm",
           ":margin",
           "0mm",
           ":padding",
           "0mm",
           ":position",
           "relative"
+        )
+      ),
+      vx_core.f_new(
+        vx_web_html.t_style,
+        ":name",
+        "img",
+        ":props",
+        vx_core.f_new(
+          vx_web_html.t_propmap,
+          ":border",
+          "0mm",
+          ":display",
+          "block",
+          ":margin",
+          "0mm",
+          ":padding",
+          "0mm"
         )
       ),
       vx_core.f_new(

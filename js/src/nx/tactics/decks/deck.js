@@ -307,6 +307,8 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_damage.f_deck_trauma(),
           nx_tactics_decks_damage.f_deck_traumaback(),
           nx_tactics_decks_damage.f_deck_slow(),
+          nx_tactics_decks_damage.f_deck_bleeding(),
+          nx_tactics_decks_damage.f_deck_bloodloss(),
           nx_tactics_decks_starter.f_deck_player_blue(),
           nx_tactics_decks_starter.f_deck_player_green(),
           nx_tactics_decks_starter.f_deck_player_red(),

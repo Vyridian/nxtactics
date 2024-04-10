@@ -8,27 +8,27 @@ export default class nx_tactics_decks_fate {
 
   /**
    * Constant: card-fate-blue
-   * {card}
+   * {cardback}
    */
-  static c_card_fate_blue = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-blue'}}
+  static c_card_fate_blue = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-blue'}}
 
   /**
    * Constant: card-fate-green
-   * {card}
+   * {cardback}
    */
-  static c_card_fate_green = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-green'}}
+  static c_card_fate_green = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-green'}}
 
   /**
    * Constant: card-fate-red
-   * {card}
+   * {cardback}
    */
-  static c_card_fate_red = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-red'}}
+  static c_card_fate_red = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-red'}}
 
   /**
    * Constant: card-fate-yellow
-   * {card}
+   * {cardback}
    */
-  static c_card_fate_yellow = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-yellow'}}
+  static c_card_fate_yellow = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-yellow'}}
 
   /**
    * Constant: fate-2c
@@ -738,7 +738,7 @@ export default class nx_tactics_decks_fate {
 
     // (const card-fate-blue)
     Object.assign(nx_tactics_decks_fate.c_card_fate_blue, vx_core.f_new(
-      nx_tactics_base.t_card,
+      nx_tactics_base.t_cardback,
       ":id",
       "card-fate-blue",
       ":name",
@@ -749,7 +749,7 @@ export default class nx_tactics_decks_fate {
 
     // (const card-fate-green)
     Object.assign(nx_tactics_decks_fate.c_card_fate_green, vx_core.f_new(
-      nx_tactics_base.t_card,
+      nx_tactics_base.t_cardback,
       ":id",
       "card-fate-green",
       ":name",
@@ -760,7 +760,7 @@ export default class nx_tactics_decks_fate {
 
     // (const card-fate-red)
     Object.assign(nx_tactics_decks_fate.c_card_fate_red, vx_core.f_new(
-      nx_tactics_base.t_card,
+      nx_tactics_base.t_cardback,
       ":id",
       "card-fate-red",
       ":name",
@@ -771,7 +771,7 @@ export default class nx_tactics_decks_fate {
 
     // (const card-fate-yellow)
     Object.assign(nx_tactics_decks_fate.c_card_fate_yellow, vx_core.f_new(
-      nx_tactics_base.t_card,
+      nx_tactics_base.t_cardback,
       ":id",
       "card-fate-yellow",
       ":name",

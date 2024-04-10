@@ -8,32 +8,38 @@
   :id "action-combat"
   :name "Action: Combat"
   :summary
-   "* Target a unit damaging Skill/Power.
+   "* Target a unit with a damaging Skill/Power.
     * Each player chooses a Fate card from their hand or a random Fate from Shared Fate.
     * Fate Cards are compared like Rock/Paper/Scissors.
-    * Order: Attack > Focus > Defend/Evade/Counter > Attack
+    * Combat Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter
     * If both play Attack or Focus then compare by rank (lower is faster).
     * Order: AJQK2-10
     * If Tied, there is no result.
-    * If one player Wins, then resolve their result and apply Damage.
+    * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
     * Discard all card used (except Keep)"))
 
 (func card-action-move : base/card
  (base/card
   :id "action-move"
-  :name "Action: Move"))
+  :name "Action: Move"
+  :summary
+   "* Action: Move your unit up to your [Move] stat.
+    * Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns."))
 
 (func card-action-recover : base/card
  (base/card
   :id "action-recover"
   :name "Action: Recover"
   :summary
-   "* Discard a [Fatigue], [Stun], [Stress], or [Slow]"))
+   "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]
+    * Double Action: Discard a [Bleeding]"))
 
 (func card-action-skill : base/card
  (base/card
   :id "action-skill"
-  :name "Action: Skill"))
+  :name "Action: Skill"
+  :summary
+   "* Action: "))
 
 (func card-characterguide : base/card
  (base/card
@@ -58,13 +64,17 @@
  (base/card
   :id "fatelower"
   :name "Fate: Inverted"
-  :image "images/card-fate-lower.svg"))
+  :image "images/card-fate-lower.svg"
+  :summary
+   "Fate: Play this when playing a Fate card to indicate that the lower choice on the Fate is being used (i.e. the side facing toward you)."))
 
 (func card-fateupper : base/card
  (base/card
   :id "fateupper"
   :name "Fate: Dignified"
-  :image "images/card-fate-upper.svg"))
+  :image "images/card-fate-upper.svg"
+  :summary
+   "Fate: Play this when playing a Fate card to indicate that the upper choice on the Fate is being used (i.e. the side facing away from you)."))
 
 (func card-free-action : base/card
  (base/card
@@ -92,30 +102,49 @@
 (func card-player-blue : base/card
  [num : int]
  (base/card
-  :id (string "player-blue-" num)
+  :id (string "card-player-blue-" num)
   :name "Player"
   :image "images/card-blue.svg"))
 
 (func card-player-green : base/card
  [num : int]
  (base/card
-  :id (string "player-green-" num)
+  :id (string "card-player-green-" num)
   :name "Player"
   :image "images/card-green.svg"))
 
 (func card-player-red : base/card
  [num : int]
  (base/card
-  :id (string "player-red-" num)
+  :id (string "card-player-red-" num)
   :name "Player"
   :image "images/card-red.svg"))
 
 (func card-player-yellow : base/card
  [num : int]
  (base/card
-  :id (string "player-yellow-" num)
+  :id (string "card-player-yellow-" num)
   :name "Player"
   :image "images/card-yellow.svg"))
+
+(func card-scale : base/card
+ (base/card
+  :id (string "card-scale")
+  :name "Scale"
+  :summary
+   "* Each stat/skill/power has a number after the letter 'x'.
+    * This is the scale of that ability.
+    * The number represents the number of zeroes. E.g. 5x3 translates to 5000.
+    * x0 denotes human scale. E.g. 1x0=10kg, 10iq+50, 10will+50, 1kph"))
+
+(func card-scale-0 : base/card
+ (base/card
+  :id (string "card-scale-0")
+  :name "Scale:0"
+  :summary
+   "* Human Scale
+    * Turn Length: 4sec
+    * Note: Humans walk at 5kph or 1.3m/s. This makes a 4sec turn 5 spaces."))
 
 (func card-setupguide : base/card
  (base/card
@@ -128,17 +157,17 @@
     * Player [Turn Order] cards are shuffled together to create a [Turn Order] deck.
     * Reveal the top card in the Scenario deck and follow its instructions."))
 
-(func card-turn-game : base/card
+(func card-turn-order : base/card
  (base/card
-  :id "turn-game"
-  :name "Turn: Game"
+  :id "turn-order"
+  :name "Turn: Order"
   :summary
-   "* Reveal: Reveal the top card from the [Turn Order] deck to determine the next active Player.
-    * Activate and Target: That [Player] chooses a Unit to Activate and announces a target.
-    * Reveal Again: Reveal the next card from the [Turn Order] deck. If none, go to Player Turns
-    * Activate and Target: The next Player MAY choose a Unit to Activate and announce a target that is not currently an active Player or a target. If so, repeat the Reveal Again step.
-    * Wait: OR the next player may Wait for the previous [Player] to finish.
-    * Player Turns: If a player Waited or there are no [Turn Order] cards remaining, the active Players may simultaneously do [Turn: Player]."))
+   "* Reveal: Flip each card of [Turn Order] deck to form a row. This is the [Player] order this turn.
+    * Activate: In order, each [Player] chooses a Unit to activate.
+    * Action1: Each [Player] chooses an Action to take. If applicable, they also announce target(s).
+    * Resolve1: If a player was the target of an Action, they must wait for the action to resolve. Otherwise, each player performs their [Player: Action] simultaneously. Note: lower order Units cannot be blocked by the movement of higher order Units.
+    * Action2: Same as Action1 above.
+    * Resolve2: Same as Resolve1 above."))
 
 (func card-turn-order : base/card
  (base/card
@@ -184,7 +213,7 @@
     (base/cardlist
      (card-gameguide)
      (card-setupguide)
-     (card-turn-game)
+     (card-turn-order)
      (card-turn-player)
      (card-action-move)
      (card-action-combat)
@@ -195,6 +224,8 @@
      (card-characterguide)
      (card-levelingguide)
      (card-turn-order)
+     (card-scale)
+     (card-scale-0)
      (card-fateupper)
      (card-fatelower))
    cardmap : base/cardmap :=

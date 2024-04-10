@@ -30,7 +30,7 @@
        (lib space_and_time   :path nx/tactics/books/space_and_time)
        (lib superheroes      :path nx/tactics/books/superheroes)
        (lib world_wars       :path nx/tactics/books/world_wars)
- :doc  "Tactics Damage Decks")
+ :doc  "Tactics Decks")
 
 (const tactics-all : base/tactics
  (let : base/tactics
@@ -124,6 +124,8 @@
      (damage/deck-trauma)
      (damage/deck-traumaback)
      (damage/deck-slow)
+     (damage/deck-bleeding)
+     (damage/deck-bloodloss)
      (starter/deck-player-blue)
      (starter/deck-player-green)
      (starter/deck-player-red)

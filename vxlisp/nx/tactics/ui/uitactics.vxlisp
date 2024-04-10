@@ -72,11 +72,45 @@
    event-navbutton-back-click))
  :doc "Eventmap for navbutton-back")
 
+(func string<-mass-h-l-w : string
+ [mass   : string
+  height : string
+  length : string
+  width  : string]
+ (let
+  [smass : string :=
+    (if : string
+     (then
+      (!-empty mass)
+      (string "mass:" mass)))
+   h : string :=
+    (if : string
+     (then
+      (!-empty height)
+      (string "h:" height)))
+   l : string :=
+    (if : string
+     (then
+      (!-empty length)
+      (string "l:" length)))
+   w : string :=
+    (if : string
+     (then
+      (!-empty width)
+      (string "w:" width)))
+   slist : stringlist := (stringlist smass h l w)]
+  (string<-stringlist-join
+   slist " "))
+ :test (test
+        "mass:80kg/160lb h:2m/6ft l:2m/6ft w:1m/3ft"
+        (string<-mass-h-l-w
+         "80kg/160lb" "2m/6ft" "1m/3ft" "2m/6ft"))
+ :doc "Returns a string from a mass, height, length, width")
+
 (func string-display<-any : string
  [value : any]
  (let : string
-  [datatype : any :=
-    (type<-any value)
+  [datatype : any := (type<-any value)
    display : string :=
     (if : string
      (then
@@ -94,6 +128,10 @@
        (string-display<-skill
         (any<-any : base/skill
          value)))
+     (then
+      (or
+       (== datatype base/item)
+       (== datatype base/unit)) "")
      (then
       (is-type datatype base/card)
       (let : string
@@ -188,6 +226,36 @@
      parent))))
  :doc "Returns a ui created from any value")
 
+(func ui-title1<-uid-text : ui/ui
+ [uid  : string
+  text : string]
+ (let : ui/ui
+  [uidtitle : string :=
+    (string uid "-title1")]
+  (ui/ui
+   :uid uidtitle
+   :style styles/style-card-title1
+   :stylelist
+    (ui/stylelist
+     styles/style-text-header1)
+   :data text))
+ :doc "Returns a card title1")
+
+(func ui-title2<-uid-text : ui/ui
+ [uid  : string
+  text : string]
+ (let : ui/ui
+  [uidtitle : string :=
+    (string uid "-title2")]
+  (ui/ui
+   :uid uidtitle
+   :style styles/style-card-title2
+   :stylelist
+    (ui/stylelist
+     styles/style-text-header1)
+   :data text))
+ :doc "Returns a card title2")
+
 (func uilist<-card-parent : ui/uilist
  [card   : base/card
   parent : string]
@@ -220,16 +288,15 @@
      (then isdisplay4
       (:1 displaysplit))
      (else display))
-   uidtitle : string :=
-    (string uid "-title")
-   uititle : ui/ui :=
-    (ui/ui
-     :uid uidtitle
-     :style styles/style-card-title
-     :stylelist
-      (ui/stylelist
-       styles/style-text-header1)
-     :data name)
+   uititle1 : ui/ui :=
+    (ui-title1<-uid-text
+     uid name)
+   uititle2 : ui/ui :=
+    (if : ui/ui
+     (then
+      (== datatype base/cardback)
+      (ui-title2<-uid-text
+       uid name)))
    uiddisplay : string :=
     (string uid "-display")
    uidisplay : ui/ui :=
@@ -242,12 +309,22 @@
      :data display1)
    ranksuit : base/ranksuit :=
     (:ranksuit card)
-   uilistrs : ui/uilist :=
+   uilist1 : ui/uilist :=
     (uilist<-ranksuit-parent
      ranksuit
      uid)
-   uilistdam : ui/uilist :=
+   uilist2 : ui/uilist :=
     (if : ui/uilist
+     (then
+      (== datatype base/item)
+      (uilist<-item-parent
+       (any<-any card)
+       parent))
+     (then
+      (== datatype base/unit)
+      (uilist<-unit-parent
+       (any<-any card)
+       parent))
      (then
       isdisplay4
       (let : ui/uilist
@@ -286,10 +363,235 @@
         uidisplay3
         uidisplay4))))]
   (ui/uilist
-   uilistrs
-   uilistdam
-   uititle
+   uilist1
+   uilist2
+   uititle1
+   uititle2
    uidisplay)))
+
+(func uilist<-item-parent : ui/uilist
+ [unit   : base/item
+  parent : string]
+ (let : ui/uilist
+  [name : string := (:name unit)
+   titles : string := (:titles unit)
+   image : string := (:image unit)
+   value : string := (:value unit)
+   summary : string := (:summary unit)
+   body : string := (:body unit)
+   bodydetail : string :=
+    (string<-mass-h-l-w
+     (:mass   unit)
+     (:height unit)
+     (:length unit)
+     (:width  unit))
+   mind : string := (:mind unit)
+   minddetail : string := "demeanor:Aloof nature:Nurturing"
+   will : string := (:will unit)
+   willdetail : string := "beast:1x1 shadow:1x1"
+   move : string := (:move unit)
+   movedetail : string := "land:5kph/3mph water:2kph/5mph air:2kph/4mph"
+   detail : string :=
+    (string
+     summary
+     "* [Melee]:1x0 [Hammer]
+      * [Tradeskill]:1x0 [Blacksmithing]")
+   prefix : string := (string parent "-" name)
+   uidimage : string := (string prefix "-image")
+   uiimage : ui/ui :=
+    (ui/ui
+     :uid uidimage
+     :style styles/style-unit-image
+     :data
+      (file/file<-path
+       image))
+   uivalue : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-value")
+     :style styles/style-unit-value
+     :stylelist
+      (ui/stylelist
+       styles/style-text-header1)
+     :data value)
+   uititles : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-titles")
+     :style styles/style-unit-titles
+     :stylelist
+      (ui/stylelist
+       styles/style-text)
+     :data titles)
+   uibody : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-body")
+     :style styles/style-unit-body
+     :stylelist
+      (ui/stylelist
+       styles/style-text-header1)
+     :data body)
+   uibodydetail : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-bodydetail")
+     :style styles/style-unit-bodydetail
+     :stylelist
+      (ui/stylelist
+       styles/style-text-2)
+     :data bodydetail)
+   uidetail : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-detail")
+     :style styles/style-unit-detail
+     :stylelist
+      (ui/stylelist
+       styles/style-textarea)
+     :data detail)]
+  (ui/uilist
+   uiimage
+   uivalue
+   uititles
+   uibody
+   uibodydetail
+   uidetail))
+ :doc "Returns a list of child ui from a item/parent")
+
+(func uilist<-unit-parent : ui/uilist
+ [unit   : base/unit
+  parent : string]
+ (let : ui/uilist
+  [name : string := (:name unit)
+   titles : string := (:titles unit)
+   image : string := (:image unit)
+   value : string := (:value unit)
+   summary : string := (:summary unit)
+   body : string := (:body unit)
+   bodydetail : string :=
+    (string<-mass-h-l-w
+     (:mass   unit)
+     (:height unit)
+     (:length unit)
+     (:width  unit))
+   mind : string := (:mind unit)
+   minddetail : string := "demeanor:Aloof nature:Nurturing"
+   will : string := (:will unit)
+   willdetail : string := "beast:1x1 shadow:1x1"
+   move : string := (:move unit)
+   movedetail : string := "land:5kph/3mph water:2kph/5mph air:2kph/4mph"
+   detail : string :=
+    (string
+     summary
+     "* [Melee]:1x0 [Hammer]
+      * [Tradeskill]:1x0 [Blacksmithing]")
+   prefix : string := (string parent "-" name)
+   uidimage : string := (string prefix "-image")
+   uiimage : ui/ui :=
+    (ui/ui
+     :uid uidimage
+     :style styles/style-unit-image
+     :data
+      (file/file<-path
+       image))
+   uivalue : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-value")
+     :style styles/style-unit-value
+     :stylelist
+      (ui/stylelist
+       styles/style-text-header1)
+     :data value)
+   uititles : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-titles")
+     :style styles/style-unit-titles
+     :stylelist
+      (ui/stylelist
+       styles/style-text)
+     :data titles)
+   uibody : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-body")
+     :style styles/style-unit-body
+     :stylelist
+      (ui/stylelist
+       styles/style-text-header1)
+     :data body)
+   uibodydetail : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-bodydetail")
+     :style styles/style-unit-bodydetail
+     :stylelist
+      (ui/stylelist
+       styles/style-text-2)
+     :data bodydetail)
+   uimind : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-mind")
+     :style styles/style-unit-mind
+     :stylelist
+      (ui/stylelist
+       styles/style-text-header1)
+     :data mind)
+   uiminddetail : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-minddetail")
+     :style styles/style-unit-minddetail
+     :stylelist
+      (ui/stylelist
+       styles/style-text-2)
+     :data minddetail)
+   uiwill : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-will")
+     :style styles/style-unit-will
+     :stylelist
+      (ui/stylelist
+       styles/style-text-header1)
+     :data will)
+   uiwilldetail : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-willdetail")
+     :style styles/style-unit-willdetail
+     :stylelist
+      (ui/stylelist
+       styles/style-text-2)
+     :data willdetail)
+   uimove : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-move")
+     :style styles/style-unit-move
+     :stylelist
+      (ui/stylelist
+       styles/style-text-header1)
+     :data move)
+   uimovedetail : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-movedetail")
+     :style styles/style-unit-movedetail
+     :stylelist
+      (ui/stylelist
+       styles/style-text-2)
+     :data movedetail)
+   uidetail : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-detail")
+     :style styles/style-unit-detail
+     :stylelist
+      (ui/stylelist
+       styles/style-textarea)
+     :data detail)]
+  (ui/uilist
+   uiimage
+   uivalue
+   uititles
+   uibody
+   uibodydetail
+   uimind
+   uiminddetail
+   uiwill
+   uiwilldetail
+   uimove
+   uimovedetail
+   uidetail))
+ :doc "Returns a list of child ui from an unit/parent")
 
 (func ui<-card-parent : ui/ui
  [card   : base/card
@@ -352,21 +654,6 @@
     (ui/uimap<-uilist
      uilist2)))
  :doc "Returns the a card ui.")
-
-(func ui<-unit-parent : ui
- [unit   : base/unit
-  parent : string]
- :doc "Returns the template for a unit ui.")
-
-(func ui<-unit-background : ui/ui)
-
-(func ui<-unit-header : ui/ui)
-
-(func ui<-unit-flavor : ui/ui)
-
-(func ui<-unit-skillpower : ui/ui)
-
-(func ui<-unit-stat : ui/ui)
 
 (func ui-app : ui/ui
  (let : ui/ui

@@ -2,8 +2,24 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Damage Decks")
 
-(const fatigue : base/card
+(const bleeding : base/cardback
+ (base/cardback
+  :id "bleeding"
+  :name "Bleeding"
+  :image "images/card-bleeding.svg"
+  :summary
+   "* Turn End: Gain a [Fatigue] for each [Bleeding]. If [Body]:0, then gain a [Blood Loss] instead."))
+
+(const bloodloss : base/card
  (base/card
+  :id "bloodloss"
+  :name "Bloodloss"
+  :image "images/card-bloodloss.svg"
+  :summary
+   "* Day End: Discard one [Bloodloss]"))
+
+(const fatigue : base/cardback
+ (base/cardback
   :id "fatigue"
   :name "Damage: Fatigue"
   :titles "Physical Damage/Fatigue/Weaken/Exertion"
@@ -12,8 +28,8 @@
    "* If you have [Body]:0 then you are Exhausted. Any additional [Fatigue] is flipped to [Damage].
     * Exhausted: Cannot play odd [Attack] cards and your second action may only be [Recover]."))
 
-(const slow : base/card
- (base/card
+(const slow : base/cardback
+ (base/cardback
   :id "slow"
   :name "Restraint: Slow"
   :titles "Constraint/Burden"
@@ -22,8 +38,8 @@
     "* If you have [Move]:0, you are Encumbered. Any additional [Slow] is flipped to [Restraint].
      * Encumbered: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up)."))
 
-(const stress : base/card
- (base/card
+(const stress : base/cardback
+ (base/cardback
   :id "stress"
   :name "Trauma: Stress"
   :titles "Emotional Trauma/Stress/Duress/Horror"
@@ -40,8 +56,8 @@
     This is our last dance
     This is ourselves under pressure - Queen and David Bowie, Under Pressure"))
 
-(const stun : base/card
- (base/card
+(const stun : base/cardback
+ (base/cardback
   :id "stun"
   :name "Disorder: Stun"
   :titles "Mental Damage/Strain/Distraction/Surprise/Shock"
@@ -690,6 +706,22 @@
     Major: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
     Extreme: Foot Severed. Hobbled. Bleeding:2"))
 
+(func deck-bleeding : base/deck
+ (base/deck
+  :name "Bleeding"
+  :cardmap
+   (base/cardmap-copy<-card-num
+    bleeding 54))
+ :doc "Bleeding Deck")
+
+(func deck-bloodloss : base/deck
+ (base/deck
+  :name "Bloodloss"
+  :cardmap
+   (base/cardmap-copy<-card-num
+    bloodloss 54))
+ :doc "Bloodloss Deck")
+
 (func deck-damage : base/deck
  (base/deck
   :name "Damage"
@@ -768,10 +800,10 @@
  (base/deck
   :name "Disorder"
   :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
-  :summary "* S-Hack Blood/Gore/Dismember/Stress
-            * H-Slash Blood/Burden
-            * C-Bash/Fatigue/Push/Fatigue
-            * D-Pierce/Shock/Stun/Pin/Disable/Strain")
+  :summary "* S-Delusion/Racism/Irrational/Lost in Fantasy/Lost in Nightmare/Lost in Hell
+            * H-Compulsion/Obsession/Monomaniacal
+            * C-Disfunction/Shock/Disable/Tremors/Spasms/Seizures/Stroke/Nerve Damage/Paralysis/Brain Damage
+            * D-Distortion/Misperception/Misunderstand/Miscommunicate/Amnesia/Aphasia")
  :doc "Damage to the Mind")
 
 (func deck-disorderback : base/deck
@@ -785,11 +817,11 @@
 (func deck-trauma : base/deck
  (base/deck
   :name "Trauma"
-  :titles "Apathy, Cowed, Crisis, Berserk, Broken, Depression, Servitude, Surly"
-  :summary "* S-Hack Blood/Gore/Dismember
-            * H-Slash Blood/Slow
-            * C-Bash/Fatigue/Push
-            * D-Pierce/Stun/Pin/Disable")
+  :titles ""
+  :summary "* S-Fear/Cowed/Died of Fear
+            * H-Despair/Apathy/Depression/Broken/Suicidal
+            * C-Anger/Surly/Suicidal Rage
+            * D-Doubt/Servitude/Coverted")
  :doc "Damage to the Will")
 
 (func deck-slow : base/deck

@@ -38,15 +38,18 @@ export default class nx_tactics_decks_scenario {
               nx_tactics_base.t_cardlist,
               goblinscout,
               horse,
-              nx_tactics_decks_scenario.f_unit_jessaveer(),
+              nx_tactics_decks_scenario.f_unit_jesaveer(),
               nx_tactics_decks_scenario.f_unit_jonaveer(),
               nx_tactics_decks_scenario.f_unit_xeibhanower(),
               nx_tactics_decks_scenario.f_unit_wilddog(),
               nx_tactics_decks_scenario.f_unit_woodencart(),
               nx_tactics_decks_scenario.f_item_armor_leathercuirass(),
+              nx_tactics_decks_scenario.f_item_axehand(),
+              nx_tactics_decks_scenario.f_item_axewood(),
               nx_tactics_decks_scenario.f_item_barehanded(),
               nx_tactics_decks_scenario.f_item_bowshort(),
               nx_tactics_decks_scenario.f_item_dagger(),
+              nx_tactics_decks_scenario.f_item_hammer(),
               nx_tactics_decks_scenario.f_item_shieldbuckler(),
               nx_tactics_decks_scenario.f_item_shieldheater(),
               nx_tactics_decks_scenario.f_item_shieldround(),
@@ -92,10 +95,74 @@ export default class nx_tactics_decks_scenario {
       nx_tactics_base.t_item,
       ":name",
       "Leather Cuirass",
+      ":titles",
+      "Leather Body Armor",
       ":image",
       "images/cards/item-armor-leathercuirass.svg",
       ":summary",
-      "* Leather Body Armor\n* Hit Location: Shoulders, Chest, Abdomen, Vitals\n* Armor:1x1\n* Hardened vs. Slash"
+      "* Armor:1x1\n* Location: Shoulders, Chest, Abdomen, Vitals\n* Hardened: [Slash]"
+    )
+    return output
+  }
+
+  /**
+   * @function item_axehand
+   * @return {item}
+   */
+  static t_item_axehand = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_axehand = {
+    vx_type: nx_tactics_decks_scenario.t_item_axehand
+  }
+
+  // (func item-axehand)
+  static f_item_axehand() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Hand Axe",
+      ":image",
+      "images/cards/item-axehand.svg",
+      ":summary",
+      "* Melee: [Hack] [Slash]\n* Location: [1-hand]",
+      ":body",
+      "9x-1",
+      ":mass",
+      "900g/2lb"
+    )
+    return output
+  }
+
+  /**
+   * @function item_axewood
+   * @return {item}
+   */
+  static t_item_axewood = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_axewood = {
+    vx_type: nx_tactics_decks_scenario.t_item_axewood
+  }
+
+  // (func item-axewood)
+  static f_item_axewood() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Wood Axe",
+      ":titles",
+      "Splitting Axe",
+      ":image",
+      "images/cards/item-axewood.svg",
+      ":summary",
+      "* Melee: [Hack] [Slash]\n* Location: [1-hand]\n* Armor:1x1",
+      ":body",
+      "1x0",
+      ":mass",
+      "1.4kg/3lb"
     )
     return output
   }
@@ -121,7 +188,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-barehanded.svg",
       ":summary",
-      "* Weapon: Close Combat\n* Damage: Bash"
+      "* Close Combat: [Bash]"
     )
     return output
   }
@@ -147,7 +214,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-bowshort.svg",
       ":summary",
-      "* Weapon: Two-handed Ranged\n* Damage: Pierce Slash"
+      "* Ranged: [Pierce] [Slash]\n* Location: [2-hand]"
     )
     return output
   }
@@ -173,7 +240,37 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-dagger.svg",
       ":summary",
-      "* Weapon: One-handed Close Combat\n* Damage: Pierce Slash\n* Attack Speed:+1"
+      "* Close Combat: [Pierce] [Slash]\n* Location: [1-hand]\n* Attack:+1"
+    )
+    return output
+  }
+
+  /**
+   * @function item_hammer
+   * @return {item}
+   */
+  static t_item_hammer = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_hammer = {
+    vx_type: nx_tactics_decks_scenario.t_item_hammer
+  }
+
+  // (func item-hammer)
+  static f_item_hammer() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Hammer",
+      ":image",
+      "images/cards/item-hammer.svg",
+      ":summary",
+      "* Melee: [Bash] [Hack]\n* Location: [1-hand]",
+      ":body",
+      "3x0",
+      ":mass",
+      "3.2kg/7lb"
     )
     return output
   }
@@ -199,7 +296,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-shieldbuckler.svg",
       ":summary",
-      "* Armor:1x1\n* Hit Location: Left or Right Hand"
+      "* Armor:1x1\n* Location: [1-hand]"
     )
     return output
   }
@@ -225,7 +322,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-shieldheater.svg",
       ":summary",
-      "* Armor:2x1\n* Hit Location: Left or Right Hand"
+      "* Armor:2x1\n* Location: [1-hand]\n* Hardened: [Hack]",
+      ":body",
+      "3x0",
+      ":mass",
+      "3.2kg/7lb"
     )
     return output
   }
@@ -251,7 +352,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-shieldround.svg",
       ":summary",
-      "* Armor:2x1\n* Hit Location: Left or Right Hand"
+      "* Armor:2x1\n* Location: [1-hand]\n* Hardened: [Pierce]",
+      ":body",
+      "5x0",
+      ":mass",
+      "5kg/11lb"
     )
     return output
   }
@@ -277,7 +382,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-spear.svg",
       ":summary",
-      "* Weapon: Two-handed Melee\n* Damage: Pierce Slash\n* Armor:1x1\n* Reach"
+      "* Melee: [Pierce] [Slash]\n* Location: [2-hand]\n* Armor:1x1\n* [Reach]"
     )
     return output
   }
@@ -303,7 +408,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-spearshort.svg",
       ":summary",
-      "* Weapon: One-handed Melee\n* Damage: Pierce Slash"
+      "* Melee: [Pierce] [Slash]\n* Location: [1-hand]"
     )
     return output
   }
@@ -329,7 +434,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-swordlong.svg",
       ":summary",
-      "* Weapon: One-handed Melee\n* Damage: Pierce or Slash\n* Armor:1x1"
+      "* Melee: [Pierce] or [Slash]\n* Location: [1-hand]\n* Armor:1x1",
+      ":body",
+      "1x0",
+      ":mass",
+      "1.25kg/3lb"
     )
     return output
   }
@@ -666,14 +775,30 @@ export default class nx_tactics_decks_scenario {
       "Goblin Scout",
       ":image",
       "images/cards/unit-goblin-scout.svg",
-      ":demeanor",
-      "Depraved",
       ":gender",
       "Male",
+      ":demeanor",
+      "Depraved",
       ":nature",
       "Cowardly Envious",
+      ":conscience",
+      "1x1",
       ":race",
-      "Goblin"
+      "Goblin",
+      ":body",
+      "2x1",
+      ":mind",
+      "6x1",
+      ":will",
+      "2x1",
+      ":move",
+      "4x0",
+      ":value",
+      "1x0",
+      ":mass",
+      "22kg/50lb",
+      ":height",
+      "1m/3ft"
     )
     return output
   }
@@ -697,31 +822,81 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Horse",
       ":image",
-      "images/cards/unit-horse.svg"
+      "images/cards/unit-horse.svg",
+      ":body",
+      "4x2",
+      ":mind",
+      "5x-1",
+      ":will",
+      "2x1",
+      ":move",
+      "7x0",
+      ":mass",
+      "450kg/1000lb",
+      ":landspeed",
+      "7kph/4mph",
+      ":demeanor",
+      "Aloof",
+      ":nature",
+      "Skitish"
     )
     return output
   }
 
   /**
-   * @function unit_jessaveer
+   * @function unit_jesaveer
    * @return {unit}
    */
-  static t_unit_jessaveer = {
+  static t_unit_jesaveer = {
     vx_type: vx_core.t_type
   }
-  static e_unit_jessaveer = {
-    vx_type: nx_tactics_decks_scenario.t_unit_jessaveer
+  static e_unit_jesaveer = {
+    vx_type: nx_tactics_decks_scenario.t_unit_jesaveer
   }
 
-  // (func unit-jessaveer)
-  static f_unit_jessaveer() {
+  // (func unit-jesaveer)
+  static f_unit_jesaveer() {
     let output = nx_tactics_base.e_unit
     output = vx_core.f_new(
       nx_tactics_base.t_unit,
       ":name",
-      "Jess Aveer",
+      "Jes Aveer",
+      ":titles",
+      "Jessana Aveer",
       ":image",
-      "images/cards/unit-jessaveer.svg"
+      "images/cards/unit-jesaveer.svg",
+      ":summary",
+      "* A proud young woman with a love of blacksmithing.",
+      ":race",
+      "Human",
+      ":gender",
+      "F",
+      ":age",
+      24,
+      ":body",
+      "6x1",
+      ":mind",
+      "6x1",
+      ":will",
+      "6x1",
+      ":move",
+      "5x0",
+      ":mass",
+      "63kg",
+      ":height",
+      "1.72m/5'7",
+      ":landspeed",
+      "5kph",
+      ":demeanor",
+      "Willful",
+      ":nature",
+      "Nuturing",
+      ":beast",
+      "1x1",
+      ":shadow",
+      "1x1",
+      ":value",
+      "1x0"
     )
     return output
   }
@@ -744,8 +919,42 @@ export default class nx_tactics_decks_scenario {
       nx_tactics_base.t_unit,
       ":name",
       "Jon Aveer",
+      ":titles",
+      "Ajona Aveer",
       ":image",
-      "images/cards/unit-jonaveer.svg"
+      "images/cards/unit-jonaveer.svg",
+      ":summary",
+      "* A clever young man trying to make a living.",
+      ":race",
+      "Human",
+      ":gender",
+      "M",
+      ":age",
+      23,
+      ":body",
+      "7x1",
+      ":mind",
+      "6x1",
+      ":will",
+      "5x1",
+      ":move",
+      "5x0",
+      ":mass",
+      "75kg",
+      ":height",
+      "1.78m/5'10",
+      ":landspeed",
+      "5kph",
+      ":demeanor",
+      "Frivolous",
+      ":nature",
+      "Loyal",
+      ":beast",
+      "1x1",
+      ":shadow",
+      "1x1",
+      ":value",
+      "1x0"
     )
     return output
   }
@@ -769,7 +978,25 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Wild Dog",
       ":image",
-      "images/cards/unit-wilddog.svg"
+      "images/cards/unit-wilddog.svg",
+      ":summary",
+      "* The Wild Dog is one of the fastest runners in the animal kingdom. Close Combat: [Bite] [Grab] Speed:2x1 [Endurance Running]",
+      ":body",
+      "5x1",
+      ":mind",
+      "8x-1",
+      ":will",
+      "4x1",
+      ":move",
+      "2x1",
+      ":mass",
+      "22kg/50lb",
+      ":height",
+      "76cm/30in",
+      ":landspeed",
+      "20kph/12mph (max 70/44)",
+      ":nature",
+      "Dogged"
     )
     return output
   }
@@ -793,7 +1020,11 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Wooden Cart",
       ":image",
-      "images/cards/unit-woodencart.svg"
+      "images/cards/unit-woodencart.svg",
+      ":body",
+      "2x2",
+      ":mass",
+      "200kg/440lb"
     )
     return output
   }
@@ -831,9 +1062,12 @@ export default class nx_tactics_decks_scenario {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-murintrail": nx_tactics_decks_scenario.e_deck_murintrail,
       "item-armor-leathercuirass": nx_tactics_decks_scenario.e_item_armor_leathercuirass,
+      "item-axehand": nx_tactics_decks_scenario.e_item_axehand,
+      "item-axewood": nx_tactics_decks_scenario.e_item_axewood,
       "item-barehanded": nx_tactics_decks_scenario.e_item_barehanded,
       "item-bowshort": nx_tactics_decks_scenario.e_item_bowshort,
       "item-dagger": nx_tactics_decks_scenario.e_item_dagger,
+      "item-hammer": nx_tactics_decks_scenario.e_item_hammer,
       "item-shieldbuckler": nx_tactics_decks_scenario.e_item_shieldbuckler,
       "item-shieldheater": nx_tactics_decks_scenario.e_item_shieldheater,
       "item-shieldround": nx_tactics_decks_scenario.e_item_shieldround,
@@ -855,7 +1089,7 @@ export default class nx_tactics_decks_scenario {
       "place-tradingpost": nx_tactics_decks_scenario.e_place_tradingpost,
       "unit-goblinscout": nx_tactics_decks_scenario.e_unit_goblinscout,
       "unit-horse": nx_tactics_decks_scenario.e_unit_horse,
-      "unit-jessaveer": nx_tactics_decks_scenario.e_unit_jessaveer,
+      "unit-jesaveer": nx_tactics_decks_scenario.e_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scenario.e_unit_jonaveer,
       "unit-wilddog": nx_tactics_decks_scenario.e_unit_wilddog,
       "unit-woodencart": nx_tactics_decks_scenario.e_unit_woodencart,
@@ -864,9 +1098,12 @@ export default class nx_tactics_decks_scenario {
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-murintrail": nx_tactics_decks_scenario.t_deck_murintrail,
       "item-armor-leathercuirass": nx_tactics_decks_scenario.t_item_armor_leathercuirass,
+      "item-axehand": nx_tactics_decks_scenario.t_item_axehand,
+      "item-axewood": nx_tactics_decks_scenario.t_item_axewood,
       "item-barehanded": nx_tactics_decks_scenario.t_item_barehanded,
       "item-bowshort": nx_tactics_decks_scenario.t_item_bowshort,
       "item-dagger": nx_tactics_decks_scenario.t_item_dagger,
+      "item-hammer": nx_tactics_decks_scenario.t_item_hammer,
       "item-shieldbuckler": nx_tactics_decks_scenario.t_item_shieldbuckler,
       "item-shieldheater": nx_tactics_decks_scenario.t_item_shieldheater,
       "item-shieldround": nx_tactics_decks_scenario.t_item_shieldround,
@@ -888,7 +1125,7 @@ export default class nx_tactics_decks_scenario {
       "place-tradingpost": nx_tactics_decks_scenario.t_place_tradingpost,
       "unit-goblinscout": nx_tactics_decks_scenario.t_unit_goblinscout,
       "unit-horse": nx_tactics_decks_scenario.t_unit_horse,
-      "unit-jessaveer": nx_tactics_decks_scenario.t_unit_jessaveer,
+      "unit-jesaveer": nx_tactics_decks_scenario.t_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scenario.t_unit_jonaveer,
       "unit-wilddog": nx_tactics_decks_scenario.t_unit_wilddog,
       "unit-woodencart": nx_tactics_decks_scenario.t_unit_woodencart,
@@ -940,6 +1177,42 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_item_armor_leathercuirass
+    }
+
+    // (func item-axehand)
+    nx_tactics_decks_scenario.t_item_axehand['vx_value'] = {
+      name          : "item-axehand",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_axehand
+    }
+
+    // (func item-axewood)
+    nx_tactics_decks_scenario.t_item_axewood['vx_value'] = {
+      name          : "item-axewood",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_axewood
     }
 
     // (func item-barehanded)
@@ -994,6 +1267,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_item_dagger
+    }
+
+    // (func item-hammer)
+    nx_tactics_decks_scenario.t_item_hammer['vx_value'] = {
+      name          : "item-hammer",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_hammer
     }
 
     // (func item-shieldbuckler)
@@ -1374,9 +1665,9 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_unit_horse
     }
 
-    // (func unit-jessaveer)
-    nx_tactics_decks_scenario.t_unit_jessaveer['vx_value'] = {
-      name          : "unit-jessaveer",
+    // (func unit-jesaveer)
+    nx_tactics_decks_scenario.t_unit_jesaveer['vx_value'] = {
+      name          : "unit-jesaveer",
       pkgname       : "nx/tactics/decks/scenario",
       extends       : ":func",
       idx           : 0,
@@ -1389,7 +1680,7 @@ export default class nx_tactics_decks_scenario {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario.f_unit_jessaveer
+      fn            : nx_tactics_decks_scenario.f_unit_jesaveer
     }
 
     // (func unit-jonaveer)

@@ -44,6 +44,13 @@ export default class nx_tactics_base {
   static e_card = {vx_type: nx_tactics_base.t_card}
 
   /**
+   * type: cardback
+   * The back of a card. Title repeated on top and bottom.
+   */
+  static t_cardback = {}
+  static e_cardback = {vx_type: nx_tactics_base.t_cardback}
+
+  /**
    * type: cardimage
    */
   static t_cardimage = {}
@@ -1361,25 +1368,6 @@ export default class nx_tactics_base {
   }
 
   /**
-   * @function rating_from_mass
-   * Return a rating from a mass.
-   * @param  {string} mass
-   * @return {rating}
-   */
-  static t_rating_from_mass = {
-    vx_type: vx_core.t_type
-  }
-  static e_rating_from_mass = {
-    vx_type: nx_tactics_base.t_rating_from_mass
-  }
-
-  // (func rating<-mass)
-  static f_rating_from_mass(mass) {
-    let output = nx_tactics_base.e_rating
-    return output
-  }
-
-  /**
    * @function sectionlist_all_from_chapterlist
    * Returns a list of all sections including subsections
    * @param  {chapterlist} chapterlist
@@ -1978,6 +1966,7 @@ export default class nx_tactics_base {
       "booklist": nx_tactics_base.e_booklist,
       "bookmap": nx_tactics_base.e_bookmap,
       "card": nx_tactics_base.e_card,
+      "cardback": nx_tactics_base.e_cardback,
       "cardimage": nx_tactics_base.e_cardimage,
       "cardlist": nx_tactics_base.e_cardlist,
       "cardmap": nx_tactics_base.e_cardmap,
@@ -2061,7 +2050,6 @@ export default class nx_tactics_base {
       "chapterlistlist<-booklist": nx_tactics_base.e_chapterlistlist_from_booklist,
       "chaptermap<-chapterlist": nx_tactics_base.e_chaptermap_from_chapterlist,
       "name<-chapter": nx_tactics_base.e_name_from_chapter,
-      "rating<-mass": nx_tactics_base.e_rating_from_mass,
       "sectionlist-all<-chapterlist": nx_tactics_base.e_sectionlist_all_from_chapterlist,
       "sectionlist-all<-section": nx_tactics_base.e_sectionlist_all_from_section,
       "sectionlist-all<-sectionlist": nx_tactics_base.e_sectionlist_all_from_sectionlist,
@@ -2094,7 +2082,6 @@ export default class nx_tactics_base {
       "chapterlistlist<-booklist": nx_tactics_base.t_chapterlistlist_from_booklist,
       "chaptermap<-chapterlist": nx_tactics_base.t_chaptermap_from_chapterlist,
       "name<-chapter": nx_tactics_base.t_name_from_chapter,
-      "rating<-mass": nx_tactics_base.t_rating_from_mass,
       "sectionlist-all<-chapterlist": nx_tactics_base.t_sectionlist_all_from_chapterlist,
       "sectionlist-all<-section": nx_tactics_base.t_sectionlist_all_from_section,
       "sectionlist-all<-sectionlist": nx_tactics_base.t_sectionlist_all_from_sectionlist,
@@ -2121,6 +2108,7 @@ export default class nx_tactics_base {
       "booklist": nx_tactics_base.t_booklist,
       "bookmap": nx_tactics_base.t_bookmap,
       "card": nx_tactics_base.t_card,
+      "cardback": nx_tactics_base.t_cardback,
       "cardimage": nx_tactics_base.t_cardimage,
       "cardlist": nx_tactics_base.t_cardlist,
       "cardmap": nx_tactics_base.t_cardmap,
@@ -2469,6 +2457,75 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_card['vx_type'] = nx_tactics_base.t_card
     nx_tactics_base.e_card['vx_value'] = {}
+
+    // (type cardback)
+    nx_tactics_base.t_cardback['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_cardback['vx_value'] = {
+      name          : "cardback",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "id": {
+          "name" : "id",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "ranksuit",
+        "type" : nx_tactics_base.t_ranksuit,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_cardback['vx_type'] = nx_tactics_base.t_cardback
+    nx_tactics_base.e_cardback['vx_value'] = {}
 
     // (type cardimage)
     nx_tactics_base.t_cardimage['vx_type'] = vx_core.t_type
@@ -3247,32 +3304,32 @@ export default class nx_tactics_base {
         },
         "body": {
           "name" : "body",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "mind": {
           "name" : "mind",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "will": {
           "name" : "will",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "move": {
           "name" : "move",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "shadow": {
           "name" : "shadow",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "beast": {
           "name" : "beast",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "classification": {
@@ -5428,32 +5485,37 @@ export default class nx_tactics_base {
         },
         "body": {
           "name" : "body",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "mind": {
           "name" : "mind",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "will": {
           "name" : "will",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "move": {
           "name" : "move",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "shadow": {
           "name" : "shadow",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "conscience": {
+          "name" : "conscience",
+          "type" : vx_core.t_string,
           "multi": false
         },
         "beast": {
           "name" : "beast",
-          "type" : nx_tactics_base.t_rating,
+          "type" : vx_core.t_string,
           "multi": false
         },
         "demeanor": {
@@ -6480,24 +6542,6 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_name_from_chapter
-    }
-
-    // (func rating<-mass)
-    nx_tactics_base.t_rating_from_mass['vx_value'] = {
-      name          : "rating<-mass",
-      pkgname       : "nx/tactics/base",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_base.f_rating_from_mass
     }
 
     // (func sectionlist-all<-chapterlist)

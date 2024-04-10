@@ -5,37 +5,68 @@
 (func item-armor-leathercuirass : base/item
  (base/item
   :name "Leather Cuirass"
+  :titles "Leather Body Armor"
   :image "images/cards/item-armor-leathercuirass.svg"
   :summary
-   "* Leather Body Armor
-    * Hit Location: Shoulders, Chest, Abdomen, Vitals
-    * Armor:1x1
-    * Hardened vs. Slash"))
+   "* Armor:1x1
+    * Location: Shoulders, Chest, Abdomen, Vitals
+    * Hardened: [Slash]"))
+
+(func item-axehand : base/item
+ (base/item
+  :name "Hand Axe"
+  :image "images/cards/item-axehand.svg"
+  :summary
+   "* Melee: [Hack] [Slash]
+    * Location: [1-hand]"
+  :body "9x-1"
+  :mass "900g/2lb"))
+
+(func item-axewood : base/item
+ (base/item
+  :name "Wood Axe"
+  :titles "Splitting Axe"
+  :image "images/cards/item-axewood.svg"
+  :summary
+   "* Melee: [Hack] [Slash]
+    * Location: [1-hand]
+    * Armor:1x1"
+  :body "1x0"
+  :mass "1.4kg/3lb"))
 
 (func item-barehanded : base/item
  (base/item
   :name "Bare Handed"
   :image "images/cards/item-barehanded.svg"
   :summary
-   "* Weapon: Close Combat
-    * Damage: Bash"))
+   "* Close Combat: [Bash]"))
 
 (func item-bowshort : base/item
  (base/item
   :name "Short Bow"
   :image "images/cards/item-bowshort.svg"
   :summary
-   "* Weapon: Two-handed Ranged
-    * Damage: Pierce Slash"))
+   "* Ranged: [Pierce] [Slash]
+    * Location: [2-hand]"))
 
 (func item-dagger : base/item
  (base/item
   :name "Dagger"
   :image "images/cards/item-dagger.svg"
   :summary
-   "* Weapon: One-handed Close Combat
-    * Damage: Pierce Slash
-    * Attack Speed:+1"))
+   "* Close Combat: [Pierce] [Slash]
+    * Location: [1-hand]
+    * Attack:+1"))
+
+(func item-hammer : base/item
+ (base/item
+  :name "Hammer"
+  :image "images/cards/item-hammer.svg"
+  :summary
+   "* Melee: [Bash] [Hack]
+    * Location: [1-hand]"
+  :body "3x0"
+  :mass "3.2kg/7lb"))
 
 (func item-shieldbuckler : base/item
  (base/item
@@ -43,7 +74,7 @@
   :image "images/cards/item-shieldbuckler.svg"
   :summary
    "* Armor:1x1
-    * Hit Location: Left or Right Hand"))
+    * Location: [1-hand]"))
 
 (func item-shieldheater : base/item
  (base/item
@@ -51,7 +82,10 @@
   :image "images/cards/item-shieldheater.svg"
   :summary
    "* Armor:2x1
-    * Hit Location: Left or Right Hand"))
+    * Location: [1-hand]
+    * Hardened: [Hack]"
+  :body "3x0"
+  :mass "3.2kg/7lb"))
 
 (func item-shieldround : base/item
  (base/item
@@ -59,34 +93,39 @@
   :image "images/cards/item-shieldround.svg"
   :summary
    "* Armor:2x1
-    * Hit Location: Left or Right Hand"))
+    * Location: [1-hand]
+    * Hardened: [Pierce]"
+  :body "5x0"
+  :mass "5kg/11lb"))
 
 (func item-spear : base/item
  (base/item
   :name "Spear"
   :image "images/cards/item-spear.svg"
   :summary
-   "* Weapon: Two-handed Melee
-    * Damage: Pierce Slash
+   "* Melee: [Pierce] [Slash]
+    * Location: [2-hand]
     * Armor:1x1
-    * Reach"))
+    * [Reach]"))
 
 (func item-spearshort : base/item
  (base/item
   :name "Short Spear"
   :image "images/cards/item-spearshort.svg"
   :summary
-   "* Weapon: One-handed Melee
-    * Damage: Pierce Slash"))
+   "* Melee: [Pierce] [Slash]
+    * Location: [1-hand]"))
 
 (func item-swordlong : base/item
  (base/item
   :name "Longsword"
   :image "images/cards/item-swordlong.svg"
   :summary
-   "* Weapon: One-handed Melee
-    * Damage: Pierce or Slash
-    * Armor:1x1"))
+   "* Melee: [Pierce] or [Slash]
+    * Location: [1-hand]
+    * Armor:1x1"
+  :body "1x0"
+  :mass "1.25kg/3lb"))
 
 (func place-blacksmith : base/location
  (base/location
@@ -157,35 +196,99 @@
  (base/unit
   :name "Goblin Scout"
   :image "images/cards/unit-goblin-scout.svg"
-  :demeanor "Depraved"
   :gender "Male"
+  :demeanor "Depraved"
   :nature "Cowardly Envious"
-  :race "Goblin"))
+  :conscience "1x1"
+  :race "Goblin"
+  :body "2x1"
+  :mind "6x1"
+  :will "2x1"
+  :move "4x0"
+  :value "1x0"
+  :mass "22kg/50lb"
+  :height "1m/3ft"))
 
 (func unit-horse : base/unit
  (base/unit
   :name "Horse"
-  :image "images/cards/unit-horse.svg"))
+  :image "images/cards/unit-horse.svg"
+  :body "4x2"
+  :mind "5x-1"
+  :will "2x1"
+  :move "7x0"
+  :mass "450kg/1000lb"
+  :landspeed "7kph/4mph"
+  :demeanor "Aloof"
+  :nature "Skitish"))
 
-(func unit-jessaveer : base/unit
+(func unit-jesaveer : base/unit
  (base/unit
-  :name "Jess Aveer"
-  :image "images/cards/unit-jessaveer.svg"))
+  :name "Jes Aveer"
+  :titles "Jessana Aveer"
+  :image "images/cards/unit-jesaveer.svg"
+  :summary
+   "* A proud young woman with a love of blacksmithing."
+  :race "Human"
+  :gender "F"
+  :age 24
+  :body "6x1"
+  :mind "6x1"
+  :will "6x1"
+  :move "5x0"
+  :mass "63kg"
+  :height "1.72m/5'7"
+  :landspeed "5kph"
+  :demeanor "Willful"
+  :nature "Nuturing"
+  :beast "1x1"
+  :shadow "1x1"
+  :value "1x0"))
 
 (func unit-jonaveer : base/unit
  (base/unit
   :name "Jon Aveer"
-  :image "images/cards/unit-jonaveer.svg"))
+  :titles "Ajona Aveer"
+  :image "images/cards/unit-jonaveer.svg"
+  :summary
+   "* A clever young man trying to make a living."
+  :race "Human"
+  :gender "M"
+  :age 23
+  :body "7x1"
+  :mind "6x1"
+  :will "5x1"
+  :move "5x0"
+  :mass "75kg"
+  :height "1.78m/5'10"
+  :landspeed "5kph"
+  :demeanor "Frivolous"
+  :nature "Loyal"
+  :beast "1x1"
+  :shadow "1x1"
+  :value "1x0"))
 
 (func unit-wilddog : base/unit
  (base/unit
   :name "Wild Dog"
-  :image "images/cards/unit-wilddog.svg"))
+  :image "images/cards/unit-wilddog.svg"
+  :summary
+   "* The Wild Dog is one of the fastest runners in the animal kingdom. Close Combat: [Bite] [Grab] Speed:2x1 [Endurance Running]"
+  :body "5x1"
+  :mind "8x-1"
+  :will "4x1"
+  :move "2x1"
+  :mass "22kg/50lb"
+  :height "76cm/30in"
+  :landspeed "20kph/12mph (max 70/44)"
+  :nature "Dogged"))
 
 (func unit-woodencart : base/unit
  (base/unit
   :name "Wooden Cart"
-  :image "images/cards/unit-woodencart.svg"))
+  :image "images/cards/unit-woodencart.svg"
+  :body "2x2"
+  :mass "200kg/440lb"))
 
 (func unit-xeibhanower : base/unit
  (base/unit
@@ -205,15 +308,18 @@
      (base/cardlist
       goblinscout
       horse
-      (unit-jessaveer)
+      (unit-jesaveer)
       (unit-jonaveer)
       (unit-xeibhanower)
       (unit-wilddog)
       (unit-woodencart)
       (item-armor-leathercuirass)
+      (item-axehand)
+      (item-axewood)
       (item-barehanded)
       (item-bowshort)
       (item-dagger)
+      (item-hammer)
       (item-shieldbuckler)
       (item-shieldheater)
       (item-shieldround)

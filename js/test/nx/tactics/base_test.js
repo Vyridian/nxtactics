@@ -26,11 +26,11 @@ export default class nx_tactics_base_test {
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
       "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 18, ":tests", 36, ":total", 198), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 6, ":tests", 2, ":total", 31), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 6, ":tests", 2, ":total", 30), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 198), 
-      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 77)
+      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 78)
     )
   }
 
@@ -47,6 +47,7 @@ export default class nx_tactics_base_test {
           "booklist", 0,
           "bookmap", 0,
           "card", 0,
+          "cardback", 0,
           "cardimage", 0,
           "cardlist", 0,
           "cardmap", 0,
@@ -228,7 +229,6 @@ export default class nx_tactics_base_test {
           "chapterlistlist<-booklist", 0,
           "chaptermap<-chapterlist", 0,
           "name<-chapter", 0,
-          "rating<-mass", 0,
           "sectionlist-all<-chapterlist", 0,
           "sectionlist-all<-section", 0,
           "sectionlist-all<-sectionlist", 1,

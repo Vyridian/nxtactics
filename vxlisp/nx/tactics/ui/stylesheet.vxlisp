@@ -39,11 +39,18 @@
   :fontsize 60)
  :doc "Returns Normal text Font")
 
+(const font-text-2 : ui/font
+ (ui/font
+  :name     "font-text-2"
+  :fontface fontface1
+  :fontsize 30)
+ :doc "Returns Normal text Font")
+
 (const font-textarea : ui/font
  (ui/font
   :name     "font-textarea"
   :fontface fontface1
-  :fontsize 70)
+  :fontsize 60)
  :doc "Returns Textarea Font")
 
 (const font-title : ui/font
@@ -413,9 +420,9 @@
   :layout ui/layout-image)
  :doc "")
 
-(const style-card-title : ui/style
+(const style-card-title1 : ui/style
  (ui/style
-  :name "style-card-title"
+  :name "style-card-title1"
   :layout ui/layout-label
   :align ui/align-center
   :pointpos
@@ -424,6 +431,23 @@
   :pointsize
    (ui/point
     :x 51))
+ :doc "")
+
+(const style-card-title2 : ui/style
+ (ui/style
+  :name "style-card-title2"
+  :layout ui/layout-label
+  :align ui/align-center
+  :pointpos
+   (ui/point
+    :x 58
+    :y 88)
+  :pointsize
+   (ui/point
+    :x 51)
+  :pointrotate
+   (ui/point
+    :x 180))
  :doc "")
 
 (const style-clickable : ui/style
@@ -646,6 +670,13 @@
   :font font-text)
  :doc "Returns the style for text area")
 
+(const style-text-2 : ui/style
+ (ui/style
+  :name "style-text-2"
+  :type ui/styletype-shared
+  :font font-text-2)
+ :doc "Returns the style for text area")
+
 (const style-textarea : ui/style
  (ui/style
   :name  "style-textarea"
@@ -709,6 +740,180 @@
 (const style-unit : ui/style
  :doc "Returns the style for unit ui.")
 
+(const style-unit-body : ui/style
+ (ui/style
+  :name "style-unit-body"
+  :layout ui/layout-label
+  :align ui/align-center
+  :pointpos
+   (ui/point
+    :x 50
+    :y 8)
+  :pointsize
+   (ui/point
+    :x 13
+    :y 6))
+ :doc "")
+
+(const style-unit-bodydetail : ui/style
+ (ui/style
+  :name "style-unit-bodydetail"
+  :layout ui/layout-label
+  :pointpos
+   (ui/point
+    :x 34
+    :y 13)
+  :pointsize
+   (ui/point
+    :x 29
+    :y 5))
+ :doc "")
+
+(const style-unit-detail : ui/style
+ (ui/style
+  :name "style-unit-detail"
+  :layout ui/layout-label
+  :pointpos
+   (ui/point
+    :x 2
+    :y 50)
+  :pointsize
+   (ui/point
+    :x 60
+    :y 37))
+ :doc "")
+
+(const style-unit-image : ui/style
+ (ui/style
+  :name "style-unit-image"
+  :layout ui/layout-image
+  :pointpos
+   (ui/point
+    :x 1
+    :y 6)
+  :pointsize
+   (ui/point
+    :x 30
+    :y 42))
+ :doc "")
+
+(const style-unit-mind : ui/style
+ (ui/style
+  :name "style-unit-mind"
+  :layout ui/layout-label
+  :align ui/align-center
+  :pointpos
+   (ui/point
+    :x 50
+    :y 17)
+  :pointsize
+   (ui/point
+    :x 13
+    :y 6))
+ :doc "")
+
+(const style-unit-minddetail : ui/style
+ (ui/style
+  :name "style-unit-minddetail"
+  :layout ui/layout-label
+  :pointpos
+   (ui/point
+    :x 34
+    :y 22)
+  :pointsize
+   (ui/point
+    :x 29
+    :y 5))
+ :doc "")
+
+(const style-unit-will : ui/style
+ (ui/style
+  :name "style-unit-will"
+  :layout ui/layout-label
+  :align ui/align-center
+  :pointpos
+   (ui/point
+    :x 50
+    :y 26)
+  :pointsize
+   (ui/point
+    :x 13
+    :y 6))
+ :doc "")
+
+(const style-unit-willdetail : ui/style
+ (ui/style
+  :name "style-unit-willdetail"
+  :layout ui/layout-label
+  :pointpos
+   (ui/point
+    :x 34
+    :y 31)
+  :pointsize
+   (ui/point
+    :x 29
+    :y 5))
+ :doc "")
+
+(const style-unit-move : ui/style
+ (ui/style
+  :name "style-unit-move"
+  :layout ui/layout-label
+  :align ui/align-center
+  :pointpos
+   (ui/point
+    :x 50
+    :y 35)
+  :pointsize
+   (ui/point
+    :x 13
+    :y 6))
+ :doc "")
+
+(const style-unit-movedetail : ui/style
+ (ui/style
+  :name "style-unit-movedetail"
+  :layout ui/layout-label
+  :pointpos
+   (ui/point
+    :x 34
+    :y 40)
+  :pointsize
+   (ui/point
+    :x 29
+    :y 5))
+ :doc "")
+
+(const style-unit-titles : ui/style
+ (ui/style
+  :name   "style-unit-titles"
+  :layout ui/layout-label
+  :align ui/align-center
+  :pointpos
+   (ui/point
+    :x 7
+    :y 5)
+  :pointsize
+   (ui/point
+    :x 51
+    :y 4))
+ :doc "Returns the style for unit titles text")
+
+(const style-unit-value : ui/style
+ (ui/style
+  :name "style-unit-value"
+  :layout ui/layout-label
+  :align ui/align-center
+  :pointpos
+   (ui/point
+    :x 50
+    :y 0)
+  :pointsize
+   (ui/point
+    :x 13
+    :y 6))
+ :doc "")
+
 (const stylesheet-app : ui/stylesheet
  (ui/stylesheet
   :fontfacemap
@@ -756,11 +961,12 @@
      style-image-wand1
      style-image-wand2
      style-text
-     style-textarea
+     style-text-2
      style-text-header1
      style-text-header2
      style-text-label
      style-text-rank1
      style-text-rank2
-     style-text-title)))
+     style-text-title
+     style-textarea)))
  :doc "Returns the stylesheet for this project")

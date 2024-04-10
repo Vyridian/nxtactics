@@ -32,11 +32,11 @@ export default class nx_tactics_ui_uitactics_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/uitactics", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 46, ":tests", 22, ":total", 47), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 42), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 56, ":tests", 26, ":total", 46), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 1, ":total", 41), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 47), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 1, ":total", 46), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -68,6 +68,7 @@ export default class nx_tactics_ui_uitactics_test {
           "string-display<-book", 0,
           "string-display<-deck", 0,
           "string-display<-skill", 0,
+          "string<-mass-h-l-w", 1,
           "ui-app", 0,
           "ui-app-background", 0,
           "ui-app-home", 0,
@@ -92,24 +93,47 @@ export default class nx_tactics_ui_uitactics_test {
           "ui-navigate<-ui-main", 0,
           "ui-navigate<-ui-navbar", 0,
           "ui-suit<-uid-rank-suit-pos", 0,
+          "ui-title1<-uid-text", 0,
+          "ui-title2<-uid-text", 0,
           "ui<-any-parent", 0,
           "ui<-card-parent", 0,
-          "ui<-unit-background", 0,
-          "ui<-unit-flavor", 0,
-          "ui<-unit-header", 0,
-          "ui<-unit-parent", 0,
-          "ui<-unit-skillpower", 0,
-          "ui<-unit-stat", 0,
           "uilist<-card-parent", 0,
+          "uilist<-item-parent", 0,
           "uilist<-ranksuit-parent", 0,
+          "uilist<-unit-parent", 0,
           "uimap<-cardmap-parent", 0
         )
     )
   }
 
+  static f_string_from_mass_h_l_w(context) {
+    const output = vx_core.f_new(
+      vx_test.t_testcase,
+      ":passfail", false,
+      ":testpkg", "nx/tactics/ui/uitactics",
+      ":casename", "string<-mass-h-l-w",
+      ":describelist",
+        vx_core.f_new(
+          vx_test.t_testdescribelist,
+          vx_core.f_new(
+            vx_test.t_testdescribe,
+            ":describename", "(test\n \"mass:80kg/160lb h:2m/6ft l:2m/6ft w:1m/3ft\"\n (string<-mass-h-l-w\n  \"80kg/160lb\" \"2m/6ft\" \"1m/3ft\" \"2m/6ft\"))",
+            ":testresult",
+            vx_test.f_test(
+              context,
+              "mass:80kg/160lb h:2m/6ft l:2m/6ft w:1m/3ft",
+              nx_tactics_ui_uitactics.f_string_from_mass_h_l_w("80kg/160lb", "2m/6ft", "1m/3ft", "2m/6ft")
+            )
+          )
+        )
+    )
+    return output
+  }
+
   static test_cases(context) {
     const output = vx_core.f_new(
-      vx_test.t_testcaselist
+      vx_test.t_testcaselist,
+      nx_tactics_ui_uitactics_test.f_string_from_mass_h_l_w(context)
     )
     return output
   }

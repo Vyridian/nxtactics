@@ -24,12 +24,12 @@ export default class nx_tactics_decks_damage_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/damage", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 58), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 23, ":tests", 15, ":total", 65), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 7), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 60), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 24, ":tests", 17, ":total", 69), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 9), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 65), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 69), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -45,6 +45,8 @@ export default class nx_tactics_decks_damage_test {
       "constmap",
         vx_core.f_new(
           vx_core.t_intmap,
+          "bleeding", 0,
+          "bloodloss", 0,
           "damage-2c", 0,
           "damage-2d", 0,
           "damage-2h", 0,
@@ -107,6 +109,8 @@ export default class nx_tactics_decks_damage_test {
       "funcmap",
         vx_core.f_new(
           vx_core.t_intmap,
+          "deck-bleeding", 0,
+          "deck-bloodloss", 0,
           "deck-damage", 0,
           "deck-damageback", 0,
           "deck-disorder", 0,

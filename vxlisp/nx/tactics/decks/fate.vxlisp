@@ -2,26 +2,26 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Fate Decks")
 
-(const card-fate-blue : base/card
- (base/card
+(const card-fate-blue : base/cardback
+ (base/cardback
   :id "card-fate-blue"
   :name "Fate"
   :image "images/card-fate-blue.svg"))
 
-(const card-fate-green : base/card
- (base/card
+(const card-fate-green : base/cardback
+ (base/cardback
   :id "card-fate-green"
   :name "Fate"
   :image "images/card-fate-green.svg"))
 
-(const card-fate-red : base/card
- (base/card
+(const card-fate-red : base/cardback
+ (base/cardback
   :id "card-fate-red"
   :name "Fate"
   :image "images/card-fate-red.svg"))
 
-(const card-fate-yellow : base/card
- (base/card
+(const card-fate-yellow : base/cardback
+ (base/cardback
   :id "card-fate-yellow"
   :name "Fate"
   :image "images/card-fate-yellow.svg"))

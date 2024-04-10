@@ -7,6 +7,18 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_damage {
 
   /**
+   * Constant: bleeding
+   * {cardback}
+   */
+  static c_bleeding = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'bleeding'}}
+
+  /**
+   * Constant: bloodloss
+   * {card}
+   */
+  static c_bloodloss = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'bloodloss'}}
+
+  /**
    * Constant: damage-2c
    * {damage}
    */
@@ -340,27 +352,83 @@ export default class nx_tactics_decks_damage {
 
   /**
    * Constant: fatigue
-   * {card}
+   * {cardback}
    */
-  static c_fatigue = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'fatigue'}}
+  static c_fatigue = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'fatigue'}}
 
   /**
    * Constant: slow
-   * {card}
+   * {cardback}
    */
-  static c_slow = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'slow'}}
+  static c_slow = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'slow'}}
 
   /**
    * Constant: stress
-   * {card}
+   * {cardback}
    */
-  static c_stress = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'stress'}}
+  static c_stress = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'stress'}}
 
   /**
    * Constant: stun
-   * {card}
+   * {cardback}
    */
-  static c_stun = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'stun'}}
+  static c_stun = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'stun'}}
+
+  /**
+   * @function deck_bleeding
+   * Bleeding Deck
+   * @return {deck}
+   */
+  static t_deck_bleeding = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_bleeding = {
+    vx_type: nx_tactics_decks_damage.t_deck_bleeding
+  }
+
+  // (func deck-bleeding)
+  static f_deck_bleeding() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Bleeding",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_copy_from_card_num(
+        nx_tactics_decks_damage.c_bleeding,
+        54
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function deck_bloodloss
+   * Bloodloss Deck
+   * @return {deck}
+   */
+  static t_deck_bloodloss = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_bloodloss = {
+    vx_type: nx_tactics_decks_damage.t_deck_bloodloss
+  }
+
+  // (func deck-bloodloss)
+  static f_deck_bloodloss() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_new(
+      nx_tactics_base.t_deck,
+      ":name",
+      "Bloodloss",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_copy_from_card_num(
+        nx_tactics_decks_damage.c_bloodloss,
+        54
+      )
+    )
+    return output
+  }
 
   /**
    * @function deck_damage
@@ -497,7 +565,7 @@ export default class nx_tactics_decks_damage {
       ":titles",
       "Crazed, Insane, Nonsensical, Obsessed, Unhinged",
       ":summary",
-      "* S-Hack Blood/Gore/Dismember/Stress\n* H-Slash Blood/Burden\n* C-Bash/Fatigue/Push/Fatigue\n* D-Pierce/Shock/Stun/Pin/Disable/Strain"
+      "* S-Delusion/Racism/Irrational/Lost in Fantasy/Lost in Nightmare/Lost in Hell\n* H-Compulsion/Obsession/Monomaniacal\n* C-Disfunction/Shock/Disable/Tremors/Spasms/Seizures/Stroke/Nerve Damage/Paralysis/Brain Damage\n* D-Distortion/Misperception/Misunderstand/Miscommunicate/Amnesia/Aphasia"
     )
     return output
   }
@@ -578,9 +646,9 @@ export default class nx_tactics_decks_damage {
       ":name",
       "Trauma",
       ":titles",
-      "Apathy, Cowed, Crisis, Berserk, Broken, Depression, Servitude, Surly",
+      "",
       ":summary",
-      "* S-Hack Blood/Gore/Dismember\n* H-Slash Blood/Slow\n* C-Bash/Fatigue/Push\n* D-Pierce/Stun/Pin/Disable"
+      "* S-Fear/Cowed/Died of Fear\n* H-Despair/Apathy/Depression/Broken/Suicidal\n* C-Anger/Surly/Suicidal Rage\n* D-Doubt/Servitude/Coverted"
     )
     return output
   }
@@ -617,6 +685,8 @@ export default class nx_tactics_decks_damage {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
+      "bleeding": nx_tactics_decks_damage.c_bleeding,
+      "bloodloss": nx_tactics_decks_damage.c_bloodloss,
       "damage-2c": nx_tactics_decks_damage.c_damage_2c,
       "damage-2d": nx_tactics_decks_damage.c_damage_2d,
       "damage-2h": nx_tactics_decks_damage.c_damage_2h,
@@ -677,6 +747,8 @@ export default class nx_tactics_decks_damage {
       "stun": nx_tactics_decks_damage.c_stun
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
+      "deck-bleeding": nx_tactics_decks_damage.e_deck_bleeding,
+      "deck-bloodloss": nx_tactics_decks_damage.e_deck_bloodloss,
       "deck-damage": nx_tactics_decks_damage.e_deck_damage,
       "deck-damageback": nx_tactics_decks_damage.e_deck_damageback,
       "deck-disorder": nx_tactics_decks_damage.e_deck_disorder,
@@ -686,6 +758,8 @@ export default class nx_tactics_decks_damage {
       "deck-traumaback": nx_tactics_decks_damage.e_deck_traumaback
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "deck-bleeding": nx_tactics_decks_damage.t_deck_bleeding,
+      "deck-bloodloss": nx_tactics_decks_damage.t_deck_bloodloss,
       "deck-damage": nx_tactics_decks_damage.t_deck_damage,
       "deck-damageback": nx_tactics_decks_damage.t_deck_damageback,
       "deck-disorder": nx_tactics_decks_damage.t_deck_disorder,
@@ -705,6 +779,42 @@ export default class nx_tactics_decks_damage {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
+
+    // (func deck-bleeding)
+    nx_tactics_decks_damage.t_deck_bleeding['vx_value'] = {
+      name          : "deck-bleeding",
+      pkgname       : "nx/tactics/decks/damage",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_damage.f_deck_bleeding
+    }
+
+    // (func deck-bloodloss)
+    nx_tactics_decks_damage.t_deck_bloodloss['vx_value'] = {
+      name          : "deck-bloodloss",
+      pkgname       : "nx/tactics/decks/damage",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_damage.f_deck_bloodloss
+    }
 
     // (func deck-damage)
     nx_tactics_decks_damage.t_deck_damage['vx_value'] = {
@@ -831,6 +941,32 @@ export default class nx_tactics_decks_damage {
       proplast      : {},
       fn            : nx_tactics_decks_damage.f_deck_traumaback
     }
+
+    // (const bleeding)
+    Object.assign(nx_tactics_decks_damage.c_bleeding, vx_core.f_new(
+      nx_tactics_base.t_cardback,
+      ":id",
+      "bleeding",
+      ":name",
+      "Bleeding",
+      ":image",
+      "images/card-bleeding.svg",
+      ":summary",
+      "* Turn End: Gain a [Fatigue] for each [Bleeding]. If [Body]:0, then gain a [Blood Loss] instead."
+    ))
+
+    // (const bloodloss)
+    Object.assign(nx_tactics_decks_damage.c_bloodloss, vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "bloodloss",
+      ":name",
+      "Bloodloss",
+      ":image",
+      "images/card-bloodloss.svg",
+      ":summary",
+      "* Day End: Discard one [Bloodloss]"
+    ))
 
     // (const damage-2c)
     Object.assign(nx_tactics_decks_damage.c_damage_2c, vx_core.f_new(
@@ -1624,7 +1760,7 @@ export default class nx_tactics_decks_damage {
 
     // (const fatigue)
     Object.assign(nx_tactics_decks_damage.c_fatigue, vx_core.f_new(
-      nx_tactics_base.t_card,
+      nx_tactics_base.t_cardback,
       ":id",
       "fatigue",
       ":name",
@@ -1639,7 +1775,7 @@ export default class nx_tactics_decks_damage {
 
     // (const slow)
     Object.assign(nx_tactics_decks_damage.c_slow, vx_core.f_new(
-      nx_tactics_base.t_card,
+      nx_tactics_base.t_cardback,
       ":id",
       "slow",
       ":name",
@@ -1654,7 +1790,7 @@ export default class nx_tactics_decks_damage {
 
     // (const stress)
     Object.assign(nx_tactics_decks_damage.c_stress, vx_core.f_new(
-      nx_tactics_base.t_card,
+      nx_tactics_base.t_cardback,
       ":id",
       "stress",
       ":name",
@@ -1671,7 +1807,7 @@ export default class nx_tactics_decks_damage {
 
     // (const stun)
     Object.assign(nx_tactics_decks_damage.c_stun, vx_core.f_new(
-      nx_tactics_base.t_card,
+      nx_tactics_base.t_cardback,
       ":id",
       "stun",
       ":name",
