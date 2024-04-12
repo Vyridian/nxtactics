@@ -2,6 +2,58 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Scenario Decks")
 
+(const ability-bite : base/ability
+ (base/ability
+  :name "Bite"))
+
+(const ability-blacksmithing : base/ability
+ (base/ability
+  :name "Blacksmithing"))
+
+(const ability-drag : base/ability
+ (base/ability
+  :name "Drag"))
+
+(const ability-grab : base/ability
+ (base/ability
+  :name "Grab"))
+
+(const ability-sneak : base/ability
+ (base/ability
+  :name "Sneak"))
+
+(const ability-trade : base/ability
+ (base/ability
+  :name "Trade"))
+
+(const ability-trapping : base/ability
+ (base/ability
+  :name "Trapping"))
+
+(const power-groundmovement : base/power
+ (base/power
+  :name "Ground Movement"))
+
+(const skill-closecombat : base/skill
+ (base/skill
+  :name "Close Combat"))
+
+(const skill-melee : base/skill
+ (base/skill
+  :name "Melee"))
+
+(const skill-hunting : base/skill
+ (base/skill
+  :name "Hunting"))
+
+(const skill-stealth : base/skill
+ (base/skill
+  :name "Stealth"))
+
+(const skill-tradeskill : base/skill
+ (base/skill
+  :name "Tradeskill"))
+
 (func item-armor-leathercuirass : base/item
  (base/item
   :name "Leather Cuirass"
@@ -9,8 +61,10 @@
   :image "images/cards/item-armor-leathercuirass.svg"
   :summary
    "* Armor:1x1
-    * Location: Shoulders, Chest, Abdomen, Vitals
-    * Hardened: [Slash]"))
+    * Location: [Shoulders] [Chest] [Abdomen] [Vitals]
+    * Hardened: [Slash]"
+  :body "7x0"
+  :mass "7kg/15lb"))
 
 (func item-axehand : base/item
  (base/item
@@ -18,28 +72,18 @@
   :image "images/cards/item-axehand.svg"
   :summary
    "* Melee: [Hack] [Slash]
+    * Hit: [Size Bonus]
     * Location: [1-hand]"
   :body "9x-1"
   :mass "900g/2lb"))
-
-(func item-axewood : base/item
- (base/item
-  :name "Wood Axe"
-  :titles "Splitting Axe"
-  :image "images/cards/item-axewood.svg"
-  :summary
-   "* Melee: [Hack] [Slash]
-    * Location: [1-hand]
-    * Armor:1x1"
-  :body "1x0"
-  :mass "1.4kg/3lb"))
 
 (func item-barehanded : base/item
  (base/item
   :name "Bare Handed"
   :image "images/cards/item-barehanded.svg"
   :summary
-   "* Close Combat: [Bash]"))
+   "* Close Combat: [Bash]
+    * Hit: [Size Bonus]"))
 
 (func item-bowshort : base/item
  (base/item
@@ -47,7 +91,11 @@
   :image "images/cards/item-bowshort.svg"
   :summary
    "* Ranged: [Pierce] [Slash]
-    * Location: [2-hand]"))
+    * Hit:+1
+    * Range:10x1 100m/300ft
+    * Location: [2-hand]"
+  :body "10x-1"
+  :mass "1kg/2lb"))
 
 (func item-dagger : base/item
  (base/item
@@ -55,18 +103,22 @@
   :image "images/cards/item-dagger.svg"
   :summary
    "* Close Combat: [Pierce] [Slash]
-    * Location: [1-hand]
-    * Attack:+1"))
+    * Hit: [Size Bonus]
+    * Location: [1-hand]"
+  :body "5x-1"
+  :mass "500g/1lb"
+  :length "25cm/10in"))
 
 (func item-hammer : base/item
  (base/item
   :name "Hammer"
   :image "images/cards/item-hammer.svg"
   :summary
-   "* Melee: [Bash] [Hack]
+   "* Melee: [Bash]
+    * Hit:+2 [Size Bonus]
     * Location: [1-hand]"
-  :body "3x0"
-  :mass "3.2kg/7lb"))
+  :body "2x0"
+  :mass "2kg/4.4lb"))
 
 (func item-shieldbuckler : base/item
  (base/item
@@ -74,7 +126,9 @@
   :image "images/cards/item-shieldbuckler.svg"
   :summary
    "* Armor:1x1
-    * Location: [1-hand]"))
+    * Location: [1-hand]"
+  :body "10x-1"
+  :mass "1kg/2lb"))
 
 (func item-shieldheater : base/item
  (base/item
@@ -104,9 +158,12 @@
   :image "images/cards/item-spear.svg"
   :summary
    "* Melee: [Pierce] [Slash]
+    * Hit:+3 [Size Bonus]
     * Location: [2-hand]
     * Armor:1x1
-    * [Reach]"))
+    * [Reach]"
+  :body "3x0"
+  :mass "3kg/6lb"))
 
 (func item-spearshort : base/item
  (base/item
@@ -114,18 +171,36 @@
   :image "images/cards/item-spearshort.svg"
   :summary
    "* Melee: [Pierce] [Slash]
-    * Location: [1-hand]"))
+    * Hit:+1 [Size Bonus]
+    * Location: [1-hand]"
+  :body "10x-1"
+  :mass "1.5kg/4lb"))
 
 (func item-swordlong : base/item
  (base/item
   :name "Longsword"
   :image "images/cards/item-swordlong.svg"
   :summary
-   "* Melee: [Pierce] or [Slash]
+   "* Melee: [Pierce] [Slash]
+    * Hit:+1 [Size Bonus]
     * Location: [1-hand]
     * Armor:1x1"
-  :body "1x0"
+  :body "10x-1"
   :mass "1.25kg/3lb"))
+
+(func item-woodaxe : base/item
+ (base/item
+  :name "Wood Axe"
+  :titles "Splitting Maul"
+  :image "images/cards/item-woodaxe.svg"
+  :summary
+   "* Melee: [Hack] [Slash]
+    * Attack:-1
+    * Hit:+3 [Size Bonus]
+    * Location: [2-hand]
+    * Armor:1x1"
+  :body "3x0"
+  :mass "3.1kg/7lb"))
 
 (func place-blacksmith : base/location
  (base/location
@@ -200,6 +275,7 @@
   :demeanor "Depraved"
   :nature "Cowardly Envious"
   :conscience "1x1"
+  :beast "1x0"
   :race "Goblin"
   :body "2x1"
   :mind "6x1"
@@ -207,7 +283,24 @@
   :move "4x0"
   :value "1x0"
   :mass "22kg/50lb"
-  :height "1m/3ft"))
+  :height "1m/3ft"
+  :speedland "4kph/2.5mph"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-closecombat
+     :level "1"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-dagger))))
+    (base/unitskill
+     :skill skill-stealth
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability ability-sneak))))))
 
 (func unit-horse : base/unit
  (base/unit
@@ -216,11 +309,16 @@
   :body "4x2"
   :mind "5x-1"
   :will "2x1"
-  :move "7x0"
+  :move "8x0"
   :mass "450kg/1000lb"
-  :landspeed "7kph/4mph"
+  :speedland "8kph/5mph"
   :demeanor "Aloof"
-  :nature "Skitish"))
+  :nature "Skitish"
+  :unitpowermap
+   (base/unitpowermap<-unitpowerlist
+    (base/unitpower
+     :power power-groundmovement
+     :level "8x0"))))
 
 (func unit-jesaveer : base/unit
  (base/unit
@@ -228,7 +326,7 @@
   :titles "Jessana Aveer"
   :image "images/cards/unit-jesaveer.svg"
   :summary
-   "* A proud young woman with a love of blacksmithing."
+   "A resilient, young woman with a love of blacksmithing."
   :race "Human"
   :gender "F"
   :age 24
@@ -237,13 +335,29 @@
   :will "6x1"
   :move "5x0"
   :mass "63kg"
-  :height "1.72m/5'7"
-  :landspeed "5kph"
+  :height "1.72m/5ft7"
+  :speedland "5kph/3mph"
   :demeanor "Willful"
   :nature "Nuturing"
-  :beast "1x1"
-  :shadow "1x1"
-  :value "1x0"))
+  :beast "1x0"
+  :shadow "1x0"
+  :value "1x0"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-melee
+     :level "1"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-hammer))))
+    (base/unitskill
+     :skill skill-tradeskill
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability ability-blacksmithing))))))
 
 (func unit-jonaveer : base/unit
  (base/unit
@@ -251,7 +365,7 @@
   :titles "Ajona Aveer"
   :image "images/cards/unit-jonaveer.svg"
   :summary
-   "* A clever young man trying to make a living."
+   "A clever, young man trying to make his fortune."
   :race "Human"
   :gender "M"
   :age 23
@@ -260,12 +374,50 @@
   :will "5x1"
   :move "5x0"
   :mass "75kg"
-  :height "1.78m/5'10"
-  :landspeed "5kph"
+  :height "1.78m/5ft10"
+  :speedland "5kph/3mph"
   :demeanor "Frivolous"
   :nature "Loyal"
-  :beast "1x1"
-  :shadow "1x1"
+  :beast "1x0"
+  :shadow "1x0"
+  :value "1x0"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-melee
+     :level "1"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-spear))))
+    (base/unitskill
+     :skill skill-tradeskill
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability ability-trade))))))
+
+(func unit-liliducon : base/unit
+ (base/unit
+  :name "Lili Ducon"
+  :image "images/cards/unit-liliducon.svg"
+  :summary
+   "A pleasant and perceptive young lady, who moved with her father Wilm. She took her mother's death hard, and having a difficult time adapting."
+  :race "Human"
+  :gender "F"
+  :age 11
+  :body "4x1"
+  :mind "4x1"
+  :will "4x1"
+  :move "4x0"
+  :mass "40kg/88lb"
+  :height "1.5m/5ft"
+  :speedland "4kph"
+  :demeanor "Pleasant"
+  :nature "Anxious"
+  :beast "1x0"
+  :shadow "1x0"
   :value "1x0"))
 
 (func unit-wilddog : base/unit
@@ -273,15 +425,67 @@
   :name "Wild Dog"
   :image "images/cards/unit-wilddog.svg"
   :summary
-   "* The Wild Dog is one of the fastest runners in the animal kingdom. Close Combat: [Bite] [Grab] Speed:2x1 [Endurance Running]"
+   "The Wild Dog is one of the fastest runners in the animal kingdom.
+    * Speed:2x1 [Endurance Running]"
   :body "5x1"
   :mind "8x-1"
   :will "4x1"
   :move "2x1"
   :mass "22kg/50lb"
   :height "76cm/30in"
-  :landspeed "20kph/12mph (max 70/44)"
-  :nature "Dogged"))
+  :speedland "20kph/12mph (max 70/44)"
+  :nature "Dogged"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-closecombat
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+        (base/unitability
+         :ability ability-bite)
+        (base/unitability
+         :ability ability-grab))
+        (base/unitability
+         :ability ability-drag)))))
+
+(func unit-wilmducon : base/unit
+ (base/unit
+  :name "Wilm Ducon"
+  :image "images/cards/unit-wilmducon.svg"
+  :summary
+   "A proud, prickly huntsman who lost his wife in a violent raid and moved away with his daughter Lily to restart his life."
+  :race "Human"
+  :gender "M"
+  :age 30
+  :body "8x1"
+  :mind "5x1"
+  :will "5x1"
+  :move "5x0"
+  :mass "80kg/180"
+  :height "1.8m/6ft"
+  :speedland "5kph/3mph"
+  :demeanor "Gruff"
+  :nature "Tortured"
+  :beast "1x0"
+  :shadow "1x0"
+  :value "1x0"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-melee
+     :level "1"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-woodaxe))))
+    (base/unitskill
+     :skill skill-hunting
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability ability-trapping))))))
 
 (func unit-woodencart : base/unit
  (base/unit
@@ -293,7 +497,17 @@
 (func unit-xeibhanower : base/unit
  (base/unit
   :name "Xeib Honower"
-  :image "images/cards/unit-xeibhanower.svg"))
+  :image "images/cards/unit-xeibhanower.svg"
+  :race "Human"
+  :gender "M"
+  :age 23
+  :body "8x1"
+  :mind "5x1"
+  :will "6x1"
+  :move "4x0"
+  :mass "80kg"
+  :height "1.78m/5'10"
+  :speedland "4kph/2.5mph"))
 
 (func deck-murintrail : base/deck
  (let : base/deck
@@ -306,16 +520,18 @@
    :cardmap
     (base/cardmap<-cardlist
      (base/cardlist
-      goblinscout
-      horse
       (unit-jesaveer)
       (unit-jonaveer)
       (unit-xeibhanower)
+      (unit-wilmducon)
+      (unit-liliducon)
       (unit-wilddog)
+      (unit-goblinscout)
+      (unit-horse)
       (unit-woodencart)
       (item-armor-leathercuirass)
       (item-axehand)
-      (item-axewood)
+      (item-woodaxe)
       (item-barehanded)
       (item-bowshort)
       (item-dagger)

@@ -72,6 +72,96 @@
    event-navbutton-back-click))
  :doc "Eventmap for navbutton-back")
 
+(func string<-conscience-beast-shadow : string
+ [conscience : string
+  beast      : string
+  shadow     : string]
+ (let
+  [s1 : string :=
+    (if : string
+     (then
+      (!-empty conscience)
+      (string "conscience:" conscience)))
+   s2 : string :=
+    (if : string
+     (then
+      (!-empty beast)
+      (string "beast:" beast)))
+   s3 : string :=
+    (if : string
+     (then
+      (!-empty shadow)
+      (string "shadow:" shadow)))
+   slist : stringlist :=
+    (stringlist s1 s2 s3)]
+  (string<-stringlist-join
+   slist " "))
+ :test (test
+        "conscience: 1x1 beast:2x1 shadow:3x1"
+        (string<-conscience-beast-shadow
+         "1x1" "2x1" "3x1"))
+ :doc "Returns a string for will string")
+
+(func string<-demeanor-nature : string
+ [demeanor : string
+  nature   : string]
+ (let
+  [sdemeanor : string :=
+    (if : string
+     (then
+      (!-empty demeanor)
+      (string "demeanor:" demeanor)))
+   snature : string :=
+    (if : string
+     (then
+      (!-empty nature)
+      (string "nature:" nature)))
+   slist : stringlist :=
+    (stringlist sdemeanor snature)]
+  (string<-stringlist-join
+   slist " "))
+ :test (test
+        "demeanor:nice nature:naughty"
+        (string<-demeanor-nature
+         "nice" "naughty"))
+ :doc "Returns a string for mind string")
+
+(func string<-land-water-air-space : string
+ [land  : string
+  water : string
+  air   : string
+  space : string]
+ (let
+  [s1 : string :=
+    (if : string
+     (then
+      (!-empty land)
+      (string "land:" land)))
+   s2 : string :=
+    (if : string
+     (then
+      (!-empty water)
+      (string "water:" water)))
+   s3 : string :=
+    (if : string
+     (then
+      (!-empty air)
+      (string "air:" air)))
+   s4 : string :=
+    (if : string
+     (then
+      (!-empty space)
+      (string "space:" space)))
+   slist : stringlist :=
+    (stringlist s1 s2 s3 s4)]
+  (string<-stringlist-join
+   slist " "))
+ :test (test
+        "land:1 water:2 air:3 space:4"
+        (string<-land-water-air-space
+         "1" "2" "3" "4"))
+ :doc "Returns a string for will string")
+
 (func string<-mass-h-l-w : string
  [mass   : string
   height : string
@@ -98,7 +188,8 @@
      (then
       (!-empty width)
       (string "w:" width)))
-   slist : stringlist := (stringlist smass h l w)]
+   slist : stringlist :=
+    (stringlist smass h l w)]
   (string<-stringlist-join
    slist " "))
  :test (test
@@ -208,9 +299,108 @@
    display : string :=
     (string<-stringlist-join
      appended
-     ", ")]
+     " ")]
   display)
  :doc "Returns display text from a skill")
+
+(func string-display<-unit : string
+ [unit : base/unit]
+ (let : string
+  [summary : string := (:summary unit)
+   unitskillmap : base/unitskillmap :=
+    (:unitskillmap unit)
+   skilllist : stringlist :=
+    (stringlist-display<-unitskillmap
+     unitskillmap)
+   summarylist : stringlist :=
+    (if : stringlist
+     (then
+      (!-empty summary)
+      (stringlist summary)))
+   displaylist : stringlist :=
+    (stringlist
+     summarylist
+     skilllist)]
+  (string<-stringlist-join
+   displaylist newline))
+ :doc "Returns display text from a unit")
+
+(func string-display<-unitskill : string
+ [unitskill : base/unitskill]
+ (let : string
+  [skill : base/skill := (:skill unitskill)
+   level : string     := (:level unitskill)
+   skillname : string := (:name skill)
+   items : stringlist :=
+    (stringlist-display<-unititemmap
+     (:unititemmap unitskill))
+   specialties : stringlist :=
+    (stringlist-display<-unitspecialtymap
+     (:unitspecialtymap unitskill))
+   abilities : stringlist :=
+    (stringlist-display<-unitabilitymap
+     (:unitabilitymap unitskill))
+   extralist : stringlist :=
+    (stringlist
+     items
+     specialties
+     abilities)
+   extras : string :=
+    (if : string
+     (then
+      (!-empty extralist)
+      (string
+       " "
+       (string<-stringlist-join
+        extralist " "))))]
+  (string
+   "* ["
+   skillname
+   "]:"
+   level
+   extras))
+ :doc "Returns a string from a unitskill")
+
+(func stringlist-display<-unitabilitymap : stringlist
+ [unitabilitymap : base/unitabilitymap]
+ (list<-map : stringlist
+  unitabilitymap
+  (fn : string
+   [key : string
+    unitability : unitability]
+   (string "[" key "]")))
+ :doc "Returns a stringlist from a unitabilitymap")
+
+(func stringlist-display<-unititemmap : stringlist
+ [unititemmap : base/unititemmap]
+ (list<-map : stringlist
+  unititemmap
+  (fn : string
+   [key      : string
+    unititem : unititem]
+   (string "[" key "]")))
+ :doc "Returns a stringlist from a unititemmap")
+
+(func stringlist-display<-unitskillmap : stringlist
+ [unitskillmap : base/unitskillmap]
+ (list<-map : stringlist
+  unitskillmap
+  (fn : string
+   [key : string
+    unitskill : unitskill]
+   (string-display<-unitskill
+    unitskill)))
+ :doc "Returns a stringlist from a unitskillmap")
+
+(func stringlist-display<-unitspecialtymap : stringlist
+ [unitspecialtymap : base/unitspecialtymap]
+ (list<-map : stringlist
+  unitspecialtymap
+  (fn : string
+   [key : string
+    unitspecialty : unitspecialty]
+   (string "[" key "]")))
+ :doc "Returns a stringlist from a unitspecialtymap")
 
 (func ui<-any-parent : ui/ui
  [data   : any
@@ -385,22 +575,19 @@
      (:height unit)
      (:length unit)
      (:width  unit))
-   mind : string := (:mind unit)
-   minddetail : string := "demeanor:Aloof nature:Nurturing"
-   will : string := (:will unit)
-   willdetail : string := "beast:1x1 shadow:1x1"
-   move : string := (:move unit)
-   movedetail : string := "land:5kph/3mph water:2kph/5mph air:2kph/4mph"
-   detail : string :=
-    (string
-     summary
-     "* [Melee]:1x0 [Hammer]
-      * [Tradeskill]:1x0 [Blacksmithing]")
    prefix : string := (string parent "-" name)
-   uidimage : string := (string prefix "-image")
+   uiitemsummary : ui/ui :=
+    (ui/ui
+     :uid (string prefix "-summary")
+     :style styles/style-item-summary
+     :stylelist
+      (ui/stylelist
+       styles/style-textarea)
+     :data summary)
+   detail : string := ""
    uiimage : ui/ui :=
     (ui/ui
-     :uid uidimage
+     :uid (string prefix "-image")
      :style styles/style-unit-image
      :data
       (file/file<-path
@@ -451,6 +638,7 @@
    uititles
    uibody
    uibodydetail
+   uiitemsummary
    uidetail))
  :doc "Returns a list of child ui from a item/parent")
 
@@ -471,16 +659,25 @@
      (:length unit)
      (:width  unit))
    mind : string := (:mind unit)
-   minddetail : string := "demeanor:Aloof nature:Nurturing"
+   minddetail : string :=
+    (string<-demeanor-nature
+     (:demeanor unit)
+     (:nature unit))
    will : string := (:will unit)
-   willdetail : string := "beast:1x1 shadow:1x1"
+   willdetail : string :=
+    (string<-conscience-beast-shadow
+     (:conscience unit)
+     (:beast unit)
+     (:shadow unit))
    move : string := (:move unit)
-   movedetail : string := "land:5kph/3mph water:2kph/5mph air:2kph/4mph"
+   movedetail : string :=
+    (string<-land-water-air-space
+     (:speedland unit)
+     (:speedwater unit)
+     (:speedair unit)
+     (:speedspace unit))
    detail : string :=
-    (string
-     summary
-     "* [Melee]:1x0 [Hammer]
-      * [Tradeskill]:1x0 [Blacksmithing]")
+    (string-display<-unit unit)
    prefix : string := (string parent "-" name)
    uidimage : string := (string prefix "-image")
    uiimage : ui/ui :=

@@ -7,6 +7,84 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_scenario {
 
   /**
+   * Constant: ability-bite
+   * {ability}
+   */
+  static c_ability_bite = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-bite'}}
+
+  /**
+   * Constant: ability-blacksmithing
+   * {ability}
+   */
+  static c_ability_blacksmithing = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-blacksmithing'}}
+
+  /**
+   * Constant: ability-drag
+   * {ability}
+   */
+  static c_ability_drag = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-drag'}}
+
+  /**
+   * Constant: ability-grab
+   * {ability}
+   */
+  static c_ability_grab = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-grab'}}
+
+  /**
+   * Constant: ability-sneak
+   * {ability}
+   */
+  static c_ability_sneak = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-sneak'}}
+
+  /**
+   * Constant: ability-trade
+   * {ability}
+   */
+  static c_ability_trade = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-trade'}}
+
+  /**
+   * Constant: ability-trapping
+   * {ability}
+   */
+  static c_ability_trapping = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-trapping'}}
+
+  /**
+   * Constant: power-groundmovement
+   * {power}
+   */
+  static c_power_groundmovement = {vx_type: nx_tactics_base.t_power, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'power-groundmovement'}}
+
+  /**
+   * Constant: skill-closecombat
+   * {skill}
+   */
+  static c_skill_closecombat = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-closecombat'}}
+
+  /**
+   * Constant: skill-hunting
+   * {skill}
+   */
+  static c_skill_hunting = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-hunting'}}
+
+  /**
+   * Constant: skill-melee
+   * {skill}
+   */
+  static c_skill_melee = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-melee'}}
+
+  /**
+   * Constant: skill-stealth
+   * {skill}
+   */
+  static c_skill_stealth = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-stealth'}}
+
+  /**
+   * Constant: skill-tradeskill
+   * {skill}
+   */
+  static c_skill_tradeskill = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-tradeskill'}}
+
+  /**
    * @function deck_murintrail
    * @return {deck}
    */
@@ -36,16 +114,18 @@ export default class nx_tactics_decks_scenario {
           nx_tactics_base.f_cardmap_from_cardlist(
             vx_core.f_new(
               nx_tactics_base.t_cardlist,
-              goblinscout,
-              horse,
               nx_tactics_decks_scenario.f_unit_jesaveer(),
               nx_tactics_decks_scenario.f_unit_jonaveer(),
               nx_tactics_decks_scenario.f_unit_xeibhanower(),
+              nx_tactics_decks_scenario.f_unit_wilmducon(),
+              nx_tactics_decks_scenario.f_unit_liliducon(),
               nx_tactics_decks_scenario.f_unit_wilddog(),
+              nx_tactics_decks_scenario.f_unit_goblinscout(),
+              nx_tactics_decks_scenario.f_unit_horse(),
               nx_tactics_decks_scenario.f_unit_woodencart(),
               nx_tactics_decks_scenario.f_item_armor_leathercuirass(),
               nx_tactics_decks_scenario.f_item_axehand(),
-              nx_tactics_decks_scenario.f_item_axewood(),
+              nx_tactics_decks_scenario.f_item_woodaxe(),
               nx_tactics_decks_scenario.f_item_barehanded(),
               nx_tactics_decks_scenario.f_item_bowshort(),
               nx_tactics_decks_scenario.f_item_dagger(),
@@ -100,7 +180,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-armor-leathercuirass.svg",
       ":summary",
-      "* Armor:1x1\n* Location: Shoulders, Chest, Abdomen, Vitals\n* Hardened: [Slash]"
+      "* Armor:1x1\n* Location: [Shoulders] [Chest] [Abdomen] [Vitals]\n* Hardened: [Slash]",
+      ":body",
+      "7x0",
+      ":mass",
+      "7kg/15lb"
     )
     return output
   }
@@ -126,43 +210,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-axehand.svg",
       ":summary",
-      "* Melee: [Hack] [Slash]\n* Location: [1-hand]",
+      "* Melee: [Hack] [Slash]\n* Hit: [Size Bonus]\n* Location: [1-hand]",
       ":body",
       "9x-1",
       ":mass",
       "900g/2lb"
-    )
-    return output
-  }
-
-  /**
-   * @function item_axewood
-   * @return {item}
-   */
-  static t_item_axewood = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_axewood = {
-    vx_type: nx_tactics_decks_scenario.t_item_axewood
-  }
-
-  // (func item-axewood)
-  static f_item_axewood() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new(
-      nx_tactics_base.t_item,
-      ":name",
-      "Wood Axe",
-      ":titles",
-      "Splitting Axe",
-      ":image",
-      "images/cards/item-axewood.svg",
-      ":summary",
-      "* Melee: [Hack] [Slash]\n* Location: [1-hand]\n* Armor:1x1",
-      ":body",
-      "1x0",
-      ":mass",
-      "1.4kg/3lb"
     )
     return output
   }
@@ -188,7 +240,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-barehanded.svg",
       ":summary",
-      "* Close Combat: [Bash]"
+      "* Close Combat: [Bash]\n* Hit: [Size Bonus]"
     )
     return output
   }
@@ -214,7 +266,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-bowshort.svg",
       ":summary",
-      "* Ranged: [Pierce] [Slash]\n* Location: [2-hand]"
+      "* Ranged: [Pierce] [Slash]\n* Hit:+1\n* Range:10x1 100m/300ft\n* Location: [2-hand]",
+      ":body",
+      "10x-1",
+      ":mass",
+      "1kg/2lb"
     )
     return output
   }
@@ -240,7 +296,13 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-dagger.svg",
       ":summary",
-      "* Close Combat: [Pierce] [Slash]\n* Location: [1-hand]\n* Attack:+1"
+      "* Close Combat: [Pierce] [Slash]\n* Hit: [Size Bonus]\n* Location: [1-hand]",
+      ":body",
+      "5x-1",
+      ":mass",
+      "500g/1lb",
+      ":length",
+      "25cm/10in"
     )
     return output
   }
@@ -266,11 +328,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-hammer.svg",
       ":summary",
-      "* Melee: [Bash] [Hack]\n* Location: [1-hand]",
+      "* Melee: [Bash]\n* Hit:+2 [Size Bonus]\n* Location: [1-hand]",
       ":body",
-      "3x0",
+      "2x0",
       ":mass",
-      "3.2kg/7lb"
+      "2kg/4.4lb"
     )
     return output
   }
@@ -296,7 +358,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-shieldbuckler.svg",
       ":summary",
-      "* Armor:1x1\n* Location: [1-hand]"
+      "* Armor:1x1\n* Location: [1-hand]",
+      ":body",
+      "10x-1",
+      ":mass",
+      "1kg/2lb"
     )
     return output
   }
@@ -382,7 +448,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-spear.svg",
       ":summary",
-      "* Melee: [Pierce] [Slash]\n* Location: [2-hand]\n* Armor:1x1\n* [Reach]"
+      "* Melee: [Pierce] [Slash]\n* Hit:+3 [Size Bonus]\n* Location: [2-hand]\n* Armor:1x1\n* [Reach]",
+      ":body",
+      "3x0",
+      ":mass",
+      "3kg/6lb"
     )
     return output
   }
@@ -408,7 +478,11 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-spearshort.svg",
       ":summary",
-      "* Melee: [Pierce] [Slash]\n* Location: [1-hand]"
+      "* Melee: [Pierce] [Slash]\n* Hit:+1 [Size Bonus]\n* Location: [1-hand]",
+      ":body",
+      "10x-1",
+      ":mass",
+      "1.5kg/4lb"
     )
     return output
   }
@@ -434,11 +508,43 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/item-swordlong.svg",
       ":summary",
-      "* Melee: [Pierce] or [Slash]\n* Location: [1-hand]\n* Armor:1x1",
+      "* Melee: [Pierce] [Slash]\n* Hit:+1 [Size Bonus]\n* Location: [1-hand]\n* Armor:1x1",
       ":body",
-      "1x0",
+      "10x-1",
       ":mass",
       "1.25kg/3lb"
+    )
+    return output
+  }
+
+  /**
+   * @function item_woodaxe
+   * @return {item}
+   */
+  static t_item_woodaxe = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_woodaxe = {
+    vx_type: nx_tactics_decks_scenario.t_item_woodaxe
+  }
+
+  // (func item-woodaxe)
+  static f_item_woodaxe() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Wood Axe",
+      ":titles",
+      "Splitting Maul",
+      ":image",
+      "images/cards/item-woodaxe.svg",
+      ":summary",
+      "* Melee: [Hack] [Slash]\n* Attack:-1\n* Hit:+3 [Size Bonus]\n* Location: [2-hand]\n* Armor:1x1",
+      ":body",
+      "3x0",
+      ":mass",
+      "3.1kg/7lb"
     )
     return output
   }
@@ -783,6 +889,8 @@ export default class nx_tactics_decks_scenario {
       "Cowardly Envious",
       ":conscience",
       "1x1",
+      ":beast",
+      "1x0",
       ":race",
       "Goblin",
       ":body",
@@ -798,7 +906,42 @@ export default class nx_tactics_decks_scenario {
       ":mass",
       "22kg/50lb",
       ":height",
-      "1m/3ft"
+      "1m/3ft",
+      ":speedland",
+      "4kph/2.5mph",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_closecombat,
+          ":level",
+          "1",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario.f_item_dagger()
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_stealth,
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_sneak
+            )
+          )
+        )
+      )
     )
     return output
   }
@@ -830,15 +973,25 @@ export default class nx_tactics_decks_scenario {
       ":will",
       "2x1",
       ":move",
-      "7x0",
+      "8x0",
       ":mass",
       "450kg/1000lb",
-      ":landspeed",
-      "7kph/4mph",
+      ":speedland",
+      "8kph/5mph",
       ":demeanor",
       "Aloof",
       ":nature",
-      "Skitish"
+      "Skitish",
+      ":unitpowermap",
+      nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitpower,
+          ":power",
+          nx_tactics_decks_scenario.c_power_groundmovement,
+          ":level",
+          "8x0"
+        )
+      )
     )
     return output
   }
@@ -866,7 +1019,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/unit-jesaveer.svg",
       ":summary",
-      "* A proud young woman with a love of blacksmithing.",
+      "A resilient, young woman with a love of blacksmithing.",
       ":race",
       "Human",
       ":gender",
@@ -884,19 +1037,52 @@ export default class nx_tactics_decks_scenario {
       ":mass",
       "63kg",
       ":height",
-      "1.72m/5'7",
-      ":landspeed",
-      "5kph",
+      "1.72m/5ft7",
+      ":speedland",
+      "5kph/3mph",
       ":demeanor",
       "Willful",
       ":nature",
       "Nuturing",
       ":beast",
-      "1x1",
+      "1x0",
       ":shadow",
-      "1x1",
+      "1x0",
       ":value",
-      "1x0"
+      "1x0",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_melee,
+          ":level",
+          "1",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario.f_item_hammer()
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_tradeskill,
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_blacksmithing
+            )
+          )
+        )
+      )
     )
     return output
   }
@@ -924,7 +1110,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/unit-jonaveer.svg",
       ":summary",
-      "* A clever young man trying to make a living.",
+      "A clever, young man trying to make his fortune.",
       ":race",
       "Human",
       ":gender",
@@ -942,17 +1128,106 @@ export default class nx_tactics_decks_scenario {
       ":mass",
       "75kg",
       ":height",
-      "1.78m/5'10",
-      ":landspeed",
-      "5kph",
+      "1.78m/5ft10",
+      ":speedland",
+      "5kph/3mph",
       ":demeanor",
       "Frivolous",
       ":nature",
       "Loyal",
       ":beast",
-      "1x1",
+      "1x0",
       ":shadow",
-      "1x1",
+      "1x0",
+      ":value",
+      "1x0",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_melee,
+          ":level",
+          "1",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario.f_item_spear()
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_tradeskill,
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_trade
+            )
+          )
+        )
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unit_liliducon
+   * @return {unit}
+   */
+  static t_unit_liliducon = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_liliducon = {
+    vx_type: nx_tactics_decks_scenario.t_unit_liliducon
+  }
+
+  // (func unit-liliducon)
+  static f_unit_liliducon() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Lili Ducon",
+      ":image",
+      "images/cards/unit-liliducon.svg",
+      ":summary",
+      "A pleasant and perceptive young lady, who moved with her father Wilm. She took her mother's death hard, and having a difficult time adapting.",
+      ":race",
+      "Human",
+      ":gender",
+      "F",
+      ":age",
+      11,
+      ":body",
+      "4x1",
+      ":mind",
+      "4x1",
+      ":will",
+      "4x1",
+      ":move",
+      "4x0",
+      ":mass",
+      "40kg/88lb",
+      ":height",
+      "1.5m/5ft",
+      ":speedland",
+      "4kph",
+      ":demeanor",
+      "Pleasant",
+      ":nature",
+      "Anxious",
+      ":beast",
+      "1x0",
+      ":shadow",
+      "1x0",
       ":value",
       "1x0"
     )
@@ -980,7 +1255,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/unit-wilddog.svg",
       ":summary",
-      "* The Wild Dog is one of the fastest runners in the animal kingdom. Close Combat: [Bite] [Grab] Speed:2x1 [Endurance Running]",
+      "The Wild Dog is one of the fastest runners in the animal kingdom.\n* Speed:2x1 [Endurance Running]",
       ":body",
       "5x1",
       ":mind",
@@ -993,10 +1268,127 @@ export default class nx_tactics_decks_scenario {
       "22kg/50lb",
       ":height",
       "76cm/30in",
-      ":landspeed",
+      ":speedland",
       "20kph/12mph (max 70/44)",
       ":nature",
-      "Dogged"
+      "Dogged",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_closecombat,
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_bite
+            ),
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_grab
+            )
+          ),
+          vx_core.f_new(
+            nx_tactics_base.t_unitability,
+            ":ability",
+            nx_tactics_decks_scenario.c_ability_drag
+          )
+        )
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unit_wilmducon
+   * @return {unit}
+   */
+  static t_unit_wilmducon = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_wilmducon = {
+    vx_type: nx_tactics_decks_scenario.t_unit_wilmducon
+  }
+
+  // (func unit-wilmducon)
+  static f_unit_wilmducon() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Wilm Ducon",
+      ":image",
+      "images/cards/unit-wilmducon.svg",
+      ":summary",
+      "A proud, prickly huntsman who lost his wife in a violent raid and moved away with his daughter Lily to restart his life.",
+      ":race",
+      "Human",
+      ":gender",
+      "M",
+      ":age",
+      30,
+      ":body",
+      "8x1",
+      ":mind",
+      "5x1",
+      ":will",
+      "5x1",
+      ":move",
+      "5x0",
+      ":mass",
+      "80kg/180",
+      ":height",
+      "1.8m/6ft",
+      ":speedland",
+      "5kph/3mph",
+      ":demeanor",
+      "Gruff",
+      ":nature",
+      "Tortured",
+      ":beast",
+      "1x0",
+      ":shadow",
+      "1x0",
+      ":value",
+      "1x0",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_melee,
+          ":level",
+          "1",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario.f_item_woodaxe()
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_hunting,
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_trapping
+            )
+          )
+        )
+      )
     )
     return output
   }
@@ -1048,7 +1440,27 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Xeib Honower",
       ":image",
-      "images/cards/unit-xeibhanower.svg"
+      "images/cards/unit-xeibhanower.svg",
+      ":race",
+      "Human",
+      ":gender",
+      "M",
+      ":age",
+      23,
+      ":body",
+      "8x1",
+      ":mind",
+      "5x1",
+      ":will",
+      "6x1",
+      ":move",
+      "4x0",
+      ":mass",
+      "80kg",
+      ":height",
+      "1.78m/5'10",
+      ":speedland",
+      "4kph/2.5mph"
     )
     return output
   }
@@ -1057,13 +1469,24 @@ export default class nx_tactics_decks_scenario {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
-      
+      "ability-bite": nx_tactics_decks_scenario.c_ability_bite,
+      "ability-blacksmithing": nx_tactics_decks_scenario.c_ability_blacksmithing,
+      "ability-drag": nx_tactics_decks_scenario.c_ability_drag,
+      "ability-grab": nx_tactics_decks_scenario.c_ability_grab,
+      "ability-sneak": nx_tactics_decks_scenario.c_ability_sneak,
+      "ability-trade": nx_tactics_decks_scenario.c_ability_trade,
+      "ability-trapping": nx_tactics_decks_scenario.c_ability_trapping,
+      "power-groundmovement": nx_tactics_decks_scenario.c_power_groundmovement,
+      "skill-closecombat": nx_tactics_decks_scenario.c_skill_closecombat,
+      "skill-hunting": nx_tactics_decks_scenario.c_skill_hunting,
+      "skill-melee": nx_tactics_decks_scenario.c_skill_melee,
+      "skill-stealth": nx_tactics_decks_scenario.c_skill_stealth,
+      "skill-tradeskill": nx_tactics_decks_scenario.c_skill_tradeskill
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-murintrail": nx_tactics_decks_scenario.e_deck_murintrail,
       "item-armor-leathercuirass": nx_tactics_decks_scenario.e_item_armor_leathercuirass,
       "item-axehand": nx_tactics_decks_scenario.e_item_axehand,
-      "item-axewood": nx_tactics_decks_scenario.e_item_axewood,
       "item-barehanded": nx_tactics_decks_scenario.e_item_barehanded,
       "item-bowshort": nx_tactics_decks_scenario.e_item_bowshort,
       "item-dagger": nx_tactics_decks_scenario.e_item_dagger,
@@ -1074,6 +1497,7 @@ export default class nx_tactics_decks_scenario {
       "item-spear": nx_tactics_decks_scenario.e_item_spear,
       "item-spearshort": nx_tactics_decks_scenario.e_item_spearshort,
       "item-swordlong": nx_tactics_decks_scenario.e_item_swordlong,
+      "item-woodaxe": nx_tactics_decks_scenario.e_item_woodaxe,
       "place-blacksmith": nx_tactics_decks_scenario.e_place_blacksmith,
       "place-campsite": nx_tactics_decks_scenario.e_place_campsite,
       "place-cavemouth": nx_tactics_decks_scenario.e_place_cavemouth,
@@ -1091,7 +1515,9 @@ export default class nx_tactics_decks_scenario {
       "unit-horse": nx_tactics_decks_scenario.e_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scenario.e_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scenario.e_unit_jonaveer,
+      "unit-liliducon": nx_tactics_decks_scenario.e_unit_liliducon,
       "unit-wilddog": nx_tactics_decks_scenario.e_unit_wilddog,
+      "unit-wilmducon": nx_tactics_decks_scenario.e_unit_wilmducon,
       "unit-woodencart": nx_tactics_decks_scenario.e_unit_woodencart,
       "unit-xeibhanower": nx_tactics_decks_scenario.e_unit_xeibhanower
     })
@@ -1099,7 +1525,6 @@ export default class nx_tactics_decks_scenario {
       "deck-murintrail": nx_tactics_decks_scenario.t_deck_murintrail,
       "item-armor-leathercuirass": nx_tactics_decks_scenario.t_item_armor_leathercuirass,
       "item-axehand": nx_tactics_decks_scenario.t_item_axehand,
-      "item-axewood": nx_tactics_decks_scenario.t_item_axewood,
       "item-barehanded": nx_tactics_decks_scenario.t_item_barehanded,
       "item-bowshort": nx_tactics_decks_scenario.t_item_bowshort,
       "item-dagger": nx_tactics_decks_scenario.t_item_dagger,
@@ -1110,6 +1535,7 @@ export default class nx_tactics_decks_scenario {
       "item-spear": nx_tactics_decks_scenario.t_item_spear,
       "item-spearshort": nx_tactics_decks_scenario.t_item_spearshort,
       "item-swordlong": nx_tactics_decks_scenario.t_item_swordlong,
+      "item-woodaxe": nx_tactics_decks_scenario.t_item_woodaxe,
       "place-blacksmith": nx_tactics_decks_scenario.t_place_blacksmith,
       "place-campsite": nx_tactics_decks_scenario.t_place_campsite,
       "place-cavemouth": nx_tactics_decks_scenario.t_place_cavemouth,
@@ -1127,7 +1553,9 @@ export default class nx_tactics_decks_scenario {
       "unit-horse": nx_tactics_decks_scenario.t_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scenario.t_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scenario.t_unit_jonaveer,
+      "unit-liliducon": nx_tactics_decks_scenario.t_unit_liliducon,
       "unit-wilddog": nx_tactics_decks_scenario.t_unit_wilddog,
+      "unit-wilmducon": nx_tactics_decks_scenario.t_unit_wilmducon,
       "unit-woodencart": nx_tactics_decks_scenario.t_unit_woodencart,
       "unit-xeibhanower": nx_tactics_decks_scenario.t_unit_xeibhanower
     })
@@ -1195,24 +1623,6 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_item_axehand
-    }
-
-    // (func item-axewood)
-    nx_tactics_decks_scenario.t_item_axewood['vx_value'] = {
-      name          : "item-axewood",
-      pkgname       : "nx/tactics/decks/scenario",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario.f_item_axewood
     }
 
     // (func item-barehanded)
@@ -1393,6 +1803,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_item_swordlong
+    }
+
+    // (func item-woodaxe)
+    nx_tactics_decks_scenario.t_item_woodaxe['vx_value'] = {
+      name          : "item-woodaxe",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_woodaxe
     }
 
     // (func place-blacksmith)
@@ -1701,6 +2129,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_unit_jonaveer
     }
 
+    // (func unit-liliducon)
+    nx_tactics_decks_scenario.t_unit_liliducon['vx_value'] = {
+      name          : "unit-liliducon",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_liliducon
+    }
+
     // (func unit-wilddog)
     nx_tactics_decks_scenario.t_unit_wilddog['vx_value'] = {
       name          : "unit-wilddog",
@@ -1717,6 +2163,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_unit_wilddog
+    }
+
+    // (func unit-wilmducon)
+    nx_tactics_decks_scenario.t_unit_wilmducon['vx_value'] = {
+      name          : "unit-wilmducon",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_wilmducon
     }
 
     // (func unit-woodencart)
@@ -1754,6 +2218,97 @@ export default class nx_tactics_decks_scenario {
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_unit_xeibhanower
     }
+
+    // (const ability-bite)
+    Object.assign(nx_tactics_decks_scenario.c_ability_bite, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Bite"
+    ))
+
+    // (const ability-blacksmithing)
+    Object.assign(nx_tactics_decks_scenario.c_ability_blacksmithing, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Blacksmithing"
+    ))
+
+    // (const ability-drag)
+    Object.assign(nx_tactics_decks_scenario.c_ability_drag, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Drag"
+    ))
+
+    // (const ability-grab)
+    Object.assign(nx_tactics_decks_scenario.c_ability_grab, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Grab"
+    ))
+
+    // (const ability-sneak)
+    Object.assign(nx_tactics_decks_scenario.c_ability_sneak, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Sneak"
+    ))
+
+    // (const ability-trade)
+    Object.assign(nx_tactics_decks_scenario.c_ability_trade, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Trade"
+    ))
+
+    // (const ability-trapping)
+    Object.assign(nx_tactics_decks_scenario.c_ability_trapping, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Trapping"
+    ))
+
+    // (const power-groundmovement)
+    Object.assign(nx_tactics_decks_scenario.c_power_groundmovement, vx_core.f_new(
+      nx_tactics_base.t_power,
+      ":name",
+      "Ground Movement"
+    ))
+
+    // (const skill-closecombat)
+    Object.assign(nx_tactics_decks_scenario.c_skill_closecombat, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Close Combat"
+    ))
+
+    // (const skill-hunting)
+    Object.assign(nx_tactics_decks_scenario.c_skill_hunting, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Hunting"
+    ))
+
+    // (const skill-melee)
+    Object.assign(nx_tactics_decks_scenario.c_skill_melee, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Melee"
+    ))
+
+    // (const skill-stealth)
+    Object.assign(nx_tactics_decks_scenario.c_skill_stealth, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Stealth"
+    ))
+
+    // (const skill-tradeskill)
+    Object.assign(nx_tactics_decks_scenario.c_skill_tradeskill, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Tradeskill"
+    ))
 
   }
 }

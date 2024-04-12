@@ -411,6 +411,12 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_image_wand2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-wand2'}}
 
   /**
+   * Constant: style-item-summary
+   * {style}
+   */
+  static c_style_item_summary = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-item-summary'}}
+
+  /**
    * Constant: style-selected
    * {style}
    */
@@ -634,6 +640,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-image-sword2": nx_tactics_ui_stylesheet.c_style_image_sword2,
       "style-image-wand1": nx_tactics_ui_stylesheet.c_style_image_wand1,
       "style-image-wand2": nx_tactics_ui_stylesheet.c_style_image_wand2,
+      "style-item-summary": nx_tactics_ui_stylesheet.c_style_item_summary,
       "style-selected": nx_tactics_ui_stylesheet.c_style_selected,
       "style-text": nx_tactics_ui_stylesheet.c_style_text,
       "style-text-2": nx_tactics_ui_stylesheet.c_style_text_2,
@@ -1835,6 +1842,31 @@ export default class nx_tactics_ui_stylesheet {
           ":path",
           "icons"
         )
+      )
+    ))
+
+    // (const style-item-summary)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_item_summary, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-item-summary",
+      ":layout",
+      vx_ui_ui.c_layout_label,
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        32,
+        ":y",
+        16
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        30,
+        ":y",
+        31
       )
     ))
 

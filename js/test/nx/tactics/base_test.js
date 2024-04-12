@@ -25,12 +25,12 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 18, ":tests", 36, ":total", 198), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 6, ":tests", 2, ":total", 30), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 19, ":tests", 40, ":total", 206), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 5, ":tests", 2, ":total", 34), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 198), 
-      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 78)
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 206), 
+      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 82)
     )
   }
 
@@ -105,13 +105,17 @@ export default class nx_tactics_base_test {
           "trauma", 0,
           "unit", 0,
           "unitability", 0,
+          "unitabilitylist", 0,
           "unitabilitymap", 0,
           "unititem", 0,
+          "unititemlist", 0,
           "unititemmap", 0,
           "unitmap", 0,
           "unitpower", 0,
+          "unitpowerlist", 0,
           "unitpowermap", 0,
           "unitskill", 0,
+          "unitskilllist", 0,
           "unitskillmap", 0,
           "unitspecialty", 0,
           "unitspecialtymap", 0,
@@ -246,7 +250,11 @@ export default class nx_tactics_base_test {
           "skilllist<-skillmap", 0,
           "skilllistlist<-sectionlist", 0,
           "skillmap<-skilllist", 0,
-          "tactics<-booklist", 0
+          "tactics<-booklist", 0,
+          "unitabilitymap<-unitabilitylist", 0,
+          "unititemmap<-unititemlist", 0,
+          "unitpowermap<-unitpowerlist", 0,
+          "unitskillmap<-unitskilllist", 0
         )
     )
   }

@@ -309,19 +309,28 @@
 
 (type unitability : struct
  :properties [name      : string
+              ability   : ability
               image     : string
               titles    : string
               reference : string])
+
+(type unitabilitylist : list
+ :allowtypes [unitability])
 
 (type unitabilitymap : map
  :allowtypes [unitability])
 
 (type unititem : struct
- :properties [facing : string
+ :properties [name   : string
+              item   : item
+              facing : string
               number : string
               rounds : string
               value  : string]
  :traits [card])
+
+(type unititemlist : list
+ :allowtypes [unititem])
 
 (type unititemmap : map
  :allowtypes [unititem])
@@ -343,6 +352,9 @@
               unitspecialtymap : unitspecialtymap]
  :traits [card])
 
+(type unitpowerlist : list
+ :allowtypes [unitpower])
+
 (type unitpowermap : map
  :allowtypes [unitpower])
 
@@ -353,6 +365,9 @@
               unititemmap      : unititemmap
               unitspecialtymap : unitspecialtymap]
  :traits [card])
+
+(type unitskilllist : list
+ :allowtypes [unitskill])
 
 (type unitskillmap : map
  :allowtypes [unitskill])
@@ -808,7 +823,7 @@
  :doc "Returns a cardmap from a given bookmap")
 
 (func cardmap<-cardlist : cardmap
- [cardlist : cardlist]
+ [cardlist : cardlist :...]
  (map<-list : cardmap
   cardlist
   (fn : string
@@ -1159,3 +1174,55 @@
    :skillmap   skillmap
    :unitmap    unitmap))
  :doc "Return a ready tactics from a bookmap.")
+
+(func unitabilitymap<-unitabilitylist : unitabilitymap
+ [unitabilitylist : unitabilitylist :...]
+ (map<-list : unitabilitymap
+  unitabilitylist
+  (fn : string
+   [unitability : unitability]
+   (let : string
+    [ability : ability := (:ability unitability)
+     name : string :=
+      (if : string
+       (is-empty ability)
+       (:name unitability)
+       (:name ability))]
+   name)))
+ :doc "Returns a unitabilitymap from a unitabilitylist")
+
+(func unititemmap<-unititemlist : unititemmap
+ [unititemlist : unititemlist :...]
+ (map<-list : unititemmap
+  unititemlist
+  (fn : string
+   [unititem : unititem]
+   (let : string
+    [item : item := (:item unititem)
+     name : string := (:name item)]
+   name)))
+ :doc "Returns a unititemmap from a unititemlist")
+
+(func unitpowermap<-unitpowerlist : unitpowermap
+ [unitpowerlist : unitpowerlist :...]
+ (map<-list : unitpowermap
+  unitpowerlist
+  (fn : string
+   [unitpower : unitpower]
+   (let : string
+    [power : power := (:power unitpower)
+     name : string := (:name power)]
+   name)))
+ :doc "Returns a unitpowermap from a unitpowerlist")
+
+(func unitskillmap<-unitskilllist : unitskillmap
+ [unitskilllist : unitskilllist :...]
+ (map<-list : unitskillmap
+  unitskilllist
+  (fn : string
+   [unitskill : unitskill]
+   (let : string
+    [skill : skill := (:skill unitskill)
+     name : string := (:name skill)]
+   name)))
+ :doc "Returns a unitskillmap from a unitskilllist")

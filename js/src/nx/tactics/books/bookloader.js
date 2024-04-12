@@ -4918,10 +4918,10 @@ export default class nx_tactics_books_bookloader {
       {"any-1": nx_tactics_base.t_unitskill},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const ability = nx_tactics_books_bookloader.f_unitability_from_xml(xmlability)
-        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitability}, ability, ":name")
+        const unitability = nx_tactics_books_bookloader.f_unitability_from_xml(xmlability)
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitability}, unitability, ":name")
         const origmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitabilitymap, "struct-2": nx_tactics_base.t_unitskill}, unitskill, ":unitabilitymap")
-        const chgmap = vx_core.f_copy(origmap, name, ability)
+        const chgmap = vx_core.f_copy(origmap, name, unitability)
         return vx_core.f_copy(unitskill, ":unitabilitymap", chgmap)
       })
     )

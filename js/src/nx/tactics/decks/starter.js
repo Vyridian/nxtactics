@@ -54,7 +54,7 @@ export default class nx_tactics_decks_starter {
       ":name",
       "Action: Move",
       ":summary",
-      "* Action: Move your unit up to your [Move] stat.\n* Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns."
+      "* Action: Move up to half (rounded down) of your [Move] stat.\n* Facing: During your Move, change your facing up to 2 times the entire Turn.\n* Full Speed (2 Actions): Move your full [Move] stat.\n* Sprint (2 Actions): If you moved at Full Speed last turn, Move 1.5x your [Move] stat.\n* Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns."
     )
     return output
   }
@@ -238,7 +238,7 @@ export default class nx_tactics_decks_starter {
       ":name",
       "Free Action",
       ":summary",
-      "* Move: Take a [Fatigue] to [Move]:1.\n* Opportunity Combat: If a Target moves through 2 spaces adjacent to a Unit, that Unit may spend a [Stun] to take a free [Action: Combat]."
+      "* Move Out: Take a [Fatigue] to [Move]:1.\n* Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.\n* Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.\n* Final Sprint: Take a [Slow] to [Move].\n* Opportunity Fight: If a Target moves through 2 spaces adjacent to a Unit, that Unit may spend a [Stun] to take a free [Action: Fight]."
     )
     return output
   }

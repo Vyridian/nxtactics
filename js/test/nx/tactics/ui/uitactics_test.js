@@ -32,11 +32,11 @@ export default class nx_tactics_ui_uitactics_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/uitactics", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 56, ":tests", 26, ":total", 46), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 1, ":total", 41), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 63, ":tests", 35, ":total", 55), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 8, ":tests", 4, ":total", 50), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 1, ":total", 46), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 55), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -68,7 +68,16 @@ export default class nx_tactics_ui_uitactics_test {
           "string-display<-book", 0,
           "string-display<-deck", 0,
           "string-display<-skill", 0,
+          "string-display<-unit", 0,
+          "string-display<-unitskill", 0,
+          "string<-conscience-beast-shadow", 1,
+          "string<-demeanor-nature", 1,
+          "string<-land-water-air-space", 1,
           "string<-mass-h-l-w", 1,
+          "stringlist-display<-unitabilitymap", 0,
+          "stringlist-display<-unititemmap", 0,
+          "stringlist-display<-unitskillmap", 0,
+          "stringlist-display<-unitspecialtymap", 0,
           "ui-app", 0,
           "ui-app-background", 0,
           "ui-app-home", 0,
@@ -106,6 +115,78 @@ export default class nx_tactics_ui_uitactics_test {
     )
   }
 
+  static f_string_from_conscience_beast_shadow(context) {
+    const output = vx_core.f_new(
+      vx_test.t_testcase,
+      ":passfail", false,
+      ":testpkg", "nx/tactics/ui/uitactics",
+      ":casename", "string<-conscience-beast-shadow",
+      ":describelist",
+        vx_core.f_new(
+          vx_test.t_testdescribelist,
+          vx_core.f_new(
+            vx_test.t_testdescribe,
+            ":describename", "(test\n \"conscience: 1x1 beast:2x1 shadow:3x1\"\n (string<-conscience-beast-shadow\n  \"1x1\" \"2x1\" \"3x1\"))",
+            ":testresult",
+            vx_test.f_test(
+              context,
+              "conscience: 1x1 beast:2x1 shadow:3x1",
+              nx_tactics_ui_uitactics.f_string_from_conscience_beast_shadow("1x1", "2x1", "3x1")
+            )
+          )
+        )
+    )
+    return output
+  }
+
+  static f_string_from_demeanor_nature(context) {
+    const output = vx_core.f_new(
+      vx_test.t_testcase,
+      ":passfail", false,
+      ":testpkg", "nx/tactics/ui/uitactics",
+      ":casename", "string<-demeanor-nature",
+      ":describelist",
+        vx_core.f_new(
+          vx_test.t_testdescribelist,
+          vx_core.f_new(
+            vx_test.t_testdescribe,
+            ":describename", "(test\n \"demeanor:nice nature:naughty\"\n (string<-demeanor-nature\n  \"nice\" \"naughty\"))",
+            ":testresult",
+            vx_test.f_test(
+              context,
+              "demeanor:nice nature:naughty",
+              nx_tactics_ui_uitactics.f_string_from_demeanor_nature("nice", "naughty")
+            )
+          )
+        )
+    )
+    return output
+  }
+
+  static f_string_from_land_water_air_space(context) {
+    const output = vx_core.f_new(
+      vx_test.t_testcase,
+      ":passfail", false,
+      ":testpkg", "nx/tactics/ui/uitactics",
+      ":casename", "string<-land-water-air-space",
+      ":describelist",
+        vx_core.f_new(
+          vx_test.t_testdescribelist,
+          vx_core.f_new(
+            vx_test.t_testdescribe,
+            ":describename", "(test\n \"land:1 water:2 air:3 space:4\"\n (string<-land-water-air-space\n  \"1\" \"2\" \"3\" \"4\"))",
+            ":testresult",
+            vx_test.f_test(
+              context,
+              "land:1 water:2 air:3 space:4",
+              nx_tactics_ui_uitactics.f_string_from_land_water_air_space("1", "2", "3", "4")
+            )
+          )
+        )
+    )
+    return output
+  }
+
   static f_string_from_mass_h_l_w(context) {
     const output = vx_core.f_new(
       vx_test.t_testcase,
@@ -133,6 +214,9 @@ export default class nx_tactics_ui_uitactics_test {
   static test_cases(context) {
     const output = vx_core.f_new(
       vx_test.t_testcaselist,
+      nx_tactics_ui_uitactics_test.f_string_from_conscience_beast_shadow(context),
+      nx_tactics_ui_uitactics_test.f_string_from_demeanor_nature(context),
+      nx_tactics_ui_uitactics_test.f_string_from_land_water_air_space(context),
       nx_tactics_ui_uitactics_test.f_string_from_mass_h_l_w(context)
     )
     return output
