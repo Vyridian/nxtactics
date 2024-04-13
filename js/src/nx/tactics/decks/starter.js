@@ -296,6 +296,35 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
+   * @function card_mapscale_1
+   * @return {card}
+   */
+  static t_card_mapscale_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_mapscale_1 = {
+    vx_type: nx_tactics_decks_starter.t_card_mapscale_1
+  }
+
+  // (func card-mapscale-1)
+  static f_card_mapscale_1() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      vx_core.f_new(
+        vx_core.t_string,
+        "card-mapscale-1"
+      ),
+      ":name",
+      "Map Scale:1",
+      ":summary",
+      "* Human Scale\n* Turn Length: 2sec\n* Note: Humans (max speed 3x1 = 30kph) walk at 6kph or 1.6m/s. This makes a 2sec turn 3 spaces."
+    )
+    return output
+  }
+
+  /**
    * @function card_player_blue
    * @param  {int} num
    * @return {card}
@@ -443,36 +472,7 @@ export default class nx_tactics_decks_starter {
       ":name",
       "Scale",
       ":summary",
-      "* Each stat/skill/power has a number after the letter 'x'.\n* This is the scale of that ability.\n* The number represents the number of zeroes. E.g. 5x3 translates to 5000.\n* x0 denotes human scale. E.g. 1x0=10kg, 10iq+50, 10will+50, 1kph"
-    )
-    return output
-  }
-
-  /**
-   * @function card_scale_0
-   * @return {card}
-   */
-  static t_card_scale_0 = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_scale_0 = {
-    vx_type: nx_tactics_decks_starter.t_card_scale_0
-  }
-
-  // (func card-scale-0)
-  static f_card_scale_0() {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      nx_tactics_base.t_card,
-      ":id",
-      vx_core.f_new(
-        vx_core.t_string,
-        "card-scale-0"
-      ),
-      ":name",
-      "Scale:0",
-      ":summary",
-      "* Human Scale\n* Turn Length: 4sec\n* Note: Humans walk at 5kph or 1.3m/s. This makes a 4sec turn 5 spaces."
+      "* Each stat/skill/power has a number after the letter 'x'.\n* This is the scale of that ability.\n* The number represents the number of zeroes. E.g. 5x3 translates to 5000.\n* x1 denotes human scale. E.g. 1x1=10kg, 10iq+50, 10will, 10kph"
     )
     return output
   }
@@ -751,7 +751,7 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_levelingguide(),
           nx_tactics_decks_starter.f_card_turn_order(),
           nx_tactics_decks_starter.f_card_scale(),
-          nx_tactics_decks_starter.f_card_scale_0(),
+          nx_tactics_decks_starter.f_card_mapscale_1(),
           nx_tactics_decks_starter.f_card_fateupper(),
           nx_tactics_decks_starter.f_card_fatelower()
         )
@@ -968,12 +968,12 @@ export default class nx_tactics_decks_starter {
       "card-free-action": nx_tactics_decks_starter.e_card_free_action,
       "card-gameguide": nx_tactics_decks_starter.e_card_gameguide,
       "card-levelingguide": nx_tactics_decks_starter.e_card_levelingguide,
+      "card-mapscale-1": nx_tactics_decks_starter.e_card_mapscale_1,
       "card-player-blue": nx_tactics_decks_starter.e_card_player_blue,
       "card-player-green": nx_tactics_decks_starter.e_card_player_green,
       "card-player-red": nx_tactics_decks_starter.e_card_player_red,
       "card-player-yellow": nx_tactics_decks_starter.e_card_player_yellow,
       "card-scale": nx_tactics_decks_starter.e_card_scale,
-      "card-scale-0": nx_tactics_decks_starter.e_card_scale_0,
       "card-setupguide": nx_tactics_decks_starter.e_card_setupguide,
       "card-turn-order": nx_tactics_decks_starter.e_card_turn_order,
       "card-turn-order_1": nx_tactics_decks_starter.e_card_turn_order_1,
@@ -1000,12 +1000,12 @@ export default class nx_tactics_decks_starter {
       "card-free-action": nx_tactics_decks_starter.t_card_free_action,
       "card-gameguide": nx_tactics_decks_starter.t_card_gameguide,
       "card-levelingguide": nx_tactics_decks_starter.t_card_levelingguide,
+      "card-mapscale-1": nx_tactics_decks_starter.t_card_mapscale_1,
       "card-player-blue": nx_tactics_decks_starter.t_card_player_blue,
       "card-player-green": nx_tactics_decks_starter.t_card_player_green,
       "card-player-red": nx_tactics_decks_starter.t_card_player_red,
       "card-player-yellow": nx_tactics_decks_starter.t_card_player_yellow,
       "card-scale": nx_tactics_decks_starter.t_card_scale,
-      "card-scale-0": nx_tactics_decks_starter.t_card_scale_0,
       "card-setupguide": nx_tactics_decks_starter.t_card_setupguide,
       "card-turn-order": nx_tactics_decks_starter.t_card_turn_order,
       "card-turn-order_1": nx_tactics_decks_starter.t_card_turn_order_1,
@@ -1230,6 +1230,24 @@ export default class nx_tactics_decks_starter {
       fn            : nx_tactics_decks_starter.f_card_levelingguide
     }
 
+    // (func card-mapscale-1)
+    nx_tactics_decks_starter.t_card_mapscale_1['vx_value'] = {
+      name          : "card-mapscale-1",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_mapscale_1
+    }
+
     // (func card-player-blue)
     nx_tactics_decks_starter.t_card_player_blue['vx_value'] = {
       name          : "card-player-blue",
@@ -1318,24 +1336,6 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_scale
-    }
-
-    // (func card-scale-0)
-    nx_tactics_decks_starter.t_card_scale_0['vx_value'] = {
-      name          : "card-scale-0",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_scale_0
     }
 
     // (func card-setupguide)

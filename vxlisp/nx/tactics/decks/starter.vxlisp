@@ -110,6 +110,15 @@
     * Skill Points: May be exchanged for a Level 1 Skill or a new Level 1 Power.
     * Ability Points: May be exchanged for an Ability, Specialty, or a Power Level increase."))
 
+(func card-mapscale-1 : base/card
+ (base/card
+  :id (string "card-mapscale-1")
+  :name "Map Scale:1"
+  :summary
+   "* Human Scale
+    * Turn Length: 2sec
+    * Note: Humans (max speed 3x1 = 30kph) walk at 6kph or 1.6m/s. This makes a 2sec turn 3 spaces."))
+
 (func card-player-blue : base/card
  [num : int]
  (base/card
@@ -146,16 +155,7 @@
    "* Each stat/skill/power has a number after the letter 'x'.
     * This is the scale of that ability.
     * The number represents the number of zeroes. E.g. 5x3 translates to 5000.
-    * x0 denotes human scale. E.g. 1x0=10kg, 10iq+50, 10will+50, 1kph"))
-
-(func card-scale-0 : base/card
- (base/card
-  :id (string "card-scale-0")
-  :name "Scale:0"
-  :summary
-   "* Human Scale
-    * Turn Length: 4sec
-    * Note: Humans walk at 5kph or 1.3m/s. This makes a 4sec turn 5 spaces."))
+    * x1 denotes human scale. E.g. 1x1=10kg, 10iq+50, 10will, 10kph"))
 
 (func card-setupguide : base/card
  (base/card
@@ -236,7 +236,7 @@
      (card-levelingguide)
      (card-turn-order)
      (card-scale)
-     (card-scale-0)
+     (card-mapscale-1)
      (card-fateupper)
      (card-fatelower))
    cardmap : base/cardmap :=

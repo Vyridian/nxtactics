@@ -292,11 +292,11 @@
   :body "2x1"
   :mind "6x1"
   :will "2x1"
-  :move "4x0"
+  :move "2x1"
   :value "1x0"
   :mass "22kg/50lb"
   :height "1m/3ft"
-  :speedland "4kph/2.5mph"
+  :speedland "20kph"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
@@ -321,16 +321,16 @@
   :body "4x2"
   :mind "5x-1"
   :will "2x1"
-  :move "8x0"
+  :move "4x1"
   :mass "450kg/1000lb"
-  :speedland "8kph/5mph"
+  :speedland "40kph/25mph"
   :demeanor "Aloof"
   :nature "Skitish"
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
      :power power-groundmovement
-     :level "8x0"))))
+     :level "4x1"))))
 
 (func unit-jesaveer : base/unit
  (base/unit
@@ -345,10 +345,10 @@
   :body "6x1"
   :mind "6x1"
   :will "6x1"
-  :move "5x0"
+  :move "3x1"
   :mass "63kg"
   :height "1.72m/5ft7"
-  :speedland "5kph/3mph"
+  :speedland "30kph/20mph"
   :demeanor "Willful"
   :nature "Nuturing"
   :beast "1x0"
@@ -384,10 +384,10 @@
   :body "7x1"
   :mind "6x1"
   :will "5x1"
-  :move "5x0"
+  :move "3x1"
   :mass "75kg"
   :height "1.78m/5ft10"
-  :speedland "5kph/3mph"
+  :speedland "30kph/20mph"
   :demeanor "Frivolous"
   :nature "Loyal"
   :beast "1x0"
@@ -415,17 +415,17 @@
   :name "Lili Ducon"
   :image "images/cards/unit-liliducon.svg"
   :summary
-   "A pleasant and perceptive young lady, who moved with her father Wilm. She took her mother's death hard, and having a difficult time adapting."
+   "A pleasant and perceptive young lady, who moved with her father Wilm. She took her mother's death hard, and is having a difficult time adapting."
   :race "Human"
   :gender "F"
   :age 11
   :body "4x1"
   :mind "4x1"
   :will "4x1"
-  :move "4x0"
+  :move "2x1"
   :mass "40kg/88lb"
   :height "1.5m/5ft"
-  :speedland "4kph"
+  :speedland "20kph"
   :demeanor "Pleasant"
   :nature "Anxious"
   :beast "1x0"
@@ -448,13 +448,13 @@
   :image "images/cards/unit-wilddog.svg"
   :summary
    "The Wild Dog is one of the fastest runners in the animal kingdom."
-  :body "5x1"
+  :body "2x1"
   :mind "8x-1"
   :will "4x1"
-  :move "2x1"
+  :move "7x1"
   :mass "22kg/50lb"
   :height "76cm/30in"
-  :speedland "20kph/12mph (max 70/44)"
+  :speedland "70kph/44mph"
   :nature "Dogged"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
@@ -473,24 +473,24 @@
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
      :power power-groundmovement
-     :level "2x1"))))
+     :level "7x1"))))
 
 (func unit-wilmducon : base/unit
  (base/unit
   :name "Wilm Ducon"
   :image "images/cards/unit-wilmducon.svg"
   :summary
-   "A proud, prickly huntsman who lost his wife in a violent raid and moved away with his daughter Lily to restart his life."
+   "A proud, prickly huntsman who lost his wife in a violent raid and moved away with his daughter, Lily, to restart his life."
   :race "Human"
   :gender "M"
   :age 30
   :body "8x1"
   :mind "5x1"
   :will "5x1"
-  :move "5x0"
+  :move "3x1"
   :mass "80kg/180"
   :height "1.8m/6ft"
-  :speedland "5kph/3mph"
+  :speedland "30kph/20mph"
   :demeanor "Gruff"
   :nature "Tortured"
   :beast "1x0"
@@ -530,10 +530,10 @@
   :body "8x1"
   :mind "5x1"
   :will "6x1"
-  :move "4x0"
+  :move "2.5x1"
   :mass "80kg"
   :height "1.78m/5'10"
-  :speedland "4kph/2.5mph"))
+  :speedland "25kph"))
 
 (func deck-murintrail : base/deck
  (let : base/deck
