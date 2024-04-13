@@ -351,8 +351,12 @@ export default class nx_tactics_ui_uitactics {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":summary")
-        const unitskillmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitskillmap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitskillmap")
-        const skilllist = nx_tactics_ui_uitactics.f_stringlist_display_from_unitskillmap(unitskillmap)
+        const skilllist = nx_tactics_ui_uitactics.f_stringlist_display_from_unitskillmap(
+          vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitskillmap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitskillmap")
+        )
+        const powerlist = nx_tactics_ui_uitactics.f_stringlist_display_from_unitpowermap(
+          vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitpowermap, "struct-2": nx_tactics_base.t_unit}, unit, ":unitpowermap")
+        )
         const summarylist = vx_core.f_if_2(
           {"any-1": vx_core.t_stringlist},
           vx_core.f_then(
@@ -366,11 +370,70 @@ export default class nx_tactics_ui_uitactics {
         const displaylist = vx_core.f_new(
           vx_core.t_stringlist,
           summarylist,
-          skilllist
+          skilllist,
+          powerlist
         )
         return vx_type.f_string_from_stringlist_join(
           displaylist,
           vx_core.c_newline
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function string_display_from_unitpower
+   * Returns a string from a unitpower
+   * @param  {unitpower} unitpower
+   * @return {string}
+   */
+  static t_string_display_from_unitpower = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_display_from_unitpower = {
+    vx_type: nx_tactics_ui_uitactics.t_string_display_from_unitpower
+  }
+
+  // (func string-display<-unitpower)
+  static f_string_display_from_unitpower(unitpower) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const power = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_power, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":power")
+        const level = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":level")
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_power}, power, ":name")
+        const specialties = nx_tactics_ui_uitactics.f_stringlist_display_from_unitspecialtymap(
+          vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitspecialtymap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unitspecialtymap")
+        )
+        const abilities = nx_tactics_ui_uitactics.f_stringlist_display_from_unitabilitymap(
+          vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitabilitymap, "struct-2": nx_tactics_base.t_unitpower}, unitpower, ":unitabilitymap")
+        )
+        const extralist = vx_core.f_new(
+          vx_core.t_stringlist,
+          specialties,
+          abilities
+        )
+        const extras = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty_1(extralist)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_core.t_string,
+              " ",
+              vx_type.f_string_from_stringlist_join(extralist, " ")
+            )})
+          )
+        )
+        return vx_core.f_new(
+          vx_core.t_string,
+          "* [",
+          name,
+          "]:",
+          level,
+          extras
         )
       })
     )
@@ -776,6 +839,31 @@ export default class nx_tactics_ui_uitactics {
           key,
           "]"
         ))
+    )
+    return output
+  }
+
+  /**
+   * @function stringlist_display_from_unitpowermap
+   * Returns a stringlist from a unitpowermap
+   * @param  {unitpowermap} unitpowermap
+   * @return {stringlist}
+   */
+  static t_stringlist_display_from_unitpowermap = {
+    vx_type: vx_core.t_type
+  }
+  static e_stringlist_display_from_unitpowermap = {
+    vx_type: nx_tactics_ui_uitactics.t_stringlist_display_from_unitpowermap
+  }
+
+  // (func stringlist-display<-unitpowermap)
+  static f_stringlist_display_from_unitpowermap(unitpowermap) {
+    let output = vx_core.e_stringlist
+    output = vx_core.f_list_from_map_1(
+      {"any-1": vx_core.t_string, "any-2": nx_tactics_base.t_unitpower, "list-1": vx_core.t_stringlist, "map-2": nx_tactics_base.t_unitpowermap},
+      unitpowermap,
+      vx_core.f_new(vx_core.t_any_from_key_value, ([key, unitpower]) => 
+        nx_tactics_ui_uitactics.f_string_display_from_unitpower(unitpower))
     )
     return output
   }
@@ -2900,6 +2988,7 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-deck": nx_tactics_ui_uitactics.e_string_display_from_deck,
       "string-display<-skill": nx_tactics_ui_uitactics.e_string_display_from_skill,
       "string-display<-unit": nx_tactics_ui_uitactics.e_string_display_from_unit,
+      "string-display<-unitpower": nx_tactics_ui_uitactics.e_string_display_from_unitpower,
       "string-display<-unitskill": nx_tactics_ui_uitactics.e_string_display_from_unitskill,
       "string<-conscience-beast-shadow": nx_tactics_ui_uitactics.e_string_from_conscience_beast_shadow,
       "string<-demeanor-nature": nx_tactics_ui_uitactics.e_string_from_demeanor_nature,
@@ -2907,6 +2996,7 @@ export default class nx_tactics_ui_uitactics {
       "string<-mass-h-l-w": nx_tactics_ui_uitactics.e_string_from_mass_h_l_w,
       "stringlist-display<-unitabilitymap": nx_tactics_ui_uitactics.e_stringlist_display_from_unitabilitymap,
       "stringlist-display<-unititemmap": nx_tactics_ui_uitactics.e_stringlist_display_from_unititemmap,
+      "stringlist-display<-unitpowermap": nx_tactics_ui_uitactics.e_stringlist_display_from_unitpowermap,
       "stringlist-display<-unitskillmap": nx_tactics_ui_uitactics.e_stringlist_display_from_unitskillmap,
       "stringlist-display<-unitspecialtymap": nx_tactics_ui_uitactics.e_stringlist_display_from_unitspecialtymap,
       "ui-app": nx_tactics_ui_uitactics.e_ui_app,
@@ -2952,6 +3042,7 @@ export default class nx_tactics_ui_uitactics {
       "string-display<-deck": nx_tactics_ui_uitactics.t_string_display_from_deck,
       "string-display<-skill": nx_tactics_ui_uitactics.t_string_display_from_skill,
       "string-display<-unit": nx_tactics_ui_uitactics.t_string_display_from_unit,
+      "string-display<-unitpower": nx_tactics_ui_uitactics.t_string_display_from_unitpower,
       "string-display<-unitskill": nx_tactics_ui_uitactics.t_string_display_from_unitskill,
       "string<-conscience-beast-shadow": nx_tactics_ui_uitactics.t_string_from_conscience_beast_shadow,
       "string<-demeanor-nature": nx_tactics_ui_uitactics.t_string_from_demeanor_nature,
@@ -2959,6 +3050,7 @@ export default class nx_tactics_ui_uitactics {
       "string<-mass-h-l-w": nx_tactics_ui_uitactics.t_string_from_mass_h_l_w,
       "stringlist-display<-unitabilitymap": nx_tactics_ui_uitactics.t_stringlist_display_from_unitabilitymap,
       "stringlist-display<-unititemmap": nx_tactics_ui_uitactics.t_stringlist_display_from_unititemmap,
+      "stringlist-display<-unitpowermap": nx_tactics_ui_uitactics.t_stringlist_display_from_unitpowermap,
       "stringlist-display<-unitskillmap": nx_tactics_ui_uitactics.t_stringlist_display_from_unitskillmap,
       "stringlist-display<-unitspecialtymap": nx_tactics_ui_uitactics.t_stringlist_display_from_unitspecialtymap,
       "ui-app": nx_tactics_ui_uitactics.t_ui_app,
@@ -3151,6 +3243,24 @@ export default class nx_tactics_ui_uitactics {
       fn            : nx_tactics_ui_uitactics.f_string_display_from_unit
     }
 
+    // (func string-display<-unitpower)
+    nx_tactics_ui_uitactics.t_string_display_from_unitpower['vx_value'] = {
+      name          : "string-display<-unitpower",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_string_display_from_unitpower
+    }
+
     // (func string-display<-unitskill)
     nx_tactics_ui_uitactics.t_string_display_from_unitskill['vx_value'] = {
       name          : "string-display<-unitskill",
@@ -3275,6 +3385,24 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_stringlist_display_from_unititemmap
+    }
+
+    // (func stringlist-display<-unitpowermap)
+    nx_tactics_ui_uitactics.t_stringlist_display_from_unitpowermap['vx_value'] = {
+      name          : "stringlist-display<-unitpowermap",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_stringlist_display_from_unitpowermap
     }
 
     // (func stringlist-display<-unitskillmap)

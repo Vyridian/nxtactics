@@ -32,11 +32,11 @@ export default class nx_tactics_ui_uitactics_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/uitactics", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 63, ":tests", 35, ":total", 55), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 8, ":tests", 4, ":total", 50), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 64, ":tests", 37, ":total", 57), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 52), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 55), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 57), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -69,6 +69,7 @@ export default class nx_tactics_ui_uitactics_test {
           "string-display<-deck", 0,
           "string-display<-skill", 0,
           "string-display<-unit", 0,
+          "string-display<-unitpower", 0,
           "string-display<-unitskill", 0,
           "string<-conscience-beast-shadow", 1,
           "string<-demeanor-nature", 1,
@@ -76,6 +77,7 @@ export default class nx_tactics_ui_uitactics_test {
           "string<-mass-h-l-w", 1,
           "stringlist-display<-unitabilitymap", 0,
           "stringlist-display<-unititemmap", 0,
+          "stringlist-display<-unitpowermap", 0,
           "stringlist-display<-unitskillmap", 0,
           "stringlist-display<-unitspecialtymap", 0,
           "ui-app", 0,

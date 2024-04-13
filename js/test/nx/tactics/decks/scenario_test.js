@@ -24,12 +24,12 @@ export default class nx_tactics_decks_scenario_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/scenario", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 13), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 49), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 16), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 52), 
       "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 36), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 49), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 52), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -45,18 +45,21 @@ export default class nx_tactics_decks_scenario_test {
       "constmap",
         vx_core.f_new(
           vx_core.t_intmap,
+          "ability-bargain", 0,
           "ability-bite", 0,
           "ability-blacksmithing", 0,
           "ability-drag", 0,
+          "ability-foraging", 0,
           "ability-grab", 0,
           "ability-sneak", 0,
-          "ability-trade", 0,
           "ability-trapping", 0,
           "power-groundmovement", 0,
+          "skill-business", 0,
           "skill-closecombat", 0,
           "skill-hunting", 0,
           "skill-melee", 0,
           "skill-stealth", 0,
+          "skill-survival", 0,
           "skill-tradeskill", 0
         ),
       "funcmap",

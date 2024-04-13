@@ -264,7 +264,7 @@ export default class nx_tactics_decks_starter {
       ":name",
       "Game Guide",
       ":summary",
-      "* Create [Characters] or [Factions] to play [Scenarios].\n* Each [Scenario] contains various [Threats] and [Goals]\n* Find them and use your [Skills] / [Powers] to complete them for [Rewards]\n* Some [Rewards] are items, others allow you to increase your [Skills], [Powers], [Abilities], or [Specialties]"
+      "* Create [Characters] or [Factions] to play [Scenarios].\n* Each [Scenario] contains various [Threats] and [Goals]\n* Find them and use your [Skills] / [Powers] to complete them for [Rewards]\n* Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties]."
     )
     return output
   }
@@ -288,7 +288,9 @@ export default class nx_tactics_decks_starter {
       ":id",
       "levelingguide",
       ":name",
-      "Leveling Guide"
+      "Leveling Guide",
+      ":summary",
+      "* Major Achievement: Completion gains a Skill Point.\n* Minor Achievement: Completing gains an Ability Point.\n* Skill Points: May be exchanged for a Level 1 Skill or a new Level 1 Power.\n* Ability Points: May be exchanged for an Ability, Specialty, or a Power Level increase."
     )
     return output
   }

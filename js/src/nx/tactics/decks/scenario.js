@@ -7,6 +7,12 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_scenario {
 
   /**
+   * Constant: ability-bargain
+   * {ability}
+   */
+  static c_ability_bargain = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-bargain'}}
+
+  /**
    * Constant: ability-bite
    * {ability}
    */
@@ -25,6 +31,12 @@ export default class nx_tactics_decks_scenario {
   static c_ability_drag = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-drag'}}
 
   /**
+   * Constant: ability-foraging
+   * {ability}
+   */
+  static c_ability_foraging = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-foraging'}}
+
+  /**
    * Constant: ability-grab
    * {ability}
    */
@@ -37,12 +49,6 @@ export default class nx_tactics_decks_scenario {
   static c_ability_sneak = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-sneak'}}
 
   /**
-   * Constant: ability-trade
-   * {ability}
-   */
-  static c_ability_trade = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-trade'}}
-
-  /**
    * Constant: ability-trapping
    * {ability}
    */
@@ -53,6 +59,12 @@ export default class nx_tactics_decks_scenario {
    * {power}
    */
   static c_power_groundmovement = {vx_type: nx_tactics_base.t_power, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'power-groundmovement'}}
+
+  /**
+   * Constant: skill-business
+   * {skill}
+   */
+  static c_skill_business = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-business'}}
 
   /**
    * Constant: skill-closecombat
@@ -77,6 +89,12 @@ export default class nx_tactics_decks_scenario {
    * {skill}
    */
   static c_skill_stealth = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-stealth'}}
+
+  /**
+   * Constant: skill-survival
+   * {skill}
+   */
+  static c_skill_survival = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-survival'}}
 
   /**
    * Constant: skill-tradeskill
@@ -1161,7 +1179,7 @@ export default class nx_tactics_decks_scenario {
         vx_core.f_new(
           nx_tactics_base.t_unitskill,
           ":skill",
-          nx_tactics_decks_scenario.c_skill_tradeskill,
+          nx_tactics_decks_scenario.c_skill_business,
           ":level",
           "1",
           ":unitabilitymap",
@@ -1169,7 +1187,7 @@ export default class nx_tactics_decks_scenario {
             vx_core.f_new(
               nx_tactics_base.t_unitability,
               ":ability",
-              nx_tactics_decks_scenario.c_ability_trade
+              nx_tactics_decks_scenario.c_ability_bargain
             )
           )
         )
@@ -1229,7 +1247,25 @@ export default class nx_tactics_decks_scenario {
       ":shadow",
       "1x0",
       ":value",
-      "1x0"
+      "1x0",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_survival,
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_foraging
+            )
+          )
+        )
+      )
     )
     return output
   }
@@ -1255,7 +1291,7 @@ export default class nx_tactics_decks_scenario {
       ":image",
       "images/cards/unit-wilddog.svg",
       ":summary",
-      "The Wild Dog is one of the fastest runners in the animal kingdom.\n* Speed:2x1 [Endurance Running]",
+      "The Wild Dog is one of the fastest runners in the animal kingdom.",
       ":body",
       "5x1",
       ":mind",
@@ -1298,6 +1334,16 @@ export default class nx_tactics_decks_scenario {
             ":ability",
             nx_tactics_decks_scenario.c_ability_drag
           )
+        )
+      ),
+      ":unitpowermap",
+      nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitpower,
+          ":power",
+          nx_tactics_decks_scenario.c_power_groundmovement,
+          ":level",
+          "2x1"
         )
       )
     )
@@ -1469,18 +1515,21 @@ export default class nx_tactics_decks_scenario {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
+      "ability-bargain": nx_tactics_decks_scenario.c_ability_bargain,
       "ability-bite": nx_tactics_decks_scenario.c_ability_bite,
       "ability-blacksmithing": nx_tactics_decks_scenario.c_ability_blacksmithing,
       "ability-drag": nx_tactics_decks_scenario.c_ability_drag,
+      "ability-foraging": nx_tactics_decks_scenario.c_ability_foraging,
       "ability-grab": nx_tactics_decks_scenario.c_ability_grab,
       "ability-sneak": nx_tactics_decks_scenario.c_ability_sneak,
-      "ability-trade": nx_tactics_decks_scenario.c_ability_trade,
       "ability-trapping": nx_tactics_decks_scenario.c_ability_trapping,
       "power-groundmovement": nx_tactics_decks_scenario.c_power_groundmovement,
+      "skill-business": nx_tactics_decks_scenario.c_skill_business,
       "skill-closecombat": nx_tactics_decks_scenario.c_skill_closecombat,
       "skill-hunting": nx_tactics_decks_scenario.c_skill_hunting,
       "skill-melee": nx_tactics_decks_scenario.c_skill_melee,
       "skill-stealth": nx_tactics_decks_scenario.c_skill_stealth,
+      "skill-survival": nx_tactics_decks_scenario.c_skill_survival,
       "skill-tradeskill": nx_tactics_decks_scenario.c_skill_tradeskill
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
@@ -2219,6 +2268,13 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_unit_xeibhanower
     }
 
+    // (const ability-bargain)
+    Object.assign(nx_tactics_decks_scenario.c_ability_bargain, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Bargain"
+    ))
+
     // (const ability-bite)
     Object.assign(nx_tactics_decks_scenario.c_ability_bite, vx_core.f_new(
       nx_tactics_base.t_ability,
@@ -2240,6 +2296,13 @@ export default class nx_tactics_decks_scenario {
       "Drag"
     ))
 
+    // (const ability-foraging)
+    Object.assign(nx_tactics_decks_scenario.c_ability_foraging, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Foraging"
+    ))
+
     // (const ability-grab)
     Object.assign(nx_tactics_decks_scenario.c_ability_grab, vx_core.f_new(
       nx_tactics_base.t_ability,
@@ -2254,13 +2317,6 @@ export default class nx_tactics_decks_scenario {
       "Sneak"
     ))
 
-    // (const ability-trade)
-    Object.assign(nx_tactics_decks_scenario.c_ability_trade, vx_core.f_new(
-      nx_tactics_base.t_ability,
-      ":name",
-      "Trade"
-    ))
-
     // (const ability-trapping)
     Object.assign(nx_tactics_decks_scenario.c_ability_trapping, vx_core.f_new(
       nx_tactics_base.t_ability,
@@ -2273,6 +2329,13 @@ export default class nx_tactics_decks_scenario {
       nx_tactics_base.t_power,
       ":name",
       "Ground Movement"
+    ))
+
+    // (const skill-business)
+    Object.assign(nx_tactics_decks_scenario.c_skill_business, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Business"
     ))
 
     // (const skill-closecombat)
@@ -2301,6 +2364,13 @@ export default class nx_tactics_decks_scenario {
       nx_tactics_base.t_skill,
       ":name",
       "Stealth"
+    ))
+
+    // (const skill-survival)
+    Object.assign(nx_tactics_decks_scenario.c_skill_survival, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Survival"
     ))
 
     // (const skill-tradeskill)

@@ -98,12 +98,17 @@
    "* Create [Characters] or [Factions] to play [Scenarios].
     * Each [Scenario] contains various [Threats] and [Goals]
     * Find them and use your [Skills] / [Powers] to complete them for [Rewards]
-    * Some [Rewards] are items, others allow you to increase your [Skills], [Powers], [Abilities], or [Specialties]"))
+    * Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties]."))
 
 (func card-levelingguide : base/card
  (base/card
   :id "levelingguide"
-  :name "Leveling Guide"))
+  :name "Leveling Guide"
+  :summary
+   "* Major Achievement: Completion gains a Skill Point.
+    * Minor Achievement: Completing gains an Ability Point.
+    * Skill Points: May be exchanged for a Level 1 Skill or a new Level 1 Power.
+    * Ability Points: May be exchanged for an Ability, Specialty, or a Power Level increase."))
 
 (func card-player-blue : base/card
  [num : int]

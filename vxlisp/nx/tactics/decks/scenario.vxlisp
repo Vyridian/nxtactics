@@ -2,6 +2,10 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Scenario Decks")
 
+(const ability-bargain : base/ability
+ (base/ability
+  :name "Bargain"))
+
 (const ability-bite : base/ability
  (base/ability
   :name "Bite"))
@@ -14,6 +18,10 @@
  (base/ability
   :name "Drag"))
 
+(const ability-foraging : base/ability
+ (base/ability
+  :name "Foraging"))
+
 (const ability-grab : base/ability
  (base/ability
   :name "Grab"))
@@ -22,10 +30,6 @@
  (base/ability
   :name "Sneak"))
 
-(const ability-trade : base/ability
- (base/ability
-  :name "Trade"))
-
 (const ability-trapping : base/ability
  (base/ability
   :name "Trapping"))
@@ -33,6 +37,10 @@
 (const power-groundmovement : base/power
  (base/power
   :name "Ground Movement"))
+
+(const skill-business : base/skill
+ (base/skill
+  :name "Business"))
 
 (const skill-closecombat : base/skill
  (base/skill
@@ -49,6 +57,10 @@
 (const skill-stealth : base/skill
  (base/skill
   :name "Stealth"))
+
+(const skill-survival : base/skill
+ (base/skill
+  :name "Survival"))
 
 (const skill-tradeskill : base/skill
  (base/skill
@@ -391,12 +403,12 @@
         (base/unititem
          :item (item-spear))))
     (base/unitskill
-     :skill skill-tradeskill
+     :skill skill-business
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability ability-trade))))))
+        :ability ability-bargain))))))
 
 (func unit-liliducon : base/unit
  (base/unit
@@ -418,15 +430,24 @@
   :nature "Anxious"
   :beast "1x0"
   :shadow "1x0"
-  :value "1x0"))
+  :value "1x0"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-survival
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability ability-foraging))))))
+
 
 (func unit-wilddog : base/unit
  (base/unit
   :name "Wild Dog"
   :image "images/cards/unit-wilddog.svg"
   :summary
-   "The Wild Dog is one of the fastest runners in the animal kingdom.
-    * Speed:2x1 [Endurance Running]"
+   "The Wild Dog is one of the fastest runners in the animal kingdom."
   :body "5x1"
   :mind "8x-1"
   :will "4x1"
@@ -447,7 +468,12 @@
         (base/unitability
          :ability ability-grab))
         (base/unitability
-         :ability ability-drag)))))
+         :ability ability-drag)))
+  :unitpowermap
+   (base/unitpowermap<-unitpowerlist
+    (base/unitpower
+     :power power-groundmovement
+     :level "2x1"))))
 
 (func unit-wilmducon : base/unit
  (base/unit

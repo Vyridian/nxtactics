@@ -307,11 +307,12 @@
  [unit : base/unit]
  (let : string
   [summary : string := (:summary unit)
-   unitskillmap : base/unitskillmap :=
-    (:unitskillmap unit)
    skilllist : stringlist :=
     (stringlist-display<-unitskillmap
-     unitskillmap)
+     (:unitskillmap unit))
+   powerlist : stringlist :=
+    (stringlist-display<-unitpowermap
+     (:unitpowermap unit))
    summarylist : stringlist :=
     (if : stringlist
      (then
@@ -320,10 +321,43 @@
    displaylist : stringlist :=
     (stringlist
      summarylist
-     skilllist)]
+     skilllist
+     powerlist)]
   (string<-stringlist-join
    displaylist newline))
  :doc "Returns display text from a unit")
+
+(func string-display<-unitpower : string
+ [unitpower : base/unitpower]
+ (let : string
+  [power : base/power := (:power unitpower)
+   level : string     := (:level unitpower)
+   name  : string     := (:name power)
+   specialties : stringlist :=
+    (stringlist-display<-unitspecialtymap
+     (:unitspecialtymap unitpower))
+   abilities : stringlist :=
+    (stringlist-display<-unitabilitymap
+     (:unitabilitymap unitpower))
+   extralist : stringlist :=
+    (stringlist
+     specialties
+     abilities)
+   extras : string :=
+    (if : string
+     (then
+      (!-empty extralist)
+      (string
+       " "
+       (string<-stringlist-join
+        extralist " "))))]
+  (string
+   "* ["
+   name
+   "]:"
+   level
+   extras))
+ :doc "Returns a string from a unitpower")
 
 (func string-display<-unitskill : string
  [unitskill : base/unitskill]
@@ -380,6 +414,17 @@
     unititem : unititem]
    (string "[" key "]")))
  :doc "Returns a stringlist from a unititemmap")
+
+(func stringlist-display<-unitpowermap : stringlist
+ [unitpowermap : base/unitpowermap]
+ (list<-map : stringlist
+  unitpowermap
+  (fn : string
+   [key : string
+    unitpower : unitpower]
+   (string-display<-unitpower
+    unitpower)))
+ :doc "Returns a stringlist from a unitpowermap")
 
 (func stringlist-display<-unitskillmap : stringlist
  [unitskillmap : base/unitskillmap]
