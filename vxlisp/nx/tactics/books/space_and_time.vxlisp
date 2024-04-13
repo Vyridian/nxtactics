@@ -230,10 +230,10 @@ and Europa.")
           :image "SpaceAndTime/Pluto.png"
           :length "2Mm"
           :mass "1.3x10^19tons"))
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         :Sun
-         (location
+         (place
           :name "Sun"
           :image "SpaceAndTime/Sun.png"
           :reference
@@ -246,12 +246,12 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
               :code ":invalidproperty"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :prop "mass"
                 :value "2x10^27tons")
               :severity 2))))
         :Mercury
-         (location
+         (place
           :name "Mercury"
           :image "SpaceAndTime/Mercury.png"
           :summary "* Optimal Travel Time from Earth: .01g=16 days, .1g=7 days, 1g=2 days"
@@ -262,7 +262,7 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
               :code ":invalidproperty"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :prop "mass"
                 :value "3x10^20tons")
               :severity 2))
@@ -275,12 +275,12 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
                  :code ":invalidproperty"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :prop "length"
                    :value "4.8Mm")
                  :severity 2))))))
         :Venus
-         (location
+         (place
           :name "Venus"
           :image "SpaceAndTime/Venus.png"
           :summary "* Optimal Travel Time from Earth: .01g=10 days, .1g=4 days, 1g=1.5 days"
@@ -292,7 +292,7 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
               :code ":invalidproperty"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :prop "mass"
                 :value "5x10^21tons")
               :severity 2))
@@ -305,12 +305,12 @@ small unregarded yellow sun. - Hitchhiker's Guide to the Galaxy"
                  :code ":invalidproperty"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :prop "length"
                    :value "12.1Mm")
                  :severity 2))))))
         :Earth
-         (location
+         (place
           :name "Earth"
           :image "SpaceAndTime/Earth.png"
           :reference
@@ -347,7 +347,7 @@ And the earth is my blue boat home - Peter Mayer, Blue Boat Home"
               :code ":invalidproperty"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :prop "mass"
                 :value "6x10^21tons")
               :severity 2))
@@ -360,12 +360,12 @@ And the earth is my blue boat home - Peter Mayer, Blue Boat Home"
                  :code ":invalidproperty"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :prop "length"
                    :value "12.6Mm")
                  :severity 2))))))
         :Moon
-         (location
+         (place
           :name "Moon"
           :image "SpaceAndTime/Moon.png"
           :reference
@@ -403,12 +403,12 @@ experiences, and sex will play some kind of transformative role in their life.
               :code ":invalidproperty"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :prop "mass"
                 :value "7x10^19tons")
               :severity 2))))
         :Mars
-         (location
+         (place
           :name "Mars"
           :image "SpaceAndTime/Mars.png"
           :summary
@@ -422,7 +422,7 @@ experiences, and sex will play some kind of transformative role in their life.
               :code ":invalidproperty"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :prop "mass"
                 :value "6.4x10^20tons")
               :severity 2))
@@ -435,12 +435,12 @@ experiences, and sex will play some kind of transformative role in their life.
                  :code ":invalidproperty"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :prop "length"
                    :value "6.8Mm")
                  :severity 2))))))
         "Asteroid Belt"
-         (location
+         (place
           :name "Asteroid Belt"
           :image "SpaceAndTime/AsteroidBelt.png"
           :summary
@@ -455,7 +455,7 @@ diameter and millions of smaller ones."
               :code ":invalidtagfound"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :tag "place")
               :severity 2))
            :msgblocks
@@ -467,7 +467,7 @@ diameter and millions of smaller ones."
                  :code ":invalidtagfound"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :tag "place")
                  :severity 2)))
              (msgblock
@@ -477,11 +477,11 @@ diameter and millions of smaller ones."
                  :code ":invalidtagfound"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :tag "place")
                  :severity 2))))))
         :Ceres
-         (location
+         (place
           :name "Ceres"
           :image "SpaceAndTime/Ceres.png"
           :summary
@@ -498,7 +498,7 @@ by a tenuous atmosphere containing water vapour.
               :code ":invalidproperty"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :prop "mass"
                 :value "9x10^17tons")
               :severity 2))
@@ -511,12 +511,12 @@ by a tenuous atmosphere containing water vapour.
                  :code ":invalidproperty"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :prop "length"
                    :value "950km")
                  :severity 2))))))
         :Jupiter
-         (location
+         (place
           :name "Jupiter"
           :image "SpaceAndTime/Jupiter.png"
           :reference "* The movie Outland takes place on Io, one of Jupiter's moons."
@@ -528,7 +528,7 @@ by a tenuous atmosphere containing water vapour.
               :code ":invalidproperty"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :prop "mass"
                 :value "2x10^24tons")
               :severity 2))
@@ -541,7 +541,7 @@ by a tenuous atmosphere containing water vapour.
                  :code ":invalidproperty"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :prop "length"
                    :value "143Mm")
                  :severity 2)))
@@ -552,7 +552,7 @@ by a tenuous atmosphere containing water vapour.
                  :code ":invalidtagfound"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :tag "place")
                  :severity 2))))))))
     "Space Terrain"

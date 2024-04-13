@@ -796,10 +796,10 @@ ships into orbit."
     "Solar Colonies"
      (section
       :name "Solar Colonies"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         :Stellaser
-         (location
+         (place
           :name "Stellaser"
           :summary "* Giant mirrors placed in pairs in Solar orbit. The mirrors gather light by reflecting it back and forth between them before releasing it in a concentrated beam to slowly accelerate starships. Though this beam would certainly be deadly to humans, the beam is only dangerous to exposed targets without sufficient radiation shielding."
           :titles "Starlight Express")))
@@ -809,10 +809,10 @@ ships into orbit."
     "Asteroid Colonies"
      (section
       :name "Asteroid Colonies"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Asteroid Mining Colony"
-         (location
+         (place
           :name "Asteroid Mining Colony"))
       :unitmap
        (unitmap
@@ -846,14 +846,14 @@ Jupiter. Jupiter's remoteness makes it fairly easy to defend against direct
 assault, but the harsh environment makes sabotage a much greater threat, so
 Jovian intelligence forces constantly search for threats.
 * Agora - The Jovian governing body with primary offices on Elysee colony."
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Elysee Station"
-         (location
+         (place
           :name "Elysee Station"
           :summary "* The largest Jovian Colony and the capital of the Jovian Confederation.")
         "Joshua Station"
-         (location
+         (place
           :name "Joshua Station"
           :summary
            "* The second largest Jovian Colony and Jupiter's hub of manufacturing. The
@@ -868,14 +868,14 @@ live and let live attitude, so little effort is made to stop activities that
 don't threaten the colony."
           :titles "Wildest Place in the Solar System")
         "Khannan Station"
-         (location
+         (place
           :name "Khannan Station"
           :summary
            "* The third largest Jovian Colony and Jupiter's military center. The
 station only allows military personnel on board. Large sections of the colony
 are dedicated to ship construction and others are top secret research labs.")
         "Jovian Gas Refinery"
-         (location
+         (place
           :name "Jovian Gas Refinery"
           :summary
            "* These heavily armored, refining stations float in the upper atmosphere of
@@ -885,7 +885,7 @@ the bottom of the station extracting gases from the differnt layers of the
 atmosphere. The broad round floatation disc and long tubes give the stations
 the general appearance of a jelly fish.")
         "Io Colony"
-         (location
+         (place
           :name "Io Colony"
           :reference "Outland"
           :summary
@@ -902,10 +902,10 @@ deputies.")))
        "* With the exception of Titan, the outer planets are too remote and unimportant
 to ever be colonized. Jupiter provides an unlimited supply of gas resources, so
 Saturn, Uranus, and Neptune have little to offer."
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Titan Research Station"
-         (location
+         (place
           :name "Titan Research Station"
           :summary
            "* A small, permanent research colony has been erected on Titan to study its
@@ -1963,7 +1963,7 @@ a miner, Li worked hard, long hours in the tunnels deep below the Lunar surface 
 harvesters. He quit in disgust when he realized that the company he’d worked ten hard years for
 was constantly operating at a loss and systematically abusing its employees in order to provide
 CEGA and massive Earth corporations with cheap Lunar ores. Using the excellent education
-provided to all Selenties, Li spoke out against the CEGA “occupation�?, making speeches and
+provided to all Selenties, Li spoke out against the CEGA “occupation�?, making speeches and
 distributing eloquent pleas for regime change in an attempt to awaken the populace to the truth
 of their situation.
 
@@ -2049,7 +2049,7 @@ the PCs for help with the scientist case - another test by the Society to help t
 potential. She has contacts all through the Federation bureaucracy, and could use them to help
 the players with their investigation... But there will likely be a price of some kind, as she’s already
 stretched her resources thin to secure passage for the refugees. This could, however, lead to the
-“Refugees Under Attack�? subplot. Or Yanna could be a background character that just serves to
+“Refugees Under Attack�? subplot. Or Yanna could be a background character that just serves to
 lead the PCs into the episode.")
         "Ysa Cantroini"
          (unit

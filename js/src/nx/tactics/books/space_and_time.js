@@ -234,12 +234,12 @@ export default class nx_tactics_books_space_and_time {
               "1.3x10^19tons"
             )
           ),
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             ":Sun",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Sun",
               ":image",
@@ -259,7 +259,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":prop",
                       "mass",
                       ":value",
@@ -273,7 +273,7 @@ export default class nx_tactics_books_space_and_time {
             ),
             ":Mercury",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Mercury",
               ":image",
@@ -293,7 +293,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":prop",
                       "mass",
                       ":value",
@@ -319,7 +319,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":prop",
                           "length",
                           ":value",
@@ -335,7 +335,7 @@ export default class nx_tactics_books_space_and_time {
             ),
             ":Venus",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Venus",
               ":image",
@@ -357,7 +357,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":prop",
                       "mass",
                       ":value",
@@ -383,7 +383,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":prop",
                           "length",
                           ":value",
@@ -399,7 +399,7 @@ export default class nx_tactics_books_space_and_time {
             ),
             ":Earth",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Earth",
               ":image",
@@ -419,7 +419,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":prop",
                       "mass",
                       ":value",
@@ -445,7 +445,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":prop",
                           "length",
                           ":value",
@@ -461,7 +461,7 @@ export default class nx_tactics_books_space_and_time {
             ),
             ":Moon",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Moon",
               ":image",
@@ -483,7 +483,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":prop",
                       "mass",
                       ":value",
@@ -497,7 +497,7 @@ export default class nx_tactics_books_space_and_time {
             ),
             ":Mars",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Mars",
               ":image",
@@ -519,7 +519,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":prop",
                       "mass",
                       ":value",
@@ -545,7 +545,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":prop",
                           "length",
                           ":value",
@@ -561,7 +561,7 @@ export default class nx_tactics_books_space_and_time {
             ),
             "Asteroid Belt",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Asteroid Belt",
               ":image",
@@ -581,7 +581,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":tag",
                       "place"
                     ),
@@ -605,7 +605,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "place"
                         ),
@@ -627,7 +627,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "place"
                         ),
@@ -641,7 +641,7 @@ export default class nx_tactics_books_space_and_time {
             ),
             ":Ceres",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Ceres",
               ":image",
@@ -661,7 +661,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":prop",
                       "mass",
                       ":value",
@@ -687,7 +687,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":prop",
                           "length",
                           ":value",
@@ -703,7 +703,7 @@ export default class nx_tactics_books_space_and_time {
             ),
             ":Jupiter",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Jupiter",
               ":image",
@@ -725,7 +725,7 @@ export default class nx_tactics_books_space_and_time {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":prop",
                       "mass",
                       ":value",
@@ -751,7 +751,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":prop",
                           "length",
                           ":value",
@@ -775,7 +775,7 @@ export default class nx_tactics_books_space_and_time {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "place"
                         ),

@@ -1658,12 +1658,12 @@ export default class nx_tactics_books_science_fiction {
           nx_tactics_base.t_section,
           ":name",
           "Space Opera Phenomenon",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Motaran Rift",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Motaran Rift",
               ":summary",
@@ -1700,12 +1700,12 @@ export default class nx_tactics_books_science_fiction {
               "G-23 Paxilon Hydrochlorate, PAX (Latin for Peace)"
             )
           ),
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Alliance Spaceport",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Alliance Spaceport",
               ":summary",

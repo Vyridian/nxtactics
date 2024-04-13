@@ -222,7 +222,8 @@
      (then
       (or
        (== datatype base/item)
-       (== datatype base/unit)) "")
+       (== datatype base/unit))
+      "")
      (then
       (is-type datatype base/card)
       (let : string

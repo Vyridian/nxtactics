@@ -2518,10 +2518,10 @@ everything they encounter.")))
      (section
       :name "Renegades"
       :summary "* The Renegades are the personal strikeforce of the Will. They are ironically called Renegades despite being completely under the control of the Will."
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Parapsychological Studies Institute"
-         (location
+         (place
           :name "Parapsychological Studies Institute"
           :summary "* The Will took over a downtown medical research lab and transformed it into a legitimate research institute using his vast personal wealth and seemingly endless influential 'friends'. The institute is now a respected lab where	anyone off the street with unusual abilities or situations can receive testing, councelling, and/or treatment."
           :titles "PSI"))

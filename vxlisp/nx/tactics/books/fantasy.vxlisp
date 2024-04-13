@@ -458,31 +458,31 @@ local politics. His mission has no time limit, and he is periodically scried by 
 * Sun Disc - Round shield with the image of the sun is a standard decoration.
 * Sun Spear - Spear with the image of the sun near its point."
           :titles "Aegypta, Helios, Kemet"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Alexandria
-             (location
+             (place
               :name "Alexandria"
               :summary
                "* Lighthouse of Alexandria - One of the Seven Wonders of the World
 * Library of Alexandra - The foremost center of learning in the world.")
             "Great Pyramids"
-             (location
+             (place
               :name "Great Pyramids"
               :reference "* The Pyramid of Cheops was originally no less than four hundred and ninety feet high.  Its base covers 31 acres...contains 2,300,000 blocks of stone, each averaging two and a half tons...set with joints measuring one ten-thousandth of an inch wide. - Ancient Egypt, Its Culture and History"
               :summary "* One of the Seven Wonder of the World")
             :Necropolis
-             (location
+             (place
               :name "Necropolis"
               :summary
                "* Despite time, the elements, and cataclysmic upheavals, the ruins of the Citystate of Quaran still stands as grim reminders of that dark and nearly forgotten age. Here amidst stark stone towers and nightmarish effigies, once flourished the capital of the most sinister empire in human history.
 * Over the years, occultists, black magicians, and tomb robbers have come to the ruins in search dark and macabre secrets. Many cursed tomes, diabolical artifacts, and instruments of torture and death have been recovered, often to the great regret of those who discovered them. Countless more lie in tombs, vaults, and underground pits and tunnels, awaiting discovery by those who covet infernal knowledge above all other considerations.")
             "Pyramid of Skulls"
-             (location
+             (place
               :name "Pyramid of Skulls"
               :summary "* The Quaran Necromancer-Kings erected a mountain of skulls 1000 feet high, representing untold millions of their victims. The mountain stands to this day and appears to be magically resistent to destruction.")
             :Thebes
-             (location
+             (place
               :name "Thebes"))
           :unitmap
            (unitmap
@@ -538,18 +538,18 @@ local politics. His mission has no time limit, and he is periodically scried by 
          (section
           :name "Dracarta"
           :summary "* Trade - The Dracatans smelt Red Iron in large quantities, and export it throughout the area. Their prices remain low enough that it is not cost effective to compete with their efficient facilities."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Dracartan Cisterns"
-             (location
+             (place
               :name "Dracartan Cisterns"
               :summary "* The water supply of Dracarta is perhaps its most precious commodity. The supply is kept in a series of enormous underground cisterns. Tampering with the water supply in any way is a captial offense and there are numerous signs reinforcing that fact.")
             "Dracata Halls of Infamy"
-             (location
+             (place
               :name "Dracata Halls of Infamy"
               :summary "* Here are arrayed the worst and most despicable criminals in Dracartan history. Their statue-like forms standing as warning to future offenders, preserved by immersion in Red Iron.")
             "Dracata Halls of Justice"
-             (location
+             (place
               :name "Dracata Halls of Justice"
               :summary "* The Council of Elders, Dracarta's esteemed legisilative/judicial body holds sway in these large halls. The laws of the land are determined here. Serious crimes are also heard here in open court. Punishments include forced labor, banishment to the wilderness, or for truly heinous offenses: the sentence of Retribution (immersion in red iron)."))
           :unitmap
@@ -654,10 +654,10 @@ local politics. His mission has no time limit, and he is periodically scried by 
          (section
           :name "Shadow Isles"
           :summary "* These islands are inhabited by the Malum, a cabal of Arch-Spectres."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Obsidian Tower"
-             (location
+             (place
               :name "Obsidian Tower"
               :summary "* The Shadow Wizards live in ancient ruined towers of obscure origin. These dark towers dot the landscape of the Shadow Isles, and it is here that they perform their experiments night and day seemingly without rest. Some have entered the tower without molestation but have fled when they viewed the horrorific activities within."))
           :unitmap
@@ -682,10 +682,10 @@ local politics. His mission has no time limit, and he is periodically scried by 
          (section
           :name "Tunis"
           :summary "* Weather - Tunis is hot and humid all year round. The temperature varies from warm to sweltering. The hot weather encourages the laid back attitude of the locals."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Fiaqua
-             (location
+             (place
               :name "Fiaqua"
               :reference "Las Vegas"
               :summary
@@ -738,17 +738,17 @@ local politics. His mission has no time limit, and he is periodically scried by 
          (section
           :name "Brittania"
           :reference "England"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Avalon
-             (location
+             (place
               :name "Avalon"
               :summary
                "* Rogue
 * Serf
 * Squire")
             :Saxony
-             (location
+             (place
               :name "Saxony"))
           :unitmap
            (unitmap
@@ -866,33 +866,33 @@ local politics. His mission has no time limit, and he is periodically scried by 
          (section
           :name "Jade Empire"
           :titles "Quan Dynasty, Jade Kingdom"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Tian
-             (location
+             (place
               :name "Tian"
               :summary "* The capital of the Jade Empire is situated on an island within a man-made lake. The metropolis can only be reached by boat. The city was constructed for the Emperor who demanded that the new capital surpass in beauty all of the cities of the world. Gilded towers and domes and the Palace of a thousand fountains are especially noteworthy."
               :titles "Golden City")
             "Emperor's Canal"
-             (location
+             (place
               :name "Emperor's Canal"
               :summary "* A man-made waterway connects the River Shan with the lake that surrounds Tian. A system of locks allows traffic on the canal to be strictly monitored, and the canal is not large enough for warships.")
             "Emperor's Forest"
-             (location
+             (place
               :name "Emperor's Forest"
               :summary "* East of the capital is an artificial forest created for the pleasure of the Emperor and the aristocracy, so they might hunt 'wild' game. The forest is continually restocked with dangerous creatures that have been rendered harmless by declawing and with sedatives.")
             "Emperor's Road"
-             (location
+             (place
               :name "Emperor's Road"
               :summary "* This highway spans the length and breadth of the Jade Empire. It is extremely well maintained funded by tolls.")
             "Shoalin Monastery"
-             (location
+             (place
               :name "Shoalin Monastery"
               :summary
                "* Are you worthy? It is a simple question.
 * You are a foreigner. Here you will be treated with hatred and disrespect because you are different. We provide aid to no one. If you find this unfair, you are always free to go. Few are strong enough to walk this path. It is up to you whether you are one of them.")
             "Wudang Monastery"
-             (location
+             (place
               :name "Wudang Monastery"))
           :unitmap
            (unitmap
@@ -921,10 +921,10 @@ local politics. His mission has no time limit, and he is periodically scried by 
         :Nepal
          (section
           :name "Nepal"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Himalaya Mountains"
-             (location
+             (place
               :name "Himalaya Mountains"))
           :unitmap
            (unitmap
@@ -935,10 +935,10 @@ local politics. His mission has no time limit, and he is periodically scried by 
          (section
           :name "Nippon"
           :titles "Land of the Rising Sun"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Valley of the Mists"
-             (location
+             (place
               :name "Valley of the Mists"))
           :unitmap
            (unitmap
@@ -980,28 +980,28 @@ local politics. His mission has no time limit, and he is periodically scried by 
            "* Horseclans - Anatolian horsemen are widely believed to be the greatest light horsemen in the world.  The Horseclans live on the plains where their horsemen have maximum effect.  They live a semi-nomadic existance moving on when resources become scarce.
 * Romani - The Romani are a gregarious, nomadic people often travelling in wagons carrying all that they own. They are reknowned as artists, acrobats, fortune tellers, thieves, tricksters, or swindlers depending on your point of view. The Romani religion revolves around two demigods: Fortuna, the lovely but fickle goddess of luck, and the grim entity known as Death. They revere Fortuna but mock Death, whom they strive to cheat at every opportunity.
 * Carnevale of True Wonders - A large group of Romani and other assorted wanderer/adventurers have banded together to form a semi-organized travelling circus. They show up near a town and rent some unused plaza or farmland and set up their tents and stalls. Their shows are constantly varying including: acrobats, strong men, duelists, wrestlers, theater troupes, musicians, magicians, story tellers, fortune tellers, wonderous creatures, items, foods and drinks. Anyone can join the welcoming troupe. There are a few rules, however: all wonders must be real (per the name) and no theft, fraud, or swindles are allowed on Carnevale grounds."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Ephesus
-             (location
+             (place
               :name "Ephesus"
               :summary
                "* Temple of Artemis - One of the Seven Wonders of the World.
 * The sacred site at Ephesus was far older than the Temple.  An archaic, pre-Hellenic fertility goddess was
 already passionately venerated, and the Greeks associated her with Artemis.")
             :Galatia
-             (location
+             (place
               :name "Galatia")
             :Halicarnassus
-             (location
+             (place
               :name "Halicarnassus"
               :reference "* Mausolus built the Mausoleum, and the term mausoleum has come to be used generically for any grand tomb."
               :summary "* Mausoleum of Halicarnassus - One of the Seven Wonders of the World.")
             :Phrygia
-             (location
+             (place
               :name "Phrygia")
             :Witchwood
-             (location
+             (place
               :name "Witchwood"
               :summary
                "* The forest home of the Dhuna.
@@ -1042,22 +1042,22 @@ already passionately venerated, and the Greeks associated her with Artemis.")
         :Balkan
          (section
           :name "Balkan"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Dragon's Eye"
-             (location
+             (place
               :name "Dragon's Eye"
               :summary "* A small sea surrounded by mountainous, inhospitable terrain. There are many small islands in the Dragon's Eye, and it is rumored that the great dragon Tiamat lives on one of them."
               :titles "Black Sea, Transylvania")
             :Carpathia
-             (location
+             (place
               :name "Carpathia"
               :summary
                "* The region suffered under a widespread magical disaster of unknown origin. Suddenly the dead began to rise in great numbers and overran the land. Small communities are allowed to live and are 'protected' by the Vampires that feed upon them.
 * Since the disaster, an unnatural fog surrounds the area. The fog seems to spawn undead and other monstrosities."
               :titles "Deadlands")
             "Carpathian Mountains"
-             (location
+             (place
               :name "Carpathian Mountains"))
           :unitmap
            (unitmap
@@ -1072,10 +1072,10 @@ already passionately venerated, and the Greeks associated her with Artemis.")
           :reference "Byzantine Empire"
           :summary "* Byzantium represents a sizable empire. They are an advanced people with an extensive legal system and extremely complex rules, religion, and politics."
           :titles "Eastern Empire"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Constantinople
-             (location
+             (place
               :name "Constantinople"))
           :unitmap
            (unitmap
@@ -1182,10 +1182,10 @@ already passionately venerated, and the Greeks associated her with Artemis.")
            "* The Shattered Lands is bleak and desolate. The landscape is nightmarish: jagged spikes of rock jut upward from the cracked and barren earth. The violent upheavals have exposed many mineral deposits. Unfortunately, the residents of this land have used strip mining techniques which have badly polluted the air and rivers. The air is tinged with a fine ash, the waters are foul tasting, and there are many dangerous chemical waste products including bubbling pools of lye. Creatures living in the rivers and lakes are often deformed or mutated.
 * The Shattered Lands are home to many small, violent clans that violently compete with each other for the scarce resources in this bleak area."
           :titles "Harak"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Urag
-             (location
+             (place
               :name "Urag"
               :reference "* A group of scholars entered Urag with the contention that the Ur were not evil but were a product of their harsh environment. They encountered a small band of Ur and offered them gold, fragrant oils and gems. These the savages examined and discarded. Without apparent enmity, they slew the scholars, took their cloths and fed the remains to their hunting dogs. They then killed the scholars' mounts, butchered them for meat, and continued on their way."
               :summary
@@ -1220,31 +1220,31 @@ already passionately venerated, and the Greeks associated her with Artemis.")
         "Volcanic Hills"
          (section
           :name "Volcanic Hills"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Dragon Rock Mountain"
-             (location
+             (place
               :name "Dragon Rock Mountain"
               :summary "* Dragon Rock is an active volcano that has blighted the Volcanic Hills with its many eruptions over the centuries. It has not erupted in recent memory and seems to be content pouring out smoke and lava creating the River of Fire. Dragon Rock is also so named because a number of Fire Dragons live in the area, apparently drawing strength from the volcano.")
             :Firefalls
-             (location
+             (place
               :name "Firefalls"
               :summary "* The River of Fire ends at an enormous, seemingly bottomless chasm, The lava pours off the edge in a spectacular display before dropping into untold depths. The view is particularly impressive at night. Some believe the chasm is actually a portal to the underworld and the large number of fire demons in the area supports that claim.")
             "River of Fire"
-             (location
+             (place
               :name "River of Fire"
               :summary "* The River of Fire is actually an everflowing torrent of molten lava pouring from Dragon Rock Mountain and finally dropping over Firefalls. Fire Demons and Elementals are said to swim in the river and Fire Dragons have been seen consuming the lava.")))))
     :Northlands
      (section
       :name "Northlands"
       :titles "Frozen North"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Plateau of Leng"
-         (location
+         (place
           :name "Plateau of Leng")
         "Unknown Kadath"
-         (location
+         (place
           :name "Unknown Kadath"))
       :sectionmap
        (sectionmap
@@ -1260,10 +1260,10 @@ already passionately venerated, and the Greeks associated her with Artemis.")
 * People - The Auroran people are tall and statuesque and live in crystalline, ice castles. Their artificers work with the unique material Adamant, the fabled permanent ice of lengend. The Aurorans have an amazing resistence to the cold but conversely they are only confortable in freezing temperatures.
 * Religion - The Aurorans revere Boreas the god of the North Wind. They do not create temples but instead build altars in the open wilderness where one can truly feel his presense."
           :titles "Hyperborea"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Sea of Ice"
-             (location
+             (place
               :name "Sea of Ice"
               :summary "* An expanse of shimmering, perpertually frozen water, the Sea of Ice is traversed by the Aurorans on Ice Schooners and personal Ice Skimmers."))
           :unitmap
@@ -1302,10 +1302,10 @@ already passionately venerated, and the Greeks associated her with Artemis.")
           :summary
            "* Frost Giants - The Frost Giants wage perpetual war on all creatures especially the Aurorans and Nords.
 Their lack of tactical ability is made up for by their phenomenal strength, endurance, and determination. Their bodies emminate extreme cold, so as they expand their territory the temperatures drop. Their goal actually seems to be to freeze the world."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Ymir's Teeth"
-             (location
+             (place
               :name "Ymir's Teeth"
               :summary
                "* A massive ridge of jagged moutains that the Frost Giants believe are the teeth of an inconceivably large god and that the world lies in its open maw awaiting the day when the being awakes.
@@ -1318,24 +1318,24 @@ Their lack of tactical ability is made up for by their phenomenal strength, endu
 * Lost Kingdom - Scattered throughout the region are the ruins of a long forgotten civilization.
 * The eastern cliffs are sheer, 200 foot cliffs that ring the coastline. Giant diabolical visages have been carved into the cliff-sides along portions of the coast. A clan of flying devils makes its home in the mouths and eye-sockets of the immense stone effigies and fly out to attack those who draw too close.
 * Seas - The seas around Khazad are said to be home to many sea monsters including sea demons. The black ships of the Nefaratus are known to frequent these waters as well."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Khazad Burial Grounds"
-             (location
+             (place
               :name "Khazad Burial Grounds"
               :summary "* Far to the north are vast burial grounds, denoted by row upon row of age-worn stone markers. The remains of a man-like race have been found in massive sarcophagi of strange design. Some of the more important bodies were buried with gold funerary masks of frightening aspect. These masks are believed to be intended to ward demons or evil spirits from the deceased. Rarely these tombs contain brass urns sealed with paraffin. These artifacts were sometimes used to imprison Bottle Imps or safekeep the corpse-dust of departed wizards. Prized by curio collectors and necromancers, these relics bring high prices. Unfortunately, necrophages haunt the region, craving fresh corpses over the dry bones of the long dead.")
             :Necron
-             (location
+             (place
               :name "Necron"
               :summary "* There are stories of an entire city and its inhabitants buried beneath the earth. All of its inhabitants supposedly mummified and interred in stone sarcophagi. Very little reliable information is available about this supposed necropolis.")))
         :Nefaratus
          (section
           :name "Nefaratus"
           :summary "* A bleak island nation, home to the Black Savants. Little is known of their isolated homeland culture or motives. What is known is that they seldom leave their obsidian towers and that they wield powerful magic. Here they stare into their obsidian mirrors and converse with unseen beings. Many believe that the Black Savants are diabolists and receive advice and consel from the giant devils known as Shaitan,"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Maledictus
-             (location
+             (place
               :name "Maledictus"
               :summary "* The capital city of Nefaratus"))
           :unitmap
@@ -1361,10 +1361,10 @@ Their lack of tactical ability is made up for by their phenomenal strength, endu
 * Marriage - The Nords do not formally marry. Instead they prefer to simply live together (The Nord Way) trusting that if they keep their love strong, they will naturally stay together.
 * Ma and Fa - Endearing terms for Mother and Father"
           :titles "Aesir, Aesyr, Frostland"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Skyrim
-             (location
+             (place
               :name "Skyrim"))
           :unitmap
            (unitmap
@@ -1408,49 +1408,49 @@ Their lack of tactical ability is made up for by their phenomenal strength, endu
 * Harpies
 * Status - The Aegean navy dominates the Aegean island chain and enables a thriving merchant trade across Mediterranea.
 * History - The Aegean city states used to be individual monarchies until the Imperium swept in and conquered Hellas, the capital. During the invasion, the Hellenic leadership fled with its navy and united the other city states under the name Aegea. Since then, the Imperium sent it navy to conquer Crete and 	was disasterously routed by the Aegean navy. The Aegeans subsequently attempted to retake Hellas and was easily repelled. Now an uneasy truce exists with the Imperials unable to create the navy it needs for conquest and the Aegeans unable to create the army it needs to drive out the Imperials."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Crete
-             (location
+             (place
               :name "Crete")
             :Hellas
-             (location
+             (place
               :name "Hellas"
               :summary
                "* Description - Currently a territory of the Imperium, Hellas is an orderly and socially advanced nation. They have a partial democracy (answerable to the Imperium) and a complex legal system that is surprisingly fair.
 * Universities - Hellan Universities are famous for acedemia, sciences, and philosophy. They do, however, share their Imperial neighbor's prejudices against Naturalism and the Arcane (except for Alchemy and Artifice which are considered sciences).")
             :Knossus
-             (location
+             (place
               :name "Knossus")
             :Labyrinth
-             (location
+             (place
               :name "Labyrinth"
               :summary "A natural maze of cracked basalt")
             "Mount Parnassus"
-             (location
+             (place
               :name "Mount Parnassus"
               :summary "* The Oracle of Delphi is on the slopes of Parnassus.")
             :Minoa
-             (location
+             (place
               :name "Minoa")
             :Olympia
-             (location
+             (place
               :name "Olympia"
               :summary
                "* Statue of Zeus - One of the Seven Wonders of the World.
 * Olympiad - The Olympic games.")
             :Rhodes
-             (location
+             (place
               :name "Rhodes"
               :summary
                "* Famous for the Colossus of Rhodes, a 30m tall statue of Helios and one of the Seven Wonders of the World.
 * It is said that the Colossus can move, though there is no evidence to support this.
 * The Colossus was constructed to celebrate the failure of an invasion force of 40,000 to take the city. Massive siege towers were necessary to take the walls. The first was mounted on six ships, but these capsized in a storm before they could be used. A larger, land-based tower was defeated when the defenders flooded the land in front of the walls so that the rolling tower could not move. The next year, a relief force arrived and the siege was abandoned. Much of the iron and bronze was reforged from the various weapons left behind, and the abandoned second siege tower was used for scaffolding.")
             :Sparta
-             (location
+             (place
               :name "Sparta")
             "Swamp of Despair"
-             (location
+             (place
               :name "Swamp of Despair"))
           :unitmap
            (unitmap
@@ -1470,17 +1470,17 @@ Their lack of tactical ability is made up for by their phenomenal strength, endu
          (section
           :name "Arden"
           :titles "Alfar, Ljossalfar, Elder, Elf, Sidhe, Sidheni, Sylvan, Sylvus"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Alfheim
-             (location
+             (place
               :name "Alfheim")
             :Ardenwood
-             (location
+             (place
               :name "Ardenwood"
               :reference "* We had entered the Ardenwoods on a scouting mission to probe the Sidhe defenses. We had only been in the woods for half an hour before arrows started raining from the trees. Forms flitted among the leaves and brush all around, but we never saw our attackers. We were forced to flee, and they allowed us to leave. The exact nature and numbers of their defenders remains unknown, but their 	effectiveness was clear. - Imperial Expeditionary Log")
             :Ashwood
-             (location
+             (place
               :name "Ashwood"))
           :unitmap
            (unitmap
@@ -1534,13 +1534,13 @@ Their lack of tactical ability is made up for by their phenomenal strength, endu
           :name "Gaul"
           :reference "France, Gallia"
           :summary "* Syndicate - The Gaul Syndicate is a sophisticed crime cartel."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Catacombs
-             (location
+             (place
               :name "Catacombs")
             :Mistridge
-             (location
+             (place
               :name "Mistridge"
               :summary "* A walled town housing the main lodge of the Order of Hermes magical society. Mistridge is loosely affiliated with the Arcanum to the East, but the members of the Mistridge lodge keep a low profile as opposed to the grandiose towers of the Arcanum."))
           :sectionmap
@@ -1596,10 +1596,10 @@ arbitrary justice system. Small crimes are basically ignored, so petty theft esp
         :Bavaria
          (section
           :name "Bavaria"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Blackmarsh
-             (location
+             (place
               :name "Blackmarsh")))
         :Iberia
          (section
@@ -1619,22 +1619,22 @@ arbitrary justice system. Small crimes are basically ignored, so petty theft esp
 * Alms - A person's spiritual enlightenment is measured by the Theocrats in a spiritual value called Alms. Alms are awarded for specific contributions to the church including tithes, military service, good deeds, church titles, pilgrimages, etc. Each rank provides specific perks within society but is also intened to be a direct measure of the quality of the person's afterlife.
 * Clash of Champions - The Imperium has tried to invade the Order twice to no avail. The geography and religious zealots of the Order have proven too difficult to overcome. Since the last battle, the Order and Elysia (backed by the Imperium) have waged a propaganda war culminating in the annual event known as the Clash of Champions. Each year both nations scout for worthy (and expendible) warriors to represent their interests in a duel atop the main gates of the Order capital. The winner receives great rewards from their sponsor. Though not technically, a duel to the death, it is expected that the loser will be thrown or forced  off the gates to fall 20 feet below to the roar of the crowds. It is considered a particular coup to cause a vanquished foe to fall amongst his or her own supporters. Since the Order and Elysia could scarsely be more different in their outlooks on life, the winners consider their victory to be a referendum on the virtues of their philosophies. The Order takes the competition very seriously and, of course, gambling and drinking are not allowed within the city walls. Elyisians consider the Clash to be one of the social events of the season. Though they must travel through the mountain pass and they are not permitted entrance to the city, they still come in large numbers with their wagons, children, merchants, wenches, gamblers, acrobats, and performers. For the Elysians, the party is equally large whether they win or not."
               :titles "Chantry, The Order, Papal States, Theocracy"
-              :locationmap
-               (locationmap
+              :placemap
+               (placemap
                 "Halls of Penance"
-                 (location
+                 (place
                   :name "Halls of Penance")
                 "Order Catherdral"
-                 (location
+                 (place
                   :name "Order Catherdral")
                 "Order Monastery"
-                 (location
+                 (place
                   :name "Order Monastery")
                 "Order Nunnery"
-                 (location
+                 (place
                   :name "Order Nunnery")
                 "Order Reliquary"
-                 (location
+                 (place
                   :name "Order Reliquary"))
               :unitmap
                (unitmap
@@ -1694,10 +1694,10 @@ arbitrary justice system. Small crimes are basically ignored, so petty theft esp
 * Architecture - Imperia has a love of monolithic buildings with towering columns that reflect the Imperial ego.
 * Roads - The Imperium maintains excellent cobblestone roads throughout its own and its allies territories. All roads lead to Imperia and have armed forts at regular intervals with Centurions, an inn, and a trading post. The forts charge a toll to pass, prices at these forts are high, and any trade done is taxed, but forts are always professionally defended and are generally worth the price.  The roads benefit trade, but are also a reminder of the influence of the Imperium."
           :titles "Italia, Sovereign"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Imperia
-             (location
+             (place
               :name "Imperia"
               :summary "* The capital city of the Imperium."
               :titles "Empire"
@@ -1708,14 +1708,14 @@ arbitrary justice system. Small crimes are basically ignored, so petty theft esp
                   :code ":invalidtagfound"
                   :detail
                    (anymap
-                    :type nx/tactics/base/location
+                    :type nx/tactics/base/place
                     :tag "place")
                   :severity 2))))
             "Mount Vesuvius"
-             (location
+             (place
               :name "Mount Vesuvius")
             :Pompeii
-             (location
+             (place
               :name "Pompeii"
               :summary
                "* The story of the destruction of Pompeii when Mt. Versuvius erupted is widely known. The story is often used as a cautionary tale to obey the will of the gods.
@@ -1755,18 +1755,18 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
              (item
               :name "Dark Forge"
               :summary "* A legendary forge where a man may be forged into the body of an Iron Golem, at the cost of his humanity."))
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Iron Mountains"
-             (location
+             (place
               :name "Iron Mountains"
               :summary "* The home of a stout race of men who live their lives on the cliffs and in tunnels of the Iron Mountains.")
             "Iron Citadel"
-             (location
+             (place
               :name "Iron Citadel"
               :summary "* The capital of the Iron Kingdom. It is an enormous castle built into a cliff-face. Though it is huge outside, the citadel is mostly within the mountain. The mountain face makes the citadel basically impregnible from the outside. The true danger, however, lies undergound...")
             "Deep Roads"
-             (location
+             (place
               :name "Deep Roads"
               :summary "* A fantastic labyrinth of inter-connected, underground tunnels deep within the earth. The tunnels were mostly created by volcanic activity and underground rivers ages ago. They are so extensive that many civilizations live within the Deep Roads."
               :titles "Dark Roads, Underdark, Underlands")))
@@ -1776,16 +1776,16 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
           :reference "Switzerland"
           :summary "* Zurans are small in stature but very well educated people. They are are highly materialistic and suspiscious of others. They prefer windowless towers to minimize the chance of theft. They typically hide and trap their valuables and carry hidden weapons all the time."
           :titles "Gnomes of Zurich"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Zuran Academy"
-             (location
+             (place
               :name "Zuran Academy"
               :summary
                "* The Zuran Academy is large complex of buildings that house schools, libraries, laboratories, and forges. Here can be found worlds most advanced scientific pursuits including: Alchemy, Thaumaturgy, Artifce, Gold/Silversmithing, Timekeeping, Glassblowing, and Tinkering.
 * Masters take on students as apprentices to dedicate their lives to a craft.")
             :Zurich
-             (location
+             (place
               :name "Zurich"))
           :unitmap
            (unitmap
@@ -1835,10 +1835,10 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
 * Certamen - Arcane Duel
 * Templar"
               :titles "Magocracy"
-              :locationmap
-               (locationmap
+              :placemap
+               (placemap
                 :Arcanum
-                 (location
+                 (place
                   :name "Arcanum"
                   :reference "Chantry, Ivory Tower, Tower of Babylon"
                   :summary
@@ -1847,10 +1847,10 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
 * The home of the Arcanum Society, a fraterity of wizards, sages, alchemists, and artificers. Though their only stated goal is the pursuit of arcane knowledge, they are widely known as power brokers across the known world (and perhaps some unknown ones).
 * Arcanum Awards - The Arcanum Society holds an annual dinner to recognize the greatest magical discoveries of the year.")
                 "Great Ziggurat"
-                 (location
+                 (place
                   :name "Great Ziggurat")
                 "Hanging Gardens"
-                 (location
+                 (place
                   :name "Hanging Gardens"
                   :reference "Hanging Gardens of Babylon"
                   :summary "* One of the Seven Wonders of the World")))))
@@ -1858,19 +1858,19 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
          (section
           :name "Canaan"
           :reference "Israel"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Mount Zion"
-             (location
+             (place
               :name "Mount Zion")
             "Solomon's Temple"
-             (location
+             (place
               :name "Solomon's Temple")
             :Zion
-             (location
+             (place
               :name "Zion")
             "Dead Sea"
-             (location
+             (place
               :name "Dead Sea")))
         :Pars
          (section
@@ -1887,10 +1887,10 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
 * Politics - Farad is ruled by a figurehead Kaliph, but each city state is actually run by individual Sultans who answer to no one. Assassination is an artform. Their assassins are known for their cunning and ruthlessness.
 * Justice - Justice is harsh and arbitrary. The militia is highly corrupt, and anything can be gotten for a price.
 * Economics - Trade caravans and shipping are huge sources of wealth. Spices and exotic dyes and weaves are particularly large industries."
-              :locationmap
-               (locationmap
+              :placemap
+               (placemap
                 :Faradin
-                 (location
+                 (place
                   :name "Faradin"))
               :unitmap
                (unitmap
@@ -1909,10 +1909,10 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
             :Phatas
              (section
               :name "Phatas"
-              :locationmap
-               (locationmap
+              :placemap
+               (placemap
                 :Phatasia
-                 (location
+                 (place
                   :name "Phatasia"
                   :reference
                    "* Joseph Jacobs, Jack and the Beanstalk
@@ -1922,7 +1922,7 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
 * Windships - Over time, the town grew and eventually a brilliant wizard discovered a way to construct windships based on his studies of the floating city. He made a fortune by keeping the technique a closely guarded secret. Unfortunately, the secret seems to have died with its creator, and no one has been able create new windships since.
 * Weather - Phantasia can get chilly and severe weather can be very harrowing.")
                 "Bazaar of the Bizarre"
-                 (location
+                 (place
                   :name "Bazaar of the Bizarre"
                   :summary
                    "* Each year for one week, the Phantasias hold an exhibition of oddities and diversions. To gain entrance, you must be attired in costume. Wearers of the most outlandish garb are awarded a silver goblet which allows them to drink for free during the festival.
@@ -1972,10 +1972,10 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
         "Desert Wastes"
          (section
           :name "Desert Wastes"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "City of Brass"
-             (location
+             (place
               :name "City of Brass"
               :summary "* The City of Brass is a major city of the [Ifrit]. It is a beautiful place with palaces, libraries, and cathedrals all built to giant scale and all built of brass to withstand the withering desert heat."))
           :unitmap
@@ -1996,10 +1996,10 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
         "Cresent Isles"
          (section
           :name "Cresent Isles"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Nauticus Reef"
-             (location
+             (place
               :name "Nauticus Reef"
               :summary "* A great mass of coral filled with beautiful and dangerous sea life. The reef has been the cause of many shipwrecks over the years and is the subject of many perilous salvage operations over the years.")))
         :Lemuria
@@ -2021,10 +2021,10 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
      (section
       :name "Wilderlands"
       :reference "* Americas"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Aberrant Rainforest"
-         (location
+         (place
           :name "Aberrant Rainforest"
           :summary
            "* The Aberrant Rainforest is a weird and grotesque jungle the freakish origins of which are attributed to a magical mishap of unparalleled proportions.
@@ -2032,12 +2032,12 @@ awakening as Burning Dead and are hysterically drawn to the living who will not 
 * Murky streams flow uphill, stagnant ponds move slowly across the land, and the ground itself seems to pulse as if it were alive.
 * Because many varieties of unique and valuable herbs grow throughout the forest, visitors are not unknown.")
         "Lost Sea"
-         (location
+         (place
           :name "Lost Sea"
           :reference "Salt Flats"
           :summary "* Deep within the Wilderlands is a flat wasteland known as the Lost Sea. This area appears to be a dry seabed littered with the ancient skeletons of giant aquatic monsters. The area gets little rain and is layered in salt from the former sea, so nothing lives here. It is said that the wrecks of ancient ships can be found in isolated places potentially carrying treasures from ancient civilizations.")
         "Lost World"
-         (location
+         (place
           :name "Lost World"
           :reference "The Land that Time Forgot"
           :summary
@@ -2047,10 +2047,10 @@ the outside world for millions of years. Numerous creatures though to be extinct
 survive in this safe haven."
           :titles "Pangaea")
         "Salt Flats"
-         (location
+         (place
           :name "Salt Flats")
         "Sea of Glass"
-         (location
+         (place
           :name "Sea of Glass"
           :summary
            "* The sea of glass is a vast expanse of mostly flat glass. The sea was presumably
@@ -2144,17 +2144,17 @@ under the noonday Sun."))
      (section
       :name "Positive Planes"
       :titles "Higher Realms, Order Realms, Positive Realms, Positive Space"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         :Celestia
-         (location
+         (place
           :name "Celestia")
         :Hyperspace
-         (location
+         (place
           :name "Hyperspace"
           :summary "* Hyperspace is not an actual place, it is what one observes while travelling between Positive Planes.")
         :Source
-         (location
+         (place
           :name "Source"
           :reference "* I am kindness. I am unity. I am bigotry. I am expansion. I am the end! The DEATH that comes for expansion! For existence! The NULL that comes unto us all. Because I AM the PHOENIX! Life and death INCARNATE! The resurrection and renewal that will never end. Memories reawakened. A life lived and ended, again and again. A perpetual cycle of joy and sorrow. Anger and gratitude. Bliss and grief. All of them, just small parts of what relentlessly perseveres. Infinite, Absolute, Unconditional. - Madelyn Prior, X-men"
           :summary
@@ -2168,34 +2168,34 @@ under the noonday Sun."))
      (section
       :name "Negative Space"
       :titles "Lower Realms, Negative Realms, Negative Space, Negative Universe, Negaverse"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         :Abyss
-         (location
+         (place
           :name "Abyss"
           :titles "Pandemonium, The Well")
         :Oblivion
-         (location
+         (place
           :name "Oblivion"
           :summary "* It is speculated that beyond Oblivion, lies the [Source] in an endless cycle."
           :titles "Absolute Chaos, The End, True Chaos")
         :Umbra
-         (location
+         (place
           :name "Umbra"
           :summary "* Hyperspace is not an actual place, it is what one observes while travelling between Positive Planes."
           :titles "Subspace")
         :Wyld
-         (location
+         (place
           :name "Wyld"
           :titles "Wildspace, Wylderlands, Wyldspace")))
     "Temporal Realms"
      (section
       :name "Temporal Realms"
       :summary "* The Temporal Realms are described by coordinates for +/-x, +/-y, +/-z +/-t (length, height, width, time)"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         :Vortex
-         (location
+         (place
           :name "Vortex"
           :reference
            "* The Christmas tree, which can be traced in its origins back to pre-Christian European beliefs, represents an axis mundi.
@@ -2216,10 +2216,10 @@ under the noonday Sun."))
 * Gates - Gates are more easily created when both realms resemble each other at both ends of the Gate.
 * Realm Overlay - Sometimes when an area of both realms closely resembles one another, the areas overlap creating a natural Gate of sorts where one may accidentally wander from one Realm to the other without noticing."
       :titles "Periphery"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Ley Line"
-         (location
+         (place
           :name "Ley Line"
           :summary
            "* Ley Lines are invisible, spiritual energy lines that pass through the universe and serve as the branches and roots of the World Tree. The Ley Lines influence the areas they pass through. Their existence transcends time. Contacting the Lines boosts spiritual powers and connects the past and future. They can be tapped to raise magical effects and they can spread the effect of tragic or corrupted areas, creating haunted or cursed areas.
@@ -2229,21 +2229,21 @@ under the noonday Sun."))
 * Ley Line Filth - When negative energy builds up over time near a Ley Line, so a Ley Line can sometimes leak solid dark energy that is called Filth or Corruption. This Filth corrupts the area, withering plants and contaminating animals and water. Since it is a spiritual corruption, it can only be repaired with purification magic or by somehow confronting and addressing the cause of the corruption."
           :titles "Dragon Lines, Fate Lines, Lines of Power, Threads of Fate, Time Lines")
         "Digital Realm"
-         (location
+         (place
           :name "Digital Realm"
           :titles "Cyberspace, Cyberrealm")
         "Dreaming, The"
-         (location
+         (place
           :name "Dreaming, The"
           :titles "Dreamlands, Dreamworld, Fade, Imaginary World, Nod")
         "Fade, The"
-         (location
+         (place
           :name "Fade, The"
           :summary
            "* The Fade is a Mirror Realm that is a sort of Dream Realm but is driven by strong emotions.
 * Fade Curse - A Curse is a spirit that has manifested from strong emotions over a long period of time.")
         :Luna
-         (location
+         (place
           :name "Luna"
           :summary "* The Spirit Realm of the Moon"
           (msgblock
@@ -2253,22 +2253,22 @@ under the noonday Sun."))
               :code ":invalidtagfound"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :tag "unit")
               :severity 2))))
         "Hollow World"
-         (location
+         (place
           :name "Hollow World")
         "Memory Realm"
-         (location
+         (place
           :name "Memory Realm"
           :titles "Land of Lost Things, Memory Lane")
         "Micro Realm"
-         (location
+         (place
           :name "Micro Realm"
           :titles "Microverse, Quantum Realm")
         "Mirrors Realms"
-         (location
+         (place
           :name "Mirrors Realms"
           :reference
            "* Alice in Wonderland
@@ -2279,29 +2279,29 @@ under the noonday Sun."))
           :summary "* Beyond all mirrors lie worlds almost identical to our own but more a reflection of mind than of substance. There are an infinite number of these mirror universes, though each is accessible in a slightly different way."
           :titles "Alternate Dimensions, Mirrorlands, Mirror Universe, Mirror World, Mirrorverse, Mirrors, The Upsidedown, Twilight Zone")
         "Negative Realms"
-         (location
+         (place
           :name "Negative Realms"
           :summary
            "* Negative Realms are described by coordinates for -x, -y, -z, t (length, height, width, time)
 * The Negative Realms are particular mirrors of the Material Realms. They were created at the same moment that the Material Realms were, but while the Material Realms were mostly filled with normal matter, the Negative Realms were mostly filled with anti-matter."
           :titles "Anti-matter Universes")
         "Nexus of Realities"
-         (location
+         (place
           :name "Nexus of Realities"
           :summary
            "* The Nexus of Realities is a place that touches the [Vortex] and through it all other realities. So near the [Vortex], Time is meaningless here, so anyone entering will feel as if they have been in the Nexus for a very long time and may stay here as long as they want with no wants. When they leave, however, no time will have past and their time spent will be remembered like a dream.
 * Tanelorn - The city Tanelorn has been built at the Nexus and is a sort of waystation for those travelling to other worlds. Tanelorn exists in all inner realms and appears as a simple town native to each reality. One cannot look for Tanelorn for it does not appear on any map, but it can occasionally be stumbled upon by frustrated travellers seeking new horizons. As the existence of Tanelorn can never be proven, it remains a myth throughout the universe."
           :titles "Tanelorn, Waystation")
         :Pangea
-         (location
+         (place
           :name "Pangea"
           :titles "Prehistoric Realm")
         :Yuggoth
-         (location
+         (place
           :name "Yuggoth"
           :summary "* The Spirit Realm of Pluto")
         :Shadowland
-         (location
+         (place
           :name "Shadowland"
           :summary
            "* The Realm of the recently dead.
@@ -2311,7 +2311,7 @@ under the noonday Sun."))
 * The [Veil] separating the Shadowland from the living world is called the Shroud.
 * Many portals lead from here to the [Underworld], but if a [Wraith] loses his connection to the living world, he may not return to the [Shadowlands].")
         :Veil
-         (location
+         (place
           :name "Veil"
           :summary
            "* The Veil is a barrier between the natural world and the supernatural worlds.
@@ -2399,32 +2399,32 @@ under the noonday Sun."))
 ** Unseelie Court - 
 * Archfae - 
 * Fae Magic - Though the Fae trade in physical objects like gold or food, these things are actually made of imagination and Fae Magic. For the Fae, magic is the one true currency. Having it and using it is the sign of royalty. Those with no magic have no status and no value."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Arcadia
-             (location
+             (place
               :name "Arcadia"
               :summary "* The capital city of the Fae. It is a land partially of Dream and is not normally accessible to mortals.")
             "Elysian Forest"
-             (location
+             (place
               :name "Elysian Forest"
               :summary "* The forests of Elysium are filled with living creatures including wild animals, large insects, Sprites, and Pixies.")
             "Elysian Fields"
-             (location
+             (place
               :name "Elysian Fields")))))
     "Higher Realms"
      (section
       :name "Higher Realms"
       :titles "Over Realms"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Celestial Realm"
-         (location
+         (place
           :name "Celestial Realm"
           :summary "* Powerful beings of order inhabit this Realm. They are not overtly hostile, but they unyielding and have a severe approach to justice that makes one wonder if anyone can survive their scrutiny."
           :titles "Afterworld, Angelic Realm, Celestine Realm")
         "Imaginary Space"
-         (location
+         (place
           :name "Imaginary Space"
           :reference "* Though the story is fictional, as far as the characters are concerned, their fate is real. Therein lies the rub, are you and I the audience or characters on the stage? Nobody can know for sure. Afterall, nothing is easier to fool than the senses. - Furina, Genshin Impact"
           :summary
@@ -2436,19 +2436,19 @@ under the noonday Sun."))
 * Body - Physical rules barely apply. All resistences use Will instead of Body."
           :titles "Astral Plane, Astral Realm, Complex Space, Ether, Etheral Plane, Etheral Realm, Hyperspace, I-Space, Imaginary Realm, Subjective Reality, Subspace, Superspace, The Pale, Ultraspace")
         "Realm of Light"
-         (location
+         (place
           :name "Realm of Light"
           :summary "* This is an area of space near the center of the Universe. It is said to be based upon lines and angles instead of surfaces and curves, and it is known to be a region of intense and deadly energies. The realm appears much like a negative image of the known Universe with dark stars on a backdrop of intense light. Few organic creatures can survive in this region regardless of defenses, but this is the home of such creatures as the [Radiance] and the [Hounds of Tindalos]."
           :titles "Tindalos")
         :Wyver
-         (location
+         (place
           :name "Wyver"
           :summary
            "* Wyver is the Creator Being that manifests as a mirror dimension reflecting the world of order.
 * Travel - Creatures of order can enter Wyvr through any reflective surface."
           :titles "Weaver")
         :Wyld
-         (location
+         (place
           :name "Wyld"
           :summary
            "* Wyld is the Life Bringer Being that manifests as a mirror dimension reflecting the natural world. It is thought that Wyld is the source of all life.
@@ -2456,7 +2456,7 @@ under the noonday Sun."))
 * Travel - Natural creatures can enter Wyld through any reflective surface."
           :titles "Manitou, Wellspring")
         :Wyrm
-         (location
+         (place
           :name "Wyrm"
           :reference "* Sitting in a bunker, here behind my wall. Waiting for the worms to come. In perfect isolation, , here behind my wall. Waiting for the worms to come. Waiting, to cut out the dead wood. Waiting, to clean up the city. Waiting, to follow the worms. Waiting, to put on a black shirt. Waiting, to weed out the weaklings. Waiting, to smash in their windows and kick in their doors. Waiting, for the final solution to strengthen the strain. Waiting, to follow the worms. - Waiting for the Worms, Pink Floyd"
           :summary "* Wyrm is the Time/Destructor Being that manifests as mirror dimension reflecting the world of entropy and  and corruption. Corrupted creatures can enter Wyrm through any reflective surface.")))
@@ -2465,10 +2465,10 @@ under the noonday Sun."))
       :name "Lower Realms"
       :summary "* Those places closest to the very beginning and the final end of the universe."
       :titles "Under Realms"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         :Oblivion
-         (location
+         (place
           :name "Oblivion"
           :reference
            "* Leviathan - Hellraiser II
@@ -2481,7 +2481,7 @@ under the noonday Sun."))
 * Some believe that through Oblivion lies rebirth, but few are willing to personally put that theory to the test, and none who enter has ever returned."
           :titles "Abyss, End of All Things, Heat Death of the Universe, Lakhesis, Order, Pattern, Primal Destroyer, Primal Void, The End")
         "Source, The"
-         (location
+         (place
           :name "Source, The"
           :reference "...I started with loathing when told of the monstrous nuclear chaos beyond angled space which the Necronomicon had mercifully cloaked under the name of Azathoth. - The Whisperer in Darkness"
           :summary
@@ -2490,7 +2490,7 @@ under the noonday Sun."))
 * Sublimating - Nothing physical can survive exposure to the Source, but it is possible to transcend the physical and enter Source. This is called Sublimating. There are many magical, spiritual and technological ways to enter the Sublime and entire civilizations have done so. Any who enter the Sublime begin to expand themselves. Absorbing and evolving with each eternal instant. Almost none who enter ever returns regardless of promises or bonds. The few that have returned are very different and almost always quickly return to the Sublime. After being exposed to the endless possiblities of existence, perhaps they no longer see the our existence or our way of understanding our existence as real or important anymore."
           :titles "Ascension, Azathoth, Atropos, Apep, Apophis, Jormungand (Midgard Serpent), Primal Chaos, The Beginning, The Big Bang, The First Thing, Truth, Sublime")
         "Tempest, The"
-         (location
+         (place
           :name "Tempest, The"
           :reference "* The Galactic Barrier - Star Trek"
           :summary
@@ -2504,7 +2504,7 @@ under the noonday Sun."))
 * Regardless of where one enters, all its twisting maze-like tunnels lead in the same direction: toward the dark heart of [Oblivion]."
           :titles "Event Horizon, The Great Barrier, The Edge of the World")
         :Underworld
-         (location
+         (place
           :name "Underworld"
           :summary
            "* The Underworld is a psychic realm of the dead. Similar to the [Dreaming], the Underworld is a Spiritual not a physical place.
@@ -2516,7 +2516,7 @@ under the noonday Sun."))
 * Time - Time in the Underworld is distinctly different from the living world. Long periods can pass for some while little time has passed for others. Either way, little time passes in the living world compared to the ages that can seem to pass in the Underworld."
           :titles "Netherworld, Netherrealm, Netherverse, Underrealm, Underverse")
         "Void, The"
-         (location
+         (place
           :name "Void, The"
           :summary
            "* The Void is an empty Realm between Realms. It is the Spiritual equivalent to outer space.
@@ -2532,7 +2532,7 @@ under the noonday Sun."))
               :code ":invalidtagfound"
               :detail
                (anymap
-                :type nx/tactics/base/location
+                :type nx/tactics/base/place
                 :tag "unit")
               :severity 2))
            :msgblocks
@@ -2544,7 +2544,7 @@ under the noonday Sun."))
                  :code ":invalidtagfound"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :tag "unit")
                  :severity 2)))
              (msgblock
@@ -2554,7 +2554,7 @@ under the noonday Sun."))
                  :code ":invalidtagfound"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :tag "unit")
                  :severity 2)))
              (msgblock
@@ -2564,7 +2564,7 @@ under the noonday Sun."))
                  :code ":invalidtagfound"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :tag "unit")
                  :severity 2)))
              (msgblock
@@ -2574,7 +2574,7 @@ under the noonday Sun."))
                  :code ":invalidtagfound"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :tag "unit")
                  :severity 2)))
              (msgblock
@@ -2584,7 +2584,7 @@ under the noonday Sun."))
                  :code ":invalidtagfound"
                  :detail
                   (anymap
-                   :type nx/tactics/base/location
+                   :type nx/tactics/base/place
                    :tag "unit")
                  :severity 2))))))))
     "Outer Realms"
@@ -2595,16 +2595,16 @@ under the noonday Sun."))
        "* These are the various part of the Spirit Realm where demons live. It is unclear whether these worlds are in distant parts of our dimension or in other dimensions entirely. They are certainly so distant that only dimensional travel can reach them.
 * Physics are often radically different from our own which often is sanity threatening."
       :titles "Abyssal Realms, Chaos Realms, Demon Realms, Hells"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Hell of Being Cut to Pieces"
-         (location
+         (place
           :name "Hell of Being Cut to Pieces"
           :summary
            "* Souls who arrive here fall into a sea of razor-sharp blades that spin and cut sinners to shreds.
 * Souls - The domain is a place for those who make a living by violence.")
         "Hell of Being Skinned Alive"
-         (location
+         (place
           :name "Hell of Being Skinned Alive"
           :summary
            "* If there is a worse place, no one has yet found it. At a glance it appear as a desert world, but it is infinitely worse. The winds have sculpted the rocks and mesas into horrifying shapes. Those who can see through the sandstorms can see demonic forms torturing souls, but their screams are covered by the winds.
@@ -2617,7 +2617,7 @@ under the noonday Sun."))
 * Silent Stronghold - Her orbiting palace is where her allies stay, but as Tou Mu is paranoid, the crystal of this place renders unguarded thought into sound which echoes throughout the palace.
 * Sinister Fortress - One of the few structures on the surface of this hell, this iron fortress courses with the lightning that constantly strikes it. On the outer walls are lashed the bodies of those that Tou Mu has taken a special interst. Here they are constantly torn by winds and struck by lightning. The Iron Empress has never removed a victim from the wall since the first traitor was lashed there.")
         "Hell of Boiling Oil"
-         (location
+         (place
           :name "Hell of Boiling Oil"
           :summary
            "* The name of this hell is a misnomer. The hell is not filled with boiling oil, but rather with rendered human fat. Gobbets of charred and burning fat float atop the ocean of thick, bubbling grease. A dark gray froth of overcooked scum floats to the surface in places.
@@ -2626,7 +2626,7 @@ under the noonday Sun."))
 * Ruler - This realm is ruled by Hluh, an island-sized, gelatinous, bright red jellyfish with sharp-toothed sucker mouths on each tentacle.
 * Devils - The devils of this have no names, no faces, and no sense of self. They realm resemble chitinous tapeworms or gigantic water striders that skim acoss the surface of the boiling sea.")
         "Hell of Burrowing Maggots"
-         (location
+         (place
           :name "Hell of Burrowing Maggots"
           :summary
            "* A quick glance reveals this place to be a vast plain of white sand. There is no sun, but the overcast sky is not dark. The sand, however, is crawling. The stench of decay staggers any so unfortunate as to need to breathe.
@@ -2635,7 +2635,7 @@ under the noonday Sun."))
 * Demons - Maggots grow larger as they age. The largest of them are the size of a whale.
 * The Great Beast - What appears to be a large white mountain is actually an enormous carcass of an unknown beast. The maggots have been devouring it since the hell was created, and it appears it will take an eternity to complete the job. What the beast is is unknown. Some believe it is tied to creation and the the universe will cease when it is comsumed. A foolish mage once studied it from a distance, but days later he returned screaming gibberish and only said two coherent words before he took his own life: 'It moved.'")
         "Hell of Seven Burning Seas"
-         (location
+         (place
           :name "Hell of Seven Burning Seas"
           :summary
            "* If would be hard to chose a worse fate, burning or drowning. Those souls doomed to this hell do both. They may stay above water and have their garments burst into flame or submerge and boil themselves.
@@ -2643,14 +2643,14 @@ under the noonday Sun."))
 * Ruler - No one has seen the Empress of Pearls who is rumored to live at the greatest depths of the Great Trench where no other creature can survive. Some believe she is a great 'devil-fish' that can cause tsunamis.
 * Devils - Devil crabs, devil sharks, and devil squid are some of the horrors that populate the depths.")
         "Hell of Upside-Down Sinners"
-         (location
+         (place
           :name "Hell of Upside-Down Sinners"
           :summary
            "* This domain defies description. This is either the cleverest of the Yomi realms or the maddest hell devised by the sickest of minds. Time and space are inverted. Sensation and thought are twisted. Minutes pass like an eternity and millenia rush by in a blink of an eye. In this hell, the strong perish and the weak survive. That which is dull cuts while sharp objects bring comfort.
 * Souls - Recent arrivals are often driven mad as they begin to see odors, smell sounds, and hear sights. Emotions too become jumbled. Souls begin to hate those who helped them and love those who have done them wrong. They fear the helpless and refuse to flee certain destruction. Skills and powers do not work correctly here. The stronger the ability the more ineffectual it is.
 * Ruler - No one knows what inconceivable creature would create such a realm.")
         "Hell: Kakuri, The Night Realm"
-         (location
+         (place
           :name "Hell: Kakuri, The Night Realm"
           :summary
            "* There is no end to the darkness in the Night Realm. There is no sun, no stars. The winds are bitterly cold, bearing dagger-sharp ice crystals. Facing into the wind is blinding. Fires flicker and die in the winds, but any light attracts the tormented and Shikome alike. The terrain is rocky and frozen black crystal that leech the energy of those who rest on them. Meadows and tree exist, but they are covered with dark crytal blades that tear at passersby.
@@ -2660,7 +2660,7 @@ under the noonday Sun."))
 * Kyuden No Kakuri - The Castle of Kakuri is the stronghold of Emma-o.  It is situated at the top of an unassailable peak. The castle has elaborate obsidian walls and are a testament to his vanity and conceit.
 * Cave of Maidens - One of Emma-o's favored traps, the caves appear an oasis from the icy torment and occasionally a way out of Yomi. Edible fungi, shelter, and pretty prisoners can be found in the caves. The prisoners will dote on the visitors, but they will suddenly accuse them of theft, rape, murder, or worse. The visitors are beaten and driven from the caves. The power of the Shikome lets them trick their victims again and again with the lure of false hope. Amazingly, there is actually a chance that a cave is actually an exit from the Hell, the ultimate lure for lost souls.")
         "Hell: Pit of Iron and Salt"
-         (location
+         (place
           :name "Hell: Pit of Iron and Salt"
           :summary
            "* The Pit is a vast salt mine with seemingly no bottom. Iron citadels dot the inside of the pit, so the pit resembles a great gaping maw with the citadels resembling teeth. The landscape is unchanging and sterile. It is not a place of shock or disgust, but a hell of quiet oppression.
@@ -2668,7 +2668,7 @@ under the noonday Sun."))
 * Ruler - Yama-king Wu Hua lives at the the bottom of the pit in a great iron city surrounded by six enormous barbed spires on which hundreds of bodies are impaled. Sputtering greenish fires can be seen from a distance that hint at grotesque rituals and obscene torments, but what exactly goes on inside is unknown.
 * Iron Citadels - The citadels are places of decadence and depravity. The souls are intermittently rotated from the mines to the citadel to act as slaves. Most mine workers view the change as desirable, but every soul chosen learns that this is not the case. In reality, the souls are treated worse here than anywhere else in the domain. Their suffering is more valuable to Wu Hua because it is so much more 'personal'.")
         "Hell: Wicked City"
-         (location
+         (place
           :name "Hell: Wicked City"
           :summary
            "* Wicked City is a place of endless urban blight stretching to the horizon in all directions. The perpetually overcast air is dark and thick with acrid vapors and burning smog. The stench of urine, vomit, blood, and excrement blows out of every alley. The streets and buildings are packed with the souls who mindlessly slave away in inescapable agonies and the power-mad demons who torment them.
@@ -2685,10 +2685,10 @@ under the noonday Sun."))
           :reference "* Dante's Inferno"
           :summary "* Pandemonium (literally the Place of All Demons), the capital of Hell, the High Capital, of Satan and his Peers, built by the fallen angels at the suggestion of Mammon. The demons built it in about an hour, but it far surpassed all human palaces or dwellings. It was also reputed to be made of solid gold."
           :titles "Pandaemonium, Place of All Demons"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "Council-Chamber of Pandæmonium"
-             (location
+             (place
               :name "Council-Chamber of Pandæmonium"
               :summary "* The Stygian Council debates here.")))
         :Phyrexia

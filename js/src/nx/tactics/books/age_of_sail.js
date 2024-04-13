@@ -1428,12 +1428,12 @@ export default class nx_tactics_books_age_of_sail {
           nx_tactics_base.t_section,
           ":name",
           "Tokugawa Prefecture",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Tokugawa Town",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Tokugawa Town",
               ":summary",
@@ -1441,7 +1441,7 @@ export default class nx_tactics_books_age_of_sail {
             ),
             "Buddhist Temple",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Buddhist Temple",
               ":summary",

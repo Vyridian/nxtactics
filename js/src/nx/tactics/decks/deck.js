@@ -181,6 +181,7 @@ export default class nx_tactics_decks_deck {
 
   /**
    * @function deck_items
+   * Items Deck
    * @return {deck}
    */
   static t_deck_items = {
@@ -193,16 +194,31 @@ export default class nx_tactics_decks_deck {
   // (func deck-items)
   static f_deck_items() {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Items"
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_deck},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const itemmap = vx_core.f_any_from_struct(
+          {"any-1": nx_tactics_base.t_itemmap, "struct-2": nx_tactics_base.t_tactics},
+          nx_tactics_decks_deck.c_tactics_all,
+          ":itemmap"
+        )
+        const cardmap = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_itemmap}, itemmap)
+        return vx_core.f_new(
+          nx_tactics_base.t_deck,
+          ":name",
+          "Items",
+          ":cardmap",
+          cardmap
+        )
+      })
     )
     return output
   }
 
   /**
    * @function deck_places
+   * Places Deck
    * @return {deck}
    */
   static t_deck_places = {
@@ -215,16 +231,31 @@ export default class nx_tactics_decks_deck {
   // (func deck-places)
   static f_deck_places() {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Places"
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_deck},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const placemap = vx_core.f_any_from_struct(
+          {"any-1": nx_tactics_base.t_placemap, "struct-2": nx_tactics_base.t_tactics},
+          nx_tactics_decks_deck.c_tactics_all,
+          ":placemap"
+        )
+        const cardmap = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_placemap}, placemap)
+        return vx_core.f_new(
+          nx_tactics_base.t_deck,
+          ":name",
+          "Places",
+          ":cardmap",
+          cardmap
+        )
+      })
     )
     return output
   }
 
   /**
    * @function deck_powers
+   * Powers Deck
    * @return {deck}
    */
   static t_deck_powers = {
@@ -237,10 +268,24 @@ export default class nx_tactics_decks_deck {
   // (func deck-powers)
   static f_deck_powers() {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Powers"
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_deck},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const powermap = vx_core.f_any_from_struct(
+          {"any-1": nx_tactics_base.t_powermap, "struct-2": nx_tactics_base.t_tactics},
+          nx_tactics_decks_deck.c_tactics_all,
+          ":powermap"
+        )
+        const cardmap = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_power, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_powermap}, powermap)
+        return vx_core.f_new(
+          nx_tactics_base.t_deck,
+          ":name",
+          "Powers",
+          ":cardmap",
+          cardmap
+        )
+      })
     )
     return output
   }
@@ -362,6 +407,7 @@ export default class nx_tactics_decks_deck {
 
   /**
    * @function deck_units
+   * Units Deck
    * @return {deck}
    */
   static t_deck_units = {
@@ -374,10 +420,24 @@ export default class nx_tactics_decks_deck {
   // (func deck-units)
   static f_deck_units() {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Units"
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_deck},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const unitmap = vx_core.f_any_from_struct(
+          {"any-1": nx_tactics_base.t_unitmap, "struct-2": nx_tactics_base.t_tactics},
+          nx_tactics_decks_deck.c_tactics_all,
+          ":unitmap"
+        )
+        const cardmap = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_unitmap}, unitmap)
+        return vx_core.f_new(
+          nx_tactics_base.t_deck,
+          ":name",
+          "Units",
+          ":cardmap",
+          cardmap
+        )
+      })
     )
     return output
   }

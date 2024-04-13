@@ -917,10 +917,10 @@ a Wave Motion Gun."
     "Space Opera Phenomenon"
      (section
       :name "Space Opera Phenomenon"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Motaran Rift"
-         (location
+         (place
           :name "Motaran Rift"
           :summary
            "* Beyond the Alliance Frontier is the ionic Pendulask storm stretching 100 light years across. In the center of the storm is a spacial disturbance that has ripped the fabric of time itself - The Motaran Rift.
@@ -954,10 +954,10 @@ a Wave Motion Gun."
            "* PAX is a chemical compound designed to be added to air processors in order to pacify a populace. An Alliance research team on Miranda discovered that the Pax was effective with 99.9% of people. Unfortunately, it was such an effective means of pacifying that the people stopped doing anything, they simply waited for death. The remaining tenth of a percent (0.1%) of the population had the opposite
 reaction. They became highly aggressive, committing unspeakable acts including cannibalism, rape, and self-mutilation. These people would come to be known as Reavers."
           :titles "G-23 Paxilon Hydrochlorate, PAX (Latin for Peace)"))
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Alliance Spaceport"
-         (location
+         (place
           :name "Alliance Spaceport"
           :summary
            "* Spaceports on Alliance worlds service all incoming and outgoing space traffic. It is strictly illegal to attempt to land on a planet anywhere except a spaceport.

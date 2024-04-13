@@ -627,10 +627,10 @@ could track, observe, or control every move, thought, or bodily function.
 Implants seem to also cause their users to become distant, inhuman, and
 sometimes dangerous."
           :titles "Clockwork Convention"
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             :Autocthonia
-             (location
+             (place
               :name "Autocthonia"
               :summary
                "* Description - A metallic Horizon Realm the size of a moon. It was
@@ -1337,10 +1337,10 @@ Paradox Realm
 * He gives no indication that he is in pain or that he cares what is happening to him.
 * His cycles of rebirth seem to have confused him and he seems to have forgotten his original life.
 * Perhaps he can be stimulated to realize his predicament and try to escape."
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         "Wells of Silence"
-         (location
+         (place
           :name "Wells of Silence"
           :reference
            "* And in the naked light, I saw, 10,000 people or more.

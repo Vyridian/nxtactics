@@ -302,12 +302,12 @@ export default class nx_tactics_books_fantasy {
               "* Units - Charioteer, Necromancer, Pharoh, Sun Priest, Sorceror/Hieolphant\n* The Empire of the Sun - Aegyptus worship the sun and the nile river that brings life.\n* Sun Disc - Round shield with the image of the sun is a standard decoration.\n* Sun Spear - Spear with the image of the sun near its point.",
               ":titles",
               "Aegypta, Helios, Kemet",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Alexandria",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Alexandria",
                   ":summary",
@@ -315,7 +315,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Great Pyramids",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Great Pyramids",
                   ":reference",
@@ -325,7 +325,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Necropolis",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Necropolis",
                   ":summary",
@@ -333,7 +333,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Pyramid of Skulls",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Pyramid of Skulls",
                   ":summary",
@@ -341,7 +341,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Thebes",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Thebes"
                 )
@@ -440,12 +440,12 @@ export default class nx_tactics_books_fantasy {
               "Dracarta",
               ":summary",
               "* Trade - The Dracatans smelt Red Iron in large quantities, and export it throughout the area. Their prices remain low enough that it is not cost effective to compete with their efficient facilities.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Dracartan Cisterns",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Dracartan Cisterns",
                   ":summary",
@@ -453,7 +453,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Dracata Halls of Infamy",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Dracata Halls of Infamy",
                   ":summary",
@@ -461,7 +461,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Dracata Halls of Justice",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Dracata Halls of Justice",
                   ":summary",
@@ -638,12 +638,12 @@ export default class nx_tactics_books_fantasy {
               "Shadow Isles",
               ":summary",
               "* These islands are inhabited by the Malum, a cabal of Arch-Spectres.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Obsidian Tower",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Obsidian Tower",
                   ":summary",
@@ -690,12 +690,12 @@ export default class nx_tactics_books_fantasy {
               "Tunis",
               ":summary",
               "* Weather - Tunis is hot and humid all year round. The temperature varies from warm to sweltering. The hot weather encourages the laid back attitude of the locals.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Fiaqua",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Fiaqua",
                   ":reference",
@@ -772,12 +772,12 @@ export default class nx_tactics_books_fantasy {
               "Brittania",
               ":reference",
               "England",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Avalon",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Avalon",
                   ":summary",
@@ -785,7 +785,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Saxony",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Saxony"
                 )
@@ -1006,12 +1006,12 @@ export default class nx_tactics_books_fantasy {
               "Jade Empire",
               ":titles",
               "Quan Dynasty, Jade Kingdom",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Tian",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Tian",
                   ":summary",
@@ -1021,7 +1021,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Emperor's Canal",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Emperor's Canal",
                   ":summary",
@@ -1029,7 +1029,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Emperor's Forest",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Emperor's Forest",
                   ":summary",
@@ -1037,7 +1037,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Emperor's Road",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Emperor's Road",
                   ":summary",
@@ -1045,7 +1045,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Shoalin Monastery",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Shoalin Monastery",
                   ":summary",
@@ -1053,7 +1053,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Wudang Monastery",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Wudang Monastery"
                 )
@@ -1108,12 +1108,12 @@ export default class nx_tactics_books_fantasy {
               nx_tactics_base.t_section,
               ":name",
               "Nepal",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Himalaya Mountains",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Himalaya Mountains"
                 )
@@ -1136,12 +1136,12 @@ export default class nx_tactics_books_fantasy {
               "Nippon",
               ":titles",
               "Land of the Rising Sun",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Valley of the Mists",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Valley of the Mists"
                 )
@@ -1220,12 +1220,12 @@ export default class nx_tactics_books_fantasy {
               "* The Romani were erroneously believed to originate in Egypt (therefore Gypsy).",
               ":summary",
               "* Horseclans - Anatolian horsemen are widely believed to be the greatest light horsemen in the world.  The Horseclans live on the plains where their horsemen have maximum effect.  They live a semi-nomadic existance moving on when resources become scarce.\n* Romani - The Romani are a gregarious, nomadic people often travelling in wagons carrying all that they own. They are reknowned as artists, acrobats, fortune tellers, thieves, tricksters, or swindlers depending on your point of view. The Romani religion revolves around two demigods: Fortuna, the lovely but fickle goddess of luck, and the grim entity known as Death. They revere Fortuna but mock Death, whom they strive to cheat at every opportunity.\n* Carnevale of True Wonders - A large group of Romani and other assorted wanderer/adventurers have banded together to form a semi-organized travelling circus. They show up near a town and rent some unused plaza or farmland and set up their tents and stalls. Their shows are constantly varying including: acrobats, strong men, duelists, wrestlers, theater troupes, musicians, magicians, story tellers, fortune tellers, wonderous creatures, items, foods and drinks. Anyone can join the welcoming troupe. There are a few rules, however: all wonders must be real (per the name) and no theft, fraud, or swindles are allowed on Carnevale grounds.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Ephesus",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Ephesus",
                   ":summary",
@@ -1233,13 +1233,13 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Galatia",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Galatia"
                 ),
                 ":Halicarnassus",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Halicarnassus",
                   ":reference",
@@ -1249,13 +1249,13 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Phrygia",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Phrygia"
                 ),
                 ":Witchwood",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Witchwood",
                   ":summary",
@@ -1334,12 +1334,12 @@ export default class nx_tactics_books_fantasy {
               nx_tactics_base.t_section,
               ":name",
               "Balkan",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Dragon's Eye",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Dragon's Eye",
                   ":summary",
@@ -1349,7 +1349,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Carpathia",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Carpathia",
                   ":summary",
@@ -1359,7 +1359,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Carpathian Mountains",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Carpathian Mountains"
                 )
@@ -1390,12 +1390,12 @@ export default class nx_tactics_books_fantasy {
               "* Byzantium represents a sizable empire. They are an advanced people with an extensive legal system and extremely complex rules, religion, and politics.",
               ":titles",
               "Eastern Empire",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Constantinople",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Constantinople"
                 )
@@ -1590,12 +1590,12 @@ export default class nx_tactics_books_fantasy {
               "* The Shattered Lands is bleak and desolate. The landscape is nightmarish: jagged spikes of rock jut upward from the cracked and barren earth. The violent upheavals have exposed many mineral deposits. Unfortunately, the residents of this land have used strip mining techniques which have badly polluted the air and rivers. The air is tinged with a fine ash, the waters are foul tasting, and there are many dangerous chemical waste products including bubbling pools of lye. Creatures living in the rivers and lakes are often deformed or mutated.\n* The Shattered Lands are home to many small, violent clans that violently compete with each other for the scarce resources in this bleak area.",
               ":titles",
               "Harak",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Urag",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Urag",
                   ":reference",
@@ -1662,12 +1662,12 @@ export default class nx_tactics_books_fantasy {
               nx_tactics_base.t_section,
               ":name",
               "Volcanic Hills",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Dragon Rock Mountain",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Dragon Rock Mountain",
                   ":summary",
@@ -1675,7 +1675,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Firefalls",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Firefalls",
                   ":summary",
@@ -1683,7 +1683,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "River of Fire",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "River of Fire",
                   ":summary",
@@ -1700,18 +1700,18 @@ export default class nx_tactics_books_fantasy {
           "Northlands",
           ":titles",
           "Frozen North",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Plateau of Leng",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Plateau of Leng"
             ),
             "Unknown Kadath",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Unknown Kadath"
             )
@@ -1730,12 +1730,12 @@ export default class nx_tactics_books_fantasy {
               "* Auroea is a land of vast snow fields, glittering ice peaks, and frozen lakes.\n* People - The Auroran people are tall and statuesque and live in crystalline, ice castles. Their artificers work with the unique material Adamant, the fabled permanent ice of lengend. The Aurorans have an amazing resistence to the cold but conversely they are only confortable in freezing temperatures.\n* Religion - The Aurorans revere Boreas the god of the North Wind. They do not create temples but instead build altars in the open wilderness where one can truly feel his presense.",
               ":titles",
               "Hyperborea",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Sea of Ice",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Sea of Ice",
                   ":summary",
@@ -1810,12 +1810,12 @@ export default class nx_tactics_books_fantasy {
               "Jotunheim",
               ":summary",
               "* Frost Giants - The Frost Giants wage perpetual war on all creatures especially the Aurorans and Nords.\nTheir lack of tactical ability is made up for by their phenomenal strength, endurance, and determination. Their bodies emminate extreme cold, so as they expand their territory the temperatures drop. Their goal actually seems to be to freeze the world.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Ymir's Teeth",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Ymir's Teeth",
                   ":summary",
@@ -1830,12 +1830,12 @@ export default class nx_tactics_books_fantasy {
               "Khazad",
               ":summary",
               "* A strange and unknown realm, Khazad is located in the furthest reaches of the world. It is practically inaccessible. A line of precipitous 200 foot cliffs runs the length of its eastern coast and a ridge of mountains extends along its eastern borders. To the north lie fields of ice and snow. As a result of these impediments to travel, much of what is known is based on a very few hardy adventurers who have survived journeys to this isolated area. According to accounts, the interior is also less than inviting. Patches of bleached and barren gall oak stand like skeletons silhouetted against a dreary purple-grey sky. Broken and irregular lines of hills are interspersed with moors, quagmires, and stagnant ponds. The air is heavy with the stench of moldering vegetation and exudes an unsettling, ancient quality.\n* Lost Kingdom - Scattered throughout the region are the ruins of a long forgotten civilization.\n* The eastern cliffs are sheer, 200 foot cliffs that ring the coastline. Giant diabolical visages have been carved into the cliff-sides along portions of the coast. A clan of flying devils makes its home in the mouths and eye-sockets of the immense stone effigies and fly out to attack those who draw too close.\n* Seas - The seas around Khazad are said to be home to many sea monsters including sea demons. The black ships of the Nefaratus are known to frequent these waters as well.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Khazad Burial Grounds",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Khazad Burial Grounds",
                   ":summary",
@@ -1843,7 +1843,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Necron",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Necron",
                   ":summary",
@@ -1858,12 +1858,12 @@ export default class nx_tactics_books_fantasy {
               "Nefaratus",
               ":summary",
               "* A bleak island nation, home to the Black Savants. Little is known of their isolated homeland culture or motives. What is known is that they seldom leave their obsidian towers and that they wield powerful magic. Here they stare into their obsidian mirrors and converse with unseen beings. Many believe that the Black Savants are diabolists and receive advice and consel from the giant devils known as Shaitan,",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Maledictus",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Maledictus",
                   ":summary",
@@ -1902,12 +1902,12 @@ export default class nx_tactics_books_fantasy {
               "* The Nords are a large race of humans. Nords have relatively short lifespans, but they do not physically weaken with age until they are near death.\n* Personality - Nords are deeply emotional and prone to raucous laughter, deep brooding, and intense rage. They generally believe in living in the moment and do not typically hold regrets or grudges.\n* The Nord Way - The Nords have a tradition of stark minimalism reflecting there severe environment. They tend to discard any activity or tradition not directly related to survival. This simplicity sometimes surprises others to which the Nords steadily reply that it is the 'Nord Way'.\n* Marriage - The Nords do not formally marry. Instead they prefer to simply live together (The Nord Way) trusting that if they keep their love strong, they will naturally stay together.\n* Ma and Fa - Endearing terms for Mother and Father",
               ":titles",
               "Aesir, Aesyr, Frostland",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Skyrim",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Skyrim"
                 )
@@ -1982,18 +1982,18 @@ export default class nx_tactics_books_fantasy {
               "Aegean Islands, Greece",
               ":summary",
               "* Scholar\n* Senator\n* Spartan\n* Gorgons\n* Harpies\n* Status - The Aegean navy dominates the Aegean island chain and enables a thriving merchant trade across Mediterranea.\n* History - The Aegean city states used to be individual monarchies until the Imperium swept in and conquered Hellas, the capital. During the invasion, the Hellenic leadership fled with its navy and united the other city states under the name Aegea. Since then, the Imperium sent it navy to conquer Crete and 	was disasterously routed by the Aegean navy. The Aegeans subsequently attempted to retake Hellas and was easily repelled. Now an uneasy truce exists with the Imperials unable to create the navy it needs for conquest and the Aegeans unable to create the army it needs to drive out the Imperials.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Crete",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Crete"
                 ),
                 ":Hellas",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Hellas",
                   ":summary",
@@ -2001,13 +2001,13 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Knossus",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Knossus"
                 ),
                 ":Labyrinth",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Labyrinth",
                   ":summary",
@@ -2015,7 +2015,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Mount Parnassus",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Mount Parnassus",
                   ":summary",
@@ -2023,13 +2023,13 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Minoa",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Minoa"
                 ),
                 ":Olympia",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Olympia",
                   ":summary",
@@ -2037,7 +2037,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Rhodes",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Rhodes",
                   ":summary",
@@ -2045,13 +2045,13 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Sparta",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Sparta"
                 ),
                 "Swamp of Despair",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Swamp of Despair"
                 )
@@ -2088,18 +2088,18 @@ export default class nx_tactics_books_fantasy {
               "Arden",
               ":titles",
               "Alfar, Ljossalfar, Elder, Elf, Sidhe, Sidheni, Sylvan, Sylvus",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Alfheim",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Alfheim"
                 ),
                 ":Ardenwood",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Ardenwood",
                   ":reference",
@@ -2107,7 +2107,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Ashwood",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Ashwood"
                 )
@@ -2208,18 +2208,18 @@ export default class nx_tactics_books_fantasy {
               "France, Gallia",
               ":summary",
               "* Syndicate - The Gaul Syndicate is a sophisticed crime cartel.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Catacombs",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Catacombs"
                 ),
                 ":Mistridge",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Mistridge",
                   ":summary",
@@ -2316,12 +2316,12 @@ export default class nx_tactics_books_fantasy {
               nx_tactics_base.t_section,
               ":name",
               "Bavaria",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Blackmarsh",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Blackmarsh"
                 )
@@ -2346,36 +2346,36 @@ export default class nx_tactics_books_fantasy {
                   "* The Order is a large, theocratic nation which lies to the west of Elysia. Life in the Order is dominated by religion, the Hierophant, and the Theocracy.\n* Geography - The Order covers a large mountainous pennisula, separated from Elysia, and the Imperium by the Pyrenees mountains.\n* Daily Life - The influence of the religion is evident everywhere. Individualism has been throughly suppressed. All citizen dress alike, speak in tired cliches, and effect identical mannerisms.\n* Laws - Laws of the Order are extremely strict and narrowly interpreted. Those who commit even the slightest transgression are dragged to the Halls of Penance. At the discretion of the Inquisitors, non-believers may be forcibly converted or may simply 'disapper'.\n* Visitors - Travellers from other lands are rare and stand out like beacons. They are generally treated as inferiors and are only tolerated if their presense is of some advantage to the state.\n* Alms - A person's spiritual enlightenment is measured by the Theocrats in a spiritual value called Alms. Alms are awarded for specific contributions to the church including tithes, military service, good deeds, church titles, pilgrimages, etc. Each rank provides specific perks within society but is also intened to be a direct measure of the quality of the person's afterlife.\n* Clash of Champions - The Imperium has tried to invade the Order twice to no avail. The geography and religious zealots of the Order have proven too difficult to overcome. Since the last battle, the Order and Elysia (backed by the Imperium) have waged a propaganda war culminating in the annual event known as the Clash of Champions. Each year both nations scout for worthy (and expendible) warriors to represent their interests in a duel atop the main gates of the Order capital. The winner receives great rewards from their sponsor. Though not technically, a duel to the death, it is expected that the loser will be thrown or forced  off the gates to fall 20 feet below to the roar of the crowds. It is considered a particular coup to cause a vanquished foe to fall amongst his or her own supporters. Since the Order and Elysia could scarsely be more different in their outlooks on life, the winners consider their victory to be a referendum on the virtues of their philosophies. The Order takes the competition very seriously and, of course, gambling and drinking are not allowed within the city walls. Elyisians consider the Clash to be one of the social events of the season. Though they must travel through the mountain pass and they are not permitted entrance to the city, they still come in large numbers with their wagons, children, merchants, wenches, gamblers, acrobats, and performers. For the Elysians, the party is equally large whether they win or not.",
                   ":titles",
                   "Chantry, The Order, Papal States, Theocracy",
-                  ":locationmap",
+                  ":placemap",
                   vx_core.f_new(
-                    nx_tactics_base.t_locationmap,
+                    nx_tactics_base.t_placemap,
                     "Halls of Penance",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Halls of Penance"
                     ),
                     "Order Catherdral",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Order Catherdral"
                     ),
                     "Order Monastery",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Order Monastery"
                     ),
                     "Order Nunnery",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Order Nunnery"
                     ),
                     "Order Reliquary",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Order Reliquary"
                     )
@@ -2486,12 +2486,12 @@ export default class nx_tactics_books_fantasy {
               "* Description - The Imperium is the most stable and advanced nation in history. It is known as a conquering nation that has taken over much of the modern world. Its reputation is somewhat exaggerated. The Imperial Legionnaires are the most devastating standing army on the planet, but the Imperium has had its share of defeats and finds it hard to hold territory that it 'conquers'. Fortunately, the Imperium is mostly concerned with trade and is very willing to negotiate with its neighbors and allow autonomy in its territories in order to concentrate on its borders to the east where it faces constant incursions from the Shattered Lands and from the Dragon's Eye.\n* Currency - Imperial Sovereigns (Imperials or Crowns) are made from gold, have eight sides, and have the image of the current emperor on the front and the imperial seal on the back. They are made of solid gold and are accepted almost everywhere.\n* Architecture - Imperia has a love of monolithic buildings with towering columns that reflect the Imperial ego.\n* Roads - The Imperium maintains excellent cobblestone roads throughout its own and its allies territories. All roads lead to Imperia and have armed forts at regular intervals with Centurions, an inn, and a trading post. The forts charge a toll to pass, prices at these forts are high, and any trade done is taxed, but forts are always professionally defended and are generally worth the price.  The roads benefit trade, but are also a reminder of the influence of the Imperium.",
               ":titles",
               "Italia, Sovereign",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Imperia",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Imperia",
                   ":summary",
@@ -2511,7 +2511,7 @@ export default class nx_tactics_books_fantasy {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "place"
                         ),
@@ -2523,13 +2523,13 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Mount Vesuvius",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Mount Vesuvius"
                 ),
                 ":Pompeii",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Pompeii",
                   ":summary",
@@ -2600,12 +2600,12 @@ export default class nx_tactics_books_fantasy {
                   "* A legendary forge where a man may be forged into the body of an Iron Golem, at the cost of his humanity."
                 )
               ),
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Iron Mountains",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Iron Mountains",
                   ":summary",
@@ -2613,7 +2613,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Iron Citadel",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Iron Citadel",
                   ":summary",
@@ -2621,7 +2621,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Deep Roads",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Deep Roads",
                   ":summary",
@@ -2642,12 +2642,12 @@ export default class nx_tactics_books_fantasy {
               "* Zurans are small in stature but very well educated people. They are are highly materialistic and suspiscious of others. They prefer windowless towers to minimize the chance of theft. They typically hide and trap their valuables and carry hidden weapons all the time.",
               ":titles",
               "Gnomes of Zurich",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Zuran Academy",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Zuran Academy",
                   ":summary",
@@ -2655,7 +2655,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 ":Zurich",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Zurich"
                 )
@@ -2744,12 +2744,12 @@ export default class nx_tactics_books_fantasy {
                   "* Magister\n* Maleficar - A practitioner of Black Magic\n* Librarian\n* Certamen - Arcane Duel\n* Templar",
                   ":titles",
                   "Magocracy",
-                  ":locationmap",
+                  ":placemap",
                   vx_core.f_new(
-                    nx_tactics_base.t_locationmap,
+                    nx_tactics_base.t_placemap,
                     ":Arcanum",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Arcanum",
                       ":reference",
@@ -2759,13 +2759,13 @@ export default class nx_tactics_books_fantasy {
                     ),
                     "Great Ziggurat",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Great Ziggurat"
                     ),
                     "Hanging Gardens",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Hanging Gardens",
                       ":reference",
@@ -2784,30 +2784,30 @@ export default class nx_tactics_books_fantasy {
               "Canaan",
               ":reference",
               "Israel",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Mount Zion",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Mount Zion"
                 ),
                 "Solomon's Temple",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Solomon's Temple"
                 ),
                 ":Zion",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Zion"
                 ),
                 "Dead Sea",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Dead Sea"
                 )
@@ -2830,12 +2830,12 @@ export default class nx_tactics_books_fantasy {
                   "Farad",
                   ":summary",
                   "* Farad is an ancient land.\n* People - The country is largely poor and overpopulated.\n* Politics - Farad is ruled by a figurehead Kaliph, but each city state is actually run by individual Sultans who answer to no one. Assassination is an artform. Their assassins are known for their cunning and ruthlessness.\n* Justice - Justice is harsh and arbitrary. The militia is highly corrupt, and anything can be gotten for a price.\n* Economics - Trade caravans and shipping are huge sources of wealth. Spices and exotic dyes and weaves are particularly large industries.",
-                  ":locationmap",
+                  ":placemap",
                   vx_core.f_new(
-                    nx_tactics_base.t_locationmap,
+                    nx_tactics_base.t_placemap,
                     ":Faradin",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Faradin"
                     )
@@ -2874,12 +2874,12 @@ export default class nx_tactics_books_fantasy {
                   nx_tactics_base.t_section,
                   ":name",
                   "Phatas",
-                  ":locationmap",
+                  ":placemap",
                   vx_core.f_new(
-                    nx_tactics_base.t_locationmap,
+                    nx_tactics_base.t_placemap,
                     ":Phatasia",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Phatasia",
                       ":reference",
@@ -2889,7 +2889,7 @@ export default class nx_tactics_books_fantasy {
                     ),
                     "Bazaar of the Bizarre",
                     vx_core.f_new(
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":name",
                       "Bazaar of the Bizarre",
                       ":summary",
@@ -2970,12 +2970,12 @@ export default class nx_tactics_books_fantasy {
               nx_tactics_base.t_section,
               ":name",
               "Desert Wastes",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "City of Brass",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "City of Brass",
                   ":summary",
@@ -3012,12 +3012,12 @@ export default class nx_tactics_books_fantasy {
               nx_tactics_base.t_section,
               ":name",
               "Cresent Isles",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Nauticus Reef",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Nauticus Reef",
                   ":summary",
@@ -3060,12 +3060,12 @@ export default class nx_tactics_books_fantasy {
           "Wilderlands",
           ":reference",
           "* Americas",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Aberrant Rainforest",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Aberrant Rainforest",
               ":summary",
@@ -3073,7 +3073,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Lost Sea",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Lost Sea",
               ":reference",
@@ -3083,7 +3083,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Lost World",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Lost World",
               ":reference",
@@ -3095,13 +3095,13 @@ export default class nx_tactics_books_fantasy {
             ),
             "Salt Flats",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Salt Flats"
             ),
             "Sea of Glass",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Sea of Glass",
               ":summary",
@@ -3746,18 +3746,18 @@ export default class nx_tactics_books_fantasy {
           "Positive Planes",
           ":titles",
           "Higher Realms, Order Realms, Positive Realms, Positive Space",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             ":Celestia",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Celestia"
             ),
             ":Hyperspace",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hyperspace",
               ":summary",
@@ -3765,7 +3765,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Source",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Source",
               ":reference",
@@ -3784,12 +3784,12 @@ export default class nx_tactics_books_fantasy {
           "Negative Space",
           ":titles",
           "Lower Realms, Negative Realms, Negative Space, Negative Universe, Negaverse",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             ":Abyss",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Abyss",
               ":titles",
@@ -3797,7 +3797,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Oblivion",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Oblivion",
               ":summary",
@@ -3807,7 +3807,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Umbra",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Umbra",
               ":summary",
@@ -3817,7 +3817,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Wyld",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Wyld",
               ":titles",
@@ -3832,12 +3832,12 @@ export default class nx_tactics_books_fantasy {
           "Temporal Realms",
           ":summary",
           "* The Temporal Realms are described by coordinates for +/-x, +/-y, +/-z +/-t (length, height, width, time)",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             ":Vortex",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Vortex",
               ":reference",
@@ -3858,12 +3858,12 @@ export default class nx_tactics_books_fantasy {
           "* The Periphery consists of a number of Realms that touch the Material Realm.\n* These Realms are forever separated from the mortal world by thin but strong membrane called the Veil.\n* Peripheral Vision - Sometimes a glimse of the Outer Realms may be seen at the edge of normal vision.\n* Gates - Gates are more easily created when both realms resemble each other at both ends of the Gate.\n* Realm Overlay - Sometimes when an area of both realms closely resembles one another, the areas overlap creating a natural Gate of sorts where one may accidentally wander from one Realm to the other without noticing.",
           ":titles",
           "Periphery",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Ley Line",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Ley Line",
               ":summary",
@@ -3873,7 +3873,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Digital Realm",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Digital Realm",
               ":titles",
@@ -3881,7 +3881,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Dreaming, The",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Dreaming, The",
               ":titles",
@@ -3889,7 +3889,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Fade, The",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Fade, The",
               ":summary",
@@ -3897,7 +3897,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Luna",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Luna",
               ":summary",
@@ -3915,7 +3915,7 @@ export default class nx_tactics_books_fantasy {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":tag",
                       "unit"
                     ),
@@ -3927,13 +3927,13 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hollow World",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hollow World"
             ),
             "Memory Realm",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Memory Realm",
               ":titles",
@@ -3941,7 +3941,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Micro Realm",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Micro Realm",
               ":titles",
@@ -3949,7 +3949,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Mirrors Realms",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Mirrors Realms",
               ":reference",
@@ -3961,7 +3961,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Negative Realms",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Negative Realms",
               ":summary",
@@ -3971,7 +3971,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Nexus of Realities",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Nexus of Realities",
               ":summary",
@@ -3981,7 +3981,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Pangea",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Pangea",
               ":titles",
@@ -3989,7 +3989,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Yuggoth",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Yuggoth",
               ":summary",
@@ -3997,7 +3997,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Shadowland",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Shadowland",
               ":summary",
@@ -4005,7 +4005,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Veil",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Veil",
               ":summary",
@@ -4126,12 +4126,12 @@ export default class nx_tactics_books_fantasy {
               "Elysium",
               ":summary",
               "* The legendary homeland of the Fae. It is a wonderous place of myth and legend deep in the dream world.\n* Seasons - The Fae realm is driven by the seasons in an eternal cycle of death and rebirth.\n** Spring - \n*** Spring Bloom\n** Summer - \n** Autumn - \n*** Autumnal Harvest\n** Winter - \n* Courts - \n** Seelie Court - \n** Unseelie Court - \n* Archfae - \n* Fae Magic - Though the Fae trade in physical objects like gold or food, these things are actually made of imagination and Fae Magic. For the Fae, magic is the one true currency. Having it and using it is the sign of royalty. Those with no magic have no status and no value.",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 ":Arcadia",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Arcadia",
                   ":summary",
@@ -4139,7 +4139,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Elysian Forest",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Elysian Forest",
                   ":summary",
@@ -4147,7 +4147,7 @@ export default class nx_tactics_books_fantasy {
                 ),
                 "Elysian Fields",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Elysian Fields"
                 )
@@ -4162,12 +4162,12 @@ export default class nx_tactics_books_fantasy {
           "Higher Realms",
           ":titles",
           "Over Realms",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Celestial Realm",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Celestial Realm",
               ":summary",
@@ -4177,7 +4177,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Imaginary Space",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Imaginary Space",
               ":reference",
@@ -4189,7 +4189,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Realm of Light",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Realm of Light",
               ":summary",
@@ -4199,7 +4199,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Wyver",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Wyver",
               ":summary",
@@ -4209,7 +4209,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Wyld",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Wyld",
               ":summary",
@@ -4219,7 +4219,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Wyrm",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Wyrm",
               ":reference",
@@ -4238,12 +4238,12 @@ export default class nx_tactics_books_fantasy {
           "* Those places closest to the very beginning and the final end of the universe.",
           ":titles",
           "Under Realms",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             ":Oblivion",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Oblivion",
               ":reference",
@@ -4255,7 +4255,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Source, The",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Source, The",
               ":reference",
@@ -4267,7 +4267,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Tempest, The",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Tempest, The",
               ":reference",
@@ -4279,7 +4279,7 @@ export default class nx_tactics_books_fantasy {
             ),
             ":Underworld",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Underworld",
               ":summary",
@@ -4289,7 +4289,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Void, The",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Void, The",
               ":summary",
@@ -4307,7 +4307,7 @@ export default class nx_tactics_books_fantasy {
                     vx_core.f_new(
                       vx_core.t_anymap,
                       ":type",
-                      nx_tactics_base.t_location,
+                      nx_tactics_base.t_place,
                       ":tag",
                       "unit"
                     ),
@@ -4331,7 +4331,7 @@ export default class nx_tactics_books_fantasy {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "unit"
                         ),
@@ -4353,7 +4353,7 @@ export default class nx_tactics_books_fantasy {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "unit"
                         ),
@@ -4375,7 +4375,7 @@ export default class nx_tactics_books_fantasy {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "unit"
                         ),
@@ -4397,7 +4397,7 @@ export default class nx_tactics_books_fantasy {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "unit"
                         ),
@@ -4419,7 +4419,7 @@ export default class nx_tactics_books_fantasy {
                         vx_core.f_new(
                           vx_core.t_anymap,
                           ":type",
-                          nx_tactics_base.t_location,
+                          nx_tactics_base.t_place,
                           ":tag",
                           "unit"
                         ),
@@ -4444,12 +4444,12 @@ export default class nx_tactics_books_fantasy {
           "* These are the various part of the Spirit Realm where demons live. It is unclear whether these worlds are in distant parts of our dimension or in other dimensions entirely. They are certainly so distant that only dimensional travel can reach them.\n* Physics are often radically different from our own which often is sanity threatening.",
           ":titles",
           "Abyssal Realms, Chaos Realms, Demon Realms, Hells",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Hell of Being Cut to Pieces",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell of Being Cut to Pieces",
               ":summary",
@@ -4457,7 +4457,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hell of Being Skinned Alive",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell of Being Skinned Alive",
               ":summary",
@@ -4465,7 +4465,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hell of Boiling Oil",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell of Boiling Oil",
               ":summary",
@@ -4473,7 +4473,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hell of Burrowing Maggots",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell of Burrowing Maggots",
               ":summary",
@@ -4481,7 +4481,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hell of Seven Burning Seas",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell of Seven Burning Seas",
               ":summary",
@@ -4489,7 +4489,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hell of Upside-Down Sinners",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell of Upside-Down Sinners",
               ":summary",
@@ -4497,7 +4497,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hell: Kakuri, The Night Realm",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell: Kakuri, The Night Realm",
               ":summary",
@@ -4505,7 +4505,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hell: Pit of Iron and Salt",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell: Pit of Iron and Salt",
               ":summary",
@@ -4513,7 +4513,7 @@ export default class nx_tactics_books_fantasy {
             ),
             "Hell: Wicked City",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Hell: Wicked City",
               ":summary",
@@ -4534,12 +4534,12 @@ export default class nx_tactics_books_fantasy {
               "* Pandemonium (literally the Place of All Demons), the capital of Hell, the High Capital, of Satan and his Peers, built by the fallen angels at the suggestion of Mammon. The demons built it in about an hour, but it far surpassed all human palaces or dwellings. It was also reputed to be made of solid gold.",
               ":titles",
               "Pandaemonium, Place of All Demons",
-              ":locationmap",
+              ":placemap",
               vx_core.f_new(
-                nx_tactics_base.t_locationmap,
+                nx_tactics_base.t_placemap,
                 "Council-Chamber of Pandæmonium",
                 vx_core.f_new(
-                  nx_tactics_base.t_location,
+                  nx_tactics_base.t_place,
                   ":name",
                   "Council-Chamber of Pandæmonium",
                   ":summary",

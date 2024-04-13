@@ -214,68 +214,68 @@
   :body "3x0"
   :mass "3.1kg/7lb"))
 
-(func place-blacksmith : base/location
- (base/location
+(func place-blacksmith : base/place
+ (base/place
   :name "Blacksmith"
   :image "images/cards/place-blacksmith.svg"))
 
-(func place-campsite : base/location
- (base/location
+(func place-campsite : base/place
+ (base/place
   :name "Campsite"
   :image "images/cards/place-campsite.svg"))
 
-(func place-cavemouth : base/location
- (base/location
+(func place-cavemouth : base/place
+ (base/place
   :name "Cave Mouth"
   :image "images/cards/place-cavemouth.svg"))
 
-(func place-farmhouse : base/location
- (base/location
+(func place-farmhouse : base/place
+ (base/place
   :name "Farmhouse"
   :image "images/cards/place-farmhouse.svg"))
 
-(func place-field : base/location
- (base/location
+(func place-field : base/place
+ (base/place
   :name "Field"
   :image "images/cards/place-field.svg"))
 
-(func place-forest : base/location
- (base/location
+(func place-forest : base/place
+ (base/place
   :name "Forest"
   :image "images/cards/place-forest.svg"))
 
-(func place-guardpost : base/location
- (base/location
+(func place-guardpost : base/place
+ (base/place
   :name "Guardpost"
   :image "images/cards/place-guardpost.svg"))
 
-(func place-mill : base/location
- (base/location
+(func place-mill : base/place
+ (base/place
   :name "Mill"
   :image "images/cards/place-mill.svg"))
 
-(func place-mountain : base/location
- (base/location
+(func place-mountain : base/place
+ (base/place
   :name "Mountain"
   :image "images/cards/place-mountain.svg"))
 
-(func place-stoneroad : base/location
- (base/location
+(func place-stoneroad : base/place
+ (base/place
   :name "Stone Road"
   :image "images/cards/place-stoneroad.svg"))
 
-(func place-tavern : base/location
- (base/location
+(func place-tavern : base/place
+ (base/place
   :name "Tavern"
   :image "images/cards/place-tavern.svg"))
 
-(func place-temple : base/location
- (base/location
+(func place-temple : base/place
+ (base/place
   :name "Temple"
   :image "images/cards/place-temple.svg"))
 
-(func place-tradingpost : base/location
- (base/location
+(func place-tradingpost : base/place
+ (base/place
   :name "Trading Post"
   :image "images/cards/place-tradingpost.svg"))
 

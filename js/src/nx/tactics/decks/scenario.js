@@ -569,7 +569,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_blacksmith
-   * @return {location}
+   * @return {place}
    */
   static t_place_blacksmith = {
     vx_type: vx_core.t_type
@@ -580,9 +580,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-blacksmith)
   static f_place_blacksmith() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Blacksmith",
       ":image",
@@ -593,7 +593,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_campsite
-   * @return {location}
+   * @return {place}
    */
   static t_place_campsite = {
     vx_type: vx_core.t_type
@@ -604,9 +604,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-campsite)
   static f_place_campsite() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Campsite",
       ":image",
@@ -617,7 +617,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_cavemouth
-   * @return {location}
+   * @return {place}
    */
   static t_place_cavemouth = {
     vx_type: vx_core.t_type
@@ -628,9 +628,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-cavemouth)
   static f_place_cavemouth() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Cave Mouth",
       ":image",
@@ -641,7 +641,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_farmhouse
-   * @return {location}
+   * @return {place}
    */
   static t_place_farmhouse = {
     vx_type: vx_core.t_type
@@ -652,9 +652,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-farmhouse)
   static f_place_farmhouse() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Farmhouse",
       ":image",
@@ -665,7 +665,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_field
-   * @return {location}
+   * @return {place}
    */
   static t_place_field = {
     vx_type: vx_core.t_type
@@ -676,9 +676,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-field)
   static f_place_field() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Field",
       ":image",
@@ -689,7 +689,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_forest
-   * @return {location}
+   * @return {place}
    */
   static t_place_forest = {
     vx_type: vx_core.t_type
@@ -700,9 +700,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-forest)
   static f_place_forest() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Forest",
       ":image",
@@ -713,7 +713,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_guardpost
-   * @return {location}
+   * @return {place}
    */
   static t_place_guardpost = {
     vx_type: vx_core.t_type
@@ -724,9 +724,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-guardpost)
   static f_place_guardpost() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Guardpost",
       ":image",
@@ -737,7 +737,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_mill
-   * @return {location}
+   * @return {place}
    */
   static t_place_mill = {
     vx_type: vx_core.t_type
@@ -748,9 +748,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-mill)
   static f_place_mill() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Mill",
       ":image",
@@ -761,7 +761,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_mountain
-   * @return {location}
+   * @return {place}
    */
   static t_place_mountain = {
     vx_type: vx_core.t_type
@@ -772,9 +772,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-mountain)
   static f_place_mountain() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Mountain",
       ":image",
@@ -785,7 +785,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_stoneroad
-   * @return {location}
+   * @return {place}
    */
   static t_place_stoneroad = {
     vx_type: vx_core.t_type
@@ -796,9 +796,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-stoneroad)
   static f_place_stoneroad() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Stone Road",
       ":image",
@@ -809,7 +809,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_tavern
-   * @return {location}
+   * @return {place}
    */
   static t_place_tavern = {
     vx_type: vx_core.t_type
@@ -820,9 +820,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-tavern)
   static f_place_tavern() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Tavern",
       ":image",
@@ -833,7 +833,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_temple
-   * @return {location}
+   * @return {place}
    */
   static t_place_temple = {
     vx_type: vx_core.t_type
@@ -844,9 +844,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-temple)
   static f_place_temple() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Temple",
       ":image",
@@ -857,7 +857,7 @@ export default class nx_tactics_decks_scenario {
 
   /**
    * @function place_tradingpost
-   * @return {location}
+   * @return {place}
    */
   static t_place_tradingpost = {
     vx_type: vx_core.t_type
@@ -868,9 +868,9 @@ export default class nx_tactics_decks_scenario {
 
   // (func place-tradingpost)
   static f_place_tradingpost() {
-    let output = nx_tactics_base.e_location
+    let output = nx_tactics_base.e_place
     output = vx_core.f_new(
-      nx_tactics_base.t_location,
+      nx_tactics_base.t_place,
       ":name",
       "Trading Post",
       ":image",

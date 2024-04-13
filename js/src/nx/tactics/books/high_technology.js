@@ -1707,7 +1707,7 @@ export default class nx_tactics_books_high_technology {
               ":name",
               "Ismael Li",
               ":summary",
-              "Ismael Li is the leader and driving force behind the burgeoning Lunar resistance movement. Once\na miner, Li worked hard, long hours in the tunnels deep below the Lunar surface and Helium-3\nharvesters. He quit in disgust when he realized that the company he’d worked ten hard years for\nwas constantly operating at a loss and systematically abusing its employees in order to provide\nCEGA and massive Earth corporations with cheap Lunar ores. Using the excellent education\nprovided to all Selenties, Li spoke out against the CEGA \"occupation��?, making speeches and\ndistributing eloquent pleas for regime change in an attempt to awaken the populace to the truth\nof their situation.\n\nFive years ago, under investigation by CEGA and Lunar police forces, Li took his crusade\nunderground. No matter what he did, legitimate means would only get him arrested. He set\nabout building a proper revolutionary organization out of the public eye, aiming to drive CEGA off\nthe Lunar surface by force of arms. Strangely, this has won him many more converts among the\nusually peaceful Selenites than his speaches ever did. He finds this somewhat disheartening,\nbut still forges ahead.\n\nLi is now ready to launch his uprising. The arrival of the PCs has moved his timetable up a bit,\nas their actions on Venus have distracted many of CEGA’s forces and their skills can be a great\nhelp to him. He is a fundamentally honest man, and will promise fuel, parts, and provisions\nin exchange for the PCs’ help. He will give them what he promised without short-changing or\nholding back. He also truly believes in his cause, and would willing sacrifice his life to save any\nof his supporters."
+              "Ismael Li is the leader and driving force behind the burgeoning Lunar resistance movement. Once\na miner, Li worked hard, long hours in the tunnels deep below the Lunar surface and Helium-3\nharvesters. He quit in disgust when he realized that the company he’d worked ten hard years for\nwas constantly operating at a loss and systematically abusing its employees in order to provide\nCEGA and massive Earth corporations with cheap Lunar ores. Using the excellent education\nprovided to all Selenties, Li spoke out against the CEGA \"occupation�?, making speeches and\ndistributing eloquent pleas for regime change in an attempt to awaken the populace to the truth\nof their situation.\n\nFive years ago, under investigation by CEGA and Lunar police forces, Li took his crusade\nunderground. No matter what he did, legitimate means would only get him arrested. He set\nabout building a proper revolutionary organization out of the public eye, aiming to drive CEGA off\nthe Lunar surface by force of arms. Strangely, this has won him many more converts among the\nusually peaceful Selenites than his speaches ever did. He finds this somewhat disheartening,\nbut still forges ahead.\n\nLi is now ready to launch his uprising. The arrival of the PCs has moved his timetable up a bit,\nas their actions on Venus have distracted many of CEGA’s forces and their skills can be a great\nhelp to him. He is a fundamentally honest man, and will promise fuel, parts, and provisions\nin exchange for the PCs’ help. He will give them what he promised without short-changing or\nholding back. He also truly believes in his cause, and would willing sacrifice his life to save any\nof his supporters."
             ),
             "Jovian Floater",
             vx_core.f_new(
@@ -1739,7 +1739,7 @@ export default class nx_tactics_books_high_technology {
               ":name",
               "Yanna Summers",
               ":summary",
-              "Yanna Summers is the decidated and hardworking administrator of the Martian Orbital Elevator.\nWhile her actual domain is very small - she only has direct control over Heaven and Hell station -\nthe amount of commerce that travels up and down the beanstalk has given her a sizable amount\nof influence within the Federation’s government. This is counterbalanced by her attempts to open\nFederation society up a little. Her position and efforts, however, did draw the attention of the\nSociety of the Evolved Human, which she eagerly joined when offered membership.\nYanna’s connection to the Society was what lead Aglaee to steer the players towards her, and\ninclined her to help them find a home for the refugees. It also could be what leads to her asking\nthe PCs for help with the scientist case - another test by the Society to help them reach their\npotential. She has contacts all through the Federation bureaucracy, and could use them to help\nthe players with their investigation... But there will likely be a price of some kind, as she’s already\nstretched her resources thin to secure passage for the refugees. This could, however, lead to the\n\"Refugees Under Attack��? subplot. Or Yanna could be a background character that just serves to\nlead the PCs into the episode."
+              "Yanna Summers is the decidated and hardworking administrator of the Martian Orbital Elevator.\nWhile her actual domain is very small - she only has direct control over Heaven and Hell station -\nthe amount of commerce that travels up and down the beanstalk has given her a sizable amount\nof influence within the Federation’s government. This is counterbalanced by her attempts to open\nFederation society up a little. Her position and efforts, however, did draw the attention of the\nSociety of the Evolved Human, which she eagerly joined when offered membership.\nYanna’s connection to the Society was what lead Aglaee to steer the players towards her, and\ninclined her to help them find a home for the refugees. It also could be what leads to her asking\nthe PCs for help with the scientist case - another test by the Society to help them reach their\npotential. She has contacts all through the Federation bureaucracy, and could use them to help\nthe players with their investigation... But there will likely be a price of some kind, as she’s already\nstretched her resources thin to secure passage for the refugees. This could, however, lead to the\n\"Refugees Under Attack�? subplot. Or Yanna could be a background character that just serves to\nlead the PCs into the episode."
             ),
             "Ysa Cantroini",
             vx_core.f_new(
@@ -4864,12 +4864,12 @@ export default class nx_tactics_books_high_technology {
           nx_tactics_base.t_section,
           ":name",
           "Solar Colonies",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             ":Stellaser",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Stellaser",
               ":summary",
@@ -4890,12 +4890,12 @@ export default class nx_tactics_books_high_technology {
           nx_tactics_base.t_section,
           ":name",
           "Asteroid Colonies",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Asteroid Mining Colony",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Asteroid Mining Colony"
             )
@@ -4920,12 +4920,12 @@ export default class nx_tactics_books_high_technology {
           "Jupiter Colonies",
           ":summary",
           "* Culture - Personal space in Jovian colonies is extremely limited, so people\nshare quarters with multiple people. There are not even enough beds for each\nperson, so most people live with people who work different shifts and use the\nsame beds on off-shifts. Common areas are used for everything except sleeping.\nThe Jovians have adapted to be far more social and reliant on others for day\nto day life. This communal living has generally made them a tight knit society\nwith a strong sense of group identity.\n* Science - Jovian science is one of the most advanced in the solar system.\nResearch and development on ways to make their harsh life safer and more\ncomfortable are always high priorites. Jovian scientists crank out a steady\nstream of innovations across all disciplines.\n* Military - The military has reaped the rewards of Jovian science and is\narguably the most advanced force in the solar system, though certainly nowhere\nnear the largest. Jovian forces are composed of separate standing armies:\nAlpha, Beta, and Gamma Divisions with Alpha containing the Godsfire flagship.\nJovian military theory is based on efficient use of a small number of highly\nmobile units. They do not fear a large scale assault, since they would receive\nmuch forewarning of any attempt to mobilize a large force all the way out to\nJupiter. Jupiter's remoteness makes it fairly easy to defend against direct\nassault, but the harsh environment makes sabotage a much greater threat, so\nJovian intelligence forces constantly search for threats.\n* Agora - The Jovian governing body with primary offices on Elysee colony.",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Elysee Station",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Elysee Station",
               ":summary",
@@ -4933,7 +4933,7 @@ export default class nx_tactics_books_high_technology {
             ),
             "Joshua Station",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Joshua Station",
               ":summary",
@@ -4943,7 +4943,7 @@ export default class nx_tactics_books_high_technology {
             ),
             "Khannan Station",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Khannan Station",
               ":summary",
@@ -4951,7 +4951,7 @@ export default class nx_tactics_books_high_technology {
             ),
             "Jovian Gas Refinery",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Jovian Gas Refinery",
               ":summary",
@@ -4959,7 +4959,7 @@ export default class nx_tactics_books_high_technology {
             ),
             "Io Colony",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Io Colony",
               ":reference",
@@ -4976,12 +4976,12 @@ export default class nx_tactics_books_high_technology {
           "Saturn Colonies",
           ":summary",
           "* With the exception of Titan, the outer planets are too remote and unimportant\nto ever be colonized. Jupiter provides an unlimited supply of gas resources, so\nSaturn, Uranus, and Neptune have little to offer.",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Titan Research Station",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Titan Research Station",
               ":summary",

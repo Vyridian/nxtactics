@@ -4430,12 +4430,12 @@ export default class nx_tactics_books_superheroes {
           "Renegades",
           ":summary",
           "* The Renegades are the personal strikeforce of the Will. They are ironically called Renegades despite being completely under the control of the Will.",
-          ":locationmap",
+          ":placemap",
           vx_core.f_new(
-            nx_tactics_base.t_locationmap,
+            nx_tactics_base.t_placemap,
             "Parapsychological Studies Institute",
             vx_core.f_new(
-              nx_tactics_base.t_location,
+              nx_tactics_base.t_place,
               ":name",
               "Parapsychological Studies Institute",
               ":summary",

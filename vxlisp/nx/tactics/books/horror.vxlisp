@@ -37,23 +37,23 @@
     "Mythos Places"
      (section
       :name "Mythos Places"
-      :locationmap
-       (locationmap
+      :placemap
+       (placemap
         :Carcosa
-         (location
+         (place
           :name "Carcosa"
           :reference "* ... my eyes became riveted to the open page, and with a cry of terror or perhaps it was of joy so poinant that I suffered in every nerve... I read it and re-read it and wept and laughed and trembled with a horror which at times assails me yet. This the thing that troubles me, for I cannot forget Carcosa. Where black stars hang in the heavens. Where the shadows of men's thoughts lengthen in the afternoon. ... I pray God will curse the writer as the writer has cursed he has cursed the world with this beautiful stupendous creation. Terrible in its simplicity, irresistible in its truth, a world which now trembles before the King in Yellow. - Robert W. Chambers, The Repairer of Reputations"
           :titles "Lost Carcosa")
         :R'yleh
-         (location
+         (place
           :name "R'yleh"
           :image "Cthulhu/Ryleh.jpg"
           :reference "That is not dead which can eternal lie, And with strange aeons even death may die.")
         :Yaddith
-         (location
+         (place
           :name "Yaddith")
         :Yuggoth
-         (location
+         (place
           :name "Yuggoth"))
       :sectionmap
        (sectionmap
@@ -79,32 +79,32 @@ Geography
 * The Underworld is a subterranean region that runs beneath the whole of the Dreamlands. Its principle inhabitants are ghouls, who can physically enter the waking world through crypts. The Underworld is also home to the gugs, monstrous giants banished from the surface for untold blasphemies. The Underworld's deepest realm is the Vale of Pnath, a dangerous lightless chasm inhabited by enormous unseen beasts called bholes. Bholes are likely the ancestors of the Dholes of Yaddith.
 * The Moon has a parallel in the Dreamlands and is inhabited by the dreaded moon-beasts, amorphous frog-like creatures allied with Nyarlathotep. Interestingly, it is possible for a ship to sail off the edge of the Dreamlands and travel through space to the moon.
 * Kadath - Kadath or Unknown Kadath is the dwelling place of the Great Ones. It is a gigantic castle found atop an immense cosmic mountain in the Cold Waste.  Kadath is the place where the dreamlands gods dwell, but it is inaccessible to mortals because the gods do not want to be bothered."
-          :locationmap
-           (locationmap
+          :placemap
+           (placemap
             "City of the Gugs"
-             (location
+             (place
               :name "City of the Gugs"
               :summary
                "* The City of the Gugs is a colossal, horrifying cityscape of soaring, cyclopean towers. It is the dwelling place of the gugs, banished to the underworld by a covenant of the gods. Its most prominent landmark is the Tower of Koth, which contains a legendary stairway that leads to the surface.
 * Close by the city is the cemetery of the gugs, its graves marked by huge stone monoliths. Ghouls often dine here; a deceased gug feeds them for almost a year.")
             "Crag of the Ghouls"
-             (location
+             (place
               :name "Crag of the Ghouls"
               :summary "* The Crag of the Ghouls is a rugged cliff in the Peaks of Thok from which the ghouls of deeper dreamland pitch the leftover bones of their sepulchral feasts. Uncounted miles below the crag is the bone-filled [Vale of Pnath].")
             "Great Abyss"
-             (location
+             (place
               :name "Great Abyss"
               :summary
                "* The Great Abyss is a realm that lies below the ruins of Sarkomand and is possibly a massive cavern that joins with all parts of the underworld. It connects with the upper Dreamlands by a stairway in Sarkomand.
 * The Abyss is ruled by the god Nodens, who is served by the night-gaunts. Nodens' influence seems very languid in the underworld and does not appear to extend much beyond the Abyss itself; except perhaps to Ngranek on the isle of Oriab, whose upper slopes are guarded by his night-gaunts.")
             "Jungle of Kled"
-             (location
+             (place
               :name "Jungle of Kled"
               :summary
                "* Several abandoned ivory palaces are laid within Kled.
 * The perfumed Jungle of Kled can be reached by traveling North from the Enchanted Wood to Thran. At Thran a elephant caravan can be taken over land or a river boat can be taken to Hlanith where passage on a ship can be found to Kled.")
             "Library at Ultar"
-             (location
+             (place
               :name "Library at Ultar"
               :summary
                "* Library at Ultar - The Library is a great circular stone building. It is
@@ -137,13 +137,13 @@ magnification. The entire scene is splashed with blood, and below the
 painting is a metal bucket collecting the occasional drops of blood that fall
 from the painting.")
             "Peaks of Thok"
-             (location
+             (place
               :name "Peaks of Thok"
               :summary
                "* The Peaks of Thok (or Throk) is a frightening range of towering granite
 mountains in the underworld.")
             "Stony Desert"
-             (location
+             (place
               :name "Stony Desert"
               :summary
                "* The desert is a bleak and barren waste, dull gray in color, and lit by a
@@ -152,7 +152,7 @@ visible.
 * The Stony Desert lies north-west of Ultar. At the south end of the desert
 rises the mountain of the gods, Mt. Hatheg-Kla.")
             :Hatheg-Kla
-             (location
+             (place
               :name "Hatheg-Kla"
               :summary
                "* Approach - Hatheg-Kla lies in the [Stony Desert] which is covered with
@@ -172,13 +172,13 @@ a large dead tree with large birds flying about. The branchs are hung with
 many white globes. On closer examination, the birds are Byahkee and the globes
 are human skulls.")
             :Ultar
-             (location
+             (place
               :name "Ultar"
               :summary
                "* Ulthar - Ulthar is a pleasant city, well-known to dreamers for its ban on
 harming cats and the enormous number of cats that make Ulthar their home.")
             "Vale of Pnath"
-             (location
+             (place
               :name "Vale of Pnath"
               :summary
                "* The vale of Pnath (or Pnoth) is a vast pit in the underworld. It is flanked
@@ -188,7 +188,7 @@ the waking world cast the refuse of their feastings. Enormous worm-like
 dholes burrow through the vale. Night-gaunts often carry helpless victims to
 the vale, where they are left to die.")
             "Vaults of Zin"
-             (location
+             (place
               :name "Vaults of Zin"
               :summary
                "* The Vaults of Zin is a huge cavern in the underworld. It lies near the
@@ -452,7 +452,7 @@ convoluted ellipsoid where its head should be, covered with a multitude of very 
 of them are blurry and indistinct.  They can also fly unassisted through interstellar space at fantastic speeds.
 They dissolve shortly after death.
 * They seem to be highly focused on their scientific pursuits and are most often encountered in search of obscure
-minerals in remote locations.  Trespassers are usually eliminated, though they have been known to have human agents
+minerals in remote places.  Trespassers are usually eliminated, though they have been known to have human agents
 work on their behalf.
 * Mi-go have access to a number of advanced weapons.  The mist projector releases a cloud of frigid gas.  They have
 an organic 'armor' that humans can use, but it is extremely sticky and will damage the user each time it is removed.
@@ -874,7 +874,7 @@ to destroy any evidence, and fly back to the Moon.")))
                   :name "Investigating Colin Baxter"
                   :summary
                    "* Colin Baxter, Phillip's youngest child, is due a healthy piece of
-Phillip's estate, but he must be located first. His last known location
+Phillip's estate, but he must be located first. His last known place
 was St. Augstine, Florida. Judge Braddock is concerned with the series of
 bizarre occurences and hires the investigators to track Colin down and
 check on his safety.
@@ -902,7 +902,7 @@ Since then, Colin has been drinking his troubles away.
 * The inheritance money helps, but Colin is still short $2,000. He will
 offer the characters 50% of the profits if they chip in the money.
 * He believes that the wreck of the treasure galleon, La Rosaria can be
-found off Bimini. He claims to have an accurate map to the location. His
+found off Bimini. He claims to have an accurate map to the place. His
 map is hand copied from an original kept in the library of the 200 year
 old Spanish church.
 * Father Garcia - At the church they meet Father Garcia who is a friend of
@@ -912,7 +912,7 @@ admits to seeing figures moving in the dark on the church grounds, though
 he feels he must be imagining things. After gaining his trust, Father
 Garcia shares the church library. Though Colin's research is shoddy,
 futher research supports his findings that the map is an authentic map of
-the location of	the La Rosaria.")
+the place of	the La Rosaria.")
                 "Colin's Wreck"
                  (scenario
                   :name "Colin's Wreck"
@@ -922,7 +922,7 @@ bought and retrofitted for large scale salvage. The crew is mostly Cubans
 and blacks. As they depart, someone spots a reflection from the coast.
 Using binoculars, they see someone observing them back with binoculars
 before the person ducks away.
-* The Voyage - The map shows a location off Bimini, 300 miles south of St.
+* The Voyage - The map shows a place off Bimini, 300 miles south of St.
 Augustine. The voyage takes less than 24 hours on calm seas.
 * Diving - The diving pumps have enough pressure for no more than 2 divers
 at once. Wolff operates the pumps. Colin would prefer to dive with a
@@ -1350,7 +1350,7 @@ Kled.
 * Numerous ivory palaces dot the jungles. If the dreamers ask about the great
 pool mentioned in the Pnakotic Manuscripts, the guides recognize it as the
 Palace of the Sacred Fount.
-* Palace of the Sacred Fount - The palaces is one of the less feared locations,
+* Palace of the Sacred Fount - The palaces is one of the less feared places,
 though it is still avoided. As with other ivory palaces in Kled, the palace
 is somehow physically in perfect condition though the rooms are empty and the
 floors are thick with dirt and leaves. The smell in the area is a unique musky
@@ -1573,7 +1573,7 @@ for the dreamers help.")))
 * Colonel Hugh Huntley - Francis has arranged with the British Foreign Office to allow the investigators to travel to Lhasa, Tibet to aid him in his research. Colonel Huntley provides them with papers and can help arrange transport to the British Legation in Lhasa where Francis Wilson is staying.
 * Road to Lhasa - The 400 mile journey to Lhasa can only be taken on foot or via horse-drawn caravan. The route is heavily trafficked by pilgrims, traders, smugglers, and spies. The journey takes weeks and is alternately terrifying, boring, facinating, cold, and misery-making.
 * Lhasa - Lhasa is a sprawling squat city with no building taller than 2 stories except for the Potala, the home of the Dalai Lama. The Potala is a bulky, stone structure that is imposing but unattractive.
-* The British Legation - The Legation is on the outskirts of Lhasa. Here Francis Wilson has residence. He seems thinner and more stressed than at the funeral. He has been researching the Tunguska Blast and mad Rasputin's apparent presence at the blast. After piecing together his research, he illegally entered the Soviet Union and stole parts of Rasputin's journal. He then fled to Tibet through Mongolia. He has been translating sections since then. He claims that Rasputin met someone called Eibon in his dreams, and that this Eibon told him of his own death. Eibon also warned him of a dark star that would fall from the sky. This Eibon gave him a stone that he used to destoy the star. He further foretells another dark star that would fall long after Rasputin's death in Tibet. Francis guesses that the location may be near an abandoned temple roughly 300 miles north of Lhasa. He has found a guide Lha-bzang who studied in the temple as a child.
+* The British Legation - The Legation is on the outskirts of Lhasa. Here Francis Wilson has residence. He seems thinner and more stressed than at the funeral. He has been researching the Tunguska Blast and mad Rasputin's apparent presence at the blast. After piecing together his research, he illegally entered the Soviet Union and stole parts of Rasputin's journal. He then fled to Tibet through Mongolia. He has been translating sections since then. He claims that Rasputin met someone called Eibon in his dreams, and that this Eibon told him of his own death. Eibon also warned him of a dark star that would fall from the sky. This Eibon gave him a stone that he used to destoy the star. He further foretells another dark star that would fall long after Rasputin's death in Tibet. Francis guesses that the place may be near an abandoned temple roughly 300 miles north of Lhasa. He has found a guide Lha-bzang who studied in the temple as a child.
 * Lha-bzang - Francis plans to travel there soon with a native Tibetan, Lha-bzang. Lha-bzang is a domden, a Tibetan mortician. A skilled Anthropologist may recall that Tibetan funeral rites involve the corpse being hacked to bits by the axe-wielding domden and then fed to ravens or vultures. Lha-bzang's dream form is the holy man on the mountain. Lha-bzang is going on the journey to expand his spiritual understanding. Unfortunately, he has also been paid off by a Soviet spy. If questioned about the temple, he says he was sold as a slave as a child but he fled the temple when he realized that their teachings were not Buddhist.
 * Ivan Dorkyev - A Soviet spy who has been tracking Francis down since Francis stole Rasputin's journal in Leningrad. He is over 6 feet tall and is dressed in the tattered robes of a yak-herder. Beneath, he carries two pistols, a knife, and a bandolier of ammo. He hides at his camp in the mountains near the ruins waiting for Lha-bzang to bring Francis.
 * Trip to the Ruins - Lha-bzang leads the expedition 300 miles through a tangle of steep mountain passes, brackish lakes, and arid valleys. On the way, they encounter kay-herders, small mountain monasteries, and moutain farms. About 2 weeks in to the trip, while camped, a minor earth tremor shakes everyone awake. A week laker, they arrive at the Nenmka temple, sitting on the slope of a mountain.

@@ -97,16 +97,40 @@
   :name "Encounters"))
 
 (func deck-items : base/deck
- (base/deck
-  :name "Items"))
+ (let : base/deck
+  [itemmap : base/itemmap :=
+   (:itemmap tactics-all)
+   cardmap : base/cardmap :=
+    (map<-map : base/cardmap
+     itemmap)]
+  (base/deck
+   :name "Items"
+   :cardmap cardmap))
+ :doc "Items Deck")
 
 (func deck-places : base/deck
- (base/deck
-  :name "Places"))
+ (let : base/deck
+  [placemap : base/placemap :=
+   (:placemap tactics-all)
+   cardmap : base/cardmap :=
+    (map<-map : base/cardmap
+     placemap)]
+  (base/deck
+   :name "Places"
+   :cardmap cardmap))
+ :doc "Places Deck")
 
 (func deck-powers : base/deck
- (base/deck
-  :name "Powers"))
+ (let : base/deck
+  [powermap : base/powermap :=
+   (:powermap tactics-all)
+   cardmap : base/cardmap :=
+    (map<-map : base/cardmap
+     powermap)]
+  (base/deck
+   :name "Powers"
+   :cardmap cardmap))
+ :doc "Powers Deck")
 
 (func deck-setup : base/deck
  (base/deck
@@ -146,14 +170,24 @@
 
 (func deck-skills : base/deck
  (let : base/deck
-  [skillmap : base/skillmap := (:skillmap tactics-all)
-   cardmap  : base/cardmap  := (map<-map : base/cardmap
-                                skillmap)]
+  [skillmap : base/skillmap :=
+   (:skillmap tactics-all)
+   cardmap : base/cardmap :=
+    (map<-map : base/cardmap
+     skillmap)]
   (base/deck
    :name "Skills"
    :cardmap cardmap))
  :doc "Skills Deck")
 
 (func deck-units : base/deck
- (base/deck
-  :name "Units"))
+ (let : base/deck
+  [unitmap : base/unitmap :=
+   (:unitmap tactics-all)
+   cardmap : base/cardmap :=
+    (map<-map : base/cardmap
+     unitmap)]
+  (base/deck
+   :name "Units"
+   :cardmap cardmap))
+ :doc "Units Deck")
