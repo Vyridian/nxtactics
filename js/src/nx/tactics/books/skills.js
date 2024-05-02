@@ -129,7 +129,7 @@ export default class nx_tactics_books_skills {
               ":name",
               "Assassination",
               ":reference",
-              "Was it so easy?  Was it so simple?  You just pushed and death came?  Nothing spiritual about it...They just stopped\ntalking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows",
+              "Was it so easy? Was it so simple? You just pushed and death came? Nothing spiritual about it...They just stopped talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows",
               ":titles",
               "Assassin, Blackguard, Ninja, Shinobi",
               ":stat",
@@ -179,7 +179,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Poison Tolerance",
                   ":reference",
-                  "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an\nimmunity to iocane powder. - Princess Bride"
+                  "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an immunity to iocane powder. - Princess Bride"
                 ),
                 "Prepare Acid",
                 vx_core.f_new(
@@ -227,7 +227,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Balance",
                   ":summary",
-                  "* User has extensive experience balancing under difficult circumstances.\n* [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled,\nbalance is maintained. Movement is at half speed while balancing, but\nadditional [Hits] or [Criticals] improve movement speed by 10% each up to\nfull speed."
+                  "* User has extensive experience balancing under difficult circumstances.\n* [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled, balance is maintained. Movement is at half speed while balancing, but additional [Hits] or [Criticals] improve movement speed by 10% each up to full speed."
                 ),
                 ":Backflip",
                 vx_core.f_new(
@@ -243,7 +243,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Body Building",
                   ":summary",
-                  "* Character is distinctly powerful looking.\n* [Passive]: Unit may reroll any failed attempt to lift, push, or pull an\nobject."
+                  "* Character is distinctly powerful looking.\n* [Passive]: Unit may reroll any failed attempt to lift, push, or pull an object."
                 ),
                 ":Breakfall",
                 vx_core.f_new(
@@ -251,7 +251,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Breakfall",
                   ":summary",
-                  "* Reduces Critical Hits to Hits from impacts during Knockback,\nKnockdown, or Falling\n* [Reaction]"
+                  "* Reduces Critical Hits to Hits from impacts during Knockback, Knockdown, or Falling\n* [Reaction]"
                 ),
                 ":Contortion",
                 vx_core.f_new(
@@ -421,7 +421,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Team Acrobatics",
                   ":summary",
-                  "* Allows a number of people with this ability to work together to form\nhuman pyramids, human ladders, etc."
+                  "* Allows a number of people with this ability to work together to form human pyramids, human ladders, etc."
                 ),
                 ":Tightrope",
                 vx_core.f_new(
@@ -455,7 +455,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Vault",
                   ":summary",
-                  "* Move over a low obstacle with no reduction in speed.\n* [Action]: Move and ignore up to Level in movement penalties this turn from\nfences, barricades, and other low obstacles."
+                  "* Move over a low obstacle with no reduction in speed.\n* [Action]: Move and ignore up to Level in movement penalties this turn from fences, barricades, and other low obstacles."
                 ),
                 "Wall Climbing",
                 vx_core.f_new(
@@ -487,29 +487,7 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* Balance\n* Breakfall\n* Contortion\n* Escape Artistry\n* Gymnastics\n* High Jump\n* Kippup\n* Long Jump\n* Tightrope\n* Throw\n* Tumbling\n* Wall Spring\n* Zero G",
                   ":titles",
-                  "Acrobat, Contortionist, Escape Artist, Jester",
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_specialty,
-                          ":tag",
-                          "ability"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
+                  "Acrobat, Contortionist, Escape Artist, Jester"
                 ),
                 ":Climbing",
                 vx_core.f_new(
@@ -613,7 +591,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Bounty Hunter",
                   ":reference",
-                  "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and\nliked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway",
+                  "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway",
                   ":summary",
                   "* Bounty Hunting represents experience in stalking and capturing a target in an urban setting. This is traditionally done for money and can be quite profitable.\n* Bounties are placed on people for whom the law lacks the resources or inclination to pursue.\n* Bounties are placed by insurance companies, bail bondsmen, armies, the F.B.I., and individuals.\n* The reward can be paid for information, the capture of the target in a reasonably uninjured state, or even dead or alive.\n* The reward obviously needs to be commensurate with the difficulty or no one will take it. Capturing is harder than killing, so captures gain a bonus."
                 ),
@@ -751,9 +729,9 @@ export default class nx_tactics_books_skills {
               ":name",
               "Survival",
               ":summary",
-              "Common Survival Abilities\n* [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or\nSurvival roll.\n* [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty\nversus Body + Survival or gain Black [Exhaustion] Tokens.",
+              "Common Survival Abilities\n* [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or Survival roll.\n* [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty versus Body + Survival or gain Black [Exhaustion] Tokens.",
               ":titles",
-              "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Seeker, Sentry, Survivalist, Trailblazer, Traveller,\nWanderer, Wayfarer",
+              "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Seeker, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer",
               ":stat",
               "Defense",
               ":abilitymap",
@@ -797,7 +775,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Foraging",
                   ":summary",
-                  "* [Action]: This ability can be used to forage for 1 man day of food and water for each [Hit]. Such food will\ntypically be disgusting to those unaccustomed to the local cuisine, but it will sustain.  Excess food only\nlasts for 1 additional day before going bad.  Excess water can be transfered to containers if any, otherwise it\ncannot be carried.  [Critical Hit]s provide a particularly tasty, convenient, or useful source of nutrition\n(e.g. water in bamboo that can be carried, food that will last another day or more)."
+                  "* [Action]: This ability can be used to forage for 1 man day of food and water for each [Hit]. Such food will typically be disgusting to those unaccustomed to the local cuisine, but it will sustain. Excess food only lasts for 1 additional day before going bad. Excess water can be transfered to containers if any, otherwise it cannot be carried. [Critical Hit]s provide a particularly tasty, convenient, or useful source of nutrition (e.g. water in bamboo that can be carried, food that will last another day or more)."
                 ),
                 ":Forestry",
                 vx_core.f_new(
@@ -807,7 +785,7 @@ export default class nx_tactics_books_skills {
                   ":reference",
                   "Tin Man",
                   ":summary",
-                  "* This ability is used to avoid or mitigate the common hazards encountered while delving into\nthe forest.  This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 2 [Forest] spaces\n* [Action]: [+1 Stealth] in [Woods]\n* [Defense]: [+1 Defense] vs Ranged in [Woods]",
+                  "* This ability is used to avoid or mitigate the common hazards encountered while delving into the forest.  This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 2 [Forest] spaces\n* [Action]: [+1 Stealth] in [Woods]\n* [Defense]: [+1 Defense] vs Ranged in [Woods]",
                   ":titles",
                   "Forest Lord, Logger, Lumberjack, Pathcutter, Ranger, Warden, Woodcutter, Woodsman"
                 ),
@@ -825,7 +803,7 @@ export default class nx_tactics_books_skills {
                   ":reference",
                   "Tarzan",
                   ":summary",
-                  "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle.  This\ncan also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 1 [Jungle] space\n* [Action]: [+1 Stealth] in [Jungle]\n* [Defense]: [+1 Defense] vs Ranged in [Jungle]",
+                  "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle. This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 1 [Jungle] space\n* [Action]: [+1 Stealth] in [Jungle]\n* [Defense]: [+1 Defense] vs Ranged in [Jungle]",
                   ":titles",
                   "Jungle Dweller, Lord of the Jungle"
                 ),
@@ -843,7 +821,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Swamp Survival",
                   ":summary",
-                  "* This ability is used to avoid or mitigate the common hazards encountered while delving into\nswampland.  This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 1 [Swamp] space\n* [Action]: [+1 Stealth] in [Swamp]\n* [Defense]: [+1 Defense] vs Ranged in [Swamp]",
+                  "* This ability is used to avoid or mitigate the common hazards encountered while delving into swampland. This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 1 [Swamp] space\n* [Action]: [+1 Stealth] in [Swamp]\n* [Defense]: [+1 Defense] vs Ranged in [Swamp]",
                   ":titles",
                   "Murk Dweller, Murk Lord, Swamp Lord, Swamp Knight, Swamp Thing"
                 ),
@@ -905,7 +883,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Architecture",
                   ":summary",
-                  "* [Extended Action]: Design a structure. The size and quality of the\nstructure are limited by level.\n* [Action]: Determine weaknesses of a structure.",
+                  "* [Extended Action]: Design a structure. The size and quality of the structure are limited by level.\n* [Action]: Determine weaknesses of a structure.",
                   ":titles",
                   "Architect"
                 ),
@@ -1079,7 +1057,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Sewing",
                   ":summary",
-                  "* Crochet\n* Embroidery\n* Fashion Clothing\n* Needlepoint\n* Repair Cloth",
+                  "* Crochet\n               * Embroidery\n               * Fashion Clothing\n               * Needlepoint\n               * Repair Cloth",
                   ":titles",
                   "Dressmaker, Seamstress"
                 ),
@@ -1195,7 +1173,7 @@ export default class nx_tactics_books_skills {
               ":name",
               "Piloting",
               ":summary",
-              "* The Jink and Barrel Roll maneuvers simply make it harder for the plane to be hit.\n* The Half Loop, Wingover, and Falling Leaf are all attempts to loose an enemy that's tailing you.\n* The Loop, Immelman, and Retournment are all attempts to both loose a tail, abd to end up tailing that foe\nyourself.\n* When a 'dogged' plane attempts a maneuver to escape his tail the pilot needs to succeed in the maneuver.  If he\nfails his roll, then he's still being tailed, if he succeeds, then the tailing pilot gets to attempt the same\nmaneuver (as a 'free' action at full dice pool) - if the 'tail' matches or exceeds the successes rolled by the\ntarget plane's pilot, then the tail is maintained for another turn.\n* When a dogged plane attempts a 'reversal' maneuver the effects are the same, except that if the tailing plane\nscores less successes than the target plane, the roles are reversed.",
+              "* The Jink and Barrel Roll maneuvers simply make it harder for the plane to be hit.\n* The Half Loop, Wingover, and Falling Leaf are all attempts to loose an enemy that's tailing you.\n* The Loop, Immelman, and Retournment are all attempts to both loose a tail, abd to end up tailing that foe yourself.\n* When a 'dogged' plane attempts a maneuver to escape his tail the pilot needs to succeed in the maneuver. If he fails his roll, then he's still being tailed, if he succeeds, then the tailing pilot gets to attempt the same maneuver (as a 'free' action at full dice pool) - if the 'tail' matches or exceeds the successes rolled by the target plane's pilot, then the tail is maintained for another turn.\n* When a dogged plane attempts a 'reversal' maneuver the effects are the same, except that if the tailing plane scores less successes than the target plane, the roles are reversed.",
               ":titles",
               "Aviator, Pilot, Sky Captain, Sky Knight, Sky Marshall, Wing Commander, Wingman",
               ":abilitymap",
@@ -1207,7 +1185,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Barn Storming",
                   ":summary",
-                  "* Low altitude flying that uses ground cover to block line of sight.  Naturally, this manuever\ncan be extremely dangerous.",
+                  "* Low altitude flying that uses ground cover to block line of sight.  Naturally, this manuever can be extremely dangerous.",
                   ":titles",
                   "Nape of the Earth"
                 ),
@@ -1243,7 +1221,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Circle of Death",
                   ":summary",
-                  "A Russian WWII maneuver when attacking ground forces that attacks the column from the rear, then circles\naround to make repeated rear attacks until all weapons were expended."
+                  "A Russian WWII maneuver when attacking ground forces that attacks the column from the rear, then circles around to make repeated rear attacks until all weapons were expended."
                 ),
                 "Close Air Support",
                 vx_core.f_new(
@@ -1265,7 +1243,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Falling Leaf",
                   ":summary",
-                  "The pilot deliberately stalls, sending it into a spinning fall, only to restart the engine and\nlevel off."
+                  "The pilot deliberately stalls, sending it into a spinning fall, only to restart the engine and level off."
                 ),
                 "Fly Out of the Sun",
                 vx_core.f_new(
@@ -1295,7 +1273,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Half Loop",
                   ":summary",
-                  "The pilot pulls up and over, as if he was going to loop the aircraft, but adds a half-roll to right the plane\nat the top of the loop to continue level flight in the opposite direction to that which he started."
+                  "The pilot pulls up and over, as if he was going to loop the aircraft, but adds a half-roll to right the plane at the top of the loop to continue level flight in the opposite direction to that which he started."
                 ),
                 "Immelmann Turn",
                 vx_core.f_new(
@@ -1303,7 +1281,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Immelmann Turn",
                   ":summary",
-                  "The Immelmann turn has become one of the most popular airshow maneuvers in the world.  However, the aerobatic\nmaneuver is altogether different from the WWI Immelmann turn (See Wingover) and is of little use in modern\ndogfighting.",
+                  "The Immelmann turn has become one of the most popular airshow maneuvers in the world. However, the aerobatic maneuver is altogether different from the WWI Immelmann turn (See Wingover) and is of little use in modern dogfighting.",
                   ":titles",
                   "Roll Off the Top"
                 ),
@@ -1329,7 +1307,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Loop",
                   ":summary",
-                  "* The pilot pulls the plane up and over in a complete circle, ending up in the same position and facing that he\nstarted."
+                  "* The pilot pulls the plane up and over in a complete circle, ending up in the same position and facing that he started."
                 ),
                 "Pull Out of a Dive",
                 vx_core.f_new(
@@ -1349,7 +1327,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Split S",
                   ":summary",
-                  "A diving maneuver mostly used to disengage.  The pilot half-rolls his aircraft inverted and executes a\ndescending half-loop, resulting in level flight in the exact opposite direction at a lower altitude.",
+                  "A diving maneuver mostly used to disengage. The pilot half-rolls his aircraft inverted and executes a descending half-loop, resulting in level flight in the exact opposite direction at a lower altitude.",
                   ":titles",
                   "Reverse Immelmann"
                 ),
@@ -1385,7 +1363,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Wing Over",
                   ":reference",
-                  "Performed by an experienced flyer, this maneuver can surprise a pursuer by quickly reversing on them.  If you\nhave the distance lead in a chase, you can use this to convert from a defensive posture to an offensive one.\nThe trick is not to get shot up when you are reversing.",
+                  "Performed by an experienced flyer, this maneuver can surprise a pursuer by quickly reversing on them. If you have the distance lead in a chase, you can use this to convert from a defensive posture to an offensive one. The trick is not to get shot up when you are reversing.",
                   ":titles",
                   "Immelmann Turn, Retournment"
                 ),
@@ -1433,6 +1411,22 @@ export default class nx_tactics_books_skills {
               ":abilitymap",
               vx_core.f_new(
                 nx_tactics_base.t_abilitymap,
+                "Bareback",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Bareback",
+                  ":summary",
+                  "* Can ride without a saddle without penalty."
+                ),
+                "Bull Riding",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Bull Riding",
+                  ":summary",
+                  "* While riding a hostile creature, the Scale of the creature considered to be one less for you."
+                ),
                 "Catabatan Circle",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
@@ -1467,7 +1461,9 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
-                  "Horse Archery"
+                  "Horse Archery",
+                  ":summary",
+                  "Can use a bow while riding without penalty."
                 ),
                 "Run Down",
                 vx_core.f_new(
@@ -1476,6 +1472,14 @@ export default class nx_tactics_books_skills {
                   "Run Down",
                   ":summary",
                   "* [Damage]: +1 Damage when attacking from the rear.\n* [Attack], [Damage]: Any [Critical Hits] may be [Retreats]"
+                ),
+                "Side Saddle",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Side Saddle",
+                  ":summary",
+                  "* Can ride side saddle without penalty."
                 ),
                 "Steed Trample",
                 vx_core.f_new(
@@ -1491,7 +1495,7 @@ export default class nx_tactics_books_skills {
               ":name",
               "Seamanship",
               ":summary",
-              "The art of operating a ship or boat including specialised skills such as: navigation and international maritime\nlaw; weather, meteorology and forecasting; watchstanding; ship-handling and small boat handling; operation of deck\nequipment, anchors and cables; ropework and line handling; communications; sailing; engines; execution of\nevolutions such as towing; cargo handling equipment, dangerous cargoes and cargo storage; dealing with\nemergencies; survival at sea and search and rescue; fire fighting.\n\nThe degree of knowledge needed within these areas is dependent upon the nature of the work.  However, the practice\nof good seamanship should be the goal of all.",
+              "The art of operating a ship or boat including specialised skills such as: navigation and international maritime law; weather, meteorology and forecasting; watchstanding; ship-handling and small boat handling; operation of deck equipment, anchors and cables; ropework and line handling; communications; sailing; engines; execution of evolutions such as towing; cargo handling equipment, dangerous cargoes and cargo storage; dealing with emergencies; survival at sea and search and rescue; fire fighting.\n\nThe degree of knowledge needed within these areas is dependent upon the nature of the work. However, the practice of good seamanship should be the goal of all.",
               ":titles",
               "Admiral, Capitan, Commodore, First Officer, Navigator, Pirate, Sailor, Seaman, Ship's Mate",
               ":abilitymap",
@@ -1639,7 +1643,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "AI Programming",
                   ":summary",
-                  "* Artificial Intelligences may be given skills if the designer also\npossesses that skill. AI skill rolls are not open-ended."
+                  "* Artificial Intelligences may be given skills if the designer also possesses that skill. AI skill rolls are not open-ended."
                 ),
                 "Computer Engineering",
                 vx_core.f_new(
@@ -1691,7 +1695,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Ghost in the Machine",
                   ":summary",
-                  "* By digitizing one's personality at the moment of death, a person can gain a semblance of\nimmortality.  A new program is created that is an replica of the original.  Successes\ndetermine how close a copy it is to the original.  10 successes is a perfect copy."
+                  "* By digitizing one's personality at the moment of death, a person can gain a semblance of immortality. A new program is created that is an replica of the original. Successes determine how close a copy it is to the original. 10 successes is a perfect copy."
                 ),
                 ":Hacking",
                 vx_core.f_new(
@@ -1791,7 +1795,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Electrical Overload",
                   ":summary",
-                  "* Burn out a small part of a system. The system becomes unusable until\nthe fault is found and corrected."
+                  "* Burn out a small part of a system. The system becomes unusable until the fault is found and corrected."
                 ),
                 "Electronic Bypass",
                 vx_core.f_new(
@@ -3907,9 +3911,9 @@ export default class nx_tactics_books_skills {
               ":name",
               "Faith",
               ":reference",
-              "The argument goes something like this: 'I refuse to prove that I exist,' says God, 'for proof denies faith, and\nwithout faith I am nothing.'  'But,' says Man, 'The Babel fish is a dead giveaway, isn't it?  It could not have\nevolved by chance.  It proves you exist, and so therefore, by your own arguments, you don't. QED.' - Hitchhiker's\nGuide to the Galaxy",
+              "The argument goes something like this: 'I refuse to prove that I exist,' says God, 'for proof denies faith, and without faith I am nothing.' 'But,' says Man, 'The Babel fish is a dead giveaway, isn't it? It could not have evolved by chance. It proves you exist, and so therefore, by your own arguments, you don't. QED.' - Hitchhiker's Guide to the Galaxy",
               ":titles",
-              "Abbot, Absolver, Archbishop, Bishop, Cardinal, Cleric, Ceremonial Guard, Gakusho, Missionary, Paladin, Priest, Redeemer,\nSin	Eater, Theologist, Theurge, Theurgy",
+              "Abbot, Absolver, Archbishop, Bishop, Cardinal, Cleric, Ceremonial Guard, Gakusho, Missionary, Paladin, Priest, Redeemer, Sin	Eater, Theologist, Theurge, Theurgy",
               ":abilitymap",
               vx_core.f_new(
                 nx_tactics_base.t_abilitymap,
@@ -3925,7 +3929,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Affirmation",
                   ":summary",
-                  "An affirmation is a statement designed to have a positive effect on the conscious mind when\nrepeated at frequent intervals throughout meditation ritual spells."
+                  "An affirmation is a statement designed to have a positive effect on the conscious mind when repeated at frequent intervals throughout meditation ritual spells."
                 ),
                 ":Atonement",
                 vx_core.f_new(
@@ -3939,7 +3943,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Blessing",
                   ":summary",
-                  "* A simple incantation with a variety of subtle effects.\n* [Action]: Touch. Target gains a new Blessing Token (max 1).  At any time, the target may\nremove the token and gain +1 on any Defense roll.\n* [Duration]: up to 1 day/level."
+                  "* A simple incantation with a variety of subtle effects.\n* [Action]: Touch. Target gains a new Blessing Token (max 1).  At any time, the target may remove the token and gain +1 on any Defense roll.\n* [Duration]: up to 1 day/level."
                 ),
                 ":Chant",
                 vx_core.f_new(
@@ -3961,7 +3965,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Consecration",
                   ":summary",
-                  "* To consecrate is to solemnly dedicate or devote something or someone to a sacred purpose, to\ncleanse and protect."
+                  "* To consecrate is to solemnly dedicate or devote something or someone to a sacred purpose, to cleanse and protect."
                 ),
                 ":Contemplation",
                 vx_core.f_new(
@@ -3969,7 +3973,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Contemplation",
                   ":summary",
-                  "* Contemplation is a focused and disiplined form of contemplation or reflecting, whereby one is\nable to alter an emotional state and to receive self-insight."
+                  "* Contemplation is a focused and disiplined form of contemplation or reflecting, whereby one is able to alter an emotional state and to receive self-insight."
                 ),
                 ":Conversion",
                 vx_core.f_new(
@@ -3983,7 +3987,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Dedication",
                   ":summary",
-                  "* [Death]: Unit enters specified Deity's realm.  It is not substantiated that this ability\nactually works.  Those who have crossed over are changed and may not and will not return."
+                  "* [Death]: Unit enters specified Deity's realm.  It is not substantiated that this ability actually works. Those who have crossed over are changed and may not and will not return."
                 ),
                 ":Drumming",
                 vx_core.f_new(
@@ -3991,7 +3995,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Drumming",
                   ":summary",
-                  "* Drumming is literally pounding on a surface.  This is used to raise power and to change\nemotional states."
+                  "* Drumming is literally pounding on a surface.  This is used to raise power and to change emotional states."
                 ),
                 ":Excommunication",
                 vx_core.f_new(
@@ -4005,7 +4009,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Initiation",
                   ":summary",
-                  "* Used to describe the profound spiritual experience that occurs when one's unity with Deity\nand the Universe is realised; when one is welcomed as a fully-fledged member of a particular\ngroup; and the celebration of a successful ritual."
+                  "* Used to describe the profound spiritual experience that occurs when one's unity with Deity and the Universe is realised; when one is welcomed as a fully-fledged member of a particular group; and the celebration of a successful ritual."
                 ),
                 ":Marriage",
                 vx_core.f_new(
@@ -4061,7 +4065,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Sin Eating",
                   ":summary",
-                  "* A willing subject may describe his dark desires, the Sin Eater then\nrepeats the description replacing references to the subject with himself.\nAfter the ritual is complete, the subject will not feel the urges so\nstrongly. Instead the Sin Eater will feel those emotions. If he acts on\nthem, even symbolically, his [Shadow] gains power. If he can resolve them,\nhe gains experience."
+                  "* A willing subject may describe his dark desires, the Sin Eater then repeats the description replacing references to the subject with himself. After the ritual is complete, the subject will not feel the urges so strongly. Instead the Sin Eater will feel those emotions. If he acts on them, even symbolically, his [Shadow] gains power. If he can resolve them, he gains experience."
                 )
               )
             ),
@@ -4071,9 +4075,9 @@ export default class nx_tactics_books_skills {
               ":name",
               "Influence",
               ":reference",
-              "* Many men, of course, became extremely rich, and this was perfectly natural and nothing to be ashamed of\nbecause no one was really poor, at least no one worth speaking of. - Hitchhiker's Guide to the Galaxy",
+              "* Many men, of course, became extremely rich, and this was perfectly natural and nothing to be ashamed of because no one was really poor, at least no one worth speaking of. - Hitchhiker's Guide to the Galaxy",
               ":titles",
-              "Aristocrat, Baron, Baroness, Baronet, Celebrity, Count, Countess, Daimyo, Dame, Duchess, Duke, Emperor,\nEmpress, King, Knight, Lord, Marchioness, Marquis, Matriarch, Monarch, Patriarch, Pontif, Prince, Princess,\nQueen, Regina, Sire, Sovereign, Star",
+              "Aristocrat, Baron, Baroness, Baronet, Celebrity, Count, Countess, Daimyo, Dame, Duchess, Duke, Emperor, Empress, King, Knight, Lord, Marchioness, Marquis, Matriarch, Monarch, Patriarch, Pontif, Prince, Princess, Queen, Regina, Regis, Sire, Sovereign, Star",
               ":abilitymap",
               vx_core.f_new(
                 nx_tactics_base.t_abilitymap,
@@ -4121,7 +4125,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Fame",
                   ":summary",
-                  "* Your reputation precedes you. People are drawn to the famous and will often do extraordinary things\nto be near them.\n* [Synergy]: [Seduction]\n* [Action]: Leverage your fame to gain minor free goods or services including upgraded lodging, free\nmeals, audience with nobles, etc."
+                  "* Your reputation precedes you. People are drawn to the famous and will often do extraordinary things to be near them.\n* [Synergy]: [Seduction]\n* [Action]: Leverage your fame to gain minor free goods or services including upgraded lodging, free meals, audience with nobles, etc."
                 ),
                 "Family Ties",
                 vx_core.f_new(
@@ -4157,7 +4161,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Infamy",
                   ":summary",
-                  "* Your dark reputation precedes you. People are intrigued by the infamous and will often do extraordinary\nthings in fear and facination of them.\n* [Synergy]: [Intimidation]\n* [Action]: Leverage your infamy to gain minor free goods or services including upgraded lodging, free\nmeals, etc."
+                  "* Your dark reputation precedes you. People are intrigued by the infamous and will often do extraordinary things in fear and facination of them.\n* [Synergy]: [Intimidation]\n* [Action]: Leverage your infamy to gain minor free goods or services including upgraded lodging, free meals, etc."
                 ),
                 ":Intrigue",
                 vx_core.f_new(

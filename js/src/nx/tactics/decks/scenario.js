@@ -132,41 +132,13 @@ export default class nx_tactics_decks_scenario {
           nx_tactics_base.f_cardmap_from_cardlist(
             vx_core.f_new(
               nx_tactics_base.t_cardlist,
-              nx_tactics_decks_scenario.f_unit_jesaveer(),
-              nx_tactics_decks_scenario.f_unit_jonaveer(),
-              nx_tactics_decks_scenario.f_unit_xeibhanower(),
-              nx_tactics_decks_scenario.f_unit_wilmducon(),
-              nx_tactics_decks_scenario.f_unit_liliducon(),
-              nx_tactics_decks_scenario.f_unit_wilddog(),
-              nx_tactics_decks_scenario.f_unit_goblinscout(),
-              nx_tactics_decks_scenario.f_unit_horse(),
-              nx_tactics_decks_scenario.f_unit_woodencart(),
-              nx_tactics_decks_scenario.f_item_armor_leathercuirass(),
-              nx_tactics_decks_scenario.f_item_axehand(),
-              nx_tactics_decks_scenario.f_item_woodaxe(),
-              nx_tactics_decks_scenario.f_item_barehanded(),
-              nx_tactics_decks_scenario.f_item_bowshort(),
-              nx_tactics_decks_scenario.f_item_dagger(),
-              nx_tactics_decks_scenario.f_item_hammer(),
-              nx_tactics_decks_scenario.f_item_shieldbuckler(),
-              nx_tactics_decks_scenario.f_item_shieldheater(),
-              nx_tactics_decks_scenario.f_item_shieldround(),
-              nx_tactics_decks_scenario.f_item_spear(),
-              nx_tactics_decks_scenario.f_item_spearshort(),
-              nx_tactics_decks_scenario.f_item_swordlong(),
-              nx_tactics_decks_scenario.f_place_field(),
-              nx_tactics_decks_scenario.f_place_forest(),
-              nx_tactics_decks_scenario.f_place_mountain(),
-              nx_tactics_decks_scenario.f_place_blacksmith(),
-              nx_tactics_decks_scenario.f_place_campsite(),
-              nx_tactics_decks_scenario.f_place_cavemouth(),
-              nx_tactics_decks_scenario.f_place_farmhouse(),
-              nx_tactics_decks_scenario.f_place_guardpost(),
-              nx_tactics_decks_scenario.f_place_mill(),
+              nx_tactics_decks_scenario.f_item_coppercoins(),
+              nx_tactics_decks_scenario.f_item_silvercoins(),
+              nx_tactics_decks_scenario.f_item_goldcoins(),
+              nx_tactics_decks_scenario.f_item_platinumcoins(),
+              nx_tactics_decks_scenario.f_place_gravelroad(),
               nx_tactics_decks_scenario.f_place_stoneroad(),
-              nx_tactics_decks_scenario.f_place_tavern(),
-              nx_tactics_decks_scenario.f_place_temple(),
-              nx_tactics_decks_scenario.f_place_tradingpost()
+              nx_tactics_decks_scenario.f_place_woodenhall()
             )
           )
         )
@@ -294,6 +266,36 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function item_coppercoins
+   * @return {item}
+   */
+  static t_item_coppercoins = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_coppercoins = {
+    vx_type: nx_tactics_decks_scenario.t_item_coppercoins
+  }
+
+  // (func item-coppercoins)
+  static f_item_coppercoins() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Copper Coins",
+      ":image",
+      "images/cards/item-coppercoins.svg",
+      ":summary",
+      "* A few (~5=$5) coins.\n* A pauper's wealth.\n* 10 Copper = 1 Silver\n* Cheap meal, 2 cheap drinks, night in a common room, a nice tip.",
+      ":body",
+      "5x-2",
+      ":mass",
+      "50g/.1lb"
+    )
+    return output
+  }
+
+  /**
    * @function item_dagger
    * @return {item}
    */
@@ -326,6 +328,36 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function item_goldcoins
+   * @return {item}
+   */
+  static t_item_goldcoins = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_goldcoins = {
+    vx_type: nx_tactics_decks_scenario.t_item_goldcoins
+  }
+
+  // (func item-goldcoins)
+  static f_item_goldcoins() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Gold Coins",
+      ":image",
+      "images/cards/item-goldcoins.svg",
+      ":summary",
+      "* A few (~5=$500) coins.\n* A tidy sum.\n* 10 Silver = 1 Gold\n* 10 Gold = 1 Platinum\n* A piece of quality gear.",
+      ":body",
+      "10x-2",
+      ":mass",
+      "150g/.3lb"
+    )
+    return output
+  }
+
+  /**
    * @function item_hammer
    * @return {item}
    */
@@ -351,6 +383,36 @@ export default class nx_tactics_decks_scenario {
       "2x0",
       ":mass",
       "2kg/4.4lb"
+    )
+    return output
+  }
+
+  /**
+   * @function item_platinumcoins
+   * @return {item}
+   */
+  static t_item_platinumcoins = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_platinumcoins = {
+    vx_type: nx_tactics_decks_scenario.t_item_platinumcoins
+  }
+
+  // (func item-platinumcoins)
+  static f_item_platinumcoins() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Platinum Coins",
+      ":image",
+      "images/cards/item-platinumcoins.svg",
+      ":summary",
+      "* A few (~5=$5000) coins.\n* A small fortune.\n* 10 Gold = 1 Platinum\n* A piece of extremely high quality or magical gear.",
+      ":body",
+      "10x-2",
+      ":mass",
+      "150g/.3lb"
     )
     return output
   }
@@ -441,6 +503,36 @@ export default class nx_tactics_decks_scenario {
       "5x0",
       ":mass",
       "5kg/11lb"
+    )
+    return output
+  }
+
+  /**
+   * @function item_silvercoins
+   * @return {item}
+   */
+  static t_item_silvercoins = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_silvercoins = {
+    vx_type: nx_tactics_decks_scenario.t_item_silvercoins
+  }
+
+  // (func item-silvercoins)
+  static f_item_silvercoins() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Silver Coins",
+      ":image",
+      "images/cards/item-silvercoins.svg",
+      ":summary",
+      "* A few (~5=$50) coins.\n* Spending money.\n* 10 Copper = 1 Silver\n* 10 Silver = 1 Gold\n* 2 nice meals, 3 bottles wine, round of drinks, a private room, week supplies, cheap gear.",
+      ":body",
+      "10x-2",
+      ":mass",
+      "100g/.2lb"
     )
     return output
   }
@@ -640,6 +732,30 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function place_dirtpath
+   * @return {place}
+   */
+  static t_place_dirtpath = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_dirtpath = {
+    vx_type: nx_tactics_decks_scenario.t_place_dirtpath
+  }
+
+  // (func place-dirtpath)
+  static f_place_dirtpath() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Dirt Path",
+      ":image",
+      "images/cards/place-dirtpath.svg"
+    )
+    return output
+  }
+
+  /**
    * @function place_farmhouse
    * @return {place}
    */
@@ -712,6 +828,30 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function place_gravelroad
+   * @return {place}
+   */
+  static t_place_gravelroad = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_gravelroad = {
+    vx_type: nx_tactics_decks_scenario.t_place_gravelroad
+  }
+
+  // (func place-gravelroad)
+  static f_place_gravelroad() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Gravel Road",
+      ":image",
+      "images/cards/place-gravelroad.svg"
+    )
+    return output
+  }
+
+  /**
    * @function place_guardpost
    * @return {place}
    */
@@ -731,6 +871,30 @@ export default class nx_tactics_decks_scenario {
       "Guardpost",
       ":image",
       "images/cards/place-guardpost.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_horsestables
+   * @return {place}
+   */
+  static t_place_horsestables = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_horsestables = {
+    vx_type: nx_tactics_decks_scenario.t_place_horsestables
+  }
+
+  // (func place-horsestables)
+  static f_place_horsestables() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Horse Stables",
+      ":image",
+      "images/cards/place-horsestables.svg"
     )
     return output
   }
@@ -832,6 +996,126 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function place_tavern_bar
+   * @return {place}
+   */
+  static t_place_tavern_bar = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_tavern_bar = {
+    vx_type: nx_tactics_decks_scenario.t_place_tavern_bar
+  }
+
+  // (func place-tavern-bar)
+  static f_place_tavern_bar() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Tavern Bar",
+      ":image",
+      "images/cards/place-tavern-bar.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_tavern_bedroom
+   * @return {place}
+   */
+  static t_place_tavern_bedroom = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_tavern_bedroom = {
+    vx_type: nx_tactics_decks_scenario.t_place_tavern_bedroom
+  }
+
+  // (func place-tavern-bedroom)
+  static f_place_tavern_bedroom() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Tavern Bedroom",
+      ":image",
+      "images/cards/place-tavern-bedroom.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_tavern_common
+   * @return {place}
+   */
+  static t_place_tavern_common = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_tavern_common = {
+    vx_type: nx_tactics_decks_scenario.t_place_tavern_common
+  }
+
+  // (func place-tavern-common)
+  static f_place_tavern_common() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Tavern Common",
+      ":image",
+      "images/cards/place-tavern-common.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_tavern_dining
+   * @return {place}
+   */
+  static t_place_tavern_dining = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_tavern_dining = {
+    vx_type: nx_tactics_decks_scenario.t_place_tavern_dining
+  }
+
+  // (func place-tavern-dining)
+  static f_place_tavern_dining() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Tavern Dining",
+      ":image",
+      "images/cards/place-tavern-dining.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_tavern_stairs
+   * @return {place}
+   */
+  static t_place_tavern_stairs = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_tavern_stairs = {
+    vx_type: nx_tactics_decks_scenario.t_place_tavern_stairs
+  }
+
+  // (func place-tavern-stairs)
+  static f_place_tavern_stairs() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Tavern Stairs",
+      ":image",
+      "images/cards/place-tavern-stairs.svg"
+    )
+    return output
+  }
+
+  /**
    * @function place_temple
    * @return {place}
    */
@@ -875,6 +1159,30 @@ export default class nx_tactics_decks_scenario {
       "Trading Post",
       ":image",
       "images/cards/place-tradingpost.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function place_woodenhall
+   * @return {place}
+   */
+  static t_place_woodenhall = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_woodenhall = {
+    vx_type: nx_tactics_decks_scenario.t_place_woodenhall
+  }
+
+  // (func place-woodenhall)
+  static f_place_woodenhall() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new(
+      nx_tactics_base.t_place,
+      ":name",
+      "Wooden Hall",
+      ":image",
+      "images/cards/place-woodenhall.svg"
     )
     return output
   }
@@ -991,11 +1299,11 @@ export default class nx_tactics_decks_scenario {
       ":will",
       "2x1",
       ":move",
-      "4x1",
+      "5x1",
       ":mass",
       "450kg/1000lb",
       ":speedland",
-      "40kph/25mph",
+      "50kph/30mph",
       ":demeanor",
       "Aloof",
       ":nature",
@@ -1305,7 +1613,7 @@ export default class nx_tactics_decks_scenario {
       ":height",
       "76cm/30in",
       ":speedland",
-      "70kph/44mph",
+      "70kph/37mph",
       ":nature",
       "Dogged",
       ":unitskillmap",
@@ -1538,11 +1846,15 @@ export default class nx_tactics_decks_scenario {
       "item-axehand": nx_tactics_decks_scenario.e_item_axehand,
       "item-barehanded": nx_tactics_decks_scenario.e_item_barehanded,
       "item-bowshort": nx_tactics_decks_scenario.e_item_bowshort,
+      "item-coppercoins": nx_tactics_decks_scenario.e_item_coppercoins,
       "item-dagger": nx_tactics_decks_scenario.e_item_dagger,
+      "item-goldcoins": nx_tactics_decks_scenario.e_item_goldcoins,
       "item-hammer": nx_tactics_decks_scenario.e_item_hammer,
+      "item-platinumcoins": nx_tactics_decks_scenario.e_item_platinumcoins,
       "item-shieldbuckler": nx_tactics_decks_scenario.e_item_shieldbuckler,
       "item-shieldheater": nx_tactics_decks_scenario.e_item_shieldheater,
       "item-shieldround": nx_tactics_decks_scenario.e_item_shieldround,
+      "item-silvercoins": nx_tactics_decks_scenario.e_item_silvercoins,
       "item-spear": nx_tactics_decks_scenario.e_item_spear,
       "item-spearshort": nx_tactics_decks_scenario.e_item_spearshort,
       "item-swordlong": nx_tactics_decks_scenario.e_item_swordlong,
@@ -1550,16 +1862,25 @@ export default class nx_tactics_decks_scenario {
       "place-blacksmith": nx_tactics_decks_scenario.e_place_blacksmith,
       "place-campsite": nx_tactics_decks_scenario.e_place_campsite,
       "place-cavemouth": nx_tactics_decks_scenario.e_place_cavemouth,
+      "place-dirtpath": nx_tactics_decks_scenario.e_place_dirtpath,
       "place-farmhouse": nx_tactics_decks_scenario.e_place_farmhouse,
       "place-field": nx_tactics_decks_scenario.e_place_field,
       "place-forest": nx_tactics_decks_scenario.e_place_forest,
+      "place-gravelroad": nx_tactics_decks_scenario.e_place_gravelroad,
       "place-guardpost": nx_tactics_decks_scenario.e_place_guardpost,
+      "place-horsestables": nx_tactics_decks_scenario.e_place_horsestables,
       "place-mill": nx_tactics_decks_scenario.e_place_mill,
       "place-mountain": nx_tactics_decks_scenario.e_place_mountain,
       "place-stoneroad": nx_tactics_decks_scenario.e_place_stoneroad,
       "place-tavern": nx_tactics_decks_scenario.e_place_tavern,
+      "place-tavern-bar": nx_tactics_decks_scenario.e_place_tavern_bar,
+      "place-tavern-bedroom": nx_tactics_decks_scenario.e_place_tavern_bedroom,
+      "place-tavern-common": nx_tactics_decks_scenario.e_place_tavern_common,
+      "place-tavern-dining": nx_tactics_decks_scenario.e_place_tavern_dining,
+      "place-tavern-stairs": nx_tactics_decks_scenario.e_place_tavern_stairs,
       "place-temple": nx_tactics_decks_scenario.e_place_temple,
       "place-tradingpost": nx_tactics_decks_scenario.e_place_tradingpost,
+      "place-woodenhall": nx_tactics_decks_scenario.e_place_woodenhall,
       "unit-goblinscout": nx_tactics_decks_scenario.e_unit_goblinscout,
       "unit-horse": nx_tactics_decks_scenario.e_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scenario.e_unit_jesaveer,
@@ -1576,11 +1897,15 @@ export default class nx_tactics_decks_scenario {
       "item-axehand": nx_tactics_decks_scenario.t_item_axehand,
       "item-barehanded": nx_tactics_decks_scenario.t_item_barehanded,
       "item-bowshort": nx_tactics_decks_scenario.t_item_bowshort,
+      "item-coppercoins": nx_tactics_decks_scenario.t_item_coppercoins,
       "item-dagger": nx_tactics_decks_scenario.t_item_dagger,
+      "item-goldcoins": nx_tactics_decks_scenario.t_item_goldcoins,
       "item-hammer": nx_tactics_decks_scenario.t_item_hammer,
+      "item-platinumcoins": nx_tactics_decks_scenario.t_item_platinumcoins,
       "item-shieldbuckler": nx_tactics_decks_scenario.t_item_shieldbuckler,
       "item-shieldheater": nx_tactics_decks_scenario.t_item_shieldheater,
       "item-shieldround": nx_tactics_decks_scenario.t_item_shieldround,
+      "item-silvercoins": nx_tactics_decks_scenario.t_item_silvercoins,
       "item-spear": nx_tactics_decks_scenario.t_item_spear,
       "item-spearshort": nx_tactics_decks_scenario.t_item_spearshort,
       "item-swordlong": nx_tactics_decks_scenario.t_item_swordlong,
@@ -1588,16 +1913,25 @@ export default class nx_tactics_decks_scenario {
       "place-blacksmith": nx_tactics_decks_scenario.t_place_blacksmith,
       "place-campsite": nx_tactics_decks_scenario.t_place_campsite,
       "place-cavemouth": nx_tactics_decks_scenario.t_place_cavemouth,
+      "place-dirtpath": nx_tactics_decks_scenario.t_place_dirtpath,
       "place-farmhouse": nx_tactics_decks_scenario.t_place_farmhouse,
       "place-field": nx_tactics_decks_scenario.t_place_field,
       "place-forest": nx_tactics_decks_scenario.t_place_forest,
+      "place-gravelroad": nx_tactics_decks_scenario.t_place_gravelroad,
       "place-guardpost": nx_tactics_decks_scenario.t_place_guardpost,
+      "place-horsestables": nx_tactics_decks_scenario.t_place_horsestables,
       "place-mill": nx_tactics_decks_scenario.t_place_mill,
       "place-mountain": nx_tactics_decks_scenario.t_place_mountain,
       "place-stoneroad": nx_tactics_decks_scenario.t_place_stoneroad,
       "place-tavern": nx_tactics_decks_scenario.t_place_tavern,
+      "place-tavern-bar": nx_tactics_decks_scenario.t_place_tavern_bar,
+      "place-tavern-bedroom": nx_tactics_decks_scenario.t_place_tavern_bedroom,
+      "place-tavern-common": nx_tactics_decks_scenario.t_place_tavern_common,
+      "place-tavern-dining": nx_tactics_decks_scenario.t_place_tavern_dining,
+      "place-tavern-stairs": nx_tactics_decks_scenario.t_place_tavern_stairs,
       "place-temple": nx_tactics_decks_scenario.t_place_temple,
       "place-tradingpost": nx_tactics_decks_scenario.t_place_tradingpost,
+      "place-woodenhall": nx_tactics_decks_scenario.t_place_woodenhall,
       "unit-goblinscout": nx_tactics_decks_scenario.t_unit_goblinscout,
       "unit-horse": nx_tactics_decks_scenario.t_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scenario.t_unit_jesaveer,
@@ -1710,6 +2044,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_item_bowshort
     }
 
+    // (func item-coppercoins)
+    nx_tactics_decks_scenario.t_item_coppercoins['vx_value'] = {
+      name          : "item-coppercoins",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_coppercoins
+    }
+
     // (func item-dagger)
     nx_tactics_decks_scenario.t_item_dagger['vx_value'] = {
       name          : "item-dagger",
@@ -1728,6 +2080,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_item_dagger
     }
 
+    // (func item-goldcoins)
+    nx_tactics_decks_scenario.t_item_goldcoins['vx_value'] = {
+      name          : "item-goldcoins",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_goldcoins
+    }
+
     // (func item-hammer)
     nx_tactics_decks_scenario.t_item_hammer['vx_value'] = {
       name          : "item-hammer",
@@ -1744,6 +2114,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_item_hammer
+    }
+
+    // (func item-platinumcoins)
+    nx_tactics_decks_scenario.t_item_platinumcoins['vx_value'] = {
+      name          : "item-platinumcoins",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_platinumcoins
     }
 
     // (func item-shieldbuckler)
@@ -1798,6 +2186,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_item_shieldround
+    }
+
+    // (func item-silvercoins)
+    nx_tactics_decks_scenario.t_item_silvercoins['vx_value'] = {
+      name          : "item-silvercoins",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_silvercoins
     }
 
     // (func item-spear)
@@ -1926,6 +2332,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_place_cavemouth
     }
 
+    // (func place-dirtpath)
+    nx_tactics_decks_scenario.t_place_dirtpath['vx_value'] = {
+      name          : "place-dirtpath",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_dirtpath
+    }
+
     // (func place-farmhouse)
     nx_tactics_decks_scenario.t_place_farmhouse['vx_value'] = {
       name          : "place-farmhouse",
@@ -1980,6 +2404,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_place_forest
     }
 
+    // (func place-gravelroad)
+    nx_tactics_decks_scenario.t_place_gravelroad['vx_value'] = {
+      name          : "place-gravelroad",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_gravelroad
+    }
+
     // (func place-guardpost)
     nx_tactics_decks_scenario.t_place_guardpost['vx_value'] = {
       name          : "place-guardpost",
@@ -1996,6 +2438,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_place_guardpost
+    }
+
+    // (func place-horsestables)
+    nx_tactics_decks_scenario.t_place_horsestables['vx_value'] = {
+      name          : "place-horsestables",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_horsestables
     }
 
     // (func place-mill)
@@ -2070,6 +2530,96 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_place_tavern
     }
 
+    // (func place-tavern-bar)
+    nx_tactics_decks_scenario.t_place_tavern_bar['vx_value'] = {
+      name          : "place-tavern-bar",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_tavern_bar
+    }
+
+    // (func place-tavern-bedroom)
+    nx_tactics_decks_scenario.t_place_tavern_bedroom['vx_value'] = {
+      name          : "place-tavern-bedroom",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_tavern_bedroom
+    }
+
+    // (func place-tavern-common)
+    nx_tactics_decks_scenario.t_place_tavern_common['vx_value'] = {
+      name          : "place-tavern-common",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_tavern_common
+    }
+
+    // (func place-tavern-dining)
+    nx_tactics_decks_scenario.t_place_tavern_dining['vx_value'] = {
+      name          : "place-tavern-dining",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_tavern_dining
+    }
+
+    // (func place-tavern-stairs)
+    nx_tactics_decks_scenario.t_place_tavern_stairs['vx_value'] = {
+      name          : "place-tavern-stairs",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_tavern_stairs
+    }
+
     // (func place-temple)
     nx_tactics_decks_scenario.t_place_temple['vx_value'] = {
       name          : "place-temple",
@@ -2104,6 +2654,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_place_tradingpost
+    }
+
+    // (func place-woodenhall)
+    nx_tactics_decks_scenario.t_place_woodenhall['vx_value'] = {
+      name          : "place-woodenhall",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_place_woodenhall
     }
 
     // (func unit-goblinscout)

@@ -109,6 +109,56 @@
   :body "10x-1"
   :mass "1kg/2lb"))
 
+(func item-coppercoins : base/item
+ (base/item
+  :name "Copper Coins"
+  :image "images/cards/item-coppercoins.svg"
+  :summary
+   "* A few (~5=$5) coins.
+    * A pauper's wealth.
+    * 10 Copper = 1 Silver
+    * Cheap meal, 2 cheap drinks, night in a common room, a nice tip."
+  :body "5x-2"
+  :mass "50g/.1lb"))
+
+(func item-silvercoins : base/item
+ (base/item
+  :name "Silver Coins"
+  :image "images/cards/item-silvercoins.svg"
+  :summary
+   "* A few (~5=$50) coins.
+    * Spending money.
+    * 10 Copper = 1 Silver
+    * 10 Silver = 1 Gold
+    * 2 nice meals, 3 bottles wine, round of drinks, a private room, week supplies, cheap gear."
+  :body "10x-2"
+  :mass "100g/.2lb"))
+
+(func item-goldcoins : base/item
+ (base/item
+  :name "Gold Coins"
+  :image "images/cards/item-goldcoins.svg"
+  :summary
+   "* A few (~5=$500) coins.
+    * A tidy sum.
+    * 10 Silver = 1 Gold
+    * 10 Gold = 1 Platinum
+    * A piece of quality gear."
+  :body "10x-2"
+  :mass "150g/.3lb"))
+
+(func item-platinumcoins : base/item
+ (base/item
+  :name "Platinum Coins"
+  :image "images/cards/item-platinumcoins.svg"
+  :summary
+   "* A few (~5=$5000) coins.
+    * A small fortune.
+    * 10 Gold = 1 Platinum
+    * A piece of extremely high quality or magical gear."
+  :body "10x-2"
+  :mass "150g/.3lb"))
+
 (func item-dagger : base/item
  (base/item
   :name "Dagger"
@@ -229,6 +279,11 @@
   :name "Cave Mouth"
   :image "images/cards/place-cavemouth.svg"))
 
+(func place-dirtpath : base/place
+ (base/place
+  :name "Dirt Path"
+  :image "images/cards/place-dirtpath.svg"))
+
 (func place-farmhouse : base/place
  (base/place
   :name "Farmhouse"
@@ -244,10 +299,20 @@
   :name "Forest"
   :image "images/cards/place-forest.svg"))
 
+(func place-gravelroad : base/place
+ (base/place
+  :name "Gravel Road"
+  :image "images/cards/place-gravelroad.svg"))
+
 (func place-guardpost : base/place
  (base/place
   :name "Guardpost"
   :image "images/cards/place-guardpost.svg"))
+
+(func place-horsestables : base/place
+ (base/place
+  :name "Horse Stables"
+  :image "images/cards/place-horsestables.svg"))
 
 (func place-mill : base/place
  (base/place
@@ -269,6 +334,31 @@
   :name "Tavern"
   :image "images/cards/place-tavern.svg"))
 
+(func place-tavern-bar : base/place
+ (base/place
+  :name "Tavern Bar"
+  :image "images/cards/place-tavern-bar.svg"))
+
+(func place-tavern-bedroom : base/place
+ (base/place
+  :name "Tavern Bedroom"
+  :image "images/cards/place-tavern-bedroom.svg"))
+
+(func place-tavern-common : base/place
+ (base/place
+  :name "Tavern Common"
+  :image "images/cards/place-tavern-common.svg"))
+
+(func place-tavern-dining : base/place
+ (base/place
+  :name "Tavern Dining"
+  :image "images/cards/place-tavern-dining.svg"))
+
+(func place-tavern-stairs : base/place
+ (base/place
+  :name "Tavern Stairs"
+  :image "images/cards/place-tavern-stairs.svg"))
+
 (func place-temple : base/place
  (base/place
   :name "Temple"
@@ -278,6 +368,11 @@
  (base/place
   :name "Trading Post"
   :image "images/cards/place-tradingpost.svg"))
+
+(func place-woodenhall : base/place
+ (base/place
+  :name "Wooden Hall"
+  :image "images/cards/place-woodenhall.svg"))
 
 (func unit-goblinscout : base/unit
  (base/unit
@@ -321,9 +416,9 @@
   :body "4x2"
   :mind "5x-1"
   :will "2x1"
-  :move "4x1"
+  :move "5x1"
   :mass "450kg/1000lb"
-  :speedland "40kph/25mph"
+  :speedland "50kph/30mph"
   :demeanor "Aloof"
   :nature "Skitish"
   :unitpowermap
@@ -441,7 +536,6 @@
        (base/unitability
         :ability ability-foraging))))))
 
-
 (func unit-wilddog : base/unit
  (base/unit
   :name "Wild Dog"
@@ -454,7 +548,7 @@
   :move "7x1"
   :mass "22kg/50lb"
   :height "76cm/30in"
-  :speedland "70kph/44mph"
+  :speedland "70kph/37mph"
   :nature "Dogged"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
@@ -546,6 +640,7 @@
    :cardmap
     (base/cardmap<-cardlist
      (base/cardlist
+/*
       (unit-jesaveer)
       (unit-jonaveer)
       (unit-xeibhanower)
@@ -557,6 +652,12 @@
       (unit-woodencart)
       (item-armor-leathercuirass)
       (item-axehand)
+*/
+      (item-coppercoins)
+      (item-silvercoins)
+      (item-goldcoins)
+      (item-platinumcoins)
+/*
       (item-woodaxe)
       (item-barehanded)
       (item-bowshort)
@@ -574,11 +675,21 @@
       (place-blacksmith)
       (place-campsite)
       (place-cavemouth)
-      (place-farmhouse)
-      (place-guardpost)
-      (place-mill)
+*/
+//      (place-dirtpath)
+//      (place-farmhouse)
+      (place-gravelroad)
+//      (place-guardpost)
+//      (place-horsestables)
+//      (place-mill)
       (place-stoneroad)
-      (place-tavern)
-      (place-temple)
-      (place-tradingpost)
+//      (place-tavern)
+//      (place-tavern-bar)
+//      (place-tavern-bedroom)
+//      (place-tavern-common)
+//      (place-tavern-dining)
+//      (place-tavern-stairs)
+//      (place-temple)
+//      (place-tradingpost)
+      (place-woodenhall)
       )))))

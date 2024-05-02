@@ -41,7 +41,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Beam Saber",
               ":summary",
-              "* Rotating ionizing lasers on the hilt create a hollow magnetic bubble in the form of a saber.  The light and\ncolor are caused by the air molecules ionizing in the lasers.  Any contact with a solid object or another\nmagnetic field creates a breach in the bubble which triggers a plasma burst in the hilt that instantly travels\ndown the bubble and exits the breach with burning explosive effect."
+              "* Rotating ionizing lasers on the hilt create a hollow magnetic bubble in the form of a saber. The light and color are caused by the air molecules ionizing in the lasers. Any contact with a solid object or another magnetic field creates a breach in the bubble which triggers a plasma burst in the hilt that instantly travels down the bubble and exits the breach with burning explosive effect."
             ),
             "Lightning Saber",
             vx_core.f_new(
@@ -49,7 +49,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Lightning Saber",
               ":summary",
-              "* Rotating ionizing lasers on the hilt create a hollow magnetic bubble in the form of a saber.  The light and\ncolor are caused by the air molecules ionizing in the lasers.  Any contact with a solid object or another\nmagnetic field creates a breach in the bubble which triggers an electric pulse in the hilt that instantly travels\ndown the bubble and exits the breach with shocking effect."
+              "* Rotating ionizing lasers on the hilt create a hollow magnetic bubble in the form of a saber. The light and color are caused by the air molecules ionizing in the lasers. Any contact with a solid object or another magnetic field creates a breach in the bubble which triggers an electric pulse in the hilt that instantly travels down the bubble and exits the breach with shocking effect."
             ),
             "Shock Lance",
             vx_core.f_new(
@@ -73,7 +73,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "9mm Cone Pistol",
               ":summary",
-              "* The modern upgrade to the traditional firearm.  Cone weapons fire rocket-propelled, recoilless rounds.  These\nrounds can be large calibur while maintaining a high fire rate and no recoil making them especially well suited for\nweightlessness.  Cone weapons are cheap, reliable, and versitile.\n* Cone weapons may carry varying payloads including: AP, HE, HEAT, chemical, incediary, and underwater rounds.",
+              "* The modern upgrade to the traditional firearm. Cone weapons fire rocket-propelled, recoilless rounds. These rounds can be large calibur while maintaining a high fire rate and no recoil making them especially well suited for weightlessness. Cone weapons are cheap, reliable, and versitile.\n* Cone weapons may carry varying payloads including: AP, HE, HEAT, chemical, incediary, and underwater rounds.",
               ":titles",
               "Gyrojet Pistol, Rocket Pistol"
             ),
@@ -119,7 +119,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "7.62mm Cone Rifle",
               ":summary",
-              "* The modern upgrade to the traditional firearm.  Cone weapons fire rocket-propelled, recoilless rounds.  These\nrounds can be large calibur while maintaining a high fire rate and no recoil making them especially well suited for\nweightlessness.  Cone weapons are cheap, reliable, and versitile.\n* Cone weapons may carry varying payloads including: AP, HE, HEAT, chemical, incediary, and underwater rounds.",
+              "* The modern upgrade to the traditional firearm. Cone weapons fire rocket-propelled, recoilless rounds. These rounds can be large calibur while maintaining a high fire rate and no recoil making them especially well suited for weightlessness. Cone weapons are cheap, reliable, and versitile.\n* Cone weapons may carry varying payloads including: AP, HE, HEAT, chemical, incediary, and underwater rounds.",
               ":titles",
               "Gyrojet Rifle, Rocket Rifle"
             ),
@@ -171,7 +171,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Energy Attenuating Aerosol",
               ":summary",
-              "* A dense gas designed to absorb and refract energies that pass through it.  This obscures vision and greatly\nweakens lasers and other direct energy weapons that pass through it.",
+              "* A dense gas designed to absorb and refract energies that pass through it.  This obscures vision and greatly weakens lasers and other direct energy weapons that pass through it.",
               ":titles",
               "Anti-Laser Gas"
             ),
@@ -455,7 +455,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Spinal Wave Cannon",
               ":summary",
-              "* An enormously powerful energy cannon capable of enormous damage over a large\narea.",
+              "* An enormously powerful energy cannon capable of enormous damage over a large area.",
               ":titles",
               "Death Star Cannon, Wave Motion Gun"
             )
@@ -617,7 +617,7 @@ export default class nx_tactics_books_combat {
           ":name",
           "Rate of Fire",
           ":summary",
-          "* Fully-Automatic Weapons - These weapons fire continuously as long as the\ntrigger is held down, or until they run out of ammunition, or until the\nbarrel warps from the heat.\n* Burst Weapons - This is usually a setting on Fully-Automatic Weapons\nthat fires a number of shots, roughly 3, each time the trigger is pulled.\nThis is a compromise between Fully and Semi-Automatic Modes.\n* Semi-Automatic weapons - These weapons are generally capable of fully\nautomatic fire, but are limited to fire a single shot each time the trigger\nis pulled. As such, they are limited to the shooter's ability to pull the\ntrigger, generally once every second."
+          "* Fully-Automatic Weapons - These weapons fire continuously as long as the trigger is held down, or until they run out of ammunition, or until the barrel warps from the heat.\n* Burst Weapons - This is usually a setting on Fully-Automatic Weapons that fires a number of shots, roughly 3, each time the trigger is pulled. This is a compromise between Fully and Semi-Automatic Modes.\n* Semi-Automatic weapons - These weapons are generally capable of fully automatic fire, but are limited to fire a single shot each time the trigger is pulled. As such, they are limited to the shooter's ability to pull the trigger, generally once every second."
         ),
         "Aiming and Range",
         vx_core.f_new(
@@ -673,31 +673,9 @@ export default class nx_tactics_books_combat {
               ":name",
               "Breast Plate",
               ":summary",
-              "* Armor: 0 if hit in the Head, Arms, or Legs",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "1mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              "* [Hit Location]: Shoulders Chest Abdomen Vitals",
+              ":armor",
+              "1mm"
             ),
             ":Brigandine",
             vx_core.f_new(
@@ -712,30 +690,8 @@ export default class nx_tactics_books_combat {
               "Bronze Armor",
               ":summary",
               "* Bronze Cuirass, Helmet, Greaves",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "1mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "1mm"
             ),
             "Chain Mail Armor",
             vx_core.f_new(
@@ -748,30 +704,8 @@ export default class nx_tactics_books_combat {
               "* Chain mail is a type of armor consisting of small metal rings linked together in a pattern to form a mesh. It was generally in common military use between the 3rd century BC and the 16th century AD in Europe, and longer in Asia and North Africa.",
               ":titles",
               "Chainmail, Mail, Byrnie, Hauberk",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "1mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "1mm"
             ),
             "Chain Mail Shirt",
             vx_core.f_new(
@@ -779,33 +713,11 @@ export default class nx_tactics_books_combat {
               ":name",
               "Chain Mail Shirt",
               ":summary",
-              "* Armor: 1mm if hit in chest",
+              "* [Hit Location]: Shoulders Chest Abdomen Vitals",
               ":titles",
               "Chainmail, Mail",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "0mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "1mm"
             ),
             ":Cuirbouilli",
             vx_core.f_new(
@@ -824,360 +736,96 @@ export default class nx_tactics_books_combat {
               nx_tactics_base.t_item,
               ":name",
               "Laminated Armor",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "1mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "1mm"
             ),
             "Leather Armor",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Leather Armor",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "0mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "0mm"
             ),
             "Leather Pants",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Leather Pants",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "0mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "0mm"
             ),
             "Leather Shirt",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Leather Shirt",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "0mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "0mm"
             ),
             "Leather Vest",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Leather Vest",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "0mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "0mm"
             ),
             "Padded Armor",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Padded Armor",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "0mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "0mm"
             ),
             "Plate Armor",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Plate Armor",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "3mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "3mm"
             ),
             ":Platemail",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Platemail",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "2mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "2mm"
             ),
             "Quilted Armor",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Quilted Armor",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "0mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "0mm"
             ),
             ":Ringmail",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Ringmail",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "1mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "1mm"
             ),
             ":Scalemail",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Scalemail",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "2mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "2mm"
             ),
             "Scale Barding",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Scale Barding",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "2mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "2mm"
             ),
             "Splint Armor",
             vx_core.f_new(
@@ -1186,60 +834,16 @@ export default class nx_tactics_books_combat {
               "Splint Armor",
               ":titles",
               "Lamellar",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "2mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "2mm"
             ),
             "Studded Leather Armor",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Studded Leather Armor",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "0mm"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "0mm"
             )
           )
         ),
@@ -1258,30 +862,8 @@ export default class nx_tactics_books_combat {
               "Buckler",
               ":classification",
               "Shield",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "1"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "1"
             ),
             "Kite Shield",
             vx_core.f_new(
@@ -1290,30 +872,8 @@ export default class nx_tactics_books_combat {
               "Kite Shield",
               ":classification",
               "Shield",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "2"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "2"
             ),
             "Legionary Shield",
             vx_core.f_new(
@@ -1322,30 +882,8 @@ export default class nx_tactics_books_combat {
               "Legionary Shield",
               ":classification",
               "Shield",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "2"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "2"
             ),
             "Round Shield",
             vx_core.f_new(
@@ -1356,30 +894,8 @@ export default class nx_tactics_books_combat {
               "Hoplon Round Shield, Target Shield",
               ":classification",
               "Shield",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "2"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "2"
             ),
             ":Shield",
             vx_core.f_new(
@@ -1390,30 +906,8 @@ export default class nx_tactics_books_combat {
               "Aegis, Heater",
               ":classification",
               "Shield",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "2"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "2"
             ),
             "Tower Shield",
             vx_core.f_new(
@@ -1424,30 +918,8 @@ export default class nx_tactics_books_combat {
               "Hoplite Shield",
               ":classification",
               "Shield",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_item,
-                      ":prop",
-                      "armor",
-                      ":value",
-                      "3"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":armor",
+              "3"
             ),
             "Wicker Shield",
             vx_core.f_new(
@@ -3609,7 +3081,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "40mm Heavy Autocannon (HAC)",
               ":summary",
-              "* The Heavy Autocannon is often the main armament of light tanks.  Its high rate of fire tends to preclude the use of\nmost exotic ammunition."
+              "* The Heavy Autocannon is often the main armament of light tanks. Its high rate of fire tends to preclude the use of most exotic ammunition."
             ),
             "Heavy Flame Cannon",
             vx_core.f_new(
@@ -3693,7 +3165,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "140mm Heavy Field Gun (HFG)",
               ":summary",
-              "* The Heavy Field Gun is a used on heavy tank destroyers and main battle tanks.  The HFG is effective against most main battle\ntanks."
+              "* The Heavy Field Gun is a used on heavy tank destroyers and main battle tanks. The HFG is effective against most main battle tanks."
             ),
             "140mm Heavy Field Mortar (HFM)",
             vx_core.f_new(
@@ -3707,7 +3179,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "200mm Very Heavy Field Gun (VHFG)",
               ":summary",
-              "* The Very Heavy Field Gun is used in heavy artillery pieces and fixed installations.  The VHFG is effective against almost any\ntarget.",
+              "* The Very Heavy Field Gun is used in heavy artillery pieces and fixed installations. The VHFG is effective against almost any target.",
               ":titles",
               "Naval Gun"
             )
@@ -4219,1817 +3691,9 @@ export default class nx_tactics_books_combat {
           ":name",
           "Levels",
           ":reference",
-          "* The resistance to penetration of armor is related to the thickness of the steel - 2mm armor required about 3 times as much energy to defeat as 1mm armor.\n* By its apex, hardened steel plate was almost impregnable on the battlefield. Knights were instead increasingly felled by polearms such as the halberd and blunt weapons such as maces or war hammers that could send concussive force through the plate armor resulting in injuries such as broken bones, organ hemorrhage and/or head trauma. Another tactic was to attempt to strike through the gaps between the armor pieces, using daggers, spears and spear points to attack the man-at-arms' eyes or joints.\n* Weight - A full suit of medieval plate is thought to have weighed little more than 60 lb (27 kg) on average, considerably lighter than the equipment often carried by the elite of today's armies. If during the 14-15th centuries armour seldom weighed more than 15kgs, than by the late 16th century it weighed 25kg. The increasing weight and thickness of late 16th century armor therefore gave substantial resistance.\n* Proof - In the early years of pistol and arquebuses, firearms were relatively low in velocity. The full suits of armour, or breast plates actually stopped bullets fired from a modest distance. The front breast plates were, in fact, commonly shot as a test. The impact point would often be encircled with engraving to point it out. This was called the 'proof'. Rather than making plate armour obsolete, the use of firearms stimulated the development of plate armour into its later stages.\n* At the end of the 1800's silk body armor was worn by those who could afford it. The assassination of Arch-Duke Ferdinand that precipitated WWI was wearing silk body armor but was shot in the neck over the armor. A similar vest worn by Alfonso XIII of Spain saved his life in 1901.\n* Criminal gangs in late 1920's to early 1930's began wearing thick cotton and cloth suits that could absorb .22, .25, .32 Long, .32, .380 ACP, and .45 ACP rounds. To overcome this, law enforcement began using .357 Magnum rounds.\n* Club, Axe or Greek sword : 1kg ; used single handed ; 65 joules(48 ft lbs)\n* Club, Axe or Greek sword : 2kg ; used two-handed ; 130 joules(96 foot lbs)\n* Javelin :0.8 kg ; thrown, with run-up; 198 joules(146 ft lbs)\n* Javelin :0.8 kg ; thrown, one pace only; 111 joules(83 ft lbs)\n* Javelin :0.8 kg ; thrown standing; 60 joules(49 ft lbs)\n* Javelin :0.8 kg ; thrown, one pace with loop ; 160 joules(118 ft lbs)\n* Light spear or small sword/dagger :0.8 kg ; close combat ; 30 joules(24 ft lbs)\n* Sarissa :8(?)kg ; two-hand thrust,pace fwd ; 160 joules(118 ft lbs)\n* Spear-butt : various ; thrust down, coup-de-grace; 50 joules (40 ft lbs)\n* Energies of the order of 30-60 joules (24-49 ft lbs) could be given generally to typical Greek Hand weapons, and armour would need to resist this type of thrust, as well as slashing blows up to 60 joules(49 ft lbs)\n* Sling bullet :24g swung one handed ; 30-36 joules(22-27 ft lbs)\n* Light bow 20J at 50m, 15J at 100m, 9J at 200m (sufficient to penetrate flesh)\n* Heavy bow 30J at 50 metres, 26J at 100 metres, 20J at 200 metres\n* Ballistic Armor Level I protects against .22 cal Long Rifle and .38\n* Ballistic Armor Level IIA protects against 9mm Low Velocity and .40 cal\n* Ballistic Armor Level II protects against 9mm and .357 Magnum\n* Ballistic Armor Level IIIA protects against High Velocity 9mm and .44 Magnum\n* Ballistic Armor Level III protects against 7.62 Rifle\n* Ballistic Armor Level IV protects against .30 cal Armor Piercing Rifle\n* All heavy armor penetration values are in mm of steel or equivalent at 30 degrees.\n* The 5.56 AP round penetrates 12mm at 100m.\n* The 7.92 MG round penetrates 13mm at 100m.\n* The 7.62 AP round penetrates 15mm at 300m.\n* .50 cal penetrates 20mm Armor\n* 20mm penetrates 30mm Armor.  It took an average of twenty 20mm hits to shoot down a WWII bomber.\n* 30mm A-10 penetrates 69mm at 500m and 38mm at 1000m.  A 30mm Autocannon could bring down a WWII bomber in 1-3 hits.\n* 40mm Bofors penetrates: 0 yards-2.7in (68mm), 2,000 yards-1.2in (30mm), 4,000 yards-0.60in, 6000 yards-0.45in.\n* 50mm PaK 38 was one of the few early guns capable of effectively penetrating the 45 mm armor of the formidable T-34\n* The PaK 40 penetrates 100mm Armor and was effective against almost every Allied tank until the end of the war.\n* The Panther's 75 mm KwK 42 L/70 penetrates 120mm at 1000m\n* Very few Allied or Soviet weapons could penetrate the Panther's front armor.\n* Pershing's 90mm penetrates 110mm at 1000m\n* The Tiger's 8.8 cm KwK 36 L/56 penetrates 135mm at 1000m.\n* Whereas Panthers were the more serious threat to Allied tanks, Tigers had a bigger psychological effect on  opposing crews, causing a 'Tiger phobia'. Allied tankers would sometimes evade rather than confront a Tiger, even a tank that only looked like one, such as the Panzer IV with turret skirts applied. In the Normandy campaign, it could take four to five Shermans to knock out a single Tiger tank by maneuvering to its weaker flank or rear armor; the Soviet T-34s fared similarly against the German tanks, as had the German PzIII earlier against the Soviet heavy tanks. An accepted Allied tactic was to engage the Tiger as a group, one attracting the attention of the Tiger crew while the others attacked the sides or rear of the vehicle. Since the ammunition and fuel were stored in the sides, a side penetration often resulted in a kill. This was, however, a risky tactic, and often resulted in the loss of several Allied vehicles. It took a great deal of tactical skill to eliminate a Tiger.\n* IS-2's A-19 122mm penetrates 150mm at 1000m and can go through the front and rear armor and the engine block of the German Panther tank.\n* The 17 pounder mounted on the Sherman Firefly was able to penetrate 131mm at 1000 meters, more than sufficient to defeat the German Tiger I and Panther tank at standard combat ranges.\n* Pershing 90mm APCR penetrates 192mm at 1000m\n* The Tiger II/Elefant/PaK43's 8.8 cm KwK 43 penetrates 165mm at 1000m\n* The M4 Sherman was unable to penetrate the front of a Tiger II even at point blank and the M26 Pershing and IS-2 had to come within 1300 m and 200 m respectively.\n* The Tiger II's 88 mm armament could penetrate 165mm at 1000m and destroy all Allied armor at a range far outside the effective range of the enemy's armament. Also, notwithstanding its reliability problems, the Tiger II was remarkably agile for such a heavy vehicle. Contemporary German records indicate that it had a lower ground pressure and was as maneuverable as the much lighter Panzer IV.\n* A typical modern lined shaped charge can penetrate armor steel to a depth of 7 or more times the diameter of the charge's cone (cone diameters, CD), though greater depths of 10 CD and above are now feasible.\n* The shaped charge of the PanzerFaust could penetrate up to 200 mm of steel, enough to defeat any armoured fighting vehicle of the period including T-34's and IS-2.\n* RPG-16 and M72 LAW can penetrate 300mm\n* RPG-22 can penetrate 400mm\n* RPG-7 can penetrate 500mm\n* M1 Abrams cannot penetrate its own 610mm Sloped Armor\n* RPG-29 can penetrate 750mm and has penetrated the front armor of a Challenger 2.\n* BLU-109 Penetrator - Penetration of reinforced concrete: 1.8 m (6 ft)\n* BLU-116 Advanced Unitary Penetrator (AUP), BLU-118/B Thermobaric Warhead - Penetration of reinforced concrete: 3.4m\n(11 ft)\n* BLU-113 Super Penetrator - Penetration of reinforced concrete: more than 6m (20 ft)\n* The crippled Bismark endured 5 torpedoes and a relentless attack by the 14 inch guns of 2 Battleships and the 8 inch guns of 2 Heavy Cruisers even at point blank range for over half an hour. The upper decks were destroyed, but the ship was still under power and the hull was relatively sound. It was finally scuttled by the crew.\n\n* Penetration of materials vs 5.56mm: http://www.inetres.com/gp/military/infantry/rifle/556mm_ammo.html\n** The following stop a 5.56mm round fired at less than 50 meters:\n*** One thickness of well-packed sandbags.\n*** A 2 inch (51 mm) non-reinforced concrete wall.\n*** A 55 gallon drum filled with water or sand.\n*** A small ammunition can filled with sand.\n*** A cinder block filled with sand (block will probably shatter).\n*** A plate glass windowpane at a 45 degree angle (glass fragments may be thrown behind the glass).\n*** A brick veneer.\n*** A layer of books 18 to 24 inches (457 to 610 mm) thick.\n** The following do not stop a 5.56mm round fired at less than 50 meters:\n*** Interior walls made of thin wood paneling, sheetrock, or plaster\n*** Common office furniture, such as desks and chairs\n*** Wooden frame buildings and single cinder block walls offer little protection from 5.56mm rounds.\n*** A car body (round will penetrate but normally not exit).\n\n* 40mm High Explosive dual purpse round\n** Penetrate 2 inches (50 mm) of armorplate, 12 inches (300 mm) of pine logs, 16 inches (400 mm) of concrete blocks,\nor 20 inches (500 mm) of sandbags at ranges up to 1,312 feet (400 m).\n\n* Sandbags = 1/10th Steel\n* Concrete = 1/8th Steel\n* Pine Logs = 1/6th Steel\n\nhttp://www.panzerworld.net/armourpenetration",
+          "* The resistance to penetration of armor is related to the thickness of the steel - 2mm armor required about 3 times as much energy to defeat as 1mm armor.\n* By its apex, hardened steel plate was almost impregnable on the battlefield. Knights were instead increasingly felled by polearms such as the halberd and blunt weapons such as maces or war hammers that could send concussive force through the plate armor resulting in injuries such as broken bones, organ hemorrhage and/or head trauma. Another tactic was to attempt to strike through the gaps between the armor pieces, using daggers, spears and spear points to attack the man-at-arms' eyes or joints.\n* Weight - A full suit of medieval plate is thought to have weighed little more than 60 lb (27 kg) on average, considerably lighter than the equipment often carried by the elite of today's armies. If during the 14-15th centuries armour seldom weighed more than 15kgs, than by the late 16th century it weighed 25kg. The increasing weight and thickness of late 16th century armor therefore gave substantial resistance.\n* Proof - In the early years of pistol and arquebuses, firearms were relatively low in velocity. The full suits of armour, or breast plates actually stopped bullets fired from a modest distance. The front breast plates were, in fact, commonly shot as a test. The impact point would often be encircled with engraving to point it out. This was called the 'proof'. Rather than making plate armour obsolete, the use of firearms stimulated the development of plate armour into its later stages.\n* At the end of the 1800's silk body armor was worn by those who could afford it. The assassination of Arch-Duke Ferdinand that precipitated WWI was wearing silk body armor but was shot in the neck over the armor. A similar vest worn by Alfonso XIII of Spain saved his life in 1901.\n* Criminal gangs in late 1920's to early 1930's began wearing thick cotton and cloth suits that could absorb .22, .25, .32 Long, .32, .380 ACP, and .45 ACP rounds. To overcome this, law enforcement began using .357 Magnum rounds.\n* Club, Axe or Greek sword : 1kg ; used single handed ; 65 joules(48 ft lbs)\n* Club, Axe or Greek sword : 2kg ; used two-handed ; 130 joules(96 foot lbs)\n* Javelin :0.8 kg ; thrown, with run-up; 198 joules(146 ft lbs)\n* Javelin :0.8 kg ; thrown, one pace only; 111 joules(83 ft lbs)\n* Javelin :0.8 kg ; thrown standing; 60 joules(49 ft lbs)\n* Javelin :0.8 kg ; thrown, one pace with loop ; 160 joules(118 ft lbs)\n* Light spear or small sword/dagger :0.8 kg ; close combat ; 30 joules(24 ft lbs)\n* Sarissa :8(?)kg ; two-hand thrust,pace fwd ; 160 joules(118 ft lbs)\n* Spear-butt : various ; thrust down, coup-de-grace; 50 joules (40 ft lbs)\n* Energies of the order of 30-60 joules (24-49 ft lbs) could be given generally to typical Greek Hand weapons, and armour would need to resist this type of thrust, as well as slashing blows up to 60 joules(49 ft lbs)\n* Sling bullet :24g swung one handed ; 30-36 joules(22-27 ft lbs)\n* Light bow 20J at 50m, 15J at 100m, 9J at 200m (sufficient to penetrate flesh)\n* Heavy bow 30J at 50 metres, 26J at 100 metres, 20J at 200 metres\n* Ballistic Armor Level I protects against .22 cal Long Rifle and .38\n* Ballistic Armor Level IIA protects against 9mm Low Velocity and .40 cal\n* Ballistic Armor Level II protects against 9mm and .357 Magnum\n* Ballistic Armor Level IIIA protects against High Velocity 9mm and .44 Magnum\n* Ballistic Armor Level III protects against 7.62 Rifle\n* Ballistic Armor Level IV protects against .30 cal Armor Piercing Rifle\n* All heavy armor penetration values are in mm of steel or equivalent at 30 degrees.\n* The 5.56 AP round penetrates 12mm at 100m.\n* The 7.92 MG round penetrates 13mm at 100m.\n* The 7.62 AP round penetrates 15mm at 300m.\n* .50 cal penetrates 20mm Armor\n* 20mm penetrates 30mm Armor.  It took an average of twenty 20mm hits to shoot down a WWII bomber.\n* 30mm A-10 penetrates 69mm at 500m and 38mm at 1000m.  A 30mm Autocannon could bring down a WWII bomber in 1-3 hits.\n* 40mm Bofors penetrates: 0 yards-2.7in (68mm), 2,000 yards-1.2in (30mm), 4,000 yards-0.60in, 6000 yards-0.45in.\n* 50mm PaK 38 was one of the few early guns capable of effectively penetrating the 45 mm armor of the formidable T-34\n* The PaK 40 penetrates 100mm Armor and was effective against almost every Allied tank until the end of the war.\n* The Panther's 75 mm KwK 42 L/70 penetrates 120mm at 1000m\n* Very few Allied or Soviet weapons could penetrate the Panther's front armor.\n* Pershing's 90mm penetrates 110mm at 1000m\n* The Tiger's 8.8 cm KwK 36 L/56 penetrates 135mm at 1000m.\n* Whereas Panthers were the more serious threat to Allied tanks, Tigers had a bigger psychological effect on  opposing crews, causing a 'Tiger phobia'. Allied tankers would sometimes evade rather than confront a Tiger, even a tank that only looked like one, such as the Panzer IV with turret skirts applied. In the Normandy campaign, it could take four to five Shermans to knock out a single Tiger tank by maneuvering to its weaker flank or rear armor; the Soviet T-34s fared similarly against the German tanks, as had the German PzIII earlier against the Soviet heavy tanks. An accepted Allied tactic was to engage the Tiger as a group, one attracting the attention of the Tiger crew while the others attacked the sides or rear of the vehicle. Since the ammunition and fuel were stored in the sides, a side penetration often resulted in a kill. This was, however, a risky tactic, and often resulted in the loss of several Allied vehicles. It took a great deal of tactical skill to eliminate a Tiger.\n* IS-2's A-19 122mm penetrates 150mm at 1000m and can go through the front and rear armor and the engine block of the German Panther tank.\n* The 17 pounder mounted on the Sherman Firefly was able to penetrate 131mm at 1000 meters, more than sufficient to defeat the German Tiger I and Panther tank at standard combat ranges.\n* Pershing 90mm APCR penetrates 192mm at 1000m\n* The Tiger II/Elefant/PaK43's 8.8 cm KwK 43 penetrates 165mm at 1000m\n* The M4 Sherman was unable to penetrate the front of a Tiger II even at point blank and the M26 Pershing and IS-2 had to come within 1300 m and 200 m respectively.\n* The Tiger II's 88 mm armament could penetrate 165mm at 1000m and destroy all Allied armor at a range far outside the effective range of the enemy's armament. Also, notwithstanding its reliability problems, the Tiger II was remarkably agile for such a heavy vehicle. Contemporary German records indicate that it had a lower ground pressure and was as maneuverable as the much lighter Panzer IV.\n* A typical modern lined shaped charge can penetrate armor steel to a depth of 7 or more times the diameter of the charge's cone (cone diameters, CD), though greater depths of 10 CD and above are now feasible.\n* The shaped charge of the PanzerFaust could penetrate up to 200 mm of steel, enough to defeat any armoured fighting vehicle of the period including T-34's and IS-2.\n* RPG-16 and M72 LAW can penetrate 300mm\n* RPG-22 can penetrate 400mm\n* RPG-7 can penetrate 500mm\n* M1 Abrams cannot penetrate its own 610mm Sloped Armor\n* RPG-29 can penetrate 750mm and has penetrated the front armor of a Challenger 2.\n* BLU-109 Penetrator - Penetration of reinforced concrete: 1.8 m (6 ft)\n* BLU-116 Advanced Unitary Penetrator (AUP), BLU-118/B Thermobaric Warhead - Penetration of reinforced concrete: 3.4m (11 ft)\n* BLU-113 Super Penetrator - Penetration of reinforced concrete: more than 6m (20 ft)\n* The crippled Bismark endured 5 torpedoes and a relentless attack by the 14 inch guns of 2 Battleships and the 8 inch guns of 2 Heavy Cruisers even at point blank range for over half an hour. The upper decks were destroyed, but the ship was still under power and the hull was relatively sound. It was finally scuttled by the crew.\n\n* Penetration of materials vs 5.56mm: http://www.inetres.com/gp/military/infantry/rifle/556mm_ammo.html\n** The following stop a 5.56mm round fired at less than 50 meters:\n*** One thickness of well-packed sandbags.\n*** A 2 inch (51 mm) non-reinforced concrete wall.\n*** A 55 gallon drum filled with water or sand.\n*** A small ammunition can filled with sand.\n*** A cinder block filled with sand (block will probably shatter).\n*** A plate glass windowpane at a 45 degree angle (glass fragments may be thrown behind the glass).\n*** A brick veneer.\n*** A layer of books 18 to 24 inches (457 to 610 mm) thick.\n** The following do not stop a 5.56mm round fired at less than 50 meters:\n*** Interior walls made of thin wood paneling, sheetrock, or plaster\n*** Common office furniture, such as desks and chairs\n*** Wooden frame buildings and single cinder block walls offer little protection from 5.56mm rounds.\n*** A car body (round will penetrate but normally not exit).\n\n* 40mm High Explosive dual purpse round\n** Penetrate 2 inches (50 mm) of armorplate, 12 inches (300 mm) of pine logs, 16 inches (400 mm) of concrete blocks,\nor 20 inches (500 mm) of sandbags at ranges up to 1,312 feet (400 m).\n\n* Sandbags = 1/10th Steel\n* Concrete = 1/8th Steel\n* Pine Logs = 1/6th Steel\n\nhttp://www.panzerworld.net/armourpenetration",
           ":summary",
-          "* Level\n* Damage\n* Armor (mm)\n* Energy (J)\n* Explosive Force (psi)\n* Mass (kg)\n\nThe following table is an attempt to unify Damage, Armor, Energy, Explosive Force, Strength, and Mass together. This is done with the following premises:\n1) Where possible use factual comparisons between Weapons and Armor that defeated those weapons.\n2) Once damage and armor are mapped, the energy created from each firearm can be derived by muzzle velocity and weapon calibre.\n3) Energy in Joules (J) is easily converted into explosive force measured in PSI\n4) Energy may also easily be converted into a strength rating by determining how much mass that energy would lift over a person's head (3m) in 1 second.\n5) Finally the mass rating from strength can be used as a general chart for mass (and by correlation Body).\n\nThe formula is Energy = Mass (kg) * ((3m ^ 2) / 1s * 10m / 1s / 1s.\nSimplified the formula is Energy = Mass (kg) * 100.",
-          vx_core.f_new(
-            vx_core.t_msgblock,
-            ":msgs",
-            vx_core.f_new(
-              vx_core.t_msglist,
-              vx_core.f_new(
-                vx_core.t_msg,
-                ":code",
-                ":invalidtagfound",
-                ":detail",
-                vx_core.f_new(
-                  vx_core.t_anymap,
-                  ":type",
-                  nx_tactics_base.t_section,
-                  ":tag",
-                  "level"
-                ),
-                ":severity",
-                2
-              )
-            ),
-            ":msgblocks",
-            vx_core.f_new(
-              vx_core.t_msgblocklist,
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_section,
-                      ":tag",
-                      "level"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
-            )
-          )
+          "* Level\n* Damage\n* Armor (mm)\n* Energy (J)\n* Explosive Force (psi)\n* Mass (kg)\n\nThe following table is an attempt to unify Damage, Armor, Energy, Explosive Force, Strength, and Mass together. This is done with the following premises:\n1. Where possible use factual comparisons between Weapons and Armor that defeated those weapons.\n2. Once damage and armor are mapped, the energy created from each firearm can be derived by muzzle velocity and weapon calibre.\n3. Energy in Joules (J) is easily converted into explosive force measured in PSI\n4. Energy may also easily be converted into a strength rating by determining how much mass that energy would lift over a person's head (3m) in 1 second.\n5. Finally the mass rating from strength can be used as a general chart for mass (and by correlation Body).\n\nThe formula is Energy = Mass (kg) * ((3m ^ 2) / 1s * 10m / 1s / 1s.\nSimplified the formula is Energy = Mass (kg) * 100."
         ),
         "Combatant Types",
         vx_core.f_new(
@@ -6053,7 +3717,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Mob",
               ":summary",
-              "* Mob units take -1 to all combat, morale, or military rolls.\n* When a Mob unit takes its action, other Mob units within 2 spaces\nmust roll Will. If they fail, they immediately activate and attempt\nto move adjacent to the original Mob and perform the same action."
+              "* Mob units take -1 to all combat, morale, or military rolls.\n* When a Mob unit takes its action, other Mob units within 2 spaces must roll Will. If they fail, they immediately activate and attempt to move adjacent to the original Mob and perform the same action."
             ),
             ":Veteran",
             vx_core.f_new(
@@ -6107,7 +3771,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Armor Facing",
               ":summary",
-              "* Armor is rarely uniform around a unit.\n* Determine the armor side you are targetting (i.e. Front, Rear, Side, Top, Under) by determining which of your opponents [Firing Arc]s your weapon lies in.\n* If facing still cannot be determined, then it is the defender's choice.\n* Infantry units may attack top or under armor if they are within 1 space of the target (assume grenades or other\nimprovised weapons)."
+              "* Armor is rarely uniform around a unit.\n* Determine the armor side you are targetting (i.e. Front, Rear, Side, Top, Under) by determining which of your opponents [Firing Arc]s your weapon lies in.\n* If facing still cannot be determined, then it is the defender's choice.\n* Infantry units may attack top or under armor if they are within 1 space of the target (assume grenades or other improvised weapons)."
             ),
             ":Explosive",
             vx_core.f_new(
@@ -6115,7 +3779,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Explosive",
               ":summary",
-              "* 1 gram of TNT releases 1000 calories upon explosion or 4184J.  1 gram of sugar has abour 4x the energy.\n* 1g=4.184x10^3J, 1kg=4.184x10^6J, 1ton=4.184x10^9J, 1kt=4.184x10^12J, 1Mt=4.184x10^15J\n* Explosions Damage falls off by half (-1 Damage) for every 2m from the center.\n* Following a blast wave is a negative blast of 1/3 strength\n* Blasts are reflected and amplified by solid surfaces. A person between a blast and a building will suffer 2-3x the injury as those in open spaces.\n\nBlast Damage in Overpressure\nPo=0.34E/R^3\nwhere\nPo= overpressure in pascals (about 6895 Pascals per psi.)\nE=energy, in joules (0.1 Kg TNT = 461,200 joules)\nR^3= the cube of distance, in meters\nAnd, IIRC\n5 psi(35 Kpa): windows shattered, startled/stunned\n20 psi: (140 kPa)lung damage, eardrums likely popped\n35 psi (250 kPa): serious injury probable, death rare\n200 psi (1400 kPa): mutilation\n\n.15 psi: Glass breaks\n.25 psi: Hurricane winds, injuries from flying glass\n.4 psi: Limited minor structural damage (windows broken, cracks in plaster, broken roof tiles)\n.7 psi: Minor damage to house\n1 psi: Partial demolition of houses made uninhabitable\n2 psi: Partial collapse of walls and roofs of houses, Residential structures collapse, injuries common\n3 psi: Non-reinforced concrete or cinder wall shattered, steel frame buildings distored, 3000lb machinery unaffected, 10% eardrum\ndamage\n4 psi: Most buildings collapse except concrete, fatalities occur\n5 psi: Wooden utility poles snap, 50% eardrum damage\n6.3 psi: Lung haemorrhage damage\n7 psi: Houses completely destroyed, loaded trains overturned\n8 psi: Non-reinforced brick walls fail by shearing or flexure\n9 psi: Loaded train boxcars demolished\n10 psi: Buildings totally destroyed, 7000lb machines moved and badly damaged, 12000lb machines survive, Reinforced concrete\nbuildings severly damaged, fatal injuries common\n14.5 psi: 1% fatalities\n17.5 psi: 10% fatalities\n20.5 psi: 50% fatalities\n25.5 psi: 90% fatalities\n29.0 psi: 99% fatalities\n\n\n500lb Bomb\n1000lb Bomb\n4000lb (2t) Blockbuster Bomb 'Cookie' 3/4 weight is explosive\n8000lb (4t) Bomb\n12000lb (6t) Tallboy\n22000lb (11t) Grand Slam Earthquake Bomb\n1kt Fission Bomb\n10kt Fission Bomb\n1Mt Fusion Bomb\n10Mt Fusion Bomb\n\nBlast Radius:\n~50mm 2m\n~60mm 5m\n~70mm 10m\n~80mm 15m\n~90mm 20m\n105mm 25m\n155mm 50m\n203mm 80m\n\nECR The effective casualty radius is defined as the radius of a circle about the point of detonation in which it may be expected\nthat 50 percent of exposed troops will become casualties.\n\nThe 40mm grenade has an effective casualty radius of 5 meters.\n155mm (M107) 50m ECR\n5\"x54 (Mk64) 45m ECR\n120mm (M934) 60m ECR\n107mm (M329A2) 40m ECR\n105mm (M1) 35m ECR\n81mm (M935/M734) 40m ECR F/M252\n81mm (M374A3) 34m ECR F/M29\n60mm (M720/M888 ) 27.5 ECR"
+              "* 1 gram of TNT releases 1000 calories upon explosion or 4184J.  1 gram of sugar has abour 4x the energy.\n            * 1g=4.184x10^3J, 1kg=4.184x10^6J, 1ton=4.184x10^9J, 1kt=4.184x10^12J, 1Mt=4.184x10^15J\n            * Explosions Damage falls off by half (-1 Damage) for every 2m from the center.\n            * Following a blast wave is a negative blast of 1/3 strength\n            * Blasts are reflected and amplified by solid surfaces. A person between a blast and a building will suffer 2-3x the injury as those in open spaces.\n\n            Blast Damage in Overpressure\n            Po=0.34E/R^3\n            where\n            Po= overpressure in pascals (about 6895 Pascals per psi.)\n            E=energy, in joules (0.1 Kg TNT = 461,200 joules)\n            R^3= the cube of distance, in meters\n            And, IIRC\n            5 psi(35 Kpa): windows shattered, startled/stunned\n            20 psi: (140 kPa)lung damage, eardrums likely popped\n            35 psi (250 kPa): serious injury probable, death rare\n            200 psi (1400 kPa): mutilation\n\n            .15 psi: Glass breaks\n            .25 psi: Hurricane winds, injuries from flying glass\n            .4 psi: Limited minor structural damage (windows broken, cracks in plaster, broken roof tiles)\n            .7 psi: Minor damage to house\n            1 psi: Partial demolition of houses made uninhabitable\n            2 psi: Partial collapse of walls and roofs of houses, Residential structures collapse, injuries common\n            3 psi: Non-reinforced concrete or cinder wall shattered, steel frame buildings distored, 3000lb machinery unaffected, 10% eardrum damage\n            4 psi: Most buildings collapse except concrete, fatalities occur\n            5 psi: Wooden utility poles snap, 50% eardrum damage\n            6.3 psi: Lung haemorrhage damage\n            7 psi: Houses completely destroyed, loaded trains overturned\n            8 psi: Non-reinforced brick walls fail by shearing or flexure\n            9 psi: Loaded train boxcars demolished\n            10 psi: Buildings totally destroyed, 7000lb machines moved and badly damaged, 12000lb machines survive, Reinforced concrete buildings severly damaged, fatal injuries common\n            14.5 psi: 1% fatalities\n            17.5 psi: 10% fatalities\n            20.5 psi: 50% fatalities\n            25.5 psi: 90% fatalities\n            29.0 psi: 99% fatalities\n\n            500lb Bomb\n            1000lb Bomb\n            4000lb (2t) Blockbuster Bomb 'Cookie' 3/4 weight is explosive\n            8000lb (4t) Bomb\n            12000lb (6t) Tallboy\n            22000lb (11t) Grand Slam Earthquake Bomb\n            1kt Fission Bomb\n            10kt Fission Bomb\n            1Mt Fusion Bomb\n            10Mt Fusion Bomb\n\n            Blast Radius:\n            ~50mm 2m\n            ~60mm 5m\n            ~70mm 10m\n            ~80mm 15m\n            ~90mm 20m\n            105mm 25m\n            155mm 50m\n            203mm 80m\n\n            ECR The effective casualty radius is defined as the radius of a circle about the point of detonation in which it may be expected\n            that 50 percent of exposed troops will become casualties.\n\n            The 40mm grenade has an effective casualty radius of 5 meters.\n            155mm (M107) 50m ECR\n            5\"x54 (Mk64) 45m ECR\n            120mm (M934) 60m ECR\n            107mm (M329A2) 40m ECR\n            105mm (M1) 35m ECR\n            81mm (M935/M734) 40m ECR F/M252\n            81mm (M374A3) 34m ECR F/M29\n            60mm (M720/M888 ) 27.5 ECR"
             ),
             "Anti-Missile Missile",
             vx_core.f_new(
@@ -6251,7 +3915,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Flechette Ammo",
               ":summary",
-              "* This is kind of a shot-gun that fires a swarm of darts instead of buckshot ('flechette' is French for 'little\narrow').  They look like nails.  In the shell, a group of flechettes are held together by a plastic frame called a\nsabot, which falls away when the load exits the muzzle.  Light flechettes are twenty to a shell, heavy are six to a\nshell.  Like shotgun shells, they are good for causing large amounts of damage to the intruder in one's apartment,\nbut failing to penetrate the wall so as to not annoy the neighbors.\n* Light flechettes are only good against soft body armor; rifle plates will stop them cold.  Additionally, light\nflechettes lack the stopping power of buckshot against unarmored targets.\n* Heavy flechettes have the mass of a 000 buckshot pellet and likely being made from very hard material (at least\nhardened steel, probably tungsten), these shells will exhibit rifle grade penetration.\n* Flechettes are fin stabilized steel projectiles similar in appearance to arrows. During the Korean War the Chinese army tactic of human wave attacks against US lines of defence prompted interest in flechette projectiles in single and multiple projectile systems for small arms and antipersonnel (APERS) use. Flechettes have a performance criteria very different from the conventional rifle bullet. Typical modern flechettes are small light weight steel projectiles, and the velocity lost to air resistance is generally 375 fps. per 100 Meters of flight. Unlike rifle bullets, flechettes are not spin stabilized, but use fins to achieve level flight. The flechette's long body looses rigidity on target impact and bends into a hook, often breaking off the fin portion creating an additional wound. Flechette munitions include projectiles for use in the M16 rifle, CAWS (close assault weapons system), and 12 gage shotgun, as well as the 105mm M101A1/M102 howitzer, 2.75 in. FFAR (folding fin aircraft rocket), and the 70mm Hydra-70 FFAR."
+              "* This is kind of a shot-gun that fires a swarm of darts instead of buckshot ('flechette' is French for 'little arrow'). They look like nails. In the shell, a group of flechettes are held together by a plastic frame called a sabot, which falls away when the load exits the muzzle. Light flechettes are twenty to a shell, heavy are six to a shell. Like shotgun shells, they are good for causing large amounts of damage to the intruder in one's apartment, but failing to penetrate the wall so as to not annoy the neighbors.\n* Light flechettes are only good against soft body armor; rifle plates will stop them cold. Additionally, light flechettes lack the stopping power of buckshot against unarmored targets.\n* Heavy flechettes have the mass of a 000 buckshot pellet and likely being made from very hard material (at least hardened steel, probably tungsten), these shells will exhibit rifle grade penetration.\n* Flechettes are fin stabilized steel projectiles similar in appearance to arrows. During the Korean War the Chinese army tactic of human wave attacks against US lines of defence prompted interest in flechette projectiles in single and multiple projectile systems for small arms and antipersonnel (APERS) use. Flechettes have a performance criteria very different from the conventional rifle bullet. Typical modern flechettes are small light weight steel projectiles, and the velocity lost to air resistance is generally 375 fps. per 100 Meters of flight. Unlike rifle bullets, flechettes are not spin stabilized, but use fins to achieve level flight. The flechette's long body looses rigidity on target impact and bends into a hook, often breaking off the fin portion creating an additional wound. Flechette munitions include projectiles for use in the M16 rifle, CAWS (close assault weapons system), and 12 gage shotgun, as well as the 105mm M101A1/M102 howitzer, 2.75 in. FFAR (folding fin aircraft rocket), and the 70mm Hydra-70 FFAR."
             ),
             "Fragmentation Ammo",
             vx_core.f_new(
@@ -6297,7 +3961,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Needle Ammo",
               ":summary",
-              "* Needlers are unique weapons that fire small needle-like projectiles at high velocities.\n* Advantages: Because they are so light, needlers have much lower recoil than ordinary rounds.  They also benefit\nfrom high rates of fire and large ammo capacities.\n* Disadvantages: Their principle weakness is that damage falls off sharply against armor.\n* One needler has a solid block of plastic as ammo and a cylinder in the barrel that rotates at high velocities.  The\ntwisting motion of the cylinder repeatedly shaves off toothpick-sized needles, tightly coils them and ejects them from\nthe barrel at high velocity.  When the coiled needle strikes a target itunwinds, drilling into the target.  Because\nthe barrel does not stop spinning, the needler can fire a continuous hailstorm of needles until it is out of ammo.\n* Rules: [Shattershot], [Continuous Stream]",
+              "* Needlers are unique weapons that fire small needle-like projectiles at high velocities.\n* Advantages: Because they are so light, needlers have much lower recoil than ordinary rounds. They also benefit from high rates of fire and large ammo capacities.\n* Disadvantages: Their principle weakness is that damage falls off sharply against armor.\n* One needler has a solid block of plastic as ammo and a cylinder in the barrel that rotates at high velocities. The twisting motion of the cylinder repeatedly shaves off toothpick-sized needles, tightly coils them and ejects them from the barrel at high velocity. When the coiled needle strikes a target itunwinds, drilling into the target. Because the barrel does not stop spinning, the needler can fire a continuous hailstorm of needles until it is out of ammo.\n* Rules: [Shattershot], [Continuous Stream]",
               ":titles",
               "Needlegun"
             ),
@@ -6325,7 +3989,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Recoiless Ammo",
               ":summary",
-              "* Recoilless weapons fire rocket-propelled, recoilless rounds.  These rounds can be large calibur while maintaining\na high fire rate and no recoil making them especially well suited for underwater or space.\n* Recoilless weapons may carry varying payloads including: AP, HE, HEAT, chemical, incediary, and underwater rounds.",
+              "* Recoilless weapons fire rocket-propelled, recoilless rounds.  These rounds can be large calibur while maintaining a high fire rate and no recoil making them especially well suited for underwater or space.\n* Recoilless weapons may carry varying payloads including: AP, HE, HEAT, chemical, incediary, and underwater rounds.",
               ":titles",
               "Bazooka, Gyrojet, Rocket Round"
             ),
@@ -6371,7 +4035,7 @@ export default class nx_tactics_books_combat {
           ":reference",
           "Examples of pulsed systems with high peak power:\n* 700 TW (700x10^12 W) - The National Ignition Facility is working on a system that, when complete, will contain a 192-beam, 1.8-megajoule laser system adjoining a 10-meter-diameter target chamber. The system is expected to be completed in April of 2009.\n* 1.3 PW (1.3x10^15 W) - world's most powerful laser as of 1998, located at the Lawrence Livermore Laboratory",
           ":summary",
-          "* Lasers are the ultimate sniper's weapon.  They are silent, extremely hard to spot, and have pinpoint accuracy.  They\nare, however, vulnerable to impurities in the the medium they fire through.  These impurities are heated by the beam\nand can dilute the beam as well as make the beam visible.\n\n* Accuracy: +1\n\n* 5 mW - CD-ROM\n* 10 mW - DVD player\n* 100 mW - CD-RW\n* 250 mW - DVD-R\n* 1 W - green laser in current Holographic Versatile Disc prototype development\n* 1-20 W - output of the majority of commercially available solid-state lasers used for micro machining\n* 30-100 W - typical sealed CO2 surgical lasers[26]\n* 100-3000 W (peak output 1.5 kW) - typical sealed CO2 lasers used in industrial laser cutting\n\nEnergy Storage\nLet's assume non-rechargeable systems at an energy density of 2.5 kilojoules per cubic centimeter, which is quite plausible. You might consider a rechargeable battery pack as an option, with half the capacity of the non-rechargeables.\nLithium-polymer cells are rechargeable, and have an energy density of 1.08 kJ/cm3.\nAs for nonrechargable batteries, check out the various molten salt batteries. They're stored as a solid, so they can be stored 'charged' virtually forever. As soon as you bring them up to operating temperature (400 C or more), and as long as you keep them there, you have an incredibly high\noutput battery. The military has used them like this for a very long time, and most current research is focused on making them rechargeable.\nApparently the energy density varies widely, but it's clear that they can have very high energy density.\n\nWhether you use lasers or particle beams, you'll need a kilojoule of output energy to reliably incapacitate a human target. In the case of a laser weapon, that energy would be subdivided into ~1 joule pulses at ~5 microsecond intervals, to achieve penetration in the face of a laser's natural tendency to deposit energy at the target's surface. Particle beams don't have that problem; boost the electrons up to a few hundred MeV, and you can dump the whole kilojoule's worth at once.\nThe plasma clears away easily in that time frame; debris is the real issue, and the driving force between the 5 microsecond pulse rate. That allows roughly 90% of the debris to clear the beam path, assuming a 1mm beam and instantaneous 1J pulses. 1 joule every 5 microseconds is optimal against soft tissue, other materials will want different pulse trains.\nI'm assuming a weapon designed to penetrate ~30cm in soft body tissue. This gives about 15cm in bone or plastic, 5cm in brick or concrete, or 2.5cm in steel or most ceramics. Synthetics won't be very good at stopping energy weapons, even tough ones like kevlar, but you might be able to find a ceramic that could stop a laser beam with a centimeter's thickness or so. Particle beams are tougher to stop; it mostly comes down to sticking mass in the way without regard to material properties.\nLasers would likely have to have pulse energy and frequency tuned to the specific material being targeted. It might be possible to do this automatically, based on crude spectoanalysis of the material vaporized in each pulse, but if not expect penetration to be roughly halved if a laser weapon is fired at a target it has not been optimized for.\nTaking into account the inefficiency of the system, the input energy will likely be somewhere between two and five kilojoules per shot. So you could get fifty to a hundred shots from a pistol-sized non rechargeable energy source, or half that with a rechargeable battery. Automatic fire at anywhere up to 20 Hz (1200 rpm) shouldn't be a problem in the short term, though might cause cooling problems if you keep it up.\nYou also need to focus the energy on the target, with a spot size of a millimeter or less. With a laser, that gets kind of tricky. A 5-centimeter mirror, about the largest you can really imagine on a pistol, gives an effective range of perhaps sixty meters, beyond which the weapon starts losing penetration quite rapidly.\nyou still need to get down to a millimeter or so to flash-boil water in a layer ~one optical depth in thickness. Once you do that, the steam will expand and spread the damage around, but if you don't hit the threshold for turning water into steam all you do is warm up the target.\nWith penetration, range, and repeatability dealt with, it is time to turn to accuracy. Lack of recoil, automatic fire capability, and line-of-sight accuracy are all major assets here, but there is one more improvement to be made. Both lasers and particle beams can be steered at least a degree or two off-axis, in the case of the laser via the adaptive-optic mirror, for particle beams with a transverse magnetic field at the muzzle.\nIf we can throw in a chip-mounted laser or acoustic gyro set, we can have a gyrostabilized handgun. The weapon shoots not at where the gun is pointed at the instant of firing, but at a weighted average of where it has been pointing over the past quarter of a second or so. Smoothes out a lot of the jitter inherent in human marksmanship.\nAnother clever one would be to use the laser's optics to project a laser sight. Pull the trigger, and the harmless red dot suddenly explodes. BANG! Using the laser optics as a scope would be more useful for long range or high accuracy shots.\nIn combat, I would expect such a weapon to be used in automatic fire mode at ~10 Hz. With fifty to a hundred pulses to play with, you won't run out of ammunition too soon as is the case with current machine pistols. And recoilless, stabilized automatic fire should allow a moderately capable marksman to walk a burst on target in one or two reaction cycles (say, half a second) in most circumstances.\nPractical combat range, if you don't mind missing a good part of the time, would be on the order of 50 meters\nCooling:\nAnd you'll need some serious cooling. I'd go with liquid-metal microchannel heat pipes etched into all the hot surfaces, and leading to cooling fins around the 'barrel'. If you use the chemical-propellant option, regenerative cooling could also work.\nWhat would it sound like?\nThe actual mechanism of producing the laser beam could sound like anything, from complete silence, to the click of an electrical contact, to a sharp, electric snap, to a gunshot-like thunderclap.\nThe beam, when incident upon its target, will make a nice bang.\nThe pistol won't make a 'zap' sound, will it?\nIf the beam is repeated rapidly it might, however, make a buzz. It might end up sounding quite electrical at a few hundred Hertz.\nRemember that the temporary cavity caused by the explosions only lasts a few milliseconds, so the beam has to have completed its work of piercing the target at this time. The individual explosions will be too closely spaced (microseconds apart) to be individually audible. Since shocks are always supersonic to the air in their path, and subsonic to the moving air left behind them, multiple subsequent shocks from the same source tend to merge into one stronger shock. Thus, each pulse probably makes one bang. The bang comes from a series of explosions whose total energy is about the same as that of the gunpowder detonating in a firing rifle, so it will probably be about as loud.\nIf the beam is in the visible part of the spectrum, you get a noticeable path through clean air at indoor lighting intensities. I am not sure if it will be visible out of doors under full sunlight, but you could see it at night. The beam will be widest at the aperture of the gun, probably a few centimeters across to keep the optics from being damaged by the intense light. The beam will converge to a spot a millimeter or so across at the target. In unclean air, the beam will be a lot more visible. This Rayleigh scattering is linear, so the total integrated brightness across the cross section of the beam should be constant, if we neglect the gradual attenuation of the beam due to the light being scattered out of it. Higher frequency light scatters much more than lower frequency light, so a blue beam would be much more visible than a red one.\nWhen a visible beam is incident on the target, it creates a very bright flash of the same color as the beam. This may temporarily dazzle those looking at it, and the beam itself may be overlooked because of the bright flash obscuring it.\nIf the weapon lases in the UV, the intense pulse may cause multi-photon ionization of atoms in the air, causing a fluorescent glow along the path of the beam (possibly red, green, or violet, I'm not quite sure what sparsely ionized air at atmospheric pressure looks like). Since this process is non-linear, it will be dimmest near the aperture where the beam is widest, and most intense nearer the target. Weapon designers will probably try to minimize this effect, since it leads to attenuation of the beam and subsequent loss of effectiveness.\nNear IR beams are likely to only be visible if there are relatively large pieces of dust, lint, or pollen floating around, which will glow incandescent as they burn under the irradiation of your beam. I doubt beams in the 'thermal' IR range would be used, even though the air is fairly transparent to these wavelengths, because with short, intense pulses you tend to get cascade ionization with these lower frequencies, and this will completely absorb the beam.\nBeams at non-visible frequencies will also make a flash and a bang where incident on the target from the expanding plasma of their explosion, but nowhere near as bright as that of a visible beam.\nIn vacuum, of course, the beam itself is always invisible, but you can still see the flashes at the target.\nWill the beam be invisible or bright enough to be blinding?\nIt is quite likely to be both. The beam itself may be invisible or minimally visible, but if even a tiny fraction of the beam is specularly scattered into your eye, near IR and visible and some near UV will be focused to a diffraction limited spot on your retina, causing burns and permanent scarring. This can lead to degradation of vision or total blindness. Interestingly, the brain compensates for blind spots on the retina, so that you might have lost up to 60% of your vision from multiple exposures to beams and you still think you can see just fine.\nAnyone likely to be using a laser will probably wear protective goggles or contacts. With today's technology, you would probably make them out of an optical band gap material that excludes a very narrow window of light centered on the laser's frequency. This means that the people who fired the lasers would not be able to see the beams or flashes of their own weapons (assuming they used visible light lasers). They would still see the flashes from the plasma explosions, though, plus incandescence of suspended atmospheric particles and fluorescence from multi-photon absorption.\nThe method of subsequent explosions on the back of an expanding cavity driving the cavity through the target will leave a wound much like that of a gunshot, except without fun stuff like the bullet fragmenting or breaking up. A variant where nearly parallel beams a few cm apart literally rip the tissue between them could leave a wound looking more like an ugly gash - add on a few more of these beams on the same plane and you could literally cut someone in half with one millisecond pulse, using only about as much energy as goes into accelerating the bullet of a modern day battle rifle.\nWill there be a large splash of blood and gore on the wall behind the unlucky pirate?\nQuite likely, Note that since you do not have the momentum associated with a projectile, it will be more spread out than you would get from a gunshot wound, and you would get blood and gore coming out the front, too.\nI assume that since the beam is one millimeter in diameter but the hole in the pirate is four centimeters, little or no wound cauterization will occur.\nNope, the wound would be ragged and messy. It is created by mechanical, not thermal effects.\nThe laser weapon will probably end up looking something like a camcorder, with a big lens that the beam goes through, and a fairly compact design. Since mirrors and internal optics can bend the beam inside the weapon, there is no need for the long barrels you see on modern firearms. Cooling, if necessary, would probably not involve fins - I would expect something more like the radiator on modern automobiles. Remember, shedding your heat through contact with the air is much more efficient than radiation.\nkeeping in mind that using contact with the air doesn't work if there is no air, i.e., in vacuum. C. James Huff notes that there is one kind of fin for radiant cooling and another for air cooling. He mentions that the fins on a CPU hot sink is a good example of the latter. For a vacuum rated laser he recommends a compressed or liquified gas cartridge since a radiant cooler would be inconveniently huge.\nAlso, lasers are getting surprisingly efficient. When each beam pulse contains no more energy than imparted to a rifle bullet, lasers might need cooling no more than a modern rifle.\nthe laser's battery will be carrying plenty of juice. Anything carrying that much energy will be at least slightly unstable. In other words, it wouldn't take much to make a charged battery into a home-made bomb (which might come in handy if one suddenly needed a bomb.). You might have read news reports about laptop computers who's batteries suddenly burst into flame.\nAnd don't even think about sticking a fork into the open contacts.\nThis has been observed somewhat tongue-in-cheek by John Routledge as Routledge's Law: 'Any interesting battery material for a laser gun would be more usefully deployed as an explosive warhead.' He also notes the problem with ammunition cook off. If you are holding a fully-charged laser pistol, and some lucky enemy sniper manages to score a direct hit on the pistol's battery, it is going to be just to bad if the resulting explosion vaporizes you and all your friends within a large radius.\nAssuming a worst case of 5 kilojoules per shot and a rechargeable magazine containing 50 shots, the magazine is packing 250 kilojoules. This is the equivalent of 250,000 * 2.7778e-4 = 70 watt-hours or 250,000 / 4,500 = 55 grams of TNT (For comparison purposes, a standard 8 inch stick of dynamite is about 208 grams and hand grenades used by the US Army have explosive charges of 56 to 226 grams of TNT). At his specified power density of 2.5 kilojoules per cubic centimeter, this would imply a magazine volume of 100 cm3. this is approximately the same volume as forty-two .45 caliber rounds.\n\nFan Beam\nIf a man is about 45 centimeters wide (18 inches), at a range of 5 meters, and the bolts were to be spaced 3 centimeters apart, it would take 15 bolts fired at 0.3 degree increments to the left and right. Your target would fall... in two places.\nA less blood-thirsty use would be in the wilderness, chopping down trees ('Lumberjack' mode).\n\nMultiple Modes\nStun would be a laser in Pulsed Energy Projectile mode.  Heat would be a laser in unpulsed heat ray mode at relatively low energy levels. Disrupt would be a laser in pulsed blaster mode or in unpulsed heat ray mode at high energy levels. Overload makes the battery explode. Dematerialize is the only one that cannot be done, but it is rather silly in the first place.\n('Dematerialize' is a fancy way of saying 'disintegrator ray'. A weapon that can vaporize a human body without setting the walls and floor on fire or even raising the temperature of the room? Give me a break!)\nRemember that a laser in pulse mode could have its effect optimized to a given material by a specific setting for pulse frequency. So one could have a 'metal cutting' setting for use as a tool or to open a locked door, and a 'kill human' setting for war-to-the-knife combat. All with the same pulse laser, just with a different frequency.\nSuch a weapon would have a selector switch for each mode. And it might have a 'customizable' mode. This would allow an expert to manually tweak the settings: continuous or pulse, spectrum frequency, pulse timing, power level, etc."
+          "* Lasers are the ultimate sniper's weapon. They are silent, extremely hard to spot, and have pinpoint accuracy. They are, however, vulnerable to impurities in the the medium they fire through. These impurities are heated by the beam and can dilute the beam as well as make the beam visible.\n\n       * Accuracy: +1\n\n       * 5 mW - CD-ROM\n       * 10 mW - DVD player\n       * 100 mW - CD-RW\n       * 250 mW - DVD-R\n       * 1 W - green laser in current Holographic Versatile Disc prototype development\n       * 1-20 W - output of the majority of commercially available solid-state lasers used for micro machining\n       * 30-100 W - typical sealed CO2 surgical lasers[26]\n       * 100-3000 W (peak output 1.5 kW) - typical sealed CO2 lasers used in industrial laser cutting\n\n       Energy Storage\n       Let's assume non-rechargeable systems at an energy density of 2.5 kilojoules per cubic centimeter, which is quite plausible. You might consider a rechargeable battery pack as an option, with half the capacity of the non-rechargeables.\n       Lithium-polymer cells are rechargeable, and have an energy density of 1.08 kJ/cm3.\n       As for nonrechargable batteries, check out the various molten salt batteries. They're stored as a solid, so they can be stored 'charged' virtually forever. As soon as you bring them up to operating temperature (400 C or more), and as long as you keep them there, you have an incredibly high output battery. The military has used them like this for a very long time, and most current research is focused on making them rechargeable.\n       Apparently the energy density varies widely, but it's clear that they can have very high energy density.\n\n       Whether you use lasers or particle beams, you'll need a kilojoule of output energy to reliably incapacitate a human target. In the case of a laser weapon, that energy would be subdivided into ~1 joule pulses at ~5 microsecond intervals, to achieve penetration in the face of a laser's natural tendency to deposit energy at the target's surface. Particle beams don't have that problem; boost the electrons up to a few hundred MeV, and you can dump the whole kilojoule's worth at once.\n       The plasma clears away easily in that time frame; debris is the real issue, and the driving force between the 5 microsecond pulse rate. That allows roughly 90% of the debris to clear the beam path, assuming a 1mm beam and instantaneous 1J pulses. 1 joule every 5 microseconds is optimal against soft tissue, other materials will want different pulse trains.\n       I'm assuming a weapon designed to penetrate ~30cm in soft body tissue. This gives about 15cm in bone or plastic, 5cm in brick or concrete, or 2.5cm in steel or most ceramics. Synthetics won't be very good at stopping energy weapons, even tough ones like kevlar, but you might be able to find a ceramic that could stop a laser beam with a centimeter's thickness or so. Particle beams are tougher to stop; it mostly comes down to sticking mass in the way without regard to material properties.\n       Lasers would likely have to have pulse energy and frequency tuned to the specific material being targeted. It might be possible to do this automatically, based on crude spectoanalysis of the material vaporized in each pulse, but if not expect penetration to be roughly halved if a laser weapon is fired at a target it has not been optimized for.\n       Taking into account the inefficiency of the system, the input energy will likely be somewhere between two and five kilojoules per shot. So you could get fifty to a hundred shots from a pistol-sized non rechargeable energy source, or half that with a rechargeable battery. Automatic fire at anywhere up to 20 Hz (1200 rpm) shouldn't be a problem in the short term, though might cause cooling problems if you keep it up.\n       You also need to focus the energy on the target, with a spot size of a millimeter or less. With a laser, that gets kind of tricky. A 5-centimeter mirror, about the largest you can really imagine on a pistol, gives an effective range of perhaps sixty meters, beyond which the weapon starts losing penetration quite rapidly.\n       you still need to get down to a millimeter or so to flash-boil water in a layer ~one optical depth in thickness. Once you do that, the steam will expand and spread the damage around, but if you don't hit the threshold for turning water into steam all you do is warm up the target.\n       With penetration, range, and repeatability dealt with, it is time to turn to accuracy. Lack of recoil, automatic fire capability, and line-of-sight accuracy are all major assets here, but there is one more improvement to be made. Both lasers and particle beams can be steered at least a degree or two off-axis, in the case of the laser via the adaptive-optic mirror, for particle beams with a transverse magnetic field at the muzzle.\n       If we can throw in a chip-mounted laser or acoustic gyro set, we can have a gyrostabilized handgun. The weapon shoots not at where the gun is pointed at the instant of firing, but at a weighted average of where it has been pointing over the past quarter of a second or so. Smoothes out a lot of the jitter inherent in human marksmanship.\n       Another clever one would be to use the laser's optics to project a laser sight. Pull the trigger, and the harmless red dot suddenly explodes. BANG! Using the laser optics as a scope would be more useful for long range or high accuracy shots.\n       In combat, I would expect such a weapon to be used in automatic fire mode at ~10 Hz. With fifty to a hundred pulses to play with, you won't run out of ammunition too soon as is the case with current machine pistols. And recoilless, stabilized automatic fire should allow a moderately capable marksman to walk a burst on target in one or two reaction cycles (say, half a second) in most circumstances.\n       Practical combat range, if you don't mind missing a good part of the time, would be on the order of 50 meters\n       Cooling:\n       And you'll need some serious cooling. I'd go with liquid-metal microchannel heat pipes etched into all the hot surfaces, and leading to cooling fins around the 'barrel'. If you use the chemical-propellant option, regenerative cooling could also work.\n       What would it sound like?\n       The actual mechanism of producing the laser beam could sound like anything, from complete silence, to the click of an electrical contact, to a sharp, electric snap, to a gunshot-like thunderclap.\n       The beam, when incident upon its target, will make a nice bang.\n       The pistol won't make a 'zap' sound, will it?\n       If the beam is repeated rapidly it might, however, make a buzz. It might end up sounding quite electrical at a few hundred Hertz.\n       Remember that the temporary cavity caused by the explosions only lasts a few milliseconds, so the beam has to have completed its work of piercing the target at this time. The individual explosions will be too closely spaced (microseconds apart) to be individually audible. Since shocks are always supersonic to the air in their path, and subsonic to the moving air left behind them, multiple subsequent shocks from the same source tend to merge into one stronger shock. Thus, each pulse probably makes one bang. The bang comes from a series of explosions whose total energy is about the same as that of the gunpowder detonating in a firing rifle, so it will probably be about as loud.\n       If the beam is in the visible part of the spectrum, you get a noticeable path through clean air at indoor lighting intensities. I am not sure if it will be visible out of doors under full sunlight, but you could see it at night. The beam will be widest at the aperture of the gun, probably a few centimeters across to keep the optics from being damaged by the intense light. The beam will converge to a spot a millimeter or so across at the target. In unclean air, the beam will be a lot more visible. This Rayleigh scattering is linear, so the total integrated brightness across the cross section of the beam should be constant, if we neglect the gradual attenuation of the beam due to the light being scattered out of it. Higher frequency light scatters much more than lower frequency light, so a blue beam would be much more visible than a red one.\n       When a visible beam is incident on the target, it creates a very bright flash of the same color as the beam. This may temporarily dazzle those looking at it, and the beam itself may be overlooked because of the bright flash obscuring it.\n       If the weapon lases in the UV, the intense pulse may cause multi-photon ionization of atoms in the air, causing a fluorescent glow along the path of the beam (possibly red, green, or violet, I'm not quite sure what sparsely ionized air at atmospheric pressure looks like). Since this process is non-linear, it will be dimmest near the aperture where the beam is widest, and most intense nearer the target. Weapon designers will probably try to minimize this effect, since it leads to attenuation of the beam and subsequent loss of effectiveness.\n       Near IR beams are likely to only be visible if there are relatively large pieces of dust, lint, or pollen floating around, which will glow incandescent as they burn under the irradiation of your beam. I doubt beams in the 'thermal' IR range would be used, even though the air is fairly transparent to these wavelengths, because with short, intense pulses you tend to get cascade ionization with these lower frequencies, and this will completely absorb the beam.\n       Beams at non-visible frequencies will also make a flash and a bang where incident on the target from the expanding plasma of their explosion, but nowhere near as bright as that of a visible beam.\n       In vacuum, of course, the beam itself is always invisible, but you can still see the flashes at the target.\n       Will the beam be invisible or bright enough to be blinding?\n       It is quite likely to be both. The beam itself may be invisible or minimally visible, but if even a tiny fraction of the beam is specularly scattered into your eye, near IR and visible and some near UV will be focused to a diffraction limited spot on your retina, causing burns and permanent scarring. This can lead to degradation of vision or total blindness. Interestingly, the brain compensates for blind spots on the retina, so that you might have lost up to 60% of your vision from multiple exposures to beams and you still think you can see just fine.\n       Anyone likely to be using a laser will probably wear protective goggles or contacts. With today's technology, you would probably make them out of an optical band gap material that excludes a very narrow window of light centered on the laser's frequency. This means that the people who fired the lasers would not be able to see the beams or flashes of their own weapons (assuming they used visible light lasers). They would still see the flashes from the plasma explosions, though, plus incandescence of suspended atmospheric particles and fluorescence from multi-photon absorption.\n       The method of subsequent explosions on the back of an expanding cavity driving the cavity through the target will leave a wound much like that of a gunshot, except without fun stuff like the bullet fragmenting or breaking up. A variant where nearly parallel beams a few cm apart literally rip the tissue between them could leave a wound looking more like an ugly gash - add on a few more of these beams on the same plane and you could literally cut someone in half with one millisecond pulse, using only about as much energy as goes into accelerating the bullet of a modern day battle rifle.\n       Will there be a large splash of blood and gore on the wall behind the unlucky pirate?\n       Quite likely, Note that since you do not have the momentum associated with a projectile, it will be more spread out than you would get from a gunshot wound, and you would get blood and gore coming out the front, too.\n       I assume that since the beam is one millimeter in diameter but the hole in the pirate is four centimeters, little or no wound cauterization will occur.\n       Nope, the wound would be ragged and messy. It is created by mechanical, not thermal effects.\n       The laser weapon will probably end up looking something like a camcorder, with a big lens that the beam goes through, and a fairly compact design. Since mirrors and internal optics can bend the beam inside the weapon, there is no need for the long barrels you see on modern firearms. Cooling, if necessary, would probably not involve fins - I would expect something more like the radiator on modern automobiles. Remember, shedding your heat through contact with the air is much more efficient than radiation.\n       keeping in mind that using contact with the air doesn't work if there is no air, i.e., in vacuum. C. James Huff notes that there is one kind of fin for radiant cooling and another for air cooling. He mentions that the fins on a CPU hot sink is a good example of the latter. For a vacuum rated laser he recommends a compressed or liquified gas cartridge since a radiant cooler would be inconveniently huge.\n       Also, lasers are getting surprisingly efficient. When each beam pulse contains no more energy than imparted to a rifle bullet, lasers might need cooling no more than a modern rifle.\n       the laser's battery will be carrying plenty of juice. Anything carrying that much energy will be at least slightly unstable. In other words, it wouldn't take much to make a charged battery into a home-made bomb (which might come in handy if one suddenly needed a bomb.). You might have read news reports about laptop computers who's batteries suddenly burst into flame.\n       And don't even think about sticking a fork into the open contacts.\n       This has been observed somewhat tongue-in-cheek by John Routledge as Routledge's Law: 'Any interesting battery material for a laser gun would be more usefully deployed as an explosive warhead.' He also notes the problem with ammunition cook off. If you are holding a fully-charged laser pistol, and some lucky enemy sniper manages to score a direct hit on the pistol's battery, it is going to be just to bad if the resulting explosion vaporizes you and all your friends within a large radius.\n       Assuming a worst case of 5 kilojoules per shot and a rechargeable magazine containing 50 shots, the magazine is packing 250 kilojoules. This is the equivalent of 250,000 * 2.7778e-4 = 70 watt-hours or 250,000 / 4,500 = 55 grams of TNT (For comparison purposes, a standard 8 inch stick of dynamite is about 208 grams and hand grenades used by the US Army have explosive charges of 56 to 226 grams of TNT). At his specified power density of 2.5 kilojoules per cubic centimeter, this would imply a magazine volume of 100 cm3. this is approximately the same volume as forty-two .45 caliber rounds.\n\n       Fan Beam\n       If a man is about 45 centimeters wide (18 inches), at a range of 5 meters, and the bolts were to be spaced 3 centimeters apart, it would take 15 bolts fired at 0.3 degree increments to the left and right. Your target would fall... in two places.\n       A less blood-thirsty use would be in the wilderness, chopping down trees ('Lumberjack' mode).\n\n       Multiple Modes\n       Stun would be a laser in Pulsed Energy Projectile mode.  Heat would be a laser in unpulsed heat ray mode at relatively low energy levels. Disrupt would be a laser in pulsed blaster mode or in unpulsed heat ray mode at high energy levels. Overload makes the battery explode. Dematerialize is the only one that cannot be done, but it is rather silly in the first place.\n       ('Dematerialize' is a fancy way of saying 'disintegrator ray'. A weapon that can vaporize a human body without setting the walls and floor on fire or even raising the temperature of the room? Give me a break!)\n       Remember that a laser in pulse mode could have its effect optimized to a given material by a specific setting for pulse frequency. So one could have a 'metal cutting' setting for use as a tool or to open a locked door, and a 'kill human' setting for war-to-the-knife combat. All with the same pulse laser, just with a different frequency.\n       Such a weapon would have a selector switch for each mode. And it might have a 'customizable' mode. This would allow an expert to manually tweak the settings: continuous or pulse, spectrum frequency, pulse timing, power level, etc."
         ),
         "Less Than Lethal",
         vx_core.f_new(
@@ -6379,7 +4043,7 @@ export default class nx_tactics_books_combat {
           ":name",
           "Less Than Lethal",
           ":reference",
-          "It was recently revealed that the US military was researching a rather alarming line of less-lethal\nweapons, the Pulsed Energy Projectile (PEP) program.  (As a side note, understand that there is no such\nthing as a 'non-lethal' weapon.  This is because any weapon or gas that can reliably incapacitate or render\nunconscious a 300 pound world wrestling champion will be strong enough to instantly kill a small child or\nelderly person.)  PEP weapons fire a laser pulse that is very intense but only a fraction of a second in\nduration.  The pulse vaporizes a tiny portion of the hapless victim's clothing or skin, creating a plasma\nburst intense enough to knock the victim to the ground.  This was intended to be used for crowd control.\nA pulse strong enough to knock one down is also strong enough to make one's eyeballs explode if it hit your\nface.  However, during test performed on animals, the researchers noticed something unexpected.  The pulses\nwere creating pain and temporary paralysis in the test animals.  As it turns out, certain pulses would\ncreate a plasma burst emitting an electromagnetic signal of proper frequency to artificially stimulate the\nnerve endings in the animal's skin.  The US military is researching this effect, trying to find the\nfrequency that will cause the maximum pain sensation without actually causing any physical harm to the\ntarget.  There is also the possibility that other frequencies could cause taser-like paralysis effects.\nThe effect can be made lethal.  The original name for the project was Pulsed Impulsive Kill Laser (PIKL)\nbut was quickly changed.  Currently PEP weapons are not man-portable, they are vehicle mounted weapons.\nThey have a range of about two kilometers.  We might yet see Space-1999 style hand lasers with a \"stun\"\nsetting.",
+          "It was recently revealed that the US military was researching a rather alarming line of less-lethal weapons, the Pulsed Energy Projectile (PEP) program. (As a side note, understand that there is no such thing as a 'non-lethal' weapon. This is because any weapon or gas that can reliably incapacitate or render unconscious a 300 pound world wrestling champion will be strong enough to instantly kill a small child or elderly person.) PEP weapons fire a laser pulse that is very intense but only a fraction of a second in duration. The pulse vaporizes a tiny portion of the hapless victim's clothing or skin, creating a plasma burst intense enough to knock the victim to the ground. This was intended to be used for crowd control. A pulse strong enough to knock one down is also strong enough to make one's eyeballs explode if it hit your face. However, during test performed on animals, the researchers noticed something unexpected. The pulses were creating pain and temporary paralysis in the test animals. As it turns out, certain pulses would create a plasma burst emitting an electromagnetic signal of proper frequency to artificially stimulate the nerve endings in the animal's skin. The US military is researching this effect, trying to find the frequency that will cause the maximum pain sensation without actually causing any physical harm to the target. There is also the possibility that other frequencies could cause taser-like paralysis effects. The effect can be made lethal. The original name for the project was Pulsed Impulsive Kill Laser (PIKL) but was quickly changed. Currently PEP weapons are not man-portable, they are vehicle mounted weapons. They have a range of about two kilometers. We might yet see Space-1999 style hand lasers with a stun setting.",
           ":rulemap",
           vx_core.f_new(
             nx_tactics_base.t_rulemap,
@@ -6389,7 +4053,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Pain Ray",
               ":reference",
-              "* For riot control situations, the US Army is working on the Active Denial System (ADS).  It emits microwaves\nthat only penetrate a short way into the skin, not deep enough to do permanent damage but more than deep enough\nto roast all the target's pain nerve endings.  As with all microwaves, the range of this beam of concentrated\nagony is drastically reduced by rain or heavy humidity."
+              "* For riot control situations, the US Army is working on the Active Denial System (ADS). It emits microwaves that only penetrate a short way into the skin, not deep enough to do permanent damage but more than deep enough to roast all the target's pain nerve endings. As with all microwaves, the range of this beam of concentrated agony is drastically reduced by rain or heavy humidity."
             ),
             "Vomit Ray",
             vx_core.f_new(
@@ -6397,7 +4061,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Vomit Ray",
               ":reference",
-              "* The US Navy is working on its Electromagnetic Personnel Interdiction Control\nproject, AKA the Vomit Ray. The US Department of Homeland Security is working\non a pistol sized version, which is a very unsettling thought."
+              "* The US Navy is working on its Electromagnetic Personnel Interdiction Control project, AKA the Vomit Ray. The US Department of Homeland Security is working on a pistol sized version, which is a very unsettling thought."
             )
           )
         ),
@@ -6413,9 +4077,9 @@ export default class nx_tactics_books_combat {
           ":name",
           "Particle Beams",
           ":reference",
-          "* If you get a particle beam intense enough to burn someone, it will also deliver\na lethal dose of radiation from a hit anywhere on the body.\n* Radiation will scatter from the beam 'impact' site, irradiating things around it.\nIn an atmosphere, radiation will scatter off air molecules to irradiate things\nnear the beam.  Some of it will backscatter, irradiating whatever fires the gun.\nForget about a sci-fi hero using a particle beam 'blaster' - after blasting a hoard\nof bug eyed space aliens, he'd be sick or dying from radiation poisoning.  In real\nlife, particle beam weapons were considered for their ability to use radiation to\ndisable things (mostly ICBMs) without necessarily blowing holes in them.",
+          "* If you get a particle beam intense enough to burn someone, it will also deliver a lethal dose of radiation from a hit anywhere on the body.\n* Radiation will scatter from the beam 'impact' site, irradiating things around it. In an atmosphere, radiation will scatter off air molecules to irradiate things near the beam. Some of it will backscatter, irradiating whatever fires the gun. Forget about a sci-fi hero using a particle beam 'blaster' - after blasting a hoard of bug eyed space aliens, he'd be sick or dying from radiation poisoning. In real life, particle beam weapons were considered for their ability to use radiation to disable things (mostly ICBMs) without necessarily blowing holes in them.",
           ":summary",
-          "* Particle beams fire a stream of relativistic atoms or sub-atomic particles.  These are beams of ionizing\nradiation."
+          "* Particle beams fire a stream of relativistic atoms or sub-atomic particles.  These are beams of ionizing radiation."
         ),
         ":Plasmacasters",
         vx_core.f_new(
@@ -6423,7 +4087,7 @@ export default class nx_tactics_books_combat {
           ":name",
           "Plasmacasters",
           ":summary",
-          "* A weapon that fires a shell that releases a burst of plasma when it strikes a target.  This shell glow with barely\ncontained energy as it flies to its target.",
+          "* A weapon that fires a shell that releases a burst of plasma when it strikes a target.  This shell glow with barely contained energy as it flies to its target.",
           ":titles",
           "Blaster, Spinfusor"
         ),
@@ -6433,9 +4097,9 @@ export default class nx_tactics_books_combat {
           ":name",
           "Railgun",
           ":reference",
-          "* On January 31, 2008, the US Navy tested a 10MJ railgun with a muzzle velocity of 2500m/s.  It is expected to reach\n5800m/s at 10 shots/minute (enough to hit a 5m target 370km/200miles away).",
+          "* On January 31, 2008, the US Navy tested a 10MJ railgun with a muzzle velocity of 2500m/s. It is expected to reach 5800m/s at 10 shots/minute (enough to hit a 5m target 370km/200miles away).",
           ":summary",
-          "* This type of weapon includes all hypervelocity rounds propelled by massive magnetic fields.\n* Their great speed gives them excellent penetration and kinetic damage.  Because of this great speed, they cannot\ncarry any useful payload because the payload would be destroyed when the shell was launched.  Therefore, railguns are\nall kinetic weapons only.\n* Coilguns (Gauss) and Railguns are technically different, but their result is the same.",
+          "* This type of weapon includes all hypervelocity rounds propelled by massive magnetic fields.\n* Their great speed gives them excellent penetration and kinetic damage.  Because of this great speed, they cannot carry any useful payload because the payload would be destroyed when the shell was launched.  Therefore, railguns are all kinetic weapons only.\n* Coilguns (Gauss) and Railguns are technically different, but their result is the same.",
           ":titles",
           "Coilgun, Gauss Gun, Kinetic Kill Weapons, Linear Cannon, Linear Rifle, Mass Driver"
         ),
@@ -6451,7 +4115,7 @@ export default class nx_tactics_books_combat {
           ":name",
           "Disruptor Weapons",
           ":summary",
-          "* Disruptors temporarily weaken the molecular bonds in the target.  Damage is done via violent system shock, and\nthe weapon may distintegrate the target entirely if enough damage is done.\n* Disruptors have decreasing effectiveness with the density and hardness of the target.  Soft materials like flesh are\nthe most practical target.  Damage drops off sharply against metals and rocks making disintegration of such materials\nextremely difficult.",
+          "* Disruptors temporarily weaken the molecular bonds in the target. Damage is done via violent system shock, and the weapon may distintegrate the target entirely if enough damage is done.\n* Disruptors have decreasing effectiveness with the density and hardness of the target.  Soft materials like flesh are the most practical target. Damage drops off sharply against metals and rocks making disintegration of such materials extremely difficult.",
           ":titles",
           "Disintegrator, Phaser"
         ),
@@ -6461,7 +4125,7 @@ export default class nx_tactics_books_combat {
           ":name",
           "Energy Melee Weapons",
           ":summary",
-          "* The lance is essentially a giant plasma cutting torch using compressed-gas ignited from direct current from the\nexo-armor's fusion reactor.\n* The gas supply limits the usefulness of the weapon and many may need to be carried."
+          "* The lance is essentially a giant plasma cutting torch using compressed-gas ignited from direct current from the exo-armor's fusion reactor.\n* The gas supply limits the usefulness of the weapon and many may need to be carried."
         ),
         "Weapon Rules",
         vx_core.f_new(
@@ -6477,7 +4141,7 @@ export default class nx_tactics_books_combat {
               ":name",
               "Firing Arc",
               ":summary",
-              "Larger weapons are often cumbersome to use or aim and may only attack in a particular arc.  The\nfollowing abbreviations are used:\n* F - Front. Can only attach in any front arc.\n* B - Back. Can only attack in any rear arc.\n* FF - Fixed Forward.  Can only attack the forward arc.\n* FB - Fixed Backward.  Can only attack the rear arc.\n* FL - Fixed Left.  Can only attack the left arc.\n* FR - Fixed Right.  Can only attack the right arc.\n* Turrent - Turret mount.  Can attack in any direction but must use [Turret] rules to fire anywhere\nbut forward.\n* Pintle - Pintle mount.  Can attack in any direction without limit, but if the pintle mount is used,\na crew member is exposed and may be targetted separately from the vehicle at -1."
+              "Larger weapons are often cumbersome to use or aim and may only attack in a particular arc. The following abbreviations are used:\n* F - Front. Can only attach in any front arc.\n* B - Back. Can only attack in any rear arc.\n* FF - Fixed Forward.  Can only attack the forward arc.\n* FB - Fixed Backward.  Can only attack the rear arc.\n* FL - Fixed Left.  Can only attack the left arc.\n* FR - Fixed Right.  Can only attack the right arc.\n* Turrent - Turret mount.  Can attack in any direction but must use [Turret] rules to fire anywhere but forward.\n* Pintle - Pintle mount.  Can attack in any direction without limit, but if the pintle mount is used, a crew member is exposed and may be targetted separately from the vehicle at -1."
             ),
             ":Reload",
             vx_core.f_new(

@@ -32,11 +32,11 @@ export default class nx_tactics_ui_uitactics_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/uitactics", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 64, ":tests", 37, ":total", 57), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 52), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 63, ":tests", 37, ":total", 58), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 53), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 57), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 6, ":tests", 4, ":total", 58), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -94,6 +94,7 @@ export default class nx_tactics_ui_uitactics_test {
           "ui-app-statusdrawer", 0,
           "ui-app-titlebar", 0,
           "ui-app-titlebar-print", 0,
+          "ui-app-titlebar-title", 0,
           "ui-app<-tactics", 0,
           "ui-image<-uid-path", 0,
           "ui-nav<-any-parent", 0,
@@ -112,7 +113,7 @@ export default class nx_tactics_ui_uitactics_test {
           "uilist<-item-parent", 0,
           "uilist<-ranksuit-parent", 0,
           "uilist<-unit-parent", 0,
-          "uimap<-cardmap-parent", 0
+          "uimap<-cardmap-parent-page-size", 0
         )
     )
   }
@@ -128,11 +129,11 @@ export default class nx_tactics_ui_uitactics_test {
           vx_test.t_testdescribelist,
           vx_core.f_new(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"conscience: 1x1 beast:2x1 shadow:3x1\"\n (string<-conscience-beast-shadow\n  \"1x1\" \"2x1\" \"3x1\"))",
+            ":describename", "(test\n \"conscience:1x1 beast:2x1 shadow:3x1\"\n (string<-conscience-beast-shadow\n  \"1x1\" \"2x1\" \"3x1\"))",
             ":testresult",
             vx_test.f_test(
               context,
-              "conscience: 1x1 beast:2x1 shadow:3x1",
+              "conscience:1x1 beast:2x1 shadow:3x1",
               nx_tactics_ui_uitactics.f_string_from_conscience_beast_shadow("1x1", "2x1", "3x1")
             )
           )
@@ -200,12 +201,12 @@ export default class nx_tactics_ui_uitactics_test {
           vx_test.t_testdescribelist,
           vx_core.f_new(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"mass:80kg/160lb h:2m/6ft l:2m/6ft w:1m/3ft\"\n (string<-mass-h-l-w\n  \"80kg/160lb\" \"2m/6ft\" \"1m/3ft\" \"2m/6ft\"))",
+            ":describename", "(test\n \"mass:80kg/160lb h:2m/6ft l:1m/3ft w:1m/3ft\"\n (string<-mass-h-l-w\n  \"80kg/160lb\" \"2m/6ft\" \"1m/3ft\" \"1m/3ft\"))",
             ":testresult",
             vx_test.f_test(
               context,
-              "mass:80kg/160lb h:2m/6ft l:2m/6ft w:1m/3ft",
-              nx_tactics_ui_uitactics.f_string_from_mass_h_l_w("80kg/160lb", "2m/6ft", "1m/3ft", "2m/6ft")
+              "mass:80kg/160lb h:2m/6ft l:1m/3ft w:1m/3ft",
+              nx_tactics_ui_uitactics.f_string_from_mass_h_l_w("80kg/160lb", "2m/6ft", "1m/3ft", "1m/3ft")
             )
           )
         )

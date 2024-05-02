@@ -70,97 +70,46 @@
 			</place>
 			<place name="Library at Ultar">
 				<summary>
-					* Library at Ultar - The Library is a great circular stone building. It is
-					enchanted and appears at different places in Ultar at different times, and it
-					is impossible to find by accident.
-					* Architecture - There is a central 200 foot dome filled with tables and
-					chairs. The walls are covered with paintings and hallways radiate from the
-					main chamber. The room is lit by sunlight pouring through wide windows
-					overhead. This sunlight never changes despite weather or time of day.
-					* Hallways - The radiating spokes of hallways are lined with bookshelves and
-					go a long distance into darkness. Halls connecting the spokes appear every
-					100 feet. The books are divided by subject but are then only organized by age
-					with newer books closer to the center. A light source is needed if one travels
-					down the corridors. After several hundred yards the parchment scrolls and
-					conventional books give way to carved wooden, stone, clay, or metal plaques.
-					Beyond these even more bizarre methods of information storing appear, formed
-					from crystals, ghosts enslaved to repeat specific lore, huge bottles of
-					sinister looking liquid that must be drank to obtain the knowledge, and so
-					forth. The languages used become more alien, and dreamers may encounter
-					Serpent People or Elder Things in the very distant past.
-					* Librarian - In the center of the dome can be found the desk of the
-					librarian, Tukor. Tukor is a normal man from Ultar and can find most of the
-					recent books from memory.
-					* Paintings - The paintings in the room have a variety of subject matter.
-					Some are famous characters. Others are bizarre - panoramas of endless
-					cemeteries, twisted trees hung with countless skulls, dinosaurs stalking
-					ruined cities. One is a portrait of a scientist or physician in the grisly
-					act of dissecting himself with a scalpel and examining his organs under
-					magnification. The entire scene is splashed with blood, and below the
-					painting is a metal bucket collecting the occasional drops of blood that fall
-					from the painting.
+					* Library at Ultar - The Library is a great circular stone building. It is enchanted and appears at different places in Ultar at different times, and it is impossible to find by accident.
+					* Architecture - There is a central 200 foot dome filled with tables and chairs. The walls are covered with paintings and hallways radiate from the main chamber. The room is lit by sunlight pouring through wide windows overhead. This sunlight never changes despite weather or time of day.
+					* Hallways - The radiating spokes of hallways are lined with bookshelves and go a long distance into darkness. Halls connecting the spokes appear every 100 feet. The books are divided by subject but are then only organized by age with newer books closer to the center. A light source is needed if one travels down the corridors. After several hundred yards the parchment scrolls and conventional books give way to carved wooden, stone, clay, or metal plaques. Beyond these even more bizarre methods of information storing appear, formed from crystals, ghosts enslaved to repeat specific lore, huge bottles of sinister looking liquid that must be drank to obtain the knowledge, and so forth. The languages used become more alien, and dreamers may encounter Serpent People or Elder Things in the very distant past.
+					* Librarian - In the center of the dome can be found the desk of the librarian, Tukor. Tukor is a normal man from Ultar and can find most of the recent books from memory.
+					* Paintings - The paintings in the room have a variety of subject matter. Some are famous characters. Others are bizarre - panoramas of endless cemeteries, twisted trees hung with countless skulls, dinosaurs stalking ruined cities. One is a portrait of a scientist or physician in the grisly act of dissecting himself with a scalpel and examining his organs under magnification. The entire scene is splashed with blood, and below the painting is a metal bucket collecting the occasional drops of blood that fall from the painting.
 				</summary>
 			</place>
 			<place name="Peaks of Thok">
 				<summary>
-					* The Peaks of Thok (or Throk) is a frightening range of towering granite
-					mountains in the underworld.
+					* The Peaks of Thok (or Throk) is a frightening range of towering granite mountains in the underworld.
 				</summary>
 			</place>
 			<place name="Stony Desert">
 				<summary>
-					* The desert is a bleak and barren waste, dull gray in color, and lit by a
-					glaring sun. Huge slabs of shattered stone lie everywhere. No sign of life is
-					visible.
-					* The Stony Desert lies north-west of Ultar. At the south end of the desert
-					rises the mountain of the gods, Mt. Hatheg-Kla.
+					* The desert is a bleak and barren waste, dull gray in color, and lit by a glaring sun. Huge slabs of shattered stone lie everywhere. No sign of life is visible.
+					* The Stony Desert lies north-west of Ultar. At the south end of the desert rises the mountain of the gods, Mt. Hatheg-Kla.
 				</summary>
 			</place>
 			<place name="Hatheg-Kla">
 				<summary>
-					* Approach - Hatheg-Kla lies in the [Stony Desert] which is covered with
-					broken slabs of stone. As one approaches the mountain, smoe of the slabs are
-					still turned upright in the ground and bear traces of ancient carvings.
-					Soon it becomes obvious that they are travelling in a titanic graveyard.
-					* Description - This mountain rises like a rock statue in a silent temple.
-					Mists always surround the peak, for mists are the memories of the gods, and
-					the gods lived Hatheg-Kla when they dwelt upon it in the old days. Often the
-					gods of earth visit in their ships of cloud.
-					* Climbing - The climb up the mountain is made perilous by chasms, cliffs, and
-					falling stones. By night it is cold and snowy. Higher up the air grows thin,
-					though the mists grow thicker.
-					* On the North-West side of Hatheg Kla, a cave can be seen 2000 feet up.
-					Two colossal statues flank the cave, and 1000 feet below the cave can be seen
-					a large dead tree with large birds flying about. The branchs are hung with
-					many white globes. On closer examination, the birds are Byahkee and the globes
-					are human skulls.
+					* Approach - Hatheg-Kla lies in the [Stony Desert] which is covered with broken slabs of stone. As one approaches the mountain, smoe of the slabs are still turned upright in the ground and bear traces of ancient carvings. Soon it becomes obvious that they are travelling in a titanic graveyard.
+     * Description - This mountain rises like a rock statue in a silent temple. Mists always surround the peak, for mists are the memories of the gods, and the gods lived Hatheg-Kla when they dwelt upon it in the old days. Often the gods of earth visit in their ships of cloud.
+					* Climbing - The climb up the mountain is made perilous by chasms, cliffs, and falling stones. By night it is cold and snowy. Higher up the air grows thin, though the mists grow thicker.
+					* On the North-West side of Hatheg Kla, a cave can be seen 2000 feet up. Two colossal statues flank the cave, and 1000 feet below the cave can be seen a large dead tree with large birds flying about. The branchs are hung with many white globes. On closer examination, the birds are Byahkee and the globes are human skulls.
 				</summary>
 			</place>
 			<place name="Ultar">
 				<summary>
-					* Ulthar - Ulthar is a pleasant city, well-known to dreamers for its ban on
-					harming cats and the enormous number of cats that make Ulthar their home.
+					* Ulthar - Ulthar is a pleasant city, well-known to dreamers for its ban on harming cats and the enormous number of cats that make Ulthar their home.
 				</summary>
 			</place>
 			<place name="Vale of Pnath">
 				<summary>
-					* The vale of Pnath (or Pnoth) is a vast pit in the underworld. It is flanked
-					by the Peaks of Thok and is mostly lightless. The vale is filled with a
-					mountain-sized heap of bones and is the spot into which all the ghouls of
-					the waking world cast the refuse of their feastings. Enormous worm-like
-					dholes burrow through the vale. Night-gaunts often carry helpless victims to
-					the vale, where they are left to die.
+					* The vale of Pnath (or Pnoth) is a vast pit in the underworld. It is flanked by the Peaks of Thok and is mostly lightless. The vale is filled with a mountain-sized heap of bones and is the spot into which all the ghouls of the waking world cast the refuse of their feastings. Enormous worm-like dholes burrow through the vale. Night-gaunts often carry helpless victims to the vale, where they are left to die.
 				</summary>
 			</place>
 			<place name="Vaults of Zin">
 				<summary>
-					* The Vaults of Zin is a huge cavern in the underworld. It lies near the
-					cemetery of the gugs and opens onto a large cave that is the mouth of vaults
-					of Zin, and the vindictive ghasts are always on watch there for those
-					denizens of the upper abyss'. The ghasts who dwell in the Vaults of Zin prey
-					on ghouls and gugs, and sometimes even one another.
-					* It is possible that a well in the monastery of the High Priest Not to Be
-					Described in the Plateau of Leng connects with the Vaults of Zin.
+					* The Vaults of Zin is a huge cavern in the underworld. It lies near the cemetery of the gugs and opens onto a large cave that is the mouth of vaults of Zin, and the vindictive ghasts are always on watch there for those denizens of the upper abyss'. The ghasts who dwell in the Vaults of Zin prey on ghouls and gugs, and sometimes even one another.
+					* It is possible that a well in the monastery of the High Priest Not to Be Described in the Plateau of Leng connects with the Vaults of Zin.
 				</summary>
 			</place>
 		</section>
@@ -184,110 +133,52 @@
 		<item name="Book of Eibon" classification="Book" image="Cthulhu/CthaatAquadingen.jpg">
 			<titles>Liber Ivonis, Livre d'Eibon</titles>
 			<summary>
-				* The Book of Eibon is a work of the legendary magician Eibon of Mhu-Thulan. The book
-				was produced after Eibon's disapearance by his former aprentice Cryon of Varaad.
-				* Contents -  The book deals with magic he practised, records of the area and
-				historical acounts of other mages. It also contains records of the habits of Great Old
-				Ones such as Abhoth, Atlach-Nacha, Rlim Shaikorth and Tsathoggua (the later being a
-				deity whom Eibon was particularly favored by). There is a limited amount of
-				information on the Drowners; Bugg-Shash and Yibb-Tsll.
-				* Spells - The Book of Eibon also contains a huge number of spells. Among them are the
-				procedures required to create a spatial gateway, numerous prayers to Tsathoggua, an
-				incantation used to call one of the former's children to you, how to make protective
-				symbol effective against the servants of Nyarlathotep, a simple spell to raise a small
-				curtain of mist and a potent curse to cripple a foe. It is said that the early edition
-				contained a formula capable of calling a Dhole to Earth and controlling it.
-				* Hyperborean Version - The original version was made by Cryon of Varaad who complied
-				his master's notes, journals and records into one volume. It was orignaly written on a
-				form of vellum in the Hyperborean language of Tsath-Yo.
-				* Atlantean Version - Later in prehistory stone Tablets containing the Hyperborean
-				text of the Book of Eibon were found by the Atlanteans. They were eventualy translated
-				from there original Tsath-Yo into Atlantean Senzar by the High Priest Klarkash-Ton.
-				* Kishitic Version - The Kishites made a translation in there langauge from the
-				Atlanteans relics they unearthed. Information about this version of the book is
-				sketchy at best.
-				* Egyptian Version - Some copies of the Kisihtic edition where preserved on papyri and
-				translated by the latter Egyptians into hieroglyphs. Tablets and tomb paintings
-				containing these hieroglyphs may still exisit.
-				* Libor Ivonis - In aproximately 900 AD a Latin translation known as the Libor Ivonis
-				was made by the monk Caius Phillippus Faber. It was finally printed during 1622 in
-				Roman. This translation is over five hundred pages long.
-				* Libre d'Ivon - In 1240 Gaspard du Nord of Aivonge translated his former teacher's
-				copy of the Libor Ivonis into French.
-				* Book of Eibon - This english translation was made by an unknown author sometime
-				between the fifthteenth and sixteenth centuries.
+				* The Book of Eibon is a work of the legendary magician Eibon of Mhu-Thulan. The book was produced after Eibon's disapearance by his former aprentice Cryon of Varaad.
+				* Contents -  The book deals with magic he practised, records of the area and historical acounts of other mages. It also contains records of the habits of the Old Ones such as Abhoth, Atlach-Nacha, Rlim Shaikorth and Tsathoggua (the later being a deity whom Eibon was particularly favored by). There is a limited amount of information on the Drowners; Bugg-Shash and Yibb-Tsll.
+				* Spells - The Book of Eibon also contains a huge number of spells. Among them are the procedures required to create a spatial gateway, numerous prayers to Tsathoggua, an incantation used to call one of the former's children to you, how to make protective symbol effective against the servants of Nyarlathotep, a simple spell to raise a small curtain of mist and a potent curse to cripple a foe. It is said that the early edition contained a formula capable of calling a Dhole to Earth and controlling it.
+				* Hyperborean Version - The original version was made by Cryon of Varaad who complied his master's notes, journals and records into one volume. It was orignaly written on a form of vellum in the Hyperborean language of Tsath-Yo.
+				* Atlantean Version - Later in prehistory stone Tablets containing the Hyperborean text of the Book of Eibon were found by the Atlanteans. They were eventualy translated from there original Tsath-Yo into Atlantean Senzar by the High Priest Klarkash-Ton.
+				* Kishitic Version - The Kishites made a translation in there langauge from the Atlanteans relics they unearthed. Information about this version of the book is sketchy at best.
+				* Egyptian Version - Some copies of the Kisihtic edition where preserved on papyri and translated by the latter Egyptians into hieroglyphs. Tablets and tomb paintings containing these hieroglyphs may still exisit.
+				* Libor Ivonis - In aproximately 900 AD a Latin translation known as the Libor Ivonis was made by the monk Caius Phillippus Faber. It was finally printed during 1622 in Roman. This translation is over five hundred pages long.
+				* Libre d'Ivon - In 1240 Gaspard du Nord of Aivonge translated his former teacher's copy of the Libor Ivonis into French.
+				* Book of Eibon - This english translation was made by an unknown author sometime between the fifthteenth and sixteenth centuries.
 			</summary>
 		</item>
 		<item name="Celaeno Fragments" classification="Book" image="Cthulhu/CelaenoFragments.jpg">
 			<summary>
-				225 million years ago, the stone tablets that become the Celaeno Fragments are scribed
-				around the middle Triassic (presumably by Serpent People). One set of the tablets is
-				eventually taken to the Great Library of Celaeno, on the fourth planet around the star
-				Celaeno.
+				* 225 million years ago, the stone tablets that become the Celaeno Fragments are scribed around the middle Triassic (presumably by Serpent People). One set of the tablets is eventually taken to the Great Library of Celaeno, on the fourth planet around the star Celaeno.
 			</summary>
 		</item>
 		<item name="Cthaat Aquadingen" classification="Book" image="Cthulhu/CthaatAquadingen.jpg">
 			<summary>
-				* The Cthäat Aquadingen, possibly meaning Things of the Water, this text, by an
-				unknown author, deals with Cthulhu and other sea-horrors, such as Inpesca. It also
-				contains many so-called Sathlattae, rituals and spells related to Ubbo-Sathla. It is
-				first mentioned as appearing in northern Germany around 400 AD. A Latin version was
-				apparently written between the 11th and 12th century, as was an English translation
-				that appeared sometime in the 14th century.
-				* The version found in the [Library at Ultar] is bound in soft, human skin, still
-				pliable, and always moist from perspiration welling from its pores. Simply handling
-				the book is creepy.
+				* The Cthäat Aquadingen, possibly meaning Things of the Water, this text, by an unknown author, deals with Cthulhu and other sea-horrors, such as Inpesca. It also contains many so-called Sathlattae, rituals and spells related to Ubbo-Sathla. It is first mentioned as appearing in northern Germany around 400 AD. A Latin version was apparently written between the 11th and 12th century, as was an English translation that appeared sometime in the 14th century.
+				* The version found in the [Library at Ultar] is bound in soft, human skin, still pliable, and always moist from perspiration welling from its pores. Simply handling the book is creepy.
 			</summary>
 		</item>
 		<item name="Cultes De Goules" classification="Book">
 			<summary>
-				* Cultes des Goules is a book of black magic written by Francois-Honore Balfour
-				(Comte d'Erlette) in 1702. It was published in France and later denounced by the
-				church. Only a handful of copies are in existence. One of the known copies was kept
-				for 91 years in an arcane library of the Church of Starry Wisdom in Providence, Rhode
-				Island. After Robert Blake’s mysterious death in 1935, Doctor Dexter removed the
-				grimoire and added it to his library.
+				* Cultes des Goules is a book of black magic written by Francois-Honore Balfour (Comte d'Erlette) in 1702. It was published in France and later denounced by the church. Only a handful of copies are in existence. One of the known copies was kept for 91 years in an arcane library of the Church of Starry Wisdom in Providence, Rhode Island. After Robert Blake’s mysterious death in 1935, Doctor Dexter removed the grimoire and added it to his library.
 			</summary>
 		</item>
 		<item name="De Vermis Misteriis" classification="Book" image="Cthulhu/DeVermisMisteriis.jpg">
 			<titles>The Mysteries of the Worm</titles>
 			<summary>
-				* De Vermis Mysteriis is the work of one Ludvig Prinn; a Flemish alchemist and
-				supposed sorcerer. Prinn had spent a great deal of time traveling in the east and
-				claimed to have obtained a great age through the use of his sorcery. Eventualy Prinn
-				was captured by the Inquisition and sentanced to death. While awaiting execution in
-				his cell he wrote the volume he called De Vermiss Mysteriis. How Prinn managed to have
-				the blasphemous manuscript smuggled past his captors is unknown.
-				* Contents - The De Vermis Mysteriis is slightly over 700 pages long. It deals with
-				subjects such as Irim City of the Pillars, The Priesthood of Nephren Ka and the
-				avatars of Nyarlathotep worshipped in the east.
-				* Spells - Part of the last chapter deals with a bizarre time drug that alters one's
-				perception of time. It also contains instructions for creating the Pnakotic Pentangle.
-				Another of the later chapters entitiled the Saracenic Rituals, focuses on the
-				summoning and controlling other worldly beings. Other supposed spells include a ritual
-				for summoning a child of Shub-Niggurath, a formula for calling up the spirit from the
-				remains of its corpse, and instructions on how to craft a certain symbol Prinn claims
-				to be a powerful aid in banishing entities.
+				* De Vermis Mysteriis is the work of one Ludvig Prinn; a Flemish alchemist and supposed sorcerer. Prinn had spent a great deal of time traveling in the east and claimed to have obtained a great age through the use of his sorcery. Eventualy Prinn was captured by the Inquisition and sentanced to death. While awaiting execution in his cell he wrote the volume he called De Vermiss Mysteriis. How Prinn managed to have the blasphemous manuscript smuggled past his captors is unknown.
+				* Contents - The De Vermis Mysteriis is slightly over 700 pages long. It deals with subjects such as Irim City of the Pillars, The Priesthood of Nephren Ka and the avatars of Nyarlathotep worshipped in the east.
+				* Spells - Part of the last chapter deals with a bizarre time drug that alters one's perception of time. It also contains instructions for creating the Pnakotic Pentangle. Another of the later chapters entitiled the Saracenic Rituals, focuses on the summoning and controlling other worldly beings. Other supposed spells include a ritual for summoning a child of Shub-Niggurath, a formula for calling up the spirit from the remains of its corpse, and instructions on how to craft a certain symbol Prinn claims to be a powerful aid in banishing entities.
 			</summary>
 		</item>
 		<item name="Elder Sign" image="Cthulhu/ElderSign.jpg">
 			<reference>
-				H.P. Lovecraft (who had created the Elder Sign without ever describing what it looked
-				like) had drawn a picture of the Elder Sign in a letter. This branch-like image is
-				considered by many to be the true Elder Sign.
+				H.P. Lovecraft (who had created the Elder Sign without ever describing what it looked like) had drawn a picture of the Elder Sign in a letter. This branch-like image is considered by many to be the true Elder Sign.
 			</reference>
 		</item>
 		<item name="Mi-Go Armor" classification="Med. Armor" image="Cthulhu/MigoArmor.jpg" />
 		<item name="Mi-Go Brain Bottle" image="Cthulhu/BrainCase.jpg" />
 		<item name="Necronomicon" classification="Book" image="Cthulhu/Necronomicon.jpg">
 			<reference>
-				* They walk unseen and foul in lonely places where the Words have been
-				spoken... They bend the forest and crush the city, yet may not forest or city
-				behold the hand that smites... Great Cthulhu is Their cousin, yet can he spy
-				Them only dimly. Iä! Shub-Niggurath! As a foulness shall ye know Them. Their
-				hand is at your throats, yet ye see Them not; and Their habitation is even one with your
-				guarded threshold... After summer is winter, after winter summer. They wait
-				patient and potent, for here shall They reign again.
+				* They walk unseen and foul in lonely places where the Words have been spoken... They bend the forest and crush the city, yet may not forest or city behold the hand that smites... Great Cthulhu is Their cousin, yet can he spy Them only dimly. Iä! Shub-Niggurath! As a foulness shall ye know Them. Their hand is at your throats, yet ye see Them not; and Their habitation is even one with your guarded threshold... After summer is winter, after winter summer. They wait patient and potent, for here shall They reign again.
 			</reference>
 		</item>
 		<item name="Pnakotic Manuscripts" classification="Book" image="Cthulhu/PnakoticManuscripts.jpg" />
@@ -297,10 +188,7 @@
 	<section name="Mythos Independent Races">
 		<unit name="Colour Out of Space" image="Cthulhu/ColourOutOfSpace.png">
 			<reference>
-				In terms of matter I suppose the thing Ammi described would be called a gas, but this gas obeyed the laws that
-				are not of our cosmos ... This was no breath from the skies whose motions and dimensions our astronomers
-				measure or deem too vast to measure.  It was just a colour out of space - a frightful messenger from unformed
-				realms of infinity beyond all Nature as we know it. - The Colour Out of Space
+				In terms of matter I suppose the thing Ammi described would be called a gas, but this gas obeyed the laws that are not of our cosmos ... This was no breath from the skies whose motions and dimensions our astronomers measure or deem too vast to measure.  It was just a colour out of space - a frightful messenger from unformed realms of infinity beyond all Nature as we know it. - The Colour Out of Space
 			</reference>
 		</unit>
 		<unit name="Cthonian" image="Cthulhu/Cthonian.png" />
@@ -453,10 +341,7 @@
 		<unit name="Spawn of Azathoth">
 			<titles>Nemesis</titles>
 			<summary>
-				* The massive Outer God Azathoth mindlessly casts off small parts of itself, the
-				Spawn of Azathoth. Though small compared to Azathoth, these bodies are the size of
-				small, brown dwarf stars. From Azathoth, they hurtle through time and space
-				forever. Sometimes they pass near ordinary stellar systems and wreak havoc,
+				* The massive Other God Azathoth mindlessly casts off small parts of itself, the Spawn of Azathoth. Though small compared to Azathoth, these bodies are the size of small, brown dwarf stars. From Azathoth, they hurtle through time and space forever. Sometimes they pass near ordinary stellar systems and wreak havoc,
 				colliding with worlds or suns, causing gravitational catastrophes, or raining its
 				seeds ([Seed of Azathoth]) upon them.
 			</summary>
@@ -500,7 +385,7 @@
 				It seemed to be a sort of monster, or symbol representing a monster, of a form which only a diseased fancy could conceive. If I say that my somewhat extravagant imagination yielded simultaneous pictures of an octopus, a dragon, and a human caricature, I shall not be unfaithful to the spirit of the thing. A pulpy, tentacled head surmounted a grotesque and scaly body with rudimentary wings; but it was the general outline of the whole which made it most shockingly frightful. - H.P. Lovecraft, Call of Cthulhu
 			</reference>
 			<reference>
-				Cthulhu is eponymous with the mythos. If you know nothing else of Lovecraft's body of works, you at least know the visage of this subterranean horror. Which is interesting, because he's relatively tame compared to the Outer Gods. Although he may be worshipped like a god by many, he isn't one. Not really. ... One might call him a priest. ... Since the dawn of man, these beings have been guiding the species through dreams and through psychic manipulation. Someday, when mankind has abandoned its morals and descended into madness, They will wake Cthulhu from his slumber, and he will raise the Old Ones from death and all the world will flame with a holocaust of ecstacy and freedom. ... Cthulhu is not oblivious or indifferent to mankind. He isn't even malevolent. He is Lovecraft's simple promise of evanescence. Nothing belongs to man. Not this world, not the home they've built on it, not even the human mind. It is the ultimate destiny of this species to unravel into primal chaos, as all Things must. To the sounds of their laughter and exultant shouts, all man has ever built will one day fade away. - Tale Foundry
+				Cthulhu is eponymous with the mythos. Cthulhu is not oblivious or indifferent to mankind. He isn't even malevolent. He is Lovecraft's simple promise of evanescence. Nothing belongs to man. Not this world, not the home they've built on it, not even the human mind. It is the ultimate destiny of this species to unravel into primal chaos, as all Things must. To the sounds of their laughter and exultant shouts, all man has ever built will one day fade away. - Tale Foundry
 			</reference>
 		</unit>
 		<unit name="Dagon" image="Cthulhu/Dagon.png">
@@ -515,7 +400,7 @@
 		</unit>
 		<unit name="Ithaqua the Windwalker" image="Cthulhu/Ithaqua.png" />
 	</section>
-	<section name="Outer Gods">
+	<section name="Other Gods">
 		<unit name="Azathoth" image="Cthulhu/Azathoth.png">
 			<titles>Daemon Sultan, The Blind, Idiot God</titles>
 			<reference>
@@ -547,7 +432,7 @@
 				Into the lands of civlization came Nyarlathotep. Men advised on another to see Nyarlathotep and shuddered. And where Nyarlathotep went, rest vanished; for the small hours were rent with the screams of a nightmare. - Nyarlathotep
 			</reference>
 			<reference>
-				Nyarlathotep is nothing like the other Outer Gods. He travels by his own laws,
+				Nyarlathotep is nothing like the other Other Gods. He travels by his own laws,
 				into and out of the known cosmos, acting as a messenger to and from the Outer
 				Gods. His strange personality, or perhaps the simple fact that he has a
 				personality, baffles them. ... To lesser intelligences, he's a trickster,
@@ -559,18 +444,7 @@
 				in, but a malevolent, undetectable outside seeping in. - Tale Foundry
 			</reference>
 			<summary>
-				* Like the other Outer Gods, Nyarlathotep is a primal being of unimaginable power.
-				Unlike the others, however, his power is knowledge and Nyarlathotep may be a
-				creature entirely of the mind. Though he typically appears as a man, he has
-				innumerable other forms and may be able to appear in any form he wishes. He seens
-				to specifically target and toy with humanity by offering dangerous knowledge and
-				observing the results. This is probably an overly simplistic view of his actions.
-				Like the other Outer Gods, he is too grand a figure to care about humanity. More
-				likely, he acts like Yog-Sothoth and simply appears as an avatar and provides
-				Knowledge to those who seek him without regard to what we do with it. In this way,
-				Nyarlathotep is like Prometheus providing fire to humanity. It is possible that
-				Nyarlathotep is constantly offering knowledge, but we are generally unable to
-				recognize it. Perhaps Nyarlathotep is the Muse behind all discoveries.
+				* Like the other Other Gods, Nyarlathotep is a primal being of unimaginable power. Unlike the others, however, his power is knowledge and Nyarlathotep may be a 		creature entirely of the mind. Though he typically appears as a man, he has 	innumerable other forms and may be able to appear in any form he wishes. He seems to specifically target and toy with humanity by offering dangerous knowledge and observing the results. This is probably an overly simplistic view of his actions. Like the other Other Gods, he is too grand a figure to care about humanity. More likely, he acts like Yog-Sothoth and simply appears as an avatar and provides Knowledge to those who seek him without regard to what we do with it. In this way, Nyarlathotep is like Prometheus providing fire to humanity. It is possible that Nyarlathotep is constantly offering knowledge, but we are generally unable to recognize it. Perhaps Nyarlathotep is the Muse behind all discoveries.
 			</summary>
 		</unit>
 		<unit name="Shub-Niggurath" image="Cthulhu/ShubNiggurath.png">
@@ -578,20 +452,7 @@
 				The Black Goat of the Woods with a Thousand Young
 			</titles>
 			<reference>
-				Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so
-				tenuous in composition that its limbs vanish as quickly as they materialize,
-				its very form dividing constantly into a surplus of smaller abominations that
-				are either reabsorbed into its great form, or that escape to some hideous life
-				elsewhere. Not the spitting image of a fertility goddess but this is as close
-				as the mythos gets. Shub-Niggurath may well be the most widely revered amoung
-				the outer gods, infuence reaching not only to the Greeks, Cretans, Egyptions,
-				and some druids, but to races so far-flung across the cosmos as the Mi-go of
-				Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new
-				life, especially intelligent life, is held as a sacred act. Many humans derive
-				joy and self-import from the notion that their kind was toild over by some
-				kind of divine intelligence. Shub-Niggurath with her blind, indifferent,
-				prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's
-				affirmation that life itself is nothing extrodinary. - Tale Foundry
+				Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close 			as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry
 			</reference>
 		</unit>
 		<unit name="Yog-Sothoth" image="Cthulhu/YogSothoth.png">
@@ -615,7 +476,7 @@
 				Locked away at the border of reality, there exists an intelligence. Rather, the
 				intelligence. All of it. Yog-Sothoth holds the knowledge of all that is, all that
 				was, and all that will be. ... For this reason, he is one of the most heavily
-				worshipped entities among the Outer Gods. His name is frequently invoked during
+				worshipped entities among the Other Gods. His name is frequently invoked during
 				the rituals and incantations of those seeking hidden knowledge. And often, he
 				answers. Sadly for the ones who call on him, the knowledge he grants almost always
 				leads to madness and self-destruction. Not because Yog-Sothoth is evil or

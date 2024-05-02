@@ -149,6 +149,18 @@ export default class nx_tactics_base {
   static e_item = {vx_type: nx_tactics_base.t_item}
 
   /**
+   * type: itemlist
+   */
+  static t_itemlist = {}
+  static e_itemlist = vx_core.vx_new_list(nx_tactics_base.t_itemlist, [])
+
+  /**
+   * type: itemlistlist
+   */
+  static t_itemlistlist = {}
+  static e_itemlistlist = vx_core.vx_new_list(nx_tactics_base.t_itemlistlist, [])
+
+  /**
    * type: itemmap
    */
   static t_itemmap = {}
@@ -186,6 +198,12 @@ export default class nx_tactics_base {
   static e_placelist = vx_core.vx_new_list(nx_tactics_base.t_placelist, [])
 
   /**
+   * type: placelistlist
+   */
+  static t_placelistlist = {}
+  static e_placelistlist = vx_core.vx_new_list(nx_tactics_base.t_placelistlist, [])
+
+  /**
    * type: placemap
    */
   static t_placemap = {}
@@ -208,6 +226,12 @@ export default class nx_tactics_base {
    */
   static t_powerlist = {}
   static e_powerlist = vx_core.vx_new_list(nx_tactics_base.t_powerlist, [])
+
+  /**
+   * type: powerlistlist
+   */
+  static t_powerlistlist = {}
+  static e_powerlistlist = vx_core.vx_new_list(nx_tactics_base.t_powerlistlist, [])
 
   /**
    * type: powermap
@@ -522,6 +546,12 @@ export default class nx_tactics_base {
    */
   static t_weakness = {}
   static e_weakness = {vx_type: nx_tactics_base.t_weakness}
+
+  /**
+   * type: weaknesslist
+   */
+  static t_weaknesslist = {}
+  static e_weaknesslist = vx_core.vx_new_list(nx_tactics_base.t_weaknesslist, [])
 
   /**
    * type: weaknessmap
@@ -1398,6 +1428,152 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function itemlist_from_itemlistlist
+   * Returns a itemlist from a given itemlistlist
+   * @param  {itemlistlist} itemlistlist
+   * @return {itemlist}
+   */
+  static t_itemlist_from_itemlistlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_itemlist_from_itemlistlist = {
+    vx_type: nx_tactics_base.t_itemlist_from_itemlistlist
+  }
+
+  // (func itemlist<-itemlistlist)
+  static f_itemlist_from_itemlistlist(itemlistlist) {
+    let output = nx_tactics_base.e_itemlist
+    output = vx_core.f_list_join_from_list({"any-1": nx_tactics_base.t_item, "any-2": nx_tactics_base.t_itemlist, "list-1": nx_tactics_base.t_itemlist, "list-2": nx_tactics_base.t_itemlistlist}, itemlistlist)
+    return output
+  }
+
+  /**
+   * @function itemlist_from_itemmap
+   * Returns a itemlist from a given itemmap
+   * @param  {itemmap} itemmap
+   * @return {itemlist}
+   */
+  static t_itemlist_from_itemmap = {
+    vx_type: vx_core.t_type
+  }
+  static e_itemlist_from_itemmap = {
+    vx_type: nx_tactics_base.t_itemlist_from_itemmap
+  }
+
+  // (func itemlist<-itemmap)
+  static f_itemlist_from_itemmap(itemmap) {
+    let output = nx_tactics_base.e_itemlist
+    output = vx_core.f_list_from_map({"any-1": nx_tactics_base.t_item, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_itemlist, "map-2": nx_tactics_base.t_itemmap}, itemmap)
+    return output
+  }
+
+  /**
+   * @function itemlist_from_section
+   * Returns a itemlist from a given section
+   * @param  {section} section
+   * @return {itemlist}
+   */
+  static t_itemlist_from_section = {
+    vx_type: vx_core.t_type
+  }
+  static e_itemlist_from_section = {
+    vx_type: nx_tactics_base.t_itemlist_from_section
+  }
+
+  // (func itemlist<-section)
+  static f_itemlist_from_section(section) {
+    let output = nx_tactics_base.e_itemlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_itemlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const secname = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_section}, section, ":name")
+        const sec = vx_core.f_copy(section, ":name", secname)
+        const itemmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_itemmap, "struct-2": nx_tactics_base.t_section}, section, ":itemmap")
+        return nx_tactics_base.f_itemlist_from_itemmap(itemmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function itemlist_from_sectionlist
+   * Returns a itemlist from a given sectionlist
+   * @param  {sectionlist} sectionlist
+   * @return {itemlist}
+   */
+  static t_itemlist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_itemlist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_itemlist_from_sectionlist
+  }
+
+  // (func itemlist<-sectionlist)
+  static f_itemlist_from_sectionlist(sectionlist) {
+    let output = nx_tactics_base.e_itemlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_itemlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const itemlistlist = nx_tactics_base.f_itemlistlist_from_sectionlist(sectionlist)
+        return nx_tactics_base.f_itemlist_from_itemlistlist(itemlistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function itemlistlist_from_sectionlist
+   * Returns a itemlistlist from a given sectionlist
+   * @param  {sectionlist} sections
+   * @return {itemlistlist}
+   */
+  static t_itemlistlist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_itemlistlist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_itemlistlist_from_sectionlist
+  }
+
+  // (func itemlistlist<-sectionlist)
+  static f_itemlistlist_from_sectionlist(sections) {
+    let output = nx_tactics_base.e_itemlistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_itemlist, "any-2": nx_tactics_base.t_section, "list-1": nx_tactics_base.t_itemlistlist, "list-2": nx_tactics_base.t_sectionlist},
+      sections,
+      vx_core.f_new(vx_core.t_any_from_any, (section) => 
+        nx_tactics_base.f_itemlist_from_section(section))
+    )
+    return output
+  }
+
+  /**
+   * @function itemmap_from_itemlist
+   * Returns a itemmap from a given itemlist
+   * @param  {itemlist} itemlist
+   * @return {itemmap}
+   */
+  static t_itemmap_from_itemlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_itemmap_from_itemlist = {
+    vx_type: nx_tactics_base.t_itemmap_from_itemlist
+  }
+
+  // (func itemmap<-itemlist)
+  static f_itemmap_from_itemlist(itemlist) {
+    let output = nx_tactics_base.e_itemmap
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_item, "any-2": nx_tactics_base.t_item, "list-2": nx_tactics_base.t_itemlist, "map-1": nx_tactics_base.t_itemmap, "struct-2": nx_tactics_base.t_item},
+      itemlist,
+      vx_core.f_new(vx_core.t_any_from_any, (item) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_item}, item, ":name"))
+    )
+    return output
+  }
+
+  /**
    * @function name_from_chapter
    * @param  {chapter} chapter
    * @return {string}
@@ -1417,9 +1593,130 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function placelist_from_placelistlist
+   * Returns a placelist from a given placelistlist
+   * @param  {placelistlist} placelistlist
+   * @return {placelist}
+   */
+  static t_placelist_from_placelistlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_placelist_from_placelistlist = {
+    vx_type: nx_tactics_base.t_placelist_from_placelistlist
+  }
+
+  // (func placelist<-placelistlist)
+  static f_placelist_from_placelistlist(placelistlist) {
+    let output = nx_tactics_base.e_placelist
+    output = vx_core.f_list_join_from_list({"any-1": nx_tactics_base.t_place, "any-2": nx_tactics_base.t_placelist, "list-1": nx_tactics_base.t_placelist, "list-2": nx_tactics_base.t_placelistlist}, placelistlist)
+    return output
+  }
+
+  /**
+   * @function placelist_from_placemap
+   * Returns a placelist from a given placemap
+   * @param  {placemap} placemap
+   * @return {placelist}
+   */
+  static t_placelist_from_placemap = {
+    vx_type: vx_core.t_type
+  }
+  static e_placelist_from_placemap = {
+    vx_type: nx_tactics_base.t_placelist_from_placemap
+  }
+
+  // (func placelist<-placemap)
+  static f_placelist_from_placemap(placemap) {
+    let output = nx_tactics_base.e_placelist
+    output = vx_core.f_list_from_map({"any-1": nx_tactics_base.t_place, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_placelist, "map-2": nx_tactics_base.t_placemap}, placemap)
+    return output
+  }
+
+  /**
+   * @function placelist_from_section
+   * Returns a placelist from a given section
+   * @param  {section} section
+   * @return {placelist}
+   */
+  static t_placelist_from_section = {
+    vx_type: vx_core.t_type
+  }
+  static e_placelist_from_section = {
+    vx_type: nx_tactics_base.t_placelist_from_section
+  }
+
+  // (func placelist<-section)
+  static f_placelist_from_section(section) {
+    let output = nx_tactics_base.e_placelist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_placelist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const secname = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_section}, section, ":name")
+        const sec = vx_core.f_copy(section, ":name", secname)
+        const placemap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_placemap, "struct-2": nx_tactics_base.t_section}, section, ":placemap")
+        return nx_tactics_base.f_placelist_from_placemap(placemap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function placelist_from_sectionlist
+   * Returns a placelist from a given sectionlist
+   * @param  {sectionlist} sectionlist
+   * @return {placelist}
+   */
+  static t_placelist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_placelist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_placelist_from_sectionlist
+  }
+
+  // (func placelist<-sectionlist)
+  static f_placelist_from_sectionlist(sectionlist) {
+    let output = nx_tactics_base.e_placelist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_placelist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const placelistlist = nx_tactics_base.f_placelistlist_from_sectionlist(sectionlist)
+        return nx_tactics_base.f_placelist_from_placelistlist(placelistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function placelistlist_from_sectionlist
+   * Returns a placelistlist from a given sectionlist
+   * @param  {sectionlist} sections
+   * @return {placelistlist}
+   */
+  static t_placelistlist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_placelistlist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_placelistlist_from_sectionlist
+  }
+
+  // (func placelistlist<-sectionlist)
+  static f_placelistlist_from_sectionlist(sections) {
+    let output = nx_tactics_base.e_placelistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_placelist, "any-2": nx_tactics_base.t_section, "list-1": nx_tactics_base.t_placelistlist, "list-2": nx_tactics_base.t_sectionlist},
+      sections,
+      vx_core.f_new(vx_core.t_any_from_any, (section) => 
+        nx_tactics_base.f_placelist_from_section(section))
+    )
+    return output
+  }
+
+  /**
    * @function placemap_from_placelist
    * Returns a placemap from a given placelist
-   * @param  {placelist} placelist
+   * @param  {placelist} ... placelist
    * @return {placemap}
    */
   static t_placemap_from_placelist = {
@@ -1430,13 +1727,135 @@ export default class nx_tactics_base {
   }
 
   // (func placemap<-placelist)
-  static f_placemap_from_placelist(placelist) {
+  static f_placemap_from_placelist(...placelist) {
     let output = nx_tactics_base.e_placemap
+    placelist = vx_core.f_new(nx_tactics_base.t_placelist, ...placelist)
     output = vx_core.f_map_from_list(
       {"any-1": nx_tactics_base.t_place, "any-2": nx_tactics_base.t_place, "list-2": nx_tactics_base.t_placelist, "map-1": nx_tactics_base.t_placemap, "struct-2": nx_tactics_base.t_place},
       placelist,
       vx_core.f_new(vx_core.t_any_from_any, (place) => 
         vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_place}, place, ":name"))
+    )
+    return output
+  }
+
+  /**
+   * @function powerlist_from_powerlistlist
+   * Returns a powerlist from a given powerlistlist
+   * @param  {powerlistlist} powerlistlist
+   * @return {powerlist}
+   */
+  static t_powerlist_from_powerlistlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_powerlist_from_powerlistlist = {
+    vx_type: nx_tactics_base.t_powerlist_from_powerlistlist
+  }
+
+  // (func powerlist<-powerlistlist)
+  static f_powerlist_from_powerlistlist(powerlistlist) {
+    let output = nx_tactics_base.e_powerlist
+    output = vx_core.f_list_join_from_list({"any-1": nx_tactics_base.t_power, "any-2": nx_tactics_base.t_powerlist, "list-1": nx_tactics_base.t_powerlist, "list-2": nx_tactics_base.t_powerlistlist}, powerlistlist)
+    return output
+  }
+
+  /**
+   * @function powerlist_from_powermap
+   * Returns a powerlist from a given powermap
+   * @param  {powermap} powermap
+   * @return {powerlist}
+   */
+  static t_powerlist_from_powermap = {
+    vx_type: vx_core.t_type
+  }
+  static e_powerlist_from_powermap = {
+    vx_type: nx_tactics_base.t_powerlist_from_powermap
+  }
+
+  // (func powerlist<-powermap)
+  static f_powerlist_from_powermap(powermap) {
+    let output = nx_tactics_base.e_powerlist
+    output = vx_core.f_list_from_map({"any-1": nx_tactics_base.t_power, "any-2": nx_tactics_base.t_power, "list-1": nx_tactics_base.t_powerlist, "map-2": nx_tactics_base.t_powermap}, powermap)
+    return output
+  }
+
+  /**
+   * @function powerlist_from_section
+   * Returns a powerlist from a given section
+   * @param  {section} section
+   * @return {powerlist}
+   */
+  static t_powerlist_from_section = {
+    vx_type: vx_core.t_type
+  }
+  static e_powerlist_from_section = {
+    vx_type: nx_tactics_base.t_powerlist_from_section
+  }
+
+  // (func powerlist<-section)
+  static f_powerlist_from_section(section) {
+    let output = nx_tactics_base.e_powerlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_powerlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const secname = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_section}, section, ":name")
+        const sec = vx_core.f_copy(section, ":name", secname)
+        const powermap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_powermap, "struct-2": nx_tactics_base.t_section}, section, ":powermap")
+        return nx_tactics_base.f_powerlist_from_powermap(powermap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function powerlist_from_sectionlist
+   * Returns a powerlist from a given sectionlist
+   * @param  {sectionlist} sectionlist
+   * @return {powerlist}
+   */
+  static t_powerlist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_powerlist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_powerlist_from_sectionlist
+  }
+
+  // (func powerlist<-sectionlist)
+  static f_powerlist_from_sectionlist(sectionlist) {
+    let output = nx_tactics_base.e_powerlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_powerlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const powerlistlist = nx_tactics_base.f_powerlistlist_from_sectionlist(sectionlist)
+        return nx_tactics_base.f_powerlist_from_powerlistlist(powerlistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function powerlistlist_from_sectionlist
+   * Returns a powerlistlist from a given sectionlist
+   * @param  {sectionlist} sections
+   * @return {powerlistlist}
+   */
+  static t_powerlistlist_from_sectionlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_powerlistlist_from_sectionlist = {
+    vx_type: nx_tactics_base.t_powerlistlist_from_sectionlist
+  }
+
+  // (func powerlistlist<-sectionlist)
+  static f_powerlistlist_from_sectionlist(sections) {
+    let output = nx_tactics_base.e_powerlistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_powerlist, "any-2": nx_tactics_base.t_section, "list-1": nx_tactics_base.t_powerlistlist, "list-2": nx_tactics_base.t_sectionlist},
+      sections,
+      vx_core.f_new(vx_core.t_any_from_any, (section) => 
+        nx_tactics_base.f_powerlist_from_section(section))
     )
     return output
   }
@@ -1772,7 +2191,7 @@ export default class nx_tactics_base {
 
   /**
    * @function skilllist_from_section
-   * Returns a skilllist from a given skilllistlist
+   * Returns a skilllist from a given section
    * @param  {section} section
    * @return {skilllist}
    */
@@ -1894,7 +2313,7 @@ export default class nx_tactics_base {
   /**
    * @function skillmap_from_skilllist
    * Returns a skillmap from a given skilllist
-   * @param  {skilllist} skilllist
+   * @param  {skilllist} ... skilllist
    * @return {skillmap}
    */
   static t_skillmap_from_skilllist = {
@@ -1905,8 +2324,9 @@ export default class nx_tactics_base {
   }
 
   // (func skillmap<-skilllist)
-  static f_skillmap_from_skilllist(skilllist) {
+  static f_skillmap_from_skilllist(...skilllist) {
     let output = nx_tactics_base.e_skillmap
+    skilllist = vx_core.f_new(nx_tactics_base.t_skilllist, ...skilllist)
     output = vx_core.f_map_from_list(
       {"any-1": nx_tactics_base.t_skill, "any-2": nx_tactics_base.t_skill, "list-2": nx_tactics_base.t_skilllist, "map-1": nx_tactics_base.t_skillmap, "struct-2": nx_tactics_base.t_skill},
       skilllist,
@@ -1941,6 +2361,12 @@ export default class nx_tactics_base {
         const chaptermap = nx_tactics_base.f_chaptermap_from_chapterlist(chapterlist)
         const sectionlist = nx_tactics_base.f_sectionlist_all_from_chapterlist(chapterlist)
         const sectionmap = nx_tactics_base.f_sectionmap_from_sectionlist(sectionlist)
+        const itemlist = nx_tactics_base.f_itemlist_from_sectionlist(sectionlist)
+        const itemmap = nx_tactics_base.f_itemmap_from_itemlist(itemlist)
+        const placelist = nx_tactics_base.f_placelist_from_sectionlist(sectionlist)
+        const placemap = nx_tactics_base.f_placemap_from_placelist(placelist)
+        const powerlist = nx_tactics_base.f_powerlist_from_sectionlist(sectionlist)
+        const powermap = nx_tactics_base.f_powermap_from_powerlist(powerlist)
         const skilllist = nx_tactics_base.f_skilllist_from_sectionlist(sectionlist)
         const skillmap = nx_tactics_base.f_skillmap_from_skilllist(skilllist)
         const unitlist = nx_tactics_base.f_unitlist_from_sectionlist(sectionlist)
@@ -1951,6 +2377,12 @@ export default class nx_tactics_base {
           bookmap,
           ":chaptermap",
           chaptermap,
+          ":itemmap",
+          itemmap,
+          ":placemap",
+          placemap,
+          ":powermap",
+          powermap,
           ":sectionmap",
           sectionmap,
           ":skillmap",
@@ -2160,7 +2592,7 @@ export default class nx_tactics_base {
   /**
    * @function unitmap_from_unitlist
    * Returns a unitmap from a given unitlist
-   * @param  {unitlist} unitlist
+   * @param  {unitlist} ... unitlist
    * @return {unitmap}
    */
   static t_unitmap_from_unitlist = {
@@ -2171,8 +2603,9 @@ export default class nx_tactics_base {
   }
 
   // (func unitmap<-unitlist)
-  static f_unitmap_from_unitlist(unitlist) {
+  static f_unitmap_from_unitlist(...unitlist) {
     let output = nx_tactics_base.e_unitmap
+    unitlist = vx_core.f_new(nx_tactics_base.t_unitlist, ...unitlist)
     output = vx_core.f_map_from_list(
       {"any-1": nx_tactics_base.t_unit, "any-2": nx_tactics_base.t_unit, "list-2": nx_tactics_base.t_unitlist, "map-1": nx_tactics_base.t_unitmap, "struct-2": nx_tactics_base.t_unit},
       unitlist,
@@ -2246,6 +2679,32 @@ export default class nx_tactics_base {
             return name
           })
         ))
+    )
+    return output
+  }
+
+  /**
+   * @function weaknessmap_from_weaknesslist
+   * Returns a weaknessmap from a given weaknesslist
+   * @param  {weaknesslist} ... weaknesslist
+   * @return {weaknessmap}
+   */
+  static t_weaknessmap_from_weaknesslist = {
+    vx_type: vx_core.t_type
+  }
+  static e_weaknessmap_from_weaknesslist = {
+    vx_type: nx_tactics_base.t_weaknessmap_from_weaknesslist
+  }
+
+  // (func weaknessmap<-weaknesslist)
+  static f_weaknessmap_from_weaknesslist(...weaknesslist) {
+    let output = nx_tactics_base.e_weaknessmap
+    weaknesslist = vx_core.f_new(nx_tactics_base.t_weaknesslist, ...weaknesslist)
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_weakness, "any-2": nx_tactics_base.t_weakness, "list-2": nx_tactics_base.t_weaknesslist, "map-1": nx_tactics_base.t_weaknessmap, "struct-2": nx_tactics_base.t_weakness},
+      weaknesslist,
+      vx_core.f_new(vx_core.t_any_from_any, (weakness) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_weakness}, weakness, ":name"))
     )
     return output
   }
@@ -2369,16 +2828,20 @@ export default class nx_tactics_base {
       "fate": nx_tactics_base.e_fate,
       "goal": nx_tactics_base.e_goal,
       "item": nx_tactics_base.e_item,
+      "itemlist": nx_tactics_base.e_itemlist,
+      "itemlistlist": nx_tactics_base.e_itemlistlist,
       "itemmap": nx_tactics_base.e_itemmap,
       "mind": nx_tactics_base.e_mind,
       "modifier": nx_tactics_base.e_modifier,
       "modifiermap": nx_tactics_base.e_modifiermap,
       "place": nx_tactics_base.e_place,
       "placelist": nx_tactics_base.e_placelist,
+      "placelistlist": nx_tactics_base.e_placelistlist,
       "placemap": nx_tactics_base.e_placemap,
       "playingcard": nx_tactics_base.e_playingcard,
       "power": nx_tactics_base.e_power,
       "powerlist": nx_tactics_base.e_powerlist,
+      "powerlistlist": nx_tactics_base.e_powerlistlist,
       "powermap": nx_tactics_base.e_powermap,
       "rank": nx_tactics_base.e_rank,
       "ranksuit": nx_tactics_base.e_ranksuit,
@@ -2431,6 +2894,7 @@ export default class nx_tactics_base {
       "unitweakness": nx_tactics_base.e_unitweakness,
       "unitweaknessmap": nx_tactics_base.e_unitweaknessmap,
       "weakness": nx_tactics_base.e_weakness,
+      "weaknesslist": nx_tactics_base.e_weaknesslist,
       "weaknessmap": nx_tactics_base.e_weaknessmap,
       "bookmap<-booklist": nx_tactics_base.e_bookmap_from_booklist,
       "cardimage<-card": nx_tactics_base.e_cardimage_from_card,
@@ -2443,8 +2907,24 @@ export default class nx_tactics_base {
       "chapterlist<-chapterlistlist": nx_tactics_base.e_chapterlist_from_chapterlistlist,
       "chapterlistlist<-booklist": nx_tactics_base.e_chapterlistlist_from_booklist,
       "chaptermap<-chapterlist": nx_tactics_base.e_chaptermap_from_chapterlist,
+      "itemlist<-itemlistlist": nx_tactics_base.e_itemlist_from_itemlistlist,
+      "itemlist<-itemmap": nx_tactics_base.e_itemlist_from_itemmap,
+      "itemlist<-section": nx_tactics_base.e_itemlist_from_section,
+      "itemlist<-sectionlist": nx_tactics_base.e_itemlist_from_sectionlist,
+      "itemlistlist<-sectionlist": nx_tactics_base.e_itemlistlist_from_sectionlist,
+      "itemmap<-itemlist": nx_tactics_base.e_itemmap_from_itemlist,
       "name<-chapter": nx_tactics_base.e_name_from_chapter,
+      "placelist<-placelistlist": nx_tactics_base.e_placelist_from_placelistlist,
+      "placelist<-placemap": nx_tactics_base.e_placelist_from_placemap,
+      "placelist<-section": nx_tactics_base.e_placelist_from_section,
+      "placelist<-sectionlist": nx_tactics_base.e_placelist_from_sectionlist,
+      "placelistlist<-sectionlist": nx_tactics_base.e_placelistlist_from_sectionlist,
       "placemap<-placelist": nx_tactics_base.e_placemap_from_placelist,
+      "powerlist<-powerlistlist": nx_tactics_base.e_powerlist_from_powerlistlist,
+      "powerlist<-powermap": nx_tactics_base.e_powerlist_from_powermap,
+      "powerlist<-section": nx_tactics_base.e_powerlist_from_section,
+      "powerlist<-sectionlist": nx_tactics_base.e_powerlist_from_sectionlist,
+      "powerlistlist<-sectionlist": nx_tactics_base.e_powerlistlist_from_sectionlist,
       "powermap<-powerlist": nx_tactics_base.e_powermap_from_powerlist,
       "sectionlist-all<-chapterlist": nx_tactics_base.e_sectionlist_all_from_chapterlist,
       "sectionlist-all<-section": nx_tactics_base.e_sectionlist_all_from_section,
@@ -2473,7 +2953,8 @@ export default class nx_tactics_base {
       "unitlistlist<-sectionlist": nx_tactics_base.e_unitlistlist_from_sectionlist,
       "unitmap<-unitlist": nx_tactics_base.e_unitmap_from_unitlist,
       "unitpowermap<-unitpowerlist": nx_tactics_base.e_unitpowermap_from_unitpowerlist,
-      "unitskillmap<-unitskilllist": nx_tactics_base.e_unitskillmap_from_unitskilllist
+      "unitskillmap<-unitskilllist": nx_tactics_base.e_unitskillmap_from_unitskilllist,
+      "weaknessmap<-weaknesslist": nx_tactics_base.e_weaknessmap_from_weaknesslist
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "bookmap<-booklist": nx_tactics_base.t_bookmap_from_booklist,
@@ -2487,8 +2968,24 @@ export default class nx_tactics_base {
       "chapterlist<-chapterlistlist": nx_tactics_base.t_chapterlist_from_chapterlistlist,
       "chapterlistlist<-booklist": nx_tactics_base.t_chapterlistlist_from_booklist,
       "chaptermap<-chapterlist": nx_tactics_base.t_chaptermap_from_chapterlist,
+      "itemlist<-itemlistlist": nx_tactics_base.t_itemlist_from_itemlistlist,
+      "itemlist<-itemmap": nx_tactics_base.t_itemlist_from_itemmap,
+      "itemlist<-section": nx_tactics_base.t_itemlist_from_section,
+      "itemlist<-sectionlist": nx_tactics_base.t_itemlist_from_sectionlist,
+      "itemlistlist<-sectionlist": nx_tactics_base.t_itemlistlist_from_sectionlist,
+      "itemmap<-itemlist": nx_tactics_base.t_itemmap_from_itemlist,
       "name<-chapter": nx_tactics_base.t_name_from_chapter,
+      "placelist<-placelistlist": nx_tactics_base.t_placelist_from_placelistlist,
+      "placelist<-placemap": nx_tactics_base.t_placelist_from_placemap,
+      "placelist<-section": nx_tactics_base.t_placelist_from_section,
+      "placelist<-sectionlist": nx_tactics_base.t_placelist_from_sectionlist,
+      "placelistlist<-sectionlist": nx_tactics_base.t_placelistlist_from_sectionlist,
       "placemap<-placelist": nx_tactics_base.t_placemap_from_placelist,
+      "powerlist<-powerlistlist": nx_tactics_base.t_powerlist_from_powerlistlist,
+      "powerlist<-powermap": nx_tactics_base.t_powerlist_from_powermap,
+      "powerlist<-section": nx_tactics_base.t_powerlist_from_section,
+      "powerlist<-sectionlist": nx_tactics_base.t_powerlist_from_sectionlist,
+      "powerlistlist<-sectionlist": nx_tactics_base.t_powerlistlist_from_sectionlist,
       "powermap<-powerlist": nx_tactics_base.t_powermap_from_powerlist,
       "sectionlist-all<-chapterlist": nx_tactics_base.t_sectionlist_all_from_chapterlist,
       "sectionlist-all<-section": nx_tactics_base.t_sectionlist_all_from_section,
@@ -2517,7 +3014,8 @@ export default class nx_tactics_base {
       "unitlistlist<-sectionlist": nx_tactics_base.t_unitlistlist_from_sectionlist,
       "unitmap<-unitlist": nx_tactics_base.t_unitmap_from_unitlist,
       "unitpowermap<-unitpowerlist": nx_tactics_base.t_unitpowermap_from_unitpowerlist,
-      "unitskillmap<-unitskilllist": nx_tactics_base.t_unitskillmap_from_unitskilllist
+      "unitskillmap<-unitskilllist": nx_tactics_base.t_unitskillmap_from_unitskilllist,
+      "weaknessmap<-weaknesslist": nx_tactics_base.t_weaknessmap_from_weaknesslist
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       "ability": nx_tactics_base.t_ability,
@@ -2543,16 +3041,20 @@ export default class nx_tactics_base {
       "fate": nx_tactics_base.t_fate,
       "goal": nx_tactics_base.t_goal,
       "item": nx_tactics_base.t_item,
+      "itemlist": nx_tactics_base.t_itemlist,
+      "itemlistlist": nx_tactics_base.t_itemlistlist,
       "itemmap": nx_tactics_base.t_itemmap,
       "mind": nx_tactics_base.t_mind,
       "modifier": nx_tactics_base.t_modifier,
       "modifiermap": nx_tactics_base.t_modifiermap,
       "place": nx_tactics_base.t_place,
       "placelist": nx_tactics_base.t_placelist,
+      "placelistlist": nx_tactics_base.t_placelistlist,
       "placemap": nx_tactics_base.t_placemap,
       "playingcard": nx_tactics_base.t_playingcard,
       "power": nx_tactics_base.t_power,
       "powerlist": nx_tactics_base.t_powerlist,
+      "powerlistlist": nx_tactics_base.t_powerlistlist,
       "powermap": nx_tactics_base.t_powermap,
       "rank": nx_tactics_base.t_rank,
       "ranksuit": nx_tactics_base.t_ranksuit,
@@ -2605,6 +3107,7 @@ export default class nx_tactics_base {
       "unitweakness": nx_tactics_base.t_unitweakness,
       "unitweaknessmap": nx_tactics_base.t_unitweaknessmap,
       "weakness": nx_tactics_base.t_weakness,
+      "weaknesslist": nx_tactics_base.t_weaknesslist,
       "weaknessmap": nx_tactics_base.t_weaknessmap
     })
     const pkg = vx_core.vx_new_struct(vx_core.t_package, {
@@ -3758,6 +4261,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "armor": {
+          "name" : "armor",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "classification": {
           "name" : "classification",
           "type" : vx_core.t_string,
@@ -3867,6 +4375,42 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_item['vx_type'] = nx_tactics_base.t_item
     nx_tactics_base.e_item['vx_value'] = {}
+
+    // (type itemlist)
+    nx_tactics_base.t_itemlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_itemlist['vx_value'] = {
+      name          : "itemlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_item],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_itemlist['vx_type'] = nx_tactics_base.t_itemlist
+
+    // (type itemlistlist)
+    nx_tactics_base.t_itemlistlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_itemlistlist['vx_value'] = {
+      name          : "itemlistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_itemlist],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_itemlistlist['vx_type'] = nx_tactics_base.t_itemlistlist
 
     // (type itemmap)
     nx_tactics_base.t_itemmap['vx_type'] = vx_core.t_type
@@ -4103,6 +4647,16 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_ranksuit,
           "multi": false
         },
+        "length": {
+          "name" : "length",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "mass": {
+          "name" : "mass",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "placemap": {
           "name" : "placemap",
           "type" : nx_tactics_base.t_placemap,
@@ -4140,6 +4694,24 @@ export default class nx_tactics_base {
       proplast      : {}
     }
     nx_tactics_base.e_placelist['vx_type'] = nx_tactics_base.t_placelist
+
+    // (type placelistlist)
+    nx_tactics_base.t_placelistlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_placelistlist['vx_value'] = {
+      name          : "placelistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_placelist],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_placelistlist['vx_type'] = nx_tactics_base.t_placelistlist
 
     // (type placemap)
     nx_tactics_base.t_placemap['vx_type'] = vx_core.t_type
@@ -4267,11 +4839,16 @@ export default class nx_tactics_base {
           "name" : "specialtymap",
           "type" : nx_tactics_base.t_specialtymap,
           "multi": false
+        },
+        "weaknessmap": {
+          "name" : "weaknessmap",
+          "type" : nx_tactics_base.t_weaknessmap,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "specialtymap",
-        "type" : nx_tactics_base.t_specialtymap,
+        "name" : "weaknessmap",
+        "type" : nx_tactics_base.t_weaknessmap,
         "multi": false
       }
     }
@@ -4295,6 +4872,24 @@ export default class nx_tactics_base {
       proplast      : {}
     }
     nx_tactics_base.e_powerlist['vx_type'] = nx_tactics_base.t_powerlist
+
+    // (type powerlistlist)
+    nx_tactics_base.t_powerlistlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_powerlistlist['vx_value'] = {
+      name          : "powerlistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_powerlist],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_powerlistlist['vx_type'] = nx_tactics_base.t_powerlistlist
 
     // (type powermap)
     nx_tactics_base.t_powermap['vx_type'] = vx_core.t_type
@@ -6894,6 +7489,24 @@ export default class nx_tactics_base {
     nx_tactics_base.e_weakness['vx_type'] = nx_tactics_base.t_weakness
     nx_tactics_base.e_weakness['vx_value'] = {}
 
+    // (type weaknesslist)
+    nx_tactics_base.t_weaknesslist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_weaknesslist['vx_value'] = {
+      name          : "weaknesslist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_weakness],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_weaknesslist['vx_type'] = nx_tactics_base.t_weaknesslist
+
     // (type weaknessmap)
     nx_tactics_base.t_weaknessmap['vx_type'] = vx_core.t_type
     nx_tactics_base.t_weaknessmap['vx_value'] = {
@@ -7111,6 +7724,114 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_chaptermap_from_chapterlist
     }
 
+    // (func itemlist<-itemlistlist)
+    nx_tactics_base.t_itemlist_from_itemlistlist['vx_value'] = {
+      name          : "itemlist<-itemlistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_itemlist_from_itemlistlist
+    }
+
+    // (func itemlist<-itemmap)
+    nx_tactics_base.t_itemlist_from_itemmap['vx_value'] = {
+      name          : "itemlist<-itemmap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_itemlist_from_itemmap
+    }
+
+    // (func itemlist<-section)
+    nx_tactics_base.t_itemlist_from_section['vx_value'] = {
+      name          : "itemlist<-section",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_itemlist_from_section
+    }
+
+    // (func itemlist<-sectionlist)
+    nx_tactics_base.t_itemlist_from_sectionlist['vx_value'] = {
+      name          : "itemlist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_itemlist_from_sectionlist
+    }
+
+    // (func itemlistlist<-sectionlist)
+    nx_tactics_base.t_itemlistlist_from_sectionlist['vx_value'] = {
+      name          : "itemlistlist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_itemlistlist_from_sectionlist
+    }
+
+    // (func itemmap<-itemlist)
+    nx_tactics_base.t_itemmap_from_itemlist['vx_value'] = {
+      name          : "itemmap<-itemlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_itemmap_from_itemlist
+    }
+
     // (func name<-chapter)
     nx_tactics_base.t_name_from_chapter['vx_value'] = {
       name          : "name<-chapter",
@@ -7129,6 +7850,96 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_name_from_chapter
     }
 
+    // (func placelist<-placelistlist)
+    nx_tactics_base.t_placelist_from_placelistlist['vx_value'] = {
+      name          : "placelist<-placelistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_placelist_from_placelistlist
+    }
+
+    // (func placelist<-placemap)
+    nx_tactics_base.t_placelist_from_placemap['vx_value'] = {
+      name          : "placelist<-placemap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_placelist_from_placemap
+    }
+
+    // (func placelist<-section)
+    nx_tactics_base.t_placelist_from_section['vx_value'] = {
+      name          : "placelist<-section",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_placelist_from_section
+    }
+
+    // (func placelist<-sectionlist)
+    nx_tactics_base.t_placelist_from_sectionlist['vx_value'] = {
+      name          : "placelist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_placelist_from_sectionlist
+    }
+
+    // (func placelistlist<-sectionlist)
+    nx_tactics_base.t_placelistlist_from_sectionlist['vx_value'] = {
+      name          : "placelistlist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_placelistlist_from_sectionlist
+    }
+
     // (func placemap<-placelist)
     nx_tactics_base.t_placemap_from_placelist['vx_value'] = {
       name          : "placemap<-placelist",
@@ -7145,6 +7956,96 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_placemap_from_placelist
+    }
+
+    // (func powerlist<-powerlistlist)
+    nx_tactics_base.t_powerlist_from_powerlistlist['vx_value'] = {
+      name          : "powerlist<-powerlistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_powerlist_from_powerlistlist
+    }
+
+    // (func powerlist<-powermap)
+    nx_tactics_base.t_powerlist_from_powermap['vx_value'] = {
+      name          : "powerlist<-powermap",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_powerlist_from_powermap
+    }
+
+    // (func powerlist<-section)
+    nx_tactics_base.t_powerlist_from_section['vx_value'] = {
+      name          : "powerlist<-section",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_powerlist_from_section
+    }
+
+    // (func powerlist<-sectionlist)
+    nx_tactics_base.t_powerlist_from_sectionlist['vx_value'] = {
+      name          : "powerlist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_powerlist_from_sectionlist
+    }
+
+    // (func powerlistlist<-sectionlist)
+    nx_tactics_base.t_powerlistlist_from_sectionlist['vx_value'] = {
+      name          : "powerlistlist<-sectionlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_powerlistlist_from_sectionlist
     }
 
     // (func powermap<-powerlist)
@@ -7667,6 +8568,24 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_unitskillmap_from_unitskilllist
+    }
+
+    // (func weaknessmap<-weaknesslist)
+    nx_tactics_base.t_weaknessmap_from_weaknesslist['vx_value'] = {
+      name          : "weaknessmap<-weaknesslist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_weaknessmap_from_weaknesslist
     }
 
     // (const rank-ace)

@@ -249,7 +249,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Galadriel",
               ":reference",
-              "* If you ask it of me, I will give you the One Ring. You offer it to me\nfreely? I do not deny that my heart has greatly desired this. In the\nplace of a Dark Lord you would have a Queen! Not dark but beautiful and\nterrible as the Dawn! Treacherous as the Seas! Stronger than the\nfoundations of the Earth! All shall love me and despair! ... I passed\nthe test. I shall diminish, and go to the west, and remain Galadriel.\n- Frodo and Galadriel - Lord of the Rings"
+              "* If you ask it of me, I will give you the One Ring. You offer it to me freely? I do not deny that my heart has greatly desired this. In the place of a Dark Lord you would have a Queen! Not dark but beautiful and terrible as the Dawn! Treacherous as the Seas! Stronger than the foundations of the Earth! All shall love me and despair! ... I passed the test. I shall diminish, and go to the west, and remain Galadriel. - Frodo and Galadriel - Lord of the Rings"
             )
           )
         )
@@ -1229,7 +1229,7 @@ export default class nx_tactics_books_fantasy {
                   ":name",
                   "Ephesus",
                   ":summary",
-                  "* Temple of Artemis - One of the Seven Wonders of the World.\n* The sacred site at Ephesus was far older than the Temple.  An archaic, pre-Hellenic fertility goddess was\nalready passionately venerated, and the Greeks associated her with Artemis."
+                  "* Temple of Artemis - One of the Seven Wonders of the World.\n* The sacred site at Ephesus was far older than the Temple.  An archaic, pre-Hellenic fertility goddess was already passionately venerated, and the Greeks associated her with Artemis."
                 ),
                 ":Galatia",
                 vx_core.f_new(
@@ -1809,7 +1809,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Jotunheim",
               ":summary",
-              "* Frost Giants - The Frost Giants wage perpetual war on all creatures especially the Aurorans and Nords.\nTheir lack of tactical ability is made up for by their phenomenal strength, endurance, and determination. Their bodies emminate extreme cold, so as they expand their territory the temperatures drop. Their goal actually seems to be to freeze the world.",
+              "* Frost Giants - The Frost Giants wage perpetual war on all creatures especially the Aurorans and Nords. Their lack of tactical ability is made up for by their phenomenal strength, endurance, and determination. Their bodies emminate extreme cold, so as they expand their territory the temperatures drop. Their goal actually seems to be to freeze the world.",
               ":placemap",
               vx_core.f_new(
                 nx_tactics_base.t_placemap,
@@ -2237,7 +2237,7 @@ export default class nx_tactics_books_fantasy {
                   ":reference",
                   "Southern France",
                   ":summary",
-                  "* Elysia is a land of gentle hills and sparse woodlands shifting to deep woods along its northern border. It is named after Elysium, the legendary land of the Fae. Elysia was annexed by the Imperium 50 years ago, and no one seems to particularly mind the new owners.\n* People - The people of Elysia are fond of music, dance and all manner of stimulating pastimes. They enhance their features with makeup and dress in flamboyant apparel including velvet blouses and trousers, capes of silken brocade, soft slippers and so forth. The women hide their faces behind decorative fans to give the impression that they are shy and demure. This is hardly the case. The men are even less subtle and are widely regarded as lechers and philanderers in other lands. The Elysians consider romance to be a wonderful game to be played constantly.\n* Beliefs - The people believe that the world is filled with mysteries and that these mysteries are ultimately unsolvable. The point of life is not to pursue the answers but to marvel at the mysteries themselves. In these beliefs, there is no right or wrong, only perspective and sublty.\n* Law - The unusual way they see right and wrong, leads to a fairly\narbitrary justice system. Small crimes are basically ignored, so petty theft especially pickpocketing is rampant. Major crimes, on the other hand, are dealt with quickly and severely. Trials are held in public with justice determined by popular vote by those attending. Punishment is arbitrarily and creatively disposed by the Mayor of each city.\n* The Night of Fools - Once each year, the infamous festival known as the night of fools takes place. During this night almost no crimes are prosecuted. People dress in ludicrous costumes and take to the streets in an evening of revelry, debauchery, and mayhem. On the following day, order is restored.\n* Beggars - Begging is considered an honest, if unenviable, profession in Elysia. Though many are frauds and thieves, the Elysians are fond of their beggars and expect others to be equally open-minded. It is traditional to scatter coppers when beggars appear or suffer public scorn and ridicule.\n* Bath - Public and private bath houses (with or without masseuse) are a popular pasttime and meeting place similar to a tavern elsewhere complete with snacks and drinks.",
+                  "* Elysia is a land of gentle hills and sparse woodlands shifting to deep woods along its northern border. It is named after Elysium, the legendary land of the Fae. Elysia was annexed by the Imperium 50 years ago, and no one seems to particularly mind the new owners.\n* People - The people of Elysia are fond of music, dance and all manner of stimulating pastimes. They enhance their features with makeup and dress in flamboyant apparel including velvet blouses and trousers, capes of silken brocade, soft slippers and so forth. The women hide their faces behind decorative fans to give the impression that they are shy and demure. This is hardly the case. The men are even less subtle and are widely regarded as lechers and philanderers in other lands. The Elysians consider romance to be a wonderful game to be played constantly.\n* Beliefs - The people believe that the world is filled with mysteries and that these mysteries are ultimately unsolvable. The point of life is not to pursue the answers but to marvel at the mysteries themselves. In these beliefs, there is no right or wrong, only perspective and sublty.\n* Law - The unusual way they see right and wrong, leads to a fairly arbitrary justice system. Small crimes are basically ignored, so petty theft especially pickpocketing is rampant. Major crimes, on the other hand, are dealt with quickly and severely. Trials are held in public with justice determined by popular vote by those attending. Punishment is arbitrarily and creatively disposed by the Mayor of each city.\n* The Night of Fools - Once each year, the infamous festival known as the night of fools takes place. During this night almost no crimes are prosecuted. People dress in ludicrous costumes and take to the streets in an evening of revelry, debauchery, and mayhem. On the following day, order is restored.\n* Beggars - Begging is considered an honest, if unenviable, profession in Elysia. Though many are frauds and thieves, the Elysians are fond of their beggars and expect others to be equally open-minded. It is traditional to scatter coppers when beggars appear or suffer public scorn and ridicule.\n* Bath - Public and private bath houses (with or without masseuse) are a popular pasttime and meeting place similar to a tavern elsewhere complete with snacks and drinks.",
                   ":unitmap",
                   vx_core.f_new(
                     nx_tactics_base.t_unitmap,
@@ -2498,26 +2498,12 @@ export default class nx_tactics_books_fantasy {
                   "* The capital city of the Imperium.",
                   ":titles",
                   "Empire",
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
+                  ":placemap",
+                  nx_tactics_base.f_placemap_from_placelist(
                     vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "place"
-                        ),
-                        ":severity",
-                        2
-                      )
+                      nx_tactics_base.t_place,
+                      ":name",
+                      "Panopticon"
                     )
                   )
                 ),
@@ -2533,7 +2519,7 @@ export default class nx_tactics_books_fantasy {
                   ":name",
                   "Pompeii",
                   ":summary",
-                  "* The story of the destruction of Pompeii when Mt. Versuvius erupted is widely known. The story is often used as a cautionary tale to obey the will of the gods.\n* Pompeii is now an empty ruin that functions as an enormous graveyard for the approximately 20,000 victims of the disaster. The dead remain at rest as long as the the area is undisturbed, and careful travellers may investigate the area at their peril. If there is any disturbance the bodies begin\nawakening as Burning Dead and are hysterically drawn to the living who will not long survive their embrace."
+                  "* The story of the destruction of Pompeii when Mt. Versuvius erupted is widely known. The story is often used as a cautionary tale to obey the will of the gods.\n* Pompeii is now an empty ruin that functions as an enormous graveyard for the approximately 20,000 victims of the disaster. The dead remain at rest as long as the the area is undisturbed, and careful travellers may investigate the area at their peril. If there is any disturbance the bodies begin awakening as Burning Dead and are hysterically drawn to the living who will not long survive their embrace."
                 )
               ),
               ":unitmap",
@@ -2587,7 +2573,7 @@ export default class nx_tactics_books_fantasy {
               ":reference",
               "Germany",
               ":summary",
-              "* Description - Currently claimed as a territory of the Imperium.\n* Dwarves",
+              "* Description - Currently claimed as a territory of the Imperium.\n           * Dwarves",
               ":itemmap",
               vx_core.f_new(
                 nx_tactics_base.t_itemmap,
@@ -2905,7 +2891,7 @@ export default class nx_tactics_books_fantasy {
                       ":name",
                       "Phantasian Dreamer",
                       ":summary",
-                      "* The Dreamers use their [Dreaming] skill to capture and sell the exotic\n[Dream Essence] to those wealthy enough to afford such luxury."
+                      "* The Dreamers use their [Dreaming] skill to capture and sell the exotic [Dream Essence] to those wealthy enough to afford such luxury."
                     ),
                     "Phantasian Windship",
                     vx_core.f_new(
@@ -3089,7 +3075,7 @@ export default class nx_tactics_books_fantasy {
               ":reference",
               "The Land that Time Forgot",
               ":summary",
-              "* Deep within the Wilderland jungles is a towering ridge of a massive caldera formed\nby an ancient volcano. Within the caldera is a large expanse of jungle cut off from\nthe outside world for millions of years. Numerous creatures though to be extinct still\nsurvive in this safe haven.",
+              "* Deep within the Wilderland jungles is a towering ridge of a massive caldera formed by an ancient volcano. Within the caldera is a large expanse of jungle cut off from the outside world for millions of years. Numerous creatures though to be extinct still survive in this safe haven.",
               ":titles",
               "Pangaea"
             ),
@@ -3105,7 +3091,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Sea of Glass",
               ":summary",
-              "* The sea of glass is a vast expanse of mostly flat glass. The sea was presumably\nformed by a massive firestorm detonating over a sandy desert, but no cause had been\ndiscovered. Travelling over the glass is similar to travelling over ice though the\nglass is much harder and the weather is very hot. The glass creates a blinding glare\nwhen the Sun is at the right angle, and the surface can seem like a giant frying pan\nunder the noonday Sun."
+              "* The sea of glass is a vast expanse of mostly flat glass. The sea was presumably formed by a massive firestorm detonating over a sandy desert, but no cause had been discovered. Travelling over the glass is similar to travelling over ice though the glass is much harder and the weather is very hot. The glass creates a blinding glare when the Sun is at the right angle, and the surface can seem like a giant frying pan under the noonday Sun."
             )
           ),
           ":sectionmap",
@@ -3902,26 +3888,16 @@ export default class nx_tactics_books_fantasy {
               "Luna",
               ":summary",
               "* The Spirit Realm of the Moon",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
+              ":unitmap",
+              nx_tactics_base.f_unitmap_from_unitlist(
                 vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":tag",
-                      "unit"
-                    ),
-                    ":severity",
-                    2
-                  )
+                  nx_tactics_base.t_unit,
+                  ":name",
+                  "Goddess Selene",
+                  ":titles",
+                  "Full Moon, Moon Queen, Silver Queen",
+                  ":summary",
+                  "* Selene is the Goddess of the Moon, the Alfar, and the Werebeasts.\n					          * She has 4 aspects:\n** Full - \n** Waxing - \n** Waning - \n** New -"
                 )
               )
             ),
@@ -4294,140 +4270,39 @@ export default class nx_tactics_books_fantasy {
               "Void, The",
               ":summary",
               "* The Void is an empty Realm between Realms. It is the Spiritual equivalent to outer space.\n* The Void is a realm of nothingness and contains no matter, energy, atmosphere, magnetism, inertia, gravity, or any other force.\n* Light, sound, and heat do not exist in the Void, but those with Spirits can see and hear normally. They also experience no discomfort despite the harsh conditions. Those without Spirits are blind, deaf, and lost in the endless void.\n* Attributes - Those with Spirits appear as idealistic versions of themselves in the Void. Body, Mind, Spirit, and Speed are increased to the higher of their Mind or Spirit.\n* Speed - As light and inertia do not exist in the Void, vessels may move much faster than light. Those with Spirits may move at astronomical speeds and can move at the equivalent of [Mind] or [Spirit] x 1 Light Day per second.\n* Void Ships - Ships created to travel between the realms. Note: physical travel into the Astral Realm by magical means may only be performed without observers.",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
+              ":unitmap",
+              nx_tactics_base.f_unitmap_from_unitlist(
                 vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":tag",
-                      "unit"
-                    ),
-                    ":severity",
-                    2
-                  )
+                  nx_tactics_base.t_unit,
+                  ":name",
+                  "Void Lurker"
                 ),
-                ":msgblocks",
                 vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "unit"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  ),
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "unit"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  ),
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "unit"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  ),
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "unit"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  ),
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "unit"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
+                  nx_tactics_base.t_unit,
+                  ":name",
+                  "Void Manta"
+                ),
+                vx_core.f_new(
+                  nx_tactics_base.t_unit,
+                  ":name",
+                  "Void Shark"
+                ),
+                vx_core.f_new(
+                  nx_tactics_base.t_unit,
+                  ":name",
+                  "Void Spawn"
+                ),
+                vx_core.f_new(
+                  nx_tactics_base.t_unit,
+                  ":name",
+                  "Void Walker"
+                ),
+                vx_core.f_new(
+                  nx_tactics_base.t_unit,
+                  ":name",
+                  "Void Whale",
+                  ":titles",
+                  "Leviathan"
                 )
               )
             )

@@ -20,7 +20,8 @@
 (func event-navbutton-click<-event : event/event
  [event : event/event]
  (let : event/event
-  [ischanged : boolean := (nav/boolean-navigate-back)]
+  [ischanged : boolean :=
+    (nav/boolean-navigate-back)]
   event)
  :context
  :doc "Event handler for card clicks")
@@ -93,11 +94,13 @@
       (!-empty shadow)
       (string "shadow:" shadow)))
    slist : stringlist :=
-    (stringlist s1 s2 s3)]
-  (string<-stringlist-join
-   slist " "))
+    (stringlist s1 s2 s3)
+   sjoin : string :=
+    (type/string<-stringlist-join
+     slist " ")]
+  (type/string-trim sjoin))
  :test (test
-        "conscience: 1x1 beast:2x1 shadow:3x1"
+        "conscience:1x1 beast:2x1 shadow:3x1"
         (string<-conscience-beast-shadow
          "1x1" "2x1" "3x1"))
  :doc "Returns a string for will string")
@@ -117,9 +120,11 @@
       (!-empty nature)
       (string "nature:" nature)))
    slist : stringlist :=
-    (stringlist sdemeanor snature)]
-  (string<-stringlist-join
-   slist " "))
+    (stringlist sdemeanor snature)
+   sjoin : string :=
+    (type/string<-stringlist-join
+     slist " ")]
+  (type/string-trim sjoin))
  :test (test
         "demeanor:nice nature:naughty"
         (string<-demeanor-nature
@@ -153,9 +158,11 @@
       (!-empty space)
       (string "space:" space)))
    slist : stringlist :=
-    (stringlist s1 s2 s3 s4)]
-  (string<-stringlist-join
-   slist " "))
+    (stringlist s1 s2 s3 s4)
+   sjoin : string :=
+    (type/string<-stringlist-join
+     slist " ")]
+  (type/string-trim sjoin))
  :test (test
         "land:1 water:2 air:3 space:4"
         (string<-land-water-air-space
@@ -189,13 +196,15 @@
       (!-empty width)
       (string "w:" width)))
    slist : stringlist :=
-    (stringlist smass h l w)]
-  (string<-stringlist-join
-   slist " "))
+    (stringlist smass h l w)
+   sjoin : string :=
+    (type/string<-stringlist-join
+     slist " ")]
+  (type/string-trim sjoin))
  :test (test
-        "mass:80kg/160lb h:2m/6ft l:2m/6ft w:1m/3ft"
+        "mass:80kg/160lb h:2m/6ft l:1m/3ft w:1m/3ft"
         (string<-mass-h-l-w
-         "80kg/160lb" "2m/6ft" "1m/3ft" "2m/6ft"))
+         "80kg/160lb" "2m/6ft" "1m/3ft" "1m/3ft"))
  :doc "Returns a string from a mass, height, length, width")
 
 (func string-display<-any : string
@@ -536,13 +545,16 @@
    uiddisplay : string :=
     (string uid "-display")
    uidisplay : ui/ui :=
-    (ui/ui
-     :uid uiddisplay
-     :style styles/style-card-display
-     :stylelist
-      (ui/stylelist
-       styles/style-textarea)
-     :data display1)
+    (if : ui/ui
+     (then
+      (!-empty display1)
+      (ui/ui
+       :uid uiddisplay
+       :style styles/style-card-display
+       :stylelist
+        (ui/stylelist
+         styles/style-textarea)
+       :data display1)))
    ranksuit : base/ranksuit :=
     (:ranksuit card)
    uilist1 : ui/uilist :=
@@ -623,61 +635,82 @@
      (:width  unit))
    prefix : string := (string parent "-" name)
    uiitemsummary : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-summary")
-     :style styles/style-item-summary
-     :stylelist
-      (ui/stylelist
-       styles/style-textarea)
-     :data summary)
+    (if : ui/ui
+     (then
+      (!-empty summary)
+      (ui/ui
+       :uid (string prefix "-summary")
+       :style styles/style-item-summary
+       :stylelist
+        (ui/stylelist
+         styles/style-textarea)
+       :data summary)))
    detail : string := ""
    uiimage : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-image")
-     :style styles/style-unit-image
-     :data
-      (file/file<-path
-       image))
+    (if : ui/ui
+     (then
+      (!-empty image)
+      (ui/ui
+       :uid (string prefix "-image")
+       :style styles/style-unit-image
+       :data
+        (file/file<-path
+         image))))
    uivalue : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-value")
-     :style styles/style-unit-value
-     :stylelist
-      (ui/stylelist
-       styles/style-text-header1)
-     :data value)
+    (if : ui/ui
+     (then
+      (!-empty value)
+      (ui/ui
+       :uid (string prefix "-value")
+       :style styles/style-unit-value
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data value)))
    uititles : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-titles")
-     :style styles/style-unit-titles
-     :stylelist
-      (ui/stylelist
-       styles/style-text)
-     :data titles)
+    (if : ui/ui
+     (then
+      (!-empty titles)
+      (ui/ui
+       :uid (string prefix "-titles")
+       :style styles/style-unit-titles
+       :stylelist
+        (ui/stylelist
+         styles/style-text)
+       :data titles)))
    uibody : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-body")
-     :style styles/style-unit-body
-     :stylelist
-      (ui/stylelist
-       styles/style-text-header1)
-     :data body)
+    (if : ui/ui
+     (then
+      (!-empty body)
+      (ui/ui
+       :uid (string prefix "-body")
+       :style styles/style-unit-body
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data body)))
    uibodydetail : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-bodydetail")
-     :style styles/style-unit-bodydetail
-     :stylelist
-      (ui/stylelist
-       styles/style-text-2)
-     :data bodydetail)
+    (if : ui/ui
+     (then
+      (!-empty bodydetail)
+      (ui/ui
+       :uid (string prefix "-bodydetail")
+       :style styles/style-unit-bodydetail
+       :stylelist
+        (ui/stylelist
+         styles/style-text-2)
+       :data bodydetail)))
    uidetail : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-detail")
-     :style styles/style-unit-detail
-     :stylelist
-      (ui/stylelist
-       styles/style-textarea)
-     :data detail)]
+    (if : ui/ui
+     (then
+      (!-empty detail)
+      (ui/ui
+       :uid (string prefix "-detail")
+       :style styles/style-unit-detail
+       :stylelist
+        (ui/stylelist
+         styles/style-textarea)
+       :data detail)))]
   (ui/uilist
    uiimage
    uivalue
@@ -725,102 +758,137 @@
    detail : string :=
     (string-display<-unit unit)
    prefix : string := (string parent "-" name)
-   uidimage : string := (string prefix "-image")
    uiimage : ui/ui :=
-    (ui/ui
-     :uid uidimage
-     :style styles/style-unit-image
-     :data
-      (file/file<-path
-       image))
+    (if : ui/ui
+     (then
+      (!-empty image)
+      (ui/ui
+       :uid (string prefix "-image")
+       :style styles/style-unit-image
+       :data
+        (file/file<-path
+         image))))
    uivalue : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-value")
-     :style styles/style-unit-value
-     :stylelist
-      (ui/stylelist
-       styles/style-text-header1)
-     :data value)
+    (if : ui/ui
+     (then
+      (!-empty value)
+      (ui/ui
+       :uid (string prefix "-value")
+       :style styles/style-unit-value
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data value)))
    uititles : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-titles")
-     :style styles/style-unit-titles
-     :stylelist
-      (ui/stylelist
-       styles/style-text)
-     :data titles)
+    (if : ui/ui
+     (then
+      (!-empty titles)
+      (ui/ui
+       :uid (string prefix "-titles")
+       :style styles/style-unit-titles
+       :stylelist
+        (ui/stylelist
+         styles/style-text)
+       :data titles)))
    uibody : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-body")
-     :style styles/style-unit-body
-     :stylelist
-      (ui/stylelist
-       styles/style-text-header1)
-     :data body)
+    (if : ui/ui
+     (then
+      (!-empty body)
+      (ui/ui
+       :uid (string prefix "-body")
+       :style styles/style-unit-body
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data body)))
    uibodydetail : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-bodydetail")
-     :style styles/style-unit-bodydetail
-     :stylelist
-      (ui/stylelist
-       styles/style-text-2)
-     :data bodydetail)
+    (if : ui/ui
+     (then
+      (!-empty bodydetail)
+      (ui/ui
+       :uid (string prefix "-bodydetail")
+       :style styles/style-unit-bodydetail
+       :stylelist
+        (ui/stylelist
+         styles/style-text-2)
+       :data bodydetail)))
    uimind : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-mind")
-     :style styles/style-unit-mind
-     :stylelist
-      (ui/stylelist
-       styles/style-text-header1)
-     :data mind)
+    (if : ui/ui
+     (then
+      (!-empty mind)
+      (ui/ui
+       :uid (string prefix "-mind")
+       :style styles/style-unit-mind
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data mind)))
    uiminddetail : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-minddetail")
-     :style styles/style-unit-minddetail
-     :stylelist
-      (ui/stylelist
-       styles/style-text-2)
-     :data minddetail)
+    (if : ui/ui
+     (then
+      (!-empty minddetail)
+      (ui/ui
+       :uid (string prefix "-minddetail")
+       :style styles/style-unit-minddetail
+       :stylelist
+        (ui/stylelist
+         styles/style-text-2)
+       :data minddetail)))
    uiwill : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-will")
-     :style styles/style-unit-will
-     :stylelist
-      (ui/stylelist
-       styles/style-text-header1)
-     :data will)
+    (if : ui/ui
+     (then
+      (!-empty will)
+      (ui/ui
+       :uid (string prefix "-will")
+       :style styles/style-unit-will
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data will)))
    uiwilldetail : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-willdetail")
-     :style styles/style-unit-willdetail
-     :stylelist
-      (ui/stylelist
-       styles/style-text-2)
-     :data willdetail)
+    (if : ui/ui
+     (then
+      (!-empty willdetail)
+      (ui/ui
+       :uid (string prefix "-willdetail")
+       :style styles/style-unit-willdetail
+       :stylelist
+        (ui/stylelist
+         styles/style-text-2)
+       :data willdetail)))
    uimove : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-move")
-     :style styles/style-unit-move
-     :stylelist
-      (ui/stylelist
-       styles/style-text-header1)
-     :data move)
+    (if : ui/ui
+     (then
+      (!-empty move)
+      (ui/ui
+       :uid (string prefix "-move")
+       :style styles/style-unit-move
+       :stylelist
+        (ui/stylelist
+         styles/style-text-header1)
+       :data move)))
    uimovedetail : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-movedetail")
-     :style styles/style-unit-movedetail
-     :stylelist
-      (ui/stylelist
-       styles/style-text-2)
-     :data movedetail)
+    (if : ui/ui
+     (then
+      (!-empty movedetail)
+      (ui/ui
+       :uid (string prefix "-movedetail")
+       :style styles/style-unit-movedetail
+       :stylelist
+        (ui/stylelist
+         styles/style-text-2)
+       :data movedetail)))
    uidetail : ui/ui :=
-    (ui/ui
-     :uid (string prefix "-detail")
-     :style styles/style-unit-detail
-     :stylelist
-      (ui/stylelist
-       styles/style-textarea)
-     :data detail)]
+    (if : ui/ui
+     (then
+      (!-empty detail)
+      (ui/ui
+       :uid (string prefix "-detail")
+       :style styles/style-unit-detail
+       :stylelist
+        (ui/stylelist
+         styles/style-textarea)
+       :data detail)))]
   (ui/uilist
    uiimage
    uivalue
@@ -1035,8 +1103,8 @@
     style-app-titlebar)
   :uimap
    (ui/uimap<-uilist
-    (ui/uilist
-     (ui-app-titlebar-print))))
+    (ui-app-titlebar-title)
+    (ui-app-titlebar-print)))
  :doc "")
 
 (func ui-app-titlebar-print : ui/ui
@@ -1052,12 +1120,24 @@
     :layout ui/layout-image)
   :stylelist
    (ui/stylelist
-    style-app-titlebar-print
-    style-clickable)
+    styles/style-app-titlebar-print
+    styles/style-clickable)
   :eventmap
    (event/eventmap<-eventlist
     (event/eventlist
      event-printbutton-click))))
+
+(func ui-app-titlebar-title : ui/ui
+ (ui/ui
+  :uid "titlebar-title"
+  :parent "titlebar"
+  :data "Title"
+  :style
+   (ui/style
+    :layout ui/layout-label)
+  :stylelist
+   (ui/stylelist
+    styles/style-app-titlebar-title)))
 
 (func ui-image<-uid-path : ui/ui
  [uid  : string
@@ -1110,8 +1190,8 @@
    uid     : string       := (string parent "-" name)
    cardmap : base/cardmap := (:cardmap deck)
    uimap : ui/uimap :=
-    (uimap<-cardmap-parent
-     cardmap uid)]
+    (uimap<-cardmap-parent-page-size
+     cardmap uid 1 100)]
   (ui/ui
    :uid    uid
    :parent parent
@@ -1141,9 +1221,8 @@
    cardmap3 : base/cardmap :=
     (copy cardmap1 cardmap2)
    uimap : ui/uimap :=
-    (uimap<-cardmap-parent
-     cardmap3
-     uid)]
+    (uimap<-cardmap-parent-page-size
+     cardmap3 uid 1 100)]
   (ui/ui
    :uid    uid
    :parent parent
@@ -1161,15 +1240,20 @@
    name : string := "Back"
    uid1 : string := (:uid navbutton)
    uid2 : string := (string uid1 name)
+   uiimage : ui/ui :=
+    (ui-image<-uid-path
+     uid2
+     "icons/icon-backarrow.svg")
+   uimap : ui/uimap :=
+    (ui/uimap<-uilist
+     uiimage)
    styles1 : ui/stylelist :=
-    (:stylelist navbutton)
-   styles2 : ui/stylelist :=
-    (copy styles1
-     styles/style-button-back)]
+    (:stylelist navbutton)]
   (copy navbutton
    :uid uid2
    :name name
-   :stylelist styles2
+   :stylelist styles1
+   :uimap uimap
    :eventmap eventmap-navbutton-back))
  :doc "Returns the navigation back button")
 
@@ -1376,14 +1460,16 @@
      uisuit2))))
  :doc "")
 
-(func uimap<-cardmap-parent : ui/uimap
+(func uimap<-cardmap-parent-page-size : ui/uimap
  [cardmap : base/cardmap
-  parent  : string]
+  parent  : string
+  page    : int
+  size    : int]
  (map<-map : ui/uimap
   cardmap
   (fn : ui/ui
    [key  : string
     card : base/card]
-   (ui<-any-parent
+   (ui<-card-parent
     card parent)))
  :doc "")

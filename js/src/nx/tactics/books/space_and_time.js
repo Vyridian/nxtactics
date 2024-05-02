@@ -47,7 +47,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Dimensional Ripples",
               ":summary",
-              "* Changes made to one dimension can cause similar changes to nearby parallel dimensions like\nripples in a pond. Temporal Distortion Waves always cause Dimensional Ripples."
+              "* Changes made to one dimension can cause similar changes to nearby parallel dimensions like ripples in a pond. Temporal Distortion Waves always cause Dimensional Ripples."
             ),
             "Dimensional Storm",
             vx_core.f_new(
@@ -55,7 +55,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Dimensional Storm",
               ":summary",
-              "* A Dimensional Storm is a theoretical disaster where the barriers between dimensions are\nbroken and events from unrelated time periods and dimensions become mixed up creating chaos\nacross multiple dimensions."
+              "* A Dimensional Storm is a theoretical disaster where the barriers between dimensions are broken and events from unrelated time periods and dimensions become mixed up creating chaos across multiple dimensions."
             )
           )
         )
@@ -169,7 +169,7 @@ export default class nx_tactics_books_space_and_time {
               ":reference",
               "* The movie Outland takes place on Io.",
               ":summary",
-              "* Io is a ball of sulfur and sulfer dioxide convered with enormous geysers spitting\nplumes 300-1400km high. Its core is overheated by gravitational flux between Jupiter\nand Europa."
+              "* Io is a ball of sulfur and sulfer dioxide convered with enormous geysers spitting plumes 300-1400km high. Its core is overheated by gravitational flux between Jupiter and Europa."
             ),
             ":Saturn",
             vx_core.f_new(
@@ -246,30 +246,8 @@ export default class nx_tactics_books_space_and_time {
               "SpaceAndTime/Sun.png",
               ":reference",
               "Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy lies a\nsmall unregarded yellow sun. - Hitchhiker's Guide to the Galaxy",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":prop",
-                      "mass",
-                      ":value",
-                      "2x10^27tons"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              ":mass",
+              "2x10^27tons"
             ),
             ":Mercury",
             vx_core.f_new(
@@ -280,58 +258,10 @@ export default class nx_tactics_books_space_and_time {
               "SpaceAndTime/Mercury.png",
               ":summary",
               "* Optimal Travel Time from Earth: .01g=16 days, .1g=7 days, 1g=2 days",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":prop",
-                      "mass",
-                      ":value",
-                      "3x10^20tons"
-                    ),
-                    ":severity",
-                    2
-                  )
-                ),
-                ":msgblocks",
-                vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidproperty",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":prop",
-                          "length",
-                          ":value",
-                          "4.8Mm"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
-                )
-              )
+              ":mass",
+              "3x10^20tons",
+              ":length",
+              "4.8Mm"
             ),
             ":Venus",
             vx_core.f_new(
@@ -344,58 +274,10 @@ export default class nx_tactics_books_space_and_time {
               "* Optimal Travel Time from Earth: .01g=10 days, .1g=4 days, 1g=1.5 days",
               ":titles",
               "Evening Star, Morning Star",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":prop",
-                      "mass",
-                      ":value",
-                      "5x10^21tons"
-                    ),
-                    ":severity",
-                    2
-                  )
-                ),
-                ":msgblocks",
-                vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidproperty",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":prop",
-                          "length",
-                          ":value",
-                          "12.1Mm"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
-                )
-              )
+              ":mass",
+              "5x10^21tons",
+              ":length",
+              "12.1Mm"
             ),
             ":Earth",
             vx_core.f_new(
@@ -406,58 +288,10 @@ export default class nx_tactics_books_space_and_time {
               "SpaceAndTime/Earth.png",
               ":reference",
               "Though below me, I feel no motion\nStanding on these mountains and plains\nFar away from the rolling ocean\nStill my dry land heart can say\nI've been sailing all my life now\nNever harbor or port have I known\nThe wide universe is the ocean I travel\nAnd the earth is my blue boat home\n\nSun, my sail, and moon my rudder\nAs I ply the starry sea\nLeaning over the edge in wonder\nCasting questions into the deep\nDrifting here with my ship's companions\nAll we kindred pilgrim souls\nMaking our way by the lights of the heavens\nIn our beautiful blue boat home\n\nI give thanks to the waves upholding me\nHail the great winds urging me on\nGreet the infinite sea before me\nSing the sky my sailor's song\nI was born upon the fathoms\nNever harbor or port have I known\nThe wide universe is the ocean I travel\nAnd the earth is my blue boat home - Peter Mayer, Blue Boat Home",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":prop",
-                      "mass",
-                      ":value",
-                      "6x10^21tons"
-                    ),
-                    ":severity",
-                    2
-                  )
-                ),
-                ":msgblocks",
-                vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidproperty",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":prop",
-                          "length",
-                          ":value",
-                          "12.6Mm"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
-                )
-              )
+              ":mass",
+              "6x10^21tons",
+              ":length",
+              "12.6Mm"
             ),
             ":Moon",
             vx_core.f_new(
@@ -467,33 +301,11 @@ export default class nx_tactics_books_space_and_time {
               ":image",
               "SpaceAndTime/Moon.png",
               ":reference",
-              "* The monthly cycle of the moon, in contrast to the annual cycle of the sun's path, has been implicitly linked to\nwomen's menstrual cycles by many cultures, although rarely explicitly stated.  Many of the most well-known\nmythologies feature female lunar deities.",
+              "* The monthly cycle of the moon, in contrast to the annual cycle of the sun's path, has been implicitly linked to women's menstrual cycles by many cultures, although rarely explicitly stated. Many of the most well-known mythologies feature female lunar deities.",
               ":summary",
-              "* The moon rotates on its axis in about 27 days. Daytime on one side of the\nmoon lasts about 13 and a half days, followed by 13 and a half nights of\ndarkness. When sunlight hits the moon's surface, the temperature can reach\n253 degrees F (123 C). The dark side can have temperatures dipping to minus\n243 F (minus 153 C).\n* New Moon - A person born under the new moon will have an underlying sense of youthful enthusiasm and optimism.\nThey will probably prefer to take the initiative, especially in romance, and will be ready to look for new\ninterests in life, new people and new ideas.  The person will see how things can be improved and can spur others\nto action, before leaving them to finish the project.  They need to guard against selfishness and taking others\nby surprise with over quick and hasty reactions.\n* Waxing Moon - A person born under a waxing moon will be ambitious and sociable.  The person will be locked into\ntheir goals and have a strong need to create something which will be remembered by others.  They will have a\ncharismatic personality that draws others to them, but may instinctively use others for their own ends, rather\nthan help them.  They prefer a career where they are out in front and have attention and status.  The person will\nbe slow to anger, but formidable when aroused, and hates to be hurried or presented with a fait accompli.\nHowever, they won't mind doing this to others if it tips the odds in their favor.\n* Full Moon - A person born under a full moon will be sensitive to the needs of others and expects others to be\nsensitive to their own needs.  There is an underlying sense of watchfulness.  The person will need friendships,\ncolleagues and relationships, and will relate well to others.  They will either be drawn to highly successful\npeople and help them achieve their goals, or else achieve success themselves with the help of others.  There is a\ntension and nervousness at play which can lead to a short attention span and a constant search for new people and\nexperiences, and sex will play some kind of transformative role in their life.\n* Waning Moon - A person born under a waning moon will finish the projects that others start, and reorganize and sort out the problems left by others. They will often have clairvoyant insight and follow hunches rather than be logical. The person can be too sensitive and become upset by the demands of others, and can also be too inclined to sit back and let things happen.",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":prop",
-                      "mass",
-                      ":value",
-                      "7x10^19tons"
-                    ),
-                    ":severity",
-                    2
-                  )
-                )
-              )
+              "* The moon rotates on its axis in about 27 days. Daytime on one side of the moon lasts about 13 and a half days, followed by 13 and a half nights of darkness. When sunlight hits the moon's surface, the temperature can reach 253 degrees F (123 C). The dark side can have temperatures dipping to minus 243 F (minus 153 C).\n* New Moon - A person born under the new moon will have an underlying sense of youthful enthusiasm and optimism. They will probably prefer to take the initiative, especially in romance, and will be ready to look for new interests in life, new people and new ideas. The person will see how things can be improved and can spur others to action, before leaving them to finish the project. They need to guard against selfishness and taking others by surprise with over quick and hasty reactions.\n* Waxing Moon - A person born under a waxing moon will be ambitious and sociable. The person will be locked into their goals and have a strong need to create something which will be remembered by others. They will have a charismatic personality that draws others to them, but may instinctively use others for their own ends, rather than help them. They prefer a career where they are out in front and have attention and status. The person will be slow to anger, but formidable when aroused, and hates to be hurried or presented with a fait accompli. However, they won't mind doing this to others if it tips the odds in their favor.\n* Full Moon - A person born under a full moon will be sensitive to the needs of others and expects others to be sensitive to their own needs. There is an underlying sense of watchfulness. The person will need friendships, colleagues and  relationships, and will relate well to others. They will either be drawn to highly successful people and help them achieve their goals, or else achieve success themselves with the help of others. There is a tension and nervousness at play which can lead to a short attention span and a constant search for new people and experiences, and sex will play some kind of transformative role in their life.\n* Waning Moon - A person born under a waning moon will finish the projects that others start, and reorganize and sort out the problems left by others. They will often have clairvoyant insight and follow hunches rather than be logical. The person can be too sensitive and become upset by the demands of others, and can also be too inclined to sit back and let things happen.",
+              ":mass",
+              "7x10^19tons"
             ),
             ":Mars",
             vx_core.f_new(
@@ -506,58 +318,10 @@ export default class nx_tactics_books_space_and_time {
               "* Has two moons: Phobos and Deimos which may be captured asteroids.\n* Optimal Travel Time from Earth: .01g=15 days, .1g=6 days, 1g=2 days",
               ":titles",
               "Red Planet",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":prop",
-                      "mass",
-                      ":value",
-                      "6.4x10^20tons"
-                    ),
-                    ":severity",
-                    2
-                  )
-                ),
-                ":msgblocks",
-                vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidproperty",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":prop",
-                          "length",
-                          ":value",
-                          "6.8Mm"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
-                )
-              )
+              ":mass",
+              "6.4x10^20tons",
+              ":length",
+              "6.8Mm"
             ),
             "Asteroid Belt",
             vx_core.f_new(
@@ -567,77 +331,31 @@ export default class nx_tactics_books_space_and_time {
               ":image",
               "SpaceAndTime/AsteroidBelt.png",
               ":summary",
-              "* Gravitational pull from Jupiter prevented the asteroid field from forming into a planet.  It has far too\nlittle mass to have ever been a planet.\n* This belt is now estimated to contain between 1.1 and 1.9 million asteroids larger than 1 km (0.6 mi) in\ndiameter and millions of smaller ones.",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":tag",
-                      "place"
-                    ),
-                    ":severity",
-                    2
-                  )
-                ),
-                ":msgblocks",
-                vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "place"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  ),
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "place"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
-                )
-              )
+              "* Gravitational pull from Jupiter prevented the asteroid field from forming into a planet. It has far too little mass to have ever been a planet.\n* This belt is now estimated to contain between 1.1 and 1.9 million asteroids larger than 1 km (0.6 mi) in diameter and millions of smaller ones."
+            ),
+            "Asteroid C Type",
+            vx_core.f_new(
+              nx_tactics_base.t_place,
+              ":name",
+              "Asteroid C Type",
+              ":summary",
+              "* Chondrite Asteroids - most common, clay and silicate rocks"
+            ),
+            "Asteroid M Type",
+            vx_core.f_new(
+              nx_tactics_base.t_place,
+              ":name",
+              "Asteroid M Type",
+              ":summary",
+              "* Metallic Asteroids"
+            ),
+            "Asteroid S Type",
+            vx_core.f_new(
+              nx_tactics_base.t_place,
+              ":name",
+              "Asteroid S Type",
+              ":summary",
+              "* Stony Asteroids"
             ),
             ":Ceres",
             vx_core.f_new(
@@ -647,59 +365,11 @@ export default class nx_tactics_books_space_and_time {
               ":image",
               "SpaceAndTime/Ceres.png",
               ":summary",
-              "* Ceres - With a diameter of about 950km, Ceres is by far the largest and most massive body in the asteroid\nbelt, and contains approximately a third of the belt's total mass.  The surface of Ceres is probably made of a\nmixture of water ice and various hydrated minerals like carbonates and clays.  It may harbour an ocean of\nliquid water, which makes it a target of current searches for extraterrestrial life.  Ceres may be surrounded\nby a tenuous atmosphere containing water vapour.\n* Optimal Travel Time from Earth: .01g=32 days, .1g=12 days, 1g=4 days",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
-                vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":prop",
-                      "mass",
-                      ":value",
-                      "9x10^17tons"
-                    ),
-                    ":severity",
-                    2
-                  )
-                ),
-                ":msgblocks",
-                vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidproperty",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":prop",
-                          "length",
-                          ":value",
-                          "950km"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
-                )
-              )
+              "* Ceres - With a diameter of about 950km, Ceres is by far the largest and most massive body in the asteroid belt, and contains approximately a third of the belt's total mass. The surface of Ceres is probably made of a mixture of water ice and various hydrated minerals like carbonates and clays. It may harbour an ocean of liquid water, which makes it a target of current searches for extraterrestrial life. Ceres may be surrounded by a tenuous atmosphere containing water vapour.\n* Optimal Travel Time from Earth: .01g=32 days, .1g=12 days, 1g=4 days",
+              ":mass",
+              "9x10^17tons",
+              ":length",
+              "950km"
             ),
             ":Jupiter",
             vx_core.f_new(
@@ -712,78 +382,18 @@ export default class nx_tactics_books_space_and_time {
               "* The movie Outland takes place on Io, one of Jupiter's moons.",
               ":summary",
               "* Optimal Travel Time from Earth: .01g=1.75 months, .1g=18 days, 1g=6 days",
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
+              ":mass",
+              "2x10^24tons",
+              ":length",
+              "143Mm",
+              ":placemap",
+              nx_tactics_base.f_placemap_from_placelist(
                 vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidproperty",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_place,
-                      ":prop",
-                      "mass",
-                      ":value",
-                      "2x10^24tons"
-                    ),
-                    ":severity",
-                    2
-                  )
-                ),
-                ":msgblocks",
-                vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidproperty",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":prop",
-                          "length",
-                          ":value",
-                          "143Mm"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  ),
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_place,
-                          ":tag",
-                          "place"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
+                  nx_tactics_base.t_place,
+                  ":name",
+                  "Jupiter Trojan Asteroid Belt",
+                  ":summary",
+                  "* There are 2 Asteroid fields at the Lagrange points at both sides of Jupiter. They may be as many asteroids here as in the asteroid belt."
                 )
               )
             )
@@ -831,7 +441,7 @@ export default class nx_tactics_books_space_and_time {
               ":image",
               "Units/SpaceAndTime/SolarFlare.jpg",
               ":reference",
-              "This photograph shows one of the most spectacular solar flares ever recorded; the base of the flare is more than\n591Mm across."
+              "This photograph shows one of the most spectacular solar flares ever recorded; the base of the flare is more than 591Mm across."
             )
           ),
           ":unitmap",
@@ -931,7 +541,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Ionized Atmosphere World",
               ":summary",
-              "* Atmosphere is heavily ionized which produces powerful lightning storms and\nregularly disrupts electrical systems and communications."
+              "* Atmosphere is heavily ionized which produces powerful lightning storms and regularly disrupts electrical systems and communications."
             ),
             "Irradiated World",
             vx_core.f_new(
@@ -1025,7 +635,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Seasonally Extreme World",
               ":summary",
-              "* A planet with a very oblong orbit and high axial shift will produce severe\nchanges in seasons shifting from artic to tropic environments during the year.\nSuch a punishing environment is difficult for complex life to develop. Simple\nlife forms will tend toward short life spans or hibernation during winter\nmonths with a massive spring bloom and fall die off."
+              "* A planet with a very oblong orbit and high axial shift will produce severe changes in seasons shifting from artic to tropic environments during the year. Such a punishing environment is difficult for complex life to develop. Simple life forms will tend toward short life spans or hibernation during winter months with a massive spring bloom and fall die off."
             ),
             "Seasonless World",
             vx_core.f_new(
@@ -1033,7 +643,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Seasonless World",
               ":summary",
-              "* A planet with a nearly circular orbit and minor axial shift will produce\nbands of terrain where the seasons don't change throughout the year. Polar\nareas are uniformly cold and equatorial areas are uniformly hot. Such a\npredictable environment is ideal for life to develop."
+              "* A planet with a nearly circular orbit and minor axial shift will produce bands of terrain where the seasons don't change throughout the year. Polar areas are uniformly cold and equatorial areas are uniformly hot. Such a predictable environment is ideal for life to develop."
             ),
             "Seismic World",
             vx_core.f_new(
@@ -1059,7 +669,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Swamp World",
               ":summary",
-              "* The combination of mild greenhouse effect and high amounts of surface water\ncreates a world where most land masses are densely covered with vegetation.\nVery little dry land exists and the vegetation mostly has its roots underwater.\nSome particularly dense vegetation can be walked on. Quicksand, parasites,\ninsects, water predators, and other threats are common."
+              "* The combination of mild greenhouse effect and high amounts of surface water creates a world where most land masses are densely covered with vegetation. Very little dry land exists and the vegetation mostly has its roots underwater. Some particularly dense vegetation can be walked on. Quicksand, parasites, insects, water predators, and other threats are common."
             ),
             "Toxic World",
             vx_core.f_new(
@@ -1119,7 +729,7 @@ export default class nx_tactics_books_space_and_time {
           ":name",
           "Why Tactics: Space and Time?",
           ":summary",
-          "* Space is deadly to any normal lifeforms.\n* Militarily space represents the ultimate high ground.  Anyone in orbit can see everything below and can reach any\nplace on a planet in minutes."
+          "* Space is deadly to any normal lifeforms.\n* Militarily space represents the ultimate high ground.  Anyone in orbit can see everything below and can reach any place on a planet in minutes."
         )
       )
     )
@@ -1161,7 +771,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Planetary Gravity",
               ":summary",
-              "* Microgravity - 0G to .2G - Microgravity only exists in space and on moons. Low gravity favors the development of tall, slight frames who will have much difficulty in 1G environments. Worlds with such low gravities do not maintain an atmosphere.\n* Very Low Gravity - .2G to .5G - Very Low gravity exists on small planets and\nlarge moons. Low gravity favors the development of tall, slight frames who will\nhave difficulty in 1G environments. Worlds with such low gravities do not maintain\nan atmosphere.\n* Low Gravity - .5G to .8G - Low exists on smaller planets. Low gravity favors\nthe development of tall frames. Worlds with low gravities will have thin\natmospheres and consequently be exposed to higher levels of radiation.\n* Terran Gravity - .8G to 1.2G\n* High Gravity - 1.2G to 1.5G - High gravity exists on larger planets. High gravity\nfavors short, heavy frames.\n* Very High Gravity - 1.5G to 2.5G - Very high gravity exists on larger planets.\nVery high gravity favors short, heavy frames.\n* Intense Gravity - 1.8G to 2.5G - Intense gravity exists on gas giant planets\nlike Jupiter. Few creatures can survive such extreme gravity where the atmosphere\nis extremely dense.\n* Extreme Gravity - 2.5G+ - Extreme gravity exists on stars like the Sun (28G) with\nthe extreme end being a Neutron star (300,000,000,000G) or a black hole."
+              "* Microgravity - 0G to .2G - Microgravity only exists in space and on moons. Low gravity favors the development of tall, slight frames who will have much difficulty in 1G environments. Worlds with such low gravities do not maintain an atmosphere.\n* Very Low Gravity - .2G to .5G - Very Low gravity exists on small planets and large moons. Low gravity favors the development of tall, slight frames who will have difficulty in 1G environments. Worlds with such low gravities do not maintain an atmosphere.\n* Low Gravity - .5G to .8G - Low exists on smaller planets. Low gravity favors the development of tall frames. Worlds with low gravities will have thin atmospheres and consequently be exposed to higher levels of radiation.\n* Terran Gravity - .8G to 1.2G\n* High Gravity - 1.2G to 1.5G - High gravity exists on larger planets. High gravity favors short, heavy frames.\n* Very High Gravity - 1.5G to 2.5G - Very high gravity exists on larger planets. Very high gravity favors short, heavy frames.\n* Intense Gravity - 1.8G to 2.5G - Intense gravity exists on gas giant planets like Jupiter. Few creatures can survive such extreme gravity where the atmosphere is extremely dense.\n* Extreme Gravity - 2.5G+ - Extreme gravity exists on stars like the Sun (28G) with the extreme end being a Neutron star (300,000,000,000G) or a black hole."
             ),
             "Planetary Atmosphere",
             vx_core.f_new(
@@ -1233,9 +843,9 @@ export default class nx_tactics_books_space_and_time {
       ":name",
       "Time Travel",
       ":reference",
-      "* Philosophy - Though we are now able to travel through time, there remains much speculation\nover how time travel actually works. The general concensus is that the term 'Time Stream' may\nbe an accurate description. Time acts like a river of water, and we are travelers on that\nriver. But our boats are unpowered, so we drift with the current until we hit the shore. Now,\nwith the power of the Time Rotor, we may move against the current of time to any time or\nplace we choose.",
+      "* Philosophy - Though we are now able to travel through time, there remains much speculation over how time travel actually works. The general concensus is that the term 'Time Stream' may be an accurate description. Time acts like a river of water, and we are travelers on that river. But our boats are unpowered, so we drift with the current until we hit the shore. Now, with the power of the Time Rotor, we may move against the current of time to any time or place we choose.",
       ":summary",
-      "* The Vortex - The Vortex is a temporal zero-point where time does not exist. The Vortex appears\nas a tunnel headed away from the viewer regardless of which direction the viewer looks. Entering\nthe Vortex is feels like dying (and probably is a death). Exiting the Vortex is like being born\n(or reborn).\n* Beings and objects may travel through the the [Vortex] emerging at another point in Time. Every\npoint in time is equi-distant from the [Vortex].",
+      "* The Vortex - The Vortex is a temporal zero-point where time does not exist. The Vortex appears as a tunnel headed away from the viewer regardless of which direction the viewer looks. Entering the Vortex is feels like dying (and probably is a death). Exiting the Vortex is like being born (or reborn).\n* Beings and objects may travel through the the [Vortex] emerging at another point in Time. Every point in time is equi-distant from the [Vortex].",
       ":sectionmap",
       vx_core.f_new(
         nx_tactics_base.t_sectionmap,
@@ -1253,7 +863,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Laws of Time",
               ":summary",
-              "Time Travellers\n* Emphemeral - Those who have never traveled in time are called Ephemerals. All the events of\ntheir lives may be altered repeatedly by one or more time travelers, and they will not sense\nanything is amiss or remember anything about the previous time stream.\n* Temporal - Once a being travels through time, it is permanently separated from the normal\ntime stream and is called a Temporal. The events of a Temporal's life may also be changed by\nother time travelers, but a Temporal will remember some or all of the previous time stream."
+              "Time Travellers\n* Emphemeral - Those who have never traveled in time are called Ephemerals. All the events of their lives may be altered repeatedly by one or more time travelers, and they will not sense anything is amiss or remember anything about the previous time stream.\n* Temporal - Once a being travels through time, it is permanently separated from the normal time stream and is called a Temporal. The events of a Temporal's life may also be changed by other time travelers, but a Temporal will remember some or all of the previous time stream."
             ),
             "History Can Be Changed",
             vx_core.f_new(
@@ -1269,7 +879,7 @@ export default class nx_tactics_books_space_and_time {
               ":reference",
               "Final Destination",
               ":summary",
-              "* A Temporal has one limitation that Emphemerals do not: the moment of death of a Temporal\ncannot be undone. Since only living beings may travel through time, when a Temporal dies, he\nor she can no longer move forward in time. Even if time is rewritten to prevent the\nTemporal's death, the time traveler will still die at the exact age of his original death\nregardless of the circumstances. The cause of death may vary, but death will always occur at\nthe exact age that the original death happened."
+              "* A Temporal has one limitation that Emphemerals do not: the moment of death of a Temporal cannot be undone. Since only living beings may travel through time, when a Temporal dies, he or she can no longer move forward in time. Even if time is rewritten to prevent the Temporal's death, the time traveler will still die at the exact age of his original death regardless of the circumstances. The cause of death may vary, but death will always occur at the exact age that the original death happened."
             ),
             "Law of Preservation",
             vx_core.f_new(
@@ -1277,7 +887,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Law of Preservation",
               ":summary",
-              "* Jumping through time necessarily causes a number of paradoxes, but Time seems to have a\nself-healing mechanism that limits the scope of changes to the Timeline, provided the changes\nare small enough. One of these effects is when a person makes a time jump, that jump cannot\ncause a series of events that ultimately prevents itself. For example: say a person jumped\nback in time because of a temporal disturbance. He then prevented the disturbance from ever\nhappening. Logically, this is a paradox. If the disturbance never happened, then he would\nnever go back to prevent the disturbance, so the disturbance would happen, so he would go\nback to prevent the disturbance, etc. Instead the last jump that prevents the disturbance\noccurs, the disturbance never occurs, and all memory of what happened during the paradox is\nlost. This time period has become complex but is stable. Of course, a further time jump\nmight erase the actions of the previous jump, since the last jump will always stand despite\nany paradoxes created."
+              "* Jumping through time necessarily causes a number of paradoxes, but Time seems to have a self-healing mechanism that limits the scope of changes to the Timeline, provided the changes are small enough. One of these effects is when a person makes a time jump, that jump cannot cause a series of events that ultimately prevents itself. For example: say a person jumped back in time because of a temporal disturbance. He then prevented the disturbance from ever happening. Logically, this is a paradox. If the disturbance never happened, then he would never go back to prevent the disturbance, so the disturbance would happen, so he would go back to prevent the disturbance, etc. Instead the last jump that prevents the disturbance occurs, the disturbance never occurs, and all memory of what happened during the paradox is lost. This time period has become complex but is stable. Of course, a further time jump might erase the actions of the previous jump, since the last jump will always stand despite any paradoxes created."
             ),
             "Loop Trap Paradox",
             vx_core.f_new(
@@ -1285,7 +895,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Loop Trap Paradox",
               ":summary",
-              "* Whenever two versions of same person exist at the same point in time, a Loop Trap Paradox is created. The future version of the person immediately vanishes and the past version of the person performs the same actions that the future version did eventually returning to the same moment where both versions exist at the same time and the cycle continues eternally. The person is doomed to repeat the same actions over and over again unless another time traveler intervenes.\n* To avoid Loop Traps, it is vitally important that a time traveler keeps accurate track of\nevery period of time to which he or she has traveled."
+              "* Whenever two versions of same person exist at the same point in time, a Loop Trap Paradox is created. The future version of the person immediately vanishes and the past version of the person performs the same actions that the future version did eventually returning to the same moment where both versions exist at the same time and the cycle continues eternally. The person is doomed to repeat the same actions over and over again unless another time traveler intervenes.\n* To avoid Loop Traps, it is vitally important that a time traveler keeps accurate track of every period of time to which he or she has traveled."
             ),
             "Matter Suppression",
             vx_core.f_new(
@@ -1293,7 +903,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Matter Suppression",
               ":summary",
-              "* Matter cannot normally travel through time, but time technology allows certain narrow\nexceptions. Living matter can travel freely through time, seemingly based only on the will to\nlive. Non-living matter, however, decomposes rapidly when moved through time. Non-living\nobjects that travel backwards in time decompose faster the farther back in time they travel.\nNon-living objects that travel forward in time beyond their original time period decompose\nimmediately. For this reason, no one has been able to travel to a future beyond their time\nmachines 'present' because their time machines vanish stranding them in the Vortex."
+              "* Matter cannot normally travel through time, but time technology allows certain narrow exceptions. Living matter can travel freely through time, seemingly based only on the will to live. Non-living matter, however, decomposes rapidly when moved through time. Non-living objects that travel backwards in time decompose faster the farther back in time they travel. Non-living objects that travel forward in time beyond their original time period decompose immediately. For this reason, no one has been able to travel to a future beyond their time machines 'present' because their time machines vanish stranding them in the Vortex."
             ),
             "Messages in Time",
             vx_core.f_new(
@@ -1301,7 +911,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Messages in Time",
               ":summary",
-              "* With the benefit of hindsight, there are many times when it would be convenient to send a\nmessage to a past version of yourself to change a course of action. Of course, this would be\na paradox: if you don't take the same action in the past, you would never send the message to\nchange the action. If you did attempt to leave a message to a past self, the rule of Matter\nSuppression would cause the message to disappear to prevent the paradox. However, by placing\na message in the Time Rotor, the message can resist Matter Suppression for up to 1 day. If\nthe message is successfully delivered, the future self will typically vanish immediately\nsince that future will have been erased in favor of a new future created by the message.\n* Self Preventing Mission - Using a Message in Time, it is possible to prevent every reason\nwhy the initial Time Travel was made. In this case, the mission never occurs, though memories\nof the trip may remain."
+              "* With the benefit of hindsight, there are many times when it would be convenient to send a message to a past version of yourself to change a course of action. Of course, this would be a paradox: if you don't take the same action in the past, you would never send the message to change the action. If you did attempt to leave a message to a past self, the rule of Matter Suppression would cause the message to disappear to prevent the paradox. However, by placing a message in the Time Rotor, the message can resist Matter Suppression for up to 1 day. If the message is successfully delivered, the future self will typically vanish immediately since that future will have been erased in favor of a new future created by the message.\n* Self Preventing Mission - Using a Message in Time, it is possible to prevent every reason why the initial Time Travel was made. In this case, the mission never occurs, though memories of the trip may remain."
             ),
             "Temporal Disaster Wave",
             vx_core.f_new(
@@ -1309,7 +919,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Temporal Disaster Wave",
               ":summary",
-              "* Sometimes massive changes to history will cause such an enormous [Temporal Distortion Wave]\nthat it travels all the way through history to the present. These are called Temporal\nDisaster Waves. A Disaster Wave will have wide-sweeping ramifications and are far too\ndangerous and random to allow."
+              "* Sometimes massive changes to history will cause such an enormous [Temporal Distortion Wave] that it travels all the way through history to the present. These are called Temporal Disaster Waves. A Disaster Wave will have wide-sweeping ramifications and are far too dangerous and random to allow."
             ),
             "Temporal Distortion",
             vx_core.f_new(
@@ -1325,7 +935,7 @@ export default class nx_tactics_books_space_and_time {
               ":reference",
               "History Tends to Repeat Itself",
               ":summary",
-              "* Major temporal alterations can be made without significantly altering history. Major\nchanges will, however, create a Temporal Distortion Wave. This wave in time will slowly\nflow around the changed events, making minor alterations in names and events as it goes.\nEventually, the wave subsides when history goes back on course with only minor changes to the\nhistory books. For Example: killing Hitler as a baby will have little effect on history,\nbecause the time stream will find someone else to fill his role, and the history books will\njust have different names.\n* Severity - A Distortion Wave is rated based on the number of years it will travel before\nthe time stream returns to its normal course. History during this period is altered, but time\nfutureward of the wave is relatively normal.\n* Detection - A person that experiences a wave washing through his/her time stream will\nexperience radical changes to events. Of course, only time travelers will notice these\nchanges as unusual. Those that can analyze the time stream can see the wave traveling through\ntime. If a person is futureward of the wave, he/she will not detect any changes until the\nwave approaches.\n* Stopping the Wave - A Wave can still be stopped by jumping forward in time past the wave\nand choosing major events that took place in the normal time stream and forcing them to\nhappen again despite the changes the oncoming Wave would create. This action will act as a\ndam, preventing the Wave from doing further damage to the future. The time stream is now\nsafe, but the work is not complete because a Standing Wave has been created.\n* Standing Wave- A Distortion Wave that has been stopped futureward will be reflected back\nto the past changing history back again until it reaches its origin and reflected futureward\nagain repeatining the process, changing time back and forth infinitely in what is called a\nStanding Wave. A Standing Wave remains very dangerous and can only be ended by preventing the\noriginal source of the wave which will return the time stream to normal."
+              "* Major temporal alterations can be made without significantly altering history. Major changes will, however, create a Temporal Distortion Wave. This wave in time will slowly flow around the changed events, making minor alterations in names and events as it goes. Eventually, the wave subsides when history goes back on course with only minor changes to the history books. For Example: killing Hitler as a baby will have little effect on history, because the time stream will find someone else to fill his role, and the history books will just have different names.\n* Severity - A Distortion Wave is rated based on the number of years it will travel before the time stream returns to its normal course. History during this period is altered, but time futureward of the wave is relatively normal.\n* Detection - A person that experiences a wave washing through his/her time stream will experience radical changes to events. Of course, only time travelers will notice these changes as unusual. Those that can analyze the time stream can see the wave traveling through time. If a person is futureward of the wave, he/she will not detect any changes until the wave approaches.\n* Stopping the Wave - A Wave can still be stopped by jumping forward in time past the wave and choosing major events that took place in the normal time stream and forcing them to happen again despite the changes the oncoming Wave would create. This action will act as a dam, preventing the Wave from doing further damage to the future. The time stream is now safe, but the work is not complete because a Standing Wave has been created.\n* Standing Wave- A Distortion Wave that has been stopped futureward will be reflected back to the past changing history back again until it reaches its origin and reflected futureward again repeatining the process, changing time back and forth infinitely in what is called a Standing Wave. A Standing Wave remains very dangerous and can only be ended by preventing the original source of the wave which will return the time stream to normal."
             ),
             "Temporal Memory",
             vx_core.f_new(
@@ -1333,7 +943,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Temporal Memory",
               ":summary",
-              "* When a Temporal has his time stream rewritten by another Time Traveler, it is possible\nto retain dream-like memories of the time line that no longer exists."
+              "* When a Temporal has his time stream rewritten by another Time Traveler, it is possible to retain dream-like memories of the time line that no longer exists."
             ),
             "Traveling Futureward",
             vx_core.f_new(
@@ -1341,7 +951,7 @@ export default class nx_tactics_books_space_and_time {
               ":name",
               "Traveling Futureward",
               ":summary",
-              "* Traveling to Ones Own Future - Time machines cannot travel farther forward in time beyond\ntheir 'present'. Any attempt to do so results in the immediate disintegration of the time\nmachine and passengers are stranded in the Vortex.\n* Futureward Time Hops - The simplest way of performing multiple time hops is to travel back\nto a time period and then make a number of futureward hops from there. In this way one can\nsee the development of a subject over time such as the construction of a building. It also\nallow one to view the consequences of any changes made to history.\n* Futureward Time Hops Complications - Making forward hops essentially avoids paradoxes, but\nother problems can occur. People may recognize you which can be a problem if your appearance\nhasn't changed. They may ask questions about the intervening time and why they never kept in\ntouch. If you keep arriving in the same spot at different times, you may set yourself up for\nan ambush. Be cautious and change your physical destination as well as your temporal on each\njump."
+              "* Traveling to Ones Own Future - Time machines cannot travel farther forward in time beyond their 'present'. Any attempt to do so results in the immediate disintegration of the time machine and passengers are stranded in the Vortex.\n* Futureward Time Hops - The simplest way of performing multiple time hops is to travel back to a time period and then make a number of futureward hops from there. In this way one can see the development of a subject over time such as the construction of a building. It also allow one to view the consequences of any changes made to history.\n* Futureward Time Hops Complications - Making forward hops essentially avoids paradoxes, but other problems can occur. People may recognize you which can be a problem if your appearance hasn't changed. They may ask questions about the intervening time and why they never kept in touch. If you keep arriving in the same spot at different times, you may set yourself up for an ambush. Be cautious and change your physical destination as well as your temporal on each jump."
             ),
             "Traveling Pastward",
             vx_core.f_new(

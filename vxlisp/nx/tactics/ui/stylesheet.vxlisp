@@ -186,9 +186,9 @@
 
 (const style-div : ui/style
  (ui/style
-  :name          "div"
-  :styletype     styletype-system
-  :layout        ui/layout-flow-columns)
+  :name      "div"
+  :styletype styletype-system
+  :layout    ui/layout-flow-columns)
  :doc "Returns the style for app ui.")
 
 (const style-app : ui/style
@@ -219,7 +219,8 @@
               :x 6
               :y 12)
   :pointsize (ui/point
-              :y 6))
+              :y 6)
+  :scroll-y  true)
  :doc "")
 
 (const style-app-menubar : ui/style
@@ -322,20 +323,22 @@
   :type             ui/styletype-shared
   :color-background "A9C8FF"
   :layout           ui/layout-button
+  :pointpos         (ui/point
+                     :x 57)
   :pointsize        point-iconsize)
  :doc "")
 
-(const style-button-back : ui/style
+(const style-app-titlebar-title : ui/style
  (ui/style
-  :name             "style-button-back"
-  :type             ui/styletype-shared
-  :image-background (ui/image
-                     :name "image-button-back"
-                     :label "Back"
-                     :file
-                      (file/file
-                       :name "icon-backarrow.svg"
-                       :path "icons")))
+  :name       "style-app-titlebar-title"
+  :type       ui/styletype-shared
+  :layout     ui/layout-label
+  :font       font-header1
+  :color-font "FFFFFF"
+  :pointpos   (ui/point
+               :x 1)
+  :pointsize  (ui/point
+               :x 50))
  :doc "")
 
 (const style-card : ui/style
@@ -344,7 +347,8 @@
   :type             ui/styletype-shared
   :color-background "FFFFFF"
   :layout           ui/layout-flow-item
-  :pointsize        point-cardsize)
+  :pointsize        point-cardsize
+  :scroll-y         true)
  :doc "")
 
 (const style-card-display : ui/style
@@ -452,27 +456,26 @@
 
 (const style-clickable : ui/style
  (ui/style
-  :name             "style-clickable"
-  :type             ui/styletype-shared
-  :styletype        styletype-shared
-  :cursor           ui/cursor-pointer
+  :name "style-clickable"
+  :type ui/styletype-shared
+  :styletype styletype-shared
+  :cursor ui/cursor-pointer
   :color-hoverbkgrd "E0E0E0")
  :doc "Returns the style for clickable class.")
 
 (const style-deck : ui/style
  (ui/style
-  :name             "style-deck"
-  :type             ui/styletype-shared
+  :name "style-deck"
+  :type ui/styletype-shared
   :color-background "C0C0C0"
-  :layout ui/layout-flow-columns
-)
+  :layout ui/layout-flow-columns)
  :doc "Returns the style for deck.")
 
 (const style-hidden : ui/style
  (ui/style
-  :name    "style-hidden"
-  :type    ui/styletype-shared
-  :hidden  true)
+  :name   "style-hidden"
+  :type   ui/styletype-shared
+  :hidden true)
  :doc "")
 
 (const style-image-background : ui/style
@@ -672,9 +675,9 @@
 
 (const style-selected : ui/style
  (ui/style
-  :name             "style-selected"
-  :type             ui/styletype-shared
-  :color-background "E2CCCC")
+  :name         "style-selected"
+  :type         ui/styletype-shared
+  :color-border "E2CCCC")
  :doc "")
 
 (const style-text : ui/style
@@ -958,7 +961,7 @@
      style-app-statusdrawer
      style-app-titlebar
      style-app-titlebar-print
-     style-button-back
+     style-app-titlebar-title
      style-card
      style-deck
      style-image-background

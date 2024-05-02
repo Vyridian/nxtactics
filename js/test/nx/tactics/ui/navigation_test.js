@@ -3,7 +3,6 @@
 import nx_tactics_ui_navigation from "../../../../src/nx/tactics/ui/navigation.js"
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
-import nx_tactics_base from "../../../../src/nx/tactics/base.js"
 import nx_tactics_ui_stylesheet from "../../../../src/nx/tactics/ui/stylesheet.js"
 import vx_ui_ui from "../../../../src/vx/ui/ui.js"
 
@@ -52,13 +51,13 @@ export default class nx_tactics_ui_navigation_test {
         vx_core.f_new(
           vx_core.t_intmap,
           "boolean-navigate-back", 0,
-          "int-selected<-main", 0,
+          "ui-app", 0,
           "ui-main", 0,
           "ui-navbar", 0,
           "ui-navbutton", 0,
           "ui-navbutton<-ui-parent-selected", 0,
-          "ui-writeselected<-main-pos", 0,
-          "ui-writeselected<-navbar-pos", 0
+          "ui-render<-main-selected", 0,
+          "ui-render<-navbar-selected", 0
         )
     )
   }

@@ -1,29 +1,34 @@
 (package nx/tactics/ui/navigation
- :libs (lib base   :path nx/tactics/base)
-       (lib styles :path nx/tactics/ui/stylesheet)
+ :libs (lib styles :path nx/tactics/ui/stylesheet)
        (lib ui     :path vx/ui/ui)
  :doc "Tactics UI")
 
 (func boolean-navigate-back : boolean
  (let : boolean
   [navbar : ui/ui := (nav/ui-navbar)
-   main   : ui/ui := (nav/ui-main)
-   posselected : int :=
-    (nav/int-selected<-main
-     main)
+   main : ui/ui := (nav/ui-main)
+   selected : int :=
+    (ui/int-selected<-ui
+     navbar)
+   ischange : boolean :=
+    (> selected 2)
    poschg : int :=
-    (if : int :debug
-     (> posselected 1)
-     (-1 posselected))
+    (if : int
+     ischange
+     (- selected 2))
    navbarchg : ui/ui :=
-    (nav/ui-writeselected<-navbar-pos
-     navbar poschg)
+    (if : ui/ui
+     (then
+      ischange
+      (ui-render<-navbar-selected
+       navbar poschg)))
    mainchg : ui/ui :=
-    (nav/ui-writeselected<-main-pos
-     main poschg)]
-  (if : boolean
-   (> poschg 0)
-   true))
+    (if : ui/ui
+     (then
+      ischange
+      (ui-render<-main-selected
+       main poschg)))]
+  ischange)
  :context
  :sideeffects "Alters uinavbar and uimain"
  :doc "Navigate to the previous ui")
@@ -33,6 +38,12 @@
   "main")
  :context
  :doc "Returns the application main panel")
+
+(func ui-app : ui/ui
+ (ui/ui-readstate<-uid
+  "app")
+ :context
+ :doc "Returns the application app")
 
 (func ui-navbar : ui/ui
  (ui/ui-readstate<-uid
@@ -68,27 +79,32 @@
      style-clickable)))
  :doc "Returns a navbar-button")
 
-(func int-selected<-main : int
- [main : ui/ui]
- (ui/int-selected<-ui main)
- :doc "Returns the index of the currently selected main")
-
-(func ui-writeselected<-main-pos : ui/ui
- [main : ui/ui
-  pos  : int]
+(func ui-render<-main-selected : ui/ui
+ [main     : ui/ui
+  selected : int]
  (if : ui/ui
   (then
-   (< pos 1)
-   main))
+   (< selected 1)
+   main)
+  (else
+   (let : ui/ui
+    [parent : ui/ui := (ui-app)]
+    (ui/ui-render<-ui-parent-visible
+     main parent selected))))
  :context
  :doc "")
 
-(func ui-writeselected<-navbar-pos : ui/ui
- [navbar : ui/ui
-  pos    : int]
+(func ui-render<-navbar-selected : ui/ui
+ [navbar   : ui/ui
+  selected : int]
  (if : ui/ui
   (then
-   (< pos 1)
-   navbar))
+   (< selected 1)
+   navbar)
+  (else
+   (let : ui/ui
+    [parent : ui/ui := (ui-app)]
+    (ui/ui-render<-ui-parent-selected
+     navbar parent (+1 selected)))))
  :context
  :doc "")

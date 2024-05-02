@@ -6,7 +6,7 @@
 (func card-action-combat : base/card
  (base/card
   :id "action-combat"
-  :name "Action: Combat"
+  :name "Combat Action"
   :summary
    "* Target a unit with a damaging Skill/Power.
     * Each player chooses a Fate card from their hand or a random Fate from Shared Fate.
@@ -21,28 +21,38 @@
 (func card-action-move : base/card
  (base/card
   :id "action-move"
-  :name "Action: Move"
+  :name "Move Action"
   :summary
-   "* Action: Move up to half (rounded down) of your [Move] stat.
+   "* Action: Move up to your [Move] stat.
     * Facing: During your Move, change your facing up to 2 times the entire Turn.
-    * Full Speed (2 Actions): Move your full [Move] stat.
-    * Sprint (2 Actions): If you moved at Full Speed last turn, Move 1.5x your [Move] stat.
+    * Full Move (2 Actions): Move your [Move]x2.
+    * Sprint (2 Actions): If you moved at Full Speed last turn, you may [Move]x3 this turn.
     * Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns."))
 
 (func card-action-recover : base/card
  (base/card
   :id "action-recover"
-  :name "Action: Recover"
+  :name "Recover Action"
   :summary
    "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]
-    * Double Action: Discard a [Bleeding]"))
+    * Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."))
 
 (func card-action-skill : base/card
  (base/card
   :id "action-skill"
-  :name "Action: Skill"
+  :name "Skill Action"
   :summary
    "* Action: "))
+
+(func card-areaeffect : base/card
+ (base/card
+  :id "areaeffect"
+  :name "Area Effect"
+  :image "images/card-areaeffect.svg"
+  :summary
+   "* Some powers can attack in a large area.
+    * Reduce your Skill or Intensity by 1 to get an Area Effect Card. Each additional reduction doubles the number of cards.
+    * Place a card next to your unit and arrange the rest in any stable shape. Examples below."))
 
 (func card-characterguide : base/card
  (base/card
@@ -52,7 +62,7 @@
 (func card-damageguide : base/card
  (base/card
   :id "damageguide"
-  :name "Damage Guide"
+  :name "Combat Damage"
   :summary
    "* Damage Types: Determine the [Damage Types] of the weapon.
     * Reveal Damage: Reveal cards equal to [Hits].
@@ -84,11 +94,12 @@
   :id "free-action"
   :name "Free Action"
   :summary
-   "* Move Out: Take a [Fatigue] to [Move]:1.
+   "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.
+    * Move Out: Take a [Fatigue] to [Move]:1.
     * Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.
     * Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.
     * Final Sprint: Take a [Slow] to [Move].
-    * Opportunity Fight: If a Target moves through 2 spaces adjacent to a Unit, that Unit may spend a [Stun] to take a free [Action: Fight]."))
+    * Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."))
 
 (func card-gameguide : base/card
  (base/card
@@ -106,9 +117,27 @@
   :name "Leveling Guide"
   :summary
    "* Major Achievement: Completion gains a Skill Point.
-    * Minor Achievement: Completing gains an Ability Point.
-    * Skill Points: May be exchanged for a Level 1 Skill or a new Level 1 Power.
-    * Ability Points: May be exchanged for an Ability, Specialty, or a Power Level increase."))
+    * Minor Achievement: Completion gains an Ability Point.
+    * Skill Points: May be exchanged for a Skill Level one below your level or a new Level 1 Power (if allowed).
+    * Ability Points: May be exchanged for an Ability, Specialty, or a Power Intensity increase."))
+
+(func card-lineofsight : base/card
+ (base/card
+  :id "lineofsight"
+  :name "Line of Sight"
+  :summary
+   "* Most distance effects require line of sight to the target.
+    * Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).
+    * If nothing is between you, then you have full line of sight. Resolve normally.
+    * If something is between you, guess at the amount of Cover provided and resolve with the following penalties:
+    ** 25% Cover: Speed:-1.
+    ** 50% Cover: Speed:-2.
+    ** 75% Cover: Speed:-3.
+    ** 100% Cover: Speed-4.
+    * If successful, assign each 25% to whatever is giving cover (this can include fog, smoke, tables, walls, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
+    ** Insubstantial: Resolve damage normally.
+    ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
+    ** Unit: That unit is the new target. Resolve a new Combat with it instead."))
 
 (func card-mapscale-1 : base/card
  (base/card
@@ -116,8 +145,20 @@
   :name "Map Scale:1"
   :summary
    "* Human Scale
+    * Space Size: 1m
     * Turn Length: 2sec
-    * Note: Humans (max speed 3x1 = 30kph) walk at 6kph or 1.6m/s. This makes a 2sec turn 3 spaces."))
+    * Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).
+    * Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)"))
+
+(func card-mapscale-2 : base/card
+ (base/card
+  :id (string "card-mapscale-2")
+  :name "Map Scale:2"
+  :summary
+   "* Vehicle Scale
+    * Space Size: 3m
+    * Turn Length: 1sec
+    * Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m)."))
 
 (func card-player-blue : base/card
  [num : int]
@@ -147,15 +188,32 @@
   :name "Player"
   :image "images/card-yellow.svg"))
 
+(func card-reach : base/card
+ (base/card
+  :id "card-reach"
+  :name "Reach"
+  :summary
+   "* Can target one additional dot away [Scaled]"))
+
 (func card-scale : base/card
  (base/card
-  :id (string "card-scale")
+  :id "card-scale"
   :name "Scale"
   :summary
    "* Each stat/skill/power has a number after the letter 'x'.
     * This is the scale of that ability.
     * The number represents the number of zeroes. E.g. 5x3 translates to 5000.
     * x1 denotes human scale. E.g. 1x1=10kg, 10iq+50, 10will, 10kph"))
+
+(func card-scaled : base/card
+ (base/card
+  :id "card-scaled"
+  :name "Scaled"
+  :summary
+   "* Scaled refers to the comparison between the Scale of a stat/ability/map to another.
+    * If the scales are the same, no change is required.
+    * If the scales are different, multiple or divide the Level by 10 for each difference in scale.
+    * E.g. On an x1 map a Move:3x2 would move 30 spaces instead of 3."))
 
 (func card-setupguide : base/card
  (base/card
@@ -168,17 +226,46 @@
     * Player [Turn Order] cards are shuffled together to create a [Turn Order] deck.
     * Reveal the top card in the Scenario deck and follow its instructions."))
 
+(func card-skill-blue : base/card
+ [num : int]
+ (base/card
+  :id (string "skill-" num)
+  :name (string "Skill " num)
+  :image "images/card-blue.svg"))
+
+(func card-skill-green : base/card
+ [num : int]
+ (base/card
+  :id (string "skill-" num)
+  :name (string "Skill " num)
+  :image "images/card-green.svg"))
+
+(func card-skill-red : base/card
+ [num : int]
+ (base/card
+  :id (string "skill-" num)
+  :name (string "Skill " num)
+  :image "images/card-red.svg"))
+
+(func card-skill-yellow : base/card
+ [num : int]
+ (base/card
+  :id (string "skill-" num)
+  :name (string "Skill " num)
+  :image "images/card-yellow.svg"))
+
 (func card-turn-order : base/card
  (base/card
   :id "turn-order"
   :name "Turn: Order"
   :summary
    "* Reveal: Flip each card of [Turn Order] deck to form a row. This is the [Player] order this turn.
-    * Activate: In order, each [Player] chooses a Unit to activate.
-    * Action1: Each [Player] chooses an Action to take. If applicable, they also announce target(s).
-    * Resolve1: If a player was the target of an Action, they must wait for the action to resolve. Otherwise, each player performs their [Player: Action] simultaneously. Note: lower order Units cannot be blocked by the movement of higher order Units.
-    * Action2: Same as Action1 above.
-    * Resolve2: Same as Resolve1 above."))
+    * Action1: Each [Player] chooses a Unit to activate along with their first [Action] and target(s).
+    * Change1: In order, each [Player] may change their decision.
+    * Resolve1: If a player was the target of an Action, they must wait for that action to resolve. Otherwise, all players performs their Action simultaneously. Note: lower order Units cannot be blocked by the movement of higher order Units.
+    * Action2: Each [Player] chooses their second [Action] and targets.
+    * Change2: Same as Change1.
+    * Resolve2: Same as Resolve1."))
 
 (func card-turn-order : base/card
  (base/card
@@ -236,9 +323,13 @@
      (card-levelingguide)
      (card-turn-order)
      (card-scale)
+     (card-scaled)
      (card-mapscale-1)
+     (card-mapscale-2)
      (card-fateupper)
-     (card-fatelower))
+     (card-fatelower)
+     (card-areaeffect)
+     (card-reach))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]
@@ -256,6 +347,10 @@
     (card-player-blue 3)
     (card-player-blue 4)
     (card-player-blue 5)
+    (card-skill-blue 1)
+    (card-skill-blue 2)
+    (card-skill-blue 3)
+    (card-skill-blue 4)
     (card-unit-blue 1)
     (card-unit-blue 2)
     (card-unit-blue 3)
@@ -277,6 +372,10 @@
     (card-player-green 3)
     (card-player-green 4)
     (card-player-green 5)
+    (card-skill-green 1)
+    (card-skill-green 2)
+    (card-skill-green 3)
+    (card-skill-green 4)
     (card-unit-green 1)
     (card-unit-green 2)
     (card-unit-green 3)
@@ -298,6 +397,10 @@
     (card-player-red 3)
     (card-player-red 4)
     (card-player-red 5)
+    (card-skill-red 1)
+    (card-skill-red 2)
+    (card-skill-red 3)
+    (card-skill-red 4)
     (card-unit-red 1)
     (card-unit-red 2)
     (card-unit-red 3)
@@ -319,6 +422,10 @@
     (card-player-yellow 3)
     (card-player-yellow 4)
     (card-player-yellow 5)
+    (card-skill-yellow 1)
+    (card-skill-yellow 2)
+    (card-skill-yellow 3)
+    (card-skill-yellow 4)
     (card-unit-yellow 1)
     (card-unit-yellow 2)
     (card-unit-yellow 3)

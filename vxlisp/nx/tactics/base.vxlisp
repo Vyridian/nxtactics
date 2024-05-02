@@ -92,6 +92,7 @@
               move            : string
               shadow          : string
               beast           : string
+              armor           : string
               classification  : string
               crew            : string
               energy          : string
@@ -113,16 +114,27 @@
               value           : string
               width           : string])
 
+(type itemlist : list
+ :allowtypes [item])
+
+(type itemlistlist : list
+ :allowtypes [itemlist])
+
 (type itemmap : map
  :allowtypes [item])
 
 (type place : struct
  :traits     [card]
- :properties [placemap : placemap
-              unitmap     : unitmap])
+ :properties [length   : string
+              mass     : string
+              placemap : placemap
+              unitmap  : unitmap])
 
 (type placelist : list
  :allowtypes [place])
+
+(type placelistlist : list
+ :allowtypes [placelist])
 
 (type placemap : map
  :allowtypes [place])
@@ -145,10 +157,14 @@
  :traits     [card]
  :properties [stat         : string
               abilitymap   : abilitymap
-              specialtymap : specialtymap])
+              specialtymap : specialtymap
+              weaknessmap  : weaknessmap])
 
 (type powerlist : list
  :allowtypes [power])
+
+(type powerlistlist : list
+ :allowtypes [powerlist])
 
 (type powermap : map
  :allowtypes [power])
@@ -401,6 +417,9 @@
 
 (type weakness : struct
  :traits [card])
+
+(type weaknesslist : list
+ :allowtypes [weakness])
 
 (type weaknessmap : map
  :allowtypes [weakness])
@@ -922,6 +941,50 @@
  [chapter : chapter]
  (:name chapter))
 
+(func itemlist<-section : itemlist
+ [section : section]
+ (let : itemlist
+  [secname : string := (:name section)
+   sec : section :=
+    (copy section
+     :name secname)
+   itemmap : itemmap := (:itemmap section)]
+  (itemlist<-itemmap
+   itemmap))
+ :doc "Returns a itemlist from a given section")
+
+(func itemlist<-sectionlist : itemlist
+ [sectionlist : sectionlist]
+ (let : itemlist
+  [itemlistlist : itemlistlist :=
+   (itemlistlist<-sectionlist
+    sectionlist)]
+  (itemlist<-itemlistlist
+   itemlistlist))
+ :doc "Returns a itemlist from a given sectionlist")
+
+(func itemlist<-itemlistlist : itemlist
+ [itemlistlist : itemlistlist]
+ (list-join<-list : itemlist
+  itemlistlist)
+ :doc "Returns a itemlist from a given itemlistlist")
+
+(func itemlist<-itemmap : itemlist
+ [itemmap : itemmap]
+ (list<-map : itemlist
+  itemmap)
+ :doc "Returns a itemlist from a given itemmap")
+
+(func itemlistlist<-sectionlist : itemlistlist
+ [sections : sectionlist]
+ (list<-list : itemlistlist
+  sections
+  (fn : itemlist
+   [section : section]
+   (itemlist<-section
+    section)))
+ :doc "Returns a itemlistlist from a given sectionlist")
+
 (func itemmap<-itemlist : itemmap
  [itemlist : itemlist]
  (map<-list : itemmap
@@ -931,14 +994,102 @@
    (:name item)))
  :doc "Returns a itemmap from a given itemlist")
 
+(func placelist<-section : placelist
+ [section : section]
+ (let : placelist
+  [secname : string := (:name section)
+   sec : section :=
+    (copy section
+     :name secname)
+   placemap : placemap := (:placemap section)]
+  (placelist<-placemap
+   placemap))
+ :doc "Returns a placelist from a given section")
+
+(func placelist<-sectionlist : placelist
+ [sectionlist : sectionlist]
+ (let : placelist
+  [placelistlist : placelistlist :=
+   (placelistlist<-sectionlist
+    sectionlist)]
+  (placelist<-placelistlist
+   placelistlist))
+ :doc "Returns a placelist from a given sectionlist")
+
+(func placelist<-placelistlist : placelist
+ [placelistlist : placelistlist]
+ (list-join<-list : placelist
+  placelistlist)
+ :doc "Returns a placelist from a given placelistlist")
+
+(func placelist<-placemap : placelist
+ [placemap : placemap]
+ (list<-map : placelist
+  placemap)
+ :doc "Returns a placelist from a given placemap")
+
+(func placelistlist<-sectionlist : placelistlist
+ [sections : sectionlist]
+ (list<-list : placelistlist
+  sections
+  (fn : placelist
+   [section : section]
+   (placelist<-section
+    section)))
+ :doc "Returns a placelistlist from a given sectionlist")
+
 (func placemap<-placelist : placemap
- [placelist : placelist]
+ [placelist : placelist :...]
  (map<-list : placemap
   placelist
   (fn : place
    [place : place]
    (:name place)))
  :doc "Returns a placemap from a given placelist")
+
+(func powerlist<-section : powerlist
+ [section : section]
+ (let : powerlist
+  [secname : string := (:name section)
+   sec : section :=
+    (copy section
+     :name secname)
+   powermap : powermap := (:powermap section)]
+  (powerlist<-powermap
+   powermap))
+ :doc "Returns a powerlist from a given section")
+
+(func powerlist<-sectionlist : powerlist
+ [sectionlist : sectionlist]
+ (let : powerlist
+  [powerlistlist : powerlistlist :=
+   (powerlistlist<-sectionlist
+    sectionlist)]
+  (powerlist<-powerlistlist
+   powerlistlist))
+ :doc "Returns a powerlist from a given sectionlist")
+
+(func powerlist<-powerlistlist : powerlist
+ [powerlistlist : powerlistlist]
+ (list-join<-list : powerlist
+  powerlistlist)
+ :doc "Returns a powerlist from a given powerlistlist")
+
+(func powerlist<-powermap : powerlist
+ [powermap : powermap]
+ (list<-map : powerlist
+  powermap)
+ :doc "Returns a powerlist from a given powermap")
+
+(func powerlistlist<-sectionlist : powerlistlist
+ [sections : sectionlist]
+ (list<-list : powerlistlist
+  sections
+  (fn : powerlist
+   [section : section]
+   (powerlist<-section
+    section)))
+ :doc "Returns a powerlistlist from a given sectionlist")
 
 (func powermap<-powerlist : powermap
  [powerlist : powerlist]
@@ -1142,7 +1293,7 @@
    skillmap : skillmap := (:skillmap section)]
   (skilllist<-skillmap
    skillmap))
- :doc "Returns a skilllist from a given skilllistlist")
+ :doc "Returns a skilllist from a given section")
 
 (func skilllist<-sectionlist : skilllist
  [sectionlist : sectionlist]
@@ -1177,7 +1328,7 @@
  :doc "Returns a skilllistlist from a given sectionlist")
 
 (func skillmap<-skilllist : skillmap
- [skilllist : skilllist]
+ [skilllist : skilllist :...]
  (map<-list : skillmap
   skilllist
   (fn : skill
@@ -1203,24 +1354,24 @@
    sectionmap : sectionmap :=
     (sectionmap<-sectionlist
      sectionlist)
-//   itemlist : itemlist :=
-//    (itemlist<-sectionlist
-//     sectionlist)
-//   itemmap : itemmap :=
-//    (itemmap<-itemlist
-//     itemlist)
-//   placelist : placelist :=
-//    (placelist<-sectionlist
-//     sectionlist)
-//   placemap : placemap :=
-//    (placemap<-placelist
-//     placelist)
-//   powerlist : powerlist :=
-//    (powerlist<-sectionlist
-//     sectionlist)
-//   powermap : powermap :=
-//    (powermap<-powerlist
-//     powerlist)
+   itemlist : itemlist :=
+    (itemlist<-sectionlist
+     sectionlist)
+   itemmap : itemmap :=
+    (itemmap<-itemlist
+     itemlist)
+   placelist : placelist :=
+    (placelist<-sectionlist
+     sectionlist)
+   placemap : placemap :=
+    (placemap<-placelist
+     placelist)
+   powerlist : powerlist :=
+    (powerlist<-sectionlist
+     sectionlist)
+   powermap : powermap :=
+    (powermap<-powerlist
+     powerlist)
    skilllist : skilllist :=
     (skilllist<-sectionlist
      sectionlist)
@@ -1236,9 +1387,9 @@
   (tactics
    :bookmap    bookmap
    :chaptermap chaptermap
-//   :itemmap   itemmap
-//   :placemap   placemap
-//   :powermap   powermap
+   :itemmap    itemmap
+   :placemap   placemap
+   :powermap   powermap
 //   :scenariomap   scenariomap
    :sectionmap sectionmap
    :skillmap   skillmap
@@ -1318,7 +1469,7 @@
  :doc "Returns a unitlistlist from a given sectionlist")
 
 (func unitmap<-unitlist : unitmap
- [unitlist : unitlist]
+ [unitlist : unitlist :...]
  (map<-list : unitmap
   unitlist
   (fn : unit
@@ -1349,3 +1500,12 @@
      name : string := (:name skill)]
    name)))
  :doc "Returns a unitskillmap from a unitskilllist")
+
+(func weaknessmap<-weaknesslist : weaknessmap
+ [weaknesslist : weaknesslist :...]
+ (map<-list : weaknessmap
+  weaknesslist
+  (fn : weakness
+   [weakness : weakness]
+   (:name weakness)))
+ :doc "Returns a weaknessmap from a given weaknesslist")

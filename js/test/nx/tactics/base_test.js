@@ -25,12 +25,12 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 22, ":tests", 48, ":total", 218), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 4, ":tests", 2, ":total", 42), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 27, ":tests", 65, ":total", 240), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 3, ":tests", 2, ":total", 59), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 218), 
-      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 86)
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 240), 
+      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 91)
     )
   }
 
@@ -64,16 +64,20 @@ export default class nx_tactics_base_test {
           "fate", 0,
           "goal", 0,
           "item", 0,
+          "itemlist", 0,
+          "itemlistlist", 0,
           "itemmap", 0,
           "mind", 0,
           "modifier", 0,
           "modifiermap", 0,
           "place", 0,
           "placelist", 0,
+          "placelistlist", 0,
           "placemap", 0,
           "playingcard", 0,
           "power", 0,
           "powerlist", 0,
+          "powerlistlist", 0,
           "powermap", 0,
           "rank", 0,
           "ranksuit", 0,
@@ -126,6 +130,7 @@ export default class nx_tactics_base_test {
           "unitweakness", 0,
           "unitweaknessmap", 0,
           "weakness", 0,
+          "weaknesslist", 0,
           "weaknessmap", 0
         ),
       "constmap",
@@ -236,8 +241,24 @@ export default class nx_tactics_base_test {
           "chapterlist<-chapterlistlist", 0,
           "chapterlistlist<-booklist", 0,
           "chaptermap<-chapterlist", 0,
+          "itemlist<-itemlistlist", 0,
+          "itemlist<-itemmap", 0,
+          "itemlist<-section", 0,
+          "itemlist<-sectionlist", 0,
+          "itemlistlist<-sectionlist", 0,
+          "itemmap<-itemlist", 0,
           "name<-chapter", 0,
+          "placelist<-placelistlist", 0,
+          "placelist<-placemap", 0,
+          "placelist<-section", 0,
+          "placelist<-sectionlist", 0,
+          "placelistlist<-sectionlist", 0,
           "placemap<-placelist", 0,
+          "powerlist<-powerlistlist", 0,
+          "powerlist<-powermap", 0,
+          "powerlist<-section", 0,
+          "powerlist<-sectionlist", 0,
+          "powerlistlist<-sectionlist", 0,
           "powermap<-powerlist", 0,
           "sectionlist-all<-chapterlist", 0,
           "sectionlist-all<-section", 0,
@@ -266,7 +287,8 @@ export default class nx_tactics_base_test {
           "unitlistlist<-sectionlist", 0,
           "unitmap<-unitlist", 0,
           "unitpowermap<-unitpowerlist", 0,
-          "unitskillmap<-unitskilllist", 0
+          "unitskillmap<-unitskilllist", 0,
+          "weaknessmap<-weaknesslist", 0
         )
     )
   }

@@ -746,6 +746,7 @@ export default class vx_ui_ui {
 
   /**
    * @function string_selected_from_ui
+   * Return the uid of the ui with selected=true
    * @param  {ui} ui
    * @return {string}
    */
@@ -810,7 +811,7 @@ export default class vx_ui_ui {
 
   /**
    * @function stringlist_from_ui
-   * Return a list of uid of the ui with selected=true
+   * Return a list of uid of the ui
    * @param  {ui} ui
    * @return {stringlist}
    */
@@ -1185,6 +1186,64 @@ export default class vx_ui_ui {
   }
 
   /**
+   * @function ui_render_from_ui_parent_selected
+   * Return a ui after changing selected item and rendering it.
+   * @param  {ui} ui
+   * @param  {ui} parent
+   * @param  {int} selected
+   * @return {ui}
+   */
+  static t_ui_render_from_ui_parent_selected = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_render_from_ui_parent_selected = {
+    vx_type: vx_ui_ui.t_ui_render_from_ui_parent_selected
+  }
+
+  // (func ui-render<-ui-parent-selected)
+  static f_ui_render_from_ui_parent_selected(ui, parent, selected) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uichg = vx_ui_ui.f_ui_from_ui_selected(ui, selected)
+        return vx_ui_ui.f_ui_render_from_ui_orig_parent(uichg, ui, parent)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function ui_render_from_ui_parent_visible
+   * Return a ui after changing visible item and rendering it.
+   * @param  {ui} ui
+   * @param  {ui} parent
+   * @param  {int} visible
+   * @return {ui}
+   */
+  static t_ui_render_from_ui_parent_visible = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_render_from_ui_parent_visible = {
+    vx_type: vx_ui_ui.t_ui_render_from_ui_parent_visible
+  }
+
+  // (func ui-render<-ui-parent-visible)
+  static f_ui_render_from_ui_parent_visible(ui, parent, visible) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_ui},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uichg = vx_ui_ui.f_ui_from_ui_visible(ui, visible)
+        return vx_ui_ui.f_ui_render_from_ui_orig_parent(uichg, ui, parent)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function ui_selected_from_ui
    * Returns the ui of the first ui with selected=true
    * @param  {ui} ui
@@ -1306,6 +1365,130 @@ export default class vx_ui_ui {
   }
 
   /**
+   * @function ui_from_ui_selected
+   * Return a ui after changing selected only one child.
+   * @param  {ui} ui
+   * @param  {int} selected
+   * @return {ui}
+   */
+  static t_ui_from_ui_selected = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_from_ui_selected = {
+    vx_type: vx_ui_ui.t_ui_from_ui_selected
+  }
+
+  // (func ui<-ui-selected)
+  static f_ui_from_ui_selected(ui, selected) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_if_2(
+      {"any-1": vx_ui_ui.t_ui},
+      vx_core.f_then(
+        vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_lt(selected, 1)}),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return ui})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
+          {"any-1": vx_ui_ui.t_ui},
+          [],
+          vx_core.f_new(vx_core.t_any_from_func, () => {
+            const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+            const uilist1 = vx_ui_ui.f_uilist_from_uimap(uimap)
+            const uilist2 = vx_core.f_list_from_list_intany(
+              {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist, "list-2": vx_ui_ui.t_uilist},
+              uilist1,
+              vx_core.f_new(vx_core.t_any_from_int_any, (posval, uival) => 
+                vx_core.f_if_2(
+                  {"any-1": vx_ui_ui.t_ui},
+                  vx_core.f_then(
+                    vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(posval, selected)}),
+                    vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+                      uival,
+                      ":selected",
+                      true
+                    )})
+                  ),
+                  vx_core.f_else(
+                    vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+                      uival,
+                      ":selected",
+                      false
+                    )})
+                  )
+                ))
+            )
+            const childmap = vx_ui_ui.f_uimap_from_uilist(uilist2)
+            return vx_core.f_copy(ui, ":uimap", childmap)
+          })
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function ui_from_ui_visible
+   * Return a ui after changing hidden to all but one child.
+   * @param  {ui} ui
+   * @param  {int} visible
+   * @return {ui}
+   */
+  static t_ui_from_ui_visible = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_from_ui_visible = {
+    vx_type: vx_ui_ui.t_ui_from_ui_visible
+  }
+
+  // (func ui<-ui-visible)
+  static f_ui_from_ui_visible(ui, visible) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_if_2(
+      {"any-1": vx_ui_ui.t_ui},
+      vx_core.f_then(
+        vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_lt(visible, 1)}),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return ui})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
+          {"any-1": vx_ui_ui.t_ui},
+          [],
+          vx_core.f_new(vx_core.t_any_from_func, () => {
+            const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+            const uilist1 = vx_ui_ui.f_uilist_from_uimap(uimap)
+            const uilist2 = vx_core.f_list_from_list_intany(
+              {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist, "list-2": vx_ui_ui.t_uilist},
+              uilist1,
+              vx_core.f_new(vx_core.t_any_from_int_any, (posval, uival) => 
+                vx_core.f_if_2(
+                  {"any-1": vx_ui_ui.t_ui},
+                  vx_core.f_then(
+                    vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(posval, visible)}),
+                    vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+                      uival,
+                      ":hidden",
+                      false
+                    )})
+                  ),
+                  vx_core.f_else(
+                    vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
+                      uival,
+                      ":hidden",
+                      true
+                    )})
+                  )
+                ))
+            )
+            const childmap = vx_ui_ui.f_uimap_from_uilist(uilist2)
+            return vx_core.f_copy(ui, ":uimap", childmap)
+          })
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
    * @function uid_selected_from_ui
    * Returns the uid of the first ui with selected=true
    * @param  {ui} ui
@@ -1406,7 +1589,7 @@ export default class vx_ui_ui {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, uiarg, ":uimap")
         const uilist = vx_ui_ui.f_uilist_from_uimap(uimap)
-        return vx_core.f_list_from_list_1(
+        return vx_collection.f_list_from_list_filter(
           {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist, "list-2": vx_ui_ui.t_uilist},
           uilist,
           vx_core.f_new(vx_core.t_any_from_any, (item) => 
@@ -1505,7 +1688,7 @@ export default class vx_ui_ui {
 
   /**
    * @function uimap_from_uilist
-   * @param  {uilist} uilist
+   * @param  {uilist} ... uilist
    * @return {uimap}
    */
   static t_uimap_from_uilist = {
@@ -1516,8 +1699,9 @@ export default class vx_ui_ui {
   }
 
   // (func uimap<-uilist)
-  static f_uimap_from_uilist(uilist) {
+  static f_uimap_from_uilist(...uilist) {
     let output = vx_ui_ui.e_uimap
+    uilist = vx_core.f_new(vx_ui_ui.t_uilist, ...uilist)
     output = vx_core.f_map_from_list(
       {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "list-2": vx_ui_ui.t_uilist, "map-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui},
       uilist,
@@ -1649,10 +1833,14 @@ export default class vx_ui_ui {
       "ui-render": vx_ui_ui.e_ui_render,
       "ui-render<-fn-render-ui-orig-parent": vx_ui_ui.e_ui_render_from_fn_render_ui_orig_parent,
       "ui-render<-ui-orig-parent": vx_ui_ui.e_ui_render_from_ui_orig_parent,
+      "ui-render<-ui-parent-selected": vx_ui_ui.e_ui_render_from_ui_parent_selected,
+      "ui-render<-ui-parent-visible": vx_ui_ui.e_ui_render_from_ui_parent_visible,
       "ui-selected<-ui": vx_ui_ui.e_ui_selected_from_ui,
       "ui-writechild<-ui-child": vx_ui_ui.e_ui_writechild_from_ui_child,
       "ui-writechildmap<-ui-childmap": vx_ui_ui.e_ui_writechildmap_from_ui_childmap,
       "ui<-layout-ui-orig-parent": vx_ui_ui.e_ui_from_layout_ui_orig_parent,
+      "ui<-ui-selected": vx_ui_ui.e_ui_from_ui_selected,
+      "ui<-ui-visible": vx_ui_ui.e_ui_from_ui_visible,
       "uid-selected<-ui": vx_ui_ui.e_uid_selected_from_ui,
       "uiengine-readstate": vx_ui_ui.e_uiengine_readstate,
       "uiengine-render": vx_ui_ui.e_uiengine_render,
@@ -1691,10 +1879,14 @@ export default class vx_ui_ui {
       "ui-render": vx_ui_ui.t_ui_render,
       "ui-render<-fn-render-ui-orig-parent": vx_ui_ui.t_ui_render_from_fn_render_ui_orig_parent,
       "ui-render<-ui-orig-parent": vx_ui_ui.t_ui_render_from_ui_orig_parent,
+      "ui-render<-ui-parent-selected": vx_ui_ui.t_ui_render_from_ui_parent_selected,
+      "ui-render<-ui-parent-visible": vx_ui_ui.t_ui_render_from_ui_parent_visible,
       "ui-selected<-ui": vx_ui_ui.t_ui_selected_from_ui,
       "ui-writechild<-ui-child": vx_ui_ui.t_ui_writechild_from_ui_child,
       "ui-writechildmap<-ui-childmap": vx_ui_ui.t_ui_writechildmap_from_ui_childmap,
       "ui<-layout-ui-orig-parent": vx_ui_ui.t_ui_from_layout_ui_orig_parent,
+      "ui<-ui-selected": vx_ui_ui.t_ui_from_ui_selected,
+      "ui<-ui-visible": vx_ui_ui.t_ui_from_ui_visible,
       "uid-selected<-ui": vx_ui_ui.t_uid_selected_from_ui,
       "uiengine-readstate": vx_ui_ui.t_uiengine_readstate,
       "uiengine-render": vx_ui_ui.t_uiengine_render,
@@ -2337,6 +2529,16 @@ export default class vx_ui_ui {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "color-border": {
+          "name" : "color-border",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "color-font": {
+          "name" : "color-font",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "color-hoverbkgrd": {
           "name" : "color-hoverbkgrd",
           "type" : vx_core.t_string,
@@ -2391,11 +2593,21 @@ export default class vx_ui_ui {
           "name" : "pointsize",
           "type" : vx_ui_ui.t_point,
           "multi": false
+        },
+        "scroll-x": {
+          "name" : "scroll-x",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "scroll-y": {
+          "name" : "scroll-y",
+          "type" : vx_core.t_boolean,
+          "multi": false
         }
       },
       proplast      : {
-        "name" : "pointsize",
-        "type" : vx_ui_ui.t_point,
+        "name" : "scroll-y",
+        "type" : vx_core.t_boolean,
         "multi": false
       }
     }
@@ -3148,6 +3360,42 @@ export default class vx_ui_ui {
       fn            : vx_ui_ui.f_ui_render_from_ui_orig_parent
     }
 
+    // (func ui-render<-ui-parent-selected)
+    vx_ui_ui.t_ui_render_from_ui_parent_selected['vx_value'] = {
+      name          : "ui-render<-ui-parent-selected",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_render_from_ui_parent_selected
+    }
+
+    // (func ui-render<-ui-parent-visible)
+    vx_ui_ui.t_ui_render_from_ui_parent_visible['vx_value'] = {
+      name          : "ui-render<-ui-parent-visible",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_render_from_ui_parent_visible
+    }
+
     // (func ui-selected<-ui)
     vx_ui_ui.t_ui_selected_from_ui['vx_value'] = {
       name          : "ui-selected<-ui",
@@ -3218,6 +3466,42 @@ export default class vx_ui_ui {
       properties    : [],
       proplast      : {},
       fn            : vx_ui_ui.f_ui_from_layout_ui_orig_parent
+    }
+
+    // (func ui<-ui-selected)
+    vx_ui_ui.t_ui_from_ui_selected['vx_value'] = {
+      name          : "ui<-ui-selected",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_from_ui_selected
+    }
+
+    // (func ui<-ui-visible)
+    vx_ui_ui.t_ui_from_ui_visible['vx_value'] = {
+      name          : "ui<-ui-visible",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_ui_from_ui_visible
     }
 
     // (func uid-selected<-ui)

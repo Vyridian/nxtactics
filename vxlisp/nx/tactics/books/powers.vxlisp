@@ -3519,10 +3519,10 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
           :name "Vampirism"
           :summary
            "* Any unit with Vampirism is by definition a [Vampire].
-* [Deploy]: Start with [Vampire Blood] Tokens equal to Vampirisim.
-* Generations - When a Vampire is created, it automatically gains the Vampire Generation ability one less than the one who created them. A Vampire can only gain a lower Generation by [Diablerie].
-* Vitae - The blood
-* Hunger - Vampires are always hungry, unless they have recently killed."
+            * [Deploy]: Start with [Vampire Blood] Tokens equal to Vampirisim.
+            * Generations - When a Vampire is created, it automatically gains the Vampire Generation ability one less than the one who created them. A Vampire can only gain a lower Generation by [Diablerie].
+            * Vitae - The blood
+            * Hunger - Vampires are always hungry, unless they have recently killed."
           :stat "Beast"
           :abilitymap
            (abilitymap
@@ -3593,23 +3593,23 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
               :name "Blood Sight"
               :summary
                "* See blood through the skin.
-* With close observation, subtle blood characteristics can be detected including blood diseases, poisoning, or Diablerie")
+                * With close observation, subtle blood characteristics can be detected including blood diseases, poisoning, or Diablerie")
             "Consume Flesh"
              (ability
               :name "Consume Flesh"
               :summary
                "* Consume the flesh of a grabbed unit. Gain a [Vampire Blood] token and target gains a [Damage] and a [Spirit Damage].
-* You may not gain more [Vampire Blood] than target has [Spirit], though you gain one more [Vampire Blood] if the target is slain by drinking its blood.
-* You may not have more [Vampire Blood] than [Vampirism].
-* You may not drink from the dead.")
+                * You may not gain more [Vampire Blood] than target has [Spirit], though you gain one more [Vampire Blood] if the target is slain by drinking its blood.
+                * You may not have more [Vampire Blood] than [Vampirism].
+                * You may not drink from the dead.")
             "Drink Blood"
              (ability
               :name "Drink Blood"
               :summary
                "* Drink blood from a grabbed unit. Gain a [Vampire Blood] token and target gains a [Damage] and a [Spirit Damage].
-* You may not gain more [Vampire Blood] than target has [Spirit], though you gain one more [Vampire Blood] if the target is slain by drinking its blood.
-* You may not have more [Vampire Blood] than [Vampirism].
-* You may not drink from the dead."
+                * You may not gain more [Vampire Blood] than target has [Spirit], though you gain one more [Vampire Blood] if the target is slain by drinking its blood.
+                * You may not have more [Vampire Blood] than [Vampirism].
+                * You may not drink from the dead."
               :titles "The Kiss")
             :Embrace
              (ability
@@ -3621,29 +3621,23 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
               :name "Torpor"
               :summary
                "* If slain, but the body is not burned or the head severed, the vampire will not die but instead enter a deep sleep while his body slowly recovers.
-* It is said that very old Vampires may be sleeping for centuries in Torpor."))
-          (msgblock
-           :msgs
-            (msglist
-             (msg
-              :code ":invalidtagfound"
-              :detail
-               (anymap
-                :type nx/tactics/base/power
-                :tag "weakness")
-              :severity 2))
-           :msgblocks
-            (msgblocklist
-             (msgblock
-              :msgs
-               (msglist
-                (msg
-                 :code ":invalidtagfound"
-                 :detail
-                  (anymap
-                   :type nx/tactics/base/power
-                   :tag "weakness")
-                 :severity 2))))))))
+                * It is said that very old Vampires may be sleeping for centuries in Torpor."))
+          :weaknessmap
+           (base/weaknessmap<-weaknesslist
+            (base/weakness
+             :name "Diablerie"
+             :summary
+              "* Diablerie is the act of a vampire drinking the blood of another vampire until it is destroyed. It is the ultimate symbol of the treachery innate in vampire society.
+					          * Diablerie is standard practice among the Sabbat and is strictly forbidden by the Carmarilla on pain of final death. Diablerie is one of the defining differences between the two sects.
+					          * Drinking blood from mortals is an ecstatic experience, the moment of death the climax. Drinking the eternal blood of vampires is that much more gratifying, with the moment of death a feeling like no other. Particularly corrupt vampires will commit diablerie simply for the pleasure.
+					          * This weakness is gained automatically when it is used successfully. Once gained, this ability forever marks the user and is clearly visible to those with can read auras.
+					          * [Requires]: Can only be used after a [Drink Blood] or [Consume Flesh] action on a vampire that drains the last of his blood.
+					          * [Automatic]: The vampire is destroyed and the [Diablerie] ability is gained. If the destroyed vampire has a higher level in [Vampirism], then the acting vampire immediately gains one level in [Vampirism].")
+            (base/weakness
+             :name "Rarified Tastes"
+             :titles "Blood Connoisseur"
+             :summary
+              "* As Vampires age, their taste for blood becomes increasingly refined and they can no longer tolerate 'common' blood. Very old Vampires have exceedingly exotic tastes.")))))
     :Cybernetics
      (section
       :name "Cybernetics"

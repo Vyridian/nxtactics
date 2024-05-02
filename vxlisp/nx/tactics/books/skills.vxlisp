@@ -24,7 +24,8 @@
         "Extraordinary Skills"
          (section
           :name "Extraordinary Skills"
-          :reference "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono , Hell's Paradise"))))))
+          :reference
+           "* What you call tao. It's a power everyone possesses innately, but mastering it allows one to achieve superhuman abilities... But you must be careful how you use it. Tao is life itself. Use too much, and you'll exhaust more than just your stamina... In the worst case, overuse likely leads to death. - Shion-dono , Hell's Paradise"))))))
 
 (func chapter_skill_types : base/chapter
  (chapter
@@ -41,7 +42,7 @@
           :name "Animal Handling"
           :summary
            "* Deploy: Deploy trained animals with total level equal to skill.
-* Each week, one animal may be trained one trick."
+            * Each week, one animal may be trained one trick."
           :titles "Animal Trainer, Breeder, Driver, Herder, Horse Whisperer, Houndmaster, Shepherd, Zoologist"
           :abilitymap
            (abilitymap
@@ -86,8 +87,7 @@
          (skill
           :name "Assassination"
           :reference
-           "Was it so easy?  Was it so simple?  You just pushed and death came?  Nothing spiritual about it...They just stopped
-talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows"
+           "Was it so easy? Was it so simple? You just pushed and death came? Nothing spiritual about it...They just stopped talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows"
           :titles "Assassin, Blackguard, Ninja, Shinobi"
           :stat "Shadow"
           :abilitymap
@@ -114,8 +114,7 @@ talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar S
              (ability
               :name "Poison Tolerance"
               :reference
-               "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an
-immunity to iocane powder. - Princess Bride")
+               "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an immunity to iocane powder. - Princess Bride")
             "Prepare Acid"
              (ability
               :name "Prepare Acid")
@@ -141,31 +140,26 @@ immunity to iocane powder. - Princess Bride")
               :name "Balance"
               :summary
                "* User has extensive experience balancing under difficult circumstances.
-* [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled,
-balance is maintained. Movement is at half speed while balancing, but
-additional [Hits] or [Criticals] improve movement speed by 10% each up to
-full speed.")
+                * [Action]: Roll vs. difficulty to maintain balance. If any [Hits] are rolled, balance is maintained. Movement is at half speed while balancing, but additional [Hits] or [Criticals] improve movement speed by 10% each up to full speed.")
             :Backflip
              (ability
               :name "Backflip"
               :summary
                "+1 Initiative
-+0 Speed (Can only move backward, ignores terrain movement penalties)
-* A showy move that allows the unit to move directly backward without turning.")
+                +0 Speed (Can only move backward, ignores terrain movement penalties)
+                * A showy move that allows the unit to move directly backward without turning.")
             "Body Building"
              (ability
               :name "Body Building"
               :summary
                "* Character is distinctly powerful looking.
-* [Passive]: Unit may reroll any failed attempt to lift, push, or pull an
-object.")
+                * [Passive]: Unit may reroll any failed attempt to lift, push, or pull an object.")
             :Breakfall
              (ability
               :name "Breakfall"
               :summary
-               "* Reduces Critical Hits to Hits from impacts during Knockback,
-Knockdown, or Falling
-* [Reaction]")
+               "* Reduces Critical Hits to Hits from impacts during Knockback, Knockdown, or Falling
+                * [Reaction]")
             :Contortion
              (ability
               :name "Contortion")
@@ -251,8 +245,7 @@ Knockdown, or Falling
              (ability
               :name "Team Acrobatics"
               :summary
-               "* Allows a number of people with this ability to work together to form
-human pyramids, human ladders, etc.")
+               "* Allows a number of people with this ability to work together to form human pyramids, human ladders, etc.")
             :Tightrope
              (ability
               :name "Tightrope")
@@ -271,8 +264,7 @@ human pyramids, human ladders, etc.")
               :name "Vault"
               :summary
                "* Move over a low obstacle with no reduction in speed.
-* [Action]: Move and ignore up to Level in movement penalties this turn from
-fences, barricades, and other low obstacles.")
+                * [Action]: Move and ignore up to Level in movement penalties this turn from fences, barricades, and other low obstacles.")
             "Wall Climbing"
              (ability
               :name "Wall Climbing")
@@ -289,38 +281,28 @@ fences, barricades, and other low obstacles.")
               :name "Acrobatics"
               :summary
                "* Balance
-* Breakfall
-* Contortion
-* Escape Artistry
-* Gymnastics
-* High Jump
-* Kippup
-* Long Jump
-* Tightrope
-* Throw
-* Tumbling
-* Wall Spring
-* Zero G"
-              :titles "Acrobat, Contortionist, Escape Artist, Jester"
-              (msgblock
-               :msgs
-                (msglist
-                 (msg
-                  :code ":invalidtagfound"
-                  :detail
-                   (anymap
-                    :type nx/tactics/base/specialty
-                    :tag "ability")
-                  :severity 2))))
+                * Breakfall
+                * Contortion
+                * Escape Artistry
+                * Gymnastics
+                * High Jump
+                * Kippup
+                * Long Jump
+                * Tightrope
+                * Throw
+                * Tumbling
+                * Wall Spring
+                * Zero G"
+              :titles "Acrobat, Contortionist, Escape Artist, Jester")
             :Climbing
              (specialty
               :name "Climbing"
               :summary
                "* Ice Climbing
-* Rappelling
-* Rock Climbing
-* Tree Climbing
-* Wall Climbing")))
+                * Rappelling
+                * Rock Climbing
+                * Tree Climbing
+                * Wall Climbing")))
         :Hunting
          (skill
           :name "Hunting"
@@ -369,14 +351,13 @@ fences, barricades, and other low obstacles.")
              (specialty
               :name "Bounty Hunter"
               :reference
-               "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and
-liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway"
+               "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway"
               :summary
                "* Bounty Hunting represents experience in stalking and capturing a target in an urban setting. This is traditionally done for money and can be quite profitable.
-* Bounties are placed on people for whom the law lacks the resources or inclination to pursue.
-* Bounties are placed by insurance companies, bail bondsmen, armies, the F.B.I., and individuals.
-* The reward can be paid for information, the capture of the target in a reasonably uninjured state, or even dead or alive.
-* The reward obviously needs to be commensurate with the difficulty or no one will take it. Capturing is harder than killing, so captures gain a bonus.")
+                * Bounties are placed on people for whom the law lacks the resources or inclination to pursue.
+                * Bounties are placed by insurance companies, bail bondsmen, armies, the F.B.I., and individuals.
+                * The reward can be paid for information, the capture of the target in a reasonably uninjured state, or even dead or alive.
+                * The reward obviously needs to be commensurate with the difficulty or no one will take it. Capturing is harder than killing, so captures gain a bonus.")
             "Demon Hunter"
              (specialty
               :name "Demon Hunter")
@@ -394,10 +375,10 @@ liked it, never really care for anything else thereafter. - On the Blue Water, E
               :name "Treasure Hunter"
               :reference
                "* Indiana Jones
-* Lara Croft"
+                * Lara Croft"
               :summary
                "* Treasure Hunting represents experience in the dangerous and profitable world of lost tombs and ancient relics. Rare relics hold high presitge and are usually sold (in the form of a finders fee) to museaums, governments or private collectors. Raiding tombs is a fairly lawless and perilous activity to start with, and such high value items tend to attract disreputable characters of all kinds. As a result, treasure hunters often end their careers in unfortunate accidents.
-* +1 while researching or navigating inside a crypt or tomb."
+                * +1 while researching or navigating inside a crypt or tomb."
               :titles "Tomb Raider, Treasure Seeker")
             "Vampire Hunter"
              (specialty
@@ -437,14 +418,14 @@ liked it, never really care for anything else thereafter. - On the Blue Water, E
               :reference "* Kirk: We tried it once your way, Khan, are you game for a rematch? Khan, I'm laughing at the 'superior intellect.' Khan: Full impulse power! Joachim: No, sir! You have Genesis! You can have whatever... Khan: FULL POWER! DAMN YOU! - Star Trek II: The Wrath of Khan"
               :summary
                "* Dishonor opponent's mother.
-* Roll vs. Mind. If successful, opponent must attack you."
+                * Roll vs. Mind. If successful, opponent must attack you."
               :titles "Goad")
             :Vengeance
              (ability
               :name "Vengeance"
               :reference
                "* More names off the list, more names on it. - Pyke, Runeterra
-* She opened a book and a box of tools. Sunny came home with a mission... Sunny came home with a list of names. She didn't believe in transcendence. 'It's time for a few small repairs.' she said. Sunny came home with a Vengence. - Shawn Colvin, Sunny Came Home")
+                * She opened a book and a box of tools. Sunny came home with a mission... Sunny came home with a list of names. She didn't believe in transcendence. 'It's time for a few small repairs.' she said. Sunny came home with a Vengence. - Shawn Colvin, Sunny Came Home")
             :Warcry
              (ability
               :name "Warcry")))
@@ -453,13 +434,10 @@ liked it, never really care for anything else thereafter. - On the Blue Water, E
           :name "Survival"
           :summary
            "Common Survival Abilities
-* [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or
-Survival roll.
-* [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty
-versus Body + Survival or gain Black [Exhaustion] Tokens."
+            * [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or Survival roll.
+            * [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty versus Body + Survival or gain Black [Exhaustion] Tokens."
           :titles
-           "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Seeker, Sentry, Survivalist, Trailblazer, Traveller,
-Wanderer, Wayfarer"
+           "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Seeker, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer"
           :stat "Defense"
           :abilitymap
            (abilitymap
@@ -483,22 +461,17 @@ Wanderer, Wayfarer"
              (ability
               :name "Foraging"
               :summary
-               "* [Action]: This ability can be used to forage for 1 man day of food and water for each [Hit]. Such food will
-typically be disgusting to those unaccustomed to the local cuisine, but it will sustain.  Excess food only
-lasts for 1 additional day before going bad.  Excess water can be transfered to containers if any, otherwise it
-cannot be carried.  [Critical Hit]s provide a particularly tasty, convenient, or useful source of nutrition
-(e.g. water in bamboo that can be carried, food that will last another day or more).")
+               "* [Action]: This ability can be used to forage for 1 man day of food and water for each [Hit]. Such food will typically be disgusting to those unaccustomed to the local cuisine, but it will sustain. Excess food only lasts for 1 additional day before going bad. Excess water can be transfered to containers if any, otherwise it cannot be carried. [Critical Hit]s provide a particularly tasty, convenient, or useful source of nutrition (e.g. water in bamboo that can be carried, food that will last another day or more).")
             :Forestry
              (ability
               :name "Forestry"
               :reference "Tin Man"
               :summary
-               "* This ability is used to avoid or mitigate the common hazards encountered while delving into
-the forest.  This can also be used to avoid the attention of random predators.
-* [Requires]: Unit must be a [Light Unit]
-* [Move]: Ignore movement penalty for 2 [Forest] spaces
-* [Action]: [+1 Stealth] in [Woods]
-* [Defense]: [+1 Defense] vs Ranged in [Woods]"
+               "* This ability is used to avoid or mitigate the common hazards encountered while delving into the forest.  This can also be used to avoid the attention of random predators.
+                * [Requires]: Unit must be a [Light Unit]
+                * [Move]: Ignore movement penalty for 2 [Forest] spaces
+                * [Action]: [+1 Stealth] in [Woods]
+                * [Defense]: [+1 Defense] vs Ranged in [Woods]"
               :titles "Forest Lord, Logger, Lumberjack, Pathcutter, Ranger, Warden, Woodcutter, Woodsman")
             "High Altitude Survival"
              (ability
@@ -508,12 +481,11 @@ the forest.  This can also be used to avoid the attention of random predators.
               :name "Jungle Survival"
               :reference "Tarzan"
               :summary
-               "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle.  This
-can also be used to avoid the attention of random predators.
-* [Requires]: Unit must be a [Light Unit]
-* [Move]: Ignore movement penalty for 1 [Jungle] space
-* [Action]: [+1 Stealth] in [Jungle]
-* [Defense]: [+1 Defense] vs Ranged in [Jungle]"
+               "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle. This can also be used to avoid the attention of random predators.
+                * [Requires]: Unit must be a [Light Unit]
+                * [Move]: Ignore movement penalty for 1 [Jungle] space
+                * [Action]: [+1 Stealth] in [Jungle]
+                * [Defense]: [+1 Defense] vs Ranged in [Jungle]"
               :titles "Jungle Dweller, Lord of the Jungle")
             "Motion Sense"
              (ability
@@ -523,12 +495,11 @@ can also be used to avoid the attention of random predators.
              (ability
               :name "Swamp Survival"
               :summary
-               "* This ability is used to avoid or mitigate the common hazards encountered while delving into
-swampland.  This can also be used to avoid the attention of random predators.
-* [Requires]: Unit must be a [Light Unit]
-* [Move]: Ignore movement penalty for 1 [Swamp] space
-* [Action]: [+1 Stealth] in [Swamp]
-* [Defense]: [+1 Defense] vs Ranged in [Swamp]"
+               "* This ability is used to avoid or mitigate the common hazards encountered while delving into swampland. This can also be used to avoid the attention of random predators.
+                * [Requires]: Unit must be a [Light Unit]
+                * [Move]: Ignore movement penalty for 1 [Swamp] space
+                * [Action]: [+1 Stealth] in [Swamp]
+                * [Defense]: [+1 Defense] vs Ranged in [Swamp]"
               :titles "Murk Dweller, Murk Lord, Swamp Lord, Swamp Knight, Swamp Thing")
             "Underground Survival"
              (ability
@@ -540,11 +511,11 @@ swampland.  This can also be used to avoid the attention of random predators.
               :name "Caving"
               :summary
                "* Dead Reckoning
-* Detect Hollow Rock
-* Mining
-* Motion Sense
-* Sapping
-* Underground Survival"
+                * Detect Hollow Rock
+                * Mining
+                * Motion Sense
+                * Sapping
+                * Underground Survival"
               :titles "Miner, Prospector, Sapper, Spelunker, Underminer")))
         :Tradeskills
          (skill
@@ -566,9 +537,8 @@ swampland.  This can also be used to avoid the attention of random predators.
              (ability
               :name "Architecture"
               :summary
-               "* [Extended Action]: Design a structure. The size and quality of the
-structure are limited by level.
-* [Action]: Determine weaknesses of a structure."
+               "* [Extended Action]: Design a structure. The size and quality of the structure are limited by level.
+                * [Action]: Determine weaknesses of a structure."
               :titles "Architect")
             :Blacksmithing
              (ability
@@ -579,9 +549,9 @@ structure are limited by level.
               :name "Brewing"
               :summary
                "* Brew Beer
-* Brew Hard Liquor
-* Brew Mead
-* Brew Wine"
+                * Brew Hard Liquor
+                * Brew Mead
+                * Brew Wine"
               :titles "Brewer, Vintner")
             :Carpentry
              (ability
@@ -611,13 +581,13 @@ structure are limited by level.
               :name "Glassblowing"
               :summary
                "* Blow Bottle
-* Blow Glass Decoration")
+                * Blow Glass Decoration")
             :Jewelsmithing
              (ability
               :name "Jewelsmithing"
               :summary
                "* Gemcutting
-* Fashion Jewelry"
+                * Fashion Jewelry"
               :titles "Gemcutter, Jeweler")
             :Laboring
              (ability
@@ -628,17 +598,17 @@ structure are limited by level.
               :name "Landscaping"
               :summary
                "* Grow Bonsai
-* Grow Flowers
-* Grow Hedges
-* Grow Hedge Maze
-* Grow Trees"
+                * Grow Flowers
+                * Grow Hedges
+                * Grow Hedge Maze
+                * Grow Trees"
               :titles "Groundskeeper, Landscaper, Lawnboy")
             :Leatherworking
              (ability
               :name "Leatherworking"
               :summary
                "* Fashion Leather Goods
-* Flay Skins"
+                * Flay Skins"
               :titles "Tanner")
             :Livestock
              (ability
@@ -659,7 +629,7 @@ structure are limited by level.
               :name "Porting"
               :summary
                "* Bear Litter
-* Port Boat"
+                * Port Boat"
               :titles "Bearer, Porter")
             :Pottery
              (ability
@@ -674,10 +644,10 @@ structure are limited by level.
               :name "Sewing"
               :summary
                "* Crochet
-* Embroidery
-* Fashion Clothing
-* Needlepoint
-* Repair Cloth"
+               * Embroidery
+               * Fashion Clothing
+               * Needlepoint
+               * Repair Cloth"
               :titles "Dressmaker, Seamstress")
             :Stagecraft
              (ability
@@ -689,7 +659,7 @@ structure are limited by level.
               :name "Weaponsmith"
               :summary
                "* The ability to repair, improve, or even create weapons.
-* [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits."
+                * [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits."
               :titles "Bladesmith, Swordsmith")
             :Woodworking
              (ability
@@ -738,15 +708,10 @@ structure are limited by level.
           :name "Piloting"
           :summary
            "* The Jink and Barrel Roll maneuvers simply make it harder for the plane to be hit.
-* The Half Loop, Wingover, and Falling Leaf are all attempts to loose an enemy that's tailing you.
-* The Loop, Immelman, and Retournment are all attempts to both loose a tail, abd to end up tailing that foe
-yourself.
-* When a 'dogged' plane attempts a maneuver to escape his tail the pilot needs to succeed in the maneuver.  If he
-fails his roll, then he's still being tailed, if he succeeds, then the tailing pilot gets to attempt the same
-maneuver (as a 'free' action at full dice pool) - if the 'tail' matches or exceeds the successes rolled by the
-target plane's pilot, then the tail is maintained for another turn.
-* When a dogged plane attempts a 'reversal' maneuver the effects are the same, except that if the tailing plane
-scores less successes than the target plane, the roles are reversed."
+            * The Half Loop, Wingover, and Falling Leaf are all attempts to loose an enemy that's tailing you.
+            * The Loop, Immelman, and Retournment are all attempts to both loose a tail, abd to end up tailing that foe yourself.
+            * When a 'dogged' plane attempts a maneuver to escape his tail the pilot needs to succeed in the maneuver. If he fails his roll, then he's still being tailed, if he succeeds, then the tailing pilot gets to attempt the same maneuver (as a 'free' action at full dice pool) - if the 'tail' matches or exceeds the successes rolled by the target plane's pilot, then the tail is maintained for another turn.
+            * When a dogged plane attempts a 'reversal' maneuver the effects are the same, except that if the tailing plane scores less successes than the target plane, the roles are reversed."
           :titles "Aviator, Pilot, Sky Captain, Sky Knight, Sky Marshall, Wing Commander, Wingman"
           :abilitymap
            (abilitymap
@@ -754,8 +719,7 @@ scores less successes than the target plane, the roles are reversed."
              (ability
               :name "Barn Storming"
               :summary
-               "* Low altitude flying that uses ground cover to block line of sight.  Naturally, this manuever
-can be extremely dangerous."
+               "* Low altitude flying that uses ground cover to block line of sight.  Naturally, this manuever can be extremely dangerous."
               :titles "Nape of the Earth")
             "Barrel Roll"
              (ability
@@ -774,8 +738,7 @@ can be extremely dangerous."
              (ability
               :name "Circle of Death"
               :summary
-               "A Russian WWII maneuver when attacking ground forces that attacks the column from the rear, then circles
-around to make repeated rear attacks until all weapons were expended.")
+               "A Russian WWII maneuver when attacking ground forces that attacks the column from the rear, then circles around to make repeated rear attacks until all weapons were expended.")
             "Close Air Support"
              (ability
               :name "Close Air Support")
@@ -787,8 +750,7 @@ around to make repeated rear attacks until all weapons were expended.")
              (ability
               :name "Falling Leaf"
               :summary
-               "The pilot deliberately stalls, sending it into a spinning fall, only to restart the engine and
-level off.")
+               "The pilot deliberately stalls, sending it into a spinning fall, only to restart the engine and level off.")
             "Fly Out of the Sun"
              (ability
               :name "Fly Out of the Sun"
@@ -801,27 +763,24 @@ level off.")
               :name "Flying Mount"
               :summary
                "* When riding a mount that can fly, a unit must have experience riding that particular mount.
-* Examples: Dragon, Flying Carpet, Giant Eagle, Giant Wasp, Griffin, Hippogriff, Pegasus, Roc")
+                * Examples: Dragon, Flying Carpet, Giant Eagle, Giant Wasp, Griffin, Hippogriff, Pegasus, Roc")
             "Half Loop"
              (ability
               :name "Half Loop"
               :summary
-               "The pilot pulls up and over, as if he was going to loop the aircraft, but adds a half-roll to right the plane
-at the top of the loop to continue level flight in the opposite direction to that which he started.")
+               "The pilot pulls up and over, as if he was going to loop the aircraft, but adds a half-roll to right the plane at the top of the loop to continue level flight in the opposite direction to that which he started.")
             "Immelmann Turn"
              (ability
               :name "Immelmann Turn"
               :summary
-               "The Immelmann turn has become one of the most popular airshow maneuvers in the world.  However, the aerobatic
-maneuver is altogether different from the WWI Immelmann turn (See Wingover) and is of little use in modern
-dogfighting."
+               "The Immelmann turn has become one of the most popular airshow maneuvers in the world. However, the aerobatic maneuver is altogether different from the WWI Immelmann turn (See Wingover) and is of little use in modern dogfighting."
               :titles "Roll Off the Top")
             :Jink
              (ability
               :name "Jink"
               :summary
                "* Yawing his plane from side to side, the pilot attempts to throw-off the aim of enemy gunners.
-* [Action]: [+1 Defense] until this unit's next turn.")
+                * [Action]: [+1 Defense] until this unit's next turn.")
             :Levitating
              (ability
               :name "Levitating"
@@ -830,8 +789,7 @@ dogfighting."
              (ability
               :name "Loop"
               :summary
-               "* The pilot pulls the plane up and over in a complete circle, ending up in the same position and facing that he
-started.")
+               "* The pilot pulls the plane up and over in a complete circle, ending up in the same position and facing that he started.")
             "Pull Out of a Dive"
              (ability
               :name "Pull Out of a Dive")
@@ -842,8 +800,7 @@ started.")
              (ability
               :name "Split S"
               :summary
-               "A diving maneuver mostly used to disengage.  The pilot half-rolls his aircraft inverted and executes a
-descending half-loop, resulting in level flight in the exact opposite direction at a lower altitude."
+               "A diving maneuver mostly used to disengage. The pilot half-rolls his aircraft inverted and executes a descending half-loop, resulting in level flight in the exact opposite direction at a lower altitude."
               :titles "Reverse Immelmann")
             :Strafe
              (ability
@@ -862,16 +819,14 @@ descending half-loop, resulting in level flight in the exact opposite direction 
              (ability
               :name "Wing Over"
               :reference
-               "Performed by an experienced flyer, this maneuver can surprise a pursuer by quickly reversing on them.  If you
-have the distance lead in a chase, you can use this to convert from a defensive posture to an offensive one.
-The trick is not to get shot up when you are reversing."
+               "Performed by an experienced flyer, this maneuver can surprise a pursuer by quickly reversing on them. If you have the distance lead in a chase, you can use this to convert from a defensive posture to an offensive one. The trick is not to get shot up when you are reversing."
               :titles "Immelmann Turn, Retournment")
             "Winged Flight"
              (ability
               :name "Winged Flight"
               :summary
                "* If the unit has wings, it must have this ability or fly at a penalty.
-* If the unit grew up with wings, this ability is assumed."))
+                * If the unit grew up with wings, this ability is assumed."))
           :specialtymap
            (specialtymap
             "Civilian Airplanes"
@@ -888,27 +843,37 @@ The trick is not to get shot up when you are reversing."
           :name "Riding"
           :summary
            "* Level 1: Ride a horse
-* Level 2: Ride a Lt. Warhorse
-* Level 3: Ride a Med. Warhorse
-* Level 4: Ride a Hvy. Warhorse
-* Note: Riding a flying mount requires [Flying]"
+            * Level 2: Ride a Lt. Warhorse
+            * Level 3: Ride a Med. Warhorse
+            * Level 4: Ride a Hvy. Warhorse
+            * Note: Riding a flying mount requires [Flying]"
           :titles "Caravan Driver, Cavalry, Driver, Dragoon, Horseman, Knight, Lancer, Outrider, Rider"
           :abilitymap
            (abilitymap
+            "Bareback"
+             (ability
+              :name "Bareback"
+              :summary
+               "* Can ride without a saddle without penalty.")
+            "Bull Riding"
+             (ability
+              :name "Bull Riding"
+              :summary
+               "* While riding a hostile creature, the Scale of the creature considered to be one less for you.")
             "Catabatan Circle"
              (ability
               :name "Catabatan Circle"
               :summary
                "* [Formation]
-* High Dodge and Concentrated firepower")
+                * High Dodge and Concentrated firepower")
             :Charge
              (ability
               :name "Charge"
               :reference "* We'll use the old ways...speed of horse! - Arthur, Excalibur"
               :summary
                "* [Requires]: Unit must have moved at least 4 spaces in a straight line.
-* [Action]: Melee Attack costs no [Speed].
-* [Attack], [Damage]: Any [Critical Hits] may be [Morale Tokens]")
+                * [Action]: Melee Attack costs no [Speed].
+                * [Attack], [Damage]: Any [Critical Hits] may be [Morale Tokens]")
             "Drive Carriage"
              (ability
               :name "Drive Carriage")
@@ -917,13 +882,20 @@ The trick is not to get shot up when you are reversing."
               :name "Drive Cart")
             "Horse Archery"
              (ability
-              :name "Horse Archery")
+              :name "Horse Archery"
+              :summary
+               "Can use a bow while riding without penalty.")
             "Run Down"
              (ability
               :name "Run Down"
               :summary
                "* [Damage]: +1 Damage when attacking from the rear.
-* [Attack], [Damage]: Any [Critical Hits] may be [Retreats]")
+                * [Attack], [Damage]: Any [Critical Hits] may be [Retreats]")
+            "Side Saddle"
+             (ability
+              :name "Side Saddle"
+              :summary
+               "* Can ride side saddle without penalty.")
             "Steed Trample"
              (ability
               :name "Steed Trample")))
@@ -931,14 +903,9 @@ The trick is not to get shot up when you are reversing."
          (skill
           :name "Seamanship"
           :summary
-           "The art of operating a ship or boat including specialised skills such as: navigation and international maritime
-law; weather, meteorology and forecasting; watchstanding; ship-handling and small boat handling; operation of deck
-equipment, anchors and cables; ropework and line handling; communications; sailing; engines; execution of
-evolutions such as towing; cargo handling equipment, dangerous cargoes and cargo storage; dealing with
-emergencies; survival at sea and search and rescue; fire fighting.
+           "The art of operating a ship or boat including specialised skills such as: navigation and international maritime law; weather, meteorology and forecasting; watchstanding; ship-handling and small boat handling; operation of deck equipment, anchors and cables; ropework and line handling; communications; sailing; engines; execution of evolutions such as towing; cargo handling equipment, dangerous cargoes and cargo storage; dealing with emergencies; survival at sea and search and rescue; fire fighting.
 
-The degree of knowledge needed within these areas is dependent upon the nature of the work.  However, the practice
-of good seamanship should be the goal of all."
+            The degree of knowledge needed within these areas is dependent upon the nature of the work. However, the practice of good seamanship should be the goal of all."
           :titles "Admiral, Capitan, Commodore, First Officer, Navigator, Pirate, Sailor, Seaman, Ship's Mate"
           :abilitymap
            (abilitymap
@@ -959,7 +926,7 @@ of good seamanship should be the goal of all."
               :name "Navigation"
               :summary
                "* More than just finding a vessel's present location, safe navigation includes predicting future location, route planning and collision avoidance.
-* [Extended Action]: When determining actual travel time by sea, roll vs the difficulty of the journey. -1% travel time x [Hits] rolled. -2% travel time x [Critical Hits] rolled.")
+                * [Extended Action]: When determining actual travel time by sea, roll vs the difficulty of the journey. -1% travel time x [Hits] rolled. -2% travel time x [Critical Hits] rolled.")
             :Planing
              (ability
               :name "Planing"
@@ -973,11 +940,11 @@ of good seamanship should be the goal of all."
               :summary
                "The act of reversing a capsized vessel is called righting.
 
-If a capsized vessel has sufficient flotation to prevent sinking, it may recover on its own if the stability is such that it is not stable inverted.
+                If a capsized vessel has sufficient flotation to prevent sinking, it may recover on its own if the stability is such that it is not stable inverted.
 
-Small dinghies frequently capsize in the normal course of use and are occasionally deliberately capsized as it can be the fastest means of draining water from the boat.
+                Small dinghies frequently capsize in the normal course of use and are occasionally deliberately capsized as it can be the fastest means of draining water from the boat.
 
-In a storm, even large vessels may be rolled by being hit broadside by a large wave. This is normally catastrophic for larger ships.")
+                In a storm, even large vessels may be rolled by being hit broadside by a large wave. This is normally catastrophic for larger ships.")
             :Sailing
              (ability
               :name "Sailing"
@@ -1023,8 +990,7 @@ In a storm, even large vessels may be rolled by being hit broadside by a large w
              (ability
               :name "AI Programming"
               :summary
-               "* Artificial Intelligences may be given skills if the designer also
-possesses that skill. AI skill rolls are not open-ended.")
+               "* Artificial Intelligences may be given skills if the designer also possesses that skill. AI skill rolls are not open-ended.")
             "Computer Engineering"
              (ability
               :name "Computer Engineering")
@@ -1051,9 +1017,7 @@ possesses that skill. AI skill rolls are not open-ended.")
              (ability
               :name "Ghost in the Machine"
               :summary
-               "* By digitizing one's personality at the moment of death, a person can gain a semblance of
-immortality.  A new program is created that is an replica of the original.  Successes
-determine how close a copy it is to the original.  10 successes is a perfect copy.")
+               "* By digitizing one's personality at the moment of death, a person can gain a semblance of immortality. A new program is created that is an replica of the original. Successes determine how close a copy it is to the original. 10 successes is a perfect copy.")
             :Hacking
              (ability
               :name "Hacking")
@@ -1104,8 +1068,7 @@ determine how close a copy it is to the original.  10 successes is a perfect cop
              (ability
               :name "Electrical Overload"
               :summary
-               "* Burn out a small part of a system. The system becomes unusable until
-the fault is found and corrected.")
+               "* Burn out a small part of a system. The system becomes unusable until the fault is found and corrected.")
             "Electronic Bypass"
              (ability
               :name "Electronic Bypass")
@@ -1229,15 +1192,15 @@ the fault is found and corrected.")
               :name "Movie Trivia"
               :summary
                "* Each topic must be taken separately.
-* Any knowledge rolls in the given field are at +2.
-* Character has a high chance to remember any detail in the given topic.  This is similar to eidetic memory.")
+                * Any knowledge rolls in the given field are at +2.
+                * Character has a high chance to remember any detail in the given topic.  This is similar to eidetic memory.")
             "Music Trivia"
              (ability
               :name "Music Trivia"
               :summary
                "* Each topic must be taken separately.
-* Any knowledge rolls in the given field are at +2.
-* Character has a high chance to remember any detail in the given topic.  This is similar to eidetic memory.")
+                * Any knowledge rolls in the given field are at +2.
+                * Character has a high chance to remember any detail in the given topic.  This is similar to eidetic memory.")
             "Mythology and Legend"
              (ability
               :name "Mythology and Legend")
@@ -1444,7 +1407,7 @@ the fault is found and corrected.")
           :name "Life Sciences"
           :reference
            "* See [Equipment: Drugs]
-* See [Flora and Fauna: Plants]"
+            * See [Flora and Fauna: Plants]"
           :titles "Life Scientist"
           :stat "Mind"
           :abilitymap
@@ -1469,9 +1432,9 @@ the fault is found and corrected.")
               :name "Botony"
               :summary
                "* Analyze/Identify Plant
-* Locate Plant
-* Harvest Plant
-* Cultivate Plant Strain"
+                * Locate Plant
+                * Harvest Plant
+                * Cultivate Plant Strain"
               :titles "Botonist, Herbalist, Horticulturalist")
             :Cloning
              (ability
@@ -1574,7 +1537,7 @@ the fault is found and corrected.")
               :name "Zoology"
               :summary
                "* Analyze/Identify Animal
-* Locate Animal"
+                * Locate Animal"
               :titles "Zoologist")))
         "Physical Sciences"
          (skill
@@ -1590,7 +1553,7 @@ the fault is found and corrected.")
               :name "Analyze Substance"
               :summary
                "* [Requires]: Must have abilities corresponding to the substance being analyzed (e.g. Geology for rocks, Metallurgy for metals, etc.).
-* [Extended Action]: Run a series of tests on a substance to determine its make up.")
+                * [Extended Action]: Run a series of tests on a substance to determine its make up.")
             :Astronomy
              (ability
               :name "Astronomy")
@@ -1602,7 +1565,7 @@ the fault is found and corrected.")
               :name "Cartography"
               :summary
                "* [Action]: Accurately map the surrounding area.
-* [Action]: Locate anomalies in maps, including errors, forgeries, and potentially hidden areas."
+                * [Action]: Locate anomalies in maps, including errors, forgeries, and potentially hidden areas."
               :titles "Cartographer, Map Maker")
             :Chemistry
              (ability
@@ -1623,12 +1586,12 @@ the fault is found and corrected.")
               :name "Mathematics: Advanced"
               :reference
                "* Differential Calculus - The definition, properties, and applications of the derivative of a function. The process of finding the derivative is called differentiation.
-* Integral Calculus - The definitions, properties, and applications of two related concepts, the indefinite integral and the definite integral. The process of finding the value of an integral is called integration.
-* Calculus is used in every branch of the physical sciences, actuarial science, computer science, statistics, engineering, economics, business, medicine, demography, and in other fields wherever a problem can be mathematically modeled and an optimal solution is desired.
-* Physics makes particular use of calculus; all concepts in classical mechanics are interrelated through calculus. The mass of an object of known density, the moment of inertia of objects, as well as the total energy of an object within a conservative field can be found by the use of calculus.
-* Electricity and Magnetism - Calculus can be used to find the total flux of electromagnetic fields. A more historical example of the use of calculus in physics is Newton's second law of motion, it expressly uses the term 'rate of change' which refers to the derivative.
-* Medicine - Calculus can be used to find the optimal branching angle of a blood vessel so as to maximize flow.
-* Economics - Calculus allows for the determination of maximal profit by providing a way to easily calculate both marginal cost and marginal revenue."
+                * Integral Calculus - The definitions, properties, and applications of two related concepts, the indefinite integral and the definite integral. The process of finding the value of an integral is called integration.
+                * Calculus is used in every branch of the physical sciences, actuarial science, computer science, statistics, engineering, economics, business, medicine, demography, and in other fields wherever a problem can be mathematically modeled and an optimal solution is desired.
+                * Physics makes particular use of calculus; all concepts in classical mechanics are interrelated through calculus. The mass of an object of known density, the moment of inertia of objects, as well as the total energy of an object within a conservative field can be found by the use of calculus.
+                * Electricity and Magnetism - Calculus can be used to find the total flux of electromagnetic fields. A more historical example of the use of calculus in physics is Newton's second law of motion, it expressly uses the term 'rate of change' which refers to the derivative.
+                * Medicine - Calculus can be used to find the optimal branching angle of a blood vessel so as to maximize flow.
+                * Economics - Calculus allows for the determination of maximal profit by providing a way to easily calculate both marginal cost and marginal revenue."
               :titles "Differential Calculus, Integral Calculus, Limits and Infintesimals, Linear Algebra")
             :Metallurgy
              (ability
@@ -1836,7 +1799,7 @@ the fault is found and corrected.")
               :name "Literacy"
               :summary
                "* Can read and write
-* This ability is assumed in modern characters from 1st and 2nd world nations")
+                * This ability is assumed in modern characters from 1st and 2nd world nations")
             "Motivational Speaking"
              (ability
               :name "Motivational Speaking"
@@ -1871,8 +1834,8 @@ the fault is found and corrected.")
               :name "Sincerity"
               :summary
                "* Helps convince others when you are being truthful.
-* Helps improve long term relationships by increasing trust.
-* Limitation - May only be used when you truly believe that your are correct.")
+                * Helps improve long term relationships by increasing trust.
+                * Limitation - May only be used when you truly believe that your are correct.")
             "Small Talk"
              (ability
               :name "Small Talk"
@@ -1949,7 +1912,7 @@ the fault is found and corrected.")
               :reference "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor"
               :summary
                "* Philosophy - The 'common tongue' concept is boring and unrealistic.
-* Simulate the limitations of language by reducing usable vocabulary. This can be done by limiting a conversation to 2, 3, 4, or 5 letter words depending on the fluency of those involved. Having a conversation using only 2 letter words is going to require a fair amount of hand gesturing or drawing to get a point across. If a person is overhearing a conversation, bleep out the big words and let them guess at the missing words.")
+                * Simulate the limitations of language by reducing usable vocabulary. This can be done by limiting a conversation to 2, 3, 4, or 5 letter words depending on the fluency of those involved. Having a conversation using only 2 letter words is going to require a fair amount of hand gesturing or drawing to get a point across. If a person is overhearing a conversation, bleep out the big words and let them guess at the missing words.")
             :Writing
              (specialty
               :name "Writing")))
@@ -2030,7 +1993,7 @@ the fault is found and corrected.")
               :name "Decoy"
               :summary
                "* Create a decoy to mislead.
-* [Move]: Remove this unit from play and place 1 Decoy Token and 1 Decoy Unit Token on this unit's space. Both decoys may act normally during the Action phase, but any action but movement will dispel the decoys.  Both decoys defend as the original unit. If either unit is Hit, both decoys are dispelled. The decoys last until the next turn or until dispelled.")
+                * [Move]: Remove this unit from play and place 1 Decoy Token and 1 Decoy Unit Token on this unit's space. Both decoys may act normally during the Action phase, but any action but movement will dispel the decoys.  Both decoys defend as the original unit. If either unit is Hit, both decoys are dispelled. The decoys last until the next turn or until dispelled.")
             "Detect Trap"
              (ability
               :name "Detect Trap")
@@ -2053,7 +2016,7 @@ the fault is found and corrected.")
               :name "Forgery"
               :summary
                "* The ability to forge money or documents. This ability is also used while creating money to prevent forgery.
-* [Extended Action]: Roll vs. object quality or anti-forgery level. Any [Hits] allow a forgery that can pass at a distance. The more [Hits] and [Criticals] rolled, the more indistinquishable from the original. High level forgeries are works of art unto themselves.")
+                * [Extended Action]: Roll vs. object quality or anti-forgery level. Any [Hits] allow a forgery that can pass at a distance. The more [Hits] and [Criticals] rolled, the more indistinquishable from the original. High level forgeries are works of art unto themselves.")
             :Gambling
              (ability
               :name "Gambling"
@@ -2137,21 +2100,21 @@ the fault is found and corrected.")
               :name "Infiltrate"
               :summary
                "* [Defense] - Mind
-* [Deploy] - Deploy this unit in waiting area.
-* [Action] - Replace any non-unique unit with this unit.")
+                * [Deploy] - Deploy this unit in waiting area.
+                * [Action] - Replace any non-unique unit with this unit.")
             "Geospatial Intelligence"
              (ability
               :name "Geospatial Intelligence"
               :summary
                "* Intelligence gathered from satellite, aerial photography, mapping.
-* Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
+                * Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
               :titles "GEOINT, IMINT, Imagery Intelligence")
             "Human Intelligence"
              (ability
               :name "Human Intelligence"
               :summary
                "* Intelligence gathered from a person on the ground.
-* Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
+                * Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
               :titles "HUMINT")
             "Intelligence Network"
              (ability
@@ -2206,13 +2169,9 @@ the fault is found and corrected.")
          (skill
           :name "Faith"
           :reference
-           "The argument goes something like this: 'I refuse to prove that I exist,' says God, 'for proof denies faith, and
-without faith I am nothing.'  'But,' says Man, 'The Babel fish is a dead giveaway, isn't it?  It could not have
-evolved by chance.  It proves you exist, and so therefore, by your own arguments, you don't. QED.' - Hitchhiker's
-Guide to the Galaxy"
+           "The argument goes something like this: 'I refuse to prove that I exist,' says God, 'for proof denies faith, and without faith I am nothing.' 'But,' says Man, 'The Babel fish is a dead giveaway, isn't it? It could not have evolved by chance. It proves you exist, and so therefore, by your own arguments, you don't. QED.' - Hitchhiker's Guide to the Galaxy"
           :titles
-           "Abbot, Absolver, Archbishop, Bishop, Cardinal, Cleric, Ceremonial Guard, Gakusho, Missionary, Paladin, Priest, Redeemer,
-Sin	Eater, Theologist, Theurge, Theurgy"
+           "Abbot, Absolver, Archbishop, Bishop, Cardinal, Cleric, Ceremonial Guard, Gakusho, Missionary, Paladin, Priest, Redeemer, Sin	Eater, Theologist, Theurge, Theurgy"
           :abilitymap
            (abilitymap
             :Absolution
@@ -2222,8 +2181,7 @@ Sin	Eater, Theologist, Theurge, Theurgy"
              (ability
               :name "Affirmation"
               :summary
-               "An affirmation is a statement designed to have a positive effect on the conscious mind when
-repeated at frequent intervals throughout meditation ritual spells.")
+               "An affirmation is a statement designed to have a positive effect on the conscious mind when repeated at frequent intervals throughout meditation ritual spells.")
             :Atonement
              (ability
               :name "Atonement")
@@ -2232,9 +2190,8 @@ repeated at frequent intervals throughout meditation ritual spells.")
               :name "Blessing"
               :summary
                "* A simple incantation with a variety of subtle effects.
-* [Action]: Touch. Target gains a new Blessing Token (max 1).  At any time, the target may
-remove the token and gain +1 on any Defense roll.
-* [Duration]: up to 1 day/level.")
+                * [Action]: Touch. Target gains a new Blessing Token (max 1).  At any time, the target may remove the token and gain +1 on any Defense roll.
+                * [Duration]: up to 1 day/level.")
             :Chant
              (ability
               :name "Chant"
@@ -2246,14 +2203,12 @@ remove the token and gain +1 on any Defense roll.
              (ability
               :name "Consecration"
               :summary
-               "* To consecrate is to solemnly dedicate or devote something or someone to a sacred purpose, to
-cleanse and protect.")
+               "* To consecrate is to solemnly dedicate or devote something or someone to a sacred purpose, to cleanse and protect.")
             :Contemplation
              (ability
               :name "Contemplation"
               :summary
-               "* Contemplation is a focused and disiplined form of contemplation or reflecting, whereby one is
-able to alter an emotional state and to receive self-insight.")
+               "* Contemplation is a focused and disiplined form of contemplation or reflecting, whereby one is able to alter an emotional state and to receive self-insight.")
             :Conversion
              (ability
               :name "Conversion")
@@ -2261,14 +2216,12 @@ able to alter an emotional state and to receive self-insight.")
              (ability
               :name "Dedication"
               :summary
-               "* [Death]: Unit enters specified Deity's realm.  It is not substantiated that this ability
-actually works.  Those who have crossed over are changed and may not and will not return.")
+               "* [Death]: Unit enters specified Deity's realm.  It is not substantiated that this ability actually works. Those who have crossed over are changed and may not and will not return.")
             :Drumming
              (ability
               :name "Drumming"
               :summary
-               "* Drumming is literally pounding on a surface.  This is used to raise power and to change
-emotional states.")
+               "* Drumming is literally pounding on a surface.  This is used to raise power and to change emotional states.")
             :Excommunication
              (ability
               :name "Excommunication")
@@ -2276,9 +2229,7 @@ emotional states.")
              (ability
               :name "Initiation"
               :summary
-               "* Used to describe the profound spiritual experience that occurs when one's unity with Deity
-and the Universe is realised; when one is welcomed as a fully-fledged member of a particular
-group; and the celebration of a successful ritual.")
+               "* Used to describe the profound spiritual experience that occurs when one's unity with Deity and the Universe is realised; when one is welcomed as a fully-fledged member of a particular group; and the celebration of a successful ritual.")
             :Marriage
              (ability
               :name "Marriage")
@@ -2307,22 +2258,14 @@ group; and the celebration of a successful ritual.")
              (ability
               :name "Sin Eating"
               :summary
-               "* A willing subject may describe his dark desires, the Sin Eater then
-repeats the description replacing references to the subject with himself.
-After the ritual is complete, the subject will not feel the urges so
-strongly. Instead the Sin Eater will feel those emotions. If he acts on
-them, even symbolically, his [Shadow] gains power. If he can resolve them,
-he gains experience.")))
+               "* A willing subject may describe his dark desires, the Sin Eater then repeats the description replacing references to the subject with himself. After the ritual is complete, the subject will not feel the urges so strongly. Instead the Sin Eater will feel those emotions. If he acts on them, even symbolically, his [Shadow] gains power. If he can resolve them, he gains experience.")))
         :Influence
          (skill
           :name "Influence"
           :reference
-           "* Many men, of course, became extremely rich, and this was perfectly natural and nothing to be ashamed of
-because no one was really poor, at least no one worth speaking of. - Hitchhiker's Guide to the Galaxy"
+           "* Many men, of course, became extremely rich, and this was perfectly natural and nothing to be ashamed of because no one was really poor, at least no one worth speaking of. - Hitchhiker's Guide to the Galaxy"
           :titles
-           "Aristocrat, Baron, Baroness, Baronet, Celebrity, Count, Countess, Daimyo, Dame, Duchess, Duke, Emperor,
-Empress, King, Knight, Lord, Marchioness, Marquis, Matriarch, Monarch, Patriarch, Pontif, Prince, Princess,
-Queen, Regina, Sire, Sovereign, Star"
+           "Aristocrat, Baron, Baroness, Baronet, Celebrity, Count, Countess, Daimyo, Dame, Duchess, Duke, Emperor, Empress, King, Knight, Lord, Marchioness, Marquis, Matriarch, Monarch, Patriarch, Pontif, Prince, Princess, Queen, Regina, Regis, Sire, Sovereign, Star"
           :abilitymap
            (abilitymap
             "Black Market Ties"
@@ -2348,11 +2291,9 @@ Queen, Regina, Sire, Sovereign, Star"
              (ability
               :name "Fame"
               :summary
-               "* Your reputation precedes you. People are drawn to the famous and will often do extraordinary things
-to be near them.
-* [Synergy]: [Seduction]
-* [Action]: Leverage your fame to gain minor free goods or services including upgraded lodging, free
-meals, audience with nobles, etc.")
+               "* Your reputation precedes you. People are drawn to the famous and will often do extraordinary things to be near them.
+                * [Synergy]: [Seduction]
+                * [Action]: Leverage your fame to gain minor free goods or services including upgraded lodging, free meals, audience with nobles, etc.")
             "Family Ties"
              (ability
               :name "Family Ties")
@@ -2371,11 +2312,9 @@ meals, audience with nobles, etc.")
              (ability
               :name "Infamy"
               :summary
-               "* Your dark reputation precedes you. People are intrigued by the infamous and will often do extraordinary
-things in fear and facination of them.
-* [Synergy]: [Intimidation]
-* [Action]: Leverage your infamy to gain minor free goods or services including upgraded lodging, free
-meals, etc.")
+               "* Your dark reputation precedes you. People are intrigued by the infamous and will often do extraordinary things in fear and facination of them.
+                * [Synergy]: [Intimidation]
+                * [Action]: Leverage your infamy to gain minor free goods or services including upgraded lodging, free meals, etc.")
             :Intrigue
              (ability
               :name "Intrigue")
@@ -2437,7 +2376,7 @@ meals, etc.")
           :name "Intimidation"
           :reference
            "* I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain. - Bene Gesserit Litany, Dune
-* They tell him they want his territory: all his business. Soze looks over the faces of his family, then he showed these men of will what will really was. He tells him he would rather see his family dead, than live another day after this. ... He waits until his wife and kids are in the ground, and then he goes after the rest of the mob. He kills their kids. He kills their wives. He kills their parents and their parents friends. He burns down the houses they live in and the stores they work in. He kills people who owe them money. And like that, he's gone. - Verbal Kint, Usual Suspects"
+            * They tell him they want his territory: all his business. Soze looks over the faces of his family, then he showed these men of will what will really was. He tells him he would rather see his family dead, than live another day after this. ... He waits until his wife and kids are in the ground, and then he goes after the rest of the mob. He kills their kids. He kills their wives. He kills their parents and their parents friends. He burns down the houses they live in and the stores they work in. He kills people who owe them money. And like that, he's gone. - Verbal Kint, Usual Suspects"
           :titles "Demagogue, Enforcer, Fearmonger, Overseer, Pimp, Slave Lord, Slaver, Tormentor, Torturer"
           :stat "Shadow"
           :abilitymap
@@ -2466,13 +2405,13 @@ meals, etc.")
               :name "Interrogate"
               :reference
                "* I'm gonna ask you one more goddamn time, and if you still 'respectfully refuse,' I'm callin' the Bear Jew over here, and he's gonna take that big-ole bat of his, and he's gonna beat you to death with it. Now take your wiener schnitzel lickin' finger and point out on this map what I want to know...We got a German here who wants to die for his country! Oblige him! - Lt. Aldo Raine, Inglourious Basterds
-* You don't need that. I'll tell you everything. Yes...I know you will. - Raiders of the Lost Ark")
+                * You don't need that. I'll tell you everything. Yes...I know you will. - Raiders of the Lost Ark")
             :Intimidate
              (ability
               :name "Intimidate"
               :reference
                "* Your timing is impeccable. Pity you were all they sent... The Fatui would do well to update their intelligence concerning me. Ah, but of course, that would require one of you to return in one piece. - Ayato, Genshin Impact
-* ...to the death. No. To the pain. I don't think I'm quite familiar with that phrase. ... To the pain means the first thing you will lose will be your feet below the ankles. Then your hands at the wrists. Next your nose. ...And then my ears, I understand let's get on with it. WRONG. Your ears you keep and I'll tell you why. So that every shriek of every child at seeing your hideousness will be yours to cherish. Every babe that weeps at your approach, every woman who cries out, 'Dear God! What is that THING?,' will echo in your perfect ears. That is what to the pain means. It means I leave you in anguish, wallowing in freakish misery ... forever. ...I think you're bluffing. It's possible, Pig, I might be bluffing. It's conceivable, you miserable, vomitous mass, that I'm only lying here because I lack the strength to stand. But, then again... perhaps I have the strength after all. - Princess Bride"
+                * ...to the death. No. To the pain. I don't think I'm quite familiar with that phrase. ... To the pain means the first thing you will lose will be your feet below the ankles. Then your hands at the wrists. Next your nose. ...And then my ears, I understand let's get on with it. WRONG. Your ears you keep and I'll tell you why. So that every shriek of every child at seeing your hideousness will be yours to cherish. Every babe that weeps at your approach, every woman who cries out, 'Dear God! What is that THING?,' will echo in your perfect ears. That is what to the pain means. It means I leave you in anguish, wallowing in freakish misery ... forever. ...I think you're bluffing. It's possible, Pig, I might be bluffing. It's conceivable, you miserable, vomitous mass, that I'm only lying here because I lack the strength to stand. But, then again... perhaps I have the strength after all. - Princess Bride"
               :summary "* A form of bluffing")
             "Reign of Terror"
              (ability
@@ -2598,16 +2537,16 @@ meals, etc.")
               :name "Dirge"
               :summary
                "* Opponents in Radius are cloaked in despair.
-* [Passive]
-* [Continuous]: [Retreats] are increased by 1 for all opponents within the radius."
+                * [Passive]
+                * [Continuous]: [Retreats] are increased by 1 for all opponents within the radius."
               :titles "Demoralize, Song of Fear")
             :Discord
              (ability
               :name "Discord"
               :summary
                "* A sudden sound that disrupts the natural flow of existing sounds.
-* The secret to this skill is to pick the most inappropriate sound at the most inappropriate time.
-* The result is extremely distracting and will cancel other effects based on sound including other Communication abilities."
+                * The secret to this skill is to pick the most inappropriate sound at the most inappropriate time.
+                * The result is extremely distracting and will cancel other effects based on sound including other Communication abilities."
               :titles "Cacaphony")
             :Disguise
              (ability
@@ -2621,7 +2560,7 @@ meals, etc.")
               :name "Gabriel's Horn"
               :summary
                "* [Requires]: Horn
-* Damages Walls of any kind")
+                * Damages Walls of any kind")
             :Harmonize
              (ability
               :name "Harmonize")
@@ -2646,14 +2585,14 @@ meals, etc.")
               :name "Inspiration"
               :summary
                "* Allies in Radius are Continuously inspired to greater feats by this ability.
-* [Passive]
-* [Continuous]: [Retreats] are reduced by 1 for all allies within the radius.")
+                * [Passive]
+                * [Continuous]: [Retreats] are reduced by 1 for all allies within the radius.")
             :Juggling
              (ability
               :name "Juggling"
               :summary
                "* Besides juggling objects, this ability allows the user to catch objects.
-* [Reaction]: When an object is thrown at a space within one space of the user, roll vs. the [Attack], the object is caught if any [Hits] are scored. Further, the user may immediately throw the object using [Juggling] level as attack value.")
+                * [Reaction]: When an object is thrown at a space within one space of the user, roll vs. the [Attack], the object is caught if any [Hits] are scored. Further, the user may immediately throw the object using [Juggling] level as attack value.")
             :Lullaby
              (ability
               :name "Lullaby")
@@ -2729,9 +2668,9 @@ meals, etc.")
               :name "Music"
               :summary
                "* Song, Musical Instrument
-* The power of music lies in its ability to tell truths that we willing listen to even if they are unpleasant.
-* See Equipment for Musical Instruments
-* Musical Instruments may be used with any performance power to increase any Range or Radius by 1 Space."
+                * The power of music lies in its ability to tell truths that we willing listen to even if they are unpleasant.
+                * See Equipment for Musical Instruments
+                * Musical Instruments may be used with any performance power to increase any Range or Radius by 1 Space."
               :titles "Bard, Classical, Drummer, Guitarist, Harpist, Hip-Hop, Jazz, Lyrist, Minstrel, Musician, Piper, Pop, Rap, Rhapsode, Rock, Skald, Troubadour")
             :Acting
              (specialty
@@ -2772,8 +2711,8 @@ meals, etc.")
               :name "Seduction"
               :reference
                "* But what of all those sweet words you spoke in private?  Oh that's just what we call pillow talk, baby, that's all. - Ash, Army of Darkness
-* But you don't understand. That men are weak? 
-* Guess I must be dumb. She had a pocket full of horses, trojan and some of them used... I guess I should have closed my eyes when you drove me to the pace where your horses run free. Cause I felt a little ill when I saw all the pictures of the jockeys that were there before me. Believe it or not, I started to worry. I wondered if I had enough class. But it was Saturday night, I guess that makes it alright. And you say, Baby have you got enough gas? Oh, Yeah! - Prince, Little Red Corvette"
+                * But you don't understand. That men are weak? 
+                * Guess I must be dumb. She had a pocket full of horses, trojan and some of them used... I guess I should have closed my eyes when you drove me to the pace where your horses run free. Cause I felt a little ill when I saw all the pictures of the jockeys that were there before me. Believe it or not, I started to worry. I wondered if I had enough class. But it was Saturday night, I guess that makes it alright. And you say, Baby have you got enough gas? Oh, Yeah! - Prince, Little Red Corvette"
               :titles "Femme Fatale, Vamp")
             "Silver Tongue"
              (ability
@@ -2837,22 +2776,22 @@ meals, etc.")
               :name "Backstab"
               :summary
                "* [Action]: Gain [+1 Synergy] when [Flanking] target in Close Combat.
-* [Action]: Gain [+1 Synergy] per [Level] when in the target's Blind Spot in Close Combat."
+                * [Action]: Gain [+1 Synergy] per [Level] when in the target's Blind Spot in Close Combat."
               :titles "Back Biter, Back Stabber, Opportunist, Traitor")
             "Blend into the Crowd"
              (ability
               :name "Blend into the Crowd"
               :summary
                "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
-* [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
+                * [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
             :Camouflage
              (ability
               :name "Camouflage"
               :summary
                "* [Continuous]: While active, unit is hidden.
-* [Defense]: +1 Defense in [Terrain].
-* [Roll]: Skill - Move this turn.
-* [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
+                * [Defense]: +1 Defense in [Terrain].
+                * [Roll]: Skill - Move this turn.
+                * [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
             "Cloak and Dagger"
              (ability
               :name "Cloak and Dagger"
@@ -2879,14 +2818,14 @@ meals, etc.")
               :name "Stalk"
               :summary
                "* The ability to move carefully to avoid detection.
-* [Requires]: No other action may be performed this turn.
-* [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
+                * [Requires]: No other action may be performed this turn.
+                * [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
             "Strike and Fade"
              (ability
               :name "Strike and Fade"
               :summary
                "* [Requires]: No other action may be performed this turn.
-* [Attack]: After this attack, if you have sufficient Move remaining, move 1 space.")
+                * [Attack]: After this attack, if you have sufficient Move remaining, move 1 space.")
             :Tailing
              (ability
               :name "Tailing"

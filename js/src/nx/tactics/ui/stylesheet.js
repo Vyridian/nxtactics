@@ -232,17 +232,17 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_app_titlebar_print = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-app-titlebar-print'}}
 
   /**
+   * Constant: style-app-titlebar-title
+   * {style}
+   */
+  static c_style_app_titlebar_title = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-app-titlebar-title'}}
+
+  /**
    * Constant: style-body
    * Returns the style for app ui.
    * {style}
    */
   static c_style_body = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-body'}}
-
-  /**
-   * Constant: style-button-back
-   * {style}
-   */
-  static c_style_button_back = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-button-back'}}
 
   /**
    * Constant: style-card
@@ -611,8 +611,8 @@ export default class nx_tactics_ui_stylesheet {
       "style-app-statusdrawer": nx_tactics_ui_stylesheet.c_style_app_statusdrawer,
       "style-app-titlebar": nx_tactics_ui_stylesheet.c_style_app_titlebar,
       "style-app-titlebar-print": nx_tactics_ui_stylesheet.c_style_app_titlebar_print,
+      "style-app-titlebar-title": nx_tactics_ui_stylesheet.c_style_app_titlebar_title,
       "style-body": nx_tactics_ui_stylesheet.c_style_body,
-      "style-button-back": nx_tactics_ui_stylesheet.c_style_button_back,
       "style-card": nx_tactics_ui_stylesheet.c_style_card,
       "style-card-display": nx_tactics_ui_stylesheet.c_style_card_display,
       "style-card-display2": nx_tactics_ui_stylesheet.c_style_card_display2,
@@ -992,7 +992,9 @@ export default class nx_tactics_ui_stylesheet {
         vx_ui_ui.t_point,
         ":y",
         6
-      )
+      ),
+      ":scroll-y",
+      true
     ))
 
     // (const style-app-menubar)
@@ -1176,8 +1178,41 @@ export default class nx_tactics_ui_stylesheet {
       "A9C8FF",
       ":layout",
       vx_ui_ui.c_layout_button,
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        57
+      ),
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_iconsize
+    ))
+
+    // (const style-app-titlebar-title)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_app_titlebar_title, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-app-titlebar-title",
+      ":type",
+      vx_ui_ui.c_styletype_shared,
+      ":layout",
+      vx_ui_ui.c_layout_label,
+      ":font",
+      nx_tactics_ui_stylesheet.c_font_header1,
+      ":color-font",
+      "FFFFFF",
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        1
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        50
+      )
     ))
 
     // (const style-body)
@@ -1215,31 +1250,6 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_pin_expand
     ))
 
-    // (const style-button-back)
-    Object.assign(nx_tactics_ui_stylesheet.c_style_button_back, vx_core.f_new(
-      vx_ui_ui.t_style,
-      ":name",
-      "style-button-back",
-      ":type",
-      vx_ui_ui.c_styletype_shared,
-      ":image-background",
-      vx_core.f_new(
-        vx_ui_ui.t_image,
-        ":name",
-        "image-button-back",
-        ":label",
-        "Back",
-        ":file",
-        vx_core.f_new(
-          vx_data_file.t_file,
-          ":name",
-          "icon-backarrow.svg",
-          ":path",
-          "icons"
-        )
-      )
-    ))
-
     // (const style-card)
     Object.assign(nx_tactics_ui_stylesheet.c_style_card, vx_core.f_new(
       vx_ui_ui.t_style,
@@ -1252,7 +1262,9 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_flow_item,
       ":pointsize",
-      nx_tactics_ui_stylesheet.c_point_cardsize
+      nx_tactics_ui_stylesheet.c_point_cardsize,
+      ":scroll-y",
+      true
     ))
 
     // (const style-card-display)
@@ -1877,7 +1889,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-selected",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-border",
       "E2CCCC"
     ))
 
@@ -2059,7 +2071,9 @@ export default class nx_tactics_ui_stylesheet {
         "z": 0,
         "t": 0,
         "i": 0
-      }
+      },
+      "scroll-x": false,
+      "scroll-y": false
     })
 
     // (const style-unit-body)
@@ -2409,7 +2423,7 @@ export default class nx_tactics_ui_stylesheet {
           nx_tactics_ui_stylesheet.c_style_app_statusdrawer,
           nx_tactics_ui_stylesheet.c_style_app_titlebar,
           nx_tactics_ui_stylesheet.c_style_app_titlebar_print,
-          nx_tactics_ui_stylesheet.c_style_button_back,
+          nx_tactics_ui_stylesheet.c_style_app_titlebar_title,
           nx_tactics_ui_stylesheet.c_style_card,
           nx_tactics_ui_stylesheet.c_style_deck,
           nx_tactics_ui_stylesheet.c_style_image_background,

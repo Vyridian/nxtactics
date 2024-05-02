@@ -1400,52 +1400,23 @@ export default class nx_tactics_books_powers {
                   "* If slain, but the body is not burned or the head severed, the vampire will not die but instead enter a deep sleep while his body slowly recovers.\n* It is said that very old Vampires may be sleeping for centuries in Torpor."
                 )
               ),
-              vx_core.f_new(
-                vx_core.t_msgblock,
-                ":msgs",
+              ":weaknessmap",
+              nx_tactics_base.f_weaknessmap_from_weaknesslist(
                 vx_core.f_new(
-                  vx_core.t_msglist,
-                  vx_core.f_new(
-                    vx_core.t_msg,
-                    ":code",
-                    ":invalidtagfound",
-                    ":detail",
-                    vx_core.f_new(
-                      vx_core.t_anymap,
-                      ":type",
-                      nx_tactics_base.t_power,
-                      ":tag",
-                      "weakness"
-                    ),
-                    ":severity",
-                    2
-                  )
+                  nx_tactics_base.t_weakness,
+                  ":name",
+                  "Diablerie",
+                  ":summary",
+                  "* Diablerie is the act of a vampire drinking the blood of another vampire until it is destroyed. It is the ultimate symbol of the treachery innate in vampire society.\n					          * Diablerie is standard practice among the Sabbat and is strictly forbidden by the Carmarilla on pain of final death. Diablerie is one of the defining differences between the two sects.\n					          * Drinking blood from mortals is an ecstatic experience, the moment of death the climax. Drinking the eternal blood of vampires is that much more gratifying, with the moment of death a feeling like no other. Particularly corrupt vampires will commit diablerie simply for the pleasure.\n					          * This weakness is gained automatically when it is used successfully. Once gained, this ability forever marks the user and is clearly visible to those with can read auras.\n					          * [Requires]: Can only be used after a [Drink Blood] or [Consume Flesh] action on a vampire that drains the last of his blood.\n					          * [Automatic]: The vampire is destroyed and the [Diablerie] ability is gained. If the destroyed vampire has a higher level in [Vampirism], then the acting vampire immediately gains one level in [Vampirism]."
                 ),
-                ":msgblocks",
                 vx_core.f_new(
-                  vx_core.t_msgblocklist,
-                  vx_core.f_new(
-                    vx_core.t_msgblock,
-                    ":msgs",
-                    vx_core.f_new(
-                      vx_core.t_msglist,
-                      vx_core.f_new(
-                        vx_core.t_msg,
-                        ":code",
-                        ":invalidtagfound",
-                        ":detail",
-                        vx_core.f_new(
-                          vx_core.t_anymap,
-                          ":type",
-                          nx_tactics_base.t_power,
-                          ":tag",
-                          "weakness"
-                        ),
-                        ":severity",
-                        2
-                      )
-                    )
-                  )
+                  nx_tactics_base.t_weakness,
+                  ":name",
+                  "Rarified Tastes",
+                  ":titles",
+                  "Blood Connoisseur",
+                  ":summary",
+                  "* As Vampires age, their taste for blood becomes increasingly refined and they can no longer tolerate 'common' blood. Very old Vampires have exceedingly exotic tastes."
                 )
               )
             )

@@ -23,7 +23,7 @@
   :id "fatigue"
   :name "Damage: Fatigue"
   :titles "Physical Damage/Fatigue/Weaken/Exertion"
-  :image "images/card-fatigue.svg"
+  :image "images/card-damage-fatigue.svg"
   :summary
    "* If you have [Body]:0 then you are Exhausted. Any additional [Fatigue] is flipped to [Damage].
     * Exhausted: Cannot play odd [Attack] cards and your second action may only be [Recover]."))
@@ -33,17 +33,19 @@
   :id "slow"
   :name "Restraint: Slow"
   :titles "Constraint/Burden"
-  :image "images/card-slow.svg"
+  :image "images/card-restraint-slow.svg"
   :summary
     "* If you have [Move]:0, you are Encumbered. Any additional [Slow] is flipped to [Restraint].
-     * Encumbered: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up)."))
+     * Encumbered: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up).
+     * Special*: Each Move penalty is -25% rounded up. Simplified using the following chart:
+     *  Original Move:10-8-5-3-0 9-7-5-3-0 8-6-4-2-0 7-6-4-2-0 6-5-3-2-0 5-4-3-2-0 4-3-2-1-0 3-3-2-1-0 2-2-1-1-0 1-1-1-1-0"))
 
 (const stress : base/cardback
  (base/cardback
   :id "stress"
   :name "Trauma: Stress"
   :titles "Emotional Trauma/Stress/Duress/Horror"
-  :image "images/card-stress.svg"
+  :image "images/card-trauma-stress.svg"
   :summary
    "* If you have [Will]:0, you are [Shaken]. Any additional [Will] is flipped to [Trauma].
     * [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]"
@@ -61,7 +63,7 @@
   :id "stun"
   :name "Disorder: Stun"
   :titles "Mental Damage/Strain/Distraction/Surprise/Shock"
-  :image "images/card-stun.svg"
+  :image "images/card-disorder-stun.svg"
   :summary
    "* If you have [Mind]:0, you are [Confused]. Any additional [Stun] is flipped to [Disorder].
     * [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover]."))
@@ -86,7 +88,7 @@
  (base/damage
   :name "Bash: Head"
   :ranksuit base/ranksuit-ac
-  :image "images/card-hitlocation-head.svg"
+  :image "images/card-damage-head.svg"
   :summary
    "Minor: Head Ringing. Stun:1
     Moderate: Concussion. Stun:1 Push:1
@@ -97,7 +99,7 @@
  (base/damage
   :name "Pierce: Head"
   :ranksuit base/ranksuit-ad
-  :image "images/card-hitlocation-head.svg"
+  :image "images/card-damage-head.svg"
   :summary
    "Minor: Head Grazed. Stun:1
     Moderate: Pierced Throat. Can't speak. Stun: 1, Stress:1
@@ -108,7 +110,7 @@
  (base/damage
   :name "Hack: Head"
   :ranksuit base/ranksuit-ah
-  :image "images/card-hitlocation-head.svg"
+  :image "images/card-damage-head.svg"
   :summary
    "Minor: Head Graze. Stun:1
     Moderate: Head Slash. Slow:1 Bleeding:1
@@ -119,7 +121,7 @@
  (base/damage
   :name "Slash: Head"
   :ranksuit base/ranksuit-as
-  :image "images/card-hitlocation-head.svg"
+  :image "images/card-damage-head.svg"
   :summary
    "Minor: Head Cut. Bleeding:1
     Moderate: Face Gash. Stress:1 Bleeding:1
@@ -130,7 +132,7 @@
  (base/damage
   :name "Bash: Shoulders"
   :ranksuit base/ranksuit-kc
-  :image "images/card-hitlocation-shoulders.svg"
+  :image "images/card-damage-shoulders.svg"
   :summary
    "Minor: Shoulder Bruise. Fatigue:1
     Moderate: Bruised Ribs. Slow:1 Fatigue:1 Push:1
@@ -142,7 +144,7 @@
  (base/damage
   :name "Pierce: Shoulders"
   :ranksuit base/ranksuit-kd
-  :image "images/card-hitlocation-shoulders.svg"
+  :image "images/card-damage-shoulders.svg"
   :summary
    "Minor: Glance off Shoulder. Stun:1
     Moderate: Pierced Shoulder. Stun:1 Bleeding:1
@@ -154,7 +156,7 @@
  (base/damage
   :name "Hack: Shoulders"
   :ranksuit base/ranksuit-kh
-  :image "images/card-hitlocation-shoulders.svg"
+  :image "images/card-damage-shoulders.svg"
   :summary
    "Minor: Chest Graze. Stress:1
     Moderate: Chest Slash. Stress:1 Bleeding:1
@@ -166,7 +168,7 @@
  (base/damage
   :name "Slash: Shoulders"
   :ranksuit base/ranksuit-ks
-  :image "images/card-hitlocation-shoulders.svg"
+  :image "images/card-damage-shoulders.svg"
   :summary
    "Minor: Shoulder Cut. Bleeding:1
     Moderate: Shoulder Slash. Slow:1 Bleeding:1
@@ -179,7 +181,7 @@
   :name "Bash: Chest"
   :titles "Bash: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qc
-  :image "images/card-hitlocation-chest.svg"
+  :image "images/card-damage-chest.svg"
   :summary
    "Minor: Chest Bruise. Fatigue:1
     Moderate: Wind Knocked Out. Slow:1 Fatigue:1 Push:1
@@ -192,7 +194,7 @@
   :name "Pierce: Chest"
   :titles "Pierce: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qd
-  :image "images/card-hitlocation-chest.svg"
+  :image "images/card-damage-chest.svg"
   :summary
    "Minor: Chest Graze. Bleeding:1
     Moderate: Chest Pierced. Stun:1 Bleeding:1
@@ -205,7 +207,7 @@
   :name "Hack: Chest"
   :titles "Hack: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qh
-  :image "images/card-hitlocation-chest.svg"
+  :image "images/card-damage-chest.svg"
   :summary
    "Minor: Chest Cut. Bleeding:1
     Moderate: Chest Slash. Bleeding:1 Push:1
@@ -218,7 +220,7 @@
   :name "Slash: Chest"
   :titles "Slash: Middle Chest/Back/Lungs/Heart"
   :ranksuit base/ranksuit-qs
-  :image "images/card-hitlocation-chest.svg"
+  :image "images/card-damage-chest.svg"
   :summary
    "Minor: Chest Cut. Bleeding:1
     Moderate: Chest Slash. Slow:1 Bleeding:1
@@ -231,7 +233,7 @@
   :name "Bash: Abdomen"
   :titles "Bash: Abdomen/Lower Back"
   :ranksuit base/ranksuit-jc
-  :image "images/card-hitlocation-abdomen.svg"
+  :image "images/card-damage-abdomen.svg"
   :summary
    "Minor: Stomach Bruise. Push:1
     Moderate: Solar Plexus Bruise. Slow:1 Fatigue:1
@@ -243,7 +245,7 @@
   :name "Pierce: Abdomen"
   :titles "Pierce: Abdomen/Lower Back"
   :ranksuit base/ranksuit-jd
-  :image "images/card-hitlocation-abdomen.svg"
+  :image "images/card-damage-abdomen.svg"
   :summary
    "Minor: Side Puncture. Bleeding:1
     Moderate: Belly Puncture. Slow:1 Bleeding:1
@@ -255,7 +257,7 @@
   :name "Hack: Abdomen"
   :titles "Hack: Abdomen/Lower Back"
   :ranksuit base/ranksuit-jh
-  :image "images/card-hitlocation-abdomen.svg"
+  :image "images/card-damage-abdomen.svg"
   :summary
    "Minor: Glance off Hip. Bleeding:1
     Moderate: Stomach Cut. Bleeding:1 Stress: 1
@@ -267,7 +269,7 @@
   :name "Slash: Abdomen"
   :titles "Slash: Abdomen/Lower Back"
   :ranksuit base/ranksuit-js
-  :image "images/card-hitlocation-abdomen.svg"
+  :image "images/card-damage-abdomen.svg"
   :summary
    "Minor: Stomach Cut. Bleeding:1
     Moderate: Stomach Slash. Slow:1 Bleeding:1
@@ -279,7 +281,7 @@
   :name "Bash: Vitals"
   :titles "Bash: Hips/Groin"
   :ranksuit base/ranksuit-tc
-  :image "images/card-hitlocation-vitals.svg"
+  :image "images/card-damage-vitals.svg"
   :summary
    "Minor: Hip Bruise. Stun:1
     Moderate: Genital Slam. Slow:1 Stun:1 Stress:1
@@ -291,7 +293,7 @@
   :name "Pierce: Vitals"
   :titles "Pierce: Hips/Groin"
   :ranksuit base/ranksuit-td
-  :image "images/card-hitlocation-vitals.svg"
+  :image "images/card-damage-vitals.svg"
   :summary
    "Minor: Buttock Pierced. Bleeding:1
     Moderate: Gut Pierced. Stun:1 Bleeding:1
@@ -303,7 +305,7 @@
   :name "Hack: Vitals"
   :titles "Hack: Hips/Groin"
   :ranksuit base/ranksuit-th
-  :image "images/card-hitlocation-vitals.svg"
+  :image "images/card-damage-vitals.svg"
   :summary
    "Minor: Hip Graze. Bleeding:1
     Moderate: Hip Gash. Stress:1 Bleeding:1
@@ -315,7 +317,7 @@
   :name "Slash: Vitals"
   :titles "Slash: Hips/Groin"
   :ranksuit base/ranksuit-ts
-  :image "images/card-hitlocation-vitals.svg"
+  :image "images/card-damage-vitals.svg"
   :summary
    "Minor: Hip Graze. Bleeding:1
     Moderate: Groin Slash. Slow:1 Bleeding:1
@@ -327,7 +329,7 @@
   :name "Bash: Left Arm"
   :titles "Bash: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9c
-  :image "images/card-hitlocation-arm-left.svg"
+  :image "images/card-damage-arm-left.svg"
   :summary
    "Minor: Arm Bruise. Push:1
     Moderate: Arm Battered. Fatigue:1 Push:1
@@ -339,7 +341,7 @@
   :name "Pierce: Left Arm"
   :titles "Pierce: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9d
-  :image "images/card-hitlocation-arm-left.svg"
+  :image "images/card-damage-arm-left.svg"
   :summary
    "Minor: Arm Graze. Stun:1
     Moderate: Arm Numb. Stun:1 Bleeding:1
@@ -351,7 +353,7 @@
   :name "Hack: Left Arm"
   :titles "Hack: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9h
-  :image "images/card-hitlocation-arm-left.svg"
+  :image "images/card-damage-arm-left.svg"
   :summary
    "Minor: Arm Graze. Withdraw:1
     Moderate: Arm Gash. Withdraw:1 Bleeding:1
@@ -363,7 +365,7 @@
   :name "Slash: Left Arm"
   :titles "Slash: Left Upper Arm/Elbow"
   :ranksuit base/ranksuit-9s
-  :image "images/card-hitlocation-arm-left.svg"
+  :image "images/card-damage-arm-left.svg"
   :summary
    "Minor: Arm Cut. Bleeding:1
     Moderate: Arm Slash. Slow:1 Bleeding:1
@@ -375,7 +377,7 @@
   :name "Bash: Right Arm"
   :titles "Bash: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8c
-  :image "images/card-hitlocation-arm-right.svg"
+  :image "images/card-damage-arm-right.svg"
   :summary
    "Minor: Arm Bruise. Push:1
     Moderate: Arm Battered. Fatigue:1 Push:1
@@ -387,7 +389,7 @@
   :name "Pierce: Right Arm"
   :titles "Pierce: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8d
-  :image "images/card-hitlocation-arm-right.svg"
+  :image "images/card-damage-arm-right.svg"
   :summary
    "Minor: Arm Graze. Stun:1
     Moderate: Arm Pierced. Stun:1 Bleeding:1
@@ -399,7 +401,7 @@
   :name "Hack: Right Arm"
   :titles "Hack: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8h
-  :image "images/card-hitlocation-arm-right.svg"
+  :image "images/card-damage-arm-right.svg"
   :summary
    "Minor: Arm Graze. Withdraw:1
     Moderate: Arm Gash. Withdraw:1 Bleeding:1
@@ -411,7 +413,7 @@
   :name "Slash: Right Arm"
   :titles "Slash: Right Upper Arm/Elbow"
   :ranksuit base/ranksuit-8s
-  :image "images/card-hitlocation-arm-right.svg"
+  :image "images/card-damage-arm-right.svg"
   :summary
    "Minor: Arm Cut. Bleeding:1
     Moderate: Arm Slash. Slow:1 Bleeding:1
@@ -423,7 +425,7 @@
   :name "Bash: Left Hand"
   :titles "Bash: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7c
-  :image "images/card-hitlocation-hand-left.svg"
+  :image "images/card-damage-hand-left.svg"
   :summary
    "Minor: Forearm Bruise. Fatigue:1
     Moderate: Hand Numb. Drop:1 Stress:1 Stun:1
@@ -435,7 +437,7 @@
   :name "Pierce: Left Hand"
   :titles "Pierce: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7d
-  :image "images/card-hitlocation-hand-left.svg"
+  :image "images/card-damage-hand-left.svg"
   :summary
    "Minor: Forearm Graze. Stun:1
     Moderate: Forearm Pierced. Stun:1 Bleeding:1
@@ -447,7 +449,7 @@
   :name "Hack: Left Hand"
   :titles "Hack: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7h
-  :image "images/card-hitlocation-hand-left.svg"
+  :image "images/card-damage-hand-left.svg"
   :summary
    "Minor: Forearm Graze. Withdraw:1
     Moderate: Forearm Gash. Drop:1 Stress:1 Bleeding:1
@@ -459,7 +461,7 @@
   :name "Slash: Left Hand"
   :titles "Slash: Left Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-7s
-  :image "images/card-hitlocation-hand-left.svg"
+  :image "images/card-damage-hand-left.svg"
   :summary
    "Minor: Forearm Cut. Bleeding:1
     Moderate: Forearm Slash. Drop:1 Slow:1 Bleeding:1
@@ -471,7 +473,7 @@
   :name "Bash: Right Hand"
   :titles "Bash: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6c
-  :image "images/card-hitlocation-hand-right.svg"
+  :image "images/card-damage-hand-right.svg"
   :summary
    "Minor: Forearm Bruise. Fatigue:1
     Moderate: Hand Numb. Drop:1 Stress:1 Stun:1
@@ -483,7 +485,7 @@
   :name "Pierce: Right Hand"
   :titles "Pierce: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6d
-  :image "images/card-hitlocation-hand-right.svg"
+  :image "images/card-damage-hand-right.svg"
   :summary
    "Minor: Forearm Graze. Stun:1
     Moderate: Forearm Pierced. Stun:1 Bleeding:1
@@ -495,7 +497,7 @@
   :name "Hack: Right Hand"
   :titles "Hack: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6h
-  :image "images/card-hitlocation-hand-right.svg"
+  :image "images/card-damage-hand-right.svg"
   :summary
    "Minor: Forearm Graze. Withdraw:1
     Moderate: Forearm Gash. Drop:1 Stress:1 Bleeding:1
@@ -507,7 +509,7 @@
   :name "Slash: Right Hand"
   :titles "Slash: Right Lower Arm/Wrist/Hand"
   :ranksuit base/ranksuit-6s
-  :image "images/card-hitlocation-hand-right.svg"
+  :image "images/card-damage-hand-right.svg"
   :summary
    "Minor: Forearm Cut. Bleeding:1
     Moderate: Forearm Slash. Drop:1 Slow:1 Bleeding:1
@@ -519,7 +521,7 @@
   :name "Bash: Left Leg"
   :titles "Bash: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5c
-  :image "images/card-hitlocation-leg-left.svg"
+  :image "images/card-damage-leg-left.svg"
   :summary
    "Minor: Thigh Bruise. Fatigue:1
     Moderate: Knee Damage. Slow:1 Fatigue:1
@@ -531,19 +533,19 @@
   :name "Pierce: Left Leg"
   :titles "Pierce: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5d
-  :image "images/card-hitlocation-leg-left.svg"
+  :image "images/card-damage-leg-left.svg"
   :summary
    "Minor: Thigh Graze. Slow:1
     Moderate: Thigh Pierced. Stress:1 Bleeding:1
     Major: Knee Pierced. Hobbled. Slow:3 Bleeding:1
-    Extreme: Nerve Damage. Hobbled. Bleeding:2 Stress:2"))
+    Extreme: Knee Disabled. Hobbled. Bleeding:2 Stress:2"))
 
 (const damage-5h : base/damage
  (base/damage
   :name "Hack: Left Leg"
   :titles "Hack: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5h
-  :image "images/card-hitlocation-leg-left.svg"
+  :image "images/card-damage-leg-left.svg"
   :summary
    "Minor: Thigh Graze. Withdraw:1
     Moderate: Thigh Slash. Withdraw:1 Bleeding:1
@@ -555,7 +557,7 @@
   :name "Slash: Left Leg"
   :titles "Slash: Left Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-5s
-  :image "images/card-hitlocation-leg-left.svg"
+  :image "images/card-damage-leg-left.svg"
   :summary
    "Minor: Thigh Cut. Bleeding:1
     Moderate: Thigh Slash. Scarred. Slow:1 Bleeding:1
@@ -567,7 +569,7 @@
   :name "Bash: Right Leg"
   :titles "Bash: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4c
-  :image "images/card-hitlocation-leg-right.svg"
+  :image "images/card-damage-leg-right.svg"
   :summary
    "Minor: Thigh Bruise. Fatigue:1
     Moderate: Knee Damage. Slow:1 Fatigue:1
@@ -579,19 +581,19 @@
   :name "Pierce: Right Leg"
   :titles "Pierce: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4d
-  :image "images/card-hitlocation-leg-right.svg"
+  :image "images/card-damage-leg-right.svg"
   :summary
    "Minor: Thigh Graze. Slow:1
     Moderate: Thigh Pierced. Stress:1 Bleeding:1
     Major: Knee Pierced. Hobbled. Slow:3 Bleeding:1
-    Extreme: Nerve Damage. Hobbled. Bleeding:2 Stress:2"))
+    Extreme: Knee Disabled. Hobbled. Bleeding:2 Stress:2"))
 
 (const damage-4h : base/damage
  (base/damage
   :name "Hack: Right Leg"
   :titles "Hack: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4h
-  :image "images/card-hitlocation-leg-right.svg"
+  :image "images/card-damage-leg-right.svg"
   :summary
    "Minor: Thigh Graze. Withdraw:1
     Moderate: Thigh Cut. Withdraw:1 Bleeding:1
@@ -603,7 +605,7 @@
   :name "Slash: Right Leg"
   :titles "Slash: Right Upper Leg/Thigh/Knee"
   :ranksuit base/ranksuit-4s
-  :image "images/card-hitlocation-leg-right.svg"
+  :image "images/card-damage-leg-right.svg"
   :summary
    "Minor: Thigh Cut. Bleeding:1
     Moderate: Thigh Slash. Scarred. Slow:1 Bleeding:1
@@ -615,7 +617,7 @@
   :name "Bash: Left Foot"
   :titles "Bash: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3c
-  :image "images/card-hitlocation-foot-left.svg"
+  :image "images/card-damage-foot-left.svg"
   :summary
    "Minor: Shin Bruised. Slow:1
     Moderate: Foot Smash. Slow:1 Stress:1
@@ -627,7 +629,7 @@
   :name "Pierce: Left Foot"
   :titles "Pierce: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3d
-  :image "images/card-hitlocation-foot-left.svg"
+  :image "images/card-damage-foot-left.svg"
   :summary
    "Minor: Ankle Graze. Slow:1
     Moderate: Foot Slash. Slow:1 Bleeding:1
@@ -639,7 +641,7 @@
   :name "Hack: Left Foot"
   :titles "Hack: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3h
-  :image "images/card-hitlocation-foot-left.svg"
+  :image "images/card-damage-foot-left.svg"
   :summary
    "Minor: Ankle Grazed. Withdraw:1
     Moderate: Ankle Gash. Withdraw:1 Bleeding:1
@@ -651,7 +653,7 @@
   :name "Slash: Left Foot"
   :titles "Slash: Left Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-3s
-  :image "images/card-hitlocation-foot-left.svg"
+  :image "images/card-damage-foot-left.svg"
   :summary
    "Minor: Foot Cut. Bleeding:1
     Moderate: Ankle Slash. Slow:1 Bleeding:1
@@ -663,7 +665,7 @@
   :name "Bash: Right Foot"
   :titles "Bash: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2c
-  :image "images/card-hitlocation-foot-right.svg"
+  :image "images/card-damage-foot-right.svg"
   :summary
    "Minor: Shin Bruised. Slow:1
     Moderate: Foot Smash. Slow:1 Stress:1
@@ -675,7 +677,7 @@
   :name "Pierce: Right Foot"
   :titles "Pierce: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2d
-  :image "images/card-hitlocation-foot-right.svg"
+  :image "images/card-damage-foot-right.svg"
   :summary
    "Minor: Ankle Graze. Slow:1
     Moderate: Foot Slash. Slow:1 Bleeding:1
@@ -687,7 +689,7 @@
   :name "Hack: Right Foot"
   :titles "Hack: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2h
-  :image "images/card-hitlocation-foot-right.svg"
+  :image "images/card-damage-foot-right.svg"
   :summary
    "Minor: Ankle Grazed. Withdraw:1
     Moderate: Ankle Gash. Withdraw:1 Bleeding:1
@@ -699,12 +701,364 @@
   :name "Slash: Right Foot"
   :titles "Slash: Right Lower Leg/Shin/Ankle/Foot"
   :ranksuit base/ranksuit-2s
-  :image "images/card-hitlocation-foot-right.svg"
+  :image "images/card-damage-foot-right.svg"
   :summary
    "Minor: Foot Cut. Bleeding:1
     Moderate: Ankle Slash. Slow:1 Bleeding:1
     Major: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
     Extreme: Foot Severed. Hobbled. Bleeding:2"))
+
+(const disorder-wild-black : base/damage
+ (base/damage
+  :name "Disorder: Deck"
+  :ranksuit base/ranksuit-jokerblack
+  :image "images/card-hitlocation-jester-black.svg"
+  :summary
+   "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
+
+(const disorder-wild-red : base/damage
+ (base/damage
+  :name "Disorder: Discard"
+  :ranksuit base/ranksuit-jokerred
+  :image "images/card-hitlocation-jester-red.svg"
+  :summary
+   "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
+
+(const disorder-ac : base/damage
+ (base/damage
+  :name "Loss: Awareness"
+  :ranksuit base/ranksuit-ac
+  :image "images/card-disorder-loss.svg"
+  :summary
+   "Minor - Fatigue. Fatigue:1
+    Major - Must sleep half the day. Fatigue:2
+    Critical - Must sleep 3/4 of day. Falls asleep randomly. Fatigue:4
+    Extreme - Comatose. [Immobilized]"))
+
+(const disorder-ad : base/damage
+ (base/damage
+  :name "Delusion: Reality"
+  :ranksuit base/ranksuit-ad
+  :image "images/card-disorder-delusion.svg"
+  :summary
+   "Minor - Hear noises and voices. Stun:1
+    Major - See things that aren't there. Stun:2
+    Critical - Terrible Hallucinations. Stun:4
+    Extreme - Lost in a living hell. Screaming. [Immobilized] Stun:4"))
+
+(const disorder-as : base/damage
+ (base/damage
+  :name "Neural: Head"
+  :ranksuit base/ranksuit-as
+  :image "images/card-disorder-head.svg"
+  :summary
+   "Minor: Nervous Tick. Stun:1
+    Major: Tremors. Stun:1 Slow:1
+    Critical: Convulsions. [Hobbled] Stun:2 Slow:2
+    Extreme: Violent Seizures. [Dying] [Immobilized] Stun:4"))
+
+(const disorder-kc : base/damage
+ (base/damage
+  :name "Loss: Memory"
+  :ranksuit base/ranksuit-kc
+  :image "images/card-disorder-loss.svg"
+  :summary
+   "Minor: Forgetful. Stress:1
+    Major: Significant memory loss. Half of Skills at 0. Stun:1 Stress:1
+    Critical: Most memories lost. All skills at 0. Stun:2 Stress:2
+    Extreme: Cannot remember or retain memories. Stun:3 Stress:3"))
+
+(const disorder-qc : base/damage
+ (base/damage
+  :name "Loss: Personality"
+  :ranksuit base/ranksuit-qc
+  :image "images/card-disorder-loss.svg"
+  :summary
+   "Minor: Irritable and Emotional. Stress:1
+    Major: Denial of problem. Aggressive and impatient. Can't handle stress. Stress:2
+    Critical: Major personality change. Stun:2 Stress:3
+    Extreme: Become a completely different person. Become an NPC. Stun:2 Stress:2"))
+
+(const restraint-wild-black : base/damage
+ (base/damage
+  :name "Restraint: Deck"
+  :ranksuit base/ranksuit-jokerblack
+  :image "images/card-hitlocation-jester-black.svg"
+  :summary
+   "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
+
+(const restraint-wild-red : base/damage
+ (base/damage
+  :name "Restraint: Discard"
+  :ranksuit base/ranksuit-jokerred
+  :image "images/card-hitlocation-jester-red.svg"
+  :summary
+   "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
+
+(const restraint-ac : base/damage
+ (base/damage
+  :name "Constrict: Head"
+  :ranksuit base/ranksuit-ac
+  :image "images/card-restraint-head.svg"
+  :summary
+   "Minor: Hair Ensnared. Slow:1
+    Moderate: Face Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Skull Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Neck Constructed. [Suffocating] [Dying] Remove:3 Damage"))
+
+(const restraint-ad : base/damage
+ (base/damage
+  :name "Bind: Head"
+  :ranksuit base/ranksuit-ad
+  :image "images/card-restraint-head.svg"
+  :summary
+   "Minor: Hair Ensnared. Slow:1
+    Moderate: Face Ensnared. Slow:2 Remove:1 Actions
+    Major: Head Ensnared. Slow:3 Remove:2 Actions
+    Extreme: Neck Ensnared. [Suffocating] Remove:3 Actions"))
+
+(const restraint-ah : base/damage
+ (base/damage
+  :name "Hold: Head"
+  :ranksuit base/ranksuit-ah
+  :image "images/card-restraint-head.svg"
+  :summary
+   "Minor: Hair Held. Pull:1. Remove:Any Hit
+    Moderate: Jaw Held. Pull:1. Remove:1 Damage
+    Major: Head Held. Pull:1. Remove:2 Damage
+    Extreme: Neck Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restraint-as : base/damage
+ (base/damage
+  :name "Lock: Head"
+  :ranksuit base/ranksuit-as
+  :image "images/card-restraint-head.svg"
+  :summary
+   "Minor: Hair caught. Slow:1. Remove:Any Hit
+    Moderate: Head lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Neck sprained. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Neck dislocated. [Paralyzed] Stun:3. Remove:3 Damage"))
+
+(const restraint-5c : base/damage
+ (base/damage
+  :name "Constrict: Left Leg"
+  :titles "Constrict: Left Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-5c
+  :image "images/card-restraint-leg-left.svg"
+  :summary
+   "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Knee Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Thigh Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restraint-5d : base/damage
+ (base/damage
+  :name "Bind: Left Leg"
+  :titles "Bind: Left Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-5d
+  :image "images/card-restraint-leg-left.svg"
+  :summary
+   "Minor: Leg Ensnared. Slow:1 Remove:1 Action
+    Moderate: Leg Ensnared. Slow:2 Remove:2 Actions
+    Major: Knee Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Thigh Ensnared. [Hobbled] Remove:4 Actions"))
+
+(const restraint-5h : base/damage
+ (base/damage
+  :name "Hold: Left Leg"
+  :titles "Hold: Left Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-5h
+  :image "images/card-restraint-leg-left.svg"
+  :summary
+   "Minor: Leg Held. Pull:1. Remove:Any Hit
+    Moderate: Leg Held. Pull:1. Remove:1 Damage
+    Major: Knee Held. Pull:1. Remove:2 Damage
+    Extreme: Thigh Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restraint-5s : base/damage
+ (base/damage
+  :name "Lock: Left Leg"
+  :titles "Lock: Left Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-5s
+  :image "images/card-restraint-leg-left.svg"
+  :summary
+   "Minor: Thigh held. Slow:1. Remove:Any Hit
+    Moderate: Knee held. Slow:1 Stun:1. Remove:1 Damage
+    Major: Knee lock. Foot useless. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Knee dislocated. Knee useless. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(const restraint-4c : base/damage
+ (base/damage
+  :name "Constrict: Right Leg"
+  :titles "Constrict: Right Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-4c
+  :image "images/card-restraint-leg-right.svg"
+  :summary
+   "Minor: Leg Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Leg Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Knee Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Thigh Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restraint-4d : base/damage
+ (base/damage
+  :name "Bind: Right Leg"
+  :titles "Bind: Right Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-4d
+  :image "images/card-restraint-leg-right.svg"
+  :summary
+   "Minor: Leg Ensnared. Slow:1 Remove:1 Action
+    Moderate: Leg Ensnared. Slow:2 Remove:2 Actions
+    Major: Knee Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Thigh Ensnared. [Hobbled] Remove:4 Actions"))
+
+(const restraint-4h : base/damage
+ (base/damage
+  :name "Hold: Right Leg"
+  :titles "Hold: Right Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-4h
+  :image "images/card-restraint-leg-right.svg"
+  :summary
+   "Minor: Leg Held. Pull:1. Remove:Any Hit
+    Moderate: Leg Held. Pull:1. Remove:1 Damage
+    Major: Knee Held. Pull:1. Remove:2 Damage
+    Extreme: Thigh Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restraint-4s : base/damage
+ (base/damage
+  :name "Lock: Right Leg"
+  :titles "Lock: Right Upper Leg/Thigh/Knee"
+  :ranksuit base/ranksuit-4s
+  :image "images/card-restraint-leg-right.svg"
+  :summary
+   "Minor: Thigh held. Slow:1. Remove:Any Hit
+    Moderate: Knee held. Slow:1 Stun:1. Remove:1 Damage
+    Major: Knee lock. Foot useless. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Knee dislocated. Knee useless. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(const restraint-3c : base/damage
+ (base/damage
+  :name "Constrict: Left Foot"
+  :titles "Constrict: Left Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2c
+  :image "images/card-restraint-foot-left.svg"
+  :summary
+   "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Ankle Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Shin Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restraint-3d : base/damage
+ (base/damage
+  :name "Bind: Left Foot"
+  :titles "Bind: Left Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2d
+  :image "images/card-restraint-foot-left.svg"
+  :summary
+   "Minor: Toes Ensnared. Slow:1 Remove:1 Action
+    Moderate: Foot Ensnared. Slow:2 Remove:2 Actions
+    Major: Ankle Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Shin Ensnared. [Hobbled] Remove:4 Actions"))
+
+(const restraint-3h : base/damage
+ (base/damage
+  :name "Hold: Left Foot"
+  :titles "Hold: Left Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2h
+  :image "images/card-restraint-foot-left.svg"
+  :summary
+   "Minor: Toes Held. Pull:1. Remove:Any Hit
+    Moderate: Foot Held. Pull:1. Remove:1 Damage
+    Major: Ankle Held. Pull:1. Remove:2 Damage
+    Extreme: Shin Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restraint-3s : base/damage
+ (base/damage
+  :name "Lock: Left Foot"
+  :titles "Lock: Left Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2s
+  :image "images/card-restraint-foot-left.svg"
+  :summary
+   "Minor: Foot lock. Slow:1. Remove:Any Hit
+    Moderate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Foot bones dislocated. Foot useless. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Ankle dislocated. Ankle useless. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(const restraint-2c : base/damage
+ (base/damage
+  :name "Constrict: Right Foot"
+  :titles "Constrict: Right Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2c
+  :image "images/card-restraint-foot-right.svg"
+  :summary
+   "Minor: Toes Constricted. Slow:1 Every turn. Remove:Any Hit
+    Moderate: Foot Constricted. Slow:1 Every turn. Remove:1 Damage
+    Major: Ankle Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
+    Extreme: Shin Constricted. [Hobbled]. Slow:3 Every turn. Remove:3 Damage"))
+
+(const restraint-2d : base/damage
+ (base/damage
+  :name "Bind: Right Foot"
+  :titles "Bind: Right Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2d
+  :image "images/card-restraint-foot-right.svg"
+  :summary
+   "Minor: Toes Ensnared. Slow:1 Remove:1 Action
+    Moderate: Foot Ensnared. Slow:2 Remove:2 Actions
+    Major: Ankle Ensnared. Slow:3 Remove:3 Actions
+    Extreme: Shin Ensnared. [Hobbled] Remove:4 Actions"))
+
+(const restraint-2h : base/damage
+ (base/damage
+  :name "Hold: Right Foot"
+  :titles "Hold: Right Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2h
+  :image "images/card-restraint-foot-right.svg"
+  :summary
+   "Minor: Toes Held. Pull:1. Remove:Any Hit
+    Moderate: Foot Held. Pull:1. Remove:1 Damage
+    Major: Ankle Held. Pull:1. Remove:2 Damage
+    Extreme: Shin Held. Knockdown. Pull:1. Remove:3 Damage"))
+
+(const restraint-2s : base/damage
+ (base/damage
+  :name "Lock: Right Foot"
+  :titles "Lock: Right Lower Leg/Shin/Ankle/Foot"
+  :ranksuit base/ranksuit-2s
+  :image "images/card-restraint-foot-right.svg"
+  :summary
+   "Minor: Foot lock. Slow:1. Remove:Any Hit
+    Moderate: Ankle lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Foot bones dislocated. Foot useless. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Ankle dislocated. Ankle useless. [Hobbled] Stun:3. Remove:3 Damage"))
+
+(const trauma-wild-black : base/damage
+ (base/damage
+  :name "Trauma: Deck"
+  :ranksuit base/ranksuit-jokerblack
+  :image "images/card-hitlocation-jester-black.svg"
+  :summary
+   "Search the Deck for any card and play it. Then Shuffle Discards into Deck."))
+
+(const trauma-wild-red : base/damage
+ (base/damage
+  :name "Trauma: Discard"
+  :ranksuit base/ranksuit-jokerred
+  :image "images/card-hitlocation-jester-red.svg"
+  :summary
+   "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
+
+(const trauma-as : base/damage
+ (base/damage
+  :name "Fear: Death"
+  :ranksuit base/ranksuit-as
+  :image "images/card-trauma-fear.svg"
+  :summary
+   "Minor: Cannot interact with dead things.
+    Major: Collapse in fear if only 2 Body remain.
+    Critical: Collapse in fear when over half Wounds taken or death is even mentioned.
+    Extreme: Believe that death is pursuing them. Permanently flee until collapse in exhaustion."
+  :reference
+   "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over."))
 
 (func deck-bleeding : base/deck
  (base/deck
@@ -725,10 +1079,6 @@
 (func deck-damage : base/deck
  (base/deck
   :name "Damage"
-  :summary "* S-Hack Blood/Gore/Dismember
-            * H-Slash Blood/Slow
-            * C-Bash/Fatigue/Push
-            * D-Pierce/Stab/Stun/Pin/Disable"
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
@@ -800,10 +1150,67 @@
  (base/deck
   :name "Disorder"
   :titles "Crazed, Insane, Nonsensical, Obsessed, Unhinged"
-  :summary "* S-Delusion/Racism/Irrational/Lost in Fantasy/Lost in Nightmare/Lost in Hell
-            * H-Compulsion/Obsession/Monomaniacal
-            * C-Disfunction/Shock/Disable/Tremors/Spasms/Seizures/Stroke/Nerve Damage/Paralysis/Brain Damage
-            * D-Distortion/Misperception/Misunderstand/Miscommunicate/Amnesia/Aphasia")
+  :summary
+   "* C-Loss/Disfunction/Misunderstand/Miscommunicate/Amnesia/Aphasia
+    * D-Delusion/Racism/Irrational/Lost in Fantasy/Lost in Nightmare/Lost in Hell/Distortion/Misperception
+    * H-Compulsion/Obsession/Monomaniacal
+    * S-Neural/Shock/Disable/Tremors/Spasms/Seizures/Stroke/Nerve Damage/Paralysis/Brain"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     disorder-wild-black
+     disorder-wild-red
+     disorder-ac
+     disorder-ad
+     disorder-as
+     disorder-kc
+     damage-kd
+     damage-kh
+     damage-ks
+     disorder-qc
+     damage-qd
+     damage-qh
+     damage-qs
+     damage-jc
+     damage-jd
+     damage-jh
+     damage-js
+     damage-tc
+     damage-td
+     damage-th
+     damage-ts
+     damage-9c
+     damage-9d
+     damage-9h
+     damage-9s
+     damage-8c
+     damage-8d
+     damage-8h
+     damage-8s
+     damage-7c
+     damage-7d
+     damage-7h
+     damage-7s
+     damage-6c
+     damage-6d
+     damage-6h
+     damage-6s
+     damage-5c
+     damage-5d
+     damage-5h
+     damage-5s
+     damage-4c
+     damage-4d
+     damage-4h
+     damage-4s
+     damage-3c
+     damage-3d
+     damage-3h
+     damage-3s
+     damage-2c
+     damage-2d
+     damage-2h
+     damage-2s)))
  :doc "Damage to the Mind")
 
 (func deck-disorderback : base/deck
@@ -814,23 +1221,149 @@
     stun 54))
  :doc "Stun Card Back Deck")
 
+(func deck-restraint : base/deck
+ (base/deck
+  :name "Restraint"
+  :titles ""
+  :summary
+   "* C-Constrict/Break
+    * D-Bind/Snare/Snag
+    * H-Hold/Push/Pull
+    * S-Lock/Immobilize/Dislocate"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     restraint-wild-black
+     restraint-wild-red
+     restraint-ac
+     restraint-ad
+     restraint-ah
+     restraint-as
+     damage-kc
+     damage-kd
+     damage-kh
+     damage-ks
+     damage-qc
+     damage-qd
+     damage-qh
+     damage-qs
+     damage-jc
+     damage-jd
+     damage-jh
+     damage-js
+     damage-tc
+     damage-td
+     damage-th
+     damage-ts
+     damage-9c
+     damage-9d
+     damage-9h
+     damage-9s
+     damage-8c
+     damage-8d
+     damage-8h
+     damage-8s
+     damage-7c
+     damage-7d
+     damage-7h
+     damage-7s
+     damage-6c
+     damage-6d
+     damage-6h
+     damage-6s
+     restraint-5c
+     restraint-5d
+     restraint-5h
+     restraint-5s
+     restraint-4c
+     restraint-4d
+     restraint-4h
+     restraint-4s
+     restraint-3c
+     restraint-3d
+     restraint-3h
+     restraint-3s
+     restraint-2c
+     restraint-2d
+     restraint-2h
+     restraint-2s)))
+ :doc "Restraint Card Deck")
+
+(func deck-restraintback : base/deck
+ (base/deck
+  :name "Restraint Back"
+  :cardmap
+   (base/cardmap-copy<-card-num
+    slow 54))
+ :doc "Restraint Card Back Deck")
+
 (func deck-trauma : base/deck
  (base/deck
   :name "Trauma"
   :titles ""
-  :summary "* S-Fear/Cowed/Died of Fear
-            * H-Despair/Apathy/Depression/Broken/Suicidal
-            * C-Anger/Surly/Suicidal Rage
-            * D-Doubt/Servitude/Coverted")
- :doc "Damage to the Will")
-
-(func deck-slow : base/deck
- (base/deck
-  :name "Slow Back"
+  :summary
+   "* C-Anger/Fury/Surly/Suicidal Rage
+    * D-Doubt/Servitude/Coverted
+    * H-Despair/Apathy/Depression/Broken/Suicidal
+    * S-Fear/Cowed/Died of Fear"
   :cardmap
-   (base/cardmap-copy<-card-num
-    slow 54))
- :doc "Slow Card Back Deck")
+   (base/cardmap<-cardlist
+    (base/cardlist
+     trauma-wild-black
+     trauma-wild-red
+     restraint-ac
+     restraint-ad
+     restraint-ah
+     trauma-as
+     damage-kc
+     damage-kd
+     damage-kh
+     damage-ks
+     damage-qc
+     damage-qd
+     damage-qh
+     damage-qs
+     damage-jc
+     damage-jd
+     damage-jh
+     damage-js
+     damage-tc
+     damage-td
+     damage-th
+     damage-ts
+     damage-9c
+     damage-9d
+     damage-9h
+     damage-9s
+     damage-8c
+     damage-8d
+     damage-8h
+     damage-8s
+     damage-7c
+     damage-7d
+     damage-7h
+     damage-7s
+     damage-6c
+     damage-6d
+     damage-6h
+     damage-6s
+     damage-5c
+     damage-5d
+     damage-5h
+     damage-5s
+     damage-4c
+     damage-4d
+     damage-4h
+     damage-4s
+     restraint-3c
+     restraint-3d
+     restraint-3h
+     restraint-3s
+     restraint-2c
+     restraint-2d
+     restraint-2h
+     restraint-2s)))
+ :doc "Trauma Card Deck")
 
 (func deck-traumaback : base/deck
  (base/deck

@@ -563,7 +563,8 @@ export default class nx_tactics_ui_uitactics {
           s2,
           s3
         )
-        return vx_type.f_string_from_stringlist_join(slist, " ")
+        const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
+        return vx_type.f_string_trim(sjoin)
       })
     )
     return output
@@ -617,7 +618,8 @@ export default class nx_tactics_ui_uitactics {
           sdemeanor,
           snature
         )
-        return vx_type.f_string_from_stringlist_join(slist, " ")
+        const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
+        return vx_type.f_string_trim(sjoin)
       })
     )
     return output
@@ -697,7 +699,8 @@ export default class nx_tactics_ui_uitactics {
           s3,
           s4
         )
-        return vx_type.f_string_from_stringlist_join(slist, " ")
+        const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
+        return vx_type.f_string_trim(sjoin)
       })
     )
     return output
@@ -777,7 +780,8 @@ export default class nx_tactics_ui_uitactics {
           l,
           w
         )
-        return vx_type.f_string_from_stringlist_join(slist, " ")
+        const sjoin = vx_type.f_string_from_stringlist_join(slist, " ")
+        return vx_type.f_string_trim(sjoin)
       })
     )
     return output
@@ -1330,10 +1334,8 @@ export default class nx_tactics_ui_uitactics {
       ),
       ":uimap",
       vx_ui_ui.f_uimap_from_uilist(
-        vx_core.f_new(
-          vx_ui_ui.t_uilist,
-          nx_tactics_ui_uitactics.f_ui_app_titlebar_print()
-        )
+        nx_tactics_ui_uitactics.f_ui_app_titlebar_title(),
+        nx_tactics_ui_uitactics.f_ui_app_titlebar_print()
       )
     )
     return output
@@ -1391,6 +1393,43 @@ export default class nx_tactics_ui_uitactics {
   }
 
   /**
+   * @function ui_app_titlebar_title
+   * @return {ui}
+   */
+  static t_ui_app_titlebar_title = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_app_titlebar_title = {
+    vx_type: nx_tactics_ui_uitactics.t_ui_app_titlebar_title
+  }
+
+  // (func ui-app-titlebar-title)
+  static f_ui_app_titlebar_title() {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_new(
+      vx_ui_ui.t_ui,
+      ":uid",
+      "titlebar-title",
+      ":parent",
+      "titlebar",
+      ":data",
+      "Title",
+      ":style",
+      vx_core.f_new(
+        vx_ui_ui.t_style,
+        ":layout",
+        vx_ui_ui.c_layout_label
+      ),
+      ":stylelist",
+      vx_core.f_new(
+        vx_ui_ui.t_stylelist,
+        nx_tactics_ui_stylesheet.c_style_app_titlebar_title
+      )
+    )
+    return output
+  }
+
+  /**
    * @function ui_app_from_tactics
    * @param  {tactics} tactics
    * @return {ui}
@@ -1409,7 +1448,7 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_ui_ui.t_ui},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const appui = nx_tactics_ui_uitactics.f_ui_app()
+        const appui = nx_tactics_ui_navigation.f_ui_app(context)
         return vx_core.f_copy(appui, ":data", tactics)
       })
     )
@@ -1553,7 +1592,7 @@ export default class nx_tactics_ui_uitactics {
           name
         )
         const cardmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_cardmap, "struct-2": nx_tactics_base.t_deck}, deck, ":cardmap")
-        const uimap = nx_tactics_ui_uitactics.f_uimap_from_cardmap_parent(cardmap, uid)
+        const uimap = nx_tactics_ui_uitactics.f_uimap_from_cardmap_parent_page_size(cardmap, uid, 1, 100)
         return vx_core.f_new(
           vx_ui_ui.t_ui,
           ":uid",
@@ -1608,7 +1647,7 @@ export default class nx_tactics_ui_uitactics {
         const cardmap1 = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_specialty, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_specialtymap}, specialtymap)
         const cardmap2 = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_abilitymap}, abilitymap)
         const cardmap3 = vx_core.f_copy(cardmap1, cardmap2)
-        const uimap = nx_tactics_ui_uitactics.f_uimap_from_cardmap_parent(cardmap3, uid)
+        const uimap = nx_tactics_ui_uitactics.f_uimap_from_cardmap_parent_page_size(cardmap3, uid, 1, 100)
         return vx_core.f_new(
           vx_ui_ui.t_ui,
           ":uid",
@@ -1657,11 +1696,9 @@ export default class nx_tactics_ui_uitactics {
           uid1,
           name
         )
+        const uiimage = nx_tactics_ui_uitactics.f_ui_image_from_uid_path(uid2, "icons/icon-backarrow.svg")
+        const uimap = vx_ui_ui.f_uimap_from_uilist(uiimage)
         const styles1 = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_stylelist, "struct-2": vx_ui_ui.t_ui}, navbutton, ":stylelist")
-        const styles2 = vx_core.f_copy(
-          styles1,
-          nx_tactics_ui_stylesheet.c_style_button_back
-        )
         return vx_core.f_copy(
           navbutton,
           ":uid",
@@ -1669,7 +1706,9 @@ export default class nx_tactics_ui_uitactics {
           ":name",
           name,
           ":stylelist",
-          styles2,
+          styles1,
+          ":uimap",
+          uimap,
           ":eventmap",
           nx_tactics_ui_uitactics.c_eventmap_navbutton_back
         )
@@ -2256,19 +2295,25 @@ export default class nx_tactics_ui_uitactics {
           uid,
           "-display"
         )
-        const uidisplay = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          uiddisplay,
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_card_display,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_textarea
-          ),
-          ":data",
-          display1
+        const uidisplay = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(display1)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              uiddisplay,
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_card_display,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_textarea
+              ),
+              ":data",
+              display1
+            )})
+          )
         )
         const ranksuit = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_ranksuit, "struct-2": nx_tactics_base.t_card}, card, ":ranksuit")
         const uilist1 = nx_tactics_ui_uitactics.f_uilist_from_ranksuit_parent(ranksuit, uid)
@@ -2422,127 +2467,169 @@ export default class nx_tactics_ui_uitactics {
           "-",
           name
         )
-        const uiitemsummary = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-summary"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_item_summary,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_textarea
-          ),
-          ":data",
-          summary
+        const uiitemsummary = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(summary)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-summary"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_item_summary,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_textarea
+              ),
+              ":data",
+              summary
+            )})
+          )
         )
         const detail = ""
-        const uiimage = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-image"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_image,
-          ":data",
-          vx_data_file.f_file_from_path(image)
+        const uiimage = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(image)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-image"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_image,
+              ":data",
+              vx_data_file.f_file_from_path(image)
+            )})
+          )
         )
-        const uivalue = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-value"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_value,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          value
+        const uivalue = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(value)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-value"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_value,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_header1
+              ),
+              ":data",
+              value
+            )})
+          )
         )
-        const uititles = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-titles"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_titles,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text
-          ),
-          ":data",
-          titles
+        const uititles = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(titles)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-titles"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_titles,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text
+              ),
+              ":data",
+              titles
+            )})
+          )
         )
-        const uibody = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-body"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_body,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          body
+        const uibody = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(body)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-body"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_body,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_header1
+              ),
+              ":data",
+              body
+            )})
+          )
         )
-        const uibodydetail = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-bodydetail"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_bodydetail,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_2
-          ),
-          ":data",
-          bodydetail
+        const uibodydetail = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(bodydetail)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-bodydetail"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_bodydetail,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_2
+              ),
+              ":data",
+              bodydetail
+            )})
+          )
         )
-        const uidetail = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-detail"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_detail,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_textarea
-          ),
-          ":data",
-          detail
+        const uidetail = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(detail)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-detail"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_detail,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_textarea
+              ),
+              ":data",
+              detail
+            )})
+          )
         )
         return vx_core.f_new(
           vx_ui_ui.t_uilist,
@@ -2712,217 +2799,288 @@ export default class nx_tactics_ui_uitactics {
           "-",
           name
         )
-        const uidimage = vx_core.f_new(
-          vx_core.t_string,
-          prefix,
-          "-image"
+        const uiimage = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(image)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-image"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_image,
+              ":data",
+              vx_data_file.f_file_from_path(image)
+            )})
+          )
         )
-        const uiimage = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          uidimage,
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_image,
-          ":data",
-          vx_data_file.f_file_from_path(image)
+        const uivalue = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(value)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-value"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_value,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_header1
+              ),
+              ":data",
+              value
+            )})
+          )
         )
-        const uivalue = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-value"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_value,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          value
+        const uititles = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(titles)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-titles"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_titles,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text
+              ),
+              ":data",
+              titles
+            )})
+          )
         )
-        const uititles = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-titles"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_titles,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text
-          ),
-          ":data",
-          titles
+        const uibody = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(body)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-body"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_body,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_header1
+              ),
+              ":data",
+              body
+            )})
+          )
         )
-        const uibody = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-body"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_body,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          body
+        const uibodydetail = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(bodydetail)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-bodydetail"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_bodydetail,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_2
+              ),
+              ":data",
+              bodydetail
+            )})
+          )
         )
-        const uibodydetail = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-bodydetail"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_bodydetail,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_2
-          ),
-          ":data",
-          bodydetail
+        const uimind = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(mind)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-mind"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_mind,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_header1
+              ),
+              ":data",
+              mind
+            )})
+          )
         )
-        const uimind = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-mind"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_mind,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          mind
+        const uiminddetail = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(minddetail)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-minddetail"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_minddetail,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_2
+              ),
+              ":data",
+              minddetail
+            )})
+          )
         )
-        const uiminddetail = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-minddetail"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_minddetail,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_2
-          ),
-          ":data",
-          minddetail
+        const uiwill = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(will)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-will"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_will,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_header1
+              ),
+              ":data",
+              will
+            )})
+          )
         )
-        const uiwill = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-will"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_will,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          will
+        const uiwilldetail = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(willdetail)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-willdetail"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_willdetail,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_2
+              ),
+              ":data",
+              willdetail
+            )})
+          )
         )
-        const uiwilldetail = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-willdetail"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_willdetail,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_2
-          ),
-          ":data",
-          willdetail
+        const uimove = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(move)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-move"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_move,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_header1
+              ),
+              ":data",
+              move
+            )})
+          )
         )
-        const uimove = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-move"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_move,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          move
+        const uimovedetail = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(movedetail)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-movedetail"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_movedetail,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_text_2
+              ),
+              ":data",
+              movedetail
+            )})
+          )
         )
-        const uimovedetail = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-movedetail"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_movedetail,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_2
-          ),
-          ":data",
-          movedetail
-        )
-        const uidetail = vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          vx_core.f_new(
-            vx_core.t_string,
-            prefix,
-            "-detail"
-          ),
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_unit_detail,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_textarea
-          ),
-          ":data",
-          detail
+        const uidetail = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(detail)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "-detail"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_unit_detail,
+              ":stylelist",
+              vx_core.f_new(
+                vx_ui_ui.t_stylelist,
+                nx_tactics_ui_stylesheet.c_style_textarea
+              ),
+              ":data",
+              detail
+            )})
+          )
         )
         return vx_core.f_new(
           vx_ui_ui.t_uilist,
@@ -2945,26 +3103,28 @@ export default class nx_tactics_ui_uitactics {
   }
 
   /**
-   * @function uimap_from_cardmap_parent
+   * @function uimap_from_cardmap_parent_page_size
    * @param  {cardmap} cardmap
    * @param  {string} parent
+   * @param  {int} page
+   * @param  {int} size
    * @return {uimap}
    */
-  static t_uimap_from_cardmap_parent = {
+  static t_uimap_from_cardmap_parent_page_size = {
     vx_type: vx_core.t_type
   }
-  static e_uimap_from_cardmap_parent = {
-    vx_type: nx_tactics_ui_uitactics.t_uimap_from_cardmap_parent
+  static e_uimap_from_cardmap_parent_page_size = {
+    vx_type: nx_tactics_ui_uitactics.t_uimap_from_cardmap_parent_page_size
   }
 
-  // (func uimap<-cardmap-parent)
-  static f_uimap_from_cardmap_parent(cardmap, parent) {
+  // (func uimap<-cardmap-parent-page-size)
+  static f_uimap_from_cardmap_parent_page_size(cardmap, parent, page, size) {
     let output = vx_ui_ui.e_uimap
     output = vx_core.f_map_from_map_1(
       {"any-1": vx_ui_ui.t_ui, "any-2": nx_tactics_base.t_card, "map-1": vx_ui_ui.t_uimap, "map-2": nx_tactics_base.t_cardmap},
       cardmap,
       vx_core.f_new(vx_core.t_any_from_key_value, ([key, card]) => 
-        nx_tactics_ui_uitactics.f_ui_from_any_parent(card, parent))
+        nx_tactics_ui_uitactics.f_ui_from_card_parent(card, parent))
     )
     return output
   }
@@ -3013,6 +3173,7 @@ export default class nx_tactics_ui_uitactics {
       "ui-app-statusdrawer": nx_tactics_ui_uitactics.e_ui_app_statusdrawer,
       "ui-app-titlebar": nx_tactics_ui_uitactics.e_ui_app_titlebar,
       "ui-app-titlebar-print": nx_tactics_ui_uitactics.e_ui_app_titlebar_print,
+      "ui-app-titlebar-title": nx_tactics_ui_uitactics.e_ui_app_titlebar_title,
       "ui-app<-tactics": nx_tactics_ui_uitactics.e_ui_app_from_tactics,
       "ui-image<-uid-path": nx_tactics_ui_uitactics.e_ui_image_from_uid_path,
       "ui-nav<-any-parent": nx_tactics_ui_uitactics.e_ui_nav_from_any_parent,
@@ -3031,7 +3192,7 @@ export default class nx_tactics_ui_uitactics {
       "uilist<-item-parent": nx_tactics_ui_uitactics.e_uilist_from_item_parent,
       "uilist<-ranksuit-parent": nx_tactics_ui_uitactics.e_uilist_from_ranksuit_parent,
       "uilist<-unit-parent": nx_tactics_ui_uitactics.e_uilist_from_unit_parent,
-      "uimap<-cardmap-parent": nx_tactics_ui_uitactics.e_uimap_from_cardmap_parent
+      "uimap<-cardmap-parent-page-size": nx_tactics_ui_uitactics.e_uimap_from_cardmap_parent_page_size
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "event-navbutton-click<-event": nx_tactics_ui_uitactics.t_event_navbutton_click_from_event,
@@ -3067,6 +3228,7 @@ export default class nx_tactics_ui_uitactics {
       "ui-app-statusdrawer": nx_tactics_ui_uitactics.t_ui_app_statusdrawer,
       "ui-app-titlebar": nx_tactics_ui_uitactics.t_ui_app_titlebar,
       "ui-app-titlebar-print": nx_tactics_ui_uitactics.t_ui_app_titlebar_print,
+      "ui-app-titlebar-title": nx_tactics_ui_uitactics.t_ui_app_titlebar_title,
       "ui-app<-tactics": nx_tactics_ui_uitactics.t_ui_app_from_tactics,
       "ui-image<-uid-path": nx_tactics_ui_uitactics.t_ui_image_from_uid_path,
       "ui-nav<-any-parent": nx_tactics_ui_uitactics.t_ui_nav_from_any_parent,
@@ -3085,7 +3247,7 @@ export default class nx_tactics_ui_uitactics {
       "uilist<-item-parent": nx_tactics_ui_uitactics.t_uilist_from_item_parent,
       "uilist<-ranksuit-parent": nx_tactics_ui_uitactics.t_uilist_from_ranksuit_parent,
       "uilist<-unit-parent": nx_tactics_ui_uitactics.t_uilist_from_unit_parent,
-      "uimap<-cardmap-parent": nx_tactics_ui_uitactics.t_uimap_from_cardmap_parent
+      "uimap<-cardmap-parent-page-size": nx_tactics_ui_uitactics.t_uimap_from_cardmap_parent_page_size
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -3693,6 +3855,24 @@ export default class nx_tactics_ui_uitactics {
       fn            : nx_tactics_ui_uitactics.f_ui_app_titlebar_print
     }
 
+    // (func ui-app-titlebar-title)
+    nx_tactics_ui_uitactics.t_ui_app_titlebar_title['vx_value'] = {
+      name          : "ui-app-titlebar-title",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_ui_app_titlebar_title
+    }
+
     // (func ui-app<-tactics)
     nx_tactics_ui_uitactics.t_ui_app_from_tactics['vx_value'] = {
       name          : "ui-app<-tactics",
@@ -4017,9 +4197,9 @@ export default class nx_tactics_ui_uitactics {
       fn            : nx_tactics_ui_uitactics.f_uilist_from_unit_parent
     }
 
-    // (func uimap<-cardmap-parent)
-    nx_tactics_ui_uitactics.t_uimap_from_cardmap_parent['vx_value'] = {
-      name          : "uimap<-cardmap-parent",
+    // (func uimap<-cardmap-parent-page-size)
+    nx_tactics_ui_uitactics.t_uimap_from_cardmap_parent_page_size['vx_value'] = {
+      name          : "uimap<-cardmap-parent-page-size",
       pkgname       : "nx/tactics/ui/uitactics",
       extends       : ":func",
       idx           : 0,
@@ -4032,7 +4212,7 @@ export default class nx_tactics_ui_uitactics {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_ui_uitactics.f_uimap_from_cardmap_parent
+      fn            : nx_tactics_ui_uitactics.f_uimap_from_cardmap_parent_page_size
     }
 
     // (const event-navbutton-back-click)

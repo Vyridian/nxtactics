@@ -26,7 +26,7 @@ export default class nx_tactics_decks_starter {
       ":id",
       "action-combat",
       ":name",
-      "Action: Combat",
+      "Combat Action",
       ":summary",
       "* Target a unit with a damaging Skill/Power.\n* Each player chooses a Fate card from their hand or a random Fate from Shared Fate.\n* Fate Cards are compared like Rock/Paper/Scissors.\n* Combat Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter\n* If both play Attack or Focus then compare by rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.\n* Discard all card used (except Keep)"
     )
@@ -52,9 +52,9 @@ export default class nx_tactics_decks_starter {
       ":id",
       "action-move",
       ":name",
-      "Action: Move",
+      "Move Action",
       ":summary",
-      "* Action: Move up to half (rounded down) of your [Move] stat.\n* Facing: During your Move, change your facing up to 2 times the entire Turn.\n* Full Speed (2 Actions): Move your full [Move] stat.\n* Sprint (2 Actions): If you moved at Full Speed last turn, Move 1.5x your [Move] stat.\n* Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns."
+      "* Action: Move up to your [Move] stat.\n* Facing: During your Move, change your facing up to 2 times the entire Turn.\n* Full Move (2 Actions): Move your [Move]x2.\n* Sprint (2 Actions): If you moved at Full Speed last turn, you may [Move]x3 this turn.\n* Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns."
     )
     return output
   }
@@ -78,9 +78,9 @@ export default class nx_tactics_decks_starter {
       ":id",
       "action-recover",
       ":name",
-      "Action: Recover",
+      "Recover Action",
       ":summary",
-      "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]\n* Double Action: Discard a [Bleeding]"
+      "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]\n* Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."
     )
     return output
   }
@@ -104,9 +104,37 @@ export default class nx_tactics_decks_starter {
       ":id",
       "action-skill",
       ":name",
-      "Action: Skill",
+      "Skill Action",
       ":summary",
       "* Action: "
+    )
+    return output
+  }
+
+  /**
+   * @function card_areaeffect
+   * @return {card}
+   */
+  static t_card_areaeffect = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_areaeffect = {
+    vx_type: nx_tactics_decks_starter.t_card_areaeffect
+  }
+
+  // (func card-areaeffect)
+  static f_card_areaeffect() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "areaeffect",
+      ":name",
+      "Area Effect",
+      ":image",
+      "images/card-areaeffect.svg",
+      ":summary",
+      "* Some powers can attack in a large area.\n* Reduce your Skill or Intensity by 1 to get an Area Effect Card. Each additional reduction doubles the number of cards.\n* Place a card next to your unit and arrange the rest in any stable shape. Examples below."
     )
     return output
   }
@@ -154,7 +182,7 @@ export default class nx_tactics_decks_starter {
       ":id",
       "damageguide",
       ":name",
-      "Damage Guide",
+      "Combat Damage",
       ":summary",
       "* Damage Types: Determine the [Damage Types] of the weapon.\n* Reveal Damage: Reveal cards equal to [Hits].\n* Separate Damage: Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).\n* Hit Location: The top card from the matching pile is the Hit Location (or the mismatch pile if no matches). Move it aside and flip the Fatigue pile to its facedown side.\n* Armor: Check [Armor] in the [Hit Location] and then the target reduces the Damage or Fatigue for each point of armor. The Hit Location can only be removed last.\n* Fatigue: The target may take the Fatigue cards as long they have Body. Any remaining Fatigue are flipped faceup and added to the Damage pile.\n* Damage: Count the Damage pile and apply the effect on the Hit Location card to the target.\n* Cleanup: Discard other cards. Shuffle if a Wild was revealed."
     )
@@ -238,7 +266,7 @@ export default class nx_tactics_decks_starter {
       ":name",
       "Free Action",
       ":summary",
-      "* Move Out: Take a [Fatigue] to [Move]:1.\n* Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.\n* Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.\n* Final Sprint: Take a [Slow] to [Move].\n* Opportunity Fight: If a Target moves through 2 spaces adjacent to a Unit, that Unit may spend a [Stun] to take a free [Action: Fight]."
+      "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.\n* Move Out: Take a [Fatigue] to [Move]:1.\n* Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.\n* Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.\n* Final Sprint: Take a [Slow] to [Move].\n* Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."
     )
     return output
   }
@@ -290,7 +318,33 @@ export default class nx_tactics_decks_starter {
       ":name",
       "Leveling Guide",
       ":summary",
-      "* Major Achievement: Completion gains a Skill Point.\n* Minor Achievement: Completing gains an Ability Point.\n* Skill Points: May be exchanged for a Level 1 Skill or a new Level 1 Power.\n* Ability Points: May be exchanged for an Ability, Specialty, or a Power Level increase."
+      "* Major Achievement: Completion gains a Skill Point.\n* Minor Achievement: Completion gains an Ability Point.\n* Skill Points: May be exchanged for a Skill Level one below your level or a new Level 1 Power (if allowed).\n* Ability Points: May be exchanged for an Ability, Specialty, or a Power Intensity increase."
+    )
+    return output
+  }
+
+  /**
+   * @function card_lineofsight
+   * @return {card}
+   */
+  static t_card_lineofsight = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_lineofsight = {
+    vx_type: nx_tactics_decks_starter.t_card_lineofsight
+  }
+
+  // (func card-lineofsight)
+  static f_card_lineofsight() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "lineofsight",
+      ":name",
+      "Line of Sight",
+      ":summary",
+      "* Most distance effects require line of sight to the target.\n* Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).\n* If nothing is between you, then you have full line of sight. Resolve normally.\n* If something is between you, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Speed:-1.\n** 50% Cover: Speed:-2.\n** 75% Cover: Speed:-3.\n** 100% Cover: Speed-4.\n* If successful, assign each 25% to whatever is giving cover (this can include fog, smoke, tables, walls, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead."
     )
     return output
   }
@@ -319,7 +373,36 @@ export default class nx_tactics_decks_starter {
       ":name",
       "Map Scale:1",
       ":summary",
-      "* Human Scale\n* Turn Length: 2sec\n* Note: Humans (max speed 3x1 = 30kph) walk at 6kph or 1.6m/s. This makes a 2sec turn 3 spaces."
+      "* Human Scale\n* Space Size: 1m\n* Turn Length: 2sec\n* Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).\n* Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)"
+    )
+    return output
+  }
+
+  /**
+   * @function card_mapscale_2
+   * @return {card}
+   */
+  static t_card_mapscale_2 = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_mapscale_2 = {
+    vx_type: nx_tactics_decks_starter.t_card_mapscale_2
+  }
+
+  // (func card-mapscale-2)
+  static f_card_mapscale_2() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      vx_core.f_new(
+        vx_core.t_string,
+        "card-mapscale-2"
+      ),
+      ":name",
+      "Map Scale:2",
+      ":summary",
+      "* Vehicle Scale\n* Space Size: 3m\n* Turn Length: 1sec\n* Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m)."
     )
     return output
   }
@@ -449,6 +532,32 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
+   * @function card_reach
+   * @return {card}
+   */
+  static t_card_reach = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_reach = {
+    vx_type: nx_tactics_decks_starter.t_card_reach
+  }
+
+  // (func card-reach)
+  static f_card_reach() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-reach",
+      ":name",
+      "Reach",
+      ":summary",
+      "* Can target one additional dot away [Scaled]"
+    )
+    return output
+  }
+
+  /**
    * @function card_scale
    * @return {card}
    */
@@ -465,14 +574,37 @@ export default class nx_tactics_decks_starter {
     output = vx_core.f_new(
       nx_tactics_base.t_card,
       ":id",
-      vx_core.f_new(
-        vx_core.t_string,
-        "card-scale"
-      ),
+      "card-scale",
       ":name",
       "Scale",
       ":summary",
       "* Each stat/skill/power has a number after the letter 'x'.\n* This is the scale of that ability.\n* The number represents the number of zeroes. E.g. 5x3 translates to 5000.\n* x1 denotes human scale. E.g. 1x1=10kg, 10iq+50, 10will, 10kph"
+    )
+    return output
+  }
+
+  /**
+   * @function card_scaled
+   * @return {card}
+   */
+  static t_card_scaled = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_scaled = {
+    vx_type: nx_tactics_decks_starter.t_card_scaled
+  }
+
+  // (func card-scaled)
+  static f_card_scaled() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-scaled",
+      ":name",
+      "Scaled",
+      ":summary",
+      "* Scaled refers to the comparison between the Scale of a stat/ability/map to another.\n* If the scales are the same, no change is required.\n* If the scales are different, multiple or divide the Level by 10 for each difference in scale.\n* E.g. On an x1 map a Move:3x2 would move 30 spaces instead of 3."
     )
     return output
   }
@@ -504,6 +636,146 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
+   * @function card_skill_blue
+   * @param  {int} num
+   * @return {card}
+   */
+  static t_card_skill_blue = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_skill_blue = {
+    vx_type: nx_tactics_decks_starter.t_card_skill_blue
+  }
+
+  // (func card-skill-blue)
+  static f_card_skill_blue(num) {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      vx_core.f_new(
+        vx_core.t_string,
+        "skill-",
+        num
+      ),
+      ":name",
+      vx_core.f_new(
+        vx_core.t_string,
+        "Skill ",
+        num
+      ),
+      ":image",
+      "images/card-blue.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function card_skill_green
+   * @param  {int} num
+   * @return {card}
+   */
+  static t_card_skill_green = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_skill_green = {
+    vx_type: nx_tactics_decks_starter.t_card_skill_green
+  }
+
+  // (func card-skill-green)
+  static f_card_skill_green(num) {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      vx_core.f_new(
+        vx_core.t_string,
+        "skill-",
+        num
+      ),
+      ":name",
+      vx_core.f_new(
+        vx_core.t_string,
+        "Skill ",
+        num
+      ),
+      ":image",
+      "images/card-green.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function card_skill_red
+   * @param  {int} num
+   * @return {card}
+   */
+  static t_card_skill_red = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_skill_red = {
+    vx_type: nx_tactics_decks_starter.t_card_skill_red
+  }
+
+  // (func card-skill-red)
+  static f_card_skill_red(num) {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      vx_core.f_new(
+        vx_core.t_string,
+        "skill-",
+        num
+      ),
+      ":name",
+      vx_core.f_new(
+        vx_core.t_string,
+        "Skill ",
+        num
+      ),
+      ":image",
+      "images/card-red.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function card_skill_yellow
+   * @param  {int} num
+   * @return {card}
+   */
+  static t_card_skill_yellow = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_skill_yellow = {
+    vx_type: nx_tactics_decks_starter.t_card_skill_yellow
+  }
+
+  // (func card-skill-yellow)
+  static f_card_skill_yellow(num) {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      vx_core.f_new(
+        vx_core.t_string,
+        "skill-",
+        num
+      ),
+      ":name",
+      vx_core.f_new(
+        vx_core.t_string,
+        "Skill ",
+        num
+      ),
+      ":image",
+      "images/card-yellow.svg"
+    )
+    return output
+  }
+
+  /**
    * @function card_turn_order
    * @return {card}
    */
@@ -524,7 +796,7 @@ export default class nx_tactics_decks_starter {
       ":name",
       "Turn: Order",
       ":summary",
-      "* Reveal: Flip each card of [Turn Order] deck to form a row. This is the [Player] order this turn.\n* Activate: In order, each [Player] chooses a Unit to activate.\n* Action1: Each [Player] chooses an Action to take. If applicable, they also announce target(s).\n* Resolve1: If a player was the target of an Action, they must wait for the action to resolve. Otherwise, each player performs their [Player: Action] simultaneously. Note: lower order Units cannot be blocked by the movement of higher order Units.\n* Action2: Same as Action1 above.\n* Resolve2: Same as Resolve1 above."
+      "* Reveal: Flip each card of [Turn Order] deck to form a row. This is the [Player] order this turn.\n* Action1: Each [Player] chooses a Unit to activate along with their first [Action] and target(s).\n* Change1: In order, each [Player] may change their decision.\n* Resolve1: If a player was the target of an Action, they must wait for that action to resolve. Otherwise, all players performs their Action simultaneously. Note: lower order Units cannot be blocked by the movement of higher order Units.\n* Action2: Each [Player] chooses their second [Action] and targets.\n* Change2: Same as Change1.\n* Resolve2: Same as Resolve1."
     )
     return output
   }
@@ -751,9 +1023,13 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_levelingguide(),
           nx_tactics_decks_starter.f_card_turn_order(),
           nx_tactics_decks_starter.f_card_scale(),
+          nx_tactics_decks_starter.f_card_scaled(),
           nx_tactics_decks_starter.f_card_mapscale_1(),
+          nx_tactics_decks_starter.f_card_mapscale_2(),
           nx_tactics_decks_starter.f_card_fateupper(),
-          nx_tactics_decks_starter.f_card_fatelower()
+          nx_tactics_decks_starter.f_card_fatelower(),
+          nx_tactics_decks_starter.f_card_areaeffect(),
+          nx_tactics_decks_starter.f_card_reach()
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
         return vx_core.f_new(
@@ -795,6 +1071,10 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_player_blue(3),
           nx_tactics_decks_starter.f_card_player_blue(4),
           nx_tactics_decks_starter.f_card_player_blue(5),
+          nx_tactics_decks_starter.f_card_skill_blue(1),
+          nx_tactics_decks_starter.f_card_skill_blue(2),
+          nx_tactics_decks_starter.f_card_skill_blue(3),
+          nx_tactics_decks_starter.f_card_skill_blue(4),
           nx_tactics_decks_starter.f_card_unit_blue(1),
           nx_tactics_decks_starter.f_card_unit_blue(2),
           nx_tactics_decks_starter.f_card_unit_blue(3),
@@ -840,6 +1120,10 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_player_green(3),
           nx_tactics_decks_starter.f_card_player_green(4),
           nx_tactics_decks_starter.f_card_player_green(5),
+          nx_tactics_decks_starter.f_card_skill_green(1),
+          nx_tactics_decks_starter.f_card_skill_green(2),
+          nx_tactics_decks_starter.f_card_skill_green(3),
+          nx_tactics_decks_starter.f_card_skill_green(4),
           nx_tactics_decks_starter.f_card_unit_green(1),
           nx_tactics_decks_starter.f_card_unit_green(2),
           nx_tactics_decks_starter.f_card_unit_green(3),
@@ -885,6 +1169,10 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_player_red(3),
           nx_tactics_decks_starter.f_card_player_red(4),
           nx_tactics_decks_starter.f_card_player_red(5),
+          nx_tactics_decks_starter.f_card_skill_red(1),
+          nx_tactics_decks_starter.f_card_skill_red(2),
+          nx_tactics_decks_starter.f_card_skill_red(3),
+          nx_tactics_decks_starter.f_card_skill_red(4),
           nx_tactics_decks_starter.f_card_unit_red(1),
           nx_tactics_decks_starter.f_card_unit_red(2),
           nx_tactics_decks_starter.f_card_unit_red(3),
@@ -930,6 +1218,10 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_player_yellow(3),
           nx_tactics_decks_starter.f_card_player_yellow(4),
           nx_tactics_decks_starter.f_card_player_yellow(5),
+          nx_tactics_decks_starter.f_card_skill_yellow(1),
+          nx_tactics_decks_starter.f_card_skill_yellow(2),
+          nx_tactics_decks_starter.f_card_skill_yellow(3),
+          nx_tactics_decks_starter.f_card_skill_yellow(4),
           nx_tactics_decks_starter.f_card_unit_yellow(1),
           nx_tactics_decks_starter.f_card_unit_yellow(2),
           nx_tactics_decks_starter.f_card_unit_yellow(3),
@@ -961,6 +1253,7 @@ export default class nx_tactics_decks_starter {
       "card-action-move": nx_tactics_decks_starter.e_card_action_move,
       "card-action-recover": nx_tactics_decks_starter.e_card_action_recover,
       "card-action-skill": nx_tactics_decks_starter.e_card_action_skill,
+      "card-areaeffect": nx_tactics_decks_starter.e_card_areaeffect,
       "card-characterguide": nx_tactics_decks_starter.e_card_characterguide,
       "card-damageguide": nx_tactics_decks_starter.e_card_damageguide,
       "card-fatelower": nx_tactics_decks_starter.e_card_fatelower,
@@ -968,13 +1261,21 @@ export default class nx_tactics_decks_starter {
       "card-free-action": nx_tactics_decks_starter.e_card_free_action,
       "card-gameguide": nx_tactics_decks_starter.e_card_gameguide,
       "card-levelingguide": nx_tactics_decks_starter.e_card_levelingguide,
+      "card-lineofsight": nx_tactics_decks_starter.e_card_lineofsight,
       "card-mapscale-1": nx_tactics_decks_starter.e_card_mapscale_1,
+      "card-mapscale-2": nx_tactics_decks_starter.e_card_mapscale_2,
       "card-player-blue": nx_tactics_decks_starter.e_card_player_blue,
       "card-player-green": nx_tactics_decks_starter.e_card_player_green,
       "card-player-red": nx_tactics_decks_starter.e_card_player_red,
       "card-player-yellow": nx_tactics_decks_starter.e_card_player_yellow,
+      "card-reach": nx_tactics_decks_starter.e_card_reach,
       "card-scale": nx_tactics_decks_starter.e_card_scale,
+      "card-scaled": nx_tactics_decks_starter.e_card_scaled,
       "card-setupguide": nx_tactics_decks_starter.e_card_setupguide,
+      "card-skill-blue": nx_tactics_decks_starter.e_card_skill_blue,
+      "card-skill-green": nx_tactics_decks_starter.e_card_skill_green,
+      "card-skill-red": nx_tactics_decks_starter.e_card_skill_red,
+      "card-skill-yellow": nx_tactics_decks_starter.e_card_skill_yellow,
       "card-turn-order": nx_tactics_decks_starter.e_card_turn_order,
       "card-turn-order_1": nx_tactics_decks_starter.e_card_turn_order_1,
       "card-turn-player": nx_tactics_decks_starter.e_card_turn_player,
@@ -993,6 +1294,7 @@ export default class nx_tactics_decks_starter {
       "card-action-move": nx_tactics_decks_starter.t_card_action_move,
       "card-action-recover": nx_tactics_decks_starter.t_card_action_recover,
       "card-action-skill": nx_tactics_decks_starter.t_card_action_skill,
+      "card-areaeffect": nx_tactics_decks_starter.t_card_areaeffect,
       "card-characterguide": nx_tactics_decks_starter.t_card_characterguide,
       "card-damageguide": nx_tactics_decks_starter.t_card_damageguide,
       "card-fatelower": nx_tactics_decks_starter.t_card_fatelower,
@@ -1000,13 +1302,21 @@ export default class nx_tactics_decks_starter {
       "card-free-action": nx_tactics_decks_starter.t_card_free_action,
       "card-gameguide": nx_tactics_decks_starter.t_card_gameguide,
       "card-levelingguide": nx_tactics_decks_starter.t_card_levelingguide,
+      "card-lineofsight": nx_tactics_decks_starter.t_card_lineofsight,
       "card-mapscale-1": nx_tactics_decks_starter.t_card_mapscale_1,
+      "card-mapscale-2": nx_tactics_decks_starter.t_card_mapscale_2,
       "card-player-blue": nx_tactics_decks_starter.t_card_player_blue,
       "card-player-green": nx_tactics_decks_starter.t_card_player_green,
       "card-player-red": nx_tactics_decks_starter.t_card_player_red,
       "card-player-yellow": nx_tactics_decks_starter.t_card_player_yellow,
+      "card-reach": nx_tactics_decks_starter.t_card_reach,
       "card-scale": nx_tactics_decks_starter.t_card_scale,
+      "card-scaled": nx_tactics_decks_starter.t_card_scaled,
       "card-setupguide": nx_tactics_decks_starter.t_card_setupguide,
+      "card-skill-blue": nx_tactics_decks_starter.t_card_skill_blue,
+      "card-skill-green": nx_tactics_decks_starter.t_card_skill_green,
+      "card-skill-red": nx_tactics_decks_starter.t_card_skill_red,
+      "card-skill-yellow": nx_tactics_decks_starter.t_card_skill_yellow,
       "card-turn-order": nx_tactics_decks_starter.t_card_turn_order,
       "card-turn-order_1": nx_tactics_decks_starter.t_card_turn_order_1,
       "card-turn-player": nx_tactics_decks_starter.t_card_turn_player,
@@ -1102,6 +1412,24 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_action_skill
+    }
+
+    // (func card-areaeffect)
+    nx_tactics_decks_starter.t_card_areaeffect['vx_value'] = {
+      name          : "card-areaeffect",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_areaeffect
     }
 
     // (func card-characterguide)
@@ -1230,6 +1558,24 @@ export default class nx_tactics_decks_starter {
       fn            : nx_tactics_decks_starter.f_card_levelingguide
     }
 
+    // (func card-lineofsight)
+    nx_tactics_decks_starter.t_card_lineofsight['vx_value'] = {
+      name          : "card-lineofsight",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_lineofsight
+    }
+
     // (func card-mapscale-1)
     nx_tactics_decks_starter.t_card_mapscale_1['vx_value'] = {
       name          : "card-mapscale-1",
@@ -1246,6 +1592,24 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_mapscale_1
+    }
+
+    // (func card-mapscale-2)
+    nx_tactics_decks_starter.t_card_mapscale_2['vx_value'] = {
+      name          : "card-mapscale-2",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_mapscale_2
     }
 
     // (func card-player-blue)
@@ -1320,6 +1684,24 @@ export default class nx_tactics_decks_starter {
       fn            : nx_tactics_decks_starter.f_card_player_yellow
     }
 
+    // (func card-reach)
+    nx_tactics_decks_starter.t_card_reach['vx_value'] = {
+      name          : "card-reach",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_reach
+    }
+
     // (func card-scale)
     nx_tactics_decks_starter.t_card_scale['vx_value'] = {
       name          : "card-scale",
@@ -1338,6 +1720,24 @@ export default class nx_tactics_decks_starter {
       fn            : nx_tactics_decks_starter.f_card_scale
     }
 
+    // (func card-scaled)
+    nx_tactics_decks_starter.t_card_scaled['vx_value'] = {
+      name          : "card-scaled",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_scaled
+    }
+
     // (func card-setupguide)
     nx_tactics_decks_starter.t_card_setupguide['vx_value'] = {
       name          : "card-setupguide",
@@ -1354,6 +1754,78 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_setupguide
+    }
+
+    // (func card-skill-blue)
+    nx_tactics_decks_starter.t_card_skill_blue['vx_value'] = {
+      name          : "card-skill-blue",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_skill_blue
+    }
+
+    // (func card-skill-green)
+    nx_tactics_decks_starter.t_card_skill_green['vx_value'] = {
+      name          : "card-skill-green",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_skill_green
+    }
+
+    // (func card-skill-red)
+    nx_tactics_decks_starter.t_card_skill_red['vx_value'] = {
+      name          : "card-skill-red",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_skill_red
+    }
+
+    // (func card-skill-yellow)
+    nx_tactics_decks_starter.t_card_skill_yellow['vx_value'] = {
+      name          : "card-skill-yellow",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_skill_yellow
     }
 
     // (func card-turn-order)

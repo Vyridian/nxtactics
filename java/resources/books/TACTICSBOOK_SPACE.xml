@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc name="Space and Time" image="Space.jpg">
 <chapter name="Space and Time Overview">
-    <section name="Why Tactics: Space and Time?">
+ <section name="Why Tactics: Space and Time?">
 		<summary>
 			* Space is deadly to any normal lifeforms.
 			* Militarily space represents the ultimate high ground.  Anyone in orbit can see everything below and can reach any
@@ -233,34 +233,28 @@
 		</place>
 		<place name="Asteroid Belt" image="SpaceAndTime/AsteroidBelt.png">
 			<summary>
-				* Gravitational pull from Jupiter prevented the asteroid field from forming into a planet.  It has far too
-				little mass to have ever been a planet.
-				* This belt is now estimated to contain between 1.1 and 1.9 million asteroids larger than 1 km (0.6 mi) in
-				diameter and millions of smaller ones.
+				* Gravitational pull from Jupiter prevented the asteroid field from forming into a planet.  It has far too little mass to have ever been a planet.
+				* This belt is now estimated to contain between 1.1 and 1.9 million asteroids larger than 1 km (0.6 mi) in diameter and millions of smaller ones.
 			</summary>
-      <place name="Asteroid C Type">
-        <summary>
-          * Chondrite Asteroids - most common, clay and silicate rocks
-        </summary>
-      </place>
-      <place name="Asteroid S Type">
-        <summary>
-          * Stony Asteroids
-        </summary>
-      </place>
-      <place name="Asteroid M Type">
-        <summary>
-          * Metallic Asteroids
-        </summary>
-      </place>
+  </place>
+  <place name="Asteroid C Type">
+   <summary>
+    * Chondrite Asteroids - most common, clay and silicate rocks
+   </summary>
+  </place>
+  <place name="Asteroid S Type">
+   <summary>
+    * Stony Asteroids
+   </summary>
+  </place>
+  <place name="Asteroid M Type">
+   <summary>
+    * Metallic Asteroids
+   </summary>
 		</place>
 		<place name="Ceres" mass="9x10^17tons" length="950km" image="SpaceAndTime/Ceres.png">
 			<summary>
-				* Ceres - With a diameter of about 950km, Ceres is by far the largest and most massive body in the asteroid
-				belt, and contains approximately a third of the belt's total mass.  The surface of Ceres is probably made of a
-				mixture of water ice and various hydrated minerals like carbonates and clays.  It may harbour an ocean of
-				liquid water, which makes it a target of current searches for extraterrestrial life.  Ceres may be surrounded
-				by a tenuous atmosphere containing water vapour.
+				* Ceres - With a diameter of about 950km, Ceres is by far the largest and most massive body in the asteroid belt, and contains approximately a third of the belt's total mass. The surface of Ceres is probably made of a mixture of water ice and various hydrated minerals like carbonates and clays. It may harbour an ocean of liquid water, which makes it a target of current searches for extraterrestrial life. Ceres may be surrounded by a tenuous atmosphere containing water vapour.
 				* Optimal Travel Time from Earth: .01g=32 days, .1g=12 days, 1g=4 days
 			</summary>
 		</place>
@@ -271,11 +265,11 @@
 			<summary>
 				* Optimal Travel Time from Earth: .01g=1.75 months, .1g=18 days, 1g=6 days
 			</summary>
-      <place name="Jupiter Trojan Asteroid Belt">
-        <summary>
-          * There are 2 Asteroid fields at the Lagrange points at both sides of Jupiter. They may be as many asteroids here as in the asteroid belt.
-        </summary>
-      </place>
+   <place name="Jupiter Trojan Asteroid Belt">
+    <summary>
+     * There are 2 Asteroid fields at the Lagrange points at both sides of Jupiter. They may be as many asteroids here as in the asteroid belt.
+    </summary>
+   </place>
 		</place>
 		<item name="Europa">
 			<reference>
