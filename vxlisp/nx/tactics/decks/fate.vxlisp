@@ -2,30 +2,6 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Fate Decks")
 
-(const card-fate-blue : base/cardback
- (base/cardback
-  :id "card-fate-blue"
-  :name "Fate"
-  :image "images/card-fate-blue.svg"))
-
-(const card-fate-green : base/cardback
- (base/cardback
-  :id "card-fate-green"
-  :name "Fate"
-  :image "images/card-fate-green.svg"))
-
-(const card-fate-red : base/cardback
- (base/cardback
-  :id "card-fate-red"
-  :name "Fate"
-  :image "images/card-fate-red.svg"))
-
-(const card-fate-yellow : base/cardback
- (base/cardback
-  :id "card-fate-yellow"
-  :name "Fate"
-  :image "images/card-fate-yellow.svg"))
-
 (const fate-wildblack : base/fate
  (base/fate
   :name "Fool"
@@ -72,8 +48,8 @@
     * Win : Attack 2-K, Focus
     * Loss: Defend, Evade, Counter, Wild
     * Tie : Attack A
-    * Hits: 1
-    * Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4
+    * Hit: 0
+    * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
 
    - or -
 
@@ -92,8 +68,8 @@
     * Win : Focus 2-K, Defend, Evade, Counter
     * Loss: Attack, Wild
     * Tie : Focus A
-    * Hits: 1
-    * Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4
+    * Hits: 0
+    * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
 
    - or -
 
@@ -112,8 +88,8 @@
     * Win : Focus 2-K, Defend, Evade, Counter
     * Loss: Attack, Wild
     * Tie : Focus A
-    * Hits: 1
-    * Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4
+    * Hits: 0
+    * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
 
    - or -
 
@@ -133,7 +109,7 @@
     * Loss: Defend, Evade, Counter, Wild
     * Tie : Attack A
     * Hits: 0
-    * Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4
+    * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
 
    - or -
 
@@ -152,8 +128,8 @@
     * Win : Attack 2-10, Focus
     * Loss: Attack JQA, Defend, Evade, Counter, Wild
     * Tie : Attack K
-    * Hits: 1
-    * Combo: KK Hits: 2 or KKK Hits: 3
+    * Hits: 10
+    * Combo: KK Hits: 20 or KKK Hits: 30
 
    - or -
 
@@ -172,8 +148,8 @@
     * Win : Focus 2-10, Defend, Evade, Counter
     * Loss: Attack, Focus JQA, Wild
     * Tie : Focus K
-    * Hits: 1
-    * Combo: KK Hits: 2 or KKK Hits: 3
+    * Hits: 10
+    * Combo: KK Hits: 20 or KKK Hits: 30
 
    - or -
 
@@ -192,8 +168,8 @@
     * Win : Focus 2-10, Defend, Evade, Counter
     * Loss: Attack, Focus JQA, Wild
     * Tie : Focus K
-    * Hits: 1
-    * Combo: KK Hits: 2 or KKK Hits: 3
+    * Hits: 10
+    * Combo: KK Hits: 20 or KKK Hits: 30
 
    - or -
 
@@ -212,8 +188,8 @@
     * Win : Attack 2-10, Focus
     * Loss: Attack JQA, Defend, Evade, Counter, Wild
     * Tie : Attack K
-    * Hits: 1
-    * Combo: KK Hits: 2 or KKK Hits: 3
+    * Hits: 10
+    * Combo: KK Hits: 20 or KKK Hits: 30
 
    - or -
 
@@ -232,8 +208,8 @@
     * Win : Attack 2-10 K, Focus
     * Loss: Attack JA, Defend, Evade, Counter, Wild
     * Tie : Attack Q
-    * Hits: 1
-    * Combo: QQ Hits: 2
+    * Hits: 10
+    * Combo: QQ Hits: 20
 
    - or -
 
@@ -252,8 +228,8 @@
     * Win : Focus 2-10 K, Defend, Evade, Counter
     * Loss: Attack, Focus JA, Wild
     * Tie : Focus Q
-    * Hits: 1
-    * Combo: QQ Hits: 2
+    * Hits: 10
+    * Combo: QQ Hits: 20
 
    - or -
 
@@ -273,8 +249,8 @@
     * Win : Focus 2-10 K, Defend, Evade, Counter
     * Loss: Attack, Focus JA, Wild
     * Tie : Focus Q
-    * Hits: 1
-    * Combo: QQ Hits: 2
+    * Hits: 10
+    * Combo: QQ Hits: 20
 
    - or -
 
@@ -293,8 +269,8 @@
     * Win : Attack 2-10 K, Focus
     * Loss: Attack JA, Defend, Evade, Counter, Wild
     * Tie : Attack Q
-    * Hits: 1
-    * Combo: QQ Hits: 2
+    * Hits: 10
+    * Combo: QQ Hits: 20
 
    - or -
 
@@ -314,7 +290,7 @@
     * Win : Attack 2-10 QK, Focus
     * Loss: Attack A, Defend, Evade, Counter, Wild
     * Tie : Attack J
-    * Hits: 1
+    * Hits: 10
 
    - or -
 
@@ -334,7 +310,7 @@
     * Win : Focus 2-10 QK, Defend, Evade, Counter
     * Loss: Attack, Focus A, Wild
     * Tie : Focus J
-    * Hits: 1
+    * Hits: 10
 
    - or -
 
@@ -354,7 +330,7 @@
     * Win : Focus 2-10 QK, Defend, Evade, Counter
     * Loss: Attack, Focus A, Wild
     * Tie : Focus J
-    * Hits: 1
+    * Hits: 10
 
    - or -
 
@@ -374,7 +350,7 @@
     * Win : Attack 2-10 QK, Focus
     * Loss: Attack A, Defend, Evade, Counter, Wild
     * Tie : Attack J
-    * Hits: 1
+    * Hits: 10
 
    - or -
 
@@ -394,7 +370,7 @@
     * Win : Focus
     * Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild
     * Tie : Attack 10
-    * Hits: 1, Draw 1
+    * Hits: 10, Draw 1
 
    - or -
 
@@ -414,7 +390,7 @@
     * Win : Defend, Evade, Counter
     * Lose: Attack, Focus 2-9 JQKA, Wild
     * Tie : Focus 10
-    * Hits: 1
+    * Hits: 10
 
    - or -
 
@@ -434,7 +410,7 @@
     * Win : Defend, Evade, Counter
     * Lose: Attack, Focus 2-9 JQKA, Wild
     * Tie : Focus 10
-    * Hits: 1
+    * Hits: 10
 
    - or -
 
@@ -454,7 +430,7 @@
     * Win : Focus
     * Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild
     * Tie : Attack 10
-    * Hits: 1, Draw 1
+    * Hits: 10, Draw 1
 
    - or -
 
@@ -1099,6 +1075,13 @@
     * Loss: Focus, Defend, Evade, Counter
     * Hits: 0, Keep, Draw 1, Choose Hit Location"))
 
+(func card-fate : base/cardback
+ [color : string]
+ (base/cardback
+  :id (string "card-fate-" color)
+  :name "Fate"
+  :image (string "images/card-fate-" color ".svg")))
+
 (func deck-fate : base/deck
  (base/deck
   :name "Fate"
@@ -1162,42 +1145,16 @@
      )))
  :doc "Fate Deck")
 
-(func deck-fate-blue : base/deck
- (base/deck
-  :name "Fate Blue"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist-copy<-card-num
-     card-fate-blue
-     54)))
- :doc "Fate Back Deck")
-
-(func deck-fate-green : base/deck
- (base/deck
-  :name "Fate Green"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist-copy<-card-num
-     card-fate-green
-     54)))
- :doc "Fate Back Deck")
-
-(func deck-fate-red : base/deck
- (base/deck
-  :name "Fate Red"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist-copy<-card-num
-     card-fate-red
-     54)))
- :doc "Fate Back Deck")
-
-(func deck-fate-yellow : base/deck
- (base/deck
-  :name "Fate Yellow"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist-copy<-card-num
-     card-fate-yellow
-     54)))
+(func deck-fate : base/deck
+ [color : string]
+ (let : base/deck
+  [card : base/card := (card-fate color)]
+  (base/deck
+   :id (string "deck-fate-" color)
+   :name "Fate"
+   :cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist-copy<-card-num
+      card
+      54))))
  :doc "Fate Back Deck")

@@ -2,6 +2,7 @@
  :libs (lib base             :path nx/tactics/base)
        (lib damage           :path nx/tactics/decks/damage)
        (lib fate             :path nx/tactics/decks/fate)
+       (lib rule             :path nx/tactics/decks/rule)
        (lib scenario         :path nx/tactics/decks/scenario)
        (lib starter          :path nx/tactics/decks/starter)
        (lib tarot            :path nx/tactics/decks/tarot)
@@ -75,6 +76,7 @@
    (base/cardmap<-cardlist
     (base/cardlist
      (deck-books)
+     (deck-rules)
      (deck-setup)
      (deck-scenarios)
      (deck-encounters)
@@ -138,7 +140,6 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     (starter/deck-player)
      (tarot/deck-tarot)
      (fate/deck-fate)
      (damage/deck-damage)
@@ -151,14 +152,14 @@
      (damage/deck-restraintback)
      (damage/deck-bleeding)
      (damage/deck-bloodloss)
-     (starter/deck-player-blue)
-     (starter/deck-player-green)
-     (starter/deck-player-red)
-     (starter/deck-player-yellow)
-     (fate/deck-fate-blue)
-     (fate/deck-fate-green)
-     (fate/deck-fate-red)
-     (fate/deck-fate-yellow))))
+     (starter/deck-player "blue")
+     (starter/deck-player "green")
+     (starter/deck-player "red")
+     (starter/deck-player "yellow")
+     (fate/deck-fate "blue")
+     (fate/deck-fate "green")
+     (fate/deck-fate "red")
+     (fate/deck-fate "yellow"))))
  :doc "Setup Deck")
 
 (func deck-scenarios : base/deck

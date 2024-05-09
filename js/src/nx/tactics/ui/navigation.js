@@ -129,7 +129,7 @@ export default class nx_tactics_ui_navigation {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "navbar-",
+      "navbar/",
       ":parent",
       "navbar",
       ":stylelist",
@@ -168,7 +168,7 @@ export default class nx_tactics_ui_navigation {
         const uid = vx_core.f_new(
           vx_core.t_string,
           parent,
-          "-",
+          "/",
           name
         )
         const navbutton = nx_tactics_ui_navigation.f_ui_navbutton()

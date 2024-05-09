@@ -476,7 +476,7 @@
   text : string]
  (let : ui/ui
   [uidtitle : string :=
-    (string uid "-title1")]
+    (string uid "/title1")]
   (ui/ui
    :uid uidtitle
    :style styles/style-card-title1
@@ -491,7 +491,7 @@
   text : string]
  (let : ui/ui
   [uidtitle : string :=
-    (string uid "-title2")]
+    (string uid "/title2")]
   (ui/ui
    :uid uidtitle
    :style styles/style-card-title2
@@ -519,7 +519,7 @@
      id
      name)
    uid : string :=
-    (string parent "-" id1)
+    (string parent "/" id1)
    display : string :=
     (string-display<-any
      card)
@@ -543,7 +543,7 @@
       (ui-title2<-uid-text
        uid name)))
    uiddisplay : string :=
-    (string uid "-display")
+    (string uid "/display")
    uidisplay : ui/ui :=
     (if : ui/ui
      (then
@@ -576,7 +576,7 @@
      (then
       isdisplay4
       (let : ui/uilist
-       [uid2 : string := (string uid "-display2")
+       [uid2 : string := (string uid "/display2")
         display2 : string := (:2 displaysplit)
         uidisplay2 : ui/ui :=
          (ui/ui
@@ -586,7 +586,7 @@
            (ui/stylelist
             styles/style-textarea)
           :data display2)
-        uid3 : string := (string uid "-display3")
+        uid3 : string := (string uid "/display3")
         display3 : string := (:3 displaysplit)
         uidisplay3 : ui/ui :=
          (ui/ui
@@ -596,7 +596,7 @@
            (ui/stylelist
             styles/style-textarea)
           :data display3)
-        uid4 : string := (string uid "-display4")
+        uid4 : string := (string uid "/display4")
         display4 : string := (:4 displaysplit)
         uidisplay4 : ui/ui :=
          (ui/ui
@@ -633,13 +633,13 @@
      (:height unit)
      (:length unit)
      (:width  unit))
-   prefix : string := (string parent "-" name)
+   prefix : string := (string parent "/" name)
    uiitemsummary : ui/ui :=
     (if : ui/ui
      (then
       (!-empty summary)
       (ui/ui
-       :uid (string prefix "-summary")
+       :uid (string prefix "/summary")
        :style styles/style-item-summary
        :stylelist
         (ui/stylelist
@@ -651,7 +651,7 @@
      (then
       (!-empty image)
       (ui/ui
-       :uid (string prefix "-image")
+       :uid (string prefix "/image")
        :style styles/style-unit-image
        :data
         (file/file<-path
@@ -661,7 +661,7 @@
      (then
       (!-empty value)
       (ui/ui
-       :uid (string prefix "-value")
+       :uid (string prefix "/value")
        :style styles/style-unit-value
        :stylelist
         (ui/stylelist
@@ -672,7 +672,7 @@
      (then
       (!-empty titles)
       (ui/ui
-       :uid (string prefix "-titles")
+       :uid (string prefix "/titles")
        :style styles/style-unit-titles
        :stylelist
         (ui/stylelist
@@ -683,7 +683,7 @@
      (then
       (!-empty body)
       (ui/ui
-       :uid (string prefix "-body")
+       :uid (string prefix "/body")
        :style styles/style-unit-body
        :stylelist
         (ui/stylelist
@@ -694,7 +694,7 @@
      (then
       (!-empty bodydetail)
       (ui/ui
-       :uid (string prefix "-bodydetail")
+       :uid (string prefix "/bodydetail")
        :style styles/style-unit-bodydetail
        :stylelist
         (ui/stylelist
@@ -705,7 +705,7 @@
      (then
       (!-empty detail)
       (ui/ui
-       :uid (string prefix "-detail")
+       :uid (string prefix "/detail")
        :style styles/style-unit-detail
        :stylelist
         (ui/stylelist
@@ -757,13 +757,13 @@
      (:speedspace unit))
    detail : string :=
     (string-display<-unit unit)
-   prefix : string := (string parent "-" name)
+   prefix : string := (string parent "/" name)
    uiimage : ui/ui :=
     (if : ui/ui
      (then
       (!-empty image)
       (ui/ui
-       :uid (string prefix "-image")
+       :uid (string prefix "/image")
        :style styles/style-unit-image
        :data
         (file/file<-path
@@ -773,7 +773,7 @@
      (then
       (!-empty value)
       (ui/ui
-       :uid (string prefix "-value")
+       :uid (string prefix "/value")
        :style styles/style-unit-value
        :stylelist
         (ui/stylelist
@@ -784,7 +784,7 @@
      (then
       (!-empty titles)
       (ui/ui
-       :uid (string prefix "-titles")
+       :uid (string prefix "/titles")
        :style styles/style-unit-titles
        :stylelist
         (ui/stylelist
@@ -795,7 +795,7 @@
      (then
       (!-empty body)
       (ui/ui
-       :uid (string prefix "-body")
+       :uid (string prefix "/body")
        :style styles/style-unit-body
        :stylelist
         (ui/stylelist
@@ -806,7 +806,7 @@
      (then
       (!-empty bodydetail)
       (ui/ui
-       :uid (string prefix "-bodydetail")
+       :uid (string prefix "/bodydetail")
        :style styles/style-unit-bodydetail
        :stylelist
         (ui/stylelist
@@ -817,7 +817,7 @@
      (then
       (!-empty mind)
       (ui/ui
-       :uid (string prefix "-mind")
+       :uid (string prefix "/mind")
        :style styles/style-unit-mind
        :stylelist
         (ui/stylelist
@@ -828,7 +828,7 @@
      (then
       (!-empty minddetail)
       (ui/ui
-       :uid (string prefix "-minddetail")
+       :uid (string prefix "/minddetail")
        :style styles/style-unit-minddetail
        :stylelist
         (ui/stylelist
@@ -839,7 +839,7 @@
      (then
       (!-empty will)
       (ui/ui
-       :uid (string prefix "-will")
+       :uid (string prefix "/will")
        :style styles/style-unit-will
        :stylelist
         (ui/stylelist
@@ -850,7 +850,7 @@
      (then
       (!-empty willdetail)
       (ui/ui
-       :uid (string prefix "-willdetail")
+       :uid (string prefix "/willdetail")
        :style styles/style-unit-willdetail
        :stylelist
         (ui/stylelist
@@ -861,7 +861,7 @@
      (then
       (!-empty move)
       (ui/ui
-       :uid (string prefix "-move")
+       :uid (string prefix "/move")
        :style styles/style-unit-move
        :stylelist
         (ui/stylelist
@@ -872,7 +872,7 @@
      (then
       (!-empty movedetail)
       (ui/ui
-       :uid (string prefix "-movedetail")
+       :uid (string prefix "/movedetail")
        :style styles/style-unit-movedetail
        :stylelist
         (ui/stylelist
@@ -883,7 +883,7 @@
      (then
       (!-empty detail)
       (ui/ui
-       :uid (string prefix "-detail")
+       :uid (string prefix "/detail")
        :style styles/style-unit-detail
        :stylelist
         (ui/stylelist
@@ -921,7 +921,7 @@
      id
      name)
    uid : string :=
-    (string parent "-" id1)
+    (string parent "/" id1)
    imgback : string :=
     (switch : string
      datatype
@@ -1083,7 +1083,7 @@
 
 (func ui-app-statusbar : ui/ui
  (ui/ui
-  :uid   "statusbar"
+  :uid "statusbar"
   :stylelist
    (ui/stylelist
     style-app-statusbar)))
@@ -1109,7 +1109,7 @@
 
 (func ui-app-titlebar-print : ui/ui
  (ui/ui
-  :uid "titlebar-print"
+  :uid "titlebar/print"
   :parent "titlebar"
   :data
    (file/file
@@ -1129,7 +1129,7 @@
 
 (func ui-app-titlebar-title : ui/ui
  (ui/ui
-  :uid "titlebar-title"
+  :uid "titlebar/title"
   :parent "titlebar"
   :data "Title"
   :style
@@ -1146,7 +1146,7 @@
   (then
    (!-empty path)
    (ui/ui
-    :uid (string uid "-imagebkgd")
+    :uid (string uid "/imagebkgd")
     :style
      (ui/style
       :layout layout-image)
@@ -1187,7 +1187,7 @@
   parent : string]
  (let : ui/ui
   [name    : string       := (:name deck)
-   uid     : string       := (string parent "-" name)
+   uid     : string       := (string parent "/" name)
    cardmap : base/cardmap := (:cardmap deck)
    uimap : ui/uimap :=
     (uimap<-cardmap-parent-page-size
@@ -1209,7 +1209,7 @@
   [name  : string :=
     (:name skill)
    uid : string :=
-    (string parent "-" name)
+    (string parent "/" name)
    specialtymap : base/specialtymap :=
     (:specialtymap skill)
    abilitymap : base/abilitymap :=
@@ -1375,7 +1375,7 @@
   pos  : int]
  (let : ui/ui
   [id : string :=
-    (string uid "-suit-" pos)
+    (string uid "/suit-" pos)
    filename : string :=
     (switch
      suit
@@ -1420,19 +1420,19 @@
      labelrank1 : string :=
       (string
        parent
-       "-rank1")
+       "/rank1")
      labelrank2 : string :=
       (string
        parent
-       "-rank2")
+       "/rank2")
      labelsuit1 : string :=
       (string
        parent
-       "-suit1")
+       "/suit1")
      labelsuit2 : string :=
       (string
        parent
-       "-suit2")
+       "/suit2")
      srank : string := (:titles rank)
      ssuit : string := (:titles suit)
      uisuit1 : ui/ui :=

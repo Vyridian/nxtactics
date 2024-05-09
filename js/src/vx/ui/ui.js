@@ -581,6 +581,79 @@ export default class vx_ui_ui {
   }
 
   /**
+   * @function int_visible_from_ui
+   * Returns the position of the currently visible subui
+   * @param  {ui} ui
+   * @return {int}
+   */
+  static t_int_visible_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_int_visible_from_ui = {
+    vx_type: vx_ui_ui.t_int_visible_from_ui
+  }
+
+  // (func int-visible<-ui)
+  static f_int_visible_from_ui(ui) {
+    let output = vx_core.e_int
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_int, "list-1": vx_core.t_intlist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const intlist = vx_ui_ui.f_intlist_visible_from_ui(ui)
+        return vx_core.f_first_from_list({"any-1": vx_core.t_int, "list-1": vx_core.t_intlist}, intlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function intlist_visible_from_ui
+   * Return a uilist of the ui with selected=true
+   * @param  {ui} uiarg
+   * @return {uilist}
+   */
+  static t_intlist_visible_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_intlist_visible_from_ui = {
+    vx_type: vx_ui_ui.t_intlist_visible_from_ui
+  }
+
+  // (func intlist-visible<-ui)
+  static f_intlist_visible_from_ui(uiarg) {
+    let output = vx_ui_ui.e_uilist
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_uilist, "any-2": vx_ui_ui.t_ui, "list-1": generic_list_1, "list-2": vx_ui_ui.t_uilist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, uiarg, ":uimap")
+        const uilist = vx_ui_ui.f_uilist_from_uimap(uimap)
+        const intlist = vx_core.f_list_from_list_intany(
+          {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "list-1": vx_ui_ui.t_uilist, "list-2": vx_ui_ui.t_uilist},
+          uilist,
+          vx_core.f_new(vx_core.t_any_from_int_any, (pos, subui) => 
+            vx_core.f_if_2(
+              {"any-1": vx_core.t_int},
+              vx_core.f_then(
+                vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_not(
+                  vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": vx_ui_ui.t_ui}, subui, ":hidden")
+                )}),
+                vx_core.f_new(vx_core.t_any_from_func, () => {return pos})
+              )
+            ))
+        )
+        return vx_collection.f_list_from_list_filter(
+          {"any-1": vx_core.t_int, "any-2": vx_ui_ui.t_ui, "list-1": generic_list_1, "list-2": vx_ui_ui.t_uilist},
+          intlist,
+          vx_core.f_new(vx_core.t_any_from_any, (pos) => pos)
+        )
+      })
+    )
+    return output
+  }
+
+  /**
    * @function layout_from_style
    * @param  {style} style
    * @return {layout}
@@ -1811,6 +1884,8 @@ export default class vx_ui_ui {
       "boolean-writestate<-uiengine": vx_ui_ui.e_boolean_writestate_from_uiengine,
       "fontfacemap<-fontfacelist": vx_ui_ui.e_fontfacemap_from_fontfacelist,
       "int-selected<-ui": vx_ui_ui.e_int_selected_from_ui,
+      "int-visible<-ui": vx_ui_ui.e_int_visible_from_ui,
+      "intlist-visible<-ui": vx_ui_ui.e_intlist_visible_from_ui,
       "layout<-style": vx_ui_ui.e_layout_from_style,
       "layout<-ui": vx_ui_ui.e_layout_from_ui,
       "layout<-ui-layoutengine": vx_ui_ui.e_layout_from_ui_layoutengine,
@@ -1857,6 +1932,8 @@ export default class vx_ui_ui {
       "boolean-writestate<-uiengine": vx_ui_ui.t_boolean_writestate_from_uiengine,
       "fontfacemap<-fontfacelist": vx_ui_ui.t_fontfacemap_from_fontfacelist,
       "int-selected<-ui": vx_ui_ui.t_int_selected_from_ui,
+      "int-visible<-ui": vx_ui_ui.t_int_visible_from_ui,
+      "intlist-visible<-ui": vx_ui_ui.t_intlist_visible_from_ui,
       "layout<-style": vx_ui_ui.t_layout_from_style,
       "layout<-ui": vx_ui_ui.t_layout_from_ui,
       "layout<-ui-layoutengine": vx_ui_ui.t_layout_from_ui_layoutengine,
@@ -2962,6 +3039,42 @@ export default class vx_ui_ui {
       properties    : [],
       proplast      : {},
       fn            : vx_ui_ui.f_int_selected_from_ui
+    }
+
+    // (func int-visible<-ui)
+    vx_ui_ui.t_int_visible_from_ui['vx_value'] = {
+      name          : "int-visible<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_int_visible_from_ui
+    }
+
+    // (func intlist-visible<-ui)
+    vx_ui_ui.t_intlist_visible_from_ui['vx_value'] = {
+      name          : "intlist-visible<-ui",
+      pkgname       : "vx/ui/ui",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_ui.f_intlist_visible_from_ui
     }
 
     // (func layout<-style)

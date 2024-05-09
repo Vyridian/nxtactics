@@ -24,12 +24,12 @@ export default class nx_tactics_decks_fate_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/fate", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 58), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 5, ":total", 63), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 54), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 3, ":tests", 2, ":total", 57), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 63), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 56), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -45,10 +45,6 @@ export default class nx_tactics_decks_fate_test {
       "constmap",
         vx_core.f_new(
           vx_core.t_intmap,
-          "card-fate-blue", 0,
-          "card-fate-green", 0,
-          "card-fate-red", 0,
-          "card-fate-yellow", 0,
           "fate-2c", 0,
           "fate-2d", 0,
           "fate-2h", 0,
@@ -107,11 +103,9 @@ export default class nx_tactics_decks_fate_test {
       "funcmap",
         vx_core.f_new(
           vx_core.t_intmap,
+          "card-fate", 0,
           "deck-fate", 0,
-          "deck-fate-blue", 0,
-          "deck-fate-green", 0,
-          "deck-fate-red", 0,
-          "deck-fate-yellow", 0
+          "deck-fate_1", 0
         )
     )
   }

@@ -28,11 +28,11 @@ export default class vx_ui_ui_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "vx/ui/ui", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 41), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 59, ":tests", 67, ":total", 113), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 4, ":tests", 2, ":total", 44), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 60, ":tests", 69, ":total", 115), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 4, ":tests", 2, ":total", 46), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 113), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 115), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 28)
     )
   }
@@ -126,6 +126,8 @@ export default class vx_ui_ui_test {
           "boolean-writestate<-uiengine", 0,
           "fontfacemap<-fontfacelist", 0,
           "int-selected<-ui", 0,
+          "int-visible<-ui", 0,
+          "intlist-visible<-ui", 0,
           "layout<-style", 0,
           "layout<-ui", 0,
           "layout<-ui-layoutengine", 0,

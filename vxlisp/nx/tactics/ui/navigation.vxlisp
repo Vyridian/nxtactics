@@ -53,7 +53,7 @@
 
 (func ui-navbutton : ui/ui
  (ui/ui
-  :uid "navbar-"
+  :uid "navbar/"
   :parent "navbar"
   :stylelist
    (ui/stylelist
@@ -66,7 +66,7 @@
   selected : boolean]
  (let : ui/ui
   [name : string  := (:name ui)
-   uid  : string  := (string parent "-" name)
+   uid  : string  := (string parent "/" name)
    navbutton : ui := (ui-navbutton)]
   (copy navbutton
    :uid    uid

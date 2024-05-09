@@ -4,7 +4,7 @@
    height="88mm"
    version="1.1"
    id="svg132"
-   sodipodi:docname="card-trauma-rage.svg"
+   sodipodi:docname="card-trauma-fear.svg"
    viewBox="0 0 975.48891 1362.5877"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -32,13 +32,6 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg132"
      inkscape:document-units="mm" />
-  <rect
-     style="fill:#dfefe9;stroke:#383838;stroke-width:0.15484;paint-order:markers fill stroke;fill-opacity:1;stroke-opacity:1"
-     id="rect132"
-     width="976.54572"
-     height="1358.5623"
-     x="-2.529911"
-     y="2.529911" />
   <g
      id="g1"
      transform="matrix(1.0002239,0,0,0.84912065,-227.24883,34.870259)">

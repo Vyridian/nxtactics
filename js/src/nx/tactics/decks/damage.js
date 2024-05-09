@@ -351,6 +351,18 @@ export default class nx_tactics_decks_damage {
   static c_damage_wild_red = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'damage-wild-red'}}
 
   /**
+   * Constant: disorder-2s
+   * {damage}
+   */
+  static c_disorder_2s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'disorder-2s'}}
+
+  /**
+   * Constant: disorder-3s
+   * {damage}
+   */
+  static c_disorder_3s = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'disorder-3s'}}
+
+  /**
    * Constant: disorder-ac
    * {damage}
    */
@@ -363,6 +375,12 @@ export default class nx_tactics_decks_damage {
   static c_disorder_ad = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'disorder-ad'}}
 
   /**
+   * Constant: disorder-ah
+   * {damage}
+   */
+  static c_disorder_ah = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'disorder-ah'}}
+
+  /**
    * Constant: disorder-as
    * {damage}
    */
@@ -373,6 +391,12 @@ export default class nx_tactics_decks_damage {
    * {damage}
    */
   static c_disorder_kc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'disorder-kc'}}
+
+  /**
+   * Constant: disorder-ks
+   * {damage}
+   */
+  static c_disorder_ks = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'disorder-ks'}}
 
   /**
    * Constant: disorder-qc
@@ -549,10 +573,100 @@ export default class nx_tactics_decks_damage {
   static c_stun = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'stun'}}
 
   /**
+   * Constant: trauma-2c
+   * {damage}
+   */
+  static c_trauma_2c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-2c'}}
+
+  /**
+   * Constant: trauma-3c
+   * {damage}
+   */
+  static c_trauma_3c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-3c'}}
+
+  /**
+   * Constant: trauma-4c
+   * {damage}
+   */
+  static c_trauma_4c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-4c'}}
+
+  /**
+   * Constant: trauma-5c
+   * {damage}
+   */
+  static c_trauma_5c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-5c'}}
+
+  /**
+   * Constant: trauma-6c
+   * {damage}
+   */
+  static c_trauma_6c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-6c'}}
+
+  /**
+   * Constant: trauma-7c
+   * {damage}
+   */
+  static c_trauma_7c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-7c'}}
+
+  /**
+   * Constant: trauma-8c
+   * {damage}
+   */
+  static c_trauma_8c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-8c'}}
+
+  /**
+   * Constant: trauma-9c
+   * {damage}
+   */
+  static c_trauma_9c = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-9c'}}
+
+  /**
+   * Constant: trauma-ac
+   * {damage}
+   */
+  static c_trauma_ac = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-ac'}}
+
+  /**
+   * Constant: trauma-ad
+   * {damage}
+   */
+  static c_trauma_ad = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-ad'}}
+
+  /**
+   * Constant: trauma-ah
+   * {damage}
+   */
+  static c_trauma_ah = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-ah'}}
+
+  /**
    * Constant: trauma-as
    * {damage}
    */
   static c_trauma_as = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-as'}}
+
+  /**
+   * Constant: trauma-jc
+   * {damage}
+   */
+  static c_trauma_jc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-jc'}}
+
+  /**
+   * Constant: trauma-kc
+   * {damage}
+   */
+  static c_trauma_kc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-kc'}}
+
+  /**
+   * Constant: trauma-qc
+   * {damage}
+   */
+  static c_trauma_qc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-qc'}}
+
+  /**
+   * Constant: trauma-tc
+   * {damage}
+   */
+  static c_trauma_tc = {vx_type: nx_tactics_base.t_damage, vx_constdef: {pkgname: 'nx/tactics/decks/damage', name: 'trauma-tc'}}
 
   /**
    * Constant: trauma-wild-black
@@ -964,7 +1078,7 @@ export default class nx_tactics_decks_damage {
 
   /**
    * @function deck_trauma
-   * Trauma Card Deck
+   * Trauma Deck
    * @return {deck}
    */
   static t_deck_trauma = {
@@ -991,55 +1105,55 @@ export default class nx_tactics_decks_damage {
           nx_tactics_base.t_cardlist,
           nx_tactics_decks_damage.c_trauma_wild_black,
           nx_tactics_decks_damage.c_trauma_wild_red,
-          nx_tactics_decks_damage.c_restraint_ac,
-          nx_tactics_decks_damage.c_restraint_ad,
-          nx_tactics_decks_damage.c_restraint_ah,
+          nx_tactics_decks_damage.c_trauma_ac,
+          nx_tactics_decks_damage.c_trauma_ad,
+          nx_tactics_decks_damage.c_trauma_ah,
           nx_tactics_decks_damage.c_trauma_as,
-          nx_tactics_decks_damage.c_damage_kc,
+          nx_tactics_decks_damage.c_trauma_kc,
           nx_tactics_decks_damage.c_damage_kd,
           nx_tactics_decks_damage.c_damage_kh,
           nx_tactics_decks_damage.c_damage_ks,
-          nx_tactics_decks_damage.c_damage_qc,
+          nx_tactics_decks_damage.c_trauma_qc,
           nx_tactics_decks_damage.c_damage_qd,
           nx_tactics_decks_damage.c_damage_qh,
           nx_tactics_decks_damage.c_damage_qs,
-          nx_tactics_decks_damage.c_damage_jc,
+          nx_tactics_decks_damage.c_trauma_jc,
           nx_tactics_decks_damage.c_damage_jd,
           nx_tactics_decks_damage.c_damage_jh,
           nx_tactics_decks_damage.c_damage_js,
-          nx_tactics_decks_damage.c_damage_tc,
+          nx_tactics_decks_damage.c_trauma_tc,
           nx_tactics_decks_damage.c_damage_td,
           nx_tactics_decks_damage.c_damage_th,
           nx_tactics_decks_damage.c_damage_ts,
-          nx_tactics_decks_damage.c_damage_9c,
+          nx_tactics_decks_damage.c_trauma_9c,
           nx_tactics_decks_damage.c_damage_9d,
           nx_tactics_decks_damage.c_damage_9h,
           nx_tactics_decks_damage.c_damage_9s,
-          nx_tactics_decks_damage.c_damage_8c,
+          nx_tactics_decks_damage.c_trauma_8c,
           nx_tactics_decks_damage.c_damage_8d,
           nx_tactics_decks_damage.c_damage_8h,
           nx_tactics_decks_damage.c_damage_8s,
-          nx_tactics_decks_damage.c_damage_7c,
+          nx_tactics_decks_damage.c_trauma_7c,
           nx_tactics_decks_damage.c_damage_7d,
           nx_tactics_decks_damage.c_damage_7h,
           nx_tactics_decks_damage.c_damage_7s,
-          nx_tactics_decks_damage.c_damage_6c,
+          nx_tactics_decks_damage.c_trauma_6c,
           nx_tactics_decks_damage.c_damage_6d,
           nx_tactics_decks_damage.c_damage_6h,
           nx_tactics_decks_damage.c_damage_6s,
-          nx_tactics_decks_damage.c_damage_5c,
+          nx_tactics_decks_damage.c_trauma_5c,
           nx_tactics_decks_damage.c_damage_5d,
           nx_tactics_decks_damage.c_damage_5h,
           nx_tactics_decks_damage.c_damage_5s,
-          nx_tactics_decks_damage.c_damage_4c,
+          nx_tactics_decks_damage.c_trauma_4c,
           nx_tactics_decks_damage.c_damage_4d,
           nx_tactics_decks_damage.c_damage_4h,
           nx_tactics_decks_damage.c_damage_4s,
-          nx_tactics_decks_damage.c_restraint_3c,
+          nx_tactics_decks_damage.c_trauma_3c,
           nx_tactics_decks_damage.c_restraint_3d,
           nx_tactics_decks_damage.c_restraint_3h,
           nx_tactics_decks_damage.c_restraint_3s,
-          nx_tactics_decks_damage.c_restraint_2c,
+          nx_tactics_decks_damage.c_trauma_2c,
           nx_tactics_decks_damage.c_restraint_2d,
           nx_tactics_decks_damage.c_restraint_2h,
           nx_tactics_decks_damage.c_restraint_2s
@@ -1137,10 +1251,14 @@ export default class nx_tactics_decks_damage {
       "damage-ts": nx_tactics_decks_damage.c_damage_ts,
       "damage-wild-black": nx_tactics_decks_damage.c_damage_wild_black,
       "damage-wild-red": nx_tactics_decks_damage.c_damage_wild_red,
+      "disorder-2s": nx_tactics_decks_damage.c_disorder_2s,
+      "disorder-3s": nx_tactics_decks_damage.c_disorder_3s,
       "disorder-ac": nx_tactics_decks_damage.c_disorder_ac,
       "disorder-ad": nx_tactics_decks_damage.c_disorder_ad,
+      "disorder-ah": nx_tactics_decks_damage.c_disorder_ah,
       "disorder-as": nx_tactics_decks_damage.c_disorder_as,
       "disorder-kc": nx_tactics_decks_damage.c_disorder_kc,
+      "disorder-ks": nx_tactics_decks_damage.c_disorder_ks,
       "disorder-qc": nx_tactics_decks_damage.c_disorder_qc,
       "disorder-wild-black": nx_tactics_decks_damage.c_disorder_wild_black,
       "disorder-wild-red": nx_tactics_decks_damage.c_disorder_wild_red,
@@ -1170,7 +1288,22 @@ export default class nx_tactics_decks_damage {
       "slow": nx_tactics_decks_damage.c_slow,
       "stress": nx_tactics_decks_damage.c_stress,
       "stun": nx_tactics_decks_damage.c_stun,
+      "trauma-2c": nx_tactics_decks_damage.c_trauma_2c,
+      "trauma-3c": nx_tactics_decks_damage.c_trauma_3c,
+      "trauma-4c": nx_tactics_decks_damage.c_trauma_4c,
+      "trauma-5c": nx_tactics_decks_damage.c_trauma_5c,
+      "trauma-6c": nx_tactics_decks_damage.c_trauma_6c,
+      "trauma-7c": nx_tactics_decks_damage.c_trauma_7c,
+      "trauma-8c": nx_tactics_decks_damage.c_trauma_8c,
+      "trauma-9c": nx_tactics_decks_damage.c_trauma_9c,
+      "trauma-ac": nx_tactics_decks_damage.c_trauma_ac,
+      "trauma-ad": nx_tactics_decks_damage.c_trauma_ad,
+      "trauma-ah": nx_tactics_decks_damage.c_trauma_ah,
       "trauma-as": nx_tactics_decks_damage.c_trauma_as,
+      "trauma-jc": nx_tactics_decks_damage.c_trauma_jc,
+      "trauma-kc": nx_tactics_decks_damage.c_trauma_kc,
+      "trauma-qc": nx_tactics_decks_damage.c_trauma_qc,
+      "trauma-tc": nx_tactics_decks_damage.c_trauma_tc,
       "trauma-wild-black": nx_tactics_decks_damage.c_trauma_wild_black,
       "trauma-wild-red": nx_tactics_decks_damage.c_trauma_wild_red
     })
@@ -2206,6 +2339,32 @@ export default class nx_tactics_decks_damage {
       "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."
     ))
 
+    // (const disorder-2s)
+    Object.assign(nx_tactics_decks_damage.c_disorder_2s, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Neural: Right Foot",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2s,
+      ":image",
+      "images/card-disorder-rightfoot.svg",
+      ":summary",
+      "Minor: Foot Pain. [Slow]:1\nMajor: Foot Cramps and Weakness. Restricted movement. [Slow]:1\nCritical:Foot Numbness. [Hobbled]. [Slow]:2\nExtreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"
+    ))
+
+    // (const disorder-3s)
+    Object.assign(nx_tactics_decks_damage.c_disorder_3s, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Neural: Left Foot",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3s,
+      ":image",
+      "images/card-disorder-leftfoot.svg",
+      ":summary",
+      "Minor: Foot Pain. [Slow]:1\nMajor: Foot Cramps and Weakness. Restricted movement. [Slow]:1\nCritical:Foot Numbness. [Hobbled]. [Slow]:2\nExtreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"
+    ))
+
     // (const disorder-ac)
     Object.assign(nx_tactics_decks_damage.c_disorder_ac, vx_core.f_new(
       nx_tactics_base.t_damage,
@@ -2216,20 +2375,33 @@ export default class nx_tactics_decks_damage {
       ":image",
       "images/card-disorder-loss.svg",
       ":summary",
-      "Minor - Fatigue. Fatigue:1\nMajor - Must sleep half the day. Fatigue:2\nCritical - Must sleep 3/4 of day. Falls asleep randomly. Fatigue:4\nExtreme - Comatose. [Immobilized]"
+      "Minor: Space out. Fatigue:1\nMajor: Must sleep half the day. Fatigue:2\nCritical: Must sleep 3/4 of day. Falls asleep randomly. Fatigue:4\nExtreme: Comatose. [Immobilized]"
     ))
 
     // (const disorder-ad)
     Object.assign(nx_tactics_decks_damage.c_disorder_ad, vx_core.f_new(
       nx_tactics_base.t_damage,
       ":name",
-      "Delusion: Reality",
+      "Delusion: Death",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
       "images/card-disorder-delusion.svg",
       ":summary",
-      "Minor - Hear noises and voices. Stun:1\nMajor - See things that aren't there. Stun:2\nCritical - Terrible Hallucinations. Stun:4\nExtreme - Lost in a living hell. Screaming. [Immobilized] Stun:4"
+      "Minor: You hear the dead. Stun:1\nMajor: You see the dead. Some are scary. Some are nice. Stun:2\nCritical: Dedicate yourself to the dead. Stun:4\nExtreme: Cannot sense the living world. Catatonic. Stun:4"
+    ))
+
+    // (const disorder-ah)
+    Object.assign(nx_tactics_decks_damage.c_disorder_ah, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Compulsion: Death",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ah,
+      ":image",
+      "images/card-disorder-compulsion.svg",
+      ":summary",
+      "Minor: You contemplate murder.\nMajor: You follow potential targets and plan how you could kill them.\nCritical: Serial Killer. Methodically plan and execute your murders.\nExtreme: Kill as often as possible in increasingly elaborate ways. [Shadow Triumphant]"
     ))
 
     // (const disorder-as)
@@ -2242,7 +2414,7 @@ export default class nx_tactics_decks_damage {
       ":image",
       "images/card-disorder-head.svg",
       ":summary",
-      "Minor: Nervous Tick. Stun:1\nMajor: Tremors. Stun:1 Slow:1\nCritical: Convulsions. [Hobbled] Stun:2 Slow:2\nExtreme: Violent Seizures. [Dying] [Immobilized] Stun:4"
+      "Minor: Headache. Stun:1\nMajor: Intense Migraine. Stun:1 Slow:1\nCritical:Stroke. Half of body paralyzed. [Hobbled] Stun:2 Slow:2\nExtreme:Stroke. Body paralyzed. [Immobilized] Stun:4"
     ))
 
     // (const disorder-kc)
@@ -2256,6 +2428,19 @@ export default class nx_tactics_decks_damage {
       "images/card-disorder-loss.svg",
       ":summary",
       "Minor: Forgetful. Stress:1\nMajor: Significant memory loss. Half of Skills at 0. Stun:1 Stress:1\nCritical: Most memories lost. All skills at 0. Stun:2 Stress:2\nExtreme: Cannot remember or retain memories. Stun:3 Stress:3"
+    ))
+
+    // (const disorder-ks)
+    Object.assign(nx_tactics_decks_damage.c_disorder_ks, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Neural: Shoulders",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ks,
+      ":image",
+      "images/card-disorder-shoulders.svg",
+      ":summary",
+      "Minor: Back Pain. Stun:1\nMajor: Heavy breathing. Stun:1 Slow:1\nCritical: Shortness of Breath. [Hobbled] Stun:2 Slow:2\nExtreme: Lung Failure [Suffocating] Stun:4"
     ))
 
     // (const disorder-qc)
@@ -2562,7 +2747,7 @@ export default class nx_tactics_decks_damage {
       ":image",
       "images/card-restraint-head.svg",
       ":summary",
-      "Minor: Hair Ensnared. Slow:1\nModerate: Face Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Skull Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Neck Constructed. [Suffocating] [Dying] Remove:3 Damage"
+      "Minor: Hair Ensnared. Slow:1\nModerate: Face Constricted. Slow:1 Every turn. Remove:1 Damage\nMajor: Skull Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage\nExtreme: Neck Constricted. [Suffocating] [Dying] Remove:3 Damage"
     ))
 
     // (const restraint-ad)
@@ -2677,6 +2862,149 @@ export default class nx_tactics_decks_damage {
       "* If you have [Mind]:0, you are [Confused]. Any additional [Stun] is flipped to [Disorder].\n* [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover]."
     ))
 
+    // (const trauma-2c)
+    Object.assign(nx_tactics_decks_damage.c_trauma_2c, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Fortune",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_2c,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Frustrated by an arbitrary world.\nMajor: Random outbursts. Your temper seems to surge at random times.\nCritical: Lash out. Choose enemy targets at random. [Beast]:2\nExtreme: Blind Rage. Choose targets completely at random. [Beast Unleashed]"
+    ))
+
+    // (const trauma-3c)
+    Object.assign(nx_tactics_decks_damage.c_trauma_3c, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Things",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_3c,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Graphetti Artist. Make your mark on the world.\nMajor: Vandal. Take out your anger by defacing and damaging objects. [Beast]:1\nCritical: Arsonist. Kill them with fire. [Beast]:2\nExtreme: Destroyer. The world is too far gone. Burn it all down. [Beast Unleashed]"
+    ))
+
+    // (const trauma-4c)
+    Object.assign(nx_tactics_decks_damage.c_trauma_4c, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Change",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_4c,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.\nMajor: Reactionary. Cannot tolerate anything new or modern.\nCritical: Luddite. Destroy anything modern or new.\nExtreme:Violent Primitivist. Destroy anything that is more advanced than would be on a farm."
+    ))
+
+    // (const trauma-5c)
+    Object.assign(nx_tactics_decks_damage.c_trauma_5c, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Strangers",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_5c,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Possessive. Drawn to abusive relationships.\nMajor: Controlling. You are a manipulator.\nCritical: Stalker. You are a sexual abuser.\nExtreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. [Beast Unleashed]"
+    ))
+
+    // (const trauma-6c)
+    Object.assign(nx_tactics_decks_damage.c_trauma_6c, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Strangers",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_6c,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Resentful. Talks about others with sweeping sterotypes.\nMajor: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.\nCritical: Terrorist. Hates other groups and actively seeks to undermine or harm them.\nExtreme: Genocidal. Actively works to wipe out certain groups. [Beast Unleashed]"
+    ))
+
+    // (const trauma-7c)
+    Object.assign(nx_tactics_decks_damage.c_trauma_7c, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Companions",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_7c,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Vindictive. Aggressively protective of companions.\nMajor: Hunter. Take merciless revenge on any wrongs against companions.\nCritical: Punisher. There are more who deserve punishment. Relentlessly hunt them down.\nExtreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. [Beast Unleashed]"
+    ))
+
+    // (const trauma-8c)
+    Object.assign(nx_tactics_decks_damage.c_trauma_8c, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Status",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_8c,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Jealous. Frustrated by showoffs.\nMajor: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. [Beast]:1\nCritical: Smear Campaign. Dedicated to embarassing and undermining the elite.\nExtreme: Punish the elite for their hubris. Kill them all. [Beast Unleashed]"
+    ))
+
+    // (const trauma-9c)
+    Object.assign(nx_tactics_decks_damage.c_trauma_9c, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Belief",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_9c,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.\nMajor: Sacreligeous. Has a tendency toward sacrilege and blasphemy.\nCritical: Violent secularist. Blame faith for everything. Unable to work with those who with strong beliefs.\nExtreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. [Beast Unleashed]"
+    ))
+
+    // (const trauma-ac)
+    Object.assign(nx_tactics_decks_damage.c_trauma_ac, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Death",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ac,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Frustrated by the randomness and cruelty of death.\nMajor: Create meaning in death by choosing who dies. [Beast]:1\nCritical: Hair Trigger. Witnessing death sends you into an uncontrolled rage. [Beast]:2\nExtreme: Killing machine. Murderous Rage until death. [Beast Unleashed]"
+    ))
+
+    // (const trauma-ad)
+    Object.assign(nx_tactics_decks_damage.c_trauma_ad, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Despair: Death",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ad,
+      ":image",
+      "images/card-trauma-despair.svg",
+      ":summary",
+      "Minor: Grieving. Thinks and talks about death of self and others.\nMajor: Fatalistic. Longs for death. May only obtain Skills/Abilities directly related to Death (including Combat).\nCritical: Tormented. Plans and creates opportunities for death.\nExtreme: Suicidal. Death is inevitable."
+    ))
+
+    // (const trauma-ah)
+    Object.assign(nx_tactics_decks_damage.c_trauma_ah, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Desire: Death",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_ah,
+      ":image",
+      "images/card-trauma-desire.svg",
+      ":summary",
+      "Minor: Study and discuss death constantly.\nMajor: Necrophile. May only take Skills/Abilities associated with death.\nCritical: Become a death cultist.\nExtreme: Take the final step. Try to cross over."
+    ))
+
     // (const trauma-as)
     Object.assign(nx_tactics_decks_damage.c_trauma_as, vx_core.f_new(
       nx_tactics_base.t_damage,
@@ -2687,9 +3015,61 @@ export default class nx_tactics_decks_damage {
       ":image",
       "images/card-trauma-fear.svg",
       ":summary",
-      "Minor: Cannot interact with dead things.\nMajor: Collapse in fear if only 2 Body remain.\nCritical: Collapse in fear when over half Wounds taken or death is even mentioned.\nExtreme: Believe that death is pursuing them. Permanently flee until collapse in exhaustion.",
+      "Minor: Become agitated, shaky and incoherent when facing death.\nMajor: Death is coming. Run.\nCritical: Collapse in terror of death.\nExtreme: Die of Fright. [Dead]",
       ":reference",
       "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over."
+    ))
+
+    // (const trauma-jc)
+    Object.assign(nx_tactics_decks_damage.c_trauma_jc, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Violence",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_jc,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Viscious. Revel in the kill.\nMajor: Bloodthirsty. Find a way to keep the kills coming.\nCritical: Butcher. [Beast]:1 Cleave a bloody path wherever you go. [Beast]:2\nExtreme: Animalistic. Kill indiscriminately. [Beast Unleased]"
+    ))
+
+    // (const trauma-kc)
+    Object.assign(nx_tactics_decks_damage.c_trauma_kc, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Power",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_kc,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Rebel. You hate those who seek to control others.\nMajor: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1\nCritical: Insurgent. You despise those in power and are dedicated to putting a blade to them. [Beast]:2\nExtreme: Antifa. Violently attack anyone who commands others. [Beast Unleashed]"
+    ))
+
+    // (const trauma-qc)
+    Object.assign(nx_tactics_decks_damage.c_trauma_qc, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Self",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_qc,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Self Critical. You feel extreme guilt for your actions.\nMajor: Self loathing.\nCritical: Self Destructive.\nExtreme: Suicidal. You are worthless and disgusting. End it in a way befitting of your self loathing."
+    ))
+
+    // (const trauma-tc)
+    Object.assign(nx_tactics_decks_damage.c_trauma_tc, vx_core.f_new(
+      nx_tactics_base.t_damage,
+      ":name",
+      "Rage: Reality",
+      ":ranksuit",
+      nx_tactics_base.c_ranksuit_tc,
+      ":image",
+      "images/card-trauma-rage.svg",
+      ":summary",
+      "Minor: Angry drunk. Obnoxious and pushy when intoxicated.\nMajor: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. [Beast]:1\nCritical: Violent Addict. You're violent when high and will take anything for a high. [Beast]:2\nExtreme:Wildly Violent Addict. Do anything it takes to stay high. [Beast Unleashed]"
     ))
 
     // (const trauma-wild-black)

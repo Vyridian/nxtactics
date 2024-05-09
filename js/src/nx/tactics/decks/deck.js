@@ -4,6 +4,7 @@ import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
 import nx_tactics_decks_damage from "../../../nx/tactics/decks/damage.js"
 import nx_tactics_decks_fate from "../../../nx/tactics/decks/fate.js"
+import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_scenario from "../../../nx/tactics/decks/scenario.js"
 import nx_tactics_decks_starter from "../../../nx/tactics/decks/starter.js"
 import nx_tactics_decks_tarot from "../../../nx/tactics/decks/tarot.js"
@@ -165,6 +166,7 @@ export default class nx_tactics_decks_deck {
         vx_core.f_new(
           nx_tactics_base.t_cardlist,
           nx_tactics_decks_deck.f_deck_books(),
+          nx_tactics_decks_rule.f_deck_rules(),
           nx_tactics_decks_deck.f_deck_setup(),
           nx_tactics_decks_deck.f_deck_scenarios(),
           nx_tactics_decks_deck.f_deck_encounters(),
@@ -342,7 +344,6 @@ export default class nx_tactics_decks_deck {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           nx_tactics_base.t_cardlist,
-          nx_tactics_decks_starter.f_deck_player(),
           nx_tactics_decks_tarot.f_deck_tarot(),
           nx_tactics_decks_fate.f_deck_fate(),
           nx_tactics_decks_damage.f_deck_damage(),
@@ -355,14 +356,14 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_damage.f_deck_restraintback(),
           nx_tactics_decks_damage.f_deck_bleeding(),
           nx_tactics_decks_damage.f_deck_bloodloss(),
-          nx_tactics_decks_starter.f_deck_player_blue(),
-          nx_tactics_decks_starter.f_deck_player_green(),
-          nx_tactics_decks_starter.f_deck_player_red(),
-          nx_tactics_decks_starter.f_deck_player_yellow(),
-          nx_tactics_decks_fate.f_deck_fate_blue(),
-          nx_tactics_decks_fate.f_deck_fate_green(),
-          nx_tactics_decks_fate.f_deck_fate_red(),
-          nx_tactics_decks_fate.f_deck_fate_yellow()
+          nx_tactics_decks_starter.f_deck_player("blue"),
+          nx_tactics_decks_starter.f_deck_player("green"),
+          nx_tactics_decks_starter.f_deck_player("red"),
+          nx_tactics_decks_starter.f_deck_player("yellow"),
+          nx_tactics_decks_fate.f_deck_fate_1("blue"),
+          nx_tactics_decks_fate.f_deck_fate_1("green"),
+          nx_tactics_decks_fate.f_deck_fate_1("red"),
+          nx_tactics_decks_fate.f_deck_fate_1("yellow")
         )
       )
     )

@@ -730,21 +730,32 @@
   :ranksuit base/ranksuit-ac
   :image "images/card-disorder-loss.svg"
   :summary
-   "Minor - Fatigue. Fatigue:1
-    Major - Must sleep half the day. Fatigue:2
-    Critical - Must sleep 3/4 of day. Falls asleep randomly. Fatigue:4
-    Extreme - Comatose. [Immobilized]"))
+   "Minor: Space out. Fatigue:1
+    Major: Must sleep half the day. Fatigue:2
+    Critical: Must sleep 3/4 of day. Falls asleep randomly. Fatigue:4
+    Extreme: Comatose. [Immobilized]"))
 
 (const disorder-ad : base/damage
  (base/damage
-  :name "Delusion: Reality"
+  :name "Delusion: Death"
   :ranksuit base/ranksuit-ad
   :image "images/card-disorder-delusion.svg"
   :summary
-   "Minor - Hear noises and voices. Stun:1
-    Major - See things that aren't there. Stun:2
-    Critical - Terrible Hallucinations. Stun:4
-    Extreme - Lost in a living hell. Screaming. [Immobilized] Stun:4"))
+   "Minor: You hear the dead. Stun:1
+    Major: You see the dead. Some are scary. Some are nice. Stun:2
+    Critical: Dedicate yourself to the dead. Stun:4
+    Extreme: Cannot sense the living world. Catatonic. Stun:4"))
+
+(const disorder-ah : base/damage
+ (base/damage
+  :name "Compulsion: Death"
+  :ranksuit base/ranksuit-ah
+  :image "images/card-disorder-compulsion.svg"
+  :summary
+   "Minor: You contemplate murder.
+    Major: You follow potential targets and plan how you could kill them.
+    Critical: Serial Killer. Methodically plan and execute your murders.
+    Extreme: Kill as often as possible in increasingly elaborate ways. [Shadow Triumphant]"))
 
 (const disorder-as : base/damage
  (base/damage
@@ -752,10 +763,10 @@
   :ranksuit base/ranksuit-as
   :image "images/card-disorder-head.svg"
   :summary
-   "Minor: Nervous Tick. Stun:1
-    Major: Tremors. Stun:1 Slow:1
-    Critical: Convulsions. [Hobbled] Stun:2 Slow:2
-    Extreme: Violent Seizures. [Dying] [Immobilized] Stun:4"))
+   "Minor: Headache. Stun:1
+    Major: Intense Migraine. Stun:1 Slow:1
+    Critical:Stroke. Half of body paralyzed. [Hobbled] Stun:2 Slow:2
+    Extreme:Stroke. Body paralyzed. [Immobilized] Stun:4"))
 
 (const disorder-kc : base/damage
  (base/damage
@@ -768,6 +779,17 @@
     Critical: Most memories lost. All skills at 0. Stun:2 Stress:2
     Extreme: Cannot remember or retain memories. Stun:3 Stress:3"))
 
+(const disorder-ks : base/damage
+ (base/damage
+  :name "Neural: Shoulders"
+  :ranksuit base/ranksuit-ks
+  :image "images/card-disorder-shoulders.svg"
+  :summary
+   "Minor: Back Pain. Stun:1
+    Major: Heavy breathing. Stun:1 Slow:1
+    Critical: Shortness of Breath. [Hobbled] Stun:2 Slow:2
+    Extreme: Lung Failure [Suffocating] Stun:4"))
+
 (const disorder-qc : base/damage
  (base/damage
   :name "Loss: Personality"
@@ -778,6 +800,28 @@
     Major: Denial of problem. Aggressive and impatient. Can't handle stress. Stress:2
     Critical: Major personality change. Stun:2 Stress:3
     Extreme: Become a completely different person. Become an NPC. Stun:2 Stress:2"))
+
+(const disorder-3s : base/damage
+ (base/damage
+  :name "Neural: Left Foot"
+  :ranksuit base/ranksuit-3s
+  :image "images/card-disorder-leftfoot.svg"
+  :summary
+   "Minor: Foot Pain. [Slow]:1
+    Major: Foot Cramps and Weakness. Restricted movement. [Slow]:1
+    Critical:Foot Numbness. [Hobbled]. [Slow]:2
+    Extreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"))
+
+(const disorder-2s : base/damage
+ (base/damage
+  :name "Neural: Right Foot"
+  :ranksuit base/ranksuit-2s
+  :image "images/card-disorder-rightfoot.svg"
+  :summary
+   "Minor: Foot Pain. [Slow]:1
+    Major: Foot Cramps and Weakness. Restricted movement. [Slow]:1
+    Critical:Foot Numbness. [Hobbled]. [Slow]:2
+    Extreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"))
 
 (const restraint-wild-black : base/damage
  (base/damage
@@ -804,7 +848,7 @@
    "Minor: Hair Ensnared. Slow:1
     Moderate: Face Constricted. Slow:1 Every turn. Remove:1 Damage
     Major: Skull Constricted. [Hobbled]. Slow:2 Every turn. Remove:2 Damage
-    Extreme: Neck Constructed. [Suffocating] [Dying] Remove:3 Damage"))
+    Extreme: Neck Constricted. [Suffocating] [Dying] Remove:3 Damage"))
 
 (const restraint-ad : base/damage
  (base/damage
@@ -1047,18 +1091,183 @@
   :summary
    "Reclaim a card and play it OR play the next card. Then Shuffle Discards into Deck."))
 
+(const trauma-ac : base/damage
+ (base/damage
+  :name "Rage: Death"
+  :ranksuit base/ranksuit-ac
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Frustrated by the randomness and cruelty of death.
+    Major: Create meaning in death by choosing who dies. [Beast]:1
+    Critical: Hair Trigger. Witnessing death sends you into an uncontrolled rage. [Beast]:2
+    Extreme: Killing machine. Murderous Rage until death. [Beast Unleashed]"))
+
+(const trauma-ad : base/damage
+ (base/damage
+  :name "Despair: Death"
+  :ranksuit base/ranksuit-ad
+  :image "images/card-trauma-despair.svg"
+  :summary
+   "Minor: Grieving. Thinks and talks about death of self and others.
+    Major: Fatalistic. Longs for death. May only obtain Skills/Abilities directly related to Death (including Combat).
+    Critical: Tormented. Plans and creates opportunities for death.
+    Extreme: Suicidal. Death is inevitable."))
+
+(const trauma-ah : base/damage
+ (base/damage
+  :name "Desire: Death"
+  :ranksuit base/ranksuit-ah
+  :image "images/card-trauma-desire.svg"
+  :summary
+   "Minor: Study and discuss death constantly.
+    Major: Necrophile. May only take Skills/Abilities associated with death.
+    Critical: Become a death cultist.
+    Extreme: Take the final step. Try to cross over."))
+
 (const trauma-as : base/damage
  (base/damage
   :name "Fear: Death"
   :ranksuit base/ranksuit-as
   :image "images/card-trauma-fear.svg"
   :summary
-   "Minor: Cannot interact with dead things.
-    Major: Collapse in fear if only 2 Body remain.
-    Critical: Collapse in fear when over half Wounds taken or death is even mentioned.
-    Extreme: Believe that death is pursuing them. Permanently flee until collapse in exhaustion."
+   "Minor: Become agitated, shaky and incoherent when facing death.
+    Major: Death is coming. Run.
+    Critical: Collapse in terror of death.
+    Extreme: Die of Fright. [Dead]"
   :reference
    "You begin your life, and it begins a journey towards you. ... You will run, it will walk. You will rest, it will not. One day, you will linger in the same place too long... And when, too late, you rise to go, you will notice a second shadow next to yours. Your life will then be over."))
+
+(const trauma-kc : base/damage
+ (base/damage
+  :name "Rage: Power"
+  :ranksuit base/ranksuit-kc
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Rebel. You hate those who seek to control others.
+    Major: Revolutionary. You openly discuss revolution and seek to bring others to your cause. [Beast]:1
+    Critical: Insurgent. You despise those in power and are dedicated to putting a blade to them. [Beast]:2
+    Extreme: Antifa. Violently attack anyone who commands others. [Beast Unleashed]"))
+
+(const trauma-qc : base/damage
+ (base/damage
+  :name "Rage: Self"
+  :ranksuit base/ranksuit-qc
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Self Critical. You feel extreme guilt for your actions.
+    Major: Self loathing.
+    Critical: Self Destructive.
+    Extreme: Suicidal. You are worthless and disgusting. End it in a way befitting of your self loathing."))
+
+(const trauma-jc : base/damage
+ (base/damage
+  :name "Rage: Violence"
+  :ranksuit base/ranksuit-jc
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Viscious. Revel in the kill.
+    Major: Bloodthirsty. Find a way to keep the kills coming.
+    Critical: Butcher. [Beast]:1 Cleave a bloody path wherever you go. [Beast]:2
+    Extreme: Animalistic. Kill indiscriminately. [Beast Unleased]"))
+
+(const trauma-tc : base/damage
+ (base/damage
+  :name "Rage: Reality"
+  :ranksuit base/ranksuit-tc
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Angry drunk. Obnoxious and pushy when intoxicated.
+    Major: Violent Alcoholic. You're violent when intoxicated, and you try to stay intoxicated as much as possible. [Beast]:1
+    Critical: Violent Addict. You're violent when high and will take anything for a high. [Beast]:2
+    Extreme:Wildly Violent Addict. Do anything it takes to stay high. [Beast Unleashed]"))
+
+(const trauma-9c : base/damage
+ (base/damage
+  :name "Rage: Belief"
+  :ranksuit base/ranksuit-9c
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Skeptic. Completely apathetic and dismissive of religious figures or icons.
+    Major: Sacreligeous. Has a tendency toward sacrilege and blasphemy.
+    Critical: Violent secularist. Blame faith for everything. Unable to work with those who with strong beliefs.
+    Extreme: Jihadist. Holy War. Mercilessly slay all unbelievers. Your own safety doesn't matter. [Beast Unleashed]"))
+
+(const trauma-8c : base/damage
+ (base/damage
+  :name "Rage: Status"
+  :ranksuit base/ranksuit-8c
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Jealous. Frustrated by showoffs.
+    Major: Contemptuous. Hate social situations and institutions. Insult and undermine the elite. [Beast]:1
+    Critical: Smear Campaign. Dedicated to embarassing and undermining the elite.
+    Extreme: Punish the elite for their hubris. Kill them all. [Beast Unleashed]"))
+
+(const trauma-7c : base/damage
+ (base/damage
+  :name "Rage: Companions"
+  :ranksuit base/ranksuit-7c
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Vindictive. Aggressively protective of companions.
+    Major: Hunter. Take merciless revenge on any wrongs against companions.
+    Critical: Punisher. There are more who deserve punishment. Relentlessly hunt them down.
+    Extreme: Angel of Death. Remove all their filth from the world. Endless bloodshed. [Beast Unleashed]"))
+
+(const trauma-6c : base/damage
+ (base/damage
+  :name "Rage: Strangers"
+  :ranksuit base/ranksuit-6c
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Resentful. Talks about others with sweeping sterotypes.
+    Major: Hateful. Uses overtly hateful language and is uncomfortable working in certain groups.
+    Critical: Terrorist. Hates other groups and actively seeks to undermine or harm them.
+    Extreme: Genocidal. Actively works to wipe out certain groups. [Beast Unleashed]"))
+
+(const trauma-5c : base/damage
+ (base/damage
+  :name "Rage: Strangers"
+  :ranksuit base/ranksuit-5c
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Possessive. Drawn to abusive relationships.
+    Major: Controlling. You are a manipulator.
+    Critical: Stalker. You are a sexual abuser.
+    Extreme: Jealous Rage. Kill your rivals. If you can't have them. No one can. [Beast Unleashed]"))
+
+(const trauma-4c : base/damage
+ (base/damage
+  :name "Rage: Change"
+  :ranksuit base/ranksuit-4c
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.
+    Major: Reactionary. Cannot tolerate anything new or modern.
+    Critical: Luddite. Destroy anything modern or new.
+    Extreme:Violent Primitivist. Destroy anything that is more advanced than would be on a farm."))
+
+(const trauma-3c : base/damage
+ (base/damage
+  :name "Rage: Things"
+  :ranksuit base/ranksuit-3c
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Graphetti Artist. Make your mark on the world.
+    Major: Vandal. Take out your anger by defacing and damaging objects. [Beast]:1
+    Critical: Arsonist. Kill them with fire. [Beast]:2
+    Extreme: Destroyer. The world is too far gone. Burn it all down. [Beast Unleashed]"))
+
+(const trauma-2c : base/damage
+ (base/damage
+  :name "Rage: Fortune"
+  :ranksuit base/ranksuit-2c
+  :image "images/card-trauma-rage.svg"
+  :summary
+   "Minor: Frustrated by an arbitrary world.
+    Major: Random outbursts. Your temper seems to surge at random times.
+    Critical: Lash out. Choose enemy targets at random. [Beast]:2
+    Extreme: Blind Rage. Choose targets completely at random. [Beast Unleashed]"))
 
 (func deck-bleeding : base/deck
  (base/deck
@@ -1311,59 +1520,59 @@
     (base/cardlist
      trauma-wild-black
      trauma-wild-red
-     restraint-ac
-     restraint-ad
-     restraint-ah
+     trauma-ac
+     trauma-ad
+     trauma-ah
      trauma-as
-     damage-kc
+     trauma-kc
      damage-kd
      damage-kh
      damage-ks
-     damage-qc
+     trauma-qc
      damage-qd
      damage-qh
      damage-qs
-     damage-jc
+     trauma-jc
      damage-jd
      damage-jh
      damage-js
-     damage-tc
+     trauma-tc
      damage-td
      damage-th
      damage-ts
-     damage-9c
+     trauma-9c
      damage-9d
      damage-9h
      damage-9s
-     damage-8c
+     trauma-8c
      damage-8d
      damage-8h
      damage-8s
-     damage-7c
+     trauma-7c
      damage-7d
      damage-7h
      damage-7s
-     damage-6c
+     trauma-6c
      damage-6d
      damage-6h
      damage-6s
-     damage-5c
+     trauma-5c
      damage-5d
      damage-5h
      damage-5s
-     damage-4c
+     trauma-4c
      damage-4d
      damage-4h
      damage-4s
-     restraint-3c
+     trauma-3c
      restraint-3d
      restraint-3h
      restraint-3s
-     restraint-2c
+     trauma-2c
      restraint-2d
      restraint-2h
      restraint-2s)))
- :doc "Trauma Card Deck")
+ :doc "Trauma Deck")
 
 (func deck-traumaback : base/deck
  (base/deck

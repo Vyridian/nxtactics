@@ -7,30 +7,6 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_fate {
 
   /**
-   * Constant: card-fate-blue
-   * {cardback}
-   */
-  static c_card_fate_blue = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-blue'}}
-
-  /**
-   * Constant: card-fate-green
-   * {cardback}
-   */
-  static c_card_fate_green = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-green'}}
-
-  /**
-   * Constant: card-fate-red
-   * {cardback}
-   */
-  static c_card_fate_red = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-red'}}
-
-  /**
-   * Constant: card-fate-yellow
-   * {cardback}
-   */
-  static c_card_fate_yellow = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'card-fate-yellow'}}
-
-  /**
    * Constant: fate-2c
    * {fate}
    */
@@ -355,6 +331,42 @@ export default class nx_tactics_decks_fate {
   static c_fate_wildred = {vx_type: nx_tactics_base.t_fate, vx_constdef: {pkgname: 'nx/tactics/decks/fate', name: 'fate-wildred'}}
 
   /**
+   * @function card_fate
+   * @param  {string} color
+   * @return {cardback}
+   */
+  static t_card_fate = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_fate = {
+    vx_type: nx_tactics_decks_fate.t_card_fate
+  }
+
+  // (func card-fate)
+  static f_card_fate(color) {
+    let output = nx_tactics_base.e_cardback
+    output = vx_core.f_new(
+      nx_tactics_base.t_cardback,
+      ":id",
+      vx_core.f_new(
+        vx_core.t_string,
+        "card-fate-",
+        color
+      ),
+      ":name",
+      "Fate",
+      ":image",
+      vx_core.f_new(
+        vx_core.t_string,
+        "images/card-fate-",
+        color,
+        ".svg"
+      )
+    )
+    return output
+  }
+
+  /**
    * @function deck_fate
    * Fate Deck
    * @return {deck}
@@ -438,121 +450,42 @@ export default class nx_tactics_decks_fate {
   }
 
   /**
-   * @function deck_fate_blue
+   * @function deck_fate
    * Fate Back Deck
+   * @param  {string} color
    * @return {deck}
    */
-  static t_deck_fate_blue = {
+  static t_deck_fate_1 = {
     vx_type: vx_core.t_type
   }
-  static e_deck_fate_blue = {
-    vx_type: nx_tactics_decks_fate.t_deck_fate_blue
+  static e_deck_fate_1 = {
+    vx_type: nx_tactics_decks_fate.t_deck_fate_1
   }
 
-  // (func deck-fate-blue)
-  static f_deck_fate_blue() {
+  // (func deck-fate)
+  static f_deck_fate_1(color) {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Fate Blue",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        nx_tactics_base.f_cardlist_copy_from_card_num(
-          nx_tactics_decks_fate.c_card_fate_blue,
-          54
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_deck},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const card = nx_tactics_decks_fate.f_card_fate(color)
+        return vx_core.f_new(
+          nx_tactics_base.t_deck,
+          ":id",
+          vx_core.f_new(
+            vx_core.t_string,
+            "deck-fate-",
+            color
+          ),
+          ":name",
+          "Fate",
+          ":cardmap",
+          nx_tactics_base.f_cardmap_from_cardlist(
+            nx_tactics_base.f_cardlist_copy_from_card_num(card, 54)
+          )
         )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function deck_fate_green
-   * Fate Back Deck
-   * @return {deck}
-   */
-  static t_deck_fate_green = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_fate_green = {
-    vx_type: nx_tactics_decks_fate.t_deck_fate_green
-  }
-
-  // (func deck-fate-green)
-  static f_deck_fate_green() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Fate Green",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        nx_tactics_base.f_cardlist_copy_from_card_num(
-          nx_tactics_decks_fate.c_card_fate_green,
-          54
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function deck_fate_red
-   * Fate Back Deck
-   * @return {deck}
-   */
-  static t_deck_fate_red = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_fate_red = {
-    vx_type: nx_tactics_decks_fate.t_deck_fate_red
-  }
-
-  // (func deck-fate-red)
-  static f_deck_fate_red() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Fate Red",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        nx_tactics_base.f_cardlist_copy_from_card_num(
-          nx_tactics_decks_fate.c_card_fate_red,
-          54
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function deck_fate_yellow
-   * Fate Back Deck
-   * @return {deck}
-   */
-  static t_deck_fate_yellow = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_fate_yellow = {
-    vx_type: nx_tactics_decks_fate.t_deck_fate_yellow
-  }
-
-  // (func deck-fate-yellow)
-  static f_deck_fate_yellow() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Fate Yellow",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        nx_tactics_base.f_cardlist_copy_from_card_num(
-          nx_tactics_decks_fate.c_card_fate_yellow,
-          54
-        )
-      )
+      })
     )
     return output
   }
@@ -561,10 +494,6 @@ export default class nx_tactics_decks_fate {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
-      "card-fate-blue": nx_tactics_decks_fate.c_card_fate_blue,
-      "card-fate-green": nx_tactics_decks_fate.c_card_fate_green,
-      "card-fate-red": nx_tactics_decks_fate.c_card_fate_red,
-      "card-fate-yellow": nx_tactics_decks_fate.c_card_fate_yellow,
       "fate-2c": nx_tactics_decks_fate.c_fate_2c,
       "fate-2d": nx_tactics_decks_fate.c_fate_2d,
       "fate-2h": nx_tactics_decks_fate.c_fate_2h,
@@ -621,18 +550,14 @@ export default class nx_tactics_decks_fate {
       "fate-wildred": nx_tactics_decks_fate.c_fate_wildred
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
+      "card-fate": nx_tactics_decks_fate.e_card_fate,
       "deck-fate": nx_tactics_decks_fate.e_deck_fate,
-      "deck-fate-blue": nx_tactics_decks_fate.e_deck_fate_blue,
-      "deck-fate-green": nx_tactics_decks_fate.e_deck_fate_green,
-      "deck-fate-red": nx_tactics_decks_fate.e_deck_fate_red,
-      "deck-fate-yellow": nx_tactics_decks_fate.e_deck_fate_yellow
+      "deck-fate_1": nx_tactics_decks_fate.e_deck_fate_1
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "card-fate": nx_tactics_decks_fate.t_card_fate,
       "deck-fate": nx_tactics_decks_fate.t_deck_fate,
-      "deck-fate-blue": nx_tactics_decks_fate.t_deck_fate_blue,
-      "deck-fate-green": nx_tactics_decks_fate.t_deck_fate_green,
-      "deck-fate-red": nx_tactics_decks_fate.t_deck_fate_red,
-      "deck-fate-yellow": nx_tactics_decks_fate.t_deck_fate_yellow
+      "deck-fate_1": nx_tactics_decks_fate.t_deck_fate_1
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -645,6 +570,24 @@ export default class nx_tactics_decks_fate {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
+
+    // (func card-fate)
+    nx_tactics_decks_fate.t_card_fate['vx_value'] = {
+      name          : "card-fate",
+      pkgname       : "nx/tactics/decks/fate",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_fate.f_card_fate
+    }
 
     // (func deck-fate)
     nx_tactics_decks_fate.t_deck_fate['vx_value'] = {
@@ -664,12 +607,12 @@ export default class nx_tactics_decks_fate {
       fn            : nx_tactics_decks_fate.f_deck_fate
     }
 
-    // (func deck-fate-blue)
-    nx_tactics_decks_fate.t_deck_fate_blue['vx_value'] = {
-      name          : "deck-fate-blue",
+    // (func deck-fate)
+    nx_tactics_decks_fate.t_deck_fate_1['vx_value'] = {
+      name          : "deck-fate",
       pkgname       : "nx/tactics/decks/fate",
       extends       : ":func",
-      idx           : 0,
+      idx           : 1,
       allowfuncs    : [],
       disallowfuncs : [],
       allowtypes    : [],
@@ -679,106 +622,8 @@ export default class nx_tactics_decks_fate {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_fate.f_deck_fate_blue
+      fn            : nx_tactics_decks_fate.f_deck_fate_1
     }
-
-    // (func deck-fate-green)
-    nx_tactics_decks_fate.t_deck_fate_green['vx_value'] = {
-      name          : "deck-fate-green",
-      pkgname       : "nx/tactics/decks/fate",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_fate.f_deck_fate_green
-    }
-
-    // (func deck-fate-red)
-    nx_tactics_decks_fate.t_deck_fate_red['vx_value'] = {
-      name          : "deck-fate-red",
-      pkgname       : "nx/tactics/decks/fate",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_fate.f_deck_fate_red
-    }
-
-    // (func deck-fate-yellow)
-    nx_tactics_decks_fate.t_deck_fate_yellow['vx_value'] = {
-      name          : "deck-fate-yellow",
-      pkgname       : "nx/tactics/decks/fate",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_fate.f_deck_fate_yellow
-    }
-
-    // (const card-fate-blue)
-    Object.assign(nx_tactics_decks_fate.c_card_fate_blue, vx_core.f_new(
-      nx_tactics_base.t_cardback,
-      ":id",
-      "card-fate-blue",
-      ":name",
-      "Fate",
-      ":image",
-      "images/card-fate-blue.svg"
-    ))
-
-    // (const card-fate-green)
-    Object.assign(nx_tactics_decks_fate.c_card_fate_green, vx_core.f_new(
-      nx_tactics_base.t_cardback,
-      ":id",
-      "card-fate-green",
-      ":name",
-      "Fate",
-      ":image",
-      "images/card-fate-green.svg"
-    ))
-
-    // (const card-fate-red)
-    Object.assign(nx_tactics_decks_fate.c_card_fate_red, vx_core.f_new(
-      nx_tactics_base.t_cardback,
-      ":id",
-      "card-fate-red",
-      ":name",
-      "Fate",
-      ":image",
-      "images/card-fate-red.svg"
-    ))
-
-    // (const card-fate-yellow)
-    Object.assign(nx_tactics_decks_fate.c_card_fate_yellow, vx_core.f_new(
-      nx_tactics_base.t_cardback,
-      ":id",
-      "card-fate-yellow",
-      ":name",
-      "Fate",
-      ":image",
-      "images/card-fate-yellow.svg"
-    ))
 
     // (const fate-2c)
     Object.assign(nx_tactics_decks_fate.c_fate_2c, vx_core.f_new(
@@ -1206,7 +1051,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hits: 1\n* Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hit: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-ad)
@@ -1219,7 +1064,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 1\n* Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-ah)
@@ -1232,7 +1077,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 1\n* Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-as)
@@ -1245,7 +1090,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hits: 0\n* Combo: AA Hits: 2 or AAA Hits: 3 or AAAA Hits: 4\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-jc)
@@ -1260,7 +1105,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 QK, Focus\n* Loss: Attack A, Defend, Evade, Counter, Wild\n* Tie : Attack J\n* Hits: 1\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10 QK, Focus\n* Loss: Attack A, Defend, Evade, Counter, Wild\n* Tie : Attack J\n* Hits: 10\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-jd)
@@ -1275,7 +1120,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 QK, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 1\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10 QK, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 10\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-jh)
@@ -1290,7 +1135,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 QK, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 1\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10 QK, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 10\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-js)
@@ -1305,7 +1150,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 QK, Focus\n* Loss: Attack A, Defend, Evade, Counter, Wild\n* Tie : Attack J\n* Hits: 1\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10 QK, Focus\n* Loss: Attack A, Defend, Evade, Counter, Wild\n* Tie : Attack J\n* Hits: 10\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-kc)
@@ -1318,7 +1163,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 1\n* Combo: KK Hits: 2 or KKK Hits: 3\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-kd)
@@ -1331,7 +1176,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 1\n* Combo: KK Hits: 2 or KKK Hits: 3\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-kh)
@@ -1344,7 +1189,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 1\n* Combo: KK Hits: 2 or KKK Hits: 3\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-ks)
@@ -1357,7 +1202,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 1\n* Combo: KK Hits: 2 or KKK Hits: 3\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-qc)
@@ -1370,7 +1215,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 1\n* Combo: QQ Hits: 2\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-qd)
@@ -1383,7 +1228,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 1\n* Combo: QQ Hits: 2\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-qh)
@@ -1398,7 +1243,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 1\n* Combo: QQ Hits: 2\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-qs)
@@ -1411,7 +1256,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 1\n* Combo: QQ Hits: 2\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
     ))
 
     // (const fate-tc)
@@ -1426,7 +1271,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 1, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 10, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
     ))
 
     // (const fate-td)
@@ -1441,7 +1286,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 10\n* Hits: 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 10\n* Hits: 10\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-th)
@@ -1456,7 +1301,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 10\n* Hits: 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 10\n* Hits: 10\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
     ))
 
     // (const fate-ts)
@@ -1471,7 +1316,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 1, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 10, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
     ))
 
     // (const fate-wildblack)

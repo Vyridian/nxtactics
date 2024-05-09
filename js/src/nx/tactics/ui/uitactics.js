@@ -1358,7 +1358,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "titlebar-print",
+      "titlebar/print",
       ":parent",
       "titlebar",
       ":data",
@@ -1409,7 +1409,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "titlebar-title",
+      "titlebar/title",
       ":parent",
       "titlebar",
       ":data",
@@ -1481,7 +1481,7 @@ export default class nx_tactics_ui_uitactics {
           vx_core.f_new(
             vx_core.t_string,
             uid,
-            "-imagebkgd"
+            "/imagebkgd"
           ),
           ":style",
           vx_core.f_new(
@@ -1588,7 +1588,7 @@ export default class nx_tactics_ui_uitactics {
         const uid = vx_core.f_new(
           vx_core.t_string,
           parent,
-          "-",
+          "/",
           name
         )
         const cardmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_cardmap, "struct-2": nx_tactics_base.t_deck}, deck, ":cardmap")
@@ -1639,7 +1639,7 @@ export default class nx_tactics_ui_uitactics {
         const uid = vx_core.f_new(
           vx_core.t_string,
           parent,
-          "-",
+          "/",
           name
         )
         const specialtymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_skill}, skill, ":specialtymap")
@@ -1902,7 +1902,7 @@ export default class nx_tactics_ui_uitactics {
         const id = vx_core.f_new(
           vx_core.t_string,
           uid,
-          "-suit-",
+          "/suit-",
           pos
         )
         const filename = vx_core.f_switch(
@@ -1998,7 +1998,7 @@ export default class nx_tactics_ui_uitactics {
         const uidtitle = vx_core.f_new(
           vx_core.t_string,
           uid,
-          "-title1"
+          "/title1"
         )
         return vx_core.f_new(
           vx_ui_ui.t_ui,
@@ -2043,7 +2043,7 @@ export default class nx_tactics_ui_uitactics {
         const uidtitle = vx_core.f_new(
           vx_core.t_string,
           uid,
-          "-title2"
+          "/title2"
         )
         return vx_core.f_new(
           vx_ui_ui.t_ui,
@@ -2139,7 +2139,7 @@ export default class nx_tactics_ui_uitactics {
         const uid = vx_core.f_new(
           vx_core.t_string,
           parent,
-          "-",
+          "/",
           id1
         )
         const imgback = vx_core.f_switch(
@@ -2257,7 +2257,7 @@ export default class nx_tactics_ui_uitactics {
         const uid = vx_core.f_new(
           vx_core.t_string,
           parent,
-          "-",
+          "/",
           id1
         )
         const display = nx_tactics_ui_uitactics.f_string_display_from_any(card)
@@ -2293,7 +2293,7 @@ export default class nx_tactics_ui_uitactics {
         const uiddisplay = vx_core.f_new(
           vx_core.t_string,
           uid,
-          "-display"
+          "/display"
         )
         const uidisplay = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
@@ -2348,7 +2348,7 @@ export default class nx_tactics_ui_uitactics {
                 const uid2 = vx_core.f_new(
                   vx_core.t_string,
                   uid,
-                  "-display2"
+                  "/display2"
                 )
                 const display2 = vx_core.f_any_from_list({"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist}, displaysplit, 2)
                 const uidisplay2 = vx_core.f_new(
@@ -2368,7 +2368,7 @@ export default class nx_tactics_ui_uitactics {
                 const uid3 = vx_core.f_new(
                   vx_core.t_string,
                   uid,
-                  "-display3"
+                  "/display3"
                 )
                 const display3 = vx_core.f_any_from_list({"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist}, displaysplit, 3)
                 const uidisplay3 = vx_core.f_new(
@@ -2388,7 +2388,7 @@ export default class nx_tactics_ui_uitactics {
                 const uid4 = vx_core.f_new(
                   vx_core.t_string,
                   uid,
-                  "-display4"
+                  "/display4"
                 )
                 const display4 = vx_core.f_any_from_list({"any-1": vx_core.t_string, "list-1": vx_core.t_stringlist}, displaysplit, 4)
                 const uidisplay4 = vx_core.f_new(
@@ -2464,7 +2464,7 @@ export default class nx_tactics_ui_uitactics {
         const prefix = vx_core.f_new(
           vx_core.t_string,
           parent,
-          "-",
+          "/",
           name
         )
         const uiitemsummary = vx_core.f_if_2(
@@ -2477,7 +2477,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-summary"
+                "/summary"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_item_summary,
@@ -2502,7 +2502,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-image"
+                "/image"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_image,
@@ -2521,7 +2521,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-value"
+                "/value"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_value,
@@ -2545,7 +2545,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-titles"
+                "/titles"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_titles,
@@ -2569,7 +2569,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-body"
+                "/body"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_body,
@@ -2593,7 +2593,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-bodydetail"
+                "/bodydetail"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_bodydetail,
@@ -2617,7 +2617,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-detail"
+                "/detail"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_detail,
@@ -2680,22 +2680,22 @@ export default class nx_tactics_ui_uitactics {
             const labelrank1 = vx_core.f_new(
               vx_core.t_string,
               parent,
-              "-rank1"
+              "/rank1"
             )
             const labelrank2 = vx_core.f_new(
               vx_core.t_string,
               parent,
-              "-rank2"
+              "/rank2"
             )
             const labelsuit1 = vx_core.f_new(
               vx_core.t_string,
               parent,
-              "-suit1"
+              "/suit1"
             )
             const labelsuit2 = vx_core.f_new(
               vx_core.t_string,
               parent,
-              "-suit2"
+              "/suit2"
             )
             const srank = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_rank}, rank, ":titles")
             const ssuit = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_suit}, suit, ":titles")
@@ -2796,7 +2796,7 @@ export default class nx_tactics_ui_uitactics {
         const prefix = vx_core.f_new(
           vx_core.t_string,
           parent,
-          "-",
+          "/",
           name
         )
         const uiimage = vx_core.f_if_2(
@@ -2809,7 +2809,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-image"
+                "/image"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_image,
@@ -2828,7 +2828,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-value"
+                "/value"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_value,
@@ -2852,7 +2852,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-titles"
+                "/titles"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_titles,
@@ -2876,7 +2876,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-body"
+                "/body"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_body,
@@ -2900,7 +2900,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-bodydetail"
+                "/bodydetail"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_bodydetail,
@@ -2924,7 +2924,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-mind"
+                "/mind"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_mind,
@@ -2948,7 +2948,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-minddetail"
+                "/minddetail"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_minddetail,
@@ -2972,7 +2972,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-will"
+                "/will"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_will,
@@ -2996,7 +2996,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-willdetail"
+                "/willdetail"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_willdetail,
@@ -3020,7 +3020,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-move"
+                "/move"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_move,
@@ -3044,7 +3044,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-movedetail"
+                "/movedetail"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_movedetail,
@@ -3068,7 +3068,7 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new(
                 vx_core.t_string,
                 prefix,
-                "-detail"
+                "/detail"
               ),
               ":style",
               nx_tactics_ui_stylesheet.c_style_unit_detail,

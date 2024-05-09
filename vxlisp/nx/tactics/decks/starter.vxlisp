@@ -3,76 +3,6 @@
        (lib typ  :path vx/type)
  :doc  "Tactics Starter Decks")
 
-(func card-action-combat : base/card
- (base/card
-  :id "action-combat"
-  :name "Combat Action"
-  :summary
-   "* Target a unit with a damaging Skill/Power.
-    * Each player chooses a Fate card from their hand or a random Fate from Shared Fate.
-    * Fate Cards are compared like Rock/Paper/Scissors.
-    * Combat Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter
-    * If both play Attack or Focus then compare by rank (lower is faster).
-    * Order: AJQK2-10
-    * If Tied, there is no result.
-    * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
-    * Discard all card used (except Keep)"))
-
-(func card-action-move : base/card
- (base/card
-  :id "action-move"
-  :name "Move Action"
-  :summary
-   "* Action: Move up to your [Move] stat.
-    * Facing: During your Move, change your facing up to 2 times the entire Turn.
-    * Full Move (2 Actions): Move your [Move]x2.
-    * Sprint (2 Actions): If you moved at Full Speed last turn, you may [Move]x3 this turn.
-    * Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns."))
-
-(func card-action-recover : base/card
- (base/card
-  :id "action-recover"
-  :name "Recover Action"
-  :summary
-   "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]
-    * Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."))
-
-(func card-action-skill : base/card
- (base/card
-  :id "action-skill"
-  :name "Skill Action"
-  :summary
-   "* Action: "))
-
-(func card-areaeffect : base/card
- (base/card
-  :id "areaeffect"
-  :name "Area Effect"
-  :image "images/card-areaeffect.svg"
-  :summary
-   "* Some powers can attack in a large area.
-    * Reduce your Skill or Intensity by 1 to get an Area Effect Card. Each additional reduction doubles the number of cards.
-    * Place a card next to your unit and arrange the rest in any stable shape. Examples below."))
-
-(func card-characterguide : base/card
- (base/card
-  :id "characterguide"
-  :name "Character Guide"))
-
-(func card-damageguide : base/card
- (base/card
-  :id "damageguide"
-  :name "Combat Damage"
-  :summary
-   "* Damage Types: Determine the [Damage Types] of the weapon.
-    * Reveal Damage: Reveal cards equal to [Hits].
-    * Separate Damage: Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).
-    * Hit Location: The top card from the matching pile is the Hit Location (or the mismatch pile if no matches). Move it aside and flip the Fatigue pile to its facedown side.
-    * Armor: Check [Armor] in the [Hit Location] and then the target reduces the Damage or Fatigue for each point of armor. The Hit Location can only be removed last.
-    * Fatigue: The target may take the Fatigue cards as long they have Body. Any remaining Fatigue are flipped faceup and added to the Damage pile.
-    * Damage: Count the Damage pile and apply the effect on the Hit Location card to the target.
-    * Cleanup: Discard other cards. Shuffle if a Wild was revealed."))
-
 (func card-fatelower : base/card
  (base/card
   :id "fatelower"
@@ -89,175 +19,29 @@
   :summary
    "Fate: Play this when playing a Fate card to indicate that the upper choice on the Fate is being used (i.e. the side facing away from you)."))
 
-(func card-free-action : base/card
+(func card-player : base/card
+ [color : string
+  num : int]
  (base/card
-  :id "free-action"
-  :name "Free Action"
-  :summary
-   "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.
-    * Move Out: Take a [Fatigue] to [Move]:1.
-    * Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.
-    * Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.
-    * Final Sprint: Take a [Slow] to [Move].
-    * Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."))
-
-(func card-gameguide : base/card
- (base/card
-  :id "gameguide"
-  :name "Game Guide"
-  :summary
-   "* Create [Characters] or [Factions] to play [Scenarios].
-    * Each [Scenario] contains various [Threats] and [Goals]
-    * Find them and use your [Skills] / [Powers] to complete them for [Rewards]
-    * Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties]."))
-
-(func card-levelingguide : base/card
- (base/card
-  :id "levelingguide"
-  :name "Leveling Guide"
-  :summary
-   "* Major Achievement: Completion gains a Skill Point.
-    * Minor Achievement: Completion gains an Ability Point.
-    * Skill Points: May be exchanged for a Skill Level one below your level or a new Level 1 Power (if allowed).
-    * Ability Points: May be exchanged for an Ability, Specialty, or a Power Intensity increase."))
-
-(func card-lineofsight : base/card
- (base/card
-  :id "lineofsight"
-  :name "Line of Sight"
-  :summary
-   "* Most distance effects require line of sight to the target.
-    * Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).
-    * If nothing is between you, then you have full line of sight. Resolve normally.
-    * If something is between you, guess at the amount of Cover provided and resolve with the following penalties:
-    ** 25% Cover: Speed:-1.
-    ** 50% Cover: Speed:-2.
-    ** 75% Cover: Speed:-3.
-    ** 100% Cover: Speed-4.
-    * If successful, assign each 25% to whatever is giving cover (this can include fog, smoke, tables, walls, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
-    ** Insubstantial: Resolve damage normally.
-    ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
-    ** Unit: That unit is the new target. Resolve a new Combat with it instead."))
-
-(func card-mapscale-1 : base/card
- (base/card
-  :id (string "card-mapscale-1")
-  :name "Map Scale:1"
-  :summary
-   "* Human Scale
-    * Space Size: 1m
-    * Turn Length: 2sec
-    * Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).
-    * Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)"))
-
-(func card-mapscale-2 : base/card
- (base/card
-  :id (string "card-mapscale-2")
-  :name "Map Scale:2"
-  :summary
-   "* Vehicle Scale
-    * Space Size: 3m
-    * Turn Length: 1sec
-    * Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m)."))
-
-(func card-player-blue : base/card
- [num : int]
- (base/card
-  :id (string "card-player-blue-" num)
+  :id (string "card-player-" color "-" num)
   :name "Player"
-  :image "images/card-blue.svg"))
+  :image (string "images/card-" color ".svg")))
 
-(func card-player-green : base/card
- [num : int]
+(func card-skill : base/card
+ [color : string
+  num : int]
  (base/card
-  :id (string "card-player-green-" num)
-  :name "Player"
-  :image "images/card-green.svg"))
-
-(func card-player-red : base/card
- [num : int]
- (base/card
-  :id (string "card-player-red-" num)
-  :name "Player"
-  :image "images/card-red.svg"))
-
-(func card-player-yellow : base/card
- [num : int]
- (base/card
-  :id (string "card-player-yellow-" num)
-  :name "Player"
-  :image "images/card-yellow.svg"))
-
-(func card-reach : base/card
- (base/card
-  :id "card-reach"
-  :name "Reach"
-  :summary
-   "* Can target one additional dot away [Scaled]"))
-
-(func card-scale : base/card
- (base/card
-  :id "card-scale"
-  :name "Scale"
-  :summary
-   "* Each stat/skill/power has a number after the letter 'x'.
-    * This is the scale of that ability.
-    * The number represents the number of zeroes. E.g. 5x3 translates to 5000.
-    * x1 denotes human scale. E.g. 1x1=10kg, 10iq+50, 10will, 10kph"))
-
-(func card-scaled : base/card
- (base/card
-  :id "card-scaled"
-  :name "Scaled"
-  :summary
-   "* Scaled refers to the comparison between the Scale of a stat/ability/map to another.
-    * If the scales are the same, no change is required.
-    * If the scales are different, multiple or divide the Level by 10 for each difference in scale.
-    * E.g. On an x1 map a Move:3x2 would move 30 spaces instead of 3."))
-
-(func card-setupguide : base/card
- (base/card
-  :id "setupguide"
-  :name "Setup Guide"
-  :summary
-   "* Choose a Scenario and sort it in numerical order.
-    * Each [Player] chooses or creates the [Units] they will use.
-    * Each [Player] chooses a colored Starter Deck.
-    * Player [Turn Order] cards are shuffled together to create a [Turn Order] deck.
-    * Reveal the top card in the Scenario deck and follow its instructions."))
-
-(func card-skill-blue : base/card
- [num : int]
- (base/card
-  :id (string "skill-" num)
-  :name (string "Skill " num)
-  :image "images/card-blue.svg"))
-
-(func card-skill-green : base/card
- [num : int]
- (base/card
-  :id (string "skill-" num)
-  :name (string "Skill " num)
-  :image "images/card-green.svg"))
-
-(func card-skill-red : base/card
- [num : int]
- (base/card
-  :id (string "skill-" num)
-  :name (string "Skill " num)
-  :image "images/card-red.svg"))
-
-(func card-skill-yellow : base/card
- [num : int]
- (base/card
-  :id (string "skill-" num)
-  :name (string "Skill " num)
-  :image "images/card-yellow.svg"))
+  :id (string "card-skill-" color "-" num)
+  :name (string "Skill#" num)
+  :image (string "images/card-" color ".svg")))
 
 (func card-turn-order : base/card
+ [color : string
+  num   : int]
  (base/card
-  :id "turn-order"
-  :name "Turn: Order"
+  :id    (string "turn-order-" num)
+  :name  (string "Turn Order: Unit#" num)
+  :image (string "images/card-" color ".svg")
   :summary
    "* Reveal: Flip each card of [Turn Order] deck to form a row. This is the [Player] order this turn.
     * Action1: Each [Player] chooses a Unit to activate along with their first [Action] and target(s).
@@ -267,173 +51,46 @@
     * Change2: Same as Change1.
     * Resolve2: Same as Resolve1."))
 
-(func card-turn-order : base/card
- (base/card
-  :id "turn-order"
-  :name "Turn Order"))
-
 (func card-turn-player : base/card
+ [color : string]
  (base/card
-  :id "turn-player"
+  :id (string "turn-player-" color)
   :name "Turn: Player"))
 
-(func card-unit-blue : base/card
- [num : int]
+(func card-unit : base/card
+ [color : string
+  num   : int]
  (base/card
-  :id (string "unit-" num)
-  :name (string "Unit " num)
-  :image "images/card-blue.svg"))
-
-(func card-unit-green : base/card
- [num : int]
- (base/card
-  :id (string "unit-" num)
-  :name (string "Unit " num)
-  :image "images/card-green.svg"))
-
-(func card-unit-red : base/card
- [num : int]
- (base/card
-  :id (string "unit-" num)
-  :name (string "Unit " num)
-  :image "images/card-red.svg"))
-
-(func card-unit-yellow : base/card
- [num : int]
- (base/card
-  :id (string "unit-" num)
-  :name (string "Unit " num)
-  :image "images/card-yellow.svg"))
+  :id (string "unit-" color "-" num)
+  :name (string "Unit#" num)
+  :image (string "images/card-" color ".svg")))
 
 (func deck-player : base/deck
+ [color : string]
  (let : base/deck
   [cardlist : base/cardlist :=
     (base/cardlist
-     (card-gameguide)
-     (card-setupguide)
-     (card-turn-order)
-     (card-turn-player)
-     (card-action-move)
-     (card-action-combat)
-     (card-damageguide)
-     (card-action-skill)
-     (card-action-recover)
-     (card-free-action)
-     (card-characterguide)
-     (card-levelingguide)
-     (card-turn-order)
-     (card-scale)
-     (card-scaled)
-     (card-mapscale-1)
-     (card-mapscale-2)
-     (card-fateupper)
-     (card-fatelower)
-     (card-areaeffect)
-     (card-reach))
+     (card-player color 1)
+     (card-turn-order color 1)
+     (card-turn-order color 2)
+     (card-turn-order color 3)
+     (card-turn-order color 4)
+     (card-turn-order color 5)
+     (card-unit color 1)
+     (card-unit color 2)
+     (card-unit color 3)
+     (card-unit color 4)
+     (card-unit color 5)
+     (card-skill color 1)
+     (card-skill color 2)
+     (card-skill color 3)
+     (card-skill color 4)
+     (card-skill color 5))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]
   (base/deck
-   :id "player"
-   :name "Player"
-   :cardmap cardmap)))
-
-(func deck-player-blue : base/deck
- (let : base/deck
-  [cardlist : base/cardlist :=
-   (base/cardlist
-    (card-player-blue 1)
-    (card-player-blue 2)
-    (card-player-blue 3)
-    (card-player-blue 4)
-    (card-player-blue 5)
-    (card-skill-blue 1)
-    (card-skill-blue 2)
-    (card-skill-blue 3)
-    (card-skill-blue 4)
-    (card-unit-blue 1)
-    (card-unit-blue 2)
-    (card-unit-blue 3)
-    (card-unit-blue 4))
-   cardmap : base/cardmap :=
-    (base/cardmap<-cardlist
-     cardlist)]
-  (base/deck
-   :id "player-blue"
-   :name "Player Blue"
-   :cardmap cardmap)))
-
-(func deck-player-green : base/deck
- (let : base/deck
-  [cardlist : base/cardlist :=
-   (base/cardlist
-    (card-player-green 1)
-    (card-player-green 2)
-    (card-player-green 3)
-    (card-player-green 4)
-    (card-player-green 5)
-    (card-skill-green 1)
-    (card-skill-green 2)
-    (card-skill-green 3)
-    (card-skill-green 4)
-    (card-unit-green 1)
-    (card-unit-green 2)
-    (card-unit-green 3)
-    (card-unit-green 4))
-   cardmap : base/cardmap :=
-    (base/cardmap<-cardlist
-     cardlist)]
-  (base/deck
-   :id "player-green"
-   :name "Player Green"
-   :cardmap cardmap)))
-
-(func deck-player-red : base/deck
- (let : base/deck
-  [cardlist : base/cardlist :=
-   (base/cardlist
-    (card-player-red 1)
-    (card-player-red 2)
-    (card-player-red 3)
-    (card-player-red 4)
-    (card-player-red 5)
-    (card-skill-red 1)
-    (card-skill-red 2)
-    (card-skill-red 3)
-    (card-skill-red 4)
-    (card-unit-red 1)
-    (card-unit-red 2)
-    (card-unit-red 3)
-    (card-unit-red 4))
-   cardmap : base/cardmap :=
-    (base/cardmap<-cardlist
-     cardlist)]
-  (base/deck
-   :id "player-red"
-   :name "Player Red"
-   :cardmap cardmap)))
-
-(func deck-player-yellow : base/deck
- (let : base/deck
-  [cardlist : base/cardlist :=
-   (base/cardlist
-    (card-player-yellow 1)
-    (card-player-yellow 2)
-    (card-player-yellow 3)
-    (card-player-yellow 4)
-    (card-player-yellow 5)
-    (card-skill-yellow 1)
-    (card-skill-yellow 2)
-    (card-skill-yellow 3)
-    (card-skill-yellow 4)
-    (card-unit-yellow 1)
-    (card-unit-yellow 2)
-    (card-unit-yellow 3)
-    (card-unit-yellow 4))
-   cardmap : base/cardmap :=
-    (base/cardmap<-cardlist
-     cardlist)]
-  (base/deck
-   :id "player-yellow"
-   :name "Player Yellow"
+   :id (string "deck-player-" color)
+   :name "Player Deck"
+   :image (string "images/card-" color ".svg")
    :cardmap cardmap)))

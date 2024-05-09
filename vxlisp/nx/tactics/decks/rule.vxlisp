@@ -1,0 +1,249 @@
+(package nx/tactics/decks/rule
+ :libs (lib base :path nx/tactics/base)
+       (lib typ  :path vx/type)
+ :doc  "Tactics Rules")
+
+(func card-action-combat : base/card
+ (base/card
+  :id "action-combat"
+  :name "Combat Action"
+  :summary
+   "* Target a unit with a damaging Skill/Power.
+    * Each player chooses a Fate card from their hand or a random Fate from Shared Fate.
+    * Fate Cards are compared like Rock/Paper/Scissors.
+    * Combat Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter
+    * If both play Attack or Focus then compare by rank (lower is faster).
+    * Order: AJQK2-10
+    * If Tied, there is no result.
+    * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
+    * Discard all card used (except Keep)"))
+
+(func card-action-move : base/card
+ (base/card
+  :id "action-move"
+  :name "Move Action"
+  :summary
+   "* Action: Move straight up to your [Move] stat.
+    * Full Move (2 Actions): Move straight your [Move]x2.
+    * Sprint (2 Actions): If you moved at Full Speed last turn, you may [Move]x3 straight this turn.
+    * Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns.
+    * Change Facing: During your Move, Full Move, or Sprint, you may make up to 2 Turns or Drifts.
+    * Turn: Turn your unit's facing 45 degrees to the left or right.
+    * Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing."))
+
+(func card-action-recover : base/card
+ (base/card
+  :id "action-recover"
+  :name "Recover Action"
+  :summary
+   "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]
+    * Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."))
+
+(func card-action-skill : base/card
+ (base/card
+  :id "action-skill"
+  :name "Skill Action"
+  :summary
+   "* Action: Assign your Unit's Skill card to the target.
+    * Stat: The Skill test has a target Body, Mind, Will, or Move.
+    * Resolve: Resolve the Skill as if it was Combat.
+    * Damage: Any stat reductions are added to the Skill card instead of the target.
+    * Success: If the stat is reduced to 0, the Skill succeeds.
+    * Fail: If the user abandons the test or has any stat reduced to 0, the Skill fails and the Skill card is returned losing all reductions.
+    * Extended: The user may continue this test on different turns until a Success or Fail."))
+
+(func card-areaeffect : base/card
+ (base/card
+  :id "areaeffect"
+  :name "Area Effect"
+  :image "images/card-areaeffect.svg"
+  :summary
+   "* Some powers can attack in a large area.
+    * Reduce your Skill or Intensity by 1 to get an Area Effect Card. Each additional reduction doubles the number of cards.
+    * Place a card next to your unit and arrange the rest in any stable shape. Examples below."))
+
+(func card-beast : base/card
+ (base/card
+  :id "beast"
+  :name "Beast"
+  :summary
+   "* The Beast"))
+
+(func card-characters : base/card
+ (base/card
+  :id "characters"
+  :name "Characters"))
+
+(func card-damageguide : base/card
+ (base/card
+  :id "damageguide"
+  :name "Combat Damage"
+  :summary
+   "* Damage Types: Determine the [Damage Types] of the weapon.
+    * Reveal Damage: Reveal cards equal to [Hits].
+    * Separate Damage: Separate them into 2 piles: Those that match the [Damage Types] (Damage) and those that don't (Fatigue).
+    * Hit Location: The top card from the matching pile is the Hit Location (or the mismatch pile if no matches). Move it aside and flip the Fatigue pile to its facedown side.
+    * Armor: Check [Armor] in the [Hit Location] and then the target reduces the Damage or Fatigue for each point of armor. The Hit Location can only be removed last.
+    * Fatigue: The target may take the Fatigue cards as long they have Body. Any remaining Fatigue are flipped faceup and added to the Damage pile.
+    * Damage: Count the Damage pile and apply the effect on the Hit Location card to the target.
+    * Cleanup: Discard other cards. Shuffle if a Wild was revealed."))
+
+(func card-defenselayers : base/card
+ (base/card
+  :id "defenselayers"
+  :name "Defense Layers"
+  :summary
+   "* Obstacles
+    * Shields
+    * Armor
+    * Toughness
+    * Body"))
+
+(func card-free-action : base/card
+ (base/card
+  :id "free-action"
+  :name "Free Action"
+  :summary
+   "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.
+    * Move Out: Take a [Fatigue] to [Move]:1.
+    * Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.
+    * Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.
+    * Final Sprint: Take a [Slow] to [Move].
+    * Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."))
+
+(func card-gameguide : base/card
+ (base/card
+  :id "gameguide"
+  :name "Game Guide"
+  :summary
+   "* Create [Characters] or [Factions] to play [Scenarios].
+    * Each [Scenario] contains various [Threats] and [Goals]
+    * Find them and use your [Skills] / [Powers] to complete them for [Rewards]
+    * Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties]."))
+
+(func card-leveling : base/card
+ (base/card
+  :id "leveling"
+  :name "Leveling"
+  :summary
+   "* Major Achievement: Completion gains a Skill Point.
+    * Minor Achievement: Completion gains an Ability Point.
+    * Skill Points: May be exchanged for a Skill Level one below your level or a new Level 1 Power (if allowed).
+    * Ability Points: May be exchanged for an Ability, Specialty, or a Power Intensity increase."))
+
+(func card-lineofsight : base/card
+ (base/card
+  :id "lineofsight"
+  :name "Line of Sight"
+  :summary
+   "* Most distance effects require line of sight to the target.
+    * Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).
+    * If nothing is between you, then you have full line of sight. Resolve normally.
+    * If something is between you, guess at the amount of Cover provided and resolve with the following penalties:
+    ** 25% Cover: Speed:-1.
+    ** 50% Cover: Speed:-2.
+    ** 75% Cover: Speed:-3.
+    ** 100% Cover: Speed-4.
+    * If successful, assign each 25% to whatever is giving cover (this can include fog, smoke, tables, walls, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
+    ** Insubstantial: Resolve damage normally.
+    ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
+    ** Unit: That unit is the new target. Resolve a new Combat with it instead."))
+
+(func card-mapscale-1 : base/card
+ (base/card
+  :id (string "card-mapscale-1")
+  :name "Map Scale:1"
+  :summary
+   "* Human Scale
+    * Space Size: 1m
+    * Turn Length: 2sec
+    * Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).
+    * Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)"))
+
+(func card-mapscale-2 : base/card
+ (base/card
+  :id (string "card-mapscale-2")
+  :name "Map Scale:2"
+  :summary
+   "* Vehicle Scale
+    * Space Size: 3m
+    * Turn Length: 1sec
+    * Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m)."))
+
+(func card-reach : base/card
+ (base/card
+  :id "card-reach"
+  :name "Reach"
+  :summary
+   "* Can target one additional dot away [Scaled]"))
+
+(func card-scale : base/card
+ (base/card
+  :id "card-scale"
+  :name "Scale"
+  :summary
+   "* Each stat/skill/power has a number after the letter 'x'.
+    * This is the scale of that ability.
+    * The number represents the number of zeroes. E.g. 5x3 translates to 5000.
+    * x1 denotes human scale. E.g. 1x1=10kg, 10iq+50, 10will, 10kph"))
+
+(func card-scaled : base/card
+ (base/card
+  :id "card-scaled"
+  :name "Scaled"
+  :summary
+   "* Scaled refers to the comparison between the Scale of a stat/ability/map to another.
+    * If the scales are the same, no change is required.
+    * If the scales are different, multiple or divide the Level by 10 for each difference in scale.
+    * E.g. On an x1 map a Move:3x2 would move 30 spaces instead of 3."))
+
+(func card-setupguide : base/card
+ (base/card
+  :id "setupguide"
+  :name "Setup Guide"
+  :summary
+   "* Choose a Scenario and sort it in numerical order.
+    * Each [Player] chooses or creates the [Units] they will use.
+    * Each [Player] chooses a colored Starter Deck.
+    * Player [Turn Order] cards are shuffled together to create a [Turn Order] deck.
+    * Reveal the top card in the Scenario deck and follow its instructions."))
+
+(func card-shadow : base/card
+ (base/card
+  :id "shadow"
+  :name "Shadow"
+  :summary
+   "* The Shadow
+    * Shadow Triumphant:"))
+
+(func deck-rules : base/deck
+ (let : base/deck
+  [cardlist : base/cardlist :=
+    (base/cardlist
+     (card-gameguide)
+     (card-setupguide)
+     (card-action-move)
+     (card-action-combat)
+     (card-action-skill)
+     (card-action-recover)
+     (card-free-action)
+     (card-lineofsight)
+     (card-damageguide)
+     (card-defenselayers)
+     (card-characters)
+     (card-beast)
+     (card-shadow)
+     (card-leveling)
+     (card-scale)
+     (card-scaled)
+     (card-mapscale-1)
+     (card-mapscale-2)
+     (card-areaeffect)
+     (card-reach))
+   cardmap : base/cardmap :=
+    (base/cardmap<-cardlist
+     cardlist)]
+  (base/deck
+   :id "deckrules"
+   :name "Rules"
+   :cardmap cardmap)))

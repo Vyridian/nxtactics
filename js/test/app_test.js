@@ -49,6 +49,7 @@ import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_te
 import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
 import nx_tactics_decks_damage_test from "./nx/tactics/decks/damage_test.js"
 import nx_tactics_decks_fate_test from "./nx/tactics/decks/fate_test.js"
+import nx_tactics_decks_rule_test from "./nx/tactics/decks/rule_test.js"
 import nx_tactics_decks_scenario_test from "./nx/tactics/decks/scenario_test.js"
 import nx_tactics_decks_starter_test from "./nx/tactics/decks/starter_test.js"
 import nx_tactics_decks_tarot_test from "./nx/tactics/decks/tarot_test.js"
@@ -133,6 +134,7 @@ export default class app_test {
       nx_tactics_books_world_wars_test.test_package(context),
       nx_tactics_decks_damage_test.test_package(context),
       nx_tactics_decks_fate_test.test_package(context),
+      nx_tactics_decks_rule_test.test_package(context),
       nx_tactics_decks_scenario_test.test_package(context),
       nx_tactics_decks_starter_test.test_package(context),
       nx_tactics_decks_tarot_test.test_package(context),
