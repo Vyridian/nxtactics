@@ -64,10 +64,10 @@
   :ranksuit base/ranksuit-ah
   :image "images/card-trauma-need.svg"
   :summary
-   "Minor: Study and discuss death constantly.
+   "Minor: Study and discuss wounds and death.
     Major: Necrophile. May only take Skills/Abilities associated with death.
-    Critical: Become a death cultist.
-    Extreme: Take the final step. Try to cross over."))
+    Critical: Death Cultist. Obsessive focus on death, spirits, and necromancy.
+    Extreme: Suicidal. Take the final step. Try to cross over."))
 
 (const trauma-as : base/damage
  (base/damage
@@ -156,8 +156,8 @@
   :summary
    "Minor: Vainglory. You brag about own appearance, abilities, and status.
     Major: Gloryhound. You seek praise at the expense of others.
-    Critical: Nascissist. Only think in terms of yourself. Take offense at anyone who questions you. Difficult to work with others.
-    Extreme: Messiah Complex. Your every action changes the world. You must be patient with all the little people."))
+    Critical: Nascissist. Only think in terms of yourself. Take offense at anyone who questions you. Acts alone and refuses all help.
+    Extreme: Messiah Complex. Your every action changes the world. Solo all comers. None can interfere."))
 
 (const trauma-qs : base/damage
  (base/damage
@@ -507,8 +507,8 @@
   :summary
    "Minor: Hyperactive. Axious when not active.
     Major: Change for changes sake.
-    Critical: Stream of consciousness.
-    Extreme: Cannot focus on any topic."))
+    Critical: Stream of consciousness. Needs to be 'All In' all the time.
+    Extreme: Cannot focus on any topic. No downtime. Work yourself to death."))
 
 (const trauma-4s : base/damage
  (base/damage

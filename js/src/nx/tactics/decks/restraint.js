@@ -954,7 +954,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-arm-right.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Elbow Ensnared.\nModerate: Elbow Bond. Slow:1 Remove:1 Actions\nMajor: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions\nExtreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"
     ))
 
     // (const restraint-8h)
@@ -969,7 +969,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-arm-right.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Arm Held. Pull:1. Remove:Any Hit\nModerate: Arm Held. Pull:1. Remove:1 Damage\nMajor: Elbow Held. Pull:1. Remove:2 Damage\nExtreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"
     ))
 
     // (const restraint-8s)
@@ -984,7 +984,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-arm-right.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Bicep held. Slow:1. Remove:Any Hit\nModerate: Elbow held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"
     ))
 
     // (const restraint-9c)
@@ -1014,7 +1014,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-arm-left.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Elbow Ensnared.\nModerate: Elbow Bond. Slow:1 Remove:1 Actions\nMajor: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions\nExtreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"
     ))
 
     // (const restraint-9h)
@@ -1029,7 +1029,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-arm-left.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Arm Held. Pull:1. Remove:Any Hit\nModerate: Arm Held. Pull:1. Remove:1 Damage\nMajor: Elbow Held. Pull:1. Remove:2 Damage\nExtreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"
     ))
 
     // (const restraint-9s)
@@ -1044,7 +1044,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-arm-left.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Bicep held. Slow:1. Remove:Any Hit\nModerate: Elbow held. Slow:1 Stun:1. Remove:1 Damage\nMajor: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"
     ))
 
     // (const restraint-ac)
@@ -1070,7 +1070,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-head.svg",
       ":summary",
-      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Slow:2 Remove:1 Actions\nMajor: Head Ensnared. Slow:3 Remove:2 Actions\nExtreme: Neck Ensnared. [Suffocating] Remove:3 Actions"
+      "Minor: Hair Ensnared. Slow:1\nModerate: Face Ensnared. Slow:2 Remove:1 Actions\nMajor: Head Ensnared. Slow:3 Remove:2 Actions\nExtreme: Head Bound. Blood and Air cut off from Head. [Suffocating] [Dying]"
     ))
 
     // (const restraint-ah)
@@ -1122,7 +1122,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-abdomen.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Abdomen Ensnared.\nModerate: Abdomen Ensnared. Slow:1 Remove:1 Actions\nMajor: Abdomen Ensnared. Slow:2 Remove:2 Actions\nExtreme: Abdomen Bound. Slow:3 Remove:3 Actions"
     ))
 
     // (const restraint-jh)
@@ -1135,7 +1135,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-abdomen.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Abdomen Held. Pull:1. Remove:Any Hit\nModerate: Abdomen Held. Pull:1. Remove:1 Damage\nMajor: Waist Held. Pull:1. Remove:2 Damage\nExtreme: Waist Held. Pull:1. Remove:3 Damage"
     ))
 
     // (const restraint-js)
@@ -1148,7 +1148,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-abdomen.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Abdomen Held. Pull:1. Remove:Any Hit\nModerate: Abdomen Held. Pull:1. Remove:1 Damage\nMajor: Waist Held. Pull:1. Remove:2 Damage\nExtreme: Waist Held. Pull:1. Remove:3 Damage"
     ))
 
     // (const restraint-kc)
@@ -1174,7 +1174,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-shoulders.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Shoulder Ensnared. Slow:1\nModerate: Shoulders Ensnared. Slow:2 Remove:1 Actions\nMajor: Shoulders Bound. [Impaired]. Slow:3 Remove:2 Actions\nExtreme: Neck Bound. [Suffocating] Remove:3 Actions"
     ))
 
     // (const restraint-kh)
@@ -1187,7 +1187,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-shoulders.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Shoulder Held. Pull:1. Remove:Any Hit\nModerate: Shoulder Held. Pull:1. Remove:1 Damage\nMajor: Shoulders Held. Pull:1. Remove:2 Damage\nExtreme: Shoulders Held. Pull:1. Remove:3 Damage"
     ))
 
     // (const restraint-ks)
@@ -1200,7 +1200,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-shoulders.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Shoulder caught. Slow:1. Remove:Any Hit\nModerate: Shoulder lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Shoulder sprained. [Impaired] Stun:2. Remove:2 Damage\nExtreme: Shoulder dislocated. [Impaired] Stun:3. Remove:3 Damage"
     ))
 
     // (const restraint-qc)
@@ -1226,7 +1226,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-chest.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Chest Ensnared.\nModerate: Chest Ensnared. Slow:1 Remove:1 Actions\nMajor: Chest Ensnared. Slow:2 Remove:2 Actions\nExtreme: Chest Bound. [Impaired] Remove:3 Actions"
     ))
 
     // (const restraint-qh)
@@ -1239,7 +1239,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-chest.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Chest Held. Pull:1. Remove:Any Hit\nModerate: Chest Held. Pull:1. Slow:1 Remove:Any Hit\nMajor: Chest Held. Pull:1. Remove:1 Damage\nExtreme: Chest Held. Pull:1. Remove:2 Damage"
     ))
 
     // (const restraint-qs)
@@ -1252,7 +1252,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-chest.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Chest Held. Pull:1. Remove:Any Hit\nModerate: Chest Held. Pull:1. Slow:1 Remove:Any Hit\nMajor: Chest Held. Pull:1. Remove:1 Damage\nExtreme: Chest Held. Pull:1. Remove:2 Damage"
     ))
 
     // (const restraint-tc)
@@ -1278,7 +1278,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-vitals.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Hips Ensnared.\nModerate: Hips Ensnared. Slow:1 Remove:1 Actions\nMajor: Hips Ensnared. Slow:2 Remove:2 Actions\nExtreme: Hips Bound. [Hobbled] Slow:3 Remove:3 Actions"
     ))
 
     // (const restraint-th)
@@ -1291,7 +1291,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-vitals.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Hips Held. Pull:1. Remove:Any Hit\nModerate: Hips Held. Pull:1. Remove:1 Damage\nMajor: Buttocks Held. Pull:1. Remove:2 Damage\nExtreme: Crotch Held. Pull:1. Remove:3 Damage"
     ))
 
     // (const restraint-ts)
@@ -1304,7 +1304,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-vitals.svg",
       ":summary",
-      "Minor:\nModerate:\nMajor:\nExtreme:"
+      "Minor: Hip caught. Slow:1. Remove:Any Hit\nModerate: Hip lock. Slow:1 Stun:1. Remove:1 Damage\nMajor: Hip sprained. [Hobbled] Stun:2. Remove:2 Damage\nExtreme: Hip dislocated. [Hobbled] Stun:3. Remove:3 Damage"
     ))
 
     // (const restraint-wild-black)
@@ -1345,7 +1345,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-slow.svg",
       ":summary",
-      "* If you have [Move]:0, you are Encumbered. Any additional [Slow] is flipped to [Restraint].\n* Encumbered: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up).\n* Special*: Each Move penalty is -25% rounded up. Simplified using the following chart:\n*  Original Move:10-8-5-3-0 9-7-5-3-0 8-6-4-2-0 7-6-4-2-0 6-5-3-2-0 5-4-3-2-0 4-3-2-1-0 3-3-2-1-0 2-2-1-1-0 1-1-1-1-0"
+      "* If you have [Move]:0, you are Encumbered. Any additional [Slow] is flipped to [Restraint].\n* Encumbered: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up).\n* Special*: Each Move penalty is -25% rounded up. Simplified using the following chart:\n*  Original Move: 10-8-5-3-0 / 9-7-5-3-0 / 8-6-4-2-0 / 7-6-4-2-0 / 6-5-3-2-0 / 5-4-3-2-0 / 4-3-2-1-0 / 3-3-2-1-0 / 2-2-1-1-0 / 1-1-1-1-0"
     ))
 
   }

@@ -12,7 +12,7 @@
     "* If you have [Move]:0, you are Encumbered. Any additional [Slow] is flipped to [Restraint].
      * Encumbered: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up).
      * Special*: Each Move penalty is -25% rounded up. Simplified using the following chart:
-     *  Original Move:10-8-5-3-0 9-7-5-3-0 8-6-4-2-0 7-6-4-2-0 6-5-3-2-0 5-4-3-2-0 4-3-2-1-0 3-3-2-1-0 2-2-1-1-0 1-1-1-1-0"))
+     *  Original Move: 10-8-5-3-0 / 9-7-5-3-0 / 8-6-4-2-0 / 7-6-4-2-0 / 6-5-3-2-0 / 5-4-3-2-0 / 4-3-2-1-0 / 3-3-2-1-0 / 2-2-1-1-0 / 1-1-1-1-0"))
 
 (const restraint-wild-black : base/damage
  (base/damage
@@ -50,7 +50,7 @@
    "Minor: Hair Ensnared. Slow:1
     Moderate: Face Ensnared. Slow:2 Remove:1 Actions
     Major: Head Ensnared. Slow:3 Remove:2 Actions
-    Extreme: Neck Ensnared. [Suffocating] Remove:3 Actions"))
+    Extreme: Head Bound. Blood and Air cut off from Head. [Suffocating] [Dying]"))
 
 (const restraint-ah : base/damage
  (base/damage
@@ -91,10 +91,10 @@
   :ranksuit base/ranksuit-kd
   :image "images/card-restraint-shoulders.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Shoulder Ensnared. Slow:1
+    Moderate: Shoulders Ensnared. Slow:2 Remove:1 Actions
+    Major: Shoulders Bound. [Impaired]. Slow:3 Remove:2 Actions
+    Extreme: Neck Bound. [Suffocating] Remove:3 Actions"))
 
 (const restraint-kh : base/damage
  (base/damage
@@ -102,10 +102,10 @@
   :ranksuit base/ranksuit-kh
   :image "images/card-restraint-shoulders.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Shoulder Held. Pull:1. Remove:Any Hit
+    Moderate: Shoulder Held. Pull:1. Remove:1 Damage
+    Major: Shoulders Held. Pull:1. Remove:2 Damage
+    Extreme: Shoulders Held. Pull:1. Remove:3 Damage"))
 
 (const restraint-ks : base/damage
  (base/damage
@@ -113,10 +113,10 @@
   :ranksuit base/ranksuit-ks
   :image "images/card-restraint-shoulders.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Shoulder caught. Slow:1. Remove:Any Hit
+    Moderate: Shoulder lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Shoulder sprained. [Impaired] Stun:2. Remove:2 Damage
+    Extreme: Shoulder dislocated. [Impaired] Stun:3. Remove:3 Damage"))
 
 (const restraint-qc : base/damage
  (base/damage
@@ -135,10 +135,10 @@
   :ranksuit base/ranksuit-qd
   :image "images/card-restraint-chest.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Chest Ensnared.
+    Moderate: Chest Ensnared. Slow:1 Remove:1 Actions
+    Major: Chest Ensnared. Slow:2 Remove:2 Actions
+    Extreme: Chest Bound. [Impaired] Remove:3 Actions"))
 
 (const restraint-qh : base/damage
  (base/damage
@@ -146,10 +146,10 @@
   :ranksuit base/ranksuit-qh
   :image "images/card-restraint-chest.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Chest Held. Pull:1. Remove:Any Hit
+    Moderate: Chest Held. Pull:1. Slow:1 Remove:Any Hit
+    Major: Chest Held. Pull:1. Remove:1 Damage
+    Extreme: Chest Held. Pull:1. Remove:2 Damage"))
 
 (const restraint-qs : base/damage
  (base/damage
@@ -157,10 +157,10 @@
   :ranksuit base/ranksuit-qs
   :image "images/card-restraint-chest.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Chest Held. Pull:1. Remove:Any Hit
+    Moderate: Chest Held. Pull:1. Slow:1 Remove:Any Hit
+    Major: Chest Held. Pull:1. Remove:1 Damage
+    Extreme: Chest Held. Pull:1. Remove:2 Damage"))
 
 (const restraint-jc : base/damage
  (base/damage
@@ -179,10 +179,10 @@
   :ranksuit base/ranksuit-jd
   :image "images/card-restraint-abdomen.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Abdomen Ensnared.
+    Moderate: Abdomen Ensnared. Slow:1 Remove:1 Actions
+    Major: Abdomen Ensnared. Slow:2 Remove:2 Actions
+    Extreme: Abdomen Bound. Slow:3 Remove:3 Actions"))
 
 (const restraint-jh : base/damage
  (base/damage
@@ -190,10 +190,10 @@
   :ranksuit base/ranksuit-jc
   :image "images/card-restraint-abdomen.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Abdomen Held. Pull:1. Remove:Any Hit
+    Moderate: Abdomen Held. Pull:1. Remove:1 Damage
+    Major: Waist Held. Pull:1. Remove:2 Damage
+    Extreme: Waist Held. Pull:1. Remove:3 Damage"))
 
 (const restraint-js : base/damage
  (base/damage
@@ -201,10 +201,10 @@
   :ranksuit base/ranksuit-js
   :image "images/card-restraint-abdomen.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Abdomen Held. Pull:1. Remove:Any Hit
+    Moderate: Abdomen Held. Pull:1. Remove:1 Damage
+    Major: Waist Held. Pull:1. Remove:2 Damage
+    Extreme: Waist Held. Pull:1. Remove:3 Damage"))
 
 (const restraint-tc : base/damage
  (base/damage
@@ -223,10 +223,10 @@
   :ranksuit base/ranksuit-td
   :image "images/card-restraint-vitals.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Hips Ensnared.
+    Moderate: Hips Ensnared. Slow:1 Remove:1 Actions
+    Major: Hips Ensnared. Slow:2 Remove:2 Actions
+    Extreme: Hips Bound. [Hobbled] Slow:3 Remove:3 Actions"))
 
 (const restraint-th : base/damage
  (base/damage
@@ -234,10 +234,10 @@
   :ranksuit base/ranksuit-th
   :image "images/card-restraint-vitals.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Hips Held. Pull:1. Remove:Any Hit
+    Moderate: Hips Held. Pull:1. Remove:1 Damage
+    Major: Buttocks Held. Pull:1. Remove:2 Damage
+    Extreme: Crotch Held. Pull:1. Remove:3 Damage"))
 
 (const restraint-ts : base/damage
  (base/damage
@@ -245,10 +245,10 @@
   :ranksuit base/ranksuit-ts
   :image "images/card-restraint-vitals.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Hip caught. Slow:1. Remove:Any Hit
+    Moderate: Hip lock. Slow:1 Stun:1. Remove:1 Damage
+    Major: Hip sprained. [Hobbled] Stun:2. Remove:2 Damage
+    Extreme: Hip dislocated. [Hobbled] Stun:3. Remove:3 Damage"))
 
 (const restraint-9c : base/damage
  (base/damage
@@ -269,10 +269,10 @@
   :ranksuit base/ranksuit-9d
   :image "images/card-restraint-arm-left.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Elbow Ensnared.
+    Moderate: Elbow Bond. Slow:1 Remove:1 Actions
+    Major: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions
+    Extreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"))
 
 (const restraint-9h : base/damage
  (base/damage
@@ -281,10 +281,10 @@
   :ranksuit base/ranksuit-9h
   :image "images/card-restraint-arm-left.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Arm Held. Pull:1. Remove:Any Hit
+    Moderate: Arm Held. Pull:1. Remove:1 Damage
+    Major: Elbow Held. Pull:1. Remove:2 Damage
+    Extreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"))
 
 (const restraint-9s : base/damage
  (base/damage
@@ -293,10 +293,10 @@
   :ranksuit base/ranksuit-9s
   :image "images/card-restraint-arm-left.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Bicep held. Slow:1. Remove:Any Hit
+    Moderate: Elbow held. Slow:1 Stun:1. Remove:1 Damage
+    Major: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage
+    Extreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"))
 
 (const restraint-8c : base/damage
  (base/damage
@@ -317,10 +317,10 @@
   :ranksuit base/ranksuit-8d
   :image "images/card-restraint-arm-right.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Elbow Ensnared.
+    Moderate: Elbow Bond. Slow:1 Remove:1 Actions
+    Major: Arm Ensnared. [Impaired] Slow:2 Remove:2 Actions
+    Extreme: Arm Bound. [Impaired] Slow:3 Remove:3 Actions"))
 
 (const restraint-8h : base/damage
  (base/damage
@@ -329,10 +329,10 @@
   :ranksuit base/ranksuit-8h
   :image "images/card-restraint-arm-right.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Arm Held. Pull:1. Remove:Any Hit
+    Moderate: Arm Held. Pull:1. Remove:1 Damage
+    Major: Elbow Held. Pull:1. Remove:2 Damage
+    Extreme: Bicep Held. [Impaired] Pull:1. Remove:3 Damage"))
 
 (const restraint-8s : base/damage
  (base/damage
@@ -341,10 +341,10 @@
   :ranksuit base/ranksuit-8s
   :image "images/card-restraint-arm-right.svg"
   :summary
-   "Minor:
-    Moderate:
-    Major:
-    Extreme:"))
+   "Minor: Bicep held. Slow:1. Remove:Any Hit
+    Moderate: Elbow held. Slow:1 Stun:1. Remove:1 Damage
+    Major: Elbow lock. Foot useless. [Impaired] Stun:2. Remove:2 Damage
+    Extreme: Elbow dislocated. Knee useless. [Impaired] Stun:3. Remove:3 Damage"))
 
 (const restraint-7c : base/damage
  (base/damage

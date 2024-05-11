@@ -74,7 +74,7 @@
      y="6.6311646" />
   <g
      id="g1"
-     transform="matrix(0.74696101,0,0,0.80234064,-84.572806,80.358084)">
+     transform="matrix(0.74696101,0,0,0.80234064,-63.105797,159.07045)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:148.144px;font-family:Amiri;-inkscape-font-specification:'Amiri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.269288;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
@@ -82,7 +82,9 @@
        y="778.5697"
        id="text1"><tspan
          sodipodi:role="line"
-         id="tspan1">Move: -1*</tspan></text>
+         id="tspan1"
+         x="513.04822"
+         y="778.5697">Move: -1*</tspan></text>
     <path
        fill="#fefefe"
        d="m 423.87315,743.60565 0.21512,0.052 c 1.71719,3.76403 3.49119,3.70519 5.98388,7.35145 -7.82361,-0.10797 -11.69949,-1.08864 -18.76246,-4.29382 -1.34963,-0.0879 -4.75661,-3.11408 -5.45151,-3.66689 -1.44497,-1.14935 -2.73119,-2.33754 -3.98746,-3.59097 2.82341,0.88799 5.73821,1.52855 8.60636,2.10838 4.47579,0.90536 8.94267,1.61647 13.39636,2.03887 z"
@@ -139,7 +141,7 @@
   </g>
   <g
      id="g20"
-     transform="matrix(4.7616586,0,0,4.7616586,349.29094,694.05121)">
+     transform="matrix(4.7616586,0,0,4.7616586,370.75795,772.76358)">
     <path
        fill="#2c3361"
        transform="matrix(0.0634766,0,0,0.0634766,0,1.52588e-5)"

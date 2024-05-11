@@ -558,7 +558,7 @@
  (base/damage
   :name "Neural: Left Foot"
   :ranksuit base/ranksuit-3s
-  :image "images/card-disorder-leftfoot.svg"
+  :image "images/card-disorder-foot-left.svg"
   :summary
    "Minor: Foot Pain. [Slow]:1
     Major: Foot Cramps and Weakness. Restricted movement. [Slow]:1
@@ -602,7 +602,7 @@
  (base/damage
   :name "Neural: Right Foot"
   :ranksuit base/ranksuit-2s
-  :image "images/card-disorder-rightfoot.svg"
+  :image "images/card-disorder-foot-right.svg"
   :summary
    "Minor: Foot Pain. [Slow]:1
     Major: Foot Cramps and Weakness. Restricted movement. [Slow]:1

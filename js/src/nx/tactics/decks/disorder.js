@@ -614,7 +614,7 @@ export default class nx_tactics_decks_disorder {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":image",
-      "images/card-disorder-rightfoot.svg",
+      "images/card-disorder-foot-right.svg",
       ":summary",
       "Minor: Foot Pain. [Slow]:1\nMajor: Foot Cramps and Weakness. Restricted movement. [Slow]:1\nCritical:Foot Numbness. [Hobbled]. [Slow]:2\nExtreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"
     ))
@@ -666,7 +666,7 @@ export default class nx_tactics_decks_disorder {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
       ":image",
-      "images/card-disorder-leftfoot.svg",
+      "images/card-disorder-foot-left.svg",
       ":summary",
       "Minor: Foot Pain. [Slow]:1\nMajor: Foot Cramps and Weakness. Restricted movement. [Slow]:1\nCritical:Foot Numbness. [Hobbled]. [Slow]:2\nExtreme:Nerve damage. Foot unresponsive. [Hobbled]. [Slow]:2"
     ))

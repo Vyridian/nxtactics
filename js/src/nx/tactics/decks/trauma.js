@@ -724,7 +724,7 @@ export default class nx_tactics_decks_trauma {
       ":image",
       "images/card-trauma-need.svg",
       ":summary",
-      "Minor: Hyperactive. Axious when not active.\nMajor: Change for changes sake.\nCritical: Stream of consciousness.\nExtreme: Cannot focus on any topic."
+      "Minor: Hyperactive. Axious when not active.\nMajor: Change for changes sake.\nCritical: Stream of consciousness. Needs to be 'All In' all the time.\nExtreme: Cannot focus on any topic. No downtime. Work yourself to death."
     ))
 
     // (const trauma-4s)
@@ -1036,7 +1036,7 @@ export default class nx_tactics_decks_trauma {
       ":image",
       "images/card-trauma-need.svg",
       ":summary",
-      "Minor: Study and discuss death constantly.\nMajor: Necrophile. May only take Skills/Abilities associated with death.\nCritical: Become a death cultist.\nExtreme: Take the final step. Try to cross over."
+      "Minor: Study and discuss wounds and death.\nMajor: Necrophile. May only take Skills/Abilities associated with death.\nCritical: Death Cultist. Obsessive focus on death, spirits, and necromancy.\nExtreme: Suicidal. Take the final step. Try to cross over."
     ))
 
     // (const trauma-as)
@@ -1194,7 +1194,7 @@ export default class nx_tactics_decks_trauma {
       ":image",
       "images/card-trauma-need.svg",
       ":summary",
-      "Minor: Vainglory. You brag about own appearance, abilities, and status.\nMajor: Gloryhound. You seek praise at the expense of others.\nCritical: Nascissist. Only think in terms of yourself. Take offense at anyone who questions you. Difficult to work with others.\nExtreme: Messiah Complex. Your every action changes the world. You must be patient with all the little people."
+      "Minor: Vainglory. You brag about own appearance, abilities, and status.\nMajor: Gloryhound. You seek praise at the expense of others.\nCritical: Nascissist. Only think in terms of yourself. Take offense at anyone who questions you. Acts alone and refuses all help.\nExtreme: Messiah Complex. Your every action changes the world. Solo all comers. None can interfere."
     ))
 
     // (const trauma-qs)
