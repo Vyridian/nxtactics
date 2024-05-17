@@ -6,6 +6,7 @@
        (lib restraint        :path nx/tactics/decks/restraint)
        (lib rule             :path nx/tactics/decks/rule)
        (lib scenario         :path nx/tactics/decks/scenario)
+       (lib nightonthetown   :path nx/tactics/decks/scenario_nightonthetown)
        (lib starter          :path nx/tactics/decks/starter)
        (lib tarot            :path nx/tactics/decks/tarot)
        (lib trauma           :path nx/tactics/decks/trauma)
@@ -171,7 +172,8 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     (scenario/deck-murintrail)))))
+     (scenario/deck-murintrail)
+     (nightonthetown/deck-nightonthetown)))))
 
 (func deck-skills : base/deck
  (let : base/deck

@@ -39,14 +39,14 @@ export default class nx_tactics_ui_navigation {
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
             vx_core.f_new(vx_core.t_boolean_from_func, () => {return ischange}),
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_navigation.f_ui_render_from_navbar_selected(context, navbar, poschg)})
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_navigation.f_ui_layout_from_navbar_selected(context, navbar, poschg)})
           )
         )
         const mainchg = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
             vx_core.f_new(vx_core.t_boolean_from_func, () => {return ischange}),
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_navigation.f_ui_render_from_main_selected(context, main, poschg)})
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_navigation.f_ui_layout_from_main_selected(context, main, poschg)})
           )
         )
         return ischange
@@ -70,7 +70,83 @@ export default class nx_tactics_ui_navigation {
   // (func ui-app)
   static f_ui_app(context) {
     let output = vx_ui_ui.e_ui
-    output = vx_ui_ui.f_ui_readstate_from_uid(context, "app")
+    output = vx_ui_ui.f_ui_readstate_uiapp(context)
+    return output
+  }
+
+  /**
+   * @function ui_layout_from_main_selected
+   * @param  {ui} main
+   * @param  {int} selected
+   * @return {ui}
+   */
+  static t_ui_layout_from_main_selected = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_layout_from_main_selected = {
+    vx_type: nx_tactics_ui_navigation.t_ui_layout_from_main_selected
+  }
+
+  // (func ui-layout<-main-selected)
+  static f_ui_layout_from_main_selected(context, main, selected) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_if_2(
+      {"any-1": vx_ui_ui.t_ui},
+      vx_core.f_then(
+        vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_lt(selected, 1)}),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return main})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
+          {"any-1": vx_ui_ui.t_ui},
+          [],
+          vx_core.f_new(vx_core.t_any_from_func, () => {
+            const parent = nx_tactics_ui_navigation.f_ui_app(context)
+            return vx_ui_ui.f_ui_layout_from_ui_parent_visible(main, parent, selected)
+          })
+        )})
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function ui_layout_from_navbar_selected
+   * @param  {ui} navbar
+   * @param  {int} selected
+   * @return {ui}
+   */
+  static t_ui_layout_from_navbar_selected = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_layout_from_navbar_selected = {
+    vx_type: nx_tactics_ui_navigation.t_ui_layout_from_navbar_selected
+  }
+
+  // (func ui-layout<-navbar-selected)
+  static f_ui_layout_from_navbar_selected(context, navbar, selected) {
+    let output = vx_ui_ui.e_ui
+    output = vx_core.f_if_2(
+      {"any-1": vx_ui_ui.t_ui},
+      vx_core.f_then(
+        vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_lt(selected, 1)}),
+        vx_core.f_new(vx_core.t_any_from_func, () => {return navbar})
+      ),
+      vx_core.f_else(
+        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
+          {"any-1": vx_ui_ui.t_ui},
+          [],
+          vx_core.f_new(vx_core.t_any_from_func, () => {
+            const parent = nx_tactics_ui_navigation.f_ui_app(context)
+            return vx_ui_ui.f_ui_layout_from_ui_parent_selected(
+              navbar,
+              parent,
+              vx_core.f_plus1(selected)
+            )
+          })
+        )})
+      )
+    )
     return output
   }
 
@@ -89,7 +165,7 @@ export default class nx_tactics_ui_navigation {
   // (func ui-main)
   static f_ui_main(context) {
     let output = vx_ui_ui.e_ui
-    output = vx_ui_ui.f_ui_readstate_from_uid(context, "main")
+    output = vx_ui_ui.f_ui_readstate_from_uid(context, "app/main")
     return output
   }
 
@@ -108,7 +184,7 @@ export default class nx_tactics_ui_navigation {
   // (func ui-navbar)
   static f_ui_navbar(context) {
     let output = vx_ui_ui.e_ui
-    output = vx_ui_ui.f_ui_readstate_from_uid(context, "navbar")
+    output = vx_ui_ui.f_ui_readstate_from_uid(context, "app/navbar")
     return output
   }
 
@@ -129,9 +205,7 @@ export default class nx_tactics_ui_navigation {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "navbar/",
-      ":parent",
-      "navbar",
+      "app/navbar/",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -178,8 +252,6 @@ export default class nx_tactics_ui_navigation {
           uid,
           ":name",
           name,
-          ":parent",
-          parent,
           ":selected",
           selected,
           ":stylelist",
@@ -194,82 +266,6 @@ export default class nx_tactics_ui_navigation {
     return output
   }
 
-  /**
-   * @function ui_render_from_main_selected
-   * @param  {ui} main
-   * @param  {int} selected
-   * @return {ui}
-   */
-  static t_ui_render_from_main_selected = {
-    vx_type: vx_core.t_type
-  }
-  static e_ui_render_from_main_selected = {
-    vx_type: nx_tactics_ui_navigation.t_ui_render_from_main_selected
-  }
-
-  // (func ui-render<-main-selected)
-  static f_ui_render_from_main_selected(context, main, selected) {
-    let output = vx_ui_ui.e_ui
-    output = vx_core.f_if_2(
-      {"any-1": vx_ui_ui.t_ui},
-      vx_core.f_then(
-        vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_lt(selected, 1)}),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return main})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
-          {"any-1": vx_ui_ui.t_ui},
-          [],
-          vx_core.f_new(vx_core.t_any_from_func, () => {
-            const parent = nx_tactics_ui_navigation.f_ui_app(context)
-            return vx_ui_ui.f_ui_render_from_ui_parent_visible(main, parent, selected)
-          })
-        )})
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function ui_render_from_navbar_selected
-   * @param  {ui} navbar
-   * @param  {int} selected
-   * @return {ui}
-   */
-  static t_ui_render_from_navbar_selected = {
-    vx_type: vx_core.t_type
-  }
-  static e_ui_render_from_navbar_selected = {
-    vx_type: nx_tactics_ui_navigation.t_ui_render_from_navbar_selected
-  }
-
-  // (func ui-render<-navbar-selected)
-  static f_ui_render_from_navbar_selected(context, navbar, selected) {
-    let output = vx_ui_ui.e_ui
-    output = vx_core.f_if_2(
-      {"any-1": vx_ui_ui.t_ui},
-      vx_core.f_then(
-        vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_lt(selected, 1)}),
-        vx_core.f_new(vx_core.t_any_from_func, () => {return navbar})
-      ),
-      vx_core.f_else(
-        vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
-          {"any-1": vx_ui_ui.t_ui},
-          [],
-          vx_core.f_new(vx_core.t_any_from_func, () => {
-            const parent = nx_tactics_ui_navigation.f_ui_app(context)
-            return vx_ui_ui.f_ui_render_from_ui_parent_selected(
-              navbar,
-              parent,
-              vx_core.f_plus1(selected)
-            )
-          })
-        )})
-      )
-    )
-    return output
-  }
-
 
 
   static {
@@ -279,22 +275,22 @@ export default class nx_tactics_ui_navigation {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "boolean-navigate-back": nx_tactics_ui_navigation.e_boolean_navigate_back,
       "ui-app": nx_tactics_ui_navigation.e_ui_app,
+      "ui-layout<-main-selected": nx_tactics_ui_navigation.e_ui_layout_from_main_selected,
+      "ui-layout<-navbar-selected": nx_tactics_ui_navigation.e_ui_layout_from_navbar_selected,
       "ui-main": nx_tactics_ui_navigation.e_ui_main,
       "ui-navbar": nx_tactics_ui_navigation.e_ui_navbar,
       "ui-navbutton": nx_tactics_ui_navigation.e_ui_navbutton,
-      "ui-navbutton<-ui-parent-selected": nx_tactics_ui_navigation.e_ui_navbutton_from_ui_parent_selected,
-      "ui-render<-main-selected": nx_tactics_ui_navigation.e_ui_render_from_main_selected,
-      "ui-render<-navbar-selected": nx_tactics_ui_navigation.e_ui_render_from_navbar_selected
+      "ui-navbutton<-ui-parent-selected": nx_tactics_ui_navigation.e_ui_navbutton_from_ui_parent_selected
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "boolean-navigate-back": nx_tactics_ui_navigation.t_boolean_navigate_back,
       "ui-app": nx_tactics_ui_navigation.t_ui_app,
+      "ui-layout<-main-selected": nx_tactics_ui_navigation.t_ui_layout_from_main_selected,
+      "ui-layout<-navbar-selected": nx_tactics_ui_navigation.t_ui_layout_from_navbar_selected,
       "ui-main": nx_tactics_ui_navigation.t_ui_main,
       "ui-navbar": nx_tactics_ui_navigation.t_ui_navbar,
       "ui-navbutton": nx_tactics_ui_navigation.t_ui_navbutton,
-      "ui-navbutton<-ui-parent-selected": nx_tactics_ui_navigation.t_ui_navbutton_from_ui_parent_selected,
-      "ui-render<-main-selected": nx_tactics_ui_navigation.t_ui_render_from_main_selected,
-      "ui-render<-navbar-selected": nx_tactics_ui_navigation.t_ui_render_from_navbar_selected
+      "ui-navbutton<-ui-parent-selected": nx_tactics_ui_navigation.t_ui_navbutton_from_ui_parent_selected
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -342,6 +338,42 @@ export default class nx_tactics_ui_navigation {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_navigation.f_ui_app
+    }
+
+    // (func ui-layout<-main-selected)
+    nx_tactics_ui_navigation.t_ui_layout_from_main_selected['vx_value'] = {
+      name          : "ui-layout<-main-selected",
+      pkgname       : "nx/tactics/ui/navigation",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_navigation.f_ui_layout_from_main_selected
+    }
+
+    // (func ui-layout<-navbar-selected)
+    nx_tactics_ui_navigation.t_ui_layout_from_navbar_selected['vx_value'] = {
+      name          : "ui-layout<-navbar-selected",
+      pkgname       : "nx/tactics/ui/navigation",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_navigation.f_ui_layout_from_navbar_selected
     }
 
     // (func ui-main)
@@ -414,42 +446,6 @@ export default class nx_tactics_ui_navigation {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_navigation.f_ui_navbutton_from_ui_parent_selected
-    }
-
-    // (func ui-render<-main-selected)
-    nx_tactics_ui_navigation.t_ui_render_from_main_selected['vx_value'] = {
-      name          : "ui-render<-main-selected",
-      pkgname       : "nx/tactics/ui/navigation",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_ui_navigation.f_ui_render_from_main_selected
-    }
-
-    // (func ui-render<-navbar-selected)
-    nx_tactics_ui_navigation.t_ui_render_from_navbar_selected['vx_value'] = {
-      name          : "ui-render<-navbar-selected",
-      pkgname       : "nx/tactics/ui/navigation",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_ui_navigation.f_ui_render_from_navbar_selected
     }
 
   }

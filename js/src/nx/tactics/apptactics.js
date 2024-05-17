@@ -140,7 +140,6 @@ export default class nx_tactics_apptactics {
           ":ui",
           nx_tactics_ui_uitactics.f_ui_app()
         )
-        const issetstate = vx_ui_ui.f_boolean_writestate_from_uiengine(context, uiengine)
         const uienginerender = vx_ui_ui.f_uiengine_render(context, uiengine)
         return ""
       })

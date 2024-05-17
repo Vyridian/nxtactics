@@ -8,27 +8,27 @@ import vx_type from "../../../vx/type.js"
 export default class nx_tactics_decks_rule {
 
   /**
-   * @function card_action_combat
+   * @function card_action_fight
    * @return {card}
    */
-  static t_card_action_combat = {
+  static t_card_action_fight = {
     vx_type: vx_core.t_type
   }
-  static e_card_action_combat = {
-    vx_type: nx_tactics_decks_rule.t_card_action_combat
+  static e_card_action_fight = {
+    vx_type: nx_tactics_decks_rule.t_card_action_fight
   }
 
-  // (func card-action-combat)
-  static f_card_action_combat() {
+  // (func card-action-fight)
+  static f_card_action_fight() {
     let output = nx_tactics_base.e_card
     output = vx_core.f_new(
       nx_tactics_base.t_card,
       ":id",
-      "action-combat",
+      "action-fight",
       ":name",
-      "Combat Action",
+      "Fight Action",
       ":summary",
-      "* Target a unit with a damaging Skill/Power.\n* Each player chooses a Fate card from their hand or a random Fate from Shared Fate.\n* Fate Cards are compared like Rock/Paper/Scissors.\n* Combat Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter\n* If both play Attack or Focus then compare by rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.\n* Discard all card used (except Keep)"
+      "* Target a unit with a damaging Skill/Power.\n* Each player chooses a Fate card from their hand or a random Fate from Shared Fate.\n* Fate Cards are compared like Rock/Paper/Scissors.\n* Fight Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter\n* If both play Attack or Focus then compare by rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.\n* Discard all card used (except Keep)"
     )
     return output
   }
@@ -54,7 +54,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Move Action",
       ":summary",
-      "* Action: Move straight up to your [Move] stat.\n* Full Move (2 Actions): Move straight your [Move]x2.\n* Sprint (2 Actions): If you moved at Full Speed last turn, you may [Move]x3 straight this turn.\n* Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns.\n* Change Facing: During your Move, Full Move, or Sprint, you may make up to 2 Turns or Drifts.\n* Turn: Turn your unit's facing 45 degrees to the left or right.\n* Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing."
+      "* Action: Move straight up to your [Move] stat.\n* Double Move (2 Actions): Move straight your [Move]x2.\n* Sprint (2 Actions): If you took a Double Move or Sprint last turn, you may [Move]x3 straight this turn.\n* Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns.\n* Change Facing: During your Move Action, you may Turn or Drift up to 2 times.\n* Turn: Turn your unit's facing 45 degrees to the left or right.\n* Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing."
     )
     return output
   }
@@ -160,7 +160,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Beast",
       ":summary",
-      "* The Beast"
+      "* The Beast\n* Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank"
     )
     return output
   }
@@ -185,6 +185,32 @@ export default class nx_tactics_decks_rule {
       "characters",
       ":name",
       "Characters"
+    )
+    return output
+  }
+
+  /**
+   * @function card_conscience
+   * @return {card}
+   */
+  static t_card_conscience = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_conscience = {
+    vx_type: nx_tactics_decks_rule.t_card_conscience
+  }
+
+  // (func card-conscience)
+  static f_card_conscience() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "conscience",
+      ":name",
+      "Conscience",
+      ":summary",
+      "* Conscience"
     )
     return output
   }
@@ -262,7 +288,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Free Action",
       ":summary",
-      "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.\n* Move Out: Take a [Fatigue] to [Move]:1.\n* Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.\n* Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.\n* Final Sprint: Take a [Slow] to [Move].\n* Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."
+      "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.\n* Move Out: Take a [Fatigue] to [Move]:1. You may Turn or Drift once during this Move.\n* Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.\n* Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.\n* Final Sprint: Take a [Slow] to [Move].\n* Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."
     )
     return output
   }
@@ -404,6 +430,32 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
+   * @function card_move
+   * @return {card}
+   */
+  static t_card_move = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_move = {
+    vx_type: nx_tactics_decks_rule.t_card_move
+  }
+
+  // (func card-move)
+  static f_card_move() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-move",
+      ":name",
+      "Move",
+      ":summary",
+      "* Special*: Each Move penalty is -25% rounded up. Simplified using the following chart starting from the original Move stat:\n10-8-5-3-0\n9-7-5-3-0\n8-6-4-2-0\n7-6-4-2-0\n6-5-3-2-0\n5-4-3-2-0\n4-3-2-1-0\n3-3-2-1-0\n2-2-1-1-0\n1-1-1-1-0"
+    )
+    return output
+  }
+
+  /**
    * @function card_reach
    * @return {card}
    */
@@ -502,7 +554,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Setup Guide",
       ":summary",
-      "* Choose a Scenario and sort it in numerical order.\n* Each [Player] chooses or creates the [Units] they will use.\n* Each [Player] chooses a colored Starter Deck.\n* Player [Turn Order] cards are shuffled together to create a [Turn Order] deck.\n* Reveal the top card in the Scenario deck and follow its instructions."
+      "* Choose a Scenario and sort it in numerical order.\n* Each [Player] chooses or creates the [Units] they will use.\n* Each [Player] chooses a colored Starter Deck.\n* All Player [Initiative] cards are shuffled together to create an [Initiative] deck.\n* Reveal the top card in the Scenario deck and follow its instructions."
     )
     return output
   }
@@ -528,7 +580,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Shadow",
       ":summary",
-      "* The Shadow\n* Shadow Triumphant:"
+      "* The Shadow\n* Shadow Triumphant: The Shadow is now in control of this unit. Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank"
     )
     return output
   }
@@ -556,7 +608,7 @@ export default class nx_tactics_decks_rule {
           nx_tactics_decks_rule.f_card_gameguide(),
           nx_tactics_decks_rule.f_card_setupguide(),
           nx_tactics_decks_rule.f_card_action_move(),
-          nx_tactics_decks_rule.f_card_action_combat(),
+          nx_tactics_decks_rule.f_card_action_fight(),
           nx_tactics_decks_rule.f_card_action_skill(),
           nx_tactics_decks_rule.f_card_action_recover(),
           nx_tactics_decks_rule.f_card_free_action(),
@@ -564,8 +616,10 @@ export default class nx_tactics_decks_rule {
           nx_tactics_decks_rule.f_card_damageguide(),
           nx_tactics_decks_rule.f_card_defenselayers(),
           nx_tactics_decks_rule.f_card_characters(),
+          nx_tactics_decks_rule.f_card_move(),
           nx_tactics_decks_rule.f_card_beast(),
           nx_tactics_decks_rule.f_card_shadow(),
+          nx_tactics_decks_rule.f_card_conscience(),
           nx_tactics_decks_rule.f_card_leveling(),
           nx_tactics_decks_rule.f_card_scale(),
           nx_tactics_decks_rule.f_card_scaled(),
@@ -596,13 +650,14 @@ export default class nx_tactics_decks_rule {
       
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "card-action-combat": nx_tactics_decks_rule.e_card_action_combat,
+      "card-action-fight": nx_tactics_decks_rule.e_card_action_fight,
       "card-action-move": nx_tactics_decks_rule.e_card_action_move,
       "card-action-recover": nx_tactics_decks_rule.e_card_action_recover,
       "card-action-skill": nx_tactics_decks_rule.e_card_action_skill,
       "card-areaeffect": nx_tactics_decks_rule.e_card_areaeffect,
       "card-beast": nx_tactics_decks_rule.e_card_beast,
       "card-characters": nx_tactics_decks_rule.e_card_characters,
+      "card-conscience": nx_tactics_decks_rule.e_card_conscience,
       "card-damageguide": nx_tactics_decks_rule.e_card_damageguide,
       "card-defenselayers": nx_tactics_decks_rule.e_card_defenselayers,
       "card-free-action": nx_tactics_decks_rule.e_card_free_action,
@@ -611,6 +666,7 @@ export default class nx_tactics_decks_rule {
       "card-lineofsight": nx_tactics_decks_rule.e_card_lineofsight,
       "card-mapscale-1": nx_tactics_decks_rule.e_card_mapscale_1,
       "card-mapscale-2": nx_tactics_decks_rule.e_card_mapscale_2,
+      "card-move": nx_tactics_decks_rule.e_card_move,
       "card-reach": nx_tactics_decks_rule.e_card_reach,
       "card-scale": nx_tactics_decks_rule.e_card_scale,
       "card-scaled": nx_tactics_decks_rule.e_card_scaled,
@@ -619,13 +675,14 @@ export default class nx_tactics_decks_rule {
       "deck-rules": nx_tactics_decks_rule.e_deck_rules
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "card-action-combat": nx_tactics_decks_rule.t_card_action_combat,
+      "card-action-fight": nx_tactics_decks_rule.t_card_action_fight,
       "card-action-move": nx_tactics_decks_rule.t_card_action_move,
       "card-action-recover": nx_tactics_decks_rule.t_card_action_recover,
       "card-action-skill": nx_tactics_decks_rule.t_card_action_skill,
       "card-areaeffect": nx_tactics_decks_rule.t_card_areaeffect,
       "card-beast": nx_tactics_decks_rule.t_card_beast,
       "card-characters": nx_tactics_decks_rule.t_card_characters,
+      "card-conscience": nx_tactics_decks_rule.t_card_conscience,
       "card-damageguide": nx_tactics_decks_rule.t_card_damageguide,
       "card-defenselayers": nx_tactics_decks_rule.t_card_defenselayers,
       "card-free-action": nx_tactics_decks_rule.t_card_free_action,
@@ -634,6 +691,7 @@ export default class nx_tactics_decks_rule {
       "card-lineofsight": nx_tactics_decks_rule.t_card_lineofsight,
       "card-mapscale-1": nx_tactics_decks_rule.t_card_mapscale_1,
       "card-mapscale-2": nx_tactics_decks_rule.t_card_mapscale_2,
+      "card-move": nx_tactics_decks_rule.t_card_move,
       "card-reach": nx_tactics_decks_rule.t_card_reach,
       "card-scale": nx_tactics_decks_rule.t_card_scale,
       "card-scaled": nx_tactics_decks_rule.t_card_scaled,
@@ -653,9 +711,9 @@ export default class nx_tactics_decks_rule {
     })
     vx_core.vx_global_package_set(pkg)
 
-    // (func card-action-combat)
-    nx_tactics_decks_rule.t_card_action_combat['vx_value'] = {
-      name          : "card-action-combat",
+    // (func card-action-fight)
+    nx_tactics_decks_rule.t_card_action_fight['vx_value'] = {
+      name          : "card-action-fight",
       pkgname       : "nx/tactics/decks/rule",
       extends       : ":func",
       idx           : 0,
@@ -668,7 +726,7 @@ export default class nx_tactics_decks_rule {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_rule.f_card_action_combat
+      fn            : nx_tactics_decks_rule.f_card_action_fight
     }
 
     // (func card-action-move)
@@ -777,6 +835,24 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_characters
+    }
+
+    // (func card-conscience)
+    nx_tactics_decks_rule.t_card_conscience['vx_value'] = {
+      name          : "card-conscience",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_conscience
     }
 
     // (func card-damageguide)
@@ -921,6 +997,24 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_mapscale_2
+    }
+
+    // (func card-move)
+    nx_tactics_decks_rule.t_card_move['vx_value'] = {
+      name          : "card-move",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_move
     }
 
     // (func card-reach)

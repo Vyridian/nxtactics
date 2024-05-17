@@ -29,7 +29,7 @@
 (func event-navigate-card-click<-event : event/event
  [event : event/event]
  (let : event/event
-  [parent : string := "nav"
+  [parent : string := "app/nav"
    uifrom : ui/ui :=
     (ui/ui-from<-event
      event)
@@ -52,8 +52,7 @@
  [event : event/event]
  (let : event/event
   [uimain : ui/ui :=
-    (ui/ui-readstate<-uid
-     "main")
+    (nav/ui-main)
    isprint : boolean :=
     (ui/boolean-print
      uimain)]
@@ -474,31 +473,25 @@
 (func ui-title1<-uid-text : ui/ui
  [uid  : string
   text : string]
- (let : ui/ui
-  [uidtitle : string :=
-    (string uid "/title1")]
-  (ui/ui
-   :uid uidtitle
-   :style styles/style-card-title1
-   :stylelist
-    (ui/stylelist
-     styles/style-text-header1)
-   :data text))
+ (ui/ui
+  :uid (string uid "/title1")
+  :style styles/style-card-title1
+  :stylelist
+   (ui/stylelist
+    styles/style-text-header1)
+  :data text)
  :doc "Returns a card title1")
 
 (func ui-title2<-uid-text : ui/ui
  [uid  : string
   text : string]
- (let : ui/ui
-  [uidtitle : string :=
-    (string uid "/title2")]
-  (ui/ui
-   :uid uidtitle
-   :style styles/style-card-title2
-   :stylelist
-    (ui/stylelist
-     styles/style-text-header1)
-   :data text))
+ (ui/ui
+  :uid (string uid "/title2")
+  :style styles/style-card-title2
+  :stylelist
+   (ui/stylelist
+    styles/style-text-header1)
+  :data text)
  :doc "Returns a card title2")
 
 (func uilist<-card-parent : ui/uilist
@@ -980,18 +973,18 @@
    statusdrawer : ui/ui := (ui-app-statusdrawer)
    titlebar     : ui/ui := (ui-app-titlebar)
    uimap : ui/uimap :=
-    (ui/uimap
-     :background   background
-     :main         main
-     :menubar      menubar
-     :menudrawer   menudrawer
-     :msgbox       msgbox
-     :navbar       navbar
-     :navdrawer    navdrawer
-     :parallax     parallax
-     :statusbar    statusbar
-     :statusdrawer statusdrawer
-     :titlebar     titlebar)]
+    (ui/uimap<-uilist
+     background
+     main
+     menubar
+     menudrawer
+     msgbox
+     navbar
+     navdrawer
+     parallax
+     statusbar
+     statusdrawer
+     titlebar)]
   (ui/ui
    :uid   "app"
    :style style-app
@@ -1008,7 +1001,7 @@
 
 (func ui-app-background : ui/ui
  (ui/ui
-  :uid "app-background"
+  :uid "app/background"
   :stylelist
    (ui/stylelist
     style-app-background)))
@@ -1016,88 +1009,86 @@
 (func ui-app-home : ui/ui
  (ui-nav<-deck-parent
   (deck/deck-home)
-  "main")
+  "app/main")
  :doc "App Home Panel")
 
 (func ui-app-main : ui/ui
  (ui/ui
-  :uid "main"
+  :uid "app/main"
   :stylelist
    (ui/stylelist
     style-app-main)
   :uimap
    (ui/uimap<-uilist
-    (ui/uilist
-     (ui-app-home))))
+    (ui-app-home)))
  :doc "")
 
 (func ui-app-menubar : ui/ui
  (ui/ui
-  :uid "menubar"
+  :uid "app/menubar"
   :stylelist
    (ui/stylelist
     style-app-menubar)))
 
 (func ui-app-menudrawer : ui/ui
  (ui/ui
-  :uid "menudrawer"
+  :uid "app/menudrawer"
   :stylelist
    (ui/stylelist
     style-app-menudrawer)))
 
 (func ui-app-msgbox : ui/ui
  (ui/ui
-  :uid "msgbox"
+  :uid "app/msgbox"
   :stylelist
    (ui/stylelist
     style-app-msgbox)))
 
 (func ui-app-navbar : ui/ui
  (ui/ui
-  :uid "navbar"
+  :uid "app/navbar"
   :stylelist
    (ui/stylelist
     style-app-navbar)
   :uimap
    (ui/uimap<-uilist
-    (ui/uilist
-     (ui-navbutton-back)
-     (nav/ui-navbutton<-ui-parent-selected
-      (ui/ui
-       :name "Home")
-      "navbar"
-      true))))
+    (ui-navbutton-back)
+    (nav/ui-navbutton<-ui-parent-selected
+     (ui/ui
+      :name "Home")
+     "app-navbar"
+     true)))
  :doc "Returns a new side navigation bar")
 
 (func ui-app-navdrawer : ui/ui
  (ui/ui
-  :uid "navdrawer"
+  :uid "app/navdrawer"
   :stylelist
    (ui/stylelist
     style-app-navdrawer)))
 
 (func ui-app-parallax : ui/ui
  (ui/ui
-  :uid "parallax"
+  :uid "app/parallax"
   :style style-app-parallax))
 
 (func ui-app-statusbar : ui/ui
  (ui/ui
-  :uid "statusbar"
+  :uid "app/statusbar"
   :stylelist
    (ui/stylelist
     style-app-statusbar)))
 
 (func ui-app-statusdrawer : ui/ui
  (ui/ui
-  :uid "statusdrawer"
+  :uid "app/statusdrawer"
   :stylelist
    (ui/stylelist
     style-app-statusdrawer)))
 
 (func ui-app-titlebar : ui/ui
  (ui/ui
-  :uid "titlebar"
+  :uid "app/titlebar"
   :stylelist
    (ui/stylelist
     style-app-titlebar)
@@ -1109,8 +1100,7 @@
 
 (func ui-app-titlebar-print : ui/ui
  (ui/ui
-  :uid "titlebar/print"
-  :parent "titlebar"
+  :uid "app/titlebar/print"
   :data
    (file/file
     :name "icon-printer.svg"
@@ -1129,8 +1119,7 @@
 
 (func ui-app-titlebar-title : ui/ui
  (ui/ui
-  :uid "titlebar/title"
-  :parent "titlebar"
+  :uid "app/titlebar/title"
   :data "Title"
   :style
    (ui/style
@@ -1193,8 +1182,7 @@
     (uimap<-cardmap-parent-page-size
      cardmap uid 1 100)]
   (ui/ui
-   :uid    uid
-   :parent parent
+   :uid uid
    :stylelist
     (ui/stylelist
      style-deck)
@@ -1224,8 +1212,7 @@
     (uimap<-cardmap-parent-page-size
      cardmap3 uid 1 100)]
   (ui/ui
-   :uid    uid
-   :parent parent
+   :uid uid
    :stylelist
     (ui/stylelist
      style-deck)
@@ -1303,7 +1290,7 @@
     (ui-nav<-any-parent
      data mainid)
    mainb2 : ui/ui :=
-    (ui/ui-layout<-ui
+    (ui/ui-addlayout<-ui
      mainb1)
    mainmap3 : ui/uimap :=
     (copy mainmap2
@@ -1312,7 +1299,7 @@
     (ui/ui-writechildmap<-ui-childmap
      main mainmap3)
    main3 : ui/ui :=
-    (ui/ui-render
+    (ui/ui-layout
      main2)]
   main3)
  :context
@@ -1358,10 +1345,10 @@
      navbar2
      buttonb2)
    navbar4 : ui/ui :=
-    (ui/ui-layout<-ui
+    (ui/ui-addlayout<-ui
      navbar3)
    navbar5 : ui/ui :=
-    (ui/ui-render
+    (ui/ui-layout
      navbar4)]
   navbar5)
  :context
@@ -1465,11 +1452,15 @@
   parent  : string
   page    : int
   size    : int]
- (map<-map : ui/uimap
-  cardmap
-  (fn : ui/ui
-   [key  : string
-    card : base/card]
-   (ui<-card-parent
-    card parent)))
- :doc "")
+ (let : ui/uimap
+  [uilist : ui/uilist :=
+    (list<-map : ui/uilist
+     cardmap
+     (fn : ui/ui
+      [key  : string
+       card : base/card]
+      (ui<-card-parent
+       card parent)))]
+  (ui/uimap<-uilist
+   uilist))
+ :doc "Returns a uimap given a cardmap")

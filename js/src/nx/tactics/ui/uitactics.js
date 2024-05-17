@@ -92,7 +92,7 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_event.t_event},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const parent = "nav"
+        const parent = "app/nav"
         const uifrom = vx_ui_ui.f_ui_from_from_event(context, event)
         const data = vx_core.f_any_from_struct({"any-1": vx_core.t_any, "struct-2": vx_ui_ui.t_ui}, uifrom, ":data")
         const uinav = nx_tactics_ui_uitactics.f_ui_from_any_parent(data, parent)
@@ -123,7 +123,7 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_event.t_event},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uimain = vx_ui_ui.f_ui_readstate_from_uid(context, "main")
+        const uimain = nx_tactics_ui_navigation.f_ui_main(context)
         const isprint = vx_ui_ui.f_boolean_print(context, uimain)
         return event
       })
@@ -957,31 +957,7 @@ export default class nx_tactics_ui_uitactics {
         const statusbar = nx_tactics_ui_uitactics.f_ui_app_statusbar()
         const statusdrawer = nx_tactics_ui_uitactics.f_ui_app_statusdrawer()
         const titlebar = nx_tactics_ui_uitactics.f_ui_app_titlebar()
-        const uimap = vx_core.f_new(
-          vx_ui_ui.t_uimap,
-          ":background",
-          background,
-          ":main",
-          main,
-          ":menubar",
-          menubar,
-          ":menudrawer",
-          menudrawer,
-          ":msgbox",
-          msgbox,
-          ":navbar",
-          navbar,
-          ":navdrawer",
-          navdrawer,
-          ":parallax",
-          parallax,
-          ":statusbar",
-          statusbar,
-          ":statusdrawer",
-          statusdrawer,
-          ":titlebar",
-          titlebar
-        )
+        const uimap = vx_ui_ui.f_uimap_from_uilist(background, main, menubar, menudrawer, msgbox, navbar, navdrawer, parallax, statusbar, statusdrawer, titlebar)
         return vx_core.f_new(
           vx_ui_ui.t_ui,
           ":uid",
@@ -1013,7 +989,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "app-background",
+      "app/background",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1040,7 +1016,7 @@ export default class nx_tactics_ui_uitactics {
     let output = vx_ui_ui.e_ui
     output = nx_tactics_ui_uitactics.f_ui_nav_from_deck_parent(
       nx_tactics_decks_deck.f_deck_home(),
-      "main"
+      "app/main"
     )
     return output
   }
@@ -1062,7 +1038,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "main",
+      "app/main",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1070,10 +1046,7 @@ export default class nx_tactics_ui_uitactics {
       ),
       ":uimap",
       vx_ui_ui.f_uimap_from_uilist(
-        vx_core.f_new(
-          vx_ui_ui.t_uilist,
-          nx_tactics_ui_uitactics.f_ui_app_home()
-        )
+        nx_tactics_ui_uitactics.f_ui_app_home()
       )
     )
     return output
@@ -1096,7 +1069,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "menubar",
+      "app/menubar",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1123,7 +1096,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "menudrawer",
+      "app/menudrawer",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1150,7 +1123,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "msgbox",
+      "app/msgbox",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1178,7 +1151,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "navbar",
+      "app/navbar",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1186,18 +1159,15 @@ export default class nx_tactics_ui_uitactics {
       ),
       ":uimap",
       vx_ui_ui.f_uimap_from_uilist(
-        vx_core.f_new(
-          vx_ui_ui.t_uilist,
-          nx_tactics_ui_uitactics.f_ui_navbutton_back(),
-          nx_tactics_ui_navigation.f_ui_navbutton_from_ui_parent_selected(
-            vx_core.f_new(
-              vx_ui_ui.t_ui,
-              ":name",
-              "Home"
-            ),
-            "navbar",
-            true
-          )
+        nx_tactics_ui_uitactics.f_ui_navbutton_back(),
+        nx_tactics_ui_navigation.f_ui_navbutton_from_ui_parent_selected(
+          vx_core.f_new(
+            vx_ui_ui.t_ui,
+            ":name",
+            "Home"
+          ),
+          "app-navbar",
+          true
         )
       )
     )
@@ -1221,7 +1191,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "navdrawer",
+      "app/navdrawer",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1248,7 +1218,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "parallax",
+      "app/parallax",
       ":style",
       nx_tactics_ui_stylesheet.c_style_app_parallax
     )
@@ -1272,7 +1242,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "statusbar",
+      "app/statusbar",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1299,7 +1269,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "statusdrawer",
+      "app/statusdrawer",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1326,7 +1296,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "titlebar",
+      "app/titlebar",
       ":stylelist",
       vx_core.f_new(
         vx_ui_ui.t_stylelist,
@@ -1358,9 +1328,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "titlebar/print",
-      ":parent",
-      "titlebar",
+      "app/titlebar/print",
       ":data",
       vx_core.f_new(
         vx_data_file.t_file,
@@ -1409,9 +1377,7 @@ export default class nx_tactics_ui_uitactics {
     output = vx_core.f_new(
       vx_ui_ui.t_ui,
       ":uid",
-      "titlebar/title",
-      ":parent",
-      "titlebar",
+      "app/titlebar/title",
       ":data",
       "Title",
       ":style",
@@ -1597,8 +1563,6 @@ export default class nx_tactics_ui_uitactics {
           vx_ui_ui.t_ui,
           ":uid",
           uid,
-          ":parent",
-          parent,
           ":stylelist",
           vx_core.f_new(
             vx_ui_ui.t_stylelist,
@@ -1652,8 +1616,6 @@ export default class nx_tactics_ui_uitactics {
           vx_ui_ui.t_ui,
           ":uid",
           uid,
-          ":parent",
-          parent,
           ":stylelist",
           vx_core.f_new(
             vx_ui_ui.t_stylelist,
@@ -1804,10 +1766,10 @@ export default class nx_tactics_ui_uitactics {
             ))
         )
         const mainb1 = nx_tactics_ui_uitactics.f_ui_nav_from_any_parent(data, mainid)
-        const mainb2 = vx_ui_ui.f_ui_layout_from_ui(context, mainb1)
+        const mainb2 = vx_ui_ui.f_ui_addlayout_from_ui(context, mainb1)
         const mainmap3 = vx_core.f_copy(mainmap2, uid, mainb2)
         const main2 = vx_ui_ui.f_ui_writechildmap_from_ui_childmap(main, mainmap3)
-        const main3 = vx_ui_ui.f_ui_render(main2)
+        const main3 = vx_ui_ui.f_ui_layout(main2)
         return main3
       })
     )
@@ -1869,8 +1831,8 @@ export default class nx_tactics_ui_uitactics {
         )
         const navbar2 = vx_ui_ui.f_ui_writechild_from_ui_child(navbar, buttona2)
         const navbar3 = vx_ui_ui.f_ui_writechild_from_ui_child(navbar2, buttonb2)
-        const navbar4 = vx_ui_ui.f_ui_layout_from_ui(context, navbar3)
-        const navbar5 = vx_ui_ui.f_ui_render(navbar4)
+        const navbar4 = vx_ui_ui.f_ui_addlayout_from_ui(context, navbar3)
+        const navbar5 = vx_ui_ui.f_ui_layout(navbar4)
         return navbar5
       })
     )
@@ -1991,30 +1953,23 @@ export default class nx_tactics_ui_uitactics {
   // (func ui-title1<-uid-text)
   static f_ui_title1_from_uid_text(uid, text) {
     let output = vx_ui_ui.e_ui
-    output = vx_core.f_let(
-      {"any-1": vx_ui_ui.t_ui},
-      [],
-      vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uidtitle = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "/title1"
-        )
-        return vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          uidtitle,
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_card_title1,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          text
-        )
-      })
+    output = vx_core.f_new(
+      vx_ui_ui.t_ui,
+      ":uid",
+      vx_core.f_new(
+        vx_core.t_string,
+        uid,
+        "/title1"
+      ),
+      ":style",
+      nx_tactics_ui_stylesheet.c_style_card_title1,
+      ":stylelist",
+      vx_core.f_new(
+        vx_ui_ui.t_stylelist,
+        nx_tactics_ui_stylesheet.c_style_text_header1
+      ),
+      ":data",
+      text
     )
     return output
   }
@@ -2036,30 +1991,23 @@ export default class nx_tactics_ui_uitactics {
   // (func ui-title2<-uid-text)
   static f_ui_title2_from_uid_text(uid, text) {
     let output = vx_ui_ui.e_ui
-    output = vx_core.f_let(
-      {"any-1": vx_ui_ui.t_ui},
-      [],
-      vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uidtitle = vx_core.f_new(
-          vx_core.t_string,
-          uid,
-          "/title2"
-        )
-        return vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uid",
-          uidtitle,
-          ":style",
-          nx_tactics_ui_stylesheet.c_style_card_title2,
-          ":stylelist",
-          vx_core.f_new(
-            vx_ui_ui.t_stylelist,
-            nx_tactics_ui_stylesheet.c_style_text_header1
-          ),
-          ":data",
-          text
-        )
-      })
+    output = vx_core.f_new(
+      vx_ui_ui.t_ui,
+      ":uid",
+      vx_core.f_new(
+        vx_core.t_string,
+        uid,
+        "/title2"
+      ),
+      ":style",
+      nx_tactics_ui_stylesheet.c_style_card_title2,
+      ":stylelist",
+      vx_core.f_new(
+        vx_ui_ui.t_stylelist,
+        nx_tactics_ui_stylesheet.c_style_text_header1
+      ),
+      ":data",
+      text
     )
     return output
   }
@@ -3104,6 +3052,7 @@ export default class nx_tactics_ui_uitactics {
 
   /**
    * @function uimap_from_cardmap_parent_page_size
+   * Returns a uimap given a cardmap
    * @param  {cardmap} cardmap
    * @param  {string} parent
    * @param  {int} page
@@ -3120,11 +3069,18 @@ export default class nx_tactics_ui_uitactics {
   // (func uimap<-cardmap-parent-page-size)
   static f_uimap_from_cardmap_parent_page_size(cardmap, parent, page, size) {
     let output = vx_ui_ui.e_uimap
-    output = vx_core.f_map_from_map_1(
-      {"any-1": vx_ui_ui.t_ui, "any-2": nx_tactics_base.t_card, "map-1": vx_ui_ui.t_uimap, "map-2": nx_tactics_base.t_cardmap},
-      cardmap,
-      vx_core.f_new(vx_core.t_any_from_key_value, ([key, card]) => 
-        nx_tactics_ui_uitactics.f_ui_from_card_parent(card, parent))
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_uimap},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uilist = vx_core.f_list_from_map_1(
+          {"any-1": vx_ui_ui.t_ui, "any-2": nx_tactics_base.t_card, "list-1": vx_ui_ui.t_uilist, "map-2": nx_tactics_base.t_cardmap},
+          cardmap,
+          vx_core.f_new(vx_core.t_any_from_key_value, ([key, card]) => 
+            nx_tactics_ui_uitactics.f_ui_from_card_parent(card, parent))
+        )
+        return vx_ui_ui.f_uimap_from_uilist(uilist)
+      })
     )
     return output
   }

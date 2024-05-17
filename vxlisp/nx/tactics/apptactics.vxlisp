@@ -52,9 +52,6 @@
      :layoutengine uihtml/layoutenginehtml
      :stylesheet   styles/stylesheet-app
      :ui           (uitx/ui-app))
-   issetstate : ui/uiengine :=
-    (ui/boolean-writestate<-uiengine
-     uiengine)
    uienginerender : ui/uiengine :=
     (ui/uiengine-render
      uiengine)]

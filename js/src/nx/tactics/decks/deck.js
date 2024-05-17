@@ -8,6 +8,7 @@ import nx_tactics_decks_fate from "../../../nx/tactics/decks/fate.js"
 import nx_tactics_decks_restraint from "../../../nx/tactics/decks/restraint.js"
 import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_scenario from "../../../nx/tactics/decks/scenario.js"
+import nx_tactics_decks_scenario_nightonthetown from "../../../nx/tactics/decks/scenario_nightonthetown.js"
 import nx_tactics_decks_starter from "../../../nx/tactics/decks/starter.js"
 import nx_tactics_decks_tarot from "../../../nx/tactics/decks/tarot.js"
 import nx_tactics_decks_trauma from "../../../nx/tactics/decks/trauma.js"
@@ -317,7 +318,8 @@ export default class nx_tactics_decks_deck {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           nx_tactics_base.t_cardlist,
-          nx_tactics_decks_scenario.f_deck_murintrail()
+          nx_tactics_decks_scenario.f_deck_murintrail(),
+          nx_tactics_decks_scenario_nightonthetown.f_deck_nightonthetown()
         )
       )
     )

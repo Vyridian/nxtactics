@@ -51,8 +51,8 @@
   :image "images/card-damage-head.svg"
   :summary
    "Minor: Head Ringing. Stun:1
-    Moderate: Concussion. Stun:1 Push:1
-    Major: Skull Fracture. Unconscious. Stun:1 Fatigue:1 Push:1 Knockdown:1
+    Major: Concussion. Stun:1 Push:1
+    Critical: Skull Fracture. Unconscious. Stun:1 Fatigue:1 Push:1 Knockdown:1
     Extreme: Skull Crushed. Dead."))
 
 (const damage-ad : base/damage
@@ -62,8 +62,8 @@
   :image "images/card-damage-head.svg"
   :summary
    "Minor: Head Grazed. Stun:1
-    Moderate: Pierced Throat. Can't speak. Stun: 1, Stress:1
-    Major: Blinded in one Eye. Partly Blind. Stun:2 Stress:1
+    Major: Pierced Throat. Can't speak. Stun: 1, Stress:1
+    Critical: Blinded in one Eye. Partly Blind. Stun:2 Stress:1
     Extreme: Brain Pierced. Dying. Disorder:2"))
 
 (const damage-ah : base/damage
@@ -73,8 +73,8 @@
   :image "images/card-damage-head.svg"
   :summary
    "Minor: Head Graze. Stun:1
-    Moderate: Head Slash. Slow:1 Bleeding:1
-    Major: Neck Fracture. Immobilized. Slow:3 Bleeding:1
+    Major: Head Slash. Slow:1 Bleeding:1
+    Critical: Neck Fracture. Immobilized. Slow:3 Bleeding:1
     Extreme: Spine Severed. Paralyzed. Stress:3 Bleeding:2"))
 
 (const damage-as : base/damage
@@ -84,8 +84,8 @@
   :image "images/card-damage-head.svg"
   :summary
    "Minor: Head Cut. Bleeding:1
-    Moderate: Face Gash. Stress:1 Bleeding:1
-    Major: Throat Slashed. Bleeding:3 Stress:2
+    Major: Face Gash. Stress:1 Bleeding:1
+    Critical: Throat Slashed. Bleeding:3 Stress:2
     Extreme: Beheaded. Dead."))
 
 (const damage-kc : base/damage
@@ -95,8 +95,8 @@
   :image "images/card-damage-shoulders.svg"
   :summary
    "Minor: Shoulder Bruise. Fatigue:1
-    Moderate: Bruised Ribs. Slow:1 Fatigue:1 Push:1
-    Major: Broken Ribs. Hobbled. Slow:2 Push:1
+    Major: Bruised Ribs. Slow:1 Fatigue:1 Push:1
+    Critical: Broken Ribs. Hobbled. Slow:2 Push:1
     Extreme: Rib Cage Collapse. Dead. Push:1")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
@@ -107,8 +107,8 @@
   :image "images/card-damage-shoulders.svg"
   :summary
    "Minor: Glance off Shoulder. Stun:1
-    Moderate: Pierced Shoulder. Stun:1 Bleeding:1
-    Major: Pierced Chest. Stun:2 Bleeding:2
+    Major: Pierced Shoulder. Stun:1 Bleeding:1
+    Critical: Pierced Chest. Stun:2 Bleeding:2
     Extreme: Pierced Throat. Bleeding:2 Stun:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
@@ -119,8 +119,8 @@
   :image "images/card-damage-shoulders.svg"
   :summary
    "Minor: Chest Graze. Stress:1
-    Moderate: Chest Slash. Stress:1 Bleeding:1
-    Major: Bleeding in Chest Cavity. Stress:2 Bleeding:2
+    Major: Chest Slash. Stress:1 Bleeding:1
+    Critical: Bleeding in Chest Cavity. Stress:2 Bleeding:2
     Extreme: Shoulder Cleaved. Dying. Bleeding:3 Stun:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
@@ -131,8 +131,8 @@
   :image "images/card-damage-shoulders.svg"
   :summary
    "Minor: Shoulder Cut. Bleeding:1
-    Moderate: Shoulder Slash. Slow:1 Bleeding:1
-    Major: Throat Cut. Bleeding:2 Stress:2
+    Major: Shoulder Slash. Slow:1 Bleeding:1
+    Critical: Throat Cut. Bleeding:2 Stress:2
     Extreme: Throat Slashed. Bleeding:4 Stun:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
@@ -144,8 +144,8 @@
   :image "images/card-damage-chest.svg"
   :summary
    "Minor: Chest Bruise. Fatigue:1
-    Moderate: Wind Knocked Out. Slow:1 Fatigue:1 Push:1
-    Major: Heart Trauma. Slow:2 Stress:2 Push:1
+    Major: Wind Knocked Out. Slow:1 Fatigue:1 Push:1
+    Critical: Heart Trauma. Slow:2 Stress:2 Push:1
     Extreme: Heart Stopped. Dying. Push:1")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
@@ -157,8 +157,8 @@
   :image "images/card-damage-chest.svg"
   :summary
    "Minor: Chest Graze. Bleeding:1
-    Moderate: Chest Pierced. Stun:1 Bleeding:1
-    Major: Lung Punctured. Hobbled. Bleeding:2 Stun:2
+    Major: Chest Pierced. Stun:1 Bleeding:1
+    Critical: Lung Punctured. Hobbled. Bleeding:2 Stun:2
     Extreme: Heart Pierced. Dying. Bleeding:4 Stun:2")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
@@ -170,8 +170,8 @@
   :image "images/card-damage-chest.svg"
   :summary
    "Minor: Chest Cut. Bleeding:1
-    Moderate: Chest Slash. Bleeding:1 Push:1
-    Major: Collapsed Lung. Hobbled. Slow:2 Push:1
+    Major: Chest Slash. Bleeding:1 Push:1
+    Critical: Collapsed Lung. Hobbled. Slow:2 Push:1
     Extreme: Lungs Collapsed. Dying. Hobbled. Stress: 4")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
@@ -183,8 +183,8 @@
   :image "images/card-damage-chest.svg"
   :summary
    "Minor: Chest Cut. Bleeding:1
-    Moderate: Chest Slash. Slow:1 Bleeding:1
-    Major: Long Chest Slash. Slow:2 Bleeding:2
+    Major: Chest Slash. Slow:1 Bleeding:1
+    Critical: Long Chest Slash. Slow:2 Bleeding:2
     Extreme: Spine Severed. [Paralyzed]. Stress: 4")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
@@ -196,8 +196,8 @@
   :image "images/card-damage-abdomen.svg"
   :summary
    "Minor: Stomach Bruise. Push:1
-    Moderate: Solar Plexus Bruise. Slow:1 Fatigue:1
-    Major: Hip Fracture. Hobbled. Slow:3 Bleeding:1
+    Major: Solar Plexus Bruise. Slow:1 Fatigue:1
+    Critical: Hip Fracture. Hobbled. Slow:3 Bleeding:1
     Extreme: Crushed Hip. Immobilized. Bleeding:3 Stress:2"))
 
 (const damage-jd : base/damage
@@ -208,8 +208,8 @@
   :image "images/card-damage-abdomen.svg"
   :summary
    "Minor: Side Puncture. Bleeding:1
-    Moderate: Belly Puncture. Slow:1 Bleeding:1
-    Major: Liver Pierced. Bleeding:2 Slow:2
+    Major: Belly Puncture. Slow:1 Bleeding:1
+    Critical: Liver Pierced. Bleeding:2 Slow:2
     Extreme: Stomach Pierced. Hobbled. Bleeding:3 [Acid]:2"))
 
 (const damage-jh : base/damage
@@ -220,8 +220,8 @@
   :image "images/card-damage-abdomen.svg"
   :summary
    "Minor: Glance off Hip. Bleeding:1
-    Moderate: Stomach Cut. Bleeding:1 Stress: 1
-    Major: Kidney Damage. Slow:1 Bleeding:1 Fatigue:2
+    Major: Stomach Cut. Bleeding:1 Stress: 1
+    Critical: Kidney Damage. Slow:1 Bleeding:1 Fatigue:2
     Extreme: Renal Failure: Dying. Fatigue:3 Stress:2"))
 
 (const damage-js : base/damage
@@ -232,8 +232,8 @@
   :image "images/card-damage-abdomen.svg"
   :summary
    "Minor: Stomach Cut. Bleeding:1
-    Moderate: Stomach Slash. Slow:1 Bleeding:1
-    Major: Stomach Gash. Slow:1 Bleeding:3
+    Major: Stomach Slash. Slow:1 Bleeding:1
+    Critical: Stomach Gash. Slow:1 Bleeding:3
     Extreme: Disemboweled. Bleeding:4 Stress:2"))
 
 (const damage-tc : base/damage
@@ -244,8 +244,8 @@
   :image "images/card-damage-vitals.svg"
   :summary
    "Minor: Hip Bruise. Stun:1
-    Moderate: Genital Slam. Slow:1 Stun:1 Stress:1
-    Major: Kidney Rupture. Slow:2 Bleeding:1 Fatigue:1
+    Major: Genital Slam. Slow:1 Stun:1 Stress:1
+    Critical: Kidney Rupture. Slow:2 Bleeding:1 Fatigue:1
     Extreme: Hip Fracture: Hobbled. Slow:2 Fatigue:2"))
 
 (const damage-td : base/damage
@@ -256,8 +256,8 @@
   :image "images/card-damage-vitals.svg"
   :summary
    "Minor: Buttock Pierced. Bleeding:1
-    Moderate: Gut Pierced. Stun:1 Bleeding:1
-    Major: Partially Sterilized. Stress:2 Bleeding:2
+    Major: Gut Pierced. Stun:1 Bleeding:1
+    Critical: Partially Sterilized. Stress:2 Bleeding:2
     Extreme: Intestines Pierced. Diseased:2 Slow:1 Bleeding:1"))
 
 (const damage-th : base/damage
@@ -268,8 +268,8 @@
   :image "images/card-damage-vitals.svg"
   :summary
    "Minor: Hip Graze. Bleeding:1
-    Moderate: Hip Gash. Stress:1 Bleeding:1
-    Major: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2
+    Major: Hip Gash. Stress:1 Bleeding:1
+    Critical: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2
     Extreme: Wide Groin Gash. Bleeding:4 Stress:2"))
 
 (const damage-ts : base/damage
@@ -280,8 +280,8 @@
   :image "images/card-damage-vitals.svg"
   :summary
    "Minor: Hip Graze. Bleeding:1
-    Moderate: Groin Slash. Slow:1 Bleeding:1
-    Major: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2
+    Major: Groin Slash. Slow:1 Bleeding:1
+    Critical: Sterilized. Immobilized. Slow:3 Bleeding:1 Stress:2
     Extreme: Groin opened up. Bleeding:4 Stress:2"))
 
 (const damage-9c : base/damage
@@ -292,8 +292,8 @@
   :image "images/card-damage-arm-left.svg"
   :summary
    "Minor: Arm Bruise. Push:1
-    Moderate: Arm Battered. Fatigue:1 Push:1
-    Major: Arm Fracture. Impaired. Stress:2 Fatigue:2
+    Major: Arm Battered. Fatigue:1 Push:1
+    Critical: Arm Fracture. Impaired. Stress:2 Fatigue:2
     Extreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"))
 
 (const damage-9d : base/damage
@@ -304,8 +304,8 @@
   :image "images/card-damage-arm-left.svg"
   :summary
    "Minor: Arm Graze. Stun:1
-    Moderate: Arm Numb. Stun:1 Bleeding:1
-    Major: Elbow Pierced. Impaired. Stun:3 Bleeding:1
+    Major: Arm Numb. Stun:1 Bleeding:1
+    Critical: Elbow Pierced. Impaired. Stun:3 Bleeding:1
     Extreme: Artery Severed. Bleeding: 4 Stun:2"))
 
 (const damage-9h : base/damage
@@ -316,8 +316,8 @@
   :image "images/card-damage-arm-left.svg"
   :summary
    "Minor: Arm Graze. Withdraw:1
-    Moderate: Arm Gash. Withdraw:1 Bleeding:1
-    Major: Deep Arm Gash. Impaired. Stress:2 Bleeding:2
+    Major: Arm Gash. Withdraw:1 Bleeding:1
+    Critical: Deep Arm Gash. Impaired. Stress:2 Bleeding:2
     Extreme: Elbow Severed. Impaired. Stun:2 Stress:2"))
 
 (const damage-9s : base/damage
@@ -328,8 +328,8 @@
   :image "images/card-damage-arm-left.svg"
   :summary
    "Minor: Arm Cut. Bleeding:1
-    Moderate: Arm Slash. Slow:1 Bleeding:1
-    Major: Elbow Slash. Impaired. Slow:2 Bleeding:2
+    Major: Arm Slash. Slow:1 Bleeding:1
+    Critical: Elbow Slash. Impaired. Slow:2 Bleeding:2
     Extreme: Artery Severed. Bleeding: 4 Stress:2"))
 
 (const damage-8c : base/damage
@@ -340,8 +340,8 @@
   :image "images/card-damage-arm-right.svg"
   :summary
    "Minor: Arm Bruise. Push:1
-    Moderate: Arm Battered. Fatigue:1 Push:1
-    Major: Arm Fracture. Impaired. Stress:2 Fatigue:2
+    Major: Arm Battered. Fatigue:1 Push:1
+    Critical: Arm Fracture. Impaired. Stress:2 Fatigue:2
     Extreme: Elbow Shattered. Impaired. Stress:3 Fatigue:2"))
 
 (const damage-8d : base/damage
@@ -352,8 +352,8 @@
   :image "images/card-damage-arm-right.svg"
   :summary
    "Minor: Arm Graze. Stun:1
-    Moderate: Arm Pierced. Stun:1 Bleeding:1
-    Major: Elbow Pierced. Impaired. Stun:3 Bleeding:1
+    Major: Arm Pierced. Stun:1 Bleeding:1
+    Critical: Elbow Pierced. Impaired. Stun:3 Bleeding:1
     Extreme: Artery Severed. Bleeding: 4 Stun:2"))
 
 (const damage-8h : base/damage
@@ -364,8 +364,8 @@
   :image "images/card-damage-arm-right.svg"
   :summary
    "Minor: Arm Graze. Withdraw:1
-    Moderate: Arm Gash. Withdraw:1 Bleeding:1
-    Major: Deep Arm Gash. Impaired. Stress:2 Bleeding:2
+    Major: Arm Gash. Withdraw:1 Bleeding:1
+    Critical: Deep Arm Gash. Impaired. Stress:2 Bleeding:2
     Extreme: Elbow Severed. Impaired. Stun:2 Stress:2"))
 
 (const damage-8s : base/damage
@@ -376,8 +376,8 @@
   :image "images/card-damage-arm-right.svg"
   :summary
    "Minor: Arm Cut. Bleeding:1
-    Moderate: Arm Slash. Slow:1 Bleeding:1
-    Major: Elbow Slash. Impaired. Slow:2 Bleeding:2
+    Major: Arm Slash. Slow:1 Bleeding:1
+    Critical: Elbow Slash. Impaired. Slow:2 Bleeding:2
     Extreme: Artery Severed. Bleeding: 4 Stress:2"))
 
 (const damage-7c : base/damage
@@ -388,8 +388,8 @@
   :image "images/card-damage-hand-left.svg"
   :summary
    "Minor: Forearm Bruise. Fatigue:1
-    Moderate: Hand Numb. Drop:1 Stress:1 Stun:1
-    Major: Hand Fracture. Impaired. Stun:2 Fatigue:1
+    Major: Hand Numb. Drop:1 Stress:1 Stun:1
+    Critical: Hand Fracture. Impaired. Stun:2 Fatigue:1
     Extreme: Hand Shattered. Impaired. Stun:2 Stress:2"))
 
 (const damage-7d : base/damage
@@ -400,8 +400,8 @@
   :image "images/card-damage-hand-left.svg"
   :summary
    "Minor: Forearm Graze. Stun:1
-    Moderate: Forearm Pierced. Stun:1 Bleeding:1
-    Major: Wrist Pierced. Impaired. Stun:1 Bleeding:2
+    Major: Forearm Pierced. Stun:1 Bleeding:1
+    Critical: Wrist Pierced. Impaired. Stun:1 Bleeding:2
     Extreme: Artery Cut. Impaired. Stun:2 Bleeding:2"))
 
 (const damage-7h : base/damage
@@ -412,8 +412,8 @@
   :image "images/card-damage-hand-left.svg"
   :summary
    "Minor: Forearm Graze. Withdraw:1
-    Moderate: Forearm Gash. Drop:1 Stress:1 Bleeding:1
-    Major: Hand Slash. Impaired. Stress:2 Bleeding:2
+    Major: Forearm Gash. Drop:1 Stress:1 Bleeding:1
+    Critical: Hand Slash. Impaired. Stress:2 Bleeding:2
     Extreme: Hand Mangled. Impaired. Bleeding:2 Stress:2"))
 
 (const damage-7s : base/damage
@@ -424,7 +424,7 @@
   :image "images/card-damage-hand-left.svg"
   :summary
    "Minor: Forearm Cut. Bleeding:1
-    Moderate: Forearm Slash. Drop:1 Slow:1 Bleeding:1
+    Major: Forearm Slash. Drop:1 Slow:1 Bleeding:1
     Extreme: Artery Severed. Impaired. Bleeding:3 Stress:1
     Extreme: Hand Severed. Impaired. Bleeding:2 Stress:2"))
 
@@ -436,8 +436,8 @@
   :image "images/card-damage-hand-right.svg"
   :summary
    "Minor: Forearm Bruise. Fatigue:1
-    Moderate: Hand Numb. Drop:1 Stress:1 Stun:1
-    Major: Hand Fracture. Impaired. Stun:2 Fatigue:1
+    Major: Hand Numb. Drop:1 Stress:1 Stun:1
+    Critical: Hand Fracture. Impaired. Stun:2 Fatigue:1
     Extreme: Hand Shattered. Impaired. Stun:2 Stress:2"))
 
 (const damage-6d : base/damage
@@ -448,8 +448,8 @@
   :image "images/card-damage-hand-right.svg"
   :summary
    "Minor: Forearm Graze. Stun:1
-    Moderate: Forearm Pierced. Stun:1 Bleeding:1
-    Major: Wrist Pierced. Impaired. Stun:1 Bleeding:2
+    Major: Forearm Pierced. Stun:1 Bleeding:1
+    Critical: Wrist Pierced. Impaired. Stun:1 Bleeding:2
     Extreme: Artery Cut. Impaired. Stun:2 Bleeding:2"))
 
 (const damage-6h : base/damage
@@ -460,8 +460,8 @@
   :image "images/card-damage-hand-right.svg"
   :summary
    "Minor: Forearm Graze. Withdraw:1
-    Moderate: Forearm Gash. Drop:1 Stress:1 Bleeding:1
-    Major: Hand Slash. Impaired. Stress:2 Bleeding:2
+    Major: Forearm Gash. Drop:1 Stress:1 Bleeding:1
+    Critical: Hand Slash. Impaired. Stress:2 Bleeding:2
     Extreme: Hand Mangled. Impaired. Bleeding:2 Stress:2"))
 
 (const damage-6s : base/damage
@@ -472,7 +472,7 @@
   :image "images/card-damage-hand-right.svg"
   :summary
    "Minor: Forearm Cut. Bleeding:1
-    Moderate: Forearm Slash. Drop:1 Slow:1 Bleeding:1
+    Major: Forearm Slash. Drop:1 Slow:1 Bleeding:1
     Extreme: Artery Severed. Impaired. Bleeding:3 Stress:1
     Extreme: Hand Severed. Impaired. Bleeding:2 Stress:2"))
 
@@ -484,8 +484,8 @@
   :image "images/card-damage-leg-left.svg"
   :summary
    "Minor: Thigh Bruise. Fatigue:1
-    Moderate: Knee Damage. Slow:1 Fatigue:1
-    Major: Knee Fracture. Hobbled. Slow:2 Fatigue: 1
+    Major: Knee Damage. Slow:1 Fatigue:1
+    Critical: Knee Fracture. Hobbled. Slow:2 Fatigue: 1
     Extreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"))
 
 (const damage-5d : base/damage
@@ -496,8 +496,8 @@
   :image "images/card-damage-leg-left.svg"
   :summary
    "Minor: Thigh Graze. Slow:1
-    Moderate: Thigh Pierced. Stress:1 Bleeding:1
-    Major: Knee Pierced. Hobbled. Slow:3 Bleeding:1
+    Major: Thigh Pierced. Stress:1 Bleeding:1
+    Critical: Knee Pierced. Hobbled. Slow:3 Bleeding:1
     Extreme: Knee Disabled. Hobbled. Bleeding:2 Stress:2"))
 
 (const damage-5h : base/damage
@@ -508,8 +508,8 @@
   :image "images/card-damage-leg-left.svg"
   :summary
    "Minor: Thigh Graze. Withdraw:1
-    Moderate: Thigh Slash. Withdraw:1 Bleeding:1
-    Major: Wide Thigh Gash. Slow:2 Bleeding:2
+    Major: Thigh Slash. Withdraw:1 Bleeding:1
+    Critical: Wide Thigh Gash. Slow:2 Bleeding:2
     Extreme: Severed at Knee. Hobbled. Bleeding:2 Stress:2"))
 
 (const damage-5s : base/damage
@@ -520,8 +520,8 @@
   :image "images/card-damage-leg-left.svg"
   :summary
    "Minor: Thigh Cut. Bleeding:1
-    Moderate: Thigh Slash. Scarred. Slow:1 Bleeding:1
-    Major: Hamstring Cut. Hobbled. Slow:2 Bleeding:2
+    Major: Thigh Slash. Scarred. Slow:1 Bleeding:1
+    Critical: Hamstring Cut. Hobbled. Slow:2 Bleeding:2
     Extreme: Artery Severed. Bleeding:4 Stress:2"))
 
 (const damage-4c : base/damage
@@ -532,8 +532,8 @@
   :image "images/card-damage-leg-right.svg"
   :summary
    "Minor: Thigh Bruise. Fatigue:1
-    Moderate: Knee Damage. Slow:1 Fatigue:1
-    Major: Knee Fracture. Hobbled. Slow:2 Fatigue: 1
+    Major: Knee Damage. Slow:1 Fatigue:1
+    Critical: Knee Fracture. Hobbled. Slow:2 Fatigue: 1
     Extreme: Thigh Fracture. Hobbled. Slow:3 Fatigue:1"))
 
 (const damage-4d : base/damage
@@ -544,8 +544,8 @@
   :image "images/card-damage-leg-right.svg"
   :summary
    "Minor: Thigh Graze. Slow:1
-    Moderate: Thigh Pierced. Stress:1 Bleeding:1
-    Major: Knee Pierced. Hobbled. Slow:3 Bleeding:1
+    Major: Thigh Pierced. Stress:1 Bleeding:1
+    Critical: Knee Pierced. Hobbled. Slow:3 Bleeding:1
     Extreme: Knee Disabled. Hobbled. Bleeding:2 Stress:2"))
 
 (const damage-4h : base/damage
@@ -556,8 +556,8 @@
   :image "images/card-damage-leg-right.svg"
   :summary
    "Minor: Thigh Graze. Withdraw:1
-    Moderate: Thigh Cut. Withdraw:1 Bleeding:1
-    Major: Wide Thigh Gash. Slow:2 Bleeding:2
+    Major: Thigh Cut. Withdraw:1 Bleeding:1
+    Critical: Wide Thigh Gash. Slow:2 Bleeding:2
     Extreme: Severed at Knee. Hobbled. Bleeding:2 Stress:2"))
 
 (const damage-4s : base/damage
@@ -568,8 +568,8 @@
   :image "images/card-damage-leg-right.svg"
   :summary
    "Minor: Thigh Cut. Bleeding:1
-    Moderate: Thigh Slash. Scarred. Slow:1 Bleeding:1
-    Major: Hamstring Cut. Hobbled. Slow:2 Bleeding:2
+    Major: Thigh Slash. Scarred. Slow:1 Bleeding:1
+    Critical: Hamstring Cut. Hobbled. Slow:2 Bleeding:2
     Extreme: Artery Severed. Bleeding:4 Stress:2"))
 
 (const damage-3c : base/damage
@@ -580,8 +580,8 @@
   :image "images/card-damage-foot-left.svg"
   :summary
    "Minor: Shin Bruised. Slow:1
-    Moderate: Foot Smash. Slow:1 Stress:1
-    Major: Ankle Fracture. Hobbled. Slow:2
+    Major: Foot Smash. Slow:1 Stress:1
+    Critical: Ankle Fracture. Hobbled. Slow:2
     Extreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"))
 
 (const damage-3d : base/damage
@@ -592,8 +592,8 @@
   :image "images/card-damage-foot-left.svg"
   :summary
    "Minor: Ankle Graze. Slow:1
-    Moderate: Foot Slash. Slow:1 Bleeding:1
-    Major: Foot Pierced. Slow:3 Bleeding:1
+    Major: Foot Slash. Slow:1 Bleeding:1
+    Critical: Foot Pierced. Slow:3 Bleeding:1
     Extreme: Ankle Useless. Hobbled. Bleeding:1"))
 
 (const damage-3h : base/damage
@@ -604,8 +604,8 @@
   :image "images/card-damage-foot-left.svg"
   :summary
    "Minor: Ankle Grazed. Withdraw:1
-    Moderate: Ankle Gash. Withdraw:1 Bleeding:1
-    Major: 2 Toes Lost. Stress:2 Bleeding:1
+    Major: Ankle Gash. Withdraw:1 Bleeding:1
+    Critical: 2 Toes Lost. Stress:2 Bleeding:1
     Extreme: Foot Mangled. Hobbled. Stress:2 Bleeding:2"))
 
 (const damage-3s : base/damage
@@ -616,8 +616,8 @@
   :image "images/card-damage-foot-left.svg"
   :summary
    "Minor: Foot Cut. Bleeding:1
-    Moderate: Ankle Slash. Slow:1 Bleeding:1
-    Major: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
+    Major: Ankle Slash. Slow:1 Bleeding:1
+    Critical: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
     Extreme: Foot Severed. Hobbled. Bleeding:2"))
 
 (const damage-2c : base/damage
@@ -628,8 +628,8 @@
   :image "images/card-damage-foot-right.svg"
   :summary
    "Minor: Shin Bruised. Slow:1
-    Moderate: Foot Smash. Slow:1 Stress:1
-    Major: Ankle Fracture. Hobbled. Slow:2
+    Major: Foot Smash. Slow:1 Stress:1
+    Critical: Ankle Fracture. Hobbled. Slow:2
     Extreme: Foot Shattered. Hobbled. Fatigue:2 Slow:2"))
 
 (const damage-2d : base/damage
@@ -640,8 +640,8 @@
   :image "images/card-damage-foot-right.svg"
   :summary
    "Minor: Ankle Graze. Slow:1
-    Moderate: Foot Slash. Slow:1 Bleeding:1
-    Major: Foot Pierced. Slow:3 Bleeding:1
+    Major: Foot Slash. Slow:1 Bleeding:1
+    Critical: Foot Pierced. Slow:3 Bleeding:1
     Extreme: Ankle Useless. Hobbled. Bleeding:1"))
 
 (const damage-2h : base/damage
@@ -652,8 +652,8 @@
   :image "images/card-damage-foot-right.svg"
   :summary
    "Minor: Ankle Grazed. Withdraw:1
-    Moderate: Ankle Gash. Withdraw:1 Bleeding:1
-    Major: 2 Toes Lost. Stress:2 Bleeding:1
+    Major: Ankle Gash. Withdraw:1 Bleeding:1
+    Critical: 2 Toes Lost. Stress:2 Bleeding:1
     Extreme: Foot Mangled. Hobbled. Stress:2 Bleeding:2"))
 
 (const damage-2s : base/damage
@@ -664,8 +664,8 @@
   :image "images/card-damage-foot-right.svg"
   :summary
    "Minor: Foot Cut. Bleeding:1
-    Moderate: Ankle Slash. Slow:1 Bleeding:1
-    Major: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
+    Major: Ankle Slash. Slow:1 Bleeding:1
+    Critical: Cut Achilles Tendon. Hobbled. Slow:3 Bleeding:1
     Extreme: Foot Severed. Hobbled. Bleeding:2"))
 
 (func deck-bleeding : base/deck

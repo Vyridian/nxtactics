@@ -32,7 +32,7 @@ export default class nx_tactics_ui_uitactics_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/uitactics", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 63, ":tests", 37, ":total", 58), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 65, ":tests", 38, ":total", 58), 
       "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 53), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 

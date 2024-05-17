@@ -1,0 +1,271 @@
+(package nx/tactics/decks/scenario_nightonthetown
+ :libs (lib base :path nx/tactics/base)
+ :doc  "Night On The Town Scenario")
+
+(const ability-bite : base/ability
+ (base/ability
+  :name "Bite"))
+
+(const ability-sneak : base/ability
+ (base/ability
+  :name "Sneak"))
+
+(const skill-closecombat : base/skill
+ (base/skill
+  :name "Close Combat"))
+
+(const skill-melee : base/skill
+ (base/skill
+  :name "Melee"))
+
+(const skill-stealth : base/skill
+ (base/skill
+  :name "Stealth"))
+
+(const skill-survival : base/skill
+ (base/skill
+  :name "Survival"))
+
+(const skill-tradeskill : base/skill
+ (base/skill
+  :name "Tradeskill"))
+
+(func item-axehand : base/item
+ (base/item
+  :name "Hand Axe"
+  :image "images/cards/item-axehand.svg"
+  :summary
+   "* Melee: [Hack] [Slash]
+    * Hit: [Size Bonus]
+    * Location: [1-hand]"
+  :body "9x-1"
+  :mass "900g/2lb"))
+
+(func item-barehanded : base/item
+ (base/item
+  :name "Bare Handed"
+  :image "images/cards/item-barehanded.svg"
+  :summary
+   "* Close Combat: [Bash]
+    * Hit: [Size Bonus]"))
+
+(func item-bowshort : base/item
+ (base/item
+  :name "Short Bow"
+  :image "images/cards/item-bowshort.svg"
+  :summary
+   "* Ranged: [Pierce] [Slash]
+    * Hit:+1
+    * Range:10x1 100m/300ft
+    * Location: [2-hand]"
+  :body "10x-1"
+  :mass "1kg/2lb"))
+
+(func item-combination : base/item
+ (base/item
+  :name "Combination"
+  :image "images/cards/item-combination.svg"))
+
+(func item-jerrycan : base/item
+ (base/item
+  :name "Jerry Can"
+  :image "images/cards/item-jerrycan.svg"))
+
+(func item-keys : base/item
+ (base/item
+  :name "Keys"
+  :image "images/cards/item-keys.svg"))
+
+(func item-knife : base/item
+ (base/item
+  :name "Knife"
+  :image "images/cards/item-knife.svg"
+  :summary
+   "* Close Combat: [Pierce] [Slash]
+    * Hit: [Size Bonus]
+    * Location: [1-hand]"
+  :body "5x-1"
+  :mass "500g/1lb"
+  :length "25cm/10in"))
+
+(func item-liquor : base/item
+ (base/item
+  :name "Liquor"
+  :image "images/cards/item-liquor.svg"))
+
+(func item-molotovcocktail : base/item
+ (base/item
+  :name "Molotov Cocktail"
+  :image "images/cards/item-molotovcocktail.svg"))
+
+(func item-revolver : base/item
+ (base/item
+  :name "Revolver"
+  :image "images/cards/item-revolver.svg"))
+
+(func item-revolverammo : base/item
+ (base/item
+  :name "Revolver Ammo"
+  :image "images/cards/item-revolverammo.svg"))
+
+(func item-rifle : base/item
+ (base/item
+  :name "Rifle"
+  :image "images/cards/item-rifle.svg"))
+
+(func item-rifleammo : base/item
+ (base/item
+  :name "Rifle Ammo"
+  :image "images/cards/item-rifleammo.svg"))
+
+(func item-safe : base/item
+ (base/item
+  :name "Safe"
+  :image "images/cards/item-safe.svg"))
+
+(func item-shotgun : base/item
+ (base/item
+  :name "Shotgun"
+  :image "images/cards/item-shotgun.svg"))
+
+(func item-shotgunammo : base/item
+ (base/item
+  :name "Shotgun Ammo"
+  :image "images/cards/item-shotgunammo.svg"))
+
+(func item-spear : base/item
+ (base/item
+  :name "Spear"
+  :image "images/cards/item-spear.svg"
+  :summary
+   "* Melee: [Pierce] [Slash]
+    * Hit:+3 [Size Bonus]
+    * Location: [2-hand]
+    * Armor:1x1
+    * [Reach]"
+  :body "3x0"
+  :mass "3kg/6lb"))
+
+(func item-fireaxe : base/item
+ (base/item
+  :name "Fire Axe"
+  :image "images/cards/item-woodaxe.svg"
+  :summary
+   "* Melee: [Hack] [Slash]
+    * Attack:-1
+    * Hit:+3 [Size Bonus]
+    * Location: [2-hand]
+    * Armor:1x1"
+  :body "3x0"
+  :mass "3.1kg/7lb"))
+
+(func place-clinic : base/place
+ (base/place
+  :name "Clinic"
+  :image "images/cards/place-clinic.svg"))
+
+(func place-conveniencestore : base/place
+ (base/place
+  :name "Convenience Store"
+  :image "images/cards/place-conveniencestore.svg"))
+
+(func place-gasstation : base/place
+ (base/place
+  :name "Gas Station"
+  :image "images/cards/place-gasstation.svg"))
+
+(func place-gunstore : base/place
+ (base/place
+  :name "Gun Store"
+  :image "images/cards/place-gunstore.svg"))
+
+(func place-policestation : base/place
+ (base/place
+  :name "Police Station"
+  :image "images/cards/place-policestation.svg"))
+
+(func place-street : base/place
+ (base/place
+  :name "Street"
+  :image "images/cards/place-street.svg"))
+
+(func unit-zombiedog : base/unit
+ (base/unit
+  :name "Zombie Dog"
+  :image "images/cards/unit-zombiedog.svg"
+  :summary
+   ""
+  :body "2x1"
+  :mind "8x-1"
+  :will "4x1"
+  :move "7x1"
+  :mass "22kg/50lb"
+  :height "76cm/30in"
+  :speedland "70kph/37mph"
+  :nature "Dogged"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-closecombat
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+        (base/unitability
+         :ability ability-bite))))))
+
+(func unit-zombierunner : base/unit
+ (base/unit
+  :name "Horse"
+  :image "images/cards/unit-horse.svg"
+  :body "4x2"
+  :mind "5x-1"
+  :will "2x1"
+  :move "5x1"
+  :mass "450kg/1000lb"
+  :speedland "50kph/30mph"
+  :demeanor "Aloof"))
+
+(func unit-zombiewalker : base/unit
+ (base/unit
+  :name "Zombie Walker"
+  :image "images/cards/unit-zombiewalker.svg"
+  :body "4x2"
+  :mind "5x-1"
+  :will "2x1"
+  :move "5x1"
+  :mass "450kg/1000lb"
+  :speedland "50kph/30mph"))
+
+(func deck-nightonthetown : base/deck
+ (base/deck
+  :name "Night on the Town"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     (unit-zombiedog)
+     (unit-zombierunner)
+     (unit-zombiewalker)
+     (item-barehanded)
+     (item-bowshort)
+     (item-combination)
+     (item-fireaxe)
+     (item-jerrycan)
+     (item-keys)
+     (item-knife)
+     (item-liquor)
+     (item-molotovcocktail)
+     (item-revolver)
+     (item-revolverammo)
+     (item-rifle)
+     (item-rifleammo)
+     (item-safe)
+     (item-shotgun)
+     (item-shotgunammo)
+     (item-spear)
+     (place-clinic)
+     (place-conveniencestore)
+     (place-gasstation)
+     (place-gunstore)
+     (place-policestation)
+     (place-street)
+     ))))

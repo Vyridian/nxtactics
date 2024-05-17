@@ -52,12 +52,12 @@ export default class nx_tactics_ui_navigation_test {
           vx_core.t_intmap,
           "boolean-navigate-back", 0,
           "ui-app", 0,
+          "ui-layout<-main-selected", 0,
+          "ui-layout<-navbar-selected", 0,
           "ui-main", 0,
           "ui-navbar", 0,
           "ui-navbutton", 0,
-          "ui-navbutton<-ui-parent-selected", 0,
-          "ui-render<-main-selected", 0,
-          "ui-render<-navbar-selected", 0
+          "ui-navbutton<-ui-parent-selected", 0
         )
     )
   }

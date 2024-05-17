@@ -5,8 +5,8 @@
 
 (func boolean-navigate-back : boolean
  (let : boolean
-  [navbar : ui/ui := (nav/ui-navbar)
-   main : ui/ui := (nav/ui-main)
+  [navbar : ui/ui := (ui-navbar)
+   main : ui/ui := (ui-main)
    selected : int :=
     (ui/int-selected<-ui
      navbar)
@@ -20,41 +20,39 @@
     (if : ui/ui
      (then
       ischange
-      (ui-render<-navbar-selected
+      (ui-layout<-navbar-selected
        navbar poschg)))
    mainchg : ui/ui :=
     (if : ui/ui
      (then
       ischange
-      (ui-render<-main-selected
+      (ui-layout<-main-selected
        main poschg)))]
   ischange)
  :context
  :sideeffects "Alters uinavbar and uimain"
  :doc "Navigate to the previous ui")
 
-(func ui-main : ui/ui
- (ui/ui-readstate<-uid
-  "main")
- :context
- :doc "Returns the application main panel")
-
 (func ui-app : ui/ui
- (ui/ui-readstate<-uid
-  "app")
+ (ui/ui-readstate-uiapp)
  :context
  :doc "Returns the application app")
 
+(func ui-main : ui/ui
+ (ui/ui-readstate<-uid
+  "app/main")
+ :context
+ :doc "Returns the application main panel")
+
 (func ui-navbar : ui/ui
  (ui/ui-readstate<-uid
-  "navbar")
+  "app/navbar")
  :context
  :doc "Returns the application navbar")
 
 (func ui-navbutton : ui/ui
  (ui/ui
-  :uid "navbar/"
-  :parent "navbar"
+  :uid "app/navbar/"
   :stylelist
    (ui/stylelist
     style-app-navbar-button
@@ -71,7 +69,6 @@
   (copy navbutton
    :uid    uid
    :name   name
-   :parent parent
    :selected selected
    :stylelist
     (ui/stylelist
@@ -79,7 +76,7 @@
      style-clickable)))
  :doc "Returns a navbar-button")
 
-(func ui-render<-main-selected : ui/ui
+(func ui-layout<-main-selected : ui/ui
  [main     : ui/ui
   selected : int]
  (if : ui/ui
@@ -89,12 +86,12 @@
   (else
    (let : ui/ui
     [parent : ui/ui := (ui-app)]
-    (ui/ui-render<-ui-parent-visible
+    (ui/ui-layout<-ui-parent-visible
      main parent selected))))
  :context
  :doc "")
 
-(func ui-render<-navbar-selected : ui/ui
+(func ui-layout<-navbar-selected : ui/ui
  [navbar   : ui/ui
   selected : int]
  (if : ui/ui
@@ -104,7 +101,7 @@
   (else
    (let : ui/ui
     [parent : ui/ui := (ui-app)]
-    (ui/ui-render<-ui-parent-selected
+    (ui/ui-layout<-ui-parent-selected
      navbar parent (+1 selected)))))
  :context
  :doc "")
