@@ -2,6 +2,7 @@
 
 import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
+import vx_collection from "../../../vx/collection.js"
 import nx_tactics_decks_deck from "../../../nx/tactics/decks/deck.js"
 import vx_event from "../../../vx/event.js"
 import vx_data_file from "../../../vx/data/file.js"
@@ -12,12 +13,6 @@ import vx_ui_ui from "../../../vx/ui/ui.js"
 
 
 export default class nx_tactics_ui_uitactics {
-
-  /**
-   * Constant: event-navbutton-back-click
-   * {event}
-   */
-  static c_event_navbutton_back_click = {vx_type: vx_event.t_event, vx_constdef: {pkgname: 'nx/tactics/ui/uitactics', name: 'event-navbutton-back-click'}}
 
   /**
    * Constant: event-navigate-card-click
@@ -37,40 +32,6 @@ export default class nx_tactics_ui_uitactics {
    * {eventmap}
    */
   static c_eventmap_app_home_card = {vx_type: vx_event.t_eventmap, vx_constdef: {pkgname: 'nx/tactics/ui/uitactics', name: 'eventmap-app-home-card'}}
-
-  /**
-   * Constant: eventmap-navbutton-back
-   * Eventmap for navbutton-back
-   * {eventmap}
-   */
-  static c_eventmap_navbutton_back = {vx_type: vx_event.t_eventmap, vx_constdef: {pkgname: 'nx/tactics/ui/uitactics', name: 'eventmap-navbutton-back'}}
-
-  /**
-   * @function event_navbutton_click_from_event
-   * Event handler for card clicks
-   * @param  {event} event
-   * @return {event}
-   */
-  static t_event_navbutton_click_from_event = {
-    vx_type: vx_core.t_type
-  }
-  static e_event_navbutton_click_from_event = {
-    vx_type: nx_tactics_ui_uitactics.t_event_navbutton_click_from_event
-  }
-
-  // (func event-navbutton-click<-event)
-  static f_event_navbutton_click_from_event(context, event) {
-    let output = vx_event.e_event
-    output = vx_core.f_let(
-      {"any-1": vx_event.t_event},
-      [],
-      vx_core.f_new(vx_core.t_any_from_func, () => {
-        const ischanged = nx_tactics_ui_navigation.f_boolean_navigate_back(context)
-        return event
-      })
-    )
-    return output
-  }
 
   /**
    * @function event_navigate_card_click_from_event
@@ -123,7 +84,7 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_event.t_event},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uimain = nx_tactics_ui_navigation.f_ui_main(context)
+        const uimain = nx_tactics_ui_navigation.f_ui_readstate_main(context)
         const isprint = vx_ui_ui.f_boolean_print(context, uimain)
         return event
       })
@@ -1160,13 +1121,12 @@ export default class nx_tactics_ui_uitactics {
       ":uimap",
       vx_ui_ui.f_uimap_from_uilist(
         nx_tactics_ui_uitactics.f_ui_navbutton_back(),
-        nx_tactics_ui_navigation.f_ui_navbutton_from_ui_parent_selected(
+        nx_tactics_ui_navigation.f_ui_navbutton_from_ui_selected(
           vx_core.f_new(
             vx_ui_ui.t_ui,
             ":name",
             "Home"
           ),
-          "app-navbar",
           true
         )
       )
@@ -1656,24 +1616,13 @@ export default class nx_tactics_ui_uitactics {
         const uid2 = vx_core.f_new(
           vx_core.t_string,
           uid1,
+          "/",
           name
         )
         const uiimage = nx_tactics_ui_uitactics.f_ui_image_from_uid_path(uid2, "icons/icon-backarrow.svg")
         const uimap = vx_ui_ui.f_uimap_from_uilist(uiimage)
         const styles1 = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_stylelist, "struct-2": vx_ui_ui.t_ui}, navbutton, ":stylelist")
-        return vx_core.f_copy(
-          navbutton,
-          ":uid",
-          uid2,
-          ":name",
-          name,
-          ":stylelist",
-          styles1,
-          ":uimap",
-          uimap,
-          ":eventmap",
-          nx_tactics_ui_uitactics.c_eventmap_navbutton_back
-        )
+        return vx_core.f_copy(navbutton, ":uid", uid2, ":name", name, ":stylelist", styles1, ":uimap", uimap)
       })
     )
     return output
@@ -1703,8 +1652,8 @@ export default class nx_tactics_ui_uitactics {
           {"any-1": vx_ui_ui.t_ui},
           [],
           vx_core.f_new(vx_core.t_any_from_func, () => {
-            const navbar = nx_tactics_ui_navigation.f_ui_navbar(context)
-            const main = nx_tactics_ui_navigation.f_ui_main(context)
+            const navbar = nx_tactics_ui_navigation.f_ui_readstate_navbar(context)
+            const main = nx_tactics_ui_navigation.f_ui_readstate_main(context)
             const ui1 = nx_tactics_ui_uitactics.f_ui_navigate_from_ui_navbar(context, uiarg, navbar)
             const ui2 = nx_tactics_ui_uitactics.f_ui_navigate_from_ui_main(context, uiarg, main)
             return uiarg
@@ -1737,40 +1686,33 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_ui_ui.t_ui},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
         const data = vx_core.f_any_from_struct({"any-1": vx_core.t_any, "struct-2": vx_ui_ui.t_ui}, ui, ":data")
         const mainid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, main, ":uid")
-        const mainmap1 = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, main, ":uimap")
-        const mainmap2 = vx_core.f_map_from_map_1(
-          {"any-1": vx_ui_ui.t_ui, "any-2": vx_ui_ui.t_ui, "map-1": vx_ui_ui.t_uimap, "map-2": vx_ui_ui.t_uimap},
-          mainmap1,
-          vx_core.f_new(vx_core.t_any_from_key_value, ([key, value]) => 
-            vx_core.f_if_2(
-              {"any-1": vx_ui_ui.t_ui},
-              vx_core.f_then(
-                vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(
-                  true,
-                  vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": vx_ui_ui.t_ui}, value, ":hidden")
-                )}),
-                vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_empty(
-                  vx_ui_ui.t_ui
-                )})
-              ),
-              vx_core.f_else(
-                vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-                  value,
-                  ":hidden",
-                  true
-                )})
-              )
-            ))
+        const mainmap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, main, ":uimap")
+        const pos = vx_ui_ui.f_int_visible_from_ui(main)
+        const len = vx_core.f_length_2(mainmap)
+        const isremoveend = vx_core.f_if_2(
+          {"any-1": vx_core.t_boolean},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_gt(len, pos)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_ui_ui.f_boolean_layoutremove_from_ui_start_end(
+              context,
+              main,
+              vx_core.f_plus1(pos),
+              len
+            )})
+          )
         )
-        const mainb1 = nx_tactics_ui_uitactics.f_ui_nav_from_any_parent(data, mainid)
-        const mainb2 = vx_ui_ui.f_ui_addlayout_from_ui(context, mainb1)
-        const mainmap3 = vx_core.f_copy(mainmap2, uid, mainb2)
-        const main2 = vx_ui_ui.f_ui_writechildmap_from_ui_childmap(main, mainmap3)
-        const main3 = vx_ui_ui.f_ui_layout(main2)
-        return main3
+        const uivisible = vx_ui_ui.f_ui_visible_from_ui(main)
+        const ishidden = vx_ui_ui.f_boolean_layout_from_ui_parent_visible(
+          context,
+          uivisible,
+          main,
+          false
+        )
+        const child = nx_tactics_ui_uitactics.f_ui_nav_from_any_parent(data, mainid)
+        const isadded = vx_ui_ui.f_boolean_layoutaddchild_from_ui_parent(context, child, main)
+        return main
       })
     )
     return output
@@ -1798,42 +1740,34 @@ export default class nx_tactics_ui_uitactics {
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
-        const navbarid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, navbar, ":uid")
-        const buttona1 = vx_ui_ui.f_ui_selected_from_ui(navbar)
-        const buttona2 = vx_core.f_copy(
-          buttona1,
-          ":selected",
-          false
-        )
-        const uidbtnb = vx_core.f_new(
-          vx_core.t_string,
-          "navbutton-",
-          uid
-        )
-        const buttonb1 = vx_ui_ui.f_ui_child_from_ui_uid(navbar, uidbtnb)
-        const buttonb2 = vx_core.f_if_2(
-          {"any-1": vx_ui_ui.t_ui},
+        const navmap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, navbar, ":uimap")
+        const pos = vx_ui_ui.f_int_selected_from_ui(navbar)
+        const len = vx_core.f_length_2(navmap)
+        const isremoveend = vx_core.f_if_2(
+          {"any-1": vx_core.t_boolean},
           vx_core.f_then(
-            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty_1(buttonb1)}),
-            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_copy(
-              buttonb1,
-              ":selected",
-              true
-            )})
-          ),
-          vx_core.f_else(
-            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_navigation.f_ui_navbutton_from_ui_parent_selected(
-              ui,
-              navbarid,
-              true
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_gt(len, pos)}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_ui_ui.f_boolean_layoutremove_from_ui_start_end(
+              context,
+              navbar,
+              vx_core.f_plus1(pos),
+              len
             )})
           )
         )
-        const navbar2 = vx_ui_ui.f_ui_writechild_from_ui_child(navbar, buttona2)
-        const navbar3 = vx_ui_ui.f_ui_writechild_from_ui_child(navbar2, buttonb2)
-        const navbar4 = vx_ui_ui.f_ui_addlayout_from_ui(context, navbar3)
-        const navbar5 = vx_ui_ui.f_ui_layout(navbar4)
-        return navbar5
+        const uiselected = vx_ui_ui.f_ui_selected_from_ui(navbar)
+        const isselected = vx_ui_ui.f_boolean_layout_from_ui_parent_selected(
+          context,
+          uiselected,
+          navbar,
+          false
+        )
+        const button = nx_tactics_ui_navigation.f_ui_navbutton_from_ui_selected(
+          ui,
+          true
+        )
+        const isadded = vx_ui_ui.f_boolean_layoutaddchild_from_ui_parent(context, button, navbar)
+        return navbar
       })
     )
     return output
@@ -3089,14 +3023,11 @@ export default class nx_tactics_ui_uitactics {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
-      "event-navbutton-back-click": nx_tactics_ui_uitactics.c_event_navbutton_back_click,
       "event-navigate-card-click": nx_tactics_ui_uitactics.c_event_navigate_card_click,
       "event-printbutton-click": nx_tactics_ui_uitactics.c_event_printbutton_click,
-      "eventmap-app-home-card": nx_tactics_ui_uitactics.c_eventmap_app_home_card,
-      "eventmap-navbutton-back": nx_tactics_ui_uitactics.c_eventmap_navbutton_back
+      "eventmap-app-home-card": nx_tactics_ui_uitactics.c_eventmap_app_home_card
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "event-navbutton-click<-event": nx_tactics_ui_uitactics.e_event_navbutton_click_from_event,
       "event-navigate-card-click<-event": nx_tactics_ui_uitactics.e_event_navigate_card_click_from_event,
       "event-printbutton-click<-event": nx_tactics_ui_uitactics.e_event_printbutton_click_from_event,
       "string-display<-any": nx_tactics_ui_uitactics.e_string_display_from_any,
@@ -3151,7 +3082,6 @@ export default class nx_tactics_ui_uitactics {
       "uimap<-cardmap-parent-page-size": nx_tactics_ui_uitactics.e_uimap_from_cardmap_parent_page_size
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "event-navbutton-click<-event": nx_tactics_ui_uitactics.t_event_navbutton_click_from_event,
       "event-navigate-card-click<-event": nx_tactics_ui_uitactics.t_event_navigate_card_click_from_event,
       "event-printbutton-click<-event": nx_tactics_ui_uitactics.t_event_printbutton_click_from_event,
       "string-display<-any": nx_tactics_ui_uitactics.t_string_display_from_any,
@@ -3216,24 +3146,6 @@ export default class nx_tactics_ui_uitactics {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
-
-    // (func event-navbutton-click<-event)
-    nx_tactics_ui_uitactics.t_event_navbutton_click_from_event['vx_value'] = {
-      name          : "event-navbutton-click<-event",
-      pkgname       : "nx/tactics/ui/uitactics",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_ui_uitactics.f_event_navbutton_click_from_event
-    }
 
     // (func event-navigate-card-click<-event)
     nx_tactics_ui_uitactics.t_event_navigate_card_click_from_event['vx_value'] = {
@@ -4171,13 +4083,6 @@ export default class nx_tactics_ui_uitactics {
       fn            : nx_tactics_ui_uitactics.f_uimap_from_cardmap_parent_page_size
     }
 
-    // (const event-navbutton-back-click)
-    Object.assign(nx_tactics_ui_uitactics.c_event_navbutton_back_click, vx_core.f_copy(
-      vx_event.c_event_click,
-      ":event<-event",
-      nx_tactics_ui_uitactics.t_event_navbutton_click_from_event
-    ))
-
     // (const event-navigate-card-click)
     Object.assign(nx_tactics_ui_uitactics.c_event_navigate_card_click, vx_core.f_copy(
       vx_event.c_event_click,
@@ -4197,14 +4102,6 @@ export default class nx_tactics_ui_uitactics {
       vx_core.f_new(
         vx_event.t_eventlist,
         nx_tactics_ui_uitactics.c_event_navigate_card_click
-      )
-    ))
-
-    // (const eventmap-navbutton-back)
-    Object.assign(nx_tactics_ui_uitactics.c_eventmap_navbutton_back, vx_event.f_eventmap_from_eventlist(
-      vx_core.f_new(
-        vx_event.t_eventlist,
-        nx_tactics_ui_uitactics.c_event_navbutton_back_click
       )
     ))
 

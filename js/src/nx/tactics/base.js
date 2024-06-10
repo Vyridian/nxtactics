@@ -5440,14 +5440,14 @@ export default class nx_tactics_base {
           "type" : nx_tactics_base.t_itemmap,
           "multi": false
         },
-        "placemap": {
-          "name" : "placemap",
-          "type" : nx_tactics_base.t_placemap,
-          "multi": false
-        },
         "modifiermap": {
           "name" : "modifiermap",
           "type" : nx_tactics_base.t_modifiermap,
+          "multi": false
+        },
+        "placemap": {
+          "name" : "placemap",
+          "type" : nx_tactics_base.t_placemap,
           "multi": false
         },
         "powermap": {
@@ -7199,6 +7199,11 @@ export default class nx_tactics_base {
         },
         "level": {
           "name" : "level",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "powerlevel": {
+          "name" : "powerlevel",
           "type" : vx_core.t_string,
           "multi": false
         },

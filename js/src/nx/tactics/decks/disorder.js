@@ -1281,7 +1281,7 @@ export default class nx_tactics_decks_disorder {
       ":image",
       "images/card-disorder-stun.svg",
       ":summary",
-      "* If you have [Mind]:0, you are [Confused]. Any additional [Stun] is flipped to [Disorder].\n* [Confused]: Cannot play odd [Focus] cards and your second action may only be [Recover]."
+      "* Stun: temporary distraction or suprise\n* Disorder: lasting [Loss], [Delusion], [Compulsion], [Neural].\n* If [Mind]:0 gain [Confused].\n* [Confused]: Cannot play odd [Focus] cards. Second action may only be [Recover]. Additional [Stun] is flipped to Disorder."
     ))
 
   }

@@ -28,7 +28,9 @@
 
 (const ability-sneak : base/ability
  (base/ability
-  :name "Sneak"))
+  :name "Sneak"
+  :summary
+   "* You may use [Stealth] even though you moved this round."))
 
 (const ability-trapping : base/ability
  (base/ability
@@ -56,7 +58,15 @@
 
 (const skill-stealth : base/skill
  (base/skill
-  :name "Stealth"))
+  :name "Stealth"
+  :summary
+   "[Action]: Activate [Continuous] effect.
+    [Continuous]:
+    * When
+    ** A unit tries to detect you
+    ** And you haven't moved this round
+    ** And you are out of [Line of Sight] OR have full [Cover]
+    * Then the unit must win a simple [Investigate] vs. your [Stealth] to notice you."))
 
 (const skill-survival : base/skill
  (base/skill
@@ -181,6 +191,26 @@
     * Location: [1-hand]"
   :body "2x0"
   :mass "2kg/4.4lb"))
+
+(func item-finewoodlandcloak : base/item
+ (base/item
+  :name "Fine Woodland Cloak"
+  :image "images/cards/item-finewoodlandcloak.svg"
+  :summary
+   "* [Passive]: [Stealth]:+1 in [Forest]
+    * [Passive]: Discard the first [Fatigue] you receive from [Weather] each [Turn]."
+  :body "2x0"
+  :mass "2kg/4.4lb"))
+
+(func item-healingsalve : base/item
+ (base/item
+  :name "Healing Salve"
+  :image "images/cards/item-healingsalve.svg"
+  :summary
+   "* [Uses]: 3
+    * [Double Action] Use:1: Reduce a Major Wound to a Minor Wound."
+  :body "5x-1"
+  :mass "500g/1.1lb"))
 
 (func item-shieldbuckler : base/item
  (base/item
@@ -392,6 +422,40 @@
   :mass "22kg/50lb"
   :height "1m/3ft"
   :speedland "20kph"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-closecombat
+     :level "1"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-dagger))))
+    (base/unitskill
+     :skill skill-stealth
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability ability-sneak))))))
+
+(func unit-flint : base/unit
+ (base/unit
+  :name "Flint"
+  :image "images/cards/unit-flint.svg"
+  :race "Half-elven"
+  :gender "M"
+  :age 17
+  :body "7x1"
+  :mind "5x1"
+  :will "5x1"
+  :move "3x1"
+  :mass "70kg/153lb"
+  :height "1.67m/5'6"
+  :beast "1x0"
+  :shadow "1x0"
+  :value "1x0"
+  :speedland "30kph/20mph"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
@@ -640,6 +704,7 @@
    :cardmap
     (base/cardmap<-cardlist
      (base/cardlist
+      (unit-flint)
       (unit-jesaveer)
       (unit-jonaveer)
       (unit-xeibhanower)
@@ -660,6 +725,8 @@
       (item-bowshort)
       (item-dagger)
       (item-hammer)
+      (item-healingsalve)
+      (item-finewoodlandcloak)
       (item-shieldbuckler)
       (item-shieldheater)
       (item-shieldround)

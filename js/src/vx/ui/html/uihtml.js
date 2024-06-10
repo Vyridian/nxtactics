@@ -4,7 +4,6 @@ import vx_core from "../../../vx/core.js"
 import vx_data_file from "../../../vx/data/file.js"
 import vx_web_html from "../../../vx/web/html.js"
 import vx_web_htmldoc from "../../../vx/web/htmldoc.js"
-import vx_event from "../../../vx/event.js"
 import vx_type from "../../../vx/type.js"
 import vx_ui_ui from "../../../vx/ui/ui.js"
 
@@ -59,6 +58,73 @@ export default class vx_ui_html_uihtml {
   static c_style_selected = {vx_type: vx_web_html.t_style, vx_constdef: {pkgname: 'vx/ui/html/uihtml', name: 'style-selected'}}
 
   /**
+   * @function boolean_layoutremove_html
+   * Removes html node with a given ui.
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_layoutremove_html = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_layoutremove_html = {
+    vx_type: vx_ui_html_uihtml.t_boolean_layoutremove_html
+  }
+
+  // (func boolean-layoutremove-html)
+  static f_boolean_layoutremove_html(ui) {
+    let output = vx_core.e_boolean
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_boolean},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
+        return vx_web_htmldoc.f_boolean_remove_from_id(id)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function boolean_layoutselected_html
+   * Removes html node with a given ui.
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_layoutselected_html = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_layoutselected_html = {
+    vx_type: vx_ui_html_uihtml.t_boolean_layoutselected_html
+  }
+
+  // (func boolean-layoutselected-html)
+  static f_boolean_layoutselected_html(ui) {
+    let output = vx_core.e_boolean
+    output = vx_ui_html_uihtml.f_boolean_writeclass_from_ui(ui)
+    return output
+  }
+
+  /**
+   * @function boolean_layoutvisible_html
+   * Removes html node with a given ui.
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_layoutvisible_html = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_layoutvisible_html = {
+    vx_type: vx_ui_html_uihtml.t_boolean_layoutvisible_html
+  }
+
+  // (func boolean-layoutvisible-html)
+  static f_boolean_layoutvisible_html(ui) {
+    let output = vx_core.e_boolean
+    output = vx_ui_html_uihtml.f_boolean_writeclass_from_ui(ui)
+    return output
+  }
+
+  /**
    * @function boolean_print_html
    * Create a print ready version of ui
    * @param  {ui} ui
@@ -89,6 +155,135 @@ export default class vx_ui_html_uihtml {
   }
 
   /**
+   * @function boolean_writeclass_from_ui
+   * Writes to an html node adding or removing the given hidden class.
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_writeclass_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_writeclass_from_ui = {
+    vx_type: vx_ui_html_uihtml.t_boolean_writeclass_from_ui
+  }
+
+  // (func boolean-writeclass<-ui)
+  static f_boolean_writeclass_from_ui(ui) {
+    let output = vx_core.e_boolean
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_boolean},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
+        const sclass = vx_ui_html_uihtml.f_string_class_from_ui(ui)
+        return vx_web_htmldoc.f_boolean_write_from_id_attribute_value(id, "class", sclass)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function boolean_writeeventsall_from_ui
+   * Write the events for ui and subui to the dom.
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_writeeventsall_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_writeeventsall_from_ui = {
+    vx_type: vx_ui_html_uihtml.t_boolean_writeeventsall_from_ui
+  }
+
+  // (func boolean-writeeventsall<-ui)
+  static f_boolean_writeeventsall_from_ui(ui) {
+    let output = vx_core.e_boolean
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_boolean},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+        const iswrite1 = vx_web_htmldoc.f_boolean_writeevents_from_ui(ui)
+        const iswrite2 = vx_ui_html_uihtml.f_boolean_writeeventsall_from_uimap(uimap)
+        return vx_core.f_and(iswrite1, iswrite2)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function boolean_writeeventsall_from_uimap
+   * Write the events for each ui and subui to the dom.
+   * @param  {uimap} uimap
+   * @return {boolean}
+   */
+  static t_boolean_writeeventsall_from_uimap = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_writeeventsall_from_uimap = {
+    vx_type: vx_ui_html_uihtml.t_boolean_writeeventsall_from_uimap
+  }
+
+  // (func boolean-writeeventsall<-uimap)
+  static f_boolean_writeeventsall_from_uimap(uimap) {
+    let output = vx_core.e_boolean
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_boolean},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const boollist = vx_core.f_list_from_map_1(
+          {"any-1": vx_core.t_boolean, "any-2": vx_ui_ui.t_ui, "list-1": vx_core.t_booleanlist, "map-2": vx_ui_ui.t_uimap},
+          uimap,
+          vx_core.f_new(vx_core.t_any_from_key_value, ([key, value]) => 
+            vx_ui_html_uihtml.f_boolean_writeeventsall_from_ui(value))
+        )
+        return vx_core.f_and_1(boollist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function boolean_writeselected_from_ui
+   * Writes to an html node adding or removing the selected class.
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_writeselected_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_writeselected_from_ui = {
+    vx_type: vx_ui_html_uihtml.t_boolean_writeselected_from_ui
+  }
+
+  // (func boolean-writeselected<-ui)
+  static f_boolean_writeselected_from_ui(ui) {
+    let output = vx_core.e_boolean
+    output = vx_ui_html_uihtml.f_boolean_writeclass_from_ui(ui)
+    return output
+  }
+
+  /**
+   * @function boolean_writevisible_from_ui
+   * Writes to an html node adding or removing the hidden class.
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_writevisible_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_writevisible_from_ui = {
+    vx_type: vx_ui_html_uihtml.t_boolean_writevisible_from_ui
+  }
+
+  // (func boolean-writevisible<-ui)
+  static f_boolean_writevisible_from_ui(ui) {
+    let output = vx_core.e_boolean
+    output = vx_ui_html_uihtml.f_boolean_writeclass_from_ui(ui)
+    return output
+  }
+
+  /**
    * @function context_write
    * @return {context}
    */
@@ -108,7 +303,7 @@ export default class vx_ui_html_uihtml {
 
   /**
    * @function divchild_from_ui
-   * Returns a divchildlist of empty divs from a uimap
+   * Returns a divchild from a ui
    * @param  {ui} ui
    * @return {divchild}
    */
@@ -148,7 +343,7 @@ export default class vx_ui_html_uihtml {
 
   /**
    * @function divchildlist_from_uimap
-   * Returns a divchildlist of empty divs from a uimap
+   * Returns a divchildlist of divs from a uimap
    * @param  {uimap} uimap
    * @return {divchildlist}
    */
@@ -183,6 +378,76 @@ export default class vx_ui_html_uihtml {
   }
 
   /**
+   * @function divchildlist_from_uimap
+   * Returns a divchildlist of divs from a uimap
+   * @param  {uimap} uimap
+   * @return {divchildlist}
+   */
+  static t_divchildlist_from_uimap_1 = {
+    vx_type: vx_core.t_type
+  }
+  static e_divchildlist_from_uimap_1 = {
+    vx_type: vx_ui_html_uihtml.t_divchildlist_from_uimap_1
+  }
+
+  // (func divchildlist<-uimap)
+  static f_divchildlist_from_uimap_1(uimap) {
+    let output = vx_web_html.e_divchildlist
+    output = vx_core.f_list_from_map_1(
+      {"any-1": vx_web_html.t_divchild, "any-2": vx_ui_ui.t_ui, "list-1": vx_web_html.t_divchildlist, "map-2": vx_ui_ui.t_uimap},
+      uimap,
+      vx_core.f_new(vx_core.t_any_from_key_value, ([key, value]) => 
+        vx_core.f_let(
+          {"any-1": vx_web_html.t_div},
+          [],
+          vx_core.f_new(vx_core.t_any_from_func, () => {
+            const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, value, ":uid")
+            return vx_core.f_new(
+              vx_web_html.t_div,
+              ":id",
+              uid
+            )
+          })
+        ))
+    )
+    return output
+  }
+
+  /**
+   * @function divchildlist_from_uimap_origmap_parent
+   * Returns a divchildlist of divs from a uimap
+   * @param  {uimap} uimap
+   * @param  {uimap} origmap
+   * @param  {ui} parent
+   * @return {divchildlist}
+   */
+  static t_divchildlist_from_uimap_origmap_parent = {
+    vx_type: vx_core.t_type
+  }
+  static e_divchildlist_from_uimap_origmap_parent = {
+    vx_type: vx_ui_html_uihtml.t_divchildlist_from_uimap_origmap_parent
+  }
+
+  // (func divchildlist<-uimap-origmap-parent)
+  static f_divchildlist_from_uimap_origmap_parent(uimap, origmap, parent) {
+    let output = vx_web_html.e_divchildlist
+    output = vx_core.f_list_from_map_1(
+      {"any-1": vx_web_html.t_divchild, "any-2": vx_ui_ui.t_ui, "list-1": vx_web_html.t_divchildlist, "map-2": vx_ui_ui.t_uimap},
+      uimap,
+      vx_core.f_new(vx_core.t_any_from_key_value, ([key, value]) => 
+        vx_core.f_let(
+          {"any-1": vx_web_html.t_node},
+          [],
+          vx_core.f_new(vx_core.t_any_from_func, () => {
+            const origvalue = vx_core.f_any_from_map({"any-1": vx_ui_ui.t_ui, "map-1": vx_ui_ui.t_uimap}, origmap, key)
+            return vx_ui_html_uihtml.f_node_from_ui_orig_parent(value, origvalue, parent)
+          })
+        ))
+    )
+    return output
+  }
+
+  /**
    * @function node_app_from_ui_orig_parent
    * @param  {ui} ui
    * @param  {ui} orig
@@ -199,35 +464,268 @@ export default class vx_ui_html_uihtml {
   // (func node-app<-ui-orig-parent)
   static f_node_app_from_ui_orig_parent(ui, orig, parent) {
     let output = vx_web_html.e_node
-    output = vx_core.f_empty(
-      vx_web_html.t_div
+    output = vx_core.f_let(
+      {"any-1": vx_web_html.t_node},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+        const origmap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, orig, ":uimap")
+        const children = vx_ui_html_uihtml.f_divchildlist_from_uimap_origmap_parent(uimap, origmap, ui)
+        return vx_core.f_new(
+          vx_web_html.t_div,
+          ":id",
+          uid,
+          ":nodes",
+          children
+        )
+      })
     )
     return output
   }
 
   /**
-   * @function node_layout_from_node_ui
-   * @param  {node} node
+   * @function node_default_from_ui_orig_parent
    * @param  {ui} ui
+   * @param  {ui} orig
+   * @param  {ui} parent
    * @return {node}
    */
-  static t_node_layout_from_node_ui = {
+  static t_node_default_from_ui_orig_parent = {
     vx_type: vx_core.t_type
   }
-  static e_node_layout_from_node_ui = {
-    vx_type: vx_ui_html_uihtml.t_node_layout_from_node_ui
+  static e_node_default_from_ui_orig_parent = {
+    vx_type: vx_ui_html_uihtml.t_node_default_from_ui_orig_parent
   }
 
-  // (func node-layout<-node-ui)
-  static f_node_layout_from_node_ui(node, ui) {
+  // (func node-default<-ui-orig-parent)
+  static f_node_default_from_ui_orig_parent(ui, orig, parent) {
     let output = vx_web_html.e_node
     output = vx_core.f_let(
       {"any-1": vx_web_html.t_node},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+        const uistyle = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
+        const origmap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, orig, ":uimap")
+        const style = vx_ui_html_uihtml.f_style_from_style(uistyle)
+        const styles = vx_ui_html_uihtml.f_stylelist_extra_from_ui(ui)
+        const children = vx_ui_html_uihtml.f_divchildlist_from_uimap_origmap_parent(uimap, origmap, ui)
+        return vx_core.f_new(
+          vx_web_html.t_div,
+          ":id",
+          uid,
+          ":style-unique",
+          style,
+          ":stylelist",
+          styles,
+          ":nodes",
+          children
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function node_image_from_ui_orig_parent
+   * @param  {ui} ui
+   * @param  {ui} orig
+   * @param  {ui} parent
+   * @return {node}
+   */
+  static t_node_image_from_ui_orig_parent = {
+    vx_type: vx_core.t_type
+  }
+  static e_node_image_from_ui_orig_parent = {
+    vx_type: vx_ui_html_uihtml.t_node_image_from_ui_orig_parent
+  }
+
+  // (func node-image<-ui-orig-parent)
+  static f_node_image_from_ui_orig_parent(ui, orig, parent) {
+    let output = vx_web_html.e_node
+    output = vx_core.f_let(
+      {"any-1": vx_web_html.t_node},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
+        const uistyle = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
+        const data = vx_core.f_any_from_struct({"any-1": vx_core.t_any, "struct-2": vx_ui_ui.t_ui}, ui, ":data")
+        const file = vx_core.f_any_from_any({"any-1": vx_data_file.t_file, "any-2": vx_core.t_any}, data)
+        const path = vx_data_file.f_pathfull_from_file(file)
+        const style = vx_ui_html_uihtml.f_style_from_style(uistyle)
+        const styles = vx_ui_html_uihtml.f_stylelist_extra_from_ui(ui)
+        return vx_core.f_new(
+          vx_web_html.t_img,
+          ":id",
+          uid,
+          ":style-unique",
+          style,
+          ":stylelist",
+          styles,
+          ":src",
+          path
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function node_label_from_ui_orig_parent
+   * @param  {ui} ui
+   * @param  {ui} orig
+   * @param  {ui} parent
+   * @return {node}
+   */
+  static t_node_label_from_ui_orig_parent = {
+    vx_type: vx_core.t_type
+  }
+  static e_node_label_from_ui_orig_parent = {
+    vx_type: vx_ui_html_uihtml.t_node_label_from_ui_orig_parent
+  }
+
+  // (func node-label<-ui-orig-parent)
+  static f_node_label_from_ui_orig_parent(ui, orig, parent) {
+    let output = vx_web_html.e_node
+    output = vx_core.f_let(
+      {"any-1": vx_web_html.t_node},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
+        const data = vx_core.f_any_from_struct({"any-1": vx_core.t_any, "struct-2": vx_ui_ui.t_ui}, ui, ":data")
+        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
+        const uistyle = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
+        const uistyles = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_stylelist, "struct-2": vx_ui_ui.t_ui}, ui, ":stylelist")
+        const datatype = vx_core.f_type_from_any(data)
+        const style = vx_ui_html_uihtml.f_style_from_style(uistyle)
+        const styles = vx_ui_html_uihtml.f_stylelist_from_stylelist(uistyles)
+        const text = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              datatype,
+              vx_core.t_string
+            )}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_any_from_any({"any-1": vx_core.t_string, "any-2": vx_core.t_any}, data)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_string_from_any(data)})
+          )
+        )
+        return vx_core.f_new(
+          vx_web_html.t_p,
+          ":id",
+          uid,
+          ":style-unique",
+          style,
+          ":stylelist",
+          styles,
+          ":text",
+          text
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function node_layout_from_node_ui_parent
+   * @param  {node} node
+   * @param  {ui} ui
+   * @param  {ui} parent
+   * @return {node}
+   */
+  static t_node_layout_from_node_ui_parent = {
+    vx_type: vx_core.t_type
+  }
+  static e_node_layout_from_node_ui_parent = {
+    vx_type: vx_ui_html_uihtml.t_node_layout_from_node_ui_parent
+  }
+
+  // (func node-layout<-node-ui-parent)
+  static f_node_layout_from_node_ui_parent(node, ui, parent) {
+    let output = vx_web_html.e_node
+    output = vx_core.f_let(
+      {"any-1": vx_web_html.t_node},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
+        const parentid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, parent, ":uid")
         const htmltext = vx_web_html.f_string_from_node_indent(node, 2)
-        const htmldone = vx_web_htmldoc.f_boolean_replace_from_ui_htmltext(ui, htmltext)
+        const htmldone = vx_web_htmldoc.f_boolean_replace_from_id_parent_htmltext(id, parentid, htmltext)
         return node
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function node_from_ui_orig_parent
+   * @param  {ui} ui
+   * @param  {ui} orig
+   * @param  {ui} parent
+   * @return {node}
+   */
+  static t_node_from_ui_orig_parent = {
+    vx_type: vx_core.t_type
+  }
+  static e_node_from_ui_orig_parent = {
+    vx_type: vx_ui_html_uihtml.t_node_from_ui_orig_parent
+  }
+
+  // (func node<-ui-orig-parent)
+  static f_node_from_ui_orig_parent(ui, orig, parent) {
+    let output = vx_web_html.e_node
+    output = vx_core.f_let(
+      {"any-1": vx_web_html.t_node, "any-2": vx_ui_ui.t_layout},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const style = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
+        const layout = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_layout, "struct-2": vx_ui_ui.t_style}, style, ":layout")
+        return vx_core.f_switch(
+          {"any-1": vx_web_html.t_node, "any-2": vx_ui_ui.t_layout},
+          layout,
+          vx_core.f_case_1(
+            vx_ui_ui.c_layout_image,
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_ui_html_uihtml.f_node_image_from_ui_orig_parent(ui, orig, parent)})
+          ),
+          vx_core.f_case_1(
+            vx_ui_ui.c_layout_label,
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_ui_html_uihtml.f_node_label_from_ui_orig_parent(ui, orig, parent)})
+          ),
+          vx_core.f_else(
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_ui_html_uihtml.f_node_default_from_ui_orig_parent(ui, orig, parent)})
+          )
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function string_class_from_ui
+   * Returns a class string given a ui.
+   * @param  {ui} ui
+   * @return {string}
+   */
+  static t_string_class_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_string_class_from_ui = {
+    vx_type: vx_ui_html_uihtml.t_string_class_from_ui
+  }
+
+  // (func string-class<-ui)
+  static f_string_class_from_ui(ui) {
+    let output = vx_core.e_string
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_string},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const htmlstyles = vx_ui_html_uihtml.f_stylelist_extra_from_ui(ui)
+        return vx_web_html.f_string_from_stylelist(htmlstyles)
       })
     )
     return output
@@ -1378,23 +1876,10 @@ export default class vx_ui_html_uihtml {
       {"any-1": vx_ui_ui.t_ui},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
-        const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
-        const children = vx_ui_html_uihtml.f_divchildlist_from_uimap(uimap)
-        const node = vx_core.f_new(
-          vx_web_html.t_div,
-          ":id",
-          uid,
-          ":nodes",
-          children
-        )
-        const nodechg = vx_ui_html_uihtml.f_node_layout_from_node_ui(node, ui)
-        const uimapchg = vx_ui_ui.f_uimap_layout_from_uimap_parent(uimap, ui)
-        return vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uimap",
-          uimapchg
-        )
+        const node = vx_ui_html_uihtml.f_node_app_from_ui_orig_parent(ui, orig, parent)
+        const nodechg = vx_ui_html_uihtml.f_node_layout_from_node_ui_parent(node, ui, parent)
+        const iswrite = vx_ui_html_uihtml.f_boolean_writeeventsall_from_ui(ui)
+        return ui
       })
     )
     return output
@@ -1421,30 +1906,11 @@ export default class vx_ui_html_uihtml {
       {"any-1": vx_ui_ui.t_ui},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
         const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
-        const uistyle = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
-        const style = vx_ui_html_uihtml.f_style_from_style(uistyle)
-        const styles = vx_ui_html_uihtml.f_stylelist_extra_from_ui(ui)
-        const children = vx_ui_html_uihtml.f_divchildlist_from_uimap(uimap)
-        const node = vx_core.f_new(
-          vx_web_html.t_div,
-          ":id",
-          uid,
-          ":style-unique",
-          style,
-          ":stylelist",
-          styles,
-          ":nodes",
-          children
-        )
-        const nodechg = vx_ui_html_uihtml.f_node_layout_from_node_ui(node, ui)
-        const uimapchg = vx_ui_ui.f_uimap_layout_from_uimap_parent(uimap, ui)
-        return vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uimap",
-          uimapchg
-        )
+        const node = vx_ui_html_uihtml.f_node_default_from_ui_orig_parent(ui, orig, parent)
+        const nodechg = vx_ui_html_uihtml.f_node_layout_from_node_ui_parent(node, ui, parent)
+        const iswrite = vx_ui_html_uihtml.f_boolean_writeeventsall_from_ui(ui)
+        return ui
       })
     )
     return output
@@ -1471,25 +1937,9 @@ export default class vx_ui_html_uihtml {
       {"any-1": vx_ui_ui.t_ui},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
-        const uistyle = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
-        const data = vx_core.f_any_from_struct({"any-1": vx_core.t_any, "struct-2": vx_ui_ui.t_ui}, ui, ":data")
-        const file = vx_core.f_any_from_any({"any-1": vx_data_file.t_file, "any-2": vx_core.t_any}, data)
-        const path = vx_data_file.f_pathfull_from_file(file)
-        const style = vx_ui_html_uihtml.f_style_from_style(uistyle)
-        const styles = vx_ui_html_uihtml.f_stylelist_extra_from_ui(ui)
-        const node = vx_core.f_new(
-          vx_web_html.t_img,
-          ":id",
-          uid,
-          ":style-unique",
-          style,
-          ":stylelist",
-          styles,
-          ":src",
-          path
-        )
-        const nodechg = vx_ui_html_uihtml.f_node_layout_from_node_ui(node, ui)
+        const node = vx_ui_html_uihtml.f_node_image_from_ui_orig_parent(ui, orig, parent)
+        const nodechg = vx_ui_html_uihtml.f_node_layout_from_node_ui_parent(node, ui, parent)
+        const iswrite = vx_ui_html_uihtml.f_boolean_writeeventsall_from_ui(ui)
         return ui
       })
     )
@@ -1517,45 +1967,11 @@ export default class vx_ui_html_uihtml {
       {"any-1": vx_ui_ui.t_ui},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
-        const uid = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": vx_ui_ui.t_ui}, ui, ":uid")
-        const data = vx_core.f_any_from_struct({"any-1": vx_core.t_any, "struct-2": vx_ui_ui.t_ui}, ui, ":data")
         const uimap = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_uimap, "struct-2": vx_ui_ui.t_ui}, ui, ":uimap")
-        const uistyle = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_style, "struct-2": vx_ui_ui.t_ui}, ui, ":style")
-        const uistyles = vx_core.f_any_from_struct({"any-1": vx_ui_ui.t_stylelist, "struct-2": vx_ui_ui.t_ui}, ui, ":stylelist")
-        const datatype = vx_core.f_type_from_any(data)
-        const style = vx_ui_html_uihtml.f_style_from_style(uistyle)
-        const styles = vx_ui_html_uihtml.f_stylelist_from_stylelist(uistyles)
-        const text = vx_core.f_if_2(
-          {"any-1": vx_core.t_string},
-          vx_core.f_then(
-            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
-              datatype,
-              vx_core.t_string
-            )}),
-            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_any_from_any({"any-1": vx_core.t_string, "any-2": vx_core.t_any}, data)})
-          ),
-          vx_core.f_else(
-            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_string_from_any(data)})
-          )
-        )
-        const node = vx_core.f_new(
-          vx_web_html.t_p,
-          ":id",
-          uid,
-          ":style-unique",
-          style,
-          ":stylelist",
-          styles,
-          ":text",
-          text
-        )
-        const nodechg = vx_ui_html_uihtml.f_node_layout_from_node_ui(node, ui)
-        const uimapchg = vx_ui_ui.f_uimap_layout_from_uimap_parent(uimap, ui)
-        return vx_core.f_new(
-          vx_ui_ui.t_ui,
-          ":uimap",
-          uimapchg
-        )
+        const node = vx_ui_html_uihtml.f_node_label_from_ui_orig_parent(ui, orig, parent)
+        const nodechg = vx_ui_html_uihtml.f_node_layout_from_node_ui_parent(node, ui, parent)
+        const iswrite = vx_ui_html_uihtml.f_boolean_writeeventsall_from_ui(ui)
+        return ui
       })
     )
     return output
@@ -1574,12 +1990,27 @@ export default class vx_ui_html_uihtml {
       "style-selected": vx_ui_html_uihtml.c_style_selected
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
+      "boolean-layoutremove-html": vx_ui_html_uihtml.e_boolean_layoutremove_html,
+      "boolean-layoutselected-html": vx_ui_html_uihtml.e_boolean_layoutselected_html,
+      "boolean-layoutvisible-html": vx_ui_html_uihtml.e_boolean_layoutvisible_html,
       "boolean-print-html": vx_ui_html_uihtml.e_boolean_print_html,
+      "boolean-writeclass<-ui": vx_ui_html_uihtml.e_boolean_writeclass_from_ui,
+      "boolean-writeeventsall<-ui": vx_ui_html_uihtml.e_boolean_writeeventsall_from_ui,
+      "boolean-writeeventsall<-uimap": vx_ui_html_uihtml.e_boolean_writeeventsall_from_uimap,
+      "boolean-writeselected<-ui": vx_ui_html_uihtml.e_boolean_writeselected_from_ui,
+      "boolean-writevisible<-ui": vx_ui_html_uihtml.e_boolean_writevisible_from_ui,
       "context-write": vx_ui_html_uihtml.e_context_write,
       "divchild<-ui": vx_ui_html_uihtml.e_divchild_from_ui,
       "divchildlist<-uimap": vx_ui_html_uihtml.e_divchildlist_from_uimap,
+      "divchildlist<-uimap_1": vx_ui_html_uihtml.e_divchildlist_from_uimap_1,
+      "divchildlist<-uimap-origmap-parent": vx_ui_html_uihtml.e_divchildlist_from_uimap_origmap_parent,
       "node-app<-ui-orig-parent": vx_ui_html_uihtml.e_node_app_from_ui_orig_parent,
-      "node-layout<-node-ui": vx_ui_html_uihtml.e_node_layout_from_node_ui,
+      "node-default<-ui-orig-parent": vx_ui_html_uihtml.e_node_default_from_ui_orig_parent,
+      "node-image<-ui-orig-parent": vx_ui_html_uihtml.e_node_image_from_ui_orig_parent,
+      "node-label<-ui-orig-parent": vx_ui_html_uihtml.e_node_label_from_ui_orig_parent,
+      "node-layout<-node-ui-parent": vx_ui_html_uihtml.e_node_layout_from_node_ui_parent,
+      "node<-ui-orig-parent": vx_ui_html_uihtml.e_node_from_ui_orig_parent,
+      "string-class<-ui": vx_ui_html_uihtml.e_string_class_from_ui,
       "string-style<-font": vx_ui_html_uihtml.e_string_style_from_font,
       "string-style<-image": vx_ui_html_uihtml.e_string_style_from_image,
       "string-stylename<-name-styletype": vx_ui_html_uihtml.e_string_stylename_from_name_styletype,
@@ -1599,12 +2030,27 @@ export default class vx_ui_html_uihtml {
       "ui-layout-label<-ui-orig-parent": vx_ui_html_uihtml.e_ui_layout_label_from_ui_orig_parent
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "boolean-layoutremove-html": vx_ui_html_uihtml.t_boolean_layoutremove_html,
+      "boolean-layoutselected-html": vx_ui_html_uihtml.t_boolean_layoutselected_html,
+      "boolean-layoutvisible-html": vx_ui_html_uihtml.t_boolean_layoutvisible_html,
       "boolean-print-html": vx_ui_html_uihtml.t_boolean_print_html,
+      "boolean-writeclass<-ui": vx_ui_html_uihtml.t_boolean_writeclass_from_ui,
+      "boolean-writeeventsall<-ui": vx_ui_html_uihtml.t_boolean_writeeventsall_from_ui,
+      "boolean-writeeventsall<-uimap": vx_ui_html_uihtml.t_boolean_writeeventsall_from_uimap,
+      "boolean-writeselected<-ui": vx_ui_html_uihtml.t_boolean_writeselected_from_ui,
+      "boolean-writevisible<-ui": vx_ui_html_uihtml.t_boolean_writevisible_from_ui,
       "context-write": vx_ui_html_uihtml.t_context_write,
       "divchild<-ui": vx_ui_html_uihtml.t_divchild_from_ui,
       "divchildlist<-uimap": vx_ui_html_uihtml.t_divchildlist_from_uimap,
+      "divchildlist<-uimap_1": vx_ui_html_uihtml.t_divchildlist_from_uimap_1,
+      "divchildlist<-uimap-origmap-parent": vx_ui_html_uihtml.t_divchildlist_from_uimap_origmap_parent,
       "node-app<-ui-orig-parent": vx_ui_html_uihtml.t_node_app_from_ui_orig_parent,
-      "node-layout<-node-ui": vx_ui_html_uihtml.t_node_layout_from_node_ui,
+      "node-default<-ui-orig-parent": vx_ui_html_uihtml.t_node_default_from_ui_orig_parent,
+      "node-image<-ui-orig-parent": vx_ui_html_uihtml.t_node_image_from_ui_orig_parent,
+      "node-label<-ui-orig-parent": vx_ui_html_uihtml.t_node_label_from_ui_orig_parent,
+      "node-layout<-node-ui-parent": vx_ui_html_uihtml.t_node_layout_from_node_ui_parent,
+      "node<-ui-orig-parent": vx_ui_html_uihtml.t_node_from_ui_orig_parent,
+      "string-class<-ui": vx_ui_html_uihtml.t_string_class_from_ui,
       "string-style<-font": vx_ui_html_uihtml.t_string_style_from_font,
       "string-style<-image": vx_ui_html_uihtml.t_string_style_from_image,
       "string-stylename<-name-styletype": vx_ui_html_uihtml.t_string_stylename_from_name_styletype,
@@ -1635,6 +2081,60 @@ export default class vx_ui_html_uihtml {
     })
     vx_core.vx_global_package_set(pkg)
 
+    // (func boolean-layoutremove-html)
+    vx_ui_html_uihtml.t_boolean_layoutremove_html['vx_value'] = {
+      name          : "boolean-layoutremove-html",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_boolean_layoutremove_html
+    }
+
+    // (func boolean-layoutselected-html)
+    vx_ui_html_uihtml.t_boolean_layoutselected_html['vx_value'] = {
+      name          : "boolean-layoutselected-html",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_boolean_layoutselected_html
+    }
+
+    // (func boolean-layoutvisible-html)
+    vx_ui_html_uihtml.t_boolean_layoutvisible_html['vx_value'] = {
+      name          : "boolean-layoutvisible-html",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_boolean_layoutvisible_html
+    }
+
     // (func boolean-print-html)
     vx_ui_html_uihtml.t_boolean_print_html['vx_value'] = {
       name          : "boolean-print-html",
@@ -1651,6 +2151,96 @@ export default class vx_ui_html_uihtml {
       properties    : [],
       proplast      : {},
       fn            : vx_ui_html_uihtml.f_boolean_print_html
+    }
+
+    // (func boolean-writeclass<-ui)
+    vx_ui_html_uihtml.t_boolean_writeclass_from_ui['vx_value'] = {
+      name          : "boolean-writeclass<-ui",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_boolean_writeclass_from_ui
+    }
+
+    // (func boolean-writeeventsall<-ui)
+    vx_ui_html_uihtml.t_boolean_writeeventsall_from_ui['vx_value'] = {
+      name          : "boolean-writeeventsall<-ui",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_boolean_writeeventsall_from_ui
+    }
+
+    // (func boolean-writeeventsall<-uimap)
+    vx_ui_html_uihtml.t_boolean_writeeventsall_from_uimap['vx_value'] = {
+      name          : "boolean-writeeventsall<-uimap",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_boolean_writeeventsall_from_uimap
+    }
+
+    // (func boolean-writeselected<-ui)
+    vx_ui_html_uihtml.t_boolean_writeselected_from_ui['vx_value'] = {
+      name          : "boolean-writeselected<-ui",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_boolean_writeselected_from_ui
+    }
+
+    // (func boolean-writevisible<-ui)
+    vx_ui_html_uihtml.t_boolean_writevisible_from_ui['vx_value'] = {
+      name          : "boolean-writevisible<-ui",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_boolean_writevisible_from_ui
     }
 
     // (func context-write)
@@ -1707,6 +2297,42 @@ export default class vx_ui_html_uihtml {
       fn            : vx_ui_html_uihtml.f_divchildlist_from_uimap
     }
 
+    // (func divchildlist<-uimap)
+    vx_ui_html_uihtml.t_divchildlist_from_uimap_1['vx_value'] = {
+      name          : "divchildlist<-uimap",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 1,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_divchildlist_from_uimap_1
+    }
+
+    // (func divchildlist<-uimap-origmap-parent)
+    vx_ui_html_uihtml.t_divchildlist_from_uimap_origmap_parent['vx_value'] = {
+      name          : "divchildlist<-uimap-origmap-parent",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_divchildlist_from_uimap_origmap_parent
+    }
+
     // (func node-app<-ui-orig-parent)
     vx_ui_html_uihtml.t_node_app_from_ui_orig_parent['vx_value'] = {
       name          : "node-app<-ui-orig-parent",
@@ -1725,9 +2351,9 @@ export default class vx_ui_html_uihtml {
       fn            : vx_ui_html_uihtml.f_node_app_from_ui_orig_parent
     }
 
-    // (func node-layout<-node-ui)
-    vx_ui_html_uihtml.t_node_layout_from_node_ui['vx_value'] = {
-      name          : "node-layout<-node-ui",
+    // (func node-default<-ui-orig-parent)
+    vx_ui_html_uihtml.t_node_default_from_ui_orig_parent['vx_value'] = {
+      name          : "node-default<-ui-orig-parent",
       pkgname       : "vx/ui/html/uihtml",
       extends       : ":func",
       idx           : 0,
@@ -1740,7 +2366,97 @@ export default class vx_ui_html_uihtml {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : vx_ui_html_uihtml.f_node_layout_from_node_ui
+      fn            : vx_ui_html_uihtml.f_node_default_from_ui_orig_parent
+    }
+
+    // (func node-image<-ui-orig-parent)
+    vx_ui_html_uihtml.t_node_image_from_ui_orig_parent['vx_value'] = {
+      name          : "node-image<-ui-orig-parent",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_node_image_from_ui_orig_parent
+    }
+
+    // (func node-label<-ui-orig-parent)
+    vx_ui_html_uihtml.t_node_label_from_ui_orig_parent['vx_value'] = {
+      name          : "node-label<-ui-orig-parent",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_node_label_from_ui_orig_parent
+    }
+
+    // (func node-layout<-node-ui-parent)
+    vx_ui_html_uihtml.t_node_layout_from_node_ui_parent['vx_value'] = {
+      name          : "node-layout<-node-ui-parent",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_node_layout_from_node_ui_parent
+    }
+
+    // (func node<-ui-orig-parent)
+    vx_ui_html_uihtml.t_node_from_ui_orig_parent['vx_value'] = {
+      name          : "node<-ui-orig-parent",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_node_from_ui_orig_parent
+    }
+
+    // (func string-class<-ui)
+    vx_ui_html_uihtml.t_string_class_from_ui['vx_value'] = {
+      name          : "string-class<-ui",
+      pkgname       : "vx/ui/html/uihtml",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_ui_html_uihtml.f_string_class_from_ui
     }
 
     // (func string-style<-font)
@@ -2093,6 +2809,12 @@ export default class vx_ui_html_uihtml {
       vx_ui_html_uihtml.c_layout_else_html,
       ":boolean-print",
       vx_ui_html_uihtml.t_boolean_print_html,
+      ":boolean-layoutremove",
+      vx_ui_html_uihtml.t_boolean_layoutremove_html,
+      ":boolean-layoutselected",
+      vx_ui_html_uihtml.t_boolean_layoutselected_html,
+      ":boolean-layoutvisible",
+      vx_ui_html_uihtml.t_boolean_layoutvisible_html,
       ":stylesheetrender",
       vx_ui_html_uihtml.t_stylesheet_layout_html
     ))

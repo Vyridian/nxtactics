@@ -39,43 +39,43 @@ export default class vx_web_htmldoc {
     return output
   }
 
-  static vx_boolean_replace_from_ui_htmltext(ui, htmltext) {
+  static vx_boolean_replace_from_id_parent_htmltext(id, parent, htmltext) {
     let output = vx_core.c_false
-    const id = vx_core.f_any_from_struct({'any-1': vx_core.t_string}, ui, ':uid')
-    const eventmap = vx_core.f_any_from_struct({'any-1': vx_event.t_eventmap}, ui, ':eventmap')
     let elem = document.getElementById(id)
     if (elem != null) {
-      const maplistenerold = vx_web_htmldoc.vx_maplistener_read_from_id(id)
-      if (maplistenerold) {
-        vx_web_htmldoc.vx_boolean_write_from_id_maplistener(id, {})
-        for (const [nativeeventname, listener] of Object.entries(maplistenerold)) {
-          elem.removeEventListener(nativeeventname, listener)
-        }
-      }
       elem.outerHTML = htmltext
-      if (eventmap == vx_event.e_eventmap) {
-      } else {
-        elem = document.getElementById(id)
-        const maplistener = {}
-        for (const [eventname, event] of Object.entries(eventmap['vx_value'])) {
-          const listener = (nativeevent) => {
-            const context = vx_web_htmldoc.vx_context_read()
-            const eventchg = vx_web_htmldoc.vx_event_from_event_id_nativeevent(event, id, nativeevent)
-            const fn_event = event['vx_value']['event<-event']
-            const fn_event_async = event['vx_value']['event<-event']
-            let eventoutput = null
-            if (fn_event != vx_event.e_event_from_event) {
-              eventoutput = vx_core.vx_any_from_func(vx_event.t_event, fn_event, context, eventchg)
-            } else if (fn_event_async != vx_event.e_event_from_event) {
-              eventoutput = vx_core.vx_any_from_func_async(vx_event.t_event, fn_event_async, context, eventchg)
-            }
-            return eventoutput
-          }
-          const nativeeventname = vx_web_htmldoc.vx_nativeeventname_from_eventname(eventname)
-          elem.addEventListener(nativeeventname, listener)
-          maplistener[nativeeventname] = maplistener
-        }
-        vx_web_htmldoc.vx_boolean_write_from_id_maplistener(id, maplistener)
+      output = vx_core.c_true
+    } else {
+      const elemparent = document.getElementById(parent)
+      if (elemparent != null) {
+        elem = document.createElement("div")
+        elemparent.appendChild(elem)
+        elem.outerHTML = htmltext
+        output = vx_core.c_true
+      }
+    }
+    return output
+  }
+
+  static vx_boolean_remove_from_id(id) {
+    let output = vx_core.c_false
+    let elem = document.getElementById(id)
+    if (elem != null) {
+      elem.remove()
+      output = vx_core.c_true
+    }
+    return output
+  }
+
+  static vx_boolean_write_from_id_attribute_value(id, attribute, value) {
+    let output = vx_core.c_false
+    const elem = document.getElementById(id)
+    if (elem != null) {
+      const oldvalue = elem.getAttribute(attribute)
+      if (oldvalue == null) {
+        elem.setAttribute(attribute, value)
+      } else if (oldvalue != value) {
+        elem.setAttribute(attribute, value)
       }
       output = vx_core.c_true
     }
@@ -103,6 +103,51 @@ export default class vx_web_htmldoc {
     if (elem != null) {
       elem.hidden = !visible
       output = vx_core.c_true
+    }
+    return output
+  }
+
+  static vx_boolean_writeevents_from_ui(ui) {
+    let output = vx_core.c_false
+    const eventmap = vx_core.f_any_from_struct({'any-1': vx_event.t_eventmap}, ui, ':eventmap')
+    if (eventmap == vx_event.e_eventmap) {
+      output = vx_core.c_true
+    } else {
+      const id = vx_core.f_any_from_struct({'any-1': vx_core.t_string}, ui, ':uid')
+      let elem = document.getElementById(id)
+      if (elem != null) {
+        const maplistenerold = vx_web_htmldoc.vx_maplistener_read_from_id(id)
+        if (maplistenerold) {
+          vx_web_htmldoc.vx_boolean_write_from_id_maplistener(id, {})
+          for (const [nativeeventname, listener] of Object.entries(maplistenerold)) {
+            elem.removeEventListener(nativeeventname, listener)
+          }
+        }
+        if (eventmap != vx_event.e_eventmap) {
+          elem = document.getElementById(id)
+          const maplistener = {}
+          for (const [eventname, event] of Object.entries(eventmap['vx_value'])) {
+            const listener = (nativeevent) => {
+              const context = vx_web_htmldoc.vx_context_read()
+              const eventchg = vx_web_htmldoc.vx_event_from_event_id_nativeevent(event, id, nativeevent)
+              const fn_event = event['vx_value']['event<-event']
+              const fn_event_async = event['vx_value']['event<-event']
+              let eventoutput = null
+              if (fn_event != vx_event.e_event_from_event) {
+                eventoutput = vx_core.vx_any_from_func(vx_event.t_event, fn_event, context, eventchg)
+              } else if (fn_event_async != vx_event.e_event_from_event) {
+                eventoutput = vx_core.vx_any_from_func_async(vx_event.t_event, fn_event_async, context, eventchg)
+              }
+              return eventoutput
+            }
+            const nativeeventname = vx_web_htmldoc.vx_nativeeventname_from_eventname(eventname)
+            elem.addEventListener(nativeeventname, listener)
+            maplistener[nativeeventname] = maplistener
+          }
+          vx_web_htmldoc.vx_boolean_write_from_id_maplistener(id, maplistener)
+        }
+        output = vx_core.c_true
+      }
     }
     return output
   }
@@ -136,9 +181,13 @@ export default class vx_web_htmldoc {
     return output
   }
 
+  static vx_element_from_id(id) {
+    const output = document.getElementById(id)
+    return output
+  }
+
   static vx_event_from_event_id_nativeevent(event, id, nativeevent) {
-    let output
-    output = vx_core.f_copy(event, ":from", id)
+    const output = vx_core.f_copy(event, ":from", id)
     return output
   }
 
@@ -191,6 +240,26 @@ export default class vx_web_htmldoc {
   }
 
   /**
+   * @function boolean_remove_from_id
+   * Removes an html node with given id.
+   * @param  {string} id
+   * @return {boolean}
+   */
+  static t_boolean_remove_from_id = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_remove_from_id = {
+    vx_type: vx_web_htmldoc.t_boolean_remove_from_id
+  }
+
+  // (func boolean-remove<-id)
+  static f_boolean_remove_from_id(id) {
+    let output = vx_core.e_boolean
+    output = vx_web_htmldoc.vx_boolean_remove_from_id(id)
+    return output
+  }
+
+  /**
    * @function boolean_replace_from_id_htmltext
    * Replaces an html node with given id and text.
    * @param  {string} id
@@ -212,23 +281,24 @@ export default class vx_web_htmldoc {
   }
 
   /**
-   * @function boolean_replace_from_ui_htmltext
-   * Replaces an html node with given id and text.
-   * @param  {ui} ui
+   * @function boolean_replace_from_id_parent_htmltext
+   * Replaces an html node with given id, parentid, and text.
+   * @param  {string} id
+   * @param  {string} parent
    * @param  {string} htmltext
    * @return {boolean}
    */
-  static t_boolean_replace_from_ui_htmltext = {
+  static t_boolean_replace_from_id_parent_htmltext = {
     vx_type: vx_core.t_type
   }
-  static e_boolean_replace_from_ui_htmltext = {
-    vx_type: vx_web_htmldoc.t_boolean_replace_from_ui_htmltext
+  static e_boolean_replace_from_id_parent_htmltext = {
+    vx_type: vx_web_htmldoc.t_boolean_replace_from_id_parent_htmltext
   }
 
-  // (func boolean-replace<-ui-htmltext)
-  static f_boolean_replace_from_ui_htmltext(ui, htmltext) {
+  // (func boolean-replace<-id-parent-htmltext)
+  static f_boolean_replace_from_id_parent_htmltext(id, parent, htmltext) {
     let output = vx_core.e_boolean
-    output = vx_web_htmldoc.vx_boolean_replace_from_ui_htmltext(ui, htmltext)
+    output = vx_web_htmldoc.vx_boolean_replace_from_id_parent_htmltext(id, parent, htmltext)
     return output
   }
 
@@ -250,6 +320,28 @@ export default class vx_web_htmldoc {
   static async f_boolean_write_stylesheet_from_string(text) {
     let output = Promise.resolve(vx_core.e_boolean)
     output = vx_web_htmldoc.vx_boolean_write_stylesheet_from_string(text)
+    return output
+  }
+
+  /**
+   * @function boolean_write_from_id_attribute_value
+   * Writes to an html node with given id and attribute name and value.
+   * @param  {string} id
+   * @param  {string} attribute
+   * @param  {string} value
+   * @return {boolean}
+   */
+  static t_boolean_write_from_id_attribute_value = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_write_from_id_attribute_value = {
+    vx_type: vx_web_htmldoc.t_boolean_write_from_id_attribute_value
+  }
+
+  // (func boolean-write<-id-attribute-value)
+  static f_boolean_write_from_id_attribute_value(id, attribute, value) {
+    let output = vx_core.e_boolean
+    output = vx_web_htmldoc.vx_boolean_write_from_id_attribute_value(id, attribute, value)
     return output
   }
 
@@ -321,6 +413,26 @@ export default class vx_web_htmldoc {
         return iswrite
       })
     )
+    return output
+  }
+
+  /**
+   * @function boolean_writeevents_from_ui
+   * Writes the eventmap from ui into dom.
+   * @param  {ui} ui
+   * @return {boolean}
+   */
+  static t_boolean_writeevents_from_ui = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_writeevents_from_ui = {
+    vx_type: vx_web_htmldoc.t_boolean_writeevents_from_ui
+  }
+
+  // (func boolean-writeevents<-ui)
+  static f_boolean_writeevents_from_ui(ui) {
+    let output = vx_core.e_boolean
+    output = vx_web_htmldoc.vx_boolean_writeevents_from_ui(ui)
     return output
   }
 
@@ -438,12 +550,15 @@ export default class vx_web_htmldoc {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "boolean-print<-id-stylesheettext": vx_web_htmldoc.e_boolean_print_from_id_stylesheettext,
+      "boolean-remove<-id": vx_web_htmldoc.e_boolean_remove_from_id,
       "boolean-replace<-id-htmltext": vx_web_htmldoc.e_boolean_replace_from_id_htmltext,
-      "boolean-replace<-ui-htmltext": vx_web_htmldoc.e_boolean_replace_from_ui_htmltext,
+      "boolean-replace<-id-parent-htmltext": vx_web_htmldoc.e_boolean_replace_from_id_parent_htmltext,
       "boolean-write-stylesheet<-string": vx_web_htmldoc.e_boolean_write_stylesheet_from_string,
+      "boolean-write<-id-attribute-value": vx_web_htmldoc.e_boolean_write_from_id_attribute_value,
       "boolean-write<-id-htmltext": vx_web_htmldoc.e_boolean_write_from_id_htmltext,
       "boolean-write<-id-visible": vx_web_htmldoc.e_boolean_write_from_id_visible,
       "boolean-write<-stylesheet": vx_web_htmldoc.e_boolean_write_from_stylesheet,
+      "boolean-writeevents<-ui": vx_web_htmldoc.e_boolean_writeevents_from_ui,
       "context-read": vx_web_htmldoc.e_context_read,
       "context-write": vx_web_htmldoc.e_context_write,
       "string<-id": vx_web_htmldoc.e_string_from_id,
@@ -452,12 +567,15 @@ export default class vx_web_htmldoc {
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "boolean-print<-id-stylesheettext": vx_web_htmldoc.t_boolean_print_from_id_stylesheettext,
+      "boolean-remove<-id": vx_web_htmldoc.t_boolean_remove_from_id,
       "boolean-replace<-id-htmltext": vx_web_htmldoc.t_boolean_replace_from_id_htmltext,
-      "boolean-replace<-ui-htmltext": vx_web_htmldoc.t_boolean_replace_from_ui_htmltext,
+      "boolean-replace<-id-parent-htmltext": vx_web_htmldoc.t_boolean_replace_from_id_parent_htmltext,
       "boolean-write-stylesheet<-string": vx_web_htmldoc.t_boolean_write_stylesheet_from_string,
+      "boolean-write<-id-attribute-value": vx_web_htmldoc.t_boolean_write_from_id_attribute_value,
       "boolean-write<-id-htmltext": vx_web_htmldoc.t_boolean_write_from_id_htmltext,
       "boolean-write<-id-visible": vx_web_htmldoc.t_boolean_write_from_id_visible,
       "boolean-write<-stylesheet": vx_web_htmldoc.t_boolean_write_from_stylesheet,
+      "boolean-writeevents<-ui": vx_web_htmldoc.t_boolean_writeevents_from_ui,
       "context-read": vx_web_htmldoc.t_context_read,
       "context-write": vx_web_htmldoc.t_context_write,
       "string<-id": vx_web_htmldoc.t_string_from_id,
@@ -494,6 +612,24 @@ export default class vx_web_htmldoc {
       fn            : vx_web_htmldoc.f_boolean_print_from_id_stylesheettext
     }
 
+    // (func boolean-remove<-id)
+    vx_web_htmldoc.t_boolean_remove_from_id['vx_value'] = {
+      name          : "boolean-remove<-id",
+      pkgname       : "vx/web/htmldoc",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_web_htmldoc.f_boolean_remove_from_id
+    }
+
     // (func boolean-replace<-id-htmltext)
     vx_web_htmldoc.t_boolean_replace_from_id_htmltext['vx_value'] = {
       name          : "boolean-replace<-id-htmltext",
@@ -512,9 +648,9 @@ export default class vx_web_htmldoc {
       fn            : vx_web_htmldoc.f_boolean_replace_from_id_htmltext
     }
 
-    // (func boolean-replace<-ui-htmltext)
-    vx_web_htmldoc.t_boolean_replace_from_ui_htmltext['vx_value'] = {
-      name          : "boolean-replace<-ui-htmltext",
+    // (func boolean-replace<-id-parent-htmltext)
+    vx_web_htmldoc.t_boolean_replace_from_id_parent_htmltext['vx_value'] = {
+      name          : "boolean-replace<-id-parent-htmltext",
       pkgname       : "vx/web/htmldoc",
       extends       : ":func",
       idx           : 0,
@@ -527,7 +663,7 @@ export default class vx_web_htmldoc {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : vx_web_htmldoc.f_boolean_replace_from_ui_htmltext
+      fn            : vx_web_htmldoc.f_boolean_replace_from_id_parent_htmltext
     }
 
     // (func boolean-write-stylesheet<-string)
@@ -546,6 +682,24 @@ export default class vx_web_htmldoc {
       properties    : [],
       proplast      : {},
       fn            : vx_web_htmldoc.f_boolean_write_stylesheet_from_string
+    }
+
+    // (func boolean-write<-id-attribute-value)
+    vx_web_htmldoc.t_boolean_write_from_id_attribute_value['vx_value'] = {
+      name          : "boolean-write<-id-attribute-value",
+      pkgname       : "vx/web/htmldoc",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_web_htmldoc.f_boolean_write_from_id_attribute_value
     }
 
     // (func boolean-write<-id-htmltext)
@@ -600,6 +754,24 @@ export default class vx_web_htmldoc {
       properties    : [],
       proplast      : {},
       fn            : vx_web_htmldoc.f_boolean_write_from_stylesheet
+    }
+
+    // (func boolean-writeevents<-ui)
+    vx_web_htmldoc.t_boolean_writeevents_from_ui['vx_value'] = {
+      name          : "boolean-writeevents<-ui",
+      pkgname       : "vx/web/htmldoc",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : vx_web_htmldoc.f_boolean_writeevents_from_ui
     }
 
     // (func context-read)

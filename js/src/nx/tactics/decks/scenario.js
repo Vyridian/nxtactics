@@ -132,6 +132,7 @@ export default class nx_tactics_decks_scenario {
           nx_tactics_base.f_cardmap_from_cardlist(
             vx_core.f_new(
               nx_tactics_base.t_cardlist,
+              nx_tactics_decks_scenario.f_unit_flint(),
               nx_tactics_decks_scenario.f_unit_jesaveer(),
               nx_tactics_decks_scenario.f_unit_jonaveer(),
               nx_tactics_decks_scenario.f_unit_xeibhanower(),
@@ -152,6 +153,8 @@ export default class nx_tactics_decks_scenario {
               nx_tactics_decks_scenario.f_item_bowshort(),
               nx_tactics_decks_scenario.f_item_dagger(),
               nx_tactics_decks_scenario.f_item_hammer(),
+              nx_tactics_decks_scenario.f_item_healingsalve(),
+              nx_tactics_decks_scenario.f_item_finewoodlandcloak(),
               nx_tactics_decks_scenario.f_item_shieldbuckler(),
               nx_tactics_decks_scenario.f_item_shieldheater(),
               nx_tactics_decks_scenario.f_item_shieldround(),
@@ -369,6 +372,36 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function item_finewoodlandcloak
+   * @return {item}
+   */
+  static t_item_finewoodlandcloak = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_finewoodlandcloak = {
+    vx_type: nx_tactics_decks_scenario.t_item_finewoodlandcloak
+  }
+
+  // (func item-finewoodlandcloak)
+  static f_item_finewoodlandcloak() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Fine Woodland Cloak",
+      ":image",
+      "images/cards/item-finewoodlandcloak.svg",
+      ":summary",
+      "* [Passive]: [Stealth]:+1 in [Forest]\n* [Passive]: Discard the first [Fatigue] you receive from [Weather] each [Turn].",
+      ":body",
+      "2x0",
+      ":mass",
+      "2kg/4.4lb"
+    )
+    return output
+  }
+
+  /**
    * @function item_goldcoins
    * @return {item}
    */
@@ -424,6 +457,36 @@ export default class nx_tactics_decks_scenario {
       "2x0",
       ":mass",
       "2kg/4.4lb"
+    )
+    return output
+  }
+
+  /**
+   * @function item_healingsalve
+   * @return {item}
+   */
+  static t_item_healingsalve = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_healingsalve = {
+    vx_type: nx_tactics_decks_scenario.t_item_healingsalve
+  }
+
+  // (func item-healingsalve)
+  static f_item_healingsalve() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Healing Salve",
+      ":image",
+      "images/cards/item-healingsalve.svg",
+      ":summary",
+      "* [Uses]: 3\n* [Double Action] Use:1: Reduce a Major Wound to a Minor Wound.",
+      ":body",
+      "5x-1",
+      ":mass",
+      "500g/1.1lb"
     )
     return output
   }
@@ -1229,6 +1292,89 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function unit_flint
+   * @return {unit}
+   */
+  static t_unit_flint = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_flint = {
+    vx_type: nx_tactics_decks_scenario.t_unit_flint
+  }
+
+  // (func unit-flint)
+  static f_unit_flint() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Flint",
+      ":image",
+      "images/cards/unit-flint.svg",
+      ":race",
+      "Half-elven",
+      ":gender",
+      "M",
+      ":age",
+      17,
+      ":body",
+      "7x1",
+      ":mind",
+      "5x1",
+      ":will",
+      "5x1",
+      ":move",
+      "3x1",
+      ":mass",
+      "70kg/153lb",
+      ":height",
+      "1.67m/5'6",
+      ":beast",
+      "1x0",
+      ":shadow",
+      "1x0",
+      ":value",
+      "1x0",
+      ":speedland",
+      "30kph/20mph",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_closecombat,
+          ":level",
+          "1",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario.f_item_dagger()
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_stealth,
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_sneak
+            )
+          )
+        )
+      )
+    )
+    return output
+  }
+
+  /**
    * @function unit_goblinscout
    * @return {unit}
    */
@@ -1889,8 +2035,10 @@ export default class nx_tactics_decks_scenario {
       "item-bowshort": nx_tactics_decks_scenario.e_item_bowshort,
       "item-coppercoins": nx_tactics_decks_scenario.e_item_coppercoins,
       "item-dagger": nx_tactics_decks_scenario.e_item_dagger,
+      "item-finewoodlandcloak": nx_tactics_decks_scenario.e_item_finewoodlandcloak,
       "item-goldcoins": nx_tactics_decks_scenario.e_item_goldcoins,
       "item-hammer": nx_tactics_decks_scenario.e_item_hammer,
+      "item-healingsalve": nx_tactics_decks_scenario.e_item_healingsalve,
       "item-platinumcoins": nx_tactics_decks_scenario.e_item_platinumcoins,
       "item-shieldbuckler": nx_tactics_decks_scenario.e_item_shieldbuckler,
       "item-shieldheater": nx_tactics_decks_scenario.e_item_shieldheater,
@@ -1922,6 +2070,7 @@ export default class nx_tactics_decks_scenario {
       "place-temple": nx_tactics_decks_scenario.e_place_temple,
       "place-tradingpost": nx_tactics_decks_scenario.e_place_tradingpost,
       "place-woodenhall": nx_tactics_decks_scenario.e_place_woodenhall,
+      "unit-flint": nx_tactics_decks_scenario.e_unit_flint,
       "unit-goblinscout": nx_tactics_decks_scenario.e_unit_goblinscout,
       "unit-horse": nx_tactics_decks_scenario.e_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scenario.e_unit_jesaveer,
@@ -1940,8 +2089,10 @@ export default class nx_tactics_decks_scenario {
       "item-bowshort": nx_tactics_decks_scenario.t_item_bowshort,
       "item-coppercoins": nx_tactics_decks_scenario.t_item_coppercoins,
       "item-dagger": nx_tactics_decks_scenario.t_item_dagger,
+      "item-finewoodlandcloak": nx_tactics_decks_scenario.t_item_finewoodlandcloak,
       "item-goldcoins": nx_tactics_decks_scenario.t_item_goldcoins,
       "item-hammer": nx_tactics_decks_scenario.t_item_hammer,
+      "item-healingsalve": nx_tactics_decks_scenario.t_item_healingsalve,
       "item-platinumcoins": nx_tactics_decks_scenario.t_item_platinumcoins,
       "item-shieldbuckler": nx_tactics_decks_scenario.t_item_shieldbuckler,
       "item-shieldheater": nx_tactics_decks_scenario.t_item_shieldheater,
@@ -1973,6 +2124,7 @@ export default class nx_tactics_decks_scenario {
       "place-temple": nx_tactics_decks_scenario.t_place_temple,
       "place-tradingpost": nx_tactics_decks_scenario.t_place_tradingpost,
       "place-woodenhall": nx_tactics_decks_scenario.t_place_woodenhall,
+      "unit-flint": nx_tactics_decks_scenario.t_unit_flint,
       "unit-goblinscout": nx_tactics_decks_scenario.t_unit_goblinscout,
       "unit-horse": nx_tactics_decks_scenario.t_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scenario.t_unit_jesaveer,
@@ -2121,6 +2273,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_item_dagger
     }
 
+    // (func item-finewoodlandcloak)
+    nx_tactics_decks_scenario.t_item_finewoodlandcloak['vx_value'] = {
+      name          : "item-finewoodlandcloak",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_finewoodlandcloak
+    }
+
     // (func item-goldcoins)
     nx_tactics_decks_scenario.t_item_goldcoins['vx_value'] = {
       name          : "item-goldcoins",
@@ -2155,6 +2325,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_item_hammer
+    }
+
+    // (func item-healingsalve)
+    nx_tactics_decks_scenario.t_item_healingsalve['vx_value'] = {
+      name          : "item-healingsalve",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_healingsalve
     }
 
     // (func item-platinumcoins)
@@ -2715,6 +2903,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_place_woodenhall
     }
 
+    // (func unit-flint)
+    nx_tactics_decks_scenario.t_unit_flint['vx_value'] = {
+      name          : "unit-flint",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_flint
+    }
+
     // (func unit-goblinscout)
     nx_tactics_decks_scenario.t_unit_goblinscout['vx_value'] = {
       name          : "unit-goblinscout",
@@ -2923,7 +3129,9 @@ export default class nx_tactics_decks_scenario {
     Object.assign(nx_tactics_decks_scenario.c_ability_sneak, vx_core.f_new(
       nx_tactics_base.t_ability,
       ":name",
-      "Sneak"
+      "Sneak",
+      ":summary",
+      "* You may use [Stealth] even though you moved this round."
     ))
 
     // (const ability-trapping)
@@ -2972,7 +3180,9 @@ export default class nx_tactics_decks_scenario {
     Object.assign(nx_tactics_decks_scenario.c_skill_stealth, vx_core.f_new(
       nx_tactics_base.t_skill,
       ":name",
-      "Stealth"
+      "Stealth",
+      ":summary",
+      "[Action]: Activate [Continuous] effect.\n[Continuous]:\n* When\n** A unit tries to detect you\n** And you haven't moved this round\n** And you are out of [Line of Sight] OR have full [Cover]\n* Then the unit must win a simple [Investigate] vs. your [Stealth] to notice you."
     ))
 
     // (const skill-survival)

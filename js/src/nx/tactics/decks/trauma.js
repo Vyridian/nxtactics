@@ -579,7 +579,7 @@ export default class nx_tactics_decks_trauma {
       ":image",
       "images/card-trauma-stress.svg",
       ":summary",
-      "* If you have [Will]:0, you are [Shaken]. Any additional [Will] is flipped to [Trauma].\n* [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]",
+      "* Stress: temporary duress or horror.\n* Trauma: lasting [Rage], [Despair], [Need], [Fear].\n* If [Will]:0 then gain [Shaken].\n* [Shaken]: Cannot play odd [Defend] cards. Second action may only be [Recover]. Additional [Stress] is flipped to Trauma.",
       ":reference",
       "Because love's such an old-fashioned word\nAnd love dares you to care for\nThe people on the edge of the night\nAnd love dares you to change our way of\nCaring about ourselves\nThis is our last dance\nThis is ourselves under pressure - Queen and David Bowie, Under Pressure"
     ))

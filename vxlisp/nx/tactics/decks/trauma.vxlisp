@@ -9,8 +9,10 @@
   :titles "Emotional Trauma/Stress/Duress/Horror"
   :image "images/card-trauma-stress.svg"
   :summary
-   "* If you have [Will]:0, you are [Shaken]. Any additional [Will] is flipped to [Trauma].
-    * [Shaken]: Cannot play odd [Defend] cards and your second action may only be [Recover]"
+   "* Stress: temporary duress or horror.
+    * Trauma: lasting [Rage], [Despair], [Need], [Fear].
+    * If [Will]:0 then gain [Shaken].
+    * [Shaken]: Cannot play odd [Defend] cards. Second action may only be [Recover]. Additional [Stress] is flipped to Trauma."
   :reference
    "Because love's such an old-fashioned word
     And love dares you to care for

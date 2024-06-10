@@ -25,11 +25,11 @@ export default class nx_tactics_decks_scenario_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/scenario", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 16), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 65), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 49), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 68), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 52), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 65), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 68), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -72,8 +72,10 @@ export default class nx_tactics_decks_scenario_test {
           "item-bowshort", 0,
           "item-coppercoins", 0,
           "item-dagger", 0,
+          "item-finewoodlandcloak", 0,
           "item-goldcoins", 0,
           "item-hammer", 0,
+          "item-healingsalve", 0,
           "item-platinumcoins", 0,
           "item-shieldbuckler", 0,
           "item-shieldheater", 0,
@@ -105,6 +107,7 @@ export default class nx_tactics_decks_scenario_test {
           "place-temple", 0,
           "place-tradingpost", 0,
           "place-woodenhall", 0,
+          "unit-flint", 0,
           "unit-goblinscout", 0,
           "unit-horse", 0,
           "unit-jesaveer", 0,

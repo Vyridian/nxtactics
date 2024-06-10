@@ -47,7 +47,6 @@ import nx_tactics_books_skills_test from "./nx/tactics/books/skills_test.js"
 import nx_tactics_books_space_and_time_test from "./nx/tactics/books/space_and_time_test.js"
 import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_test.js"
 import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
-import nx_tactics_decks_damage_test from "./nx/tactics/decks/damage_test.js"
 import nx_tactics_decks_disorder_test from "./nx/tactics/decks/disorder_test.js"
 import nx_tactics_decks_fate_test from "./nx/tactics/decks/fate_test.js"
 import nx_tactics_decks_restraint_test from "./nx/tactics/decks/restraint_test.js"
@@ -57,6 +56,7 @@ import nx_tactics_decks_scenario_nightonthetown_test from "./nx/tactics/decks/sc
 import nx_tactics_decks_starter_test from "./nx/tactics/decks/starter_test.js"
 import nx_tactics_decks_tarot_test from "./nx/tactics/decks/tarot_test.js"
 import nx_tactics_decks_trauma_test from "./nx/tactics/decks/trauma_test.js"
+import nx_tactics_decks_wound_test from "./nx/tactics/decks/wound_test.js"
 import vx_data_file_test from "./vx/data/file_test.js"
 import vx_data_xml_test from "./vx/data/xml_test.js"
 import vx_test_test from "./vx/test_test.js"
@@ -136,7 +136,6 @@ export default class app_test {
       nx_tactics_books_space_and_time_test.test_package(context),
       nx_tactics_books_superheroes_test.test_package(context),
       nx_tactics_books_world_wars_test.test_package(context),
-      nx_tactics_decks_damage_test.test_package(context),
       nx_tactics_decks_disorder_test.test_package(context),
       nx_tactics_decks_fate_test.test_package(context),
       nx_tactics_decks_restraint_test.test_package(context),
@@ -146,6 +145,7 @@ export default class app_test {
       nx_tactics_decks_starter_test.test_package(context),
       nx_tactics_decks_tarot_test.test_package(context),
       nx_tactics_decks_trauma_test.test_package(context),
+      nx_tactics_decks_wound_test.test_package(context),
       vx_data_file_test.test_package(context),
       vx_data_xml_test.test_package(context),
       vx_test_test.test_package(context),

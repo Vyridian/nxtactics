@@ -112,6 +112,32 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
+   * @function card_advantage
+   * @return {card}
+   */
+  static t_card_advantage = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_advantage = {
+    vx_type: nx_tactics_decks_rule.t_card_advantage
+  }
+
+  // (func card-advantage)
+  static f_card_advantage() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-advantage",
+      ":name",
+      "Advantage",
+      ":summary",
+      "* When performing a Skill/Combat test\n* Then reveal Fate. You may use the Fate card instead of your card."
+    )
+    return output
+  }
+
+  /**
    * @function card_areaeffect
    * @return {card}
    */
@@ -263,6 +289,32 @@ export default class nx_tactics_decks_rule {
       "Defense Layers",
       ":summary",
       "* Obstacles\n* Shields\n* Armor\n* Toughness\n* Body"
+    )
+    return output
+  }
+
+  /**
+   * @function card_disadvantage
+   * @return {card}
+   */
+  static t_card_disadvantage = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_disadvantage = {
+    vx_type: nx_tactics_decks_rule.t_card_disadvantage
+  }
+
+  // (func card-disadvantage)
+  static f_card_disadvantage() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-disadvantage",
+      ":name",
+      "Disadvantage",
+      ":summary",
+      "* When performing a Skill/Combat test\n* Then reveal Fate. If it has a worse result than your card, you must use the Fate card instead."
     )
     return output
   }
@@ -586,6 +638,32 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
+   * @function card_suprise
+   * @return {card}
+   */
+  static t_card_suprise = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_suprise = {
+    vx_type: nx_tactics_decks_rule.t_card_suprise
+  }
+
+  // (func card-suprise)
+  static f_card_suprise() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-suprise",
+      ":name",
+      "Suprise",
+      ":summary",
+      "* When a unit suddenly appears adjacent to an existing unit, reveal [Fate]. If the result is [Coins] or [Cups] then the existing unit takes a [Stun] or [Stress] respectively."
+    )
+    return output
+  }
+
+  /**
    * @function deck_rules
    * @return {deck}
    */
@@ -625,8 +703,11 @@ export default class nx_tactics_decks_rule {
           nx_tactics_decks_rule.f_card_scaled(),
           nx_tactics_decks_rule.f_card_mapscale_1(),
           nx_tactics_decks_rule.f_card_mapscale_2(),
+          nx_tactics_decks_rule.f_card_advantage(),
+          nx_tactics_decks_rule.f_card_disadvantage(),
           nx_tactics_decks_rule.f_card_areaeffect(),
-          nx_tactics_decks_rule.f_card_reach()
+          nx_tactics_decks_rule.f_card_reach(),
+          nx_tactics_decks_rule.f_card_suprise()
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
         return vx_core.f_new(
@@ -654,12 +735,14 @@ export default class nx_tactics_decks_rule {
       "card-action-move": nx_tactics_decks_rule.e_card_action_move,
       "card-action-recover": nx_tactics_decks_rule.e_card_action_recover,
       "card-action-skill": nx_tactics_decks_rule.e_card_action_skill,
+      "card-advantage": nx_tactics_decks_rule.e_card_advantage,
       "card-areaeffect": nx_tactics_decks_rule.e_card_areaeffect,
       "card-beast": nx_tactics_decks_rule.e_card_beast,
       "card-characters": nx_tactics_decks_rule.e_card_characters,
       "card-conscience": nx_tactics_decks_rule.e_card_conscience,
       "card-damageguide": nx_tactics_decks_rule.e_card_damageguide,
       "card-defenselayers": nx_tactics_decks_rule.e_card_defenselayers,
+      "card-disadvantage": nx_tactics_decks_rule.e_card_disadvantage,
       "card-free-action": nx_tactics_decks_rule.e_card_free_action,
       "card-gameguide": nx_tactics_decks_rule.e_card_gameguide,
       "card-leveling": nx_tactics_decks_rule.e_card_leveling,
@@ -672,6 +755,7 @@ export default class nx_tactics_decks_rule {
       "card-scaled": nx_tactics_decks_rule.e_card_scaled,
       "card-setupguide": nx_tactics_decks_rule.e_card_setupguide,
       "card-shadow": nx_tactics_decks_rule.e_card_shadow,
+      "card-suprise": nx_tactics_decks_rule.e_card_suprise,
       "deck-rules": nx_tactics_decks_rule.e_deck_rules
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
@@ -679,12 +763,14 @@ export default class nx_tactics_decks_rule {
       "card-action-move": nx_tactics_decks_rule.t_card_action_move,
       "card-action-recover": nx_tactics_decks_rule.t_card_action_recover,
       "card-action-skill": nx_tactics_decks_rule.t_card_action_skill,
+      "card-advantage": nx_tactics_decks_rule.t_card_advantage,
       "card-areaeffect": nx_tactics_decks_rule.t_card_areaeffect,
       "card-beast": nx_tactics_decks_rule.t_card_beast,
       "card-characters": nx_tactics_decks_rule.t_card_characters,
       "card-conscience": nx_tactics_decks_rule.t_card_conscience,
       "card-damageguide": nx_tactics_decks_rule.t_card_damageguide,
       "card-defenselayers": nx_tactics_decks_rule.t_card_defenselayers,
+      "card-disadvantage": nx_tactics_decks_rule.t_card_disadvantage,
       "card-free-action": nx_tactics_decks_rule.t_card_free_action,
       "card-gameguide": nx_tactics_decks_rule.t_card_gameguide,
       "card-leveling": nx_tactics_decks_rule.t_card_leveling,
@@ -697,6 +783,7 @@ export default class nx_tactics_decks_rule {
       "card-scaled": nx_tactics_decks_rule.t_card_scaled,
       "card-setupguide": nx_tactics_decks_rule.t_card_setupguide,
       "card-shadow": nx_tactics_decks_rule.t_card_shadow,
+      "card-suprise": nx_tactics_decks_rule.t_card_suprise,
       "deck-rules": nx_tactics_decks_rule.t_deck_rules
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -781,6 +868,24 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_action_skill
+    }
+
+    // (func card-advantage)
+    nx_tactics_decks_rule.t_card_advantage['vx_value'] = {
+      name          : "card-advantage",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_advantage
     }
 
     // (func card-areaeffect)
@@ -889,6 +994,24 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_defenselayers
+    }
+
+    // (func card-disadvantage)
+    nx_tactics_decks_rule.t_card_disadvantage['vx_value'] = {
+      name          : "card-disadvantage",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_disadvantage
     }
 
     // (func card-free-action)
@@ -1105,6 +1228,24 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_shadow
+    }
+
+    // (func card-suprise)
+    nx_tactics_decks_rule.t_card_suprise['vx_value'] = {
+      name          : "card-suprise",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_suprise
     }
 
     // (func deck-rules)

@@ -4,6 +4,7 @@ import nx_tactics_ui_uitactics from "../../../../src/nx/tactics/ui/uitactics.js"
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
 import nx_tactics_base from "../../../../src/nx/tactics/base.js"
+import vx_collection from "../../../../src/vx/collection.js"
 import nx_tactics_decks_deck from "../../../../src/nx/tactics/decks/deck.js"
 import vx_event from "../../../../src/vx/event.js"
 import vx_data_file from "../../../../src/vx/data/file.js"
@@ -31,12 +32,12 @@ export default class nx_tactics_ui_uitactics_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/uitactics", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 5), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 65, ":tests", 38, ":total", 58), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 53), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 65, ":tests", 36, ":total", 55), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 52), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 6, ":tests", 4, ":total", 58), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 7, ":tests", 4, ":total", 55), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -52,16 +53,13 @@ export default class nx_tactics_ui_uitactics_test {
       "constmap",
         vx_core.f_new(
           vx_core.t_intmap,
-          "event-navbutton-back-click", 0,
           "event-navigate-card-click", 0,
           "event-printbutton-click", 0,
-          "eventmap-app-home-card", 0,
-          "eventmap-navbutton-back", 0
+          "eventmap-app-home-card", 0
         ),
       "funcmap",
         vx_core.f_new(
           vx_core.t_intmap,
-          "event-navbutton-click<-event", 0,
           "event-navigate-card-click<-event", 0,
           "event-printbutton-click<-event", 0,
           "string-display<-any", 0,

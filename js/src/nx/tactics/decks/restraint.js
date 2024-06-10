@@ -1345,7 +1345,7 @@ export default class nx_tactics_decks_restraint {
       ":image",
       "images/card-restraint-slow.svg",
       ":summary",
-      "* If you have [Move]:0, you are Encumbered. Any additional [Slow] is flipped to [Restraint].\n* Encumbered: Cannot play odd [Evade] cards and [Move] actions are halved (rounded up).\n* Special*: Each Move penalty is -25% rounded up. Simplified using the following chart:\n* Original Move: 10-8-5-3-0 / 9-7-5-3-0 / 8-6-4-2-0 / 7-6-4-2-0 / 6-5-3-2-0 / 5-4-3-2-0 / 4-3-2-1-0 / 3-3-2-1-0 / 2-2-1-1-0 / 1-1-1-1-0"
+      "* Slow: temporary movement penalty.\n* Restraint: [Constrict] [Bind] [Hold] [Lock]\n* If [Move]:0 gain [Encumbered].\n* [Encumbered]: Cannot play odd [Evade] cards. [Move] actions are halved (rounded up). Second action may only be [Recover]. Additional [Slow] is flipped to Restraint.\n* Special*: Each Move penalty is -25% rounded up. Simplified using the following chart:\n* Original Move: 10-8-5-3-0 / 9-7-5-3-0 / 8-6-4-2-0 / 7-6-4-2-0 / 6-5-3-2-0 / 5-4-3-2-0 / 4-3-2-1-0 / 3-3-2-1-0 / 2-2-1-1-0 / 1-1-1-1-0"
     ))
 
   }

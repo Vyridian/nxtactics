@@ -1,5 +1,6 @@
 (package nx/tactics/ui/uitactics
  :libs (lib base   :path nx/tactics/base)
+       (lib coll   :path vx/collection)
        (lib deck   :path nx/tactics/decks/deck)
        (lib event  :path vx/event)
        (lib file   :path vx/data/file)
@@ -9,22 +10,9 @@
        (lib ui     :path vx/ui/ui)
  :doc "Tactics UI")
 
-(const event-navbutton-back-click : event/event
- (copy event/event-click
-  :event<-event event-navbutton-click<-event))
-
 (const event-navigate-card-click : event/event
  (copy event/event-click
   :event<-event event-navigate-card-click<-event))
-
-(func event-navbutton-click<-event : event/event
- [event : event/event]
- (let : event/event
-  [ischanged : boolean :=
-    (nav/boolean-navigate-back)]
-  event)
- :context
- :doc "Event handler for card clicks")
 
 (func event-navigate-card-click<-event : event/event
  [event : event/event]
@@ -52,7 +40,7 @@
  [event : event/event]
  (let : event/event
   [uimain : ui/ui :=
-    (nav/ui-main)
+    (nav/ui-readstate-main)
    isprint : boolean :=
     (ui/boolean-print
      uimain)]
@@ -65,12 +53,6 @@
   (event/eventlist
    event-navigate-card-click))
  :doc "Eventmap for app-home-card")
-
-(const eventmap-navbutton-back : event/eventmap
- (event/eventmap<-eventlist
-  (event/eventlist
-   event-navbutton-back-click))
- :doc "Eventmap for navbutton-back")
 
 (func string<-conscience-beast-shadow : string
  [conscience : string
@@ -1053,10 +1035,9 @@
   :uimap
    (ui/uimap<-uilist
     (ui-navbutton-back)
-    (nav/ui-navbutton<-ui-parent-selected
+    (nav/ui-navbutton<-ui-selected
      (ui/ui
       :name "Home")
-     "app-navbar"
      true)))
  :doc "Returns a new side navigation bar")
 
@@ -1226,7 +1207,7 @@
     (nav/ui-navbutton)
    name : string := "Back"
    uid1 : string := (:uid navbutton)
-   uid2 : string := (string uid1 name)
+   uid2 : string := (string uid1 "/" name)
    uiimage : ui/ui :=
     (ui-image<-uid-path
      uid2
@@ -1240,8 +1221,7 @@
    :uid uid2
    :name name
    :stylelist styles1
-   :uimap uimap
-   :eventmap eventmap-navbutton-back))
+   :uimap uimap))
  :doc "Returns the navigation back button")
 
 (func ui-navigate<-ui : ui/ui
@@ -1250,8 +1230,8 @@
   (then
    (!-empty uiarg)
    (let : ui/ui
-    [navbar : ui := (nav/ui-navbar)
-     main   : ui := (nav/ui-main)
+    [navbar : ui := (nav/ui-readstate-navbar)
+     main   : ui := (nav/ui-readstate-main)
      ui1 : ui :=
       (ui-navigate<-ui-navbar
        uiarg
@@ -1269,88 +1249,63 @@
  [ui   : ui/ui
   main : ui/ui]
  (let : ui/ui
-  [uid      : string   := (:uid  ui)
-   data     : any      := (:data ui)
-   mainid   : string   := (:uid   main)
-   mainmap1 : ui/uimap := (:uimap main)
-   mainmap2 : ui/uimap :=
-    (map<-map : ui/uimap
-     mainmap1
-     (fn : ui/ui
-      [key   : string
-       value : ui/ui]
-      (if : ui/ui
-       (then
-        (= true (:hidden value))
-        (empty ui/ui))
-       (else
-        (copy value
-         :hidden true)))))
-   mainb1 : ui/ui :=
+  [data    : any      := (:data ui)
+   mainid  : string   := (:uid main)
+   mainmap : ui/uimap := (:uimap main)
+   pos : int :=
+    (ui/int-visible<-ui main)
+   len : int :=
+    (length mainmap)
+   isremoveend : boolean :=
+    (if : boolean
+     (then
+      (> len pos)
+      (ui/boolean-layoutremove<-ui-start-end
+       main (+1 pos) len)))
+   uivisible : ui :=
+    (ui-visible<-ui main)
+   ishidden : boolean :=
+    (ui/boolean-layout<-ui-parent-visible
+     uivisible main false)
+   child : ui/ui :=
     (ui-nav<-any-parent
      data mainid)
-   mainb2 : ui/ui :=
-    (ui/ui-addlayout<-ui
-     mainb1)
-   mainmap3 : ui/uimap :=
-    (copy mainmap2
-     uid mainb2)
-   main2 : ui/ui :=
-    (ui/ui-writechildmap<-ui-childmap
-     main mainmap3)
-   main3 : ui/ui :=
-    (ui/ui-layout
-     main2)]
-  main3)
+   isadded : boolean :=
+    (ui/boolean-layoutaddchild<-ui-parent
+     child main)]
+  main)
  :context
- :sideeffects "Alters uinavbar and uimain"
+ :sideeffects "Alters uimain"
  :doc "Navigate to the given ui")
 
 (func ui-navigate<-ui-navbar : ui/ui
  [ui     : ui/ui
   navbar : ui/ui]
  (let : ui/ui
-  [uid      : string := (:uid ui)
-   navbarid : string := (:uid navbar)
-   buttona1 : ui/ui :=
-    (ui/ui-selected<-ui
-     navbar)
-   buttona2 : ui/ui :=
-    (copy buttona1
-     :selected false)
-   uidbtnb : string :=
-    (string
-     "navbutton-"
-     uid)
-   buttonb1 : ui/ui :=
-    (ui/ui-child<-ui-uid
-     navbar uidbtnb)
-   buttonb2 : ui/ui :=
-    (if : ui/ui
+  [uid    : string   := (:uid ui)
+   navmap : ui/uimap := (:uimap navbar)
+   pos : int :=
+    (ui/int-selected<-ui navbar)
+   len : int :=
+    (length navmap)
+   isremoveend : boolean :=
+    (if : boolean
      (then
-      (!-empty buttonb1)
-      (copy buttonb1
-       :selected true))
-     (else
-      (nav/ui-navbutton<-ui-parent-selected
-       ui
-       navbarid
-       true)))
-   navbar2 : ui/ui :=
-    (ui/ui-writechild<-ui-child
-     navbar
-     buttona2)
-   navbar3 : ui/ui :=
-    (ui/ui-writechild<-ui-child
-     navbar2
-     buttonb2)
-   navbar4 : ui/ui :=
-    (ui/ui-addlayout<-ui
-     navbar3)
-   navbar5 : ui/ui :=
-    (ui/ui-layout
-     navbar4)]
-  navbar5)
+      (> len pos)
+      (ui/boolean-layoutremove<-ui-start-end
+       navbar (+1 pos) len)))
+   uiselected : ui/ui :=
+    (ui/ui-selected<-ui navbar)
+   isselected : boolean :=
+    (ui/boolean-layout<-ui-parent-selected
+     uiselected navbar false)
+   button : ui/ui :=
+    (nav/ui-navbutton<-ui-selected
+     ui true)
+   isadded : boolean :=
+    (ui/boolean-layoutaddchild<-ui-parent
+     button navbar)]
+  navbar)
  :context
  :sideeffects "Alters uinavbar"
  :doc "Navigate to the given ui")

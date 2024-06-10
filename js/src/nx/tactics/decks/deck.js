@@ -2,7 +2,6 @@
 
 import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
-import nx_tactics_decks_damage from "../../../nx/tactics/decks/damage.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
 import nx_tactics_decks_fate from "../../../nx/tactics/decks/fate.js"
 import nx_tactics_decks_restraint from "../../../nx/tactics/decks/restraint.js"
@@ -12,6 +11,7 @@ import nx_tactics_decks_scenario_nightonthetown from "../../../nx/tactics/decks/
 import nx_tactics_decks_starter from "../../../nx/tactics/decks/starter.js"
 import nx_tactics_decks_tarot from "../../../nx/tactics/decks/tarot.js"
 import nx_tactics_decks_trauma from "../../../nx/tactics/decks/trauma.js"
+import nx_tactics_decks_wound from "../../../nx/tactics/decks/wound.js"
 import nx_tactics_books_advanced_rules from "../../../nx/tactics/books/advanced_rules.js"
 import nx_tactics_books_age_of_sail from "../../../nx/tactics/books/age_of_sail.js"
 import nx_tactics_books_age_of_steam from "../../../nx/tactics/books/age_of_steam.js"
@@ -351,16 +351,16 @@ export default class nx_tactics_decks_deck {
           nx_tactics_base.t_cardlist,
           nx_tactics_decks_tarot.f_deck_tarot(),
           nx_tactics_decks_fate.f_deck_fate(),
-          nx_tactics_decks_damage.f_deck_damage(),
-          nx_tactics_decks_damage.f_deck_damageback(),
+          nx_tactics_decks_wound.f_deck_wound(),
+          nx_tactics_decks_wound.f_deck_woundback(),
           nx_tactics_decks_disorder.f_deck_disorder(),
           nx_tactics_decks_disorder.f_deck_disorderback(),
           nx_tactics_decks_trauma.f_deck_trauma(),
           nx_tactics_decks_trauma.f_deck_traumaback(),
           nx_tactics_decks_restraint.f_deck_restraint(),
           nx_tactics_decks_restraint.f_deck_restraintback(),
-          nx_tactics_decks_damage.f_deck_bleeding(),
-          nx_tactics_decks_damage.f_deck_bloodloss(),
+          nx_tactics_decks_wound.f_deck_bleeding(),
+          nx_tactics_decks_wound.f_deck_bloodloss(),
           nx_tactics_decks_starter.f_deck_player("blue"),
           nx_tactics_decks_starter.f_deck_player("green"),
           nx_tactics_decks_starter.f_deck_player("red"),

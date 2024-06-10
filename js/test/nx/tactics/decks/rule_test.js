@@ -26,11 +26,11 @@ export default class nx_tactics_decks_rule_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/rule", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 23), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 23), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 26), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 26), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 23), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 26), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -54,12 +54,14 @@ export default class nx_tactics_decks_rule_test {
           "card-action-move", 0,
           "card-action-recover", 0,
           "card-action-skill", 0,
+          "card-advantage", 0,
           "card-areaeffect", 0,
           "card-beast", 0,
           "card-characters", 0,
           "card-conscience", 0,
           "card-damageguide", 0,
           "card-defenselayers", 0,
+          "card-disadvantage", 0,
           "card-free-action", 0,
           "card-gameguide", 0,
           "card-leveling", 0,
@@ -72,6 +74,7 @@ export default class nx_tactics_decks_rule_test {
           "card-scaled", 0,
           "card-setupguide", 0,
           "card-shadow", 0,
+          "card-suprise", 0,
           "deck-rules", 0
         )
     )

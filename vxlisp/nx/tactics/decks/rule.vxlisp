@@ -52,6 +52,14 @@
     * Fail: If the user abandons the test or has any stat reduced to 0, the Skill fails and the Skill card is returned losing all reductions.
     * Extended: The user may continue this test on different turns until a Success or Fail."))
 
+(func card-advantage : base/card
+ (base/card
+  :id "card-advantage"
+  :name "Advantage"
+  :summary
+   "* When performing a Skill/Combat test
+    * Then reveal Fate. You may use the Fate card instead of your card."))
+
 (func card-areaeffect : base/card
  (base/card
   :id "areaeffect"
@@ -106,6 +114,14 @@
     * Armor
     * Toughness
     * Body"))
+
+(func card-disadvantage : base/card
+ (base/card
+  :id "card-disadvantage"
+  :name "Disadvantage"
+  :summary
+   "* When performing a Skill/Combat test
+    * Then reveal Fate. If it has a worse result than your card, you must use the Fate card instead."))
 
 (func card-free-action : base/card
  (base/card
@@ -202,6 +218,13 @@
   :summary
    "* Can target one additional dot away [Scaled]"))
 
+(func card-suprise : base/card
+ (base/card
+  :id "card-suprise"
+  :name "Suprise"
+  :summary
+   "* When a unit suddenly appears adjacent to an existing unit, reveal [Fate]. If the result is [Coins] or [Cups] then the existing unit takes a [Stun] or [Stress] respectively."))
+
 (func card-scale : base/card
  (base/card
   :id "card-scale"
@@ -265,8 +288,11 @@
      (card-scaled)
      (card-mapscale-1)
      (card-mapscale-2)
+     (card-advantage)
+     (card-disadvantage)
      (card-areaeffect)
-     (card-reach))
+     (card-reach)
+     (card-suprise))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]

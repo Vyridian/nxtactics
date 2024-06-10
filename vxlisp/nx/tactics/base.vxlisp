@@ -208,8 +208,8 @@
  :properties [damagemap   : damagemap
               deckmap     : deckmap
               itemmap     : itemmap
-              placemap : placemap
               modifiermap : modifiermap
+              placemap    : placemap
               powermap    : powermap
               rulemap     : rulemap
               scenariomap : scenariomap
@@ -388,6 +388,7 @@
 
 (type unitskill : struct
  :properties [level            : string
+              powerlevel       : string
               skill            : skill
               unitabilitymap   : unitabilitymap
               unititemmap      : unititemmap

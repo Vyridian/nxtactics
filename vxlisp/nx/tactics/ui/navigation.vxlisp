@@ -1,34 +1,99 @@
 (package nx/tactics/ui/navigation
- :libs (lib styles :path nx/tactics/ui/stylesheet)
+ :libs (lib event  :path vx/event)
+       (lib styles :path nx/tactics/ui/stylesheet)
        (lib ui     :path vx/ui/ui)
  :doc "Tactics UI")
 
+(const event-navbutton-click : event/event
+ (copy event/event-click
+  :event<-event event-navbutton-click<-event))
+
+(func event-navbutton-click<-event : event/event
+ [event : event/event]
+ (let : event/event
+  [target : ui := (ui/ui-from<-event event)
+   uid : string := (:uid target)
+   isback : boolean := (= uid "app/navbar/Back")
+   isnav : boolean :=
+    (if : boolean
+     (then isback
+      (boolean-navigate-back))
+     (else
+      (boolean-navigate<-navid
+       uid)))]
+  event)
+ :context
+ :doc "Event handler for card clicks")
+
+(const eventmap-navbutton : event/eventmap
+ (event/eventmap<-eventlist
+  (event/eventlist
+   event-navbutton-click))
+ :doc "Eventmap for navbutton")
+
+(func boolean-navigate<-navid : boolean
+ [navid : string]
+ (let : boolean
+  [navbar : ui/ui := (ui-readstate-navbar)
+   inavselect : int :=
+    (ui/int-child<-ui-uid
+     navbar navid)]
+  (boolean-navigate<-select
+   (-1 inavselect)))
+ :context
+ :sideeffects "Alters uinavbar and uimain"
+ :doc "Navigate to the named navid.")
+
+(func boolean-navigate<-select : boolean
+ [iselect : int]
+ (let : boolean
+  [main : ui/ui := (ui-readstate-main)
+   ideselect : int :=
+    (ui/int-visible<-ui
+     main)
+   ischange : boolean :=
+    (!= iselect ideselect)]
+  (if : boolean
+   (then ischange
+    (let : boolean
+     [navbar : ui/ui := (ui-readstate-navbar)
+      navdeselect : ui/ui :=
+       (ui/ui-child<-ui-pos navbar (+1 ideselect))
+      isnavdeselect : boolean :=
+       (ui/boolean-layout<-ui-parent-selected
+        navdeselect navbar false)
+      navselect : ui/ui :=
+       (ui/ui-child<-ui-pos navbar (+1 iselect))
+      isnavselect : boolean :=
+       (ui/boolean-layout<-ui-parent-selected
+        navselect navbar true)
+      maindeselect : ui/ui :=
+       (ui/ui-child<-ui-pos main ideselect)
+      ismaindeselect : boolean :=
+       (ui/boolean-layout<-ui-parent-visible
+        maindeselect main false)
+      mainselect : ui/ui :=
+       (ui/ui-child<-ui-pos main iselect)
+      ismainselect : boolean :=
+       (ui/boolean-layout<-ui-parent-visible
+        mainselect main true)]
+      true))))
+ :context
+ :sideeffects "Alters uinavbar and uimain"
+ :doc "Navigate to the ui at select position.")
+
 (func boolean-navigate-back : boolean
  (let : boolean
-  [navbar : ui/ui := (ui-navbar)
-   main : ui/ui := (ui-main)
-   selected : int :=
+  [navbar : ui/ui := (ui-readstate-navbar)
+   ideselect : int :=
     (ui/int-selected<-ui
      navbar)
    ischange : boolean :=
-    (> selected 2)
-   poschg : int :=
-    (if : int
-     ischange
-     (- selected 2))
-   navbarchg : ui/ui :=
-    (if : ui/ui
-     (then
-      ischange
-      (ui-layout<-navbar-selected
-       navbar poschg)))
-   mainchg : ui/ui :=
-    (if : ui/ui
-     (then
-      ischange
-      (ui-layout<-main-selected
-       main poschg)))]
-  ischange)
+    (> ideselect 2)]
+  (if : boolean
+   (then ischange
+    (boolean-navigate<-select
+     (- ideselect 2)))))
  :context
  :sideeffects "Alters uinavbar and uimain"
  :doc "Navigate to the previous ui")
@@ -37,44 +102,6 @@
  (ui/ui-readstate-uiapp)
  :context
  :doc "Returns the application app")
-
-(func ui-main : ui/ui
- (ui/ui-readstate<-uid
-  "app/main")
- :context
- :doc "Returns the application main panel")
-
-(func ui-navbar : ui/ui
- (ui/ui-readstate<-uid
-  "app/navbar")
- :context
- :doc "Returns the application navbar")
-
-(func ui-navbutton : ui/ui
- (ui/ui
-  :uid "app/navbar/"
-  :stylelist
-   (ui/stylelist
-    style-app-navbar-button
-    style-clickable)))
-
-(func ui-navbutton<-ui-parent-selected : ui/ui
- [ui       : ui/ui
-  parent   : string
-  selected : boolean]
- (let : ui/ui
-  [name : string  := (:name ui)
-   uid  : string  := (string parent "/" name)
-   navbutton : ui := (ui-navbutton)]
-  (copy navbutton
-   :uid    uid
-   :name   name
-   :selected selected
-   :stylelist
-    (ui/stylelist
-     style-app-navbar-button
-     style-clickable)))
- :doc "Returns a navbar-button")
 
 (func ui-layout<-main-selected : ui/ui
  [main     : ui/ui
@@ -85,7 +112,7 @@
    main)
   (else
    (let : ui/ui
-    [parent : ui/ui := (ui-app)]
+    [parent : ui/ui := (ui/ui-readstate-uiapp)]
     (ui/ui-layout<-ui-parent-visible
      main parent selected))))
  :context
@@ -100,8 +127,44 @@
    navbar)
   (else
    (let : ui/ui
-    [parent : ui/ui := (ui-app)]
+    [parent : ui/ui := (ui/ui-readstate-uiapp)]
     (ui/ui-layout<-ui-parent-selected
      navbar parent (+1 selected)))))
  :context
  :doc "")
+
+(func ui-navbutton : ui/ui
+ (ui/ui
+  :uid "app/navbar"
+  :stylelist
+   (ui/stylelist
+    style-app-navbar-button
+    style-clickable)
+  :eventmap eventmap-navbutton)
+ :doc "Returns an empty navbutton")
+
+(func ui-navbutton<-ui-selected : ui/ui
+ [ui       : ui/ui
+  selected : boolean]
+ (let : ui/ui
+  [name : string  := (:name ui)
+   navbutton : ui := (ui-navbutton)
+   uid  : string  :=
+    (string (:uid navbutton) "/" name)]
+  (copy navbutton
+   :uid    uid
+   :name   name
+   :selected selected))
+ :doc "Returns a navbar-button")
+
+(func ui-readstate-main : ui/ui
+ (ui/ui-readstate<-uid
+  "app/main")
+ :context
+ :doc "Returns the application main panel")
+
+(func ui-readstate-navbar : ui/ui
+ (ui/ui-readstate<-uid
+  "app/navbar")
+ :context
+ :doc "Returns the application navbar")
