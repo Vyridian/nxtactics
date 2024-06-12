@@ -1272,7 +1272,14 @@
      data mainid)
    isadded : boolean :=
     (ui/boolean-layoutaddchild<-ui-parent
-     child main)]
+     child main)
+   card : base/card :=
+    (any<-any : base/card
+     data)
+   title : string := (:name card)
+   istitle : boolean :=
+    (nav/boolean-layouttitlebar<-string
+     title)]
   main)
  :context
  :sideeffects "Alters uimain"

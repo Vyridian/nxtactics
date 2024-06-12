@@ -1,6 +1,7 @@
 'strict mode'
 
 import vx_core from "../../../vx/core.js"
+import nx_tactics_base from "../../../nx/tactics/base.js"
 import vx_event from "../../../vx/event.js"
 import nx_tactics_ui_stylesheet from "../../../nx/tactics/ui/stylesheet.js"
 import vx_ui_ui from "../../../vx/ui/ui.js"
@@ -20,6 +21,36 @@ export default class nx_tactics_ui_navigation {
    * {eventmap}
    */
   static c_eventmap_navbutton = {vx_type: vx_event.t_eventmap, vx_constdef: {pkgname: 'nx/tactics/ui/navigation', name: 'eventmap-navbutton'}}
+
+  /**
+   * @function boolean_layouttitlebar_from_string
+   * Returns true of titlebar updated with give card.
+   * @param  {string} text
+   * @return {boolean}
+   */
+  static t_boolean_layouttitlebar_from_string = {
+    vx_type: vx_core.t_type
+  }
+  static e_boolean_layouttitlebar_from_string = {
+    vx_type: nx_tactics_ui_navigation.t_boolean_layouttitlebar_from_string
+  }
+
+  // (func boolean-layouttitlebar<-string)
+  static f_boolean_layouttitlebar_from_string(context, text) {
+    let output = vx_core.e_boolean
+    output = vx_core.f_let(
+      {"any-1": vx_core.t_boolean},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const titlebar = nx_tactics_ui_navigation.f_ui_readstate_titlebar(context)
+        const title = vx_ui_ui.f_ui_child_from_ui_uid(titlebar, "app/titlebar/title")
+        const title2 = vx_core.f_copy(title, ":data", text)
+        const title3 = vx_ui_ui.f_ui_layout_from_ui_orig_parent(title2, title, titlebar)
+        return   true
+      })
+    )
+    return output
+  }
 
   /**
    * @function boolean_navigate_back
@@ -155,6 +186,10 @@ export default class nx_tactics_ui_navigation {
                   main,
                   true
                 )
+                const data = vx_core.f_any_from_struct({"any-1": vx_core.t_any, "struct-2": vx_ui_ui.t_ui}, mainselect, ":data")
+                const card = vx_core.f_any_from_any({"any-1": nx_tactics_base.t_card, "any-2": vx_core.t_any}, data)
+                const title = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
+                const istitle = nx_tactics_ui_navigation.f_boolean_layouttitlebar_from_string(context, title)
                 return   true
               })
             )})
@@ -403,6 +438,25 @@ export default class nx_tactics_ui_navigation {
     return output
   }
 
+  /**
+   * @function ui_readstate_titlebar
+   * Returns the application titlebar panel
+   * @return {ui}
+   */
+  static t_ui_readstate_titlebar = {
+    vx_type: vx_core.t_type
+  }
+  static e_ui_readstate_titlebar = {
+    vx_type: nx_tactics_ui_navigation.t_ui_readstate_titlebar
+  }
+
+  // (func ui-readstate-titlebar)
+  static f_ui_readstate_titlebar(context) {
+    let output = vx_ui_ui.e_ui
+    output = vx_ui_ui.f_ui_readstate_from_uid(context, "app/titlebar")
+    return output
+  }
+
 
 
   static {
@@ -411,6 +465,7 @@ export default class nx_tactics_ui_navigation {
       "eventmap-navbutton": nx_tactics_ui_navigation.c_eventmap_navbutton
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
+      "boolean-layouttitlebar<-string": nx_tactics_ui_navigation.e_boolean_layouttitlebar_from_string,
       "boolean-navigate-back": nx_tactics_ui_navigation.e_boolean_navigate_back,
       "boolean-navigate<-navid": nx_tactics_ui_navigation.e_boolean_navigate_from_navid,
       "boolean-navigate<-select": nx_tactics_ui_navigation.e_boolean_navigate_from_select,
@@ -421,9 +476,11 @@ export default class nx_tactics_ui_navigation {
       "ui-navbutton": nx_tactics_ui_navigation.e_ui_navbutton,
       "ui-navbutton<-ui-selected": nx_tactics_ui_navigation.e_ui_navbutton_from_ui_selected,
       "ui-readstate-main": nx_tactics_ui_navigation.e_ui_readstate_main,
-      "ui-readstate-navbar": nx_tactics_ui_navigation.e_ui_readstate_navbar
+      "ui-readstate-navbar": nx_tactics_ui_navigation.e_ui_readstate_navbar,
+      "ui-readstate-titlebar": nx_tactics_ui_navigation.e_ui_readstate_titlebar
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "boolean-layouttitlebar<-string": nx_tactics_ui_navigation.t_boolean_layouttitlebar_from_string,
       "boolean-navigate-back": nx_tactics_ui_navigation.t_boolean_navigate_back,
       "boolean-navigate<-navid": nx_tactics_ui_navigation.t_boolean_navigate_from_navid,
       "boolean-navigate<-select": nx_tactics_ui_navigation.t_boolean_navigate_from_select,
@@ -434,7 +491,8 @@ export default class nx_tactics_ui_navigation {
       "ui-navbutton": nx_tactics_ui_navigation.t_ui_navbutton,
       "ui-navbutton<-ui-selected": nx_tactics_ui_navigation.t_ui_navbutton_from_ui_selected,
       "ui-readstate-main": nx_tactics_ui_navigation.t_ui_readstate_main,
-      "ui-readstate-navbar": nx_tactics_ui_navigation.t_ui_readstate_navbar
+      "ui-readstate-navbar": nx_tactics_ui_navigation.t_ui_readstate_navbar,
+      "ui-readstate-titlebar": nx_tactics_ui_navigation.t_ui_readstate_titlebar
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -447,6 +505,24 @@ export default class nx_tactics_ui_navigation {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
+
+    // (func boolean-layouttitlebar<-string)
+    nx_tactics_ui_navigation.t_boolean_layouttitlebar_from_string['vx_value'] = {
+      name          : "boolean-layouttitlebar<-string",
+      pkgname       : "nx/tactics/ui/navigation",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_navigation.f_boolean_layouttitlebar_from_string
+    }
 
     // (func boolean-navigate-back)
     nx_tactics_ui_navigation.t_boolean_navigate_back['vx_value'] = {
@@ -644,6 +720,24 @@ export default class nx_tactics_ui_navigation {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_navigation.f_ui_readstate_navbar
+    }
+
+    // (func ui-readstate-titlebar)
+    nx_tactics_ui_navigation.t_ui_readstate_titlebar['vx_value'] = {
+      name          : "ui-readstate-titlebar",
+      pkgname       : "nx/tactics/ui/navigation",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_navigation.f_ui_readstate_titlebar
     }
 
     // (const event-navbutton-click)

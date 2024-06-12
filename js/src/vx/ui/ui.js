@@ -545,13 +545,14 @@ export default class vx_ui_ui {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const ui2 = vx_ui_ui.f_ui_addlayout_from_ui(context, uiarg)
         const iswrite = vx_ui_ui.f_boolean_write_from_ui_parent(ui2, parent)
-        return vx_ui_ui.f_ui_layout_from_ui_orig_parent(
+        const ui3 = vx_ui_ui.f_ui_layout_from_ui_orig_parent(
           ui2,
           vx_core.f_empty(
             vx_ui_ui.t_ui
           ),
           parent
         )
+        return iswrite
       })
     )
     return output

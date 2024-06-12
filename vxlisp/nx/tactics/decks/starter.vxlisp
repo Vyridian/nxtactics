@@ -32,7 +32,15 @@
   num : int]
  (base/card
   :id (string "card-skill-" color "-" num)
-  :name (string "Skill#" num)
+  :name (string "Skill #" num)
+  :image (string "images/card-" color ".svg")))
+
+(func card-target : base/card
+ [color : string
+  num : int]
+ (base/card
+  :id (string "card-target-" color "-" num)
+  :name (string "Target #" num)
   :image (string "images/card-" color ".svg")))
 
 (func card-turn-order : base/card
@@ -40,16 +48,16 @@
   num   : int]
  (base/card
   :id    (string "turn-order-" num)
-  :name  (string "Turn Order: Unit#" num)
+  :name  (string "Turn Order: Unit #" num)
   :image (string "images/card-" color ".svg")
   :summary
-   "* Reveal: Flip each card of [Turn Order] deck to form a row. This is the [Player] order this turn.
-    * Action1: Each [Player] chooses a Unit to activate along with their first [Action] and target(s).
-    * Change1: In order, each [Player] may change their decision.
-    * Resolve1: If a player was the target of an Action, they must wait for that action to resolve. Otherwise, all players performs their Action simultaneously. Note: lower order Units cannot be blocked by the movement of higher order Units.
-    * Action2: Each [Player] chooses their second [Action] and targets.
-    * Change2: Same as Change1.
-    * Resolve2: Same as Resolve1."))
+   "* Reveal: Flip each card of [Turn Order] deck to form a row.
+    * Action 1: Simulataneously, each Unit's controller chooses a target (or none) for their first action and places their Target card on that Turn Order card.
+    * Change 1: In order, each Unit may change their decision.
+    * Resolve 1: All Units act simultaneously unless a Unit was targeted by a Unit with a lower Turn Order, they must wait for the targeting Unit to resolve. Note: lower order Units cannot be blocked by the movement of higher order Units.
+    * Action 2: Same as Action 1 for second Action.
+    * Change 2: Same as Change 1.
+    * Resolve 2: Same as Resolve 1."))
 
 (func card-turn-player : base/card
  [color : string]
@@ -62,7 +70,7 @@
   num   : int]
  (base/card
   :id (string "unit-" color "-" num)
-  :name (string "Unit#" num)
+  :name (string "Unit #" num)
   :image (string "images/card-" color ".svg")))
 
 (func deck-player : base/deck
@@ -81,6 +89,11 @@
      (card-unit color 3)
      (card-unit color 4)
      (card-unit color 5)
+     (card-target color 1)
+     (card-target color 2)
+     (card-target color 3)
+     (card-target color 4)
+     (card-target color 5)
      (card-skill color 1)
      (card-skill color 2)
      (card-skill color 3)

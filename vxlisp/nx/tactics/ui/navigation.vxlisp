@@ -1,5 +1,6 @@
 (package nx/tactics/ui/navigation
- :libs (lib event  :path vx/event)
+ :libs (lib base   :path nx/tactics/base)
+       (lib event  :path vx/event)
        (lib styles :path nx/tactics/ui/stylesheet)
        (lib ui     :path vx/ui/ui)
  :doc "Tactics UI")
@@ -30,6 +31,25 @@
   (event/eventlist
    event-navbutton-click))
  :doc "Eventmap for navbutton")
+
+(func boolean-layouttitlebar<-string : boolean
+ [text : string]
+ (let : boolean
+  [titlebar : ui :=
+    (ui-readstate-titlebar)
+   title : ui/ui :=
+    (ui/ui-child<-ui-uid
+     titlebar "app/titlebar/title")
+   title2 : ui/ui :=
+    (copy title
+     :data text)
+   title3 : ui/ui :=
+    (ui-layout<-ui-orig-parent
+     title2 title titlebar)]
+  true)
+ :context
+ :sideeffects "Alters uititlebar"
+ :doc "Returns true of titlebar updated with give card.")
 
 (func boolean-navigate<-navid : boolean
  [navid : string]
@@ -76,7 +96,15 @@
        (ui/ui-child<-ui-pos main iselect)
       ismainselect : boolean :=
        (ui/boolean-layout<-ui-parent-visible
-        mainselect main true)]
+        mainselect main true)
+      data : any := (:data mainselect)
+      card : base/card :=
+       (any<-any : base/card
+        data)
+      title : string := (:name card)
+      istitle : boolean :=
+       (nav/boolean-layouttitlebar<-string
+        title)]
       true))))
  :context
  :sideeffects "Alters uinavbar and uimain"
@@ -152,8 +180,8 @@
    uid  : string  :=
     (string (:uid navbutton) "/" name)]
   (copy navbutton
-   :uid    uid
-   :name   name
+   :uid  uid
+   :name name
    :selected selected))
  :doc "Returns a navbar-button")
 
@@ -168,3 +196,9 @@
   "app/navbar")
  :context
  :doc "Returns the application navbar")
+
+(func ui-readstate-titlebar : ui/ui
+ (ui/ui-readstate<-uid
+  "app/titlebar")
+ :context
+ :doc "Returns the application titlebar panel")

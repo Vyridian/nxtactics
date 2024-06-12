@@ -311,7 +311,7 @@ export default class vx_collection {
       valuemap,
       key,
       vx_core.f_empty(
-        vx_core.t_generic_any_1
+        vx_core.t_any
       )
     )
     return output

@@ -1712,6 +1712,9 @@ export default class nx_tactics_ui_uitactics {
         )
         const child = nx_tactics_ui_uitactics.f_ui_nav_from_any_parent(data, mainid)
         const isadded = vx_ui_ui.f_boolean_layoutaddchild_from_ui_parent(context, child, main)
+        const card = vx_core.f_any_from_any({"any-1": nx_tactics_base.t_card, "any-2": vx_core.t_any}, data)
+        const title = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
+        const istitle = nx_tactics_ui_navigation.f_boolean_layouttitlebar_from_string(context, title)
         return main
       })
     )
