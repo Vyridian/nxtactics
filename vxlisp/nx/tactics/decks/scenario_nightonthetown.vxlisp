@@ -14,9 +14,17 @@
  (base/skill
   :name "Close Combat"))
 
+(const skill-investigation : base/skill
+ (base/skill
+  :name "Investigation"))
+
 (const skill-melee : base/skill
  (base/skill
   :name "Melee"))
+
+(const skill-ranged : base/skill
+ (base/skill
+  :name "Ranged"))
 
 (const skill-stealth : base/skill
  (base/skill
@@ -159,6 +167,16 @@
   :body "3x0"
   :mass "3.1kg/7lb"))
 
+(func item-monocle : base/item
+ (base/item
+  :name "Monocle"
+  :image "images/cards/item-monocle.svg"
+  :summary
+   "* if examining small objects
+    ** [Investigation]:+1"
+  :body "2x-2"
+  :mass "20g/.05lb"))
+
 (func place-clinic : base/place
  (base/place
   :name "Clinic"
@@ -189,12 +207,42 @@
   :name "Street"
   :image "images/cards/place-street.svg"))
 
+(func unit-theprofessor : base/unit
+ (base/unit
+  :name "The Professor"
+  :image "images/cards/unit-theprofessor.svg"
+  :body "7x2"
+  :mind "7x1"
+  :will "3x1"
+  :move "6x1"
+  :mass "70kg/155lb"
+  :height "1.7m/5'6"
+  :speedland "60kph/37mph"
+  :demeanor "Foolish"
+  :nature "Cowardly"
+  :summary ""
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-ranged
+     :level "1"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-bowshort))))
+    (base/unitskill
+     :skill skill-investigation
+     :level "1"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-monocle)))))))
+
+
 (func unit-zombiedog : base/unit
  (base/unit
   :name "Zombie Dog"
   :image "images/cards/unit-zombiedog.svg"
-  :summary
-   ""
   :body "2x1"
   :mind "8x-1"
   :will "4x1"
@@ -211,7 +259,10 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability ability-bite))))))
+         :ability ability-bite))))
+  :summary
+   "[Prey]: [Bleeding], [Prone] within 2 Moves. Never targets [Undead].
+    [Ravenous]: Will ignore current target for a [Bleeding] or [Prone] target within 2 Moves."))
 
 (func unit-zombierunner : base/unit
  (base/unit
@@ -223,7 +274,9 @@
   :move "5x1"
   :mass "450kg/1000lb"
   :speedland "50kph/30mph"
-  :demeanor "Aloof"))
+  :demeanor "Aloof"  :summary
+   "[Prey]: [Bleeding], [Prone] within 2 Moves. Never targets [Undead].
+    [Ravenous]: Will ignore current target for a [Bleeding] or [Prone] target within 2 Moves."))
 
 (func unit-zombiewalker : base/unit
  (base/unit
@@ -234,7 +287,10 @@
   :will "2x1"
   :move "5x1"
   :mass "450kg/1000lb"
-  :speedland "50kph/30mph"))
+  :speedland "50kph/30mph"
+  :summary
+   "[Prey]: [Bleeding], [Prone] within 2 Moves. Never targets [Undead].
+    [Ravenous]: Will ignore current target for a [Bleeding] or [Prone] target within 2 Moves."))
 
 (func deck-nightonthetown : base/deck
  (base/deck
@@ -242,6 +298,7 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
+     (unit-theprofessor)
      (unit-zombiedog)
      (unit-zombierunner)
      (unit-zombiewalker)
@@ -254,6 +311,7 @@
      (item-knife)
      (item-liquor)
      (item-molotovcocktail)
+     (item-monocle)
      (item-revolver)
      (item-revolverammo)
      (item-rifle)

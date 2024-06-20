@@ -25,10 +25,22 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   static c_skill_closecombat = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario_nightonthetown', name: 'skill-closecombat'}}
 
   /**
+   * Constant: skill-investigation
+   * {skill}
+   */
+  static c_skill_investigation = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario_nightonthetown', name: 'skill-investigation'}}
+
+  /**
    * Constant: skill-melee
    * {skill}
    */
   static c_skill_melee = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario_nightonthetown', name: 'skill-melee'}}
+
+  /**
+   * Constant: skill-ranged
+   * {skill}
+   */
+  static c_skill_ranged = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario_nightonthetown', name: 'skill-ranged'}}
 
   /**
    * Constant: skill-stealth
@@ -70,6 +82,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           nx_tactics_base.t_cardlist,
+          nx_tactics_decks_scenario_nightonthetown.f_unit_theprofessor(),
           nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog(),
           nx_tactics_decks_scenario_nightonthetown.f_unit_zombierunner(),
           nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker(),
@@ -82,6 +95,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
           nx_tactics_decks_scenario_nightonthetown.f_item_knife(),
           nx_tactics_decks_scenario_nightonthetown.f_item_liquor(),
           nx_tactics_decks_scenario_nightonthetown.f_item_molotovcocktail(),
+          nx_tactics_decks_scenario_nightonthetown.f_item_monocle(),
           nx_tactics_decks_scenario_nightonthetown.f_item_revolver(),
           nx_tactics_decks_scenario_nightonthetown.f_item_revolverammo(),
           nx_tactics_decks_scenario_nightonthetown.f_item_rifle(),
@@ -366,6 +380,36 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "Molotov Cocktail",
       ":image",
       "images/cards/item-molotovcocktail.svg"
+    )
+    return output
+  }
+
+  /**
+   * @function item_monocle
+   * @return {item}
+   */
+  static t_item_monocle = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_monocle = {
+    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_monocle
+  }
+
+  // (func item-monocle)
+  static f_item_monocle() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Monocle",
+      ":image",
+      "images/cards/item-monocle.svg",
+      ":summary",
+      "* if examining small objects\n** [Investigation]:+1",
+      ":body",
+      "2x-2",
+      ":mass",
+      "20g/.05lb"
     )
     return output
   }
@@ -713,6 +757,83 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   }
 
   /**
+   * @function unit_theprofessor
+   * @return {unit}
+   */
+  static t_unit_theprofessor = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_theprofessor = {
+    vx_type: nx_tactics_decks_scenario_nightonthetown.t_unit_theprofessor
+  }
+
+  // (func unit-theprofessor)
+  static f_unit_theprofessor() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "The Professor",
+      ":image",
+      "images/cards/unit-theprofessor.svg",
+      ":body",
+      "7x2",
+      ":mind",
+      "7x1",
+      ":will",
+      "3x1",
+      ":move",
+      "6x1",
+      ":mass",
+      "70kg/155lb",
+      ":height",
+      "1.7m/5'6",
+      ":speedland",
+      "60kph/37mph",
+      ":demeanor",
+      "Foolish",
+      ":nature",
+      "Cowardly",
+      ":summary",
+      "",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario_nightonthetown.c_skill_ranged,
+          ":level",
+          "1",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario_nightonthetown.f_item_bowshort()
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario_nightonthetown.c_skill_investigation,
+          ":level",
+          "1",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario_nightonthetown.f_item_monocle()
+            )
+          )
+        )
+      )
+    )
+    return output
+  }
+
+  /**
    * @function unit_zombiedog
    * @return {unit}
    */
@@ -732,8 +853,6 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "Zombie Dog",
       ":image",
       "images/cards/unit-zombiedog.svg",
-      ":summary",
-      "",
       ":body",
       "2x1",
       ":mind",
@@ -767,7 +886,9 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             )
           )
         )
-      )
+      ),
+      ":summary",
+      "[Prey]: [Bleeding], [Prone] within 2 Moves. Never targets [Undead].\n[Ravenous]: Will ignore current target for a [Bleeding] or [Prone] target within 2 Moves."
     )
     return output
   }
@@ -805,7 +926,9 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":speedland",
       "50kph/30mph",
       ":demeanor",
-      "Aloof"
+      "Aloof",
+      ":summary",
+      "[Prey]: [Bleeding], [Prone] within 2 Moves. Never targets [Undead].\n[Ravenous]: Will ignore current target for a [Bleeding] or [Prone] target within 2 Moves."
     )
     return output
   }
@@ -841,7 +964,9 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":mass",
       "450kg/1000lb",
       ":speedland",
-      "50kph/30mph"
+      "50kph/30mph",
+      ":summary",
+      "[Prey]: [Bleeding], [Prone] within 2 Moves. Never targets [Undead].\n[Ravenous]: Will ignore current target for a [Bleeding] or [Prone] target within 2 Moves."
     )
     return output
   }
@@ -853,7 +978,9 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "ability-bite": nx_tactics_decks_scenario_nightonthetown.c_ability_bite,
       "ability-sneak": nx_tactics_decks_scenario_nightonthetown.c_ability_sneak,
       "skill-closecombat": nx_tactics_decks_scenario_nightonthetown.c_skill_closecombat,
+      "skill-investigation": nx_tactics_decks_scenario_nightonthetown.c_skill_investigation,
       "skill-melee": nx_tactics_decks_scenario_nightonthetown.c_skill_melee,
+      "skill-ranged": nx_tactics_decks_scenario_nightonthetown.c_skill_ranged,
       "skill-stealth": nx_tactics_decks_scenario_nightonthetown.c_skill_stealth,
       "skill-survival": nx_tactics_decks_scenario_nightonthetown.c_skill_survival,
       "skill-tradeskill": nx_tactics_decks_scenario_nightonthetown.c_skill_tradeskill
@@ -870,6 +997,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "item-knife": nx_tactics_decks_scenario_nightonthetown.e_item_knife,
       "item-liquor": nx_tactics_decks_scenario_nightonthetown.e_item_liquor,
       "item-molotovcocktail": nx_tactics_decks_scenario_nightonthetown.e_item_molotovcocktail,
+      "item-monocle": nx_tactics_decks_scenario_nightonthetown.e_item_monocle,
       "item-revolver": nx_tactics_decks_scenario_nightonthetown.e_item_revolver,
       "item-revolverammo": nx_tactics_decks_scenario_nightonthetown.e_item_revolverammo,
       "item-rifle": nx_tactics_decks_scenario_nightonthetown.e_item_rifle,
@@ -884,6 +1012,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "place-gunstore": nx_tactics_decks_scenario_nightonthetown.e_place_gunstore,
       "place-policestation": nx_tactics_decks_scenario_nightonthetown.e_place_policestation,
       "place-street": nx_tactics_decks_scenario_nightonthetown.e_place_street,
+      "unit-theprofessor": nx_tactics_decks_scenario_nightonthetown.e_unit_theprofessor,
       "unit-zombiedog": nx_tactics_decks_scenario_nightonthetown.e_unit_zombiedog,
       "unit-zombierunner": nx_tactics_decks_scenario_nightonthetown.e_unit_zombierunner,
       "unit-zombiewalker": nx_tactics_decks_scenario_nightonthetown.e_unit_zombiewalker
@@ -900,6 +1029,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "item-knife": nx_tactics_decks_scenario_nightonthetown.t_item_knife,
       "item-liquor": nx_tactics_decks_scenario_nightonthetown.t_item_liquor,
       "item-molotovcocktail": nx_tactics_decks_scenario_nightonthetown.t_item_molotovcocktail,
+      "item-monocle": nx_tactics_decks_scenario_nightonthetown.t_item_monocle,
       "item-revolver": nx_tactics_decks_scenario_nightonthetown.t_item_revolver,
       "item-revolverammo": nx_tactics_decks_scenario_nightonthetown.t_item_revolverammo,
       "item-rifle": nx_tactics_decks_scenario_nightonthetown.t_item_rifle,
@@ -914,6 +1044,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "place-gunstore": nx_tactics_decks_scenario_nightonthetown.t_place_gunstore,
       "place-policestation": nx_tactics_decks_scenario_nightonthetown.t_place_policestation,
       "place-street": nx_tactics_decks_scenario_nightonthetown.t_place_street,
+      "unit-theprofessor": nx_tactics_decks_scenario_nightonthetown.t_unit_theprofessor,
       "unit-zombiedog": nx_tactics_decks_scenario_nightonthetown.t_unit_zombiedog,
       "unit-zombierunner": nx_tactics_decks_scenario_nightonthetown.t_unit_zombierunner,
       "unit-zombiewalker": nx_tactics_decks_scenario_nightonthetown.t_unit_zombiewalker
@@ -1126,6 +1257,24 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario_nightonthetown.f_item_molotovcocktail
+    }
+
+    // (func item-monocle)
+    nx_tactics_decks_scenario_nightonthetown.t_item_monocle['vx_value'] = {
+      name          : "item-monocle",
+      pkgname       : "nx/tactics/decks/scenario_nightonthetown",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_monocle
     }
 
     // (func item-revolver)
@@ -1380,6 +1529,24 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       fn            : nx_tactics_decks_scenario_nightonthetown.f_place_street
     }
 
+    // (func unit-theprofessor)
+    nx_tactics_decks_scenario_nightonthetown.t_unit_theprofessor['vx_value'] = {
+      name          : "unit-theprofessor",
+      pkgname       : "nx/tactics/decks/scenario_nightonthetown",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario_nightonthetown.f_unit_theprofessor
+    }
+
     // (func unit-zombiedog)
     nx_tactics_decks_scenario_nightonthetown.t_unit_zombiedog['vx_value'] = {
       name          : "unit-zombiedog",
@@ -1455,11 +1622,25 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "Close Combat"
     ))
 
+    // (const skill-investigation)
+    Object.assign(nx_tactics_decks_scenario_nightonthetown.c_skill_investigation, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Investigation"
+    ))
+
     // (const skill-melee)
     Object.assign(nx_tactics_decks_scenario_nightonthetown.c_skill_melee, vx_core.f_new(
       nx_tactics_base.t_skill,
       ":name",
       "Melee"
+    ))
+
+    // (const skill-ranged)
+    Object.assign(nx_tactics_decks_scenario_nightonthetown.c_skill_ranged, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Ranged"
     ))
 
     // (const skill-stealth)

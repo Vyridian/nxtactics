@@ -39,19 +39,6 @@
    "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]
     * Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."))
 
-(func card-action-skill : base/card
- (base/card
-  :id "action-skill"
-  :name "Skill Action"
-  :summary
-   "* Action: Assign your Unit's Skill card to the target.
-    * Stat: The Skill test has a target Body, Mind, Will, or Move.
-    * Resolve: Resolve the Skill as if it was Combat.
-    * Damage: Any stat reductions are added to the Skill card instead of the target.
-    * Success: If the stat is reduced to 0, the Skill succeeds.
-    * Fail: If the user abandons the test or has any stat reduced to 0, the Skill fails and the Skill card is returned losing all reductions.
-    * Extended: The user may continue this test on different turns until a Success or Fail."))
-
 (func card-advantage : base/card
  (base/card
   :id "card-advantage"
@@ -110,6 +97,7 @@
   :name "Defense Layers"
   :summary
    "* Obstacles
+    * Cover
     * Shields
     * Armor
     * Toughness
@@ -135,10 +123,10 @@
     * Final Sprint: Take a [Slow] to [Move].
     * Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."))
 
-(func card-gameguide : base/card
+(func card-game : base/card
  (base/card
-  :id "gameguide"
-  :name "Game Guide"
+  :id "game"
+  :name "Game"
   :summary
    "* Create [Characters] or [Factions] to play [Scenarios].
     * Each [Scenario] contains various [Threats] and [Goals]
@@ -218,6 +206,16 @@
   :summary
    "* Can target one additional dot away [Scaled]"))
 
+(func card-round : base/card
+ (base/card
+  :id "round"
+  :name "Round"
+  :summary
+   "* A Round represents a unit of time passing.
+    * Round Start: Increase the Round Counter by 1.
+    * Turns: During a Round, each Unit will get a [Turn].
+    * Round End: "))
+
 (func card-suprise : base/card
  (base/card
   :id "card-suprise"
@@ -264,15 +262,53 @@
    "* The Shadow
     * Shadow Triumphant: The Shadow is now in control of this unit. Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank"))
 
+(func card-sklll-action : base/card
+ (base/card
+  :id "sklll-action"
+  :name "Skill Action"
+  :summary
+   "* Action: Assign your Unit's Target card to the target.
+    * Stat: The Skill test has a target Stat.
+    * Resolve: Resolve the Skill as if it was Combat.
+    * Damage: Any stat reductions are added to the Skill card instead of the target.
+    * Success: If the stat is reduced to 0, the Skill succeeds.
+    * Fail: If the user abandons the test or has any stat reduced to 0, the Skill fails and the Skill card is returned losing all reductions.
+    * Simple: Some Tests only require a single success or failure.
+    * Extended: The user may continue this test on different turns until a Success or Fail.
+    * See Also: [Unskilled] [Unfamiliar Item]."))
+
+(func card-turn : base/card
+ (base/card
+  :id "turn"
+  :name "Turn"
+  :summary
+   ""))
+
+(func card-unfamiliaritem : base/card
+ (base/card
+  :id "card-unfamiliaritem"
+  :name "Unfamiliar Item"
+  :summary
+   "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled]."))
+
+(func card-unskilled : base/card
+ (base/card
+  :id "card-unskilled"
+  :name "Unskilled"
+  :summary
+   "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item]."))
+
 (func deck-rules : base/deck
  (let : base/deck
   [cardlist : base/cardlist :=
     (base/cardlist
-     (card-gameguide)
+     (card-game)
+     (card-round)
+     (card-turn)
      (card-setupguide)
      (card-action-move)
      (card-action-fight)
-     (card-action-skill)
+     (card-sklll-action)
      (card-action-recover)
      (card-free-action)
      (card-lineofsight)
@@ -292,7 +328,10 @@
      (card-disadvantage)
      (card-areaeffect)
      (card-reach)
-     (card-suprise))
+     (card-suprise)
+     (card-unskilled)
+     (card-unfamiliaritem)
+    )
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]

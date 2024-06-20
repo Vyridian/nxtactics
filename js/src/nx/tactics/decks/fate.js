@@ -480,6 +480,13 @@ export default class nx_tactics_decks_fate {
           ),
           ":name",
           "Fate",
+          ":image",
+          vx_core.f_new(
+            vx_core.t_string,
+            "images/card-",
+            color,
+            ".svg"
+          ),
           ":cardmap",
           nx_tactics_base.f_cardmap_from_cardlist(
             nx_tactics_base.f_cardlist_copy_from_card_num(card, 54)

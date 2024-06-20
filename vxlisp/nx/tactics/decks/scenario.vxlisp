@@ -2,6 +2,13 @@
  :libs (lib base :path nx/tactics/base)
  :doc  "Tactics Scenario Decks")
 
+(const ability-ambush : base/ability
+ (base/ability
+  :name "Ambush"
+  :summary
+   "* [Extended Skill]: Any one who approaches the units, tests [Investigation] vs. your [Stealth] with [Advantage] to detect them.
+    * Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak."))
+
 (const ability-bargain : base/ability
  (base/ability
   :name "Bargain"))
@@ -46,11 +53,30 @@
 
 (const skill-closecombat : base/skill
  (base/skill
-  :name "Close Combat"))
+  :name "Close Combat"
+  :summary
+   "* Requires: Units must be in the same space to use Close Combat.
+    * Fighting very close to the opponent. This includes most martial arts, brawling, and knife fighting."))
+
+(const skill-intimidation : base/skill
+ (base/skill
+  :name "Intimidation"
+  :summary
+   ""))
+
+(const skill-investigation : base/skill
+ (base/skill
+  :name "Investigation"
+  :summary
+   ""))
 
 (const skill-melee : base/skill
  (base/skill
-  :name "Melee"))
+  :name "Melee"
+  :summary
+   "* Requires: Units must 1 space away from each other.
+    * Allows the use of all Melee weapons, but unfamiliar weapons are at Initiative:-1.
+    * Fighting near the opponent. This includes most hand to hand weapons."))
 
 (const skill-hunting : base/skill
  (base/skill
@@ -63,10 +89,10 @@
    "[Action]: Activate [Continuous] effect.
     [Continuous]:
     * When
-    ** A unit tries to detect you
+    ** A unit performs an [Investigate] Action near you
     ** And you haven't moved this round
     ** And you are out of [Line of Sight] OR have full [Cover]
-    * Then the unit must win a simple [Investigate] vs. your [Stealth] to notice you."))
+    * Then the unit must win a simple [Investigate] vs. your [Stealth] with [Advantage] to notice you."))
 
 (const skill-survival : base/skill
  (base/skill
@@ -212,6 +238,30 @@
   :body "5x-1"
   :mass "500g/1.1lb"))
 
+(func item-longsword : base/item
+ (base/item
+  :name "Longsword"
+  :image "images/cards/item-longsword.svg"
+  :summary
+   "* Melee: [Pierce] [Slash]
+    * Hit:+1 [Size Bonus]
+    * Location: [1-hand]
+    * Armor:1x1"
+  :body "10x-1"
+  :mass "1.25kg/3lb"))
+
+(func item-rations : base/item
+ (base/item
+  :name "Rations"
+  :image "images/cards/item-rations.svg"
+  :summary
+   "* Enough Food for 7-10 days.
+    * Cost: [Silver Coins]
+    * An assortment of jerky, dried fruits, hardtack, hardrolls, dried cheese, potatoes, turnips and nuts.
+    * Water is heavy, so these are mostly dry. If consumed without water, the unit will be [Dehydrated] after 7 days."
+  :body "4x0"
+  :mass "4kg/9lbs"))
+
 (func item-shieldbuckler : base/item
  (base/item
   :name "Buckler Shield"
@@ -257,10 +307,10 @@
   :body "3x0"
   :mass "3kg/6lb"))
 
-(func item-spearshort : base/item
+(func item-shortspear : base/item
  (base/item
   :name "Short Spear"
-  :image "images/cards/item-spearshort.svg"
+  :image "images/cards/item-shortspear.svg"
   :summary
    "* Melee: [Pierce] [Slash]
     * Hit:+1 [Size Bonus]
@@ -268,17 +318,27 @@
   :body "10x-1"
   :mass "1.5kg/4lb"))
 
-(func item-swordlong : base/item
+(func item-shortsword : base/item
  (base/item
-  :name "Longsword"
-  :image "images/cards/item-swordlong.svg"
+  :name "Shortsword"
+  :image "images/cards/item-shortsword.svg"
   :summary
    "* Melee: [Pierce] [Slash]
-    * Hit:+1 [Size Bonus]
+    * Hit: [Size Bonus]
     * Location: [1-hand]
     * Armor:1x1"
   :body "10x-1"
-  :mass "1.25kg/3lb"))
+  :mass "1kg/2.2lb"))
+
+(func item-waterskin : base/item
+ (base/item
+  :name "Waterskin"
+  :image "images/cards/item-waterskin.svg"
+  :summary
+   "* 2 liters/.5 gallon. Enough Water for 2 days.
+    * Cost: [Copper Coins]. Can be refilled from any clean water source."
+  :body "2x0"
+  :mass "2kg/4.4lbs"))
 
 (func item-woodaxe : base/item
  (base/item
@@ -404,6 +464,78 @@
   :name "Wooden Hall"
   :image "images/cards/place-woodenhall.svg"))
 
+(func unit-bandit : base/unit
+ (base/unit
+  :name "Bandit"
+  :image "images/cards/unit-bandit.svg"
+  :summary
+   "A highwayman."
+  :race "Human"
+  :gender "M"
+  :body "8x1"
+  :mind "5x1"
+  :will "5x1"
+  :move "3x1"
+  :mass "80kg/180"
+  :height "1.8m/6ft"
+  :speedland "30kph/20mph"
+  :mass "80kg/220lb"
+  :height "1.9m/6'3ft"
+  :demeanor "Opportunistic"
+  :nature "Ruthless"
+  :beast "2x0"
+  :shadow "5x0"
+  :value "1x0"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-melee
+     :level "3"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-shortsword))))
+    (base/unitskill
+     :skill skill-stealth
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability ability-ambush))))))
+
+(func unit-bruiser : base/unit
+ (base/unit
+  :name "Bruiser"
+  :image "images/cards/unit-bruiser.svg"
+  :summary
+   "A burly, intimidating man."
+  :race "Human"
+  :gender "M"
+  :body "10x1"
+  :mind "3x1"
+  :will "5x1"
+  :move "2x1"
+  :mass "100kg/220lb"
+  :height "1.9m/6'3ft"
+  :speedland "20kph/12.5mph"
+  :demeanor "Glaring"
+  :nature "Callous"
+  :beast "5x0"
+  :shadow "1x0"
+  :value "1x0"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-closecombat
+     :level "2"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability ability-grab)))
+    (base/unitskill
+     :skill skill-intimidation
+     :level "1"))))
+
 (func unit-goblinscout : base/unit
  (base/unit
   :name "Goblin Scout"
@@ -472,6 +604,41 @@
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
         :ability ability-sneak))))))
+
+(func unit-guardsman : base/unit
+ (base/unit
+  :name "Guardsman"
+  :image "images/cards/unit-guardsman.svg"
+  :summary
+   "A typical member of a city watch or to keep lookout."
+  :race "Human"
+  :gender "M"
+  :body "8x1"
+  :mind "5x1"
+  :will "5x1"
+  :move "3x1"
+  :mass "80kg/180"
+  :height "1.8m/6ft"
+  :speedland "30kph/20mph"
+  :mass "80kg/220lb"
+  :height "1.9m/6'3ft"
+  :demeanor "Indifferent"
+  :nature "Lazy"
+  :beast "1x0"
+  :shadow "2x0"
+  :value "1x0"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill skill-melee
+     :level "2"
+     :unititemmap
+      (base/unititemmap<-unititemlist
+        (base/unititem
+         :item (item-shortspear))))
+    (base/unitskill
+     :skill skill-investigation
+     :level "1"))))
 
 (func unit-horse : base/unit
  (base/unit
@@ -705,15 +872,19 @@
     (base/cardmap<-cardlist
      (base/cardlist
       (unit-flint)
-      (unit-jesaveer)
-      (unit-jonaveer)
-      (unit-xeibhanower)
-      (unit-wilmducon)
-      (unit-liliducon)
-      (unit-wilddog)
-      (unit-goblinscout)
-      (unit-horse)
-      (unit-woodencart)
+      (unit-bandit)
+      (unit-bruiser)
+      (unit-guardsman)
+      (item-healingsalve)
+      (item-finewoodlandcloak)
+      (item-rations)
+      (item-waterskin)
+      skill-intimidation
+      skill-investigation
+      skill-stealth
+      ability-ambush
+      ability-sneak
+      skill-closecombat
       (item-coppercoins)
       (item-silvercoins)
       (item-goldcoins)
@@ -725,14 +896,22 @@
       (item-bowshort)
       (item-dagger)
       (item-hammer)
-      (item-healingsalve)
-      (item-finewoodlandcloak)
       (item-shieldbuckler)
       (item-shieldheater)
       (item-shieldround)
       (item-spear)
-      (item-spearshort)
-      (item-swordlong)
+      (item-shortspear)
+      (item-longsword)
+      (item-shortsword)
+      (unit-jesaveer)
+      (unit-jonaveer)
+      (unit-xeibhanower)
+      (unit-wilmducon)
+      (unit-liliducon)
+      (unit-wilddog)
+      (unit-goblinscout)
+      (unit-horse)
+      (unit-woodencart)
       (place-field)
       (place-forest)
       (place-mountain)

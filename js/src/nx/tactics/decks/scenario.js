@@ -7,6 +7,12 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 export default class nx_tactics_decks_scenario {
 
   /**
+   * Constant: ability-ambush
+   * {ability}
+   */
+  static c_ability_ambush = {vx_type: nx_tactics_base.t_ability, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'ability-ambush'}}
+
+  /**
    * Constant: ability-bargain
    * {ability}
    */
@@ -79,6 +85,18 @@ export default class nx_tactics_decks_scenario {
   static c_skill_hunting = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-hunting'}}
 
   /**
+   * Constant: skill-intimidation
+   * {skill}
+   */
+  static c_skill_intimidation = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-intimidation'}}
+
+  /**
+   * Constant: skill-investigation
+   * {skill}
+   */
+  static c_skill_investigation = {vx_type: nx_tactics_base.t_skill, vx_constdef: {pkgname: 'nx/tactics/decks/scenario', name: 'skill-investigation'}}
+
+  /**
    * Constant: skill-melee
    * {skill}
    */
@@ -133,15 +151,19 @@ export default class nx_tactics_decks_scenario {
             vx_core.f_new(
               nx_tactics_base.t_cardlist,
               nx_tactics_decks_scenario.f_unit_flint(),
-              nx_tactics_decks_scenario.f_unit_jesaveer(),
-              nx_tactics_decks_scenario.f_unit_jonaveer(),
-              nx_tactics_decks_scenario.f_unit_xeibhanower(),
-              nx_tactics_decks_scenario.f_unit_wilmducon(),
-              nx_tactics_decks_scenario.f_unit_liliducon(),
-              nx_tactics_decks_scenario.f_unit_wilddog(),
-              nx_tactics_decks_scenario.f_unit_goblinscout(),
-              nx_tactics_decks_scenario.f_unit_horse(),
-              nx_tactics_decks_scenario.f_unit_woodencart(),
+              nx_tactics_decks_scenario.f_unit_bandit(),
+              nx_tactics_decks_scenario.f_unit_bruiser(),
+              nx_tactics_decks_scenario.f_unit_guardsman(),
+              nx_tactics_decks_scenario.f_item_healingsalve(),
+              nx_tactics_decks_scenario.f_item_finewoodlandcloak(),
+              nx_tactics_decks_scenario.f_item_rations(),
+              nx_tactics_decks_scenario.f_item_waterskin(),
+              nx_tactics_decks_scenario.c_skill_intimidation,
+              nx_tactics_decks_scenario.c_skill_investigation,
+              nx_tactics_decks_scenario.c_skill_stealth,
+              nx_tactics_decks_scenario.c_ability_ambush,
+              nx_tactics_decks_scenario.c_ability_sneak,
+              nx_tactics_decks_scenario.c_skill_closecombat,
               nx_tactics_decks_scenario.f_item_coppercoins(),
               nx_tactics_decks_scenario.f_item_silvercoins(),
               nx_tactics_decks_scenario.f_item_goldcoins(),
@@ -153,14 +175,22 @@ export default class nx_tactics_decks_scenario {
               nx_tactics_decks_scenario.f_item_bowshort(),
               nx_tactics_decks_scenario.f_item_dagger(),
               nx_tactics_decks_scenario.f_item_hammer(),
-              nx_tactics_decks_scenario.f_item_healingsalve(),
-              nx_tactics_decks_scenario.f_item_finewoodlandcloak(),
               nx_tactics_decks_scenario.f_item_shieldbuckler(),
               nx_tactics_decks_scenario.f_item_shieldheater(),
               nx_tactics_decks_scenario.f_item_shieldround(),
               nx_tactics_decks_scenario.f_item_spear(),
-              nx_tactics_decks_scenario.f_item_spearshort(),
-              nx_tactics_decks_scenario.f_item_swordlong(),
+              nx_tactics_decks_scenario.f_item_shortspear(),
+              nx_tactics_decks_scenario.f_item_longsword(),
+              nx_tactics_decks_scenario.f_item_shortsword(),
+              nx_tactics_decks_scenario.f_unit_jesaveer(),
+              nx_tactics_decks_scenario.f_unit_jonaveer(),
+              nx_tactics_decks_scenario.f_unit_xeibhanower(),
+              nx_tactics_decks_scenario.f_unit_wilmducon(),
+              nx_tactics_decks_scenario.f_unit_liliducon(),
+              nx_tactics_decks_scenario.f_unit_wilddog(),
+              nx_tactics_decks_scenario.f_unit_goblinscout(),
+              nx_tactics_decks_scenario.f_unit_horse(),
+              nx_tactics_decks_scenario.f_unit_woodencart(),
               nx_tactics_decks_scenario.f_place_field(),
               nx_tactics_decks_scenario.f_place_forest(),
               nx_tactics_decks_scenario.f_place_mountain(),
@@ -492,6 +522,36 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function item_longsword
+   * @return {item}
+   */
+  static t_item_longsword = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_longsword = {
+    vx_type: nx_tactics_decks_scenario.t_item_longsword
+  }
+
+  // (func item-longsword)
+  static f_item_longsword() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Longsword",
+      ":image",
+      "images/cards/item-longsword.svg",
+      ":summary",
+      "* Melee: [Pierce] [Slash]\n* Hit:+1 [Size Bonus]\n* Location: [1-hand]\n* Armor:1x1",
+      ":body",
+      "10x-1",
+      ":mass",
+      "1.25kg/3lb"
+    )
+    return output
+  }
+
+  /**
    * @function item_platinumcoins
    * @return {item}
    */
@@ -517,6 +577,36 @@ export default class nx_tactics_decks_scenario {
       "10x-2",
       ":mass",
       "150g/.3lb"
+    )
+    return output
+  }
+
+  /**
+   * @function item_rations
+   * @return {item}
+   */
+  static t_item_rations = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_rations = {
+    vx_type: nx_tactics_decks_scenario.t_item_rations
+  }
+
+  // (func item-rations)
+  static f_item_rations() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Rations",
+      ":image",
+      "images/cards/item-rations.svg",
+      ":summary",
+      "* Enough Food for 7-10 days.\n* Cost: [Silver Coins]\n* An assortment of jerky, dried fruits, hardtack, hardrolls, dried cheese, potatoes, turnips and nuts.\n* Water is heavy, so these are mostly dry. If consumed without water, the unit will be [Dehydrated] after 7 days.",
+      ":body",
+      "4x0",
+      ":mass",
+      "4kg/9lbs"
     )
     return output
   }
@@ -612,6 +702,66 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function item_shortspear
+   * @return {item}
+   */
+  static t_item_shortspear = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_shortspear = {
+    vx_type: nx_tactics_decks_scenario.t_item_shortspear
+  }
+
+  // (func item-shortspear)
+  static f_item_shortspear() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Short Spear",
+      ":image",
+      "images/cards/item-shortspear.svg",
+      ":summary",
+      "* Melee: [Pierce] [Slash]\n* Hit:+1 [Size Bonus]\n* Location: [1-hand]",
+      ":body",
+      "10x-1",
+      ":mass",
+      "1.5kg/4lb"
+    )
+    return output
+  }
+
+  /**
+   * @function item_shortsword
+   * @return {item}
+   */
+  static t_item_shortsword = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_shortsword = {
+    vx_type: nx_tactics_decks_scenario.t_item_shortsword
+  }
+
+  // (func item-shortsword)
+  static f_item_shortsword() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Shortsword",
+      ":image",
+      "images/cards/item-shortsword.svg",
+      ":summary",
+      "* Melee: [Pierce] [Slash]\n* Hit: [Size Bonus]\n* Location: [1-hand]\n* Armor:1x1",
+      ":body",
+      "10x-1",
+      ":mass",
+      "1kg/2.2lb"
+    )
+    return output
+  }
+
+  /**
    * @function item_silvercoins
    * @return {item}
    */
@@ -672,61 +822,31 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
-   * @function item_spearshort
+   * @function item_waterskin
    * @return {item}
    */
-  static t_item_spearshort = {
+  static t_item_waterskin = {
     vx_type: vx_core.t_type
   }
-  static e_item_spearshort = {
-    vx_type: nx_tactics_decks_scenario.t_item_spearshort
+  static e_item_waterskin = {
+    vx_type: nx_tactics_decks_scenario.t_item_waterskin
   }
 
-  // (func item-spearshort)
-  static f_item_spearshort() {
+  // (func item-waterskin)
+  static f_item_waterskin() {
     let output = nx_tactics_base.e_item
     output = vx_core.f_new(
       nx_tactics_base.t_item,
       ":name",
-      "Short Spear",
+      "Waterskin",
       ":image",
-      "images/cards/item-spearshort.svg",
+      "images/cards/item-waterskin.svg",
       ":summary",
-      "* Melee: [Pierce] [Slash]\n* Hit:+1 [Size Bonus]\n* Location: [1-hand]",
+      "* 2 liters/.5 gallon. Enough Water for 2 days.\n* Cost: [Copper Coins]. Can be refilled from any clean water source.",
       ":body",
-      "10x-1",
+      "2x0",
       ":mass",
-      "1.5kg/4lb"
-    )
-    return output
-  }
-
-  /**
-   * @function item_swordlong
-   * @return {item}
-   */
-  static t_item_swordlong = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_swordlong = {
-    vx_type: nx_tactics_decks_scenario.t_item_swordlong
-  }
-
-  // (func item-swordlong)
-  static f_item_swordlong() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new(
-      nx_tactics_base.t_item,
-      ":name",
-      "Longsword",
-      ":image",
-      "images/cards/item-swordlong.svg",
-      ":summary",
-      "* Melee: [Pierce] [Slash]\n* Hit:+1 [Size Bonus]\n* Location: [1-hand]\n* Armor:1x1",
-      ":body",
-      "10x-1",
-      ":mass",
-      "1.25kg/3lb"
+      "2kg/4.4lbs"
     )
     return output
   }
@@ -1292,6 +1412,176 @@ export default class nx_tactics_decks_scenario {
   }
 
   /**
+   * @function unit_bandit
+   * @return {unit}
+   */
+  static t_unit_bandit = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_bandit = {
+    vx_type: nx_tactics_decks_scenario.t_unit_bandit
+  }
+
+  // (func unit-bandit)
+  static f_unit_bandit() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Bandit",
+      ":image",
+      "images/cards/unit-bandit.svg",
+      ":summary",
+      "A highwayman.",
+      ":race",
+      "Human",
+      ":gender",
+      "M",
+      ":body",
+      "8x1",
+      ":mind",
+      "5x1",
+      ":will",
+      "5x1",
+      ":move",
+      "3x1",
+      ":mass",
+      "80kg/180",
+      ":height",
+      "1.8m/6ft",
+      ":speedland",
+      "30kph/20mph",
+      ":mass",
+      "80kg/220lb",
+      ":height",
+      "1.9m/6'3ft",
+      ":demeanor",
+      "Opportunistic",
+      ":nature",
+      "Ruthless",
+      ":beast",
+      "2x0",
+      ":shadow",
+      "5x0",
+      ":value",
+      "1x0",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_melee,
+          ":level",
+          "3",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario.f_item_shortsword()
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_stealth,
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_ambush
+            )
+          )
+        )
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unit_bruiser
+   * @return {unit}
+   */
+  static t_unit_bruiser = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_bruiser = {
+    vx_type: nx_tactics_decks_scenario.t_unit_bruiser
+  }
+
+  // (func unit-bruiser)
+  static f_unit_bruiser() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Bruiser",
+      ":image",
+      "images/cards/unit-bruiser.svg",
+      ":summary",
+      "A burly, intimidating man.",
+      ":race",
+      "Human",
+      ":gender",
+      "M",
+      ":body",
+      "10x1",
+      ":mind",
+      "3x1",
+      ":will",
+      "5x1",
+      ":move",
+      "2x1",
+      ":mass",
+      "100kg/220lb",
+      ":height",
+      "1.9m/6'3ft",
+      ":speedland",
+      "20kph/12.5mph",
+      ":demeanor",
+      "Glaring",
+      ":nature",
+      "Callous",
+      ":beast",
+      "5x0",
+      ":shadow",
+      "1x0",
+      ":value",
+      "1x0",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_closecombat,
+          ":level",
+          "2",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              nx_tactics_base.t_unitability,
+              ":ability",
+              nx_tactics_decks_scenario.c_ability_grab
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_intimidation,
+          ":level",
+          "1"
+        )
+      )
+    )
+    return output
+  }
+
+  /**
    * @function unit_flint
    * @return {unit}
    */
@@ -1453,6 +1743,89 @@ export default class nx_tactics_decks_scenario {
               nx_tactics_decks_scenario.c_ability_sneak
             )
           )
+        )
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unit_guardsman
+   * @return {unit}
+   */
+  static t_unit_guardsman = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_guardsman = {
+    vx_type: nx_tactics_decks_scenario.t_unit_guardsman
+  }
+
+  // (func unit-guardsman)
+  static f_unit_guardsman() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      nx_tactics_base.t_unit,
+      ":name",
+      "Guardsman",
+      ":image",
+      "images/cards/unit-guardsman.svg",
+      ":summary",
+      "A typical member of a city watch or to keep lookout.",
+      ":race",
+      "Human",
+      ":gender",
+      "M",
+      ":body",
+      "8x1",
+      ":mind",
+      "5x1",
+      ":will",
+      "5x1",
+      ":move",
+      "3x1",
+      ":mass",
+      "80kg/180",
+      ":height",
+      "1.8m/6ft",
+      ":speedland",
+      "30kph/20mph",
+      ":mass",
+      "80kg/220lb",
+      ":height",
+      "1.9m/6'3ft",
+      ":demeanor",
+      "Indifferent",
+      ":nature",
+      "Lazy",
+      ":beast",
+      "1x0",
+      ":shadow",
+      "2x0",
+      ":value",
+      "1x0",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_melee,
+          ":level",
+          "2",
+          ":unititemmap",
+          nx_tactics_base.f_unititemmap_from_unititemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_unititem,
+              ":item",
+              nx_tactics_decks_scenario.f_item_shortspear()
+            )
+          )
+        ),
+        vx_core.f_new(
+          nx_tactics_base.t_unitskill,
+          ":skill",
+          nx_tactics_decks_scenario.c_skill_investigation,
+          ":level",
+          "1"
         )
       )
     )
@@ -2010,6 +2383,7 @@ export default class nx_tactics_decks_scenario {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
+      "ability-ambush": nx_tactics_decks_scenario.c_ability_ambush,
       "ability-bargain": nx_tactics_decks_scenario.c_ability_bargain,
       "ability-bite": nx_tactics_decks_scenario.c_ability_bite,
       "ability-blacksmithing": nx_tactics_decks_scenario.c_ability_blacksmithing,
@@ -2022,6 +2396,8 @@ export default class nx_tactics_decks_scenario {
       "skill-business": nx_tactics_decks_scenario.c_skill_business,
       "skill-closecombat": nx_tactics_decks_scenario.c_skill_closecombat,
       "skill-hunting": nx_tactics_decks_scenario.c_skill_hunting,
+      "skill-intimidation": nx_tactics_decks_scenario.c_skill_intimidation,
+      "skill-investigation": nx_tactics_decks_scenario.c_skill_investigation,
       "skill-melee": nx_tactics_decks_scenario.c_skill_melee,
       "skill-stealth": nx_tactics_decks_scenario.c_skill_stealth,
       "skill-survival": nx_tactics_decks_scenario.c_skill_survival,
@@ -2039,14 +2415,17 @@ export default class nx_tactics_decks_scenario {
       "item-goldcoins": nx_tactics_decks_scenario.e_item_goldcoins,
       "item-hammer": nx_tactics_decks_scenario.e_item_hammer,
       "item-healingsalve": nx_tactics_decks_scenario.e_item_healingsalve,
+      "item-longsword": nx_tactics_decks_scenario.e_item_longsword,
       "item-platinumcoins": nx_tactics_decks_scenario.e_item_platinumcoins,
+      "item-rations": nx_tactics_decks_scenario.e_item_rations,
       "item-shieldbuckler": nx_tactics_decks_scenario.e_item_shieldbuckler,
       "item-shieldheater": nx_tactics_decks_scenario.e_item_shieldheater,
       "item-shieldround": nx_tactics_decks_scenario.e_item_shieldround,
+      "item-shortspear": nx_tactics_decks_scenario.e_item_shortspear,
+      "item-shortsword": nx_tactics_decks_scenario.e_item_shortsword,
       "item-silvercoins": nx_tactics_decks_scenario.e_item_silvercoins,
       "item-spear": nx_tactics_decks_scenario.e_item_spear,
-      "item-spearshort": nx_tactics_decks_scenario.e_item_spearshort,
-      "item-swordlong": nx_tactics_decks_scenario.e_item_swordlong,
+      "item-waterskin": nx_tactics_decks_scenario.e_item_waterskin,
       "item-woodaxe": nx_tactics_decks_scenario.e_item_woodaxe,
       "place-blacksmith": nx_tactics_decks_scenario.e_place_blacksmith,
       "place-campsite": nx_tactics_decks_scenario.e_place_campsite,
@@ -2070,8 +2449,11 @@ export default class nx_tactics_decks_scenario {
       "place-temple": nx_tactics_decks_scenario.e_place_temple,
       "place-tradingpost": nx_tactics_decks_scenario.e_place_tradingpost,
       "place-woodenhall": nx_tactics_decks_scenario.e_place_woodenhall,
+      "unit-bandit": nx_tactics_decks_scenario.e_unit_bandit,
+      "unit-bruiser": nx_tactics_decks_scenario.e_unit_bruiser,
       "unit-flint": nx_tactics_decks_scenario.e_unit_flint,
       "unit-goblinscout": nx_tactics_decks_scenario.e_unit_goblinscout,
+      "unit-guardsman": nx_tactics_decks_scenario.e_unit_guardsman,
       "unit-horse": nx_tactics_decks_scenario.e_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scenario.e_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scenario.e_unit_jonaveer,
@@ -2093,14 +2475,17 @@ export default class nx_tactics_decks_scenario {
       "item-goldcoins": nx_tactics_decks_scenario.t_item_goldcoins,
       "item-hammer": nx_tactics_decks_scenario.t_item_hammer,
       "item-healingsalve": nx_tactics_decks_scenario.t_item_healingsalve,
+      "item-longsword": nx_tactics_decks_scenario.t_item_longsword,
       "item-platinumcoins": nx_tactics_decks_scenario.t_item_platinumcoins,
+      "item-rations": nx_tactics_decks_scenario.t_item_rations,
       "item-shieldbuckler": nx_tactics_decks_scenario.t_item_shieldbuckler,
       "item-shieldheater": nx_tactics_decks_scenario.t_item_shieldheater,
       "item-shieldround": nx_tactics_decks_scenario.t_item_shieldround,
+      "item-shortspear": nx_tactics_decks_scenario.t_item_shortspear,
+      "item-shortsword": nx_tactics_decks_scenario.t_item_shortsword,
       "item-silvercoins": nx_tactics_decks_scenario.t_item_silvercoins,
       "item-spear": nx_tactics_decks_scenario.t_item_spear,
-      "item-spearshort": nx_tactics_decks_scenario.t_item_spearshort,
-      "item-swordlong": nx_tactics_decks_scenario.t_item_swordlong,
+      "item-waterskin": nx_tactics_decks_scenario.t_item_waterskin,
       "item-woodaxe": nx_tactics_decks_scenario.t_item_woodaxe,
       "place-blacksmith": nx_tactics_decks_scenario.t_place_blacksmith,
       "place-campsite": nx_tactics_decks_scenario.t_place_campsite,
@@ -2124,8 +2509,11 @@ export default class nx_tactics_decks_scenario {
       "place-temple": nx_tactics_decks_scenario.t_place_temple,
       "place-tradingpost": nx_tactics_decks_scenario.t_place_tradingpost,
       "place-woodenhall": nx_tactics_decks_scenario.t_place_woodenhall,
+      "unit-bandit": nx_tactics_decks_scenario.t_unit_bandit,
+      "unit-bruiser": nx_tactics_decks_scenario.t_unit_bruiser,
       "unit-flint": nx_tactics_decks_scenario.t_unit_flint,
       "unit-goblinscout": nx_tactics_decks_scenario.t_unit_goblinscout,
+      "unit-guardsman": nx_tactics_decks_scenario.t_unit_guardsman,
       "unit-horse": nx_tactics_decks_scenario.t_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scenario.t_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scenario.t_unit_jonaveer,
@@ -2345,6 +2733,24 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_item_healingsalve
     }
 
+    // (func item-longsword)
+    nx_tactics_decks_scenario.t_item_longsword['vx_value'] = {
+      name          : "item-longsword",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_longsword
+    }
+
     // (func item-platinumcoins)
     nx_tactics_decks_scenario.t_item_platinumcoins['vx_value'] = {
       name          : "item-platinumcoins",
@@ -2361,6 +2767,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_item_platinumcoins
+    }
+
+    // (func item-rations)
+    nx_tactics_decks_scenario.t_item_rations['vx_value'] = {
+      name          : "item-rations",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_rations
     }
 
     // (func item-shieldbuckler)
@@ -2417,6 +2841,42 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_item_shieldround
     }
 
+    // (func item-shortspear)
+    nx_tactics_decks_scenario.t_item_shortspear['vx_value'] = {
+      name          : "item-shortspear",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_shortspear
+    }
+
+    // (func item-shortsword)
+    nx_tactics_decks_scenario.t_item_shortsword['vx_value'] = {
+      name          : "item-shortsword",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_item_shortsword
+    }
+
     // (func item-silvercoins)
     nx_tactics_decks_scenario.t_item_silvercoins['vx_value'] = {
       name          : "item-silvercoins",
@@ -2453,9 +2913,9 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_item_spear
     }
 
-    // (func item-spearshort)
-    nx_tactics_decks_scenario.t_item_spearshort['vx_value'] = {
-      name          : "item-spearshort",
+    // (func item-waterskin)
+    nx_tactics_decks_scenario.t_item_waterskin['vx_value'] = {
+      name          : "item-waterskin",
       pkgname       : "nx/tactics/decks/scenario",
       extends       : ":func",
       idx           : 0,
@@ -2468,25 +2928,7 @@ export default class nx_tactics_decks_scenario {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario.f_item_spearshort
-    }
-
-    // (func item-swordlong)
-    nx_tactics_decks_scenario.t_item_swordlong['vx_value'] = {
-      name          : "item-swordlong",
-      pkgname       : "nx/tactics/decks/scenario",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario.f_item_swordlong
+      fn            : nx_tactics_decks_scenario.f_item_waterskin
     }
 
     // (func item-woodaxe)
@@ -2903,6 +3345,42 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_place_woodenhall
     }
 
+    // (func unit-bandit)
+    nx_tactics_decks_scenario.t_unit_bandit['vx_value'] = {
+      name          : "unit-bandit",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_bandit
+    }
+
+    // (func unit-bruiser)
+    nx_tactics_decks_scenario.t_unit_bruiser['vx_value'] = {
+      name          : "unit-bruiser",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_bruiser
+    }
+
     // (func unit-flint)
     nx_tactics_decks_scenario.t_unit_flint['vx_value'] = {
       name          : "unit-flint",
@@ -2937,6 +3415,24 @@ export default class nx_tactics_decks_scenario {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario.f_unit_goblinscout
+    }
+
+    // (func unit-guardsman)
+    nx_tactics_decks_scenario.t_unit_guardsman['vx_value'] = {
+      name          : "unit-guardsman",
+      pkgname       : "nx/tactics/decks/scenario",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario.f_unit_guardsman
     }
 
     // (func unit-horse)
@@ -3083,6 +3579,15 @@ export default class nx_tactics_decks_scenario {
       fn            : nx_tactics_decks_scenario.f_unit_xeibhanower
     }
 
+    // (const ability-ambush)
+    Object.assign(nx_tactics_decks_scenario.c_ability_ambush, vx_core.f_new(
+      nx_tactics_base.t_ability,
+      ":name",
+      "Ambush",
+      ":summary",
+      "* [Extended Skill]: Any one who approaches the units, tests [Investigation] vs. your [Stealth] with [Advantage] to detect them.\n* Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak."
+    ))
+
     // (const ability-bargain)
     Object.assign(nx_tactics_decks_scenario.c_ability_bargain, vx_core.f_new(
       nx_tactics_base.t_ability,
@@ -3159,7 +3664,9 @@ export default class nx_tactics_decks_scenario {
     Object.assign(nx_tactics_decks_scenario.c_skill_closecombat, vx_core.f_new(
       nx_tactics_base.t_skill,
       ":name",
-      "Close Combat"
+      "Close Combat",
+      ":summary",
+      "* Requires: Units must be in the same space to use Close Combat.\n* Fighting very close to the opponent. This includes most martial arts, brawling, and knife fighting."
     ))
 
     // (const skill-hunting)
@@ -3169,11 +3676,31 @@ export default class nx_tactics_decks_scenario {
       "Hunting"
     ))
 
+    // (const skill-intimidation)
+    Object.assign(nx_tactics_decks_scenario.c_skill_intimidation, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Intimidation",
+      ":summary",
+      ""
+    ))
+
+    // (const skill-investigation)
+    Object.assign(nx_tactics_decks_scenario.c_skill_investigation, vx_core.f_new(
+      nx_tactics_base.t_skill,
+      ":name",
+      "Investigation",
+      ":summary",
+      ""
+    ))
+
     // (const skill-melee)
     Object.assign(nx_tactics_decks_scenario.c_skill_melee, vx_core.f_new(
       nx_tactics_base.t_skill,
       ":name",
-      "Melee"
+      "Melee",
+      ":summary",
+      "* Requires: Units must 1 space away from each other.\n* Allows the use of all Melee weapons, but unfamiliar weapons are at Initiative:-1.\n* Fighting near the opponent. This includes most hand to hand weapons."
     ))
 
     // (const skill-stealth)
@@ -3182,7 +3709,7 @@ export default class nx_tactics_decks_scenario {
       ":name",
       "Stealth",
       ":summary",
-      "[Action]: Activate [Continuous] effect.\n[Continuous]:\n* When\n** A unit tries to detect you\n** And you haven't moved this round\n** And you are out of [Line of Sight] OR have full [Cover]\n* Then the unit must win a simple [Investigate] vs. your [Stealth] to notice you."
+      "[Action]: Activate [Continuous] effect.\n[Continuous]:\n* When\n** A unit performs an [Investigate] Action near you\n** And you haven't moved this round\n** And you are out of [Line of Sight] OR have full [Cover]\n* Then the unit must win a simple [Investigate] vs. your [Stealth] with [Advantage] to notice you."
     ))
 
     // (const skill-survival)

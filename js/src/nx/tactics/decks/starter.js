@@ -103,6 +103,47 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
+   * @function card_rotated
+   * @param  {string} color
+   * @param  {int} num
+   * @return {card}
+   */
+  static t_card_rotated = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_rotated = {
+    vx_type: nx_tactics_decks_starter.t_card_rotated
+  }
+
+  // (func card-rotated)
+  static f_card_rotated(color, num) {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      vx_core.f_new(
+        vx_core.t_string,
+        "card-rotated-",
+        color,
+        "-",
+        num
+      ),
+      ":name",
+      "Rotated",
+      ":image",
+      vx_core.f_new(
+        vx_core.t_string,
+        "images/card-",
+        color,
+        ".svg"
+      ),
+      ":summary",
+      "* Between Games, rotate this card 90 degrees and place it on top of all rotated card.\n* When Starting a game, rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."
+    )
+    return output
+  }
+
+  /**
    * @function card_skill
    * @param  {string} color
    * @param  {int} num
@@ -226,7 +267,7 @@ export default class nx_tactics_decks_starter {
         ".svg"
       ),
       ":summary",
-      "* Reveal: Flip each card of [Turn Order] deck to form a row.\n* Action 1: Simulataneously, each Unit's controller chooses a target for their first action and places their Target card on that target.\n* Change 1: In order, each Unit may change their decision.\n* Resolve 1: All Units act simultaneously unless a Unit was targeted by a Unit with a lower Turn Order, they must wait for the targeting Unit to resolve. Note: lower order Units cannot be blocked by the movement of higher order Units.\n* Action 2: Same as Action 1 for second Action.\n* Change 2: Same as Change 1.\n* Resolve 2: Same as Resolve 1."
+      "* Reveal: Flip each card of [Turn Order] deck to form a row.\n* Action 1: Simulataneously, each Unit's controller chooses a target (or none) for their first action and places their Target card on that Turn Order card.\n* Change 1: In order, each Unit may change their decision.\n* Resolve 1: All Units act simultaneously unless a Unit was targeted by a Unit with a lower Turn Order, they must wait for the targeting Unit to resolve. Note: lower order Units cannot be blocked by the movement of higher order Units.\n* Action 2: Same as Action 1 for second Action.\n* Change 2: Same as Change 1.\n* Resolve 2: Same as Resolve 1."
     )
     return output
   }
@@ -325,6 +366,7 @@ export default class nx_tactics_decks_starter {
         const cardlist = vx_core.f_new(
           nx_tactics_base.t_cardlist,
           nx_tactics_decks_starter.f_card_player(color, 1),
+          nx_tactics_decks_starter.f_card_rotated(color, 1),
           nx_tactics_decks_starter.f_card_turn_order(color, 1),
           nx_tactics_decks_starter.f_card_turn_order(color, 2),
           nx_tactics_decks_starter.f_card_turn_order(color, 3),
@@ -382,6 +424,7 @@ export default class nx_tactics_decks_starter {
       "card-fatelower": nx_tactics_decks_starter.e_card_fatelower,
       "card-fateupper": nx_tactics_decks_starter.e_card_fateupper,
       "card-player": nx_tactics_decks_starter.e_card_player,
+      "card-rotated": nx_tactics_decks_starter.e_card_rotated,
       "card-skill": nx_tactics_decks_starter.e_card_skill,
       "card-target": nx_tactics_decks_starter.e_card_target,
       "card-turn-order": nx_tactics_decks_starter.e_card_turn_order,
@@ -393,6 +436,7 @@ export default class nx_tactics_decks_starter {
       "card-fatelower": nx_tactics_decks_starter.t_card_fatelower,
       "card-fateupper": nx_tactics_decks_starter.t_card_fateupper,
       "card-player": nx_tactics_decks_starter.t_card_player,
+      "card-rotated": nx_tactics_decks_starter.t_card_rotated,
       "card-skill": nx_tactics_decks_starter.t_card_skill,
       "card-target": nx_tactics_decks_starter.t_card_target,
       "card-turn-order": nx_tactics_decks_starter.t_card_turn_order,
@@ -464,6 +508,24 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_player
+    }
+
+    // (func card-rotated)
+    nx_tactics_decks_starter.t_card_rotated['vx_value'] = {
+      name          : "card-rotated",
+      pkgname       : "nx/tactics/decks/starter",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_starter.f_card_rotated
     }
 
     // (func card-skill)

@@ -86,32 +86,6 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
-   * @function card_action_skill
-   * @return {card}
-   */
-  static t_card_action_skill = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_action_skill = {
-    vx_type: nx_tactics_decks_rule.t_card_action_skill
-  }
-
-  // (func card-action-skill)
-  static f_card_action_skill() {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      nx_tactics_base.t_card,
-      ":id",
-      "action-skill",
-      ":name",
-      "Skill Action",
-      ":summary",
-      "* Action: Assign your Unit's Skill card to the target.\n* Stat: The Skill test has a target Body, Mind, Will, or Move.\n* Resolve: Resolve the Skill as if it was Combat.\n* Damage: Any stat reductions are added to the Skill card instead of the target.\n* Success: If the stat is reduced to 0, the Skill succeeds.\n* Fail: If the user abandons the test or has any stat reduced to 0, the Skill fails and the Skill card is returned losing all reductions.\n* Extended: The user may continue this test on different turns until a Success or Fail."
-    )
-    return output
-  }
-
-  /**
    * @function card_advantage
    * @return {card}
    */
@@ -288,7 +262,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Defense Layers",
       ":summary",
-      "* Obstacles\n* Shields\n* Armor\n* Toughness\n* Body"
+      "* Obstacles\n* Cover\n* Shields\n* Armor\n* Toughness\n* Body"
     )
     return output
   }
@@ -346,25 +320,25 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
-   * @function card_gameguide
+   * @function card_game
    * @return {card}
    */
-  static t_card_gameguide = {
+  static t_card_game = {
     vx_type: vx_core.t_type
   }
-  static e_card_gameguide = {
-    vx_type: nx_tactics_decks_rule.t_card_gameguide
+  static e_card_game = {
+    vx_type: nx_tactics_decks_rule.t_card_game
   }
 
-  // (func card-gameguide)
-  static f_card_gameguide() {
+  // (func card-game)
+  static f_card_game() {
     let output = nx_tactics_base.e_card
     output = vx_core.f_new(
       nx_tactics_base.t_card,
       ":id",
-      "gameguide",
+      "game",
       ":name",
-      "Game Guide",
+      "Game",
       ":summary",
       "* Create [Characters] or [Factions] to play [Scenarios].\n* Each [Scenario] contains various [Threats] and [Goals]\n* Find them and use your [Skills] / [Powers] to complete them for [Rewards]\n* Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties]."
     )
@@ -534,6 +508,32 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
+   * @function card_round
+   * @return {card}
+   */
+  static t_card_round = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_round = {
+    vx_type: nx_tactics_decks_rule.t_card_round
+  }
+
+  // (func card-round)
+  static f_card_round() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "round",
+      ":name",
+      "Round",
+      ":summary",
+      "* A Round represents a unit of time passing.\n* Round Start: Increase the Round Counter by 1.\n* Turns: During a Round, each Unit will get a [Turn].\n* Round End: "
+    )
+    return output
+  }
+
+  /**
    * @function card_scale
    * @return {card}
    */
@@ -638,6 +638,32 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
+   * @function card_sklll_action
+   * @return {card}
+   */
+  static t_card_sklll_action = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_sklll_action = {
+    vx_type: nx_tactics_decks_rule.t_card_sklll_action
+  }
+
+  // (func card-sklll-action)
+  static f_card_sklll_action() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "sklll-action",
+      ":name",
+      "Skill Action",
+      ":summary",
+      "* Action: Assign your Unit's Target card to the target.\n* Stat: The Skill test has a target Stat.\n* Resolve: Resolve the Skill as if it was Combat.\n* Damage: Any stat reductions are added to the Skill card instead of the target.\n* Success: If the stat is reduced to 0, the Skill succeeds.\n* Fail: If the user abandons the test or has any stat reduced to 0, the Skill fails and the Skill card is returned losing all reductions.\n* Simple: Some Tests only require a single success or failure.\n* Extended: The user may continue this test on different turns until a Success or Fail.\n* See Also: [Unskilled] [Unfamiliar Item]."
+    )
+    return output
+  }
+
+  /**
    * @function card_suprise
    * @return {card}
    */
@@ -664,6 +690,84 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
+   * @function card_turn
+   * @return {card}
+   */
+  static t_card_turn = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_turn = {
+    vx_type: nx_tactics_decks_rule.t_card_turn
+  }
+
+  // (func card-turn)
+  static f_card_turn() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "turn",
+      ":name",
+      "Turn",
+      ":summary",
+      ""
+    )
+    return output
+  }
+
+  /**
+   * @function card_unfamiliaritem
+   * @return {card}
+   */
+  static t_card_unfamiliaritem = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_unfamiliaritem = {
+    vx_type: nx_tactics_decks_rule.t_card_unfamiliaritem
+  }
+
+  // (func card-unfamiliaritem)
+  static f_card_unfamiliaritem() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-unfamiliaritem",
+      ":name",
+      "Unfamiliar Item",
+      ":summary",
+      "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled]."
+    )
+    return output
+  }
+
+  /**
+   * @function card_unskilled
+   * @return {card}
+   */
+  static t_card_unskilled = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_unskilled = {
+    vx_type: nx_tactics_decks_rule.t_card_unskilled
+  }
+
+  // (func card-unskilled)
+  static f_card_unskilled() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "card-unskilled",
+      ":name",
+      "Unskilled",
+      ":summary",
+      "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item]."
+    )
+    return output
+  }
+
+  /**
    * @function deck_rules
    * @return {deck}
    */
@@ -683,11 +787,13 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const cardlist = vx_core.f_new(
           nx_tactics_base.t_cardlist,
-          nx_tactics_decks_rule.f_card_gameguide(),
+          nx_tactics_decks_rule.f_card_game(),
+          nx_tactics_decks_rule.f_card_round(),
+          nx_tactics_decks_rule.f_card_turn(),
           nx_tactics_decks_rule.f_card_setupguide(),
           nx_tactics_decks_rule.f_card_action_move(),
           nx_tactics_decks_rule.f_card_action_fight(),
-          nx_tactics_decks_rule.f_card_action_skill(),
+          nx_tactics_decks_rule.f_card_sklll_action(),
           nx_tactics_decks_rule.f_card_action_recover(),
           nx_tactics_decks_rule.f_card_free_action(),
           nx_tactics_decks_rule.f_card_lineofsight(),
@@ -707,7 +813,9 @@ export default class nx_tactics_decks_rule {
           nx_tactics_decks_rule.f_card_disadvantage(),
           nx_tactics_decks_rule.f_card_areaeffect(),
           nx_tactics_decks_rule.f_card_reach(),
-          nx_tactics_decks_rule.f_card_suprise()
+          nx_tactics_decks_rule.f_card_suprise(),
+          nx_tactics_decks_rule.f_card_unskilled(),
+          nx_tactics_decks_rule.f_card_unfamiliaritem()
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
         return vx_core.f_new(
@@ -734,7 +842,6 @@ export default class nx_tactics_decks_rule {
       "card-action-fight": nx_tactics_decks_rule.e_card_action_fight,
       "card-action-move": nx_tactics_decks_rule.e_card_action_move,
       "card-action-recover": nx_tactics_decks_rule.e_card_action_recover,
-      "card-action-skill": nx_tactics_decks_rule.e_card_action_skill,
       "card-advantage": nx_tactics_decks_rule.e_card_advantage,
       "card-areaeffect": nx_tactics_decks_rule.e_card_areaeffect,
       "card-beast": nx_tactics_decks_rule.e_card_beast,
@@ -744,25 +851,29 @@ export default class nx_tactics_decks_rule {
       "card-defenselayers": nx_tactics_decks_rule.e_card_defenselayers,
       "card-disadvantage": nx_tactics_decks_rule.e_card_disadvantage,
       "card-free-action": nx_tactics_decks_rule.e_card_free_action,
-      "card-gameguide": nx_tactics_decks_rule.e_card_gameguide,
+      "card-game": nx_tactics_decks_rule.e_card_game,
       "card-leveling": nx_tactics_decks_rule.e_card_leveling,
       "card-lineofsight": nx_tactics_decks_rule.e_card_lineofsight,
       "card-mapscale-1": nx_tactics_decks_rule.e_card_mapscale_1,
       "card-mapscale-2": nx_tactics_decks_rule.e_card_mapscale_2,
       "card-move": nx_tactics_decks_rule.e_card_move,
       "card-reach": nx_tactics_decks_rule.e_card_reach,
+      "card-round": nx_tactics_decks_rule.e_card_round,
       "card-scale": nx_tactics_decks_rule.e_card_scale,
       "card-scaled": nx_tactics_decks_rule.e_card_scaled,
       "card-setupguide": nx_tactics_decks_rule.e_card_setupguide,
       "card-shadow": nx_tactics_decks_rule.e_card_shadow,
+      "card-sklll-action": nx_tactics_decks_rule.e_card_sklll_action,
       "card-suprise": nx_tactics_decks_rule.e_card_suprise,
+      "card-turn": nx_tactics_decks_rule.e_card_turn,
+      "card-unfamiliaritem": nx_tactics_decks_rule.e_card_unfamiliaritem,
+      "card-unskilled": nx_tactics_decks_rule.e_card_unskilled,
       "deck-rules": nx_tactics_decks_rule.e_deck_rules
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "card-action-fight": nx_tactics_decks_rule.t_card_action_fight,
       "card-action-move": nx_tactics_decks_rule.t_card_action_move,
       "card-action-recover": nx_tactics_decks_rule.t_card_action_recover,
-      "card-action-skill": nx_tactics_decks_rule.t_card_action_skill,
       "card-advantage": nx_tactics_decks_rule.t_card_advantage,
       "card-areaeffect": nx_tactics_decks_rule.t_card_areaeffect,
       "card-beast": nx_tactics_decks_rule.t_card_beast,
@@ -772,18 +883,23 @@ export default class nx_tactics_decks_rule {
       "card-defenselayers": nx_tactics_decks_rule.t_card_defenselayers,
       "card-disadvantage": nx_tactics_decks_rule.t_card_disadvantage,
       "card-free-action": nx_tactics_decks_rule.t_card_free_action,
-      "card-gameguide": nx_tactics_decks_rule.t_card_gameguide,
+      "card-game": nx_tactics_decks_rule.t_card_game,
       "card-leveling": nx_tactics_decks_rule.t_card_leveling,
       "card-lineofsight": nx_tactics_decks_rule.t_card_lineofsight,
       "card-mapscale-1": nx_tactics_decks_rule.t_card_mapscale_1,
       "card-mapscale-2": nx_tactics_decks_rule.t_card_mapscale_2,
       "card-move": nx_tactics_decks_rule.t_card_move,
       "card-reach": nx_tactics_decks_rule.t_card_reach,
+      "card-round": nx_tactics_decks_rule.t_card_round,
       "card-scale": nx_tactics_decks_rule.t_card_scale,
       "card-scaled": nx_tactics_decks_rule.t_card_scaled,
       "card-setupguide": nx_tactics_decks_rule.t_card_setupguide,
       "card-shadow": nx_tactics_decks_rule.t_card_shadow,
+      "card-sklll-action": nx_tactics_decks_rule.t_card_sklll_action,
       "card-suprise": nx_tactics_decks_rule.t_card_suprise,
+      "card-turn": nx_tactics_decks_rule.t_card_turn,
+      "card-unfamiliaritem": nx_tactics_decks_rule.t_card_unfamiliaritem,
+      "card-unskilled": nx_tactics_decks_rule.t_card_unskilled,
       "deck-rules": nx_tactics_decks_rule.t_deck_rules
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -850,24 +966,6 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_action_recover
-    }
-
-    // (func card-action-skill)
-    nx_tactics_decks_rule.t_card_action_skill['vx_value'] = {
-      name          : "card-action-skill",
-      pkgname       : "nx/tactics/decks/rule",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_rule.f_card_action_skill
     }
 
     // (func card-advantage)
@@ -1032,9 +1130,9 @@ export default class nx_tactics_decks_rule {
       fn            : nx_tactics_decks_rule.f_card_free_action
     }
 
-    // (func card-gameguide)
-    nx_tactics_decks_rule.t_card_gameguide['vx_value'] = {
-      name          : "card-gameguide",
+    // (func card-game)
+    nx_tactics_decks_rule.t_card_game['vx_value'] = {
+      name          : "card-game",
       pkgname       : "nx/tactics/decks/rule",
       extends       : ":func",
       idx           : 0,
@@ -1047,7 +1145,7 @@ export default class nx_tactics_decks_rule {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_rule.f_card_gameguide
+      fn            : nx_tactics_decks_rule.f_card_game
     }
 
     // (func card-leveling)
@@ -1158,6 +1256,24 @@ export default class nx_tactics_decks_rule {
       fn            : nx_tactics_decks_rule.f_card_reach
     }
 
+    // (func card-round)
+    nx_tactics_decks_rule.t_card_round['vx_value'] = {
+      name          : "card-round",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_round
+    }
+
     // (func card-scale)
     nx_tactics_decks_rule.t_card_scale['vx_value'] = {
       name          : "card-scale",
@@ -1230,6 +1346,24 @@ export default class nx_tactics_decks_rule {
       fn            : nx_tactics_decks_rule.f_card_shadow
     }
 
+    // (func card-sklll-action)
+    nx_tactics_decks_rule.t_card_sklll_action['vx_value'] = {
+      name          : "card-sklll-action",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_sklll_action
+    }
+
     // (func card-suprise)
     nx_tactics_decks_rule.t_card_suprise['vx_value'] = {
       name          : "card-suprise",
@@ -1246,6 +1380,60 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_suprise
+    }
+
+    // (func card-turn)
+    nx_tactics_decks_rule.t_card_turn['vx_value'] = {
+      name          : "card-turn",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_turn
+    }
+
+    // (func card-unfamiliaritem)
+    nx_tactics_decks_rule.t_card_unfamiliaritem['vx_value'] = {
+      name          : "card-unfamiliaritem",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_unfamiliaritem
+    }
+
+    // (func card-unskilled)
+    nx_tactics_decks_rule.t_card_unskilled['vx_value'] = {
+      name          : "card-unskilled",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_unskilled
     }
 
     // (func deck-rules)

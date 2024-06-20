@@ -267,7 +267,8 @@
 (func string-display<-skill : string
  [skill : base/skill]
  (let : string
-  [specialtymap : base/specialtymap := (:specialtymap skill)
+  [summary : string := (:summary skill)
+   specialtymap : base/specialtymap := (:specialtymap skill)
    abilitymap   : base/abilitymap   := (:abilitymap skill)
    specialnames : stringlist :=
     (list<-map : stringlist
@@ -285,6 +286,7 @@
       (:name value)))
    appended : stringlist :=
     (stringlist
+     summary
      specialnames
      abilitynames)
    display : string :=
@@ -609,6 +611,7 @@
      (:length unit)
      (:width  unit))
    prefix : string := (string parent "/" name)
+/*
    uiitemsummary : ui/ui :=
     (if : ui/ui
      (then
@@ -620,7 +623,8 @@
         (ui/stylelist
          styles/style-textarea)
        :data summary)))
-   detail : string := ""
+*/
+   detail : string := summary
    uiimage : ui/ui :=
     (if : ui/ui
      (then
@@ -692,7 +696,7 @@
    uititles
    uibody
    uibodydetail
-   uiitemsummary
+//   uiitemsummary
    uidetail))
  :doc "Returns a list of child ui from a item/parent")
 

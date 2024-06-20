@@ -1152,6 +1152,7 @@
   (base/deck
    :id (string "deck-fate-" color)
    :name "Fate"
+   :image (string "images/card-" color ".svg")
    :cardmap
     (base/cardmap<-cardlist
      (base/cardlist-copy<-card-num

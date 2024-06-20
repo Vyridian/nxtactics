@@ -26,11 +26,11 @@ export default class nx_tactics_decks_rule_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/rule", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 26), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 26), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 30), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 30), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 26), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 30), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -53,7 +53,6 @@ export default class nx_tactics_decks_rule_test {
           "card-action-fight", 0,
           "card-action-move", 0,
           "card-action-recover", 0,
-          "card-action-skill", 0,
           "card-advantage", 0,
           "card-areaeffect", 0,
           "card-beast", 0,
@@ -63,18 +62,23 @@ export default class nx_tactics_decks_rule_test {
           "card-defenselayers", 0,
           "card-disadvantage", 0,
           "card-free-action", 0,
-          "card-gameguide", 0,
+          "card-game", 0,
           "card-leveling", 0,
           "card-lineofsight", 0,
           "card-mapscale-1", 0,
           "card-mapscale-2", 0,
           "card-move", 0,
           "card-reach", 0,
+          "card-round", 0,
           "card-scale", 0,
           "card-scaled", 0,
           "card-setupguide", 0,
           "card-shadow", 0,
+          "card-sklll-action", 0,
           "card-suprise", 0,
+          "card-turn", 0,
+          "card-unfamiliaritem", 0,
+          "card-unskilled", 0,
           "deck-rules", 0
         )
     )

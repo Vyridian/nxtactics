@@ -24,12 +24,12 @@ export default class nx_tactics_decks_scenario_nightonthetown_test {
     return vx_core.f_new(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/scenario_nightonthetown", 
-      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 7), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 35), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 28), 
+      "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 9), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 39), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 30), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 35), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 39), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -48,7 +48,9 @@ export default class nx_tactics_decks_scenario_nightonthetown_test {
           "ability-bite", 0,
           "ability-sneak", 0,
           "skill-closecombat", 0,
+          "skill-investigation", 0,
           "skill-melee", 0,
+          "skill-ranged", 0,
           "skill-stealth", 0,
           "skill-survival", 0,
           "skill-tradeskill", 0
@@ -67,6 +69,7 @@ export default class nx_tactics_decks_scenario_nightonthetown_test {
           "item-knife", 0,
           "item-liquor", 0,
           "item-molotovcocktail", 0,
+          "item-monocle", 0,
           "item-revolver", 0,
           "item-revolverammo", 0,
           "item-rifle", 0,
@@ -81,6 +84,7 @@ export default class nx_tactics_decks_scenario_nightonthetown_test {
           "place-gunstore", 0,
           "place-policestation", 0,
           "place-street", 0,
+          "unit-theprofessor", 0,
           "unit-zombiedog", 0,
           "unit-zombierunner", 0,
           "unit-zombiewalker", 0

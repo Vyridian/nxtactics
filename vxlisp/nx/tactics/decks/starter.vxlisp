@@ -27,6 +27,17 @@
   :name "Player"
   :image (string "images/card-" color ".svg")))
 
+(func card-rotated : base/card
+ [color : string
+  num : int]
+ (base/card
+  :id (string "card-rotated-" color "-" num)
+  :name "Rotated"
+  :image (string "images/card-" color ".svg")
+  :summary
+   "* Between Games, rotate this card 90 degrees and place it on top of all rotated card.
+    * When Starting a game, rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."))
+
 (func card-skill : base/card
  [color : string
   num : int]
@@ -79,6 +90,7 @@
   [cardlist : base/cardlist :=
     (base/cardlist
      (card-player color 1)
+     (card-rotated color 1)
      (card-turn-order color 1)
      (card-turn-order color 2)
      (card-turn-order color 3)

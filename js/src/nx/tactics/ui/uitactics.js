@@ -265,6 +265,7 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_core.t_string},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
+        const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_skill}, skill, ":summary")
         const specialtymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_skill}, skill, ":specialtymap")
         const abilitymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_skill}, skill, ":abilitymap")
         const specialnames = vx_core.f_list_from_map_1(
@@ -281,6 +282,7 @@ export default class nx_tactics_ui_uitactics {
         )
         const appended = vx_core.f_new(
           vx_core.t_stringlist,
+          summary,
           specialnames,
           abilitynames
         )
@@ -2352,31 +2354,7 @@ export default class nx_tactics_ui_uitactics {
           "/",
           name
         )
-        const uiitemsummary = vx_core.f_if_2(
-          {"any-1": vx_ui_ui.t_ui},
-          vx_core.f_then(
-            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(summary)}),
-            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
-              vx_ui_ui.t_ui,
-              ":uid",
-              vx_core.f_new(
-                vx_core.t_string,
-                prefix,
-                "/summary"
-              ),
-              ":style",
-              nx_tactics_ui_stylesheet.c_style_item_summary,
-              ":stylelist",
-              vx_core.f_new(
-                vx_ui_ui.t_stylelist,
-                nx_tactics_ui_stylesheet.c_style_textarea
-              ),
-              ":data",
-              summary
-            )})
-          )
-        )
-        const detail = ""
+        const detail = summary
         const uiimage = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
@@ -2523,7 +2501,6 @@ export default class nx_tactics_ui_uitactics {
           uititles,
           uibody,
           uibodydetail,
-          uiitemsummary,
           uidetail
         )
       })
