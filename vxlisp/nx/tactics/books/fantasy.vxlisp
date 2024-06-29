@@ -146,7 +146,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         :Kratos
          (unit
           :name "Kratos"
-          :image "Fantasy/Kratos.png"))))))
+          :image "images/fantasy/Kratos.png"))))))
 
 (func chapter_lord_of_the_rings : base/chapter
  (chapter
@@ -197,7 +197,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         :Flint
          (unit
           :name "Flint"
-          :image "Fantasy/Flint.png"
+          :image "images/fantasy/Flint.png"
           :summary "Half-Elven Thief"
           :unitskillmap
            (unitskillmap
@@ -213,7 +213,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         "Galamir Mirlesem"
          (unit
           :name "Galamir Mirlesem"
-          :image "Fantasy/GalamirMirlesem.png"
+          :image "images/fantasy/GalamirMirlesem.png"
           :summary
            "* Human Mage
             * Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.
@@ -255,7 +255,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         "Jaris Ransun"
          (unit
           :name "Jaris Ransun"
-          :image "Fantasy/Ransun.png"
+          :image "images/fantasy/Ransun.png"
           :summary "Human Hunter"
           :titles "Valen the Hunter"
           :unitskillmap
@@ -274,7 +274,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         "Phirax Alganon"
          (unit
           :name "Phirax Alganon"
-          :image "Fantasy/PhiraxAlganon.png"
+          :image "images/fantasy/PhiraxAlganon.png"
           :summary
            "* Half-Elven Bard
             * Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.
@@ -314,7 +314,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         "Sarak Ishimar"
          (unit
           :name "Sarak Ishimar"
-          :image "Fantasy/SarakIshimar.png"
+          :image "images/fantasy/SarakIshimar.png"
           :summary "Human Cleric"
           :unitpowermap
            (unitpowermap
@@ -335,7 +335,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         "Stam Domindor"
          (unit
           :name "Stam Domindor"
-          :image "Fantasy/Stam.png"
+          :image "images/fantasy/Stam.png"
           :summary "Dwarven Warrior"
           :unitskillmap
            (unitskillmap
@@ -345,9 +345,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :level "7"
               :unititemmap
                (unititemmap
-                "Short Bow"
+                "Shortbow"
                  (unititem
-                  :name "Short Bow")))))))
+                  :name "Shortbow")))))))
     "Nexus Fantasy Actors"
      (section
       :name "Nexus Fantasy Actors"

@@ -1200,32 +1200,26 @@ and is among the more deadlier poisons known to man. - Man in Black
       :name "Ritual Items"
       :summary
        "* holy oil, lamp, bell
-* [Dreamcatcher] - hung above the bed, is then used as a charm to protect sleeping children from nightmares.  &quot;Only good dreams would be allowed to filter through . . . Bad dreams would stay in the net, disappearing with the light of day.&quot;
-* Medicine Bag
-* Phylactery - An amulet to protect the wearer from harm, enclosing magical text, herbs, or relics."
+        * [Dreamcatcher] - hung above the bed, is then used as a charm to protect sleeping children from nightmares. 'Only good dreams would be allowed to filter through. Bad dreams would stay in the net, disappearing with the light of day.'
+        * Medicine Bag
+        * Phylactery - An amulet to protect the wearer from harm, enclosing magical text, herbs, or relics."
       :itemmap
        (itemmap
         :Athame
          (item
           :name "Athame"
           :reference
-           "As a masculine principle, it is often used in combination with the cup or Graal, as
-feminine principle, and evokes the act of procreation, as symbol of universal
-creativity."
+           "As a masculine principle, it is often used in combination with the cup or Graal, as feminine principle, and evokes the act of procreation, as symbol of universal creativity."
           :summary
-           "* Symbolizes Air, the Mental, and Masculinity.  Air appears as nothing, can
-only be felt with subtle senses and never gripped and commanded.
-				* A ritual dagger"
+           "* Symbolizes Air, the Mental, and Masculinity.  Air appears as nothing, can only be felt with subtle senses and never gripped and commanded.
+				        * A ritual dagger"
           :titles "Swords")
         :Graal
          (item
           :name "Graal"
           :summary
-           "* Symbolizes Water, the Emotional, and Feminity.  The emotions are tidal like
-the the ocean, flowing like rivers and streams.
-				* As a feminie principle, it is often used in combination with the dagger or
-				Athame, as masculine principle, and evokes the act of procreation, as symbol
-				of universal creativity."
+           "* Symbolizes Water, the Emotional, and Feminity.  The emotions are tidal like the the ocean, flowing like rivers and streams.
+            * As a feminie principle, it is often used in combination with the dagger or Athame, as masculine principle, and evokes the act of procreation, as symbol of universal creativity."
           :titles "Cup, Grail")
         "Mummified Hand"
          (item
@@ -1233,15 +1227,11 @@ the the ocean, flowing like rivers and streams.
         :Pentacle
          (item
           :name "Pentacle"
-          :image "Units/Equipment/Pentacle.jpg"
+          :image "image/items/Pentacle.jpg"
           :summary
            "* Symbolizes Earth and the Physical
-				An amulet used in magical evocation, generally made of parchment, paper or metal, on
-				which the symbol of a spirit or energy being evoked is drawn.  It is often worn around
-				the neck, or placed within the triangle of evocation.  Protective symbols may also be
-				included (sometimes on the reverse), a common one being the five-point Seal of Solomon.
-				The pentacle is always drawn in one continuous stroke, earning it the title the 'endless
-				knot'."
+            * An amulet used in magical evocation, generally made of parchment, paper or metal, on which the symbol of a spirit or energy being evoked is drawn.  It is often worn around the neck, or placed within the triangle of evocation.  Protective symbols may also be included (sometimes on the reverse), a common one being the five-point Seal of Solomon.
+            * The pentacle is always drawn in one continuous stroke, earning it the title the 'endless knot'."
           :titles "Disks, Endless Knot, Stone")
         "Ritual Claw"
          (item

@@ -1890,12 +1890,12 @@ export default class nx_tactics_books_combat {
               nx_tactics_base.t_item,
               ":name",
               "Longsword",
+              ":summary",
+              "[Fight]: [Melee]\n[Damage]:10x1 [Pierce] [Slash]",
               ":classification",
               "Sword",
               ":energy",
-              "100J",
-              ":modifiers",
-              "Bleeding"
+              "100J"
             ),
             ":Ninjato",
             vx_core.f_new(
@@ -1995,9 +1995,7 @@ export default class nx_tactics_books_combat {
           ":name",
           "Archery",
           ":itemmap",
-          vx_core.f_new(
-            nx_tactics_base.t_itemmap,
-            "Composite Bow",
+          nx_tactics_base.f_itemmap_from_itemlist(
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
@@ -2009,41 +2007,40 @@ export default class nx_tactics_books_combat {
               ":modifiers",
               "Piercing"
             ),
-            "Compound Bow",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Compound Bow"
             ),
-            ":Longbow",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
               "Longbow",
-              ":summary",
-              "* [Attack]: [+1 Range], [+2 Piercing]",
               ":titles",
               "Daikyu",
+              ":summary",
+              "* [Fight]: [Ranged]\n* [Damage]:10x1 [Pierce] [Slash]\n* [Range]:10x1 100m/300ft\n* [Location]: [2-hand]",
               ":energy",
-              "156J",
-              ":modifiers",
-              "Piercing"
+              "156J"
             ),
-            "Short Bow",
             vx_core.f_new(
               nx_tactics_base.t_item,
               ":name",
-              "Short Bow",
+              "Shortbow",
+              ":image",
+              "images/cards/item-shortbow.svg",
+              ":titles",
+              "Hankyu, Recurve Bow",
               ":reference",
               "Can fire about 6 aimed shots or 12 unaimed shots per minute.",
               ":summary",
-              "* [Attack]: [+1 Piercing]",
-              ":titles",
-              "Hankyu, Recurve Bow",
+              "* [Fight]: [Ranged]\n* [Damage]:8x1 [Pierce] [Slash]\n* [Range]:2x1 20m/60ft\n* [Location]: [2-hand]",
               ":energy",
               "80J",
-              ":modifiers",
-              "Piercing"
+              ":body",
+              "10x-1",
+              ":mass",
+              "1kg/2lb"
             )
           )
         ),
@@ -4192,6 +4189,18 @@ export default class nx_tactics_books_combat {
           nx_tactics_base.t_section,
           ":name",
           "Combat Skills",
+          ":itemmap",
+          nx_tactics_base.f_itemmap_from_itemlist(
+            vx_core.f_new(
+              nx_tactics_base.t_item,
+              ":name",
+              "Bare Handed",
+              ":image",
+              "images/cards/item-barehanded.svg",
+              ":summary",
+              "* [Fight]: [Close Combat] or [Melee]\n* [Damage]: [Size Bonus] [Bash]"
+            )
+          ),
           ":skillmap",
           vx_core.f_new(
             nx_tactics_base.t_skillmap,
@@ -4200,10 +4209,10 @@ export default class nx_tactics_books_combat {
               nx_tactics_base.t_skill,
               ":name",
               "Close Combat",
-              ":reference",
-              "* The usefulness of kicks in self-defense and actual combat has been debated. Kicks are powerful but risk balance, expose the groin, and risk take downs.\n* Joker, there is nothing wrong with you that I can't fix.  With my hands. - Batman, The Dark Knight Returns\n* There are seven working defenses from this position.  Three of them disarm with minimal contact, three of them kill.  The other....hurts. - Batman, The Dark Knight Returns\n* Beat losers, get paid. - Sett, Runeterra",
               ":summary",
-              "* [Targeting]: Close combat may only be used to attack the space directly ahead or the space you are on.\n* The baseline for kicking abilities is that they are -1 Speed and +1 Damage\nwith a minor special ability.\nNAME				SPD		DMG		MV		DEF\nSHORT KICK			+  1		+  0		+  0		S,C,A\nFORWARD KICK			+  0		+  2		-- 1		S,C,A\n----------------------------------------------------------------------------------------------------------------------------------\n\n\nBACK ROUNDHOUSE			-- 2		+  2		-- 1		None				K2			*  Ignores all Blocks except for San He and Evade Blow.\n*CARTWHEEL KICK			-- 1		-- 1		+  0		S,C		(2 W)		K4, A3			*  DMG vs. all adjacent hexes; opponents who take DMG are Knocked Back one hex; Straight Line attack; the fighter may use full MV, dealing DMG each time he moves next to an opponent.\nCRESCENT KICK			-- 1		+  4		-- 2		S, miss C				K3		*  KDA\nDESCENDING WHEEL KICK		-- 2		+3 (x2)		+  0 		(Special)	(1 W)		K4, A3, Jump, Ft.Swp	*  First hit = Aerial, Block- S, miss C; Second hit = Crouching, KD, Block- C, miss A.\nFOOT SWEEP			-- 2		+  3		-- 2		C, miss A				K2, Crouch	*  KD; Crouching Maneuver.\nFORWARD CHEST KICK		+  0		+  2		-- 1		S,C,A				K3			*  KD.\nForward Flip Kick		+  1		+  5		Two		S,A		(1 W)		K3, A3, Handstand Kick	*  KD, KDA (unless blocking), (dodge move?)\n*FORWARD SLIDE KICK		+  0		+  2		+  0		C, miss A				K2, A2		*  KD\nFRONT SNAP KICK			+  2		+  2		None		S,C,A				K2			**\nHAMMER KICK			-- 2		+ 3, + 4	-- 2		C,miss A	(1 W)		K3,(x2)K,Ft.Swp		*  KD; Hits Downed opponents.\n*HEEL STAMP			+  2		-- 4		+  1		S,C, miss A			K1, A1			*  Opponent is Knocked Back (Fighter's Str. + Athletics) - Opponent's Str.; Fighter is KnockedBack 1.\nJUMPING SOBAT(TO)		-- 1		+  4		Two		S,C,A				K2, A1, Jump		*  Aerial. (MY: Aviods Sweeps [fist,foot,spin foot], may only be blocked C or w/ Kick Def) This is charlie's hop toward low kick.\nKNEE DROP			-- 1		+  3		-- 1		(miss S,C,A)			K2, A1			*  Attacks Downed opponents only.\nLONG SWEEP KICK			-- 2		+  3		None		C, miss A			K2, Crouch, Foot Sweep	*  KD; Crouching; this maneuver may be used to strike an opponent who is 1 Hex away.\nPUSH KICK (STOMACH KICK)	+  0		+  1		+  0		S,C,A				K2			*  Knockback.\nRISING BIRD KICK		-- 1		+  0(x3)	One		S,C		(1 W)		K4,A4,Jump,Dbl-Hit Kick	*  KDA; Aerial Maneuver.\nShin Strikes			(+ 0)		(+ 1)		(+ 0)		(Normal)			K3			*  used in conjunction with any basic Kick; the fighter must be in an adjacent Hex to use this maneuver.\nSPINNING FOOT SWEEP		-- 2		+  3(x2)	None		C, miss A	(1 W)		K2, A1, Foot Sweep	*  DMG is dealt to all adjacent hexes, target in front of fighter is struck twice; KD; Crouching.\nSPLITS KICK			-- 1		+  4		One		S, miss C			K2			*  KDA\nSTEPPING FRONT KICK		+  0		+  1(x2)	+  1		S,C		(1 W)  		K4, Double-Hit Kick	*  Fighter must MV into opponent's hex; 1st hit causes Knockback.\nStudder Step Kick		+  1		+  2		One		C(miss A)			K3, A1			*  Must be blocked low.\nTHRUSTING FORWARD KICK		+  1		+  2		+  1		S, C		(1 W)		K2, A1			*  Aerial Maneuver; KDA.\n\n\nPunch\n\nName             Speed      Damage     Move      Defense\n\nJab                  +2          -1         +0       S,C,A\n\nStrong Punch        +0          +1         +0       S,C,A\n\nFierce Punch        -1          +3         -1       S,C,A\n\n----------------------------------------------------------------\n\nBoshi-Ken(Thumb Drive)-1          +2          +0      S,C,A\nP2,A2\nxIf damage is scored opponent suffers -1 move next round.\n\nBuffalo Punch         -2           +5          One     S,A\nP2\n\nBushin Air Elbow    +2           -1           +2     S,A\nP3,A1,Elbow Strikes,Jump\nxAerial Maneuver\n\nCaber Punch         -2           +3           -1     S,C,A\nP2,Str4\nxKD\n\n\nCobra Hand Strike   +3           +1           +1     S,C,A\n(1W)   P3\n\nDash Punch          +0           +4           +2     S,C\n(1W)   P4,A1\n\nDash Uppercut       +0           +4          +2     S,miss C\n(1W)   P4,A1,Dash Punch\nxKDA\n\nDouble Hit Punch    -1           +0(x2)       +0     S,C,A\nP2\n\nEar Pop           -1           +0           -1     S,C,A\nP2\nxIgnores Sta:fighter -1 Honor\n\nElbow Barrage       +0           +0(x3)     One      S,C\n(1W)   P4,Elbow Smash,Elbow Strikes\nxMust be in opponent's hex\n\nElbow Drop      +0           +2           +0     miss S,C,A\nP2,A1\nxMust be used on Downed opponent; If opponent is interrupted he\nloses action and is still considered downed at the end of round.\n\nElbow Smash      +2           +2          One     S,C,A\nP1\n\nElbow Strikes    (+0)        (+1)         (+0)    (normal)\nP3\nxUsed in conjunction with any basic punch, must be in opponent's\nhex.\n\nFist Sweep        -1           +3           -2     C,miss A\nP3\nxCrouching Maneuver;KD\n\nFlaming Dragon Punch-1          +6(x3)       -2     S,C\n(1C,1W) P5,A1,F2,Dragon Punch\nxKD;Knockback 1(all);->Aerial Maneuver\n\nHand Of The Crane  +1          +0           +0    (Normal)\nP4\nxMay be used in conjunction with any basic Punch while standing.\n\nHand Of The Eagle Claw+1       +0           +1    (Normal)\nP4,A3,Jump\nxMay be in conjunction with any basic Punch while Aerial.\n\nHand Of The Striking Mantis+0     +0        +0    (Normal)\nP4,A2,Dex4\nxMay be used in conjunction with any basic Punch while standing:\nfighter may strike opponent one hex away.\n\n\nHook                   +0        +3       -2        S,C,A\nP1\n\nIron Palm(Tieh Sha Chang) +0       +4        -1       None\n(1C) P4,F4\nxIgnores Blocks;KDA\n\nKidney Punch           +0        +2       +0        S,C,A\nP2\nxFighter must be behind opponent or in opponent's hex to execute\nthis maneuver; following round opponent is -1 SPD.\n\nLunge Punch       +0        +1       +1        C\nP3,A1\n\nNeck Shatterer         -1        +4       -2        S,miss A\nP2,Elbow Strikes\n\nPalm Heel Punch       -2        +3       +0        S,C,A\nP2\nxWhen DMG is dealt treat total as if it were one higher for\npurposes of calculating dizzy.\n\nPower Uppercut       -1        +3       One       S,C\nP1\nxKDA\n\nRazor Fist Punch      +1        +4       +0        S,C\n(1C,1W) P5\nxKnockback1;DMG is Aggrivated\n\nRekka Ken           (+3)      (+0)     (+0)      (Normal)\n(1W per turn)P4,A2\nxUsed with any basic punch; can be used for up to 3 turns; if\nused full 3 turns next round must be spent taunting, or lose 3\nGlory; Combo to dizzy.\n\nReverse Fist Punch    +0(+2)   +2        One      S,C,A\nP1\nx+2 SPD if punch follows a set up punch.\n\nRushing Strong        +0        +1       +1        S,A\nP2\n\nShikan Ken(knuckle fist) +1       +1        +0       S,C\nP2\nxSTR.test to knock opponent back 1 hex; KDA\n\nShockwave            +0        +0       None      S,C,miss A\n(1C) P4,F2\nxShockwave extends in straight hex line; 1 hex per dot in STR;\nKD all.\n\nSpinning Chothesline   +0       +0       -2        S,miss C\n(1W) P4,A3,Clothesline\nxDMG vs. all adjacent hexes; Knockback 1 each time DMG is dealt;\nAdvance with MV after each hit, may roll DMG again if applicable;\nDodge Maneuver.\n\nSpinning Knuckle     -1        +1(x2)    +3         S,C\n(1W) P3,A1,Spinning Back Fist\nxDodge Maneuver.\n\nStrong Decending Elvow +0       +1         +1         S,A\nP2,A1,Jump\nxAerial.\n\nSword Hand Strike     -1       +4         -2         S,C,A\nP3\nxIgnores armor,Toughskin,etc.\n\nTriple Strike         -2    (+0,+0,+1)    None      S,C,A\nP2,K1\nxRoll three damage tests as indicated, take highest two rolls.\n\nTurn Punch      Rnd 1-1        +4        Two        S,C\n(W first turn)P4       Rnd 2-1        +5        Two        S,C\n           Rnd 3+0       +6        Two        S,C\n           Rnd 4+1       +7        Two        S,C\nxCard is layed face down; May be played at any time thereafter as\nlong as card is left face down; -1 SPD,DMG,MV while charging\nmaneuver; Need not be used.\n\nUppercut           +1        +2        -1         S,C,A\nP1\nx +1DMG vs. Crouching.",
+              "* [Target]: Close combat may only be used to attack the space directly ahead or the space you are on.\n* Fighting very close to the opponent. This includes most martial arts, brawling, and knife fighting.\n* If you don't have a weapon, use the [Bare Handed] item.",
+              ":reference",
+              "* The usefulness of kicks in self-defense and actual combat has been debated. Kicks are powerful but risk balance, expose the groin, and risk take downs.\n* Joker, there is nothing wrong with you that I can't fix. With my hands. - Batman, The Dark Knight Returns\n* There are seven working defenses from this position. Three of them disarm with minimal contact, three of them kill. The other....hurts. - Batman, The Dark Knight Returns\n* Beat losers, get paid. - Sett, Runeterra\n* The baseline for kicking abilities is that they are -1 Speed and +1 Damage with a minor special ability.\nNAME				SPD		DMG		MV		DEF\nSHORT KICK			+  1		+  0		+  0		S,C,A\nFORWARD KICK			+  0		+  2		-- 1		S,C,A\nBACK ROUNDHOUSE			-- 2		+  2		-- 1		None				K2			*  Ignores all Blocks except for San He and Evade Blow.\n*CARTWHEEL KICK			-- 1		-- 1		+  0		S,C		(2 W)		K4, A3			*  DMG vs. all adjacent hexes; opponents who take DMG are Knocked Back one hex; Straight Line attack; the fighter may use full MV, dealing DMG each time he moves next to an opponent.\nCRESCENT KICK			-- 1		+  4		-- 2		S, miss C				K3		*  KDA\nDESCENDING WHEEL KICK		-- 2		+3 (x2)		+  0 		(Special)	(1 W)		K4, A3, Jump, Ft.Swp	*  First hit = Aerial, Block- S, miss C; Second hit = Crouching, KD, Block- C, miss A.\nFOOT SWEEP			-- 2		+  3		-- 2		C, miss A				K2, Crouch	*  KD; Crouching Maneuver.\nFORWARD CHEST KICK		+  0		+  2		-- 1		S,C,A				K3			*  KD.\nForward Flip Kick		+  1		+  5		Two		S,A		(1 W)		K3, A3, Handstand Kick	*  KD, KDA (unless blocking), (dodge move?)\n*FORWARD SLIDE KICK		+  0		+  2		+  0		C, miss A				K2, A2		*  KD\nFRONT SNAP KICK			+  2		+  2		None		S,C,A				K2			**\nHAMMER KICK			-- 2		+ 3, + 4	-- 2		C,miss A	(1 W)		K3,(x2)K,Ft.Swp		*  KD; Hits Downed opponents.\n*HEEL STAMP			+  2		-- 4		+  1		S,C, miss A			K1, A1			*  Opponent is Knocked Back (Fighter's Str. + Athletics) - Opponent's Str.; Fighter is KnockedBack 1.\nJUMPING SOBAT(TO)		-- 1		+  4		Two		S,C,A				K2, A1, Jump		*  Aerial. (MY: Aviods Sweeps [fist,foot,spin foot], may only be blocked C or w/ Kick Def) This is charlie's hop toward low kick.\nKNEE DROP			-- 1		+  3		-- 1		(miss S,C,A)			K2, A1			*  Attacks Downed opponents only.\nLONG SWEEP KICK			-- 2		+  3		None		C, miss A			K2, Crouch, Foot Sweep	*  KD; Crouching; this maneuver may be used to strike an opponent who is 1 Hex away.\nPUSH KICK (STOMACH KICK)	+  0		+  1		+  0		S,C,A				K2			*  Knockback.\nRISING BIRD KICK		-- 1		+  0(x3)	One		S,C		(1 W)		K4,A4,Jump,Dbl-Hit Kick	*  KDA; Aerial Maneuver.\nShin Strikes			(+ 0)		(+ 1)		(+ 0)		(Normal)			K3			*  used in conjunction with any basic Kick; the fighter must be in an adjacent Hex to use this maneuver.\nSPINNING FOOT SWEEP		-- 2		+  3(x2)	None		C, miss A	(1 W)		K2, A1, Foot Sweep	*  DMG is dealt to all adjacent hexes, target in front of fighter is struck twice; KD; Crouching.\nSPLITS KICK			-- 1		+  4		One		S, miss C			K2			*  KDA\nSTEPPING FRONT KICK		+  0		+  1(x2)	+  1		S,C		(1 W)  		K4, Double-Hit Kick	*  Fighter must MV into opponent's hex; 1st hit causes Knockback.\nStudder Step Kick		+  1		+  2		One		C(miss A)			K3, A1			*  Must be blocked low.\nTHRUSTING FORWARD KICK		+  1		+  2		+  1		S, C		(1 W)		K2, A1			*  Aerial Maneuver; KDA.\n\n\nPunch\n\nName             Speed      Damage     Move      Defense\n\nJab                  +2          -1         +0       S,C,A\n\nStrong Punch        +0          +1         +0       S,C,A\n\nFierce Punch        -1          +3         -1       S,C,A\n\n----------------------------------------------------------------\n\nBoshi-Ken(Thumb Drive)-1          +2          +0      S,C,A\nP2,A2\nxIf damage is scored opponent suffers -1 move next round.\n\nBuffalo Punch         -2           +5          One     S,A\nP2\n\nBushin Air Elbow    +2           -1           +2     S,A\nP3,A1,Elbow Strikes,Jump\nxAerial Maneuver\n\nCaber Punch         -2           +3           -1     S,C,A\nP2,Str4\nxKD\n\n\nCobra Hand Strike   +3           +1           +1     S,C,A\n(1W)   P3\n\nDash Punch          +0           +4           +2     S,C\n(1W)   P4,A1\n\nDash Uppercut       +0           +4          +2     S,miss C\n(1W)   P4,A1,Dash Punch\nxKDA\n\nDouble Hit Punch    -1           +0(x2)       +0     S,C,A\nP2\n\nEar Pop           -1           +0           -1     S,C,A\nP2\nxIgnores Sta:fighter -1 Honor\n\nElbow Barrage       +0           +0(x3)     One      S,C\n(1W)   P4,Elbow Smash,Elbow Strikes\nxMust be in opponent's hex\n\nElbow Drop      +0           +2           +0     miss S,C,A\nP2,A1\nxMust be used on Downed opponent; If opponent is interrupted he\nloses action and is still considered downed at the end of round.\n\nElbow Smash      +2           +2          One     S,C,A\nP1\n\nElbow Strikes    (+0)        (+1)         (+0)    (normal)\nP3\nxUsed in conjunction with any basic punch, must be in opponent's\nhex.\n\nFist Sweep        -1           +3           -2     C,miss A\nP3\nxCrouching Maneuver;KD\n\nFlaming Dragon Punch-1          +6(x3)       -2     S,C\n(1C,1W) P5,A1,F2,Dragon Punch\nxKD;Knockback 1(all);->Aerial Maneuver\n\nHand Of The Crane  +1          +0           +0    (Normal)\nP4\nxMay be used in conjunction with any basic Punch while standing.\n\nHand Of The Eagle Claw+1       +0           +1    (Normal)\nP4,A3,Jump\nxMay be in conjunction with any basic Punch while Aerial.\n\nHand Of The Striking Mantis+0     +0        +0    (Normal)\nP4,A2,Dex4\nxMay be used in conjunction with any basic Punch while standing:\nfighter may strike opponent one hex away.\n\n\nHook                   +0        +3       -2        S,C,A\nP1\n\nIron Palm(Tieh Sha Chang) +0       +4        -1       None\n(1C) P4,F4\nxIgnores Blocks;KDA\n\nKidney Punch           +0        +2       +0        S,C,A\nP2\nxFighter must be behind opponent or in opponent's hex to execute\nthis maneuver; following round opponent is -1 SPD.\n\nLunge Punch       +0        +1       +1        C\nP3,A1\n\nNeck Shatterer         -1        +4       -2        S,miss A\nP2,Elbow Strikes\n\nPalm Heel Punch       -2        +3       +0        S,C,A\nP2\nxWhen DMG is dealt treat total as if it were one higher for\npurposes of calculating dizzy.\n\nPower Uppercut       -1        +3       One       S,C\nP1\nxKDA\n\nRazor Fist Punch      +1        +4       +0        S,C\n(1C,1W) P5\nxKnockback1;DMG is Aggrivated\n\nRekka Ken           (+3)      (+0)     (+0)      (Normal)\n(1W per turn)P4,A2\nxUsed with any basic punch; can be used for up to 3 turns; if\nused full 3 turns next round must be spent taunting, or lose 3\nGlory; Combo to dizzy.\n\nReverse Fist Punch    +0(+2)   +2        One      S,C,A\nP1\nx+2 SPD if punch follows a set up punch.\n\nRushing Strong        +0        +1       +1        S,A\nP2\n\nShikan Ken(knuckle fist) +1       +1        +0       S,C\nP2\nxSTR.test to knock opponent back 1 hex; KDA\n\nShockwave            +0        +0       None      S,C,miss A\n(1C) P4,F2\nxShockwave extends in straight hex line; 1 hex per dot in STR;\nKD all.\n\nSpinning Chothesline   +0       +0       -2        S,miss C\n(1W) P4,A3,Clothesline\nxDMG vs. all adjacent hexes; Knockback 1 each time DMG is dealt;\nAdvance with MV after each hit, may roll DMG again if applicable;\nDodge Maneuver.\n\nSpinning Knuckle     -1        +1(x2)    +3         S,C\n(1W) P3,A1,Spinning Back Fist\nxDodge Maneuver.\n\nStrong Decending Elvow +0       +1         +1         S,A\nP2,A1,Jump\nxAerial.\n\nSword Hand Strike     -1       +4         -2         S,C,A\nP3\nxIgnores armor,Toughskin,etc.\n\nTriple Strike         -2    (+0,+0,+1)    None      S,C,A\nP2,K1\nxRoll three damage tests as indicated, take highest two rolls.\n\nTurn Punch      Rnd 1-1        +4        Two        S,C\n(W first turn)P4       Rnd 2-1        +5        Two        S,C\n           Rnd 3+0       +6        Two        S,C\n           Rnd 4+1       +7        Two        S,C\nxCard is layed face down; May be played at any time thereafter as\nlong as card is left face down; -1 SPD,DMG,MV while charging\nmaneuver; Need not be used.\n\nUppercut           +1        +2        -1         S,C,A\nP1\nx +1DMG vs. Crouching.",
               ":titles",
               "Brawler, Grappler, Hand-to-Hand, Infighter, Martial Artist, Wrestler",
               ":stat",
@@ -4215,7 +4224,9 @@ export default class nx_tactics_books_combat {
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
-                  "Punch"
+                  "Punch",
+                  ":summary",
+                  "* [Fight]: [Close Combat]\n* [Damage]: [Size Bonus] [Bash]"
                 ),
                 ":Kick",
                 vx_core.f_new(
@@ -4223,7 +4234,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kick",
                   ":summary",
-                  "* [Low Attack]\n-1 Initiative\n-1 Move\n+1 Damage"
+                  "* [Low Attack]\n* [Fight]: [Close Combat]-1\n* [Damage]: [Size Bonus]+1 [Bash]"
                 ),
                 ":Grab",
                 vx_core.f_new(
@@ -4231,7 +4242,15 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Grab",
                   ":summary",
-                  "-1 Initiative\n-1 Action\n* Attempt to grab an item. Roll vs. Body to succeed."
+                  "* [Fight]: [Close Combat]\n* [Damage]: [Size Bonus] [Hold] [Lock]\n* Attempt to grab a unit."
+                ),
+                ":Drag",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Drag",
+                  ":summary",
+                  "[Requires]: You must have a [Hold] on the target.\n[Action]: You may Move at half speed while also dragging the target behind you."
                 ),
                 "Back Fist",
                 vx_core.f_new(
@@ -4335,7 +4354,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Haymaker",
                   ":summary",
-                  "* A slow all out attack that causes massive damage. Especially\nuseful to finish off weakened opponents.\n-2 Initiative\n0 Move\n+2 Damage",
+                  "* A slow all out attack that causes massive damage. Especially useful to finish off weakened opponents.\n-2 Initiative\n0 Move\n+2 Damage",
                   ":titles",
                   "Two-Fisted Smash"
                 ),
@@ -4353,7 +4372,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Hyperfist",
                   ":summary",
-                  "* [Critical Hits] can be exchanged for additional Attacks.\nSame as [Auto].\n-2 Initiative\n-1 Damage\n1 Move",
+                  "* [Critical Hits] can be exchanged for additional Attacks. Same as [Auto].\n-2 Initiative\n-1 Damage\n1 Move",
                   ":titles",
                   "Hundred Hand Slap, Lightning Fist, Rapid Punch"
                 ),
@@ -4397,7 +4416,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Nerve Strike",
                   ":summary",
-                  "* Use the tips of the fingers to strike and pinch nerve clusters\nto produce pain and debilitation.\n* [Action]\n* -1 Initiative\n* +1 Stun",
+                  "* Use the tips of the fingers to strike and pinch nerve clusters to produce pain and debilitation.\n* [Action]\n* -1 Initiative\n* +1 Stun",
                   ":titles",
                   "Atemi Strike, Atemi Waza, Cobra Strike"
                 ),
@@ -4421,7 +4440,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Phoenix Strike",
                   ":summary",
-                  "* Middle finger protrudes from fist to strike nerve clusters to\ncause numbness.\n* [Criticals] can be exchanged for Slow tokens."
+                  "* Middle finger protrudes from fist to strike nerve clusters to cause numbness.\n* [Criticals] can be exchanged for Slow tokens."
                 ),
                 ":Ram",
                 vx_core.f_new(
@@ -4447,7 +4466,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Strike Defense",
                   ":summary",
-                  "* The fighter concentrates on the strikes of the opponent but\nbecomes vulnerable to other attacks.\n* [Reaction]\n+1 Initiative\n-1 Move\n+2 Defense vs. Strikes (-1 Defense vs. Others)"
+                  "* The fighter concentrates on the strikes of the opponent but becomes vulnerable to other attacks.\n* [Reaction]\n+1 Initiative\n-1 Move\n+2 Defense vs. Strikes (-1 Defense vs. Others)"
                 ),
                 "Sword Hand",
                 vx_core.f_new(
@@ -4465,7 +4484,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Tiger Claw",
                   ":summary",
-                  "Tiger Claw Strike    (+0)     (+1)       (+0)       S,C,A"
+                  "Tiger Claw Strike"
                 ),
                 ":Uppercut",
                 vx_core.f_new(
@@ -4473,7 +4492,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Uppercut",
                   ":summary",
-                  "* This powerful punch starts low and ends high using the fighter's\nleg and back muscles to increase damage.\n* [Criticals] can be exchanged for Knockback\n-1 Initiative\n+1 Damage\n-1 Move"
+                  "* This powerful punch starts low and ends high using the fighter's leg and back muscles to increase damage.\n* [Criticals] can be exchanged for Knockback\n-1 Initiative\n+1 Damage\n-1 Move"
                 ),
                 "Axe Kick",
                 vx_core.f_new(
@@ -4481,7 +4500,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Axe Kick",
                   ":summary",
-                  "* Fighter raises his leg high over his head and snaps it down\ntoward the opponent's head and neck.\n* [High Attack]\n-1 Initiative\n-2 Move\n+1 Damage"
+                  "* Fighter raises his leg high over his head and snaps it down toward the opponent's head and neck.\n* [High Attack]\n-1 Initiative\n-2 Move\n+1 Damage"
                 ),
                 "Back Kick",
                 vx_core.f_new(
@@ -4527,7 +4546,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Dragon Tail",
                   ":summary",
-                  "* The fighter drops low, extends his leg and whirls around quickly,\nkicking his opponents and knocking their feet out from under them.\n-2 Initiative\n-1 Accuracy\nDamage is [Knockback] instead.\nCriticals are [Knockdown] instead.",
+                  "* The fighter drops low, extends his leg and whirls around quickly, kicking his opponents and knocking their feet out from under them.\n-2 Initiative\n-1 Accuracy\nDamage is [Knockback] instead.\nCriticals are [Knockdown] instead.",
                   ":titles",
                   "Iron Broom, Tiger Tail Sweep"
                 ),
@@ -4537,7 +4556,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Drop Kick",
                   ":summary",
-                  "* Ends [Prone].\n* Kick the opponent with the soles of both feet and fall to the ground.\n	-- 1		+  2		-- 1		S miss C,A			K2, A1			**"
+                  "* Ends [Prone].\n* Kick the opponent with the soles of both feet and fall to the ground."
                 ),
                 "Flying Kick",
                 vx_core.f_new(
@@ -4547,7 +4566,7 @@ export default class nx_tactics_books_combat {
                   ":image",
                   "MartialArts/FlyingKick.jpg",
                   ":summary",
-                  "* The fighter launches himself feet first into the air toward his\nopponent.  He ends his move with a powerful kick, usually to the\nopponent's head or midsection.\n+1 Accurary\n+1 Damage\n+1 Move (Aerial in one direction)\n	+  0		+  6		-- 2		S,C		(1 W)		K4, A4, Jump		*  Knockback; KD; --> Aerial Maneuver.",
+                  "* The fighter launches himself feet first into the air toward his opponent.  He ends his move with a powerful kick, usually to the opponent's head or midsection.\n+1 Accurary\n+1 Damage\n+1 Move (Aerial in one direction)\n +  0		+  6		-- 2		S,C		(1 W)		K4, A4, Jump		*  Knockback; KD; --> Aerial Maneuver.",
                   ":titles",
                   "Flying Thrust Kick"
                 ),
@@ -4557,7 +4576,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Foot Stomp",
                   ":reference",
-                  "* The toe crusher.  That went out of style when I left kindergarten.\n- Kung Fu Hustle",
+                  "* The toe crusher.  That went out of style when I left kindergarten. - Kung Fu Hustle",
                   ":summary",
                   "* Stomp on opponent's foot to slow their movement."
                 ),
@@ -4567,7 +4586,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Handstand Kick",
                   ":summary",
-                  "* The fighter bends over, places his hands on the ground, and then\npresses his legs up into a handstand. The legs snap up with\ntremendous kicking force. Can be used while [Prone]\n-1 Initiative\n1 Move\n+2 Damage"
+                  "* The fighter bends over, places his hands on the ground, and then presses his legs up into a handstand. The legs snap up with tremendous kicking force. Can be used while [Prone]\n-1 Initiative\n1 Move\n+2 Damage"
                 ),
                 "Hurricane Kick",
                 vx_core.f_new(
@@ -4587,7 +4606,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kick Defense",
                   ":summary",
-                  "* The fighter concentrates on the legs of the opponent but becomes\nvulnerable to other attacks.\n* [Reaction]\n+1 Initiative\n-1 Move\n+2 Defense vs. Kicks (-1 Defense vs. Others)"
+                  "* The fighter concentrates on the legs of the opponent but becomes vulnerable to other attacks.\n* [Reaction]\n+1 Initiative\n-1 Move\n+2 Defense vs. Kicks (-1 Defense vs. Others)"
                 ),
                 "Kick Off",
                 vx_core.f_new(
@@ -4595,7 +4614,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kick Off",
                   ":summary",
-                  "* Propel yourself and opponent apart instead of damaging. Especially\nuseful when the opponent is near dangerous terrain.\n-1 Initiative\n+1 Accuracy\n[Hits] are [Knockback] instead.\n[Critical Hits] are [Knockdown] instead.",
+                  "* Propel yourself and opponent apart instead of damaging. Especially useful when the opponent is near dangerous terrain.\n-1 Initiative\n+1 Accuracy\n[Hits] are [Knockback] instead.\n[Critical Hits] are [Knockdown] instead.",
                   ":titles",
                   "Heel Stamp"
                 ),
@@ -4613,7 +4632,7 @@ export default class nx_tactics_books_combat {
                   ":image",
                   "MartialArts/TigerKnee.jpg",
                   ":summary",
-                  "* Leap up to strike with the knee to the stomach, chest or face\nusing the momentum of the leap to increase damage.\n+2 Initiative\n+1 Damage\n0 Move",
+                  "* Leap up to strike with the knee to the stomach, chest or face using the momentum of the leap to increase damage.\n+2 Initiative\n+1 Damage\n0 Move",
                   ":titles",
                   "Flying Knee Thrust, Tiger Knee"
                 ),
@@ -4623,7 +4642,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Leg Sweep",
                   ":summary",
-                  "* A low spinning kick designed primarily to knock an opponent of\nhis feet.\n-2 Move\n-1 Accuracy [Low Attack]\n+1 Damage\n[Critical Hits] are [Knockdown]",
+                  "* A low spinning kick designed primarily to knock an opponent of his feet.\n-2 Move\n-1 Accuracy [Low Attack]\n+1 Damage\n[Critical Hits] are [Knockdown]",
                   ":titles",
                   "Foot Sweep"
                 ),
@@ -4635,7 +4654,7 @@ export default class nx_tactics_books_combat {
                   ":image",
                   "MartialArts/LightningLeg.jpg",
                   ":summary",
-                  "* [Finishing Move]\n* [Attack]: [Auto]\n	LIGHTNING LEG			-- 2		+  1(x3)	None		as 100handslap	(1 W)		K3, Double Hit Kick	*  Knockback; When this maneuver is chosen the fighter determines which of the three attacks strike high, and which strike low (2 high, 1 low; or 1 high, 2 low), this affects blocking accordingly."
+                  "* [Finishing Move]\n* [Attack]: [Auto]\n LIGHTNING LEG			-- 2		+  1(x3)	None		as 100handslap	(1 W)		K3, Double Hit Kick\n*  Knockback; When this maneuver is chosen the fighter determines which of the three attacks strike high, and which strike low (2 high, 1 low; or 1 high, 2 low), this affects blocking accordingly."
                 ),
                 "Reverse Front Kick",
                 vx_core.f_new(
@@ -4643,7 +4662,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Reverse Front Kick",
                   ":summary",
-                  "* Feint kick past head then snap back into the back of the head or\nneck.\n-1 Initiative\n+1 Accuracy\n-2 Move"
+                  "* Feint kick past head then snap back into the back of the head or neck.\n-1 Initiative\n+1 Accuracy\n-2 Move"
                 ),
                 "Roundhouse Kick",
                 vx_core.f_new(
@@ -4651,7 +4670,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Roundhouse Kick",
                   ":summary",
-                  "* Fighter pivots and kicks using the momentum from the pivot to\nincrease the damage of the kick.\n-1 Initiative\n-1 Action\n+2 Damage"
+                  "* Fighter pivots and kicks using the momentum from the pivot to increase the damage of the kick.\n-1 Initiative\n-1 Action\n+2 Damage"
                 ),
                 "Scissor Kick",
                 vx_core.f_new(
@@ -4659,7 +4678,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Scissor Kick",
                   ":summary",
-                  "* Leap up and kick two opponents in different directions\nsimultaneously.\n-1 Initiative\n0 Move [Aerial]\n-1 Damage"
+                  "* Leap up and kick two opponents in different directions simultaneously.\n-1 Initiative\n0 Move [Aerial]\n-1 Damage"
                 ),
                 "Side Kick",
                 vx_core.f_new(
@@ -4705,7 +4724,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Air Throw",
                   ":summary",
-                  "* The fighter intercepts a leaping or flying opponent in mid-air,\ntwists, and slams him to the ground, landing on top of him.\n* [Reaction], [Aerial]\n+1 Initiative\n+0 Damage is [Knockdown]. Damage also reduces falling Damage\nto the fighter.\nCriticals are [Knockdown]. Criticals also reduces falling Criticals\nto the fighter."
+                  "* The fighter intercepts a leaping or flying opponent in mid-air, twists, and slams him to the ground, landing on top of him.\n* [Reaction], [Aerial]\n+1 Initiative\n+0 Damage is [Knockdown]. Damage also reduces falling Damage\nto the fighter.\nCriticals are [Knockdown]. Criticals also reduces falling Criticals\nto the fighter."
                 ),
                 ":Backbreaker",
                 vx_core.f_new(
@@ -4713,7 +4732,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Backbreaker",
                   ":summary",
-                  "* The fighter lifts his opponent in the air and smashes him to the\nground or onto his knee. This maneuver can cause serious spinal\ninjuries.\n* Uses a [Hold]\n-2 Initiative\n-1 Accuracy\n+2 Damage\nCriticals are [Cripple]"
+                  "* The fighter lifts his opponent in the air and smashes him to the ground or onto his knee. This maneuver can cause serious spinal injuries.\n* Uses a [Hold]\n-2 Initiative\n-1 Accuracy\n+2 Damage\nCriticals are [Cripple]"
                 ),
                 "Backroll Throw",
                 vx_core.f_new(
@@ -4721,7 +4740,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Backroll Throw",
                   ":summary",
-                  "* The fighter grabs the opponent and then rolls backwards while\nusing his legs to help lift and throw the opponent over him. The\nopponent is send directly behind the fighter and the fighter is\nleft [Prone].\n* Uses a [Hold]\n-1 Initiative\n+1 Damage is [Knockdown]\nCriticals are [Knockdown]"
+                  "* The fighter grabs the opponent and then rolls backwards while using his legs to help lift and throw the opponent over him. The opponent is send directly behind the fighter and the fighter is left [Prone].\n* Uses a [Hold]\n-1 Initiative\n+1 Damage is [Knockdown]\nCriticals are [Knockdown]"
                 ),
                 "Bear Hug",
                 vx_core.f_new(
@@ -4737,7 +4756,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Choke Hold",
                   ":summary",
-                  "* The fighter wraps his arms around the opponents neck and begins\nchoking him.\n* [Continuous]\n* Requires a [Hold]\n-1 Initiative\nCriticals are [Asphixiation]\n1 Move"
+                  "* The fighter wraps his arms around the opponents neck and begins choking him.\n* [Continuous]\n* Requires a [Hold]\n-1 Initiative\nCriticals are [Asphixiation]\n1 Move"
                 ),
                 "Fighting Hold",
                 vx_core.f_new(
@@ -4753,7 +4772,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Grappling Defense",
                   ":summary",
-                  "* Skilled grapplers must learn how to resist and escape from the\nsame maneuvers that they use.\n* [Reaction]\n+1 Initiative\n-1 Move\n0 Damage - Remove a [Hold] from yourself.\nCriticals - Remove additional [Holds]."
+                  "* Skilled grapplers must learn how to resist and escape from the same maneuvers that they use.\n* [Reaction]\n+1 Initiative\n-1 Move\n0 Damage - Remove a [Hold] from yourself.\nCriticals - Remove additional [Holds]."
                 ),
                 "Ground Fighting",
                 vx_core.f_new(
@@ -4775,7 +4794,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Hip Throw",
                   ":summary",
-                  "* This is a quick move to get an opponent on the ground. The\nfighter moves a leg behind the opponent's and pushes him past the\nhip and directly to the floor.\n-1 Move\nDamage - [Knockdown]\nCriticals - [Knockdown]"
+                  "* This is a quick move to get an opponent on the ground. The fighter moves a leg behind the opponent's and pushes him past the hip and directly to the floor.\n-1 Move\nDamage - [Knockdown]\nCriticals - [Knockdown]"
                 ),
                 ":Hold",
                 vx_core.f_new(
@@ -4919,7 +4938,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Grappling",
                   ":summary",
-                  "* Atomic Drop\n     * Air Throw\n     * Backbreaker\n     * Backroll Throw\n     * Bear Hug\n     * Choke Hold\n     * Fighting Hold\n     * Grappling Defense\n     * Ground Fighting\n     * Headlock\n     * Hip Throw\n     * Hold\n     * Hook Hold\n     * Iron Claw\n     * Joint Lock\n     * Knee Bash\n     * Neck Break\n     * Nelson\n     * Piledriver\n     * Pin\n     * Reversal\n     * Shoulder Throw\n     * Sleeper Hold\n     * Suplex\n     * Tackle\n     * Take Down\n     * Thigh Press"
+                  "* Atomic Drop\n* Air Throw\n* Backbreaker\n* Backroll Throw\n* Bear Hug\n* Choke Hold\n* Fighting Hold\n* Grappling Defense\n* Ground Fighting\n* Headlock\n* Hip Throw\n* Hold\n* Hook Hold\n* Iron Claw\n* Joint Lock\n* Knee Bash\n* Neck Break\n* Nelson\n* Piledriver\n* Pin\n* Reversal\n* Shoulder Throw\n* Sleeper Hold\n* Suplex\n* Tackle\n* Take Down\n* Thigh Press"
                 ),
                 ":Aikido",
                 vx_core.f_new(
@@ -4929,7 +4948,7 @@ export default class nx_tactics_books_combat {
                   ":reference",
                   "* Water flows and takes any shape or course, yet it is always consistant with its own nature.",
                   ":summary",
-                  "* This essentially noncombative Japanese art concentrates on the development of the self, and physical, mental, and spiritual nonresistance.  By moving with and blending with an opponent's attacks, they may be used against him.\n* Athletics - [Breakfall]\n* Evasion - [Deflect], [Disengage], [Drunken Monkey Roll], [Evasive Roll], [Iron Horse], [Weapon Block]\n* Grapples - [Air Throw], [Backroll Throw], [Disengage], [Grab], [Grapple Defense], [Hip Throw], [Joint Lock], [Pin], [Shoulder Throw], [Takedown]\n* Kicks - [Dragon Tail], [Kick Defense], [Leg Sweep], [Slide Kick]\n* Strikes - [Nerve Strike], [Strike Defense]\n\n		GRAB:\n		Ugoku Taosu(5)\n		Atemi Torae(4)\n\n		FOCUS:\n		Push(2)\n		Chi Kung Healing(3)\n		Ghost Form(5)\n		Stunning Shout(3)\n		Zen No Mind(3)",
+                  "* This essentially noncombative Japanese art concentrates on the development of the self, and physical, mental, and spiritual nonresistance.  By moving with and blending with an opponent's attacks, they may be used against him.\n* Athletics - [Breakfall]\n* Evasion - [Deflect], [Disengage], [Drunken Monkey Roll], [Evasive Roll], [Iron Horse], [Weapon Block]\n* Grapples - [Air Throw], [Backroll Throw], [Disengage], [Grab], [Grapple Defense], [Hip Throw], [Joint Lock], [Pin], [Shoulder Throw], [Takedown]\n* Kicks - [Dragon Tail], [Kick Defense], [Leg Sweep], [Slide Kick]\n* Strikes - [Nerve Strike], [Strike Defense]\n\n  GRAB:\n  Ugoku Taosu(5)\n  Atemi Torae(4)\n\n  FOCUS:\n  Push(2)\n  Chi Kung Healing(3)\n  Ghost Form(5)\n  Stunning Shout(3)\n  Zen No Mind(3)",
                   ":titles",
                   "Aikijutsu"
                 ),
@@ -4993,7 +5012,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Hwarang-Do",
                   ":summary",
-                  "* This style concentrates on punches and a wid variety of weapon techniques. Further masters are said to possess mystical powers including telepathy, clairvoyance, and the ability to sense danger.\n* A Korean style that is said to have grown out of certain healing techniques, and modern masters are often healers as well. Legend has it that a Buddhist mong developed the style and taught it to the Hwarang who were similar the Korean equivalent of knights: fighters, diplomats, and military leaders who lived by a strict code of honor.\n* Athletics - [Breakfall], [High Jump], [Kippup], [Long Jump]\n* Evasion - [Deflect], [Disengage]\n* Grapples - [Choke Hold], [Grapple Defense], [Joint Lock], [Shoulder Throw]\n* Kicks - [Backflip Kick], [Kick Defense], [Roundhouse Kick],\n[Slide Kick]\n* Strikes - [Dash Attack], [Elbow Strike], [Nerve Strike], [Phoenix Strike], [Strike Defense]\n* Focus Powers - [Blind Fighting], [Spirit Healing], [Zen No Mind]"
+                  "* This style concentrates on punches and a wid variety of weapon techniques. Further masters are said to possess mystical powers including telepathy, clairvoyance, and the ability to sense danger.\n* A Korean style that is said to have grown out of certain healing techniques, and modern masters are often healers as well. Legend has it that a Buddhist mong developed the style and taught it to the Hwarang who were similar the Korean equivalent of knights: fighters, diplomats, and military leaders who lived by a strict code of honor.\n* Athletics - [Breakfall], [High Jump], [Kippup], [Long Jump]\n* Evasion - [Deflect], [Disengage]\n* Grapples - [Choke Hold], [Grapple Defense], [Joint Lock], [Shoulder Throw]\n* Kicks - [Backflip Kick], [Kick Defense], [Roundhouse Kick], [Slide Kick]\n* Strikes - [Dash Attack], [Elbow Strike], [Nerve Strike], [Phoenix Strike], [Strike Defense]\n* Focus Powers - [Blind Fighting], [Spirit Healing], [Zen No Mind]"
                 ),
                 "Jeet Kune Do",
                 vx_core.f_new(
@@ -5021,7 +5040,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kabaddi",
                   ":summary",
-                  "* [Head Butt]\n		KICK:\n		Slide Kick(2)\n\n		BLOCK:\n		San He(3)\n		Energy Reflection(3)\n\n		GRAB:\n		Head Butt Hold(2)\n		Brain Cracker(1)\n		Dislocate Limb(3)\n		Disengage(1)\n		Air Suplex(1)\n\n		ATHLETICS:\n		Cannon Drill(5)\n		Flying Body Spear(2)\n\n		FOCUS:\n		Chi Kung Healing(3)\n		Extendible Limbs(4)\n		Fireball(3)\n		Improved Fireball(5)\n		Regeneration(1)\n		Yoga Flame(3)\n		Yoga Teleport(5)\n		Cobra Charm(2)\n		Ghost Form(5)\n		Flying Fireball(3)\n		Inferno Strike(5)\n		Mind Reading(3)\n		Telepathy(2)\n		Chi Push(5)\n		Levitation(3)\n		Balance(3)\n		Leech(3)"
+                  "* [Head Butt]\n  KICK:\n  Slide Kick(2)\n\n  BLOCK:\n  San He(3)\n  Energy Reflection(3)\n\n  GRAB:\n  Head Butt Hold(2)\n  Brain Cracker(1)\n  Dislocate Limb(3)\n  Disengage(1)\n  Air Suplex(1)\n\n  ATHLETICS:\n  Cannon Drill(5)\n  Flying Body Spear(2)\n\n  FOCUS:\n  Chi Kung Healing(3)\n  Extendible Limbs(4)\n  Fireball(3)\n  Improved Fireball(5)\n  Regeneration(1)\n  Yoga Flame(3)\n  Yoga Teleport(5)\n  Cobra Charm(2)\n  Ghost Form(5)\n  Flying Fireball(3)\n  Inferno Strike(5)\n  Mind Reading(3)\n  Telepathy(2)\n  Chi Push(5)\n  Levitation(3)\n  Balance(3)\n  Leech(3)"
                 ),
                 ":Kalaripayattu",
                 vx_core.f_new(
@@ -5029,7 +5048,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kalaripayattu",
                   ":summary",
-                  "* A boxing art from southern India that dates back to 500 AD. Fighters are trained in 4 syltes: unarmed, stick fighting, other weapons, and the 108 vital points of the human body. Masters are also skiled healers.\n* Athletics - [Breakfall], [Jump]\n* Grapples - [Joint Lock], [Throw]\n* Kicks - [Flying Kick], [Roundhouse Kick]\n* Strikes - [Elbow Strike], [Nerve Strike], [Phoenix Strike],\n[Strike Defense], [Sword Hand]\n* Focus Powers - [Spirit Healing]",
+                  "* A boxing art from southern India that dates back to 500 AD. Fighters are trained in 4 syltes: unarmed, stick fighting, other weapons, and the 108 vital points of the human body. Masters are also skiled healers.\n* Athletics - [Breakfall], [Jump]\n* Grapples - [Joint Lock], [Throw]\n* Kicks - [Flying Kick], [Roundhouse Kick]\n* Strikes - [Elbow Strike], [Nerve Strike], [Phoenix Strike], [Strike Defense], [Sword Hand]\n* Focus Powers - [Spirit Healing]",
                   ":titles",
                   "Battlefield Practices, Gurus"
                 ),
@@ -5049,7 +5068,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kickboxing",
                   ":summary",
-                  "* [Backroll Throw]\n* [Dashing Punch]\n* [Haymaker]\n* [Hyperfist]\n* [Knee Bash]\n* [Slide Kick]\n* [Spinning Back Fist]\n		PUNCH:\n		Feint(1)\n		Hook(1)\n		Double Hit Punch(1)\n		Heart Punch(4)\n		Lunge Punch(2)\n		Fist Sweep(2)\n		Dashing Punch(5)\n		Turn Punch(5)\n		Rekka Ken(5)\n		Spinning Back Fist(1)\n		Spinning Knuckle(3)\n\n		KICK:\n		Double Dread Kick(3)\n		Back Roundhouse(1)\n		Ax Kick(3)\n		Reverse Frontal Kick(1)\n		Flying Knee Thrust(1)\n		Stepping Front Kick(3)\n		Slide Kick(2)\n		Double Hit Kick(1)\n		Wounded Knee(2)\n\n		BLOCK:\n		Deflecting Punch(1)\n\n		GRAB:\n		Knee Basher(2)\n		Back Roll Throw(1)\n		Brain Cracker(1)\n\n		---- Savate ----\n		PUNCH:\n		Spinning Back Fist(1)\n		Palm Heel Punch(1)\n		Ear Pop(2)\n		Spinning Knuckle(3)\n\n		KICK:\n		Ax Kick(2)\n		Double Hit Kick(1)\n		Flash Kick(4)\n		Double Dread Kick(3)\n		Foot Sweep(1)\n		Spinning Foot Sweep(1)\n		Lightning Leg(5)\n		Slide Kick(2)\n		Stepping Front Kick(4)\n		Flying Knee Thrust(1)\n		Double Hit Knee(1)\n\n		BLOCK:\n\n		GRAB:\n		Knee Basher(2)\n		Bear Hug(1)\n		Neck Choke(2)",
+                  "* [Backroll Throw]\n* [Dashing Punch]\n* [Haymaker]\n* [Hyperfist]\n* [Knee Bash]\n* [Slide Kick]\n* [Spinning Back Fist]\n  PUNCH:\n  Feint(1)\n  Hook(1)\n  Double Hit Punch(1)\n  Heart Punch(4)\n  Lunge Punch(2)\n  Fist Sweep(2)\n  Dashing Punch(5)\n  Turn Punch(5)\n  Rekka Ken(5)\n  Spinning Back Fist(1)\n  Spinning Knuckle(3)\n\n  KICK:\n  Double Dread Kick(3)\n  Back Roundhouse(1)\n  Ax Kick(3)\n  Reverse Frontal Kick(1)\n  Flying Knee Thrust(1)\n  Stepping Front Kick(3)\n  Slide Kick(2)\n  Double Hit Kick(1)\n  Wounded Knee(2)\n\n  BLOCK:\n  Deflecting Punch(1)\n\n  GRAB:\n  Knee Basher(2)\n  Back Roll Throw(1)\n  Brain Cracker(1)\n\n  ---- Savate ----\n  PUNCH:\n  Spinning Back Fist(1)\n  Palm Heel Punch(1)\n  Ear Pop(2)\n  Spinning Knuckle(3)\n\n  KICK:\n  Ax Kick(2)\n  Double Hit Kick(1)\n  Flash Kick(4)\n  Double Dread Kick(3)\n  Foot Sweep(1)\n  Spinning Foot Sweep(1)\n  Lightning Leg(5)\n  Slide Kick(2)\n  Stepping Front Kick(4)\n  Flying Knee Thrust(1)\n  Double Hit Knee(1)\n\n  BLOCK:\n\n  GRAB:\n  Knee Basher(2)\n  Bear Hug(1)\n  Neck Choke(2)",
                   ":titles",
                   "Savate"
                 ),
@@ -5097,7 +5116,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kung Fu, Mantis Style",
                   ":summary",
-                  "* Mantis operates in sequences and combinations baffling opponents with multiple simultaneous attacks and blocks, all executed at high speed. Mantis is a quick, high, linear, hard style that attacks by rapidly executed combinations.\n* [Combo]\n* Strikes - [Deflecting Punch], [Hyperfist], [Jab], [Knife Hand], [One Two Punch]"
+                  "* Mantis operates in sequences and combinations baffling opponents with multiple simultaneous attacks and blocks, all executed at high speed. Mantis is a quick, high, linear, hard style that attacks by rapidly executed combinations.\n* [Combination]\n* Strikes - [Deflecting Punch], [Hyperfist], [Jab], [Knife Hand], [One Two Punch]"
                 ),
                 "Kung Fu, Monkey Style",
                 vx_core.f_new(
@@ -5129,7 +5148,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kung Fu, Wing Chun",
                   ":summary",
-                  "* Wing Chung, literally 'singing spring', is a Southern Chinese kung fu style and a form of\nself-defense originating in Qing China, which requires quick arm movements and strong legs. Softness (via relaxation) and performance of techniques in a relaxed manner is fundamental to Wing Chun."
+                  "* Wing Chung, literally 'singing spring', is a Southern Chinese kung fu style and a form of self-defense originating in Qing China, which requires quick arm movements and strong legs. Softness (via relaxation) and performance of techniques in a relaxed manner is fundamental to Wing Chun."
                 ),
                 "Muay Thai",
                 vx_core.f_new(
@@ -5139,7 +5158,7 @@ export default class nx_tactics_books_combat {
                   ":reference",
                   "* Apachai: The use of knees and elbows is very important in Muay Thai.\n* Akisame: Which, in fact, is rather rare as most contemporary martial arts have banned the use of knees and elbows in tournament fighting.\n* Kenichi: Really? How come?\n* Apachai: If you use them wrong, you can kill your opponent!\n* Akisame: That's right. However, in Muay Thai, they specifically focus on these moves.\n* Kenichi: Yeahhh, and why is that?\n* Apachai: Because if you use them right, you can kill your opponent!\n- Kenichi: World's Mightiest Disciple",
                   ":summary",
-                  "* A fast, brutal martial art from Thailand.\n* The style uses close strikes with the knees, elbows, fists, and feet.\nThere are no grabs or throws. Fighters often jump up to add more force\nto their blows. Fighters are also trained to take damage as much as\navoid it.\n* Evasion - [Iron Skin]\n* Grapples - [Knee Bash]\n* Kicks - [Axe Kick], [Double Kick], [Foot Stomp], [Kick Defense],\n[Knee Drop], [Knee Strike], [Leg Sweep], [Lightning Leg],\n[Reverse Front Kick], [Roundhouse Kick]\n* Strikes - [Dash Attack], [Dragon Punch], [Elbow Drop], [Elbow Strike],\n[Feint], [One Two Punch], [Ram], [Spinning Back Fist], [Strike Defense],\n[Sword Hand], [Uppercut]",
+                  "* A fast, brutal martial art from Thailand.\n* The style uses close strikes with the knees, elbows, fists, and feet. There are no grabs or throws. Fighters often jump up to add more force to their blows. Fighters are also trained to take damage as much as avoid it.\n* Evasion - [Iron Skin]\n* Grapples - [Knee Bash]\n* Kicks - [Axe Kick], [Double Kick], [Foot Stomp], [Kick Defense], [Knee Drop], [Knee Strike], [Leg Sweep], [Lightning Leg], [Reverse Front Kick], [Roundhouse Kick]\n* Strikes - [Dash Attack], [Dragon Punch], [Elbow Drop], [Elbow Strike], [Feint], [One Two Punch], [Ram], [Spinning Back Fist], [Strike Defense], [Sword Hand], [Uppercut]",
                   ":titles",
                   "Thai Kickboxing"
                 ),
@@ -5149,7 +5168,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Ninjutsu",
                   ":summary",
-                  "* Ninjutsu is the art of the Japanese Ninja. Ninjutsu saw greatest use from 1200-1600 AD when warlords employed ninja clans to spy on and assassinate their enemies.\n* The primary weapons of the ninja are the ninja-to sword and shuriken throwing stars. They were also adept in many types of concealed weapons. They are also known for unusual gadgets to assist them in climbing, crossing water, picking locks, etc. They are assassins, so they are not interested in honorable combat and will use traps or poison instead of combat if possible.\n* Kunoichi - Female ninja operated as infiltrators, spies and assassins. They spent time in enemy houses, reported secrets and undermined rival houses by any means necessary. Kunoichi could use their gender to their advantage because women were underestimated as warriors. This made it easier for them to get closer to their targets by posing as maids, geisha, servants and priestesses. In some cases, they were taken on as concubines and mistresses, giving them unparalleled access to all their marks.\n* Athletics - [Backflip], [Breakfall], [Jump], [Wall Spring]\n* Evasion - [Deflect], [Disarm], [Dirty Fighting], [Disengate], [Distraction], [Dive for Cover], [Dodge], [Dodge Roll], [Weapon Block]\n* Grapples - [Air Throw], [Backroll Throw], [Choke Hold], [Grapple Defense], [Groundfighting], [Joint Lock], [Suplex], [Takedown], [Tackle]\n* Kicks - [Backflip Kick], [Handstand Kick], [Leg Sweep], [Roundhouse Kick], [Slide Kick]\n* Strikes - [Ear Pop], [Grab Punch], [Nerve Strike], [Phoenix Strike]\n* Melee - [Dazing Blow], [Jab], [Parry], [Riposte], [Slash], [Thrust]",
+                  "* Ninjutsu is the art of the Japanese Ninja. Ninjutsu saw greatest use from 1200-1600 AD when warlords employed ninja clans to spy on and assassinate their enemies.\n* The primary weapons of the ninja are the ninja-to sword and shuriken throwing stars. They were also adept in many types of concealed weapons. They are also known for unusual gadgets to assist them in climbing, crossing water, picking locks, etc. They are assassins, so they are not interested in honorable combat and will use traps or poison instead of combat if possible.\n* Kunoichi - Female ninja operated as infiltrators, spies and assassins. They spent time in enemy houses, reported secrets and undermined rival houses by any means necessary. Kunoichi could use their gender to their advantage because women were underestimated as warriors. This made it easier for them to get closer to their targets by posing as maids, geisha, servants and priestesses. In some cases, they were taken on as concubines and mistresses, giving them unparalleled access to all their marks.\n* Athletics - [Backflip], [Breakfall], [Jump], [Wall Spring]\n* Evasion - [Deflect], [Disarm], [Dirty Fighting], [Disengate], [Distraction], [Dive for Cover], [Dodge], [Dodge Roll], [Weapon Block]\n* Grapples - [Air Throw], [Backroll Throw], [Choke Hold], [Grapple Defense], [Groundfighting], [Joint Lock], [Suplex], [Takedown], [Tackle]\n* Kicks - [Backflip Kick], [Handstand Kick], [Leg Sweep], [Roundhouse Kick], [Slide Kick]\n* Strikes - [Ear Pop], [Grab Punch], [Nerve Strike], [Phoenix Strike]\n* Melee - [Dazing Blow], [Jab], [Parry], [Riposte], [Thrust]",
                   ":titles",
                   "Shinobi, Kunoichi"
                 ),
@@ -5159,7 +5178,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Pakua",
                   ":summary",
-                  "* A Chinese 'internal' fighting style derived from I Ching, the Book of\nChanges which states that the universe is in a state of constant change.\nTherefore, in Pakua, any change, the placement of the foot, the turning\nof a hand is important. Pakua is highly circular and emphasizes\nfootwork and constant motion. Pakua masters are said to use palm\nstrikes instead of fist strikes to better control the energy they\nrelease.\n* Evasion - [Deflect], [Sidestep], [Weapon Block]\n* Grapples - [Grapple Defense], [Joint Lock]\n* Kicks - [Kick Defense], [Leg Sweep]\n* Strikes - [Grab Punch], [Palm Strike], [Strike Defense]\n* Focus Powers - [Zen No Mind]",
+                  "* A Chinese 'internal' fighting style derived from I Ching, the Book of Changes which states that the universe is in a state of constant change. Therefore, in Pakua, any change, the placement of the foot, the turning of a hand is important. Pakua is highly circular and emphasizes footwork and constant motion. Pakua masters are said to use palm strikes instead of fist strikes to better control the energy they release.\n* Evasion - [Deflect], [Sidestep], [Weapon Block]\n* Grapples - [Grapple Defense], [Joint Lock]\n* Kicks - [Kick Defense], [Leg Sweep]\n* Strikes - [Grab Punch], [Palm Strike], [Strike Defense]\n* Focus Powers - [Zen No Mind]",
                   ":titles",
                   "Eight Diagrams"
                 ),
@@ -5169,7 +5188,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Pentjak-Silat",
                   ":summary",
-                  "* A broad set of Indonsian fighting styles. Fighters are trained to\nkeep their footing on unstable ground because the condition is so common\nin Indonesia. Silat teaches many weapons especially the kris, a wavy\nbladed dagger. The mysticism and legends surrounding this weapon\nequal or exceed the katana.\n* Athletics - [Breakfall], [Disarm], [Disengage], [Dodge Roll], [Jump],\n[Kippup]\n* Evasion - [Deflect], [Hip Throw], [Iron Horse], [Iron Skin]\n* Grapples - [Choke Hold], [Grab Punch], [Grapple Defense], [Joint Lock],\n[Pin], [Takedown]\n* Kicks - [Double Kick], [Dragon Kick], [Flying Kick], [Leg Sweep],\n[Lightning Leg], [Roundhouse Kick]\n* Strikes - [Deflecting Punch], [Hyperfist], [Jab], [Nerve Strike],\n[Phoenix Strike], [Sword Hand]\n* Melee - [Fleche], [Parry], [Riposte], [Slash], [Thrust]",
+                  "* A broad set of Indonsian fighting styles. Fighters are trained to keep their footing on unstable ground because the condition is so common in Indonesia. Silat teaches many weapons especially the kris, a wavy bladed dagger. The mysticism and legends surrounding this weapon equal or exceed the katana.\n* Athletics - [Breakfall], [Disarm], [Disengage], [Dodge Roll], [Jump], [Kippup]\n* Evasion - [Deflect], [Hip Throw], [Iron Horse], [Iron Skin]\n* Grapples - [Choke Hold], [Grab Punch], [Grapple Defense], [Joint Lock], [Pin], [Takedown]\n* Kicks - [Double Kick], [Dragon Kick], [Flying Kick], [Leg Sweep], [Lightning Leg], [Roundhouse Kick]\n* Strikes - [Deflecting Punch], [Hyperfist], [Jab], [Nerve Strike], [Phoenix Strike], [Sword Hand]\n* Melee - [Fleche], [Parry], [Riposte], [Slash], [Thrust]",
                   ":titles",
                   "Guru, Pandekar, Silat"
                 ),
@@ -5199,7 +5218,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Tae Kwon Do",
                   ":summary",
-                  "* A Korean martial art developed in the 1600s AD. It emphasizes kicks\nover punches.\n* Athletics - [Breakfall], [Jump], [Wall Spring]\n* Evasion - [Deflect], [Iron Horse]\n* Kicks - [Axe Kick], [Double Kick], [Flying Kick], [Hurricane Kick],\n[Kick Off], [Knee Strike], [Lightning Leg], [Reverse Front Kick],\n[Roundhouse Kick], [Scissor Kick]\n* Strikes - [Deflecting Punch], [Haymaker], [Hyperfist],\n[Spinning Back Fist], [Sword Hand]",
+                  "* A Korean martial art developed in the 1600s AD. It emphasizes kicks over punches.\n* Athletics - [Breakfall], [Jump], [Wall Spring]\n* Evasion - [Deflect], [Iron Horse]\n* Kicks - [Axe Kick], [Double Kick], [Flying Kick], [Hurricane Kick], [Kick Off], [Knee Strike], [Lightning Leg], [Reverse Front Kick], [Roundhouse Kick], [Scissor Kick]\n* Strikes - [Deflecting Punch], [Haymaker], [Hyperfist], [Spinning Back Fist], [Sword Hand]",
                   ":titles",
                   "The Way of Kicking and Punching"
                 ),
@@ -5209,7 +5228,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Tai Ch'i Ch'uan",
                   ":summary",
-                  "* The ultimate internal Chinese martial art. The style is based on the\nThirteen Postures (8 actions, 5 directions). It emphasizes blocking\na strike and grabbing or striking back.\n* Athletics - [Balance], [Breakfall]\n* Evasion - [Deflect], [Disarm], [Disengage], [Iron Horse], [Iron Skin]\n* Grapples - [Air Throw], [Back Roll Throw], [Grab Punch],\n[Grappling Defense], [Hip Throw], [Joint Lock], [Pin], [Shoulder Throw]\n* Kicks - [Dragon Tail], [Kick Defense], [Leg Sweep], [Slide Kick]\n* Strikes - [Deflecting Punch], [Grab Punch], [Nerve Strike],\n[Palm Strike], [Phoenix Strike], [Strike Defense]\n* Focus - [Empty Force], [Spirit Healing], [Zen No Mind]",
+                  "* The ultimate internal Chinese martial art. The style is based on the\nThirteen Postures (8 actions, 5 directions). It emphasizes blocking\na strike and grabbing or striking back.\n* Athletics - [Balance], [Breakfall]\n* Evasion - [Deflect], [Disarm], [Disengage], [Iron Horse], [Iron Skin]\n* Grapples - [Air Throw], [Back Roll Throw], [Grab Punch], [Grappling Defense], [Hip Throw], [Joint Lock], [Pin], [Shoulder Throw]\n* Kicks - [Dragon Tail], [Kick Defense], [Leg Sweep], [Slide Kick]\n* Strikes - [Deflecting Punch], [Grab Punch], [Nerve Strike], [Palm Strike], [Phoenix Strike], [Strike Defense]\n* Focus - [Empty Force], [Spirit Healing], [Zen No Mind]",
                   ":titles",
                   "Supreme Ultimate Fist, Yin-Yang Boxing"
                 ),
@@ -5219,7 +5238,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Wrestling",
                   ":summary",
-                  "* Wrestling is one of the earliest martial arts. Virtually every ancient\nsociety had some form of wrestling and many have survived largely\nunchanged.\n* Atheltics - [Breakfall], [Jump]\n* Evasion - [Disengage]\n* Grapples - [Air Throw], [Backbreaker], [Bear Hug], [Choke Hold],\n[Grapple Defense], [Hip Throw], [Iron Claw], [Joint Lock], [Knee Bash],\n[Nelson], [Piledriver], [Pin], [Reversal], [Sleeper Hold]\n[Shoulder Throw], [Suplex], [Tackle], [Take Down], [Thigh Press]\n* Kicks - [Knee Strike]\n* Strikes - [Ear Pop], [Haymaker], [Ram]",
+                  "* Wrestling is one of the earliest martial arts. Virtually every ancient society had some form of wrestling and many have survived largely unchanged.\n* Atheltics - [Breakfall], [Jump]\n* Evasion - [Disengage]\n* Grapples - [Air Throw], [Backbreaker], [Bear Hug], [Choke Hold], [Grapple Defense], [Hip Throw], [Iron Claw], [Joint Lock], [Knee Bash], [Nelson], [Piledriver], [Pin], [Reversal], [Sleeper Hold] [Shoulder Throw], [Suplex], [Tackle], [Take Down], [Thigh Press]\n* Kicks - [Knee Strike]\n* Strikes - [Ear Pop], [Haymaker], [Ram]",
                   ":titles",
                   "Dumog/Greco Roman/Koshti/Naban/Sanbo/Yaghliguresh"
                 ),
@@ -5229,7 +5248,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Wu Shu",
                   ":summary",
-                  "* [Axe Kick]\n* [Backflip Kick]\n* [Backroll Throw]\n* [Drunken Monkey Roll]\n* [Flying Kick]\n* [Handstand Kick]\n* [Hurricane Kick]\n* [Kick Off]\n* [Kippup]\n* [Leg Sweep]\n* [Lightning Leg]\n* [Reverse Front Kick]\n* [Rolling Attack]\n* [Scissor Kick]\n* [Slide Kick]\n* [Spinning Back Fist]\n* [Spinning Thrust Kick]\n* [Wall Spring]\n		PUNCH:\n		Rekka Ken(5)\n		Spinning Knuckle(3)\n\n		KICK:\n		Back Flip Kick(2)\n		Forward Back Flip Kick(1)\n		Ax Kick(4)\n		Cartwheel Kick(2)\n		Reverse Frontal Kick(2)\n		Scissor Kick(4)\n		Flying Thrust Kick(4)\n		Forward Flip Knee(2)\n		Handstand Kick(1)\n		Hurricane Kick(1)\n		Air Hurricane Kick(1)\n		Lightning Leg(3)\n		Stepping Front Kick(4)\n		Whirlwind Kick(4)\n		Double Hit Kick(1)\n		Great Wall Of China(5)\n		Descending Wheel Kick(4)\n\n		BLOCK:\n		Maka Wara(4)\n		San He(3)\n\n		GRAB:\n		Air Throw(2)\n		Back Roll Throw(1)\n\n		ATHLETICS:\n		Cannon Drill(5)\n		Displacement(4)\n		Backflip(2)\n		Flying Heel Stomp(3)\n		Rolling Attack(3)\n		Vertical Rolling Attack(3)\n		Wall Spring(1)\n		Evasive Tumble(2)\n\n		FOCUS:\n		Balance(4)\n		Chi Kung Healing(4)\n		Fireball(4)\n		Improved Fireball(5)\n		Flying Fireball(3)"
+                  "* [Axe Kick]\n* [Backflip Kick]\n* [Backroll Throw]\n* [Drunken Monkey Roll]\n* [Flying Kick]\n* [Handstand Kick]\n* [Hurricane Kick]\n* [Kick Off]\n* [Kippup]\n* [Leg Sweep]\n* [Lightning Leg]\n* [Reverse Front Kick]\n* [Rolling Attack]\n* [Scissor Kick]\n* [Slide Kick]\n* [Spinning Back Fist]\n* [Spinning Thrust Kick]\n* [Wall Spring]\n  PUNCH:\n  Rekka Ken(5)\n  Spinning Knuckle(3)\n\n  KICK:\n  Back Flip Kick(2)\n  Forward Back Flip Kick(1)\n  Ax Kick(4)\n  Cartwheel Kick(2)\n  Reverse Frontal Kick(2)\n  Scissor Kick(4)\n  Flying Thrust Kick(4)\n  Forward Flip Knee(2)\n  Handstand Kick(1)\n  Hurricane Kick(1)\n  Air Hurricane Kick(1)\n  Lightning Leg(3)\n  Stepping Front Kick(4)\n  Whirlwind Kick(4)\n  Double Hit Kick(1)\n  Great Wall Of China(5)\n  Descending Wheel Kick(4)\n\n  BLOCK:\n  Maka Wara(4)\n  San He(3)\n\n  GRAB:\n  Air Throw(2)\n  Back Roll Throw(1)\n\n  ATHLETICS:\n  Cannon Drill(5)\n  Displacement(4)\n  Backflip(2)\n  Flying Heel Stomp(3)\n  Rolling Attack(3)\n  Vertical Rolling Attack(3)\n  Wall Spring(1)\n  Evasive Tumble(2)\n\n  FOCUS:\n  Balance(4)\n  Chi Kung Healing(4)\n  Fireball(4)\n  Improved Fireball(5)\n  Flying Fireball(3)"
                 ),
                 ":Binding",
                 vx_core.f_new(
@@ -5273,13 +5292,13 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Blind Fighting"
                 ),
-                ":Combo",
+                ":Combination",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
-                  "Combo",
+                  "Combination",
                   ":summary",
-                  "* Any combat abilities may be strung together as a Combo. Every ability after the first gets +1 to initiative. If any ability misses or fails, then the combo ends and the next ability is at -1 initiative. Each combo must be chosen when this ability is gained and must be taken again for each separate combo."
+                  "* Any combat abilities may be strung together as a Combination. Every ability after the first gets +1 to initiative. If any ability misses or fails, then the combo ends and the next ability is at -1 initiative. Each combo must be chosen when this ability is gained and must be taken again for each separate combo."
                 ),
                 "Death Touch",
                 vx_core.f_new(
@@ -5299,7 +5318,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Empty Force",
                   ":summary",
-                  "* The fighter projects a strike across empty space. The fighter\nmay strike at any range, but if he does not score at least 1\nCriticals for each space of Range, the ability fails.\n-2 Initiative\n-2 Move\n-1 Damage\nCritical - [Range]",
+                  "* The fighter projects a strike across empty space. The fighter may strike at any range, but if he does not score at least 1 Criticals for each space of Range, the ability fails.\n-2 Initiative\n-2 Move\n-1 Damage\nCritical - [Range]",
                   ":titles",
                   "Distant Death, Kongjin"
                 ),
@@ -5309,7 +5328,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Feather Walk",
                   ":summary",
-                  "* Reduces body weight while active.  This increases the effects of [Retreat] and leaping while decreasing falling\nspeed and damage.\n* If [Skill] greater than or equal to [Body], then unit may walk on any substance that would suspend a feather.",
+                  "* Reduces body weight while active.  This increases the effects of [Retreat] and leaping while decreasing falling speed and damage.\n* If [Skill] greater than or equal to [Body], then unit may walk on any substance that would suspend a feather.",
                   ":titles",
                   "Feather Fall, Walk on Water"
                 ),
@@ -5341,7 +5360,7 @@ export default class nx_tactics_books_combat {
                   ":reference",
                   "Fastball Special - Colossus and Wolverine, X-men",
                   ":summary",
-                  "* Like a [Combo], the Team Combo chains attacks together. The Team Combo\nhowever is performed by different members of a team with the identical\nTeam Combo. Any team member may perform each step of the combo with each\nsubsequent attack allowed to reroll 1 die. The combo ends if any attack\nmisses, any member attacks twice in a row, or if a turn passes with no\nattack attempt. Any combat abilities may be strung together as a Team\nCombo (even abilities that only others in the team possess). Each combo\nmust be chosen when this ability is gained and must be taken again for\neach separate combo."
+                  "* Like a [Combo], the Team Combo chains attacks together. The Team Combo however is performed by different members of a team with the identical Team Combo. Any team member may perform each step of the combo with each subsequent attack allowed to reroll 1 die. The combo ends if any attack misses, any member attacks twice in a row, or if a turn passes with no attack attempt. Any combat abilities may be strung together as a Team Combo (even abilities that only others in the team possess). Each combo must be chosen when this ability is gained and must be taken again for each separate combo."
                 ),
                 "Walk on Fire",
                 vx_core.f_new(
@@ -5617,7 +5636,7 @@ export default class nx_tactics_books_combat {
               ":reference",
               "* Mizu: I must become the greatest swordsman alive. Swordfather: Is that all? - Mizu and Swordfather, Blue Eye Samurai",
               ":summary",
-              "* [Targetting]: Melee combat may only be used to attack the 3 space directly ahead of you or the space you are on.\n* See Arms and Armor for weapons",
+              "* Fighting near the opponent. This includes most hand to hand weapons.\n* [Target]: Melee combat may only be used to attack the 3 space directly ahead of you or the space you are on.\n* Allows the use of all Melee weapons, but unfamiliar weapons follow the [Unfamiliar Item] rule.\n* See Arms and Armor for weapons",
               ":titles",
               "Battlemaster, Champion, Congueror, Fencer, Fighter, Master of Arms, Warrior",
               ":stat",
@@ -5646,14 +5665,6 @@ export default class nx_tactics_books_combat {
                   nx_tactics_base.t_ability,
                   ":name",
                   "Backlash"
-                ),
-                ":Bash",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Bash",
-                  ":summary",
-                  "* A quick. powerful smashing maneuver usually performed 'sidearm' with an ax, club, or staff.\n* Requires: [Blunt Weapon]\n+1 Initiative\n+1 Damage\nCriticals - [Knockback]"
                 ),
                 "Blade Barrier",
                 vx_core.f_new(
@@ -5713,7 +5724,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Dual Wield",
                   ":reference",
-                  "* Not used on the battlefield where a shield would be more practical.\n* Used primarily for parrying during one on one duels.\n* Two longsword duelling was done by very skilled fighters in Italian duelling.\n* Dual katana Japanese styles also exist.",
+                  "* Not used on the battlefield where a shield would be more practical.\n               * Used primarily for parrying during one on one duels.\n               * Two longsword duelling was done by very skilled fighters in Italian duelling.\n               * Dual katana Japanese styles also exist.",
                   ":summary",
                   "* Using a Dagger, Hand Axe or Hammer in the off hand."
                 ),
@@ -5837,14 +5848,6 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Set Against Charge"
                 ),
-                ":Slash",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Slash",
-                  ":summary",
-                  "* A powerful blow with a cutting weapon.\n+1 Initative\n-1 Move\n+1 Accuracy\nCriticals - [Bleed]"
-                ),
                 "Stunning Blow",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
@@ -5963,7 +5966,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Hammers",
                   ":summary",
-                  "* War hammers were developed as a consequence of the ever more prevalent metal armors of the medieval battlefields during the 14th and 15th centuries. Swords were of little use against these armors. The war hammer could deal blows of tremendous force to the target, especially when mounted on a pole, and by impact alone do damage without penetrating the armor. The spike end could be used for grappling the target's armour, reins, or shield, or could be turned in the direction of the blow to pierce even heavy armor. Against mounted opponents, the weapon could also be directed at the legs of the horse, toppling the armored foe to the ground where he could be more easily attacked.\n* See Arms and Armor for weapons"
+                  "* War hammers were developed as a consequence of the ever more prevalent metal armors of the medieval battlefields during the 14th and 15th centuries. Swords were of little use against these armors. The war hammer could deal blows of tremendous force to the target, especially when mounted on a pole, and by impact alone do damage without penetrating the armor. The spike end could be used for grappling the target's armour, reins, or shield, or could be turned in the direction of the blow to pierce even heavy armor. Against mounted opponents, the weapon could also be directed at the legs of the horse, toppling the armored foe to the ground where he could be more easily attacked.\n               * See Arms and Armor for weapons"
                 ),
                 "Short Blades",
                 vx_core.f_new(
@@ -5999,7 +6002,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Staves",
                   ":summary",
-                  "* This specialty includes long staves and short sticks. Staves have longer reach than most weapons while fighting sticks attack with great speed.\n* [Bash], [Dazing Blow], [Disarm], [Fend Off], [Fleche], [Parry], [Riposte], [Sweep]",
+                  "* This specialty includes long staves and short sticks. Staves have longer reach than most weapons while fighting sticks attack with great speed.\n* [Dazing Blow], [Disarm], [Fend Off], [Fleche], [Parry], [Riposte], [Sweep]",
                   ":titles",
                   "Arnis, Bojutus, Escrima, Kali, Stick Fighting"
                 ),
@@ -6419,7 +6422,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Recoil Compensator",
                   ":summary",
-                  "* Reduces the 'kick' of the weapon and therefore reduces the penalty for\ncontinuous fire."
+                  "* Reduces the 'kick' of the weapon and therefore reduces the penalty for continuous fire."
                 ),
                 ":Silencer",
                 vx_core.f_new(
@@ -6513,7 +6516,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Barrage",
                   ":summary",
-                  "A barrage is a line or barrier of exploding shells from a large number of guns firing continuously.  Its purpose is to deny or hamper enemy passage.  It contrasts with a concentration, in which all the guns aim at the same small area.\n\nThe barrage was developed in World War I, with the infantry following the advancing barrage.  Its employment in this way recognised the importance of artillery fire in neutralising, rather than destroying, the enemy.  A creeping barrage immediately followed by an infantry assault could be far more effective than weeks of preliminary bombardment."
+                  "* A barrage is a line or barrier of exploding shells from a large number of guns firing continuously.  Its purpose is to deny or hamper enemy passage.  It contrasts with a concentration, in which all the guns aim at the same small area.\n\n* The barrage was developed in World War I, with the infantry following the advancing barrage.  Its employment in this way recognised the importance of artillery fire in neutralising, rather than destroying, the enemy.  A creeping barrage immediately followed by an infantry assault could be far more effective than weeks of preliminary bombardment."
                 ),
                 "Forward Observer",
                 vx_core.f_new(
@@ -6566,60 +6569,6 @@ export default class nx_tactics_books_combat {
                   nx_tactics_base.t_specialty,
                   ":name",
                   "Machineguns"
-                )
-              )
-            ),
-            "Physical Power",
-            vx_core.f_new(
-              nx_tactics_base.t_skill,
-              ":name",
-              "Physical Power",
-              ":summary",
-              "* This skill is used when manifesting and controlling a [Power] that directly affect physical objects.\n* Physical Powers must have clear range and line of sight on a target.",
-              ":stat",
-              "Body",
-              ":abilitymap",
-              vx_core.f_new(
-                nx_tactics_base.t_abilitymap,
-                "Gunnery Power",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Gunnery Power",
-                  ":summary",
-                  "* Use [Gunnery] and a Gunnery item instead of [Physical Power] to manifest a [Physical] [Ability] on contact."
-                ),
-                "Firearm Power",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Firearm Power",
-                  ":summary",
-                  "* Can use [Firearms] and Firearm item instead of [Physical Power] to manifest a [Physical] [Ability] on contact."
-                ),
-                "Close Combat Power",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Close Combat Power",
-                  ":summary",
-                  "* Can use [Close Combat] instead of [Physical Power] to manifest a [Physical] [Ability] on contact."
-                ),
-                "Melee Power",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Melee Power",
-                  ":summary",
-                  "* Use [Melee] and a Melee item instead of [Physical Power] to manifest a [Physical] [Ability] on contact."
-                ),
-                "Ranged Power",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Ranged Power",
-                  ":summary",
-                  "* Can use [Ranged] and a Ranged item of [Physical Power] to manifest a [Physical] [Ability] on contact."
                 )
               )
             ),

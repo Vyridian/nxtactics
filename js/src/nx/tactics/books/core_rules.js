@@ -1046,16 +1046,6 @@ export default class nx_tactics_books_core_rules {
               "Tokens/MoraleToken.png",
               ":summary",
               "-1 [Spirit]\n* A unit must move 1 space away from the source of the attack/damage for each Morale Token received.\n* If it already has Morale tokens,  it must roll Morale tokens vs. [Spirit] and must move additional spaces\nfor any [Hits].\n* This movement does not cost [Speed], but if the unit is blocked from moving away it will suffer a [Collision]\nof Speed equal to the number of remaining [Hits].\n* [Anytime]: If [Morale] >= [Spirit] then the unit will take no [Actions], move at its best speed away from\nany opponents, and will leave the map if able."
-            ),
-            ":Stun",
-            vx_core.f_new(
-              nx_tactics_base.t_rule,
-              ":name",
-              "Stun",
-              ":image",
-              "Tokens/StunToken.png",
-              ":summary",
-              "-1 [Mind]\n-1 [Defense]\n-1 [Speed]\n-1 [Skill]\n* [Move]: If [Stun] >= [Mind], then make a full Move along a random path.\n* [Action]: If [Stun] >= [Mind], then the unit is confused and may not perform an [Action].\n* [Anytime]: If [Stun] >= [Body], then replace the excess Stun with [Damage] tokens."
             )
           )
         ),

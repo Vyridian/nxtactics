@@ -167,7 +167,7 @@
         "Free Spears"
          (unit
           :name "Free Spears"
-          :image "Germanics/GermanLevySpearmen.png"
+          :image "images/ancients/GermanLevySpearmen.png"
           :summary
            "Free Spears are farmers and hunters.  According to Germanic tradition, as soon as these men receive their
 spear and shield, they are 'free' adults.  Though lacking in the organized training of the warbands, they
@@ -183,7 +183,7 @@ their neighbors militia."
         "Youth Skirmishers"
          (unit
           :name "Youth Skirmishers"
-          :image "Germanics/GermanSkirmishers.png"
+          :image "images/ancients/GermanSkirmishers.png"
           :summary
            "Young skirmishers break up and harass enemy formations before the main battle lines meet, and act as a screen
 for heavy troops, taking losses in order to increase the odds of survival of more valuable 'proven' warriors.
@@ -205,7 +205,7 @@ being poor and of low status, but also choosing speed over protection."
         "Proven Spearmen"
          (unit
           :name "Proven Spearmen"
-          :image "Germanics/GermanTrustedSpearmen.png"
+          :image "images/ancients/GermanTrustedSpearmen.png"
           :summary
            "Proud and experienced, 'proven' warriors steeled by years of constant warfare and veterans of numerous
 conflicts.  These men are hardened for battle and unlikely to flee from conflict, and are trained through
@@ -225,7 +225,7 @@ long experience to work in close or open formation, and even the shieldwall."
         "German Slayers"
          (unit
           :name "German Slayers"
-          :image "Germanics/GermanSlayers.png"
+          :image "images/ancients/GermanSlayers.png"
           :summary
            "By shaping heavy boughs of oak and inserting bone spikes, these Cudgels can be used to maim both armored
 and unarmored foes alike.  Cudgels are cheap, easy to make, and replaceable on campaign, while also being
@@ -242,7 +242,7 @@ were recorded to have taken down units of the feared and notoriously lethal kata
         "German Shooters"
          (unit
           :name "German Shooters"
-          :image "Germanics/GermanShooters.png"
+          :image "images/ancients/GermanShooters.png"
           :summary
            "Equipped to harass and break up enemy formations so more experienced and valuable melee warriors can finish
 them.  Shooters are often untrained or uncapable warriors, but many are also excellect hunters.  They are
@@ -266,7 +266,7 @@ and common multipurpose tools, such as the axe or bow were looked down upon."
         "Sword Possessors"
          (unit
           :name "Sword Possessors"
-          :image "Germanics/GermanSwordPossessors.png"
+          :image "images/ancients/GermanSwordPossessors.png"
           :summary
            "Sword Possessors are well trained, experienced and armed with superior quality swords and javelins to
 soften the enemy before their furious charge.
@@ -288,7 +288,7 @@ valiant warriors carried their highly valued swords with pride."
         "Night Walkers"
          (unit
           :name "Night Walkers"
-          :image "Germanics/GermanNightWalkers.png"
+          :image "images/ancients/GermanNightWalkers.png"
           :summary
            "Night-Walkers are unconventional warriors who specialize in ambush.  They display their zeal and ferocity
 with the help of pitch and dye by blackening their shields and bodies.  They choose dark nights for their
@@ -309,7 +309,7 @@ survive assaults by these maniacal warriors are convinced they are spirits sent 
         "Pike Fence"
          (unit
           :name "Pike Fence"
-          :image "Germanics/GermanPikeFence.png"
+          :image "images/ancients/GermanPikeFence.png"
           :summary
            "The Pike Fence are hard-nosed, disciplined warriors that fight together in a
 very dense formation, unlike most other Germanic warbands. They are trained in
@@ -329,7 +329,7 @@ the Shield Wall and are universally feared by cavalry."
         "Hearth Companions"
          (unit
           :name "Hearth Companions"
-          :image "Germanics/GermanHearthCompanion.png"
+          :image "images/ancients/GermanHearthCompanion.png"
           :summary
            "These are the Germanic tribes' best warriors. Germans respect their leader's
 bravery, not their rank, and it is a disgrace for a leader to be surpassed in
@@ -356,7 +356,7 @@ credit-that's what is truly meant by allegiance."
         "Germanic Riders"
          (unit
           :name "Germanic Riders"
-          :image "Germanics/GermanRiders.png"
+          :image "images/ancients/GermanRiders.png"
           :summary
            "Riders ride small, poor quality horses, though they are excellent light cavalry.  Like many Germanic warriors,
 however, they can lack battle-discipline and be over-keen to enter battle for glory.
@@ -378,7 +378,7 @@ unorganized band."
         "Germ. Companion Cavalry"
          (unit
           :name "Germ. Companion Cavalry"
-          :image "Germanics/GermanCompanionCavalry.png"
+          :image "images/ancients/GermanCompanionCavalry.png"
           :summary
            "The Companion Cavalry are extremely wealthy and powerful men, but still fiercely loyal to their lord who
 provides them the finest warhorses and wargear at his disposal.
@@ -414,7 +414,7 @@ flanks, but they are also useful for overrunning heavy infantry and slaughtering
         "Greek Hoplite"
          (unit
           :name "Greek Hoplite"
-          :image "Greeks/GreekHopliteToken.png"
+          :image "images/ancients/GreekHopliteToken.png"
           :classification "Hvy. Infantry"
           :unitskillmap
            (unitskillmap
@@ -433,7 +433,7 @@ flanks, but they are also useful for overrunning heavy infantry and slaughtering
         "Spartan Hoplite"
          (unit
           :name "Spartan Hoplite"
-          :image "Greeks/GreekSpartanToken.png"
+          :image "images/ancients/GreekSpartanToken.png"
           :reference
            "* From the age of seven onwards, Spartan males were trained for a life of warfare.  They were taught iron
 discipline, and almost programmed to forget about their individuality.
@@ -454,7 +454,7 @@ which required high levels of discipline and selflessness."
         "Greek General"
          (unit
           :name "Greek General"
-          :image "Greeks/GreekGeneralToken.png"
+          :image "images/ancients/GreekGeneralToken.png"
           :classification "Med. Infantry"
           :unitskillmap
            (unitskillmap
@@ -667,7 +667,7 @@ then being stoned to death by the others."
         :Hastati
          (unit
           :name "Hastati"
-          :image "Romans/RomanLegionaireToken.png"
+          :image "images/ancients/RomanLegionaireToken.png"
           :summary
            "These were the first line of the Roman heavy infantry and were made up of the relatively young
 (inexperienced), but wealthier citizens.  The Hastati were the primary engaging force of the
@@ -691,7 +691,7 @@ to rest and regroup, the Hastati would roll behind the Princeps."
         :Princeps
          (unit
           :name "Princeps"
-          :image "Romans/RomanPrincepToken.png"
+          :image "images/ancients/RomanPrincepToken.png"
           :summary
            "The elite of the legion, in the prime of their careers for age and experience, and constituted the
 wealthier class.  It was simply the obligation of the Princeps to win the battle.  First they would
@@ -716,7 +716,7 @@ the middle of the fight."
         :Triarii
          (unit
           :name "Triarii"
-          :image "Romans/RomanLegionaire2Token.png"
+          :image "images/ancients/RomanLegionaire2Token.png"
           :summary
            "Though the triarii were similarly armored as the Hastatii and Princeps, they played a much different
 role and were more akin to the Greek hoplites than Roman heavy infantry.  The Triarii were the oldest
@@ -747,7 +747,7 @@ that something was in a desperate situation."
         :Centurion
          (unit
           :name "Centurion"
-          :image "Romans/RomanCenturionToken.png"
+          :image "images/ancients/RomanCenturionToken.png"
           :summary "Each Centurion commanded the 80 men in a single century (Forward Hastati, etc)."
           :classification "Med. Infantry"
           :unitskillmap
@@ -791,7 +791,7 @@ handpicked from the legions and represent the best warriors in Rome."
         :Velites
          (unit
           :name "Velites"
-          :image "Romans/RomanVeliteToken.png"
+          :image "images/ancients/RomanVeliteToken.png"
           :summary
            "The poorest citizen class allowed to serve, these units were lightly armed skirmishers who were
 deployed en masse on the battlefield in front of the heavier infantry lines, but moved back beyond
@@ -813,7 +813,7 @@ armament, Velites could avoid elephant charges and flank them."
         "Equites Legionis"
          (unit
           :name "Equites Legionis"
-          :image "Romans/RomanHeavyCavalryToken.png"
+          :image "images/ancients/RomanHeavyCavalryToken.png"
           :summary
            "The Republican cavalry was designed for speed of movement, and were similarly equipped to the Hastati.  Their
 duty was to provide scouting and potential fast moving support to weakening parts of a battle line.  At times
@@ -847,7 +847,7 @@ the auxilia accepted non-Romans (which represented 90% of the empire)."
         "Cohors Peditata"
          (unit
           :name "Cohors Peditata"
-          :image "Romans/RomanAuxiliaToken.png"
+          :image "images/ancients/RomanAuxiliaToken.png"
           :summary "Most auxiliary cohortes contained heavy infantry similar to legionaries."
           :classification "Hvy. Infantry"
           :unitskillmap
@@ -859,7 +859,7 @@ the auxilia accepted non-Romans (which represented 90% of the empire)."
         "Cohortes Sagittariorum"
          (unit
           :name "Cohortes Sagittariorum"
-          :image "Romans/RomanArcherAuxiliaToken.png"
+          :image "images/ancients/RomanArcherAuxiliaToken.png"
           :summary "Most Sagittarii were from Syria."
           :classification "Lt. Infantry"
           :unitskillmap
@@ -892,7 +892,7 @@ the auxilia accepted non-Romans (which represented 90% of the empire)."
         "Eques Alaris"
          (unit
           :name "Eques Alaris"
-          :image "Romans/RomanLightCavalryToken.png"
+          :image "images/ancients/RomanLightCavalryToken.png"
           :summary "Auxiliary Cavalryman"
           :classification "Lt. Cavalry"
           :unitskillmap
@@ -935,7 +935,7 @@ the auxilia accepted non-Romans (which represented 90% of the empire)."
         "Roman Charioteer"
          (unit
           :name "Roman Charioteer"
-          :image "Romans/RomanCharioteer.png"
+          :image "images/ancients/RomanCharioteer.png"
           :classification "Hvy. Cavalry")))
     :Civilians
      (section
@@ -945,7 +945,7 @@ the auxilia accepted non-Romans (which represented 90% of the empire)."
         "Roman Gladiator"
          (unit
           :name "Roman Gladiator"
-          :image "Romans/RomanGladiatorToken.png"
+          :image "images/ancients/RomanGladiatorToken.png"
           :unitskillmap
            (unitskillmap
             :Armor

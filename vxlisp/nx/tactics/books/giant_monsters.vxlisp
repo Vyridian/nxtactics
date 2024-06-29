@@ -74,10 +74,10 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :image "Daikaiju/SuperXToken.png"
           :summary
            "* Flight at mach 1
-* Cadmium Missiles
-* Laser Cannons
-* equipped with a wide variety of missiles
-* heat resistant layer"
+            * Cadmium Missiles
+            * Laser Cannons
+            * equipped with a wide variety of missiles
+            * heat resistant layer"
           :mass "150tons"
           :height "11m"
           :length "27m")

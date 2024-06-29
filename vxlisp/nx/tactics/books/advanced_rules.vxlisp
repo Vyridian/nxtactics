@@ -44,39 +44,19 @@
 * [Activate]: Remove one White token."
       :rulemap
        (rulemap
-        :Fascination
-         (rule
-          :name "Fascination"
-          :summary
-           "* [Move]: If a unit has more Facination Tokens than Mind, then no Move.
-* [Action]: If a unit has more Facination Tokens than Mind, then no Action.")
         :Faith
          (rule
           :name "Faith"
           :image "Tokens/FaithToken.png")
-        :Peace
-         (rule
-          :name "Peace"
-          :image "Tokens/PeaceToken.png")
         :Rage
          (rule
           :name "Rage"
           :image "Tokens/RageToken.png"
           :summary
            "+1 Attack
--1 Defense
--1 All other Abilities that are not Attacks
-* Ignore 1 Retreat for each Rage")
-        :Slow
-         (rule
-          :name "Slow"
-          :image "Tokens/SlowToken.png"
-          :summary "* [Move]: [-1 Speed]"
-          :titles "Hold"
-          :classification "White Token")
-        :Strain
-         (rule
-          :name "Strain")))
+            -1 Defense
+            -1 All other Abilities that are not Attacks
+            * Ignore 1 Retreat for each Rage")))
     "Advanced Black Tokens"
      (section
       :name "Advanced Black Tokens"
@@ -554,13 +534,6 @@ not left handed...There's something I ought to tell you...I am not left handed e
       :name "Damage Cards"
       :damagemap
        (damagemap
-        :Damage
-         (damage
-          :name "Damage"
-          :summary
-           "* Effect: -1 [Body]
-* Duration: Permanent until healed.
-* Regular Damage with no side-effects.")
         "Air Reserve Loss"
          (damage
           :name "Air Reserve Loss")

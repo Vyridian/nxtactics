@@ -193,7 +193,7 @@
 
 (const style-app : ui/style
  (ui/style
-  :color-background "B0E0E6"
+  :color-bkg "B0E0E6"
   :layout           ui/layout-app
   :pin              ui/pin-expand)
  :doc "Returns the style for app ui.")
@@ -227,7 +227,7 @@
  (ui/style
   :name             "style-app-menubar"
   :type             ui/styletype-shared
-  :color-background "5E9CA0"
+  :color-bkg "5E9CA0"
   :layout           ui/layout-menubar
   :pin              ui/pin-top
   :pointsize        (ui/point
@@ -252,7 +252,7 @@
  (ui/style
   :name             "style-app-navbar"
   :type             ui/styletype-shared
-  :color-background "90C5A9"
+  :color-bkg "90C5A9"
   :layout           ui/layout-navbar
   :pin              ui/pin-left
   :pointpos         (ui/point
@@ -266,7 +266,7 @@
  (ui/style
   :name             "style-app-navbar-button"
   :type             ui/styletype-shared
-  :color-background "A9C8FF"
+  :color-bkg "A9C8FF"
   :layout           ui/layout-button
   :pointsize        point-iconsize)
  :doc "")
@@ -289,7 +289,7 @@
  (ui/style
   :name             "style-app-statusbar"
   :type             ui/styletype-shared
-  :color-background "B6B6B6"
+  :color-bkg "B6B6B6"
   :layout           ui/layout-statusbar
   :pin              ui/pin-bottom
   :pointsize        (ui/point
@@ -307,7 +307,7 @@
  (ui/style
   :name             "style-app-titlebar"
   :type             ui/styletype-shared
-  :color-background "0000F0"
+  :color-bkg "0000F0"
   :layout           ui/layout-titlebar
   :pin              ui/pin-top
   :pointpos         (ui/point
@@ -321,7 +321,7 @@
  (ui/style
   :name             "style-app-titlebar-print"
   :type             ui/styletype-shared
-  :color-background "A9C8FF"
+  :color-bkg "A9C8FF"
   :layout           ui/layout-button
   :pointpos         (ui/point
                      :x 57)
@@ -345,7 +345,7 @@
  (ui/style
   :name             "style-card"
   :type             ui/styletype-shared
-  :color-background "FFFFFF"
+  :color-bkg "FFFFFF"
   :layout           ui/layout-flow-item
   :pointsize        point-cardsize
   :scroll-y         true)
@@ -454,20 +454,61 @@
     :x 180))
  :doc "")
 
+(const style-cardimage-image1 : ui/style
+ (ui/style
+  :name "style-cardimage-image1"
+  :type ui/styletype-shared
+  :layout ui/layout-image
+  :pointorigin ui/point-lefttop
+  :pointpos
+   (ui/point
+    :x 61
+    :y 45
+    :pointtype ui/pointtype-absolute)
+  :pointsize
+   (ui/point
+    :x 43
+    :y 60)
+  :pointrotate
+   (ui/point
+    :x 90))
+ :doc "")
+
+(const style-cardimage-image2 : ui/style
+ (ui/style
+  :name "style-cardimage-image2"
+  :type ui/styletype-shared
+  :layout ui/layout-image
+  :flip ui/flip-x
+  :pointorigin ui/point-lefttop
+  :pointpos
+   (ui/point
+    :x 61
+    :y 45
+    :pointtype ui/pointtype-absolute)
+  :pointsize
+   (ui/point
+    :x 43
+    :y 60)
+  :pointrotate
+   (ui/point
+    :x 90))
+ :doc "")
+
 (const style-clickable : ui/style
  (ui/style
   :name "style-clickable"
   :type ui/styletype-shared
   :styletype styletype-shared
   :cursor ui/cursor-pointer
-  :color-hoverbkgrd "E0E0E0")
+  :color-bkghover "E0E0E0")
  :doc "Returns the style for clickable class.")
 
 (const style-deck : ui/style
  (ui/style
   :name "style-deck"
   :type ui/styletype-shared
-  :color-background "C0C0C0"
+  :color-bkg "C0C0C0"
   :layout ui/layout-flow-columns)
  :doc "Returns the style for deck.")
 

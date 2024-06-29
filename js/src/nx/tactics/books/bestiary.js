@@ -705,7 +705,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Draconian Dragoon",
               ":image",
-              "Fantasy/Draconian.png",
+              "images/bestiary/Draconian.png",
               ":summary",
               "* Elite Draconians are awarded Dractyl steeds. The Dractyl are unwieldy flyers and may only fly short distances with a heavy Draconian soldier."
             )
@@ -889,7 +889,7 @@ export default class nx_tactics_books_bestiary {
           ":name",
           "Sagittarians",
           ":summary",
-          "* Maximum Body - 7\n* Morale - Normal\n* Preferred Skills (Sagittarian) - Melee (Spear), Ranged (Javelin, Short Bow)",
+          "* Maximum Body - 7\n* Morale - Normal\n* Preferred Skills (Sagittarian) - Melee (Spear), Ranged (Javelin, Shortbow)",
           ":titles",
           "Centaur, Minotaur",
           ":unitmap",
@@ -1575,7 +1575,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Gnoll Axeman",
               ":image",
-              "Fantasy/Gnoll_Axeman.png",
+              "images/bestiary/Gnoll_Axeman.png",
               ":unitskillmap",
               vx_core.f_new(
                 nx_tactics_base.t_unitskillmap,
@@ -1773,7 +1773,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Goblin Captain",
               ":image",
-              "Fantasy/Goblin_Captain.png",
+              "images/bestiary/Goblin_Captain.png",
               ":unitskillmap",
               vx_core.f_new(
                 nx_tactics_base.t_unitskillmap,
@@ -1817,11 +1817,11 @@ export default class nx_tactics_books_bestiary {
                   ":unititemmap",
                   vx_core.f_new(
                     nx_tactics_base.t_unititemmap,
-                    "Short Bow",
+                    "Shortbow",
                     vx_core.f_new(
                       nx_tactics_base.t_unititem,
                       ":name",
-                      "Short Bow"
+                      "Shortbow"
                     )
                   )
                 )
@@ -1873,7 +1873,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Goblin Raider",
               ":image",
-              "Fantasy/Goblin_Raider.png",
+              "images/bestiary/Goblin_Raider.png",
               ":unitskillmap",
               vx_core.f_new(
                 nx_tactics_base.t_unitskillmap,
@@ -1903,7 +1903,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Goblin Scout",
               ":image",
-              "Fantasy/Goblin_Scout.png",
+              "images/bestiary/Goblin_Scout.png",
               ":unitskillmap",
               vx_core.f_new(
                 nx_tactics_base.t_unitskillmap,
@@ -2039,7 +2039,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Hobgoblin Swordsman",
               ":image",
-              "Fantasy/Hobgoblin_Swordsman.png",
+              "images/bestiary/Hobgoblin_Swordsman.png",
               ":unitskillmap",
               vx_core.f_new(
                 nx_tactics_base.t_unitskillmap,
@@ -2201,7 +2201,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Uruk Warrior",
               ":image",
-              "Fantasy/Orc_Warrior.png",
+              "images/bestiary/Orc_Warrior.png",
               ":unitskillmap",
               vx_core.f_new(
                 nx_tactics_base.t_unitskillmap,
@@ -2329,7 +2329,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Celestial Dragon",
               ":image",
-              "Fantasy/Dragon_Celestial.png",
+              "images/bestiary/Dragon_Celestial.png",
               ":reference",
               "Shenron - Dragon Ball",
               ":titles",
@@ -2373,7 +2373,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Frost Dragon",
               ":image",
-              "Fantasy/Dragon_Frost.png",
+              "images/bestiary/Dragon_Frost.png",
               ":summary",
               "* Inhales Heat - The Frost Dragon survives by draining heat sources. Its lair is always incredibly cold with its own body temperature matching the surroundings.\n* Absorb Heat - The body of the Frost Dragon absorbs heat around it creating intense cold around its body.\n* Cold Immunity - Cold has no effect on Frost Dragons\n* Heat Vulnerability - Heat attacks overwhelm its heat absorption ability.",
               ":titles",
@@ -2405,7 +2405,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Shadow Dragon",
               ":image",
-              "Fantasy/Dragon_Obsidian.png",
+              "images/bestiary/Dragon_Obsidian.png",
               ":summary",
               "* Spits Acid - The Shadow Dragon can belch stomach acid from its mouth to burn targets.\n* Acid Cloud - By exhaling while belching acid, the Shadow Dragon can",
               ":titles",
@@ -6367,7 +6367,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Chimera",
               ":image",
-              "Fantasy/Chimera.png"
+              "images/bestiary/Chimera.png"
             ),
             ":Chonchon",
             vx_core.f_new(
@@ -6407,7 +6407,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Griffin",
               ":image",
-              "Fantasy/Griffin.png"
+              "images/bestiary/Griffin.png"
             ),
             "Goblin Spider",
             vx_core.f_new(
@@ -6423,7 +6423,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Gorgon",
               ":image",
-              "Fantasy/Medusa.png",
+              "images/bestiary/Medusa.png",
               ":titles",
               "Medusa",
               ":unitpowermap",
@@ -6457,11 +6457,11 @@ export default class nx_tactics_books_bestiary {
                   ":unititemmap",
                   vx_core.f_new(
                     nx_tactics_base.t_unititemmap,
-                    "Short Bow",
+                    "Shortbow",
                     vx_core.f_new(
                       nx_tactics_base.t_unititem,
                       ":name",
-                      "Short Bow"
+                      "Shortbow"
                     )
                   )
                 )
@@ -6919,7 +6919,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Black Lotus",
               ":image",
-              "Fantasy/BlackLotus.jpg",
+              "images/bestiary/BlackLotus.jpg",
               ":reference",
               "* Blue Lotus - Recent studies have shown Nymphaea caerulea to have psychedelic properties, and may have been used as a sacrament in ancient Egypt and certain ancient South American cultures.  Dosages of 5 to 10 grams of the flowers induces slight stimulation, a shift in thought processes, enhanced visual perception, and mild closed-eye visuals.",
               ":summary",
@@ -7387,7 +7387,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Werecat",
               ":image",
-              "ModernFantasy/Lycanthrope_Weretiger.png",
+              "images/bestiary/Lycanthrope_Weretiger.png",
               ":reference",
               "Every time it happens... you tell yourself it's love.  But it isn't.  It's blood.  And death. - Cat People",
               ":titles",
@@ -7399,7 +7399,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Werecrow",
               ":image",
-              "ModernFantasy/Lycanthrope_Tengu.png",
+              "images/bestiary/Lycanthrope_Tengu.png",
               ":summary",
               "* Able to fly, the Werecrows make terrific scouts and spies.  Their overwhelming curiousity is matched only by their tendency to gossip.",
               ":titles",
@@ -7457,7 +7457,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Wererat",
               ":image",
-              "ModernFantasy/Lycanthrope_Wererat.png",
+              "images/bestiary/Lycanthrope_Wererat.png",
               ":unitskillmap",
               vx_core.f_new(
                 nx_tactics_base.t_unitskillmap,
@@ -7531,7 +7531,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Werewolf",
               ":image",
-              "ModernFantasy/Lycanthrope_Werewolf.png",
+              "images/bestiary/Lycanthrope_Werewolf.png",
               ":reference",
               "* The crescent moon is a double-edged sword. Be wary, lest it cut you.",
               ":titles",
@@ -7745,7 +7745,7 @@ export default class nx_tactics_books_bestiary {
               ":name",
               "Lich",
               ":image",
-              "Fantasy/Lich.png",
+              "images/bestiary/Lich.png",
               ":summary",
               "* A lich is a powerful animated corpse created by [Necromancy] through the use of [Lich Form]. The necromaner curses itself to a horrific undead existence in exchange for eternal 'life'. The lich retains most of the abilities of its former life and gains some additional undead powers as well.\n* Because of their solitary nature, a lich cannot gain social skills nor increase their existing skills. Further these skills have a tendency to degrade the longer the lich exists.",
               ":unitpowermap",
@@ -8431,7 +8431,7 @@ export default class nx_tactics_books_bestiary {
                   ":name",
                   "Tremere",
                   ":image",
-                  "ModernFantasy/Vampire_Tremere.png",
+                  "images/bestiary/Vampire_Tremere.png",
                   ":summary",
                   "* The Tremere is the second youngest clan having appeared in the Dark Ages.\n* History - The Tremere began as House Tremere, mages of the Order of Hermes named for their leader and founder, Tremere. At the end of the first millennium, the members of House Tremere realized the Hermetic arts were failing and found its immortality potions no longer working. House Tremere undertook numerous experiments, but it was Goratrix who devised a solution in his investigation of vampires. In 1022, Goratrix invited Tremere and six of the founder's closest advisers to participate in the completed ritual, which promised true immortality. Whether Goratrix knew what would happen is known only by him and, perhaps, Tremere, but at the completion of the ritual the participants fell unconscious and were reborn as vampires, their avatars destroyed and magical abilities lost. The mages had gained their immortality but lost the power they lived for. In time, the Tzimisce made war against House Tremere in retribution for the Fiends that had been made part of Goratrix's experiments. The Order of Hermes also became suspicious of diabolical practices being performed by the increasingly secretive House. In 1037 Tremere gathered the seven newly-made Cainites and forced the blood bond upon them. He then declared to them that House Tremere would be restructured with a new pyramid hierarchy, placing himself at the top as Primus of House and clan Tremere and his seven closest followers forming the Inner Council of Seven directly under him. They would slowly begin Embracing the rest of the House, with each initiate being bound to the Inner Council to ensure their loyalty. In time, all members of House Tremere would die or become vampires. While Tremere and Etrius pursued their own research throughout Europe in converting the hermetic arts into Thaumaturgy, Goratrix once again returned to his laboratories with his apprentices at hand. After years of experimentation on captured Tzimisce, Nosferatu, and Gangrel, he succeeded in creating a Gargoyle in 1121, and by 1125 the hybrids were serving as shock troops against the Fiends. Nevertheless, the Tremere found themselves third-class citizens among the undead. Whatever boldness Tremere had shown in entering the night was ignored by the staunchly traditionalist clans, and they were often forced from cities by princes who did not look kindly on their presumption. As he and Etrius rapidly acquired more vampiric lore they discovered the history of Caine and the Antediluvians, as well as the benefits of diablerie. Seeking to establish themselves as a clan proper, the Tremere sought a clan founder to diablerize and settled on Saulot, the enigmatic founder of the Salubri clan. In 1133, Tremere and the Inner Council discovered Saulot's tomb in the Anatolian desert. Tremere diablerized the Antediluvian and promptly entered torpor, leaving the Inner Council to lead the clan and destroy the remaining Salubri. As with everything else that the Tremere had done to this point, the result was a mixed blessing. The Tremere were entrenched in many Cainite courts, their services as mages making them indispensable to princes across Europe. They were now accepted as one of the Low Clans, albeit considered usurpers, distrusted warlocks, and known diablerists. In the early years of the 21st century, the Intellegence agencies of the United States managed to gain access to SchreckNet and gained firsthand knowledge of the existence of a race of undead bloodsuckers that were spread in all corners of the world. Sharing their knowledge with other intelligence agencies, the united secret services contacted the Vatican, whom they knew to have experience fighting the undead. After years of careful research, the Second Inquisition had targeted Vienna as the 'capital of vampires' and prepared a strike against their headquarters. In 2008, a united USSOCOM and Vatican ESOG force stormed the Vienna Chantry of Clan Tremere and destroyed it, blaming it to an ISIS terror attack to the public. London, Las Vegas, Paris, and Marseilles were largely cleared of vampiric activity, with numerous captured vampires being placed in black sites and experimented upon to discover their weaknesses. The Inner Council of Seven were slain and their Blood Bonds shattered. Since then the once monolithic Tremere structure has completely fallen apart.",
                   ":titles",
@@ -8509,7 +8509,7 @@ export default class nx_tactics_books_bestiary {
                   ":name",
                   "Lasombra",
                   ":image",
-                  "ModernFantasy/Vampire_Lasombra.png",
+                  "images/bestiary/Vampire_Lasombra.png",
                   ":titles",
                   "Dark Priest",
                   ":unitpowermap",
@@ -8539,7 +8539,7 @@ export default class nx_tactics_books_bestiary {
                   ":name",
                   "Tzimisce",
                   ":image",
-                  "ModernFantasy/Vampire_Tzimisce.png",
+                  "images/bestiary/Vampire_Tzimisce.png",
                   ":reference",
                   "The Tzimisce take pleasure in shaping themselves into a variety of inhuman forms.  Distended skulls, elongated fingers, polychromatic mottling are often displayed to demonstrate their alien superiority.",
                   ":summary",

@@ -2713,8 +2713,10 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
              (ability
               :name "Bite"
               :summary
-               "* The fighter savagely bites his opponent.
-* Criticals - [Piercing]")
+               "* IF you have a [Hold] on a target
+                * THEN
+                ** [Fight]: [Close Combat]
+                ** [Damage]: [Size Bonus] [Pierce] [Slash] [Hack]")
             "Bull Rush"
              (ability
               :name "Bull Rush"

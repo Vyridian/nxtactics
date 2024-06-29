@@ -2040,6 +2040,10 @@ export default class nx_tactics_ui_uitactics {
             nx_tactics_base.t_unit,
             vx_core.f_new(vx_core.t_any_from_func, () => {return "images/card-unit.svg"})
           ),
+          vx_core.f_case_1(
+            nx_tactics_base.t_cardimage,
+            vx_core.f_new(vx_core.t_any_from_func, () => {return ""})
+          ),
           vx_core.f_else(vx_core.f_new(vx_core.t_any_from_func, () => {return image}))
         )
         const uiimage = nx_tactics_ui_uitactics.f_ui_image_from_uid_path(uid, imgback)
@@ -2115,7 +2119,7 @@ export default class nx_tactics_ui_uitactics {
   static f_uilist_from_card_parent(card, parent) {
     let output = vx_ui_ui.e_uilist
     output = vx_core.f_let(
-      {"any-1": vx_ui_ui.t_ui},
+      {"any-1": vx_ui_ui.t_uilist},
       [],
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":id")
@@ -2227,6 +2231,16 @@ export default class nx_tactics_ui_uitactics {
             )})
           ),
           vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              datatype,
+              nx_tactics_base.t_cardimage
+            )}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return nx_tactics_ui_uitactics.f_uilist_from_cardimage_parent(
+              vx_core.f_any_from_any({"any-1": nx_tactics_base.t_cardimage, "any-2": nx_tactics_base.t_card}, card),
+              parent
+            )})
+          ),
+          vx_core.f_then(
             vx_core.f_new(vx_core.t_boolean_from_func, () => {return isdisplay4}),
             vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_let(
               {"any-1": vx_ui_ui.t_uilist},
@@ -2309,6 +2323,78 @@ export default class nx_tactics_ui_uitactics {
           uititle1,
           uititle2,
           uidisplay
+        )
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function uilist_from_cardimage_parent
+   * Returns a list of child ui from a cardimage/parent
+   * @param  {cardimage} cardimage
+   * @param  {string} parent
+   * @return {uilist}
+   */
+  static t_uilist_from_cardimage_parent = {
+    vx_type: vx_core.t_type
+  }
+  static e_uilist_from_cardimage_parent = {
+    vx_type: nx_tactics_ui_uitactics.t_uilist_from_cardimage_parent
+  }
+
+  // (func uilist<-cardimage-parent)
+  static f_uilist_from_cardimage_parent(cardimage, parent) {
+    let output = vx_ui_ui.e_uilist
+    output = vx_core.f_let(
+      {"any-1": vx_ui_ui.t_uilist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const name = vx_core.f_log_1({"any-1": vx_core.t_string}, "nx/tactics/ui/uitactics/uilist<-cardimage-parent/:value/let/:arg/fn-any/:value/any<-struct", vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":name"))
+        const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":image")
+        const imgmirror = vx_core.f_log_1({"any-1": vx_core.t_boolean}, "nx/tactics/ui/uitactics/uilist<-cardimage-parent/:value/let/:arg/fn-any/:value/any<-struct", vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":imgmirror"))
+        const prefix = vx_core.f_new(
+          vx_core.t_string,
+          parent,
+          "/",
+          name
+        )
+        const uiimage1 = vx_core.f_new(
+          vx_ui_ui.t_ui,
+          ":uid",
+          vx_core.f_new(
+            vx_core.t_string,
+            prefix,
+            "/image1"
+          ),
+          ":style",
+          nx_tactics_ui_stylesheet.c_style_cardimage_image1,
+          ":data",
+          vx_data_file.f_file_from_path(image)
+        )
+        const uiimage2 = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new(vx_core.t_boolean_from_func, () => {return imgmirror}),
+            vx_core.f_new(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              vx_ui_ui.t_ui,
+              ":uid",
+              vx_core.f_new(
+                vx_core.t_string,
+                prefix,
+                "/image2"
+              ),
+              ":style",
+              nx_tactics_ui_stylesheet.c_style_cardimage_image2,
+              ":data",
+              vx_data_file.f_file_from_path(image)
+            )})
+          )
+        )
+        return vx_core.f_new(
+          vx_ui_ui.t_uilist,
+          uiimage1,
+          uiimage2
         )
       })
     )
@@ -3056,6 +3142,7 @@ export default class nx_tactics_ui_uitactics {
       "ui<-any-parent": nx_tactics_ui_uitactics.e_ui_from_any_parent,
       "ui<-card-parent": nx_tactics_ui_uitactics.e_ui_from_card_parent,
       "uilist<-card-parent": nx_tactics_ui_uitactics.e_uilist_from_card_parent,
+      "uilist<-cardimage-parent": nx_tactics_ui_uitactics.e_uilist_from_cardimage_parent,
       "uilist<-item-parent": nx_tactics_ui_uitactics.e_uilist_from_item_parent,
       "uilist<-ranksuit-parent": nx_tactics_ui_uitactics.e_uilist_from_ranksuit_parent,
       "uilist<-unit-parent": nx_tactics_ui_uitactics.e_uilist_from_unit_parent,
@@ -3110,6 +3197,7 @@ export default class nx_tactics_ui_uitactics {
       "ui<-any-parent": nx_tactics_ui_uitactics.t_ui_from_any_parent,
       "ui<-card-parent": nx_tactics_ui_uitactics.t_ui_from_card_parent,
       "uilist<-card-parent": nx_tactics_ui_uitactics.t_uilist_from_card_parent,
+      "uilist<-cardimage-parent": nx_tactics_ui_uitactics.t_uilist_from_cardimage_parent,
       "uilist<-item-parent": nx_tactics_ui_uitactics.t_uilist_from_item_parent,
       "uilist<-ranksuit-parent": nx_tactics_ui_uitactics.t_uilist_from_ranksuit_parent,
       "uilist<-unit-parent": nx_tactics_ui_uitactics.t_uilist_from_unit_parent,
@@ -3989,6 +4077,24 @@ export default class nx_tactics_ui_uitactics {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_ui_uitactics.f_uilist_from_card_parent
+    }
+
+    // (func uilist<-cardimage-parent)
+    nx_tactics_ui_uitactics.t_uilist_from_cardimage_parent['vx_value'] = {
+      name          : "uilist<-cardimage-parent",
+      pkgname       : "nx/tactics/ui/uitactics",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_ui_uitactics.f_uilist_from_cardimage_parent
     }
 
     // (func uilist<-item-parent)

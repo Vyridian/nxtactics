@@ -111,20 +111,20 @@ the weapon, making it easier to reload on horseback or on a moving carriage."
         :Chainshot
          (item
           :name "Chainshot"
-          :image "AgeOfSail/Cannon_Chainshot.jpg"
+          :image "images/age-of-sail/Cannon_Chainshot.jpg"
           :summary "* Does no damage.  All [Hits] are [Disabled Tokens].  All [Critical Hits] are [Crippled Tokens].")
         :Grapeshot
          (item
           :name "Grapeshot"
-          :image "AgeOfSail/Cannon_Grapeshot.jpg")
+          :image "images/age-of-sail/Cannon_Grapeshot.jpg")
         "Round shot"
          (item
           :name "Round shot"
-          :image "AgeOfSail/Cannon_Roundshot.jpg")
+          :image "images/age-of-sail/Cannon_Roundshot.jpg")
         "140mm Field Culverin"
          (item
           :name "140mm Field Culverin"
-          :image "AgeOfSail/Culverin.jpg"
+          :image "images/age-of-sail/Culverin.jpg"
           :summary "600,000J"
           :classification "Cannon"
           :length "4.5m"
@@ -134,7 +134,7 @@ the weapon, making it easier to reload on horseback or on a moving carriage."
         "100mm Demi-culverin"
          (item
           :name "100mm Demi-culverin"
-          :image "AgeOfSail/Demi-culverin.jpg"
+          :image "images/age-of-sail/Demi-culverin.jpg"
           :classification "Cannon"
           :length "3.4m"
           :mass "1.5tons"
@@ -173,7 +173,7 @@ the weapon, making it easier to reload on horseback or on a moving carriage."
         "British Musketeers"
          (unit
           :name "British Musketeers"
-          :image "AgeOfSail/British_Musketeers.png"
+          :image "images/age-of-sail/British_Musketeers.png"
           :summary "Musket Infantry"
           :classification "Lt. Infantry"
           :unitskillmap
@@ -190,7 +190,7 @@ the weapon, making it easier to reload on horseback or on a moving carriage."
         "British Caravel"
          (unit
           :name "British Caravel"
-          :image "AgeOfSail/BritishCaravel.png"
+          :image "images/age-of-sail/BritishCaravel.png"
           :speed "15kph"
           :classification "Med. Naval Vessel"
           :crew "20"
@@ -215,7 +215,7 @@ the weapon, making it easier to reload on horseback or on a moving carriage."
         "British Frigate"
          (unit
           :name "British Frigate"
-          :image "AgeOfSail/BritishFrigate.png"
+          :image "images/age-of-sail/BritishFrigate.png"
           :reference
            "A warship second only in size to the Ship-of-the-Line.  Frigates were three-masted with a raised forecastle
 and quarterdeck.  They had anywhere from 24 to 38 guns on her deck.  They were faster than the
@@ -241,7 +241,7 @@ pirates were ever in command of a frigate as most pirates would flee from a frig
         "British Man-O-War"
          (unit
           :name "British Man-O-War"
-          :image "AgeOfSail/BritishManOWar.png"
+          :image "images/age-of-sail/BritishManOWar.png"
           :classification "Hvy. Naval Vessel"
           :mass "1000tons"
           :unitpowermap
@@ -262,7 +262,7 @@ pirates were ever in command of a frigate as most pirates would flee from a frig
         "British Schooner"
          (unit
           :name "British Schooner"
-          :image "AgeOfSail/BritishSchooner.png"
+          :image "images/age-of-sail/BritishSchooner.png"
           :classification "Med. Naval Vessel"
           :mass "80tons"
           :length "18m"
@@ -312,11 +312,11 @@ pirates were ever in command of a frigate as most pirates would flee from a frig
         "Napoleon Bonaparte"
          (unit
           :name "Napoleon Bonaparte"
-          :image "AgeOfSail/French_Napoleon.png")
+          :image "images/age-of-sail/French_Napoleon.png")
         "French Musketeers"
          (unit
           :name "French Musketeers"
-          :image "AgeOfSail/French_Musketeers.png"
+          :image "images/age-of-sail/French_Musketeers.png"
           :summary "Musket Infantry"
           :classification "Lt. Infantry"
           :unitskillmap
@@ -349,7 +349,7 @@ pirates were ever in command of a frigate as most pirates would flee from a frig
         "French Dragoons"
          (unit
           :name "French Dragoons"
-          :image "AgeOfSail/French_Dragoons.png"
+          :image "images/age-of-sail/French_Dragoons.png"
           :summary "Musket Cavalry intending to ride into battle and dismount to fire."
           :classification "Med. Cavalry"
           :unitskillmap
@@ -389,7 +389,7 @@ Only the three major sea-powers of the time (Spain, England, and France) had man
         "French Schooner"
          (unit
           :name "French Schooner"
-          :image "AgeOfSail/FrenchSchooner.png"
+          :image "images/age-of-sail/FrenchSchooner.png"
           :classification "Med. Naval Vessel"
           :mass "80tons"
           :length "18m"
@@ -421,7 +421,7 @@ Caribbean began combating pirates."
         "Pirate Crew"
          (unit
           :name "Pirate Crew"
-          :image "AgeOfSail/Pirate_Crew.png"
+          :image "images/age-of-sail/Pirate_Crew.png"
           :classification "Lt. Infantry"
           :unitskillmap
            (unitskillmap
@@ -437,7 +437,7 @@ Caribbean began combating pirates."
         "Pirate Caravel"
          (unit
           :name "Pirate Caravel"
-          :image "AgeOfSail/PirateCaravel.png"
+          :image "images/age-of-sail/PirateCaravel.png"
           :speed "15kph"
           :classification "Med. Naval Vessel"
           :crew "20"
@@ -462,7 +462,7 @@ Caribbean began combating pirates."
         "Pirate Schooner"
          (unit
           :name "Pirate Schooner"
-          :image "AgeOfSail/PirateSchooner.png"
+          :image "images/age-of-sail/PirateSchooner.png"
           :reference
            "The Schooner has a narrow hull, two masts and is less than 100 tons.  She is generally rigged with two large
 sails.  She had a shallow draft which allowed her to remain in shallow coves waiting for her prey.  The
@@ -603,7 +603,7 @@ ship with much greater sailing power."
         "Spanish Caravel"
          (unit
           :name "Spanish Caravel"
-          :image "AgeOfSail/SpanishCaravel.png"
+          :image "images/age-of-sail/SpanishCaravel.png"
           :speed "15kph"
           :classification "Med. Naval Vessel"
           :crew "20"
@@ -628,7 +628,7 @@ ship with much greater sailing power."
         "Spanish Galleon"
          (unit
           :name "Spanish Galleon"
-          :image "AgeOfSail/SpanishGalleon.png"
+          :image "images/age-of-sail/SpanishGalleon.png"
           :reference
            "Large ships meant for transporting cargo.  The Spanish treasure fleets were made of these ships.  Although
 they were sluggish, they weren't the easy target you would expect for they could carry heavy cannon which
@@ -647,7 +647,7 @@ masts but these were an exception to the rule."
         "Spanish Man-O-War"
          (unit
           :name "Spanish Man-O-War"
-          :image "AgeOfSail/SpanishManOWar.png"
+          :image "images/age-of-sail/SpanishManOWar.png"
           :classification "Hvy. Naval Vessel"
           :mass "1000tons"
           :unitpowermap
@@ -668,7 +668,7 @@ masts but these were an exception to the rule."
         "Spanish Schooner"
          (unit
           :name "Spanish Schooner"
-          :image "AgeOfSail/SpanishSchooner.png"
+          :image "images/age-of-sail/SpanishSchooner.png"
           :classification "Med. Naval Vessel"
           :mass "80tons"
           :length "18m"
@@ -693,7 +693,7 @@ masts but these were an exception to the rule."
         "American Frigate"
          (unit
           :name "American Frigate"
-          :image "AgeOfSail/AmericanFrigate.png"
+          :image "images/age-of-sail/AmericanFrigate.png"
           :titles "USS Constitution, Old Ironsides"
           :speed "24kph"
           :classification "Hvy. Naval Vessel"

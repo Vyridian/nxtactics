@@ -25,12 +25,12 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 27, ":tests", 65, ":total", 240), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 3, ":tests", 2, ":total", 59), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 29, ":tests", 73, ":total", 250), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 67), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 240), 
-      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 91)
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 250), 
+      "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 93)
     )
   }
 
@@ -42,6 +42,8 @@ export default class nx_tactics_base_test {
         vx_core.f_new(
           vx_core.t_intmap,
           "ability", 0,
+          "abilitylist", 0,
+          "abilitylistlist", 0,
           "abilitymap", 0,
           "book", 0,
           "booklist", 0,
@@ -230,6 +232,14 @@ export default class nx_tactics_base_test {
       "funcmap",
         vx_core.f_new(
           vx_core.t_intmap,
+          "abilitylist<-abilitylistlist", 0,
+          "abilitylist<-power", 0,
+          "abilitylist<-powerlist", 0,
+          "abilitylist<-skill", 0,
+          "abilitylist<-skilllist", 0,
+          "abilitylistlist<-powerlist", 0,
+          "abilitylistlist<-skilllist", 0,
+          "abilitymap<-abilitylist", 0,
           "bookmap<-booklist", 0,
           "cardimage<-card", 0,
           "cardlist-copy<-card-num", 0,

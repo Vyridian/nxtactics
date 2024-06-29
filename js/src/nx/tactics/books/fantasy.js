@@ -205,7 +205,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Kratos",
               ":image",
-              "Fantasy/Kratos.png"
+              "images/fantasy/Kratos.png"
             )
           )
         )
@@ -3249,7 +3249,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Flint",
               ":image",
-              "Fantasy/Flint.png",
+              "images/fantasy/Flint.png",
               ":summary",
               "Half-Elven Thief",
               ":unitskillmap",
@@ -3281,7 +3281,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Galamir Mirlesem",
               ":image",
-              "Fantasy/GalamirMirlesem.png",
+              "images/fantasy/GalamirMirlesem.png",
               ":summary",
               "* Human Mage\n* Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.\n* History - Galamir was born to Chantry trainers, and as a child he was allowed special access to the arcane academy. As a teen, he became obsessed with magic and its effect on the world. His brilliance and magical aptitude were soon recognized and he was accepted into the academy. For the next 25 years he completed his full wizardry and elemental training and received top honors. He was a logical 	candidate to become a trainer himself, but he was bored of the cloistered life, so he began visiting other Chantries across the world. Along the way he encountered a naive, young half-elf rogue named Phirax living on a simple farm. Galamir recruited Phirax to join him to perform the more dangerous and mundane tasks while Galamir provided the leadership and strategy. Later, he recruited the Warrior Stam and the Cleric Sarak into their party to rounded out their abilities.",
               ":unitpowermap",
@@ -3351,7 +3351,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Jaris Ransun",
               ":image",
-              "Fantasy/Ransun.png",
+              "images/fantasy/Ransun.png",
               ":summary",
               "Human Hunter",
               ":titles",
@@ -3389,7 +3389,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Phirax Alganon",
               ":image",
-              "Fantasy/PhiraxAlganon.png",
+              "images/fantasy/PhiraxAlganon.png",
               ":summary",
               "* Half-Elven Bard\n* Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.\n* Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).\n* History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure.",
               ":unitpowermap",
@@ -3461,7 +3461,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Sarak Ishimar",
               ":image",
-              "Fantasy/SarakIshimar.png",
+              "images/fantasy/SarakIshimar.png",
               ":summary",
               "Human Cleric",
               ":unitpowermap",
@@ -3503,7 +3503,7 @@ export default class nx_tactics_books_fantasy {
               ":name",
               "Stam Domindor",
               ":image",
-              "Fantasy/Stam.png",
+              "images/fantasy/Stam.png",
               ":summary",
               "Dwarven Warrior",
               ":unitskillmap",
@@ -3519,11 +3519,11 @@ export default class nx_tactics_books_fantasy {
                   ":unititemmap",
                   vx_core.f_new(
                     nx_tactics_base.t_unititemmap,
-                    "Short Bow",
+                    "Shortbow",
                     vx_core.f_new(
                       nx_tactics_base.t_unititem,
                       ":name",
-                      "Short Bow"
+                      "Shortbow"
                     )
                   )
                 )

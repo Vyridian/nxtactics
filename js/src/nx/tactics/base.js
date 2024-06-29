@@ -14,6 +14,18 @@ export default class nx_tactics_base {
   static e_ability = {vx_type: nx_tactics_base.t_ability}
 
   /**
+   * type: abilitylist
+   */
+  static t_abilitylist = {}
+  static e_abilitylist = vx_core.vx_new_list(nx_tactics_base.t_abilitylist, [])
+
+  /**
+   * type: abilitylistlist
+   */
+  static t_abilitylistlist = {}
+  static e_abilitylistlist = vx_core.vx_new_list(nx_tactics_base.t_abilitylistlist, [])
+
+  /**
    * type: abilitymap
    */
   static t_abilitymap = {}
@@ -1101,9 +1113,213 @@ export default class nx_tactics_base {
   static c_suit_spade = {vx_type: nx_tactics_base.t_suit, vx_constdef: {pkgname: 'nx/tactics/base', name: 'suit-spade'}}
 
   /**
+   * @function abilitylist_from_abilitylistlist
+   * Returns an abilitylist from a given abilitylistlist
+   * @param  {abilitylistlist} abilitylistlist
+   * @return {abilitylistlist}
+   */
+  static t_abilitylist_from_abilitylistlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_abilitylist_from_abilitylistlist = {
+    vx_type: nx_tactics_base.t_abilitylist_from_abilitylistlist
+  }
+
+  // (func abilitylist<-abilitylistlist)
+  static f_abilitylist_from_abilitylistlist(abilitylistlist) {
+    let output = nx_tactics_base.e_abilitylistlist
+    output = vx_core.f_list_join_from_list({"any-1": nx_tactics_base.t_ability, "any-2": nx_tactics_base.t_abilitylist, "list-1": nx_tactics_base.t_abilitylist, "list-2": nx_tactics_base.t_abilitylistlist}, abilitylistlist)
+    return output
+  }
+
+  /**
+   * @function abilitylist_from_power
+   * Returns an abilitylist from a given power
+   * @param  {power} power
+   * @return {abilitylist}
+   */
+  static t_abilitylist_from_power = {
+    vx_type: vx_core.t_type
+  }
+  static e_abilitylist_from_power = {
+    vx_type: nx_tactics_base.t_abilitylist_from_power
+  }
+
+  // (func abilitylist<-power)
+  static f_abilitylist_from_power(power) {
+    let output = nx_tactics_base.e_abilitylist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_abilitylist, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_abilitylist, "map-2": nx_tactics_base.t_abilitymap},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const abilitymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_power}, power, ":abilitymap")
+        return vx_core.f_list_from_map({"any-1": nx_tactics_base.t_ability, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_abilitylist, "map-2": nx_tactics_base.t_abilitymap}, abilitymap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function abilitylist_from_powerlist
+   * Returns a abilitylist from a given skilllist
+   * @param  {powerlist} powerlist
+   * @return {abilitylist}
+   */
+  static t_abilitylist_from_powerlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_abilitylist_from_powerlist = {
+    vx_type: nx_tactics_base.t_abilitylist_from_powerlist
+  }
+
+  // (func abilitylist<-powerlist)
+  static f_abilitylist_from_powerlist(powerlist) {
+    let output = nx_tactics_base.e_abilitylist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_abilitylist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const abilitylistlist = nx_tactics_base.f_abilitylistlist_from_powerlist(powerlist)
+        return nx_tactics_base.f_abilitylist_from_abilitylistlist(abilitylistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function abilitylist_from_skill
+   * Returns an abilitylist from a given skill
+   * @param  {skill} skill
+   * @return {abilitylist}
+   */
+  static t_abilitylist_from_skill = {
+    vx_type: vx_core.t_type
+  }
+  static e_abilitylist_from_skill = {
+    vx_type: nx_tactics_base.t_abilitylist_from_skill
+  }
+
+  // (func abilitylist<-skill)
+  static f_abilitylist_from_skill(skill) {
+    let output = nx_tactics_base.e_abilitylist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_abilitylist, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_abilitylist, "map-2": nx_tactics_base.t_abilitymap},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const abilitymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_skill}, skill, ":abilitymap")
+        return vx_core.f_list_from_map({"any-1": nx_tactics_base.t_ability, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_abilitylist, "map-2": nx_tactics_base.t_abilitymap}, abilitymap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function abilitylist_from_skilllist
+   * Returns a abilitylist from a given skilllist
+   * @param  {skilllist} skilllist
+   * @return {abilitylist}
+   */
+  static t_abilitylist_from_skilllist = {
+    vx_type: vx_core.t_type
+  }
+  static e_abilitylist_from_skilllist = {
+    vx_type: nx_tactics_base.t_abilitylist_from_skilllist
+  }
+
+  // (func abilitylist<-skilllist)
+  static f_abilitylist_from_skilllist(skilllist) {
+    let output = nx_tactics_base.e_abilitylist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_abilitylist},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const abilitylistlist = nx_tactics_base.f_abilitylistlist_from_skilllist(skilllist)
+        return nx_tactics_base.f_abilitylist_from_abilitylistlist(abilitylistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function abilitylistlist_from_powerlist
+   * Returns an abilitylistlist from a given powerlist
+   * @param  {powerlist} powerlist
+   * @return {abilitylistlist}
+   */
+  static t_abilitylistlist_from_powerlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_abilitylistlist_from_powerlist = {
+    vx_type: nx_tactics_base.t_abilitylistlist_from_powerlist
+  }
+
+  // (func abilitylistlist<-powerlist)
+  static f_abilitylistlist_from_powerlist(powerlist) {
+    let output = nx_tactics_base.e_abilitylistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_abilitylist, "any-2": nx_tactics_base.t_power, "list-1": nx_tactics_base.t_abilitylistlist, "list-2": nx_tactics_base.t_powerlist},
+      powerlist,
+      vx_core.f_new(vx_core.t_any_from_any, (power) => 
+        nx_tactics_base.f_abilitylist_from_power(power))
+    )
+    return output
+  }
+
+  /**
+   * @function abilitylistlist_from_skilllist
+   * Returns an abilitylistlist from a given skilllist
+   * @param  {skilllist} skilllist
+   * @return {abilitylistlist}
+   */
+  static t_abilitylistlist_from_skilllist = {
+    vx_type: vx_core.t_type
+  }
+  static e_abilitylistlist_from_skilllist = {
+    vx_type: nx_tactics_base.t_abilitylistlist_from_skilllist
+  }
+
+  // (func abilitylistlist<-skilllist)
+  static f_abilitylistlist_from_skilllist(skilllist) {
+    let output = nx_tactics_base.e_abilitylistlist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_abilitylist, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_abilitylistlist, "list-2": nx_tactics_base.t_skilllist},
+      skilllist,
+      vx_core.f_new(vx_core.t_any_from_any, (skill) => 
+        nx_tactics_base.f_abilitylist_from_skill(skill))
+    )
+    return output
+  }
+
+  /**
+   * @function abilitymap_from_abilitylist
+   * Returns an abilitymap from a given abilitylist
+   * @param  {abilitylist} ... abilitylist
+   * @return {abilitymap}
+   */
+  static t_abilitymap_from_abilitylist = {
+    vx_type: vx_core.t_type
+  }
+  static e_abilitymap_from_abilitylist = {
+    vx_type: nx_tactics_base.t_abilitymap_from_abilitylist
+  }
+
+  // (func abilitymap<-abilitylist)
+  static f_abilitymap_from_abilitylist(...abilitylist) {
+    let output = nx_tactics_base.e_abilitymap
+    abilitylist = vx_core.f_new(nx_tactics_base.t_abilitylist, ...abilitylist)
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_ability, "any-2": nx_tactics_base.t_ability, "list-2": nx_tactics_base.t_abilitylist, "map-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_ability},
+      abilitylist,
+      vx_core.f_new(vx_core.t_any_from_any, (ability) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_ability}, ability, ":name"))
+    )
+    return output
+  }
+
+  /**
    * @function bookmap_from_booklist
    * Returns a bookmap of all books.
-   * @param  {booklist} booklist
+   * @param  {booklist} ... booklist
    * @return {bookmap}
    */
   static t_bookmap_from_booklist = {
@@ -1114,8 +1330,9 @@ export default class nx_tactics_base {
   }
 
   // (func bookmap<-booklist)
-  static f_bookmap_from_booklist(booklist) {
+  static f_bookmap_from_booklist(...booklist) {
     let output = nx_tactics_base.e_bookmap
+    booklist = vx_core.f_new(nx_tactics_base.t_booklist, ...booklist)
     output = vx_core.f_map_from_list(
       {"any-1": nx_tactics_base.t_book, "any-2": nx_tactics_base.t_book, "list-2": nx_tactics_base.t_booklist, "map-1": nx_tactics_base.t_bookmap, "struct-2": nx_tactics_base.t_book},
       booklist,
@@ -1147,6 +1364,7 @@ export default class nx_tactics_base {
       vx_core.f_new(vx_core.t_any_from_func, () => {
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
         const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":image")
+        const imgmirror = vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": nx_tactics_base.t_card}, card, ":imgmirror")
         const id = vx_core.f_new(
           vx_core.t_string,
           name,
@@ -1161,7 +1379,9 @@ export default class nx_tactics_base {
           ":origcard",
           card,
           ":image",
-          image
+          image,
+          ":imgmirror",
+          imgmirror
         )
       })
     )
@@ -1332,7 +1552,7 @@ export default class nx_tactics_base {
 
   /**
    * @function chapterlist_from_booklist
-   * Returns a chapterlist from a given bookmap
+   * Returns a chapterlist from a given booklist
    * @param  {booklist} booklist
    * @return {chapterlist}
    */
@@ -1551,7 +1771,7 @@ export default class nx_tactics_base {
   /**
    * @function itemmap_from_itemlist
    * Returns a itemmap from a given itemlist
-   * @param  {itemlist} itemlist
+   * @param  {itemlist} ... itemlist
    * @return {itemmap}
    */
   static t_itemmap_from_itemlist = {
@@ -1562,8 +1782,9 @@ export default class nx_tactics_base {
   }
 
   // (func itemmap<-itemlist)
-  static f_itemmap_from_itemlist(itemlist) {
+  static f_itemmap_from_itemlist(...itemlist) {
     let output = nx_tactics_base.e_itemmap
+    itemlist = vx_core.f_new(nx_tactics_base.t_itemlist, ...itemlist)
     output = vx_core.f_map_from_list(
       {"any-1": nx_tactics_base.t_item, "any-2": nx_tactics_base.t_item, "list-2": nx_tactics_base.t_itemlist, "map-1": nx_tactics_base.t_itemmap, "struct-2": nx_tactics_base.t_item},
       itemlist,
@@ -2369,10 +2590,20 @@ export default class nx_tactics_base {
         const powermap = nx_tactics_base.f_powermap_from_powerlist(powerlist)
         const skilllist = nx_tactics_base.f_skilllist_from_sectionlist(sectionlist)
         const skillmap = nx_tactics_base.f_skillmap_from_skilllist(skilllist)
+        const abilitylist1 = nx_tactics_base.f_abilitylist_from_skilllist(skilllist)
+        const abilitylist2 = nx_tactics_base.f_abilitylist_from_powerlist(powerlist)
+        const abilitylist3 = vx_core.f_new(
+          nx_tactics_base.t_abilitylist,
+          abilitylist1,
+          abilitylist2
+        )
+        const abilitymap = nx_tactics_base.f_abilitymap_from_abilitylist(abilitylist3)
         const unitlist = nx_tactics_base.f_unitlist_from_sectionlist(sectionlist)
         const unitmap = nx_tactics_base.f_unitmap_from_unitlist(unitlist)
         return vx_core.f_new(
           nx_tactics_base.t_tactics,
+          ":abilitymap",
+          abilitymap,
           ":bookmap",
           bookmap,
           ":chaptermap",
@@ -2806,6 +3037,8 @@ export default class nx_tactics_base {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "ability": nx_tactics_base.e_ability,
+      "abilitylist": nx_tactics_base.e_abilitylist,
+      "abilitylistlist": nx_tactics_base.e_abilitylistlist,
       "abilitymap": nx_tactics_base.e_abilitymap,
       "book": nx_tactics_base.e_book,
       "booklist": nx_tactics_base.e_booklist,
@@ -2896,6 +3129,14 @@ export default class nx_tactics_base {
       "weakness": nx_tactics_base.e_weakness,
       "weaknesslist": nx_tactics_base.e_weaknesslist,
       "weaknessmap": nx_tactics_base.e_weaknessmap,
+      "abilitylist<-abilitylistlist": nx_tactics_base.e_abilitylist_from_abilitylistlist,
+      "abilitylist<-power": nx_tactics_base.e_abilitylist_from_power,
+      "abilitylist<-powerlist": nx_tactics_base.e_abilitylist_from_powerlist,
+      "abilitylist<-skill": nx_tactics_base.e_abilitylist_from_skill,
+      "abilitylist<-skilllist": nx_tactics_base.e_abilitylist_from_skilllist,
+      "abilitylistlist<-powerlist": nx_tactics_base.e_abilitylistlist_from_powerlist,
+      "abilitylistlist<-skilllist": nx_tactics_base.e_abilitylistlist_from_skilllist,
+      "abilitymap<-abilitylist": nx_tactics_base.e_abilitymap_from_abilitylist,
       "bookmap<-booklist": nx_tactics_base.e_bookmap_from_booklist,
       "cardimage<-card": nx_tactics_base.e_cardimage_from_card,
       "cardlist-copy<-card-num": nx_tactics_base.e_cardlist_copy_from_card_num,
@@ -2957,6 +3198,14 @@ export default class nx_tactics_base {
       "weaknessmap<-weaknesslist": nx_tactics_base.e_weaknessmap_from_weaknesslist
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
+      "abilitylist<-abilitylistlist": nx_tactics_base.t_abilitylist_from_abilitylistlist,
+      "abilitylist<-power": nx_tactics_base.t_abilitylist_from_power,
+      "abilitylist<-powerlist": nx_tactics_base.t_abilitylist_from_powerlist,
+      "abilitylist<-skill": nx_tactics_base.t_abilitylist_from_skill,
+      "abilitylist<-skilllist": nx_tactics_base.t_abilitylist_from_skilllist,
+      "abilitylistlist<-powerlist": nx_tactics_base.t_abilitylistlist_from_powerlist,
+      "abilitylistlist<-skilllist": nx_tactics_base.t_abilitylistlist_from_skilllist,
+      "abilitymap<-abilitylist": nx_tactics_base.t_abilitymap_from_abilitylist,
       "bookmap<-booklist": nx_tactics_base.t_bookmap_from_booklist,
       "cardimage<-card": nx_tactics_base.t_cardimage_from_card,
       "cardlist-copy<-card-num": nx_tactics_base.t_cardlist_copy_from_card_num,
@@ -3019,6 +3268,8 @@ export default class nx_tactics_base {
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       "ability": nx_tactics_base.t_ability,
+      "abilitylist": nx_tactics_base.t_abilitylist,
+      "abilitylistlist": nx_tactics_base.t_abilitylistlist,
       "abilitymap": nx_tactics_base.t_abilitymap,
       "book": nx_tactics_base.t_book,
       "booklist": nx_tactics_base.t_booklist,
@@ -3153,6 +3404,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -3187,6 +3443,42 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_ability['vx_type'] = nx_tactics_base.t_ability
     nx_tactics_base.e_ability['vx_value'] = {}
+
+    // (type abilitylist)
+    nx_tactics_base.t_abilitylist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_abilitylist['vx_value'] = {
+      name          : "abilitylist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_ability],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_abilitylist['vx_type'] = nx_tactics_base.t_abilitylist
+
+    // (type abilitylistlist)
+    nx_tactics_base.t_abilitylistlist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_abilitylistlist['vx_value'] = {
+      name          : "abilitylistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_abilitylist],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_abilitylistlist['vx_type'] = nx_tactics_base.t_abilitylistlist
 
     // (type abilitymap)
     nx_tactics_base.t_abilitymap['vx_type'] = vx_core.t_type
@@ -3239,6 +3531,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -3352,6 +3649,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -3421,6 +3723,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -3488,6 +3795,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -3599,6 +3911,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -3730,6 +4047,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -3836,6 +4158,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -3910,6 +4237,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -3977,6 +4309,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -4048,6 +4385,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -4115,6 +4457,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -4204,6 +4551,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -4465,6 +4817,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -4532,6 +4889,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -4620,6 +4982,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -4800,6 +5167,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -4944,6 +5316,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5011,6 +5388,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -5090,6 +5472,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -5214,6 +5601,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5307,6 +5699,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5398,6 +5795,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -5594,6 +5996,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5733,6 +6140,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5800,6 +6212,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -5871,6 +6288,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -5938,6 +6360,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -6092,6 +6519,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6159,6 +6591,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -6269,6 +6706,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6355,6 +6797,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -6446,6 +6893,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -6513,6 +6965,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -6820,6 +7277,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7011,6 +7473,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7170,6 +7637,11 @@ export default class nx_tactics_base {
         "image": {
           "name" : "image",
           "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
           "multi": false
         },
         "reference": {
@@ -7371,6 +7843,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7459,6 +7936,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
         "reference": {
           "name" : "reference",
           "type" : vx_core.t_string,
@@ -7530,6 +8012,150 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_weaknessmap['vx_type'] = nx_tactics_base.t_weaknessmap
     nx_tactics_base.e_weaknessmap['vx_value'] = {}
+
+    // (func abilitylist<-abilitylistlist)
+    nx_tactics_base.t_abilitylist_from_abilitylistlist['vx_value'] = {
+      name          : "abilitylist<-abilitylistlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_abilitylist_from_abilitylistlist
+    }
+
+    // (func abilitylist<-power)
+    nx_tactics_base.t_abilitylist_from_power['vx_value'] = {
+      name          : "abilitylist<-power",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_abilitylist_from_power
+    }
+
+    // (func abilitylist<-powerlist)
+    nx_tactics_base.t_abilitylist_from_powerlist['vx_value'] = {
+      name          : "abilitylist<-powerlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_abilitylist_from_powerlist
+    }
+
+    // (func abilitylist<-skill)
+    nx_tactics_base.t_abilitylist_from_skill['vx_value'] = {
+      name          : "abilitylist<-skill",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_abilitylist_from_skill
+    }
+
+    // (func abilitylist<-skilllist)
+    nx_tactics_base.t_abilitylist_from_skilllist['vx_value'] = {
+      name          : "abilitylist<-skilllist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_abilitylist_from_skilllist
+    }
+
+    // (func abilitylistlist<-powerlist)
+    nx_tactics_base.t_abilitylistlist_from_powerlist['vx_value'] = {
+      name          : "abilitylistlist<-powerlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_abilitylistlist_from_powerlist
+    }
+
+    // (func abilitylistlist<-skilllist)
+    nx_tactics_base.t_abilitylistlist_from_skilllist['vx_value'] = {
+      name          : "abilitylistlist<-skilllist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_abilitylistlist_from_skilllist
+    }
+
+    // (func abilitymap<-abilitylist)
+    nx_tactics_base.t_abilitymap_from_abilitylist['vx_value'] = {
+      name          : "abilitymap<-abilitylist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_abilitymap_from_abilitylist
+    }
 
     // (func bookmap<-booklist)
     nx_tactics_base.t_bookmap_from_booklist['vx_value'] = {
@@ -9207,8 +9833,11 @@ export default class nx_tactics_base {
 
     // (const stat-beast)
     Object.assign(nx_tactics_base.c_stat_beast, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9220,11 +9849,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9234,8 +9865,11 @@ export default class nx_tactics_base {
 
     // (const stat-body)
     Object.assign(nx_tactics_base.c_stat_body, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9247,11 +9881,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9261,8 +9897,11 @@ export default class nx_tactics_base {
 
     // (const stat-mind)
     Object.assign(nx_tactics_base.c_stat_mind, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9274,11 +9913,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9288,8 +9929,11 @@ export default class nx_tactics_base {
 
     // (const stat-shadow)
     Object.assign(nx_tactics_base.c_stat_shadow, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9301,11 +9945,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9315,8 +9961,11 @@ export default class nx_tactics_base {
 
     // (const stat-speed)
     Object.assign(nx_tactics_base.c_stat_speed, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9328,11 +9977,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9342,8 +9993,11 @@ export default class nx_tactics_base {
 
     // (const stat-will)
     Object.assign(nx_tactics_base.c_stat_will, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9355,11 +10009,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9369,8 +10025,11 @@ export default class nx_tactics_base {
 
     // (const suit-black)
     Object.assign(nx_tactics_base.c_suit_black, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9382,11 +10041,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9396,8 +10057,11 @@ export default class nx_tactics_base {
 
     // (const suit-club)
     Object.assign(nx_tactics_base.c_suit_club, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9409,11 +10073,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9423,8 +10089,11 @@ export default class nx_tactics_base {
 
     // (const suit-diamond)
     Object.assign(nx_tactics_base.c_suit_diamond, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9436,11 +10105,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9450,8 +10121,11 @@ export default class nx_tactics_base {
 
     // (const suit-heart)
     Object.assign(nx_tactics_base.c_suit_heart, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9463,11 +10137,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9477,8 +10153,11 @@ export default class nx_tactics_base {
 
     // (const suit-red)
     Object.assign(nx_tactics_base.c_suit_red, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9490,11 +10169,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
@@ -9504,8 +10185,11 @@ export default class nx_tactics_base {
 
     // (const suit-spade)
     Object.assign(nx_tactics_base.c_suit_spade, {
+      "imgmirror": false,
       "ranksuit": {
+        "imgmirror": false,
         "ranksuit": {
+          "imgmirror": false,
           "ranksuit": {
             
           },
@@ -9517,11 +10201,13 @@ export default class nx_tactics_base {
           }
         },
         "rank": {
+          "imgmirror": false,
           "ranksuit": {
             
           }
         },
         "suit": {
+          "imgmirror": false,
           "ranksuit": {
             
           }

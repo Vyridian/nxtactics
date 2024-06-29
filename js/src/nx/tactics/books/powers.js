@@ -8604,7 +8604,7 @@ export default class nx_tactics_books_powers {
                   ":name",
                   "Bite",
                   ":summary",
-                  "* The fighter savagely bites his opponent.\n* Criticals - [Piercing]"
+                  "* IF you have a [Hold] on a target\n* THEN\n** [Fight]: [Close Combat]\n** [Damage]: [Size Bonus] [Pierce] [Slash] [Hack]"
                 ),
                 "Bull Rush",
                 vx_core.f_new(

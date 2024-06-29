@@ -299,6 +299,18 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_card_title2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-title2'}}
 
   /**
+   * Constant: style-cardimage-image1
+   * {style}
+   */
+  static c_style_cardimage_image1 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-cardimage-image1'}}
+
+  /**
+   * Constant: style-cardimage-image2
+   * {style}
+   */
+  static c_style_cardimage_image2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-cardimage-image2'}}
+
+  /**
    * Constant: style-clickable
    * Returns the style for clickable class.
    * {style}
@@ -622,6 +634,8 @@ export default class nx_tactics_ui_stylesheet {
       "style-card-suit": nx_tactics_ui_stylesheet.c_style_card_suit,
       "style-card-title1": nx_tactics_ui_stylesheet.c_style_card_title1,
       "style-card-title2": nx_tactics_ui_stylesheet.c_style_card_title2,
+      "style-cardimage-image1": nx_tactics_ui_stylesheet.c_style_cardimage_image1,
+      "style-cardimage-image2": nx_tactics_ui_stylesheet.c_style_cardimage_image2,
       "style-clickable": nx_tactics_ui_stylesheet.c_style_clickable,
       "style-deck": nx_tactics_ui_stylesheet.c_style_deck,
       "style-div": nx_tactics_ui_stylesheet.c_style_div,
@@ -939,7 +953,7 @@ export default class nx_tactics_ui_stylesheet {
     // (const style-app)
     Object.assign(nx_tactics_ui_stylesheet.c_style_app, vx_core.f_new(
       vx_ui_ui.t_style,
-      ":color-background",
+      ":color-bkg",
       "B0E0E6",
       ":layout",
       vx_ui_ui.c_layout_app,
@@ -1004,7 +1018,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-app-menubar",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-bkg",
       "5E9CA0",
       ":layout",
       vx_ui_ui.c_layout_menubar,
@@ -1047,7 +1061,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-app-navbar",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-bkg",
       "90C5A9",
       ":layout",
       vx_ui_ui.c_layout_navbar,
@@ -1076,7 +1090,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-app-navbar-button",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-bkg",
       "A9C8FF",
       ":layout",
       vx_ui_ui.c_layout_button,
@@ -1113,7 +1127,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-app-statusbar",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-bkg",
       "B6B6B6",
       ":layout",
       vx_ui_ui.c_layout_statusbar,
@@ -1145,7 +1159,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-app-titlebar",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-bkg",
       "0000F0",
       ":layout",
       vx_ui_ui.c_layout_titlebar,
@@ -1174,7 +1188,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-app-titlebar-print",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-bkg",
       "A9C8FF",
       ":layout",
       vx_ui_ui.c_layout_button,
@@ -1257,7 +1271,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-card",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-bkg",
       "FFFFFF",
       ":layout",
       vx_ui_ui.c_layout_flow_item,
@@ -1449,6 +1463,82 @@ export default class nx_tactics_ui_stylesheet {
       )
     ))
 
+    // (const style-cardimage-image1)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_cardimage_image1, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-cardimage-image1",
+      ":type",
+      vx_ui_ui.c_styletype_shared,
+      ":layout",
+      vx_ui_ui.c_layout_image,
+      ":pointorigin",
+      vx_ui_ui.c_point_lefttop,
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        61,
+        ":y",
+        45,
+        ":pointtype",
+        vx_ui_ui.c_pointtype_absolute
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        43,
+        ":y",
+        60
+      ),
+      ":pointrotate",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        90
+      )
+    ))
+
+    // (const style-cardimage-image2)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_cardimage_image2, vx_core.f_new(
+      vx_ui_ui.t_style,
+      ":name",
+      "style-cardimage-image2",
+      ":type",
+      vx_ui_ui.c_styletype_shared,
+      ":layout",
+      vx_ui_ui.c_layout_image,
+      ":flip",
+      vx_ui_ui.c_flip_x,
+      ":pointorigin",
+      vx_ui_ui.c_point_lefttop,
+      ":pointpos",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        61,
+        ":y",
+        45,
+        ":pointtype",
+        vx_ui_ui.c_pointtype_absolute
+      ),
+      ":pointsize",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        43,
+        ":y",
+        60
+      ),
+      ":pointrotate",
+      vx_core.f_new(
+        vx_ui_ui.t_point,
+        ":x",
+        90
+      )
+    ))
+
     // (const style-clickable)
     Object.assign(nx_tactics_ui_stylesheet.c_style_clickable, vx_core.f_new(
       vx_ui_ui.t_style,
@@ -1460,7 +1550,7 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_styletype_shared,
       ":cursor",
       vx_ui_ui.t_cursor_pointer,
-      ":color-hoverbkgrd",
+      ":color-bkghover",
       "E0E0E0"
     ))
 
@@ -1471,7 +1561,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-deck",
       ":type",
       vx_ui_ui.c_styletype_shared,
-      ":color-background",
+      ":color-bkg",
       "C0C0C0",
       ":layout",
       vx_ui_ui.c_layout_flow_columns
@@ -2038,7 +2128,7 @@ export default class nx_tactics_ui_stylesheet {
         }
       },
       "hidden": false,
-      "image-background": {
+      "image-bkg": {
         "file": {
           "permission": {
             
@@ -2050,6 +2140,13 @@ export default class nx_tactics_ui_stylesheet {
       },
       "pin": {
         
+      },
+      "pointorigin": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "t": 0,
+        "i": 0
       },
       "pointpos": {
         "x": 0,

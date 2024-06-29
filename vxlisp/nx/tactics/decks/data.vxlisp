@@ -1,0 +1,91 @@
+(package nx/tactics/decks/data
+ :libs (lib base             :path nx/tactics/base)
+       (lib advanced_rules   :path nx/tactics/books/advanced_rules)
+       (lib age_of_sail      :path nx/tactics/books/age_of_sail)
+       (lib age_of_steam     :path nx/tactics/books/age_of_steam)
+       (lib bestiary         :path nx/tactics/books/bestiary)
+       (lib characters       :path nx/tactics/books/characters)
+       (lib combat           :path nx/tactics/books/combat)
+       (lib core_rules       :path nx/tactics/books/core_rules)
+       (lib fantasy          :path nx/tactics/books/fantasy)
+       (lib gear             :path nx/tactics/books/gear)
+       (lib giant_monsters   :path nx/tactics/books/giant_monsters)
+       (lib high_technology  :path nx/tactics/books/high_technology)
+       (lib horror           :path nx/tactics/books/horror)
+       (lib land_sea_and_air :path nx/tactics/books/land_sea_and_air)
+       (lib magic            :path nx/tactics/books/magic)
+       (lib medieval         :path nx/tactics/books/medieval)
+       (lib modern           :path nx/tactics/books/modern)
+       (lib modern_fantasy   :path nx/tactics/books/modern_fantasy)
+       (lib powers           :path nx/tactics/books/powers)
+       (lib prehistory       :path nx/tactics/books/prehistory)
+       (lib pulp_fiction     :path nx/tactics/books/pulp_fiction)
+       (lib science_fiction  :path nx/tactics/books/science_fiction)
+       (lib skills           :path nx/tactics/books/skills)
+       (lib space_and_time   :path nx/tactics/books/space_and_time)
+       (lib superheroes      :path nx/tactics/books/superheroes)
+       (lib world_wars       :path nx/tactics/books/world_wars))
+
+(const tactics-all : base/tactics
+ (let : base/tactics
+  [booklist : base/booklist := (booklist-all)]
+  (base/tactics<-booklist
+   booklist))
+ :doc "All tactics cards")
+
+(func booklist-all : base/booklist
+ (base/booklist
+  (core_rules/tacticsbook)
+  (combat/tacticsbook)
+  (skills/tacticsbook)
+  (magic/tacticsbook)
+  (powers/tacticsbook)
+  (gear/tacticsbook)
+  (advanced_rules/tacticsbook)
+  (characters/tacticsbook)
+  (bestiary/tacticsbook)
+  (land_sea_and_air/tacticsbook)
+  (fantasy/tacticsbook)
+  (giant_monsters/tacticsbook)
+  (prehistory/tacticsbook)
+  (medieval/tacticsbook)
+  (age_of_sail/tacticsbook)
+  (age_of_steam/tacticsbook)
+  (pulp_fiction/tacticsbook)
+  (world_wars/tacticsbook)
+  (horror/tacticsbook)
+  (modern/tacticsbook)
+  (modern_fantasy/tacticsbook)
+  (superheroes/tacticsbook)
+  (high_technology/tacticsbook)
+  (science_fiction/tacticsbook)
+  (space_and_time/tacticsbook))
+ :doc "All books")
+
+(func tactics-ability : base/ability
+ [name : string]
+ (let : base/ability
+  [abilitymap : base/abilitymap := (:abilitymap tactics-all)]
+  (any<-map abilitymap name))
+ :doc "Returns an ability from tactics-all")
+
+(func tactics-item : base/item
+ [name : string]
+ (let : base/item
+  [itemmap : base/itemmap := (:itemmap tactics-all)]
+  (any<-map itemmap name))
+ :doc "Returns an item from tactics-all")
+
+(func tactics-power : base/power
+ [name : string]
+ (let : base/power
+  [powermap : base/powermap := (:powermap tactics-all)]
+  (any<-map powermap name))
+ :doc "Returns a power from tactics-all")
+
+(func tactics-skill : base/skill
+ [name : string]
+ (let : base/skill
+  [skillmap : base/skillmap := (:skillmap tactics-all)]
+  (any<-map skillmap name))
+ :doc "Returns a skill from tactics-all")

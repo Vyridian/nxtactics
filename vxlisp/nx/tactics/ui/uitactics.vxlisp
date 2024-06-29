@@ -481,7 +481,7 @@
 (func uilist<-card-parent : ui/uilist
  [card   : base/card
   parent : string]
- (let : ui/ui
+ (let : ui/uilist
   [id   : string := (:id card)
    name : string := (:name card)
    datatype : any := (type<-any card)
@@ -548,6 +548,11 @@
      (then
       (== datatype base/unit)
       (uilist<-unit-parent
+       (any<-any card)
+       parent))
+     (then
+      (== datatype base/cardimage)
+      (uilist<-cardimage-parent
        (any<-any card)
        parent))
      (then
@@ -699,6 +704,35 @@
 //   uiitemsummary
    uidetail))
  :doc "Returns a list of child ui from a item/parent")
+
+(func uilist<-cardimage-parent : ui/uilist
+ [cardimage : base/cardimage
+  parent : string]
+ (let : ui/uilist
+  [name      : string  := (:name  cardimage :debug)
+   image     : string  := (:image cardimage)
+   imgmirror : boolean := (:imgmirror cardimage :debug)
+   prefix    : string  := (string parent "/" name)
+   uiimage1  : ui/ui :=
+    (ui/ui
+     :uid (string prefix "/image1")
+     :style styles/style-cardimage-image1
+     :data
+      (file/file<-path
+       image))
+   uiimage2 : ui/ui :=
+    (if
+     (then imgmirror
+      (ui/ui
+       :uid (string prefix "/image2")
+       :style styles/style-cardimage-image2
+       :data
+        (file/file<-path
+         image))))]
+  (ui/uilist
+   uiimage1
+   uiimage2))
+ :doc "Returns a list of child ui from a cardimage/parent")
 
 (func uilist<-unit-parent : ui/uilist
  [unit   : base/unit
@@ -906,6 +940,7 @@
      datatype
      (case base/item "images/card-item.svg")
      (case base/unit "images/card-unit.svg")
+     (case base/cardimage "")
      (else image))
    uiimage : ui/ui :=
     (ui-image<-uid-path

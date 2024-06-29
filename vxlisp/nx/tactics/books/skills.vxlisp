@@ -437,7 +437,7 @@
             * [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or Survival roll.
             * [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty versus Body + Survival or gain Black [Exhaustion] Tokens."
           :titles
-           "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Seeker, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer"
+           "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer"
           :stat "Defense"
           :abilitymap
            (abilitymap
@@ -523,149 +523,123 @@
           :reference "* Tradesman"
           :stat "None"
           :abilitymap
-           (abilitymap
-            :Administration
-             (ability
-              :name "Administration"
-              :titles "Administrator, Secretary")
-            :Agriculture
-             (ability
-              :name "Agriculture"
-              :summary "* Grow Crop"
-              :titles "Farmer, Gardener")
-            :Architecture
-             (ability
-              :name "Architecture"
-              :summary
-               "* [Extended Action]: Design a structure. The size and quality of the structure are limited by level.
-                * [Action]: Determine weaknesses of a structure."
-              :titles "Architect")
-            :Blacksmithing
-             (ability
-              :name "Blacksmithing"
-              :titles "Blacksmith")
-            :Brewing
-             (ability
-              :name "Brewing"
-              :summary
-               "* Brew Beer
-                * Brew Hard Liquor
-                * Brew Mead
-                * Brew Wine"
-              :titles "Brewer, Vintner")
-            :Carpentry
-             (ability
-              :name "Carpentry"
-              :titles "Carpenter")
-            :Cleaning
-             (ability
-              :name "Cleaning"
-              :titles "Maid")
-            :Cobbling
-             (ability
-              :name "Cobbling"
-              :summary "* Make Shoes"
-              :titles "Cobbler")
-            :Cooking
-             (ability
-              :name "Cooking"
-              :summary "* Prepare Recipe"
-              :titles "Chef, Cook")
-            :Cooping
-             (ability
-              :name "Cooping"
-              :summary "* Make Sealable Barrel"
-              :titles "Cooper")
-            :Glassblowing
-             (ability
-              :name "Glassblowing"
-              :summary
-               "* Blow Bottle
-                * Blow Glass Decoration")
-            :Jewelsmithing
-             (ability
-              :name "Jewelsmithing"
-              :summary
-               "* Gemcutting
-                * Fashion Jewelry"
-              :titles "Gemcutter, Jeweler")
-            :Laboring
-             (ability
-              :name "Laboring"
-              :titles "Laborer, Worker")
-            :Landscaping
-             (ability
-              :name "Landscaping"
-              :summary
-               "* Grow Bonsai
-                * Grow Flowers
-                * Grow Hedges
-                * Grow Hedge Maze
-                * Grow Trees"
-              :titles "Groundskeeper, Landscaper, Lawnboy")
-            :Leatherworking
-             (ability
-              :name "Leatherworking"
-              :summary
-               "* Fashion Leather Goods
-                * Flay Skins"
-              :titles "Tanner")
-            :Livestock
-             (ability
-              :name "Livestock")
-            :Logging
-             (ability
-              :name "Logging")
-            :Metalworking
-             (ability
-              :name "Metalworking"
-              :titles "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith")
-            :Plumbing
-             (ability
-              :name "Plumbing"
-              :titles "Plumber")
-            :Porting
-             (ability
-              :name "Porting"
-              :summary
-               "* Bear Litter
-                * Port Boat"
-              :titles "Bearer, Porter")
-            :Pottery
-             (ability
-              :name "Pottery"
-              :titles "Potter")
-            :Servant
-             (ability
-              :name "Servant"
-              :titles "Butler, Footman, Lady in Waiting")
-            :Sewing
-             (ability
-              :name "Sewing"
-              :summary
-               "* Crochet
-               * Embroidery
-               * Fashion Clothing
-               * Needlepoint
-               * Repair Cloth"
-              :titles "Dressmaker, Seamstress")
-            :Stagecraft
-             (ability
-              :name "Stagecraft"
-              :summary "* The technical aspects of theatrical production, which include scenic design, stage machinery, lighting, sound, costume design, and makeup."
-              :titles "Stagehand")
-            :Weaponsmith
-             (ability
-              :name "Weaponsmith"
-              :summary
-               "* The ability to repair, improve, or even create weapons.
-                * [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits."
-              :titles "Bladesmith, Swordsmith")
-            :Woodworking
-             (ability
-              :name "Woodworking"
-              :summary "The process of building, making or carving something using wood."
-              :titles "Carver, Whittler, Woodworker")))))
+           (base/abilitymap<-abilitylist
+            (ability
+             :name "Administration"
+             :titles "Administrator, Secretary")
+            (ability
+             :name "Agriculture"
+             :summary "* Grow Crop"
+             :titles "Farmer, Gardener")
+            (ability
+             :name "Architecture"
+             :summary
+              "* [Extended Action]: Design a structure. The size and quality of the structure are limited by level.
+               * [Action]: Determine weaknesses of a structure."
+             :titles "Architect")
+            (ability
+             :name "Blacksmithing"
+             :titles "Blacksmith")
+            (ability
+             :name "Brewing"
+             :summary
+              "* Brew Beer
+               * Brew Hard Liquor
+               * Brew Mead
+               * Brew Wine"
+             :titles "Brewer, Vintner")
+            (ability
+             :name "Carpentry"
+             :titles "Carpenter")
+            (ability
+             :name "Cleaning"
+             :titles "Maid")
+            (ability
+             :name "Cobbling"
+             :summary "* Make Shoes"
+             :titles "Cobbler")
+            (ability
+             :name "Cooking"
+             :summary "* Prepare Recipe"
+             :titles "Chef, Cook")
+            (ability
+             :name "Cooping"
+             :summary "* Make Sealable Barrel"
+             :titles "Cooper")
+            (ability
+             :name "Glassblowing"
+             :summary
+              "* Blow Bottle
+               * Blow Glass Decoration")
+            (ability
+             :name "Jewelsmithing"
+             :summary
+              "* Gemcutting
+               * Fashion Jewelry"
+             :titles "Gemcutter, Jeweler")
+            (ability
+             :name "Laboring"
+             :titles "Laborer, Worker")
+            (ability
+             :name "Landscaping"
+             :summary
+              "* Grow Bonsai
+               * Grow Flowers
+               * Grow Hedges
+               * Grow Hedge Maze
+               * Grow Trees"
+             :titles "Groundskeeper, Landscaper, Lawnboy")
+            (ability
+             :name "Leatherworking"
+             :summary
+              "* Fashion Leather Goods
+               * Flay Skins"
+             :titles "Tanner")
+            (ability
+             :name "Livestock")
+            (ability
+             :name "Logging")
+            (ability
+             :name "Metalworking"
+             :titles "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith")
+            (ability
+             :name "Plumbing"
+             :titles "Plumber")
+            (ability
+             :name "Porting"
+             :summary
+              "* Bear Litter
+               * Port Boat"
+             :titles "Bearer, Porter")
+            (ability
+             :name "Pottery"
+             :titles "Potter")
+            (ability
+             :name "Servant"
+             :titles "Butler, Footman, Lady in Waiting")
+            (ability
+             :name "Sewing"
+             :summary
+              "* Crochet
+              * Embroidery
+              * Fashion Clothing
+              * Needlepoint
+              * Repair Cloth"
+             :titles "Dressmaker, Seamstress")
+            (ability
+             :name "Stagecraft"
+             :summary "* The technical aspects of theatrical production, which include scenic design, stage machinery, lighting, sound, costume design, and makeup."
+             :titles "Stagehand")
+            (ability
+             :name "Weaponsmith"
+             :summary
+              "* The ability to repair, improve, or even create weapons.
+               * [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits."
+             :titles "Bladesmith, Swordsmith")
+            (ability
+             :name "Woodworking"
+             :summary "The process of building, making or carving something using wood."
+             :titles "Carver, Whittler, Woodworker")))))
     "Transportation Skills"
      (section
       :name "Transportation Skills"
@@ -1097,70 +1071,65 @@
          (skill
           :name "Investigation"
           :summary "* Investigation is the ability to uncover hidden or lost information. Though it allows the user to rapidly find information, it does not provide the ability to use that information. Other skills or allies would be needed beyond the basics."
-          :titles "Archivist, Crime Scene Investigator, Detective, Inspector, Investigative Reporter, Librarian, Researcher"
+          :titles "Archivist, Crime Scene Investigator, Detective, Inspector, Investigative Reporter, Librarian, Researcher, Seeker"
           :abilitymap
-           (abilitymap
-            :Decipher
-             (ability
-              :name "Decipher"
-              :summary "* Detect and decode hidden messages.")
-            "Connect the Dots"
-             (ability
-              :name "Connect the Dots")
-            "Crack the Case"
-             (ability
-              :name "Crack the Case")
-            "Criminal Research"
-             (ability
-              :name "Criminal Research")
-            "Data Collection"
-             (ability
-              :name "Data Collection")
-            "Delve Too Deep"
-             (ability
-              :name "Delve Too Deep")
-            "Desperate Search"
-             (ability
-              :name "Desperate Search")
-            "Dig Deep"
-             (ability
-              :name "Dig Deep")
-            "Financial Research"
-             (ability
-              :name "Financial Research")
-            "Find Traces"
-             (ability
-              :name "Find Traces")
-            "Forbidden Knowledge"
-             (ability
-              :name "Forbidden Knowledge")
-            "Forensic Research"
-             (ability
-              :name "Forensic Research")
-            "Historical Research"
-             (ability
-              :name "Historical Research")
-            "Inquiring Mind"
-             (ability
-              :name "Inquiring Mind")
-            "Medical Research"
-             (ability
-              :name "Medical Research")
-            "Occult Research"
-             (ability
-              :name "Occult Research")
-            :Ransack
-             (ability
-              :name "Ransack")
-            "Scene of the Crime"
-             (ability
-              :name "Scene of the Crime")
-            "Search for the Truth"
-             (ability
-              :name "Search for the Truth")
-            "Working a Hunch"
-             (ability
-              :name "Working a Hunch")))
+           (base/abilitymap<-abilitylist
+            (ability
+             :name "Decipher"
+             :summary "* Detect and decode hidden messages.")
+            (ability
+             :name "Connect the Dots")
+            (ability
+             :name "Crack the Case")
+            (ability
+             :name "Criminal Research")
+            (ability
+             :name "Data Collection")
+            (ability
+             :name "Detail Oriented"
+             :summary
+              "IF during a [Search] you find an item that has [Body]:5x0 or more THEN ONCE you may resuffle that item into the [Search Deck] and draw another instead.")
+            (ability
+             :name "Delve Too Deep")
+            (ability
+             :name "Desperate Search")
+            (ability
+             :name "Dig Deep")
+            (ability
+             :name "Financial Research")
+            (ability
+             :name "Find Traces")
+            (ability
+             :name "Forbidden Knowledge")
+            (ability
+             :name "Forensic Research")
+            (ability
+             :name "Historical Research")
+            (ability
+             :name "Inquiring Mind")
+            (ability
+             :name "Medical Research")
+            (ability
+             :name "Occult Research")
+            (ability
+             :name "Ransack")
+            (ability
+             :name "Scene of the Crime")
+            (ability
+             :name "Search"
+             :summary
+              "* Rummage around for things:
+               ** ONCE, IF you searched a location and found an [Item], you may reshuffle that [Item] into its location and draw again.")
+            (ability
+             :name "Search for the Truth")
+            (ability
+             :name "Seek"
+             :summary
+              "* Detect Hidden:
+               ** IF you have a valid reason to suspect something hidden
+               ** THEN [Simple Skill]: [Investigation] vs target [Stealth]/[Hide] with [Size Penalty] to detect them.")
+            (ability
+             :name "Working a Hunch")))
         :Knowledge
          (skill
           :name "Knowledge"
@@ -2766,70 +2735,72 @@
           :name "Stealth"
           :titles "Stalker"
           :stat "Body"
+          :summary
+           "* This skill includes abilities that let you hide, move silently, and suprise your opponents."
           :abilitymap
-           (abilitymap
-            :Ambush
-             (ability
-              :name "Ambush")
-            :Backstab
-             (ability
-              :name "Backstab"
-              :summary
-               "* [Action]: Gain [+1 Synergy] when [Flanking] target in Close Combat.
-                * [Action]: Gain [+1 Synergy] per [Level] when in the target's Blind Spot in Close Combat."
-              :titles "Back Biter, Back Stabber, Opportunist, Traitor")
-            "Blend into the Crowd"
-             (ability
-              :name "Blend into the Crowd"
-              :summary
-               "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
-                * [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
-            :Camouflage
-             (ability
-              :name "Camouflage"
-              :summary
-               "* [Continuous]: While active, unit is hidden.
-                * [Defense]: +1 Defense in [Terrain].
-                * [Roll]: Skill - Move this turn.
-                * [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
-            "Cloak and Dagger"
-             (ability
-              :name "Cloak and Dagger"
-              :summary "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
-            :Hide
-             (ability
-              :name "Hide"
-              :summary "* Find a hiding place in an area where you will not normally be detected.")
-            :Seek
-             (ability
-              :name "Seek"
-              :summary "* Discover the location of someone using [Stealth]."
-              :titles "Detect Stealth")
-            :Sneak
-             (ability
-              :name "Sneak"
-              :summary "* Move silently")
-            "Sneak Attack"
-             (ability
-              :name "Sneak Attack"
-              :titles "Suprise Attack")
-            :Stalk
-             (ability
-              :name "Stalk"
-              :summary
-               "* The ability to move carefully to avoid detection.
-                * [Requires]: No other action may be performed this turn.
-                * [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
-            "Strike and Fade"
-             (ability
-              :name "Strike and Fade"
-              :summary
-               "* [Requires]: No other action may be performed this turn.
-                * [Attack]: After this attack, if you have sufficient Move remaining, move 1 space.")
-            :Tailing
-             (ability
-              :name "Tailing"
-              :summary "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed.")
-            "Without a Trace"
-             (ability
-              :name "Without a Trace"))))))))
+           (base/abilitymap<-abilitylist
+            (ability
+             :name "Ambush"
+             :summary
+              "* [Simple Skill]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.
+               * [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak.")
+            (ability
+             :name "Backstab"
+             :summary
+              "* [Passive]:
+               ** IF [Flanking] THEN [Initiative]:+1 AND [Hits]:+1
+               ** IF [Blindspot] THEN [Initiative]:+1/level AND [Hits]:+1/[Level]"
+             :titles "Back Biter, Back Stabber, Opportunist, Traitor")
+            (ability
+             :name "Blend into the Crowd"
+             :summary
+              "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
+               * [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
+            (ability
+             :name "Camouflage"
+             :summary
+              "* [Continuous]: While active, unit is hidden.
+               * [Defense]: +1 Defense in [Terrain].
+               * [Roll]: Skill - Move this turn.
+               * [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
+            (ability
+             :name "Cloak and Dagger"
+             :summary "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
+            (ability
+             :name "Hide"
+             :summary
+              "* Find a hiding place in an area where you will not normally be detected.
+               * IF You have [Full Cover] AND you don't move AND your opponents are at least your [Body] spaces away.
+               * THEN [Action] [Continuous]: You are hidden from view AND Opponents must succeed at [Investigate]/[Seek] to detect you.")
+            (ability
+             :name "Sneak"
+             :summary
+              "* Move silently: [Passive]: You may move at half speed (rounded down) without cancelling [Stealth] abilities.")
+            (ability
+             :name "Sneak Attack"
+             :titles "Suprise Attack")
+            (ability
+             :name "Stalk"
+             :summary
+              "* The ability to move carefully to avoid detection.
+               * [Requires]: No other action may be performed this turn.
+               * [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
+            (ability
+             :name "Strike and Fade"
+             :summary
+              "* [Requires]: No other action may be performed this turn.
+               * [Attack]: After this attack, if you have sufficient Move remaining, move 1 space.")
+            (ability
+             :name "Tailing"
+             :summary
+              "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed.")
+            (ability
+             :name "Vanish"
+             :reference
+              "* Smoke Bomb! - Krieger, Archer"
+             :summary
+              "* If you can momentarily break line of sight, you can immediately [Hide].")
+            (ability
+             :name "Without a Trace"
+             :summary
+              "* Extremely difficult tor track you."))))))))

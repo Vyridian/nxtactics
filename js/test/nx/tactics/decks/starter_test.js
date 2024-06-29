@@ -26,11 +26,11 @@ export default class nx_tactics_decks_starter_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/starter", 
       "constnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
-      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
+      "docnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 11), 
+      "funcnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 11), 
       "bigospacenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
+      "totalnums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 11), 
       "typenums", vx_core.f_new(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
   }
@@ -54,12 +54,13 @@ export default class nx_tactics_decks_starter_test {
           "card-fateupper", 0,
           "card-player", 0,
           "card-rotated", 0,
+          "card-round-num", 0,
           "card-skill", 0,
           "card-target", 0,
           "card-turn-order", 0,
-          "card-turn-player", 0,
           "card-unit", 0,
-          "deck-player", 0
+          "deck-player", 0,
+          "deck-round", 0
         )
     )
   }

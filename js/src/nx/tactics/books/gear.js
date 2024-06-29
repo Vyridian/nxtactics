@@ -2161,7 +2161,7 @@ export default class nx_tactics_books_gear {
           ":name",
           "Ritual Items",
           ":summary",
-          "* holy oil, lamp, bell\n* [Dreamcatcher] - hung above the bed, is then used as a charm to protect sleeping children from nightmares.  &quot;Only good dreams would be allowed to filter through . . . Bad dreams would stay in the net, disappearing with the light of day.&quot;\n* Medicine Bag\n* Phylactery - An amulet to protect the wearer from harm, enclosing magical text, herbs, or relics.",
+          "* holy oil, lamp, bell\n* [Dreamcatcher] - hung above the bed, is then used as a charm to protect sleeping children from nightmares. 'Only good dreams would be allowed to filter through. Bad dreams would stay in the net, disappearing with the light of day.'\n* Medicine Bag\n* Phylactery - An amulet to protect the wearer from harm, enclosing magical text, herbs, or relics.",
           ":itemmap",
           vx_core.f_new(
             nx_tactics_base.t_itemmap,
@@ -2171,9 +2171,9 @@ export default class nx_tactics_books_gear {
               ":name",
               "Athame",
               ":reference",
-              "As a masculine principle, it is often used in combination with the cup or Graal, as\nfeminine principle, and evokes the act of procreation, as symbol of universal\ncreativity.",
+              "As a masculine principle, it is often used in combination with the cup or Graal, as feminine principle, and evokes the act of procreation, as symbol of universal creativity.",
               ":summary",
-              "* Symbolizes Air, the Mental, and Masculinity.  Air appears as nothing, can\nonly be felt with subtle senses and never gripped and commanded.\n				* A ritual dagger",
+              "* Symbolizes Air, the Mental, and Masculinity.  Air appears as nothing, can only be felt with subtle senses and never gripped and commanded.\n				        * A ritual dagger",
               ":titles",
               "Swords"
             ),
@@ -2183,7 +2183,7 @@ export default class nx_tactics_books_gear {
               ":name",
               "Graal",
               ":summary",
-              "* Symbolizes Water, the Emotional, and Feminity.  The emotions are tidal like\nthe the ocean, flowing like rivers and streams.\n				* As a feminie principle, it is often used in combination with the dagger or\n				Athame, as masculine principle, and evokes the act of procreation, as symbol\n				of universal creativity.",
+              "* Symbolizes Water, the Emotional, and Feminity.  The emotions are tidal like the the ocean, flowing like rivers and streams.\n* As a feminie principle, it is often used in combination with the dagger or Athame, as masculine principle, and evokes the act of procreation, as symbol of universal creativity.",
               ":titles",
               "Cup, Grail"
             ),
@@ -2199,9 +2199,9 @@ export default class nx_tactics_books_gear {
               ":name",
               "Pentacle",
               ":image",
-              "Units/Equipment/Pentacle.jpg",
+              "image/items/Pentacle.jpg",
               ":summary",
-              "* Symbolizes Earth and the Physical\n				An amulet used in magical evocation, generally made of parchment, paper or metal, on\n				which the symbol of a spirit or energy being evoked is drawn.  It is often worn around\n				the neck, or placed within the triangle of evocation.  Protective symbols may also be\n				included (sometimes on the reverse), a common one being the five-point Seal of Solomon.\n				The pentacle is always drawn in one continuous stroke, earning it the title the 'endless\n				knot'.",
+              "* Symbolizes Earth and the Physical\n* An amulet used in magical evocation, generally made of parchment, paper or metal, on which the symbol of a spirit or energy being evoked is drawn.  It is often worn around the neck, or placed within the triangle of evocation.  Protective symbols may also be included (sometimes on the reverse), a common one being the five-point Seal of Solomon.\n* The pentacle is always drawn in one continuous stroke, earning it the title the 'endless knot'.",
               ":titles",
               "Disks, Endless Knot, Stone"
             ),

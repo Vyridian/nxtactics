@@ -3,10 +3,17 @@
        (lib typ  :path vx/type)
  :doc  "Tactics Rules")
 
-(func card-action-fight : base/card
+(func card-action : base/card
  (base/card
-  :id "action-fight"
-  :name "Fight Action"
+  :id "action"
+  :name "Action"
+  :summary
+   "* Each [Turn] a Unit will get 2 Actions. These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]."))
+
+(func card-fight-action : base/card
+ (base/card
+  :id "fight-action"
+  :name "Fight"
   :summary
    "* Target a unit with a damaging Skill/Power.
     * Each player chooses a Fate card from their hand or a random Fate from Shared Fate.
@@ -18,12 +25,12 @@
     * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
     * Discard all card used (except Keep)"))
 
-(func card-action-move : base/card
+(func card-move-action : base/card
  (base/card
-  :id "action-move"
-  :name "Move Action"
+  :id "move-action"
+  :name "Move"
   :summary
-   "* Action: Move straight up to your [Move] stat.
+   "* [Action]: Move straight up to your [Move] stat.
     * Double Move (2 Actions): Move straight your [Move]x2.
     * Sprint (2 Actions): If you took a Double Move or Sprint last turn, you may [Move]x3 straight this turn.
     * Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns.
@@ -31,20 +38,34 @@
     * Turn: Turn your unit's facing 45 degrees to the left or right.
     * Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing."))
 
-(func card-action-recover : base/card
+(func card-recover-action : base/card
  (base/card
-  :id "action-recover"
-  :name "Recover Action"
+  :id "recover-action"
+  :name "Recover"
   :summary
    "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]
     * Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."))
+
+(func card-search-action : base/card
+ (base/card
+  :id "search-action"
+  :name "Search"
+  :summary
+   "* [Double Action]: Test [Investigate] vs. [Fate] to search the [Place] you occupy. If you succeed, you may find something."))
+
+(func card-wait-action : base/card
+ (base/card
+  :id "wait-action"
+  :name "Wait"
+  :summary
+   "* [Action]: End your [Turn]. You may interrupt another unit's [Action] to take your second Action."))
 
 (func card-advantage : base/card
  (base/card
   :id "card-advantage"
   :name "Advantage"
   :summary
-   "* When performing a Skill/Combat test
+   "* When performing a Skill/Fight test
     * Then reveal Fate. You may use the Fate card instead of your card."))
 
 (func card-areaeffect : base/card
@@ -65,10 +86,37 @@
    "* The Beast
     * Beast Unleashed: The Beast is now in control of this unit. Set Conscience = Will; set Will = Beast stat; and set Beast=blank"))
 
-(func card-characters : base/card
+(func card-body : base/card
  (base/card
-  :id "characters"
-  :name "Characters"))
+  :id "body"
+  :name "Body"
+  :summary
+   "* Body is the measure of a unit's mass and durability.
+    * A unit with Body:0 is incapacitated.
+    * It is derived from the mass in kg. E.g. 300kg = 3x10^2 = 3x2"))
+
+(func card-mind : base/card
+ (base/card
+  :id "mind"
+  :name "Mind"
+  :summary
+   "* Mind is the measure of a unit's intellect and problem solving ability.
+    * A unit with Mind:0 is delirious.
+    * It is lossly derived from the IQ-50. E.g. 100IQ = 5x10^1 = 5x1, 140IQ = 9x10^1 = 9x1"))
+
+(func card-will : base/card
+ (base/card
+  :id "will"
+  :name "Will"
+  :summary
+   "* Will is the measure of a unit's grit, determination and psychological stability.
+    * A unit with Will:0 is panicked.
+    * It is lossly derived from an average person having a 100 score. E.g. 100 = 5x10^1 = 5x1, 140 = 9x10^1 = 9x1"))
+
+(func card-character : base/card
+ (base/card
+  :id "character"
+  :name "Character"))
 
 (func card-conscience : base/card
  (base/card
@@ -111,16 +159,31 @@
    "* When performing a Skill/Combat test
     * Then reveal Fate. If it has a worse result than your card, you must use the Fate card instead."))
 
+(func card-exposed : base/card
+ (base/card
+  :id "card-exposed"
+  :name "Exposed"
+  :summary
+   "* Your [Normal] [Defend] cards can't win."))
+
+(func card-flanking : base/card
+ (base/card
+  :id "card-flanking"
+  :name "Flanking"
+  :summary
+   "* Flanks: IF a unit attacks an opponent from anywhere behind THEN [Initiative]:+1
+    * Blindspot: IF a unit attacks an opponent and is in a straight line directly behind an opponent THEN the opponent is [Exposed] for this attack. "))
+
 (func card-free-action : base/card
  (base/card
   :id "free-action"
   :name "Free Action"
   :summary
    "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.
-    * Move Out: Take a [Fatigue] to [Move]:1. You may Turn or Drift once during this Move.
-    * Push Your Luck: Take a [Stun] to reduce a Double Action to an Action.
-    * Grit Your Teeth: Take a [Stress] to ignore the effect of all of your negative statuses this turn.
-    * Final Sprint: Take a [Slow] to [Move].
+    * Move Out: [Fatigue]:+1 to [Move]:1. You may Turn or Drift once during this Move.
+    * Push Your Luck: [Stun]:+1 to reduce a Double Action to an Action.
+    * Grit Your Teeth: [Stress]:+1 to ignore the effect of all of your negative statuses this turn.
+    * Final Sprint: [Slow]:+1 to [Move].
     * Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."))
 
 (func card-game : base/card
@@ -129,19 +192,30 @@
   :name "Game"
   :summary
    "* Create [Characters] or [Factions] to play [Scenarios].
-    * Each [Scenario] contains various [Threats] and [Goals]
-    * Find them and use your [Skills] / [Powers] to complete them for [Rewards]
-    * Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties]."))
+    * Each [Scenario] contains various [Threats] and [Goals].
+    * Try to complete them using your [Skills] and [Powers] for [Rewards].
+    * Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].
+    * A Game is broken up into Rounds.
+    * Each Round every Player takes a Turn.
+    * Each Turn each Player takes 2 Actions."))
+
+(func card-initiative : base/card
+ (base/card
+  :id "card-initiative"
+  :name "Initiative"
+  :summary
+   "* Lower is Better: IF you and your opponent both play [Normal] [Attack] or you both play [Normal] [Focus] THEN the lower [Rank] of the cards wins.
+    * Skill Difference: The difference between your and your opponent's [Skill] is a Bonus or Penalty.
+    * Bonus (+X): Initiative bonus is SUBTRACTED before comparing.
+    * Penalty (-X): Initiative penalty is ADDED before comparing."))
 
 (func card-leveling : base/card
  (base/card
   :id "leveling"
   :name "Leveling"
   :summary
-   "* Major Achievement: Completion gains a Skill Point.
-    * Minor Achievement: Completion gains an Ability Point.
-    * Skill Points: May be exchanged for a Skill Level one below your level or a new Level 1 Power (if allowed).
-    * Ability Points: May be exchanged for an Ability, Specialty, or a Power Intensity increase."))
+   "* Major Achievement: Completion gains a Skill Point with level equal to your 2nd highest Skill.
+    * Minor Achievement: Completion gains an [Ability Point]."))
 
 (func card-lineofsight : base/card
  (base/card
@@ -152,10 +226,10 @@
     * Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).
     * If nothing is between you, then you have full line of sight. Resolve normally.
     * If something is between you, guess at the amount of Cover provided and resolve with the following penalties:
-    ** 25% Cover: Speed:-1.
-    ** 50% Cover: Speed:-2.
-    ** 75% Cover: Speed:-3.
-    ** 100% Cover: Speed-4.
+    ** 25% Cover: Initiative:-1.
+    ** 50% Cover: Initiative:-2.
+    ** 75% Cover: Initiative:-3.
+    ** 100% Cover: Initiative:-4.
     * If successful, assign each 25% to whatever is giving cover (this can include fog, smoke, tables, walls, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
     ** Insubstantial: Resolve damage normally.
     ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
@@ -212,16 +286,57 @@
   :name "Round"
   :summary
    "* A Round represents a unit of time passing.
-    * Round Start: Increase the Round Counter by 1.
     * Turns: During a Round, each Unit will get a [Turn].
-    * Round End: "))
+    * Round Endt: Discard the top Round# card."))
 
-(func card-suprise : base/card
+(func card-round-num : base/card
+ [num : int]
  (base/card
-  :id "card-suprise"
-  :name "Suprise"
+  :id (string "round-" num)
+  :name (string "Round #" num)
   :summary
-   "* When a unit suddenly appears adjacent to an existing unit, reveal [Fate]. If the result is [Coins] or [Cups] then the existing unit takes a [Stun] or [Stress] respectively."))
+   "* Represents the current Round number.
+    * The [Scenario] determines how many rounds there are and whether they count up or down.
+    * Scenario Start: Stack the cards in order with Round#1 on top or bottom depending on the [Scenario].
+    * Round End: Discard the top Round#.
+    ** IF one or more [Encounter] cards are revealed THEN resolve them.
+    ** IF there are no remaining Round# cards THEN the [Scenario] immediately ends for time."))
+
+(func card-skillpoint : base/card
+ [num : int]
+ (base/card
+  :id   (string "skillpoint-" num)
+  :name (string "Skill Point#" num)
+  :summary
+   "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.
+    * A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.
+    * Skill Points may be saved.
+    * A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.
+    * 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level."))
+
+(func card-abilitypoint : base/card
+ [num : int]
+ (base/card
+  :id   (string "abilitypoint-" num)
+  :name (string "Ability Point")
+  :summary
+   "* [Minor Achievment]: Gain an Ability Point. You may also convert 1 of your existing Abilities into an Ability Point.
+    * An Ability Point may be exchanged for an Ability, Specialty, or a Power Intensity increase.
+    * Ability Points may be saved."))
+
+(func card-surprise : base/card
+ (base/card
+  :id "card-surprise"
+  :name "Surprise"
+  :summary
+   "* When:
+    ** A unit suddenly appears adjacent or on a unit.
+    * Then:
+    ** Reveal [Fate]. Unit takes temporary damage based on the [Suit].
+    ** [Wands] = [Fatigue]
+    ** [Coins] = [Stun]
+    ** [Cups] = [Stress]
+    ** [Swords] = [Slow]"))
 
 (func card-scale : base/card
  (base/card
@@ -265,7 +380,7 @@
 (func card-sklll-action : base/card
  (base/card
   :id "sklll-action"
-  :name "Skill Action"
+  :name "Skill"
   :summary
    "* Action: Assign your Unit's Target card to the target.
     * Stat: The Skill test has a target Stat.
@@ -277,12 +392,20 @@
     * Extended: The user may continue this test on different turns until a Success or Fail.
     * See Also: [Unskilled] [Unfamiliar Item]."))
 
+(func card-surrounded : base/card
+ (base/card
+  :id "card-surrounded"
+  :name "Surrounded"
+  :summary
+   "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent."))
+
 (func card-turn : base/card
  (base/card
   :id "turn"
   :name "Turn"
   :summary
-   ""))
+   "* Each [Round], each [Unit] will get a [Turn] based on [Turn Order].
+    * Each Turn a Unit will get 2 [Action]s. These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]."))
 
 (func card-unfamiliaritem : base/card
  (base/card
@@ -303,23 +426,29 @@
   [cardlist : base/cardlist :=
     (base/cardlist
      (card-game)
+     (card-setupguide)
      (card-round)
      (card-turn)
-     (card-setupguide)
-     (card-action-move)
-     (card-action-fight)
+     (card-action)
+     (card-move-action)
+     (card-fight-action)
      (card-sklll-action)
-     (card-action-recover)
+     (card-recover-action)
+     (card-search-action)
+     (card-wait-action)
      (card-free-action)
      (card-lineofsight)
+     (card-initiative)
      (card-damageguide)
      (card-defenselayers)
-     (card-characters)
+     (card-character)
+     (card-body)
+     (card-mind)
+     (card-will)
      (card-move)
      (card-beast)
      (card-shadow)
      (card-conscience)
-     (card-leveling)
      (card-scale)
      (card-scaled)
      (card-mapscale-1)
@@ -328,9 +457,43 @@
      (card-disadvantage)
      (card-areaeffect)
      (card-reach)
-     (card-suprise)
+     (card-flanking)
+     (card-surrounded)
+     (card-exposed)
+     (card-surprise)
      (card-unskilled)
      (card-unfamiliaritem)
+     (card-round-num 1)
+     (card-round-num 2)
+     (card-round-num 3)
+     (card-round-num 4)
+     (card-round-num 5)
+     (card-round-num 6)
+     (card-round-num 7)
+     (card-round-num 8)
+     (card-round-num 9)
+     (card-round-num 10)
+     (card-round-num 11)
+     (card-round-num 12)
+     (card-round-num 13)
+     (card-round-num 14)
+     (card-round-num 15)
+     (card-round-num 16)
+     (card-round-num 17)
+     (card-round-num 18)
+     (card-round-num 19)
+     (card-round-num 20)
+     (card-leveling)
+     (card-skillpoint 1)
+     (card-skillpoint 2)
+     (card-skillpoint 3)
+     (card-skillpoint 4)
+     (card-skillpoint 5)
+     (card-abilitypoint 1)
+     (card-abilitypoint 2)
+     (card-abilitypoint 3)
+     (card-abilitypoint 4)
+     (card-abilitypoint 5)
     )
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist

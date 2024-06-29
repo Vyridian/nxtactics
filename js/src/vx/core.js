@@ -651,7 +651,8 @@ export default class vx_core {
         values.map(value => {
           const valuetype = vx_core.f_type_from_any(value)
           let isfound = false
-          if (typedef == valuetype) {
+          if (vx_core.f_is_empty(value)) {
+          } else if (typedef == valuetype) {
             listvals.push(...value)
             isfound = true
           } else if (allowany) {
@@ -2224,9 +2225,9 @@ export default class vx_core {
   /**
    * @function dotmethod
    * Not Recommened: Support for Object Oriented dot notation. e.g. (this.foo 'a') = this.foo('a')
-   * @param  {any} object
+   * @param  {any} target
    * @param  {string} method
-   * @param  {anylist} ... params
+   * @param  {anylist} ... parameters
    * @return {any}
    */
   static t_dotmethod = {
@@ -2237,10 +2238,10 @@ export default class vx_core {
   }
 
   // (func .)
-  static f_dotmethod(object, method, ...params) {
+  static f_dotmethod(target, method, ...parameters) {
     let output = vx_core.e_any
-    params = vx_core.f_new(vx_core.t_anylist, ...params)
-    output = object[method].apply(params)
+    parameters = vx_core.f_new(vx_core.t_anylist, ...parameters)
+    output = target[method].apply(parameters)
     return output
   }
 
@@ -3736,7 +3737,7 @@ export default class vx_core {
    * @function fn
    * Shell for lambda function calls
    * @param  {typemap} generic
-   * @param  {arglist} params
+   * @param  {arglist} parameters
    * @param  {any_from_func} fn_any
    * @return {any-1}
    */
@@ -3748,7 +3749,7 @@ export default class vx_core {
   }
 
   // (func fn)
-  static f_fn(generic, params, fn_any) {
+  static f_fn(generic, parameters, fn_any) {
     const generic_any_1 = generic["any-1"]
     let output = vx_core.f_empty(generic_any_1)
     return output

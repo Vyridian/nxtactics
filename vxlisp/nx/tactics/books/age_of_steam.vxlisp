@@ -71,7 +71,7 @@
         ".45 Colt Peacemaker"
          (item
           :name ".45 Colt Peacemaker"
-          :image "Western/Colt1873.jpg"
+          :image "images/age-of-steam/Colt1873.jpg"
           :reference
            "US Army issue from 1873-1892 and used by other notables like Wyatt Earp and Bat Masterson.  Wyatt Earp's
 fictional Colt Buntline was supposed to be a long barrel version of the Colt Peacemaker."
@@ -83,7 +83,7 @@ fictional Colt Buntline was supposed to be a long barrel version of the Colt Pea
         ".45 Smith&amp;Wesson Schofield"
          (item
           :name ".45 Smith&amp;Wesson Schofield"
-          :image "Western/Schofield1869.jpg"
+          :image "images/age-of-steam/Schofield1869.jpg"
           :reference "Just meat and potatoes.  Me and Jesse James think it's the best handgun in the world. - Kid, The Quick and the Dead."
           :summary "Single action, revolver"
           :classification "Pistol"
@@ -93,7 +93,7 @@ fictional Colt Buntline was supposed to be a long barrel version of the Colt Pea
         ".41 Remington Derringer"
          (item
           :name ".41 Remington Derringer"
-          :image "Western/Derringer.jpg"
+          :image "images/age-of-steam/Derringer.jpg"
           :reference
            "The classic Remington design is still popular; a Remington pattern derringer in .38 Special is still smaller than
 the most compact .25 ACP semiautomatic, and provides far superior terminal ballistic performance in its two shots
@@ -106,7 +106,7 @@ than the .25 ACP does with six or seven."
         ".44 Winchester Model 1873"
          (item
           :name ".44 Winchester Model 1873"
-          :image "Western/Winchester1873.jpg"
+          :image "images/age-of-steam/Winchester1873.jpg"
           :reference
            "The Winchester is among the earliest repeating rifles, and has become synonymous with lever-action firearms.
 Known as 'The Gun that Won the West' for its immense popularity at that time."
@@ -130,14 +130,14 @@ Known as 'The Gun that Won the West' for its immense popularity at that time."
         ".50 Gatling Gun"
          (item
           :name ".50 Gatling Gun"
-          :image "Western/GatlingGun1876.jpg.jpg"
+          :image "images/age-of-steam/GatlingGun1876.jpg.jpg"
           :classification "Hvy. MG"
           :modifiers "Auto, Bleeding"
           :range "100m")
         "Napoleon Cannon"
          (item
           :name "Napoleon Cannon"
-          :image "Western/CivilWarCannon.jpg"
+          :image "images/age-of-steam/CivilWarCannon.jpg"
           :summary "Smoothbore, muzzle-loading, 12-pounder"
           :classification "Cannon"
           :modifiers "Blast, Indirect Fire"
@@ -400,7 +400,7 @@ Hit Location")))
         :Bandito
          (unit
           :name "Bandito"
-          :image "Western/BanditoToken.png"
+          :image "images/age-of-steam/BanditoToken.png"
           :reference
            "You think you're better than I am?  Where we came from, if one did not want to die of poverty, one became a
 priest or a bandit! ...You became a priest because you were... too much of a coward to do what I do! - Tuco. The
@@ -415,7 +415,7 @@ Good, the Bad, and the Ugly."
         :Gunslinger
          (unit
           :name "Gunslinger"
-          :image "Western/GunslingerToken.png"
+          :image "images/age-of-steam/GunslingerToken.png"
           :classification "Lt. Infantry"
           :unitskillmap
            (unitskillmap
@@ -434,7 +434,7 @@ Good, the Bad, and the Ugly."
         "Man with No Name"
          (unit
           :name "Man with No Name"
-          :image "Western/ManWithNoNameToken.png"
+          :image "images/age-of-steam/ManWithNoNameToken.png"
           :reference
            "* [to Tuco] Tut, tut. Such ingratitude after all the times I saved your life. - Blondie, The Good, the Bad, and
 the Ugly
@@ -450,7 +450,7 @@ The Good, the Bad, and the Ugly"
         "Professional Killer"
          (unit
           :name "Professional Killer"
-          :image "Western/ProfessionalKiller.png"
+          :image "images/age-of-steam/ProfessionalKiller.png"
           :reference
            "He paid me a thousand.  I think his idea was that I kill you.  But you know, the pity is when I'm paid, I always
 follow my job through. - Angel Eyes, The Good, the Bad, and the Ugly"
@@ -489,7 +489,7 @@ follow my job through. - Angel Eyes, The Good, the Bad, and the Ugly"
         "Sioux Gunfighter"
          (unit
           :name "Sioux Gunfighter"
-          :image "Western/IndianAxe.jpg"
+          :image "images/age-of-steam/IndianAxe.jpg"
           :reference "Spotted Horse cannot be killed by a bullet! - Spotted Horse, The Quick and the Dead")))
     "Steam Age Townsfolk"
      (section

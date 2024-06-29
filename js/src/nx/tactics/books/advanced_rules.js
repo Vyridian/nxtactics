@@ -427,14 +427,6 @@ export default class nx_tactics_books_advanced_rules {
           ":damagemap",
           vx_core.f_new(
             nx_tactics_base.t_damagemap,
-            ":Damage",
-            vx_core.f_new(
-              nx_tactics_base.t_damage,
-              ":name",
-              "Damage",
-              ":summary",
-              "* Effect: -1 [Body]\n* Duration: Permanent until healed.\n* Regular Damage with no side-effects."
-            ),
             "Air Reserve Loss",
             vx_core.f_new(
               nx_tactics_base.t_damage,
@@ -1031,14 +1023,6 @@ export default class nx_tactics_books_advanced_rules {
           ":rulemap",
           vx_core.f_new(
             nx_tactics_base.t_rulemap,
-            ":Fascination",
-            vx_core.f_new(
-              nx_tactics_base.t_rule,
-              ":name",
-              "Fascination",
-              ":summary",
-              "* [Move]: If a unit has more Facination Tokens than Mind, then no Move.\n* [Action]: If a unit has more Facination Tokens than Mind, then no Action."
-            ),
             ":Faith",
             vx_core.f_new(
               nx_tactics_base.t_rule,
@@ -1046,14 +1030,6 @@ export default class nx_tactics_books_advanced_rules {
               "Faith",
               ":image",
               "Tokens/FaithToken.png"
-            ),
-            ":Peace",
-            vx_core.f_new(
-              nx_tactics_base.t_rule,
-              ":name",
-              "Peace",
-              ":image",
-              "Tokens/PeaceToken.png"
             ),
             ":Rage",
             vx_core.f_new(
@@ -1064,26 +1040,6 @@ export default class nx_tactics_books_advanced_rules {
               "Tokens/RageToken.png",
               ":summary",
               "+1 Attack\n-1 Defense\n-1 All other Abilities that are not Attacks\n* Ignore 1 Retreat for each Rage"
-            ),
-            ":Slow",
-            vx_core.f_new(
-              nx_tactics_base.t_rule,
-              ":name",
-              "Slow",
-              ":image",
-              "Tokens/SlowToken.png",
-              ":summary",
-              "* [Move]: [-1 Speed]",
-              ":titles",
-              "Hold",
-              ":classification",
-              "White Token"
-            ),
-            ":Strain",
-            vx_core.f_new(
-              nx_tactics_base.t_rule,
-              ":name",
-              "Strain"
             )
           )
         ),

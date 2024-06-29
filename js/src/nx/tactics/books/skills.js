@@ -731,7 +731,7 @@ export default class nx_tactics_books_skills {
               ":summary",
               "Common Survival Abilities\n* [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or Survival roll.\n* [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty versus Body + Survival or gain Black [Exhaustion] Tokens.",
               ":titles",
-              "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Seeker, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer",
+              "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer",
               ":stat",
               "Defense",
               ":abilitymap",
@@ -857,9 +857,7 @@ export default class nx_tactics_books_skills {
               ":stat",
               "None",
               ":abilitymap",
-              vx_core.f_new(
-                nx_tactics_base.t_abilitymap,
-                ":Administration",
+              nx_tactics_base.f_abilitymap_from_abilitylist(
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -867,7 +865,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Administrator, Secretary"
                 ),
-                ":Agriculture",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -877,7 +874,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Farmer, Gardener"
                 ),
-                ":Architecture",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -887,7 +883,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Architect"
                 ),
-                ":Blacksmithing",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -895,7 +890,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Blacksmith"
                 ),
-                ":Brewing",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -905,7 +899,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Brewer, Vintner"
                 ),
-                ":Carpentry",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -913,7 +906,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Carpenter"
                 ),
-                ":Cleaning",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -921,7 +913,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Maid"
                 ),
-                ":Cobbling",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -931,7 +922,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Cobbler"
                 ),
-                ":Cooking",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -941,7 +931,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Chef, Cook"
                 ),
-                ":Cooping",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -951,7 +940,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Cooper"
                 ),
-                ":Glassblowing",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -959,7 +947,6 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* Blow Bottle\n* Blow Glass Decoration"
                 ),
-                ":Jewelsmithing",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -969,7 +956,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Gemcutter, Jeweler"
                 ),
-                ":Laboring",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -977,7 +963,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Laborer, Worker"
                 ),
-                ":Landscaping",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -987,7 +972,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Groundskeeper, Landscaper, Lawnboy"
                 ),
-                ":Leatherworking",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -997,19 +981,16 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Tanner"
                 ),
-                ":Livestock",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Livestock"
                 ),
-                ":Logging",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Logging"
                 ),
-                ":Metalworking",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1017,7 +998,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith"
                 ),
-                ":Plumbing",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1025,7 +1005,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Plumber"
                 ),
-                ":Porting",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1035,7 +1014,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Bearer, Porter"
                 ),
-                ":Pottery",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1043,7 +1021,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Potter"
                 ),
-                ":Servant",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1051,17 +1028,15 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Butler, Footman, Lady in Waiting"
                 ),
-                ":Sewing",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Sewing",
                   ":summary",
-                  "* Crochet\n               * Embroidery\n               * Fashion Clothing\n               * Needlepoint\n               * Repair Cloth",
+                  "* Crochet\n              * Embroidery\n              * Fashion Clothing\n              * Needlepoint\n              * Repair Cloth",
                   ":titles",
                   "Dressmaker, Seamstress"
                 ),
-                ":Stagecraft",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1071,7 +1046,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Stagehand"
                 ),
-                ":Weaponsmith",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1081,7 +1055,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Bladesmith, Swordsmith"
                 ),
-                ":Woodworking",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1855,11 +1828,9 @@ export default class nx_tactics_books_skills {
               ":summary",
               "* Investigation is the ability to uncover hidden or lost information. Though it allows the user to rapidly find information, it does not provide the ability to use that information. Other skills or allies would be needed beyond the basics.",
               ":titles",
-              "Archivist, Crime Scene Investigator, Detective, Inspector, Investigative Reporter, Librarian, Researcher",
+              "Archivist, Crime Scene Investigator, Detective, Inspector, Investigative Reporter, Librarian, Researcher, Seeker",
               ":abilitymap",
-              vx_core.f_new(
-                nx_tactics_base.t_abilitymap,
-                ":Decipher",
+              nx_tactics_base.f_abilitymap_from_abilitylist(
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -1867,115 +1838,117 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* Detect and decode hidden messages."
                 ),
-                "Connect the Dots",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Connect the Dots"
                 ),
-                "Crack the Case",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Crack the Case"
                 ),
-                "Criminal Research",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Criminal Research"
                 ),
-                "Data Collection",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Data Collection"
                 ),
-                "Delve Too Deep",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Detail Oriented",
+                  ":summary",
+                  "IF during a [Search] you find an item that has [Body]:5x0 or more THEN ONCE you may resuffle that item into the [Search Deck] and draw another instead."
+                ),
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Delve Too Deep"
                 ),
-                "Desperate Search",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Desperate Search"
                 ),
-                "Dig Deep",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Dig Deep"
                 ),
-                "Financial Research",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Financial Research"
                 ),
-                "Find Traces",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Find Traces"
                 ),
-                "Forbidden Knowledge",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Forbidden Knowledge"
                 ),
-                "Forensic Research",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Forensic Research"
                 ),
-                "Historical Research",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Historical Research"
                 ),
-                "Inquiring Mind",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Inquiring Mind"
                 ),
-                "Medical Research",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Medical Research"
                 ),
-                "Occult Research",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Occult Research"
                 ),
-                ":Ransack",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Ransack"
                 ),
-                "Scene of the Crime",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Scene of the Crime"
                 ),
-                "Search for the Truth",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Search",
+                  ":summary",
+                  "* Rummage around for things:\n** ONCE, IF you searched a location and found an [Item], you may reshuffle that [Item] into its location and draw again."
+                ),
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Search for the Truth"
                 ),
-                "Working a Hunch",
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Seek",
+                  ":summary",
+                  "* Detect Hidden:\n** IF you have a valid reason to suspect something hidden\n** THEN [Simple Skill]: [Investigation] vs target [Stealth]/[Hide] with [Size Penalty] to detect them."
+                ),
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -5014,26 +4987,26 @@ export default class nx_tactics_books_skills {
               "Stalker",
               ":stat",
               "Body",
+              ":summary",
+              "* This skill includes abilities that let you hide, move silently, and suprise your opponents.",
               ":abilitymap",
-              vx_core.f_new(
-                nx_tactics_base.t_abilitymap,
-                ":Ambush",
+              nx_tactics_base.f_abilitymap_from_abilitylist(
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
-                  "Ambush"
+                  "Ambush",
+                  ":summary",
+                  "* [Simple Skill]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.\n* [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak."
                 ),
-                ":Backstab",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Backstab",
                   ":summary",
-                  "* [Action]: Gain [+1 Synergy] when [Flanking] target in Close Combat.\n* [Action]: Gain [+1 Synergy] per [Level] when in the target's Blind Spot in Close Combat.",
+                  "* [Passive]:\n** IF [Flanking] THEN [Initiative]:+1 AND [Hits]:+1\n** IF [Blindspot] THEN [Initiative]:+1/level AND [Hits]:+1/[Level]",
                   ":titles",
                   "Back Biter, Back Stabber, Opportunist, Traitor"
                 ),
-                "Blend into the Crowd",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -5041,7 +5014,6 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.\n* [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces."
                 ),
-                ":Camouflage",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -5049,7 +5021,6 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* [Continuous]: While active, unit is hidden.\n* [Defense]: +1 Defense in [Terrain].\n* [Roll]: Skill - Move this turn.\n* [Versus]: and others must roll Spirit - Terrain penalty vs to detect."
                 ),
-                "Cloak and Dagger",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -5057,33 +5028,20 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise]."
                 ),
-                ":Hide",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Hide",
                   ":summary",
-                  "* Find a hiding place in an area where you will not normally be detected."
+                  "* Find a hiding place in an area where you will not normally be detected.\n* IF You have [Full Cover] AND you don't move AND your opponents are at least your [Body] spaces away.\n* THEN [Action] [Continuous]: You are hidden from view AND Opponents must succeed at [Investigate]/[Seek] to detect you."
                 ),
-                ":Seek",
-                vx_core.f_new(
-                  nx_tactics_base.t_ability,
-                  ":name",
-                  "Seek",
-                  ":summary",
-                  "* Discover the location of someone using [Stealth].",
-                  ":titles",
-                  "Detect Stealth"
-                ),
-                ":Sneak",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Sneak",
                   ":summary",
-                  "* Move silently"
+                  "* Move silently: [Passive]: You may move at half speed (rounded down) without cancelling [Stealth] abilities."
                 ),
-                "Sneak Attack",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -5091,7 +5049,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Suprise Attack"
                 ),
-                ":Stalk",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -5099,7 +5056,6 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* The ability to move carefully to avoid detection.\n* [Requires]: No other action may be performed this turn.\n* [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail."
                 ),
-                "Strike and Fade",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -5107,7 +5063,6 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* [Requires]: No other action may be performed this turn.\n* [Attack]: After this attack, if you have sufficient Move remaining, move 1 space."
                 ),
-                ":Tailing",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -5115,11 +5070,21 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed."
                 ),
-                "Without a Trace",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
-                  "Without a Trace"
+                  "Vanish",
+                  ":reference",
+                  "* Smoke Bomb! - Krieger, Archer",
+                  ":summary",
+                  "* If you can momentarily break line of sight, you can immediately [Hide]."
+                ),
+                vx_core.f_new(
+                  nx_tactics_base.t_ability,
+                  ":name",
+                  "Without a Trace",
+                  ":summary",
+                  "* Extremely difficult tor track you."
                 )
               )
             )

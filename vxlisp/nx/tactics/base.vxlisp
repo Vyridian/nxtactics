@@ -5,6 +5,12 @@
 (type ability : struct
  :traits [card])
 
+(type abilitylist : list
+ :allowtypes [ability])
+
+(type abilitylistlist : list
+ :allowtypes [abilitylist])
+
 (type abilitymap : map
  :allowtypes [ability])
 
@@ -19,15 +25,17 @@
  :allowtypes [book])
 
 (type card : struct
- :properties [id          : string
-              name        : string
-              icon        : string
-              image       : string
-              reference   : string
-              summary     : string
-              titles      : string
-              orientation : string
-              ranksuit    : ranksuit])
+ :properties
+  [id          : string
+   name        : string
+   icon        : string
+   image       : string
+   imgmirror   : boolean
+   reference   : string
+   summary     : string
+   titles      : string
+   orientation : string
+   ranksuit    : ranksuit])
 
 (type cardback : struct
  :traits [card]
@@ -78,41 +86,43 @@
  :traits [card])
 
 (type goal : struct
- :properties [description : string
-              progress    : int
-              complete    : int
-              reward      : string]
+ :properties
+  [description : string
+   progress    : int
+   complete    : int
+   reward      : string]
  :traits [card])
 
 (type item : struct
  :traits     [card]
- :properties [body            : string
-              mind            : string
-              will            : string
-              move            : string
-              shadow          : string
-              beast           : string
-              armor           : string
-              classification  : string
-              crew            : string
-              energy          : string
-              explosive       : string
-              height          : string
-              length          : string
-              mass            : string
-              modifiers       : string
-              muzzlevelocity  : string
-              range           : string
-              rof             : string
-              rolemap         : rolemap
-              rounds          : string
-              speed           : string
-              speedair        : string
-              speedland       : string
-              speedspace      : string
-              speedwater      : string
-              value           : string
-              width           : string])
+ :properties
+  [body           : string
+   mind           : string
+   will           : string
+   move           : string
+   shadow         : string
+   beast          : string
+   armor          : string
+   classification : string
+   crew           : string
+   energy         : string
+   explosive      : string
+   height         : string
+   length         : string
+   mass           : string
+   modifiers      : string
+   muzzlevelocity : string
+   range          : string
+   rof            : string
+   rolemap        : rolemap
+   rounds         : string
+   speed          : string
+   speedair       : string
+   speedland      : string
+   speedspace     : string
+   speedwater     : string
+   value          : string
+   width          : string])
 
 (type itemlist : list
  :allowtypes [item])
@@ -125,10 +135,11 @@
 
 (type place : struct
  :traits     [card]
- :properties [length   : string
-              mass     : string
-              placemap : placemap
-              unitmap  : unitmap])
+ :properties
+  [length   : string
+   mass     : string
+   placemap : placemap
+   unitmap  : unitmap])
 
 (type placelist : list
  :allowtypes [place])
@@ -155,10 +166,11 @@
 
 (type power : struct
  :traits     [card]
- :properties [stat         : string
-              abilitymap   : abilitymap
-              specialtymap : specialtymap
-              weaknessmap  : weaknessmap])
+ :properties
+  [stat         : string
+   abilitymap   : abilitymap
+   specialtymap : specialtymap
+   weaknessmap  : weaknessmap])
 
 (type powerlist : list
  :allowtypes [power])
@@ -179,9 +191,10 @@
 
 (type rating : struct
  :traits     [card]
- :properties [level : int :doc "Values: 2->10"
-              part  : int :doc "Values: 0->9"
-              scale : int :doc "Values: -x->x"]
+ :properties
+  [level : int :doc "Values: 2->10"
+   part  : int :doc "Values: 0->9"
+   scale : int :doc "Values: -x->x"]
  :doc "Rating are displayed as level.partxscale. e.g. 3x1, 5.1x2")
 
 (type role : struct)
@@ -205,20 +218,21 @@
 
 (type section : struct
  :traits     [card]
- :properties [damagemap   : damagemap
-              deckmap     : deckmap
-              itemmap     : itemmap
-              modifiermap : modifiermap
-              placemap    : placemap
-              powermap    : powermap
-              rulemap     : rulemap
-              scenariomap : scenariomap
-              sectionmap  : sectionmap
-              skillmap    : skillmap
-              suitmap     : suitmap
-              terrainmap  : terrainmap
-              unitmap     : unitmap
-              weaknessmap : weaknessmap])
+ :properties
+  [damagemap   : damagemap
+   deckmap     : deckmap
+   itemmap     : itemmap
+   modifiermap : modifiermap
+   placemap    : placemap
+   powermap    : powermap
+   rulemap     : rulemap
+   scenariomap : scenariomap
+   sectionmap  : sectionmap
+   skillmap    : skillmap
+   suitmap     : suitmap
+   terrainmap  : terrainmap
+   unitmap     : unitmap
+   weaknessmap : weaknessmap])
 
 (type sectionlist : list
  :allowtypes [section])
@@ -231,9 +245,10 @@
 
 (type skill : struct
  :traits     [card]
- :properties [stat         : string
-              abilitymap   : abilitymap
-              specialtymap : specialtymap])
+ :properties
+  [stat         : string
+   abilitymap   : abilitymap
+   specialtymap : specialtymap])
 
 (type skilllist : list
  :allowtypes [skill])
@@ -261,23 +276,25 @@
  :allowtypes [suit])
 
 (type tactics : struct
- :properties [bookmap    : bookmap
-              abilitymap : abilitymap
-              cardmap    : cardmap
-              itemmap    : itemmap
-              placemap   : placemap
-              powermap   : powermap
-              skillmap   : skillmap
-              unitmap    : unitmap])
+ :properties
+  [bookmap    : bookmap
+   abilitymap : abilitymap
+   cardmap    : cardmap
+   itemmap    : itemmap
+   placemap   : placemap
+   powermap   : powermap
+   skillmap   : skillmap
+   unitmap    : unitmap])
 
 (type tarot : struct
  :traits [card])
 
 (type team : struct
- :properties [completevictory : string
-              deploy          : string
-              forces          : string
-              partialvictory  : string]
+ :properties
+  [completevictory : string
+   deploy          : string
+   forces          : string
+   partialvictory  : string]
  :traits [card])
 
 (type teammap : map
@@ -290,51 +307,54 @@
  :allowtypes [terrain])
 
 (type threat : struct
- :properties [description  : string
-              progress     : int
-              complete     : int
-              consequences : string]
+ :properties
+  [description  : string
+   progress     : int
+   complete     : int
+   consequences : string]
  :traits [card])
 
 (type unit : struct
  :traits     [card]
- :properties [body            : string
-              mind            : string
-              will            : string
-              move            : string
-              shadow          : string
-              conscience      : string
-              beast           : string
-              demeanor        : string
-              nature          : string
-              age             : int
-              classification  : string
-              crew            : string
-              gender          : string
-              mass            : string
-              height          : string
-              length          : string
-              race            : string
-              range           : string
-              speed           : string
-              speedair        : string
-              speedland       : string
-              speedspace      : string
-              speedwater      : string
-              value           : string
-              width           : string
-              damagelist      : damagelist
-              rolemap         : rolemap
-              unitpowermap    : unitpowermap
-              unitskillmap    : unitskillmap
-              unitweaknessmap : unitweaknessmap])
+ :properties
+  [body            : string
+   mind            : string
+   will            : string
+   move            : string
+   shadow          : string
+   conscience      : string
+   beast           : string
+   demeanor        : string
+   nature          : string
+   age             : int
+   classification  : string
+   crew            : string
+   gender          : string
+   mass            : string
+   height          : string
+   length          : string
+   race            : string
+   range           : string
+   speed           : string
+   speedair        : string
+   speedland       : string
+   speedspace      : string
+   speedwater      : string
+   value           : string
+   width           : string
+   damagelist      : damagelist
+   rolemap         : rolemap
+   unitpowermap    : unitpowermap
+   unitskillmap    : unitskillmap
+   unitweaknessmap : unitweaknessmap])
 
 (type unitability : struct
- :properties [name      : string
-              ability   : ability
-              image     : string
-              titles    : string
-              reference : string])
+ :properties
+  [name      : string
+   ability   : ability
+   image     : string
+   titles    : string
+   reference : string])
 
 (type unitabilitylist : list
  :allowtypes [unitability])
@@ -343,12 +363,13 @@
  :allowtypes [unitability])
 
 (type unititem : struct
- :properties [name   : string
-              item   : item
-              facing : string
-              number : string
-              rounds : string
-              value  : string]
+ :properties
+  [name   : string
+   item   : item
+   facing : string
+   number : string
+   rounds : string
+   value  : string]
  :traits [card])
 
 (type unititemlist : list
@@ -367,17 +388,18 @@
  :allowtypes [unit])
 
 (type unitpower : struct
- :properties [level            : string
-              power            : power
-              front            : string
-              back             : string
-              over             : string
-              under            : string
-              side             : string
-              strength         : string
-              unitabilitymap   : unitabilitymap
-              unititemmap      : unititemmap
-              unitspecialtymap : unitspecialtymap]
+ :properties
+  [level            : string
+   power            : power
+   front            : string
+   back             : string
+   over             : string
+   under            : string
+   side             : string
+   strength         : string
+   unitabilitymap   : unitabilitymap
+   unititemmap      : unititemmap
+   unitspecialtymap : unitspecialtymap]
  :traits [card])
 
 (type unitpowerlist : list
@@ -387,12 +409,13 @@
  :allowtypes [unitpower])
 
 (type unitskill : struct
- :properties [level            : string
-              powerlevel       : string
-              skill            : skill
-              unitabilitymap   : unitabilitymap
-              unititemmap      : unititemmap
-              unitspecialtymap : unitspecialtymap]
+ :properties
+  [level            : string
+   powerlevel       : string
+   skill            : skill
+   unitabilitymap   : unitabilitymap
+   unititemmap      : unititemmap
+   unitspecialtymap : unitspecialtymap]
  :traits [card])
 
 (type unitskilllist : list
@@ -402,10 +425,11 @@
  :allowtypes [unitskill])
 
 (type unitspecialty : struct
- :properties [name      : string
-              image     : string
-              titles    : string
-              reference : string])
+ :properties
+  [name      : string
+   image     : string
+   titles    : string
+   reference : string])
 
 (type unitspecialtymap : map
  :allowtypes [unitspecialty])
@@ -819,8 +843,79 @@
 
 (const suit-red : suit)
 
+(func abilitylist<-abilitylistlist : abilitylistlist
+ [abilitylistlist : abilitylistlist]
+ (list-join<-list : abilitylist
+  abilitylistlist)
+ :doc "Returns an abilitylist from a given abilitylistlist")
+
+(func abilitylist<-skill : abilitylist
+ [skill : skill]
+ (let : abilitylist
+  [abilitymap : abilitymap := (:abilitymap skill)]
+  (list<-map : abilitylist
+   abilitymap))
+ :doc "Returns an abilitylist from a given skill")
+
+(func abilitylist<-power : abilitylist
+ [power : power]
+ (let : abilitylist
+  [abilitymap : abilitymap := (:abilitymap power)]
+  (list<-map : abilitylist
+   abilitymap))
+ :doc "Returns an abilitylist from a given power")
+
+(func abilitylist<-powerlist : abilitylist
+ [powerlist : powerlist]
+ (let : abilitylist
+  [abilitylistlist : abilitylistlist :=
+    (abilitylistlist<-powerlist
+     powerlist)]
+ (abilitylist<-abilitylistlist
+  abilitylistlist))
+ :doc "Returns a abilitylist from a given skilllist")
+
+(func abilitylist<-skilllist : abilitylist
+ [skilllist : skilllist]
+ (let : abilitylist
+  [abilitylistlist : abilitylistlist :=
+    (abilitylistlist<-skilllist
+     skilllist)]
+ (abilitylist<-abilitylistlist
+  abilitylistlist))
+ :doc "Returns a abilitylist from a given skilllist")
+
+(func abilitylistlist<-powerlist : abilitylistlist
+ [powerlist : powerlist]
+ (list<-list : abilitylistlist
+  powerlist
+  (fn : abilitylist
+   [power : power]
+   (abilitylist<-power : abilitylist
+    power)))
+ :doc "Returns an abilitylistlist from a given powerlist")
+
+(func abilitylistlist<-skilllist : abilitylistlist
+ [skilllist : skilllist]
+ (list<-list : abilitylistlist
+  skilllist
+  (fn : abilitylist
+   [skill : skill]
+   (abilitylist<-skill : abilitylist
+    skill)))
+ :doc "Returns an abilitylistlist from a given skilllist")
+
+(func abilitymap<-abilitylist : abilitymap
+ [abilitylist : abilitylist :...]
+ (map<-list : abilitymap
+  abilitylist
+  (fn : ability
+   [ability : ability]
+   (:name ability)))
+ :doc "Returns an abilitymap from a given abilitylist")
+
 (func bookmap<-booklist : bookmap
- [booklist : booklist]
+ [booklist : booklist :...]
  (map<-list : bookmap
   booklist
   (fn : string
@@ -894,11 +989,12 @@
 (func chapterlist<-booklist : chapterlist
  [booklist : booklist]
  (let : chapterlist
-  [chapterlistlist : chapterlistlist := (chapterlistlist<-booklist
-                                         booklist)]
+  [chapterlistlist : chapterlistlist :=
+    (chapterlistlist<-booklist
+     booklist)]
  (chapterlist<-chapterlistlist
   chapterlistlist))
- :doc "Returns a chapterlist from a given bookmap")
+ :doc "Returns a chapterlist from a given booklist")
 
 (func chapterlist<-chapterlistlist : chapterlistlist
  [chapterlistlist : chapterlistlist]
@@ -930,12 +1026,14 @@
  (let : cardimage
   [name  : string := (:name card)
    image : string := (:image card)
+   imgmirror : boolean := (:imgmirror card)
    id : string := (string name "-image")]
   (base/cardimage
    :id id
    :name name
    :origcard card
-   :image image))
+   :image image
+   :imgmirror imgmirror))
  :doc "Returns a cardimage from a given card")
 
 (func name<-chapter : string
@@ -987,7 +1085,7 @@
  :doc "Returns a itemlistlist from a given sectionlist")
 
 (func itemmap<-itemlist : itemmap
- [itemlist : itemlist]
+ [itemlist : itemlist :...]
  (map<-list : itemmap
   itemlist
   (fn : item
@@ -1048,6 +1146,18 @@
    (:name place)))
  :doc "Returns a placemap from a given placelist")
 
+(func powerlist<-powerlistlist : powerlist
+ [powerlistlist : powerlistlist]
+ (list-join<-list : powerlist
+  powerlistlist)
+ :doc "Returns a powerlist from a given powerlistlist")
+
+(func powerlist<-powermap : powerlist
+ [powermap : powermap]
+ (list<-map : powerlist
+  powermap)
+ :doc "Returns a powerlist from a given powermap")
+
 (func powerlist<-section : powerlist
  [section : section]
  (let : powerlist
@@ -1069,18 +1179,6 @@
   (powerlist<-powerlistlist
    powerlistlist))
  :doc "Returns a powerlist from a given sectionlist")
-
-(func powerlist<-powerlistlist : powerlist
- [powerlistlist : powerlistlist]
- (list-join<-list : powerlist
-  powerlistlist)
- :doc "Returns a powerlist from a given powerlistlist")
-
-(func powerlist<-powermap : powerlist
- [powermap : powermap]
- (list<-map : powerlist
-  powermap)
- :doc "Returns a powerlist from a given powermap")
 
 (func powerlistlist<-sectionlist : powerlistlist
  [sections : sectionlist]
@@ -1379,6 +1477,18 @@
    skillmap : skillmap :=
     (skillmap<-skilllist
      skilllist)
+   abilitylist1 : abilitylist :=
+    (abilitylist<-skilllist
+     skilllist)
+   abilitylist2 : abilitylist :=
+    (abilitylist<-powerlist
+     powerlist)
+   abilitylist3 : abilitylist :=
+    (abilitylist
+     abilitylist1 abilitylist2)
+   abilitymap : abilitymap :=
+    (abilitymap<-abilitylist
+     abilitylist3)
    unitlist : unitlist :=
     (unitlist<-sectionlist
      sectionlist)
@@ -1386,6 +1496,7 @@
     (unitmap<-unitlist
      unitlist)]
   (tactics
+   :abilitymap abilitymap
    :bookmap    bookmap
    :chaptermap chaptermap
    :itemmap    itemmap

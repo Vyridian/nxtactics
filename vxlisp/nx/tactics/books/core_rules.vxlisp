@@ -672,19 +672,7 @@ for any [Hits].
 * This movement does not cost [Speed], but if the unit is blocked from moving away it will suffer a [Collision]
 of Speed equal to the number of remaining [Hits].
 * [Anytime]: If [Morale] >= [Spirit] then the unit will take no [Actions], move at its best speed away from
-any opponents, and will leave the map if able.")
-        :Stun
-         (rule
-          :name "Stun"
-          :image "Tokens/StunToken.png"
-          :summary
-           "-1 [Mind]
--1 [Defense]
--1 [Speed]
--1 [Skill]
-* [Move]: If [Stun] >= [Mind], then make a full Move along a random path.
-* [Action]: If [Stun] >= [Mind], then the unit is confused and may not perform an [Action].
-* [Anytime]: If [Stun] >= [Body], then replace the excess Stun with [Damage] tokens.")))
+any opponents, and will leave the map if able.")))
     "Black Tokens"
      (section
       :name "Black Tokens"
