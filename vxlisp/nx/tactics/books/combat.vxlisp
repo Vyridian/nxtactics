@@ -618,7 +618,7 @@
          :image "images/cards/item-barehanded.svg"
          :summary
           "* [Fight]: [Close Combat] or [Melee]
-           * [Damage]: [Size Bonus] [Bash]"))
+           * [Damage]: [Body] [Bash]"))
       :skillmap
        (skillmap
         "Close Combat"
@@ -840,20 +840,20 @@ x +1DMG vs. Crouching."
               :name "Punch"
               :summary
                "* [Fight]: [Close Combat]
-                * [Damage]: [Size Bonus] [Bash]")
+                * [Damage]: [Body] [Bash]")
             :Kick
              (ability
               :name "Kick"
               :summary
                "* [Low Attack]
                 * [Fight]: [Close Combat]-1
-                * [Damage]: [Size Bonus]+1 [Bash]")
+                * [Damage]: [Body]+1 [Bash]")
             :Grab
              (ability
               :name "Grab"
               :summary
                "* [Fight]: [Close Combat]
-                * [Damage]: [Size Bonus] [Hold] [Lock]
+                * [Damage]: [Body] [Hold] [Lock]
                 * Attempt to grab a unit.")
             :Drag
              (ability
@@ -3817,11 +3817,13 @@ Those who dared to fight for their freedom. - Glass Fleet"
         (item
          :name "Composite Bow"
          :summary
-          "* The main advantage of composite bows over self bows (made from a single piece of wood) is their combination of smaller size with high power. They are therefore much more suitable for use from horseback, and presumably from a chariot.
-           * Constructing composite bows requires much more time and materials than self bows, and the animal glue traditionally used can lose strength in humid conditions and be quickly ruined by submersion. For most practical non-mounted archery purposes, composite construction offers no advantage; 'the initial velocity is about the same for all types of bow, the design parameters appear to be less important than is often claimed.' However, their compact size make them superior for horsemen.
-           * [Attack]: [+1 Range], [+1 Piercing]"
-         :energy "170J"
-         :modifiers "Piercing")
+          "* [Fight]: [Ranged]
+           * [Damage]: 10x1 [Pierce] [Slash]
+           * [Range]: 10x1 100m/300ft
+           * [Location]: [2-hand]
+           * The main advantage of composite bows over self bows (made from a single piece of wood) is their combination of smaller size with high power. They are more suitable for use from horseback or chariot.
+           * Constructing composite bows requires much more time and materials than self bows, and the animal glue traditionally used can lose strength in humid conditions and be quickly ruined by submersion. For most practical non-mounted archery purposes, composite construction offers no advantage; 'the initial velocity is about the same for all types of bow, the design parameters appear to be less important than is often claimed.' However, their compact size make them superior for horsemen."
+         :energy "170J")
         (item
          :name "Compound Bow")
         (item
@@ -3829,8 +3831,8 @@ Those who dared to fight for their freedom. - Glass Fleet"
          :titles "Daikyu"
          :summary
           "* [Fight]: [Ranged]
-           * [Damage]:10x1 [Pierce] [Slash]
-           * [Range]:10x1 100m/300ft
+           * [Damage]: 10x1 [Pierce] [Slash]
+           * [Range]: 10x1 100m/300ft
            * [Location]: [2-hand]"
          :energy "156J")
         (item
@@ -3840,9 +3842,11 @@ Those who dared to fight for their freedom. - Glass Fleet"
          :reference "Can fire about 6 aimed shots or 12 unaimed shots per minute."
          :summary
           "* [Fight]: [Ranged]
-           * [Damage]:8x1 [Pierce] [Slash]
-           * [Range]:2x1 20m/60ft
-           * [Location]: [2-hand]"
+           * [Damage]: 8x1 [Pierce] [Slash]
+           * [Range]: 2x1 20m/60ft
+           * [Location]: [2-hand]
+           * [Shots]: 0 Max:1
+           * [Reload]: [Action]"
          :energy "80J"
          :body "10x-1"
          :mass "1kg/2lb")))

@@ -36,21 +36,21 @@
  (ui/font
   :name     "font-text"
   :fontface fontface1
-  :fontsize 60)
+  :fontsize 70)
  :doc "Returns Normal text Font")
 
 (const font-text-2 : ui/font
  (ui/font
   :name     "font-text-2"
   :fontface fontface1
-  :fontsize 30)
+  :fontsize 40)
  :doc "Returns Normal text Font")
 
 (const font-textarea : ui/font
  (ui/font
   :name     "font-textarea"
   :fontface fontface1
-  :fontsize 60)
+  :fontsize 70)
  :doc "Returns Textarea Font")
 
 (const font-title : ui/font

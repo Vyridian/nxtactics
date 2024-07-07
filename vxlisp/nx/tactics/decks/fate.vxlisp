@@ -15,10 +15,8 @@
     * Hits: 0. Search or Reclaim 1.
     * Shuffle: Discards into Deck.
 
-    - or -
-
     Combo Breaker (Blue Burst):
-    * When a Combo is performed on you, discard to cancel the Combo."))
+    * IF a Combo is performed on you THEN discard to cancel the Combo."))
 
 (const fate-wildred : base/fate
  (base/fate
@@ -33,10 +31,8 @@
     * Hits: 0. Search or Reclaim 1.
     * Shuffle: Discards into Deck.
 
-    - or -
-
     Combo Breaker (Blue Burst):
-    * When a Combo is performed on you, discard to cancel the Combo."))
+    * IF a Combo is performed on you THEN discard to cancel the Combo."))
 
 (const fate-ac : base/fate
  (base/fate
@@ -46,17 +42,15 @@
   :summary
    "Attack (Super)
     * Win : Attack 2-K, Focus
-    * Loss: Defend, Evade, Counter, Wild
-    * Tie : Attack A
-    * Hit: 0
+    * Loss: Evade, Counter, Wild
+    * Tie : Attack A, Defend Overkill
+    * Hits: 0
     * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
-
-   - or -
 
     Counter
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-ad : base/fate
  (base/fate
@@ -71,12 +65,10 @@
     * Hits: 0
     * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
 
-   - or -
-
     Counter
     * Win : Attack, Wild
     * Loss: Focus, Defend, Evade
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-ah : base/fate
  (base/fate
@@ -91,12 +83,10 @@
     * Hits: 0
     * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-as : base/fate
  (base/fate
@@ -106,17 +96,15 @@
   :summary
    "Attack (Super)
     * Win : Attack 2-K, Focus
-    * Loss: Defend, Evade, Counter, Wild
-    * Tie : Attack A
-    * Hits: 0
+    * Loss: Evade, Counter, Wild
+    * Tie : Attack A, Defend Overkill
+    * Hit: 0
     * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
-
-   - or -
 
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-kc : base/fate
  (base/fate
@@ -126,17 +114,15 @@
   :summary
    "Attack (Special)
     * Win : Attack 2-10, Focus
-    * Loss: Attack JQA, Defend, Evade, Counter, Wild
-    * Tie : Attack K
+    * Loss: Attack AJQ, Evade, Counter, Wild
+    * Tie : Attack K, Defend Overkill
     * Hits: 10
     * Combo: KK Hits: 20 or KKK Hits: 30
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-kd : base/fate
  (base/fate
@@ -146,17 +132,15 @@
   :summary
    "Focus (Special)
     * Win : Focus 2-10, Defend, Evade, Counter
-    * Loss: Attack, Focus JQA, Wild
+    * Loss: Attack, Focus AJQ, Wild
     * Tie : Focus K
     * Hits: 10
     * Combo: KK Hits: 20 or KKK Hits: 30
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-kh : base/fate
  (base/fate
@@ -166,17 +150,15 @@
   :summary
    "Focus (Special)
     * Win : Focus 2-10, Defend, Evade, Counter
-    * Loss: Attack, Focus JQA, Wild
+    * Loss: Attack, Focus AJQ, Wild
     * Tie : Focus K
     * Hits: 10
     * Combo: KK Hits: 20 or KKK Hits: 30
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-ks : base/fate
  (base/fate
@@ -186,17 +168,15 @@
   :summary
    "Attack (Special)
     * Win : Attack 2-10, Focus
-    * Loss: Attack JQA, Defend, Evade, Counter, Wild
-    * Tie : Attack K
+    * Loss: Attack AJQ, Evade, Counter, Wild
+    * Tie : Attack K, Defend Overkill
     * Hits: 10
     * Combo: KK Hits: 20 or KKK Hits: 30
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-qc : base/fate
  (base/fate
@@ -205,18 +185,16 @@
   :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
-    * Win : Attack 2-10 K, Focus
-    * Loss: Attack JA, Defend, Evade, Counter, Wild
-    * Tie : Attack Q
+    * Win : Attack K 2-10, Focus
+    * Loss: Attack AJ, Evade, Counter, Wild
+    * Tie : Attack Q, Defend Overkill
     * Hits: 10
     * Combo: QQ Hits: 20
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-qd : base/fate
  (base/fate
@@ -225,18 +203,16 @@
   :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
-    * Win : Focus 2-10 K, Defend, Evade, Counter
-    * Loss: Attack, Focus JA, Wild
+    * Win : Focus K 2-10, Defend, Evade, Counter
+    * Loss: Attack, Focus AJ, Wild
     * Tie : Focus Q
     * Hits: 10
     * Combo: QQ Hits: 20
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-qh : base/fate
  (base/fate
@@ -246,18 +222,16 @@
   :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
-    * Win : Focus 2-10 K, Defend, Evade, Counter
-    * Loss: Attack, Focus JA, Wild
+    * Win : Focus K 2-10, Defend, Evade, Counter
+    * Loss: Attack, Focus AJ, Wild
     * Tie : Focus Q
     * Hits: 10
     * Combo: QQ Hits: 20
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-qs : base/fate
  (base/fate
@@ -266,18 +240,16 @@
   :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
-    * Win : Attack 2-10 K, Focus
-    * Loss: Attack JA, Defend, Evade, Counter, Wild
-    * Tie : Attack Q
+    * Win : Attack K 2-10, Focus
+    * Loss: Attack AJ, Evade, Counter, Wild
+    * Tie : Attack Q, Defend Overkill
     * Hits: 10
     * Combo: QQ Hits: 20
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-jc : base/fate
  (base/fate
@@ -287,17 +259,15 @@
   :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
-    * Win : Attack 2-10 QK, Focus
-    * Loss: Attack A, Defend, Evade, Counter, Wild
-    * Tie : Attack J
+    * Win : Attack QK 2-10, Focus
+    * Loss: Attack A, Evade, Counter, Wild
+    * Tie : Attack J, Defend Overkill
     * Hits: 10
-
-   - or -
 
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-jd : base/fate
  (base/fate
@@ -307,17 +277,15 @@
   :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
-    * Win : Focus 2-10 QK, Defend, Evade, Counter
+    * Win : Focus QK 2-10, Defend, Evade, Counter
     * Loss: Attack, Focus A, Wild
     * Tie : Focus J
     * Hits: 10
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-jh : base/fate
  (base/fate
@@ -327,17 +295,15 @@
   :image "images/card-fate-focus-counter.svg"
   :summary
    "Focus (Special)
-    * Win : Focus 2-10 QK, Defend, Evade, Counter
+    * Win : Focus QK 2-10, Defend, Evade, Counter
     * Loss: Attack, Focus A, Wild
     * Tie : Focus J
     * Hits: 10
 
-   - or -
-
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-js : base/fate
  (base/fate
@@ -347,17 +313,15 @@
   :image "images/card-fate-attack-counter.svg"
   :summary
    "Attack (Special)
-    * Win : Attack 2-10 QK, Focus
-    * Loss: Attack A, Defend, Evade, Counter, Wild
-    * Tie : Attack J
+    * Win : Attack QK 2-10, Focus
+    * Loss: Attack A, Evade, Counter, Wild
+    * Tie : Attack J, Defend Overkill
     * Hits: 10
-
-   - or -
 
     Counter
     * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0. Immediately resolve an Attack or Focus"))
+    * Loss: Focus, Defend, Evade
+    * Hits: 0. Resolve an Attack or Focus"))
 
 (const fate-tc : base/fate
  (base/fate
@@ -368,16 +332,15 @@
   :summary
    "Attack (Normal)
     * Win : Focus
-    * Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 10
-    * Hits: 10, Draw 1
-
-   - or -
+    * Lose: Attack AJQK 2-9, Defend 10, Evade, Counter, Wild
+    * Tie : Attack 10, Defend 2-9 Overkill
+    * Hits: 10, Draw
 
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-10, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-td : base/fate
  (base/fate
@@ -387,17 +350,16 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Defend, Evade, Counter
-    * Lose: Attack, Focus 2-9 JQKA, Wild
+    * Win : Defend, Counter
+    * Lose: Attack, Focus AJQK 2-9, Evade, Wild
     * Tie : Focus 10
     * Hits: 10
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 10, Focus 10, Counter, Wild
+    * Loss: Attack 2-9, Focus AJQK 2-9
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-th : base/fate
  (base/fate
@@ -407,17 +369,16 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Defend, Evade, Counter
-    * Lose: Attack, Focus 2-9 JQKA, Wild
+    * Win : Defend, Counter
+    * Lose: Attack, Focus AJQK 2-9, Evade, Wild
     * Tie : Focus 10
     * Hits: 10
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 10, Focus 10, Counter, Wild
+    * Loss: Attack 2-9, Focus AJQK 2-9
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-ts : base/fate
  (base/fate
@@ -428,16 +389,15 @@
   :summary
    "Attack (Normal)
     * Win : Focus
-    * Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 10
-    * Hits: 10, Draw 1
-
-   - or -
+    * Lose: Attack AJQK 2-9, Defend 10, Evade, Counter, Wild
+    * Tie : Attack 10, Defend 2-9 Overkill
+    * Hits: 10, Draw
 
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-10, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-9c : base/fate
  (base/fate
@@ -446,17 +406,16 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 10, Focus
-    * Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 9
-    * Hits: 9, Draw 1
-
-   - or -
+    * Win : Attack/Evade 10, Focus
+    * Lose: Attack AJQK 2-8, Defend 9-10, Evade 2-9, Counter, Wild
+    * Tie : Attack 9, Defend 2-8 Overkill
+    * Hits: 9, Draw
 
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-9, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-9d : base/fate
  (base/fate
@@ -465,17 +424,16 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-9 JQKA, Wild
+    * Win : Focus/Evade 10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-8, Evade 2-9, Wild
     * Tie : Focus 9
     * Hits: 9
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 9-10, Focus 9-10, Counter, Wild
+    * Loss: Attack 2-8, Focus AJQK 2-8
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-9h : base/fate
  (base/fate
@@ -484,17 +442,16 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-9 JQKA, Wild
+    * Win : Focus/Evade 10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-8, Evade 2-9, Wild
     * Tie : Focus 9
     * Hits: 9
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 9-10, Focus 9-10, Counter, Wild
+    * Loss: Attack 2-8, Focus AJQK 2-8
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-9s : base/fate
  (base/fate
@@ -503,17 +460,16 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 10, Focus
-    * Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 9
-    * Hits: 9, Draw 1
-
-   - or -
+    * Win : Attack/Evade 10, Focus
+    * Lose: Attack AJQK 2-8, Defend 9-10, Evade 2-9, Counter, Wild
+    * Tie : Attack 9, Defend 2-8 Overkill
+    * Hits: 9, Draw
 
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-9, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-8c : base/fate
  (base/fate
@@ -522,18 +478,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 9-10, Focus
-    * Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 8
-    * Hits: 8, Draw 1
-    * Combo: 8-9-10 Hits: 27, Draw or Reclaim 1
-
-   - or -
+    * Win : Attack/Evade 9-10, Focus
+    * Lose: Attack AJQK 2-7, Defend 8-10, Evade 2-8, Counter, Wild
+    * Tie : Attack 8, Defend 2-7 Overkill
+    * Hits: 8, Draw
+    * Combo: 8-9-10 Hits: 27, Draw or Reclaim:1
 
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-8, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 9-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-8d : base/fate
  (base/fate
@@ -542,18 +497,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 9-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-7 JQKA, Wild
+    * Win : Focus/Evade 9-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-7, Evade 2-8, Wild
     * Tie : Focus 8
     * Hits: 8
     * Combo: 8-9-10 Hits: 27, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 8-10, Focus 8-10, Counter, Wild
+    * Loss: Attack 2-7, Focus AJQK 2-7
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-8h : base/fate
  (base/fate
@@ -562,18 +516,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 9-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-7 JQKA, Wild
+    * Win : Focus/Evade 9-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-7, Evade 2-8, Wild
     * Tie : Focus 8
     * Hits: 8
     * Combo: 8-9-10 Hits: 27, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 8-10, Focus 8-10, Counter, Wild
+    * Loss: Attack 2-7, Focus AJQK 2-7
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-8s : base/fate
  (base/fate
@@ -582,18 +535,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 9-10, Focus
-    * Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 8
-    * Hits: 8, Draw 1
-    * Combo: 8-9-10 Hits: 27, Draw or Reclaim 1
-
-   - or -
+    * Win : Attack/Evade 9-10, Focus
+    * Lose: Attack AJQK 2-7, Defend 8-10, Evade 2-8, Counter, Wild
+    * Tie : Attack 8, Defend 2-7 Overkill
+    * Hits: 8, Draw
+    * Combo: 8-9-10 Hits: 27, Draw or Reclaim:1
 
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-8, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 9-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-7c : base/fate
  (base/fate
@@ -602,18 +554,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 8-10, Focus
-    * Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 7
-    * Hits: 7, Draw 1
+    * Win : Attack/Evade 8-10, Focus
+    * Lose: Attack AJQK 2-6, Defend 7-10, Evade 2-7, Counter, Wild
+    * Tie : Attack 7, Defend 2-6 Overkill
+    * Hits: 7, Draw
     * Combo: 7-8-9, Hits: 24, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-7, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 8-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-7d : base/fate
  (base/fate
@@ -622,18 +573,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 8-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-6 JQKA, Wild
+    * Win : Focus/Evade 8-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-6, Evade 2-7, Wild
     * Tie : Focus 7
     * Hits: 7
     * Combo: 7-8-9, Hits: 24, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 7-10, Focus 7-10, Counter, Wild
+    * Loss: Attack 2-6, Focus AJQK 2-6
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-7h : base/fate
  (base/fate
@@ -642,18 +592,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 8-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-6 JQKA, Wild
+    * Win : Focus/Evade 8-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-6, Evade 2-7, Wild
     * Tie : Focus 7
     * Hits: 7
     * Combo: 7-8-9, Hits: 24, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 7-10, Focus 7-10, Counter, Wild
+    * Loss: Attack 2-6, Focus AJQK 2-6
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-7s : base/fate
  (base/fate
@@ -662,18 +611,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 8-10, Focus
-    * Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 7
-    * Hits: 7, Draw 1
+    * Win : Attack/Evade 8-10, Focus
+    * Lose: Attack AJQK 2-6, Defend 7-10, Evade 2-7, Counter, Wild
+    * Tie : Attack 7, Defend 2-6 Overkill
+    * Hits: 7, Draw
     * Combo: 7-8-9, Hits: 24, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-7, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 8-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-6c : base/fate
  (base/fate
@@ -682,18 +630,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 7-10, Focus
-    * Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 6
-    * Hits: 6, Draw 1
+    * Win : Attack/Evade 7-10, Focus
+    * Lose: Attack AJQK 2-5, Defend 6-10, Evade 2-6, Counter, Wild
+    * Tie : Attack 7, Defend 2-6 Overkill
+    * Hits: 6, Draw
     * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-6, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 7-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-6d : base/fate
  (base/fate
@@ -702,18 +649,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 7-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-5 JQKA, Wild
+    * Win : Focus/Evade 7-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-5, Evade 2-6, Wild
     * Tie : Focus 6
     * Hits: 6
     * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 6-10, Focus 6-10, Counter, Wild
+    * Loss: Attack 2-5, Focus AJQK 2-5
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-6h : base/fate
  (base/fate
@@ -722,18 +668,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 7-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-5 JQKA, Wild
+    * Win : Focus/Evade 7-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-5, Evade 2-6, Wild
     * Tie : Focus 6
     * Hits: 6
     * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 6-10, Focus 6-10, Counter, Wild
+    * Loss: Attack 2-5, Focus AJQK 2-5
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-6s : base/fate
  (base/fate
@@ -742,18 +687,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 7-10, Focus
-    * Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 6
-    * Hits: 6, Draw 1
+    * Win : Attack/Evade 7-10, Focus
+    * Lose: Attack AJQK 2-5, Defend 6-10, Evade 2-6, Counter, Wild
+    * Tie : Attack 7, Defend 2-6 Overkill
+    * Hits: 6, Draw
     * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-6, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 7-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-5c : base/fate
  (base/fate
@@ -762,18 +706,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 6-10, Focus
-    * Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 5
-    * Hits: 6, Draw 1
-    * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
-
-   - or -
+    * Win : Attack/Evade 6-10, Focus
+    * Lose: Attack AJQK 2-4, Defend 5-10, Evade 2-5, Counter, Wild
+    * Tie : Attack 5, Defend 2-5 Overkill
+    * Hits: 5, Draw
+    * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
 
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-5, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 6-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-5d : base/fate
  (base/fate
@@ -782,18 +725,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 6-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-4 JQKA, Wild
+    * Win : Focus/Evade 6-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-4, Evade 2-5, Wild
     * Tie : Focus 5
     * Hits: 5
     * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 5-10, Focus 5-10, Counter, Wild
+    * Loss: Attack 2-4, Focus AJQK 2-4
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-5h : base/fate
  (base/fate
@@ -802,18 +744,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 6-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-4 JQKA, Wild
+    * Win : Focus/Evade 6-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-4, Evade 2-5, Wild
     * Tie : Focus 5
     * Hits: 5
     * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 5-10, Focus 5-10, Counter, Wild
+    * Loss: Attack 2-4, Focus AJQK 2-4
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-5s : base/fate
  (base/fate
@@ -822,18 +763,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 6-10, Focus
-    * Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 5
-    * Hits: 5, Draw 1
+    * Win : Attack/Evade 6-10, Focus
+    * Lose: Attack AJQK 2-4, Defend 5-10, Evade 2-5, Counter, Wild
+    * Tie : Attack 5, Defend 2-5 Overkill
+    * Hits: 5, Draw
     * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-5, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 6-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-4c : base/fate
  (base/fate
@@ -842,18 +782,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 5-10, Focus
-    * Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 4
-    * Hits: 5, Draw 1
-    * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
-
-   - or -
+    * Win : Attack/Evade 5-10
+    * Lose: Attack AJQK 2-3, Defend 4-10, Evade 2-4, Counter, Wild
+    * Tie : Attack 4, Defend 2-4 Overkill
+    * Hits: 4, Focus, Draw
+    * Combo: 4-5-6, Hits: 15, Draw or Reclaim 1
 
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-4, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 5-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-4d : base/fate
  (base/fate
@@ -862,18 +801,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 5-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-3 JQKA, Wild
+    * Win : Focus/Evade 5-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-3, Evade 2-4, Wild
     * Tie : Focus 4
-    * Hits: 5
-    * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
-
-   - or -
+    * Hits: 4
+    * Combo: 4-5-6, Hits: 15, Draw or Reclaim 1
 
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 4-10, Focus 4-10, Counter, Wild
+    * Loss: Attack 2-3, Focus AJQK 2-3
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-4h : base/fate
  (base/fate
@@ -882,18 +820,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 5-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2-3 JQKA, Wild
+    * Win : Focus/Evade 5-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2-3, Evade 2-4, Wild
     * Tie : Focus 4
     * Hits: 4
     * Combo: 4-5-6, Hits: 15, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 4-10, Focus 4-10, Counter, Wild
+    * Loss: Attack 2-3, Focus AJQK 2-3
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-4s : base/fate
  (base/fate
@@ -902,18 +839,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 5-10, Focus
-    * Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 4
-    * Hits: 4, Draw 1
+    * Win : Attack/Evade 5-10, Focus
+    * Lose: Attack AJQK 2-3, Defend 4-10, Evade 2-4, Counter, Wild
+    * Tie : Attack 4, Defend 2-4 Overkill
+    * Hits: 4, Draw
     * Combo: 4-5-6, Hits: 15, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-4, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 5-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-3c : base/fate
  (base/fate
@@ -922,18 +858,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 4-10, Focus
-    * Lose: Attack 2 JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 3
-    * Hits: 3, Draw 1
+    * Win : Attack/Evade 4-10, Focus
+    * Lose: Attack AJQK 2, Defend 3-10, Evade 2-3, Counter, Wild
+    * Tie : Attack 3, Defend 2-3 Overkill
+    * Hits: 3, Draw
     * Combo: 3-4-5, Hits: 12, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-3, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 4-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-3d : base/fate
  (base/fate
@@ -942,18 +877,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 4-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2 JQKA, Wild
+    * Win : Focus/Evade 4-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2, Evade 2-3, Wild
     * Tie : Focus 3
     * Hits: 3
     * Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 3-10, Focus 3-10, Counter, Wild
+    * Loss: Attack 2, Focus AJQK 2
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-3h : base/fate
  (base/fate
@@ -962,18 +896,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 4-10, Defend, Evade, Counter
-    * Lose: Attack, Focus 2 JQKA, Wild
+    * Win : Focus/Evade 4-10, Defend, Counter
+    * Lose: Attack, Focus AJQK 2, Evade 2-3, Wild
     * Tie : Focus 3
     * Hits: 3
     * Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack AJQK 3-10, Focus 3-10, Counter, Wild
+    * Loss: Attack 2, Focus AJQK 2
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-3s : base/fate
  (base/fate
@@ -982,18 +915,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 4-10, Focus
-    * Lose: Attack 2, Focus JQKA, Defend, Evade, Counter, Wild
-    * Tie : Attack 3
-    * Hits: 3
+    * Win : Attack/Evade 4-10, Focus
+    * Lose: Attack AJQK 2, Defend 3-10, Evade 2-3, Counter, Wild
+    * Tie : Attack 3, Defend 2-3 Overkill
+    * Hits: 3, Draw
     * Combo: 3-4-5, Hits: 12, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2-3, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 4-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-2c : base/fate
  (base/fate
@@ -1002,18 +934,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 3-10, Focus
-    * Lose: Attack JQKA, Defend, Evade, Counter, Wild
+    * Win : Attack/Evade 3-10, Focus
+    * Lose: Attack AJQK, Defend, Evade 2, Counter, Wild
     * Tie : Attack 2
-    * Hits: 2, Draw 1
+    * Hits: 2, Draw
     * Combo: 2-3-4, Hits: 9, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 3-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (const fate-2d : base/fate
  (base/fate
@@ -1022,18 +953,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 3-10, Defend, Evade, Counter
-    * Lose: Attack, Focus JQKA, Wild
+    * Win : Focus/Evade 3-10, Defend, Counter
+    * Lose: Attack, Focus AJQK, Evade 2, Wild
     * Tie : Focus 2
     * Hits: 2
     * Combo: 2-3-4, Hits: 9, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack, Focus 2-10, Counter, Wild
+    * Loss: Focus AJQK
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-2h : base/fate
  (base/fate
@@ -1042,18 +972,17 @@
   :image "images/card-fate-focus-evade.svg"
   :summary
    "Focus (Normal)
-    * Win : Focus 3-10, Defend, Evade, Counter
-    * Lose: Attack, Focus JQKA, Wild
+    * Win : Focus/Evade 3-10, Defend, Counter
+    * Lose: Attack, Focus AJQK, Evade 2, Wild
     * Tie : Focus 2
     * Hits: 2
     * Combo: 2-3-4, Hits: 9, Draw or Reclaim 1
 
-   - or -
-
     Evade
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Move"))
+    * Win : Attack, Focus 2-10, Counter, Wild
+    * Loss: Focus AJQK
+    * Tie : Defend, Evade
+    * Any : Move"))
 
 (const fate-2s : base/fate
  (base/fate
@@ -1062,18 +991,17 @@
   :image "images/card-fate-attack-defend.svg"
   :summary
    "Attack (Normal)
-    * Win : Attack 3-10, Focus
-    * Lose: Attack JQKA, Defend, Evade, Counter, Wild
+    * Win : Attack/Evade 3-10, Focus
+    * Lose: Attack AJQK, Defend, Evade 2, Counter, Wild
     * Tie : Attack 2
-    * Hits: 2, Draw 1
+    * Hits: 2, Draw
     * Combo: 2-3-4, Hits: 9, Draw or Reclaim 1
 
-   - or -
-
     Defend
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade, Counter
-    * Hits: 0, Keep, Draw 1, Choose Hit Location"))
+    * Win : Attack 2, Counter, Wild
+    * Loss: Focus
+    * Tie : Attack AJQK 3-10 Overkill, Defend, Evade, Keep
+    * Hits: 0, Keep, Draw"))
 
 (func card-fate : base/cardback
  [color : string]

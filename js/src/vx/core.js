@@ -652,6 +652,7 @@ export default class vx_core {
           const valuetype = vx_core.f_type_from_any(value)
           let isfound = false
           if (vx_core.f_is_empty(value)) {
+            isfound = true
           } else if (typedef == valuetype) {
             listvals.push(...value)
             isfound = true
@@ -3555,7 +3556,7 @@ export default class vx_core {
   /**
    * @function copy
    * Returns a copy of a given value with the given values added or updated.
-   * @param  {any} value
+   * @param  {generic_any_1} value
    * @param  {anylist} ... values
    * @return {any-1}
    */

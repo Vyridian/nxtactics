@@ -24,7 +24,7 @@
   :image "images/cards/item-axehand.svg"
   :summary
    "* [Fight]: [Melee]
-    * [Damage]: [Size Bonus] [Hack] [Slash]
+    * [Damage]: [Body] [Hack] [Slash]
     * [Location]: [1-hand]"
   :body "9x-1"
   :mass "900g/2lb"))
@@ -85,7 +85,7 @@
   :image "images/cards/item-dagger.svg"
   :summary
    "* [Fight]: [Close Combat] or [Melee]
-    * [Damage]: [Size Bonus] [Pierce] [Slash]
+    * [Damage]: [Body] [Pierce] [Slash]
     * [Location]: [1-hand]"
   :body "5x-1"
   :mass "500g/1lb"
@@ -98,10 +98,21 @@
   :image "images/cards/item-hammer.svg"
   :summary
    "* [Fight]: [Melee]
-    * [Damage]: [Size Bonus]+2 [Bash]
+    * [Damage]: [Body]+2 [Bash]
     * [Location]: [1-hand]"
   :body "2x0"
   :mass "2kg/4.4lb"))
+
+(func item-arrowquiver : base/item
+ (base/item
+  :name "Arrow Quiver"
+  :image "images/cards/item-arrowquiver.svg"
+  :summary
+   "* Holds up to 20 arrows
+    * [Location]: [Shoulders] Back"
+  :body "10x-1"
+  :mass "1kg/2.2lb"
+  :length "6cm/2ft"))
 
 (func item-finewoodlandcloak : base/item
  (base/item
@@ -129,7 +140,7 @@
   :image "images/cards/item-longsword.svg"
   :summary
    "* [Fight]: [Melee]
-    * [Damage]: [Size Bonus]+1 [Pierce] [Slash]
+    * [Damage]: [Body]+1 [Pierce] [Slash]
     * [Location]: [1-hand]
     * [Armor]: 1x1"
   :body "10x-1"
@@ -183,7 +194,7 @@
   :image "images/cards/item-spear.svg"
   :summary
    "* [Fight]: [Melee] [Reach]
-    * [Damage]: [Size Bonus]+3 [Pierce] [Slash]
+    * [Damage]: [Body]+3 [Pierce] [Slash]
     * [Location]: [2-hand]
     * [Armor]: 1x1"
   :body "3x0"
@@ -195,7 +206,7 @@
   :image "images/cards/item-shortspear.svg"
   :summary
    "* [Fight]: [Melee]
-    * [Damage]: [Size Bonus]+1 [Pierce] [Slash]
+    * [Damage]: [Body]+1 [Pierce] [Slash]
     * [Location]: [1-hand]
     * [Armor]: 1x1"
   :body "10x-1"
@@ -207,7 +218,7 @@
   :image "images/cards/item-shortsword.svg"
   :summary
    "* [Fight]: [Melee]
-    * [Damage]: [Size Bonus]+1 [Pierce] [Slash]
+    * [Damage]: [Body]+1 [Pierce] [Slash]
     * [Location]: [1-hand]
     * [Armor]: 1x1"
   :body "10x-1"
@@ -230,7 +241,7 @@
   :image "images/cards/item-woodaxe.svg"
   :summary
    "* [Fight]: [Melee]-1
-    * [Damage]: [Size Bonus]+3 [Hack] [Slash]
+    * [Damage]: [Body]+3 [Hack] [Slash]
     * [Location]: [2-hand]
     * [Armor]: 1x1"
   :body "3x0"
@@ -572,7 +583,7 @@
         (base/unititem
          :item (item-hammer))))
     (base/unitskill
-     :skill (data/tactics-skill "Tradeskill")
+     :skill (data/tactics-skill "Tradeskills")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
@@ -616,7 +627,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-skill "Bargain")))))))
+        :ability (data/tactics-ability "Bargain")))))))
 
 (func unit-liliducon : base/unit
  (base/unit
@@ -724,6 +735,7 @@
  (base/unit
   :name "Wooden Cart"
   :image "images/cards/unit-woodencart.svg"
+  :imgmirror true
   :body "2x2"
   :mass "200kg/440lb"))
 
@@ -768,6 +780,7 @@
       (data/tactics-ability "Sneak")
       (data/tactics-skill   "Business")
       (data/tactics-ability "Bargain")
+      (data/tactics-skill   "Tradeskills")
       (item-coppercoins)
       (item-silvercoins)
       (item-goldcoins)
@@ -777,6 +790,7 @@
       (item-woodaxe)
       (data/tactics-item "Bare Handed")
       (data/tactics-item "Shortbow")
+      (item-arrowquiver)
       (item-dagger)
       (item-hammer)
       (item-shieldbuckler)

@@ -1088,7 +1088,7 @@
             (ability
              :name "Detail Oriented"
              :summary
-              "IF during a [Search] you find an item that has [Body]:5x0 or more THEN ONCE you may resuffle that item into the [Search Deck] and draw another instead.")
+              "ONCE IF you found and item during a [Search] AND had [Hits]:10+ THEN you may resuffle that item into the [Search Deck] and draw again taking the new result insteaad.")
             (ability
              :name "Delve Too Deep")
             (ability
@@ -2051,89 +2051,76 @@
           :titles "Covert Ops, Infiltrator, Informer, Spy, Traitor"
           :stat "Shadow"
           :abilitymap
-           (abilitymap
-            :Counterintelligence
-             (ability
-              :name "Counterintelligence")
-            "Cyber Intelligence"
-             (ability
-              :name "Cyber Intelligence"
-              :summary "* Intelligence gathered from computer networks."
-              :titles "CYBINT, DNINT, Digital Network Intelligence")
-            :Eavesdrop
-             (ability
-              :name "Eavesdrop"
-              :summary "* Listen in to conversations without being detected.")
-            :Infiltrate
-             (ability
-              :name "Infiltrate"
-              :summary
-               "* [Defense] - Mind
-                * [Deploy] - Deploy this unit in waiting area.
-                * [Action] - Replace any non-unique unit with this unit.")
-            "Geospatial Intelligence"
-             (ability
-              :name "Geospatial Intelligence"
-              :summary
-               "* Intelligence gathered from satellite, aerial photography, mapping.
-                * Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
-              :titles "GEOINT, IMINT, Imagery Intelligence")
-            "Human Intelligence"
-             (ability
-              :name "Human Intelligence"
-              :summary
-               "* Intelligence gathered from a person on the ground.
-                * Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
-              :titles "HUMINT")
-            "Intelligence Network"
-             (ability
-              :name "Intelligence Network"
-              :reference "If you thought there was some secret cell somewhere working Al Qaedia. Then I want you to know you're wrong. This it it. There is no working group coming to the rescue. There is nobody else hidden on some other floor. There is just us... and we are failing!... They murdered 3000 of our citizens..in cold-blood and they have slaughtered our forward deploy. And what the fuck have we done about it, huh? What have we done?!  We have 20 leadership names. We have only eliminated 4 of them. I want targets. Do your fucking jobs. Bring me people to kill. - Zero Dark Thirty")
-            "Lip Reading"
-             (ability
-              :name "Lip Reading"
-              :summary "* Attempt to understand what is being said without the benefit of hearing. The more [Hits] rolled, the more accurate the interpretation.")
-            "Measurement and Signals"
-             (ability
-              :name "Measurement and Signals"
-              :summary "* Intelligence gathered from the signatures (distinctive characteristics) of fixed or dynamic target sources. This includes radar, acoustic, nuclear, chemical, and biological intelligence."
-              :titles "MASINT")
-            :Misdirection
-             (ability
-              :name "Misdirection"
-              :reference "* Smoke and Mirrors... Classic Misdirection - Leblanc, Runeterra")
-            "Open Source Intelligence"
-             (ability
-              :name "Open Source Intelligence"
-              :summary "* Intelligence gathered from open sources."
-              :titles "OSINT")
-            :Propaganda
-             (ability
-              :name "Propaganda")
-            "Quick Change"
-             (ability
-              :name "Quick Change")
-            :Sabotage
-             (ability
-              :name "Sabotage"
-              :titles "Saboteur")
-            "Signals Intelligence"
-             (ability
-              :name "Signals Intelligence"
-              :reference "* Quiller"
-              :summary "* Intelligence gathered from interception of signals."
-              :titles "SIGINT, Signals")
-            :Subversion
-             (ability
-              :name "Subversion")
-            "Technical Intelligence"
-             (ability
-              :name "Technical Intelligence"
-              :summary "* Intelligence gathered from analysis of weapons and equipment."
-              :titles "TECHINT")
-            "Whispering Campaign"
-             (ability
-              :name "Whispering Campaign")))
+           (base/abilitymap<-abilitylist
+            (ability
+             :name "Counterintelligence")
+            (ability
+             :name "Cyber Intelligence"
+             :summary "* Intelligence gathered from computer networks."
+             :titles "CYBINT, DNINT, Digital Network Intelligence")
+            (ability
+             :name "Eavesdrop"
+             :summary "* Listen in to conversations without being detected.")
+            (ability
+             :name "Infiltrate"
+             :summary
+              "* [Defense] - Mind
+               * [Deploy] - Deploy this unit in waiting area.
+               * [Action] - Replace any non-unique unit with this unit.")
+            (ability
+             :name "Geospatial Intelligence"
+             :summary
+              "* Intelligence gathered from satellite, aerial photography, mapping.
+               * Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
+             :titles "GEOINT, IMINT, Imagery Intelligence")
+            (ability
+             :name "Human Intelligence"
+             :summary
+              "* Intelligence gathered from a person on the ground.
+               * Espionage, Diplomats, Military Attaches, NGOs, Patrolling, POWs Detainees, Refugees, Strategic Reconnaissance, Traveller Debriefing"
+             :titles "HUMINT")
+            (ability
+             :name "Intelligence Network"
+             :reference
+              "If you thought there was some secret cell somewhere working Al Qaedia. Then I want you to know you're wrong. This it it. There is no working group coming to the rescue. There is nobody else hidden on some other floor. There is just us... and we are failing!... They murdered 3000 of our citizens..in cold-blood and they have slaughtered our forward deploy. And what the fuck have we done about it, huh? What have we done?! We have 20 leadership names. We have only eliminated 4 of them. I want targets. Do your fucking jobs. Bring me people to kill. - Zero Dark Thirty")
+            (ability
+             :name "Lip Reading"
+             :summary
+              "* Attempt to understand what is being said without the benefit of hearing. The more [Hits] rolled, the more accurate the interpretation.")
+            (ability
+             :name "Measurement and Signals"
+             :summary
+              "* Intelligence gathered from the signatures (distinctive characteristics) of fixed or dynamic target sources. This includes radar, acoustic, nuclear, chemical, and biological intelligence."
+             :titles "MASINT")
+            (ability
+             :name "Misdirection"
+             :reference
+              "* Smoke and Mirrors... Classic Misdirection - Leblanc, Runeterra")
+            (ability
+             :name "Open Source Intelligence"
+             :summary
+              "* Intelligence gathered from open sources."
+             :titles "OSINT")
+            (ability
+             :name "Propaganda")
+            (ability
+             :name "Quick Change")
+            (ability
+             :name "Sabotage"
+             :titles "Saboteur")
+            (ability
+             :name "Signals Intelligence"
+             :reference "* Quiller"
+             :summary "* Intelligence gathered from interception of signals."
+             :titles "SIGINT, Signals")
+            (ability
+             :name "Subversion")
+            (ability
+             :name "Technical Intelligence"
+             :summary "* Intelligence gathered from analysis of weapons and equipment."
+             :titles "TECHINT")
+            (ability
+             :name "Whispering Campaign")))
         :Faith
          (skill
           :name "Faith"

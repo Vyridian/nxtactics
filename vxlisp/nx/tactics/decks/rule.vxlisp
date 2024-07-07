@@ -8,7 +8,16 @@
   :id "action"
   :name "Action"
   :summary
-   "* Each [Turn] a Unit will get 2 Actions. These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]."))
+   "* Each [Turn] a Unit will get 2 Actions. These are [Move], [Fight], [Skill], [Recover], [Search], [Equip], and [Reload], and [Wait]."))
+
+(func card-equip-action : base/card
+ (base/card
+  :id "equip-action"
+  :name "Equip"
+  :summary
+   "* [Action]: Drop an item in one or more hands and equip another that is readily available in a holster, sheath, belt OR return an item in hand to a readily available spot.
+    * [Action]: Give or receive an item from an adjacent willing unit.
+    * [Double Action]: Drop an item in one or more hands and equip another that is in an inconvenient spot like a large bag, backpack, on your back, on another person, etc. OR return an item in hand to an inconvenient spot."))
 
 (func card-fight-action : base/card
  (base/card
@@ -45,6 +54,14 @@
   :summary
    "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]
     * Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."))
+
+(func card-reload-action : base/card
+ (base/card
+  :id "reload-action"
+  :name "Reload"
+  :summary
+   "* [Double Action]: Change a clip, nock an arrow.
+    * 4 Actions: Reload a revolver, a mortar, a machinegun or a crossbow."))
 
 (func card-search-action : base/card
  (base/card
@@ -125,6 +142,22 @@
   :summary
    "* Conscience"))
 
+(func card-cover : base/card
+ (base/card
+  :id "cover"
+  :name "Cover"
+  :summary
+   "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.
+    * If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:
+    ** 25% Cover: Initiative:-1.
+    ** 50% Cover: Initiative:-2.
+    ** 75% Cover: Initiative:-3.
+    ** 100% Cover: Initiative:-4.
+    * If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
+    ** Insubstantial: Resolve damage normally.
+    ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
+    ** Unit: That unit is the new target. Resolve a new Combat with it instead."))
+
 (func card-damageguide : base/card
  (base/card
   :id "damageguide"
@@ -139,10 +172,10 @@
     * Damage: Count the Damage pile and apply the effect on the Hit Location card to the target.
     * Cleanup: Discard other cards. Shuffle if a Wild was revealed."))
 
-(func card-defenselayers : base/card
+(func card-damagereduction : base/card
  (base/card
-  :id "defenselayers"
-  :name "Defense Layers"
+  :id "damagereduction"
+  :name "Damage Reduction"
   :summary
    "* Obstacles
     * Cover
@@ -181,10 +214,10 @@
   :summary
    "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.
     * Move Out: [Fatigue]:+1 to [Move]:1. You may Turn or Drift once during this Move.
-    * Push Your Luck: [Stun]:+1 to reduce a Double Action to an Action.
+    * Double Down: [Stun]:+1 to reduce a Double Action to an Action.
     * Grit Your Teeth: [Stress]:+1 to ignore the effect of all of your negative statuses this turn.
     * Final Sprint: [Slow]:+1 to [Move].
-    * Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."))
+    * Opportunity Combat: IF a Target moves from one adjacent space of a Unit to another THEN that Unit may take a [Stun] to take a free [Fight] against it."))
 
 (func card-game : base/card
  (base/card
@@ -224,16 +257,7 @@
   :summary
    "* Most distance effects require line of sight to the target.
     * Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).
-    * If nothing is between you, then you have full line of sight. Resolve normally.
-    * If something is between you, guess at the amount of Cover provided and resolve with the following penalties:
-    ** 25% Cover: Initiative:-1.
-    ** 50% Cover: Initiative:-2.
-    ** 75% Cover: Initiative:-3.
-    ** 100% Cover: Initiative:-4.
-    * If successful, assign each 25% to whatever is giving cover (this can include fog, smoke, tables, walls, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.
-    ** Insubstantial: Resolve damage normally.
-    ** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.
-    ** Unit: That unit is the new target. Resolve a new Combat with it instead."))
+    * If nothing is between you, then you have full line of sight. Resolve normally."))
 
 (func card-mapscale-1 : base/card
  (base/card
@@ -405,7 +429,9 @@
   :name "Turn"
   :summary
    "* Each [Round], each [Unit] will get a [Turn] based on [Turn Order].
-    * Each Turn a Unit will get 2 [Action]s. These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]."))
+    * Turn Start: Draw from your [Fate] deck. [Recover].
+    * Take 2 Actions: These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]. You may perform the same Action twice.
+    * Turn End: The next unit in Turn Order performs their turn until the Round Ends."))
 
 (func card-unfamiliaritem : base/card
  (base/card
@@ -434,13 +460,16 @@
      (card-fight-action)
      (card-sklll-action)
      (card-recover-action)
+     (card-equip-action)
+     (card-reload-action)
      (card-search-action)
      (card-wait-action)
      (card-free-action)
      (card-lineofsight)
      (card-initiative)
      (card-damageguide)
-     (card-defenselayers)
+     (card-damagereduction)
+     (card-cover)
      (card-character)
      (card-body)
      (card-mind)

@@ -3854,10 +3854,10 @@ Way up in the middle of the air"
           :name "Ribbon Guard"
           :summary
            "* Ribbons are unusual, two-dimensional entities. They never communicate, but they understand orders and always follow them accurately without concern for their own safety, so they are favored as guards or servants.
-* Description - They appear as floating banners of fabric of varying colors, but they have no actual depth. They ripple slowly through air or water like snakes and may strike or grapple opponents. They do not seem to eat, sleep or even breathe. It is unclear if they have independent thought or are merely automatons.
-* Powers:
-** [Resistance]: [Resist Impact], [Resist Pierce], [Resist Electricity], [Resist Vacuum], [Resist Radiation], [Immune Vaccuum], [Cannot Eat], [Cannot Sleep]
-** [Vulnerability]: [Vulnerable to Slash], [Vulnerable to Fire], [Vulnerable to Cold]")))
+           * Description - They appear as floating banners of fabric of varying colors, but they have no actual depth. They ripple slowly through air or water like snakes and may strike or grapple opponents. They do not seem to eat, sleep or even breathe. It is unclear if they have independent thought or are merely automatons.
+           * Powers:
+           ** [Resistance]: [Resist Impact], [Resist Pierce], [Resist Electricity], [Resist Vacuum], [Resist Radiation], [Immune Vaccuum], [Cannot Eat], [Cannot Sleep]
+           ** [Vulnerability]: [Vulnerable to Slash], [Vulnerable to Fire], [Vulnerable to Cold]")))
     :Mirrorlands
      (section
       :name "Mirrorlands"
@@ -3866,13 +3866,14 @@ Way up in the middle of the air"
         "Mirror Reflection"
          (unit
           :name "Mirror Reflection"
-          :summary "* A Mirror Reflection is being from the Mirrorlands that has no personal definition but longs for the definition of others. To this end, they become a mirror image of another being and try to impersonate the person though they lack any memories of the original. It would be practical to dispose of the original, but they are always only a reflection so they would die as well.")
+          :summary
+           "* A Mirror Reflection is being from the Mirrorlands that has no personal definition but longs for the definition of others. To this end, they become a mirror image of another being and try to impersonate the person though they lack any memories of the original. It would be practical to dispose of the original, but they are always only a reflection so they would die as well.")
         "Mirror Shard"
          (unit
           :name "Mirror Shard"
           :summary
            "* A Mirror Shard is a weaker form of a [Mirror Reflection]. It copies some single aspect of the original but is otherwise an empty shell. This incompleteness drives them mad with desperation. They are always drawn to the those they copy and are usually irrationally destructive.
-* [Action] [Target]: The Mirror Shard becomes the same [Mass] as the target. Then choose one [Skill] or [Power] to copy. The Mirror Shard gains that Skill/Power and loses all other Skills and Powers. It [Body], [Mind], and [Will] are altered accordingly."))))))
+            * [Action] [Target]: The Mirror Shard becomes the same [Mass] as the target. Then choose one [Skill] or [Power] to copy. The Mirror Shard gains that Skill/Power and loses all other Skills and Powers. It [Body], [Mind], and [Will] are altered accordingly."))))))
 
 (func chapter_darkling : base/chapter
  (chapter

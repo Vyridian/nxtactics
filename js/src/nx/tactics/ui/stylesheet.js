@@ -750,7 +750,7 @@ export default class nx_tactics_ui_stylesheet {
       ":fontface",
       nx_tactics_ui_stylesheet.c_fontface1,
       ":fontsize",
-      60
+      70
     ))
 
     // (const font-text-2)
@@ -761,7 +761,7 @@ export default class nx_tactics_ui_stylesheet {
       ":fontface",
       nx_tactics_ui_stylesheet.c_fontface1,
       ":fontsize",
-      30
+      40
     ))
 
     // (const font-textarea)
@@ -772,7 +772,7 @@ export default class nx_tactics_ui_stylesheet {
       ":fontface",
       nx_tactics_ui_stylesheet.c_fontface1,
       ":fontsize",
-      60
+      70
     ))
 
     // (const font-title)

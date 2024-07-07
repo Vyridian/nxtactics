@@ -1863,7 +1863,7 @@ export default class nx_tactics_books_skills {
                   ":name",
                   "Detail Oriented",
                   ":summary",
-                  "IF during a [Search] you find an item that has [Body]:5x0 or more THEN ONCE you may resuffle that item into the [Search Deck] and draw another instead."
+                  "ONCE IF you found and item during a [Search] AND had [Hits]:10+ THEN you may resuffle that item into the [Search Deck] and draw again taking the new result insteaad."
                 ),
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
@@ -3724,15 +3724,12 @@ export default class nx_tactics_books_skills {
               ":stat",
               "Shadow",
               ":abilitymap",
-              vx_core.f_new(
-                nx_tactics_base.t_abilitymap,
-                ":Counterintelligence",
+              nx_tactics_base.f_abilitymap_from_abilitylist(
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Counterintelligence"
                 ),
-                "Cyber Intelligence",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3742,7 +3739,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "CYBINT, DNINT, Digital Network Intelligence"
                 ),
-                ":Eavesdrop",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3750,7 +3746,6 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* Listen in to conversations without being detected."
                 ),
-                ":Infiltrate",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3758,7 +3753,6 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* [Defense] - Mind\n* [Deploy] - Deploy this unit in waiting area.\n* [Action] - Replace any non-unique unit with this unit."
                 ),
-                "Geospatial Intelligence",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3768,7 +3762,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "GEOINT, IMINT, Imagery Intelligence"
                 ),
-                "Human Intelligence",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3778,15 +3771,13 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "HUMINT"
                 ),
-                "Intelligence Network",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Intelligence Network",
                   ":reference",
-                  "If you thought there was some secret cell somewhere working Al Qaedia. Then I want you to know you're wrong. This it it. There is no working group coming to the rescue. There is nobody else hidden on some other floor. There is just us... and we are failing!... They murdered 3000 of our citizens..in cold-blood and they have slaughtered our forward deploy. And what the fuck have we done about it, huh? What have we done?!  We have 20 leadership names. We have only eliminated 4 of them. I want targets. Do your fucking jobs. Bring me people to kill. - Zero Dark Thirty"
+                  "If you thought there was some secret cell somewhere working Al Qaedia. Then I want you to know you're wrong. This it it. There is no working group coming to the rescue. There is nobody else hidden on some other floor. There is just us... and we are failing!... They murdered 3000 of our citizens..in cold-blood and they have slaughtered our forward deploy. And what the fuck have we done about it, huh? What have we done?! We have 20 leadership names. We have only eliminated 4 of them. I want targets. Do your fucking jobs. Bring me people to kill. - Zero Dark Thirty"
                 ),
-                "Lip Reading",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3794,7 +3785,6 @@ export default class nx_tactics_books_skills {
                   ":summary",
                   "* Attempt to understand what is being said without the benefit of hearing. The more [Hits] rolled, the more accurate the interpretation."
                 ),
-                "Measurement and Signals",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3804,7 +3794,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "MASINT"
                 ),
-                ":Misdirection",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3812,7 +3801,6 @@ export default class nx_tactics_books_skills {
                   ":reference",
                   "* Smoke and Mirrors... Classic Misdirection - Leblanc, Runeterra"
                 ),
-                "Open Source Intelligence",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3822,19 +3810,16 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "OSINT"
                 ),
-                ":Propaganda",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Propaganda"
                 ),
-                "Quick Change",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Quick Change"
                 ),
-                ":Sabotage",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3842,7 +3827,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "Saboteur"
                 ),
-                "Signals Intelligence",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3854,13 +3838,11 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "SIGINT, Signals"
                 ),
-                ":Subversion",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
                   "Subversion"
                 ),
-                "Technical Intelligence",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",
@@ -3870,7 +3852,6 @@ export default class nx_tactics_books_skills {
                   ":titles",
                   "TECHINT"
                 ),
-                "Whispering Campaign",
                 vx_core.f_new(
                   nx_tactics_base.t_ability,
                   ":name",

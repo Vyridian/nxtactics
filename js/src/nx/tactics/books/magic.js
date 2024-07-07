@@ -3401,7 +3401,7 @@ export default class nx_tactics_books_magic {
                   ":name",
                   "Fortune Telling",
                   ":summary",
-                  "* [Deploy]: Roll vs. target Spirit.  If you succeed, you receive +1 on all actions against him this encounter.\n* Casting - In various methods of divination, bones, stones, cards, sticks and other objects are cast onto the ground or a special cloth so that an insight into the life patterns can be revealed.\n* Bibliomancy - Reading random passages from a book, such as Liber Legis or the I Ching.\n* Tea Leaves\n* Tarot"
+                  "* [Deploy]: Roll vs. target Spirit. If you succeed, you receive +1 on all actions against him this encounter.\n* Casting - In various methods of divination, bones, stones, cards, sticks and other objects are cast onto the ground or a special cloth so that an insight into the life patterns can be revealed.\n* Bibliomancy - Reading random passages from a book, such as Liber Legis or the I Ching.\n* Tea Leaves\n* Tarot"
                 ),
                 ":Hallmark",
                 vx_core.f_new(

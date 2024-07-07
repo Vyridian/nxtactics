@@ -58,6 +58,7 @@ export default class nx_tactics_decks_scenario_murintrail {
               nx_tactics_decks_data.f_tactics_ability("Sneak"),
               nx_tactics_decks_data.f_tactics_skill("Business"),
               nx_tactics_decks_data.f_tactics_ability("Bargain"),
+              nx_tactics_decks_data.f_tactics_skill("Tradeskills"),
               nx_tactics_decks_scenario_murintrail.f_item_coppercoins(),
               nx_tactics_decks_scenario_murintrail.f_item_silvercoins(),
               nx_tactics_decks_scenario_murintrail.f_item_goldcoins(),
@@ -67,6 +68,7 @@ export default class nx_tactics_decks_scenario_murintrail {
               nx_tactics_decks_scenario_murintrail.f_item_woodaxe(),
               nx_tactics_decks_data.f_tactics_item("Bare Handed"),
               nx_tactics_decks_data.f_tactics_item("Shortbow"),
+              nx_tactics_decks_scenario_murintrail.f_item_arrowquiver(),
               nx_tactics_decks_scenario_murintrail.f_item_dagger(),
               nx_tactics_decks_scenario_murintrail.f_item_hammer(),
               nx_tactics_decks_scenario_murintrail.f_item_shieldbuckler(),
@@ -150,6 +152,38 @@ export default class nx_tactics_decks_scenario_murintrail {
   }
 
   /**
+   * @function item_arrowquiver
+   * @return {item}
+   */
+  static t_item_arrowquiver = {
+    vx_type: vx_core.t_type
+  }
+  static e_item_arrowquiver = {
+    vx_type: nx_tactics_decks_scenario_murintrail.t_item_arrowquiver
+  }
+
+  // (func item-arrowquiver)
+  static f_item_arrowquiver() {
+    let output = nx_tactics_base.e_item
+    output = vx_core.f_new(
+      nx_tactics_base.t_item,
+      ":name",
+      "Arrow Quiver",
+      ":image",
+      "images/cards/item-arrowquiver.svg",
+      ":summary",
+      "* Holds up to 20 arrows\n* [Location]: [Shoulders] Back",
+      ":body",
+      "10x-1",
+      ":mass",
+      "1kg/2.2lb",
+      ":length",
+      "6cm/2ft"
+    )
+    return output
+  }
+
+  /**
    * @function item_axehand
    * @return {item}
    */
@@ -170,7 +204,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":image",
       "images/cards/item-axehand.svg",
       ":summary",
-      "* [Fight]: [Melee]\n* [Damage]: [Size Bonus] [Hack] [Slash]\n* [Location]: [1-hand]",
+      "* [Fight]: [Melee]\n* [Damage]: [Body] [Hack] [Slash]\n* [Location]: [1-hand]",
       ":body",
       "9x-1",
       ":mass",
@@ -230,7 +264,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":image",
       "images/cards/item-dagger.svg",
       ":summary",
-      "* [Fight]: [Close Combat] or [Melee]\n* [Damage]: [Size Bonus] [Pierce] [Slash]\n* [Location]: [1-hand]",
+      "* [Fight]: [Close Combat] or [Melee]\n* [Damage]: [Body] [Pierce] [Slash]\n* [Location]: [1-hand]",
       ":body",
       "5x-1",
       ":mass",
@@ -324,7 +358,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":image",
       "images/cards/item-hammer.svg",
       ":summary",
-      "* [Fight]: [Melee]\n* [Damage]: [Size Bonus]+2 [Bash]\n* [Location]: [1-hand]",
+      "* [Fight]: [Melee]\n* [Damage]: [Body]+2 [Bash]\n* [Location]: [1-hand]",
       ":body",
       "2x0",
       ":mass",
@@ -384,7 +418,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":image",
       "images/cards/item-longsword.svg",
       ":summary",
-      "* [Fight]: [Melee]\n* [Damage]: [Size Bonus]+1 [Pierce] [Slash]\n* [Location]: [1-hand]\n* [Armor]: 1x1",
+      "* [Fight]: [Melee]\n* [Damage]: [Body]+1 [Pierce] [Slash]\n* [Location]: [1-hand]\n* [Armor]: 1x1",
       ":body",
       "10x-1",
       ":mass",
@@ -564,7 +598,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":image",
       "images/cards/item-shortspear.svg",
       ":summary",
-      "* [Fight]: [Melee]\n* [Damage]: [Size Bonus]+1 [Pierce] [Slash]\n* [Location]: [1-hand]\n* [Armor]: 1x1",
+      "* [Fight]: [Melee]\n* [Damage]: [Body]+1 [Pierce] [Slash]\n* [Location]: [1-hand]\n* [Armor]: 1x1",
       ":body",
       "10x-1",
       ":mass",
@@ -594,7 +628,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":image",
       "images/cards/item-shortsword.svg",
       ":summary",
-      "* [Fight]: [Melee]\n* [Damage]: [Size Bonus]+1 [Pierce] [Slash]\n* [Location]: [1-hand]\n* [Armor]: 1x1",
+      "* [Fight]: [Melee]\n* [Damage]: [Body]+1 [Pierce] [Slash]\n* [Location]: [1-hand]\n* [Armor]: 1x1",
       ":body",
       "10x-1",
       ":mass",
@@ -654,7 +688,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":image",
       "images/cards/item-spear.svg",
       ":summary",
-      "* [Fight]: [Melee] [Reach]\n* [Damage]: [Size Bonus]+3 [Pierce] [Slash]\n* [Location]: [2-hand]\n* [Armor]: 1x1",
+      "* [Fight]: [Melee] [Reach]\n* [Damage]: [Body]+3 [Pierce] [Slash]\n* [Location]: [2-hand]\n* [Armor]: 1x1",
       ":body",
       "3x0",
       ":mass",
@@ -716,7 +750,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":image",
       "images/cards/item-woodaxe.svg",
       ":summary",
-      "* [Fight]: [Melee]-1\n* [Damage]: [Size Bonus]+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]: 1x1",
+      "* [Fight]: [Melee]-1\n* [Damage]: [Body]+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]: 1x1",
       ":body",
       "3x0",
       ":mass",
@@ -1798,7 +1832,7 @@ export default class nx_tactics_decks_scenario_murintrail {
         vx_core.f_new(
           nx_tactics_base.t_unitskill,
           ":skill",
-          nx_tactics_decks_data.f_tactics_skill("Tradeskill"),
+          nx_tactics_decks_data.f_tactics_skill("Tradeskills"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -1897,7 +1931,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               nx_tactics_base.t_unitability,
               ":ability",
-              nx_tactics_decks_data.f_tactics_skill("Bargain")
+              nx_tactics_decks_data.f_tactics_ability("Bargain")
             )
           )
         )
@@ -2169,6 +2203,8 @@ export default class nx_tactics_decks_scenario_murintrail {
       "Wooden Cart",
       ":image",
       "images/cards/unit-woodencart.svg",
+      ":imgmirror",
+      true,
       ":body",
       "2x2",
       ":mass",
@@ -2230,6 +2266,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-murintrail": nx_tactics_decks_scenario_murintrail.e_deck_murintrail,
       "item-armor-leathercuirass": nx_tactics_decks_scenario_murintrail.e_item_armor_leathercuirass,
+      "item-arrowquiver": nx_tactics_decks_scenario_murintrail.e_item_arrowquiver,
       "item-axehand": nx_tactics_decks_scenario_murintrail.e_item_axehand,
       "item-coppercoins": nx_tactics_decks_scenario_murintrail.e_item_coppercoins,
       "item-dagger": nx_tactics_decks_scenario_murintrail.e_item_dagger,
@@ -2288,6 +2325,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-murintrail": nx_tactics_decks_scenario_murintrail.t_deck_murintrail,
       "item-armor-leathercuirass": nx_tactics_decks_scenario_murintrail.t_item_armor_leathercuirass,
+      "item-arrowquiver": nx_tactics_decks_scenario_murintrail.t_item_arrowquiver,
       "item-axehand": nx_tactics_decks_scenario_murintrail.t_item_axehand,
       "item-coppercoins": nx_tactics_decks_scenario_murintrail.t_item_coppercoins,
       "item-dagger": nx_tactics_decks_scenario_murintrail.t_item_dagger,
@@ -2389,6 +2427,24 @@ export default class nx_tactics_decks_scenario_murintrail {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario_murintrail.f_item_armor_leathercuirass
+    }
+
+    // (func item-arrowquiver)
+    nx_tactics_decks_scenario_murintrail.t_item_arrowquiver['vx_value'] = {
+      name          : "item-arrowquiver",
+      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario_murintrail.f_item_arrowquiver
     }
 
     // (func item-axehand)

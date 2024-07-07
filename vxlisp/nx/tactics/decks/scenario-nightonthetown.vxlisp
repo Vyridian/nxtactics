@@ -9,7 +9,7 @@
   :image "images/cards/item-axehand.svg"
   :summary
    "* Melee: [Hack] [Slash]
-    * Hit: [Size Bonus]
+    * Hit: [Body]
     * Location: [1-hand]"
   :body "9x-1"
   :mass "900g/2lb"))
@@ -35,7 +35,7 @@
   :image "images/cards/item-knife.svg"
   :summary
    "* [Fight]: [Close Combat]
-    * [Damage]: [Size Bonus]-1 [Pierce] [Slash]
+    * [Damage]: [Body]-1 [Pierce] [Slash]
     * [Location]: [1-hand]"
   :body "5x-1"
   :mass "500g/1lb"
@@ -92,7 +92,7 @@
   :image "images/cards/item-spear.svg"
   :summary
    "* [Fight]: [Melee] [Reach]
-    * [Damage]: [Size Bonus]+3 [Pierce] [Slash]
+    * [Damage]: [Body]+3 [Pierce] [Slash]
     * [Location]: [2-hand]
     * [Armor]:1x1"
   :body "3x0"
@@ -105,7 +105,7 @@
   :summary
    "* [Fight]: [Melee]
     * [Initiative]:-1
-    * [Damage]: [Size Bonus]+3 [Hack] [Slash]
+    * [Damage]: [Body]+3 [Hack] [Slash]
     * [Location]: [2-hand]
     * [Armor]:1x1"
   :body "3x0"
@@ -294,20 +294,28 @@
          :ability (data/tactics-ability "Bite")))))))
 
 (func deck-nightonthetown : base/deck
+ (let : base/deck
+  [professor : base/card := (unit-theprofessor)
+   professori : base/cardimage := (base/cardimage<-card professor)]
  (base/deck
   :name "Night on the Town"
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     (unit-theprofessor)
-     (rule-zombie)
-     (unit-zombiedog)
-     (unit-zombierunner)
-     (unit-zombiewalker)
-     (data/tactics-item "Bare Handed")
-     (data/tactics-item "Shortbow")
+     professor
+     professori
      (data/tactics-ability "Grab")
      (data/tactics-ability "Bite")
+     (data/tactics-ability "Detail Oriented")
+     (item-monocle)
+     (data/tactics-item "Shortbow")
+     (unit-zombiedog)
+     (base/cardimage<-card (unit-zombiedog))
+     (unit-zombierunner)
+     (base/cardimage<-card (unit-zombierunner))
+     (unit-zombiewalker)
+     (base/cardimage<-card (unit-zombiewalker))
+     (data/tactics-item "Bare Handed")
      (item-lockcombination)
      (item-fireaxe)
      (item-jerrycan)
@@ -315,7 +323,6 @@
      (item-knife)
      (item-liquorbottle)
      (item-molotovcocktail)
-     (item-monocle)
      (item-revolver)
      (item-revolverammo)
      (item-rifle)
@@ -330,4 +337,4 @@
      (place-gunstore)
      (place-policestation)
      (place-street)
-     ))))
+     )))))

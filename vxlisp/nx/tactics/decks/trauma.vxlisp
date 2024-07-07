@@ -623,8 +623,6 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     trauma-6c
-/*
      trauma-wild-black
      trauma-wild-red
      trauma-ac
@@ -659,6 +657,7 @@
      trauma-7d
      trauma-7h
      trauma-7s
+     trauma-6c
      trauma-6d
      trauma-6h
      trauma-6s
@@ -678,7 +677,6 @@
      trauma-2d
      trauma-2h
      trauma-2s
-*/
 )))
  :doc "Trauma Deck")
 

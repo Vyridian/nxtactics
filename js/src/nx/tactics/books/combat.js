@@ -2001,11 +2001,9 @@ export default class nx_tactics_books_combat {
               ":name",
               "Composite Bow",
               ":summary",
-              "* The main advantage of composite bows over self bows (made from a single piece of wood) is their combination of smaller size with high power. They are therefore much more suitable for use from horseback, and presumably from a chariot.\n* Constructing composite bows requires much more time and materials than self bows, and the animal glue traditionally used can lose strength in humid conditions and be quickly ruined by submersion. For most practical non-mounted archery purposes, composite construction offers no advantage; 'the initial velocity is about the same for all types of bow, the design parameters appear to be less important than is often claimed.' However, their compact size make them superior for horsemen.\n* [Attack]: [+1 Range], [+1 Piercing]",
+              "* [Fight]: [Ranged]\n* [Damage]: 10x1 [Pierce] [Slash]\n* [Range]: 10x1 100m/300ft\n* [Location]: [2-hand]\n* The main advantage of composite bows over self bows (made from a single piece of wood) is their combination of smaller size with high power. They are more suitable for use from horseback or chariot.\n* Constructing composite bows requires much more time and materials than self bows, and the animal glue traditionally used can lose strength in humid conditions and be quickly ruined by submersion. For most practical non-mounted archery purposes, composite construction offers no advantage; 'the initial velocity is about the same for all types of bow, the design parameters appear to be less important than is often claimed.' However, their compact size make them superior for horsemen.",
               ":energy",
-              "170J",
-              ":modifiers",
-              "Piercing"
+              "170J"
             ),
             vx_core.f_new(
               nx_tactics_base.t_item,
@@ -2019,7 +2017,7 @@ export default class nx_tactics_books_combat {
               ":titles",
               "Daikyu",
               ":summary",
-              "* [Fight]: [Ranged]\n* [Damage]:10x1 [Pierce] [Slash]\n* [Range]:10x1 100m/300ft\n* [Location]: [2-hand]",
+              "* [Fight]: [Ranged]\n* [Damage]: 10x1 [Pierce] [Slash]\n* [Range]: 10x1 100m/300ft\n* [Location]: [2-hand]",
               ":energy",
               "156J"
             ),
@@ -2034,7 +2032,7 @@ export default class nx_tactics_books_combat {
               ":reference",
               "Can fire about 6 aimed shots or 12 unaimed shots per minute.",
               ":summary",
-              "* [Fight]: [Ranged]\n* [Damage]:8x1 [Pierce] [Slash]\n* [Range]:2x1 20m/60ft\n* [Location]: [2-hand]",
+              "* [Fight]: [Ranged]\n* [Damage]: 8x1 [Pierce] [Slash]\n* [Range]: 2x1 20m/60ft\n* [Location]: [2-hand]\n* [Shots]: 0 Max:1\n* [Reload]: [Action]",
               ":energy",
               "80J",
               ":body",
@@ -4198,7 +4196,7 @@ export default class nx_tactics_books_combat {
               ":image",
               "images/cards/item-barehanded.svg",
               ":summary",
-              "* [Fight]: [Close Combat] or [Melee]\n* [Damage]: [Size Bonus] [Bash]"
+              "* [Fight]: [Close Combat] or [Melee]\n* [Damage]: [Body] [Bash]"
             )
           ),
           ":skillmap",
@@ -4226,7 +4224,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Punch",
                   ":summary",
-                  "* [Fight]: [Close Combat]\n* [Damage]: [Size Bonus] [Bash]"
+                  "* [Fight]: [Close Combat]\n* [Damage]: [Body] [Bash]"
                 ),
                 ":Kick",
                 vx_core.f_new(
@@ -4234,7 +4232,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Kick",
                   ":summary",
-                  "* [Low Attack]\n* [Fight]: [Close Combat]-1\n* [Damage]: [Size Bonus]+1 [Bash]"
+                  "* [Low Attack]\n* [Fight]: [Close Combat]-1\n* [Damage]: [Body]+1 [Bash]"
                 ),
                 ":Grab",
                 vx_core.f_new(
@@ -4242,7 +4240,7 @@ export default class nx_tactics_books_combat {
                   ":name",
                   "Grab",
                   ":summary",
-                  "* [Fight]: [Close Combat]\n* [Damage]: [Size Bonus] [Hold] [Lock]\n* Attempt to grab a unit."
+                  "* [Fight]: [Close Combat]\n* [Damage]: [Body] [Hold] [Lock]\n* Attempt to grab a unit."
                 ),
                 ":Drag",
                 vx_core.f_new(

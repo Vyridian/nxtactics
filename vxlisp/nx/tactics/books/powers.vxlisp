@@ -1430,16 +1430,16 @@ counter-measures, and by treating the power plant with the respect it deserves. 
           :reference "* Fantasy... can only survive with an underlying reality. Reality... is the stillness buried deep beneath the illusion. This is eternity. - Raiden Shogun, Genshin Impact"
           :summary
            "* Illusion is the art of fooling the target into believing in something that is not really there. Illusion is Limited by [Art].
-* Illusions
-** Alter the perceptions to see and hear things that do not exist.
-** Skill roll determines the difficulty to detect the illusion, but even those who detect the illusion cannot see through the illusion including the caster.
-** Illusions may be enormous, altering terrain and populating it with any number of creatures.
-** Illusions may cover real things, but cannot make them disappear.
-** Illusions may not do damage or take damage since they are not really there.
-** Note: unliving creatures cannot detect or be influenced by illusions.
-* Phantasms
-** Phantasmal objects appear real, but are only partially real and are destroyed with a single [Damage Token].
-** All [Phantasm]s are moved independently each time the unit Moves.  All [Phantasm]s perform the same actions as the unit but no effect. When [Phantasm]s are attacked they take effects normally but are uneffected by effects except [Damage] which immediately destroys them."
+            * Illusions
+            ** Alter the perceptions to see and hear things that do not exist.
+            ** Skill roll determines the difficulty to detect the illusion, but even those who detect the illusion cannot see through the illusion including the caster.
+            ** Illusions may be enormous, altering terrain and populating it with any number of creatures.
+            ** Illusions may cover real things, but cannot make them disappear.
+            ** Illusions may not do damage or take damage since they are not really there.
+            ** Note: unliving creatures cannot detect or be influenced by illusions.
+            * Phantasms
+            ** Phantasmal objects appear real, but are only partially real and are destroyed with a single [Damage Token].
+            ** All [Phantasm]s are moved independently each time the unit Moves.  All [Phantasm]s perform the same actions as the unit but no effect. When [Phantasm]s are attacked they take effects normally but are uneffected by effects except [Damage] which immediately destroys them."
           :titles "Illusionist"
           :abilitymap
            (abilitymap
@@ -1447,8 +1447,7 @@ counter-measures, and by treating the power plant with the respect it deserves. 
              (ability
               :name "Conjure Effigy"
               :summary
-               "* Create a phantasmal copy of an object touched. The Effigy appears real in most ways, but does not
-function as the original and will shatter to dust if force is applied to it.")
+               "* Create a phantasmal copy of an object touched. The Effigy appears real in most ways, but does not function as the original and will shatter to dust if force is applied to it.")
             "Conjure Phantasmal Force"
              (ability
               :name "Conjure Phantasmal Force"
@@ -1469,14 +1468,16 @@ function as the original and will shatter to dust if force is applied to it.")
             :Forgetfulness
              (ability
               :name "Forgetfulness"
-              :summary "* Roll vs. Spirit. Target forgets a specific fact or time period.")
+              :summary
+               "* Roll vs. Spirit. Target forgets a specific fact or time period.")
             :Foxfire
              (ability
               :name "Foxfire")
             "Hidden Thing"
              (ability
               :name "Hidden Thing"
-              :summary "* A Phantasm may be placed on other objects making them partially or completely invisible.")
+              :summary
+               "* A Phantasm may be placed on other objects making them partially or completely invisible.")
             "Hypnotic Eyes"
              (ability
               :name "Hypnotic Eyes"
@@ -2716,7 +2717,7 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
                "* IF you have a [Hold] on a target
                 * THEN
                 ** [Fight]: [Close Combat]
-                ** [Damage]: [Size Bonus] [Pierce] [Slash] [Hack]")
+                ** [Damage]: [Body] [Pierce] [Slash] [Hack]")
             "Bull Rush"
              (ability
               :name "Bull Rush"
@@ -3317,23 +3318,23 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
               :reference "The Howling"
               :summary
                "* Requires: [Animal Form], [Beastman Form]
-* Action: Change to specific Crinos unit.
-** +2 Body, -2 Mind, +1 Spirit.
-** Clothes and Armor are destroyed or dropped.
-** All Equipment not in hands is dropped.
-** Gain [Natural Weaponry], [Armor], and [Regeneration] Abilities.
-** Each [[Bleeding]] or [[Damage]] Token taken grants a [[Rage]] Token.
-** Each [[Bleeding]] Token inflicted grants a [[Rage]] Token.
-** Each adjacent Ally or Foe slain grants a [[Rage]] Token.
-** Remove a [[Rage]] Token instead of gaining a [[Hold]], [[Control]], [[Morale]], [[Despair]] or [[Fear]] Token.
-** If [[Rage]] Tokens exceed Spirit, then roll [[Rage]] vs [[Spirit]] or gain a [[Berserk]] Token.
-** Duration: Until sunrise.")
+                * Action: Change to specific Crinos unit.
+                ** +2 Body, -2 Mind, +1 Spirit.
+                ** Clothes and Armor are destroyed or dropped.
+                ** All Equipment not in hands is dropped.
+                ** Gain [Natural Weaponry], [Armor], and [Regeneration] Abilities.
+                ** Each [[Bleeding]] or [[Damage]] Token taken grants a [[Rage]] Token.
+                ** Each [[Bleeding]] Token inflicted grants a [[Rage]] Token.
+                ** Each adjacent Ally or Foe slain grants a [[Rage]] Token.
+                ** Remove a [[Rage]] Token instead of gaining a [[Hold]], [[Control]], [[Morale]], [[Despair]] or [[Fear]] Token.
+                ** If [[Rage]] Tokens exceed Spirit, then roll [[Rage]] vs [[Spirit]] or gain a [[Berserk]] Token.
+                ** Duration: Until sunrise.")
             "Human Form"
              (ability
               :name "Human Form"
               :summary
                "* Action: Change back to human unit from other Lycanthropy form.
-* Duration: Indefinite")
+                * Duration: Indefinite")
             "Mark Territory"
              (ability
               :name "Mark Territory"
@@ -3356,18 +3357,19 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
               :name "Phase Jump"
               :summary
                "* The ability to move without travelling through the intervening space.
-* [Action]: Instantly move to any empty space up to 1/3 speed away without passing through any intervening spaces.")
+                * [Action]: Instantly move to any empty space up to 1/3 speed away without passing through any intervening spaces.")
             "Phase Walk"
              (ability
               :name "Phase Walk"
               :summary
                "* The ability to move through solid matter.
-* [Action]: Move at half speed ignoring terrain penalties or other objects. While Phase Walking, the user takes no physical damage (unless it is magical). If the move ends in a solid object, the user is still considered to be Phase Walking unitl it no longer ends it turn on a solid object. No attacks can be made this turn.")))
+                * [Action]: Move at half speed ignoring terrain penalties or other objects. While Phase Walking, the user takes no physical damage (unless it is magical). If the move ends in a solid object, the user is still considered to be Phase Walking unitl it no longer ends it turn on a solid object. No attacks can be made this turn.")))
         "Reality Warping"
          (power
           :name "Reality Warping"
           :reference "* Franklin Richards"
-          :summary "* Perhaps equal to Time Travel as the most powerful of all abilities. By altering reality, seemingly nothing is beyond possibility."
+          :summary
+           "* Perhaps equal to Time Travel as the most powerful of all abilities. By altering reality, seemingly nothing is beyond possibility."
           :abilitymap
            (abilitymap
             "Closed Universe"
@@ -3375,8 +3377,9 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
               :name "Closed Universe"
               :reference
                "* M.C. Escher, Relativity
-* Land of the Lost"
-              :summary "* Exits from a location loop back upon themselves to leave a person back where they started.")))
+                * Land of the Lost"
+              :summary
+               "* Exits from a location loop back upon themselves to leave a person back where they started.")))
         "Shape Change"
          (power
           :name "Shape Change"
@@ -3386,7 +3389,8 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
             "Physical Imitation"
              (ability
               :name "Physical Imitation"
-              :reference "* So, how do we know who's human? If I was an imitation, a perfect imitation, how would you know it was really me? - Childs, The Thing")))
+              :reference
+               "* So, how do we know who's human? If I was an imitation, a perfect imitation, how would you know it was really me? - Childs, The Thing")))
         "Size Control"
          (power
           :name "Size Control"
@@ -3417,11 +3421,13 @@ Body Armor may be permanent or temporary.  If permanent, no time is needed to ac
             :Offspring
              (ability
               :name "Offspring"
-              :reference "* A Cell gets out, and it will IMITATE EVERYTHING on the face of the EARTH! AND NOTHING CAN STOP IT! - Blair, The Thing")))
+              :reference
+               "* A Cell gets out, and it will IMITATE EVERYTHING on the face of the EARTH! AND NOTHING CAN STOP IT! - Blair, The Thing")))
         :Toxins
          (power
           :name "Toxins"
-          :reference "* Say 'ah'. Some poisons can kill people in the thousands with that amount. Like botulinum toxin. It inhibits acetylcholine release, causing loss of muscle tone, lethary, .. dizziness .., visual impairment.., heavy eyelids, intense thirst, loss of speech, vomiting, diarrhea, stomach distention, breathing difficulty.. then.. respiratory failure. - A.K.I, Street Fighter 6"
+          :reference
+           "* Say 'ah'. Some poisons can kill people in the thousands with that amount. Like botulinum toxin. It inhibits acetylcholine release, causing loss of muscle tone, lethary, .. dizziness .., visual impairment.., heavy eyelids, intense thirst, loss of speech, vomiting, diarrhea, stomach distention, breathing difficulty.. then.. respiratory failure. - A.K.I, Street Fighter 6"
           :titles "Poisonous, Venomous"
           :abilitymap
            (abilitymap

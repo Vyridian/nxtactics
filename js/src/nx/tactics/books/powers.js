@@ -6306,7 +6306,7 @@ export default class nx_tactics_books_powers {
                   ":name",
                   "Conjure Effigy",
                   ":summary",
-                  "* Create a phantasmal copy of an object touched. The Effigy appears real in most ways, but does not\nfunction as the original and will shatter to dust if force is applied to it."
+                  "* Create a phantasmal copy of an object touched. The Effigy appears real in most ways, but does not function as the original and will shatter to dust if force is applied to it."
                 ),
                 "Conjure Phantasmal Force",
                 vx_core.f_new(
@@ -8604,7 +8604,7 @@ export default class nx_tactics_books_powers {
                   ":name",
                   "Bite",
                   ":summary",
-                  "* IF you have a [Hold] on a target\n* THEN\n** [Fight]: [Close Combat]\n** [Damage]: [Size Bonus] [Pierce] [Slash] [Hack]"
+                  "* IF you have a [Hold] on a target\n* THEN\n** [Fight]: [Close Combat]\n** [Damage]: [Body] [Pierce] [Slash] [Hack]"
                 ),
                 "Bull Rush",
                 vx_core.f_new(

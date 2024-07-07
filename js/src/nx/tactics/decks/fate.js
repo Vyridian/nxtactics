@@ -642,7 +642,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 3-10, Focus\n* Lose: Attack JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 2\n* Hits: 2, Draw 1\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 3-10, Focus\n* Lose: Attack AJQK, Defend, Evade 2, Counter, Wild\n* Tie : Attack 2\n* Hits: 2, Draw\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 3-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-2d)
@@ -655,7 +655,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 3-10, Defend, Evade, Counter\n* Lose: Attack, Focus JQKA, Wild\n* Tie : Focus 2\n* Hits: 2\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 3-10, Defend, Counter\n* Lose: Attack, Focus AJQK, Evade 2, Wild\n* Tie : Focus 2\n* Hits: 2\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\nEvade\n* Win : Attack, Focus 2-10, Counter, Wild\n* Loss: Focus AJQK\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-2h)
@@ -668,7 +668,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 3-10, Defend, Evade, Counter\n* Lose: Attack, Focus JQKA, Wild\n* Tie : Focus 2\n* Hits: 2\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 3-10, Defend, Counter\n* Lose: Attack, Focus AJQK, Evade 2, Wild\n* Tie : Focus 2\n* Hits: 2\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\nEvade\n* Win : Attack, Focus 2-10, Counter, Wild\n* Loss: Focus AJQK\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-2s)
@@ -681,7 +681,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 3-10, Focus\n* Lose: Attack JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 2\n* Hits: 2, Draw 1\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 3-10, Focus\n* Lose: Attack AJQK, Defend, Evade 2, Counter, Wild\n* Tie : Attack 2\n* Hits: 2, Draw\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 3-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-3c)
@@ -694,7 +694,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 4-10, Focus\n* Lose: Attack 2 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 3\n* Hits: 3, Draw 1\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 4-10, Focus\n* Lose: Attack AJQK 2, Defend 3-10, Evade 2-3, Counter, Wild\n* Tie : Attack 3, Defend 2-3 Overkill\n* Hits: 3, Draw\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-3, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 4-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-3d)
@@ -707,7 +707,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 4-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2 JQKA, Wild\n* Tie : Focus 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 4-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2, Evade 2-3, Wild\n* Tie : Focus 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.\n\nEvade\n* Win : Attack AJQK 3-10, Focus 3-10, Counter, Wild\n* Loss: Attack 2, Focus AJQK 2\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-3h)
@@ -720,7 +720,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 4-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2 JQKA, Wild\n* Tie : Focus 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 4-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2, Evade 2-3, Wild\n* Tie : Focus 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.\n\nEvade\n* Win : Attack AJQK 3-10, Focus 3-10, Counter, Wild\n* Loss: Attack 2, Focus AJQK 2\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-3s)
@@ -733,7 +733,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 4-10, Focus\n* Lose: Attack 2, Focus JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 4-10, Focus\n* Lose: Attack AJQK 2, Defend 3-10, Evade 2-3, Counter, Wild\n* Tie : Attack 3, Defend 2-3 Overkill\n* Hits: 3, Draw\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-3, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 4-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-4c)
@@ -746,7 +746,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 5-10, Focus\n* Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 4\n* Hits: 5, Draw 1\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 5-10\n* Lose: Attack AJQK 2-3, Defend 4-10, Evade 2-4, Counter, Wild\n* Tie : Attack 4, Defend 2-4 Overkill\n* Hits: 4, Focus, Draw\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-4, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 5-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-4d)
@@ -759,7 +759,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 5-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-3 JQKA, Wild\n* Tie : Focus 4\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 5-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-3, Evade 2-4, Wild\n* Tie : Focus 4\n* Hits: 4\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 4-10, Focus 4-10, Counter, Wild\n* Loss: Attack 2-3, Focus AJQK 2-3\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-4h)
@@ -772,7 +772,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 5-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-3 JQKA, Wild\n* Tie : Focus 4\n* Hits: 4\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 5-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-3, Evade 2-4, Wild\n* Tie : Focus 4\n* Hits: 4\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 4-10, Focus 4-10, Counter, Wild\n* Loss: Attack 2-3, Focus AJQK 2-3\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-4s)
@@ -785,7 +785,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 5-10, Focus\n* Lose: Attack 2-3 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 4\n* Hits: 4, Draw 1\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 5-10, Focus\n* Lose: Attack AJQK 2-3, Defend 4-10, Evade 2-4, Counter, Wild\n* Tie : Attack 4, Defend 2-4 Overkill\n* Hits: 4, Draw\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-4, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 5-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-5c)
@@ -798,7 +798,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 6-10, Focus\n* Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 5\n* Hits: 6, Draw 1\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 6-10, Focus\n* Lose: Attack AJQK 2-4, Defend 5-10, Evade 2-5, Counter, Wild\n* Tie : Attack 5, Defend 2-5 Overkill\n* Hits: 5, Draw\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-5, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 6-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-5d)
@@ -811,7 +811,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 6-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-4 JQKA, Wild\n* Tie : Focus 5\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 6-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-4, Evade 2-5, Wild\n* Tie : Focus 5\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 5-10, Focus 5-10, Counter, Wild\n* Loss: Attack 2-4, Focus AJQK 2-4\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-5h)
@@ -824,7 +824,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 6-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-4 JQKA, Wild\n* Tie : Focus 5\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 6-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-4, Evade 2-5, Wild\n* Tie : Focus 5\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 5-10, Focus 5-10, Counter, Wild\n* Loss: Attack 2-4, Focus AJQK 2-4\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-5s)
@@ -837,7 +837,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 6-10, Focus\n* Lose: Attack 2-4 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 5\n* Hits: 5, Draw 1\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 6-10, Focus\n* Lose: Attack AJQK 2-4, Defend 5-10, Evade 2-5, Counter, Wild\n* Tie : Attack 5, Defend 2-5 Overkill\n* Hits: 5, Draw\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-5, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 6-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-6c)
@@ -850,7 +850,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 7-10, Focus\n* Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 6\n* Hits: 6, Draw 1\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 7-10, Focus\n* Lose: Attack AJQK 2-5, Defend 6-10, Evade 2-6, Counter, Wild\n* Tie : Attack 7, Defend 2-6 Overkill\n* Hits: 6, Draw\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-6, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 7-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-6d)
@@ -863,7 +863,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 7-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-5 JQKA, Wild\n* Tie : Focus 6\n* Hits: 6\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 7-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-5, Evade 2-6, Wild\n* Tie : Focus 6\n* Hits: 6\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 6-10, Focus 6-10, Counter, Wild\n* Loss: Attack 2-5, Focus AJQK 2-5\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-6h)
@@ -876,7 +876,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 7-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-5 JQKA, Wild\n* Tie : Focus 6\n* Hits: 6\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 7-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-5, Evade 2-6, Wild\n* Tie : Focus 6\n* Hits: 6\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 6-10, Focus 6-10, Counter, Wild\n* Loss: Attack 2-5, Focus AJQK 2-5\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-6s)
@@ -889,7 +889,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 7-10, Focus\n* Lose: Attack 2-5 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 6\n* Hits: 6, Draw 1\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 7-10, Focus\n* Lose: Attack AJQK 2-5, Defend 6-10, Evade 2-6, Counter, Wild\n* Tie : Attack 7, Defend 2-6 Overkill\n* Hits: 6, Draw\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-6, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 7-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-7c)
@@ -902,7 +902,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 8-10, Focus\n* Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 7\n* Hits: 7, Draw 1\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 8-10, Focus\n* Lose: Attack AJQK 2-6, Defend 7-10, Evade 2-7, Counter, Wild\n* Tie : Attack 7, Defend 2-6 Overkill\n* Hits: 7, Draw\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-7, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 8-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-7d)
@@ -915,7 +915,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 8-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-6 JQKA, Wild\n* Tie : Focus 7\n* Hits: 7\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 8-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-6, Evade 2-7, Wild\n* Tie : Focus 7\n* Hits: 7\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 7-10, Focus 7-10, Counter, Wild\n* Loss: Attack 2-6, Focus AJQK 2-6\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-7h)
@@ -928,7 +928,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 8-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-6 JQKA, Wild\n* Tie : Focus 7\n* Hits: 7\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 8-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-6, Evade 2-7, Wild\n* Tie : Focus 7\n* Hits: 7\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 7-10, Focus 7-10, Counter, Wild\n* Loss: Attack 2-6, Focus AJQK 2-6\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-7s)
@@ -941,7 +941,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 8-10, Focus\n* Lose: Attack 2-6 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 7\n* Hits: 7, Draw 1\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 8-10, Focus\n* Lose: Attack AJQK 2-6, Defend 7-10, Evade 2-7, Counter, Wild\n* Tie : Attack 7, Defend 2-6 Overkill\n* Hits: 7, Draw\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-7, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 8-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-8c)
@@ -954,7 +954,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 9-10, Focus\n* Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 8\n* Hits: 8, Draw 1\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 9-10, Focus\n* Lose: Attack AJQK 2-7, Defend 8-10, Evade 2-8, Counter, Wild\n* Tie : Attack 8, Defend 2-7 Overkill\n* Hits: 8, Draw\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim:1\n\nDefend\n* Win : Attack 2-8, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 9-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-8d)
@@ -967,7 +967,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 9-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-7 JQKA, Wild\n* Tie : Focus 8\n* Hits: 8\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 9-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-7, Evade 2-8, Wild\n* Tie : Focus 8\n* Hits: 8\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 8-10, Focus 8-10, Counter, Wild\n* Loss: Attack 2-7, Focus AJQK 2-7\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-8h)
@@ -980,7 +980,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 9-10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-7 JQKA, Wild\n* Tie : Focus 8\n* Hits: 8\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 9-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-7, Evade 2-8, Wild\n* Tie : Focus 8\n* Hits: 8\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 8-10, Focus 8-10, Counter, Wild\n* Loss: Attack 2-7, Focus AJQK 2-7\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-8s)
@@ -993,7 +993,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 9-10, Focus\n* Lose: Attack 2-7 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 8\n* Hits: 8, Draw 1\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 9-10, Focus\n* Lose: Attack AJQK 2-7, Defend 8-10, Evade 2-8, Counter, Wild\n* Tie : Attack 8, Defend 2-7 Overkill\n* Hits: 8, Draw\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim:1\n\nDefend\n* Win : Attack 2-8, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 9-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-9c)
@@ -1006,7 +1006,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 10, Focus\n* Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 9\n* Hits: 9, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 10, Focus\n* Lose: Attack AJQK 2-8, Defend 9-10, Evade 2-9, Counter, Wild\n* Tie : Attack 9, Defend 2-8 Overkill\n* Hits: 9, Draw\n\nDefend\n* Win : Attack 2-9, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-9d)
@@ -1019,7 +1019,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 9\n* Hits: 9\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-8, Evade 2-9, Wild\n* Tie : Focus 9\n* Hits: 9\n\nEvade\n* Win : Attack AJQK 9-10, Focus 9-10, Counter, Wild\n* Loss: Attack 2-8, Focus AJQK 2-8\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-9h)
@@ -1032,7 +1032,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus 10, Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 9\n* Hits: 9\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Focus/Evade 10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-8, Evade 2-9, Wild\n* Tie : Focus 9\n* Hits: 9\n\nEvade\n* Win : Attack AJQK 9-10, Focus 9-10, Counter, Wild\n* Loss: Attack 2-8, Focus AJQK 2-8\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-9s)
@@ -1045,7 +1045,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack 10, Focus\n* Lose: Attack 2-8 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 9\n* Hits: 9, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Attack/Evade 10, Focus\n* Lose: Attack AJQK 2-8, Defend 9-10, Evade 2-9, Counter, Wild\n* Tie : Attack 9, Defend 2-8 Overkill\n* Hits: 9, Draw\n\nDefend\n* Win : Attack 2-9, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-ac)
@@ -1058,7 +1058,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hit: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Evade, Counter, Wild\n* Tie : Attack A, Defend Overkill\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-ad)
@@ -1071,7 +1071,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-ah)
@@ -1084,7 +1084,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-as)
@@ -1097,7 +1097,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Defend, Evade, Counter, Wild\n* Tie : Attack A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Evade, Counter, Wild\n* Tie : Attack A, Defend Overkill\n* Hit: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-jc)
@@ -1112,7 +1112,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 QK, Focus\n* Loss: Attack A, Defend, Evade, Counter, Wild\n* Tie : Attack J\n* Hits: 10\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack QK 2-10, Focus\n* Loss: Attack A, Evade, Counter, Wild\n* Tie : Attack J, Defend Overkill\n* Hits: 10\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-jd)
@@ -1127,7 +1127,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 QK, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 10\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus QK 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 10\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-jh)
@@ -1142,7 +1142,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 QK, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 10\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus QK 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 10\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-js)
@@ -1157,7 +1157,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 QK, Focus\n* Loss: Attack A, Defend, Evade, Counter, Wild\n* Tie : Attack J\n* Hits: 10\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack QK 2-10, Focus\n* Loss: Attack A, Evade, Counter, Wild\n* Tie : Attack J, Defend Overkill\n* Hits: 10\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-kc)
@@ -1170,7 +1170,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack AJQ, Evade, Counter, Wild\n* Tie : Attack K, Defend Overkill\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-kd)
@@ -1183,7 +1183,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus AJQ, Wild\n* Tie : Focus K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-kh)
@@ -1196,7 +1196,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus JQA, Wild\n* Tie : Focus K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus AJQ, Wild\n* Tie : Focus K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-ks)
@@ -1209,7 +1209,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack JQA, Defend, Evade, Counter, Wild\n* Tie : Attack K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack AJQ, Evade, Counter, Wild\n* Tie : Attack K, Defend Overkill\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-qc)
@@ -1222,7 +1222,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack K 2-10, Focus\n* Loss: Attack AJ, Evade, Counter, Wild\n* Tie : Attack Q, Defend Overkill\n* Hits: 10\n* Combo: QQ Hits: 20\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-qd)
@@ -1235,7 +1235,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus K 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus AJ, Wild\n* Tie : Focus Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-qh)
@@ -1250,7 +1250,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10 K, Defend, Evade, Counter\n* Loss: Attack, Focus JA, Wild\n* Tie : Focus Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Focus (Special)\n* Win : Focus K 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus AJ, Wild\n* Tie : Focus Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-qs)
@@ -1263,7 +1263,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-counter.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10 K, Focus\n* Loss: Attack JA, Defend, Evade, Counter, Wild\n* Tie : Attack Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\n   - or -\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0. Immediately resolve an Attack or Focus"
+      "Attack (Special)\n* Win : Attack K 2-10, Focus\n* Loss: Attack AJ, Evade, Counter, Wild\n* Tie : Attack Q, Defend Overkill\n* Hits: 10\n* Combo: QQ Hits: 20\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
     ))
 
     // (const fate-tc)
@@ -1278,7 +1278,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 10, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Focus\n* Lose: Attack AJQK 2-9, Defend 10, Evade, Counter, Wild\n* Tie : Attack 10, Defend 2-9 Overkill\n* Hits: 10, Draw\n\nDefend\n* Win : Attack 2-10, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-td)
@@ -1293,7 +1293,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 10\n* Hits: 10\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Defend, Counter\n* Lose: Attack, Focus AJQK 2-9, Evade, Wild\n* Tie : Focus 10\n* Hits: 10\n\nEvade\n* Win : Attack AJQK 10, Focus 10, Counter, Wild\n* Loss: Attack 2-9, Focus AJQK 2-9\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-th)
@@ -1308,7 +1308,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-focus-evade.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Defend, Evade, Counter\n* Lose: Attack, Focus 2-9 JQKA, Wild\n* Tie : Focus 10\n* Hits: 10\n\n   - or -\n\nEvade\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Move"
+      "Focus (Normal)\n* Win : Defend, Counter\n* Lose: Attack, Focus AJQK 2-9, Evade, Wild\n* Tie : Focus 10\n* Hits: 10\n\nEvade\n* Win : Attack AJQK 10, Focus 10, Counter, Wild\n* Loss: Attack 2-9, Focus AJQK 2-9\n* Tie : Defend, Evade\n* Any : Move"
     ))
 
     // (const fate-ts)
@@ -1323,7 +1323,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-attack-defend.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Focus\n* Lose: Attack 2-9 JQKA, Defend, Evade, Counter, Wild\n* Tie : Attack 10\n* Hits: 10, Draw 1\n\n   - or -\n\nDefend\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade, Counter\n* Hits: 0, Keep, Draw 1, Choose Hit Location"
+      "Attack (Normal)\n* Win : Focus\n* Lose: Attack AJQK 2-9, Defend 10, Evade, Counter, Wild\n* Tie : Attack 10, Defend 2-9 Overkill\n* Hits: 10, Draw\n\nDefend\n* Win : Attack 2-10, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
     ))
 
     // (const fate-wildblack)
@@ -1336,7 +1336,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-joker.svg",
       ":summary",
-      "Wild (Gold Burst):\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck.\n\n- or -\n\nCombo Breaker (Blue Burst):\n* When a Combo is performed on you, discard to cancel the Combo."
+      "Wild (Gold Burst):\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck.\n\nCombo Breaker (Blue Burst):\n* IF a Combo is performed on you THEN discard to cancel the Combo."
     ))
 
     // (const fate-wildred)
@@ -1349,7 +1349,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-joker.svg",
       ":summary",
-      "Wild (Gold Burst):\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck.\n\n- or -\n\nCombo Breaker (Blue Burst):\n* When a Combo is performed on you, discard to cancel the Combo."
+      "Wild (Gold Burst):\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck.\n\nCombo Breaker (Blue Burst):\n* IF a Combo is performed on you THEN discard to cancel the Combo."
     ))
 
   }

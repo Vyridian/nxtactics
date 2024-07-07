@@ -21,47 +21,65 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   // (func deck-nightonthetown)
   static f_deck_nightonthetown() {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      nx_tactics_base.t_deck,
-      ":name",
-      "Night on the Town",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        vx_core.f_new(
-          nx_tactics_base.t_cardlist,
-          nx_tactics_decks_scenario_nightonthetown.f_unit_theprofessor(),
-          nx_tactics_decks_scenario_nightonthetown.f_rule_zombie(),
-          nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog(),
-          nx_tactics_decks_scenario_nightonthetown.f_unit_zombierunner(),
-          nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker(),
-          nx_tactics_decks_data.f_tactics_item("Bare Handed"),
-          nx_tactics_decks_data.f_tactics_item("Shortbow"),
-          nx_tactics_decks_data.f_tactics_ability("Grab"),
-          nx_tactics_decks_data.f_tactics_ability("Bite"),
-          nx_tactics_decks_scenario_nightonthetown.f_item_lockcombination(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_fireaxe(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_jerrycan(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_keys(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_knife(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_liquorbottle(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_molotovcocktail(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_monocle(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_revolver(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_revolverammo(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_rifle(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_rifleammo(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_safe(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_shotgun(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_shotgunammo(),
-          nx_tactics_decks_scenario_nightonthetown.f_item_spear(),
-          nx_tactics_decks_scenario_nightonthetown.f_place_clinic(),
-          nx_tactics_decks_scenario_nightonthetown.f_place_conveniencestore(),
-          nx_tactics_decks_scenario_nightonthetown.f_place_gasstation(),
-          nx_tactics_decks_scenario_nightonthetown.f_place_gunstore(),
-          nx_tactics_decks_scenario_nightonthetown.f_place_policestation(),
-          nx_tactics_decks_scenario_nightonthetown.f_place_street()
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_deck},
+      [],
+      vx_core.f_new(vx_core.t_any_from_func, () => {
+        const professor = nx_tactics_decks_scenario_nightonthetown.f_unit_theprofessor()
+        const professori = nx_tactics_base.f_cardimage_from_card(professor)
+        return vx_core.f_new(
+          nx_tactics_base.t_deck,
+          ":name",
+          "Night on the Town",
+          ":cardmap",
+          nx_tactics_base.f_cardmap_from_cardlist(
+            vx_core.f_new(
+              nx_tactics_base.t_cardlist,
+              professor,
+              professori,
+              nx_tactics_decks_data.f_tactics_ability("Grab"),
+              nx_tactics_decks_data.f_tactics_ability("Bite"),
+              nx_tactics_decks_data.f_tactics_ability("Detail Oriented"),
+              nx_tactics_decks_scenario_nightonthetown.f_item_monocle(),
+              nx_tactics_decks_data.f_tactics_item("Shortbow"),
+              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog(),
+              nx_tactics_base.f_cardimage_from_card(
+                nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog()
+              ),
+              nx_tactics_decks_scenario_nightonthetown.f_unit_zombierunner(),
+              nx_tactics_base.f_cardimage_from_card(
+                nx_tactics_decks_scenario_nightonthetown.f_unit_zombierunner()
+              ),
+              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker(),
+              nx_tactics_base.f_cardimage_from_card(
+                nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker()
+              ),
+              nx_tactics_decks_data.f_tactics_item("Bare Handed"),
+              nx_tactics_decks_scenario_nightonthetown.f_item_lockcombination(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_fireaxe(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_jerrycan(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_keys(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_knife(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_liquorbottle(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_molotovcocktail(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_revolver(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_revolverammo(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_rifle(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_rifleammo(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_safe(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_shotgun(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_shotgunammo(),
+              nx_tactics_decks_scenario_nightonthetown.f_item_spear(),
+              nx_tactics_decks_scenario_nightonthetown.f_place_clinic(),
+              nx_tactics_decks_scenario_nightonthetown.f_place_conveniencestore(),
+              nx_tactics_decks_scenario_nightonthetown.f_place_gasstation(),
+              nx_tactics_decks_scenario_nightonthetown.f_place_gunstore(),
+              nx_tactics_decks_scenario_nightonthetown.f_place_policestation(),
+              nx_tactics_decks_scenario_nightonthetown.f_place_street()
+            )
+          )
         )
-      )
+      })
     )
     return output
   }
@@ -87,7 +105,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":image",
       "images/cards/item-axehand.svg",
       ":summary",
-      "* Melee: [Hack] [Slash]\n* Hit: [Size Bonus]\n* Location: [1-hand]",
+      "* Melee: [Hack] [Slash]\n* Hit: [Body]\n* Location: [1-hand]",
       ":body",
       "9x-1",
       ":mass",
@@ -117,7 +135,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":image",
       "images/cards/item-woodaxe.svg",
       ":summary",
-      "* [Fight]: [Melee]\n* [Initiative]:-1\n* [Damage]: [Size Bonus]+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1",
+      "* [Fight]: [Melee]\n* [Initiative]:-1\n* [Damage]: [Body]+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1",
       ":body",
       "3x0",
       ":mass",
@@ -195,7 +213,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":image",
       "images/cards/item-knife.svg",
       ":summary",
-      "* [Fight]: [Close Combat]\n* [Damage]: [Size Bonus]-1 [Pierce] [Slash]\n* [Location]: [1-hand]",
+      "* [Fight]: [Close Combat]\n* [Damage]: [Body]-1 [Pierce] [Slash]\n* [Location]: [1-hand]",
       ":body",
       "5x-1",
       ":mass",
@@ -497,7 +515,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":image",
       "images/cards/item-spear.svg",
       ":summary",
-      "* [Fight]: [Melee] [Reach]\n* [Damage]: [Size Bonus]+3 [Pierce] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1",
+      "* [Fight]: [Melee] [Reach]\n* [Damage]: [Body]+3 [Pierce] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1",
       ":body",
       "3x0",
       ":mass",

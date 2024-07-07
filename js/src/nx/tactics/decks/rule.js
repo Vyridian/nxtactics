@@ -62,7 +62,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Action",
       ":summary",
-      "* Each [Turn] a Unit will get 2 Actions. These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]."
+      "* Each [Turn] a Unit will get 2 Actions. These are [Move], [Fight], [Skill], [Recover], [Search], [Equip], and [Reload], and [Wait]."
     )
     return output
   }
@@ -224,6 +224,32 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
+   * @function card_cover
+   * @return {card}
+   */
+  static t_card_cover = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_cover = {
+    vx_type: nx_tactics_decks_rule.t_card_cover
+  }
+
+  // (func card-cover)
+  static f_card_cover() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "cover",
+      ":name",
+      "Cover",
+      ":summary",
+      "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.\n* If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Initiative:-1.\n** 50% Cover: Initiative:-2.\n** 75% Cover: Initiative:-3.\n** 100% Cover: Initiative:-4.\n* If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead."
+    )
+    return output
+  }
+
+  /**
    * @function card_damageguide
    * @return {card}
    */
@@ -250,25 +276,25 @@ export default class nx_tactics_decks_rule {
   }
 
   /**
-   * @function card_defenselayers
+   * @function card_damagereduction
    * @return {card}
    */
-  static t_card_defenselayers = {
+  static t_card_damagereduction = {
     vx_type: vx_core.t_type
   }
-  static e_card_defenselayers = {
-    vx_type: nx_tactics_decks_rule.t_card_defenselayers
+  static e_card_damagereduction = {
+    vx_type: nx_tactics_decks_rule.t_card_damagereduction
   }
 
-  // (func card-defenselayers)
-  static f_card_defenselayers() {
+  // (func card-damagereduction)
+  static f_card_damagereduction() {
     let output = nx_tactics_base.e_card
     output = vx_core.f_new(
       nx_tactics_base.t_card,
       ":id",
-      "defenselayers",
+      "damagereduction",
       ":name",
-      "Defense Layers",
+      "Damage Reduction",
       ":summary",
       "* Obstacles\n* Cover\n* Shields\n* Armor\n* Toughness\n* Body"
     )
@@ -297,6 +323,32 @@ export default class nx_tactics_decks_rule {
       "Disadvantage",
       ":summary",
       "* When performing a Skill/Combat test\n* Then reveal Fate. If it has a worse result than your card, you must use the Fate card instead."
+    )
+    return output
+  }
+
+  /**
+   * @function card_equip_action
+   * @return {card}
+   */
+  static t_card_equip_action = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_equip_action = {
+    vx_type: nx_tactics_decks_rule.t_card_equip_action
+  }
+
+  // (func card-equip-action)
+  static f_card_equip_action() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "equip-action",
+      ":name",
+      "Equip",
+      ":summary",
+      "* [Action]: Drop an item in one or more hands and equip another that is readily available in a holster, sheath, belt OR return an item in hand to a readily available spot.\n* [Action]: Give or receive an item from an adjacent willing unit.\n* [Double Action]: Drop an item in one or more hands and equip another that is in an inconvenient spot like a large bag, backpack, on your back, on another person, etc. OR return an item in hand to an inconvenient spot."
     )
     return output
   }
@@ -400,7 +452,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Free Action",
       ":summary",
-      "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.\n* Move Out: [Fatigue]:+1 to [Move]:1. You may Turn or Drift once during this Move.\n* Push Your Luck: [Stun]:+1 to reduce a Double Action to an Action.\n* Grit Your Teeth: [Stress]:+1 to ignore the effect of all of your negative statuses this turn.\n* Final Sprint: [Slow]:+1 to [Move].\n* Opportunity Combat: If a Target moves from one adjacent space of a Unit to another, that Unit may take a [Stun] to take a free [Combat Action]."
+      "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.\n* Move Out: [Fatigue]:+1 to [Move]:1. You may Turn or Drift once during this Move.\n* Double Down: [Stun]:+1 to reduce a Double Action to an Action.\n* Grit Your Teeth: [Stress]:+1 to ignore the effect of all of your negative statuses this turn.\n* Final Sprint: [Slow]:+1 to [Move].\n* Opportunity Combat: IF a Target moves from one adjacent space of a Unit to another THEN that Unit may take a [Stun] to take a free [Fight] against it."
     )
     return output
   }
@@ -504,7 +556,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Line of Sight",
       ":summary",
-      "* Most distance effects require line of sight to the target.\n* Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).\n* If nothing is between you, then you have full line of sight. Resolve normally.\n* If something is between you, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Initiative:-1.\n** 50% Cover: Initiative:-2.\n** 75% Cover: Initiative:-3.\n** 100% Cover: Initiative:-4.\n* If successful, assign each 25% to whatever is giving cover (this can include fog, smoke, tables, walls, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead."
+      "* Most distance effects require line of sight to the target.\n* Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).\n* If nothing is between you, then you have full line of sight. Resolve normally."
     )
     return output
   }
@@ -693,6 +745,32 @@ export default class nx_tactics_decks_rule {
       "Recover",
       ":summary",
       "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]\n* Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."
+    )
+    return output
+  }
+
+  /**
+   * @function card_reload_action
+   * @return {card}
+   */
+  static t_card_reload_action = {
+    vx_type: vx_core.t_type
+  }
+  static e_card_reload_action = {
+    vx_type: nx_tactics_decks_rule.t_card_reload_action
+  }
+
+  // (func card-reload-action)
+  static f_card_reload_action() {
+    let output = nx_tactics_base.e_card
+    output = vx_core.f_new(
+      nx_tactics_base.t_card,
+      ":id",
+      "reload-action",
+      ":name",
+      "Reload",
+      ":summary",
+      "* [Double Action]: Change a clip, nock an arrow.\n* 4 Actions: Reload a revolver, a mortar, a machinegun or a crossbow."
     )
     return output
   }
@@ -1022,7 +1100,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       "Turn",
       ":summary",
-      "* Each [Round], each [Unit] will get a [Turn] based on [Turn Order].\n* Each Turn a Unit will get 2 [Action]s. These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]."
+      "* Each [Round], each [Unit] will get a [Turn] based on [Turn Order].\n* Turn Start: Draw from your [Fate] deck. [Recover].\n* Take 2 Actions: These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]. You may perform the same Action twice.\n* Turn End: The next unit in Turn Order performs their turn until the Round Ends."
     )
     return output
   }
@@ -1160,13 +1238,16 @@ export default class nx_tactics_decks_rule {
           nx_tactics_decks_rule.f_card_fight_action(),
           nx_tactics_decks_rule.f_card_sklll_action(),
           nx_tactics_decks_rule.f_card_recover_action(),
+          nx_tactics_decks_rule.f_card_equip_action(),
+          nx_tactics_decks_rule.f_card_reload_action(),
           nx_tactics_decks_rule.f_card_search_action(),
           nx_tactics_decks_rule.f_card_wait_action(),
           nx_tactics_decks_rule.f_card_free_action(),
           nx_tactics_decks_rule.f_card_lineofsight(),
           nx_tactics_decks_rule.f_card_initiative(),
           nx_tactics_decks_rule.f_card_damageguide(),
-          nx_tactics_decks_rule.f_card_defenselayers(),
+          nx_tactics_decks_rule.f_card_damagereduction(),
+          nx_tactics_decks_rule.f_card_cover(),
           nx_tactics_decks_rule.f_card_character(),
           nx_tactics_decks_rule.f_card_body(),
           nx_tactics_decks_rule.f_card_mind(),
@@ -1251,9 +1332,11 @@ export default class nx_tactics_decks_rule {
       "card-body": nx_tactics_decks_rule.e_card_body,
       "card-character": nx_tactics_decks_rule.e_card_character,
       "card-conscience": nx_tactics_decks_rule.e_card_conscience,
+      "card-cover": nx_tactics_decks_rule.e_card_cover,
       "card-damageguide": nx_tactics_decks_rule.e_card_damageguide,
-      "card-defenselayers": nx_tactics_decks_rule.e_card_defenselayers,
+      "card-damagereduction": nx_tactics_decks_rule.e_card_damagereduction,
       "card-disadvantage": nx_tactics_decks_rule.e_card_disadvantage,
+      "card-equip-action": nx_tactics_decks_rule.e_card_equip_action,
       "card-exposed": nx_tactics_decks_rule.e_card_exposed,
       "card-fight-action": nx_tactics_decks_rule.e_card_fight_action,
       "card-flanking": nx_tactics_decks_rule.e_card_flanking,
@@ -1269,6 +1352,7 @@ export default class nx_tactics_decks_rule {
       "card-move-action": nx_tactics_decks_rule.e_card_move_action,
       "card-reach": nx_tactics_decks_rule.e_card_reach,
       "card-recover-action": nx_tactics_decks_rule.e_card_recover_action,
+      "card-reload-action": nx_tactics_decks_rule.e_card_reload_action,
       "card-round": nx_tactics_decks_rule.e_card_round,
       "card-round-num": nx_tactics_decks_rule.e_card_round_num,
       "card-scale": nx_tactics_decks_rule.e_card_scale,
@@ -1296,9 +1380,11 @@ export default class nx_tactics_decks_rule {
       "card-body": nx_tactics_decks_rule.t_card_body,
       "card-character": nx_tactics_decks_rule.t_card_character,
       "card-conscience": nx_tactics_decks_rule.t_card_conscience,
+      "card-cover": nx_tactics_decks_rule.t_card_cover,
       "card-damageguide": nx_tactics_decks_rule.t_card_damageguide,
-      "card-defenselayers": nx_tactics_decks_rule.t_card_defenselayers,
+      "card-damagereduction": nx_tactics_decks_rule.t_card_damagereduction,
       "card-disadvantage": nx_tactics_decks_rule.t_card_disadvantage,
+      "card-equip-action": nx_tactics_decks_rule.t_card_equip_action,
       "card-exposed": nx_tactics_decks_rule.t_card_exposed,
       "card-fight-action": nx_tactics_decks_rule.t_card_fight_action,
       "card-flanking": nx_tactics_decks_rule.t_card_flanking,
@@ -1314,6 +1400,7 @@ export default class nx_tactics_decks_rule {
       "card-move-action": nx_tactics_decks_rule.t_card_move_action,
       "card-reach": nx_tactics_decks_rule.t_card_reach,
       "card-recover-action": nx_tactics_decks_rule.t_card_recover_action,
+      "card-reload-action": nx_tactics_decks_rule.t_card_reload_action,
       "card-round": nx_tactics_decks_rule.t_card_round,
       "card-round-num": nx_tactics_decks_rule.t_card_round_num,
       "card-scale": nx_tactics_decks_rule.t_card_scale,
@@ -1488,6 +1575,24 @@ export default class nx_tactics_decks_rule {
       fn            : nx_tactics_decks_rule.f_card_conscience
     }
 
+    // (func card-cover)
+    nx_tactics_decks_rule.t_card_cover['vx_value'] = {
+      name          : "card-cover",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_cover
+    }
+
     // (func card-damageguide)
     nx_tactics_decks_rule.t_card_damageguide['vx_value'] = {
       name          : "card-damageguide",
@@ -1506,9 +1611,9 @@ export default class nx_tactics_decks_rule {
       fn            : nx_tactics_decks_rule.f_card_damageguide
     }
 
-    // (func card-defenselayers)
-    nx_tactics_decks_rule.t_card_defenselayers['vx_value'] = {
-      name          : "card-defenselayers",
+    // (func card-damagereduction)
+    nx_tactics_decks_rule.t_card_damagereduction['vx_value'] = {
+      name          : "card-damagereduction",
       pkgname       : "nx/tactics/decks/rule",
       extends       : ":func",
       idx           : 0,
@@ -1521,7 +1626,7 @@ export default class nx_tactics_decks_rule {
       traits        : [],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_rule.f_card_defenselayers
+      fn            : nx_tactics_decks_rule.f_card_damagereduction
     }
 
     // (func card-disadvantage)
@@ -1540,6 +1645,24 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_disadvantage
+    }
+
+    // (func card-equip-action)
+    nx_tactics_decks_rule.t_card_equip_action['vx_value'] = {
+      name          : "card-equip-action",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_equip_action
     }
 
     // (func card-exposed)
@@ -1810,6 +1933,24 @@ export default class nx_tactics_decks_rule {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_rule.f_card_recover_action
+    }
+
+    // (func card-reload-action)
+    nx_tactics_decks_rule.t_card_reload_action['vx_value'] = {
+      name          : "card-reload-action",
+      pkgname       : "nx/tactics/decks/rule",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_rule.f_card_reload_action
     }
 
     // (func card-round)
