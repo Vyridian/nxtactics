@@ -1,0 +1,4048 @@
+(package nx/tactics/books/high_technology
+ :libs (lib base :path nx/tactics/base))
+
+(func tacticsbook : base/book
+ (base/book
+  :name "High Technology"
+  :image "HighTech.jpg"
+  :chaptermap
+   (base/chaptermap
+    "High Tech Overview" (chapter_high_tech_overview)
+    "Cyberpunk Campaign" (chapter_cyberpunk_campaign)
+    "High Tech Rules" (chapter_high_tech_rules)
+    "High Tech Equipment" (chapter_high_tech_equipment)
+    "High Tech Spacecraft" (chapter_high_tech_spacecraft)
+    "High Tech Aircraft" (chapter_high_tech_aircraft)
+    "High Tech Heavy Armor" (chapter_high_tech_heavy_armor)
+    "Space Colonies" (chapter_space_colonies)
+    "Car Wars" (chapter_car_wars)
+    "Cyberpunk" (chapter_cyberpunk)
+    "Jovian Chronicles" (chapter_jovian_chronicles)
+    "Mobile Suit Gundam Equipment" (chapter_mobile_suit_gundam_equipment)
+    "Mobile Suit Gundam Units" (chapter_mobile_suit_gundam_units)
+    "Terminator" (chapter_terminator)
+   )))
+
+(func chapter_high_tech_overview : base/chapter
+ (chapter
+  :name "High Tech Overview"
+  :sectionmap
+   (sectionmap
+    "Why Tactics: High Technology?"
+     (section
+      :name "Why Tactics: High Technology?"))))
+
+(func chapter_cyberpunk_campaign : base/chapter
+ (chapter
+  :name "Cyberpunk Campaign"
+  :sectionmap
+   (sectionmap
+    "Cyberpunk Overview"
+     (section
+      :name "Cyberpunk Overview"
+      :summary
+       "* Events Leading to War
+* Overview of the War
+* Aftermath")
+    "Car Wars"
+     (section
+      :name "Car Wars"
+      :scenariomap
+       (scenariomap
+        "Escort Duty"
+         (scenario
+          :name "Escort Duty"
+          :summary
+           "* An Agricorp has commissioned some independents to covertly escort an unmarked tractor-trailer 1900 miles from
+their site in La Jolla to a USDA facility near Nashville, TN.
+* A rival has sent its own independents to get their hands on the cargo.
+* Note: The cargo/escort is a decoy for the real shipment."
+          :teammap
+           (teammap
+            :Escort
+             (team
+              :name "Escort"
+              :completevictory "$1000/each if cargo delivered intact."
+              :forces
+               "* 1 Tractor-trailer
+* 2 Sedans"
+              :partialvictory "Prevent enemy from taking any of the shipment.")
+            :Interceptors
+             (team
+              :name "Interceptors"
+              :completevictory "Capture the entire shipment."
+              :forces
+               "* 1 Van
+* 3 Sedans"
+              :partialvictory "Capture any of the shipment.")))
+        "Safe House"
+         (scenario
+          :name "Safe House"
+          :summary
+           "* A small-time fixer has evidence of the identity of a cyber serial killer, the Night City Stalker.  Two news
+organizations are bidding on the deal, but the loser contacted the Stalker out of spite.")
+        "Toxic Spill"
+         (scenario
+          :name "Toxic Spill"
+          :summary
+           "* While guarding a 200 person Nomad camp, the well drill discovers a hidden toxic waste dump.  Alarms alert the
+dumping company that their little secret has been discovered, so they send a team to 'clean up' the problem.
+* The whole Nomad camp must evacuate 3 miles to town before they are silenced, unfortunately they do not have
+enough vehicles to do it in one trip.")
+        "The Heist"
+         (scenario
+          :name "The Heist"
+          :summary
+           "* In a winter storm, a shipment of Palladium is diverted to a small warehouse in a corporate park.  It will not
+be moved until the weather turns, so it is a perfect opportunity to break in and steal the goods.
+* During the storm, the skies are dangerous, and even the roads are fairly dicey.  Snowmobile are certainly an
+option."
+          :teammap
+           (teammap
+            :Thieves
+             (team
+              :name "Thieves"
+              :completevictory "Capture the whole shipment."
+              :forces
+               "* 10 Thieves
+* 5 Snowmobiles
+* 3 Sedans"
+              :partialvictory "Take at least half of the shipment.")
+            :Guards
+             (team
+              :name "Guards"
+              :completevictory "Protect the entire shipment."
+              :forces
+               "* 10 Armed and Armored Guards
+* 10 Unarmored, sleeping Guards
+* 5 Sedans
+* 2 Helicopters"
+              :partialvictory "Protect at least half of the shipment."))))))))
+
+(func chapter_high_tech_rules : base/chapter
+ (chapter
+  :name "High Tech Rules"
+  :sectionmap
+   (sectionmap
+    :Cyberspace
+     (section
+      :name "Cyberspace"
+      :summary
+       "* A huge, interconnected series of computer networks, software systems, and virtual realities that form a continuous
+digital universe of nearly infinite scope.
+* Interface programs sort through this information and produce a virtual world tailored to the user's desire.  The
+most common interface is that of digital cities that mirror their real world equivalents, but display computer
+systems, data blocks, and information pathways instead of buildings, people, and highways.
+* Nodes - Nodes in Cyberspace are locations in Cyberspace.  Nodes include Telecom lines, Satellite Uplinks,
+Firewalls, Security Cameras, Remote Controls, Databases, and Virtual Realities.  Different Nodes usually require
+valid security or payment to use.  Nodes can also hold nasty surprises including alarms and defense programs.
+* Movement - Distances are insignificant in Cyberspace.  Instead, movement is measured in tasks.  Any program can
+perform a number of tasks each turn equal to [Netrunning] skill.  Each node entered in Cyberspace is a task.
+Performing any [Action] at a node is also a task."
+      :titles "The Digital Web, The Net, The Network, World Wide Web, The Web"))))
+
+(func chapter_high_tech_equipment : base/chapter
+ (chapter
+  :name "High Tech Equipment"
+  :sectionmap
+   (sectionmap
+    "Consumer Goods"
+     (section
+      :name "Consumer Goods"
+      :itemmap
+       (itemmap
+        :Autobike
+         (item
+          :name "Autobike"
+          :summary
+           "* Autonomous motorcycle used for most transit. A small fraction of the Autocar
+fleet is filled by Autobikes. Though slightly cheaper to rent than Autocars and
+better in tight traffic, most people use Autocars exclusively.")
+        :Autocar
+         (item
+          :name "Autocar"
+          :summary
+           "* Autonomous car used for most transit. Ordinary citizens rarely own their own
+vehicles, instead they summon an automated rental car with their phone that takes
+them directly to their destination. Autocars are parked throughout populated
+areas, so summoning one usually takes seconds. Autocars coordinate with each other
+and can travel at high speeds in tight traffic without incident.
+* History - Automated cars took over major cities within years of their invention.
+They solved traffic, parking, accident, and environmental problems all at once
+while offering cheaper per mile travel than owning your own vehicle. They rapidly
+made taxi and ridesharing solutions obsolete, and it soon became illegal for a
+human to drive a vehicle because autocars were so much safer. Soon all mass
+transit systems reduced down to autocars and some autobikes.")
+        :Cyberchip
+         (item
+          :name "Cyberchip"
+          :summary
+           "* Standard memory/application chip.  All media is stored on cyberchips and can be played by simply plugging the
+chip into any standard interface.
+* Plugging cyberchips directly into one's body is called 'Chipping In'.")
+        :Cybercycle
+         (item
+          :name "Cybercycle"
+          :summary "* High performance motorcycle that allows direct neural interface.")
+        :Cyberdeck
+         (item
+          :name "Cyberdeck")
+        :Cyberphone
+         (item
+          :name "Cyberphone")
+        "Direct Neural Interface"
+         (item
+          :name "Direct Neural Interface"
+          :summary
+           "* This implant includes a processor chip and interface plugs that connect directly to the brain.  The chip
+contains an artificial intelligence avatar program that learns from and emulates the user's personality.  This
+AI can then enter cyberspace or control cybernetic equipment at the speed of a computer program while retaining
+the decision making logic of its user.  Further, the AI regularly updates the user with its decisions, and
+gathers the user's impression, so it can make further decisions.  While 'Jacked In' the user is motionless as
+his mind is overwhelmed with information from the AI.  DNI's are powerful tools, but are also risky technology.
+Since information floods into the mind at incredible speeds, any malfunction in the DNI or the AI can cause
+sanity threatening sensory overload or sensory deprivation that seem to last for days in mere seconds.
+* Burn Out - losing one's mind to DNI failure.")
+        :Flitter
+         (item
+          :name "Flitter"
+          :summary "* Light, one-man helicopter"
+          :titles "Aerogyro, Gyrocopter")
+        "Hover Board"
+         (item
+          :name "Hover Board")
+        "Mag Lev Train"
+         (item
+          :name "Mag Lev Train"
+          :summary "* Speed: 200mph")
+        :Metrocar
+         (item
+          :name "Metrocar"
+          :summary "* Ultra-subcompact reverse trike.")
+        "Mister Fusion"
+         (item
+          :name "Mister Fusion"
+          :image "HighTech/MrFusion.jpg")
+        "Quad ATV"
+         (item
+          :name "Quad ATV")
+        "Private Quadcopter"
+         (item
+          :name "Private Quadcopter")
+        :Skimmer
+         (item
+          :name "Skimmer"
+          :summary
+           "* The modern hovercraft creates a tightly computer-controlled air pocket beneath
+it that allows the Skimmer to move quickly over land or sea. The Skimmer
+manipulates the pocket to change direction. Though fast and all-terrain, they are
+not as quiet, maneuverable, or energy efficient as Autocars, so their use is
+limited to lightly populated areas."
+          :titles "Ground Effect Vehicle, Hovercraft")))
+    "Corporate Equipment"
+     (section
+      :name "Corporate Equipment"
+      :itemmap
+       (itemmap
+        "Cargo Osprey"
+         (item
+          :name "Cargo Osprey")
+        "Corporate Limosine"
+         (item
+          :name "Corporate Limosine")
+        "Corporate Osprey"
+         (item
+          :name "Corporate Osprey"
+          :summary
+           "* Speed: 275knots
+* Range: 600miles
+* The Osprey is a tilt-wing propeller plane that is used as a
+corporate commuter plane. Like a helicopter, it can land on
+buildings, and it can also fly directly to nearby cities.")
+        "Personal Aerodyne"
+         (item
+          :name "Personal Aerodyne"
+          :summary
+           "* Speed: 250mph
+* Range: 400miles")
+        :Transjet
+         (item
+          :name "Transjet"
+          :summary
+           "* The Transjet is the standard commercial airliner across the world. It flies up
+beyond the atmosphere where it can travel at extreme speeds and then lands
+anywhere in the world within an hour."
+          :titles "Hopper, Transatmospheric Jet")))
+    "Police Equipment"
+     (section
+      :name "Police Equipment"
+      :itemmap
+       (itemmap
+        :Aerodyne
+         (item
+          :name "Aerodyne"
+          :reference "Blade Runner"
+          :summary
+           "* Speed: 350mph
+* Range: 400miles
+* Short and bulbous, the Aerodyne has the aerodynamics of a brick.  It relies on its huge jets to fly."
+          :titles "Air Car, Pegasus")))
+    "Military Equipment"
+     (section
+      :name "Military Equipment"
+      :unitmap
+       (unitmap
+        "Combat Aerodyne"
+         (unit
+          :name "Combat Aerodyne"
+          :summary
+           "* Speed: 480mph
+* Range: 600miles
+* Armored combat Aerodyne")
+        "Barracuda Drone Submarine"
+         (unit
+          :name "Barracuda Drone Submarine"
+          :summary "* Carrier borne small, unmanned, high speed, attack submarine. It is designed as a long range drone that continually scouts the water surrounding a capital ship. Its tip is a HEAT shaped explosive, and it uses a particularly volitle fuel mix, so that it can be used as a torpedo if any serious threat enters its sphere of control.")
+        "Manta VTOL Fighter"
+         (unit
+          :name "Manta VTOL Fighter"
+          :reference "* Carrier Command: Gaea Mission"
+          :summary "* Carrier borne VTOL Fighter. It has four redirectable thrusters that allow it to hover at any altitude including directly over water. It is fully sealed and can be launched and recovered underwater, but its underwater speed is poor. Its thrust is sufficient to ferry a Sea Lion ATV or other medium vehicle when necessary. It has a small, replaceable mission module to custom tailor its missions for anti-air, anti-ship, anti-armor, anti-personnel, missile, bombs, repair, apc, recon, science, transport, and more. Its mission module is interchangable with the Sea Lion Amphibious Tank.")
+        "Pelican VTOL Heavy Transport"
+         (unit
+          :name "Pelican VTOL Heavy Transport"
+          :summary "* Land based VTOL transport plane. It has four redirectable thrusters that allow it to hover at any altitude including directly over water. It is fully sealed and can land and take off from water. It has a single landing deck on top to facilitate in-air refuelling and resupply of VTOL fighters. It has a large, replaceable mission module to custom tailor its missions for anti-air, anti-ship, anti-armor, anti-personnel, missile, bombs, repair, apc, recon, science, transport, and more. It is powerful enough to carry 1 heavy tank, 2 medium tanks, or 3 APCs. It is, however, a large target with limited armor, so it is not suitable for heavy fire situations.")
+        "Sea Lion Amphibious Medium Tank"
+         (unit
+          :name "Sea Lion Amphibious Medium Tank"
+          :reference "* Carrier Command: Gaea Mission"
+          :summary "* Carrier borne All Terrain Vehicle. It has six wheels that work equally well on water or land, but on water it augments its speed using a caterpillar drive. It is fully sealed and submerisble, but its underwater speed is poor. It has a small, replaceable mission module to custom tailor its missions for anti-air, anti-ship, anti-armor, anti-personnel, missile, repair, apc, recon, science, and more. Its mission module is interchangable with the Manta Fighter.")
+        "Sailfin Light Frigate"
+         (unit
+          :name "Sailfin Light Frigate"
+          :summary
+           "* Fully Submersible Light Frigate loaded with 2 Barracuda Submarines.
+* Purpose - The Sailfin is a high speed interceptor and screening craft. It is equipped with anti-missile and small anti-ship weaponry as well as a large ECM suite.
+* Hydrofoils - Uses a Magnetohydrodynamic (MHD) to produce high speeds with little noise. It is designed in a catamaran configuration with hydrofoils and an air cushion effect to provide near flight."
+          :titles "Flying Fish")
+        "Hammerhead Destroyer"
+         (unit
+          :name "Hammerhead Destroyer"
+          :summary
+           "* Fully Submersible Destroyer loaded with 2 Manta Fighters and 4 Barracuda Submarines.
+* Purpose - The Hammerhead is an all round escort ship for larger capital ships.")
+        "Mako Assault Carrier"
+         (unit
+          :name "Mako Assault Carrier"
+          :reference "* Carrier Command: Gaea Mission"
+          :summary "* Fully Submersible Light Carrier loaded with 4 Manta Fighters, 4 Sea Lion ATVs, and 2 Barracuda Submarines. Uses a Magnetohydrodynamic (MHD) to produce high speeds with little noise.")
+        "Orca Medium Cruiser"
+         (unit
+          :name "Orca Medium Cruiser"
+          :summary
+           "* Fully Submersible Medium Cruiser loaded with 6 Manta Fighters, 1 Pelican Transport, 6 Sea Lion ATVs, and
+4 Barracuda Submarines.")
+        "Leviathan Command Carrier"
+         (unit
+          :name "Leviathan Command Carrier"
+          :summary
+           "* Fully Submersible Heavy Carrier loaded with 12 Manta Fighters, 4 Pelican Transports, 6 Sea Lion ATVs, and
+8 Barracuda Submarines.")))
+    "Body Armor"
+     (section
+      :name "Body Armor"
+      :unitmap
+       (unitmap
+        "Stealth Suit"
+         (unit
+          :name "Stealth Suit"
+          :reference "* Nuclear launch detected... - Starcraft"
+          :titles "Ghost Special Operative")
+        "Powered Body Armor"
+         (unit
+          :name "Powered Body Armor"
+          :summary "* Heavy Body Armor"
+          :titles "Hard Suit"))))))
+
+(func chapter_high_tech_spacecraft : base/chapter
+ (chapter
+  :name "High Tech Spacecraft"
+  :summary
+   "* Interplanetary travel is a common reality in the 23rd century.
+
+* Types - Spaceships are mostly cargo and ore mining ships, followed by gas tankers.
+
+* Prismatic Armor - Modern ships have a very thick ablative skin composed of a honeycomb of diamond nano-fibers filled with a highly refractive, radiation and impact absorbing ceramic compound. This armor has a number of beneficial qualities. It deflects energy in random directions which provides radiation resistance, stealth, and energy weapon defense. It fragments and ablates under energy weapon and kinetic impact which shatters incoming	micro-meteors and high speed weaponry and distributes the incoming energy in all directions to prevent penetration. The ablating particles also carry away excess heat in a similar way to evaporation. The resultant particles become a cloud of anti-energy aresol. Any impact strong enough to penetrate the armor will liquify the surrounding armor which quickly solidifies and helps to seal hull breaches.
+
+* Deflectors - Most long-range ships are equipped with a deflector array. The array is composed of a wide bank of closely spaced ionizing lasers and particle beams. The lasers ionize the particles and form a strong magnetic force down the length of the beam. Small objects headed toward the ship are ionized by the beams and then redirected away by the magnetic field. Point defense lasers are used for larger particles as well as incoming missiles.
+
+* Propulsion - Propulsion spaceward (outward from the Sun) is often provided by massive Stellasers that reflect and concentrate solar radiation into a 'tight' beam similar to a laser. Ships have depolyable solar sails to capture this energy for propulsion and recharging batteries. These sails can even be used to slowly tack inward. Some cargo ships use particularly large sails to slowly sail the solar wind to reduce costs. Most ships rely on powerful nuclear thrusters for sunward (toward the Sun) travel to accelerate the ship at up to 1g. When possible the ship will accelerate for half the voyage, turn around, and then decelerate for the rest of the trip.
+
+* Gravity - Except for short periods of weightlessness midway through the trip, the passengers feel gravity during the trip. Up is toward the nose and down is toward the engines. The internal organization of a ship is very similar to a skyscraper. For fuel and reaction mass reasons, the ship may need to travel at slower speeds (and lower gravity) or coast at zero gravity midway through the trip. For this reason, large ships are often equipped with rotating decks to simulate gravity for the crew.
+
+* Reentry - Spaceships are generally too heavy and not equipped to survive a landing on anything larger than a small moon. Landing on something as massive as the Earth's Moon is possible, but achieving orbit again requires a powerful Laser Lifter system like the one on Luna.
+
+* Travel Costs
+** Planet to orbital station skyhooks travel daily and cost 200-300 credits one-way.
+** Orbital to moon travel twice weekly and cost 600 credits one-way.
+** Interplanetary trips are like cruises. They travel weekly and cost 20,000-30,000 credits
+one-way.
+
+* Safety - Inner ship walls are covered with pillowy-soft panels of 'Space Gel'. This viscous fluid provides a combination of heat insulation, impact padding, radiation shielding, shrapnel absorption, and depressurization protection. Space Gel exposed to freezing temperatures will immediately harden into a very durable solid. If the hull is breached, damaged panels will leak Space Gel. Any gel that touches an area near the breach will instantly freeze, gradually plugging the leak."
+  :sectionmap
+   (sectionmap
+    "High Tech Commercial Spacecraft"
+     (section
+      :name "High Tech Commercial Spacecraft"
+      :unitmap
+       (unitmap
+        :Shuttlecraft
+         (unit
+          :name "Shuttlecraft")
+        "Cargo Spacefreighter"
+         (unit
+          :name "Cargo Spacefreighter")
+        "Ore Spacefreighter"
+         (unit
+          :name "Ore Spacefreighter"
+          :summary "* Magsail ship")
+        "Gas Spacefreighter"
+         (unit
+          :name "Gas Spacefreighter")
+        "Space Rescue Ship"
+         (unit
+          :name "Space Rescue Ship"
+          :reference "Event Horizon"
+          :summary "Emergency Medical and Rescue Craft")
+        "Star Explorer"
+         (unit
+          :name "Star Explorer"
+          :summary "Scout Vessel")
+        :Spaceliner
+         (unit
+          :name "Spaceliner"
+          :summary "Luxury cruise liner for tourism or transport"
+          :titles "Starliner")))
+    "Fighter Class"
+     (section
+      :name "Fighter Class"
+      :unitmap
+       (unitmap
+        "Star Bomber"
+         (unit
+          :name "Star Bomber")
+        "Star Figher"
+         (unit
+          :name "Star Figher"
+          :summary "* General purpose space fighter that can be fitted with special purpose gear.")
+        "Star Interceptor"
+         (unit
+          :name "Star Interceptor")
+        "Star Torpedo Bomber"
+         (unit
+          :name "Star Torpedo Bomber")))
+    "High Tech Shuttle Class"
+     (section
+      :name "High Tech Shuttle Class"
+      :unitmap
+       (unitmap
+        "Assault Shuttle"
+         (unit
+          :name "Assault Shuttle")
+        "Eagle Lunar Transport"
+         (unit
+          :name "Eagle Lunar Transport"
+          :summary
+           "* The Eagle is the primary form of transportation for the inhabitants of the various moons of the Solar System. A multipurpose craft, it is divided into three basic sections; the command module, the service pod, and the superstructure. It is powered by four nuclear fusion rockets, and carries fuel reserves for 48 hours of flight.
+* Type A Transport Eagle is fitted with the standard passenger pod and is capable of holding 8 passengers (up to 12 in an emergency), in addition to the pilot and co-pilot.
+* Type B Freighter Eagle is used for transporting supplies, equipment and minerals. They can also be used as space-borne tankers for refueling.
+* Type C Reconnaissance Eagle comes equipped with various types of sensory devices for exploratory missions.
+* Type D Rescue Eagle, identifiable by the bold red stripes on the pod, has been adapted for field diagnosis and treatment of injury or disease. Manned by medical personnel, Rescue Eagles are equipped with mobile beds, patient-monitor units, and facilities for field surgery.
+* Type E Laboratory Eagle is equipped with a remote laboratory and can be used to locate and refine crude minerals, eliminating the need to transport bulky raw ores. It can carry food and water and recycle air to support the team for several weeks.
+* Specialty Modules include a the winch platform used to disperse nuclear waste canisters. There is also an additional booster unit that can be added to the super-structure which can increase the range and power."
+          :titles "Eagle"
+          :speed "162 Mkmh"
+          :mass "238 tons"
+          :length "23m"
+          :range "26 Bkm"
+          :width "9m")
+        "Lunar Rail Capsule"
+         (unit
+          :name "Lunar Rail Capsule"
+          :summary "* A small pod launched from a Lunar Rail Gun. Passenger Capsule are launched from 80 mile long Rail guns at 1G. Cargo capsules are launched from 2 mile long Rail guns at 40G. They are then captured in lunar orbit by drones and lunar satellite bases.")
+        "Star Gunship"
+         (unit
+          :name "Star Gunship"
+          :summary "* General purpose heavy weapons platform that can be fitted with special purpose gear.")
+        "Heavy Star Bomber"
+         (unit
+          :name "Heavy Star Bomber")
+        "Reconnaissance Shuttle"
+         (unit
+          :name "Reconnaissance Shuttle")
+        "Star Torpedo Boat"
+         (unit
+          :name "Star Torpedo Boat")))
+    "Frigate Class"
+     (section
+      :name "Frigate Class"
+      :unitmap
+       (unitmap
+        "Assault Star Carrier"
+         (unit
+          :name "Assault Star Carrier")
+        "Missile Frigate"
+         (unit
+          :name "Missile Frigate")
+        "Siege Frigate"
+         (unit
+          :name "Siege Frigate")
+        "Star Destroyer"
+         (unit
+          :name "Star Destroyer")
+        "System Defense Corvette"
+         (unit
+          :name "System Defense Corvette"
+          :summary "Interplanetary Defense")))
+    "High Tech Cruisers"
+     (section
+      :name "High Tech Cruisers"
+      :unitmap
+       (unitmap
+        "Star Battleship"
+         (unit
+          :name "Star Battleship")
+        "Star Carrier"
+         (unit
+          :name "Star Carrier")
+        "Star Cruiser"
+         (unit
+          :name "Star Cruiser")))
+    "High Tech Dreadnoughts"
+     (section
+      :name "High Tech Dreadnoughts"
+      :unitmap
+       (unitmap
+        "Super Star Battleship"
+         (unit
+          :name "Super Star Battleship")
+        "Super Star Carrier"
+         (unit
+          :name "Super Star Carrier")))
+    "High Tech Satellites"
+     (section
+      :name "High Tech Satellites"
+      :unitmap
+       (unitmap
+        "Communication Satellite"
+         (unit
+          :name "Communication Satellite")
+        "Damocles Orbital Laser"
+         (unit
+          :name "Damocles Orbital Laser"
+          :image "HighTech/DamoclesSatellite.jpg"
+          :summary
+           "* Orbital Laser Platform designed for strategic strikes against land targets. May also be used agaist
+large orbital targets or for asteroid defense.")
+        "EMP Satellite"
+         (unit
+          :name "EMP Satellite"
+          :reference
+           "* What's it going to be, Plissken? Them or us? I shut down the third world, you win they lose. I shut
+down America, they win, you lose. The more things change, the more they stay the same. - Snake Plissken,
+Escape from LA"
+          :titles "Goldeneye")
+        "Hunter Killer Satellite"
+         (unit
+          :name "Hunter Killer Satellite"
+          :summary
+           "* A combat ready satellite often masquerading as a peaceful version. Hunter Satellites act like UAV's
+quietly patrolling until their weaponry is needed, then they are disposable."
+          :titles "Battle Satellite")
+        "Orbital Skyhook Satellite"
+         (unit
+          :name "Orbital Skyhook Satellite"
+          :summary "* Large rotating satellite in low orbit. Its purpose is to drop its kilometers long tether to dock with a [Suborbital Shuttle] and use its momentum to fling the shuttle into higher orbit. A few of these Skyhooks at different orbits can pull a shuttle all the way into high orbit. Pulling up shuttles gradually degrades the satellite's orbit, but fortunately, the same system can be used in reverse to slow orbital craft without using fuel which returns lost momentum to the Skyhook.")
+        "Solar Reflector Satellite"
+         (unit
+          :name "Solar Reflector Satellite"
+          :summary "* These are massive, lightweight solar mirrors that can be focused for variouse purposes. They can focus light for solar farms, generate light for long nights like on the moon, generate thrust by light pressure and by heating ablative drives."))))))
+
+(func chapter_high_tech_aircraft : base/chapter
+ (chapter
+  :name "High Tech Aircraft"
+  :sectionmap
+   (sectionmap
+    "High Tech Commercial Aircraft"
+     (section
+      :name "High Tech Commercial Aircraft"
+      :unitmap
+       (unitmap
+        "Hypersonic Airliner"
+         (unit
+          :name "Hypersonic Airliner"
+          :summary
+           "* Suborbital passenger plane that can make intercontinental flights at Mach 5+
+* Such high speed planes are all wedge shaped Hypersonic Waveriders.")
+        "Suborbital Shuttle"
+         (unit
+          :name "Suborbital Shuttle"
+          :summary
+           "* Suborbital passenger plane that can reach the upper atmosphere and connect to an [Orbital Skyhook Satellite]'s
+tether.  The end of the tether holds a small wing shaped cargo container.  Passengers and cargo are quickly
+exchanged, and the container is reeled back up to the skyhook while the plane returns to its launch site.")))
+    "High Tech Military Aircraft"
+     (section
+      :name "High Tech Military Aircraft"
+      :unitmap
+       (unitmap
+        "Valkyrie Air Cavalry"
+         (unit
+          :name "Valkyrie Air Cavalry"
+          :classification "Lt. Aircraft")
+        "Aurora Transatmospheric Fighter"
+         (unit
+          :name "Aurora Transatmospheric Fighter"
+          :summary
+           "* A sleek, shuttle-like jet with speeds of Mach 5. A nuclear engine, stealth armor, full environmental containment, and a virtual or direct neural link make this one-man craft the deadliest thing in the skies.
+* It carries twin 30mm autocannons, a plasma cannon, 16 air-to-air missiles, and 2 fuel air explosives for ground targets."
+          :classification "Lt. Aircraft"))))))
+
+(func chapter_high_tech_heavy_armor : base/chapter
+ (chapter
+  :name "High Tech Heavy Armor"
+  :sectionmap
+   (sectionmap
+    "High Mobility Forces"
+     (section
+      :name "High Mobility Forces"
+      :summary
+       "* Mobile - The term Mobile, short for High Mobility, was coined to describe forces that emphasized manueverability and terrain use over raw speed, weaponry, or armor.
+** Mobile Infantry - Human sized battle suits capable of increasing an infantry unit's combat ability. Early versions emphasized weapons and armor, but their high cost and attrition rate moved the focus to fast hit-and-run or blitzkreig style armor.
+** Mobile Suit - The Mobile Suit is an attempt to create a larger version of Mobile Infantry suits. They remain humanoid and can benefit from infantry tactics on a large scale. The design is a swiss army knife, capable of quickly changing and scavenging weapons and is equally suited for combat and large scale repair operations. The design does have many detractors, however, who argue that the humanoid form is not optimal for ground combat where its height makes it an easy target, air combat where it is not aerodynamic, or space combat where legs have little use.
+** Mobile Cavalry - Mobile Cavalry is any High Mobility vehicle that is optimized toward its intended enviroment: Mobile Fighters in atmosphere, Mobile Tanks on land, Mobile Subs underwater, Mobile Insects in space, etc. These system are highly specialized in contrast with the general utility of Mobile Suits. Though such designs seem more optimal, there is an argument that Mobile Suit mass production and spare part availability would ultimately win out.
+** Mobile Armor - The ultimate expression of High Mobility weapons, Mobile Armor are large, heavily armed and armored versions of Mobile Cavalry. They are terrifying monstrosities with similar reputations to the King Tiger tank in World War II. Though on paper, they seem to be the ultimate weapon, in practice their high cost and manufacturing complexity severly limited their deployment and losing even one was devastatingly costly. They can turn the tide of any battle, but were overall less effective than smaller units.
+* Linear Frame - The linear frame is a special harness that mimics the actions of the mobile suit pilot and translates them into mobile suit actions. This gives the mobile suit an uncanny agility and a strangely human grace. A trained pilot can shift the suit's center of gravity to change the armor's orientation without propellent which can substantially increase endurance and survivability.
+* Piloting - A mobile suit pilot wears a special suit and is secured to a linear frame that
+help manage the incredible g-forces that the mobile suit produces. Rookie pilots have been
+knocked unconscious or even killed by their own combat maneuvers, so extensive, specialized
+training is essential. Ace pilots seem almost superhuman in their ability to take physical
+stress without blacking out.
+* Mobile Suits vs. Capital Ships - Mobile suits have a unique ability against capital ships.
+They can land anywhere on the surface of the ship (typically outside of firing arcs) and attack
+components directly. Whenever a mobile suit on a capital ship score [Critical Hits], the player
+may look at the damage deck and choose the critical instead of choosing one at random.
+* Flight Systems - Spacecraft and Exo-Suits use a ionic plasma drive which ionizes and
+accelerates gas particles out the exhaust vents at relativistic speeds. These energized
+particles create a glowing stardust effect at the exhaust ports. These drives also function in
+atmosphere but their interaction with air creates a massive heat buildup, so they can only be
+used in short bursts like jump jets. Unusually large vents with heat dispersers can be specially
+designed for atmosphere, but these are suboptimal in space.
+* Plasma Lance - The lance is a short mobile suit melee weapon. Its firing end is a hollow
+magnetic tube lined with layers of copper leaf. When held in a specially designed hand or connector,
+a direct current from the fusion reactor transforms the copper leaf into a short ionizing plasma jet
+of incompressible copper. The lance appears as an empty weapon hilt until it fires; then it flashes
+with a brief, blinding jet that violently pierces almost any material it contacts. It is very
+effective against armor, but its uses are limited so they may only be used a few times before being
+depleted. Mobile suits will often carry multiple lances, although larger variants exist.
+
+Land based Mobile Suits follow these principles:
+* Maintain a low profile - Weapons are so destructive that it is much more effective to not be hit. Stay low and use cover at all times. Tracked, Wheeled, Hover and 4 legged vehicles maintain the lowest profile while still being all-terrain.
+* High mobility - Slow, predictable units are sitting ducks. Also, move in 3 dimensions to maximize mobility. This makes legs and jump jets superior to tracks and wheels.
+* Projectile weapons are more effective on the ground than in space - High caliber cannons can be mounted on land vehicles.
+* Land based Mobile Suits developed from dog-like anti-personnel hunter-killer robots. As Electromagnetic Warfare began to defeat digital circuitry, it became necessary to put soldiers back into the war machines and return to larger, more reliable analog systems.
+
+Space based Mobile Suits follow these principles:
+* Propellent must be expended to accelerate - a modern vehicle in space is more limited by its propellent than its fuel.
+* Arms and Legs are useful - When one part of a mobile suit is moved, it produces a counter-movement in the opposite direction. This effect can be used to adjust the mobile suit's direction without expending propellant. Thus, in zero gravity the mobile suit's arms and legs are not dead weight, but a vital component of its maneuvering system."
+      :titles "Armored Frame, Exo-Suit, MEC (Multi-Environment Cavalry), Mobile Armor, Mobile Cavalry, Mobile Invantry, Mobile Suit"
+      :unitmap
+       (unitmap
+        "Piranha Mobile Armor"
+         (unit
+          :name "Piranha Mobile Armor"
+          :summary
+           "* The current state-of-the-art space mecha is a wedge-shaped, heavily-armored stealth craft with a turreted particle cannon.
+* Armor Module - The wedge-shaped front, bottom, and sides of the craft are a single hot-swappable module for in combat maintainance. It is primarily composed of ablative, stealth armor. The armor is sharply angled to present the smallest possible angle of penetration and detection from the front.
+* Core Module - The center of the craft is a gyroscopic sphere. The gyroscope is so powerful, it is used for attitude control instead of maneuver jets.
+* Core Drone Module - Like most mobile armors, the Piranha is deployed in large packs (schools) of drones with random human piloted command units. Without a pilot, the core module can contain spare ammo or propellent.
+* Core Pilot Module - The pilot seat is enclosed in this sphere which allows the craft to turn very quickly while rotating the pilot seat separately to minimize angular momentum and G-forces. The escape hatch can be rotated to the top or the bottom of the ship to allow easy exit or connect to ship airlocks.
+* Mission Module - The top and back of the craft contain the weapon systems, propulsion, and fuel in a single hot swappable module. This entire module can be immediately replaced to customize the craft for a mission or rapidly refuel and reload.
+* Space Interceptor Module - The standard space module includes a single heavy particle beam turret and nuclear propulsion (including fuel and reaction mass).
+* Space Bomber Module - This module is identical to the Space Interceptor Modules but replaces the turret with a fixed medium railgun and 2 heavy penetrator nuclear missiles.
+* Orbital Insertion Module - Though rarely used, this module allows the ship to reach orbit from a planet's surface using chemical rockets. The module is also capable of independent re-entry so it can be refueled and reused without the main craft.
+* Atmospheric Interceptor Module - Jet engines and anti-aircraft missiles. With this module, the ship is capable of trans-atmospheric flight. Though its wedge shape is aerodynamic, it provides no lift, so it must rely on its thrust to maneuver and to remain airborne.
+* Atmospheric Bomber Module - Jet engines and precision bombs.
+* Atmospheric Close Support Module - Jet engines and a single heavy penetrator autocannon.
+* Air Cavalry Module - Dual turbine rotor systems and fuel with 2 light rail cannons for rescue and light air support.
+* Land Module - A turret pairing a heavy rail cannon with a high capacity rail machine gun. The rear houses a missile pod housing 6 indirect fire missiles for light bombardment.
+* Marine Module - Marine caterpillar thrust system that allows high speed surface movement or moderate underwater movement with decent stealth.
+* Command Module - Advanced communications and coordiation systems.
+* Sensor Module - Specialized long-range active and passive sensor systems for patroling or spying.
+* Stealth Module - Enhanced stealth system foregoing firepower and performance for stealth. Contains a single medium rail cannon.
+* Science Module - Highly sensitive sensor package for detailed analysis.
+* Service Module - The ship has useful carrying capacity, so besides its combat role, it operates as a repair worker bee and cargo hauler. Typically, repair crews get more flight time on the ship than combat pilots.
+* Cargo Module - A large cargo container and thruster can be afixed to the rear for transport duties.
+* Long Range Module - A variant of the cargo container can be attached to the back of another module to increase the range of the ship providing extra thrust and reaction mass. The module is jettisoned once it reaches its target and is hopefully recovered later.
+* Arms - 6 thin, light-weight arms fold out from under the ship to the front, back, and sides. Each arm has 3 powerful fingers with magnetic clamps and sharp tips that allow the craft to cling to surfaces and walk along them at high speeds like an insect. The arms are strong enough to climb vertical surfaces or be inverted under gravity. The end of each arm has an attitude control jet to aid in high speed manuevers. On land, these jets are replaced with powerful turbines that lets the craft skate across level ground or water. The elbow of each arm is a sphere that can be used as landing gear or wheels on roads or other reasonably flat terrain. 6 arms were chosen, so the craft can still move on 4 arms while carrying or dragging a heavy load with 2. As with insects, 6 arms provides sufficient redundancy in case 1 or even 2 legs are lost to damage. In land combat, the arms allow the craft to maximize cover and peek its gun around corners or over obstacles."
+          :titles "Terrapin")
+        "Panther Mobile Cavalry"
+         (unit
+          :name "Panther Mobile Cavalry"
+          :summary
+           "* The current state-of-the-art land mecha is a 4 legged style reminiscent of big cats or wolves.
+* Like most mobile armors, the Panther operates in packs of drones with random human piloted command units. The pilot climbs into the back of the unit and rides in the position of a performance motorcycle.  If desired, the pilot can open the back and sit up as if riding a horse. Piloted units sacrifice a hardpoint to fit the pilot.
+* Payloads such as large caliber cannons and shields are mounted on one of two fixed back mounts. This unit can also stand on 2 legs and slide the cannon up to become a shoulder mount. All 4 legs possess manipulative hands with claws and magnets for climbing and can carry the cannon or a shield as needed. Small wheels in the elbows are used when travelling on roads.")))
+    "High Tech Land Vehicles"
+     (section
+      :name "High Tech Land Vehicles"
+      :unitmap
+       (unitmap
+        "Hover Tank"
+         (unit
+          :name "Hover Tank")
+        "Light Walker"
+         (unit
+          :name "Light Walker")
+        "Heavy Walker"
+         (unit
+          :name "Heavy Walker"))))))
+
+(func chapter_space_colonies : base/chapter
+ (chapter
+  :name "Space Colonies"
+  :sectionmap
+   (sectionmap
+    "L5 Colonies"
+     (section
+      :name "L5 Colonies"
+      :summary
+       "* The L5 Colonies are enormous space colonies that have been constructed at the five Lagrange points around Earth where gravitational forces are stable. They are 25km to 40km long.
+* Construction - These stations are constructed inside cylinders of Moon rock and asteroids ferried from the Asteroid Belt. The external surface is heavily armored against meteorite impacts. Industrial complexes are mostly on outermost layer of the colonies to keep them away from habitations. Towns are built on the internal surface of the colony. The internal space is divided into zones with large reflective pressure walls that give the appearance of continuous space while limiting the risk of catastrophic failure to any particular zone. Transport tubes are underground and also serve as emergency shelters. In addition to the outer cylinder, there is also an inner cylinder that forms a pressurized, zero-g drydock through the center of the colony.
+* Personnel - Those that have travelled from Earth to the Orbital stations are many of the best and brightest that Earth has to offer. Each colony supports up to 20 million people. Living space is about 300 square km, which is not a lot of room for so many people. Three or four story buildings are the norm, but they cannot be built higher than that because of the Coriolis effect.
+* Resources - Large amounts of solar energy are continuously collected, but life is difficult in space where all materials must be imported (at high tariffs). Orbital industry is generally thriving.
+* Politics - Because the Orbitals are largely corporate run and lack a specific history, they are largely free of geopolitical politics, as well as cultural and racial conflicts. They do, however, retain fierce, corporate politics. Most of all, the Orbitals chafe under the Earth bound regulatory and military agencies that supervise and tax them. Taxes are necessarily high to support so much technology, and taxes are always a point of conflict."
+      :titles "Orbitals, Orbital Platforms"
+      :unitmap
+       (unitmap
+        "L1: Shangri-la"
+         (unit
+          :name "L1: Shangri-la")
+        "L2: Elysium"
+         (unit
+          :name "L2: Elysium")
+        "L4: Avalon"
+         (unit
+          :name "L4: Avalon"
+          :summary
+           "The first of the L5 colonies, Avalon has the largest starship construction facilities. Its proximity
+to Earth and the Moon provide it optimal security and resources.")
+        "L3: Eden"
+         (unit
+          :name "L3: Eden")
+        "L5: Valhalla"
+         (unit
+          :name "L5: Valhalla")))
+    "Nomad Colonies"
+     (section
+      :name "Nomad Colonies"
+      :summary
+       "* Small individual colonies are beginning to dot open space between the planets. These colonies maintain their own solar orbits and can be convenient stop over points between planets.
+* Culture - Nomad colonists are a hard working, individualistic people. Some are religious or cultural fanatics. Others are essentially criminal organizations or pirates. Nomad colonists are highly desired as crew for interplanetary commercial space flights. They are used to cramped space conditions and they are also 	talented mechanics and jury-riggers.
+* Trade - Each Nomad Colony is primarily a trading station. They do not produce anything except food for themselves. Everything else is purchased from other planets.
+* Politics - Nomad Colonies are each formed for their own reasons and maintain unique governments and social structures. They attempt to remain neutral from other nations and will trade with anyone without regard to political or criminal status. Though the Nomad colonies are each completely unique, they all recognize the other Nomads as allies and treat any threat to one as a threat to all.
+* Military - Nomad Colonies typically maintain little or no defenses as befits their neutral status. They may, however, maintain hidden defenses or pirate ships nearby.")
+    "Mars Colonies"
+     (section
+      :name "Mars Colonies"
+      :summary
+       "* Colonial Mars is much like the American Frontier. Colonists left the overcrowded and impoverished Earth in search of a new life knowing that there was almost no chance to return to the Old World. They and their children would live or die on Mars, and they proudly adopted the name Martian.
+* Terraforming - Mars is one of the greatest technological projects ever attempted by humanity.
+* Climate - Mars is in the later stages of Terraforming. The air is thin and cold but breathable, similar to a mountain top.
+* Cities - Since the atmosphere became breathable, the population on Mars has sharply increased. Cities that were once domed habitats have grown into large settlements. Land is practically free, so buildings are low and sprawling.
+* Production - Mining is the primary reason for founding the Martian colony and continues to be the main source of jobs. Terraforming, industrial equipment, and algae farming support the mining effort.
+* Politics - The Martian Council is a democratic body that establishes and enforces Martian law. Unfortunately, they are largely a puppet of the Earth Authority and have been increasingly squeezing the Martian colonists to increase production for their war efforts. This pressure has spurred the creation of the Free Mars Movement that seeks to free Mars form Earth control.
+* Corporations - Martial Metals is one of the biggest corporations in the Solar System. It developed the orbital elevator and its steady source of cheap metals feed a large industry of orbital facilities including drydocks."
+      :unitmap
+       (unitmap
+        "Orbital Elevator"
+         (unit
+          :name "Orbital Elevator"
+          :summary
+           "* The Orbital Elevator is a miracle of technology and the only practical way to affordably get materials off the planet. The Orbital Elevator, the Asteroid Belt, and the Lunar Railguns are the only sources of building materials for colonies and spacecraft.
+* The Elevator is also a majestic symbol of power for the Martian Council and the Earth Authorities.")
+        "Free Mars Radical"
+         (unit
+          :name "Free Mars Radical")
+        "Martian Pirate"
+         (unit
+          :name "Martian Pirate")
+        "Sand Marauder"
+         (unit
+          :name "Sand Marauder")))
+    "Moon Colonies"
+     (section
+      :name "Moon Colonies"
+      :summary
+       "* The Moon's mineral and ice deposits made it the logical location of the first
+permanent off-world colony. Robotic solar-powered laser drills cut tunnel
+complexes into the walls of craters. Human colonists followed soon after.
+Regular exercise in 1 G training centers is mandatory for all colonists to avoid
+the dangers of low gravity.
+* Cities dot the lunar landscape connected by underground transport tubes.
+* The two largest cities maintain spaceports complete with Laser Lifters to boost large
+ships into orbit."
+      :titles "Lunars, Lunatics, Moon Men, Moonies, Selenites")
+    "Solar Colonies"
+     (section
+      :name "Solar Colonies"
+      :placemap
+       (placemap
+        :Stellaser
+         (place
+          :name "Stellaser"
+          :summary "* Giant mirrors placed in pairs in Solar orbit. The mirrors gather light by reflecting it back and forth between them before releasing it in a concentrated beam to slowly accelerate starships. Though this beam would certainly be deadly to humans, the beam is only dangerous to exposed targets without sufficient radiation shielding."
+          :titles "Starlight Express")))
+    "Venusiau Colonies"
+     (section
+      :name "Venusiau Colonies")
+    "Asteroid Colonies"
+     (section
+      :name "Asteroid Colonies"
+      :placemap
+       (placemap
+        "Asteroid Mining Colony"
+         (place
+          :name "Asteroid Mining Colony"))
+      :unitmap
+       (unitmap
+        "Asteroid Miner"
+         (unit
+          :name "Asteroid Miner"
+          :titles "Belter")))
+    "Jupiter Colonies"
+     (section
+      :name "Jupiter Colonies"
+      :summary
+       "* Culture - Personal space in Jovian colonies is extremely limited, so people
+share quarters with multiple people. There are not even enough beds for each
+person, so most people live with people who work different shifts and use the
+same beds on off-shifts. Common areas are used for everything except sleeping.
+The Jovians have adapted to be far more social and reliant on others for day
+to day life. This communal living has generally made them a tight knit society
+with a strong sense of group identity.
+* Science - Jovian science is one of the most advanced in the solar system.
+Research and development on ways to make their harsh life safer and more
+comfortable are always high priorites. Jovian scientists crank out a steady
+stream of innovations across all disciplines.
+* Military - The military has reaped the rewards of Jovian science and is
+arguably the most advanced force in the solar system, though certainly nowhere
+near the largest. Jovian forces are composed of separate standing armies:
+Alpha, Beta, and Gamma Divisions with Alpha containing the Godsfire flagship.
+Jovian military theory is based on efficient use of a small number of highly
+mobile units. They do not fear a large scale assault, since they would receive
+much forewarning of any attempt to mobilize a large force all the way out to
+Jupiter. Jupiter's remoteness makes it fairly easy to defend against direct
+assault, but the harsh environment makes sabotage a much greater threat, so
+Jovian intelligence forces constantly search for threats.
+* Agora - The Jovian governing body with primary offices on Elysee colony."
+      :placemap
+       (placemap
+        "Elysee Station"
+         (place
+          :name "Elysee Station"
+          :summary "* The largest Jovian Colony and the capital of the Jovian Confederation.")
+        "Joshua Station"
+         (place
+          :name "Joshua Station"
+          :summary
+           "* The second largest Jovian Colony and Jupiter's hub of manufacturing. The
+station is essentially a giant factory with live in workers. All commercial
+starships are constructed here.
+* Jovian Armor Works - The best known aerospace corporation in Jovian space
+is famous for inventing the Exo-armor and designing almost all of the
+Exo-armor fleet.
+* Joshua station also houses the seedier areas of Jovian society. Black
+markets, drug dens, and bordellos operate freely. Jovians tend to have a
+live and let live attitude, so little effort is made to stop activities that
+don't threaten the colony."
+          :titles "Wildest Place in the Solar System")
+        "Khannan Station"
+         (place
+          :name "Khannan Station"
+          :summary
+           "* The third largest Jovian Colony and Jupiter's military center. The
+station only allows military personnel on board. Large sections of the colony
+are dedicated to ship construction and others are top secret research labs.")
+        "Jovian Gas Refinery"
+         (place
+          :name "Jovian Gas Refinery"
+          :summary
+           "* These heavily armored, refining stations float in the upper atmosphere of
+Jupiter. They float by means of enormous rings filled with heated hydrogen
+and manuever using fusion thrusters. Multiple kilometer long tubes hang from
+the bottom of the station extracting gases from the differnt layers of the
+atmosphere. The broad round floatation disc and long tubes give the stations
+the general appearance of a jelly fish.")
+        "Io Colony"
+         (place
+          :name "Io Colony"
+          :reference "Outland"
+          :summary
+           "* A small, titanium mining colony is located on Io. Miners work intensely to
+gain maximum bonuses. Life is dangerous and many miners are hooked on
+amphetimines to maximize productivity. Victimless crime is largely ignored
+in this generally lawless outpost. Besides miners and transport workers there
+are only cooks, bartenders, prostitutes, a single doctor, a sheriff and two
+deputies.")))
+    "Saturn Colonies"
+     (section
+      :name "Saturn Colonies"
+      :summary
+       "* With the exception of Titan, the outer planets are too remote and unimportant
+to ever be colonized. Jupiter provides an unlimited supply of gas resources, so
+Saturn, Uranus, and Neptune have little to offer."
+      :placemap
+       (placemap
+        "Titan Research Station"
+         (place
+          :name "Titan Research Station"
+          :summary
+           "* A small, permanent research colony has been erected on Titan to study its
+unique atmosphere and geology. The hope was to discover evidence of primitive
+life, but no life has yet to be discovered."))))))
+
+(func chapter_car_wars : base/chapter
+ (chapter
+  :name "Car Wars"))
+
+(func chapter_cyberpunk : base/chapter
+ (chapter
+  :name "Cyberpunk"
+  :summary
+   "* The year is 2151.
+
+Things are pretty bad on planet Earth:
+* Global Warming - The build up of smothering greenhouse effect gases has resulted in the complete melting of the Arctic
+ice cap as well as much of the Antartic ice cap.  Coastal areas have been inundated and global temperatures continue to
+rise, a new record every year.
+* Resource Depletion - As the climate changed, desperate farmers overfarmed their land, increasing erosion and therefore
+food prices.  Fossil fuels became increasingly scarce and given the ongoing climate problems, ecologically unsuitable.
+* Overpopulation -
+* Economic Collapse -
+
+Things are slightly better in space:
+* Orbital Stations - For the last hundred years, large space colonies have been constructed at the five Lagrange points
+around Earth.  Relative to Earth, the Orbital stations are gleaming paradises of corporate efficiency.  Corporate
+interests are certainly strong on the Orbital colonies, and the Orbitals increasingly chafe at Earth's taxation of their
+goods and the high tariffs on imports.
+* Luna - Huge moon bases dot the lunar surface.  With its low gravity and limitless lunar rock, the Moon is the natural
+construction center for most Orbital facilities and spaceships.  Surface and underground mining operations go around the
+clock.  Enormous massdrivers propel the material into Earth orbit.
+* Mercury - Solar stations on Mercury provide limitless power while the molten
+surface provides limitless ore. Though the surface is hellish and survival is
+difficult, Mercury provides wealth beyond imagining to those able to survive.
+The population is 90% male with most residents on a 6 year work contract. After
+the contract they usually return to wherever they came from with enough money to
+buy a house and start a family. Like a military veteran, Mercury companies also
+offer generous benefits for the rest of the contractor's life or generous death
+benefits to their family if they don't survive. Despite extensive safety systems,
+the fatatlity rate remains 1 in 20 even among these hardy folk. Politically,
+Mercury is extremely independent and has little patience for the affairs of the
+other planets.
+* Venus
+* Mars
+* Asteroid Belt - Though Luna provides a steady supply of material to the colonies, whole Asteroids can be ferried from
+the Asteroid Belt to create instant colonies.  Further, the valuable minerals in an asteroid are easier to detect and
+mine than in either Lunar or Terrestrial mines.  The Asteroid field is large, however, so a whole crop of freelance
+prospectors have travelled to the Asteroid Belt in a high-tech gold-rush.
+* Jupiter
+* Saturn
+
+* Cryomax - Maximum security prison where prisoners are stored in partial cryonic suspension to maximize space.
+** Reference - Demolition Man
+* Crystal - Liquid crystal computer matrix"
+  :sectionmap
+   (sectionmap
+    :Government
+     (section
+      :name "Government"
+      :unitmap
+       (unitmap
+        :Innovator
+         (unit
+          :name "Innovator"
+          :reference "Appleseed, Genetic Android, Bioroid"
+          :summary
+           "* Genetically engineered artificial human.
+
+Theoretically superior to humans in every way, they are purposely implanted
+with a number of limitations:
+* They cannot reproduce.
+* They must undergo routine medical treatments or their genetic structure
+breaks down.
+* They are peaceful in nature to buffer mankind's tendency to violence.
+* They defer to human authority unless they believe that the authority will
+harm mankind.")
+        "Cycle Police"
+         (unit
+          :name "Cycle Police"
+          :unitskillmap
+           (unitskillmap
+            :Driving
+             (unitskill
+              :name "Driving"
+              :level "4"
+              :unitspecialtymap
+               (unitspecialtymap
+                :Motorcycles
+                 (unitspecialty
+                  :name "Motorcycles")))))
+        :E.S.W.A.T.
+         (unit
+          :name "E.S.W.A.T."
+          :reference "Appleseed")
+        "Mobile Police"
+         (unit
+          :name "Mobile Police"
+          :reference "Appleseed")))
+    :Military
+     (section
+      :name "Military"
+      :unitmap
+       (unitmap
+        "Combat Android"
+         (unit
+          :name "Combat Android")
+        "Planetary Defense Navy"
+         (unit
+          :name "Planetary Defense Navy")
+        "Planetary Defense Pilot"
+         (unit
+          :name "Planetary Defense Pilot")
+        "Eugenic Warrior"
+         (unit
+          :name "Eugenic Warrior"
+          :reference "* Khan, Star Trek II"
+          :summary
+           "* Through bioengineering, an elite warrior caste has been created combining strategic genius, leadership skills,
+and physical perfection.  Unfortunately, they also develop incredible egos and megalomania."
+          :titles "Master Race, Super Soldier")))
+    :MegaCorps
+     (section
+      :name "MegaCorps"
+      :summary
+       "* After the world stock market crash and subsequent collapse of many economies and governments around the
+world (including the US), only international corporations were left with the ability to exert power on a
+global scale.
+* The economic collapse acted as a purge, the strongest conglomerates consuming the weaker ones until only
+the biggest and strongest remained. With most governments enfeebled and the competition obliterated, the
+megacorps were left to fill a huge power vacuum. Naturally there was some disagreement as to how to divide
+the spoils. The result was a series of wars as each corporation attempted to destroy its competition
+physically and finacially. Smaller conflicts, covert and overt, continue to this day, with full scale war
+threatening to resurface at any time."
+      :unitmap
+       (unitmap
+        "Corporate Man"
+         (unit
+          :name "Corporate Man"
+          :titles "Collarboy, Company Man, Suit")
+        "Corporate Security"
+         (unit
+          :name "Corporate Security")
+        "System Administrator"
+         (unit
+          :name "System Administrator"
+          :titles "Cyber Engineer, Icemen, SysOp, SysAdmin, Weasel")
+        "Kildren Pilot"
+         (unit
+          :name "Kildren Pilot"
+          :summary
+           "* Kildren are genetically modified before birth to halt the aging process.
+            * Physically, they are eternally teenagers. Mentally, however, they are quiet and serious. A side effect of their frozen aging process is the inability to recall distant memories. Kildren, therefore, lack a strong sense of time or the past. They live for the now and are fearless pilots. For some, however, the sense of timelessness lacks purpose and turns into hopelessness.")
+        :Media
+         (unit
+          :name "Media"
+          :summary
+           "* Ethnicity: Greek-American
+            * Hair: Black Short Waved Hair
+            * Eyes: Pale Grey
+            * Clothes: Clean White Shirt under black leather thigh-length light-armored jacket (occasional loose tie), grey hardwearing slacks, black shoes or running sneakers, Aviator sunglasses when being 'too cool'.
+            * Equipment: Beeper, Camera, Colt automatic pistol and shoulder holster, 1 room apartment
+            * Contacts: Camera Man, Police Officer"
+          :unitskillmap
+           (unitskillmap
+            :Firearms
+             (unitskill
+              :name "Firearms"
+              :summary "Pistol"
+              :level "4")))
+        "Medical Technician"
+         (unit
+          :name "Medical Technician"
+          :titles "Med Tech")
+        :Scientist
+         (unit
+          :name "Scientist")))
+    "Offworld Colonies"
+     (section
+      :name "Offworld Colonies"
+      :unitmap
+       (unitmap
+        :Miner
+         (unit
+          :name "Miner")
+        :Pirate
+         (unit
+          :name "Pirate")))
+    :Sprawls
+     (section
+      :name "Sprawls"
+      :titles "Dirtboys, Dirtgirls"
+      :unitmap
+       (unitmap
+        "Bounty Hunter"
+         (unit
+          :name "Bounty Hunter")
+        "Cyber Psycho"
+         (unit
+          :name "Cyber Psycho"
+          :summary "* Buttonhead - someone addicted to artificially stimulating the pleasure centers of the brain."
+          :titles "Buttonhead")
+        :Enforcer
+         (unit
+          :name "Enforcer")
+        :Fixer
+         (unit
+          :name "Fixer"
+          :summary
+           "* Fixers buy and sell information, goods, and services.
+* Some of their services merely require the right connections.  Others are not quite legal."
+          :titles "Bookie, Executive Secretary, Gobetween, Information Broker, Negotiator, Organizer, Producer, Roadie, Thirdman")
+        "Gang Member"
+         (unit
+          :name "Gang Member")
+        :Netrunner
+         (unit
+          :name "Netrunner"
+          :summary
+           "* Outlaw computer jocks or hackers.  Some people do it for the glory; most do it for the money.  Information is
+power in the modern world and all the information is somewhere on the Net.  Further, the modern world is a marvel
+of automation, so a clever person may turn that automation to his own uses."
+          :titles "Crystaljock, Hacker")
+        :Nomad
+         (unit
+          :name "Nomad"
+          :summary
+           "* Deltajock - A pilot of delta-winged smuggling craft
+* Panzerjock - A driver of armored smuggling hovercraft"
+          :titles "Deltajock, Gypsy, Linerunner, Panzerjock, Road Warrior, Smuggler")
+        :Rocker
+         (unit
+          :name "Rocker"
+          :summary
+           "* Zonedancing - Dancing turned into a dominance game.  A dancer attempts to persuade other dancers in his zone to
+conform to his movements using charisma, talent or violence."
+          :titles "Bard")
+        :Solo
+         (unit
+          :name "Solo"
+          :reference "* I don't want to walk this Earth if I gotta do it solo...so...low. - Iyaz, Solo"
+          :titles "Assassin, Hit Man")
+        :Tech
+         (unit
+          :name "Tech"
+          :titles "Cybertech"))))))
+
+(func chapter_jovian_chronicles : base/chapter
+ (chapter
+  :name "Jovian Chronicles"
+  :sectionmap
+   (sectionmap
+    "Orbital Revolution"
+     (section
+      :name "Orbital Revolution"
+      :summary
+       "Events Leading to War
+* Air Tax
+
+Overview of the War
+* Rock War
+
+Aftermath
+* Terran Union"
+      :scenariomap
+       (scenariomap
+        "Rock War"
+         (scenario
+          :name "Rock War")
+        "Battle in the Depths"
+         (scenario
+          :name "Battle in the Depths"
+          :summary
+           "* An undersea fission cannon is discovered before it becomes operational.
+* A squadron is sent ahead of the fleet to destroy the cannon before it
+is brought to bear on the fleet.
+* The base defenders need to stall for 10 minutes until the cannon can be
+fired destroying most of the fleet. 5 minutes later a second shot will
+ensure victory.
+* The battle takes place completely underwater.")
+        "Destroy the Downlink"
+         (scenario
+          :name "Destroy the Downlink"
+          :summary
+           "* The rebels choose to destroy a microwave receiver converting power from
+a vast orbital solar satellite array. If they can destroy it, the entire
+area will be without power and defenseless for days allowing the rebels
+free reign to take territory.
+* The defenders realize the vulnerability of the station and it is
+heavily defended.")
+        "Rat Warren"
+         (scenario
+          :name "Rat Warren"
+          :summary
+           "* The mechs stationed to defend the city are cut off from reinforcements.
+* The rebels see an opportunity, but they have only powersuits and their
+wits to take the colossal defenders down. They can use the sewers and
+subways as cover to launch hit and run attacks.")
+        "Traitorous Acts"
+         (scenario
+          :name "Traitorous Acts"
+          :summary
+           "* An surprise attack is launched on a munitions depot, but there is a
+problem. The defenders are not surprised: there is a mole in your group.
+* Attackers have a superior force, but one of them is a traitor. They
+will have to watch their backs.
+* Defender secretly chooses one attacking unit as the traitor and can
+choose to activate it at any time.")
+        "Joy Ride"
+         (scenario
+          :name "Joy Ride"
+          :summary
+           "* A young, hotshot rebel manages to sneak into an enemy test facility and
+steal a prototype mecha. The whole base is on his tail, and he will need
+to use urban cover and speed to try to get away.")
+        "Train Spotting"
+         (scenario
+          :name "Train Spotting"
+          :summary
+           "* Ambush a mag-lev train and stop it before it escapes.
+* Attackers must disable the train and destroy the defenders.
+* Defenders must escape or drive off the attackers.")
+        "Breaking Damocles"
+         (scenario
+          :name "Breaking Damocles"
+          :summary
+           "* The Damocles is an orbital facility equipped with a powerful laser. Its
+existence has put major pressure on Earth governments to comply with UEA
+demands.
+* Attackers must placed explosives along the edge of the facility and
+destroy the attitude control thrusters to send the facility into a death
+spiral that would make it burn up in orbit. Hopefully, it will crash in
+an uninhabited area.
+* Defenders must destroy the attackers or the explosives to prevent this
+nightmare scenario.")
+        "Moon Rocket"
+         (scenario
+          :name "Moon Rocket"
+          :summary
+           "* A huge rocket is about to be launched from its silo in a crater on the
+Moon.
+* The attackers must destroy the launch silo or failing that the missile
+itself before it leaves the combat area. Critical hits on the missile
+may cause it to explode, destroying the launch base.")
+        "Mirage Storm"
+         (scenario
+          :name "Mirage Storm"
+          :summary
+           "* Two recon mechs gather intelligence around Jupiter but are pursued. The
+recon units try to even the odds by flying into the atmosphere directly
+into a super storm. The storm plays havoc with normal sensors, but the
+recon units can sort out the jumble of sensor data.
+* The 5 attackers must destroy the 2 escaping mechs.
+* The defenders must drive off or destroy the superior attackers.
+* Special Rules: For each defender place 2 additional ghost mechs on the
+battlefield. These represent false image data produced by the cloud.
+After each attack, the defenders may secretly switch which unit is
+the real mech among the three identical images. The ghost mechs are
+obviously immune to all damage.")))
+    "Jovian Odyssey"
+     (section
+      :name "Jovian Odyssey"
+      :scenariomap
+       (scenariomap
+        "Dreams OF Phantoms"
+         (scenario
+          :name "Dreams OF Phantoms"
+          :summary
+           "* Call of Jupiter - Jovian scientists discovered an odd life form floating in Juptier's
+atmosphere, the Jovian Floater. A floating research station was proposed, but the
+extreme funding could not be secured. Spies for the Venusian Bank determined that the
+Floaters may be responsible for the phenomenon called the 'Call of Jupiter', where
+explorers to Jupiter have often explained that they were drawn to Jupiter because of
+dreams they had of Jupiter singing to them. This would imply that the Floaters can
+communicate telepathically over interplanetary space: an incredible finding.
+
+* Slumbering Eidolon - The Venusians established a top secret floating base in Jupiter's
+atmosphere under the noses of the Jovians. The intense atmosphere combined with the
+powerful radiation and magnetic fields effectively hide them from any watching eyes
+above. Eidolon is secretly supported by a group in the largely lawless Joshua Station
+to procure or ship supplies and provide emergency rescue if necessary.
+
+* Mission - Discover the Slumbering Eidolon and capture or destroy it. They could
+discover it by finding a supply or courier ship headed there during a patrol, or stumble
+across a supporting organization on a Jovian colony. The assault force would
+most probably consist of two Thunderbolts, one Javelin, and a small number of
+Pathfinders and Retaliators. If they choose to capture the Eidolon, a hurried scramble
+as a self-destruct timer counts down and bulkheads slam shut is just as exciting as an
+action-packed firefight in the command center. Agents and reporters are harder to
+integrate with the destruction of the station, but are more
+easily involved in the discovery process.")
+        "Dreams OF Secrets"
+         (scenario
+          :name "Dreams OF Secrets"
+          :summary
+           "* Summary - After the discovery and decomissioning of the secret Venusian research
+station, the Jovian government found some advanced mech prototypes that the Venusians
+had been testing in the Jovian atmosphere. This led to the Agora paying more attention
+to a request of assylum from one Dr. Peyarje, and sent the PCs to help retrieve him.
+
+* Dr. Peyarje - UEA has conscripted the brilliant Dr. Peyarje into their service,
+forcing him to develop next generation exo-weapons at a hidden base. In the interests of
+keeping an appearance of openness, they have allowed Peyarje to attend the 2210
+ Intersettlement Scientific Convention (ISC), though he is accompanied by a detachment
+of the UEA military. He has managed to get a plea for help and request for asylum to the
+Jovian embassy. His crowning achievement is a telepathic mech control system based on
+discoveries found from the Floaters over Jupiter.
+
+* Georgia On My Mind - The players have been dispatched to extract Peyarje from the ISC
+conference in Venus orbit. They are hidden among the large Jovian delegation to the ISC
+aboard the Georgia On My Mind space liner. However, in order to smuggle them aboard,
+they can carry now weapons or equipment and will need an alternate means of escape.
+
+* Stanton Station - A space station in Venus Orbit where the Internation Scientific
+Convention (ISC) is being held. Here, Peyarje will be allowed to present a carefully
+censored summary of his work on cyberlinkage technologies. The players should take part
+in the early stages of the ISC while they investigate the conference and find a way to
+get Peyarje away from his UEA handlers and off-station.
+
+* Jovians - The Jovians wish to reap the PR benefits to be found in rescuing a brilliant,
+pacifist scientist from UEA’s militaristic clutches and also hope that Peyarje can shed
+some light on some samples of his CAT/Rapid-Scan system found on a secret research
+station.
+
+* UEA - Unfortunately for these operatives, the UEA is taking the security of their
+prisoner very seriously. The third division of the UEA 4th fleet are moored just off
+Stanton, at the invitation of the Venusian Plantary Council, and permission has been
+granted for several officers and marines to accompany Peyarje as a security detail.
+Though the ISC filed a formal protest over the admittance of UEA military officers
+acting in an official capacity, the issue has since been dismissed and other nations
+have been allowed to included similarly-limited security details for their detachments.
+
+* Beautiful Dreamer - The PC's meet their contact, Ysa Cantroini and through her, Aglaee
+Dessources. Both seem to be independents commissioned by the Jovians. Ysa is surpisingly
+competent at many abilities and Aglaee has a ship for escape along with the  characters'
+gear and mechs.
+
+
+* CHARACTER INVOLVEMENT
+JAF pilots could be members of an official JAF escort, added (as mentioned
+above) to balance out the UEA military forces escorting Dr. Peyarje. The pilots would still be
+instructed to ask questions and discretely investigate, but would be intended to act as a decoy
+and backup for the real extraction team. By asking questions and poking their noses into places
+they don’t belong, they would be expected to draw attention away from the real JIS operatives.
+Who could, in turn, be exposed and captured at the last minute, forcing the players to pull off
+the heist on their own with insufficient planning.
+
+The players could be the backup JIS team instead of the primary, tasked with investigating and
+doing footwork for the primary team. This puts them on the front lines, while the primary team
+works to solidify their own cover. The primary team’s cover could then be blown, forcing the
+players to execute the operation, and keeping them on the front lines. This has many hooks for
+complications and intruigue. What if the compromised team wasn’t discovered, but betrayed
+by a double agent in their own ranks? This goes well with the scenario (see below) that has
+the players trapped in hiding on Stanton. What if the Venusians (specifically, Malachai) were
+aware of the operation all along and either want the operatives to expose themselves or for the
+operation to succeed/fail for reasons of their own?
+
+Reporters have the easiest time finding cover identities - they don’t need them. The ISC is a big
+deal, and reporters from all over the solar system can be expected to attend. And reporters are
+expected to be nosy, so no-one’s going to take excessive notice of a few asking questions where
+they shouldn’t. However, due to their typical lack of combat skills, reporters will probably be harder
+to handle for the actual freeing of Peyarje. They would probably have to resort to subterfuge and
+trickery if called upon to get Peyarje away from his guards themselves. One possibility is to have
+JIS agents already in place on Stanton handle the snatch, then pass Peyarje off to the reporters
+for transport, as in the JAF pilots write-up above.
+
+The 3rd Division of the CEGA 4th fleet is composed of:
+ • 2 Tengu carriers with extra vehicle bays.
+ • 4 Bricru corvettes.
+ • 1 Hachiman destroyer.
+
+One Tengu carries a Wyvern and three Wraiths, while the other carries four Syreens. The
+squadron is accompanied by several fuel ships, to give extra range to the short-legged CEGA
+warships. Garand’s Wyvern is the Command variant. While the Hachiman is technically the
+flagship of the squadron, Garand usually commands from aboard his Tengu where he has easy
+access to his exo-armor. This can be used to involve Kleb in the scenario without Garand’s
+knowledge - Kleb could be travelling aboard the Hachiman, watching and ready to take command
+should the situation demand it.
+
+* Escape - The 3rd Divison lacks is deployed far from reinforcements, so it will act
+cautiously. They know that they don’t need to kill the players - they need to capture
+the Dreamer. The PCs should realize this, and be careful not to let themselves be drawn
+away... For what seems like a retreat could really be an attempt to lure them away so
+that another force can slip in and disable the Dreamer’s engines.")
+        "Dreams oF Freedom"
+         (scenario
+          :name "Dreams oF Freedom"
+          :summary
+           "* Beautiful Dreamer - Rescued from his UEA handlers at the Intersettlement Scientific
+Convention, Dr. Peyarje and his rescuers have fled Venus aboard the Beautiful Dreamer,
+privateer ship commanded by Aglaee DesSources. Unfortunately, they have not lost the UEA
+forces seeking to recapture Peyarje. The 3rd Division of the UEA 4th fleet, commanded
+by ace pilot Ranho Garand, is in hot pursuit.
+
+* Intercept Course - DesSources’ skillful helmsmanship makes the most of their limited
+reaction mass, but Garand’s 3rd Division is slowly closing in, blocking the orbits they
+could use to travel out-system. Garand's fleet makes a high energy burn and manages to
+intercept them and another heated battle ensues. After the battle, the UEA force, having
+used their remaining reaction mass to intercept must wait for a fuel tender to continue
+the pursuit.
+
+* The Long Trip to Earth - Low on fuel, with the UEA pursuit fleet closing in fast, the
+crew of the Beautiful Dreamer find themselves with only one option: change course and
+head for the Earth system, the heart of the UEA and the only source of supplies and fuel
+in range. Perhaps they can loose their pursuers in the high-traffic Orbitals and find
+another way to Jupiter. Because reaction mass is low and they need to run silent, the
+trip takes many days at zero-g. Many days in radio silence are spent discussing ways to
+get out of this mess.")
+        "Moonlight Sonata"
+         (scenario
+          :name "Moonlight Sonata"
+          :summary
+           "* Ismael Li - Fortunately, the Jovians have been working hard to save the mission and
+have made a deal with a burgeoning rebel group on the Moon which can to provide them
+with the fuel and parts they need... For a price!
+
+* The Eagle has Landed - Now they just need to avoid the blockade and land on the Moon.
+Though the Moon has very low gravity, the Beautiful Dreamer is not designed to land on
+a Moon. Even if they survive the landing, they may not be able to take off again.
+However, there is no choice in the matter. After a harrowing landing, the rebels help
+bury the Dreamer in lunar dust and begin repairs and refueling.
+
+* Copernicus Base - The characters are invited to the underground, domed city known as
+Coperinus Base. Here the charismatic Ismael Li introduces them to the harsh life of
+the Lunar miners. There is nothing to do but wait and meet the pleasant locals while the
+ship is repaired and the UEA prepares its next move.
+
+* The Plot Thickens - Gradually, Ismael brings the characters to see supporters and see
+his gear. Ismael intends to lead a rebellion to take over Copernicus Base and he needs
+the characters' help. His group lacks seasoned fighters and they lack tactics,
+organization, and strategy. This revelation sparks a heated debate over the wisdom of
+this endevour. No one can argue that their situation is difficult, but even if they
+succeed the Lunar Authority and the UEA will not just sit back and allow a rebellion.
+Ismael argues that once they seize control, the Lunar Authority will have to negotiate.
+Others fear a strong, military response. Any armed conflict in a space station is
+loaded with risk. If one of the characters befriends or falls in love with one of the
+rebels, it would add a more personal edge to the rebellion.
+
+* Eleventh Hour - With or without the characters' help, Ismael begins to grease the
+wheels of revolution through raids, assassinations, sabotage, and public relations
+campaigns. Their target is Captain Ansevik the head of Copernicus security. If they
+can capture her, they believe they can secure the base.
+
+* Moon Strike - After providing the characters with the repairs and fuel they need, he
+launches his armed uprising in the depths of Copernicus hoping to drag them into the
+fight. Moving barricades outwards at carefully-regulated intervals, his troops and
+exo-suits advance through the dome, driving out the UEA bureaucrats and policemen as
+they go. The few initial firefights go well for the rebels.
+
+* The Tide Turns - About six hours into the fighting, things begin to turn. Ansevik
+manages to get her exo-suit forces into Copernicus, and their numbers mean bad things
+for the rebels.
+
+* Evacuation - Catherine Glit starts an evacuation of refugees. The rebels lift as many
+to hastily-contracted merchant and passenger ships in lunar orbit as they can. Things
+become even more chaotic as the Selenties abandon their posts and the rebels fall back
+before the UEA forces. Organizing such a retreat is no easy task. Dessources takes as
+many refugees as possible aboard the Dreamer. Ysa wants to help the rebels fight. The
+characters should be involved in the fighting or evacuation effort somehow. After all,
+it was their presence that provided the catalyst that started the rebellion.
+
+* Escape - Her holds crammed with refugees and UAE ships starting to move in, Aglaee
+orders the characters back to the ship. Greatful for their help, Li lets them go. He
+sends Catherine Glit with them at the last minute, against her wishes. As the characters
+head for the spaceport, the rebels begin another counter-attack, slowly forcing the UAE
+ground troops back and taking the spaceport and ground-to-orbit weapons. The citizens
+who couldn’t be evacuated riot, pelting helpless UEA infantry and marines with rocks and
+bricks. Things are obviously not going well for the UEA troops.
+
+* Copernicus Dome Disaster - Ansevik realizes that the rebels could use the city's
+ground-to-orbit weapons to attack his warships. He must now choose whether to withdraw
+or fire on the defensive batteries. In a panic, Ansevik orders his ships to attack the
+laser and missile batteries. The resulting explosions are far larger than expected and
+shatter the dome. A hasty retreat ensues as the Dome opens to vacuum, killing rebel,
+civilian, and UEA marine alike.
+
+* Chaos -  Ismael Li operates the Laser Lifter to boost the refugee ships away, including
+the Dreamer. Li's last words, relayed to his friends and helpers aboard the Dreamer, are
+My life for freedom! The Dreamer attempts to escape with the other refugee ships, but
+the UEA ships are positioned to easily stop them. The UEA demands their surrender, but
+the UEA ships are then ordered to focus on rescue instead of pursuing the refugee ships.
+
+* Aftermath - In the end, thousands are killed in Copernicus Dome. The UEA, of course,
+refuses to take the blame for the Dome disaster. Their first desperate response is to
+put the blame on the Jovian terrorists who abducted Peyarje. Reporters use Ansevik’s
+actions as fodder for their own counter-attack against UEA’s propaganda.
+
+* Notes - Develop the rebellion and the rebels, especially Ismael Li. Emphasize the
+moon’s restrained and industrious culture and the rampant poverty and utilitarian
+nature of the underground cities. If appropriate, show the corruption of the UEA
+officials that oversee the colonies. Play up the initial hope and final despair of the
+rebels, the desperation of the refugees to find a better life, and the chaos of
+close-quarters fighting in the Lunar warrens.")
+        "Dreams of War"
+         (scenario
+          :name "Dreams of War"
+          :summary
+           "* Mission to Mars - The UEA is in pursuit again and logically expects the Dreamer to
+head to Jupiter. However, with its high speed escape and her holds crammed with refugees,
+there’s no way for the Beautiful Dreamer to make Jupiter without running out of supplies
+or fuel. Fortunately for her crew and desperate passengers, the ship can easily make
+Mars. There, Aglaee DesSources hopes that the Martian Republic will be able to provide
+homes to the refugees.
+
+* Decoy - The UEA pursuit will soon catch up and they cannot be allowed to follow the
+Dreamer to Mars, so a desperate plan is devised. The booster rockets from the Moon are
+removed and fitted with decoy gear to make the rockets appear as the Dreamer. The pilots
+will escort the rockets on the current course while the Dreamer makes a course
+correction and silently coasts towards Mars. The escort will engage enemy mechs drawing
+out the enemies resources while maintaining the charade as long as possible. Once the
+decoy is discovered the pilots must return to the rockets and activate the massive
+rockets to boost away at high speed to rendevous with the Dreamer. This plan is loaded
+with risk and the pilots will probably be caught or killed. Their farewell is long and
+emotional. After the Moon, the pursuit fleet commander has been ordered to kill everyone
+aboard the Dreamer both in revenge and to eliminate witnesses. When the UEA pursuit
+fleet catches up to the decoy, a heated fight begins with no quarter given. Because the
+UEA is out for blood, they focus on the pilots instead of the 'Dreamer'. The pilots are
+driven back and the ruse is discovered. The pilots must make a desperate dash to the
+booster and escape before they are blown out of the sky. Fortunately, they escape though
+with heavy losses and damage and rendevous with the Dreamer on schedule. The UEA fleet
+has overcommitted to Jupiter and are unable to pursue to Mars. Anxious days pass as the
+Dreamer travels at full speed to Mars. When they arrive they will have to hope that the
+Martian government doesn't arrest them on the spot. Meanwhile, Garand has deduced that
+the refugees will divert the Dreamer to Mars (because that's what he would do), but his
+disgust with his superiors' handling of the battle on the Moon causes him to go to Mars
+on his own.
+
+* Mars Arrival - The Dreamer enters Mars orbit and is immediately escorted by a fighter
+wing and two destroyers. The escort demands that the Dreamer stand down all weapons and
+prepare to be boarded. They have little choice in the matter. There is nowhere else to
+go. The boarding party secures the engine room and bridge and dock the Dreamer at the
+massive Orbital Elevator space station called Heaven. All passengers are taken to
+immigration while their ship is searched. Here they meet Yanna Summers, the chief
+adminstrator of the Elevator. Little information is forthcoming and all senior staff are
+to be taken by shuttle to Mars Federation police headquarters. As they descend, they get
+an amazing view of the incredible Orbital Elevator in action.
+
+* Stairway to Heaven - Constructed with the aid of Venus Bank, the Martian Orbital
+Elevator, Stairway to Heaven is a marvel of engineering. It stretches upwards from its
+base at Hell Station just north of the Federation capital of Kurtzenheim to the Heaven
+Station counterweight. The elevator is dominates the landscape and has become a symbol
+of Mars Federation authority. It shines like a moon day or night, and it catches the
+first light of day every sunrise before the rest of Mars. Its ore containers crawl up
+and down the tether 24 hours a day. The current chief adminstrator, Yanna Summers, is
+extremely organized and professional and keeps very tight ship.
+
+* Martian Politics - Since its creation, the Orbital Elevator has become the center of
+Martian politics. Mars has two major political factions: the Mars Federation and the
+Free Republic of Mars. The Mars Federation is an authoritarian regime. It controls most
+of Mars and is loosely allied with the UEA. The Free Republic of Mars is smaller and is
+largely at odds with everything the Federation does. The Orbital Elevator has become the
+center of Martian debate because the Federation controls the Elevator and the huge
+profits it produces will allow the Federation to dominate the Free Republic in just a
+few years. Open conflict on Mars has become common and numerous terrorist organizations
+perform increasingly savage raids on the Mars Federation. The Federation in turn blames
+the Republic of backing the terrorists which is not entirely without merit.
+
+* Life on Mars - At police headquarters, they must negotiate for asylum for the
+refugees and avoid arrest and extridition to the UEA. They meet with Paul Treben of the
+Solar Police who is surprised to learn of the unofficial version of the events on the
+Moon. He will report everything he learns to his superiors who will in turn secretly
+inform the UEA. Representatives from both political factions arrive intending to use the
+characters to their own ends. The Mars Federation wants to extridite the characters as
+terrorists, but the Free Republic grants the refugees asylum and puts a hold on the
+extridition of the crew of the Dreamer.
+
+* Waiting Around - Support for the UEA is weak here, so the characters are released for
+the time being, though they are escorted by an armed detail at all times. Garand and his
+elite unit are also poking around and soon confronts the high profile characters, but he
+has no authority on Mars and can do nothing while the characters remain. In the meantime,
+the refugees are brought to the Free Republic and a media circus begins as their stories
+hit the airwaves. The public is shocked and sympathetic to the Selenites, but this soon
+turns to rage as it becomes clear that the same thing could happen to them. The normal
+protests for fair use of the Orbital Elevator break out into massive riots and terrorist
+activity spikes across Mars.
+
+* Dangerous Liason - Though the govenments seems to treat the characters like criminals,
+the public treats them like celebrities or even heroes. While out and about, a pretty
+young woman approaches one of the males and gushes about how wonderful he is and leaves
+him her contact code on a slip of paper. After further inspection, the contact code is
+not a personal address but a secure web site. Following the link, they speak with the
+girl, Lydia Ketchum, but her manner is very different. She is a political radical who
+has been implicated in terrorist activity including attacks on police and bombings. She
+is proud of her actions and believes that giving her life for a free Mars would be a
+fair trade. She proposes a daring escape plan. Her people will help smuggle the
+characters up the elevator in a depressurize ore car. There they must fight their way
+through the station, take over the administration headquarters, and release their ship
+and mechs from impound. Her people can then use the station defenses to cover their
+escape. With the station under her control, she can negotiate fair use of the elevator
+going forward from a position of strength.
+
+* Departure - Lydia's plan does not sound entirely rational, and she is not the sort of
+person who can be trusted. However, without allies the characters are never going to
+escape Mars, so they have no choice but to take a chance regardless of the consequences.
+Catherine and Ibrahim are unsure of their long-term safety on Mars and decide to join
+the group to continue all the way to Jupiter despite the risks.
+
+* Hell Ride - After days of planning, Lydia's people distract the guards and the
+characters make a run for it. After they make their escape, they are swiftly taken to
+an ore processing plant and smuggled aboard an ore train car. In the train are guns,
+pressure suits, Lydia, and four of her people. The train goes to Hell station where the
+cars are searched. Tense moments pass as they wait for the inspector to get to their
+car. When he opens the car, he looks right at them, winks at Lydia, waves his scanner,
+and lets the car pass. The characters must take care not to be crushed when the train
+contents are dumped into an elevator crawler. Soon, the crawler begins its long, slow
+trip up the elevator.
+
+* Heaven Sent - When the elevator arrives at Heaven, its contents are dumped into an
+open bin. More of Lydia's sympathizers help them bypass security forces. Now the
+characters need to get to Heaven's Command Center with as little bloodshed as possible.
+Complicating the situation, Garand appears on a screen. He and his men have commendeered
+an elevator crawler and are on their way up with their mechs. Though Heaven is a huge
+structure, it is not a military installation, so with the help of sympathizers, getting
+to the Command Center is surprisingly easy. Yanna is enraged, but her actions are always
+pragmatic, so she surrenders the Command Center when the odds are stacked against her.
+
+* Elevator Falls - Once Command is secured, the way to the Dreamer is open. Lydia says
+she will cover their escape and then begin negotiations with the govenment for release
+of the station. She is, of course, lying. After the Dreamer departs, she does help the
+Dreamer escape by threatening the UEA ships who cannot fire on the station, but once the
+Dreamer is clear, she turns Heaven's weapons on the tether. As the support is destroyed,
+Heaven begins spinning out of orbit while the elevator cable begins to fall, slowly at
+first, then faster and faster. Garand uses his mech to punch free of the doomed elevator,
+but he is a very low orbit. The damage from the cable's impact is incredible, as the
+white-hot dimond-fiber cable slams into the red dust at several times the speed of sound.
+The elevator is more than one and a half the length of the planet's equator and slowly
+wraps itself around Mars destroying everything around it for miles. The impact raises a
+massive cloud of dust and leaves a huge canyon visible from space. The destruction is
+unequalled in the history of mankind. The death toll is in the millions. The UEA must
+rescue Garand and Heaven station, so the Dreamer crew can begin the sad trip to Jupiter.")
+        "Dreams of Death"
+         (scenario
+          :name "Dreams of Death"
+          :summary
+           "* Epilogue - The Heaven crew is rescued from a harrowing tumble into space, but the
+station spins off into space. Lydia proudly takes full credit for the assault in the
+name of a free Mars. There is little doubt that Lydia will be tried and executed which
+seemed to be her plan from the start. Her testimony makes it seem that she duped the
+Dreamer crew into fighting her battle for her. There are many, however, who draw a
+connection between the Dreamer crew and the disasters on the Moon and Mars. They are
+not officially terrorists, but you wouldn't know it from some of the news stations. The
+elevator disaster almost exclusively harmed the Mars Federation which shifted the
+balance of power back toward the Free Republic, which was Lydia's intention. Garand was
+saved by a daring low-orbit rescue. The UEA uses his story and the elevator fall to try
+to deflect attention from their crimes on the Moon, but the UN determines that the
+Copernicus Disaster was an act of state oppression and that the UEA should be subjected
+to sactions.
+
+* Jupiter - With fresh supplies and full fuel tanks, the Dreamer is easily able to make
+Jupiter. There, Dr. Peyarje transfers to the JAW Skunk Works team on Joshua Station.
+His new thought control system is refitted into the new Prometheus prototype mech.
+
+* A Mad Plan - The UEA leadership assesses their situation are are not happy at all.
+They invested massive resources developing Dr. Peyarje's mech control system to gain the
+upper hand, but now that technology will shift military power toward the Jovians instead.
+Their actions have caused the Selenites to openly hate and fear them. The Martian
+economy is in ruins with their ally the Mars Federation hit hardest. The Venusian Bank
+is still behind them, but they won't be if UEA influence collapses. The military proposes
+a heartless plan: destroy the Jovian colonies now before the new technology can be used
+and the entire Solar System will fall under UEA control. The Venusians can be bought off.
+The disasters on the Moon and Mars leave them in no position to fight back. The other
+colonies are too small and will have to fall in line. All of this chaos has created an
+opportunity to establish a new order, but the time to act is now.
+
+* The Hammer Falls - The 4th Fleet, still assigned to recover Peyarje and waiting just
+outside of Jovian space, is ordered into action. The Elysee Station sensor net has been
+disabled by a UEA agent, allowing the fleet to close with the colony undetected. A
+powerful jamming device has been deployed by the fleet to prevent the station from
+calling for help. The ships and mechs are ordered to attack Joshua Station to disable
+their defenses and force them to negotiate the extradition of the 'terrorists'.
+Unknown to them, their attack is a diversion for an elite squad of marines in exo-suits
+who will use retro-rocket packs to deorbit Elysee Station. Their real plan is to send
+the capital colony and all its inhabitants plunging into the Jovian atmosphere within
+twenty-four hours. With its leaders and their central hub gone, the Jovians will fall
+under UEA control.
+
+* Dragonstriker - On Joshua station, the characters are introduced to the new elite
+Vindicator mechs as well as the prototype Prometheus. Each have been fitted with the new
+CAT control system, but have yet to be tested. Suddenly advanced warning alarms sound,
+the station is under attack! Ranho Garand's team of elite mechs are charging toward the
+station, his massive Dragonstriker armor slicing through the Jovian defenses. His
+intense will and discipline give him near-perfect control over the still imperfect
+control system fitted to the prototype Dragonstriker. The characters launch to meet him,
+and the Dreamer hastily launches to lend support to the defending destroyers. All long
+range communications are disrupted by jammers, so a courier ship is sent to warn the
+other colonies. The battle is intense, but before it can be resolved, the courier
+returns. The pilot, Carl DeMers, broadcasts a warning when the interference clears:
+there is another larger force that has attacked Elysee station! They have fixed rocket
+packs to the hull and are decelerating the entire colony out of orbit! Everyone at
+Elysee will die when the station breaks up in Jupiter's atmosphere.
+
+* Taking Sides - Kleb’s total lack of honor have pushed Garand’s loyalties to the
+breaking point. If he finds out about the true plan for Elysee, he will turn on Kleb’s
+fleet. This will cause other fleet elements loyal to Garand to turn or withdraw from
+combat. The mechs board their ships are are quickly, re-outfitted on the short trip to
+Elysee.
+
+* The God and the Dragon - They arrive at Elysee to find the battle in full swing, with
+the Jovian forces slowly being driven back by the UEA Fleet, and the retro-rockets are
+just beginning to fire. The JSS Godsfire, its weapon block mauled by enemy fire, is
+trying to evacuate as many civillians as it can, using its remaining firepower to keep
+the UEA exos and fighters at a distance. Two teams are deployed: one to fight the UEA
+special forces and disable the rockets, and the another to battle the UEA fleet. The
+arrival of the Prometheus and Dragonstriker, and a detachment of other exo-armors,
+quickly turns the tide of battle. The battle seems unlikely to be resolved soon, thanks
+to the power of Kleb’s Posideon flagship. Garand confronts his former boss, and flies
+straight toward the Posideon. The Dragonstriker is heavily damaged by the fire, but
+manages to clamp unto the Posideon's bridge and opens fire at point blank range. The
+Dragonstriker and Posideon go up in a massive explosion, damaging nearby ships. The tide
+of battle suddenly turns. Many UEA soldiers were unhappy with Admiral Kleb's actions and
+are easy to convince with impassioned plees. The rockets are disabled and Elysee station
+uses its engines to regain its correct orbit.
+
+* Epilogue: Garand - Of Garand, no remains are found. While he could have escaped in the
+escape pod, it seems unlikely that he survived. That the CSS Karana, an Uller-class
+missile cruiser believed destroyed during the battle, is missing is noticed during
+cleanup months later, but no connection is ever made between the two events. Garand did
+survive, but was horribly wounded, and was recovered later by the crew of the Karana,
+who had trained under him.
+
+* Epilogue: UEA - Kleb was killed in the destruction of the Scylla’s bridge. The UEA
+government publically him off as a 'lone gunman' who acted without official sanction and
+engages in a ruthless purge of the Navy’s command structure to 'remove any who might
+seek to follow Admiral Kleb’s example'. In fact, they use this to eliminate to expunge
+or marginalize those taught by Garand or 'corrupted' by his philosophy from the upper
+ranks. Their shadowy ties to Venus remain as strong as ever, and, much to their relief,
+the diplomatic repercussions of the Odyssey affair fade away over the next year.
+
+* Epilogue: Venus - Malachai falls into disgrace with VenusBank for his failure to
+produce results or protect the existance of Project Methuselah, and becomes a
+dissatisfied freelancer. For the next decade he wanders the solar system, hatching mad
+schemes to put him in the good graces of his former employer once more and destroy the
+Confederation. He is eventually captured by SolaPol and disappears. VenusBank begins
+scaling back its operations slightly, uncertain of just how much the Confederation knows.
+No public or private charges are ever made by the Confederation over the poaching of the
+Floaters or the aims of Project Methuselah, leaving the Bank executives in a very
+unpleasant information vacuum.
+
+* Epilogue: Mars - The consequences of the Martian Elevator take a long time to
+show themselves. Initially, neither Martian government accuses the other of the
+collapse. Evidence is sketchy, and the presence of Jovian and UEA agents on-site makes
+things even more uneasy.")))
+    "Europa Incident"
+     (section
+      :name "Europa Incident"
+      :summary
+       "* The Flashlight Project - Blocked from what they believed to be their rightful control
+over the colonies at every turn by the Jovian Confederation, UEA launched several
+top-secret advanced weapons projects.  One of the less successful efforts was the
+Flashlight Project, an attempt to develop heavy autonomous drone combat spacecraft.  The
+two Lucifer prototypes, the ultimate end result of the project, were ideal for commerce
+raiding.  They could operate for years without more than cursory communication with their
+home base; their stealth systems could hide them from the most determined sensors; and
+their heavy array of particle beam weapons could savage a warship in a single volley.
+* The project turned out to be too complicated and expensive to mass-produce, but the
+prototype was dispatched to Jovian space for 'field trials', with orders to destroy any
+target with a Jovian registry it came across. The plan was to disrupt the Jovian economy
+enough to make them more pliable to UEA demands.
+* After the Battle of Elysee, the UEA council determined that the Lucifer would be a
+political hand grenade if it was captured. They ordered the Lucifer to self destruct, but
+it had already disappeared in the radiation and magnetic fields around Jupiter, the very
+fields they had relied upon to hide the drone as it went about its work.  Finally, the
+crew managed to get a signal through, but some interference caused the drone to change
+course and crash on Europa instead of self-destructing."
+      :scenariomap
+       (scenariomap
+        "A Damaged Freighter"
+         (scenario
+          :name "A Damaged Freighter"
+          :summary
+           "* The UEA Black Eagle Squadron is smuggled aboard the freighter Narsus to recover the
+datacore of the Lucifer and destroy any evidence. The Black Eagles had planned to slip
+onto Europa undetected after the Narsus dropped into orbit around the moon. Supposedly,
+she was to be taking on water for a journey up to Ganymede. The plan was that she
+would deploy the Eagles’ exo-armors, head off to deliver the rest of her cargo, then
+return and pick them up a week later. Faulty parts led to an explosion in Narsus'
+engines during her insertion burn. The captain managed to drop the freighter into a
+stable orbit around Europa before the engines completely died, but then, as is
+standard practice for merchant crews, immediately set off a distress beacon.
+* With all the unexplained attacks in Jovian space lately, an exo-armor patrol is
+dispatched from their carrier to investigate. The crew seems to sincerely have
+severe engine trouble. Some of the Jovians will have to board the Narsus leaving
+their exos tethered to the hull. The remainder stay on patrol.
+* Inside, the freighter is in zero-g and is particularly cramped. The crew's story
+seems to hold up, but the four passengers are uneasy about the situation. The engines
+are in bad shape and are irradiated. The cargo hold has large, sealed, liquid cargo
+bins labeled with warnings as liquid methane. If the Jovians start attempt to open the
+cargo, the captain will lose his nerve and reveal that the passengers are UEA pilots.
+A firefight erupts and the Black Eagles get into the cargo containers and remotely
+open the cargo bay to vacuum. The UEA troops escape by detonating the Narsus as a
+distraction (killing the crew, of course) and releasing an ECM scrambler pod. They
+have clearly descended to Europa somewhere.")
+        "Escape to the Ice Planet"
+         (scenario
+          :name "Escape to the Ice Planet"
+          :summary
+           "* With Europa's low surface gravity, the Black Eagle team's exo-armors descend to the
+surface safely using their own thrusters. Europa’s surface is covered by a thick layer
+of ice. Unlike ice on Earth, this isn’t slippery - it’s nowhere near the freezing
+point. The surface is perilous with unstable ground and spontaneous geysers.
+* The UEA team radios for a pickup using a small signal booster in orbit. They then
+begin a tedious search for the Lucifer.
+* The JAF patrol rejoins its carrier and begins a search of Europa.
+* The UEA team eventually discovers the crashed Lucifer but finds footprints and
+vehicle tracks nearby. The data core has already been removed and taken to the small
+research station Europa 1. The UEA team breaks the ice beneath the Lucifer to let it
+fall into the ocean below never to be discovered. Then they must follow the tracks to
+recover the data core before its secrets are revealed and/or silence the witnesses.
+* When the JAF arrives, they must deduce what has happened and race to intercept the
+UEA team.")
+        "Hide and Seek"
+         (scenario
+          :name "Hide and Seek"
+          :summary
+           "* Europa 1 is not well guarded, but it is a large facility with lots of staff. The
+UEA must infiltrate the base and quickly locate the data core before the rendezvous in
+12 hours. The station is unarmed, and if a firefight erupts, everyone will flee to the
+underground shelters. If they run out of time, the UEA may be forced to destroy the
+base, but this would not guarantee the destruction of the data core.
+* The JAF can immediately land at the base and are introduced to Dr. Han Krieger and
+his attractive daughter Paula. They have recovered the data core, but did not have
+sufficient equipment to study the downed ship.
+* If the UEA can get close enough they can hack the core remotely and trigger a data
+wipe. They may also threaten to blow up the base if they are not given the core.
+Whether they succeed or not, the UEA will have to retreat back to the rendezvous
+point or be stranded. When they retreat, the JAF will have to guess at where they are
+going and why, but either way they will need to pursue them.")
+        "Hell Unchained"
+         (scenario
+          :name "Hell Unchained"
+          :summary
+           "* Suddenly, a large shadow passes overhead. It's a frigate, the UEA pickup has arrived.
+Six exo-armors exit its bay and begin to advance.
+* As the JAF prepare to meet them, the frigate opens fire. Suddenly, there is a deep
+tremor in the ice below. The UEA agents feel it too and stop code. Suddenly, from under
+the ice, an impossibly brilliant beam of light lances up to engulf one of the
+descending exo-armors. It doesn't explode but it just melts and disappears in the beam.
+Soon, the ice seems to explode and the enormous black form of the Lucifer rises from
+below.
+* With its data core removed and a firefight nearby, it switched to its limited,
+secondary systems and it is unable to determine friend from foe. Its massive guns are
+clearly building another charge and moments later it fires at the frigate's engines.
+The crippled engines briefly leak fusing hydrogen before destroying the frigate in a
+nuclear fireball. It then begins to engage the new exo-armors from the frigate.
+* The JAF and UEA will have to quickly come to terms with the fact that the Lucifer
+will kill them all unless they work together.
+* If the Lucifer escapes, it will boosts off Europa into a tight slingshot orbit
+and then use its ECM systems to hide in Jupiters radiation belt. Without its higher
+brain functions, the Lucifer is more of a killing machine than an assassin, so it is
+now a question of how much damage it will do before it is taken down.
+* If the Lucifer is destroyed over Europa, it will crash into the ice and be lost in
+the depths. Without their pickup, the UEA agents will have to negotiate the terms of
+their surrender. Regardless, they will be tried and interrogated for their actions.")))
+    "Jovian History"
+     (section
+      :name "Jovian History"
+      :summary
+       "* Mercury, Helios Station - A permanent colony of 8 million orbiting Mercury is
+established. Its orbit puts it constantly in Mercury's shadow protecting it from
+most of the Sun's deadyly rays. Naturally, it has access to almost limitless
+solar power. All equipment around Mercury is outfitted with a unique heavy armor
+that combines hard radiation shielding with solar collection.
+
+* Venus, New Tokyo - The capital of Venus is a sprawling megaplex of 15 million at
+the North Pole of Venus. Though terraforming has been going on for decades, the
+poles are still the only places where the temperatures are survivable. The city
+is completely enclosed and partially underground. Industry is relegated to the
+wastelands outside. The Venusian bank invested heavily in developing Venus and has
+seen phenomenal growth. The bank now effectively owns the entire planet.
+
+* Earth 2210 - The UAE launches an attack against the Jovian civilian colonies in an
+attempt to push the colonies back into line.
+* Mars, Marsquake - The obital elevator around Mars is destroyed by sabotage, and
+the enormous, carbon-diamond fiber cable was slowly dragged from orbit as the
+planet turned. The cable dropped with devastating force, wrapping around the
+equator two and a half times. Fortunately, the sparse population of Mars reduced
+the scope of the devastation. There is a common joke that Mars is now the only
+planet with an actual black line at the equator. Hot heads and smugglers have
+take to racing down the trench created by the cable.
+
+* War Aftermath - Some UAE leaders were found guilty of crimes against humanity
+for their attacks against the Jovian colonies. The other colonies increasingly see
+Earth as irrelevant to their future. Earth politics is divided on how to proceed.
+The UAE has gone underground and now covertly funds a paramilitary group of
+disgruntled combat veterans and pirates in order to further its aims in space.")
+    "Jovian Characters"
+     (section
+      :name "Jovian Characters"
+      :unitmap
+       (unitmap
+        "Aglaee Dessources"
+         (unit
+          :name "Aglaee Dessources"
+          :summary
+           "* Mysterious, beautiful, and cold, Aglaee DesSources is the captain of the
+Beautiful Dreamer, a privateer vessel. Once an extremely promising CEGA Navy
+captain, she retired at the age of thirty to her present position.
+* 42 year old aristocratic-looking woman.")
+        "Adrian Allen"
+         (unit
+          :name "Adrian Allen"
+          :summary
+           "* Adrian is bookish and quiet pilot unlike the adventurous, rowdy Exo-pilot crowd.
+He is inexperienced and sometimes panics in combat when clear solutions are not
+obvious. He is currently single athough he is attracted to Foxy Fujima.
+* Age: 22")
+        "Madelaine Koudriopoulos"
+         (unit
+          :name "Madelaine Koudriopoulos"
+          :summary
+           "* Strong willed and tenacious fighter pilot.
+* She is the only daughter of Konrad Koudroipoulos, Khannan's commander. Because of
+this, she had to fight with pilots who accused her of favoritism and her father who
+made every effort to get her to step down.
+* She has been teamed up with Adrian Allen who has become like a big brother to her.
+She interferes a lot with his personal life, much to his despair. She is bold but
+is uncomfortable dating, so she currently has no boyfriend.
+* Age: 21")
+        "Foxy Fujima"
+         (unit
+          :name "Foxy Fujima"
+          :summary
+           "* Freelance reporter travelling from cylinder to cylinder in search of a story. She
+has a high attitude of the moral importance of reporting, so she will not cover
+trival stories which has limited her career development. Her beauty has attracted many
+men, but she seems to only be interested in her career.
+* Age: 22")
+        "Dr. Agram Peyarje"
+         (unit
+          :name "Dr. Agram Peyarje"
+          :summary
+           "Brilliant scientist researching human/machine interfaces.
+A staunch pacifist, Peyarje is repelled by war in general and utterly
+disgusted by what CEGA plans to do with his inventions. He sees the Confederation as his best
+hope of escape, even if they too are warmongers.")
+        "Dr. Catherine Glit"
+         (unit
+          :name "Dr. Catherine Glit"
+          :summary
+           "* Catherine used to serve as Ismael Li's personal assistant and moderator. She
+is now the representative of the escaping Lunar refugees.
+* She is an excellent doctor, highly regarded by all. While she appears cold
+to everyone, she is shy and only opens up to close friends.")
+        "Ismael Li"
+         (unit
+          :name "Ismael Li"
+          :summary
+           "Ismael Li is the leader and driving force behind the burgeoning Lunar resistance movement. Once
+a miner, Li worked hard, long hours in the tunnels deep below the Lunar surface and Helium-3
+harvesters. He quit in disgust when he realized that the company he’d worked ten hard years for
+was constantly operating at a loss and systematically abusing its employees in order to provide
+CEGA and massive Earth corporations with cheap Lunar ores. Using the excellent education
+provided to all Selenties, Li spoke out against the CEGA “occupation�?, making speeches and
+distributing eloquent pleas for regime change in an attempt to awaken the populace to the truth
+of their situation.
+
+Five years ago, under investigation by CEGA and Lunar police forces, Li took his crusade
+underground. No matter what he did, legitimate means would only get him arrested. He set
+about building a proper revolutionary organization out of the public eye, aiming to drive CEGA off
+the Lunar surface by force of arms. Strangely, this has won him many more converts among the
+usually peaceful Selenites than his speaches ever did. He finds this somewhat disheartening,
+but still forges ahead.
+
+Li is now ready to launch his uprising. The arrival of the PCs has moved his timetable up a bit,
+as their actions on Venus have distracted many of CEGA’s forces and their skills can be a great
+help to him. He is a fundamentally honest man, and will promise fuel, parts, and provisions
+in exchange for the PCs’ help. He will give them what he promised without short-changing or
+holding back. He also truly believes in his cause, and would willing sacrifice his life to save any
+of his supporters.")
+        "Jovian Floater"
+         (unit
+          :name "Jovian Floater"
+          :summary
+           "* The Jovian floater is giant, blimp-sized animal filled with gas that lives its entire
+life floating in Jupiter's atmosphere. It has a unique biology similar to photosynthesis
+that consumes water, methane, and radiation to produce food. This biology also produces
+a short-lived compound that repairs radiation damage to its DNA which allows it to
+survive in the harsh radioactive environment. The medical significance of this creature
+especially to space flight cannot be overstated. How life could begin in such high
+radioactivity remains a mystery.")
+        "Luka Ansevik"
+         (unit
+          :name "Luka Ansevik"
+          :summary
+           "Captain Luka Ansevik is the commander of the small CEGA lunar garrison force. Captain
+Ansevik is throughly unimaginative, a very by-the-book officer, assigned to a post not likely to tax
+her capabilities. After all, what threat could the unarmed and industrious Selenites pose to the
+military might of CEGA? When revolution erupts around her, Ansevik will do her best to contain
+it, but becomes increasing desperate as the situation unravels. She knows that failure to resolve
+the situation before her superiors are forced to take notice will be the end of her career.
+Ansevik is an officer focused on tactics and administrative work. As such, her combat skills
+are virtually nonexistent - she is much more comfortable ordering others into combat than
+fighting herself. This leads to disaster, as it leaves Ansevik out of touch with her troops as
+they desperately fight the rebels in the streets of Copernicus. Finally, increasingly desperate to
+contain the situation, she could be the one to order the dome blown.
+(Ind) Ysa Cantroni
+Ysa will be in her element during the Lunar uprising. Action, crusading for justice, and a bevy of
+human interest stories to practice her reporting skills on! Having spent a year touring the Earth
+system at one point, Ysa has a number of useful contacts on Luna that can supplement those
+provided by DesSources and Li. Even if she doesn’t travel down from the Dreamer with the PCs
+initially, she will try to find some way down so she can help the Selenites of Copernicus fight for
+their freedom once the uprising begins.
+Of course, Ysa might not be quite as good at tunnel fighting as she thinks she is. Saving her
+from herself could be an exciting and frustrating subplot for a PC, especially one who has
+become emotionally involved with her. Having a mysterious masked figure in a red CEGA exosuit
+(Garand, of course) help save her and keep her safe from CEGA forces, but carefully avoid
+aiding the rebels, might create an interesting mystery... Or not, depending on how sharp your
+players are.")
+        "Lydia Ketchum"
+         (unit
+          :name "Lydia Ketchum"
+          :summary
+           "* Lydia Ketchum is a Martian Republic Rook, a Ranger trained for deep-cover operations
+within the Federation. One of the Republic’s best rangers, she’s been assigned to watch
+the orbital elevator. She takes her job quite seriously, and has so far managed to avoid
+drawing the notice of the Federation.
+
+* Unfortunately, not all is as it appears with Ranger Ketchum. She is from the Isidis
+Planitia, an isolated area that recently (2207) declared its independence from the rest
+of the Republic. The Isidisians are even more militant about the Federation than
+ordinary Republic citizens, and see the Federation’s orbital elevator as a very personal
+and insufferable insult to their national pride.")
+        "Yanna Summers"
+         (unit
+          :name "Yanna Summers"
+          :summary
+           "Yanna Summers is the decidated and hardworking administrator of the Martian Orbital Elevator.
+While her actual domain is very small - she only has direct control over Heaven and Hell station -
+the amount of commerce that travels up and down the beanstalk has given her a sizable amount
+of influence within the Federation’s government. This is counterbalanced by her attempts to open
+Federation society up a little. Her position and efforts, however, did draw the attention of the
+Society of the Evolved Human, which she eagerly joined when offered membership.
+Yanna’s connection to the Society was what lead Aglaee to steer the players towards her, and
+inclined her to help them find a home for the refugees. It also could be what leads to her asking
+the PCs for help with the scientist case - another test by the Society to help them reach their
+potential. She has contacts all through the Federation bureaucracy, and could use them to help
+the players with their investigation... But there will likely be a price of some kind, as she’s already
+stretched her resources thin to secure passage for the refugees. This could, however, lead to the
+“Refugees Under Attack�? subplot. Or Yanna could be a background character that just serves to
+lead the PCs into the episode.")
+        "Ysa Cantroini"
+         (unit
+          :name "Ysa Cantroini"
+          :summary
+           "Ysa
+has spent the past several years travelling the solar system and working odd job. This has given
+her an extremely wide range of skills (though none at more than 2/1 or 2/2) and connections,
+especially here on her native Venus.
+Ysa is bright and intelligent, generally assuming a quiet but cheerful air. She’s a wandering soul,
+and doesn’t think she could ever stay happy in one place or one job for the rest of her life. She
+is seriously considering becoming a reporter, however, as this gives her a way to travel and
+encounter a wide variety of experiences while getting paid and doing good. Much to her shame,
+her father is a high-ranking executive in the Venusian bank. She has cut all ties with him, and
+does not regret doing so, but this secret connection could still draw suspicion to her.")
+        "Admiral Russel Kleb"
+         (unit
+          :name "Admiral Russel Kleb"
+          :summary
+           "Admiral Kleb is the throughly corrupt commander of the CEGA 4th Fleet. A hard-line war
+supporter, Kleb believes the inhabitants of the colonies to be completely inferior to native
+Terrans. This provides him with the justification he needs to take any action in pursuit of CEGA
+dominance. He is in the pay (and service) of the Venusian bank, as they provide him with the
+means to further his own ambitions, but he will not hesitate to betray them for his own advantage.
+They are, after all, just inferior colonists, cowardly employing bribery when they should be using
+righteous force.
+
+					* Despite his biases, Kleb is a brilliant tactician, equally adept at combat
+					maneuvers and political backstabbing. He is a staunch member of the UEA ruling
+					faction, and an adherent to the warship-centric old school of military thinking. To
+					him, adherents of the exo-centric school are children playing with fancy new toys.
+					Ranho Garand, as the most prominently successful exopilot in the UEA navy and focus
+					of the Dragonstriker program, is a frequent target of Kleb’s scorn.")
+        "Ranho Garand"
+         (unit
+          :name "Ranho Garand"
+          :summary
+           "* Commander of the 3rd Division of the CEGA 4th fleet, Garand is an ace exo-armor pilot
+and media darling. Despite his military connections, Garand is a devoted member of
+Chang’s political faction. While he does believe the military to be a necessary tool, he
+doesn’t believe that it is the proper one to further UEA’s domination over their wayward
+colonies. He was one of UEA’s first exo-armor pilots, and taught many of the current
+generation, passing on both his piloting skills and his philosophy.
+
+Garand is a man of honor and discipline, with a spotless service record and excellent
+reputation. He does not enjoy killing or combat, but his honor demands that he follow
+orders and defend his people. Despite his iron will, he is prone to fits of irrational
+rage towards those who have forced him to commit (or involved him in) dishonorable acts.")))
+    "Commercial Spacecraft"
+     (section
+      :name "Commercial Spacecraft"
+      :unitmap
+       (unitmap
+        "Albatross Transorbital Shuttle"
+         (unit
+          :name "Albatross Transorbital Shuttle"
+          :summary
+           "* The Albatross is the latest in a long line of shuttles used for cargo and
+passenger transfers to various atmospheres. One or two are standard equipment for
+any large military ship."
+          :mass "45tons"
+          :speedair "1200kph"
+          :speedspace "1.5g")
+        "Beautiful Dreamer Transport"
+         (unit
+          :name "Beautiful Dreamer Transport"
+          :summary
+           "* The Beautiful Dreamer, at first sight, seems to be a standard Inari-class liner. As
+with many Inari, the Dreamer has been modified heavily, and there are many differences
+in the ship’s lines. Two concealed railguns run along the ship’s spine, providing an
+unpleasant and unexpected punch. The cargo bays on the craft’s edges have been modified
+to carry mechs and fighters, complete with concealed catapults.
+* 2 Medium Railguns
+* 4 Mech Bays - Cannot land fighters.
+* 2 Magnetic Catapults"
+          :crew "54"
+          :mass "10000tons"
+          :length "270m")
+        "Inari Space Liner"
+         (unit
+          :name "Inari Space Liner"
+          :summary
+           "* Unlike the bulk transport Mule, the Inari was designed to be a high speed passenger
+liner to get people quickly between the planets. Though not as modular as the Mule,
+the Inari can be heavily customized to specific tasks. Though it is not a military
+vessel, the Inari is fast and can be modified to be cary significant armor and weapons,
+thus making it well suited as a privateer."
+          :titles "Georgia on my Mind"
+          :crew "108"
+          :mass "10000tons"
+          :length "200m")
+        "Carver Mining Ship"
+         (unit
+          :name "Carver Mining Ship"
+          :summary
+           "* The Carver is designed for the purpose seeking out and mining asteroids.
+The ship is very odd looking with three insect-like legs surrounding the
+main laser drill. The standard protocol for asteroid mining is to land on
+a mineral-rich feature, drill a deep tunnel, and then pressurize the
+tunnel so further operations can be done without environment suits. Ore
+is sent on a conveyor belt to the onboard smelter for separation and
+purification.
+* The Carver is intended to work perpetually. Its drive system is slow
+but extremely robust, able to use mined hydrogen for fuel and any waste
+material as reaction mass. Small tugs commute back and forth carrying ore
+to nearby space colonies and returning with supplies and spare parts. The
+tugs also carry replacement crew members.
+* The Carver has been in service for so long that their prices have come
+down dramatically. Since this work is enormously profitable, banks are
+willing to finance individuals if they can demonstrate a sound business
+plan."
+          :speed ".15g"
+          :mass "1200tons"
+          :length "80m"
+          :width "80m")
+        "Mule Freighter"
+         (unit
+          :name "Mule Freighter"
+          :summary
+           "* The Mule Freighter is a simple, reliable design for transporting large
+amounts of cargo across the solar system. It has no interior cargo hold,
+instead it has a series of connectors to link self contained cargo pods
+of various sizes. The connectors can also be used to hook onto asteroids
+or other ships to allow the Mule to act as a tug.
+* The Mule is the most common ship in the solar system and is used by
+every government and commercial space organization. Because the Mule is
+so versatile, it can even be used as a slow carrier or missile gunboat.
+For similar reasons, it is a favorite ship for smuggling or piracy as
+well.
+* Its acceleration reduces as its load increases. It can transport up to
+40ktons before its acceleration becomes too low to be practical."
+          :titles "Narsus"
+          :speed ".4g"
+          :crew "6"
+          :mass "4000tons"
+          :length "345m"
+          :width "40m")
+        "Ox Orbital Tug"
+         (unit
+          :name "Ox Orbital Tug"
+          :summary
+           "* The Ox is a space-only shuttle used for short tranports between space
+stations, tugbot duty, asteroid transport, and salvage operations. It has
+large manipulator arms to manage unusually shaped loads. It is a very
+sturdy if slow craft."
+          :speed ".5g"
+          :mass "41tons")))
+    "Jovian Federation"
+     (section
+      :name "Jovian Federation"
+      :summary
+       "* Jovian capital ships are built for easy maintainance and reuse.  They are composed of 4
+sections: engine, cargo, habitat, and mission. All but the mission section can be
+interchanged with the equivalent sections from other ships. The habitat ring can even be
+removed for short range missions, or additional cargo modules can be added for greater
+endurance."
+      :unitmap
+       (unitmap
+        "Jovian Pilot"
+         (unit
+          :name "Jovian Pilot")
+        "Jovian Mech Jock"
+         (unit
+          :name "Jovian Mech Jock")
+        "Jovian Tech"
+         (unit
+          :name "Jovian Tech")
+        "Lancer Space Interceptor"
+         (unit
+          :name "Lancer Space Interceptor"
+          :summary
+           "* Despite the heavy investment in Mech Suits, Jovian interceptors remain
+an important part of Jovian armed forces. Their high acceleration allows
+them to be sent as the first line of defense ahead of the slower Mech
+Suits. They are well suited to recon and hit-and-run missions. They carry
+variable weapon pods for specialized recon, ECM, bomber, or long-range
+scouting missions.
+* 1 Light Laser Cannon
+* 6 Light Missiles
+* 2 Medium Missiles
+* 1 Heavy Missile"
+          :mass "50tons"
+          :height "25m"
+          :speedspace "3.2g"
+          :width "10m")
+        "Pathfinder Mech Suit"
+         (unit
+          :name "Pathfinder Mech Suit"
+          :image "JovianChronicles/PathfinderToken.png"
+          :summary
+           "* The Pathfinder is a rugged, simple to maintain Exo Suit design that forms the majority
+of the Jovian Mech forces. It is very agile but relatively fragile and mounts only
+light weaponry because it is designed primarily as a scout craft. Its high speed,
+agility, and exceptional close combat abilities proved the value of Mech Suit design and
+it remains the most iconic Mech Suit in existence.
+* 1 Medium Particle Cannon
+* 2 Medium Missiles
+* 2 Plasma Lances"
+          :mass "35tons"
+          :height "15.4m"
+          :speedland "26kph"
+          :speedspace "2.8g"
+          :width "11m")
+        "Retaliator Mech Suit"
+         (unit
+          :name "Retaliator Mech Suit"
+          :summary
+           "* The Retailator is the standard Jovian interceptor Mech. Well-armed and fast for its
+size, it can take on larger opponents and come out on top. Its speed comes at the
+sacrifice of some armor unfortunately and its thrusters always overheat forcing pilots
+to take great care or risk burned out thrusters.
+* 1 Medium Rail Cannon
+* 4 Medium Missiles
+* 6 Light Missiles
+* 2 Plasma Lances"
+          :mass "42tons"
+          :height "15.5m"
+          :speedland "66kph"
+          :speedspace "2.4g"
+          :width "12m")
+        "Vindicator Mech Suit"
+         (unit
+          :name "Vindicator Mech Suit"
+          :summary
+           "* The Vindicator is the most powerful mass-produced Mech in the solar system. It carries
+massive armor and armament, but its high cost limits its use to a few elite pilots. It
+is also painfully slow compared to the Pathfinders and Retailators it flies with.
+* 1 Medium Rail Cannon
+* 1 Medium Laser Cannon
+* 10 Heavy Missiles
+* 3 Plasma Lances
+* 2 Anti Missile Systems"
+          :mass "70tons"
+          :height "16m"
+          :speedland "36kph"
+          :speedspace "1.8g"
+          :width "14m")
+        "Prometheus Mech Suit"
+         (unit
+          :name "Prometheus Mech Suit"
+          :summary
+           "* The Prometheus was intended to be a prototype for a new generation of mech suits which
+would be more efficient, better armed, and faster than their predecessors. However, as
+development progressed, several experimental systems were added that made it a one of a
+kind wonder that could never be mass produced.
+* 1 Heavy Plasma Cannon
+* 2 Light Plasma Cannons
+* 2 Plasma Lances"
+          :mass "64tons"
+          :height "18m")
+        "Prometheus Storm Attacker"
+         (unit
+          :name "Prometheus Storm Attacker"
+          :summary
+           "* The [Prometheus Mech Suit] can be equipped with a heavy set of extra armor and weapons.
+The additional mass of the armor is negated by additional thrusters. If these thrusters
+are damaged the armor can be jettisoned leaving a fully functional Promethus.
+* 1 Heavy Plasma Cannon
+* 2 Light Plasma Cannons
+* 2 Plasma Lances
+* 2 Heavy Laser Cannons
+* 1 Particle Scatter Gun
+* 80 Medium Missiles"
+          :mass "82tons"
+          :height "21m")
+        "Athena Destroyer"
+         (unit
+          :name "Athena Destroyer"
+          :summary
+           "* Athena Destroyers function much as their wet navy ancestors. Depending
+on the political climate, they are either protective shepards or hunting
+wolves. The Athena's job is to get in the way of danger. If an unknown
+vessel is detected, the destroyer will move ahead into a blocking
+position to defend the rest of the fleet.
+* The Athena is particularly fast and maneuverable for a capital ship and
+works closely with any small craft.
+
+Weapons:
+* Point Defense System
+* 3x Particle Accelerators
+* 6x Railguns
+* 2x Area Defense Laser Cannon
+* 1x Missile Bay"
+          :speed ".8g"
+          :mass "10ktons"
+          :length "291m"
+          :width "81m")
+        "Forge Patrol Carrier"
+         (unit
+          :name "Forge Patrol Carrier"
+          :summary
+           "* Forge class carriers carry 12 pilots including squadron leaders.
+* There are 24 Forge class vessels commissioned.
+* Speed: .8g
+
+Weapons:
+* Point Defense System
+* 8 Rail Cannons
+* 2 Laser Cannons
+* 2 Missile Bays
+
+Vehicles:
+* 6x Mobile Suits with room for 12
+* 6x Catapults"
+          :mass "39000tons"
+          :length "460m"
+          :width "285m")
+        "Explorer Scout Ship"
+         (unit
+          :name "Explorer Scout Ship"
+          :summary
+           "* One of the earliest planetary exploration ships, the Explorer has been
+produced for many years and is a reliable though uninspired design. Its
+modular design is its greatest asset and has ensured its continued use
+for decades. The crew module can be extended on a tether for artificial
+gravity with the other end counterbalanced by a water tank."
+          :speed ".4g"
+          :mass "1ktons"
+          :length "345m"
+          :width "40m")
+        "Gagarin Fleet Tender"
+         (unit
+          :name "Gagarin Fleet Tender"
+          :summary
+           "* The Gagarin is a mobile tender designed to facilitate drydock style repairs close to the front lines.
+* Its mission hull is a gigantic workshop with huge door sections that can surround and refit a vessel in a
+pressurized environment.
+* Speed: .1g
+
+Weapons:
+* Point Defense System
+* 1x Missile Bay"
+          :mass "92ktons"
+          :length "740m"
+          :width "285m")
+        "Javelin Cruiser"
+         (unit
+          :name "Javelin Cruiser"
+          :summary
+           "* The Javelin is the most common warship in the Jovian Navy despite its
+age and lack of interceptor or Mech Bays. Its design is based on
+pre-Mech combat philosophy, emphasizing heavy weapons on capital ships as
+opposed to projection of force using smaller craft. Therefore, it is
+very heavily armed for a relatively small craft including the deadly
+heavy particle beam cannon.
+* Crew accomodations are small but comfortable with cleverly placed
+mirrors throughout the ship that give the illusion of greater interior
+space.
+* Point Defense System
+* 2 Heavy Rail Cannons
+* 1 Heavy Particle Beam Cannon Turret
+* 2 Missile Bay
+* 6 Space Dart Heavy Missiles"
+          :speed ".6g"
+          :mass "20ktons"
+          :length "235m"
+          :width "72m")
+        "Valiant Strike Carrier"
+         (unit
+          :name "Valiant Strike Carrier"
+          :summary
+           "* The Valiant Strike Carrier is a ship like no other. Every other ship in
+the fleet is designed to work in cooperation with one another. The Valiant
+is designed to operate on long range, long term patrols with no backup.
+It is therefore heavily armed, armored, and carries extensive supplies
+and fabrication facilities.
+* It has two rotating crew decks that are very spacious for a spaceship.
+* 6 Heavy Rail Cannons on 2 Turrets
+* 1 Missile Bay
+* 1 Spinal Particle Beam Cannon
+* 6 Magnetic Catapults
+* 1 Certifuge Crew Module
+* 2 Lancer Interceptors
+* 2 Pathfinder Mech Suits
+* 2 Retaliator Mech Suits
+* 2 Vindicator Mech Suits"
+          :speed ".8g"
+          :mass "40ktons"
+          :length "320m"
+          :width "75m")))
+    :UEA
+     (section
+      :name "UEA"
+      :titles "United Earth Alliance"
+      :unitmap
+       (unitmap
+        "UEA Commando"
+         (unit
+          :name "UEA Commando"
+          :classification "Lt. Infantry")
+        "UEA Marine"
+         (unit
+          :name "UEA Marine"
+          :summary
+           "* Standard issue for all regular infantry and covert ops personnel.
+* High Impact Plastics with reinforced joints.
+* Enhanced Sensory gear and Comm System
+* HUD Targeting
+* Optional Backpacks with custom gear"
+          :classification "Lt. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor")))
+        "UEA Mobile Infantry"
+         (unit
+          :name "UEA Mobile Infantry"
+          :summary
+           "* Standard issue for assault and special forces personnel.
+* Hardened Crystalline Lattice Ceramic Compounds
+* Elaborate Sensory and Comm System
+* HUD Targeting with Smart Weapon links
+
+Powerful Backpack package including:
+* Ion thrusters
+* Heat Sink
+* Mini Fusion Plant
+* Y-rack gernade launcher (optional I-rack or micro turret)
+* Weapons can be powered from plant
+* Environmental Independence
+* Flamethrowers and Thrusters in arms and legs
+* Stealth options available"
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor")))
+        "UEA Mobile Assault Infantry"
+         (unit
+          :name "UEA Mobile Assault Infantry"
+          :summary
+           "* Form is vaguely humanoid
+* Armor is extremely heavy and hardened
+* Weapons are built in and smart
+* Power Assist and Hand to Hand Weaponry make few obstacles a barrier
+
+Weapon Packages
+* When standing still the armor is considered a fixed weapon platform.
+* Heavy Machine Guns
+* Light Autocannon
+* Multiple Missile Launchers
+
+Backpack Package
+* Large Fusion Plant
+* Improved Heat Sink
+* Thrusters are extremely powerful
+* Wheels in legs for fast road movement
+* Speed and Maneuverability in open terrain are the trademarks of these types.
+* They are clumsy and overly destructive in tight quarters.
+* These models are purely Assault/Scorched Earth types similar to miniature tanks."
+          :classification "Hvy. Infantry"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor")))
+        "UEA Pilot"
+         (unit
+          :name "UEA Pilot")
+        "UEA Mecha Pilot"
+         (unit
+          :name "UEA Mecha Pilot")
+        "UEA Tech"
+         (unit
+          :name "UEA Tech")
+        "Cerberus Mech Suit"
+         (unit
+          :name "Cerberus Mech Suit"
+          :summary
+           "* The Cerberus is the first cutting edge Mobile Suit design from the UEA.
+* The name Cerberus comes from the large ECM pods on each shoulder which
+continually scan in all directions giving the appearance of 3 heads.
+* The Cerberus is designed as a hit-and-run unit, so it very fast and
+manueverable but has limited endurance by design. It is only available
+to commanders and elite pilots.
+* 30mm Massdriver with Depleted Uranium/Tungsten rounds. 20 shots.
+* Linked 20mm Vulcan Autocannons in the head.
+* 1 Plasma Lance
+* 1 Mech Combat Knife"
+          :classification "Lt. Spacecraft"
+          :mass "63tons"
+          :height "17m"
+          :speedland "36kph"
+          :speedspace "1.8g"
+          :width "15m")
+        "Dragonstriker Mech Armor"
+         (unit
+          :name "Dragonstriker Mech Armor"
+          :image "JovianChronicles/DragonstrikerToken.png"
+          :summary
+           "* Mechs are designed to battle other mechs and perhaps cripple enemy capital ships.
+The Dragonstriker is a unique prototype designed to attack enemy capital ships and
+installations directly. It is a massive mech, towering over other mechs and carrying
+formidable weapons to battle both capital ship and other mechs.
+* The Dragonstriker has a detachable booster that provides extra acceleration and range.
+The booster also houses the 2 Medium Laser cannons for strafing enemy capital ships.
+* 4 Heavy Anti-Ship Beam Cannon
+* 2 Medium Anti-Ship Laser Cannon (2 linked under for strafing attacks, mounted to booster)
+* 6 30mm Vulcan Autocannon (4 linked forward, 2 linked rear in head)
+* 4 Heavy Anti-Ship Missile (4 forward)
+* 2 Anti-Missile Laser Turret (1 forward, 1 rear)"
+          :titles "CXE-01"
+          :classification "Lt. Spacecraft"
+          :mass "110tons"
+          :height "24m")
+        "Hachiman Destroyer"
+         (unit
+          :name "Hachiman Destroyer"
+          :summary
+           "* The Hachiman is the workhorse of the UEA navy. They have been produced
+for many years with minor upgrades.
+* 1 Point Defense System
+* 6 Railcannon Turrets
+* 2 Missile Bays
+* 2 Laser Turrets"
+          :speed ".6g"
+          :classification "Hvy. Spacecraft"
+          :crew "60"
+          :mass "5500tons"
+          :length "208m"
+          :width "80m")
+        "Lucifer Cybersat"
+         (unit
+          :name "Lucifer Cybersat"
+          :summary
+           "* The Lucifer’s designed for one purpose - to ambush and kill enemy warships.  Its
+sophisticated Stealth systems allow it to hide and its strong electronic warfare suite
+prevents its prey from calling for help.  Powerful thrusters allow it to accelerate at
+incredible speeds, and a cluster of six small linked particle cannons and two large
+ones allow it to inflict massive damage very quickly.
+* Armor - Despite the advanced technology, its armor is quite thin for its size, and
+in a stand-up fight, it will almost certainly lose. The only questions are how to
+force it into a stand-up fight and how many of its attackers it can take with it.
+* Particle Cannons - The combined power of the dual particle cannons are equal to a
+spaceship's main gun. They have separate fusion engines just to recharge its capacitors,
+but it still takes 30 seconds between firings.
+* Particle Array - The 6 smaller particle cannons are designed for rapid fire against
+fast moving targets and are used between firing of the main guns.
+* Claws - Its claws are independent wire-guided drones armed with small energy weapons
+to deal with enemy interceptors. The claws are very fast and agile, but not very tough.
+They can replenish their fuel reserves by docking with the Lucifer.
+* Speed - The drones will almost never use their full top speed, and the Lucifer will
+make every effort to conserve its remass.  For long-range travel, it won’t boost at
+more than 0.4 or 0.6 Gs except in short bursts.  Much of its time will be spent
+drifting along a medium-traffic orbit.
+* Stealth - The Lucifer carries an advanced ECM/stealth package that allows it to
+sneak up on enemies and attempt to cripple them while scrambling any distress calls.
+
+ECM(6, 10km), Stealth (6);
+Quantity	Name	Type	Arc	ACC	DM	BR	ROF	Perks + Flaws	Ammo
+1	Particle Cannon Cluster	E	F	+0	x12	4	+4	Hw,Red;AD(2),HEAT	Unl.
+2	Mega Particle Cannon	E	F	-1	x30	7	-1	Red,Hw;AD(2),HEAT;Link	Unl."
+          :titles "CXS-01B, Automated Experimental Terror Raider"
+          :classification "Lt. Spacecraft"
+          :mass "95tons"
+          :height "18.8m"
+          :speedspace "4g"
+          :unitskillmap
+           (unitskillmap
+            "Mission Section"
+             (unitskill
+              :name "Mission Section"
+              :unitspecialtymap
+               (unitspecialtymap
+                "Stealth Vessel"
+                 (unitspecialty
+                  :name "Stealth Vessel")))))
+        "Lucifer Claw Drone"
+         (unit
+          :name "Lucifer Claw Drone"
+          :summary
+           "Armor:	10/20/30
+*Miscellaneous Threat Value (MTV): -
+Crew:	Computer 1 (Dumb, Level 2) (2 actions)
+
+Accessories: Autopilot; Arm: Manipulator Arm (R5, Can Punch); Armor: HEAT Resistant(5); Communications (-2, 2km);
+Hostile Environment Protection: Radiation (4), Vacuum, Extreme Cold; Sensors(+0, 2km); Vulnerable to Haywire;
+Quantity	Name	Type	Arc	ACC	DM	BR	ROF	Perks + Flaws	Ammo
+1	Laser Cannon	E	FF	+1	x10	5	+0	Red;AD(1),HEAT	Unl.
+1	Plasma Lance	E	F	+0	x15	M	+0	AC,Red;HEAT	Unl."
+          :classification "Lt. Spacecraft"
+          :mass "3tons"
+          :speedspace "5g")
+        "Siren Space Interceptor"
+         (unit
+          :name "Siren Space Interceptor"
+          :summary
+           "* The Siren Fighter is the standard medium range interceptor spaceship
+used by the UEA. It is faster than any other short range space craft in the
+Solar System, but without high mobility verniers it is outclassed by Mobile
+Suits. It is ideally suited for patrolling and policing the space lanes.
+* The Siren can be launched from Earth using a booster rocket making it even more
+practical for Earth defense.
+* 2 Medium Railguns
+* 6 Medium Missiles
+* 4 Light Missiles"
+          :classification "Lt. Spacecraft"
+          :mass "40tons"
+          :length "14m"
+          :speedspace "3.5g"
+          :width "12m")
+        "Syreen Mech Suit"
+         (unit
+          :name "Syreen Mech Suit"
+          :image "JovianChronicles/SyreenToken.png"
+          :summary
+           "* The Syreen Suit is a Siren space fighter retrofitted into a Mech Suit. It was hastily
+constructed when the first conflict with the Jovians displayed the dominant mobility of
+the Jovian Mech Suits.
+* As an efficient and cheap design, it can be fielded in large numbers. However, it does
+not compare well to the new Mech Suits that it is meant to face, so casualties are high.
+* The Syreen can be launched from Earth using a booster rocket making it even more
+practical for Earth defense.
+* 2 Heavy Missiles
+* 6 Medium Missiles
+* 4 Light Missiles
+* Point defense laser system
+* 2 Crude manipulator arms for close combat.
+* The command variant includes a powerful ECM pod."
+          :classification "Lt. Spacecraft"
+          :mass "52tons"
+          :height "17.2m"
+          :speedspace "3g"
+          :width "17.5m")
+        "Poseidon Battlecruiser"
+         (unit
+          :name "Poseidon Battlecruiser"
+          :summary
+           "* The Poseidon Class Battlecruiser is the top of the line UEA warship. It
+gets its name from the two rotating living sections that give the ship the
+appearance of a trident.
+* The Poseidon outclasses any other warship from any faction and is a
+menancing presense. It was, however, designed before the advent of Mech
+Suits, so it carries more interceptors than Mechs.
+* Point Defense System
+* 4 Particle Accelerator Batteries
+* 4 Railcannon Batteries
+* 6 Interceptors
+* 4 Mech Suits"
+          :classification "Hvy. Spacecraft"
+          :crew "200"
+          :mass "30ktons"
+          :length "325m"
+          :speedspace ".5g"
+          :width "200m")
+        "Tengu Escort Carrier"
+         (unit
+          :name "Tengu Escort Carrier"
+          :summary
+           "* The Tengu is a long range craft designed for limited engagements and
+policing. It has extensive supplies but lacks firepower.
+* 1 Point Defense System
+* 2 Missile Bays
+* 2 Mech Suits
+* 2 Fighters
+* 2 Catapults"
+          :classification "Hvy. Spacecraft"
+          :crew "24"
+          :mass "25ktons"
+          :length "250m"
+          :speedspace ".5g"
+          :width "38m")
+        "Wyvern Mech Suit"
+         (unit
+          :name "Wyvern Mech Suit"
+          :image "JovianChronicles/WyvernToken.png"
+          :summary
+           "* The Wyveern is the first and most numerous of the UEA Mech Suits.
+Though a copy of the Martial Federation Defender, it is a sturdy,
+reliable and most importantly mass-produceable design. Its primary
+limitation is the lack of energy weapons which limits its combat
+endurance before it needs to be rearmed.
+* 1 Hyperbazooka
+* 2 Massdriver Machineguns
+* 2 Self guided Missiles"
+          :speed "1.4g"
+          :mass "55tons"
+          :height "17m"
+          :length "4m"
+          :speedair "2.4mach"
+          :speedland "36kph"
+          :width "14m"))))))
+
+(func chapter_mobile_suit_gundam_equipment : base/chapter
+ (chapter
+  :name "Mobile Suit Gundam Equipment"
+  :sectionmap
+   (sectionmap
+    "Gundam Equipment"
+     (section
+      :name "Gundam Equipment"
+      :summary "* Energy rating for MW weapons assumes a 3 second burst."
+      :itemmap
+       (itemmap
+        "Titanium Composite"
+         (item
+          :name "Titanium Composite"
+          :summary "This is the state of the art armor plate before the discovery of Gundarium Alpha which completely eclipses it.")
+        "Gundarium Alpha"
+         (item
+          :name "Gundarium Alpha"
+          :summary
+           "Originally called Luna Titanium, it was renamed after the success of the RX-78 Gundam built from it.
+A super high-tensile alloy originally known as Luna Titanium.  Originally intended for use inside thermonuclear
+reactors, this alloy's superb strength, durability, heat resistance and radiation-absorbing properties make it
+an ideal material for mobile suit armor."
+          :titles "Gundarium, Luna Titanium")
+        "Gundarium Gamma"
+         (item
+          :name "Gundarium Gamma")
+        "60mm Vulcan Cannon"
+         (item
+          :name "60mm Vulcan Cannon"
+          :reference "Stats based on 57mm Bofors Naval Gun"
+          :titles "VCU-505EX-Gry/Ver.009 (Titans) / VCU-505EX-V*B/Ver.012 (AEUG)"
+          :classification "Cannon"
+          :modifiers "Auto"
+          :muzzlevelocity "1000m/s"
+          :range "8.5km"
+          :rof "220/min")
+        "100mm Machine Gun"
+         (item
+          :name "100mm Machine Gun"
+          :titles "NF-GMG-Type.37"
+          :classification "Cannon"
+          :modifiers "Auto"
+          :muzzlevelocity "600m/s")
+        "120mm Machine Gun"
+         (item
+          :name "120mm Machine Gun"
+          :classification "Cannon"
+          :modifiers "Auto"
+          :muzzlevelocity "600m/s"
+          :rounds "100")
+        "180mm Recoilless Cannon"
+         (item
+          :name "180mm Recoilless Cannon"
+          :titles "NFHI-GMCa-type.09"
+          :classification "Cannon"
+          :muzzlevelocity "300m/s")
+        "240mm Recoilless Cannon"
+         (item
+          :name "240mm Recoilless Cannon"
+          :classification "Cannon"
+          :muzzlevelocity "300m/s")
+        "280mm Bazooka"
+         (item
+          :name "280mm Bazooka"
+          :classification "Hvy. Rocket Launcher"
+          :modifiers "HE"
+          :muzzlevelocity "120m/s"
+          :rounds "4")
+        "360mm Hyper Bazooka"
+         (item
+          :name "360mm Hyper Bazooka"
+          :summary "* Capable of destroying a GM in a single hit."
+          :titles "H&amp;L-GB05R (Zeon) / H-Baz-85-Gry/Ver.045 (Titans) / H-Baz-87-A*E/Ver.004 (AEUG)"
+          :classification "Hvy. Rocket Launcher"
+          :modifiers "HE"
+          :muzzlevelocity "120m/s"
+          :rounds "10")
+        "380mm Hyper Bazooka"
+         (item
+          :name "380mm Hyper Bazooka"
+          :titles "BLASH-XHB-L-03/N-STD"
+          :classification "Hvy. Rocket Launcher"
+          :modifiers "HE"
+          :muzzlevelocity "120m/s"
+          :rounds "5")
+        "Clay Bazooka"
+         (item
+          :name "Clay Bazooka"
+          :image "Gundam/ClayBazooka.jpg"
+          :classification "Hvy. Rocket Launcher"
+          :modifiers "HE"
+          :muzzlevelocity "120m/s")
+        ".4MW Beam Saber"
+         (item
+          :name ".4MW Beam Saber"
+          :titles "XB-G-1048L (Titans) / A*E-Br*G-Sc-L (AEUG)"
+          :classification "Hvy. Melee"
+          :energy "1.2MJ"
+          :modifiers "Energy")
+        ".65MW Beam Saber"
+         (item
+          :name ".65MW Beam Saber"
+          :classification "Hvy. Melee"
+          :energy "1.95MJ"
+          :modifiers "Energy")
+        "1.3MW Beam Gun"
+         (item
+          :name "1.3MW Beam Gun"
+          :classification "Cannon"
+          :energy "3.9MJ"
+          :modifiers "Energy")
+        "1.3MW Funnel"
+         (item
+          :name "1.3MW Funnel"
+          :classification "Cannon"
+          :energy "3.9MJ"
+          :modifiers "Energy")
+        "1.9MW Beam Rifle"
+         (item
+          :name "1.9MW Beam Rifle"
+          :summary "Powered by rechargeable energy cap"
+          :titles "BOWA-BR-S-85-C2"
+          :classification "Cannon"
+          :energy "5.7MJ"
+          :modifiers "Energy")
+        "2.2MW Beam Pistol"
+         (item
+          :name "2.2MW Beam Pistol"
+          :summary "Powered by rechargeable energy cap"
+          :classification "Cannon"
+          :energy "6.6MJ"
+          :modifiers "Energy")
+        "2.2MW Funnel"
+         (item
+          :name "2.2MW Funnel"
+          :classification "Hvy. MG"
+          :energy "6.6MJ"
+          :modifiers "Energy")
+        "2.6MW Beam Rifle"
+         (item
+          :name "2.6MW Beam Rifle"
+          :summary "Powered by rechargeable energy cap"
+          :titles "BOWA*XBR-M-86-C2 (Titans), A*E-Br*XBR-87-C (AEUG)"
+          :classification "Cannon"
+          :energy "7.8MJ"
+          :modifiers "Energy")
+        "2.8MW Beam Rifle"
+         (item
+          :name "2.8MW Beam Rifle"
+          :summary "Powered by rechargeable energy cap"
+          :classification "Cannon"
+          :energy "8.4MJ"
+          :modifiers "Energy")
+        "5.7MW Beam Rifle"
+         (item
+          :name "5.7MW Beam Rifle"
+          :image "Gundam/ZetaBeamRifle.jpg"
+          :summary "Powered by replaceable e-pac, doubles as large beam saber"
+          :classification "Cannon"
+          :energy "17.1MJ"
+          :modifiers "Energy")
+        "8.3MW Hyper Mega Launcher"
+         (item
+          :name "8.3MW Hyper Mega Launcher"
+          :summary "Powered by replaceable e-pac, doubles as large beam saber"
+          :classification "Cannon"
+          :energy "24.9MJ"
+          :modifiers "Energy")
+        "19.5MW Mega Particle Gun"
+         (item
+          :name "19.5MW Mega Particle Gun"
+          :classification "Cannon"
+          :energy "58.5MJ"
+          :modifiers "Energy"))))))
+
+(func chapter_mobile_suit_gundam_units : base/chapter
+ (chapter
+  :name "Mobile Suit Gundam Units"
+  :sectionmap
+   (sectionmap
+    "Gundam Independents"
+     (section
+      :name "Gundam Independents"
+      :unitmap
+       (unitmap
+        :Side
+         (unit
+          :name "Side"
+          :length "32km")))
+    "Gundam Federation"
+     (section
+      :name "Gundam Federation"
+      :unitmap
+       (unitmap
+        :Ball
+         (unit
+          :name "Ball"
+          :image "Gundam/Ball.png"
+          :titles "RB-79"
+          :speed ".96g"
+          :classification "Cannon"
+          :mass "17.2tons"
+          :height "12.8m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "3"
+              :unititemmap
+               (unititemmap
+                "180mm Recoilless Cannon"
+                 (unititem
+                  :name "180mm Recoilless Cannon"
+                  :facing "F")))))
+        :Gundam
+         (unit
+          :name "Gundam"
+          :image "Gundam/Gundam.png"
+          :summary
+           "Performance: maximum thruster acceleration 0.93 G; maximum ground running speed 165 km/h
+Equipment and design features: re-entry coolant system
+Optional hand armaments: BOWA-XBR-M-79-07G beam rifle, powered by rechargeable energy cap;
+RX·M-Sh-008/S-01025 shield, can be optionally stored on backpack"
+          :titles "RX-78-2"
+          :classification "Lt. Spacecraft"
+          :mass "43.4tons"
+          :height "18m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "6"
+              :unititemmap
+               (unititemmap
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx2"
+                  :number "2")
+                "380mm Hyper Bazooka"
+                 (unititem
+                  :name "380mm Hyper Bazooka")))))
+        "Gundam Ground Type"
+         (unit
+          :name "Gundam Ground Type"
+          :image "Gundam/GundamGroundType.png"
+          :reference `The engineers at Jaburo used spare parts originally manufactured for the RX-78-2 Gundam prototype and built approximately 20 units of a specialized ground combat-model Gundam, the RX-79[G]. Twelve of these units were assigned to the Kojima Battalion stationed in Southeast Asia, particularly to the 04th and 08th MS Teams. Since the RX-79[G]'s were made primarily of spare parts leftover from "Project V," no replacement parts were available. This resulted in hasty field repairs`
+          :summary
+           "Speed: 0.71 G
+Fixed armaments: multi-launcher, mounted in chest;
+2 x X.B.Sa-G-03 beam saber, stored in recharge
+racks in legs, hand-carried in use
+Optional fixed armaments: RGM-S-Sh-WF/S-00109 shield, mounted on either forearm
+Optional hand armaments:
+P.B.R-0079/A12 S-000011 beam rifle, powered by rechargeable energy cap;
+bazooka gun, clip-fed, 7 rounds per clip;
+6-tube missile launcher;"
+          :titles "RX-79(G)"
+          :classification "Med. Tank"
+          :mass "52.8tons"
+          :height "18.2m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4"
+              :unititemmap
+               (unititemmap
+                "100mm Machine Gun"
+                 (unititem
+                  :name "100mm Machine Gun"
+                  :summary "Clip-fed, 2 spare clips stored on hip armor")
+                "180mm Recoilless Cannon"
+                 (unititem
+                  :name "180mm Recoilless Cannon")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :summary "Chest Mount"
+                  :facing "FF"
+                  :number "1")))))
+        :Guncannon
+         (unit
+          :name "Guncannon"
+          :image "Gundam/Guncannon.png"
+          :summary
+           "Speed: 0.74 G
+Optional hand armaments: BOWA-XBR-L beam rifle, powered by rechargeable energy cap"
+          :titles "RX-77-2"
+          :speed "78kph"
+          :classification "Lt. Spacecraft"
+          :mass "51tons"
+          :height "17.5m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4"
+              :unititemmap
+               (unititemmap
+                "240mm Recoilless Cannon"
+                 (unititem
+                  :name "240mm Recoilless Cannon"
+                  :facing "FFx2"
+                  :number "2"
+                  :rounds "40")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx2"
+                  :number "2")))))
+        :Guntank
+         (unit
+          :name "Guntank"
+          :image "Gundam/Guntank.png"
+          :summary
+           "Performance: maximum thruster acceleration 1.10 G; maximum ground driving speed 70 km/h
+2 x 4-tube 40mm rocket launcher, mounted on arms"
+          :titles "RX-75"
+          :speed "70kph"
+          :classification "Lt. Spacecraft"
+          :mass "56tons"
+          :height "15.6m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4"
+              :unititemmap
+               (unititemmap
+                "180mm Recoilless Cannon"
+                 (unititem
+                  :name "180mm Recoilless Cannon"
+                  :facing "FFx2"
+                  :number "2"
+                  :rounds "60")))))
+        :GM
+         (unit
+          :name "GM"
+          :image "Gundam/GM.png"
+          :titles "RGM-79"
+          :classification "Lt. Spacecraft"
+          :mass "41.2tons"
+          :height "18m")
+        :Magellan
+         (unit
+          :name "Magellan"
+          :image "Gundam/Magellan.png"
+          :classification "Hvy. Spacecraft")
+        "Pegasus Class Carrier"
+         (unit
+          :name "Pegasus Class Carrier"
+          :image "Gundam/WhiteBase.png"
+          :summary
+           "Fixed armaments: 4 x main gun; 2 x mega particle gun; hyper mega particle cannon; 2 x missile launcher
+Mobile suits: 8 (12)
+2x Catapults"
+          :titles "White Base"
+          :classification "Hvy. Spacecraft"
+          :mass "54ktons"
+          :height "76.5m"
+          :length "341.7m"
+          :width "124.1m")))
+    :Zeon
+     (section
+      :name "Zeon"
+      :unitmap
+       (unitmap
+        :Big-Zam
+         (unit
+          :name "Big-Zam"
+          :image "Gundam/BigZam.png"
+          :classification "Med. Spacecraft"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Energy"
+                 (unitability
+                  :name "Hardened vs. Energy")))))
+        :Dom
+         (unit
+          :name "Dom"
+          :image "Gundam/Dom.png"
+          :summary "Ground Mobile Suit"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Elmeth
+         (unit
+          :name "Elmeth"
+          :image "Gundam/Elmeth.png"
+          :classification "Med. Spacecraft")
+        :Gelgoog
+         (unit
+          :name "Gelgoog"
+          :image "Gundam/Gelgoog.png"
+          :classification "Lt. Spacecraft"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Gouf
+         (unit
+          :name "Gouf"
+          :image "Gundam/Gouf.png"
+          :classification "Lt. Spacecraft")
+        "Rick Dom"
+         (unit
+          :name "Rick Dom"
+          :image "Gundam/RickDom.png"
+          :reference
+           "Realizing that the outcome of the war was going to be decided in space, Zeon devoted all of its mobile suit
+manufacturing resources to space combat units.  Refining the Dom design for space was simple, and mostly involved
+replacing the hover jet thrusters with standard rocket thrusters.  Zeon manufacturers began cranking out hundreds
+of these new units late in the war, replacing the aging MS-06F Zaku II as the premiere front line combat unit."
+          :summary
+           "Performance: maximum thruster acceleration 0.67 G; maximum ground running speed 110 km/h
+Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, battery powered, stored in recharge rack on back, hand-carried in use"
+          :titles "MS-09R"
+          :classification "Lt. Spacecraft"
+          :mass "78.6tons"
+          :height "18.6m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "4"
+              :unititemmap
+               (unititemmap
+                "360mm Hyper Bazooka"
+                 (unititem
+                  :name "360mm Hyper Bazooka"
+                  :rounds "10")))))
+        "Zaku II"
+         (unit
+          :name "Zaku II"
+          :image "Gundam/ZakuII.png"
+          :summary
+           "Speed: .59G/88kph
+Sensor radius: 3200 m
+180-degree turn time: 1.7 sec
+Ground speed: 88 km/h
+Armor: super-high tensile steel
+Armament: heat hawk x 1
+Optional armament: 3-missile pod x 2, cracker"
+          :classification "Lt. Spacecraft"
+          :mass "58.1tons"
+          :height "17.5m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "3"
+              :unititemmap
+               (unititemmap
+                "280mm Bazooka"
+                 (unititem
+                  :name "280mm Bazooka"
+                  :rounds "4")
+                "120mm Machine Gun"
+                 (unititem
+                  :name "120mm Machine Gun"
+                  :rounds "100")))))
+        :Z'Gok
+         (unit
+          :name "Z'Gok"
+          :image "Gundam/ZGok.png"
+          :summary
+           "0.86 G; maximum water speed 103 knots
+Fixed armaments:
+6 x 240mm missile launcher, 5 round magazine per launcher, mounted in head;
+2 x mega particle cannon, mounted in forearms"
+          :titles "MSM-07"
+          :classification "Lt. Naval Vessel"
+          :crew "1"
+          :mass "65.1tons"
+          :height "18.4m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Zeong
+         (unit
+          :name "Zeong"
+          :image "Gundam/Zeong.png"
+          :summary
+           "maximum thruster acceleration 0.81 G
+Fixed armaments: 2 x wire-guided 5-barrel mega particle gun, barrels mounted in manipulator fingers, all barrels in each hand
+are fire-linked; 2 x mega particle gun, mounted in torso; mega particle gun, mounted in head"
+          :titles "MSN-02"
+          :classification "Med. Spacecraft"
+          :crew "1"
+          :mass "151.2tons"
+          :height "17.3m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        "Gwazine Class Battleship"
+         (unit
+          :name "Gwazine Class Battleship"
+          :image "Gundam/Gwazine.png"
+          :reference "The Zeon Gwazine class battleships were more than a match for any Federation Forces warship."
+          :summary
+           "Fixed armaments: 3 x 2-barrel main gun; 10 x 2-barrel secondary gun; many x 155mm machine gun
+Mobile suits: 20"
+          :classification "Hvy. Spacecraft"
+          :mass "108.1ktons"
+          :height "103m"
+          :length "440m"
+          :width "320m")
+        :Musai
+         (unit
+          :name "Musai"
+          :image "Gundam/Musai.png")
+        "Zanzibar Class Cruiser"
+         (unit
+          :name "Zanzibar Class Cruiser"
+          :image "Gundam/Zanzibar.png"
+          :reference
+           "Zeon's closest answer to the Federation's Pegasus class carrier, the Zeon Zanzibar class mobile cruiser replaced the vulnerable H.L.V. for the purpose of ferrying mobile suits to Earth and back to space. With a capacity of 6 mobile suits and a battery of bow-mounted mega particle guns, the Zanzibar was often used as the command ship for smaller fleets when a Gwazine class battleship was either unavailable or unsuitable. Lacking the Pegasus class' integral Minovsky Craft System, the Zanzibar could only operate for short periods in Earth's atmosphere, using sustained thrust. When being launched back into space, the Zanzibar class required a special rocket booster to supply the necessary thrust to break free of Earth's gravity.
+ like most Zeon warships of the One Year War, lacked launch catapults, instead deploying its complement of mobile suits through a simple hatch on the ventral hull."
+          :summary
+           "Fixed armaments: 1 x 2-barrel main gun; 4 x mega particle gun; 5 x 2-barrel machine gun
+Mobile suits: 6"
+          :classification "Hvy. Spacecraft"
+          :height "70.5m"
+          :length "255m"
+          :width "221.8m")))
+    :0083
+     (section
+      :name "0083"
+      :unitmap
+       (unitmap
+        "Gundam GP01"
+         (unit
+          :name "Gundam GP01"
+          :image "Gundam/GundamGP01.png"
+          :titles "Gundam Unit 01")
+        "Gundam GP02"
+         (unit
+          :name "Gundam GP02"
+          :image "Gundam/GundamGP02.png"
+          :titles "Gundam Unit 02")
+        "Gundam GP03"
+         (unit
+          :name "Gundam GP03"
+          :image "Gundam/GundamGP03.png"
+          :titles "Gundam Unit 03")
+        "Neue Ziel"
+         (unit
+          :name "Neue Ziel"
+          :image "Gundam/NeueZiel.png")))
+    :AEUG
+     (section
+      :name "AEUG"
+      :unitmap
+       (unitmap
+        "Z Gundam"
+         (unit
+          :name "Z Gundam"
+          :image "Gundam/ZGundam.png"
+          :summary
+           "* Variable Mobile Suit
+Speed: 1.81 G
+Fixed armaments:
+2 x 2-tube grenade launcher, 2 rounds per tube, mounted in forearms;
+Optional fixed armaments:
+grenade launcher cartridge, 18+1 rounds, serves as extended ammunition magazine for grenade launcher;
+shield, mounted on left forearm"
+          :titles "MSZ-006"
+          :classification "Lt. Spacecraft"
+          :mass "28.7tons"
+          :height "19.8m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "6"
+              :unititemmap
+               (unititemmap
+                "5.7MW Beam Rifle"
+                 (unititem
+                  :name "5.7MW Beam Rifle"
+                  :summary "2 spare e-pacs stored in shield")
+                "8.3MW Hyper Mega Launcher"
+                 (unititem
+                  :name "8.3MW Hyper Mega Launcher")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx2"
+                  :number "2"
+                  :rounds "1200")))))
+        "Z Gundam Waverider"
+         (unit
+          :name "Z Gundam Waverider"
+          :image "Gundam/Waverider_ZGundam.png"
+          :summary "* Variable Mobile Suit"
+          :titles "MSZ-006"
+          :speed "1.81g"
+          :classification "Lt. Spacecraft"
+          :mass "28.7tons"
+          :length "24.3m"
+          :width "18.6m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "6"
+              :unititemmap
+               (unititemmap
+                "5.7MW Beam Rifle"
+                 (unititem
+                  :name "5.7MW Beam Rifle")
+                "1.3MW Beam Gun"
+                 (unititem
+                  :name "1.3MW Beam Gun")))))
+        :G-Defenser
+         (unit
+          :name "G-Defenser"
+          :image "Gundam/GDefenser.png"
+          :summary
+           "* Space Fighter
+* Separatable cockpit capsule
+Fixed armaments: 2 x 14-tube missile pod, mounted in binders on main body; long beam rifle, mounted on main body; 2 x mini laser gun fire-linked, power rated at 1.7 MW each, mounted in nose of cockpit capsule; 4 x vulcan gun, mounted in pairs in missile pod binders, each pair fire-linked"
+          :titles "FXA-05D"
+          :speed "1.41g"
+          :classification "Lt. Spacecraft"
+          :mass "24.7tons"
+          :length "39.5m"
+          :width "27.1m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        "Gundam MK-II"
+         (unit
+          :name "Gundam MK-II"
+          :image "Gundam/GundamMkII.png"
+          :reference
+           "* Paradoxically, the Gundam Mk. II is not armored with the wonderfully durable Gundarium alloy material used by
+the original RX-78 Gundam, making it no more or less physically durable than mass-production mobile suits."
+          :summary
+           "RX*M-Sh-VT/S-00018 (Titans) / RX*M-Sh-VT/S-001 (AEUG) shield, mounted on either forearm
+Optional hand armaments: 2 spare e-pacs stored in shield;
+AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds per clip"
+          :titles "RX-178"
+          :speed "1.5g"
+          :classification "Lt. Spacecraft"
+          :mass "33.4tons"
+          :height "18.5m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "5"
+              :unititemmap
+               (unititemmap
+                "2.6MW Beam Rifle"
+                 (unititem
+                  :name "2.6MW Beam Rifle")
+                "360mm Hyper Bazooka"
+                 (unititem
+                  :name "360mm Hyper Bazooka"
+                  :rounds "7")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx2"
+                  :number "2"
+                  :rounds "1400")))))
+        "Hyaku Shiki"
+         (unit
+          :name "Hyaku Shiki"
+          :image "Gundam/HyakuShiki.png"
+          :summary
+           "Equipment and design features: anti-beam reflective coating on amror
+Optional hand armaments:
+AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds per clip; mega bazooka launcher"
+          :titles "MSN-100"
+          :speed "1.37g"
+          :classification "Lt. Spacecraft"
+          :mass "31.5tons"
+          :height "18.5m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "6"
+              :unititemmap
+               (unititemmap
+                "2.8MW Beam Rifle"
+                 (unititem
+                  :name "2.8MW Beam Rifle")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx2"
+                  :number "2")))))
+        :Nemo
+         (unit
+          :name "Nemo"
+          :image "Gundam/Nemo.png"
+          :summary
+           "Optional fixed armaments: shield, mounted on either forearm
+Although closely based on the GM II, was far better in performance in terms of generator power,
+thruster acceleration and maneuverability. To help keep its cost down, the Nemo used many weapons
+already employed by other existing mobile suits, such as the RMS-099 Rick Dias' beam saber and the
+GM II's beam rifle."
+          :titles "MSA-003"
+          :speed "1.15g"
+          :classification "Lt. Spacecraft"
+          :mass "36.2tons"
+          :height "18.5m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "3"
+              :unititemmap
+               (unititemmap
+                "1.9MW Beam Rifle"
+                 (unititem
+                  :name "1.9MW Beam Rifle")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx2"
+                  :number "2")))))
+        "Rick Dias"
+         (unit
+          :name "Rick Dias"
+          :image "Gundam/RickDias.png"
+          :reference
+           "* Because many former Zeon engineers worked on the Rick Dias, it featured many similaritys to Zeon suits.  It not
+only features a mono-eye sensor its name is also derived from the MS-09R Rick Dom (Rick comes from the word
+Remake).  The Rick Dias should originally be called Gundam Gamma because it is built out of new Gundarium Gamma.
+This material was developed by Axis and it makes the suit lighter and thus makes it able to accommodate greater
+fuel capacity."
+          :summary
+           "* Equipment and design features: 2 x 'random binder' ejectable external propellant tank, mounted on backpack; birdlime launchers in hands; flare launchers in hands
+* Fixed armaments: 2-barrel 55mm vulcan phalanx anti-missile gun system, mounted in head;
+* Optional hand armaments: AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds; beam rifle, powered by rechargeable energy cap"
+          :titles "RMS-099, Gundam Gamma"
+          :speed "1.37g"
+          :classification "Lt. Spacecraft"
+          :mass "32.2tons"
+          :height "18.7m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "3"
+              :unititemmap
+               (unititemmap
+                "2.2MW Beam Pistol"
+                 (unititem
+                  :name "2.2MW Beam Pistol"
+                  :number "2")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx2"
+                  :number "2")))))
+        "Super Gundam"
+         (unit
+          :name "Super Gundam"
+          :image "Gundam/SuperGundam.png"
+          :summary "Combined Mobile Suit"
+          :titles "FXA-05D+RX-178"
+          :classification "Med. Spacecraft"
+          :mass "72.9tons"
+          :height "18.5m")
+        :Argama
+         (unit
+          :name "Argama"
+          :image "Gundam/Argama.png"
+          :classification "Hvy. Spacecraft")
+        "Garuda Class Transport"
+         (unit
+          :name "Garuda Class Transport"
+          :image "Gundam/Garuda_Audhumla.png"
+          :summary
+           "Propulsion system: jet engine x 10
+Armament: laser gun x 10
+Mobile suits: 20
+Ships of the line: Garuda, Audhumla, Sudori, Melord
+Mechanical designer: Kazumi Fujita"
+          :titles "Audhumla, Garuda, Melord, Sudori"
+          :classification "Med. Aircraft"
+          :mass "9800tons"
+          :length "317m"
+          :width "524m")))
+    "Gundam Titans"
+     (section
+      :name "Gundam Titans"
+      :unitmap
+       (unitmap
+        :Asshimar
+         (unit
+          :name "Asshimar"
+          :image "Gundam/Asshimar.png"
+          :summary "* Variable Mobile Suit"
+          :titles "NRX-044"
+          :classification "Lt. Spacecraft"
+          :mass "41.1tons"
+          :height "19.3m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Baund-Doc
+         (unit
+          :name "Baund-Doc"
+          :image "Gundam/BaundDoc.png"
+          :summary "* Variable Mobile Suit"
+          :titles "NRX-055"
+          :classification "Lt. Spacecraft"
+          :mass "82.7tons"
+          :height "27.3m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Byalant
+         (unit
+          :name "Byalant"
+          :image "Gundam/Byalant.png"
+          :summary "* Variable Mobile Suit"
+          :titles "PMX-000"
+          :classification "Lt. Spacecraft"
+          :mass "34.2tons"
+          :height "18.6m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Gabthley
+         (unit
+          :name "Gabthley"
+          :image "Gundam/Gabthley.png"
+          :summary "* Variable Mobile Suit"
+          :titles "RX-110"
+          :classification "Lt. Spacecraft"
+          :mass "32.6tons"
+          :height "18.5m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Gaplant
+         (unit
+          :name "Gaplant"
+          :image "Gundam/Gaplant.png"
+          :summary "* Variable Mobile Suit"
+          :titles "ORX-005"
+          :classification "Lt. Spacecraft"
+          :mass "50.7tons"
+          :height "19.8m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        "GM II"
+         (unit
+          :name "GM II"
+          :image "Gundam/GMII.png"
+          :summary
+           "Fixed armaments:
+beam saber, power rating unknown
+Optional fixed armaments: shield, mounted on either forearm"
+          :titles "RMS-179, RGM-79R"
+          :speed "1.06g"
+          :classification "Lt. Spacecraft"
+          :mass "40.5tons"
+          :height "18.1m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "3"
+              :unititemmap
+               (unititemmap
+                "1.9MW Beam Rifle"
+                 (unititem
+                  :name "1.9MW Beam Rifle")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx2"
+                  :number "2")))))
+        :Hambrabi
+         (unit
+          :name "Hambrabi"
+          :image "Gundam/Hambrabi.png"
+          :summary "* Variable Mobile Suit"
+          :titles "RX-139"
+          :classification "Lt. Spacecraft"
+          :mass "34.6tons"
+          :height "19.9m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Hizack
+         (unit
+          :name "Hizack"
+          :image "Gundam/Hizack.png"
+          :titles "RMS-106"
+          :classification "Lt. Spacecraft"
+          :mass "38.7tons"
+          :height "18m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Marasai
+         (unit
+          :name "Marasai"
+          :image "Gundam/Marasai.png"
+          :titles "RMS-108"
+          :classification "Lt. Spacecraft"
+          :mass "33.1tons"
+          :height "17.5m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Messala
+         (unit
+          :name "Messala"
+          :image "Gundam/Messala.png"
+          :summary "* Variable Mobile Suit"
+          :titles "PMX-000"
+          :classification "Lt. Spacecraft"
+          :mass "37.3tons"
+          :height "23m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Psycho-Gundam
+         (unit
+          :name "Psycho-Gundam"
+          :image "Gundam/PsychoGundam.png"
+          :summary "* Variable Mobile Suit"
+          :titles "MRX-009"
+          :classification "Med. Spacecraft"
+          :mass "214.1tons"
+          :height "40m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Energy"
+                 (unitability
+                  :name "Hardened vs. Energy")))))
+        "Psycho-Gundam MK-II"
+         (unit
+          :name "Psycho-Gundam MK-II"
+          :image "Gundam/PsychoGundamMkII.png"
+          :summary
+           "* Variable Mobile Suit
+Performance: maximum thruster acceleration: 0.86 G (mobile suit mode), 1.99 G (mobile fortress mode)
+Equipment and design features: sensors, range 16230 meters; psycho control chair in cockpit; detachable head, can be operated without main body
+Fixed armaments: 20 x mega beam gun, power rated at 6.3 MW each, 3 mounted in each shoulder, 4 mounted in each leg, 2 mounted in each hip armor, 1 mounted in each front waist armor; 3 x mega scattering beam gun, power rated at 10.7 MW each, mounted in torso; 2 x wire-guided psycommu beam sword, power rated at 1.7 MW each, mounted in forearms; 10 x beam gun, emitter barrels mounted as fingers in hands; 2-barrel mega beam gun, mounted in head
+Remote weapons: reflector bits, deflects and redirects beam weapons fire, stored in backpack
+Though armed with the same 3-barreled scattering mega particle gun in its chest and beam gun fingers, the Psyco Gundam Mark II also mounted 20 smaller beam guns all over its body, giving it firepower capable of attacking targets in all directions. Its forearms also mounted large-bladed beam swords, and could be detached and directed at targets via a cable connection and through the control of the Psyco Gundam Mark II's psycommu system, giving the unit an all-range attack capability quite similar to that of the Principality of Zeon's MSN-02 Zeong. The Psyco Gundam Mark II also carried a set of 'reflector bits,' which were unarmed but used to redirect its own beam weapons fire to targets that are out-of-sight, or to deflect incoming enemy beam weapons fire."
+          :titles "MRX-010"
+          :classification "Med. Spacecraft"
+          :mass "187.8tons"
+          :height "40m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Energy"
+                 (unitability
+                  :name "Hardened vs. Energy")))))
+        :Qubeley
+         (unit
+          :name "Qubeley"
+          :image "Gundam/Qubeley.png"
+          :summary "Fixed armaments: 2 x beam launcher/beam saber, mounted in forearms in beam launcher mode, hand-carried in beam saber mode"
+          :titles "AMX-004"
+          :speed "1.08g"
+          :classification "Lt. Spacecraft"
+          :mass "35.2tons"
+          :height "18.4m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "6"
+              :unititemmap
+               (unititemmap
+                "1.3MW Funnel"
+                 (unititem
+                  :name "1.3MW Funnel"
+                  :number "10")))))
+        :The-O
+         (unit
+          :name "The-O"
+          :image "Gundam/TheO.png"
+          :summary "4 x sub-arm, mounted inside front skirt armor"
+          :titles "PMX-003"
+          :speed "1.57g"
+          :classification "Lt. Spacecraft"
+          :mass "57.3tons"
+          :height "24.8m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "6"
+              :unititemmap
+               (unititemmap
+                "2.6MW Beam Rifle"
+                 (unititem
+                  :name "2.6MW Beam Rifle")))))
+        :Saberfish
+         (unit
+          :name "Saberfish"
+          :image "Gundam/Saberfish.png"
+          :summary "High Altitude Fighter"
+          :classification "Lt. Aircraft")
+        :Gwazine
+         (unit
+          :name "Gwazine"
+          :image "Gundam/Gwazine.png")
+        :Jupitris
+         (unit
+          :name "Jupitris"
+          :image "Gundam/Jupitris.png")
+        :Salamis
+         (unit
+          :name "Salamis"
+          :image "Gundam/Salamis.png")))
+    "Federation (New)"
+     (section
+      :name "Federation (New)"
+      :unitmap
+       (unitmap
+        "Nu Gundam"
+         (unit
+          :name "Nu Gundam"
+          :image "Gundam/NuGundam.png"
+          :titles "RX-93"
+          :classification "Lt. Spacecraft"
+          :mass "27.9tons"
+          :height "22m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))
+        :Re-GZ
+         (unit
+          :name "Re-GZ"
+          :image "Gundam/ReGZ.png"
+          :summary "* Variable Mobile Suit"
+          :titles "RGZ-91"
+          :classification "Lt. Spacecraft"
+          :mass "24.7tons"
+          :height "20.5m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles")))))))
+    "Neo Zion"
+     (section
+      :name "Neo Zion"
+      :unitmap
+       (unitmap
+        :Alpha-Azieru
+         (unit
+          :name "Alpha-Azieru"
+          :image "Gundam/AlphaAzieru.png"
+          :summary
+           "Speed: 8.29 G
+				* 2 x external propellant tank, ejectable, mounted on main body
+Fixed armaments: 2 x wire-guided psycommu mega arm, each mounts 5 x beam gun, fire-linked, power rated at 12.6 MW each"
+          :titles "NZ-333"
+          :classification "Med. Spacecraft"
+          :mass "267.4tons"
+          :height "58.4m"
+          :length "108m"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"
+              :level "6"
+              :unititemmap
+               (unititemmap
+                "19.5 MW Mega Particle Gun"
+                 (unititem
+                  :name "19.5 MW Mega Particle Gun"
+                  :facing "Turret")
+                "2.2MW Funnel"
+                 (unititem
+                  :name "2.2MW Funnel"
+                  :number "9")
+                "60mm Vulcan Cannon"
+                 (unititem
+                  :name "60mm Vulcan Cannon"
+                  :facing "Turretx4"
+                  :number "4")))))
+        :Sazabi
+         (unit
+          :name "Sazabi"
+          :image "Gundam/NuGundam.png"
+          :titles "MSN-04"
+          :classification "Lt. Spacecraft"
+          :mass "30.5tons"
+          :height "25m"
+          :unitskillmap
+           (unitskillmap
+            :Armor
+             (unitskill
+              :name "Armor"
+              :unitabilitymap
+               (unitabilitymap
+                "Hardened vs. Projectiles"
+                 (unitability
+                  :name "Hardened vs. Projectiles"))))))))))
+
+(func chapter_terminator : base/chapter
+ (chapter
+  :name "Terminator"
+  :sectionmap
+   (sectionmap
+    "Terminator Units"
+     (section
+      :name "Terminator Units"
+      :unitmap
+       (unitmap
+        "Terminator T-800"
+         (unit
+          :name "Terminator T-800"
+          :image "Terminator/T800.png"
+          :mass "200kg"
+          :unitskillmap
+           (unitskillmap
+            :Strength
+             (unitskill
+              :name "Strength")))
+        "Terminator T-1000"
+         (unit
+          :name "Terminator T-1000"
+          :image "Terminator/T1000.png"
+          :unitskillmap
+           (unitskillmap
+            :Flexible
+             (unitskill
+              :name "Flexible")))
+        "Terminator T-X"
+         (unit
+          :name "Terminator T-X"
+          :image "Terminator/TX.png"
+          :summary
+           "* The T-X is designed to not only terminate humans but rogue Terminators
+reprogrammed by the Resistance. It is a composite of the T-800 and T-1000,
+a solid endoskeleton covered with polymimetic liquid metal alloy, allowing
+it to take the shape of any humanoid it touches. The T-X endoskeleton
+contains many powerful weapons making it considerably more deadly than
+previous versions."
+          :mass "150kg"
+          :unitskillmap
+           (unitskillmap
+            "Natural Weaponry"
+             (unitskill
+              :name "Natural Weaponry")))
+        "Terminator Hunter Killer"
+         (unit
+          :name "Terminator Hunter Killer"
+          :image "Terminator/HunterKiller.png"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery")))
+        "Terminator Tank"
+         (unit
+          :name "Terminator Tank"
+          :image "Terminator/HKTank.png"
+          :unitskillmap
+           (unitskillmap
+            :Gunnery
+             (unitskill
+              :name "Gunnery"))))))))

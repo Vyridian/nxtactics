@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <title>Nx Tactics</title>
+  <head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <script type="module">
+      import vx_core from "../build/js/src/vx/core.js"
+      import nx_tactics_apptactics from "../build/js/src/nx/tactics/apptactics.js"
+      const context = nx_tactics_apptactics.f_context_nx(vx_core.e_anylist)
+      nx_tactics_apptactics.f_main_nx(context, vx_core.e_anylist)
+    </script>
+    <div id="app"></div>
+  </body>
+</html>
