@@ -1,0 +1,28 @@
+(package nx/tactics/decks/unit
+ :libs (lib base :path nx/tactics/base)
+ :doc "Units")
+
+(func unitmap-tactics : base/unitmap
+ [tactics : base/tactics]
+ (base/unitmap<-unitlist
+  (base/unit
+   :name "Butterfly, Giant")
+  (base/unit
+   :name "Caterpillar, Giant")
+  (base/unit
+   :name "Hellbear")
+  (base/unit
+   :name "Hellboar")
+  (base/unit
+   :name "Hellbull")
+  )
+ :doc "Returns the base unitmap")
+
+(func tactics-unitmap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [unitmap : base/unitmap :=
+   (unitmap-tactics tactics)]
+  (copy tactics
+   :unitmap unitmap))
+ :doc "Returns a tactics updated with unitmap")

@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "World Wars"
   :image "WorldWars.jpg"
@@ -1154,10 +1155,10 @@ wounded, in addition to the two destroyers lost in the first invasion attempt an
        "* On May 4-8, 1942, the Japanese fought the US and Australian in the first naval battle between aircraft carriers and the first naval battle where neither side's ships sighted or fired directly upon the other.
 * On May 6, 1942, land-based B-17s attacked the approaching Port Moresby invasion fleet with the usual lack of success. Almost another year would pass before the USAAF realized high-altitude bombing attacks against moving naval targets were pointless. That night the commander at Port Moresby made the difficult decision to detach his main surface force (3 cruisers and 3 destroyers) to block the probable course of an invasion. He risked a repeat of the loss of HMS Prince of Wales and Repulse by exposing surface ships to attack by land-based aircraft without air cover. Indeed, his cruisers were spotted and came under an intense air attack from torpedo bombers but escaped with little damage. Only minutes after the Japanese raid, his force was inadvertently attacked by friendly B-17s and once again had to
 endure near misses.
-* On May 7, 1942, U.S. aircraft, sent in the wrong direction by a miscoded contact report, had missed ShÅ?kaku and Zuikaku but found the invasion fleet, escorted by the small carrier ShÅ?hÅ?, which was soon sunk with heavy casualties. In the previous five months the Allies had lost numerous major warships and had been unable to sink a single major Japanese ship in return. ShÅ?hÅ? was small by carrier standards, but the phrase 'scratch one flattop,' announced the first Allied naval success of the Pacific War.
-* On May 8, 1942, the main carrier forces located one another and launched full raids, which passed each other in the air. ShÅ?kaku was hit three times by bombs. Her deck damaged, ShÅ?kaku was unable to land her aircraft and was thus effectively put out of action. Both American carriers were hit: Yorktown by a bomb; the Lexington, by both bombs and torpedoes. Lexington had to be abandoned and sunk to prevent her capture.
+* On May 7, 1942, U.S. aircraft, sent in the wrong direction by a miscoded contact report, had missed Shï¿½?kaku and Zuikaku but found the invasion fleet, escorted by the small carrier Shï¿½?hï¿½?, which was soon sunk with heavy casualties. In the previous five months the Allies had lost numerous major warships and had been unable to sink a single major Japanese ship in return. Shï¿½?hï¿½? was small by carrier standards, but the phrase 'scratch one flattop,' announced the first Allied naval success of the Pacific War.
+* On May 8, 1942, the main carrier forces located one another and launched full raids, which passed each other in the air. Shï¿½?kaku was hit three times by bombs. Her deck damaged, Shï¿½?kaku was unable to land her aircraft and was thus effectively put out of action. Both American carriers were hit: Yorktown by a bomb; the Lexington, by both bombs and torpedoes. Lexington had to be abandoned and sunk to prevent her capture.
 * Tactically, the Japanese had achieved a narrow victory; one small carrier lost and a large carrier severely damaged against the Americans' loss of a large carrier and significant damage to another. But from the Allied point of view, after five months of continuous defeat, a battle that came out almost even was close enough to a victory.
-* Strategically, the Allies had won since the invasion of Port Moresby, New Guinea had been averted (the first time the Japanese had been turned back). With ShÅ?kaku damaged and Zuikaku short of aircraft, neither was able to take part in the crucial Battle of Midway a month later. The loss of Lexington was a severe blow as she was one of the Navy's largest carriers. The damaged Yorktown returned to Pearl Harbor and although her damage was estimated to require months in port, she was made more or less battle-worthy in a miracle of improvisation and determination in just 2 days."
+* Strategically, the Allies had won since the invasion of Port Moresby, New Guinea had been averted (the first time the Japanese had been turned back). With Shï¿½?kaku damaged and Zuikaku short of aircraft, neither was able to take part in the crucial Battle of Midway a month later. The loss of Lexington was a severe blow as she was one of the Navy's largest carriers. The damaged Yorktown returned to Pearl Harbor and although her damage was estimated to require months in port, she was made more or less battle-worthy in a miracle of improvisation and determination in just 2 days."
       :scenariomap
        (scenariomap
         "Battle of the Coral Sea"
@@ -1180,8 +1181,8 @@ endure near misses.
                "* The Japanese had 3 fleets:
 * Solomon invasion force
 * Port Moresby invasion force
-* 2x Carriers (ShÅ?kaku and Zuikaku)
-* 1x Small carrier (ShÅ?hÅ?)
+* 2x Carriers (Shï¿½?kaku and Zuikaku)
+* 1x Small carrier (Shï¿½?hï¿½?)
 * 2x Heavy cruisers
 * Support ships")))))
     "Battle of Midway"
@@ -1208,8 +1209,8 @@ Nagumo had received the same message from Tokyo.
 * At 9:20, Allied planes began attacking, led by Torpedo Squadron 8 (VT-8, from Hornet), followed by VT-6 (from Enterprise). Every TBD Devastator of VT-8 was shot down, with only one survivor. VT-6 squadron met nearly the same fate, with no hits against the enemy, thanks in part to terrible aircraft torpedoes. The Japanese combat air patrol, flying the much faster Zero, made short work of the Americans, who not only had no fighter support but were flying the slow, under-armed TBDs.
 * The appearance of a third torpedo plane attack from the southeast by VT-3 at 10:00 very quickly drew the majority of the Japanese CAP into the southeast quadrant of the fleet. By chance, at the same time VT-3 was sighted by the Japanese, two separate formations (comprising three squadrons total) of American SBD Dauntless dive-bombers were approaching the Japanese fleet from the northeast and southwest. These formations initially had difficulty in locating the Japanese carriers, and their fuel was running low. However, by the decisions of squadron commanders C. Wade McClusky, Jr. and Max Leslie to continue the search, they spotted the wake of Japanese destroyer Arashi. The destroyer was steaming at full speed back to Nagumo's carrier force, after having unsuccessfully depth-charged the U.S. submarine Nautilus.
 * The American dive-bombers arrived in a perfect position to attack the Japanese. Armed Japanese strike aircraft filled the hangar decks at the time of the fateful attack, fuel hoses were snaking across the decks as refueling operations were hastily completed, and the constant change of ordnance meant bombs and torpedoes were stacked around the hangars rather than stowed safely in the magazines. The Japanese carriers were extraordinarily vulnerable.
-* Contrary to some accounts of the battle, contemporary research, based on recent translation of relevant portions of the 100 volume Japanese account of the war, has demonstrated that the Japanese were not in fact prepared to launch a counterstrike when they were decisively attacked. Because of the constant flight deck activity associated with combat air patrol operations, the Japanese had never had an opportunity to spot their reserve for launch. The few aircraft on the Japanese flight decks at the time of the attack were either CAP fighters, or (in the case of SÅ?ryÅ«) strike fighters being spotted to augment the CAP.
-* At 10:22, Enterprise's aircraft attacked Kaga, while to the south, Yorktown's aircraft attacked carrier SÅ?ryÅ«, with Akagi being struck by several of Enterprise's bombers four minutes later. Simultaneously, VT-3 was targeting HiryÅ«, although the American torpedo aircraft again scored no hits. Within six minutes, the SBD dive bombers made their attack runs and left all three of their targets heavily ablaze. Akagi was hit by just one bomb, which was sufficient; it penetrated to the upper hangar deck and exploded among the armed and fueled aircraft there. One extremely near miss also slanted in and exploded underwater, bending the flight deck upward with the resulting geyser and causing crucial rudder damage. SÅ?ryÅ« took three bomb hits in the hangar decks; Kaga took at least four. All three carriers were out of action and were eventually abandoned and scuttled.
+* Contrary to some accounts of the battle, contemporary research, based on recent translation of relevant portions of the 100 volume Japanese account of the war, has demonstrated that the Japanese were not in fact prepared to launch a counterstrike when they were decisively attacked. Because of the constant flight deck activity associated with combat air patrol operations, the Japanese had never had an opportunity to spot their reserve for launch. The few aircraft on the Japanese flight decks at the time of the attack were either CAP fighters, or (in the case of Sï¿½?ryÅ«) strike fighters being spotted to augment the CAP.
+* At 10:22, Enterprise's aircraft attacked Kaga, while to the south, Yorktown's aircraft attacked carrier Sï¿½?ryÅ«, with Akagi being struck by several of Enterprise's bombers four minutes later. Simultaneously, VT-3 was targeting HiryÅ«, although the American torpedo aircraft again scored no hits. Within six minutes, the SBD dive bombers made their attack runs and left all three of their targets heavily ablaze. Akagi was hit by just one bomb, which was sufficient; it penetrated to the upper hangar deck and exploded among the armed and fueled aircraft there. One extremely near miss also slanted in and exploded underwater, bending the flight deck upward with the resulting geyser and causing crucial rudder damage. Sï¿½?ryÅ« took three bomb hits in the hangar decks; Kaga took at least four. All three carriers were out of action and were eventually abandoned and scuttled.
 * By proceeding to target directly, without waiting for fighter escort, the torpedo squadrons, one after another, at low level, engaged enemy combat air patrol. This created an opportunity for the pilots of the dive bombers, who had arrived high above the action and were able to dive on target before being attacked. The torpedo planes were shot down and the torpedo squadron pilots lost their lives, but they enabled a titanic victory.
    * HiryÅ«, the sole surviving Japanese aircraft carrier, wasted little time in counterattacking. The first wave of Japanese dive-bombers badly damaged Yorktown with two bomb hits, yet her damage control teams patched her up so effectively (in about an hour) the second wave's torpedo bombers mistook her for an intact carrier. After two torpedo hits, Yorktown lost power and was out of the battle, forcing Admiral Fletcher to move his flag to the heavy cruiser Astoria.
 * HiryÅ« recovered its aircraft and prepared for a strike against what was believed to be the only remaining American carrier.
@@ -1240,10 +1241,10 @@ Nagumo had received the same message from Tokyo.
               :name "Japanese Forces"
               :forces
                "* The Japanese had 4 fleets:
-* Carriers (Akagi, Kaga, HiryÅ« and SÅ?ryÅ«)
+* Carriers (Akagi, Kaga, HiryÅ« and Sï¿½?ryÅ«)
 * Cruiser Tone
 * Destroyer (Arashi)
-* 1x Small carrier (ShÅ?hÅ?)
+* 1x Small carrier (Shï¿½?hï¿½?)
 * 2x Heavy cruisers
 * Support ships")))))
     "Battle of Quadalcanal"
@@ -1291,8 +1292,8 @@ Nagumo had received the same message from Tokyo.
                "1) Deploy in as many fleets as desired.
 2) Maintain secret movement."
               :forces
-               "* 2 Carriers - ShÅ?kaku (Flagship), Zuikaku
-* 1 Light Carrier - RyÅ«jÅ?
+               "* 2 Carriers - Shï¿½?kaku (Flagship), Zuikaku
+* 1 Light Carrier - RyÅ«jï¿½?
 * 2 Battleships
 * 9 Heavy Cruisers - Tone, Chikuma
 * 3 Light Cruiser
@@ -1354,8 +1355,8 @@ Nagumo had received the same message from Tokyo.
               :name "Japanese Forces"
               :deploy "1) Deploy in as many fleets as desired."
               :forces
-               "* 3 Carriers - JunyÅ?, ShÅ?kaku (Flagship), Zuikaku
-* 1 Light Carrier - ZuihÅ?
+               "* 3 Carriers - Junyï¿½?, Shï¿½?kaku (Flagship), Zuikaku
+* 1 Light Carrier - Zuihï¿½?
 * 2 Battleships
 * 1 Heavy Cruiser - Atago, Chikuma, Suzuya
 * 1 Light Cruiser - Yura

@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "Core Rules"
   :image "warrior_msleal_full.jpg"
@@ -20,108 +21,107 @@
   :name "Core Overview"
   :summary
    "* Round - Each Unit takes their turn. When all Units have taken their turn or passed, the Round ends.
-* Turn - Each Unit takes a Turn during a Round.
-** Turn Order - Units take turns in order of the highest [Body] to lowest. The largest units are the most predictable and must activate first.
-** Facing - At any time during your turn, you may change your facing by 45 degrees to any adjacent direction of the 8 compass directions. You may change your facing a maximum of 2 times (a total of 90 degrees) during your turn regardless of how many Move actions you take.
-** Actions - The current may take up to 2 Actions during its Turn.
-*** Move
-**** Simple Move - 
-**** Accelerate -
-**** Brake - 
-**** Drift - 
-** Interrupt - During the Unit's Move, any smaller Unit may interrupt the current Unit and take its Turn immediately. When it has finished its Turn, the interrupted Unit continues. Multiple chained interrupts are possible this way.
+    * Turn - Each Unit takes a Turn during a Round.
+    ** Turn Order - Units take turns in order of the highest [Body] to lowest. The largest units are the most predictable and must activate first.
+    ** Facing - At any time during your turn, you may change your facing by 45 degrees to any adjacent direction of the 8 compass directions. You may change your facing a maximum of 2 times (a total of 90 degrees) during your turn regardless of how many Move actions you take.
+    ** Actions - The current may take up to 2 Actions during its Turn.
+    *** Move
+    **** Simple Move - 
+    **** Accelerate -
+    **** Brake - 
+    **** Drift - 
+    ** Interrupt - During the Unit's Move, any smaller Unit may interrupt the current Unit and take its Turn immediately. When it has finished its Turn, the interrupted Unit continues. Multiple chained interrupts are possible this way.
 
-** Abilities - Each [Unit] may use up to 2 [Abilities] each [Turn].
-There are 3 types of [Ability]: [Move], [Attack], and [Action] abilities.  They may be performed in any order but there may only be one [Move] or [Attack] [Ability] used in a turn.  So the following are the allowed combinations: Move/Attack, Attack/Move, Move/Action, Action/Move, Attack/Action, Action/Attack, Action/Action.
+    ** Abilities - Each [Unit] may use up to 2 [Abilities] each [Turn].
+    There are 3 types of [Ability]: [Move], [Attack], and [Action] abilities.  They may be performed in any order but there may only be one [Move] or [Attack] [Ability] used in a turn.  So the following are the allowed combinations: Move/Attack, Attack/Move, Move/Action, Action/Move, Attack/Action, Action/Attack, Action/Action.
 
-Damage Cards:
+    Damage Cards:
 
-Ammo Damaged
+    Ammo Damaged
 
-Armor Rupture
-* Armor Breach
+    Armor Rupture
+    * Armor Breach
 
-Cargo Damage
-* Individual - Lost ammo, water, food
-* Team - Lost ammo, water, food
-* Vehicle - Lost fuel, ammo, water, food, reaction mass
-* Ship - Lost fuel, ammo, water, food (submarine: air)
-* Starship - Lost fuel, ammo, propellant, air, water, food
+    Cargo Damage
+    * Individual - Lost ammo, water, food
+    * Team - Lost ammo, water, food
+    * Vehicle - Lost fuel, ammo, water, food, reaction mass
+    * Ship - Lost fuel, ammo, water, food (submarine: air)
+    * Starship - Lost fuel, ammo, propellant, air, water, food
 
-Crew Damage
+    Crew Damage
 
-Command Failure
-* Command Control Failure - Commands may not be issued to teams outside command.
-* Helm Control Failure - Cannot change speed or heading until rerouted.
-* Navigation Control Failure - Cannot plot courses or use maps until rerouted.
-* Communication Control Failure - Cannot use communications until rerouted.
-* Sensor Control Failure - Cannot use sensors until rerouted.
-* Weapon Targetting Control Failure - May only fire at current target with current weapon.
+    Command Failure
+    * Command Control Failure - Commands may not be issued to teams outside command.
+    * Helm Control Failure - Cannot change speed or heading until rerouted.
+    * Navigation Control Failure - Cannot plot courses or use maps until rerouted.
+    * Communication Control Failure - Cannot use communications until rerouted.
+    * Sensor Control Failure - Cannot use sensors until rerouted.
+    * Weapon Targetting Control Failure - May only fire at current target with current weapon.
 
-Communication Failure
+    Communication Failure
 
-Sensor
+    Sensor
 
-Control Failure
-* Throttle Failure - Cannot increase speed.
-* Throttle Failure - Cannot maintain speed. Must increase or decrease speed.
-* Throttle Failure - Cannot reduce speed.
-* Steering Failure - Cannot turn left.
-* Steering Failure - Cannot maintain course. Must turn.
-* Sterring Failure - Cannot turn right.
-* Steering Failure - Cannot ascend.
-* Steering Failure - Cannot maintain altitude. Must ascend or descend.
-* Sterring Failure - Cannot descend.
-* Navigation Failure - Cannot plot a course or use maps.
-* Unstable Controls - Must drift each turn if able.
+    Control Failure
+    * Throttle Failure - Cannot increase speed.
+    * Throttle Failure - Cannot maintain speed. Must increase or decrease speed.
+    * Throttle Failure - Cannot reduce speed.
+    * Steering Failure - Cannot turn left.
+    * Steering Failure - Cannot maintain course. Must turn.
+    * Sterring Failure - Cannot turn right.
+    * Steering Failure - Cannot ascend.
+    * Steering Failure - Cannot maintain altitude. Must ascend or descend.
+    * Sterring Failure - Cannot descend.
+    * Navigation Failure - Cannot plot a course or use maps.
+    * Unstable Controls - Must drift each turn if able.
 
-Power Plant Damage
-* Engine Overheat - -1 Max Power generation
-* Electrical Short - -1 Max Power generation and chance of fire.
-* Electrical Overload - 1 Random System loses power until reset.
+    Power Plant Damage
+    * Engine Overheat - -1 Max Power generation
+    * Electrical Short - -1 Max Power generation and chance of fire.
+    * Electrical Overload - 1 Random System loses power until reset.
 
-Equipment Failure
+    Equipment Failure
 
-Fire
-* Individual - Clothes or hair catches fire
-* Team
-* Vehicle - Engine Fire
+    Fire
+    * Individual - Clothes or hair catches fire
+    * Team
+    * Vehicle - Engine Fire
 
-Life Support Failure
-* Vehicle -
-* Ship - Air (submarine: heat, pressure)
-* Starship - Air, heat, pressure
+    Life Support Failure
+    * Vehicle -
+    * Ship - Air (submarine: heat, pressure)
+    * Starship - Air, heat, pressure
 
-Movement Failure
-* Individual - Leg or Foot Damage
-* Team - Some members can't move without help.
-* Vehicle - Flat tire, slipped tread
-* Ship -
-* Starship -
+    Movement Failure
+    * Individual - Leg or Foot Damage
+    * Team - Some members can't move without help.
+    * Vehicle - Flat tire, slipped tread
+    * Ship -
+    * Starship -
 
-Reduced Visibility
-* Individual - Temporay Blindness (Sweat, dust, blood, smoke)
-* Team - Temporay Blindness (dust, smoke)
-* Vehicle - (dirt on windshield, smoke)
-* Ship - Smoke, Sensor Failure
-* Starship - Sensor Failure
+    Reduced Visibility
+    * Individual - Temporay Blindness (Sweat, dust, blood, smoke)
+    * Team - Temporay Blindness (dust, smoke)
+    * Vehicle - (dirt on windshield, smoke)
+    * Ship - Smoke, Sensor Failure
+    * Starship - Sensor Failure
 
-Structural Damage
-* Bulkhead Breach
-* Hull Breach
+    Structural Damage
+    * Bulkhead Breach
+    * Hull Breach
 
-Weapon Damage"
+    Weapon Damage"
   :sectionmap
    (sectionmap
     "Why Tactics: Core Rules?"
      (section
       :name "Why Tactics: Core Rules?"
       :summary
-       "* Tactics is a tactical combat system designed to be played as a board game, a tactical combat game, or as a
-replacement for the combat portion of a Role Playing Game.  The design goal of Tactics is to simplify the elements of tactical combat while allowing the addition of modules that provide different levels of detail to allow each game to simulate just the aspects the players are interested in.
-* Tactics: Core Rules is designed to get players started with the Tactics system and allow any number of players to play Tactics as a pickup game.
-* Setup, gameplay, and winning conditions are all designed to keep things moving.
-* So why are you still reading this?  Start playing!")
+       "* Tactics is a tactical combat system designed to be played as a board game, a tactical combat game, or as a replacement for the combat portion of a Role Playing Game.  The design goal of Tactics is to simplify the elements of tactical combat while allowing the addition of modules that provide different levels of detail to allow each game to simulate just the aspects the players are interested in.
+       * Tactics: Core Rules is designed to get players started with the Tactics system and allow any number of players to play Tactics as a pickup game.
+       * Setup, gameplay, and winning conditions are all designed to keep things moving.
+       * So why are you still reading this?  Start playing!")
     "Tactics Design Foundation"
      (section
       :name "Tactics Design Foundation"

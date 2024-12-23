@@ -1,5 +1,8 @@
 (package nx/tactics/decks/data
- :libs (lib base             :path nx/tactics/base)
+ :libs (lib coll             :path vx/collection)
+       (lib base             :path nx/tactics/base)
+       (lib ability          :path nx/tactics/decks/ability)
+       (lib unit             :path nx/tactics/decks/unit)
        (lib advanced_rules   :path nx/tactics/books/advanced_rules)
        (lib age_of_sail      :path nx/tactics/books/age_of_sail)
        (lib age_of_steam     :path nx/tactics/books/age_of_steam)
@@ -27,47 +30,62 @@
        (lib world_wars       :path nx/tactics/books/world_wars))
 
 (const tactics-all : base/tactics
- (let : base/tactics
-  [booklist : base/booklist := (booklist-all)]
-  (base/tactics<-booklist
-   booklist))
+ (tactics-main)
  :doc "All tactics cards")
 
-(func booklist-all : base/booklist
+(func booklist-all<-tactics : base/booklist
+ [tactics : base/tactics]
  (base/booklist
-  (core_rules/tacticsbook)
-  (combat/tacticsbook)
-  (skills/tacticsbook)
-  (magic/tacticsbook)
-  (powers/tacticsbook)
-  (gear/tacticsbook)
-  (advanced_rules/tacticsbook)
-  (characters/tacticsbook)
-  (bestiary/tacticsbook)
-  (land_sea_and_air/tacticsbook)
-  (fantasy/tacticsbook)
-  (giant_monsters/tacticsbook)
-  (prehistory/tacticsbook)
-  (medieval/tacticsbook)
-  (age_of_sail/tacticsbook)
-  (age_of_steam/tacticsbook)
-  (pulp_fiction/tacticsbook)
-  (world_wars/tacticsbook)
-  (horror/tacticsbook)
-  (modern/tacticsbook)
-  (modern_fantasy/tacticsbook)
-  (superheroes/tacticsbook)
-  (high_technology/tacticsbook)
-  (science_fiction/tacticsbook)
-  (space_and_time/tacticsbook))
+  (core_rules/tacticsbook tactics)
+  (combat/tacticsbook tactics)
+  (skills/tacticsbook tactics)
+  (magic/tacticsbook tactics)
+  (powers/tacticsbook tactics)
+  (gear/tacticsbook tactics)
+  (advanced_rules/tacticsbook tactics)
+  (characters/tacticsbook tactics)
+  (bestiary/tacticsbook tactics)
+  (land_sea_and_air/tacticsbook tactics)
+  (fantasy/tacticsbook tactics)
+  (giant_monsters/tacticsbook tactics)
+  (prehistory/tacticsbook tactics)
+  (medieval/tacticsbook tactics)
+  (age_of_sail/tacticsbook tactics)
+  (age_of_steam/tacticsbook tactics)
+  (pulp_fiction/tacticsbook tactics)
+  (world_wars/tacticsbook tactics)
+  (horror/tacticsbook tactics)
+  (modern/tacticsbook tactics)
+  (modern_fantasy/tacticsbook tactics)
+  (superheroes/tacticsbook tactics)
+  (high_technology/tacticsbook tactics)
+  (science_fiction/tacticsbook tactics)
+  (space_and_time/tacticsbook tactics))
  :doc "All books")
 
-(func tactics-ability : base/ability
+(func ability<-name : base/ability
  [name : string]
- (let : base/ability
-  [abilitymap : base/abilitymap := (:abilitymap tactics-all)]
-  (any<-map abilitymap name))
+ (ability<-name-tactics
+  name tactics-all)
  :doc "Returns an ability from tactics-all")
+
+(func ability<-name-tactics : base/ability
+ [name : string
+  tactics : base/tactics]
+ (let : base/ability
+  [abilitymap : base/abilitymap := (:abilitymap tactics)
+   ability : base/ability := (any<-map abilitymap name)]
+  (log-error ability))
+ :doc "Returns an ability from tactics")
+
+(func tactics-booklist<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+ [booklist : base/booklist := (booklist-all<-tactics tactics)]
+ (base/tactics<-tactics-booklist
+  tactics
+  booklist))
+ :doc "Returns a tactics from a tactics and booklist")
 
 (func tactics-item : base/item
  [name : string]
@@ -89,3 +107,24 @@
   [skillmap : base/skillmap := (:skillmap tactics-all)]
   (any<-map skillmap name))
  :doc "Returns a skill from tactics-all")
+
+(func tactics-main : base/tactics
+ (let : base/tactics
+  [tacticsbasic : base/tactics := (empty base/tactics)
+   tacticsabilities : base/tactics :=
+    (ability/tactics-abilitymap<-tactics tacticsbasic)
+   tacticsunits : base/tactics :=
+    (unit/tactics-unitmap<-tactics tacticsabilities)
+   tacticsall : base/tactics := 
+    (tactics-booklist<-tactics tacticsunits)]
+  tacticsall)
+ :doc "Returns a fully loaded tactics")
+
+(func unit<-name-tactics : base/unit
+ [name : string
+  tactics : base/tactics]
+ (let : base/unit
+  [unitmap : base/unitmap := (:unitmap tactics)
+   unit : base/unit := (any<-map unitmap name)]
+  (log-error unit))
+ :doc "Returns a unit from tactics")

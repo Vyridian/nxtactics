@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "Powers"
   :image "Powers.jpg"
@@ -9,7 +10,7 @@
    (base/chaptermap
     "Powers Overview" (chapter_powers_overview)
     "Special Modifiers" (chapter_special_modifiers)
-    "Equipment Powers" (chapter_equipment_powers)
+    "Equipment Powers" (chapter-equipment-powers tactics)
     "Strength and Weaknesses" (chapter_strength_and_weaknesses)
     "Mental Powers and Weaknesses" (chapter_mental_powers_and_weaknesses)
     "Movement Powers" (chapter_movement_powers)
@@ -251,7 +252,8 @@
          (modifier
           :name "Traceable Emmissions"))))))
 
-(func chapter_equipment_powers : base/chapter
+(func chapter-equipment-powers : base/chapter
+ [tactics : tactics]
  (chapter
   :name "Equipment Powers"
   :sectionmap
@@ -289,10 +291,9 @@
             * The level of quality effects the number of abilities as usual.
             * Each level of quality doubles the original price of the item."
           :abilitymap
-           (abilitymap
-            "Balanced for Throwing"
-             (ability
-              :name "Balanced for Throwing")))))
+           (base/abilitymap<-tactics-namelist
+            tactics
+            "Balanced for Throwing"))))
     "Vehicular Systems"
      (section
       :name "Vehicular Systems"
@@ -2212,9 +2213,6 @@
             :Tracked
              (ability
               :name "Tracked")
-            :Tunnelling
-             (ability
-              :name "Tunnelling")
             "Turbo Booster"
              (ability
               :name "Turbo Booster"
@@ -2222,6 +2220,17 @@
             :Wheeled
              (ability
               :name "Wheeled")))
+        "Digging"
+         (power
+          :name "Digging"
+          :abilitymap
+           (abilitymap<-abilitylist
+            (ability
+             :name "Drilling")
+            (ability
+             :name "Excavating")
+            (ability
+             :name "Tunneling")))
         "Water Movement"
          (power
           :name "Water Movement"

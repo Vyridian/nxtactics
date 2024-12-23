@@ -277,14 +277,15 @@
 
 (type tactics : struct
  :properties
-  [bookmap    : bookmap
-   abilitymap : abilitymap
-   cardmap    : cardmap
-   itemmap    : itemmap
-   placemap   : placemap
-   powermap   : powermap
-   skillmap   : skillmap
-   unitmap    : unitmap])
+  [bookmap     : bookmap
+   abilitymap  : abilitymap
+   cardmap     : cardmap
+   itemmap     : itemmap
+   placemap    : placemap
+   powermap    : powermap
+   scenariomap : scenariomap
+   skillmap    : skillmap
+   unitmap     : unitmap])
 
 (type tarot : struct
  :traits [card])
@@ -845,7 +846,7 @@
 
 (func abilitylist<-abilitylistlist : abilitylistlist
  [abilitylistlist : abilitylistlist]
- (list-join<-list : abilitylist
+ (list<-list-join : abilitylist
   abilitylistlist)
  :doc "Returns an abilitylist from a given abilitylistlist")
 
@@ -913,6 +914,16 @@
    [ability : ability]
    (:name ability)))
  :doc "Returns an abilitymap from a given abilitylist")
+
+(func abilitymap<-tactics-namelist : abilitymap
+ [tactics  : tactics
+  namelist : stringlist :...]
+ (let : abilitymap
+  [abilitymap : abilitymap := (:abilitymap tactics)]
+  (coll/map<-map-keys : abilitymap
+   abilitymap
+   namelist))
+ :doc "Returns a map of abilites from tactics")
 
 (func bookmap<-booklist : bookmap
  [booklist : booklist :...]
@@ -998,7 +1009,7 @@
 
 (func chapterlist<-chapterlistlist : chapterlistlist
  [chapterlistlist : chapterlistlist]
- (list-join<-list : chapterlist
+ (list<-list-join : chapterlist
   chapterlistlist)
  :doc "Returns a chapterlist from a given chapterlistlist")
 
@@ -1064,7 +1075,7 @@
 
 (func itemlist<-itemlistlist : itemlist
  [itemlistlist : itemlistlist]
- (list-join<-list : itemlist
+ (list<-list-join : itemlist
   itemlistlist)
  :doc "Returns a itemlist from a given itemlistlist")
 
@@ -1117,7 +1128,7 @@
 
 (func placelist<-placelistlist : placelist
  [placelistlist : placelistlist]
- (list-join<-list : placelist
+ (list<-list-join : placelist
   placelistlist)
  :doc "Returns a placelist from a given placelistlist")
 
@@ -1148,7 +1159,7 @@
 
 (func powerlist<-powerlistlist : powerlist
  [powerlistlist : powerlistlist]
- (list-join<-list : powerlist
+ (list<-list-join : powerlist
   powerlistlist)
  :doc "Returns a powerlist from a given powerlistlist")
 
@@ -1226,7 +1237,7 @@
 
 (func sectionlist<-sectionlistlist : sectionlist
  [sectionlistlist : sectionlistlist]
- (list-join<-list : sectionlist
+ (list<-list-join : sectionlist
   sectionlistlist)
  :doc "Returns a sectionlist from a given sectionlistlist")
 
@@ -1270,7 +1281,7 @@
   [sectionlistlist : sectionlistlist :=
     (sectionlistlist<-sectionlist
      sectionlist)]
-  (list-join<-list : sectionlist
+  (list<-list-join : sectionlist
    sectionlistlist))
  :test (test
         (sectionlist
@@ -1406,7 +1417,7 @@
 
 (func skilllist<-skilllistlist : skilllist
  [skilllistlist : skilllistlist]
- (list-join<-list : skilllist
+ (list<-list-join : skilllist
   skilllistlist)
  :doc "Returns a skilllist from a given skilllistlist")
 
@@ -1435,8 +1446,9 @@
    (:name skill)))
  :doc "Returns a skillmap from a given skilllist")
 
-(func tactics<-booklist : tactics
- [booklist : booklist]
+(func tactics<-tactics-booklist : tactics
+ [tactics  : tactics
+  booklist : booklist]
  (let : tactics
   [bookmap : bookmap :=
     (bookmap<-booklist
@@ -1494,19 +1506,60 @@
      sectionlist)
    unitmap : unitmap :=
     (unitmap<-unitlist
-     unitlist)]
+     unitlist)
+   tacticsbook : tactics :=
+    (tactics
+     :abilitymap  abilitymap
+     :bookmap     bookmap
+     :itemmap     itemmap
+     :placemap    placemap
+     :powermap    powermap
+     :scenariomap scenariomap
+     :skillmap    skillmap
+     :unitmap     unitmap)]
+  (tactics<-tactics-merge
+   tactics
+   tacticsbook))
+ :doc "Return a ready tactics from a booklist.")
+
+(func tactics<-tactics-merge : tactics
+ [tactics : tactics
+  merge   : tactics]
+ (let : tactics
+  [abilitymap1 : abilitymap := (:abilitymap tactics)
+   abilitymap2 : abilitymap := (:abilitymap merge)
+   abilitymap3 : abilitymap := (copy abilitymap1 abilitymap2)
+   bookmap1 : bookmap := (:bookmap tactics)
+   bookmap2 : bookmap := (:bookmap merge)
+   bookmap3 : bookmap := (copy bookmap1 bookmap2)
+   itemmap1 : itemmap := (:itemmap tactics)
+   itemmap2 : itemmap := (:itemmap merge)
+   itemmap3 : itemmap := (copy itemmap1 itemmap2)
+   placemap1 : placemap := (:placemap tactics)
+   placemap2 : placemap := (:placemap merge)
+   placemap3 : placemap := (copy placemap1 placemap2)
+   powermap1 : powermap := (:powermap tactics)
+   powermap2 : powermap := (:powermap merge)
+   powermap3 : powermap := (copy powermap1 powermap2)
+   scenariomap1 : scenariomap := (:scenariomap tactics)
+   scenariomap2 : scenariomap := (:scenariomap merge)
+   scenariomap3 : scenariomap := (copy scenariomap1 scenariomap2)
+   skillmap1 : skillmap := (:skillmap tactics)
+   skillmap2 : skillmap := (:skillmap merge)
+   skillmap3 : skillmap := (copy skillmap1 skillmap2)
+   unitmap1 : unitmap := (:unitmap tactics)
+   unitmap2 : unitmap := (:unitmap merge)
+   unitmap3 : unitmap := (copy unitmap1 unitmap2)]
   (tactics
-   :abilitymap abilitymap
-   :bookmap    bookmap
-   :chaptermap chaptermap
-   :itemmap    itemmap
-   :placemap   placemap
-   :powermap   powermap
-//   :scenariomap   scenariomap
-   :sectionmap sectionmap
-   :skillmap   skillmap
-   :unitmap    unitmap))
- :doc "Return a ready tactics from a bookmap.")
+   :abilitymap  abilitymap3
+   :bookmap     bookmap3
+   :itemmap     itemmap3
+   :placemap    placemap3
+   :powermap    powermap3
+   :scenariomap scenariomap3
+   :skillmap    skillmap3
+   :unitmap     unitmap3))
+ :doc "Returns a tactics with all maps merged with merge.")
 
 (func unitabilitymap<-unitabilitylist : unitabilitymap
  [unitabilitylist : unitabilitylist :...]
@@ -1560,7 +1613,7 @@
 
 (func unitlist<-unitlistlist : unitlist
  [unitlistlist : unitlistlist]
- (list-join<-list : unitlist
+ (list<-list-join : unitlist
   unitlistlist)
  :doc "Returns a unitlist from a given unitlistlist")
 

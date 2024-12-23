@@ -1,0 +1,20 @@
+(package nx/tactics/decks/ability
+ :libs (lib base :path nx/tactics/base)
+ :doc "Abilities")
+
+(func abilitymap-tactics : base/abilitymap
+ [tactics : base/tactics]
+ (base/abilitymap<-abilitylist
+  (ability
+   :name "Balanced for Throwing")
+  )
+ :doc "Returns the base abilitymap")
+
+(func tactics-abilitymap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [abilitymap : base/abilitymap :=
+   (abilitymap-tactics tactics)]
+  (copy tactics
+   :abilitymap abilitymap))
+ :doc "Returns a tactics updated with abilitymap")

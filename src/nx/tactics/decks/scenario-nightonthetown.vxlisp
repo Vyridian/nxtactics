@@ -190,7 +190,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/tactics-ability "Detail Oriented")))
+         :ability (data/ability<-name "Detail Oriented")))
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
@@ -218,7 +218,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/tactics-ability "Grab")))))
+         :ability (data/ability<-name "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -227,7 +227,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/tactics-ability "Bite")))))))
+         :ability (data/ability<-name "Bite")))))))
 
 (func unit-zombierunner : base/unit
  (base/unit
@@ -251,7 +251,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/tactics-ability "Grab")))))
+         :ability (data/ability<-name "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -260,7 +260,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/tactics-ability "Bite")))))))
+         :ability (data/ability<-name "Bite")))))))
 
 (func unit-zombiewalker : base/unit
  (base/unit
@@ -282,7 +282,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/tactics-ability "Grab")))))
+         :ability (data/ability<-name "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -291,7 +291,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/tactics-ability "Bite")))))))
+         :ability (data/ability<-name "Bite")))))))
 
 (func deck-nightonthetown : base/deck
  (let : base/deck
@@ -304,9 +304,9 @@
     (base/cardlist
      professor
      professori
-     (data/tactics-ability "Grab")
-     (data/tactics-ability "Bite")
-     (data/tactics-ability "Detail Oriented")
+     (data/ability<-name "Grab")
+     (data/ability<-name "Bite")
+     (data/ability<-name "Detail Oriented")
      (item-monocle)
      (data/tactics-item "Shortbow")
      (unit-zombiedog)

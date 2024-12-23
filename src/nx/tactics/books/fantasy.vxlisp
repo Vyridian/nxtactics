@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "Fantasy"
   :image "DaveDormanEasternTerritories.jpg"
@@ -1752,7 +1753,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             "Deep Roads"
              (place
               :name "Deep Roads"
-              :summary "* A fantastic labyrinth of inter-connected, underground tunnels deep within the earth. The tunnels were mostly created by volcanic activity and underground rivers ages ago. They are so extensive that many civilizations live within the Deep Roads."
+              :summary
+               "* A fantastic labyrinth of inter-connected, underground tunnels deep within the earth. The tunnels were mostly created by volcanic activity and underground rivers ages ago. Since then Dholes, Kobolds, and Dwarves have extended and refined the tunnels. They are so extensive that many civilizations live within the Deep Roads."
               :titles "Dark Roads, Underdark, Underlands")))
         :Zura
          (section

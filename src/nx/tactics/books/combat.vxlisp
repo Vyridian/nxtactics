@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "Combat"
   :image "Warrior.jpg"
@@ -2625,6 +2626,8 @@ x +1DMG vs. Crouching."
          (skill
           :name "Firearms"
           :titles "Crackshot, Marksman, Rifleman, Sharpshooter, Sniper"
+          :reference
+           "Captain's orders: Bullet to the face. - Crackshot Corsair, Runeterra"
           :abilitymap
            (abilitymap
             :Anti-Personnel

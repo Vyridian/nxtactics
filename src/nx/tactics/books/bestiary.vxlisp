@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "Bestiary"
   :image "FloraAndFauna.jpg"
@@ -703,6 +704,9 @@
       :name "Fantastic Mammals"
       :unitmap
        (unitmap
+        "Bat, Giant"
+         (unit
+          :name "Bat, Giant")
         "Bat, Huge"
          (unit
           :name "Bat, Huge")
@@ -2630,9 +2634,9 @@
      (section
       :name "Tritons"
       :reference "Little Mermaid"
+      :titles "Melusine, Mermaid, Merman"
       :summary
        "* The Tritons are group of aquatic species distantly related to man. They are adapted to life underwater, but are still able to breathe air for a few minutes. They have innumerable sub species with drastically different appearances, some human-like, some fish-like, some with tentacles."
-      :titles "Melusine, Mermaid, Merman"
       :unitmap
        (unitmap
         "Merrow Hydromancer"
@@ -2648,7 +2652,7 @@
            "* The Merrow have sloping shoulders, scaly yellow-green skin and dark deep-set eyes. Their hands and feet are webbed, and their powerful jaws are lined with a double row of sharp teeth. Having both gills and rudimentary lungs, the amphibians are capable of living on land or sea though the land tires them. They are powerful swimmers but are somewhat slow and awkward on land.
             * Slavers by trade, they prey upon the primitive tribes which dwell along the coasts and islands. Their weapons are mostly designed to capture instead of kill. They also traffic in narcotic herbs, exotic beasts and all manner of contraband.
             * Merrow tradition states that long ago, a merrow hunting party discovered a great forgotten city in a deep trench. The discovery brought madness and destruction to the merrow city. The survivors of those nights moved from their city, abandoned their gods, and faithfully serve the Old Ones that dwell in that forgotten city of madnesss. Their descendants are known as the Deep Ones. They are primitive, blasphemous, deformed fish creatures and are known to kidnap both Merrow and Humans for slaves and breeding."
-          :titles "Deep One, Deeper, Imrian, Sahagin")
+          :titles "Deep One, Deeper, Imrian, Sahagin, Slithery Dee")
         "Merrow Slaver"
          (unit
           :name "Merrow Slaver")
@@ -2784,7 +2788,8 @@
            "* Colossus of Rhodes
             * Colossus of Sardia
             * Pygmalion
-            * Talos"
+            * Talos
+            * Exodia, Obliterate! - Yugi, Yu-Gi-Oh!"
           :titles "Animated Statue, Stone Golem"
           :height "30m")))
     :Machina
@@ -4245,13 +4250,16 @@
     :Trogladytes
      (section
       :name "Trogladytes"
+      :titles "Crawlers, Morlocks"
       :reference
        "* In choosing the name 'Morlocks', Wells may have been inspired by Moloch, the Caananite god of child sacrifice, with the Eloi analogous to children. Alternatively, he may have also been inspired by the Morlachs, an ethnic group in the Balkans which attracted attention from Western travellers as a perceived archetype of barbarism and backwardness... The Time Traveller speculates that the relationship developed from a class distinction present in his own time: the Morlocks are the working class who were relegated to working and living underground so that the rich upper class could live in luxury on the surface. - H.G. Wells, The Time Machine
-        * The Descent"
+        * The Descent
+        * Neaderthals"
       :summary
-       "* Description - Trogladytes have dull grey-to-white skin, chinless faces, large greyish-red eyes that reflect light, reflecting light, and flaxen hair on the head and back. They are highly adapted to living in the dark with keen sense of hearing and smell but poor eyesight, and they cannot tolerate bright light. They are exceedingly primitive, but they are cunning and have learning to cultivate mushrooms, grubs and fishing pools. They do not bathe and their dens are notorious for their stench. Trogladytes recognize each other by smell.
-        * History - Trogladytes are an offshoot of mankind that lived in large cavern systems but were cut off from the surface. Since then they have adapted to underground life. Sparse living has made them merciless and cannibalistic."
-      :titles "Crawlers, Morlocks")
+       "* Description - Trogladytes have dull grey-to-white skin, chinless faces, large greyish-red eyes that reflect light, and flaxen hair on the head and back. Their bodies are muscular with short limbs which increases their strength but inhibits their speed. Their bodies are typically scarred from brutal infighting and are often missing limbs or eyes. They do not have any concept of hygiene and their dens are notorious for their stench.
+        * Abilities - They are highly adapted to living in the dark with keen sense of hearing and smell but poor eyesight, and they cannot tolerate bright light. They are exceedingly primitive, but they are cunning and have learning to cultivate mushrooms, grubs and fishing pools. Trogladytes recognize each other by smell.
+        * History - Trogladytes are an offshoot of mankind that lived in large cavern systems but were cut off from the surface. Since then they have adapted to underground life. Sparse living has made them merciless and cannibalistic.
+        * Society - Pure survival of the fittest: Anything that can't defend itself is food.")
     :Uruks
      (section
       :name "Uruks"
@@ -4697,6 +4705,9 @@ to ever-greater acts of violence and revenge.")
         :Werebear
          (unit
           :name "Werebear")
+        :Wereboar
+         (unit
+          :name "Wereboar")
         :Werecat
          (unit
           :name "Werecat"
@@ -4888,29 +4899,33 @@ to ever-greater acts of violence and revenge.")
          (unit
           :name "Ghoul"
           :summary
-           "* Description - A ghoul is a reanimated corpse that perpetuates its undead existence by feeding on the living and the dead. They reek of charnel pits and they have shrivelled nightmarish features. Though frail and unhealthy looking, they possess fearsome strength. The teeth and claws also carry [Corpse Rot], an infection that slowly kills the victim if the Ghoul doesn't first. Victims of Ghouls often raise as Ghouls themselves if they are not cured or their corpse is not blessed or destroyed.
+           "* Description - A ghoul is a reanimated corpse that perpetuates its undead existence by feeding on the the dead. They reek of charnel pits and they have shrivelled nightmarish features. Though frail and unhealthy looking, they possess fearsome strength. The teeth and claws also carry [Corpse Rot], an infection that slowly kills the victim if the Ghoul doesn't first. Victims of Ghouls often raise as Ghouls themselves if they are not cured or their corpse is not blessed or destroyed.
+            * Personality - When well fed, Ghouls can communicate and can be surprisingly friendly though their intelligence is low and their interests are narrow (i.e. searching for corpses).
             * Japanese Gaki appear as gaunt-faced monsters with enormous, frog-like mouths and grossly distended bellies.
             * Morale - High
             * Units - Mob"
           :titles "Gaki, Hungry Dead, Necrophage"
           :unitpowermap
-           (unitpowermap
-            "Natural Weaponry"
-             (unitpower
-              :name "Natural Weaponry"
-              :level "3")
-            "Special Ability"
-             (unitpower
-              :name "Special Ability"
-              :level "2"
-              :unitabilitymap
-               (unitabilitymap
-                :Cannibal
-                 (unitability
-                  :name "Cannibal")
-                :Savage
-                 (unitability
-                  :name "Savage")))))
+           (base/unitpowermap<-unitpowerlist
+            (unitpower
+             :name "Natural Weaponry"
+             :level "3")
+            (unitpower
+             :name "Digging"
+             :level "3"
+             :unitabilitymap
+              (base/unitabilitymap<-unitabilitylist
+               (unitability
+                :name "Tunneling")))
+            (unitpower
+             :name "Special Ability"
+             :level "2"
+             :unitabilitymap
+              (unitabilitymap<-unitabilitylist
+               (unitability
+                :name "Cannibal")
+               (unitability
+                :name "Savage")))))
         :Lich
          (unit
           :name "Lich"
@@ -5394,7 +5409,7 @@ to ever-greater acts of violence and revenge.")
               :reference "The Tzimisce take pleasure in shaping themselves into a variety of inhuman forms.  Distended skulls, elongated fingers, polychromatic mottling are often displayed to demonstrate their alien superiority."
               :summary
                "* The Tzimisce's extensive use of Fleshcraft upon themselves, their servants, and their foes, have made them the most bizarre and alien of the Vampire clans. Fortunately, they are solitary by nature preferring isolated locale to practice their horrid techniques on their hapless prey.
-* Examples: Backroom Surgeon, Carny Folk, Dracula, Inquisitor, Kali, Mortician, Nazi Scientist, Tatoo Artist, Toturer, Vivisectionist"
+                * Examples: Backroom Surgeon, Carny Folk, Dracula, Inquisitor, Kali, Mortician, Nazi Scientist, Tatoo Artist, Toturer, Vivisectionist"
               :titles "Monster, Alien"
               :unitpowermap
                (unitpowermap

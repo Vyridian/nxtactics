@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "Modern Fantasy"
   :image "Vampire_Slayer_by_Prasa.jpg"

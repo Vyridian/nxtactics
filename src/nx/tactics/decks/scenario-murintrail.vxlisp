@@ -394,7 +394,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-ability "Ambush")))))))
+        :ability (data/ability<-name "Ambush")))))))
 
 (func unit-bruiser : base/unit
  (base/unit
@@ -424,7 +424,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-ability "Grab"))))
+        :ability (data/ability<-name "Grab"))))
     (base/unitskill
      :skill (data/tactics-skill "Intimidation")
      :level "1"))))
@@ -462,7 +462,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-ability "Sneak")))))))
+        :ability (data/ability<-name "Sneak")))))))
 
 (func unit-flint : base/unit
  (base/unit
@@ -496,7 +496,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-ability "Sneak")))))))
+        :ability (data/ability<-name "Sneak")))))))
 
 (func unit-guardsman : base/unit
  (base/unit
@@ -588,7 +588,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-ability "Blacksmithing")))))))
+        :ability (data/ability<-name "Blacksmithing")))))))
 
 (func unit-jonaveer : base/unit
  (base/unit
@@ -627,7 +627,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-ability "Bargain")))))))
+        :ability (data/ability<-name "Bargain")))))))
 
 (func unit-liliducon : base/unit
  (base/unit
@@ -682,11 +682,11 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/tactics-ability "Bite"))
+         :ability (data/ability<-name "Bite"))
         (base/unitability
-         :ability (data/tactics-ability "Grab"))
+         :ability (data/ability<-name "Grab"))
         (base/unitability
-         :ability (data/tactics-ability "Drag")))))
+         :ability (data/ability<-name "Drag")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -729,7 +729,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-ability "Trapping")))))))
+        :ability (data/ability<-name "Trapping")))))))
 
 (func unit-woodencart : base/unit
  (base/unit
@@ -776,10 +776,10 @@
       (data/tactics-skill   "Close Combat")
       (data/tactics-skill   "Melee")
       (data/tactics-skill   "Stealth")
-      (data/tactics-ability "Ambush")
-      (data/tactics-ability "Sneak")
+      (data/ability<-name "Ambush")
+      (data/ability<-name "Sneak")
       (data/tactics-skill   "Business")
-      (data/tactics-ability "Bargain")
+      (data/ability<-name "Bargain")
       (data/tactics-skill   "Tradeskills")
       (item-coppercoins)
       (item-silvercoins)

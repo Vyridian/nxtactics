@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "Advanced Rules"
   :image "AdvancedRules.jpg"
@@ -27,9 +28,9 @@
       :name "Advanced Rules Strategies"
       :summary
        "* Strike First - Units are immediately penalized for damage taken, so do unto others before they do unto you.
-* Maintain a Threat - The battlefield changes with each unit's move, so use pawns to control the map while saving powerful and valuable units until later in the Round.  If you are not careful your opponent will surround and eliminate your units that have already acted.
-* Hold the Line - Opportunity and Hold Off abilities are deadly and allow you to protect weaker units.
-* Use the Terrain - Cover and abilities linked to cover offer an outstanding defense that layers with normal defense. The difference is most pronounced with lesser units. Effective use of terrain will determine the victor in most battles."))))
+        * Maintain a Threat - The battlefield changes with each unit's move, so use pawns to control the map while saving powerful and valuable units until later in the Round.  If you are not careful your opponent will surround and eliminate your units that have already acted.
+        * Hold the Line - Opportunity and Hold Off abilities are deadly and allow you to protect weaker units.
+        * Use the Terrain - Cover and abilities linked to cover offer an outstanding defense that layers with normal defense. The difference is most pronounced with lesser units. Effective use of terrain will determine the victor in most battles."))))
 
 (func chapter_advanced_tokens : base/chapter
  (chapter
@@ -41,7 +42,7 @@
       :name "Advanced White Tokens"
       :summary
        "White tokens represent temporary conditions that will pass quickly.
-* [Activate]: Remove one White token."
+        * [Activate]: Remove one White token."
       :rulemap
        (rulemap
         :Faith
@@ -110,7 +111,7 @@
           :name "Acid"
           :summary
            "* May use a [Move] to remove an Acid Token.
-* [End of Turn] - Roll Acid Tokens.  Hits do Damage.  Remove an Acid Token.")))
+            * [End of Turn] - Roll Acid Tokens.  Hits do Damage.  Remove an Acid Token.")))
     "Green Tokens"
      (section
       :name "Green Tokens"
@@ -812,26 +813,26 @@ not left handed...There's something I ought to tell you...I am not left handed e
       :summary
        "Carrier Command is a set of rules for use with units that hold other units in a [Hanger].
 
-Common Actions
-* Enter or Exit Hanger - Move and Action (Unit): Place a unit from the [Hanger] on the [Flight Deck] OR from the [Flight Deck] to the [Hanger].
-Only 1 unit may be on the [Flight Deck] at any given moment and may be targetted normally there.
-* Launch or Land - Move and Action (Unit): Move a unit onto or off of the [Flight Deck].  If the carrier has a [Launch Catapult], a launching
-unit gains +2 movement.
-* Dive Bomb - Action: -4 Altitude and drop bombs attacking the top of the target creating [Fire] and damaging weapons, crew, and [Flight Deck].
-Normally only the target and opposing aircraft can [Interrupt] before the bombs are dropped.  Can only be performed from exactly +5 Altitude
-and with no [White Tokens].
-* Torpedo Bomb - Action: Drop torpedo attacking a side of the target below the water line creating [Flooding] and damaging [Speed].  Can only be
-performed from exactly +1 Altitude and with no [White Tokens].
-* Landing - Move and Action (Unit): Move a unit and place it on the [Flight Deck].  Only 1 unit may be on the [Flight Deck] at any given moment
-and may be targetted normally there.
-* Refuel or Reload - Move and Action (Unit): Any unit on the [Flight Deck] or in the [Hanger] may refuel OR reload weapons (changing weapons if
-desired).")
+       Common Actions
+       * Enter or Exit Hanger - Move and Action (Unit): Place a unit from the [Hanger] on the [Flight Deck] OR from the [Flight Deck] to the [Hanger].
+       Only 1 unit may be on the [Flight Deck] at any given moment and may be targetted normally there.
+       * Launch or Land - Move and Action (Unit): Move a unit onto or off of the [Flight Deck].  If the carrier has a [Launch Catapult], a launching
+       unit gains +2 movement.
+       * Dive Bomb - Action: -4 Altitude and drop bombs attacking the top of the target creating [Fire] and damaging weapons, crew, and [Flight Deck].
+       Normally only the target and opposing aircraft can [Interrupt] before the bombs are dropped.  Can only be performed from exactly +5 Altitude
+       and with no [White Tokens].
+       * Torpedo Bomb - Action: Drop torpedo attacking a side of the target below the water line creating [Flooding] and damaging [Speed].  Can only be
+       performed from exactly +1 Altitude and with no [White Tokens].
+       * Landing - Move and Action (Unit): Move a unit and place it on the [Flight Deck].  Only 1 unit may be on the [Flight Deck] at any given moment
+       and may be targetted normally there.
+       * Refuel or Reload - Move and Action (Unit): Any unit on the [Flight Deck] or in the [Hanger] may refuel OR reload weapons (changing weapons if
+       desired).")
     :RTS/4X
      (section
       :name "RTS/4X"
       :summary
        "4X:
-* eXplore
-* eXpand
-* eXploit
-* eXterminate"))))
+        * eXplore
+        * eXpand
+        * eXploit
+        * eXterminate"))))

@@ -2,6 +2,7 @@
  :libs (lib base :path nx/tactics/base))
 
 (func tacticsbook : base/book
+ [tactics : base/tactics]
  (base/book
   :name "Magic"
   :image "Magick.jpg"
@@ -590,8 +591,8 @@ the duration of this effect.")
           :name "Thaumaturgy"
           :summary
            "* The interface between Magic and Science. Mathematics, Biology, Geology and Chemistry are studied to manifest amazing creations.
-* Thaumaturgy can create permanent artificial life.
-* Thaumaturgy favors crytals and gemstones for power supplies."
+            * Thaumaturgy can create permanent artificial life.
+            * Thaumaturgy favors crytals and gemstones for power supplies."
           :titles "The Art Mathematical, Wonder Working"
           :abilitymap
            (abilitymap

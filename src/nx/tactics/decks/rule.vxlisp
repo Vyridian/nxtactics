@@ -34,15 +34,15 @@
     * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
     * Discard all card used (except Keep)"))
 
-(func card-move-action : base/card
+(func card-move : base/card
  (base/card
   :id "move-action"
   :name "Move"
   :summary
-   "* [Action]: Move straight up to your [Move] stat.
-    * Double Move (2 Actions): Move straight your [Move]x2.
-    * Sprint (2 Actions): If you took a Double Move or Sprint last turn, you may [Move]x3 straight this turn.
-    * Leftover Move: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Move left, you may take note of it and carry it over to subsequent turns.
+   "* [Action]: Move straight up to your [Speed] stat.
+    * Double Move (2 Actions): Move straight your [Speed]x2.
+    * Sprint (2 Actions): If you took a Double Move or Sprint last turn, you may move [Speed]x3 straight this turn.
+    * Leftover Speed: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Speed left, you may take note of it and carry it over to subsequent turns.
     * Change Facing: During your Move Action, you may Turn or Drift up to 2 times.
     * Turn: Turn your unit's facing 45 degrees to the left or right.
     * Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing."))
@@ -295,12 +295,12 @@
     * Turn Length: 1sec
     * Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m)."))
 
-(func card-move : base/card
+(func card-speed : base/card
  (base/card
-  :id "card-move"
-  :name "Move"
+  :id "card-speed"
+  :name "Speed"
   :summary
-   "* Special*: Each Move penalty is -25% rounded up. Simplified using the following chart starting from the original Move stat:
+   "* Special*: Each Speed penalty is -25% rounded up. Simplified using the following chart starting from the original Speed stat:
     10-8-5-3-0
     9-7-5-3-0
     8-6-4-2-0
@@ -395,7 +395,7 @@
    "* Scaled refers to the comparison between the Scale of a stat/ability/map to another.
     * If the scales are the same, no change is required.
     * If the scales are different, multiple or divide the Level by 10 for each difference in scale.
-    * E.g. On an x1 map a Move:3x2 would move 30 spaces instead of 3."))
+    * E.g. On an x1 map a Speed:3x2 would move 30 spaces instead of 3."))
 
 (func card-setupguide : base/card
  (base/card
@@ -471,7 +471,7 @@
      (card-round)
      (card-turn)
      (card-action)
-     (card-move-action)
+     (card-move)
      (card-fight-action)
      (card-sklll-action)
      (card-recover-action)
@@ -491,7 +491,7 @@
      (card-body)
      (card-mind)
      (card-will)
-     (card-move)
+     (card-speed)
      (card-beast)
      (card-shadow)
      (card-conscience)
