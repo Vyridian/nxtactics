@@ -19,7 +19,6 @@
 .gradle
 
 # Ignore build output directory
-build
 deps
 gradle
 
