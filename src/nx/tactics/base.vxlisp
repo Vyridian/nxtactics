@@ -213,6 +213,9 @@
  :properties [teammap : teammap]
  :traits     [card])
 
+(type scenariolist : list
+ :allowtypes [scenario])
+
 (type scenariomap : map
  :allowtypes [scenario])
 
@@ -1210,6 +1213,15 @@
    (:name power)))
  :doc "Returns a powermap from a given powerlist")
 
+(func scenariomap<-scenariolist : scenariomap
+ [scenariolist : scenariolist :...]
+ (map<-list : scenariomap
+  scenariolist
+  (fn : scenario
+   [scenario : scenario]
+   (:name scenario)))
+ :doc "Returns a scenariomap from a given scenariolist")
+
 (func sectionlist<-chapter : sectionlist
  [chapter : chapter]
  (let : sectionlist
@@ -1385,7 +1397,7 @@
  :doc "Returns a shallow sectionlistlist from a given sectionlist")
 
 (func sectionmap<-sectionlist : sectionmap
- [sectionlist : sectionlist]
+ [sectionlist : sectionlist :...]
  (map<-list : sectionmap
   sectionlist
   (fn : section

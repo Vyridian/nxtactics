@@ -1,0 +1,20 @@
+(package nx/tactics/decks/item
+ :libs (lib base :path nx/tactics/base)
+ :doc "Items")
+
+(func itemmap-tactics : base/itemmap
+ [tactics : base/tactics]
+ (base/itemmap<-itemlist
+  (item
+   :name "item1")
+  )
+ :doc "Returns the base itemmap")
+
+(func tactics-itemmap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [itemmap : base/itemmap :=
+   (itemmap-tactics tactics)]
+  (copy tactics
+   :itemmap itemmap))
+ :doc "Returns a tactics updated with itemmap")

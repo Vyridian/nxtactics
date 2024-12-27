@@ -2,6 +2,10 @@
  :libs (lib coll             :path vx/collection)
        (lib base             :path nx/tactics/base)
        (lib ability          :path nx/tactics/decks/ability)
+       (lib item             :path nx/tactics/decks/item)
+       (lib place            :path nx/tactics/decks/place)
+       (lib scenario         :path nx/tactics/decks/scenario)
+       (lib skill            :path nx/tactics/decks/skill)
        (lib unit             :path nx/tactics/decks/unit)
        (lib advanced_rules   :path nx/tactics/books/advanced_rules)
        (lib age_of_sail      :path nx/tactics/books/age_of_sail)
@@ -113,10 +117,16 @@
   [tacticsbasic : base/tactics := (empty base/tactics)
    tacticsabilities : base/tactics :=
     (ability/tactics-abilitymap<-tactics tacticsbasic)
+   tacticsskills : base/tactics :=
+    (skill/tactics-skillmap<-tactics tacticsabilities)
    tacticsunits : base/tactics :=
-    (unit/tactics-unitmap<-tactics tacticsabilities)
+    (unit/tactics-unitmap<-tactics tacticsskills)
+   tacticsplaces : base/tactics :=
+    (place/tactics-placemap<-tactics tacticsunits)
+   tacticsscenarios : base/tactics :=
+    (scenario/tactics-scenariomap<-tactics tacticsplaces)
    tacticsall : base/tactics := 
-    (tactics-booklist<-tactics tacticsunits)]
+    (tactics-booklist<-tactics tacticsscenarios)]
   tacticsall)
  :doc "Returns a fully loaded tactics")
 

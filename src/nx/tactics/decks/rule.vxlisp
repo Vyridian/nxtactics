@@ -82,8 +82,7 @@
   :id "card-advantage"
   :name "Advantage"
   :summary
-   "* When performing a Skill/Fight test
-    * Then reveal Fate. You may use the Fate card instead of your card."))
+   "* [Reveal Fate]: Reveal another Fate. You may use this Fate card instead."))
 
 (func card-areaeffect : base/card
  (base/card
@@ -197,8 +196,7 @@
   :id "card-disadvantage"
   :name "Disadvantage"
   :summary
-   "* When performing a Skill/Combat test
-    * Then reveal Fate. If it has a worse result than your card, you must use the Fate card instead."))
+   "* [Reveal Fate]: Reveal another Fate. IF it is worse THEN use it instead."))
 
 (func card-exposed : base/card
  (base/card

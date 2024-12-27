@@ -1,0 +1,20 @@
+(package nx/tactics/decks/place
+ :libs (lib base :path nx/tactics/base)
+ :doc "places")
+
+(func placemap-tactics : base/placemap
+ [tactics : base/tactics]
+ (base/placemap<-placelist
+  (place
+   :name "place1")
+  )
+ :doc "Returns the base placemap")
+
+(func tactics-placemap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [placemap : base/placemap :=
+   (placemap-tactics tactics)]
+  (copy tactics
+   :placemap placemap))
+ :doc "Returns a tactics updated with placemap")

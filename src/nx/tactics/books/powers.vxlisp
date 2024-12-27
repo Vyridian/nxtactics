@@ -2670,10 +2670,19 @@
               :name "Resist Exposure")
             "Resist Fire"
              (ability
-              :name "Resist Fire")
+              :name "Resist Fire"
+              :summary
+               "[Reduce Damage]: Reduce [Weapon Damage] by [Intensity].
+                Note: Not the same as Resist Heat")
             "Resist Gravity"
              (ability
               :name "Resist Gravity")
+            "Resist Heat"
+             (ability
+              :name "Resist Heat"
+              :summary
+               "[Reduce Damage]: Reduce [Weapon Damage] by [Intensity].
+                Note: Not the same as Resist Fire")
             "Resist Hunger"
              (ability
               :name "Resist Hunger")

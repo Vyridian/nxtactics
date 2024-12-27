@@ -1,0 +1,20 @@
+(package nx/tactics/decks/skill
+ :libs (lib base :path nx/tactics/base)
+ :doc "Skills")
+
+(func skillmap-tactics : base/skillmap
+ [tactics : base/tactics]
+ (base/skillmap<-skilllist
+  (skill
+   :name "Skill1")
+  )
+ :doc "Returns the base skillmap")
+
+(func tactics-skillmap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [skillmap : base/skillmap :=
+   (skillmap-tactics tactics)]
+  (copy tactics
+   :skillmap skillmap))
+ :doc "Returns a tactics updated with skillmap")
