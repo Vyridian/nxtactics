@@ -281,8 +281,8 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :image "Daikaiju/Getter_1.png"
           :summary
            "* Swimming: 18knots
-* Flight: Mach 2"
-          :speed "420kph"
+            * Flight: Mach 2"
+          :speedland "420kph"
           :mass "220tons"
           :height "38m"
           :unitskillmap
@@ -300,9 +300,9 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :image "Daikaiju/Getter_2.png"
           :summary
            "* Swimming: 18knots
-* Ground Speed: Mach 3!
-* Tunnelling: 300kph"
-          :speed "420kph"
+            * Ground Speed: Mach 3!
+            * Tunnelling: 300kph"
+          :speedland "420kph"
           :mass "220tons"
           :height "38m"
           :unitskillmap
@@ -320,8 +320,8 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :image "Daikaiju/Getter_3.png"
           :summary
            "* Swimming: 28knots
-* Flight: Mach 3"
-          :speed "150kph"
+            * Flight: Mach 3"
+          :speedland "150kph"
           :mass "220tons"
           :height "20m"
           :unitskillmap
@@ -387,11 +387,11 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :image "Daikaiju/GreatMazinger.png"
           :summary
            "* Swimming: 25knots
-* Flight: Mach 4 (Mach 5 w/Great Booster)
-* Ceiling: 50km
-* Jump: 30m
-* Dive Depth: 8km"
-          :speed "450kph"
+            * Flight: Mach 4 (Mach 5 w/Great Booster)
+            * Ceiling: 50km
+            * Jump: 30m
+            * Dive Depth: 8km"
+          :speedland "450kph"
           :mass "32tons"
           :height "25m"
           :unitskillmap
@@ -418,8 +418,8 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :image "Daikaiju/MazingerZ.png"
           :summary
            "* Swimming: 20knots
-* Flight: Mach 3 w/Jet Scrander"
-          :speed "360kph"
+            * Flight: Mach 3 w/Jet Scrander"
+          :speedland "360kph"
           :mass "20tons"
           :height "18m"
           :unitskillmap

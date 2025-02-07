@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="2.0686841"
-     inkscape:cx="113.84048"
-     inkscape:cy="103.6891"
+     inkscape:cx="113.59878"
+     inkscape:cy="103.9308"
      inkscape:window-width="1350"
      inkscape:window-height="1017"
      inkscape:window-x="228"
@@ -77,7 +77,7 @@
          style="fill:none;stroke:#e5e5e5;stroke-width:4.92837673;stroke-dasharray:none;stroke-opacity:1"
          d="m 533.60019,-959.52569 c -5.75297,-0.2602 -11.72601,-0.5365 -17.46285,0.043 -39.33443,4.759 -75.38967,19.7494 -100.33049,51.8058 -30.61817,39.3506 -33.90227,114.4049 -27.80247,162.8213 -3.65391,3.6431 -4.81075,1.7541 -8.37526,3.7991 -5.46057,3.1311 -7.59004,11.7097 -7.61978,17.4845 -0.0624,12.1589 3.11299,23.6557 5.41802,35.487 4.01958,20.64226 6.71815,48.58834 23.0104,63.65632 2.57048,2.37547 5.72967,4.21712 8.89333,5.67704 1.99608,12.24604 5.87191,117.59058 2.54713,125.24055 h 226.56402 l 2.61185,-80.83864 c 0.22223,-12.1427 -2.20971,-33.29946 1.98596,-44.35872 l 1.59731,-1.40308 c 19.2717,-17.21592 23.10962,-39.03466 28.21258,-63.07357 2.49734,-11.7581 5.435,-23.825 5.91452,-35.8539 0.27892,-6.9341 0.73808,-13.5083 -3.17307,-19.5783 -3.03643,-2.2671 -6.22841,-4.4144 -8.82868,-7.188 3.07979,-54.9605 4.17426,-123.9453 -34.51559,-167.5918 -24.55353,-27.6983 -61.87205,-44.4765 -98.64693,-46.1288 z" /></g><g
        id="move"
-       transform="matrix(0.04824098,0,0,0.05181757,-2.1866319,-11.7401)"
+       transform="matrix(0.04824098,0,0,0.05181757,-7.9421022,-11.484301)"
        inkscape:label="move"><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:148.144px;font-family:Amiri;-inkscape-font-specification:'Amiri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.269288;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
@@ -85,9 +85,9 @@
          y="778.5697"
          id="text1-9"><tspan
            sodipodi:role="line"
-           id="tspan1-8"
+           id="tspan1"
            x="513.04822"
-           y="778.5697">Move: -1*</tspan></text><path
+           y="778.5697">Speed:-1*</tspan></text><path
          fill="#fefefe"
          d="m 423.87315,743.60565 0.21512,0.052 c 1.71719,3.76403 3.49119,3.70519 5.98388,7.35145 -7.82361,-0.10797 -11.69949,-1.08864 -18.76246,-4.29382 -1.34963,-0.0879 -4.75661,-3.11408 -5.45151,-3.66689 -1.44497,-1.14935 -2.73119,-2.33754 -3.98746,-3.59097 2.82341,0.88799 5.73821,1.52855 8.60636,2.10838 4.47579,0.90536 8.94267,1.61647 13.39636,2.03887 z"
          id="path2-5"

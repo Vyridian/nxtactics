@@ -541,16 +541,16 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_unit_minddetail = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-unit-minddetail', type: vx_ui_ui.t_style}}
 
   /**
-   * Constant: style-unit-move
+   * Constant: style-unit-speed
    * {style}
    */
-  static c_style_unit_move = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-unit-move', type: vx_ui_ui.t_style}}
+  static c_style_unit_speed = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-unit-speed', type: vx_ui_ui.t_style}}
 
   /**
-   * Constant: style-unit-movedetail
+   * Constant: style-unit-speeddetail
    * {style}
    */
-  static c_style_unit_movedetail = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-unit-movedetail', type: vx_ui_ui.t_style}}
+  static c_style_unit_speeddetail = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-unit-speeddetail', type: vx_ui_ui.t_style}}
 
   /**
    * Constant: style-unit-titles
@@ -672,8 +672,8 @@ export default class nx_tactics_ui_stylesheet {
       "style-unit-image": nx_tactics_ui_stylesheet.c_style_unit_image,
       "style-unit-mind": nx_tactics_ui_stylesheet.c_style_unit_mind,
       "style-unit-minddetail": nx_tactics_ui_stylesheet.c_style_unit_minddetail,
-      "style-unit-move": nx_tactics_ui_stylesheet.c_style_unit_move,
-      "style-unit-movedetail": nx_tactics_ui_stylesheet.c_style_unit_movedetail,
+      "style-unit-speed": nx_tactics_ui_stylesheet.c_style_unit_speed,
+      "style-unit-speeddetail": nx_tactics_ui_stylesheet.c_style_unit_speeddetail,
       "style-unit-titles": nx_tactics_ui_stylesheet.c_style_unit_titles,
       "style-unit-value": nx_tactics_ui_stylesheet.c_style_unit_value,
       "style-unit-will": nx_tactics_ui_stylesheet.c_style_unit_will,
@@ -1927,11 +1927,11 @@ export default class nx_tactics_ui_stylesheet {
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 29, ":y", 5)
     ))
 
-    // (const style-unit-move)
-    Object.assign(nx_tactics_ui_stylesheet.c_style_unit_move, vx_core.f_new(
+    // (const style-unit-speed)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_unit_speed, vx_core.f_new(
       {"any-1": vx_ui_ui.t_style},
       ":name",
-      "style-unit-move",
+      "style-unit-speed",
       ":layout",
       vx_ui_ui.c_layout_label,
       ":align",
@@ -1942,11 +1942,11 @@ export default class nx_tactics_ui_stylesheet {
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 13, ":y", 6)
     ))
 
-    // (const style-unit-movedetail)
-    Object.assign(nx_tactics_ui_stylesheet.c_style_unit_movedetail, vx_core.f_new(
+    // (const style-unit-speeddetail)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_unit_speeddetail, vx_core.f_new(
       {"any-1": vx_ui_ui.t_style},
       ":name",
-      "style-unit-movedetail",
+      "style-unit-speeddetail",
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",

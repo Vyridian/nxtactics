@@ -150,7 +150,7 @@ export default class nx_tactics_books_ancients {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "Carthaginian Elephant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Carthaginian Elephant", ":speed", "40kph", ":mass", "10tons")
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Carthaginian Elephant", ":speedland", "40kph", ":mass", "10tons")
           )
         ),
         "Carhaginian Naval Vessels",

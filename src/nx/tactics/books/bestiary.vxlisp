@@ -529,12 +529,12 @@
         "African Elephant"
          (unit
           :name "African Elephant"
-          :speed "40kph"
+          :speedland "40kph"
           :mass "10tons")
         "Asian Elephant"
          (unit
           :name "Asian Elephant"
-          :speed "40kph"
+          :speedland "40kph"
           :mass "5tons")
         "Rogue Elephant"
          (unit
@@ -559,7 +559,7 @@
             * Gallop 22mph / 35kph (10km+)
             * Gallop 25mph / 40kph (1km burst)
             * These speeds are consistent with a horse. In terms of war, camels are probably superior given their better stamina and load capacity."
-          :speed "35kph")
+           :speedland "35kph")
         :Cattle
          (unit
           :name "Cattle")
@@ -589,7 +589,7 @@
             * Gallop 25mph / 40kph (1km burst)
             * The U.S. Calvary in 1941 recommended that the collective weight of rider and gear not exceed 20% of the total weight of the horse."
           :titles "Charger, Courser, Draft, Maverick, Pony, Stallion, War Horse"
-          :speed "32kph"
+          :speedland "32kph"
           :mass "600kg")))
     :Marsupials
      (section

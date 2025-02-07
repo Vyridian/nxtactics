@@ -25,14 +25,14 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.7454522"
-     inkscape:cx="39.244844"
+     inkscape:cx="38.958386"
      inkscape:cy="28.645872"
-     inkscape:window-width="1350"
-     inkscape:window-height="1008"
+     inkscape:window-width="2140"
+     inkscape:window-height="1297"
      inkscape:window-x="130"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="move" />
   <defs
      id="defs1">
     <radialGradient
@@ -72,11 +72,10 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51525px;font-family:Amiri;-inkscape-font-specification:'Amiri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0173914;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
          x="8.4406309"
          y="7.7900329"
-         id="text1-96"><tspan
+         id="text1-96"
+         inkscape:label="text1-96"><tspan
            sodipodi:role="line"
-           id="tspan1-8"
-           x="8.4406309"
-           y="7.7900329">Move</tspan></text>
+           id="tspan2">Speed</tspan></text>
       <path
          fill="#fefefe"
          d="m 2.6887754,5.1530799 0.012867,0.00311 C 2.8043794,5.3813888 2.9105149,5.3778684 3.0596493,5.5960186 2.5915739,5.5895617 2.3596868,5.5308866 1.9371198,5.3391259 1.8563764,5.333864 1.6525392,5.1528152 1.6109641,5.1197415 1.5245142,5.0509771 1.4475607,4.9798899 1.3724006,4.9048992 c 0.16892,0.053127 0.3433085,0.09145 0.5149049,0.1261412 0.2677798,0.054166 0.5350269,0.096711 0.8014838,0.1219824 z"

@@ -99,7 +99,7 @@
   [body           : string
    mind           : string
    will           : string
-   move           : string
+   speed          : string
    shadow         : string
    beast          : string
    armor          : string
@@ -116,7 +116,6 @@
    rof            : string
    rolemap        : rolemap
    rounds         : string
-   speed          : string
    speedair       : string
    speedland      : string
    speedspace     : string
@@ -324,7 +323,7 @@
   [body            : string
    mind            : string
    will            : string
-   move            : string
+   speed           : string
    shadow          : string
    conscience      : string
    beast           : string
@@ -339,7 +338,6 @@
    length          : string
    race            : string
    range           : string
-   speed           : string
    speedair        : string
    speedland       : string
    speedspace      : string

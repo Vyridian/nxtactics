@@ -1334,7 +1334,7 @@ export default class nx_tactics_decks_restraint {
     ))
 
     // (const slow)
-    Object.assign(nx_tactics_decks_restraint.c_slow, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "slow", ":name", "Restraint: Slow", ":titles", "Constraint/Burden", ":image", "images/card-restraint-slow.svg", ":summary", "* Slow: temporary movement penalty.\n* Restraint: [Constrict] [Bind] [Hold] [Lock]\n* If [Speed]:0 gain [Encumbered].\n* [Encumbered]: Cannot play odd [Evade] cards. [Move] actions are halved (rounded up). Second action may only be [Recover]. Additional [Slow] is flipped to Restraint.\n* Special*: Each Speed penalty is -25% rounded up. Simplified using the following chart:\n* Original Speed: 10-8-5-3-0 / 9-7-5-3-0 / 8-6-4-2-0 / 7-6-4-2-0 / 6-5-3-2-0 / 5-4-3-2-0 / 4-3-2-1-0 / 3-3-2-1-0 / 2-2-1-1-0 / 1-1-1-1-0"))
+    Object.assign(nx_tactics_decks_restraint.c_slow, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "slow", ":name", "Restraint: Slow", ":titles", "Constraint/Burden", ":image", "images/card-restraint-slow.svg", ":summary", "* Slow: temporary movement penalty.\n* Restraint: [Constrict] [Bind] [Hold] [Lock]\n* If [Speed]:0 gain [Encumbered].\n* [Encumbered]: Cannot play odd [Evade] cards. [Move] actions are halved (rounded up). Second action may only be [Recover]. Additional [Slow] is flipped to Restraint.\n* Special*: IF [Speed] over 5 THEN the penalty is Speed:-2."))
 
   }
 }

@@ -92,10 +92,10 @@
           :name "AH-1 Cobra"
           :image "Modern/American_Helicopter_Cobra.png"
           :summary
-           "2x 7.62mm Miniguns
-2x 7-round 70mm Rocket Pods
-20mm XM195 Vulcan Cannon"
-          :speed "350kph"
+           "* 2x 7.62mm Miniguns
+            * 2x 7-round 70mm Rocket Pods
+            * 20mm XM195 Vulcan Cannon"
+          :speedair "350kph"
           :classification "Lt. Aircraft"
           :crew "2"
           :mass "4tons"
@@ -111,9 +111,9 @@
           :name "UH-1 Iroquois (Huey)"
           :image "Modern/American_Helicopter_Huey.png"
           :summary
-           "2x 7.62mm M60 Machine Gun
-2x 7-round 70mm Rocket Pods"
-          :speed "200kph"
+           "* 2x 7.62mm M60 Machine Gun
+            * 2x 7-round 70mm Rocket Pods"
+          :speedair "200kph"
           :classification "Lt. Aircraft"
           :crew "1+14"
           :mass "4tons"
@@ -839,16 +839,15 @@ Hostage Rescue"))
          (unit
           :name "M1A2 Abrams Tank"
           :summary
-           "Turbine Engine: takes any fuel, typically Jet Fuel, starting the engine consumes nearly 11 gallons of fuel and it emits a jet blast behind it. Can survive multiple hits from the most powerful tank munitions including 120mm DU APFSDS and anti-tank missiles. Its own weapons are unable to penetrate front or side armor even at close range in friendly fire incidents.
-
-4 Gunnery
-120mm smoothbore: APFSDS, HEAT, Anti-Personnel
-.50 MG, 2 x 7.62mm MG
-Smoke Grenades, Smoke Screen
-Armor
-610mm Composite DU, 1500mm vs HEAT, 950mm vs APDS Front
-Missile Countermeasures"
-          :speed "72kph"
+           "* Turbine Engine: takes any fuel, typically Jet Fuel, starting the engine consumes nearly 11 gallons of fuel and it emits a jet blast behind it. Can survive multiple hits from the most powerful tank munitions including 120mm DU APFSDS and anti-tank missiles. Its own weapons are unable to penetrate front or side armor even at close range in friendly fire incidents.
+            * 4 Gunnery
+            * 120mm smoothbore: APFSDS, HEAT, Anti-Personnel
+            * .50 MG, 2 x 7.62mm MG
+            * Smoke Grenades, Smoke Screen
+            * Armor
+            * 610mm Composite DU, 1500mm vs HEAT, 950mm vs APDS Front
+            * Missile Countermeasures"
+          :speedland "72kph"
           :mass "70tons"
           :unitskillmap
            (unitskillmap
@@ -860,11 +859,11 @@ Missile Countermeasures"
          (unit
           :name "M2A2 Bradley AFV"
           :summary
-           "25mm Chain Gun, 900 rounds, APDS, HEI
-7.62mm MG, 2200 rounds
-TOWII Missiles
-Smoke Grenades, Smoke Screen"
-          :speed "66kph"
+           "* 25mm Chain Gun, 900 rounds, APDS, HEI
+            * 7.62mm MG, 2200 rounds
+            * TOWII Missiles
+            * Smoke Grenades, Smoke Screen"
+          :speedland "66kph"
           :mass "33tons"
           :unitskillmap
            (unitskillmap

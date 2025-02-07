@@ -261,38 +261,39 @@ actions while largely ignoring the tactical elements of small unit combat. Tacti
       :name "Anatomy of a Unit"
       :summary
        "Scale:
-Ratings:
-* Attribute and Skill Rating - Each unit is rated at a certain level in a number of attributes and skills. Attributes rate the power, resistance, and damage capacity in the following areas: Body, Mind, and Spirit. Value is an overall rating of the cost of the unit to aquire or recruit. Skills rate the varied abilities in which this unit is proficient.
-* Level:Scale - Each Rating has two parts: Level and a Scale. The Level is a number from 2 to 10, and the Scale is the number of zeroes added after that number. E.g. 5000 becomes 5:3 (Rating 5 : Scale 3).
-* Level/Intensity - 
-** No Rating - Challenged. Everyday tasks are difficult.
-** Rating 1:0 - Everyday. Most people get by with this rating.
-** Rating 2:0 - Everyday. Most people get by with this rating.
-** Rating 3:0 - Competent. Most healthy adults have some attributes and skills in this range.
-** Rating 4:0 - Competent. Most healthy adults have some attributes and skills in this range.
-** Rating 5:0 - Veteran. Well trained and highly experienced. Veteran Marines, Commandoes, Paratroopers, SS.
-** Rating 6:0 - Elite. Highest level of training and experience. Special Forces, SAS, Delta Force, Navy SEALs, Airborne Rangers, Green Berets.
-** Rating 7:0 - World Class. Highest training and natural ability. Olympic Athletes, Nobel-winning scientists, Top martial artists.
-** Rating 8:0 - World Class. Highest training and natural ability. Olympic Athletes, Nobel-winning scientists, Top martial artists.
-** Rating 9:0 - Legendary. Realistic Human maximum. Einstein, James Bond.
-** Rating 1:1+ - Superhuman.
-* Scale/Severity - The second part of an attribute or skill Rating is it's scale. Each scale represents a power of 10 greater than the last. The observable universe has a diameter of 9x10^26m or 9:26m, a mass of 1.5x10^53kg or 1.5:52g, and has 1x10^82 atoms. The Planck Length is 10^-35m or 1:-35m. The Tegmark theoretical distance to an identical universe to ours is 10^118m or 1:118m.
-** Scale -2 - Insect Scale. Distance/Size=1cm(.3in), Speed=1cm/s(.3in/s), Mass=100g(~.2lb), Energy=1J, Force=1N(100g lifted 1m), Current=1W
-** Scale -1 - Game Scale. Distance/Size=10cm(3.5in), Speed=10cm/s(3.5in/s, .3kph, .2mph), Mass=1kg(~2.2lb), Energy=10J, Force=10N(1kg lifted 1m), Current=10W(LED Light Bulb, Human energy use/s)
-** Scale 0 - Human Scale. Distance/Size=1m(3ft), Speed=1m/s(3ft/s, 3.5kph, 2mph), Mass=10kg(~22lb), Energy=100J, Force=100N(10kg lifted 1m), Current=100W(Incandesent Light Bulb, Human energy use/s)
-** Scale 1 - Vehicle/Giant Scale. Distance/Size=10m(33ft), Speed=10m/s(30ft/s, 35kph, 20mph), Mass=100kg(~220lb), Energy=1kJ, Force=1kN(100kg lifted 1m), Current=1kW.
-** Scale 2 - Flight Scale. Distance/Size=100m(330ft, Football field), Speed=100m/s(330ft/s, 350kph, 200mph), Mass=1ton, Energy=10kJ, Force=10kN(1ton lifted 1m), Current=10kW.
-** Scale 3 - Super Sonic Scale. Distance/Size=1km(3300ft, 0.6miles), Speed=1km/s(3300ft/s, 3500kph, 2000mph, Mach3), Mass=10ton, Energy=100kJ, Force=100kN(10ton lifted 1m), Current=100kW."
+        Ratings:
+        * Attribute and Skill Rating - Each unit is rated at a certain level in a number of attributes and skills. Attributes rate the power, resistance, and damage capacity in the following areas: Body, Mind, and Spirit. Value is an overall rating of the cost of the unit to aquire or recruit. Skills rate the varied abilities in which this unit is proficient.
+        * Level:Scale - Each Rating has two parts: Level and a Scale. The Level is a number from 2 to 10, and the Scale is the number of zeroes added after that number. E.g. 5000 becomes 5:3 (Rating 5 : Scale 3).
+        * Level/Intensity - 
+        ** No Rating - Challenged. Everyday tasks are difficult.
+        ** Rating 1:0 - Everyday. Most people get by with this rating.
+        ** Rating 2:0 - Everyday. Most people get by with this rating.
+        ** Rating 3:0 - Competent. Most healthy adults have some attributes and skills in this range.
+        ** Rating 4:0 - Competent. Most healthy adults have some attributes and skills in this range.
+        ** Rating 5:0 - Veteran. Well trained and highly experienced. Veteran Marines, Commandoes, Paratroopers, SS.
+        ** Rating 6:0 - Elite. Highest level of training and experience. Special Forces, SAS, Delta Force, Navy SEALs, Airborne Rangers, Green Berets.
+        ** Rating 7:0 - World Class. Highest training and natural ability. Olympic Athletes, Nobel-winning scientists, Top martial artists.
+        ** Rating 8:0 - World Class. Highest training and natural ability. Olympic Athletes, Nobel-winning scientists, Top martial artists.
+        ** Rating 9:0 - Legendary. Realistic Human maximum. Einstein, James Bond.
+        ** Rating 1:1+ - Superhuman.
+        * Scale/Severity - The second part of an attribute or skill Rating is it's scale. Each scale represents a power of 10 greater than the last. The observable universe has a diameter of 9x10^26m or 9:26m, a mass of 1.5x10^53kg or 1.5:52g, and has 1x10^82 atoms. The Planck Length is 10^-35m or 1:-35m. The Tegmark theoretical distance to an identical universe to ours is 10^118m or 1:118m.
+        ** Scale -2 - Insect Scale. Distance/Size=1cm(.3in), Speed=1cm/s(.3in/s), Mass=100g(~.2lb), Energy=1J, Force=1N(100g lifted 1m), Current=1W
+        ** Scale -1 - Game Scale. Distance/Size=10cm(3.5in), Speed=10cm/s(3.5in/s, .3kph, .2mph), Mass=1kg(~2.2lb), Energy=10J, Force=10N(1kg lifted 1m), Current=10W(LED Light Bulb, Human energy use/s)
+        ** Scale 0 - Human Scale. Distance/Size=1m(3ft), Speed=1m/s(3ft/s, 3.5kph, 2mph), Mass=10kg(~22lb), Energy=100J, Force=100N(10kg lifted 1m), Current=100W(Incandesent Light Bulb, Human energy use/s)
+        ** Scale 1 - Vehicle/Giant Scale. Distance/Size=10m(33ft), Speed=10m/s(30ft/s, 35kph, 20mph), Mass=100kg(~220lb), Energy=1kJ, Force=1kN(100kg lifted 1m), Current=1kW.
+        ** Scale 2 - Flight Scale. Distance/Size=100m(330ft, Football field), Speed=100m/s(330ft/s, 350kph, 200mph), Mass=1ton, Energy=10kJ, Force=10kN(1ton lifted 1m), Current=10kW.
+        ** Scale 3 - Super Sonic Scale. Distance/Size=1km(3300ft, 0.6miles), Speed=1km/s(3300ft/s, 3500kph, 2000mph, Mach3), Mass=10ton, Energy=100kJ, Force=100kN(10ton lifted 1m), Current=100kW."
       :rulemap
        (rulemap
         :Body
          (rule
           :name "Body"
           :image "Tokens/BodyToken.png"
-          :reference "* The nature of existence is obvious. The things I can see and touch are real."
+          :reference
+           "* The nature of existence is obvious. The things I can see and touch are real."
           :summary
            "* Physical - The physical resistance of the unit. This is equal to the unit's highest Physical skill. Units with low Body are easily killed.
-* Body is determined by Mass. Fit human male: 8:1 (80kg/175lb). Fit human female: 6:1 (60kg/132lb)."
+            * Body is determined by Mass. Fit human male: 8:1 (80kg/175lb). Fit human female: 6:1 (60kg/132lb)."
           :titles "Build, Constitution, Endurance, Physique, Size, Stamina, Strength, Toughness")
         :Mind
          (rule
@@ -300,10 +301,10 @@ Ratings:
           :image "Tokens/MindToken.png"
           :reference
            "* You're that smart? Let me put it this way. Have you ever heard of Plato, Aristotle, Socrates? Yes. Morons. - Princess Bride
-* The nature of existence is misleading. The atoms of our bodies are 99.99% empty space. The actual particles making up every human alive could be compressed to the size of a sugar cube. We are walking, talking electromagnetic fields."
+            * The nature of existence is misleading. The atoms of our bodies are 99.99% empty space. The actual particles making up every human alive could be compressed to the size of a sugar cube. We are walking, talking electromagnetic fields."
           :summary
            "* Mental - The mental strength of the unit. This is equal to the unit's highest Mental skill. Units with low Mind are easily fooled.
-* Mind is vaguely defined by IQ. IQ=Mind+50. Typical human Mind: 5:1 (100IQ). Brilliant human: 10:1 (150IQ)."
+            * Mind is vaguely defined by IQ. IQ=Mind+50. Typical human Mind: 5:1 (100IQ). Brilliant human: 10:1 (150IQ)."
           :titles "Intelligence, Mental Clarity, Mental Strength, Perception, Problem Solving, Learning, Reason, Wits")
         :Will
          (rule
@@ -311,10 +312,10 @@ Ratings:
           :image "Tokens/SpiritToken.png"
           :reference
            "* I think, therefore I am. - Descartes, Cogito Ergo Sum
-* The nature of existence is subjective. I have experience and thoughts in this precise moment, beyond that I can prove nothing. Does time actually pass as I understand it? Is anything else but me real? Am I living in a dream/hallucination/simulation? Am I just insane? Our experience is the only thing we can be sure of. Therefore, we may as well choose to live as we see fit. No amount of evidence can definitively prove otherwise."
+            * The nature of existence is subjective. I have experience and thoughts in this precise moment, beyond that I can prove nothing. Does time actually pass as I understand it? Is anything else but me real? Am I living in a dream/hallucination/simulation? Am I just insane? Our experience is the only thing we can be sure of. Therefore, we may as well choose to live as we see fit. No amount of evidence can definitively prove otherwise."
           :summary
            "* Emotional - The inner strength of the unit. This is equal to the unit's highest Willpower skill. Units with low Will are easily manipulated or collapse under pressure.
-* Will has no emperical formula. Typical human Will: 5:1. Phenomenal human Will: 10:1."
+            * Will has no emperical formula. Typical human Will: 5:1. Phenomenal human Will: 10:1."
           :titles "Chi, Confidence, Determination, Ego, Emotion, Faith, Grit, Guts, Heart, Instinct, Ki, Mana, Perseverence, Resolve, Spirit, Spiritualism, Will, Willpower")
         :Speed
          (rule
@@ -322,11 +323,11 @@ Ratings:
           :image "Tokens/SpeedToken.png"
           :summary
            "* The maximum movement speed of the unit. Each turn a player may move a [Unit] by spending 1 Speed for each space moved.
-* Speed is measured in Kilometers Per Hour (kph) or Miles Per Hour (mph), and at each scale a different number of spaces.
-* At Personal Scale, Mph = Speed * 5 (5-25mph) examples: 2=Crawl, 4=Walk, 6=Encumbered Human, 8= Human, 12=Dog, 16=Horse, 24=Bird.
+            * Speed is measured in Kilometers Per Hour (kph) or Miles Per Hour (mph), and at each scale a different number of spaces.
+            * At Personal Scale, Mph = Speed * 5 (5-25mph) examples: 2=Crawl, 4=Walk, 6=Encumbered Human, 8= Human, 12=Dog, 16=Horse, 24=Bird.
 
-Limitations:
-* Units may not make more than 4 Facing changes in 1 [Turn].")
+            Limitations:
+            * Units may not make more than 4 Facing changes in 1 [Turn].")
         :Level
          (rule
           :name "Level"
@@ -384,10 +385,10 @@ Limitations:
           :name "Attack"
           :summary
            "* Find the [Attack Rating] and the [Defense Rating].
-* Draw two hands for each number and compare them.
-* Number cards 1-5 are Misses.  Discard these.
-* Number cards 6-10 are Hits.  Discard an equal number of these from both hands.  It doesn't matter which numbers.
-* Face cards are Critical Hits.")
+            * Draw two hands for each number and compare them.
+            * Number cards 1-5 are Misses.  Discard these.
+            * Number cards 6-10 are Hits.  Discard an equal number of these from both hands.  It doesn't matter which numbers.
+            * Face cards are Critical Hits.")
         "Targeting: Close Combat"
          (rule
           :name "Targeting: Close Combat"

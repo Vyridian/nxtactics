@@ -2724,9 +2724,9 @@ export default class nx_tactics_books_bestiary {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "African Elephant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "African Elephant", ":speed", "40kph", ":mass", "10tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "African Elephant", ":speedland", "40kph", ":mass", "10tons"),
             "Asian Elephant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Asian Elephant", ":speed", "40kph", ":mass", "5tons"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Asian Elephant", ":speedland", "40kph", ":mass", "5tons"),
             "Rogue Elephant",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Rogue Elephant"),
             "War Elephant",
@@ -2744,7 +2744,7 @@ export default class nx_tactics_books_bestiary {
             ":Bison",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bison"),
             ":Camel",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Camel", ":reference", "* Trot: 10mph / 16kph\n* Canter 17mph / 27kph\n* Gallop 22mph / 35kph (10km+)\n* Gallop 25mph / 40kph (1km burst)\n* These speeds are consistent with a horse. In terms of war, camels are probably superior given their better stamina and load capacity.", ":speed", "35kph"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Camel", ":reference", "* Trot: 10mph / 16kph\n* Canter 17mph / 27kph\n* Gallop 22mph / 35kph (10km+)\n* Gallop 25mph / 40kph (1km burst)\n* These speeds are consistent with a horse. In terms of war, camels are probably superior given their better stamina and load capacity.", ":speedland", "35kph"),
             ":Cattle",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cattle"),
             ":Deer",
@@ -2758,7 +2758,7 @@ export default class nx_tactics_books_bestiary {
             ":Reindeer",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Reindeer"),
             ":Horse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Horse", ":reference", "* Trot: 10mph / 16kph (Cataphracts)\n* Canter 12mph / 19kph (Heavy Cavalry, Cataphracts Charge)\n* Gallop 20mph / 32kph (Light Cavalry, Heavy Cavalry Charge)\n* Gallop 25mph / 40kph (1km burst)\n* The U.S. Calvary in 1941 recommended that the collective weight of rider and gear not exceed 20% of the total weight of the horse.", ":titles", "Charger, Courser, Draft, Maverick, Pony, Stallion, War Horse", ":speed", "32kph", ":mass", "600kg")
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Horse", ":reference", "* Trot: 10mph / 16kph (Cataphracts)\n* Canter 12mph / 19kph (Heavy Cavalry, Cataphracts Charge)\n* Gallop 20mph / 32kph (Light Cavalry, Heavy Cavalry Charge)\n* Gallop 25mph / 40kph (1km burst)\n* The U.S. Calvary in 1941 recommended that the collective weight of rider and gear not exceed 20% of the total weight of the horse.", ":titles", "Charger, Courser, Draft, Maverick, Pony, Stallion, War Horse", ":speedland", "32kph", ":mass", "600kg")
           )
         ),
         ":Marsupials",

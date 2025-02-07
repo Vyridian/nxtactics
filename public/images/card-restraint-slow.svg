@@ -55,10 +55,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.1450488"
-     inkscape:cx="-147.1553"
-     inkscape:cy="116.58892"
-     inkscape:window-width="1904"
+     inkscape:zoom="3.2386871"
+     inkscape:cx="52.336022"
+     inkscape:cy="216.44573"
+     inkscape:window-width="2138"
      inkscape:window-height="1001"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -74,7 +74,7 @@
      y="0.077482097" />
   <g
      id="g1"
-     transform="matrix(0.74696101,0,0,0.80234064,-55.950127,345.11786)">
+     transform="matrix(0.74696101,0,0,0.80234064,-88.838974,345.11786)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:148.144px;font-family:Amiri;-inkscape-font-specification:'Amiri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.269288;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
@@ -84,7 +84,7 @@
          sodipodi:role="line"
          id="tspan1"
          x="513.04822"
-         y="778.5697">Move: -1*</tspan></text>
+         y="778.5697">Speed:-1*</tspan></text>
     <path
        fill="#fefefe"
        d="m 423.87315,743.60565 0.21512,0.052 c 1.71719,3.76403 3.49119,3.70519 5.98388,7.35145 -7.82361,-0.10797 -11.69949,-1.08864 -18.76246,-4.29382 -1.34963,-0.0879 -4.75661,-3.11408 -5.45151,-3.66689 -1.44497,-1.14935 -2.73119,-2.33754 -3.98746,-3.59097 2.82341,0.88799 5.73821,1.52855 8.60636,2.10838 4.47579,0.90536 8.94267,1.61647 13.39636,2.03887 z"

@@ -761,8 +761,8 @@
      (:conscience unit)
      (:beast unit)
      (:shadow unit))
-   move : string := (:move unit)
-   movedetail : string :=
+   speed : string := (:speed unit)
+   speeddetail : string :=
     (string<-land-water-air-space
      (:speedland unit)
      (:speedwater unit)
@@ -869,28 +869,28 @@
         (ui/stylelist
          styles/style-text-2)
        :data willdetail)))
-   uimove : ui/ui :=
+   uispeed : ui/ui :=
     (if : ui/ui
      (then
-      (!-empty move)
+      (!-empty speed)
       (ui/ui
-       :uid (string prefix "/move")
-       :style styles/style-unit-move
+       :uid (string prefix "/speed")
+       :style styles/style-unit-speed
        :stylelist
         (ui/stylelist
          styles/style-text-header1)
-       :data move)))
-   uimovedetail : ui/ui :=
+       :data speed)))
+   uispeeddetail : ui/ui :=
     (if : ui/ui
      (then
-      (!-empty movedetail)
+      (!-empty speeddetail)
       (ui/ui
-       :uid (string prefix "/movedetail")
-       :style styles/style-unit-movedetail
+       :uid (string prefix "/speeddetail")
+       :style styles/style-unit-speeddetail
        :stylelist
         (ui/stylelist
          styles/style-text-2)
-       :data movedetail)))
+       :data speeddetail)))
    uidetail : ui/ui :=
     (if : ui/ui
      (then
@@ -912,8 +912,8 @@
    uiminddetail
    uiwill
    uiwilldetail
-   uimove
-   uimovedetail
+   uispeed
+   uispeeddetail
    uidetail))
  :doc "Returns a list of child ui from an unit/parent")
 

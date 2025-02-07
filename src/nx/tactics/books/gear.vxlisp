@@ -1378,52 +1378,52 @@ rubbed against a jacket or clamp, causing chirping noises."
       :name "Unfiled Gear"
       :summary
        "* Acid
-* Alabaster
-* Barricade
-* Blood
-* Cage
-* Chariot
-* Conch Horn
-* Fireworks
-* Trumpet
-* War Machine
+        * Alabaster
+        * Barricade
+        * Blood
+        * Cage
+        * Chariot
+        * Conch Horn
+        * Fireworks
+        * Trumpet
+        * War Machine
 
-!Symbols
-* Banner
-* Coat of Arms
-* Crest
-* Crown
-* Fasces
-* Helix
-* Rod
-* Scepter
-* Signet
-* Standard
-* Thyrsus
+        !Symbols
+        * Banner
+        * Coat of Arms
+        * Crest
+        * Crown
+        * Fasces
+        * Helix
+        * Rod
+        * Scepter
+        * Signet
+        * Standard
+        * Thyrsus
 
-!Arcane Items
-* Airship
-* Armageddon Clock
-* Flying Carpet
+        !Arcane Items
+        * Airship
+        * Armageddon Clock
+        * Flying Carpet
 
-!Containers
-* Chest
-* Cauldron
-* Coffer
-* Goblet
-* Jar
-* Puzzle Box
-* Vat
-* Vessel
+        !Containers
+        * Chest
+        * Cauldron
+        * Coffer
+        * Goblet
+        * Jar
+        * Puzzle Box
+        * Vat
+        * Vessel
 
-!Technology
-* [Blinding Bulb]
-* [Phone Tap]]
-* [Shotgun Microphone]
-* [Sleepteacher]
-* [Subliminal Broadcaster]
-* [Surveillance Cameras]
-* [Telephoto Lens]"
+        !Technology
+        * [Blinding Bulb]
+        * [Phone Tap]]
+        * [Shotgun Microphone]
+        * [Sleepteacher]
+        * [Subliminal Broadcaster]
+        * [Surveillance Cameras]
+        * [Telephoto Lens]"
       :itemmap
        (itemmap
         "Beast Claw"
@@ -1437,11 +1437,11 @@ rubbed against a jacket or clamp, causing chirping noises."
           :name "Vampire Blood"
           :summary
            "* Black Token
-* Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].
-* [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.
-* [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
-* [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
-* [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
+            * Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].
+            * [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.
+            * [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
+            * [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
+            * [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
         "Healing Salve"
          (item
           :name "Healing Salve")

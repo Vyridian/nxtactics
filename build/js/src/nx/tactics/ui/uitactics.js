@@ -2449,8 +2449,8 @@ export default class nx_tactics_ui_uitactics {
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":beast"),
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":shadow")
         )
-        const move = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":move")
-        const movedetail = nx_tactics_ui_uitactics.f_string_from_land_water_air_space(
+        const speed = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":speed")
+        const speeddetail = nx_tactics_ui_uitactics.f_string_from_land_water_air_space(
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":speedland"),
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":speedwater"),
           vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_unit}, unit, ":speedair"),
@@ -2633,43 +2633,43 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        const uimove = vx_core.f_if_2(
+        const uispeed = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(move)}),
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(speed)}),
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new(
               {"any-1": vx_ui_ui.t_ui},
               ":uid",
-              vx_core.f_new({"any-1": vx_core.t_string}, prefix, "/move"),
+              vx_core.f_new({"any-1": vx_core.t_string}, prefix, "/speed"),
               ":style",
-              nx_tactics_ui_stylesheet.c_style_unit_move,
+              nx_tactics_ui_stylesheet.c_style_unit_speed,
               ":stylelist",
               vx_core.f_new(
                 {"any-1": vx_ui_ui.t_stylelist},
                 nx_tactics_ui_stylesheet.c_style_text_header1
               ),
               ":data",
-              move
+              speed
             )})
           )
         )
-        const uimovedetail = vx_core.f_if_2(
+        const uispeeddetail = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
-            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(movedetail)}),
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_notempty(speeddetail)}),
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new(
               {"any-1": vx_ui_ui.t_ui},
               ":uid",
-              vx_core.f_new({"any-1": vx_core.t_string}, prefix, "/movedetail"),
+              vx_core.f_new({"any-1": vx_core.t_string}, prefix, "/speeddetail"),
               ":style",
-              nx_tactics_ui_stylesheet.c_style_unit_movedetail,
+              nx_tactics_ui_stylesheet.c_style_unit_speeddetail,
               ":stylelist",
               vx_core.f_new(
                 {"any-1": vx_ui_ui.t_stylelist},
                 nx_tactics_ui_stylesheet.c_style_text_2
               ),
               ":data",
-              movedetail
+              speeddetail
             )})
           )
         )
@@ -2693,7 +2693,7 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        return vx_core.f_new({"any-1": vx_ui_ui.t_uilist}, uiimage, uivalue, uititles, uibody, uibodydetail, uimind, uiminddetail, uiwill, uiwilldetail, uimove, uimovedetail, uidetail)
+        return vx_core.f_new({"any-1": vx_ui_ui.t_uilist}, uiimage, uivalue, uititles, uibody, uibodydetail, uimind, uiminddetail, uiwill, uiwilldetail, uispeed, uispeeddetail, uidetail)
       })
     )
     return output

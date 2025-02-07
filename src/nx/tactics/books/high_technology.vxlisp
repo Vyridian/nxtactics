@@ -455,14 +455,14 @@ one-way.
           :name "Eagle Lunar Transport"
           :summary
            "* The Eagle is the primary form of transportation for the inhabitants of the various moons of the Solar System. A multipurpose craft, it is divided into three basic sections; the command module, the service pod, and the superstructure. It is powered by four nuclear fusion rockets, and carries fuel reserves for 48 hours of flight.
-* Type A Transport Eagle is fitted with the standard passenger pod and is capable of holding 8 passengers (up to 12 in an emergency), in addition to the pilot and co-pilot.
-* Type B Freighter Eagle is used for transporting supplies, equipment and minerals. They can also be used as space-borne tankers for refueling.
-* Type C Reconnaissance Eagle comes equipped with various types of sensory devices for exploratory missions.
-* Type D Rescue Eagle, identifiable by the bold red stripes on the pod, has been adapted for field diagnosis and treatment of injury or disease. Manned by medical personnel, Rescue Eagles are equipped with mobile beds, patient-monitor units, and facilities for field surgery.
-* Type E Laboratory Eagle is equipped with a remote laboratory and can be used to locate and refine crude minerals, eliminating the need to transport bulky raw ores. It can carry food and water and recycle air to support the team for several weeks.
-* Specialty Modules include a the winch platform used to disperse nuclear waste canisters. There is also an additional booster unit that can be added to the super-structure which can increase the range and power."
+            * Type A Transport Eagle is fitted with the standard passenger pod and is capable of holding 8 passengers (up to 12 in an emergency), in addition to the pilot and co-pilot.
+            * Type B Freighter Eagle is used for transporting supplies, equipment and minerals. They can also be used as space-borne tankers for refueling.
+            * Type C Reconnaissance Eagle comes equipped with various types of sensory devices for exploratory missions.
+            * Type D Rescue Eagle, identifiable by the bold red stripes on the pod, has been adapted for field diagnosis and treatment of injury or disease. Manned by medical personnel, Rescue Eagles are equipped with mobile beds, patient-monitor units, and facilities for field surgery.
+            * Type E Laboratory Eagle is equipped with a remote laboratory and can be used to locate and refine crude minerals, eliminating the need to transport bulky raw ores. It can carry food and water and recycle air to support the team for several weeks.
+            * Specialty Modules include a the winch platform used to disperse nuclear waste canisters. There is also an additional booster unit that can be added to the super-structure which can increase the range and power."
           :titles "Eagle"
-          :speed "162 Mkmh"
+          :speedspace "162 Mkmh"
           :mass "238 tons"
           :length "23m"
           :range "26 Bkm"
@@ -2052,49 +2052,20 @@ lead the PCs into the episode.")
          (unit
           :name "Ysa Cantroini"
           :summary
-           "Ysa
-has spent the past several years travelling the solar system and working odd job. This has given
-her an extremely wide range of skills (though none at more than 2/1 or 2/2) and connections,
-especially here on her native Venus.
-Ysa is bright and intelligent, generally assuming a quiet but cheerful air. She’s a wandering soul,
-and doesn’t think she could ever stay happy in one place or one job for the rest of her life. She
-is seriously considering becoming a reporter, however, as this gives her a way to travel and
-encounter a wide variety of experiences while getting paid and doing good. Much to her shame,
-her father is a high-ranking executive in the Venusian bank. She has cut all ties with him, and
-does not regret doing so, but this secret connection could still draw suspicion to her.")
+           "Ysa has spent the past several years travelling the solar system and working odd job. This has given her an extremely wide range of skills (though none at more than 2/1 or 2/2) and connections, especially here on her native Venus.
+            * Ysa is bright and intelligent, generally assuming a quiet but cheerful air. She’s a wandering soul, and doesn’t think she could ever stay happy in one place or one job for the rest of her life. She is seriously considering becoming a reporter, however, as this gives her a way to travel and encounter a wide variety of experiences while getting paid and doing good. Much to her shame, her father is a high-ranking executive in the Venusian bank. She has cut all ties with him, and does not regret doing so, but this secret connection could still draw suspicion to her.")
         "Admiral Russel Kleb"
          (unit
           :name "Admiral Russel Kleb"
           :summary
-           "Admiral Kleb is the throughly corrupt commander of the CEGA 4th Fleet. A hard-line war
-supporter, Kleb believes the inhabitants of the colonies to be completely inferior to native
-Terrans. This provides him with the justification he needs to take any action in pursuit of CEGA
-dominance. He is in the pay (and service) of the Venusian bank, as they provide him with the
-means to further his own ambitions, but he will not hesitate to betray them for his own advantage.
-They are, after all, just inferior colonists, cowardly employing bribery when they should be using
-righteous force.
-
-					* Despite his biases, Kleb is a brilliant tactician, equally adept at combat
-					maneuvers and political backstabbing. He is a staunch member of the UEA ruling
-					faction, and an adherent to the warship-centric old school of military thinking. To
-					him, adherents of the exo-centric school are children playing with fancy new toys.
-					Ranho Garand, as the most prominently successful exopilot in the UEA navy and focus
-					of the Dragonstriker program, is a frequent target of Kleb’s scorn.")
+           "* Admiral Kleb is the throughly corrupt commander of the CEGA 4th Fleet. A hard-line war supporter, Kleb believes the inhabitants of the colonies to be completely inferior to native Terrans. This provides him with the justification he needs to take any action in pursuit of CEGA dominance. He is in the pay (and service) of the Venusian bank, as they provide him with the means to further his own ambitions, but he will not hesitate to betray them for his own advantage. They are, after all, just inferior colonists, cowardly employing bribery when they should be using righteous force.
+					* Despite his biases, Kleb is a brilliant tactician, equally adept at combat maneuvers and political backstabbing. He is a staunch member of the UEA ruling faction, and an adherent to the warship-centric old school of military thinking. To him, adherents of the exo-centric school are children playing with fancy new toys. Ranho Garand, as the most prominently successful exopilot in the UEA navy and focus of the Dragonstriker program, is a frequent target of Kleb’s scorn.")
         "Ranho Garand"
          (unit
           :name "Ranho Garand"
           :summary
-           "* Commander of the 3rd Division of the CEGA 4th fleet, Garand is an ace exo-armor pilot
-and media darling. Despite his military connections, Garand is a devoted member of
-Chang’s political faction. While he does believe the military to be a necessary tool, he
-doesn’t believe that it is the proper one to further UEA’s domination over their wayward
-colonies. He was one of UEA’s first exo-armor pilots, and taught many of the current
-generation, passing on both his piloting skills and his philosophy.
-
-Garand is a man of honor and discipline, with a spotless service record and excellent
-reputation. He does not enjoy killing or combat, but his honor demands that he follow
-orders and defend his people. Despite his iron will, he is prone to fits of irrational
-rage towards those who have forced him to commit (or involved him in) dishonorable acts.")))
+           "* Commander of the 3rd Division of the CEGA 4th fleet, Garand is an ace exo-armor pilot and media darling. Despite his military connections, Garand is a devoted member of Chang’s political faction. While he does believe the military to be a necessary tool, he doesn’t believe that it is the proper one to further UEA’s domination over their wayward colonies. He was one of UEA’s first exo-armor pilots, and taught many of the current generation, passing on both his piloting skills and his philosophy.
+            * Garand is a man of honor and discipline, with a spotless service record and excellent reputation. He does not enjoy killing or combat, but his honor demands that he follow orders and defend his people. Despite his iron will, he is prone to fits of irrational rage towards those who have forced him to commit (or involved him in) dishonorable acts.")))
     "Commercial Spacecraft"
      (section
       :name "Commercial Spacecraft"
@@ -2104,9 +2075,7 @@ rage towards those who have forced him to commit (or involved him in) dishonorab
          (unit
           :name "Albatross Transorbital Shuttle"
           :summary
-           "* The Albatross is the latest in a long line of shuttles used for cargo and
-passenger transfers to various atmospheres. One or two are standard equipment for
-any large military ship."
+           "* The Albatross is the latest in a long line of shuttles used for cargo and passenger transfers to various atmospheres. One or two are standard equipment for any large military ship."
           :mass "45tons"
           :speedair "1200kph"
           :speedspace "1.5g")
@@ -2114,14 +2083,10 @@ any large military ship."
          (unit
           :name "Beautiful Dreamer Transport"
           :summary
-           "* The Beautiful Dreamer, at first sight, seems to be a standard Inari-class liner. As
-with many Inari, the Dreamer has been modified heavily, and there are many differences
-in the ship’s lines. Two concealed railguns run along the ship’s spine, providing an
-unpleasant and unexpected punch. The cargo bays on the craft’s edges have been modified
-to carry mechs and fighters, complete with concealed catapults.
-* 2 Medium Railguns
-* 4 Mech Bays - Cannot land fighters.
-* 2 Magnetic Catapults"
+           "* The Beautiful Dreamer, at first sight, seems to be a standard Inari-class liner. As with many Inari, the Dreamer has been modified heavily, and there are many differences in the ship’s lines. Two concealed railguns run along the ship’s spine, providing an unpleasant and unexpected punch. The cargo bays on the craft’s edges have been modified to carry mechs and fighters, complete with concealed catapults.
+            * 2 Medium Railguns
+            * 4 Mech Bays - Cannot land fighters.
+            * 2 Magnetic Catapults"
           :crew "54"
           :mass "10000tons"
           :length "270m")
@@ -2129,11 +2094,7 @@ to carry mechs and fighters, complete with concealed catapults.
          (unit
           :name "Inari Space Liner"
           :summary
-           "* Unlike the bulk transport Mule, the Inari was designed to be a high speed passenger
-liner to get people quickly between the planets. Though not as modular as the Mule,
-the Inari can be heavily customized to specific tasks. Though it is not a military
-vessel, the Inari is fast and can be modified to be cary significant armor and weapons,
-thus making it well suited as a privateer."
+           "* Unlike the bulk transport Mule, the Inari was designed to be a high speed passenger liner to get people quickly between the planets. Though not as modular as the Mule, the Inari can be heavily customized to specific tasks. Though it is not a military vessel, the Inari is fast and can be modified to be cary significant armor and weapons, thus making it well suited as a privateer."
           :titles "Georgia on my Mind"
           :crew "108"
           :mass "10000tons"
@@ -2143,22 +2104,10 @@ thus making it well suited as a privateer."
           :name "Carver Mining Ship"
           :summary
            "* The Carver is designed for the purpose seeking out and mining asteroids.
-The ship is very odd looking with three insect-like legs surrounding the
-main laser drill. The standard protocol for asteroid mining is to land on
-a mineral-rich feature, drill a deep tunnel, and then pressurize the
-tunnel so further operations can be done without environment suits. Ore
-is sent on a conveyor belt to the onboard smelter for separation and
-purification.
-* The Carver is intended to work perpetually. Its drive system is slow
-but extremely robust, able to use mined hydrogen for fuel and any waste
-material as reaction mass. Small tugs commute back and forth carrying ore
-to nearby space colonies and returning with supplies and spare parts. The
-tugs also carry replacement crew members.
-* The Carver has been in service for so long that their prices have come
-down dramatically. Since this work is enormously profitable, banks are
-willing to finance individuals if they can demonstrate a sound business
-plan."
-          :speed ".15g"
+            The ship is very odd looking with three insect-like legs surrounding the main laser drill. The standard protocol for asteroid mining is to land on a mineral-rich feature, drill a deep tunnel, and then pressurize the tunnel so further operations can be done without environment suits. Ore is sent on a conveyor belt to the onboard smelter for separation and purification.
+            * The Carver is intended to work perpetually. Its drive system is slow but extremely robust, able to use mined hydrogen for fuel and any waste material as reaction mass. Small tugs commute back and forth carrying ore to nearby space colonies and returning with supplies and spare parts. The tugs also carry replacement crew members.
+            * The Carver has been in service for so long that their prices have come down dramatically. Since this work is enormously profitable, banks are willing to finance individuals if they can demonstrate a sound business plan."
+          :speedspace ".15g"
           :mass "1200tons"
           :length "80m"
           :width "80m")
@@ -2166,20 +2115,11 @@ plan."
          (unit
           :name "Mule Freighter"
           :summary
-           "* The Mule Freighter is a simple, reliable design for transporting large
-amounts of cargo across the solar system. It has no interior cargo hold,
-instead it has a series of connectors to link self contained cargo pods
-of various sizes. The connectors can also be used to hook onto asteroids
-or other ships to allow the Mule to act as a tug.
-* The Mule is the most common ship in the solar system and is used by
-every government and commercial space organization. Because the Mule is
-so versatile, it can even be used as a slow carrier or missile gunboat.
-For similar reasons, it is a favorite ship for smuggling or piracy as
-well.
-* Its acceleration reduces as its load increases. It can transport up to
-40ktons before its acceleration becomes too low to be practical."
+           "* The Mule Freighter is a simple, reliable design for transporting large amounts of cargo across the solar system. It has no interior cargo hold, instead it has a series of connectors to link self contained cargo pods of various sizes. The connectors can also be used to hook onto asteroids or other ships to allow the Mule to act as a tug.
+            * The Mule is the most common ship in the solar system and is used by every government and commercial space organization. Because the Mule is so versatile, it can even be used as a slow carrier or missile gunboat. For similar reasons, it is a favorite ship for smuggling or piracy as well.
+            * Its acceleration reduces as its load increases. It can transport up to 40ktons before its acceleration becomes too low to be practical."
           :titles "Narsus"
-          :speed ".4g"
+          :speedspace ".4g"
           :crew "6"
           :mass "4000tons"
           :length "345m"
@@ -2188,21 +2128,14 @@ well.
          (unit
           :name "Ox Orbital Tug"
           :summary
-           "* The Ox is a space-only shuttle used for short tranports between space
-stations, tugbot duty, asteroid transport, and salvage operations. It has
-large manipulator arms to manage unusually shaped loads. It is a very
-sturdy if slow craft."
-          :speed ".5g"
+           "* The Ox is a space-only shuttle used for short tranports between space stations, tugbot duty, asteroid transport, and salvage operations. It has large manipulator arms to manage unusually shaped loads. It is a very sturdy if slow craft."
+          :speedspace ".5g"
           :mass "41tons")))
     "Jovian Federation"
      (section
       :name "Jovian Federation"
       :summary
-       "* Jovian capital ships are built for easy maintainance and reuse.  They are composed of 4
-sections: engine, cargo, habitat, and mission. All but the mission section can be
-interchanged with the equivalent sections from other ships. The habitat ring can even be
-removed for short range missions, or additional cargo modules can be added for greater
-endurance."
+       "* Jovian capital ships are built for easy maintainance and reuse. They are composed of 4 sections: engine, cargo, habitat, and mission. All but the mission section can be interchanged with the equivalent sections from other ships. The habitat ring can even be removed for short range missions, or additional cargo modules can be added for greater endurance."
       :unitmap
        (unitmap
         "Jovian Pilot"
@@ -2271,14 +2204,12 @@ to take great care or risk burned out thrusters.
          (unit
           :name "Vindicator Mech Suit"
           :summary
-           "* The Vindicator is the most powerful mass-produced Mech in the solar system. It carries
-massive armor and armament, but its high cost limits its use to a few elite pilots. It
-is also painfully slow compared to the Pathfinders and Retailators it flies with.
-* 1 Medium Rail Cannon
-* 1 Medium Laser Cannon
-* 10 Heavy Missiles
-* 3 Plasma Lances
-* 2 Anti Missile Systems"
+           "* The Vindicator is the most powerful mass-produced Mech in the solar system. It carries massive armor and armament, but its high cost limits its use to a few elite pilots. It is also painfully slow compared to the Pathfinders and Retailators it flies with.
+            * 1 Medium Rail Cannon
+            * 1 Medium Laser Cannon
+            * 10 Heavy Missiles
+            * 3 Plasma Lances
+            * 2 Anti Missile Systems"
           :mass "70tons"
           :height "16m"
           :speedland "36kph"
@@ -2288,13 +2219,10 @@ is also painfully slow compared to the Pathfinders and Retailators it flies with
          (unit
           :name "Prometheus Mech Suit"
           :summary
-           "* The Prometheus was intended to be a prototype for a new generation of mech suits which
-would be more efficient, better armed, and faster than their predecessors. However, as
-development progressed, several experimental systems were added that made it a one of a
-kind wonder that could never be mass produced.
-* 1 Heavy Plasma Cannon
-* 2 Light Plasma Cannons
-* 2 Plasma Lances"
+           "* The Prometheus was intended to be a prototype for a new generation of mech suits which would be more efficient, better armed, and faster than their predecessors. However, as development progressed, several experimental systems were added that made it a one of a kind wonder that could never be mass produced.
+            * 1 Heavy Plasma Cannon
+            * 2 Light Plasma Cannons
+            * 2 Plasma Lances"
           :mass "64tons"
           :height "18m")
         "Prometheus Storm Attacker"
@@ -2302,35 +2230,28 @@ kind wonder that could never be mass produced.
           :name "Prometheus Storm Attacker"
           :summary
            "* The [Prometheus Mech Suit] can be equipped with a heavy set of extra armor and weapons.
-The additional mass of the armor is negated by additional thrusters. If these thrusters
-are damaged the armor can be jettisoned leaving a fully functional Promethus.
-* 1 Heavy Plasma Cannon
-* 2 Light Plasma Cannons
-* 2 Plasma Lances
-* 2 Heavy Laser Cannons
-* 1 Particle Scatter Gun
-* 80 Medium Missiles"
+            The additional mass of the armor is negated by additional thrusters. If these thrusters are damaged the armor can be jettisoned leaving a fully functional Promethus.
+            * 1 Heavy Plasma Cannon
+            * 2 Light Plasma Cannons
+            * 2 Plasma Lances
+            * 2 Heavy Laser Cannons
+            * 1 Particle Scatter Gun
+            * 80 Medium Missiles"
           :mass "82tons"
           :height "21m")
         "Athena Destroyer"
          (unit
           :name "Athena Destroyer"
           :summary
-           "* Athena Destroyers function much as their wet navy ancestors. Depending
-on the political climate, they are either protective shepards or hunting
-wolves. The Athena's job is to get in the way of danger. If an unknown
-vessel is detected, the destroyer will move ahead into a blocking
-position to defend the rest of the fleet.
-* The Athena is particularly fast and maneuverable for a capital ship and
-works closely with any small craft.
-
-Weapons:
-* Point Defense System
-* 3x Particle Accelerators
-* 6x Railguns
-* 2x Area Defense Laser Cannon
-* 1x Missile Bay"
-          :speed ".8g"
+           "* Athena Destroyers function much as their wet navy ancestors. Depending on the political climate, they are either protective shepards or hunting wolves. The Athena's job is to get in the way of danger. If an unknown vessel is detected, the destroyer will move ahead into a blocking position to defend the rest of the fleet.
+            * The Athena is particularly fast and maneuverable for a capital ship and works closely with any small craft.
+            Weapons:
+            * Point Defense System
+            * 3x Particle Accelerators
+            * 6x Railguns
+            * 2x Area Defense Laser Cannon
+            * 1x Missile Bay"
+          :speedspace ".8g"
           :mass "10ktons"
           :length "291m"
           :width "81m")
@@ -2358,12 +2279,8 @@ Vehicles:
          (unit
           :name "Explorer Scout Ship"
           :summary
-           "* One of the earliest planetary exploration ships, the Explorer has been
-produced for many years and is a reliable though uninspired design. Its
-modular design is its greatest asset and has ensured its continued use
-for decades. The crew module can be extended on a tether for artificial
-gravity with the other end counterbalanced by a water tank."
-          :speed ".4g"
+           "* One of the earliest planetary exploration ships, the Explorer has been produced for many years and is a reliable though uninspired design. Its modular design is its greatest asset and has ensured its continued use for decades. The crew module can be extended on a tether for artificial gravity with the other end counterbalanced by a water tank."
+          :speedspace ".4g"
           :mass "1ktons"
           :length "345m"
           :width "40m")
@@ -2372,35 +2289,26 @@ gravity with the other end counterbalanced by a water tank."
           :name "Gagarin Fleet Tender"
           :summary
            "* The Gagarin is a mobile tender designed to facilitate drydock style repairs close to the front lines.
-* Its mission hull is a gigantic workshop with huge door sections that can surround and refit a vessel in a
-pressurized environment.
-* Speed: .1g
-
-Weapons:
-* Point Defense System
-* 1x Missile Bay"
+            * Its mission hull is a gigantic workshop with huge door sections that can surround and refit a vessel in a pressurized environment.
+            Weapons:
+            * Point Defense System
+            * 1x Missile Bay"
           :mass "92ktons"
           :length "740m"
-          :width "285m")
+          :width "285m"
+          :speedspace ".1g")
         "Javelin Cruiser"
          (unit
           :name "Javelin Cruiser"
           :summary
-           "* The Javelin is the most common warship in the Jovian Navy despite its
-age and lack of interceptor or Mech Bays. Its design is based on
-pre-Mech combat philosophy, emphasizing heavy weapons on capital ships as
-opposed to projection of force using smaller craft. Therefore, it is
-very heavily armed for a relatively small craft including the deadly
-heavy particle beam cannon.
-* Crew accomodations are small but comfortable with cleverly placed
-mirrors throughout the ship that give the illusion of greater interior
-space.
-* Point Defense System
-* 2 Heavy Rail Cannons
-* 1 Heavy Particle Beam Cannon Turret
-* 2 Missile Bay
-* 6 Space Dart Heavy Missiles"
-          :speed ".6g"
+           "* The Javelin is the most common warship in the Jovian Navy despite its age and lack of interceptor or Mech Bays. Its design is based on pre-Mech combat philosophy, emphasizing heavy weapons on capital ships as opposed to projection of force using smaller craft. Therefore, it is very heavily armed for a relatively small craft including the deadly heavy particle beam cannon.
+            * Crew accomodations are small but comfortable with cleverly placed mirrors throughout the ship that give the illusion of greater interior space.
+            * Point Defense System
+            * 2 Heavy Rail Cannons
+            * 1 Heavy Particle Beam Cannon Turret
+            * 2 Missile Bay
+            * 6 Space Dart Heavy Missiles"
+          :speedspace ".6g"
           :mass "20ktons"
           :length "235m"
           :width "72m")
@@ -2408,22 +2316,18 @@ space.
          (unit
           :name "Valiant Strike Carrier"
           :summary
-           "* The Valiant Strike Carrier is a ship like no other. Every other ship in
-the fleet is designed to work in cooperation with one another. The Valiant
-is designed to operate on long range, long term patrols with no backup.
-It is therefore heavily armed, armored, and carries extensive supplies
-and fabrication facilities.
-* It has two rotating crew decks that are very spacious for a spaceship.
-* 6 Heavy Rail Cannons on 2 Turrets
-* 1 Missile Bay
-* 1 Spinal Particle Beam Cannon
-* 6 Magnetic Catapults
-* 1 Certifuge Crew Module
-* 2 Lancer Interceptors
-* 2 Pathfinder Mech Suits
-* 2 Retaliator Mech Suits
-* 2 Vindicator Mech Suits"
-          :speed ".8g"
+           "* The Valiant Strike Carrier is a ship like no other. Every other ship in the fleet is designed to work in cooperation with one another. The Valiant is designed to operate on long range, long term patrols with no backup. It is therefore heavily armed, armored, and carries extensive supplies and fabrication facilities.
+            * It has two rotating crew decks that are very spacious for a spaceship.
+            * 6 Heavy Rail Cannons on 2 Turrets
+            * 1 Missile Bay
+            * 1 Spinal Particle Beam Cannon
+            * 6 Magnetic Catapults
+            * 1 Certifuge Crew Module
+            * 2 Lancer Interceptors
+            * 2 Pathfinder Mech Suits
+            * 2 Retaliator Mech Suits
+            * 2 Vindicator Mech Suits"
+          :speedspace ".8g"
           :mass "40ktons"
           :length "320m"
           :width "75m")))
@@ -2558,13 +2462,12 @@ The booster also houses the 2 Medium Laser cannons for strafing enemy capital sh
          (unit
           :name "Hachiman Destroyer"
           :summary
-           "* The Hachiman is the workhorse of the UEA navy. They have been produced
-for many years with minor upgrades.
-* 1 Point Defense System
-* 6 Railcannon Turrets
-* 2 Missile Bays
-* 2 Laser Turrets"
-          :speed ".6g"
+           "* The Hachiman is the workhorse of the UEA navy. They have been produced for many years with minor upgrades.
+            * 1 Point Defense System
+            * 6 Railcannon Turrets
+            * 2 Missile Bays
+            * 2 Laser Turrets"
+          :speedspace ".6g"
           :classification "Hvy. Spacecraft"
           :crew "60"
           :mass "5500tons"
@@ -2698,13 +2601,12 @@ Suits, so it carries more interceptors than Mechs.
          (unit
           :name "Tengu Escort Carrier"
           :summary
-           "* The Tengu is a long range craft designed for limited engagements and
-policing. It has extensive supplies but lacks firepower.
-* 1 Point Defense System
-* 2 Missile Bays
-* 2 Mech Suits
-* 2 Fighters
-* 2 Catapults"
+           "* The Tengu is a long range craft designed for limited engagements and policing. It has extensive supplies but lacks firepower.
+            * 1 Point Defense System
+            * 2 Missile Bays
+            * 2 Mech Suits
+            * 2 Fighters
+            * 2 Catapults"
           :classification "Hvy. Spacecraft"
           :crew "24"
           :mass "25ktons"
@@ -2717,14 +2619,14 @@ policing. It has extensive supplies but lacks firepower.
           :image "JovianChronicles/WyvernToken.png"
           :summary
            "* The Wyveern is the first and most numerous of the UEA Mech Suits.
-Though a copy of the Martial Federation Defender, it is a sturdy,
-reliable and most importantly mass-produceable design. Its primary
-limitation is the lack of energy weapons which limits its combat
-endurance before it needs to be rearmed.
-* 1 Hyperbazooka
-* 2 Massdriver Machineguns
-* 2 Self guided Missiles"
-          :speed "1.4g"
+            Though a copy of the Martial Federation Defender, it is a sturdy,
+            reliable and most importantly mass-produceable design. Its primary
+            limitation is the lack of energy weapons which limits its combat
+            endurance before it needs to be rearmed.
+            * 1 Hyperbazooka
+            * 2 Massdriver Machineguns
+            * 2 Self guided Missiles"
+          :speedspace "1.4g"
           :mass "55tons"
           :height "17m"
           :length "4m"
@@ -2932,7 +2834,7 @@ an ideal material for mobile suit armor."
           :name "Ball"
           :image "Gundam/Ball.png"
           :titles "RB-79"
-          :speed ".96g"
+          :speedspace ".96g"
           :classification "Cannon"
           :mass "17.2tons"
           :height "12.8m"
@@ -3022,10 +2924,10 @@ bazooka gun, clip-fed, 7 rounds per clip;
           :name "Guncannon"
           :image "Gundam/Guncannon.png"
           :summary
-           "Speed: 0.74 G
-Optional hand armaments: BOWA-XBR-L beam rifle, powered by rechargeable energy cap"
+           "Optional hand armaments: BOWA-XBR-L beam rifle, powered by rechargeable energy cap"
           :titles "RX-77-2"
-          :speed "78kph"
+          :speedland "78kph"
+          :speedspace ".74g"
           :classification "Lt. Spacecraft"
           :mass "51tons"
           :height "17.5m"
@@ -3054,9 +2956,9 @@ Optional hand armaments: BOWA-XBR-L beam rifle, powered by rechargeable energy c
           :image "Gundam/Guntank.png"
           :summary
            "Performance: maximum thruster acceleration 1.10 G; maximum ground driving speed 70 km/h
-2 x 4-tube 40mm rocket launcher, mounted on arms"
+            2 x 4-tube 40mm rocket launcher, mounted on arms"
           :titles "RX-75"
-          :speed "70kph"
+          :speedland "70kph"
           :classification "Lt. Spacecraft"
           :mass "56tons"
           :height "15.6m"
@@ -3195,12 +3097,12 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :image "Gundam/ZakuII.png"
           :summary
            "Speed: .59G/88kph
-Sensor radius: 3200 m
-180-degree turn time: 1.7 sec
-Ground speed: 88 km/h
-Armor: super-high tensile steel
-Armament: heat hawk x 1
-Optional armament: 3-missile pod x 2, cracker"
+            Sensor radius: 3200 m
+            180-degree turn time: 1.7 sec
+            Ground speed: 88 km/h
+            Armor: super-high tensile steel
+            Armament: heat hawk x 1
+            Optional armament: 3-missile pod x 2, cracker"
           :classification "Lt. Spacecraft"
           :mass "58.1tons"
           :height "17.5m"
@@ -3226,9 +3128,9 @@ Optional armament: 3-missile pod x 2, cracker"
           :image "Gundam/ZGok.png"
           :summary
            "0.86 G; maximum water speed 103 knots
-Fixed armaments:
-6 x 240mm missile launcher, 5 round magazine per launcher, mounted in head;
-2 x mega particle cannon, mounted in forearms"
+            Fixed armaments:
+            6 x 240mm missile launcher, 5 round magazine per launcher, mounted in head;
+            2 x mega particle cannon, mounted in forearms"
           :titles "MSM-07"
           :classification "Lt. Naval Vessel"
           :crew "1"
@@ -3250,8 +3152,7 @@ Fixed armaments:
           :image "Gundam/Zeong.png"
           :summary
            "maximum thruster acceleration 0.81 G
-Fixed armaments: 2 x wire-guided 5-barrel mega particle gun, barrels mounted in manipulator fingers, all barrels in each hand
-are fire-linked; 2 x mega particle gun, mounted in torso; mega particle gun, mounted in head"
+            Fixed armaments: 2 x wire-guided 5-barrel mega particle gun, barrels mounted in manipulator fingers, all barrels in each hand are fire-linked; 2 x mega particle gun, mounted in torso; mega particle gun, mounted in head"
           :titles "MSN-02"
           :classification "Med. Spacecraft"
           :crew "1"
@@ -3274,7 +3175,7 @@ are fire-linked; 2 x mega particle gun, mounted in torso; mega particle gun, mou
           :reference "The Zeon Gwazine class battleships were more than a match for any Federation Forces warship."
           :summary
            "Fixed armaments: 3 x 2-barrel main gun; 10 x 2-barrel secondary gun; many x 155mm machine gun
-Mobile suits: 20"
+            Mobile suits: 20"
           :classification "Hvy. Spacecraft"
           :mass "108.1ktons"
           :height "103m"
@@ -3290,10 +3191,10 @@ Mobile suits: 20"
           :image "Gundam/Zanzibar.png"
           :reference
            "Zeon's closest answer to the Federation's Pegasus class carrier, the Zeon Zanzibar class mobile cruiser replaced the vulnerable H.L.V. for the purpose of ferrying mobile suits to Earth and back to space. With a capacity of 6 mobile suits and a battery of bow-mounted mega particle guns, the Zanzibar was often used as the command ship for smaller fleets when a Gwazine class battleship was either unavailable or unsuitable. Lacking the Pegasus class' integral Minovsky Craft System, the Zanzibar could only operate for short periods in Earth's atmosphere, using sustained thrust. When being launched back into space, the Zanzibar class required a special rocket booster to supply the necessary thrust to break free of Earth's gravity.
- like most Zeon warships of the One Year War, lacked launch catapults, instead deploying its complement of mobile suits through a simple hatch on the ventral hull."
+            Like most Zeon warships of the One Year War, lacked launch catapults, instead deploying its complement of mobile suits through a simple hatch on the ventral hull."
           :summary
            "Fixed armaments: 1 x 2-barrel main gun; 4 x mega particle gun; 5 x 2-barrel machine gun
-Mobile suits: 6"
+            Mobile suits: 6"
           :classification "Hvy. Spacecraft"
           :height "70.5m"
           :length "255m"
@@ -3333,12 +3234,12 @@ Mobile suits: 6"
           :image "Gundam/ZGundam.png"
           :summary
            "* Variable Mobile Suit
-Speed: 1.81 G
-Fixed armaments:
-2 x 2-tube grenade launcher, 2 rounds per tube, mounted in forearms;
-Optional fixed armaments:
-grenade launcher cartridge, 18+1 rounds, serves as extended ammunition magazine for grenade launcher;
-shield, mounted on left forearm"
+            Speed: 1.81 G
+            Fixed armaments:
+            2 x 2-tube grenade launcher, 2 rounds per tube, mounted in forearms;
+            Optional fixed armaments:
+            grenade launcher cartridge, 18+1 rounds, serves as extended ammunition magazine for grenade launcher;
+            shield, mounted on left forearm"
           :titles "MSZ-006"
           :classification "Lt. Spacecraft"
           :mass "28.7tons"
@@ -3370,7 +3271,7 @@ shield, mounted on left forearm"
           :image "Gundam/Waverider_ZGundam.png"
           :summary "* Variable Mobile Suit"
           :titles "MSZ-006"
-          :speed "1.81g"
+          :speedspace "1.81g"
           :classification "Lt. Spacecraft"
           :mass "28.7tons"
           :length "24.3m"
@@ -3395,10 +3296,10 @@ shield, mounted on left forearm"
           :image "Gundam/GDefenser.png"
           :summary
            "* Space Fighter
-* Separatable cockpit capsule
-Fixed armaments: 2 x 14-tube missile pod, mounted in binders on main body; long beam rifle, mounted on main body; 2 x mini laser gun fire-linked, power rated at 1.7 MW each, mounted in nose of cockpit capsule; 4 x vulcan gun, mounted in pairs in missile pod binders, each pair fire-linked"
+            * Separatable cockpit capsule
+            Fixed armaments: 2 x 14-tube missile pod, mounted in binders on main body; long beam rifle, mounted on main body; 2 x mini laser gun fire-linked, power rated at 1.7 MW each, mounted in nose of cockpit capsule; 4 x vulcan gun, mounted in pairs in missile pod binders, each pair fire-linked"
           :titles "FXA-05D"
-          :speed "1.41g"
+          :speedspace "1.41g"
           :classification "Lt. Spacecraft"
           :mass "24.7tons"
           :length "39.5m"
@@ -3418,14 +3319,13 @@ Fixed armaments: 2 x 14-tube missile pod, mounted in binders on main body; long 
           :name "Gundam MK-II"
           :image "Gundam/GundamMkII.png"
           :reference
-           "* Paradoxically, the Gundam Mk. II is not armored with the wonderfully durable Gundarium alloy material used by
-the original RX-78 Gundam, making it no more or less physically durable than mass-production mobile suits."
+           "* Paradoxically, the Gundam Mk. II is not armored with the wonderfully durable Gundarium alloy material used by the original RX-78 Gundam, making it no more or less physically durable than mass-production mobile suits."
           :summary
            "RX*M-Sh-VT/S-00018 (Titans) / RX*M-Sh-VT/S-001 (AEUG) shield, mounted on either forearm
-Optional hand armaments: 2 spare e-pacs stored in shield;
-AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds per clip"
+            Optional hand armaments: 2 spare e-pacs stored in shield;
+            AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds per clip"
           :titles "RX-178"
-          :speed "1.5g"
+          :speedspace "1.5g"
           :classification "Lt. Spacecraft"
           :mass "33.4tons"
           :height "18.5m"
@@ -3456,10 +3356,10 @@ AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds per clip"
           :image "Gundam/HyakuShiki.png"
           :summary
            "Equipment and design features: anti-beam reflective coating on amror
-Optional hand armaments:
-AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds per clip; mega bazooka launcher"
+            Optional hand armaments:
+            AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds per clip; mega bazooka launcher"
           :titles "MSN-100"
-          :speed "1.37g"
+          :speedspace "1.37g"
           :classification "Lt. Spacecraft"
           :mass "31.5tons"
           :height "18.5m"
@@ -3484,13 +3384,10 @@ AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds per clip; mega bazooka launche
           :name "Nemo"
           :image "Gundam/Nemo.png"
           :summary
-           "Optional fixed armaments: shield, mounted on either forearm
-Although closely based on the GM II, was far better in performance in terms of generator power,
-thruster acceleration and maneuverability. To help keep its cost down, the Nemo used many weapons
-already employed by other existing mobile suits, such as the RMS-099 Rick Dias' beam saber and the
-GM II's beam rifle."
+           "Optional fixed armaments: shield, mounted on either forearm.
+            Although closely based on the GM II, was far better in performance in terms of generator power, thruster acceleration and maneuverability. To help keep its cost down, the Nemo used many weapons already employed by other existing mobile suits, such as the RMS-099 Rick Dias' beam saber and the GM II's beam rifle."
           :titles "MSA-003"
-          :speed "1.15g"
+          :speedspace "1.15g"
           :classification "Lt. Spacecraft"
           :mass "36.2tons"
           :height "18.5m"
@@ -3515,17 +3412,13 @@ GM II's beam rifle."
           :name "Rick Dias"
           :image "Gundam/RickDias.png"
           :reference
-           "* Because many former Zeon engineers worked on the Rick Dias, it featured many similaritys to Zeon suits.  It not
-only features a mono-eye sensor its name is also derived from the MS-09R Rick Dom (Rick comes from the word
-Remake).  The Rick Dias should originally be called Gundam Gamma because it is built out of new Gundarium Gamma.
-This material was developed by Axis and it makes the suit lighter and thus makes it able to accommodate greater
-fuel capacity."
+           "* Because many former Zeon engineers worked on the Rick Dias, it featured many similaritys to Zeon suits. It not only features a mono-eye sensor its name is also derived from the MS-09R Rick Dom (Rick comes from the word Remake). The Rick Dias should originally be called Gundam Gamma because it is built out of new Gundarium Gamma. This material was developed by Axis and it makes the suit lighter and thus makes it able to accommodate greater fuel capacity."
           :summary
            "* Equipment and design features: 2 x 'random binder' ejectable external propellant tank, mounted on backpack; birdlime launchers in hands; flare launchers in hands
-* Fixed armaments: 2-barrel 55mm vulcan phalanx anti-missile gun system, mounted in head;
-* Optional hand armaments: AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds; beam rifle, powered by rechargeable energy cap"
+            * Fixed armaments: 2-barrel 55mm vulcan phalanx anti-missile gun system, mounted in head;
+            * Optional hand armaments: AE/ZIM.C-BAZ-531 clay bazooka, clip-fed, 7 rounds; beam rifle, powered by rechargeable energy cap"
           :titles "RMS-099, Gundam Gamma"
-          :speed "1.37g"
+          :speedspace "1.37g"
           :classification "Lt. Spacecraft"
           :mass "32.2tons"
           :height "18.7m"
@@ -3684,7 +3577,7 @@ Mechanical designer: Kazumi Fujita"
 beam saber, power rating unknown
 Optional fixed armaments: shield, mounted on either forearm"
           :titles "RMS-179, RGM-79R"
-          :speed "1.06g"
+          :speedspace "1.06g"
           :classification "Lt. Spacecraft"
           :mass "40.5tons"
           :height "18.1m"
@@ -3828,7 +3721,7 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
           :image "Gundam/Qubeley.png"
           :summary "Fixed armaments: 2 x beam launcher/beam saber, mounted in forearms in beam launcher mode, hand-carried in beam saber mode"
           :titles "AMX-004"
-          :speed "1.08g"
+          :speedspace "1.08g"
           :classification "Lt. Spacecraft"
           :mass "35.2tons"
           :height "18.4m"
@@ -3850,7 +3743,7 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
           :image "Gundam/TheO.png"
           :summary "4 x sub-arm, mounted inside front skirt armor"
           :titles "PMX-003"
-          :speed "1.57g"
+          :speedspace "1.57g"
           :classification "Lt. Spacecraft"
           :mass "57.3tons"
           :height "24.8m"

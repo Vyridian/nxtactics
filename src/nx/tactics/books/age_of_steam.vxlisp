@@ -264,7 +264,7 @@ them easily.")))
          (unit
           :name "Merrimack"
           :titles "CSS Virginia"
-          :speed "17kph"
+          :speedwater "17kph"
           :classification "Hvy. Naval Vessel"
           :crew "320"
           :mass "4500tons"
@@ -320,7 +320,7 @@ them easily.")))
         "USS Monitor"
          (unit
           :name "USS Monitor"
-          :speed "15kph"
+          :speedwater "15kph"
           :classification "Hvy. Naval Vessel"
           :crew "59"
           :mass "1000tons"

@@ -870,7 +870,8 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
         "Reflex Gun"
          (unit
           :name "Reflex Gun"
-          :summary "* Argo is on the opposite side of Pluto. The opposite side? Oh, no Star Force, you're not getting away. My Reflex Gun can shoot around corners. - Colonel Ganz")))
+          :summary
+           "* Argo is on the opposite side of Pluto. The opposite side? Oh, no Star Force, you're not getting away. My Reflex Gun can shoot around corners. - Colonel Ganz")))
     "Comet Empire"
      (section
       :name "Comet Empire"
@@ -880,7 +881,8 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
          (unit
           :name "Prince Zordar"
           :image "SpaceBattleshipYamato/PrinceZordar.png"
-          :summary "I hold the whole universe in the palm of my hand. I just close my hand and planet crumble, the stars shatter! What chance does your planet Earth have? It's a cosmic joke. - Prince Zordar")
+          :summary
+           "I hold the whole universe in the palm of my hand. I just close my hand and planet crumble, the stars shatter! What chance does your planet Earth have? It's a cosmic joke. - Prince Zordar")
         "Comet Empire"
          (unit
           :name "Comet Empire"
@@ -889,9 +891,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
          (unit
           :name "Medaruhse"
           :summary
-           "Its principal weapon is a large plasma cannon which fires directly into a SMITE field which teleports the
-energy to a considerable distance.  This gives the weapon a tremendous firing range more than twice that of
-a Wave Motion Gun."
+           "Its principal weapon is a large plasma cannon which fires directly into a SMITE field which teleports the energy to a considerable distance.  This gives the weapon a tremendous firing range more than twice that of a Wave Motion Gun."
           :titles "Magna Flame Gun"
           :unitpowermap
            (unitpowermap
@@ -925,7 +925,7 @@ a Wave Motion Gun."
           :name "Motaran Rift"
           :summary
            "* Beyond the Alliance Frontier is the ionic Pendulask storm stretching 100 light years across. In the center of the storm is a spacial disturbance that has ripped the fabric of time itself - The Motaran Rift.
-* There has been documented evidence of horrific beings who appear alive, but then not alive, which have escaped from the Rift to wreak havoc on nearby worlds. Scientists theorize that there must be a time corridor that links some netherworld to the third dimension. Others believe it is a conduit that links another part if the universe to itself. Religious groups call it Hell.")))
+            * There has been documented evidence of horrific beings who appear alive, but then not alive, which have escaped from the Rift to wreak havoc on nearby worlds. Scientists theorize that there must be a time corridor that links some netherworld to the third dimension. Others believe it is a conduit that links another part if the universe to itself. Religious groups call it Hell.")))
     "Terran Union"
      (section
       :name "Terran Union")
@@ -934,17 +934,17 @@ a Wave Motion Gun."
       :name "Galactic Alliance"
       :summary
        "* Alliance Defense Service - A Service chartered with the defense and policing of star systems including air, sea, and land policing and defense. They hold authority over all civilian facilities including cities, space stations, and satellites.
-** Alliance Police
-** Alliance Bureau of Investigation
-* Alliance Military Service
-** Alliance Naval Division - A division managing large combat ships of all types including capital ships, military space stations, and military satellites.
-** Alliance Starfighter Division - A division managing small combat ships including interceptors, close support, and bombers.
-** Alliance Commando Corp - Elite teams focused on performing surgical military operations deep within hostile territory.
-** Alliance Marine Corp - A dedicated combat group focused on spearheading battles and rapid response.
-* Alliance Contact Service - A Service dedicated to exploration, diplomacy, trade negotiations, foreign intelligence, and the projection of soft power.
-** Alliance Diplomatic Corp
-** Alliance Intelligence Corp
-* Alliance Research Service"
+        ** Alliance Police
+        ** Alliance Bureau of Investigation
+        * Alliance Military Service
+        ** Alliance Naval Division - A division managing large combat ships of all types including capital ships, military space stations, and military satellites.
+        ** Alliance Starfighter Division - A division managing small combat ships including interceptors, close support, and bombers.
+        ** Alliance Commando Corp - Elite teams focused on performing surgical military operations deep within hostile territory.
+        ** Alliance Marine Corp - A dedicated combat group focused on spearheading battles and rapid response.
+        * Alliance Contact Service - A Service dedicated to exploration, diplomacy, trade negotiations, foreign intelligence, and the projection of soft power.
+        ** Alliance Diplomatic Corp
+        ** Alliance Intelligence Corp
+        * Alliance Research Service"
       :titles "Federation, Feddys (derogatory), Starfleet"
       :itemmap
        (itemmap
@@ -952,8 +952,7 @@ a Wave Motion Gun."
          (item
           :name "PAX"
           :summary
-           "* PAX is a chemical compound designed to be added to air processors in order to pacify a populace. An Alliance research team on Miranda discovered that the Pax was effective with 99.9% of people. Unfortunately, it was such an effective means of pacifying that the people stopped doing anything, they simply waited for death. The remaining tenth of a percent (0.1%) of the population had the opposite
-reaction. They became highly aggressive, committing unspeakable acts including cannibalism, rape, and self-mutilation. These people would come to be known as Reavers."
+           "* PAX is a chemical compound designed to be added to air processors in order to pacify a populace. An Alliance research team on Miranda discovered that the Pax was effective with 99.9% of people. Unfortunately, it was such an effective means of pacifying that the people stopped doing anything, they simply waited for death. The remaining tenth of a percent (0.1%) of the population had the opposite reaction. They became highly aggressive, committing unspeakable acts including cannibalism, rape, and self-mutilation. These people would come to be known as Reavers."
           :titles "G-23 Paxilon Hydrochlorate, PAX (Latin for Peace)"))
       :placemap
        (placemap
@@ -962,10 +961,10 @@ reaction. They became highly aggressive, committing unspeakable acts including c
           :name "Alliance Spaceport"
           :summary
            "* Spaceports on Alliance worlds service all incoming and outgoing space traffic. It is strictly illegal to attempt to land on a planet anywhere except a spaceport.
-* Spaceports manage customs, quarantines, weapons checks, temporary lodging, resupply, trade, entertainment, etc.
-* Spaceports are always located far away from major cities. They are also heavily armed with troops, fighters, and destroyers available at short notice.
-* For safety reasons, landing pads and drydocks are located 10km away from any inhabited area. The spaceport proper is reached by shuttles.
-* Orbital and land-based spaceports are essentially the same except for modes of travel."))
+            * Spaceports manage customs, quarantines, weapons checks, temporary lodging, resupply, trade, entertainment, etc.
+            * Spaceports are always located far away from major cities. They are also heavily armed with troops, fighters, and destroyers available at short notice.
+            * For safety reasons, landing pads and drydocks are located 10km away from any inhabited area. The spaceport proper is reached by shuttles.
+            * Orbital and land-based spaceports are essentially the same except for modes of travel."))
       :unitmap
        (unitmap
         "Alliance Armsman"
@@ -980,7 +979,8 @@ reaction. They became highly aggressive, committing unspeakable acts including c
         "Alliance Emmissary"
          (unit
           :name "Alliance Emmissary"
-          :summary "* Serves on First Contact and other diplomatic missions. Emmissaries must determine the best course of action to develop long-term relations with other species. As such, they have sweeping powers to determine policy that military personnel must implement including blockades and quarantines."
+          :summary
+           "* Serves on First Contact and other diplomatic missions. Emmissaries must determine the best course of action to develop long-term relations with other species. As such, they have sweeping powers to determine policy that military personnel must implement including blockades and quarantines."
           :titles "Diplomat")
         "Alliance Heavy Marine"
          (unit
@@ -1015,9 +1015,9 @@ reaction. They became highly aggressive, committing unspeakable acts including c
           :name "Alliance Scout"
           :summary
            "* Alliance Scouts operate somewhat differently from the other divisions of the Alliance. Since Scouts must opearte on the edge of civilized space, the Scout Service values independence and resourcefulness. Its people are highly independent (some would say insubordinate) and are accustomed to doing a lot with a little. Scouts do not wear normally uniforms, even onboard ships and easily blend in with the frontier fringers. They operate with little funding or support and are experts at survival and mechancal engineering.
-* Reputation - Among the other divisions, the Scouts are seen as unprofessional cowboys, madmen, or criminals depending on who you talk to. The Scouts themselves admit to cases of all of these, and they proudly maintain that it takes a certain type to be a successful Scout.
-* Intelligence - Given the Scouts' deployment at the fringes of civilization, they often gain intelligence that the Intelligence Bureau would find difficult to obtain on their own. Officially, the Scout service shares all intelligence gathered with the Bureau. Unofficially, the Scouts do not like the way the Intelligence Bureau operates and rarely volunteers information. This hesitency, of course, makes the Bureau suspiscious.
-* Wartime - During war, the Scouts are called upon to perform skirmish and sabotage missions using their fast, light craft.")
+            * Reputation - Among the other divisions, the Scouts are seen as unprofessional cowboys, madmen, or criminals depending on who you talk to. The Scouts themselves admit to cases of all of these, and they proudly maintain that it takes a certain type to be a successful Scout.
+            * Intelligence - Given the Scouts' deployment at the fringes of civilization, they often gain intelligence that the Intelligence Bureau would find difficult to obtain on their own. Officially, the Scout service shares all intelligence gathered with the Bureau. Unofficially, the Scouts do not like the way the Intelligence Bureau operates and rarely volunteers information. This hesitency, of course, makes the Bureau suspiscious.
+            * Wartime - During war, the Scouts are called upon to perform skirmish and sabotage missions using their fast, light craft.")
         "Alliance Technician"
          (unit
           :name "Alliance Technician")
@@ -1027,25 +1027,27 @@ reaction. They became highly aggressive, committing unspeakable acts including c
         "Alliance Defense Pilot"
          (unit
           :name "Alliance Defense Pilot"
-          :summary "* Planet-based spacefighter pilot. These fighters can only attain low-orbit, but they are relatively cheap to manufacture and easy to fly so they can be fielded in large numbers.")
+          :summary
+           "* Planet-based spacefighter pilot. These fighters can only attain low-orbit, but they are relatively cheap to manufacture and easy to fly so they can be fielded in large numbers.")
         "Alliance Defense Trooper"
          (unit
           :name "Alliance Defense Trooper"
-          :summary "* Planet-based military force. These warriors are trained to use the local terrain and defensive positions to repel invaders. Since defense forces are rarely needed, it is usually a cushy job. Therefore, they have a somewhate deserved reputation for being lazy and unprepared.")
+          :summary
+           "* Planet-based military force. These warriors are trained to use the local terrain and defensive positions to repel invaders. Since defense forces are rarely needed, it is usually a cushy job. Therefore, they have a somewhate deserved reputation for being lazy and unprepared.")
         "Inquiry Light Recon ATV"
          (unit
           :name "Inquiry Light Recon ATV"
           :summary
            "* Wheeled
-* Open topped ATV with HMG and MRLx2."
-          :speed "170kph"
+            * Open topped ATV with HMG and MRLx2."
+          :speedland "170kph"
           :crew "3"
           :mass "4tons")
         "Sepoy APC"
          (unit
           :name "Sepoy APC"
           :summary "* Wheeled"
-          :speed "300kph"
+          :speedland "300kph"
           :crew "1+11"
           :mass "38tons")
         "Hunter AC Tank"
@@ -1053,37 +1055,37 @@ reaction. They became highly aggressive, committing unspeakable acts including c
           :name "Hunter AC Tank"
           :summary
            "* Air Cushioned
-* Pulse Laser
-* Gauss MG
-* MRL"
-          :speed "45kph"
+            * Pulse Laser
+            * Gauss MG
+            * MRL"
+          :speedair "45kph"
           :crew "6"
           :mass "210tons")
         "Siega Strider"
          (unit
           :name "Siega Strider"
           :summary "* Legged"
-          :speed "200kph"
+          :speedair "200kph"
           :crew "1"
           :mass "60tons")
         "Striker Grav Tank"
          (unit
           :name "Striker Grav Tank"
           :summary "* 50MW Pulse Laser"
-          :speed "480kph"
+          :speedair "480kph"
           :crew "3"
           :mass "522tons")
         "Tarsan Grav APC"
          (unit
           :name "Tarsan Grav APC"
-          :speed "300kph"
+          :speedair "300kph"
           :crew "2+10"
           :mass "51tons")
         "Essor Recon Drone"
          (unit
           :name "Essor Recon Drone"
           :summary "* No Weapons"
-          :speed "1000kph"
+          :speedair "1000kph"
           :crew "0"
           :mass "4.3tons")
         "Princely Lord Attack Speeder"
@@ -1091,39 +1093,36 @@ reaction. They became highly aggressive, committing unspeakable acts including c
           :name "Princely Lord Attack Speeder"
           :summary
            "* Grav Flyer
-* Pulse Laser"
-          :speed "960kph"
+            * Pulse Laser"
+          :speedair "960kph"
           :crew "2"
           :mass "171tons")
         "Alliance Exploration Ship"
          (unit
           :name "Alliance Exploration Ship"
           :summary
-           "* SS Copernicus - Floating adrift in open space, the Copernicus is a ghost ship
-in more ways than one.")
+           "* SS Copernicus - Floating adrift in open space, the Copernicus is a ghost ship in more ways than one.")
         "Hellbore Missile"
          (unit
           :name "Hellbore Missile"
           :summary
-           "* A giant missile designed to drill into a planet and detonate deep in the magma setting
-off massive volcanic eruptions across the world with the intention to make the world
-uninhabitable.")))
+           "* A giant missile designed to drill into a planet and detonate deep in the magma setting off massive volcanic eruptions across the world with the intention to make the world uninhabitable.")))
     "Azuriach Empire"
      (section
       :name "Azuriach Empire"
       :summary
        "History:
-* Exodus - After the first Exodus to space, the over-industrialized, pollution ridden Earth fell into a deep recession. The remaining population of Earth began to feel that their fellow humans had abandoned them to their fate and grew to resent their spacefaring kin.
-* Eugenics War - After the Eugenics War, Earth banned all genetic engineering including cloning and artificial life while the Colonials embraced these technologies for their very survival.  Earth began to see the Colonials as a twisted offshoot of mankind that chose a sterile life in space surrounded by runaway technology instead of a wholesome life with earth, sky, and sea.
-* Azure Party - After the Eugenics War, the Earth moved toward a 'Pure Earth' platform combining a resurgence of religion with a return to a more natural, peaceful way of life, on Earth.  A particularly militaristic wing of the the 'Pure Earth' movement became known as the Azure party due to the round blue patches they wore symbolizing the Earth. The Azures were experts at propaganda and found an easy scapecoat in the Colonials.  As the global recession continued, the Azures influence over Earth politics increased.
-* United Earth Alliance (UEA) - After millenia of conflict, Earth united under a single banner, the United Earth Alliance (UEA). Its political platform was the 'Pure Earth' platform, without genetic engineering, without cloning, and with the UEA in control of the Solar System. The Colonials saw this for the power grab that it was and mocked this position as the 'Groundhog Movement'.
-* Solar Cold War - The UEA and the Colonials, especially the Jovians, fought a cold war for decades trying to gain the upper hand. The development of Exo-suits by the Jovian Confederation led to a new arms race between the Jovians and Earth. In the end, the strain on the Earth economy was too great, and the UEA became desparate. In order to maintain control, they declared martial law and began a military build up. This ultimately, forced the other Colonials to rally toward the Jovians or lose their sovereignty.
-* The Rock War - Earth's military might far exceeded the colonies, but their reach was limited to Earth's orbit. The Colonials had far more spaceships, but the vast majority of these were civilian ships.  Ultimately, however, it was the UEA's unpopularity that was its downfall. Before the final battle, sabotage and poor maintenance had incapacitated half of the Earth fleet. When the final battle was fought, the Colonials used their superior numbers to engage the Earth fleet in high Earth orbit where Earth's gravity well restricted the UEA fleet's movements. Then the Colonials covertly captured the industrial Mass Drivers on the Moon and began railing rocks into the Earth fleet and unto Earth itself. After horrific loses on both sides, the Earth military staged a coup on Earth and immediately negotiated a cease fire. The UEA was disbanded and their leaders (largely Azures) were put on trial.
-* Terran Union - After the fall of the UEG, the Colonials created a new representative goverment with each colony, including Earth and Luna, as a state. Earth began rebuilding, but the scars of the war would take centuries to heal.
-* Colony Ships - After 50 years of peace, the colonization of the Solar System was moving along smoothly, so the Terrans began to look outward to the stars. New discoveries in propulsion made long-range probes and colony ships feasible, though their journeys were still measured in decades, so they would still be one-way missions.
-* First Contact - The Terrans had been searching the stars for extra-terrestrial life for hundreds of years, but they were not prepared to find it in their own backyard. A survey of Pluto uncovered an abandoned alien outpost. This was the Terrans' first proof of alien life, and it was decidedly malevolent. This refocused space exploration on the construction of military warships. 30 years later, a human colony vessel had its first face-to-face encounter with a space-faring, alien race, the Thranx.
-* Alliance - The Thranx were much more advanced than the Terrans, but fortunately they were also much more peaceful. The Thranx were part of a loose trade Alliance of races including the Blarads, Caitians, Saurians, and Vargr. The Terrans entered the Alliance and were able to purchase the secrets to FTL drives.  With FTL, colonization of the stars began in earnest. Like the early American settlers, there were many willing to risk death for a chance at a new life. Large colony ships began radiating outward to nearby planets.  Among these were a number of disgruntled Azures who were horrified at the sight of humans reduced to a third rate state in an alien dominated Alliance. Over the next decades, the Azures began settling in one region of stars distant from any alien races.
-* Azuriach Imperium - Over time, the Azures consolidated power in their sector of space. They secretly built a large military fleet, and by the time the Terran Union discovered them, the Azures were powerful enough to declare themselves the Azuriach Imperium. Officially, the larger Alliance considers the Azuriachs a human internal problem. Unofficially, the Alliance is concerned with the distinctly human-centric views of the Azuriachs and are not interested in the Azuriachs gaining power over the human worlds."
+        * Exodus - After the first Exodus to space, the over-industrialized, pollution ridden Earth fell into a deep recession. The remaining population of Earth began to feel that their fellow humans had abandoned them to their fate and grew to resent their spacefaring kin.
+        * Eugenics War - After the Eugenics War, Earth banned all genetic engineering including cloning and artificial life while the Colonials embraced these technologies for their very survival.  Earth began to see the Colonials as a twisted offshoot of mankind that chose a sterile life in space surrounded by runaway technology instead of a wholesome life with earth, sky, and sea.
+        * Azure Party - After the Eugenics War, the Earth moved toward a 'Pure Earth' platform combining a resurgence of religion with a return to a more natural, peaceful way of life, on Earth.  A particularly militaristic wing of the the 'Pure Earth' movement became known as the Azure party due to the round blue patches they wore symbolizing the Earth. The Azures were experts at propaganda and found an easy scapecoat in the Colonials.  As the global recession continued, the Azures influence over Earth politics increased.
+        * United Earth Alliance (UEA) - After millenia of conflict, Earth united under a single banner, the United Earth Alliance (UEA). Its political platform was the 'Pure Earth' platform, without genetic engineering, without cloning, and with the UEA in control of the Solar System. The Colonials saw this for the power grab that it was and mocked this position as the 'Groundhog Movement'.
+        * Solar Cold War - The UEA and the Colonials, especially the Jovians, fought a cold war for decades trying to gain the upper hand. The development of Exo-suits by the Jovian Confederation led to a new arms race between the Jovians and Earth. In the end, the strain on the Earth economy was too great, and the UEA became desparate. In order to maintain control, they declared martial law and began a military build up. This ultimately, forced the other Colonials to rally toward the Jovians or lose their sovereignty.
+        * The Rock War - Earth's military might far exceeded the colonies, but their reach was limited to Earth's orbit. The Colonials had far more spaceships, but the vast majority of these were civilian ships.  Ultimately, however, it was the UEA's unpopularity that was its downfall. Before the final battle, sabotage and poor maintenance had incapacitated half of the Earth fleet. When the final battle was fought, the Colonials used their superior numbers to engage the Earth fleet in high Earth orbit where Earth's gravity well restricted the UEA fleet's movements. Then the Colonials covertly captured the industrial Mass Drivers on the Moon and began railing rocks into the Earth fleet and unto Earth itself. After horrific loses on both sides, the Earth military staged a coup on Earth and immediately negotiated a cease fire. The UEA was disbanded and their leaders (largely Azures) were put on trial.
+        * Terran Union - After the fall of the UEG, the Colonials created a new representative goverment with each colony, including Earth and Luna, as a state. Earth began rebuilding, but the scars of the war would take centuries to heal.
+        * Colony Ships - After 50 years of peace, the colonization of the Solar System was moving along smoothly, so the Terrans began to look outward to the stars. New discoveries in propulsion made long-range probes and colony ships feasible, though their journeys were still measured in decades, so they would still be one-way missions.
+        * First Contact - The Terrans had been searching the stars for extra-terrestrial life for hundreds of years, but they were not prepared to find it in their own backyard. A survey of Pluto uncovered an abandoned alien outpost. This was the Terrans' first proof of alien life, and it was decidedly malevolent. This refocused space exploration on the construction of military warships. 30 years later, a human colony vessel had its first face-to-face encounter with a space-faring, alien race, the Thranx.
+        * Alliance - The Thranx were much more advanced than the Terrans, but fortunately they were also much more peaceful. The Thranx were part of a loose trade Alliance of races including the Blarads, Caitians, Saurians, and Vargr. The Terrans entered the Alliance and were able to purchase the secrets to FTL drives.  With FTL, colonization of the stars began in earnest. Like the early American settlers, there were many willing to risk death for a chance at a new life. Large colony ships began radiating outward to nearby planets.  Among these were a number of disgruntled Azures who were horrified at the sight of humans reduced to a third rate state in an alien dominated Alliance. Over the next decades, the Azures began settling in one region of stars distant from any alien races.
+        * Azuriach Imperium - Over time, the Azures consolidated power in their sector of space. They secretly built a large military fleet, and by the time the Terran Union discovered them, the Azures were powerful enough to declare themselves the Azuriach Imperium. Officially, the larger Alliance considers the Azuriachs a human internal problem. Unofficially, the Alliance is concerned with the distinctly human-centric views of the Azuriachs and are not interested in the Azuriachs gaining power over the human worlds."
       :titles "Earth Empire"
       :unitmap
        (unitmap
@@ -1146,14 +1145,14 @@ uninhabitable.")))
          (unit
           :name "Trepida Light Grav Tank"
           :summary "* Fusion Cannon"
-          :speed "1000kph"
+          :speedland "1000kph"
           :crew "2"
           :mass "110tons")
         "Invader Grav Tank"
          (unit
           :name "Invader Grav Tank"
           :summary "* Fusion Cannon"
-          :speed "3640kph"
+          :speedland "3640kph"
           :crew "4"
           :mass "152tons")
         "Vortex Land Carrier"
@@ -1161,15 +1160,15 @@ uninhabitable.")))
           :name "Vortex Land Carrier"
           :summary
            "* These enormous vehicles are equivalent to a naval battleship/aircraft carrier but hovers over the ground using intense magnetic repulsion and massive hoverfans.
-* The area directly below the hull is exposed to lethal magnetic energy.
-* Fusion Cannon")))
+            * The area directly below the hull is exposed to lethal magnetic energy.
+            * Fusion Cannon")))
     "Galactic Trade Union"
      (section
       :name "Galactic Trade Union"
       :summary
        "* A powerful group of loosely affiliated mega-corporations that acts as the largest lobbying group in the Alliance. The Union has wields tremendous influence over the Alliance government and is essentially a shadow government itself. Though it wields tremendous power, there is intense disagreement how that power should be used with one group or another benefiting the most from every action taken. Conflict within the Union is subversive and bloody with many outside pawns being used including mercenaries and the Star Syndicate.
-* The Trade Union has no actual employees. Instead, the individual corporations act on its behalf either directly or through contractors.
-* Most smaller companies believe the Trade Union acts as a mafia by extorting money from its members for protection while leaning trade deals toward the core members and stifling the very competition they profess to uphold.")
+        * The Trade Union has no actual employees. Instead, the individual corporations act on its behalf either directly or through contractors.
+        * Most smaller companies believe the Trade Union acts as a mafia by extorting money from its members for protection while leaning trade deals toward the core members and stifling the very competition they profess to uphold.")
     "Star Syndicate"
      (section
       :name "Star Syndicate"
@@ -1214,8 +1213,8 @@ uninhabitable.")))
           :name "Corsair Motorcycle"
           :summary
            "* Wheeled
-* Civilian Motorcycle"
-          :speed "120kph"
+            * Civilian Motorcycle"
+          :speedland "120kph"
           :crew "1"
           :mass "350kg")
         "Letra Ground Car"
@@ -1223,8 +1222,8 @@ uninhabitable.")))
           :name "Letra Ground Car"
           :summary
            "* Wheeled
-* Civilian Automobile"
-          :speed "80kph"
+            * Civilian Automobile"
+          :speedland "80kph"
           :crew "1+4"
           :mass "4tons")
         "Shackleton Snow ATV"
@@ -1232,8 +1231,8 @@ uninhabitable.")))
           :name "Shackleton Snow ATV"
           :summary
            "* Tracked
-* Easy to maintain snow ATV"
-          :speed "70kph"
+            * Easy to maintain snow ATV"
+          :speedland "70kph"
           :crew "1+3"
           :mass "8tons")
         "Rheena Passenger ACV"
@@ -1241,8 +1240,8 @@ uninhabitable.")))
           :name "Rheena Passenger ACV"
           :summary
            "* Air Cushioned
-* Passenger Hovercraft"
-          :speed "60kph"
+            * Passenger Hovercraft"
+          :speedland "60kph"
           :crew "1+15"
           :mass "8tons")
         "Or-E-Cull ATV"
@@ -1250,8 +1249,8 @@ uninhabitable.")))
           :name "Or-E-Cull ATV"
           :summary
            "* Tracked
-* High Speed ATV"
-          :speed "175kph"
+            * High Speed ATV"
+          :speedland "175kph"
           :crew "1+5"
           :mass "10tons")
         "Surveyor Hover-Buggy"
@@ -1259,8 +1258,8 @@ uninhabitable.")))
           :name "Surveyor Hover-Buggy"
           :summary
            "* Air Cushion
-* 1 Fixed LMG."
-          :speed "45kph"
+            * 1 Fixed LMG."
+          :speedland "45kph"
           :crew "1"
           :mass "13.7tons")
         "AVI Cargo ACV"
@@ -1268,8 +1267,8 @@ uninhabitable.")))
           :name "AVI Cargo ACV"
           :summary
            "* Air Cushioned
-* Cargo Hovercraft"
-          :speed "60kph"
+            * Cargo Hovercraft"
+          :speedland "60kph"
           :crew "1+3"
           :mass "18tons")
         "Hugheston Wheeled Transport"
@@ -1277,9 +1276,9 @@ uninhabitable.")))
           :name "Hugheston Wheeled Transport"
           :summary
            "* Wheeled
-* Cargo Transporter"
+            * Cargo Transporter"
           :titles "Semi Truck"
-          :speed "100kph"
+          :speedland "100kph"
           :crew "1+2"
           :mass "21tons")
         "Arctica Grav Transport"
@@ -1287,9 +1286,9 @@ uninhabitable.")))
           :name "Arctica Grav Transport"
           :summary
            "* Grav
-* Self loading cargo transporter"
+            * Self loading cargo transporter"
           :titles "Semi Truck"
-          :speed "120kph"
+          :speedair "120kph"
           :crew "1+2"
           :mass "25tons")
         "Bundan Wheeled ATV"
@@ -1297,8 +1296,8 @@ uninhabitable.")))
           :name "Bundan Wheeled ATV"
           :summary
            "* Wheeled
-* ATV"
-          :speed "100kph"
+            * ATV"
+          :speedland "100kph"
           :crew "1+16"
           :mass "28tons")
         "Permax Tracked ATV"
@@ -1306,8 +1305,8 @@ uninhabitable.")))
           :name "Permax Tracked ATV"
           :summary
            "* Tracked
-* ATV"
-          :speed "80kph"
+            * ATV"
+          :speedland "80kph"
           :crew "1+16"
           :mass "47tons")
         "Cinto Construction Vehicle"
@@ -1315,8 +1314,8 @@ uninhabitable.")))
           :name "Cinto Construction Vehicle"
           :summary
            "* Tracked
-* Bulldozer/Backhoe"
-          :speed "75kph"
+            * Bulldozer/Backhoe"
+          :speedland "75kph"
           :crew "1"
           :mass "48tons")
         "Tavee-Gho Hoveryacht"
@@ -1324,8 +1323,8 @@ uninhabitable.")))
           :name "Tavee-Gho Hoveryacht"
           :summary
            "* Air Cushioned
-* Hovercraft"
-          :speed "105kph"
+            * Hovercraft"
+          :speedwater "105kph"
           :crew "1+3"
           :mass "82tons")
         "Cetacean Dolphin Cycle"
@@ -1333,16 +1332,15 @@ uninhabitable.")))
           :name "Cetacean Dolphin Cycle"
           :summary
            "* Underwater, Propelled by moving Fluke
-* Intended for fun in the sea.  It can glide with the dolphins and communicate with them using
-recorded dolphin speech."
-          :speed "50kph"
+            * Intended for fun in the sea. It can glide with the dolphins and communicate with them using recorded dolphin speech."
+          :speedwater "50kph"
           :crew "1"
           :mass "75kg")
         "Hass Grav Minisub"
          (unit
           :name "Hass Grav Minisub"
           :summary "* Underwater"
-          :speed "25kph"
+          :speedwater "25kph"
           :crew "1+1"
           :mass "1tons")
         "Dashi Hydrofoil"
@@ -1350,9 +1348,9 @@ recorded dolphin speech."
           :name "Dashi Hydrofoil"
           :summary
            "* Hydrofoil, Underwater
-* Submerged: 25kph
-* Beam Laser"
-          :speed "125kph"
+            * Submerged: 25kph
+            * Beam Laser"
+          :speedwater "125kph"
           :crew "2"
           :mass "2tons")
         "Vieus Hydrofoil"
@@ -1360,15 +1358,16 @@ recorded dolphin speech."
           :name "Vieus Hydrofoil"
           :summary
            "* Hydrofoil
-* Pulse Laser"
-          :speed "110kph"
+            * Pulse Laser"
+          :speedwater "110kph"
           :crew "2"
           :mass "22tons")
         "Gasheda Undersea ATV"
          (unit
           :name "Gasheda Undersea ATV"
-          :summary "* Tracked, Underwater"
-          :speed "110kph"
+          :summary
+           "* Tracked, Underwater"
+          :speedwater "110kph"
           :crew "6"
           :mass "184tons")
         "Aquanaut Restaurant"
@@ -1376,8 +1375,8 @@ recorded dolphin speech."
           :name "Aquanaut Restaurant"
           :summary
            "* Tracked, Underwater
-* Undersea Restaurant"
-          :speed "110kph"
+            * Undersea Restaurant"
+          :speedwater "110kph"
           :crew "15+85"
           :mass "251tons")
         "Tiamat Mining Crawler"
@@ -1385,9 +1384,9 @@ recorded dolphin speech."
           :name "Tiamat Mining Crawler"
           :summary
            "* Tracked, Underwater
-* Self-contained undersea mining colony for 50.
-* Can stay 10km underwater for 3 to 6 months at a time."
-          :speed "70kph"
+            * Self-contained undersea mining colony for 50.
+            * Can stay 10km underwater for 3 to 6 months at a time."
+          :speedwater "70kph"
           :crew "14+50"
           :mass "1000tons")
         "Timla Personal Floating Chair"
@@ -1395,9 +1394,9 @@ recorded dolphin speech."
           :name "Timla Personal Floating Chair"
           :summary
            "* Grav
-* Used for the luxury, the elderly or disabled, or for aliens with poor ground locomotion.
-* The floating chair normally just hovers over the ground, but it can slowly ascend if needed."
-          :speed "30kph"
+            * Used for the luxury, the elderly or disabled, or for aliens with poor ground locomotion.
+            * The floating chair normally just hovers over the ground, but it can slowly ascend if needed."
+          :speedair "30kph"
           :crew "1"
           :mass "100kg")
         "Peter Pan Child's Grav Chair"
@@ -1405,9 +1404,9 @@ recorded dolphin speech."
           :name "Peter Pan Child's Grav Chair"
           :summary
            "* Grav
-* Young passengers automatically are taken to their programmed destination anywhere in the world.
-* Computer will not allow reprogramming unless authorized by the parent."
-          :speed "600kph"
+            * Young passengers automatically are taken to their programmed destination anywhere in the world.
+            * Computer will not allow reprogramming unless authorized by the parent."
+          :speedair "600kph"
           :crew "1"
           :mass "400kg")
         "Zeus Luxury Grav Chair"
@@ -1415,9 +1414,8 @@ recorded dolphin speech."
           :name "Zeus Luxury Grav Chair"
           :summary
            "* Grav
-* The ultimate in individual luxury transport.  The autopilot allows the passengers to work,
-talk, or relax with a drink."
-          :speed "300kph"
+            * The ultimate in individual luxury transport.  The autopilot allows the passengers to work, talk, or relax with a drink."
+          :speedair "300kph"
           :crew "1+1"
           :mass "480kg")
         "Swallow Flycycle"
@@ -1425,8 +1423,8 @@ talk, or relax with a drink."
           :name "Swallow Flycycle"
           :summary
            "* Grav
-* Autopilot"
-          :speed "300kph"
+            * Autopilot"
+          :speedair "300kph"
           :crew "1+1"
           :mass "1tons")
         "Venery Police Speeder"
@@ -1434,8 +1432,8 @@ talk, or relax with a drink."
           :name "Venery Police Speeder"
           :summary
            "* Grav
-* Gauss MG"
-          :speed "1080kph"
+            * Gauss MG"
+          :speedair "1080kph"
           :crew "1"
           :mass "1.2tons")
         "Strike It Rich Prospector Grav Bubble"
@@ -1443,8 +1441,8 @@ talk, or relax with a drink."
           :name "Strike It Rich Prospector Grav Bubble"
           :summary
            "* Grav
-* Can manuever close to analyze samples with its robotic arm. The bubble is to be used near a base. A team usually drops off one crewman to dig while the other prospects for new sites."
-          :speed "1600kph"
+            * Can manuever close to analyze samples with its robotic arm. The bubble is to be used near a base. A team usually drops off one crewman to dig while the other prospects for new sites."
+          :speedair "1600kph"
           :crew "1+1"
           :mass "1.5tons")
         "Planet Hopper Grav Car"
@@ -1452,15 +1450,15 @@ talk, or relax with a drink."
           :name "Planet Hopper Grav Car"
           :summary
            "* Grav
-* Flying family-sized car can travel anywhere on a planet in under a day."
-          :speed "1000kph"
+            * Flying family-sized car can travel anywhere on a planet in under a day."
+          :speedair "1000kph"
           :crew "1+3"
           :mass "2.6tons")
         "Quest Air-Raft"
          (unit
           :name "Quest Air-Raft"
           :summary "* Grav"
-          :speed "540kph"
+          :speedair "540kph"
           :crew "1+5"
           :mass "8.3tons")
         "Demeter Grav Farm Wagon"
@@ -1468,9 +1466,9 @@ talk, or relax with a drink."
           :name "Demeter Grav Farm Wagon"
           :summary
            "* Grav
-* Grav farming equipment that does not disturb crops.
-* Robotic arms plant and harvest."
-          :speed "100kph"
+            * Grav farming equipment that does not disturb crops.
+            * Robotic arms plant and harvest."
+          :speedair "100kph"
           :crew "3"
           :mass "11tons")
         "Lifesaver Grav Emergency Responder"
@@ -1478,9 +1476,9 @@ talk, or relax with a drink."
           :name "Lifesaver Grav Emergency Responder"
           :summary
            "* Grav
-* Includes variety of sensors for detecting radiation leaks, trapped survivors, etc.
-* Fire retardant foam cannon"
-          :speed "600kph"
+            * Includes variety of sensors for detecting radiation leaks, trapped survivors, etc.
+            * Fire retardant foam cannon"
+          :speedair "600kph"
           :crew "2+8"
           :mass "13tons")
         "Duone Rapid Speeder"
@@ -1488,8 +1486,8 @@ talk, or relax with a drink."
           :name "Duone Rapid Speeder"
           :summary
            "* Grav
-* Extremely high-speed grav flyer."
-          :speed "3840kph"
+            * Extremely high-speed grav flyer."
+          :speedair "3840kph"
           :crew "1+3"
           :mass "14tons")
         "Wanderer Grav Airbus"
@@ -1497,15 +1495,15 @@ talk, or relax with a drink."
           :name "Wanderer Grav Airbus"
           :summary
            "* Grav
-* Flying mass transit or tour bus can reach any location on the planet in under a day."
-          :speed "1400kph"
+            * Flying mass transit or tour bus can reach any location on the planet in under a day."
+          :speedair "1400kph"
           :crew "1+10"
           :mass "15tons")
         "Traveller Shuttle"
          (unit
           :name "Traveller Shuttle"
           :summary "* Grav, Suborbital"
-          :speed "180kph"
+          :speedair "180kph"
           :crew "1+8"
           :mass "17tons")
         "Cloud Nine Grav Houseboat"
@@ -1513,10 +1511,9 @@ talk, or relax with a drink."
           :name "Cloud Nine Grav Houseboat"
           :summary
            "* Grav
-* 3 Bedroom, 2 Bath, 1 Kitchen, 1 Living/Dining Room, 2 Office
-* Take a vacation or live in the sky.  The Cloud Nine has fuel and supplies for a year without
-landing."
-          :speed "300kph"
+            * 3 Bedroom, 2 Bath, 1 Kitchen, 1 Living/Dining Room, 2 Office
+            * Take a vacation or live in the sky.  The Cloud Nine has fuel and supplies for a year without landing."
+          :speedair "300kph"
           :crew "1+10"
           :mass "20tons")
         "Athene Grav Lounge"
@@ -1524,8 +1521,8 @@ landing."
           :name "Athene Grav Lounge"
           :summary
            "* Grav
-* Mobile lounge popular with private clubs, business executives, and negotiators."
-          :speed "720kph"
+            * Mobile lounge popular with private clubs, business executives, and negotiators."
+          :speedair "720kph"
           :crew "6+30"
           :mass "30tons")
         "Motherlode Grav Miner"
@@ -1533,8 +1530,8 @@ landing."
           :name "Motherlode Grav Miner"
           :summary
            "* Grav
-* Mining Utility Vehicle"
-          :speed "540kph"
+            * Mining Utility Vehicle"
+          :speedair "540kph"
           :crew "2+2"
           :mass "49tons")
         "Tachcel Grav Hyperliner"
@@ -1542,9 +1539,9 @@ landing."
           :name "Tachcel Grav Hyperliner"
           :summary
            "* Grav, Suborbital
-* Speed: 6G
-* At maximum speed, can reach any location on a typical planet in under an hour."
-          :speed "4200kph"
+            * Speed: 6G
+            * At maximum speed, can reach any location on a typical planet in under an hour."
+          :speedair "4200kph"
           :crew "2+72"
           :mass "50tons")
         "Jacques Grav Miner"
@@ -1552,9 +1549,9 @@ landing."
           :name "Jacques Grav Miner"
           :summary
            "* Grav
-* Mining vehicle designed to locate, mine, and transport ore from a variety of environments.
-* Mining Laser"
-          :speed "120kph"
+            * Mining vehicle designed to locate, mine, and transport ore from a variety of environments.
+            * Mining Laser"
+          :speedair "120kph"
           :crew "2+2"
           :mass "67tons")
         "Windrider Grav Weather Lab"
@@ -1562,8 +1559,8 @@ landing."
           :name "Windrider Grav Weather Lab"
           :summary
            "* Grav
-* Floating meteorological laboratory"
-          :speed "60kph"
+            * Floating meteorological laboratory"
+          :speedair "60kph"
           :crew "2+10"
           :mass "88tons")
         "Thorian Kur Repair Shop"
@@ -1571,8 +1568,8 @@ landing."
           :name "Thorian Kur Repair Shop"
           :summary
            "* Grav
-* Flying repair platform"
-          :speed "330kph"
+            * Flying repair platform"
+          :speedair "330kph"
           :crew "1+3"
           :mass "127tons")
         "Sans Souci Grav Yacht"
@@ -1580,10 +1577,9 @@ landing."
           :name "Sans Souci Grav Yacht"
           :summary
            "* Grav
-* The ultimate millionaire's portable mansion.  The interior has 14 staterooms and is custom
-designed to the owner's tastes.  Some models include a swimming pool.
-* High tech armor and sensors."
-          :speed "960kph"
+            * The ultimate millionaire's portable mansion. The interior has 14 staterooms and is custom designed to the owner's tastes. Some models include a swimming pool.
+            * High tech armor and sensors."
+          :speedair "960kph"
           :crew "1+30"
           :mass "342tons")
         "Zeff Grav Cargo Transport"
@@ -1591,8 +1587,8 @@ designed to the owner's tastes.  Some models include a swimming pool.
           :name "Zeff Grav Cargo Transport"
           :summary
            "* Grav
-* Heavy Cargo Transporter"
-          :speed "720kph"
+            * Heavy Cargo Transporter"
+          :speedair "720kph"
           :crew "1+1"
           :mass "500tons")))
     :Aeodronian
@@ -1851,7 +1847,7 @@ to recreate those dark days."
          (unit
           :name "Vargr Buccaneer Grav Platform"
           :summary "* High speed, open topped, gravity cycle shaped like a cylinder."
-          :speed "1000kph"
+          :speedair "1000kph"
           :crew "1"
           :mass "1.4tons")))
     :Virtuals
@@ -2616,10 +2612,10 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
           :image "StarWars/Imperial_Assault Gunboat.png"
           :summary
            "* 2 Laser Cannons
-* 2 Concussion Missile Launchers (20 missiles each)
-* 100 Shields"
+            * 2 Concussion Missile Launchers (20 missiles each)
+            * 100 Shields"
           :titles "Alpha Class Xg-1 Star Wing"
-          :speed "1050kph"
+          :speedair "1050kph"
           :crew "1"
           :height "7.2m"
           :length "10m"
@@ -2649,7 +2645,7 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
           :name "Imperial Walker"
           :image "StarWars/Imperial_Walker.png"
           :titles "AT-AT (All Terrain Armored Transport)"
-          :speed "60kph"
+          :speedland "60kph"
           :crew "4"
           :length "20m"
           :unitskillmap
@@ -2950,7 +2946,7 @@ Back")
           :name "A-Wing Fighter"
           :image "StarWars/Rebel_AWing.png"
           :titles "RZ-1"
-          :speed "1300kph"
+          :speedair "1300kph"
           :classification "Lt. Spacecraft"
           :height "1.9m"
           :length "9.6m"
@@ -2983,15 +2979,15 @@ Back")
           :name "E-Wing Fighter"
           :summary
            "* The first fighter designed entirely under the support of the New Republic.
-* The E-wing was intended to match, or exceed, the performance of the preceding X-wing series
-in nearly every respect.  However, the craft suffered from some significant problems when
-first deployed.  As a result, many pilots continued to fly upgraded versions of the
-venerable X-wing.
-* 4200G acceleration
-* 3 Laser Cannons
-* 1 Proton Torpedo Launcher w/16 Torpedoes
-* 1 R7 Astromech"
-          :speed "1300kph"
+            * The E-wing was intended to match, or exceed, the performance of the preceding X-wing series
+            in nearly every respect.  However, the craft suffered from some significant problems when
+            first deployed.  As a result, many pilots continued to fly upgraded versions of the
+            venerable X-wing.
+            * 4200G acceleration
+            * 3 Laser Cannons
+            * 1 Proton Torpedo Launcher w/16 Torpedoes
+            * 1 R7 Astromech"
+          :speedair "1300kph"
           :classification "Lt. Spacecraft"
           :length "11.2m")
         "X-Wing Fighter"
@@ -3002,7 +2998,7 @@ venerable X-wing.
            "* 3700G acceleration
 * 50 Shields"
           :titles "T-65"
-          :speed "1050kph"
+          :speedair "1050kph"
           :classification "Lt. Spacecraft"
           :length "12.5m"
           :unitskillmap
@@ -3027,8 +3023,8 @@ venerable X-wing.
           :image "StarWars/Rebel_YWing.png"
           :summary
            "* 2700G acceleration
-* 75 Shields"
-          :speed "1000kph"
+            * 75 Shields"
+          :speedair "1000kph"
           :classification "Lt. Spacecraft"
           :height "2.9m"
           :length "16m"
@@ -3071,7 +3067,7 @@ venerable X-wing.
           :image "StarWars/Rebel_MilleniumFalcon.png"
           :summary "* Speed: 1050kph Atmosphere, 80 Megalight?"
           :titles "YT-1300"
-          :speed "1050kph"
+          :speedair "1050kph"
           :classification "Med. Spacecraft"
           :crew "4+6"
           :height "8m"

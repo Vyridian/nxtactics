@@ -913,9 +913,9 @@
     :y 5))
  :doc "")
 
-(const style-unit-move : ui/style
+(const style-unit-speed : ui/style
  (ui/style
-  :name "style-unit-move"
+  :name "style-unit-speed"
   :layout ui/layout-label
   :align ui/align-center
   :pointpos
@@ -928,9 +928,9 @@
     :y 6))
  :doc "")
 
-(const style-unit-movedetail : ui/style
+(const style-unit-speeddetail : ui/style
  (ui/style
-  :name "style-unit-movedetail"
+  :name "style-unit-speeddetail"
   :layout ui/layout-label
   :pointpos
    (ui/point

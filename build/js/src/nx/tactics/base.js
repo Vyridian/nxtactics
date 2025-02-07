@@ -4687,8 +4687,8 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
-        "move": {
-          "name" : "move",
+        "speed": {
+          "name" : "speed",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -4769,11 +4769,6 @@ export default class nx_tactics_base {
         },
         "rounds": {
           "name" : "rounds",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "speed": {
-          "name" : "speed",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -7124,8 +7119,8 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
-        "move": {
-          "name" : "move",
+        "speed": {
+          "name" : "speed",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -7196,11 +7191,6 @@ export default class nx_tactics_base {
         },
         "range": {
           "name" : "range",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "speed": {
-          "name" : "speed",
           "type" : vx_core.t_string,
           "multi": false
         },

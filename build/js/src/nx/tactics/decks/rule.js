@@ -766,7 +766,7 @@ export default class nx_tactics_decks_rule {
   // (func card-speed)
   static f_card_speed() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-speed", ":name", "Speed", ":summary", "* Special*: Each Speed penalty is -25% rounded up. Simplified using the following chart starting from the original Speed stat:\n10-8-5-3-0\n9-7-5-3-0\n8-6-4-2-0\n7-6-4-2-0\n6-5-3-2-0\n5-4-3-2-0\n4-3-2-1-0\n3-3-2-1-0\n2-2-1-1-0\n1-1-1-1-0")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-speed", ":name", "Speed", ":summary", "* Special*: IF Speed over 5 THEN penalty is Speed:-2.")
     return output
   }
 
