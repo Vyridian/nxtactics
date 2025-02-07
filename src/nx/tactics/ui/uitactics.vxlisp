@@ -485,6 +485,13 @@
   [id   : string := (:id card)
    name : string := (:name card)
    datatype : any := (type<-any card)
+   style-display : ui/style :=
+    (if : ui/style
+     (then
+      (== datatype base/fate)
+      styles/style-card-display-fate)
+     (else
+      styles/style-card-display))
    isdisplay4 : boolean :=
     (or
      (== datatype base/damage)
@@ -527,7 +534,7 @@
       (!-empty display1)
       (ui/ui
        :uid uiddisplay
-       :style styles/style-card-display
+       :style style-display
        :stylelist
         (ui/stylelist
          styles/style-textarea)
@@ -709,9 +716,9 @@
  [cardimage : base/cardimage
   parent : string]
  (let : ui/uilist
-  [name      : string  := (:name  cardimage :debug)
+  [name      : string  := (:name  cardimage)
    image     : string  := (:image cardimage)
-   imgmirror : boolean := (:imgmirror cardimage :debug)
+   imgmirror : boolean := (:imgmirror cardimage)
    prefix    : string  := (string parent "/" name)
    uiimage1  : ui/ui :=
     (ui/ui

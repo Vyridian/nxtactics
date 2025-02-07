@@ -1944,6 +1944,19 @@ export default class nx_tactics_ui_uitactics {
         const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":id")
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
         const datatype = vx_core.f_type_from_any(card)
+        const style_display = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_style},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              datatype,
+              nx_tactics_base.t_fate
+            )}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_card_display_fate})
+          ),
+          vx_core.f_else(
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_card_display})
+          )
+        )
         const isdisplay4 = vx_core.f_or_1(
           vx_core.f_eqeq(
             datatype,
@@ -2005,7 +2018,7 @@ export default class nx_tactics_ui_uitactics {
               ":uid",
               uiddisplay,
               ":style",
-              nx_tactics_ui_stylesheet.c_style_card_display,
+              style_display,
               ":stylelist",
               vx_core.f_new(
                 {"any-1": vx_ui_ui.t_stylelist},
@@ -2136,9 +2149,9 @@ export default class nx_tactics_ui_uitactics {
       {"any-1": vx_ui_ui.t_uilist},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const name = vx_core.f_log_1({"any-1": vx_core.t_string}, "nx/tactics/ui/uitactics/uilist<-cardimage-parent/:value/let/:arg/fn-any/:value/any<-struct", vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":name"))
+        const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":name")
         const image = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":image")
-        const imgmirror = vx_core.f_log_1({"any-1": vx_core.t_boolean}, "nx/tactics/ui/uitactics/uilist<-cardimage-parent/:value/let/:arg/fn-any/:value/any<-struct", vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":imgmirror"))
+        const imgmirror = vx_core.f_any_from_struct({"any-1": vx_core.t_boolean, "struct-2": nx_tactics_base.t_cardimage}, cardimage, ":imgmirror")
         const prefix = vx_core.f_new({"any-1": vx_core.t_string}, parent, "/", name)
         const uiimage1 = vx_core.f_new(
           {"any-1": vx_ui_ui.t_ui},

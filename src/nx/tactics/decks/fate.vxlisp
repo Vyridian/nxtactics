@@ -9,14 +9,15 @@
   :image "images/card-fate-joker.svg"
   :summary
    "Wild (Gold Burst):
-    * Win : Attack, Focus
-    * Loss: Defend, Evade, Counter
-    * Tie : Wild
-    * Hits: 0. Search or Reclaim 1.
+    * Win: Fast(26), Strong(26)
+    * Loss: Block(26), Evade(13), Counter(13)
+    * Tie: Wild(2)
+    * Success: 0. Search:1 or Reclaim:1.
     * Shuffle: Discards into Deck.
 
     Combo Breaker (Blue Burst):
-    * IF a Combo is performed on you THEN discard to cancel the Combo."))
+    * Mitigation: Discard to cancel ALL Successes. IF reasonable THEN an adjacent Ally may do this instead.
+    * Shuffle: Discards into Deck."))
 
 (const fate-wildred : base/fate
  (base/fate
@@ -25,983 +26,1004 @@
   :image "images/card-fate-joker.svg"
   :summary
    "Wild (Gold Burst):
-    * Win : Attack, Focus
-    * Loss: Defend, Evade, Counter
-    * Tie : Wild
-    * Hits: 0. Search or Reclaim 1.
+    * Win: Fast(26), Strong(26)
+    * Loss: Block(26), Evade(13), Counter(13)
+    * Tie: Wild(2)
+    * Success: 0. Search:1 or Reclaim:1.
     * Shuffle: Discards into Deck.
 
     Combo Breaker (Blue Burst):
-    * IF a Combo is performed on you THEN discard to cancel the Combo."))
+    * Mitigation: Discard to cancel ALL Successes. IF reasonable THEN an adjacent Ally may do this instead.
+    * Shuffle: Discards into Deck."))
 
 (const fate-ac : base/fate
  (base/fate
   :name "Devil"
   :ranksuit base/ranksuit-ac
-  :image "images/card-fate-attack-counter.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Super)
-    * Win : Attack 2-K, Focus
-    * Loss: Evade, Counter, Wild
-    * Tie : Attack A, Defend Overkill
-    * Hits: 0
-    * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
+   "Strong and Dominating (Super)
+    * Win: Strong:2-K(24), Block(26), Counter(13)
+    * Loss: Fast(26), Evade(12), Wild(2)
+    * Tie: Strong:A(2)
+    * Success: 1
+    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Block
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-ad : base/fate
  (base/fate
   :name "Lust"
   :ranksuit base/ranksuit-ad
-  :image "images/card-fate-focus-counter.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Super)
-    * Win : Focus 2-K, Defend, Evade, Counter
-    * Loss: Attack, Wild
-    * Tie : Focus A
-    * Hits: 0
-    * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
+   "Strong and Clever (Super)
+    * Win: Strong:2-K(24), Block(26), Counter(13)
+    * Loss: Fast(26), Evade(12), Wild(2)
+    * Tie: Strong:A(2)
+    * Success: 1
+    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
 
     Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-ah : base/fate
  (base/fate
   :name "Lovers"
   :ranksuit base/ranksuit-ah
-  :image "images/card-fate-focus-counter.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Super)
-    * Win : Focus 2-K, Defend, Evade, Counter
-    * Loss: Attack, Wild
-    * Tie : Focus A
-    * Hits: 0
-    * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
+   "Fast and Unexpected (Super)
+    * Win: Fast:2-K(24), Strong(26), Evade(13)
+    * Loss: Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:A(2)
+    * Success: 1
+    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Block
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-as : base/fate
  (base/fate
   :name "Death"
   :ranksuit base/ranksuit-as
-  :image "images/card-fate-attack-counter.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Super)
-    * Win : Attack 2-K, Focus
-    * Loss: Evade, Counter, Wild
-    * Tie : Attack A, Defend Overkill
-    * Hit: 0
-    * Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40
+   "Fast and Precise (Super)
+    * Win: Fast:2-K(24), Strong(26), Evade(13)
+    * Loss: Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:A(2)
+    * Success: 1
+    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-kc : base/fate
  (base/fate
   :name "Emperor"
   :ranksuit base/ranksuit-kc
-  :image "images/card-fate-attack-counter.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Special)
-    * Win : Attack 2-10, Focus
-    * Loss: Attack AJQ, Evade, Counter, Wild
-    * Tie : Attack K, Defend Overkill
-    * Hits: 10
-    * Combo: KK Hits: 20 or KKK Hits: 30
+   "Strong and Dominating (Special)
+    * Win: Strong:2-10(18), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:JQA(6), Evade(12), Wild(2)
+    * Tie: Strong:K(2)
+    * Success: 1
+    * Combo: KK Success:2 or KKK Success:3
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Block
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-kd : base/fate
  (base/fate
   :name "Judgement"
   :ranksuit base/ranksuit-kd
-  :image "images/card-fate-focus-counter.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Special)
-    * Win : Focus 2-10, Defend, Evade, Counter
-    * Loss: Attack, Focus AJQ, Wild
-    * Tie : Focus K
-    * Hits: 10
-    * Combo: KK Hits: 20 or KKK Hits: 30
+   "Strong and Clever (Special)
+    * Win: Strong:2-10(18), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:JQA(6), Evade(12), Wild(2)
+    * Tie: Strong:K(2)
+    * Success: 1
+    * Combo: KK Success:2 or KKK Success:3
 
     Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-kh : base/fate
  (base/fate
   :name "Hierophant"
   :ranksuit base/ranksuit-kh
-  :image "images/card-fate-focus-counter.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Special)
-    * Win : Focus 2-10, Defend, Evade, Counter
-    * Loss: Attack, Focus AJQ, Wild
-    * Tie : Focus K
-    * Hits: 10
-    * Combo: KK Hits: 20 or KKK Hits: 30
+   "Fast and Unexpected (Special)
+    * Win: Fast:2-10(18), Strong(26), Evade(13)
+    * Loss: Fast:JQA(6), Block*(26), Counter(13), Wild(2)
+    * Tie: Strong:K(2)
+    * Success: 1
+    * Combo: KK Success:2 or KKK Success:3
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Block
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-ks : base/fate
  (base/fate
   :name "Sun"
   :ranksuit base/ranksuit-ks
-  :image "images/card-fate-attack-counter.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Special)
-    * Win : Attack 2-10, Focus
-    * Loss: Attack AJQ, Evade, Counter, Wild
-    * Tie : Attack K, Defend Overkill
-    * Hits: 10
-    * Combo: KK Hits: 20 or KKK Hits: 30
+   "Fast and Precise (Special)
+    * Win: Fast:2-10(18), Strong(26), Evade(13)
+    * Loss: Fast:JQA(6), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:K(2)
+    * Success: 1
+    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-qc : base/fate
  (base/fate
   :name "Empress"
   :ranksuit base/ranksuit-qc
-  :image "images/card-fate-attack-counter.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Special)
-    * Win : Attack K 2-10, Focus
-    * Loss: Attack AJ, Evade, Counter, Wild
-    * Tie : Attack Q, Defend Overkill
-    * Hits: 10
-    * Combo: QQ Hits: 20
+   "Strong and Dominating (Special)
+    * Win: Strong:2-10,K(20), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:JA(4), Evade(12), Wild(2)
+    * Tie: Strong:Q(2)
+    * Success: 1
+    * Combo: QQ Success:2
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Block
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-qd : base/fate
  (base/fate
   :name "Justice"
   :ranksuit base/ranksuit-qd
-  :image "images/card-fate-focus-counter.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Special)
-    * Win : Focus K 2-10, Defend, Evade, Counter
-    * Loss: Attack, Focus AJ, Wild
-    * Tie : Focus Q
-    * Hits: 10
-    * Combo: QQ Hits: 20
+   "Strong and Clever (Special)
+    * Win: Strong:2-10,K(20), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:JA(4), Evade(12), Wild(2)
+    * Tie: Strong:Q(2)
+    * Success: 1
+    * Combo: QQ Success:2
 
     Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-qh : base/fate
  (base/fate
   :name "Priestess"
   :summary ""
   :ranksuit base/ranksuit-qh
-  :image "images/card-fate-focus-counter.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Special)
-    * Win : Focus K 2-10, Defend, Evade, Counter
-    * Loss: Attack, Focus AJ, Wild
-    * Tie : Focus Q
-    * Hits: 10
-    * Combo: QQ Hits: 20
+   "Fast and Unexpected (Special)
+    * Win: Fast:2-10,K(20), Strong(26), Evade(13)
+    * Loss: Fast:JA(4), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:Q(2)
+    * Success: 1
+    * Combo: QQ Success:2
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Block
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-qs : base/fate
  (base/fate
   :name "Moon"
   :ranksuit base/ranksuit-qs
-  :image "images/card-fate-attack-counter.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Special)
-    * Win : Attack K 2-10, Focus
-    * Loss: Attack AJ, Evade, Counter, Wild
-    * Tie : Attack Q, Defend Overkill
-    * Hits: 10
-    * Combo: QQ Hits: 20
+   "Fast and Precise (Special)
+    * Win: Fast:2-10,K(20), Strong(26), Evade(13)
+    * Loss: Fast:JA(4), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:Q(2)
+    * Success: 1
+    * Combo: QQ Success:2
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-jc : base/fate
  (base/fate
   :name "Magus"
   :titles "Knight of Rods"
   :ranksuit base/ranksuit-jc
-  :image "images/card-fate-attack-counter.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Special)
-    * Win : Attack QK 2-10, Focus
-    * Loss: Attack A, Evade, Counter, Wild
-    * Tie : Attack J, Defend Overkill
-    * Hits: 10
+   "Strong and Dominating (Special)
+    * Win: Strong:2-10,QK(22), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:A(2), Evade(12), Wild(2)
+    * Tie: Strong:J(2)
+    * Success: 1
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Block
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-jd : base/fate
  (base/fate
   :name "Hanged Man"
   :titles "Prince of Coins"
   :ranksuit base/ranksuit-jd
-  :image "images/card-fate-focus-counter.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Special)
-    * Win : Focus QK 2-10, Defend, Evade, Counter
-    * Loss: Attack, Focus A, Wild
-    * Tie : Focus J
-    * Hits: 10
+   "Strong and Clever (Special)
+    * Win: Strong:2-10,QK(22), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:A(2), Evade(12), Wild(2)
+    * Tie: Strong:J(2)
+    * Success: 1
 
     Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-jh : base/fate
  (base/fate
   :name "Hermit"
   :titles "Princess of Cups"
   :ranksuit base/ranksuit-jh
-  :image "images/card-fate-focus-counter.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Special)
-    * Win : Focus QK 2-10, Defend, Evade, Counter
-    * Loss: Attack, Focus A, Wild
-    * Tie : Focus J
-    * Hits: 10
+   "Fast and Unexpected (Special)
+    * Win: Fast:2-10,QK(22), Strong(26), Evade(13)
+    * Loss: Fast:A(2), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:J(2)
+    * Success: 1
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Block
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-js : base/fate
  (base/fate
   :name "Star"
   :titles "Lady of Swords"
   :ranksuit base/ranksuit-js
-  :image "images/card-fate-attack-counter.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Special)
-    * Win : Attack QK 2-10, Focus
-    * Loss: Attack A, Evade, Counter, Wild
-    * Tie : Attack J, Defend Overkill
-    * Hits: 10
+   "Fast and Precise (Special)
+    * Win: Fast:2-10,QK(22), Strong(26), Evade(13)
+    * Loss: Fast:A(2), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:J(2)
+    * Success: 1
 
-    Counter
-    * Win : Attack, Wild
-    * Loss: Focus, Defend, Evade
-    * Hits: 0. Resolve an Attack or Focus"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)
+
+    * Discard: Cancel 1 Success."))
 
 (const fate-tc : base/fate
  (base/fate
   :name "Tower"
   :titles "Ten of Rods"
   :ranksuit base/ranksuit-tc
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Focus
-    * Lose: Attack AJQK 2-9, Defend 10, Evade, Counter, Wild
-    * Tie : Attack 10, Defend 2-9 Overkill
-    * Hits: 10, Draw
+   "Strong and Dominating (Normal)
+    * Win: Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-9,J-A(24), Evade(12), Wild(2)
+    * Tie: Strong:10(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-10, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-td : base/fate
  (base/fate
   :name "Wheel of Fortune"
   :titles "Ten of Coins"
   :ranksuit base/ranksuit-td
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Defend, Counter
-    * Lose: Attack, Focus AJQK 2-9, Evade, Wild
-    * Tie : Focus 10
-    * Hits: 10
+   "Strong and Clever (Normal)
+    * Win: Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-9,J-A(24), Evade(12), Wild(2)
+    * Tie: Strong:10(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 10, Focus 10, Counter, Wild
-    * Loss: Attack 2-9, Focus AJQK 2-9
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-th : base/fate
  (base/fate
   :name "Art"
   :titles "Ten of Cups"
   :ranksuit base/ranksuit-th
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Defend, Counter
-    * Lose: Attack, Focus AJQK 2-9, Evade, Wild
-    * Tie : Focus 10
-    * Hits: 10
+   "Fast and Unexpected (Special)
+    * Win: Strong(26), Evade(13)
+    * Loss: Fast:2-9,J-A(24), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:10(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 10, Focus 10, Counter, Wild
-    * Loss: Attack 2-9, Focus AJQK 2-9
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-ts : base/fate
  (base/fate
   :name "Chariot"
   :titles "Ten of Swords"
   :ranksuit base/ranksuit-ts
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Focus
-    * Lose: Attack AJQK 2-9, Defend 10, Evade, Counter, Wild
-    * Tie : Attack 10, Defend 2-9 Overkill
-    * Hits: 10, Draw
+   "Fast and Precise (Normal)
+    * Win: Strong(26), Evade(13)
+    * Loss: Fast:2-9,J-A(24), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:10(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-10, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (const fate-9c : base/fate
  (base/fate
   :name "Nine of Wands"
   :ranksuit base/ranksuit-9c
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 10, Focus
-    * Lose: Attack AJQK 2-8, Defend 9-10, Evade 2-9, Counter, Wild
-    * Tie : Attack 9, Defend 2-8 Overkill
-    * Hits: 9, Draw
+   "Strong and Dominating (Normal)
+    * Win: Strong:10(2), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-8,J-A(22), Evade(12), Wild(2)
+    * Tie: Strong:9(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-9, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-9d : base/fate
  (base/fate
   :name "Nine of Coins"
   :ranksuit base/ranksuit-9d
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-8, Evade 2-9, Wild
-    * Tie : Focus 9
-    * Hits: 9
+   "Strong and Clever (Normal)
+    * Win: Strong:10(2), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-8,J-A(22), Evade(12), Wild(2)
+    * Tie: Strong:9(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 9-10, Focus 9-10, Counter, Wild
-    * Loss: Attack 2-8, Focus AJQK 2-8
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-9h : base/fate
  (base/fate
   :name "Nine of Cups"
   :ranksuit base/ranksuit-9h
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-8, Evade 2-9, Wild
-    * Tie : Focus 9
-    * Hits: 9
+   "Fast and Unexpected (Special)
+    * Win: Fast:10(2), Strong(26), Evade(13)
+    * Loss: Fast:2-8,J-A(22), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:9(2)
+    * Success: ?
 
-    Evade
-    * Win : Attack AJQK 9-10, Focus 9-10, Counter, Wild
-    * Loss: Attack 2-8, Focus AJQK 2-8
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-9s : base/fate
  (base/fate
   :name "Nine of Swords"
   :ranksuit base/ranksuit-9s
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 10, Focus
-    * Lose: Attack AJQK 2-8, Defend 9-10, Evade 2-9, Counter, Wild
-    * Tie : Attack 9, Defend 2-8 Overkill
-    * Hits: 9, Draw
+   "Fast and Precise (Normal)
+    * Win: Fast:10(2), Strong(26), Evade(13)
+    * Loss: Fast:2-8,J-A(22), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:9(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-9, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (const fate-8c : base/fate
  (base/fate
   :name "Eight of Wands"
   :ranksuit base/ranksuit-8c
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 9-10, Focus
-    * Lose: Attack AJQK 2-7, Defend 8-10, Evade 2-8, Counter, Wild
-    * Tie : Attack 8, Defend 2-7 Overkill
-    * Hits: 8, Draw
-    * Combo: 8-9-10 Hits: 27, Draw or Reclaim:1
+   "Strong and Dominating (Normal)
+    * Win: Strong:9-10(4), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-7,J-A(20), Evade(12), Wild(2)
+    * Tie: Strong:8(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-8, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 9-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-8d : base/fate
  (base/fate
   :name "Eight of Coins"
   :ranksuit base/ranksuit-8d
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 9-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-7, Evade 2-8, Wild
-    * Tie : Focus 8
-    * Hits: 8
-    * Combo: 8-9-10 Hits: 27, Draw or Reclaim 1
+   "Strong and Clever (Normal)
+    * Win: Strong:9-10(4), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-7,J-A(20), Evade(12), Wild(2)
+    * Tie: Strong:8(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 8-10, Focus 8-10, Counter, Wild
-    * Loss: Attack 2-7, Focus AJQK 2-7
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-8h : base/fate
  (base/fate
   :name "Eight of Cups"
   :ranksuit base/ranksuit-8h
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 9-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-7, Evade 2-8, Wild
-    * Tie : Focus 8
-    * Hits: 8
-    * Combo: 8-9-10 Hits: 27, Draw or Reclaim 1
+   "Fast and Unexpected (Special)
+    * Win: Fast:9-10(4), Strong(26), Evade(13)
+    * Loss: Fast:2-7,J-A(20), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:8(2)
+    * Success: ?
 
-    Evade
-    * Win : Attack AJQK 8-10, Focus 8-10, Counter, Wild
-    * Loss: Attack 2-7, Focus AJQK 2-7
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-8s : base/fate
  (base/fate
   :name "Eight of Swords"
   :ranksuit base/ranksuit-8s
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 9-10, Focus
-    * Lose: Attack AJQK 2-7, Defend 8-10, Evade 2-8, Counter, Wild
-    * Tie : Attack 8, Defend 2-7 Overkill
-    * Hits: 8, Draw
-    * Combo: 8-9-10 Hits: 27, Draw or Reclaim:1
+   "Fast and Precise (Normal)
+    * Win: Fast:9-10(4), Strong(26), Evade(13)
+    * Loss: Fast:2-7,J-A(20), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:8(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-8, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 9-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (const fate-7c : base/fate
  (base/fate
   :name "Seven of Wands"
   :ranksuit base/ranksuit-7c
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 8-10, Focus
-    * Lose: Attack AJQK 2-6, Defend 7-10, Evade 2-7, Counter, Wild
-    * Tie : Attack 7, Defend 2-6 Overkill
-    * Hits: 7, Draw
-    * Combo: 7-8-9, Hits: 24, Draw or Reclaim 1
+   "Strong and Dominating (Normal)
+    * Win: Strong:8-10(6), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-6,J-A(18), Evade(12), Wild(2)
+    * Tie: Strong:7(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-7, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 8-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-7d : base/fate
  (base/fate
   :name "Seven of Coins"
   :ranksuit base/ranksuit-7d
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 8-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-6, Evade 2-7, Wild
-    * Tie : Focus 7
-    * Hits: 7
-    * Combo: 7-8-9, Hits: 24, Draw or Reclaim 1
+   "Strong and Clever (Normal)
+    * Win: Strong:8-10(6), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-6,J-A(18), Evade(12), Wild(2)
+    * Tie: Strong:7(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 7-10, Focus 7-10, Counter, Wild
-    * Loss: Attack 2-6, Focus AJQK 2-6
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-7h : base/fate
  (base/fate
   :name "Seven of Cups"
   :ranksuit base/ranksuit-7h
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 8-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-6, Evade 2-7, Wild
-    * Tie : Focus 7
-    * Hits: 7
-    * Combo: 7-8-9, Hits: 24, Draw or Reclaim 1
+   "Fast and Unexpected (Special)
+    * Win: Fast:8-10(6), Strong(26), Evade(13)
+    * Loss: Fast:2-6,J-A(18), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:7(2)
+    * Success: ?
 
-    Evade
-    * Win : Attack AJQK 7-10, Focus 7-10, Counter, Wild
-    * Loss: Attack 2-6, Focus AJQK 2-6
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-7s : base/fate
  (base/fate
   :name "Seven of Swords"
   :ranksuit base/ranksuit-7s
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 8-10, Focus
-    * Lose: Attack AJQK 2-6, Defend 7-10, Evade 2-7, Counter, Wild
-    * Tie : Attack 7, Defend 2-6 Overkill
-    * Hits: 7, Draw
-    * Combo: 7-8-9, Hits: 24, Draw or Reclaim 1
+   "Fast and Precise (Normal)
+    * Win: Fast:8-10(6), Strong(26), Evade(13)
+    * Loss: Fast:2-6,J-A(18), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:7(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-7, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 8-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (const fate-6c : base/fate
  (base/fate
   :name "Six of Wands"
   :ranksuit base/ranksuit-6c
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 7-10, Focus
-    * Lose: Attack AJQK 2-5, Defend 6-10, Evade 2-6, Counter, Wild
-    * Tie : Attack 7, Defend 2-6 Overkill
-    * Hits: 6, Draw
-    * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
+   "Strong and Dominating (Normal)
+    * Win: Strong:7-10(8), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-5,J-A(16), Evade(12), Wild(2)
+    * Tie: Strong:6(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-6, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 7-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-6d : base/fate
  (base/fate
   :name "Six of Coins"
   :ranksuit base/ranksuit-6d
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 7-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-5, Evade 2-6, Wild
-    * Tie : Focus 6
-    * Hits: 6
-    * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
+   "Strong and Clever (Normal)
+    * Win: Strong:7-10(8), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-5,J-A(16), Evade(12), Wild(2)
+    * Tie: Strong:6(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 6-10, Focus 6-10, Counter, Wild
-    * Loss: Attack 2-5, Focus AJQK 2-5
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-6h : base/fate
  (base/fate
   :name "Six of Cups"
   :ranksuit base/ranksuit-6h
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 7-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-5, Evade 2-6, Wild
-    * Tie : Focus 6
-    * Hits: 6
-    * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
+   "Fast and Unexpected (Special)
+    * Win: Fast:7-10(8), Strong(26), Evade(13)
+    * Loss: Fast:2-5,J-A(16), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:6(2)
+    * Success: ?
 
-    Evade
-    * Win : Attack AJQK 6-10, Focus 6-10, Counter, Wild
-    * Loss: Attack 2-5, Focus AJQK 2-5
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-6s : base/fate
  (base/fate
   :name "Six of Swords"
   :ranksuit base/ranksuit-6s
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 7-10, Focus
-    * Lose: Attack AJQK 2-5, Defend 6-10, Evade 2-6, Counter, Wild
-    * Tie : Attack 7, Defend 2-6 Overkill
-    * Hits: 6, Draw
-    * Combo: 6-7-8, Hits: 21, Draw or Reclaim 1
+   "Fast and Precise (Normal)
+    * Win: Fast:7-10(8), Strong(26), Evade(13)
+    * Loss: Fast:2-5,J-A(16), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:6(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-6, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 7-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (const fate-5c : base/fate
  (base/fate
   :name "Five of Wands"
   :ranksuit base/ranksuit-5c
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 6-10, Focus
-    * Lose: Attack AJQK 2-4, Defend 5-10, Evade 2-5, Counter, Wild
-    * Tie : Attack 5, Defend 2-5 Overkill
-    * Hits: 5, Draw
-    * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
+   "Strong and Dominating (Normal)
+    * Win: Strong:6-10(10), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-4,J-A(14), Evade(12), Wild(2)
+    * Tie: Strong:5(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-5, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 6-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-5d : base/fate
  (base/fate
   :name "Five of Coins"
   :ranksuit base/ranksuit-5d
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 6-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-4, Evade 2-5, Wild
-    * Tie : Focus 5
-    * Hits: 5
-    * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
+   "Strong and Clever (Normal)
+    * Win: Strong:6-10(10), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-4,J-A(14), Evade(12), Wild(2)
+    * Tie: Strong:5(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 5-10, Focus 5-10, Counter, Wild
-    * Loss: Attack 2-4, Focus AJQK 2-4
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-5h : base/fate
  (base/fate
   :name "Five of Cups"
   :ranksuit base/ranksuit-5h
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 6-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-4, Evade 2-5, Wild
-    * Tie : Focus 5
-    * Hits: 5
-    * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
+   "Fast and Unexpected (Special)
+    * Win: Fast:6-10(10), Strong(26), Evade(13)
+    * Loss: Fast:2-4,J-A(14), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:5(2)
+    * Success: ?
 
-    Evade
-    * Win : Attack AJQK 5-10, Focus 5-10, Counter, Wild
-    * Loss: Attack 2-4, Focus AJQK 2-4
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-5s : base/fate
  (base/fate
   :name "Five of Swords"
   :ranksuit base/ranksuit-5s
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 6-10, Focus
-    * Lose: Attack AJQK 2-4, Defend 5-10, Evade 2-5, Counter, Wild
-    * Tie : Attack 5, Defend 2-5 Overkill
-    * Hits: 5, Draw
-    * Combo: 5-6-7, Hits: 18, Draw or Reclaim 1
+   "Fast and Precise (Normal)
+    * Win: Fast:6-10(10), Strong(26), Evade(13)
+    * Loss: Fast:2-4,J-A(14), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:5(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-5, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 6-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (const fate-4c : base/fate
  (base/fate
   :name "Four of Wands"
   :ranksuit base/ranksuit-4c
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 5-10
-    * Lose: Attack AJQK 2-3, Defend 4-10, Evade 2-4, Counter, Wild
-    * Tie : Attack 4, Defend 2-4 Overkill
-    * Hits: 4, Focus, Draw
-    * Combo: 4-5-6, Hits: 15, Draw or Reclaim 1
+   "Strong and Dominating (Normal)
+    * Win: Strong:5-10(12), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-3,J-A(12), Evade(12), Wild(2)
+    * Tie: Strong:4(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-4, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 5-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-4d : base/fate
  (base/fate
   :name "Four of Coins"
   :ranksuit base/ranksuit-4d
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 5-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-3, Evade 2-4, Wild
-    * Tie : Focus 4
-    * Hits: 4
-    * Combo: 4-5-6, Hits: 15, Draw or Reclaim 1
+   "Strong and Clever (Normal)
+    * Win: Strong:5-10(12), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2-3,J-A(12), Evade(12), Wild(2)
+    * Tie: Strong:4(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 4-10, Focus 4-10, Counter, Wild
-    * Loss: Attack 2-3, Focus AJQK 2-3
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-4h : base/fate
  (base/fate
   :name "Four of Cups"
   :ranksuit base/ranksuit-4h
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 5-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2-3, Evade 2-4, Wild
-    * Tie : Focus 4
-    * Hits: 4
-    * Combo: 4-5-6, Hits: 15, Draw or Reclaim 1
+   "Fast and Unexpected (Special)
+    * Win: Fast:5-10(12), Strong(26), Evade(13)
+    * Loss: Fast:2-3,J-A(12), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:4(2)
+    * Success: ?
 
-    Evade
-    * Win : Attack AJQK 4-10, Focus 4-10, Counter, Wild
-    * Loss: Attack 2-3, Focus AJQK 2-3
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-4s : base/fate
  (base/fate
   :name "Four of Swords"
   :ranksuit base/ranksuit-4s
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 5-10, Focus
-    * Lose: Attack AJQK 2-3, Defend 4-10, Evade 2-4, Counter, Wild
-    * Tie : Attack 4, Defend 2-4 Overkill
-    * Hits: 4, Draw
-    * Combo: 4-5-6, Hits: 15, Draw or Reclaim 1
+   "Fast and Precise (Normal)
+    * Win: Fast:5-10(12), Strong(26), Evade(13)
+    * Loss: Fast:2-3,J-A(12), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:4(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-4, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 5-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (const fate-3c : base/fate
  (base/fate
   :name "Three of Wands"
   :ranksuit base/ranksuit-3c
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 4-10, Focus
-    * Lose: Attack AJQK 2, Defend 3-10, Evade 2-3, Counter, Wild
-    * Tie : Attack 3, Defend 2-3 Overkill
-    * Hits: 3, Draw
-    * Combo: 3-4-5, Hits: 12, Draw or Reclaim 1
+   "Strong and Dominating (Normal)
+    * Win: Strong:4-10(14), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2,J-A(10), Evade(12), Wild(2)
+    * Tie: Strong:3(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-3, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 4-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-3d : base/fate
  (base/fate
   :name "Three of Coins"
   :ranksuit base/ranksuit-3d
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 4-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2, Evade 2-3, Wild
-    * Tie : Focus 3
-    * Hits: 3
-    * Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.
+   "Strong and Clever (Normal)
+    * Win: Strong:4-10(14), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:2,J-A(10), Evade(12), Wild(2)
+    * Tie: Strong:3(2)
+    * Success: *
 
-    Evade
-    * Win : Attack AJQK 3-10, Focus 3-10, Counter, Wild
-    * Loss: Attack 2, Focus AJQK 2
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-3h : base/fate
  (base/fate
   :name "Three of Cups"
   :ranksuit base/ranksuit-3h
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 4-10, Defend, Counter
-    * Lose: Attack, Focus AJQK 2, Evade 2-3, Wild
-    * Tie : Focus 3
-    * Hits: 3
-    * Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.
+   "Fast and Unexpected (Special)
+    * Win: Fast:4-10(14), Strong(26), Evade(13)
+    * Loss: Fast:2,J-A(10), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:3(2)
+    * Success: ?
 
-    Evade
-    * Win : Attack AJQK 3-10, Focus 3-10, Counter, Wild
-    * Loss: Attack 2, Focus AJQK 2
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-3s : base/fate
  (base/fate
   :name "Three of Swords"
   :ranksuit base/ranksuit-3s
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 4-10, Focus
-    * Lose: Attack AJQK 2, Defend 3-10, Evade 2-3, Counter, Wild
-    * Tie : Attack 3, Defend 2-3 Overkill
-    * Hits: 3, Draw
-    * Combo: 3-4-5, Hits: 12, Draw or Reclaim 1
+   "Fast and Precise (Normal)
+    * Win: Fast:4-10(14), Strong(26), Evade(13)
+    * Loss: Fast:2,J-A(10), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:3(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2-3, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 4-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (const fate-2c : base/fate
  (base/fate
   :name "Two of Wands"
   :ranksuit base/ranksuit-2c
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-strong-block.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 3-10, Focus
-    * Lose: Attack AJQK, Defend, Evade 2, Counter, Wild
-    * Tie : Attack 2
-    * Hits: 2, Draw
-    * Combo: 2-3-4, Hits: 9, Draw or Reclaim 1
+   "Strong and Dominating (Normal)
+    * Win: Strong:3-10(16), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:J-A(8), Evade(12), Wild(2)
+    * Tie: Strong:2(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 3-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-2d : base/fate
  (base/fate
   :name "Two of Coins"
   :ranksuit base/ranksuit-2d
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-strong-counter.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 3-10, Defend, Counter
-    * Lose: Attack, Focus AJQK, Evade 2, Wild
-    * Tie : Focus 2
-    * Hits: 2
-    * Combo: 2-3-4, Hits: 9, Draw or Reclaim 1
+   "Strong and Clever (Normal)
+    * Win: Strong:3-10(16), Block(26), Counter(13)
+    * Loss: Fast(26), Strong:J-A(8), Evade(12), Wild(2)
+    * Tie: Strong:2(2)
+    * Success: *
 
-    Evade
-    * Win : Attack, Focus 2-10, Counter, Wild
-    * Loss: Focus AJQK
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Counter
+    * Win: Fast(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade, Counter
+    * Success: New Fate"))
 
 (const fate-2h : base/fate
  (base/fate
   :name "Two of Cups"
   :ranksuit base/ranksuit-2h
-  :image "images/card-fate-focus-evade.svg"
+  :image "images/card-fate-fast-block.svg"
   :summary
-   "Focus (Normal)
-    * Win : Focus/Evade 3-10, Defend, Counter
-    * Lose: Attack, Focus AJQK, Evade 2, Wild
-    * Tie : Focus 2
-    * Hits: 2
-    * Combo: 2-3-4, Hits: 9, Draw or Reclaim 1
+   "Fast and Unexpected (Special)
+    * Win: Fast:3-10(16), Strong(26), Evade(13)
+    * Loss: Fast:J-A(8), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:2(2)
+    * Success: ?
 
-    Evade
-    * Win : Attack, Focus 2-10, Counter, Wild
-    * Loss: Focus AJQK
-    * Tie : Defend, Evade
-    * Any : Move"))
+    Block
+    * Win: Fast*(26), Wild(2)
+    * Loss: Strong(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Keep, Draw:1"))
 
 (const fate-2s : base/fate
  (base/fate
   :name "Two of Swords"
   :ranksuit base/ranksuit-2s
-  :image "images/card-fate-attack-defend.svg"
+  :image "images/card-fate-fast-evade.svg"
   :summary
-   "Attack (Normal)
-    * Win : Attack/Evade 3-10, Focus
-    * Lose: Attack AJQK, Defend, Evade 2, Counter, Wild
-    * Tie : Attack 2
-    * Hits: 2, Draw
-    * Combo: 2-3-4, Hits: 9, Draw or Reclaim 1
+   "Fast and Precise (Normal)
+    * Win: Fast:3-10(16), Strong(26), Evade(13)
+    * Loss: Fast:J-A(8), Block*(26), Counter(13), Wild(2)
+    * Tie: Fast:3(2)
+    * Success: *
 
-    Defend
-    * Win : Attack 2, Counter, Wild
-    * Loss: Focus
-    * Tie : Attack AJQK 3-10 Overkill, Defend, Evade, Keep
-    * Hits: 0, Keep, Draw"))
+    Evade
+    * Win: Strong(26), Wild(2)
+    * Lose: Fast(26)
+    * Tie: Block(26), Evade(13), Counter(13)
+    * Success: 0, Move:1 (Win or Tie)"))
 
 (func card-fate : base/cardback
  [color : string]
@@ -1018,58 +1040,58 @@
     (base/cardlist
      fate-wildblack
      fate-wildred
-     fate-as
      fate-ac
      fate-ad
      fate-ah
-     fate-ks
+     fate-as
      fate-kc
      fate-kd
      fate-kh
-     fate-qs
+     fate-ks
      fate-qc
      fate-qd
      fate-qh
-     fate-js
+     fate-qs
      fate-jc
      fate-jd
      fate-jh
-     fate-ts
+     fate-js
      fate-tc
      fate-td
      fate-th
-     fate-9s
+     fate-ts
      fate-9c
      fate-9d
      fate-9h
-     fate-8s
+     fate-9s
      fate-8c
      fate-8d
      fate-8h
-     fate-7s
+     fate-8s
      fate-7c
      fate-7d
      fate-7h
-     fate-6s
+     fate-7s
      fate-6c
      fate-6d
      fate-6h
-     fate-5s
+     fate-6s
      fate-5c
      fate-5d
      fate-5h
-     fate-4s
+     fate-5s
      fate-4c
      fate-4d
      fate-4h
-     fate-3s
+     fate-4s
      fate-3c
      fate-3d
      fate-3h
-     fate-2s
+     fate-3s
      fate-2c
      fate-2d
      fate-2h
+     fate-2s
      )))
  :doc "Fate Deck")
 

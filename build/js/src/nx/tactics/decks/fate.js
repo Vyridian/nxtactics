@@ -382,58 +382,58 @@ export default class nx_tactics_decks_fate {
           {"any-1": nx_tactics_base.t_cardlist},
           nx_tactics_decks_fate.c_fate_wildblack,
           nx_tactics_decks_fate.c_fate_wildred,
-          nx_tactics_decks_fate.c_fate_as,
           nx_tactics_decks_fate.c_fate_ac,
           nx_tactics_decks_fate.c_fate_ad,
           nx_tactics_decks_fate.c_fate_ah,
-          nx_tactics_decks_fate.c_fate_ks,
+          nx_tactics_decks_fate.c_fate_as,
           nx_tactics_decks_fate.c_fate_kc,
           nx_tactics_decks_fate.c_fate_kd,
           nx_tactics_decks_fate.c_fate_kh,
-          nx_tactics_decks_fate.c_fate_qs,
+          nx_tactics_decks_fate.c_fate_ks,
           nx_tactics_decks_fate.c_fate_qc,
           nx_tactics_decks_fate.c_fate_qd,
           nx_tactics_decks_fate.c_fate_qh,
-          nx_tactics_decks_fate.c_fate_js,
+          nx_tactics_decks_fate.c_fate_qs,
           nx_tactics_decks_fate.c_fate_jc,
           nx_tactics_decks_fate.c_fate_jd,
           nx_tactics_decks_fate.c_fate_jh,
-          nx_tactics_decks_fate.c_fate_ts,
+          nx_tactics_decks_fate.c_fate_js,
           nx_tactics_decks_fate.c_fate_tc,
           nx_tactics_decks_fate.c_fate_td,
           nx_tactics_decks_fate.c_fate_th,
-          nx_tactics_decks_fate.c_fate_9s,
+          nx_tactics_decks_fate.c_fate_ts,
           nx_tactics_decks_fate.c_fate_9c,
           nx_tactics_decks_fate.c_fate_9d,
           nx_tactics_decks_fate.c_fate_9h,
-          nx_tactics_decks_fate.c_fate_8s,
+          nx_tactics_decks_fate.c_fate_9s,
           nx_tactics_decks_fate.c_fate_8c,
           nx_tactics_decks_fate.c_fate_8d,
           nx_tactics_decks_fate.c_fate_8h,
-          nx_tactics_decks_fate.c_fate_7s,
+          nx_tactics_decks_fate.c_fate_8s,
           nx_tactics_decks_fate.c_fate_7c,
           nx_tactics_decks_fate.c_fate_7d,
           nx_tactics_decks_fate.c_fate_7h,
-          nx_tactics_decks_fate.c_fate_6s,
+          nx_tactics_decks_fate.c_fate_7s,
           nx_tactics_decks_fate.c_fate_6c,
           nx_tactics_decks_fate.c_fate_6d,
           nx_tactics_decks_fate.c_fate_6h,
-          nx_tactics_decks_fate.c_fate_5s,
+          nx_tactics_decks_fate.c_fate_6s,
           nx_tactics_decks_fate.c_fate_5c,
           nx_tactics_decks_fate.c_fate_5d,
           nx_tactics_decks_fate.c_fate_5h,
-          nx_tactics_decks_fate.c_fate_4s,
+          nx_tactics_decks_fate.c_fate_5s,
           nx_tactics_decks_fate.c_fate_4c,
           nx_tactics_decks_fate.c_fate_4d,
           nx_tactics_decks_fate.c_fate_4h,
-          nx_tactics_decks_fate.c_fate_3s,
+          nx_tactics_decks_fate.c_fate_4s,
           nx_tactics_decks_fate.c_fate_3c,
           nx_tactics_decks_fate.c_fate_3d,
           nx_tactics_decks_fate.c_fate_3h,
-          nx_tactics_decks_fate.c_fate_2s,
+          nx_tactics_decks_fate.c_fate_3s,
           nx_tactics_decks_fate.c_fate_2c,
           nx_tactics_decks_fate.c_fate_2d,
-          nx_tactics_decks_fate.c_fate_2h
+          nx_tactics_decks_fate.c_fate_2h,
+          nx_tactics_decks_fate.c_fate_2s
         )
       )
     )
@@ -622,9 +622,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 3-10, Focus\n* Lose: Attack AJQK, Defend, Evade 2, Counter, Wild\n* Tie : Attack 2\n* Hits: 2, Draw\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 3-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Strong:3-10(16), Block(26), Counter(13)\n* Loss: Fast(26), Strong:J-A(8), Evade(12), Wild(2)\n* Tie: Strong:2(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-2d)
@@ -635,9 +635,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2d,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 3-10, Defend, Counter\n* Lose: Attack, Focus AJQK, Evade 2, Wild\n* Tie : Focus 2\n* Hits: 2\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\nEvade\n* Win : Attack, Focus 2-10, Counter, Wild\n* Loss: Focus AJQK\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Strong:3-10(16), Block(26), Counter(13)\n* Loss: Fast(26), Strong:J-A(8), Evade(12), Wild(2)\n* Tie: Strong:2(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-2h)
@@ -648,9 +648,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2h,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 3-10, Defend, Counter\n* Lose: Attack, Focus AJQK, Evade 2, Wild\n* Tie : Focus 2\n* Hits: 2\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\nEvade\n* Win : Attack, Focus 2-10, Counter, Wild\n* Loss: Focus AJQK\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Fast:3-10(16), Strong(26), Evade(13)\n* Loss: Fast:J-A(8), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:2(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-2s)
@@ -661,9 +661,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2s,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 3-10, Focus\n* Lose: Attack AJQK, Defend, Evade 2, Counter, Wild\n* Tie : Attack 2\n* Hits: 2, Draw\n* Combo: 2-3-4, Hits: 9, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 3-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Fast:3-10(16), Strong(26), Evade(13)\n* Loss: Fast:J-A(8), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:3(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-3c)
@@ -674,9 +674,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 4-10, Focus\n* Lose: Attack AJQK 2, Defend 3-10, Evade 2-3, Counter, Wild\n* Tie : Attack 3, Defend 2-3 Overkill\n* Hits: 3, Draw\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-3, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 4-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Strong:4-10(14), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2,J-A(10), Evade(12), Wild(2)\n* Tie: Strong:3(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-3d)
@@ -687,9 +687,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3d,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 4-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2, Evade 2-3, Wild\n* Tie : Focus 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.\n\nEvade\n* Win : Attack AJQK 3-10, Focus 3-10, Counter, Wild\n* Loss: Attack 2, Focus AJQK 2\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Strong:4-10(14), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2,J-A(10), Evade(12), Wild(2)\n* Tie: Strong:3(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-3h)
@@ -700,9 +700,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3h,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 4-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2, Evade 2-3, Wild\n* Tie : Focus 3\n* Hits: 3\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1.\n\nEvade\n* Win : Attack AJQK 3-10, Focus 3-10, Counter, Wild\n* Loss: Attack 2, Focus AJQK 2\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Fast:4-10(14), Strong(26), Evade(13)\n* Loss: Fast:2,J-A(10), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:3(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-3s)
@@ -713,9 +713,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3s,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 4-10, Focus\n* Lose: Attack AJQK 2, Defend 3-10, Evade 2-3, Counter, Wild\n* Tie : Attack 3, Defend 2-3 Overkill\n* Hits: 3, Draw\n* Combo: 3-4-5, Hits: 12, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-3, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 4-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Fast:4-10(14), Strong(26), Evade(13)\n* Loss: Fast:2,J-A(10), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:3(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-4c)
@@ -726,9 +726,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 5-10\n* Lose: Attack AJQK 2-3, Defend 4-10, Evade 2-4, Counter, Wild\n* Tie : Attack 4, Defend 2-4 Overkill\n* Hits: 4, Focus, Draw\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-4, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 5-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Strong:5-10(12), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-3,J-A(12), Evade(12), Wild(2)\n* Tie: Strong:4(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-4d)
@@ -739,9 +739,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4d,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 5-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-3, Evade 2-4, Wild\n* Tie : Focus 4\n* Hits: 4\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 4-10, Focus 4-10, Counter, Wild\n* Loss: Attack 2-3, Focus AJQK 2-3\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Strong:5-10(12), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-3,J-A(12), Evade(12), Wild(2)\n* Tie: Strong:4(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-4h)
@@ -752,9 +752,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4h,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 5-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-3, Evade 2-4, Wild\n* Tie : Focus 4\n* Hits: 4\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 4-10, Focus 4-10, Counter, Wild\n* Loss: Attack 2-3, Focus AJQK 2-3\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Fast:5-10(12), Strong(26), Evade(13)\n* Loss: Fast:2-3,J-A(12), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:4(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-4s)
@@ -765,9 +765,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4s,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 5-10, Focus\n* Lose: Attack AJQK 2-3, Defend 4-10, Evade 2-4, Counter, Wild\n* Tie : Attack 4, Defend 2-4 Overkill\n* Hits: 4, Draw\n* Combo: 4-5-6, Hits: 15, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-4, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 5-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Fast:5-10(12), Strong(26), Evade(13)\n* Loss: Fast:2-3,J-A(12), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:4(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-5c)
@@ -778,9 +778,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 6-10, Focus\n* Lose: Attack AJQK 2-4, Defend 5-10, Evade 2-5, Counter, Wild\n* Tie : Attack 5, Defend 2-5 Overkill\n* Hits: 5, Draw\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-5, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 6-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Strong:6-10(10), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-4,J-A(14), Evade(12), Wild(2)\n* Tie: Strong:5(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-5d)
@@ -791,9 +791,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5d,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 6-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-4, Evade 2-5, Wild\n* Tie : Focus 5\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 5-10, Focus 5-10, Counter, Wild\n* Loss: Attack 2-4, Focus AJQK 2-4\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Strong:6-10(10), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-4,J-A(14), Evade(12), Wild(2)\n* Tie: Strong:5(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-5h)
@@ -804,9 +804,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5h,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 6-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-4, Evade 2-5, Wild\n* Tie : Focus 5\n* Hits: 5\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 5-10, Focus 5-10, Counter, Wild\n* Loss: Attack 2-4, Focus AJQK 2-4\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Fast:6-10(10), Strong(26), Evade(13)\n* Loss: Fast:2-4,J-A(14), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:5(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-5s)
@@ -817,9 +817,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5s,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 6-10, Focus\n* Lose: Attack AJQK 2-4, Defend 5-10, Evade 2-5, Counter, Wild\n* Tie : Attack 5, Defend 2-5 Overkill\n* Hits: 5, Draw\n* Combo: 5-6-7, Hits: 18, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-5, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 6-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Fast:6-10(10), Strong(26), Evade(13)\n* Loss: Fast:2-4,J-A(14), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:5(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-6c)
@@ -830,9 +830,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 7-10, Focus\n* Lose: Attack AJQK 2-5, Defend 6-10, Evade 2-6, Counter, Wild\n* Tie : Attack 7, Defend 2-6 Overkill\n* Hits: 6, Draw\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-6, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 7-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Strong:7-10(8), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-5,J-A(16), Evade(12), Wild(2)\n* Tie: Strong:6(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-6d)
@@ -843,9 +843,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6d,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 7-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-5, Evade 2-6, Wild\n* Tie : Focus 6\n* Hits: 6\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 6-10, Focus 6-10, Counter, Wild\n* Loss: Attack 2-5, Focus AJQK 2-5\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Strong:7-10(8), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-5,J-A(16), Evade(12), Wild(2)\n* Tie: Strong:6(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-6h)
@@ -856,9 +856,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6h,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 7-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-5, Evade 2-6, Wild\n* Tie : Focus 6\n* Hits: 6\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 6-10, Focus 6-10, Counter, Wild\n* Loss: Attack 2-5, Focus AJQK 2-5\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Fast:7-10(8), Strong(26), Evade(13)\n* Loss: Fast:2-5,J-A(16), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:6(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-6s)
@@ -869,9 +869,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 7-10, Focus\n* Lose: Attack AJQK 2-5, Defend 6-10, Evade 2-6, Counter, Wild\n* Tie : Attack 7, Defend 2-6 Overkill\n* Hits: 6, Draw\n* Combo: 6-7-8, Hits: 21, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-6, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 7-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Fast:7-10(8), Strong(26), Evade(13)\n* Loss: Fast:2-5,J-A(16), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:6(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-7c)
@@ -882,9 +882,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 8-10, Focus\n* Lose: Attack AJQK 2-6, Defend 7-10, Evade 2-7, Counter, Wild\n* Tie : Attack 7, Defend 2-6 Overkill\n* Hits: 7, Draw\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-7, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 8-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Strong:8-10(6), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-6,J-A(18), Evade(12), Wild(2)\n* Tie: Strong:7(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-7d)
@@ -895,9 +895,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7d,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 8-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-6, Evade 2-7, Wild\n* Tie : Focus 7\n* Hits: 7\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 7-10, Focus 7-10, Counter, Wild\n* Loss: Attack 2-6, Focus AJQK 2-6\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Strong:8-10(6), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-6,J-A(18), Evade(12), Wild(2)\n* Tie: Strong:7(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-7h)
@@ -908,9 +908,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 8-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-6, Evade 2-7, Wild\n* Tie : Focus 7\n* Hits: 7\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 7-10, Focus 7-10, Counter, Wild\n* Loss: Attack 2-6, Focus AJQK 2-6\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Fast:8-10(6), Strong(26), Evade(13)\n* Loss: Fast:2-6,J-A(18), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:7(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-7s)
@@ -921,9 +921,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7s,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 8-10, Focus\n* Lose: Attack AJQK 2-6, Defend 7-10, Evade 2-7, Counter, Wild\n* Tie : Attack 7, Defend 2-6 Overkill\n* Hits: 7, Draw\n* Combo: 7-8-9, Hits: 24, Draw or Reclaim 1\n\nDefend\n* Win : Attack 2-7, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 8-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Fast:8-10(6), Strong(26), Evade(13)\n* Loss: Fast:2-6,J-A(18), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:7(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-8c)
@@ -934,9 +934,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 9-10, Focus\n* Lose: Attack AJQK 2-7, Defend 8-10, Evade 2-8, Counter, Wild\n* Tie : Attack 8, Defend 2-7 Overkill\n* Hits: 8, Draw\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim:1\n\nDefend\n* Win : Attack 2-8, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 9-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Strong:9-10(4), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-7,J-A(20), Evade(12), Wild(2)\n* Tie: Strong:8(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-8d)
@@ -947,9 +947,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8d,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 9-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-7, Evade 2-8, Wild\n* Tie : Focus 8\n* Hits: 8\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 8-10, Focus 8-10, Counter, Wild\n* Loss: Attack 2-7, Focus AJQK 2-7\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Strong:9-10(4), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-7,J-A(20), Evade(12), Wild(2)\n* Tie: Strong:8(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-8h)
@@ -960,9 +960,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8h,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 9-10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-7, Evade 2-8, Wild\n* Tie : Focus 8\n* Hits: 8\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim 1\n\nEvade\n* Win : Attack AJQK 8-10, Focus 8-10, Counter, Wild\n* Loss: Attack 2-7, Focus AJQK 2-7\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Fast:9-10(4), Strong(26), Evade(13)\n* Loss: Fast:2-7,J-A(20), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:8(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-8s)
@@ -973,9 +973,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8s,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 9-10, Focus\n* Lose: Attack AJQK 2-7, Defend 8-10, Evade 2-8, Counter, Wild\n* Tie : Attack 8, Defend 2-7 Overkill\n* Hits: 8, Draw\n* Combo: 8-9-10 Hits: 27, Draw or Reclaim:1\n\nDefend\n* Win : Attack 2-8, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 9-10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Fast:9-10(4), Strong(26), Evade(13)\n* Loss: Fast:2-7,J-A(20), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:8(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-9c)
@@ -986,9 +986,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 10, Focus\n* Lose: Attack AJQK 2-8, Defend 9-10, Evade 2-9, Counter, Wild\n* Tie : Attack 9, Defend 2-8 Overkill\n* Hits: 9, Draw\n\nDefend\n* Win : Attack 2-9, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Strong:10(2), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-8,J-A(22), Evade(12), Wild(2)\n* Tie: Strong:9(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-9d)
@@ -999,9 +999,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9d,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-8, Evade 2-9, Wild\n* Tie : Focus 9\n* Hits: 9\n\nEvade\n* Win : Attack AJQK 9-10, Focus 9-10, Counter, Wild\n* Loss: Attack 2-8, Focus AJQK 2-8\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Strong:10(2), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-8,J-A(22), Evade(12), Wild(2)\n* Tie: Strong:9(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-9h)
@@ -1012,9 +1012,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9h,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Focus/Evade 10, Defend, Counter\n* Lose: Attack, Focus AJQK 2-8, Evade 2-9, Wild\n* Tie : Focus 9\n* Hits: 9\n\nEvade\n* Win : Attack AJQK 9-10, Focus 9-10, Counter, Wild\n* Loss: Attack 2-8, Focus AJQK 2-8\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Fast:10(2), Strong(26), Evade(13)\n* Loss: Fast:2-8,J-A(22), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:9(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-9s)
@@ -1025,9 +1025,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9s,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Attack/Evade 10, Focus\n* Lose: Attack AJQK 2-8, Defend 9-10, Evade 2-9, Counter, Wild\n* Tie : Attack 9, Defend 2-8 Overkill\n* Hits: 9, Draw\n\nDefend\n* Win : Attack 2-9, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK 10 Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Fast:10(2), Strong(26), Evade(13)\n* Loss: Fast:2-8,J-A(22), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:9(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-ac)
@@ -1038,9 +1038,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ac,
       ":image",
-      "images/card-fate-attack-counter.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Evade, Counter, Wild\n* Tie : Attack A, Defend Overkill\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Strong and Dominating (Super)\n* Win: Strong:2-K(24), Block(26), Counter(13)\n* Loss: Fast(26), Evade(12), Wild(2)\n* Tie: Strong:A(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-ad)
@@ -1051,9 +1051,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ad,
       ":image",
-      "images/card-fate-focus-counter.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Strong and Clever (Super)\n* Win: Strong:2-K(24), Block(26), Counter(13)\n* Loss: Fast(26), Evade(12), Wild(2)\n* Tie: Strong:A(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-ah)
@@ -1064,9 +1064,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ah,
       ":image",
-      "images/card-fate-focus-counter.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Super)\n* Win : Focus 2-K, Defend, Evade, Counter\n* Loss: Attack, Wild\n* Tie : Focus A\n* Hits: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Fast and Unexpected (Super)\n* Win: Fast:2-K(24), Strong(26), Evade(13)\n* Loss: Block*(26), Counter(13), Wild(2)\n* Tie: Fast:A(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-as)
@@ -1077,9 +1077,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_as,
       ":image",
-      "images/card-fate-attack-counter.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Super)\n* Win : Attack 2-K, Focus\n* Loss: Evade, Counter, Wild\n* Tie : Attack A, Defend Overkill\n* Hit: 0\n* Combo: AA Hits: 20 or AAA Hits: 30 or AAAA Hits: 40\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Fast and Precise (Super)\n* Win: Fast:2-K(24), Strong(26), Evade(13)\n* Loss: Block*(26), Counter(13), Wild(2)\n* Tie: Fast:A(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-jc)
@@ -1092,9 +1092,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jc,
       ":image",
-      "images/card-fate-attack-counter.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack QK 2-10, Focus\n* Loss: Attack A, Evade, Counter, Wild\n* Tie : Attack J, Defend Overkill\n* Hits: 10\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Strong and Dominating (Special)\n* Win: Strong:2-10,QK(22), Block(26), Counter(13)\n* Loss: Fast(26), Strong:A(2), Evade(12), Wild(2)\n* Tie: Strong:J(2)\n* Success: 1\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-jd)
@@ -1107,9 +1107,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jd,
       ":image",
-      "images/card-fate-focus-counter.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus QK 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 10\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Strong and Clever (Special)\n* Win: Strong:2-10,QK(22), Block(26), Counter(13)\n* Loss: Fast(26), Strong:A(2), Evade(12), Wild(2)\n* Tie: Strong:J(2)\n* Success: 1\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-jh)
@@ -1122,9 +1122,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_jh,
       ":image",
-      "images/card-fate-focus-counter.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus QK 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus A, Wild\n* Tie : Focus J\n* Hits: 10\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Fast and Unexpected (Special)\n* Win: Fast:2-10,QK(22), Strong(26), Evade(13)\n* Loss: Fast:A(2), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:J(2)\n* Success: 1\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-js)
@@ -1137,9 +1137,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_js,
       ":image",
-      "images/card-fate-attack-counter.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack QK 2-10, Focus\n* Loss: Attack A, Evade, Counter, Wild\n* Tie : Attack J, Defend Overkill\n* Hits: 10\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Fast and Precise (Special)\n* Win: Fast:2-10,QK(22), Strong(26), Evade(13)\n* Loss: Fast:A(2), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:J(2)\n* Success: 1\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-kc)
@@ -1150,9 +1150,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kc,
       ":image",
-      "images/card-fate-attack-counter.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack AJQ, Evade, Counter, Wild\n* Tie : Attack K, Defend Overkill\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Strong and Dominating (Special)\n* Win: Strong:2-10(18), Block(26), Counter(13)\n* Loss: Fast(26), Strong:JQA(6), Evade(12), Wild(2)\n* Tie: Strong:K(2)\n* Success: 1\n* Combo: KK Success:2 or KKK Success:3\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-kd)
@@ -1163,9 +1163,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kd,
       ":image",
-      "images/card-fate-focus-counter.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus AJQ, Wild\n* Tie : Focus K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Strong and Clever (Special)\n* Win: Strong:2-10(18), Block(26), Counter(13)\n* Loss: Fast(26), Strong:JQA(6), Evade(12), Wild(2)\n* Tie: Strong:K(2)\n* Success: 1\n* Combo: KK Success:2 or KKK Success:3\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-kh)
@@ -1176,9 +1176,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_kh,
       ":image",
-      "images/card-fate-focus-counter.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus AJQ, Wild\n* Tie : Focus K\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Fast and Unexpected (Special)\n* Win: Fast:2-10(18), Strong(26), Evade(13)\n* Loss: Fast:JQA(6), Block*(26), Counter(13), Wild(2)\n* Tie: Strong:K(2)\n* Success: 1\n* Combo: KK Success:2 or KKK Success:3\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-ks)
@@ -1189,9 +1189,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ks,
       ":image",
-      "images/card-fate-attack-counter.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack 2-10, Focus\n* Loss: Attack AJQ, Evade, Counter, Wild\n* Tie : Attack K, Defend Overkill\n* Hits: 10\n* Combo: KK Hits: 20 or KKK Hits: 30\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Fast and Precise (Special)\n* Win: Fast:2-10(18), Strong(26), Evade(13)\n* Loss: Fast:JQA(6), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:K(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-qc)
@@ -1202,9 +1202,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qc,
       ":image",
-      "images/card-fate-attack-counter.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack K 2-10, Focus\n* Loss: Attack AJ, Evade, Counter, Wild\n* Tie : Attack Q, Defend Overkill\n* Hits: 10\n* Combo: QQ Hits: 20\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Strong and Dominating (Special)\n* Win: Strong:2-10,K(20), Block(26), Counter(13)\n* Loss: Fast(26), Strong:JA(4), Evade(12), Wild(2)\n* Tie: Strong:Q(2)\n* Success: 1\n* Combo: QQ Success:2\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-qd)
@@ -1215,9 +1215,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qd,
       ":image",
-      "images/card-fate-focus-counter.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus K 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus AJ, Wild\n* Tie : Focus Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Strong and Clever (Special)\n* Win: Strong:2-10,K(20), Block(26), Counter(13)\n* Loss: Fast(26), Strong:JA(4), Evade(12), Wild(2)\n* Tie: Strong:Q(2)\n* Success: 1\n* Combo: QQ Success:2\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-qh)
@@ -1230,9 +1230,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qh,
       ":image",
-      "images/card-fate-focus-counter.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Special)\n* Win : Focus K 2-10, Defend, Evade, Counter\n* Loss: Attack, Focus AJ, Wild\n* Tie : Focus Q\n* Hits: 10\n* Combo: QQ Hits: 20\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Fast and Unexpected (Special)\n* Win: Fast:2-10,K(20), Strong(26), Evade(13)\n* Loss: Fast:JA(4), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:Q(2)\n* Success: 1\n* Combo: QQ Success:2\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-qs)
@@ -1243,9 +1243,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_qs,
       ":image",
-      "images/card-fate-attack-counter.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Special)\n* Win : Attack K 2-10, Focus\n* Loss: Attack AJ, Evade, Counter, Wild\n* Tie : Attack Q, Defend Overkill\n* Hits: 10\n* Combo: QQ Hits: 20\n\nCounter\n* Win : Attack, Wild\n* Loss: Focus, Defend, Evade\n* Hits: 0. Resolve an Attack or Focus"
+      "Fast and Precise (Special)\n* Win: Fast:2-10,K(20), Strong(26), Evade(13)\n* Loss: Fast:JA(4), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:Q(2)\n* Success: 1\n* Combo: QQ Success:2\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)\n\n* Discard: Cancel 1 Success."
     ))
 
     // (const fate-tc)
@@ -1258,9 +1258,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_tc,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-strong-block.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Focus\n* Lose: Attack AJQK 2-9, Defend 10, Evade, Counter, Wild\n* Tie : Attack 10, Defend 2-9 Overkill\n* Hits: 10, Draw\n\nDefend\n* Win : Attack 2-10, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Strong and Dominating (Normal)\n* Win: Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-9,J-A(24), Evade(12), Wild(2)\n* Tie: Strong:10(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-td)
@@ -1273,9 +1273,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_td,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-strong-counter.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Defend, Counter\n* Lose: Attack, Focus AJQK 2-9, Evade, Wild\n* Tie : Focus 10\n* Hits: 10\n\nEvade\n* Win : Attack AJQK 10, Focus 10, Counter, Wild\n* Loss: Attack 2-9, Focus AJQK 2-9\n* Tie : Defend, Evade\n* Any : Move"
+      "Strong and Clever (Normal)\n* Win: Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-9,J-A(24), Evade(12), Wild(2)\n* Tie: Strong:10(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
     ))
 
     // (const fate-th)
@@ -1288,9 +1288,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_th,
       ":image",
-      "images/card-fate-focus-evade.svg",
+      "images/card-fate-fast-block.svg",
       ":summary",
-      "Focus (Normal)\n* Win : Defend, Counter\n* Lose: Attack, Focus AJQK 2-9, Evade, Wild\n* Tie : Focus 10\n* Hits: 10\n\nEvade\n* Win : Attack AJQK 10, Focus 10, Counter, Wild\n* Loss: Attack 2-9, Focus AJQK 2-9\n* Tie : Defend, Evade\n* Any : Move"
+      "Fast and Unexpected (Special)\n* Win: Strong(26), Evade(13)\n* Loss: Fast:2-9,J-A(24), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:10(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
     ))
 
     // (const fate-ts)
@@ -1303,9 +1303,9 @@ export default class nx_tactics_decks_fate {
       ":ranksuit",
       nx_tactics_base.c_ranksuit_ts,
       ":image",
-      "images/card-fate-attack-defend.svg",
+      "images/card-fate-fast-evade.svg",
       ":summary",
-      "Attack (Normal)\n* Win : Focus\n* Lose: Attack AJQK 2-9, Defend 10, Evade, Counter, Wild\n* Tie : Attack 10, Defend 2-9 Overkill\n* Hits: 10, Draw\n\nDefend\n* Win : Attack 2-10, Counter, Wild\n* Loss: Focus\n* Tie : Attack AJQK Overkill, Defend, Evade, Keep\n* Hits: 0, Keep, Draw"
+      "Fast and Precise (Normal)\n* Win: Strong(26), Evade(13)\n* Loss: Fast:2-9,J-A(24), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:10(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
     ))
 
     // (const fate-wildblack)
@@ -1318,7 +1318,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-joker.svg",
       ":summary",
-      "Wild (Gold Burst):\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck.\n\nCombo Breaker (Blue Burst):\n* IF a Combo is performed on you THEN discard to cancel the Combo."
+      "Wild (Gold Burst):\n* Win: Fast(26), Strong(26)\n* Loss: Block(26), Evade(13), Counter(13)\n* Tie: Wild(2)\n* Success: 0. Search:1 or Reclaim:1.\n* Shuffle: Discards into Deck.\n\nCombo Breaker (Blue Burst):\n* Mitigation: Discard to cancel ALL Successes. IF reasonable THEN an adjacent Ally may do this instead.\n* Shuffle: Discards into Deck."
     ))
 
     // (const fate-wildred)
@@ -1331,7 +1331,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-joker.svg",
       ":summary",
-      "Wild (Gold Burst):\n* Win : Attack, Focus\n* Loss: Defend, Evade, Counter\n* Tie : Wild\n* Hits: 0. Search or Reclaim 1.\n* Shuffle: Discards into Deck.\n\nCombo Breaker (Blue Burst):\n* IF a Combo is performed on you THEN discard to cancel the Combo."
+      "Wild (Gold Burst):\n* Win: Fast(26), Strong(26)\n* Loss: Block(26), Evade(13), Counter(13)\n* Tie: Wild(2)\n* Success: 0. Search:1 or Reclaim:1.\n* Shuffle: Discards into Deck.\n\nCombo Breaker (Blue Burst):\n* Mitigation: Discard to cancel ALL Successes. IF reasonable THEN an adjacent Ally may do this instead.\n* Shuffle: Discards into Deck."
     ))
 
   }

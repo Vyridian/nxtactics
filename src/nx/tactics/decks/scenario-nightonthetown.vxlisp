@@ -3,123 +3,6 @@
        (lib data :path nx/tactics/decks/data)
  :doc  "Night On The Town Scenario")
 
-(func item-axehand : base/item
- (base/item
-  :name "Hand Axe"
-  :image "images/cards/item-axehand.svg"
-  :summary
-   "* Melee: [Hack] [Slash]
-    * Hit: [Body]
-    * Location: [1-hand]"
-  :body "9x-1"
-  :mass "900g/2lb"))
-
-(func item-lockcombination : base/item
- (base/item
-  :name "Lock Combination"
-  :image "images/cards/item-lockcombination.svg"))
-
-(func item-jerrycan : base/item
- (base/item
-  :name "Jerry Can"
-  :image "images/cards/item-jerrycan.svg"))
-
-(func item-keys : base/item
- (base/item
-  :name "Keys"
-  :image "images/cards/item-keys.svg"))
-
-(func item-knife : base/item
- (base/item
-  :name "Knife"
-  :image "images/cards/item-knife.svg"
-  :summary
-   "* [Fight]: [Close Combat]
-    * [Damage]: [Body]-1 [Pierce] [Slash]
-    * [Location]: [1-hand]"
-  :body "5x-1"
-  :mass "500g/1lb"
-  :length "25cm/10in"))
-
-(func item-liquorbottle : base/item
- (base/item
-  :name "Liquor Bottle"
-  :image "images/cards/item-liquorbottle.svg"))
-
-(func item-molotovcocktail : base/item
- (base/item
-  :name "Molotov Cocktail"
-  :image "images/cards/item-molotovcocktail.svg"))
-
-(func item-revolver : base/item
- (base/item
-  :name "Revolver"
-  :image "images/cards/item-revolver.svg"))
-
-(func item-revolverammo : base/item
- (base/item
-  :name "Revolver Ammo"
-  :image "images/cards/item-revolverammo.svg"))
-
-(func item-rifle : base/item
- (base/item
-  :name "Rifle"
-  :image "images/cards/item-rifle.svg"))
-
-(func item-rifleammo : base/item
- (base/item
-  :name "Rifle Ammo"
-  :image "images/cards/item-rifleammo.svg"))
-
-(func item-safe : base/item
- (base/item
-  :name "Safe"
-  :image "images/cards/item-safe.svg"))
-
-(func item-shotgun : base/item
- (base/item
-  :name "Shotgun"
-  :image "images/cards/item-shotgun.svg"))
-
-(func item-shotgunammo : base/item
- (base/item
-  :name "Shotgun Ammo"
-  :image "images/cards/item-shotgunammo.svg"))
-
-(func item-spear : base/item
- (base/item
-  :name "Spear"
-  :image "images/cards/item-spear.svg"
-  :summary
-   "* [Fight]: [Melee] [Reach]
-    * [Damage]: [Body]+3 [Pierce] [Slash]
-    * [Location]: [2-hand]
-    * [Armor]:1x1"
-  :body "3x0"
-  :mass "3kg/6lb"))
-
-(func item-fireaxe : base/item
- (base/item
-  :name "Fire Axe"
-  :image "images/cards/item-woodaxe.svg"
-  :summary
-   "* [Fight]: [Melee]
-    * [Initiative]:-1
-    * [Damage]: [Body]+3 [Hack] [Slash]
-    * [Location]: [2-hand]
-    * [Armor]:1x1"
-  :body "3x0"
-  :mass "3.1kg/7lb"))
-
-(func item-monocle : base/item
- (base/item
-  :name "Monocle"
-  :image "images/cards/item-monocle.svg"
-  :summary
-   "* [Passive]: IF examining small objects THEN [Investigation]:+1"
-  :body "2x-2"
-  :mass "20g/.05lb"))
-
 (func place-clinic : base/place
  (base/place
   :name "Clinic"
@@ -168,10 +51,10 @@
   :body "7x2"
   :mind "7x1"
   :will "3x1"
-  :speed "4x1"
+  :speed "5x0"
   :mass "70kg/155lb"
   :height "1.7m/5'6"
-  :speedland "40kph/25mph"
+  :speedland "18kph/11mph"
   :demeanor "Foolish"
   :nature "Cowardly"
   :summary ""
@@ -183,18 +66,18 @@
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (data/tactics-item "Shortbow"))))
+         :item (data/item<-key "Shortbow"))))
     (base/unitskill
      :skill (data/tactics-skill "Investigation")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-name "Detail Oriented")))
+         :ability (data/ability<-key "Detail Oriented")))
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (item-monocle)))))))
+         :item (data/item<-key "Monocle")))))))
 
 (func unit-zombiedog : base/unit
  (base/unit
@@ -203,10 +86,10 @@
   :body "2x1"
   :mind "8x-1"
   :will "4x1"
-  :speed "7x1"
+  :speed "6X0"
   :mass "22kg/50lb"
   :height "76cm/30in"
-  :speedland "50kph/30mph"
+  :speedland "20kph/12mph"
   :nature "Dogged"
   :summary
    "[Zombie]"
@@ -218,7 +101,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-name "Grab")))))
+         :ability (data/ability<-key "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -226,8 +109,8 @@
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (data/ability<-name "Bite")))))))
+       (base/unitability
+        :ability (data/ability<-key "Bite")))))))
 
 (func unit-zombierunner : base/unit
  (base/unit
@@ -236,10 +119,10 @@
   :body "7x1"
   :mind "5x-1"
   :will "2x1"
-  :speed "3x1"
+  :speed "3x0"
   :mass "70kg/155lb"
   :height "1.8m/6ft"
-  :speedland "30kph/20mph"
+  :speedland "10kph/7mph"
   :demeanor "Aloof"
   :summary
    "[Zombie]"
@@ -251,7 +134,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-name "Grab")))))
+         :ability (data/ability<-key "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -260,7 +143,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-name "Bite")))))))
+         :ability (data/ability<-key "Bite")))))))
 
 (func unit-zombiewalker : base/unit
  (base/unit
@@ -269,9 +152,9 @@
   :body "8x1"
   :mind "5x-1"
   :will "2x1"
-  :speed "2x1"
+  :speed "2x0"
   :mass "80kg/175"
-  :speedland "20kph/12mph"
+  :speedland "10kph"
   :summary
    "[Zombie]"
   :unitskillmap
@@ -282,7 +165,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-name "Grab")))))
+         :ability (data/ability<-key "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -291,50 +174,56 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-name "Bite")))))))
+         :ability (data/ability<-key "Bite")))))))
 
 (func deck-nightonthetown : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [professor : base/card := (unit-theprofessor)
    professori : base/cardimage := (base/cardimage<-card professor)]
- (base/deck
-  :name "Night on the Town"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist
-     professor
-     professori
-     (data/ability<-name "Grab")
-     (data/ability<-name "Bite")
-     (data/ability<-name "Detail Oriented")
-     (item-monocle)
-     (data/tactics-item "Shortbow")
-     (unit-zombiedog)
-     (base/cardimage<-card (unit-zombiedog))
-     (unit-zombierunner)
-     (base/cardimage<-card (unit-zombierunner))
-     (unit-zombiewalker)
-     (base/cardimage<-card (unit-zombiewalker))
-     (data/tactics-item "Bare Handed")
-     (item-lockcombination)
-     (item-fireaxe)
-     (item-jerrycan)
-     (item-keys)
-     (item-knife)
-     (item-liquorbottle)
-     (item-molotovcocktail)
-     (item-revolver)
-     (item-revolverammo)
-     (item-rifle)
-     (item-rifleammo)
-     (item-safe)
-     (item-shotgun)
-     (item-shotgunammo)
-     (item-spear)
-     (place-clinic)
-     (place-conveniencestore)
-     (place-gasstation)
-     (place-gunstore)
-     (place-policestation)
-     (place-street)
+  (base/deck
+   :name "Night on the Town"
+   :cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      professor
+      professori
+      (any<-any : base/cardlist
+       (base/abilitylist<-tactics-keys
+        tactics
+        "Bite"
+        "Detail Oriented"
+        "Grab"))
+      (any<-any : base/cardlist
+       (base/itemlist<-tactics-keys
+        tactics
+        "Bare Handed"
+        "Fire Axe"
+        "Jerry Can"
+        "Keys"
+        "Knife"
+        "Liquor Bottle"
+        "Lock Combination"
+        "Molotov Cocktail"
+        "Monocle"
+        "Revolver"
+        "Revolver Ammo"
+        "Rifle"
+        "Rifle Ammo"
+        "Shortbow"
+        "Shotgun"
+        "Shotgun Ammo"
+        "Spear"))
+      (unit-zombiedog)
+      (base/cardimage<-card (unit-zombiedog))
+      (unit-zombierunner)
+      (base/cardimage<-card (unit-zombierunner))
+      (unit-zombiewalker)
+      (base/cardimage<-card (unit-zombiewalker))
+      (place-clinic)
+      (place-conveniencestore)
+      (place-gasstation)
+      (place-gunstore)
+      (place-policestation)
+      (place-street)
      )))))

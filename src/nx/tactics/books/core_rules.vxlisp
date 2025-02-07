@@ -855,8 +855,8 @@ any opponents, and will leave the map if able.")))
           :name "Personal Scale"
           :summary
            "Wars are fought at larger scales, but individual interaction is best done at this scale.
-* 1 Turn = 2 seconds
-* 1 Space = 2 meters (6 ft)
+* Round:2s
+* Space:2m (6 ft)
 * 24 x 20 map = 48m x 40m
 * 1 Space/Turn = 1m/s
 * The world record for 100m dash is 10 seconds = 22mph = 36kph = 10m/s = 10 spaces

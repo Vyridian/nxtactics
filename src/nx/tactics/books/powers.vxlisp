@@ -291,7 +291,7 @@
             * The level of quality effects the number of abilities as usual.
             * Each level of quality doubles the original price of the item."
           :abilitymap
-           (base/abilitymap<-tactics-namelist
+           (base/abilitymap<-tactics-keys
             tactics
             "Balanced for Throwing"))))
     "Vehicular Systems"
@@ -1411,13 +1411,16 @@
             "Project Pain"
              (ability
               :name "Project Pain"
-              :summary "* Relive a past (or current) trauma and project those feelings on a target. If you have more than 1 damage you may move 1 to the target. If you have more than 1 negative condition, you may move 1 negative condition to the target."
+              :summary
+               "* Relive a past (or current) trauma and project those feelings on a target. If you have more than 1 damage you may move 1 to the target. If you have more than 1 negative condition, you may move 1 negative condition to the target."
               :titles "Pain Shared is a Pain Doubled")
             "Share Pain"
              (ability
               :name "Share Pain"
-              :reference "* Your pain runs deep. ... Share your pain with me... and gain strength from the sharing. - Sybok, Star Trek V: The Final Frontier"
-              :summary "* Feel the pain the target is experiencing and create trust through the shared experience."
+              :reference
+               "* Your pain runs deep. ... Share your pain with me... and gain strength from the sharing. - Sybok, Star Trek V: The Final Frontier"
+              :summary
+               "* Feel the pain the target is experiencing and create trust through the shared experience."
               :titles "Pain Shared is Pain Halved")
             :Sympathy
              (ability
@@ -4802,7 +4805,8 @@
             "Eternal Flame"
              (ability
               :name "Eternal Flame"
-              :summary "* Creates a flame that burns without fuel for as long as desired (only one at a time).")
+              :summary
+               "* Creates a flame that burns without fuel for as long as desired (only one at a time).")
             "Fan the Flames"
              (ability
               :name "Fan the Flames")
@@ -4830,7 +4834,8 @@
             "Fire Walk"
              (ability
               :name "Fire Walk"
-              :reference "* I touch the fire and freezes me. I look into it and its black. Why can't I feel? My skin should crack and peel. I want the fire back. Now through the smoke, she calls to me, to make my way across the flame. To save the day or maybe melt away. I guess it's all the same. So I will walk through the fire, cause whereelse can I turn. I will walk through the fire and let it... The torch I bear is scorthing me, and Buffy's laughing I've no doubt. I hope she fries. I'm free if that bitch dies. I'd better help her out. Cause she is drawn to the fire. Some people never learn, and she will walk through the fire and let it... These endless days are finally ending in a blaze. And we are caught in the fire. The point of no return. So we will walk through the fire and let it burn. - Buffy the Vampire Slayer, Once More with Feeling"
+              :reference
+               "* I touch the fire and freezes me. I look into it and its black. Why can't I feel? My skin should crack and peel. I want the fire back. Now through the smoke, she calls to me, to make my way across the flame. To save the day or maybe melt away. I guess it's all the same. So I will walk through the fire, cause whereelse can I turn. I will walk through the fire and let it... The torch I bear is scorthing me, and Buffy's laughing I've no doubt. I hope she fries. I'm free if that bitch dies. I'd better help her out. Cause she is drawn to the fire. Some people never learn, and she will walk through the fire and let it... These endless days are finally ending in a blaze. And we are caught in the fire. The point of no return. So we will walk through the fire and let it burn. - Buffy the Vampire Slayer, Once More with Feeling"
               :summary "* Walk through flames. Gain [Armor] vs. Fire and ignore [Burning] effects.")
             "Fire Ward"
              (ability
@@ -4861,7 +4866,9 @@
             :Inferno
              (ability
               :name "Inferno"
-              :titles "Pyroclasm")
+              :titles "Pyroclasm"
+              :reference
+               "The embers of oblivion. Past, present, and future. A forbidden force that subsumes all creation. By my blood, by my flesh. The commandments set by the old gods are now shattered. Heavens! Earth! You will never forget my name! I am called Megumin! Foremost prodigy among Crimson Demons. Behold my Power! Explosion! - Megumin, Konosuba")
             "Living Flame"
              (ability
               :name "Living Flame")
@@ -5078,6 +5085,21 @@
             :Waypoint
              (ability
               :name "Waypoint")))
+        :Divergence
+         (power
+          :name "Divergence"
+          :summary "* The opposite of Convergence, Divergence specializes on objects moving apart."
+          :stat "Mind"
+          :abilitymap
+           (abilitymap
+            "Amplify Repulsion"
+             (ability
+              :name "Amplify Repulsion"
+              :summary "* Massively increase the repulsive force between two objects. This can increase magnetic repulsion and also increase the movement of two objects that have just collided to increase Knockback.")
+            "Pressor Force"
+             (ability
+              :name "Pressor Force"
+              :summary "* Apply low but steady pressure pushing an object away.")))
         :Explosive
          (power
           :name "Explosive")

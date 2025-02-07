@@ -393,23 +393,23 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Gryphon Light Infantry")
           )
         ),
-        ":Krokan",
+        ":Krukan",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Krokan",
+          "Krukan",
           ":summary",
-          "* Krokans are heavy, intelligent frog creatures. They appear very similar to enormous bullfrogs. Seated they are about 5ft all around. They possess manipulative fingers, powerful legs, and long tongues. Their weight and leg strength make them dangerous combatants. They are also notorious for attempting to swallow victims alive.\n* Society - Their culture is tribal and semi-nomadic with many small emcampments both above and below the water.\n* It is said that a purely land-based version exists that more resemble toads.",
+          "* Krukans are heavy, intelligent frog creatures. They appear very similar to enormous bullfrogs. Seated they are about 5ft all around. They possess manipulative fingers, powerful legs, and long tongues. Their weight and leg strength make them dangerous combatants. They are also notorious for attempting to swallow victims alive.\n* Society - Their culture is tribal and semi-nomadic with many small emcampments both above and below the water.\n* It is said that a purely land-based version exists that more resemble toads.",
           ":titles",
-          "Bullywug, Croaker, Froglok",
+          "Anuran, Bullywug, Croaker, Froglok, Krokan",
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
-            "Bull Krokan",
+            "Bull Krukan",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Bull Krokan",
+              "Bull Krukan",
               ":reference",
               "* I don't believe I require a menu. - Tahm Kench, Runeterra",
               ":unitpowermap",
@@ -429,11 +429,11 @@ export default class nx_tactics_books_bestiary {
                 )
               )
             ),
-            "Poison Krokan",
+            "Poison Krukan",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Poison Krokan",
+              "Poison Krukan",
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
@@ -441,11 +441,11 @@ export default class nx_tactics_books_bestiary {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Venomous")
               )
             ),
-            "Krokan Chemist",
+            "Krukan Chemist",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
-              "Krokan Chemist",
+              "Krukan Chemist",
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
@@ -453,12 +453,12 @@ export default class nx_tactics_books_bestiary {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Alchemy")
               )
             ),
-            "Krokan Shaman",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Krokan Shaman"),
-            "Krokan Skirmisher",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Krokan Skirmisher"),
-            "Krokan Trapper",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Krokan Trapper")
+            "Krukan Shaman",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Krukan Shaman"),
+            "Krukan Skirmisher",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Krukan Skirmisher"),
+            "Krukan Trapper",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Krukan Trapper")
           )
         ),
         ":Mantids",
@@ -2598,7 +2598,7 @@ export default class nx_tactics_books_bestiary {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             "Black Bear",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Black Bear"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Black Bear", ":reference", "* Apex predator. High on cocaine. Out of its mind. - Cocaine Bear"),
             "Brown Bear",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Brown Bear"),
             "Grizzly Bear",
@@ -3999,7 +3999,7 @@ export default class nx_tactics_books_bestiary {
             "Pestilence Horse",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Pestilence Horse", ":summary", "* A Pestience Horse is a zombie horse that carries deadly diseases. It's decaying body is not as fast as its original body, but may still trot fairly quickly. It is not as agressive as other undead, instead travelling around spreading disease and fleeing when confronted."),
             ":Scarecrow",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Scarecrow", ":reference", "* Headless Horseman\n* Great Pumpkin\n* Jack O' Lantern\n* Pumpkin King", ":summary", "* A scarecrow is a humanoid mass of twigs, straw, and old clothes that has been animated by an undead spirit. Some are actual scarecrows that have been possessed; others form out of pumpkin patches on moonless nights. Scarecrows hate all living things, but wish to do more than kill. They desire to frighten living beings as much as possible. A scarecrow can be created when someone calls for vengeance before their death. Sometimes they are killed by brigands, other times they starves to death because of blight or drought. The scarecrow then haunts the place of death, not ranging more than a mile from it. Sometimes entire families become scarecrows, and the victims of scarecrows occasionally join the haunting as well. Simply killing the body is not enough to end its haunting, as it reappears from another pumpkin on the next moonless night. To finally destroy a scarecrow, every scrap of every body must be burned, as well as any pumpkins or pumpkin vines. The land must then be tilled and planted with a new crop. Only then are the spirits forced to give up their vengeance and give up the mortal coil.\n* Scarecrows prefer to play with their prey, sneaking up on them and attempting to terrify them.  Scarecrows fight without regard to their own safety, as they know they are likely to return on another night if destroyed."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Scarecrow", ":reference", "* Headless Horseman\n* Great Pumpkin\n* Jack O' Lantern\n* Pumpkin King", ":titles", "Dullahan", ":summary", "* A scarecrow is a humanoid mass of twigs, straw, and old clothes that has been animated by an undead spirit. Some are actual scarecrows that have been possessed; others form out of pumpkin patches on moonless nights. Scarecrows hate all living things, but wish to do more than kill. They desire to frighten living beings as much as possible. A scarecrow can be created when someone calls for vengeance before their death. Sometimes they are killed by brigands, other times they starves to death because of blight or drought. The scarecrow then haunts the place of death, not ranging more than a mile from it. Sometimes entire families become scarecrows, and the victims of scarecrows occasionally join the haunting as well. Simply killing the body is not enough to end its haunting, as it reappears from another pumpkin on the next moonless night. To finally destroy a scarecrow, every scrap of every body must be burned, as well as any pumpkins or pumpkin vines. The land must then be tilled and planted with a new crop. Only then are the spirits forced to give up their vengeance and give up the mortal coil.\n* Scarecrows prefer to play with their prey, sneaking up on them and attempting to terrify them.  Scarecrows fight without regard to their own safety, as they know they are likely to return on another night if destroyed."),
             "Skeletal Dragon",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Skeletal Dragon"),
             "Skeletal Knight",

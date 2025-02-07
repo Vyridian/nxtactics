@@ -9,6 +9,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
 
   /**
    * @function deck_nightonthetown
+   * @param  {tactics} tactics
    * @return {deck}
    */
   static t_deck_nightonthetown = {
@@ -19,7 +20,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   }
 
   // (func deck-nightonthetown)
-  static f_deck_nightonthetown() {
+  static f_deck_nightonthetown(tactics) {
     let output = nx_tactics_base.e_deck
     output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_deck},
@@ -37,11 +38,14 @@ export default class nx_tactics_decks_scenario_nightonthetown {
               {"any-1": nx_tactics_base.t_cardlist},
               professor,
               professori,
-              nx_tactics_decks_data.f_ability_from_name("Grab"),
-              nx_tactics_decks_data.f_ability_from_name("Bite"),
-              nx_tactics_decks_data.f_ability_from_name("Detail Oriented"),
-              nx_tactics_decks_scenario_nightonthetown.f_item_monocle(),
-              nx_tactics_decks_data.f_tactics_item("Shortbow"),
+              vx_core.f_any_from_any(
+                {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_abilitylist},
+                nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Bite", "Detail Oriented", "Grab")
+              ),
+              vx_core.f_any_from_any(
+                {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_itemlist},
+                nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Fire Axe", "Jerry Can", "Keys", "Knife", "Liquor Bottle", "Lock Combination", "Molotov Cocktail", "Monocle", "Revolver", "Revolver Ammo", "Rifle", "Rifle Ammo", "Shortbow", "Shotgun", "Shotgun Ammo", "Spear")
+              ),
               nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog(),
               nx_tactics_base.f_cardimage_from_card(
                 nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog()
@@ -54,22 +58,6 @@ export default class nx_tactics_decks_scenario_nightonthetown {
               nx_tactics_base.f_cardimage_from_card(
                 nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker()
               ),
-              nx_tactics_decks_data.f_tactics_item("Bare Handed"),
-              nx_tactics_decks_scenario_nightonthetown.f_item_lockcombination(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_fireaxe(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_jerrycan(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_keys(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_knife(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_liquorbottle(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_molotovcocktail(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_revolver(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_revolverammo(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_rifle(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_rifleammo(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_safe(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_shotgun(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_shotgunammo(),
-              nx_tactics_decks_scenario_nightonthetown.f_item_spear(),
               nx_tactics_decks_scenario_nightonthetown.f_place_clinic(),
               nx_tactics_decks_scenario_nightonthetown.f_place_conveniencestore(),
               nx_tactics_decks_scenario_nightonthetown.f_place_gasstation(),
@@ -81,312 +69,6 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         )
       })
     )
-    return output
-  }
-
-  /**
-   * @function item_axehand
-   * @return {item}
-   */
-  static t_item_axehand = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_axehand = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_axehand
-  }
-
-  // (func item-axehand)
-  static f_item_axehand() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hand Axe", ":image", "images/cards/item-axehand.svg", ":summary", "* Melee: [Hack] [Slash]\n* Hit: [Body]\n* Location: [1-hand]", ":body", "9x-1", ":mass", "900g/2lb")
-    return output
-  }
-
-  /**
-   * @function item_fireaxe
-   * @return {item}
-   */
-  static t_item_fireaxe = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_fireaxe = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_fireaxe
-  }
-
-  // (func item-fireaxe)
-  static f_item_fireaxe() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Fire Axe", ":image", "images/cards/item-woodaxe.svg", ":summary", "* [Fight]: [Melee]\n* [Initiative]:-1\n* [Damage]: [Body]+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1", ":body", "3x0", ":mass", "3.1kg/7lb")
-    return output
-  }
-
-  /**
-   * @function item_jerrycan
-   * @return {item}
-   */
-  static t_item_jerrycan = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_jerrycan = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_jerrycan
-  }
-
-  // (func item-jerrycan)
-  static f_item_jerrycan() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Jerry Can", ":image", "images/cards/item-jerrycan.svg")
-    return output
-  }
-
-  /**
-   * @function item_keys
-   * @return {item}
-   */
-  static t_item_keys = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_keys = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_keys
-  }
-
-  // (func item-keys)
-  static f_item_keys() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Keys", ":image", "images/cards/item-keys.svg")
-    return output
-  }
-
-  /**
-   * @function item_knife
-   * @return {item}
-   */
-  static t_item_knife = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_knife = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_knife
-  }
-
-  // (func item-knife)
-  static f_item_knife() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Knife", ":image", "images/cards/item-knife.svg", ":summary", "* [Fight]: [Close Combat]\n* [Damage]: [Body]-1 [Pierce] [Slash]\n* [Location]: [1-hand]", ":body", "5x-1", ":mass", "500g/1lb", ":length", "25cm/10in")
-    return output
-  }
-
-  /**
-   * @function item_liquorbottle
-   * @return {item}
-   */
-  static t_item_liquorbottle = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_liquorbottle = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_liquorbottle
-  }
-
-  // (func item-liquorbottle)
-  static f_item_liquorbottle() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Liquor Bottle", ":image", "images/cards/item-liquorbottle.svg")
-    return output
-  }
-
-  /**
-   * @function item_lockcombination
-   * @return {item}
-   */
-  static t_item_lockcombination = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_lockcombination = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_lockcombination
-  }
-
-  // (func item-lockcombination)
-  static f_item_lockcombination() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lock Combination", ":image", "images/cards/item-lockcombination.svg")
-    return output
-  }
-
-  /**
-   * @function item_molotovcocktail
-   * @return {item}
-   */
-  static t_item_molotovcocktail = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_molotovcocktail = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_molotovcocktail
-  }
-
-  // (func item-molotovcocktail)
-  static f_item_molotovcocktail() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Molotov Cocktail", ":image", "images/cards/item-molotovcocktail.svg")
-    return output
-  }
-
-  /**
-   * @function item_monocle
-   * @return {item}
-   */
-  static t_item_monocle = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_monocle = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_monocle
-  }
-
-  // (func item-monocle)
-  static f_item_monocle() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Monocle", ":image", "images/cards/item-monocle.svg", ":summary", "* [Passive]: IF examining small objects THEN [Investigation]:+1", ":body", "2x-2", ":mass", "20g/.05lb")
-    return output
-  }
-
-  /**
-   * @function item_revolver
-   * @return {item}
-   */
-  static t_item_revolver = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_revolver = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_revolver
-  }
-
-  // (func item-revolver)
-  static f_item_revolver() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Revolver", ":image", "images/cards/item-revolver.svg")
-    return output
-  }
-
-  /**
-   * @function item_revolverammo
-   * @return {item}
-   */
-  static t_item_revolverammo = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_revolverammo = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_revolverammo
-  }
-
-  // (func item-revolverammo)
-  static f_item_revolverammo() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Revolver Ammo", ":image", "images/cards/item-revolverammo.svg")
-    return output
-  }
-
-  /**
-   * @function item_rifle
-   * @return {item}
-   */
-  static t_item_rifle = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_rifle = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_rifle
-  }
-
-  // (func item-rifle)
-  static f_item_rifle() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rifle", ":image", "images/cards/item-rifle.svg")
-    return output
-  }
-
-  /**
-   * @function item_rifleammo
-   * @return {item}
-   */
-  static t_item_rifleammo = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_rifleammo = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_rifleammo
-  }
-
-  // (func item-rifleammo)
-  static f_item_rifleammo() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rifle Ammo", ":image", "images/cards/item-rifleammo.svg")
-    return output
-  }
-
-  /**
-   * @function item_safe
-   * @return {item}
-   */
-  static t_item_safe = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_safe = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_safe
-  }
-
-  // (func item-safe)
-  static f_item_safe() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Safe", ":image", "images/cards/item-safe.svg")
-    return output
-  }
-
-  /**
-   * @function item_shotgun
-   * @return {item}
-   */
-  static t_item_shotgun = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_shotgun = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_shotgun
-  }
-
-  // (func item-shotgun)
-  static f_item_shotgun() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shotgun", ":image", "images/cards/item-shotgun.svg")
-    return output
-  }
-
-  /**
-   * @function item_shotgunammo
-   * @return {item}
-   */
-  static t_item_shotgunammo = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_shotgunammo = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_shotgunammo
-  }
-
-  // (func item-shotgunammo)
-  static f_item_shotgunammo() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shotgun Ammo", ":image", "images/cards/item-shotgunammo.svg")
-    return output
-  }
-
-  /**
-   * @function item_spear
-   * @return {item}
-   */
-  static t_item_spear = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_spear = {
-    vx_type: nx_tactics_decks_scenario_nightonthetown.t_item_spear
-  }
-
-  // (func item-spear)
-  static f_item_spear() {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Spear", ":image", "images/cards/item-spear.svg", ":summary", "* [Fight]: [Melee] [Reach]\n* [Damage]: [Body]+3 [Pierce] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1", ":body", "3x0", ":mass", "3kg/6lb")
     return output
   }
 
@@ -543,13 +225,13 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":will",
       "3x1",
       ":speed",
-      "4x1",
+      "5x0",
       ":mass",
       "70kg/155lb",
       ":height",
       "1.7m/5'6",
       ":speedland",
-      "40kph/25mph",
+      "18kph/11mph",
       ":demeanor",
       "Foolish",
       ":nature",
@@ -569,7 +251,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unititem},
               ":item",
-              nx_tactics_decks_data.f_tactics_item("Shortbow")
+              nx_tactics_decks_data.f_item_from_key("Shortbow")
             )
           )
         ),
@@ -584,7 +266,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Detail Oriented")
+              nx_tactics_decks_data.f_ability_from_key("Detail Oriented")
             )
           ),
           ":unititemmap",
@@ -592,7 +274,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unititem},
               ":item",
-              nx_tactics_decks_scenario_nightonthetown.f_item_monocle()
+              nx_tactics_decks_data.f_item_from_key("Monocle")
             )
           )
         )
@@ -628,13 +310,13 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":will",
       "4x1",
       ":speed",
-      "7x1",
+      "6X0",
       ":mass",
       "22kg/50lb",
       ":height",
       "76cm/30in",
       ":speedland",
-      "50kph/30mph",
+      "20kph/12mph",
       ":nature",
       "Dogged",
       ":summary",
@@ -652,7 +334,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Grab")
+              nx_tactics_decks_data.f_ability_from_key("Grab")
             )
           )
         )
@@ -670,7 +352,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Bite")
+              nx_tactics_decks_data.f_ability_from_key("Bite")
             )
           )
         )
@@ -706,13 +388,13 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":will",
       "2x1",
       ":speed",
-      "3x1",
+      "3x0",
       ":mass",
       "70kg/155lb",
       ":height",
       "1.8m/6ft",
       ":speedland",
-      "30kph/20mph",
+      "10kph/7mph",
       ":demeanor",
       "Aloof",
       ":summary",
@@ -730,7 +412,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Grab")
+              nx_tactics_decks_data.f_ability_from_key("Grab")
             )
           )
         )
@@ -748,7 +430,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Bite")
+              nx_tactics_decks_data.f_ability_from_key("Bite")
             )
           )
         )
@@ -784,11 +466,11 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       ":will",
       "2x1",
       ":speed",
-      "2x1",
+      "2x0",
       ":mass",
       "80kg/175",
       ":speedland",
-      "20kph/12mph",
+      "10kph",
       ":summary",
       "[Zombie]",
       ":unitskillmap",
@@ -804,7 +486,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Grab")
+              nx_tactics_decks_data.f_ability_from_key("Grab")
             )
           )
         )
@@ -822,7 +504,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Bite")
+              nx_tactics_decks_data.f_ability_from_key("Bite")
             )
           )
         )
@@ -839,23 +521,6 @@ export default class nx_tactics_decks_scenario_nightonthetown {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-nightonthetown": nx_tactics_decks_scenario_nightonthetown.e_deck_nightonthetown,
-      "item-axehand": nx_tactics_decks_scenario_nightonthetown.e_item_axehand,
-      "item-fireaxe": nx_tactics_decks_scenario_nightonthetown.e_item_fireaxe,
-      "item-jerrycan": nx_tactics_decks_scenario_nightonthetown.e_item_jerrycan,
-      "item-keys": nx_tactics_decks_scenario_nightonthetown.e_item_keys,
-      "item-knife": nx_tactics_decks_scenario_nightonthetown.e_item_knife,
-      "item-liquorbottle": nx_tactics_decks_scenario_nightonthetown.e_item_liquorbottle,
-      "item-lockcombination": nx_tactics_decks_scenario_nightonthetown.e_item_lockcombination,
-      "item-molotovcocktail": nx_tactics_decks_scenario_nightonthetown.e_item_molotovcocktail,
-      "item-monocle": nx_tactics_decks_scenario_nightonthetown.e_item_monocle,
-      "item-revolver": nx_tactics_decks_scenario_nightonthetown.e_item_revolver,
-      "item-revolverammo": nx_tactics_decks_scenario_nightonthetown.e_item_revolverammo,
-      "item-rifle": nx_tactics_decks_scenario_nightonthetown.e_item_rifle,
-      "item-rifleammo": nx_tactics_decks_scenario_nightonthetown.e_item_rifleammo,
-      "item-safe": nx_tactics_decks_scenario_nightonthetown.e_item_safe,
-      "item-shotgun": nx_tactics_decks_scenario_nightonthetown.e_item_shotgun,
-      "item-shotgunammo": nx_tactics_decks_scenario_nightonthetown.e_item_shotgunammo,
-      "item-spear": nx_tactics_decks_scenario_nightonthetown.e_item_spear,
       "place-clinic": nx_tactics_decks_scenario_nightonthetown.e_place_clinic,
       "place-conveniencestore": nx_tactics_decks_scenario_nightonthetown.e_place_conveniencestore,
       "place-gasstation": nx_tactics_decks_scenario_nightonthetown.e_place_gasstation,
@@ -870,23 +535,6 @@ export default class nx_tactics_decks_scenario_nightonthetown {
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-nightonthetown": nx_tactics_decks_scenario_nightonthetown.t_deck_nightonthetown,
-      "item-axehand": nx_tactics_decks_scenario_nightonthetown.t_item_axehand,
-      "item-fireaxe": nx_tactics_decks_scenario_nightonthetown.t_item_fireaxe,
-      "item-jerrycan": nx_tactics_decks_scenario_nightonthetown.t_item_jerrycan,
-      "item-keys": nx_tactics_decks_scenario_nightonthetown.t_item_keys,
-      "item-knife": nx_tactics_decks_scenario_nightonthetown.t_item_knife,
-      "item-liquorbottle": nx_tactics_decks_scenario_nightonthetown.t_item_liquorbottle,
-      "item-lockcombination": nx_tactics_decks_scenario_nightonthetown.t_item_lockcombination,
-      "item-molotovcocktail": nx_tactics_decks_scenario_nightonthetown.t_item_molotovcocktail,
-      "item-monocle": nx_tactics_decks_scenario_nightonthetown.t_item_monocle,
-      "item-revolver": nx_tactics_decks_scenario_nightonthetown.t_item_revolver,
-      "item-revolverammo": nx_tactics_decks_scenario_nightonthetown.t_item_revolverammo,
-      "item-rifle": nx_tactics_decks_scenario_nightonthetown.t_item_rifle,
-      "item-rifleammo": nx_tactics_decks_scenario_nightonthetown.t_item_rifleammo,
-      "item-safe": nx_tactics_decks_scenario_nightonthetown.t_item_safe,
-      "item-shotgun": nx_tactics_decks_scenario_nightonthetown.t_item_shotgun,
-      "item-shotgunammo": nx_tactics_decks_scenario_nightonthetown.t_item_shotgunammo,
-      "item-spear": nx_tactics_decks_scenario_nightonthetown.t_item_spear,
       "place-clinic": nx_tactics_decks_scenario_nightonthetown.t_place_clinic,
       "place-conveniencestore": nx_tactics_decks_scenario_nightonthetown.t_place_conveniencestore,
       "place-gasstation": nx_tactics_decks_scenario_nightonthetown.t_place_gasstation,
@@ -927,312 +575,6 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario_nightonthetown.f_deck_nightonthetown
-    }
-
-    // (func item-axehand)
-    nx_tactics_decks_scenario_nightonthetown.t_item_axehand['vx_value'] = {
-      name          : "item-axehand",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_axehand
-    }
-
-    // (func item-fireaxe)
-    nx_tactics_decks_scenario_nightonthetown.t_item_fireaxe['vx_value'] = {
-      name          : "item-fireaxe",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_fireaxe
-    }
-
-    // (func item-jerrycan)
-    nx_tactics_decks_scenario_nightonthetown.t_item_jerrycan['vx_value'] = {
-      name          : "item-jerrycan",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_jerrycan
-    }
-
-    // (func item-keys)
-    nx_tactics_decks_scenario_nightonthetown.t_item_keys['vx_value'] = {
-      name          : "item-keys",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_keys
-    }
-
-    // (func item-knife)
-    nx_tactics_decks_scenario_nightonthetown.t_item_knife['vx_value'] = {
-      name          : "item-knife",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_knife
-    }
-
-    // (func item-liquorbottle)
-    nx_tactics_decks_scenario_nightonthetown.t_item_liquorbottle['vx_value'] = {
-      name          : "item-liquorbottle",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_liquorbottle
-    }
-
-    // (func item-lockcombination)
-    nx_tactics_decks_scenario_nightonthetown.t_item_lockcombination['vx_value'] = {
-      name          : "item-lockcombination",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_lockcombination
-    }
-
-    // (func item-molotovcocktail)
-    nx_tactics_decks_scenario_nightonthetown.t_item_molotovcocktail['vx_value'] = {
-      name          : "item-molotovcocktail",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_molotovcocktail
-    }
-
-    // (func item-monocle)
-    nx_tactics_decks_scenario_nightonthetown.t_item_monocle['vx_value'] = {
-      name          : "item-monocle",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_monocle
-    }
-
-    // (func item-revolver)
-    nx_tactics_decks_scenario_nightonthetown.t_item_revolver['vx_value'] = {
-      name          : "item-revolver",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_revolver
-    }
-
-    // (func item-revolverammo)
-    nx_tactics_decks_scenario_nightonthetown.t_item_revolverammo['vx_value'] = {
-      name          : "item-revolverammo",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_revolverammo
-    }
-
-    // (func item-rifle)
-    nx_tactics_decks_scenario_nightonthetown.t_item_rifle['vx_value'] = {
-      name          : "item-rifle",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_rifle
-    }
-
-    // (func item-rifleammo)
-    nx_tactics_decks_scenario_nightonthetown.t_item_rifleammo['vx_value'] = {
-      name          : "item-rifleammo",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_rifleammo
-    }
-
-    // (func item-safe)
-    nx_tactics_decks_scenario_nightonthetown.t_item_safe['vx_value'] = {
-      name          : "item-safe",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_safe
-    }
-
-    // (func item-shotgun)
-    nx_tactics_decks_scenario_nightonthetown.t_item_shotgun['vx_value'] = {
-      name          : "item-shotgun",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_shotgun
-    }
-
-    // (func item-shotgunammo)
-    nx_tactics_decks_scenario_nightonthetown.t_item_shotgunammo['vx_value'] = {
-      name          : "item-shotgunammo",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_shotgunammo
-    }
-
-    // (func item-spear)
-    nx_tactics_decks_scenario_nightonthetown.t_item_spear['vx_value'] = {
-      name          : "item-spear",
-      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scenario_nightonthetown.f_item_spear
     }
 
     // (func place-clinic)

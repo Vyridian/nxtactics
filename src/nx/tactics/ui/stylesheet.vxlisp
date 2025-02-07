@@ -112,13 +112,13 @@
 
 (const point-rank-pos1 : ui/point
  (ui/point
-  :x 1
-  :y 0))
+  :x 3
+  :y 2))
 
 (const point-rank-pos2 : ui/point
  (ui/point
-  :x 57
-  :y 80))
+  :x 56
+  :y 79))
 
 (const point-rank-size : ui/point
  (ui/point
@@ -127,13 +127,13 @@
 
 (const point-suit-pos1 : ui/point
  (ui/point
-  :x 0
-  :y 6))
+  :x 2
+  :y 8))
 
 (const point-suit-pos2 : ui/point
  (ui/point
-  :x 56
-  :y 74))
+  :x 55
+  :y 73))
 
 (const point-suit-size : ui/point
  (ui/point
@@ -225,13 +225,13 @@
 
 (const style-app-menubar : ui/style
  (ui/style
-  :name             "style-app-menubar"
-  :type             ui/styletype-shared
+  :name      "style-app-menubar"
+  :type      ui/styletype-shared
   :color-bkg "5E9CA0"
-  :layout           ui/layout-menubar
-  :pin              ui/pin-top
-  :pointsize        (ui/point
-                     :y 6))
+  :layout    ui/layout-menubar
+  :pin       ui/pin-top
+  :pointsize (ui/point
+              :y 6))
  :doc "")
 
 (const style-app-menudrawer : ui/style
@@ -250,16 +250,16 @@
 
 (const style-app-navbar : ui/style
  (ui/style
-  :name             "style-app-navbar"
-  :type             ui/styletype-shared
+  :name      "style-app-navbar"
+  :type      ui/styletype-shared
   :color-bkg "90C5A9"
-  :layout           ui/layout-navbar
-  :pin              ui/pin-left
-  :pointpos         (ui/point
-                     :y 6)
-  :pointsize        (ui/point
-                     :x 6
-                     :y 6))
+  :layout    ui/layout-navbar
+  :pin       ui/pin-left
+  :pointpos  (ui/point
+              :y 6)
+  :pointsize (ui/point
+              :x 6
+              :y 6))
  :doc "")
 
 (const style-app-navbar-button : ui/style
@@ -287,13 +287,13 @@
 
 (const style-app-statusbar : ui/style
  (ui/style
-  :name             "style-app-statusbar"
-  :type             ui/styletype-shared
+  :name      "style-app-statusbar"
+  :type      ui/styletype-shared
   :color-bkg "B6B6B6"
-  :layout           ui/layout-statusbar
-  :pin              ui/pin-bottom
-  :pointsize        (ui/point
-                     :y 6))
+  :layout    ui/layout-statusbar
+  :pin       ui/pin-bottom
+  :pointsize (ui/point
+              :y 6))
  :doc "")
 
 (const style-app-statusdrawer : ui/style
@@ -358,7 +358,7 @@
   :pointpos
    (ui/point
     :x 6
-    :y 6)
+    :y 7)
   :pointsize
    (ui/point
     :x 51))
@@ -412,6 +412,19 @@
     :x 58))
  :doc "")
 
+(const style-card-display-fate : ui/style
+ (ui/style
+  :name "style-card-display-fate"
+  :layout ui/layout-label
+  :pointpos
+   (ui/point
+    :x 8
+    :y 7)
+  :pointsize
+   (ui/point
+    :x 51))
+ :doc "")
+
 (const style-card-rank : ui/style
  (ui/style
   :name "style-card-rank"
@@ -431,7 +444,8 @@
   :align ui/align-center
   :pointpos
    (ui/point
-    :x 7)
+    :x 7
+    :y 2)
   :pointsize
    (ui/point
     :x 51))

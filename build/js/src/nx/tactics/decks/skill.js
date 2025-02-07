@@ -23,7 +23,13 @@ export default class nx_tactics_decks_skill {
   static f_skillmap_tactics(tactics) {
     let output = nx_tactics_base.e_skillmap
     output = nx_tactics_base.f_skillmap_from_skilllist(
-      vx_core.f_new({"any-1": nx_tactics_base.t_skill}, ":name", "Skill1")
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_skill},
+        ":name",
+        "Melee",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Space Clearing")
+      )
     )
     return output
   }

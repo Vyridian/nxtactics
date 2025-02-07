@@ -2078,7 +2078,7 @@ export default class nx_tactics_books_fantasy {
         ":Void",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Void", ":summary", "* The Void was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless physical multiverse."),
         ":Limbo",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Limbo", ":summary", "* The Limbo was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless spirit multiverse."),
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Limbo", ":summary", "* The Limbo was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless spirit multiverse.\n* Beings with Will perceive everything as endless white."),
         "Positive Planes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -2139,12 +2139,12 @@ export default class nx_tactics_books_fantasy {
           ":summary",
           "* The Periphery consists of a number of Realms that touch the Material Realm.\n* These Realms are forever separated from the mortal world by thin but strong membrane called the Veil.\n* Peripheral Vision - Sometimes a glimse of the Outer Realms may be seen at the edge of normal vision.\n* Gates - Gates are more easily created when both realms resemble each other at both ends of the Gate.\n* Realm Overlay - Sometimes when an area of both realms closely resembles one another, the areas overlap creating a natural Gate of sorts where one may accidentally wander from one Realm to the other without noticing.",
           ":titles",
-          "Periphery",
+          "Periphery, Realms Within",
           ":placemap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_placemap},
             "Ley Line",
-            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Ley Line", ":summary", "* Ley Lines are invisible, spiritual energy lines that pass through the universe and serve as the branches and roots of the World Tree. The Ley Lines influence the areas they pass through. Their existence transcends time. Contacting the Lines boosts spiritual powers and connects the past and future. They can be tapped to raise magical effects and they can spread the effect of tragic or corrupted areas, creating haunted or cursed areas.\n* Dragons are said to choose exposed Ley Lines as lairs and nests. It is possible that Ley Lines are the secret to their power.\n* Fault Lines and Volcanic activity are side effects of Ley Line power.\n* Ley Line Memories - Ley Lines exist through history, so it is sometimes possible to witness events from the past or future near the lines.\n* Ley Line Filth - When negative energy builds up over time near a Ley Line, so a Ley Line can sometimes leak solid dark energy that is called Filth or Corruption. This Filth corrupts the area, withering plants and contaminating animals and water. Since it is a spiritual corruption, it can only be repaired with purification magic or by somehow confronting and addressing the cause of the corruption.", ":titles", "Dragon Lines, Fate Lines, Lines of Power, Threads of Fate, Time Lines"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Ley Line", ":summary", "* Ley Lines are invisible, spiritual energy lines that pass through the universe and serve as the branches and roots of the World Tree. The Ley Lines influence the areas they pass through. Their existence transcends time. Contacting the Lines boosts spiritual powers and connects the past and future. They can be tapped to raise magical effects and they can spread the effect of tragic or corrupted areas, creating haunted or cursed areas.\n* Dragons are said to choose exposed Ley Lines as lairs and nests. It is possible that Ley Lines are the secret to their power.\n* Fault Lines, Underground Rivers, and Volcanic activity are side effects of Ley Line power.\n* Ley Line Memories - Ley Lines exist through history, so it is sometimes possible to witness events from the past or future near the lines.\n* Ley Line Filth - When negative energy builds up over time near a Ley Line, so a Ley Line can sometimes leak solid dark energy that is called Filth or Corruption. This Filth corrupts the area, withering plants and contaminating animals and water. Since it is a spiritual corruption, it can only be repaired with purification magic or by somehow confronting and addressing the cause of the corruption.", ":titles", "Dragon Lines, Fate Lines, Lines of Power, Threads of Fate, Time Lines"),
             "Digital Realm",
             vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Digital Realm", ":titles", "Cyberspace, Cyberrealm"),
             "Dreaming, The",
@@ -2330,7 +2330,7 @@ export default class nx_tactics_books_fantasy {
           ":summary",
           "* These are the various part of the Spirit Realm where demons live. It is unclear whether these worlds are in distant parts of our dimension or in other dimensions entirely. They are certainly so distant that only dimensional travel can reach them.\n* Physics are often radically different from our own which often is sanity threatening.",
           ":titles",
-          "Abyssal Realms, Chaos Realms, Demon Realms, Hells",
+          "Abyssal Realms, Chaos Realms, Demon Realms, Hells, Realms Beyond",
           ":placemap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_placemap},

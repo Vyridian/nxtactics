@@ -368,10 +368,10 @@
   :body "8x1"
   :mind "5x1"
   :will "5x1"
-  :speed "3x1"
+  :speed "4x0"
   :mass "80kg/180"
   :height "1.8m/6ft"
-  :speedland "30kph/20mph"
+  :speedland "15kph/10mph"
   :mass "80kg/220lb"
   :height "1.9m/6'3ft"
   :demeanor "Opportunistic"
@@ -394,7 +394,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-name "Ambush")))))))
+        :ability (data/ability<-key "Ambush")))))))
 
 (func unit-bruiser : base/unit
  (base/unit
@@ -407,10 +407,10 @@
   :body "10x1"
   :mind "3x1"
   :will "5x1"
-  :speed "2x1"
+  :speed "3x0"
   :mass "100kg/220lb"
   :height "1.9m/6'3ft"
-  :speedland "20kph/12.5mph"
+  :speedland "10kph/7mph"
   :demeanor "Glaring"
   :nature "Callous"
   :beast "5x0"
@@ -424,7 +424,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-name "Grab"))))
+        :ability (data/ability<-key "Grab"))))
     (base/unitskill
      :skill (data/tactics-skill "Intimidation")
      :level "1"))))
@@ -442,11 +442,11 @@
   :body "2x1"
   :mind "6x1"
   :will "2x1"
-  :speed "2x1"
+  :speed "3x0"
   :value "1x0"
   :mass "22kg/50lb"
   :height "1m/3ft"
-  :speedland "20kph"
+  :speedland "10kph/7mph"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
@@ -462,7 +462,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-name "Sneak")))))))
+        :ability (data/ability<-key "Sneak")))))))
 
 (func unit-flint : base/unit
  (base/unit
@@ -474,13 +474,13 @@
   :body "7x1"
   :mind "5x1"
   :will "5x1"
-  :speed "3x1"
+  :speed "5x0"
   :mass "70kg/153lb"
   :height "1.67m/5'6"
+  :speedland "18kph/11mph"
   :beast "1x0"
   :shadow "1x0"
   :value "1x0"
-  :speedland "30kph/20mph"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
@@ -496,7 +496,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-name "Sneak")))))))
+        :ability (data/ability<-key "Sneak")))))))
 
 (func unit-guardsman : base/unit
  (base/unit
@@ -509,10 +509,10 @@
   :body "8x1"
   :mind "5x1"
   :will "5x1"
-  :speed "3x1"
+  :speed "4x0"
   :mass "80kg/175"
   :height "1.8m/6ft"
-  :speedland "30kph/20mph"
+  :speedland "15kph/10mph"
   :height "1.9m/6'3ft"
   :demeanor "Indifferent"
   :nature "Lazy"
@@ -540,7 +540,7 @@
   :body "4x2"
   :mind "5x-1"
   :will "2x1"
-  :speed "5x1"
+  :speed "10x1"
   :mass "450kg/1000lb"
   :speedland "50kph/30mph"
   :demeanor "Aloof"
@@ -564,10 +564,10 @@
   :body "6x1"
   :mind "6x1"
   :will "6x1"
-  :speed "3x1"
+  :speed "4x0"
   :mass "63kg"
   :height "1.72m/5ft7"
-  :speedland "30kph/20mph"
+  :speedland "20kph/15mph"
   :demeanor "Willful"
   :nature "Nuturing"
   :beast "1x0"
@@ -588,7 +588,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-name "Blacksmithing")))))))
+        :ability (data/ability<-key "Blacksmithing")))))))
 
 (func unit-jonaveer : base/unit
  (base/unit
@@ -603,10 +603,10 @@
   :body "7x1"
   :mind "6x1"
   :will "5x1"
-  :speed "3x1"
+  :speed "3x0"
   :mass "75kg"
   :height "1.78m/5ft10"
-  :speedland "30kph/20mph"
+  :speedland "10kph/7mph"
   :demeanor "Frivolous"
   :nature "Loyal"
   :beast "1x0"
@@ -627,7 +627,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-name "Bargain")))))))
+        :ability (data/ability<-key "Bargain")))))))
 
 (func unit-liliducon : base/unit
  (base/unit
@@ -641,10 +641,10 @@
   :body "4x1"
   :mind "4x1"
   :will "4x1"
-  :speed "2x1"
+  :speed "2x0"
   :mass "40kg/88lb"
   :height "1.5m/5ft"
-  :speedland "20kph"
+  :speedland "10kph"
   :demeanor "Pleasant"
   :nature "Anxious"
   :beast "1x0"
@@ -669,7 +669,7 @@
   :body "2x1"
   :mind "8x-1"
   :will "4x1"
-  :speed "7x1"
+  :speed "2x1"
   :mass "22kg/50lb"
   :height "76cm/30in"
   :speedland "70kph/37mph"
@@ -682,11 +682,11 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-name "Bite"))
+         :ability (data/ability<-key "Bite"))
         (base/unitability
-         :ability (data/ability<-name "Grab"))
+         :ability (data/ability<-key "Grab"))
         (base/unitability
-         :ability (data/ability<-name "Drag")))))
+         :ability (data/ability<-key "Drag")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -705,10 +705,10 @@
   :body "8x1"
   :mind "5x1"
   :will "5x1"
-  :speed "3x1"
+  :speed "4x0"
   :mass "80kg/180"
   :height "1.8m/6ft"
-  :speedland "30kph/20mph"
+  :speedland "20kph/15mph"
   :demeanor "Gruff"
   :nature "Tortured"
   :beast "1x0"
@@ -729,7 +729,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-name "Trapping")))))))
+        :ability (data/ability<-key "Trapping")))))))
 
 (func unit-woodencart : base/unit
  (base/unit
@@ -749,12 +749,13 @@
   :body "8x1"
   :mind "5x1"
   :will "6x1"
-  :speed "2.5x1"
+  :speed "3x0"
   :mass "80kg"
   :height "1.78m/5'10"
-  :speedland "25kph"))
+  :speedland "10kph/7mph"))
 
 (func deck-murintrail : base/deck
+ [tactics : base/tactics]
  (let : base/deck
   [goblinscout   := (unit-goblinscout)
    goblinscout-i := (base/cardimage<-card goblinscout)
@@ -776,11 +777,14 @@
       (data/tactics-skill "Close Combat")
       (data/tactics-skill "Melee")
       (data/tactics-skill "Stealth")
-      (data/ability<-name "Ambush")
-      (data/ability<-name "Sneak")
       (data/tactics-skill "Business")
-      (data/ability<-name "Bargain")
       (data/tactics-skill "Tradeskills")
+      (any<-any : base/cardlist
+       (base/abilitylist<-tactics-keys
+        tactics
+        "Ambush"
+        "Bargain"
+        "Sneak"))
       (item-coppercoins)
       (item-silvercoins)
       (item-goldcoins)
@@ -788,8 +792,11 @@
       (item-armor-leathercuirass)
       (item-axehand)
       (item-woodaxe)
-      (data/tactics-item "Bare Handed")
-      (data/tactics-item "Shortbow")
+      (any<-any : base/cardlist
+       (base/itemlist<-tactics-keys
+        tactics
+        "Bare Handed"
+        "Shortbow"))
       (item-arrowquiver)
       (item-dagger)
       (item-hammer)

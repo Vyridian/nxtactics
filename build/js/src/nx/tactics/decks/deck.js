@@ -80,26 +80,33 @@ export default class nx_tactics_decks_deck {
   // (func deck-home)
   static f_deck_home() {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
+    output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_deck},
-      ":name",
-      "Home",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_deck.f_deck_books(),
-          nx_tactics_decks_rule.f_deck_rules(),
-          nx_tactics_decks_deck.f_deck_setup(),
-          nx_tactics_decks_deck.f_deck_scenarios(),
-          nx_tactics_decks_deck.f_deck_encounters(),
-          nx_tactics_decks_deck.f_deck_places(),
-          nx_tactics_decks_deck.f_deck_units(),
-          nx_tactics_decks_deck.f_deck_items(),
-          nx_tactics_decks_deck.f_deck_skills(),
-          nx_tactics_decks_deck.f_deck_powers()
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const tactics =   nx_tactics_decks_data.c_tactics_all
+        return vx_core.f_new(
+          {"any-1": nx_tactics_base.t_deck},
+          ":name",
+          "Home",
+          ":cardmap",
+          nx_tactics_base.f_cardmap_from_cardlist(
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_cardlist},
+              nx_tactics_decks_deck.f_deck_books(),
+              nx_tactics_decks_rule.f_deck_rules(),
+              nx_tactics_decks_deck.f_deck_setup(),
+              nx_tactics_decks_deck.f_deck_scenarios(tactics),
+              nx_tactics_decks_deck.f_deck_encounters(),
+              nx_tactics_decks_deck.f_deck_places(),
+              nx_tactics_decks_deck.f_deck_units(),
+              nx_tactics_decks_deck.f_deck_items(),
+              nx_tactics_decks_deck.f_deck_skills(),
+              nx_tactics_decks_deck.f_deck_powers()
+            )
+          )
         )
-      )
+      })
     )
     return output
   }
@@ -199,6 +206,7 @@ export default class nx_tactics_decks_deck {
 
   /**
    * @function deck_scenarios
+   * @param  {tactics} tactics
    * @return {deck}
    */
   static t_deck_scenarios = {
@@ -209,7 +217,7 @@ export default class nx_tactics_decks_deck {
   }
 
   // (func deck-scenarios)
-  static f_deck_scenarios() {
+  static f_deck_scenarios(tactics) {
     let output = nx_tactics_base.e_deck
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
@@ -219,8 +227,8 @@ export default class nx_tactics_decks_deck {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_scenario_murintrail.f_deck_murintrail(),
-          nx_tactics_decks_scenario_nightonthetown.f_deck_nightonthetown()
+          nx_tactics_decks_scenario_murintrail.f_deck_murintrail(tactics),
+          nx_tactics_decks_scenario_nightonthetown.f_deck_nightonthetown(tactics)
         )
       )
     )

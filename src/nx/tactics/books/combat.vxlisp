@@ -1988,81 +1988,6 @@ x +1DMG vs. Crouching."
               :reference "* Do you want to know why I use a knife? Guns are too quick. You can't savor all the little...emotions. You see, in their last moments, people show you who they really are. So, in a way I know your friends better than you ever did. Would you like to know which of them were cowards? - Joker, The Dark Knight"
               :summary "* Includes Pocket Knives, Switchblades, Straight Razors, Small Kitchen Knives, etc."
               :titles "Butcher, Knife Fighter, Murderer")))
-        "Combat Focus"
-         (skill
-          :name "Combat Focus"
-          :titles "Chi Powers"
-          :stat "Spirit"
-          :abilitymap
-           (abilitymap
-            "Blind Fighting"
-             (ability
-              :name "Blind Fighting")
-            :Combination
-             (ability
-              :name "Combination"
-              :summary
-               "* Any combat abilities may be strung together as a Combination. Every ability after the first gets +1 to initiative. If any ability misses or fails, then the combo ends and the next ability is at -1 initiative. Each combo must be chosen when this ability is gained and must be taken again for each separate combo.")
-            "Death Touch"
-             (ability
-              :name "Death Touch"
-              :reference "Five Point Palm Exploding Heart Technique - Kill Bill"
-              :summary
-               "* The fighter strikes vulnerable pressure points, disrupting the opponent's chi flow causing intense pain or death. The effect has no outward effect, but the victim will know something is wrong. Eventually, the victim recovers or dies suddenly from the stress.
-                -1 Action
-                -2 Initiative
-                -2 Accuracy
-                +0 Damage - [Stun] only
-                +3 Criticals - [Poison]
-                0 Move
-                -1 Defense"
-              :titles "Dim Mak")
-            "Empty Force"
-             (ability
-              :name "Empty Force"
-              :summary
-               "* The fighter projects a strike across empty space. The fighter may strike at any range, but if he does not score at least 1 Criticals for each space of Range, the ability fails.
-                -2 Initiative
-                -2 Move
-                -1 Damage
-                Critical - [Range]"
-              :titles "Distant Death, Kongjin")
-            "Feather Walk"
-             (ability
-              :name "Feather Walk"
-              :summary
-               "* Reduces body weight while active.  This increases the effects of [Retreat] and leaping while decreasing falling speed and damage.
-                * If [Skill] greater than or equal to [Body], then unit may walk on any substance that would suspend a feather."
-              :titles "Feather Fall, Walk on Water")
-            "Feign Death"
-             (ability
-              :name "Feign Death")
-            "Hold Breath"
-             (ability
-              :name "Hold Breath")
-            "Spirit Healing"
-             (ability
-              :name "Spirit Healing"
-              :titles "Chi Kung Healing")
-            "Team Combo"
-             (ability
-              :name "Team Combo"
-              :reference "Fastball Special - Colossus and Wolverine, X-men"
-              :summary
-               "* Like a [Combo], the Team Combo chains attacks together. The Team Combo however is performed by different members of a team with the identical Team Combo. Any team member may perform each step of the combo with each subsequent attack allowed to reroll 1 die. The combo ends if any attack misses, any member attacks twice in a row, or if a turn passes with no attack attempt. Any combat abilities may be strung together as a Team Combo (even abilities that only others in the team possess). Each combo must be chosen when this ability is gained and must be taken again for each separate combo.")
-            "Walk on Fire"
-             (ability
-              :name "Walk on Fire")
-            "Zen No Mind"
-             (ability
-              :name "Zen No Mind"
-              :reference
-               "The mind must always be in the state of 'flowing,' for when it stops anywhere that means the flow is interrupted...In the case of the swordsman, it means death.  When the swordsman stands against his opponent, he is not to think of the opponent, nor of himself, nor of his enemy's sword movements. ... When he strikes, it is not the man but the sword in the hand of the man's subconscious that strikes. - Zen Master Takuan Soho"
-              :summary
-               "* A mind not fixed or occupied by thought or emotion and thus open to everything.
-                * Mushin is achieved when a fighter feels no anger, fear or ego during combat, so the fighter is totally free to act and react towards an opponent without hesitation. At this point, a person relies not on what they think should be the next move, but what is felt intuitively.
-                * A martial artist would likely have to train for many years to be capable of mushin. This allows time for combinations of movements and exchanges of techniques to be practiced repetitively many thousands of times, until they can be performed spontaneously, without conscious thought."
-              :titles "Mushin")))
         :Defense
          (skill
           :name "Defense"
@@ -2914,11 +2839,10 @@ x +1DMG vs. Crouching."
           :name "Command"
           :reference
            "* Generals are in the business of getting people killed. Captains like to keep theirs alive. You wanna put on a parade? Go find a general. You wanna fight your way home? Talk to me. - Obregon Kaine, Negation Comic
-* Well hello mister fancy pants. I got news for you pal. You ain't leading but two things right now: Jack and Shit and Jack left town. - Ash, Army of Darkness
-* And when Alexander saw the breadth of his domain, he wept for there were no more worlds to conquer. - Hans Gruber, Die Hard"
+            * Well hello mister fancy pants. I got news for you pal. You ain't leading but two things right now: Jack and Shit and Jack left town. - Ash, Army of Darkness
+            * And when Alexander saw the breadth of his domain, he wept for there were no more worlds to conquer. - Hans Gruber, Die Hard"
           :titles
-           "Captain, Castellan, Commander, Drillmaster, Drill Sergeant, Major, Overlord, Sergeant,
-Warchief, Warlord"
+           "Captain, Castellan, Commander, Drillmaster, Drill Sergeant, Major, Overlord, Sergeant, Warchief, Warlord"
           :stat "Mind"
           :abilitymap
            (abilitymap
@@ -2927,26 +2851,26 @@ Warchief, Warlord"
               :name "Call to Arms"
               :reference
                "Unite. Take up arms.
-Stand shoulder to shoulder with your brothers and sisters.
-And break free from the cold shackles of oppression.
+                Stand shoulder to shoulder with your brothers and sisters.
+                And break free from the cold shackles of oppression.
 
-Liberty for all is more noble than the preservation of one's soul.
-Destiny and valor will meet at the end of the sword.
-And the tales of heroic sacrifice will be the legend of a new age.
+                Liberty for all is more noble than the preservation of one's soul.
+                Destiny and valor will meet at the end of the sword.
+                And the tales of heroic sacrifice will be the legend of a new age.
 
-There will be no respite.
-There will be no surrender.
-Only glory and honor.
-The price will be high for the greatest prize of all.
-Stand and be counted among those that dared.
-Those who dared to fight for their freedom. - Glass Fleet"
+                There will be no respite.
+                There will be no surrender.
+                Only glory and honor.
+                The price will be high for the greatest prize of all.
+                Stand and be counted among those that dared.
+                Those who dared to fight for their freedom. - Glass Fleet"
               :summary "Gather a war party from the populace")
             "Chain of Command"
              (ability
               :name "Chain of Command"
               :summary
                "* [Action]: [Activate] up to [Command] units directly or indirectly adjacent to this unit. These units (including this one) may spend [Speed] or [Actions] in any order this [Turn].
-* [Interrupt]: May not be used as an Interrupt.")
+                * [Interrupt]: May not be used as an Interrupt.")
             :Rally
              (ability
               :name "Rally")))
@@ -2955,9 +2879,9 @@ Those who dared to fight for their freedom. - Glass Fleet"
           :name "Military"
           :reference
            "* He can't make that kind of decision.  He's just a grunt!  No offense.  None taken - Burke and Hicks, Aliens
-* I think we'd better split up...Yeah... we can do more damage that way. - Ghostbusters
-* If ten times the enemy's strength, surround them; If five times, attack them; If double, divide them; If equal, be able to fight them; If fewer, be able to evade them; If weaker, be able to avoid them. - Sun Tzu
-* Warfare is the art of deception. Thus although you are capable, display incapability to them. When your objective is nearby, make it appear distant; when it is far away, create the illusion of being nearby. - Sun Tzu, The Art of War"
+            * I think we'd better split up...Yeah... we can do more damage that way. - Ghostbusters
+            * If ten times the enemy's strength, surround them; If five times, attack them; If double, divide them; If equal, be able to fight them; If fewer, be able to evade them; If weaker, be able to avoid them. - Sun Tzu
+            * Warfare is the art of deception. Thus although you are capable, display incapability to them. When your objective is nearby, make it appear distant; when it is far away, create the illusion of being nearby. - Sun Tzu, The Art of War"
           :titles "Admiral, Brigade, Brigadier, Cadet, Centurion, Colonel, Commander, Commando, Conscript, Corporal, Field Marshal, Footman, Gamesman, General, Grunt, High Guard, Honor Guard, Infantry, Legionnaire, Lieutenant, Praetor, Praetorian Guard, Reserves, Royal Guard, Soldier, Soldier of Fortune, Strategist, Tactician, Vanguard"
           :stat "Will"
           :abilitymap
@@ -2976,11 +2900,12 @@ Those who dared to fight for their freedom. - Glass Fleet"
               :name "Bomb Disposal"
               :reference
                "* I'll tell you a dirty little secret. When you're in the middle of an explosion, it's the ultimate rush. - Haggerty, Obliterated
-* Who has one thumb and just saved Las Vegas? This guy! - Hagerty, Obliterated")
+                * Who has one thumb and just saved Las Vegas? This guy! - Hagerty, Obliterated")
             "Close Assault"
              (ability
               :name "Close Assault"
-              :summary "* [Action]: If a [Vehicle] is adjacent to this unit, you may target the Top Armor.  If the unit has explosives, it may target the Under Armor.")
+              :summary
+               "* [Action]: If a [Vehicle] is adjacent to this unit, you may target the Top Armor.  If the unit has explosives, it may target the Under Armor.")
             "Combat Driver"
              (ability
               :name "Combat Driver"
@@ -2988,7 +2913,8 @@ Those who dared to fight for their freedom. - Glass Fleet"
             :Demolitions
              (ability
               :name "Demolitions"
-              :summary "* Experienced with setting up large explosives to destroy large structures.")
+              :summary
+               "* Experienced with setting up large explosives to destroy large structures.")
             "Divide and Conquer"
              (ability
               :name "Divide and Conquer")
@@ -3005,23 +2931,25 @@ Those who dared to fight for their freedom. - Glass Fleet"
             "Formation: Back to Back"
              (ability
               :name "Formation: Back to Back"
-              :summary "* [Formation]: Not strictly a formation, units with their backs against each other largely protect each other's back.")
+              :summary
+               "* [Formation]: Not strictly a formation, units with their backs against each other largely protect each other's back.")
             "Formation: Cover"
              (ability
               :name "Formation: Cover"
-              :summary "* [Formation]: Not strictly a formation, units in Cover formation stay close enough together to protect each other's sides.")
+              :summary
+               "* [Formation]: Not strictly a formation, units in Cover formation stay close enough together to protect each other's sides.")
             "Formation: March"
              (ability
               :name "Formation: March"
               :summary
                "* [Formation]: Units move in columns.
-* [+1 Speed]")
+                * [+1 Speed]")
             "Formation: Parade"
              (ability
               :name "Formation: Parade"
               :summary
                "* [Formation]: A showy formation designed to look good.  Has no use in battle.
-* [+ 1 Intimidation]")
+                * [+ 1 Intimidation]")
             "Formation: Phalanx"
              (ability
               :name "Formation: Phalanx"

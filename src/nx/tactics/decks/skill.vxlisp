@@ -6,7 +6,11 @@
  [tactics : base/tactics]
  (base/skillmap<-skilllist
   (skill
-   :name "Skill1")
+   :name "Melee"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Space Clearing"))
   )
  :doc "Returns the base skillmap")
 

@@ -261,17 +261,17 @@ requiring air.")
           :name "Lyrium Potion"
           :summary
            "* Natural Lyrium is a white, radioactive dust extracted from Uranium mines.
-* Lyrium Ore - Direct contact with lyrium ore produces nausea, blistering of the skin,
-and dementia.
-* Lyrium Potions - Lyrium dust can be mixed into a potion that bestows resistance to
-magic to those who use it regularly. However, Lyrium is extremely physically and
-psychologically addictive not unlike heroin.
-* Chantry Templars are all required to take Lyrium regularly. The addictive qualities of
-Lyrium ensure that the Templars remain under Chantry control.
-* History - It is thought that Lyrium is created from Ley Lines (Dragon Lines) traveling
-through the earth.
-* [Passive]: +1 [Defense] vs. any magical effect and -1 [Action] when using any magical
-effect."
+            * Lyrium Ore - Direct contact with lyrium ore produces nausea, blistering of the skin,
+            and dementia.
+            * Lyrium Potions - Lyrium dust can be mixed into a potion that bestows resistance to
+            magic to those who use it regularly. However, Lyrium is extremely physically and
+            psychologically addictive not unlike heroin.
+            * Chantry Templars are all required to take Lyrium regularly. The addictive qualities of
+            Lyrium ensure that the Templars remain under Chantry control.
+            * History - It is thought that Lyrium is created from Ley Lines (Dragon Lines) traveling
+            through the earth.
+            * [Passive]: [Defense]:+1 vs. any magical effect and [Skill]:+1 when using any magical
+            effect."
           :titles "Radium")
         "Makeup of Beauty"
          (item

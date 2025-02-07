@@ -15,6 +15,7 @@ export default class nx_tactics_decks_scenario_murintrail {
 
   /**
    * @function deck_murintrail
+   * @param  {tactics} tactics
    * @return {deck}
    */
   static t_deck_murintrail = {
@@ -25,7 +26,7 @@ export default class nx_tactics_decks_scenario_murintrail {
   }
 
   // (func deck-murintrail)
-  static f_deck_murintrail() {
+  static f_deck_murintrail(tactics) {
     let output = nx_tactics_base.e_deck
     output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_deck},
@@ -54,11 +55,12 @@ export default class nx_tactics_decks_scenario_murintrail {
               nx_tactics_decks_data.f_tactics_skill("Close Combat"),
               nx_tactics_decks_data.f_tactics_skill("Melee"),
               nx_tactics_decks_data.f_tactics_skill("Stealth"),
-              nx_tactics_decks_data.f_ability_from_name("Ambush"),
-              nx_tactics_decks_data.f_ability_from_name("Sneak"),
               nx_tactics_decks_data.f_tactics_skill("Business"),
-              nx_tactics_decks_data.f_ability_from_name("Bargain"),
               nx_tactics_decks_data.f_tactics_skill("Tradeskills"),
+              vx_core.f_any_from_any(
+                {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_abilitylist},
+                nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Bargain", "Sneak")
+              ),
               nx_tactics_decks_scenario_murintrail.f_item_coppercoins(),
               nx_tactics_decks_scenario_murintrail.f_item_silvercoins(),
               nx_tactics_decks_scenario_murintrail.f_item_goldcoins(),
@@ -66,8 +68,10 @@ export default class nx_tactics_decks_scenario_murintrail {
               nx_tactics_decks_scenario_murintrail.f_item_armor_leathercuirass(),
               nx_tactics_decks_scenario_murintrail.f_item_axehand(),
               nx_tactics_decks_scenario_murintrail.f_item_woodaxe(),
-              nx_tactics_decks_data.f_tactics_item("Bare Handed"),
-              nx_tactics_decks_data.f_tactics_item("Shortbow"),
+              vx_core.f_any_from_any(
+                {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_itemlist},
+                nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Shortbow")
+              ),
               nx_tactics_decks_scenario_murintrail.f_item_arrowquiver(),
               nx_tactics_decks_scenario_murintrail.f_item_dagger(),
               nx_tactics_decks_scenario_murintrail.f_item_hammer(),
@@ -926,13 +930,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "3x1",
+      "4x0",
       ":mass",
       "80kg/180",
       ":height",
       "1.8m/6ft",
       ":speedland",
-      "30kph/20mph",
+      "15kph/10mph",
       ":mass",
       "80kg/220lb",
       ":height",
@@ -975,7 +979,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Ambush")
+              nx_tactics_decks_data.f_ability_from_key("Ambush")
             )
           )
         )
@@ -1017,13 +1021,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "2x1",
+      "3x0",
       ":mass",
       "100kg/220lb",
       ":height",
       "1.9m/6'3ft",
       ":speedland",
-      "20kph/12.5mph",
+      "10kph/7mph",
       ":demeanor",
       "Glaring",
       ":nature",
@@ -1047,7 +1051,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Grab")
+              nx_tactics_decks_data.f_ability_from_key("Grab")
             )
           )
         ),
@@ -1096,19 +1100,19 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "3x1",
+      "5x0",
       ":mass",
       "70kg/153lb",
       ":height",
       "1.67m/5'6",
+      ":speedland",
+      "18kph/11mph",
       ":beast",
       "1x0",
       ":shadow",
       "1x0",
       ":value",
       "1x0",
-      ":speedland",
-      "30kph/20mph",
       ":unitskillmap",
       nx_tactics_base.f_unitskillmap_from_unitskilllist(
         vx_core.f_new(
@@ -1137,7 +1141,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Sneak")
+              nx_tactics_decks_data.f_ability_from_key("Sneak")
             )
           )
         )
@@ -1185,7 +1189,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "2x1",
       ":speed",
-      "2x1",
+      "3x0",
       ":value",
       "1x0",
       ":mass",
@@ -1193,7 +1197,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":height",
       "1m/3ft",
       ":speedland",
-      "20kph",
+      "10kph/7mph",
       ":unitskillmap",
       nx_tactics_base.f_unitskillmap_from_unitskilllist(
         vx_core.f_new(
@@ -1222,7 +1226,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Sneak")
+              nx_tactics_decks_data.f_ability_from_key("Sneak")
             )
           )
         )
@@ -1264,13 +1268,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "3x1",
+      "4x0",
       ":mass",
       "80kg/175",
       ":height",
       "1.8m/6ft",
       ":speedland",
-      "30kph/20mph",
+      "15kph/10mph",
       ":height",
       "1.9m/6'3ft",
       ":demeanor",
@@ -1341,7 +1345,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "2x1",
       ":speed",
-      "5x1",
+      "10x1",
       ":mass",
       "450kg/1000lb",
       ":speedland",
@@ -1401,13 +1405,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "6x1",
       ":speed",
-      "3x1",
+      "4x0",
       ":mass",
       "63kg",
       ":height",
       "1.72m/5ft7",
       ":speedland",
-      "30kph/20mph",
+      "20kph/15mph",
       ":demeanor",
       "Willful",
       ":nature",
@@ -1446,7 +1450,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Blacksmithing")
+              nx_tactics_decks_data.f_ability_from_key("Blacksmithing")
             )
           )
         )
@@ -1492,13 +1496,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "3x1",
+      "3x0",
       ":mass",
       "75kg",
       ":height",
       "1.78m/5ft10",
       ":speedland",
-      "30kph/20mph",
+      "10kph/7mph",
       ":demeanor",
       "Frivolous",
       ":nature",
@@ -1537,7 +1541,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Bargain")
+              nx_tactics_decks_data.f_ability_from_key("Bargain")
             )
           )
         )
@@ -1581,13 +1585,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "4x1",
       ":speed",
-      "2x1",
+      "2x0",
       ":mass",
       "40kg/88lb",
       ":height",
       "1.5m/5ft",
       ":speedland",
-      "20kph",
+      "10kph",
       ":demeanor",
       "Pleasant",
       ":nature",
@@ -1649,7 +1653,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "4x1",
       ":speed",
-      "7x1",
+      "2x1",
       ":mass",
       "22kg/50lb",
       ":height",
@@ -1671,17 +1675,17 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Bite")
+              nx_tactics_decks_data.f_ability_from_key("Bite")
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Grab")
+              nx_tactics_decks_data.f_ability_from_key("Grab")
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Drag")
+              nx_tactics_decks_data.f_ability_from_key("Drag")
             )
           )
         )
@@ -1735,13 +1739,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "3x1",
+      "4x0",
       ":mass",
       "80kg/180",
       ":height",
       "1.8m/6ft",
       ":speedland",
-      "30kph/20mph",
+      "20kph/15mph",
       ":demeanor",
       "Gruff",
       ":nature",
@@ -1780,7 +1784,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_name("Trapping")
+              nx_tactics_decks_data.f_ability_from_key("Trapping")
             )
           )
         )
@@ -1833,7 +1837,7 @@ export default class nx_tactics_decks_scenario_murintrail {
   // (func unit-xeibhanower)
   static f_unit_xeibhanower() {
     let output = nx_tactics_base.e_unit
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Xeib Honower", ":image", "images/cards/unit-xeibhanower.svg", ":race", "Human", ":gender", "M", ":age", 23, ":body", "8x1", ":mind", "5x1", ":will", "6x1", ":speed", "2.5x1", ":mass", "80kg", ":height", "1.78m/5'10", ":speedland", "25kph")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Xeib Honower", ":image", "images/cards/unit-xeibhanower.svg", ":race", "Human", ":gender", "M", ":age", 23, ":body", "8x1", ":mind", "5x1", ":will", "6x1", ":speed", "3x0", ":mass", "80kg", ":height", "1.78m/5'10", ":speedland", "10kph/7mph")
     return output
   }
 

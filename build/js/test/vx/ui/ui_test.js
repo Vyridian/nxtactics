@@ -214,7 +214,7 @@ export default class vx_ui_ui_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (ui :uid \"app\")\n (let : ui\n  [iswrite : boolean :=\n    (boolean-writestate<-uiapp\n     (ui :uid \"app\"))\n   appui : ui :=\n    (ui-readstate-uiapp)\n   isremoved : boolean :=\n    (boolean-removestate-uiapp)]\n  appui))",
+            ":describename", "(test\n (ui :uid \"app\")\n (let : ui\n  [iswrite : boolean :=\n    (boolean-writestate<-uiapp\n     (ui :uid \"app\"))\n   appui : ui :=\n    (ui-readstate-uiapp)\n   isremoved : boolean :=\n    (boolean-removestate-uiapp)]\n  appui))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -250,7 +250,7 @@ export default class vx_ui_ui_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"\"\n (string-parentuid<-uid\n  \"a\"))",
+            ":describename", "(test\n \"\"\n (string-parentuid<-uid\n  \"a\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -260,7 +260,7 @@ export default class vx_ui_ui_test {
           ),
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"a/b\"\n (string-parentuid<-uid\n  \"a/b/c\"))",
+            ":describename", "(test\n \"a/b\"\n (string-parentuid<-uid\n  \"a/b/c\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -284,7 +284,7 @@ export default class vx_ui_ui_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (ui\n  :uid \"myapp\")\n (let : ui\n  [iswrite : boolean :=\n    (boolean-writestate<-uiapp\n     (ui\n      :uid \"myapp\"))]\n  (ui-readstate-uiapp)))",
+            ":describename", "(test\n (ui\n  :uid \"myapp\")\n (let : ui\n  [iswrite : boolean :=\n    (boolean-writestate<-uiapp\n     (ui\n      :uid \"myapp\"))]\n  (ui-readstate-uiapp)))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -318,7 +318,7 @@ export default class vx_ui_ui_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (ui\n  :uid \"a/b/c\")\n (let : ui\n  [uiapp : ui :=\n    (ui\n     :uid \"a\"\n     :uimap\n      (uimap<-uilist\n       (ui\n        :uid \"a/b\"\n        :uimap\n         (uimap<-uilist\n          (ui\n           :uid \"a/b/c\")))))\n   iswrite : boolean :=\n    (boolean-writestate<-uiapp uiapp)\n   readval : ui :=\n    (ui-readstate<-uid\n     \"a/b/c\")\n   isremoved : boolean := (boolean-removestate-uiapp)]\n  readval))",
+            ":describename", "(test\n (ui\n  :uid \"a/b/c\")\n (let : ui\n  [uiapp : ui :=\n    (ui\n     :uid \"a\"\n     :uimap\n      (uimap<-uilist\n       (ui\n        :uid \"a/b\"\n        :uimap\n         (uimap<-uilist\n          (ui\n           :uid \"a/b/c\")))))\n   iswrite : boolean :=\n    (boolean-writestate<-uiapp uiapp)\n   readval : ui :=\n    (ui-readstate<-uid\n     \"a/b/c\")\n   isremoved : boolean := (boolean-removestate-uiapp)]\n  readval))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -368,7 +368,7 @@ export default class vx_ui_ui_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (ui\n  :uimap\n   (uimap\n    :a\n     (ui\n      :uid \"a\"\n      :hidden true)\n    :b\n     (ui\n      :uid \"b\")))\n (ui-write<-ui-visible\n  (ui\n   :uimap\n    (uimap\n     :a\n      (ui\n       :uid \"a\")\n     :b\n      (ui\n       :uid \"b\"\n       :hidden true)))\n  2))",
+            ":describename", "(test\n (ui\n  :uimap\n   (uimap\n    :a\n     (ui\n      :uid \"a\"\n      :hidden true)\n    :b\n     (ui\n      :uid \"b\")))\n (ui-write<-ui-visible\n  (ui\n   :uimap\n    (uimap\n     :a\n      (ui\n       :uid \"a\")\n     :b\n      (ui\n       :uid \"b\"\n       :hidden true)))\n  2))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -427,7 +427,7 @@ export default class vx_ui_ui_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (ui\n  :uid \"a/b/c\")\n (ui<-ui-find\n  (ui\n   :uid \"a\"\n   :uimap\n    (uimap\n     :a/b\n      (ui\n       :uid \"a/b\"\n       :uimap\n        (uimap\n         :a/b/c\n          (ui\n           :uid \"a/b/c\")))))\n  \"a/b/c\"))",
+            ":describename", "(test\n (ui\n  :uid \"a/b/c\")\n (ui<-ui-find\n  (ui\n   :uid \"a\"\n   :uimap\n    (uimap\n     :a/b\n      (ui\n       :uid \"a/b\"\n       :uimap\n        (uimap\n         :a/b/c\n          (ui\n           :uid \"a/b/c\")))))\n  \"a/b/c\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -474,7 +474,7 @@ export default class vx_ui_ui_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (ui\n  :uimap\n   (uimap\n    :a\n     (ui\n      :uid \"a\")\n    :b\n     (ui\n      :uid \"b\"\n      :selected true)))\n (ui<-ui-selected\n  (ui\n   :uimap\n    (uimap\n     :a\n      (ui\n       :uid \"a\"\n       :selected true)\n     :b\n      (ui\n       :uid \"b\")))\n  2))",
+            ":describename", "(test\n (ui\n  :uimap\n   (uimap\n    :a\n     (ui\n      :uid \"a\")\n    :b\n     (ui\n      :uid \"b\"\n      :selected true)))\n (ui<-ui-selected\n  (ui\n   :uimap\n    (uimap\n     :a\n      (ui\n       :uid \"a\"\n       :selected true)\n     :b\n      (ui\n       :uid \"b\")))\n  2))",
             ":testresult",
             vx_test.f_test(
               context,

@@ -78,7 +78,7 @@ export default class vx_translate_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"!NotFound!\"\n (translate \"!NotFound!\"))",
+            ":describename", "(test\n \"!NotFound!\"\n (translate \"!NotFound!\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -102,7 +102,7 @@ export default class vx_translate_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"Repl Type Not Found\"\n (translate\n  (msg\n   :path \"vx/repl/repl/repl<-string-argmap\"\n   :code \"repltypenotfound\")))",
+            ":describename", "(test\n \"Repl Type Not Found\"\n (translate\n  (msg\n   :path \"vx/repl/repl/repl<-string-argmap\"\n   :code \"repltypenotfound\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -129,7 +129,7 @@ export default class vx_translate_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"Hola\"\n (translate<-translation-string\n  (translation\n   :wordmap\n    (stringmap\n     \"Hello\" \"Hola\"))\n  \"Hello\"))",
+            ":describename", "(test\n \"Hola\"\n (translate<-translation-string\n  (translation\n   :wordmap\n    (stringmap\n     \"Hello\" \"Hola\"))\n  \"Hello\"))",
             ":testresult",
             vx_test.f_test(
               context,

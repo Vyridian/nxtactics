@@ -5,9 +5,94 @@
 (func itemmap-tactics : base/itemmap
  [tactics : base/tactics]
  (base/itemmap<-itemlist
-  (item
-   :name "item1")
-  )
+  (base/item
+   :name "Bedroll of Restful Sleep"
+   :summary
+    "Providest the [Restful Sleep] ability.")
+  (base/item
+   :name "Hand Axe"
+   :image "images/cards/item-axehand.svg"
+   :summary
+    "* Melee: [Hack] [Slash]
+     * Hit: [Body]
+     * Location: [1-hand]"
+   :body "9x-1"
+   :mass "900g/2lb")
+  (base/item
+   :name "Lock Combination"
+   :image "images/cards/item-lockcombination.svg")
+  (base/item
+   :name "Jerry Can"
+   :image "images/cards/item-jerrycan.svg")
+  (base/item
+   :name "Keys"
+   :image "images/cards/item-keys.svg")
+  (base/item
+   :name "Knife"
+   :image "images/cards/item-knife.svg"
+   :summary
+    "* [Fight]: [Close Combat]
+     * [Damage]: [Body]-1 [Pierce] [Slash]
+     * [Location]: [1-hand]"
+   :body "5x-1"
+   :mass "500g/1lb"
+   :length "25cm/10in")
+  (base/item
+   :name "Liquor Bottle"
+   :image "images/cards/item-liquorbottle.svg")
+  (base/item
+   :name "Molotov Cocktail"
+   :image "images/cards/item-molotovcocktail.svg")
+  (base/item
+   :name "Revolver"
+   :image "images/cards/item-revolver.svg")
+  (base/item
+   :name "Revolver Ammo"
+   :image "images/cards/item-revolverammo.svg")
+  (base/item
+   :name "Rifle"
+   :image "images/cards/item-rifle.svg")
+  (base/item
+   :name "Rifle Ammo"
+   :image "images/cards/item-rifleammo.svg")
+  (base/item
+   :name "Safe"
+   :image "images/cards/item-safe.svg")
+  (base/item
+   :name "Shotgun"
+   :image "images/cards/item-shotgun.svg")
+  (base/item
+   :name "Shotgun Ammo"
+   :image "images/cards/item-shotgunammo.svg")
+  (base/item
+   :name "Spear"
+   :image "images/cards/item-spear.svg"
+   :summary
+    "* [Fight]: [Melee] [Reach]
+     * [Damage]: [Body]+3 [Pierce] [Slash]
+     * [Location]: [2-hand]
+     * [Armor]:1x1"
+   :body "3x0"
+   :mass "3kg/6lb")
+  (base/item
+   :name "Fire Axe"
+   :image "images/cards/item-woodaxe.svg"
+   :summary
+    "* [Fight]: [Melee]
+     * [Initiative]:-1
+     * [Damage]: [Body]+3 [Hack] [Slash]
+     * [Location]: [2-hand]
+     * [Armor]:1x1"
+   :body "3x0"
+   :mass "3.1kg/7lb")
+  (base/item
+   :name "Monocle"
+   :image "images/cards/item-monocle.svg"
+   :summary
+    "* [Passive]: IF examining small objects THEN [Investigation]:+1"
+   :body "2x-2"
+   :mass "20g/.05lb")
+ )
  :doc "Returns the base itemmap")
 
 (func tactics-itemmap<-tactics : base/tactics

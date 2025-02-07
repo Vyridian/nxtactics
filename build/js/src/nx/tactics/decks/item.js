@@ -23,7 +23,24 @@ export default class nx_tactics_decks_item {
   static f_itemmap_tactics(tactics) {
     let output = nx_tactics_base.e_itemmap
     output = nx_tactics_base.f_itemmap_from_itemlist(
-      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "item1")
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bedroll of Restful Sleep", ":summary", "Providest the [Restful Sleep] ability."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hand Axe", ":image", "images/cards/item-axehand.svg", ":summary", "* Melee: [Hack] [Slash]\n* Hit: [Body]\n* Location: [1-hand]", ":body", "9x-1", ":mass", "900g/2lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lock Combination", ":image", "images/cards/item-lockcombination.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Jerry Can", ":image", "images/cards/item-jerrycan.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Keys", ":image", "images/cards/item-keys.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Knife", ":image", "images/cards/item-knife.svg", ":summary", "* [Fight]: [Close Combat]\n* [Damage]: [Body]-1 [Pierce] [Slash]\n* [Location]: [1-hand]", ":body", "5x-1", ":mass", "500g/1lb", ":length", "25cm/10in"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Liquor Bottle", ":image", "images/cards/item-liquorbottle.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Molotov Cocktail", ":image", "images/cards/item-molotovcocktail.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Revolver", ":image", "images/cards/item-revolver.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Revolver Ammo", ":image", "images/cards/item-revolverammo.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rifle", ":image", "images/cards/item-rifle.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rifle Ammo", ":image", "images/cards/item-rifleammo.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Safe", ":image", "images/cards/item-safe.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shotgun", ":image", "images/cards/item-shotgun.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shotgun Ammo", ":image", "images/cards/item-shotgunammo.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Spear", ":image", "images/cards/item-spear.svg", ":summary", "* [Fight]: [Melee] [Reach]\n* [Damage]: [Body]+3 [Pierce] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1", ":body", "3x0", ":mass", "3kg/6lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Fire Axe", ":image", "images/cards/item-woodaxe.svg", ":summary", "* [Fight]: [Melee]\n* [Initiative]:-1\n* [Damage]: [Body]+3 [Hack] [Slash]\n* [Location]: [2-hand]\n* [Armor]:1x1", ":body", "3x0", ":mass", "3.1kg/7lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Monocle", ":image", "images/cards/item-monocle.svg", ":summary", "* [Passive]: IF examining small objects THEN [Investigation]:+1", ":body", "2x-2", ":mass", "20g/.05lb")
     )
     return output
   }

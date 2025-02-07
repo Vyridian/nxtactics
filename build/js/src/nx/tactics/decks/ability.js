@@ -23,7 +23,26 @@ export default class nx_tactics_decks_ability {
   static f_abilitymap_tactics(tactics) {
     let output = nx_tactics_base.e_abilitymap
     output = nx_tactics_base.f_abilitymap_from_abilitylist(
-      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Balanced for Throwing")
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Balanced for Throwing"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dream Therapy", ":summary", "Heal Trauma by exploring the Dream World."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Existential Riddle", ":summary", "Demoralize unwitting rivals by questioning their purpose in life."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Gymnastics"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Restful Sleep", ":summary", "Ensure restful sleep for levelx2 hours."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Returning Throw"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulbind", ":titles", "Soulbond"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulburn"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Souldrain", ":titles", "Spiritsiphon"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulforge"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulrend", ":titles", "Soulrip", ":reference", "* We'll tear your soul apart! - Pinhead, Hellraiser"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulshatter"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulsteal", ":reference", "Primitive people may see a photograph as stealing the soul."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulstain"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulstone", ":titles", "Souljar"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulstrike"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulvise"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulwrack"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Space Clearing", ":summary", "[Requires]: 2 handed Weapon\n[Combat]: Attack in a circle around you. Anyone hit get [Push]:1."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Undermine", ":summary", "Damage walls.")
     )
     return output
   }

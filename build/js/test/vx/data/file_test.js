@@ -74,7 +74,7 @@ export default class vx_data_file_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"fname\"\n (pathfull<-file\n  (file\n   :name \"fname\")))",
+            ":describename", "(test\n \"fname\"\n (pathfull<-file\n  (file\n   :name \"fname\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -86,7 +86,7 @@ export default class vx_data_file_test {
           ),
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"fpath/fname\"\n (pathfull<-file\n  (file\n   :path \"fpath\"\n   :name \"fname\")))",
+            ":describename", "(test\n \"fpath/fname\"\n (pathfull<-file\n  (file\n   :path \"fpath\"\n   :name \"fname\")))",
             ":testresult",
             vx_test.f_test(
               context,

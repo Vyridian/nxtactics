@@ -26,12 +26,12 @@ export default class nx_tactics_ui_stylesheet_test {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/ui/stylesheet", 
-      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 91), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 32, ":tests", 30, ":total", 91), 
+      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 92), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 32, ":tests", 30, ":total", 92), 
       "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 91), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 92), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -87,6 +87,7 @@ export default class nx_tactics_ui_stylesheet_test {
           "style-body", 0,
           "style-card", 0,
           "style-card-display", 0,
+          "style-card-display-fate", 0,
           "style-card-display2", 0,
           "style-card-display3", 0,
           "style-card-display4", 0,

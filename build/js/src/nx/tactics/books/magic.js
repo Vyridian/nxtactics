@@ -98,7 +98,7 @@ export default class nx_tactics_books_magic {
   // (func chapter_magic_overview)
   static f_chapter_magic_overview() {
     let output = nx_tactics_base.e_chapter
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Magic Overview", ":summary", "* The Art\n\nClassifications\n* Abjuration - Protective Magic.  They create barriers, negate abilities, harm\ntrespassers, or banish those who do not\nbelong.  It includes Barriers and Wards.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Magic Overview", ":summary", "* The Art")
     return output
   }
 
@@ -139,6 +139,33 @@ export default class nx_tactics_books_magic {
           ":powermap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_powermap},
+            ":Abjuration",
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_power},
+              ":name",
+              "Abjuration",
+              ":summary",
+              "Protective Magic. They create barriers, negate abilities, harm trespassers, or banish those who do not belong. It includes Barriers and Wards.",
+              ":abilitymap",
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_abilitymap},
+                ":Banishment",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Banishment", ":summary", "* [Action]: Return any [Outsider] to its original realm. This ability may only be attempted on a particular being once per month."),
+                ":Binding",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Binding", ":summary", "* Any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may bind immediately or parley first and use the binding as a threat.\n* [Requires]: The caster must describe the subject's past in detail and name his/her demands. If the description is in error or the demand cannot be completed, the Binding automatically fails.\n* [Action]: If successful, the caster will know the subject is bound and it will perform the demand to the letter, but the subject is unwilling and will seek to defeat the caster's wishes through semantics or in passive/agressive ways."),
+                "Binding Contract",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Binding Contract", ":summary", "* Like [Binding], any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may parley and use the binding to enforce an agreement.\n* [Requires]: The caster must name his/her demands and offer compensation to the subject. They may then negotiate for as long as desired.\n* [Action]: If the subject refuses to bargain, the caster may still cast or threaten a [Binding]. If the subject agrees to the bargain, the subject and the caster are automatically bound to the terms of the bargain, and both must fulfill their commitments or be immediately subject to a [Summoning] and automatically successful forced [Binding] (even if neither party has these abilities)."),
+                "Containment Jar",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Containment Jar", ":reference", "* Evil Containment Wave - Dragon Ball", ":summary", "* A summoned being may be captured in a special container that permanently imprisons the creature.\n* The being in the jar can telepathically communicate with anyone touching the jar. If the jar is broken, the being is immediately freed. The being may bargain for its freedom, and if it does so, it must fulfill its bargain.\n* Imprisonment in a jar can be used as a threat or the caster may simply imprison the being to be used later.", ":titles", "Souljar"),
+                "Create Elder Sign",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Create Elder Sign"),
+                ":Pentagram",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pentagram", ":summary", "* A Triangle enclosed in a circle. A double triangle will form a Pentagram.\n* The five points represent the four elements with the spirit presiding at the top. The triangles form a doorway.\n* Time allowing, it is usually meticulously inscribed and used with a [Protective Circle].\n* It serves to contain any being (and its minions) summoned by the caster.\n* It provides defense equal to the success roll versus any being (and its minions) summoned by the caster. This defense applies to ALL attempts to act across the Pentagram. If an attack exceeds the defense of the Pentagram, the defense reduces by one.", ":titles", "Binding Circle, Devil's Door, Thaumaturgic Triangle"),
+                ":Protection",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Protection", ":summary", "* A protective barrier inscribed on the ground to protect the caster from summoned beings (usually his own).\n* A typical size for a circle is nine feet in diameter, though the size can vary depending on the purpose of the circle.\n* Some practitioners choose to mark the physical boundary of their circle, either before or prior to the actual casting. This can be done using a cord, a chalk line, a line drawn in the soil, or small objects such as stones.\n* Some practitioners mark the four cardinal points with candles, either white, or of colors representative of the elements:\n** North: green for the element of Earth\n** East: yellow for the element of Air\n** South: red for the element of Fire\n** West: blue for the element of Water\n* Cutting a door - The barrier is fragile and sensitive to things passing through it. Leaving or passing through the circle often weakens or dispels the barrier. This is referred to as 'breaking the circle'. Practitioners should not leave the circle unless absolutely necessary. In order to leave a circle and keep it intact, a door must be cut in the energy of the circle. Using the athame, a doorway is cut in the circle, at which point anything may pass through without harming the circle. This opening must be closed afterwards by reconnecting the lines of the circle.", ":titles", "Circle of Protection, Protective Circle"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Guards and Wards")
+              )
+            ),
             ":Alchemy",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -158,9 +185,9 @@ export default class nx_tactics_books_magic {
                 "Animate Statue",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Animate Statue", ":reference", "* Terra Cotta Warriors\n* Kali - The Golden Voyage of Sinbad"),
                 "Ashes to Ashes",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ashes to Ashes", ":summary", "* Force a substance to age as if hundreds of years had passed.  Stone wears to powder, wood turns to ashes, metal\ncorrodes, colors fade."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ashes to Ashes", ":summary", "* Force a substance to age as if hundreds of years had passed.  Stone wears to powder, wood turns to ashes, metal corrodes, colors fade."),
                 "Exract Rare Earths",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Exract Rare Earths", ":summary", "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the\ninnate powers of other ingredients.\n* To those without Alchemical skill, they are indistinguishable from normal soil or sand.  An Alchemist, however,\nmay tell the difference and may extract [Hits] drams of Rare Earths from any soil in an hour."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Exract Rare Earths", ":summary", "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the innate powers of other ingredients.\n* To those without Alchemical skill, they are indistinguishable from normal soil or sand.  An Alchemist, however, may tell the difference and may extract [Hits] drams of Rare Earths from any soil in an hour."),
                 "Forge Orichalcum",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Forge Orichalcum", ":summary", "* See Equipment / Metals / Orichalcum"),
                 "Forge Rebis",
@@ -244,13 +271,13 @@ export default class nx_tactics_books_magic {
                 "Balance of Libra",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Balance of Libra", ":summary", "* [Action]: Place the Balance of Libra card on this unit. At any time you may discard the Balance of Libra card to cause a unit that has done damage to you to immediately suffer the same amount of damage."),
                 "Calm of Cancer",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Calm of Cancer", ":summary", "* [Action]: Targets ignore all [Mind] penalties for the duration of this\nability."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Calm of Cancer", ":summary", "* [Action]: Targets ignore all [Mind] penalties for the duration of this ability."),
                 "Celestial Convergence",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Celestial Convergence"),
                 "Chariot of the Sun",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Chariot of the Sun", ":summary", "* [Extended Action]: At dawn, if the sun is visible, summon a blazing chariot with horses of flame that can carry the user and up to level passengers high into the sky all day. At sunset, the chariot lands anywhere the user chooses where the sun is visible."),
                 "Charm of Virgo",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Charm of Virgo", ":summary", "* [Action]: Gain [Synergy] on unit's next communication skill. Duration 1\nturn."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Charm of Virgo", ":summary", "* [Action]: Gain [Synergy] on unit's next communication skill. Duration 1 turn."),
                 "Cleansing of Aquarius",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cleansing of Aquarius", ":reference", "* Aquarius is not a water sign. It's an air sign. The mix up often comes about from Aquarius' overarching symbol, the water-bearer.", ":summary", "* [Action]: Remove X [Poison], [Disease], or [Corruption] cards from the target."),
                 "Courage of Leo",
@@ -260,9 +287,9 @@ export default class nx_tactics_books_magic {
                 "Déjà Vu",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Déjà Vu", ":summary", "* You have seen this situation before and are not surprised by it.\n* [Action]: The next time you are [Suprised], ignore all penalties for [Surprise]."),
                 "Depth of Pisces",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Depth of Pisces", ":summary", "* [Extended Action]: Gain [Synergy] on the next [Search], [Research], or\n[Investigation] [Action]."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Depth of Pisces", ":summary", "* [Extended Action]: Gain [Synergy] on the next [Search], [Research], or [Investigation] [Action]."),
                 "Determination of Aries",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Determination of Aries", ":summary", "* [Action]: Target ignores all movement penalties (including terrain) for\nthe duration of this effect."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Determination of Aries", ":summary", "* [Action]: Target ignores all movement penalties (including terrain) for the duration of this effect."),
                 "Duality of Gemini",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Duality of Gemini", ":summary", "* [Action]: Take on a different personality with different mannerisms. This can be the basis for a very convincing disguise."),
                 ":Eclipse",
@@ -315,6 +342,8 @@ export default class nx_tactics_books_magic {
                 {"any-1": nx_tactics_base.t_abilitymap},
                 ":Delay",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Delay"),
+                ":Predestined",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Predestined", ":reference", "Y: Why do you even bother playing games? If you know how turns out? T:I only know what will happen because it will happen. Y:So you control everything. T:I control nothing... T:Here. This mirror reflects one second into the future... I could set the mirror two minutes into the future. Or an hour. Do you want to know how this ends? And drive yourself crazy trying to avoid the inevitable. - Tiangong and Yi Xing, Honor of Kings, Secret Level Island in the Sun"),
                 "Reverse Time",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Reverse Time", ":reference", "* If I could turn back time... - Cher"),
                 "Slow Time",
@@ -351,29 +380,11 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Conjure Weapon", ":summary", "* Conjure a weapon out of thin air.\n* [Limited]: By the user's skill in the weapon created.")
               )
             ),
-            ":Divergence",
+            "Papercraft",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
               ":name",
-              "Divergence",
-              ":summary",
-              "* The opposite of Convergence, Divergence specializes on objects moving apart.",
-              ":stat",
-              "Mind",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Amplify Repulsion",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Amplify Repulsion", ":summary", "* Massively increase the repulsive force between two objects. This can increase magnetic repulsion and also increase the movement of two objects that have just collided to increase Knockback."),
-                "Pressor Force",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pressor Force", ":summary", "* Apply low but steady pressure pushing an object away.")
-              )
-            ),
-            "Paper Magic",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Paper Magic",
+              "Papercraft",
               ":titles",
               "Ofuda",
               ":abilitymap",
@@ -425,16 +436,6 @@ export default class nx_tactics_books_magic {
               ":abilitymap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_abilitymap},
-                ":Banishment",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Banishment", ":summary", "* [Action]: Return any [Outsider] to its original realm. This ability may only be attempted on a particular being once per month."),
-                ":Binding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Binding", ":summary", "* Any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may bind immediately or parley first and use the binding as a threat.\n* [Requires]: The caster must describe the subject's past in detail and name his/her demands. If the description is in error or the demand cannot be completed, the Binding automatically fails.\n* [Action]: If successful, the caster will know the subject is bound and it will perform the demand to the letter, but the subject is unwilling and will seek to defeat the caster's wishes through semantics or in passive/agressive ways."),
-                "Binding Contract",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Binding Contract", ":summary", "* Like [Binding], any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may parley and use the binding to enforce an agreement.\n* [Requires]: The caster must name his/her demands and offer compensation to the subject. They may then negotiate for as long as desired.\n* [Action]: If the subject refuses to bargain, the caster may still cast or threaten a [Binding]. If the subject agrees to the bargain, the subject and the caster are automatically bound to the terms of the bargain, and both must fulfill their commitments or be immediately subject to a [Summoning] and automatically successful forced [Binding] (even if neither party has these abilities)."),
-                "Containment Jar",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Containment Jar", ":reference", "* Evil Containment Wave - Dragon Ball", ":summary", "* A summoned being may be captured in a special container that permanently imprisons the creature.\n* The being in the jar can telepathically communicate with anyone touching the jar. If the jar is broken, the being is immediately freed. The being may bargain for its freedom, and if it does so, it must fulfill its bargain.\n* Imprisonment in a jar can be used as a threat or the caster may simply imprison the being to be used later.", ":titles", "Soulbind"),
-                "Create Elder Sign",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Create Elder Sign"),
                 "Daedalus Gateway",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Daedalus Gateway", ":summary", "* A subtle gate that moves a person to a different Realm without them realizing. Both locations must be nearly identical."),
                 "Dimension Door",
@@ -443,10 +444,6 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dimensional Gateway", ":summary", "* Open a portal to another dimension."),
                 ":Gateway",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Gateway", ":summary", "* Open a portal to another location."),
-                ":Pentagram",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pentagram", ":summary", "* A Triangle enclosed in a circle. A double triangle will form a Pentagram.\n* The five points represent the four elements with the spirit presiding at the top. The triangles form a doorway.\n* Time allowing, it is usually meticulously inscribed and used with a [Protective Circle].\n* It serves to contain any being (and its minions) summoned by the caster.\n* It provides defense equal to the success roll versus any being (and its minions) summoned by the caster. This defense applies to ALL attempts to act across the Pentagram. If an attack exceeds the defense of the Pentagram, the defense reduces by one.", ":titles", "Binding Circle, Devil's Door, Thaumaturgic Triangle"),
-                ":Protection",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Protection", ":summary", "* A protective barrier inscribed on the ground to protect the caster from summoned beings (usually his own).\n* A typical size for a circle is nine feet in diameter, though the size can vary depending on the purpose of the circle.\n* Some practitioners choose to mark the physical boundary of their circle, either before or prior to the actual casting. This can be done using a cord, a chalk line, a line drawn in the soil, or small objects such as stones.\n* Some practitioners mark the four cardinal points with candles, either white, or of colors representative of the elements:\n** North: green for the element of Earth\n** East: yellow for the element of Air\n** South: red for the element of Fire\n** West: blue for the element of Water\n* Cutting a door - The barrier is fragile and sensitive to things passing through it. Leaving or passing through the circle often weakens or dispels the barrier. This is referred to as 'breaking the circle'. Practitioners should not leave the circle unless absolutely necessary. In order to leave a circle and keep it intact, a door must be cut in the energy of the circle. Using the athame, a doorway is cut in the circle, at which point anything may pass through without harming the circle. This opening must be closed afterwards by reconnecting the lines of the circle.", ":titles", "Circle of Protection, Protective Circle"),
                 "Soul Pact",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soul Pact", ":summary", "* Death: Enter a specified Demon Realm. This ability is automatic and is not optional."),
                 "Summon Demon",
@@ -456,7 +453,7 @@ export default class nx_tactics_books_magic {
                 "Summon Familiar",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Summon Familiar", ":reference", "* Animal companions, such as cats, that are either trained to assist in magic, or are used as a mascot.", ":summary", "* Summon an animal shaped familiar spirit to serve as a companion, servant, spy, etc.\n* The Familiar is highly intelligent and must be bargained with before it agrees to serve.\n* Duration: Indefinite.\n* The Familiar will age with its master.\n* The Familiar can gain abilities that its master possesses.\n* Three mystic cords are constructed to link the Familiar to its master.\n** Golden Cord - Connects magical abilities.\n** Silver Cord - Connects the minds.\n** Bronze Cord - Connects the bodies.\n!Familiar Skills\n* Shapechange to Human Form\n* Giant Growth (Self)\n* Communicate with Master\n* Speech"),
                 "Summon Item",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Summon Item", ":summary", "* A single item may be attuned to a summoning.  Later that item may be summoned to the owner's hand.")
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Summon Item", ":summary", "* A single item may be attuned to a summoning. Later that item may be summoned to the owner's hand.")
               )
             ),
             ":Thaumaturgy",
@@ -498,7 +495,7 @@ export default class nx_tactics_books_magic {
                 ":Dispel",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dispel", ":summary", "* Attack a placed magical ability.  Each hit weakens its abilities."),
                 ":Fork",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fork", ":summary", "* Duplicate an allied caster's magical ability. The other caster fully\ncontrols both abilities but may not aim both at the same target."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fork", ":summary", "* Duplicate an allied caster's magical ability. The other caster fully controls both abilities but may not aim both at the same target."),
                 ":Magnify",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Magnify", ":summary", "* Magnify draws from the potential energy in all things to increase the power in an existing force.\n* Note: Magic cannot be magnified. Magic only simulates reality and has no hidden reserves to tap.\n!Examples\n* An arrow can hit with devastating force.\n* A bird's weight can be increased so it falls.\n* A fire can be enhanced into an inferno while not burning fuel faster or producing additional smoke. The fuel has near infinite reserves to draw upon."),
                 "Mana Burn",
@@ -539,15 +536,15 @@ export default class nx_tactics_books_magic {
           ":powermap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_powermap},
-            "Blood Magic",
+            "Bloodcraft",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
               ":name",
-              "Blood Magic",
+              "Bloodcraft",
               ":summary",
               "* Each use of Blood Magic requires a blood sacrifice. The user immediately suffers one [Blood Loss], or if a captured sacrifice is available, the user may instead use the blood of the sacrifice.\n* Blood magic is a favorite of Vampires who can recover from [Blood Loss] quickly.",
               ":titles",
-              "Blood Brother, Blood Mage, Blood Witch, Vampire",
+              "Blood Magic, Blood Brother, Blood Mage, Blood Witch, Sanguineous, Vampire",
               ":stat",
               "Shadow",
               ":abilitymap",
@@ -580,7 +577,7 @@ export default class nx_tactics_books_magic {
                 ":Hecatomb",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hecatomb", ":reference", "* In ancient Greece or Rome, a great public sacrifice, originally of a hundred oxen.\n* An extensive loss of life for some cause."),
                 ":Lifeblood",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lifeblood", ":summary", "* Use Blood to heal yourself.\n* [Action]: Take a [Blood Loss]. Change 1 [Critical Damage] to a normal [Damage] or\nchange 1 [Damage] to a [Blood Loss]."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lifeblood", ":summary", "* Use Blood to heal yourself.\n* [Action]: Take a [Blood Loss]. Change 1 [Critical Damage] to a normal [Damage] or change 1 [Damage] to a [Blood Loss]."),
                 "Out for Blood",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Out for Blood")
               )
@@ -733,8 +730,8 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wall of Darkness")
               )
             ),
-            "Demon Soul",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Demon Soul", ":reference", "* Claymore\n* Ghost Rider\n* Prototype", ":summary", "* Demon Soul is when a user has been partially or completely possessed by a demonic entity.\n* Demon Soul allows the user a number of physical advantages including regeneration and natural weaponry, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit.", ":titles", "Yoma", ":stat", "Beast"),
+            "Demonic",
+            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Demonic", ":reference", "* Claymore\n* Ghost Rider\n* Prototype", ":summary", "* Demon Soul is when a user has been partially or completely possessed by a demonic entity.\n* Demon Soul allows the user a number of physical advantages including regeneration and natural weaponry, however each use of an ability at full strength (higher than level - 2) risks increasing the Beast inside until it eventually dominates the user's Spirit.", ":titles", "Demon Soul, Yoma", ":stat", "Beast"),
             ":Fleshcraft",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -859,7 +856,7 @@ export default class nx_tactics_books_magic {
               ":titles",
               "Angel, Banisher, Brother, Buddist, Exorcist, Father, Friar, Hearth Mage, Monk, Mother Superior, Nun, Paladin, Penitent, Purifier, Purity, Shintoist, Sister",
               ":stat",
-              "Spirit",
+              "Will",
               ":abilitymap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_abilitymap},
@@ -919,11 +916,11 @@ export default class nx_tactics_books_magic {
               ":name",
               "Conviction",
               ":reference",
-              "* Being religious is a form of conceit. the faith in which I was brought up assured me that I was better than other people; I was 'saved,' they were 'damned'... Our hymns were loaded with arrogance - self-congratulation... With a touch more confidence and a liberal helping of ignorance, I would have been a famous evangelist... A confidence man knows he's lying; that limits his scope. But a successful shaman believes what he says - and belief is contagious; there is no limit to his scope.  - Jubal, Stranger in a Strange Land",
+              "* Being religious is a form of conceit. the faith in which I was brought up assured me that I was better than other people; I was 'saved,' they were 'damned'... Our hymns were loaded with arrogance - self-congratulation... With a touch more confidence and a liberal helping of ignorance, I would have been a famous evangelist... A confidence man knows he's lying; that limits his scope. But a successful shaman believes what he says - and belief is contagious; there is no limit to his scope. - Jubal, Stranger in a Strange Land",
               ":titles",
               "Crusader, Faithful, Fanatic, Grand Inquisitor, Inquisitor, Paladin, Zealot",
               ":stat",
-              "Spirit",
+              "Will",
               ":abilitymap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_abilitymap},
@@ -969,17 +966,17 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Zeal")
               )
             ),
-            ":Convergence",
+            ":Blessing",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
               ":name",
-              "Convergence",
+              "Blessing",
               ":summary",
               "* Divine power surrounds the petitioner and those deemed allies.\n* [Focus]: +1 [Defense]",
               ":titles",
-              "Blessing, Protection",
+              "BProtection",
               ":stat",
-              "Spirit",
+              "Will",
               ":abilitymap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_abilitymap},
@@ -1249,10 +1246,10 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Call the Creep"),
                 "Call the Trees",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Call the Trees"),
-                "Commune with Nature",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Commune with Nature"),
                 "Choking Fungus",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Choking Fungus", ":summary", "* Fungus spontaneously grows in the area and releases spores that cause uncontrollable coughing to anyone who breathes without a fine filter in the area."),
+                "Commune with Nature",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Commune with Nature"),
                 "Drink from the Earth",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Drink from the Earth"),
                 "Fertile Crops",
@@ -1295,14 +1292,52 @@ export default class nx_tactics_books_magic {
             )
           )
         ),
-        ":Spiritualism",
+        ":Spiritual",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
+          "Spiritual",
+          ":titles",
           "Spiritualism",
           ":powermap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_powermap},
+            "Cultivation",
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_power},
+              ":name",
+              "Cultivation",
+              ":titles",
+              "Chi Powers, Combat Focus, Ki Powers",
+              ":stat",
+              "Will",
+              ":abilitymap",
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_abilitymap},
+                "Blind Fighting",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blind Fighting"),
+                ":Combination",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Combination", ":summary", "* Any combat abilities may be strung together as a Combination. Every ability after the first gets +1 to initiative. If any ability misses or fails, then the combo ends and the next ability is at -1 initiative. Each combo must be chosen when this ability is gained and must be taken again for each separate combo."),
+                "Death Touch",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Death Touch", ":reference", "Five Point Palm Exploding Heart Technique - Kill Bill", ":summary", "* The fighter strikes vulnerable pressure points, disrupting the opponent's chi flow causing intense pain or death. The effect has no outward effect, but the victim will know something is wrong. Eventually, the victim recovers or dies suddenly from the stress.\n-1 Action\n-2 Initiative\n-2 Accuracy\n+0 Damage - [Stun] only\n+3 Criticals - [Poison]\n0 Move\n-1 Defense", ":titles", "Dim Mak"),
+                "Empty Force",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Empty Force", ":summary", "* The fighter projects a strike across empty space. The fighter may strike at any range, but if he does not score at least 1 Criticals for each space of Range, the ability fails.\n-2 Initiative\n-2 Move\n-1 Damage\nCritical - [Range]", ":titles", "Distant Death, Kongjin"),
+                "Feather Walk",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Feather Walk", ":summary", "* Reduces body weight while active.  This increases the effects of [Retreat] and leaping while decreasing falling speed and damage.\n* If [Skill] greater than or equal to [Body], then unit may walk on any substance that would suspend a feather.", ":titles", "Feather Fall, Walk on Water"),
+                "Feign Death",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Feign Death"),
+                "Hold Breath",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hold Breath"),
+                "Spirit Healing",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Spirit Healing", ":titles", "Chi Kung Healing"),
+                "Team Combo",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Team Combo", ":reference", "Fastball Special - Colossus and Wolverine, X-men", ":summary", "* Like a [Combo], the Team Combo chains attacks together. The Team Combo however is performed by different members of a team with the identical Team Combo. Any team member may perform each step of the combo with each subsequent attack allowed to reroll 1 die. The combo ends if any attack misses, any member attacks twice in a row, or if a turn passes with no attack attempt. Any combat abilities may be strung together as a Team Combo (even abilities that only others in the team possess). Each combo must be chosen when this ability is gained and must be taken again for each separate combo."),
+                "Walk on Fire",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Walk on Fire"),
+                "Zen No Mind",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Zen No Mind", ":reference", "The mind must always be in the state of 'flowing,' for when it stops anywhere that means the flow is interrupted...In the case of the swordsman, it means death.  When the swordsman stands against his opponent, he is not to think of the opponent, nor of himself, nor of his enemy's sword movements. ... When he strikes, it is not the man but the sword in the hand of the man's subconscious that strikes. - Zen Master Takuan Soho", ":summary", "* A mind not fixed or occupied by thought or emotion and thus open to everything.\n* Mushin is achieved when a fighter feels no anger, fear or ego during combat, so the fighter is totally free to act and react towards an opponent without hesitation. At this point, a person relies not on what they think should be the next move, but what is felt intuitively.\n* A martial artist would likely have to train for many years to be capable of mushin. This allows time for combinations of movements and exchanges of techniques to be practiced repetitively many thousands of times, until they can be performed spontaneously, without conscious thought.", ":titles", "Mushin")
+              )
+            ),
             ":Divination",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -1403,6 +1438,10 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Down the Rabbit Hole", ":summary", "* [Requires]: A hole that leads somewhere unknown.\n* [Action]: By entering a hole, the Dreamer may travel to the [Spirit Realm].  If the Dreamer is a native of the [Spirit Realm], he may stay as long as he wants. If not, he will return to the real world after [Skill] hours as if waking from a dream."),
                 ":Dreamcatching",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dreamcatching"),
+                ":Dreamreading",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dreamreading", ":summary", "[Hour]: By sleeping next to a dreamer, you may witness their dreams and interpret them. You may also return to previous dreams."),
+                ":Dreamriding",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dreamriding", ":summary", "[Hour]: By sleeping next to a dreamer, you may participate in their dreams."),
                 ":Dreamquest",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dreamquest", ":summary", "* [Requires]: Sleeping\n* [Action]: While asleep, Spirit enters the [Spirit Realm].  The Spirit may travel as long as it wants, but whenever the Body awakens, the Spirit immediately returns.\n* [Death]: Spirit may permanently enter the [Spirit Realm]."),
                 "Dream Effectively",
@@ -1451,7 +1490,7 @@ export default class nx_tactics_books_magic {
               ":summary",
               "* Enchantment/Witchcraft focuses on enchantments that alter the fate of the target.\n* The deities of Witchcraft are embodiments of a life-force manifest in nature. The Goddess and God are seen as complementary polarities and this balance is seen in nature. They are sometimes symbolised as the Sun and Moon, and from her lunar associations the Goddess becomes a Triple Goddess with aspects of Maiden, Mother, and Crone. Some hold the Goddess to be pre-eminent, since she contains and conceives all. The God is the spark of life and inspiration within her, simultaneously her lover and her child.",
               ":titles",
-              "Abjuration, Beguiler, Enchanter, Enchantress, Entrancer, Hexer, Warlock, Witch, Witchcraft, Witchdoctor",
+              "Beguiler, Enchanter, Enchantress, Entrancer, Warlock, Witch, Witchcraft, Witchdoctor",
               ":abilitymap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_abilitymap},
@@ -1459,6 +1498,10 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Barren Loins", ":summary", "* Target cannot conceive a child while under this curse."),
                 ":Charm",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Charm", ":summary", "* The opposite of [Malediction]. Charm reduces the severity of negative effects.\n* [Requires]: Target cannot have any [Charm] Tokens.\n* [Action]: Roll vs. Spirit and add a Black [Charm] Token for each [Hit].", ":titles", "Warding Sign"),
+                "Craft Incense",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Craft Incense"),
+                "Craft Perfume",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Craft Perfume"),
                 "Death Ward",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Death Ward", ":summary", "* Provides increased defense against undead beings."),
                 "Evil Eye",
@@ -1529,17 +1572,17 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vision Quest")
               )
             ),
-            ":Sympathy",
+            ":Fetishism",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
               ":name",
-              "Sympathy",
+              "Fetishism",
               ":reference",
               "* Synchronicity is a phenomenon where people interpret two seemingly unrelated experiences as being meaningfully intertwined.",
               ":summary",
-              "* Sympathetic magic is using a symbol to represent the thing you want to affect with your magic. Whatever you do to the symbol, you do to the target. The object and the thing it represents are 'in sympathy'; they are aligned. Sympathetic magic is a useful idea because often, your target is something non-physical, or something you can’t otherwise interact with directly. You could banish negative thoughts directly, but it’s easier to tie them to something physical by writing them down and then burning the paper. As the paper burns, so does the negativity. Correspondences are related to this. For example, different-colored candles represent different desires (like green for money, red for love, black for banishment, etc.) and as the candle burns down, your spell is cast. Wearing different stones or crystals can attract luck or success to you.   \n				* Cursed Energy - Cursed energy is born from negative emotions such as grief and anger. These negative feelings are common in human society so almost everyone possesses cursed energy. Cursed Energy can be controlled and focused to perform various magical feats.\n				* Cursed Spirit - Cursed Spirits are apparitions manifested entirely from cursed energy. Even their bodies are composed of cursed energy, making cursed spirits invisible to non-sorcerers. The emission of cursed energy from humans collects like sediment until a cursed spirit is born from the collective negative energy. Cursed Spirits born with strong feelings directed toward a certain aspect are especially strong. The stronger humanity's fear and anger is directed at cursing a certain aspect of the world, like natural disasters, the more powerful Curse Spirits spawned from those negative sentiments will be.\n				* Law of Similarity - Like produces like. An effect resembles its cause.\n				* Law of Contact/Contagion - Things which have once been in contact with each other continue to act on each other at a distance.",
+              "* Fetishism is using a symbol to represent the thing you want to affect with your magic. Whatever you do to the symbol, you do to the target. The object and the thing it represents are 'in sympathy'; they are aligned. Sympathetic magic is a useful idea because often, your target is something non-physical, or something you can’t otherwise interact with directly. You could banish negative thoughts directly, but it’s easier to tie them to something physical by writing them down and then burning the paper. As the paper burns, so does the negativity. Correspondences are related to this. For example, different-colored candles represent different desires (like green for money, red for love, black for banishment, etc.) and as the candle burns down, your spell is cast. Wearing different stones or crystals can attract luck or success to you.   \n* Cursed Energy - Cursed energy is born from negative emotions such as grief and anger. These negative feelings are common in human society so almost everyone possesses cursed energy. Cursed Energy can be controlled and focused to perform various magical feats.\n* Cursed Spirit - Cursed Spirits are apparitions manifested entirely from cursed energy. Even their bodies are composed of cursed energy, making cursed spirits invisible to non-sorcerers. The emission of cursed energy from humans collects like sediment until a cursed spirit is born from the collective negative energy. Cursed Spirits born with strong feelings directed toward a certain aspect are especially strong. The stronger humanity's fear and anger is directed at cursing a certain aspect of the world, like natural disasters, the more powerful Curse Spirits spawned from those negative sentiments will be.\n* Law of Similarity - Like produces like. An effect resembles its cause.\n* Law of Contact/Contagion - Things which have once been in contact with each other continue to act on each other at a distance.",
               ":titles",
-              "Correspondence, Curses, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor",
+              "Correspondence, Curses, Hexer, Shintoist, Soulcraft, Sympathy, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor",
               ":abilitymap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_abilitymap},

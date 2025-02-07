@@ -130,7 +130,7 @@ export default class nx_tactics_ui_uitactics_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"conscience:1x1 beast:2x1 shadow:3x1\"\n (string<-conscience-beast-shadow\n  \"1x1\" \"2x1\" \"3x1\"))",
+            ":describename", "(test\n \"conscience:1x1 beast:2x1 shadow:3x1\"\n (string<-conscience-beast-shadow\n  \"1x1\" \"2x1\" \"3x1\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -154,7 +154,7 @@ export default class nx_tactics_ui_uitactics_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"demeanor:nice nature:naughty\"\n (string<-demeanor-nature\n  \"nice\" \"naughty\"))",
+            ":describename", "(test\n \"demeanor:nice nature:naughty\"\n (string<-demeanor-nature\n  \"nice\" \"naughty\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -178,7 +178,7 @@ export default class nx_tactics_ui_uitactics_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"land:1 water:2 air:3 space:4\"\n (string<-land-water-air-space\n  \"1\" \"2\" \"3\" \"4\"))",
+            ":describename", "(test\n \"land:1 water:2 air:3 space:4\"\n (string<-land-water-air-space\n  \"1\" \"2\" \"3\" \"4\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -202,7 +202,7 @@ export default class nx_tactics_ui_uitactics_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n \"mass:80kg/160lb h:2m/6ft l:1m/3ft w:1m/3ft\"\n (string<-mass-h-l-w\n  \"80kg/160lb\" \"2m/6ft\" \"1m/3ft\" \"1m/3ft\"))",
+            ":describename", "(test\n \"mass:80kg/160lb h:2m/6ft l:1m/3ft w:1m/3ft\"\n (string<-mass-h-l-w\n  \"80kg/160lb\" \"2m/6ft\" \"1m/3ft\" \"1m/3ft\"))",
             ":testresult",
             vx_test.f_test(
               context,

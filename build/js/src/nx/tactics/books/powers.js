@@ -62,7 +62,7 @@ export default class nx_tactics_books_powers {
               ":summary",
               "* A weapon with this skill is of particularly high quality and possesses unusual abilities.\n* The level of quality effects the number of abilities as usual.\n* Each level of quality doubles the original price of the item.",
               ":abilitymap",
-              nx_tactics_base.f_abilitymap_from_tactics_namelist(tactics, "Balanced for Throwing")
+              nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Balanced for Throwing")
             )
           )
         ),
@@ -1910,7 +1910,7 @@ export default class nx_tactics_books_powers {
                 "Flaming Weapon",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Flaming Weapon", ":summary", "* Add the [Fire] trait to a weapon or to unarmed attacks.", ":titles", "Fire Fist, Flame Tongue, Flamebrand, Flaming Arrow, Flaming Sword"),
                 ":Inferno",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Inferno", ":titles", "Pyroclasm"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Inferno", ":titles", "Pyroclasm", ":reference", "The embers of oblivion. Past, present, and future. A forbidden force that subsumes all creation. By my blood, by my flesh. The commandments set by the old gods are now shattered. Heavens! Earth! You will never forget my name! I am called Megumin! Foremost prodigy among Crimson Demons. Behold my Power! Explosion! - Megumin, Konosuba"),
                 "Living Flame",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Living Flame"),
                 "Pyroclastic Flow",
@@ -2057,6 +2057,24 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Warp"),
                 ":Waypoint",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Waypoint")
+              )
+            ),
+            ":Divergence",
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_power},
+              ":name",
+              "Divergence",
+              ":summary",
+              "* The opposite of Convergence, Divergence specializes on objects moving apart.",
+              ":stat",
+              "Mind",
+              ":abilitymap",
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_abilitymap},
+                "Amplify Repulsion",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Amplify Repulsion", ":summary", "* Massively increase the repulsive force between two objects. This can increase magnetic repulsion and also increase the movement of two objects that have just collided to increase Knockback."),
+                "Pressor Force",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pressor Force", ":summary", "* Apply low but steady pressure pushing an object away.")
               )
             ),
             ":Explosive",

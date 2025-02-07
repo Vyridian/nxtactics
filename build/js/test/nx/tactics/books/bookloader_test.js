@@ -197,7 +197,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/ability\n  :name \"name\"\n  :image \"image\")\n (ability<-ability-stringmap\n  (empty base/ability)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/ability\n  :name \"name\"\n  :image \"image\")\n (ability<-ability-stringmap\n  (empty base/ability)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -226,7 +226,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/ability\n  :titles \"titles\")\n (ability<-ability-xmlchild\n  (empty base/ability)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/ability\n  :titles \"titles\")\n (ability<-ability-xmlchild\n  (empty base/ability)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -264,7 +264,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/ability\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (ability<-xml\n  (xml/xml\n   :tag \"ability\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+            ":describename", "(test\n (base/ability\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (ability<-xml\n  (xml/xml\n   :tag \"ability\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -320,7 +320,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :name \"nm\")\n (book<-book-key-value\n  (empty base/book)\n  \"name\"\n  \"nm\"))",
+            ":describename", "(test\n (base/book\n  :name \"nm\")\n (book<-book-key-value\n  (empty base/book)\n  \"name\"\n  \"nm\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -336,7 +336,7 @@ export default class nx_tactics_books_bookloader_test {
           ),
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :name \"image\")\n (book<-book-key-value\n  (empty base/book)\n  \"name\"\n  \"image\"))",
+            ":describename", "(test\n (base/book\n  :name \"image\")\n (book<-book-key-value\n  (empty base/book)\n  \"name\"\n  \"image\"))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -366,7 +366,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :name \"name\"\n  :image \"image\")\n (book<-book-stringmap\n  (empty base/book)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/book\n  :name \"name\"\n  :image \"image\")\n (book<-book-stringmap\n  (empty base/book)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -395,7 +395,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :name \"name1\")\n (book<-book-xml\n  (empty base/book)\n  (xml/xml\n   :tag \"doc\"\n   :propmap\n    (stringmap\n     :name \"name1\"))))",
+            ":describename", "(test\n (base/book\n  :name \"name1\")\n (book<-book-xml\n  (empty base/book)\n  (xml/xml\n   :tag \"doc\"\n   :propmap\n    (stringmap\n     :name \"name1\"))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -416,7 +416,7 @@ export default class nx_tactics_books_bookloader_test {
           ),
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (empty base/book)\n (book<-book-xml\n  (empty base/book)\n  (xml/xml\n   :tag \"?xml\")))",
+            ":describename", "(test\n (empty base/book)\n (book<-book-xml\n  (empty base/book)\n  (xml/xml\n   :tag \"?xml\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -433,7 +433,7 @@ export default class nx_tactics_books_bookloader_test {
           ),
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :name \"name1\"\n  (msgblock\n   (msg\n    :code \":duplicatetagfound\"\n    :detail\n     (anymap\n      :type nx/tactics/base/book\n      :tag \"doc\")\n      :severity 2)))\n (book<-book-xml\n  (base/book\n   :name \"name1\")\n  (xml/xml\n   :tag \"doc\")))",
+            ":describename", "(test\n (base/book\n  :name \"name1\"\n  (msgblock\n   (msg\n    :code \":duplicatetagfound\"\n    :detail\n     (anymap\n      :type nx/tactics/base/book\n      :tag \"doc\")\n      :severity 2)))\n (book<-book-xml\n  (base/book\n   :name \"name1\")\n  (xml/xml\n   :tag \"doc\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -482,7 +482,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :chaptermap\n   (base/chaptermap\n    :chapter1\n     (base/chapter\n      :name \"chapter1\")))\n (book<-book-xmlchapter\n  (empty base/book)\n  (xml/xml\n   :tag \"chapter\"\n   :propmap\n    (stringmap\n     :name \"chapter1\"))))",
+            ":describename", "(test\n (base/book\n  :chaptermap\n   (base/chaptermap\n    :chapter1\n     (base/chapter\n      :name \"chapter1\")))\n (book<-book-xmlchapter\n  (empty base/book)\n  (xml/xml\n   :tag \"chapter\"\n   :propmap\n    (stringmap\n     :name \"chapter1\"))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -525,7 +525,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :titles \"titles\")\n (book<-book-xmlchild\n  (empty base/book)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/book\n  :titles \"titles\")\n (book<-book-xmlchild\n  (empty base/book)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -549,7 +549,7 @@ export default class nx_tactics_books_bookloader_test {
           ),
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :chaptermap\n   (base/chaptermap\n    :chapter1\n     (base/chapter\n      :name \"chapter1\")))\n (book<-book-xmlchild\n  (empty base/book)\n  (xml/xml\n   :tag \"chapter\"\n   :propmap\n    (stringmap\n     :name \"chapter1\"))))",
+            ":describename", "(test\n (base/book\n  :chaptermap\n   (base/chaptermap\n    :chapter1\n     (base/chapter\n      :name \"chapter1\")))\n (book<-book-xmlchild\n  (empty base/book)\n  (xml/xml\n   :tag \"chapter\"\n   :propmap\n    (stringmap\n     :name \"chapter1\"))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -592,7 +592,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :name \"name1\")\n (book<-xml\n  (xml/xml\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"?xml\")\n     (xml/xml\n      :tag \"doc\"\n      :propmap\n       (stringmap\n        :name \"name1\"))))))",
+            ":describename", "(test\n (base/book\n  :name \"name1\")\n (book<-xml\n  (xml/xml\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"?xml\")\n     (xml/xml\n      :tag \"doc\"\n      :propmap\n       (stringmap\n        :name \"name1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -632,7 +632,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :name \"name1\"\n  :image \"image1\"\n  :titles \"titles1\"\n  :reference \"reference1\"\n  :chaptermap\n   (base/chaptermap\n    :chapter1\n     (base/chapter\n      :name \"chapter1\")))\n (book<-xmldoc\n  (xml/xml\n   :tag \"doc\"\n   :propmap\n    (stringmap\n     :name \"name1\"\n     :image \"image1\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles1\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference1\")))\n     (xml/xml\n      :tag \"chapter\"\n      :propmap\n       (stringmap\n        :name \"chapter1\"))))))",
+            ":describename", "(test\n (base/book\n  :name \"name1\"\n  :image \"image1\"\n  :titles \"titles1\"\n  :reference \"reference1\"\n  :chaptermap\n   (base/chaptermap\n    :chapter1\n     (base/chapter\n      :name \"chapter1\")))\n (book<-xmldoc\n  (xml/xml\n   :tag \"doc\"\n   :propmap\n    (stringmap\n     :name \"name1\"\n     :image \"image1\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles1\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference1\")))\n     (xml/xml\n      :tag \"chapter\"\n      :propmap\n       (stringmap\n        :name \"chapter1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -711,7 +711,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/book\n  :name \"name1\")\n (book<-xmllist\n  (xml/xmllist\n   (xml/xml\n    :tag \"?xml\")\n   (xml/xml\n    :tag \"doc\"\n    :propmap\n     (stringmap\n      :name \"name1\")))))",
+            ":describename", "(test\n (base/book\n  :name \"name1\")\n (book<-xmllist\n  (xml/xmllist\n   (xml/xml\n    :tag \"?xml\")\n   (xml/xml\n    :tag \"doc\"\n    :propmap\n     (stringmap\n      :name \"name1\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -747,7 +747,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/chapter\n  :name \"name\"\n  :image \"image\")\n (chapter<-chapter-stringmap\n  (empty base/chapter)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/chapter\n  :name \"name\"\n  :image \"image\")\n (chapter<-chapter-stringmap\n  (empty base/chapter)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -776,7 +776,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/chapter\n  :titles \"titles\")\n (chapter<-chapter-xmlchild\n  (empty base/chapter)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/chapter\n  :titles \"titles\")\n (chapter<-chapter-xmlchild\n  (empty base/chapter)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -814,7 +814,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/chapter\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :sectionmap\n   (base/sectionmap\n    :section1\n     (base/section\n      :name \"section1\")\n    :section2\n     (base/section\n      :name \"section2\")))\n (chapter<-xml\n  (xml/xml\n   :tag \"chapter\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section1\"))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section2\"))))))",
+            ":describename", "(test\n (base/chapter\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :sectionmap\n   (base/sectionmap\n    :section1\n     (base/section\n      :name \"section1\")\n    :section2\n     (base/section\n      :name \"section2\")))\n (chapter<-xml\n  (xml/xml\n   :tag \"chapter\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section1\"))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section2\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -902,7 +902,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/damage\n  :name  \"name\"\n  :image \"image\")\n (damage<-damage-stringmap\n  (empty base/damage)\n  (stringmap\n   :name  \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/damage\n  :name  \"name\"\n  :image \"image\")\n (damage<-damage-stringmap\n  (empty base/damage)\n  (stringmap\n   :name  \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -931,7 +931,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/damage\n  :titles \"titles\")\n (damage<-damage-xmlchild\n  (empty base/damage)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/damage\n  :titles \"titles\")\n (damage<-damage-xmlchild\n  (empty base/damage)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -969,7 +969,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/power\n  :name \"name\"\n  :image \"image\")\n (power<-power-stringmap\n  (empty base/power)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/power\n  :name \"name\"\n  :image \"image\")\n (power<-power-stringmap\n  (empty base/power)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -998,7 +998,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/power\n  :titles \"titles\")\n (power<-power-xmlchild\n  (empty base/power)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/power\n  :titles \"titles\")\n (power<-power-xmlchild\n  (empty base/power)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1036,7 +1036,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/power\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :abilitymap\n   (base/abilitymap\n    :ability1\n     (base/ability\n      :name \"ability1\"))\n  :specialtymap\n   (base/specialtymap\n    :specialty1\n     (base/specialty\n      :name \"specialty1\")))\n (power<-xml\n  (xml/xml\n   :tag \"power\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"ability\"\n      :propmap\n       (stringmap\n        :name \"ability1\"))\n     (xml/xml\n      :tag \"specialty\"\n      :propmap\n       (stringmap\n        :name \"specialty1\"))))))",
+            ":describename", "(test\n (base/power\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :abilitymap\n   (base/abilitymap\n    :ability1\n     (base/ability\n      :name \"ability1\"))\n  :specialtymap\n   (base/specialtymap\n    :specialty1\n     (base/specialty\n      :name \"specialty1\")))\n (power<-xml\n  (xml/xml\n   :tag \"power\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"ability\"\n      :propmap\n       (stringmap\n        :name \"ability1\"))\n     (xml/xml\n      :tag \"specialty\"\n      :propmap\n       (stringmap\n        :name \"specialty1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1128,7 +1128,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/rule\n  :name  \"name\"\n  :image \"image\")\n (rule<-rule-stringmap\n  (empty base/rule)\n  (stringmap\n   :name  \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/rule\n  :name  \"name\"\n  :image \"image\")\n (rule<-rule-stringmap\n  (empty base/rule)\n  (stringmap\n   :name  \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1157,7 +1157,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/rule\n  :titles \"titles\")\n (rule<-rule-xmlchild\n  (empty base/rule)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/rule\n  :titles \"titles\")\n (rule<-rule-xmlchild\n  (empty base/rule)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1195,7 +1195,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/scenario\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (scenario<-xml\n  (xml/xml\n   :tag \"scenario\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+            ":describename", "(test\n (base/scenario\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (scenario<-xml\n  (xml/xml\n   :tag \"scenario\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1251,7 +1251,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/section\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :powermap\n   (base/powermap\n    :power1\n     (base/power\n      :name \"power1\"))\n  :scenariomap\n   (base/scenariomap\n    :scenario1\n     (base/scenario\n      :name \"scenario1\"))\n  :sectionmap\n   (base/sectionmap\n    :section1\n     (base/section\n      :name \"section1\"))\n  :skillmap\n   (base/skillmap\n    :skill1\n     (base/skill\n      :name \"skill1\")))\n (section<-xml\n  (xml/xml\n   :tag \"section\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"power\"\n      :propmap\n       (stringmap\n        :name \"power1\"))\n     (xml/xml\n      :tag \"scenario\"\n      :propmap\n       (stringmap\n        :name \"scenario1\"))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section1\"))\n     (xml/xml\n      :tag \"skill\"\n      :propmap\n       (stringmap\n        :name \"skill1\"))))))",
+            ":describename", "(test\n (base/section\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :powermap\n   (base/powermap\n    :power1\n     (base/power\n      :name \"power1\"))\n  :scenariomap\n   (base/scenariomap\n    :scenario1\n     (base/scenario\n      :name \"scenario1\"))\n  :sectionmap\n   (base/sectionmap\n    :section1\n     (base/section\n      :name \"section1\"))\n  :skillmap\n   (base/skillmap\n    :skill1\n     (base/skill\n      :name \"skill1\")))\n (section<-xml\n  (xml/xml\n   :tag \"section\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"power\"\n      :propmap\n       (stringmap\n        :name \"power1\"))\n     (xml/xml\n      :tag \"scenario\"\n      :propmap\n       (stringmap\n        :name \"scenario1\"))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section1\"))\n     (xml/xml\n      :tag \"skill\"\n      :propmap\n       (stringmap\n        :name \"skill1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1369,7 +1369,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/skill\n  :titles \"titles\")\n (skill<-skill-xmlchild\n  (empty base/skill)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/skill\n  :titles \"titles\")\n (skill<-skill-xmlchild\n  (empty base/skill)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1407,7 +1407,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/skill\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :abilitymap\n   (base/abilitymap\n    :ability1\n     (base/ability\n      :name \"ability1\"))\n  :specialtymap\n   (base/specialtymap\n    :specialty1\n     (base/specialty\n      :name \"specialty1\")))\n (skill<-xml\n  (xml/xml\n   :tag \"skill\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"ability\"\n      :propmap\n       (stringmap\n        :name \"ability1\"))\n     (xml/xml\n      :tag \"specialty\"\n      :propmap\n       (stringmap\n        :name \"specialty1\"))))))",
+            ":describename", "(test\n (base/skill\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :abilitymap\n   (base/abilitymap\n    :ability1\n     (base/ability\n      :name \"ability1\"))\n  :specialtymap\n   (base/specialtymap\n    :specialty1\n     (base/specialty\n      :name \"specialty1\")))\n (skill<-xml\n  (xml/xml\n   :tag \"skill\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"ability\"\n      :propmap\n       (stringmap\n        :name \"ability1\"))\n     (xml/xml\n      :tag \"specialty\"\n      :propmap\n       (stringmap\n        :name \"specialty1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1499,7 +1499,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/specialty\n  :name \"name\"\n  :image \"image\")\n (specialty<-specialty-stringmap\n  (empty base/specialty)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/specialty\n  :name \"name\"\n  :image \"image\")\n (specialty<-specialty-stringmap\n  (empty base/specialty)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1528,7 +1528,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/specialty\n  :titles \"titles\")\n (specialty<-specialty-xmlchild\n  (empty base/specialty)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/specialty\n  :titles \"titles\")\n (specialty<-specialty-xmlchild\n  (empty base/specialty)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1566,7 +1566,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/specialty\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (specialty<-xml\n  (xml/xml\n   :tag \"specialty\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+            ":describename", "(test\n (base/specialty\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (specialty<-xml\n  (xml/xml\n   :tag \"specialty\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1622,7 +1622,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/terrain\n  :name  \"name\"\n  :image \"image\")\n (terrain<-terrain-stringmap\n  (empty base/terrain)\n  (stringmap\n   :name  \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/terrain\n  :name  \"name\"\n  :image \"image\")\n (terrain<-terrain-stringmap\n  (empty base/terrain)\n  (stringmap\n   :name  \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1651,7 +1651,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/terrain\n  :titles \"titles\")\n (terrain<-terrain-xmlchild\n  (empty base/terrain)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/terrain\n  :titles \"titles\")\n (terrain<-terrain-xmlchild\n  (empty base/terrain)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1689,7 +1689,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unit\n  :name \"name\"\n  :image \"image\")\n (unit<-unit-stringmap\n  (empty base/unit)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/unit\n  :name \"name\"\n  :image \"image\")\n (unit<-unit-stringmap\n  (empty base/unit)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1718,7 +1718,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unit\n  :titles \"titles\")\n (unit<-unit-xmlchild\n  (empty base/unit)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/unit\n  :titles \"titles\")\n (unit<-unit-xmlchild\n  (empty base/unit)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1756,7 +1756,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unit\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :unitskillmap\n   (base/unitskillmap\n    \"skill1\" (base/unitskill\n              :name \"skill1\")))\n (unit<-xml\n  (xml/xml\n   :tag \"unit\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"skill\"\n      :propmap\n       (stringmap\n        :name \"skill1\"))))))",
+            ":describename", "(test\n (base/unit\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :unitskillmap\n   (base/unitskillmap\n    \"skill1\" (base/unitskill\n              :name \"skill1\")))\n (unit<-xml\n  (xml/xml\n   :tag \"unit\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"skill\"\n      :propmap\n       (stringmap\n        :name \"skill1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1835,7 +1835,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unitability\n  :name \"name\"\n  :image \"image\")\n (unitability<-unitability-stringmap\n  (empty base/unitability)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/unitability\n  :name \"name\"\n  :image \"image\")\n (unitability<-unitability-stringmap\n  (empty base/unitability)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1864,7 +1864,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unitability\n  :titles \"titles\")\n (unitability<-unitability-xmlchild\n  (empty base/unitability)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/unitability\n  :titles \"titles\")\n (unitability<-unitability-xmlchild\n  (empty base/unitability)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1902,7 +1902,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unitability\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (unitability<-xml\n  (xml/xml\n   :tag \"unitability\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+            ":describename", "(test\n (base/unitability\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (unitability<-xml\n  (xml/xml\n   :tag \"unitability\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1958,7 +1958,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unititem\n  :name \"name\"\n  :image \"image\")\n (unititem<-unititem-stringmap\n  (empty base/unititem)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/unititem\n  :name \"name\"\n  :image \"image\")\n (unititem<-unititem-stringmap\n  (empty base/unititem)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1987,7 +1987,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unititem\n  :titles \"titles1\")\n (unititem<-unititem-xmlchild\n  (empty base/unititem)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles1\")))))",
+            ":describename", "(test\n (base/unititem\n  :titles \"titles1\")\n (unititem<-unititem-xmlchild\n  (empty base/unititem)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles1\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -2025,7 +2025,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unititem\n  :name \"name1\"\n  :image \"image1\"\n  :titles \"titles1\"\n  :reference \"reference1\"\n  :summary \"summary1\")\n (unititem<-xml\n  (xml/xml\n   :tag \"unititem\"\n   :propmap\n    (stringmap\n     :name \"name1\"\n     :image \"image1\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles1\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference1\")))\n     (xml/xml\n      :tag \"summary\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"summary1\")))))))",
+            ":describename", "(test\n (base/unititem\n  :name \"name1\"\n  :image \"image1\"\n  :titles \"titles1\"\n  :reference \"reference1\"\n  :summary \"summary1\")\n (unititem<-xml\n  (xml/xml\n   :tag \"unititem\"\n   :propmap\n    (stringmap\n     :name \"name1\"\n     :image \"image1\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles1\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference1\")))\n     (xml/xml\n      :tag \"summary\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"summary1\")))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -2091,7 +2091,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unitpower\n  :summary \"summary1\")\n (unitpower<-unitpower-xmlchild\n  (empty base/unitpower)\n  (xml/xml\n   :tag \"summary\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"summary1\")))))",
+            ":describename", "(test\n (base/unitpower\n  :summary \"summary1\")\n (unitpower<-unitpower-xmlchild\n  (empty base/unitpower)\n  (xml/xml\n   :tag \"summary\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"summary1\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -2129,7 +2129,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unitskill\n  :summary \"summary1\")\n (unitskill<-unitskill-xmlchild\n  (empty base/unitskill)\n  (xml/xml\n   :tag \"summary\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"summary1\")))))",
+            ":describename", "(test\n (base/unitskill\n  :summary \"summary1\")\n (unitskill<-unitskill-xmlchild\n  (empty base/unitskill)\n  (xml/xml\n   :tag \"summary\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"summary1\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -2167,7 +2167,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unitspecialty\n  :name \"name\"\n  :image \"image\")\n (unitspecialty<-unitspecialty-stringmap\n  (empty base/unitspecialty)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
+            ":describename", "(test\n (base/unitspecialty\n  :name \"name\"\n  :image \"image\")\n (unitspecialty<-unitspecialty-stringmap\n  (empty base/unitspecialty)\n  (stringmap\n   :name \"name\"\n   :image \"image\")))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -2196,7 +2196,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unitspecialty\n  :titles \"titles\")\n (unitspecialty<-unitspecialty-xmlchild\n  (empty base/unitspecialty)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
+            ":describename", "(test\n (base/unitspecialty\n  :titles \"titles\")\n (unitspecialty<-unitspecialty-xmlchild\n  (empty base/unitspecialty)\n  (xml/xml\n   :tag \"titles\"\n   :children\n    (xml/xmllist\n     (xml/xml\n      :text \"titles\")))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -2234,7 +2234,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/unitspecialty\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (unitspecialty<-xml\n  (xml/xml\n   :tag \"unitspecialty\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+            ":describename", "(test\n (base/unitspecialty\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (unitspecialty<-xml\n  (xml/xml\n   :tag \"unitspecialty\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
             ":testresult",
             vx_test.f_test(
               context,

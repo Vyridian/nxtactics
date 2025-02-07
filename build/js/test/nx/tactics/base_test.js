@@ -25,11 +25,11 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 29, ":tests", 76, ":total", 254), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 70), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 31, ":tests", 80, ":total", 258), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 74), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 254), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 258), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 94)
     )
     return output
@@ -234,15 +234,17 @@ export default class nx_tactics_base_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
+          "ability<-tactics-key", 0,
           "abilitylist<-abilitylistlist", 0,
           "abilitylist<-power", 0,
           "abilitylist<-powerlist", 0,
           "abilitylist<-skill", 0,
           "abilitylist<-skilllist", 0,
+          "abilitylist<-tactics-keys", 0,
           "abilitylistlist<-powerlist", 0,
           "abilitylistlist<-skilllist", 0,
           "abilitymap<-abilitylist", 0,
-          "abilitymap<-tactics-namelist", 0,
+          "abilitymap<-tactics-keys", 0,
           "bookmap<-booklist", 0,
           "cardimage<-card", 0,
           "cardlist-copy<-card-num", 0,
@@ -258,6 +260,7 @@ export default class nx_tactics_base_test {
           "itemlist<-itemmap", 0,
           "itemlist<-section", 0,
           "itemlist<-sectionlist", 0,
+          "itemlist<-tactics-keys", 0,
           "itemlistlist<-sectionlist", 0,
           "itemmap<-itemlist", 0,
           "name<-chapter", 0,
@@ -297,6 +300,7 @@ export default class nx_tactics_base_test {
           "unititemmap<-unititemlist", 0,
           "unitlist<-section", 0,
           "unitlist<-sectionlist", 0,
+          "unitlist<-tactics-keys", 0,
           "unitlist<-unitlistlist", 0,
           "unitlist<-unitmap", 0,
           "unitlistlist<-sectionlist", 0,
@@ -320,7 +324,7 @@ export default class nx_tactics_base_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (sectionlist\n  (section\n   :name \"a\"\n   :sectionmap\n    (sectionmap\n     \"a1\"\n     (section\n      :name \"a1\")))\n  (section\n   :name \"a1\")\n  (section\n   :name \"b\"\n   :sectionmap\n    (sectionmap\n     \"b1\"\n     (section\n      :name \"b1\")))\n  (section\n   :name \"b1\"))\n (sectionlist-all<-sectionlist\n  (sectionlist\n   (section\n    :name \"a\"\n    :sectionmap\n     (sectionmap\n      \"a1\"\n      (section\n       :name \"a1\")))\n   (section\n    :name \"b\"\n    :sectionmap\n     (sectionmap\n      \"b1\"\n      (section\n       :name \"b1\"))))))",
+            ":describename", "(test\n (sectionlist\n  (section\n   :name \"a\"\n   :sectionmap\n    (sectionmap\n     \"a1\"\n     (section\n      :name \"a1\")))\n  (section\n   :name \"a1\")\n  (section\n   :name \"b\"\n   :sectionmap\n    (sectionmap\n     \"b1\"\n     (section\n      :name \"b1\")))\n  (section\n   :name \"b1\"))\n (sectionlist-all<-sectionlist\n  (sectionlist\n   (section\n    :name \"a\"\n    :sectionmap\n     (sectionmap\n      \"a1\"\n      (section\n       :name \"a1\")))\n   (section\n    :name \"b\"\n    :sectionmap\n     (sectionmap\n      \"b1\"\n      (section\n       :name \"b1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -396,7 +400,7 @@ export default class nx_tactics_base_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (sectionlistlist\n  (sectionlist\n   (section\n    :name \"a\"\n    :sectionmap\n     (sectionmap\n      \"a1\"\n      (section\n       :name \"a1\")))\n   (section\n    :name \"a1\"))\n  (sectionlist\n   (section\n    :name \"b\"\n    :sectionmap\n     (sectionmap\n      \"b1\"\n      (section\n       :name \"b1\")))\n   (section\n    :name \"b1\")))\n (sectionlistlist<-sectionlist\n  (sectionlist\n   (section\n    :name \"a\"\n    :sectionmap\n     (sectionmap\n      \"a1\"\n      (section\n       :name \"a1\")))\n   (section\n    :name \"b\"\n    :sectionmap\n     (sectionmap\n      \"b1\"\n      (section\n       :name \"b1\"))))))",
+            ":describename", "(test\n (sectionlistlist\n  (sectionlist\n   (section\n    :name \"a\"\n    :sectionmap\n     (sectionmap\n      \"a1\"\n      (section\n       :name \"a1\")))\n   (section\n    :name \"a1\"))\n  (sectionlist\n   (section\n    :name \"b\"\n    :sectionmap\n     (sectionmap\n      \"b1\"\n      (section\n       :name \"b1\")))\n   (section\n    :name \"b1\")))\n (sectionlistlist<-sectionlist\n  (sectionlist\n   (section\n    :name \"a\"\n    :sectionmap\n     (sectionmap\n      \"a1\"\n      (section\n       :name \"a1\")))\n   (section\n    :name \"b\"\n    :sectionmap\n     (sectionmap\n      \"b1\"\n      (section\n       :name \"b1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,

@@ -144,11 +144,11 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :image "Daikaiju/MothraToken.png"
           :summary
            "* Flight at mach 3
-* can travel through space
-* hurricane winds from wings
-* antenna ray-shooting beams
-* can release powder from her wings that will reflect energy attacks back on their source
-* able to conduct energy through its touch or release it as strands of lightning from her wings"
+            * can travel through space
+            * hurricane winds from wings
+            * antenna ray-shooting beams
+            * can release powder from her wings that will reflect energy attacks back on their source
+            * able to conduct energy through its touch or release it as strands of lightning from her wings"
           :mass "20ktons"
           :length "65m")
         "Mothra, Larva"
@@ -167,14 +167,16 @@ dimension tide passed a dimensional disturbance remained through which a creatur
          (unit
           :name "Battra"
           :image "Daikaiju/BattraToken.png"
-          :summary "Flight at mach 3; can travel through space; hurricane winds from wings; able to shoot Prism beams from eyes; can conduct energy through its touch"
+          :summary
+           "Flight at mach 3; can travel through space; hurricane winds from wings; able to shoot Prism beams from eyes; can conduct energy through its touch"
           :mass "30ktons"
           :length "73m")
         "Battra, Larva"
          (unit
           :name "Battra, Larva"
           :image "Daikaiju/BattraLarvaeToken.png"
-          :summary "Burrowing ability; adept swimmer; able to shoot Prism beams from horn and eyes; body can generate energy pulses to attack others with its touch"
+          :summary
+           "Burrowing ability; adept swimmer; able to shoot Prism beams from horn and eyes; body can generate energy pulses to attack others with its touch"
           :mass "20ktons"
           :length "90m")
         :Biollante
@@ -191,10 +193,10 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :image "Daikaiju/GodzillaToken.png"
           :summary
            "* Superheated atomic breath capable of devastating whole city blocks
-* Remarkably fast regenerative healing factor
-* Incredibly strong, even for his size
-* Able to swim at 40 knots
-* Though extremely powerful, possesses a few weaknesses: has an aversion to electricity, can be weakened by massive amounts of cadmium and other radiation-retardants"
+            * Remarkably fast regenerative healing factor
+            * Incredibly strong, even for his size
+            * Able to swim at 40 knots
+            * Though extremely powerful, possesses a few weaknesses: has an aversion to electricity, can be weakened by massive amounts of cadmium and other radiation-retardants"
           :mass "60ktons"
           :height "100m"
           :unitskillmap
@@ -216,14 +218,13 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :image "Daikaiju/GyaosToken.png"
           :summary
            "* Flight at mach 4.2
-* Hurricane winds from wings
-* A shrill cry serves as an ultrasonic scalpel which amounts to approximately 3 million Hz, and can also cut
-through solid steel bards with a thickness of 30cm.
-* Can reproduce asexually
-* Gyoas easily adapts to its surroundings, growing exponentially in size.
-* Gyaos has one absolutely perfect pair of chromosomes.
-* Origin - Gyaos was the product of genetic engineering by a super-ancient civilization.
-* Vision - As a nocturnal creature, Gyaos avoids and dislikes light."
+            * Hurricane winds from wings
+            * A shrill cry serves as an ultrasonic scalpel which amounts to approximately 3 million Hz, and can also cut through solid steel bards with a thickness of 30cm.
+            * Can reproduce asexually
+            * Gyoas easily adapts to its surroundings, growing exponentially in size.
+            * Gyaos has one absolutely perfect pair of chromosomes.
+            * Origin - Gyaos was the product of genetic engineering by a super-ancient civilization.
+            * Vision - As a nocturnal creature, Gyaos avoids and dislikes light."
           :mass "75tons"
           :height "85m"
           :width "185m")
@@ -233,9 +234,9 @@ through solid steel bards with a thickness of 30cm.
           :image "Daikaiju/KingGhidorahToken.png"
           :summary
            "* Speed Mach 3
-* Able to fire Gravity beams from its mouths
-* hurricane winds from wings
-* constricting necks"
+            * Able to fire Gravity beams from its mouths
+            * hurricane winds from wings
+            * constricting necks"
           :mass "70ktons"
           :height "140m")
         :Legion
@@ -245,10 +246,9 @@ through solid steel bards with a thickness of 30cm.
           :reference "And he asked him, What is thy name? And he answered, saying, My name is Legion: for we are many. - New Testament - Mark 5:9"
           :summary
            "* Silicone-based life form with cell structure like transistors
-* Joints operate by pressurized gas.
-* Communicates via electromagnetic waves
-* Launches seeds into orbit by generating a high oxygen area and then detonating it.
-Flight at mach 1; sharp horn, which can open to fire a beam; horn generates a tremendous amount of heat after firing; can burrow and travel, underground, at a speed of 50 kilometers an hour; able to produce up to 100 Symbiotic Legion an hour; can create a magnetic force shield to protect the front of its body using the ten smaller legs near its head; if its horn is destroyed Legion can fire off strands of energy that are able to pierce and burn objects
+            * Joints operate by pressurized gas.
+            * Communicates via electromagnetic waves
+            * Launches seeds into orbit by generating a high oxygen area and then detonating it. Flight at mach 1; sharp horn, which can open to fire a beam; horn generates a tremendous amount of heat after firing; can burrow and travel, underground, at a speed of 50 kilometers an hour; able to produce up to 100 Symbiotic Legion an hour; can create a magnetic force shield to protect the front of its body using the ten smaller legs near its head; if its horn is destroyed Legion can fire off strands of energy that are able to pierce and burn objects
 Eye: Legion can see electro-magnetic activity.
 Voice: The Legion Mother's microwave blast, which eminates from her huge tusks is powerful enough to vaporize a type-90 tank with one blow.
 Ovaries: Legion's ovaries house a hive of countless soldiers that can be ordered to attack instantly. It is estimated that she can reproduce approximately 100 soldiers every hour.
@@ -261,7 +261,8 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
          (unit
           :name "Megaguirus"
           :image "Daikaiju/MegaguirusToken.png"
-          :summary "Flight at mach 4; hurricane winds and sonic waves from wings; claws; stinger with the ability to drain power; claw tipped wings; able to use stinger to discharge a blast of energy comprised of its opponent's beam weapon which it absorbed; flight causes electronic disturbances"
+          :summary
+           "Flight at mach 4; hurricane winds and sonic waves from wings; claws; stinger with the ability to drain power; claw tipped wings; able to use stinger to discharge a blast of energy comprised of its opponent's beam weapon which it absorbed; flight causes electronic disturbances"
           :mass "12ktons"
           :length "50m"))))))
 
@@ -292,7 +293,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
               :name "Gunnery"
               :summary
                "* Getter Beam
-* Tomahawk Boomerang"
+                * Tomahawk Boomerang"
               :level "5")))
         "Getter 2"
          (unit
@@ -312,7 +313,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
               :name "Gunnery"
               :summary
                "* Getter Drill
-* Drill Missile"
+                * Drill Missile"
               :level "5")))
         "Getter 3"
          (unit
@@ -345,7 +346,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
               :name "Gunnery"
               :summary
                "* Getter Beam
-* Double Tomahawk Boomerang"
+                * Double Tomahawk Boomerang"
               :level "5")))
         "Getter G Liger"
          (unit
@@ -353,9 +354,9 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :image "Daikaiju/GetterG_Liger.png"
           :summary
            "* Swimming: 18knots
-* Flight: Mach 2
-* Ground Speed: Mach 3!
-* Tunnelling: 800kph"
+            * Flight: Mach 2
+            * Ground Speed: Mach 3!
+            * Tunnelling: 800kph"
           :mass "330tons"
           :height "50m"
           :unitskillmap
@@ -378,8 +379,8 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
               :name "Gunnery"
               :summary
                "* Finger Net
-* Strong Missile
-* Getter Cyclone"
+                * Strong Missile
+                * Getter Cyclone"
               :level "5")))
         "Great Mazinger"
          (unit
@@ -401,12 +402,12 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
               :name "Gunnery"
               :summary
                "* Navel Missile
-* Atomic Punch
-* Great Boomerang
-* Scramble Cutter - Attack with Great Booster
-* Great Typhoon
-* Breast Burn
-* Thunder Break"
+                * Atomic Punch
+                * Great Boomerang
+                * Scramble Cutter - Attack with Great Booster
+                * Great Typhoon
+                * Breast Burn
+                * Thunder Break"
               :level "5")))
         :Grendizer
          (unit
@@ -428,28 +429,17 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
              (unitskill
               :name "Gunnery"
               :summary
-               "Koushiryoku Beam
-Mazinger Z can channel pure Photonic Energy through its eyes, unleashing a pair of powerful lasers, which are said to be equal to 10 tons of explosives. This was originally considered Mazinger Z's weakest attack, however, in Shin Mazinger the power of this attacked is greatly magnified to the point where it can now be considered the strongest.
-Missile Punch
-Mazinger Z mounts a missile launch bay in its belly, which can store several missiles.
-Rocket Punch
-Mazinger Z's eponymous attack; it fires off its forearm like a missile, punching straight through an enemy before returning and docking with the elbow again.
-Rust Hurricane
-The powerful turbines in Mazinger Z's head create gale-force winds, launching them through the mouth grill. The attack includes highly corrosive particles (thought to be ionized hydrogen), almost instantaneously causing an enemy to rust over and fall apart.
-Breast Fire
-The large red fins on Mazinger Z's chest act as heat sinks for its Photonic Energy reactor. Mazinger Z can fire off this stored thermal energy as a powerful, 30,000 degree white-hot beam that melts almost anything. In the Super Robot Wars series, Kouji and Tetsuya Tsurugi can use the Breast Fire and Breast Burn respectively in the Double Burning Fire attack, which they use in the MX version of the Final Dynamic Special (also involving Grendizer and a Getter).
-Kyoukagata Rocket Punch
-Mazinger Z's Rocket Punch was later reinforced with stronger armor, giving it a more powerful punch.
-Iron Cutter
-An improved Rocket Punch in which the forearm sprouts a pair of axe-like blades, allowing it to cut and slash as well as bludgeon. This is the only weapon in Mazinger Z:s arsenal which can damage Super-alloy Z.
-Drill Missile
-A barrage of small, needle-like missiles fired from ports in Mazinger's upper arms. This attack was typically performed after the Rocket Punch but before the forearm had returned.
-Daisharin Rocket Punch
-Mazinger Z spins its arms rapidly, building up momentum before firing off both fists in standard Rocket Punch fashion.
-Reitou Beam
-Mazinger unleashes a blast of intense cold; this attack was alternately fired from the mouth grill or the spikes on the sides of Mazinger's head.
-Finger Missile
-A rarely-used attack where Mazinger fires the last joint of its fingers as miniature missiles."
+               "* Koushiryoku Beam - Mazinger Z can channel pure Photonic Energy through its eyes, unleashing a pair of powerful lasers, which are said to be equal to 10 tons of explosives. This was originally considered Mazinger Z's weakest attack, however, in Shin Mazinger the power of this attacked is greatly magnified to the point where it can now be considered the strongest.
+                * Missile Punch - Mazinger Z mounts a missile launch bay in its belly, which can store several missiles.
+                * Rocket Punch - Mazinger Z's eponymous attack; it fires off its forearm like a missile, punching straight through an enemy before returning and docking with the elbow again.
+                * Rust Hurricane - The powerful turbines in Mazinger Z's head create gale-force winds, launching them through the mouth grill. The attack includes highly corrosive particles (thought to be ionized hydrogen), almost instantaneously causing an enemy to rust over and fall apart.
+                * Breast Fire - The large red fins on Mazinger Z's chest act as heat sinks for its Photonic Energy reactor. Mazinger Z can fire off this stored thermal energy as a powerful, 30,000 degree white-hot beam that melts almost anything. In the Super Robot Wars series, Kouji and Tetsuya Tsurugi can use the Breast Fire and Breast Burn respectively in the Double Burning Fire attack, which they use in the MX version of the Final Dynamic Special (also involving Grendizer and a Getter).
+                * Kyoukagata Rocket Punch - Mazinger Z's Rocket Punch was later reinforced with stronger armor, giving it a more powerful punch.
+                * Iron Cutter - An improved Rocket Punch in which the forearm sprouts a pair of axe-like blades, allowing it to cut and slash as well as bludgeon. This is the only weapon in Mazinger Z:s arsenal which can damage Super-alloy Z.
+                * Drill Missile - A barrage of small, needle-like missiles fired from ports in Mazinger's upper arms. This attack was typically performed after the Rocket Punch but before the forearm had returned.
+                * Daisharin Rocket Punch - Mazinger Z spins its arms rapidly, building up momentum before firing off both fists in standard Rocket Punch fashion.
+                * Reitou Beam - Mazinger unleashes a blast of intense cold; this attack was alternately fired from the mouth grill or the spikes on the sides of Mazinger's head.
+                * Finger Missile - A rarely-used attack where Mazinger fires the last joint of its fingers as miniature missiles."
               :level "5")))
         :Raideen
          (unit
@@ -465,7 +455,7 @@ A rarely-used attack where Mazinger fires the last joint of its fingers as minia
               :name "Gunnery"
               :summary
                "* God Missile
-* God Arrow"
+                * God Arrow"
               :level "5")))
         :Voltron
          (unit
@@ -480,15 +470,15 @@ A rarely-used attack where Mazinger fires the last joint of its fingers as minia
               :name "Gunnery"
               :summary
                "* Wing Boomerang - Boomerang attack from the wings of GoLion.
-* Space Cutter - Spinning Blades.
-* Eye Flash - Beams fired from the eyes of GoLion.
-* Hurricane Attack - Wind attack similar to Daimos Blizzard, but not as strong.
-* Laser Magnum - Laser-like bullets fired from the mouth of the Green Lion.
-* Fire Tornado - A burst of flame emits from the mouth of the Red Lion.
-* Cross Beam - Cross-shaped boomerang fired from the chest.
-* Gatling Missiles - Small missiles fired from the legs.
-* Electromagnetic Lance - Weapon used as a spear at times.
-* Foot Missile - Missiles fired from the mouths of the Blue and Yellow Lions.
-* Four Lion Attack - The 'Lion Head Attack' 100-Ton Punch.
-* Grand Fire - A stream of flames fired from the mouths of the Blue and Yellow Lions"
+                * Space Cutter - Spinning Blades.
+                * Eye Flash - Beams fired from the eyes of GoLion.
+                * Hurricane Attack - Wind attack similar to Daimos Blizzard, but not as strong.
+                * Laser Magnum - Laser-like bullets fired from the mouth of the Green Lion.
+                * Fire Tornado - A burst of flame emits from the mouth of the Red Lion.
+                * Cross Beam - Cross-shaped boomerang fired from the chest.
+                * Gatling Missiles - Small missiles fired from the legs.
+                * Electromagnetic Lance - Weapon used as a spear at times.
+                * Foot Missile - Missiles fired from the mouths of the Blue and Yellow Lions.
+                * Four Lion Attack - The 'Lion Head Attack' 100-Ton Punch.
+                * Grand Fire - A stream of flames fired from the mouths of the Blue and Yellow Lions"
               :level "5"))))))))

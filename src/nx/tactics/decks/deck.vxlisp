@@ -14,21 +14,24 @@
  :doc  "Tactics Decks")
 
 (func deck-home : base/deck
- (base/deck
-  :name "Home"
-  :cardmap
-   (base/cardmap<-cardlist
-    (base/cardlist
-     (deck-books)
-     (deck-rules)
-     (deck-setup)
-     (deck-scenarios)
-     (deck-encounters)
-     (deck-places)
-     (deck-units)
-     (deck-items)
-     (deck-skills)
-     (deck-powers)))))
+ (let : base/deck
+  [tactics : base/tactics :=
+    data/tactics-all]
+  (base/deck
+   :name "Home"
+   :cardmap
+    (base/cardmap<-cardlist
+     (base/cardlist
+      (deck-books)
+      (deck-rules)
+      (deck-setup)
+      (deck-scenarios tactics)
+      (deck-encounters)
+      (deck-places)
+      (deck-units)
+      (deck-items)
+      (deck-skills)
+      (deck-powers))))))
 
 (func deck-books : base/deck
  (base/deck
@@ -108,13 +111,14 @@
  :doc "Setup Deck")
 
 (func deck-scenarios : base/deck
+ [tactics : base/tactics]
  (base/deck
   :name "Scenarios"
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     (scenario/deck-murintrail)
-     (nightonthetown/deck-nightonthetown)))))
+     (scenario/deck-murintrail tactics)
+     (nightonthetown/deck-nightonthetown tactics)))))
 
 (func deck-skills : base/deck
  (let : base/deck

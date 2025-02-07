@@ -7,6 +7,63 @@
  (base/abilitymap<-abilitylist
   (ability
    :name "Balanced for Throwing")
+  (ability
+   :name "Dream Therapy"
+   :summary
+    "Heal Trauma by exploring the Dream World.")
+  (ability
+   :name "Existential Riddle"
+   :summary
+    "Demoralize unwitting rivals by questioning their purpose in life.")
+  (ability
+   :name "Mental Gymnastics")
+  (ability
+   :name "Restful Sleep"
+   :summary
+    "Ensure restful sleep for levelx2 hours.")
+  (ability
+   :name "Returning Throw")
+  (ability
+   :name "Soulbind"
+   :titles "Soulbond")
+  (ability
+   :name "Soulburn")
+  (ability
+   :name "Souldrain"
+   :titles "Spiritsiphon")
+  (ability
+   :name "Soulforge")
+  (ability
+   :name "Soulrend"
+   :titles "Soulrip"
+   :reference
+    "* We'll tear your soul apart! - Pinhead, Hellraiser")
+  (ability
+   :name "Soulshatter")
+  (ability
+   :name "Soulsteal"
+   :reference
+    "Primitive people may see a photograph as stealing the soul.")
+  (ability
+   :name "Soulstain")
+  (ability
+   :name "Soulstone"
+   :titles "Souljar")
+  (ability
+   :name "Soulstrike")
+  (ability
+   :name "Soulvise")
+  (ability
+   :name "Soulwrack")
+  (ability
+   :name "Space Clearing"
+   :summary
+    "[Requires]: 2 handed Weapon
+     [Combat]: Attack in a circle around you. Anyone hit get [Push]:1.")
+  (ability
+   :name "Undermine"
+   :summary
+    "Damage walls.")
   )
  :doc "Returns the base abilitymap")
 

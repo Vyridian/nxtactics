@@ -69,7 +69,7 @@ export default class vx_sample_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n myconst\n myconst)",
+            ":describename", "(test\n myconst\n myconst)",
             ":testresult",
             vx_test.f_test(
                 context,

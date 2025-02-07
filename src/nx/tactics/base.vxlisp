@@ -413,7 +413,7 @@
 (type unitskill : struct
  :properties
   [level            : string
-   powerlevel       : string
+   effect           : string
    skill            : skill
    unitabilitymap   : unitabilitymap
    unititemmap      : unititemmap
@@ -845,6 +845,17 @@
 
 (const suit-red : suit)
 
+(func ability<-tactics-key : ability
+ [tactics : tactics
+  key     : string]
+ (let : ability
+  [abilitymap : abilitymap :=
+    (:abilitymap tactics)
+   ability : ability :=
+    (any<-map abilitymap key)]
+  (log-error ability))
+ :doc "Returns an ability from tactics")
+
 (func abilitylist<-abilitylistlist : abilitylistlist
  [abilitylistlist : abilitylistlist]
  (list<-list-join : abilitylist
@@ -887,6 +898,21 @@
   abilitylistlist))
  :doc "Returns a abilitylist from a given skilllist")
 
+(func abilitylist<-tactics-keys : abilitylist
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : abilitylist
+  [abilitymap : abilitymap :=
+    (:abilitymap tactics)
+   map2 : abilitymap :=
+    (coll/map<-map-keys
+     abilitymap
+     keys)
+   abilitylist : abilitylist :=
+    (list<-map map2)]
+  (log-error abilitylist))
+ :doc "Return an abilitylist from keys and tactics")
+
 (func abilitylistlist<-powerlist : abilitylistlist
  [powerlist : powerlist]
  (list<-list : abilitylistlist
@@ -916,15 +942,16 @@
    (:name ability)))
  :doc "Returns an abilitymap from a given abilitylist")
 
-(func abilitymap<-tactics-namelist : abilitymap
- [tactics  : tactics
-  namelist : stringlist :...]
+(func abilitymap<-tactics-keys : abilitymap
+ [tactics : tactics
+  keys : stringlist :...]
  (let : abilitymap
-  [abilitymap : abilitymap := (:abilitymap tactics)]
-  (coll/map<-map-keys : abilitymap
-   abilitymap
-   namelist))
- :doc "Returns a map of abilites from tactics")
+  [abilitylist : abilitylist :=
+    (abilitylist<-tactics-keys
+     tactics keys)]
+  (abilitymap<-abilitylist
+   abilitylist))
+ :doc "Return an abilitymap from keys and tactics")
 
 (func bookmap<-booklist : bookmap
  [booklist : booklist :...]
@@ -1052,6 +1079,18 @@
  [chapter : chapter]
  (:name chapter))
 
+(func itemlist<-itemlistlist : itemlist
+ [itemlistlist : itemlistlist]
+ (list<-list-join : itemlist
+  itemlistlist)
+ :doc "Returns a itemlist from a given itemlistlist")
+
+(func itemlist<-itemmap : itemlist
+ [itemmap : itemmap]
+ (list<-map : itemlist
+  itemmap)
+ :doc "Returns a itemlist from a given itemmap")
+
 (func itemlist<-section : itemlist
  [section : section]
  (let : itemlist
@@ -1074,17 +1113,21 @@
    itemlistlist))
  :doc "Returns a itemlist from a given sectionlist")
 
-(func itemlist<-itemlistlist : itemlist
- [itemlistlist : itemlistlist]
- (list<-list-join : itemlist
-  itemlistlist)
- :doc "Returns a itemlist from a given itemlistlist")
-
-(func itemlist<-itemmap : itemlist
- [itemmap : itemmap]
- (list<-map : itemlist
-  itemmap)
- :doc "Returns a itemlist from a given itemmap")
+(func itemlist<-tactics-keys : itemlist
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : itemlist
+  [itemmap : itemmap :=
+    (:itemmap tactics)
+   map2 : itemmap :=
+    (coll/map<-map-keys
+     itemmap
+     keys)
+   itemlist : itemlist :=
+    (list<-map : itemlist
+     map2)]
+  (log-error itemlist))
+ :doc "Return an itemlist from keys and tactics")
 
 (func itemlistlist<-sectionlist : itemlistlist
  [sections : sectionlist]
@@ -1620,6 +1663,22 @@
   (unitlist<-unitlistlist
    unitlistlist))
  :doc "Returns a unitlist from a given sectionlist")
+
+(func unitlist<-tactics-keys : unitlist
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : unitlist
+  [unitmap : unitmap :=
+    (:unitmap tactics)
+   map2 : unitmap :=
+    (coll/map<-map-keys
+     unitmap
+     keys)
+   unitlist : unitlist :=
+    (list<-map : unitlist
+     map2)]
+  (log-error unitlist))
+ :doc "Return an unitlist from keys and tactics")
 
 (func unitlist<-unitlistlist : unitlist
  [unitlistlist : unitlistlist]

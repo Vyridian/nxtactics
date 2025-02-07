@@ -257,6 +257,12 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_card_display = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display', type: vx_ui_ui.t_style}}
 
   /**
+   * Constant: style-card-display-fate
+   * {style}
+   */
+  static c_style_card_display_fate = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display-fate', type: vx_ui_ui.t_style}}
+
+  /**
    * Constant: style-card-display2
    * {style}
    */
@@ -627,6 +633,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-body": nx_tactics_ui_stylesheet.c_style_body,
       "style-card": nx_tactics_ui_stylesheet.c_style_card,
       "style-card-display": nx_tactics_ui_stylesheet.c_style_card_display,
+      "style-card-display-fate": nx_tactics_ui_stylesheet.c_style_card_display_fate,
       "style-card-display2": nx_tactics_ui_stylesheet.c_style_card_display2,
       "style-card-display3": nx_tactics_ui_stylesheet.c_style_card_display3,
       "style-card-display4": nx_tactics_ui_stylesheet.c_style_card_display4,
@@ -855,19 +862,19 @@ export default class nx_tactics_ui_stylesheet {
     Object.assign(nx_tactics_ui_stylesheet.c_point_iconsize, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 6, ":y", 6))
 
     // (const point-rank-pos1)
-    Object.assign(nx_tactics_ui_stylesheet.c_point_rank_pos1, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 1, ":y", 0))
+    Object.assign(nx_tactics_ui_stylesheet.c_point_rank_pos1, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 3, ":y", 2))
 
     // (const point-rank-pos2)
-    Object.assign(nx_tactics_ui_stylesheet.c_point_rank_pos2, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 57, ":y", 80))
+    Object.assign(nx_tactics_ui_stylesheet.c_point_rank_pos2, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 56, ":y", 79))
 
     // (const point-rank-size)
     Object.assign(nx_tactics_ui_stylesheet.c_point_rank_size, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 4, ":y", 6))
 
     // (const point-suit-pos1)
-    Object.assign(nx_tactics_ui_stylesheet.c_point_suit_pos1, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 0, ":y", 6))
+    Object.assign(nx_tactics_ui_stylesheet.c_point_suit_pos1, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 2, ":y", 8))
 
     // (const point-suit-pos2)
-    Object.assign(nx_tactics_ui_stylesheet.c_point_suit_pos2, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 56, ":y", 74))
+    Object.assign(nx_tactics_ui_stylesheet.c_point_suit_pos2, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 55, ":y", 73))
 
     // (const point-suit-size)
     Object.assign(nx_tactics_ui_stylesheet.c_point_suit_size, vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 6, ":y", 6))
@@ -1135,7 +1142,20 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 6, ":y", 6),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 6, ":y", 7),
+      ":pointsize",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 51)
+    ))
+
+    // (const style-card-display-fate)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_card_display_fate, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_style},
+      ":name",
+      "style-card-display-fate",
+      ":layout",
+      vx_ui_ui.c_layout_label,
+      ":pointpos",
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 8, ":y", 7),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 51)
     ))
@@ -1213,7 +1233,7 @@ export default class nx_tactics_ui_stylesheet {
       ":align",
       vx_ui_ui.c_align_center,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 7),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 7, ":y", 2),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 51)
     ))

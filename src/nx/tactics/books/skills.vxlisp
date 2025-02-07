@@ -134,6 +134,7 @@
          (skill
           :name "Athletics"
           :stat "Body"
+          :titles "Athelte, Champion, Gym Rat, Jock, Lunkhead, Medalist, Olympian"
           :abilitymap
            (abilitymap
             :Balance
@@ -311,6 +312,11 @@
           :titles "Forward Observer, Gamekeeper, Hunter, Huntress, Huntsman, Huntmaster, Lookout, Mage Hunter, Master Huntsman, Master of the Hunt, Poacher, Ranger, Royal Huntsman, Scout, Sentinel, Stalker, Tracer, Tracker, Watchman"
           :abilitymap
            (abilitymap
+            "Bug Hunt"
+             (ability
+              :name "Bug Hunt"
+              :reference
+               "* H:Is this going to be a stand-up fight, sir? Is it going to be another bug hunt? G:A Xenomorph may be involved... H:It's a bug hunt. - Hudson and Gorman, Aliens")
             "Call of the Hunt"
              (ability
               :name "Call of the Hunt")
@@ -339,6 +345,9 @@
             :Snare
              (ability
               :name "Snare")
+            "Tag and Bag"
+             (ability
+              :name "Tag and Bag")
             "There is No Escape"
              (ability
               :name "There is No Escape"
@@ -2384,11 +2393,15 @@
             :Torture
              (ability
               :name "Torture"
-              :reference "* Your cries of agony, where will they not reach?  Where on Citaeron will they not re-echo?  No man living will meet a doom more terrible than yours. - Sophocles, Oedipus Rex")))
+              :reference
+               "* Your cries of agony, where will they not reach?  Where on Citaeron will they not re-echo?  No man living will meet a doom more terrible than yours. - Sophocles, Oedipus Rex")))
         :Law
          (skill
           :name "Law"
-          :titles "Bailiff, Constable, Executioner, Judge, Lawbringer, Lawyer, Litigant, Magistrate, Peace Officer, Peacekeeper, Police Officer"
+          :titles
+           "Bailiff, Chief Justice, Constable, Executioner, Judge, Justice, Lawbringer, Lawyer, Litigant, Magistrate, Peace Officer, Peacekeeper, Police Officer"
+          :reference
+           "I shall now render judgment on Furina's misrepresentation of herself as the Archon of Fontaine. As a human who knowingly deceived her fellow citizens, Furina is .. Guilty. - Neuvillette, Genshin Impact"
           :stat "Mind"
           :abilitymap
            (abilitymap
@@ -2524,7 +2537,8 @@
             :Heartstrings
              (ability
               :name "Heartstrings"
-              :reference "* Strumming my pain with his fingers. Singing my life with his words. Killing me softly with his song. Killing me softly with his song telling my whole life with his song. - The Fugees, Killing Me Softly")
+              :reference
+               "* I felt he found all my letters and read each one out loud. I prayed he would finish. But he just kept right on... He sang as if he knew me. In all my dark despair. And then he looked right through me. As if I wasn't there... Strumming my pain with his fingers. Singing my life with his words. Killing me softly with his song. Killing me softly with his song. Telling my whole life with his words. Killing me softly with his song. - Roberta Flack, Killing Me Softly")
             "Hip Hop Dance"
              (ability
               :name "Hip Hop Dance")

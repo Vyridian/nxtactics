@@ -623,7 +623,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             "Death's Head Viper"
              (unit
               :name "Death's Head Viper"
-              :summary "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled."
+              :summary
+               "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled."
               :titles "Wrist Viper")))
         :Jhagara
          (section
@@ -644,7 +645,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         "Serpentine River"
          (section
           :name "Serpentine River"
-          :summary "* The [Serpentine River] is actually more of a slow moving swamp that flows from the south and pours into the ocean. At the mouth of the river, a large set of thick posts have been sunk into the silt, simultaneously providing tradeships with a place to tie up while blocking entrance into the river.  Porters must then be paid to bring goods to [Fiaqua] by barge. This is mostly just another opportunity for corruption. The [Naga] in the area do not allow boat traffic farther upstream from [Fiaqua].")
+          :summary
+           "* The [Serpentine River] is actually more of a slow moving swamp that flows from the south and pours into the ocean. At the mouth of the river, a large set of thick posts have been sunk into the silt, simultaneously providing tradeships with a place to tie up while blocking entrance into the river.  Porters must then be paid to bring goods to [Fiaqua] by barge. This is mostly just another opportunity for corruption. The [Naga] in the area do not allow boat traffic farther upstream from [Fiaqua].")
         "Shadow Isles"
          (section
           :name "Shadow Isles"
@@ -654,7 +656,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             "Obsidian Tower"
              (place
               :name "Obsidian Tower"
-              :summary "* The Shadow Wizards live in ancient ruined towers of obscure origin. These dark towers dot the landscape of the Shadow Isles, and it is here that they perform their experiments night and day seemingly without rest. Some have entered the tower without molestation but have fled when they viewed the horrorific activities within."))
+              :summary
+               "* The Shadow Wizards live in ancient ruined towers of obscure origin. These dark towers dot the landscape of the Shadow Isles, and it is here that they perform their experiments night and day seemingly without rest. Some have entered the tower without molestation but have fled when they viewed the horrorific activities within."))
           :unitmap
            (unitmap
             "Shadow Wizard"
@@ -666,17 +669,20 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         "Sinking Land"
          (section
           :name "Sinking Land"
-          :summary "* The Sinking Lands is a vast, fetid swamp of waist-deep water covering a deep layer of loose mud and decomposing vegetation. The entire swamp is basically a quicksand pit that will slowly engulf anything that stands still on the bottom. Numerous creatures that swim, float, or flit across the water have made a home here despite the perils."
+          :summary
+           "* The Sinking Lands is a vast, fetid swamp of waist-deep water covering a deep layer of loose mud and decomposing vegetation. The entire swamp is basically a quicksand pit that will slowly engulf anything that stands still on the bottom. Numerous creatures that swim, float, or flit across the water have made a home here despite the perils."
           :unitmap
            (unitmap
             :Sludge
              (unit
               :name "Sludge"
-              :summary "* The Sludge are a man-sized race of semi-intelligent Slugs that live within the Sinking Land. They swim quickly through the shallow water pushing off of the bottom. The Sludge are very curious and gather around visitors in large numbers. Though intimidating and pushy, they are largely harmless and flee if harmed. The main danger is they have been known to accidentally capsize boats in their enthusiasm. They are knowledgable about the area, but their lack of language makes communication a challenge.")))
+              :summary
+               "* The Sludge are a man-sized race of semi-intelligent Slugs that live within the Sinking Land. They swim quickly through the shallow water pushing off of the bottom. The Sludge are very curious and gather around visitors in large numbers. Though intimidating and pushy, they are largely harmless and flee if harmed. The main danger is they have been known to accidentally capsize boats in their enthusiasm. They are knowledgable about the area, but their lack of language makes communication a challenge.")))
         :Tunis
          (section
           :name "Tunis"
-          :summary "* Weather - Tunis is hot and humid all year round. The temperature varies from warm to sweltering. The hot weather encourages the laid back attitude of the locals."
+          :summary
+           "* Weather - Tunis is hot and humid all year round. The temperature varies from warm to sweltering. The hot weather encourages the laid back attitude of the locals."
           :placemap
            (placemap
             :Fiaqua
@@ -2116,7 +2122,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
     :Limbo
      (section
       :name "Limbo"
-      :summary "* The Limbo was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless spirit multiverse.")
+      :summary
+       "* The Limbo was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless spirit multiverse.
+        * Beings with Will perceive everything as endless white.")
     "Positive Planes"
      (section
       :name "Positive Planes"
@@ -2192,7 +2200,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         * Peripheral Vision - Sometimes a glimse of the Outer Realms may be seen at the edge of normal vision.
         * Gates - Gates are more easily created when both realms resemble each other at both ends of the Gate.
         * Realm Overlay - Sometimes when an area of both realms closely resembles one another, the areas overlap creating a natural Gate of sorts where one may accidentally wander from one Realm to the other without noticing."
-      :titles "Periphery"
+      :titles "Periphery, Realms Within"
       :placemap
        (placemap
         "Ley Line"
@@ -2201,7 +2209,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
           :summary
            "* Ley Lines are invisible, spiritual energy lines that pass through the universe and serve as the branches and roots of the World Tree. The Ley Lines influence the areas they pass through. Their existence transcends time. Contacting the Lines boosts spiritual powers and connects the past and future. They can be tapped to raise magical effects and they can spread the effect of tragic or corrupted areas, creating haunted or cursed areas.
             * Dragons are said to choose exposed Ley Lines as lairs and nests. It is possible that Ley Lines are the secret to their power.
-            * Fault Lines and Volcanic activity are side effects of Ley Line power.
+            * Fault Lines, Underground Rivers, and Volcanic activity are side effects of Ley Line power.
             * Ley Line Memories - Ley Lines exist through history, so it is sometimes possible to witness events from the past or future near the lines.
             * Ley Line Filth - When negative energy builds up over time near a Ley Line, so a Ley Line can sometimes leak solid dark energy that is called Filth or Corruption. This Filth corrupts the area, withering plants and contaminating animals and water. Since it is a spiritual corruption, it can only be repaired with purification magic or by somehow confronting and addressing the cause of the corruption."
           :titles "Dragon Lines, Fate Lines, Lines of Power, Threads of Fate, Time Lines")
@@ -2526,7 +2534,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
       :summary
        "* These are the various part of the Spirit Realm where demons live. It is unclear whether these worlds are in distant parts of our dimension or in other dimensions entirely. They are certainly so distant that only dimensional travel can reach them.
         * Physics are often radically different from our own which often is sanity threatening."
-      :titles "Abyssal Realms, Chaos Realms, Demon Realms, Hells"
+      :titles "Abyssal Realms, Chaos Realms, Demon Realms, Hells, Realms Beyond"
       :placemap
        (placemap
         "Hell of Being Cut to Pieces"
