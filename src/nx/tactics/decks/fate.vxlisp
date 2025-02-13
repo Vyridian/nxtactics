@@ -8,16 +8,17 @@
   :ranksuit base/ranksuit-jokerblack
   :image "images/card-fate-joker.svg"
   :summary
-   "Wild (Gold Burst):
+   "Suffle Discards into Deck"
+   /*"Wild (Gold Burst):
     * Win: Fast(26), Strong(26)
     * Loss: Block(26), Evade(13), Counter(13)
     * Tie: Wild(2)
-    * Success: 0. Search:1 or Reclaim:1.
+    * Hit: 0. Search:1 or Reclaim:1.
     * Shuffle: Discards into Deck.
 
     Combo Breaker (Blue Burst):
     * Mitigation: Discard to cancel ALL Successes. IF reasonable THEN an adjacent Ally may do this instead.
-    * Shuffle: Discards into Deck."))
+    * Shuffle: Discards into Deck."*/))
 
 (const fate-wildred : base/fate
  (base/fate
@@ -25,16 +26,17 @@
   :ranksuit base/ranksuit-jokerred
   :image "images/card-fate-joker.svg"
   :summary
-   "Wild (Gold Burst):
+   "Suffle Discards into Deck"
+   /*"Wild (Gold Burst):
     * Win: Fast(26), Strong(26)
     * Loss: Block(26), Evade(13), Counter(13)
     * Tie: Wild(2)
-    * Success: 0. Search:1 or Reclaim:1.
+    * Hit: 0. Search:1 or Reclaim:1.
     * Shuffle: Discards into Deck.
 
     Combo Breaker (Blue Burst):
     * Mitigation: Discard to cancel ALL Successes. IF reasonable THEN an adjacent Ally may do this instead.
-    * Shuffle: Discards into Deck."))
+    * Shuffle: Discards into Deck."*/))
 
 (const fate-ac : base/fate
  (base/fate
@@ -42,20 +44,21 @@
   :ranksuit base/ranksuit-ac
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Super)
+   ""
+   /*"Strong and Dominating (Super)
     * Win: Strong:2-K(24), Block(26), Counter(13)
     * Loss: Fast(26), Evade(12), Wild(2)
     * Tie: Strong:A(2)
-    * Success: 1
-    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
+    * Hit: 1
+    * Combo: AA Hit:2 or AAA Hit:3 or AAAA Hit:4
 
     Block
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1
+    * Hit: 0, Keep, Draw:1
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-ad : base/fate
  (base/fate
@@ -63,20 +66,21 @@
   :ranksuit base/ranksuit-ad
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Super)
+   ""
+   /*"Strong and Clever (Super)
     * Win: Strong:2-K(24), Block(26), Counter(13)
     * Loss: Fast(26), Evade(12), Wild(2)
     * Tie: Strong:A(2)
-    * Success: 1
-    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
+    * Hit: 1
+    * Combo: AA Hit:2 or AAA Hit:3 or AAAA Hit:4
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate
+    * Hit: New Fate
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-ah : base/fate
  (base/fate
@@ -84,20 +88,21 @@
   :ranksuit base/ranksuit-ah
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Super)
+   ""
+   /*"Fast and Unexpected (Super)
     * Win: Fast:2-K(24), Strong(26), Evade(13)
     * Loss: Block*(26), Counter(13), Wild(2)
     * Tie: Fast:A(2)
-    * Success: 1
-    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
+    * Hit: 1
+    * Combo: AA Hit:2 or AAA Hit:3 or AAAA Hit:4
 
     Block
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1
+    * Hit: 0, Keep, Draw:1
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-as : base/fate
  (base/fate
@@ -105,20 +110,21 @@
   :ranksuit base/ranksuit-as
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Super)
+   ""
+   /*"Fast and Precise (Super)
     * Win: Fast:2-K(24), Strong(26), Evade(13)
     * Loss: Block*(26), Counter(13), Wild(2)
     * Tie: Fast:A(2)
-    * Success: 1
-    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
+    * Hit: 1
+    * Combo: AA Hit:2 or AAA Hit:3 or AAAA Hit:4
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)
+    * Hit: 0, Move:1 (Win or Tie)
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-kc : base/fate
  (base/fate
@@ -126,20 +132,21 @@
   :ranksuit base/ranksuit-kc
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Special)
+   ""
+   /*"Strong and Dominating (Special)
     * Win: Strong:2-10(18), Block(26), Counter(13)
     * Loss: Fast(26), Strong:JQA(6), Evade(12), Wild(2)
     * Tie: Strong:K(2)
-    * Success: 1
-    * Combo: KK Success:2 or KKK Success:3
+    * Hit: 1
+    * Combo: KK Hit:2 or KKK Hit:3
 
     Block
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1
+    * Hit: 0, Keep, Draw:1
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-kd : base/fate
  (base/fate
@@ -147,20 +154,21 @@
   :ranksuit base/ranksuit-kd
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Special)
+   ""
+   /*"Strong and Clever (Special)
     * Win: Strong:2-10(18), Block(26), Counter(13)
     * Loss: Fast(26), Strong:JQA(6), Evade(12), Wild(2)
     * Tie: Strong:K(2)
-    * Success: 1
-    * Combo: KK Success:2 or KKK Success:3
+    * Hit: 1
+    * Combo: KK Hit:2 or KKK Hit:3
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate
+    * Hit: New Fate
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-kh : base/fate
  (base/fate
@@ -168,20 +176,21 @@
   :ranksuit base/ranksuit-kh
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:2-10(18), Strong(26), Evade(13)
     * Loss: Fast:JQA(6), Block*(26), Counter(13), Wild(2)
     * Tie: Strong:K(2)
-    * Success: 1
-    * Combo: KK Success:2 or KKK Success:3
+    * Hit: 1
+    * Combo: KK Hit:2 or KKK Hit:3
 
     Block
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1
+    * Hit: 0, Keep, Draw:1
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-ks : base/fate
  (base/fate
@@ -189,20 +198,21 @@
   :ranksuit base/ranksuit-ks
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Special)
+   ""
+   /*"Fast and Precise (Special)
     * Win: Fast:2-10(18), Strong(26), Evade(13)
     * Loss: Fast:JQA(6), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:K(2)
-    * Success: 1
-    * Combo: AA Success:2 or AAA Success:3 or AAAA Success:4
+    * Hit: 1
+    * Combo: AA Hit:2 or AAA Hit:3 or AAAA Hit:4
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)
+    * Hit: 0, Move:1 (Win or Tie)
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-qc : base/fate
  (base/fate
@@ -210,20 +220,21 @@
   :ranksuit base/ranksuit-qc
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Special)
+   ""
+   /*"Strong and Dominating (Special)
     * Win: Strong:2-10,K(20), Block(26), Counter(13)
     * Loss: Fast(26), Strong:JA(4), Evade(12), Wild(2)
     * Tie: Strong:Q(2)
-    * Success: 1
-    * Combo: QQ Success:2
+    * Hit: 1
+    * Combo: QQ Hit:2
 
     Block
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1
+    * Hit: 0, Keep, Draw:1
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-qd : base/fate
  (base/fate
@@ -231,20 +242,21 @@
   :ranksuit base/ranksuit-qd
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Special)
+   ""
+   /*"Strong and Clever (Special)
     * Win: Strong:2-10,K(20), Block(26), Counter(13)
     * Loss: Fast(26), Strong:JA(4), Evade(12), Wild(2)
     * Tie: Strong:Q(2)
-    * Success: 1
-    * Combo: QQ Success:2
+    * Hit: 1
+    * Combo: QQ Hit:2
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate
+    * Hit: New Fate
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-qh : base/fate
  (base/fate
@@ -253,20 +265,21 @@
   :ranksuit base/ranksuit-qh
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:2-10,K(20), Strong(26), Evade(13)
     * Loss: Fast:JA(4), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:Q(2)
-    * Success: 1
-    * Combo: QQ Success:2
+    * Hit: 1
+    * Combo: QQ Hit:2
 
     Block
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1
+    * Hit: 0, Keep, Draw:1
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-qs : base/fate
  (base/fate
@@ -274,20 +287,21 @@
   :ranksuit base/ranksuit-qs
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Special)
+   ""
+   /*"Fast and Precise (Special)
     * Win: Fast:2-10,K(20), Strong(26), Evade(13)
     * Loss: Fast:JA(4), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:Q(2)
-    * Success: 1
-    * Combo: QQ Success:2
+    * Hit: 1
+    * Combo: QQ Hit:2
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)
+    * Hit: 0, Move:1 (Win or Tie)
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-jc : base/fate
  (base/fate
@@ -296,19 +310,20 @@
   :ranksuit base/ranksuit-jc
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Special)
+   ""
+   /*"Strong and Dominating (Special)
     * Win: Strong:2-10,QK(22), Block(26), Counter(13)
     * Loss: Fast(26), Strong:A(2), Evade(12), Wild(2)
     * Tie: Strong:J(2)
-    * Success: 1
+    * Hit: 1
 
     Block
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1
+    * Hit: 0, Keep, Draw:1
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-jd : base/fate
  (base/fate
@@ -317,19 +332,20 @@
   :ranksuit base/ranksuit-jd
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Special)
+   ""
+   /* "Strong and Clever (Special)
     * Win: Strong:2-10,QK(22), Block(26), Counter(13)
     * Loss: Fast(26), Strong:A(2), Evade(12), Wild(2)
     * Tie: Strong:J(2)
-    * Success: 1
+    * Hit: 1
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate
+    * Hit: New Fate
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-jh : base/fate
  (base/fate
@@ -338,19 +354,20 @@
   :ranksuit base/ranksuit-jh
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:2-10,QK(22), Strong(26), Evade(13)
     * Loss: Fast:A(2), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:J(2)
-    * Success: 1
+    * Hit: 1
 
     Block
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1
+    * Hit: 0, Keep, Draw:1
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-js : base/fate
  (base/fate
@@ -359,19 +376,20 @@
   :ranksuit base/ranksuit-js
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Special)
+   ""
+   /*"Fast and Precise (Special)
     * Win: Fast:2-10,QK(22), Strong(26), Evade(13)
     * Loss: Fast:A(2), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:J(2)
-    * Success: 1
+    * Hit: 1
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)
+    * Hit: 0, Move:1 (Win or Tie)
 
-    * Discard: Cancel 1 Success."))
+    * Discard: Cancel 1 Success."*/))
 
 (const fate-tc : base/fate
  (base/fate
@@ -380,17 +398,17 @@
   :ranksuit base/ranksuit-tc
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-9,J-A(24), Evade(12), Wild(2)
     * Tie: Strong:10(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-td : base/fate
  (base/fate
@@ -399,17 +417,17 @@
   :ranksuit base/ranksuit-td
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-9,J-A(24), Evade(12), Wild(2)
     * Tie: Strong:10(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-th : base/fate
  (base/fate
@@ -418,17 +436,17 @@
   :ranksuit base/ranksuit-th
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Strong(26), Evade(13)
     * Loss: Fast:2-9,J-A(24), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:10(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-ts : base/fate
  (base/fate
@@ -437,35 +455,35 @@
   :ranksuit base/ranksuit-ts
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Strong(26), Evade(13)
     * Loss: Fast:2-9,J-A(24), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:10(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (const fate-9c : base/fate
  (base/fate
-  :name "Nine of Wands"
+  :name "Nine of Rods"
   :ranksuit base/ranksuit-9c
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Strong:10(2), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-8,J-A(22), Evade(12), Wild(2)
     * Tie: Strong:9(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-9d : base/fate
  (base/fate
@@ -473,17 +491,17 @@
   :ranksuit base/ranksuit-9d
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Strong:10(2), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-8,J-A(22), Evade(12), Wild(2)
     * Tie: Strong:9(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-9h : base/fate
  (base/fate
@@ -491,17 +509,17 @@
   :ranksuit base/ranksuit-9h
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:10(2), Strong(26), Evade(13)
     * Loss: Fast:2-8,J-A(22), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:9(2)
-    * Success: ?
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-9s : base/fate
  (base/fate
@@ -509,35 +527,35 @@
   :ranksuit base/ranksuit-9s
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Fast:10(2), Strong(26), Evade(13)
     * Loss: Fast:2-8,J-A(22), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:9(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (const fate-8c : base/fate
  (base/fate
-  :name "Eight of Wands"
+  :name "Eight of Rods"
   :ranksuit base/ranksuit-8c
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Strong:9-10(4), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-7,J-A(20), Evade(12), Wild(2)
     * Tie: Strong:8(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-8d : base/fate
  (base/fate
@@ -545,17 +563,17 @@
   :ranksuit base/ranksuit-8d
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Strong:9-10(4), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-7,J-A(20), Evade(12), Wild(2)
     * Tie: Strong:8(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-8h : base/fate
  (base/fate
@@ -563,17 +581,17 @@
   :ranksuit base/ranksuit-8h
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:9-10(4), Strong(26), Evade(13)
     * Loss: Fast:2-7,J-A(20), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:8(2)
-    * Success: ?
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-8s : base/fate
  (base/fate
@@ -581,35 +599,35 @@
   :ranksuit base/ranksuit-8s
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Fast:9-10(4), Strong(26), Evade(13)
     * Loss: Fast:2-7,J-A(20), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:8(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (const fate-7c : base/fate
  (base/fate
-  :name "Seven of Wands"
+  :name "Seven of Rods"
   :ranksuit base/ranksuit-7c
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Strong:8-10(6), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-6,J-A(18), Evade(12), Wild(2)
     * Tie: Strong:7(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-7d : base/fate
  (base/fate
@@ -617,17 +635,17 @@
   :ranksuit base/ranksuit-7d
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Strong:8-10(6), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-6,J-A(18), Evade(12), Wild(2)
     * Tie: Strong:7(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-7h : base/fate
  (base/fate
@@ -635,17 +653,17 @@
   :ranksuit base/ranksuit-7h
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:8-10(6), Strong(26), Evade(13)
     * Loss: Fast:2-6,J-A(18), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:7(2)
-    * Success: ?
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-7s : base/fate
  (base/fate
@@ -653,35 +671,35 @@
   :ranksuit base/ranksuit-7s
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Fast:8-10(6), Strong(26), Evade(13)
     * Loss: Fast:2-6,J-A(18), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:7(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (const fate-6c : base/fate
  (base/fate
-  :name "Six of Wands"
+  :name "Six of Rods"
   :ranksuit base/ranksuit-6c
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Strong:7-10(8), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-5,J-A(16), Evade(12), Wild(2)
     * Tie: Strong:6(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-6d : base/fate
  (base/fate
@@ -689,17 +707,17 @@
   :ranksuit base/ranksuit-6d
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Strong:7-10(8), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-5,J-A(16), Evade(12), Wild(2)
     * Tie: Strong:6(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-6h : base/fate
  (base/fate
@@ -707,17 +725,17 @@
   :ranksuit base/ranksuit-6h
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:7-10(8), Strong(26), Evade(13)
     * Loss: Fast:2-5,J-A(16), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:6(2)
-    * Success: ?
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-6s : base/fate
  (base/fate
@@ -725,35 +743,35 @@
   :ranksuit base/ranksuit-6s
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Fast:7-10(8), Strong(26), Evade(13)
     * Loss: Fast:2-5,J-A(16), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:6(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (const fate-5c : base/fate
  (base/fate
-  :name "Five of Wands"
+  :name "Five of Rods"
   :ranksuit base/ranksuit-5c
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Strong:6-10(10), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-4,J-A(14), Evade(12), Wild(2)
     * Tie: Strong:5(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-5d : base/fate
  (base/fate
@@ -761,17 +779,17 @@
   :ranksuit base/ranksuit-5d
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Strong:6-10(10), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-4,J-A(14), Evade(12), Wild(2)
     * Tie: Strong:5(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-5h : base/fate
  (base/fate
@@ -779,17 +797,17 @@
   :ranksuit base/ranksuit-5h
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:6-10(10), Strong(26), Evade(13)
     * Loss: Fast:2-4,J-A(14), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:5(2)
-    * Success: ?
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-5s : base/fate
  (base/fate
@@ -797,35 +815,35 @@
   :ranksuit base/ranksuit-5s
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Fast:6-10(10), Strong(26), Evade(13)
     * Loss: Fast:2-4,J-A(14), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:5(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (const fate-4c : base/fate
  (base/fate
-  :name "Four of Wands"
+  :name "Four of Rods"
   :ranksuit base/ranksuit-4c
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Strong:5-10(12), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-3,J-A(12), Evade(12), Wild(2)
     * Tie: Strong:4(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-4d : base/fate
  (base/fate
@@ -833,17 +851,17 @@
   :ranksuit base/ranksuit-4d
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Strong:5-10(12), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2-3,J-A(12), Evade(12), Wild(2)
     * Tie: Strong:4(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-4h : base/fate
  (base/fate
@@ -851,17 +869,17 @@
   :ranksuit base/ranksuit-4h
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:5-10(12), Strong(26), Evade(13)
     * Loss: Fast:2-3,J-A(12), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:4(2)
-    * Success: ?
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-4s : base/fate
  (base/fate
@@ -869,35 +887,35 @@
   :ranksuit base/ranksuit-4s
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Fast:5-10(12), Strong(26), Evade(13)
     * Loss: Fast:2-3,J-A(12), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:4(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (const fate-3c : base/fate
  (base/fate
-  :name "Three of Wands"
+  :name "Three of Rods"
   :ranksuit base/ranksuit-3c
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Strong:4-10(14), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2,J-A(10), Evade(12), Wild(2)
     * Tie: Strong:3(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-3d : base/fate
  (base/fate
@@ -905,17 +923,17 @@
   :ranksuit base/ranksuit-3d
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Strong:4-10(14), Block(26), Counter(13)
     * Loss: Fast(26), Strong:2,J-A(10), Evade(12), Wild(2)
     * Tie: Strong:3(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-3h : base/fate
  (base/fate
@@ -923,17 +941,17 @@
   :ranksuit base/ranksuit-3h
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:4-10(14), Strong(26), Evade(13)
     * Loss: Fast:2,J-A(10), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:3(2)
-    * Success: ?
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-3s : base/fate
  (base/fate
@@ -941,35 +959,35 @@
   :ranksuit base/ranksuit-3s
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Fast:4-10(14), Strong(26), Evade(13)
     * Loss: Fast:2,J-A(10), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:3(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (const fate-2c : base/fate
  (base/fate
-  :name "Two of Wands"
+  :name "Two of Rods"
   :ranksuit base/ranksuit-2c
   :image "images/card-fate-strong-block.svg"
   :summary
-   "Strong and Dominating (Normal)
+   ""
+   /*"Strong and Dominating (Normal)
     * Win: Strong:3-10(16), Block(26), Counter(13)
     * Loss: Fast(26), Strong:J-A(8), Evade(12), Wild(2)
     * Tie: Strong:2(2)
-    * Success: *
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-2d : base/fate
  (base/fate
@@ -977,17 +995,17 @@
   :ranksuit base/ranksuit-2d
   :image "images/card-fate-strong-counter.svg"
   :summary
-   "Strong and Clever (Normal)
+   ""
+   /*"Strong and Clever (Normal)
     * Win: Strong:3-10(16), Block(26), Counter(13)
     * Loss: Fast(26), Strong:J-A(8), Evade(12), Wild(2)
     * Tie: Strong:2(2)
-    * Success: *
 
     Counter
     * Win: Fast(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade, Counter
-    * Success: New Fate"))
+    * Hit: New Fate"*/))
 
 (const fate-2h : base/fate
  (base/fate
@@ -995,17 +1013,17 @@
   :ranksuit base/ranksuit-2h
   :image "images/card-fate-fast-block.svg"
   :summary
-   "Fast and Unexpected (Special)
+   ""
+   /*"Fast and Unexpected (Special)
     * Win: Fast:3-10(16), Strong(26), Evade(13)
     * Loss: Fast:J-A(8), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:2(2)
-    * Success: ?
 
     Block
     * Win: Fast*(26), Wild(2)
     * Loss: Strong(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Keep, Draw:1"))
+    * Hit: 0, Keep, Draw:1"*/))
 
 (const fate-2s : base/fate
  (base/fate
@@ -1013,17 +1031,17 @@
   :ranksuit base/ranksuit-2s
   :image "images/card-fate-fast-evade.svg"
   :summary
-   "Fast and Precise (Normal)
+   ""
+   /*"Fast and Precise (Normal)
     * Win: Fast:3-10(16), Strong(26), Evade(13)
     * Loss: Fast:J-A(8), Block*(26), Counter(13), Wild(2)
     * Tie: Fast:3(2)
-    * Success: *
 
     Evade
     * Win: Strong(26), Wild(2)
     * Lose: Fast(26)
     * Tie: Block(26), Evade(13), Counter(13)
-    * Success: 0, Move:1 (Win or Tie)"))
+    * Hit: 0, Move:1 (Win or Tie)"*/))
 
 (func card-fate : base/cardback
  [color : string]

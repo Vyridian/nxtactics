@@ -17,7 +17,7 @@
 (const tarot-ac : base/tarot
  (base/tarot
   :name "Devil"
-  :titles "Master of Wands"
+  :titles "Master of Rods"
   :image "images/cards/tarot-devil.png"
   :ranksuit base/ranksuit-ac))
 
@@ -45,7 +45,7 @@
 (const tarot-kc : base/tarot
  (base/tarot
   :name "Emperor"
-  :titles "King of Wands"
+  :titles "King of Rods"
   :image "images/cards/tarot-emperor.png"
   :ranksuit base/ranksuit-kc))
 
@@ -73,7 +73,7 @@
 (const tarot-qc : base/tarot
  (base/tarot
   :name "Empress"
-  :titles "Queen of Wands"
+  :titles "Queen of Rods"
   :image "images/cards/tarot-empress.png"
   :ranksuit base/ranksuit-qc))
 
@@ -101,7 +101,7 @@
 (const tarot-jc : base/tarot
  (base/tarot
   :name "Magus"
-  :titles "Knight of Wands"
+  :titles "Knight of Rods"
   :image "images/cards/tarot-magus.png"
   :ranksuit base/ranksuit-jc))
 
@@ -129,7 +129,7 @@
 (const tarot-tc : base/tarot
  (base/tarot
   :name "Tower"
-  :titles "Ten of Wands"
+  :titles "Ten of Rods"
   :image "images/cards/tarot-tower.png"
   :ranksuit base/ranksuit-tc))
 
@@ -156,8 +156,8 @@
 
 (const tarot-9c : base/tarot
  (base/tarot
-  :name "Nine of Wands"
-  :titles "Bishop of Wands"
+  :name "Nine of Rods"
+  :titles "Bishop of Rods"
   :ranksuit base/ranksuit-9c))
 
 (const tarot-9d : base/tarot
@@ -180,8 +180,8 @@
 
 (const tarot-8c : base/tarot
  (base/tarot
-  :name "Eight of Wands"
-  :titles "Archer of Wands"
+  :name "Eight of Rods"
+  :titles "Archer of Rods"
   :ranksuit base/ranksuit-8c))
 
 (const tarot-8d : base/tarot
@@ -204,8 +204,8 @@
 
 (const tarot-7c : base/tarot
  (base/tarot
-  :name "Seven of Wands"
-  :titles "Soldier of Wands"
+  :name "Seven of Rods"
+  :titles "Soldier of Rods"
   :ranksuit base/ranksuit-7c))
 
 (const tarot-7d : base/tarot
@@ -228,8 +228,8 @@
 
 (const tarot-6c : base/tarot
  (base/tarot
-  :name "Six of Wands"
-  :titles "Craftsman of Wands"
+  :name "Six of Rods"
+  :titles "Craftsman of Rods"
   :ranksuit base/ranksuit-6c))
 
 (const tarot-6d : base/tarot
@@ -252,8 +252,8 @@
 
 (const tarot-5c : base/tarot
  (base/tarot
-  :name "Five of Wands"
-  :titles "Merchant of Wands, Merchant of Wonders"
+  :name "Five of Rods"
+  :titles "Merchant of Rods, Merchant of Wonders"
   :ranksuit base/ranksuit-5c))
 
 (const tarot-5d : base/tarot
@@ -276,8 +276,8 @@
 
 (const tarot-4c : base/tarot
  (base/tarot
-  :name "Four of Wands"
-  :titles "Miner of Wands"
+  :name "Four of Rods"
+  :titles "Miner of Rods"
   :ranksuit base/ranksuit-4c))
 
 (const tarot-4d : base/tarot
@@ -300,8 +300,8 @@
 
 (const tarot-3c : base/tarot
  (base/tarot
-  :name "Three of Wands"
-  :titles "Farmer of Wands"
+  :name "Three of Rods"
+  :titles "Farmer of Rods"
   :ranksuit base/ranksuit-3c))
 
 (const tarot-3d : base/tarot
@@ -324,8 +324,8 @@
 
 (const tarot-2c : base/tarot
  (base/tarot
-  :name "Two of Wands"
-  :titles "Outcast of Wands, Madman"
+  :name "Two of Rods"
+  :titles "Outcast of Rods, Madman"
   :ranksuit base/ranksuit-2c))
 
 (const tarot-2d : base/tarot

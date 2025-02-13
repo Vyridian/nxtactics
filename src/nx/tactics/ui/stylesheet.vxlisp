@@ -571,6 +571,7 @@
   :name "style-image-coin2"
   :type ui/styletype-shared
   :pointpos point-suit-pos2
+  :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
   :image-background
    (ui/image
@@ -603,6 +604,7 @@
   :name "style-image-cup2"
   :type ui/styletype-shared
   :pointpos point-suit-pos2
+  :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
   :image-background
    (ui/image
@@ -628,6 +630,7 @@
   :name "style-image-jester-black2"
   :type ui/styletype-shared
   :pointpos point-suit-pos2
+  :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
   :image-background image-jester-black)
  :doc "")
@@ -646,6 +649,7 @@
   :name "style-image-jester-red2"
   :type ui/styletype-shared
   :pointpos point-suit-pos2
+  :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
   :image-background image-jester-red)
  :doc "")
@@ -671,6 +675,7 @@
   :name "style-image-sword2"
   :type ui/styletype-shared
   :pointpos point-suit-pos2
+  :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
   :image-background
    (ui/image
@@ -682,35 +687,36 @@
       :path "icons")))
  :doc "")
 
-(const style-image-wand1 : ui/style
+(const style-image-rod1 : ui/style
  (ui/style
-  :name "style-image-wand1"
+  :name "style-image-rod1"
   :type ui/styletype-shared
   :pointpos point-suit-pos1
   :pointsize point-suit-size
   :image-background
    (ui/image
-    :name "image-wand1"
-    :label "Wands"
+    :name "image-rod1"
+    :label "Rods"
     :file
      (file/file
-      :name "icon-wand.svg"
+      :name "icon-rod.svg"
       :path "icons")))
  :doc "")
 
-(const style-image-wand2 : ui/style
+(const style-image-rod2 : ui/style
  (ui/style
-  :name "style-image-wand2"
+  :name "style-image-rod2"
   :type ui/styletype-shared
   :pointpos point-suit-pos2
+  :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
   :image-background
    (ui/image
-    :name "image-wand1"
-    :label "Wands"
+    :name "image-rod1"
+    :label "Rods"
     :file
      (file/file
-      :name "icon-wand.svg"
+      :name "icon-rod.svg"
       :path "icons")))
  :doc "")
 
@@ -797,7 +803,9 @@
   :layout ui/layout-label
   :align  ui/align-center
   :font   font-rank
+  :pointorigin ui/point-center
   :pointpos point-rank-pos2
+  :pointrotate ui/point-rotate-180
   :pointsize point-rank-size)
  :doc "Returns the style for label text")
 
@@ -1028,10 +1036,10 @@
      style-image-jester-black2
      style-image-jester-red1
      style-image-jester-red2
+     style-image-rod1
+     style-image-rod2
      style-image-sword1
      style-image-sword2
-     style-image-wand1
-     style-image-wand2
      style-text
      style-text-2
      style-text-header1

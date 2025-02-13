@@ -1374,24 +1374,26 @@
    filename : string :=
     (switch
      suit
-     (case base/suit-club "icon-wand.svg")
+     (case base/suit-club "icon-rod.svg")
      (case base/suit-diamond "icon-coin.svg")
      (case base/suit-heart "icon-cup.svg")
      (case base/suit-spade "icon-sword.svg")
      (case base/suit-black "icon-jester-black.svg")
      (case base/suit-red "icon-jester-red.svg"))
-   pointpos : ui/point :=
-    (switch : ui/point
+   style : ui/style :=
+    (switch : ui/style
      pos
      (case 1
-      styles/point-suit-pos1)
+      (ui/style
+       :layout ui/layout-image
+       :pointpos styles/point-suit-pos1
+       :pointsize styles/point-suit-size))
      (case 2
-      styles/point-suit-pos2))
-   style : ui/style :=
-    (ui/style
-     :layout ui/layout-image
-     :pointpos pointpos
-     :pointsize styles/point-suit-size)]
+      (ui/style
+       :layout ui/layout-image
+       :pointpos styles/point-suit-pos2
+       :pointrotate ui/point-rotate-180
+       :pointsize styles/point-suit-size)))]
    (ui/ui
     :uid id
     :style style

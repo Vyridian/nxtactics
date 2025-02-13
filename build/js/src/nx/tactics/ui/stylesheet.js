@@ -405,6 +405,18 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_image_jester_red2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-jester-red2', type: vx_ui_ui.t_style}}
 
   /**
+   * Constant: style-image-rod1
+   * {style}
+   */
+  static c_style_image_rod1 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-rod1', type: vx_ui_ui.t_style}}
+
+  /**
+   * Constant: style-image-rod2
+   * {style}
+   */
+  static c_style_image_rod2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-rod2', type: vx_ui_ui.t_style}}
+
+  /**
    * Constant: style-image-sword1
    * {style}
    */
@@ -415,18 +427,6 @@ export default class nx_tactics_ui_stylesheet {
    * {style}
    */
   static c_style_image_sword2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-sword2', type: vx_ui_ui.t_style}}
-
-  /**
-   * Constant: style-image-wand1
-   * {style}
-   */
-  static c_style_image_wand1 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-wand1', type: vx_ui_ui.t_style}}
-
-  /**
-   * Constant: style-image-wand2
-   * {style}
-   */
-  static c_style_image_wand2 = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-image-wand2', type: vx_ui_ui.t_style}}
 
   /**
    * Constant: style-item-summary
@@ -657,10 +657,10 @@ export default class nx_tactics_ui_stylesheet {
       "style-image-jester-black2": nx_tactics_ui_stylesheet.c_style_image_jester_black2,
       "style-image-jester-red1": nx_tactics_ui_stylesheet.c_style_image_jester_red1,
       "style-image-jester-red2": nx_tactics_ui_stylesheet.c_style_image_jester_red2,
+      "style-image-rod1": nx_tactics_ui_stylesheet.c_style_image_rod1,
+      "style-image-rod2": nx_tactics_ui_stylesheet.c_style_image_rod2,
       "style-image-sword1": nx_tactics_ui_stylesheet.c_style_image_sword1,
       "style-image-sword2": nx_tactics_ui_stylesheet.c_style_image_sword2,
-      "style-image-wand1": nx_tactics_ui_stylesheet.c_style_image_wand1,
-      "style-image-wand2": nx_tactics_ui_stylesheet.c_style_image_wand2,
       "style-item-summary": nx_tactics_ui_stylesheet.c_style_item_summary,
       "style-selected": nx_tactics_ui_stylesheet.c_style_selected,
       "style-text": nx_tactics_ui_stylesheet.c_style_text,
@@ -1439,6 +1439,8 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_styletype_shared,
       ":pointpos",
       nx_tactics_ui_stylesheet.c_point_suit_pos2,
+      ":pointrotate",
+      vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
       ":image-background",
@@ -1485,6 +1487,8 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_styletype_shared,
       ":pointpos",
       nx_tactics_ui_stylesheet.c_point_suit_pos2,
+      ":pointrotate",
+      vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
       ":image-background",
@@ -1523,6 +1527,8 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_styletype_shared,
       ":pointpos",
       nx_tactics_ui_stylesheet.c_point_suit_pos2,
+      ":pointrotate",
+      vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
       ":image-background",
@@ -1553,10 +1559,60 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_styletype_shared,
       ":pointpos",
       nx_tactics_ui_stylesheet.c_point_suit_pos2,
+      ":pointrotate",
+      vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
       ":image-background",
       nx_tactics_ui_stylesheet.c_image_jester_red
+    ))
+
+    // (const style-image-rod1)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_image_rod1, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_style},
+      ":name",
+      "style-image-rod1",
+      ":type",
+      vx_ui_ui.c_styletype_shared,
+      ":pointpos",
+      nx_tactics_ui_stylesheet.c_point_suit_pos1,
+      ":pointsize",
+      nx_tactics_ui_stylesheet.c_point_suit_size,
+      ":image-background",
+      vx_core.f_new(
+        {"any-1": vx_ui_ui.t_image},
+        ":name",
+        "image-rod1",
+        ":label",
+        "Rods",
+        ":file",
+        vx_core.f_new({"any-1": vx_data_file.t_file}, ":name", "icon-rod.svg", ":path", "icons")
+      )
+    ))
+
+    // (const style-image-rod2)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_image_rod2, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_style},
+      ":name",
+      "style-image-rod2",
+      ":type",
+      vx_ui_ui.c_styletype_shared,
+      ":pointpos",
+      nx_tactics_ui_stylesheet.c_point_suit_pos2,
+      ":pointrotate",
+      vx_ui_ui.c_point_rotate_180,
+      ":pointsize",
+      nx_tactics_ui_stylesheet.c_point_suit_size,
+      ":image-background",
+      vx_core.f_new(
+        {"any-1": vx_ui_ui.t_image},
+        ":name",
+        "image-rod1",
+        ":label",
+        "Rods",
+        ":file",
+        vx_core.f_new({"any-1": vx_data_file.t_file}, ":name", "icon-rod.svg", ":path", "icons")
+      )
     ))
 
     // (const style-image-sword1)
@@ -1591,6 +1647,8 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_styletype_shared,
       ":pointpos",
       nx_tactics_ui_stylesheet.c_point_suit_pos2,
+      ":pointrotate",
+      vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_suit_size,
       ":image-background",
@@ -1602,52 +1660,6 @@ export default class nx_tactics_ui_stylesheet {
         "Swords",
         ":file",
         vx_core.f_new({"any-1": vx_data_file.t_file}, ":name", "icon-sword.svg", ":path", "icons")
-      )
-    ))
-
-    // (const style-image-wand1)
-    Object.assign(nx_tactics_ui_stylesheet.c_style_image_wand1, vx_core.f_new(
-      {"any-1": vx_ui_ui.t_style},
-      ":name",
-      "style-image-wand1",
-      ":type",
-      vx_ui_ui.c_styletype_shared,
-      ":pointpos",
-      nx_tactics_ui_stylesheet.c_point_suit_pos1,
-      ":pointsize",
-      nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
-      vx_core.f_new(
-        {"any-1": vx_ui_ui.t_image},
-        ":name",
-        "image-wand1",
-        ":label",
-        "Wands",
-        ":file",
-        vx_core.f_new({"any-1": vx_data_file.t_file}, ":name", "icon-wand.svg", ":path", "icons")
-      )
-    ))
-
-    // (const style-image-wand2)
-    Object.assign(nx_tactics_ui_stylesheet.c_style_image_wand2, vx_core.f_new(
-      {"any-1": vx_ui_ui.t_style},
-      ":name",
-      "style-image-wand2",
-      ":type",
-      vx_ui_ui.c_styletype_shared,
-      ":pointpos",
-      nx_tactics_ui_stylesheet.c_point_suit_pos2,
-      ":pointsize",
-      nx_tactics_ui_stylesheet.c_point_suit_size,
-      ":image-background",
-      vx_core.f_new(
-        {"any-1": vx_ui_ui.t_image},
-        ":name",
-        "image-wand1",
-        ":label",
-        "Wands",
-        ":file",
-        vx_core.f_new({"any-1": vx_data_file.t_file}, ":name", "icon-wand.svg", ":path", "icons")
       )
     ))
 
@@ -1766,8 +1778,12 @@ export default class nx_tactics_ui_stylesheet {
       vx_ui_ui.c_align_center,
       ":font",
       nx_tactics_ui_stylesheet.c_font_rank,
+      ":pointorigin",
+      vx_ui_ui.c_point_center,
       ":pointpos",
       nx_tactics_ui_stylesheet.c_point_rank_pos2,
+      ":pointrotate",
+      vx_ui_ui.c_point_rotate_180,
       ":pointsize",
       nx_tactics_ui_stylesheet.c_point_rank_size
     ))
@@ -2080,10 +2096,10 @@ export default class nx_tactics_ui_stylesheet {
           nx_tactics_ui_stylesheet.c_style_image_jester_black2,
           nx_tactics_ui_stylesheet.c_style_image_jester_red1,
           nx_tactics_ui_stylesheet.c_style_image_jester_red2,
+          nx_tactics_ui_stylesheet.c_style_image_rod1,
+          nx_tactics_ui_stylesheet.c_style_image_rod2,
           nx_tactics_ui_stylesheet.c_style_image_sword1,
           nx_tactics_ui_stylesheet.c_style_image_sword2,
-          nx_tactics_ui_stylesheet.c_style_image_wand1,
-          nx_tactics_ui_stylesheet.c_style_image_wand2,
           nx_tactics_ui_stylesheet.c_style_text,
           nx_tactics_ui_stylesheet.c_style_text_2,
           nx_tactics_ui_stylesheet.c_style_text_header1,

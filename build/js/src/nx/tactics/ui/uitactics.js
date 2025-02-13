@@ -1653,7 +1653,7 @@ export default class nx_tactics_ui_uitactics {
           suit,
           vx_core.f_case_1(
             nx_tactics_base.c_suit_club,
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "icon-wand.svg"})
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "icon-rod.svg"})
           ),
           vx_core.f_case_1(
             nx_tactics_base.c_suit_diamond,
@@ -1676,26 +1676,35 @@ export default class nx_tactics_ui_uitactics {
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "icon-jester-red.svg"})
           )
         )
-        const pointpos = vx_core.f_switch(
-          {"any-1": vx_ui_ui.t_point, "any-2": vx_core.t_int},
+        const style = vx_core.f_switch(
+          {"any-1": vx_ui_ui.t_style, "any-2": vx_core.t_int},
           pos,
           vx_core.f_case_1(
             1,
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_point_suit_pos1})
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              {"any-1": vx_ui_ui.t_style},
+              ":layout",
+              vx_ui_ui.c_layout_image,
+              ":pointpos",
+              nx_tactics_ui_stylesheet.c_point_suit_pos1,
+              ":pointsize",
+              nx_tactics_ui_stylesheet.c_point_suit_size
+            )})
           ),
           vx_core.f_case_1(
             2,
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_point_suit_pos2})
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_new(
+              {"any-1": vx_ui_ui.t_style},
+              ":layout",
+              vx_ui_ui.c_layout_image,
+              ":pointpos",
+              nx_tactics_ui_stylesheet.c_point_suit_pos2,
+              ":pointrotate",
+              vx_ui_ui.c_point_rotate_180,
+              ":pointsize",
+              nx_tactics_ui_stylesheet.c_point_suit_size
+            )})
           )
-        )
-        const style = vx_core.f_new(
-          {"any-1": vx_ui_ui.t_style},
-          ":layout",
-          vx_ui_ui.c_layout_image,
-          ":pointpos",
-          pointpos,
-          ":pointsize",
-          nx_tactics_ui_stylesheet.c_point_suit_size
         )
         return vx_core.f_new(
           {"any-1": vx_ui_ui.t_ui},

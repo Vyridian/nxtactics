@@ -512,9 +512,9 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_2c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_tarot},
       ":name",
-      "Two of Wands",
+      "Two of Rods",
       ":titles",
-      "Outcast of Wands, Madman",
+      "Outcast of Rods, Madman",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c
     ))
@@ -556,9 +556,9 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_3c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_tarot},
       ":name",
-      "Three of Wands",
+      "Three of Rods",
       ":titles",
-      "Farmer of Wands",
+      "Farmer of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c
     ))
@@ -600,9 +600,9 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_tarot},
       ":name",
-      "Four of Wands",
+      "Four of Rods",
       ":titles",
-      "Miner of Wands",
+      "Miner of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c
     ))
@@ -644,9 +644,9 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_tarot},
       ":name",
-      "Five of Wands",
+      "Five of Rods",
       ":titles",
-      "Merchant of Wands, Merchant of Wonders",
+      "Merchant of Rods, Merchant of Wonders",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c
     ))
@@ -688,9 +688,9 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_6c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_tarot},
       ":name",
-      "Six of Wands",
+      "Six of Rods",
       ":titles",
-      "Craftsman of Wands",
+      "Craftsman of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c
     ))
@@ -732,9 +732,9 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_7c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_tarot},
       ":name",
-      "Seven of Wands",
+      "Seven of Rods",
       ":titles",
-      "Soldier of Wands",
+      "Soldier of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c
     ))
@@ -776,9 +776,9 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_tarot},
       ":name",
-      "Eight of Wands",
+      "Eight of Rods",
       ":titles",
-      "Archer of Wands",
+      "Archer of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c
     ))
@@ -820,9 +820,9 @@ export default class nx_tactics_decks_tarot {
     Object.assign(nx_tactics_decks_tarot.c_tarot_9c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_tarot},
       ":name",
-      "Nine of Wands",
+      "Nine of Rods",
       ":titles",
-      "Bishop of Wands",
+      "Bishop of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c
     ))
@@ -866,7 +866,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Devil",
       ":titles",
-      "Master of Wands",
+      "Master of Rods",
       ":image",
       "images/cards/tarot-devil.png",
       ":ranksuit",
@@ -918,7 +918,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Magus",
       ":titles",
-      "Knight of Wands",
+      "Knight of Rods",
       ":image",
       "images/cards/tarot-magus.png",
       ":ranksuit",
@@ -970,7 +970,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Emperor",
       ":titles",
-      "King of Wands",
+      "King of Rods",
       ":image",
       "images/cards/tarot-emperor.png",
       ":ranksuit",
@@ -1022,7 +1022,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Empress",
       ":titles",
-      "Queen of Wands",
+      "Queen of Rods",
       ":image",
       "images/cards/tarot-empress.png",
       ":ranksuit",
@@ -1074,7 +1074,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Tower",
       ":titles",
-      "Ten of Wands",
+      "Ten of Rods",
       ":image",
       "images/cards/tarot-tower.png",
       ":ranksuit",

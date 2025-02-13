@@ -618,13 +618,13 @@ export default class nx_tactics_decks_fate {
     Object.assign(nx_tactics_decks_fate.c_fate_2c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_fate},
       ":name",
-      "Two of Wands",
+      "Two of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_2c,
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Strong:3-10(16), Block(26), Counter(13)\n* Loss: Fast(26), Strong:J-A(8), Evade(12), Wild(2)\n* Tie: Strong:2(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-2d)
@@ -637,7 +637,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Strong:3-10(16), Block(26), Counter(13)\n* Loss: Fast(26), Strong:J-A(8), Evade(12), Wild(2)\n* Tie: Strong:2(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-2h)
@@ -650,7 +650,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:3-10(16), Strong(26), Evade(13)\n* Loss: Fast:J-A(8), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:2(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-2s)
@@ -663,20 +663,20 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Fast:3-10(16), Strong(26), Evade(13)\n* Loss: Fast:J-A(8), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:3(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-3c)
     Object.assign(nx_tactics_decks_fate.c_fate_3c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_fate},
       ":name",
-      "Three of Wands",
+      "Three of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_3c,
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Strong:4-10(14), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2,J-A(10), Evade(12), Wild(2)\n* Tie: Strong:3(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-3d)
@@ -689,7 +689,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Strong:4-10(14), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2,J-A(10), Evade(12), Wild(2)\n* Tie: Strong:3(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-3h)
@@ -702,7 +702,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:4-10(14), Strong(26), Evade(13)\n* Loss: Fast:2,J-A(10), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:3(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-3s)
@@ -715,20 +715,20 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Fast:4-10(14), Strong(26), Evade(13)\n* Loss: Fast:2,J-A(10), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:3(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-4c)
     Object.assign(nx_tactics_decks_fate.c_fate_4c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_fate},
       ":name",
-      "Four of Wands",
+      "Four of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_4c,
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Strong:5-10(12), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-3,J-A(12), Evade(12), Wild(2)\n* Tie: Strong:4(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-4d)
@@ -741,7 +741,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Strong:5-10(12), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-3,J-A(12), Evade(12), Wild(2)\n* Tie: Strong:4(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-4h)
@@ -754,7 +754,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:5-10(12), Strong(26), Evade(13)\n* Loss: Fast:2-3,J-A(12), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:4(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-4s)
@@ -767,20 +767,20 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Fast:5-10(12), Strong(26), Evade(13)\n* Loss: Fast:2-3,J-A(12), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:4(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-5c)
     Object.assign(nx_tactics_decks_fate.c_fate_5c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_fate},
       ":name",
-      "Five of Wands",
+      "Five of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c,
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Strong:6-10(10), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-4,J-A(14), Evade(12), Wild(2)\n* Tie: Strong:5(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-5d)
@@ -793,7 +793,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Strong:6-10(10), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-4,J-A(14), Evade(12), Wild(2)\n* Tie: Strong:5(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-5h)
@@ -806,7 +806,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:6-10(10), Strong(26), Evade(13)\n* Loss: Fast:2-4,J-A(14), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:5(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-5s)
@@ -819,20 +819,20 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Fast:6-10(10), Strong(26), Evade(13)\n* Loss: Fast:2-4,J-A(14), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:5(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-6c)
     Object.assign(nx_tactics_decks_fate.c_fate_6c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_fate},
       ":name",
-      "Six of Wands",
+      "Six of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c,
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Strong:7-10(8), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-5,J-A(16), Evade(12), Wild(2)\n* Tie: Strong:6(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-6d)
@@ -845,7 +845,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Strong:7-10(8), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-5,J-A(16), Evade(12), Wild(2)\n* Tie: Strong:6(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-6h)
@@ -858,7 +858,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:7-10(8), Strong(26), Evade(13)\n* Loss: Fast:2-5,J-A(16), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:6(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-6s)
@@ -871,20 +871,20 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Fast:7-10(8), Strong(26), Evade(13)\n* Loss: Fast:2-5,J-A(16), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:6(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-7c)
     Object.assign(nx_tactics_decks_fate.c_fate_7c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_fate},
       ":name",
-      "Seven of Wands",
+      "Seven of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7c,
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Strong:8-10(6), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-6,J-A(18), Evade(12), Wild(2)\n* Tie: Strong:7(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-7d)
@@ -897,7 +897,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Strong:8-10(6), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-6,J-A(18), Evade(12), Wild(2)\n* Tie: Strong:7(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-7h)
@@ -910,7 +910,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:8-10(6), Strong(26), Evade(13)\n* Loss: Fast:2-6,J-A(18), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:7(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-7s)
@@ -923,20 +923,20 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Fast:8-10(6), Strong(26), Evade(13)\n* Loss: Fast:2-6,J-A(18), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:7(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-8c)
     Object.assign(nx_tactics_decks_fate.c_fate_8c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_fate},
       ":name",
-      "Eight of Wands",
+      "Eight of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_8c,
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Strong:9-10(4), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-7,J-A(20), Evade(12), Wild(2)\n* Tie: Strong:8(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-8d)
@@ -949,7 +949,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Strong:9-10(4), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-7,J-A(20), Evade(12), Wild(2)\n* Tie: Strong:8(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-8h)
@@ -962,7 +962,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:9-10(4), Strong(26), Evade(13)\n* Loss: Fast:2-7,J-A(20), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:8(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-8s)
@@ -975,20 +975,20 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Fast:9-10(4), Strong(26), Evade(13)\n* Loss: Fast:2-7,J-A(20), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:8(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-9c)
     Object.assign(nx_tactics_decks_fate.c_fate_9c, vx_core.f_new(
       {"any-1": nx_tactics_base.t_fate},
       ":name",
-      "Nine of Wands",
+      "Nine of Rods",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_9c,
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Strong:10(2), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-8,J-A(22), Evade(12), Wild(2)\n* Tie: Strong:9(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-9d)
@@ -1001,7 +1001,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Strong:10(2), Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-8,J-A(22), Evade(12), Wild(2)\n* Tie: Strong:9(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-9h)
@@ -1014,7 +1014,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:10(2), Strong(26), Evade(13)\n* Loss: Fast:2-8,J-A(22), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:9(2)\n* Success: ?\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-9s)
@@ -1027,7 +1027,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Fast:10(2), Strong(26), Evade(13)\n* Loss: Fast:2-8,J-A(22), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:9(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-ac)
@@ -1040,7 +1040,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Super)\n* Win: Strong:2-K(24), Block(26), Counter(13)\n* Loss: Fast(26), Evade(12), Wild(2)\n* Tie: Strong:A(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-ad)
@@ -1053,7 +1053,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Super)\n* Win: Strong:2-K(24), Block(26), Counter(13)\n* Loss: Fast(26), Evade(12), Wild(2)\n* Tie: Strong:A(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-ah)
@@ -1066,7 +1066,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Super)\n* Win: Fast:2-K(24), Strong(26), Evade(13)\n* Loss: Block*(26), Counter(13), Wild(2)\n* Tie: Fast:A(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-as)
@@ -1079,7 +1079,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Super)\n* Win: Fast:2-K(24), Strong(26), Evade(13)\n* Loss: Block*(26), Counter(13), Wild(2)\n* Tie: Fast:A(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-jc)
@@ -1094,7 +1094,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Special)\n* Win: Strong:2-10,QK(22), Block(26), Counter(13)\n* Loss: Fast(26), Strong:A(2), Evade(12), Wild(2)\n* Tie: Strong:J(2)\n* Success: 1\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-jd)
@@ -1109,7 +1109,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Special)\n* Win: Strong:2-10,QK(22), Block(26), Counter(13)\n* Loss: Fast(26), Strong:A(2), Evade(12), Wild(2)\n* Tie: Strong:J(2)\n* Success: 1\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-jh)
@@ -1124,7 +1124,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:2-10,QK(22), Strong(26), Evade(13)\n* Loss: Fast:A(2), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:J(2)\n* Success: 1\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-js)
@@ -1139,7 +1139,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Special)\n* Win: Fast:2-10,QK(22), Strong(26), Evade(13)\n* Loss: Fast:A(2), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:J(2)\n* Success: 1\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-kc)
@@ -1152,7 +1152,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Special)\n* Win: Strong:2-10(18), Block(26), Counter(13)\n* Loss: Fast(26), Strong:JQA(6), Evade(12), Wild(2)\n* Tie: Strong:K(2)\n* Success: 1\n* Combo: KK Success:2 or KKK Success:3\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-kd)
@@ -1165,7 +1165,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Special)\n* Win: Strong:2-10(18), Block(26), Counter(13)\n* Loss: Fast(26), Strong:JQA(6), Evade(12), Wild(2)\n* Tie: Strong:K(2)\n* Success: 1\n* Combo: KK Success:2 or KKK Success:3\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-kh)
@@ -1178,7 +1178,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:2-10(18), Strong(26), Evade(13)\n* Loss: Fast:JQA(6), Block*(26), Counter(13), Wild(2)\n* Tie: Strong:K(2)\n* Success: 1\n* Combo: KK Success:2 or KKK Success:3\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-ks)
@@ -1191,7 +1191,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Special)\n* Win: Fast:2-10(18), Strong(26), Evade(13)\n* Loss: Fast:JQA(6), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:K(2)\n* Success: 1\n* Combo: AA Success:2 or AAA Success:3 or AAAA Success:4\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-qc)
@@ -1204,7 +1204,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Special)\n* Win: Strong:2-10,K(20), Block(26), Counter(13)\n* Loss: Fast(26), Strong:JA(4), Evade(12), Wild(2)\n* Tie: Strong:Q(2)\n* Success: 1\n* Combo: QQ Success:2\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-qd)
@@ -1217,7 +1217,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Special)\n* Win: Strong:2-10,K(20), Block(26), Counter(13)\n* Loss: Fast(26), Strong:JA(4), Evade(12), Wild(2)\n* Tie: Strong:Q(2)\n* Success: 1\n* Combo: QQ Success:2\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-qh)
@@ -1232,7 +1232,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Fast:2-10,K(20), Strong(26), Evade(13)\n* Loss: Fast:JA(4), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:Q(2)\n* Success: 1\n* Combo: QQ Success:2\n\nBlock\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-qs)
@@ -1245,7 +1245,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Special)\n* Win: Fast:2-10,K(20), Strong(26), Evade(13)\n* Loss: Fast:JA(4), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:Q(2)\n* Success: 1\n* Combo: QQ Success:2\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)\n\n* Discard: Cancel 1 Success."
+      ""
     ))
 
     // (const fate-tc)
@@ -1260,7 +1260,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-block.svg",
       ":summary",
-      "Strong and Dominating (Normal)\n* Win: Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-9,J-A(24), Evade(12), Wild(2)\n* Tie: Strong:10(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-td)
@@ -1275,7 +1275,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-strong-counter.svg",
       ":summary",
-      "Strong and Clever (Normal)\n* Win: Block(26), Counter(13)\n* Loss: Fast(26), Strong:2-9,J-A(24), Evade(12), Wild(2)\n* Tie: Strong:10(2)\n* Success: *\n\nCounter\n* Win: Fast(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade, Counter\n* Success: New Fate"
+      ""
     ))
 
     // (const fate-th)
@@ -1290,7 +1290,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-block.svg",
       ":summary",
-      "Fast and Unexpected (Special)\n* Win: Strong(26), Evade(13)\n* Loss: Fast:2-9,J-A(24), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:10(2)\n* Success: *\n\nBlock\n* Win: Fast*(26), Wild(2)\n* Loss: Strong(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Keep, Draw:1"
+      ""
     ))
 
     // (const fate-ts)
@@ -1305,7 +1305,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-fast-evade.svg",
       ":summary",
-      "Fast and Precise (Normal)\n* Win: Strong(26), Evade(13)\n* Loss: Fast:2-9,J-A(24), Block*(26), Counter(13), Wild(2)\n* Tie: Fast:10(2)\n* Success: *\n\nEvade\n* Win: Strong(26), Wild(2)\n* Lose: Fast(26)\n* Tie: Block(26), Evade(13), Counter(13)\n* Success: 0, Move:1 (Win or Tie)"
+      ""
     ))
 
     // (const fate-wildblack)
@@ -1318,7 +1318,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-joker.svg",
       ":summary",
-      "Wild (Gold Burst):\n* Win: Fast(26), Strong(26)\n* Loss: Block(26), Evade(13), Counter(13)\n* Tie: Wild(2)\n* Success: 0. Search:1 or Reclaim:1.\n* Shuffle: Discards into Deck.\n\nCombo Breaker (Blue Burst):\n* Mitigation: Discard to cancel ALL Successes. IF reasonable THEN an adjacent Ally may do this instead.\n* Shuffle: Discards into Deck."
+      "Suffle Discards into Deck"
     ))
 
     // (const fate-wildred)
@@ -1331,7 +1331,7 @@ export default class nx_tactics_decks_fate {
       ":image",
       "images/card-fate-joker.svg",
       ":summary",
-      "Wild (Gold Burst):\n* Win: Fast(26), Strong(26)\n* Loss: Block(26), Evade(13), Counter(13)\n* Tie: Wild(2)\n* Success: 0. Search:1 or Reclaim:1.\n* Shuffle: Discards into Deck.\n\nCombo Breaker (Blue Burst):\n* Mitigation: Discard to cancel ALL Successes. IF reasonable THEN an adjacent Ally may do this instead.\n* Shuffle: Discards into Deck."
+      "Suffle Discards into Deck"
     ))
 
   }
