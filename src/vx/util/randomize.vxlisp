@@ -1,0 +1,13 @@
+(package vx/util/randomize)
+
+(func randomize : int
+ [lower : int
+  upper : int]
+ (native
+  :js :auto)
+ :doc "Returns a random int between lower and upper inclusive.")
+
+(func rolldice : int
+ [number : int
+  type   : int]
+ :doc "Returns the total of a number of dice rolls.")

@@ -1,0 +1,6 @@
+  static vx_randomize(
+    lower,
+    upper) {
+    let output = Math.floor(Math.random() * upper) + 1
+    return output
+  }

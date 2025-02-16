@@ -44,70 +44,6 @@
       :titles "Arcanist"
       :powermap
        (powermap
-        :Abjuration
-         (power
-          :name "Abjuration"
-          :summary
-           "Protective Magic. They create barriers, negate abilities, harm trespassers, or banish those who do not belong. It includes Barriers and Wards."
-          :abilitymap
-           (abilitymap
-            :Banishment
-             (ability
-              :name "Banishment"
-              :summary
-               "* [Action]: Return any [Outsider] to its original realm. This ability may only be attempted on a particular being once per month.")
-            :Binding
-             (ability
-              :name "Binding"
-              :summary
-               "* Any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may bind immediately or parley first and use the binding as a threat.
-                * [Requires]: The caster must describe the subject's past in detail and name his/her demands. If the description is in error or the demand cannot be completed, the Binding automatically fails.
-                * [Action]: If successful, the caster will know the subject is bound and it will perform the demand to the letter, but the subject is unwilling and will seek to defeat the caster's wishes through semantics or in passive/agressive ways.")
-            "Binding Contract"
-             (ability
-              :name "Binding Contract"
-              :summary
-               "* Like [Binding], any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may parley and use the binding to enforce an agreement.
-                * [Requires]: The caster must name his/her demands and offer compensation to the subject. They may then negotiate for as long as desired.
-                * [Action]: If the subject refuses to bargain, the caster may still cast or threaten a [Binding]. If the subject agrees to the bargain, the subject and the caster are automatically bound to the terms of the bargain, and both must fulfill their commitments or be immediately subject to a [Summoning] and automatically successful forced [Binding] (even if neither party has these abilities).")
-            "Containment Jar"
-             (ability
-              :name "Containment Jar"
-              :reference "* Evil Containment Wave - Dragon Ball"
-              :summary
-               "* A summoned being may be captured in a special container that permanently imprisons the creature.
-                * The being in the jar can telepathically communicate with anyone touching the jar. If the jar is broken, the being is immediately freed. The being may bargain for its freedom, and if it does so, it must fulfill its bargain.
-                * Imprisonment in a jar can be used as a threat or the caster may simply imprison the being to be used later."
-              :titles "Souljar")
-            "Create Elder Sign"
-             (ability
-              :name "Create Elder Sign")
-            :Pentagram
-             (ability
-              :name "Pentagram"
-              :summary
-               "* A Triangle enclosed in a circle. A double triangle will form a Pentagram.
-                * The five points represent the four elements with the spirit presiding at the top. The triangles form a doorway.
-                * Time allowing, it is usually meticulously inscribed and used with a [Protective Circle].
-                * It serves to contain any being (and its minions) summoned by the caster.
-                * It provides defense equal to the success roll versus any being (and its minions) summoned by the caster. This defense applies to ALL attempts to act across the Pentagram. If an attack exceeds the defense of the Pentagram, the defense reduces by one."
-              :titles "Binding Circle, Devil's Door, Thaumaturgic Triangle")
-            :Protection
-             (ability
-              :name "Protection"
-              :summary
-               "* A protective barrier inscribed on the ground to protect the caster from summoned beings (usually his own).
-                * A typical size for a circle is nine feet in diameter, though the size can vary depending on the purpose of the circle.
-                * Some practitioners choose to mark the physical boundary of their circle, either before or prior to the actual casting. This can be done using a cord, a chalk line, a line drawn in the soil, or small objects such as stones.
-                * Some practitioners mark the four cardinal points with candles, either white, or of colors representative of the elements:
-                ** North: green for the element of Earth
-                ** East: yellow for the element of Air
-                ** South: red for the element of Fire
-                ** West: blue for the element of Water
-                * Cutting a door - The barrier is fragile and sensitive to things passing through it. Leaving or passing through the circle often weakens or dispels the barrier. This is referred to as 'breaking the circle'. Practitioners should not leave the circle unless absolutely necessary. In order to leave a circle and keep it intact, a door must be cut in the energy of the circle. Using the athame, a doorway is cut in the circle, at which point anything may pass through without harming the circle. This opening must be closed afterwards by reconnecting the lines of the circle."
-              :titles "Circle of Protection, Protective Circle")
-             (ability
-              :name "Guards and Wards")))
         :Alchemy
          (power
           :name "Alchemy"
@@ -523,6 +459,71 @@
             :Pinwheel
              (ability
               :name "Pinwheel")))
+        :Protection
+         (power
+          :name "Protection"
+          :titles "Abjuration"
+          :summary
+           "Protective Magic. They create barriers, negate abilities, harm trespassers, or banish those who do not belong. It includes Barriers and Wards."
+          :abilitymap
+           (abilitymap
+            :Banishment
+             (ability
+              :name "Banishment"
+              :summary
+               "* [Action]: Return any [Outsider] to its original realm. This ability may only be attempted on a particular being once per month.")
+            :Binding
+             (ability
+              :name "Binding"
+              :summary
+               "* Any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may bind immediately or parley first and use the binding as a threat.
+                * [Requires]: The caster must describe the subject's past in detail and name his/her demands. If the description is in error or the demand cannot be completed, the Binding automatically fails.
+                * [Action]: If successful, the caster will know the subject is bound and it will perform the demand to the letter, but the subject is unwilling and will seek to defeat the caster's wishes through semantics or in passive/agressive ways.")
+            "Binding Contract"
+             (ability
+              :name "Binding Contract"
+              :summary
+               "* Like [Binding], any subject successfully summoned is attuned to the caster and is subject to a binding. The caster may parley and use the binding to enforce an agreement.
+                * [Requires]: The caster must name his/her demands and offer compensation to the subject. They may then negotiate for as long as desired.
+                * [Action]: If the subject refuses to bargain, the caster may still cast or threaten a [Binding]. If the subject agrees to the bargain, the subject and the caster are automatically bound to the terms of the bargain, and both must fulfill their commitments or be immediately subject to a [Summoning] and automatically successful forced [Binding] (even if neither party has these abilities).")
+            "Containment Jar"
+             (ability
+              :name "Containment Jar"
+              :reference "* Evil Containment Wave - Dragon Ball"
+              :summary
+               "* A summoned being may be captured in a special container that permanently imprisons the creature.
+                * The being in the jar can telepathically communicate with anyone touching the jar. If the jar is broken, the being is immediately freed. The being may bargain for its freedom, and if it does so, it must fulfill its bargain.
+                * Imprisonment in a jar can be used as a threat or the caster may simply imprison the being to be used later."
+              :titles "Souljar")
+            "Create Elder Sign"
+             (ability
+              :name "Create Elder Sign")
+            :Pentagram
+             (ability
+              :name "Pentagram"
+              :summary
+               "* A Triangle enclosed in a circle. A double triangle will form a Pentagram.
+                * The five points represent the four elements with the spirit presiding at the top. The triangles form a doorway.
+                * Time allowing, it is usually meticulously inscribed and used with a [Protective Circle].
+                * It serves to contain any being (and its minions) summoned by the caster.
+                * It provides defense equal to the success roll versus any being (and its minions) summoned by the caster. This defense applies to ALL attempts to act across the Pentagram. If an attack exceeds the defense of the Pentagram, the defense reduces by one."
+              :titles "Binding Circle, Devil's Door, Thaumaturgic Triangle")
+            "Protective Circle"
+             (ability
+              :name "Protective Circle"
+              :summary
+               "* A protective barrier inscribed on the ground to protect the caster from summoned beings (usually his own).
+                * A typical size for a circle is nine feet in diameter, though the size can vary depending on the purpose of the circle.
+                * Some practitioners choose to mark the physical boundary of their circle, either before or prior to the actual casting. This can be done using a cord, a chalk line, a line drawn in the soil, or small objects such as stones.
+                * Some practitioners mark the four cardinal points with candles, either white, or of colors representative of the elements:
+                ** North: green for the element of Earth
+                ** East: yellow for the element of Air
+                ** South: red for the element of Fire
+                ** West: blue for the element of Water
+                * Cutting a door - The barrier is fragile and sensitive to things passing through it. Leaving or passing through the circle often weakens or dispels the barrier. This is referred to as 'breaking the circle'. Practitioners should not leave the circle unless absolutely necessary. In order to leave a circle and keep it intact, a door must be cut in the energy of the circle. Using the athame, a doorway is cut in the circle, at which point anything may pass through without harming the circle. This opening must be closed afterwards by reconnecting the lines of the circle."
+              :titles "Circle of Protection, Protective Circle")
+             (ability
+              :name "Guards and Wards")))
         :Sorcery
          (power
           :name "Sorcery"
@@ -1171,143 +1172,6 @@
       :titles "Channelling, Miracle Working, White Magic"
       :powermap
        (powermap
-        :Asceticism
-         (power
-          :name "Asceticism"
-          :reference "* Snow White"
-          :summary
-           "* Aura
-            * All Purity skills are at -1 for each level of [Shadow]. Ironically, the [Beast] is natural and therefore is not impure.
-
-            There are said to be 'Four Affirmations' of the spirit:
-            * Tradition and the family - The family is seen as the main mechanism by which traditions are reserved.  Their main celebrations relate to birth and marriage.
-            * Love of nature - Nature is sacred; to be in contact with nature is to be close to the sacred spirits.  Natural objects are worshipped as containing sacred spirits. Killing living beings should be done with reverence for taking a life to continue one's own, and should be kept to a minimum.
-            * Physical cleanliness - Take baths, wash hands, and rinse mouths often.
-            * Festivals - Any festival dedicated to the Spirits, of which there are many each year."
-          :titles "Angel, Banisher, Brother, Buddist, Exorcist, Father, Friar, Hearth Mage, Monk, Mother Superior, Nun, Paladin, Penitent, Purifier, Purity, Shintoist, Sister"
-          :stat "Will"
-          :abilitymap
-           (abilitymap
-            :Absolution
-             (ability
-              :name "Absolution"
-              :summary "* A ritual of cleansing of sin. Absolution can be a difficult journey depending on the person and the sins. To be absolved, one must fully express, accept and atone for one's sins, only then may absolution be found."
-              :titles "Atonement")
-            "Arrow of Purity"
-             (ability
-              :name "Arrow of Purity"
-              :reference
-               "* Kakome, Inuyasha
-                * Mirana, DOTA"
-              :summary
-               "* An arrow or other projectile can be enhanced to destroy corruption.
-                * +1 Attack and +1 Damage vs. [Corrupted] or [Chaotic]")
-            "Blaze of Glory"
-             (ability
-              :name "Blaze of Glory")
-            "Calm Animal"
-             (ability
-              :name "Calm Animal")
-            "Chime of Purity"
-             (ability
-              :name "Chime of Purity"
-              :summary "* The user sounds a bell or chime, and its piercingly pure tones are unbearable to otherworldly beings.")
-            :Cleaning
-             (ability
-              :name "Cleaning"
-              :summary "* By simply rubbing any dirty surface with a wet cloth, the material immediately becomes cleaner regardless of the contamination. All harmful contaminents are cleaned off as well.")
-            :Cleanse
-             (ability
-              :name "Cleanse"
-              :summary
-               "* Those who believe see a silvery shower wash over the target and cleaning away [Disease] or [Poison] like dirt.
-                * Reduces [Poison] and [Disease] damage rolls by the skill level.")
-            :Exorcism
-             (ability
-              :name "Exorcism"
-              :summary "* Banish a spirit that is possessing a person, item, or location.")
-            :Halo
-             (ability
-              :name "Halo"
-              :summary
-               "* Magnificient halo of light appears behind the user's head.  Observers are awed by the sight.
-                * [Action] - +1 on Social abiliites."
-              :titles "Godshead")
-            :Introspection
-             (ability
-              :name "Introspection")
-            :Pacifism
-             (ability
-              :name "Pacifism")
-            :Penance
-             (ability
-              :name "Penance")
-            :Purify
-             (ability
-              :name "Purify"
-              :summary "* Contamination including filth, [Disease], [Poison], or [Raditation] may be cleansed in a small area.")
-            :Purge
-             (ability
-              :name "Purge")
-            :Sanctuary
-             (ability
-              :name "Sanctuary"
-              :summary "* From the user's perspective, it is like being on stage. While chanting, a spotlight seems to come upon the user, all other lights dim, and enemies cease to notice the user's presence.")
-            "Sense Corruption"
-             (ability
-              :name "Sense Corruption")
-            :Serenity
-             (ability
-              :name "Serenity")
-            "Throw Salt"
-             (ability
-              :name "Throw Salt")
-            "True Sight"
-             (ability
-              :name "True Sight")
-            "Vow of Chastity"
-             (ability
-              :name "Vow of Chastity"
-              :titles "Celibacy")
-            "Vow of Obedience"
-             (ability
-              :name "Vow of Obedience"
-              :reference
-               "To dream the impossible dream
-                To fight the unbeatable foe
-                To bear with unbearable sorrow
-                And to run where the brave dare not go
-
-                To right the unrightable wrong
-                And to love pure and chaste from afar
-                To try when your arms are too weary
-                To reach the unreachable star
-
-                This is my quest
-                To follow that star
-                No matter how hopeless
-                No matter how far
-
-                To fight for the right
-                Without question or pause
-                To be willing to march, march into Hell
-                For that heavenly cause
-
-                And I know if I'll only be true
-                To this glorious quest
-                That my heart will lie peaceful and calm
-                When I'm laid to my rest - Don Quixote, The Impossible Dream"
-              :summary
-               "* The vow of obedience is a commitment to truly follow the direction of ones beliefs regardless of obstacles or consequences knowing that whatever the outcome, it was always the true, right outcome.")
-            "Vow of Poverty"
-             (ability
-              :name "Vow of Poverty")
-            "Vow of Silence"
-             (ability
-              :name "Vow of Silence")
-            "Ward Undead"
-             (ability
-              :name "Ward Undead")))
         :Conviction
          (power
           :name "Conviction"
@@ -1607,6 +1471,143 @@
             :Transference
              (ability
               :name "Transference")))
+        :Purity
+         (power
+          :name "Purity"
+          :reference "* Snow White"
+          :summary
+           "* Aura
+            * All Purity skills are at -1 for each level of [Shadow]. Ironically, the [Beast] is natural and therefore is not impure.
+
+            There are said to be 'Four Affirmations' of the spirit:
+            * Tradition and the family - The family is seen as the main mechanism by which traditions are reserved.  Their main celebrations relate to birth and marriage.
+            * Love of nature - Nature is sacred; to be in contact with nature is to be close to the sacred spirits.  Natural objects are worshipped as containing sacred spirits. Killing living beings should be done with reverence for taking a life to continue one's own, and should be kept to a minimum.
+            * Physical cleanliness - Take baths, wash hands, and rinse mouths often.
+            * Festivals - Any festival dedicated to the Spirits, of which there are many each year."
+          :titles "Asceticism, Angel, Banisher, Brother, Buddist, Exorcist, Father, Friar, Hearth Mage, Monk, Mother Superior, Nun, Paladin, Penitent, Purifier, Purity, Shintoist, Sister"
+          :stat "Will"
+          :abilitymap
+           (abilitymap
+            :Absolution
+             (ability
+              :name "Absolution"
+              :summary "* A ritual of cleansing of sin. Absolution can be a difficult journey depending on the person and the sins. To be absolved, one must fully express, accept and atone for one's sins, only then may absolution be found."
+              :titles "Atonement")
+            "Arrow of Purity"
+             (ability
+              :name "Arrow of Purity"
+              :reference
+               "* Kakome, Inuyasha
+                * Mirana, DOTA"
+              :summary
+               "* An arrow or other projectile can be enhanced to destroy corruption.
+                * +1 Attack and +1 Damage vs. [Corrupted] or [Chaotic]")
+            "Blaze of Glory"
+             (ability
+              :name "Blaze of Glory")
+            "Calm Animal"
+             (ability
+              :name "Calm Animal")
+            "Chime of Purity"
+             (ability
+              :name "Chime of Purity"
+              :summary "* The user sounds a bell or chime, and its piercingly pure tones are unbearable to otherworldly beings.")
+            :Cleaning
+             (ability
+              :name "Cleaning"
+              :summary "* By simply rubbing any dirty surface with a wet cloth, the material immediately becomes cleaner regardless of the contamination. All harmful contaminents are cleaned off as well.")
+            :Cleanse
+             (ability
+              :name "Cleanse"
+              :summary
+               "* Those who believe see a silvery shower wash over the target and cleaning away [Disease] or [Poison] like dirt.
+                * Reduces [Poison] and [Disease] damage rolls by the skill level.")
+            :Exorcism
+             (ability
+              :name "Exorcism"
+              :summary "* Banish a spirit that is possessing a person, item, or location.")
+            :Halo
+             (ability
+              :name "Halo"
+              :summary
+               "* Magnificient halo of light appears behind the user's head.  Observers are awed by the sight.
+                * [Action] - +1 on Social abiliites."
+              :titles "Godshead")
+            :Introspection
+             (ability
+              :name "Introspection")
+            :Pacifism
+             (ability
+              :name "Pacifism")
+            :Penance
+             (ability
+              :name "Penance")
+            :Purify
+             (ability
+              :name "Purify"
+              :summary "* Contamination including filth, [Disease], [Poison], or [Raditation] may be cleansed in a small area.")
+            :Purge
+             (ability
+              :name "Purge")
+            :Sanctuary
+             (ability
+              :name "Sanctuary"
+              :summary "* From the user's perspective, it is like being on stage. While chanting, a spotlight seems to come upon the user, all other lights dim, and enemies cease to notice the user's presence.")
+            "Sense Corruption"
+             (ability
+              :name "Sense Corruption")
+            :Serenity
+             (ability
+              :name "Serenity")
+            "Throw Salt"
+             (ability
+              :name "Throw Salt")
+            "True Sight"
+             (ability
+              :name "True Sight")
+            "Vow of Chastity"
+             (ability
+              :name "Vow of Chastity"
+              :titles "Celibacy")
+            "Vow of Obedience"
+             (ability
+              :name "Vow of Obedience"
+              :reference
+               "To dream the impossible dream
+                To fight the unbeatable foe
+                To bear with unbearable sorrow
+                And to run where the brave dare not go
+
+                To right the unrightable wrong
+                And to love pure and chaste from afar
+                To try when your arms are too weary
+                To reach the unreachable star
+
+                This is my quest
+                To follow that star
+                No matter how hopeless
+                No matter how far
+
+                To fight for the right
+                Without question or pause
+                To be willing to march, march into Hell
+                For that heavenly cause
+
+                And I know if I'll only be true
+                To this glorious quest
+                That my heart will lie peaceful and calm
+                When I'm laid to my rest - Don Quixote, The Impossible Dream"
+              :summary
+               "* The vow of obedience is a commitment to truly follow the direction of ones beliefs regardless of obstacles or consequences knowing that whatever the outcome, it was always the true, right outcome.")
+            "Vow of Poverty"
+             (ability
+              :name "Vow of Poverty")
+            "Vow of Silence"
+             (ability
+              :name "Vow of Silence")
+            "Ward Undead"
+             (ability
+              :name "Ward Undead")))
         :Radiant
          (power
           :name "Radiant"
@@ -1929,7 +1930,141 @@
                 * Mushin is achieved when a fighter feels no anger, fear or ego during combat, so the fighter is totally free to act and react towards an opponent without hesitation. At this point, a person relies not on what they think should be the next move, but what is felt intuitively.
                 * A martial artist would likely have to train for many years to be capable of mushin. This allows time for combinations of movements and exchanges of techniques to be practiced repetitively many thousands of times, until they can be performed spontaneously, without conscious thought."
               :titles "Mushin")))
-
+        :Curses
+         (power
+          :name "Curses"
+          :reference
+           "* Synchronicity is a phenomenon where people interpret two seemingly unrelated experiences as being meaningfully intertwined."
+          :summary
+           "* Fetishism is using a symbol to represent the thing you want to affect with your magic. Whatever you do to the symbol, you do to the target. The object and the thing it represents are 'in sympathy'; they are aligned. Sympathetic magic is a useful idea because often, your target is something non-physical, or something you can’t otherwise interact with directly. You could banish negative thoughts directly, but it’s easier to tie them to something physical by writing them down and then burning the paper. As the paper burns, so does the negativity. Correspondences are related to this. For example, different-colored candles represent different desires (like green for money, red for love, black for banishment, etc.) and as the candle burns down, your spell is cast. Wearing different stones or crystals can attract luck or success to you.   
+            * Cursed Energy - Cursed energy is born from negative emotions such as grief and anger. These negative feelings are common in human society so almost everyone possesses cursed energy. Cursed Energy can be controlled and focused to perform various magical feats.
+            * Cursed Spirit - Cursed Spirits are apparitions manifested entirely from cursed energy. Even their bodies are composed of cursed energy, making cursed spirits invisible to non-sorcerers. The emission of cursed energy from humans collects like sediment until a cursed spirit is born from the collective negative energy. Cursed Spirits born with strong feelings directed toward a certain aspect are especially strong. The stronger humanity's fear and anger is directed at cursing a certain aspect of the world, like natural disasters, the more powerful Curse Spirits spawned from those negative sentiments will be.
+            * Law of Similarity - Like produces like. An effect resembles its cause.
+            * Law of Contact/Contagion - Things which have once been in contact with each other continue to act on each other at a distance."
+          :titles
+           "Correspondence, Fetishism, Hexer, Shintoist, Soulcraft, Sympathy, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor"
+          :abilitymap
+           (abilitymap
+            "Black Vise"
+             (ability
+              :name "Black Vise"
+              :summary "* Target must use a special [Ability] each [Turn] or take a [Stun].")
+            "Breath of Life"
+             (ability
+              :name "Breath of Life"
+              :summary "* Create an [Animated] creature."
+              :titles "Cursed Corpse")
+            "Cursed Sight"
+             (ability
+              :name "Cursed Sight"
+              :summary "* Curses and Cursed Spirits are normally invisibile, but this ability allows them to be seen.")
+            "Cursed Tool"
+             (ability
+              :name "Cursed Tool")
+            "Cursed Weapon"
+             (ability
+              :name "Cursed Weapon"
+              :summary "* Cursed Item - Items can also be infused with Curse Energy including such as cursed tools, cursed objects, and cursed corpses.")
+            "Dominant Possession"
+             (ability
+              :name "Dominant Possession"
+              :summary "* After defeating a target in mental combat, the user possesses the body of the target. The user keeps his Mind and Will stats and uses the target's Body."
+              :titles "Skinriding")
+            :Effigy
+             (ability
+              :name "Effigy"
+              :reference "Poppet, Voodoo Doll"
+              :summary
+               "* Create a figure representing the target. The target can be a being, a vehicle, a building, etc. The figure can be a doll, a wax figurine, an Origami, a sculpture, a drawing, or any other image created by hand by the caster. In addition, the Effigy must have some item linking it to the target. This can be a possession, a hair, a body part, etc. The more significant the better.
+                * Spells may then be cast upon the figure as if the figure was at 4 spaces range regardless of actual distance or line of sight. This ability can create any number of effects, but it cannot actually cause physical damage. All Body damage becomes [Stun] if the target cannot take anymore [Stun], the excess is ignored.
+                * The ability level of any Spells cast are [Limited] by the skill with which the Effigy is created and the significance of the item linked to the Effigy."
+              :titles "Straw Man")
+            :Fetish
+             (ability
+              :name "Fetish"
+              :summary
+               "* A fetish is a small object that can be used to bind a spirit. The item must be unique and may be found or created.
+                * [Action]: If you killed an extradimensional creatures last turn, you may capture the spirit of that creature in the Fetish.
+                * [Action]: Release the spirit in the fetish to perform one task that turn. The spirit must perform the task if it is able though it does so under duress and may twist the intentions or deceive the user. Regardless of outcome, the spirit is released and will disappear.")
+            :Figurine
+             (ability
+              :name "Figurine"
+              :summary
+               "* A miniature of a small creature grows into a full size version.")
+            "Iron Maiden"
+             (ability
+              :name "Iron Maiden"
+              :summary
+               "* Target takes 1 Stun Token for each point of combat damage it inflicts."
+              :titles "Thorns")
+            :Juju
+             (ability
+              :name "Juju"
+              :summary
+               "* The most horrific of fetishes, the shrunken head permanently holds the spirit of the slain person in an undead limbo. A shrunken head may only be created immediately after the user directly slays a person. After that a gruesome series of rituals over the next week mummifies the head and binds the spirit to the head.
+                * [Action]: Once per day, for 1 hour, the user may speak to the head and the head will telepathically respond. The head is effectively a prisoner of the user, and the user may interrogate or torment the head as he sees fit. The head cannot remain silent, but it does not have to be helpful or truthful."
+              :titles "Shrunken Head, Tsantsa")
+            "Life-like Art"
+             (ability
+              :name "Life-like Art")
+            "Life-like Tattoo"
+             (ability
+              :name "Life-like Tattoo")
+            "Living Tool"
+             (ability
+              :name "Living Tool"
+              :summary
+               "* Animates a small tool which makes the next skill easier.
+                * [Requires]: A simple tool with no moving parts.
+                * [Action]: On the next action the tool may be used at [+1 Skill].")
+            "Living Weapon"
+             (ability
+              :name "Living Weapon"
+              :summary
+               "* Animates a melee weapon which makes the next attack easier.
+                * [Requires]: A melee weapon with no moving parts.
+                * [Action]: On the next action the weapon may be used at [+1 Skill].")
+            :Miniature
+             (ability
+              :name "Miniature"
+              :summary "* A miniature of a simple item grows into a full size version.")
+            :Puppeteer
+             (ability
+              :name "Puppeteer"
+              :summary "* When this unit acts the target unit must perform the same actions.")
+            :Rack
+             (ability
+              :name "Rack"
+              :summary "* Each time Target uses a special [Ability] it takes a [Stun].")
+            :Serendipity
+             (ability
+              :name "Serendipity")
+            "Spirit Bottle"
+             (ability
+              :name "Spirit Bottle"
+              :summary
+               "* Create a bottle, mirror, or vase that captures and holds the Spirit of a being. If the being's body dies, the spirit continues to exist in the bottle. The spirit may mentally communicate with anyone touching the bottle.")
+            "Spirit Link"
+             (ability
+              :name "Spirit Link"
+              :summary
+               "* Create a bond with target. Each time it does damage to a target, remove 1 white token from yourself.")
+            "Subtle Possession"
+             (ability
+              :name "Subtle Possession"
+              :summary
+               "* The user's spirit secretly enters the body of the target. The user acts as a manipulative inner voice to the target.")
+            "Sympathetic Bond"
+             (ability
+              :name "Sympathetic Bond"
+              :summary
+               "* [Action]: Bond with a willing unit.
+                * [Action]: Transmit an emotion to a bonded unit.")
+            "True Name"
+             (ability
+              :name "True Name"
+              :summary
+               "* If the user knows the True Name of his subject, he gains +1 [Synchonicity] against that subject.")))
         :Divination
          (power
           :name "Divination"
@@ -2345,142 +2480,7 @@
               :name "Totem")
             "Vision Quest"
              (ability
-              :name "Vision Quest")))
-        :Fetishism
-         (power
-          :name "Fetishism"
-          :reference
-           "* Synchronicity is a phenomenon where people interpret two seemingly unrelated experiences as being meaningfully intertwined."
-          :summary
-           "* Fetishism is using a symbol to represent the thing you want to affect with your magic. Whatever you do to the symbol, you do to the target. The object and the thing it represents are 'in sympathy'; they are aligned. Sympathetic magic is a useful idea because often, your target is something non-physical, or something you can’t otherwise interact with directly. You could banish negative thoughts directly, but it’s easier to tie them to something physical by writing them down and then burning the paper. As the paper burns, so does the negativity. Correspondences are related to this. For example, different-colored candles represent different desires (like green for money, red for love, black for banishment, etc.) and as the candle burns down, your spell is cast. Wearing different stones or crystals can attract luck or success to you.   
-            * Cursed Energy - Cursed energy is born from negative emotions such as grief and anger. These negative feelings are common in human society so almost everyone possesses cursed energy. Cursed Energy can be controlled and focused to perform various magical feats.
-            * Cursed Spirit - Cursed Spirits are apparitions manifested entirely from cursed energy. Even their bodies are composed of cursed energy, making cursed spirits invisible to non-sorcerers. The emission of cursed energy from humans collects like sediment until a cursed spirit is born from the collective negative energy. Cursed Spirits born with strong feelings directed toward a certain aspect are especially strong. The stronger humanity's fear and anger is directed at cursing a certain aspect of the world, like natural disasters, the more powerful Curse Spirits spawned from those negative sentiments will be.
-            * Law of Similarity - Like produces like. An effect resembles its cause.
-            * Law of Contact/Contagion - Things which have once been in contact with each other continue to act on each other at a distance."
-          :titles
-           "Correspondence, Curses, Hexer, Shintoist, Soulcraft, Sympathy, Sympathetic Magic, Synchonicity, Voodoo, Witch man, Witchdoctor"
-          :abilitymap
-           (abilitymap
-            "Black Vise"
-             (ability
-              :name "Black Vise"
-              :summary "* Target must use a special [Ability] each [Turn] or take a [Stun].")
-            "Breath of Life"
-             (ability
-              :name "Breath of Life"
-              :summary "* Create an [Animated] creature."
-              :titles "Cursed Corpse")
-            "Cursed Sight"
-             (ability
-              :name "Cursed Sight"
-              :summary "* Curses and Cursed Spirits are normally invisibile, but this ability allows them to be seen.")
-            "Cursed Tool"
-             (ability
-              :name "Cursed Tool")
-            "Cursed Weapon"
-             (ability
-              :name "Cursed Weapon"
-              :summary "* Cursed Item - Items can also be infused with Curse Energy including such as cursed tools, cursed objects, and cursed corpses.")
-            "Dominant Possession"
-             (ability
-              :name "Dominant Possession"
-              :summary "* After defeating a target in mental combat, the user possesses the body of the target. The user keeps his Mind and Will stats and uses the target's Body."
-              :titles "Skinriding")
-            :Effigy
-             (ability
-              :name "Effigy"
-              :reference "Poppet, Voodoo Doll"
-              :summary
-               "* Create a figure representing the target. The target can be a being, a vehicle, a building, etc. The figure can be a doll, a wax figurine, an Origami, a sculpture, a drawing, or any other image created by hand by the caster. In addition, the Effigy must have some item linking it to the target. This can be a possession, a hair, a body part, etc. The more significant the better.
-                * Spells may then be cast upon the figure as if the figure was at 4 spaces range regardless of actual distance or line of sight. This ability can create any number of effects, but it cannot actually cause physical damage. All Body damage becomes [Stun] if the target cannot take anymore [Stun], the excess is ignored.
-                * The ability level of any Spells cast are [Limited] by the skill with which the Effigy is created and the significance of the item linked to the Effigy."
-              :titles "Straw Man")
-            :Fetish
-             (ability
-              :name "Fetish"
-              :summary
-               "* A fetish is a small object that can be used to bind a spirit. The item must be unique and may be found or created.
-                * [Action]: If you killed an extradimensional creatures last turn, you may capture the spirit of that creature in the Fetish.
-                * [Action]: Release the spirit in the fetish to perform one task that turn. The spirit must perform the task if it is able though it does so under duress and may twist the intentions or deceive the user. Regardless of outcome, the spirit is released and will disappear.")
-            :Figurine
-             (ability
-              :name "Figurine"
-              :summary
-               "* A miniature of a small creature grows into a full size version.")
-            "Iron Maiden"
-             (ability
-              :name "Iron Maiden"
-              :summary
-               "* Target takes 1 Stun Token for each point of combat damage it inflicts."
-              :titles "Thorns")
-            :Juju
-             (ability
-              :name "Juju"
-              :summary
-               "* The most horrific of fetishes, the shrunken head permanently holds the spirit of the slain person in an undead limbo. A shrunken head may only be created immediately after the user directly slays a person. After that a gruesome series of rituals over the next week mummifies the head and binds the spirit to the head.
-                * [Action]: Once per day, for 1 hour, the user may speak to the head and the head will telepathically respond. The head is effectively a prisoner of the user, and the user may interrogate or torment the head as he sees fit. The head cannot remain silent, but it does not have to be helpful or truthful."
-              :titles "Shrunken Head, Tsantsa")
-            "Life-like Art"
-             (ability
-              :name "Life-like Art")
-            "Life-like Tattoo"
-             (ability
-              :name "Life-like Tattoo")
-            "Living Tool"
-             (ability
-              :name "Living Tool"
-              :summary
-               "* Animates a small tool which makes the next skill easier.
-                * [Requires]: A simple tool with no moving parts.
-                * [Action]: On the next action the tool may be used at [+1 Skill].")
-            "Living Weapon"
-             (ability
-              :name "Living Weapon"
-              :summary
-               "* Animates a melee weapon which makes the next attack easier.
-                * [Requires]: A melee weapon with no moving parts.
-                * [Action]: On the next action the weapon may be used at [+1 Skill].")
-            :Miniature
-             (ability
-              :name "Miniature"
-              :summary "* A miniature of a simple item grows into a full size version.")
-            :Puppeteer
-             (ability
-              :name "Puppeteer"
-              :summary "* When this unit acts the target unit must perform the same actions.")
-            :Rack
-             (ability
-              :name "Rack"
-              :summary "* Each time Target uses a special [Ability] it takes a [Stun].")
-            :Serendipity
-             (ability
-              :name "Serendipity")
-            "Spirit Bottle"
-             (ability
-              :name "Spirit Bottle"
-              :summary
-               "* Create a bottle, mirror, or vase that captures and holds the Spirit of a being. If the being's body dies, the spirit continues to exist in the bottle. The spirit may mentally communicate with anyone touching the bottle.")
-            "Spirit Link"
-             (ability
-              :name "Spirit Link"
-              :summary
-               "* Create a bond with target. Each time it does damage to a target, remove 1 white token from yourself.")
-            "Subtle Possession"
-             (ability
-              :name "Subtle Possession"
-              :summary
-               "* The user's spirit secretly enters the body of the target. The user acts as a manipulative inner voice to the target.")
-            "Sympathetic Bond"
-             (ability
-              :name "Sympathetic Bond"
-              :summary
-               "* [Action]: Bond with a willing unit.
-                * [Action]: Transmit an emotion to a bonded unit.")
-            "True Name"
-             (ability
-              :name "True Name"
-              :summary
-               "* If the user knows the True Name of his subject, he gains +1 [Synchonicity] against that subject."))))))))
+              :name "Vision Quest"))))))))
 
 (func chapter_magic_items : base/chapter
  (chapter

@@ -15,6 +15,7 @@ import vx_state_test from "./vx/state_test.js"
 import vx_type_test from "./vx/type_test.js"
 import vx_web_html_test from "./vx/web/html_test.js"
 import nx_crypto_cryptosheet_test from "./nx/crypto/cryptosheet_test.js"
+import vx_util_randomize_test from "./vx/util/randomize_test.js"
 import vx_collection_test from "./vx/collection_test.js"
 import vx_data_textblock_test from "./vx/data/textblock_test.js"
 import vx_repl_test from "./vx/repl_test.js"
@@ -110,6 +111,7 @@ export default class app_test {
       vx_type_test.test_package(context),
       vx_web_html_test.test_package(context),
       nx_crypto_cryptosheet_test.test_package(context),
+      vx_util_randomize_test.test_package(context),
       vx_collection_test.test_package(context),
       vx_data_textblock_test.test_package(context),
       vx_repl_test.test_package(context),
