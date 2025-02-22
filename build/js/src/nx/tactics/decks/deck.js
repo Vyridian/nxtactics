@@ -2,9 +2,9 @@
 
 import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
+import nx_tactics_decks_conflict from "../../../nx/tactics/decks/conflict.js"
 import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
-import nx_tactics_decks_fate from "../../../nx/tactics/decks/fate.js"
 import nx_tactics_decks_restraint from "../../../nx/tactics/decks/restraint.js"
 import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_scenario_murintrail from "../../../nx/tactics/decks/scenario-murintrail.js"
@@ -258,8 +258,8 @@ export default class nx_tactics_decks_deck {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_tarot.f_deck_tarot(),
-          nx_tactics_decks_fate.f_deck_fate(),
+          nx_tactics_decks_conflict.f_deck_conflict(),
+          nx_tactics_decks_conflict.f_deck_conflict_back(),
           nx_tactics_decks_wound.f_deck_wound(),
           nx_tactics_decks_wound.f_deck_woundback(),
           nx_tactics_decks_disorder.f_deck_disorder(),
@@ -275,10 +275,7 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_starter.f_deck_player("green"),
           nx_tactics_decks_starter.f_deck_player("red"),
           nx_tactics_decks_starter.f_deck_player("yellow"),
-          nx_tactics_decks_fate.f_deck_fate_1("blue"),
-          nx_tactics_decks_fate.f_deck_fate_1("green"),
-          nx_tactics_decks_fate.f_deck_fate_1("red"),
-          nx_tactics_decks_fate.f_deck_fate_1("yellow")
+          nx_tactics_decks_tarot.f_deck_tarot()
         )
       )
     )

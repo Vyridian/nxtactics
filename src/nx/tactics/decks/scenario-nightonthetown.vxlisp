@@ -79,6 +79,37 @@
         (base/unititem
          :item (data/item<-key "Monocle")))))))
 
+(func unit-zombiecrawler : base/unit
+ (base/unit
+  :name "Zombie Crawler"
+  :image "images/cards/unit-zombiecrawler.svg"
+  :body "8x1"
+  :mind "5x-1"
+  :will "2x1"
+  :speed "2x0"
+  :mass "80kg/175"
+  :speedland "10kph"
+  :summary
+   "[Zombie]"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill (data/tactics-skill "Close Combat")
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+        (base/unitability
+         :ability (data/ability<-key "Grab")))))
+  :unitpowermap
+   (base/unitpowermap<-unitpowerlist
+    (base/unitpower
+     :power (data/tactics-power "Natural Weaponry")
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+        (base/unitability
+         :ability (data/ability<-key "Bite")))))))
+
 (func unit-zombiedog : base/unit
  (base/unit
   :name "Zombie Dog"
@@ -214,6 +245,7 @@
         "Shotgun"
         "Shotgun Ammo"
         "Spear"))
+      (unit-zombiecrawler)
       (unit-zombiedog)
       (base/cardimage<-card (unit-zombiedog))
       (unit-zombierunner)

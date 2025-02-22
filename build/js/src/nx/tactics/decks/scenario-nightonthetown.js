@@ -46,6 +46,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
                 {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_itemlist},
                 nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Fire Axe", "Jerry Can", "Keys", "Knife", "Liquor Bottle", "Lock Combination", "Molotov Cocktail", "Monocle", "Revolver", "Revolver Ammo", "Rifle", "Rifle Ammo", "Shortbow", "Shotgun", "Shotgun Ammo", "Spear")
               ),
+              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiecrawler(),
               nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog(),
               nx_tactics_base.f_cardimage_from_card(
                 nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog()
@@ -275,6 +276,80 @@ export default class nx_tactics_decks_scenario_nightonthetown {
               {"any-1": nx_tactics_base.t_unititem},
               ":item",
               nx_tactics_decks_data.f_item_from_key("Monocle")
+            )
+          )
+        )
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unit_zombiecrawler
+   * @return {unit}
+   */
+  static t_unit_zombiecrawler = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_zombiecrawler = {
+    vx_type: nx_tactics_decks_scenario_nightonthetown.t_unit_zombiecrawler
+  }
+
+  // (func unit-zombiecrawler)
+  static f_unit_zombiecrawler() {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_new(
+      {"any-1": nx_tactics_base.t_unit},
+      ":name",
+      "Zombie Crawler",
+      ":image",
+      "images/cards/unit-zombiecrawler.svg",
+      ":body",
+      "8x1",
+      ":mind",
+      "5x-1",
+      ":will",
+      "2x1",
+      ":speed",
+      "2x0",
+      ":mass",
+      "80kg/175",
+      ":speedland",
+      "10kph",
+      ":summary",
+      "[Zombie]",
+      ":unitskillmap",
+      nx_tactics_base.f_unitskillmap_from_unitskilllist(
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_unitskill},
+          ":skill",
+          nx_tactics_decks_data.f_tactics_skill("Close Combat"),
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_unitability},
+              ":ability",
+              nx_tactics_decks_data.f_ability_from_key("Grab")
+            )
+          )
+        )
+      ),
+      ":unitpowermap",
+      nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_unitpower},
+          ":power",
+          nx_tactics_decks_data.f_tactics_power("Natural Weaponry"),
+          ":level",
+          "1",
+          ":unitabilitymap",
+          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+            vx_core.f_new(
+              {"any-1": nx_tactics_base.t_unitability},
+              ":ability",
+              nx_tactics_decks_data.f_ability_from_key("Bite")
             )
           )
         )
@@ -529,6 +604,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "place-street": nx_tactics_decks_scenario_nightonthetown.e_place_street,
       "rule-zombie": nx_tactics_decks_scenario_nightonthetown.e_rule_zombie,
       "unit-theprofessor": nx_tactics_decks_scenario_nightonthetown.e_unit_theprofessor,
+      "unit-zombiecrawler": nx_tactics_decks_scenario_nightonthetown.e_unit_zombiecrawler,
       "unit-zombiedog": nx_tactics_decks_scenario_nightonthetown.e_unit_zombiedog,
       "unit-zombierunner": nx_tactics_decks_scenario_nightonthetown.e_unit_zombierunner,
       "unit-zombiewalker": nx_tactics_decks_scenario_nightonthetown.e_unit_zombiewalker
@@ -543,6 +619,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       "place-street": nx_tactics_decks_scenario_nightonthetown.t_place_street,
       "rule-zombie": nx_tactics_decks_scenario_nightonthetown.t_rule_zombie,
       "unit-theprofessor": nx_tactics_decks_scenario_nightonthetown.t_unit_theprofessor,
+      "unit-zombiecrawler": nx_tactics_decks_scenario_nightonthetown.t_unit_zombiecrawler,
       "unit-zombiedog": nx_tactics_decks_scenario_nightonthetown.t_unit_zombiedog,
       "unit-zombierunner": nx_tactics_decks_scenario_nightonthetown.t_unit_zombierunner,
       "unit-zombiewalker": nx_tactics_decks_scenario_nightonthetown.t_unit_zombiewalker
@@ -719,6 +796,24 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario_nightonthetown.f_unit_theprofessor
+    }
+
+    // (func unit-zombiecrawler)
+    nx_tactics_decks_scenario_nightonthetown.t_unit_zombiecrawler['vx_value'] = {
+      name          : "unit-zombiecrawler",
+      pkgname       : "nx/tactics/decks/scenario-nightonthetown",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario_nightonthetown.f_unit_zombiecrawler
     }
 
     // (func unit-zombiedog)

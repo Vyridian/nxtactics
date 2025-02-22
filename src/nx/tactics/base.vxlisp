@@ -32,6 +32,7 @@
    image       : string
    imgmirror   : boolean
    reference   : string
+   secrets     : string
    summary     : string
    titles      : string
    orientation : string
@@ -64,6 +65,9 @@
 (type chaptermap : map
  :allowtypes [chapter])
 
+(type conflict : struct
+ :traits [card])
+
 (type damage : struct
  :traits [card]
  :doc "Lasting Body Damage")
@@ -81,9 +85,6 @@
 (type deckmap : map
  :traits     [card]
  :allowtypes [deck])
-
-(type fate : struct
- :traits [card])
 
 (type goal : struct
  :properties

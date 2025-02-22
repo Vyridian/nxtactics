@@ -2182,6 +2182,9 @@
           :summary
            "* The most unusual Fae are Changelings who are Fae Spirits that reincarnate within mortal children in the womb. These Changeling children usually do not remember their Fae self until an event of self realization called the Chrysalis when they become aware of their Fae heritage. The Chrysalis is a turmultuous time for the Fae that attracts others attuned to the Dreaming. Other Fae are obliged to assist the Changeling in their self-discovery. Since Fae are perpetually reincarnated, their Fae form may be millenia old while their mortal form may be just a child. As Changelings grow older the weight of mortal life tends to make it increasingly difficult to manifest their Fae form. Eventually, they tend to forget they were ever Fae at all, and their Fae form is trapped until their mortal body dies and they can reincarnate again.
             * Seeming - Changelings appear as normal people most of the time. Their Fae self can become aware accidentally during dreams and with practice can be called at will. When the Fae self is aware, the Changeling appears in their Fae form to other supernatural beings and those with strong imaginations (like young children). To others the Changeling aways appears as a normal person. Changeling activities are often mistaken for sleepwalking or psychotic behavior by normal people.")
+        "Fae Dragon"
+         (unit
+          :name "Fae Dragon")
         :Gremlin
          (unit
           :name "Gremlin"
@@ -4608,6 +4611,13 @@ to ever-greater acts of violence and revenge.")
          (unit
           :name "Sphinx"
           :summary "* Highly intelligent")
+        :Strix
+         (unit
+          :name "Strix"
+          :titles "Stirges (plural), Vampire Owls"
+          :summary
+           "A bird of ill-omen that feeds on human flesh and blood.
+            * Description - A large-headed, dark, birdlike creature similar to an owl with transfixed eyes, rapacious beak, hooked claws. They fly and rest inverted with feet above their head.")
         "Tentacle Terror"
          (unit
           :name "Tentacle Terror"

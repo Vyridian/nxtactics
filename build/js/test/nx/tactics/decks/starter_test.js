@@ -51,8 +51,8 @@ export default class nx_tactics_decks_starter_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "card-fatelower", 0,
-          "card-fateupper", 0,
+          "card-conflictlower", 0,
+          "card-conflictupper", 0,
           "card-player", 0,
           "card-rotated", 0,
           "card-round-num", 0,

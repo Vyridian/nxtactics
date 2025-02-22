@@ -1222,6 +1222,9 @@
             :Rapture
              (ability
               :name "Rapture")
+            "Righteous Fury"
+             (ability
+              :name "Righteous Fury")
             :Righteousness
              (ability
               :name "Righteousness")

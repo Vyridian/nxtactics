@@ -1092,7 +1092,7 @@ export default class nx_tactics_books_skills {
               ":name",
               "Business",
               ":reference",
-              "* Did they get you to trade? Your heroes for ghosts? Hot ashes for trees? Hot air for a cool breeze? Cold comfort for change? Did you exchange? A walk-on part in the war. For a leading role in a cage? - Pink Floyd, Wish you were here",
+              "* Did they get you to trade? Your heroes for ghosts? Hot ashes for trees? Hot air for a cool breeze? Cold comfort for change? Did you exchange? A walk-on part in the war. For a leading role in a cage? - Pink Floyd, Wish you were here\n* Who knows? Not me. We never lost control. You're face to face. With the man who sold the world - David Bowie, The Man Who Sold the World",
               ":titles",
               "Commerce",
               ":abilitymap",

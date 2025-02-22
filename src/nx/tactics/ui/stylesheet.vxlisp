@@ -412,9 +412,9 @@
     :x 58))
  :doc "")
 
-(const style-card-display-fate : ui/style
+(const style-card-display-conflict : ui/style
  (ui/style
-  :name "style-card-display-fate"
+  :name "style-card-display-conflict"
   :layout ui/layout-label
   :pointpos
    (ui/point

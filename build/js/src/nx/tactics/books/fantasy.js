@@ -2242,6 +2242,8 @@ export default class nx_tactics_books_fantasy {
               {"any-1": nx_tactics_base.t_section},
               ":name",
               "Elysium",
+              ":titles",
+              "Faewild, Wyld",
               ":summary",
               "* The legendary homeland of the Fae. It is a wonderous place of myth and legend deep in the dream world.\n* Seasons - The Fae realm is driven by the seasons in an eternal cycle of death and rebirth.\n** Spring - \n*** Spring Bloom\n** Summer - \n** Autumn - \n*** Autumnal Harvest\n** Winter - \n* Courts - \n** Seelie Court - \n** Unseelie Court - \n* Archfae - \n* Fae Magic - Though the Fae trade in physical objects like gold or food, these things are actually made of imagination and Fae Magic. For the Fae, magic is the one true currency. Having it and using it is the sign of royalty. Those with no magic have no status and no value.",
               ":placemap",

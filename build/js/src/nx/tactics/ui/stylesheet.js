@@ -257,10 +257,10 @@ export default class nx_tactics_ui_stylesheet {
   static c_style_card_display = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display', type: vx_ui_ui.t_style}}
 
   /**
-   * Constant: style-card-display-fate
+   * Constant: style-card-display-conflict
    * {style}
    */
-  static c_style_card_display_fate = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display-fate', type: vx_ui_ui.t_style}}
+  static c_style_card_display_conflict = {vx_type: vx_ui_ui.t_style, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'style-card-display-conflict', type: vx_ui_ui.t_style}}
 
   /**
    * Constant: style-card-display2
@@ -633,7 +633,7 @@ export default class nx_tactics_ui_stylesheet {
       "style-body": nx_tactics_ui_stylesheet.c_style_body,
       "style-card": nx_tactics_ui_stylesheet.c_style_card,
       "style-card-display": nx_tactics_ui_stylesheet.c_style_card_display,
-      "style-card-display-fate": nx_tactics_ui_stylesheet.c_style_card_display_fate,
+      "style-card-display-conflict": nx_tactics_ui_stylesheet.c_style_card_display_conflict,
       "style-card-display2": nx_tactics_ui_stylesheet.c_style_card_display2,
       "style-card-display3": nx_tactics_ui_stylesheet.c_style_card_display3,
       "style-card-display4": nx_tactics_ui_stylesheet.c_style_card_display4,
@@ -1147,11 +1147,11 @@ export default class nx_tactics_ui_stylesheet {
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 51)
     ))
 
-    // (const style-card-display-fate)
-    Object.assign(nx_tactics_ui_stylesheet.c_style_card_display_fate, vx_core.f_new(
+    // (const style-card-display-conflict)
+    Object.assign(nx_tactics_ui_stylesheet.c_style_card_display_conflict, vx_core.f_new(
       {"any-1": vx_ui_ui.t_style},
       ":name",
-      "style-card-display-fate",
+      "style-card-display-conflict",
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",

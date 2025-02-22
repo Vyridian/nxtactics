@@ -1,8 +1,8 @@
 (package nx/tactics/decks/deck
  :libs (lib base           :path nx/tactics/base)
+       (lib conflict       :path nx/tactics/decks/conflict)
        (lib data           :path nx/tactics/decks/data)
        (lib disorder       :path nx/tactics/decks/disorder)
-       (lib fate           :path nx/tactics/decks/fate)
        (lib restraint      :path nx/tactics/decks/restraint)
        (lib rule           :path nx/tactics/decks/rule)
        (lib scenario       :path nx/tactics/decks/scenario-murintrail)
@@ -87,8 +87,8 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     (tarot/deck-tarot)
-     (fate/deck-fate)
+     (conflict/deck-conflict)
+     (conflict/deck-conflict-back)
      (wound/deck-wound)
      (wound/deck-woundback)
      (disorder/deck-disorder)
@@ -104,10 +104,7 @@
      (starter/deck-player "green")
      (starter/deck-player "red")
      (starter/deck-player "yellow")
-     (fate/deck-fate "blue")
-     (fate/deck-fate "green")
-     (fate/deck-fate "red")
-     (fate/deck-fate "yellow"))))
+     (tarot/deck-tarot))))
  :doc "Setup Deck")
 
 (func deck-scenarios : base/deck

@@ -48,8 +48,8 @@ import nx_tactics_books_space_and_time_test from "./nx/tactics/books/space_and_t
 import nx_tactics_books_superheroes_test from "./nx/tactics/books/superheroes_test.js"
 import nx_tactics_books_world_wars_test from "./nx/tactics/books/world_wars_test.js"
 import nx_tactics_decks_ability_test from "./nx/tactics/decks/ability_test.js"
+import nx_tactics_decks_conflict_test from "./nx/tactics/decks/conflict_test.js"
 import nx_tactics_decks_disorder_test from "./nx/tactics/decks/disorder_test.js"
-import nx_tactics_decks_fate_test from "./nx/tactics/decks/fate_test.js"
 import nx_tactics_decks_item_test from "./nx/tactics/decks/item_test.js"
 import nx_tactics_decks_place_test from "./nx/tactics/decks/place_test.js"
 import nx_tactics_decks_restraint_test from "./nx/tactics/decks/restraint_test.js"
@@ -144,8 +144,8 @@ export default class app_test {
       nx_tactics_books_superheroes_test.test_package(context),
       nx_tactics_books_world_wars_test.test_package(context),
       nx_tactics_decks_ability_test.test_package(context),
+      nx_tactics_decks_conflict_test.test_package(context),
       nx_tactics_decks_disorder_test.test_package(context),
-      nx_tactics_decks_fate_test.test_package(context),
       nx_tactics_decks_item_test.test_package(context),
       nx_tactics_decks_place_test.test_package(context),
       nx_tactics_decks_restraint_test.test_package(context),

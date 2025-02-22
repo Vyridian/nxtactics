@@ -1665,7 +1665,9 @@
         :Business
          (skill
           :name "Business"
-          :reference "* Did they get you to trade? Your heroes for ghosts? Hot ashes for trees? Hot air for a cool breeze? Cold comfort for change? Did you exchange? A walk-on part in the war. For a leading role in a cage? - Pink Floyd, Wish you were here"
+          :reference
+           "* Did they get you to trade? Your heroes for ghosts? Hot ashes for trees? Hot air for a cool breeze? Cold comfort for change? Did you exchange? A walk-on part in the war. For a leading role in a cage? - Pink Floyd, Wish you were here
+            * Who knows? Not me. We never lost control. You're face to face. With the man who sold the world - David Bowie, The Man Who Sold the World"
           :titles "Commerce"
           :abilitymap
            (abilitymap
@@ -1822,7 +1824,8 @@
             :Streetwise
              (ability
               :name "Streetwise"
-              :summary "* [Action]: Gain knowledge where a good or service can be found in a city including black market goods or services.")
+              :summary
+               "* [Action]: Gain knowledge where a good or service can be found in a city including black market goods or services.")
             :Translator
              (ability
               :name "Translator"
@@ -1830,7 +1833,8 @@
             "Trash Talk"
              (ability
               :name "Trash Talk"
-              :reference "* What's the matter Agent Scary Lips? You're Scary Lips tasting my hairy shit? You tasting Doug Wilson's World Famous beef stew? How's it going down, its kinda spicy right? You guys are so fucked right now, all I can think about is your wife and a horse. - Doug Wilson, Weeds"
+              :reference
+               "* What's the matter Agent Scary Lips? You're Scary Lips tasting my hairy shit? You tasting Doug Wilson's World Famous beef stew? How's it going down, its kinda spicy right? You guys are so fucked right now, all I can think about is your wife and a horse. - Doug Wilson, Weeds"
               :titles "Put Down")
             :Videography
              (ability
@@ -1843,7 +1847,8 @@
             "Wise Words"
              (ability
               :name "Wise Words"
-              :summary "* Apply personal life experiences to help others understand themselves.")
+              :summary
+               "* Apply personal life experiences to help others understand themselves.")
             :Cantonese
              (ability
               :name "Cantonese")
@@ -1888,7 +1893,8 @@
             :Linguistics
              (specialty
               :name "Linguistics"
-              :reference "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor"
+              :reference
+               "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor"
               :summary
                "* Philosophy - The 'common tongue' concept is boring and unrealistic.
                 * Simulate the limitations of language by reducing usable vocabulary. This can be done by limiting a conversation to 2, 3, 4, or 5 letter words depending on the fluency of those involved. Having a conversation using only 2 letter words is going to require a fair amount of hand gesturing or drawing to get a point across. If a person is overhearing a conversation, bleep out the big words and let them guess at the missing words.")
@@ -1898,7 +1904,8 @@
         :Crime
          (skill
           :name "Crime"
-          :titles "Bandit, Brigand, Crime Boss, Crook, Cutthroat, Highwayman, Pimp, Yakuza, Yakuza - Oyabun"
+          :titles
+           "Bandit, Brigand, Crime Boss, Crook, Cutthroat, Highwayman, Pimp, Yakuza, Yakuza - Oyabun"
           :stat "Shadow"
           :abilitymap
            (abilitymap
@@ -1983,8 +1990,10 @@
             :Escape
              (ability
               :name "Escape"
-              :reference "* The chain in those handcuffs is high-tensile steel. It'd take you ten minutes to hack through it with this. Now, if you're lucky, you could hack through your ankle in five minutes. Go."
-              :summary "* The ability comes from extensive practice escaping from various bonds and confinements. At higher abilities, the user can dislocate joints to slither out of bonds."
+              :reference
+               "* The chain in those handcuffs is high-tensile steel. It'd take you ten minutes to hack through it with this. Now, if you're lucky, you could hack through your ankle in five minutes. Go."
+              :summary
+               "* The ability comes from extensive practice escaping from various bonds and confinements. At higher abilities, the user can dislocate joints to slither out of bonds."
               :titles "Escape Artist")
             "Evade Pursuit"
              (ability

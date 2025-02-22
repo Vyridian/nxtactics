@@ -87,7 +87,7 @@ export default class nx_tactics_ui_stylesheet_test {
           "style-body", 0,
           "style-card", 0,
           "style-card-display", 0,
-          "style-card-display-fate", 0,
+          "style-card-display-conflict", 0,
           "style-card-display2", 0,
           "style-card-display3", 0,
           "style-card-display4", 0,

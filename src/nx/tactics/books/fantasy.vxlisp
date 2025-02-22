@@ -2367,11 +2367,13 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
              (unit
               :name "Pyaray"
               :reference "Elric of Melnibone"
-              :summary "* Pyaray is a Chaos Lord who rules the deepest parts of the ocean. He appears as a giant red octopus-like creature, and his soul is kept in a blue crystal on his head. Sailors who drown at sea are taken into his Chaos Fleet. One portent of the end of the world is the ascent of the Chaos Fleet to the surface. Pyaray and Straasha are bitter enemies."
+              :summary
+               "* Pyaray is a Chaos Lord who rules the deepest parts of the ocean. He appears as a giant red octopus-like creature, and his soul is kept in a blue crystal on his head. Sailors who drown at sea are taken into his Chaos Fleet. One portent of the end of the world is the ascent of the Chaos Fleet to the surface. Pyaray and Straasha are bitter enemies."
               :titles "Tentacled Whisperer of Impossible Secrets")))
         :Elysium
          (section
           :name "Elysium"
+          :titles "Faewild, Wyld"
           :summary
            "* The legendary homeland of the Fae. It is a wonderous place of myth and legend deep in the dream world.
             * Seasons - The Fae realm is driven by the seasons in an eternal cycle of death and rebirth.

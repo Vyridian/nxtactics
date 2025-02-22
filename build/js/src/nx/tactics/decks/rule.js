@@ -66,7 +66,7 @@ export default class nx_tactics_decks_rule {
   // (func card-advantage)
   static f_card_advantage() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-advantage", ":name", "Advantage", ":summary", "* [Reveal Fate]: Reveal another Fate. You may use this Fate card instead.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-advantage", ":name", "Advantage", ":summary", "* [Reveal]: Reveal another Conflict. You may use this card instead.")
     return output
   }
 
@@ -174,7 +174,7 @@ export default class nx_tactics_decks_rule {
   // (func card-cover)
   static f_card_cover() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "cover", ":name", "Cover", ":summary", "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.\n* If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Initiative:-1.\n** 50% Cover: Initiative:-2.\n** 75% Cover: Initiative:-3.\n** 100% Cover: Initiative:-4.\n* If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Fate]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "cover", ":name", "Cover", ":summary", "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.\n* If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Initiative:-1.\n** 50% Cover: Initiative:-2.\n** 75% Cover: Initiative:-3.\n** 100% Cover: Initiative:-4.\n* If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead.")
     return output
   }
 
@@ -246,7 +246,7 @@ export default class nx_tactics_decks_rule {
   // (func card-disadvantage)
   static f_card_disadvantage() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-disadvantage", ":name", "Disadvantage", ":summary", "* [Reveal Fate]: Reveal another Fate. IF it is worse THEN use it instead.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-disadvantage", ":name", "Disadvantage", ":summary", "* [Reveal]: Reveal another Conflict. IF it is worse THEN use it instead.")
     return output
   }
 
@@ -300,7 +300,7 @@ export default class nx_tactics_decks_rule {
   // (func card-fight-action)
   static f_card_fight_action() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "fight-action", ":name", "Fight", ":summary", "* Target a unit with a damaging Skill/Power.\n* Each player chooses a Fate card from their hand or a random Fate from Shared Fate.\n* Fate Cards are compared like Rock/Paper/Scissors.\n* Fight Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter\n* If both play Attack or Focus then compare by rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.\n* Discard all card used (except Keep)")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "fight-action", ":name", "Fight", ":summary", "* Target a unit with a damaging Skill/Power.\n* Each player chooses a Conflict card from their hand or a random card from Shared Conflict.\n* Conflict Cards are compared like Rock/Paper/Scissors.\n* Fight Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter\n* If both play Attack or Focus then compare by rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.\n* Discard all card used (except Keep)")
     return output
   }
 
@@ -667,7 +667,7 @@ export default class nx_tactics_decks_rule {
   // (func card-search-action)
   static f_card_search_action() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "search-action", ":name", "Search", ":summary", "* [Double Action]: Test [Investigate] vs. [Fate] to search the [Place] you occupy. If you succeed, you may find something.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "search-action", ":name", "Search", ":summary", "* [Double Action]: Test [Investigate] vs. [Conflict] to search the [Place] you occupy. If you succeed, you may find something.")
     return output
   }
 
@@ -784,7 +784,7 @@ export default class nx_tactics_decks_rule {
   // (func card-surprise)
   static f_card_surprise() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-surprise", ":name", "Surprise", ":summary", "* When:\n** A unit suddenly appears adjacent or on a unit.\n* Then:\n** Reveal [Fate]. Unit takes temporary damage based on the [Suit].\n** [Rods] = [Fatigue]\n** [Coins] = [Stun]\n** [Cups] = [Stress]\n** [Swords] = [Slow]")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-surprise", ":name", "Surprise", ":summary", "* When:\n** A unit suddenly appears adjacent or on a unit.\n* Then:\n** Reveal [Conflict]. Unit takes temporary damage based on the [Suit].\n** [Rods] = [Fatigue]\n** [Coins] = [Stun]\n** [Cups] = [Stress]\n** [Swords] = [Slow]")
     return output
   }
 
@@ -820,7 +820,7 @@ export default class nx_tactics_decks_rule {
   // (func card-turn)
   static f_card_turn() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "turn", ":name", "Turn", ":summary", "* Each [Round], each [Unit] will get a [Turn] based on [Turn Order].\n* Turn Start: Draw from your [Fate] deck. [Recover].\n* Take 2 Actions: These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]. You may perform the same Action twice.\n* Turn End: The next unit in Turn Order performs their turn until the Round Ends.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "turn", ":name", "Turn", ":summary", "* Each [Round], each [Unit] will get a [Turn] based on [Turn Order].\n* Turn Start: Draw from your [Conflict] deck. [Recover].\n* Take 2 Actions: These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]. You may perform the same Action twice.\n* Turn End: The next unit in Turn Order performs their turn until the Round Ends.")
     return output
   }
 

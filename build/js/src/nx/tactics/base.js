@@ -105,6 +105,12 @@ export default class nx_tactics_base {
   static e_chaptermap = {vx_type: nx_tactics_base.t_chaptermap}
 
   /**
+   * type: conflict
+   */
+  static t_conflict = {}
+  static e_conflict = {vx_type: nx_tactics_base.t_conflict}
+
+  /**
    * type: damage
    * Lasting Body Damage
    */
@@ -141,12 +147,6 @@ export default class nx_tactics_base {
    */
   static t_disorder = {}
   static e_disorder = {vx_type: nx_tactics_base.t_disorder}
-
-  /**
-   * type: fate
-   */
-  static t_fate = {}
-  static e_fate = {vx_type: nx_tactics_base.t_fate}
 
   /**
    * type: goal
@@ -3255,13 +3255,13 @@ export default class nx_tactics_base {
       "chapterlist": nx_tactics_base.e_chapterlist,
       "chapterlistlist": nx_tactics_base.e_chapterlistlist,
       "chaptermap": nx_tactics_base.e_chaptermap,
+      "conflict": nx_tactics_base.e_conflict,
       "damage": nx_tactics_base.e_damage,
       "damagelist": nx_tactics_base.e_damagelist,
       "damagemap": nx_tactics_base.e_damagemap,
       "deck": nx_tactics_base.e_deck,
       "deckmap": nx_tactics_base.e_deckmap,
       "disorder": nx_tactics_base.e_disorder,
-      "fate": nx_tactics_base.e_fate,
       "goal": nx_tactics_base.e_goal,
       "item": nx_tactics_base.e_item,
       "itemlist": nx_tactics_base.e_itemlist,
@@ -3501,13 +3501,13 @@ export default class nx_tactics_base {
       "chapterlist": nx_tactics_base.t_chapterlist,
       "chapterlistlist": nx_tactics_base.t_chapterlistlist,
       "chaptermap": nx_tactics_base.t_chaptermap,
+      "conflict": nx_tactics_base.t_conflict,
       "damage": nx_tactics_base.t_damage,
       "damagelist": nx_tactics_base.t_damagelist,
       "damagemap": nx_tactics_base.t_damagemap,
       "deck": nx_tactics_base.t_deck,
       "deckmap": nx_tactics_base.t_deckmap,
       "disorder": nx_tactics_base.t_disorder,
-      "fate": nx_tactics_base.t_fate,
       "goal": nx_tactics_base.t_goal,
       "item": nx_tactics_base.t_item,
       "itemlist": nx_tactics_base.t_itemlist,
@@ -3630,6 +3630,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -3762,6 +3767,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -3878,6 +3888,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -3952,6 +3967,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -4023,6 +4043,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -4142,6 +4167,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -4232,6 +4262,85 @@ export default class nx_tactics_base {
     nx_tactics_base.e_chaptermap['vx_type'] = nx_tactics_base.t_chaptermap
     nx_tactics_base.e_chaptermap['vx_value'] = {}
 
+    // (type conflict)
+    nx_tactics_base.t_conflict['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_conflict['vx_value'] = {
+      name          : "conflict",
+      pkgname       : "nx/tactics/base",
+      extends       : ":struct",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [nx_tactics_base.t_card],
+      properties    : {
+        "id": {
+          "name" : "id",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "name": {
+          "name" : "name",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "icon": {
+          "name" : "icon",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "image": {
+          "name" : "image",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "imgmirror": {
+          "name" : "imgmirror",
+          "type" : vx_core.t_boolean,
+          "multi": false
+        },
+        "reference": {
+          "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "summary": {
+          "name" : "summary",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "titles": {
+          "name" : "titles",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "orientation": {
+          "name" : "orientation",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "ranksuit": {
+          "name" : "ranksuit",
+          "type" : nx_tactics_base.t_ranksuit,
+          "multi": false
+        }
+      },
+      proplast      : {
+        "name" : "ranksuit",
+        "type" : nx_tactics_base.t_ranksuit,
+        "multi": false
+      }
+    }
+    nx_tactics_base.e_conflict['vx_type'] = nx_tactics_base.t_conflict
+    nx_tactics_base.e_conflict['vx_value'] = {}
+
     // (type damage)
     nx_tactics_base.t_damage['vx_type'] = vx_core.t_type
     nx_tactics_base.t_damage['vx_value'] = {
@@ -4273,6 +4382,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -4387,6 +4501,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -4466,6 +4585,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -4540,6 +4664,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -4569,80 +4698,6 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_disorder['vx_type'] = nx_tactics_base.t_disorder
     nx_tactics_base.e_disorder['vx_value'] = {}
-
-    // (type fate)
-    nx_tactics_base.t_fate['vx_type'] = vx_core.t_type
-    nx_tactics_base.t_fate['vx_value'] = {
-      name          : "fate",
-      pkgname       : "nx/tactics/base",
-      extends       : ":struct",
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [nx_tactics_base.t_card],
-      properties    : {
-        "id": {
-          "name" : "id",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "name": {
-          "name" : "name",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "icon": {
-          "name" : "icon",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "image": {
-          "name" : "image",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "imgmirror": {
-          "name" : "imgmirror",
-          "type" : vx_core.t_boolean,
-          "multi": false
-        },
-        "reference": {
-          "name" : "reference",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "summary": {
-          "name" : "summary",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "titles": {
-          "name" : "titles",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
-        }
-      },
-      proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
-        "multi": false
-      }
-    }
-    nx_tactics_base.e_fate['vx_type'] = nx_tactics_base.t_fate
-    nx_tactics_base.e_fate['vx_value'] = {}
 
     // (type goal)
     nx_tactics_base.t_goal['vx_type'] = vx_core.t_type
@@ -4685,6 +4740,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -4779,6 +4839,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -5041,6 +5106,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -5112,6 +5182,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -5205,6 +5280,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -5391,6 +5471,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -5540,6 +5625,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -5611,6 +5701,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -5695,6 +5790,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -5825,6 +5925,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -5920,6 +6025,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -6036,6 +6146,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -6238,6 +6353,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -6382,6 +6502,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -6453,6 +6578,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -6530,6 +6660,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -6601,6 +6736,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -6766,6 +6906,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -6837,6 +6982,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -6953,6 +7103,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -7043,6 +7198,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -7140,6 +7300,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -7211,6 +7376,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -7519,6 +7689,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -7715,6 +7890,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -7878,6 +8058,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },
@@ -8085,6 +8270,11 @@ export default class nx_tactics_base {
           "type" : vx_core.t_string,
           "multi": false
         },
+        "secrets": {
+          "name" : "secrets",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
         "summary": {
           "name" : "summary",
           "type" : vx_core.t_string,
@@ -8175,6 +8365,11 @@ export default class nx_tactics_base {
         },
         "reference": {
           "name" : "reference",
+          "type" : vx_core.t_string,
+          "multi": false
+        },
+        "secrets": {
+          "name" : "secrets",
           "type" : vx_core.t_string,
           "multi": false
         },

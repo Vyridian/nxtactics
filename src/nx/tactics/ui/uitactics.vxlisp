@@ -488,8 +488,8 @@
    style-display : ui/style :=
     (if : ui/style
      (then
-      (== datatype base/fate)
-      styles/style-card-display-fate)
+      (== datatype base/conflict)
+      styles/style-card-display-conflict)
      (else
       styles/style-card-display))
    isdisplay4 : boolean :=
@@ -518,10 +518,16 @@
       (:1 displaysplit))
      (else display))
    uititle1 : ui/ui :=
-    (ui-title1<-uid-text
-     uid name)
+    (if : ui/ui
+     (then
+      (= name "Conflict Back") (empty ui/ui))
+     (else
+      (ui-title1<-uid-text
+       uid name)))
    uititle2 : ui/ui :=
     (if : ui/ui
+     (then
+      (= name "Conflict Back") (empty ui/ui))
      (then
       (== datatype base/cardback)
       (ui-title2<-uid-text

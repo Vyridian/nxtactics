@@ -886,6 +886,8 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Persecute"),
                 ":Rapture",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Rapture"),
+                "Righteous Fury",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Righteous Fury"),
                 ":Righteousness",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Righteousness"),
                 ":Sacrifice",

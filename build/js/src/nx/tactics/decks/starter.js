@@ -8,38 +8,38 @@ import vx_type from "../../../vx/type.js"
 export default class nx_tactics_decks_starter {
 
   /**
-   * @function card_fatelower
+   * @function card_conflictlower
    * @return {card}
    */
-  static t_card_fatelower = {
+  static t_card_conflictlower = {
     vx_type: vx_core.t_type
   }
-  static e_card_fatelower = {
-    vx_type: nx_tactics_decks_starter.t_card_fatelower
+  static e_card_conflictlower = {
+    vx_type: nx_tactics_decks_starter.t_card_conflictlower
   }
 
-  // (func card-fatelower)
-  static f_card_fatelower() {
+  // (func card-conflictlower)
+  static f_card_conflictlower() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "fatelower", ":name", "Fate: Inverted", ":image", "images/card-fate-lower.svg", ":summary", "Fate: Play this when playing a Fate card to indicate that the lower choice on the Fate is being used (i.e. the side facing toward you).")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "conflictlower", ":name", "Conflict: Lower", ":image", "images/card-conflict-lower.svg", ":summary", "Conflict: Play this when playing a Conflict card to indicate that the lower choice on the card is being used (i.e. the side facing toward you).")
     return output
   }
 
   /**
-   * @function card_fateupper
+   * @function card_conflictupper
    * @return {card}
    */
-  static t_card_fateupper = {
+  static t_card_conflictupper = {
     vx_type: vx_core.t_type
   }
-  static e_card_fateupper = {
-    vx_type: nx_tactics_decks_starter.t_card_fateupper
+  static e_card_conflictupper = {
+    vx_type: nx_tactics_decks_starter.t_card_conflictupper
   }
 
-  // (func card-fateupper)
-  static f_card_fateupper() {
+  // (func card-conflictupper)
+  static f_card_conflictupper() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "fateupper", ":name", "Fate: Dignified", ":image", "images/card-fate-upper.svg", ":summary", "Fate: Play this when playing a Fate card to indicate that the upper choice on the Fate is being used (i.e. the side facing away from you).")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "conflictupper", ":name", "Conflict: Upper", ":image", "images/card-conflict-upper.svg", ":summary", "Conflict: Play this when playing a Conflict card to indicate that the upper choice on the card is being used (i.e. the side facing away from you).")
     return output
   }
 
@@ -363,8 +363,8 @@ export default class nx_tactics_decks_starter {
       
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "card-fatelower": nx_tactics_decks_starter.e_card_fatelower,
-      "card-fateupper": nx_tactics_decks_starter.e_card_fateupper,
+      "card-conflictlower": nx_tactics_decks_starter.e_card_conflictlower,
+      "card-conflictupper": nx_tactics_decks_starter.e_card_conflictupper,
       "card-player": nx_tactics_decks_starter.e_card_player,
       "card-rotated": nx_tactics_decks_starter.e_card_rotated,
       "card-round-num": nx_tactics_decks_starter.e_card_round_num,
@@ -376,8 +376,8 @@ export default class nx_tactics_decks_starter {
       "deck-round": nx_tactics_decks_starter.e_deck_round
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "card-fatelower": nx_tactics_decks_starter.t_card_fatelower,
-      "card-fateupper": nx_tactics_decks_starter.t_card_fateupper,
+      "card-conflictlower": nx_tactics_decks_starter.t_card_conflictlower,
+      "card-conflictupper": nx_tactics_decks_starter.t_card_conflictupper,
       "card-player": nx_tactics_decks_starter.t_card_player,
       "card-rotated": nx_tactics_decks_starter.t_card_rotated,
       "card-round-num": nx_tactics_decks_starter.t_card_round_num,
@@ -400,9 +400,9 @@ export default class nx_tactics_decks_starter {
     })
     vx_core.vx_global_package_set(pkg)
 
-    // (func card-fatelower)
-    nx_tactics_decks_starter.t_card_fatelower['vx_value'] = {
-      name          : "card-fatelower",
+    // (func card-conflictlower)
+    nx_tactics_decks_starter.t_card_conflictlower['vx_value'] = {
+      name          : "card-conflictlower",
       pkgname       : "nx/tactics/decks/starter",
       extends       : ":func",
       idx           : 0,
@@ -415,12 +415,12 @@ export default class nx_tactics_decks_starter {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_fatelower
+      fn            : nx_tactics_decks_starter.f_card_conflictlower
     }
 
-    // (func card-fateupper)
-    nx_tactics_decks_starter.t_card_fateupper['vx_value'] = {
-      name          : "card-fateupper",
+    // (func card-conflictupper)
+    nx_tactics_decks_starter.t_card_conflictupper['vx_value'] = {
+      name          : "card-conflictupper",
       pkgname       : "nx/tactics/decks/starter",
       extends       : ":func",
       idx           : 0,
@@ -433,7 +433,7 @@ export default class nx_tactics_decks_starter {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_fateupper
+      fn            : nx_tactics_decks_starter.f_card_conflictupper
     }
 
     // (func card-player)

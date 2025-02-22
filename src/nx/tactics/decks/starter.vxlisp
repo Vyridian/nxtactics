@@ -3,21 +3,21 @@
        (lib typ  :path vx/type)
  :doc  "Tactics Starter Decks")
 
-(func card-fatelower : base/card
+(func card-conflictlower : base/card
  (base/card
-  :id "fatelower"
-  :name "Fate: Inverted"
-  :image "images/card-fate-lower.svg"
+  :id "conflictlower"
+  :name "Conflict: Lower"
+  :image "images/card-conflict-lower.svg"
   :summary
-   "Fate: Play this when playing a Fate card to indicate that the lower choice on the Fate is being used (i.e. the side facing toward you)."))
+   "Conflict: Play this when playing a Conflict card to indicate that the lower choice on the card is being used (i.e. the side facing toward you)."))
 
-(func card-fateupper : base/card
+(func card-conflictupper : base/card
  (base/card
-  :id "fateupper"
-  :name "Fate: Dignified"
-  :image "images/card-fate-upper.svg"
+  :id "conflictupper"
+  :name "Conflict: Upper"
+  :image "images/card-conflict-upper.svg"
   :summary
-   "Fate: Play this when playing a Fate card to indicate that the upper choice on the Fate is being used (i.e. the side facing away from you)."))
+   "Conflict: Play this when playing a Conflict card to indicate that the upper choice on the card is being used (i.e. the side facing away from you)."))
 
 (func card-player : base/card
  [color : string

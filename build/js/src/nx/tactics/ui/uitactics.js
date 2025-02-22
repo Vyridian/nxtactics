@@ -1958,9 +1958,9 @@ export default class nx_tactics_ui_uitactics {
           vx_core.f_then(
             vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
               datatype,
-              nx_tactics_base.t_fate
+              nx_tactics_base.t_conflict
             )}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_card_display_fate})
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_card_display_conflict})
           ),
           vx_core.f_else(
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_card_display})
@@ -2006,9 +2006,26 @@ export default class nx_tactics_ui_uitactics {
           ),
           vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return display}))
         )
-        const uititle1 = nx_tactics_ui_uitactics.f_ui_title1_from_uid_text(uid, name)
+        const uititle1 = vx_core.f_if_2(
+          {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(name, "Conflict Back")}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
+              vx_ui_ui.t_ui
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_uitactics.f_ui_title1_from_uid_text(uid, name)})
+          )
+        )
         const uititle2 = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(name, "Conflict Back")}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
+              vx_ui_ui.t_ui
+            )})
+          ),
           vx_core.f_then(
             vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
               datatype,
