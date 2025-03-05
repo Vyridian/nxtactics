@@ -1653,7 +1653,7 @@ export default class nx_tactics_ui_uitactics {
           suit,
           vx_core.f_case_1(
             nx_tactics_base.c_suit_club,
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "icon-rod.svg"})
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return "icon-wand.svg"})
           ),
           vx_core.f_case_1(
             nx_tactics_base.c_suit_diamond,

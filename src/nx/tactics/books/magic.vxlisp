@@ -352,11 +352,23 @@
              (ability
               :name "Predestined"
               :reference
-               "Y: Why do you even bother playing games? If you know how turns out? T:I only know what will happen because it will happen. Y:So you control everything. T:I control nothing... T:Here. This mirror reflects one second into the future... I could set the mirror two minutes into the future. Or an hour. Do you want to know how this ends? And drive yourself crazy trying to avoid the inevitable. - Tiangong and Yi Xing, Honor of Kings, Secret Level Island in the Sun")
+               "Y: Why do you even bother playing games? If you know how turns out? T:I only know what will happen because it will happen. Y:So you control everything. T:I control nothing... T:Here. This mirror reflects one second into the future... I could set the mirror two minutes into the future, or an hour. Do you want to know how this ends, and drive yourself crazy trying to avoid the inevitable? - Tiangong and Yi Xing, Honor of Kings, Secret Level Island in the Sun")
+            "Ravages of Time"
+             (ability
+              :name "Ravages of Time"
+              :summary "* A target appears older than it is.")
+            "Recover Lost Time"
+             (ability
+              :name "Recover Lost Time"
+              :summary
+               "* Restore a target to a younger state. Reverses [Ravages of Time].")
             "Reverse Time"
              (ability
               :name "Reverse Time"
               :reference "* If I could turn back time... - Cher")
+            "Rewind Time"
+             (ability
+              :name "Rewind Time")
             "Slow Time"
              (ability
               :name "Slow Time")
@@ -368,17 +380,30 @@
               :name "Tempus Fugit"
               :summary "* Speeds time in an area"
               :titles "Time Flies")
+            "Time Corridor"
+             (ability
+              :name "Time Corridor")
             "Time Heals All Wounds"
              (ability
               :name "Time Heals All Wounds"
-              :summary "* After healing the physical effects of a wound, the ability can remove the mental scars by actually removing the wounds from the past. The level of the ability determines the number of years in the past from which the wound is erased. If the entire history is erased the wound will have never occurred and no one will remember it except the caster. The person's life history is rewritten without the wound. This can result in significant changes if the wound was debilitating. The power of this ability ensures that any changes will never be worse than the current situation.")
+              :summary
+               "* After healing the physical effects of a wound, the ability can remove the mental scars by actually removing the wounds from the past. The level of the ability determines the number of years in the past from which the wound is erased. If the entire history is erased the wound will have never occurred and no one will remember it except the caster. The person's life history is rewritten without the wound. This can result in significant changes if the wound was debilitating. The power of this ability ensures that any changes will never be worse than the current situation.")
+            "Time Sight"
+             (ability
+              :name "Time Sight")
             "Time Shift"
              (ability
               :name "Time Shift")
+            "Time Slip"
+             (ability
+              :name "Time Slip")
             "Time Stop"
              (ability
               :name "Time Stop"
               :titles "Time Freeze")
+            "Time Walk"
+             (ability
+              :name "Time Walk")
             "Wall of Time"
              (ability
               :name "Wall of Time")

@@ -687,36 +687,36 @@
       :path "icons")))
  :doc "")
 
-(const style-image-rod1 : ui/style
+(const style-image-wand1 : ui/style
  (ui/style
-  :name "style-image-rod1"
+  :name "style-image-wand1"
   :type ui/styletype-shared
   :pointpos point-suit-pos1
   :pointsize point-suit-size
   :image-background
    (ui/image
-    :name "image-rod1"
-    :label "Rods"
+    :name "image-wand1"
+    :label "Wands"
     :file
      (file/file
-      :name "icon-rod.svg"
+      :name "icon-wand.svg"
       :path "icons")))
  :doc "")
 
-(const style-image-rod2 : ui/style
+(const style-image-wand2 : ui/style
  (ui/style
-  :name "style-image-rod2"
+  :name "style-image-wand2"
   :type ui/styletype-shared
   :pointpos point-suit-pos2
   :pointrotate ui/point-rotate-180
   :pointsize point-suit-size
   :image-background
    (ui/image
-    :name "image-rod1"
-    :label "Rods"
+    :name "image-wand1"
+    :label "Wands"
     :file
      (file/file
-      :name "icon-rod.svg"
+      :name "icon-wand.svg"
       :path "icons")))
  :doc "")
 
@@ -1036,8 +1036,8 @@
      style-image-jester-black2
      style-image-jester-red1
      style-image-jester-red2
-     style-image-rod1
-     style-image-rod2
+     style-image-wand1
+     style-image-wand2
      style-image-sword1
      style-image-sword2
      style-text

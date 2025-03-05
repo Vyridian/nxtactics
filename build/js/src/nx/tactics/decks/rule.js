@@ -784,7 +784,7 @@ export default class nx_tactics_decks_rule {
   // (func card-surprise)
   static f_card_surprise() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-surprise", ":name", "Surprise", ":summary", "* When:\n** A unit suddenly appears adjacent or on a unit.\n* Then:\n** Reveal [Conflict]. Unit takes temporary damage based on the [Suit].\n** [Rods] = [Fatigue]\n** [Coins] = [Stun]\n** [Cups] = [Stress]\n** [Swords] = [Slow]")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "card-surprise", ":name", "Surprise", ":summary", "* When:\n** A unit suddenly appears adjacent or on a unit.\n* Then:\n** Reveal [Conflict]. Unit takes temporary damage based on the [Suit].\n** [Wands] = [Fatigue]\n** [Coins] = [Stun]\n** [Cups] = [Stress]\n** [Swords] = [Slow]")
     return output
   }
 

@@ -418,7 +418,10 @@
             :Hatred
              (ability
               :name "Hatred"
-              :summary "* Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
+              :reference
+               "* I killed Wesley. I shot him seven times.. because the clip ran out. He.. deserved.. MORE! - Karen Page and Kingpin, Daredevil"
+              :summary
+               "* Attack: +1 Speed vs. Tribal or long-standing personal enemies.")
             :Howl
              (ability
               :name "Howl")
@@ -1080,7 +1083,8 @@
         :Investigation
          (skill
           :name "Investigation"
-          :summary "* Investigation is the ability to uncover hidden or lost information. Though it allows the user to rapidly find information, it does not provide the ability to use that information. Other skills or allies would be needed beyond the basics."
+          :summary
+           "* Investigation is the ability to uncover hidden or lost information. Though it allows the user to rapidly find information, it does not provide the ability to use that information. Other skills or allies would be needed beyond the basics."
           :titles "Archivist, Crime Scene Investigator, Detective, Inspector, Investigative Reporter, Librarian, Researcher, Seeker"
           :abilitymap
            (base/abilitymap<-abilitylist

@@ -11,7 +11,7 @@
     (base/abilitymap<-tactics-keys
      tactics
      "Space Clearing"))
-  )
+ )
  :doc "Returns the base skillmap")
 
 (func tactics-skillmap<-tactics : base/tactics

@@ -360,7 +360,7 @@
     ** A unit suddenly appears adjacent or on a unit.
     * Then:
     ** Reveal [Conflict]. Unit takes temporary damage based on the [Suit].
-    ** [Rods] = [Fatigue]
+    ** [Wands] = [Fatigue]
     ** [Coins] = [Stun]
     ** [Cups] = [Stress]
     ** [Swords] = [Slow]"))

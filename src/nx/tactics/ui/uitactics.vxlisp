@@ -1380,7 +1380,7 @@
    filename : string :=
     (switch
      suit
-     (case base/suit-club "icon-rod.svg")
+     (case base/suit-club "icon-wand.svg")
      (case base/suit-diamond "icon-coin.svg")
      (case base/suit-heart "icon-cup.svg")
      (case base/suit-spade "icon-sword.svg")

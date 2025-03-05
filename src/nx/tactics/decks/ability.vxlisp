@@ -8,6 +8,24 @@
   (ability
    :name "Balanced for Throwing")
   (ability
+   :name "Dialect-Enlisted"
+   :summary "Dialect of enlisted soldiers")
+  (ability
+   :name "Dialect-Laborer"
+   :summary "Dialect of laborer")
+  (ability
+   :name "Dialect-Officer"
+   :summary "Dialect of officer soldiers")
+  (ability
+   :name "Dialect-Sailor"
+   :summary "Dialect of sailors")
+  (ability
+   :name "Dialect-Servant"
+   :summary "Dialect of servants")
+  (ability
+   :name "Dialect-Slave"
+   :summary "Dialect of slaves")
+  (ability
    :name "Dream Therapy"
    :summary
     "Heal Trauma by exploring the Dream World.")

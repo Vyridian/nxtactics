@@ -290,7 +290,7 @@ export default class nx_tactics_books_skills {
                 ":Fury",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fury"),
                 ":Hatred",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hatred", ":summary", "* Attack: +1 Speed vs. Tribal or long-standing personal enemies."),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hatred", ":reference", "* I killed Wesley. I shot him seven times.. because the clip ran out. He.. deserved.. MORE! - Karen Page and Kingpin, Daredevil", ":summary", "* Attack: +1 Speed vs. Tribal or long-standing personal enemies."),
                 ":Howl",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Howl"),
                 ":Taunt",

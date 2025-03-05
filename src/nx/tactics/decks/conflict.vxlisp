@@ -6,338 +6,333 @@
  (base/conflict
   :name "Fool"
   :ranksuit base/ranksuit-jokerblack
-  :image "images/card-conflict-joker.svg"
-  :summary
-   "Suffle Discards into Deck"))
+  :image "images/card-conflict-wb.svg"))
 
 (const conflict-wildred : base/conflict
  (base/conflict
   :name "World"
   :ranksuit base/ranksuit-jokerred
-  :image "images/card-conflict-joker.svg"
-  :summary
-   "Suffle Discards into Deck"))
+  :image "images/card-conflict-wr.svg"))
 
 (const conflict-ac : base/conflict
  (base/conflict
   :name "Devil"
   :ranksuit base/ranksuit-ac
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-ca.svg"))
 
 (const conflict-ad : base/conflict
  (base/conflict
   :name "Lust"
   :ranksuit base/ranksuit-ad
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-da.svg"))
 
 (const conflict-ah : base/conflict
  (base/conflict
   :name "Lovers"
   :ranksuit base/ranksuit-ah
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-ha.svg"))
 
 (const conflict-as : base/conflict
  (base/conflict
   :name "Death"
   :ranksuit base/ranksuit-as
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-sa.svg"))
 
 (const conflict-kc : base/conflict
  (base/conflict
   :name "Emperor"
   :ranksuit base/ranksuit-kc
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-ck.svg"))
 
 (const conflict-kd : base/conflict
  (base/conflict
   :name "Judgement"
   :ranksuit base/ranksuit-kd
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-dk.svg"))
 
 (const conflict-kh : base/conflict
  (base/conflict
   :name "Hierophant"
   :ranksuit base/ranksuit-kh
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-hk.svg"))
 
 (const conflict-ks : base/conflict
  (base/conflict
   :name "Sun"
   :ranksuit base/ranksuit-ks
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-sk.svg"))
 
 (const conflict-qc : base/conflict
  (base/conflict
   :name "Empress"
   :ranksuit base/ranksuit-qc
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-cq.svg"))
 
 (const conflict-qd : base/conflict
  (base/conflict
   :name "Justice"
   :ranksuit base/ranksuit-qd
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-dq.svg"))
 
 (const conflict-qh : base/conflict
  (base/conflict
   :name "Priestess"
-  :summary ""
   :ranksuit base/ranksuit-qh
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-hq.svg"))
 
 (const conflict-qs : base/conflict
  (base/conflict
   :name "Moon"
   :ranksuit base/ranksuit-qs
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-sq.svg"))
 
 (const conflict-jc : base/conflict
  (base/conflict
   :name "Magus"
-  :titles "Knight of Rods"
+  :titles "Knight of Wands"
   :ranksuit base/ranksuit-jc
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-cj.svg"))
 
 (const conflict-jd : base/conflict
  (base/conflict
   :name "Hanged Man"
   :titles "Prince of Coins"
   :ranksuit base/ranksuit-jd
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-dj.svg"))
 
 (const conflict-jh : base/conflict
  (base/conflict
   :name "Hermit"
   :titles "Princess of Cups"
   :ranksuit base/ranksuit-jh
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-hj.svg"))
 
 (const conflict-js : base/conflict
  (base/conflict
   :name "Star"
   :titles "Lady of Swords"
   :ranksuit base/ranksuit-js
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-sj.svg"))
 
 (const conflict-tc : base/conflict
  (base/conflict
   :name "Tower"
-  :titles "Ten of Rods"
+  :titles "Ten of Wands"
   :ranksuit base/ranksuit-tc
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-ct.svg"))
 
 (const conflict-td : base/conflict
  (base/conflict
   :name "Wheel of Fortune"
   :titles "Ten of Coins"
   :ranksuit base/ranksuit-td
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-dt.svg"))
 
 (const conflict-th : base/conflict
  (base/conflict
   :name "Art"
   :titles "Ten of Cups"
   :ranksuit base/ranksuit-th
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-ht.svg"))
 
 (const conflict-ts : base/conflict
  (base/conflict
   :name "Chariot"
   :titles "Ten of Swords"
   :ranksuit base/ranksuit-ts
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-st.svg"))
 
 (const conflict-9c : base/conflict
  (base/conflict
-  :name "Nine of Rods"
+  :name "Nine of Wands"
   :ranksuit base/ranksuit-9c
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-c9.svg"))
 
 (const conflict-9d : base/conflict
  (base/conflict
   :name "Nine of Coins"
   :ranksuit base/ranksuit-9d
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-d9.svg"))
 
 (const conflict-9h : base/conflict
  (base/conflict
   :name "Nine of Cups"
   :ranksuit base/ranksuit-9h
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-h9.svg"))
 
 (const conflict-9s : base/conflict
  (base/conflict
   :name "Nine of Swords"
   :ranksuit base/ranksuit-9s
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-s9.svg"))
 
 (const conflict-8c : base/conflict
  (base/conflict
-  :name "Eight of Rods"
+  :name "Eight of Wands"
   :ranksuit base/ranksuit-8c
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-c8.svg"))
 
 (const conflict-8d : base/conflict
  (base/conflict
   :name "Eight of Coins"
   :ranksuit base/ranksuit-8d
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-d8.svg"))
 
 (const conflict-8h : base/conflict
  (base/conflict
   :name "Eight of Cups"
   :ranksuit base/ranksuit-8h
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-h8.svg"))
 
 (const conflict-8s : base/conflict
  (base/conflict
   :name "Eight of Swords"
   :ranksuit base/ranksuit-8s
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-s8.svg"))
 
 (const conflict-7c : base/conflict
  (base/conflict
-  :name "Seven of Rods"
+  :name "Seven of Wands"
   :ranksuit base/ranksuit-7c
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-c7.svg"))
 
 (const conflict-7d : base/conflict
  (base/conflict
   :name "Seven of Coins"
   :ranksuit base/ranksuit-7d
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-d7.svg"))
 
 (const conflict-7h : base/conflict
  (base/conflict
   :name "Seven of Cups"
   :ranksuit base/ranksuit-7h
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-h7.svg"))
 
 (const conflict-7s : base/conflict
  (base/conflict
   :name "Seven of Swords"
   :ranksuit base/ranksuit-7s
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-s7.svg"))
 
 (const conflict-6c : base/conflict
  (base/conflict
-  :name "Six of Rods"
+  :name "Six of Wands"
   :ranksuit base/ranksuit-6c
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-c6.svg"))
 
 (const conflict-6d : base/conflict
  (base/conflict
   :name "Six of Coins"
   :ranksuit base/ranksuit-6d
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-d6.svg"))
 
 (const conflict-6h : base/conflict
  (base/conflict
   :name "Six of Cups"
   :ranksuit base/ranksuit-6h
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-h6.svg"))
 
 (const conflict-6s : base/conflict
  (base/conflict
   :name "Six of Swords"
   :ranksuit base/ranksuit-6s
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-s6.svg"))
 
 (const conflict-5c : base/conflict
  (base/conflict
-  :name "Five of Rods"
+  :name "Five of Wands"
   :ranksuit base/ranksuit-5c
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-c5.svg"))
 
 (const conflict-5d : base/conflict
  (base/conflict
   :name "Five of Coins"
   :ranksuit base/ranksuit-5d
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-d5.svg"))
 
 (const conflict-5h : base/conflict
  (base/conflict
   :name "Five of Cups"
   :ranksuit base/ranksuit-5h
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-h5.svg"))
 
 (const conflict-5s : base/conflict
  (base/conflict
   :name "Five of Swords"
   :ranksuit base/ranksuit-5s
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-s5.svg"))
 
 (const conflict-4c : base/conflict
  (base/conflict
-  :name "Four of Rods"
+  :name "Four of Wands"
   :ranksuit base/ranksuit-4c
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-c4.svg"))
 
 (const conflict-4d : base/conflict
  (base/conflict
   :name "Four of Coins"
   :ranksuit base/ranksuit-4d
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-d4.svg"))
 
 (const conflict-4h : base/conflict
  (base/conflict
   :name "Four of Cups"
   :ranksuit base/ranksuit-4h
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-h4.svg"))
 
 (const conflict-4s : base/conflict
  (base/conflict
   :name "Four of Swords"
   :ranksuit base/ranksuit-4s
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-s4.svg"))
 
 (const conflict-3c : base/conflict
  (base/conflict
-  :name "Three of Rods"
+  :name "Three of Wands"
   :ranksuit base/ranksuit-3c
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-c3.svg"))
 
 (const conflict-3d : base/conflict
  (base/conflict
   :name "Three of Coins"
   :ranksuit base/ranksuit-3d
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-d3.svg"))
 
 (const conflict-3h : base/conflict
  (base/conflict
   :name "Three of Cups"
   :ranksuit base/ranksuit-3h
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-h3.svg"))
 
 (const conflict-3s : base/conflict
  (base/conflict
   :name "Three of Swords"
   :ranksuit base/ranksuit-3s
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-s3.svg"))
 
 (const conflict-2c : base/conflict
  (base/conflict
-  :name "Two of Rods"
+  :name "Two of Wands"
   :ranksuit base/ranksuit-2c
-  :image "images/card-conflict-strong-block.svg"))
+  :image "images/card-conflict-c2.svg"))
 
 (const conflict-2d : base/conflict
  (base/conflict
   :name "Two of Coins"
   :ranksuit base/ranksuit-2d
-  :image "images/card-conflict-strong-counter.svg"))
+  :image "images/card-conflict-d2.svg"))
 
 (const conflict-2h : base/conflict
  (base/conflict
   :name "Two of Cups"
   :ranksuit base/ranksuit-2h
-  :image "images/card-conflict-fast-block.svg"))
+  :image "images/card-conflict-h2.svg"))
 
 (const conflict-2s : base/conflict
  (base/conflict
   :name "Two of Swords"
   :ranksuit base/ranksuit-2s
-  :image "images/card-conflict-fast-evade.svg"))
+  :image "images/card-conflict-s2.svg"))
 
 (func card-conflict-back : base/cardback
  (base/cardback

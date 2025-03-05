@@ -898,6 +898,24 @@ export default class nx_tactics_decks_scenario_murintrail {
   }
 
   /**
+   * @function scene_murintrail
+   * @return {scenario}
+   */
+  static t_scene_murintrail = {
+    vx_type: vx_core.t_type
+  }
+  static e_scene_murintrail = {
+    vx_type: nx_tactics_decks_scenario_murintrail.t_scene_murintrail
+  }
+
+  // (func scene-murintrail)
+  static f_scene_murintrail() {
+    let output = nx_tactics_base.e_scenario
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Murin Trail Scene", ":secrets", "* The local lord is a young man (Damyen Brushaus) has recently inherited his title, preoccupied with person interests and largely ignores the town.\n* The town watch is a small militia run by a veteran sergeant (Brunhil Virden).\n* Brunhil runs a tight ship, and is not popular in town or among the watch.\n* The area is mostly safe except for numerous venomous snakes.\n* The local inn/pub is basically a large house. There are outdoor tables for food and drink.\n* The innkeeper/cook (Hamal) runs the place with his 12 year old daughter (Rena).\n* The land is mountainous and rocky, but the weather is fair and crops are reasonable.\n* A small religious group is staying in the city until they move on. They locals don't care for them.\n* A priest (Xeb) in town makes and sells anti-venom.\n* Xeb is travelling to Murintown, but he does not want to travel unguarded.")
+    return output
+  }
+
+  /**
    * @function unit_bandit
    * @return {unit}
    */
@@ -1892,6 +1910,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       "place-temple": nx_tactics_decks_scenario_murintrail.e_place_temple,
       "place-tradingpost": nx_tactics_decks_scenario_murintrail.e_place_tradingpost,
       "place-woodenhall": nx_tactics_decks_scenario_murintrail.e_place_woodenhall,
+      "scene-murintrail": nx_tactics_decks_scenario_murintrail.e_scene_murintrail,
       "unit-bandit": nx_tactics_decks_scenario_murintrail.e_unit_bandit,
       "unit-bruiser": nx_tactics_decks_scenario_murintrail.e_unit_bruiser,
       "unit-flint": nx_tactics_decks_scenario_murintrail.e_unit_flint,
@@ -1951,6 +1970,7 @@ export default class nx_tactics_decks_scenario_murintrail {
       "place-temple": nx_tactics_decks_scenario_murintrail.t_place_temple,
       "place-tradingpost": nx_tactics_decks_scenario_murintrail.t_place_tradingpost,
       "place-woodenhall": nx_tactics_decks_scenario_murintrail.t_place_woodenhall,
+      "scene-murintrail": nx_tactics_decks_scenario_murintrail.t_scene_murintrail,
       "unit-bandit": nx_tactics_decks_scenario_murintrail.t_unit_bandit,
       "unit-bruiser": nx_tactics_decks_scenario_murintrail.t_unit_bruiser,
       "unit-flint": nx_tactics_decks_scenario_murintrail.t_unit_flint,
@@ -2767,6 +2787,24 @@ export default class nx_tactics_decks_scenario_murintrail {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scenario_murintrail.f_place_woodenhall
+    }
+
+    // (func scene-murintrail)
+    nx_tactics_decks_scenario_murintrail.t_scene_murintrail['vx_value'] = {
+      name          : "scene-murintrail",
+      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scenario_murintrail.f_scene_murintrail
     }
 
     // (func unit-bandit)

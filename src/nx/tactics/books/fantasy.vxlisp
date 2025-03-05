@@ -215,6 +215,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
          (unit
           :name "Galamir Mirlesem"
           :image "images/fantasy/GalamirMirlesem.png"
+          :demeanor "Imperious"
+          :nature "Self-Absorbed"
           :summary
            "* Human Mage
             * Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.
@@ -276,6 +278,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
          (unit
           :name "Phirax Alganon"
           :image "images/fantasy/PhiraxAlganon.png"
+          :demeanor "Personable"
+          :nature "Self Righteous"
           :summary
            "* Half-Elven Bard
             * Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.

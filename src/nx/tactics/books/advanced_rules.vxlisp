@@ -124,30 +124,18 @@
           :image "Tokens/DiseaseToken.png"
           :summary "Spreading, slow damage over time"
           :titles "Diseased, Infected, Rabid, Sickly")
-        :Envy
-         (rule
-          :name "Envy")
         :Fatigue
          (rule
           :name "Fatigue"
           :summary
            "-1 [Abilities]
 * Removed with rest")
-        :Greed
-         (rule
-          :name "Greed")
         :Hunger
          (rule
           :name "Hunger"
           :summary
            "-1 [Abilities] per week without food
 * Removed after eating")
-        :Love
-         (rule
-          :name "Love")
-        :Lust
-         (rule
-          :name "Lust")
         :Poison
          (rule
           :name "Poison"

@@ -17,35 +17,35 @@
 (const tarot-ac : base/tarot
  (base/tarot
   :name "Devil"
-  :titles "Master of Rods"
+  :titles "Warlord"
   :image "images/cards/tarot-devil.png"
   :ranksuit base/ranksuit-ac))
 
 (const tarot-ad : base/tarot
  (base/tarot
   :name "Lust"
-  :titles "Master of Coins"
+  :titles "Magnate"
   :image "images/cards/tarot-lust.png"
   :ranksuit base/ranksuit-ad))
 
 (const tarot-ah : base/tarot
  (base/tarot
   :name "Lovers"
-  :titles "Master of Cups"
+  :titles "Spy"
   :image "images/cards/tarot-lovers.png"
   :ranksuit base/ranksuit-ah))
 
 (const tarot-as : base/tarot
  (base/tarot
   :name "Death"
-  :titles "Master of Swords"
+  :titles "Assassin"
   :image "images/cards/tarot-death.png"
   :ranksuit base/ranksuit-as))
 
 (const tarot-kc : base/tarot
  (base/tarot
   :name "Emperor"
-  :titles "King of Rods"
+  :titles "King of Wands"
   :image "images/cards/tarot-emperor.png"
   :ranksuit base/ranksuit-kc))
 
@@ -73,7 +73,7 @@
 (const tarot-qc : base/tarot
  (base/tarot
   :name "Empress"
-  :titles "Queen of Rods"
+  :titles "Queen of Wands"
   :image "images/cards/tarot-empress.png"
   :ranksuit base/ranksuit-qc))
 
@@ -101,7 +101,7 @@
 (const tarot-jc : base/tarot
  (base/tarot
   :name "Magus"
-  :titles "Knight of Rods"
+  :titles "Knight of Wands"
   :image "images/cards/tarot-magus.png"
   :ranksuit base/ranksuit-jc))
 
@@ -129,7 +129,7 @@
 (const tarot-tc : base/tarot
  (base/tarot
   :name "Tower"
-  :titles "Ten of Rods"
+  :titles "Ten of Wands"
   :image "images/cards/tarot-tower.png"
   :ranksuit base/ranksuit-tc))
 
@@ -156,194 +156,194 @@
 
 (const tarot-9c : base/tarot
  (base/tarot
-  :name "Nine of Rods"
-  :titles "Bishop of Rods"
+  :name "Nine of Wands"
+  :titles "Knight"
   :ranksuit base/ranksuit-9c))
 
 (const tarot-9d : base/tarot
  (base/tarot
   :name "Nine of Coins"
-  :titles "Bishop of Coins"
+  :titles "Guildmaster"
   :ranksuit base/ranksuit-9d))
 
 (const tarot-9h : base/tarot
  (base/tarot
   :name "Nine of Cups"
-  :titles "Bishop of Cups"
+  :titles "Bishop"
   :ranksuit base/ranksuit-9h))
 
 (const tarot-9s : base/tarot
  (base/tarot
   :name "Nine of Swords"
-  :titles "Bishop of Swords"
+  :titles "Crimelord"
   :ranksuit base/ranksuit-9s))
 
 (const tarot-8c : base/tarot
  (base/tarot
-  :name "Eight of Rods"
-  :titles "Archer of Rods"
+  :name "Eight of Wands"
+  :titles "Cavalry"
   :ranksuit base/ranksuit-8c))
 
 (const tarot-8d : base/tarot
  (base/tarot
   :name "Eight of Coins"
-  :titles "Archer of Coins"
+  :titles "Archer"
   :ranksuit base/ranksuit-8d))
 
 (const tarot-8h : base/tarot
  (base/tarot
   :name "Eight of Cups"
-  :titles "Archer of Cups"
+  :titles "Axeman"
   :ranksuit base/ranksuit-8h))
 
 (const tarot-8s : base/tarot
  (base/tarot
   :name "Eight of Swords"
-  :titles "Archer of Swords"
+  :titles "Infantry"
   :ranksuit base/ranksuit-8s))
 
 (const tarot-7c : base/tarot
  (base/tarot
-  :name "Seven of Rods"
-  :titles "Soldier of Rods"
+  :name "Seven of Wands"
+  :titles "Militia"
   :ranksuit base/ranksuit-7c))
 
 (const tarot-7d : base/tarot
  (base/tarot
   :name "Seven of Coins"
-  :titles "Soldier of Coins"
+  :titles "Mercenary"
   :ranksuit base/ranksuit-7d))
 
 (const tarot-7h : base/tarot
  (base/tarot
   :name "Seven of Cups"
-  :titles "Soldier of Cups"
+  :titles "Squire"
   :ranksuit base/ranksuit-7h))
 
 (const tarot-7s : base/tarot
  (base/tarot
   :name "Seven of Swords"
-  :titles "Soldier of Swords"
+  :titles "Skirmisher"
   :ranksuit base/ranksuit-7s))
 
 (const tarot-6c : base/tarot
  (base/tarot
-  :name "Six of Rods"
-  :titles "Craftsman of Rods"
+  :name "Six of Wands"
+  :titles "Diplomat"
   :ranksuit base/ranksuit-6c))
 
 (const tarot-6d : base/tarot
  (base/tarot
   :name "Six of Coins"
-  :titles "Craftsman of Coins"
+  :titles "Banker"
   :ranksuit base/ranksuit-6d))
 
 (const tarot-6h : base/tarot
  (base/tarot
   :name "Six of Cups"
-  :titles "Craftsman of Cups"
+  :titles "Procurer"
   :ranksuit base/ranksuit-6h))
 
 (const tarot-6s : base/tarot
  (base/tarot
   :name "Six of Swords"
-  :titles "Craftsman of Swords, Swordsmith"
+  :titles "Supplier"
   :ranksuit base/ranksuit-6s))
 
 (const tarot-5c : base/tarot
  (base/tarot
-  :name "Five of Rods"
-  :titles "Merchant of Rods, Merchant of Wonders"
+  :name "Five of Wands"
+  :titles "Engineer"
   :ranksuit base/ranksuit-5c))
 
 (const tarot-5d : base/tarot
  (base/tarot
   :name "Five of Coins"
-  :titles "Merchant of Coins, Bank"
+  :titles "Alchemist"
   :ranksuit base/ranksuit-5d))
 
 (const tarot-5h : base/tarot
  (base/tarot
   :name "Five of Cups"
-  :titles "Merchant of Cups, Brothel"
+  :titles "Artist"
   :ranksuit base/ranksuit-5h))
 
 (const tarot-5s : base/tarot
  (base/tarot
   :name "Five of Swords"
-  :titles "Merchant of Swords, Arms Dealer"
+  :titles "Smith"
   :ranksuit base/ranksuit-5s))
 
 (const tarot-4c : base/tarot
  (base/tarot
-  :name "Four of Rods"
-  :titles "Miner of Rods"
+  :name "Four of Wands"
+  :titles "Farmer"
   :ranksuit base/ranksuit-4c))
 
 (const tarot-4d : base/tarot
  (base/tarot
   :name "Four of Coins"
-  :titles "Miner of Coins, Goldminer"
+  :titles "Shopkeep"
   :ranksuit base/ranksuit-4d))
 
 (const tarot-4h : base/tarot
  (base/tarot
   :name "Four of Cups"
-  :titles "Miner of Cups"
+  :titles "Physician"
   :ranksuit base/ranksuit-4h))
 
 (const tarot-4s : base/tarot
  (base/tarot
   :name "Four of Swords"
-  :titles "Miner of Swords"
+  :titles "Sailor"
   :ranksuit base/ranksuit-4s))
 
 (const tarot-3c : base/tarot
  (base/tarot
-  :name "Three of Rods"
-  :titles "Farmer of Rods"
+  :name "Three of Wands"
+  :titles "Laborer"
   :ranksuit base/ranksuit-3c))
 
 (const tarot-3d : base/tarot
  (base/tarot
   :name "Three of Coins"
-  :titles "Farmer of Coins"
+  :titles "Clerk"
   :ranksuit base/ranksuit-3d))
 
 (const tarot-3h : base/tarot
  (base/tarot
   :name "Three of Cups"
-  :titles "Farmer of Cups"
+  :titles "Servant"
   :ranksuit base/ranksuit-3h))
 
 (const tarot-3s : base/tarot
  (base/tarot
   :name "Three of Swords"
-  :titles "Farmer of Swords"
+  :titles "Miner"
   :ranksuit base/ranksuit-3s))
 
 (const tarot-2c : base/tarot
  (base/tarot
-  :name "Two of Rods"
-  :titles "Outcast of Rods, Madman"
+  :name "Two of Wands"
+  :titles "Slave"
   :ranksuit base/ranksuit-2c))
 
 (const tarot-2d : base/tarot
  (base/tarot
   :name "Two of Coins"
-  :titles "Outcast of Coins, Beggar"
+  :titles "Beggar"
   :ranksuit base/ranksuit-2d))
 
 (const tarot-2h : base/tarot
  (base/tarot
   :name "Two of Cups"
-  :titles "Outcast of Cups, Prophet"
+  :titles "Harlot"
   :ranksuit base/ranksuit-2h))
 
 (const tarot-2s : base/tarot
  (base/tarot
   :name "Two of Swords"
-  :titles "Outcast of Swords, Brigand"
+  :titles "Criminal"
   :ranksuit base/ranksuit-2s))
 
 (func deck-tarot : base/deck

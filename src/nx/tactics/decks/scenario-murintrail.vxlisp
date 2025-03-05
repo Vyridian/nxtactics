@@ -1,7 +1,7 @@
 (package nx/tactics/decks/scenario-murintrail
  :libs (lib base :path nx/tactics/base)
        (lib data :path nx/tactics/decks/data)
- :doc  "Tactics Scenario Decks")
+ :doc  "Murin Trail Scene")
 
 (const power-groundmovement : base/power
  (base/power
@@ -356,6 +356,21 @@
  (base/place
   :name "Wooden Hall"
   :image "images/cards/place-woodenhall.svg"))
+
+(func scene-murintrail : base/scenario
+ (base/scenario
+  :name "Murin Trail Scene"
+  :secrets
+   "* The local lord is a young man (Damyen Brushaus) has recently inherited his title, preoccupied with person interests and largely ignores the town.
+    * The town watch is a small militia run by a veteran sergeant (Brunhil Virden).
+    * Brunhil runs a tight ship, and is not popular in town or among the watch.
+    * The area is mostly safe except for numerous venomous snakes.
+    * The local inn/pub is basically a large house. There are outdoor tables for food and drink.
+    * The innkeeper/cook (Hamal) runs the place with his 12 year old daughter (Rena).
+    * The land is mountainous and rocky, but the weather is fair and crops are reasonable.
+    * A small religious group is staying in the city until they move on. They locals don't care for them.
+    * A priest (Xeb) in town makes and sells anti-venom.
+    * Xeb is travelling to Murintown, but he does not want to travel unguarded."))
 
 (func unit-bandit : base/unit
  (base/unit
