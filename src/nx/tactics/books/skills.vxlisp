@@ -1793,7 +1793,9 @@
             :Negotiation
              (ability
               :name "Negotiation"
-              :titles "Advisor, Arbiter, Diplomat, Emissary, Envoy, Legate, Negotiator")
+              :titles "Advisor, Arbiter, Diplomat, Emissary, Envoy, Legate, Negotiator"
+              :reference
+               "I'm not greedy, my friends though. - Yordle Grifter, Runeterra")
             :Photography
              (ability
               :name "Photography"

@@ -4726,7 +4726,7 @@ to ever-greater acts of violence and revenge.")
           :image "images/bestiary/Lycanthrope_Weretiger.png"
           :reference
            "Every time it happens... you tell yourself it's love.  But it isn't.  It's blood.  And death. - Cat People"
-          :titles "Rakshasa, Werepanther, Weretiger")
+          :titles "Rakshasa, Werejaguar, Werepanther, Weretiger")
         :Werecrow
          (unit
           :name "Werecrow"
