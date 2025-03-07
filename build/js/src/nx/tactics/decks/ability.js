@@ -24,6 +24,12 @@ export default class nx_tactics_decks_ability {
     let output = nx_tactics_base.e_abilitymap
     output = nx_tactics_base.f_abilitymap_from_abilitylist(
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Balanced for Throwing"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dialect-Enlisted", ":summary", "Dialect of enlisted soldiers"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dialect-Laborer", ":summary", "Dialect of laborer"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dialect-Officer", ":summary", "Dialect of officer soldiers"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dialect-Sailor", ":summary", "Dialect of sailors"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dialect-Servant", ":summary", "Dialect of servants"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dialect-Slave", ":summary", "Dialect of slaves"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dream Therapy", ":summary", "Heal Trauma by exploring the Dream World."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Existential Riddle", ":summary", "Demoralize unwitting rivals by questioning their purpose in life."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Gymnastics"),

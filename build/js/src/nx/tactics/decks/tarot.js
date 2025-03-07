@@ -646,7 +646,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Five of Wands",
       ":titles",
-      "Builder",
+      "Engineer",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_5c
     ))
@@ -690,7 +690,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Six of Wands",
       ":titles",
-      "Politician",
+      "Diplomat",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6c
     ))
@@ -723,7 +723,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Six of Swords",
       ":titles",
-      "Supplier",
+      "Trader",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_6s
     ))

@@ -489,7 +489,9 @@
     (if : ui/style
      (then
       (== datatype base/conflict)
-      styles/style-card-display-conflict)
+      styles/style-card-display
+      //styles/style-card-display-conflict
+      )
      (else
       styles/style-card-display))
    isdisplay4 : boolean :=
@@ -520,12 +522,16 @@
    uititle1 : ui/ui :=
     (if : ui/ui
      (then
+      (== datatype base/conflict) (empty ui/ui))
+     (then
       (= name "Conflict Back") (empty ui/ui))
      (else
       (ui-title1<-uid-text
        uid name)))
    uititle2 : ui/ui :=
     (if : ui/ui
+     (then
+      (== datatype base/conflict) (empty ui/ui))
      (then
       (= name "Conflict Back") (empty ui/ui))
      (then
@@ -546,7 +552,11 @@
          styles/style-textarea)
        :data display1)))
    ranksuit : base/ranksuit :=
-    (:ranksuit card)
+    (if : base/ranksuit
+     (then
+      (== datatype base/conflict) (empty base/ranksuit))
+     (else
+      (:ranksuit card)))
    uilist1 : ui/uilist :=
     (uilist<-ranksuit-parent
      ranksuit

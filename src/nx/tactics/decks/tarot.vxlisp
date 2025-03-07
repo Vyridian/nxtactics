@@ -247,7 +247,7 @@
 (const tarot-6s : base/tarot
  (base/tarot
   :name "Six of Swords"
-  :titles "Supplier"
+  :titles "Trader"
   :ranksuit base/ranksuit-6s))
 
 (const tarot-5c : base/tarot

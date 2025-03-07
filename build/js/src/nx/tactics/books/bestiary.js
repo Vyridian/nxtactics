@@ -3710,7 +3710,7 @@ export default class nx_tactics_books_bestiary {
             ":Wereboar",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wereboar"),
             ":Werecat",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werecat", ":image", "images/bestiary/Lycanthrope_Weretiger.png", ":reference", "Every time it happens... you tell yourself it's love.  But it isn't.  It's blood.  And death. - Cat People", ":titles", "Rakshasa, Werepanther, Weretiger"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Werecat", ":image", "images/bestiary/Lycanthrope_Weretiger.png", ":reference", "Every time it happens... you tell yourself it's love.  But it isn't.  It's blood.  And death. - Cat People", ":titles", "Rakshasa, Werejaguar, Werepanther, Weretiger"),
             ":Werecrow",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},

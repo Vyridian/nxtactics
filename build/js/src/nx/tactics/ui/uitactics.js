@@ -1960,7 +1960,7 @@ export default class nx_tactics_ui_uitactics {
               datatype,
               nx_tactics_base.t_conflict
             )}),
-            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_card_display_conflict})
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_card_display})
           ),
           vx_core.f_else(
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return nx_tactics_ui_stylesheet.c_style_card_display})
@@ -2009,6 +2009,15 @@ export default class nx_tactics_ui_uitactics {
         const uititle1 = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
           vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              datatype,
+              nx_tactics_base.t_conflict
+            )}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
+              vx_ui_ui.t_ui
+            )})
+          ),
+          vx_core.f_then(
             vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(name, "Conflict Back")}),
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
               vx_ui_ui.t_ui
@@ -2020,6 +2029,15 @@ export default class nx_tactics_ui_uitactics {
         )
         const uititle2 = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_ui},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              datatype,
+              nx_tactics_base.t_conflict
+            )}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
+              vx_ui_ui.t_ui
+            )})
+          ),
           vx_core.f_then(
             vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(name, "Conflict Back")}),
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
@@ -2055,7 +2073,21 @@ export default class nx_tactics_ui_uitactics {
             )})
           )
         )
-        const ranksuit = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_ranksuit, "struct-2": nx_tactics_base.t_card}, card, ":ranksuit")
+        const ranksuit = vx_core.f_if_2(
+          {"any-1": nx_tactics_base.t_ranksuit},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eqeq(
+              datatype,
+              nx_tactics_base.t_conflict
+            )}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
+              nx_tactics_base.t_ranksuit
+            )})
+          ),
+          vx_core.f_else(
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_ranksuit, "struct-2": nx_tactics_base.t_card}, card, ":ranksuit")})
+          )
+        )
         const uilist1 = nx_tactics_ui_uitactics.f_uilist_from_ranksuit_parent(ranksuit, uid)
         const uilist2 = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_uilist},

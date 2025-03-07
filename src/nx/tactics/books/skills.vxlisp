@@ -172,6 +172,9 @@
              (ability
               :name "Freestyle Running"
               :summary "* [Action]: Ignore 1 [Hazard] from each space of [Forest], [Broken Ground], [Jungle], [Swamp], or [Obstacle].")
+            :Golf
+             (ability
+              :name "Golf")
             :Gymnastics
              (ability
               :name "Gymnastics")
@@ -222,6 +225,9 @@
              (ability
               :name "Slide"
               :summary "* Move at full speed under low obstacles like tables or overhangs.")
+            :Skating
+             (ability
+              :name "Skating")
             :Snorkeling
              (ability
               :name "Snorkeling")
@@ -716,7 +722,8 @@
             "Cobra maneuver"
              (ability
               :name "Cobra maneuver"
-              :summary "* A dramatic and demanding maneuver in which an airplane flying at a moderate speed abruptly raises its nose momentarily to a vertical and slightly past vertical attitude, causing an extremely high angle of attack and momentarily stalling the plane, making a full-body air brake before dropping back to normal position, during which the aircraft does not change effective altitude."
+              :summary
+               "* A dramatic and demanding maneuver in which an airplane flying at a moderate speed abruptly raises its nose momentarily to a vertical and slightly past vertical attitude, causing an extremely high angle of attack and momentarily stalling the plane, making a full-body air brake before dropping back to normal position, during which the aircraft does not change effective altitude."
               :titles "Dynamic deceleration")
             "Carrier Landing"
              (ability
@@ -1788,7 +1795,9 @@
             "Motivational Speaking"
              (ability
               :name "Motivational Speaking"
-              :reference "* My name is Matt Foley and I am a motivational speaker... First off, I am thirty-five years old, I am divorced, and I live in a van down by the river... Well I'm here to tell you, that you're probably going to find out, as you go out there, that you're not going to amount to jack squat! You're going to end up eating a steady diet of government cheese and living in a van down by the river! - Matt Foley, SNL"
+              :reference
+               "* DO it! Just DO it! - Shia Labeouf
+                * My name is Matt Foley and I am a motivational speaker... First off, I am thirty-five years old, I am divorced, and I live in a van down by the river... Well I'm here to tell you, that you're probably going to find out, as you go out there, that you're not going to amount to jack squat! You're going to end up eating a steady diet of government cheese and living in a van down by the river! - Matt Foley, SNL"
               :titles "Motivational Speaker")
             :Negotiation
              (ability
@@ -2661,8 +2670,11 @@
             :Acting
              (specialty
               :name "Acting"
-              :reference "* Acting! - Master Thespian, Saturday Night Live"
-              :titles "Drama Queen, Master Thespian, Theater Brat, Thespian")))
+              :reference
+               "* Acting! - Master Thespian, Saturday Night Live
+                * Suffering is the bleeding heart of drama. - Jhin, Runeterra"
+              :titles
+               "Drama Queen, Master Thespian, Theater Brat, Thespian")))
         :Persuasion
          (skill
           :name "Persuasion"

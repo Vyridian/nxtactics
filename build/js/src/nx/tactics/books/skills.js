@@ -137,6 +137,8 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Escape Artistry"),
                 "Freestyle Running",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Freestyle Running", ":summary", "* [Action]: Ignore 1 [Hazard] from each space of [Forest], [Broken Ground], [Jungle], [Swamp], or [Obstacle]."),
+                ":Golf",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Golf"),
                 ":Gymnastics",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Gymnastics"),
                 "High Jump",
@@ -169,6 +171,8 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sledding"),
                 ":Slide",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Slide", ":summary", "* Move at full speed under low obstacles like tables or overhangs."),
+                ":Skating",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Skating"),
                 ":Snorkeling",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Snorkeling"),
                 ":Snowboarding",
@@ -1165,9 +1169,9 @@ export default class nx_tactics_books_skills {
                 ":Literacy",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Literacy", ":summary", "* Can read and write\n* This ability is assumed in modern characters from 1st and 2nd world nations"),
                 "Motivational Speaking",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Motivational Speaking", ":reference", "* My name is Matt Foley and I am a motivational speaker... First off, I am thirty-five years old, I am divorced, and I live in a van down by the river... Well I'm here to tell you, that you're probably going to find out, as you go out there, that you're not going to amount to jack squat! You're going to end up eating a steady diet of government cheese and living in a van down by the river! - Matt Foley, SNL", ":titles", "Motivational Speaker"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Motivational Speaking", ":reference", "* DO it! Just DO it! - Shia Labeouf\n* My name is Matt Foley and I am a motivational speaker... First off, I am thirty-five years old, I am divorced, and I live in a van down by the river... Well I'm here to tell you, that you're probably going to find out, as you go out there, that you're not going to amount to jack squat! You're going to end up eating a steady diet of government cheese and living in a van down by the river! - Matt Foley, SNL", ":titles", "Motivational Speaker"),
                 ":Negotiation",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Negotiation", ":titles", "Advisor, Arbiter, Diplomat, Emissary, Envoy, Legate, Negotiator"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Negotiation", ":titles", "Advisor, Arbiter, Diplomat, Emissary, Envoy, Legate, Negotiator", ":reference", "I'm not greedy, my friends though. - Yordle Grifter, Runeterra"),
                 ":Photography",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Photography", ":titles", "Photographer"),
                 ":Poetry",
@@ -1702,7 +1706,7 @@ export default class nx_tactics_books_skills {
                 ":Music",
                 vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Music", ":summary", "* Song, Musical Instrument\n* The power of music lies in its ability to tell truths that we willing listen to even if they are unpleasant.\n* See Equipment for Musical Instruments\n* Musical Instruments may be used with any performance power to increase any Range or Radius by 1 Space.", ":titles", "Bard, Classical, Drummer, Guitarist, Harpist, Hip-Hop, Jazz, Lyrist, Minstrel, Musician, Piper, Pop, Rap, Rhapsode, Rock, Skald, Troubadour"),
                 ":Acting",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Acting", ":reference", "* Acting! - Master Thespian, Saturday Night Live", ":titles", "Drama Queen, Master Thespian, Theater Brat, Thespian")
+                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Acting", ":reference", "* Acting! - Master Thespian, Saturday Night Live\n* Suffering is the bleeding heart of drama. - Jhin, Runeterra", ":titles", "Drama Queen, Master Thespian, Theater Brat, Thespian")
               )
             ),
             ":Persuasion",
