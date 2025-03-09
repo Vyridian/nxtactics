@@ -23,9 +23,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.46220914"
-     inkscape:cx="126.56608"
-     inkscape:cy="554.9436"
+     inkscape:zoom="1.3073249"
+     inkscape:cx="356.83556"
+     inkscape:cy="523.5883"
      inkscape:window-width="1833"
      inkscape:window-height="917"
      inkscape:window-x="29"
@@ -198,7 +198,7 @@
 </g></g><g
      id="g3"
      transform="matrix(1.2724499,0,0,1.2724499,-56.694726,-111.94988)"
-     style="display:inline;opacity:0.2"
+     style="display:inline;opacity:0.3"
      inkscape:label="judgement"
      clip-path="url(#clipPath3)"><path
        transform="scale(0.666992,0.666667)"
@@ -279,7 +279,8 @@
        fill="#fdfdfd"
        transform="scale(0.666992,0.666667)"
        d="m 503.663,680.061 c 1.243,0.285 2.271,0.957 3.258,1.749 8.162,6.549 15.62,14.448 23.412,21.476 4.026,3.63 9.012,6.941 12.792,10.667 1.612,1.589 0.918,4.513 0.811,6.582 -0.832,-0.29 -1.437,-0.492 -2.158,-1.014 -4.769,-3.454 -35.49,-33.267 -37.574,-36.878 -0.306,-0.53 -0.405,-1.929 -0.541,-2.582 z"
-       id="path24" /><path
+       id="path24"
+       style="fill:#cc0400;fill-opacity:1" /><path
        fill="#fdfdfd"
        transform="scale(0.666992,0.666667)"
        d="m 448.931,838.149 c 3.619,0.518 7.12,1.688 10.616,2.731 -1.955,6.537 -4.34,12.838 -10.502,16.423 -2.801,0.641 -6.117,1.854 -8.922,1.006 l -0.613,-1.419 c 1.146,-2.66 4.701,-2.238 5.713,-4.393 2.158,-4.597 1.023,-9.834 3.708,-14.348 z"
@@ -821,7 +822,7 @@
        d="m 2.8772231,3.1092569 0.063449,-2.66753913 0.06526,2.64262783 z"
        transform="matrix(3.0228156,0,0,3.0228156,2.602725,1.5506251)" /></g><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3334px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3334px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28882;stroke-opacity:1"
      x="370.96487"
      y="-687.3877"
      id="text1-8"
@@ -832,7 +833,7 @@
        x="370.96487"
        y="-687.3877">King of Coins</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3334px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3334px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28882;stroke-opacity:1"
      x="-629.61407"
      y="134.31506"
      id="text1-8-1"
@@ -843,7 +844,7 @@
        x="-629.61407"
        y="134.31506">Judgement</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:none;stroke-width:1.289;stroke-dasharray:none;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.289;stroke-dasharray:none;stroke-opacity:1"
      x="-733.18628"
      y="-962.96686"
      id="text1-5"
@@ -854,7 +855,7 @@
        x="-733.18628"
        y="-962.96686">K</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:none;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28882;stroke-opacity:1"
      x="92.926743"
      y="159.10373"
      id="text1"

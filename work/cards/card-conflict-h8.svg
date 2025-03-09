@@ -25,11 +25,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.92441827"
      inkscape:cx="289.37117"
-     inkscape:cy="659.87445"
-     inkscape:window-width="2313"
-     inkscape:window-height="1452"
-     inkscape:window-x="9"
-     inkscape:window-y="0"
+     inkscape:cy="486.79263"
+     inkscape:window-width="1835"
+     inkscape:window-height="986"
+     inkscape:window-x="61"
+     inkscape:window-y="7"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg49"
      inkscape:document-units="px"
@@ -212,7 +212,7 @@
 </g></g><g
      id="g2"
      transform="matrix(1.1811248,0,0,1.1811248,-27.23593,-0.48436955)"
-     style="opacity:0.2"
+     style="opacity:0.3"
      inkscape:label="axemen"
      clip-path="url(#clipPath2)"><path
        fill="#fefefe"
@@ -592,7 +592,7 @@
        fill="#fefefe"
        d="m 517.91329,182.38609 c -1.95963,0.22533 -3.33897,0.67933 -4.94175,1.84134 -2.66396,1.93133 -9.85481,7.38333 -10.12494,10.93333 -0.0614,0.80934 0.20877,0.87267 0.67833,1.47134 1.45004,0.46467 2.20641,0.18467 3.6191,-0.30134 -0.55293,-0.90466 -0.95847,-1.604 -1.15323,-2.65333 1.25328,-0.55133 2.3238,-1.178 3.44635,-1.95933 -0.23812,-0.53934 -0.37151,-0.97134 -0.45089,-1.556 l 0.88644,-0.53801 1.01716,0.37134 0.70968,-1.22 c 1.28129,-1.05134 2.53323,-0.99 4.104,-1.01467 l 0.65365,-0.007 c 1.17991,-0.632 1.65548,-1.18933 2.38317,-2.302 0.06,-1.46333 -0.1234,-1.75866 -0.82707,-3.066 z"
        id="path96"
-       style="stroke-width:0.666829" /><path
+       style="stroke-width:0.666829;fill:#e7342a;fill-opacity:1" /><path
        fill="url(#gradient_1)"
        d="m 493.00647,217.20478 c -4.25341,3.79666 -7.99723,8.542 -11.97051,12.65867 l -28.06969,29.06535 c -15.32947,16.166 -31.39865,31.58535 -47.24104,47.23669 -0.0947,1.4 0.92512,2.80066 1.54475,4.06 4.83303,-2.62334 12.96033,-12.50601 17.13103,-16.77801 l 29.20024,-29.72801 c 13.47657,-13.61134 27.26863,-26.89535 40.96131,-40.28269 z"
        id="path97"
@@ -1346,7 +1346,7 @@
        sodipodi:nodetypes="cccccccccc"
        transform="matrix(0.89909743,0,0,0.89909743,0.65478082,1.2040534)" /></g><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:#e7342a;stroke-width:1.28882;stroke-opacity:1"
      x="417.73694"
      y="-686.30719"
      id="text1-8"
@@ -1357,7 +1357,7 @@
        x="417.73694"
        y="-686.30719">Eight of Cups</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28881;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:#e7352b;stroke-width:1.28881;stroke-opacity:1"
      x="-648.32117"
      y="133.35158"
      id="text1-8-1"
@@ -1368,7 +1368,7 @@
        x="-648.32117"
        y="133.35158">Axeman</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:none;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:#e7342a;stroke-width:1.28882;stroke-opacity:1"
      x="-728.67297"
      y="-962.96722"
      id="text1-5"
@@ -1379,7 +1379,7 @@
        x="-728.67297"
        y="-962.96722">8</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:none;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:#e7342a;stroke-width:1.28882;stroke-opacity:1"
      x="92.704117"
      y="152.10417"
      id="text1"

@@ -217,7 +217,7 @@
 (const tarot-7h : base/tarot
  (base/tarot
   :name "Seven of Cups"
-  :titles "Squire"
+  :titles "Scout"
   :ranksuit base/ranksuit-7h))
 
 (const tarot-7s : base/tarot

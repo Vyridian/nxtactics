@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.92441827"
-     inkscape:cx="289.37117"
-     inkscape:cy="533.30837"
-     inkscape:window-width="2313"
-     inkscape:window-height="1452"
-     inkscape:window-x="9"
-     inkscape:window-y="0"
+     inkscape:cx="289.91205"
+     inkscape:cy="360.22655"
+     inkscape:window-width="1844"
+     inkscape:window-height="946"
+     inkscape:window-x="47"
+     inkscape:window-y="27"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg49"
      inkscape:document-units="px"
@@ -213,7 +213,7 @@
      id="g3"
      transform="matrix(1.5052451,0,0,1.5052451,-115.82655,-220.4261)"
      inkscape:label="hangedman"
-     style="opacity:0.2"
+     style="opacity:0.3"
      clip-path="url(#clipPath189)"><path
        fill="#fefefe"
        d="M 682.99981,0 H 0 v 1023.1272 c 0.55360336,0.3466 1.1005368,0.5866 1.7408491,0.7333 4.1286805,0.9333 21.5164949,0.14 26.8270849,0.14 l 76.876836,0.01 h 316.48036 172.71758 l 56.60561,-0.01 c 9.63277,0 19.40733,0.38 29.0221,-0.06 1.05625,-0.047 1.83272,-0.2467 2.72939,-0.8133 z"
@@ -838,7 +838,7 @@
        fill="#fefefe"
        d="m 362.05793,251.85146 c -0.16608,0.7 -0.31549,1.408 -0.4142,2.12 -0.66166,4.78134 4.15736,9.67934 6.88869,13.14734 0.54093,-0.58533 0.69234,-1.28067 0.79839,-2.054 0.57495,-4.20467 -4.88905,-9.86667 -7.27288,-13.21334 z"
        id="path156"
-       style="stroke-width:0.666829" /><path
+       style="stroke-width:0.666829;fill:#cc0400;fill-opacity:1" /><path
        fill="#fefefe"
        d="m 366.03054,368.36618 c -0.61764,3.97867 -0.21344,8.29934 -0.10272,12.31334 2.18306,2.00467 4.46351,3.90934 6.71127,5.84067 -0.13206,-4.08067 -4.93907,-13.95 -6.60855,-18.15401 z"
        id="path157"
@@ -1131,7 +1131,7 @@
        d="m 2.8772231,3.1092569 0.063449,-2.66753913 0.06526,2.64262783 z"
        transform="matrix(3.0228156,0,0,3.0228156,2.602725,1.5506251)" /></g><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3334px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3334px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28882;stroke-opacity:1"
      x="399.67542"
      y="-691.71472"
      id="text1-8"
@@ -1142,7 +1142,7 @@
        x="399.67542"
        y="-691.71472">Prince of Coins</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28882;stroke-opacity:1"
      x="-701.01672"
      y="132.15166"
      id="text1-8-1"
@@ -1152,9 +1152,9 @@
        id="tspan13"
        x="-701.01672"
        y="132.15166"
-       style="stroke-width:1.28882">Hanged Man</tspan></text><text
+       style="stroke-width:1.28882;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-opacity:1">Hanged Man</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:none;stroke-width:1.289;stroke-dasharray:none;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0602;stroke-width:1.289;stroke-dasharray:none;stroke-opacity:1"
      x="-715.18591"
      y="-962.96722"
      id="text1-5"
@@ -1165,7 +1165,7 @@
        x="-715.18591"
        y="-962.96722">J</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:none;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28882;stroke-opacity:1"
      x="103.92713"
      y="159.10373"
      id="text1"

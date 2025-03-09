@@ -24,12 +24,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.92441827"
-     inkscape:cx="289.37117"
-     inkscape:cy="675.01911"
-     inkscape:window-width="2313"
-     inkscape:window-height="1452"
-     inkscape:window-x="9"
-     inkscape:window-y="0"
+     inkscape:cx="401.87436"
+     inkscape:cy="604.16374"
+     inkscape:window-width="1851"
+     inkscape:window-height="971"
+     inkscape:window-x="56"
+     inkscape:window-y="16"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg49"
      inkscape:document-units="px"
@@ -186,7 +186,7 @@
 </g></g><g
      id="g3"
      transform="matrix(1.2386747,0,0,1.2386747,1.2842639,-93.15114)"
-     style="opacity:0.2"
+     style="opacity:0.3"
      inkscape:label="mercenary"
      clip-path="url(#clipPath3)"><path
        fill="#fefefe"
@@ -223,7 +223,8 @@
        fill="#fefefe"
        transform="scale(0.666992,0.666667)"
        d="m 516.323,482.563 c 6.578,5.361 9.956,14.522 16.701,20.133 -2.997,-0.695 -5.701,-2.195 -8.177,-3.998 -5.541,-4.032 -7.577,-9.624 -8.524,-16.135 z"
-       id="path9" /><path
+       id="path9"
+       style="fill:#cc0501;fill-opacity:1" /><path
        fill="#fefefe"
        transform="scale(0.666992,0.666667)"
        d="m 439.411,554.517 c 3.618,1.868 8.366,2.37 10.665,5.902 0.043,2.984 -1.069,4.341 -2.472,6.938 -1.766,0.004 -3.344,-0.162 -5.081,-0.47 -0.586,-2.007 1.17,-3.391 0.845,-5.886 -1.389,-1.405 -1.92,-1.059 -3.839,-1.083 -0.942,-1.807 -0.435,-3.476 -0.118,-5.401 z"
@@ -964,7 +965,7 @@
        d="m 2.8772231,3.1092569 0.063449,-2.66753913 0.06526,2.64262783 z"
        transform="matrix(3.0228156,0,0,3.0228156,2.602725,1.5506251)" /></g><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28882;stroke-opacity:1"
      x="403.81918"
      y="-690.6344"
      id="text1-8"
@@ -974,9 +975,9 @@
        id="tspan7"
        x="403.81918"
        y="-690.6344"
-       style="stroke-width:1.28882">Seven of Coins</tspan></text><text
+       style="stroke-width:1.28882;stroke:#cc0400;stroke-opacity:1;fill:#cc0400;fill-opacity:1">Seven of Coins</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3337px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28883;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3337px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28883;stroke-opacity:1"
      x="-679.00232"
      y="137.55994"
      id="text1-8-1"
@@ -987,7 +988,7 @@
        x="-679.00232"
        y="137.55994">Mercenary</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:none;stroke-width:1.289;stroke-dasharray:none;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.289;stroke-dasharray:none;stroke-opacity:1"
      x="-728.67297"
      y="-962.96722"
      id="text1-5"
@@ -998,7 +999,7 @@
        x="-728.67297"
        y="-962.96722">7</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:none;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#cc0400;fill-opacity:1;stroke:#cc0400;stroke-width:1.28882;stroke-opacity:1"
      x="92.608116"
      y="159.10419"
      id="text1"

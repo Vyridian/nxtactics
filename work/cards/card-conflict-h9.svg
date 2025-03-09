@@ -23,13 +23,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.65366243"
-     inkscape:cx="-25.242387"
-     inkscape:cy="801.63702"
-     inkscape:window-width="2313"
-     inkscape:window-height="1452"
-     inkscape:window-x="9"
-     inkscape:window-y="0"
+     inkscape:zoom="1.3073249"
+     inkscape:cx="134.62606"
+     inkscape:cy="292.19975"
+     inkscape:window-width="1810"
+     inkscape:window-height="960"
+     inkscape:window-x="46"
+     inkscape:window-y="30"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg49"
      inkscape:document-units="px"
@@ -199,7 +199,7 @@
 </g></g><g
      id="g2"
      transform="matrix(1.2756256,0,0,1.2756256,-19.56974,-90.151262)"
-     style="opacity:0.2"
+     style="opacity:0.3"
      inkscape:label="bishop"
      clip-path="url(#clipPath2)"><path
        fill="#1d1d1d"
@@ -661,7 +661,7 @@
        fill="#fefefe"
        d="m 301.48905,242.90079 c -1.47672,1.44067 -3.17688,3.06133 -3.93858,5.00067 1.80755,6.63133 6.5572,14.79 9.51731,21.15267 1.60745,-1.19733 3.42367,-2.14133 5.15718,-3.14466 -2.96678,-7.13601 -6.09898,-17.00268 -10.73591,-23.00868 z"
        id="path192"
-       style="stroke-width:0.666829" /><path
+       style="stroke-width:0.666829;fill:#e7342a;fill-opacity:1" /><path
        fill="#fefefe"
        d="m 370.29662,245.17346 c -37.05474,6.21467 -77.45578,32.41601 -102.76946,59.68003 l -0.16875,0.882 c 1.49406,-0.29534 3.40699,-2.78067 4.57823,-3.93201 7.57703,-7.45133 15.48222,-14.54667 24.08975,-20.80134 21.4678,-15.60067 47.46515,-29.65135 74.00943,-33.60868 l 0.62164,-0.892 z"
        id="path193"
@@ -974,7 +974,7 @@
        sodipodi:nodetypes="cccccccccc"
        transform="matrix(0.89909743,0,0,0.89909743,0.65478082,1.2040534)" /></g><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:#e43f36;stroke-width:1.28882;stroke-opacity:1"
      x="426.80487"
      y="-686.30676"
      id="text1-8"
@@ -985,7 +985,7 @@
        x="426.80487"
        y="-686.30676">Nine of Cups</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3329px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.601148;stroke:#000000;stroke-width:1.28881;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3329px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:#e7342a;stroke-width:1.28881;stroke-opacity:1"
      x="-638.42651"
      y="136.2184"
      id="text1-8-1"
@@ -995,9 +995,9 @@
        id="tspan1"
        x="-638.42651"
        y="136.2184"
-       style="stroke-width:1.28881">Bishop</tspan></text><text
+       style="stroke-width:1.28881;fill:#e7342a;fill-opacity:1;stroke:#e7342a;stroke-opacity:1">Bishop</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:none;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0002px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:#e7342a;stroke-width:1.28882;stroke-opacity:1"
      x="-728.67297"
      y="-962.96722"
      id="text1-5"
@@ -1008,7 +1008,7 @@
        x="-728.67297"
        y="-962.96722">9</tspan></text><text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:none;stroke-width:1.28882;stroke-opacity:0.498188"
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.0001px;font-family:Caladea;-inkscape-font-specification:'Caladea, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e7342a;fill-opacity:1;stroke:#e7342a;stroke-width:1.28882;stroke-opacity:1"
      x="92.704117"
      y="152.10417"
      id="text1"
