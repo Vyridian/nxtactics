@@ -484,8 +484,8 @@ export default class nx_tactics_books_magic {
               ":abilitymap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_abilitymap},
-                "Create Homonculus",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Create Homonculus"),
+                "Create Homunculus",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Create Homunculus"),
                 "Prepare Lightning in a Bottle",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prepare Lightning in a Bottle", ":summary", "* Create [Lightning in a Bottle].")
               )
@@ -1236,6 +1236,8 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Survival of the Fittest", ":titles", "Natural Selection")
               )
             ),
+            ":Herbalism",
+            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Herbalism", ":titles", "Herbalist", ":summary", "The ability to harvest medicinal and magical herbs."),
             ":Naturalism",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},

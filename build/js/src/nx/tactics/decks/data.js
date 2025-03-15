@@ -6,6 +6,7 @@ import nx_tactics_base from "../../../nx/tactics/base.js"
 import nx_tactics_decks_ability from "../../../nx/tactics/decks/ability.js"
 import nx_tactics_decks_item from "../../../nx/tactics/decks/item.js"
 import nx_tactics_decks_place from "../../../nx/tactics/decks/place.js"
+import nx_tactics_decks_power from "../../../nx/tactics/decks/power.js"
 import nx_tactics_decks_scenario from "../../../nx/tactics/decks/scenario.js"
 import nx_tactics_decks_skill from "../../../nx/tactics/decks/skill.js"
 import nx_tactics_decks_unit from "../../../nx/tactics/decks/unit.js"
@@ -155,37 +156,9 @@ export default class nx_tactics_decks_data {
   // (func item<-key)
   static f_item_from_key(key) {
     let output = nx_tactics_base.e_item
-    output = nx_tactics_decks_data.f_item_from_tactics_key(
+    output = nx_tactics_base.f_item_from_tactics_key(
       nx_tactics_decks_data.c_tactics_all,
       key
-    )
-    return output
-  }
-
-  /**
-   * @function item_from_tactics_key
-   * Returns an item from tactics
-   * @param  {tactics} tactics
-   * @param  {string} key
-   * @return {item}
-   */
-  static t_item_from_tactics_key = {
-    vx_type: vx_core.t_type
-  }
-  static e_item_from_tactics_key = {
-    vx_type: nx_tactics_decks_data.t_item_from_tactics_key
-  }
-
-  // (func item<-tactics-key)
-  static f_item_from_tactics_key(tactics, key) {
-    let output = nx_tactics_base.e_item
-    output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_item, "map-1": nx_tactics_base.t_itemmap},
-      [],
-      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const itemmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_itemmap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":itemmap")
-        return vx_core.f_any_from_map({"any-1": nx_tactics_base.t_item, "map-1": nx_tactics_base.t_itemmap}, itemmap, key)
-      })
     )
     return output
   }
@@ -276,68 +249,6 @@ export default class nx_tactics_decks_data {
   }
 
   /**
-   * @function tactics_power
-   * Returns a power from tactics-all
-   * @param  {string} name
-   * @return {power}
-   */
-  static t_tactics_power = {
-    vx_type: vx_core.t_type
-  }
-  static e_tactics_power = {
-    vx_type: nx_tactics_decks_data.t_tactics_power
-  }
-
-  // (func tactics-power)
-  static f_tactics_power(name) {
-    let output = nx_tactics_base.e_power
-    output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_power, "map-1": nx_tactics_base.t_powermap},
-      [],
-      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const powermap = vx_core.f_any_from_struct(
-          {"any-1": nx_tactics_base.t_powermap, "struct-2": nx_tactics_base.t_tactics},
-          nx_tactics_decks_data.c_tactics_all,
-          ":powermap"
-        )
-        return vx_core.f_any_from_map({"any-1": nx_tactics_base.t_power, "map-1": nx_tactics_base.t_powermap}, powermap, name)
-      })
-    )
-    return output
-  }
-
-  /**
-   * @function tactics_skill
-   * Returns a skill from tactics-all
-   * @param  {string} name
-   * @return {skill}
-   */
-  static t_tactics_skill = {
-    vx_type: vx_core.t_type
-  }
-  static e_tactics_skill = {
-    vx_type: nx_tactics_decks_data.t_tactics_skill
-  }
-
-  // (func tactics-skill)
-  static f_tactics_skill(name) {
-    let output = nx_tactics_base.e_skill
-    output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_skill, "map-1": nx_tactics_base.t_skillmap},
-      [],
-      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const skillmap = vx_core.f_any_from_struct(
-          {"any-1": nx_tactics_base.t_skillmap, "struct-2": nx_tactics_base.t_tactics},
-          nx_tactics_decks_data.c_tactics_all,
-          ":skillmap"
-        )
-        return vx_core.f_any_from_map({"any-1": nx_tactics_base.t_skill, "map-1": nx_tactics_base.t_skillmap}, skillmap, name)
-      })
-    )
-    return output
-  }
-
-  /**
    * @function unit_from_tactics_key
    * Returns a unit from tactics
    * @param  {tactics} tactics
@@ -401,12 +312,9 @@ export default class nx_tactics_decks_data {
       "abilitylist<-keys": nx_tactics_decks_data.e_abilitylist_from_keys,
       "booklist-all<-tactics": nx_tactics_decks_data.e_booklist_all_from_tactics,
       "item<-key": nx_tactics_decks_data.e_item_from_key,
-      "item<-tactics-key": nx_tactics_decks_data.e_item_from_tactics_key,
       "itemlist<-keys": nx_tactics_decks_data.e_itemlist_from_keys,
       "tactics-booklist<-tactics": nx_tactics_decks_data.e_tactics_booklist_from_tactics,
       "tactics-main": nx_tactics_decks_data.e_tactics_main,
-      "tactics-power": nx_tactics_decks_data.e_tactics_power,
-      "tactics-skill": nx_tactics_decks_data.e_tactics_skill,
       "unit<-tactics-key": nx_tactics_decks_data.e_unit_from_tactics_key,
       "unitlist<-keys": nx_tactics_decks_data.e_unitlist_from_keys
     })
@@ -415,12 +323,9 @@ export default class nx_tactics_decks_data {
       "abilitylist<-keys": nx_tactics_decks_data.t_abilitylist_from_keys,
       "booklist-all<-tactics": nx_tactics_decks_data.t_booklist_all_from_tactics,
       "item<-key": nx_tactics_decks_data.t_item_from_key,
-      "item<-tactics-key": nx_tactics_decks_data.t_item_from_tactics_key,
       "itemlist<-keys": nx_tactics_decks_data.t_itemlist_from_keys,
       "tactics-booklist<-tactics": nx_tactics_decks_data.t_tactics_booklist_from_tactics,
       "tactics-main": nx_tactics_decks_data.t_tactics_main,
-      "tactics-power": nx_tactics_decks_data.t_tactics_power,
-      "tactics-skill": nx_tactics_decks_data.t_tactics_skill,
       "unit<-tactics-key": nx_tactics_decks_data.t_unit_from_tactics_key,
       "unitlist<-keys": nx_tactics_decks_data.t_unitlist_from_keys
     })
@@ -508,24 +413,6 @@ export default class nx_tactics_decks_data {
       fn            : nx_tactics_decks_data.f_item_from_key
     }
 
-    // (func item<-tactics-key)
-    nx_tactics_decks_data.t_item_from_tactics_key['vx_value'] = {
-      name          : "item<-tactics-key",
-      pkgname       : "nx/tactics/decks/data",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_data.f_item_from_tactics_key
-    }
-
     // (func itemlist<-keys)
     nx_tactics_decks_data.t_itemlist_from_keys['vx_value'] = {
       name          : "itemlist<-keys",
@@ -578,42 +465,6 @@ export default class nx_tactics_decks_data {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_data.f_tactics_main
-    }
-
-    // (func tactics-power)
-    nx_tactics_decks_data.t_tactics_power['vx_value'] = {
-      name          : "tactics-power",
-      pkgname       : "nx/tactics/decks/data",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_data.f_tactics_power
-    }
-
-    // (func tactics-skill)
-    nx_tactics_decks_data.t_tactics_skill['vx_value'] = {
-      name          : "tactics-skill",
-      pkgname       : "nx/tactics/decks/data",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_data.f_tactics_skill
     }
 
     // (func unit<-tactics-key)

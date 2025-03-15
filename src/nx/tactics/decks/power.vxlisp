@@ -1,0 +1,24 @@
+(package nx/tactics/decks/power
+ :libs (lib base :path nx/tactics/base)
+ :doc "Powers")
+
+(func powermap-tactics : base/powermap
+ [tactics : base/tactics]
+ (base/powermap<-powerlist
+  (power
+   :name "Venomous"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Poison Bite"))
+ )
+ :doc "Returns the base powermap")
+
+(func tactics-powermap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [powermap : base/powermap :=
+   (powermap-tactics tactics)]
+  (copy tactics
+   :powermap powermap))
+ :doc "Returns a tactics updated with powermap")

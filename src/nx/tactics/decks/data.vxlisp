@@ -4,6 +4,7 @@
        (lib ability          :path nx/tactics/decks/ability)
        (lib item             :path nx/tactics/decks/item)
        (lib place            :path nx/tactics/decks/place)
+       (lib power            :path nx/tactics/decks/power)
        (lib scenario         :path nx/tactics/decks/scenario)
        (lib skill            :path nx/tactics/decks/skill)
        (lib unit             :path nx/tactics/decks/unit)
@@ -86,15 +87,6 @@
   tactics-all key)
  :doc "Returns an item from tactics-all")
 
-(func item<-tactics-key : base/item
- [tactics : base/tactics
-  key     : string]
- (let : base/item
-  [itemmap : base/itemmap :=
-    (:itemmap tactics)]
-  (any<-map itemmap key))
- :doc "Returns an item from tactics")
-
 (func itemlist<-keys : base/itemlist
  [keys : stringlist :...]
  (base/itemlist<-tactics-keys
@@ -110,20 +102,6 @@
   tactics
   booklist))
  :doc "Returns a tactics from a tactics and booklist")
-
-(func tactics-power : base/power
- [name : string]
- (let : base/power
-  [powermap : base/powermap := (:powermap tactics-all)]
-  (any<-map powermap name))
- :doc "Returns a power from tactics-all")
-
-(func tactics-skill : base/skill
- [name : string]
- (let : base/skill
-  [skillmap : base/skillmap := (:skillmap tactics-all)]
-  (any<-map skillmap name))
- :doc "Returns a skill from tactics-all")
 
 (func tactics-main : base/tactics
  (let : base/tactics

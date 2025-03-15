@@ -136,10 +136,6 @@
           :summary
            "-1 [Abilities] per week without food
 * Removed after eating")
-        :Poison
-         (rule
-          :name "Poison"
-          :image "Tokens/PoisonToken.png")
         :Suffocation
          (rule
           :name "Suffocation"

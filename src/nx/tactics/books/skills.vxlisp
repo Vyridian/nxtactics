@@ -81,6 +81,9 @@
             "Train Horse"
              (ability
               :name "Train Horse")
+            "Venom Extraction"
+             (ability
+              :name "Venom Extraction")
             "War Training"
              (ability
               :name "War Training")))

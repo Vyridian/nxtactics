@@ -33,6 +33,7 @@ export default class nx_tactics_decks_ability {
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dream Therapy", ":summary", "Heal Trauma by exploring the Dream World."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Existential Riddle", ":summary", "Demoralize unwitting rivals by questioning their purpose in life."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Gymnastics"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poison Bite", ":summary", "[Close Combat]: Crits are [Poisoned] instead of increasing damage."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Restful Sleep", ":summary", "Ensure restful sleep for levelx2 hours."),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Returning Throw"),
       vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soulbind", ":titles", "Soulbond"),

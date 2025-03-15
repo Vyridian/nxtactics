@@ -6,15 +6,32 @@
  [tactics : base/tactics]
  (base/unitmap<-unitlist
   (base/unit
-   :name "Butterfly, Giant")
+   :name "Butterfly: Giant")
   (base/unit
-   :name "Caterpillar, Giant")
+   :name "Caterpillar: Giant")
   (base/unit
    :name "Hellbear")
   (base/unit
    :name "Hellboar")
   (base/unit
    :name "Hellbull")
+  (base/unit
+   :name "Snake: Emerald Viper"
+   :image "images/cards/unit-snake-emeraldviper.svg"
+   :summary
+    ""
+   :powermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower
+      :level 2
+      :intensity "2x2"
+      :power
+       (base/power<-tactics-key
+        tactics "Venomous")
+      :abilitylist
+       (base/abilitylist<-tactics-keys
+        tactics
+        "Poison Bite"))))
   )
  :doc "Returns the base unitmap")
 

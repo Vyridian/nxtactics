@@ -756,7 +756,7 @@ export default class nx_tactics_decks_tarot {
       ":name",
       "Seven of Cups",
       ":titles",
-      "Squire",
+      "Scout",
       ":ranksuit",
       nx_tactics_base.c_ranksuit_7h
     ))

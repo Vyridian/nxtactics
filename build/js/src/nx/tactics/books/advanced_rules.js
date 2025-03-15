@@ -485,8 +485,6 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Fatigue", ":summary", "-1 [Abilities]\n* Removed with rest"),
             ":Hunger",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hunger", ":summary", "-1 [Abilities] per week without food\n* Removed after eating"),
-            ":Poison",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Poison", ":image", "Tokens/PoisonToken.png"),
             ":Suffocation",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suffocation", ":summary", "-1 [Abilities]\n+1 Suffocation per minute without air\n* Each Suffocation after 2 also add [Damage]\n* Remove 1 Suffocation each 10 minutes of breathing"),
             ":Thrist",

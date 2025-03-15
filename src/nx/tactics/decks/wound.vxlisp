@@ -18,6 +18,13 @@
   :summary
    "* Day End: Discard one [Bloodloss]"))
 
+(const poisoned : base/card
+ (base/card
+  :id "poisoned"
+  :name "Poisoned"
+  :image "images/card-poisoned.svg")
+)
+
 (const fatigue : base/cardback
  (base/cardback
   :id "fatigue"

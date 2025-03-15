@@ -69,6 +69,8 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Train Elephant"),
                 "Train Horse",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Train Horse"),
+                "Venom Extraction",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Venom Extraction"),
                 "War Training",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "War Training")
               )

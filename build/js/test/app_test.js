@@ -52,6 +52,7 @@ import nx_tactics_decks_conflict_test from "./nx/tactics/decks/conflict_test.js"
 import nx_tactics_decks_disorder_test from "./nx/tactics/decks/disorder_test.js"
 import nx_tactics_decks_item_test from "./nx/tactics/decks/item_test.js"
 import nx_tactics_decks_place_test from "./nx/tactics/decks/place_test.js"
+import nx_tactics_decks_power_test from "./nx/tactics/decks/power_test.js"
 import nx_tactics_decks_restraint_test from "./nx/tactics/decks/restraint_test.js"
 import nx_tactics_decks_rule_test from "./nx/tactics/decks/rule_test.js"
 import nx_tactics_decks_scenario_test from "./nx/tactics/decks/scenario_test.js"
@@ -148,6 +149,7 @@ export default class app_test {
       nx_tactics_decks_disorder_test.test_package(context),
       nx_tactics_decks_item_test.test_package(context),
       nx_tactics_decks_place_test.test_package(context),
+      nx_tactics_decks_power_test.test_package(context),
       nx_tactics_decks_restraint_test.test_package(context),
       nx_tactics_decks_rule_test.test_package(context),
       nx_tactics_decks_scenario_test.test_package(context),

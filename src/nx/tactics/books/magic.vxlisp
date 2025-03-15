@@ -622,9 +622,9 @@
           :titles "The Art Mathematical, Wonder Working"
           :abilitymap
            (abilitymap
-            "Create Homonculus"
+            "Create Homunculus"
              (ability
-              :name "Create Homonculus")
+              :name "Create Homunculus")
             "Prepare Lightning in a Bottle"
              (ability
               :name "Prepare Lightning in a Bottle"
@@ -1768,6 +1768,12 @@
              (ability
               :name "Survival of the Fittest"
               :titles "Natural Selection")))
+        :Herbalism
+         (power
+          :name "Herbalism"
+          :titles "Herbalist"
+          :summary
+           "The ability to harvest medicinal and magical herbs.")
         :Naturalism
          (power
           :name "Naturalism"

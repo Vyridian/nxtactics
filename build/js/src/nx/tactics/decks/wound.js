@@ -25,6 +25,12 @@ export default class nx_tactics_decks_wound {
   static c_fatigue = {vx_type: nx_tactics_base.t_cardback, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'fatigue', type: nx_tactics_base.t_cardback}}
 
   /**
+   * Constant: poisoned
+   * {card}
+   */
+  static c_poisoned = {vx_type: nx_tactics_base.t_card, vx_constdef: {pkgname: 'nx/tactics/decks/wound', name: 'poisoned', type: nx_tactics_base.t_card}}
+
+  /**
    * Constant: wound-2c
    * {damage}
    */
@@ -530,6 +536,7 @@ export default class nx_tactics_decks_wound {
       "bleeding": nx_tactics_decks_wound.c_bleeding,
       "bloodloss": nx_tactics_decks_wound.c_bloodloss,
       "fatigue": nx_tactics_decks_wound.c_fatigue,
+      "poisoned": nx_tactics_decks_wound.c_poisoned,
       "wound-2c": nx_tactics_decks_wound.c_wound_2c,
       "wound-2d": nx_tactics_decks_wound.c_wound_2d,
       "wound-2h": nx_tactics_decks_wound.c_wound_2h,
@@ -689,6 +696,9 @@ export default class nx_tactics_decks_wound {
 
     // (const fatigue)
     Object.assign(nx_tactics_decks_wound.c_fatigue, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "fatigue", ":name", "Damage: Fatigue", ":titles", "Physical Damage/Fatigue/Weaken/Exertion", ":image", "images/card-wound-fatigue.svg", ":summary", "* Fatigue: temporary weaknesss or exertion.\n* Wound: lasting damage and can be [Bash], [Hack], [Pierce], [Slash].\n* If [Body]:0 then gain [Exhausted].\n* [Exhausted]: Cannot play odd [Attack] cards. Second action may only be [Recover]. Additional [Fatigue] is flipped to Wound."))
+
+    // (const poisoned)
+    Object.assign(nx_tactics_decks_wound.c_poisoned, vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "poisoned", ":name", "Poisoned", ":image", "images/card-poisoned.svg"))
 
     // (const wound-2c)
     Object.assign(nx_tactics_decks_wound.c_wound_2c, vx_core.f_new(

@@ -36,6 +36,10 @@
   (ability
    :name "Mental Gymnastics")
   (ability
+   :name "Poison Bite"
+   :summary
+    "[Close Combat]: Crits are [Poisoned] instead of increasing damage.")
+  (ability
    :name "Restful Sleep"
    :summary
     "Ensure restful sleep for levelx2 hours.")

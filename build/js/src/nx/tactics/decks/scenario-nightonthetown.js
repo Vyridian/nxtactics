@@ -26,7 +26,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
       {"any-1": nx_tactics_base.t_deck},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const professor = nx_tactics_decks_scenario_nightonthetown.f_unit_theprofessor()
+        const professor = nx_tactics_decks_scenario_nightonthetown.f_unit_theprofessor(tactics)
         const professori = nx_tactics_base.f_cardimage_from_card(professor)
         return vx_core.f_new(
           {"any-1": nx_tactics_base.t_deck},
@@ -46,18 +46,18 @@ export default class nx_tactics_decks_scenario_nightonthetown {
                 {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_itemlist},
                 nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Fire Axe", "Jerry Can", "Keys", "Knife", "Liquor Bottle", "Lock Combination", "Molotov Cocktail", "Monocle", "Revolver", "Revolver Ammo", "Rifle", "Rifle Ammo", "Shortbow", "Shotgun", "Shotgun Ammo", "Spear")
               ),
-              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiecrawler(),
-              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog(),
+              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiecrawler(tactics),
+              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog(tactics),
               nx_tactics_base.f_cardimage_from_card(
-                nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog()
+                nx_tactics_decks_scenario_nightonthetown.f_unit_zombiedog(tactics)
               ),
-              nx_tactics_decks_scenario_nightonthetown.f_unit_zombierunner(),
+              nx_tactics_decks_scenario_nightonthetown.f_unit_zombierunner(tactics),
               nx_tactics_base.f_cardimage_from_card(
-                nx_tactics_decks_scenario_nightonthetown.f_unit_zombierunner()
+                nx_tactics_decks_scenario_nightonthetown.f_unit_zombierunner(tactics)
               ),
-              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker(),
+              nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker(tactics),
               nx_tactics_base.f_cardimage_from_card(
-                nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker()
+                nx_tactics_decks_scenario_nightonthetown.f_unit_zombiewalker(tactics)
               ),
               nx_tactics_decks_scenario_nightonthetown.f_place_clinic(),
               nx_tactics_decks_scenario_nightonthetown.f_place_conveniencestore(),
@@ -201,6 +201,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
 
   /**
    * @function unit_theprofessor
+   * @param  {tactics} tactics
    * @return {unit}
    */
   static t_unit_theprofessor = {
@@ -211,7 +212,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   }
 
   // (func unit-theprofessor)
-  static f_unit_theprofessor() {
+  static f_unit_theprofessor(tactics) {
     let output = nx_tactics_base.e_unit
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_unit},
@@ -244,7 +245,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitskill},
           ":skill",
-          nx_tactics_decks_data.f_tactics_skill("Ranged"),
+          nx_tactics_base.f_skill_from_tactics_key(tactics, "Ranged"),
           ":level",
           "1",
           ":unititemmap",
@@ -252,14 +253,14 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unititem},
               ":item",
-              nx_tactics_decks_data.f_item_from_key("Shortbow")
+              nx_tactics_base.f_item_from_tactics_key(tactics, "Shortbow")
             )
           )
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitskill},
           ":skill",
-          nx_tactics_decks_data.f_tactics_skill("Investigation"),
+          nx_tactics_base.f_skill_from_tactics_key(tactics, "Investigation"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -267,7 +268,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Detail Oriented")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Detail Oriented")
             )
           ),
           ":unititemmap",
@@ -275,7 +276,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unititem},
               ":item",
-              nx_tactics_decks_data.f_item_from_key("Monocle")
+              nx_tactics_base.f_item_from_tactics_key(tactics, "Monocle")
             )
           )
         )
@@ -286,6 +287,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
 
   /**
    * @function unit_zombiecrawler
+   * @param  {tactics} tactics
    * @return {unit}
    */
   static t_unit_zombiecrawler = {
@@ -296,7 +298,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   }
 
   // (func unit-zombiecrawler)
-  static f_unit_zombiecrawler() {
+  static f_unit_zombiecrawler(tactics) {
     let output = nx_tactics_base.e_unit
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_unit},
@@ -323,7 +325,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitskill},
           ":skill",
-          nx_tactics_decks_data.f_tactics_skill("Close Combat"),
+          nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -331,7 +333,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Grab")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Grab")
             )
           )
         )
@@ -341,7 +343,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitpower},
           ":power",
-          nx_tactics_decks_data.f_tactics_power("Natural Weaponry"),
+          nx_tactics_base.f_power_from_tactics_key(tactics, "Natural Weaponry"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -349,7 +351,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Bite")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Bite")
             )
           )
         )
@@ -360,6 +362,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
 
   /**
    * @function unit_zombiedog
+   * @param  {tactics} tactics
    * @return {unit}
    */
   static t_unit_zombiedog = {
@@ -370,7 +373,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   }
 
   // (func unit-zombiedog)
-  static f_unit_zombiedog() {
+  static f_unit_zombiedog(tactics) {
     let output = nx_tactics_base.e_unit
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_unit},
@@ -401,7 +404,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitskill},
           ":skill",
-          nx_tactics_decks_data.f_tactics_skill("Close Combat"),
+          nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -409,7 +412,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Grab")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Grab")
             )
           )
         )
@@ -419,7 +422,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitpower},
           ":power",
-          nx_tactics_decks_data.f_tactics_power("Natural Weaponry"),
+          nx_tactics_base.f_power_from_tactics_key(tactics, "Natural Weaponry"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -427,7 +430,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Bite")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Bite")
             )
           )
         )
@@ -438,6 +441,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
 
   /**
    * @function unit_zombierunner
+   * @param  {tactics} tactics
    * @return {unit}
    */
   static t_unit_zombierunner = {
@@ -448,7 +452,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   }
 
   // (func unit-zombierunner)
-  static f_unit_zombierunner() {
+  static f_unit_zombierunner(tactics) {
     let output = nx_tactics_base.e_unit
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_unit},
@@ -479,7 +483,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitskill},
           ":skill",
-          nx_tactics_decks_data.f_tactics_skill("Close Combat"),
+          nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -487,7 +491,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Grab")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Grab")
             )
           )
         )
@@ -497,7 +501,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitpower},
           ":power",
-          nx_tactics_decks_data.f_tactics_power("Natural Weaponry"),
+          nx_tactics_base.f_power_from_tactics_key(tactics, "Natural Weaponry"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -505,7 +509,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Bite")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Bite")
             )
           )
         )
@@ -516,6 +520,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
 
   /**
    * @function unit_zombiewalker
+   * @param  {tactics} tactics
    * @return {unit}
    */
   static t_unit_zombiewalker = {
@@ -526,7 +531,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
   }
 
   // (func unit-zombiewalker)
-  static f_unit_zombiewalker() {
+  static f_unit_zombiewalker(tactics) {
     let output = nx_tactics_base.e_unit
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_unit},
@@ -553,7 +558,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitskill},
           ":skill",
-          nx_tactics_decks_data.f_tactics_skill("Close Combat"),
+          nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -561,7 +566,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Grab")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Grab")
             )
           )
         )
@@ -571,7 +576,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitpower},
           ":power",
-          nx_tactics_decks_data.f_tactics_power("Natural Weaponry"),
+          nx_tactics_base.f_power_from_tactics_key(tactics, "Natural Weaponry"),
           ":level",
           "1",
           ":unitabilitymap",
@@ -579,7 +584,7 @@ export default class nx_tactics_decks_scenario_nightonthetown {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Bite")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Bite")
             )
           )
         )

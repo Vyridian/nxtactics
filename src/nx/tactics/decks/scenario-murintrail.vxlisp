@@ -7,357 +7,140 @@
  (base/power
   :name "Ground Movement"))
 
-(func item-armor-leathercuirass : base/item
- (base/item
-  :name "Leather Cuirass"
-  :titles "Leather Body Armor"
-  :image "images/cards/item-armor-leathercuirass.svg"
-  :summary
-   "* [Armor]: 1x1 [Hardened vs Slash]
-    * [Location]: [Shoulders] [Chest] [Abdomen] [Vitals]"
-  :body "7x0"
-  :mass "7kg/15lb"))
-
-(func item-axehand : base/item
- (base/item
-  :name "Hand Axe"
-  :image "images/cards/item-axehand.svg"
-  :summary
-   "* [Fight]: [Melee]
-    * [Damage]: [Body] [Hack] [Slash]
-    * [Location]: [1-hand]"
-  :body "9x-1"
-  :mass "900g/2lb"))
-
-(func item-coppercoins : base/item
- (base/item
-  :name "Copper Coins"
-  :image "images/cards/item-coppercoins.svg"
-  :summary
-   "* A few (~5=$5) coins.
-    * A pauper's wealth.
-    * 10 Copper = 1 Silver
-    * Cheap meal, 2 cheap drinks, night in a common room, a nice tip."
-  :body "5x-2"
-  :mass "50g/.1lb"))
-
-(func item-silvercoins : base/item
- (base/item
-  :name "Silver Coins"
-  :image "images/cards/item-silvercoins.svg"
-  :summary
-   "* A few (~5=$50) coins.
-    * Spending money.
-    * 10 Copper = 1 Silver
-    * 10 Silver = 1 Gold
-    * 2 nice meals, 3 bottles wine, round of drinks, a private room, week supplies, cheap gear."
-  :body "10x-2"
-  :mass "100g/.2lb"))
-
-(func item-goldcoins : base/item
- (base/item
-  :name "Gold Coins"
-  :image "images/cards/item-goldcoins.svg"
-  :summary
-   "* A few (~5=$500) coins.
-    * A tidy sum.
-    * 10 Silver = 1 Gold
-    * 10 Gold = 1 Platinum
-    * A piece of quality gear."
-  :body "10x-2"
-  :mass "150g/.3lb"))
-
-(func item-platinumcoins : base/item
- (base/item
-  :name "Platinum Coins"
-  :image "images/cards/item-platinumcoins.svg"
-  :summary
-   "* A few (~5=$5000) coins.
-    * A small fortune.
-    * 10 Gold = 1 Platinum
-    * A piece of extremely high quality or magical gear."
-  :body "10x-2"
-  :mass "150g/.3lb"))
-
-(func item-dagger : base/item
- (base/item
-  :name "Dagger"
-  :image "images/cards/item-dagger.svg"
-  :summary
-   "* [Fight]: [Close Combat] or [Melee]
-    * [Damage]: [Body] [Pierce] [Slash]
-    * [Location]: [1-hand]"
-  :body "5x-1"
-  :mass "500g/1lb"
-  :energy "50J"
-  :length "25cm/10in"))
-
-(func item-hammer : base/item
- (base/item
-  :name "Hammer"
-  :image "images/cards/item-hammer.svg"
-  :summary
-   "* [Fight]: [Melee]
-    * [Damage]: [Body]+2 [Bash]
-    * [Location]: [1-hand]"
-  :body "2x0"
-  :mass "2kg/4.4lb"))
-
-(func item-arrowquiver : base/item
- (base/item
-  :name "Arrow Quiver"
-  :image "images/cards/item-arrowquiver.svg"
-  :summary
-   "* Holds up to 20 arrows
-    * [Location]: [Shoulders] Back"
-  :body "10x-1"
-  :mass "1kg/2.2lb"
-  :length "6cm/2ft"))
-
-(func item-finewoodlandcloak : base/item
- (base/item
-  :name "Fine Woodland Cloak"
-  :image "images/cards/item-finewoodlandcloak.svg"
-  :summary
-   "* [Passive]: [Stealth]:+1 in [Forest]
-    * [Passive]: Discard the first [Fatigue] you receive from [Weather] each [Turn]."
-  :body "2x0"
-  :mass "2kg/4.4lb"))
-
-(func item-healingsalve : base/item
- (base/item
-  :name "Healing Salve"
-  :image "images/cards/item-healingsalve.svg"
-  :summary
-   "* [Uses]: 3
-    * [Double Action] Use:1: Reduce a Major Wound to a Minor Wound."
-  :body "5x-1"
-  :mass "500g/1.1lb"))
-
-(func item-longsword : base/item
- (base/item
-  :name "Longsword"
-  :image "images/cards/item-longsword.svg"
-  :summary
-   "* [Fight]: [Melee]
-    * [Damage]: [Body]+1 [Pierce] [Slash]
-    * [Location]: [1-hand]
-    * [Armor]: 1x1"
-  :body "10x-1"
-  :mass "1.25kg/3lb"))
-
-(func item-rations : base/item
- (base/item
-  :name "Rations"
-  :image "images/cards/item-rations.svg"
-  :summary
-   "* Enough Food for 7-10 days.
-    * Cost: [Silver Coins]
-    * An assortment of jerky, dried fruits, hardtack, hardrolls, dried cheese, potatoes, turnips and nuts.
-    * Water is heavy, so these are mostly dry. If consumed without water, the unit will be [Dehydrated] after 7 days."
-  :body "4x0"
-  :mass "4kg/9lbs"))
-
-(func item-shieldbuckler : base/item
- (base/item
-  :name "Buckler Shield"
-  :image "images/cards/item-shieldbuckler.svg"
-  :summary
-   "* [Armor]: 1x1
-    * [Location]: [1-hand]"
-  :body "10x-1"
-  :mass "1kg/2lb"))
-
-(func item-shieldheater : base/item
- (base/item
-  :name "Heater Shield"
-  :image "images/cards/item-shieldheater.svg"
-  :summary
-   "* [Armor]: 2x1 [Hardened vs Hack]
-    * [Location]: [1-hand]"
-  :body "3x0"
-  :mass "3.2kg/7lb"))
-
-(func item-shieldround : base/item
- (base/item
-  :name "Round Shield"
-  :image "images/cards/item-shieldround.svg"
-  :summary
-   "* [Armor]: 2x1 [Hardened vs Pierce]
-    * [Location]: [1-hand]"
-  :body "5x0"
-  :mass "5kg/11lb"))
-
-(func item-spear : base/item
- (base/item
-  :name "Spear"
-  :image "images/cards/item-spear.svg"
-  :summary
-   "* [Fight]: [Melee] [Reach]
-    * [Damage]: [Body]+3 [Pierce] [Slash]
-    * [Location]: [2-hand]
-    * [Armor]: 1x1"
-  :body "3x0"
-  :mass "3kg/6lb"))
-
-(func item-shortspear : base/item
- (base/item
-  :name "Short Spear"
-  :image "images/cards/item-shortspear.svg"
-  :summary
-   "* [Fight]: [Melee]
-    * [Damage]: [Body]+1 [Pierce] [Slash]
-    * [Location]: [1-hand]
-    * [Armor]: 1x1"
-  :body "10x-1"
-  :mass "1.5kg/4lb"))
-
-(func item-shortsword : base/item
- (base/item
-  :name "Shortsword"
-  :image "images/cards/item-shortsword.svg"
-  :summary
-   "* [Fight]: [Melee]
-    * [Damage]: [Body]+1 [Pierce] [Slash]
-    * [Location]: [1-hand]
-    * [Armor]: 1x1"
-  :body "10x-1"
-  :mass "1kg/2.2lb"))
-
-(func item-waterskin : base/item
- (base/item
-  :name "Waterskin"
-  :image "images/cards/item-waterskin.svg"
-  :summary
-   "* 2 liters/.5 gallon. Enough Water for 2 days.
-    * Cost: [Copper Coins]. Can be refilled from any clean water source."
-  :body "2x0"
-  :mass "2kg/4.4lbs"))
-
-(func item-woodaxe : base/item
- (base/item
-  :name "Wood Axe"
-  :titles "Splitting Maul"
-  :image "images/cards/item-woodaxe.svg"
-  :summary
-   "* [Fight]: [Melee]-1
-    * [Damage]: [Body]+3 [Hack] [Slash]
-    * [Location]: [2-hand]
-    * [Armor]: 1x1"
-  :body "3x0"
-  :mass "3.1kg/7lb"))
-
 (func place-blacksmith : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Blacksmith"
   :image "images/cards/place-blacksmith.svg"))
 
 (func place-campsite : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Campsite"
   :image "images/cards/place-campsite.svg"))
 
 (func place-cavemouth : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Cave Mouth"
   :image "images/cards/place-cavemouth.svg"))
 
 (func place-dirtpath : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Dirt Path"
   :image "images/cards/place-dirtpath.svg"))
 
 (func place-farmhouse : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Farmhouse"
   :image "images/cards/place-farmhouse.svg"))
 
 (func place-field : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Field"
   :image "images/cards/place-field.svg"))
 
 (func place-forest : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Forest"
   :image "images/cards/place-forest.svg"))
 
 (func place-gravelroad : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Gravel Road"
   :image "images/cards/place-gravelroad.svg"))
 
 (func place-guardpost : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Guardpost"
   :image "images/cards/place-guardpost.svg"))
 
 (func place-horsestables : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Horse Stables"
   :image "images/cards/place-horsestables.svg"))
 
 (func place-mill : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Mill"
   :image "images/cards/place-mill.svg"))
 
 (func place-mountain : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Mountain"
   :image "images/cards/place-mountain.svg"))
 
 (func place-stoneroad : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Stone Road"
   :image "images/cards/place-stoneroad.svg"))
 
 (func place-tavern : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Tavern"
   :image "images/cards/place-tavern.svg"))
 
 (func place-tavern-bar : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Tavern Bar"
   :image "images/cards/place-tavern-bar.svg"))
 
 (func place-tavern-bedroom : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Tavern Bedroom"
   :image "images/cards/place-tavern-bedroom.svg"))
 
 (func place-tavern-common : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Tavern Common"
   :image "images/cards/place-tavern-common.svg"))
 
 (func place-tavern-dining : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Tavern Dining"
   :image "images/cards/place-tavern-dining.svg"))
 
 (func place-tavern-stairs : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Tavern Stairs"
   :image "images/cards/place-tavern-stairs.svg"))
 
 (func place-temple : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Temple"
   :image "images/cards/place-temple.svg"))
 
 (func place-tradingpost : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Trading Post"
   :image "images/cards/place-tradingpost.svg"))
 
 (func place-woodenhall : base/place
+ [tactics : base/tactics]
  (base/place
   :name "Wooden Hall"
   :image "images/cards/place-woodenhall.svg"))
 
 (func scene-murintrail : base/scenario
+ [tactics : base/tactics]
  (base/scenario
   :name "Murin Trail Scene"
   :secrets
@@ -369,10 +152,11 @@
     * The innkeeper/cook (Hamal) runs the place with his 12 year old daughter (Rena).
     * The land is mountainous and rocky, but the weather is fair and crops are reasonable.
     * A small religious group is staying in the city until they move on. They locals don't care for them.
-    * A priest (Xeb) in town makes and sells anti-venom.
-    * Xeb is travelling to Murintown, but he does not want to travel unguarded."))
+    * A priest (Xeib) in town makes and sells anti-venom.
+    * Xeib is travelling to Murintown, but he does not want to travel unguarded."))
 
 (func unit-bandit : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Bandit"
   :image "images/cards/unit-bandit.svg"
@@ -397,21 +181,25 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Melee")
+     :skill
+      (base/skill<-tactics-key tactics "Melee")
      :level "3"
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (item-shortsword))))
+         :item
+          (base/item<-tactics-key tactics "Shortsword"))))
     (base/unitskill
-     :skill (data/tactics-skill "Stealth")
+     :skill
+      (base/skill<-tactics-key tactics "Stealth")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Ambush")))))))
+        :ability (base/ability<-tactics-key tactics "Ambush")))))))
 
 (func unit-bruiser : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Bruiser"
   :image "images/cards/unit-bruiser.svg"
@@ -434,17 +222,18 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Close Combat")
+     :skill (base/skill<-tactics-key tactics "Close Combat")
      :level "2"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
         :ability (data/ability<-key "Grab"))))
     (base/unitskill
-     :skill (data/tactics-skill "Intimidation")
+     :skill (base/skill<-tactics-key tactics "Intimidation")
      :level "1"))))
 
 (func unit-goblinscout : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Goblin Scout"
   :image "images/cards/unit-goblin-scout.svg"
@@ -465,14 +254,14 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Close Combat")
+     :skill (base/skill<-tactics-key tactics "Close Combat")
      :level "1"
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (item-dagger))))
+         :item (base/item<-tactics-key tactics "Dagger"))))
     (base/unitskill
-     :skill (data/tactics-skill "Stealth")
+     :skill (base/skill<-tactics-key tactics "Stealth")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
@@ -480,6 +269,7 @@
         :ability (data/ability<-key "Sneak")))))))
 
 (func unit-flint : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Flint (Early)"
   :image "images/cards/unit-flint.svg"
@@ -499,14 +289,14 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Close Combat")
+     :skill (base/skill<-tactics-key tactics "Close Combat")
      :level "1"
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (item-dagger))))
+         :item (base/item<-tactics-key tactics "Dagger"))))
     (base/unitskill
-     :skill (data/tactics-skill "Stealth")
+     :skill (base/skill<-tactics-key tactics "Stealth")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
@@ -514,6 +304,7 @@
         :ability (data/ability<-key "Sneak")))))))
 
 (func unit-guardsman : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Guardsman"
   :image "images/cards/unit-guardsman.svg"
@@ -537,17 +328,18 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Melee")
+     :skill (base/skill<-tactics-key tactics "Melee")
      :level "2"
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (item-shortspear))))
+         :item (base/item<-tactics-key tactics "Spear"))))
     (base/unitskill
-     :skill (data/tactics-skill "Investigation")
+     :skill (base/skill<-tactics-key tactics "Investigation")
      :level "1"))))
 
 (func unit-horse : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Horse"
   :image "images/cards/unit-horse.svg"
@@ -567,6 +359,7 @@
      :level "4x1"))))
 
 (func unit-jesaveer : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Jes Aveer"
   :titles "Jessana Aveer"
@@ -591,14 +384,14 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Melee")
+     :skill (base/skill<-tactics-key tactics "Melee")
      :level "1"
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (item-hammer))))
+         :item (base/item<-tactics-key tactics "Hammer"))))
     (base/unitskill
-     :skill (data/tactics-skill "Tradeskills")
+     :skill (base/skill<-tactics-key tactics "Tradeskills")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
@@ -606,6 +399,7 @@
         :ability (data/ability<-key "Blacksmithing")))))))
 
 (func unit-jonaveer : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Jon Aveer"
   :titles "Ajona Aveer"
@@ -630,14 +424,14 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Melee")
+     :skill (base/skill<-tactics-key tactics "Melee")
      :level "1"
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (item-spear))))
+         :item (base/item<-tactics-key tactics "Spear"))))
     (base/unitskill
-     :skill (data/tactics-skill "Business")
+     :skill (base/skill<-tactics-key tactics "Business")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
@@ -645,6 +439,7 @@
         :ability (data/ability<-key "Bargain")))))))
 
 (func unit-liliducon : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Lili Ducon"
   :image "images/cards/unit-liliducon.svg"
@@ -668,14 +463,15 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Survival")
+     :skill (base/skill<-tactics-key tactics "Survival")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/tactics-skill "Foraging")))))))
+        :ability (base/skill<-tactics-key tactics "Foraging")))))))
 
 (func unit-wilddog : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Wild Dog"
   :image "images/cards/unit-wilddog.svg"
@@ -692,7 +488,7 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Close Combat")
+     :skill (base/skill<-tactics-key tactics "Close Combat")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
@@ -709,6 +505,7 @@
      :level "7x1"))))
 
 (func unit-wilmducon : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Wilm Ducon"
   :image "images/cards/unit-wilmducon.svg"
@@ -732,21 +529,22 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Melee")
+     :skill (base/skill<-tactics-key tactics "Melee")
      :level "1"
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (item-woodaxe))))
+         :item (base/item<-tactics-key tactics "Wood Axe"))))
     (base/unitskill
-     :skill (data/tactics-skill "Hunting")
+     :skill (base/skill<-tactics-key tactics "Hunting")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Trapping")))))))
+        :ability (base/ability<-tactics-key tactics "Trapping")))))))
 
 (func unit-woodencart : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Wooden Cart"
   :image "images/cards/unit-woodencart.svg"
@@ -755,6 +553,7 @@
   :mass "200kg/440lb"))
 
 (func unit-xeibhanower : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Xeib Honower"
   :image "images/cards/unit-xeibhanower.svg"
@@ -767,92 +566,104 @@
   :speed "3x0"
   :mass "80kg"
   :height "1.78m/5'10"
-  :speedland "10kph/7mph"))
+  :speedland "10kph/7mph"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill
+     :skill (base/skill<-tactics-key tactics "Animal Handling")
+     :level "3"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability (data/ability<-key "Snake Charming"))
+       (base/unitability
+        :ability (data/ability<-key "Venom Extraction")))))))
 
 (func deck-murintrail : base/deck
  [tactics : base/tactics]
  (let : base/deck
-  [goblinscout   := (unit-goblinscout)
+  [goblinscout   := (unit-goblinscout tactics)
    goblinscout-i := (base/cardimage<-card goblinscout)
-   horse   := (unit-horse)
+   horse   := (unit-horse tactics)
    horse-i := (base/cardimage<-card horse)]
   (base/deck
    :name "Murin Trail"
    :cardmap
     (base/cardmap<-cardlist
      (base/cardlist
-      (unit-flint)
-      (unit-bandit)
-      (unit-bruiser)
-      (unit-guardsman)
-      (item-healingsalve)
-      (item-finewoodlandcloak)
-      (item-rations)
-      (item-waterskin)
-      (data/tactics-skill "Close Combat")
-      (data/tactics-skill "Melee")
-      (data/tactics-skill "Stealth")
-      (data/tactics-skill "Business")
-      (data/tactics-skill "Tradeskills")
+      (unit-flint tactics)
+      (unit-bandit tactics)
+      (unit-bruiser tactics)
+      (unit-guardsman tactics)
+      (base/skill<-tactics-key tactics "Close Combat")
+      (base/skill<-tactics-key tactics "Melee")
+      (base/skill<-tactics-key tactics "Stealth")
+      (base/skill<-tactics-key tactics "Business")
+      (base/skill<-tactics-key tactics "Tradeskills")
       (any<-any : base/cardlist
        (base/abilitylist<-tactics-keys
         tactics
         "Ambush"
         "Bargain"
         "Sneak"))
-      (item-coppercoins)
-      (item-silvercoins)
-      (item-goldcoins)
-      (item-platinumcoins)
-      (item-armor-leathercuirass)
-      (item-axehand)
-      (item-woodaxe)
       (any<-any : base/cardlist
        (base/itemlist<-tactics-keys
         tactics
         "Bare Handed"
-        "Shortbow"))
-      (item-arrowquiver)
-      (item-dagger)
-      (item-hammer)
-      (item-shieldbuckler)
-      (item-shieldheater)
-      (item-shieldround)
-      (item-spear)
-      (item-shortspear)
-      (item-longsword)
-      (item-shortsword)
-      (unit-jesaveer)
-      (unit-jonaveer)
-      (unit-xeibhanower)
-      (unit-wilmducon)
-      (unit-liliducon)
-      (unit-wilddog)
+        "Dagger"
+        "Longsword"
+        "Shortsword"
+        "Hammer"
+        "Hand Axe"
+        "Wood Axe"
+        "Spear"
+        "Short Spear"
+        "Shortbow"
+        "Arrow Quiver"
+        "Buckler"
+        "Heater Shield"
+        "Round Shield"
+        "Leather Cuirass"
+        "Copper Coins"
+        "Silver Coins"
+        "Gold Coins"
+        "Platinum Coins"
+        "Healing Salve"
+        "Fine Woodland Cloak"
+        "Rations"
+        "Waterskin"
+        ))
+      (unit-jesaveer tactics)
+      (unit-jonaveer tactics)
+      (unit-xeibhanower tactics)
+      (unit-wilmducon tactics)
+      (unit-liliducon tactics)
+      (unit-wilddog tactics)
       goblinscout
       goblinscout-i
-      (unit-horse)
+      (unit-horse tactics)
       horse-i
-      (unit-woodencart)
-      (place-field)
-      (place-forest)
-      (place-mountain)
-      (place-blacksmith)
-      (place-campsite)
-      (place-cavemouth)
-      (place-dirtpath)
-      (place-farmhouse)
-      (place-gravelroad)
-      (place-guardpost)
-      (place-horsestables)
-      (place-mill)
-      (place-stoneroad)
-      (place-tavern)
-      (place-tavern-bar)
-      (place-tavern-bedroom)
-      (place-tavern-common)
-      (place-tavern-dining)
-      (place-tavern-stairs)
-      (place-temple)
-      (place-tradingpost)
-      (place-woodenhall)
+      (unit-woodencart tactics)
+      (place-field tactics)
+      (place-forest tactics)
+      (place-mountain tactics)
+      (place-blacksmith tactics)
+      (place-campsite tactics)
+      (place-cavemouth tactics)
+      (place-dirtpath tactics)
+      (place-farmhouse tactics)
+      (place-gravelroad tactics)
+      (place-guardpost tactics)
+      (place-horsestables tactics)
+      (place-mill tactics)
+      (place-stoneroad tactics)
+      (place-tavern tactics)
+      (place-tavern-bar tactics)
+      (place-tavern-bedroom tactics)
+      (place-tavern-common tactics)
+      (place-tavern-dining tactics)
+      (place-tavern-stairs tactics)
+      (place-temple tactics)
+      (place-tradingpost tactics)
+      (place-woodenhall tactics)
       )))))

@@ -24,12 +24,12 @@ export default class nx_tactics_decks_wound_test {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/wound", 
-      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 57), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 19, ":tests", 12, ":total", 61), 
+      "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 58), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 19, ":tests", 12, ":total", 62), 
       "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 4), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 61), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 62), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -49,6 +49,7 @@ export default class nx_tactics_decks_wound_test {
           "bleeding", 0,
           "bloodloss", 0,
           "fatigue", 0,
+          "poisoned", 0,
           "wound-2c", 0,
           "wound-2d", 0,
           "wound-2h", 0,

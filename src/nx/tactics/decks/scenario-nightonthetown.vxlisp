@@ -45,6 +45,7 @@
     ** THEN at the beginning of each [Turn], take [Fatigue]:+1 or [Stress]:+1 until cured."))
 
 (func unit-theprofessor : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "The Professor"
   :image "images/cards/unit-theprofessor.svg"
@@ -61,25 +62,26 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Ranged")
+     :skill (base/skill<-tactics-key tactics "Ranged")
      :level "1"
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (data/item<-key "Shortbow"))))
+         :item (base/item<-tactics-key tactics "Shortbow"))))
     (base/unitskill
-     :skill (data/tactics-skill "Investigation")
+     :skill (base/skill<-tactics-key tactics "Investigation")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-key "Detail Oriented")))
+         :ability (base/ability<-tactics-key tactics "Detail Oriented")))
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (data/item<-key "Monocle")))))))
+         :item (base/item<-tactics-key tactics "Monocle")))))))
 
 (func unit-zombiecrawler : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Zombie Crawler"
   :image "images/cards/unit-zombiecrawler.svg"
@@ -94,23 +96,26 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Close Combat")
+     :skill (base/skill<-tactics-key tactics "Close Combat")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (data/ability<-key "Grab")))))
+       (base/unitability
+        :ability
+         (base/ability<-tactics-key tactics "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
-     :power (data/tactics-power "Natural Weaponry")
+     :power
+      (base/power<-tactics-key tactics "Natural Weaponry")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (data/ability<-key "Bite")))))))
+       (base/unitability
+        :ability (base/ability<-tactics-key tactics "Bite")))))))
 
 (func unit-zombiedog : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Zombie Dog"
   :image "images/cards/unit-zombiedog.svg"
@@ -127,23 +132,25 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Close Combat")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (data/ability<-key "Grab")))))
-  :unitpowermap
-   (base/unitpowermap<-unitpowerlist
-    (base/unitpower
-     :power (data/tactics-power "Natural Weaponry")
+     :skill (base/skill<-tactics-key tactics "Close Combat")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Bite")))))))
+        :ability (base/ability<-tactics-key tactics "Grab")))))
+  :unitpowermap
+   (base/unitpowermap<-unitpowerlist
+    (base/unitpower
+     :power
+      (base/power<-tactics-key tactics "Natural Weaponry")
+     :level "1"
+     :unitabilitymap
+      (base/unitabilitymap<-unitabilitylist
+       (base/unitability
+        :ability (base/ability<-tactics-key tactics "Bite")))))))
 
 (func unit-zombierunner : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Zombie Runner"
   :image "images/cards/unit-zombierunner.svg"
@@ -160,23 +167,25 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Close Combat")
+     :skill (base/skill<-tactics-key tactics "Close Combat")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-key "Grab")))))
+         :ability (base/ability<-tactics-key tactics "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
-     :power (data/tactics-power "Natural Weaponry")
+     :power
+      (base/power<-tactics-key tactics "Natural Weaponry")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-key "Bite")))))))
+         :ability (base/ability<-tactics-key tactics "Bite")))))))
 
 (func unit-zombiewalker : base/unit
+ [tactics : base/tactics]
  (base/unit
   :name "Zombie Walker"
   :image "images/cards/unit-zombiewalker.svg"
@@ -191,26 +200,26 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
-     :skill (data/tactics-skill "Close Combat")
+     :skill (base/skill<-tactics-key tactics "Close Combat")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-key "Grab")))))
+         :ability (base/ability<-tactics-key tactics "Grab")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
-     :power (data/tactics-power "Natural Weaponry")
+     :power (base/power<-tactics-key tactics "Natural Weaponry")
      :level "1"
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-key "Bite")))))))
+         :ability (base/ability<-tactics-key tactics "Bite")))))))
 
 (func deck-nightonthetown : base/deck
  [tactics : base/tactics]
  (let : base/deck
-  [professor : base/card := (unit-theprofessor)
+  [professor : base/card := (unit-theprofessor tactics)
    professori : base/cardimage := (base/cardimage<-card professor)]
   (base/deck
    :name "Night on the Town"
@@ -245,13 +254,13 @@
         "Shotgun"
         "Shotgun Ammo"
         "Spear"))
-      (unit-zombiecrawler)
-      (unit-zombiedog)
-      (base/cardimage<-card (unit-zombiedog))
-      (unit-zombierunner)
-      (base/cardimage<-card (unit-zombierunner))
-      (unit-zombiewalker)
-      (base/cardimage<-card (unit-zombiewalker))
+      (unit-zombiecrawler tactics)
+      (unit-zombiedog tactics)
+      (base/cardimage<-card (unit-zombiedog tactics))
+      (unit-zombierunner tactics)
+      (base/cardimage<-card (unit-zombierunner tactics))
+      (unit-zombiewalker tactics)
+      (base/cardimage<-card (unit-zombiewalker tactics))
       (place-clinic)
       (place-conveniencestore)
       (place-gasstation)

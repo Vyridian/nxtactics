@@ -2545,7 +2545,10 @@
      (section
       :name "Mycans"
       :reference
-       "* Puffcap Peddler: Oh, if mushrooms could talk. Teemo: I'll have what he's having. - Runeterra"
+       "* Puffcap Peddler: Oh, if mushrooms could talk. Teemo: I'll have what he's having. - Puffcap Peddler and Teemo, Runeterra
+        * I'm empty inside. - Mister Root, Runeterra
+        * I love being a meaningless pawn. - Mister Root, Runeterra
+        * I had a bunch of friends before. They all died. - Mister Root, Runeterra"
       :summary
        "* The Mycans are a fungal race.
         * Life Cycle - They mostly live underground as a vast fungal network, but during spring months the networks spawns small mushroom men that work to improve their living area and seek mates. At the end of the fall, these mushrooms collapse and break down. Each year, the same personalities are resurrected, but they are born anew and have no memories of their previous life, though all of their memories are permanently stored in the network.
@@ -2554,7 +2557,7 @@
         * Spores - Mycans can 'exhale' hallucinogenic spores to confuse and incapacitate opponents. They can also use their spores to create images and impressions in other creatures.
         * Communication - Mycans do not speak. Instead they communicate with each other through the mycelial network underground. In fact, they communicate so much information through this network that all Mycans in a colony immediately know everything every other member knows.
         * Intelligence - Mycans are fairly intelligent, but they are a simple folk and have little interest in things that don't directly affect their lives. They do build simple shelters and are expert farmers.
-        * Personalities - Mycans are generally friendly and quite pleasent to those who do not threaten them. They are grimly militaristic against threats, however. Though they are individuals with their own personalities, Mycans are a colony organism and are not overly concerned about their safety or deaths. They also see time in a more long term way than most creatures."
+        * Personalities - Mycans are generally friendly and quite pleasent to those who do not threaten them. They are grimly militaristic against threats, however. They appear to have happy, childlike personalities, but though they are individuals, Mycans are a colony organism and are not overly concerned about their safety or deaths. They also see time in a more long term way than most creatures."
       :titles "Fungus Men, Mushrooms, Mushroom Men, Shrooms")
     :Naga
      (section

@@ -330,6 +330,9 @@
    beast           : string
    demeanor        : string
    nature          : string
+   passions        : string
+   fears           : string
+   bonds           : string
    age             : int
    classification  : string
    crew            : string
@@ -1068,7 +1071,7 @@
    image : string := (:image card)
    imgmirror : boolean := (:imgmirror card)
    id : string := (string name "-image")]
-  (base/cardimage
+  (cardimage
    :id id
    :name name
    :origcard card
@@ -1076,9 +1079,14 @@
    :imgmirror imgmirror))
  :doc "Returns a cardimage from a given card")
 
-(func name<-chapter : string
- [chapter : chapter]
- (:name chapter))
+(func item<-tactics-key : item
+ [tactics : tactics
+  key     : string]
+ (let : item
+  [itemmap : itemmap :=
+    (:itemmap tactics)]
+  (any<-map itemmap key))
+ :doc "Returns an item from tactics")
 
 (func itemlist<-itemlistlist : itemlist
  [itemlistlist : itemlistlist]
@@ -1149,6 +1157,10 @@
    (:name item)))
  :doc "Returns a itemmap from a given itemlist")
 
+(func name<-chapter : string
+ [chapter : chapter]
+ (:name chapter))
+
 (func placelist<-section : placelist
  [section : section]
  (let : placelist
@@ -1201,6 +1213,14 @@
    [place : place]
    (:name place)))
  :doc "Returns a placemap from a given placelist")
+
+(func power<-tactics-key : power
+ [tactics : tactics
+  key : string]
+ (let : power
+  [powermap : powermap := (:powermap tactics)]
+  (any<-map powermap key))
+ :doc "Returns a power from tactics")
 
 (func powerlist<-powerlistlist : powerlist
  [powerlistlist : powerlistlist]
@@ -1446,6 +1466,14 @@
    [section : section]
    (:name section)))
  :doc "Returns a sectionmap from a given sectionlist")
+
+(func skill<-tactics-key : skill
+ [tactics : tactics
+  key : string]
+ (let : skill
+  [skillmap : skillmap := (:skillmap tactics)]
+  (any<-map skillmap key))
+ :doc "Returns a skill from tactics-all")
 
 (func skilllist<-section : skilllist
  [section : section]

@@ -25,11 +25,11 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 31, ":tests", 80, ":total", 258), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 74), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 31, ":tests", 83, ":total", 261), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 77), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 258), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 261), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 94)
     )
     return output
@@ -256,6 +256,7 @@ export default class nx_tactics_base_test {
           "chapterlist<-chapterlistlist", 0,
           "chapterlistlist<-booklist", 0,
           "chaptermap<-chapterlist", 0,
+          "item<-tactics-key", 0,
           "itemlist<-itemlistlist", 0,
           "itemlist<-itemmap", 0,
           "itemlist<-section", 0,
@@ -270,6 +271,7 @@ export default class nx_tactics_base_test {
           "placelist<-sectionlist", 0,
           "placelistlist<-sectionlist", 0,
           "placemap<-placelist", 0,
+          "power<-tactics-key", 0,
           "powerlist<-powerlistlist", 0,
           "powerlist<-powermap", 0,
           "powerlist<-section", 0,
@@ -288,6 +290,7 @@ export default class nx_tactics_base_test {
           "sectionlistlist<-chapterlist", 0,
           "sectionlistlist<-sectionlist", 1,
           "sectionmap<-sectionlist", 0,
+          "skill<-tactics-key", 0,
           "skilllist<-section", 0,
           "skilllist<-sectionlist", 0,
           "skilllist<-skilllistlist", 0,

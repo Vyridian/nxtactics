@@ -50,11 +50,34 @@ export default class nx_tactics_decks_unit {
   static f_unitmap_tactics(tactics) {
     let output = nx_tactics_base.e_unitmap
     output = nx_tactics_base.f_unitmap_from_unitlist(
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly, Giant"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar, Giant"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly: Giant"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar: Giant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbear"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellboar"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbull")
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbull"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Snake: Emerald Viper",
+        ":image",
+        "images/cards/unit-snake-emeraldviper.svg",
+        ":summary",
+        "",
+        ":powermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitpower},
+            ":level",
+            2,
+            ":intensity",
+            "2x2",
+            ":power",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Venomous"),
+            ":abilitylist",
+            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Poison Bite")
+          )
+        )
+      )
     )
     return output
   }
