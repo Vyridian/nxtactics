@@ -6,6 +6,7 @@
        (lib place            :path nx/tactics/decks/place)
        (lib power            :path nx/tactics/decks/power)
        (lib scenario         :path nx/tactics/decks/scenario)
+       (lib specialty        :path nx/tactics/decks/specialty)
        (lib skill            :path nx/tactics/decks/skill)
        (lib unit             :path nx/tactics/decks/unit)
        (lib advanced_rules   :path nx/tactics/books/advanced_rules)
@@ -68,32 +69,6 @@
   (space_and_time/tacticsbook tactics))
  :doc "All books")
 
-(func ability<-key : base/ability
- [key : string]
- (base/ability<-tactics-key
-  tactics-all key)
- :doc "Returns an ability from tactics-all")
-
-(func abilitylist<-keys : base/abilitylist
- [keys : stringlist :...]
- (base/abilitylist<-tactics-keys
-  tactics-all
-  keys)
- :doc "Returns an abilitylist from tactics-all")
-
-(func item<-key : base/item
- [key : string]
- (item<-tactics-key
-  tactics-all key)
- :doc "Returns an item from tactics-all")
-
-(func itemlist<-keys : base/itemlist
- [keys : stringlist :...]
- (base/itemlist<-tactics-keys
-  tactics-all
-  keys)
- :doc "Returns an itemlist from tactics-all")
-
 (func tactics-booklist<-tactics : base/tactics
  [tactics : base/tactics]
  (let : base/tactics
@@ -108,10 +83,16 @@
   [tacticsbasic : base/tactics := (empty base/tactics)
    tacticsabilities : base/tactics :=
     (ability/tactics-abilitymap<-tactics tacticsbasic)
+   tacticsspecialties : base/tactics :=
+    (specialty/tactics-specialtymap<-tactics tacticsabilities)
    tacticsskills : base/tactics :=
-    (skill/tactics-skillmap<-tactics tacticsabilities)
+    (skill/tactics-skillmap<-tactics tacticsspecialties)
+   tacticspowers : base/tactics :=
+    (power/tactics-powermap<-tactics tacticsskills)
+   tacticsitems : base/tactics :=
+    (item/tactics-itemmap<-tactics tacticspowers)
    tacticsunits : base/tactics :=
-    (unit/tactics-unitmap<-tactics tacticsskills)
+    (unit/tactics-unitmap<-tactics tacticsitems)
    tacticsplaces : base/tactics :=
     (place/tactics-placemap<-tactics tacticsunits)
    tacticsscenarios : base/tactics :=
@@ -120,21 +101,3 @@
     (tactics-booklist<-tactics tacticsscenarios)]
   tacticsall)
  :doc "Returns a fully loaded tactics")
-
-(func unit<-tactics-key : base/unit
- [tactics : base/tactics
-  key     : string]
- (let : base/unit
-  [unitmap : base/unitmap :=
-    (:unitmap tactics)
-   unit : base/unit :=
-    (any<-map unitmap key)]
-  (log-error unit))
- :doc "Returns a unit from tactics")
-
-(func unitlist<-keys : base/unitlist
- [keys : stringlist :...]
- (unitlist<-tactics-keys
-  tactics-all
-  keys)
- :doc "Returns an unitlist from tactics-all")

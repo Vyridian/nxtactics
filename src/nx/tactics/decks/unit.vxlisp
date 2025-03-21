@@ -16,10 +16,35 @@
   (base/unit
    :name "Hellbull")
   (base/unit
+   :name "Hidden"
+   :image "images/cards/unit-hidden.svg")
+  (base/unit
    :name "Snake: Emerald Viper"
-   :image "images/cards/unit-snake-emeraldviper.svg"
    :summary
-    ""
+    "* Movement - They can swim and climb trees.
+     * Venomous Bite - Vipers carry a limited amount of venom. They can control the amount that injected including none at all.
+     * Venom - Viperid venoms typically contain an abundance of protein-degrading enzymes, called proteases, that produce symptoms such as pain, strong local swelling and necrosis, blood loss from cardiovascular damage complicated disruption of the blood-clotting system. Death is usually caused by collapse in blood pressure. Due to the nature of proteolytic venom, a viperid bite is often a very painful experience and should always be taken seriously, though it may not necessarily prove fatal. Even with prompt and proper treatment, a bite can still result in a permanent scar, and in the worst cases, the affected limb may even have to be amputated.
+      * Vision - They do not have heat vision unlike Pit Vipers"
+   :image "images/cards/unit-snake-emeraldviper.svg"
+   :body "2x0"
+   :mind "2x1"
+   :will "4x1"
+   :speed "3x0"
+   :speedland "3kph/2mph"
+   :mass "2kg/5lbs"
+   :length "30cm/1ft"
+   :skillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill
+      :level 1
+      :skill
+       (base/skill<-tactics-key
+        tactics "Stealth")
+      :abilitylist
+       (base/abilitylist<-tactics-keys
+        tactics
+        "Ambush"
+        "Camouflage")))
    :powermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower
@@ -27,7 +52,7 @@
       :intensity "2x2"
       :power
        (base/power<-tactics-key
-        tactics "Venomous")
+        tactics "Toxins")
       :abilitylist
        (base/abilitylist<-tactics-keys
         tactics

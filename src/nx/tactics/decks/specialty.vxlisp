@@ -1,0 +1,94 @@
+(package nx/tactics/decks/specialty
+ :libs (lib base :path nx/tactics/base)
+ :doc "Specialties")
+
+(func specialtymap-tactics : base/skillmap
+ [tactics : base/tactics]
+ (base/specialtymap<-specialtylist
+  (base/specialty
+   :name "Bounty Hunter"
+   :reference
+    "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway"
+   :summary
+    "* Bounty Hunting represents experience in stalking and capturing a target in an urban setting. This is traditionally done for money and can be quite profitable.
+     * Bounties are placed on people for whom the law lacks the resources or inclination to pursue.
+     * Bounties are placed by insurance companies, bail bondsmen, armies, the F.B.I., and individuals.
+     * The reward can be paid for information, the capture of the target in a reasonably uninjured state, or even dead or alive.
+     * The reward obviously needs to be commensurate with the difficulty or no one will take it. Capturing is harder than killing, so captures gain a bonus.")
+  (base/specialty
+   :name "Alien Hunter"
+   :references
+    "* Men in Black")
+  (base/specialty
+   :name "Caving"
+   :summary
+    "* Dead Reckoning
+     * Detect Hollow Rock
+     * Mining
+     * Motion Sense
+     * Sapping
+     * Underground Survival"
+   :titles "Miner, Prospector, Sapper, Spelunker, Underminer")
+  (base/specialty
+   :name "Demon Hunter"
+   :reference
+    "* Ash Williams, Evil Dead
+     * Claymore
+     * Demon Hunter, Diablo
+     * Demon Slayer: Kimetsu no Yaiba
+     * Sango, Inuyasha")
+  (base/specialty
+   :name "Devil Hunter"
+   :reference
+    "* Chainsawman
+     * Devil Hunter Youko
+     * Devil May Cry")
+  (base/specialty
+   :name "Ghost Hunter"
+   :references
+    "* Ghostbusters")
+  (base/specialty
+   :name "Mage Hunter"
+   :reference
+    "* Templars, Dragon Age")
+  (base/specialty
+   :name "Monster Hunter"
+   :reference
+    "* Grey Wardens, Dragon Age
+     * Witcher")
+  (base/specialty
+   :name "Trapper")
+  (base/specialty
+   :name "Treasure Hunter"
+   :reference
+    "* Indiana Jones
+     * Lara Croft"
+   :summary
+    "* Treasure Hunting represents experience in the dangerous and profitable world of lost tombs and ancient relics. Rare relics hold high presitge and are usually sold (in the form of a finders fee) to museaums, governments or private collectors. Raiding tombs is a fairly lawless and perilous activity to start with, and such high value items tend to attract disreputable characters of all kinds. As a result, treasure hunters often end their careers in unfortunate accidents.
+     * +1 while researching or navigating inside a crypt or tomb."
+   :titles "Tomb Raider, Treasure Seeker")
+  (base/specialty
+   :name "Vampire Hunter"
+   :reference
+    "* Blade
+     * BloodRayne
+     * Buffy the Vampire Slayer
+     * Castlevania
+     * Fright Night
+     * Lost Boys
+     * Vampire Hunter D")
+  (base/specialty
+   :name "Werewolf Hunter")
+  (base/specialty
+   :name "Witch Hunter")
+ )
+ :doc "Returns the base specialtymap")
+
+(func tactics-specialtymap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [specialtymap : base/specialtymap :=
+   (specialtymap-tactics tactics)]
+  (copy tactics
+   :specialtymap specialtymap))
+ :doc "Returns a tactics updated with specialtymap")

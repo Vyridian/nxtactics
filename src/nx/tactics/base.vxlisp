@@ -165,7 +165,7 @@
               suit : suit])
 
 (type power : struct
- :traits     [card]
+ :traits [card]
  :properties
   [stat         : string
    abilitymap   : abilitymap
@@ -190,7 +190,7 @@
  :traits [card])
 
 (type rating : struct
- :traits     [card]
+ :traits [card]
  :properties
   [level : int :doc "Values: 2->10"
    part  : int :doc "Values: 0->9"
@@ -210,8 +210,8 @@
  :allowtypes [rule])
 
 (type scenario : struct
- :properties [teammap : teammap]
- :traits     [card])
+ :traits     [card]
+ :properties [teammap : teammap])
 
 (type scenariolist : list
  :allowtypes [scenario])
@@ -263,10 +263,12 @@
  :allowtypes [skilllist])
 
 (type specialty : struct
- :traits     [card])
+ :traits [card])
+
+(type specialtylist : list
+ :allowtypes [specialty])
 
 (type specialtymap : map
- :traits     [card]
  :allowtypes [specialty])
 
 (type stat : struct
@@ -280,15 +282,16 @@
 
 (type tactics : struct
  :properties
-  [bookmap     : bookmap
-   abilitymap  : abilitymap
-   cardmap     : cardmap
-   itemmap     : itemmap
-   placemap    : placemap
-   powermap    : powermap
-   scenariomap : scenariomap
-   skillmap    : skillmap
-   unitmap     : unitmap])
+  [bookmap      : bookmap
+   abilitymap   : abilitymap
+   cardmap      : cardmap
+   itemmap      : itemmap
+   placemap     : placemap
+   powermap     : powermap
+   scenariomap  : scenariomap
+   skillmap     : skillmap
+   specialtymap : specialtymap
+   unitmap      : unitmap])
 
 (type tarot : struct
  :traits [card])
@@ -856,8 +859,12 @@
   [abilitymap : abilitymap :=
     (:abilitymap tactics)
    ability : ability :=
-    (any<-map abilitymap key)]
-  (log-error ability))
+    (any<-map abilitymap key)
+   logit : string :=
+    (if : string
+     (then (is-empty ability) (log key))
+     (else key))]
+  ability)
  :doc "Returns an ability from tactics")
 
 (func abilitylist<-abilitylistlist : abilitylistlist
@@ -906,15 +913,14 @@
  [tactics : tactics
   keys : stringlist :...]
  (let : abilitylist
-  [abilitymap : abilitymap :=
-    (:abilitymap tactics)
-   map2 : abilitymap :=
-    (coll/map<-map-keys
-     abilitymap
-     keys)
-   abilitylist : abilitylist :=
-    (list<-map map2)]
-  (log-error abilitylist))
+  [abilitylist : abilitylist :=
+    (list<-list : abilitylist
+     keys
+     (fn : ability
+      [key : string]
+      (ability<-tactics-key
+       tactics key)))]
+  abilitylist)
  :doc "Return an abilitylist from keys and tactics")
 
 (func abilitylistlist<-powerlist : abilitylistlist
@@ -1084,8 +1090,13 @@
   key     : string]
  (let : item
   [itemmap : itemmap :=
-    (:itemmap tactics)]
-  (any<-map itemmap key))
+    (:itemmap tactics)
+   item : item := (any<-map itemmap key)
+   logit : string :=
+    (if : string
+     (then (is-empty item) (log key))
+     (else key))]
+  item)
  :doc "Returns an item from tactics")
 
 (func itemlist<-itemlistlist : itemlist
@@ -1218,8 +1229,14 @@
  [tactics : tactics
   key : string]
  (let : power
-  [powermap : powermap := (:powermap tactics)]
-  (any<-map powermap key))
+  [powermap : powermap := (:powermap tactics)
+   power : power :=
+    (any<-map powermap key)
+   logit : string :=
+    (if : string
+     (then (is-empty power) (log key))
+     (else key))]
+  power)
  :doc "Returns a power from tactics")
 
 (func powerlist<-powerlistlist : powerlist
@@ -1267,7 +1284,7 @@
  :doc "Returns a powerlistlist from a given sectionlist")
 
 (func powermap<-powerlist : powermap
- [powerlist : powerlist]
+ [powerlist : powerlist :...]
  (map<-list : powermap
   powerlist
   (fn : power
@@ -1295,8 +1312,9 @@
 (func sectionlist<-chapterlist : sectionlist
  [chapterlist : chapterlist]
  (let : sectionlist
-  [sectionlistlist : sectionlistlist := (sectionlistlist<-chapterlist
-                                         chapterlist)]
+  [sectionlistlist : sectionlistlist :=
+   (sectionlistlist<-chapterlist
+    chapterlist)]
   (sectionlist<-sectionlistlist
    sectionlistlist))
  :doc "Returns a list of all sections directly under the given chapterlist")
@@ -1471,9 +1489,14 @@
  [tactics : tactics
   key : string]
  (let : skill
-  [skillmap : skillmap := (:skillmap tactics)]
-  (any<-map skillmap key))
- :doc "Returns a skill from tactics-all")
+  [skillmap : skillmap := (:skillmap tactics)
+   skill : skill := (any<-map skillmap key)
+   logit : string :=
+    (if : string
+     (then (is-empty skill) (log key))
+     (else key))]
+  skill)
+ :doc "Returns a skill from tactics")
 
 (func skilllist<-section : skilllist
  [section : section]
@@ -1527,6 +1550,53 @@
    [skill : skill]
    (:name skill)))
  :doc "Returns a skillmap from a given skilllist")
+
+(func specialty<-tactics-key : specialty
+ [tactics : tactics
+  key : string]
+ (let : specialty
+  [specialtymap : specialtymap := (:specialtymap tactics)
+   specialty : specialty := (any<-map specialtymap key)
+   logit : string :=
+    (if : string
+     (then (is-empty specialty) (log key))
+     (else key))]
+  specialty)
+ :doc "Returns a specialty from tactics")
+
+(func specialtylist<-tactics-keys : specialtylist
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : specialtylist
+  [specialtylist : specialtylist :=
+    (list<-list : specialtylist
+     keys
+     (fn : specialty
+      [key : string]
+      (specialty<-tactics-key
+       tactics key)))]
+  specialtylist)
+ :doc "Return an specialtylist from keys and tactics")
+
+(func specialtymap<-specialtylist : specialtymap
+ [specialtylist : specialtylist :...]
+ (map<-list : specialtymap
+  specialtylist
+  (fn : specialty
+   [specialty : specialty]
+   (:name specialty)))
+ :doc "Returns a specialtymap from a given specialtylist")
+
+(func specialtymap<-tactics-keys : specialtymap
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : specialtymap
+  [specialtylist : specialtylist :=
+    (specialtylist<-tactics-keys
+     tactics keys)]
+  (specialtymap<-specialtylist
+   specialtylist))
+ :doc "Return a specialtymap from keys and tactics")
 
 (func tactics<-tactics-booklist : tactics
  [tactics  : tactics
@@ -1642,6 +1712,21 @@
    :skillmap    skillmap3
    :unitmap     unitmap3))
  :doc "Returns a tactics with all maps merged with merge.")
+
+(func unit<-tactics-key : unit
+ [tactics : tactics
+  key     : string]
+ (let : unit
+  [unitmap : unitmap :=
+    (:unitmap tactics)
+   unit : unit :=
+    (any<-map unitmap key)
+   logit : string :=
+    (if : string
+     (then (is-empty unit) (log key))
+     (else key))]
+  unit)
+ :doc "Returns a unit from tactics")
 
 (func unitabilitymap<-unitabilitylist : unitabilitymap
  [unitabilitylist : unitabilitylist :...]

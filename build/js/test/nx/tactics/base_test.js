@@ -25,12 +25,12 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 31, ":tests", 83, ":total", 261), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 77), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 32, ":tests", 88, ":total", 267), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 82), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 261), 
-      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 94)
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 267), 
+      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95)
     )
     return output
   }
@@ -101,6 +101,7 @@ export default class nx_tactics_base_test {
           "skilllistlist", 0,
           "skillmap", 0,
           "specialty", 0,
+          "specialtylist", 0,
           "specialtymap", 0,
           "stat", 0,
           "suit", 0,
@@ -297,8 +298,13 @@ export default class nx_tactics_base_test {
           "skilllist<-skillmap", 0,
           "skilllistlist<-sectionlist", 0,
           "skillmap<-skilllist", 0,
+          "specialty<-tactics-key", 0,
+          "specialtylist<-tactics-keys", 0,
+          "specialtymap<-specialtylist", 0,
+          "specialtymap<-tactics-keys", 0,
           "tactics<-tactics-booklist", 0,
           "tactics<-tactics-merge", 0,
+          "unit<-tactics-key", 0,
           "unitabilitymap<-unitabilitylist", 0,
           "unititemmap<-unititemlist", 0,
           "unitlist<-section", 0,

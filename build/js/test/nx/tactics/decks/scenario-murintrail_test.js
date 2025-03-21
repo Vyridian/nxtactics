@@ -4,7 +4,6 @@ import nx_tactics_decks_scenario_murintrail from "../../../../src/nx/tactics/dec
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
 import nx_tactics_base from "../../../../src/nx/tactics/base.js"
-import nx_tactics_decks_data from "../../../../src/nx/tactics/decks/data.js"
 
 export default class nx_tactics_decks_scenario_murintrail_test {
 

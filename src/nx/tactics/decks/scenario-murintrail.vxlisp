@@ -1,6 +1,5 @@
 (package nx/tactics/decks/scenario-murintrail
  :libs (lib base :path nx/tactics/base)
-       (lib data :path nx/tactics/decks/data)
  :doc  "Murin Trail Scene")
 
 (const power-groundmovement : base/power
@@ -167,10 +166,10 @@
   :body "8x1"
   :mind "5x1"
   :will "5x1"
-  :speed "4x0"
+  :speed "6x0"
+  :speedland "6kph/4mph"
   :mass "80kg/180"
   :height "1.8m/6ft"
-  :speedland "15kph/10mph"
   :mass "80kg/220lb"
   :height "1.9m/6'3ft"
   :demeanor "Opportunistic"
@@ -210,10 +209,10 @@
   :body "10x1"
   :mind "3x1"
   :will "5x1"
-  :speed "3x0"
+  :speed "5x0"
+  :speedland "5kph/3mph"
   :mass "100kg/220lb"
   :height "1.9m/6'3ft"
-  :speedland "10kph/7mph"
   :demeanor "Glaring"
   :nature "Callous"
   :beast "5x0"
@@ -227,7 +226,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Grab"))))
+        :ability (base/ability<-tactics-key tactics "Grab"))))
     (base/unitskill
      :skill (base/skill<-tactics-key tactics "Intimidation")
      :level "1"))))
@@ -246,11 +245,11 @@
   :body "2x1"
   :mind "6x1"
   :will "2x1"
-  :speed "3x0"
+  :speed "5x0"
+  :speedland "5kph/3mph"
   :value "1x0"
   :mass "22kg/50lb"
   :height "1m/3ft"
-  :speedland "10kph/7mph"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
@@ -266,7 +265,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Sneak")))))))
+        :ability (base/ability<-tactics-key tactics "Sneak")))))))
 
 (func unit-flint : base/unit
  [tactics : base/tactics]
@@ -279,10 +278,10 @@
   :body "7x1"
   :mind "5x1"
   :will "5x1"
-  :speed "5x0"
+  :speed "7x0"
+  :speedland "7kph/4.5mph"
   :mass "70kg/153lb"
   :height "1.67m/5'6"
-  :speedland "18kph/11mph"
   :beast "1x0"
   :shadow "1x0"
   :value "1x0"
@@ -301,7 +300,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Sneak")))))))
+        :ability (base/ability<-tactics-key tactics "Sneak")))))))
 
 (func unit-guardsman : base/unit
  [tactics : base/tactics]
@@ -315,10 +314,10 @@
   :body "8x1"
   :mind "5x1"
   :will "5x1"
-  :speed "4x0"
+  :speed "5x0"
+  :speedland "5kph/3mph"
   :mass "80kg/175"
   :height "1.8m/6ft"
-  :speedland "15kph/10mph"
   :height "1.9m/6'3ft"
   :demeanor "Indifferent"
   :nature "Lazy"
@@ -347,9 +346,9 @@
   :body "4x2"
   :mind "5x-1"
   :will "2x1"
-  :speed "10x1"
+  :speed "2x2"
   :mass "450kg/1000lb"
-  :speedland "50kph/30mph"
+  :speedland "20kph/12mph"
   :demeanor "Aloof"
   :nature "Skitish"
   :unitpowermap
@@ -372,10 +371,10 @@
   :body "6x1"
   :mind "6x1"
   :will "6x1"
-  :speed "4x0"
+  :speed "5x0"
+  :speedland "5kph/3mph"
   :mass "63kg"
   :height "1.72m/5ft7"
-  :speedland "20kph/15mph"
   :demeanor "Willful"
   :nature "Nuturing"
   :beast "1x0"
@@ -396,7 +395,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Blacksmithing")))))))
+        :ability (base/ability<-tactics-key tactics "Blacksmithing")))))))
 
 (func unit-jonaveer : base/unit
  [tactics : base/tactics]
@@ -412,10 +411,10 @@
   :body "7x1"
   :mind "6x1"
   :will "5x1"
-  :speed "3x0"
+  :speed "4x0"
+  :speedland "4kph/2.5mph"
   :mass "75kg"
   :height "1.78m/5ft10"
-  :speedland "10kph/7mph"
   :demeanor "Frivolous"
   :nature "Loyal"
   :beast "1x0"
@@ -436,7 +435,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Bargain")))))))
+        :ability (base/ability<-tactics-key tactics "Bargain")))))))
 
 (func unit-liliducon : base/unit
  [tactics : base/tactics]
@@ -451,10 +450,10 @@
   :body "4x1"
   :mind "4x1"
   :will "4x1"
-  :speed "2x0"
+  :speed "3x0"
+  :speedland "3kph/2mph"
   :mass "40kg/88lb"
   :height "1.5m/5ft"
-  :speedland "10kph"
   :demeanor "Pleasant"
   :nature "Anxious"
   :beast "1x0"
@@ -468,7 +467,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (base/skill<-tactics-key tactics "Foraging")))))))
+        :ability (base/ability<-tactics-key tactics "Foraging")))))))
 
 (func unit-wilddog : base/unit
  [tactics : base/tactics]
@@ -480,10 +479,10 @@
   :body "2x1"
   :mind "8x-1"
   :will "4x1"
-  :speed "2x1"
+  :speed "4x1"
   :mass "22kg/50lb"
   :height "76cm/30in"
-  :speedland "70kph/37mph"
+  :speedland "40kph/25mph"
   :nature "Dogged"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
@@ -493,11 +492,11 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
         (base/unitability
-         :ability (data/ability<-key "Bite"))
+         :ability (base/ability<-tactics-key tactics "Bite"))
         (base/unitability
-         :ability (data/ability<-key "Grab"))
+         :ability (base/ability<-tactics-key tactics "Grab"))
         (base/unitability
-         :ability (data/ability<-key "Drag")))))
+         :ability (base/ability<-tactics-key tactics "Drag")))))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower
@@ -517,10 +516,10 @@
   :body "8x1"
   :mind "5x1"
   :will "5x1"
-  :speed "4x0"
+  :speed "5x0"
+  :speedland "5kph/3mph"
   :mass "80kg/180"
   :height "1.8m/6ft"
-  :speedland "20kph/15mph"
   :demeanor "Gruff"
   :nature "Tortured"
   :beast "1x0"
@@ -541,7 +540,7 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (base/ability<-tactics-key tactics "Trapping")))))))
+        :ability (base/ability<-tactics-key tactics "Snare")))))))
 
 (func unit-woodencart : base/unit
  [tactics : base/tactics]
@@ -563,10 +562,10 @@
   :body "8x1"
   :mind "5x1"
   :will "6x1"
-  :speed "3x0"
+  :speed "4x0"
+  :speedland "4kph/2.5mph"
   :mass "80kg"
   :height "1.78m/5'10"
-  :speedland "10kph/7mph"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill
@@ -575,9 +574,9 @@
      :unitabilitymap
       (base/unitabilitymap<-unitabilitylist
        (base/unitability
-        :ability (data/ability<-key "Snake Charming"))
+        :ability (base/ability<-tactics-key tactics "Snake Charming"))
        (base/unitability
-        :ability (data/ability<-key "Venom Extraction")))))))
+        :ability (base/ability<-tactics-key tactics "Venom Extraction")))))))
 
 (func deck-murintrail : base/deck
  [tactics : base/tactics]

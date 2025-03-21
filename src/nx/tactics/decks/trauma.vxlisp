@@ -133,6 +133,8 @@
   :name "Rage: Self"
   :ranksuit base/ranksuit-qc
   :image "images/card-trauma-rage.svg"
+  :reference
+   "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck"
   :summary
    "Minor: Self Critical. You feel extreme guilt for your actions.
     Major: Self loathing.

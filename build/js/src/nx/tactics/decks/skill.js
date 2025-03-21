@@ -26,9 +26,35 @@ export default class nx_tactics_decks_skill {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_skill},
         ":name",
+        "Hunting",
+        ":reference",
+        "* Royal Huntsman - Sleeping Beauty",
+        ":titles",
+        "Forward Observer, Gamekeeper, Hunter, Huntress, Huntsman, Huntmaster, Lookout, Mage Hunter, Master Huntsman, Master of the Hunt, Poacher, Ranger, Royal Huntsman, Scout, Sentinel, Stalker, Tracer, Tracker, Watchman",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Bug Hunt", "Call of the Hunt", "Cull the Herd", "Deadfall", "Field Dressing", "Fishing", "Hunter's Mark", "Lure", "Scouting", "Snare", "Tag and Bag", "There is No Escape", "Track"),
+        ":specialtymap",
+        nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Alien Hunter", "Bounty Hunter", "Demon Hunter", "Devil Hunter", "Ghost Hunter", "Mage Hunter", "Monster Hunter", "Trapper", "Treasure Hunter", "Vampire Hunter", "Werewolf Hunter", "Witch Hunter")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_skill},
+        ":name",
         "Melee",
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Space Clearing")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_skill},
+        ":name",
+        "Stealth",
+        ":titles",
+        "Stalker",
+        ":stat",
+        "Body",
+        ":summary",
+        "* This skill includes abilities that let you hide, move silently, and suprise your opponents.",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Ambush", "Backstab", "Blend into the Crowd", "Camouflage", "Cloak and Dagger", "Hide", "Sneak", "Sneak Attack", "Stalk", "Strike and Fade", "Tailing", "Vanish", "Without a Trace")
       )
     )
     return output

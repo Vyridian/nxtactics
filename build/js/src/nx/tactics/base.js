@@ -367,6 +367,12 @@ export default class nx_tactics_base {
   static e_specialty = {vx_type: nx_tactics_base.t_specialty}
 
   /**
+   * type: specialtylist
+   */
+  static t_specialtylist = {}
+  static e_specialtylist = vx_core.vx_new_list(nx_tactics_base.t_specialtylist, [])
+
+  /**
    * type: specialtymap
    */
   static t_specialtymap = {}
@@ -1141,7 +1147,15 @@ export default class nx_tactics_base {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const abilitymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":abilitymap")
         const ability = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_ability, "map-1": nx_tactics_base.t_abilitymap}, abilitymap, key)
-        return vx_core.f_log_error({"any-1": nx_tactics_base.t_ability}, ability)
+        const logit = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(ability)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_log(key)})
+          ),
+          vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
+        )
+        return ability
       })
     )
     return output
@@ -1297,10 +1311,13 @@ export default class nx_tactics_base {
       {"any-1": nx_tactics_base.t_abilitylist},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const abilitymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_abilitymap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":abilitymap")
-        const map2 = vx_collection.f_map_from_map_keys({"any-1": nx_tactics_base.t_ability, "map-1": nx_tactics_base.t_abilitymap}, abilitymap, keys)
-        const abilitylist = vx_core.f_list_from_map({"any-1": nx_tactics_base.t_ability, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_abilitylist, "map-2": nx_tactics_base.t_abilitymap}, map2)
-        return vx_core.f_log_error({"any-1": nx_tactics_base.t_abilitylist}, abilitylist)
+        const abilitylist = vx_core.f_list_from_list_1(
+          {"any-1": nx_tactics_base.t_ability, "any-2": vx_core.t_string, "list-1": nx_tactics_base.t_abilitylist, "list-2": vx_core.t_stringlist},
+          keys,
+          vx_core.f_new_from_type(vx_core.t_any_from_any, (key) => 
+            nx_tactics_base.f_ability_from_tactics_key(tactics, key))
+        )
+        return abilitylist
       })
     )
     return output
@@ -1739,11 +1756,20 @@ export default class nx_tactics_base {
   static f_item_from_tactics_key(tactics, key) {
     let output = nx_tactics_base.e_item
     output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_item, "map-1": nx_tactics_base.t_itemmap},
+      {"any-1": nx_tactics_base.t_item},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const itemmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_itemmap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":itemmap")
-        return vx_core.f_any_from_map({"any-1": nx_tactics_base.t_item, "map-1": nx_tactics_base.t_itemmap}, itemmap, key)
+        const item = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_item, "map-1": nx_tactics_base.t_itemmap}, itemmap, key)
+        const logit = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(item)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_log(key)})
+          ),
+          vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
+        )
+        return item
       })
     )
     return output
@@ -2111,11 +2137,20 @@ export default class nx_tactics_base {
   static f_power_from_tactics_key(tactics, key) {
     let output = nx_tactics_base.e_power
     output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_power, "map-1": nx_tactics_base.t_powermap},
+      {"any-1": nx_tactics_base.t_power},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const powermap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_powermap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":powermap")
-        return vx_core.f_any_from_map({"any-1": nx_tactics_base.t_power, "map-1": nx_tactics_base.t_powermap}, powermap, key)
+        const power = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_power, "map-1": nx_tactics_base.t_powermap}, powermap, key)
+        const logit = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(power)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_log(key)})
+          ),
+          vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
+        )
+        return power
       })
     )
     return output
@@ -2245,7 +2280,7 @@ export default class nx_tactics_base {
   /**
    * @function powermap_from_powerlist
    * Returns a powermap from a given powerlist
-   * @param  {powerlist} powerlist
+   * @param  {powerlist} ... powerlist
    * @return {powermap}
    */
   static t_powermap_from_powerlist = {
@@ -2256,8 +2291,9 @@ export default class nx_tactics_base {
   }
 
   // (func powermap<-powerlist)
-  static f_powermap_from_powerlist(powerlist) {
+  static f_powermap_from_powerlist(...powerlist) {
     let output = nx_tactics_base.e_powermap
+    powerlist = vx_core.f_new_from_type(nx_tactics_base.t_powerlist, ...powerlist)
     output = vx_core.f_map_from_list(
       {"any-1": nx_tactics_base.t_power, "any-2": nx_tactics_base.t_power, "list-2": nx_tactics_base.t_powerlist, "map-1": nx_tactics_base.t_powermap, "struct-2": nx_tactics_base.t_power},
       powerlist,
@@ -2593,7 +2629,7 @@ export default class nx_tactics_base {
 
   /**
    * @function skill_from_tactics_key
-   * Returns a skill from tactics-all
+   * Returns a skill from tactics
    * @param  {tactics} tactics
    * @param  {string} key
    * @return {skill}
@@ -2609,11 +2645,20 @@ export default class nx_tactics_base {
   static f_skill_from_tactics_key(tactics, key) {
     let output = nx_tactics_base.e_skill
     output = vx_core.f_let(
-      {"any-1": nx_tactics_base.t_skill, "map-1": nx_tactics_base.t_skillmap},
+      {"any-1": nx_tactics_base.t_skill},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const skillmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_skillmap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":skillmap")
-        return vx_core.f_any_from_map({"any-1": nx_tactics_base.t_skill, "map-1": nx_tactics_base.t_skillmap}, skillmap, key)
+        const skill = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_skill, "map-1": nx_tactics_base.t_skillmap}, skillmap, key)
+        const logit = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(skill)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_log(key)})
+          ),
+          vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
+        )
+        return skill
       })
     )
     return output
@@ -2767,6 +2812,132 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function specialty_from_tactics_key
+   * Returns a specialty from tactics
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @return {specialty}
+   */
+  static t_specialty_from_tactics_key = {
+    vx_type: vx_core.t_type
+  }
+  static e_specialty_from_tactics_key = {
+    vx_type: nx_tactics_base.t_specialty_from_tactics_key
+  }
+
+  // (func specialty<-tactics-key)
+  static f_specialty_from_tactics_key(tactics, key) {
+    let output = nx_tactics_base.e_specialty
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_specialty},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const specialtymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":specialtymap")
+        const specialty = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_specialty, "map-1": nx_tactics_base.t_specialtymap}, specialtymap, key)
+        const logit = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(specialty)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_log(key)})
+          ),
+          vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
+        )
+        return specialty
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function specialtylist_from_tactics_keys
+   * Return an specialtylist from keys and tactics
+   * @param  {tactics} tactics
+   * @param  {stringlist} ... keys
+   * @return {specialtylist}
+   */
+  static t_specialtylist_from_tactics_keys = {
+    vx_type: vx_core.t_type
+  }
+  static e_specialtylist_from_tactics_keys = {
+    vx_type: nx_tactics_base.t_specialtylist_from_tactics_keys
+  }
+
+  // (func specialtylist<-tactics-keys)
+  static f_specialtylist_from_tactics_keys(tactics, ...keys) {
+    let output = nx_tactics_base.e_specialtylist
+    keys = vx_core.f_new_from_type(vx_core.t_stringlist, ...keys)
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_specialtylist},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const specialtylist = vx_core.f_list_from_list_1(
+          {"any-1": nx_tactics_base.t_specialty, "any-2": vx_core.t_string, "list-1": nx_tactics_base.t_specialtylist, "list-2": vx_core.t_stringlist},
+          keys,
+          vx_core.f_new_from_type(vx_core.t_any_from_any, (key) => 
+            nx_tactics_base.f_specialty_from_tactics_key(tactics, key))
+        )
+        return specialtylist
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function specialtymap_from_specialtylist
+   * Returns a specialtymap from a given specialtylist
+   * @param  {specialtylist} ... specialtylist
+   * @return {specialtymap}
+   */
+  static t_specialtymap_from_specialtylist = {
+    vx_type: vx_core.t_type
+  }
+  static e_specialtymap_from_specialtylist = {
+    vx_type: nx_tactics_base.t_specialtymap_from_specialtylist
+  }
+
+  // (func specialtymap<-specialtylist)
+  static f_specialtymap_from_specialtylist(...specialtylist) {
+    let output = nx_tactics_base.e_specialtymap
+    specialtylist = vx_core.f_new_from_type(nx_tactics_base.t_specialtylist, ...specialtylist)
+    output = vx_core.f_map_from_list(
+      {"any-1": nx_tactics_base.t_specialty, "any-2": nx_tactics_base.t_specialty, "list-2": nx_tactics_base.t_specialtylist, "map-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_specialty},
+      specialtylist,
+      vx_core.f_new_from_type(vx_core.t_any_from_any, (specialty) => 
+        vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_specialty}, specialty, ":name"))
+    )
+    return output
+  }
+
+  /**
+   * @function specialtymap_from_tactics_keys
+   * Return a specialtymap from keys and tactics
+   * @param  {tactics} tactics
+   * @param  {stringlist} ... keys
+   * @return {specialtymap}
+   */
+  static t_specialtymap_from_tactics_keys = {
+    vx_type: vx_core.t_type
+  }
+  static e_specialtymap_from_tactics_keys = {
+    vx_type: nx_tactics_base.t_specialtymap_from_tactics_keys
+  }
+
+  // (func specialtymap<-tactics-keys)
+  static f_specialtymap_from_tactics_keys(tactics, ...keys) {
+    let output = nx_tactics_base.e_specialtymap
+    keys = vx_core.f_new_from_type(vx_core.t_stringlist, ...keys)
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_specialtymap},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const specialtylist = nx_tactics_base.f_specialtylist_from_tactics_keys(tactics, ...keys)
+        return nx_tactics_base.f_specialtymap_from_specialtylist(specialtylist)
+      })
+    )
+    return output
+  }
+
+  /**
    * @function tactics_from_tactics_booklist
    * Return a ready tactics from a booklist.
    * @param  {tactics} tactics
@@ -2877,6 +3048,43 @@ export default class nx_tactics_base {
         const unitmap2 = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitmap, "struct-2": nx_tactics_base.t_tactics}, merge, ":unitmap")
         const unitmap3 = vx_core.f_copy(unitmap1, unitmap2)
         return vx_core.f_new({"any-1": nx_tactics_base.t_tactics}, ":abilitymap", abilitymap3, ":bookmap", bookmap3, ":itemmap", itemmap3, ":placemap", placemap3, ":powermap", powermap3, ":scenariomap", scenariomap3, ":skillmap", skillmap3, ":unitmap", unitmap3)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function unit_from_tactics_key
+   * Returns a unit from tactics
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @return {unit}
+   */
+  static t_unit_from_tactics_key = {
+    vx_type: vx_core.t_type
+  }
+  static e_unit_from_tactics_key = {
+    vx_type: nx_tactics_base.t_unit_from_tactics_key
+  }
+
+  // (func unit<-tactics-key)
+  static f_unit_from_tactics_key(tactics, key) {
+    let output = nx_tactics_base.e_unit
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_unit},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const unitmap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitmap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":unitmap")
+        const unit = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_unit, "map-1": nx_tactics_base.t_unitmap}, unitmap, key)
+        const logit = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(unit)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_log(key)})
+          ),
+          vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
+        )
+        return unit
       })
     )
     return output
@@ -3382,6 +3590,7 @@ export default class nx_tactics_base {
       "skilllistlist": nx_tactics_base.e_skilllistlist,
       "skillmap": nx_tactics_base.e_skillmap,
       "specialty": nx_tactics_base.e_specialty,
+      "specialtylist": nx_tactics_base.e_specialtylist,
       "specialtymap": nx_tactics_base.e_specialtymap,
       "stat": nx_tactics_base.e_stat,
       "suit": nx_tactics_base.e_suit,
@@ -3480,8 +3689,13 @@ export default class nx_tactics_base {
       "skilllist<-skillmap": nx_tactics_base.e_skilllist_from_skillmap,
       "skilllistlist<-sectionlist": nx_tactics_base.e_skilllistlist_from_sectionlist,
       "skillmap<-skilllist": nx_tactics_base.e_skillmap_from_skilllist,
+      "specialty<-tactics-key": nx_tactics_base.e_specialty_from_tactics_key,
+      "specialtylist<-tactics-keys": nx_tactics_base.e_specialtylist_from_tactics_keys,
+      "specialtymap<-specialtylist": nx_tactics_base.e_specialtymap_from_specialtylist,
+      "specialtymap<-tactics-keys": nx_tactics_base.e_specialtymap_from_tactics_keys,
       "tactics<-tactics-booklist": nx_tactics_base.e_tactics_from_tactics_booklist,
       "tactics<-tactics-merge": nx_tactics_base.e_tactics_from_tactics_merge,
+      "unit<-tactics-key": nx_tactics_base.e_unit_from_tactics_key,
       "unitabilitymap<-unitabilitylist": nx_tactics_base.e_unitabilitymap_from_unitabilitylist,
       "unititemmap<-unititemlist": nx_tactics_base.e_unititemmap_from_unititemlist,
       "unitlist<-section": nx_tactics_base.e_unitlist_from_section,
@@ -3559,8 +3773,13 @@ export default class nx_tactics_base {
       "skilllist<-skillmap": nx_tactics_base.t_skilllist_from_skillmap,
       "skilllistlist<-sectionlist": nx_tactics_base.t_skilllistlist_from_sectionlist,
       "skillmap<-skilllist": nx_tactics_base.t_skillmap_from_skilllist,
+      "specialty<-tactics-key": nx_tactics_base.t_specialty_from_tactics_key,
+      "specialtylist<-tactics-keys": nx_tactics_base.t_specialtylist_from_tactics_keys,
+      "specialtymap<-specialtylist": nx_tactics_base.t_specialtymap_from_specialtylist,
+      "specialtymap<-tactics-keys": nx_tactics_base.t_specialtymap_from_tactics_keys,
       "tactics<-tactics-booklist": nx_tactics_base.t_tactics_from_tactics_booklist,
       "tactics<-tactics-merge": nx_tactics_base.t_tactics_from_tactics_merge,
+      "unit<-tactics-key": nx_tactics_base.t_unit_from_tactics_key,
       "unitabilitymap<-unitabilitylist": nx_tactics_base.t_unitabilitymap_from_unitabilitylist,
       "unititemmap<-unititemlist": nx_tactics_base.t_unititemmap_from_unititemlist,
       "unitlist<-section": nx_tactics_base.t_unitlist_from_section,
@@ -3634,6 +3853,7 @@ export default class nx_tactics_base {
       "skilllistlist": nx_tactics_base.t_skilllistlist,
       "skillmap": nx_tactics_base.t_skillmap,
       "specialty": nx_tactics_base.t_specialty,
+      "specialtylist": nx_tactics_base.t_specialtylist,
       "specialtymap": nx_tactics_base.t_specialtymap,
       "stat": nx_tactics_base.t_stat,
       "suit": nx_tactics_base.t_suit,
@@ -6627,6 +6847,24 @@ export default class nx_tactics_base {
     nx_tactics_base.e_specialty['vx_type'] = nx_tactics_base.t_specialty
     nx_tactics_base.e_specialty['vx_value'] = {}
 
+    // (type specialtylist)
+    nx_tactics_base.t_specialtylist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_specialtylist['vx_value'] = {
+      name          : "specialtylist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_specialty],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_specialtylist['vx_type'] = nx_tactics_base.t_specialtylist
+
     // (type specialtymap)
     nx_tactics_base.t_specialtymap['vx_type'] = vx_core.t_type
     nx_tactics_base.t_specialtymap['vx_value'] = {
@@ -6639,69 +6877,9 @@ export default class nx_tactics_base {
       disallowtypes : [],
       allowvalues   : [],
       disallowvalues: [],
-      traits        : [nx_tactics_base.t_card],
-      properties    : {
-        "id": {
-          "name" : "id",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "name": {
-          "name" : "name",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "icon": {
-          "name" : "icon",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "image": {
-          "name" : "image",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "imgmirror": {
-          "name" : "imgmirror",
-          "type" : vx_core.t_boolean,
-          "multi": false
-        },
-        "reference": {
-          "name" : "reference",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "secrets": {
-          "name" : "secrets",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "summary": {
-          "name" : "summary",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "titles": {
-          "name" : "titles",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "orientation": {
-          "name" : "orientation",
-          "type" : vx_core.t_string,
-          "multi": false
-        },
-        "ranksuit": {
-          "name" : "ranksuit",
-          "type" : nx_tactics_base.t_ranksuit,
-          "multi": false
-        }
-      },
-      proplast      : {
-        "name" : "ranksuit",
-        "type" : nx_tactics_base.t_ranksuit,
-        "multi": false
-      }
+      traits        : [],
+      properties    : {},
+      proplast      : {}
     }
     nx_tactics_base.e_specialtymap['vx_type'] = nx_tactics_base.t_specialtymap
     nx_tactics_base.e_specialtymap['vx_value'] = {}
@@ -6935,6 +7113,11 @@ export default class nx_tactics_base {
         "skillmap": {
           "name" : "skillmap",
           "type" : nx_tactics_base.t_skillmap,
+          "multi": false
+        },
+        "specialtymap": {
+          "name" : "specialtymap",
+          "type" : nx_tactics_base.t_specialtymap,
           "multi": false
         },
         "unitmap": {
@@ -9679,6 +9862,78 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_skillmap_from_skilllist
     }
 
+    // (func specialty<-tactics-key)
+    nx_tactics_base.t_specialty_from_tactics_key['vx_value'] = {
+      name          : "specialty<-tactics-key",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_specialty_from_tactics_key
+    }
+
+    // (func specialtylist<-tactics-keys)
+    nx_tactics_base.t_specialtylist_from_tactics_keys['vx_value'] = {
+      name          : "specialtylist<-tactics-keys",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_specialtylist_from_tactics_keys
+    }
+
+    // (func specialtymap<-specialtylist)
+    nx_tactics_base.t_specialtymap_from_specialtylist['vx_value'] = {
+      name          : "specialtymap<-specialtylist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_specialtymap_from_specialtylist
+    }
+
+    // (func specialtymap<-tactics-keys)
+    nx_tactics_base.t_specialtymap_from_tactics_keys['vx_value'] = {
+      name          : "specialtymap<-tactics-keys",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_specialtymap_from_tactics_keys
+    }
+
     // (func tactics<-tactics-booklist)
     nx_tactics_base.t_tactics_from_tactics_booklist['vx_value'] = {
       name          : "tactics<-tactics-booklist",
@@ -9713,6 +9968,24 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_tactics_from_tactics_merge
+    }
+
+    // (func unit<-tactics-key)
+    nx_tactics_base.t_unit_from_tactics_key['vx_value'] = {
+      name          : "unit<-tactics-key",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unit_from_tactics_key
     }
 
     // (func unitabilitymap<-unitabilitylist)

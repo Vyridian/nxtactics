@@ -6,11 +6,69 @@
  [tactics : base/tactics]
  (base/skillmap<-skilllist
   (skill
+   :name "Hunting"
+   :reference "* Royal Huntsman - Sleeping Beauty"
+   :titles
+    "Forward Observer, Gamekeeper, Hunter, Huntress, Huntsman, Huntmaster, Lookout, Mage Hunter, Master Huntsman, Master of the Hunt, Poacher, Ranger, Royal Huntsman, Scout, Sentinel, Stalker, Tracer, Tracker, Watchman"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Bug Hunt"
+     "Call of the Hunt"
+     "Cull the Herd"
+     "Deadfall"
+     "Field Dressing"
+     "Fishing"
+     "Hunter's Mark"
+     "Lure"
+     "Scouting"
+     "Snare"
+     "Tag and Bag"
+     "There is No Escape"
+     "Track")
+   :specialtymap
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Alien Hunter"
+     "Bounty Hunter"
+     "Demon Hunter"
+     "Devil Hunter"
+     "Ghost Hunter"
+     "Mage Hunter"
+     "Monster Hunter"
+     "Trapper"
+     "Treasure Hunter"
+     "Vampire Hunter"
+     "Werewolf Hunter"
+     "Witch Hunter"))
+  (base/skill
    :name "Melee"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics
      "Space Clearing"))
+  (base/skill
+   :name "Stealth"
+   :titles "Stalker"
+   :stat "Body"
+   :summary
+    "* This skill includes abilities that let you hide, move silently, and suprise your opponents."
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Ambush"
+     "Backstab"
+     "Blend into the Crowd"
+     "Camouflage"
+     "Cloak and Dagger"
+     "Hide"
+     "Sneak"
+     "Sneak Attack"
+     "Stalk"
+     "Strike and Fade"
+     "Tailing"
+     "Vanish"
+     "Without a Trace"))
  )
  :doc "Returns the base skillmap")
 

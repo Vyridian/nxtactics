@@ -8,6 +8,7 @@ export default class nx_tactics_books_skills {
 
   /**
    * @function chapter_skill_types
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_skill_types = {
@@ -18,7 +19,7 @@ export default class nx_tactics_books_skills {
   }
 
   // (func chapter_skill_types)
-  static f_chapter_skill_types() {
+  static f_chapter_skill_types(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -87,31 +88,7 @@ export default class nx_tactics_books_skills {
               ":stat",
               "Shadow",
               ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Harvest Poison",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Harvest Poison"),
-                "Kiss of Death",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Kiss of Death"),
-                "Poisoned Arrow",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poisoned Arrow"),
-                "Poisoned Blade",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poisoned Blade"),
-                "Poisoned Dust",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poisoned Dust"),
-                ":Poisoning",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poisoning"),
-                "Poison Tolerance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poison Tolerance", ":reference", "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an immunity to iocane powder. - Princess Bride"),
-                "Prepare Acid",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prepare Acid"),
-                "Prepare Anti-Coagulant",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prepare Anti-Coagulant", ":summary", "* Create an Anti-Coagulant Poison. A target with Anti-Coagulant cannot easily stop [Bleeding]."),
-                "Prepare Antidote",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prepare Antidote", ":summary", "* Skilled in antidote creation.  Can create an antidote for any Poison user can brew."),
-                "Prepare Poison",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prepare Poison")
-              )
+              nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Harvest Poison", "Kiss of Death", "Poisoned Arrow", "Poisoned Blade", "Poisoned Dust", "Poisoning", "Poison Tolerance", "Prepare Acid", "Prepare Anti-Coagulant", "Prepare Antidote", "Prepare Poison")
             ),
             ":Athletics",
             vx_core.f_new(
@@ -218,65 +195,7 @@ export default class nx_tactics_books_skills {
               )
             ),
             ":Hunting",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_skill},
-              ":name",
-              "Hunting",
-              ":reference",
-              "* Royal Huntsman - Sleeping Beauty",
-              ":titles",
-              "Forward Observer, Gamekeeper, Hunter, Huntress, Huntsman, Huntmaster, Lookout, Mage Hunter, Master Huntsman, Master of the Hunt, Poacher, Ranger, Royal Huntsman, Scout, Sentinel, Stalker, Tracer, Tracker, Watchman",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Bug Hunt",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bug Hunt", ":reference", "* H:Is this going to be a stand-up fight, sir? Is it going to be another bug hunt? G:A Xenomorph may be involved... H:It's a bug hunt. - Hudson and Gorman, Aliens"),
-                "Call of the Hunt",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Call of the Hunt"),
-                "Cull the Herd",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cull the Herd"),
-                ":Deadfall",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Deadfall"),
-                "Field Dressing",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Field Dressing"),
-                ":Fishing",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fishing", ":summary", "* Catch enough fish to eat. Similar to Foraging.", ":titles", "Fisherman"),
-                ":Lure",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lure", ":reference", "Everquest Pulling"),
-                ":Scouting",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Scouting", ":titles", "Reconnaissance"),
-                ":Snare",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Snare"),
-                "Tag and Bag",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tag and Bag"),
-                "There is No Escape",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "There is No Escape", ":reference", "* Raiden Shogun, Genshin Impact"),
-                ":Track",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Track")
-              ),
-              ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                "Bounty Hunter",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Bounty Hunter", ":reference", "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway", ":summary", "* Bounty Hunting represents experience in stalking and capturing a target in an urban setting. This is traditionally done for money and can be quite profitable.\n* Bounties are placed on people for whom the law lacks the resources or inclination to pursue.\n* Bounties are placed by insurance companies, bail bondsmen, armies, the F.B.I., and individuals.\n* The reward can be paid for information, the capture of the target in a reasonably uninjured state, or even dead or alive.\n* The reward obviously needs to be commensurate with the difficulty or no one will take it. Capturing is harder than killing, so captures gain a bonus."),
-                "Demon Hunter",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Demon Hunter"),
-                "Devil Hunter",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Devil Hunter"),
-                "Mage Hunter",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Mage Hunter"),
-                ":Trapper",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Trapper"),
-                "Treasure Hunter",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Treasure Hunter", ":reference", "* Indiana Jones\n* Lara Croft", ":summary", "* Treasure Hunting represents experience in the dangerous and profitable world of lost tombs and ancient relics. Rare relics hold high presitge and are usually sold (in the form of a finders fee) to museaums, governments or private collectors. Raiding tombs is a fairly lawless and perilous activity to start with, and such high value items tend to attract disreputable characters of all kinds. As a result, treasure hunters often end their careers in unfortunate accidents.\n* +1 while researching or navigating inside a crypt or tomb.", ":titles", "Tomb Raider, Treasure Seeker"),
-                "Vampire Hunter",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Vampire Hunter"),
-                "Werewof Hunter",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Werewof Hunter"),
-                "Witch Hunter",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Witch Hunter")
-              )
-            ),
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Hunting"),
             ":Rage",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_skill},
@@ -332,24 +251,20 @@ export default class nx_tactics_books_skills {
                 ":Foraging",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Foraging", ":summary", "* [Action]: This ability can be used to forage for 1 man day of food and water for each [Hit]. Such food will typically be disgusting to those unaccustomed to the local cuisine, but it will sustain. Excess food only lasts for 1 additional day before going bad. Excess water can be transfered to containers if any, otherwise it cannot be carried. [Critical Hit]s provide a particularly tasty, convenient, or useful source of nutrition (e.g. water in bamboo that can be carried, food that will last another day or more)."),
                 ":Forestry",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Forestry", ":reference", "Tin Man", ":summary", "* This ability is used to avoid or mitigate the common hazards encountered while delving into the forest.  This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 2 [Forest] spaces\n* [Action]: [+1 Stealth] in [Woods]\n* [Defense]: [+1 Defense] vs Ranged in [Woods]", ":titles", "Forest Lord, Logger, Lumberjack, Pathcutter, Ranger, Warden, Woodcutter, Woodsman"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Forestry", ":reference", "Tin Man", ":summary", "* This ability is used to avoid or mitigate the common hazards encountered while delving into the forest.  This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for Level/2 [Forest] spaces\n* [Survival]: [Survival]:+1 in [Woods]\n* [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Woods]\n* [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Woods]", ":titles", "Forest Lord, Logger, Lumberjack, Pathcutter, Ranger, Warden, Woodcutter, Woodsman"),
                 "High Altitude Survival",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "High Altitude Survival"),
                 "Jungle Survival",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Jungle Survival", ":reference", "Tarzan", ":summary", "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle. This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 1 [Jungle] space\n* [Action]: [+1 Stealth] in [Jungle]\n* [Defense]: [+1 Defense] vs Ranged in [Jungle]", ":titles", "Jungle Dweller, Lord of the Jungle"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Jungle Survival", ":reference", "Tarzan", ":summary", "* This ability is used to avoid or mitigate the common hazards encountered while delving into the jungle. This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Survival]: [Survival]:+1 in [Jungle]\n* [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Jungle]\n* [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Jungle]", ":titles", "Jungle Dweller, Lord of the Jungle"),
                 "Motion Sense",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Motion Sense", ":summary", "* Detect air movements and faint sounds to detect moving things even when they are around corners or in the dark."),
                 "Swamp Survival",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Swamp Survival", ":summary", "* This ability is used to avoid or mitigate the common hazards encountered while delving into swampland. This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Move]: Ignore movement penalty for 1 [Swamp] space\n* [Action]: [+1 Stealth] in [Swamp]\n* [Defense]: [+1 Defense] vs Ranged in [Swamp]", ":titles", "Murk Dweller, Murk Lord, Swamp Lord, Swamp Knight, Swamp Thing"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Swamp Survival", ":summary", "* This ability is used to avoid or mitigate the common hazards encountered while delving into swampland. This can also be used to avoid the attention of random predators.\n* [Requires]: Unit must be a [Light Unit]\n* [Survival]: [Survival]:+1 in [Swamp]\n* [Stealth]: IF Level>1 THEN [Stealth]:+1 in [Swamp]\n* [Combat]: IF Level>2 THEN [Inititiative]:+1 vs Ranged in [Swamp]", ":titles", "Murk Dweller, Murk Lord, Swamp Lord, Swamp Knight, Swamp Thing"),
                 "Underground Survival",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Underground Survival")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Caving",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Caving", ":summary", "* Dead Reckoning\n* Detect Hollow Rock\n* Mining\n* Motion Sense\n* Sapping\n* Underground Survival", ":titles", "Miner, Prospector, Sapper, Spelunker, Underminer")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Caving")
             ),
             ":Tradeskills",
             vx_core.f_new(
@@ -412,8 +327,6 @@ export default class nx_tactics_books_skills {
                 {"any-1": nx_tactics_base.t_abilitymap},
                 "Bootlegger Reverse",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bootlegger Reverse"),
-                ":Drift",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Drift"),
                 ":Swerve",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Swerve"),
                 "3 Point Turn",
@@ -1774,33 +1687,7 @@ export default class nx_tactics_books_skills {
               )
             ),
             ":Stealth",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_skill},
-              ":name",
-              "Stealth",
-              ":titles",
-              "Stalker",
-              ":stat",
-              "Body",
-              ":summary",
-              "* This skill includes abilities that let you hide, move silently, and suprise your opponents.",
-              ":abilitymap",
-              nx_tactics_base.f_abilitymap_from_abilitylist(
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ambush", ":summary", "* [Simple Skill]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.\n* [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Backstab", ":summary", "* [Passive]:\n** IF [Flanking] THEN [Initiative]:+1 AND [Hits]:+1\n** IF [Blindspot] THEN [Initiative]:+1/level AND [Hits]:+1/[Level]", ":titles", "Back Biter, Back Stabber, Opportunist, Traitor"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blend into the Crowd", ":summary", "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.\n* [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Camouflage", ":summary", "* [Continuous]: While active, unit is hidden.\n* [Defense]: +1 Defense in [Terrain].\n* [Roll]: Skill - Move this turn.\n* [Versus]: and others must roll Spirit - Terrain penalty vs to detect."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cloak and Dagger", ":summary", "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise]."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hide", ":summary", "* Find a hiding place in an area where you will not normally be detected.\n* IF You have [Full Cover] AND you don't move AND your opponents are at least your [Body] spaces away.\n* THEN [Action] [Continuous]: You are hidden from view AND Opponents must succeed at [Investigate]/[Seek] to detect you."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sneak", ":summary", "* Move silently: [Passive]: You may move at half speed (rounded down) without cancelling [Stealth] abilities."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sneak Attack", ":titles", "Suprise Attack"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stalk", ":summary", "* The ability to move carefully to avoid detection.\n* [Requires]: No other action may be performed this turn.\n* [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Strike and Fade", ":summary", "* [Requires]: No other action may be performed this turn.\n* [Attack]: After this attack, if you have sufficient Move remaining, move 1 space."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tailing", ":summary", "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vanish", ":reference", "* Smoke Bomb! - Krieger, Archer", ":summary", "* If you can momentarily break line of sight, you can immediately [Hide]."),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Without a Trace", ":summary", "* Extremely difficult tor track you.")
-              )
-            )
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth")
           )
         )
       )
@@ -1810,6 +1697,7 @@ export default class nx_tactics_books_skills {
 
   /**
    * @function chapter_skills_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_skills_overview = {
@@ -1820,7 +1708,7 @@ export default class nx_tactics_books_skills {
   }
 
   // (func chapter_skills_overview)
-  static f_chapter_skills_overview() {
+  static f_chapter_skills_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1871,9 +1759,9 @@ export default class nx_tactics_books_skills {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_chaptermap},
         "Skills Overview",
-        nx_tactics_books_skills.f_chapter_skills_overview(),
+        nx_tactics_books_skills.f_chapter_skills_overview(tactics),
         "Skill Types",
-        nx_tactics_books_skills.f_chapter_skill_types()
+        nx_tactics_books_skills.f_chapter_skill_types(tactics)
       )
     )
     return output

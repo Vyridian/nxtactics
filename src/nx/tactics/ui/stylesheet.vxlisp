@@ -445,7 +445,7 @@
   :pointpos
    (ui/point
     :x 7
-    :y 2)
+    :y 1)
   :pointsize
    (ui/point
     :x 51))

@@ -10,6 +10,7 @@ import nx_tactics_decks_item from "../../../../src/nx/tactics/decks/item.js"
 import nx_tactics_decks_place from "../../../../src/nx/tactics/decks/place.js"
 import nx_tactics_decks_power from "../../../../src/nx/tactics/decks/power.js"
 import nx_tactics_decks_scenario from "../../../../src/nx/tactics/decks/scenario.js"
+import nx_tactics_decks_specialty from "../../../../src/nx/tactics/decks/specialty.js"
 import nx_tactics_decks_skill from "../../../../src/nx/tactics/decks/skill.js"
 import nx_tactics_decks_unit from "../../../../src/nx/tactics/decks/unit.js"
 import nx_tactics_books_advanced_rules from "../../../../src/nx/tactics/books/advanced_rules.js"
@@ -58,11 +59,11 @@ export default class nx_tactics_decks_data_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/data", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 10, ":total", 10), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 9), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 4, ":total", 4), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 3), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 4), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -84,15 +85,9 @@ export default class nx_tactics_decks_data_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "ability<-key", 0,
-          "abilitylist<-keys", 0,
           "booklist-all<-tactics", 0,
-          "item<-key", 0,
-          "itemlist<-keys", 0,
           "tactics-booklist<-tactics", 0,
-          "tactics-main", 0,
-          "unit<-tactics-key", 0,
-          "unitlist<-keys", 0
+          "tactics-main", 0
         )
     )
     return output

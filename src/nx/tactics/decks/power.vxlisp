@@ -5,8 +5,8 @@
 (func powermap-tactics : base/powermap
  [tactics : base/tactics]
  (base/powermap<-powerlist
-  (power
-   :name "Venomous"
+  (base/power
+   :name "Toxins"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics

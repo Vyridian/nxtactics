@@ -5,87 +5,215 @@
 (func abilitymap-tactics : base/abilitymap
  [tactics : base/tactics]
  (base/abilitymap<-abilitylist
-  (ability
+  (base/ability
+   :name "Ambush"
+   :summary
+    "* [Action]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.
+     * [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak.")
+  (base/ability
+   :name "Backstab"
+   :summary
+    "* [Passive]:
+     ** IF [Flanking] THEN [Initiative]:+1 AND [Hits]:+1
+     ** IF [Blindspot] THEN [Initiative]:+1/level AND [Hits]:+1/[Level]"
+   :titles "Back Biter, Back Stabber, Opportunist, Traitor")
+  (base/ability
    :name "Balanced for Throwing")
-  (ability
+  (base/ability
+   :name "Blend into the Crowd"
+   :summary
+    "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
+     * [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
+  (base/ability
+   :name "Bug Hunt"
+   :reference
+    "* H:Is this going to be a stand-up fight, sir? Is it going to be another bug hunt? G:A Xenomorph may be involved... H:It's a bug hunt. - Hudson and Gorman, Aliens")
+  (base/ability
+   :name "Call of the Hunt")
+  (base/ability
+   :name "Camouflage"
+   :summary
+    "* [Continuous]: While active, unit is hidden.
+     * [Defense]: +1 Defense in [Terrain].
+     * [Roll]: Skill - Move this turn.
+     * [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
+  (base/ability
+   :name "Cloak and Dagger"
+   :summary
+    "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
+  (base/ability
+   :name "Cull the Herd")
+  (base/ability
+   :name "Deadfall")
+  (base/ability
    :name "Dialect-Enlisted"
    :summary "Dialect of enlisted soldiers")
-  (ability
+  (base/ability
    :name "Dialect-Laborer"
    :summary "Dialect of laborer")
-  (ability
+  (base/ability
    :name "Dialect-Officer"
    :summary "Dialect of officer soldiers")
-  (ability
+  (base/ability
    :name "Dialect-Sailor"
    :summary "Dialect of sailors")
-  (ability
+  (base/ability
    :name "Dialect-Servant"
    :summary "Dialect of servants")
-  (ability
+  (base/ability
    :name "Dialect-Slave"
    :summary "Dialect of slaves")
-  (ability
+  (base/ability
    :name "Dream Therapy"
    :summary
     "Heal Trauma by exploring the Dream World.")
-  (ability
+  (base/ability
    :name "Existential Riddle"
    :summary
     "Demoralize unwitting rivals by questioning their purpose in life.")
-  (ability
+  (base/ability
+   :name "Field Dressing")
+  (base/ability
+   :name "Fishing"
+   :summary
+    "* Catch enough fish to eat. Similar to Foraging."
+   :titles "Fisherman")
+  (base/ability
+   :name "Harvest Poison")
+  (base/ability
+   :name "Hide"
+   :summary
+    "* Find a hiding place in an area where you will not normally be detected.
+     * IF You have [Full Cover] AND you don't move AND your opponents are at least your [Body] spaces away.
+     * THEN [Action] [Continuous]: You are hidden from view AND Opponents must succeed at [Investigate]/[Seek] to detect you.")
+  (base/ability
+   :name "Hunter's Mark"
+   :summary
+    "* [Continuous]: Place a mark on target. Initiative:+1 vs. marked target.")
+  (base/ability
+   :name "Kiss of Death")
+  (base/ability
+   :name "Lure"
+   :reference "Everquest Pulling")
+  (base/ability
    :name "Mental Gymnastics")
-  (ability
+  (base/ability
    :name "Poison Bite"
    :summary
     "[Close Combat]: Crits are [Poisoned] instead of increasing damage.")
-  (ability
+  (base/ability
+   :name "Poisoned Arrow")
+  (base/ability
+   :name "Poisoned Blade")
+  (base/ability
+   :name "Poisoned Dust")
+  (base/ability
+   :name "Poisoning")
+  (base/ability
+   :name "Poison Tolerance"
+   :reference
+    "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an immunity to iocane powder. - Princess Bride")
+  (base/ability
+   :name "Prepare Acid")
+  (base/ability
+   :name "Prepare Anti-Coagulant"
+   :summary "* Create an Anti-Coagulant Poison. A target with Anti-Coagulant cannot easily stop [Bleeding].")
+  (base/ability
+   :name "Prepare Antidote"
+   :summary "* Skilled in antidote creation.  Can create an antidote for any Poison user can brew.")
+  (base/ability
+   :name "Prepare Poison")
+  (base/ability
    :name "Restful Sleep"
    :summary
     "Ensure restful sleep for levelx2 hours.")
-  (ability
+  (base/ability
    :name "Returning Throw")
-  (ability
+  (base/ability
+   :name "Scouting"
+   :titles "Reconnaissance")
+  (base/ability
+   :name "Snare")
+  (base/ability
+   :name "Sneak"
+   :summary
+    "* Move silently: [Passive]: You may move at half speed (rounded down) without cancelling [Stealth] abilities.")
+  (base/ability
+   :name "Sneak Attack"
+   :titles "Suprise Attack")
+  (base/ability
    :name "Soulbind"
    :titles "Soulbond")
-  (ability
+  (base/ability
    :name "Soulburn")
-  (ability
+  (base/ability
    :name "Souldrain"
    :titles "Spiritsiphon")
-  (ability
+  (base/ability
    :name "Soulforge")
-  (ability
+  (base/ability
    :name "Soulrend"
    :titles "Soulrip"
    :reference
     "* We'll tear your soul apart! - Pinhead, Hellraiser")
-  (ability
+  (base/ability
    :name "Soulshatter")
-  (ability
+  (base/ability
    :name "Soulsteal"
    :reference
     "Primitive people may see a photograph as stealing the soul.")
-  (ability
+  (base/ability
    :name "Soulstain")
-  (ability
+  (base/ability
    :name "Soulstone"
    :titles "Souljar")
-  (ability
+  (base/ability
    :name "Soulstrike")
-  (ability
+  (base/ability
    :name "Soulvise")
-  (ability
+  (base/ability
    :name "Soulwrack")
-  (ability
+  (base/ability
    :name "Space Clearing"
    :summary
     "[Requires]: 2 handed Weapon
      [Combat]: Attack in a circle around you. Anyone hit get [Push]:1.")
-  (ability
+  (base/ability
+   :name "Stalk"
+   :summary
+    "* The ability to move carefully to avoid detection.
+     * [Requires]: No other action may be performed this turn.
+     * [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
+  (base/ability
+   :name "Strike and Fade"
+   :summary
+    "* [Requires]: No other action may be performed this turn.
+     * [Attack]: After this attack, if you have sufficient Move remaining, move 1 space.")
+  (base/ability
+   :name "Tag and Bag")
+  (base/ability
+   :name "Tailing"
+   :summary
+    "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed.")
+  (base/ability
+   :name "There is No Escape"
+   :reference "* Raiden Shogun, Genshin Impact")
+  (base/ability
+   :name "Track")
+  (base/ability
    :name "Undermine"
    :summary
     "Damage walls.")
+  (base/ability
+   :name "Vanish"
+   :reference
+    "* Smoke Bomb! - Krieger, Archer"
+   :summary
+    "* If you can momentarily break line of sight, you can immediately [Hide].")
+  (base/ability
+   :name "Without a Trace"
+   :summary
+    "* Extremely difficult tor track you.")
   )
  :doc "Returns the base abilitymap")
 

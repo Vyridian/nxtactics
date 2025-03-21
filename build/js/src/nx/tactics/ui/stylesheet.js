@@ -1233,7 +1233,7 @@ export default class nx_tactics_ui_stylesheet {
       ":align",
       vx_ui_ui.c_align_center,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 7, ":y", 2),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 7, ":y", 1),
       ":pointsize",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 51)
     ))

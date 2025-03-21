@@ -2,7 +2,6 @@
 
 import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
-import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 
 
 export default class nx_tactics_decks_scenario_murintrail {
@@ -573,13 +572,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "4x0",
+      "6x0",
+      ":speedland",
+      "6kph/4mph",
       ":mass",
       "80kg/180",
       ":height",
       "1.8m/6ft",
-      ":speedland",
-      "15kph/10mph",
       ":mass",
       "80kg/220lb",
       ":height",
@@ -665,13 +664,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "3x0",
+      "5x0",
+      ":speedland",
+      "5kph/3mph",
       ":mass",
       "100kg/220lb",
       ":height",
       "1.9m/6'3ft",
-      ":speedland",
-      "10kph/7mph",
       ":demeanor",
       "Glaring",
       ":nature",
@@ -695,7 +694,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Grab")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Grab")
             )
           )
         ),
@@ -745,13 +744,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "5x0",
+      "7x0",
+      ":speedland",
+      "7kph/4.5mph",
       ":mass",
       "70kg/153lb",
       ":height",
       "1.67m/5'6",
-      ":speedland",
-      "18kph/11mph",
       ":beast",
       "1x0",
       ":shadow",
@@ -786,7 +785,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Sneak")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Sneak")
             )
           )
         )
@@ -835,15 +834,15 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "2x1",
       ":speed",
-      "3x0",
+      "5x0",
+      ":speedland",
+      "5kph/3mph",
       ":value",
       "1x0",
       ":mass",
       "22kg/50lb",
       ":height",
       "1m/3ft",
-      ":speedland",
-      "10kph/7mph",
       ":unitskillmap",
       nx_tactics_base.f_unitskillmap_from_unitskilllist(
         vx_core.f_new(
@@ -872,7 +871,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Sneak")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Sneak")
             )
           )
         )
@@ -915,13 +914,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "4x0",
+      "5x0",
+      ":speedland",
+      "5kph/3mph",
       ":mass",
       "80kg/175",
       ":height",
       "1.8m/6ft",
-      ":speedland",
-      "15kph/10mph",
       ":height",
       "1.9m/6'3ft",
       ":demeanor",
@@ -993,11 +992,11 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "2x1",
       ":speed",
-      "10x1",
+      "2x2",
       ":mass",
       "450kg/1000lb",
       ":speedland",
-      "50kph/30mph",
+      "20kph/12mph",
       ":demeanor",
       "Aloof",
       ":nature",
@@ -1054,13 +1053,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "6x1",
       ":speed",
-      "4x0",
+      "5x0",
+      ":speedland",
+      "5kph/3mph",
       ":mass",
       "63kg",
       ":height",
       "1.72m/5ft7",
-      ":speedland",
-      "20kph/15mph",
       ":demeanor",
       "Willful",
       ":nature",
@@ -1099,7 +1098,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Blacksmithing")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Blacksmithing")
             )
           )
         )
@@ -1146,13 +1145,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "3x0",
+      "4x0",
+      ":speedland",
+      "4kph/2.5mph",
       ":mass",
       "75kg",
       ":height",
       "1.78m/5ft10",
-      ":speedland",
-      "10kph/7mph",
       ":demeanor",
       "Frivolous",
       ":nature",
@@ -1191,7 +1190,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Bargain")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Bargain")
             )
           )
         )
@@ -1236,13 +1235,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "4x1",
       ":speed",
-      "2x0",
+      "3x0",
+      ":speedland",
+      "3kph/2mph",
       ":mass",
       "40kg/88lb",
       ":height",
       "1.5m/5ft",
-      ":speedland",
-      "10kph",
       ":demeanor",
       "Pleasant",
       ":nature",
@@ -1266,7 +1265,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_base.f_skill_from_tactics_key(tactics, "Foraging")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Foraging")
             )
           )
         )
@@ -1305,13 +1304,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "4x1",
       ":speed",
-      "2x1",
+      "4x1",
       ":mass",
       "22kg/50lb",
       ":height",
       "76cm/30in",
       ":speedland",
-      "70kph/37mph",
+      "40kph/25mph",
       ":nature",
       "Dogged",
       ":unitskillmap",
@@ -1327,17 +1326,17 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Bite")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Bite")
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Grab")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Grab")
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Drag")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Drag")
             )
           )
         )
@@ -1392,13 +1391,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "5x1",
       ":speed",
-      "4x0",
+      "5x0",
+      ":speedland",
+      "5kph/3mph",
       ":mass",
       "80kg/180",
       ":height",
       "1.8m/6ft",
-      ":speedland",
-      "20kph/15mph",
       ":demeanor",
       "Gruff",
       ":nature",
@@ -1437,7 +1436,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_base.f_ability_from_tactics_key(tactics, "Trapping")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Snare")
             )
           )
         )
@@ -1511,13 +1510,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       ":will",
       "6x1",
       ":speed",
-      "3x0",
+      "4x0",
+      ":speedland",
+      "4kph/2.5mph",
       ":mass",
       "80kg",
       ":height",
       "1.78m/5'10",
-      ":speedland",
-      "10kph/7mph",
       ":unitskillmap",
       nx_tactics_base.f_unitskillmap_from_unitskilllist(
         vx_core.f_new(
@@ -1531,12 +1530,12 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Snake Charming")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Snake Charming")
             ),
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unitability},
               ":ability",
-              nx_tactics_decks_data.f_ability_from_key("Venom Extraction")
+              nx_tactics_base.f_ability_from_tactics_key(tactics, "Venom Extraction")
             )
           )
         )

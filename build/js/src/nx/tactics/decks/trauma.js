@@ -1153,6 +1153,8 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_qc,
       ":image",
       "images/card-trauma-rage.svg",
+      ":reference",
+      "* And, oh, my love remind me, what was it that I said? I can't help but pull the earth around me to make my bed. And, oh, my love remind me, what was it that I did? Did I drink too much? Am I losing touch? Did I build a ship to wreck? - Florence and the Machine, Ship to Wreck",
       ":summary",
       "Minor: Self Critical. You feel extreme guilt for your actions.\nMajor: Self loathing.\nCritical: Self Destructive.\nExtreme: Suicidal. You are worthless and disgusting. End it in a way befitting of your self loathing."
     ))

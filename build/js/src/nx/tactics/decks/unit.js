@@ -55,14 +55,41 @@ export default class nx_tactics_decks_unit {
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbear"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellboar"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbull"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hidden", ":image", "images/cards/unit-hidden.svg"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
         "Snake: Emerald Viper",
+        ":summary",
+        "* Movement - They can swim and climb trees.\n* Venomous Bite - Vipers carry a limited amount of venom. They can control the amount that injected including none at all.\n* Venom - Viperid venoms typically contain an abundance of protein-degrading enzymes, called proteases, that produce symptoms such as pain, strong local swelling and necrosis, blood loss from cardiovascular damage complicated disruption of the blood-clotting system. Death is usually caused by collapse in blood pressure. Due to the nature of proteolytic venom, a viperid bite is often a very painful experience and should always be taken seriously, though it may not necessarily prove fatal. Even with prompt and proper treatment, a bite can still result in a permanent scar, and in the worst cases, the affected limb may even have to be amputated.\n * Vision - They do not have heat vision unlike Pit Vipers",
         ":image",
         "images/cards/unit-snake-emeraldviper.svg",
-        ":summary",
-        "",
+        ":body",
+        "2x0",
+        ":mind",
+        "2x1",
+        ":will",
+        "4x1",
+        ":speed",
+        "3x0",
+        ":speedland",
+        "3kph/2mph",
+        ":mass",
+        "2kg/5lbs",
+        ":length",
+        "30cm/1ft",
+        ":skillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitskill},
+            ":level",
+            1,
+            ":skill",
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
+            ":abilitylist",
+            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Camouflage")
+          )
+        ),
         ":powermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           vx_core.f_new(
