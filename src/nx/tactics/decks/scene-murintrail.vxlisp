@@ -1,4 +1,4 @@
-(package nx/tactics/decks/scenario-murintrail
+(package nx/tactics/decks/scene-murintrail
  :libs (lib base :path nx/tactics/base)
  :doc  "Murin Trail Scene")
 
@@ -138,9 +138,9 @@
   :name "Wooden Hall"
   :image "images/cards/place-woodenhall.svg"))
 
-(func scene-murintrail : base/scenario
+(func scene-murintrail : base/scene
  [tactics : base/tactics]
- (base/scenario
+ (base/scene
   :name "Murin Trail Scene"
   :secrets
    "* The local lord is a young man (Damyen Brushaus) has recently inherited his title, preoccupied with person interests and largely ignores the town.
@@ -187,7 +187,7 @@
       (base/unititemmap<-unititemlist
         (base/unititem
          :item
-          (base/item<-tactics-key tactics "Shortsword"))))
+          (base/item<-tactics-key tactics "Sword: Short"))))
     (base/unitskill
      :skill
       (base/skill<-tactics-key tactics "Stealth")
@@ -533,7 +533,7 @@
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (base/item<-tactics-key tactics "Wood Axe"))))
+         :item (base/item<-tactics-key tactics "Axe: Wood"))))
     (base/unitskill
      :skill (base/skill<-tactics-key tactics "Hunting")
      :level "1"
@@ -572,11 +572,10 @@
      :skill (base/skill<-tactics-key tactics "Animal Handling")
      :level "3"
      :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Snake Charming"))
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Venom Extraction")))))))
+      (base/unitabilitymap<-tactics-keys
+       tactics
+       "Snake Charming"
+       "Venom Extraction")))))
 
 (func deck-murintrail : base/deck
  [tactics : base/tactics]
@@ -594,11 +593,14 @@
       (unit-bandit tactics)
       (unit-bruiser tactics)
       (unit-guardsman tactics)
-      (base/skill<-tactics-key tactics "Close Combat")
-      (base/skill<-tactics-key tactics "Melee")
-      (base/skill<-tactics-key tactics "Stealth")
-      (base/skill<-tactics-key tactics "Business")
-      (base/skill<-tactics-key tactics "Tradeskills")
+      (any<-any : base/cardlist
+       (base/skilllist<-tactics-keys
+        tactics
+        "Close Combat"
+        "Melee"
+        "Stealth"
+        "Business"
+        "Tradeskills"))
       (any<-any : base/cardlist
        (base/abilitylist<-tactics-keys
         tactics
@@ -610,25 +612,25 @@
         tactics
         "Bare Handed"
         "Dagger"
-        "Longsword"
-        "Shortsword"
+        "Sword: Long"
+        "Sword: Short"
         "Hammer"
-        "Hand Axe"
-        "Wood Axe"
+        "Axe: Hand"
+        "Axe: Wood"
         "Spear"
-        "Short Spear"
-        "Shortbow"
-        "Arrow Quiver"
-        "Buckler"
-        "Heater Shield"
-        "Round Shield"
-        "Leather Cuirass"
-        "Copper Coins"
-        "Silver Coins"
-        "Gold Coins"
-        "Platinum Coins"
+        "Spear: Short"
+        "Bow: Short"
+        "Quiver: Arrows"
+        "Shield: Buckler"
+        "Shield: Heater"
+        "Shield: Round"
+        "Armor: Leather Cuirass"
+        "Coins: Copper"
+        "Coins: Silver"
+        "Coins: Gold"
+        "Coins: Platinum"
         "Healing Salve"
-        "Fine Woodland Cloak"
+        "Cloak: Fine Woodland"
         "Rations"
         "Waterskin"
         ))

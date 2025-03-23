@@ -48,10 +48,10 @@
     "Car Wars"
      (section
       :name "Car Wars"
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Escort Duty"
-         (scenario
+         (scene
           :name "Escort Duty"
           :summary
            "* An Agricorp has commissioned some independents to covertly escort an unmarked tractor-trailer 1900 miles from
@@ -77,13 +77,13 @@ their site in La Jolla to a USDA facility near Nashville, TN.
 * 3 Sedans"
               :partialvictory "Capture any of the shipment.")))
         "Safe House"
-         (scenario
+         (scene
           :name "Safe House"
           :summary
            "* A small-time fixer has evidence of the identity of a cyber serial killer, the Night City Stalker.  Two news
 organizations are bidding on the deal, but the loser contacted the Stalker out of spite.")
         "Toxic Spill"
-         (scenario
+         (scene
           :name "Toxic Spill"
           :summary
            "* While guarding a 200 person Nomad camp, the well drill discovers a hidden toxic waste dump.  Alarms alert the
@@ -91,7 +91,7 @@ dumping company that their little secret has been discovered, so they send a tea
 * The whole Nomad camp must evacuate 3 miles to town before they are silenced, unfortunately they do not have
 enough vehicles to do it in one trip.")
         "The Heist"
-         (scenario
+         (scene
           :name "The Heist"
           :summary
            "* In a winter storm, a shipment of Palladium is diverted to a small warehouse in a corporate park.  It will not
@@ -1172,13 +1172,13 @@ Overview of the War
 
 Aftermath
 * Terran Union"
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Rock War"
-         (scenario
+         (scene
           :name "Rock War")
         "Battle in the Depths"
-         (scenario
+         (scene
           :name "Battle in the Depths"
           :summary
            "* An undersea fission cannon is discovered before it becomes operational.
@@ -1189,7 +1189,7 @@ fired destroying most of the fleet. 5 minutes later a second shot will
 ensure victory.
 * The battle takes place completely underwater.")
         "Destroy the Downlink"
-         (scenario
+         (scene
           :name "Destroy the Downlink"
           :summary
            "* The rebels choose to destroy a microwave receiver converting power from
@@ -1199,7 +1199,7 @@ free reign to take territory.
 * The defenders realize the vulnerability of the station and it is
 heavily defended.")
         "Rat Warren"
-         (scenario
+         (scene
           :name "Rat Warren"
           :summary
            "* The mechs stationed to defend the city are cut off from reinforcements.
@@ -1207,7 +1207,7 @@ heavily defended.")
 wits to take the colossal defenders down. They can use the sewers and
 subways as cover to launch hit and run attacks.")
         "Traitorous Acts"
-         (scenario
+         (scene
           :name "Traitorous Acts"
           :summary
            "* An surprise attack is launched on a munitions depot, but there is a
@@ -1217,21 +1217,21 @@ will have to watch their backs.
 * Defender secretly chooses one attacking unit as the traitor and can
 choose to activate it at any time.")
         "Joy Ride"
-         (scenario
+         (scene
           :name "Joy Ride"
           :summary
            "* A young, hotshot rebel manages to sneak into an enemy test facility and
 steal a prototype mecha. The whole base is on his tail, and he will need
 to use urban cover and speed to try to get away.")
         "Train Spotting"
-         (scenario
+         (scene
           :name "Train Spotting"
           :summary
            "* Ambush a mag-lev train and stop it before it escapes.
 * Attackers must disable the train and destroy the defenders.
 * Defenders must escape or drive off the attackers.")
         "Breaking Damocles"
-         (scenario
+         (scene
           :name "Breaking Damocles"
           :summary
            "* The Damocles is an orbital facility equipped with a powerful laser. Its
@@ -1242,9 +1242,9 @@ destroy the attitude control thrusters to send the facility into a death
 spiral that would make it burn up in orbit. Hopefully, it will crash in
 an uninhabited area.
 * Defenders must destroy the attackers or the explosives to prevent this
-nightmare scenario.")
+nightmare scene.")
         "Moon Rocket"
-         (scenario
+         (scene
           :name "Moon Rocket"
           :summary
            "* A huge rocket is about to be launched from its silo in a crater on the
@@ -1253,7 +1253,7 @@ Moon.
 itself before it leaves the combat area. Critical hits on the missile
 may cause it to explode, destroying the launch base.")
         "Mirage Storm"
-         (scenario
+         (scene
           :name "Mirage Storm"
           :summary
            "* Two recon mechs gather intelligence around Jupiter but are pursued. The
@@ -1270,10 +1270,10 @@ obviously immune to all damage.")))
     "Jovian Odyssey"
      (section
       :name "Jovian Odyssey"
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Dreams OF Phantoms"
-         (scenario
+         (scene
           :name "Dreams OF Phantoms"
           :summary
            "* Call of Jupiter - Jovian scientists discovered an odd life form floating in Juptier's
@@ -1300,7 +1300,7 @@ action-packed firefight in the command center. Agents and reporters are harder t
 integrate with the destruction of the station, but are more
 easily involved in the discovery process.")
         "Dreams OF Secrets"
-         (scenario
+         (scene
           :name "Dreams OF Secrets"
           :summary
            "* Summary - After the discovery and decomissioning of the secret Venusian research
@@ -1360,7 +1360,7 @@ doing footwork for the primary team. This puts them on the front lines, while th
 works to solidify their own cover. The primary team’s cover could then be blown, forcing the
 players to execute the operation, and keeping them on the front lines. This has many hooks for
 complications and intruigue. What if the compromised team wasn’t discovered, but betrayed
-by a double agent in their own ranks? This goes well with the scenario (see below) that has
+by a double agent in their own ranks? This goes well with the scene (see below) that has
 the players trapped in hiding on Stanton. What if the Venusians (specifically, Malachai) were
 aware of the operation all along and either want the operatives to expose themselves or for the
 operation to succeed/fail for reasons of their own?
@@ -1383,7 +1383,7 @@ One Tengu carries a Wyvern and three Wraiths, while the other carries four Syree
 squadron is accompanied by several fuel ships, to give extra range to the short-legged CEGA
 warships. Garand’s Wyvern is the Command variant. While the Hachiman is technically the
 flagship of the squadron, Garand usually commands from aboard his Tengu where he has easy
-access to his exo-armor. This can be used to involve Kleb in the scenario without Garand’s
+access to his exo-armor. This can be used to involve Kleb in the scene without Garand’s
 knowledge - Kleb could be travelling aboard the Hachiman, watching and ready to take command
 should the situation demand it.
 
@@ -1393,7 +1393,7 @@ the Dreamer. The PCs should realize this, and be careful not to let themselves b
 away... For what seems like a retreat could really be an attempt to lure them away so
 that another force can slip in and disable the Dreamer’s engines.")
         "Dreams oF Freedom"
-         (scenario
+         (scene
           :name "Dreams oF Freedom"
           :summary
            "* Beautiful Dreamer - Rescued from his UEA handlers at the Intersettlement Scientific
@@ -1417,7 +1417,7 @@ another way to Jupiter. Because reaction mass is low and they need to run silent
 trip takes many days at zero-g. Many days in radio silence are spent discussing ways to
 get out of this mess.")
         "Moonlight Sonata"
-         (scenario
+         (scene
           :name "Moonlight Sonata"
           :summary
            "* Ismael Li - Fortunately, the Jovians have been working hard to save the mission and
@@ -1502,7 +1502,7 @@ officials that oversee the colonies. Play up the initial hope and final despair 
 rebels, the desperation of the refugees to find a better life, and the chaos of
 close-quarters fighting in the Lunar warrens.")
         "Dreams of War"
-         (scenario
+         (scene
           :name "Dreams of War"
           :summary
            "* Mission to Mars - The UEA is in pursuit again and logically expects the Dreamer to
@@ -1639,7 +1639,7 @@ massive cloud of dust and leaves a huge canyon visible from space. The destructi
 unequalled in the history of mankind. The death toll is in the millions. The UEA must
 rescue Garand and Heaven station, so the Dreamer crew can begin the sad trip to Jupiter.")
         "Dreams of Death"
-         (scenario
+         (scene
           :name "Dreams of Death"
           :summary
            "* Epilogue - The Heaven crew is rescued from a harrowing tumble into space, but the
@@ -1772,10 +1772,10 @@ it had already disappeared in the radiation and magnetic fields around Jupiter, 
 fields they had relied upon to hide the drone as it went about its work.  Finally, the
 crew managed to get a signal through, but some interference caused the drone to change
 course and crash on Europa instead of self-destructing."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "A Damaged Freighter"
-         (scenario
+         (scene
           :name "A Damaged Freighter"
           :summary
            "* The UEA Black Eagle Squadron is smuggled aboard the freighter Narsus to recover the
@@ -1801,7 +1801,7 @@ open the cargo bay to vacuum. The UEA troops escape by detonating the Narsus as 
 distraction (killing the crew, of course) and releasing an ECM scrambler pod. They
 have clearly descended to Europa somewhere.")
         "Escape to the Ice Planet"
-         (scenario
+         (scene
           :name "Escape to the Ice Planet"
           :summary
            "* With Europa's low surface gravity, the Black Eagle team's exo-armors descend to the
@@ -1819,7 +1819,7 @@ recover the data core before its secrets are revealed and/or silence the witness
 * When the JAF arrives, they must deduce what has happened and race to intercept the
 UEA team.")
         "Hide and Seek"
-         (scenario
+         (scene
           :name "Hide and Seek"
           :summary
            "* Europa 1 is not well guarded, but it is a large facility with lots of staff. The
@@ -1836,7 +1836,7 @@ Whether they succeed or not, the UEA will have to retreat back to the rendezvous
 point or be stranded. When they retreat, the JAF will have to guess at where they are
 going and why, but either way they will need to pursue them.")
         "Hell Unchained"
-         (scenario
+         (scene
           :name "Hell Unchained"
           :summary
            "* Suddenly, a large shadow passes overhead. It's a frigate, the UEA pickup has arrived.
@@ -2355,7 +2355,7 @@ Vehicles:
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor")))
+              :name "Armored")))
         "UEA Mobile Infantry"
          (unit
           :name "UEA Mobile Infantry"
@@ -2379,7 +2379,7 @@ Powerful Backpack package including:
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor")))
+              :name "Armored")))
         "UEA Mobile Assault Infantry"
          (unit
           :name "UEA Mobile Assault Infantry"
@@ -2408,7 +2408,7 @@ Backpack Package
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor")))
+              :name "Armored")))
         "UEA Pilot"
          (unit
           :name "UEA Pilot")
@@ -3017,7 +3017,7 @@ Mobile suits: 8 (12)
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Energy"
@@ -3032,7 +3032,7 @@ Mobile suits: 8 (12)
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3052,7 +3052,7 @@ Mobile suits: 8 (12)
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3140,7 +3140,7 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3162,7 +3162,7 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3308,7 +3308,7 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3486,7 +3486,7 @@ Mechanical designer: Kazumi Fujita"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3505,7 +3505,7 @@ Mechanical designer: Kazumi Fujita"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3524,7 +3524,7 @@ Mechanical designer: Kazumi Fujita"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3543,7 +3543,7 @@ Mechanical designer: Kazumi Fujita"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3562,7 +3562,7 @@ Mechanical designer: Kazumi Fujita"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3610,7 +3610,7 @@ Optional fixed armaments: shield, mounted on either forearm"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3628,7 +3628,7 @@ Optional fixed armaments: shield, mounted on either forearm"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3646,7 +3646,7 @@ Optional fixed armaments: shield, mounted on either forearm"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3665,7 +3665,7 @@ Optional fixed armaments: shield, mounted on either forearm"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3684,7 +3684,7 @@ Optional fixed armaments: shield, mounted on either forearm"
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Energy"
@@ -3709,7 +3709,7 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Energy"
@@ -3793,7 +3793,7 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3812,7 +3812,7 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"
@@ -3869,7 +3869,7 @@ Fixed armaments: 2 x wire-guided psycommu mega arm, each mounts 5 x beam gun, fi
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :unitabilitymap
                (unitabilitymap
                 "Hardened vs. Projectiles"

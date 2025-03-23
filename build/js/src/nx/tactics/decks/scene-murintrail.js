@@ -4,13 +4,13 @@ import vx_core from "../../../vx/core.js"
 import nx_tactics_base from "../../../nx/tactics/base.js"
 
 
-export default class nx_tactics_decks_scenario_murintrail {
+export default class nx_tactics_decks_scene_murintrail {
 
   /**
    * Constant: power-groundmovement
    * {power}
    */
-  static c_power_groundmovement = {vx_type: nx_tactics_base.t_power, vx_constdef: {pkgname: 'nx/tactics/decks/scenario-murintrail', name: 'power-groundmovement', type: nx_tactics_base.t_power}}
+  static c_power_groundmovement = {vx_type: nx_tactics_base.t_power, vx_constdef: {pkgname: 'nx/tactics/decks/scene-murintrail', name: 'power-groundmovement', type: nx_tactics_base.t_power}}
 
   /**
    * @function deck_murintrail
@@ -21,7 +21,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_deck_murintrail = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_deck_murintrail
+    vx_type: nx_tactics_decks_scene_murintrail.t_deck_murintrail
   }
 
   // (func deck-murintrail)
@@ -31,9 +31,9 @@ export default class nx_tactics_decks_scenario_murintrail {
       {"any-1": nx_tactics_base.t_deck},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const goblinscout = nx_tactics_decks_scenario_murintrail.f_unit_goblinscout(tactics)
+        const goblinscout = nx_tactics_decks_scene_murintrail.f_unit_goblinscout(tactics)
         const goblinscout_i = nx_tactics_base.f_cardimage_from_card(goblinscout)
-        const horse = nx_tactics_decks_scenario_murintrail.f_unit_horse(tactics)
+        const horse = nx_tactics_decks_scene_murintrail.f_unit_horse(tactics)
         const horse_i = nx_tactics_base.f_cardimage_from_card(horse)
         return vx_core.f_new(
           {"any-1": nx_tactics_base.t_deck},
@@ -43,56 +43,55 @@ export default class nx_tactics_decks_scenario_murintrail {
           nx_tactics_base.f_cardmap_from_cardlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_cardlist},
-              nx_tactics_decks_scenario_murintrail.f_unit_flint(tactics),
-              nx_tactics_decks_scenario_murintrail.f_unit_bandit(tactics),
-              nx_tactics_decks_scenario_murintrail.f_unit_bruiser(tactics),
-              nx_tactics_decks_scenario_murintrail.f_unit_guardsman(tactics),
-              nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
-              nx_tactics_base.f_skill_from_tactics_key(tactics, "Melee"),
-              nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
-              nx_tactics_base.f_skill_from_tactics_key(tactics, "Business"),
-              nx_tactics_base.f_skill_from_tactics_key(tactics, "Tradeskills"),
+              nx_tactics_decks_scene_murintrail.f_unit_flint(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_bandit(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_bruiser(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_guardsman(tactics),
+              vx_core.f_any_from_any(
+                {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_skilllist},
+                nx_tactics_base.f_skilllist_from_tactics_keys(tactics, "Close Combat", "Melee", "Stealth", "Business", "Tradeskills")
+              ),
               vx_core.f_any_from_any(
                 {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_abilitylist},
                 nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Bargain", "Sneak")
               ),
               vx_core.f_any_from_any(
                 {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_itemlist},
-                nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Dagger", "Longsword", "Shortsword", "Hammer", "Hand Axe", "Wood Axe", "Spear", "Short Spear", "Shortbow", "Arrow Quiver", "Buckler", "Heater Shield", "Round Shield", "Leather Cuirass", "Copper Coins", "Silver Coins", "Gold Coins", "Platinum Coins", "Healing Salve", "Fine Woodland Cloak", "Rations", "Waterskin")
+                nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Dagger", "Sword: Long", "Sword: Short", "Hammer", "Axe: Hand", "Axe: Wood", "Spear", "Spear: Short", "Bow: Short", "Quiver: Arrows", "Shield: Buckler", "Shield: Heater", "Shield: Round", "Armor: Leather Cuirass", "Coins: Copper", "Coins: Silver", "Coins: Gold", "Coins: Platinum", "Healing Salve", "Cloak: Fine Woodland", "Rations", "Waterskin")
               ),
-              nx_tactics_decks_scenario_murintrail.f_unit_jesaveer(tactics),
-              nx_tactics_decks_scenario_murintrail.f_unit_jonaveer(tactics),
-              nx_tactics_decks_scenario_murintrail.f_unit_xeibhanower(tactics),
-              nx_tactics_decks_scenario_murintrail.f_unit_wilmducon(tactics),
-              nx_tactics_decks_scenario_murintrail.f_unit_liliducon(tactics),
-              nx_tactics_decks_scenario_murintrail.f_unit_wilddog(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_jesaveer(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_jonaveer(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_xeibhanower(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_wilmducon(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_liliducon(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_wilddog(tactics),
               goblinscout,
               goblinscout_i,
-              nx_tactics_decks_scenario_murintrail.f_unit_horse(tactics),
+              nx_tactics_decks_scene_murintrail.f_unit_horse(tactics),
               horse_i,
-              nx_tactics_decks_scenario_murintrail.f_unit_woodencart(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_field(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_forest(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_mountain(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_blacksmith(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_campsite(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_cavemouth(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_dirtpath(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_farmhouse(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_gravelroad(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_guardpost(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_horsestables(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_mill(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_stoneroad(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_tavern(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_tavern_bar(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_tavern_bedroom(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_tavern_common(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_tavern_dining(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_tavern_stairs(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_temple(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_tradingpost(tactics),
-              nx_tactics_decks_scenario_murintrail.f_place_woodenhall(tactics)
+              nx_tactics_decks_scene_murintrail.f_unit_woodencart(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_field(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_forest(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_mountain(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_blacksmith(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_campsite(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_cavemouth(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_dirtpath(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_farmhouse(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_gravelroad(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_guardpost(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_horsestables(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_mill(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_stoneroad(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_tavern(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_tavern_bar(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_tavern_bedroom(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_tavern_common(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_tavern_dining(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_tavern_stairs(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_temple(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_tradingpost(tactics),
+              nx_tactics_decks_scene_murintrail.f_place_woodenhall(tactics)
             )
           )
         )
@@ -110,7 +109,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_blacksmith = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_blacksmith
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_blacksmith
   }
 
   // (func place-blacksmith)
@@ -129,7 +128,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_campsite = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_campsite
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_campsite
   }
 
   // (func place-campsite)
@@ -148,7 +147,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_cavemouth = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_cavemouth
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_cavemouth
   }
 
   // (func place-cavemouth)
@@ -167,7 +166,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_dirtpath = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_dirtpath
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_dirtpath
   }
 
   // (func place-dirtpath)
@@ -186,7 +185,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_farmhouse = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_farmhouse
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_farmhouse
   }
 
   // (func place-farmhouse)
@@ -205,7 +204,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_field = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_field
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_field
   }
 
   // (func place-field)
@@ -224,7 +223,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_forest = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_forest
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_forest
   }
 
   // (func place-forest)
@@ -243,7 +242,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_gravelroad = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_gravelroad
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_gravelroad
   }
 
   // (func place-gravelroad)
@@ -262,7 +261,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_guardpost = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_guardpost
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_guardpost
   }
 
   // (func place-guardpost)
@@ -281,7 +280,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_horsestables = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_horsestables
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_horsestables
   }
 
   // (func place-horsestables)
@@ -300,7 +299,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_mill = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_mill
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_mill
   }
 
   // (func place-mill)
@@ -319,7 +318,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_mountain = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_mountain
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_mountain
   }
 
   // (func place-mountain)
@@ -338,7 +337,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_stoneroad = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_stoneroad
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_stoneroad
   }
 
   // (func place-stoneroad)
@@ -357,7 +356,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_tavern = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_tavern
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_tavern
   }
 
   // (func place-tavern)
@@ -376,7 +375,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_tavern_bar = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_tavern_bar
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_tavern_bar
   }
 
   // (func place-tavern-bar)
@@ -395,7 +394,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_tavern_bedroom = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_tavern_bedroom
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_tavern_bedroom
   }
 
   // (func place-tavern-bedroom)
@@ -414,7 +413,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_tavern_common = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_tavern_common
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_tavern_common
   }
 
   // (func place-tavern-common)
@@ -433,7 +432,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_tavern_dining = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_tavern_dining
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_tavern_dining
   }
 
   // (func place-tavern-dining)
@@ -452,7 +451,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_tavern_stairs = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_tavern_stairs
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_tavern_stairs
   }
 
   // (func place-tavern-stairs)
@@ -471,7 +470,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_temple = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_temple
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_temple
   }
 
   // (func place-temple)
@@ -490,7 +489,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_tradingpost = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_tradingpost
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_tradingpost
   }
 
   // (func place-tradingpost)
@@ -509,7 +508,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_place_woodenhall = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_place_woodenhall
+    vx_type: nx_tactics_decks_scene_murintrail.t_place_woodenhall
   }
 
   // (func place-woodenhall)
@@ -522,19 +521,19 @@ export default class nx_tactics_decks_scenario_murintrail {
   /**
    * @function scene_murintrail
    * @param  {tactics} tactics
-   * @return {scenario}
+   * @return {scene}
    */
   static t_scene_murintrail = {
     vx_type: vx_core.t_type
   }
   static e_scene_murintrail = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_scene_murintrail
+    vx_type: nx_tactics_decks_scene_murintrail.t_scene_murintrail
   }
 
   // (func scene-murintrail)
   static f_scene_murintrail(tactics) {
-    let output = nx_tactics_base.e_scenario
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Murin Trail Scene", ":secrets", "* The local lord is a young man (Damyen Brushaus) has recently inherited his title, preoccupied with person interests and largely ignores the town.\n* The town watch is a small militia run by a veteran sergeant (Brunhil Virden).\n* Brunhil runs a tight ship, and is not popular in town or among the watch.\n* The area is mostly safe except for numerous venomous snakes.\n* The local inn/pub is basically a large house. There are outdoor tables for food and drink.\n* The innkeeper/cook (Hamal) runs the place with his 12 year old daughter (Rena).\n* The land is mountainous and rocky, but the weather is fair and crops are reasonable.\n* A small religious group is staying in the city until they move on. They locals don't care for them.\n* A priest (Xeib) in town makes and sells anti-venom.\n* Xeib is travelling to Murintown, but he does not want to travel unguarded.")
+    let output = nx_tactics_base.e_scene
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Murin Trail Scene", ":secrets", "* The local lord is a young man (Damyen Brushaus) has recently inherited his title, preoccupied with person interests and largely ignores the town.\n* The town watch is a small militia run by a veteran sergeant (Brunhil Virden).\n* Brunhil runs a tight ship, and is not popular in town or among the watch.\n* The area is mostly safe except for numerous venomous snakes.\n* The local inn/pub is basically a large house. There are outdoor tables for food and drink.\n* The innkeeper/cook (Hamal) runs the place with his 12 year old daughter (Rena).\n* The land is mountainous and rocky, but the weather is fair and crops are reasonable.\n* A small religious group is staying in the city until they move on. They locals don't care for them.\n* A priest (Xeib) in town makes and sells anti-venom.\n* Xeib is travelling to Murintown, but he does not want to travel unguarded.")
     return output
   }
 
@@ -547,7 +546,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_bandit = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_bandit
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_bandit
   }
 
   // (func unit-bandit)
@@ -606,7 +605,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unititem},
               ":item",
-              nx_tactics_base.f_item_from_tactics_key(tactics, "Shortsword")
+              nx_tactics_base.f_item_from_tactics_key(tactics, "Sword: Short")
             )
           )
         ),
@@ -639,7 +638,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_bruiser = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_bruiser
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_bruiser
   }
 
   // (func unit-bruiser)
@@ -719,7 +718,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_flint = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_flint
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_flint
   }
 
   // (func unit-flint)
@@ -803,7 +802,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_goblinscout = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_goblinscout
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_goblinscout
   }
 
   // (func unit-goblinscout)
@@ -889,7 +888,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_guardsman = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_guardsman
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_guardsman
   }
 
   // (func unit-guardsman)
@@ -971,7 +970,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_horse = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_horse
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_horse
   }
 
   // (func unit-horse)
@@ -1006,7 +1005,7 @@ export default class nx_tactics_decks_scenario_murintrail {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitpower},
           ":power",
-          nx_tactics_decks_scenario_murintrail.c_power_groundmovement,
+          nx_tactics_decks_scene_murintrail.c_power_groundmovement,
           ":level",
           "4x1"
         )
@@ -1024,7 +1023,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_jesaveer = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_jesaveer
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_jesaveer
   }
 
   // (func unit-jesaveer)
@@ -1116,7 +1115,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_jonaveer = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_jonaveer
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_jonaveer
   }
 
   // (func unit-jonaveer)
@@ -1208,7 +1207,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_liliducon = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_liliducon
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_liliducon
   }
 
   // (func unit-liliducon)
@@ -1283,7 +1282,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_wilddog = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_wilddog
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_wilddog
   }
 
   // (func unit-wilddog)
@@ -1346,7 +1345,7 @@ export default class nx_tactics_decks_scenario_murintrail {
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_unitpower},
           ":power",
-          nx_tactics_decks_scenario_murintrail.c_power_groundmovement,
+          nx_tactics_decks_scene_murintrail.c_power_groundmovement,
           ":level",
           "7x1"
         )
@@ -1364,7 +1363,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_wilmducon = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_wilmducon
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_wilmducon
   }
 
   // (func unit-wilmducon)
@@ -1421,7 +1420,7 @@ export default class nx_tactics_decks_scenario_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unititem},
               ":item",
-              nx_tactics_base.f_item_from_tactics_key(tactics, "Wood Axe")
+              nx_tactics_base.f_item_from_tactics_key(tactics, "Axe: Wood")
             )
           )
         ),
@@ -1454,7 +1453,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_woodencart = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_woodencart
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_woodencart
   }
 
   // (func unit-woodencart)
@@ -1485,7 +1484,7 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_type: vx_core.t_type
   }
   static e_unit_xeibhanower = {
-    vx_type: nx_tactics_decks_scenario_murintrail.t_unit_xeibhanower
+    vx_type: nx_tactics_decks_scene_murintrail.t_unit_xeibhanower
   }
 
   // (func unit-xeibhanower)
@@ -1526,18 +1525,7 @@ export default class nx_tactics_decks_scenario_murintrail {
           ":level",
           "3",
           ":unitabilitymap",
-          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unitability},
-              ":ability",
-              nx_tactics_base.f_ability_from_tactics_key(tactics, "Snake Charming")
-            ),
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unitability},
-              ":ability",
-              nx_tactics_base.f_ability_from_tactics_key(tactics, "Venom Extraction")
-            )
-          )
+          nx_tactics_base.f_unitabilitymap_from_tactics_keys(tactics, "Snake Charming", "Venom Extraction")
         )
       )
     )
@@ -1548,91 +1536,91 @@ export default class nx_tactics_decks_scenario_murintrail {
 
   static {
     const constmap = vx_core.vx_new_map(vx_core.t_constmap, {
-      "power-groundmovement": nx_tactics_decks_scenario_murintrail.c_power_groundmovement
+      "power-groundmovement": nx_tactics_decks_scene_murintrail.c_power_groundmovement
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "deck-murintrail": nx_tactics_decks_scenario_murintrail.e_deck_murintrail,
-      "place-blacksmith": nx_tactics_decks_scenario_murintrail.e_place_blacksmith,
-      "place-campsite": nx_tactics_decks_scenario_murintrail.e_place_campsite,
-      "place-cavemouth": nx_tactics_decks_scenario_murintrail.e_place_cavemouth,
-      "place-dirtpath": nx_tactics_decks_scenario_murintrail.e_place_dirtpath,
-      "place-farmhouse": nx_tactics_decks_scenario_murintrail.e_place_farmhouse,
-      "place-field": nx_tactics_decks_scenario_murintrail.e_place_field,
-      "place-forest": nx_tactics_decks_scenario_murintrail.e_place_forest,
-      "place-gravelroad": nx_tactics_decks_scenario_murintrail.e_place_gravelroad,
-      "place-guardpost": nx_tactics_decks_scenario_murintrail.e_place_guardpost,
-      "place-horsestables": nx_tactics_decks_scenario_murintrail.e_place_horsestables,
-      "place-mill": nx_tactics_decks_scenario_murintrail.e_place_mill,
-      "place-mountain": nx_tactics_decks_scenario_murintrail.e_place_mountain,
-      "place-stoneroad": nx_tactics_decks_scenario_murintrail.e_place_stoneroad,
-      "place-tavern": nx_tactics_decks_scenario_murintrail.e_place_tavern,
-      "place-tavern-bar": nx_tactics_decks_scenario_murintrail.e_place_tavern_bar,
-      "place-tavern-bedroom": nx_tactics_decks_scenario_murintrail.e_place_tavern_bedroom,
-      "place-tavern-common": nx_tactics_decks_scenario_murintrail.e_place_tavern_common,
-      "place-tavern-dining": nx_tactics_decks_scenario_murintrail.e_place_tavern_dining,
-      "place-tavern-stairs": nx_tactics_decks_scenario_murintrail.e_place_tavern_stairs,
-      "place-temple": nx_tactics_decks_scenario_murintrail.e_place_temple,
-      "place-tradingpost": nx_tactics_decks_scenario_murintrail.e_place_tradingpost,
-      "place-woodenhall": nx_tactics_decks_scenario_murintrail.e_place_woodenhall,
-      "scene-murintrail": nx_tactics_decks_scenario_murintrail.e_scene_murintrail,
-      "unit-bandit": nx_tactics_decks_scenario_murintrail.e_unit_bandit,
-      "unit-bruiser": nx_tactics_decks_scenario_murintrail.e_unit_bruiser,
-      "unit-flint": nx_tactics_decks_scenario_murintrail.e_unit_flint,
-      "unit-goblinscout": nx_tactics_decks_scenario_murintrail.e_unit_goblinscout,
-      "unit-guardsman": nx_tactics_decks_scenario_murintrail.e_unit_guardsman,
-      "unit-horse": nx_tactics_decks_scenario_murintrail.e_unit_horse,
-      "unit-jesaveer": nx_tactics_decks_scenario_murintrail.e_unit_jesaveer,
-      "unit-jonaveer": nx_tactics_decks_scenario_murintrail.e_unit_jonaveer,
-      "unit-liliducon": nx_tactics_decks_scenario_murintrail.e_unit_liliducon,
-      "unit-wilddog": nx_tactics_decks_scenario_murintrail.e_unit_wilddog,
-      "unit-wilmducon": nx_tactics_decks_scenario_murintrail.e_unit_wilmducon,
-      "unit-woodencart": nx_tactics_decks_scenario_murintrail.e_unit_woodencart,
-      "unit-xeibhanower": nx_tactics_decks_scenario_murintrail.e_unit_xeibhanower
+      "deck-murintrail": nx_tactics_decks_scene_murintrail.e_deck_murintrail,
+      "place-blacksmith": nx_tactics_decks_scene_murintrail.e_place_blacksmith,
+      "place-campsite": nx_tactics_decks_scene_murintrail.e_place_campsite,
+      "place-cavemouth": nx_tactics_decks_scene_murintrail.e_place_cavemouth,
+      "place-dirtpath": nx_tactics_decks_scene_murintrail.e_place_dirtpath,
+      "place-farmhouse": nx_tactics_decks_scene_murintrail.e_place_farmhouse,
+      "place-field": nx_tactics_decks_scene_murintrail.e_place_field,
+      "place-forest": nx_tactics_decks_scene_murintrail.e_place_forest,
+      "place-gravelroad": nx_tactics_decks_scene_murintrail.e_place_gravelroad,
+      "place-guardpost": nx_tactics_decks_scene_murintrail.e_place_guardpost,
+      "place-horsestables": nx_tactics_decks_scene_murintrail.e_place_horsestables,
+      "place-mill": nx_tactics_decks_scene_murintrail.e_place_mill,
+      "place-mountain": nx_tactics_decks_scene_murintrail.e_place_mountain,
+      "place-stoneroad": nx_tactics_decks_scene_murintrail.e_place_stoneroad,
+      "place-tavern": nx_tactics_decks_scene_murintrail.e_place_tavern,
+      "place-tavern-bar": nx_tactics_decks_scene_murintrail.e_place_tavern_bar,
+      "place-tavern-bedroom": nx_tactics_decks_scene_murintrail.e_place_tavern_bedroom,
+      "place-tavern-common": nx_tactics_decks_scene_murintrail.e_place_tavern_common,
+      "place-tavern-dining": nx_tactics_decks_scene_murintrail.e_place_tavern_dining,
+      "place-tavern-stairs": nx_tactics_decks_scene_murintrail.e_place_tavern_stairs,
+      "place-temple": nx_tactics_decks_scene_murintrail.e_place_temple,
+      "place-tradingpost": nx_tactics_decks_scene_murintrail.e_place_tradingpost,
+      "place-woodenhall": nx_tactics_decks_scene_murintrail.e_place_woodenhall,
+      "scene-murintrail": nx_tactics_decks_scene_murintrail.e_scene_murintrail,
+      "unit-bandit": nx_tactics_decks_scene_murintrail.e_unit_bandit,
+      "unit-bruiser": nx_tactics_decks_scene_murintrail.e_unit_bruiser,
+      "unit-flint": nx_tactics_decks_scene_murintrail.e_unit_flint,
+      "unit-goblinscout": nx_tactics_decks_scene_murintrail.e_unit_goblinscout,
+      "unit-guardsman": nx_tactics_decks_scene_murintrail.e_unit_guardsman,
+      "unit-horse": nx_tactics_decks_scene_murintrail.e_unit_horse,
+      "unit-jesaveer": nx_tactics_decks_scene_murintrail.e_unit_jesaveer,
+      "unit-jonaveer": nx_tactics_decks_scene_murintrail.e_unit_jonaveer,
+      "unit-liliducon": nx_tactics_decks_scene_murintrail.e_unit_liliducon,
+      "unit-wilddog": nx_tactics_decks_scene_murintrail.e_unit_wilddog,
+      "unit-wilmducon": nx_tactics_decks_scene_murintrail.e_unit_wilmducon,
+      "unit-woodencart": nx_tactics_decks_scene_murintrail.e_unit_woodencart,
+      "unit-xeibhanower": nx_tactics_decks_scene_murintrail.e_unit_xeibhanower
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "deck-murintrail": nx_tactics_decks_scenario_murintrail.t_deck_murintrail,
-      "place-blacksmith": nx_tactics_decks_scenario_murintrail.t_place_blacksmith,
-      "place-campsite": nx_tactics_decks_scenario_murintrail.t_place_campsite,
-      "place-cavemouth": nx_tactics_decks_scenario_murintrail.t_place_cavemouth,
-      "place-dirtpath": nx_tactics_decks_scenario_murintrail.t_place_dirtpath,
-      "place-farmhouse": nx_tactics_decks_scenario_murintrail.t_place_farmhouse,
-      "place-field": nx_tactics_decks_scenario_murintrail.t_place_field,
-      "place-forest": nx_tactics_decks_scenario_murintrail.t_place_forest,
-      "place-gravelroad": nx_tactics_decks_scenario_murintrail.t_place_gravelroad,
-      "place-guardpost": nx_tactics_decks_scenario_murintrail.t_place_guardpost,
-      "place-horsestables": nx_tactics_decks_scenario_murintrail.t_place_horsestables,
-      "place-mill": nx_tactics_decks_scenario_murintrail.t_place_mill,
-      "place-mountain": nx_tactics_decks_scenario_murintrail.t_place_mountain,
-      "place-stoneroad": nx_tactics_decks_scenario_murintrail.t_place_stoneroad,
-      "place-tavern": nx_tactics_decks_scenario_murintrail.t_place_tavern,
-      "place-tavern-bar": nx_tactics_decks_scenario_murintrail.t_place_tavern_bar,
-      "place-tavern-bedroom": nx_tactics_decks_scenario_murintrail.t_place_tavern_bedroom,
-      "place-tavern-common": nx_tactics_decks_scenario_murintrail.t_place_tavern_common,
-      "place-tavern-dining": nx_tactics_decks_scenario_murintrail.t_place_tavern_dining,
-      "place-tavern-stairs": nx_tactics_decks_scenario_murintrail.t_place_tavern_stairs,
-      "place-temple": nx_tactics_decks_scenario_murintrail.t_place_temple,
-      "place-tradingpost": nx_tactics_decks_scenario_murintrail.t_place_tradingpost,
-      "place-woodenhall": nx_tactics_decks_scenario_murintrail.t_place_woodenhall,
-      "scene-murintrail": nx_tactics_decks_scenario_murintrail.t_scene_murintrail,
-      "unit-bandit": nx_tactics_decks_scenario_murintrail.t_unit_bandit,
-      "unit-bruiser": nx_tactics_decks_scenario_murintrail.t_unit_bruiser,
-      "unit-flint": nx_tactics_decks_scenario_murintrail.t_unit_flint,
-      "unit-goblinscout": nx_tactics_decks_scenario_murintrail.t_unit_goblinscout,
-      "unit-guardsman": nx_tactics_decks_scenario_murintrail.t_unit_guardsman,
-      "unit-horse": nx_tactics_decks_scenario_murintrail.t_unit_horse,
-      "unit-jesaveer": nx_tactics_decks_scenario_murintrail.t_unit_jesaveer,
-      "unit-jonaveer": nx_tactics_decks_scenario_murintrail.t_unit_jonaveer,
-      "unit-liliducon": nx_tactics_decks_scenario_murintrail.t_unit_liliducon,
-      "unit-wilddog": nx_tactics_decks_scenario_murintrail.t_unit_wilddog,
-      "unit-wilmducon": nx_tactics_decks_scenario_murintrail.t_unit_wilmducon,
-      "unit-woodencart": nx_tactics_decks_scenario_murintrail.t_unit_woodencart,
-      "unit-xeibhanower": nx_tactics_decks_scenario_murintrail.t_unit_xeibhanower
+      "deck-murintrail": nx_tactics_decks_scene_murintrail.t_deck_murintrail,
+      "place-blacksmith": nx_tactics_decks_scene_murintrail.t_place_blacksmith,
+      "place-campsite": nx_tactics_decks_scene_murintrail.t_place_campsite,
+      "place-cavemouth": nx_tactics_decks_scene_murintrail.t_place_cavemouth,
+      "place-dirtpath": nx_tactics_decks_scene_murintrail.t_place_dirtpath,
+      "place-farmhouse": nx_tactics_decks_scene_murintrail.t_place_farmhouse,
+      "place-field": nx_tactics_decks_scene_murintrail.t_place_field,
+      "place-forest": nx_tactics_decks_scene_murintrail.t_place_forest,
+      "place-gravelroad": nx_tactics_decks_scene_murintrail.t_place_gravelroad,
+      "place-guardpost": nx_tactics_decks_scene_murintrail.t_place_guardpost,
+      "place-horsestables": nx_tactics_decks_scene_murintrail.t_place_horsestables,
+      "place-mill": nx_tactics_decks_scene_murintrail.t_place_mill,
+      "place-mountain": nx_tactics_decks_scene_murintrail.t_place_mountain,
+      "place-stoneroad": nx_tactics_decks_scene_murintrail.t_place_stoneroad,
+      "place-tavern": nx_tactics_decks_scene_murintrail.t_place_tavern,
+      "place-tavern-bar": nx_tactics_decks_scene_murintrail.t_place_tavern_bar,
+      "place-tavern-bedroom": nx_tactics_decks_scene_murintrail.t_place_tavern_bedroom,
+      "place-tavern-common": nx_tactics_decks_scene_murintrail.t_place_tavern_common,
+      "place-tavern-dining": nx_tactics_decks_scene_murintrail.t_place_tavern_dining,
+      "place-tavern-stairs": nx_tactics_decks_scene_murintrail.t_place_tavern_stairs,
+      "place-temple": nx_tactics_decks_scene_murintrail.t_place_temple,
+      "place-tradingpost": nx_tactics_decks_scene_murintrail.t_place_tradingpost,
+      "place-woodenhall": nx_tactics_decks_scene_murintrail.t_place_woodenhall,
+      "scene-murintrail": nx_tactics_decks_scene_murintrail.t_scene_murintrail,
+      "unit-bandit": nx_tactics_decks_scene_murintrail.t_unit_bandit,
+      "unit-bruiser": nx_tactics_decks_scene_murintrail.t_unit_bruiser,
+      "unit-flint": nx_tactics_decks_scene_murintrail.t_unit_flint,
+      "unit-goblinscout": nx_tactics_decks_scene_murintrail.t_unit_goblinscout,
+      "unit-guardsman": nx_tactics_decks_scene_murintrail.t_unit_guardsman,
+      "unit-horse": nx_tactics_decks_scene_murintrail.t_unit_horse,
+      "unit-jesaveer": nx_tactics_decks_scene_murintrail.t_unit_jesaveer,
+      "unit-jonaveer": nx_tactics_decks_scene_murintrail.t_unit_jonaveer,
+      "unit-liliducon": nx_tactics_decks_scene_murintrail.t_unit_liliducon,
+      "unit-wilddog": nx_tactics_decks_scene_murintrail.t_unit_wilddog,
+      "unit-wilmducon": nx_tactics_decks_scene_murintrail.t_unit_wilmducon,
+      "unit-woodencart": nx_tactics_decks_scene_murintrail.t_unit_woodencart,
+      "unit-xeibhanower": nx_tactics_decks_scene_murintrail.t_unit_xeibhanower
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
     })
     const pkg = vx_core.vx_new_struct(vx_core.t_package, {
-      "name": "nx/tactics/decks/scenario-murintrail",
+      "name": "nx/tactics/decks/scene-murintrail",
       "constmap": constmap,
       "emptymap": emptymap,
       "funcmap": funcmap,
@@ -1641,9 +1629,9 @@ export default class nx_tactics_decks_scenario_murintrail {
     vx_core.vx_global_package_set(pkg)
 
     // (func deck-murintrail)
-    nx_tactics_decks_scenario_murintrail.t_deck_murintrail['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_deck_murintrail['vx_value'] = {
       name          : "deck-murintrail",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1655,13 +1643,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_deck_murintrail
+      fn            : nx_tactics_decks_scene_murintrail.f_deck_murintrail
     }
 
     // (func place-blacksmith)
-    nx_tactics_decks_scenario_murintrail.t_place_blacksmith['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_blacksmith['vx_value'] = {
       name          : "place-blacksmith",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1673,13 +1661,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_blacksmith
+      fn            : nx_tactics_decks_scene_murintrail.f_place_blacksmith
     }
 
     // (func place-campsite)
-    nx_tactics_decks_scenario_murintrail.t_place_campsite['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_campsite['vx_value'] = {
       name          : "place-campsite",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1691,13 +1679,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_campsite
+      fn            : nx_tactics_decks_scene_murintrail.f_place_campsite
     }
 
     // (func place-cavemouth)
-    nx_tactics_decks_scenario_murintrail.t_place_cavemouth['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_cavemouth['vx_value'] = {
       name          : "place-cavemouth",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1709,13 +1697,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_cavemouth
+      fn            : nx_tactics_decks_scene_murintrail.f_place_cavemouth
     }
 
     // (func place-dirtpath)
-    nx_tactics_decks_scenario_murintrail.t_place_dirtpath['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_dirtpath['vx_value'] = {
       name          : "place-dirtpath",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1727,13 +1715,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_dirtpath
+      fn            : nx_tactics_decks_scene_murintrail.f_place_dirtpath
     }
 
     // (func place-farmhouse)
-    nx_tactics_decks_scenario_murintrail.t_place_farmhouse['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_farmhouse['vx_value'] = {
       name          : "place-farmhouse",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1745,13 +1733,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_farmhouse
+      fn            : nx_tactics_decks_scene_murintrail.f_place_farmhouse
     }
 
     // (func place-field)
-    nx_tactics_decks_scenario_murintrail.t_place_field['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_field['vx_value'] = {
       name          : "place-field",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1763,13 +1751,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_field
+      fn            : nx_tactics_decks_scene_murintrail.f_place_field
     }
 
     // (func place-forest)
-    nx_tactics_decks_scenario_murintrail.t_place_forest['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_forest['vx_value'] = {
       name          : "place-forest",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1781,13 +1769,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_forest
+      fn            : nx_tactics_decks_scene_murintrail.f_place_forest
     }
 
     // (func place-gravelroad)
-    nx_tactics_decks_scenario_murintrail.t_place_gravelroad['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_gravelroad['vx_value'] = {
       name          : "place-gravelroad",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1799,13 +1787,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_gravelroad
+      fn            : nx_tactics_decks_scene_murintrail.f_place_gravelroad
     }
 
     // (func place-guardpost)
-    nx_tactics_decks_scenario_murintrail.t_place_guardpost['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_guardpost['vx_value'] = {
       name          : "place-guardpost",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1817,13 +1805,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_guardpost
+      fn            : nx_tactics_decks_scene_murintrail.f_place_guardpost
     }
 
     // (func place-horsestables)
-    nx_tactics_decks_scenario_murintrail.t_place_horsestables['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_horsestables['vx_value'] = {
       name          : "place-horsestables",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1835,13 +1823,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_horsestables
+      fn            : nx_tactics_decks_scene_murintrail.f_place_horsestables
     }
 
     // (func place-mill)
-    nx_tactics_decks_scenario_murintrail.t_place_mill['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_mill['vx_value'] = {
       name          : "place-mill",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1853,13 +1841,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_mill
+      fn            : nx_tactics_decks_scene_murintrail.f_place_mill
     }
 
     // (func place-mountain)
-    nx_tactics_decks_scenario_murintrail.t_place_mountain['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_mountain['vx_value'] = {
       name          : "place-mountain",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1871,13 +1859,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_mountain
+      fn            : nx_tactics_decks_scene_murintrail.f_place_mountain
     }
 
     // (func place-stoneroad)
-    nx_tactics_decks_scenario_murintrail.t_place_stoneroad['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_stoneroad['vx_value'] = {
       name          : "place-stoneroad",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1889,13 +1877,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_stoneroad
+      fn            : nx_tactics_decks_scene_murintrail.f_place_stoneroad
     }
 
     // (func place-tavern)
-    nx_tactics_decks_scenario_murintrail.t_place_tavern['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_tavern['vx_value'] = {
       name          : "place-tavern",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1907,13 +1895,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_tavern
+      fn            : nx_tactics_decks_scene_murintrail.f_place_tavern
     }
 
     // (func place-tavern-bar)
-    nx_tactics_decks_scenario_murintrail.t_place_tavern_bar['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_tavern_bar['vx_value'] = {
       name          : "place-tavern-bar",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1925,13 +1913,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_tavern_bar
+      fn            : nx_tactics_decks_scene_murintrail.f_place_tavern_bar
     }
 
     // (func place-tavern-bedroom)
-    nx_tactics_decks_scenario_murintrail.t_place_tavern_bedroom['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_tavern_bedroom['vx_value'] = {
       name          : "place-tavern-bedroom",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1943,13 +1931,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_tavern_bedroom
+      fn            : nx_tactics_decks_scene_murintrail.f_place_tavern_bedroom
     }
 
     // (func place-tavern-common)
-    nx_tactics_decks_scenario_murintrail.t_place_tavern_common['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_tavern_common['vx_value'] = {
       name          : "place-tavern-common",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1961,13 +1949,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_tavern_common
+      fn            : nx_tactics_decks_scene_murintrail.f_place_tavern_common
     }
 
     // (func place-tavern-dining)
-    nx_tactics_decks_scenario_murintrail.t_place_tavern_dining['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_tavern_dining['vx_value'] = {
       name          : "place-tavern-dining",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1979,13 +1967,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_tavern_dining
+      fn            : nx_tactics_decks_scene_murintrail.f_place_tavern_dining
     }
 
     // (func place-tavern-stairs)
-    nx_tactics_decks_scenario_murintrail.t_place_tavern_stairs['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_tavern_stairs['vx_value'] = {
       name          : "place-tavern-stairs",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -1997,13 +1985,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_tavern_stairs
+      fn            : nx_tactics_decks_scene_murintrail.f_place_tavern_stairs
     }
 
     // (func place-temple)
-    nx_tactics_decks_scenario_murintrail.t_place_temple['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_temple['vx_value'] = {
       name          : "place-temple",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2015,13 +2003,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_temple
+      fn            : nx_tactics_decks_scene_murintrail.f_place_temple
     }
 
     // (func place-tradingpost)
-    nx_tactics_decks_scenario_murintrail.t_place_tradingpost['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_tradingpost['vx_value'] = {
       name          : "place-tradingpost",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2033,13 +2021,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_tradingpost
+      fn            : nx_tactics_decks_scene_murintrail.f_place_tradingpost
     }
 
     // (func place-woodenhall)
-    nx_tactics_decks_scenario_murintrail.t_place_woodenhall['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_place_woodenhall['vx_value'] = {
       name          : "place-woodenhall",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2051,13 +2039,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_place_woodenhall
+      fn            : nx_tactics_decks_scene_murintrail.f_place_woodenhall
     }
 
     // (func scene-murintrail)
-    nx_tactics_decks_scenario_murintrail.t_scene_murintrail['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_scene_murintrail['vx_value'] = {
       name          : "scene-murintrail",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2069,13 +2057,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_scene_murintrail
+      fn            : nx_tactics_decks_scene_murintrail.f_scene_murintrail
     }
 
     // (func unit-bandit)
-    nx_tactics_decks_scenario_murintrail.t_unit_bandit['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_bandit['vx_value'] = {
       name          : "unit-bandit",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2087,13 +2075,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_bandit
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_bandit
     }
 
     // (func unit-bruiser)
-    nx_tactics_decks_scenario_murintrail.t_unit_bruiser['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_bruiser['vx_value'] = {
       name          : "unit-bruiser",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2105,13 +2093,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_bruiser
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_bruiser
     }
 
     // (func unit-flint)
-    nx_tactics_decks_scenario_murintrail.t_unit_flint['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_flint['vx_value'] = {
       name          : "unit-flint",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2123,13 +2111,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_flint
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_flint
     }
 
     // (func unit-goblinscout)
-    nx_tactics_decks_scenario_murintrail.t_unit_goblinscout['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_goblinscout['vx_value'] = {
       name          : "unit-goblinscout",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2141,13 +2129,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_goblinscout
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_goblinscout
     }
 
     // (func unit-guardsman)
-    nx_tactics_decks_scenario_murintrail.t_unit_guardsman['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_guardsman['vx_value'] = {
       name          : "unit-guardsman",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2159,13 +2147,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_guardsman
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_guardsman
     }
 
     // (func unit-horse)
-    nx_tactics_decks_scenario_murintrail.t_unit_horse['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_horse['vx_value'] = {
       name          : "unit-horse",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2177,13 +2165,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_horse
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_horse
     }
 
     // (func unit-jesaveer)
-    nx_tactics_decks_scenario_murintrail.t_unit_jesaveer['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_jesaveer['vx_value'] = {
       name          : "unit-jesaveer",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2195,13 +2183,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_jesaveer
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_jesaveer
     }
 
     // (func unit-jonaveer)
-    nx_tactics_decks_scenario_murintrail.t_unit_jonaveer['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_jonaveer['vx_value'] = {
       name          : "unit-jonaveer",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2213,13 +2201,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_jonaveer
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_jonaveer
     }
 
     // (func unit-liliducon)
-    nx_tactics_decks_scenario_murintrail.t_unit_liliducon['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_liliducon['vx_value'] = {
       name          : "unit-liliducon",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2231,13 +2219,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_liliducon
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_liliducon
     }
 
     // (func unit-wilddog)
-    nx_tactics_decks_scenario_murintrail.t_unit_wilddog['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_wilddog['vx_value'] = {
       name          : "unit-wilddog",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2249,13 +2237,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_wilddog
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_wilddog
     }
 
     // (func unit-wilmducon)
-    nx_tactics_decks_scenario_murintrail.t_unit_wilmducon['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_wilmducon['vx_value'] = {
       name          : "unit-wilmducon",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2267,13 +2255,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_wilmducon
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_wilmducon
     }
 
     // (func unit-woodencart)
-    nx_tactics_decks_scenario_murintrail.t_unit_woodencart['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_woodencart['vx_value'] = {
       name          : "unit-woodencart",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2285,13 +2273,13 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_woodencart
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_woodencart
     }
 
     // (func unit-xeibhanower)
-    nx_tactics_decks_scenario_murintrail.t_unit_xeibhanower['vx_value'] = {
+    nx_tactics_decks_scene_murintrail.t_unit_xeibhanower['vx_value'] = {
       name          : "unit-xeibhanower",
-      pkgname       : "nx/tactics/decks/scenario-murintrail",
+      pkgname       : "nx/tactics/decks/scene-murintrail",
       extends       : ":func",
       idx           : 0,
       allowfuncs    : [],
@@ -2303,11 +2291,11 @@ export default class nx_tactics_decks_scenario_murintrail {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_scenario_murintrail.f_unit_xeibhanower
+      fn            : nx_tactics_decks_scene_murintrail.f_unit_xeibhanower
     }
 
     // (const power-groundmovement)
-    Object.assign(nx_tactics_decks_scenario_murintrail.c_power_groundmovement, vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Ground Movement"))
+    Object.assign(nx_tactics_decks_scene_murintrail.c_power_groundmovement, vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Ground Movement"))
 
   }
 }

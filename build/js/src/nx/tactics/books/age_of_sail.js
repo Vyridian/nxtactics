@@ -8,6 +8,7 @@ export default class nx_tactics_books_age_of_sail {
 
   /**
    * @function chapter_age_of_sail_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_age_of_sail_overview = {
@@ -18,7 +19,7 @@ export default class nx_tactics_books_age_of_sail {
   }
 
   // (func chapter_age_of_sail_overview)
-  static f_chapter_age_of_sail_overview() {
+  static f_chapter_age_of_sail_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -28,7 +29,7 @@ export default class nx_tactics_books_age_of_sail {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
         "Why Tactics: Age of Sail?",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Age of Sail?", ":reference", "http://www.thepirateking.com/historical/cannon_projectiles.htm", ":summary", "The Age of Sail was the period in which international trade and naval warfare were dominated by sailing ships,\nlasting from the 16th to the mid 19th century.  This is a significant period during which square-rigged sailing\nships carried European settlers to many parts of the world in one of the most expansive human migrations in\nrecorded history."),
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Age of Sail?", ":reference", "http://www.thepirateking.com/historical/cannon_projectiles.htm", ":summary", "The Age of Sail was the period in which international trade and naval warfare were dominated by sailing ships, lasting from the 16th to the mid 19th century. This is a significant period during which square-rigged sailing ships carried European settlers to many parts of the world in one of the most expansive human migrations in recorded history."),
         "Age of Sail Land Warfare",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Sail Land Warfare", ":summary", "* Infantry\n* Cavalry\n* Muskets\n* Cannons\n* Artillery\n* High Ground"),
         "Age of Sail Naval Warfare",
@@ -40,6 +41,7 @@ export default class nx_tactics_books_age_of_sail {
 
   /**
    * @function chapter_age_of_sail_weaponry
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_age_of_sail_weaponry = {
@@ -50,7 +52,7 @@ export default class nx_tactics_books_age_of_sail {
   }
 
   // (func chapter_age_of_sail_weaponry)
-  static f_chapter_age_of_sail_weaponry() {
+  static f_chapter_age_of_sail_weaponry(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -68,7 +70,7 @@ export default class nx_tactics_books_age_of_sail {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
             "20mm Dragon",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "20mm Dragon", ":reference", "The blunderbuss, and especially the shorter dragon, was typically issued to troops such as cavalry, who needed a\nlightweight, easily handled firearm.  The dragon became so associated with cavalry and mounted infantry that the\nterm dragoon became synonymous with mounted infantry.", ":summary", "* A short, muzzle-loading, flintlock, hand shotgun", ":muzzlevelocity", "225m/s")
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "20mm Dragon", ":reference", "The blunderbuss, and especially the shorter dragon, was typically issued to troops such as cavalry, who needed a lightweight, easily handled firearm. The dragon became so associated with cavalry and mounted infantry that the term dragoon became synonymous with mounted infantry.", ":summary", "* A short, muzzle-loading, flintlock, hand shotgun", ":muzzlevelocity", "225m/s")
           )
         ),
         "Age of Sail Rifles",
@@ -82,9 +84,9 @@ export default class nx_tactics_books_age_of_sail {
             "12mm Carbine",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "12mm Carbine", ":summary", "Short musket\n# Effective Range 60m\n# Muskets could regularly penetrate Plate Armor", ":muzzlevelocity", "438m/s"),
             "18mm Musket",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "18mm Musket", ":reference", "The Brown Bess was used in the era of the expansion of the British Empire.  It was used for a hundred years with\nincremental changes in its design.", ":summary", "# Effective Range 60m\n# Muskets could regularly penetrate Plate Armor", ":titles", "Brown Bess", ":muzzlevelocity", "320m/s"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "18mm Musket", ":reference", "The Brown Bess was used in the era of the expansion of the British Empire. It was used for a hundred years with incremental changes in its design.", ":summary", "# Effective Range 60m # Muskets could regularly penetrate Plate Armor", ":titles", "Brown Bess", ":muzzlevelocity", "320m/s"),
             "20mm Blunderbuss",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "20mm Blunderbuss", ":reference", "A blunderbuss is a muzzle-loading firearm with a flared, trumpet-like barrel and is the predecessor to the\nshotgun.  Most of these weapons are mid-sized, being smaller than most shoulder-fired arms, but larger than a\npistol.  The muzzle was flared not to increase the spread of the shot, but rather to funnel powder and shot into\nthe weapon, making it easier to reload on horseback or on a moving carriage.", ":muzzlevelocity", "225m/s")
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "20mm Blunderbuss", ":reference", "A blunderbuss is a muzzle-loading firearm with a flared, trumpet-like barrel and is the predecessor to the shotgun. Most of these weapons are mid-sized, being smaller than most shoulder-fired arms, but larger than a pistol. The muzzle was flared not to increase the spread of the shot, but rather to funnel powder and shot into the weapon, making it easier to reload on horseback or on a moving carriage.", ":muzzlevelocity", "225m/s")
           )
         ),
         "Age of Sail Cannons",
@@ -114,6 +116,7 @@ export default class nx_tactics_books_age_of_sail {
 
   /**
    * @function chapter_american_revolution
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_american_revolution = {
@@ -124,7 +127,7 @@ export default class nx_tactics_books_age_of_sail {
   }
 
   // (func chapter_american_revolution)
-  static f_chapter_american_revolution() {
+  static f_chapter_american_revolution(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -139,51 +142,7 @@ export default class nx_tactics_books_age_of_sail {
           ":name",
           "Age of Sail United States",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "American Frigate",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "American Frigate",
-              ":image",
-              "images/age-of-sail/AmericanFrigate.png",
-              ":titles",
-              "USS Constitution, Old Ironsides",
-              ":speedwater",
-              "24kph",
-              ":classification",
-              "Hvy. Naval Vessel",
-              ":mass",
-              "2200tons",
-              ":length",
-              "62m",
-              ":unitpowermap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "21 inches (530 mm/88mm RHA)", ":front", "88mm", ":back", "88mm", ":side", "88mm")
-              ),
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
-                  "Gunnery",
-                  ":summary",
-                  "30 x 24-pounder (11 kg) long gun\n20 x 32-pounder (15 kg) carronade\n2 x 24-pounder (11 kg) bow chasers",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Salvo",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Salvo")
-                  )
-                )
-              )
-            )
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "American Frigate")
         )
       )
     )
@@ -192,6 +151,7 @@ export default class nx_tactics_books_age_of_sail {
 
   /**
    * @function chapter_french_revolution
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_french_revolution = {
@@ -202,7 +162,7 @@ export default class nx_tactics_books_age_of_sail {
   }
 
   // (func chapter_french_revolution)
-  static f_chapter_french_revolution() {
+  static f_chapter_french_revolution(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "French Revolution")
     return output
@@ -210,6 +170,7 @@ export default class nx_tactics_books_age_of_sail {
 
   /**
    * @function chapter_golden_age_of_sail
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_golden_age_of_sail = {
@@ -220,7 +181,7 @@ export default class nx_tactics_books_age_of_sail {
   }
 
   // (func chapter_golden_age_of_sail)
-  static f_chapter_golden_age_of_sail() {
+  static f_chapter_golden_age_of_sail(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -229,18 +190,18 @@ export default class nx_tactics_books_age_of_sail {
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        "Age of Sail Scenarios",
+        "Age of Sail Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Age of Sail Scenarios",
-          ":scenariomap",
+          "Age of Sail Scenes",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             ":Pirates",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Pirates"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Pirates"),
             ":Swashbucklers",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Swashbucklers")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Swashbucklers")
           )
         ),
         "Age of Sail Dutch",
@@ -306,7 +267,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -332,7 +293,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -356,7 +317,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -384,7 +345,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -404,7 +365,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -521,7 +482,7 @@ export default class nx_tactics_books_age_of_sail {
               ":name",
               "French Man-O-War",
               ":reference",
-              "These ships were the heavy-guns of the fleet.  They resembled galleons in design, but had heavy fire-power.\nOnly the three major sea-powers of the time (Spain, England, and France) had many of these kind of ships.",
+              "These ships were the heavy-guns of the fleet. They resembled galleons in design, but had heavy fire-power. Only the three major sea-powers of the time (Spain, England, and France) had many of these kind of ships.",
               ":classification",
               "Hvy. Naval Vessel",
               ":mass",
@@ -530,7 +491,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -558,7 +519,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -575,7 +536,7 @@ export default class nx_tactics_books_age_of_sail {
           ":name",
           "Pirates",
           ":summary",
-          "The era of piracy in the Caribbean Sea began in the 17th century and died out in\nthe 1720s after the navies of the nations of Western Europe with colonies in the\nCaribbean began combating pirates.",
+          "The era of piracy in the Caribbean Sea began in the 17th century and died out in the 1720s after the navies of the nations of Western Europe with colonies in the Caribbean began combating pirates.",
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
@@ -630,7 +591,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -647,7 +608,7 @@ export default class nx_tactics_books_age_of_sail {
               ":image",
               "images/age-of-sail/PirateSchooner.png",
               ":reference",
-              "The Schooner has a narrow hull, two masts and is less than 100 tons.  She is generally rigged with two large\nsails.  She had a shallow draft which allowed her to remain in shallow coves waiting for her prey.  The\nSchooner is very fast and large enough to carry a plentiful crew.  It was a favorite among both pirates and\nsmugglers.",
+              "The Schooner has a narrow hull, two masts and is less than 100 tons. She is generally rigged with two large sails. She had a shallow draft which allowed her to remain in shallow coves waiting for her prey. The Schooner is very fast and large enough to carry a plentiful crew. It was a favorite among both pirates and smugglers.",
               ":classification",
               "Med. Naval Vessel",
               ":mass",
@@ -660,7 +621,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -675,7 +636,7 @@ export default class nx_tactics_books_age_of_sail {
               ":name",
               "Pirate Sloop",
               ":reference",
-              "The Sloop was fast, agile, and had a shallow draft.\nToday's sailing Yacht is essentially a sloop.",
+              "The Sloop was fast, agile, and had a shallow draft. Today's sailing Yacht is essentially a sloop.",
               ":classification",
               "Lt. Naval Vessel",
               ":mass",
@@ -684,7 +645,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -699,12 +660,12 @@ export default class nx_tactics_books_age_of_sail {
               ":name",
               "Pirate Brigantine",
               ":reference",
-              "The brigantine was a small ship carrying both sails and oars.  It was a favorite of Mediterranean pirates\nfrom whence it got its name Brigantine meaning Brigand Ship.  Later the ship referred to a two-masted sailing\nship with much greater sailing power.",
+              "The brigantine was a small ship carrying both sails and oars. It was a favorite of Mediterranean pirates from whence it got its name Brigantine meaning Brigand Ship. Later the ship referred to a two-masted sailing ship with much greater sailing power.",
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -729,7 +690,7 @@ export default class nx_tactics_books_age_of_sail {
               ":name",
               "Portuguese Caravel",
               ":reference",
-              "The Nina was actually named the Santa Clara.  Nina was a pun on its owner's name: Juan Nino.",
+              "The Nina was actually named the Santa Clara. Nina was a pun on its owner's name: Juan Nino.",
               ":titles",
               "Nina, Pinta",
               ":speedwater",
@@ -748,7 +709,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -780,7 +741,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -826,7 +787,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "7 inches (180 mm/30mm RHA)", ":front", "30mm", ":back", "30mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -843,14 +804,14 @@ export default class nx_tactics_books_age_of_sail {
               ":image",
               "images/age-of-sail/SpanishGalleon.png",
               ":reference",
-              "Large ships meant for transporting cargo.  The Spanish treasure fleets were made of these ships.  Although\nthey were sluggish, they weren't the easy target you would expect for they could carry heavy cannon which\nmade attacking them difficult.  They had two to three decks.  Most had three masts.  Some galleons sported 4\nmasts but these were an exception to the rule.",
+              "Large ships meant for transporting cargo. The Spanish treasure fleets were made of these ships. Although they were sluggish, they weren't the easy target you would expect for they could carry heavy cannon which made attacking them difficult. They had two to three decks.  Most had three masts. Some galleons sported 4 masts but these were an exception to the rule.",
               ":classification",
               "Hvy. Naval Vessel",
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               )
             ),
             "Spanish Man-O-War",
@@ -868,7 +829,7 @@ export default class nx_tactics_books_age_of_sail {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "14 inches (360 mm/60mm RHA)", ":front", "60mm", ":back", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -908,6 +869,7 @@ export default class nx_tactics_books_age_of_sail {
 
   /**
    * @function chapter_renaissance
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_renaissance = {
@@ -918,7 +880,7 @@ export default class nx_tactics_books_age_of_sail {
   }
 
   // (func chapter_renaissance)
-  static f_chapter_renaissance() {
+  static f_chapter_renaissance(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Renaissance")
     return output
@@ -926,6 +888,7 @@ export default class nx_tactics_books_age_of_sail {
 
   /**
    * @function chapter_tokugawa_shogunate
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_tokugawa_shogunate = {
@@ -936,7 +899,7 @@ export default class nx_tactics_books_age_of_sail {
   }
 
   // (func chapter_tokugawa_shogunate)
-  static f_chapter_tokugawa_shogunate() {
+  static f_chapter_tokugawa_shogunate(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -954,25 +917,25 @@ export default class nx_tactics_books_age_of_sail {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_placemap},
             "Tokugawa Town",
-            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tokugawa Town", ":summary", "* The Daimyo chose to place his castle near a moderately-sized villiage.  He wanted the advantage of a town\nwithout having more people than could be kept track of.  The Daimyo's presense has brought an influx of trade, and\nthe town is surprisingly wealthy.\n* There is a cooper, a brewer, a courtesan house, an inn, a silk-maker, a woodworker, 2 woodcutters, 15 merchants,\n20 fishermen, over 100 farmers, and about 15 vagrants.\n* There are 2 police officers and many of the townspeople are in the reserve.\n* In addition, the Daimyo personally supports 25 samurai, a swordsmith, an armorer, a fletcher, 2 carpenters, 2\nadvisors, a scupltor, a jeweler, 2 fine weavers, 2 painters, 2 scribes, and a mistress."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tokugawa Town", ":summary", "* The Daimyo chose to place his castle near a moderately-sized villiage.  He wanted the advantage of a town without having more people than could be kept track of.  The Daimyo's presense has brought an influx of trade, and the town is surprisingly wealthy.\n* There is a cooper, a brewer, a courtesan house, an inn, a silk-maker, a woodworker, 2 woodcutters, 15 merchants, 20 fishermen, over 100 farmers, and about 15 vagrants.\n* There are 2 police officers and many of the townspeople are in the reserve.\n* In addition, the Daimyo personally supports 25 samurai, a swordsmith, an armorer, a fletcher, 2 carpenters, 2 advisors, a scupltor, a jeweler, 2 fine weavers, 2 painters, 2 scribes, and a mistress."),
             "Buddhist Temple",
-            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Buddhist Temple", ":summary", "* A temple was established in the area long before the Daimyo located himself in the area.  The temple remains a\nsignificant political power, and with their Sohei and Budoka, they could be more than an annoyance to the Daimyo.\n* Besides the master, there are 4 senior priests (Gakusho) and 20 monks (12 Gakusho and 8 Budoka).  There are also\n5 Sohei that act as guards and trainers.  The temple is supported by donations and tithes.\n* Martial training is only allowed as it pertains to self-awareness.  Fighting people is a sin unless in the\nprotection of others.  Training has been a point of contention with the Daimyo, but the issue has died down.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Buddhist Temple", ":summary", "* A temple was established in the area long before the Daimyo located himself in the area.  The temple remains a significant political power, and with their Sohei and Budoka, they could be more than an annoyance to the Daimyo.\n* Besides the master, there are 4 senior priests (Gakusho) and 20 monks (12 Gakusho and 8 Budoka). There are also 5 Sohei that act as guards and trainers. The temple is supported by donations and tithes.\n* Martial training is only allowed as it pertains to self-awareness. Fighting people is a sin unless in the protection of others. Training has been a point of contention with the Daimyo, but the issue has died down.")
           ),
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
             ":Daimyo",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Daimyo", ":summary", "* A gruff, no nonsense samurai.  He craved the power and pretige of this position, but now finds that life as a\nDaimyo is sheltered and dull.\n* He is convinced that there is a plot to take his life, though there is no evidence to support this.  He seems to\nenjoy the challenge of defending himself against this threat.  He does fear dying dishonorably.  For this reason,\nhe has his food rigorously tested and his bedchambers inordinately guarded.  He tries to leave himself more open to\na direct attack, so he is often poorly guarded when he is armed.\n* The Daimyo feels intellectually challenged by both the Temple Master and the Castellan.  He has become\nincreasingly interested in these mind games, and a good challenge is a sure way to the Daimyo's good favor.", ":titles", "Kenji Ginichi"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Daimyo", ":summary", "* A gruff, no nonsense samurai.  He craved the power and pretige of this position, but now finds that life as a Daimyo is sheltered and dull.\n* He is convinced that there is a plot to take his life, though there is no evidence to support this. He seems to enjoy the challenge of defending himself against this threat. He does fear dying dishonorably. For this reason, he has his food rigorously tested and his bedchambers inordinately guarded. He tries to leave himself more open to a direct attack, so he is often poorly guarded when he is armed.\n* The Daimyo feels intellectually challenged by both the Temple Master and the Castellan. He has become increasingly interested in these mind games, and a good challenge is a sure way to the Daimyo's good favor.", ":titles", "Kenji Ginichi"),
             "Daimyo's Wife",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Daimyo's Wife", ":summary", "* Efficient, beautiful, and totally unimportant.  The Daimyo is not interested in her at all.  She is only a baby\nmachine to him (and not a very good one).  She does not aspire to higher station and is quite content with her\ncircle of friends from the villiage who visit often."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Daimyo's Wife", ":summary", "* Efficient, beautiful, and totally unimportant. The Daimyo is not interested in her at all.  She is only a baby machine to him (and not a very good one). She does not aspire to higher station and is quite content with her circle of friends from the villiage who visit often."),
             "Daimyo's Son",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Daimyo's Son", ":summary", "* A bored an somewhat obnoxious teenager.  He revels in the past exploits of his illustrious father and is horrified\nby the inactive positon he is in now (a feeling shared by the Daimyo).  The idea of being a Daimyo (or a court\nsamural makes him ill.  He wants to be an adventurer or a a ronin.  He has studied with the samurai and budoka, but\nhe lacks incentive and discipline.  His most accomplished skill is distracting his guards so he can slip away."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Daimyo's Son", ":summary", "* A bored an somewhat obnoxious teenager. He revels in the past exploits of his illustrious father and is horrified by the inactive positon he is in now (a feeling shared by the Daimyo). The idea of being a Daimyo (or a court samural makes him ill. He wants to be an adventurer or a a ronin. He has studied with the samurai and budoka, but he lacks incentive and discipline.  His most accomplished skill is distracting his guards so he can slip away."),
             ":Castellan",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Castellan", ":summary", "* A classic samurai, dedicated and loyal.  His main duties are to keep the province running, but more importantly he\nmust protect the Daimyo and his family.  This last task has proven very difficult.  The Daimyo and his son have\nproven very difficult to defend.  The Daimyo constantly reduces his guards, and his son tries to escape them.  The\ncastellan may not disobey the Daimyo, but he has prepared a long list of ways to manipulate the Daimyo into safer\ncourses of action.  When unable to control the Daimyo, he will send troops 'on patrol' in the Daimyo's area.  He\nwill delay or harry the Daimyo to make his movements less predictable.  The Daimyo is aware of these machinations\nand enjoys outsmarting the castellan wherever possible.  So far, the castellan is easily winning this battle of\nwits."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Castellan", ":summary", "* A classic samurai, dedicated and loyal.  His main duties are to keep the province running, but more importantly he must protect the Daimyo and his family. This last task has proven very difficult. The Daimyo and his son have proven very difficult to defend. The Daimyo constantly reduces his guards, and his son tries to escape them. The castellan may not disobey the Daimyo, but he has prepared a long list of ways to manipulate the Daimyo into safer courses of action. When unable to control the Daimyo, he will send troops 'on patrol' in the Daimyo's area. He will delay or harry the Daimyo to make his movements less predictable. The Daimyo is aware of these machinations and enjoys outsmarting the castellan wherever possible. So far, the castellan is easily winning this battle of wits."),
             "Temple Master",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Temple Master", ":summary", "* The temple master is a man of great diplomatic skill, and the Daimyo has found himself outmatched in all but\nmilitary issues.  The Daimyo often does not grant the master an audience until he has brushed up on the matter at\nhand."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Temple Master", ":summary", "* The temple master is a man of great diplomatic skill, and the Daimyo has found himself outmatched in all but military issues. The Daimyo often does not grant the master an audience until he has brushed up on the matter at hand."),
             ":Oyabun",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Oyabun", ":summary", "* The head of the local Yakuza sees that the Daimyo is acting rather recklessly and is plotting an elaborate and\nsubtle scheme to take advantage of the situation.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Oyabun", ":summary", "* The head of the local Yakuza sees that the Daimyo is acting rather recklessly and is plotting an elaborate and subtle scheme to take advantage of the situation.")
           )
         ),
         "Age of Sail Japan",
@@ -1023,19 +986,19 @@ export default class nx_tactics_books_age_of_sail {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_chaptermap},
         "Age of Sail Overview",
-        nx_tactics_books_age_of_sail.f_chapter_age_of_sail_overview(),
+        nx_tactics_books_age_of_sail.f_chapter_age_of_sail_overview(tactics),
         "Age of Sail Weaponry",
-        nx_tactics_books_age_of_sail.f_chapter_age_of_sail_weaponry(),
+        nx_tactics_books_age_of_sail.f_chapter_age_of_sail_weaponry(tactics),
         "Renaissance",
-        nx_tactics_books_age_of_sail.f_chapter_renaissance(),
+        nx_tactics_books_age_of_sail.f_chapter_renaissance(tactics),
         "Golden Age of Sail",
-        nx_tactics_books_age_of_sail.f_chapter_golden_age_of_sail(),
+        nx_tactics_books_age_of_sail.f_chapter_golden_age_of_sail(tactics),
         "American Revolution",
-        nx_tactics_books_age_of_sail.f_chapter_american_revolution(),
+        nx_tactics_books_age_of_sail.f_chapter_american_revolution(tactics),
         "French Revolution",
-        nx_tactics_books_age_of_sail.f_chapter_french_revolution(),
+        nx_tactics_books_age_of_sail.f_chapter_french_revolution(tactics),
         "Tokugawa Shogunate",
-        nx_tactics_books_age_of_sail.f_chapter_tokugawa_shogunate()
+        nx_tactics_books_age_of_sail.f_chapter_tokugawa_shogunate(tactics)
       )
     )
     return output

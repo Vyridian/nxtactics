@@ -215,16 +215,16 @@ Known as 'The Gun that Won the West' for its immense popularity at that time."
   :name "Civil War"
   :sectionmap
    (sectionmap
-    "Civil War Scenarios"
+    "Civil War Scenes"
      (section
-      :name "Civil War Scenarios"
-      :scenariomap
-       (scenariomap
+      :name "Civil War Scenes"
+      :scenemap
+       (scenemap
         "Civil War Battle"
-         (scenario
+         (scene
           :name "Civil War Battle")
         :Ironclads
-         (scenario
+         (scene
           :name "Ironclads"
           :summary
            "The first battle between ironclads happened on 9 March 1862, as the armored Monitor was deployed to protect the
@@ -273,7 +273,7 @@ them easily.")))
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :summary "100mm iron over 610mm of wood (102mm RHA)"
               :front "200mm"
               :back "200mm"
@@ -329,7 +329,7 @@ them easily.")))
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :summary "200mm iron turret, 25mm deck, 125mm hull belt"
               :front "200mm"
               :back "200mm"
@@ -374,13 +374,13 @@ them easily.")))
   :name "Wild West"
   :sectionmap
    (sectionmap
-    "Western Scenarios"
+    "Western Scenes"
      (section
-      :name "Western Scenarios"
-      :scenariomap
-       (scenariomap
+      :name "Western Scenes"
+      :scenemap
+       (scenemap
         "Western Gunfight"
-         (scenario
+         (scene
           :name "Western Gunfight"
           :summary
            "Setup

@@ -7,8 +7,8 @@ import nx_tactics_decks_data from "../../../nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../nx/tactics/decks/disorder.js"
 import nx_tactics_decks_restraint from "../../../nx/tactics/decks/restraint.js"
 import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
-import nx_tactics_decks_scenario_murintrail from "../../../nx/tactics/decks/scenario-murintrail.js"
-import nx_tactics_decks_scenario_nightonthetown from "../../../nx/tactics/decks/scenario-nightonthetown.js"
+import nx_tactics_decks_scene_murintrail from "../../../nx/tactics/decks/scene-murintrail.js"
+import nx_tactics_decks_scene_nightonthetown from "../../../nx/tactics/decks/scene-nightonthetown.js"
 import nx_tactics_decks_starter from "../../../nx/tactics/decks/starter.js"
 import nx_tactics_decks_tarot from "../../../nx/tactics/decks/tarot.js"
 import nx_tactics_decks_trauma from "../../../nx/tactics/decks/trauma.js"
@@ -96,7 +96,7 @@ export default class nx_tactics_decks_deck {
               nx_tactics_decks_deck.f_deck_books(),
               nx_tactics_decks_rule.f_deck_rules(),
               nx_tactics_decks_deck.f_deck_setup(),
-              nx_tactics_decks_deck.f_deck_scenarios(tactics),
+              nx_tactics_decks_deck.f_deck_scenes(tactics),
               nx_tactics_decks_deck.f_deck_encounters(),
               nx_tactics_decks_deck.f_deck_places(),
               nx_tactics_decks_deck.f_deck_units(),
@@ -205,30 +205,30 @@ export default class nx_tactics_decks_deck {
   }
 
   /**
-   * @function deck_scenarios
+   * @function deck_scenes
    * @param  {tactics} tactics
    * @return {deck}
    */
-  static t_deck_scenarios = {
+  static t_deck_scenes = {
     vx_type: vx_core.t_type
   }
-  static e_deck_scenarios = {
-    vx_type: nx_tactics_decks_deck.t_deck_scenarios
+  static e_deck_scenes = {
+    vx_type: nx_tactics_decks_deck.t_deck_scenes
   }
 
-  // (func deck-scenarios)
-  static f_deck_scenarios(tactics) {
+  // (func deck-scenes)
+  static f_deck_scenes(tactics) {
     let output = nx_tactics_base.e_deck
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
       ":name",
-      "Scenarios",
+      "Scenes",
       ":cardmap",
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_cardlist},
-          nx_tactics_decks_scenario_murintrail.f_deck_murintrail(tactics),
-          nx_tactics_decks_scenario_nightonthetown.f_deck_nightonthetown(tactics)
+          nx_tactics_decks_scene_murintrail.f_deck_murintrail(tactics),
+          nx_tactics_decks_scene_nightonthetown.f_deck_nightonthetown(tactics)
         )
       )
     )
@@ -357,7 +357,7 @@ export default class nx_tactics_decks_deck {
       "deck-items": nx_tactics_decks_deck.e_deck_items,
       "deck-places": nx_tactics_decks_deck.e_deck_places,
       "deck-powers": nx_tactics_decks_deck.e_deck_powers,
-      "deck-scenarios": nx_tactics_decks_deck.e_deck_scenarios,
+      "deck-scenes": nx_tactics_decks_deck.e_deck_scenes,
       "deck-setup": nx_tactics_decks_deck.e_deck_setup,
       "deck-skills": nx_tactics_decks_deck.e_deck_skills,
       "deck-units": nx_tactics_decks_deck.e_deck_units
@@ -369,7 +369,7 @@ export default class nx_tactics_decks_deck {
       "deck-items": nx_tactics_decks_deck.t_deck_items,
       "deck-places": nx_tactics_decks_deck.t_deck_places,
       "deck-powers": nx_tactics_decks_deck.t_deck_powers,
-      "deck-scenarios": nx_tactics_decks_deck.t_deck_scenarios,
+      "deck-scenes": nx_tactics_decks_deck.t_deck_scenes,
       "deck-setup": nx_tactics_decks_deck.t_deck_setup,
       "deck-skills": nx_tactics_decks_deck.t_deck_skills,
       "deck-units": nx_tactics_decks_deck.t_deck_units
@@ -494,9 +494,9 @@ export default class nx_tactics_decks_deck {
       fn            : nx_tactics_decks_deck.f_deck_powers
     }
 
-    // (func deck-scenarios)
-    nx_tactics_decks_deck.t_deck_scenarios['vx_value'] = {
-      name          : "deck-scenarios",
+    // (func deck-scenes)
+    nx_tactics_decks_deck.t_deck_scenes['vx_value'] = {
+      name          : "deck-scenes",
       pkgname       : "nx/tactics/decks/deck",
       extends       : ":func",
       idx           : 0,
@@ -509,7 +509,7 @@ export default class nx_tactics_decks_deck {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_decks_deck.f_deck_scenarios
+      fn            : nx_tactics_decks_deck.f_deck_scenes
     }
 
     // (func deck-setup)

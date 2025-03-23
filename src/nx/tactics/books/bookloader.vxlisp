@@ -1245,11 +1245,11 @@
    rule<-rule-xmlchild))
  :doc "Returns a rule from a given xml.")
 
-(func scenario<-scenario-key-value : base/scenario
- [current : base/scenario
+(func scene<-scene-key-value : base/scene
+ [current : base/scene
   key     : string
   value   : string]
- (switch : base/scenario
+ (switch : base/scene
   key
   (case "" current)
   (case
@@ -1263,87 +1263,87 @@
     (msg<-error
      :invalidproperty
      (anymap
-      :type  base/scenario
+      :type  base/scene
       :prop  key
       :value value)))))
- :doc "Returns a modified scenario from a key value.")
+ :doc "Returns a modified scene from a key value.")
 
-(func scenario<-scenario-stringmap : base/scenario
- [scenario : base/scenario
+(func scene<-scene-stringmap : base/scene
+ [scene : base/scene
   propmap  : stringmap]
- (any<-map-start-reduce : base/scenario
+ (any<-map-start-reduce : base/scene
   propmap
-  scenario
-  scenario<-scenario-key-value)
- :doc "Returns a scenario from a propmap.")
+  scene
+  scene<-scene-key-value)
+ :doc "Returns a scene from a propmap.")
 
-(func scenario<-scenario-xmlchild : base/scenario
- [scenario : base/scenario
+(func scene<-scene-xmlchild : base/scene
+ [scene : base/scene
   child    : xml/xml]
- (let : base/scenario
+ (let : base/scene
   [tag : string := (:tag child)]
-  (switch : base/scenario
+  (switch : base/scene
    tag
-   (case "" scenario)
+   (case "" scene)
    (case
     (list
      "reference"
      "summary"
      "titles")
-    (copy scenario
+    (copy scene
      tag
      (xml/string-first<-xml
       child)))
    (case "team"
-    (scenario<-scenario-xmlteam
-     scenario
+    (scene<-scene-xmlteam
+     scene
      child))
    (else
-    (copy scenario
+    (copy scene
      (msg<-error
       :invalidtagfound
       (anymap
-       :type base/scenario
+       :type base/scene
        :tag tag))))))
- :doc "Returns a modified scenario based on a given child Xml.")
+ :doc "Returns a modified scene based on a given child Xml.")
 
-(func scenario<-scenario-xmlteam : base/scenario
- [scenario : base/scenario
+(func scene<-scene-xmlteam : base/scene
+ [scene : base/scene
   xmlteam  : xml/xml]
- (let : base/scenario
+ (let : base/scene
   [current : base/team :=
     (team<-xml
      xmlteam)
    name : string := (:name current)
-   origmap : base/teammap := (:teammap scenario)
+   origmap : base/teammap := (:teammap scene)
    chgmap  : base/teammap :=
     (copy origmap
      name current)]
-  (copy scenario
+  (copy scene
    :teammap chgmap))
- :doc "Return a scenario with new team added to teammap")
+ :doc "Return a scene with new team added to teammap")
 
-(func scenario<-xml : base/scenario
+(func scene<-xml : base/scene
  [xml : xml/xml]
- (let : base/scenario
+ (let : base/scene
   [propmap : stringmap := (:propmap xml)
-   scenario : base/scenario :=
-    (scenario<-scenario-stringmap
-     (empty base/scenario)
+   scene : base/scene :=
+    (scene<-scene-stringmap
+     (empty base/scene)
      propmap)]
-  (any<-list-start-reduce : base/scenario
+  (any<-list-start-reduce : base/scene
    (:children xml)
-   scenario
-   scenario<-scenario-xmlchild))
+   scene
+   scene<-scene-xmlchild))
  :test (test
-        (base/scenario
+        (base/scene
          :name "name"
          :image "image"
          :titles "titles"
          :reference "reference")
-        (scenario<-xml
+        (scene<-xml
          (xml/xml
-          :tag "scenario"
+          :tag "scene"
           :propmap
            (stringmap
             :name "name"
@@ -1362,7 +1362,7 @@
               (xml/xmllist
                (xml/xml
                 :text "reference")))))))
- :doc "Returns a scenario from a given xml.")
+ :doc "Returns a scene from a given xml.")
 
 (func section<-section-key-value : base/section
  [current : base/section
@@ -1437,8 +1437,8 @@
     (section<-section-xmlrule
      section
      child))
-   (case "scenario"
-    (section<-section-xmlscenario
+   (case "scene"
+    (section<-section-xmlscene
      section
      child))
    (case "section"
@@ -1562,21 +1562,21 @@
    :rulemap chgmap))
  :doc "Return a section with new rule added to rulemap")
 
-(func section<-section-xmlscenario : base/section
+(func section<-section-xmlscene : base/section
  [section     : base/section
-  xmlscenario : xml/xml]
+  xmlscene : xml/xml]
  (let : base/section
-  [scenario : base/scenario :=
-    (scenario<-xml
-     xmlscenario)
-   name : string := (:name scenario)
-   origmap : base/scenariomap := (:scenariomap section)
-   chgmap  : base/scenariomap :=
+  [scene : base/scene :=
+    (scene<-xml
+     xmlscene)
+   name : string := (:name scene)
+   origmap : base/scenemap := (:scenemap section)
+   chgmap  : base/scenemap :=
     (copy origmap
-     name scenario)]
+     name scene)]
   (copy section
-   :scenariomap chgmap))
- :doc "Return a section with new scenario added to scenariomap")
+   :scenemap chgmap))
+ :doc "Return a section with new scene added to scenemap")
 
 (func section<-section-xmlsection : base/section
  [section    : base/section
@@ -1667,11 +1667,11 @@
            :power1
             (base/power
              :name "power1"))
-         :scenariomap
-          (base/scenariomap
-           :scenario1
-            (base/scenario
-             :name "scenario1"))
+         :scenemap
+          (base/scenemap
+           :scene1
+            (base/scene
+             :name "scene1"))
          :sectionmap
           (base/sectionmap
            :section1
@@ -1709,10 +1709,10 @@
               (stringmap
                :name "power1"))
             (xml/xml
-             :tag "scenario"
+             :tag "scene"
              :propmap
               (stringmap
-               :name "scenario1"))
+               :name "scene1"))
             (xml/xml
              :tag "section"
              :propmap

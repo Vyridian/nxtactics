@@ -6,10 +6,19 @@
  [tactics : base/tactics]
  (base/abilitymap<-abilitylist
   (base/ability
+   :name "Ablative Armor"
+   :summary
+    "* Armor that vaporizes when hit decreasing damage but also damaging the armor.
+     * Ignore the first point of [Damage] and reduce [Armor] (on that facing) instead.")
+  (base/ability
    :name "Ambush"
    :summary
     "* [Action]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.
      * [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak.")
+  (base/ability
+   :name "Auto Med System"
+   :summary
+    "* Detects severe damage to the wearer and automatically takes action to reduce shock and maintain suit integrity (sealing leaks or amputating if necessary).")
   (base/ability
    :name "Backstab"
    :summary
@@ -25,11 +34,38 @@
     "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
      * [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
   (base/ability
+   :name "Blinding Spit")
+  (base/ability
+   :name "Blinding Toxin")
+  (base/ability
+   :name "Body Flares"
+   :summary
+    "* Detects and distracts heat seaking missiles,
+     * [Passive] - +1 Defense vs. Heat-Seaking Missiles (3 uses)")
+  (base/ability
    :name "Bug Hunt"
    :reference
     "* H:Is this going to be a stand-up fight, sir? Is it going to be another bug hunt? G:A Xenomorph may be involved... H:It's a bug hunt. - Hudson and Gorman, Aliens")
   (base/ability
    :name "Call of the Hunt")
+  (base/ability
+   :name "Call to Arms"
+   :reference
+    "Unite. Take up arms.
+     Stand shoulder to shoulder with your brothers and sisters.
+     And break free from the cold shackles of oppression.
+
+     Liberty for all is more noble than the preservation of one's soul.
+     Destiny and valor will meet at the end of the sword.
+     And the tales of heroic sacrifice will be the legend of a new age.
+
+     There will be no respite.
+     There will be no surrender.
+     Only glory and honor.
+     The price will be high for the greatest prize of all.
+     Stand and be counted among those that dared.
+     Those who dared to fight for their freedom. - Glass Fleet"
+   :summary "Gather a war party from the populace")
   (base/ability
    :name "Camouflage"
    :summary
@@ -38,9 +74,25 @@
      * [Roll]: Skill - Move this turn.
      * [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
   (base/ability
+   :name "Chain of Command"
+   :summary
+    "* [Action]: [Activate] up to [Command] units directly or indirectly adjacent to this unit. These units (including this one) may spend [Speed] or [Actions] in any order this [Turn].
+     * [Interrupt]: May not be used as an Interrupt.")
+  (base/ability
    :name "Cloak and Dagger"
    :summary
     "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
+  (base/ability
+   :name "Cold Resistant"
+   :summary "* [Passive] - Armor:+1 vs. Cold")
+  (base/ability
+   :name "Corrosion Resistant"
+   :summary
+    "* [Passive] - Armor:+1 vs. Corrosive Agents")
+  (base/ability
+   :name "Cryo Sleep System"
+   :summary
+    "* Can freeze the wearer into cryo-sleep and armor runs on minimal power to preserve the wearer from hostile environments or critical wounds for up to a month before power gives out.")
   (base/ability
    :name "Cull the Herd")
   (base/ability
@@ -68,16 +120,44 @@
    :summary
     "Heal Trauma by exploring the Dream World.")
   (base/ability
+   :name "Electrical Resistant"
+   :summary "* [Passive] - Armor:+1 vs. Electricity")
+  (base/ability
+   :name "Energy Resistant"
+   :summary
+    "* [Damage]: [+2 Armor] if attack is an [Energy Weapon]
+     * Only 1 Hardened vs. ability may be taken")
+  (base/ability
+   :name "Environmental Containment"
+   :summary "* Suit is sealed against chemical and biological weapons except corrosive ones. It is also water-proof.")
+  (base/ability
+   :name "Environmental Independence"
+   :summary
+    "* Suit is sealed against most hostile environments including space. Does not include corrosive environments.
+     * Requires - [Enviromental Containment]")
+  (base/ability
    :name "Existential Riddle"
    :summary
     "Demoralize unwitting rivals by questioning their purpose in life.")
   (base/ability
    :name "Field Dressing")
   (base/ability
+   :name "Fire Resistant"
+   :summary
+    "* [Damage]: [+2 Armor] if attack produces [Fire] tokens
+     * Only 1 Hardened vs. ability may be taken")
+  (base/ability
    :name "Fishing"
    :summary
     "* Catch enough fish to eat. Similar to Foraging."
    :titles "Fisherman")
+  (base/ability
+   :name "Floation Device"
+   :summary "* An emergency floatation device.")
+  (base/ability
+   :name "Grappling Hoist"
+   :summary
+    "* A grappling dart that is fired into stone or hooked onto any uneven surface. The attached winch can then pull the wearer to the target or vis versa depending on relative weight. This can be used for climbing or towing. The darts can be recovered and reused, but they are often not recoverable. 2 replacement darts are included.")
   (base/ability
    :name "Harvest Poison")
   (base/ability
@@ -91,22 +171,75 @@
    :summary
     "* [Continuous]: Place a mark on target. Initiative:+1 vs. marked target.")
   (base/ability
+   :name "Infrared Dampener"
+   :summary
+    "* By activating this system, the armor reduces all heat signatures. Use of any system (even passive ones) will negate the stealth.
+     * [Continuous Action] - Stealth vs. Infrared Sensors")
+  (base/ability
+   :name "Irritating Toxin")
+  (base/ability
    :name "Kiss of Death")
   (base/ability
    :name "Lure"
    :reference "Everquest Pulling")
   (base/ability
+   :name "Magnetic Resistant"
+   :summary
+    "* Reduces the chance that a magnetic attachment can hold on the armor (assuming it is metallic).
+     * [Passive] - Armor:+1 vs. Magnetism")
+  (base/ability
    :name "Mental Gymnastics")
+  (base/ability
+   :name "Missile Mount"
+   :summary "* A special mount to add a missile pack on the back of the armor.")
+  (base/ability
+   :name "Paralyzing Bite")
+  (base/ability
+   :name "Paralyzing Spit")
+  (base/ability
+   :name "Paralyzing Spray")
+  (base/ability
+   :name "Paralyzing Sting")
+  (base/ability
+   :name "Pep Talk"
+   :reference
+    "* A small victory is still a victory. Good work. - Kai'sa, Runeterra")
+  (base/ability
+   :name "Pierce Resistant"
+   :summary
+    "* [Damage]: [+2 Armor] if attack is a [Projectile]
+     * Only 1 Hardened vs. ability may be taken")
+  (base/ability
+   :name "Plasma Resistant"
+   :summary
+    "* Detects and disrupts the magnetic bottle surrounding plasma rounds causing them to detonate too early.
+     * [Passive] - Armor:+1 vs. Plasma")
   (base/ability
    :name "Poison Bite"
    :summary
     "[Close Combat]: Crits are [Poisoned] instead of increasing damage.")
+  (base/ability
+   :name "Poison Blood")
+  (base/ability
+   :name "Poison Spit")
+  (base/ability
+   :name "Poison Spray")
+  (base/ability
+   :name "Poison Sting")
+  (base/ability
+   :name "Poison Touch")
   (base/ability
    :name "Poisoned Arrow")
   (base/ability
    :name "Poisoned Blade")
   (base/ability
    :name "Poisoned Dust")
+  (base/ability
+   :name "Poisonous Flesh"
+   :summary "* Poisonous if bitten")
+  (base/ability
+   :name "Poisonous Skin"
+   :summary "* Poisonous to the touch")
   (base/ability
    :name "Poisoning")
   (base/ability
@@ -124,11 +257,38 @@
   (base/ability
    :name "Prepare Poison")
   (base/ability
+   :name "Pressure Resistant"
+   :summary "* [Passive] - Armor:+1 vs. Pressure and Impact")
+  (base/ability
+   :name "Radar Dampener"
+   :summary
+    "* By activating this system, the armor reduces all radar signatures. Use of any system (even passive ones) will negate the stealth.
+     * [Continuous Action] - Stealth vs. Radar")
+  (base/ability
+   :name "Radar Jammer"
+   :summary
+    "* By activating this system, the armor emits powerful radar white noise.
+     * [Continuous Action] - [-Range] Radar sensors detection to any target within range.")
+  (base/ability
+   :name "Radiation Resistant"
+   :summary "* [Passive] - Armor:+1 vs. Radiation")
+  (base/ability
+   :name "Rally"
+   :summary
+    "[Action]: Units within Range:Skill are placed into a [Formation] they all share.")
+  (base/ability
+   :name "Reactive Armor"
+   :summary
+    "* Exterior layer of armor explodes on impact reducing damage of the first hit but reduces armor rating for all subsequent hits.
+     * [Passive] - +2 Armor vs. the first hit. -1 Armor for each subsequent hit.")
+  (base/ability
    :name "Restful Sleep"
    :summary
     "Ensure restful sleep for levelx2 hours.")
   (base/ability
    :name "Returning Throw")
+  (base/ability
+   :name "Salvo")
   (base/ability
    :name "Scouting"
    :titles "Reconnaissance")
@@ -201,9 +361,20 @@
   (base/ability
    :name "Track")
   (base/ability
+   :name "Ultraviolet Jammer"
+   :summary
+    "* By activating this system, the armor emits a powerful blinding strobe in the ultraviolet band.
+     * [Continuous Action] - [-Range] Ultraviolet sensors detection to any target within range.")
+  (base/ability
+   :name "Turret Mount"
+   :summary "* A special mount to add a turreted weapon on the back of the armor.")
+  (base/ability
    :name "Undermine"
    :summary
     "Damage walls.")
+  (base/ability
+   :name "Underwater Operation"
+   :summary "* Sealed against water and can operate underwater. Small thrusters allow slow movement underwater. Oxygen scrubbers allow extended underwater operation.")
   (base/ability
    :name "Vanish"
    :reference
@@ -213,8 +384,7 @@
   (base/ability
    :name "Without a Trace"
    :summary
-    "* Extremely difficult tor track you.")
-  )
+    "* Extremely difficult tor track you."))
  :doc "Returns the base abilitymap")
 
 (func tactics-abilitymap<-tactics : base/tactics

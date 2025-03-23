@@ -770,16 +770,16 @@ Hostage Rescue"))
         "Ping Pong Player"
          (unit
           :name "Ping Pong Player")))
-    "Modern Scenarios"
+    "Modern Scenes"
      (section
-      :name "Modern Scenarios"
-      :scenariomap
-       (scenariomap
+      :name "Modern Scenes"
+      :scenemap
+       (scenemap
         "Boxing Match"
-         (scenario
+         (scene
           :name "Boxing Match")
         "Soccer Game"
-         (scenario
+         (scene
           :name "Soccer Game"))))))
 
 (func chapter_modern_warfare : base/chapter

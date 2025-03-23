@@ -50,6 +50,51 @@ export default class nx_tactics_decks_unit {
   static f_unitmap_tactics(tactics) {
     let output = nx_tactics_base.e_unitmap
     output = nx_tactics_base.f_unitmap_from_unitlist(
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "American Frigate",
+        ":image",
+        "images/age-of-sail/AmericanFrigate.png",
+        ":titles",
+        "USS Constitution, Old Ironsides",
+        ":speedwater",
+        "24kph",
+        ":classification",
+        "Hvy. Naval Vessel",
+        ":mass",
+        "2200tons",
+        ":length",
+        "62m",
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitpower},
+            ":power",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Armored"),
+            ":summary",
+            "21 inches (530 mm/88mm RHA)",
+            ":front",
+            "88mm",
+            ":back",
+            "88mm",
+            ":side",
+            "88mm"
+          )
+        ),
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitskill},
+            ":skill",
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Gunnery"),
+            ":summary",
+            "30 x 24-pounder (11 kg) long gun\n20 x 32-pounder (15 kg) carronade\n2 x 24-pounder (11 kg) bow chasers",
+            ":unitabilitymap",
+            nx_tactics_base.f_unitabilitymap_from_tactics_keys(tactics, "Salvo")
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly: Giant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar: Giant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbear"),
@@ -99,7 +144,7 @@ export default class nx_tactics_decks_unit {
             ":intensity",
             "2x2",
             ":power",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Venomous"),
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Toxins"),
             ":abilitylist",
             nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Poison Bite")
           )

@@ -169,23 +169,23 @@ export default class nx_tactics_books_medieval {
   }
 
   /**
-   * @function chapter_medieval_scenarios
+   * @function chapter_medieval_scenes
    * @return {chapter}
    */
-  static t_chapter_medieval_scenarios = {
+  static t_chapter_medieval_scenes = {
     vx_type: vx_core.t_type
   }
-  static e_chapter_medieval_scenarios = {
-    vx_type: nx_tactics_books_medieval.t_chapter_medieval_scenarios
+  static e_chapter_medieval_scenes = {
+    vx_type: nx_tactics_books_medieval.t_chapter_medieval_scenes
   }
 
-  // (func chapter_medieval_scenarios)
-  static f_chapter_medieval_scenarios() {
+  // (func chapter_medieval_scenes)
+  static f_chapter_medieval_scenes() {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
-      "Medieval Scenarios",
+      "Medieval Scenes",
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
@@ -194,53 +194,53 @@ export default class nx_tactics_books_medieval {
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Medieval Events",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             ":Assassination",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Assassination"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Assassination"),
             "Bandit Raid",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Bandit Raid", ":reference", "Seven Samurai"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Bandit Raid", ":reference", "Seven Samurai"),
             ":Battle",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Battle"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Battle"),
             ":Ceremony",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Ceremony"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Ceremony"),
             ":Contest",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Contest"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Contest"),
             ":Courier",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Courier"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Courier"),
             ":Deserters",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Deserters"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Deserters"),
             ":Duel",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Duel"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Duel"),
             "Empty Battlefield",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Empty Battlefield"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Empty Battlefield"),
             ":Escort",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Escort"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Escort"),
             "Fist Fight",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Fist Fight"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Fist Fight"),
             ":Highwaymen",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Highwaymen"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Highwaymen"),
             ":Hunt",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Hunt"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Hunt"),
             "Noble Hunt",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Noble Hunt"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Noble Hunt"),
             "Noble Party",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Noble Party", ":reference", "Cinderella"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Noble Party", ":reference", "Cinderella"),
             "Peasant Demonstration",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Peasant Demonstration", ":summary", "* Put down or support minor uprisings."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Peasant Demonstration", ":summary", "* Put down or support minor uprisings."),
             "Peasant Discontent",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Peasant Discontent", ":summary", "* Put down or support minor uprisings."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Peasant Discontent", ":summary", "* Put down or support minor uprisings."),
             "Peasant Uprising",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Peasant Uprising", ":summary", "* Put down or support a major uprising."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Peasant Uprising", ":summary", "* Put down or support a major uprising."),
             ":Quest",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Quest"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Quest"),
             "Scouting Mission",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Scouting Mission"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Scouting Mission"),
             ":Spying",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Spying"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Spying"),
             "Visiting Dignitary",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Visiting Dignitary")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Visiting Dignitary")
           )
         )
       )
@@ -292,8 +292,8 @@ export default class nx_tactics_books_medieval {
         {"any-1": nx_tactics_base.t_chaptermap},
         "Medieval Overview",
         nx_tactics_books_medieval.f_chapter_medieval_overview(),
-        "Medieval Scenarios",
-        nx_tactics_books_medieval.f_chapter_medieval_scenarios(),
+        "Medieval Scenes",
+        nx_tactics_books_medieval.f_chapter_medieval_scenes(),
         "Medieval Items",
         nx_tactics_books_medieval.f_chapter_medieval_items(),
         "Medieval English",
@@ -321,7 +321,7 @@ export default class nx_tactics_books_medieval {
       "chapter_medieval_german": nx_tactics_books_medieval.e_chapter_medieval_german,
       "chapter_medieval_items": nx_tactics_books_medieval.e_chapter_medieval_items,
       "chapter_medieval_overview": nx_tactics_books_medieval.e_chapter_medieval_overview,
-      "chapter_medieval_scenarios": nx_tactics_books_medieval.e_chapter_medieval_scenarios,
+      "chapter_medieval_scenes": nx_tactics_books_medieval.e_chapter_medieval_scenes,
       "chapter_medieval_spanish": nx_tactics_books_medieval.e_chapter_medieval_spanish,
       "tacticsbook": nx_tactics_books_medieval.e_tacticsbook
     })
@@ -331,7 +331,7 @@ export default class nx_tactics_books_medieval {
       "chapter_medieval_german": nx_tactics_books_medieval.t_chapter_medieval_german,
       "chapter_medieval_items": nx_tactics_books_medieval.t_chapter_medieval_items,
       "chapter_medieval_overview": nx_tactics_books_medieval.t_chapter_medieval_overview,
-      "chapter_medieval_scenarios": nx_tactics_books_medieval.t_chapter_medieval_scenarios,
+      "chapter_medieval_scenes": nx_tactics_books_medieval.t_chapter_medieval_scenes,
       "chapter_medieval_spanish": nx_tactics_books_medieval.t_chapter_medieval_spanish,
       "tacticsbook": nx_tactics_books_medieval.t_tacticsbook
     })
@@ -437,9 +437,9 @@ export default class nx_tactics_books_medieval {
       fn            : nx_tactics_books_medieval.f_chapter_medieval_overview
     }
 
-    // (func chapter_medieval_scenarios)
-    nx_tactics_books_medieval.t_chapter_medieval_scenarios['vx_value'] = {
-      name          : "chapter_medieval_scenarios",
+    // (func chapter_medieval_scenes)
+    nx_tactics_books_medieval.t_chapter_medieval_scenes['vx_value'] = {
+      name          : "chapter_medieval_scenes",
       pkgname       : "nx/tactics/books/medieval",
       extends       : ":func",
       idx           : 0,
@@ -452,7 +452,7 @@ export default class nx_tactics_books_medieval {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_medieval.f_chapter_medieval_scenarios
+      fn            : nx_tactics_books_medieval.f_chapter_medieval_scenes
     }
 
     // (func chapter_medieval_spanish)

@@ -560,9 +560,9 @@ export default class nx_tactics_books_characters {
             ":Subplots",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Subplots"),
             ":Symbolism",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Symbolism", ":reference", "Sometimes a cigar isn't just a cigar... - Aberrant, RPG", ":summary", "* Symbolism can be littered through a story and can sometimes be detected subconsciously even when they are\ntoo subtle for the conscious mind.\n* Subtly is important, and it may be better if the player does not consciously realize the connections being\nmade.  If nothing else it is satisfying to the Storyteller and provides a source of additional detail.\n* One way to use symbolism is to subtly change the description of then environment to match the personality of\nthe main character in a scene.\n* Examples: Tattered newspaper, broken glass, driving rain."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Symbolism", ":reference", "Sometimes a cigar isn't just a cigar... - Aberrant, RPG", ":summary", "* Symbolism can be littered through a story and can sometimes be detected subconsciously even when they are too subtle for the conscious mind.\n* Subtly is important, and it may be better if the player does not consciously realize the connections being made. If nothing else it is satisfying to the Storyteller and provides a source of additional detail.\n* One way to use symbolism is to subtly change the description of then environment to match the personality of the main character in a scene.\n* Examples: Tattered newspaper, broken glass, driving rain."),
             "Unlikely Allies",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unlikely Allies", ":summary", "* Characters who hate each other but are forced to work together is a plot twist that can be applied to any\nscenario.  Success requires their cooperation, but they don't have to like it.\n* High drama and comedy can come from such pairings.\n* Crisis can breed intense personal bonds including close friendships and romantic attraction.  And, of course,\nsuch relationships have a tendency to turn tragic."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unlikely Allies", ":summary", "* Characters who hate each other but are forced to work together is a plot twist that can be applied to any scene. Success requires their cooperation, but they don't have to like it.\n* High drama and comedy can come from such pairings.\n* Crisis can breed intense personal bonds including close friendships and romantic attraction. And, of course, such relationships have a tendency to turn tragic."),
             "Plot Twist",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Plot Twist", ":reference", "Sixth Sense, Usual Suspects", ":summary", "* Allies can become enemies.\n* Enemies may become sympathetic.\n* Characters and situations can have hidden dimensions that can change the meaning and purpose of the characters.\n* Note that the best plot twists are subtle.")
           )
@@ -585,24 +585,24 @@ export default class nx_tactics_books_characters {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Close Encounters", ":summary", "* Close encounters require immediate action. All close encounters need not\nresult in combat. Most creatures will not fight to the death and will abandon\na fight that is not going well.\n* Encounters with others may be good, bad, or neutral. The reaction to one\nanother is partly random, but mostly based on mutual history, race, attitude,\ncaste, and courtesy. Characters who are good communicators will do better than\nothers in these circumstances. Such encounters can introduce side characters\nand move the plot forward.\n* Sample travellers: Messengers, Traders, Refugees, Criminals, Victims, Armies,\nPriests, Monsters, Entertainers, Nobles, Craftsmen, Spies, Pilgrims, Patrols,\nLocals, Scholars, Charlatans, Thieves, Bandits.")
           )
         ),
-        "Character Scenarios",
+        "Character Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Character Scenarios",
-          ":scenariomap",
+          "Character Scenes",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Personal Quest",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Personal Quest", ":summary", "* These are usually intense stories deeply rooted in the desires and emotions of the characters.\n* Revenge, atonement, love, family obligations.\n* Quests drive characters beyond the bounds of propriety and moderation.  Failed questors create some of the most\nclassic villains (e.g. Darth Vader)."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Personal Quest", ":summary", "* These are usually intense stories deeply rooted in the desires and emotions of the characters.\n* Revenge, atonement, love, family obligations.\n* Quests drive characters beyond the bounds of propriety and moderation.  Failed questors create some of the most\nclassic villains (e.g. Darth Vader)."),
             ":Missions",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Missions", ":summary", "* Missions usually begin as impersonal tasks assigned by someone else, probably to fulfill an agenda other than the\ncharacter's own.  Missions are rarely what they seem at the beginning and have a tendency to evolve into something more\npersonal.\n* Often a character's agenda becomes at odds with the mission, and he/she must make some decisions about where they\nstand.\n* Some Missions require a certain amount of detective work before or during the Mission to discover the true goals and\nmotivations behind the Mission."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Missions", ":summary", "* Missions usually begin as impersonal tasks assigned by someone else, probably to fulfill an agenda other than the\ncharacter's own.  Missions are rarely what they seem at the beginning and have a tendency to evolve into something more\npersonal.\n* Often a character's agenda becomes at odds with the mission, and he/she must make some decisions about where they\nstand.\n* Some Missions require a certain amount of detective work before or during the Mission to discover the true goals and\nmotivations behind the Mission."),
             "Damage Control Mission",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Damage Control Mission", ":summary", "* A specific form of Mission where a situation has already spun out of control and the characters are dispatched to\n'fix' the situation.\n* Damage Control missions tend to be fast-paced with a rapidly deteriorating situation."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Damage Control Mission", ":summary", "* A specific form of Mission where a situation has already spun out of control and the characters are dispatched to\n'fix' the situation.\n* Damage Control missions tend to be fast-paced with a rapidly deteriorating situation."),
             "Training Mission",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Training Mission", ":summary", "* Training scenarios can take many forms.  They can put the characters in the position of student, teacher, or both.\n* Training can appear as another sort of scenario but has been carefully staged by the teacher.  Or Training can\nspiral out of control and become a life or death struggle.\n* Training is also a convenient plot device to gather unrelated characters together."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Training Mission", ":summary", "* Training scenes can take many forms.  They can put the characters in the position of student, teacher, or both.\n* Training can appear as another sort of scene but has been carefully staged by the teacher.  Or Training can\nspiral out of control and become a life or death struggle.\n* Training is also a convenient plot device to gather unrelated characters together."),
             "Disaster Mission",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Disaster Mission", ":summary", "* Sometimes bad things just happen.  Suddenly, the characters are torn from their comfort zone and thrust into a new\nperspective.  Disasters can be sever enough to create temporary alliances among enemies.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Disaster Mission", ":summary", "* Sometimes bad things just happen.  Suddenly, the characters are torn from their comfort zone and thrust into a new\nperspective.  Disasters can be sever enough to create temporary alliances among enemies.")
           )
         )
       )

@@ -209,8 +209,8 @@ export default class nx_tactics_books_core_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Player"),
             ":Rule",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rule"),
-            ":Scenario",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scenario"),
+            ":scene",
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "scene"),
             ":Space",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Space"),
             ":Team",
@@ -342,59 +342,59 @@ export default class nx_tactics_books_core_rules {
         "Why Tactics: Core Rules?",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Core Rules?", ":summary", "* Tactics is a tactical combat system designed to be played as a board game, a tactical combat game, or as a replacement for the combat portion of a Role Playing Game.  The design goal of Tactics is to simplify the elements of tactical combat while allowing the addition of modules that provide different levels of detail to allow each game to simulate just the aspects the players are interested in.\n       * Tactics: Core Rules is designed to get players started with the Tactics system and allow any number of players to play Tactics as a pickup game.\n       * Setup, gameplay, and winning conditions are all designed to keep things moving.\n       * So why are you still reading this?  Start playing!"),
         "Tactics Design Foundation",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Tactics Design Foundation", ":summary", "* Simple Core Rules\n* Any Scale\n* Any Genre - Ant Colonies to Elves to the Iraq War to Galactic Empires, Realism, History, Fantasy, Sci-Fi, Movies, Anime, and Pulp Fiction in any combination.\n* Any Scenario - Any scenario with any number of players\n* Level of Detail - Selective Realism, Modular\n* Asymmetrical Sides\n* Reenactments\n* Army Building\n* Consistent mechanics - I don't like rule books or tables. I like detail, but not when I have to look it up.\n* Simple math - The general rule is each modifier can add or subtract 1 from an ability. Where possible, keep it simple.\n* Six-sided dice - Square dice have perfect symmetry, are well known, and are common.\n* Many dice - Rolling lots of dice is satisfying. The more dice rolled the more predictable the result on a bell curve. This allows low level abilities to have a realistic chance of rolling a high number while offering high level abilities increasing consistency.\n* Opposed rolls - Rolling dice against other dice allows for both sides to take part in each conflict. Even when there is no opponent there is still fickle fate to vex you.\n* Open-ended rolls - Open-ended dice allows even the most outmatched opponent a chance at victory (e.g. David and Goliath).\n* Critical Hits - Critical Hits keeps the game from becoming too predictable. Unlike open-ended rolls, however, Criticals provide an opportunity to allow flavor and choice into the game.\n* Skills - It is tough to raise skills. Surviving through many situations teach you how to survive again.\n* Terrain and Situation - Taking advantage of the situation is the great equalizer. Outflanking, High Ground, Surrounding are critical advantages in combat.\n* Equipment - Equipment makes a difference, but a suit of armor on an unskilled opponent is not much of a challenge."),
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Tactics Design Foundation", ":summary", "* Simple Core Rules\n* Any Scale\n* Any Genre - Ant Colonies to Elves to the Iraq War to Galactic Empires, Realism, History, Fantasy, Sci-Fi, Movies, Anime, and Pulp Fiction in any combination.\n* Any scene - Any scene with any number of players\n* Level of Detail - Selective Realism, Modular\n* Asymmetrical Sides\n* Reenactments\n* Army Building\n* Consistent mechanics - I don't like rule books or tables. I like detail, but not when I have to look it up.\n* Simple math - The general rule is each modifier can add or subtract 1 from an ability. Where possible, keep it simple.\n* Six-sided dice - Square dice have perfect symmetry, are well known, and are common.\n* Many dice - Rolling lots of dice is satisfying. The more dice rolled the more predictable the result on a bell curve. This allows low level abilities to have a realistic chance of rolling a high number while offering high level abilities increasing consistency.\n* Opposed rolls - Rolling dice against other dice allows for both sides to take part in each conflict. Even when there is no opponent there is still fickle fate to vex you.\n* Open-ended rolls - Open-ended dice allows even the most outmatched opponent a chance at victory (e.g. David and Goliath).\n* Critical Hits - Critical Hits keeps the game from becoming too predictable. Unlike open-ended rolls, however, Criticals provide an opportunity to allow flavor and choice into the game.\n* Skills - It is tough to raise skills. Surviving through many situations teach you how to survive again.\n* Terrain and Situation - Taking advantage of the situation is the great equalizer. Outflanking, High Ground, Surrounding are critical advantages in combat.\n* Equipment - Equipment makes a difference, but a suit of armor on an unskilled opponent is not much of a challenge."),
         "How does Tactics compare to other games?",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "How does Tactics compare to other games?", ":summary", "* Vs. Board Games\n* Board games successfully capture the essence of reality while providing very simple mechanics to allow games to progress quickly and smoothly. The problem with board games is that each game targets only one view of a situation and generally cannot be expanded or modified without breaking the core premise of the game. Generally this leads to numerous different games that describe the same material (e.g. Star Wars). Each game focuses on a different aspect of the material with varying degrees of success and almost no overlap. Once the scenarios of the game are exhausted, the game loses public interest. Tactics seeks to create a system that can absorb new genres and new material and even allow units from different genres to battle one another. It also seeks to allow the elegant game play that board games offer by keeping the core rules simple and expandable.\n\n* Vs. Collectible Games\n* Collectible Games reinvented the classic board game. Instead of fixed rules, the rules were changeable. These changes can take 2 forms: a new expansion set can introduce new rules and environments, and each card may introduce modifications to existing rules. This approach is brilliant when applied correctly. Each expansion can be a standalone game or a supplement to the original game depending on what is agreed upon before play begins. The problems, however, are numerous. Because Collectible Games are extremely profitable, they tend to create unbalanced, 'power' cards that drive up sales but destabilize the game. I suspect that most of the manufacturers are aware of this problem, but because they are profit driven they are unable to avoid this trap. Another brilliant component of Collectible Games is the notion of a player 'building a deck' that is uniquely constructed using the build rules appropriate to the game. This idea allows each match to be entirely unique and variation is only limited by the imagination of the players. The downside of this is again associated with profits. Constructed decks are very expensive. Casual players lack the patience and resources to construct competitive decks, so games heavily favors the richest, most obsessed player instead of the most skilled player. Tactics seeks to avoid these problems by being free, by keeping deck construction rules simple, and by offering a number of preconstructed scenarios. This allows casual players to jump right into the action while allowing hard core players to enjoy themselves by increasing the level of detail instead of increasing the power level.\n\n* Vs. Tactical Games\n* Tactical games have a good understanding of unit tactics, but often do not functionally support individual characters and often over-complicate modifiers and oversimplify rolls and damage. Tactical games are almost universally inappropriate for individual character combat.\n\n* Vs. Role-playing Games\n* RPG games have a strong tactical combat element to them, but they simultaneously over-complicate individual\nactions while largely ignoring the tactical elements of small unit combat. Tactics attempts to bridge this gap and connect tactical combat with the RPG.")
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "How does Tactics compare to other games?", ":summary", "* Vs. Board Games\n* Board games successfully capture the essence of reality while providing very simple mechanics to allow games to progress quickly and smoothly. The problem with board games is that each game targets only one view of a situation and generally cannot be expanded or modified without breaking the core premise of the game. Generally this leads to numerous different games that describe the same material (e.g. Star Wars). Each game focuses on a different aspect of the material with varying degrees of success and almost no overlap. Once the scenes of the game are exhausted, the game loses public interest. Tactics seeks to create a system that can absorb new genres and new material and even allow units from different genres to battle one another. It also seeks to allow the elegant game play that board games offer by keeping the core rules simple and expandable.\n\n* Vs. Collectible Games\n* Collectible Games reinvented the classic board game. Instead of fixed rules, the rules were changeable. These changes can take 2 forms: a new expansion set can introduce new rules and environments, and each card may introduce modifications to existing rules. This approach is brilliant when applied correctly. Each expansion can be a standalone game or a supplement to the original game depending on what is agreed upon before play begins. The problems, however, are numerous. Because Collectible Games are extremely profitable, they tend to create unbalanced, 'power' cards that drive up sales but destabilize the game. I suspect that most of the manufacturers are aware of this problem, but because they are profit driven they are unable to avoid this trap. Another brilliant component of Collectible Games is the notion of a player 'building a deck' that is uniquely constructed using the build rules appropriate to the game. This idea allows each match to be entirely unique and variation is only limited by the imagination of the players. The downside of this is again associated with profits. Constructed decks are very expensive. Casual players lack the patience and resources to construct competitive decks, so games heavily favors the richest, most obsessed player instead of the most skilled player. Tactics seeks to avoid these problems by being free, by keeping deck construction rules simple, and by offering a number of preconstructed scenes. This allows casual players to jump right into the action while allowing hard core players to enjoy themselves by increasing the level of detail instead of increasing the power level.\n\n* Vs. Tactical Games\n* Tactical games have a good understanding of unit tactics, but often do not functionally support individual characters and often over-complicate modifiers and oversimplify rolls and damage. Tactical games are almost universally inappropriate for individual character combat.\n\n* Vs. Role-playing Games\n* RPG games have a strong tactical combat element to them, but they simultaneously over-complicate individual actions while largely ignoring the tactical elements of small unit combat. Tactics attempts to bridge this gap and connect tactical combat with the RPG.")
       )
     )
     return output
   }
 
   /**
-   * @function chapter_core_scenarios
+   * @function chapter_core_scenes
    * @return {chapter}
    */
-  static t_chapter_core_scenarios = {
+  static t_chapter_core_scenes = {
     vx_type: vx_core.t_type
   }
-  static e_chapter_core_scenarios = {
-    vx_type: nx_tactics_books_core_rules.t_chapter_core_scenarios
+  static e_chapter_core_scenes = {
+    vx_type: nx_tactics_books_core_rules.t_chapter_core_scenes
   }
 
-  // (func chapter_core_scenarios)
-  static f_chapter_core_scenarios() {
+  // (func chapter_core_scenes)
+  static f_chapter_core_scenes() {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
-      "Core Scenarios",
+      "Core Scenes",
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        "Sample Scenarios",
+        "Sample Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Sample Scenarios",
-          ":scenariomap",
+          "Sample Scenes",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             ":Alamo",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Alamo", ":summary", "* One team defends a strong tactical position, from a superior invading army."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Alamo", ":summary", "* One team defends a strong tactical position, from a superior invading army."),
             ":Bandits",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Bandits", ":summary", "* One team carries an unconcealed treasure across the map while the other team tries to steal it."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Bandits", ":summary", "* One team carries an unconcealed treasure across the map while the other team tries to steal it."),
             ":Blockade",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Blockade", ":summary", "* One team must successfully cross the map with half of their units. The other team must stop them."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Blockade", ":summary", "* One team must successfully cross the map with half of their units. The other team must stop them."),
             "Capture the Flag",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Capture the Flag", ":summary", "* Each team protects their battle standard.  The other team tries to take it."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Capture the Flag", ":summary", "* Each team protects their battle standard.  The other team tries to take it."),
             ":Conquest",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Conquest", ":reference", "* Crush your enemies, drive them before you, and hear the lamenting of the women. That is what is best in life. - Conan the Barbarian"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Conquest", ":reference", "* Crush your enemies, drive them before you, and hear the lamenting of the women. That is what is best in life. - Conan the Barbarian"),
             "High Score",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "High Score", ":summary", "* Each team tries to score points.  High score wins."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "High Score", ":summary", "* Each team tries to score points.  High score wins."),
             "King of the Hill",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "King of the Hill", ":summary", "* Each team attempts to hold a single objective until the clock runs out."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "King of the Hill", ":summary", "* Each team attempts to hold a single objective until the clock runs out."),
             "Treasure Hunt",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Treasure Hunt", ":summary", "* Place treasures randomly.  Each team tries to get more than half of them off the map at their starting location.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Treasure Hunt", ":summary", "* Place treasures randomly.  Each team tries to get more than half of them off the map at their starting location.")
           )
         )
       )
@@ -425,14 +425,14 @@ export default class nx_tactics_books_core_rules {
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        "Choose a Scenario",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Choose a Scenario", ":summary", "* Choose a [Scenario], generate a [Scenario] or pick one randomly from the [Scenarios] section of this or any other Tactics book.\n* [Scenario Difficulty] - Each [Scenario] has a [Difficulty] rating. For the first game, choose Easy.\n* [Victory Conditions] - Each Scenario defines its own objectives.\n* [Special Rules] - If the [Scenario] has [Special Rules], then these rules should be used for this [Scenario].\n* [Optional Rules] - If the [Scenario] has [Optional Rules], then you may choose to use any or all of them. Remember that more [Rules] tends to increase game time and complexity.  For the first game, ignore [Optional Rules].\n* Gather the required number of [Unit] tokens for this [Scenario].\n* Gather one of each of the [Unit] cards, [Terrain] cards, and [Rule] cards in use for this [Scenario].\n* If the [Scenario] has a number of [Turns], then set the [Turn Clock] to this number."),
+        "Choose a Scene",
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Choose a Scene", ":summary", "* Choose a [Scene], generate a [Scene] or pick one randomly from the [Scenes] section of this or any other Tactics book.\n* [Scene Difficulty] - Each [Scene] has a [Difficulty] rating. For the first game, choose Easy.\n* [Victory Conditions] - Each [Scene] defines its own objectives.\n* [Special Rules] - If the [Scene] has [Special Rules], then these rules should be used for this [Scene].\n* [Optional Rules] - If the [Scene] has [Optional Rules], then you may choose to use any or all of them. Remember that more [Rules] tends to increase game time and complexity.  For the first game, ignore [Optional Rules].\n* Gather the required number of [Unit] tokens for this [Scene].\n* Gather one of each of the [Unit] cards, [Terrain] cards, and [Rule] cards in use for this [Scene].\n* If the [Scene] has a number of [Rounds], then set the [Round Clock] to this number."),
         "Choose Teams",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Choose Teams", ":summary", "* Each [Scenario] describes a number of [Teams]. Any number of [Players] may be on a [Team].\n* Determine which [Players] are on each [Team] in any way you choose.\n* [Players] should sit with their [Team], preferably facing their opponents. For the first game, determine [Teams] randomly.\n* One [Team] on the [Scenario] is marked with a *.  This [Team] has the [Initiative] and goes first."),
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Choose Teams", ":summary", "* Each [Scene] describes a number of [Teams]. Any number of [Players] may be on a [Team].\n* Determine which [Players] are on each [Team] in any way you choose.\n* [Players] should sit with their [Team], preferably facing their opponents. For the first game, determine [Teams] randomly.\n* One [Team] on the [Scene] is marked with a *.  This [Team] has the [Initiative] and goes first."),
         ":Setup",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Setup", ":summary", "* Choose the [Map] described in the [Scenario] and lay it out like this: [image:MapDeploy.png].\n* Look at the [Deploy] section of the [Scenario].\n* Starting with the [Team] with [Initiative], alternate placing [Terrain] on the Map until all [Terrain] has been placed.\n* Starting with the [Team] with [Initiative], alternate placing their [Units] on the [Map]."),
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Setup", ":summary", "* Choose the [Map] described in the [Scene] and lay it out like this: [image:MapDeploy.png].\n* Look at the [Deploy] section of the [Scene].\n* Starting with the [Team] with [Initiative], alternate placing [Terrain] on the Map until all [Terrain] has been placed.\n* Starting with the [Team] with [Initiative], alternate placing their [Units] on the [Map]."),
         "Game Start",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Game Start", ":summary", "Before starting remember the following Golden Rules:\n* Trump - Any special rules in a scenario override the standard rules.\n* Rounding - All fractions are ignored."),
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Game Start", ":summary", "Before starting remember the following Golden Rules:\n* Trump - Any special rules in a scene override the standard rules.\n* Rounding - All fractions are ignored."),
         "Turn Start",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Turn Start", ":summary", "* Pass Initiative - If the [Team] with [Initiative] wishes to give the initiative to the next [Team], they may do so ONLY if they have fewer units left to activate than the next [Team].\n* The [Team] with [Initiative] now chooses any [Unit] in their [Team] to activate. Once a [Unit] is activated, it may not be activated again this turn until all units have been activated.\n* If that [Team] has no unit to activate, then [Initiative] is passed clockwise to the next [Team]."),
         "Turn Sequence",
@@ -440,7 +440,7 @@ export default class nx_tactics_books_core_rules {
         "Turn End",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Turn End", ":summary", "* If all [Units] have been activated and the [Turn Clock] is used, reduce it by 1.\n* Check for [Game Over] conditions.  If not, then begin a new turn."),
         "Game Over",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Game Over", ":summary", "The game ends when any of the following occur:\n* Last Round Ends\n* No Enemy Units Remain\n* Complete Victory condition achieved by any team\n\n* Winning - Each [Team] that acheived a [Complete Victory] condition wins.  If no [Team] acheived a\n[Complete Victory], then each [Team] that acheived a [Partial Victory] condition wins.  Winners gain the [Rewards] for the scenario, if any.\n* Ties - Ties are allowed, though any [Rewards] gained are divided by the number of winners.")
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Game Over", ":summary", "The game ends when any of the following occur:\n* Last Round Ends\n* No Enemy Units Remain\n* Complete Victory condition achieved by any team\n\n* Winning - Each [Team] that acheived a [Complete Victory] condition wins.  If no [Team] acheived a\n[Complete Victory], then each [Team] that acheived a [Partial Victory] condition wins.  Winners gain the [Rewards] for the scene, if any.\n* Ties - Ties are allowed, though any [Rewards] gained are divided by the number of winners.")
       )
     )
     return output
@@ -590,8 +590,8 @@ export default class nx_tactics_books_core_rules {
         nx_tactics_books_core_rules.f_chapter_common_rules(),
         "Tokens",
         nx_tactics_books_core_rules.f_chapter_tokens(),
-        "Core Scenarios",
-        nx_tactics_books_core_rules.f_chapter_core_scenarios(),
+        "Core Scenes",
+        nx_tactics_books_core_rules.f_chapter_core_scenes(),
         "Core Maps",
         nx_tactics_books_core_rules.f_chapter_core_maps()
       )
@@ -609,7 +609,7 @@ export default class nx_tactics_books_core_rules {
       "chapter_common_rules": nx_tactics_books_core_rules.e_chapter_common_rules,
       "chapter_core_maps": nx_tactics_books_core_rules.e_chapter_core_maps,
       "chapter_core_overview": nx_tactics_books_core_rules.e_chapter_core_overview,
-      "chapter_core_scenarios": nx_tactics_books_core_rules.e_chapter_core_scenarios,
+      "chapter_core_scenes": nx_tactics_books_core_rules.e_chapter_core_scenes,
       "chapter_lets_play": nx_tactics_books_core_rules.e_chapter_lets_play,
       "chapter_tokens": nx_tactics_books_core_rules.e_chapter_tokens,
       "tacticsbook": nx_tactics_books_core_rules.e_tacticsbook
@@ -618,7 +618,7 @@ export default class nx_tactics_books_core_rules {
       "chapter_common_rules": nx_tactics_books_core_rules.t_chapter_common_rules,
       "chapter_core_maps": nx_tactics_books_core_rules.t_chapter_core_maps,
       "chapter_core_overview": nx_tactics_books_core_rules.t_chapter_core_overview,
-      "chapter_core_scenarios": nx_tactics_books_core_rules.t_chapter_core_scenarios,
+      "chapter_core_scenes": nx_tactics_books_core_rules.t_chapter_core_scenes,
       "chapter_lets_play": nx_tactics_books_core_rules.t_chapter_lets_play,
       "chapter_tokens": nx_tactics_books_core_rules.t_chapter_tokens,
       "tacticsbook": nx_tactics_books_core_rules.t_tacticsbook
@@ -689,9 +689,9 @@ export default class nx_tactics_books_core_rules {
       fn            : nx_tactics_books_core_rules.f_chapter_core_overview
     }
 
-    // (func chapter_core_scenarios)
-    nx_tactics_books_core_rules.t_chapter_core_scenarios['vx_value'] = {
-      name          : "chapter_core_scenarios",
+    // (func chapter_core_scenes)
+    nx_tactics_books_core_rules.t_chapter_core_scenes['vx_value'] = {
+      name          : "chapter_core_scenes",
       pkgname       : "nx/tactics/books/core_rules",
       extends       : ":func",
       idx           : 0,
@@ -704,7 +704,7 @@ export default class nx_tactics_books_core_rules {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_core_rules.f_chapter_core_scenarios
+      fn            : nx_tactics_books_core_rules.f_chapter_core_scenes
     }
 
     // (func chapter_lets_play)

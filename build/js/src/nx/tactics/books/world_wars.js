@@ -109,24 +109,24 @@ export default class nx_tactics_books_world_wars {
         {"any-1": nx_tactics_base.t_sectionmap},
         ":Overview",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Overview", ":summary", "* Events Leading to War\n* Overview of the War\n* Aftermath"),
-        "WWI Scenarios",
+        "WWI Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "WWI Scenarios",
-          ":scenariomap",
+          "WWI Scenes",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Battle of Verdun, 1916",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Battle of Verdun, 1916", ":reference", "The battlefield with the highest density of dead per square yard.", ":summary", "* The Battle of Verdun was a ten month long ordeal between the French and German armies and is considered one of the most brutal events of WWI. Both the French and German armies suffered incredibly with an estimated 540,000 French and 430,000 German casualties and no strategic advantages were gained for either side.\n* In the years preceding World War I, Germany became Europe's leading industrial power. France felt increasingly threatened by German industrialization. As a response to the German threat of invasion, France built a continuous line of sunken forts from the Swiss frontier to the French city of Verdun making Verdun a vital strong point.\n* The German attack began on February 21, 1916 with an intense artillery bombardment of the forts surrounding Verdun. The French army retreated to predetermined positions while the German army pounded through the French lines.\n* Although three French forts near Verdun had capitulated to German forces, Verdun itself remained undefeated.\n* By April 1916, the French Air Force had secured the sky over Verdun, which would help the French to successfully defend the area. The British attack and a Russian offensive in the east forced the German army to transfer troops away from Verdun.\n* By December 1916, the French had advanced to their February 1916 lines, their original position. No new advantage had been gained for either side."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Battle of Verdun, 1916", ":reference", "The battlefield with the highest density of dead per square yard.", ":summary", "* The Battle of Verdun was a ten month long ordeal between the French and German armies and is considered one of the most brutal events of WWI. Both the French and German armies suffered incredibly with an estimated 540,000 French and 430,000 German casualties and no strategic advantages were gained for either side.\n* In the years preceding World War I, Germany became Europe's leading industrial power. France felt increasingly threatened by German industrialization. As a response to the German threat of invasion, France built a continuous line of sunken forts from the Swiss frontier to the French city of Verdun making Verdun a vital strong point.\n* The German attack began on February 21, 1916 with an intense artillery bombardment of the forts surrounding Verdun. The French army retreated to predetermined positions while the German army pounded through the French lines.\n* Although three French forts near Verdun had capitulated to German forces, Verdun itself remained undefeated.\n* By April 1916, the French Air Force had secured the sky over Verdun, which would help the French to successfully defend the area. The British attack and a Russian offensive in the east forced the German army to transfer troops away from Verdun.\n* By December 1916, the French had advanced to their February 1916 lines, their original position. No new advantage had been gained for either side."),
             "Battles of the Marne, 1914, 1918",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Battles of the Marne, 1914, 1918", ":summary", "* On September 4, 1914, the rapid advances of the German army through Belgium and northern France caused panic in the French army and troops were rushed from Paris in taxis to halt the advance. Combined with the BEF (British Expeditionary Force) the Germans were eventually halted and the War settled into the familiar defensive series of entrenchment's.\n* Ironically, by the end of May, 1918, the Germans had again reached the Marne after the enormous successes of Ludendorff's offensives of that year. The intervening four years had cost hundreds of thousands of lives and the armies were still, literally, exactly where they had started."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Battles of the Marne, 1914, 1918", ":summary", "* On September 4, 1914, the rapid advances of the German army through Belgium and northern France caused panic in the French army and troops were rushed from Paris in taxis to halt the advance. Combined with the BEF (British Expeditionary Force) the Germans were eventually halted and the War settled into the familiar defensive series of entrenchment's.\n* Ironically, by the end of May, 1918, the Germans had again reached the Marne after the enormous successes of Ludendorff's offensives of that year. The intervening four years had cost hundreds of thousands of lives and the armies were still, literally, exactly where they had started."),
             "Battles of Ypres, 1914, 1915, 1917",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Battles of Ypres, 1914, 1915, 1917", ":summary", "* There were in fact three battles fought around the Ypres salient during the War.\n* The first, in 1914 was an attempt by the BEF to halt the rapid advances made by the Germans.\n* The second, in 1915, was notable for the first use of poison gas by the Germans.\n* However, it is the long-planned offensive of July 31, 1917, that holds the most significance. Here, a combination of over-ambitious aims, appalling weather conditions, and misguided persistence by Haig led to horrific losses. By the time the offensive was called off total casualties for both sides had been approximately 250,000. The horrors of the battle, in which men drowned in liquid mud has become synonymous with the images of the War."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Battles of Ypres, 1914, 1915, 1917", ":summary", "* There were in fact three battles fought around the Ypres salient during the War.\n* The first, in 1914 was an attempt by the BEF to halt the rapid advances made by the Germans.\n* The second, in 1915, was notable for the first use of poison gas by the Germans.\n* However, it is the long-planned offensive of July 31, 1917, that holds the most significance. Here, a combination of over-ambitious aims, appalling weather conditions, and misguided persistence by Haig led to horrific losses. By the time the offensive was called off total casualties for both sides had been approximately 250,000. The horrors of the battle, in which men drowned in liquid mud has become synonymous with the images of the War."),
             "Battle of the Somme, 1916",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Battle of the Somme, 1916", ":summary", "* At 0730 hours on the 1st July, 1916, after a week long artillery bombardment launched the now infamous 'Big Push' attack across the river Somme. The British intended to breakthrough the German defenses in a matter of hours.\n* The mistrust that High Command had of the so-called 'New Armies' manifested itself in the orders to the troops to keep uniformed lines and to march towards the enemy across no-man's land. This, coupled with the failure of the artillery bombardment to dislodge much of the German wire, or to destroy their machine-gun posts, led to one of the biggest slaughters in military history.\n* After the first day, with a gain of only 1.5km, the British had suffered 57,470 casualties. Despite this, Haig pressed on with the attack until November 19th of the same year. For the meager achievements, total losses on the British and Imperial side numbered 419,654 with German casualties between 450,000 and 680,000. When the offensive was eventually called off the British were still 3 miles short of Bapaume and Serre, part of their first-day objectives."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Battle of the Somme, 1916", ":summary", "* At 0730 hours on the 1st July, 1916, after a week long artillery bombardment launched the now infamous 'Big Push' attack across the river Somme. The British intended to breakthrough the German defenses in a matter of hours.\n* The mistrust that High Command had of the so-called 'New Armies' manifested itself in the orders to the troops to keep uniformed lines and to march towards the enemy across no-man's land. This, coupled with the failure of the artillery bombardment to dislodge much of the German wire, or to destroy their machine-gun posts, led to one of the biggest slaughters in military history.\n* After the first day, with a gain of only 1.5km, the British had suffered 57,470 casualties. Despite this, Haig pressed on with the attack until November 19th of the same year. For the meager achievements, total losses on the British and Imperial side numbered 419,654 with German casualties between 450,000 and 680,000. When the offensive was eventually called off the British were still 3 miles short of Bapaume and Serre, part of their first-day objectives."),
             "Battle of Cambrai, 1917",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Battle of Cambrai, 1917", ":summary", "On November 20, 1917, the British launched the first full-scale offensive that was designed exclusively to accommodate the British secret weapon, the tank (so-called because when the first shipment came from England they were described as water tanks to maintain secrecy). A surprise artillery barrage started the offensive and 476 tanks, packed tightly for a mass attack moved against the German lines. Supported by infantry the gains were dramatic, breaching the almost impregnable Hindenberg line to depths of 4-5 miles in some places. However, these gains seemed to surprise British High Command equally as much as the Germans, and the following cavalry failed to take advantage. Nevertheless, Cambrai demonstrated how a well-thought out attack, combining tanks en masse with surprise, could be used to break the trench deadlock.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Battle of Cambrai, 1917", ":summary", "On November 20, 1917, the British launched the first full-scale offensive that was designed exclusively to accommodate the British secret weapon, the tank (so-called because when the first shipment came from England they were described as water tanks to maintain secrecy). A surprise artillery barrage started the offensive and 476 tanks, packed tightly for a mass attack moved against the German lines. Supported by infantry the gains were dramatic, breaching the almost impregnable Hindenberg line to depths of 4-5 miles in some places. However, these gains seemed to surprise British High Command equally as much as the Germans, and the following cavalry failed to take advantage. Nevertheless, Cambrai demonstrated how a well-thought out attack, combining tanks en masse with surprise, could be used to break the trench deadlock.")
           )
         )
       )
@@ -513,11 +513,11 @@ export default class nx_tactics_books_world_wars {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "3",
                   ":unitabilitymap",
@@ -688,7 +688,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "75mm", ":back", "30mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "75mm", ":back", "30mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -720,7 +720,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -762,7 +762,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -794,7 +794,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -828,7 +828,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "110mm", ":under", "25mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "110mm", ":under", "25mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -862,7 +862,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -896,7 +896,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -930,7 +930,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "25mm Sloped", ":over", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "25mm Sloped", ":over", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -964,7 +964,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "57mm", ":over", "0mm", ":under", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "57mm", ":over", "0mm", ":under", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -998,7 +998,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "25mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "25mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1032,7 +1032,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "108mm", ":over", "0mm", ":under", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "108mm", ":over", "0mm", ":under", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1066,7 +1066,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1096,7 +1096,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "20mm", ":back", "0mm", ":over", "0mm", ":under", "0mm", ":side", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "20mm", ":back", "0mm", ":over", "0mm", ":under", "0mm", ":side", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1126,7 +1126,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "20mm", ":back", "0mm", ":over", "0mm", ":under", "0mm", ":side", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "20mm", ":back", "0mm", ":over", "0mm", ":under", "0mm", ":side", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1190,7 +1190,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "3mm", ":back", "3mm", ":over", "0mm", ":under", "0mm", ":side", "3mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "3mm", ":back", "3mm", ":over", "0mm", ":under", "0mm", ":side", "3mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1238,7 +1238,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1282,7 +1282,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "12mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "12mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1316,7 +1316,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1352,7 +1352,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "5mm", ":over", "0mm", ":side", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "5mm", ":over", "0mm", ":side", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1386,7 +1386,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "5mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "5mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1418,7 +1418,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "5mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "5mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1460,7 +1460,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1492,7 +1492,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1530,7 +1530,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1566,7 +1566,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1604,7 +1604,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1636,7 +1636,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1672,7 +1672,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1704,7 +1704,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1740,7 +1740,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1780,7 +1780,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1818,7 +1818,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1856,7 +1856,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1894,7 +1894,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1938,7 +1938,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "100mm", ":over", "40mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "100mm", ":over", "40mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -1974,7 +1974,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "125mm", ":back", "125mm", ":over", "55mm", ":under", "125mm", ":side", "125mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "125mm", ":back", "125mm", ":over", "55mm", ":under", "125mm", ":side", "125mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2006,7 +2006,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "55mm", ":back", "55mm", ":over", "32mm", ":under", "55mm", ":side", "85mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "55mm", ":back", "55mm", ":over", "32mm", ":under", "55mm", ":side", "85mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2042,7 +2042,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2080,7 +2080,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":under", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":under", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2108,7 +2108,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2456,7 +2456,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "152mm", ":under", "16mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "152mm", ":under", "16mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2488,7 +2488,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "152mm", ":under", "16mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "152mm", ":under", "16mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2520,7 +2520,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "102mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "102mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2554,7 +2554,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "76mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "76mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2588,7 +2588,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "78mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "78mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2620,7 +2620,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2654,7 +2654,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2688,7 +2688,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm", ":under", "8mm", ":side", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm", ":under", "8mm", ":side", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2722,7 +2722,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "51mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "51mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2756,7 +2756,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "60mm", ":over", "0mm", ":under", "14mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "60mm", ":over", "0mm", ":under", "14mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2790,7 +2790,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "57mm", ":under", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "57mm", ":under", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2842,7 +2842,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "15mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "15mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2906,7 +2906,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2940,7 +2940,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -2972,7 +2972,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3006,7 +3006,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3040,7 +3040,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3074,7 +3074,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "3mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "3mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3184,12 +3184,12 @@ export default class nx_tactics_books_world_wars {
           "Battle of Kursk",
           ":summary",
           "* The last German blitzkrieg offensive in the east executed by the German forces on a strategic scale during the war, with the hope of another great encirclement of Red Army forces. The operations, which included the famous battle at Prokhorovka, remains both the largest series of armored operations and the most costly single day of aerial warfare to date.\n* Kursk is further notable for the deliberately defensive operation strategy on the Red Army's part. Having good intelligence on Hitler's intentions, the Red Army established and managed to conceal elaborate layered defense works, mine fields, and stage and disguise large reserve forces poised for a tactical and strategic counter-attack typical of defensive battle plans. Though the Germans planned and initiated an offensive strike, the well-planned defense not only frustrated their ambitions, but also enabled the Soviets to follow up with counter-offensives that exhausted the German abilities in the Theater, thereby seizing the initiative for the remainder of the war.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Tiger Phobia II",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Tiger Phobia II",
               ":summary",
@@ -3384,7 +3384,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "65mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "65mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3416,7 +3416,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "57mm", ":over", "0mm", ":under", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "57mm", ":over", "0mm", ":under", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3458,7 +3458,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3747,11 +3747,11 @@ export default class nx_tactics_books_world_wars {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "3",
                   ":unitabilitymap",
@@ -3777,11 +3777,11 @@ export default class nx_tactics_books_world_wars {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "4",
                   ":unitabilitymap",
@@ -3892,7 +3892,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "70mm", ":back", "50mm", ":over", "10mm", ":under", "5mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "70mm", ":back", "50mm", ":over", "10mm", ":under", "5mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3928,7 +3928,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "70mm", ":back", "50mm", ":over", "10mm", ":under", "5mm", ":side", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "70mm", ":back", "50mm", ":over", "10mm", ":under", "5mm", ":side", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3962,7 +3962,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "80mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -3994,7 +3994,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm Sloped", ":back", "45mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "80mm Sloped", ":back", "45mm", ":over", "30mm", ":under", "30mm", ":side", "50mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4028,7 +4028,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "100mm", ":back", "25mm", ":over", "40mm", ":under", "40mm", ":side", "80mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "100mm", ":back", "25mm", ":over", "40mm", ":under", "40mm", ":side", "80mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4062,7 +4062,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "150mm", ":back", "80mm", ":over", "40mm", ":under", "40mm", ":side", "80mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "150mm", ":back", "80mm", ":over", "40mm", ":under", "40mm", ":side", "80mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4096,7 +4096,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "35mm", ":back", "0mm", ":over", "0mm", ":side", "15mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "35mm", ":back", "0mm", ":over", "0mm", ":side", "15mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4130,7 +4130,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "80mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4162,7 +4162,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "60mm Sloped")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "60mm Sloped")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4196,7 +4196,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "80mm Sloped", ":back", "45mm", ":over", "30mm", ":side", "50mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "80mm Sloped", ":back", "45mm", ":over", "30mm", ":side", "50mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4224,7 +4224,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "200mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "200mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4252,7 +4252,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "30mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "30mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4290,7 +4290,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "100mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "100mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4330,7 +4330,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "150mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "150mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4366,7 +4366,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4402,7 +4402,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "15mm", ":back", "8mm", ":over", "6mm", ":under", "6mm", ":side", "12mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "15mm", ":back", "8mm", ":over", "6mm", ":under", "6mm", ":side", "12mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4528,7 +4528,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "15mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "15mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4642,7 +4642,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4680,7 +4680,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4716,7 +4716,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4754,7 +4754,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4792,7 +4792,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4830,7 +4830,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4868,7 +4868,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -4914,7 +4914,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "320mm", ":back", "320mm", ":over", "120mm", ":side", "320mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "320mm", ":back", "320mm", ":over", "120mm", ":side", "320mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5078,7 +5078,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "40mm", ":under", "6mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "40mm", ":under", "6mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5114,7 +5114,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "42mm", ":over", "15mm", ":under", "6mm", ":side", "25mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "42mm", ":over", "15mm", ":under", "6mm", ":side", "25mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5150,7 +5150,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "30mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "30mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5188,7 +5188,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "50mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "50mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5236,7 +5236,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5274,7 +5274,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5310,7 +5310,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "3mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "3mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5628,7 +5628,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5660,7 +5660,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "33mm", ":side", "9mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "33mm", ":side", "9mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5706,7 +5706,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5744,7 +5744,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "4mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "4mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5782,7 +5782,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5820,7 +5820,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "8mm", ":back", "8mm", ":over", "8mm", ":side", "8mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5888,7 +5888,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "4mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "4mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5936,7 +5936,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "152mm", ":back", "152mm", ":over", "152mm", ":under", "152mm", ":side", "152mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "152mm", ":back", "152mm", ":over", "152mm", ":under", "152mm", ":side", "152mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -5972,7 +5972,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "45mm", ":back", "45mm", ":over", "25mm", ":under", "45mm", ":side", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "45mm", ":back", "45mm", ":over", "25mm", ":under", "45mm", ":side", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6008,7 +6008,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":under", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":under", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6042,7 +6042,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "60mm", ":over", "20mm", ":under", "60mm", ":side", "60mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "60mm", ":over", "20mm", ":under", "60mm", ":side", "60mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6076,7 +6076,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "100mm", ":over", "35mm", ":under", "100mm", ":side", "100mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "100mm", ":over", "35mm", ":under", "100mm", ":side", "100mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6112,7 +6112,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "650mm", ":over", "200mm", ":side", "410mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "650mm", ":over", "200mm", ":side", "410mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6146,7 +6146,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6184,7 +6184,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6218,7 +6218,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -6264,12 +6264,12 @@ export default class nx_tactics_books_world_wars {
           "Invasion of Sicily",
           ":summary",
           "* On July 9, 1943, the Allies invaded Sicily. It was the largest amphibious operation of the war in terms of men landed on the beaches and of frontage. It opened the Mediterranean sea lanes and toppled Mussolini from power.\n* Operation Mincemeat - A corpse disguised as a British officer was allowed to drift ashore in Spain, carrying a briefcase containing fake secret documents. These documents revealed that the Allies were planning to invade Greece, and had no plans to invade Sicily. The documents were accepted as genuine by German intelligence, and as a result much German defensive effort was diverted from Sicily to Greece.\n* On August 7, 1943, the Axis forces were outflanked and raced for transport ships under the cover of night. The Allies weren't watching the Axis troops, so they escaped from Messina and reached Italy. Considering Allied naval and air superiority, to not prevent an Axis escape from Sicily was a major strategic blunder. Instead of a major Axis defeat, it started a long and bloody campaign.\n* The Axis lost 29,000 lives and 140,000 (mostly Italians) captured. The Allies lost 8,000 lives.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Invasion of Sicily",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Invasion of Sicily",
               ":teammap",
@@ -6290,12 +6290,12 @@ export default class nx_tactics_books_world_wars {
           "Invasion of Italy",
           ":summary",
           "* A coup deposed Benito Mussolini as head of the Italian government, which then began approaching the Allies to make peace. It was believed a quick invasion of Italy might hasten an Italian surrender and produce quick military victories over the German troops that could be trapped fighting in a hostile country. However, Italian and German resistance proved relatively strong, and fighting in Italy continued even after the fall of Berlin. In addition, the invasion left the Allies in a position of supplying food and supplies to conquered territory, a burden which would otherwise have fallen on Germany. As well, Italy occupied by a hostile German army would have created additional problems for the Germans.\n* On September 8, 1943, before the main invasion, the surrender of Italy to the Allies was announced. Italian units ceased combat, and the Navy sailed to Allied ports to surrender. However the German forces in Italy were prepared and moved to disarm Italian units and occupy important defensive positions.\n* On September 9, 1943, the invasion began easily on the beaches near Salerno. The Germans counterattacked several times and inflicted heavy losses. The Germans came close to defeating the Salerno beachhead. Despite using six	divisions of tanks and mechanized infantry, the German attacks had not had sufficient forces to both break through Allied lines and exploit the gains in the face of Allied artillery and naval gunfire support. The Allies had been fortunate that at this time Adolf Hitler had sided with the view of his Army Group commander in Northern Italy, Field Marshall Erwin Rommel, and decided that defending Italy south of Rome was not a strategic priority.\n   * By early October, all of Southern Italy was in Allied hands.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Invasion of Italy",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Invasion of Italy",
               ":teammap",
@@ -6350,12 +6350,12 @@ export default class nx_tactics_books_world_wars {
           "Syria-Lebanon Campaign",
           ":summary",
           "* On June-July 1941, the British led Allies invaded Vichy French-controlled Syria and Lebanon. The campaign remains little known, even in the countries that took part. There is evidence that Allied censors acted to suppress or reduce reportage of the fierce fighting believing that knowledge of fighting against French forces could have a negative effect on public opinion in Allied countries.\n* The Vichy French forces lost approximately 6,000 men. Of these, roughly 1,000 had been killed. This left 37,736 Vichy French prisoners of war. But, when given the choice of being repatriated to France or joining the Free French, only 5,668 men chose to join the forces of General Charles De Gaulle.\n* On November 26, 1941, the independence of Syria and Lebanon were recognized in the name of the Free French movment.\n* On February 26-27, 1945, Syria and Lebanon each declared war on Germany and Japan.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             ":Syria-Lebanon",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Syria-Lebanon",
               ":teammap",
@@ -6440,11 +6440,11 @@ export default class nx_tactics_books_world_wars {
           "Battle of El Guettar",
           ":summary",
           "* On March 23, 1943, the 10th Panzer met the U.S. II Corp. At first the battle went much as it had in earlier matchups, with the German tanks rolling up lead units of the US forces. However, they soon ran into a US minefield, and immediately the US artillery and anti-tank units opened up on them. The 10th lost 30 tanks over a short period, and retreated out of the minefield.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             ":Minefield",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Minefield")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Minefield")
           )
         ),
         ":Tunisia",
@@ -6522,11 +6522,11 @@ export default class nx_tactics_books_world_wars {
           "Battle of Bataan",
           ":summary",
           "* The capture of the Philippine Islands was crucial to Japan's effort to control the Southwest Pacific, seize the resource-rich Dutch East Indies, and protect its Southeast Asia flank.\n* The Battle of Bataan was the largest surrender in American and Filipino military history.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "War Plan Orange-3",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "War Plan Orange-3", ":summary", "* On December 26, 1941, after securing the beachheads, the Japanese launched a massive pincer attack. The defending forces planned to fall back and hold out for six months, at which time the plan assumed that relief would arrive from the U.S.\n* The surrender of Bataan would hasten the fall of Corregidor, a month later. However, without this stand, the Japanese might have quickly overrun all of the U.S. bases in the Pacific. Bataan forced them to slow down, giving the allies valuable time to prepare for conflicts such as the Battle of the Coral Sea and the Battle of Midway which followed closely thereafter.\n* Ultimately, more than 60,000 Filipino and 15,000 American prisoners of war were forced into the infamous Bataan Death March. The prisoners were forced to march through deep dust for 90 miles. 5000-10000 died en route from disease, starvation, dehydration, heat prostration, untreated wounds, and wanton execution. Those who fell behind were usually executed or left to die; the sides of the roads became littered with dead bodies and those begging for help.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "War Plan Orange-3", ":summary", "* On December 26, 1941, after securing the beachheads, the Japanese launched a massive pincer attack. The defending forces planned to fall back and hold out for six months, at which time the plan assumed that relief would arrive from the U.S.\n* The surrender of Bataan would hasten the fall of Corregidor, a month later. However, without this stand, the Japanese might have quickly overrun all of the U.S. bases in the Pacific. Bataan forced them to slow down, giving the allies valuable time to prepare for conflicts such as the Battle of the Coral Sea and the Battle of Midway which followed closely thereafter.\n* Ultimately, more than 60,000 Filipino and 15,000 American prisoners of war were forced into the infamous Bataan Death March. The prisoners were forced to march through deep dust for 90 miles. 5000-10000 died en route from disease, starvation, dehydration, heat prostration, untreated wounds, and wanton execution. Those who fell behind were usually executed or left to die; the sides of the roads became littered with dead bodies and those begging for help.")
           )
         ),
         "Battle of Malaya",
@@ -6538,12 +6538,12 @@ export default class nx_tactics_books_world_wars {
           "Battle of Corregidor",
           ":summary",
           "* The fall of Bataan in April 9, 1942, ended all organized opposition in the Phillipines. The island bastion of Corregidor, with its network of tunnels and formidable array of defensive armament, along with the fortifications across the entrance to Manila Bay, was the remaining obstacle. The Japanese had to take Corregidor; as long as the island remained in American hands, they would be denied the use of the Manila Bay, the finest natural harbor in the Far East.\n* The two 12-inch (305mm) guns of Batteries Smith and Hearn, with a horizontal range of 29,000 yards (27,000m) and all-around traverse were the longest range of all the island's artillery.\n* From December 29, 1941, to the end of April 1942, despite incessant Japanese aerial, naval and artillery bombardment, the garrison on Corregidor resisted valiantly, inflicting heavy enemy losses in men and planes.\n* The defenders were living on about thirty ounces of food per day. Drinking water was distributed only twice per day, but the constant bombing and shelling often interrupted the ration. When the bombardment killed the mules in the Cavalry, they would drag the carcasses down to the mess hall and cook them.\n* Japanese aircraft flew 614 missions dropping 1,701 bombs totaling some 365 tons of explosive.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Battle of Corregidor",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle of Corregidor",
               ":teammap",
@@ -6568,12 +6568,12 @@ export default class nx_tactics_books_world_wars {
           "Battle of the Coral Sea",
           ":summary",
           "* On May 4-8, 1942, the Japanese fought the US and Australian in the first naval battle between aircraft carriers and the first naval battle where neither side's ships sighted or fired directly upon the other.\n* On May 6, 1942, land-based B-17s attacked the approaching Port Moresby invasion fleet with the usual lack of success. Almost another year would pass before the USAAF realized high-altitude bombing attacks against moving naval targets were pointless. That night the commander at Port Moresby made the difficult decision to detach his main surface force (3 cruisers and 3 destroyers) to block the probable course of an invasion. He risked a repeat of the loss of HMS Prince of Wales and Repulse by exposing surface ships to attack by land-based aircraft without air cover. Indeed, his cruisers were spotted and came under an intense air attack from torpedo bombers but escaped with little damage. Only minutes after the Japanese raid, his force was inadvertently attacked by friendly B-17s and once again had to\nendure near misses.\n* On May 7, 1942, U.S. aircraft, sent in the wrong direction by a miscoded contact report, had missed Sh�?kaku and Zuikaku but found the invasion fleet, escorted by the small carrier Sh�?h�?, which was soon sunk with heavy casualties. In the previous five months the Allies had lost numerous major warships and had been unable to sink a single major Japanese ship in return. Sh�?h�? was small by carrier standards, but the phrase 'scratch one flattop,' announced the first Allied naval success of the Pacific War.\n* On May 8, 1942, the main carrier forces located one another and launched full raids, which passed each other in the air. Sh�?kaku was hit three times by bombs. Her deck damaged, Sh�?kaku was unable to land her aircraft and was thus effectively put out of action. Both American carriers were hit: Yorktown by a bomb; the Lexington, by both bombs and torpedoes. Lexington had to be abandoned and sunk to prevent her capture.\n* Tactically, the Japanese had achieved a narrow victory; one small carrier lost and a large carrier severely damaged against the Americans' loss of a large carrier and significant damage to another. But from the Allied point of view, after five months of continuous defeat, a battle that came out almost even was close enough to a victory.\n* Strategically, the Allies had won since the invasion of Port Moresby, New Guinea had been averted (the first time the Japanese had been turned back). With Sh�?kaku damaged and Zuikaku short of aircraft, neither was able to take part in the crucial Battle of Midway a month later. The loss of Lexington was a severe blow as she was one of the Navy's largest carriers. The damaged Yorktown returned to Pearl Harbor and although her damage was estimated to require months in port, she was made more or less battle-worthy in a miracle of improvisation and determination in just 2 days.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Battle of the Coral Sea",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle of the Coral Sea",
               ":teammap",
@@ -6594,12 +6594,12 @@ export default class nx_tactics_books_world_wars {
           "Battle of Midway",
           ":summary",
           "* From June 4, 1942 to June 7, 1942, exactly six months to the day after Japan's attack on Pearl Harbor the Americans and Japanese fought around Midway island in what is widely regarded as the most important naval battle in the Pacific.\n* For months, bureaucratic infighting delayed Admiral Yamamoto's plans in the Pacific. In the end, his threat to resign succeeded in moving his agenda forward. Yamamoto's primary strategic concern was the elimination of America's remaining carrier forces. Midway was not especially important, but the Japanese felt that the Americans would strongly defend it. The Japanese believed that only the USS Enterprise and Hornet would be available since the Lexington had been sunk and the Yorktown was badly damaged. Yamamoto dispersed his fleet to deceive the U.S. so the full extent of his fleet was hidden, but the U.S. had broken the Japanese naval code which negated this strategy and left his fleets separated by several hundred miles.\n* In order to battle 4 or 5 carriers, Admiral Nimitz needed every available carrier, so the Yorktown was restored to battle-worthy state in 72 hours. Repairs continued even as Yorktown sortied.\n* A picket line of Japanese submarines was late getting into position (partly because of Yamamoto's haste), which let the American carriers proceed to their assembly point without being detected. Reconnaissance planes were supposed to scout Pearl Harbor prior to the battle to detect American carriers. This plan was also thwarted when the refueling submarines found the refuelling point occupied by American warships (because the Japanese had carried out an identical mission in March). Thus, Japan was deprived of any knowledge concerning the movements of the American carriers. Japanese radio intercepts noticed an increase in both American submarine activity and message traffic. Yamamoto, at sea in Yamato, did not dare inform Nagumo for fear of exposing his position, and presumed (incorrectly)\nNagumo had received the same message from Tokyo.\n* Admiral Nimitz had one priceless asset: American and British cryptanalysts had broken the JN-25 code, confirming Midway as the target, determining the date of the attack, and providing a complete IJN order of battle. Japan's efforts to introduce a new codebook had been delayed, giving HYPO several crucial days.\n* Nimitz was aware, for example, the vast numerical superiority of the Japanese fleet had been divided into no less than four task forces, and the escort for the main Carrier Striking Force was limited to just a few fast ships. For this reason, they knew the anti-aircraft guns protecting the carriers would be limited. Nimitz calculated his three carriers, plus Midway island, to Yamamoto's four, gave the U.S. rough parity. Meanwhile, the Japanese remained almost totally in the dark even after the battle began.\n* On June 4, nine B-17s operating from Midway attacked the Japanese transport group, but no significant damage was sustained.\n* On June 4, 4:30, Vice Admiral Chuichi Nagumo launched an attack wave (108 aircraft). At the same time, he launched eight search aircraft (one 30 minutes late due to technical issues).\n* American radar picked up the enemy at a distance of several miles and interceptors soon scrambled. Unescorted bombers headed off to attack the Japanese carrier fleet, their fighter escorts remaining behind to defend Midway.\n* At 06:20, Japanese carrier aircraft bombed and heavily damaged the U.S. base on Midway. Midway-based obsolescent F4F Wildcats, defended Midway and suffered heavy losses. Most were downed in the first few minutes. The Japanese learned the island's bombers had already departed, and the strike leader signaled Nagumo another attack would be necessary to neutralize Midway's defenses before troops could be landed.\n* American anti-aircraft fire was accurate and intense, damaging many Japanese aircraft and claiming a third of the Japanese planes destroyed.\n* American bombers based on Midway made several torpedo attacks on the Japanese carrier fleet, but the Japanese shrugged off these attacks with almost no losses, destroying all but three of the American bombers.\n* At 7:15, As a result of the attacks from Midway, Nagumo ordered his reserve planes to be re-armed with bombs for use on land targets. 30 minutes later a scout plane signaled the discovery of a sizable American naval force to the east. Nagumo quickly reversed his order and demanded the scout plane ascertain the composition of the American force. Another 40 minutes elapsed before Tone's scout finally detected and radioed the presence of a single carrier in the American force, TF 16 (the other carrier was not detected).\n* Nagumo was now in a quandary. His opportunity to hit the American ships was curtailed by the fact his Midway strike force would be returning shortly. They would be low on fuel and carrying wounded crewmen, would need to land promptly or ditch, losing precious aircraft and crews; there was slim chance a strike could be mounted in time. Spotting his flight decks and launching aircraft would require at least 30-45 minutes, but if he launched immediately his bombers would be without fighter escort and they had just witnessed how easily unescorted American bombers were shot down by their own fighters.\n* In the end, Nagumo chose to wait for his first strike force to land, then launch the reserve force. In the final analysis, it made no difference; Fletcher had launched beginning at 07:00, so the aircraft which would deliver the crushing blow were already on their way. There was nothing Nagumo could do about it. This was the fatal flaw of Yamamoto's dispositions: it followed strictly traditional battleship doctrine.\n* It was at this point Spruance gave his second crucial command, to run toward the target, having judged that the need to throw something at the enemy as soon as possible was greater than the need for a coordinated attack. Accordingly, American squadrons were launched piecemeal, proceeding to the target in several different groups. This diminished the overall impact of the American attacks and greatly increased their casualties; coincidentally, it reduced the Japanese ability to counterstrike and found Nagumo with his decks at their most vulnerable.\n* At 9:20, Allied planes began attacking, led by Torpedo Squadron 8 (VT-8, from Hornet), followed by VT-6 (from Enterprise). Every TBD Devastator of VT-8 was shot down, with only one survivor. VT-6 squadron met nearly the same fate, with no hits against the enemy, thanks in part to terrible aircraft torpedoes. The Japanese combat air patrol, flying the much faster Zero, made short work of the Americans, who not only had no fighter support but were flying the slow, under-armed TBDs.\n* The appearance of a third torpedo plane attack from the southeast by VT-3 at 10:00 very quickly drew the majority of the Japanese CAP into the southeast quadrant of the fleet. By chance, at the same time VT-3 was sighted by the Japanese, two separate formations (comprising three squadrons total) of American SBD Dauntless dive-bombers were approaching the Japanese fleet from the northeast and southwest. These formations initially had difficulty in locating the Japanese carriers, and their fuel was running low. However, by the decisions of squadron commanders C. Wade McClusky, Jr. and Max Leslie to continue the search, they spotted the wake of Japanese destroyer Arashi. The destroyer was steaming at full speed back to Nagumo's carrier force, after having unsuccessfully depth-charged the U.S. submarine Nautilus.\n* The American dive-bombers arrived in a perfect position to attack the Japanese. Armed Japanese strike aircraft filled the hangar decks at the time of the fateful attack, fuel hoses were snaking across the decks as refueling operations were hastily completed, and the constant change of ordnance meant bombs and torpedoes were stacked around the hangars rather than stowed safely in the magazines. The Japanese carriers were extraordinarily vulnerable.\n* Contrary to some accounts of the battle, contemporary research, based on recent translation of relevant portions of the 100 volume Japanese account of the war, has demonstrated that the Japanese were not in fact prepared to launch a counterstrike when they were decisively attacked. Because of the constant flight deck activity associated with combat air patrol operations, the Japanese had never had an opportunity to spot their reserve for launch. The few aircraft on the Japanese flight decks at the time of the attack were either CAP fighters, or (in the case of S�?ryū) strike fighters being spotted to augment the CAP.\n* At 10:22, Enterprise's aircraft attacked Kaga, while to the south, Yorktown's aircraft attacked carrier S�?ryū, with Akagi being struck by several of Enterprise's bombers four minutes later. Simultaneously, VT-3 was targeting Hiryū, although the American torpedo aircraft again scored no hits. Within six minutes, the SBD dive bombers made their attack runs and left all three of their targets heavily ablaze. Akagi was hit by just one bomb, which was sufficient; it penetrated to the upper hangar deck and exploded among the armed and fueled aircraft there. One extremely near miss also slanted in and exploded underwater, bending the flight deck upward with the resulting geyser and causing crucial rudder damage. S�?ryū took three bomb hits in the hangar decks; Kaga took at least four. All three carriers were out of action and were eventually abandoned and scuttled.\n* By proceeding to target directly, without waiting for fighter escort, the torpedo squadrons, one after another, at low level, engaged enemy combat air patrol. This created an opportunity for the pilots of the dive bombers, who had arrived high above the action and were able to dive on target before being attacked. The torpedo planes were shot down and the torpedo squadron pilots lost their lives, but they enabled a titanic victory.\n   * Hiryū, the sole surviving Japanese aircraft carrier, wasted little time in counterattacking. The first wave of Japanese dive-bombers badly damaged Yorktown with two bomb hits, yet her damage control teams patched her up so effectively (in about an hour) the second wave's torpedo bombers mistook her for an intact carrier. After two torpedo hits, Yorktown lost power and was out of the battle, forcing Admiral Fletcher to move his flag to the heavy cruiser Astoria.\n* Hiryū recovered its aircraft and prepared for a strike against what was believed to be the only remaining American carrier.\n* Enterprise launched a final strike of dive bombers (including 10 bombers from Yorktown), leaving Hiryū ablaze, despite being defended by a strong defensive CAP of over a dozen Zero fighters. Rear Admiral Yamaguchi chose to go down with his ship, costing Japan perhaps her best carrier sailor.\n* In the night, the fleets did not encounter one another which may have been fortunate for the Americans, for had the US carrier fleet come in contact with Yamamoto's heavies, including Yamato, in the dark, the US cruisers would have been overwhelmed, and the carriers helpless.\n* On June 7, Yorktown was sunk during salvage efforts, by three torpedoes from Japanese submarine I-168. There were few casualties since most of the crew had already been evacuated. One torpedo from this salvo also sank the destroyer USS Hammann, which had been providing auxiliary power to Yorktown, splitting her in two.\n* The battle was a decisive victory for the Americans, dealing Japanese naval aviation a heavy blow. The pre-war Japanese training program produced pilots of exceptional quality but at a slow rate. This small group of elite aviators were combat hardened veterans. At Midway, the Japanese lost as many of these pilots in a single day as their training program produced in a year. By mid-1943, Japanese naval aviation was decimated. Even more important was the irredeemable loss of four of Japan's fleet carriers. These ships were not replaced until early in 1945. In the same span of time, the U.S. Navy commissioned more than two dozen fleet and light fleet carriers.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Battle of Midway",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle of Midway",
               ":teammap",
@@ -6620,14 +6620,14 @@ export default class nx_tactics_books_world_wars {
           "Battle of Quadalcanal",
           ":summary",
           "* On August 7, 1942, US forces landed on the islands of Guadalcanal, Tulagi, and Florida in the southern Solomons	capturing Tulagi and Florida as well as an airfield (later named Henderson Field) that was under construction by the	Japanese on Guadalcanal.\n* Between August and November 1942, the Japanese made several attempts to retake Henderson Field. These attempts resulted in three major land battles, five large naval battles, and continuous, almost daily, aircraft battles.\n* In early November 1942 the last Japanese attempt to capture Henderson Field was defeated forcing the Japanese to eventually evacuate Guadalcanal.\n* The Guadalcanal campaign marked the first significant strategic victory by Allied forces over the Japanese in the Pacific and is often considered a 'turning point' in the war.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Battle of Savo Island",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Battle of Savo Island", ":summary", "* On August 8-9, 1942, the US and Japanese fought the Battle of Savo Island (aka the First Battle of the Solmon Sea in Japan).\n* During the US landing operations, Japanese aircraft based at Rabaul attacked several times. After these clashes, Fletcher (the carrier commander) was concerned about his fuel levels and the losses to his carrier air defense. Without consulting with the other commanders, he withdrew with his carriers. Without carrier air-cover, the transports and their escort fleet would have to withdraw as well, even though less than half of the supplies and heavy equipment had been unloaded. The decision was made, however, to unload as many supplies as possible throughout the night and then depart.\n* That night, as the transports unloaded, two groups of Allied warships, 5 cruisers and 7 destroyers, screening the transports were surprised and defeated by a Japanese force of 7 cruisers and 1 destroyer. One Australian and three U.S. cruisers were sunk, and one other U.S. cruiser and two destroyers were damaged. The Japanese suffered moderate damage to one cruiser. The Japanese who was unaware Fletcher had withdrawn with the U.S. carriers, immediately retired to Rabaul without attempting to attack the now unprotected Allied transports.\n* As a result of the defeat, the remaining Allied ships withdrew from the Solomon Islands. Allied ground forces had landed on Guadalcanal only the day before. The withdrawal of the fleet left them in a precarious situation, with barely enough supplies, equipment, and food to hold their beachhead."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Battle of Savo Island", ":summary", "* On August 8-9, 1942, the US and Japanese fought the Battle of Savo Island (aka the First Battle of the Solmon Sea in Japan).\n* During the US landing operations, Japanese aircraft based at Rabaul attacked several times. After these clashes, Fletcher (the carrier commander) was concerned about his fuel levels and the losses to his carrier air defense. Without consulting with the other commanders, he withdrew with his carriers. Without carrier air-cover, the transports and their escort fleet would have to withdraw as well, even though less than half of the supplies and heavy equipment had been unloaded. The decision was made, however, to unload as many supplies as possible throughout the night and then depart.\n* That night, as the transports unloaded, two groups of Allied warships, 5 cruisers and 7 destroyers, screening the transports were surprised and defeated by a Japanese force of 7 cruisers and 1 destroyer. One Australian and three U.S. cruisers were sunk, and one other U.S. cruiser and two destroyers were damaged. The Japanese suffered moderate damage to one cruiser. The Japanese who was unaware Fletcher had withdrawn with the U.S. carriers, immediately retired to Rabaul without attempting to attack the now unprotected Allied transports.\n* As a result of the defeat, the remaining Allied ships withdrew from the Solomon Islands. Allied ground forces had landed on Guadalcanal only the day before. The withdrawal of the fleet left them in a precarious situation, with barely enough supplies, equipment, and food to hold their beachhead."),
             "Battle of Eastern Solomons",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle of Eastern Solomons",
               ":summary",
@@ -6643,7 +6643,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "Battle of Milne Bay",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle of Milne Bay",
               ":reference",
@@ -6661,7 +6661,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "Battle of the Santa Cruz Islands",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle of the Santa Cruz Islands",
               ":summary",
@@ -6677,7 +6677,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "First Naval Battle of Guadalcanal",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "First Naval Battle of Guadalcanal",
               ":summary",
@@ -6693,7 +6693,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "Second Naval Battle of Guadalcanal",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Second Naval Battle of Guadalcanal",
               ":reference",
@@ -6984,7 +6984,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "60mm Sloped", ":back", "45mm", ":over", "20mm", ":under", "20mm", ":side", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "60mm Sloped", ":back", "45mm", ":over", "20mm", ":under", "20mm", ":side", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7016,7 +7016,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "90mm Sloped", ":under", "20mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "90mm Sloped", ":under", "20mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7048,7 +7048,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "90mm Sloped", ":under", "20mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "90mm Sloped", ":under", "20mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7080,7 +7080,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "130mm", ":under", "20mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "130mm", ":under", "20mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7112,7 +7112,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "110mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "110mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7146,7 +7146,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "160mm Sloped", ":under", "30mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "160mm Sloped", ":under", "30mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7178,7 +7178,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "35mm", ":side", "16mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "35mm", ":side", "16mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7210,7 +7210,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7242,7 +7242,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "75mm", ":over", "20mm", ":side", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "75mm", ":over", "20mm", ":side", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7276,7 +7276,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "45mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "45mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7356,7 +7356,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":over", "0mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":over", "0mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7426,7 +7426,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "13mm", ":back", "13mm", ":over", "13mm", ":side", "13mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7462,7 +7462,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7498,7 +7498,7 @@ export default class nx_tactics_books_world_wars {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":front", "10mm", ":back", "10mm", ":over", "10mm", ":side", "10mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -7540,12 +7540,12 @@ export default class nx_tactics_books_world_wars {
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Unfiled WWII",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Fire Fight!",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Fire Fight!",
               ":summary",
@@ -7561,7 +7561,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "Secure the Bridge",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Secure the Bridge",
               ":teammap",
@@ -7575,7 +7575,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "Hill #115",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Hill #115",
               ":summary",
@@ -7600,12 +7600,12 @@ export default class nx_tactics_books_world_wars {
           "Battle of the Netherlands",
           ":summary",
           "Although the Netherlands had been neutral during World War I, Dutch sympathies during that conflict were more on the German side. At the end of World War I, the Netherlands gave asylum to German Emperor Wilhelm II and refused to release him into Allied custody, instead giving him a castle, Huis Doorn, where he lived until his death in 1941. Following outbreak of the Second World War, the Netherlands hoped to remain neutral just like they had done 25 years previously. The Dutch forces were poorly equipped with WWI era tankettes and biplanes and were no match for the Germans falling in 4 days.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Battle for the Hague",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle for the Hague",
               ":summary",
@@ -7621,7 +7621,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "Battle of The Afsluitdijk",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle of The Afsluitdijk",
               ":summary",
@@ -7644,12 +7644,12 @@ export default class nx_tactics_books_world_wars {
           "Battle of France",
           ":summary",
           "* After the seven months of the Phoney War, the Battle of France began in earnest on 10 May 1940. The French and British soon collapsed under the onslaught of the German blitzkrieg. The British escaped at Dunkirk, while the French Army surrendered with 90,000 dead and 200,000 wounded.\n* German troops entered Paris on 14 June and accepted the surrender of France on 22 June.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Battle of Dunkirk",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Battle of Dunkirk",
               ":summary",
@@ -7672,12 +7672,12 @@ export default class nx_tactics_books_world_wars {
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Battle of Denmark Strait",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Bismarck's Maiden Voyage",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Bismarck's Maiden Voyage",
               ":summary",
@@ -7693,7 +7693,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "Sink the Bismarck!",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Sink the Bismarck!",
               ":summary",
@@ -7720,12 +7720,12 @@ export default class nx_tactics_books_world_wars {
           "Invasion of Normandy",
           ":summary",
           "* On June 6, 1944, the Allies began Operation Overlord (also known as 'D-Day') - the long-awaited liberation of France. The deception operation had the Germans convinced that the invasion would occur at the Pas-de-Calais, while the real target was Normandy.\n   * Following two months of slow fighting in hedgerow country, the Allies were racing across France. They circled around and trapped 250,000 Germans in the Falaise pocket. As had so often happened on the Eastern Front Hitler refused to allow a strategic withdrawal until it was too late.\n   * 100,000 Germans managed to escape through the Falaise Gap but they left behind most of their equipment and 150,000 were taken prisoner.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Barkmann's Corner",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Barkmann's Corner",
               ":summary",
@@ -7741,7 +7741,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "Tiger Phobia",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Tiger Phobia",
               ":summary",
@@ -7764,11 +7764,11 @@ export default class nx_tactics_books_world_wars {
           "Liberation of France / Operation Dragoon",
           ":summary",
           "* On August 15. 1944 in an effort to aid their operations in Normandy, the Allies launched Operation Dragoon - the invasion of Southern France. The Allies rapidly consolidated this beachhead and liberated southern France in two weeks.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Red Ball Express",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Red Ball Express")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Red Ball Express")
           )
         ),
         "Operation Market Garden",
@@ -7778,12 +7778,12 @@ export default class nx_tactics_books_world_wars {
           "Operation Market Garden",
           ":summary",
           "* The British Field-Marshal Montgomery persuaded Allied High Command to launch a bold attack. Paratroopers would fly in from England and take bridges over the main rivers of the German-occupied Netherlands in three main cities, Eindhoven, Nijmegen, and Arnhem. British troops would punch through the German lines and link up with the paratroopers. If all went well, the Allies would capture the port facilities in Antwerp and advance into Germany without any remaining major obstacles. British XXX Corps was able to link up with six of the seven paratrooper-held bridges, but was unable to link up with the troops near the bridge over the Rhine at Arnhem. The result was the destruction of the British 1st Airborne Division. These events were summarized by Lt Gen. Frederick Browning as 'a bridge too far'.",
-          ":scenariomap",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Operation Market Garden",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Operation Market Garden",
               ":teammap",
@@ -7797,7 +7797,7 @@ export default class nx_tactics_books_world_wars {
             ),
             "A Bridge Too Far",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "A Bridge Too Far",
               ":teammap",

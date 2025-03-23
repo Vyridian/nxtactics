@@ -9,7 +9,7 @@
   :chaptermap
    (base/chaptermap
     "Ancients Overview" (chapter_ancients_overview)
-    "Ancients Scenarios" (chapter_ancients_scenarios)
+    "Ancients Scenes" (chapter_ancients_scenes)
     "Anglo/Saxons" (chapter_anglo_saxons)
     "Carthaginians" (chapter_carthaginians)
     "Chinese Dynasty" (chapter_chinese_dynasty)
@@ -61,18 +61,18 @@
 * War Barge
 * Ballista"))))
 
-(func chapter_ancients_scenarios : base/chapter
+(func chapter_ancients_scenes : base/chapter
  (chapter
-  :name "Ancients Scenarios"
+  :name "Ancients Scenes"
   :sectionmap
    (sectionmap
-    "Ancient Scenarios"
+    "Ancient Scenes"
      (section
-      :name "Ancient Scenarios"
-      :scenariomap
-       (scenariomap
+      :name "Ancient Scenes"
+      :scenemap
+       (scenemap
         "Flush Them Out"
-         (scenario
+         (scene
           :name "Flush Them Out"
           :summary "* 10 Turns"
           :teammap
@@ -98,7 +98,7 @@
               :forces "* 20 Levels of units"
               :partialvictory "Germanics lose more units than Romans.")))
         "Roman Gladiators"
-         (scenario
+         (scene
           :name "Roman Gladiators"))))))
 
 (func chapter_anglo_saxons : base/chapter
@@ -342,9 +342,9 @@ credit-that's what is truly meant by allegiance."
           :classification "Hvy. Infantry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "3"
               :unitabilitymap
                (unitabilitymap
@@ -389,9 +389,9 @@ flanks, but they are also useful for overrunning heavy infantry and slaughtering
           :classification "Hvy. Cavalry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "3"
               :unitabilitymap
                (unitabilitymap
@@ -443,9 +443,9 @@ which required high levels of discipline and selflessness."
           :classification "Hvy. Infantry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "2"
               :unitabilitymap
                (unitabilitymap
@@ -459,9 +459,9 @@ which required high levels of discipline and selflessness."
           :classification "Med. Infantry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "4"
               :unitabilitymap
                (unitabilitymap
@@ -508,9 +508,9 @@ successfully especially in difficult terrain.
           :classification "Hvy. Cavalry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "4"
               :unitabilitymap
                (unitabilitymap
@@ -753,9 +753,9 @@ that something was in a desperate situation."
           :classification "Med. Infantry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "4"
               :unitabilitymap
                (unitabilitymap
@@ -951,7 +951,7 @@ the auxilia accepted non-Romans (which represented 90% of the empire)."
            (unitskillmap
             :Armor
              (unitskill
-              :name "Armor"
+              :name "Armored"
               :level "1"
               :unititemmap
                (unititemmap

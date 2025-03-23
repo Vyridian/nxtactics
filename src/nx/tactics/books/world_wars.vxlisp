@@ -133,13 +133,13 @@
        "* Events Leading to War
 * Overview of the War
 * Aftermath")
-    "WWI Scenarios"
+    "WWI Scenes"
      (section
-      :name "WWI Scenarios"
-      :scenariomap
-       (scenariomap
+      :name "WWI Scenes"
+      :scenemap
+       (scenemap
         "Battle of Verdun, 1916"
-         (scenario
+         (scene
           :name "Battle of Verdun, 1916"
           :reference "The battlefield with the highest density of dead per square yard."
           :summary
@@ -150,13 +150,13 @@
 * By April 1916, the French Air Force had secured the sky over Verdun, which would help the French to successfully defend the area. The British attack and a Russian offensive in the east forced the German army to transfer troops away from Verdun.
 * By December 1916, the French had advanced to their February 1916 lines, their original position. No new advantage had been gained for either side.")
         "Battles of the Marne, 1914, 1918"
-         (scenario
+         (scene
           :name "Battles of the Marne, 1914, 1918"
           :summary
            "* On September 4, 1914, the rapid advances of the German army through Belgium and northern France caused panic in the French army and troops were rushed from Paris in taxis to halt the advance. Combined with the BEF (British Expeditionary Force) the Germans were eventually halted and the War settled into the familiar defensive series of entrenchment's.
 * Ironically, by the end of May, 1918, the Germans had again reached the Marne after the enormous successes of Ludendorff's offensives of that year. The intervening four years had cost hundreds of thousands of lives and the armies were still, literally, exactly where they had started.")
         "Battles of Ypres, 1914, 1915, 1917"
-         (scenario
+         (scene
           :name "Battles of Ypres, 1914, 1915, 1917"
           :summary
            "* There were in fact three battles fought around the Ypres salient during the War.
@@ -164,14 +164,14 @@
 * The second, in 1915, was notable for the first use of poison gas by the Germans.
 * However, it is the long-planned offensive of July 31, 1917, that holds the most significance. Here, a combination of over-ambitious aims, appalling weather conditions, and misguided persistence by Haig led to horrific losses. By the time the offensive was called off total casualties for both sides had been approximately 250,000. The horrors of the battle, in which men drowned in liquid mud has become synonymous with the images of the War.")
         "Battle of the Somme, 1916"
-         (scenario
+         (scene
           :name "Battle of the Somme, 1916"
           :summary
            "* At 0730 hours on the 1st July, 1916, after a week long artillery bombardment launched the now infamous 'Big Push' attack across the river Somme. The British intended to breakthrough the German defenses in a matter of hours.
 * The mistrust that High Command had of the so-called 'New Armies' manifested itself in the orders to the troops to keep uniformed lines and to march towards the enemy across no-man's land. This, coupled with the failure of the artillery bombardment to dislodge much of the German wire, or to destroy their machine-gun posts, led to one of the biggest slaughters in military history.
 * After the first day, with a gain of only 1.5km, the British had suffered 57,470 casualties. Despite this, Haig pressed on with the attack until November 19th of the same year. For the meager achievements, total losses on the British and Imperial side numbered 419,654 with German casualties between 450,000 and 680,000. When the offensive was eventually called off the British were still 3 miles short of Bapaume and Serre, part of their first-day objectives.")
         "Battle of Cambrai, 1917"
-         (scenario
+         (scene
           :name "Battle of Cambrai, 1917"
           :summary "On November 20, 1917, the British launched the first full-scale offensive that was designed exclusively to accommodate the British secret weapon, the tank (so-called because when the first shipment came from England they were described as water tanks to maintain secrecy). A surprise artillery barrage started the offensive and 476 tanks, packed tightly for a mass attack moved against the German lines. Supported by infantry the gains were dramatic, breaching the almost impregnable Hindenberg line to depths of 4-5 miles in some places. However, these gains seemed to surprise British High Command equally as much as the Germans, and the following cavalry failed to take advantage. Nevertheless, Cambrai demonstrated how a well-thought out attack, combining tanks en masse with surprise, could be used to break the trench deadlock."))))))
 
@@ -216,10 +216,10 @@
     "Unfiled WWII"
      (section
       :name "Unfiled WWII"
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Fire Fight!"
-         (scenario
+         (scene
           :name "Fire Fight!"
           :summary
            "* A group of German reinforcements is preparing to secure a small hill for an artillery implacement when they spot an Allied patrol. Do not allow them to interfere!"
@@ -246,7 +246,7 @@
                "* 9 Levels of Infantry (max 8) (Quickstart: 2x Able Team, 4x Baker Team, Charlie Team)
                 * 1 Sergeant")))
         "Secure the Bridge"
-         (scenario
+         (scene
           :name "Secure the Bridge"
           :teammap
            (teammap
@@ -271,7 +271,7 @@
                "* 14 Levels of Tanks (max 3) (Quickstart: Panzer IV, Hetzer, Stug III)
                 * 9 Levels of Infantry (max 8) (Quickstart: Waffen-SS, MG Team, 4x Riflemen)")))
         "Hill #115"
-         (scenario
+         (scene
           :name "Hill #115"
           :summary
            "* German Artillery holds the high ground of Hill #115. Capture the position."
@@ -305,10 +305,10 @@
      (section
       :name "Battle of the Netherlands"
       :summary "Although the Netherlands had been neutral during World War I, Dutch sympathies during that conflict were more on the German side. At the end of World War I, the Netherlands gave asylum to German Emperor Wilhelm II and refused to release him into Allied custody, instead giving him a castle, Huis Doorn, where he lived until his death in 1941. Following outbreak of the Second World War, the Netherlands hoped to remain neutral just like they had done 25 years previously. The Dutch forces were poorly equipped with WWI era tankettes and biplanes and were no match for the Germans falling in 4 days."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Battle for the Hague"
-         (scenario
+         (scene
           :name "Battle for the Hague"
           :summary
            "* On May 10, 1940, German paratroopers dropped in and around The Hague to capture Dutch airfields and the city.	After taking the city, the plan was to force the Dutch queen Wilhelmina of the Netherlands to surrender and to thus defeat the Dutch within a single day. It was the first major air-landing operation in history, and due to the failure, had negative effects on the German Military for the rest of the war.
@@ -326,7 +326,7 @@
                "* Paratroopers
 * Transport Aircraft")))
         "Battle of The Afsluitdijk"
-         (scenario
+         (scene
           :name "Battle of The Afsluitdijk"
           :summary "* On May 12, 1940 the Germans began an assault on Fort Kornwerderzand. However, unknown to the Germans three 2cm anti-air guns and 4 heavy anti-aircraft machine guns had arrived overnight at  Kornwerderzand. The next day, pilots who had previously flown unchallenged were under fire. The Germans sent 62 planes to bomb the fort. The planes dropped five waves of bombs, and four planes were shot down. The bombing was followed by an hour of heavy bombardment from the howitzers, but it had little effect on the heavily protected Dutch. As soon as the bombing stopped the Germans advanced down the narrow dike. Captain Boers waited until they were within 800 meters, then ordered machine-gun fire, making it difficult for the Germans to withdraw. The Germans were under constant fire for an hour and 20 minutes. The remaining Germans withdrew - the assault had failed."
           :teammap
@@ -360,10 +360,10 @@
       :summary
        "* After the seven months of the Phoney War, the Battle of France began in earnest on 10 May 1940. The French and British soon collapsed under the onslaught of the German blitzkrieg. The British escaped at Dunkirk, while the French Army surrendered with 90,000 dead and 200,000 wounded.
 * German troops entered Paris on 14 June and accepted the surrender of France on 22 June."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Battle of Dunkirk"
-         (scenario
+         (scene
           :name "Battle of Dunkirk"
           :summary
            "* On May 20, 1940, the German spearhead reached the coast of the English Channel, separating the British Expeditionary Force, the French First Army, and the Belgian army from the majority of French troops to the south.
@@ -408,10 +408,10 @@ German Historical Results
     "Battle of Denmark Strait"
      (section
       :name "Battle of Denmark Strait"
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Bismarck's Maiden Voyage"
-         (scenario
+         (scene
           :name "Bismarck's Maiden Voyage"
           :summary
            "* On May 19, 1941, the German Bismarck battleship left on its maiden voyage with the heavy cruiser Prinz Eugen to break out into the North Atlantic to destroy Allied shipping.
@@ -433,7 +433,7 @@ German Historical Results
                "* 1 Battleship - Bismarck
 * 1 Hvy Cruiser - Prinz Eugen")))
         "Sink the Bismarck!"
-         (scenario
+         (scene
           :name "Sink the Bismarck!"
           :summary
            "* The British public were shocked that their most emblematic warship had been destroyed so suddenly. The Admiralty mobilized every available warship in the Atlantic to hunt down and destroy Bismarck.
@@ -500,10 +500,10 @@ Their fuel and shell supplies were low, a demonstration of how difficult it was 
        "* On June 6, 1944, the Allies began Operation Overlord (also known as 'D-Day') - the long-awaited liberation of France. The deception operation had the Germans convinced that the invasion would occur at the Pas-de-Calais, while the real target was Normandy.
    * Following two months of slow fighting in hedgerow country, the Allies were racing across France. They circled around and trapped 250,000 Germans in the Falaise pocket. As had so often happened on the Eastern Front Hitler refused to allow a strategic withdrawal until it was too late.
    * 100,000 Germans managed to escape through the Falaise Gap but they left behind most of their equipment and 150,000 were taken prisoner."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Barkmann's Corner"
-         (scenario
+         (scene
           :name "Barkmann's Corner"
           :summary
            "* On the morning of July 27, 1944, Panzer Ace, Ernst Barkmann found himself in his Panther cut off from the rest of his company. The Americans were closing in with a large armoured column. Barkmann positioned his Panther under a stand of oaks near the crossroads where the American tanks would have to pass.
@@ -536,7 +536,7 @@ Their fuel and shell supplies were low, a demonstration of how difficult it was 
 ?) Surprise is yours. Do not deploy at the beginning of the game. Instead, any time you have the initiative, you may deploy the Panther anywhere on the map before taking your turn. When you attack, the enemy is [Surprised]."
               :forces "* 1 [Panther Ausf G] Tank - Ace")))
         "Tiger Phobia"
-         (scenario
+         (scene
           :name "Tiger Phobia"
           :summary
            "* On 8 August 1944, a single Tiger commanded by SS-Unterscharfuhrer Willi Fey from the 1st Company of
@@ -559,19 +559,19 @@ more later in the day using his last two rounds of ammunition.
      (section
       :name "Liberation of France / Operation Dragoon"
       :summary "* On August 15. 1944 in an effort to aid their operations in Normandy, the Allies launched Operation Dragoon - the invasion of Southern France. The Allies rapidly consolidated this beachhead and liberated southern France in two weeks."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Red Ball Express"
-         (scenario
+         (scene
           :name "Red Ball Express")))
     "Operation Market Garden"
      (section
       :name "Operation Market Garden"
       :summary "* The British Field-Marshal Montgomery persuaded Allied High Command to launch a bold attack. Paratroopers would fly in from England and take bridges over the main rivers of the German-occupied Netherlands in three main cities, Eindhoven, Nijmegen, and Arnhem. British troops would punch through the German lines and link up with the paratroopers. If all went well, the Allies would capture the port facilities in Antwerp and advance into Germany without any remaining major obstacles. British XXX Corps was able to link up with six of the seven paratrooper-held bridges, but was unable to link up with the troops near the bridge over the Rhine at Arnhem. The result was the destruction of the British 1st Airborne Division. These events were summarized by Lt Gen. Frederick Browning as 'a bridge too far'."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Operation Market Garden"
-         (scenario
+         (scene
           :name "Operation Market Garden"
           :teammap
            (teammap
@@ -582,7 +582,7 @@ more later in the day using his last two rounds of ammunition.
              (team
               :name "German")))
         "A Bridge Too Far"
-         (scenario
+         (scene
           :name "A Bridge Too Far"
           :teammap
            (teammap
@@ -643,10 +643,10 @@ more later in the day using his last two rounds of ammunition.
       :summary
        "* The last German blitzkrieg offensive in the east executed by the German forces on a strategic scale during the war, with the hope of another great encirclement of Red Army forces. The operations, which included the famous battle at Prokhorovka, remains both the largest series of armored operations and the most costly single day of aerial warfare to date.
 * Kursk is further notable for the deliberately defensive operation strategy on the Red Army's part. Having good intelligence on Hitler's intentions, the Red Army established and managed to conceal elaborate layered defense works, mine fields, and stage and disguise large reserve forces poised for a tactical and strategic counter-attack typical of defensive battle plans. Though the Germans planned and initiated an offensive strike, the well-planned defense not only frustrated their ambitions, but also enabled the Soviets to follow up with counter-offensives that exhausted the German abilities in the Theater, thereby seizing the initiative for the remainder of the war."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Tiger Phobia II"
-         (scenario
+         (scene
           :name "Tiger Phobia II"
           :summary "* On 7 July 1943, a single Tiger tank commanded by SS-Oberscharfuhrer Franz Staudegger engaged a group of about 50 T-34s around Psyolknee (the southern sector of the German salient in the Battle of Kursk). Staudegger used all his ammunition in destroying 22 Soviet tanks, while the rest retreated. For this, Staudegger was awarded the Knight's Cross."
           :teammap
@@ -811,10 +811,10 @@ an attack southward in the direction of Medenine, the northernmost British stron
      (section
       :name "Battle of El Guettar"
       :summary "* On March 23, 1943, the 10th Panzer met the U.S. II Corp. At first the battle went much as it had in earlier matchups, with the German tanks rolling up lead units of the US forces. However, they soon ran into a US minefield, and immediately the US artillery and anti-tank units opened up on them. The 10th lost 30 tanks over a short period, and retreated out of the minefield."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         :Minefield
-         (scenario
+         (scene
           :name "Minefield")))
     :Tunisia
      (section
@@ -917,10 +917,10 @@ older models. The new Hawker Hurricanes were clearly superior to the Italian Fia
 * The Vichy French forces lost approximately 6,000 men. Of these, roughly 1,000 had been killed. This left 37,736 Vichy French prisoners of war. But, when given the choice of being repatriated to France or joining the Free French, only 5,668 men chose to join the forces of General Charles De Gaulle.
 * On November 26, 1941, the independence of Syria and Lebanon were recognized in the name of the Free French movment.
 * On February 26-27, 1945, Syria and Lebanon each declared war on Germany and Japan."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         :Syria-Lebanon
-         (scenario
+         (scene
           :name "Syria-Lebanon"
           :teammap
            (teammap
@@ -981,10 +981,10 @@ Iran and the Shah but this led only to increased tensions and pro-German rallies
 * Operation Mincemeat - A corpse disguised as a British officer was allowed to drift ashore in Spain, carrying a briefcase containing fake secret documents. These documents revealed that the Allies were planning to invade Greece, and had no plans to invade Sicily. The documents were accepted as genuine by German intelligence, and as a result much German defensive effort was diverted from Sicily to Greece.
 * On August 7, 1943, the Axis forces were outflanked and raced for transport ships under the cover of night. The Allies weren't watching the Axis troops, so they escaped from Messina and reached Italy. Considering Allied naval and air superiority, to not prevent an Axis escape from Sicily was a major strategic blunder. Instead of a major Axis defeat, it started a long and bloody campaign.
 * The Axis lost 29,000 lives and 140,000 (mostly Italians) captured. The Allies lost 8,000 lives."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Invasion of Sicily"
-         (scenario
+         (scene
           :name "Invasion of Sicily"
           :teammap
            (teammap
@@ -1012,10 +1012,10 @@ Iran and the Shah but this led only to increased tensions and pro-German rallies
 * On September 8, 1943, before the main invasion, the surrender of Italy to the Allies was announced. Italian units ceased combat, and the Navy sailed to Allied ports to surrender. However the German forces in Italy were prepared and moved to disarm Italian units and occupy important defensive positions.
 * On September 9, 1943, the invasion began easily on the beaches near Salerno. The Germans counterattacked several times and inflicted heavy losses. The Germans came close to defeating the Salerno beachhead. Despite using six	divisions of tanks and mechanized infantry, the German attacks had not had sufficient forces to both break through Allied lines and exploit the gains in the face of Allied artillery and naval gunfire support. The Allies had been fortunate that at this time Adolf Hitler had sided with the view of his Army Group commander in Northern Italy, Field Marshall Erwin Rommel, and decided that defending Italy south of Rome was not a strategic priority.
    * By early October, all of Southern Italy was in Allied hands."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Invasion of Italy"
-         (scenario
+         (scene
           :name "Invasion of Italy"
           :teammap
            (teammap
@@ -1089,10 +1089,10 @@ wounded, in addition to the two destroyers lost in the first invasion attempt an
       :summary
        "* The capture of the Philippine Islands was crucial to Japan's effort to control the Southwest Pacific, seize the resource-rich Dutch East Indies, and protect its Southeast Asia flank.
 * The Battle of Bataan was the largest surrender in American and Filipino military history."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "War Plan Orange-3"
-         (scenario
+         (scene
           :name "War Plan Orange-3"
           :summary
            "* On December 26, 1941, after securing the beachheads, the Japanese launched a massive pincer attack. The defending forces planned to fall back and hold out for six months, at which time the plan assumed that relief would arrive from the U.S.
@@ -1114,10 +1114,10 @@ wounded, in addition to the two destroyers lost in the first invasion attempt an
 * From December 29, 1941, to the end of April 1942, despite incessant Japanese aerial, naval and artillery bombardment, the garrison on Corregidor resisted valiantly, inflicting heavy enemy losses in men and planes.
 * The defenders were living on about thirty ounces of food per day. Drinking water was distributed only twice per day, but the constant bombing and shelling often interrupted the ration. When the bombardment killed the mules in the Cavalry, they would drag the carcasses down to the mess hall and cook them.
 * Japanese aircraft flew 614 missions dropping 1,701 bombs totaling some 365 tons of explosive."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Battle of Corregidor"
-         (scenario
+         (scene
           :name "Battle of Corregidor"
           :teammap
            (teammap
@@ -1160,10 +1160,10 @@ endure near misses.
 * On May 8, 1942, the main carrier forces located one another and launched full raids, which passed each other in the air. Sh�?kaku was hit three times by bombs. Her deck damaged, Sh�?kaku was unable to land her aircraft and was thus effectively put out of action. Both American carriers were hit: Yorktown by a bomb; the Lexington, by both bombs and torpedoes. Lexington had to be abandoned and sunk to prevent her capture.
 * Tactically, the Japanese had achieved a narrow victory; one small carrier lost and a large carrier severely damaged against the Americans' loss of a large carrier and significant damage to another. But from the Allied point of view, after five months of continuous defeat, a battle that came out almost even was close enough to a victory.
 * Strategically, the Allies had won since the invasion of Port Moresby, New Guinea had been averted (the first time the Japanese had been turned back). With Sh�?kaku damaged and Zuikaku short of aircraft, neither was able to take part in the crucial Battle of Midway a month later. The loss of Lexington was a severe blow as she was one of the Navy's largest carriers. The damaged Yorktown returned to Pearl Harbor and although her damage was estimated to require months in port, she was made more or less battle-worthy in a miracle of improvisation and determination in just 2 days."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Battle of the Coral Sea"
-         (scenario
+         (scene
           :name "Battle of the Coral Sea"
           :teammap
            (teammap
@@ -1219,10 +1219,10 @@ Nagumo had received the same message from Tokyo.
 * In the night, the fleets did not encounter one another which may have been fortunate for the Americans, for had the US carrier fleet come in contact with Yamamoto's heavies, including Yamato, in the dark, the US cruisers would have been overwhelmed, and the carriers helpless.
 * On June 7, Yorktown was sunk during salvage efforts, by three torpedoes from Japanese submarine I-168. There were few casualties since most of the crew had already been evacuated. One torpedo from this salvo also sank the destroyer USS Hammann, which had been providing auxiliary power to Yorktown, splitting her in two.
 * The battle was a decisive victory for the Americans, dealing Japanese naval aviation a heavy blow. The pre-war Japanese training program produced pilots of exceptional quality but at a slow rate. This small group of elite aviators were combat hardened veterans. At Midway, the Japanese lost as many of these pilots in a single day as their training program produced in a year. By mid-1943, Japanese naval aviation was decimated. Even more important was the irredeemable loss of four of Japan's fleet carriers. These ships were not replaced until early in 1945. In the same span of time, the U.S. Navy commissioned more than two dozen fleet and light fleet carriers."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Battle of Midway"
-         (scenario
+         (scene
           :name "Battle of Midway"
           :teammap
            (teammap
@@ -1256,10 +1256,10 @@ Nagumo had received the same message from Tokyo.
 * Between August and November 1942, the Japanese made several attempts to retake Henderson Field. These attempts resulted in three major land battles, five large naval battles, and continuous, almost daily, aircraft battles.
 * In early November 1942 the last Japanese attempt to capture Henderson Field was defeated forcing the Japanese to eventually evacuate Guadalcanal.
 * The Guadalcanal campaign marked the first significant strategic victory by Allied forces over the Japanese in the Pacific and is often considered a 'turning point' in the war."
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         "Battle of Savo Island"
-         (scenario
+         (scene
           :name "Battle of Savo Island"
           :summary
            "* On August 8-9, 1942, the US and Japanese fought the Battle of Savo Island (aka the First Battle of the Solmon Sea in Japan).
@@ -1267,7 +1267,7 @@ Nagumo had received the same message from Tokyo.
 * That night, as the transports unloaded, two groups of Allied warships, 5 cruisers and 7 destroyers, screening the transports were surprised and defeated by a Japanese force of 7 cruisers and 1 destroyer. One Australian and three U.S. cruisers were sunk, and one other U.S. cruiser and two destroyers were damaged. The Japanese suffered moderate damage to one cruiser. The Japanese who was unaware Fletcher had withdrawn with the U.S. carriers, immediately retired to Rabaul without attempting to attack the now unprotected Allied transports.
 * As a result of the defeat, the remaining Allied ships withdrew from the Solomon Islands. Allied ground forces had landed on Guadalcanal only the day before. The withdrawal of the fleet left them in a precarious situation, with barely enough supplies, equipment, and food to hold their beachhead.")
         "Battle of Eastern Solomons"
-         (scenario
+         (scene
           :name "Battle of Eastern Solomons"
           :summary
            "* On August 24-August 25, 1942, the U.S. and Japan fought the second major engagement of the Guadalcanal Campaign. As at Coral Sea and Midway, the ships of the two adversaries were never in direct visual range of each other and fought all battles with aircraft.
@@ -1305,7 +1305,7 @@ Nagumo had received the same message from Tokyo.
 * 100 Land-based 'Betty' Bombers, fighters, recon
 * 75 Carrier-based aircraft - Kates, Vals, Zeroes")))
         "Battle of Milne Bay"
-         (scenario
+         (scene
           :name "Battle of Milne Bay"
           :reference "* Australian troops had, at Milne Bay, inflicted on the Japanese their first undoubted defeat on land...Of all the allies, it was the Australians who first broke the invincibility of the Japanese army."
           :summary
@@ -1336,7 +1336,7 @@ Nagumo had received the same message from Tokyo.
 * 2 Transports - Nankai Maru and Kinai Maru
 * 2 Submarine Chasers")))
         "Battle of the Santa Cruz Islands"
-         (scenario
+         (scene
           :name "Battle of the Santa Cruz Islands"
           :summary "* On October 26, 1942, two opposing carrier forces fought off Guadalcanal. After an exchange of carrier air attacks, Allied ships were forced to retreat with the loss of one carrier sunk (Hornet) and another (Enterprise) heavily damaged. The Japanese carrier forces, however, also retreated because of high aircraft and aircrew losses and significant damage to two carriers."
           :teammap
@@ -1365,7 +1365,7 @@ Nagumo had received the same message from Tokyo.
 * 22 Destroyers - Akizuki, Teruzuki
 * 199 aircraft")))
         "First Naval Battle of Guadalcanal"
-         (scenario
+         (scene
           :name "First Naval Battle of Guadalcanal"
           :summary
            "* On November 12-15, 1942, the decisive battle was fought during the months long Guadalcanal Campaign. The Japanese organized a transport convoy to take 7,000 infantry troops and their equipment to Guadalcanal to attempt once again to retake Henderson Field airfield. To allow the convoy to approach the island and deliver its cargo, the Japanese navy sent several warship forces to bombard Henderson Field with the goal of destroying Allied aircraft. Learning of the Japanese reinforcement effort, U.S. forces prepared to interdict the Japanese convoy and warships with aircraft and warship attacks.
@@ -1402,7 +1402,7 @@ Nagumo had received the same message from Tokyo.
 * 11 Transports
 * 12 Escort Destroyers")))
         "Second Naval Battle of Guadalcanal"
-         (scenario
+         (scene
           :name "Second Naval Battle of Guadalcanal"
           :reference
            "* It would seem that the turning point in this war has at last been reached. - U.S. President Franklin Roosevelt, upon learning of the results of the battle.
@@ -2018,14 +2018,14 @@ Nagumo had received the same message from Tokyo.
           :image "WWIIAmerican/Infantry_SergeantToken.png"
           :reference
            "* If you survive recruit training, you will be a weapon. You will be a minister of death praying for war. But until that day you are pukes. You are the lowest form of life on Earth. You are not even human, fucking beings. You are nothing but unorganized grabastic pieces of amphibian shit. Because I am hard you will not like me. But the more you hate me the more you will learn. I am hard but I am fair. There is no racial bigotry here. I do not look down on niggers, kikes, wops or greasers. Here you are all equally worthless. - Gunnery Sergeant Hartman, Full Metal Jacket
-* If your killer instincts are not clean and strong you will hesitate at the moment of truth. You will not kill. You will become dead marines and then you will be in a world of shit because marines are not allowed to die without permission. - Gunnery Sergeant Hartman, Full Metal Jacket
-* You don't say 'sir' to me, I'm a sergeant, I work for a living. - Sergeant Hulka, Stripes"
+            * If your killer instincts are not clean and strong you will hesitate at the moment of truth. You will not kill. You will become dead marines and then you will be in a world of shit because marines are not allowed to die without permission. - Gunnery Sergeant Hartman, Full Metal Jacket
+            * You don't say 'sir' to me, I'm a sergeant, I work for a living. - Sergeant Hulka, Stripes"
           :classification "Med. Infantry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "3"
               :unitabilitymap
                (unitabilitymap
@@ -2041,8 +2041,8 @@ Nagumo had received the same message from Tokyo.
           :image "WWIIAmerican/Infantry_BazookaToken.png"
           :reference
            "* 1 out of 3 infantry squads were issued a bazooka.
-* The back blast of the weapon gave away the shooter's position.
-* Casualties among bazooka team members were extremely high, and assignment to such duty was regarded as nearly suicidal."
+            * The back blast of the weapon gave away the shooter's position.
+            * Casualties among bazooka team members were extremely high, and assignment to such duty was regarded as nearly suicidal."
           :classification "Hvy. Infantry"
           :unitskillmap
            (unitskillmap
@@ -2142,7 +2142,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "75mm"
               :back "30mm"
               :over "30mm"
@@ -2168,7 +2168,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "65mm"))
           :unitskillmap
            (unitskillmap
@@ -2194,7 +2194,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "65mm"))
           :unitskillmap
            (unitskillmap
@@ -2216,7 +2216,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "65mm"))
           :unitskillmap
            (unitskillmap
@@ -2239,7 +2239,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "110mm"
               :under "25mm"))
           :unitskillmap
@@ -2263,7 +2263,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "51mm"))
           :unitskillmap
            (unitskillmap
@@ -2286,7 +2286,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "51mm"))
           :unitskillmap
            (unitskillmap
@@ -2309,7 +2309,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "25mm Sloped"
               :over "9mm"))
           :unitskillmap
@@ -2335,7 +2335,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "57mm"
               :over "0mm"
               :under "9mm"))
@@ -2360,7 +2360,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "25mm"
               :over "0mm"))
           :unitskillmap
@@ -2384,7 +2384,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "108mm"
               :over "0mm"
               :under "9mm"))
@@ -2411,7 +2411,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "51mm"))
           :unitskillmap
            (unitskillmap
@@ -2432,7 +2432,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "20mm"
               :back "0mm"
               :over "0mm"
@@ -2457,7 +2457,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "20mm"
               :back "0mm"
               :over "0mm"
@@ -2505,7 +2505,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "3mm"
               :back "3mm"
               :over "0mm"
@@ -2538,7 +2538,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :over "0mm"))
           :unitskillmap
@@ -2566,7 +2566,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "12mm"
               :over "0mm"))
           :unitskillmap
@@ -2590,7 +2590,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :over "0mm"))
           :unitskillmap
@@ -2618,7 +2618,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "5mm"
               :over "0mm"
               :side "0mm"))
@@ -2643,7 +2643,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "5mm"))
           :unitskillmap
            (unitskillmap
@@ -2665,7 +2665,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "5mm"))
           :unitskillmap
            (unitskillmap
@@ -2692,7 +2692,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2717,7 +2717,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2750,7 +2750,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2777,7 +2777,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2805,7 +2805,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2830,7 +2830,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2857,7 +2857,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2889,7 +2889,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -2916,7 +2916,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2947,7 +2947,7 @@ Nagumo had received the same message from Tokyo.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -2978,7 +2978,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -3006,7 +3006,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -3036,7 +3036,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -3067,7 +3067,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "100mm"
               :over "40mm"))
           :unitskillmap
@@ -3092,7 +3092,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "125mm"
               :back "125mm"
               :over "55mm"
@@ -3118,7 +3118,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "55mm"
               :back "55mm"
               :over "32mm"
@@ -3148,7 +3148,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"))
+              :name "Armored"))
           :unitskillmap
            (unitskillmap
             :Military
@@ -3186,7 +3186,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :under "8mm"
@@ -3216,7 +3216,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"))
+              :name "Armored"))
           :unitskillmap
            (unitskillmap
             :Military
@@ -3589,7 +3589,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "152mm"
               :under "16mm"))
           :unitskillmap
@@ -3612,7 +3612,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "152mm"
               :under "16mm"))
           :unitskillmap
@@ -3635,7 +3635,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "102mm"))
           :unitskillmap
            (unitskillmap
@@ -3658,7 +3658,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "76mm"))
           :unitskillmap
            (unitskillmap
@@ -3684,7 +3684,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "78mm"))
           :unitskillmap
            (unitskillmap
@@ -3706,7 +3706,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "65mm"))
           :unitskillmap
            (unitskillmap
@@ -3729,7 +3729,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "51mm"))
           :unitskillmap
            (unitskillmap
@@ -3752,7 +3752,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "65mm"
               :under "8mm"
               :side "45mm"))
@@ -3779,7 +3779,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "51mm"))
           :unitskillmap
            (unitskillmap
@@ -3802,7 +3802,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "60mm"
               :over "0mm"
               :under "14mm"))
@@ -3829,7 +3829,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "57mm"
               :under "9mm"))
           :unitskillmap
@@ -3865,7 +3865,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "15mm"))
           :unitskillmap
            (unitskillmap
@@ -3908,7 +3908,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -3934,7 +3934,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -3959,7 +3959,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -3985,7 +3985,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -4011,7 +4011,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -4037,7 +4037,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "3mm"))
           :unitskillmap
            (unitskillmap
@@ -4172,7 +4172,7 @@ Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "65mm"))
           :unitskillmap
            (unitskillmap
@@ -4194,7 +4194,7 @@ Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "57mm"
               :over "0mm"
               :under "9mm"))
@@ -4223,7 +4223,7 @@ Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -4619,9 +4619,9 @@ of the period."
           :classification "Lt. Infantry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "3"
               :unitabilitymap
                (unitabilitymap
@@ -4638,9 +4638,9 @@ of the period."
           :classification "Lt. Infantry"
           :unitskillmap
            (unitskillmap
-            :Command
+            :Leadership
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "4"
               :unitabilitymap
                (unitabilitymap
@@ -4722,7 +4722,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "70mm"
               :back "50mm"
               :over "10mm"
@@ -4750,7 +4750,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "70mm"
               :back "50mm"
               :over "10mm"
@@ -4777,7 +4777,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "80mm"))
           :unitskillmap
            (unitskillmap
@@ -4799,7 +4799,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "80mm Sloped"
               :back "45mm"
               :over "30mm"
@@ -4826,7 +4826,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "100mm"
               :back "25mm"
               :over "40mm"
@@ -4855,7 +4855,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "150mm"
               :back "80mm"
               :over "40mm"
@@ -4882,7 +4882,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "35mm"
               :back "0mm"
               :over "0mm"
@@ -4908,7 +4908,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "80mm"))
           :unitskillmap
            (unitskillmap
@@ -4930,7 +4930,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "60mm Sloped"))
           :unitskillmap
            (unitskillmap
@@ -4955,7 +4955,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "80mm Sloped"
               :back "45mm"
               :over "30mm"
@@ -4978,7 +4978,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "200mm"))
           :unitskillmap
            (unitskillmap
@@ -4998,7 +4998,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "30mm"
               :over "0mm"))
           :unitskillmap
@@ -5024,7 +5024,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "100mm"))
           :unitskillmap
            (unitskillmap
@@ -5052,7 +5052,7 @@ of the period."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "150mm"))
           :unitskillmap
            (unitskillmap
@@ -5078,7 +5078,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "30mm"))
           :unitskillmap
            (unitskillmap
@@ -5102,7 +5102,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "15mm"
               :back "8mm"
               :over "6mm"
@@ -5187,7 +5187,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "15mm"))
           :unitskillmap
            (unitskillmap
@@ -5265,7 +5265,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -5295,7 +5295,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -5322,7 +5322,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -5350,7 +5350,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"
@@ -5380,7 +5380,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -5408,7 +5408,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -5436,7 +5436,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"
@@ -5470,7 +5470,7 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "320mm"
               :back "320mm"
               :over "120mm"
@@ -5638,7 +5638,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "40mm"
               :under "6mm"))
           :unitskillmap
@@ -5663,7 +5663,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "42mm"
               :over "15mm"
               :under "6mm"
@@ -5690,7 +5690,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "30mm"
               :over "0mm"))
           :unitskillmap
@@ -5716,7 +5716,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "50mm"))
           :unitskillmap
            (unitskillmap
@@ -5748,7 +5748,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -5776,7 +5776,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -5805,7 +5805,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "3mm"))
           :unitskillmap
            (unitskillmap
@@ -6120,7 +6120,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "10mm"))
           :unitskillmap
            (unitskillmap
@@ -6142,7 +6142,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "33mm"
               :side "9mm"))
           :unitskillmap
@@ -6172,7 +6172,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -6202,7 +6202,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "4mm"))
           :unitskillmap
            (unitskillmap
@@ -6229,7 +6229,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -6260,7 +6260,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
@@ -6308,7 +6308,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "4mm"))
           :unitskillmap
            (unitskillmap
@@ -6338,7 +6338,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "152mm"
               :back "152mm"
               :over "152mm"
@@ -6366,7 +6366,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "45mm"
               :back "45mm"
               :over "25mm"
@@ -6394,7 +6394,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"
@@ -6421,7 +6421,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "60mm"
               :over "20mm"
               :under "60mm"
@@ -6447,7 +6447,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "100mm"
               :over "35mm"
               :under "100mm"
@@ -6474,7 +6474,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "650mm"
               :over "200mm"
               :side "410mm"))
@@ -6499,7 +6499,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"))
+              :name "Armored"))
           :unitskillmap
            (unitskillmap
             :Military
@@ -6527,7 +6527,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"))
+              :name "Armored"))
           :unitskillmap
            (unitskillmap
             :Military
@@ -6551,7 +6551,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"))
+              :name "Armored"))
           :unitskillmap
            (unitskillmap
             :Military
@@ -6812,7 +6812,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "60mm Sloped"
               :back "45mm"
               :over "20mm"
@@ -6838,7 +6838,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "90mm Sloped"
               :under "20mm"))
           :unitskillmap
@@ -6861,7 +6861,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "90mm Sloped"
               :under "20mm"))
           :unitskillmap
@@ -6884,7 +6884,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "130mm"
               :under "20mm"))
           :unitskillmap
@@ -6907,7 +6907,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "110mm"))
           :unitskillmap
            (unitskillmap
@@ -6930,7 +6930,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "160mm Sloped"
               :under "30mm"))
           :unitskillmap
@@ -6953,7 +6953,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "35mm"
               :side "16mm"))
           :unitskillmap
@@ -6976,7 +6976,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "45mm"))
           :unitskillmap
            (unitskillmap
@@ -6998,7 +6998,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "75mm"
               :over "20mm"
               :side "45mm"))
@@ -7023,7 +7023,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "45mm"))
           :unitskillmap
            (unitskillmap
@@ -7075,7 +7075,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :over "0mm"))
           :unitskillmap
@@ -7122,7 +7122,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
@@ -7149,7 +7149,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"
@@ -7176,7 +7176,7 @@ and short effective range reduces the M1935 to a last resort self defense weapon
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"

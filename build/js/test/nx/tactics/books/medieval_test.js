@@ -55,7 +55,7 @@ export default class nx_tactics_books_medieval_test {
           "chapter_medieval_german", 0,
           "chapter_medieval_items", 0,
           "chapter_medieval_overview", 0,
-          "chapter_medieval_scenarios", 0,
+          "chapter_medieval_scenes", 0,
           "chapter_medieval_spanish", 0,
           "tacticsbook", 0
         )

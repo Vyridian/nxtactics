@@ -437,8 +437,8 @@ export default class nx_tactics_books_bestiary {
               ":unitpowermap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
-                ":Venomous",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Venomous")
+                ":Toxins",
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Toxins")
               )
             ),
             "Krukan Chemist",
@@ -491,7 +491,7 @@ export default class nx_tactics_books_bestiary {
           ":name",
           "Sagittarians",
           ":summary",
-          "* Maximum Body - 7\n* Morale - Normal\n* Preferred Skills (Sagittarian) - Melee (Spear), Ranged (Javelin, Shortbow)",
+          "* Maximum Body - 7\n* Morale - Normal\n* Preferred Skills (Sagittarian) - Melee (Spear), Ranged (Javelin, Bow: Short)",
           ":titles",
           "Centaur, Minotaur",
           ":unitmap",
@@ -1055,8 +1055,8 @@ export default class nx_tactics_books_bestiary {
                   ":unititemmap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unititemmap},
-                    "Shortbow",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Shortbow")
+                    "Bow: Short",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Bow: Short")
                   )
                 )
               )
@@ -3289,8 +3289,8 @@ export default class nx_tactics_books_bestiary {
                   ":unititemmap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unititemmap},
-                    "Shortbow",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Shortbow")
+                    "Bow: Short",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Bow: Short")
                   )
                 )
               )
@@ -3795,11 +3795,11 @@ export default class nx_tactics_books_bestiary {
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Mirror Image")
                   )
                 ),
-                ":Venomous",
+                "Toxins",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Venomous",
+                  "Toxins",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},

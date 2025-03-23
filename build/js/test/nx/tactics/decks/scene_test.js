@@ -1,22 +1,21 @@
 'strict mode'
 
-import nx_tactics_decks_scenario_nightonthetown from "../../../../src/nx/tactics/decks/scenario-nightonthetown.js"
+import nx_tactics_decks_scene from "../../../../src/nx/tactics/decks/scene.js"
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
 import nx_tactics_base from "../../../../src/nx/tactics/base.js"
-import nx_tactics_decks_data from "../../../../src/nx/tactics/decks/data.js"
 
-export default class nx_tactics_decks_scenario_nightonthetown_test {
+export default class nx_tactics_decks_scene_test {
 
 
   static test_package(context) {
-    const testcaselist = nx_tactics_decks_scenario_nightonthetown_test.test_cases(context)
+    const testcaselist = nx_tactics_decks_scene_test.test_cases(context)
     const output = vx_core.f_new_from_type(
       vx_test.t_testpackage,
-      ":testpkg", "nx/tactics/decks/scenario-nightonthetown",
+      ":testpkg", "nx/tactics/decks/scene",
       ":caselist", testcaselist,
-      ":coveragesummary", nx_tactics_decks_scenario_nightonthetown_test.test_coveragesummary(),
-      ":coveragedetail", nx_tactics_decks_scenario_nightonthetown_test.test_coveragedetail()
+      ":coveragesummary", nx_tactics_decks_scene_test.test_coveragesummary(),
+      ":coveragedetail", nx_tactics_decks_scene_test.test_coveragedetail()
     );
     return output;
   }
@@ -24,13 +23,13 @@ export default class nx_tactics_decks_scenario_nightonthetown_test {
   static test_coveragesummary() {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragesummary,
-      "testpkg",   "nx/tactics/decks/scenario-nightonthetown", 
+      "testpkg",   "nx/tactics/decks/scene", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 13), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 13), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 2, ":total", 2), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 13), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 2), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -39,7 +38,7 @@ export default class nx_tactics_decks_scenario_nightonthetown_test {
   static test_coveragedetail() {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragedetail,
-      "testpkg", "nx/tactics/decks/scenario-nightonthetown",
+      "testpkg", "nx/tactics/decks/scene",
       "typemap",
         vx_core.f_new_from_type(
           vx_core.t_intmap
@@ -51,19 +50,8 @@ export default class nx_tactics_decks_scenario_nightonthetown_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "deck-nightonthetown", 0,
-          "place-clinic", 0,
-          "place-conveniencestore", 0,
-          "place-gasstation", 0,
-          "place-gunstore", 0,
-          "place-policestation", 0,
-          "place-street", 0,
-          "rule-zombie", 0,
-          "unit-theprofessor", 0,
-          "unit-zombiecrawler", 0,
-          "unit-zombiedog", 0,
-          "unit-zombierunner", 0,
-          "unit-zombiewalker", 0
+          "scenemap-tactics", 0,
+          "tactics-scenemap<-tactics", 0
         )
     )
     return output

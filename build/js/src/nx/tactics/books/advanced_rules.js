@@ -36,9 +36,9 @@ export default class nx_tactics_books_advanced_rules {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
             ":Campaigns",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaigns", ":summary", "* Starting a New Campaign\n* Creating Player Characters\n* Creating Plots\n* Conflict\n* Creating Scenarios\n* Continuing a Campaign"),
-            "Randomized Scenarios",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Randomized Scenarios", ":summary", "* Choose a Map - Any map, indoor or outdoor, square or hex map may be used. The scale must be approximately 1 inch=1.5 meters (5 feet).\n* Choose Starting Positions - Each side rolls 2d6.  From highest to lowest, each side chooses one of the starting positions (usually corners) of the map to start.\n* Deploy Teams - In the same order from highest to lowest each player deploys their teams up to 5 hexes from the edges of the map."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Campaigns", ":summary", "* Starting a New Campaign\n* Creating Player Characters\n* Creating Plots\n* Conflict\n* Creating Scenes\n* Continuing a Campaign"),
+            "Randomized Scenes",
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Randomized Scenes", ":summary", "* Choose a Map - Any map, indoor or outdoor, square or hex map may be used. The scale must be approximately 1 inch=1.5 meters (5 feet).\n* Choose Starting Positions - Each side rolls 2d6.  From highest to lowest, each side chooses one of the starting positions (usually corners) of the map to start.\n* Deploy Teams - In the same order from highest to lowest each player deploys their teams up to 5 hexes from the edges of the map."),
             "Recruit Teams",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Recruit Teams", ":summary", "* Choose Recruitment Points for each Side.\n* Recruit units by spending these points using the [Double Down] rule.\n* Usually, only units from a single Faction may be purchased.")
           )

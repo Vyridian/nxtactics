@@ -51,7 +51,7 @@ export default class nx_tactics_books_ancients_test {
         vx_core.f_new_from_type(
           vx_core.t_intmap,
           "chapter_ancients_overview", 0,
-          "chapter_ancients_scenarios", 0,
+          "chapter_ancients_scenes", 0,
           "chapter_anglo_saxons", 0,
           "chapter_carthaginians", 0,
           "chapter_chinese_dynasty", 0,

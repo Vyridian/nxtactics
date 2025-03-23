@@ -1,0 +1,20 @@
+(package nx/tactics/decks/scene
+ :libs (lib base :path nx/tactics/base)
+ :doc "Scenes")
+
+(func scenemap-tactics : base/scenemap
+ [tactics : base/tactics]
+ (base/scenemap<-scenelist
+  (base/scene
+   :name "scene1")
+  )
+ :doc "Returns the base scenemap")
+
+(func tactics-scenemap<-tactics : base/tactics
+ [tactics : base/tactics]
+ (let : base/tactics
+  [scenemap : base/scenemap :=
+   (scenemap-tactics tactics)]
+  (copy tactics
+   :scenemap scenemap))
+ :doc "Returns a tactics updated with scenemap")

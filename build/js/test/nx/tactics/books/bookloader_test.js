@@ -101,11 +101,11 @@ export default class nx_tactics_books_bookloader_test {
           "rule<-rule-stringmap", 1,
           "rule<-rule-xmlchild", 1,
           "rule<-xml", 0,
-          "scenario<-scenario-key-value", 0,
-          "scenario<-scenario-stringmap", 0,
-          "scenario<-scenario-xmlchild", 0,
-          "scenario<-scenario-xmlteam", 0,
-          "scenario<-xml", 1,
+          "scene<-scene-key-value", 0,
+          "scene<-scene-stringmap", 0,
+          "scene<-scene-xmlchild", 0,
+          "scene<-scene-xmlteam", 0,
+          "scene<-xml", 1,
           "section<-section-key-value", 0,
           "section<-section-stringmap", 0,
           "section<-section-xmlchild", 0,
@@ -115,7 +115,7 @@ export default class nx_tactics_books_bookloader_test {
           "section<-section-xmlplace", 0,
           "section<-section-xmlpower", 0,
           "section<-section-xmlrule", 0,
-          "section<-section-xmlscenario", 0,
+          "section<-section-xmlscene", 0,
           "section<-section-xmlsection", 0,
           "section<-section-xmlskill", 0,
           "section<-section-xmlterrain", 0,
@@ -1184,27 +1184,27 @@ export default class nx_tactics_books_bookloader_test {
     return output
   }
 
-  static f_scenario_from_xml(context) {
+  static f_scene_from_xml(context) {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcase,
       ":passfail", false,
       ":testpkg", "nx/tactics/books/bookloader",
-      ":casename", "scenario<-xml",
+      ":casename", "scene<-xml",
       ":describelist",
         vx_core.f_new_from_type(
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/scenario\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (scenario<-xml\n  (xml/xml\n   :tag \"scenario\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
+            ":describename", "(test\n (base/scene\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\")\n (scene<-xml\n  (xml/xml\n   :tag \"scene\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))))))",
             ":testresult",
             vx_test.f_test(
               context,
-              vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "name", ":image", "image", ":titles", "titles", ":reference", "reference"),
-              nx_tactics_books_bookloader.f_scenario_from_xml(
+              vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "name", ":image", "image", ":titles", "titles", ":reference", "reference"),
+              nx_tactics_books_bookloader.f_scene_from_xml(
                 vx_core.f_new(
                   {"any-1": vx_data_xml.t_xml},
                   ":tag",
-                  "scenario",
+                  "scene",
                   ":propmap",
                   vx_core.f_new({"any-1": vx_core.t_stringmap}, ":name", "name", ":image", "image"),
                   ":children",
@@ -1251,7 +1251,7 @@ export default class nx_tactics_books_bookloader_test {
           vx_test.t_testdescribelist,
           vx_core.f_new_from_type(
             vx_test.t_testdescribe,
-            ":describename", "(test\n (base/section\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :powermap\n   (base/powermap\n    :power1\n     (base/power\n      :name \"power1\"))\n  :scenariomap\n   (base/scenariomap\n    :scenario1\n     (base/scenario\n      :name \"scenario1\"))\n  :sectionmap\n   (base/sectionmap\n    :section1\n     (base/section\n      :name \"section1\"))\n  :skillmap\n   (base/skillmap\n    :skill1\n     (base/skill\n      :name \"skill1\")))\n (section<-xml\n  (xml/xml\n   :tag \"section\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"power\"\n      :propmap\n       (stringmap\n        :name \"power1\"))\n     (xml/xml\n      :tag \"scenario\"\n      :propmap\n       (stringmap\n        :name \"scenario1\"))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section1\"))\n     (xml/xml\n      :tag \"skill\"\n      :propmap\n       (stringmap\n        :name \"skill1\"))))))",
+            ":describename", "(test\n (base/section\n  :name \"name\"\n  :image \"image\"\n  :titles \"titles\"\n  :reference \"reference\"\n  :powermap\n   (base/powermap\n    :power1\n     (base/power\n      :name \"power1\"))\n  :scenemap\n   (base/scenemap\n    :scene1\n     (base/scene\n      :name \"scene1\"))\n  :sectionmap\n   (base/sectionmap\n    :section1\n     (base/section\n      :name \"section1\"))\n  :skillmap\n   (base/skillmap\n    :skill1\n     (base/skill\n      :name \"skill1\")))\n (section<-xml\n  (xml/xml\n   :tag \"section\"\n   :propmap\n    (stringmap\n     :name \"name\"\n     :image \"image\")\n   :children\n    (xml/xmllist\n     (xml/xml\n      :tag \"titles\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"titles\")))\n     (xml/xml\n      :tag \"reference\"\n      :children\n       (xml/xmllist\n        (xml/xml\n         :text \"reference\")))\n     (xml/xml\n      :tag \"power\"\n      :propmap\n       (stringmap\n        :name \"power1\"))\n     (xml/xml\n      :tag \"scene\"\n      :propmap\n       (stringmap\n        :name \"scene1\"))\n     (xml/xml\n      :tag \"section\"\n      :propmap\n       (stringmap\n        :name \"section1\"))\n     (xml/xml\n      :tag \"skill\"\n      :propmap\n       (stringmap\n        :name \"skill1\"))))))",
             ":testresult",
             vx_test.f_test(
               context,
@@ -1271,11 +1271,11 @@ export default class nx_tactics_books_bookloader_test {
                   ":power1",
                   vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "power1")
                 ),
-                ":scenariomap",
+                ":scenemap",
                 vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_scenariomap},
-                  ":scenario1",
-                  vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "scenario1")
+                  {"any-1": nx_tactics_base.t_scenemap},
+                  ":scene1",
+                  vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "scene1")
                 ),
                 ":sectionmap",
                 vx_core.f_new(
@@ -1330,9 +1330,9 @@ export default class nx_tactics_books_bookloader_test {
                     vx_core.f_new(
                       {"any-1": vx_data_xml.t_xml},
                       ":tag",
-                      "scenario",
+                      "scene",
                       ":propmap",
-                      vx_core.f_new({"any-1": vx_core.t_stringmap}, ":name", "scenario1")
+                      vx_core.f_new({"any-1": vx_core.t_stringmap}, ":name", "scene1")
                     ),
                     vx_core.f_new(
                       {"any-1": vx_data_xml.t_xml},
@@ -2303,7 +2303,7 @@ export default class nx_tactics_books_bookloader_test {
       nx_tactics_books_bookloader_test.f_power_from_xml(context),
       nx_tactics_books_bookloader_test.f_rule_from_rule_stringmap(context),
       nx_tactics_books_bookloader_test.f_rule_from_rule_xmlchild(context),
-      nx_tactics_books_bookloader_test.f_scenario_from_xml(context),
+      nx_tactics_books_bookloader_test.f_scene_from_xml(context),
       nx_tactics_books_bookloader_test.f_section_from_xml(context),
       nx_tactics_books_bookloader_test.f_skill_from_skill_xmlchild(context),
       nx_tactics_books_bookloader_test.f_skill_from_xml(context),

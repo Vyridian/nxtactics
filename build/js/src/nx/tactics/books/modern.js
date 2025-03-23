@@ -759,18 +759,18 @@ export default class nx_tactics_books_modern {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Ping Pong Player")
           )
         ),
-        "Modern Scenarios",
+        "Modern Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Modern Scenarios",
-          ":scenariomap",
+          "Modern Scenes",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Boxing Match",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Boxing Match"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Boxing Match"),
             "Soccer Game",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Soccer Game")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Soccer Game")
           )
         )
       )

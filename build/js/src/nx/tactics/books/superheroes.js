@@ -1486,7 +1486,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "15tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance"),
                 ":Longevity",
@@ -1834,7 +1834,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "75tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "She is able to withstand bullets from pistols and machine gun fire, and can also absorb mortar shells and energy blasts, though extremely high-energy attacks may overload her absorbing ability")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "She is able to withstand bullets from pistols and machine gun fire, and can also absorb mortar shells and energy blasts, though extremely high-energy attacks may overload her absorbing ability")
               )
             ),
             "Iron Man",
@@ -1850,7 +1850,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "85tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               )
@@ -1902,7 +1902,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "75tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               ),
@@ -1968,7 +1968,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "100tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               ),
@@ -2032,7 +2032,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "2tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               ),
@@ -2112,7 +2112,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "75tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               )
@@ -2130,7 +2130,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "85tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance"),
                 ":Fire",
@@ -2168,7 +2168,7 @@ export default class nx_tactics_books_superheroes {
                 ":Strength",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Strength", ":strength", "85tons"),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored"),
                 ":Endurance",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Endurance")
               )
@@ -2854,7 +2854,7 @@ export default class nx_tactics_books_superheroes {
                   )
                 ),
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored")
               )
             ),
             "Lash, Renegade",

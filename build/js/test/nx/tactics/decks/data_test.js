@@ -9,7 +9,7 @@ import nx_tactics_decks_ability from "../../../../src/nx/tactics/decks/ability.j
 import nx_tactics_decks_item from "../../../../src/nx/tactics/decks/item.js"
 import nx_tactics_decks_place from "../../../../src/nx/tactics/decks/place.js"
 import nx_tactics_decks_power from "../../../../src/nx/tactics/decks/power.js"
-import nx_tactics_decks_scenario from "../../../../src/nx/tactics/decks/scenario.js"
+import nx_tactics_decks_scene from "../../../../src/nx/tactics/decks/scene.js"
 import nx_tactics_decks_specialty from "../../../../src/nx/tactics/decks/specialty.js"
 import nx_tactics_decks_skill from "../../../../src/nx/tactics/decks/skill.js"
 import nx_tactics_decks_unit from "../../../../src/nx/tactics/decks/unit.js"

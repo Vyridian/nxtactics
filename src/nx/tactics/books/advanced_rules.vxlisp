@@ -202,15 +202,15 @@
 * Creating Player Characters
 * Creating Plots
 * Conflict
-* Creating Scenarios
+* Creating Scenes
 * Continuing a Campaign")
-        "Randomized Scenarios"
+        "Randomized Scenes"
          (rule
-          :name "Randomized Scenarios"
+          :name "Randomized Scenes"
           :summary
            "* Choose a Map - Any map, indoor or outdoor, square or hex map may be used. The scale must be approximately 1 inch=1.5 meters (5 feet).
-* Choose Starting Positions - Each side rolls 2d6.  From highest to lowest, each side chooses one of the starting positions (usually corners) of the map to start.
-* Deploy Teams - In the same order from highest to lowest each player deploys their teams up to 5 hexes from the edges of the map.")
+            * Choose Starting Positions - Each side rolls 2d6.  From highest to lowest, each side chooses one of the starting positions (usually corners) of the map to start.
+            * Deploy Teams - In the same order from highest to lowest each player deploys their teams up to 5 hexes from the edges of the map.")
         "Recruit Teams"
          (rule
           :name "Recruit Teams"

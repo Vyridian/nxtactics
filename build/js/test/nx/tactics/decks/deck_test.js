@@ -9,8 +9,8 @@ import nx_tactics_decks_data from "../../../../src/nx/tactics/decks/data.js"
 import nx_tactics_decks_disorder from "../../../../src/nx/tactics/decks/disorder.js"
 import nx_tactics_decks_restraint from "../../../../src/nx/tactics/decks/restraint.js"
 import nx_tactics_decks_rule from "../../../../src/nx/tactics/decks/rule.js"
-import nx_tactics_decks_scenario_murintrail from "../../../../src/nx/tactics/decks/scenario-murintrail.js"
-import nx_tactics_decks_scenario_nightonthetown from "../../../../src/nx/tactics/decks/scenario-nightonthetown.js"
+import nx_tactics_decks_scene_murintrail from "../../../../src/nx/tactics/decks/scene-murintrail.js"
+import nx_tactics_decks_scene_nightonthetown from "../../../../src/nx/tactics/decks/scene-nightonthetown.js"
 import nx_tactics_decks_starter from "../../../../src/nx/tactics/decks/starter.js"
 import nx_tactics_decks_tarot from "../../../../src/nx/tactics/decks/tarot.js"
 import nx_tactics_decks_trauma from "../../../../src/nx/tactics/decks/trauma.js"
@@ -67,7 +67,7 @@ export default class nx_tactics_decks_deck_test {
           "deck-items", 0,
           "deck-places", 0,
           "deck-powers", 0,
-          "deck-scenarios", 0,
+          "deck-scenes", 0,
           "deck-setup", 0,
           "deck-skills", 0,
           "deck-units", 0

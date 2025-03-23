@@ -463,6 +463,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_alteration_powers
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_alteration_powers = {
@@ -473,7 +474,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_alteration_powers)
-  static f_chapter_alteration_powers() {
+  static f_chapter_alteration_powers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -593,6 +594,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_body_powers
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_body_powers = {
@@ -603,7 +605,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_body_powers)
-  static f_chapter_body_powers() {
+  static f_chapter_body_powers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -977,49 +979,7 @@ export default class nx_tactics_books_powers {
               )
             ),
             ":Toxins",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Toxins",
-              ":reference",
-              "* Say 'ah'. Some poisons can kill people in the thousands with that amount. Like botulinum toxin. It inhibits acetylcholine release, causing loss of muscle tone, lethary, .. dizziness .., visual impairment.., heavy eyelids, intense thirst, loss of speech, vomiting, diarrhea, stomach distention, breathing difficulty.. then.. respiratory failure. - A.K.I, Street Fighter 6",
-              ":titles",
-              "Poisonous, Venomous",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Blinding Spit",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blinding Spit"),
-                "Blinding Toxin",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blinding Toxin"),
-                "Irritating Toxin",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Irritating Toxin"),
-                "Paralyzing Bite",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paralyzing Bite"),
-                "Paralyzing Spit",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paralyzing Spit"),
-                "Paralyzing Spray",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paralyzing Spray"),
-                "Paralyzing Sting",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paralyzing Sting"),
-                "Poison Bite",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poison Bite"),
-                "Poison Blood",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poison Blood"),
-                "Poison Spit",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poison Spit"),
-                "Poison Spray",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poison Spray"),
-                "Poison Sting",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poison Sting"),
-                "Poison Touch",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poison Touch"),
-                "Poisonous Flesh",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poisonous Flesh", ":summary", "* Poisonous if bitten"),
-                "Poisonous Skin",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Poisonous Skin", ":summary", "* Poisonous to the touch")
-              )
-            ),
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Toxins"),
             ":Transformation",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -1542,6 +1502,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_energy_and_forces
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_energy_and_forces = {
@@ -1552,7 +1513,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_energy_and_forces)
-  static f_chapter_energy_and_forces() {
+  static f_chapter_energy_and_forces(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2278,6 +2239,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_enhancement_powers
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_enhancement_powers = {
@@ -2288,7 +2250,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_enhancement_powers)
-  static f_chapter_enhancement_powers() {
+  static f_chapter_enhancement_powers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2365,6 +2327,28 @@ export default class nx_tactics_books_powers {
                 {"any-1": nx_tactics_base.t_abilitymap},
                 "Commanding Presense",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Commanding Presense")
+              ),
+              "Psychic Power",
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_skill},
+                ":name",
+                "Psychic Power",
+                ":summary",
+                "* This skill is used when manifesting and controlling a [Power] that directly affect the [Will] of targets.\n* Psychic Powers must have range and see or 'know' the target.",
+                ":titles",
+                "Psychic Combat, Psychological Warfare, Soul Combat, Spirit Combat, Test of Will",
+                ":stat",
+                "Will",
+                ":abilitymap",
+                vx_core.f_new(
+                  {"any-1": nx_tactics_base.t_abilitymap},
+                  "Ego Whip",
+                  vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ego Whip"),
+                  "Psychic Knife",
+                  vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Psychic Knife"),
+                  "Tower of Iron Will",
+                  vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tower of Iron Will")
+                )
               )
             )
           )
@@ -2376,6 +2360,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_godlike_powers
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_godlike_powers = {
@@ -2386,7 +2371,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_godlike_powers)
-  static f_chapter_godlike_powers() {
+  static f_chapter_godlike_powers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2510,6 +2495,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_mental_powers_and_weaknesses
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_mental_powers_and_weaknesses = {
@@ -2520,7 +2506,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_mental_powers_and_weaknesses)
-  static f_chapter_mental_powers_and_weaknesses() {
+  static f_chapter_mental_powers_and_weaknesses(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2931,134 +2917,146 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cloud Senses", ":reference", "These aren't the droids you're looking for... - Obi-Wan Kenobi, Star Wars", ":summary", "Reduce chance that target will notice things."),
                 ":Confusion",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Confusion"),
-                ":Lingua-Franca",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lingua-Franca", ":summary", "Synergy with [Linguistics]"),
-                "Memory Lapse",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Memory Lapse"),
-                "Memory Restoration",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Memory Restoration", ":summary", "* Retrieve lost memories from a subject."),
-                "Mental Bond",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Bond"),
-                "Mental Cloak",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Cloak", ":summary", "All living units must roll Mind vs Mental Cloak to target this unit.  Another target may not be chosen."),
-                "Mental Probe",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Probe", ":summary", "Delve deeper into targets memories each turn.", ":titles", "Mind Probe"),
-                "Mental Projection",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Projection"),
-                "Mind Reading",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mind Reading", ":summary", "Owner of target unit must announce the next Hits movements and actions that unit will perform.  That unit must perform those actions if it is able."),
-                "Mind's Eye",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mind's Eye", ":summary", "* Eye - The caster can close his eyes and see into the astral world instead of the real world."),
-                "Store Consciousness",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Store Consciousness", ":summary", "* [Action]: At the moment of another unit's death, capture its spirit within one's own mind.\n* [Action]: If the dead unit's body can somehow be restored (or a perfect duplicate can be found), transfer the captured spirit back into the body."),
-                ":Telepathy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Telepathy", ":summary", "Unit owner may have up to a Hits minute secret conversation with anyone (Player or not, strategy or not). Clock starts once roll is made."),
-                "Transfer Consciousness",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Transfer Consciousness", ":reference", "* Change Now! - Captain Jinyu, Dragonball Z", ":titles", "Body Swap")
+                "Intellect Fortress",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Intellect Fortress")
               )
             ),
-            "Mental Weakness",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Mental Weakness",
-              ":summary",
-              "* Note: Mental Weaknesses may be physical in nature, but they are grouped here because they effect mental function.",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Addle Minded",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Addle Minded", ":summary", "* Tendency to forget to do things or misplace things.  The missed things may be trival, important, or critical.", ":titles", "Absent Minded, Addle Minded, Airhead"),
-                ":Addiction",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Addiction"),
-                "Alien Thoughts",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Alien Thoughts"),
-                ":Amnesia",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Amnesia", ":reference", "* Memento", ":summary", "* Unit has strange lapses of memory. It may forget generally known facts, friends, family, or own identity."),
-                ":Anxious",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Anxious"),
-                ":Bipolar",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bipolar", ":summary", "* Prone to fits of erratic up moods and severe depression. May be moody, lie around and mope, risk life and limb, or even suicidal.", ":titles", "Manic Depressive"),
-                ":Bloodthirsty",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bloodthirsty", ":summary", "* Must attack Bleeding Enemies first. May attack Bleeding Allies if a Spirit roll fails."),
-                ":Brainwashed",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Brainwashed"),
-                ":Catatonia",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Catatonia"),
-                "Compulsive Liar",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Compulsive Liar"),
-                ":Cleptomania",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cleptomania"),
-                ":Cyberpsychosis",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cyberpsychosis", ":reference", "* Something happens when you start to add metal and plastic to people. They start to change. And it isn't pretty - Cyberpunk RPG", ":summary", "* A psychotic aberration suffered by excessive users of cyberware. It begins as a sense of loss for the portions of the body replaced with unfeeling machinery. Later it manifests as a Overconfidence and detachment from other people (sometimes in favor of machines). Extreme cases lead to more serious derangements such as: Martyr Syndrome, Megalomania, Delusions of Grandear, Inferiority Complex, and Messiah Complex."),
-                ":Delusional",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Delusional", ":reference", "* The walls of reality will come crashing down. One minute you'll be the savior of the rebel cause.  The next thing you know you'll be Cohagen's busom buddy. You'll even have fantasies of alien civilizations, as you requested, but in the end, back on Earth, you'll be lobotomized! - Dr. Edgemar, Total Recall", ":summary", "* Believe things that are not real.  May hear voices or see things.", ":titles", "Free-form Delusion, Schizoid Embelism"),
-                ":Flashbacks",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Flashbacks"),
-                ":Frightened",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Frightened", ":summary", "* Lacks nerve, especially in combat.  May freeze or flee.", ":titles", "Cowardly"),
-                ":Hallucinations",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hallucinations"),
-                ":Homicidal",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Homicidal"),
-                "Inferiority Complex",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Inferiority Complex"),
-                ":Intolerant",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Intolerant"),
-                ":Manic",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Manic"),
-                "Martyr Syndrome",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Martyr Syndrome"),
-                ":Masochism",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Masochism", ":summary", "* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse."),
-                ":Megalomania",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Megalomania", ":summary", "* A specific form of delusion that you are more important than you are. May believe you are destined for greatness, a Messiah, or even God.", ":titles", "Delusions of Grandeur, Messiah Complex"),
-                "Mental Decay",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Decay", ":titles", "Alzheimers"),
-                "Multiple Personalities",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Multiple Personalities", ":reference", "Sybil", ":summary", "* More than one distinct personality. Personalities may change under stress or randomly.  Personalities may like, dislike, or be oblivious to each other. Some may be dangerous to self or others."),
-                ":Narssicist",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Narssicist"),
-                ":Nightmares",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Nightmares"),
-                ":Obsessed",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Obsessed", ":summary", "* Focused on a single person or object and will talk about it all the time. May risk embarrassment, financial loss, or bodily harm to pursue it."),
-                "Obsessive Compulsive",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Obsessive Compulsive", ":summary", "* Compulsively performs trivial activities.", ":titles", "OCD"),
-                ":Overcompensating",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Overcompensating", ":summary", "* Constantly attempt to draw attention away from preceived flaw."),
-                ":Overconfidence",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Overconfidence"),
-                ":Paranoia",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paranoia", ":reference", "Just because you're paranoid doesn't mean they aren't after you. - Catch 22", ":summary", "* Belief that enemies are everywhere. May rant endlessly about the conspiracy, compulsively work on defenses, risk everything to stop them."),
-                ":Phobia",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Phobia", ":summary", "* Unreasoning fear of some common thing. Fear of dogs, heights, sounds, or colors. May feel discomfort, paralyzing fear, beserk fear, or catatonia."),
-                "Post Traumatic Stress Disorder",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Post Traumatic Stress Disorder"),
-                ":Pyromania",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pyromania"),
-                ":Robophobia",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Robophobia", ":reference", "* Uncanny Valley - The theory that as a robot is made more humanlike in its appearance and motion, the emotional response from a human being to the robot will become increasingly positive, until a point is reached beyond which the response quickly becomes that of strong revulsion. However, as the appearance and motion continue to become less distinguishable from a human being, the emotional response becomes positive once more.\n* This area of repulsive response aroused by a robot with appearance and motion between a 'barely human' and 'fully human' entity is called the uncanny valley. The name captures the idea that a robot which is 'almost human' will seem overly strange and corpselike.\n* Not robots...walking dead. They pretend we control them...but really... - Doctor Who, The Robots of Death\n* The name 'Grimwade's Syndrome' was an in-joke reference to production assistant Peter Grimwade who had bemoaned the fact that the stories on which he was assigned to work almost always involved robots. - Doctor Who, The Robots of Death", ":summary", "* Fear of Robots", ":titles", "Grimwade's Syndrome, Uncanny Valley"),
-                "Refuses to Kill",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Refuses to Kill"),
-                ":Sadistic",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sadistic"),
-                "Sex Crazed",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sex Crazed", ":titles", "Cassonova, Heartbreaker, Lady Killer, Libertine, Lothario, Romeo, Sex Addict"),
-                ":Shy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Shy", ":summary", "* Hate dealing with others.  Avoid interactions with new people.  May need to retreat from others."),
-                ":Sociopath",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sociopath"),
-                ":Stubborn",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stubborn", ":summary", "* Will not give in or compromise.  May risk embarrassment, financial loss, or injury to prove you're right."),
-                ":Tempermental",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tempermental", ":reference", "* What do we have? Sea Bass. Riiiight? They are mutated Sea Bass. Really. Are they ill-tempered.  Absolutely. Well that's a start. - Dr. Evil and Number 2 - Austin Powers", ":summary", "* Constantly irritable. When temper flares will risk embarrassment, financial loss, incarceration, or life and limb.", ":titles", "Bad Tempered, Hot Tempered"),
-                "Unreasoning Hatred",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unreasoning Hatred"),
-                ":Vengeful",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vengeful")
-              )
-            )
+            ":Lingua-Franca",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lingua-Franca", ":summary", "Synergy with [Linguistics]"),
+            "Memory Lapse",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Memory Lapse"),
+            "Memory Restoration",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Memory Restoration", ":summary", "* Retrieve lost memories from a subject."),
+            "Mental Bond",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Bond"),
+            "Mental Cloak",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Cloak", ":summary", "All living units must roll Mind vs Mental Cloak to target this unit.  Another target may not be chosen."),
+            "Mental Grip",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Grip"),
+            "Mental Gymnastics",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Gymnastics"),
+            "Mental Probe",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Probe", ":summary", "Delve deeper into targets memories each turn.", ":titles", "Mind Probe"),
+            "Mental Projection",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Projection"),
+            "Mind Reading",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mind Reading", ":summary", "Owner of target unit must announce the next Hits movements and actions that unit will perform.  That unit must perform those actions if it is able."),
+            "Mind Whip",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mind Whip"),
+            "Mind's Eye",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mind's Eye", ":summary", "* Eye - The caster can close his eyes and see into the astral world instead of the real world."),
+            "Psionic Blade",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Psionic Blade"),
+            "Psionic Knife",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Psionic Knife"),
+            "Store Consciousness",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Store Consciousness", ":summary", "* [Action]: At the moment of another unit's death, capture its spirit within one's own mind.\n* [Action]: If the dead unit's body can somehow be restored (or a perfect duplicate can be found), transfer the captured spirit back into the body."),
+            ":Telepathy",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Telepathy", ":summary", "Unit owner may have up to a Hits minute secret conversation with anyone (Player or not, strategy or not). Clock starts once roll is made."),
+            "Transfer Consciousness",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Transfer Consciousness", ":reference", "* Change Now! - Captain Jinyu, Dragonball Z", ":titles", "Body Swap")
+          )
+        ),
+        "Mental Weakness",
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_power},
+          ":name",
+          "Mental Weakness",
+          ":summary",
+          "* Note: Mental Weaknesses may be physical in nature, but they are grouped here because they effect mental function.",
+          ":abilitymap",
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_abilitymap},
+            "Addle Minded",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Addle Minded", ":summary", "* Tendency to forget to do things or misplace things.  The missed things may be trival, important, or critical.", ":titles", "Absent Minded, Addle Minded, Airhead"),
+            ":Addiction",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Addiction"),
+            "Alien Thoughts",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Alien Thoughts"),
+            ":Amnesia",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Amnesia", ":reference", "* Memento", ":summary", "* Unit has strange lapses of memory. It may forget generally known facts, friends, family, or own identity."),
+            ":Anxious",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Anxious"),
+            ":Bipolar",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bipolar", ":summary", "* Prone to fits of erratic up moods and severe depression. May be moody, lie around and mope, risk life and limb, or even suicidal.", ":titles", "Manic Depressive"),
+            ":Bloodthirsty",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Bloodthirsty", ":summary", "* Must attack Bleeding Enemies first. May attack Bleeding Allies if a Spirit roll fails."),
+            ":Brainwashed",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Brainwashed"),
+            ":Catatonia",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Catatonia"),
+            "Compulsive Liar",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Compulsive Liar"),
+            ":Cleptomania",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cleptomania"),
+            ":Cyberpsychosis",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cyberpsychosis", ":reference", "* Something happens when you start to add metal and plastic to people. They start to change. And it isn't pretty - Cyberpunk RPG", ":summary", "* A psychotic aberration suffered by excessive users of cyberware. It begins as a sense of loss for the portions of the body replaced with unfeeling machinery. Later it manifests as a Overconfidence and detachment from other people (sometimes in favor of machines). Extreme cases lead to more serious derangements such as: Martyr Syndrome, Megalomania, Delusions of Grandear, Inferiority Complex, and Messiah Complex."),
+            ":Delusional",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Delusional", ":reference", "* The walls of reality will come crashing down. One minute you'll be the savior of the rebel cause.  The next thing you know you'll be Cohagen's busom buddy. You'll even have fantasies of alien civilizations, as you requested, but in the end, back on Earth, you'll be lobotomized! - Dr. Edgemar, Total Recall", ":summary", "* Believe things that are not real.  May hear voices or see things.", ":titles", "Free-form Delusion, Schizoid Embelism"),
+            ":Flashbacks",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Flashbacks"),
+            ":Frightened",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Frightened", ":summary", "* Lacks nerve, especially in combat.  May freeze or flee.", ":titles", "Cowardly"),
+            ":Hallucinations",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hallucinations"),
+            ":Homicidal",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Homicidal"),
+            "Inferiority Complex",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Inferiority Complex"),
+            ":Intolerant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Intolerant"),
+            ":Manic",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Manic"),
+            "Martyr Syndrome",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Martyr Syndrome"),
+            ":Masochism",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Masochism", ":summary", "* Dislikes self. Will go out of way to injure oneself. May seek verbal, physical, psychological, or sexual abuse. May seek life threatening abuse."),
+            ":Megalomania",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Megalomania", ":summary", "* A specific form of delusion that you are more important than you are. May believe you are destined for greatness, a Messiah, or even God.", ":titles", "Delusions of Grandeur, Messiah Complex"),
+            "Mental Decay",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Decay", ":titles", "Alzheimers"),
+            "Multiple Personalities",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Multiple Personalities", ":reference", "Sybil", ":summary", "* More than one distinct personality. Personalities may change under stress or randomly.  Personalities may like, dislike, or be oblivious to each other. Some may be dangerous to self or others."),
+            ":Narssicist",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Narssicist"),
+            ":Nightmares",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Nightmares"),
+            ":Obsessed",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Obsessed", ":summary", "* Focused on a single person or object and will talk about it all the time. May risk embarrassment, financial loss, or bodily harm to pursue it."),
+            "Obsessive Compulsive",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Obsessive Compulsive", ":summary", "* Compulsively performs trivial activities.", ":titles", "OCD"),
+            ":Overcompensating",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Overcompensating", ":summary", "* Constantly attempt to draw attention away from preceived flaw."),
+            ":Overconfidence",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Overconfidence"),
+            ":Paranoia",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paranoia", ":reference", "Just because you're paranoid doesn't mean they aren't after you. - Catch 22", ":summary", "* Belief that enemies are everywhere. May rant endlessly about the conspiracy, compulsively work on defenses, risk everything to stop them."),
+            ":Phobia",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Phobia", ":summary", "* Unreasoning fear of some common thing. Fear of dogs, heights, sounds, or colors. May feel discomfort, paralyzing fear, beserk fear, or catatonia."),
+            "Post Traumatic Stress Disorder",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Post Traumatic Stress Disorder"),
+            ":Pyromania",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pyromania"),
+            ":Robophobia",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Robophobia", ":reference", "* Uncanny Valley - The theory that as a robot is made more humanlike in its appearance and motion, the emotional response from a human being to the robot will become increasingly positive, until a point is reached beyond which the response quickly becomes that of strong revulsion. However, as the appearance and motion continue to become less distinguishable from a human being, the emotional response becomes positive once more.\n* This area of repulsive response aroused by a robot with appearance and motion between a 'barely human' and 'fully human' entity is called the uncanny valley. The name captures the idea that a robot which is 'almost human' will seem overly strange and corpselike.\n* Not robots...walking dead. They pretend we control them...but really... - Doctor Who, The Robots of Death\n* The name 'Grimwade's Syndrome' was an in-joke reference to production assistant Peter Grimwade who had bemoaned the fact that the stories on which he was assigned to work almost always involved robots. - Doctor Who, The Robots of Death", ":summary", "* Fear of Robots", ":titles", "Grimwade's Syndrome, Uncanny Valley"),
+            "Refuses to Kill",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Refuses to Kill"),
+            ":Sadistic",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sadistic"),
+            "Sex Crazed",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sex Crazed", ":titles", "Cassonova, Heartbreaker, Lady Killer, Libertine, Lothario, Romeo, Sex Addict"),
+            ":Shy",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Shy", ":summary", "* Hate dealing with others.  Avoid interactions with new people.  May need to retreat from others."),
+            ":Sociopath",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sociopath"),
+            ":Stubborn",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stubborn", ":summary", "* Will not give in or compromise.  May risk embarrassment, financial loss, or injury to prove you're right."),
+            ":Tempermental",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tempermental", ":reference", "* What do we have? Sea Bass. Riiiight? They are mutated Sea Bass. Really. Are they ill-tempered.  Absolutely. Well that's a start. - Dr. Evil and Number 2 - Austin Powers", ":summary", "* Constantly irritable. When temper flares will risk embarrassment, financial loss, incarceration, or life and limb.", ":titles", "Bad Tempered, Hot Tempered"),
+            "Unreasoning Hatred",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Unreasoning Hatred"),
+            ":Vengeful",
+            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Vengeful")
           )
         )
       )
@@ -3068,6 +3066,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_movement_powers
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_movement_powers = {
@@ -3078,7 +3077,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_movement_powers)
-  static f_chapter_movement_powers() {
+  static f_chapter_movement_powers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3344,6 +3343,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_physical_powers_and_weaknesses
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_physical_powers_and_weaknesses = {
@@ -3354,7 +3354,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_physical_powers_and_weaknesses)
-  static f_chapter_physical_powers_and_weaknesses() {
+  static f_chapter_physical_powers_and_weaknesses(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3398,67 +3398,7 @@ export default class nx_tactics_books_powers {
               )
             ),
             ":Armored",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Armored",
-              ":summary",
-              "* Armor normally alters appearance and may be a permanent alteration or a suit that may be donned.\n* [+1 Value] for Armor that can appear on demand.\n* [+2 Value] for Armor that cannot be detected.\nBody Armor may be permanent or temporary.  If permanent, no time is needed to activate it, but is must either be donned and carried or it permanently alters appearance.",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Auto Med System",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Auto Med System", ":summary", "* Detects severe damage to the wearer and automatically takes action to reduce shock and maintain suit integrity (sealing leaks or amputating if necessary)."),
-                "Ablative Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ablative Armor", ":summary", "* Armor that vaporizes when hit decreasing damage but also damaging the armor.\n* Ignore the first point of [Damage] and reduce [Armor] (on that facing) instead."),
-                "Hardened vs. Energy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hardened vs. Energy", ":summary", "* [Damage]: [+2 Armor] if attack is an [Energy Weapon]\n* Only 1 Hardened vs. ability may be taken"),
-                "Body Flares",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Body Flares", ":summary", "* Detects and distracts heat seaking missiles,\n* [Passive] - +1 Defense vs. Heat-Seaking Missiles (3 uses)"),
-                "Corrosion Resistance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Corrosion Resistance", ":summary", "* [Passive] - +1 Armor vs. Corrosive Agents"),
-                "Cyro Sleep System",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cyro Sleep System", ":summary", "* Can freeze the wearer into cryo-sleep and armor runs on minimal power to preserve the wearer from hostile environments or critical wounds for up to a month before power gives out."),
-                "Electrical Resistance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Electrical Resistance", ":summary", "* [Passive] - +1 Armor vs. Electricity"),
-                "Environmental Containment",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Environmental Containment", ":summary", "* Suit is sealed against chemical and biological weapons except corrosive ones. It is also water-proof."),
-                "Environmental Independence",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Environmental Independence", ":summary", "* Suit is sealed against most hostile environments including space. Does not include corrosive environments.\n* Requires - [Enviromental Containment]"),
-                "Floation Device",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Floation Device", ":summary", "* An emergency floatation device."),
-                "Grappling Hoist",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Grappling Hoist", ":summary", "* A grappling dart that is fired into stone or hooked onto any uneven surface. The attached winch can then pull the wearer to the target or vis versa depending on relative weight. This can be used for climbing or towing. The darts can be recovered and reused, but they are often not recoverable. 2 replacement darts are included."),
-                "Hardened vs. Fire",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hardened vs. Fire", ":summary", "* [Damage]: [+2 Armor] if attack produces [Fire] tokens\n* Only 1 Hardened vs. ability may be taken"),
-                "Hardened vs. Projectiles",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hardened vs. Projectiles", ":summary", "* [Damage]: [+2 Armor] if attack is a [Projectile]\n* Only 1 Hardened vs. ability may be taken"),
-                "Infrared Dampener",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Infrared Dampener", ":summary", "* By activating this system, the armor reduces all heat signatures. Use of any system (even passive ones) will negate the stealth.\n* [Continuous Action] - Stealth vs. Infrared Sensors"),
-                "Magnetic Resistance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Magnetic Resistance", ":summary", "* Reduces the chance that a magnetic attachment can hold on the armor (assuming it is metallic).\n* [Passive] - +1 Armor vs. Magnetism"),
-                "Missile Mount",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Missile Mount", ":summary", "* A special mount to add a missile pack on the back of the armor."),
-                "Plasma Resistance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Plasma Resistance", ":summary", "* Detects and disrupts the magnetic bottle surrounding plasma rounds causing them to detonate too early.\n* [Passive] - +1 Armor vs. Plasma"),
-                "Pressure Resistance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pressure Resistance", ":summary", "* [Passive] - +1 Armor vs. Pressure and Impact"),
-                "Radar Dampener",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Radar Dampener", ":summary", "* By activating this system, the armor reduces all radar signatures. Use of any system (even passive ones) will negate the stealth.\n* [Continuous Action] - Stealth vs. Radar"),
-                "Radar Jammer",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Radar Jammer", ":summary", "* By activating this system, the armor emits powerful radar white noise.\n* [Continuous Action] - [-Range] Radar sensors detection to any target within range."),
-                "Radiation Resistance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Radiation Resistance", ":summary", "* [Passive] - +1 Armor vs. Radiation"),
-                "Reactive Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Reactive Armor", ":summary", "* Exterior layer of armor explodes on impact reducing damage of the first hit but reduces armor rating for all subsequent hits.\n* [Passive] - +2 Armor vs. the first hit. -1 Armor for each subsequent hit."),
-                "Turret Mount",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Turret Mount", ":summary", "* A special mount to add a turreted weapon on the back of the armor."),
-                "Ultraviolet Jammer",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ultraviolet Jammer", ":summary", "* By activating this system, the armor emits a powerful blinding strobe in the ultraviolet band.\n* [Continuous Action] - [-Range] Ultraviolet sensors detection to any target within range."),
-                "Underwater Operation",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Underwater Operation", ":summary", "* Sealed against water and can operate underwater. Small thrusters allow slow movement underwater. Oxygen scrubbers allow extended underwater operation.")
-              )
-            ),
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Armored"),
             ":Fortitude",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -3730,6 +3670,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_powers_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_powers_overview = {
@@ -3740,7 +3681,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_powers_overview)
-  static f_chapter_powers_overview() {
+  static f_chapter_powers_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3758,6 +3699,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_special_modifiers
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_special_modifiers = {
@@ -3768,7 +3710,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_special_modifiers)
-  static f_chapter_special_modifiers() {
+  static f_chapter_special_modifiers(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3908,6 +3850,7 @@ export default class nx_tactics_books_powers {
 
   /**
    * @function chapter_strength_and_weaknesses
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_strength_and_weaknesses = {
@@ -3918,7 +3861,7 @@ export default class nx_tactics_books_powers {
   }
 
   // (func chapter_strength_and_weaknesses)
-  static f_chapter_strength_and_weaknesses() {
+  static f_chapter_strength_and_weaknesses(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -4185,29 +4128,29 @@ export default class nx_tactics_books_powers {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_chaptermap},
         "Powers Overview",
-        nx_tactics_books_powers.f_chapter_powers_overview(),
+        nx_tactics_books_powers.f_chapter_powers_overview(tactics),
         "Special Modifiers",
-        nx_tactics_books_powers.f_chapter_special_modifiers(),
+        nx_tactics_books_powers.f_chapter_special_modifiers(tactics),
         "Equipment Powers",
         nx_tactics_books_powers.f_chapter_equipment_powers(tactics),
         "Strength and Weaknesses",
-        nx_tactics_books_powers.f_chapter_strength_and_weaknesses(),
+        nx_tactics_books_powers.f_chapter_strength_and_weaknesses(tactics),
         "Mental Powers and Weaknesses",
-        nx_tactics_books_powers.f_chapter_mental_powers_and_weaknesses(),
+        nx_tactics_books_powers.f_chapter_mental_powers_and_weaknesses(tactics),
         "Movement Powers",
-        nx_tactics_books_powers.f_chapter_movement_powers(),
+        nx_tactics_books_powers.f_chapter_movement_powers(tactics),
         "Physical Powers and Weaknesses",
-        nx_tactics_books_powers.f_chapter_physical_powers_and_weaknesses(),
+        nx_tactics_books_powers.f_chapter_physical_powers_and_weaknesses(tactics),
         "Body Powers",
-        nx_tactics_books_powers.f_chapter_body_powers(),
+        nx_tactics_books_powers.f_chapter_body_powers(tactics),
         "Energy and Forces",
-        nx_tactics_books_powers.f_chapter_energy_and_forces(),
+        nx_tactics_books_powers.f_chapter_energy_and_forces(tactics),
         "Enhancement Powers",
-        nx_tactics_books_powers.f_chapter_enhancement_powers(),
+        nx_tactics_books_powers.f_chapter_enhancement_powers(tactics),
         "Alteration Powers",
-        nx_tactics_books_powers.f_chapter_alteration_powers(),
+        nx_tactics_books_powers.f_chapter_alteration_powers(tactics),
         "Godlike Powers",
-        nx_tactics_books_powers.f_chapter_godlike_powers()
+        nx_tactics_books_powers.f_chapter_godlike_powers(tactics)
       )
     )
     return output

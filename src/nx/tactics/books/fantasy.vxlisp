@@ -350,9 +350,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :level "7"
               :unititemmap
                (unititemmap
-                "Shortbow"
+                "Bow: Short"
                  (unititem
-                  :name "Shortbow")))))))
+                  :name "Bow: Short")))))))
     "Nexus Fantasy Actors"
      (section
       :name "Nexus Fantasy Actors"

@@ -9,7 +9,7 @@
   :chaptermap
    (base/chaptermap
     "Medieval Overview" (chapter_medieval_overview)
-    "Medieval Scenarios" (chapter_medieval_scenarios)
+    "Medieval Scenes" (chapter_medieval_scenes)
     "Medieval Items" (chapter_medieval_items)
     "Medieval English" (chapter_medieval_english)
     "Medieval French" (chapter_medieval_french)
@@ -47,86 +47,86 @@
 * Catapult
 * Fortifications"))))
 
-(func chapter_medieval_scenarios : base/chapter
+(func chapter_medieval_scenes : base/chapter
  (chapter
-  :name "Medieval Scenarios"
+  :name "Medieval Scenes"
   :sectionmap
    (sectionmap
     "Medieval Events"
      (section
       :name "Medieval Events"
-      :scenariomap
-       (scenariomap
+      :scenemap
+       (scenemap
         :Assassination
-         (scenario
+         (scene
           :name "Assassination")
         "Bandit Raid"
-         (scenario
+         (scene
           :name "Bandit Raid"
           :reference "Seven Samurai")
         :Battle
-         (scenario
+         (scene
           :name "Battle")
         :Ceremony
-         (scenario
+         (scene
           :name "Ceremony")
         :Contest
-         (scenario
+         (scene
           :name "Contest")
         :Courier
-         (scenario
+         (scene
           :name "Courier")
         :Deserters
-         (scenario
+         (scene
           :name "Deserters")
         :Duel
-         (scenario
+         (scene
           :name "Duel")
         "Empty Battlefield"
-         (scenario
+         (scene
           :name "Empty Battlefield")
         :Escort
-         (scenario
+         (scene
           :name "Escort")
         "Fist Fight"
-         (scenario
+         (scene
           :name "Fist Fight")
         :Highwaymen
-         (scenario
+         (scene
           :name "Highwaymen")
         :Hunt
-         (scenario
+         (scene
           :name "Hunt")
         "Noble Hunt"
-         (scenario
+         (scene
           :name "Noble Hunt")
         "Noble Party"
-         (scenario
+         (scene
           :name "Noble Party"
           :reference "Cinderella")
         "Peasant Demonstration"
-         (scenario
+         (scene
           :name "Peasant Demonstration"
           :summary "* Put down or support minor uprisings.")
         "Peasant Discontent"
-         (scenario
+         (scene
           :name "Peasant Discontent"
           :summary "* Put down or support minor uprisings.")
         "Peasant Uprising"
-         (scenario
+         (scene
           :name "Peasant Uprising"
           :summary "* Put down or support a major uprising.")
         :Quest
-         (scenario
+         (scene
           :name "Quest")
         "Scouting Mission"
-         (scenario
+         (scene
           :name "Scouting Mission")
         :Spying
-         (scenario
+         (scene
           :name "Spying")
         "Visiting Dignitary"
-         (scenario
+         (scene
           :name "Visiting Dignitary"))))))
 
 (func chapter_medieval_items : base/chapter

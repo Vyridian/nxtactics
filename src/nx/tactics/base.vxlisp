@@ -209,15 +209,15 @@
 (type rulemap : map
  :allowtypes [rule])
 
-(type scenario : struct
+(type scene : struct
  :traits     [card]
  :properties [teammap : teammap])
 
-(type scenariolist : list
- :allowtypes [scenario])
+(type scenelist : list
+ :allowtypes [scene])
 
-(type scenariomap : map
- :allowtypes [scenario])
+(type scenemap : map
+ :allowtypes [scene])
 
 (type section : struct
  :traits     [card]
@@ -229,7 +229,7 @@
    placemap    : placemap
    powermap    : powermap
    rulemap     : rulemap
-   scenariomap : scenariomap
+   scenemap : scenemap
    sectionmap  : sectionmap
    skillmap    : skillmap
    suitmap     : suitmap
@@ -288,7 +288,7 @@
    itemmap      : itemmap
    placemap     : placemap
    powermap     : powermap
-   scenariomap  : scenariomap
+   scenemap  : scenemap
    skillmap     : skillmap
    specialtymap : specialtymap
    unitmap      : unitmap])
@@ -1137,16 +1137,13 @@
  [tactics : tactics
   keys : stringlist :...]
  (let : itemlist
-  [itemmap : itemmap :=
-    (:itemmap tactics)
-   map2 : itemmap :=
-    (coll/map<-map-keys
-     itemmap
-     keys)
-   itemlist : itemlist :=
-    (list<-map : itemlist
-     map2)]
-  (log-error itemlist))
+  [itemlist : itemlist :=
+    (list<-list : itemlist
+     keys
+     (fn : item
+      [key : string]
+      (item<-tactics-key tactics key)))]
+   itemlist)
  :doc "Return an itemlist from keys and tactics")
 
 (func itemlistlist<-sectionlist : itemlistlist
@@ -1167,6 +1164,17 @@
    [item : item]
    (:name item)))
  :doc "Returns a itemmap from a given itemlist")
+
+(func itemmap<-tactics-keys : itemmap
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : itemmap
+  [itemlist : itemlist :=
+    (itemlist<-tactics-keys
+     tactics keys)]
+  (itemmap<-itemlist
+   itemlist))
+ :doc "Return an itemmap from tactics and keys")
 
 (func name<-chapter : string
  [chapter : chapter]
@@ -1292,14 +1300,14 @@
    (:name power)))
  :doc "Returns a powermap from a given powerlist")
 
-(func scenariomap<-scenariolist : scenariomap
- [scenariolist : scenariolist :...]
- (map<-list : scenariomap
-  scenariolist
-  (fn : scenario
-   [scenario : scenario]
-   (:name scenario)))
- :doc "Returns a scenariomap from a given scenariolist")
+(func scenemap<-scenelist : scenemap
+ [scenelist : scenelist :...]
+ (map<-list : scenemap
+  scenelist
+  (fn : scene
+   [scene : scene]
+   (:name scene)))
+ :doc "Returns a scenemap from a given scenelist")
 
 (func sectionlist<-chapter : sectionlist
  [chapter : chapter]
@@ -1532,6 +1540,20 @@
   skillmap)
  :doc "Returns a skilllist from a given skillmap")
 
+(func skilllist<-tactics-keys : skilllist
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : skilllist
+  [skilllist : skilllist :=
+    (list<-list : skilllist
+     keys
+     (fn : skill
+      [key : string]
+      (skill<-tactics-key
+       tactics key)))]
+  skilllist)
+ :doc "Return a skilllist from tactics and keys")
+
 (func skilllistlist<-sectionlist : skilllistlist
  [sections : sectionlist]
  (list<-list : skilllistlist
@@ -1550,6 +1572,17 @@
    [skill : skill]
    (:name skill)))
  :doc "Returns a skillmap from a given skilllist")
+
+(func skillmap<-tactics-keys : skillmap
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : skillmap
+  [skilllist : skilllist :=
+    (skilllist<-tactics-keys
+     tactics keys)]
+  (skillmap<-skilllist
+   skilllist))
+ :doc "Return a skillmap from tactics and keys")
 
 (func specialty<-tactics-key : specialty
  [tactics : tactics
@@ -1666,7 +1699,7 @@
      :itemmap     itemmap
      :placemap    placemap
      :powermap    powermap
-     :scenariomap scenariomap
+     :scenemap scenemap
      :skillmap    skillmap
      :unitmap     unitmap)]
   (tactics<-tactics-merge
@@ -1693,9 +1726,9 @@
    powermap1 : powermap := (:powermap tactics)
    powermap2 : powermap := (:powermap merge)
    powermap3 : powermap := (copy powermap1 powermap2)
-   scenariomap1 : scenariomap := (:scenariomap tactics)
-   scenariomap2 : scenariomap := (:scenariomap merge)
-   scenariomap3 : scenariomap := (copy scenariomap1 scenariomap2)
+   scenemap1 : scenemap := (:scenemap tactics)
+   scenemap2 : scenemap := (:scenemap merge)
+   scenemap3 : scenemap := (copy scenemap1 scenemap2)
    skillmap1 : skillmap := (:skillmap tactics)
    skillmap2 : skillmap := (:skillmap merge)
    skillmap3 : skillmap := (copy skillmap1 skillmap2)
@@ -1708,7 +1741,7 @@
    :itemmap     itemmap3
    :placemap    placemap3
    :powermap    powermap3
-   :scenariomap scenariomap3
+   :scenemap scenemap3
    :skillmap    skillmap3
    :unitmap     unitmap3))
  :doc "Returns a tactics with all maps merged with merge.")
@@ -1727,6 +1760,39 @@
      (else key))]
   unit)
  :doc "Returns a unit from tactics")
+
+(func unitability<-tactics-key : unitability
+ [tactics : tactics
+  key     : string]
+ (let : unitability
+  [ability : ability :=
+    (ability<-tactics-key tactics key)]
+  (unitability
+   :ability ability))
+ :doc "Returns a unitability from tactics and ability key")
+
+(func unitabilitylist<-tactics-keys : unitabilitylist
+ [tactics : tactics
+  keys    : stringlist :...]
+ (let : unitabilitylist
+  [abilitylist : abilitylist :=
+    (abilitylist<-tactics-keys tactics keys)]
+  (list<-list : unitabilitylist
+   abilitylist
+   (fn : unitability
+    [ability : ability]
+    (unitability
+     :ability ability))))
+ :doc "Returns a unitability from tactics and ability keys")
+
+(func unitabilitymap<-tactics-keys : unitabilitymap
+ [tactics : tactics
+  keys    : stringlist :...]
+ (let : unitabilitymap
+  [unitabilitylist : unitabilitylist :=
+    (unitabilitylist<-tactics-keys tactics keys)]
+  (unitabilitymap<-unitabilitylist unitabilitylist))
+ :doc "Returns a unitabilitymap from tactics and keys")
 
 (func unitabilitymap<-unitabilitylist : unitabilitymap
  [unitabilitylist : unitabilitylist :...]
@@ -1815,6 +1881,15 @@
    (unitlist<-section
     section)))
  :doc "Returns a unitlistlist from a given sectionlist")
+
+(func unitmap<-tactics-keys : unitmap
+ [tactics : tactics
+  keys    : stringlist :...]
+ (let : unitmap
+  [unitlist : unitlist :=
+    (unitlist<-tactics-keys tactics keys)]
+  (unitmap<-unitlist unitlist))
+ :doc "Returns a unitmap from tactics and keys")
 
 (func unitmap<-unitlist : unitmap
  [unitlist : unitlist :...]

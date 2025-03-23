@@ -147,18 +147,18 @@ export default class nx_tactics_books_age_of_steam {
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        "Civil War Scenarios",
+        "Civil War Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Civil War Scenarios",
-          ":scenariomap",
+          "Civil War Scenes",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Civil War Battle",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Civil War Battle"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Civil War Battle"),
             ":Ironclads",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Ironclads", ":summary", "The first battle between ironclads happened on 9 March 1862, as the armored Monitor was deployed to protect the\nUnion's wooden fleet from the ironclad ram Virginia and other Confederate warships.  In this engagement, the\ntwo ironclads repeatedly tried to ram one another while shells bounced off their armor.  The battle attracted\nattention worldwide, making it clear that the wooden warship was now out of date, with the ironclads destroying\nthem easily.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Ironclads", ":summary", "The first battle between ironclads happened on 9 March 1862, as the armored Monitor was deployed to protect the\nUnion's wooden fleet from the ironclad ram Virginia and other Confederate warships.  In this engagement, the\ntwo ironclads repeatedly tried to ram one another while shells bounced off their armor.  The battle attracted\nattention worldwide, making it clear that the wooden warship was now out of date, with the ironclads destroying\nthem easily.")
           )
         ),
         "Confederate Army",
@@ -212,7 +212,7 @@ export default class nx_tactics_books_age_of_steam {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "100mm iron over 610mm of wood (102mm RHA)", ":front", "200mm", ":back", "200mm", ":side", "200mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "100mm iron over 610mm of wood (102mm RHA)", ":front", "200mm", ":back", "200mm", ":side", "200mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -272,7 +272,7 @@ export default class nx_tactics_books_age_of_steam {
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 ":Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armor", ":summary", "200mm iron turret, 25mm deck, 125mm hull belt", ":front", "200mm", ":back", "200mm", ":over", "25mm", ":side", "200mm")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Armored", ":summary", "200mm iron turret, 25mm deck, 125mm hull belt", ":front", "200mm", ":back", "200mm", ":over", "25mm", ":side", "200mm")
               ),
               ":unitskillmap",
               vx_core.f_new(
@@ -423,16 +423,16 @@ export default class nx_tactics_books_age_of_steam {
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        "Western Scenarios",
+        "Western Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Western Scenarios",
-          ":scenariomap",
+          "Western Scenes",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Western Gunfight",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Western Gunfight", ":summary", "Setup\nGrassland Map\nPersonal Scale\nPlayer 1 begins with a Gunslinger deployed anywhere on the map.\nPlayer 2 begins with a US Marshall deployed within 10 spaces of Gunslinger.\nBoth Players' units are standing still with pistols holstered.\nGunslinger has the initiative.\nSpecial Rules\nShoot From the Hip\nHit Location")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Western Gunfight", ":summary", "Setup\nGrassland Map\nPersonal Scale\nPlayer 1 begins with a Gunslinger deployed anywhere on the map.\nPlayer 2 begins with a US Marshall deployed within 10 spaces of Gunslinger.\nBoth Players' units are standing still with pistols holstered.\nGunslinger has the initiative.\nSpecial Rules\nShoot From the Hip\nHit Location")
           )
         ),
         "Steam Age Outlaws",

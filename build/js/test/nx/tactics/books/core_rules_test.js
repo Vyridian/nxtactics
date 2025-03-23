@@ -53,7 +53,7 @@ export default class nx_tactics_books_core_rules_test {
           "chapter_common_rules", 0,
           "chapter_core_maps", 0,
           "chapter_core_overview", 0,
-          "chapter_core_scenarios", 0,
+          "chapter_core_scenes", 0,
           "chapter_lets_play", 0,
           "chapter_tokens", 0,
           "tacticsbook", 0

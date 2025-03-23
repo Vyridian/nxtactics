@@ -1,7 +1,7 @@
-(package nx/tactics/decks/scenario-nightonthetown
+(package nx/tactics/decks/scene-nightonthetown
  :libs (lib base :path nx/tactics/base)
        (lib data :path nx/tactics/decks/data)
- :doc  "Night On The Town Scenario")
+ :doc  "Night On The Town scene")
 
 (func place-clinic : base/place
  (base/place
@@ -67,7 +67,7 @@
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (base/item<-tactics-key tactics "Shortbow"))))
+         :item (base/item<-tactics-key tactics "Bow: Short"))))
     (base/unitskill
      :skill (base/skill<-tactics-key tactics "Investigation")
      :level "1"
@@ -80,11 +80,11 @@
         (base/unititem
          :item (base/item<-tactics-key tactics "Monocle")))))))
 
-(func unit-zombiecrawler : base/unit
+(func unit-zombie-crawler : base/unit
  [tactics : base/tactics]
  (base/unit
-  :name "Zombie Crawler"
-  :image "images/cards/unit-zombiecrawler.svg"
+  :name "Zombie: Crawler"
+  :image "images/cards/unit-zombie-crawler.svg"
   :body "8x1"
   :mind "5x-1"
   :will "2x1"
@@ -114,11 +114,11 @@
        (base/unitability
         :ability (base/ability<-tactics-key tactics "Bite")))))))
 
-(func unit-zombiedog : base/unit
+(func unit-zombie-dog : base/unit
  [tactics : base/tactics]
  (base/unit
-  :name "Zombie Dog"
-  :image "images/cards/unit-zombiedog.svg"
+  :name "Zombie: Dog"
+  :image "images/cards/unit-zombie-dog.svg"
   :body "2x1"
   :mind "8x-1"
   :will "4x1"
@@ -149,10 +149,10 @@
        (base/unitability
         :ability (base/ability<-tactics-key tactics "Bite")))))))
 
-(func unit-zombierunner : base/unit
+(func unit-zombie-runner : base/unit
  [tactics : base/tactics]
  (base/unit
-  :name "Zombie Runner"
+  :name "Zombie: Runner"
   :image "images/cards/unit-zombierunner.svg"
   :body "7x1"
   :mind "5x-1"
@@ -184,11 +184,11 @@
         (base/unitability
          :ability (base/ability<-tactics-key tactics "Bite")))))))
 
-(func unit-zombiewalker : base/unit
+(func unit-zombie-walker : base/unit
  [tactics : base/tactics]
  (base/unit
-  :name "Zombie Walker"
-  :image "images/cards/unit-zombiewalker.svg"
+  :name "Zombie: Walker"
+  :image "images/cards/unit-zombie-walker.svg"
   :body "8x1"
   :mind "5x-1"
   :speed "4x0"
@@ -237,30 +237,30 @@
       (any<-any : base/cardlist
        (base/itemlist<-tactics-keys
         tactics
+        "Ammo: Revolver"
+        "Ammo: Rifle"
+        "Ammo: Shotgun"
+        "Axe: Fire"
         "Bare Handed"
-        "Fire Axe"
+        "Bottle: Liquor"
+        "Bottle: Molotov Cocktail"
+        "Bow: Short"
         "Jerry Can"
         "Keys"
         "Knife"
-        "Liquor Bottle"
-        "Lock Combination"
-        "Molotov Cocktail"
         "Monocle"
-        "Revolver"
-        "Revolver Ammo"
+        "Paper: Lock Combination"
+        "Pistol: Revolver"
         "Rifle"
-        "Rifle Ammo"
-        "Shortbow"
         "Shotgun"
-        "Shotgun Ammo"
         "Spear"))
-      (unit-zombiecrawler tactics)
-      (unit-zombiedog tactics)
-      (base/cardimage<-card (unit-zombiedog tactics))
-      (unit-zombierunner tactics)
-      (base/cardimage<-card (unit-zombierunner tactics))
-      (unit-zombiewalker tactics)
-      (base/cardimage<-card (unit-zombiewalker tactics))
+      (unit-zombie-crawler tactics)
+      (unit-zombie-dog tactics)
+      (base/cardimage<-card (unit-zombie-dog tactics))
+      (unit-zombie-runner tactics)
+      (base/cardimage<-card (unit-zombie-runner tactics))
+      (unit-zombie-walker tactics)
+      (base/cardimage<-card (unit-zombie-walker tactics))
       (place-clinic)
       (place-conveniencestore)
       (place-gasstation)

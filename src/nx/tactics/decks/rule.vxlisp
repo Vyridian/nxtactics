@@ -230,8 +230,8 @@
   :id "game"
   :name "Game"
   :summary
-   "* Create [Characters] or [Factions] to play [Scenarios].
-    * Each [Scenario] contains various [Threats] and [Goals].
+   "* Create [Characters] or [Factions] to play [Scenes].
+    * Each [Scene] contains various [Threats] and [Goals].
     * Try to complete them using your [Skills] and [Powers] for [Rewards].
     * Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].
     * A Game is broken up into Rounds.
@@ -323,11 +323,11 @@
   :name (string "Round #" num)
   :summary
    "* Represents the current Round number.
-    * The [Scenario] determines how many rounds there are and whether they count up or down.
-    * Scenario Start: Stack the cards in order with Round#1 on top or bottom depending on the [Scenario].
+    * The [scene] determines how many rounds there are and whether they count up or down.
+    * scene Start: Stack the cards in order with Round#1 on top or bottom depending on the [scene].
     * Round End: Discard the top Round#.
     ** IF one or more [Encounter] cards are revealed THEN resolve them.
-    ** IF there are no remaining Round# cards THEN the [Scenario] immediately ends for time."))
+    ** IF there are no remaining Round# cards THEN the [scene] immediately ends for time."))
 
 (func card-skillpoint : base/card
  [num : int]
@@ -390,11 +390,11 @@
   :id "setupguide"
   :name "Setup Guide"
   :summary
-   "* Choose a Scenario and sort it in numerical order.
+   "* Choose a scene and sort it in numerical order.
     * Each [Player] chooses or creates the [Units] they will use.
     * Each [Player] chooses a colored Starter Deck.
     * All Player [Initiative] cards are shuffled together to create an [Initiative] deck.
-    * Reveal the top card in the Scenario deck and follow its instructions."))
+    * Reveal the top card in the scene deck and follow its instructions."))
 
 (func card-shadow : base/card
  (base/card

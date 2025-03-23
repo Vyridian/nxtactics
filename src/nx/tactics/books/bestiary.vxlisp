@@ -2581,7 +2581,7 @@
       :summary
        "* Maximum Body - 7
         * Morale - Normal
-        * Preferred Skills (Sagittarian) - Melee (Spear), Ranged (Javelin, Shortbow)"
+        * Preferred Skills (Sagittarian) - Melee (Spear), Ranged (Javelin, Bow: Short)"
       :titles "Centaur, Minotaur"
       :unitmap
        (unitmap
@@ -4094,9 +4094,9 @@
               :level "2"
               :unititemmap
                (unititemmap
-                "Shortbow"
+                "Bow: Short"
                  (unititem
-                  :name "Shortbow")))))
+                  :name "Bow: Short")))))
         "Goblin King"
          (unit
           :name "Goblin King")
@@ -4545,9 +4545,9 @@ to ever-greater acts of violence and revenge.")
               :name "Ranged"
               :unititemmap
                (unititemmap
-                "Shortbow"
+                "Bow: Short"
                  (unititem
-                  :name "Shortbow")))))
+                  :name "Bow: Short")))))
         :Hippogriff
          (unit
           :name "Hippogriff")

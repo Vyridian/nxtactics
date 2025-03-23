@@ -46,9 +46,9 @@ export default class nx_tactics_books_gettingstarted_test {
       "constmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
-          "scenario-murin-a0", 0,
-          "scenario-murin-a1", 0,
-          "scenario-murin-a2", 0
+          "scene-murin-a0", 0,
+          "scene-murin-a1", 0,
+          "scene-murin-a2", 0
         ),
       "funcmap",
         vx_core.f_new_from_type(

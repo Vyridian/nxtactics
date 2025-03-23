@@ -1376,7 +1376,7 @@ I are destined to do this forever."
               :strength "15tons")
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Endurance
              (unitpower
               :name "Endurance")
@@ -1633,7 +1633,7 @@ I are destined to do this forever."
               :strength "75tons")
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :summary
                "She is able to withstand bullets from pistols and machine gun fire, and can also absorb mortar shells and energy blasts, though extremely high-energy attacks may overload her absorbing ability")))
         "Iron Man"
@@ -1648,7 +1648,7 @@ I are destined to do this forever."
               :strength "85tons")
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Endurance
              (unitpower
               :name "Endurance")))
@@ -1696,7 +1696,7 @@ I are destined to do this forever."
               :strength "75tons")
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Endurance
              (unitpower
               :name "Endurance"))
@@ -1748,7 +1748,7 @@ I are destined to do this forever."
               :strength "100tons")
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Endurance
              (unitpower
               :name "Endurance"))
@@ -1797,7 +1797,7 @@ I are destined to do this forever."
               :strength "2tons")
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Endurance
              (unitpower
               :name "Endurance"))
@@ -1867,7 +1867,7 @@ I are destined to do this forever."
               :strength "75tons")
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Endurance
              (unitpower
               :name "Endurance")))
@@ -1883,7 +1883,7 @@ I are destined to do this forever."
               :strength "85tons")
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Endurance
              (unitpower
               :name "Endurance")
@@ -1918,7 +1918,7 @@ I are destined to do this forever."
               :strength "85tons")
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Endurance
              (unitpower
               :name "Endurance")))))
@@ -2545,7 +2545,7 @@ I are destined to do this forever."
                   :name "Claw")))
             :Armor
              (unitpower
-              :name "Armor")))
+              :name "Armored")))
         "Lash, Renegade"
          (unit
           :name "Lash, Renegade")

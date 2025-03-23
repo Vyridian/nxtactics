@@ -6,6 +6,34 @@
  [tactics : base/tactics]
  (base/unitmap<-unitlist
   (base/unit
+   :name "American Frigate"
+   :image "images/age-of-sail/AmericanFrigate.png"
+   :titles "USS Constitution, Old Ironsides"
+   :speedwater "24kph"
+   :classification "Hvy. Naval Vessel"
+   :mass "2200tons"
+   :length "62m"
+   :unitpowermap
+    (base/unitpowermap<-unitpowerlist
+     (base/unitpower
+      :power (base/power<-tactics-key tactics "Armored")
+      :summary "21 inches (530 mm/88mm RHA)"
+      :front "88mm"
+      :back "88mm"
+      :side "88mm"))
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill
+      :skill (base/skill<-tactics-key tactics "Gunnery")
+      :summary
+       "30 x 24-pounder (11 kg) long gun
+        20 x 32-pounder (15 kg) carronade
+        2 x 24-pounder (11 kg) bow chasers"
+      :unitabilitymap
+       (base/unitabilitymap<-tactics-keys
+        tactics
+        "Salvo"))))
+  (base/unit
    :name "Butterfly: Giant")
   (base/unit
    :name "Caterpillar: Giant")

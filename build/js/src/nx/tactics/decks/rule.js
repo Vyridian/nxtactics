@@ -354,7 +354,7 @@ export default class nx_tactics_decks_rule {
   // (func card-game)
   static f_card_game() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "game", ":name", "Game", ":summary", "* Create [Characters] or [Factions] to play [Scenarios].\n* Each [Scenario] contains various [Threats] and [Goals].\n* Try to complete them using your [Skills] and [Powers] for [Rewards].\n* Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].\n* A Game is broken up into Rounds.\n* Each Round every Player takes a Turn.\n* Each Turn each Player takes 2 Actions.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "game", ":name", "Game", ":summary", "* Create [Characters] or [Factions] to play [Scenes].\n* Each [Scene] contains various [Threats] and [Goals].\n* Try to complete them using your [Skills] and [Powers] for [Rewards].\n* Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].\n* A Game is broken up into Rounds.\n* Each Round every Player takes a Turn.\n* Each Turn each Player takes 2 Actions.")
     return output
   }
 
@@ -612,7 +612,7 @@ export default class nx_tactics_decks_rule {
       ":name",
       vx_core.f_new({"any-1": vx_core.t_string}, "Round #", num),
       ":summary",
-      "* Represents the current Round number.\n* The [Scenario] determines how many rounds there are and whether they count up or down.\n* Scenario Start: Stack the cards in order with Round#1 on top or bottom depending on the [Scenario].\n* Round End: Discard the top Round#.\n** IF one or more [Encounter] cards are revealed THEN resolve them.\n** IF there are no remaining Round# cards THEN the [Scenario] immediately ends for time."
+      "* Represents the current Round number.\n* The [scene] determines how many rounds there are and whether they count up or down.\n* scene Start: Stack the cards in order with Round#1 on top or bottom depending on the [scene].\n* Round End: Discard the top Round#.\n** IF one or more [Encounter] cards are revealed THEN resolve them.\n** IF there are no remaining Round# cards THEN the [scene] immediately ends for time."
     )
     return output
   }
@@ -685,7 +685,7 @@ export default class nx_tactics_decks_rule {
   // (func card-setupguide)
   static f_card_setupguide() {
     let output = nx_tactics_base.e_card
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "setupguide", ":name", "Setup Guide", ":summary", "* Choose a Scenario and sort it in numerical order.\n* Each [Player] chooses or creates the [Units] they will use.\n* Each [Player] chooses a colored Starter Deck.\n* All Player [Initiative] cards are shuffled together to create an [Initiative] deck.\n* Reveal the top card in the Scenario deck and follow its instructions.")
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "setupguide", ":name", "Setup Guide", ":summary", "* Choose a scene and sort it in numerical order.\n* Each [Player] chooses or creates the [Units] they will use.\n* Each [Player] chooses a colored Starter Deck.\n* All Player [Initiative] cards are shuffled together to create an [Initiative] deck.\n* Reveal the top card in the scene deck and follow its instructions.")
     return output
   }
 

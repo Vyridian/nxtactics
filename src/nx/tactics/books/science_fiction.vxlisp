@@ -386,7 +386,7 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :summary
                "* The Conestogas skin consists of a laminated layer of insulators, alloy micro meteor shielding, composite armors, and aerogel layers. This provides only limited protection against Kinetic weapons (the best defense against those is high-mass armor, untenable on a starship), but it does provide excellent protection against directed energy weapons.
 * Overlying all of this are layers of Radar Absorbent Material, and a dark grey paint, in order to keep both the ships radar and optical signature as low as possible. In addition to this the ship has a radar jamming system for ECM, and the computer systems are designed with double hardened systems to prevent either jamming or EMP from damaging the ships system or any systems of equipment inside the ship.")
@@ -614,7 +614,7 @@ two. Including this one. - Vasquez and Gorman, Aliens")
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Shielding
              (unitpower
               :name "Shielding")))
@@ -782,7 +782,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"))
+              :name "Armored"))
           :unitskillmap
            (unitskillmap
             :Gunnery
@@ -897,7 +897,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"))
+              :name "Armored"))
           :unitskillmap
            (unitskillmap
             :Gunnery
@@ -2112,7 +2112,7 @@ but suffers from reduced range and limited shots.
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Shielding
              (unitpower
               :name "Shielding"))
@@ -2144,7 +2144,7 @@ crew, and has more limited endurance."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Shielding
              (unitpower
               :name "Shielding"))
@@ -2221,7 +2221,7 @@ Borg."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :summary "Solid Neutronium - Hyper Dense Neutron Star Material"))
           :unitskillmap
            (unitskillmap
@@ -2242,7 +2242,7 @@ Borg."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Shielding
              (unitpower
               :name "Shielding")
@@ -2279,7 +2279,7 @@ Borg."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Shielding
              (unitpower
               :name "Shielding")
@@ -2328,7 +2328,7 @@ Borg."
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Shielding
              (unitpower
               :name "Shielding"))
@@ -2734,7 +2734,7 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :level "26")
             :Shielding
              (unitpower
@@ -2788,7 +2788,7 @@ Tractor Beams"
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :level "29")
             :Shielding
              (unitpower
@@ -2839,7 +2839,7 @@ line. Fear of this battle station. - Grand Moff Tarkin, Star Wars"
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor"
+              :name "Armored"
               :level "30")
             :Shielding
              (unitpower
@@ -3033,7 +3033,7 @@ Back")
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Shielding
              (unitpower
               :name "Shielding"))
@@ -3077,7 +3077,7 @@ Back")
            (unitpowermap
             :Armor
              (unitpower
-              :name "Armor")
+              :name "Armored")
             :Shielding
              (unitpower
               :name "Shielding"))

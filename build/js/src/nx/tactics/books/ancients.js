@@ -39,37 +39,37 @@ export default class nx_tactics_books_ancients {
   }
 
   /**
-   * @function chapter_ancients_scenarios
+   * @function chapter_ancients_scenes
    * @return {chapter}
    */
-  static t_chapter_ancients_scenarios = {
+  static t_chapter_ancients_scenes = {
     vx_type: vx_core.t_type
   }
-  static e_chapter_ancients_scenarios = {
-    vx_type: nx_tactics_books_ancients.t_chapter_ancients_scenarios
+  static e_chapter_ancients_scenes = {
+    vx_type: nx_tactics_books_ancients.t_chapter_ancients_scenes
   }
 
-  // (func chapter_ancients_scenarios)
-  static f_chapter_ancients_scenarios() {
+  // (func chapter_ancients_scenes)
+  static f_chapter_ancients_scenes() {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
       ":name",
-      "Ancients Scenarios",
+      "Ancients Scenes",
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        "Ancient Scenarios",
+        "Ancient Scenes",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Ancient Scenarios",
-          ":scenariomap",
+          "Ancient Scenes",
+          ":scenemap",
           vx_core.f_new(
-            {"any-1": nx_tactics_base.t_scenariomap},
+            {"any-1": nx_tactics_base.t_scenemap},
             "Flush Them Out",
             vx_core.f_new(
-              {"any-1": nx_tactics_base.t_scenario},
+              {"any-1": nx_tactics_base.t_scene},
               ":name",
               "Flush Them Out",
               ":summary",
@@ -84,7 +84,7 @@ export default class nx_tactics_books_ancients {
               )
             ),
             "Roman Gladiators",
-            vx_core.f_new({"any-1": nx_tactics_base.t_scenario}, ":name", "Roman Gladiators")
+            vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Roman Gladiators")
           )
         )
       )
@@ -487,11 +487,11 @@ export default class nx_tactics_books_ancients {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "3",
                   ":unitabilitymap",
@@ -537,11 +537,11 @@ export default class nx_tactics_books_ancients {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "3",
                   ":unitabilitymap",
@@ -635,11 +635,11 @@ export default class nx_tactics_books_ancients {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "2",
                   ":unitabilitymap",
@@ -663,11 +663,11 @@ export default class nx_tactics_books_ancients {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "4",
                   ":unitabilitymap",
@@ -735,11 +735,11 @@ export default class nx_tactics_books_ancients {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "4",
                   ":unitabilitymap",
@@ -1129,11 +1129,11 @@ export default class nx_tactics_books_ancients {
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Command",
+                ":Leadership",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "4",
                   ":unitabilitymap",
@@ -1425,7 +1425,7 @@ export default class nx_tactics_books_ancients {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Armor",
+                  "Armored",
                   ":level",
                   "1",
                   ":unititemmap",
@@ -1510,8 +1510,8 @@ export default class nx_tactics_books_ancients {
         {"any-1": nx_tactics_base.t_chaptermap},
         "Ancients Overview",
         nx_tactics_books_ancients.f_chapter_ancients_overview(),
-        "Ancients Scenarios",
-        nx_tactics_books_ancients.f_chapter_ancients_scenarios(),
+        "Ancients Scenes",
+        nx_tactics_books_ancients.f_chapter_ancients_scenes(),
         "Anglo/Saxons",
         nx_tactics_books_ancients.f_chapter_anglo_saxons(),
         "Carthaginians",
@@ -1547,7 +1547,7 @@ export default class nx_tactics_books_ancients {
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "chapter_ancients_overview": nx_tactics_books_ancients.e_chapter_ancients_overview,
-      "chapter_ancients_scenarios": nx_tactics_books_ancients.e_chapter_ancients_scenarios,
+      "chapter_ancients_scenes": nx_tactics_books_ancients.e_chapter_ancients_scenes,
       "chapter_anglo_saxons": nx_tactics_books_ancients.e_chapter_anglo_saxons,
       "chapter_carthaginians": nx_tactics_books_ancients.e_chapter_carthaginians,
       "chapter_chinese_dynasty": nx_tactics_books_ancients.e_chapter_chinese_dynasty,
@@ -1563,7 +1563,7 @@ export default class nx_tactics_books_ancients {
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter_ancients_overview": nx_tactics_books_ancients.t_chapter_ancients_overview,
-      "chapter_ancients_scenarios": nx_tactics_books_ancients.t_chapter_ancients_scenarios,
+      "chapter_ancients_scenes": nx_tactics_books_ancients.t_chapter_ancients_scenes,
       "chapter_anglo_saxons": nx_tactics_books_ancients.t_chapter_anglo_saxons,
       "chapter_carthaginians": nx_tactics_books_ancients.t_chapter_carthaginians,
       "chapter_chinese_dynasty": nx_tactics_books_ancients.t_chapter_chinese_dynasty,
@@ -1607,9 +1607,9 @@ export default class nx_tactics_books_ancients {
       fn            : nx_tactics_books_ancients.f_chapter_ancients_overview
     }
 
-    // (func chapter_ancients_scenarios)
-    nx_tactics_books_ancients.t_chapter_ancients_scenarios['vx_value'] = {
-      name          : "chapter_ancients_scenarios",
+    // (func chapter_ancients_scenes)
+    nx_tactics_books_ancients.t_chapter_ancients_scenes['vx_value'] = {
+      name          : "chapter_ancients_scenes",
       pkgname       : "nx/tactics/books/ancients",
       extends       : ":func",
       idx           : 0,
@@ -1622,7 +1622,7 @@ export default class nx_tactics_books_ancients {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_ancients.f_chapter_ancients_scenarios
+      fn            : nx_tactics_books_ancients.f_chapter_ancients_scenes
     }
 
     // (func chapter_anglo_saxons)

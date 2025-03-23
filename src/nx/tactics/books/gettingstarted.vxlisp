@@ -2,8 +2,8 @@
  :libs (lib base :path nx/tactics/base)
  :doc "")
 
-(const scenario-murin-a0 : base/scenario
- (base/scenario
+(const scene-murin-a0 : base/scene
+ (base/scene
   :summary
    "* Prologue - You've been traveling for a while. Odd jobs here and there have kept you fed, but
     no opportunity has paid off so far. Your funds are desperately low, and you have to consider
@@ -20,8 +20,8 @@
     are well made but worn, and he does not appear threatening. He engages the group, but soon
     finds conversation with the aspirants to go nowhere. He suggests coming with him to Murinton."))
 
-(const scenario-murin-a1 : base/scenario
- (base/scenario
+(const scene-murin-a1 : base/scene
+ (base/scene
   :summary
    "* Murin Vale - Murin Vale is a misty depression huddled between stout Murin-Lead Mountain
     and the spiky Murin-Quartz Peak. A hundred years ago, this entire area was controlled by the
@@ -31,8 +31,8 @@
     * Plot Hooks - A rough trail leads through the wooded vale to a small abandoned town, though
     smoke can be seen rising from its center."))
 
-(const scenario-murin-a2 : base/scenario
- (base/scenario
+(const scene-murin-a2 : base/scene
+ (base/scene
   :summary
    "* Murinton - Within Murin Vale, at the base of Murin-Lead Mountain is the abandoned, Dwarven
     village of Murinton. A small populated outpost lies at its center. The outpost is dominated by

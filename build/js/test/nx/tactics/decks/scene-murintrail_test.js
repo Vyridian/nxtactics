@@ -1,21 +1,21 @@
 'strict mode'
 
-import nx_tactics_decks_scenario_murintrail from "../../../../src/nx/tactics/decks/scenario-murintrail.js"
+import nx_tactics_decks_scene_murintrail from "../../../../src/nx/tactics/decks/scene-murintrail.js"
 import vx_core from "../../../../src/vx/core.js"
 import vx_test from "../../../../src/vx/test.js"
 import nx_tactics_base from "../../../../src/nx/tactics/base.js"
 
-export default class nx_tactics_decks_scenario_murintrail_test {
+export default class nx_tactics_decks_scene_murintrail_test {
 
 
   static test_package(context) {
-    const testcaselist = nx_tactics_decks_scenario_murintrail_test.test_cases(context)
+    const testcaselist = nx_tactics_decks_scene_murintrail_test.test_cases(context)
     const output = vx_core.f_new_from_type(
       vx_test.t_testpackage,
-      ":testpkg", "nx/tactics/decks/scenario-murintrail",
+      ":testpkg", "nx/tactics/decks/scene-murintrail",
       ":caselist", testcaselist,
-      ":coveragesummary", nx_tactics_decks_scenario_murintrail_test.test_coveragesummary(),
-      ":coveragedetail", nx_tactics_decks_scenario_murintrail_test.test_coveragedetail()
+      ":coveragesummary", nx_tactics_decks_scene_murintrail_test.test_coveragesummary(),
+      ":coveragedetail", nx_tactics_decks_scene_murintrail_test.test_coveragedetail()
     );
     return output;
   }
@@ -23,7 +23,7 @@ export default class nx_tactics_decks_scenario_murintrail_test {
   static test_coveragesummary() {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragesummary,
-      "testpkg",   "nx/tactics/decks/scenario-murintrail", 
+      "testpkg",   "nx/tactics/decks/scene-murintrail", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 1), 
       "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 38), 
       "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 37), 
@@ -38,7 +38,7 @@ export default class nx_tactics_decks_scenario_murintrail_test {
   static test_coveragedetail() {
     const output = vx_core.f_new_from_type(
       vx_test.t_testcoveragedetail,
-      "testpkg", "nx/tactics/decks/scenario-murintrail",
+      "testpkg", "nx/tactics/decks/scene-murintrail",
       "typemap",
         vx_core.f_new_from_type(
           vx_core.t_intmap

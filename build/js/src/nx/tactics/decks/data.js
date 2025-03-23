@@ -7,7 +7,7 @@ import nx_tactics_decks_ability from "../../../nx/tactics/decks/ability.js"
 import nx_tactics_decks_item from "../../../nx/tactics/decks/item.js"
 import nx_tactics_decks_place from "../../../nx/tactics/decks/place.js"
 import nx_tactics_decks_power from "../../../nx/tactics/decks/power.js"
-import nx_tactics_decks_scenario from "../../../nx/tactics/decks/scenario.js"
+import nx_tactics_decks_scene from "../../../nx/tactics/decks/scene.js"
 import nx_tactics_decks_specialty from "../../../nx/tactics/decks/specialty.js"
 import nx_tactics_decks_skill from "../../../nx/tactics/decks/skill.js"
 import nx_tactics_decks_unit from "../../../nx/tactics/decks/unit.js"
@@ -150,8 +150,8 @@ export default class nx_tactics_decks_data {
         const tacticsitems = nx_tactics_decks_item.f_tactics_itemmap_from_tactics(tacticspowers)
         const tacticsunits = nx_tactics_decks_unit.f_tactics_unitmap_from_tactics(tacticsitems)
         const tacticsplaces = nx_tactics_decks_place.f_tactics_placemap_from_tactics(tacticsunits)
-        const tacticsscenarios = nx_tactics_decks_scenario.f_tactics_scenariomap_from_tactics(tacticsplaces)
-        const tacticsall = nx_tactics_decks_data.f_tactics_booklist_from_tactics(tacticsscenarios)
+        const tacticsscenes = nx_tactics_decks_scene.f_tactics_scenemap_from_tactics(tacticsplaces)
+        const tacticsall = nx_tactics_decks_data.f_tactics_booklist_from_tactics(tacticsscenes)
         return tacticsall
       })
     )

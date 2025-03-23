@@ -26,9 +26,22 @@ export default class nx_tactics_decks_power {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
-        "Venomous",
+        "Armored",
+        ":summary",
+        "* Armor normally alters appearance and may be a permanent alteration or a suit that may be donned.\n* [+1 Value] for Armor that can appear on demand.\n* [+2 Value] for Armor that cannot be detected.\nBody Armor may be permanent or temporary.  If permanent, no time is needed to activate it, but is must either be donned and carried or it permanently alters appearance.",
         ":abilitymap",
-        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Poison Bite")
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Auto Med System", "Ablative Armor", "Body Flares", "Cold Resistant", "Corrosion Resistant", "Cryo Sleep System", "Electrical Resistant", "Energy Resistant", "Environmental Containment", "Environmental Independence", "Fire Resistant", "Floation Device", "Grappling Hoist", "Infrared Dampener", "Magnetic Resistant", "Missile Mount", "Pierce Resistant", "Plasma Resistant", "Pressure Resistant", "Radar Dampener", "Radar Jammer", "Radiation Resistant", "Reactive Armor", "Turret Mount", "Ultraviolet Jammer", "Underwater Operation")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Toxins",
+        ":reference",
+        "* Say 'ah'. Some poisons can kill people in the thousands with that amount. Like botulinum toxin. It inhibits acetylcholine release, causing loss of muscle tone, lethary, .. dizziness .., visual impairment.., heavy eyelids, intense thirst, loss of speech, vomiting, diarrhea, stomach distention, breathing difficulty.. then.. respiratory failure. - A.K.I, Street Fighter 6",
+        ":titles",
+        "Poisonous, Venomous",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Blinding Spit", "Blinding Toxin", "Irritating Toxin", "Paralyzing Bite", "Paralyzing Spit", "Paralyzing Spray", "Paralyzing Sting", "Poison Bite", "Poison Blood", "Poison Spit", "Poison Spray", "Poison Sting", "Poison Touch", "Poisonous Flesh", "Poisonous Skin")
       )
     )
     return output

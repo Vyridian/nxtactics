@@ -1955,8 +1955,8 @@ export default class nx_tactics_books_fantasy {
                   ":unititemmap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unititemmap},
-                    "Shortbow",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Shortbow")
+                    "Bow: Short",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Bow: Short")
                   )
                 )
               )
