@@ -6,138 +6,6 @@
  (base/power
   :name "Ground Movement"))
 
-(func place-blacksmith : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Blacksmith"
-  :image "images/cards/place-blacksmith.svg"))
-
-(func place-campsite : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Campsite"
-  :image "images/cards/place-campsite.svg"))
-
-(func place-cavemouth : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Cave Mouth"
-  :image "images/cards/place-cavemouth.svg"))
-
-(func place-dirtpath : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Dirt Path"
-  :image "images/cards/place-dirtpath.svg"))
-
-(func place-farmhouse : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Farmhouse"
-  :image "images/cards/place-farmhouse.svg"))
-
-(func place-field : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Field"
-  :image "images/cards/place-field.svg"))
-
-(func place-forest : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Forest"
-  :image "images/cards/place-forest.svg"))
-
-(func place-gravelroad : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Gravel Road"
-  :image "images/cards/place-gravelroad.svg"))
-
-(func place-guardpost : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Guardpost"
-  :image "images/cards/place-guardpost.svg"))
-
-(func place-horsestables : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Horse Stables"
-  :image "images/cards/place-horsestables.svg"))
-
-(func place-mill : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Mill"
-  :image "images/cards/place-mill.svg"))
-
-(func place-mountain : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Mountain"
-  :image "images/cards/place-mountain.svg"))
-
-(func place-stoneroad : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Stone Road"
-  :image "images/cards/place-stoneroad.svg"))
-
-(func place-tavern : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Tavern"
-  :image "images/cards/place-tavern.svg"))
-
-(func place-tavern-bar : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Tavern Bar"
-  :image "images/cards/place-tavern-bar.svg"))
-
-(func place-tavern-bedroom : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Tavern Bedroom"
-  :image "images/cards/place-tavern-bedroom.svg"))
-
-(func place-tavern-common : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Tavern Common"
-  :image "images/cards/place-tavern-common.svg"))
-
-(func place-tavern-dining : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Tavern Dining"
-  :image "images/cards/place-tavern-dining.svg"))
-
-(func place-tavern-stairs : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Tavern Stairs"
-  :image "images/cards/place-tavern-stairs.svg"))
-
-(func place-temple : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Temple"
-  :image "images/cards/place-temple.svg"))
-
-(func place-tradingpost : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Trading Post"
-  :image "images/cards/place-tradingpost.svg"))
-
-(func place-woodenhall : base/place
- [tactics : base/tactics]
- (base/place
-  :name "Wooden Hall"
-  :image "images/cards/place-woodenhall.svg"))
-
 (func scene-murintrail : base/scene
  [tactics : base/tactics]
  (base/scene
@@ -593,6 +461,17 @@
       (unit-bandit tactics)
       (unit-bruiser tactics)
       (unit-guardsman tactics)
+      (unit-jesaveer tactics)
+      (unit-jonaveer tactics)
+      (unit-xeibhanower tactics)
+      (unit-wilmducon tactics)
+      (unit-liliducon tactics)
+      (unit-wilddog tactics)
+      goblinscout
+      goblinscout-i
+      (unit-horse tactics)
+      horse-i
+      (unit-woodencart tactics)
       (any<-any : base/cardlist
        (base/skilllist<-tactics-keys
         tactics
@@ -634,37 +513,29 @@
         "Rations"
         "Waterskin"
         ))
-      (unit-jesaveer tactics)
-      (unit-jonaveer tactics)
-      (unit-xeibhanower tactics)
-      (unit-wilmducon tactics)
-      (unit-liliducon tactics)
-      (unit-wilddog tactics)
-      goblinscout
-      goblinscout-i
-      (unit-horse tactics)
-      horse-i
-      (unit-woodencart tactics)
-      (place-field tactics)
-      (place-forest tactics)
-      (place-mountain tactics)
-      (place-blacksmith tactics)
-      (place-campsite tactics)
-      (place-cavemouth tactics)
-      (place-dirtpath tactics)
-      (place-farmhouse tactics)
-      (place-gravelroad tactics)
-      (place-guardpost tactics)
-      (place-horsestables tactics)
-      (place-mill tactics)
-      (place-stoneroad tactics)
-      (place-tavern tactics)
-      (place-tavern-bar tactics)
-      (place-tavern-bedroom tactics)
-      (place-tavern-common tactics)
-      (place-tavern-dining tactics)
-      (place-tavern-stairs tactics)
-      (place-temple tactics)
-      (place-tradingpost tactics)
-      (place-woodenhall tactics)
-      )))))
+      (any<-any : base/cardlist
+       (base/placelist<-tactics-keys
+        tactics
+        "Field"
+        "Forest"
+        "Mountain"
+        "Blacksmith"
+        "Campsite"
+        "Cave Mouth"
+        "Dirt Path"
+        "Farmhouse"
+        "Guardpost"
+        "Hall: Wooden"
+        "Horse Stables"
+        "Mill"
+        "Road: Gravel"
+        "Road: Stone"
+        "Tavern"
+        "Tavern Bar"
+        "Tavern Bedroom"
+        "Tavern Common"
+        "Tavern Dining"
+        "Tavern Stairs"
+        "Temple"
+        "Trading Post"
+      )))))))

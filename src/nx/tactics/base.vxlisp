@@ -1180,6 +1180,33 @@
  [chapter : chapter]
  (:name chapter))
 
+(func place<-tactics-key : place
+ [tactics : tactics
+  key     : string]
+ (let : place
+  [placemap : placemap :=
+    (:placemap tactics)
+   place : place :=
+    (any<-map placemap key)
+   logit : string :=
+    (if : string
+     (then (is-empty place) (log key))
+     (else key))]
+  place)
+ :doc "Returns an place from tactics")
+
+(func placelist<-placelistlist : placelist
+ [placelistlist : placelistlist]
+ (list<-list-join : placelist
+  placelistlist)
+ :doc "Returns a placelist from a given placelistlist")
+
+(func placelist<-placemap : placelist
+ [placemap : placemap]
+ (list<-map : placelist
+  placemap)
+ :doc "Returns a placelist from a given placemap")
+
 (func placelist<-section : placelist
  [section : section]
  (let : placelist
@@ -1202,17 +1229,18 @@
    placelistlist))
  :doc "Returns a placelist from a given sectionlist")
 
-(func placelist<-placelistlist : placelist
- [placelistlist : placelistlist]
- (list<-list-join : placelist
-  placelistlist)
- :doc "Returns a placelist from a given placelistlist")
-
-(func placelist<-placemap : placelist
- [placemap : placemap]
- (list<-map : placelist
-  placemap)
- :doc "Returns a placelist from a given placemap")
+(func placelist<-tactics-keys : placelist
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : placelist
+  [placelist : placelist :=
+    (list<-list : placelist
+     keys
+     (fn : place
+      [key : string]
+      (place<-tactics-key tactics key)))]
+   placelist)
+ :doc "Return an placelist from tactics and keys")
 
 (func placelistlist<-sectionlist : placelistlist
  [sections : sectionlist]

@@ -25,11 +25,11 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 34, ":tests", 95, ":total", 274), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 89), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 35, ":tests", 97, ":total", 276), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 91), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 274), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 276), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95)
     )
     return output
@@ -267,10 +267,12 @@ export default class nx_tactics_base_test {
           "itemmap<-itemlist", 0,
           "itemmap<-tactics-keys", 0,
           "name<-chapter", 0,
+          "place<-tactics-key", 0,
           "placelist<-placelistlist", 0,
           "placelist<-placemap", 0,
           "placelist<-section", 0,
           "placelist<-sectionlist", 0,
+          "placelist<-tactics-keys", 0,
           "placelistlist<-sectionlist", 0,
           "placemap<-placelist", 0,
           "power<-tactics-key", 0,

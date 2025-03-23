@@ -5,8 +5,78 @@
 (func placemap-tactics : base/placemap
  [tactics : base/tactics]
  (base/placemap<-placelist
-  (place
-   :name "place1")
+  (base/place
+   :name "Blacksmith"
+   :image "images/cards/place-blacksmith.svg")
+  (base/place
+   :name "Campsite"
+   :image "images/cards/place-campsite.svg")
+  (base/place
+   :name "Cave Mouth"
+   :image "images/cards/place-cavemouth.svg")
+  (base/place
+   :name "Dirt Path"
+   :image "images/cards/place-dirtpath.svg")
+  (base/place
+   :name "Farmhouse"
+   :image "images/cards/place-farmhouse.svg")
+  (base/place
+   :name "Field"
+   :image "images/cards/place-field.svg")
+  (base/place
+   :name "Forest"
+   :image "images/cards/place-forest.svg")
+  (base/place
+   :name "Guardpost"
+   :image "images/cards/place-guardpost.svg")
+  (base/place
+   :name "Hall: Wooden"
+   :image "images/cards/place-hall-wooden.svg")
+  (base/place
+   :name "Horse Stables"
+   :image "images/cards/place-horsestables.svg")
+  (base/place
+   :name "Mill"
+   :image "images/cards/place-mill.svg")
+  (base/place
+   :name "Mountain"
+   :image "images/cards/place-mountain.svg")
+  (base/place
+   :name "Road: Gravel"
+   :image "images/cards/place-road-gravel.svg")
+  (base/place
+   :name "Road: Stone"
+   :image "images/cards/place-road-stone.svg")
+  (base/place
+   :name "Rock"
+   :image "images/cards/place-rock.svg")
+  (base/place
+   :name "Tavern"
+   :image "images/cards/place-tavern.svg")
+  (base/place
+   :name "Tavern Bar"
+   :image "images/cards/place-tavern-bar.svg")
+  (base/place
+   :name "Tavern Bedroom"
+   :image "images/cards/place-tavern-bedroom.svg")
+  (base/place
+   :name "Tavern Common"
+   :image "images/cards/place-tavern-common.svg")
+  (base/place
+   :name "Tavern Dining"
+   :image "images/cards/place-tavern-dining.svg")
+  (base/place
+   :name "Tavern Stairs"
+   :image "images/cards/place-tavern-stairs.svg")
+  (base/place
+   :name "Temple"
+   :image "images/cards/place-temple.svg")
+  (base/place
+   :name "Trading Post"
+   :image "images/cards/place-tradingpost.svg")
+  (base/place
+   :name "Wall: Rock"
+   :image "images/cards/place-wall-rock.svg")
   )
  :doc "Returns the base placemap")
 

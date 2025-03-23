@@ -2005,6 +2005,43 @@ export default class nx_tactics_base {
   }
 
   /**
+   * @function place_from_tactics_key
+   * Returns an place from tactics
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @return {place}
+   */
+  static t_place_from_tactics_key = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_from_tactics_key = {
+    vx_type: nx_tactics_base.t_place_from_tactics_key
+  }
+
+  // (func place<-tactics-key)
+  static f_place_from_tactics_key(tactics, key) {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_place},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const placemap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_placemap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":placemap")
+        const place = vx_core.f_any_from_map({"any-1": nx_tactics_base.t_place, "map-1": nx_tactics_base.t_placemap}, placemap, key)
+        const logit = vx_core.f_if_2(
+          {"any-1": vx_core.t_string},
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_is_empty_1(place)}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_log(key)})
+          ),
+          vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return key}))
+        )
+        return place
+      })
+    )
+    return output
+  }
+
+  /**
    * @function placelist_from_placelistlist
    * Returns a placelist from a given placelistlist
    * @param  {placelistlist} placelistlist
@@ -2095,6 +2132,40 @@ export default class nx_tactics_base {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const placelistlist = nx_tactics_base.f_placelistlist_from_sectionlist(sectionlist)
         return nx_tactics_base.f_placelist_from_placelistlist(placelistlist)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function placelist_from_tactics_keys
+   * Return an placelist from tactics and keys
+   * @param  {tactics} tactics
+   * @param  {stringlist} ... keys
+   * @return {placelist}
+   */
+  static t_placelist_from_tactics_keys = {
+    vx_type: vx_core.t_type
+  }
+  static e_placelist_from_tactics_keys = {
+    vx_type: nx_tactics_base.t_placelist_from_tactics_keys
+  }
+
+  // (func placelist<-tactics-keys)
+  static f_placelist_from_tactics_keys(tactics, ...keys) {
+    let output = nx_tactics_base.e_placelist
+    keys = vx_core.f_new_from_type(vx_core.t_stringlist, ...keys)
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_placelist},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const placelist = vx_core.f_list_from_list_1(
+          {"any-1": nx_tactics_base.t_place, "any-2": vx_core.t_string, "list-1": nx_tactics_base.t_placelist, "list-2": vx_core.t_stringlist},
+          keys,
+          vx_core.f_new_from_type(vx_core.t_any_from_any, (key) => 
+            nx_tactics_base.f_place_from_tactics_key(tactics, key))
+        )
+        return placelist
       })
     )
     return output
@@ -3873,10 +3944,12 @@ export default class nx_tactics_base {
       "itemmap<-itemlist": nx_tactics_base.e_itemmap_from_itemlist,
       "itemmap<-tactics-keys": nx_tactics_base.e_itemmap_from_tactics_keys,
       "name<-chapter": nx_tactics_base.e_name_from_chapter,
+      "place<-tactics-key": nx_tactics_base.e_place_from_tactics_key,
       "placelist<-placelistlist": nx_tactics_base.e_placelist_from_placelistlist,
       "placelist<-placemap": nx_tactics_base.e_placelist_from_placemap,
       "placelist<-section": nx_tactics_base.e_placelist_from_section,
       "placelist<-sectionlist": nx_tactics_base.e_placelist_from_sectionlist,
+      "placelist<-tactics-keys": nx_tactics_base.e_placelist_from_tactics_keys,
       "placelistlist<-sectionlist": nx_tactics_base.e_placelistlist_from_sectionlist,
       "placemap<-placelist": nx_tactics_base.e_placemap_from_placelist,
       "power<-tactics-key": nx_tactics_base.e_power_from_tactics_key,
@@ -3964,10 +4037,12 @@ export default class nx_tactics_base {
       "itemmap<-itemlist": nx_tactics_base.t_itemmap_from_itemlist,
       "itemmap<-tactics-keys": nx_tactics_base.t_itemmap_from_tactics_keys,
       "name<-chapter": nx_tactics_base.t_name_from_chapter,
+      "place<-tactics-key": nx_tactics_base.t_place_from_tactics_key,
       "placelist<-placelistlist": nx_tactics_base.t_placelist_from_placelistlist,
       "placelist<-placemap": nx_tactics_base.t_placelist_from_placemap,
       "placelist<-section": nx_tactics_base.t_placelist_from_section,
       "placelist<-sectionlist": nx_tactics_base.t_placelist_from_sectionlist,
+      "placelist<-tactics-keys": nx_tactics_base.t_placelist_from_tactics_keys,
       "placelistlist<-sectionlist": nx_tactics_base.t_placelistlist_from_sectionlist,
       "placemap<-placelist": nx_tactics_base.t_placemap_from_placelist,
       "power<-tactics-key": nx_tactics_base.t_power_from_tactics_key,
@@ -9533,6 +9608,24 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_name_from_chapter
     }
 
+    // (func place<-tactics-key)
+    nx_tactics_base.t_place_from_tactics_key['vx_value'] = {
+      name          : "place<-tactics-key",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_place_from_tactics_key
+    }
+
     // (func placelist<-placelistlist)
     nx_tactics_base.t_placelist_from_placelistlist['vx_value'] = {
       name          : "placelist<-placelistlist",
@@ -9603,6 +9696,24 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_placelist_from_sectionlist
+    }
+
+    // (func placelist<-tactics-keys)
+    nx_tactics_base.t_placelist_from_tactics_keys['vx_value'] = {
+      name          : "placelist<-tactics-keys",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_placelist_from_tactics_keys
     }
 
     // (func placelistlist<-sectionlist)
