@@ -5,8 +5,9 @@
        (lib disorder       :path nx/tactics/decks/disorder)
        (lib restraint      :path nx/tactics/decks/restraint)
        (lib rule           :path nx/tactics/decks/rule)
-       (lib scene       :path nx/tactics/decks/scene-murintrail)
+       (lib murintrail     :path nx/tactics/decks/scene-murintrail)
        (lib nightonthetown :path nx/tactics/decks/scene-nightonthetown)
+       (lib ontherun       :path nx/tactics/decks/scene-ontherun)
        (lib starter        :path nx/tactics/decks/starter)
        (lib tarot          :path nx/tactics/decks/tarot)
        (lib trauma         :path nx/tactics/decks/trauma)
@@ -23,7 +24,7 @@
     (base/cardmap<-cardlist
      (base/cardlist
       (deck-books)
-      (deck-rules)
+      (deck-rules tactics)
       (deck-setup)
       (deck-scenes tactics)
       (deck-encounters)
@@ -31,7 +32,20 @@
       (deck-units)
       (deck-items)
       (deck-skills)
-      (deck-powers))))))
+      (deck-powers)
+      (deck-abilities))))))
+
+(func deck-abilities : base/deck
+ (let : base/deck
+  [abilitymap : base/abilitymap :=
+   (:abilitymap data/tactics-all)
+   cardmap : base/cardmap :=
+    (map<-map : base/cardmap
+     abilitymap)]
+  (base/deck
+   :name "Abilities"
+   :cardmap cardmap))
+ :doc "Ability Deck")
 
 (func deck-books : base/deck
  (base/deck
@@ -114,8 +128,9 @@
   :cardmap
    (base/cardmap<-cardlist
     (base/cardlist
-     (scene/deck-murintrail tactics)
-     (nightonthetown/deck-nightonthetown tactics)))))
+     (murintrail/deck-murintrail tactics)
+     (nightonthetown/deck-nightonthetown tactics)
+     (ontherun/deck-ontherun tactics)))))
 
 (func deck-skills : base/deck
  (let : base/deck

@@ -54,6 +54,8 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Herding", ":titles", "Cowboy, Pig Farmer, Rancher, Shepherd"),
                 ":Husbandry",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Husbandry"),
+                "Livestock",
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Livestock"),
                 "Stare Down",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stare Down"),
                 "Guard Training",
@@ -232,7 +234,7 @@ export default class nx_tactics_books_skills {
               ":name",
               "Survival",
               ":summary",
-              "Common Survival Abilities\n* [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or Survival roll.\n* [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty versus Body + Survival or gain Black [Exhaustion] Tokens.",
+              "Common Survival Abilities\n* [Reaction]: IF you receive Exposure THEN for each Exposure received [Reveal Fate] if face or Normal under Skill then discard the Exposure.\n* [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty versus Body + Survival or gain Black [Exhaustion] Tokens.",
               ":titles",
               "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer",
               ":stat",
@@ -267,44 +269,7 @@ export default class nx_tactics_books_skills {
               nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Caving")
             ),
             ":Tradeskills",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_skill},
-              ":name",
-              "Tradeskills",
-              ":reference",
-              "* Tradesman",
-              ":stat",
-              "None",
-              ":abilitymap",
-              nx_tactics_base.f_abilitymap_from_abilitylist(
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Administration", ":titles", "Administrator, Secretary"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Agriculture", ":summary", "* Grow Crop", ":titles", "Farmer, Gardener"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Architecture", ":summary", "* [Extended Action]: Design a structure. The size and quality of the structure are limited by level.\n* [Action]: Determine weaknesses of a structure.", ":titles", "Architect"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blacksmithing", ":titles", "Blacksmith"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Brewing", ":summary", "* Brew Beer\n* Brew Hard Liquor\n* Brew Mead\n* Brew Wine", ":titles", "Brewer, Vintner"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Carpentry", ":titles", "Carpenter"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cleaning", ":titles", "Maid"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cobbling", ":summary", "* Make Shoes", ":titles", "Cobbler"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cooking", ":summary", "* Prepare Recipe", ":titles", "Chef, Cook"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cooping", ":summary", "* Make Sealable Barrel", ":titles", "Cooper"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Glassblowing", ":summary", "* Blow Bottle\n* Blow Glass Decoration"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Jewelsmithing", ":summary", "* Gemcutting\n* Fashion Jewelry", ":titles", "Gemcutter, Jeweler"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Laboring", ":titles", "Laborer, Worker"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Landscaping", ":summary", "* Grow Bonsai\n* Grow Flowers\n* Grow Hedges\n* Grow Hedge Maze\n* Grow Trees", ":titles", "Groundskeeper, Landscaper, Lawnboy"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Leatherworking", ":summary", "* Fashion Leather Goods\n* Flay Skins", ":titles", "Tanner"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Livestock"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Logging"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Metalworking", ":titles", "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Plumbing", ":titles", "Plumber"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Porting", ":summary", "* Bear Litter\n* Port Boat", ":titles", "Bearer, Porter"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pottery", ":titles", "Potter"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Servant", ":titles", "Butler, Footman, Lady in Waiting"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sewing", ":summary", "* Crochet\n              * Embroidery\n              * Fashion Clothing\n              * Needlepoint\n              * Repair Cloth", ":titles", "Dressmaker, Seamstress"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stagecraft", ":summary", "* The technical aspects of theatrical production, which include scenic design, stage machinery, lighting, sound, costume design, and makeup.", ":titles", "Stagehand"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Weaponsmith", ":summary", "* The ability to repair, improve, or even create weapons.\n* [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits.", ":titles", "Bladesmith, Swordsmith"),
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Woodworking", ":summary", "The process of building, making or carving something using wood.", ":titles", "Carver, Whittler, Woodworker")
-              )
-            )
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Tradeskills")
           )
         ),
         "Transportation Skills",
@@ -1040,7 +1005,7 @@ export default class nx_tactics_books_skills {
                 ":Procure",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Procure", ":summary", "The ability to find rare, exotic or illegal items for sale or trade.", ":titles", "Procurer"),
                 ":Sales",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sales", ":reference", "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Business is: You buy something, you sell it for more - Father Guido Sarducci, Five Minute University", ":titles", "Carpetbagger, Peddler, Salesman"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sales", ":reference", "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Business is: You buy something, you sell it for more - Father Guido Sarducci, Five Minute University\n* We've go everything in our shop, except what we don't have. - Sakura, Nikke", ":titles", "Carpetbagger, Peddler, Salesman"),
                 ":Speculate",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Speculate"),
                 "Trade Routes",
@@ -1516,6 +1481,8 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Trial")
               )
             ),
+            "Leadership",
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Leadership"),
             ":Performance",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_skill},

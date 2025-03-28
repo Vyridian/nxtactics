@@ -2217,11 +2217,11 @@ export default class nx_tactics_books_bestiary {
                 {"any-1": nx_tactics_base.t_unitpowermap},
                 "Demon Soul",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Demon Soul"),
-                "Hyper Speed",
+                "Quickness",
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitpower},
                   ":name",
-                  "Hyper Speed",
+                  "Quickness",
                   ":unitabilitymap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unitabilitymap},

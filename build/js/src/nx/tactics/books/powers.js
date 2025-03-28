@@ -481,111 +481,20 @@ export default class nx_tactics_books_powers {
       ":name",
       "Alteration Powers",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Material Control",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Material Control",
           ":powermap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_powermap},
-            "Atomic Control",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Atomic Control",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                ":Disintegrate",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Disintegrate", ":summary", "* Causes wounds that are difficult to heal\n* A victim that takes Disintegrate Tokens equal to Body are completely destroyed."),
-                ":Destruction",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Destruction", ":summary", "* Effects only unliving objects\n* A target that takes Destruction Tokens equal to Body are completely destroyed.")
-              )
-            ),
-            "Density Control",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Density Control"),
-            ":Transfiguration",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Transfiguration",
-              ":summary",
-              "* The ability to transform others.",
-              ":titles",
-              "Fleshcrafting, Vissisitude",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                ":Blinding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blinding"),
-                "Body Morph",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Body Morph"),
-                ":Deafening",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Deafening"),
-                "Face Molding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Face Molding", ":summary", "[Downtime]: Soften a face and mold it like clay. Scuplting skill determines effectiveness."),
-                "Face Off",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Face Off", ":summary", "[Downtime]: Surgically swap appearances with another unit."),
-                ":Malleate",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Malleate", ":summary", "* Make target soft and malleable like clay."),
-                ":Petrification",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Petrification", ":summary", "* [Focus]: vs. Spirit and place [Petrification] counters on the target body location.\n* Any body location with a [Petrification] is encased in stone. It requires an [Action] to remove a [Petrification]. Any area that suffers 3 [Petrification] turns completely to stone. If any other area is so petrified, then complete petrification immediately spreads across the entire body and then the body and all its gear immediately converts to a stone statue.\n* Additional Effects: A petrified arm cannot move. A petrified leg reduces Move by half. A petrified head is unable to see or hear. Other petrifed areas have no additional effect. Petrified Arms or legs can break off like a clean amputation without blood loss. \n* This ability can also be used to restore a petrified target back to its original form if the skill is at least equal to the original. Lost limbs may also be restored by reattaching the limb before restoration.\n* This ability can also be used on any sort of earth to harden the earth to equivalent stone."),
-                ":Polymorph",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Polymorph", ":summary", "* [Action]: Roll vs. Spirit and place Black [Shapeshift] Tokens on target.\n* A unit with 0 Spirit due to polymorph changes into any creature desired of equal Body.  When the last Shapeshift Token is removed, a polymorphed unit returns to normal."),
-                "Sensory Deprivation",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sensory Deprivation"),
-                "Sensory Overload",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sensory Overload")
-              )
-            ),
-            ":Transmutation",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Transmutation",
-              ":summary",
-              "* The ability to transform non-living matter.",
-              ":titles",
-              "Reality Warper, Shaper, Transmuter",
-              ":stat",
-              "Mind",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Molecular Alteration",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Molecular Alteration")
-              )
-            )
-          )
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Atomic Control", "Density Control", "Transfiguration", "Transmutation")
         ),
-        "Power Manipulation",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Power Manipulation",
           ":powermap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_powermap},
-            "Power Copy",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Copy"),
-            "Power Disruption",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Disruption"),
-            "Power Drain",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Drain"),
-            "Power Feedback",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Feedback"),
-            "Power Fluctuation",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Fluctuation"),
-            "Power Reflection",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Reflection"),
-            "Power Theft",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Theft"),
-            "Power Vampire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Vampire")
-          )
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Power Copy", "Power Disruption", "Power Drain", "Power Feedback", "Power Fluctuation", "Power Reflection", "Power Theft", "Power Vampire")
         )
       )
     )
@@ -2257,101 +2166,21 @@ export default class nx_tactics_books_powers {
       ":name",
       "Enhancement Powers",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Physical Enhancement",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Physical Enhancement"),
-        "Mental Enhancement",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Mental Enhancement",
           ":powermap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_powermap},
-            ":Genius",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Genius",
-              ":titles",
-              "Genius, Prodigy, Savant, Super Genius",
-              ":stat",
-              "Mind",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Analyze Weakness",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Analyze Weakness"),
-                "Calculator Mind",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Calculator Mind"),
-                "Engineering Genius",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Engineering Genius"),
-                "Financial Genius",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Financial Genius"),
-                "Investigative Genius",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Investigative Genius"),
-                "Linguistic Genius",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Linguistic Genius"),
-                "Mathematical Genius",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mathematical Genius"),
-                ":Multitasking",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Multitasking"),
-                "Photographic Memory",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Photographic Memory"),
-                "Scientific Genius",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Scientific Genius"),
-                "Speed Reading",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Speed Reading"),
-                "Tactical Genius",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tactical Genius")
-              )
-            )
-          )
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Genius")
         ),
-        "Psychic Enhancement",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Psychic Enhancement",
           ":powermap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_powermap},
-            ":Charm",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Charm",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Commanding Presense",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Commanding Presense")
-              ),
-              "Psychic Power",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_skill},
-                ":name",
-                "Psychic Power",
-                ":summary",
-                "* This skill is used when manifesting and controlling a [Power] that directly affect the [Will] of targets.\n* Psychic Powers must have range and see or 'know' the target.",
-                ":titles",
-                "Psychic Combat, Psychological Warfare, Soul Combat, Spirit Combat, Test of Will",
-                ":stat",
-                "Will",
-                ":abilitymap",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_abilitymap},
-                  "Ego Whip",
-                  vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ego Whip"),
-                  "Psychic Knife",
-                  vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Psychic Knife"),
-                  "Tower of Iron Will",
-                  vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tower of Iron Will")
-                )
-              )
-            )
-          )
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Charm", "Psychic Power")
         )
       )
     )
@@ -2873,31 +2702,7 @@ export default class nx_tactics_books_powers {
               ":stat",
               "Mind",
               ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Brain Drain",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Brain Drain"),
-                "Brain Freeze",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Brain Freeze"),
-                "Brain Storm",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Brain Storm"),
-                "Ego Whip",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ego Whip", ":summary", "* Attack with [Mind] vs. [Spirit]."),
-                ":Feeblemind",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Feeblemind"),
-                "Feedback Loop",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Feedback Loop"),
-                ":Lobotomy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lobotomy"),
-                "Mental Blast",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Blast", ":summary", "Attacks Mind.  All tokens are stun."),
-                "Mental Prison",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Prison", ":summary", "* Trap a person's personality in a prison within their own mind.", ":titles", "Mind Prison, Prison of the Mind"),
-                "Summon Id Monster",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Summon Id Monster", ":summary", "[Call] [Id Monster]"),
-                "Tabula Rasa",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tabula Rasa")
-              )
+              nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Brain Drain", "Brain Freeze", "Brain Storm", "Ego Whip", "Feeblemind", "Feedback Loop", "Lobotomize", "Mental Blast", "Mental Prison", "Summon Id Monster", "Tabula Rasa")
             ),
             "Mental Connection",
             vx_core.f_new(
@@ -2941,8 +2746,6 @@ export default class nx_tactics_books_powers {
             vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mental Projection"),
             "Mind Reading",
             vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mind Reading", ":summary", "Owner of target unit must announce the next Hits movements and actions that unit will perform.  That unit must perform those actions if it is able."),
-            "Mind Whip",
-            vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mind Whip"),
             "Mind's Eye",
             vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mind's Eye", ":summary", "* Eye - The caster can close his eyes and see into the astral world instead of the real world."),
             "Psionic Blade",
@@ -3138,40 +2941,6 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "VTOL", ":summary", "* Hovering units may [Move] backwards.\n* Hovering units may use [Vector Movement] rule.")
               )
             ),
-            "Ground Movement",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Ground Movement",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                ":2-Legged",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "2-Legged"),
-                ":3-Legged",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "3-Legged"),
-                ":4-Legged",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "4-Legged"),
-                ":6-Legged",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "6-Legged"),
-                ":8-Legged",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "8-Legged"),
-                ":Hover",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hover", ":summary", "* Hovering allows full movement speed over any flat terrain without actually touching the surface. Ground, Water, Sand, Ice, generally cause no penalty, but turning is difficult and imprecise especially at high speeds.\n* Hovering units may [Move] backwards.\n* Hovering units may use [Vector Movement] rule."),
-                "Jump Jets",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Jump Jets"),
-                "Off Roading",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Off Roading"),
-                ":Snowcraft",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Snowcraft", ":summary", "* Off Snow +1 Terrain Penalty."),
-                ":Tracked",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tracked"),
-                "Turbo Booster",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Turbo Booster", ":titles", "Boost, Nitro, Turbo, Turbo Charger"),
-                ":Wheeled",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wheeled")
-              )
-            ),
             "Digging",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -3184,6 +2953,8 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tunneling")
               )
             ),
+            "Ground Movement",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Ground Movement"),
             "Water Movement",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -3229,39 +3000,9 @@ export default class nx_tactics_books_powers {
               )
             ),
             "Interstellar Movement",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Interstellar Movement",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                ":Hyperdrive",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Hyperdrive", ":image", "Units/SpaceAndTime/Hyperspace.jpg", ":summary", "* Faster than light travel can be accomplished by warping space into a Wormhole/Black hole, dropping out of normal space and travelling through the parallel universe called Hyperspace/Tachyon Space where physical laws are not bound by the relationship between mass and the speed of light, and finally returning to normal space by creating another space warp.\n* Hyperspace/Tachyon Space - Tachyon Space, like other dimensions is at right angles to our existing 3 dimension. In Hyperspace, time and distance have different meanings, all particles are tachyons, and the speed of light is an absolute minimum speed instead of a maximum. Travelling through Hyperspace is exceptionally hazardous. In fact, any deviation from the calculated route cause the corridor to collapse leaving one stranded in Hyperpace forever with no way to calculate a return.\n* Calculating a Route - Once a destination is chosen, complex calculations must be performed to calculate a direct route from the current location to the destination through the shifting reality of Hyperspace. A successful route will be a 'straight' line through Hyperspace. Proximity to a gravity well makes these calculations next to impossible. Typically, all ship computer resources are required for this calculation and the larger the ship fewer the available routes and therefore the greater the complexity. Ships may only enter and exit hyperspace at the edge of a solar system and must use conventional sub light drives within the system. A day or more at sub-light speed is therefore required to reach or leave a planet in an inner solar system. Route calculation time is roughly light years x tons / 10secs e.g. 4 light years x 100 tons / 10 = 40sec.\n* Hyperspace Corridor - Once calculated, the ship must meet the speed defined by the calculation while modulating the Hyperdrive energy signature to match the bridge to Hyperspace. If all goes well, the vast energies in Tachyon Space will form a corridor directly to the destination. Errors in any of the steps usually involve intense gravitional shearing forces that will at best cause damage to the Hyperdrive and leave the traveller stranded in deep space, or worse, Hyperspace.\n* Travel in Hyperspace - Hyperspace travel is typically a boring affair. The Hyperspace corridor carries the ship to its destination, so no manuevering is needed. The time spent in Hyperspace varies, but is usually proportional to the distance. Transit time is roughly 2 hours per light year travelled (e.g. 4 light years x 2 = 8hours)\n* Tachyon Doppler Effect - When the Hyperspace Corridor is created, both ends of the corridor will start leaking Tachyons which can be detected by sensitive instruments. The amount of Tachyons increases with the size of the ship, the distance travelled and the closer the time of arrival.\n* Tachyon Relay Network - Satellites at the edge of stellar systems use Hyperspace Corridors to beam tranmissions through Hyperspace to their opposites in other systesm. Since these communications have negligible mass, the calculations are nearly instantaneous though the same transit times apply.\n* History - Imaginary Space, I-Space - While studying fusion plant efficiency using various algorithms, a surprising discovery was made: very rarely and seemingly at random, the plant would produce a tiny tachyon burst. After decades of study, a pattern began to emerge along with a shocking discovery: only algorithms using imaginary numbers could trigger a burst and a small amount of particles were actually disappearing during the event. Where the particles were going became the primary focus of astrophysics from then on. Eventually a hypothesis gathered momentum. The particles were leaving real space and traveling along trajectories plotted through so called imaginary space. This implied that the destination of the particles could be predicted. After much trial and error another breakthrough: a second tachyon burst moments after the first and many kilometers away. The particles had returned. Faster than light travel was possible. The implications for communications were immediately obvious, but could something larger make the trip? Research was slow because increased mass meant increased complexity. The power and computational needs were high but not unachievable. Only a decade later the first successful test craft made the trip. A decade later commercial hyperdrives became available. A decade later they were affordable on even modest starships.", ":titles", "FTL Drive, Gravity Drive, Gravity Lens, Subspace Drive, T-Drive, Tachyon Drive, Warp Drive")
-              )
-            ),
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Interstellar Movement"),
             "Jump Drive",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Jump Drive",
-              ":image",
-              "Units/SpaceAndTime/Wormhole.jpg",
-              ":reference",
-              "* I created the Event Horizon to reach the stars, but she's gone much, much farther than that. She tore a hole in our universe, a gateway to another dimension. A dimension of pure chaos. Pure... evil. When she crossed over, she was just a ship. But when she came back... she was alive! - Dr. Weir, Event Horizon",
-              ":summary",
-              "* Jump Drives generate energy pulses in the ship's drive to create ripples in the fabric of space.  Each pulse must be precisely timed to the apex of each ripple to create an increasing harmonic wave (the 'Wave Motion' effect). Eventually, the energy of the occillation becomes too great, a tear in space is produced, and the starship falls in.",
-              ":titles",
-              "Gate Drive, Stargate, Wave Motion Engine, Wormhole",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Strategic Warp Jump",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Strategic Warp Jump", ":summary", "* A ship with a Warp Engine may perform a strategic warp jump and instantly remove itself from combat, returning to the strategic map.\n* A unit already on the strategic map may move [Skill] spaces on the strategic map.\n* [Requires]: The unit must cease maneuvering and must perform this ability for 3 consecutive turns.\n* [Action]: On the second consecutive action, the unit immediately removes all Vector tokens and moves the unit to any other space on the map."),
-                "Tactical Warp Jump",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tactical Warp Jump", ":summary", "* A ship with a Warp Engine may perform a tactical warp jump and instantly transport from any space on the map to any other.\n* [Requires]: The unit must cease maneuvering and must perform this ability for 2 consecutive turns.\n* [Action]: On the second consecutive action, the unit immediately removes all Vector tokens and moves the unit to any other space on the map.")
-              )
-            ),
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Jump Drive"),
             ":Teleportation",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -3551,7 +3292,7 @@ export default class nx_tactics_books_powers {
               ":name",
               "Quickness",
               ":titles",
-              "Celerity, Hyperspeed, Quickening, Speed",
+              "Celerity, Hyperspeed, Quickening, High Speed",
               ":abilitymap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_abilitymap},

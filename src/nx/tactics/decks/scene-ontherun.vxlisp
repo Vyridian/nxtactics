@@ -1,0 +1,62 @@
+(package nx/tactics/decks/scene-ontherun
+ :libs (lib base :path nx/tactics/base)
+ :doc  "On The Run Scene")
+
+(func deck-ontherun : base/deck
+ [tactics : base/tactics]
+ (base/deck
+  :name "On The Run"
+  :cardmap
+   (base/cardmap<-cardlist
+    (list<-list : base/cardlist
+     (base/unitlist<-tactics-keys
+      tactics
+      "Flint (Early)"
+      "Hidden"
+      "Hare"
+      "Snake: Emerald Viper"))
+    (list<-list : base/cardlist
+     (base/skilllist<-tactics-keys
+      tactics
+      "Close Combat"
+      "Stealth"))
+    (list<-list : base/cardlist
+     (base/abilitylist<-tactics-keys
+      tactics
+      "Ambush"
+      "Sneak"))
+    (list<-list : base/cardlist
+     (base/itemlist<-tactics-keys
+      tactics
+      "Bare Handed"
+      "Flint Stone"
+      "Knife: Dagger"
+      "Mushrooms"
+      "Pond Water"
+      "Raspberries"
+      "Torch"
+      "Wild Onions"
+      "Wild Yams"))
+    (list<-list : base/cardlist
+     (base/placelist<-tactics-keys
+      tactics
+      "Brambles"
+      "Cliff"
+      "Forest"
+      "Lake"
+      "Marsh"
+      "Mudslide"
+      "Pond"
+      "River"
+      "Rockslide"
+      "Stream"))
+   )
+ )
+ :doc "On the Run Deck")
+
+(func scene-ontherun : base/scene
+ [tactics : base/tactics]
+ (base/scene
+  :name "On The Run Scene"
+  :secrets
+   ""))

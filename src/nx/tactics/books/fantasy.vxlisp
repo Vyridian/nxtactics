@@ -249,12 +249,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :level "5"
               :unititemmap
                (unititemmap
-                :Longsword
+                "Sword: Long"
                  (unititem
-                  :name "Longsword")
-                :Dagger
+                  :name "Sword: Long")
+                "Knife: Dagger"
                  (unititem
-                  :name "Dagger")))))
+                  :name "Knife: Dagger")))))
         "Jaris Ransun"
          (unit
           :name "Jaris Ransun"

@@ -74,14 +74,14 @@
          (rule
           :name "Crippled"
           :image "Tokens/CrippledToken.png"
-          :summary "-1 [Speed]"
+          :summary "[Speed]:-1"
           :classification "Black Token")
         :Curse
          (rule
           :name "Curse"
           :summary
            "* [Anytime]: When unit gains a [Red Token] or a [Black Token], roll for each Curse Token.
-* For each [Hit], replace a Curse Token with a Token of any type just gained.")
+            * For each [Hit], replace a Curse Token with a Token of any type just gained.")
         :Depression
          (rule
           :name "Depression")

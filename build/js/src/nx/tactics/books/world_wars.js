@@ -7586,7 +7586,7 @@ export default class nx_tactics_books_world_wars {
                 ":American*",
                 vx_core.f_new({"any-1": nx_tactics_base.t_team}, ":name", "American*", ":deploy", "1) Deploy Land Vehicle Map\n2) Alternate deploying 5 Forest Tiles on your side of the map.\n3) Alternate deploying units on your edge of the map.", ":forces", "* 12 Levels of Artillery (max 3) (Quickstart: ?)\n* 9 Levels of Infantry (max 8) (Quickstart: 2x Able Team, 4x Baker Team, Charlie Team)"),
                 ":German",
-                vx_core.f_new({"any-1": nx_tactics_base.t_team}, ":name", "German", ":deploy", "1) Deploy 4 Hill Tiles in the center of the map.\n2) Alternate deploying 5 Forest Tiles on your side of the map.\n3) Alternate deploying units on the Hill (units may be dug in).", ":forces", "* 12 Levels of Artillery (max 3) (Quickstart: ?)\n* 9 Levels of Infantry (max 8) (Quickstart: Waffen-SS, MG Team, 4x Riflemen)")
+                vx_core.f_new({"any-1": nx_tactics_base.t_team}, ":name", "German", ":deploy", "1) Deploy 4 Hill Tiles in the center of the map.\n2) Alternate deploying 5 Forest Tiles on your side of the map.\n3) Alternate deploying units on the Hill (base/units may be dug in).", ":forces", "* 12 Levels of Artillery (max 3) (Quickstart: ?)\n* 9 Levels of Infantry (max 8) (Quickstart: Waffen-SS, MG Team, 4x Riflemen)")
               )
             )
           )

@@ -56,6 +56,7 @@ import nx_tactics_decks_power_test from "./nx/tactics/decks/power_test.js"
 import nx_tactics_decks_restraint_test from "./nx/tactics/decks/restraint_test.js"
 import nx_tactics_decks_rule_test from "./nx/tactics/decks/rule_test.js"
 import nx_tactics_decks_scene_murintrail_test from "./nx/tactics/decks/scene-murintrail_test.js"
+import nx_tactics_decks_scene_ontherun_test from "./nx/tactics/decks/scene-ontherun_test.js"
 import nx_tactics_decks_scene_test from "./nx/tactics/decks/scene_test.js"
 import nx_tactics_decks_skill_test from "./nx/tactics/decks/skill_test.js"
 import nx_tactics_decks_specialty_test from "./nx/tactics/decks/specialty_test.js"
@@ -154,6 +155,7 @@ export default class app_test {
       nx_tactics_decks_restraint_test.test_package(context),
       nx_tactics_decks_rule_test.test_package(context),
       nx_tactics_decks_scene_murintrail_test.test_package(context),
+      nx_tactics_decks_scene_ontherun_test.test_package(context),
       nx_tactics_decks_scene_test.test_package(context),
       nx_tactics_decks_skill_test.test_package(context),
       nx_tactics_decks_specialty_test.test_package(context),

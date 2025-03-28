@@ -540,8 +540,8 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Butterfly Knife", ":titles", "Balisong", ":energy", "50J"),
             ":Cinqueda",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Cinqueda", ":energy", "50J"),
-            ":Dagger",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Dagger", ":energy", "50J"),
+            "Knife: Dagger",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Knife: Dagger"),
             ":Dirk",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Dirk", ":energy", "50J"),
             "Hunting Knife",
@@ -1398,7 +1398,7 @@ export default class nx_tactics_books_combat {
           ":itemmap",
           nx_tactics_base.f_itemmap_from_tactics_keys(tactics, "Bare Handed"),
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Close Combat", "Defense", "Evasion", "Melee", "Ranged", "Firearms", "Gunnery", "Leadership", "Military")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Close Combat", "Defense", "Evasion", "Melee", "Ranged", "Firearms", "Gunnery", "Military")
         )
       )
     )

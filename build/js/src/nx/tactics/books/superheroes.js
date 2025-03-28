@@ -2787,9 +2787,7 @@ export default class nx_tactics_books_superheroes {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Alchemy")
               ),
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Influence",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Influence", ":level", "10")
               )
             ),

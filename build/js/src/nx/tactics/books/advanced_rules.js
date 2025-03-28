@@ -440,7 +440,7 @@ export default class nx_tactics_books_advanced_rules {
             ":Blindness",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Blindness"),
             ":Crippled",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Crippled", ":image", "Tokens/CrippledToken.png", ":summary", "-1 [Speed]", ":classification", "Black Token"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Crippled", ":image", "Tokens/CrippledToken.png", ":summary", "[Speed]:-1", ":classification", "Black Token"),
             ":Curse",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Curse", ":summary", "* [Anytime]: When unit gains a [Red Token] or a [Black Token], roll for each Curse Token.\n* For each [Hit], replace a Curse Token with a Token of any type just gained."),
             ":Depression",

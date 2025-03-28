@@ -293,7 +293,7 @@
               :deploy
                "1) Deploy 4 Hill Tiles in the center of the map.
 2) Alternate deploying 5 Forest Tiles on your side of the map.
-3) Alternate deploying units on the Hill (units may be dug in)."
+3) Alternate deploying units on the Hill (base/units may be dug in)."
               :forces
                "* 12 Levels of Artillery (max 3) (Quickstart: ?)
 * 9 Levels of Infantry (max 8) (Quickstart: Waffen-SS, MG Team, 4x Riflemen)")))))
@@ -1488,15 +1488,15 @@ Nagumo had received the same message from Tokyo.
      (section
       :name "WWI British Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Doughboy
-         (unit
+         (base/unit
           :name "Doughboy")
         "Vickers Machine Gunner"
-         (unit
+         (base/unit
           :name "Vickers Machine Gunner")
         "Sopwith Camel"
-         (unit
+         (base/unit
           :name "Sopwith Camel"))))))
 
 (func chapter_wwi_french_forces : base/chapter
@@ -1508,18 +1508,18 @@ Nagumo had received the same message from Tokyo.
      (section
       :name "WWI French Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         "French Infantry"
-         (unit
+         (base/unit
           :name "French Infantry"
           :image "WorldWars/French_Infantry.png")))
     "WWI French Vehicles"
      (section
       :name "WWI French Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Renault FT 17"
-         (unit
+         (base/unit
           :name "Renault FT 17"
           :reference "* Among the most revolutionary and influential tank designs in history. The FT 17 was the first tank with an armament in a fully rotating turret, and its configuration with the turret on top, engine in the back and the driver in front became the conventional one, repeated in most tanks until today; at the time it was a revolutionary innovation, causing armour historian Steven Zaloga to describe the type as 'the world's first modern tank.' The tank was widely used by the French and the Americans (who, as mentioned, were lent 514) in the latter stages of World War I, after 31 May 1918. The tank was cheap and well-suited for mass production. Indeed, the very production was made a weapon in itself: a goal was set of 12,260 to be produced (4,440 of which in the USA) before the end of 1919.This prospect was one of several factors which drove the German High Command to its decision to launch the massive all-or-nothing offensives in the spring of 1918, which in turn weakened their army so that it collapsed in the summer. FT 17 tanks were also used in the Second World War, among others in Poland, Finland, France and Kingdom of Yugoslavia, although they were completely obsolete by then."))))))
 
@@ -1532,9 +1532,9 @@ Nagumo had received the same message from Tokyo.
      (section
       :name "WWI French German Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Folker
-         (unit
+         (base/unit
           :name "Folker"
           :reference "* Of all the aces the war produced none compared to the greatest flyer of all, Manfred Richtofen 'The Red Baron'. To this day his name remains a legend that is better known to most than even the war that created him."))))))
 
@@ -1923,51 +1923,51 @@ Nagumo had received the same message from Tokyo.
      (section
       :name "WWII American Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Able Team"
-         (unit
+         (base/unit
           :name "Able Team"
           :image "WWIIAmerican/Infantry_AbleScoutToken.png"
           :summary "* Able Team is composed of 2 scouts who advance 25m ahead of the squad."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Baker Team"
-         (unit
+         (base/unit
           :name "Baker Team"
           :image "WWIIAmerican/Infantry_BakerGarandToken.png"
           :reference "* We're all very, very different, but there is one thing that we all have in common: we were all stupid enough to enlist in the Army. We're mutants. There's something wrong with us, something very, very wrong with us. Something seriously wrong with us - we're soldiers. But we're American soldiers!  We've been kicking ass for 200 years! - John Winger, Stripes"
           :summary "* Baker Team is composed of 5 riflemen."
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Close Assault"
-                 (unitability
+                 (base/unitability
                   :name "Close Assault")))))
         "Charlie Team"
-         (unit
+         (base/unit
           :name "Charlie Team"
           :image "WWIIAmerican/Infantry_CharlieBARToken.png"
           :summary "Charlie Team is composed of 3 riflemen, a BAR gunner, and a Squad leader."
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "US Airborne Charlie"
-         (unit
+         (base/unit
           :name "US Airborne Charlie"
           :image "WWIIAmerican/Infantry_AirborneToken.png"
           :reference
@@ -1976,44 +1976,44 @@ Nagumo had received the same message from Tokyo.
 * You probably heard we ain't in the prisoner-takin' business; we in the killin' Nazi business. And cousin, Business is a-boomin'. - Lt. Aldo Raine, Inglourious Basterds"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Espionage
-             (unitskill
+             (base/unitskill
               :name "Espionage"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Propaganda
-                 (unitability
+                 (base/unitability
                   :name "Propaganda")
                 :Sabotage
-                 (unitability
+                 (base/unitability
                   :name "Sabotage")))))
         "Browning MG Team"
-         (unit
+         (base/unit
           :name "Browning MG Team"
           :image "WWIIAmerican/Infantry_BrowningMGToken.png"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "US Sniper"
-         (unit
+         (base/unit
           :name "US Sniper"
           :image "WWIIAmerican/Infantry_USSniperToken.png"
           :reference "* WWII U.S. sniper training was very elementary and focused on being able to hit targets over long distances. There was almost no concern with the ability to blend into the environment. Training also varied from place to place, resulting in a wide range of qualities of snipers."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Platoon Sergeant"
-         (unit
+         (base/unit
           :name "Platoon Sergeant"
           :image "WWIIAmerican/Infantry_SergeantToken.png"
           :reference
@@ -2022,21 +2022,21 @@ Nagumo had received the same message from Tokyo.
             * You don't say 'sir' to me, I'm a sergeant, I work for a living. - Sergeant Hulka, Stripes"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")
                 :Rally
-                 (unitability
+                 (base/unitability
                   :name "Rally")))))
         "Bazooka Team"
-         (unit
+         (base/unit
           :name "Bazooka Team"
           :image "WWIIAmerican/Infantry_BazookaToken.png"
           :reference
@@ -2045,91 +2045,91 @@ Nagumo had received the same message from Tokyo.
             * Casualties among bazooka team members were extremely high, and assignment to such duty was regarded as nearly suicidal."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "US Forward Observer"
-         (unit
+         (base/unit
           :name "US Forward Observer"
           :image "WWIIAmerican/Infantry_ForwardObserverToken.png"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M2 Mortar Team"
-         (unit
+         (base/unit
           :name "M2 Mortar Team"
           :image "WWIIAmerican/Infantry_MortarToken.png"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "US Flamethrower"
-         (unit
+         (base/unit
           :name "US Flamethrower"
           :image "WWIIAmerican/Infantry_FlamethrowerToken.png"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "US Medic"
-         (unit
+         (base/unit
           :name "US Medic"
           :image "WWIIAmerican/Infantry_MedicToken.png"
           :reference "* Allied and German forces whereby soldiers would not knowingly fire at a medic treating a wounded comrade. This was in stark contrast to the Japanese forces, who regarded medics as primary targets, resulting in Allied medics removing or covering their insignia."
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "US Sapper"
-         (unit
+         (base/unit
           :name "US Sapper"
           :image "WWIIAmerican/Infantry_SapperToken.png"
           :summary "Combat Engineers from the US Army Corps of Engineers (USACE)"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Demolitions
-                 (unitability
+                 (base/unitability
                   :name "Demolitions")
                 :Explosives
-                 (unitability
+                 (base/unitability
                   :name "Explosives")
                 "Mine Laying"
-                 (unitability
+                 (base/unitability
                   :name "Mine Laying"))
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Demolition Pack"
-                 (unititem
+                 (base/unititem
                   :name "Demolition Pack")))))))
     "WWII American Vehicles"
      (section
       :name "WWII American Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "M4 Sherman"
-         (unit
+         (base/unit
           :name "M4 Sherman"
           :image "WWIIAmerican/TankMed_M4A3_ShermanToken.png"
           :reference "* As part of the deception plan that drew German attention away from Normandy, inflatable rubber Shermans were deployed in Kent with plywood artillery."
@@ -2139,9 +2139,9 @@ Nagumo had received the same message from Tokyo.
           :range "193km"
           :speedland "48kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "75mm"
               :back "30mm"
@@ -2149,13 +2149,13 @@ Nagumo had received the same message from Tokyo.
               :under "30mm"
               :side "50mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "M4A4 Sherman Crab"
-         (unit
+         (base/unit
           :name "M4A4 Sherman Crab"
           :image "WWIIAmerican/TankMed_ShermanCrabToken.png"
           :reference "* Valuable during and after D-Day, especially as the Germans made extensive use of minefields to slow the Allied advance through France."
@@ -2165,24 +2165,24 @@ Nagumo had received the same message from Tokyo.
           :range "193km"
           :speedland "40kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "65mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Mine Clearing"
-                 (unitability
+                 (base/unitability
                   :name "Mine Clearing")))))
         "T34 Sherman Calliope"
-         (unit
+         (base/unit
           :name "T34 Sherman Calliope"
           :image "WWIIAmerican/TankMed_T-34Calliope_M4Token.png"
           :classification "Med. Tank"
@@ -2191,19 +2191,19 @@ Nagumo had received the same message from Tokyo.
           :range "193km"
           :speedland "40kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "65mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "M4A3E8 Sherman Easy Eight"
-         (unit
+         (base/unit
           :name "M4A3E8 Sherman Easy Eight"
           :image "WWIIAmerican/TankMed_M4A3E8_EasyEightToken.png"
           :reference "* The M4A3 was the first to be factory-produced with the new HVSS (horizontal volute spring suspension) suspension with wider tracks for lower ground pressure, and the smooth ride of the HVSS with its experimental E8 designation led to the nickname Easy Eight for Shermans so equipped."
@@ -2213,19 +2213,19 @@ Nagumo had received the same message from Tokyo.
           :range "193km"
           :speedland "48kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "65mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M26 Pershing"
-         (unit
+         (base/unit
           :name "M26 Pershing"
           :image "WWIIAmerican/TankHvy_M26_PershingToken.png"
           :reference "* The Pershing reached the battlefield only in February 1945 and saw very little action in WWII."
@@ -2236,20 +2236,20 @@ Nagumo had received the same message from Tokyo.
           :range "160km"
           :speedland "40kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "110mm"
               :under "25mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M3 Lee"
-         (unit
+         (base/unit
           :name "M3 Lee"
           :image "WWIIAmerican/TankMed_M3LeeToken.png"
           :reference "* By using the hull mount, the M3 design was brought to production quicker than if a proper turreted mount had been attempted. It was well understood that the M3 design was deeply flawed, but the need for tanks was urgent."
@@ -2260,19 +2260,19 @@ Nagumo had received the same message from Tokyo.
           :range "193km"
           :speedland "40kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "51mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M5 Stuart"
-         (unit
+         (base/unit
           :name "M5 Stuart"
           :image "WWIIAmerican/TankLt_M5A1_StuartToken.png"
           :reference "* The British were the first to use the Stuart in 1941 against Afrika Korps where they suffered high losses. Its gun was too weak and its turret poorly laid out. They did, however, like its high speed and reliability. The Soviets were less generous and turned down the Stuart in Lend-Lease."
@@ -2283,19 +2283,19 @@ Nagumo had received the same message from Tokyo.
           :range "120km"
           :speedland "30kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "51mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "M24 Chaffee"
-         (unit
+         (base/unit
           :name "M24 Chaffee"
           :image "WWIIAmerican/TankLt_M24ChaffeeToken.png"
           :reference "* The M24 was not up to the challenge of fighting German tanks, but the bigger gun at least gave its crews a chance to fight back when it was required. The M24's light armor made it vulnerable to virtually all of the German tanks, anti-tank guns, and hand-held anti-tank weapons. The contribution of the M24 to winning the war in Europe was insignificant, as they arrived too late and in too few numbers to replace the worn out M5s."
@@ -2306,20 +2306,20 @@ Nagumo had received the same message from Tokyo.
           :range "161km"
           :speedland "56kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "25mm Sloped"
               :over "9mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M10 Wolverine"
-         (unit
+         (base/unit
           :name "M10 Wolverine"
           :image "WWIIAmerican/TD_M10_WolverineToken.png"
           :reference
@@ -2332,21 +2332,21 @@ Nagumo had received the same message from Tokyo.
           :range "300km"
           :speedland "51kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "57mm"
               :over "0mm"
               :under "9mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "M18 Hellcat"
-         (unit
+         (base/unit
           :name "M18 Hellcat"
           :image "WWIIAmerican/TD_M18_HellcatToken.png"
           :reference "* Recorded as the fastest tracked fighting vehicle of WWII."
@@ -2357,20 +2357,20 @@ Nagumo had received the same message from Tokyo.
           :range "168km"
           :speedland "88kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "25mm"
               :over "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M36 Jackson"
-         (unit
+         (base/unit
           :name "M36 Jackson"
           :image "WWIIAmerican/TD_M36JacksonToken.png"
           :reference "* The M36 was well liked by its crews, being one of the few armored fighting vehicles available to US forces that could take out heavy German tanks from a distance."
@@ -2381,21 +2381,21 @@ Nagumo had received the same message from Tokyo.
           :range "240km"
           :speedland "42kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "108mm"
               :over "0mm"
               :under "9mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M7 Priest"
-         (unit
+         (base/unit
           :name "M7 Priest"
           :image "WWIIAmerican/SPG_M7_PriestToken.png"
           :reference
@@ -2408,19 +2408,19 @@ Nagumo had received the same message from Tokyo.
           :range "193km"
           :speedland "39kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "51mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "57mm M1 Artillery"
-         (unit
+         (base/unit
           :name "57mm M1 Artillery"
           :image "WWIIAmerican/Artillery_57mmM1Token.png"
           :classification "Artillery"
@@ -2429,9 +2429,9 @@ Nagumo had received the same message from Tokyo.
           :length "2.8m"
           :speedland "0kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "20mm"
               :back "0mm"
@@ -2439,13 +2439,13 @@ Nagumo had received the same message from Tokyo.
               :under "0mm"
               :side "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "90mm M2 Artillery"
-         (unit
+         (base/unit
           :name "90mm M2 Artillery"
           :image "WWIIAmerican/Artillery_90mmM2Token.png"
           :reference "* They were the US's primary anti-aircraft guns from just prior to the opening of WWII into the 1950s when most AAA was replaced by missile systems."
@@ -2454,9 +2454,9 @@ Nagumo had received the same message from Tokyo.
           :length "4.7m"
           :speedland "0kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "20mm"
               :back "0mm"
@@ -2464,13 +2464,13 @@ Nagumo had received the same message from Tokyo.
               :under "0mm"
               :side "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "105mm M2A1 Howitzer"
-         (unit
+         (base/unit
           :name "105mm M2A1 Howitzer"
           :image "WWIIAmerican/Artillery_105mmM101HowitzerToken.png"
           :classification "Artillery"
@@ -2478,13 +2478,13 @@ Nagumo had received the same message from Tokyo.
           :length "6m"
           :speedland "0kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :DUKW
-         (unit
+         (base/unit
           :name "DUKW"
           :image "WWIIAmerican/TroopCarrier_DUKWToken.png"
           :reference "* It was initially rejected by the armed services, but when a Coast Guard patrol craft ran aground on a sandbar near Provincetown, Massachusetts, an experimental DUKW happened to be in the area for a demonstration. Winds up to 110 kph, rain, and heavy surf prevented conventional craft from rescuing the seven stranded Coast Guardsmen, but the DUKW had no trouble, and the military opposition melted. The DUKW would later prove its seaworthiness by crossing the English Channel."
@@ -2502,9 +2502,9 @@ Nagumo had received the same message from Tokyo.
           :speedwater "80kph"
           :width "2.5m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "3mm"
               :back "3mm"
@@ -2512,18 +2512,18 @@ Nagumo had received the same message from Tokyo.
               :under "0mm"
               :side "3mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Amphibious Assault"
-                 (unitability
+                 (base/unitability
                   :name "Amphibious Assault")))))
         "LVT-4 Water Buffalo"
-         (unit
+         (base/unit
           :name "LVT-4 Water Buffalo"
           :image "WWIIAmerican/TroopCarrier_LVT-4Token.png"
           :reference "* Production continued throughout the war, resulting in 18,621 LVTs delivered"
@@ -2535,25 +2535,25 @@ Nagumo had received the same message from Tokyo.
           :speedland "32kph"
           :speedwater "12kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :over "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Amphibious Assault"
-                 (unitability
+                 (base/unitability
                   :name "Amphibious Assault")))))
         "M3A1 Half-track"
-         (unit
+         (base/unit
           :name "M3A1 Half-track"
           :image "WWIIAmerican/HalfTrack_M3Token.png"
           :classification "Med. Vehicle"
@@ -2563,20 +2563,20 @@ Nagumo had received the same message from Tokyo.
           :range "280km"
           :speedland "64kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "12mm"
               :over "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "M3 Scout Car"
-         (unit
+         (base/unit
           :name "M3 Scout Car"
           :image "WWIIAmerican/Car_M3ScoutCarToken.png"
           :reference "Lend Lease from US"
@@ -2587,20 +2587,20 @@ Nagumo had received the same message from Tokyo.
           :range "403km"
           :speedland "81kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :over "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Willys MB/Ford GPW Jeep"
-         (unit
+         (base/unit
           :name "Willys MB/Ford GPW Jeep"
           :image "WWIIAmerican/Truck_M151_Mutt_JeepToken.png"
           :reference
@@ -2615,21 +2615,21 @@ Nagumo had received the same message from Tokyo.
           :speedland "100kph"
           :width "1.6m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "5mm"
               :over "0mm"
               :side "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "GMC CCKW 2 1/2 Ton Truck"
-         (unit
+         (base/unit
           :name "GMC CCKW 2 1/2 Ton Truck"
           :image "WWIIAmerican/Truck_CCKWToken.png"
           :reference "* 562,000 produced"
@@ -2640,19 +2640,19 @@ Nagumo had received the same message from Tokyo.
           :range "400mi"
           :speedland "90kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "5mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Medical Truck"
-         (unit
+         (base/unit
           :name "Medical Truck"
           :image "WWIIAmerican/Truck_DWC-54_MedicToken.png"
           :classification "Truck"
@@ -2662,24 +2662,24 @@ Nagumo had received the same message from Tokyo.
           :range "400mi"
           :speedland "90kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "5mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))))
     "WWII American Aircraft"
      (section
       :name "WWII American Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "F4F Wildcat"
-         (unit
+         (base/unit
           :name "F4F Wildcat"
           :image "WWIIAmerican/Fighter_F4F_WildcatToken.png"
           :classification "Lt. Aircraft"
@@ -2689,22 +2689,22 @@ Nagumo had received the same message from Tokyo.
           :range "1240km"
           :speedair "515kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "SBD Dauntless"
-         (unit
+         (base/unit
           :name "SBD Dauntless"
           :image "WWIIAmerican/DiveBomber_Douglas_SBDToken.png"
           :classification "Lt. Aircraft"
@@ -2714,22 +2714,22 @@ Nagumo had received the same message from Tokyo.
           :range "1240km"
           :speedair "410kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "F-4U Corsair"
-         (unit
+         (base/unit
           :name "F-4U Corsair"
           :image "WWIIAmerican/Fighter_F-4UCorsairToken.png"
           :reference
@@ -2747,22 +2747,22 @@ Nagumo had received the same message from Tokyo.
           :speedair "684kph"
           :width "12.5m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "P-35 Seversky"
-         (unit
+         (base/unit
           :name "P-35 Seversky"
           :image "WWIIAmerican/Fighter_P-35SeverskyToken.png"
           :classification "Lt. Aircraft"
@@ -2774,22 +2774,22 @@ Nagumo had received the same message from Tokyo.
           :speedair "496kph"
           :width "11m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "P-38 Lightning"
-         (unit
+         (base/unit
           :name "P-38 Lightning"
           :image "WWIIAmerican/Fighter_P-38LightningToken.png"
           :reference "* In the South West Pacific theater, the P-38 was the primary long-range fighter of United States Army Air Forces until the appearance of large numbers of P-51D Mustangs toward the end of the war. The P-38 was probably the quietest fighter in history. It was extremely forgiving, and could be mishandled in many ways, but the rate of roll was too slow for it to excel as a dogfighter. The P-38 was the only American fighter aircraft in production throughout American involvement in the war."
@@ -2802,22 +2802,22 @@ Nagumo had received the same message from Tokyo.
           :speedair "712kph"
           :width "16m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "P-40E Curtiss Warhawk"
-         (unit
+         (base/unit
           :name "P-40E Curtiss Warhawk"
           :image "WWIIAmerican/Fighter_P-40_WarhawkToken.png"
           :classification "Lt. Aircraft"
@@ -2827,22 +2827,22 @@ Nagumo had received the same message from Tokyo.
           :range "1100km"
           :speedair "580kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "P-40 Flying Tigers"
-         (unit
+         (base/unit
           :name "P-40 Flying Tigers"
           :image "WWIIAmerican/Fighter_P-40_ChineseFlyingTigersToken.png"
           :reference "* According to their own count, the Flying Tigers shot down 286 aircraft for the loss of up to 19 pilots."
@@ -2854,22 +2854,22 @@ Nagumo had received the same message from Tokyo.
           :range "1100km"
           :speedair "580kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "P-47 Thunderbolt"
-         (unit
+         (base/unit
           :name "P-47 Thunderbolt"
           :image "WWIIAmerican/Fighter_P-47ThunderboltToken.png"
           :reference
@@ -2886,22 +2886,22 @@ Nagumo had received the same message from Tokyo.
           :range "1290km"
           :speedair "697kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "P-51 Mustang"
-         (unit
+         (base/unit
           :name "P-51 Mustang"
           :image "WWIIAmerican/Fighter_P-51Mustang_FrenesiToken.png"
           :classification "Lt. Aircraft"
@@ -2913,22 +2913,22 @@ Nagumo had received the same message from Tokyo.
           :speedair "703kph"
           :width "11.3m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "PBY Catalina"
-         (unit
+         (base/unit
           :name "PBY Catalina"
           :image "WWIIAmerican/Recon_Catalina_PBYToken.png"
           :reference
@@ -2944,22 +2944,22 @@ Nagumo had received the same message from Tokyo.
           :speedair "314kph"
           :width "32m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "B-17 Flying Fortress"
-         (unit
+         (base/unit
           :name "B-17 Flying Fortress"
           :image "WWIIAmerican/Bomber_B-17F_FlyingFortressToken.png"
           :reference
@@ -2975,22 +2975,22 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :speedair "462kph"
           :width "31.6m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "B-24 Liberator"
-         (unit
+         (base/unit
           :name "B-24 Liberator"
           :image "WWIIAmerican/Bomber_B-24J_LiberatorToken.png"
           :reference "* Produced in greater numbers than any other American combat aircraft of WWII and still holds the record as the most produced U.S. military aircraft."
@@ -3003,22 +3003,22 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :speedair "470kph"
           :width "33.5m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "B-29 Superfortress"
-         (unit
+         (base/unit
           :name "B-29 Superfortress"
           :image "WWIIAmerican/Bomber_B-29_SuperfortressToken.png"
           :reference
@@ -3033,27 +3033,27 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :speedair "574kph"
           :width "43m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))))
     "WWII American Naval Vessels"
      (section
       :name "WWII American Naval Vessels"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Yorktown Class Carrier"
-         (unit
+         (base/unit
           :name "Yorktown Class Carrier"
           :image "WWIIAmerican/Carrier_Yorktown.png"
           :titles "Enterprise, Hornet, Yorktown"
@@ -3064,20 +3064,20 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :range "23200km"
           :speedwater "60kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "100mm"
               :over "40mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "New Orleans Class Cruiser"
-         (unit
+         (base/unit
           :name "New Orleans Class Cruiser"
           :image "WWIIAmerican/Ship_CruiserToken.png"
           :reference "* The New Orleans took one Long-Lance Torpedo which severed 150ft of her bow. Magnificent damage control work and skillful seamanship kept it afloat. New Orleans class cruisers would be found at every major naval skirmish of WWII despite the fact there were only four units remaining after 1942. They were some of the most used and hardest fought ships on the US Navy during the war. They would have three of the top four most decorated ships in the US Navy in World War II."
@@ -3089,9 +3089,9 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :speedwater "61kph"
           :width "19m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "125mm"
               :back "125mm"
@@ -3099,13 +3099,13 @@ in belly-landings and ditchings, quickly took on mythic proportions."
               :under "125mm"
               :side "125mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Atlanta Class Cruiser"
-         (unit
+         (base/unit
           :name "Atlanta Class Cruiser"
           :reference "* Designed originally as flotilla leaders but which ended up gaining recognition as effective anti-aircraft cruisers."
           :classification "Hvy. Naval Vessel"
@@ -3115,9 +3115,9 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :speedwater "62kph"
           :width "16m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "55mm"
               :back "55mm"
@@ -3125,13 +3125,13 @@ in belly-landings and ditchings, quickly took on mythic proportions."
               :under "55mm"
               :side "85mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Gleaves Class Destroyer"
-         (unit
+         (base/unit
           :name "Gleaves Class Destroyer"
           :image "WWIIAmerican/Ship_DestroyerToken.png"
           :reference
@@ -3145,22 +3145,22 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :speedwater "69kph"
           :width "11m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Iowa Class Battleship"
-         (unit
+         (base/unit
           :name "Iowa Class Battleship"
           :classification "Hvy. Naval Vessel")
         "LCVP Higgins Boat"
-         (unit
+         (base/unit
           :name "LCVP Higgins Boat"
           :image "WWIIAmerican/LandingCraft_LCM3Token.png"
           :reference "* Andrew Higgins ... is the man who won the war for us. ... If Higgins had not designed and built those LCVPs, we never could have landed over an open beach. The whole strategy of the war would have been different. - General Dwight Eisenhower"
@@ -3169,7 +3169,7 @@ in belly-landings and ditchings, quickly took on mythic proportions."
 * Constructed of plywood, can ferry 36 men or even a Jeep"
           :classification "Lt. Naval Vessel")
         "Elco Class PT Boat"
-         (unit
+         (base/unit
           :name "Elco Class PT Boat"
           :image "WWIIAmerican/Ship_PTBoatToken.png"
           :reference
@@ -3183,22 +3183,22 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :speedwater "76kph"
           :width "6m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :under "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Crater Class Transport"
-         (unit
+         (base/unit
           :name "Crater Class Transport"
           :image "WWIIAmerican/Ship_TransportToken.png"
           :summary
@@ -3213,33 +3213,33 @@ in belly-landings and ditchings, quickly took on mythic proportions."
           :crew "206"
           :mass "11.5ktons"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "2")))))
     "WWII American Strategic Forces"
      (section
       :name "WWII American Strategic Forces"
       :unitmap
-       (unitmap
+       (base/unitmap
         "WWII American Light Infantry"
-         (unit
+         (base/unit
           :name "WWII American Light Infantry"
           :summary "* 50% SMG (-1), 25% M1 (-2), 25% Bazooka (-2)"
           :classification "Lt. Infantry")
         "WWII American Med. Infantry"
-         (unit
+         (base/unit
           :name "WWII American Med. Infantry"
           :summary "* 50% M1 (-1), 25% Bazooka (-2), 25% MG (-2)"
           :classification "Med. Infantry")
         "WWII American Heavy Infantry"
-         (unit
+         (base/unit
           :name "WWII American Heavy Infantry"
           :summary "* 50% MG (-1), 50% Bazooka (-1)"
           :classification "Hvy. Infantry"))))))
@@ -3428,37 +3428,37 @@ ammunition was much more compact and more easily stored and handled within the c
      (section
       :name "WWII British Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Commonwealth Rifle Team"
-         (unit
+         (base/unit
           :name "Commonwealth Rifle Team"
           :summary "* Composed of 5 riflemen"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Close Assault"
-                 (unitability
+                 (base/unitability
                   :name "Close Assault")))))
         "Commonwealth LMG Team"
-         (unit
+         (base/unit
           :name "Commonwealth LMG Team"
           :image "WWIIBritish/Infantry_BrenLMGToken.png"
           :summary "* Composed of 3 riflemen, 1 LMG, and the squad leader"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "British Commando"
-         (unit
+         (base/unit
           :name "British Commando"
           :image "WWIIBritish/Infantry_CommandoToken.png"
           :reference
@@ -3466,29 +3466,29 @@ ammunition was much more compact and more easily stored and handled within the c
 * The Commandos were formed and operated in secrecy and produced a demoralizing effect on German forces while achieving celebrity status among the British public, comparable with that attached to fighter pilots and shrouded in myth."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "5")))
         "Vickers Machine Gun Team"
-         (unit
+         (base/unit
           :name "Vickers Machine Gun Team"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Special Operations Executive"
-         (unit
+         (base/unit
           :name "Special Operations Executive"
           :reference
            "* Bakers Street Irregulars
 * Group to conduct warfare without direct military engagement")
         "PIAT Team"
-         (unit
+         (base/unit
           :name "PIAT Team"
           :image "WWIIBritish/Infantry_PIATGunner.png"
           :reference
@@ -3497,71 +3497,71 @@ ammunition was much more compact and more easily stored and handled within the c
           :summary "* Hvy. Anti-Tank Team"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "British Sniper"
-         (unit
+         (base/unit
           :name "British Sniper"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "SAS Parachute Regiment"
-         (unit
+         (base/unit
           :name "SAS Parachute Regiment"
           :image "WWIIBritish/Infantry_Airborne.png"
           :reference "* It is considered an elite unit by virtue of its stringent selection process, rigorous training program and by the requirement of its role to operate with minimal or no support behind enemy lines and against numerically superior forces."
           :titles "Special Air Service (SAS)"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "5"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Airborne Assault"
-                 (unitability
+                 (base/unitability
                   :name "Airborne Assault"))
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "No 82 Gammon Bomb"
-                 (unititem
+                 (base/unititem
                   :name "No 82 Gammon Bomb")))))
         "British Forward Observer"
-         (unit
+         (base/unit
           :name "British Forward Observer"
           :image "WWIIBritish/Infantry_ForwardObserverToken.png"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "British Mortar Team"
-         (unit
+         (base/unit
           :name "British Mortar Team"
           :image "WWIIBritish/Infantry_MortarToken.png"
           :classification "Hvy. Infantry")
         "Gideon Force"
-         (unit
+         (base/unit
           :name "Gideon Force"
           :reference "* To raise a revolt you must send in a Corps d'Elite to do exploits and not just as peddlers of war material and cash ... A thousand resolute and well-armed men can paralyse 10,000"
           :summary "Ethopian irregulars specializing in Guerilla warfare.")
         "Combat Medical Techinician"
-         (unit
+         (base/unit
           :name "Combat Medical Techinician"
           :classification "Med. Infantry")
         "Royal Engineers"
-         (unit
+         (base/unit
           :name "Royal Engineers"
           :image "WWIIBritish/Infantry_CanadianSapperToken.png"
           :classification "Med. Infantry")))
@@ -3569,9 +3569,9 @@ ammunition was much more compact and more easily stored and handled within the c
      (section
       :name "WWII British Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Churchill A22F MkVII"
-         (unit
+         (base/unit
           :name "Churchill A22F MkVII"
           :image "WWIIBritish/TankHvy_ChurchillMkVIIToken.png"
           :reference
@@ -3586,20 +3586,20 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "90km"
           :speedland "20kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "152mm"
               :under "16mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Churchill Crocodile"
-         (unit
+         (base/unit
           :name "Churchill Crocodile"
           :image "WWIIBritish/TankHvy_ChurchillCrocToken.png"
           :classification "Hvy. Tank"
@@ -3609,20 +3609,20 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "90km"
           :speedland "20kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "152mm"
               :under "16mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Comet A34"
-         (unit
+         (base/unit
           :name "Comet A34"
           :image "WWIIBritish/TankMed_CometToken.png"
           :classification "Med. Tank"
@@ -3632,19 +3632,19 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "250km"
           :speedland "50kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "102mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Cromwell A27M"
-         (unit
+         (base/unit
           :name "Cromwell A27M"
           :image "WWIIBritish/TankMed_CromwellToken.png"
           :reference "* The fastest British tank to serve in the Second World War."
@@ -3655,19 +3655,19 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "280km"
           :speedland "51kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "76mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Matilda A12"
-         (unit
+         (base/unit
           :name "Matilda A12"
           :image "WWIIBritish/TankLt_MkIIMatildaToken.png"
           :reference
@@ -3681,19 +3681,19 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "257km"
           :speedland "24kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "78mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Sherman Firefly"
-         (unit
+         (base/unit
           :name "Sherman Firefly"
           :image "WWIIBritish/TankMed_M4FireflyToken.png"
           :reference "* One major disadvantage of the Sherman Firefly during its first few months in service was its lack of an effective High Explosive shell."
@@ -3703,19 +3703,19 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "193km"
           :speedland "40kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "65mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M3 Grant"
-         (unit
+         (base/unit
           :name "M3 Grant"
           :image "WWIIBritish/TankMed_M3GrantToken.png"
           :reference "* The British ordered the M3 when they were refused permission to have their tank designs made in American factories. They were unhappy with the tall profile and had their own turret fitted—lower in profile."
@@ -3726,19 +3726,19 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "193km"
           :speedland "40kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "51mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         :Valentine
-         (unit
+         (base/unit
           :name "Valentine"
           :image "WWIIBritish/TankLt_ValentineToken.png"
           :reference "Most Produced British Tank"
@@ -3749,21 +3749,21 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "145km"
           :speedland "24kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "65mm"
               :under "8mm"
               :side "45mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Crusader A15"
-         (unit
+         (base/unit
           :name "Crusader A15"
           :image "WWIIBritish/TankLt_CrusaderlToken.png"
           :reference
@@ -3776,19 +3776,19 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "322km"
           :speedland "42kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "51mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         :Archer
-         (unit
+         (base/unit
           :name "Archer"
           :image "WWIIBritish/TD_ArcherToken.png"
           :reference "* The rear mounting at first seemed like a liability, but it was soon made into an advantage. Combined with its low silhouette, the Archer made an excellent ambush weapon, allowing its crew to fire off a few shots, then drive away without wasting time turning around."
@@ -3799,21 +3799,21 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "140km"
           :speedland "32kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "60mm"
               :over "0mm"
               :under "14mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "17pdr SP Achilles"
-         (unit
+         (base/unit
           :name "17pdr SP Achilles"
           :image "WWIIBritish/TD_AchillesToken.png"
           :reference
@@ -3826,33 +3826,33 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "300km"
           :speedland "51kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "57mm"
               :under "9mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "17pdr Artillery"
-         (unit
+         (base/unit
           :name "17pdr Artillery"
           :image "WWIIBritish/Artillery_17pdrToken.png"
           :classification "Artillery"
           :mass "3tons"
           :speedland "0kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Humber Mk IV"
-         (unit
+         (base/unit
           :name "Humber Mk IV"
           :image "WWIIBritish/Car_HumberToken.png"
           :classification "Med. Vehicle"
@@ -3862,19 +3862,19 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "400km"
           :speedland "72kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "15mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Chevy LRDG"
-         (unit
+         (base/unit
           :name "Chevy LRDG"
           :image "WWIIBritish/Car_PatrolVehicleChevyLRDGToken.png"
           :reference
@@ -3883,18 +3883,18 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :classification "Truck"
           :mass "1.5tons"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))))
     "WWII British Aircraft"
      (section
       :name "WWII British Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Supermarine Spitfire"
-         (unit
+         (base/unit
           :name "Supermarine Spitfire"
           :image "WWIIBritish/Fighter_SpitfireToken.png"
           :reference "One of the most outstanding fighter aircraft of WWII"
@@ -3905,22 +3905,22 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "760km"
           :speedair "605kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Hawker Hurricane"
-         (unit
+         (base/unit
           :name "Hawker Hurricane"
           :image "WWIIBritish/Fighter_HurricaneToken.png"
           :reference "* Although largely overshadowed by the Supermarine Spitfire, the aircraft became renowned during the Battle of Britain."
@@ -3931,22 +3931,22 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "965"
           :speedair "547kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Hawker Tempest"
-         (unit
+         (base/unit
           :name "Hawker Tempest"
           :image "WWIIBritish/Fighter_TempestToken.png"
           :classification "Lt. Aircraft"
@@ -3956,22 +3956,22 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "1190km"
           :speedair "695kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "P-40 Curtiss Tomahawk"
-         (unit
+         (base/unit
           :name "P-40 Curtiss Tomahawk"
           :image "WWIIBritish/Fighter_TomahawkToken.png"
           :reference "* 46 British pilots reached ace status in P-40s. Caldwell scored 22 of his 28.5 victories in P-40s in North Africa. He is the prime example of a pilot using the strengths of the P-40 to its utmost. Once while flying alone, he was attacked by two Bf 109s, one of them piloted by Schruer. Although Caldwell was wounded three times, and his Tomahawk was hit by more than 100 7.9 mm bullets and five 20 mm cannon shells, he survived the encounter and shot down Schruer's wingman."
@@ -3982,22 +3982,22 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "1100km"
           :speedair "580kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         :Lancaster
-         (unit
+         (base/unit
           :name "Lancaster"
           :image "WWIIBritish/Bomber_LancasterToken.png"
           :reference "* The most famous and most successful of the Second World War night bombers, delivering 608,612 tons of bombs in 156,000 sorties."
@@ -4008,22 +4008,22 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "4600mi"
           :speedair "450kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Fairey Swordfish"
-         (unit
+         (base/unit
           :name "Fairey Swordfish"
           :image "WWIIBritish/TorpedoBomberFaireySwordfishToken.png"
           :reference "Famous for crippling the Bismarck"
@@ -4034,28 +4034,28 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "879km"
           :speedair "224kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "3mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))))
     "WWII British Naval Vessels"
      (section
       :name "WWII British Naval Vessels"
       :unitmap
-       (unitmap
+       (base/unitmap
         "British Destroyer"
-         (unit
+         (base/unit
           :name "British Destroyer"
           :classification "Med. Naval Vessel")
         "HMS Hood Battlecruiser"
-         (unit
+         (base/unit
           :name "HMS Hood Battlecruiser"
           :summary
            "Armament: 8 x 15in (381mm) (4x2),
@@ -4069,7 +4069,7 @@ career. It could cross terrain obstacles that most other tanks of its era could 
           :range "10000km"
           :speedwater "54kph")
         "King George V Class Battleship"
-         (unit
+         (base/unit
           :name "King George V Class Battleship"
           :summary
            "Speed: 28.0 knots (1941 trials) Range: 5400+nm at 18knots (11.9 tons/hour fuel burn)
@@ -4080,7 +4080,7 @@ lower belt: 5.4in (137mm)
 Aircraft carried: 4 Supermarine Walrus seaplanes, 1 double-ended catapult"
           :crew "1500")
         "HMS Ark Royal Carrier"
-         (unit
+         (base/unit
           :name "HMS Ark Royal Carrier"
           :summary
            "Armament: 16 x 4.5 inch (114 mm) guns (8 x 2)
@@ -4126,22 +4126,22 @@ Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
      (section
       :name "WWII French Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Free French Forces"
-         (unit
+         (base/unit
           :name "Free French Forces"
           :image "WWIIFrench/FrenchResistanceToken.png"
           :reference "* French fighters from colonies and resistance")
         "French Resistance Intelligence"
-         (unit
+         (base/unit
           :name "French Resistance Intelligence"
           :image "WWIIFrench/FrenchIntelligenceToken.png"
           :reference "* Spies gathering intelligence on the German occupiers")
         "French Foreign Legion"
-         (unit
+         (base/unit
           :name "French Foreign Legion")
         "Manouchian Group"
-         (unit
+         (base/unit
           :name "Manouchian Group"
           :image "WWIIFrench/ManouchianGroupToken.png"
           :reference "* Guerrilla Resistance Fighters")))
@@ -4149,18 +4149,18 @@ Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
      (section
       :name "WWII French Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Char B1"
-         (unit
+         (base/unit
           :name "Char B1"
           :image "WWIIFrench/TankMed_CharB1.png"
           :classification "Med. Tank")
         "Renault R40"
-         (unit
+         (base/unit
           :name "Renault R40"
           :classification "Lt. Tank")
         "French M4 Sherman"
-         (unit
+         (base/unit
           :name "French M4 Sherman"
           :image "WWIIFrench/TankMed_M4A3_Sherman.png"
           :classification "Med. Tank"
@@ -4169,19 +4169,19 @@ Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
           :range "193km"
           :speedland "38kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "65mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "French M10 Wolverine"
-         (unit
+         (base/unit
           :name "French M10 Wolverine"
           :image "WWIIFrench/TD_M10_Wolverine.png"
           :classification "Tank Destroyer"
@@ -4191,26 +4191,26 @@ Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
           :range "300km"
           :speedland "51kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "57mm"
               :over "0mm"
               :under "9mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))))
     "WWII French Aircraft"
      (section
       :name "WWII French Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Free French Spitfire"
-         (unit
+         (base/unit
           :name "Free French Spitfire"
           :image "WWIIFrench/SupermarineSpitfire_Mk_IXToken.png"
           :classification "Lt. Aircraft"
@@ -4220,18 +4220,18 @@ Aircraft carried: 36 Fairey Swordfish, 18 Fairey Fulmars"
           :range "760km"
           :speedair "605kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"))))))))
 
@@ -4524,66 +4524,66 @@ marketplace and carried them into the field."
      (section
       :name "WWII German Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         "German Rifle Team"
-         (unit
+         (base/unit
           :name "German Rifle Team"
           :image "WWIIGerman/Infantry_RiflemanToken.png"
           :summary "Composed of 5 riflemen"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Close Assault"
-                 (unitability
+                 (base/unitability
                   :name "Close Assault")))))
         "German MG Team"
-         (unit
+         (base/unit
           :name "German MG Team"
           :image "WWIIGerman/Infantry_MGToken.png"
           :summary "Composed of 2 riflemen, MG Gunner, MG Assistant, and squad leader"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Waffen-SS Infantry"
-         (unit
+         (base/unit
           :name "Waffen-SS Infantry"
           :image "WWIIGerman/Infantry_SSToken.png"
           :titles "Weapon SS (Shield Squadron)"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "5"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Close Assault"
-                 (unitability
+                 (base/unitability
                   :name "Close Assault")))))
         "German Sniper"
-         (unit
+         (base/unit
           :name "German Sniper"
           :image "WWIIGerman/Infantry_SniperToken.png"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         :Panzergrenadiers
-         (unit
+         (base/unit
           :name "Panzergrenadiers"
           :image "WWIIGerman/Infantry_PanzergrenadierToken.png"
           :reference
@@ -4592,111 +4592,111 @@ of the period."
           :summary "* Heavy Anti-Tank Team"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Panzerschreck Team"
-         (unit
+         (base/unit
           :name "Panzerschreck Team"
           :image "WWIIGerman/Infantry_PanzerschreckToken.png"
           :reference "* Though the Panzerschreck is a copy of the bazooka, the bazooka was having a difficulties with the Tiger and Panther, one direct hit was usually enough to destroy any Allied armored vehicle."
           :summary "* Heavy Anti-Tank Team"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         :Obertruppfuhrer
-         (unit
+         (base/unit
           :name "Obertruppfuhrer"
           :image "WWIIGerman/Infantry_ObersturmfuhrerToken.png"
           :reference "* Obertruppfuhrer was junior to Haupttruppfuhrer and typically served as a senior non-commissioned officer rank equivalent to a Platoon Sergeant."
           :summary "* Commander"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")
                 :Rally
-                 (unitability
+                 (base/unitability
                   :name "Rally")))))
         :Haupttruppfuhrer
-         (unit
+         (base/unit
           :name "Haupttruppfuhrer"
           :summary "* Commander"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")
                 :Rally
-                 (unitability
+                 (base/unitability
                   :name "Rally")))))
         :Gestapo
-         (unit
+         (base/unit
           :name "Gestapo"
           :reference "* 'Jew Hunter'? It's just a name that stuck. Well, you do have to admit, it is catchy. - Inglourious Basterds")
         :Fallschirmjager
-         (unit
+         (base/unit
           :name "Fallschirmjager"
           :image "WWIIGerman/Infantry_FallschirmjagerToken.png"
           :reference "* During the Battle of Crete, the Ultra enabled the British to wait on each German drop zone, yet despite	compromised secrecy, surviving German paratroops pushed the Commonwealth forces off the island. However, the	losses were so great that Hitler forbade their future use. He felt that the main power of the paratroop was	novelty, and that the British had clearly figured out how to defend against them. Ironically, the battle that	ended Germany's paratrooper operations had the opposite effect on the Allies. Convinced of the effectiveness of	airborne assaults, the Allies hurried to train and organize their own airborne units."
           :summary "* Paratrooper"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "German Forward Observer"
-         (unit
+         (base/unit
           :name "German Forward Observer"
           :image "WWIIGerman/Infantry_ForwardObserverToken.png"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Granatwerfer 42"
-         (unit
+         (base/unit
           :name "Granatwerfer 42"
           :image "WWIIGerman/Infantry_MortarToken.png"
           :summary "* Heavy Mortar Team"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "German Medical Corp"
-         (unit
+         (base/unit
           :name "German Medical Corp"
           :image "WWIIGerman/Infantry_MedicToken.png"
           :classification "Med. Infantry")
         "German Pioniere"
-         (unit
+         (base/unit
           :name "German Pioniere"
           :image "WWIIGerman/Infantry_PionereToken.png"
           :summary "Combat Engineers from the German Defense Force"
@@ -4705,9 +4705,9 @@ of the period."
      (section
       :name "WWII German Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Panzer III Ausf L"
-         (unit
+         (base/unit
           :name "Panzer III Ausf L"
           :image "WWIIGerman/TankLt_PzkpfwIII_DesertToken.png"
           :classification "Lt. Tank"
@@ -4719,9 +4719,9 @@ of the period."
           :speedland "40kph"
           :width "2.9m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "70mm"
               :back "50mm"
@@ -4729,13 +4729,13 @@ of the period."
               :under "5mm"
               :side "30mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Flammpanzer III Ausf M"
-         (unit
+         (base/unit
           :name "Flammpanzer III Ausf M"
           :image "WWIIGerman/TankLt_FlammpanzerIIIToken.png"
           :classification "Lt. Tank"
@@ -4747,9 +4747,9 @@ of the period."
           :speedland "40kph"
           :width "2.9m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "70mm"
               :back "50mm"
@@ -4757,13 +4757,13 @@ of the period."
               :under "5mm"
               :side "30mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Panzer IV Ausf H"
-         (unit
+         (base/unit
           :name "Panzer IV Ausf H"
           :image "WWIIGerman/TankMed_PanzerPzkpfwIV_Token.png"
           :reference "* Robust and reliable, it saw service in all combat theaters, and has the distinction of being the only German tank to remain in continuous production throughout the war with over 8,500 produced."
@@ -4774,19 +4774,19 @@ of the period."
           :range "200km"
           :speedland "42kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "80mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Panther Ausf G"
-         (unit
+         (base/unit
           :name "Panther Ausf G"
           :image "WWIIGerman/TankMed_PantherToken.png"
           :reference "* Ernst Barkmann in a lone Panther knocked out nine Shermans halting an American advance."
@@ -4796,9 +4796,9 @@ of the period."
           :range "250km"
           :speedland "46kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "80mm Sloped"
               :back "45mm"
@@ -4806,13 +4806,13 @@ of the period."
               :under "30mm"
               :side "50mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Tiger Ausf E"
-         (unit
+         (base/unit
           :name "Tiger Ausf E"
           :image "WWIIGerman/TankHvy_TigerToken.png"
           :reference "* In the Normandy campaign, it could take four to five Shermans to knock out a single Tiger tank by maneuvering to its weaker flank or rear armor."
@@ -4823,9 +4823,9 @@ of the period."
           :range "150km"
           :speedland "38kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "100mm"
               :back "25mm"
@@ -4833,13 +4833,13 @@ of the period."
               :under "40mm"
               :side "80mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Tiger II Ausf B"
-         (unit
+         (base/unit
           :name "Tiger II Ausf B"
           :image "WWIIGerman/TankHvy_PzkpfwVIb_Porsche_KingTigerToken.png"
           :reference
@@ -4852,9 +4852,9 @@ of the period."
           :range "170km"
           :speedland "41kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "150mm"
               :back "80mm"
@@ -4862,13 +4862,13 @@ of the period."
               :under "40mm"
               :side "80mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Marder II"
-         (unit
+         (base/unit
           :name "Marder II"
           :image "WWIIGerman/TD_MarderIIToken.png"
           :reference "* Based on obsolete Panzer II."
@@ -4879,22 +4879,22 @@ of the period."
           :range "190km"
           :speedland "40kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "35mm"
               :back "0mm"
               :over "0mm"
               :side "15mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "StuG III"
-         (unit
+         (base/unit
           :name "StuG III"
           :image "WWIIGerman/TD_StugIIIToken.png"
           :reference "* Cheaper than a Panzer III, it was Germany's most produced armored vehicle. Sturmgeschutz units held a very impressive record of tank kills - some 20,000 enemy tanks by spring of 1944."
@@ -4905,19 +4905,19 @@ of the period."
           :range "155km"
           :speedland "40kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "80mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "JapdPanzer 38 Hetzer"
-         (unit
+         (base/unit
           :name "JapdPanzer 38 Hetzer"
           :image "WWIIGerman/TD_HetzerToken.png"
           :reference "* The Jagdpanzer 38(t) is one of the most common late-war German tank destroyers. Also, its small size made it a hard target, and was easy to conceal allowing it to lie in ambush for enemy tanks."
@@ -4927,19 +4927,19 @@ of the period."
           :range "177km"
           :speedland "42kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "60mm Sloped"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         :JagdPanther
-         (unit
+         (base/unit
           :name "JagdPanther"
           :image "WWIIGerman/TD_JagdPantherToken.png"
           :reference
@@ -4952,22 +4952,22 @@ of the period."
           :range "160km"
           :speedland "46kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "80mm Sloped"
               :back "45mm"
               :over "30mm"
               :side "50mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Panzerjager Tiger Elefant"
-         (unit
+         (base/unit
           :name "Panzerjager Tiger Elefant"
           :image "WWIIGerman/TD_PanzerjagerTigerElefantToken.png"
           :reference "* 10:1 Kill Ratio due to strong defense though vulnerable to infantry"
@@ -4975,19 +4975,19 @@ of the period."
           :mass "65tons"
           :speedland "30kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "200mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         :Nashorn
-         (unit
+         (base/unit
           :name "Nashorn"
           :image "WWIIGerman/TD_NashornToken.png"
           :classification "Tank Destroyer"
@@ -4995,20 +4995,20 @@ of the period."
           :range "235km"
           :speedland "42kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "30mm"
               :over "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Sturmpanzer IV Brummbar"
-         (unit
+         (base/unit
           :name "Sturmpanzer IV Brummbar"
           :image "WWIIGerman/SPG_BrummbarToken.png"
           :reference "* Fire support based on Panzer IV"
@@ -5021,19 +5021,19 @@ of the period."
           :speedland "40kph"
           :width "2.9m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "100mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         :SturmTiger
-         (unit
+         (base/unit
           :name "SturmTiger"
           :image "WWIIGerman/SPG_SturmTigerToken.png"
           :reference "* Heavy Bombardment unit Based on Tiger"
@@ -5049,19 +5049,19 @@ of the period."
           :speedland "40kph"
           :width "3.6m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "150mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "SdKfz 124 Wespe"
-         (unit
+         (base/unit
           :name "SdKfz 124 Wespe"
           :image "WWIIGerman/SPG_Wespe_WaspToken.png"
           :reference
@@ -5075,19 +5075,19 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedland "40kph"
           :width "2.3m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "30mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Panzerwerfer 42"
-         (unit
+         (base/unit
           :name "Panzerwerfer 42"
           :image "WWIIGerman/RocketLauncher_Panzerwerfer42Token.png"
           :classification "Med. Vehicle"
@@ -5099,9 +5099,9 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedland "27kph"
           :width "2.5m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "15mm"
               :back "8mm"
@@ -5109,13 +5109,13 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
               :under "6mm"
               :side "12mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "PaK 38 50mm Artillery"
-         (unit
+         (base/unit
           :name "PaK 38 50mm Artillery"
           :image "WWIIGerman/Artillery_PaK38Token.png"
           :classification "Artillery"
@@ -5123,13 +5123,13 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :length "4.75m"
           :speedland "0kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "PaK 40 75mm Artillery"
-         (unit
+         (base/unit
           :name "PaK 40 75mm Artillery"
           :image "WWIIGerman/Artillery_PaK40Token.png"
           :reference "* The PaK 40 was the standard German anti-tank gun, and was supplied by Germany to its allies."
@@ -5138,13 +5138,13 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :length "6.2m"
           :speedland "0kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "PaK 43 88mm Artillery"
-         (unit
+         (base/unit
           :name "PaK 43 88mm Artillery"
           :image "WWIIGerman/Artillery_PaK43_88mmToken.png"
           :reference "* The Pak 43 entered production in 1943 and was an extremely powerful weapon, capable of dealing with any tank it would face. It was however a massive weapon, well beyond the reasonable weight for an anti-tank weapon. The weight coupled with the immense size meant that it was extremely difficult to handle on the field."
@@ -5153,26 +5153,26 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :length "9.2"
           :speedland "0kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Bofors 40mm AA"
-         (unit
+         (base/unit
           :name "Bofors 40mm AA"
           :image "WWIIGerman/AA_Bofors40mmToken.png"
           :classification "Hvy. MG"
           :mass "2.5tons"
           :speedland "0kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Halftrack Sdkfz 251"
-         (unit
+         (base/unit
           :name "Halftrack Sdkfz 251"
           :image "WWIIGerman/Halftrack_Sdkfz_250Token.png"
           :classification "Med. Vehicle"
@@ -5184,30 +5184,30 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedland "52kph"
           :width "2.1m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "15mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Mercedes L300"
-         (unit
+         (base/unit
           :name "Mercedes L300"
           :image "WWIIGerman/Truck_Mercedes_L3000Token.png"
           :classification "Truck"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "2")))
         "Kubelwagen Type 82"
-         (unit
+         (base/unit
           :name "Kubelwagen Type 82"
           :image "WWIIGerman/Car_KubelwagenType82Token.png"
           :reference
@@ -5221,13 +5221,13 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedland "80kph"
           :width "1.6m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "BMW R75 Motorcycle"
-         (unit
+         (base/unit
           :name "BMW R75 Motorcycle"
           :image "WWIIGerman/MotorcycleToken.png"
           :classification "Lt. Vehicle"
@@ -5236,18 +5236,18 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :range "350km"
           :speedland "95kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))))
     "WWII German Aircraft"
      (section
       :name "WWII German Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Messerschmitt Bf 109"
-         (unit
+         (base/unit
           :name "Messerschmitt Bf 109"
           :image "WWIIGerman/Fighter_BF-109Token.png"
           :reference
@@ -5262,22 +5262,22 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :range "850km"
           :speedair "640kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Focke-Wulf Fw 190"
-         (unit
+         (base/unit
           :name "Focke-Wulf Fw 190"
           :image "WWIIGerman/Fighter_FW_190Token.png"
           :reference
@@ -5292,22 +5292,22 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedair "656kph"
           :width "10m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Messerschmitt Bf 110"
-         (unit
+         (base/unit
           :name "Messerschmitt Bf 110"
           :image "WWIIGerman/FighterBomber_BF-110Token.png"
           :classification "Lt. Aircraft"
@@ -5319,22 +5319,22 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedair "595kph"
           :width "16.3m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Messerschmitt Me 262"
-         (unit
+         (base/unit
           :name "Messerschmitt Me 262"
           :image "WWIIGerman/FighterJet_Me-262Token.png"
           :reference "* World's First Turbojet Fighter"
@@ -5347,22 +5347,22 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedair "900kph"
           :width "12.6m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"
               :side "10mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Heinkel He 177"
-         (unit
+         (base/unit
           :name "Heinkel He 177"
           :image "WWIIGerman/Bomber_HE_177Token.png"
           :reference
@@ -5377,22 +5377,22 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedair "565kph"
           :width "31.4m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Arado Ar 234"
-         (unit
+         (base/unit
           :name "Arado Ar 234"
           :image "WWIIGerman/BomberJet_AR-234_AradoToken.png"
           :reference "* The world's first operational jet powered bomber, built in the closing stages of World War II. In the field it was used almost entirely in the reconnaissance role, but in its few uses as a bomber it proved to be nearly impossible to intercept."
@@ -5405,22 +5405,22 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedair "742kph"
           :width "14.1m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Do 24 Flying Boat"
-         (unit
+         (base/unit
           :name "Do 24 Flying Boat"
           :image "WWIIGerman/FlyingBoat_DO24Token.png"
           :summary "* Seaplance"
@@ -5433,27 +5433,27 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedair "341kph"
           :width "27m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"
               :side "10mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))))
     "WWII German Naval Vessels"
      (section
       :name "WWII German Naval Vessels"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Bismarck Class Battleship"
-         (unit
+         (base/unit
           :name "Bismarck Class Battleship"
           :image "WWIIGerman/Battleship_Bismarck.png"
           :reference
@@ -5467,28 +5467,28 @@ reserved for the Wespe alone, dropping other projects such as the Marder II."
           :speedwater "56kph"
           :width "36m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "320mm"
               :back "320mm"
               :over "120mm"
               :side "320mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Hanger
-             (unitskill
+             (base/unitskill
               :name "Hanger"
               :summary "* 4xArado Ar 196 A-3, with 1 double-ended catapult")))
         "U-Boot Type VII"
-         (unit
+         (base/unit
           :name "U-Boot Type VII"
           :image "WWIIGerman/Submarine_VIIC_UboatToken.png"
           :reference "* By the end of the war, almost 3,000 Allied ships (175 warships; the rest were merchant ships) were sunk by U-boat torpedoes."
           :classification "Submarine")
         "Elektroboot XXI"
-         (unit
+         (base/unit
           :name "Elektroboot XXI"
           :image "WWIIGerman/Submarine_XXIIIToken.png"
           :classification "Submarine"))))))
@@ -5579,9 +5579,9 @@ and short effective range reduces the M1935 to a last resort self defense weapon
      (section
       :name "WWII Italian Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Blackshirt
-         (unit
+         (base/unit
           :name "Blackshirt"
           :image "WWIIItalian/Infantry_Blackshirt.png"
           :reference
@@ -5589,40 +5589,40 @@ and short effective range reduces the M1935 to a last resort self defense weapon
 * Their methods became harsher as Mussolini's power grew, and they used violence, torture, intimidation, and murder against Mussolini's opponents. One of their distinctive techniques was force-feeding castor oil."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Black Brigade"
-         (unit
+         (base/unit
           :name "Black Brigade"
           :image "WWIIItalian/Infantry_BlackBrigade.png"
           :reference "* Italian dictator Benito Mussolini was arrested after the Italian Grand Council of Fascism, overthrew him and began negotiations with the Allies for Italy's withdrawal from the war. Mussolini was rescued by German paratroopers. He was then installed by the Germans as the President of the Italian Social Republic (RSI). The RSI was to be an Italian regime which was to nominally administer the German-occupied northern Italy. As the Blackshirts were disbanded by the terms of the armistice, the Black Brigade was formed out of those still loyal to the fascist cause."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Italian Forward Observer"
-         (unit
+         (base/unit
           :name "Italian Forward Observer"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))))
     "WWII Italian Vehicles"
      (section
       :name "WWII Italian Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Carro Armato L6/40"
-         (unit
+         (base/unit
           :name "Carro Armato L6/40"
           :image "WWIIItalian/TankLt_CarroArmatoL6Token.png"
           :reference "* Although a good light tank for its size, it was already obsolete by the time of its introduction. The low silhouette made it useful for reconnaissance, and its armament was effective against any light vehicles it may encounter. However, due to lack of suitable medium tanks, it was often employed in a combat role, for which it was unsuited."
@@ -5635,20 +5635,20 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedland "42kph"
           :width "2m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "40mm"
               :under "6mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Carro Armato M13/40"
-         (unit
+         (base/unit
           :name "Carro Armato M13/40"
           :image "WWIIItalian/TankLt_M13CarroArmatoToken.png"
           :classification "Lt. Tank"
@@ -5660,22 +5660,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedland "32kph"
           :width "2.2m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "42mm"
               :over "15mm"
               :under "6mm"
               :side "25mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Semovente 47/32"
-         (unit
+         (base/unit
           :name "Semovente 47/32"
           :image "WWIIItalian/TD_Semovente47.png"
           :classification "Tank Destroyer"
@@ -5687,20 +5687,20 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedland "42kph"
           :width "2m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "30mm"
               :over "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Semovente 75/18"
-         (unit
+         (base/unit
           :name "Semovente 75/18"
           :image "WWIIItalian/TD_Semovente47.png"
           :reference "* Though it was technically similar to the StuG III, it had a totally different role, serving as divisional artillery instead of a pure assault gun. Though their role was divisional artillery, they could fire as indirect support, and if necessary, also act as an assault gun and anti-tank vehicle."
@@ -5713,24 +5713,24 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedland "32kph"
           :width "2.2m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "50mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))))
     "WWII Italian Aircraft"
      (section
       :name "WWII Italian Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Fiat G50"
-         (unit
+         (base/unit
           :name "Fiat G50"
           :image "WWIIItalian/Fighter_Fiat_G50Token.png"
           :reference
@@ -5745,22 +5745,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "484kph"
           :width "11m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Fiat CR.42 Falco"
-         (unit
+         (base/unit
           :name "Fiat CR.42 Falco"
           :summary "* The primary fighter of the Italian Air Force at the outbreak of the war. Although outdated by monoplane fighters, it still acquitted itself well in North Africa until the advent of more advanced Allied fighters. The Fiat CR.42 was the last of the Fiat biplane fighters to enter frontline service as a fighter, and represented the epitome of the type."
           :titles "Falcon"
@@ -5773,22 +5773,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "441kph"
           :width "9.7m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Savoia-Marchetti SM.81"
-         (unit
+         (base/unit
           :name "Savoia-Marchetti SM.81"
           :summary
            "* Bomber
@@ -5802,15 +5802,15 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "347kph"
           :width "24m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "3mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"))))))))
 
@@ -6001,112 +6001,112 @@ and short effective range reduces the M1935 to a last resort self defense weapon
      (section
       :name "WWII Japanese Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Arisaka Riflemen"
-         (unit
+         (base/unit
           :name "Arisaka Riflemen"
           :image "WWIIJapanese/Infantry_RiflemenToken.png"
           :summary "Composed of 7 riflemen"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Close Assault"
-                 (unitability
+                 (base/unitability
                   :name "Close Assault")))))
         "Japanese LMG"
-         (unit
+         (base/unit
           :name "Japanese LMG"
           :summary "Composed of 4 riflemen, 1 LMG, and squad leader"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Arisaka Sniper"
-         (unit
+         (base/unit
           :name "Arisaka Sniper"
           :image "WWIIJapanese/Infantry_Sniper.png"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Special Naval Landing Forces"
-         (unit
+         (base/unit
           :name "Special Naval Landing Forces"
           :titles "SNLF"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Amphibious Assault"
-                 (unitability
+                 (base/unitability
                   :name "Amphibious Assault")))))
         "Teishin Shudan"
-         (unit
+         (base/unit
           :name "Teishin Shudan"
           :image "WWIIJapanese/Infantry_ParatrooperToken.png"
           :reference "Commando Paratroopers"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Airborne Assault"
-                 (unitability
+                 (base/unitability
                   :name "Airborne Assault")))))
         "Japanese Commander"
-         (unit
+         (base/unit
           :name "Japanese Commander"
           :image "WWIIJapanese/Infantry_CommanderToken.png"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "5"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Close Assault"
-                 (unitability
+                 (base/unitability
                   :name "Close Assault")))))
         "Japanese Forward Observer"
-         (unit
+         (base/unit
           :name "Japanese Forward Observer"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))))
     "WWII Japanese Vehicles"
      (section
       :name "WWII Japanese Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Type 95 Ha-Go"
-         (unit
+         (base/unit
           :name "Type 95 Ha-Go"
           :image "WWIIJapanese/TankLt_Type95Ha-go_Token.png"
           :reference "* One key to the Japanese success in Malaya was the unexpected presence of their tanks in wet jungle terrain where the British did not believe tanks could be used."
@@ -6117,19 +6117,19 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "250km"
           :speedland "45kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "10mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Type 97 Chi-Ha"
-         (unit
+         (base/unit
           :name "Type 97 Chi-Ha"
           :image "WWIIJapanese/TankMed_Type97ChiHa.png"
           :classification "Med. Tank"
@@ -6139,25 +6139,25 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "210km"
           :speedland "38kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "33mm"
               :side "9mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))))
     "WWII Japanese Aircraft"
      (section
       :name "WWII Japanese Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "J2M Raiden Fighter"
-         (unit
+         (base/unit
           :name "J2M Raiden Fighter"
           :image "WWIIJapanese/Fighter_J2M3_Raiden_Token.png"
           :classification "Lt. Aircraft"
@@ -6169,22 +6169,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "612kph"
           :width "10.8m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "A6M Zero Naval Fighter"
-         (unit
+         (base/unit
           :name "A6M Zero Naval Fighter"
           :image "WWIIJapanese/FighterNavy_A6M5_Zero_Token.png"
           :reference
@@ -6199,19 +6199,19 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "533kph"
           :width "12m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "4mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "B5N Kate Torpedo Bomber"
-         (unit
+         (base/unit
           :name "B5N Kate Torpedo Bomber"
           :image "WWIIJapanese/TorpedoBomber_B5N1_Kate_Token.png"
           :reference
@@ -6226,22 +6226,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "378kph"
           :width "15.5m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "D3A Val Dive Bomber"
-         (unit
+         (base/unit
           :name "D3A Val Dive Bomber"
           :image "WWIIJapanese/DiveBomber_D3A1_VALToken.png"
           :reference
@@ -6257,22 +6257,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "430kph"
           :width "14.4m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "8mm"
               :back "8mm"
               :over "8mm"
               :side "8mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Ohka Kamikaze Rocket"
-         (unit
+         (base/unit
           :name "Ohka Kamikaze Rocket"
           :image "WWIIJapanese/KamikazeRocket_Ohka_Token.png"
           :reference
@@ -6287,13 +6287,13 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "804kph"
           :width "5.1m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "A6M2 Rufe Seaplane"
-         (unit
+         (base/unit
           :name "A6M2 Rufe Seaplane"
           :image "WWIIJapanese/Seaplane_A6M2_Rufe_Token.png"
           :reference "* This floatplane was developed from the A6M Zero for supporting amphibian operations and defending remote bases."
@@ -6305,24 +6305,24 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "516kph"
           :width "12m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "4mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))))
     "WWII Japanese Naval Vessels"
      (section
       :name "WWII Japanese Naval Vessels"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Kaga Class Converted Carrier"
-         (unit
+         (base/unit
           :name "Kaga Class Converted Carrier"
           :image "WWIIJapanese/Carrier_KagaToken.png"
           :summary "Akagi carried - 21 Zeros, 21 Vals, and 21 Kates"
@@ -6335,9 +6335,9 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "52kph"
           :width "32m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "152mm"
               :back "152mm"
@@ -6345,13 +6345,13 @@ and short effective range reduces the M1935 to a last resort self defense weapon
               :under "152mm"
               :side "152mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Soryu Class Fast Carrier"
-         (unit
+         (base/unit
           :name "Soryu Class Fast Carrier"
           :image "WWIIJapanese/Carrier_Hiryu.png"
           :titles "Hiryu, Soryu"
@@ -6363,9 +6363,9 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "64kph"
           :width "21m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "45mm"
               :back "45mm"
@@ -6373,13 +6373,13 @@ and short effective range reduces the M1935 to a last resort self defense weapon
               :under "45mm"
               :side "45mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Fubuki Class Destroyer"
-         (unit
+         (base/unit
           :name "Fubuki Class Destroyer"
           :image "WWIIJapanese/Destroyer_Akatsuki_Token.png"
           :reference "* Has been called 'the world's first modern destroyer.' It set a new standard for destroyers around the world. The Japanese destroyers were bigger, more powerfully armed, and faster than anything that any other fleet possessed."
@@ -6391,9 +6391,9 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "70kph"
           :width "10m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "10mm"
               :back "10mm"
@@ -6401,13 +6401,13 @@ and short effective range reduces the M1935 to a last resort self defense weapon
               :under "10mm"
               :side "10mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Agano Class Light Cruiser"
-         (unit
+         (base/unit
           :name "Agano Class Light Cruiser"
           :image "WWIIJapanese/CruiserLt_Noshiro_Token.png"
           :classification "Med. Naval Vessel"
@@ -6418,22 +6418,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "67kph"
           :width "15.2m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "60mm"
               :over "20mm"
               :under "60mm"
               :side "60mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Tone Class Hvy. Cruiser"
-         (unit
+         (base/unit
           :name "Tone Class Hvy. Cruiser"
           :image "WWIIJapanese/CruiserHvy_Furutaka_Token.png"
           :classification "Hvy. Naval Vessel"
@@ -6444,22 +6444,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "67kph"
           :width "19m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "100mm"
               :over "35mm"
               :under "100mm"
               :side "100mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Yamato Class Battleship"
-         (unit
+         (base/unit
           :name "Yamato Class Battleship"
           :image "WWIIJapanese/Battleship_YamatoToken.png"
           :reference "* Largest battleships ever built with largest naval guns ever. Yamato sank after 8 bombs and 13 torpedos caused her magazine to explode."
@@ -6471,21 +6471,21 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "50kph"
           :width "39m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "650mm"
               :over "200mm"
               :side "410mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Otori Class Torpedo Boat"
-         (unit
+         (base/unit
           :name "Otori Class Torpedo Boat"
           :image "WWIIJapanese/TorpedoBoat_MitsubishiT14_Token.png"
           :classification "Lt. Naval Vessel"
@@ -6496,18 +6496,18 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "56kph"
           :width "8.2m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "B1 Type Submarine Carrier"
-         (unit
+         (base/unit
           :name "B1 Type Submarine Carrier"
           :image "WWIIJapanese/Submarine_I29Token.png"
           :reference
@@ -6524,18 +6524,18 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "44kph"
           :width "9.3m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Kaidai VII Submarine"
-         (unit
+         (base/unit
           :name "Kaidai VII Submarine"
           :reference
            "* 15kph Submerged
@@ -6548,14 +6548,14 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedwater "43kph"
           :width "8.25m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"))))))))
 
@@ -6698,97 +6698,97 @@ and short effective range reduces the M1935 to a last resort self defense weapon
      (section
       :name "WWII Soviet Infantry"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Soviet Rifle Team"
-         (unit
+         (base/unit
           :name "Soviet Rifle Team"
           :image "WWIIRussian/Infantry_RiflemenToken.png"
           :summary "Composed of 5 riflemen"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Close Assault"
-                 (unitability
+                 (base/unitability
                   :name "Close Assault")))))
         "Soviet Light MG Team"
-         (unit
+         (base/unit
           :name "Soviet Light MG Team"
           :image "WWIIRussian/Infantry_MGToken.png"
           :summary "Composed of 4 riflemen and an LMG"
           :classification "Med. MG"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Soviet SMG Team"
-         (unit
+         (base/unit
           :name "Soviet SMG Team"
           :image "WWIIRussian/Infantry_SMGToken.png"
           :reference "* The Soviets would often equip whole regiments and even entire divisions with the PPSh-41, giving them unmatched short-range firepower."
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Russian Commander"
-         (unit
+         (base/unit
           :name "Russian Commander"
           :image "WWIIRussian/Infantry_CommanderToken.png"
           :classification "Med. Infantry")
         "Soviet NKVD"
-         (unit
+         (base/unit
           :name "Soviet NKVD"
           :image "WWIIRussian/Infantry_NKVDToken.png"
           :reference "* People's Commissariat for Internal Affairs was the public and secret police organization of the Soviet Union that directly executed the rule of terror, including political repression, during the Stalinist era."
           :classification "Med. Infantry")
         "Soviet Sniper"
-         (unit
+         (base/unit
           :name "Soviet Sniper"
           :image "WWIIRussian/Infantry_SniperToken.png"
           :reference "* One of the best known battles involving snipers, and also the battle that made the Germans reinstate their specialized sniper training, was the Battle of Stalingrad. Their defensive position inside a city filled with rubble meant that Soviet snipers were able to inflict significant casualties."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Soviet Forward Observer"
-         (unit
+         (base/unit
           :name "Soviet Forward Observer"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "M1938 Mortar Team"
-         (unit
+         (base/unit
           :name "M1938 Mortar Team"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Russian Medic"
-         (unit
+         (base/unit
           :name "Russian Medic"
           :classification "Med. Infantry")
         "Russian Sapper"
-         (unit
+         (base/unit
           :name "Russian Sapper"
           :image "WWIIRussian/Infantry_SapperToken.png"
           :classification "Hvy. Infantry")))
@@ -6796,9 +6796,9 @@ and short effective range reduces the M1935 to a last resort self defense weapon
      (section
       :name "WWII Soviet Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         :T-34/76
-         (unit
+         (base/unit
           :name "T-34/76"
           :image "WWIIRussian/TankMed_T34-76Token.png"
           :reference "* Politcal pressure came to halt production of the T-34. This pressure was from the developer of the KV-1 and IS-2 tanks which were in competition with the T-34."
@@ -6809,9 +6809,9 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "400km"
           :speedland "53kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "60mm Sloped"
               :back "45mm"
@@ -6819,13 +6819,13 @@ and short effective range reduces the M1935 to a last resort self defense weapon
               :under "20mm"
               :side "45mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :T-34/85
-         (unit
+         (base/unit
           :name "T-34/85"
           :image "WWIIRussian/TankMed_T34-85Token.png"
           :classification "Med. Tank"
@@ -6835,20 +6835,20 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "360km"
           :speedland "53kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "90mm Sloped"
               :under "20mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "OT-34 85mm"
-         (unit
+         (base/unit
           :name "OT-34 85mm"
           :image "WWIIRussian/TankMed_T34-85Token.png"
           :classification "Med. Tank"
@@ -6858,20 +6858,20 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "360km"
           :speedland "53kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "90mm Sloped"
               :under "20mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :KV-1
-         (unit
+         (base/unit
           :name "KV-1"
           :image "WWIIRussian/TankHvy_KV1Token.png"
           :classification "Hvy. Tank"
@@ -6881,20 +6881,20 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "250km"
           :speedland "28kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "130mm"
               :under "20mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :KV-2
-         (unit
+         (base/unit
           :name "KV-2"
           :image "WWIIRussian/TankHvy_KV-2Token.png"
           :classification "Hvy. Tank"
@@ -6904,19 +6904,19 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "140km"
           :speedland "25.6kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "110mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :IS-2
-         (unit
+         (base/unit
           :name "IS-2"
           :image "WWIIRussian/TankHvy_IS-2Token.png"
           :reference "* Proving-ground tests showed that the A-19 could penetrate clear through the front and rear armor of the German Panther tank. When it didn't penetrate, it would often knock the turret right off a tank. It was, however, slow to reload firing only 2/minute."
@@ -6927,20 +6927,20 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "240km"
           :speedland "37kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "160mm Sloped"
               :under "30mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :SU-76
-         (unit
+         (base/unit
           :name "SU-76"
           :image "WWIIRussian/SPG_SU76MToken.png"
           :classification "Tank Destroyer"
@@ -6950,20 +6950,20 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "320km"
           :speedland "45kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "35mm"
               :side "16mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :SU-85
-         (unit
+         (base/unit
           :name "SU-85"
           :image "WWIIRussian/SPG_SU-85Token.png"
           :classification "Tank Destroyer"
@@ -6973,19 +6973,19 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "400km"
           :speedland "55kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "45mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :SU-100
-         (unit
+         (base/unit
           :name "SU-100"
           :image "WWIIRussian/SPG_SU-100Token.png"
           :classification "Tank Destroyer"
@@ -6995,21 +6995,21 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "320km"
           :speedland "48kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "75mm"
               :over "20mm"
               :side "45mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         :SU-122
-         (unit
+         (base/unit
           :name "SU-122"
           :image "WWIIRussian/SPG_SU-122Token.png"
           :reference "* Even a Tiger was once heavily damaged by SU-122 assault guns firing high-explosive shells."
@@ -7020,19 +7020,19 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "300km"
           :speedland "55kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "45mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "BM-13 Katyusha"
-         (unit
+         (base/unit
           :name "BM-13 Katyusha"
           :image "WWIIRussian/RocketLauncher_KatyushaToken.png"
           :classification "Hvy. Rocket Launcher"
@@ -7040,13 +7040,13 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :mass "4.2tons"
           :speedland "55kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "ZiS3 76mm"
-         (unit
+         (base/unit
           :name "ZiS3 76mm"
           :image "WWIIRussian/Artillery_ZiS3_76mmToken.png"
           :reference "* The first ZiS-3 gun was designed and built in secret from from Red Army authorities, who ignored the Red Army's need for light and medium field guns. The authorities believed Nazi propaganda that German heavy tanks carried exceptionally strong armour. So the project was run purely on the initiative of Grabin, his design bureau and the Artillery Factory No. 92 head and his deputies. None of them informed state authorities about the ZiS-3 project until the authorities belatedly realized that Nazi tanks were often destroyed by even lighter guns."
@@ -7055,13 +7055,13 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :mass "2.65tons"
           :speedland "0kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Soviet M3 Scout Car"
-         (unit
+         (base/unit
           :name "Soviet M3 Scout Car"
           :image "WWIIRussian/Car_M3ScoutCarToken.png"
           :reference "Lend Lease from US"
@@ -7072,20 +7072,20 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :range "403km"
           :speedland "81kph"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :over "0mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "BZ-35 Fuel Truck"
-         (unit
+         (base/unit
           :name "BZ-35 Fuel Truck"
           :image "WWIIRussian/Truck_BZ-35_RefuelLorryToken.png"
           :classification "Truck"
@@ -7093,18 +7093,18 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :mass "4.2tons"
           :speedland "55kph"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))))
     "WWII Soviet Aircraft"
      (section
       :name "WWII Soviet Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "P-39 Airacobra"
-         (unit
+         (base/unit
           :name "P-39 Airacobra"
           :image "WWIIRussian/Fighter_P39Airacobra.png"
           :reference
@@ -7119,22 +7119,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "605kph"
           :width "10.4m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "13mm"
               :back "13mm"
               :over "13mm"
               :side "13mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Lavochkin La-5"
-         (unit
+         (base/unit
           :name "Lavochkin La-5"
           :reference "* Exhaust gas often entered in the cockpit due to poor insulation of the engine compartment. Consequently, pilots ignored orders and frequently flew with their canopies open."
           :classification "Lt. Aircraft"
@@ -7146,22 +7146,22 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "648kph"
           :width "9.8m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"
               :side "10mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Yakovlev Yak-9"
-         (unit
+         (base/unit
           :name "Yakovlev Yak-9"
           :reference "* The most numerous Soviet fighter of the war"
           :classification "Lt. Aircraft"
@@ -7173,17 +7173,17 @@ and short effective range reduces the M1935 to a last resort self defense weapon
           :speedair "672kph"
           :width "9.7m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :front "10mm"
               :back "10mm"
               :over "10mm"
               :side "10mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"))))))))

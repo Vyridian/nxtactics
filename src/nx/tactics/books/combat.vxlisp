@@ -630,7 +630,6 @@
         "Ranged"
         "Firearms"
         "Gunnery"
-        "Leadership"
         "Military")))))
 
 (func chapter_early_weaponry : base/chapter
@@ -1000,10 +999,8 @@
          (base/item
           :name "Cinqueda"
           :energy "50J")
-        :Dagger
-         (base/item
-          :name "Dagger"
-          :energy "50J")
+        "Knife: Dagger"
+         (base/item<-tactics-key tactics "Knife: Dagger")
         :Dirk
          (base/item
           :name "Dirk"

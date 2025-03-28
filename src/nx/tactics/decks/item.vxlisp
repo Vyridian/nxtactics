@@ -29,7 +29,7 @@
    :summary
     "* [Combat]: [Melee]
      * [Initiative]:-1
-     * [Damage]: [Body]+3 [Hack] [Slash]
+     * [Damage]: [Body]:+3 [Hack] [Slash]
      * [Location]: [2-hand]
      * [Armor]:1x1"
    :body "3x0"
@@ -39,7 +39,7 @@
    :image "images/cards/item-axe-hand.svg"
    :summary
     "* [Combat]: [Melee]
-     * [Damage]: [Body] [Hack] [Slash]
+     * [Damage]: [Body]:+1 [Hack] [Slash]
      * [Location]: [1-hand]"
    :body "9x-1"
    :mass "900g/2lb")
@@ -48,8 +48,8 @@
    :titles "Splitting Maul"
    :image "images/cards/item-axe-wood.svg"
    :summary
-    "* [Combat]: [Melee]-1
-     * [Damage]: [Body]+3 [Hack] [Slash]
+    "* [Fight]: [Melee]:-1
+     * [Damage]: [Body]:+3 [Hack] [Slash]
      * [Location]: [2-hand]
      * [Armor]: 1x1"
    :body "3x0"
@@ -59,7 +59,8 @@
    :image "images/cards/item-barehanded.svg"
    :summary
     "* [Fight]: [Close Combat] or [Melee]
-     * [Damage]: [Size Bonus] [Bash]")
+     * [Arc]: [Arc:Front]
+     * [Damage]: [Body] [Bash]")
   (base/item
    :name "Bedroll"
    :summary "")
@@ -167,16 +168,7 @@
    :body "10x-2"
    :mass "100g/.2lb")
   (base/item
-   :name "Dagger"
-   :image "images/cards/item-dagger.svg"
-   :summary
-    "* [Combat]: [Close Combat] or [Melee]
-     * [Damage]: [Body] [Pierce] [Slash]
-     * [Location]: [1-hand]"
-   :body "5x-1"
-   :mass "500g/1lb"
-   :energy "50J"
-   :length "25cm/10in")
+   :name "Flint Stone")
   (base/item
    :name "Grenade: White Phosphorous")
   (base/item
@@ -184,7 +176,7 @@
    :image "images/cards/item-hammer.svg"
    :summary
     "* [Combat]: [Melee]
-     * [Damage]: [Body]+2 [Bash]
+     * [Damage]: [Body]:+3 [Bash]
      * [Location]: [1-hand]"
    :body "2x0"
    :mass "2kg/4.4lb")
@@ -207,13 +199,25 @@
    :image "images/cards/item-knife.svg"
    :summary
     "* [Combat]: [Close Combat]
-     * [Damage]: [Body]-1 [Pierce] [Slash]
+     * [Damage]: [Body] [Pierce] [Slash]
      * [Location]: [1-hand]"
    :body "5x-1"
    :mass "500g/1lb"
    :length "25cm/10in")
   (base/item
+   :name "Knife: Dagger"
+   :image "images/cards/item-knife-dagger.svg"
+   :summary
+    "* [Combat]: [Close Combat] or [Melee]
+     * [Damage]: [Body] [Pierce] [Slash]
+     * [Location]: [1-hand]"
+   :body "5x-1"
+   :mass "500g/1lb"
+   :energy "50J"
+   :length "25cm/10in")
+  (base/item
    :name "Lockpicks"
+   :image "images/cards/item-lockpicks.svg"
    :summary
     "* [Success]: IF picking a lock and Succeed with Evade THEN Success:+1")
   (base/item
@@ -224,11 +228,21 @@
    :body "2x-2"
    :mass "20g/.05lb")
   (base/item
+   :name "Mushrooms"
+   :classification "Plant"
+   :image "images/cards/item-mushrooms.svg"
+   :summary
+    "* Nutrition for a day. After eating [Reveal Fate]. IF [Coins] THEN you spend 6 hours tripping or sleeping. IF [Cups] THEN Poison:+1")
+  (base/item
    :name "Paper: Lock Combination"
    :image "images/cards/item-paper-lockcombination.svg")
   (base/item
    :name "Pistol: Revolver"
    :image "images/cards/item-pistol-revolver.svg")
+  (base/item
+   :name "Pond Water"
+   :summary
+    "* IF drank [Reveal Fate] THEN IF [Cups] THEN [Diseased]:+1")
   (base/item
    :name "Quiver: Arrows"
    :image "images/cards/item-quiver-arrows.svg"
@@ -238,6 +252,12 @@
    :body "10x-1"
    :mass "1kg/2.2lb"
    :length "6cm/2ft")
+  (base/item
+   :name "Raspberries"
+   :classification "Plant"
+   :image "images/cards/item-raspberries.svg"
+   :summary
+    "* Nutrition for a day. [Reveal Fate]. IF [Coins] THEN they are sour. IF [Cups] THEN they are sweet.")
   (base/item
    :name "Rations"
    :image "images/cards/item-rations.svg"
@@ -257,7 +277,7 @@
   (base/item
    :name "Shield: Buckler"
    :classification "Shield"
-   :image "images/cards/item-shieldbuckler.svg"
+   :image "images/cards/item-shield-buckler.svg"
    :summary
     "* [Armor]: 1x1
      * [Arc]: [Arc:Front]
@@ -313,7 +333,7 @@
    :image "images/cards/item-spear.svg"
    :summary
     "* [Combat]: [Melee] [Reach]
-     * [Damage]: [Body]+3 [Pierce] [Slash]
+     * [Damage]: [Body]:+3 [Pierce] [Slash]
      * [Location]: [2-hand]
      * [Armor]:1x1"
    :body "3x0"
@@ -323,7 +343,7 @@
    :image "images/cards/item-spear-short.svg"
    :summary
     "* [Combat]: [Melee]
-     * [Damage]: [Body]+1 [Pierce] [Slash]
+     * [Damage]: [Body]:+1 [Pierce] [Slash]
      * [Location]: [1-hand]
      * [Armor]: 1x1"
    :body "10x-1"
@@ -391,7 +411,7 @@
    :classification "Sword"
    :summary
     "* [Combat]: [Melee]
-     * [Damage]: [Body]+1 [Pierce] [Slash]
+     * [Damage]: [Body]:+2 [Pierce] [Slash]
      * [Arc]: [Arc:Front] and [Arc:Left] OR [Arc:Right]
      * [Initiative]: +1
      * [Location]: [1-hand]
@@ -425,7 +445,7 @@
    :classification "Sword"
    :summary
     "* [Combat]: [Melee]
-     * [Damage]: [Body]+1 [Pierce] [Slash]
+     * [Damage]: [Body]:+2 [Pierce] [Slash]
      * [Arc]: [Arc:Front]
      * [Location]: [1-hand]
      * [Armor]: 1x1"
@@ -437,7 +457,7 @@
    :classification "Sword"
    :summary
     "* [Combat]: [Melee]
-     * [Damage]: [Body]+1 [Pierce] [Slash]
+     * [Damage]: [Body]:+2 [Pierce] [Slash]
      * [Arc]: [Arc:Front]
      * [Location]: [1-hand]
      * [Armor]: 1x1"
@@ -447,6 +467,8 @@
    :classification "Sword"
    :energy "100J")
   (base/item
+   :name "Torch")
+  (base/item
    :name "Waterskin"
    :image "images/cards/item-waterskin.svg"
    :summary
@@ -454,6 +476,18 @@
      * Cost: [Copper Coins]. Can be refilled from any clean water source."
    :body "2x0"
    :mass "2kg/4.4lbs")
+  (base/item
+   :name "Wild Onions"
+   :classification "Plant"
+   :image "images/cards/item-wildonions.svg"
+   :summary
+    "* Nutrition for a day.")
+  (base/item
+   :name "Wild Yams"
+   :classification "Plant"
+   :image "images/cards/item-wildyams.svg"
+   :summary
+    "* Nutrition for a day.")
  )
  :doc "Returns the base itemmap")
 

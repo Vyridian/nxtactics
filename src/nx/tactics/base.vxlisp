@@ -206,6 +206,9 @@
  :properties [classification : string]
  :traits     [card])
 
+(type rulelist : list
+ :allowtypes [rule])
+
 (type rulemap : map
  :allowtypes [rule])
 
@@ -288,7 +291,8 @@
    itemmap      : itemmap
    placemap     : placemap
    powermap     : powermap
-   scenemap  : scenemap
+   rulemap      : rulemap
+   scenemap     : scenemap
    skillmap     : skillmap
    specialtymap : specialtymap
    unitmap      : unitmap])
@@ -1309,6 +1313,19 @@
    powerlistlist))
  :doc "Returns a powerlist from a given sectionlist")
 
+(func powerlist<-tactics-keys : powerlist
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : powerlist
+  [powerlist : powerlist :=
+    (list<-list : powerlist
+     keys
+     (fn : power
+      [key : string]
+      (power<-tactics-key tactics key)))]
+   powerlist)
+ :doc "Return an powerlist from tactics and keys")
+
 (func powerlistlist<-sectionlist : powerlistlist
  [sections : sectionlist]
  (list<-list : powerlistlist
@@ -1327,6 +1344,53 @@
    [power : power]
    (:name power)))
  :doc "Returns a powermap from a given powerlist")
+
+(func powermap<-tactics-keys : powermap
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : powermap
+  [powerlist : powerlist :=
+    (powerlist<-tactics-keys
+     tactics keys)]
+  (powermap<-powerlist
+   powerlist))
+ :doc "Return an powermap from tactics and keys")
+
+(func rule<-tactics-key : rule
+ [tactics : tactics
+  key : string]
+ (let : rule
+  [rulemap : rulemap := (:rulemap tactics)
+   rule : rule :=
+    (any<-map rulemap key)
+   logit : string :=
+    (if : string
+     (then (is-empty rule) (log key))
+     (else key))]
+  rule)
+ :doc "Returns a rule from tactics")
+
+(func rulelist<-tactics-keys : rulelist
+ [tactics : tactics
+  keys : stringlist :...]
+ (let : rulelist
+  [rulelist : rulelist :=
+    (list<-list : rulelist
+     keys
+     (fn : rule
+      [key : string]
+      (rule<-tactics-key tactics key)))]
+   rulelist)
+ :doc "Return an rulelist from tactics and keys")
+
+(func rulemap<-rulelist : rulemap
+ [rulelist : rulelist :...]
+ (map<-list : rulemap
+  rulelist
+  (fn : rule
+   [rule : rule]
+   (:name rule)))
+ :doc "Returns a rulemap from a given rulelist")
 
 (func scenemap<-scenelist : scenemap
  [scenelist : scenelist :...]
@@ -1754,6 +1818,9 @@
    powermap1 : powermap := (:powermap tactics)
    powermap2 : powermap := (:powermap merge)
    powermap3 : powermap := (copy powermap1 powermap2)
+   rulemap1 : rulemap := (:rulemap tactics)
+   rulemap2 : rulemap := (:rulemap merge)
+   rulemap3 : rulemap := (copy rulemap1 rulemap2)
    scenemap1 : scenemap := (:scenemap tactics)
    scenemap2 : scenemap := (:scenemap merge)
    scenemap3 : scenemap := (copy scenemap1 scenemap2)
@@ -1764,14 +1831,15 @@
    unitmap2 : unitmap := (:unitmap merge)
    unitmap3 : unitmap := (copy unitmap1 unitmap2)]
   (tactics
-   :abilitymap  abilitymap3
-   :bookmap     bookmap3
-   :itemmap     itemmap3
-   :placemap    placemap3
-   :powermap    powermap3
-   :scenemap scenemap3
-   :skillmap    skillmap3
-   :unitmap     unitmap3))
+   :abilitymap abilitymap3
+   :bookmap    bookmap3
+   :itemmap    itemmap3
+   :placemap   placemap3
+   :powermap   powermap3
+   :rulemap    rulemap3
+   :scenemap   scenemap3
+   :skillmap   skillmap3
+   :unitmap    unitmap3))
  :doc "Returns a tactics with all maps merged with merge.")
 
 (func unit<-tactics-key : unit

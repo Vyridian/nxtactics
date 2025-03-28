@@ -5,7 +5,8 @@
        (lib item             :path nx/tactics/decks/item)
        (lib place            :path nx/tactics/decks/place)
        (lib power            :path nx/tactics/decks/power)
-       (lib scene         :path nx/tactics/decks/scene)
+       (lib rule             :path nx/tactics/decks/rule)
+       (lib scene            :path nx/tactics/decks/scene)
        (lib specialty        :path nx/tactics/decks/specialty)
        (lib skill            :path nx/tactics/decks/skill)
        (lib unit             :path nx/tactics/decks/unit)
@@ -81,8 +82,10 @@
 (func tactics-main : base/tactics
  (let : base/tactics
   [tacticsbasic : base/tactics := (empty base/tactics)
+   tacticsrules : base/tactics :=
+    (rule/tactics-rulemap<-tactics tacticsbasic)
    tacticsabilities : base/tactics :=
-    (ability/tactics-abilitymap<-tactics tacticsbasic)
+    (ability/tactics-abilitymap<-tactics tacticsrules)
    tacticsspecialties : base/tactics :=
     (specialty/tactics-specialtymap<-tactics tacticsabilities)
    tacticsskills : base/tactics :=

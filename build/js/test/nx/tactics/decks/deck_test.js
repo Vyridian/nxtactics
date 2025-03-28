@@ -11,6 +11,7 @@ import nx_tactics_decks_restraint from "../../../../src/nx/tactics/decks/restrai
 import nx_tactics_decks_rule from "../../../../src/nx/tactics/decks/rule.js"
 import nx_tactics_decks_scene_murintrail from "../../../../src/nx/tactics/decks/scene-murintrail.js"
 import nx_tactics_decks_scene_nightonthetown from "../../../../src/nx/tactics/decks/scene-nightonthetown.js"
+import nx_tactics_decks_scene_ontherun from "../../../../src/nx/tactics/decks/scene-ontherun.js"
 import nx_tactics_decks_starter from "../../../../src/nx/tactics/decks/starter.js"
 import nx_tactics_decks_tarot from "../../../../src/nx/tactics/decks/tarot.js"
 import nx_tactics_decks_trauma from "../../../../src/nx/tactics/decks/trauma.js"
@@ -36,11 +37,11 @@ export default class nx_tactics_decks_deck_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/decks/deck", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 70, ":tests", 7, ":total", 10), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 72, ":tests", 8, ":total", 11), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 11), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 10), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 11), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0)
     )
     return output
@@ -61,6 +62,7 @@ export default class nx_tactics_decks_deck_test {
       "funcmap",
         vx_core.f_new_from_type(
           vx_core.t_intmap,
+          "deck-abilities", 0,
           "deck-books", 0,
           "deck-encounters", 0,
           "deck-home", 0,

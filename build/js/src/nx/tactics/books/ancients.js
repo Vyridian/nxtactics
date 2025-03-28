@@ -1387,7 +1387,7 @@ export default class nx_tactics_books_ancients {
                 vx_core.f_new(
                   {"any-1": nx_tactics_base.t_unitskill},
                   ":name",
-                  "Command",
+                  "Leadership",
                   ":level",
                   "4",
                   ":unitabilitymap",

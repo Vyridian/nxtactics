@@ -1854,9 +1854,9 @@
             "Demon Soul"
              (unitpower
               :name "Demon Soul")
-            "Hyper Speed"
+            "Quickness"
              (unitpower
-              :name "Hyper Speed"
+              :name "Quickness"
               :unitabilitymap
                (unitabilitymap
                 "After Image"

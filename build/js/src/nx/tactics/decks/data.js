@@ -7,6 +7,7 @@ import nx_tactics_decks_ability from "../../../nx/tactics/decks/ability.js"
 import nx_tactics_decks_item from "../../../nx/tactics/decks/item.js"
 import nx_tactics_decks_place from "../../../nx/tactics/decks/place.js"
 import nx_tactics_decks_power from "../../../nx/tactics/decks/power.js"
+import nx_tactics_decks_rule from "../../../nx/tactics/decks/rule.js"
 import nx_tactics_decks_scene from "../../../nx/tactics/decks/scene.js"
 import nx_tactics_decks_specialty from "../../../nx/tactics/decks/specialty.js"
 import nx_tactics_decks_skill from "../../../nx/tactics/decks/skill.js"
@@ -143,7 +144,8 @@ export default class nx_tactics_decks_data {
         const tacticsbasic = vx_core.f_empty(
           nx_tactics_base.t_tactics
         )
-        const tacticsabilities = nx_tactics_decks_ability.f_tactics_abilitymap_from_tactics(tacticsbasic)
+        const tacticsrules = nx_tactics_decks_rule.f_tactics_rulemap_from_tactics(tacticsbasic)
+        const tacticsabilities = nx_tactics_decks_ability.f_tactics_abilitymap_from_tactics(tacticsrules)
         const tacticsspecialties = nx_tactics_decks_specialty.f_tactics_specialtymap_from_tactics(tacticsabilities)
         const tacticsskills = nx_tactics_decks_skill.f_tactics_skillmap_from_tactics(tacticsspecialties)
         const tacticspowers = nx_tactics_decks_power.f_tactics_powermap_from_tactics(tacticsskills)

@@ -38,6 +38,59 @@
   (base/unit
    :name "Caterpillar: Giant")
   (base/unit
+   :name "Flint (Early)"
+   :image "images/cards/unit-flint.svg"
+   :race "Half-elven"
+   :gender "M"
+   :age 17
+   :body "7x1"
+   :mind "5x1"
+   :will "5x1"
+   :speed "7x0"
+   :speedland "7kph/4.5mph"
+   :mass "70kg/153lb"
+   :height "1.67m/5'6"
+   :beast "1x0"
+   :shadow "1x0"
+   :value "1x0"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill
+      :skill (base/skill<-tactics-key tactics "Close Combat")
+      :level 1
+      :unititemmap
+       (base/unititemmap<-unititemlist
+         (base/unititem
+          :item (base/item<-tactics-key tactics "Knife: Dagger"))))
+     (base/unitskill
+      :skill (base/skill<-tactics-key tactics "Stealth")
+      :level 1
+      :unitabilitymap
+       (base/unitabilitymap<-unitabilitylist
+        (base/unitability
+         :ability (base/ability<-tactics-key tactics "Sneak"))))
+     (base/unitskill
+      :skill (base/skill<-tactics-key tactics "Tradeskills")
+      :level 1
+      :unitabilitymap
+       (base/unitabilitymap<-unitabilitylist
+        (base/unitability
+         :ability (base/ability<-tactics-key tactics "House Painting"))))
+    ))
+  (base/unit
+   :name "Hare"
+   :body "4x0"
+   :mind "2x1"
+   :will "3x1"
+   :speed "6x1"
+   :speedland "60kph/40mph"
+   :mass "4kg/8lbs"
+   :length "60cm"
+   :secrets
+    "* Because of their extremely low fat content, they are a poor choice as a survival food.
+     * The blood of a freshly killed hare can be collected for consumption in a stew or casserole in a cooking process known as jugging.
+     * Jugged hare, known as civet de lièvre in France, is a whole hare, cut into pieces, marinated, and cooked with red wine and juniper berries in a tall jug that stands in a pan of water.")
+  (base/unit
    :name "Hellbear")
   (base/unit
    :name "Hellboar")
@@ -48,7 +101,7 @@
    :image "images/cards/unit-hidden.svg")
   (base/unit
    :name "Snake: Emerald Viper"
-   :summary
+   :secrets
     "* Movement - They can swim and climb trees.
      * Venomous Bite - Vipers carry a limited amount of venom. They can control the amount that injected including none at all.
      * Venom - Viperid venoms typically contain an abundance of protein-degrading enzymes, called proteases, that produce symptoms such as pain, strong local swelling and necrosis, blood loss from cardiovascular damage complicated disruption of the blood-clotting system. Death is usually caused by collapse in blood pressure. Due to the nature of proteolytic venom, a viperid bite is often a very painful experience and should always be taken seriously, though it may not necessarily prove fatal. Even with prompt and proper treatment, a bite can still result in a permanent scar, and in the worst cases, the affected limb may even have to be amputated.
@@ -61,7 +114,7 @@
    :speedland "3kph/2mph"
    :mass "2kg/5lbs"
    :length "30cm/1ft"
-   :skillmap
+   :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill
       :level 1
@@ -73,7 +126,7 @@
         tactics
         "Ambush"
         "Camouflage")))
-   :powermap
+   :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower
       :level 2

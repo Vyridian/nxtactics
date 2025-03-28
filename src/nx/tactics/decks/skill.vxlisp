@@ -243,16 +243,21 @@ x +1DMG vs. Crouching."
        :name "Drag"
        :summary
         "[Requires]: You must have a [Hold] on the target.
-         [Action]: You may Move at half speed while also dragging the target behind you.")
+         [Action]: You may at an additional Move:-1/space while dragging the target behind you.")
      "Back Fist"
       (base/ability
        :name "Back Fist"
-       :summary "* Strike with the back of the fist or open hand."
+       :summary
+        "* [Arc]: Arc:Left or Arc:Right
+         * Strike with the back of the fist or open hand."
        :titles "Backhand, Bitch Slap")
      :Clothesline
       (base/ability
        :name "Clothesline"
-       :summary "Clothesline         -1           +2           +0     S,C,miss A")
+       :summary
+        "* [Requires]: [Close Combat]. Must have Moved this Round. [Hit Location]=Head or Shoulders
+         * [Arc]: Arc:Left or Arc:Right
+         * [Effect]: IF [Hit Location] is Head or Shoulders THEN Knockdown:+1")
      "Bull Rush"
       (base/ability
        :name "Bull Rush")
@@ -271,13 +276,13 @@ x +1DMG vs. Crouching."
        :name "Deflecting Punch"
        :summary
         "* The fighter deflects a punch at him and immediately counters with a punch of his own.
-         * [Counter]: +1 Effect")
+         * [Counter]: [Effect]:+1")
      "Dragon Strike"
       (base/ability
        :name "Dragon Strike"
        :summary
         "* When striking with the fist, more power can be exerted when the movement originates from the feet, is guided by the waist, flows through the body, and exits through the fist.
-         * [Attack] [J]: +1 Knockback
+         * [Attack] [J]: Push:+1, Stun:+1
          * [Aerial]"
        :titles "Dragon Fist, Dragon Punch")
      "Ear Pop"
@@ -1704,20 +1709,12 @@ x +1DMG vs. Crouching."
          * Turret mounted weapons may turn their turret toward any direction and fire from the side the turret is facing.
          * Turrets are normally assumed to be facing forward.  At the beginning of its [Action], a unit may change the turret facing by 1 side (Use a [Vector] Token) indicate where the Turret is pointing."))
    :specialtymap
-    (base/specialtymap
+    (base/specialtymap<-tactics-keys
+     tactics
      "Energy Weapons"
-      (base/specialty
-       :name "Energy Weapons"
-       :reference "Whoa, whoa, whoa! Nice shootin', Tex! - Ghostbusters")
-     :Handguns
-      (base/specialty
-       :name "Handguns")
-     :Rifles
-      (base/specialty
-       :name "Rifles")
-     :Shotguns
-      (base/specialty
-       :name "Shotguns")))
+     "Handguns"
+     "Rifles"
+     "Shotguns"))
   (base/skill
    :name "Gunnery"
    :summary
@@ -1760,16 +1757,11 @@ x +1DMG vs. Crouching."
          * Up to 10 weapons of the same type can be in 1 Salvo.
          * All targets in the space are attacked."))
    :specialtymap
-    (base/specialtymap
-     :Cannons
-      (base/specialty
-       :name "Cannons")
-     :Flamethrowers
-      (base/specialty
-       :name "Flamethrowers")
-     :Machineguns
-      (base/specialty
-       :name "Machineguns")))
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Cannons"
+     "Flamethrowers"
+     "Machineguns"))
   (base/skill
    :name "Hunting"
    :reference "* Royal Huntsman - Sleeping Beauty"
@@ -1807,12 +1799,6 @@ x +1DMG vs. Crouching."
      "Werewolf Hunter"
      "Witch Hunter"))
   (base/skill
-   :name "!!! Melee"
-   :abilitymap
-    (base/abilitymap<-tactics-keys
-     tactics
-     "Space Clearing"))
-  (base/skill
    :name "Melee"
    :reference
     "* Mizu: I must become the greatest swordsman alive. Swordfather: Is that all? - Mizu and Swordfather, Blue Eye Samurai"
@@ -1824,290 +1810,54 @@ x +1DMG vs. Crouching."
    :titles "Battlemaster, Champion, Congueror, Fencer, Fighter, Master of Arms, Warrior"
    :stat "Body"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Abdomen Timing of Two"
-      (base/ability
-       :name "Abdomen Timing of Two"
-       :reference "Abdomen Timing of Two refers to feinting an attack, then striking an enemy as they are retracting from an attack, hitting them in the abdomen with the correct timing of either two moves or two seconds. Although the technique seems relatively simple, Musashi lists this as one of the hardest techniques to time correctly.")
      "Anvil Strike"
-      (base/ability
-       :name "Anvil Strike"
-       :summary "* [+1 Damage] when target is adjacent to solid terrain.")
-     :Backlash
-      (base/ability
-       :name "Backlash")
+     "Backlash"
      "Blade Barrier"
-      (base/ability
-       :name "Blade Barrier"
-       :summary "* Creates a 3 space wide [Wall] directly in front of the unit by rapidly swinging the blade in a flashy display. Anything crossing this wall is subject to an [Opportunity Attack]."
-       :titles "Wall of Swords")
      "Blind Fighting"
-      (base/ability
-       :name "Blind Fighting")
      "Combat Sense"
-      (base/ability
-       :name "Combat Sense")
      "Continuous Cut"
-      (base/ability
-       :name "Continuous Cut"
-       :reference "The Flowing Water Cut is used when you are struggling blade to blade with the enemy. When he breaks and quickly withdraws trying to spring with his sword, expand your body and spirit and cut him as slowly as possible with your long sword, following your body like stagnant water. - Miyamoto Mushashi, The Book of Five Rings"
-       :summary "* [Reaction]: [+1 Defense].  If you are not hit, you may immediately attack as a free action at [-1 Attack]."
-       :titles "Flowing Water Cut")
      "Dash Attack"
-      (base/ability
-       :name "Dash Attack"
-       :summary
-        "* [Requires]: May only move in a straight line this turn.
-         * [Action]: [-1 Attack], May attack any number of adjacent opponents along path each at a cumulative -1.")
      "Dazing Blow"
-      (base/ability
-       :name "Dazing Blow"
-       :summary
-        "-2 Damage
-         Damage - [Stun]
-         Criticals - [Stun]"
-       :titles "Pommel Strike")
      "Dual Wield"
-      (base/ability
-       :name "Dual Wield"
-       :reference
-        "* Not used on the battlefield where a shield would be more practical.
-        * Used primarily for parrying during one on one duels.
-        * Two longsword duelling was done by very skilled fighters in Italian duelling.
-        * Dual katana Japanese styles also exist."
-       :summary
-        "* Using a Dagger, Hand Axe or Hammer in the off hand.")
-     :Feint
-      (base/ability
-       :name "Feint"
-       :summary "* Feints are maneuvers designed to distract or mislead, done by giving the impression that a certain maneuver will take place, while in fact another, or even none, will."
-       :titles "Kizeme")
+     "Feint"
      "Fend Off"
-      (base/ability
-       :name "Fend Off"
-       :summary
-        "* [Requires]: Weapon with [Reach]
-         * [Reaction]: If you hit with [Fend Off], the opponent may not move any closer to you this turn.")
      "Fire and Stones Cut"
-      (base/ability
-       :name "Fire and Stones Cut"
-       :reference
-        "The Fires and Stones Cut means that when the enemy's sword and your sword clash together you cut as strongly as possible without raising the sword even a little. This means cutting quickly with the hands, body and legs - all three cutting strongly. If you train well enough you will be able to strike strongly. - Miyamoto Mushashi, The Book of Five Rings"
-       :summary
-        "* [Reaction]: [+1 Defense]
-         * [Action]: [+1 Attack], if you used this ability to [React] last turn.")
-     :Fleche
-      (base/ability
-       :name "Fleche"
-       :summary
-        "* A [Lunge] forward where the attacker continues to move forward past the defender to avoid a [Riposte] or Counter Attack.
-         -1 Initiative
-         +1 Move - May only move straight forward.
-         +1 Damage")
+     "Fleche"
      "Follow Through"
-      (base/ability
-       :name "Follow Through"
-       :summary "* [Action]: If you hit with this ability, you may immediately turn to the left or right and attack a target in the next adjacent space. This may be repeated any number of times at [-1 Attack] per target after the first though each additional target must be in the same direction.")
-     :Hamstring
-      (base/ability
-       :name "Hamstring"
-       :summary
-        "* Attack the legs to slow the opponent.
-         * [Action]
-         -1 Accuracy
-         Criticals - [Cripple]")
-     :Impale
-      (base/ability
-       :name "Impale"
-       :summary
-        "* [Requires]: Spear
-         * [Action]
-         -1 Accuracy
-         Criticals - [Piercing]")
-     :Lunge
-      (base/ability
-       :name "Lunge")
+     "Hamstring"
+     "Impale"
+     "Lunge"
      "Offhanded Fighting"
-      (base/ability
-       :name "Offhanded Fighting"
-       :summary "* [Action]: Normal Attack take a -2 penalty if performed with the non primary hand.  This ability negates that penalty when using this skill in the off hand.")
-     :Parry
-      (base/ability
-       :name "Parry"
-       :summary
-        "* The fighter uses his weapon to block an opponent's attack.
-         * [Reaction]
-         +1 Initiative
-         +2 Defense")
+     "Parry"
      "Piercing Strike"
-      (base/ability
-       :name "Piercing Strike"
-       :summary "* [Action]: Trades damage to increase armor penetration.")
      "Rapid Strike"
-      (base/ability
-       :name "Rapid Strike"
-       :reference
-        "In One Timing means, when you have closed with the enemy, to hit him as quickly and directly as possible, without moving your body or settling your spirit, while you see that he is still undecided. The timing of hitting before the enemy decides to withdraw, break or hit, to be able to hit in the timing of an instant. - Miyamoto Mushashi, The Book of Five Rings"
-       :summary
-        "* [Requires]: Wear loose clothing or less. (Armor Penalty = 0).
-         * [Action]: Speed +1, Attack -1"
-       :titles "In One Timing, Lightning Blow")
-     :Riposte
-      (base/ability
-       :name "Riposte"
-       :reference "When your swords clash together, in one motion when your sword springs away from theirs, use a continuous motion to slash their head, body and legs."
-       :summary
-        "* Speedy attack that can only be performed after a [Parry] or a [Block].
-         * [Requires]: Previous Action was [Parry] or [Block]
-         +2 Initiative
-         +2 Attack"
-       :titles "Counter Strike")
+     "Riposte"
      "Set Against Charge"
-      (base/ability
-       :name "Set Against Charge")
+     "Space Clearing"
      "Stunning Blow"
-      (base/ability
-       :name "Stunning Blow"
-       :summary "* [Attack]: Trades lethal damage for stunning damage.")
-     :Sweep
-      (base/ability
-       :name "Sweep"
-       :summary
-        "* Attack the legs to trip the opponent.
-         +1 Initative
-         -1 Move
-         -1 Damage
-         Criticals - [Knockdown]"
-       :titles "Trip")
+     "Sweep"
      "There are Many Enemies"
-      (base/ability
-       :name "There are Many Enemies"
-       :reference
-        "When you are fighting one against many, draw both sword and companion sword and assume a wide-stretched left and right attitude. The spirit is to chase the enemies around from side to side, even though they come from all four directions. Observe their attacking order, and go to meet first those who attack first. Sweep your eyes around broadly, carefully examining the attacking order, and cut left and right alternately with your swords. Waiting is bad. Always quickly re-assume your attitudes to both sides, cut the enemies down as they advance, crushing them in the direction from which they attack. Whatever you do, you must drive the enemy together, as if tying a line of fishes, and when they are seen to be piled up, cut them down strongly without giving them room to move. - Miyamoto Mushashi, The Book of Five Rings"
-       :summary
-        "* [Requires]: [Duel Wield]
-         * [Defense]: If [Surrounded], ignore opponents in front arc when determining [Surrounded] defense penalty.")
-     :Thrust
-      (base/ability
-       :name "Thrust"
-       :summary
-        "+1 Initiative
-         +1 Move
-         Critcals - [Piercing]")
+     "Thrust"
      "To Apply Stickiness"
-      (base/ability
-       :name "To Apply Stickiness"
-       :reference
-        "When the enemy attacks and you also attack with the long sword, you should go in with a sticky feeling and fix your long sword against the enemy's as you receive his cut. The spirit of stickiness is not hitting very strongly, but hitting so that the long swords do not separate easily. It is best to approach as calmly as possible when hitting the enemy's long sword with stickiness. The difference between 'Stickiness' and 'Entanglement' is that stickiness is firm and entanglement is weak. - Miyamoto Mushashi, The Book of Five Rings")
      "Weapon Block"
-      (base/ability
-       :name "Weapon Block"
-       :summary
-        "* Deflect, catch, or even turn strike back with a weapon used against the fighter.
-         * This ability provides a second Defense roll against a weapon attack before the regular Defense roll.
-         * [Reaction]
-         +2 Initiative
-         +1 Accuracy
-         0 Damage - Any successes become -Damage to the weapon. If the weapon has 0 Damage remaining, it is caught.
-         Criticals - Any Criticals become -2 Damage to the weapon. If the weapon has 0 Damage remaining and there are still Criticals, the weapon may be immediately used at +[Criticals] Accuracy. Note: The weapon remains in the hands of the attacker.")
-     "Whirlwind Attack"
-      (base/ability
-       :name "Whirlwind Attack"
-       :summary "* Allows multiple attacks to different targets by trading accuracy for extra attacks."))
+     "Whirlwind Attack")
    :specialtymap
-    (base/specialtymap
-     :Bladedancer
-      (base/specialty
-       :name "Bladedancer"
-       :summary
-        "* A combat technique focusing on elegant moves that efficiently combine attack and defense. Heavy armor may not be used with this technique.")
-     :Fensing
-      (base/specialty
-       :name "Fensing"
-       :summary
-        "* A combat technique focusing on long quick blades like rapiers and epees."
-       :titles "Fenser")
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Bladedancer"
+     "Fensing"
      "Sword Saint"
-      (base/specialty
-       :name "Sword Saint"
-       :summary
-        "* A combat technique focusing almost exclusively on mastery of the sword."
-       :titles "Kensai, Kensei")
-     :Axes
-      (base/specialty
-       :name "Axes"
-       :reference
-        "* Run to the bedroom,
-         In the suitcase on the left
-         You'll find my favorite axe.
-         Don't look so frightened
-         This is just a passing phase,
-         One of my bad days. - Pink Floyd, One of My Turns"
-       :titles "Axeman")
+     "Axes"
      "Flexible Weaponry"
-      (base/specialty
-       :name "Flexible Weaponry"
-       :summary "* Backlash, Disarm, Trip"
-       :titles "Hangman, Strangler")
-     :Hammers
-      (base/specialty
-       :name "Hammers"
-       :summary
-        "* War hammers were developed as a consequence of the ever more prevalent metal armors of the medieval battlefields during the 14th and 15th centuries. Swords were of little use against these armors. The war hammer could deal blows of tremendous force to the target, especially when mounted on a pole, and by impact alone do damage without penetrating the armor. The spike end could be used for grappling the target's armour, reins, or shield, or could be turned in the direction of the blow to pierce even heavy armor. Against mounted opponents, the weapon could also be directed at the legs of the horse, toppling the armored foe to the ground where he could be more easily attacked.
-        * See Arms and Armor for weapons")
+     "Hammers"
      "Short Blades"
-      (base/specialty
-       :name "Short Blades"
-       :summary "* Includes Short Swords, Daggers, Stilettos, Machetes, Large Kitchen Knives, etc.")
-     :Polearms
-      (base/specialty
-       :name "Polearms"
-       :summary "Fend Off"
-       :titles "Glaivemaster, Halberdier, Poleman")
-     :Spears
-      (base/specialty
-       :name "Spears"
-       :summary "Fend Off, Impale, Set Against Charge, Shield Snare"
-       :titles "Lancer, Javelineer, Myrmidon, Peltast, Pikeman, Spartan, Spearman, Velite")
-     :Staves
-      (base/specialty
-       :name "Staves"
-       :summary
-        "* This specialty includes long staves and short sticks. Staves have longer reach than most weapons while fighting sticks attack with great speed.
-         * [Dazing Blow], [Disarm], [Fend Off], [Fleche], [Parry], [Riposte], [Sweep]"
-       :titles "Arnis, Bojutus, Escrima, Kali, Stick Fighting")
-     :Swords
-      (base/specialty
-       :name "Swords"
-       :reference
-        "The Book of Five Rings - Miyamoto Mushashi
-
-         The Gaze
-         * The gaze should be large and broad. This is the twofold gaze 'Perception and Sight'. Perception is strong and sight weak.
-         * In strategy it is important to see distant things as if they were close and to take a distanced view of close things. It is important in strategy to know the enemy's sword and not to be distracted by insignificant movements of his sword. The gaze is the same for single combat and for large-scale combat.
-         * It is necessary in strategy to be able to look to both sides without moving the eyeballs. You cannot master this ability quickly. Learn what is written here: use this gaze in everyday life and do not vary it whatever happens.
-
-         The Five Attitudes
-         * The five attitudes are: Upper, Middle, Lower, Right Side, and Left Side.  These are the five.
-         * Although attitude has these five dimensions, the one purpose of all of them is to cut the enemy.
-         * There are none but these five attitudes.
-         * Whatever attitude you are in, do not be conscious of making the attitude; think only of cutting.
-
-         * Middle Attitude - Confront the enemy with the point of your sword against his face.  When he attacks, dash his sword to the right and 'ride' it.  Or, when the enemy attacks, deflect the point of his sword by hitting downwards, keep your long sword where it is, and as the enemy renews the attack cut his arms from below.
-
-         * When you master my Way of the long sword, you will be able to control any attack the enemy makes.  I assure you, there are no attitudes other than the five attitudes of the long sword of NiTo.
-
-         * Upper Attitude - From the Upper attitude cut the enemy just as he attacks.  If the enemy evades the cut, keep your sword where it is and, scooping from below, cut him as he renews the attack.
-
-         * You will always win with the five long sword methods. You must train repeatedly.
-
-         * Lower Attitude - Adopt the Lower attitude, anticipating scooping up. When the enemy attackes, hit his hands from below.  As you do so, he may try to hit your sword down. If this is the case, cut his upper arm(s) horizontally with a feeling of 'crossing'. This means that from the Lower attitudes you hit the enemy at the instant that he attacks. You will encounter this method often, both as a beginner and in later strategy.
-         * Left Side Attitude - Adopt the Left Side attitude. As the enemy attacks, hit his hands from below. If as you hit his hands he attempts to dash down your sword, with the feeling of hitting his hands, parry the path of his long sword and cut across from above your shoulder. Through this method you win by parrying the line of the enemy's attack.
-         * Right Side Attitude - In the fifth approach, the sword is in the Right Side attitude. In accordance with the enemy's attack, cross your sword from below at the side to the Upper attitude. Then cut straight from above.
-         * Cut and Slash - To cut and slash are two different things.  Cutting, whatever form of cutting it is, is decisive, with a resolute spirit. Slashing is nothing more than touching the enemy. Even if you slash strongly, and even if the enemy dies instantly, it is slashing. When you cut, your spirit is resolved. You must appreciate this. If you first slash the enemy's hands or legs, you must then cut strongly. Slashing is in spirit the same as touching. When you realise this, they become indistinguishable. Learn this well."
-       :summary
-        "* Melee - [Abdomen Timing of Two], [Continuous Cut], [Dash Attack], [Dazing Blow], [Fleche], [Fire and Stones Cut], [Parry], [Riposte], [Slash], [There Are Many Enemies], [Thrust], [To Apply Stickiness]"
-       :titles "Bushi, Fencer, Fencing, Kendo, Kenjutsu, Kensei, Ronin, Sword Saint, Samurai, Swordsman")))
+     "Polearms"
+     "Spears"
+     "Staves"
+     "Swords"))
   (base/skill
    :name "Leadership"
    :reference
@@ -2127,11 +1877,12 @@ x +1DMG vs. Crouching."
   (base/skill
    :name "Military"
    :reference
-    "* He can't make that kind of decision.  He's just a grunt!  No offense.  None taken - Burke and Hicks, Aliens
+    "* He can't make that kind of decision. He's just a grunt! No offense. None taken - Burke and Hicks, Aliens
      * I think we'd better split up...Yeah... we can do more damage that way. - Ghostbusters
      * If ten times the enemy's strength, surround them; If five times, attack them; If double, divide them; If equal, be able to fight them; If fewer, be able to evade them; If weaker, be able to avoid them. - Sun Tzu
      * Warfare is the art of deception. Thus although you are capable, display incapability to them. When your objective is nearby, make it appear distant; when it is far away, create the illusion of being nearby. - Sun Tzu, The Art of War"
-   :titles "Admiral, Brigade, Brigadier, Cadet, Centurion, Colonel, Commander, Commando, Conscript, Corporal, Field Marshal, Footman, Gamesman, General, Grunt, High Guard, Honor Guard, Infantry, Legionnaire, Lieutenant, Praetor, Praetorian Guard, Reserves, Royal Guard, Soldier, Soldier of Fortune, Strategist, Tactician, Vanguard"
+   :titles
+    "Admiral, Brigade, Brigadier, Cadet, Centurion, Colonel, Commander, Commando, Conscript, Corporal, Field Marshal, Footman, Gamesman, General, Grunt, High Guard, Honor Guard, Infantry, Legionnaire, Lieutenant, Praetor, Praetorian Guard, Reserves, Royal Guard, Soldier, Soldier of Fortune, Strategist, Tactician, Vanguard"
    :stat "Will"
    :abilitymap
     (base/abilitymap
@@ -2283,7 +2034,8 @@ x +1DMG vs. Crouching."
      :Sapping
       (base/ability
        :name "Sapping"
-       :reference "* If it was important, then they should have built it better. - Desert Naturalist, Runeterra")
+       :reference 
+        "* If it was important, then they should have built it better. - Desert Naturalist, Runeterra")
      "Space Combat"
       (base/ability
        :name "Space Combat")
@@ -2308,98 +2060,27 @@ x +1DMG vs. Crouching."
    :reference "* Good. Bad. I'm the guy with the gun. - Ash, Army of Darkness"
    :titles "Archer, Javelineer, Slinger"
    :abilitymap
-    (base/abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
      "Arcing Fire"
-      (base/ability
-       :name "Arcing Fire"
-       :summary
-        "* [Requires]: Bow or Javelin
-         * May fire over other units that block Line of Sight.")
      "Barbed Javelin"
-      (base/ability
-       :name "Barbed Javelin"
-       :summary
-        "* [Requires]: Javelin
-         * Criticals vs Large units are [Rage] Tokens.")
      "Bowel Raker"
-      (base/ability
-       :name "Bowel Raker"
-       :summary
-        "* +1 [Bleeding]
-         * -1 [Piercing]"
-       :titles "Serrated Arrow")
-     "Deadly Arrow"
-      (base/ability
-       :name "Deadly Arrow"
-       :summary
-        "* [Requires]: Bow or Crossbow
-         * Increase weapon range by 50% and choose [Hit Location]")
+     "Deadly Shot"
      "Double Shot"
-      (base/ability
-       :name "Double Shot"
-       :summary
-        "* -2 [Attack]
-         * -1 [Piercing]
-         * May attack two targets in same [Arc]."
-       :titles "Double Throw")
      "Explosive Shot"
-      (base/ability
-       :name "Explosive Shot"
-       :summary "* [Requires]: Bow or Crossbow")
-     "Flaming Arrow"
-      (base/ability
-       :name "Flaming Arrow"
-       :summary "* [Requires]: Bow or Crossbow")
-     :Fletching
-      (base/ability
-       :name "Fletching"
-       :summary "* The art of making arrows. High quality or specialized arrows are quickly used up and often impractical to buy. Creating your own is often a very practical solution."
-       :titles "Bowyer")
+     "Flaming Shot"
+     "Fletching"
      "Knife Throwing"
-      (base/ability
-       :name "Knife Throwing")
      "Piercing Shot"
-      (base/ability
-       :name "Piercing Shot"
-       :summary
-        "* [Requires]: Bow or Crossbow
-         * [Attack]: [+1 Armor Piercing]")
-     :Richochet
-      (base/ability
-       :name "Richochet"
-       :summary "* [Requires]: Thrown Object")
+     "Richochet"
      "Shield Snare"
-      (base/ability
-       :name "Shield Snare"
-       :summary
-        "* [Requires]: Javelin, Target with shield
-         * [Attack]: Criticals are [Encumberance] Tokens.")
      "Signal Shot"
-      (base/ability
-       :name "Signal Shot"
-       :summary
-        "* Alert allied units by sending a prearranged signal. This can be flaming arrow at night, smoking arrow, singing arrow, etc.
-         * [Requires]: Bow or Crossbow
-         * [Action]: For the rest of the turn, other units adjacent to this unit may be treated as if under the [Sphere of Command] of any allied Commander.")
-     "Stunning Throw"
-      (base/ability
-       :name "Stunning Throw"
-       :summary
-        "* [Requires]: Thrown Object
-         * Trades lethal damage for stunning damage."))
+     "Stunning Throw")
    :specialtymap
-    (base/specialtymap
-     :Archery
-      (base/specialty
-       :name "Archery"
-       :summary "* Bowel Raker, Double Shot, Flaming Arrow"
-       :titles "Archer, Archer Elite, Bowman, Crossbowman, Longbowman")
-     "Thrown Weapons"
-      (base/specialty
-       :name "Thrown Weapons"
-       :reference "You? You're very good. But me? I'm magic. - Bullseye, Daredevil Comics"
-       :summary "* Barbed Javelin, Double Shot, Knife Throwing, Precision Throw, Shield Snare"
-       :titles "Knife Thrower, Javelineer, Slinger")))
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Archery"
+     "Thrown Weapons"))
   (base/skill
    :name "Stealth"
    :titles "Stalker"
@@ -2422,6 +2103,39 @@ x +1DMG vs. Crouching."
      "Tailing"
      "Vanish"
      "Without a Trace"))
+  (base/skill
+   :name "Tradeskills"
+   :reference "* Tradesman"
+   :stat "None"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Administration"
+     "Agriculture"
+     "Architecture"
+     "Blacksmithing"
+     "Brewing"
+     "Carpentry"
+     "Cleaning"
+     "Cobbling"
+     "Cooking"
+     "Cooping"
+     "Glassblowing"
+     "House Painting"
+     "Jewelsmithing"
+     "Laboring"
+     "Landscaping"
+     "Leatherworking"
+     "Logging"
+     "Metalworking"
+     "Plumbing"
+     "Porting"
+     "Pottery"
+     "Servant"
+     "Sewing"
+     "Stagecraft"
+     "Weaponsmith"
+     "Woodworking"))
  )
  :doc "Returns the base skillmap")
 

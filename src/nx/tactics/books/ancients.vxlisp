@@ -926,7 +926,7 @@ the auxilia accepted non-Romans (which represented 90% of the empire)."
            (unitskillmap
             :Command
              (unitskill
-              :name "Command"
+              :name "Leadership"
               :level "4"
               :unitabilitymap
                (unitabilitymap

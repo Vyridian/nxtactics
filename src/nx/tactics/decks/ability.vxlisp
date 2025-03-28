@@ -6,19 +6,58 @@
  [tactics : base/tactics]
  (base/abilitymap<-abilitylist
   (base/ability
+   :name "2-Legged")
+  (base/ability
+   :name "3-Legged")
+  (base/ability
+   :name "4-Legged")
+  (base/ability
+   :name "6-Legged")
+  (base/ability
+   :name "8-Legged")
+  (base/ability
+   :name "Abdomen Timing of Two"
+   :reference
+    "Refers to feinting an attack, then striking an enemy as they are retracting from an attack, hitting them in the abdomen with the correct timing of either two moves or two seconds. Although the technique seems relatively simple, Musashi lists this as one of the hardest techniques to time correctly.")
+  (base/ability
    :name "Ablative Armor"
    :summary
     "* Armor that vaporizes when hit decreasing damage but also damaging the armor.
      * Ignore the first point of [Damage] and reduce [Armor] (on that facing) instead.")
+  (base/ability
+   :name "Administration"
+   :titles "Administrator, Secretary")
+  (base/ability
+   :name "Agriculture"
+   :summary "* Grow Crop"
+   :titles "Farmer, Gardener")
   (base/ability
    :name "Ambush"
    :summary
     "* [Action]: Anyone who is within 10m, tests [Investigation] vs. [Stealth] with [Advantage] to detect them.
      * [Downtime]: Carefully choose an ambush spot and conceal multiple units. They remain concealed as long as they do not move or speak.")
   (base/ability
+   :name "Analyze Weakness")
+  (base/ability
+   :name "Anvil Strike"
+   :summary "* [+1 Damage] when target is adjacent to solid terrain.")
+  (base/ability
+   :name "Architecture"
+   :summary
+    "* [Extended Action]: Design a structure. The size and quality of the structure are limited by level.
+     * [Action]: Determine weaknesses of a structure."
+   :titles "Architect")
+  (base/ability
+   :name "Arcing Fire"
+   :summary
+    "* [Requires]: Bow or Javelin
+     * May fire over other units that block Line of Sight.")
+  (base/ability
    :name "Auto Med System"
    :summary
     "* Detects severe damage to the wearer and automatically takes action to reduce shock and maintain suit integrity (sealing leaks or amputating if necessary).")
+  (base/ability
+   :name "Backlash")
   (base/ability
    :name "Backstab"
    :summary
@@ -29,10 +68,26 @@
   (base/ability
    :name "Balanced for Throwing")
   (base/ability
+   :name "Barbed Javelin"
+   :summary
+    "* [Requires]: Javelin
+     * Criticals vs Large units are [Rage] Tokens.")
+  (base/ability
+   :name "Blacksmithing"
+   :titles "Blacksmith")
+  (base/ability
+   :name "Blade Barrier"
+   :summary "* Creates a 3 space wide [Wall] directly in front of the unit by rapidly swinging the blade in a flashy display. Anything crossing this wall is subject to an [Opportunity Attack]."
+   :titles "Wall of Swords")
+  (base/ability
    :name "Blend into the Crowd"
    :summary
     "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
      * [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
+  (base/ability
+   :name "Blind Fighting")
+  (base/ability
+   :name "Blinding")
   (base/ability
    :name "Blinding Spit")
   (base/ability
@@ -43,9 +98,33 @@
     "* Detects and distracts heat seaking missiles,
      * [Passive] - +1 Defense vs. Heat-Seaking Missiles (3 uses)")
   (base/ability
+   :name "Body Morph")
+  (base/ability
+   :name "Bowel Raker"
+   :summary
+    "* +1 [Bleeding]
+     * -1 [Piercing]"
+   :titles "Serrated Arrow")
+  (base/ability
+   :name "Brain Drain")
+  (base/ability
+   :name "Brain Freeze")
+  (base/ability
+   :name "Brain Storm")
+  (base/ability
+   :name "Brewing"
+   :summary
+    "* Brew Beer
+     * Brew Hard Liquor
+     * Brew Mead
+     * Brew Wine"
+   :titles "Brewer, Vintner")
+  (base/ability
    :name "Bug Hunt"
    :reference
     "* H:Is this going to be a stand-up fight, sir? Is it going to be another bug hunt? G:A Xenomorph may be involved... H:It's a bug hunt. - Hudson and Gorman, Aliens")
+  (base/ability
+   :name "Calculator Mind")
   (base/ability
    :name "Call of the Hunt")
   (base/ability
@@ -74,17 +153,44 @@
      * [Roll]: Skill - Move this turn.
      * [Versus]: and others must roll Spirit - Terrain penalty vs to detect.")
   (base/ability
+   :name "Carpentry"
+   :titles "Carpenter")
+  (base/ability
    :name "Chain of Command"
    :summary
     "* [Action]: [Activate] up to [Command] units directly or indirectly adjacent to this unit. These units (including this one) may spend [Speed] or [Actions] in any order this [Turn].
      * [Interrupt]: May not be used as an Interrupt.")
   (base/ability
+   :name "Cleaning"
+   :titles "Maid")
+  (base/ability
    :name "Cloak and Dagger"
    :summary
     "* [Action]: Gains short term Stealth, move up to 2 spaces ignoring attacks of opportunity and attack with a [Knife] by [Surprise].")
   (base/ability
+   :name "Cobbling"
+   :summary "* Make Shoes"
+   :titles "Cobbler")
+  (base/ability
    :name "Cold Resistant"
    :summary "* [Passive] - Armor:+1 vs. Cold")
+  (base/ability
+   :name "Combat Sense")
+  (base/ability
+   :name "Commanding Presense")
+  (base/ability
+   :name "Continuous Cut"
+   :reference "The Flowing Water Cut is used when you are struggling blade to blade with the enemy. When he breaks and quickly withdraws trying to spring with his sword, expand your body and spirit and cut him as slowly as possible with your long sword, following your body like stagnant water. - Miyamoto Mushashi, The Book of Five Rings"
+   :summary "* [Reaction]: [+1 Defense].  If you are not hit, you may immediately attack as a free action at [-1 Attack]."
+   :titles "Flowing Water Cut")
+  (base/ability
+   :name "Cooking"
+   :summary "* Prepare Recipe"
+   :titles "Chef, Cook")
+  (base/ability
+   :name "Cooping"
+   :summary "* Make Sealable Barrel"
+   :titles "Cooper")
   (base/ability
    :name "Corrosion Resistant"
    :summary
@@ -96,7 +202,35 @@
   (base/ability
    :name "Cull the Herd")
   (base/ability
+   :name "Dash Attack"
+   :summary
+    "* [Requires]: May only move in a straight line this turn.
+     * [Action]: [-1 Attack], May attack any number of adjacent opponents along path each at a cumulative -1.")
+  (base/ability
+   :name "Dazing Blow"
+   :summary
+    "-2 Damage
+     Damage - [Stun]
+     Criticals - [Stun]"
+   :titles "Pommel Strike")
+  (base/ability
+   :name "Dead Drop"
+   :summary
+    "* Leave goods to be picked up later. If successful they will not be touched.")
+  (base/ability
    :name "Deadfall")
+  (base/ability
+   :name "Deadly Shot"
+   :summary
+    "* [Requires]: Bow or Crossbow
+     * Increase weapon range by 50% and choose [Hit Location]")
+  (base/ability
+   :name "Deafening")
+  (base/ability
+   :name "Destruction"
+   :summary
+    "* Effects only unliving objects
+     * A target that takes Destruction Tokens equal to Body are completely destroyed.")
   (base/ability
    :name "Dialect-Enlisted"
    :summary "Dialect of enlisted soldiers")
@@ -116,9 +250,35 @@
    :name "Dialect-Slave"
    :summary "Dialect of slaves")
   (base/ability
+   :name "Disintegrate"
+   :summary
+    "* Causes wounds that are difficult to heal
+     * A victim that takes Disintegrate Tokens equal to Body are completely destroyed.")
+  (base/ability
+   :name "Double Shot"
+   :summary
+    "* -2 [Attack]
+     * -1 [Piercing]
+     * May attack two targets in same [Arc]."
+   :titles "Double Throw")
+  (base/ability
    :name "Dream Therapy"
    :summary
     "Heal Trauma by exploring the Dream World.")
+  (base/ability
+   :name "Dual Wield"
+   :reference
+    "* Not used on the battlefield where a shield would be more practical.
+    * Used primarily for parrying during one on one duels.
+    * Two longsword duelling was done by very skilled fighters in Italian duelling.
+    * Dual katana Japanese styles also exist."
+   :summary
+    "* Using a Dagger, Hand Axe or Hammer in the off hand.")
+  (base/ability
+   :name "Ego Whip"
+   :summary
+    "* [Skill]: [Mental Combat] vs. [Spirit]."
+   :titles "Mind Whip")
   (base/ability
    :name "Electrical Resistant"
    :summary "* [Passive] - Armor:+1 vs. Electricity")
@@ -127,6 +287,8 @@
    :summary
     "* [Damage]: [+2 Armor] if attack is an [Energy Weapon]
      * Only 1 Hardened vs. ability may be taken")
+  (base/ability
+   :name "Engineering Genius")
   (base/ability
    :name "Environmental Containment"
    :summary "* Suit is sealed against chemical and biological weapons except corrosive ones. It is also water-proof.")
@@ -140,7 +302,40 @@
    :summary
     "Demoralize unwitting rivals by questioning their purpose in life.")
   (base/ability
+   :name "Explosive Shot"
+   :summary "* [Requires]: Bow or Crossbow")
+  (base/ability
+   :name "Face Molding"
+   :summary
+    "[Downtime]: Soften a face and mold it like clay. Scuplting skill determines effectiveness.")
+  (base/ability
+   :name "Face Off"
+   :summary
+    "[Downtime]: Surgically swap appearances with another unit.")
+  (base/ability
+   :name "Feeblemind")
+  (base/ability
+   :name "Feedback Loop")
+  (base/ability
+   :name "Feint"
+   :summary "* Feints are maneuvers designed to distract or mislead, done by giving the impression that a certain maneuver will take place, while in fact another, or even none, will."
+   :titles "Kizeme")
+  (base/ability
+   :name "Fend Off"
+   :summary
+    "* [Requires]: Weapon with [Reach]
+     * [Reaction]: If you hit with [Fend Off], the opponent may not move any closer to you this turn.")
+  (base/ability
    :name "Field Dressing")
+  (base/ability
+   :name "Financial Genius")
+  (base/ability
+   :name "Fire and Stones Cut"
+   :reference
+    "The Fires and Stones Cut means that when the enemy's sword and your sword clash together you cut as strongly as possible without raising the sword even a little. This means cutting quickly with the hands, body and legs - all three cutting strongly. If you train well enough you will be able to strike strongly. - Miyamoto Mushashi, The Book of Five Rings"
+   :summary
+    "* [Reaction]: [+1 Defense]
+     * [Action]: [+1 Attack], if you used this ability to [React] last turn.")
   (base/ability
    :name "Fire Resistant"
    :summary
@@ -152,12 +347,42 @@
     "* Catch enough fish to eat. Similar to Foraging."
    :titles "Fisherman")
   (base/ability
+   :name "Flaming Shot"
+   :summary "* [Requires]: Bow or Crossbow")
+  (base/ability
+   :name "Fleche"
+   :summary
+    "* A [Lunge] forward where the attacker continues to move forward past the defender to avoid a [Riposte] or Counter Attack.
+     -1 Initiative
+     +1 Move - May only move straight forward.
+     +1 Damage")
+  (base/ability
+   :name "Fletching"
+   :summary "* The art of making arrows. High quality or specialized arrows are quickly used up and often impractical to buy. Creating your own is often a very practical solution."
+   :titles "Bowyer")
+  (base/ability
    :name "Floation Device"
    :summary "* An emergency floatation device.")
+  (base/ability
+   :name "Follow Through"
+   :summary
+    "* [Action]: If you hit with this ability, you may immediately turn to the left or right and attack a target in the next adjacent space. This may be repeated any number of times at [-1 Attack] per target after the first though each additional target must be in the same direction.")
+  (base/ability
+   :name "Glassblowing"
+   :summary
+    "* Blow Bottle
+     * Blow Glass Decoration")
   (base/ability
    :name "Grappling Hoist"
    :summary
     "* A grappling dart that is fired into stone or hooked onto any uneven surface. The attached winch can then pull the wearer to the target or vis versa depending on relative weight. This can be used for climbing or towing. The darts can be recovered and reused, but they are often not recoverable. 2 replacement darts are included.")
+  (base/ability
+   :name "Hamstring"
+   :summary
+    "* Attack the legs to slow the opponent.
+     * [Action]
+     -1 Accuracy
+     Criticals - [Cripple]")
   (base/ability
    :name "Harvest Poison")
   (base/ability
@@ -167,18 +392,73 @@
      * IF You have [Full Cover] AND you don't move AND your opponents are at least your [Body] spaces away.
      * THEN [Action] [Continuous]: You are hidden from view AND Opponents must succeed at [Investigate]/[Seek] to detect you.")
   (base/ability
+   :name "House Painting")
+  (base/ability
+   :name "Hover"
+   :summary
+    "* Hovering allows full movement speed over any flat terrain without actually touching the surface. Ground, Water, Sand, Ice, generally cause no penalty, but turning is difficult and imprecise especially at high speeds.
+     * Hovering units may [Move] backwards.
+     * Hovering units may use [Vector Movement] rule.")
+  (base/ability
    :name "Hunter's Mark"
    :summary
     "* [Continuous]: Place a mark on target. Initiative:+1 vs. marked target.")
+  (base/ability
+   :name "Impale"
+   :summary
+    "* [Requires]: Spear
+     * [Action]
+     -1 Accuracy
+     Criticals - [Piercing]")
   (base/ability
    :name "Infrared Dampener"
    :summary
     "* By activating this system, the armor reduces all heat signatures. Use of any system (even passive ones) will negate the stealth.
      * [Continuous Action] - Stealth vs. Infrared Sensors")
   (base/ability
+   :name "Investigative Genius")
+  (base/ability
    :name "Irritating Toxin")
   (base/ability
+   :name "Jewelsmithing"
+   :summary
+    "* Gemcutting
+     * Fashion Jewelry"
+   :titles "Gemcutter, Jeweler")
+  (base/ability
+   :name "Jump Jets")
+  (base/ability
    :name "Kiss of Death")
+  (base/ability
+   :name "Knife Throwing")
+  (base/ability
+   :name "Laboring"
+   :titles "Laborer, Worker")
+  (base/ability
+   :name "Landscaping"
+   :summary
+    "* Grow Bonsai
+     * Grow Flowers
+     * Grow Hedges
+     * Grow Hedge Maze
+     * Grow Trees"
+   :titles "Groundskeeper, Landscaper, Lawnboy")
+  (base/ability
+   :name "Leatherworking"
+   :summary
+    "* Fashion Leather Goods
+     * Flay Skins"
+   :titles "Tanner")
+  (base/ability
+   :name "Linguistic Genius")
+  (base/ability
+   :name "Lobotomize"
+   :reference
+    "You'll even have fantasies about alien civilizations, as you requested, but in the end, back on earth you'll be lobotomized! - Dr. Edgemar, Total Recall")
+  (base/ability
+   :name "Logging")
+  (base/ability
+   :name "Lunge")
   (base/ability
    :name "Lure"
    :reference "Everquest Pulling")
@@ -188,10 +468,47 @@
     "* Reduces the chance that a magnetic attachment can hold on the armor (assuming it is metallic).
      * [Passive] - Armor:+1 vs. Magnetism")
   (base/ability
+   :name "Malleate"
+   :summary "* Make target soft and malleable like clay.")
+  (base/ability
+   :name "Mathematical Genius")
+  (base/ability
+   :name "Mental Blast"
+   :summary "Attacks Mind.  All tokens are stun.")
+  (base/ability
    :name "Mental Gymnastics")
+  (base/ability
+   :name "Mental Prison"
+   :summary "* Trap a person's personality in a prison within their own mind."
+   :titles "Mind Prison, Prison of the Mind")
+  (base/ability
+   :name "Metalworking"
+   :titles "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith")
   (base/ability
    :name "Missile Mount"
    :summary "* A special mount to add a missile pack on the back of the armor.")
+  (base/ability
+   :name "Molecular Alteration")
+  (base/ability
+   :name "Multitasking")
+  (base/ability
+   :name "Off Roading")
+  (base/ability
+   :name "Offhanded Fighting"
+   :summary
+    "* [Action]: Normal Attack take a -2 penalty if performed with the non primary hand. This ability negates that penalty when using this skill in the off hand."
+   :reference
+    "I: I admit it. You are better than I am.
+     M: Then why are you smiling?
+     I: Because I know something you don't know.
+     M: And what is that?
+     I: I am not left-handed!
+     ...
+     M: You're amazing!
+     I: I ought to be, after twenty years.
+     M: There's something I ought to tell you.
+     I: Tell me.
+     M: I'm not left-handed either. - Inigo Montoya abd /Man in Black, Princess Bride")
   (base/ability
    :name "Paralyzing Bite")
   (base/ability
@@ -201,19 +518,47 @@
   (base/ability
    :name "Paralyzing Sting")
   (base/ability
+   :name "Parry"
+   :summary
+    "* The fighter uses his weapon to block an opponent's attack.
+     * [Reaction]
+     +1 Initiative
+     +2 Defense")
+  (base/ability
    :name "Pep Talk"
    :reference
     "* A small victory is still a victory. Good work. - Kai'sa, Runeterra")
+  (base/ability
+   :name "Petrification"
+   :summary
+    "* [Focus]: vs. Spirit and place [Petrification] counters on the target body location.
+     * Any body location with a [Petrification] is encased in stone. It requires an [Action] to remove a [Petrification]. Any area that suffers 3 [Petrification] turns completely to stone. If any other area is so petrified, then complete petrification immediately spreads across the entire body and then the body and all its gear immediately converts to a stone statue.
+     * Additional Effects: A petrified arm cannot move. A petrified leg reduces Move by half. A petrified head is unable to see or hear. Other petrifed areas have no additional effect. Petrified Arms or legs can break off like a clean amputation without blood loss. 
+     * This ability can also be used to restore a petrified target back to its original form if the skill is at least equal to the original. Lost limbs may also be restored by reattaching the limb before restoration.
+     * This ability can also be used on any sort of earth to harden the earth to equivalent stone.")
+  (base/ability
+   :name "Photographic Memory")
   (base/ability
    :name "Pierce Resistant"
    :summary
     "* [Damage]: [+2 Armor] if attack is a [Projectile]
      * Only 1 Hardened vs. ability may be taken")
   (base/ability
+   :name "Piercing Shot"
+   :summary
+    "* [Requires]: Bow or Crossbow
+     * [Attack]: [+1 Armor Piercing]")
+  (base/ability
+   :name "Piercing Strike"
+   :summary "* [Action]: Trades damage to increase armor penetration.")
+  (base/ability
    :name "Plasma Resistant"
    :summary
     "* Detects and disrupts the magnetic bottle surrounding plasma rounds causing them to detonate too early.
      * [Passive] - Armor:+1 vs. Plasma")
+  (base/ability
+   :name "Plumbing"
+   :titles "Plumber")
   (base/ability
    :name "Poison Bite"
    :summary
@@ -247,6 +592,20 @@
    :reference
     "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an immunity to iocane powder. - Princess Bride")
   (base/ability
+   :name "Polymorph"
+   :summary
+    "* [Action]: Roll vs. Spirit and place Black [Shapeshift] Tokens on target.
+     * A unit with 0 Spirit due to polymorph changes into any creature desired of equal Body.  When the last Shapeshift Token is removed, a polymorphed unit returns to normal.")
+  (base/ability
+   :name "Porting"
+   :summary
+    "* Bear Litter
+     * Port Boat"
+   :titles "Bearer, Porter")
+  (base/ability
+   :name "Pottery"
+   :titles "Potter")
+  (base/ability
    :name "Prepare Acid")
   (base/ability
    :name "Prepare Anti-Coagulant"
@@ -259,6 +618,14 @@
   (base/ability
    :name "Pressure Resistant"
    :summary "* [Passive] - Armor:+1 vs. Pressure and Impact")
+  (base/ability
+   :name "Psychic Duel"
+   :reference
+    "Professor X vs. Shadow King")
+  (base/ability
+   :name "Psychic Knife"
+   :reference
+    "Psylocke, X-men")
   (base/ability
    :name "Radar Dampener"
    :summary
@@ -277,6 +644,14 @@
    :summary
     "[Action]: Units within Range:Skill are placed into a [Formation] they all share.")
   (base/ability
+   :name "Rapid Strike"
+   :reference
+    "In One Timing means, when you have closed with the enemy, to hit him as quickly and directly as possible, without moving your body or settling your spirit, while you see that he is still undecided. The timing of hitting before the enemy decides to withdraw, break or hit, to be able to hit in the timing of an instant. - Miyamoto Mushashi, The Book of Five Rings"
+   :summary
+    "* [Requires]: Wear loose clothing or less. (Armor Penalty = 0).
+     * [Action]: Speed +1, Attack -1"
+   :titles "In One Timing, Lightning Blow")
+  (base/ability
    :name "Reactive Armor"
    :summary
     "* Exterior layer of armor explodes on impact reducing damage of the first hit but reduces armor rating for all subsequent hits.
@@ -288,10 +663,53 @@
   (base/ability
    :name "Returning Throw")
   (base/ability
+   :name "Richochet"
+   :summary "* [Requires]: Thrown Object")
+  (base/ability
+   :name "Riposte"
+   :reference "When your swords clash together, in one motion when your sword springs away from theirs, use a continuous motion to slash their head, body and legs."
+   :summary
+    "* Speedy attack that can only be performed after a [Parry] or a [Block].
+     * [Requires]: Previous Action was [Parry] or [Block]
+     +2 Initiative
+     +2 Attack"
+   :titles "Counter Strike")
+  (base/ability
    :name "Salvo")
+  (base/ability
+   :name "Scientific Genius")
   (base/ability
    :name "Scouting"
    :titles "Reconnaissance")
+  (base/ability
+   :name "Sensory Deprivation")
+  (base/ability
+   :name "Sensory Overload")
+  (base/ability
+   :name "Servant"
+   :titles "Butler, Footman, Lady in Waiting")
+  (base/ability
+   :name "Set Against Charge")
+  (base/ability
+   :name "Sewing"
+   :summary
+    "* Crochet
+    * Embroidery
+    * Fashion Clothing
+    * Needlepoint
+    * Repair Cloth"
+   :titles "Dressmaker, Seamstress")
+  (base/ability
+   :name "Shield Snare"
+   :summary
+    "* [Requires]: Javelin, Target with shield
+     * [Attack]: Criticals are [Encumberance] Tokens.")
+  (base/ability
+   :name "Signal Shot"
+   :summary
+    "* Alert allied units by sending a prearranged signal. This can be flaming arrow at night, smoking arrow, singing arrow, etc.
+     * [Requires]: Bow or Crossbow
+     * [Action]: For the rest of the turn, other units adjacent to this unit may be treated as if under the [Sphere of Command] of any allied Commander.")
   (base/ability
    :name "Snare")
   (base/ability
@@ -301,6 +719,11 @@
   (base/ability
    :name "Sneak Attack"
    :titles "Suprise Attack")
+  (base/ability
+   :name "Snowcraft"
+   :summary
+    "* Ignore Snow Move penalty
+     * Off Snow Slow:+1.")
   (base/ability
    :name "Soulbind"
    :titles "Soulbond")
@@ -339,16 +762,61 @@
     "[Requires]: 2 handed Weapon
      [Combat]: Attack in a circle around you. Anyone hit get [Push]:1.")
   (base/ability
+   :name "Speed Reading")
+  (base/ability
+   :name "Stagecraft"
+   :summary "* The technical aspects of theatrical production, which include scenic design, stage machinery, lighting, sound, costume design, and makeup."
+   :titles "Stagehand")
+  (base/ability
    :name "Stalk"
    :summary
     "* The ability to move carefully to avoid detection.
      * [Requires]: No other action may be performed this turn.
      * [Action]: Move at half speed. Any attempt to act toward you, first requires an Mind vs. your skill or fail.")
   (base/ability
+   :name "Strategic Warp Jump"
+   :summary
+    "* A ship with a Warp Engine may perform a strategic warp jump and instantly remove itself from combat, returning to the strategic map.
+     * A unit already on the strategic map may move [Skill] spaces on the strategic map.
+     * [Requires]: The unit must cease maneuvering and must perform this ability for 3 consecutive turns.
+     * [Action]: On the second consecutive action, the unit immediately removes all Vector tokens and moves the unit to any other space on the map.")
+  (base/ability
    :name "Strike and Fade"
    :summary
     "* [Requires]: No other action may be performed this turn.
      * [Attack]: After this attack, if you have sufficient Move remaining, move 1 space.")
+  (base/ability
+   :name "Stunning Blow"
+   :summary "* [Attack]: Trades lethal damage for stunning damage.")
+  (base/ability
+   :name "Stunning Throw"
+   :summary
+    "* [Requires]: Thrown Object
+     * Trades lethal damage for stunning damage.")
+  (base/ability
+   :name "Summon Id Monster"
+   :summary "[Call] [Id Monster]"
+   :reference
+    "Monsters, John, monsters from the Id! - Ostrow, Forbidden Planet")
+  (base/ability
+   :name "Sweep"
+   :summary
+    "* Attack the legs to trip the opponent.
+     +1 Initative
+     -1 Move
+     -1 Damage
+     Criticals - [Knockdown]"
+   :titles "Trip")
+  (base/ability
+   :name "Tabula Rasa")
+  (base/ability
+   :name "Tactical Genius")
+  (base/ability
+   :name "Tactical Warp Jump"
+   :summary
+    "* A ship with a Warp Engine may perform a tactical warp jump and instantly transport from any space on the map to any other.
+     * [Requires]: The unit must cease maneuvering and must perform this ability for 2 consecutive turns.
+     * [Action]: On the second consecutive action, the unit immediately removes all Vector tokens and moves the unit to any other space on the map.")
   (base/ability
    :name "Tag and Bag")
   (base/ability
@@ -356,10 +824,35 @@
    :summary
     "* Subtly pursue someone. Ideally, you must stay as far away as possible without losing track of your quarry. Completely unaware people are easy to pursue. Paranoid targets will attempt to spot tailing and may attempt to evade tails even when they do not know they are being tailed.")
   (base/ability
+   :name "There are Many Enemies"
+   :reference
+    "When you are fighting one against many, draw both sword and companion sword and assume a wide-stretched left and right attitude. The spirit is to chase the enemies around from side to side, even though they come from all four directions. Observe their attacking order, and go to meet first those who attack first. Sweep your eyes around broadly, carefully examining the attacking order, and cut left and right alternately with your swords. Waiting is bad. Always quickly re-assume your attitudes to both sides, cut the enemies down as they advance, crushing them in the direction from which they attack. Whatever you do, you must drive the enemy together, as if tying a line of fishes, and when they are seen to be piled up, cut them down strongly without giving them room to move. - Miyamoto Mushashi, The Book of Five Rings"
+   :summary
+    "* [Requires]: [Duel Wield]
+     * [Defense]: If [Surrounded], ignore opponents in front arc when determining [Surrounded] defense penalty.")
+  (base/ability
    :name "There is No Escape"
-   :reference "* Raiden Shogun, Genshin Impact")
+   :reference
+    "* Raiden Shogun, Genshin Impact")
+  (base/ability
+   :name "Thrust"
+   :summary
+    "+1 Initiative
+     +1 Move
+     Critcals - [Piercing]")
+  (base/ability
+   :name "To Apply Stickiness"
+   :reference
+    "When the enemy attacks and you also attack with the long sword, you should go in with a sticky feeling and fix your long sword against the enemy's as you receive his cut. The spirit of stickiness is not hitting very strongly, but hitting so that the long swords do not separate easily. It is best to approach as calmly as possible when hitting the enemy's long sword with stickiness. The difference between 'Stickiness' and 'Entanglement' is that stickiness is firm and entanglement is weak. - Miyamoto Mushashi, The Book of Five Rings")
+  (base/ability
+   :name "Tower of Iron Will")
   (base/ability
    :name "Track")
+  (base/ability
+   :name "Tracked")
+  (base/ability
+   :name "Turbo Booster"
+   :titles "Boost, Nitro, Turbo, Turbo Charger")
   (base/ability
    :name "Ultraviolet Jammer"
    :summary
@@ -382,9 +875,35 @@
    :summary
     "* If you can momentarily break line of sight, you can immediately [Hide].")
   (base/ability
+   :name "Weapon Block"
+   :summary
+    "* Deflect, catch, or even turn strike back with a weapon used against the fighter.
+     * This ability provides a second Defense roll against a weapon attack before the regular Defense roll.
+     * [Reaction]
+     +2 Initiative
+     +1 Accuracy
+     0 Damage - Any successes become -Damage to the weapon. If the weapon has 0 Damage remaining, it is caught.
+     Criticals - Any Criticals become -2 Damage to the weapon. If the weapon has 0 Damage remaining and there are still Criticals, the weapon may be immediately used at +[Criticals] Accuracy. Note: The weapon remains in the hands of the attacker.")
+  (base/ability
+   :name "Weaponsmith"
+   :summary
+    "* The ability to repair, improve, or even create weapons.
+     * [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits."
+   :titles "Bladesmith, Swordsmith")
+  (base/ability
+   :name "Wheeled")
+  (base/ability
+   :name "Whirlwind Attack"
+   :summary "* Allows multiple attacks to different targets by trading accuracy for extra attacks.")
+  (base/ability
    :name "Without a Trace"
    :summary
-    "* Extremely difficult tor track you."))
+    "* Extremely difficult tor track you.")
+  (base/ability
+   :name "Woodworking"
+   :summary "The process of building, making or carving something using wood."
+   :titles "Carver, Whittler, Woodworker")
+ )
  :doc "Returns the base abilitymap")
 
 (func tactics-abilitymap<-tactics : base/tactics

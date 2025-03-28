@@ -97,6 +97,88 @@ export default class nx_tactics_decks_unit {
       ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly: Giant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar: Giant"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Flint (Early)",
+        ":image",
+        "images/cards/unit-flint.svg",
+        ":race",
+        "Half-elven",
+        ":gender",
+        "M",
+        ":age",
+        17,
+        ":body",
+        "7x1",
+        ":mind",
+        "5x1",
+        ":will",
+        "5x1",
+        ":speed",
+        "7x0",
+        ":speedland",
+        "7kph/4.5mph",
+        ":mass",
+        "70kg/153lb",
+        ":height",
+        "1.67m/5'6",
+        ":beast",
+        "1x0",
+        ":shadow",
+        "1x0",
+        ":value",
+        "1x0",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitskill},
+            ":skill",
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
+            ":level",
+            1,
+            ":unititemmap",
+            nx_tactics_base.f_unititemmap_from_unititemlist(
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_unititem},
+                ":item",
+                nx_tactics_base.f_item_from_tactics_key(tactics, "Knife: Dagger")
+              )
+            )
+          ),
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitskill},
+            ":skill",
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
+            ":level",
+            1,
+            ":unitabilitymap",
+            nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_unitability},
+                ":ability",
+                nx_tactics_base.f_ability_from_tactics_key(tactics, "Sneak")
+              )
+            )
+          ),
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitskill},
+            ":skill",
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Tradeskills"),
+            ":level",
+            1,
+            ":unitabilitymap",
+            nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_unitability},
+                ":ability",
+                nx_tactics_base.f_ability_from_tactics_key(tactics, "House Painting")
+              )
+            )
+          )
+        )
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hare", ":body", "4x0", ":mind", "2x1", ":will", "3x1", ":speed", "6x1", ":speedland", "60kph/40mph", ":mass", "4kg/8lbs", ":length", "60cm", ":secrets", "* Because of their extremely low fat content, they are a poor choice as a survival food.\n* The blood of a freshly killed hare can be collected for consumption in a stew or casserole in a cooking process known as jugging.\n* Jugged hare, known as civet de lièvre in France, is a whole hare, cut into pieces, marinated, and cooked with red wine and juniper berries in a tall jug that stands in a pan of water."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbear"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellboar"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbull"),
@@ -105,7 +187,7 @@ export default class nx_tactics_decks_unit {
         {"any-1": nx_tactics_base.t_unit},
         ":name",
         "Snake: Emerald Viper",
-        ":summary",
+        ":secrets",
         "* Movement - They can swim and climb trees.\n* Venomous Bite - Vipers carry a limited amount of venom. They can control the amount that injected including none at all.\n* Venom - Viperid venoms typically contain an abundance of protein-degrading enzymes, called proteases, that produce symptoms such as pain, strong local swelling and necrosis, blood loss from cardiovascular damage complicated disruption of the blood-clotting system. Death is usually caused by collapse in blood pressure. Due to the nature of proteolytic venom, a viperid bite is often a very painful experience and should always be taken seriously, though it may not necessarily prove fatal. Even with prompt and proper treatment, a bite can still result in a permanent scar, and in the worst cases, the affected limb may even have to be amputated.\n * Vision - They do not have heat vision unlike Pit Vipers",
         ":image",
         "images/cards/unit-snake-emeraldviper.svg",
@@ -123,7 +205,7 @@ export default class nx_tactics_decks_unit {
         "2kg/5lbs",
         ":length",
         "30cm/1ft",
-        ":skillmap",
+        ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitskill},
@@ -135,7 +217,7 @@ export default class nx_tactics_decks_unit {
             nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Camouflage")
           )
         ),
-        ":powermap",
+        ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitpower},

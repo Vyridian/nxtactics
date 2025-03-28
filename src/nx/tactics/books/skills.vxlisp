@@ -46,7 +46,8 @@
           :summary
            "* Deploy: Deploy trained animals with total level equal to skill.
             * Each week, one animal may be trained one trick."
-          :titles "Animal Trainer, Breeder, Driver, Herder, Horse Whisperer, Houndmaster, Shepherd, Zoologist"
+          :titles
+           "Animal Trainer, Breeder, Driver, Herder, Horse Whisperer, Houndmaster, Shepherd, Zoologist"
           :abilitymap
            (base/abilitymap
             :Falconry
@@ -59,6 +60,9 @@
             :Husbandry
              (base/ability
               :name "Husbandry")
+            "Livestock"
+            (base/ability
+             :name "Livestock")
             "Stare Down"
              (base/ability
               :name "Stare Down")
@@ -341,7 +345,7 @@
           :name "Survival"
           :summary
            "Common Survival Abilities
-            * [Anytime]: Survival Skill may be rolled against any appropriate terrain based hazard taking the better of defense or Survival roll.
+            * [Reaction]: IF you receive Exposure THEN for each Exposure received [Reveal Fate] if face or Normal under Skill then discard the Exposure.
             * [Daily]: Units missing appropriate supplies for the terrain must roll Days + # of missing supplies + Terrain Penalty versus Body + Survival or gain Black [Exhaustion] Tokens."
           :titles
            "Adventurer, Courier, Drifter, Explorer, Forager, Messenger, Pathfinder, Pioneer, Sentry, Survivalist, Trailblazer, Traveller, Wanderer, Wayfarer"
@@ -417,128 +421,7 @@
             tactics
             "Caving"))
         :Tradeskills
-         (base/skill
-          :name "Tradeskills"
-          :reference "* Tradesman"
-          :stat "None"
-          :abilitymap
-           (base/abilitymap<-abilitylist
-            (base/ability
-             :name "Administration"
-             :titles "Administrator, Secretary")
-            (base/ability
-             :name "Agriculture"
-             :summary "* Grow Crop"
-             :titles "Farmer, Gardener")
-            (base/ability
-             :name "Architecture"
-             :summary
-              "* [Extended Action]: Design a structure. The size and quality of the structure are limited by level.
-               * [Action]: Determine weaknesses of a structure."
-             :titles "Architect")
-            (base/ability
-             :name "Blacksmithing"
-             :titles "Blacksmith")
-            (base/ability
-             :name "Brewing"
-             :summary
-              "* Brew Beer
-               * Brew Hard Liquor
-               * Brew Mead
-               * Brew Wine"
-             :titles "Brewer, Vintner")
-            (base/ability
-             :name "Carpentry"
-             :titles "Carpenter")
-            (base/ability
-             :name "Cleaning"
-             :titles "Maid")
-            (base/ability
-             :name "Cobbling"
-             :summary "* Make Shoes"
-             :titles "Cobbler")
-            (base/ability
-             :name "Cooking"
-             :summary "* Prepare Recipe"
-             :titles "Chef, Cook")
-            (base/ability
-             :name "Cooping"
-             :summary "* Make Sealable Barrel"
-             :titles "Cooper")
-            (base/ability
-             :name "Glassblowing"
-             :summary
-              "* Blow Bottle
-               * Blow Glass Decoration")
-            (base/ability
-             :name "Jewelsmithing"
-             :summary
-              "* Gemcutting
-               * Fashion Jewelry"
-             :titles "Gemcutter, Jeweler")
-            (base/ability
-             :name "Laboring"
-             :titles "Laborer, Worker")
-            (base/ability
-             :name "Landscaping"
-             :summary
-              "* Grow Bonsai
-               * Grow Flowers
-               * Grow Hedges
-               * Grow Hedge Maze
-               * Grow Trees"
-             :titles "Groundskeeper, Landscaper, Lawnboy")
-            (base/ability
-             :name "Leatherworking"
-             :summary
-              "* Fashion Leather Goods
-               * Flay Skins"
-             :titles "Tanner")
-            (base/ability
-             :name "Livestock")
-            (base/ability
-             :name "Logging")
-            (base/ability
-             :name "Metalworking"
-             :titles "Coppersmith, Goldsmith, Machinist, Pewtersmith, Silversmith")
-            (base/ability
-             :name "Plumbing"
-             :titles "Plumber")
-            (base/ability
-             :name "Porting"
-             :summary
-              "* Bear Litter
-               * Port Boat"
-             :titles "Bearer, Porter")
-            (base/ability
-             :name "Pottery"
-             :titles "Potter")
-            (base/ability
-             :name "Servant"
-             :titles "Butler, Footman, Lady in Waiting")
-            (base/ability
-             :name "Sewing"
-             :summary
-              "* Crochet
-              * Embroidery
-              * Fashion Clothing
-              * Needlepoint
-              * Repair Cloth"
-             :titles "Dressmaker, Seamstress")
-            (base/ability
-             :name "Stagecraft"
-             :summary "* The technical aspects of theatrical production, which include scenic design, stage machinery, lighting, sound, costume design, and makeup."
-             :titles "Stagehand")
-            (base/ability
-             :name "Weaponsmith"
-             :summary
-              "* The ability to repair, improve, or even create weapons.
-               * [Razor's Edge] - Work a weapon to give a +1 Synergy the first time it hits."
-             :titles "Bladesmith, Swordsmith")
-            (base/ability
-             :name "Woodworking"
-             :summary "The process of building, making or carving something using wood."
-             :titles "Carver, Whittler, Woodworker")))))
+         (base/skill<-tactics-key tactics "Tradeskills")))
     "Transportation Skills"
      (section
       :name "Transportation Skills"
@@ -1604,7 +1487,9 @@
             :Sales
              (base/ability
               :name "Sales"
-              :reference "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Business is: You buy something, you sell it for more - Father Guido Sarducci, Five Minute University"
+              :reference
+               "* In 5 minutes, you learn what the average University student remembers 5 years after learning school ... Business is: You buy something, you sell it for more - Father Guido Sarducci, Five Minute University
+                * We've go everything in our shop, except what we don't have. - Sakura, Nikke"
               :titles "Carpetbagger, Peddler, Salesman")
             :Speculate
              (base/ability
@@ -2363,10 +2248,13 @@
             :Trial
              (base/ability
               :name "Trial")))
+        "Leadership"
+         (base/skill<-tactics-key tactics "Leadership")
         :Performance
          (base/skill
           :name "Performance"
-          :reference "* Ahh, the denouement. - Jhin, Runeterra"
+          :reference
+           "* Ahh, the denouement. - Jhin, Runeterra"
           :titles "Entertainer, Performer, Jester, Juggler"
           :stat "Spirit"
           :abilitymap

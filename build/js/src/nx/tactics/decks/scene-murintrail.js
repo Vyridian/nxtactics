@@ -43,7 +43,10 @@ export default class nx_tactics_decks_scene_murintrail {
           nx_tactics_base.f_cardmap_from_cardlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_cardlist},
-              nx_tactics_decks_scene_murintrail.f_unit_flint(tactics),
+              vx_core.f_list_from_list(
+                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
+                nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)")
+              ),
               nx_tactics_decks_scene_murintrail.f_unit_bandit(tactics),
               nx_tactics_decks_scene_murintrail.f_unit_bruiser(tactics),
               nx_tactics_decks_scene_murintrail.f_unit_guardsman(tactics),
@@ -58,17 +61,17 @@ export default class nx_tactics_decks_scene_murintrail {
               nx_tactics_decks_scene_murintrail.f_unit_horse(tactics),
               horse_i,
               nx_tactics_decks_scene_murintrail.f_unit_woodencart(tactics),
-              vx_core.f_any_from_any(
-                {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_skilllist},
+              vx_core.f_list_from_list(
+                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},
                 nx_tactics_base.f_skilllist_from_tactics_keys(tactics, "Close Combat", "Melee", "Stealth", "Business", "Tradeskills")
               ),
-              vx_core.f_any_from_any(
-                {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_abilitylist},
+              vx_core.f_list_from_list(
+                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_abilitylist},
                 nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Bargain", "Sneak")
               ),
-              vx_core.f_any_from_any(
-                {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_itemlist},
-                nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Dagger", "Sword: Long", "Sword: Short", "Hammer", "Axe: Hand", "Axe: Wood", "Spear", "Spear: Short", "Bow: Short", "Quiver: Arrows", "Shield: Buckler", "Shield: Heater", "Shield: Round", "Armor: Leather Cuirass", "Coins: Copper", "Coins: Silver", "Coins: Gold", "Coins: Platinum", "Healing Salve", "Cloak: Fine Woodland", "Rations", "Waterskin")
+              vx_core.f_list_from_list(
+                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
+                nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife: Dagger", "Sword: Long", "Sword: Short", "Hammer", "Axe: Hand", "Axe: Wood", "Spear", "Spear: Short", "Bow: Short", "Quiver: Arrows", "Shield: Buckler", "Shield: Heater", "Shield: Round", "Armor: Leather Cuirass", "Coins: Copper", "Coins: Silver", "Coins: Gold", "Coins: Platinum", "Healing Salve", "Cloak: Fine Woodland", "Rations", "Waterskin")
               ),
               vx_core.f_any_from_any(
                 {"any-1": nx_tactics_base.t_cardlist, "any-2": nx_tactics_base.t_placelist},
@@ -274,90 +277,6 @@ export default class nx_tactics_decks_scene_murintrail {
   }
 
   /**
-   * @function unit_flint
-   * @param  {tactics} tactics
-   * @return {unit}
-   */
-  static t_unit_flint = {
-    vx_type: vx_core.t_type
-  }
-  static e_unit_flint = {
-    vx_type: nx_tactics_decks_scene_murintrail.t_unit_flint
-  }
-
-  // (func unit-flint)
-  static f_unit_flint(tactics) {
-    let output = nx_tactics_base.e_unit
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_unit},
-      ":name",
-      "Flint (Early)",
-      ":image",
-      "images/cards/unit-flint.svg",
-      ":race",
-      "Half-elven",
-      ":gender",
-      "M",
-      ":age",
-      17,
-      ":body",
-      "7x1",
-      ":mind",
-      "5x1",
-      ":will",
-      "5x1",
-      ":speed",
-      "7x0",
-      ":speedland",
-      "7kph/4.5mph",
-      ":mass",
-      "70kg/153lb",
-      ":height",
-      "1.67m/5'6",
-      ":beast",
-      "1x0",
-      ":shadow",
-      "1x0",
-      ":value",
-      "1x0",
-      ":unitskillmap",
-      nx_tactics_base.f_unitskillmap_from_unitskilllist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitskill},
-          ":skill",
-          nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
-          ":level",
-          "1",
-          ":unititemmap",
-          nx_tactics_base.f_unititemmap_from_unititemlist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unititem},
-              ":item",
-              nx_tactics_base.f_item_from_tactics_key(tactics, "Dagger")
-            )
-          )
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitskill},
-          ":skill",
-          nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
-          ":level",
-          "1",
-          ":unitabilitymap",
-          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unitability},
-              ":ability",
-              nx_tactics_base.f_ability_from_tactics_key(tactics, "Sneak")
-            )
-          )
-        )
-      )
-    )
-    return output
-  }
-
-  /**
    * @function unit_goblinscout
    * @param  {tactics} tactics
    * @return {unit}
@@ -419,7 +338,7 @@ export default class nx_tactics_decks_scene_murintrail {
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unititem},
               ":item",
-              nx_tactics_base.f_item_from_tactics_key(tactics, "Dagger")
+              nx_tactics_base.f_item_from_tactics_key(tactics, "Knife: Dagger")
             )
           )
         ),
@@ -563,17 +482,7 @@ export default class nx_tactics_decks_scene_murintrail {
       ":demeanor",
       "Aloof",
       ":nature",
-      "Skitish",
-      ":unitpowermap",
-      nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitpower},
-          ":power",
-          nx_tactics_decks_scene_murintrail.c_power_groundmovement,
-          ":level",
-          "4x1"
-        )
-      )
+      "Skitish"
     )
     return output
   }
@@ -903,16 +812,6 @@ export default class nx_tactics_decks_scene_murintrail {
             )
           )
         )
-      ),
-      ":unitpowermap",
-      nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitpower},
-          ":power",
-          nx_tactics_decks_scene_murintrail.c_power_groundmovement,
-          ":level",
-          "7x1"
-        )
       )
     )
     return output
@@ -1107,7 +1006,6 @@ export default class nx_tactics_decks_scene_murintrail {
       "scene-murintrail": nx_tactics_decks_scene_murintrail.e_scene_murintrail,
       "unit-bandit": nx_tactics_decks_scene_murintrail.e_unit_bandit,
       "unit-bruiser": nx_tactics_decks_scene_murintrail.e_unit_bruiser,
-      "unit-flint": nx_tactics_decks_scene_murintrail.e_unit_flint,
       "unit-goblinscout": nx_tactics_decks_scene_murintrail.e_unit_goblinscout,
       "unit-guardsman": nx_tactics_decks_scene_murintrail.e_unit_guardsman,
       "unit-horse": nx_tactics_decks_scene_murintrail.e_unit_horse,
@@ -1124,7 +1022,6 @@ export default class nx_tactics_decks_scene_murintrail {
       "scene-murintrail": nx_tactics_decks_scene_murintrail.t_scene_murintrail,
       "unit-bandit": nx_tactics_decks_scene_murintrail.t_unit_bandit,
       "unit-bruiser": nx_tactics_decks_scene_murintrail.t_unit_bruiser,
-      "unit-flint": nx_tactics_decks_scene_murintrail.t_unit_flint,
       "unit-goblinscout": nx_tactics_decks_scene_murintrail.t_unit_goblinscout,
       "unit-guardsman": nx_tactics_decks_scene_murintrail.t_unit_guardsman,
       "unit-horse": nx_tactics_decks_scene_murintrail.t_unit_horse,
@@ -1218,24 +1115,6 @@ export default class nx_tactics_decks_scene_murintrail {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scene_murintrail.f_unit_bruiser
-    }
-
-    // (func unit-flint)
-    nx_tactics_decks_scene_murintrail.t_unit_flint['vx_value'] = {
-      name          : "unit-flint",
-      pkgname       : "nx/tactics/decks/scene-murintrail",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scene_murintrail.f_unit_flint
     }
 
     // (func unit-goblinscout)

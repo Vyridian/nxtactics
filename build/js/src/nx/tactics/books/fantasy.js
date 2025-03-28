@@ -1815,10 +1815,10 @@ export default class nx_tactics_books_fantasy {
                   ":unititemmap",
                   vx_core.f_new(
                     {"any-1": nx_tactics_base.t_unititemmap},
-                    ":Longsword",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Longsword"),
-                    ":Dagger",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Dagger")
+                    "Sword: Long",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Sword: Long"),
+                    "Knife: Dagger",
+                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Knife: Dagger")
                   )
                 )
               )

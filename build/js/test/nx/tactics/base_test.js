@@ -25,12 +25,12 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 35, ":tests", 97, ":total", 276), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 91), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 36, ":tests", 102, ":total", 282), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 2, ":tests", 2, ":total", 96), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 276), 
-      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 95)
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 282), 
+      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 96)
     )
     return output
   }
@@ -88,6 +88,7 @@ export default class nx_tactics_base_test {
           "role", 0,
           "rolemap", 0,
           "rule", 0,
+          "rulelist", 0,
           "rulemap", 0,
           "scene", 0,
           "scenelist", 0,
@@ -280,8 +281,13 @@ export default class nx_tactics_base_test {
           "powerlist<-powermap", 0,
           "powerlist<-section", 0,
           "powerlist<-sectionlist", 0,
+          "powerlist<-tactics-keys", 0,
           "powerlistlist<-sectionlist", 0,
           "powermap<-powerlist", 0,
+          "powermap<-tactics-keys", 0,
+          "rule<-tactics-key", 0,
+          "rulelist<-tactics-keys", 0,
+          "rulemap<-rulelist", 0,
           "scenemap<-scenelist", 0,
           "sectionlist-all<-chapterlist", 0,
           "sectionlist-all<-section", 0,

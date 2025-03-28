@@ -6,6 +6,24 @@
  [tactics : base/tactics]
  (base/specialtymap<-specialtylist
   (base/specialty
+   :name "Archery"
+   :summary "* Bowel Raker, Double Shot, Flaming Arrow"
+   :titles "Archer, Archer Elite, Bowman, Crossbowman, Longbowman")
+  (base/specialty
+   :name "Axes"
+   :reference
+    "* Run to the bedroom,
+     In the suitcase on the left
+     You'll find my favorite axe.
+     Don't look so frightened
+     This is just a passing phase,
+     One of my bad days. - Pink Floyd, One of My Turns"
+   :titles "Axeman")
+  (base/specialty
+   :name "Bladedancer"
+   :summary
+    "* A combat technique focusing on elegant moves that efficiently combine attack and defense. Heavy armor may not be used with this technique.")
+  (base/specialty
    :name "Bounty Hunter"
    :reference
     "* Certainly there is no hunting like the hunting of man and those who have hunted armed men long enough and liked it, never really care for anything else thereafter. - On the Blue Water, Ernest Hemmingway"
@@ -19,6 +37,8 @@
    :name "Alien Hunter"
    :references
     "* Men in Black")
+  (base/specialty
+   :name "Cannons")
   (base/specialty
    :name "Caving"
    :summary
@@ -44,9 +64,32 @@
      * Devil Hunter Youko
      * Devil May Cry")
   (base/specialty
+   :name "Energy Weapons"
+   :reference "Whoa, whoa, whoa! Nice shootin', Tex! - Ghostbusters")
+  (base/specialty
+   :name "Fensing"
+   :summary
+    "* A combat technique focusing on long quick blades like rapiers and epees."
+   :titles "Fenser")
+  (base/specialty
+   :name "Flamethrowers")
+  (base/specialty
+   :name "Flexible Weaponry"
+   :summary "* Backlash, Disarm, Trip"
+   :titles "Hangman, Strangler")
+  (base/specialty
    :name "Ghost Hunter"
    :references
     "* Ghostbusters")
+  (base/specialty
+   :name "Hammers"
+   :summary
+    "* War hammers were developed as a consequence of the ever more prevalent metal armors of the medieval battlefields during the 14th and 15th centuries. Swords were of little use against these armors. The war hammer could deal blows of tremendous force to the target, especially when mounted on a pole, and by impact alone do damage without penetrating the armor. The spike end could be used for grappling the target's armour, reins, or shield, or could be turned in the direction of the blow to pierce even heavy armor. Against mounted opponents, the weapon could also be directed at the legs of the horse, toppling the armored foe to the ground where he could be more easily attacked.
+    * See Arms and Armor for weapons")
+  (base/specialty
+   :name "Handguns")
+  (base/specialty
+   :name "Machineguns")
   (base/specialty
    :name "Mage Hunter"
    :reference
@@ -56,6 +99,68 @@
    :reference
     "* Grey Wardens, Dragon Age
      * Witcher")
+  (base/specialty
+   :name "Polearms"
+   :summary "Fend Off"
+   :titles "Glaivemaster, Halberdier, Poleman")
+  (base/specialty
+   :name "Rifles")
+  (base/specialty
+   :name "Short Blades"
+   :summary "* Includes Short Swords, Daggers, Stilettos, Machetes, Large Kitchen Knives, etc.")
+  (base/specialty
+   :name "Shotguns")
+  (base/specialty
+   :name "Spears"
+   :summary "Fend Off, Impale, Set Against Charge, Shield Snare"
+   :titles "Lancer, Javelineer, Myrmidon, Peltast, Pikeman, Spartan, Spearman, Velite")
+  (base/specialty
+   :name "Staves"
+   :summary
+    "* This specialty includes long staves and short sticks. Staves have longer reach than most weapons while fighting sticks attack with great speed.
+     * [Dazing Blow], [Disarm], [Fend Off], [Fleche], [Parry], [Riposte], [Sweep]"
+   :titles "Arnis, Bojutus, Escrima, Kali, Stick Fighting")
+  (base/specialty
+   :name "Swords"
+   :reference
+    "The Book of Five Rings - Miyamoto Mushashi
+
+     The Gaze
+     * The gaze should be large and broad. This is the twofold gaze 'Perception and Sight'. Perception is strong and sight weak.
+     * In strategy it is important to see distant things as if they were close and to take a distanced view of close things. It is important in strategy to know the enemy's sword and not to be distracted by insignificant movements of his sword. The gaze is the same for single combat and for large-scale combat.
+     * It is necessary in strategy to be able to look to both sides without moving the eyeballs. You cannot master this ability quickly. Learn what is written here: use this gaze in everyday life and do not vary it whatever happens.
+
+     The Five Attitudes
+     * The five attitudes are: Upper, Middle, Lower, Right Side, and Left Side.  These are the five.
+     * Although attitude has these five dimensions, the one purpose of all of them is to cut the enemy.
+     * There are none but these five attitudes.
+     * Whatever attitude you are in, do not be conscious of making the attitude; think only of cutting.
+
+     * Middle Attitude - Confront the enemy with the point of your sword against his face.  When he attacks, dash his sword to the right and 'ride' it.  Or, when the enemy attacks, deflect the point of his sword by hitting downwards, keep your long sword where it is, and as the enemy renews the attack cut his arms from below.
+
+     * When you master my Way of the long sword, you will be able to control any attack the enemy makes.  I assure you, there are no attitudes other than the five attitudes of the long sword of NiTo.
+
+     * Upper Attitude - From the Upper attitude cut the enemy just as he attacks.  If the enemy evades the cut, keep your sword where it is and, scooping from below, cut him as he renews the attack.
+
+     * You will always win with the five long sword methods. You must train repeatedly.
+
+     * Lower Attitude - Adopt the Lower attitude, anticipating scooping up. When the enemy attackes, hit his hands from below.  As you do so, he may try to hit your sword down. If this is the case, cut his upper arm(s) horizontally with a feeling of 'crossing'. This means that from the Lower attitudes you hit the enemy at the instant that he attacks. You will encounter this method often, both as a beginner and in later strategy.
+     * Left Side Attitude - Adopt the Left Side attitude. As the enemy attacks, hit his hands from below. If as you hit his hands he attempts to dash down your sword, with the feeling of hitting his hands, parry the path of his long sword and cut across from above your shoulder. Through this method you win by parrying the line of the enemy's attack.
+     * Right Side Attitude - In the fifth approach, the sword is in the Right Side attitude. In accordance with the enemy's attack, cross your sword from below at the side to the Upper attitude. Then cut straight from above.
+     * Cut and Slash - To cut and slash are two different things.  Cutting, whatever form of cutting it is, is decisive, with a resolute spirit. Slashing is nothing more than touching the enemy. Even if you slash strongly, and even if the enemy dies instantly, it is slashing. When you cut, your spirit is resolved. You must appreciate this. If you first slash the enemy's hands or legs, you must then cut strongly. Slashing is in spirit the same as touching. When you realise this, they become indistinguishable. Learn this well."
+   :summary
+    "* Melee - [Abdomen Timing of Two], [Continuous Cut], [Dash Attack], [Dazing Blow], [Fleche], [Fire and Stones Cut], [Parry], [Riposte], [Slash], [There Are Many Enemies], [Thrust], [To Apply Stickiness]"
+   :titles "Bushi, Fencer, Fencing, Kendo, Kenjutsu, Kensei, Ronin, Sword Saint, Samurai, Swordsman")
+  (base/specialty
+   :name "Sword Saint"
+   :summary
+    "* A combat technique focusing almost exclusively on mastery of the sword."
+   :titles "Kensai, Kensei")
+  (base/specialty
+   :name "Thrown Weapons"
+   :reference "You? You're very good. But me? I'm magic. - Bullseye, Daredevil Comics"
+   :summary "* Barbed Javelin, Double Shot, Knife Throwing, Precision Throw, Shield Snare"
+   :titles "Knife Thrower, Javelineer, Slinger")
   (base/specialty
    :name "Trapper")
   (base/specialty

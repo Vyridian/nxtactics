@@ -126,42 +126,7 @@
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (base/item<-tactics-key tactics "Dagger"))))
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Stealth")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Sneak")))))))
-
-(func unit-flint : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Flint (Early)"
-  :image "images/cards/unit-flint.svg"
-  :race "Half-elven"
-  :gender "M"
-  :age 17
-  :body "7x1"
-  :mind "5x1"
-  :will "5x1"
-  :speed "7x0"
-  :speedland "7kph/4.5mph"
-  :mass "70kg/153lb"
-  :height "1.67m/5'6"
-  :beast "1x0"
-  :shadow "1x0"
-  :value "1x0"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Close Combat")
-     :level "1"
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item (base/item<-tactics-key tactics "Dagger"))))
+         :item (base/item<-tactics-key tactics "Knife: Dagger"))))
     (base/unitskill
      :skill (base/skill<-tactics-key tactics "Stealth")
      :level "1"
@@ -218,12 +183,7 @@
   :mass "450kg/1000lb"
   :speedland "20kph/12mph"
   :demeanor "Aloof"
-  :nature "Skitish"
-  :unitpowermap
-   (base/unitpowermap<-unitpowerlist
-    (base/unitpower
-     :power power-groundmovement
-     :level "4x1"))))
+  :nature "Skitish"))
 
 (func unit-jesaveer : base/unit
  [tactics : base/tactics]
@@ -364,12 +324,7 @@
         (base/unitability
          :ability (base/ability<-tactics-key tactics "Grab"))
         (base/unitability
-         :ability (base/ability<-tactics-key tactics "Drag")))))
-  :unitpowermap
-   (base/unitpowermap<-unitpowerlist
-    (base/unitpower
-     :power power-groundmovement
-     :level "7x1"))))
+         :ability (base/ability<-tactics-key tactics "Drag")))))))
 
 (func unit-wilmducon : base/unit
  [tactics : base/tactics]
@@ -457,7 +412,10 @@
    :cardmap
     (base/cardmap<-cardlist
      (base/cardlist
-      (unit-flint tactics)
+      (list<-list : base/cardlist
+       (base/unitlist<-tactics-keys
+        tactics
+        "Flint (Early)"))
       (unit-bandit tactics)
       (unit-bruiser tactics)
       (unit-guardsman tactics)
@@ -472,7 +430,7 @@
       (unit-horse tactics)
       horse-i
       (unit-woodencart tactics)
-      (any<-any : base/cardlist
+      (list<-list : base/cardlist
        (base/skilllist<-tactics-keys
         tactics
         "Close Combat"
@@ -480,17 +438,17 @@
         "Stealth"
         "Business"
         "Tradeskills"))
-      (any<-any : base/cardlist
+      (list<-list : base/cardlist
        (base/abilitylist<-tactics-keys
         tactics
         "Ambush"
         "Bargain"
         "Sneak"))
-      (any<-any : base/cardlist
+      (list<-list : base/cardlist
        (base/itemlist<-tactics-keys
         tactics
         "Bare Handed"
-        "Dagger"
+        "Knife: Dagger"
         "Sword: Long"
         "Sword: Short"
         "Hammer"
