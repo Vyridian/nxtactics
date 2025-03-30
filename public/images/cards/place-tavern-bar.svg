@@ -5,7 +5,7 @@
    version="1.1"
    id="svg4669"
    sodipodi:docname="place-tavern-bar.svg"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,10 +21,10 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="2.1173077"
-     inkscape:cx="55.495004"
+     inkscape:cx="55.731153"
      inkscape:cy="179.23706"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -2480,6 +2480,21 @@
          stop-color="#4577A2"
          id="stop3952" />
     </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <rect
+         style="fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.24026"
+         id="rect1"
+         width="46.665314"
+         height="59.99826"
+         x="-46.907402"
+         y="2.3144956"
+         rx="0.1039307"
+         ry="0.097749025"
+         inkscape:label="mask"
+         transform="rotate(-90)" />
+    </clipPath>
   </defs>
   <defs
      id="defs71">
@@ -4743,7 +4758,8 @@
   </defs>
   <g
      id="g3952"
-     transform="matrix(0,5.0661794,-5.0661794,0,238.11024,18.897638)">
+     transform="matrix(0,5.10251,-5.10251,0,239.34548,14.646957)"
+     clip-path="url(#clipPath1)">
     <path
        fill="#140906"
        transform="scale(0.0453278,0.0458984)"

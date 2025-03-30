@@ -466,12 +466,12 @@
         "Coins: Silver"
         "Coins: Gold"
         "Coins: Platinum"
-        "Healing Salve"
+        "Salve: Healing"
         "Cloak: Fine Woodland"
         "Rations"
         "Waterskin"
         ))
-      (any<-any : base/cardlist
+      (list<-list : base/cardlist
        (base/placelist<-tactics-keys
         tactics
         "Field"

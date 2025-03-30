@@ -2008,6 +2008,106 @@
    name)))
  :doc "Returns a unitpowermap from a unitpowerlist")
 
+(func unitpower<-tactics-key-lvl-abilities : unitpower
+ [tactics   : tactics
+  key       : string
+  level     : int
+  abilities : stringlist]
+ (unitpower<-tactics-key-lvl-abilities-items
+  tactics key level abilities (empty stringlist)))
+
+(func unitpower<-tactics-key-lvl-abilities-items : unitpower
+ [tactics   : tactics
+  key       : string
+  level     : int
+  abilities : stringlist
+  items     : stringlist]
+ (let : unitpower
+  [power : power :=
+    (power<-tactics-key tactics key)
+   abilitylist : abilitylist :=
+    (abilitylist<-tactics-keys tactics abilities)
+   unitabilitylist : unitabilitylist :=
+    (list<-list : unitabilitylist
+     abilitylist
+     (fn : unitability
+      [ability : ability]
+      (unitability
+       :ability ability)))
+   unitabilitymap : unitabilitymap :=
+    (unitabilitymap<-unitabilitylist unitabilitylist)
+   itemlist : itemlist :=
+    (itemlist<-tactics-keys tactics items)
+   unititemlist : unititemlist :=
+    (list<-list : unititemlist
+     itemlist
+     (fn : unititem
+      [item : item]
+      (unititem
+       :item item)))
+   unititemmap : unititemmap :=
+    (unititemmap<-unititemlist unititemlist)]
+  (unitpower
+   :power power
+   :level level
+   :unitabilitymap unitabilitymap
+   :unititemmap unititemmap))
+ :doc "Returns a unitpower from tactics, skill key, level, ability keys, and item keys")
+
+(func unitskill<-tactics-key-lvl-abilities : unitskill
+ [tactics   : tactics
+  key       : string
+  level     : int
+  abilities : stringlist]
+ (unitskill<-tactics-key-lvl-abilities-items
+  tactics key level abilities (empty stringlist)))
+
+(func unitskill<-tactics-key-lvl-abilities-items : unitskill
+ [tactics   : tactics
+  key       : string
+  level     : int
+  abilities : stringlist
+  items     : stringlist]
+ (let : unitskill
+  [skill : skill :=
+    (skill<-tactics-key tactics key)
+   abilitylist : abilitylist :=
+    (abilitylist<-tactics-keys tactics abilities)
+   unitabilitylist : unitabilitylist :=
+    (list<-list : unitabilitylist
+     abilitylist
+     (fn : unitability
+      [ability : ability]
+      (unitability
+       :ability ability)))
+   unitabilitymap : unitabilitymap :=
+    (unitabilitymap<-unitabilitylist unitabilitylist)
+   itemlist : itemlist :=
+    (itemlist<-tactics-keys tactics items)
+   unititemlist : unititemlist :=
+    (list<-list : unititemlist
+     itemlist
+     (fn : unititem
+      [item : item]
+      (unititem
+       :item item)))
+   unititemmap : unititemmap :=
+    (unititemmap<-unititemlist unititemlist)]
+  (unitskill
+   :skill skill
+   :level level
+   :unitabilitymap unitabilitymap
+   :unititemmap unititemmap))
+ :doc "Returns a unitskill from tactics, skill key, level, ability keys, and item keys")
+
+(func unitskill<-tactics-key-lvl-items : unitskill
+ [tactics   : tactics
+  key       : string
+  level     : int
+  items     : stringlist]
+ (unitskill<-tactics-key-lvl-abilities-items
+  tactics key level (empty stringlist) items))
+
 (func unitskillmap<-unitskilllist : unitskillmap
  [unitskilllist : unitskilllist :...]
  (map<-list : unitskillmap

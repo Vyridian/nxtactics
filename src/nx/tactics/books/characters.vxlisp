@@ -248,50 +248,50 @@ Negative
      (section
       :name "Warrior Classes"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Gladiator
-         (unit
+         (base/unit
           :name "Gladiator"
           :summary
            "* Preferred Skills: [Melee Combat]:Spears, Flexible Weaponry, [Close Combat]:Grappling, [Athletics],
 [Evasion]")
         :Knight
-         (unit
+         (base/unit
           :name "Knight")
         "Martial Artist"
-         (unit
+         (base/unit
           :name "Martial Artist"
           :summary "* Preferred Skills: [Close Combat]:Martial Arts, [Evasion], [Acrobatics]")
         :Paladin
-         (unit
+         (base/unit
           :name "Paladin")
         :Ranger
-         (unit
+         (base/unit
           :name "Ranger"
           :summary "* Preferred Skills: [Ranged Combat]:Archery, [Hunting], [Forestry], [Riding]")
         :Samurai
-         (unit
+         (base/unit
           :name "Samurai"
           :summary "* Preferred Skills: [Melee Combat]:Swords, [Ranged Combat]:Archery, [Riding], [Evasion]")
         :Soldier
-         (unit
+         (base/unit
           :name "Soldier"
           :summary "* Preferred Skills: [Melee Combat], [Military], [Armor]")
         :Warrior
-         (unit
+         (base/unit
           :name "Warrior"
           :summary "* Preferred Skills: [Melee Combat], [Armor], [Riding]")))
     "Rogue Classes"
      (section
       :name "Rogue Classes"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Assassin
-         (unit
+         (base/unit
           :name "Assassin"
           :summary "* Preferred Skills: [Assassination], [Ranged Combat]:Thrown Weapons")
         :Bard
-         (unit
+         (base/unit
           :name "Bard"
           :summary
            "* There is magic in music, song, and story.  The Bard has learned that a story properly told can make a frightened
@@ -303,93 +303,93 @@ reason, Bards are vast storehouses of knowledge, but their information often blu
 wherever they go.
 * Preferred Skills: [Performance]:Music, [Deception], [Persuasion], [Knowledge], [Stealth]"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Stealth
-             (unitskill
+             (base/unitskill
               :name "Stealth")))
         :Charlatan
-         (unit
+         (base/unit
           :name "Charlatan"
           :summary "* Preferred Skills: [Performance], [Deception]")
         :Ninja
-         (unit
+         (base/unit
           :name "Ninja"
           :summary "* Preferred Skills: [Assassination], [Melee Combat], [Deception], [Stealth]")
         :Rogue
-         (unit
+         (base/unit
           :name "Rogue"
           :summary "* Preferred Skills: [Crime], [Close Combat]:Knives, [Deception], [Stealth]")
         :Scout
-         (unit
+         (base/unit
           :name "Scout"
           :summary "* Preferred Skills: [Scouting]")
         :Spy
-         (unit
+         (base/unit
           :name "Spy"
           :summary "* Preferred Skills: [Espionage], [Scouting], [Stealth]")
         :Thief
-         (unit
+         (base/unit
           :name "Thief"
           :summary "* Preferred Skills: [Thrown Weapons], [Deception]:Thievery, [Mechanics], [Climbing], [Acrobatics], [Scouting], [Stealth]")))
     "Mentalist Classes"
      (section
       :name "Mentalist Classes"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Illusionist
-         (unit
+         (base/unit
           :name "Illusionist")
         :Mentalist
-         (unit
+         (base/unit
           :name "Mentalist")))
     "Spiritualist Classes"
      (section
       :name "Spiritualist Classes"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Druid
-         (unit
+         (base/unit
           :name "Druid"
           :summary "* Preferred Skills: [Nature Magic], [Herbalism], [Aeromancy]")
         :Monk
-         (unit
+         (base/unit
           :name "Monk"
           :summary "* Preferred Skills: [Martial Arts]:Striking, [Mind Over Body]")
         :Priest
-         (unit
+         (base/unit
           :name "Priest")
         :Shaman
-         (unit
+         (base/unit
           :name "Shaman")
         :Witch/Warlock
-         (unit
+         (base/unit
           :name "Witch/Warlock")
         "Witch Doctor"
-         (unit
+         (base/unit
           :name "Witch Doctor")))
     "Wizard Classes"
      (section
       :name "Wizard Classes"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Alchemist
-         (unit
+         (base/unit
           :name "Alchemist")
         :Artificer
-         (unit
+         (base/unit
           :name "Artificer")
         :Elementalist
-         (unit
+         (base/unit
           :name "Elementalist"
           :summary "* Preferred Skills: Elemental Magic")
         :Necromancer
-         (unit
+         (base/unit
           :name "Necromancer")
         :Sorceror
-         (unit
+         (base/unit
           :name "Sorceror")
         :Wizard
-         (unit
+         (base/unit
           :name "Wizard"))))))
 
 (func chapter_storytelling : base/chapter

@@ -6,6 +6,13 @@
  [tactics : base/tactics]
  (base/itemmap<-itemlist
   (base/item
+   :name "Accesory: Monocle"
+   :image "images/cards/item-accessory-monocle.svg"
+   :summary
+    "* [Passive]: IF examining small objects THEN [Investigation]:+1"
+   :body "2x-2"
+   :mass "20g/.05lb")
+  (base/item
    :name "Ammo: Revolver"
    :image "images/cards/item-ammo-revolver.svg")
   (base/item
@@ -181,14 +188,6 @@
    :body "2x0"
    :mass "2kg/4.4lb")
   (base/item
-   :name "Healing Salve"
-   :image "images/cards/item-healingsalve.svg"
-   :summary
-    "* [Uses]: 3
-     * [Double Action] Use:1: Reduce a Major Wound to a Minor Wound."
-   :body "5x-1"
-   :mass "500g/1.1lb")
-  (base/item
    :name "Jerry Can"
    :image "images/cards/item-jerrycan.svg")
   (base/item
@@ -220,13 +219,6 @@
    :image "images/cards/item-lockpicks.svg"
    :summary
     "* [Success]: IF picking a lock and Succeed with Evade THEN Success:+1")
-  (base/item
-   :name "Monocle"
-   :image "images/cards/item-monocle.svg"
-   :summary
-    "* [Passive]: IF examining small objects THEN [Investigation]:+1"
-   :body "2x-2"
-   :mass "20g/.05lb")
   (base/item
    :name "Mushrooms"
    :classification "Plant"
@@ -263,7 +255,7 @@
    :image "images/cards/item-rations.svg"
    :summary
     "* Enough Food for 7-10 days.
-     * Cost: [Silver Coins]
+     * Cost: [Coins: Silver]
      * An assortment of jerky, dried fruits, hardtack, hardrolls, dried cheese, potatoes, turnips and nuts.
      * Water is heavy, so these are mostly dry. If consumed without water, the unit will be [Dehydrated] after 7 days."
    :body "4x0"
@@ -274,6 +266,14 @@
   (base/item
    :name "Safe"
    :image "images/cards/item-safe.svg")
+  (base/item
+   :name "Salve: Healing"
+   :image "images/cards/item-salve-healing.svg"
+   :summary
+    "* [Uses]: 3
+     * [Double Action] Use:1: Reduce a Major Wound to a Minor Wound."
+   :body "5x-1"
+   :mass "500g/1.1lb")
   (base/item
    :name "Shield: Buckler"
    :classification "Shield"

@@ -292,34 +292,34 @@ anywhere in the world within an hour."
      (section
       :name "Military Equipment"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Combat Aerodyne"
-         (unit
+         (base/unit
           :name "Combat Aerodyne"
           :summary
            "* Speed: 480mph
 * Range: 600miles
 * Armored combat Aerodyne")
         "Barracuda Drone Submarine"
-         (unit
+         (base/unit
           :name "Barracuda Drone Submarine"
           :summary "* Carrier borne small, unmanned, high speed, attack submarine. It is designed as a long range drone that continually scouts the water surrounding a capital ship. Its tip is a HEAT shaped explosive, and it uses a particularly volitle fuel mix, so that it can be used as a torpedo if any serious threat enters its sphere of control.")
         "Manta VTOL Fighter"
-         (unit
+         (base/unit
           :name "Manta VTOL Fighter"
           :reference "* Carrier Command: Gaea Mission"
           :summary "* Carrier borne VTOL Fighter. It has four redirectable thrusters that allow it to hover at any altitude including directly over water. It is fully sealed and can be launched and recovered underwater, but its underwater speed is poor. Its thrust is sufficient to ferry a Sea Lion ATV or other medium vehicle when necessary. It has a small, replaceable mission module to custom tailor its missions for anti-air, anti-ship, anti-armor, anti-personnel, missile, bombs, repair, apc, recon, science, transport, and more. Its mission module is interchangable with the Sea Lion Amphibious Tank.")
         "Pelican VTOL Heavy Transport"
-         (unit
+         (base/unit
           :name "Pelican VTOL Heavy Transport"
           :summary "* Land based VTOL transport plane. It has four redirectable thrusters that allow it to hover at any altitude including directly over water. It is fully sealed and can land and take off from water. It has a single landing deck on top to facilitate in-air refuelling and resupply of VTOL fighters. It has a large, replaceable mission module to custom tailor its missions for anti-air, anti-ship, anti-armor, anti-personnel, missile, bombs, repair, apc, recon, science, transport, and more. It is powerful enough to carry 1 heavy tank, 2 medium tanks, or 3 APCs. It is, however, a large target with limited armor, so it is not suitable for heavy fire situations.")
         "Sea Lion Amphibious Medium Tank"
-         (unit
+         (base/unit
           :name "Sea Lion Amphibious Medium Tank"
           :reference "* Carrier Command: Gaea Mission"
           :summary "* Carrier borne All Terrain Vehicle. It has six wheels that work equally well on water or land, but on water it augments its speed using a caterpillar drive. It is fully sealed and submerisble, but its underwater speed is poor. It has a small, replaceable mission module to custom tailor its missions for anti-air, anti-ship, anti-armor, anti-personnel, missile, repair, apc, recon, science, and more. Its mission module is interchangable with the Manta Fighter.")
         "Sailfin Light Frigate"
-         (unit
+         (base/unit
           :name "Sailfin Light Frigate"
           :summary
            "* Fully Submersible Light Frigate loaded with 2 Barracuda Submarines.
@@ -327,24 +327,24 @@ anywhere in the world within an hour."
 * Hydrofoils - Uses a Magnetohydrodynamic (MHD) to produce high speeds with little noise. It is designed in a catamaran configuration with hydrofoils and an air cushion effect to provide near flight."
           :titles "Flying Fish")
         "Hammerhead Destroyer"
-         (unit
+         (base/unit
           :name "Hammerhead Destroyer"
           :summary
            "* Fully Submersible Destroyer loaded with 2 Manta Fighters and 4 Barracuda Submarines.
 * Purpose - The Hammerhead is an all round escort ship for larger capital ships.")
         "Mako Assault Carrier"
-         (unit
+         (base/unit
           :name "Mako Assault Carrier"
           :reference "* Carrier Command: Gaea Mission"
           :summary "* Fully Submersible Light Carrier loaded with 4 Manta Fighters, 4 Sea Lion ATVs, and 2 Barracuda Submarines. Uses a Magnetohydrodynamic (MHD) to produce high speeds with little noise.")
         "Orca Medium Cruiser"
-         (unit
+         (base/unit
           :name "Orca Medium Cruiser"
           :summary
            "* Fully Submersible Medium Cruiser loaded with 6 Manta Fighters, 1 Pelican Transport, 6 Sea Lion ATVs, and
 4 Barracuda Submarines.")
         "Leviathan Command Carrier"
-         (unit
+         (base/unit
           :name "Leviathan Command Carrier"
           :summary
            "* Fully Submersible Heavy Carrier loaded with 12 Manta Fighters, 4 Pelican Transports, 6 Sea Lion ATVs, and
@@ -353,14 +353,14 @@ anywhere in the world within an hour."
      (section
       :name "Body Armor"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Stealth Suit"
-         (unit
+         (base/unit
           :name "Stealth Suit"
           :reference "* Nuclear launch detected... - Starcraft"
           :titles "Ghost Special Operative")
         "Powered Body Armor"
-         (unit
+         (base/unit
           :name "Powered Body Armor"
           :summary "* Heavy Body Armor"
           :titles "Hard Suit"))))))
@@ -396,31 +396,31 @@ one-way.
      (section
       :name "High Tech Commercial Spacecraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Shuttlecraft
-         (unit
+         (base/unit
           :name "Shuttlecraft")
         "Cargo Spacefreighter"
-         (unit
+         (base/unit
           :name "Cargo Spacefreighter")
         "Ore Spacefreighter"
-         (unit
+         (base/unit
           :name "Ore Spacefreighter"
           :summary "* Magsail ship")
         "Gas Spacefreighter"
-         (unit
+         (base/unit
           :name "Gas Spacefreighter")
         "Space Rescue Ship"
-         (unit
+         (base/unit
           :name "Space Rescue Ship"
           :reference "Event Horizon"
           :summary "Emergency Medical and Rescue Craft")
         "Star Explorer"
-         (unit
+         (base/unit
           :name "Star Explorer"
           :summary "Scout Vessel")
         :Spaceliner
-         (unit
+         (base/unit
           :name "Spaceliner"
           :summary "Luxury cruise liner for tourism or transport"
           :titles "Starliner")))
@@ -428,30 +428,30 @@ one-way.
      (section
       :name "Fighter Class"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Star Bomber"
-         (unit
+         (base/unit
           :name "Star Bomber")
         "Star Figher"
-         (unit
+         (base/unit
           :name "Star Figher"
           :summary "* General purpose space fighter that can be fitted with special purpose gear.")
         "Star Interceptor"
-         (unit
+         (base/unit
           :name "Star Interceptor")
         "Star Torpedo Bomber"
-         (unit
+         (base/unit
           :name "Star Torpedo Bomber")))
     "High Tech Shuttle Class"
      (section
       :name "High Tech Shuttle Class"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Assault Shuttle"
-         (unit
+         (base/unit
           :name "Assault Shuttle")
         "Eagle Lunar Transport"
-         (unit
+         (base/unit
           :name "Eagle Lunar Transport"
           :summary
            "* The Eagle is the primary form of transportation for the inhabitants of the various moons of the Solar System. A multipurpose craft, it is divided into three basic sections; the command module, the service pod, and the superstructure. It is powered by four nuclear fusion rockets, and carries fuel reserves for 48 hours of flight.
@@ -468,85 +468,85 @@ one-way.
           :range "26 Bkm"
           :width "9m")
         "Lunar Rail Capsule"
-         (unit
+         (base/unit
           :name "Lunar Rail Capsule"
           :summary "* A small pod launched from a Lunar Rail Gun. Passenger Capsule are launched from 80 mile long Rail guns at 1G. Cargo capsules are launched from 2 mile long Rail guns at 40G. They are then captured in lunar orbit by drones and lunar satellite bases.")
         "Star Gunship"
-         (unit
+         (base/unit
           :name "Star Gunship"
           :summary "* General purpose heavy weapons platform that can be fitted with special purpose gear.")
         "Heavy Star Bomber"
-         (unit
+         (base/unit
           :name "Heavy Star Bomber")
         "Reconnaissance Shuttle"
-         (unit
+         (base/unit
           :name "Reconnaissance Shuttle")
         "Star Torpedo Boat"
-         (unit
+         (base/unit
           :name "Star Torpedo Boat")))
     "Frigate Class"
      (section
       :name "Frigate Class"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Assault Star Carrier"
-         (unit
+         (base/unit
           :name "Assault Star Carrier")
         "Missile Frigate"
-         (unit
+         (base/unit
           :name "Missile Frigate")
         "Siege Frigate"
-         (unit
+         (base/unit
           :name "Siege Frigate")
         "Star Destroyer"
-         (unit
+         (base/unit
           :name "Star Destroyer")
         "System Defense Corvette"
-         (unit
+         (base/unit
           :name "System Defense Corvette"
           :summary "Interplanetary Defense")))
     "High Tech Cruisers"
      (section
       :name "High Tech Cruisers"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Star Battleship"
-         (unit
+         (base/unit
           :name "Star Battleship")
         "Star Carrier"
-         (unit
+         (base/unit
           :name "Star Carrier")
         "Star Cruiser"
-         (unit
+         (base/unit
           :name "Star Cruiser")))
     "High Tech Dreadnoughts"
      (section
       :name "High Tech Dreadnoughts"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Super Star Battleship"
-         (unit
+         (base/unit
           :name "Super Star Battleship")
         "Super Star Carrier"
-         (unit
+         (base/unit
           :name "Super Star Carrier")))
     "High Tech Satellites"
      (section
       :name "High Tech Satellites"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Communication Satellite"
-         (unit
+         (base/unit
           :name "Communication Satellite")
         "Damocles Orbital Laser"
-         (unit
+         (base/unit
           :name "Damocles Orbital Laser"
           :image "HighTech/DamoclesSatellite.jpg"
           :summary
            "* Orbital Laser Platform designed for strategic strikes against land targets. May also be used agaist
 large orbital targets or for asteroid defense.")
         "EMP Satellite"
-         (unit
+         (base/unit
           :name "EMP Satellite"
           :reference
            "* What's it going to be, Plissken? Them or us? I shut down the third world, you win they lose. I shut
@@ -554,18 +554,18 @@ down America, they win, you lose. The more things change, the more they stay the
 Escape from LA"
           :titles "Goldeneye")
         "Hunter Killer Satellite"
-         (unit
+         (base/unit
           :name "Hunter Killer Satellite"
           :summary
            "* A combat ready satellite often masquerading as a peaceful version. Hunter Satellites act like UAV's
 quietly patrolling until their weaponry is needed, then they are disposable."
           :titles "Battle Satellite")
         "Orbital Skyhook Satellite"
-         (unit
+         (base/unit
           :name "Orbital Skyhook Satellite"
           :summary "* Large rotating satellite in low orbit. Its purpose is to drop its kilometers long tether to dock with a [Suborbital Shuttle] and use its momentum to fling the shuttle into higher orbit. A few of these Skyhooks at different orbits can pull a shuttle all the way into high orbit. Pulling up shuttles gradually degrades the satellite's orbit, but fortunately, the same system can be used in reverse to slow orbital craft without using fuel which returns lost momentum to the Skyhook.")
         "Solar Reflector Satellite"
-         (unit
+         (base/unit
           :name "Solar Reflector Satellite"
           :summary "* These are massive, lightweight solar mirrors that can be focused for variouse purposes. They can focus light for solar farms, generate light for long nights like on the moon, generate thrust by light pressure and by heating ablative drives."))))))
 
@@ -578,15 +578,15 @@ quietly patrolling until their weaponry is needed, then they are disposable."
      (section
       :name "High Tech Commercial Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Hypersonic Airliner"
-         (unit
+         (base/unit
           :name "Hypersonic Airliner"
           :summary
            "* Suborbital passenger plane that can make intercontinental flights at Mach 5+
 * Such high speed planes are all wedge shaped Hypersonic Waveriders.")
         "Suborbital Shuttle"
-         (unit
+         (base/unit
           :name "Suborbital Shuttle"
           :summary
            "* Suborbital passenger plane that can reach the upper atmosphere and connect to an [Orbital Skyhook Satellite]'s
@@ -596,13 +596,13 @@ exchanged, and the container is reeled back up to the skyhook while the plane re
      (section
       :name "High Tech Military Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Valkyrie Air Cavalry"
-         (unit
+         (base/unit
           :name "Valkyrie Air Cavalry"
           :classification "Lt. Aircraft")
         "Aurora Transatmospheric Fighter"
-         (unit
+         (base/unit
           :name "Aurora Transatmospheric Fighter"
           :summary
            "* A sleek, shuttle-like jet with speeds of Mach 5. A nuclear engine, stealth armor, full environmental containment, and a virtual or direct neural link make this one-man craft the deadliest thing in the skies.
@@ -658,9 +658,9 @@ Space based Mobile Suits follow these principles:
 * Arms and Legs are useful - When one part of a mobile suit is moved, it produces a counter-movement in the opposite direction. This effect can be used to adjust the mobile suit's direction without expending propellant. Thus, in zero gravity the mobile suit's arms and legs are not dead weight, but a vital component of its maneuvering system."
       :titles "Armored Frame, Exo-Suit, MEC (Multi-Environment Cavalry), Mobile Armor, Mobile Cavalry, Mobile Invantry, Mobile Suit"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Piranha Mobile Armor"
-         (unit
+         (base/unit
           :name "Piranha Mobile Armor"
           :summary
            "* The current state-of-the-art space mecha is a wedge-shaped, heavily-armored stealth craft with a turreted particle cannon.
@@ -688,7 +688,7 @@ Space based Mobile Suits follow these principles:
 * Arms - 6 thin, light-weight arms fold out from under the ship to the front, back, and sides. Each arm has 3 powerful fingers with magnetic clamps and sharp tips that allow the craft to cling to surfaces and walk along them at high speeds like an insect. The arms are strong enough to climb vertical surfaces or be inverted under gravity. The end of each arm has an attitude control jet to aid in high speed manuevers. On land, these jets are replaced with powerful turbines that lets the craft skate across level ground or water. The elbow of each arm is a sphere that can be used as landing gear or wheels on roads or other reasonably flat terrain. 6 arms were chosen, so the craft can still move on 4 arms while carrying or dragging a heavy load with 2. As with insects, 6 arms provides sufficient redundancy in case 1 or even 2 legs are lost to damage. In land combat, the arms allow the craft to maximize cover and peek its gun around corners or over obstacles."
           :titles "Terrapin")
         "Panther Mobile Cavalry"
-         (unit
+         (base/unit
           :name "Panther Mobile Cavalry"
           :summary
            "* The current state-of-the-art land mecha is a 4 legged style reminiscent of big cats or wolves.
@@ -698,15 +698,15 @@ Space based Mobile Suits follow these principles:
      (section
       :name "High Tech Land Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Hover Tank"
-         (unit
+         (base/unit
           :name "Hover Tank")
         "Light Walker"
-         (unit
+         (base/unit
           :name "Light Walker")
         "Heavy Walker"
-         (unit
+         (base/unit
           :name "Heavy Walker"))))))
 
 (func chapter_space_colonies : base/chapter
@@ -725,24 +725,24 @@ Space based Mobile Suits follow these principles:
 * Politics - Because the Orbitals are largely corporate run and lack a specific history, they are largely free of geopolitical politics, as well as cultural and racial conflicts. They do, however, retain fierce, corporate politics. Most of all, the Orbitals chafe under the Earth bound regulatory and military agencies that supervise and tax them. Taxes are necessarily high to support so much technology, and taxes are always a point of conflict."
       :titles "Orbitals, Orbital Platforms"
       :unitmap
-       (unitmap
+       (base/unitmap
         "L1: Shangri-la"
-         (unit
+         (base/unit
           :name "L1: Shangri-la")
         "L2: Elysium"
-         (unit
+         (base/unit
           :name "L2: Elysium")
         "L4: Avalon"
-         (unit
+         (base/unit
           :name "L4: Avalon"
           :summary
            "The first of the L5 colonies, Avalon has the largest starship construction facilities. Its proximity
 to Earth and the Moon provide it optimal security and resources.")
         "L3: Eden"
-         (unit
+         (base/unit
           :name "L3: Eden")
         "L5: Valhalla"
-         (unit
+         (base/unit
           :name "L5: Valhalla")))
     "Nomad Colonies"
      (section
@@ -765,21 +765,21 @@ to Earth and the Moon provide it optimal security and resources.")
 * Politics - The Martian Council is a democratic body that establishes and enforces Martian law. Unfortunately, they are largely a puppet of the Earth Authority and have been increasingly squeezing the Martian colonists to increase production for their war efforts. This pressure has spurred the creation of the Free Mars Movement that seeks to free Mars form Earth control.
 * Corporations - Martial Metals is one of the biggest corporations in the Solar System. It developed the orbital elevator and its steady source of cheap metals feed a large industry of orbital facilities including drydocks."
       :unitmap
-       (unitmap
+       (base/unitmap
         "Orbital Elevator"
-         (unit
+         (base/unit
           :name "Orbital Elevator"
           :summary
            "* The Orbital Elevator is a miracle of technology and the only practical way to affordably get materials off the planet. The Orbital Elevator, the Asteroid Belt, and the Lunar Railguns are the only sources of building materials for colonies and spacecraft.
 * The Elevator is also a majestic symbol of power for the Martian Council and the Earth Authorities.")
         "Free Mars Radical"
-         (unit
+         (base/unit
           :name "Free Mars Radical")
         "Martian Pirate"
-         (unit
+         (base/unit
           :name "Martian Pirate")
         "Sand Marauder"
-         (unit
+         (base/unit
           :name "Sand Marauder")))
     "Moon Colonies"
      (section
@@ -816,9 +816,9 @@ ships into orbit."
          (place
           :name "Asteroid Mining Colony"))
       :unitmap
-       (unitmap
+       (base/unitmap
         "Asteroid Miner"
-         (unit
+         (base/unit
           :name "Asteroid Miner"
           :titles "Belter")))
     "Jupiter Colonies"
@@ -969,9 +969,9 @@ prospectors have travelled to the Asteroid Belt in a high-tech gold-rush.
      (section
       :name "Government"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Innovator
-         (unit
+         (base/unit
           :name "Innovator"
           :reference "Appleseed, Genetic Android, Bioroid"
           :summary
@@ -986,43 +986,43 @@ breaks down.
 * They defer to human authority unless they believe that the authority will
 harm mankind.")
         "Cycle Police"
-         (unit
+         (base/unit
           :name "Cycle Police"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Driving
-             (unitskill
+             (base/unitskill
               :name "Driving"
               :level "4"
               :unitspecialtymap
-               (unitspecialtymap
+               (base/unitspecialtymap
                 :Motorcycles
-                 (unitspecialty
+                 (base/unitspecialty
                   :name "Motorcycles")))))
         :E.S.W.A.T.
-         (unit
+         (base/unit
           :name "E.S.W.A.T."
           :reference "Appleseed")
         "Mobile Police"
-         (unit
+         (base/unit
           :name "Mobile Police"
           :reference "Appleseed")))
     :Military
      (section
       :name "Military"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Combat Android"
-         (unit
+         (base/unit
           :name "Combat Android")
         "Planetary Defense Navy"
-         (unit
+         (base/unit
           :name "Planetary Defense Navy")
         "Planetary Defense Pilot"
-         (unit
+         (base/unit
           :name "Planetary Defense Pilot")
         "Eugenic Warrior"
-         (unit
+         (base/unit
           :name "Eugenic Warrior"
           :reference "* Khan, Star Trek II"
           :summary
@@ -1043,26 +1043,26 @@ the spoils. The result was a series of wars as each corporation attempted to des
 physically and finacially. Smaller conflicts, covert and overt, continue to this day, with full scale war
 threatening to resurface at any time."
       :unitmap
-       (unitmap
+       (base/unitmap
         "Corporate Man"
-         (unit
+         (base/unit
           :name "Corporate Man"
           :titles "Collarboy, Company Man, Suit")
         "Corporate Security"
-         (unit
+         (base/unit
           :name "Corporate Security")
         "System Administrator"
-         (unit
+         (base/unit
           :name "System Administrator"
           :titles "Cyber Engineer, Icemen, SysOp, SysAdmin, Weasel")
         "Kildren Pilot"
-         (unit
+         (base/unit
           :name "Kildren Pilot"
           :summary
            "* Kildren are genetically modified before birth to halt the aging process.
             * Physically, they are eternally teenagers. Mentally, however, they are quiet and serious. A side effect of their frozen aging process is the inability to recall distant memories. Kildren, therefore, lack a strong sense of time or the past. They live for the now and are fearless pilots. For some, however, the sense of timelessness lacks purpose and turns into hopelessness.")
         :Media
-         (unit
+         (base/unit
           :name "Media"
           :summary
            "* Ethnicity: Greek-American
@@ -1072,59 +1072,59 @@ threatening to resurface at any time."
             * Equipment: Beeper, Camera, Colt automatic pistol and shoulder holster, 1 room apartment
             * Contacts: Camera Man, Police Officer"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Firearms
-             (unitskill
+             (base/unitskill
               :name "Firearms"
               :summary "Pistol"
               :level "4")))
         "Medical Technician"
-         (unit
+         (base/unit
           :name "Medical Technician"
           :titles "Med Tech")
         :Scientist
-         (unit
+         (base/unit
           :name "Scientist")))
     "Offworld Colonies"
      (section
       :name "Offworld Colonies"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Miner
-         (unit
+         (base/unit
           :name "Miner")
         :Pirate
-         (unit
+         (base/unit
           :name "Pirate")))
     :Sprawls
      (section
       :name "Sprawls"
       :titles "Dirtboys, Dirtgirls"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Bounty Hunter"
-         (unit
+         (base/unit
           :name "Bounty Hunter")
         "Cyber Psycho"
-         (unit
+         (base/unit
           :name "Cyber Psycho"
           :summary "* Buttonhead - someone addicted to artificially stimulating the pleasure centers of the brain."
           :titles "Buttonhead")
         :Enforcer
-         (unit
+         (base/unit
           :name "Enforcer")
         :Fixer
-         (unit
+         (base/unit
           :name "Fixer"
           :summary
            "* Fixers buy and sell information, goods, and services.
 * Some of their services merely require the right connections.  Others are not quite legal."
           :titles "Bookie, Executive Secretary, Gobetween, Information Broker, Negotiator, Organizer, Producer, Roadie, Thirdman")
         "Gang Member"
-         (unit
+         (base/unit
           :name "Gang Member")
         :Netrunner
-         (unit
+         (base/unit
           :name "Netrunner"
           :summary
            "* Outlaw computer jocks or hackers.  Some people do it for the glory; most do it for the money.  Information is
@@ -1132,26 +1132,26 @@ power in the modern world and all the information is somewhere on the Net.  Furt
 of automation, so a clever person may turn that automation to his own uses."
           :titles "Crystaljock, Hacker")
         :Nomad
-         (unit
+         (base/unit
           :name "Nomad"
           :summary
            "* Deltajock - A pilot of delta-winged smuggling craft
 * Panzerjock - A driver of armored smuggling hovercraft"
           :titles "Deltajock, Gypsy, Linerunner, Panzerjock, Road Warrior, Smuggler")
         :Rocker
-         (unit
+         (base/unit
           :name "Rocker"
           :summary
            "* Zonedancing - Dancing turned into a dominance game.  A dancer attempts to persuade other dancers in his zone to
 conform to his movements using charisma, talent or violence."
           :titles "Bard")
         :Solo
-         (unit
+         (base/unit
           :name "Solo"
           :reference "* I don't want to walk this Earth if I gotta do it solo...so...low. - Iyaz, Solo"
           :titles "Assassin, Hit Man")
         :Tech
-         (unit
+         (base/unit
           :name "Tech"
           :titles "Cybertech"))))))
 
@@ -1897,9 +1897,9 @@ disgruntled combat veterans and pirates in order to further its aims in space.")
      (section
       :name "Jovian Characters"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Aglaee Dessources"
-         (unit
+         (base/unit
           :name "Aglaee Dessources"
           :summary
            "* Mysterious, beautiful, and cold, Aglaee DesSources is the captain of the
@@ -1907,7 +1907,7 @@ Beautiful Dreamer, a privateer vessel. Once an extremely promising CEGA Navy
 captain, she retired at the age of thirty to her present position.
 * 42 year old aristocratic-looking woman.")
         "Adrian Allen"
-         (unit
+         (base/unit
           :name "Adrian Allen"
           :summary
            "* Adrian is bookish and quiet pilot unlike the adventurous, rowdy Exo-pilot crowd.
@@ -1915,7 +1915,7 @@ He is inexperienced and sometimes panics in combat when clear solutions are not
 obvious. He is currently single athough he is attracted to Foxy Fujima.
 * Age: 22")
         "Madelaine Koudriopoulos"
-         (unit
+         (base/unit
           :name "Madelaine Koudriopoulos"
           :summary
            "* Strong willed and tenacious fighter pilot.
@@ -1927,7 +1927,7 @@ She interferes a lot with his personal life, much to his despair. She is bold bu
 is uncomfortable dating, so she currently has no boyfriend.
 * Age: 21")
         "Foxy Fujima"
-         (unit
+         (base/unit
           :name "Foxy Fujima"
           :summary
            "* Freelance reporter travelling from cylinder to cylinder in search of a story. She
@@ -1936,7 +1936,7 @@ trival stories which has limited her career development. Her beauty has attracte
 men, but she seems to only be interested in her career.
 * Age: 22")
         "Dr. Agram Peyarje"
-         (unit
+         (base/unit
           :name "Dr. Agram Peyarje"
           :summary
            "Brilliant scientist researching human/machine interfaces.
@@ -1944,7 +1944,7 @@ A staunch pacifist, Peyarje is repelled by war in general and utterly
 disgusted by what CEGA plans to do with his inventions. He sees the Confederation as his best
 hope of escape, even if they too are warmongers.")
         "Dr. Catherine Glit"
-         (unit
+         (base/unit
           :name "Dr. Catherine Glit"
           :summary
            "* Catherine used to serve as Ismael Li's personal assistant and moderator. She
@@ -1952,7 +1952,7 @@ is now the representative of the escaping Lunar refugees.
 * She is an excellent doctor, highly regarded by all. While she appears cold
 to everyone, she is shy and only opens up to close friends.")
         "Ismael Li"
-         (unit
+         (base/unit
           :name "Ismael Li"
           :summary
            "Ismael Li is the leader and driving force behind the burgeoning Lunar resistance movement. Once
@@ -1978,7 +1978,7 @@ in exchange for the PCs’ help. He will give them what he promised without shor
 holding back. He also truly believes in his cause, and would willing sacrifice his life to save any
 of his supporters.")
         "Jovian Floater"
-         (unit
+         (base/unit
           :name "Jovian Floater"
           :summary
            "* The Jovian floater is giant, blimp-sized animal filled with gas that lives its entire
@@ -1989,7 +1989,7 @@ survive in the harsh radioactive environment. The medical significance of this c
 especially to space flight cannot be overstated. How life could begin in such high
 radioactivity remains a mystery.")
         "Luka Ansevik"
-         (unit
+         (base/unit
           :name "Luka Ansevik"
           :summary
            "Captain Luka Ansevik is the commander of the small CEGA lunar garrison force. Captain
@@ -2017,7 +2017,7 @@ become emotionally involved with her. Having a mysterious masked figure in a red
 aiding the rebels, might create an interesting mystery... Or not, depending on how sharp your
 players are.")
         "Lydia Ketchum"
-         (unit
+         (base/unit
           :name "Lydia Ketchum"
           :summary
            "* Lydia Ketchum is a Martian Republic Rook, a Ranger trained for deep-cover operations
@@ -2031,7 +2031,7 @@ of the Republic. The Isidisians are even more militant about the Federation than
 ordinary Republic citizens, and see the Federation’s orbital elevator as a very personal
 and insufferable insult to their national pride.")
         "Yanna Summers"
-         (unit
+         (base/unit
           :name "Yanna Summers"
           :summary
            "Yanna Summers is the decidated and hardworking administrator of the Martian Orbital Elevator.
@@ -2049,19 +2049,19 @@ stretched her resources thin to secure passage for the refugees. This could, how
 “Refugees Under Attack�? subplot. Or Yanna could be a background character that just serves to
 lead the PCs into the episode.")
         "Ysa Cantroini"
-         (unit
+         (base/unit
           :name "Ysa Cantroini"
           :summary
            "Ysa has spent the past several years travelling the solar system and working odd job. This has given her an extremely wide range of skills (though none at more than 2/1 or 2/2) and connections, especially here on her native Venus.
             * Ysa is bright and intelligent, generally assuming a quiet but cheerful air. She’s a wandering soul, and doesn’t think she could ever stay happy in one place or one job for the rest of her life. She is seriously considering becoming a reporter, however, as this gives her a way to travel and encounter a wide variety of experiences while getting paid and doing good. Much to her shame, her father is a high-ranking executive in the Venusian bank. She has cut all ties with him, and does not regret doing so, but this secret connection could still draw suspicion to her.")
         "Admiral Russel Kleb"
-         (unit
+         (base/unit
           :name "Admiral Russel Kleb"
           :summary
            "* Admiral Kleb is the throughly corrupt commander of the CEGA 4th Fleet. A hard-line war supporter, Kleb believes the inhabitants of the colonies to be completely inferior to native Terrans. This provides him with the justification he needs to take any action in pursuit of CEGA dominance. He is in the pay (and service) of the Venusian bank, as they provide him with the means to further his own ambitions, but he will not hesitate to betray them for his own advantage. They are, after all, just inferior colonists, cowardly employing bribery when they should be using righteous force.
 					* Despite his biases, Kleb is a brilliant tactician, equally adept at combat maneuvers and political backstabbing. He is a staunch member of the UEA ruling faction, and an adherent to the warship-centric old school of military thinking. To him, adherents of the exo-centric school are children playing with fancy new toys. Ranho Garand, as the most prominently successful exopilot in the UEA navy and focus of the Dragonstriker program, is a frequent target of Kleb’s scorn.")
         "Ranho Garand"
-         (unit
+         (base/unit
           :name "Ranho Garand"
           :summary
            "* Commander of the 3rd Division of the CEGA 4th fleet, Garand is an ace exo-armor pilot and media darling. Despite his military connections, Garand is a devoted member of Chang’s political faction. While he does believe the military to be a necessary tool, he doesn’t believe that it is the proper one to further UEA’s domination over their wayward colonies. He was one of UEA’s first exo-armor pilots, and taught many of the current generation, passing on both his piloting skills and his philosophy.
@@ -2070,9 +2070,9 @@ lead the PCs into the episode.")
      (section
       :name "Commercial Spacecraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Albatross Transorbital Shuttle"
-         (unit
+         (base/unit
           :name "Albatross Transorbital Shuttle"
           :summary
            "* The Albatross is the latest in a long line of shuttles used for cargo and passenger transfers to various atmospheres. One or two are standard equipment for any large military ship."
@@ -2080,7 +2080,7 @@ lead the PCs into the episode.")
           :speedair "1200kph"
           :speedspace "1.5g")
         "Beautiful Dreamer Transport"
-         (unit
+         (base/unit
           :name "Beautiful Dreamer Transport"
           :summary
            "* The Beautiful Dreamer, at first sight, seems to be a standard Inari-class liner. As with many Inari, the Dreamer has been modified heavily, and there are many differences in the ship’s lines. Two concealed railguns run along the ship’s spine, providing an unpleasant and unexpected punch. The cargo bays on the craft’s edges have been modified to carry mechs and fighters, complete with concealed catapults.
@@ -2091,7 +2091,7 @@ lead the PCs into the episode.")
           :mass "10000tons"
           :length "270m")
         "Inari Space Liner"
-         (unit
+         (base/unit
           :name "Inari Space Liner"
           :summary
            "* Unlike the bulk transport Mule, the Inari was designed to be a high speed passenger liner to get people quickly between the planets. Though not as modular as the Mule, the Inari can be heavily customized to specific tasks. Though it is not a military vessel, the Inari is fast and can be modified to be cary significant armor and weapons, thus making it well suited as a privateer."
@@ -2100,7 +2100,7 @@ lead the PCs into the episode.")
           :mass "10000tons"
           :length "200m")
         "Carver Mining Ship"
-         (unit
+         (base/unit
           :name "Carver Mining Ship"
           :summary
            "* The Carver is designed for the purpose seeking out and mining asteroids.
@@ -2112,7 +2112,7 @@ lead the PCs into the episode.")
           :length "80m"
           :width "80m")
         "Mule Freighter"
-         (unit
+         (base/unit
           :name "Mule Freighter"
           :summary
            "* The Mule Freighter is a simple, reliable design for transporting large amounts of cargo across the solar system. It has no interior cargo hold, instead it has a series of connectors to link self contained cargo pods of various sizes. The connectors can also be used to hook onto asteroids or other ships to allow the Mule to act as a tug.
@@ -2125,7 +2125,7 @@ lead the PCs into the episode.")
           :length "345m"
           :width "40m")
         "Ox Orbital Tug"
-         (unit
+         (base/unit
           :name "Ox Orbital Tug"
           :summary
            "* The Ox is a space-only shuttle used for short tranports between space stations, tugbot duty, asteroid transport, and salvage operations. It has large manipulator arms to manage unusually shaped loads. It is a very sturdy if slow craft."
@@ -2137,18 +2137,18 @@ lead the PCs into the episode.")
       :summary
        "* Jovian capital ships are built for easy maintainance and reuse. They are composed of 4 sections: engine, cargo, habitat, and mission. All but the mission section can be interchanged with the equivalent sections from other ships. The habitat ring can even be removed for short range missions, or additional cargo modules can be added for greater endurance."
       :unitmap
-       (unitmap
+       (base/unitmap
         "Jovian Pilot"
-         (unit
+         (base/unit
           :name "Jovian Pilot")
         "Jovian Mech Jock"
-         (unit
+         (base/unit
           :name "Jovian Mech Jock")
         "Jovian Tech"
-         (unit
+         (base/unit
           :name "Jovian Tech")
         "Lancer Space Interceptor"
-         (unit
+         (base/unit
           :name "Lancer Space Interceptor"
           :summary
            "* Despite the heavy investment in Mech Suits, Jovian interceptors remain
@@ -2166,7 +2166,7 @@ scouting missions.
           :speedspace "3.2g"
           :width "10m")
         "Pathfinder Mech Suit"
-         (unit
+         (base/unit
           :name "Pathfinder Mech Suit"
           :image "JovianChronicles/PathfinderToken.png"
           :summary
@@ -2184,7 +2184,7 @@ it remains the most iconic Mech Suit in existence.
           :speedspace "2.8g"
           :width "11m")
         "Retaliator Mech Suit"
-         (unit
+         (base/unit
           :name "Retaliator Mech Suit"
           :summary
            "* The Retailator is the standard Jovian interceptor Mech. Well-armed and fast for its
@@ -2201,7 +2201,7 @@ to take great care or risk burned out thrusters.
           :speedspace "2.4g"
           :width "12m")
         "Vindicator Mech Suit"
-         (unit
+         (base/unit
           :name "Vindicator Mech Suit"
           :summary
            "* The Vindicator is the most powerful mass-produced Mech in the solar system. It carries massive armor and armament, but its high cost limits its use to a few elite pilots. It is also painfully slow compared to the Pathfinders and Retailators it flies with.
@@ -2216,7 +2216,7 @@ to take great care or risk burned out thrusters.
           :speedspace "1.8g"
           :width "14m")
         "Prometheus Mech Suit"
-         (unit
+         (base/unit
           :name "Prometheus Mech Suit"
           :summary
            "* The Prometheus was intended to be a prototype for a new generation of mech suits which would be more efficient, better armed, and faster than their predecessors. However, as development progressed, several experimental systems were added that made it a one of a kind wonder that could never be mass produced.
@@ -2226,7 +2226,7 @@ to take great care or risk burned out thrusters.
           :mass "64tons"
           :height "18m")
         "Prometheus Storm Attacker"
-         (unit
+         (base/unit
           :name "Prometheus Storm Attacker"
           :summary
            "* The [Prometheus Mech Suit] can be equipped with a heavy set of extra armor and weapons.
@@ -2240,7 +2240,7 @@ to take great care or risk burned out thrusters.
           :mass "82tons"
           :height "21m")
         "Athena Destroyer"
-         (unit
+         (base/unit
           :name "Athena Destroyer"
           :summary
            "* Athena Destroyers function much as their wet navy ancestors. Depending on the political climate, they are either protective shepards or hunting wolves. The Athena's job is to get in the way of danger. If an unknown vessel is detected, the destroyer will move ahead into a blocking position to defend the rest of the fleet.
@@ -2256,7 +2256,7 @@ to take great care or risk burned out thrusters.
           :length "291m"
           :width "81m")
         "Forge Patrol Carrier"
-         (unit
+         (base/unit
           :name "Forge Patrol Carrier"
           :summary
            "* Forge class carriers carry 12 pilots including squadron leaders.
@@ -2276,7 +2276,7 @@ Vehicles:
           :length "460m"
           :width "285m")
         "Explorer Scout Ship"
-         (unit
+         (base/unit
           :name "Explorer Scout Ship"
           :summary
            "* One of the earliest planetary exploration ships, the Explorer has been produced for many years and is a reliable though uninspired design. Its modular design is its greatest asset and has ensured its continued use for decades. The crew module can be extended on a tether for artificial gravity with the other end counterbalanced by a water tank."
@@ -2285,7 +2285,7 @@ Vehicles:
           :length "345m"
           :width "40m")
         "Gagarin Fleet Tender"
-         (unit
+         (base/unit
           :name "Gagarin Fleet Tender"
           :summary
            "* The Gagarin is a mobile tender designed to facilitate drydock style repairs close to the front lines.
@@ -2298,7 +2298,7 @@ Vehicles:
           :width "285m"
           :speedspace ".1g")
         "Javelin Cruiser"
-         (unit
+         (base/unit
           :name "Javelin Cruiser"
           :summary
            "* The Javelin is the most common warship in the Jovian Navy despite its age and lack of interceptor or Mech Bays. Its design is based on pre-Mech combat philosophy, emphasizing heavy weapons on capital ships as opposed to projection of force using smaller craft. Therefore, it is very heavily armed for a relatively small craft including the deadly heavy particle beam cannon.
@@ -2313,7 +2313,7 @@ Vehicles:
           :length "235m"
           :width "72m")
         "Valiant Strike Carrier"
-         (unit
+         (base/unit
           :name "Valiant Strike Carrier"
           :summary
            "* The Valiant Strike Carrier is a ship like no other. Every other ship in the fleet is designed to work in cooperation with one another. The Valiant is designed to operate on long range, long term patrols with no backup. It is therefore heavily armed, armored, and carries extensive supplies and fabrication facilities.
@@ -2336,13 +2336,13 @@ Vehicles:
       :name "UEA"
       :titles "United Earth Alliance"
       :unitmap
-       (unitmap
+       (base/unitmap
         "UEA Commando"
-         (unit
+         (base/unit
           :name "UEA Commando"
           :classification "Lt. Infantry")
         "UEA Marine"
-         (unit
+         (base/unit
           :name "UEA Marine"
           :summary
            "* Standard issue for all regular infantry and covert ops personnel.
@@ -2352,12 +2352,12 @@ Vehicles:
 * Optional Backpacks with custom gear"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored")))
         "UEA Mobile Infantry"
-         (unit
+         (base/unit
           :name "UEA Mobile Infantry"
           :summary
            "* Standard issue for assault and special forces personnel.
@@ -2376,12 +2376,12 @@ Powerful Backpack package including:
 * Stealth options available"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored")))
         "UEA Mobile Assault Infantry"
-         (unit
+         (base/unit
           :name "UEA Mobile Assault Infantry"
           :summary
            "* Form is vaguely humanoid
@@ -2405,21 +2405,21 @@ Backpack Package
 * These models are purely Assault/Scorched Earth types similar to miniature tanks."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored")))
         "UEA Pilot"
-         (unit
+         (base/unit
           :name "UEA Pilot")
         "UEA Mecha Pilot"
-         (unit
+         (base/unit
           :name "UEA Mecha Pilot")
         "UEA Tech"
-         (unit
+         (base/unit
           :name "UEA Tech")
         "Cerberus Mech Suit"
-         (unit
+         (base/unit
           :name "Cerberus Mech Suit"
           :summary
            "* The Cerberus is the first cutting edge Mobile Suit design from the UEA.
@@ -2439,7 +2439,7 @@ to commanders and elite pilots.
           :speedspace "1.8g"
           :width "15m")
         "Dragonstriker Mech Armor"
-         (unit
+         (base/unit
           :name "Dragonstriker Mech Armor"
           :image "JovianChronicles/DragonstrikerToken.png"
           :summary
@@ -2459,7 +2459,7 @@ The booster also houses the 2 Medium Laser cannons for strafing enemy capital sh
           :mass "110tons"
           :height "24m")
         "Hachiman Destroyer"
-         (unit
+         (base/unit
           :name "Hachiman Destroyer"
           :summary
            "* The Hachiman is the workhorse of the UEA navy. They have been produced for many years with minor upgrades.
@@ -2474,7 +2474,7 @@ The booster also houses the 2 Medium Laser cannons for strafing enemy capital sh
           :length "208m"
           :width "80m")
         "Lucifer Cybersat"
-         (unit
+         (base/unit
           :name "Lucifer Cybersat"
           :summary
            "* The Lucifer’s designed for one purpose - to ambush and kill enemy warships.  Its
@@ -2510,17 +2510,17 @@ Quantity	Name	Type	Arc	ACC	DM	BR	ROF	Perks + Flaws	Ammo
           :height "18.8m"
           :speedspace "4g"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             "Mission Section"
-             (unitskill
+             (base/unitskill
               :name "Mission Section"
               :unitspecialtymap
-               (unitspecialtymap
+               (base/unitspecialtymap
                 "Stealth Vessel"
-                 (unitspecialty
+                 (base/unitspecialty
                   :name "Stealth Vessel")))))
         "Lucifer Claw Drone"
-         (unit
+         (base/unit
           :name "Lucifer Claw Drone"
           :summary
            "Armor:	10/20/30
@@ -2536,7 +2536,7 @@ Quantity	Name	Type	Arc	ACC	DM	BR	ROF	Perks + Flaws	Ammo
           :mass "3tons"
           :speedspace "5g")
         "Siren Space Interceptor"
-         (unit
+         (base/unit
           :name "Siren Space Interceptor"
           :summary
            "* The Siren Fighter is the standard medium range interceptor spaceship
@@ -2554,7 +2554,7 @@ practical for Earth defense.
           :speedspace "3.5g"
           :width "12m")
         "Syreen Mech Suit"
-         (unit
+         (base/unit
           :name "Syreen Mech Suit"
           :image "JovianChronicles/SyreenToken.png"
           :summary
@@ -2577,7 +2577,7 @@ practical for Earth defense.
           :speedspace "3g"
           :width "17.5m")
         "Poseidon Battlecruiser"
-         (unit
+         (base/unit
           :name "Poseidon Battlecruiser"
           :summary
            "* The Poseidon Class Battlecruiser is the top of the line UEA warship. It
@@ -2598,7 +2598,7 @@ Suits, so it carries more interceptors than Mechs.
           :speedspace ".5g"
           :width "200m")
         "Tengu Escort Carrier"
-         (unit
+         (base/unit
           :name "Tengu Escort Carrier"
           :summary
            "* The Tengu is a long range craft designed for limited engagements and policing. It has extensive supplies but lacks firepower.
@@ -2614,7 +2614,7 @@ Suits, so it carries more interceptors than Mechs.
           :speedspace ".5g"
           :width "38m")
         "Wyvern Mech Suit"
-         (unit
+         (base/unit
           :name "Wyvern Mech Suit"
           :image "JovianChronicles/WyvernToken.png"
           :summary
@@ -2819,18 +2819,18 @@ an ideal material for mobile suit armor."
      (section
       :name "Gundam Independents"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Side
-         (unit
+         (base/unit
           :name "Side"
           :length "32km")))
     "Gundam Federation"
      (section
       :name "Gundam Federation"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Ball
-         (unit
+         (base/unit
           :name "Ball"
           :image "Gundam/Ball.png"
           :titles "RB-79"
@@ -2839,19 +2839,19 @@ an ideal material for mobile suit armor."
           :mass "17.2tons"
           :height "12.8m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "3"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "180mm Recoilless Cannon"
-                 (unititem
+                 (base/unititem
                   :name "180mm Recoilless Cannon"
                   :facing "F")))))
         :Gundam
-         (unit
+         (base/unit
           :name "Gundam"
           :image "Gundam/Gundam.png"
           :summary
@@ -2864,23 +2864,23 @@ RX·M-Sh-008/S-01025 shield, can be optionally stored on backpack"
           :mass "43.4tons"
           :height "18m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "6"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx2"
                   :number "2")
                 "380mm Hyper Bazooka"
-                 (unititem
+                 (base/unititem
                   :name "380mm Hyper Bazooka")))))
         "Gundam Ground Type"
-         (unit
+         (base/unit
           :name "Gundam Ground Type"
           :image "Gundam/GundamGroundType.png"
           :reference `The engineers at Jaburo used spare parts originally manufactured for the RX-78-2 Gundam prototype and built approximately 20 units of a specialized ground combat-model Gundam, the RX-79[G]. Twelve of these units were assigned to the Kojima Battalion stationed in Southeast Asia, particularly to the 04th and 08th MS Teams. Since the RX-79[G]'s were made primarily of spare parts leftover from "Project V," no replacement parts were available. This resulted in hasty field repairs`
@@ -2899,28 +2899,28 @@ bazooka gun, clip-fed, 7 rounds per clip;
           :mass "52.8tons"
           :height "18.2m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "100mm Machine Gun"
-                 (unititem
+                 (base/unititem
                   :name "100mm Machine Gun"
                   :summary "Clip-fed, 2 spare clips stored on hip armor")
                 "180mm Recoilless Cannon"
-                 (unititem
+                 (base/unititem
                   :name "180mm Recoilless Cannon")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :summary "Chest Mount"
                   :facing "FF"
                   :number "1")))))
         :Guncannon
-         (unit
+         (base/unit
           :name "Guncannon"
           :image "Gundam/Guncannon.png"
           :summary
@@ -2932,26 +2932,26 @@ bazooka gun, clip-fed, 7 rounds per clip;
           :mass "51tons"
           :height "17.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "240mm Recoilless Cannon"
-                 (unititem
+                 (base/unititem
                   :name "240mm Recoilless Cannon"
                   :facing "FFx2"
                   :number "2"
                   :rounds "40")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx2"
                   :number "2")))))
         :Guntank
-         (unit
+         (base/unit
           :name "Guntank"
           :image "Gundam/Guntank.png"
           :summary
@@ -2963,21 +2963,21 @@ bazooka gun, clip-fed, 7 rounds per clip;
           :mass "56tons"
           :height "15.6m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "180mm Recoilless Cannon"
-                 (unititem
+                 (base/unititem
                   :name "180mm Recoilless Cannon"
                   :facing "FFx2"
                   :number "2"
                   :rounds "60")))))
         :GM
-         (unit
+         (base/unit
           :name "GM"
           :image "Gundam/GM.png"
           :titles "RGM-79"
@@ -2985,12 +2985,12 @@ bazooka gun, clip-fed, 7 rounds per clip;
           :mass "41.2tons"
           :height "18m")
         :Magellan
-         (unit
+         (base/unit
           :name "Magellan"
           :image "Gundam/Magellan.png"
           :classification "Hvy. Spacecraft")
         "Pegasus Class Carrier"
-         (unit
+         (base/unit
           :name "Pegasus Class Carrier"
           :image "Gundam/WhiteBase.png"
           :summary
@@ -3007,64 +3007,64 @@ Mobile suits: 8 (12)
      (section
       :name "Zeon"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Big-Zam
-         (unit
+         (base/unit
           :name "Big-Zam"
           :image "Gundam/BigZam.png"
           :classification "Med. Spacecraft"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Energy"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Energy")))))
         :Dom
-         (unit
+         (base/unit
           :name "Dom"
           :image "Gundam/Dom.png"
           :summary "Ground Mobile Suit"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Elmeth
-         (unit
+         (base/unit
           :name "Elmeth"
           :image "Gundam/Elmeth.png"
           :classification "Med. Spacecraft")
         :Gelgoog
-         (unit
+         (base/unit
           :name "Gelgoog"
           :image "Gundam/Gelgoog.png"
           :classification "Lt. Spacecraft"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Gouf
-         (unit
+         (base/unit
           :name "Gouf"
           :image "Gundam/Gouf.png"
           :classification "Lt. Spacecraft")
         "Rick Dom"
-         (unit
+         (base/unit
           :name "Rick Dom"
           :image "Gundam/RickDom.png"
           :reference
@@ -3080,19 +3080,19 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "78.6tons"
           :height "18.6m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "360mm Hyper Bazooka"
-                 (unititem
+                 (base/unititem
                   :name "360mm Hyper Bazooka"
                   :rounds "10")))))
         "Zaku II"
-         (unit
+         (base/unit
           :name "Zaku II"
           :image "Gundam/ZakuII.png"
           :summary
@@ -3107,23 +3107,23 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "58.1tons"
           :height "17.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "3"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "280mm Bazooka"
-                 (unititem
+                 (base/unititem
                   :name "280mm Bazooka"
                   :rounds "4")
                 "120mm Machine Gun"
-                 (unititem
+                 (base/unititem
                   :name "120mm Machine Gun"
                   :rounds "100")))))
         :Z'Gok
-         (unit
+         (base/unit
           :name "Z'Gok"
           :image "Gundam/ZGok.png"
           :summary
@@ -3137,17 +3137,17 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "65.1tons"
           :height "18.4m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Zeong
-         (unit
+         (base/unit
           :name "Zeong"
           :image "Gundam/Zeong.png"
           :summary
@@ -3159,17 +3159,17 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "151.2tons"
           :height "17.3m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         "Gwazine Class Battleship"
-         (unit
+         (base/unit
           :name "Gwazine Class Battleship"
           :image "Gundam/Gwazine.png"
           :reference "The Zeon Gwazine class battleships were more than a match for any Federation Forces warship."
@@ -3182,11 +3182,11 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :length "440m"
           :width "320m")
         :Musai
-         (unit
+         (base/unit
           :name "Musai"
           :image "Gundam/Musai.png")
         "Zanzibar Class Cruiser"
-         (unit
+         (base/unit
           :name "Zanzibar Class Cruiser"
           :image "Gundam/Zanzibar.png"
           :reference
@@ -3203,33 +3203,33 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
      (section
       :name "0083"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Gundam GP01"
-         (unit
+         (base/unit
           :name "Gundam GP01"
           :image "Gundam/GundamGP01.png"
           :titles "Gundam Unit 01")
         "Gundam GP02"
-         (unit
+         (base/unit
           :name "Gundam GP02"
           :image "Gundam/GundamGP02.png"
           :titles "Gundam Unit 02")
         "Gundam GP03"
-         (unit
+         (base/unit
           :name "Gundam GP03"
           :image "Gundam/GundamGP03.png"
           :titles "Gundam Unit 03")
         "Neue Ziel"
-         (unit
+         (base/unit
           :name "Neue Ziel"
           :image "Gundam/NeueZiel.png")))
     :AEUG
      (section
       :name "AEUG"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Z Gundam"
-         (unit
+         (base/unit
           :name "Z Gundam"
           :image "Gundam/ZGundam.png"
           :summary
@@ -3245,28 +3245,28 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "28.7tons"
           :height "19.8m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "6"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "5.7MW Beam Rifle"
-                 (unititem
+                 (base/unititem
                   :name "5.7MW Beam Rifle"
                   :summary "2 spare e-pacs stored in shield")
                 "8.3MW Hyper Mega Launcher"
-                 (unititem
+                 (base/unititem
                   :name "8.3MW Hyper Mega Launcher")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx2"
                   :number "2"
                   :rounds "1200")))))
         "Z Gundam Waverider"
-         (unit
+         (base/unit
           :name "Z Gundam Waverider"
           :image "Gundam/Waverider_ZGundam.png"
           :summary "* Variable Mobile Suit"
@@ -3277,21 +3277,21 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :length "24.3m"
           :width "18.6m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "6"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "5.7MW Beam Rifle"
-                 (unititem
+                 (base/unititem
                   :name "5.7MW Beam Rifle")
                 "1.3MW Beam Gun"
-                 (unititem
+                 (base/unititem
                   :name "1.3MW Beam Gun")))))
         :G-Defenser
-         (unit
+         (base/unit
           :name "G-Defenser"
           :image "Gundam/GDefenser.png"
           :summary
@@ -3305,17 +3305,17 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :length "39.5m"
           :width "27.1m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         "Gundam MK-II"
-         (unit
+         (base/unit
           :name "Gundam MK-II"
           :image "Gundam/GundamMkII.png"
           :reference
@@ -3330,28 +3330,28 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "33.4tons"
           :height "18.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "5"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "2.6MW Beam Rifle"
-                 (unititem
+                 (base/unititem
                   :name "2.6MW Beam Rifle")
                 "360mm Hyper Bazooka"
-                 (unititem
+                 (base/unititem
                   :name "360mm Hyper Bazooka"
                   :rounds "7")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx2"
                   :number "2"
                   :rounds "1400")))))
         "Hyaku Shiki"
-         (unit
+         (base/unit
           :name "Hyaku Shiki"
           :image "Gundam/HyakuShiki.png"
           :summary
@@ -3364,23 +3364,23 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "31.5tons"
           :height "18.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "6"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "2.8MW Beam Rifle"
-                 (unititem
+                 (base/unititem
                   :name "2.8MW Beam Rifle")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx2"
                   :number "2")))))
         :Nemo
-         (unit
+         (base/unit
           :name "Nemo"
           :image "Gundam/Nemo.png"
           :summary
@@ -3392,23 +3392,23 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "36.2tons"
           :height "18.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "3"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "1.9MW Beam Rifle"
-                 (unititem
+                 (base/unititem
                   :name "1.9MW Beam Rifle")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx2"
                   :number "2")))))
         "Rick Dias"
-         (unit
+         (base/unit
           :name "Rick Dias"
           :image "Gundam/RickDias.png"
           :reference
@@ -3423,24 +3423,24 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "32.2tons"
           :height "18.7m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "3"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "2.2MW Beam Pistol"
-                 (unititem
+                 (base/unititem
                   :name "2.2MW Beam Pistol"
                   :number "2")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx2"
                   :number "2")))))
         "Super Gundam"
-         (unit
+         (base/unit
           :name "Super Gundam"
           :image "Gundam/SuperGundam.png"
           :summary "Combined Mobile Suit"
@@ -3449,12 +3449,12 @@ Fixed armaments: scattering beam gun, mounted in torso; heat saber Type7, batter
           :mass "72.9tons"
           :height "18.5m")
         :Argama
-         (unit
+         (base/unit
           :name "Argama"
           :image "Gundam/Argama.png"
           :classification "Hvy. Spacecraft")
         "Garuda Class Transport"
-         (unit
+         (base/unit
           :name "Garuda Class Transport"
           :image "Gundam/Garuda_Audhumla.png"
           :summary
@@ -3472,9 +3472,9 @@ Mechanical designer: Kazumi Fujita"
      (section
       :name "Gundam Titans"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Asshimar
-         (unit
+         (base/unit
           :name "Asshimar"
           :image "Gundam/Asshimar.png"
           :summary "* Variable Mobile Suit"
@@ -3483,17 +3483,17 @@ Mechanical designer: Kazumi Fujita"
           :mass "41.1tons"
           :height "19.3m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Baund-Doc
-         (unit
+         (base/unit
           :name "Baund-Doc"
           :image "Gundam/BaundDoc.png"
           :summary "* Variable Mobile Suit"
@@ -3502,17 +3502,17 @@ Mechanical designer: Kazumi Fujita"
           :mass "82.7tons"
           :height "27.3m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Byalant
-         (unit
+         (base/unit
           :name "Byalant"
           :image "Gundam/Byalant.png"
           :summary "* Variable Mobile Suit"
@@ -3521,17 +3521,17 @@ Mechanical designer: Kazumi Fujita"
           :mass "34.2tons"
           :height "18.6m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Gabthley
-         (unit
+         (base/unit
           :name "Gabthley"
           :image "Gundam/Gabthley.png"
           :summary "* Variable Mobile Suit"
@@ -3540,17 +3540,17 @@ Mechanical designer: Kazumi Fujita"
           :mass "32.6tons"
           :height "18.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Gaplant
-         (unit
+         (base/unit
           :name "Gaplant"
           :image "Gundam/Gaplant.png"
           :summary "* Variable Mobile Suit"
@@ -3559,17 +3559,17 @@ Mechanical designer: Kazumi Fujita"
           :mass "50.7tons"
           :height "19.8m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         "GM II"
-         (unit
+         (base/unit
           :name "GM II"
           :image "Gundam/GMII.png"
           :summary
@@ -3582,23 +3582,23 @@ Optional fixed armaments: shield, mounted on either forearm"
           :mass "40.5tons"
           :height "18.1m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "3"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "1.9MW Beam Rifle"
-                 (unititem
+                 (base/unititem
                   :name "1.9MW Beam Rifle")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx2"
                   :number "2")))))
         :Hambrabi
-         (unit
+         (base/unit
           :name "Hambrabi"
           :image "Gundam/Hambrabi.png"
           :summary "* Variable Mobile Suit"
@@ -3607,17 +3607,17 @@ Optional fixed armaments: shield, mounted on either forearm"
           :mass "34.6tons"
           :height "19.9m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Hizack
-         (unit
+         (base/unit
           :name "Hizack"
           :image "Gundam/Hizack.png"
           :titles "RMS-106"
@@ -3625,17 +3625,17 @@ Optional fixed armaments: shield, mounted on either forearm"
           :mass "38.7tons"
           :height "18m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Marasai
-         (unit
+         (base/unit
           :name "Marasai"
           :image "Gundam/Marasai.png"
           :titles "RMS-108"
@@ -3643,17 +3643,17 @@ Optional fixed armaments: shield, mounted on either forearm"
           :mass "33.1tons"
           :height "17.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Messala
-         (unit
+         (base/unit
           :name "Messala"
           :image "Gundam/Messala.png"
           :summary "* Variable Mobile Suit"
@@ -3662,17 +3662,17 @@ Optional fixed armaments: shield, mounted on either forearm"
           :mass "37.3tons"
           :height "23m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Psycho-Gundam
-         (unit
+         (base/unit
           :name "Psycho-Gundam"
           :image "Gundam/PsychoGundam.png"
           :summary "* Variable Mobile Suit"
@@ -3681,17 +3681,17 @@ Optional fixed armaments: shield, mounted on either forearm"
           :mass "214.1tons"
           :height "40m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Energy"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Energy")))))
         "Psycho-Gundam MK-II"
-         (unit
+         (base/unit
           :name "Psycho-Gundam MK-II"
           :image "Gundam/PsychoGundamMkII.png"
           :summary
@@ -3706,17 +3706,17 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
           :mass "187.8tons"
           :height "40m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Energy"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Energy")))))
         :Qubeley
-         (unit
+         (base/unit
           :name "Qubeley"
           :image "Gundam/Qubeley.png"
           :summary "Fixed armaments: 2 x beam launcher/beam saber, mounted in forearms in beam launcher mode, hand-carried in beam saber mode"
@@ -3726,19 +3726,19 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
           :mass "35.2tons"
           :height "18.4m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "6"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "1.3MW Funnel"
-                 (unititem
+                 (base/unititem
                   :name "1.3MW Funnel"
                   :number "10")))))
         :The-O
-         (unit
+         (base/unit
           :name "The-O"
           :image "Gundam/TheO.png"
           :summary "4 x sub-arm, mounted inside front skirt armor"
@@ -3748,41 +3748,41 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
           :mass "57.3tons"
           :height "24.8m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "6"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "2.6MW Beam Rifle"
-                 (unititem
+                 (base/unititem
                   :name "2.6MW Beam Rifle")))))
         :Saberfish
-         (unit
+         (base/unit
           :name "Saberfish"
           :image "Gundam/Saberfish.png"
           :summary "High Altitude Fighter"
           :classification "Lt. Aircraft")
         :Gwazine
-         (unit
+         (base/unit
           :name "Gwazine"
           :image "Gundam/Gwazine.png")
         :Jupitris
-         (unit
+         (base/unit
           :name "Jupitris"
           :image "Gundam/Jupitris.png")
         :Salamis
-         (unit
+         (base/unit
           :name "Salamis"
           :image "Gundam/Salamis.png")))
     "Federation (New)"
      (section
       :name "Federation (New)"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Nu Gundam"
-         (unit
+         (base/unit
           :name "Nu Gundam"
           :image "Gundam/NuGundam.png"
           :titles "RX-93"
@@ -3790,17 +3790,17 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
           :mass "27.9tons"
           :height "22m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))
         :Re-GZ
-         (unit
+         (base/unit
           :name "Re-GZ"
           :image "Gundam/ReGZ.png"
           :summary "* Variable Mobile Suit"
@@ -3809,22 +3809,22 @@ Though armed with the same 3-barreled scattering mega particle gun in its chest 
           :mass "24.7tons"
           :height "20.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles")))))))
     "Neo Zion"
      (section
       :name "Neo Zion"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Alpha-Azieru
-         (unit
+         (base/unit
           :name "Alpha-Azieru"
           :image "Gundam/AlphaAzieru.png"
           :summary
@@ -3837,28 +3837,28 @@ Fixed armaments: 2 x wire-guided psycommu mega arm, each mounts 5 x beam gun, fi
           :height "58.4m"
           :length "108m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "6"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "19.5 MW Mega Particle Gun"
-                 (unititem
+                 (base/unititem
                   :name "19.5 MW Mega Particle Gun"
                   :facing "Turret")
                 "2.2MW Funnel"
-                 (unititem
+                 (base/unititem
                   :name "2.2MW Funnel"
                   :number "9")
                 "60mm Vulcan Cannon"
-                 (unititem
+                 (base/unititem
                   :name "60mm Vulcan Cannon"
                   :facing "Turretx4"
                   :number "4")))))
         :Sazabi
-         (unit
+         (base/unit
           :name "Sazabi"
           :image "Gundam/NuGundam.png"
           :titles "MSN-04"
@@ -3866,14 +3866,14 @@ Fixed armaments: 2 x wire-guided psycommu mega arm, each mounts 5 x beam gun, fi
           :mass "30.5tons"
           :height "25m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Hardened vs. Projectiles"
-                 (unitability
+                 (base/unitability
                   :name "Hardened vs. Projectiles"))))))))))
 
 (func chapter_terminator : base/chapter
@@ -3885,28 +3885,28 @@ Fixed armaments: 2 x wire-guided psycommu mega arm, each mounts 5 x beam gun, fi
      (section
       :name "Terminator Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Terminator T-800"
-         (unit
+         (base/unit
           :name "Terminator T-800"
           :image "Terminator/T800.png"
           :mass "200kg"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Strength
-             (unitskill
+             (base/unitskill
               :name "Strength")))
         "Terminator T-1000"
-         (unit
+         (base/unit
           :name "Terminator T-1000"
           :image "Terminator/T1000.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Flexible
-             (unitskill
+             (base/unitskill
               :name "Flexible")))
         "Terminator T-X"
-         (unit
+         (base/unit
           :name "Terminator T-X"
           :image "Terminator/TX.png"
           :summary
@@ -3918,25 +3918,25 @@ contains many powerful weapons making it considerably more deadly than
 previous versions."
           :mass "150kg"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             "Natural Weaponry"
-             (unitskill
+             (base/unitskill
               :name "Natural Weaponry")))
         "Terminator Hunter Killer"
-         (unit
+         (base/unit
           :name "Terminator Hunter Killer"
           :image "Terminator/HunterKiller.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery")))
         "Terminator Tank"
-         (unit
+         (base/unit
           :name "Terminator Tank"
           :image "Terminator/HKTank.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"))))))))

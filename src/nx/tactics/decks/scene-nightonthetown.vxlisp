@@ -78,7 +78,7 @@
      :unititemmap
       (base/unititemmap<-unititemlist
         (base/unititem
-         :item (base/item<-tactics-key tactics "Monocle")))))))
+         :item (base/item<-tactics-key tactics "Accessory: Monocle")))))))
 
 (func unit-zombie-crawler : base/unit
  [tactics : base/tactics]
@@ -184,38 +184,6 @@
         (base/unitability
          :ability (base/ability<-tactics-key tactics "Bite")))))))
 
-(func unit-zombie-walker : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Zombie: Walker"
-  :image "images/cards/unit-zombie-walker.svg"
-  :body "8x1"
-  :mind "5x-1"
-  :speed "4x0"
-  :speedland "4kph/2.5mph"
-  :will "2x1"
-  :mass "80kg/175"
-  :summary
-   "[Zombie]"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Close Combat")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Grab")))))
-  :unitpowermap
-   (base/unitpowermap<-unitpowerlist
-    (base/unitpower
-     :power (base/power<-tactics-key tactics "Natural Weaponry")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Bite")))))))
-
 (func deck-nightonthetown : base/deck
  [tactics : base/tactics]
  (let : base/deck
@@ -228,13 +196,17 @@
      (base/cardlist
       professor
       professori
-      (any<-any : base/cardlist
+      (list<-list : base/cardlist
+       (base/unitlist<-tactics-keys
+        tactics
+        "Zombie: Walker"))
+      (list<-list : base/cardlist
        (base/abilitylist<-tactics-keys
         tactics
         "Bite"
         "Detail Oriented"
         "Grab"))
-      (any<-any : base/cardlist
+      (list<-list : base/cardlist
        (base/itemlist<-tactics-keys
         tactics
         "Ammo: Revolver"
@@ -248,7 +220,7 @@
         "Jerry Can"
         "Keys"
         "Knife"
-        "Monocle"
+        "Accessory: Monocle"
         "Paper: Lock Combination"
         "Pistol: Revolver"
         "Rifle"
@@ -259,8 +231,6 @@
       (base/cardimage<-card (unit-zombie-dog tactics))
       (unit-zombie-runner tactics)
       (base/cardimage<-card (unit-zombie-runner tactics))
-      (unit-zombie-walker tactics)
-      (base/cardimage<-card (unit-zombie-walker tactics))
       (place-clinic)
       (place-conveniencestore)
       (place-gasstation)

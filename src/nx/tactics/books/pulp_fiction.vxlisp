@@ -36,47 +36,47 @@
      (section
       :name "Government Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Government Agent"
-         (unit
+         (base/unit
           :name "Government Agent"
           :summary "We have top men working on it now.  Who?  Top... men. - Raiders of the Lost Ark")))
     "Treasure Hunters"
      (section
       :name "Treasure Hunters"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Indiana Jones"
-         (unit
+         (base/unit
           :name "Indiana Jones"
           :image "PulpFiction/IndianaJones.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Knowledge
-             (unitskill
+             (base/unitskill
               :name "Knowledge"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Antiquities
-                 (unitability
+                 (base/unitability
                   :name "Antiquities")
                 :Archeology
-                 (unitability
+                 (base/unitability
                   :name "Archeology")
                 "Ancient History"
-                 (unitability
+                 (base/unitability
                   :name "Ancient History")
                 "Religious Studies"
-                 (unitability
+                 (base/unitability
                   :name "Religious Studies")))))
         "Lara Croft"
-         (unit
+         (base/unit
           :name "Lara Croft"
           :image "PulpFiction/LaraCroft.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Influence
-             (unitskill
+             (base/unitskill
               :name "Influence"))))))))
 
 (func chapter_flash_gordon : base/chapter
@@ -100,21 +100,21 @@
      (section
       :name "Land of the Lost Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Pylon
-         (unit
+         (base/unit
           :name "Pylon")
         :Skylon
-         (unit
+         (base/unit
           :name "Skylon")
         :Enik
-         (unit
+         (base/unit
           :name "Enik")
         :Pakuni
-         (unit
+         (base/unit
           :name "Pakuni")
         :Sleestak
-         (unit
+         (base/unit
           :name "Sleestak"))))))
 
 (func chapter_lost_continent : base/chapter

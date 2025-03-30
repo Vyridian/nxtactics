@@ -85,16 +85,16 @@ Words
      (section
       :name "Archons"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Furina
-         (unit
+         (base/unit
           :name "Furina"
           :titles "Focolor")
         :Nahida
-         (unit
+         (base/unit
           :name "Nahida")
         "Raiden Shogun"
-         (unit
+         (base/unit
           :name "Raiden Shogun"
           :summary
            "* The Raiden Shogun is the current Electro Archon. There are actually 3 versions of the Shogun that look almost identical: The twin sisters Ei and Makoto, and the artificial duplicate called the Puppet.
@@ -110,14 +110,14 @@ Words
             ** She states that she can casually stop storms across the world to let people sleep."
           :titles "Baal, Baalzebub, Ei, Makoto, Puppet, Shadow")
         :Venti
-         (unit
+         (base/unit
           :name "Venti"
           :summary
            "* Barbados splits the mountains in Mondstadt with a divine wind and sends entire mountains flying to become the Golden Apple Archepelego.
             * Barbados is easily considered to be the weakest of the Archons."
           :titles "Barbados")
         "Zhong Li"
-         (unit
+         (base/unit
           :name "Zhong Li"
           :summary "* Zhong Li dominated the Archon War."
           :titles "Morax, Rex Lapis"))))))
@@ -143,9 +143,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
      (section
       :name "God of War Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Kratos
-         (unit
+         (base/unit
           :name "Kratos"
           :image "images/fantasy/Kratos.png"))))))
 
@@ -158,9 +158,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
      (section
       :name "Lord of the Rings Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Galadriel
-         (unit
+         (base/unit
           :name "Galadriel"
           :reference
            "* If you ask it of me, I will give you the One Ring. You offer it to me freely? I do not deny that my heart has greatly desired this. In the place of a Dark Lord you would have a Queen! Not dark but beautiful and terrible as the Dawn! Treacherous as the Seas! Stronger than the foundations of the Earth! All shall love me and despair! ... I passed the test. I shall diminish, and go to the west, and remain Galadriel. - Frodo and Galadriel - Lord of the Rings"))))))
@@ -174,45 +174,45 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
      (section
       :name "Nexus Fantasy Characters"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Arinni Taybor"
-         (unit
+         (base/unit
           :name "Arinni Taybor"
           :summary "* Human Priest/Monk"
           :titles "Taybor the Red"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :level "5"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Quarterstaff
-                 (unititem
+                 (base/unititem
                   :name "Quarterstaff")))))
         "Eldruf Grundel"
-         (unit
+         (base/unit
           :name "Eldruf Grundel"
           :summary "Gnome Thief Magician")
         :Flint
-         (unit
+         (base/unit
           :name "Flint"
           :image "images/fantasy/Flint.png"
           :summary "Half-Elven Thief"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Stealth
-             (unitskill
+             (base/unitskill
               :name "Stealth"
               :level "9"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Backstab
-                 (unitability
+                 (base/unitability
                   :name "Backstab")))))
         "Galamir Mirlesem"
-         (unit
+         (base/unit
           :name "Galamir Mirlesem"
           :image "images/fantasy/GalamirMirlesem.png"
           :demeanor "Imperious"
@@ -222,19 +222,19 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.
             * History - Galamir was born to Chantry trainers, and as a child he was allowed special access to the arcane academy. As a teen, he became obsessed with magic and its effect on the world. His brilliance and magical aptitude were soon recognized and he was accepted into the academy. For the next 25 years he completed his full wizardry and elemental training and received top honors. He was a logical 	candidate to become a trainer himself, but he was bored of the cloistered life, so he began visiting other Chantries across the world. Along the way he encountered a naive, young half-elf rogue named Phirax living on a simple farm. Galamir recruited Phirax to join him to perform the more dangerous and mundane tasks while Galamir provided the leadership and strategy. Later, he recruited the Warrior Stam and the Cleric Sarak into their party to rounded out their abilities."
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Wizardry
-             (unitpower
+             (base/unitpower
               :name "Wizardry"
               :level "11"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             "Physical Powers"
-             (unitskill
+             (base/unitskill
               :name "Physical Powers"
               :level "10")))
         "Hetman Undrig"
-         (unit
+         (base/unit
           :name "Hetman Undrig"
           :summary
            "* Orc Assassin
@@ -242,40 +242,40 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.
             * The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote."
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :level "5"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Sword: Long"
-                 (unititem
+                 (base/unititem
                   :name "Sword: Long")
                 "Knife: Dagger"
-                 (unititem
+                 (base/unititem
                   :name "Knife: Dagger")))))
         "Jaris Ransun"
-         (unit
+         (base/unit
           :name "Jaris Ransun"
           :image "images/fantasy/Ransun.png"
           :summary "Human Hunter"
           :titles "Valen the Hunter"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Defense
-             (unitskill
+             (base/unitskill
               :name "Defense"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Chain Mail Armor"
-                 (unititem
+                 (base/unititem
                   :name "Chain Mail Armor")
                 :Shield
-                 (unititem
+                 (base/unititem
                   :name "Shield")))))
         "Phirax Alganon"
-         (unit
+         (base/unit
           :name "Phirax Alganon"
           :image "images/fantasy/PhiraxAlganon.png"
           :demeanor "Personable"
@@ -286,80 +286,80 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).
             * History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure."
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Empathy
-             (unitpower
+             (base/unitpower
               :name "Empathy"
               :level "12"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Demoralize
-                 (unitability
+                 (base/unitability
                   :name "Demoralize")
                 :Inspiration
-                 (unitability
+                 (base/unitability
                   :name "Inspiration"))))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Stealth
-             (unitskill
+             (base/unitskill
               :name "Stealth"
               :level "9"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Backstab
-                 (unitability
+                 (base/unitability
                   :name "Backstab")
                 "Hide in Shadows"
-                 (unitability
+                 (base/unitability
                   :name "Hide in Shadows")
                 "Move Silently"
-                 (unitability
+                 (base/unitability
                   :name "Move Silently")))))
         "Sarak Ishimar"
-         (unit
+         (base/unit
           :name "Sarak Ishimar"
           :image "images/fantasy/SarakIshimar.png"
           :summary "Human Cleric"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Faith
-             (unitpower
+             (base/unitpower
               :name "Faith"
               :level "8")
             :Invocation
-             (unitpower
+             (base/unitpower
               :name "Invocation"
               :level "10"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             "Physical Powers"
-             (unitskill
+             (base/unitskill
               :name "Physical Powers"
               :level "8")))
         "Stam Domindor"
-         (unit
+         (base/unit
           :name "Stam Domindor"
           :image "images/fantasy/Stam.png"
           :summary "Dwarven Warrior"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Ranged
-             (unitskill
+             (base/unitskill
               :name "Ranged"
               :level "7"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Bow: Short"
-                 (unititem
+                 (base/unititem
                   :name "Bow: Short")))))))
     "Nexus Fantasy Actors"
      (section
       :name "Nexus Fantasy Actors"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Antios Teron"
-         (unit
+         (base/unit
           :name "Antios Teron"
           :summary
            "* Human Spy
@@ -368,13 +368,13 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             local politics. His mission has no time limit, and he is periodically scried by Lord Aramel's wizards.
             * He is a convincing actor who can play most parts well. He is particularly ruthless about his identity and will silence any who might compromise him or his mission."
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Espionage
-             (unitskill
+             (base/unitskill
               :name "Espionage"
               :level "5")))
         :Blackguard
-         (unit
+         (base/unit
           :name "Blackguard"
           :summary
            "* An elite mercenary cadre organized by Hetman Undrig.
@@ -384,46 +384,46 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Dragoons are trained professionals in their jobs and recognize the need for discretion. They care little for whether a job is legal or not, and the Dragoons are known for possessing certain 'subtle' skills that make covert missions possible. They do not, however, enjoy excessive risk and are not above abandoning very dangerous missions."
           :titles "Black Dragoon")
         "Charn Aramel"
-         (unit
+         (base/unit
           :name "Charn Aramel"
           :summary "Human Dread Knight"
           :titles "Nighthook, Lord Aramel"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Conviction
-             (unitpower
+             (base/unitpower
               :name "Conviction"
               :level "10"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             "Psychic Powers"
-             (unitskill
+             (base/unitskill
               :name "Psychic Powers"
               :level "10")))
         "Sarani Kalea"
-         (unit
+         (base/unit
           :name "Sarani Kalea"
           :summary "Human Priestess"
           :titles "Princess Kalea, High Priestess of Kali"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Conviction
-             (unitpower
+             (base/unitpower
               :name "Conviction"
               :level "12")
             :Invocation
-             (unitpower
+             (base/unitpower
               :name "Invocation"
               :level "16"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Aspecting
-                 (unitability
+                 (base/unitability
                   :name "Aspecting"))))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             "Psychic Powers"
-             (unitskill
+             (base/unitskill
               :name "Psychic Powers"
               :level "12"))))))))
 
@@ -484,9 +484,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
              (place
               :name "Thebes"))
           :unitmap
-           (unitmap
+           (base/unitmap
             "Kemet Tomb Robber"
-             (unit
+             (base/unit
               :name "Kemet Tomb Robber"
               :summary "* The tomb robbers are nomadic folk who have found a profitable lifestyle by digging in dangerous tombs for untold riches. They can act as guides for expeditions into the desert.")))
         :Batrea
@@ -496,13 +496,13 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
            "* Home of the Batrean people. The Batrean males and females visually appear to be entirely different races. The males are brutish and ugly while the females are graceful and incredibly beautiful. It is the peculiar custom of Batrean males to sell their females as concubines. The females do not seem to mind leaving their brutish husbands and thatch and mud hovels.
             * History - The Batreans are a primitive people when they were visited by a Warlock fleeing persecution. The natives marvelled at his magic, so he set up a little fiefdom for himself in the jungle. He took slaves and enchanted a few to be beautiful servants. Later, one of his lovely maidens killed him in his sleep. Unwittingly, however, he had set a selective breeding program in motion. The beautiful servants returned to their village where the males enslaved them and exiled the ordinary women. Within a generation, only the beautiful women reproduced and their daughters were as lovely as themselves while the sons remained simple and primitive. Generations later, the Batreans are a complicated people, completely split by gender."
           :unitmap
-           (unitmap
+           (base/unitmap
             "Batrean Concubine"
-             (unit
+             (base/unit
               :name "Batrean Concubine"
               :summary "* Batreans women are engaging creatures, slender and lovely beyond compare. Their movements are graceful, and their manner of speech is charming and at times most eloquent. They are reknowned in other lands as the perfect concubines. Some say, however, that the Batrean women exhibit an uncanny ability to sublty influence their masters.")
             "Batrean Grunt"
-             (unit
+             (base/unit
               :name "Batrean Grunt"
               :summary "* Batrean men are huge, slope shouldered, and remarkably ugly. They are slow and brutish and are constantly arguing and fighting among themselves. They generally ignore the beautiful females except during their week-long mating season.")))
         "Burning Waste"
@@ -518,19 +518,19 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
           :name "Djaffa"
           :summary "* Djaffir are a slender, wiry desert people famous for being masterful merchants who always drive a hard bargain. They wear flowing head-dresses, robes, cloaks, and leather masks. They do not remove their masks believing that the face is the mirror to the soul and believe the masks protect them from hostile magic. The more skeptical claim that they were masks to conceal their identities from those they intend to relive of their money."
           :unitmap
-           (unitmap
+           (base/unitmap
             "Djaffir Bandit"
-             (unit
+             (base/unit
               :name "Djaffir Bandit"
               :summary "* There are small tribes of Djaffir bandits living in the desert preying on caravans. Though they will kill if provoked, they are not prone to wanton violence. Neither are they known to raid the caravans of the Djaffir Merchants, a fact which many attribute to collusion between the Sheiks of the two tribal groups. Some say the differnce between a merchant and a bandit is a matter of semantics.")
             "Djaffir Merchant"
-             (unit
+             (base/unit
               :name "Djaffir Merchant"
               :summary
                "* They are shrewd hagglers, but fortunately they are very proud of their reputations so they typically only trade in high quality goods.
                 * The merchants live in walled towns surrounding oases.")
             "Djaffir Wizard"
-             (unit
+             (base/unit
               :name "Djaffir Wizard"
               :summary "* The Wizards are well regarded by their people as seers and mystics. Like the rest of their people they are superstitious and see omens everywhere.")))
         :Dracarta
@@ -552,17 +552,17 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :name "Dracata Halls of Justice"
               :summary "* The Council of Elders, Dracarta's esteemed legisilative/judicial body holds sway in these large halls. The laws of the land are determined here. Serious crimes are also heard here in open court. Punishments include forced labor, banishment to the wilderness, or for truly heinous offenses: the sentence of Retribution (immersion in red iron)."))
           :unitmap
-           (unitmap
+           (base/unitmap
             "Dracartan Alchemist"
-             (unit
+             (base/unit
               :name "Dracartan Alchemist"
               :summary "* Dracartan Alchemists are employed to create storm crystals and adamantine for the duneships.")
             "Dracartan Desert Scout"
-             (unit
+             (base/unit
               :name "Dracartan Desert Scout"
               :summary "* The Dracartan military is largely composed of these scouts. In order to survive in the desert they do not user heavy gear or weapons. When facing difficult foes they will use the desert as their primary weapon.")
             "Dracartam Duneship"
-             (unit
+             (base/unit
               :name "Dracartam Duneship"
               :summary
                "* The legendary duneships of the Dracartan army. They race across the desert sand on adamantine runners. They are powered by storm crystals produced and ignited by the Alchemists into the huge wind funnels that propel the duneships across the sand.
@@ -583,17 +583,17 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
            "* Home of the Chana Wildmen, the jungles are also home numerous dangerous and noisome insects, snakes, leeches, and even plants.
             * Wildmen - Many large tribes of Wildmen live throughout the jungle living off of the rich vegetation and animal-life. The Wildmen are deeply addicted to [Skullcap] mushrooms and have been driven violently insane from its hallucinatory effects. They are also warlike in the extreme with tribes constantly ambushing one another to gain territory. In battle, they thrive on brutality, and mercy is considered a weakness. Prisoners are publicly skinned alive to the delight of the tribe."
           :unitmap
-           (unitmap
+           (base/unitmap
             "Chana Warlord"
-             (unit
+             (base/unit
               :name "Chana Warlord"
               :summary "* The leaders of the wildmen tribes are horrible and immensely obese creatures that have gained power through demonic pacts and are said to be part demon themselves.")
             "Chana Wildman"
-             (unit
+             (base/unit
               :name "Chana Wildman"
               :summary "* The Wildmen are savage cannibals who cover themselves with terrifying body paints. They only respect bravery and any who show fear are ritually slain to their fearsome gods. They are very superstition and in awe of magic, so they obey the Witchmen without question. They live a nocturnal lifestyle and are skilled at axes, spears, and bolas.")
             "Chana Witchman"
-             (unit
+             (base/unit
               :name "Chana Witchman"
               :summary
                "* The Witchmen revere the forces of darkness and despise the enemies of their gods the forces of light. They live a completely nocturnal lifestyle and are skilled at witchcraft and herbalism.
@@ -601,31 +601,31 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * They create shrunken heads from their victims and wear them as jujus. It is said that they can capture a person's soul and control their body like a mindless zombie.
                 * Some have trained Death's Head Vipers as pets and wear them as bracelets."
               :unitpowermap
-               (unitpowermap
+               (base/unitpowermap
                 :Sympathy
-                 (unitpower
+                 (base/unitpower
                   :name "Sympathy")
                 :Enchantment
-                 (unitpower
+                 (base/unitpower
                   :name "Enchantment")
                 :Naturalism
-                 (unitpower
+                 (base/unitpower
                   :name "Naturalism")
                 :Madness
-                 (unitpower
+                 (base/unitpower
                   :name "Madness"))
               :unitskillmap
-               (unitskillmap
+               (base/unitskillmap
                 "Animal Handling"
-                 (unitskill
+                 (base/unitskill
                   :name "Animal Handling"
                   :unitabilitymap
-                   (unitabilitymap
+                   (base/unitabilitymap
                     "Snake Charming"
-                     (unitability
+                     (base/unitability
                       :name "Snake Charming")))))
             "Death's Head Viper"
-             (unit
+             (base/unit
               :name "Death's Head Viper"
               :summary
                "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled."
@@ -639,12 +639,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Outcasts - Strangest of the Jhagarans are the Outcasts, tribesmen who wander the furthests swamps and jungles. Though few in number, they wield great power. It is believed by the other Jhagarans that the Outcats carry the 'Sitgma of Doom'. Simply being touched by an Outcast immedidately brands one as an Outcast. He or she has two choices, commit suicide or leave the tribe and join the Outcasts. In order to avoid being tainted, the Jhagarans leave tributes to the Outcasts outside their settlements. If the tributes are insufficient, the Outcasts will approach the settlement until they are placated. There is no simple solution to the Cursed Ones. Killing an Outcast brings the curse upon the killer and his family. Sometimes they will try to convince or trick strangers into killing the Outcasts for them.
             * Concordance - Every seven months, for two weeks while a particular constellation moves across the horizon, the Jhagarans will not venture forth into the swamps at night. They believe an indescribable monster called the Horag stalks the marshes. Though no Jhagaran has ever seen the Horag, their belief in it is unshakable. During theses times, tribesmen accidentally caught in the marshes after sunset have reportedly slit their throats rather than face the terror of this fearsome monster."
           :unitmap
-           (unitmap
+           (base/unitmap
             "Jhagaran Hunter"
-             (unit
+             (base/unit
               :name "Jhagaran Hunter")
             "Jhagaran Outcast"
-             (unit
+             (base/unit
               :name "Jhagaran Outcast")))
         "Serpentine River"
          (section
@@ -663,9 +663,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :summary
                "* The Shadow Wizards live in ancient ruined towers of obscure origin. These dark towers dot the landscape of the Shadow Isles, and it is here that they perform their experiments night and day seemingly without rest. Some have entered the tower without molestation but have fled when they viewed the horrorific activities within."))
           :unitmap
-           (unitmap
+           (base/unitmap
             "Shadow Wizard"
-             (unit
+             (base/unit
               :name "Shadow Wizard"
               :summary
                "* Comprised of animate darkness, these spirits of deceased magicians resemble man-like shadows. They cloak themselves inn hooded vestments and bear ebony runestaves studded with black diamonds, and their eyes burn with a fiery incandescense.
@@ -676,9 +676,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
           :summary
            "* The Sinking Lands is a vast, fetid swamp of waist-deep water covering a deep layer of loose mud and decomposing vegetation. The entire swamp is basically a quicksand pit that will slowly engulf anything that stands still on the bottom. Numerous creatures that swim, float, or flit across the water have made a home here despite the perils."
           :unitmap
-           (unitmap
+           (base/unitmap
             :Sludge
-             (unit
+             (base/unit
               :name "Sludge"
               :summary
                "* The Sludge are a man-sized race of semi-intelligent Slugs that live within the Sinking Land. They swim quickly through the shallow water pushing off of the bottom. The Sludge are very curious and gather around visitors in large numbers. Though intimidating and pushy, they are largely harmless and flee if harmed. The main danger is they have been known to accidentally capsize boats in their enthusiasm. They are knowledgable about the area, but their lack of language makes communication a challenge.")))
@@ -705,9 +705,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * Units - Drug Addict, Drug Merchant, Gambler, Loan Shark, Pimp, Prostitute, Smuggler, [Naga]"
               :titles "Flower on the Water, City of Knives"))
           :unitmap
-           (unitmap
+           (base/unitmap
             "Queen Amelia Tremont"
-             (unit
+             (base/unit
               :name "Queen Amelia Tremont")))
         :Shinsenkyo
          (section
@@ -735,9 +735,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
           :name "Antilla"
           :reference "* Atlantis"
           :unitmap
-           (unitmap
+           (base/unitmap
             "Antillan Triton"
-             (unit
+             (base/unit
               :name "Antillan Triton")))
         :Brittania
          (section
@@ -756,22 +756,22 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
              (place
               :name "Saxony"))
           :unitmap
-           (unitmap
+           (base/unitmap
             "Avalan Footman"
-             (unit
+             (base/unit
               :name "Avalan Footman")
             "Avalon Highwayman"
-             (unit
+             (base/unit
               :name "Avalon Highwayman"
               :reference "Robin Hood")
             "Avalan Knight"
-             (unit
+             (base/unit
               :name "Avalan Knight")
             "Avalon Longbowman"
-             (unit
+             (base/unit
               :name "Avalon Longbowman")
             "Avalan Shieldbearer"
-             (unit
+             (base/unit
               :name "Avalan Shieldbearer")))
         :Eire
          (section
@@ -792,28 +792,28 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :name "Stormbringer"
               :reference "* Farewell, friend. I was a thousand times more evil than thou! - Stormbringer, Stormbringer"))
           :unitmap
-           (unitmap
+           (base/unitmap
             :Elric
-             (unit
+             (base/unit
               :name "Elric"
               :reference "* You sought to imitate the Emperors of Melnibone... You mocked Elric of that line, you tortured him and you abducted his wife. You moulded her body into a hell-shape as you moulded the rest of the world... know how the folk of Melnibone toyed with such upstarts... Jagreen Lern took an hour to die and only because Moonglum begged Elric to finish him swiftly. - Elric, Stormbringer")
             :Moonglum
-             (unit
+             (base/unit
               :name "Moonglum")
             "Hunting Dogs of Dharzi"
-             (unit
+             (base/unit
               :name "Hunting Dogs of Dharzi")
             "Melnibonean Sorceror"
-             (unit
+             (base/unit
               :name "Melnibonean Sorceror")
             "Melnibonean Soldier"
-             (unit
+             (base/unit
               :name "Melnibonean Soldier")
             :Yykroon
-             (unit
+             (base/unit
               :name "Yykroon")
             :Arioch
-             (unit
+             (base/unit
               :name "Arioch"
               :summary
                "* Arioch is one of the most powerful of the Dukes of Hell.
@@ -821,23 +821,23 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * He has also been known to take the form of a large black fly or a black alien shape, horrible to look upon."
               :titles "Knight of the Swords, Lord of the Higher Hell, Lord of the Seven Darks")
             :Donblas
-             (unit
+             (base/unit
               :name "Donblas"
               :reference "* It was as if some enormous sun, thousands of times larger than earth's, had sent a ray of light pulsing through the cosmos, defying the flimsy barriers of Time and Space... the majestic Lords of Law, their earthly forms so beautiful that they challenged Elric's sanity... Leading them came Donblas, the Justic Maker, a smile upon his perfect lips. He carried a slender sword in his right hand, a sword that was straight and sharp and like a beam of light itself. - Stormbringer"
               :titles "Justice Bringer")
             :Elenoin
-             (unit
+             (base/unit
               :name "Elenoin")
             :Kyrenee
-             (unit
+             (base/unit
               :name "Kyrenee")
             :Mabelrode
-             (unit
+             (base/unit
               :name "Mabelrode"
               :summary "* Mabelrode is a Chaos Lord. He appears with his face perpetually in shadow, or simply with blank, featureless skin in place of a face."
               :titles "Mabelode the Faceless, King of the Swords")
             :Xiombarg
-             (unit
+             (base/unit
               :name "Xiombarg"
               :summary
                "* Xiombarg is a Chaos Lord. She prefers to appear as a beautiful young woman but is sometimes referred to with the male pronoun. She is prone to shapeshifting and carries a giant sword. She sometimes rides a creature with the head of a lion and the body of a bull.
@@ -851,9 +851,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Many have found their ships stranded here by the calmed winds and cloying seaweed. Those who stay and survive have found that the Sargasso can support an unusual lifestyle floating in the ocean. Though survival can be a struggle, the Sargasso people have a strong sense of interdependence and enjoy their freedom from outside domination.
             * It is said that a giant squid calls the Sargasso home."
           :unitmap
-           (unitmap
+           (base/unitmap
             "Sargassos Sea Nomad"
-             (unit
+             (base/unit
               :name "Sargassos Sea Nomad"
               :summary "* Expert fisherman and salvagers. The sea nomads can be known to be ruthless, since life in the Sargasso can be difficult.")))
         :Y'ha-nthlei
@@ -900,27 +900,27 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (place
                          :name "Wudang Monastery"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Jade Militia"
-                        (unit
+                        (base/unit
                          :name "Jade Militia"
                          :summary "* The vast number of people in the Jade Empire are kept in check by a massive regional militia. Most militia are little more than thugs with cheap equipment and a badge.")
                        "Jade Guard"
-                        (unit
+                        (base/unit
                          :name "Jade Guard"
                          :summary "* The professional military that oversees the militia.")
                        "Quan Noble"
-                        (unit
+                        (base/unit
                          :name "Quan Noble"
                          :summary
                           "* Once a barbarian people, the Quan people have grown rich at the expense of the people subjected long ago by their ancestors. They wield supreme power and are attended by hosts of fawning servitors and slaves. Among these perverse and degenerate folk, obesity is considered a sign of success and ostentatious displays of wealth are in vogue.
                            * The nobles have highly refined tastes and lofty airs. They wave themselves with scented fans when in the presence of outsiders who they consider offensive in apperance and odor.")
                        "Shaolin Monk"
-                        (unit
+                        (base/unit
                          :name "Shaolin Monk"
                          :summary "* A Buddhist Monk")
                        "Wudang Monk"
-                        (unit
+                        (base/unit
                          :name "Wudang Monk"
                          :summary "* A Taoist Monk")))
                    :Nepal
@@ -932,9 +932,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (place
                          :name "Himalaya Mountains"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Nepal Sherpa"
-                        (unit
+                        (base/unit
                          :name "Nepal Sherpa")))
                    :Nippon
                     (section
@@ -946,31 +946,31 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (place
                          :name "Valley of the Mists"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Nippon Budoka"
-                        (unit
+                        (base/unit
                          :name "Nippon Budoka"
                          :titles "Warrior Monk")
                        "Nippon Gakusho"
-                        (unit
+                        (base/unit
                          :name "Nippon Gakusho"
                          :titles "Priest")
                        "Nippon Ninja"
-                        (unit
+                        (base/unit
                          :name "Nippon Ninja")
                        "Nippon Samurai"
-                        (unit
+                        (base/unit
                          :name "Nippon Samurai")
                        "Nippon Sohei"
-                        (unit
+                        (base/unit
                          :name "Nippon Sohei")))
                    :Tibet
                     (section
                      :name "Tibet"
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Tibetan Monk"
-                        (unit
+                        (base/unit
                          :name "Tibetan Monk")))))
                :Caucasia
                 (section
@@ -1011,36 +1011,36 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                           "* The forest home of the Dhuna.
                            * Dhuana - The Dhuana are a primitive, reclusive people highly skilled at witchcraft. They live in huts deep in the forest and perform hedonistic rituals in the numerous ruins, groves, and standing stones in the area. They are mysterious but not unfriendly, and they reputed to have numerous extraordinary attributes including the ability capture a man's heart with a single kiss."))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Anatolian Light Cavalry"
-                        (unit
+                        (base/unit
                          :name "Anatolian Light Cavalry")
                        "Anatolian Mounted Archer"
-                        (unit
+                        (base/unit
                          :name "Anatolian Mounted Archer")
                        "Romani Acrobat"
-                        (unit
+                        (base/unit
                          :name "Romani Acrobat"
                          :titles "Juggler")
                        "Romani Animal Trainer"
-                        (unit
+                        (base/unit
                          :name "Romani Animal Trainer")
                        "Romani Charlatan"
-                        (unit
+                        (base/unit
                          :name "Romani Charlatan"
                          :titles "Magician, Mountebank, Swindler, Trickster")
                        "Romani Dancer"
-                        (unit
+                        (base/unit
                          :name "Romani Dancer")
                        "Romani Fortuneteller"
-                        (unit
+                        (base/unit
                          :name "Romani Fortuneteller")
                        "Romani Rogue"
-                        (unit
+                        (base/unit
                          :name "Romani Rogue"
                          :titles "Thief")
                        "Romani Thespian"
-                        (unit
+                        (base/unit
                          :name "Romani Thespian"
                          :titles "Puppeteer")))
                    :Balkan
@@ -1064,9 +1064,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (place
                          :name "Carpathian Mountains"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Carpathian Witchhunter"
-                        (unit
+                        (base/unit
                          :name "Carpathian Witchhunter"
                          :summary "* Some of the survivors of the Carpathian disaster formed a group to discover the cause of the disaster and to repair it. They seek magical knowledge of all sorts and fund themselves by using their talents as bounty hunters for the more dangerous bounties."
                          :titles "Witcher")))
@@ -1082,47 +1082,47 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (place
                          :name "Constantinople"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Byzantine Assassin"
-                        (unit
+                        (base/unit
                          :name "Byzantine Assassin")
                        "Byzantine Emperor"
-                        (unit
+                        (base/unit
                          :name "Byzantine Emperor"
                          :summary "* The emperor rules with divine right and is considered a god on earth.")
                        "Byzantine Guard"
-                        (unit
+                        (base/unit
                          :name "Byzantine Guard")
                        "Byzantine Monk"
-                        (unit
+                        (base/unit
                          :name "Byzantine Monk")
                        "Byzantine Noble"
-                        (unit
+                        (base/unit
                          :name "Byzantine Noble")
                        "Byzantine Official"
-                        (unit
+                        (base/unit
                          :name "Byzantine Official")
                        "Byzantine Priest"
-                        (unit
+                        (base/unit
                          :name "Byzantine Priest")
                        "Byzantine Spy"
-                        (unit
+                        (base/unit
                          :name "Byzantine Spy")))
                    "Caspian Sea"
                     (section
                      :name "Caspian Sea"
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Caspian Corsair"
-                        (unit
+                        (base/unit
                          :name "Caspian Corsair"
                          :summary "* These corsairs are viscious cutthroats prone to violence and murder. There are a number of different pirate bands, all rivals to one another. In lean times they prey on one another and compete over plunder. When relaxing, they favor Ska-wae, a dangerous game played with curved knives and dice.")
                        "Caspian Mercenary"
-                        (unit
+                        (base/unit
                          :name "Caspian Mercenary"
                          :summary "* The Caspians are notable for their lack of discretion concerning the type of work they will take on. Unfortunately, they are also notable for disappearing when they see the risks getting too high.")
                        "Caspian Rogue"
-                        (unit
+                        (base/unit
                          :name "Caspian Rogue")))
                    :Hesperia
                     (section
@@ -1135,28 +1135,28 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                        * Politics - Amazons engage with other nations for trade, but their real power lies in their message of female power which they quietly spread around the world. This has created a vast spy network that spreads vital information as gossip."
                      :titles "Home of the Amazons, Sarmatia"
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Amazon Archer"
-                        (unit
+                        (base/unit
                          :name "Amazon Archer"
                          :summary "* Amazon dedication to archery is legendary. Some have one breast removed to prevent interference with the draw of their bow.")
                        "Amazon Assassin"
-                        (unit
+                        (base/unit
                          :name "Amazon Assassin")
                        "Amazon Infiltrator"
-                        (unit
+                        (base/unit
                          :name "Amazon Infiltrator")
                        "Amazon Peltast"
-                        (unit
+                        (base/unit
                          :name "Amazon Peltast")
                        "Amazon Scout"
-                        (unit
+                        (base/unit
                          :name "Amazon Scout")
                        "Amazon Trapper"
-                        (unit
+                        (base/unit
                          :name "Amazon Trapper")
                        "Amazon Warrior"
-                        (unit
+                        (base/unit
                          :name "Amazon Warrior")))
                    :Scythia
                     (section
@@ -1172,12 +1172,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                            * Reputation - The Arimites have a not unwarranted reputation of being cutthroats and assassins.
                            * Revenants - Revenant is the name of anyone who exacts revenge for money. If anyone feels they need redress for any offense, they can post a notice in a public place along with a reward, and if the reward is high enough they can expect it to be carried out. Almost any kind of vengence can be commissioned including arson, theft, mugging, extortion, murder, or even slander. Murder for hire is probably the most lucrative. Government officials, laborers, merchants, jealous lovers, and irrate housewifes have all been known to use the Revenants. It is so common, that the mere shaking of a change purse has become a threat of revenge."
                          :unitmap
-                          (unitmap
+                          (base/unitmap
                            "Arimite Knife Fighter"
-                            (unit
+                            (base/unit
                              :name "Arimite Knife Fighter")
                            "Arimite Revenant"
-                            (unit
+                            (base/unit
                              :name "Arimite Revenant")))))
                    "Shattered Lands"
                     (section
@@ -1196,29 +1196,29 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                           "* The nation of the barbarous Ur.
                            * Ur - The Ur are a hard-hearted people utterly devoid of mercy or compassion. Ultimate survivalists, they view all other living creatures as prey. Forced by the circumstances of their existence, they are by nature fatalistic and grim. They take what they want, raiding both rival clans and neighboring lands. The Ur are nomadic, traveling from place to place in search of food and water - both precious commodities in this region. All Ur consider themselves to be warriors and trades not related to survival and warfare are considered useless."))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Darkling Cutthroat"
-                        (unit
+                        (base/unit
                          :name "Darkling Cutthroat"
                          :summary "* The Ur have subjegated the Darkling race and use them as cannon fodder in battle. The Darklings are vile creatures and are extremely difficult to manage, so the Ur are ruthless when administering discipline.")
                        "Stryx Spearman"
-                        (unit
+                        (base/unit
                          :name "Stryx Spearman"
                          :summary "* The vile Stryx have allied themselves with the Ur and nominally serve them. The Stryx, however, are loyal to no one and cannot be relied on in battle. The Ur find them frustrating but useful allies.")
                        "Ur Horseman"
-                        (unit
+                        (base/unit
                          :name "Ur Horseman"
                          :summary "* Horses are rare in the Shattered Lands, so only the most decorated warriors receive them. However, with nearly no tradition of horsemanship, the Ur usually dismount before combat.")
                        "Ur Shaman"
-                        (unit
+                        (base/unit
                          :name "Ur Shaman"
                          :summary "* The Ur have little education and are inept spell casters. They claim they are great seers though their predictions are always open to interpretation. The Ur military leaders use their 'prophesies' to support their own agendas.")
                        "Ur Warlord"
-                        (unit
+                        (base/unit
                          :name "Ur Warlord"
                          :summary "* The Ur clans are rules by a series of viscious warlords each trying to increase their own power and influence at the expense of others. The ceaseless infighting amond the Ur clans prevents them from being more than a regional threat.")
                        "Ur Warrior"
-                        (unit
+                        (base/unit
                          :name "Ur Warrior"
                          :summary "* The Ur Warrior is the typical shocktrooper of the Ur clans. Most adult Ur, male or female are considered warriors.")))
                    "Volcanic Hills"
@@ -1271,33 +1271,33 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :name "Sea of Ice"
                          :summary "* An expanse of shimmering, perpertually frozen water, the Sea of Ice is traversed by the Aurorans on Ice Schooners and personal Ice Skimmers."))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Auroran Alchemist"
-                        (unit
+                        (base/unit
                          :name "Auroran Alchemist"
                          :summary "* The Auroran Alchemists work with the Auroran Ice Witches to create permanent magical ice with similar properties to steel.")
                        "Auroran Banker"
-                        (unit
+                        (base/unit
                          :name "Auroran Banker"
                          :reference "* People say the Northland Bank's true currencies are blood and tears, but mayor, even speaking as a banker, that seems a little unconscionable. - Pantalone, Genshin Impact")
                        "Auroran Ice Queen"
-                        (unit
+                        (base/unit
                          :name "Auroran Ice Queen"
                          :reference "* Elsa - Frozen")
                        "Auroran Ice Witch"
-                        (unit
+                        (base/unit
                          :name "Auroran Ice Witch"
                          :summary "* Auroran Ice Witches serve as seers and priests of Boreas the god of winter and the North Wind. 	They are masters of cold magic."
                          :titles "Ice Warlock")
                        "Auroran Tundra Scout"
-                        (unit
+                        (base/unit
                          :name "Auroran Tundra Scout"
                          :summary "* The army and hunters of the Auroran people. They are typical skirmishers with	phenomenal survival skills.")
                        "Auroran Ice Skimmer"
-                        (unit
+                        (base/unit
                          :name "Auroran Ice Skimmer")
                        "Auroran Ice Schooner"
-                        (unit
+                        (base/unit
                          :name "Auroran Ice Schooner"
                          :titles "Ice Outrigger")))
                    :Jotunheim
@@ -1342,15 +1342,15 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :name "Maledictus"
                          :summary "* The capital city of Nefaratus"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Black Savant"
-                        (unit
+                        (base/unit
                          :name "Black Savant"
                          :summary
                           "* Black Savants are tall and gaunt with deathly pale white skin under their full black robes. They remain fully covered at all times, and it is said that they molder away to nothing after death. There are those who say that the Black Savants are not actually living creatures.
                            * The Black Savants are greatly feared by other folk. They avoid contact with others and mainly communicate by means of arcane signs and gestures.")
                        "Black Ship"
-                        (unit
+                        (base/unit
                          :name "Black Ship"
                          :summary "* The Savant's midnight black vessels are said to sail the cursed waters at the edge of the world. It is claimed that they are propelled by demons chained to the oars with silver shackles and driven by giant copper skinned devils. These ships have been known to pull into port cities on moonless nights only to leave again before dawn.")))
                    :Nordland
@@ -1370,25 +1370,25 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (place
                          :name "Skyrim"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Nord Axemen"
-                        (unit
+                        (base/unit
                          :name "Nord Axemen")
                        "Nord Berserkers"
-                        (unit
+                        (base/unit
                          :name "Nord Berserkers")
                        "Nord Light Archers"
-                        (unit
+                        (base/unit
                          :name "Nord Light Archers")
                        "Nord Skirmishers"
-                        (unit
+                        (base/unit
                          :name "Nord Skirmishers"
                          :titles "Scouts")
                        "Nord Spearmen"
-                        (unit
+                        (base/unit
                          :name "Nord Spearmen")
                        "Nord Valkyrie"
-                        (unit
+                        (base/unit
                          :name "Nord Valkyrie")))
                    "Worlds Edge"
                     (section
@@ -1456,18 +1456,18 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (place
                          :name "Swamp of Despair"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Hellenic Scholar"
-                        (unit
+                        (base/unit
                          :name "Hellenic Scholar")
                        "Seer of Delphi"
-                        (unit
+                        (base/unit
                          :name "Seer of Delphi"
                          :summary
                           "* The seers are recluses who live on Mount Parnassus with the Oracle. Here they tirelessly record their visions in massive leather bound tomes. Those who manage the perilous climb visit the temple seeking knowledge are treated with hospitality and an endless series of questions about the outside world to compare with their visions. Those who seek personal gain may find the Seers to well prepared and to be less than personable hosts.
                            * According to legend, the first great Oracle had a vision that after his death, he would travel in the afterlife for a long time, but that one day he would return to share his experience. It is said, the Seers gather knowledge to share the experiences of the living world with the Oracle when he returns. Though it may seem farfetched, many traditions reflect the expectation of the Oracle's return: lights in the windows at night, an extra place set at meals, an unoccupied bedroom spotlessly maintained, etc.")
                        "Spartan Warrior"
-                        (unit
+                        (base/unit
                          :name "Spartan Warrior")))
                    :Arden
                     (section
@@ -1486,40 +1486,40 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (place
                          :name "Ashwood"))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Arden Archer"
-                        (unit
+                        (base/unit
                          :name "Arden Archer")
                        "Arden Bard"
-                        (unit
+                        (base/unit
                          :name "Arden Bard")
                        "Arden Defender"
-                        (unit
+                        (base/unit
                          :name "Arden Defender"
                          :titles "Arden Warrior")
                        "Arden Druid"
-                        (unit
+                        (base/unit
                          :name "Arden Druid")
                        "Arden Healer"
-                        (unit
+                        (base/unit
                          :name "Arden Healer")
                        "Arden Hunter"
-                        (unit
+                        (base/unit
                          :name "Arden Hunter")
                        "Arden Lyrist"
-                        (unit
+                        (base/unit
                          :name "Arden Lyrist")
                        "Arden Ranger"
-                        (unit
+                        (base/unit
                          :name "Arden Ranger")
                        "Arden Scout"
-                        (unit
+                        (base/unit
                          :name "Arden Scout")
                        "Arden Unicorn Cavalry"
-                        (unit
+                        (base/unit
                          :name "Arden Unicorn Cavalry")
                        "Cu Sith Hunting Dog"
-                        (unit
+                        (base/unit
                          :name "Cu Sith Hunting Dog"
                          :summary
                           "* An enormous fairy hound roughly the size of a cow.
@@ -1528,7 +1528,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                            * Will occasionally let out three terrifying barks that can be heard for long distances, including by ships at sea. This was said to be a warning to farmers to lock up their women, lest the beast abduct them and take them to a fairy mound to supply milk for fairy children."
                          :titles "Fairy Dog (pronounced coo shee), Cu Sidhe")
                        "Goddess Selene"
-                        (unit
+                        (base/unit
                          :name "Goddess Selene"
                          :reference "* The Moon is our Goddess, the night her kingdom! - Diana, Legends of Runeterra"
                          :summary "* Most Alfar revere the Moon Goddess Selene.")))
@@ -1561,39 +1561,39 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                            * Beggars - Begging is considered an honest, if unenviable, profession in Elysia. Though many are frauds and thieves, the Elysians are fond of their beggars and expect others to be equally open-minded. It is traditional to scatter coppers when beggars appear or suffer public scorn and ridicule.
                            * Bath - Public and private bath houses (with or without masseuse) are a popular pasttime and meeting place similar to a tavern elsewhere complete with snacks and drinks."
                          :unitmap
-                          (unitmap
+                          (base/unitmap
                            "Elyisan Artisan"
-                            (unit
+                            (base/unit
                              :name "Elyisan Artisan")
                            "Elyisan Chevalier"
-                            (unit
+                            (base/unit
                              :name "Elyisan Chevalier")
                            "Elyisan Duelist"
-                            (unit
+                            (base/unit
                              :name "Elyisan Duelist")
                            "Elyisan Rogue"
-                            (unit
+                            (base/unit
                              :name "Elyisan Rogue")
                            "Proprietress Mazilda"
-                            (unit
+                            (base/unit
                              :name "Proprietress Mazilda"
                              :summary "* Mazilda was a passable sorcerous until she lost an arcane duel and was cursed with an obsession with cleanliness. She opened a bathhouse where she can make a living while she can clean herself as often as necessary. She is functionally a shut-in now, and longs for tales of the outside world to which she can no longer travel."))))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Gallic Acrobat"
-                        (unit
+                        (base/unit
                          :name "Gallic Acrobat")
                        "Gallic Charlatan"
-                        (unit
+                        (base/unit
                          :name "Gallic Charlatan")
                        "Gallic Duelist"
-                        (unit
+                        (base/unit
                          :name "Gallic Duelist")
                        "Gallic Militia"
-                        (unit
+                        (base/unit
                          :name "Gallic Militia")
                        "Gallic Warrior"
-                        (unit
+                        (base/unit
                          :name "Gallic Warrior")))
                    :Bavaria
                     (section
@@ -1639,51 +1639,51 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                             (place
                              :name "Order Reliquary"))
                          :unitmap
-                          (unitmap
+                          (base/unitmap
                            "Order Apostate"
-                            (unit
+                            (base/unit
                              :name "Order Apostate"
                              :summary "* An outcast who has lost his Alms and effectively forsaken the religion. Apostates are pariahs within the Order.")
                            "Order Brother"
-                            (unit
+                            (base/unit
                              :name "Order Brother"
                              :summary "* Monks of the Order swear numerous oaths of purity including oaths of poverty and celebacy. Most Brothers live in a Monestary, while others travel the world doing good works and spreading the word of their God.")
                            "Order Crusader"
-                            (unit
+                            (base/unit
                              :name "Order Crusader"
                              :summary "* The armored knights of the Order. They serve as the officers of the army and navy.")
                            "Order Evangelist"
-                            (unit
+                            (base/unit
                              :name "Order Evangelist")
                            "Order Father"
-                            (unit
+                            (base/unit
                              :name "Order Father")
                            "Order Hierophant"
-                            (unit
+                            (base/unit
                              :name "Order Hierophant"
                              :summary "* The Hierophant is the undisputed religious ruler of the nation. Though he theoretically holds no military power, he is considered to be infallible and a direct emissary of God, so he practically wields absolute power. His power is maintained by the Theocracy, so he must maintain their trust at all times.")
                            "Order Inquisitor"
-                            (unit
+                            (base/unit
                              :name "Order Inquisitor"
                              :summary "* The Inquisitors have a single task: to root out and elminate heretics. To this end they act as judges, secret police, and interrogators. Inquisitors preside over rituals desgined to purge unacceptable desires from penitent hearts using methods that some might call torture.")
                            "Order Mother Superior"
-                            (unit
+                            (base/unit
                              :name "Order Mother Superior")
                            "Order Priest"
-                            (unit
+                            (base/unit
                              :name "Order Priest")
                            "Order Sister"
-                            (unit
+                            (base/unit
                              :name "Order Sister"
                              :summary "* Nuns of the Order swear numerous oaths of purity including oaths of poverty and celebacy. Sisters live in a Nunery and seldom leave except to perform tasks in nearby towns.")
                            "Order Templar"
-                            (unit
+                            (base/unit
                              :name "Order Templar"
                              :summary
                               "* An official Mage Hunter/Witch Hunter of the Order.
                                * Since magic that is not sanctioned by the church is heresy, the Templars are commissioned to contain or eliminate enemies of the Order that are beyond the capabilities of the Inquisitors. They are given great authority to complete their missions and can rely on the Inquistors and Crusaders for aid.")
                            "Order Theocrat"
-                            (unit
+                            (base/unit
                              :name "Order Theocrat"
                              :summary "* The Theocracy serves as both a religious and government center. The Theocrats maintains the Library of Revelations which are the great books of religious canon that supposedly answer any question worth knowing. Interpreting these books allow the Theocrats to rule on all matters of daily life: clothing, trade, law enforcement, etc. These interpretations have led to a very rigid, conservative society where many acts are considered heretical.")))))
                    :Imperium
@@ -1717,24 +1717,24 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                           "* The story of the destruction of Pompeii when Mt. Versuvius erupted is widely known. The story is often used as a cautionary tale to obey the will of the gods.
                            * Pompeii is now an empty ruin that functions as an enormous graveyard for the approximately 20,000 victims of the disaster. The dead remain at rest as long as the the area is undisturbed, and careful travellers may investigate the area at their peril. If there is any disturbance the bodies begin awakening as Burning Dead and are hysterically drawn to the living who will not long survive their embrace."))
                      :unitmap
-                      (unitmap
+                      (base/unitmap
                        "Imperial Centurion"
-                        (unit
+                        (base/unit
                          :name "Imperial Centurion")
                        "Imperial Gladiator"
-                        (unit
+                        (base/unit
                          :name "Imperial Gladiator")
                        "Imperial Legionnaire"
-                        (unit
+                        (base/unit
                          :name "Imperial Legionnaire")
                        "Imperial Senator"
-                        (unit
+                        (base/unit
                          :name "Imperial Senator")
                        "Imperial Slaver"
-                        (unit
+                        (base/unit
                          :name "Imperial Slaver")
                        "Borderland Legionnaire"
-                        (unit
+                        (base/unit
                          :name "Borderland Legionnaire"
                          :summary "* The far eastern outposts of the empire are manned by the Legion of the Borderlands. This is body of hard-bitten mercenaries, outcasts, and criminals from many lands. Being assigned to the Legion of the Borderlands one way that the Imperium makes use of troublemakers.")))
                    :Teuton
@@ -1784,25 +1784,25 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
              (place
               :name "Zurich"))
           :unitmap
-           (unitmap
+           (base/unitmap
             "Zuran Inventor"
-             (unit
+             (base/unit
               :name "Zuran Inventor"
               :summary "* Zuran Inventors are masters at fine mechanics including clockworks, locks, and traps.")
             "Zuran Moneylender"
-             (unit
+             (base/unit
               :name "Zuran Moneylender"
               :summary "* These moneylenders are shrewd negotiators and are always looking for a way to make a profit and manage their risk. They hire enforcers to make sure payment is made in full.")
             "Zuran Procurer"
-             (unit
+             (base/unit
               :name "Zuran Procurer"
               :summary "* Zuran merchants are unusual in that they tend to not maintain any particular product. Instead, they use their connections to locate and procure whatever is required. They are expensive, but they take great pride in their work and ensure that their customers are always satisfied.")
             "Zuran Sage"
-             (unit
+             (base/unit
               :name "Zuran Sage"
               :summary "* Zuran Sages are librarians, reasearchers and advisers.")
             "Zuran Thief"
-             (unit
+             (base/unit
               :name "Zuran Thief"
               :summary "* Zuran thieves materialism of course leads many to steal what they want. The skilled thieves in Zuraare precisely why the Zurans are so paranoid of theft. The skilled locksmiths are met with equally skilled lockpickers in a security arms race.")))))
     "Middle East"
@@ -1889,17 +1889,17 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                  (place
                   :name "Faradin"))
               :unitmap
-               (unitmap
+               (base/unitmap
                 "Faradun Mercenary"
-                 (unit
+                 (base/unit
                   :name "Faradun Mercenary"
                   :summary "* Since almost all actual Faradun are merchants, the army and navy are all highly paid mercenaries from other lands.")
                 "Faradun Merchant"
-                 (unit
+                 (base/unit
                   :name "Faradun Merchant"
                   :summary "* Few actual Faraduns are not merchants. Other tasks are done by slaves, indentured servants, convicted felons, and hired laborers.")
                 "Faradun Procurer"
-                 (unit
+                 (base/unit
                   :name "Faradun Procurer"
                   :summary "* A specialized merchant skilled at obtaining any entertainment or diversion imaginable regardless of its legal status ... for the right price. Procurers are famous for their discretion in this 'no questions asked' business. The Farad legal system does not hold Procurers liable for the actions of their customers, so they act with impunity.")))
             :Phatas
@@ -1925,14 +1925,14 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                     * Multi-colored tents and pavilions litter the festival grounds, each housing some sort of attraction: a duel of spell casters for wagers, abominations from the Aberrant Forest, Illusionary panoramas, romances, sensations, or improbabilities and other things which defy description. Visitors are invited to observer, partake of, or otherwise experience all he or she desires. Rare delicacies from around the world are available.
                     * The climax is the award ceremonies when prizes are given in various categories including: 'Most Unique', 'Most Provacative', 'Most Absurd'. The final award is the most coveted: 'Most Bizarre'. A committee of 12 enchanters judge the competition, registering various degrees of approval or disapproval by means of magically enhanced facial expressions and gestures."))
               :unitmap
-               (unitmap
+               (base/unitmap
                 "Phantasian Dreamer"
-                 (unit
+                 (base/unit
                   :name "Phantasian Dreamer"
                   :summary
                    "* The Dreamers use their [Dreaming] skill to capture and sell the exotic [Dream Essence] to those wealthy enough to afford such luxury.")
                 "Phantasian Windship"
-                 (unit
+                 (base/unit
                   :name "Phantasian Windship"
                   :summary
                    "* The windships are wonderous craft which sail upon the winds as sea vessels ply the waters. They are constructed of the lightest possible materials and are therefore somewhat fragile and require constant repair. Extreme weather conditions are a particular concern especially high winds and freezing rain, and lightning.
@@ -1944,22 +1944,22 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
            "* Red Gold - The mines of Raja are rich with very impure gold deposits. Large slave colonies work the mines day and night. Rajans leave the red impurities in the smelting process leaving their gold with a swirled bloody look to it.
             * Rajan Glory - The only allowed currency of Raja are the blood red gold coins called Glories. They are simple and fearsome with a burning fire on one side and a cackling skull on the other. Like Rajan gold in general, the coins have a swirled bloody look to them and are only about 75% pure. Since Raja is 	considered a rogue state by other nations, possession of Rajan Glories is sufficient evidence to be imprisoned as a spy. On the black market the coins can get about 25% of their face value, especially in distant lands where the penalies for possession are lower."
           :unitmap
-           (unitmap
+           (base/unitmap
             "Rajan Desert Warrior"
-             (unit
+             (base/unit
               :name "Rajan Desert Warrior"
               :summary "* An army of religious fanatics who believe that their service in life will be rewarded in the after life, so they obey without question.")
             "Rajan Agent"
-             (unit
+             (base/unit
               :name "Rajan Agent"
               :summary "* The loyal servants the Black Mystics. They act as spies, assassins, terrorists, and secret police thoughout the country and beyond.")
             "Rajan Inquisitor"
-             (unit
+             (base/unit
               :name "Rajan Inquisitor"
               :summary "* The elite religious agents of the Black Mystics. They are priest, healers, torturers, and personal bodyguards of the Black Mystics."
               :titles "Torquar")
             "Rajan Black Mystic"
-             (unit
+             (base/unit
               :name "Rajan Black Mystic"
               :summary
                "* The Black Mystics are necromancer/priest who lead the Rajan cult. They are religious fanatics and believe that they channel the will of their dread gods.
@@ -1974,9 +1974,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :name "City of Brass"
               :summary "* The City of Brass is a major city of the [Ifrit]. It is a beautiful place with palaces, libraries, and cathedrals all built to giant scale and all built of brass to withstand the withering desert heat."))
           :unitmap
-           (unitmap
+           (base/unitmap
             "Juzam Djinn"
-             (unit
+             (base/unit
               :name "Juzam Djinn"
               :summary
                "* The Juzam Djinn are 14 foot tall, brass skinned devils with curved horns and tusk-like fangs. They wield huge stone clubs carbed with the visages of leering devils. They wear only necklaces of skulls collected as mementos of their grisly conquests.
@@ -2062,29 +2062,29 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Mandragores - About three feet high and vaguely man-like, they are roughly humanoid in form with gnarled root-like limbs and leafy 'hair'. Their eyes are like dark knots and their mouths are like the twisted hollow of a tree. The Mandragore usually stand rooted and immobile during the day as they soak in sunlight. During this time, they are well camoflaged among the other plant-life. At night, they move about tending their chores and looking for trespassers who they attempt to capture with nets of vines and grasses. Their unfortunate victims are bound and buried alive as fertilizer.
             * Abilities - The Mandragore are weak fighters who rely on surprise and numbers to battle large foes."
           :unitmap
-           (unitmap
+           (base/unitmap
             "Mandragore Herbalist"
-             (unit
+             (base/unit
               :name "Mandragore Herbalist"
               :unitpowermap
-               (unitpowermap
+               (base/unitpowermap
                 :Naturalism
-                 (unitpower
+                 (base/unitpower
                   :name "Naturalism"
                   :unitabilitymap
-                   (unitabilitymap
+                   (base/unitabilitymap
                     "Warp Wood"
-                     (unitability
+                     (base/unitability
                       :name "Warp Wood"))))
               :unitskillmap
-               (unitskillmap
+               (base/unitskillmap
                 "Physical Weakness"
-                 (unitskill
+                 (base/unitskill
                   :name "Physical Weakness"
                   :unitabilitymap
-                   (unitabilitymap
+                   (base/unitabilitymap
                     "Vulnerable to Fire"
-                     (unitability
+                     (base/unitability
                       :name "Vulnerable to Fire"))))))))))))
 
 (func chapter_realms_beyond : base/chapter
@@ -2317,9 +2317,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
            "* The realm of elemental air is a vast, empty space above the clouds of the world. Here there are no solids or liquids only gases without impurities (e.g. smoke).
             * Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family."
           :unitmap
-           (unitmap
+           (base/unitmap
             :h'Haarshann
-             (unit
+             (base/unit
               :name "h'Haarshann"
               :reference "Elric of Melnibone"
               :summary "* Wind Elemental Lord")))
@@ -2336,9 +2336,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
            "* The realm of elemental earth is a vast, solid space below the surface of the world. It is mostly solid rock, but cave systems, roots, and underground waterways exist as well.
             * Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family."
           :unitmap
-           (unitmap
+           (base/unitmap
             :Grome
-             (unit
+             (base/unit
               :name "Grome"
               :reference "Elric of Melnibone"
               :summary "* Earth Elemental Lord")))
@@ -2361,14 +2361,14 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
            "* The realm of elemental water is a vast space deep within the ocean depths of the world.
             * Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family."
           :unitmap
-           (unitmap
+           (base/unitmap
             :Straasha
-             (unit
+             (base/unit
               :name "Straasha"
               :reference "Elric of Melnibone"
               :summary "* Water Elemental Lord")
             :Pyaray
-             (unit
+             (base/unit
               :name "Pyaray"
               :reference "Elric of Melnibone"
               :summary
@@ -2644,9 +2644,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
            "* We must improve! We must evolve! - Victor, Runeterra
             * Metal is perfection. - Victor, Runeterra"
           :unitmap
-           (unitmap
+           (base/unitmap
             :Yawgmoth
-             (unit
+             (base/unit
               :name "Yawgmoth"
               :titles "Father of Machines, Ineffable"))))))))
 

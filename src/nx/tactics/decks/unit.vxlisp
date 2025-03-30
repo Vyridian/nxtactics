@@ -55,28 +55,17 @@
    :value "1x0"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
-     (base/unitskill
-      :skill (base/skill<-tactics-key tactics "Close Combat")
-      :level 1
-      :unititemmap
-       (base/unititemmap<-unititemlist
-         (base/unititem
-          :item (base/item<-tactics-key tactics "Knife: Dagger"))))
-     (base/unitskill
-      :skill (base/skill<-tactics-key tactics "Stealth")
-      :level 1
-      :unitabilitymap
-       (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "Sneak"))))
-     (base/unitskill
-      :skill (base/skill<-tactics-key tactics "Tradeskills")
-      :level 1
-      :unitabilitymap
-       (base/unitabilitymap<-unitabilitylist
-        (base/unitability
-         :ability (base/ability<-tactics-key tactics "House Painting"))))
-    ))
+     (base/unitskill<-tactics-key-lvl-items
+      tactics "Close Combat" 1
+      (stringlist "Knife: Dagger"))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Stealth" 1
+      (stringlist "Sneak"))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics "Tradeskills" 1
+      (stringlist "House Painting"))
+    )
+  )
   (base/unit
    :name "Hare"
    :body "4x0"
@@ -116,16 +105,11 @@
    :length "30cm/1ft"
    :unitskillmap
     (base/unitskillmap<-unitskilllist
-     (base/unitskill
-      :level 1
-      :skill
-       (base/skill<-tactics-key
-        tactics "Stealth")
-      :abilitylist
-       (base/abilitylist<-tactics-keys
-        tactics
-        "Ambush"
-        "Camouflage")))
+     (base/unitskill<-tactics-key-lvl-abilities
+      tactics
+      "Stealth"
+      1
+      (stringlist "Ambush" "Camoflage")))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower
@@ -138,7 +122,26 @@
        (base/abilitylist<-tactics-keys
         tactics
         "Poison Bite"))))
-  )
+ (base/unit
+  :name "Zombie: Walker"
+  :image "images/cards/unit-zombie-walker.svg"
+  :body "8x1"
+  :mind "5x-1"
+  :speed "4x0"
+  :speedland "4kph/2.5mph"
+  :will "2x1"
+  :mass "80kg/175"
+  :summary
+   "[Zombie]"
+  :unitskillmap
+   (base/unitskillmap<-unitskilllist
+    (base/unitskill<-tactics-key-lvl-abilities
+     tactics "Close Combat" 1 (stringlist "Grab")))
+  :unitpowermap
+   (base/unitpowermap<-unitpowerlist
+    (base/unitpower<-tactics-key-lvl-abilities
+     tactics "Natural Weaponry" 1 (stringlist "Bite"))))
+ )
  :doc "Returns the base unitmap")
 
 (func tactics-unitmap<-tactics : base/tactics

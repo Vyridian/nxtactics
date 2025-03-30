@@ -119,15 +119,19 @@
   (base/rule
    :name "Exposed"
    :summary
-    "* Your [Normal] [Defend] cards can't win.")
+    "* Your [Normal] [Block] cards always lose.")
+  (base/rule
+   :name "Exposure"
+   :summary
+    "")
   (base/rule
    :name "Fight"
    :summary
     "* Target a unit with a damaging Skill/Power.
      * Each player chooses a Conflict card from their hand or a random card from Shared Conflict.
      * Conflict Cards are compared like Rock/Paper/Scissors.
-     * Fight Speed: Defend/Evade/Counter > Attack > Focus > Defend/Evade/Counter
-     * If both play Attack or Focus then compare by rank (lower is faster).
+     * Fight Speed: Block/Counter > Fast > Evade > Strong > Block/Counter
+     * If both play Fast or Strong then compare by rank (lower is faster).
      * Order: AJQK2-10
      * If Tied, there is no result.
      * If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.
@@ -136,7 +140,7 @@
    :name "Flanking"
    :summary
     "* Flanks: IF a unit attacks an opponent from anywhere behind THEN [Initiative]:+1
-     * Blindspot: IF a unit attacks an opponent and is in a straight line directly behind an opponent THEN the opponent is [Exposed] for this attack. ")
+     * Blindspot: IF a unit attacks an opponent and is in a straight line directly behind an opponent THEN the opponent is [Exposed] for this attack.")
   (base/rule
    :name "Free Action"
    :summary
@@ -157,9 +161,13 @@
      * Each Round every Player takes a Turn.
      * Each Turn each Player takes 2 Actions.")
   (base/rule
+   :name "Hunger"
+   :summary
+    "")
+  (base/rule
    :name "Initiative"
    :summary
-    "* Lower is Better: IF you and your opponent both play [Normal] [Attack] or you both play [Normal] [Focus] THEN the lower [Rank] of the cards wins.
+    "* Lower is Better: IF you and your opponent both play [Normal] [Fast] or you both play [Normal] [Strong] THEN the lower [Rank] of the cards wins.
      * Skill Difference: The difference between your and your opponent's [Skill] is a Bonus or Penalty.
      * Bonus (+X): Initiative bonus is SUBTRACTED before comparing.
      * Penalty (-X): Initiative penalty is ADDED before comparing.")
@@ -312,6 +320,10 @@
    :name "Surrounded"
    :summary
     "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent.")
+  (base/rule
+   :name "Thirst"
+   :summary
+    "")
   (base/rule
    :name "Unfamiliar Item"
    :summary

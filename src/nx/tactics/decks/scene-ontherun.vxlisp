@@ -24,6 +24,7 @@
      (base/abilitylist<-tactics-keys
       tactics
       "Ambush"
+      "Poison Bite"
       "Sneak"))
     (list<-list : base/cardlist
      (base/itemlist<-tactics-keys
@@ -37,6 +38,21 @@
       "Torch"
       "Wild Onions"
       "Wild Yams"))
+    (list<-list : base/cardlist
+     (base/powerlist<-tactics-keys
+      tactics
+      "Toxins"))
+    (list<-list : base/cardlist
+     (base/rulelist<-tactics-keys
+      tactics
+      "Temperature"
+      "Clouds"
+      "Humidity"
+      "Wind"
+      "Exposure"
+      "Hunger"
+      "Thirst"
+      "Poisoned"))
     (list<-list : base/cardlist
      (base/placelist<-tactics-keys
       tactics

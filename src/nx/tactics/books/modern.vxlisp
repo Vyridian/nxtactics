@@ -71,24 +71,24 @@
      (section
       :name "American Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "A-10 Warthog"
-         (unit
+         (base/unit
           :name "A-10 Warthog"
           :classification "Lt. Aircraft"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "30mm GAU-8 Avenger"
-                 (unititem
+                 (base/unititem
                   :name "30mm GAU-8 Avenger")))))
         "AH-1 Cobra"
-         (unit
+         (base/unit
           :name "AH-1 Cobra"
           :image "Modern/American_Helicopter_Cobra.png"
           :summary
@@ -103,11 +103,11 @@
           :length "13m"
           :range "570km")
         "Candy Bomber"
-         (unit
+         (base/unit
           :name "Candy Bomber"
           :classification "Hvy. Aircraft")
         "UH-1 Iroquois (Huey)"
-         (unit
+         (base/unit
           :name "UH-1 Iroquois (Huey)"
           :image "Modern/American_Helicopter_Huey.png"
           :summary
@@ -121,7 +121,7 @@
           :length "17m"
           :width "3m")
         "SR-71 Blackbird"
-         (unit
+         (base/unit
           :name "SR-71 Blackbird"
           :image "Modern/American_SpyPlane_SR71Blackbird.png"
           :classification "Hvy. Aircraft")))
@@ -129,21 +129,21 @@
      (section
       :name "American Ground Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "M46 Patton"
-         (unit
+         (base/unit
           :name "M46 Patton"
           :summary
            "* An improved Pershing sometimes called Pershing II, was used extensively in Korean War.
 * 90mm Cannon"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4")))
         "M48 Patton"
-         (unit
+         (base/unit
           :name "M48 Patton"
           :summary
            "* A completely redesigned Pershing based Vietnam Era Tank
@@ -155,9 +155,9 @@ Armor
 7.62mm MG"
           :mass "50tons"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4")))))
     "American Missles"
@@ -175,9 +175,9 @@ Armor
      (section
       :name "British Ground Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "QF 20 Pounder"
-         (unit
+         (base/unit
           :name "QF 20 Pounder"))))))
 
 (func chapter_modern_ground_vehicles : base/chapter
@@ -192,116 +192,116 @@ Armor
      (section
       :name "Modern Cars"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Compact
-         (unit
+         (base/unit
           :name "Compact"
           :image "Modern/Civilian_Compact.png")
         "Luxury Sedan"
-         (unit
+         (base/unit
           :name "Luxury Sedan")
         :Minivan
-         (unit
+         (base/unit
           :name "Minivan"
           :image "Modern/Civilian_Minivan.png")
         :Sedan
-         (unit
+         (base/unit
           :name "Sedan"
           :image "Modern/Civilian_Sedan.png")
         "Sports Car"
-         (unit
+         (base/unit
           :name "Sports Car"
           :image "Modern/Civilian_SportsCar.png")
         :Subcompact
-         (unit
+         (base/unit
           :name "Subcompact"
           :titles "Econobox")
         "Station Wagon"
-         (unit
+         (base/unit
           :name "Station Wagon"
           :image "Modern/Civilian_StationWagon.png")))
     "Modern Trucks"
      (section
       :name "Modern Trucks"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Armored Car"
-         (unit
+         (base/unit
           :name "Armored Car"
           :summary
            "* RWD. 200 hp engine [20], 20 gallon tank [4], driver, gunner, SR 6, TS 80, AC 4 (max 8), 16 mpg @65.
 FP Armor: F30, L30, R30, B30, T30, U20. Cargo 200 cf. Max load 2000 lb. $70,000, 8500 lb.")
         :HummVee
-         (unit
+         (base/unit
           :name "HummVee")
         :Jeep
-         (unit
+         (base/unit
           :name "Jeep")
         "Land Cruiser"
-         (unit
+         (base/unit
           :name "Land Cruiser")
         "Pickup Truck"
-         (unit
+         (base/unit
           :name "Pickup Truck"
           :image "Modern/Civilian_PickupTruck.png"
           :summary "* Same as Sport Utility except: two to three passengers. Cargo 160 cf. Max load 1000-3000 lb. $20,000 3300 lb.")
         "Sport Utility"
-         (unit
+         (base/unit
           :name "Sport Utility"
           :image "Modern/Civilian_SUV.png"
           :summary "* RWD or AWD with around 180 hp, two- or four-door with two to eight passengers.  SR 6, TS 110, AC 6 (max 10), 18 mpg@65. Cargo 20-70 cf. Max load 500-1000 lb. $30,000 3500 lb.")
         :Van
-         (unit
+         (base/unit
           :name "Van")))
     "Modern Heavy Vehicles"
      (section
       :name "Modern Heavy Vehicles"
       :summary "150% Cost, 150% Load, 75% Speed, -1 Handling"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Bus
-         (unit
+         (base/unit
           :name "Bus"
           :titles "School Bus")
         "Bus, Luxury"
-         (unit
+         (base/unit
           :name "Bus, Luxury"
           :titles "Charter Bus")
         :Backhoe
-         (unit
+         (base/unit
           :name "Backhoe")
         "Bobcat Loader"
-         (unit
+         (base/unit
           :name "Bobcat Loader")
         :Bulldozer
-         (unit
+         (base/unit
           :name "Bulldozer")
         :Camper
-         (unit
+         (base/unit
           :name "Camper")
         "Cargo Truck"
-         (unit
+         (base/unit
           :name "Cargo Truck")
         "Construction Crane"
-         (unit
+         (base/unit
           :name "Construction Crane")
         "Dump Truck"
-         (unit
+         (base/unit
           :name "Dump Truck")
         "Garbage Truck"
-         (unit
+         (base/unit
           :name "Garbage Truck")
         "Giant Dump Truck"
-         (unit
+         (base/unit
           :name "Giant Dump Truck")
         "Giant Shovel"
-         (unit
+         (base/unit
           :name "Giant Shovel")
         "Recreational Vehicle (RV)"
-         (unit
+         (base/unit
           :name "Recreational Vehicle (RV)")
         "Tractor Trailer"
-         (unit
+         (base/unit
           :name "Tractor Trailer"
           :summary
            "* 200 gallon tank, driver, 2 passengers. SR 5.75, TS 125, AC 3 (max 6), 12 mpg@65. No Armor.
@@ -310,12 +310,12 @@ Cargo 5000 cf. Max load 30 tons. $300,000, 10 tons.  Tractor trailers use two ov
      (section
       :name "Modern Police Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Police Cruiser"
-         (unit
+         (base/unit
           :name "Police Cruiser")
         "SWAT Truck"
-         (unit
+         (base/unit
           :name "SWAT Truck")))
     "Modern Military Vehicles"
      (section
@@ -329,9 +329,9 @@ Cargo 5000 cf. Max load 30 tons. $300,000, 10 tons.  Tractor trailers use two ov
 30 damage, and has a to-hit of 13, but requires one round to reload.
 * Hovertank"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Armored Personal Carrier (APC)"
-         (unit
+         (base/unit
           :name "Armored Personal Carrier (APC)"
           :summary
            "* Wheeled. 500 hp engine, 60 gallon selfsealing tank, driver, gunner, MG50 also in turret (50), SS [3] back (5),
@@ -353,51 +353,51 @@ steadily moving train collides with a vehicle it does as much damage as the vehi
 completely shattered if a train struck it.  A train is very hard to destroy, also... it would derail before
 actually turning into rubble."
       :unitmap
-       (unitmap
+       (base/unitmap
         "Armored Boxcar"
-         (unit
+         (base/unit
           :name "Armored Boxcar")
         "Automobile Cargo Car"
-         (unit
+         (base/unit
           :name "Automobile Cargo Car")
         :Boxcar
-         (unit
+         (base/unit
           :name "Boxcar")
         :Caboose
-         (unit
+         (base/unit
           :name "Caboose")
         "Dining Car"
-         (unit
+         (base/unit
           :name "Dining Car")
         "Flatbed Car"
-         (unit
+         (base/unit
           :name "Flatbed Car")
         "Hand Cart"
-         (unit
+         (base/unit
           :name "Hand Cart")
         :Locomotive
-         (unit
+         (base/unit
           :name "Locomotive")
         :Monorail
-         (unit
+         (base/unit
           :name "Monorail")
         "Passenger Car"
-         (unit
+         (base/unit
           :name "Passenger Car")
         "Sleeping Car"
-         (unit
+         (base/unit
           :name "Sleeping Car")
         :Streetcar
-         (unit
+         (base/unit
           :name "Streetcar")
         "Tanker Car"
-         (unit
+         (base/unit
           :name "Tanker Car")
         :Tram
-         (unit
+         (base/unit
           :name "Tram")
         "Weapon Mount Car"
-         (unit
+         (base/unit
           :name "Weapon Mount Car")))
     "Modern Snowcraft"
      (section
@@ -428,13 +428,13 @@ actually turning into rubble."
           :name "Snowshoes"
           :summary "* Personal, Unpowered, Snowcraft"))
       :unitmap
-       (unitmap
+       (base/unitmap
         "Dog Sled"
-         (unit
+         (base/unit
           :name "Dog Sled"
           :summary "* Unpowered, Offroad, Snowcraft")
         :Snowmobile
-         (unit
+         (base/unit
           :name "Snowmobile"
           :summary "* Offroad, Snowcraft"))))))
 
@@ -447,18 +447,18 @@ actually turning into rubble."
      (section
       :name "Abyss Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Construction Submarine"
-         (unit
+         (base/unit
           :name "Construction Submarine")
         "Big Geek"
-         (unit
+         (base/unit
           :name "Big Geek")
         "Little Geek"
-         (unit
+         (base/unit
           :name "Little Geek")
         "Navy Seal"
-         (unit
+         (base/unit
           :name "Navy Seal"))))))
 
 (func chapter_modern_space : base/chapter
@@ -470,15 +470,15 @@ actually turning into rubble."
      (section
       :name "Modern Space Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Astronaut
-         (unit
+         (base/unit
           :name "Astronaut")
         "International Space Station"
-         (unit
+         (base/unit
           :name "International Space Station")
         "Space Shuttle"
-         (unit
+         (base/unit
           :name "Space Shuttle"))))))
 
 (func chapter_modern_cops_and_robbers : base/chapter
@@ -490,108 +490,108 @@ actually turning into rubble."
      (section
       :name "Modern Government"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Administrator
-         (unit
+         (base/unit
           :name "Administrator")
         "ATF Agent"
-         (unit
+         (base/unit
           :name "ATF Agent")
         :Congressman
-         (unit
+         (base/unit
           :name "Congressman")
         "DEA Agent"
-         (unit
+         (base/unit
           :name "DEA Agent")
         :Diplomat
-         (unit
+         (base/unit
           :name "Diplomat"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Communications
-             (unitskill
+             (base/unitskill
               :name "Communications"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Negotiation
-                 (unitability
+                 (base/unitability
                   :name "Negotiation")
                 :Politics
-                 (unitability
+                 (base/unitability
                   :name "Politics")))))
         "FBI Agent"
-         (unit
+         (base/unit
           :name "FBI Agent")
         :Monarch
-         (unit
+         (base/unit
           :name "Monarch")
         :Noble
-         (unit
+         (base/unit
           :name "Noble"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Influence
-             (unitskill
+             (base/unitskill
               :name "Influence")))
         :Senator
-         (unit
+         (base/unit
           :name "Senator")))
     "Modern Police"
      (section
       :name "Modern Police"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Police Officer"
-         (unit
+         (base/unit
           :name "Police Officer"
           :titles "Beat Cop, Pig (derogatory), Thin Blue Line")
         :Detective
-         (unit
+         (base/unit
           :name "Detective")
         "Forensics Investigator"
-         (unit
+         (base/unit
           :name "Forensics Investigator")
         "Internal Affair Agent"
-         (unit
+         (base/unit
           :name "Internal Affair Agent")
         :S.W.A.T.
-         (unit
+         (base/unit
           :name "S.W.A.T.")))
     "Modern Criminals"
      (section
       :name "Modern Criminals"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Armed Robber"
-         (unit
+         (base/unit
           :name "Armed Robber")
         :Informant
-         (unit
+         (base/unit
           :name "Informant")
         "Purse Snatcher"
-         (unit
+         (base/unit
           :name "Purse Snatcher")
         "Serial Killer"
-         (unit
+         (base/unit
           :name "Serial Killer")))
     "Modern Crime Gangs"
      (section
       :name "Modern Crime Gangs"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Mafia
-         (unit
+         (base/unit
           :name "Mafia")
         "Tong Gangs"
-         (unit
+         (base/unit
           :name "Tong Gangs"
           :summary "Tongs are local street gangs.")
         :Triads
-         (unit
+         (base/unit
           :name "Triads"
           :summary "The Triads are like the [Yakuza] offering protection to the locals.  This protection normally comes in the form of crushing the competition on the triad's businesses.  Unlike the [Yakuza], the triads deal in slavery and are more open in their illegal dealings.  Enforcement is very brutal.")
         :Yakuza
-         (unit
+         (base/unit
           :name "Yakuza"
           :summary "Besides weapons and drugs, the Yakuza are the neighborhood protection in many areas and do so far more efficiently than the police. Contrary to the attitudes protrayed in Hollywood, the Yakuza make justice swift and fair for the people they deal with. It has done this way for longer than the United States has been around. The Yakuza is not about random violence and mayhem. It is about order and discipline. Of course, many of the younger members have cast aside traditions and have become violent thugs. Like the Triads, the Yakuza was originally a response to the feudal lords when those who were not samurai had no rights or safety."))))))
 
@@ -647,18 +647,18 @@ Hostage Rescue"))
      (section
       :name "Spy Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         "CIA Agent"
-         (unit
+         (base/unit
           :name "CIA Agent")
         "NSA Agent"
-         (unit
+         (base/unit
           :name "NSA Agent")
         :Terrorist
-         (unit
+         (base/unit
           :name "Terrorist")
         "Aaron Jorgenson"
-         (unit
+         (base/unit
           :name "Aaron Jorgenson"
           :summary
            "* Wealthy Norwegian shipping magnate with subsidiaries in petroleum products, trucking, and pharmaceuticals.
@@ -669,7 +669,7 @@ Hostage Rescue"))
 * His greatest possessions are his fabulous collection of artwork in his luxurious mansion.
 * Personality - Mr. Jorgenson is an arrogant and selfish man. He is a self-made man and believes that the strong deserve to take what they can and that the weak deserve their lot. He idolizes men of action, especially his Viking ancestors. With only a short time left to live, he has dedicated his fortune to a spectacular plan that would make him a modern day Viking.")
         "James Bond"
-         (unit
+         (base/unit
           :name "James Bond"
           :summary
            "* Mr. Bond, you persist in defying my efforts to provide an amusing death for you. - Hugo Drax, Moonraker
@@ -714,61 +714,61 @@ Hostage Rescue"))
           :name "Football Field"
           :image "Units/Modern/Football_Field.jpg"))
       :unitmap
-       (unitmap
+       (base/unitmap
         "Linebacker (Blue)"
-         (unit
+         (base/unit
           :name "Linebacker (Blue)"
           :image "Modern/Football_LinebackerBlue.png")
         "Linebacker (Red)"
-         (unit
+         (base/unit
           :name "Linebacker (Red)"
           :image "Modern/Football_LinebackerRed.png")
         "Quarterback (Blue)"
-         (unit
+         (base/unit
           :name "Quarterback (Blue)"
           :image "Modern/Football_QuarterbackBlue.png")
         "Quarterback (Red)"
-         (unit
+         (base/unit
           :name "Quarterback (Red)"
           :image "Modern/Football_QuarterbackRed.png")
         "Receiver (Blue)"
-         (unit
+         (base/unit
           :name "Receiver (Blue)"
           :image "Modern/Football_ReceiverBlue.png")
         "Receiver (Red)"
-         (unit
+         (base/unit
           :name "Receiver (Red)"
           :image "Modern/Football_ReceiverRed.png")))
     "Underground Sports"
      (section
       :name "Underground Sports"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Pit Fighter"
-         (unit
+         (base/unit
           :name "Pit Fighter")
         "Rollerball Player"
-         (unit
+         (base/unit
           :name "Rollerball Player")
         "Street Fighter"
-         (unit
+         (base/unit
           :name "Street Fighter")))
     "Other Sports"
      (section
       :name "Other Sports"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Baseball Player"
-         (unit
+         (base/unit
           :name "Baseball Player")
         :Boxer
-         (unit
+         (base/unit
           :name "Boxer")
         "Hockey Player"
-         (unit
+         (base/unit
           :name "Hockey Player")
         "Ping Pong Player"
-         (unit
+         (base/unit
           :name "Ping Pong Player")))
     "Modern Scenes"
      (section
@@ -795,48 +795,48 @@ Hostage Rescue"))
      (section
       :name "Modern American Aircraft"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Advanced Tactical Fighter"
-         (unit
+         (base/unit
           :name "Advanced Tactical Fighter")
         "B-1 Bomber"
-         (unit
+         (base/unit
           :name "B-1 Bomber")
         "B-2 Stealth Bomber"
-         (unit
+         (base/unit
           :name "B-2 Stealth Bomber")
         "Predator UAV"
-         (unit
+         (base/unit
           :name "Predator UAV")
         "Stealth Fighter"
-         (unit
+         (base/unit
           :name "Stealth Fighter")
         "SH-60 Seahawk Helicopter"
-         (unit
+         (base/unit
           :name "SH-60 Seahawk Helicopter")
         "Blackhawk Helicopter"
-         (unit
+         (base/unit
           :name "Blackhawk Helicopter")
         "Apache Helicopter"
-         (unit
+         (base/unit
           :name "Apache Helicopter")
         "C-5 Galaxy"
-         (unit
+         (base/unit
           :name "C-5 Galaxy")
         "C-17 Globemaster III"
-         (unit
+         (base/unit
           :name "C-17 Globemaster III")
         "BGM-109 Tomahawk Cruise Missile"
-         (unit
+         (base/unit
           :name "BGM-109 Tomahawk Cruise Missile"
           :summary "* Conventional: 1,000 lb (450 kg) Bullpup, or submunitions dispenser with BLU-97/B Combined Effects Bomb, or a 200 kiloton of TNT (840 terajoule) W80 nuclear device (inactivated per SALT)")))
     "Modern American Ground Vehicles"
      (section
       :name "Modern American Ground Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "M1A2 Abrams Tank"
-         (unit
+         (base/unit
           :name "M1A2 Abrams Tank"
           :summary
            "* Turbine Engine: takes any fuel, typically Jet Fuel, starting the engine consumes nearly 11 gallons of fuel and it emits a jet blast behind it. Can survive multiple hits from the most powerful tank munitions including 120mm DU APFSDS and anti-tank missiles. Its own weapons are unable to penetrate front or side armor even at close range in friendly fire incidents.
@@ -850,13 +850,13 @@ Hostage Rescue"))
           :speedland "72kph"
           :mass "70tons"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4")))
         "M2A2 Bradley AFV"
-         (unit
+         (base/unit
           :name "M2A2 Bradley AFV"
           :summary
            "* 25mm Chain Gun, 900 rounds, APDS, HEI
@@ -866,21 +866,21 @@ Hostage Rescue"))
           :speedland "66kph"
           :mass "33tons"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4")))
         "Patriot Missile System"
-         (unit
+         (base/unit
           :name "Patriot Missile System")))
     "American Naval Vessels"
      (section
       :name "American Naval Vessels"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Ticonderoga Missile Cruiser"
-         (unit
+         (base/unit
           :name "Ticonderoga Missile Cruiser"
           :summary
            "* Aegis Combat System
@@ -896,9 +896,9 @@ Hostage Rescue"))
      (section
       :name "Modern British Ground Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Challenger 2"
-         (unit
+         (base/unit
           :name "Challenger 2"
           :summary
            "Comparable to the M1 Abrams, though it uses a diesel engine.
@@ -908,24 +908,24 @@ One near Basra survived being hit by 70 RPGs.
      (section
       :name "Modern German Ground Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Leopard 2A6"
-         (unit
+         (base/unit
           :name "Leopard 2A6"
           :summary "Comparable to the M1 Abrams, it carries a heavier gun and uses a diesel engine which increases reliability.")))
     "Modern Israeli Ground Vehicles"
      (section
       :name "Modern Israeli Ground Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Merkava Mark IV"
-         (unit
+         (base/unit
           :name "Merkava Mark IV")))
     "Modern African Ground Vehicles"
      (section
       :name "Modern African Ground Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Technical
-         (unit
+         (base/unit
           :name "Technical"))))))

@@ -147,46 +147,46 @@ Known as 'The Gun that Won the West' for its immense popularity at that time."
      (section
       :name "Steam Age Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Horseless  Carriage"
-         (unit
+         (base/unit
           :name "Horseless  Carriage")
         "Mailplane Biplane"
-         (unit
+         (base/unit
           :name "Mailplane Biplane")
         "Ocean Liner"
-         (unit
+         (base/unit
           :name "Ocean Liner"
           :titles "Liner, Steam Liner")
         :Stagecoach
-         (unit
+         (base/unit
           :name "Stagecoach")
         "Steam Ferry"
-         (unit
+         (base/unit
           :name "Steam Ferry")
         "Steam Train Boxcar"
-         (unit
+         (base/unit
           :name "Steam Train Boxcar")
         "Steam Train Caboose"
-         (unit
+         (base/unit
           :name "Steam Train Caboose")
         "Steam Train Coach"
-         (unit
+         (base/unit
           :name "Steam Train Coach")
         "Steam Train Locomotive"
-         (unit
+         (base/unit
           :name "Steam Train Locomotive")
         "Steam Train Private Coach"
-         (unit
+         (base/unit
           :name "Steam Train Private Coach")
         :Steamboat
-         (unit
+         (base/unit
           :name "Steamboat")
         "Tramp Freighter"
-         (unit
+         (base/unit
           :name "Tramp Freighter")
         :Zepplin
-         (unit
+         (base/unit
           :name "Zepplin"
           :titles "Dirigible"))))))
 
@@ -236,32 +236,32 @@ them easily.")))
      (section
       :name "Confederate Army"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Confederate Cannon"
-         (unit
+         (base/unit
           :name "Confederate Cannon")
         "Confederate Conscript"
-         (unit
+         (base/unit
           :name "Confederate Conscript")
         "Confederate Gatling Gunner"
-         (unit
+         (base/unit
           :name "Confederate Gatling Gunner")
         "Confederate Medic"
-         (unit
+         (base/unit
           :name "Confederate Medic")
         "Confederate Officer"
-         (unit
+         (base/unit
           :name "Confederate Officer")
         "Confederate Veteran"
-         (unit
+         (base/unit
           :name "Confederate Veteran")))
     "Confederate Navy"
      (section
       :name "Confederate Navy"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Merrimack
-         (unit
+         (base/unit
           :name "Merrimack"
           :titles "CSS Virginia"
           :speedwater "17kph"
@@ -270,55 +270,55 @@ them easily.")))
           :mass "4500tons"
           :length "84m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :summary "100mm iron over 610mm of wood (102mm RHA)"
               :front "200mm"
               :back "200mm"
               :side "200mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "2 x 7 inch (178mm) rifles
-2 x 6 inch (152mm) rifles
-6 x 9 inch (229mm) Dahlgren smoothbores
-2 x 12-pounder (5kg) howitzers"
+                2 x 6 inch (152mm) rifles
+                6 x 9 inch (229mm) Dahlgren smoothbores
+                2 x 12-pounder (5kg) howitzers"
               :level "4")))))
     "Union Army"
      (section
       :name "Union Army"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Union Cannon"
-         (unit
+         (base/unit
           :name "Union Cannon")
         "Union Conscript"
-         (unit
+         (base/unit
           :name "Union Conscript")
         "Union Gatling Gunner"
-         (unit
+         (base/unit
           :name "Union Gatling Gunner")
         "Union Medic"
-         (unit
+         (base/unit
           :name "Union Medic")
         "Union Officer"
-         (unit
+         (base/unit
           :name "Union Officer")
         "Union Veteran"
-         (unit
+         (base/unit
           :name "Union Veteran")))
     "Union Navy"
      (section
       :name "Union Navy"
       :unitmap
-       (unitmap
+       (base/unitmap
         "USS Monitor"
-         (unit
+         (base/unit
           :name "USS Monitor"
           :speedwater "15kph"
           :classification "Hvy. Naval Vessel"
@@ -326,9 +326,9 @@ them easily.")))
           :mass "1000tons"
           :length "52m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :summary "200mm iron turret, 25mm deck, 125mm hull belt"
               :front "200mm"
@@ -336,9 +336,9 @@ them easily.")))
               :over "25mm"
               :side "200mm"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary "2 x 11 in (280mm) Dahlgren smoothbores, turret"
               :level "4"))))))))
@@ -352,18 +352,18 @@ them easily.")))
      (section
       :name "Victoraian Characters"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Dr. John Watson"
-         (unit
+         (base/unit
           :name "Dr. John Watson")
         "Herbert George Wells"
-         (unit
+         (base/unit
           :name "Herbert George Wells")
         "Jack the Ripper"
-         (unit
+         (base/unit
           :name "Jack the Ripper")
         "Sherlock Holmes"
-         (unit
+         (base/unit
           :name "Sherlock Holmes"
           :reference
            "* Watson: What made like this?
@@ -397,9 +397,9 @@ Hit Location")))
      (section
       :name "Steam Age Outlaws"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Bandito
-         (unit
+         (base/unit
           :name "Bandito"
           :image "images/age-of-steam/BanditoToken.png"
           :reference
@@ -408,32 +408,32 @@ priest or a bandit! ...You became a priest because you were... too much of a cow
 Good, the Bad, and the Ugly."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Survival
-             (unitskill
+             (base/unitskill
               :name "Survival"
               :level "3")))
         :Gunslinger
-         (unit
+         (base/unit
           :name "Gunslinger"
           :image "images/age-of-steam/GunslingerToken.png"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Crime
-             (unitskill
+             (base/unitskill
               :name "Crime"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Armed Robbery"
-                 (unitability
+                 (base/unitability
                   :name "Armed Robbery")
                 :Rustling
-                 (unitability
+                 (base/unitability
                   :name "Rustling")))))
         "Man with No Name"
-         (unit
+         (base/unit
           :name "Man with No Name"
           :image "images/age-of-steam/ManWithNoNameToken.png"
           :reference
@@ -443,13 +443,13 @@ the Ugly
 The Good, the Bad, and the Ugly"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Evasion
-             (unitskill
+             (base/unitskill
               :name "Evasion"
               :level "5")))
         "Professional Killer"
-         (unit
+         (base/unit
           :name "Professional Killer"
           :image "images/age-of-steam/ProfessionalKiller.png"
           :reference
@@ -457,38 +457,38 @@ The Good, the Bad, and the Ugly"
 follow my job through. - Angel Eyes, The Good, the Bad, and the Ugly"
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Evasion
-             (unitskill
+             (base/unitskill
               :name "Evasion"
               :level "4")))))
     "Steam Age Lawmen"
      (section
       :name "Steam Age Lawmen"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Deputy
-         (unit
+         (base/unit
           :name "Deputy")
         :Sheriff
-         (unit
+         (base/unit
           :name "Sheriff")
         "US Marshall"
-         (unit
+         (base/unit
           :name "US Marshall"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Evasion
-             (unitskill
+             (base/unitskill
               :name "Evasion"
               :level "4")))))
     "Steam Age Indians"
      (section
       :name "Steam Age Indians"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Sioux Gunfighter"
-         (unit
+         (base/unit
           :name "Sioux Gunfighter"
           :image "images/age-of-steam/IndianAxe.jpg"
           :reference "Spotted Horse cannot be killed by a bullet! - Spotted Horse, The Quick and the Dead")))
@@ -496,85 +496,85 @@ follow my job through. - Angel Eyes, The Good, the Bad, and the Ugly"
      (section
       :name "Steam Age Townsfolk"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Chinese Monk"
-         (unit
+         (base/unit
           :name "Chinese Monk"
           :reference "I seek not to know the answers, but to understand the questions. - Kwai Chang Caine, Kung Fu TV Series")
         "Chinese Rail worker"
-         (unit
+         (base/unit
           :name "Chinese Rail worker")
         :Cowboy
-         (unit
+         (base/unit
           :name "Cowboy")
         :Dentist
-         (unit
+         (base/unit
           :name "Dentist")
         :Farmer
-         (unit
+         (base/unit
           :name "Farmer")
         "General Store Owner"
-         (unit
+         (base/unit
           :name "General Store Owner")
         :Judge
-         (unit
+         (base/unit
           :name "Judge")
         :Preacher
-         (unit
+         (base/unit
           :name "Preacher")
         "Saloon Barkeep"
-         (unit
+         (base/unit
           :name "Saloon Barkeep")
         :Undertaker
-         (unit
+         (base/unit
           :name "Undertaker")
         "Whore with a Heart of Gold"
-         (unit
+         (base/unit
           :name "Whore with a Heart of Gold")))
     "Steam Age Travelers"
      (section
       :name "Steam Age Travelers"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Carpet Bagger"
-         (unit
+         (base/unit
           :name "Carpet Bagger")
         :Gambler
-         (unit
+         (base/unit
           :name "Gambler"
           :summary "This is a very special pack.  See, I put an ace in every time I kill a man.  (The deck is all aces) - Ace, The Quick and the Dead")
         :Prospector
-         (unit
+         (base/unit
           :name "Prospector")
         "Snake Oil Salesman"
-         (unit
+         (base/unit
           :name "Snake Oil Salesman")))
     "Steam Age Tycoons"
      (section
       :name "Steam Age Tycoons"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Banker
-         (unit
+         (base/unit
           :name "Banker")
         "Land Baron"
-         (unit
+         (base/unit
           :name "Land Baron"
           :reference
            "All I hear from you...is how poor you are; how you can't afford my taxes.  Yet somehow, you managed to find the
 money to hire a gunfighter to kill me.  If ya got so much money, I'm just gonna have to take some more. - John
 Herod,  The Quick and the Dead"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Evasion
-             (unitskill
+             (base/unitskill
               :name "Evasion"
               :level "4")))
         "Oil Baron"
-         (unit
+         (base/unit
           :name "Oil Baron")
         "Railroad Tycoon"
-         (unit
+         (base/unit
           :name "Railroad Tycoon"))))))
 
 (func chapter_examples_of_play : base/chapter

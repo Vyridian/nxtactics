@@ -26,6 +26,7 @@ export default class nx_tactics_books_gear {
 
   /**
    * @function chapter_gear_items
+   * @param  {tactics} base_tactics
    * @return {chapter}
    */
   static t_chapter_gear_items = {
@@ -36,7 +37,7 @@ export default class nx_tactics_books_gear {
   }
 
   // (func chapter_gear_items)
-  static f_chapter_gear_items() {
+  static f_chapter_gear_items(base_tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -118,7 +119,7 @@ export default class nx_tactics_books_gear {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
             ":Alkahest",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Alkahest", ":summary", "* The universal solvent, having the power to dissolve every substance into its\nconstituent elemental parts.  It cannot dissolve anything that is absolutely\npure.", ":titles", "Alchahest, Universal Solvent"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Alkahest", ":summary", "* The universal solvent, having the power to dissolve every substance into its constituent elemental parts.  It cannot dissolve anything that is absolutely pure.", ":titles", "Alchahest, Universal Solvent"),
             ":Aphrodisiac",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Aphrodisiac"),
             "Aqua Fortis",
@@ -154,7 +155,7 @@ export default class nx_tactics_books_gear {
             ":Dipilatory",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Dipilatory"),
             "Dream Essence",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Dream Essence", ":summary", "* The elusive essence from which dreams are made.  It is gathered from a subject and\nthen distilled into a liquid.\n* The effects last for 2-8 hours and are very intense.\n* Effects vary by color:\n** Purple - Passion, Romance\n** Blue - Poignancy\n** Red - Violent Emotions\n** Silver - Imagination, Flights of Fancy\n** Gold - Prophetic Visions\n** Rainbow - Unpredictable\n** Black - Nightmares"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Dream Essence", ":summary", "* The elusive essence from which dreams are made.  It is gathered from a subject and then distilled into a liquid.\n* The effects last for 2-8 hours and are very intense.\n* Effects vary by color:\n** Purple - Passion, Romance\n** Blue - Poignancy\n** Red - Violent Emotions\n** Silver - Imagination, Flights of Fancy\n** Gold - Prophetic Visions\n** Rainbow - Unpredictable\n** Black - Nightmares"),
             "Elixir of Clarity",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Elixir of Clarity", ":summary", "* [Effect]: [+1 Mind]"),
             "Elixir of Healing",
@@ -162,7 +163,7 @@ export default class nx_tactics_books_gear {
             "Elixir of Life",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Elixir of Life", ":summary", "* [Effect]: Extends lifespan by 10 years. Each use of this Elixir increases the difficulty of the next use."),
             "Elixir of Regrowth",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Elixir of Regrowth", ":summary", "* Effect: Drop into a coma and heals damage including repairing/regrowing damaged organs or\nlimbs."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Elixir of Regrowth", ":summary", "* Effect: Drop into a coma and heals damage including repairing/regrowing damaged organs or limbs."),
             "Elixir of Strength",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Elixir of Strength", ":summary", "* [Effect]: [+1 Body]"),
             "Essense of Longing",
@@ -170,7 +171,7 @@ export default class nx_tactics_books_gear {
             "Essential Quicksilver",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Essential Quicksilver", ":summary", "A magically animate liquid metal used in the crafting of enchanted weapons."),
             ":Glowball",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Glowball", ":summary", "* A glass ball that will radiate light like a torch for [Level] hours without\nrequiring air."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Glowball", ":summary", "* A glass ball that will radiate light like a torch for [Level] hours without requiring air."),
             ":Homonculyte",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Homonculyte"),
             "Ice Crystals",
@@ -196,7 +197,7 @@ export default class nx_tactics_books_gear {
             ":Panacea",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Panacea"),
             "Philosopher's Stone",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Philosopher's Stone", ":summary", "* A legendary alchemical substance said to be capable of turning base metals\nsuch as lead into gold (chrysopoeia) or silver. It was also sometimes believed\nto be an elixir of life, useful for rejuvenation and possibly for achieving\nimmortality. For many centuries, it was the most sought-after goal in alchemy.\nThe philosophers' stone is the central symbol of alchemy, symbolizing\nperfection at its finest, enlightenment, and heavenly bliss. Efforts to\ndiscover the philosophers' stone were known as the Magnum Opus ('Great Work').\n* The first component of the philosopher's stone is Prima Materia: 'the first\nmatter of the stone is the very same with the first matter of all things.'", ":titles", "Magnum Opus, Great Work, Stone of the Philosopher, Variable Mercury"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Philosopher's Stone", ":summary", "* A legendary alchemical substance said to be capable of turning base metals such as lead into gold (chrysopoeia) or silver. It was also sometimes believed to be an elixir of life, useful for rejuvenation and possibly for achieving immortality. For many centuries, it was the most sought-after goal in alchemy. The philosophers' stone is the central symbol of alchemy, symbolizing perfection at its finest, enlightenment, and heavenly bliss. Efforts to discover the philosophers' stone were known as the Magnum Opus ('Great Work').\n* The first component of the philosopher's stone is Prima Materia: 'the first matter of the stone is the very same with the first matter of all things.'", ":titles", "Magnum Opus, Great Work, Stone of the Philosopher, Variable Mercury"),
             "Philtre of Courage",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Philtre of Courage", ":summary", "* [Effect]: [+1 Spirit]"),
             "Philtre of Fear",
@@ -228,19 +229,19 @@ export default class nx_tactics_books_gear {
             "Potion of Strength",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Potion of Strength"),
             "Potion of Venom",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Potion of Venom", ":summary", "* Effect: Body becomes a deadly storehouse of caustic venoms.  The blood,\nsweat, tears, and spit are all deadly weapons.  User is immune to its own\neffects and is also resistant to all poison, acid, and disease."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Potion of Venom", ":summary", "* Effect: Body becomes a deadly storehouse of caustic venoms. The blood, sweat, tears, and spit are all deadly weapons. User is immune to its own effects and is also resistant to all poison, acid, and disease."),
             "Potion of Warmth",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Potion of Warmth", ":summary", "* Effect: +1 [Defense] vs. [Cold]."),
             "Potion of Water Breathing",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Potion of Water Breathing"),
             "Prima Materia",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Prima Materia", ":summary", "* The primitive formless base of all matter, the primal substance that may be\nchanged into any other matter.", ":titles", "Aether, Akasha, Ether, Proteus, Quintessence"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Prima Materia", ":summary", "* The primitive formless base of all matter, the primal substance that may be changed into any other matter.", ":titles", "Aether, Akasha, Ether, Proteus, Quintessence"),
             "Rare Earths",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rare Earths", ":summary", "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the\ninnate powers of other ingredients.", ":titles", "Antimony, Cinnabar, Pitchblend, various salts, and metal oxides"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rare Earths", ":summary", "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the innate powers of other ingredients.", ":titles", "Antimony, Cinnabar, Pitchblend, various salts, and metal oxides"),
             "Sleeping Potion",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Sleeping Potion", ":reference", "Sleeping Beauty", ":titles", "Soporific"),
             ":Smokestick",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Smokestick", ":summary", "* An alchemically treated wooden stick that creates thick, opaque smoke when\nignited."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Smokestick", ":summary", "* An alchemically treated wooden stick that creates thick, opaque smoke when ignited."),
             ":Soulstone",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Soulstone"),
             "Soverign Glue",
@@ -248,7 +249,7 @@ export default class nx_tactics_books_gear {
             "Storm Crystals",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Storm Crystals"),
             ":Thunderstone",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Thunderstone", ":summary", "* A stone that emits a deafening sound when it is first struck againsts a\nhard surface."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Thunderstone", ":summary", "* A stone that emits a deafening sound when it is first struck againsts a hard surface."),
             ":Tindertwig",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tindertwig", ":reference", "A match", ":summary", "* A sulfurous substance that ignites when rubbed against a rough surface.")
           )
@@ -264,7 +265,7 @@ export default class nx_tactics_books_gear {
             "Icy Manipulator",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Icy Manipulator", ":summary", "* [Action]: Roll vs. [Mind]. If successful, target loses its next [Action]."),
             "Zuran Orb",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Zuran Orb", ":reference", "* I will go to any length to achieve my goal. Eternal life is worth any sacrifice.\n- Zur the Enchanter, Magic the Gathering", ":summary", "* [Action]: -1 [Spirit] permanently. -2 Damage, -1 Critical, -10 Age.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Zuran Orb", ":reference", "* I will go to any length to achieve my goal. Eternal life is worth any sacrifice. - Zur the Enchanter, Magic the Gathering", ":summary", "* [Action]: -1 [Spirit] permanently. -2 Damage, -1 Critical, -10 Age.")
           )
         ),
         ":Artwork",
@@ -350,7 +351,7 @@ export default class nx_tactics_books_gear {
             ":Fragments",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Fragments"),
             ":Grimoire",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Grimoire", ":summary", "A set of rules for doing something and is a journal kept by practitioners containing\ninformation and contributions relevant to their specific field of study."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Grimoire", ":summary", "A set of rules for doing something and is a journal kept by practitioners containing information and contributions relevant to their specific field of study."),
             ":Manual",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Manual"),
             ":Memoir",
@@ -388,7 +389,7 @@ export default class nx_tactics_books_gear {
             "Malleus Maleficarum",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Malleus Maleficarum", ":summary", "One of the most famous medieval treatises on witches.", ":titles", "The Hammer of Witches, Hexenhammer"),
             "Tabula Rasa",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tabula Rasa", ":summary", "* A unique blank stone tablet of unknown origin vaguely connected to the legends of the River Lethe.\n* If a person writes a description of a memory on the tablet, then the text will slowly fade from\nthe tablet and as it does the memory will also permanently fade from the user's mind. This item can\nbe used to remove trauma as well as reset unwanted skills and abilities."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tabula Rasa", ":summary", "* A unique blank stone tablet of unknown origin vaguely connected to the legends of the River Lethe.\n* If a person writes a description of a memory on the tablet, then the text will slowly fade from the tablet and as it does the memory will also permanently fade from the user's mind. This item can be used to remove trauma as well as reset unwanted skills and abilities."),
             "Wiccan Rede",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Wiccan Rede")
           )
@@ -433,7 +434,7 @@ export default class nx_tactics_books_gear {
           ":name",
           "Drugs",
           ":reference",
-          "* We had two bags of grass, seventy-five pellets of mescaline, five sheets of high-powered blotter acid, a saltshaker\nhalf-full of cocaine, and a whole galaxy of multi-colored uppers, downers, screamers, laughers... Also, a quart of\ntequila, a quart of rum, a case of beer, a pint of raw ether, and two dozen amyls...The only thing that really worried\nme was the ether.  There is nothing in the world more helpless and irresponsible and depraved than a man in the depths\nof an ether binge, and I knew we'd get into that rotten stuff pretty soon. - Raoul Duke, Fear and Loathing in Las\nVegas",
+          "* We had two bags of grass, seventy-five pellets of mescaline, five sheets of high-powered blotter acid, a saltshaker half-full of cocaine, and a whole galaxy of multi-colored uppers, downers, screamers, laughers... Also, a quart of tequila, a quart of rum, a case of beer, a pint of raw ether, and two dozen amyls...The only thing that really worried me was the ether.  There is nothing in the world more helpless and irresponsible and depraved than a man in the depths of an ether binge, and I knew we'd get into that rotten stuff pretty soon. - Raoul Duke, Fear and Loathing in Las Vegas",
           ":itemmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
@@ -638,7 +639,7 @@ export default class nx_tactics_books_gear {
             ":Diamond",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Diamond"),
             ":Electrum",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Electrum", ":reference", "* Electrum is a naturally occurring alloy of gold and silver, with trace amounts of\ncopper and other metals.\n* The color of electrum is pale yellow or yellowish-white.\n* It is usually a good conductor of electricity.\n* Electrum is much better for coinage than gold, mostly because it is harder and more\ndurable.", ":titles", "White Gold"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Electrum", ":reference", "* Electrum is a naturally occurring alloy of gold and silver, with trace amounts of copper and other metals.\n* The color of electrum is pale yellow or yellowish-white.\n* It is usually a good conductor of electricity.\n* Electrum is much better for coinage than gold, mostly because it is harder and more durable.", ":titles", "White Gold"),
             ":Emerald",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Emerald"),
             ":Gold",
@@ -650,7 +651,7 @@ export default class nx_tactics_books_gear {
             ":Pearl",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pearl"),
             "Rose Gold",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rose Gold", ":reference", "* Rose gold is a gold and copper alloy.  The higher the copper content the redder the\ncolor.", ":titles", "Red Gold"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Rose Gold", ":reference", "* Rose gold is a gold and copper alloy.  The higher the copper content the redder the color.", ":titles", "Red Gold"),
             ":Ruby",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ruby"),
             ":Sapphire",
@@ -670,13 +671,13 @@ export default class nx_tactics_books_gear {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
             ":Adamant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Adamant", ":summary", "* Requires: 10 carats of powdered blue diamonds and 1 pound of silver to create\n1 pound of Adamant."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Adamant", ":summary", "* Requires: 10 carats of powdered blue diamonds and 1 pound of silver to create 1 pound of Adamant."),
             "Black Diamond",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Black Diamond"),
             ":Mithril",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mithril", ":summary", "* A steel alloy that is as strong as steel with only half the weight.  It is extremely\ndifficult to forge even for master smiths, so it is extremely rare and valuable.", ":titles", "Elven Steel, Titanium Steel"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mithril", ":summary", "* A steel alloy that is as strong as steel with only half the weight.  It is extremely difficult to forge even for master smiths, so it is extremely rare and valuable.", ":titles", "Elven Steel, Titanium Steel"),
             ":Orichalcum",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Orichalcum", ":reference", "* A legendary metal mentioned in several ancient writings, most notably the\nstory of Atlantis.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Orichalcum", ":reference", "* A legendary metal mentioned in several ancient writings, most notably the story of Atlantis.")
           )
         ),
         "Religious Items",
@@ -772,7 +773,7 @@ export default class nx_tactics_books_gear {
             "Confusing Powder",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Confusing Powder"),
             "Dust of Disappearing Trail",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Dust of Disappearing Trail", ":summary", "* Resettles an area to make it appear as if no one has been there in a long\ntime."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Dust of Disappearing Trail", ":summary", "* Resettles an area to make it appear as if no one has been there in a long time."),
             "Dust of Dryness",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Dust of Dryness", ":summary", "* Evaporates water on contact. Destroys up to level^2 liters of water."),
             "Exploding Powder",
@@ -786,7 +787,7 @@ export default class nx_tactics_books_gear {
             "Incendiary Powder",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Incendiary Powder", ":titles", "Dragon's Breath"),
             "Iocaine Powder",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Iocaine Powder", ":reference", "* What you do not smell is called iocane powder. It is odorless, tasteless, dissolves instantly in liquid,\nand is among the more deadlier poisons known to man. - Man in Black\n* Iocane comes from Australia, as everyone knows! And Australia is entirely peopled with criminals. - Vizzini", ":titles", "Arcenic Trioxide"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Iocaine Powder", ":reference", "* What you do not smell is called iocane powder. It is odorless, tasteless, dissolves instantly in liquid, and is among the more deadlier poisons known to man. - Man in Black\n* Iocane comes from Australia, as everyone knows! And Australia is entirely peopled with criminals. - Vizzini", ":titles", "Arcenic Trioxide"),
             "Irritating Powder",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Irritating Powder", ":titles", "Itching Powder"),
             "Noxious Powder",
@@ -949,8 +950,11 @@ export default class nx_tactics_books_gear {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tooth"),
             "Vampire Blood",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Vampire Blood", ":summary", "* Black Token\n* Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].\n* [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.\n* [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.\n* [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.\n* [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns."),
-            "Healing Salve",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Healing Salve"),
+            "Salve: Healing",
+            nx_tactics_base.f_item_from_tactics_key(
+              nx_tactics_base.t_tactics,
+              "Salve: Healing"
+            ),
             ":Lattice",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lattice"),
             ":Mirror",
@@ -1025,7 +1029,7 @@ export default class nx_tactics_books_gear {
         "Gear Construction",
         nx_tactics_books_gear.f_chapter_gear_construction(),
         "Gear Items",
-        nx_tactics_books_gear.f_chapter_gear_items()
+        nx_tactics_books_gear.f_chapter_gear_items(tactics)
       )
     )
     return output

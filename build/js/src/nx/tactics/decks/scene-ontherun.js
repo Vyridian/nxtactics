@@ -38,11 +38,19 @@ export default class nx_tactics_decks_scene_ontherun {
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_abilitylist},
-          nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Sneak")
+          nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Poison Bite", "Sneak")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
           nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Flint Stone", "Knife: Dagger", "Mushrooms", "Pond Water", "Raspberries", "Torch", "Wild Onions", "Wild Yams")
+        ),
+        vx_core.f_list_from_list(
+          {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_power, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_powerlist},
+          nx_tactics_base.f_powerlist_from_tactics_keys(tactics, "Toxins")
+        ),
+        vx_core.f_list_from_list(
+          {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
+          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Temperature", "Clouds", "Humidity", "Wind", "Exposure", "Hunger", "Thirst", "Poisoned")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},

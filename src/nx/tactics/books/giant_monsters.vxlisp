@@ -31,31 +31,31 @@
      (section
       :name "Human Forces"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Bombers
-         (unit
+         (base/unit
           :name "Bombers")
         :Helicopters
-         (unit
+         (base/unit
           :name "Helicopters")
         :Fighters
-         (unit
+         (base/unit
           :name "Fighters"
           :image "Modern/FighterToken.png")
         :Tanks
-         (unit
+         (base/unit
           :name "Tanks"
           :image "Modern/TankToken.png")
         "Mobile Missile Launchers"
-         (unit
+         (base/unit
           :name "Mobile Missile Launchers"
           :image "Modern/MobileMissileToken.png")
         :Missiles
-         (unit
+         (base/unit
           :name "Missiles"
           :image "Modern/MissilesToken.png")
         "Dimension Tide"
-         (unit
+         (base/unit
           :name "Dimension Tide"
           :image "Daikaiju/DimensionTide.png"
           :summary
@@ -63,14 +63,14 @@
 the hole (presumably never to return).  No one knows where the matter goes, but it is known that after the
 dimension tide passed a dimensional disturbance remained through which a creature passed onto our world.")
         "Type 66 Maser Cannon"
-         (unit
+         (base/unit
           :name "Type 66 Maser Cannon"
           :image "Daikaiju/MaserCannonToken.png"
           :mass "80tons"
           :height "6m"
           :length "15m")
         "Super X"
-         (unit
+         (base/unit
           :name "Super X"
           :image "Daikaiju/SuperXToken.png"
           :summary
@@ -83,11 +83,11 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :height "11m"
           :length "27m")
         "Super X-II"
-         (unit
+         (base/unit
           :name "Super X-II"
           :image "Daikaiju/SuperX2.png")
         "Super X-III"
-         (unit
+         (base/unit
           :name "Super X-III"
           :image "Daikaiju/SuperX3Token.png"
           :summary "Flight at mach 1.7; can fire a Freezer Beam; equipped with Cadmium Missiles; heat resistant layer"
@@ -99,9 +99,9 @@ dimension tide passed a dimensional disturbance remained through which a creatur
      (section
       :name "Allied Monsters"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Gamera
-         (unit
+         (base/unit
           :name "Gamera"
           :image "Daikaiju/GameraToken.png"
           :summary
@@ -118,28 +118,28 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :mass "120tons"
           :height "80m")
         "Mecha King Ghidorah"
-         (unit
+         (base/unit
           :name "Mecha King Ghidorah"
           :image "Daikaiju/MechaKingGhidorahToken.png"
           :summary "Antigravity flight at mach 4; able to fire Gravity beams from its mouths on the left and right head; can fire a Laser Triple beam from the central head; equipped with Godzilla Capture Cables and the large Machine Hand restraint that can also discharge electricity"
           :mass "80ktons"
           :length "140m")
         :Mechagodzilla
-         (unit
+         (base/unit
           :name "Mechagodzilla"
           :image "Daikaiju/MechaGodzillaToken.png"
           :summary "Flight at mach 2; Mega-Buster ray from mouth; paralysis missiles; Super Heat Shield NT-20, laser beam eyes; Plasma Grenade that fires energy absorbed by the Super Heat Shield; 'G-Crusher;' shock anchors and cables; dual Garuda shoulder mounted laser cannons"
           :mass "150ktons"
           :length "120m")
         :Mogera
-         (unit
+         (base/unit
           :name "Mogera"
           :image "Daikaiju/MogeraToken.png"
           :summary "Flight at mach 1; can travel through space at mach 44; able to fire Plasma Laser Cannons from eyes; equipped with a rotating drill for a nose; able to fire a beam from its chest; can launch Spiral Grenade missiles from its hands; has treads under feet for faster movement on land; able to fire lasers from its two hands; can separate into the Star Falcon and Land Moguera"
           :mass "160ktons"
           :height "120m")
         :Mothra
-         (unit
+         (base/unit
           :name "Mothra"
           :image "Daikaiju/MothraToken.png"
           :summary
@@ -152,7 +152,7 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :mass "20ktons"
           :length "65m")
         "Mothra, Larva"
-         (unit
+         (base/unit
           :name "Mothra, Larva"
           :image "Daikaiju/MothraLarvaeToken.png"
           :summary "Web Attack"
@@ -162,9 +162,9 @@ dimension tide passed a dimensional disturbance remained through which a creatur
      (section
       :name "Enemy Monsters"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Battra
-         (unit
+         (base/unit
           :name "Battra"
           :image "Daikaiju/BattraToken.png"
           :summary
@@ -172,7 +172,7 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :mass "30ktons"
           :length "73m")
         "Battra, Larva"
-         (unit
+         (base/unit
           :name "Battra, Larva"
           :image "Daikaiju/BattraLarvaeToken.png"
           :summary
@@ -180,15 +180,15 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :mass "20ktons"
           :length "90m")
         :Biollante
-         (unit
+         (base/unit
           :name "Biollante"
           :image "Daikaiju/Biollante.png")
         :Destroyah
-         (unit
+         (base/unit
           :name "Destroyah"
           :image "Daikaiju/Destroyah.png")
         :Godzilla
-         (unit
+         (base/unit
           :name "Godzilla"
           :image "Daikaiju/GodzillaToken.png"
           :summary
@@ -200,20 +200,20 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :mass "60ktons"
           :height "100m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             "Radiation Powers"
-             (unitskill
+             (base/unitskill
               :name "Radiation Powers"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Radiation Beam"
-                 (unitability
+                 (base/unitability
                   :name "Radiation Beam")
                 "Radiation Blast"
-                 (unitability
+                 (base/unitability
                   :name "Radiation Blast")))))
         :Gyaos
-         (unit
+         (base/unit
           :name "Gyaos"
           :image "Daikaiju/GyaosToken.png"
           :summary
@@ -229,7 +229,7 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :height "85m"
           :width "185m")
         "King Ghidorah"
-         (unit
+         (base/unit
           :name "King Ghidorah"
           :image "Daikaiju/KingGhidorahToken.png"
           :summary
@@ -240,7 +240,7 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :mass "70ktons"
           :height "140m")
         :Legion
-         (unit
+         (base/unit
           :name "Legion"
           :image "Daikaiju/LegionToken.png"
           :reference "And he asked him, What is thy name? And he answered, saying, My name is Legion: for we are many. - New Testament - Mark 5:9"
@@ -258,7 +258,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :mass "600tons"
           :height "140m")
         :Megaguirus
-         (unit
+         (base/unit
           :name "Megaguirus"
           :image "Daikaiju/MegaguirusToken.png"
           :summary
@@ -275,9 +275,9 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
      (section
       :name "Allied Robots"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Getter 1"
-         (unit
+         (base/unit
           :name "Getter 1"
           :image "Daikaiju/Getter_1.png"
           :summary
@@ -287,16 +287,16 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :mass "220tons"
           :height "38m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Getter Beam
                 * Tomahawk Boomerang"
               :level "5")))
         "Getter 2"
-         (unit
+         (base/unit
           :name "Getter 2"
           :image "Daikaiju/Getter_2.png"
           :summary
@@ -307,16 +307,16 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :mass "220tons"
           :height "38m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Getter Drill
                 * Drill Missile"
               :level "5")))
         "Getter 3"
-         (unit
+         (base/unit
           :name "Getter 3"
           :image "Daikaiju/Getter_3.png"
           :summary
@@ -326,30 +326,30 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :mass "220tons"
           :height "20m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary "* Getter Missile"
               :level "5")))
         "Getter G Dragon"
-         (unit
+         (base/unit
           :name "Getter G Dragon"
           :image "Daikaiju/GetterG_Dragon.png"
           :summary "* Flight: Mach 3.5"
           :mass "330tons"
           :height "50m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Getter Beam
                 * Double Tomahawk Boomerang"
               :level "5")))
         "Getter G Liger"
-         (unit
+         (base/unit
           :name "Getter G Liger"
           :image "Daikaiju/GetterG_Liger.png"
           :summary
@@ -360,22 +360,22 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :mass "330tons"
           :height "50m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary "* Liger Missile"
               :level "5")))
         "Getter G Poseidon"
-         (unit
+         (base/unit
           :name "Getter G Poseidon"
           :image "Daikaiju/GetterG_Poseidon.png"
           :mass "330tons"
           :height "40m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Finger Net
@@ -383,7 +383,7 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 * Getter Cyclone"
               :level "5")))
         "Great Mazinger"
-         (unit
+         (base/unit
           :name "Great Mazinger"
           :image "Daikaiju/GreatMazinger.png"
           :summary
@@ -396,9 +396,9 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :mass "32tons"
           :height "25m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Navel Missile
@@ -410,11 +410,11 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 * Thunder Break"
               :level "5")))
         :Grendizer
-         (unit
+         (base/unit
           :name "Grendizer"
           :image "Daikaiju/Grendizer.png")
         "Mazinger Z"
-         (unit
+         (base/unit
           :name "Mazinger Z"
           :image "Daikaiju/MazingerZ.png"
           :summary
@@ -424,9 +424,9 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :mass "20tons"
           :height "18m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Koushiryoku Beam - Mazinger Z can channel pure Photonic Energy through its eyes, unleashing a pair of powerful lasers, which are said to be equal to 10 tons of explosives. This was originally considered Mazinger Z's weakest attack, however, in Shin Mazinger the power of this attacked is greatly magnified to the point where it can now be considered the strongest.
@@ -442,31 +442,31 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 * Finger Missile - A rarely-used attack where Mazinger fires the last joint of its fingers as miniature missiles."
               :level "5")))
         :Raideen
-         (unit
+         (base/unit
           :name "Raideen"
           :image "Daikaiju/Raideen.png"
           :summary "Flight: Mach 10 in God Bird form"
           :mass "350tons"
           :height "52m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* God Missile
                 * God Arrow"
               :level "5")))
         :Voltron
-         (unit
+         (base/unit
           :name "Voltron"
           :image "Daikaiju/Voltron.png"
           :mass "700tons"
           :height "60m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Wing Boomerang - Boomerang attack from the wings of GoLion.

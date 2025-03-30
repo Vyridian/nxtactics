@@ -115,9 +115,9 @@
           :image "AlienPredator/Alien_Egg.png"
           :reference "Who's laying these eggs?  I'm not sure. It must be something we haven't seen yet.  Ripley and Bishop, Aliens"))
       :unitmap
-       (unitmap
+       (base/unitmap
         "Alien Starship"
-         (unit
+         (base/unit
           :name "Alien Starship"
           :image "AlienPredator/AlienShip.png"
           :height "43m"
@@ -132,94 +132,94 @@
 * Its structural perfection is matched only by its hostility.  You admire it.  I admire its purity. A survivor... unclouded by conscience, remorse, or delusions of morality. - Ash and Lambert, Alien"
       :titles "Xenomorph XX121"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Alien Chest Burster"
-         (unit
+         (base/unit
           :name "Alien Chest Burster"
           :image "AlienPredator/Alien_ChestBurster.png"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Acidic
-             (unitpower
+             (base/unitpower
               :name "Acidic"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Acid Blood"
-                 (unitability
+                 (base/unitability
                   :name "Acid Blood")))))
         "Alien (Dog)"
-         (unit
+         (base/unit
           :name "Alien (Dog)"
           :image "AlienPredator/Alien_Dog.png"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Acidic
-             (unitpower
+             (base/unitpower
               :name "Acidic"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Acid Blood"
-                 (unitability
+                 (base/unitability
                   :name "Acid Blood")))))
         "Alien Face Hugger"
-         (unit
+         (base/unit
           :name "Alien Face Hugger"
           :image "AlienPredator/AlienFaceHugger.png"
           :reference
            "* I haven't seen anything like that except, uh, molecular acid.  It must be using it for blood.  It's got a
 wonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Acidic
-             (unitpower
+             (base/unitpower
               :name "Acidic"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Acid Blood"
-                 (unitability
+                 (base/unitability
                   :name "Acid Blood")))))
         "Alien Queen"
-         (unit
+         (base/unit
           :name "Alien Queen"
           :image "AlienPredator/Alien_Queen.png"
           :reference "Get away from her, you BITCH! - Ripley, Aliens"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Acidic
-             (unitpower
+             (base/unitpower
               :name "Acidic"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Acid Blood"
-                 (unitability
+                 (base/unitability
                   :name "Acid Blood")))))
         "Alien Warrior"
-         (unit
+         (base/unit
           :name "Alien Warrior"
           :image "AlienPredator/Alien_Warrior.png"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Acidic
-             (unitpower
+             (base/unitpower
               :name "Acidic"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Acid Blood"
-                 (unitability
+                 (base/unitability
                   :name "Acid Blood")))))
         :Predalien
-         (unit
+         (base/unit
           :name "Predalien"
           :image "AlienPredator/Predalien.png"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Acidic
-             (unitpower
+             (base/unitpower
               :name "Acidic"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Acid Blood"
-                 (unitability
+                 (base/unitability
                   :name "Acid Blood")))))))
     "Predator Equipment"
      (section
@@ -251,12 +251,12 @@ wonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien"
           :name "Predator Vision"
           :image "AlienPredator/PredatorVision.jpg"))
       :unitmap
-       (unitmap
+       (base/unitmap
         "Predator Scout Ship"
-         (unit
+         (base/unit
           :name "Predator Scout Ship")
         "Predator Hunting Ship"
-         (unit
+         (base/unit
           :name "Predator Hunting Ship")))
     :Predators
      (section
@@ -268,35 +268,35 @@ wonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien"
 * Aside from their repeated conflicts with humans, the Predators have notably been associated with Xenomorph XX121, known to them as kiande amedha ('hard meat'), whom they revere as perhaps the most worthy of all prey. They have been known to deliberately breed the creatures from captive Queens in order to hunt them, often as part of initiation rituals for young Predators."
       :titles "Yautja"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Un-blooded Predator"
-         (unit
+         (base/unit
           :name "Un-blooded Predator"
           :summary "* The lowest level of Yautja warriors. These are warriors in training. Many die during this brutal training regiment designed to cull the weak.")
         "Young Blood Predator"
-         (unit
+         (base/unit
           :name "Young Blood Predator"
           :summary "* A Yautja warrior who has completed their training. These warriors await their final test, killing a Xenomorph close range primitive weapons.")
         "Blooded Predator"
-         (unit
+         (base/unit
           :name "Blooded Predator"
           :image "AlienPredator/Predator.png"
           :summary "* After killing a Xenomorph, the Predator a full citizen of Yautja society and is allowed access to the Plasma Cannon and other advanced weaponry and spacecraft. A Blooded Predator may join hunts with others or go off on their own to bring back stories, honor, treasure, and trophies.")
         "Elite Predator"
-         (unit
+         (base/unit
           :name "Elite Predator"
           :image "AlienPredator/Predator_Veteran.png"
           :summary "* A Yautja warrior who has survived many dangerous hunts is raised to elite status. These Yautja have vast fighting skills and can fight many enemies single-handed.")
         "Elder Predator"
-         (unit
+         (base/unit
           :name "Elder Predator"
           :summary "* Older Elite Predators can be given the honorific of Elder. Elder Predators form the political and administrative caste of Yautja society.")
         "Clan Leader Predator"
-         (unit
+         (base/unit
           :name "Clan Leader Predator"
           :summary "* Clan Leaders direct all Predator business and travel on Predator Flagships. Elder Predators may challenge the Clan Leader to take their position.")
         "Bad Blood Predator"
-         (unit
+         (base/unit
           :name "Bad Blood Predator"
           :summary "* Bad Bloods are Predators who severely violated their code of honor and were either banished or escaped from their clan. Sometimes the Bad Bloods become the target of a hunt to make an example of them.")))
     "Human Equipment"
@@ -353,23 +353,23 @@ wonderful defense mechanism.  You don't dare kill it. - Parker and Brett, Alien"
      (section
       :name "Human Vehciles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "UD-4L Cheyenne Dropship"
-         (unit
+         (base/unit
           :name "UD-4L Cheyenne Dropship"
           :image "ColonialMarines/Dropship.png"
           :height "6m"
           :length "25m"
           :width "13m")
         "M577 Armored Personnel Carrier"
-         (unit
+         (base/unit
           :name "M577 Armored Personnel Carrier"
           :image "ColonialMarines/APC.png"
           :height "3m"
           :length "9m"
           :width "3m")
         "Conestoga Class Starship"
-         (unit
+         (base/unit
           :name "Conestoga Class Starship"
           :image "ColonialMarines/Sulaco.png"
           :summary
@@ -383,28 +383,28 @@ http://www.kitsune.addr.com/SF-Conversions/Rifts-Other-Vehicles/USS_Sulaco.htm"
           :length "385m"
           :width "77m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :summary
                "* The Conestogas skin consists of a laminated layer of insulators, alloy micro meteor shielding, composite armors, and aerogel layers. This provides only limited protection against Kinetic weapons (the best defense against those is high-mass armor, untenable on a starship), but it does provide excellent protection against directed energy weapons.
 * Overlying all of this are layers of Radar Absorbent Material, and a dark grey paint, in order to keep both the ships radar and optical signature as low as possible. In addition to this the ship has a radar jamming system for ECM, and the computer systems are designed with double hardened systems to prevent either jamming or EMP from damaging the ships system or any systems of equipment inside the ship.")
             :Hanger
-             (unitpower
+             (base/unitpower
               :name "Hanger"
               :summary "20ktons Cargo"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Its main anti-ship weapons are eight Long Lance missiles, providing it with a good long range punch. These missiles are almost small starships in their capabilities and sensor systems, and are currently the main anti-ship system of both the Colonial Marine Corps and the Navy. Backing up these weapons are two Neutral Particle Beam cannons. These large weapons are mounted along the main hull, and can only fire in a forward arc. Although they do not provide the ship with a Hard Kill capability, they can be used to disrupt a enemies electronics at huge ranges. For close range weapons there are two laser cannons located on either side of the ship. These cannons provide close in defense against missiles, mines, and the odd fighter. For some additional close in Hard Kill capabilities there are two rail guns on the ship, one on top, and the other on the bottom of the main hull. Firing a combination of both kinetic penetrators (essentially tungsten darts) which can punch holes through almost any armor, and kinetic penetrator incendiary (tungsten tipped darts designed to vaporize AFTER impact), these weapons have a reasonable rate of fire, and can do quite a lot of damage to other ships.
 * The ship is also capable of laying mines, with sixty mines available in a ventral dispenser. Although not as large a threat to enemy ships as the ships missiles, they are still quite effective for interdiction and for cutting off civilian shipping.
 * For orbital bombardment the ship has a ventral launcher filled with eighty re-entry vehicles. These can carry a variety of warheads, including nuclear payloads. Such ordnance can only be used when the ship receives the orders to do so from its Captain, or from a Marine Major or personnel higher in rank than that.")))
         :Nostromo
-         (unit
+         (base/unit
           :name "Nostromo"
           :image "ColonialMarines/Nostromo.png"
           :reference "This a commercial ship, not a rescue ship. - Parker, Alien"
@@ -416,14 +416,14 @@ Speed: .12 light years/day
           :length "244m"
           :width "165m")
         "Refinery Ship"
-         (unit
+         (base/unit
           :name "Refinery Ship"
           :image "ColonialMarines/Refinery.png"
           :height "881m"
           :length "1500m"
           :width "979m")
         "Lockmart Starcub Shuttlecraft"
-         (unit
+         (base/unit
           :name "Lockmart Starcub Shuttlecraft"
           :image "ColonialMarines/Shuttlecraft.png"
           :titles "Narcisssus"
@@ -434,19 +434,19 @@ Speed: .12 light years/day
      (section
       :name "Humans"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Company Man"
-         (unit
+         (base/unit
           :name "Company Man"
           :reference
            "* I work for the company. But don't let that fool you, I'm really an okay guy. - Burke, Aliens
 * This installation has a substantial dollar value attached to it. They can bill me. - Burke and Ripley, Aliens
 * If I went and made a major security situation out of it, everybody steps in; Administration steps in, and there's no exclusive rights for anybody, nobody wins! So I made a decision, and it was... wrong. It was a bad call, Ripley. It was a bad call. - Burke, Aliens")
         :Civilian
-         (unit
+         (base/unit
           :name "Civilian")
         "Marine Grunt"
-         (unit
+         (base/unit
           :name "Marine Grunt"
           :image "ColonialMarines/Marine.png"
           :reference
@@ -457,39 +457,39 @@ Speed: .12 light years/day
            "* Pulse Rifle
 * Shotgun")
         "Marine Heavy Weapons"
-         (unit
+         (base/unit
           :name "Marine Heavy Weapons"
           :reference "* Look, man. I only need to know one thing: where they are. - Vasquez, Aliens")
         "Marine Lieutenant"
-         (unit
+         (base/unit
           :name "Marine Lieutenant"
           :reference
            "* How many drops is this for you, Lieutenant? Thirty eight... simulated. How many *combat* drops? Uh,
 two. Including this one. - Vasquez and Gorman, Aliens")
         "Marine Pilot"
-         (unit
+         (base/unit
           :name "Marine Pilot"
           :reference "* We're in the pipe, five by five. - Ferro, Aliens")
         "Marine Sergeant"
-         (unit
+         (base/unit
           :name "Marine Sergeant"
           :reference "* Another glorious day in the Corps! A day in the Corps is like a day on the farm. Every meal's a banquet! Every paycheck a fortune! Every formation a parade! I LOVE the Corps! - Apone, Aliens")
         "Marine Tech"
-         (unit
+         (base/unit
           :name "Marine Tech"
           :summary
            "* Motion Detector
 * Electronics Pack")
         "Power Loader"
-         (unit
+         (base/unit
           :name "Power Loader"
           :image "ColonialMarines/PowerLoader.png")
         "Sentry Turret"
-         (unit
+         (base/unit
           :name "Sentry Turret"
           :image "ColonialMarines/SentryTurret.png")
         :Synthetic
-         (unit
+         (base/unit
           :name "Synthetic"
           :image "ColonialMarines/Android.png"
           :reference
@@ -509,38 +509,38 @@ two. Including this one. - Vasquez and Gorman, Aliens")
      (section
       :name "Battlestar Colonials"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Colonial Raptor"
-         (unit
+         (base/unit
           :name "Colonial Raptor"
           :image "BattlestarGalactica/Colonial_Raptor.png")
         "Colonial Viper"
-         (unit
+         (base/unit
           :name "Colonial Viper"
           :image "BattlestarGalactica/Colonial_Viper.png")
         "Colonial Battlestar"
-         (unit
+         (base/unit
           :name "Colonial Battlestar"
           :image "BattlestarGalactica/Colonial_Battlestar.png")))
     :Cylons
      (section
       :name "Cylons"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Cylon 6"
-         (unit
+         (base/unit
           :name "Cylon 6"
           :image "BattlestarGalactica/Cylon_6.png")
         "Cylon Centurion"
-         (unit
+         (base/unit
           :name "Cylon Centurion"
           :image "BattlestarGalactica/Cylon_Centurion.png")
         "Cylon Raider"
-         (unit
+         (base/unit
           :name "Cylon Raider"
           :image "BattlestarGalactica/Cylon_Raider.png")
         "Cylon Base Star"
-         (unit
+         (base/unit
           :name "Cylon Base Star"
           :image "BattlestarGalactica/Cylon_BaseStar.png"))))))
 
@@ -574,52 +574,52 @@ two. Including this one. - Vasquez and Gorman, Aliens")
      (section
       :name "Doctor Who Units"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Amy Pond"
-         (unit
+         (base/unit
           :name "Amy Pond")
         "Captain Jack Harkness"
-         (unit
+         (base/unit
           :name "Captain Jack Harkness"
           :image "DrWho/CaptainJackHarkness.png"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Longevity
-             (unitpower
+             (base/unitpower
               :name "Longevity"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Eternal Youth"
-                 (unitability
+                 (base/unitability
                   :name "Eternal Youth")
                 "True Immortality"
-                 (unitability
+                 (base/unitability
                   :name "True Immortality")))))
         "Clara Oswald"
-         (unit
+         (base/unit
           :name "Clara Oswald"
           :reference "* Clara: Have we just watched the entire life cycle of Earth, birth to death. Doctor: Yes. Clara: And you're okay with that? Doctor: ... Yes. Clara: How can you be? ... To you, I haven't been born yet, and to you I've been dead a hundred billion years. Is my body out there somewhere, in the ground? Doctor: ... Yes... I suppose it is. Clara: But hear we are talking, so I am a ghost. To you, I'm a ghost. We're all ghost to you. We must be nothing. Doctor: No, no. You're not that. Never that. Clara: They what are we? What can we possible be? Doctor: You are the only mystery, worth solving.")
         :Cyberman
-         (unit
+         (base/unit
           :name "Cyberman"
           :image "DrWho/Cyberman.png"
           :reference "We have 5 million Cybermen. How many are you? Four! You would destroy the Cybermen with 4 Daleks? We would destroy the Cybermen with 1 Dalek! You are superior to us in only one respect. You are better at dying! - Cybermen and Daleks")
         :Dalek
-         (unit
+         (base/unit
           :name "Dalek"
           :image "DrWho/Dalek.png"
           :reference "Imagine you were dying. Imagine you were afraid and a long way from home and in terrible pain. And just when you thought it couldn't get worse, you looked up and saw the face of the devil himself. Hello Dalek - The Doctor"
           :summary "The Daleks odd form may be explained by their personal shielding. Weapons and sensors are placed on stalks so that they may protrude from the shield. This prevents their shield from interfering with their equipment, but it also leaves these devices vulnerable."
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding")))
         :Davros
-         (unit
+         (base/unit
           :name "Davros"
           :image "DrWho/Davros.png"
           :reference
@@ -630,7 +630,7 @@ fashion them into weapons...How many more?  Just think how many have died in you
 who keeps running, never looking back because he dare not out of shame.  This is my final victory, Doctor.  I
 have shown you...yourself. - Davros")
         "Doctor, The"
-         (unit
+         (base/unit
           :name "Doctor, The"
           :image "DrWho/TheDoctor.png"
           :reference
@@ -673,51 +673,51 @@ would that be? Have you thought of that? Would you die for? Who I am is where
 I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
 * People always get it wrong with Time Lords. We take forever to die. Even if we are too injured to regenerate, every cell in our bodies keeps trying. Dying properly can take days. That's why we like to die among our own kind. They know not to bury us early. I think... In my current condition, it'll take me about... a day and a half to reach the top of the tower. I think, if I'm lucky, I have a day and a half. - Heaven Sent")
         :K-9
-         (unit
+         (base/unit
           :name "K-9"
           :image "DrWho/K9.png"
           :reference "The Doctor likes traveling with an entourage. Sometimes they're human, sometimes they're aliens and sometimes they're tin dogs. What about you? Where do you fit in the picture? Me? I'm their man in Havana. I'm their technical support. I'm... Oh my god. I'm the tin dog! - Sarah Jane Smith and Mickey Smith")
         "Martha Jones"
-         (unit
+         (base/unit
           :name "Martha Jones"
           :image "DrWho/MarthaJones.png"
           :reference "She completely adored him ... Is this going anywhere?  Yes.  Cause he never looked at her twice ... and she wasted years of her life ... and I told her time and time again.  Get out.  So this is me getting out. - Martha Jones and the Doctor")
         "Master, The"
-         (unit
+         (base/unit
           :name "Master, The"
           :image "DrWho/TheMaster.png"
           :reference
            "* We stand there... 8 years old... staring at the raw power of time and space, just a child.  Some would be inspired... Some would run away ... and some would go mad.  What about you?  Oh, the one who ran away.  I never stopped. - The Doctor and Martha
 * And so it came to pass, that the human race fell and the Earth was no more. And I looked out on my new Dominion as master of all and I thought it good.")
         "Rose Tyler"
-         (unit
+         (base/unit
           :name "Rose Tyler"
           :image "DrWho/RoseTyler.png"
           :reference "This is really seeing the future - you just leave us behind! ... Sarah Jane - you were that close to her once, and now ... you never even mention her. ... I don't age. I regenerate. But humans decay.  You wither and you die. Imagine watching that happen to someone you ... You can spend the rest of your life with me. But I can't spend the rest of mine with you. I have to live on, alone. That's the curse of the Timelords. - Rose and the Doctor, Doctor Who")
         "Sarah Jane Smith"
-         (unit
+         (base/unit
           :name "Sarah Jane Smith"
           :image "DrWho/SarahJaneSmith.png"
           :reference "The universe has to move forward. Pain and loss, they define us as much as happiness or love. Whether it's a world, or a relationship ... Everything has its time.  And everything ends. - Sarah Jane Smith")
         :Rutan
-         (unit
+         (base/unit
           :name "Rutan"
           :image "DrWho/Rutan.png")
         :Sontaran
-         (unit
+         (base/unit
           :name "Sontaran"
           :image "DrWho/Sontaran.png")
         "Sontaran Scout Ship"
-         (unit
+         (base/unit
           :name "Sontaran Scout Ship"
           :image "DrWho/SontaranScoutShip.png")
         :Sutekh
-         (unit
+         (base/unit
           :name "Sutekh"
           :reference "* You would use your powers for evil. Evil? Your evil is my good. I am Sutehk the Destroyer. Where I tread, I leave nothing but dust and darkness. I find that good. - The Doctor and Sutekh"
           :titles "Sutekh the Destroyer")
         "Weeping Angel"
-         (unit
+         (base/unit
           :name "Weeping Angel"))))))
 
 (func chapter_robotech : base/chapter
@@ -770,105 +770,105 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
      (section
       :name "Earth Forces"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Yamato Space Battleship"
-         (unit
+         (base/unit
           :name "Yamato Space Battleship"
           :image "SpaceBattleshipYamato/Yamato.png"
           :titles "Argo"
           :mass "62ktons"
           :length "263m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "5"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Shock Cannon"
-                 (unititem
+                 (base/unititem
                   :name "Shock Cannon")
                 "Pulse Laser"
-                 (unititem
+                 (base/unititem
                   :name "Pulse Laser")
                 :Missile
-                 (unititem
+                 (base/unititem
                   :name "Missile")
                 "Wave Motion Gun"
-                 (unititem
+                 (base/unititem
                   :name "Wave Motion Gun")))))
         "Andromeda Space Battleship"
-         (unit
+         (base/unit
           :name "Andromeda Space Battleship"
           :image "SpaceBattleshipYamato/Andromeda.png")
         "UDF Battle Satellite"
-         (unit
+         (base/unit
           :name "UDF Battle Satellite")
         "UDF Space Destroyer"
-         (unit
+         (base/unit
           :name "UDF Space Destroyer"
           :image "SpaceBattleshipYamato/Destroyer.png")
         "Cosmo Tiger II"
-         (unit
+         (base/unit
           :name "Cosmo Tiger II"
           :image "SpaceBattleshipYamato/CosmoTiger.png")
         "Cosmo Zero"
-         (unit
+         (base/unit
           :name "Cosmo Zero"
           :image "SpaceBattleshipYamato/CosmoZero.png")))
     "Gamelon Empire"
      (section
       :name "Gamelon Empire"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Leader Desslok"
-         (unit
+         (base/unit
           :name "Leader Desslok"
           :image "SpaceBattleshipYamato/LeaderDesslok.png")
         "Desslok's Command Carrier"
-         (unit
+         (base/unit
           :name "Desslok's Command Carrier"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Smite Projector"
-                 (unititem
+                 (base/unititem
                   :name "Smite Projector")))))
         "Gamelon Destroyer"
-         (unit
+         (base/unit
           :name "Gamelon Destroyer")
         :Tri-Carrier
-         (unit
+         (base/unit
           :name "Tri-Carrier")
         "Smite Ship"
-         (unit
+         (base/unit
           :name "Smite Ship"
           :image "SpaceBattleshipYamato/Gamelon_Smiteship.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Smite Projector"
-                 (unititem
+                 (base/unititem
                   :name "Smite Projector")))))
         "Drill Missile"
-         (unit
+         (base/unit
           :name "Drill Missile")
         "Reflex Gun"
-         (unit
+         (base/unit
           :name "Reflex Gun"
           :summary
            "* Argo is on the opposite side of Pluto. The opposite side? Oh, no Star Force, you're not getting away. My Reflex Gun can shoot around corners. - Colonel Ganz")))
@@ -876,38 +876,38 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
      (section
       :name "Comet Empire"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Prince Zordar"
-         (unit
+         (base/unit
           :name "Prince Zordar"
           :image "SpaceBattleshipYamato/PrinceZordar.png"
           :summary
            "I hold the whole universe in the palm of my hand. I just close my hand and planet crumble, the stars shatter! What chance does your planet Earth have? It's a cosmic joke. - Prince Zordar")
         "Comet Empire"
-         (unit
+         (base/unit
           :name "Comet Empire"
           :image "SpaceBattleshipYamato/CometEmpire.png")
         :Medaruhse
-         (unit
+         (base/unit
           :name "Medaruhse"
           :summary
            "Its principal weapon is a large plasma cannon which fires directly into a SMITE field which teleports the energy to a considerable distance.  This gives the weapon a tremendous firing range more than twice that of a Wave Motion Gun."
           :titles "Magna Flame Gun"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "5"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Magna Flame Gun"
-                 (unititem
+                 (base/unititem
                   :name "Magna Flame Gun"))))))))))
 
 (func chapter_space_opera : base/chapter
@@ -966,52 +966,52 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
             * For safety reasons, landing pads and drydocks are located 10km away from any inhabited area. The spaceport proper is reached by shuttles.
             * Orbital and land-based spaceports are essentially the same except for modes of travel."))
       :unitmap
-       (unitmap
+       (base/unitmap
         "Alliance Armsman"
-         (unit
+         (base/unit
           :name "Alliance Armsman")
         "Alliance Commander"
-         (unit
+         (base/unit
           :name "Alliance Commander")
         "Alliance Commando"
-         (unit
+         (base/unit
           :name "Alliance Commando")
         "Alliance Emmissary"
-         (unit
+         (base/unit
           :name "Alliance Emmissary"
           :summary
            "* Serves on First Contact and other diplomatic missions. Emmissaries must determine the best course of action to develop long-term relations with other species. As such, they have sweeping powers to determine policy that military personnel must implement including blockades and quarantines."
           :titles "Diplomat")
         "Alliance Heavy Marine"
-         (unit
+         (base/unit
           :name "Alliance Heavy Marine")
         "Alliance Intelligence Agent"
-         (unit
+         (base/unit
           :name "Alliance Intelligence Agent"
           :titles "Brint")
         "Alliance Marine Tech"
-         (unit
+         (base/unit
           :name "Alliance Marine Tech")
         "Alliance Mobile Cavalry"
-         (unit
+         (base/unit
           :name "Alliance Mobile Cavalry")
         "Alliance Mobile Infantry"
-         (unit
+         (base/unit
           :name "Alliance Mobile Infantry")
         "Alliance Pilot"
-         (unit
+         (base/unit
           :name "Alliance Pilot")
         "Alliance Police Detective"
-         (unit
+         (base/unit
           :name "Alliance Police Detective")
         "Alliance Police Officer"
-         (unit
+         (base/unit
           :name "Alliance Police Officer")
         "Alliance Scientist"
-         (unit
+         (base/unit
           :name "Alliance Scientist")
         "Alliance Scout"
-         (unit
+         (base/unit
           :name "Alliance Scout"
           :summary
            "* Alliance Scouts operate somewhat differently from the other divisions of the Alliance. Since Scouts must opearte on the edge of civilized space, the Scout Service values independence and resourcefulness. Its people are highly independent (some would say insubordinate) and are accustomed to doing a lot with a little. Scouts do not wear normally uniforms, even onboard ships and easily blend in with the frontier fringers. They operate with little funding or support and are experts at survival and mechancal engineering.
@@ -1019,23 +1019,23 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
             * Intelligence - Given the Scouts' deployment at the fringes of civilization, they often gain intelligence that the Intelligence Bureau would find difficult to obtain on their own. Officially, the Scout service shares all intelligence gathered with the Bureau. Unofficially, the Scouts do not like the way the Intelligence Bureau operates and rarely volunteers information. This hesitency, of course, makes the Bureau suspiscious.
             * Wartime - During war, the Scouts are called upon to perform skirmish and sabotage missions using their fast, light craft.")
         "Alliance Technician"
-         (unit
+         (base/unit
           :name "Alliance Technician")
         "Alliance Trooper"
-         (unit
+         (base/unit
           :name "Alliance Trooper")
         "Alliance Defense Pilot"
-         (unit
+         (base/unit
           :name "Alliance Defense Pilot"
           :summary
            "* Planet-based spacefighter pilot. These fighters can only attain low-orbit, but they are relatively cheap to manufacture and easy to fly so they can be fielded in large numbers.")
         "Alliance Defense Trooper"
-         (unit
+         (base/unit
           :name "Alliance Defense Trooper"
           :summary
            "* Planet-based military force. These warriors are trained to use the local terrain and defensive positions to repel invaders. Since defense forces are rarely needed, it is usually a cushy job. Therefore, they have a somewhate deserved reputation for being lazy and unprepared.")
         "Inquiry Light Recon ATV"
-         (unit
+         (base/unit
           :name "Inquiry Light Recon ATV"
           :summary
            "* Wheeled
@@ -1044,14 +1044,14 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "3"
           :mass "4tons")
         "Sepoy APC"
-         (unit
+         (base/unit
           :name "Sepoy APC"
           :summary "* Wheeled"
           :speedland "300kph"
           :crew "1+11"
           :mass "38tons")
         "Hunter AC Tank"
-         (unit
+         (base/unit
           :name "Hunter AC Tank"
           :summary
            "* Air Cushioned
@@ -1062,34 +1062,34 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "6"
           :mass "210tons")
         "Siega Strider"
-         (unit
+         (base/unit
           :name "Siega Strider"
           :summary "* Legged"
           :speedair "200kph"
           :crew "1"
           :mass "60tons")
         "Striker Grav Tank"
-         (unit
+         (base/unit
           :name "Striker Grav Tank"
           :summary "* 50MW Pulse Laser"
           :speedair "480kph"
           :crew "3"
           :mass "522tons")
         "Tarsan Grav APC"
-         (unit
+         (base/unit
           :name "Tarsan Grav APC"
           :speedair "300kph"
           :crew "2+10"
           :mass "51tons")
         "Essor Recon Drone"
-         (unit
+         (base/unit
           :name "Essor Recon Drone"
           :summary "* No Weapons"
           :speedair "1000kph"
           :crew "0"
           :mass "4.3tons")
         "Princely Lord Attack Speeder"
-         (unit
+         (base/unit
           :name "Princely Lord Attack Speeder"
           :summary
            "* Grav Flyer
@@ -1098,12 +1098,12 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "2"
           :mass "171tons")
         "Alliance Exploration Ship"
-         (unit
+         (base/unit
           :name "Alliance Exploration Ship"
           :summary
            "* SS Copernicus - Floating adrift in open space, the Copernicus is a ghost ship in more ways than one.")
         "Hellbore Missile"
-         (unit
+         (base/unit
           :name "Hellbore Missile"
           :summary
            "* A giant missile designed to drill into a planet and detonate deep in the magma setting off massive volcanic eruptions across the world with the intention to make the world uninhabitable.")))
@@ -1125,38 +1125,38 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
         * Azuriach Imperium - Over time, the Azures consolidated power in their sector of space. They secretly built a large military fleet, and by the time the Terran Union discovered them, the Azures were powerful enough to declare themselves the Azuriach Imperium. Officially, the larger Alliance considers the Azuriachs a human internal problem. Unofficially, the Alliance is concerned with the distinctly human-centric views of the Azuriachs and are not interested in the Azuriachs gaining power over the human worlds."
       :titles "Earth Empire"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Azure Imperial Legionnaire"
-         (unit
+         (base/unit
           :name "Azure Imperial Legionnaire")
         "Azure Imperial Marine"
-         (unit
+         (base/unit
           :name "Azure Imperial Marine")
         "Azure Imperial Pilot"
-         (unit
+         (base/unit
           :name "Azure Imperial Pilot")
         "Azure Imperial Security Agent"
-         (unit
+         (base/unit
           :name "Azure Imperial Security Agent")
         "Azure Imperial Security Officer"
-         (unit
+         (base/unit
           :name "Azure Imperial Security Officer")
         "Trepida Light Grav Tank"
-         (unit
+         (base/unit
           :name "Trepida Light Grav Tank"
           :summary "* Fusion Cannon"
           :speedland "1000kph"
           :crew "2"
           :mass "110tons")
         "Invader Grav Tank"
-         (unit
+         (base/unit
           :name "Invader Grav Tank"
           :summary "* Fusion Cannon"
           :speedland "3640kph"
           :crew "4"
           :mass "152tons")
         "Vortex Land Carrier"
-         (unit
+         (base/unit
           :name "Vortex Land Carrier"
           :summary
            "* These enormous vehicles are equivalent to a naval battleship/aircraft carrier but hovers over the ground using intense magnetic repulsion and massive hoverfans.
@@ -1174,42 +1174,42 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
       :name "Star Syndicate"
       :summary "* The Syndicate is a loosely held criminal empire spread throughout the Alliance. It is a convenient tool of the mega corps and governments, so the Alliance never seems to make much progress against it."
       :unitmap
-       (unitmap
+       (base/unitmap
         "Syndicate Black Marketeer"
-         (unit
+         (base/unit
           :name "Syndicate Black Marketeer")
         "Syndiate Raider"
-         (unit
+         (base/unit
           :name "Syndiate Raider"
           :summary "* Given the high value of starships and their goods, piracy is extremely profitable. The Alliance maintains a 'No-Tolerance/Shoot to Kill' policy for piracy, yet pirate ships and pirate outposts are frighteningly common. The [Azuriach Empire]'s totalitarian state has far fewer incidents of piracy, largely because the stolen goods are harder to sell.")))
     "Independent Terrans"
      (section
       :name "Independent Terrans"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Terran Bounty Hunter"
-         (unit
+         (base/unit
           :name "Terran Bounty Hunter")
         "Terran Merchant Marine"
-         (unit
+         (base/unit
           :name "Terran Merchant Marine")
         "Terran Mercenary"
-         (unit
+         (base/unit
           :name "Terran Mercenary")
         "Terran Miner"
-         (unit
+         (base/unit
           :name "Terran Miner")
         "Terran Physician"
-         (unit
+         (base/unit
           :name "Terran Physician")
         "Terran Scientist"
-         (unit
+         (base/unit
           :name "Terran Scientist")
         "Terran Technician"
-         (unit
+         (base/unit
           :name "Terran Technician")
         "Corsair Motorcycle"
-         (unit
+         (base/unit
           :name "Corsair Motorcycle"
           :summary
            "* Wheeled
@@ -1218,7 +1218,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1"
           :mass "350kg")
         "Letra Ground Car"
-         (unit
+         (base/unit
           :name "Letra Ground Car"
           :summary
            "* Wheeled
@@ -1227,7 +1227,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+4"
           :mass "4tons")
         "Shackleton Snow ATV"
-         (unit
+         (base/unit
           :name "Shackleton Snow ATV"
           :summary
            "* Tracked
@@ -1236,7 +1236,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+3"
           :mass "8tons")
         "Rheena Passenger ACV"
-         (unit
+         (base/unit
           :name "Rheena Passenger ACV"
           :summary
            "* Air Cushioned
@@ -1245,7 +1245,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+15"
           :mass "8tons")
         "Or-E-Cull ATV"
-         (unit
+         (base/unit
           :name "Or-E-Cull ATV"
           :summary
            "* Tracked
@@ -1254,7 +1254,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+5"
           :mass "10tons")
         "Surveyor Hover-Buggy"
-         (unit
+         (base/unit
           :name "Surveyor Hover-Buggy"
           :summary
            "* Air Cushion
@@ -1263,7 +1263,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1"
           :mass "13.7tons")
         "AVI Cargo ACV"
-         (unit
+         (base/unit
           :name "AVI Cargo ACV"
           :summary
            "* Air Cushioned
@@ -1272,7 +1272,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+3"
           :mass "18tons")
         "Hugheston Wheeled Transport"
-         (unit
+         (base/unit
           :name "Hugheston Wheeled Transport"
           :summary
            "* Wheeled
@@ -1282,7 +1282,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+2"
           :mass "21tons")
         "Arctica Grav Transport"
-         (unit
+         (base/unit
           :name "Arctica Grav Transport"
           :summary
            "* Grav
@@ -1292,7 +1292,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+2"
           :mass "25tons")
         "Bundan Wheeled ATV"
-         (unit
+         (base/unit
           :name "Bundan Wheeled ATV"
           :summary
            "* Wheeled
@@ -1301,7 +1301,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+16"
           :mass "28tons")
         "Permax Tracked ATV"
-         (unit
+         (base/unit
           :name "Permax Tracked ATV"
           :summary
            "* Tracked
@@ -1310,7 +1310,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+16"
           :mass "47tons")
         "Cinto Construction Vehicle"
-         (unit
+         (base/unit
           :name "Cinto Construction Vehicle"
           :summary
            "* Tracked
@@ -1319,7 +1319,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1"
           :mass "48tons")
         "Tavee-Gho Hoveryacht"
-         (unit
+         (base/unit
           :name "Tavee-Gho Hoveryacht"
           :summary
            "* Air Cushioned
@@ -1328,7 +1328,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+3"
           :mass "82tons")
         "Cetacean Dolphin Cycle"
-         (unit
+         (base/unit
           :name "Cetacean Dolphin Cycle"
           :summary
            "* Underwater, Propelled by moving Fluke
@@ -1337,14 +1337,14 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1"
           :mass "75kg")
         "Hass Grav Minisub"
-         (unit
+         (base/unit
           :name "Hass Grav Minisub"
           :summary "* Underwater"
           :speedwater "25kph"
           :crew "1+1"
           :mass "1tons")
         "Dashi Hydrofoil"
-         (unit
+         (base/unit
           :name "Dashi Hydrofoil"
           :summary
            "* Hydrofoil, Underwater
@@ -1354,7 +1354,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "2"
           :mass "2tons")
         "Vieus Hydrofoil"
-         (unit
+         (base/unit
           :name "Vieus Hydrofoil"
           :summary
            "* Hydrofoil
@@ -1363,7 +1363,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "2"
           :mass "22tons")
         "Gasheda Undersea ATV"
-         (unit
+         (base/unit
           :name "Gasheda Undersea ATV"
           :summary
            "* Tracked, Underwater"
@@ -1371,7 +1371,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "6"
           :mass "184tons")
         "Aquanaut Restaurant"
-         (unit
+         (base/unit
           :name "Aquanaut Restaurant"
           :summary
            "* Tracked, Underwater
@@ -1380,7 +1380,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "15+85"
           :mass "251tons")
         "Tiamat Mining Crawler"
-         (unit
+         (base/unit
           :name "Tiamat Mining Crawler"
           :summary
            "* Tracked, Underwater
@@ -1390,7 +1390,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "14+50"
           :mass "1000tons")
         "Timla Personal Floating Chair"
-         (unit
+         (base/unit
           :name "Timla Personal Floating Chair"
           :summary
            "* Grav
@@ -1400,7 +1400,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1"
           :mass "100kg")
         "Peter Pan Child's Grav Chair"
-         (unit
+         (base/unit
           :name "Peter Pan Child's Grav Chair"
           :summary
            "* Grav
@@ -1410,7 +1410,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1"
           :mass "400kg")
         "Zeus Luxury Grav Chair"
-         (unit
+         (base/unit
           :name "Zeus Luxury Grav Chair"
           :summary
            "* Grav
@@ -1419,7 +1419,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+1"
           :mass "480kg")
         "Swallow Flycycle"
-         (unit
+         (base/unit
           :name "Swallow Flycycle"
           :summary
            "* Grav
@@ -1428,7 +1428,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+1"
           :mass "1tons")
         "Venery Police Speeder"
-         (unit
+         (base/unit
           :name "Venery Police Speeder"
           :summary
            "* Grav
@@ -1437,7 +1437,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1"
           :mass "1.2tons")
         "Strike It Rich Prospector Grav Bubble"
-         (unit
+         (base/unit
           :name "Strike It Rich Prospector Grav Bubble"
           :summary
            "* Grav
@@ -1446,7 +1446,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+1"
           :mass "1.5tons")
         "Planet Hopper Grav Car"
-         (unit
+         (base/unit
           :name "Planet Hopper Grav Car"
           :summary
            "* Grav
@@ -1455,14 +1455,14 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+3"
           :mass "2.6tons")
         "Quest Air-Raft"
-         (unit
+         (base/unit
           :name "Quest Air-Raft"
           :summary "* Grav"
           :speedair "540kph"
           :crew "1+5"
           :mass "8.3tons")
         "Demeter Grav Farm Wagon"
-         (unit
+         (base/unit
           :name "Demeter Grav Farm Wagon"
           :summary
            "* Grav
@@ -1472,7 +1472,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "3"
           :mass "11tons")
         "Lifesaver Grav Emergency Responder"
-         (unit
+         (base/unit
           :name "Lifesaver Grav Emergency Responder"
           :summary
            "* Grav
@@ -1482,7 +1482,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "2+8"
           :mass "13tons")
         "Duone Rapid Speeder"
-         (unit
+         (base/unit
           :name "Duone Rapid Speeder"
           :summary
            "* Grav
@@ -1491,7 +1491,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+3"
           :mass "14tons")
         "Wanderer Grav Airbus"
-         (unit
+         (base/unit
           :name "Wanderer Grav Airbus"
           :summary
            "* Grav
@@ -1500,14 +1500,14 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+10"
           :mass "15tons")
         "Traveller Shuttle"
-         (unit
+         (base/unit
           :name "Traveller Shuttle"
           :summary "* Grav, Suborbital"
           :speedair "180kph"
           :crew "1+8"
           :mass "17tons")
         "Cloud Nine Grav Houseboat"
-         (unit
+         (base/unit
           :name "Cloud Nine Grav Houseboat"
           :summary
            "* Grav
@@ -1517,7 +1517,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+10"
           :mass "20tons")
         "Athene Grav Lounge"
-         (unit
+         (base/unit
           :name "Athene Grav Lounge"
           :summary
            "* Grav
@@ -1526,7 +1526,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "6+30"
           :mass "30tons")
         "Motherlode Grav Miner"
-         (unit
+         (base/unit
           :name "Motherlode Grav Miner"
           :summary
            "* Grav
@@ -1535,7 +1535,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "2+2"
           :mass "49tons")
         "Tachcel Grav Hyperliner"
-         (unit
+         (base/unit
           :name "Tachcel Grav Hyperliner"
           :summary
            "* Grav, Suborbital
@@ -1545,7 +1545,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "2+72"
           :mass "50tons")
         "Jacques Grav Miner"
-         (unit
+         (base/unit
           :name "Jacques Grav Miner"
           :summary
            "* Grav
@@ -1555,7 +1555,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "2+2"
           :mass "67tons")
         "Windrider Grav Weather Lab"
-         (unit
+         (base/unit
           :name "Windrider Grav Weather Lab"
           :summary
            "* Grav
@@ -1564,7 +1564,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "2+10"
           :mass "88tons")
         "Thorian Kur Repair Shop"
-         (unit
+         (base/unit
           :name "Thorian Kur Repair Shop"
           :summary
            "* Grav
@@ -1573,7 +1573,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+3"
           :mass "127tons")
         "Sans Souci Grav Yacht"
-         (unit
+         (base/unit
           :name "Sans Souci Grav Yacht"
           :summary
            "* Grav
@@ -1583,7 +1583,7 @@ I stand. Where I stand... is where I fall. Stand with me. - Doctor and Masters.
           :crew "1+30"
           :mass "342tons")
         "Zeff Grav Cargo Transport"
-         (unit
+         (base/unit
           :name "Zeff Grav Cargo Transport"
           :summary
            "* Grav
@@ -1628,9 +1628,9 @@ cultural history. They only recently developed technology in an effort to solve 
 over-population problem."
       :titles "Caitian, Felines"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Cizerack Warrior"
-         (unit
+         (base/unit
           :name "Cizerack Warrior")))
     :Chatilian
      (section
@@ -1680,9 +1680,9 @@ parliament. This arrangement has lasted for 500 years, but there always remains 
 risk of civil war."
       :titles "Asparagus Men"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Chatilian Empath"
-         (unit
+         (base/unit
           :name "Chatilian Empath")))
     "Cybernetically Enhanced"
      (section
@@ -1696,16 +1696,16 @@ risk of civil war."
         * Physiology - Eridani are tri-sexual creatures with males and females fertilizing and a fat creature called a Nog that carries young to term in a pouch similar to a kangaroo. Males and females have few gender-based role differences while the Nogs are largely helpless and fiercely protected.
         * History - The Eridani have a long history of conflict and conquest among themselves before uniting to bring their conquests to the stars. They are not interested in statecraft, so conquered worlds were largely left to their own devices besides helping pay for the eternal war effort. Eventually, they encountered a trecherous enemy in the Phentari squids. This enemy was able to lure the Eridani fleet into an all out attack while launching a covert attack against the Eridani homeworld reducing it to rubble. The Eridani empire was shattered and they can never live down the humiliating defeat. They now maintain a blood feud with all Phentari."
       :unitmap
-       (unitmap
+       (base/unitmap
         "Eridani Swordsaint"
-         (unit
+         (base/unit
           :name "Eridani Swordsaint"
           :summary
            "* Certain Eridani warriors are chosen at birth to fulfill the honorable status of Mokaba Datu, (Wisdom Warrior). Under the tutelage of the Buddon Priest, the young Mokaba Datu learns the basic tactics of honorable survival.
             * A swordsaint warrior must be willing to sacrifice emotion for the superior consciousness of objective thought. Even in a berserk status, an Swordsaint retains complete control and suffers no berserk penalties."
           :titles "Mokaba Datu, Wisdom Warrior")
         "Eridani Warrior"
-         (unit
+         (base/unit
           :name "Eridani Warrior"
           :summary
            "* This supreme warrior race specializes in combat skills, most notably archaic hand weapons. Every warrior is allowed to carry an ornamental archaic hand weapon of his choice wherever he goes within Alliance territory.
@@ -1758,12 +1758,12 @@ risk of civil war."
         * History - The Lizards and Rams are tribal creatures who have fought tribal conflicts for tens of thousands of years. Thir technology was limited to spears and stone axes until the Cizerak sent a diplomatic envoy to the Python Lizards. The Lizards suspected trickery and killed the envoy sparking a punitive attack from the Cizerak. The Lizards and Rams were forced into a humiliating surrender after devastating losses from the Cizerak's cowardly orbital bombardment. The Pythos have not forgiven the Cizerak and will never trust them. Since then, the Alliance has established peaceful relations with the Pythos and have recruited many into Alliance police and military forces."
       :titles "Lizards"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Python Lizard"
-         (unit
+         (base/unit
           :name "Python Lizard")
         "Ram Python"
-         (unit
+         (base/unit
           :name "Ram Python")))
     :Reavers
      (section
@@ -1813,9 +1813,9 @@ risk of civil war."
 * Weaknesses - Thranx are unsuited to water and most fear it; they are not naturally buoyant and because they breathe out of their waists, any water that reaches to this level can drown them."
       :titles "Thraxis"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Thranx Navigator"
-         (unit
+         (base/unit
           :name "Thranx Navigator")))
     :Transhuman
      (section
@@ -1839,12 +1839,12 @@ through the devastating stagnation that monopolies produce and recoil at any ten
 to recreate those dark days."
       :titles "Canines, Dogs"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Vargr Merchant"
-         (unit
+         (base/unit
           :name "Vargr Merchant")
         "Vargr Buccaneer Grav Platform"
-         (unit
+         (base/unit
           :name "Vargr Buccaneer Grav Platform"
           :summary "* High speed, open topped, gravity cycle shaped like a cylinder."
           :speedair "1000kph"
@@ -1874,9 +1874,9 @@ have no known enemies except their own Anarchs.
 have gained the ability to share their healing with others."
       :titles "Skulls"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Zen Rigeln Anarch"
-         (unit
+         (base/unit
           :name "Zen Rigeln Anarch"
           :summary
            "* Anarchs are a small sect of Zen that turned their back on the Zen philosophy of
@@ -1889,7 +1889,7 @@ body with another person and disrupt the bodily functions of the target. Pain,
 nausea, and heart failure are only a few of the effects that a skilled Anarch can
 inflict.")
         "Zen Rigeln Healer"
-         (unit
+         (base/unit
           :name "Zen Rigeln Healer"
           :summary
            "* Healing - Through skin to skin contact, a Zen Healer may link his/her own body
@@ -1899,9 +1899,9 @@ proficiency, the Zen can perform incredible feats such as brain surgery.")))
      (section
       :name "Interstellar Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Islander Star Sloop"
-         (unit
+         (base/unit
           :name "Islander Star Sloop"
           :summary
            "* The Islander is the smallest class merchant starship commonly available. It
@@ -1912,10 +1912,10 @@ can carry 30tons of cargo, 4 low passage passengers, and 10 coldsleep bays.
 courier or smuggling as well as heavier armaments."
           :mass "125tons")
         "Deep Space Probe"
-         (unit
+         (base/unit
           :name "Deep Space Probe")
         "Corsair Star Privateer"
-         (unit
+         (base/unit
           :name "Corsair Star Privateer"
           :summary
            "* The Starfarer is a small merchant starship designed for dangerous courier duty.
@@ -1932,7 +1932,7 @@ price means that few of these are procured through normal channels.
 courier or smuggling as well as heavier armaments."
           :mass "250tons")
         "Valkyrie Patrol Star Cruiser"
-         (unit
+         (base/unit
           :name "Valkyrie Patrol Star Cruiser"
           :summary
            "* The Valkyrie is a long range cruiser designed for planetary defense.
@@ -1947,7 +1947,7 @@ carries and services.
 * 6x Heavy Startorpedoes"
           :mass "12500tons")
         "Nike Patrol Space Frigate"
-         (unit
+         (base/unit
           :name "Nike Patrol Space Frigate"
           :summary
            "* The Nike is a short range frigate designed for planetary defense. As a
@@ -1963,7 +1963,7 @@ weapons load for a small ship.
 * 10x Heavy Startorpedoes"
           :mass "375tons")
         "Oliphant Luxury Starliner"
-         (unit
+         (base/unit
           :name "Oliphant Luxury Starliner"
           :summary
            "* 600 High Passage Accommations
@@ -1972,14 +1972,14 @@ weapons load for a small ship.
 * 1000 Coldsleep berths"
           :mass "75000tons")
         "Space Cutter"
-         (unit
+         (base/unit
           :name "Space Cutter"
           :summary
            "* Larger than the Pinnacle, the Cutter can travel back and forth from a planet
 to its moon."
           :mass "60tons")
         "Space Lander"
-         (unit
+         (base/unit
           :name "Space Lander"
           :summary
            "* Larger than the Cutter, the Lander can travel back and forth from a planet
@@ -1988,14 +1988,14 @@ Lander is the prefered method to deploy infantry and tanks after a marine
 orbital halo drop."
           :mass "200tons")
         "Space Pinnacle"
-         (unit
+         (base/unit
           :name "Space Pinnacle"
           :summary
            "* Larger than the Shuttlecraft, the Pinnacle can travel from orbit to a
 planet's moon and return."
           :mass "30tons")
         "Space Shuttlecraft"
-         (unit
+         (base/unit
           :name "Space Shuttlecraft"
           :summary
            "* The shuttlecraft is the smallest of the ship's boats. It is capable of
@@ -2003,13 +2003,13 @@ orbital travel to shuttle small complements of crew and cargo planetside."
           :titles "Launch"
           :mass "10tons")
         "Star Colony Ship"
-         (unit
+         (base/unit
           :name "Star Colony Ship")
         "Sub-light Sleeper Ship - Ark"
-         (unit
+         (base/unit
           :name "Sub-light Sleeper Ship - Ark")
         "Zephyr Startransport"
-         (unit
+         (base/unit
           :name "Zephyr Startransport"
           :summary
            "* The Zephyr is a small merchant starship designed for comfortable passenger
@@ -2096,12 +2096,12 @@ but suffers from reduced range and limited shots.
      (section
       :name "Federation"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Federation Shuttlecraft"
-         (unit
+         (base/unit
           :name "Federation Shuttlecraft")
         "USS Enterprise (Constitution Class)"
-         (unit
+         (base/unit
           :name "USS Enterprise (Constitution Class)"
           :image "StarTrek/Federation_Enterprise.png"
           :titles "NCC-1701"
@@ -2109,29 +2109,29 @@ but suffers from reduced range and limited shots.
           :mass "200ktons"
           :length "304m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "5"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Phaser Array"
-                 (unititem
+                 (base/unititem
                   :name "Phaser Array")
                 "Photon Torpedo"
-                 (unititem
+                 (base/unititem
                   :name "Photon Torpedo")))))
         "USS Reliant (Avenger Class)"
-         (unit
+         (base/unit
           :name "USS Reliant (Avenger Class)"
           :image "StarTrek/Federation_Reliant.png"
           :summary
@@ -2141,35 +2141,35 @@ crew, and has more limited endurance."
           :mass "165ktons"
           :length "236m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Phaser Array"
-                 (unititem
+                 (base/unititem
                   :name "Phaser Array")
                 "Photon Torpedo"
-                 (unititem
+                 (base/unititem
                   :name "Photon Torpedo"
                   :facing "Fx2, Bx2")))))))
     "Alien Races"
      (section
       :name "Alien Races"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Borg Cube"
-         (unit
+         (base/unit
           :name "Borg Cube"
           :image "StarTrek/Borg_Cube.png"
           :reference
@@ -2180,27 +2180,27 @@ First Contact"
           :mass "90Mtons"
           :length "3km"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"
               :summary "Adaptive Shielding total capacity 5,850,900TJ"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary "Total output 7,500,000TW"
               :level "4")))
         "Borg Drone"
-         (unit
+         (base/unit
           :name "Borg Drone"
           :image "StarTrek/Borg_Drone.png"
           :reference
            "The Borg were possibly created by the alien probe V'Ger to seek 'all that is knowable' and return to its
 creator.")
         "Doomsday Machine"
-         (unit
+         (base/unit
           :name "Doomsday Machine"
           :image "StarTrek/DoomsdayMachine.png"
           :reference
@@ -2218,140 +2218,140 @@ Borg."
           :mass "4x10^23tons"
           :length "2.7km"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :summary "Solid Neutronium - Hyper Dense Neutron Star Material"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Anti-Proton Beam"
-                 (unititem
+                 (base/unititem
                   :name "Anti-Proton Beam")))))
         "Klingon Bird of Prey"
-         (unit
+         (base/unit
           :name "Klingon Bird of Prey"
           :image "StarTrek/Klingon_BirdOfPrey.png"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding")
             :Weaponry
-             (unitpower
+             (base/unitpower
               :name "Weaponry"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Disruptor Bank"
-                 (unititem
+                 (base/unititem
                   :name "Disruptor Bank")
                 "Photon Torpedo"
-                 (unititem
+                 (base/unititem
                   :name "Photon Torpedo")))
             :Invisibility
-             (unitpower
+             (base/unitpower
               :name "Invisibility"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Cloaking Device"
-                 (unititem
+                 (base/unititem
                   :name "Cloaking Device"))))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4")))
         "Klingon Cruiser"
-         (unit
+         (base/unit
           :name "Klingon Cruiser"
           :image "StarTrek/Klingon_Cruiser.png"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding")
             :Weaponry
-             (unitpower
+             (base/unitpower
               :name "Weaponry"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Disruptor Bank"
-                 (unititem
+                 (base/unititem
                   :name "Disruptor Bank")
                 "Photon Torpedo"
-                 (unititem
+                 (base/unititem
                   :name "Photon Torpedo"))))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "5")))
         "Klingon Warrior"
-         (unit
+         (base/unit
           :name "Klingon Warrior"
           :image "StarTrek/Klingon_Warrior.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee")))
         "Nomad Probe"
-         (unit
+         (base/unit
           :name "Nomad Probe"
           :image "StarTrek/Nomad.png"
           :reference
            "* Error! Error!...Faulty! Faulty! Must sterilize imperfection! - STER-I-LIZE! - Nomad, Star Trek
 * Nomad - See the universe. Meet interesting people...and kill them. - Motivational Poster Parody")
         "Romulan Centurion"
-         (unit
+         (base/unit
           :name "Romulan Centurion"
           :image "StarTrek/Romulan_Centurion.png")
         "Romulan Warbird"
-         (unit
+         (base/unit
           :name "Romulan Warbird"
           :image "StarTrek/Romulan_Warbird.png"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Disruptor Bank"
-                 (unititem
+                 (base/unititem
                   :name "Disruptor Bank")
                 "Photon Torpedo"
-                 (unititem
+                 (base/unititem
                   :name "Photon Torpedo")))))
         "Species 8472"
-         (unit
+         (base/unit
           :name "Species 8472"
           :image "StarTrek/Species8472.png")
         :V'Ger
-         (unit
+         (base/unit
           :name "V'Ger"
           :image "StarTrek/VoyagerVI.png"
           :reference "Voyager VI - Tell Nomad I'm going to kick his ass. - Motivational Poster Parody"
@@ -2446,168 +2446,168 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
      (section
       :name "Star Wars Droids"
       :unitmap
-       (unitmap
+       (base/unitmap
         :C3PO
-         (unit
+         (base/unit
           :name "C3PO")
         :R2-D2
-         (unit
+         (base/unit
           :name "R2-D2")))
     "Star Wars Republic"
      (section
       :name "Star Wars Republic"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Ahsoka Tano"
-         (unit
+         (base/unit
           :name "Ahsoka Tano"
           :image "StarWars/Republic_AhsokaTano.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))
         "Anakin Skywalker"
-         (unit
+         (base/unit
           :name "Anakin Skywalker"
           :image "StarWars/Republic_AnakinSkywalker.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))
         "Clone Trooper"
-         (unit
+         (base/unit
           :name "Clone Trooper"
           :image "StarWars/Republic_CloneTrooper.png")
         "Mace Windu"
-         (unit
+         (base/unit
           :name "Mace Windu"
           :image "StarWars/Republic_MaceWindu.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))
         "Obi-Wan Kenobi"
-         (unit
+         (base/unit
           :name "Obi-Wan Kenobi"
           :image "StarWars/Republic_ObiWanKenobi.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))
         "Padme Amidala"
-         (unit
+         (base/unit
           :name "Padme Amidala"
           :image "StarWars/Republic_PadmeAmidala.png")
         "Qui Gon"
-         (unit
+         (base/unit
           :name "Qui Gon"
           :image "StarWars/Republic_QuiGon.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))))
     "Star Wars Seperatists"
      (section
       :name "Star Wars Seperatists"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Asajj Ventress"
-         (unit
+         (base/unit
           :name "Asajj Ventress"
           :image "StarWars/Separatist_AsajjVentress.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))
         "Battle Droid"
-         (unit
+         (base/unit
           :name "Battle Droid"
           :image "StarWars/Separatist_BattleDroid.png")
         "Chancillor Palpatine"
-         (unit
+         (base/unit
           :name "Chancillor Palpatine"
           :image "StarWars/Separatist_ChancillorPalpatine.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))
         "Count Dooku"
-         (unit
+         (base/unit
           :name "Count Dooku"
           :image "StarWars/Separatist_CountDooku.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))
         "General Grievous"
-         (unit
+         (base/unit
           :name "General Grievous"
           :image "StarWars/Separatist_GeneralGrievous.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))))
     "Star Wars Imperial Vehicles"
      (section
       :name "Star Wars Imperial Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Imperial Assault Gunboat"
-         (unit
+         (base/unit
           :name "Imperial Assault Gunboat"
           :image "StarWars/Imperial_Assault Gunboat.png"
           :summary
@@ -2621,7 +2621,7 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
           :length "10m"
           :width "15m")
         "Imperial Assault Transport"
-         (unit
+         (base/unit
           :name "Imperial Assault Transport"
           :summary
            "* 2 Turbo Laser Turrets
@@ -2635,13 +2635,13 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
           :length "45m"
           :width "30.4m")
         "Imperial Shuttle"
-         (unit
+         (base/unit
           :name "Imperial Shuttle"
           :image "StarWars/Imperial_Shuttle.png"
           :titles "Lambda Class"
           :classification "Med. Spacecraft")
         "Imperial Walker"
-         (unit
+         (base/unit
           :name "Imperial Walker"
           :image "StarWars/Imperial_Walker.png"
           :titles "AT-AT (All Terrain Armored Transport)"
@@ -2649,81 +2649,81 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
           :crew "4"
           :length "20m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Turbolaser
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser"
                   :facing "Fx2")))))
         "Tie Advanced"
-         (unit
+         (base/unit
           :name "Tie Advanced"
           :image "StarWars/Imperial_TieAdvanced.png"
           :titles "Tie Avenger"
           :classification "Lt. Spacecraft"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Turbolaser
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser"
                   :facing "Fx2")))))
         "Tie Bomber"
-         (unit
+         (base/unit
           :name "Tie Bomber"
           :image "StarWars/Imperial_TieBomber.png"
           :classification "Lt. Spacecraft")
         "Tie Defender"
-         (unit
+         (base/unit
           :name "Tie Defender"
           :image "StarWars/Imperial_TieDefender.png"
           :classification "Lt. Spacecraft")
         "Tie Fighter"
-         (unit
+         (base/unit
           :name "Tie Fighter"
           :image "StarWars/Imperial_TieFighter.png"
           :classification "Lt. Spacecraft"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Turbolaser
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser"
                   :facing "Fx2")))))
         "Tie Interceptor"
-         (unit
+         (base/unit
           :name "Tie Interceptor"
           :image "StarWars/Imperial_TieInterceptor.png"
           :classification "Lt. Spacecraft"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Turbolaser
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser"
                   :facing "Fx4")))))
         "Imperator Star Destroyer"
-         (unit
+         (base/unit
           :name "Imperator Star Destroyer"
           :image "StarWars/Imperial_StarDestroyer.png"
           :classification "Hvy. Spacecraft"
@@ -2731,17 +2731,17 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
           :mass "25Mtons"
           :length "1600m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :level "26")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"
               :level "26")
             :Hanger
-             (unitpower
+             (base/unitpower
               :name "Hanger"
               :summary
                "* 48 Standard Tie Fighters (4 Squadrons)
@@ -2754,9 +2754,9 @@ amount of antimatter. - http://www.theforce.net/swtc/ds/index.html"
 * 20 AT-AT Walkers
 * 30 AT-ST Walkers"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "Mega Turbo-laser Cannon Mounts (6)
@@ -2769,33 +2769,33 @@ Capital Proton Torpedo Batteries (4)
 Tractor Beams"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Turbolaser Turret"
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser Turret"
                   :number "9")
                 "Heavy Turbolaser Turret"
-                 (unititem
+                 (base/unititem
                   :name "Heavy Turbolaser Turret"
                   :number "8")))))
         "Executor Star Destroyer"
-         (unit
+         (base/unit
           :name "Executor Star Destroyer"
           :image "StarWars/Imperial_Executor.png"
           :classification "Hvy. Spacecraft"
           :length "17km"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :level "29")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"
               :level "29")
             :Hanger
-             (unitpower
+             (base/unitpower
               :name "Hanger"
               :summary
                "* 4 squadrons of TIE-fighters
@@ -2805,9 +2805,9 @@ Tractor Beams"
 * 25 AT-ATs
 * 50 AT-STs"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* 250 concussion missle tubes
@@ -2815,17 +2815,17 @@ Tractor Beams"
 * 40 tractor beams"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Turbolaser Turret"
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser Turret"
                   :number "250")
                 "Heavy Turbolaser Turret"
-                 (unititem
+                 (base/unititem
                   :name "Heavy Turbolaser Turret"
                   :number "250")))))
         "Death Star"
-         (unit
+         (base/unit
           :name "Death Star"
           :image "StarWars/Imperial_DeathStar.png"
           :reference
@@ -2836,17 +2836,17 @@ line. Fear of this battle station. - Grand Moff Tarkin, Star Wars"
           :mass "2x10^12tons"
           :length "160km"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored"
               :level "30")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"
               :level "30")
             :Hanger
-             (unitpower
+             (base/unitpower
               :name "Hanger"
               :summary
                "* 7200 TIE Fighters (600 Squadrons)
@@ -2863,35 +2863,35 @@ line. Fear of this battle station. - Grand Moff Tarkin, Star Wars"
      (section
       :name "Star Wars Imperials"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Darth Vader"
-         (unit
+         (base/unit
           :name "Darth Vader"
           :image "StarWars/Imperial_DarthVader.png"
           :reference "* Apology accepted, Captain Needa - Darth Vader, The Empire Strikes Back"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Piloting
-             (unitskill
+             (base/unitskill
               :name "Piloting"
               :level "8")))
         "Emperor Palpatine"
-         (unit
+         (base/unit
           :name "Emperor Palpatine"
           :image "StarWars/Imperial_EmperorPalpatine.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :level "9"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber")))))
         "Imperial Governor"
-         (unit
+         (base/unit
           :name "Imperial Governor"
           :image "StarWars/Imperial_Governor.png"
           :reference
@@ -2899,26 +2899,26 @@ line. Fear of this battle station. - Grand Moff Tarkin, Star Wars"
 I was brought on board. - Princess Leia, Star Wars"
           :titles "Grand Moff Tarkin")
         "Imperial Stormtrooper"
-         (unit
+         (base/unit
           :name "Imperial Stormtrooper"
           :image "StarWars/Imperial_Stormtrooper.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Firearms
-             (unitskill
+             (base/unitskill
               :name "Firearms"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Blaster Rifle"
-                 (unititem
+                 (base/unititem
                   :name "Blaster Rifle")))))))
     "Star Wars Independents"
      (section
       :name "Star Wars Independents"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Boba Fett"
-         (unit
+         (base/unit
           :name "Boba Fett"
           :image "StarWars/Independent_BobaFett.png"
           :reference
@@ -2927,11 +2927,11 @@ Falcon. You are free to use any methods necessary, but I want them alive. No
 disintegrations... As you wish. - Darth Vader and Boba Fett - Empire Strikes
 Back")
         "Jabba the Hutt"
-         (unit
+         (base/unit
           :name "Jabba the Hutt"
           :image "StarWars/Independent_JabbaTheHutt.png")
         "Slave 1"
-         (unit
+         (base/unit
           :name "Slave 1"
           :image "StarWars/Independent_Slave1.png"
           :titles "Firespray-31"
@@ -2940,9 +2940,9 @@ Back")
      (section
       :name "Star Wars Rebel Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "A-Wing Fighter"
-         (unit
+         (base/unit
           :name "A-Wing Fighter"
           :image "StarWars/Rebel_AWing.png"
           :titles "RZ-1"
@@ -2952,9 +2952,9 @@ Back")
           :length "9.6m"
           :width "6.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :summary
                "* Concussion Missles
@@ -2964,18 +2964,18 @@ Back")
 * 2 Concussion Missile Launchers (6 missiles each)"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Turbolaser
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser"
                   :facing "Fx2")))))
         "B-Wing Fighter"
-         (unit
+         (base/unit
           :name "B-Wing Fighter"
           :image "StarWars/Rebel_BWing.png"
           :classification "Lt. Spacecraft")
         "E-Wing Fighter"
-         (unit
+         (base/unit
           :name "E-Wing Fighter"
           :summary
            "* The first fighter designed entirely under the support of the New Republic.
@@ -2991,7 +2991,7 @@ Back")
           :classification "Lt. Spacecraft"
           :length "11.2m")
         "X-Wing Fighter"
-         (unit
+         (base/unit
           :name "X-Wing Fighter"
           :image "StarWars/Rebel_XWing.png"
           :summary
@@ -3002,23 +3002,23 @@ Back")
           :classification "Lt. Spacecraft"
           :length "12.5m"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Turbolaser
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser"
                   :facing "Fx4")
                 "Proton Torpedo"
-                 (unititem
+                 (base/unititem
                   :name "Proton Torpedo"
                   :facing "Fx2")))))
         "Y-Wing Fighter"
-         (unit
+         (base/unit
           :name "Y-Wing Fighter"
           :image "StarWars/Rebel_YWing.png"
           :summary
@@ -3030,39 +3030,39 @@ Back")
           :length "16m"
           :width "7.9m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Turbolaser
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser"
                   :facing "Fx2")
                 "Ion Cannon"
-                 (unititem
+                 (base/unititem
                   :name "Ion Cannon"
                   :facing "Turretx2")
                 "Proton Torpedo"
-                 (unititem
+                 (base/unititem
                   :name "Proton Torpedo"
                   :facing "Fx2")))))
         :Landspeeder
-         (unit
+         (base/unit
           :name "Landspeeder"
           :image "StarWars/Rebel_Landspeeder.png")
         "Millennium Falcon"
-         (unit
+         (base/unit
           :name "Millennium Falcon"
           :image "StarWars/Rebel_MilleniumFalcon.png"
           :summary "* Speed: 1050kph Atmosphere, 80 Megalight?"
@@ -3074,47 +3074,47 @@ Back")
           :length "35m"
           :width "26m"
           :unitpowermap
-           (unitpowermap
+           (base/unitpowermap
             :Armor
-             (unitpower
+             (base/unitpower
               :name "Armored")
             :Shielding
-             (unitpower
+             (base/unitpower
               :name "Shielding"))
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Gunnery
-             (unitskill
+             (base/unitskill
               :name "Gunnery"
               :level "4"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Turbolaser
-                 (unititem
+                 (base/unititem
                   :name "Turbolaser"
                   :facing "Turretx4, Turretx4")))))
         "Corellian Corvette"
-         (unit
+         (base/unit
           :name "Corellian Corvette"
           :image "StarWars/Rebel_CorellianCorvette.png")
         "Mon Calamari Cruiser"
-         (unit
+         (base/unit
           :name "Mon Calamari Cruiser"
           :image "StarWars/Rebel_Cruiser.png")
         "Nebulon Frigate"
-         (unit
+         (base/unit
           :name "Nebulon Frigate"
           :image "StarWars/Rebel_NebulonFrigate.png")
         "Rebel Transport"
-         (unit
+         (base/unit
           :name "Rebel Transport"
           :image "StarWars/Rebel_Transport.png")
         :Snowspeeder
-         (unit
+         (base/unit
           :name "Snowspeeder"
           :image "StarWars/Rebel_Snowspeeder.png")
         "T-16 Skyhopper"
-         (unit
+         (base/unit
           :name "T-16 Skyhopper"
           :image "StarWars/Rebel_T16Skyhopper.png"
           :reference
@@ -3124,80 +3124,80 @@ Skywalker, Star Wars")))
      (section
       :name "Rebels"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Chewbacca
-         (unit
+         (base/unit
           :name "Chewbacca"
           :image "StarWars/Rebel_Chewbacca.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Piloting
-             (unitskill
+             (base/unitskill
               :name "Piloting"
               :level "5")))
         "Han Solo"
-         (unit
+         (base/unit
           :name "Han Solo"
           :image "StarWars/Rebel_HanSolo.png"
           :reference
            "I ain't in this for your revolution, and I'm not in it for you, Princess.  I expect to be well paid. *I'm* in
 it for the money. - Han Solo, Star Wars"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Piloting
-             (unitskill
+             (base/unitskill
               :name "Piloting"
               :level "8")))
         "Luke Skywalker"
-         (unit
+         (base/unit
           :name "Luke Skywalker"
           :image "StarWars/Rebel_LukeSkywalker.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Piloting
-             (unitskill
+             (base/unitskill
               :name "Piloting"
               :level "6")))
         "Ben Kenobi"
-         (unit
+         (base/unit
           :name "Ben Kenobi"
           :image "StarWars/Rebel_BenKenobi.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Piloting
-             (unitskill
+             (base/unitskill
               :name "Piloting"
               :level "6")))
         "Princess Leia Organa"
-         (unit
+         (base/unit
           :name "Princess Leia Organa"
           :image "StarWars/Rebel_PrincessLeia.png"
           :reference "* Someone has to save our skins. Into the garbage chute, fly boy - Princess Leia, Star Wars"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Firearms
-             (unitskill
+             (base/unitskill
               :name "Firearms"
               :level "5"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Blaster Pistol"
-                 (unititem
+                 (base/unititem
                   :name "Blaster Pistol")))))
         :Yoda
-         (unit
+         (base/unit
           :name "Yoda"
           :image "StarWars/Yoda.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Melee
-             (unitskill
+             (base/unitskill
               :name "Melee"
               :level "10"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 :Lightsaber
-                 (unititem
+                 (base/unititem
                   :name "Lightsaber"))))))))))
 
 (func chapter_time_travellers : base/chapter
@@ -3242,9 +3242,9 @@ Time Tricks
 * See You in a Minute - Opponent time travelers are always paranoid about being ambushed in the past. Jumping only a few minutes into the future of a conflict can be an unexpected suprise.
 * I've Been Here All the Time - A time traveler can hide his Temporal Rotor in an unexpected place, like a jail cell, and use it to travel and return only seconds later. In this way the traveler appears to have never left."
       :unitmap
-       (unitmap
+       (base/unitmap
         "Magellus IX-g"
-         (unit
+         (base/unit
           :name "Magellus IX-g"
           :reference "Krell, Forbidden Planet"
           :summary
@@ -3258,7 +3258,7 @@ Time Tricks
           :titles "Babylon Complex"
           :length "400km")
         "Chronos Program"
-         (unit
+         (base/unit
           :name "Chronos Program"
           :reference
            "* Chronos is online - Chronos
@@ -3270,53 +3270,53 @@ Time Tricks
 * Time travelers depend heavily on Chronos for support, but have little trust for the evasive answers, omissions, and cryptic, nuanced messages it provides.
 * Engineers work tirelessly to gain control over Chronos, and Chronos does not hinder them in any way. However, every attempt to purge, patch, or restart Chronos have had no effect. Some theorize that Chronos exists through time now and could never be removed without creating a massive paradox. Others believe that the Babylon sensor network was already sentient and is masquerading as the Chronos program.")
         "Temporal Director"
-         (unit
+         (base/unit
           :name "Temporal Director"
           :summary "* When a Temporal anamoly is detected, a Temporal Director is assigned the task of choosing a course of action and gathering a team of [Temporal Operative]s to execute the plan. Directors coordinate the missions from headquarters and act as liason for the team. Directors are given broad authority to requisition and deploy resources, though they will be held accountable for any mistakes after the mission is over.")
         "Temporal Engineer"
-         (unit
+         (base/unit
           :name "Temporal Engineer"
           :summary "* An engineer specializing in [Engineering: Temporal].")
         "Temporal Event Guard"
-         (unit
+         (base/unit
           :name "Temporal Event Guard"
           :summary
            "* A field agent in Temporal Intelligence. Event Guards are posted in important time periods and quietly observe events to make sure no changes occur compared to their normal historical events. Any deviation from normal history is a sign of a [Temporal Distortion Wave]. If a change is found, the guard immediately sends a message to headquarters and then jumps futureward to attempt to stop the wave.
 * Event Guards are under strict orders to maintain their cover and not alter history in any way, including not aiding other Temporal personel on other missions.
 * In order to closely observe, historical events, the Event Guards enter the time stream and get as close as possible to a major event. They then observe the event, comparing it against their research and then Loop Trap themselves in the time period, so they are observing the event over and over again. Eventually, they will be relieved by a replacement team. The replacement team will arrive moments after the original team arrived to send them home. To the Event Guards, they will arrive in the time period and be immediately discharged, though they may remember the events using [Paranormal Memory].")
         "Temporal Intelligence Agent"
-         (unit
+         (base/unit
           :name "Temporal Intelligence Agent"
           :summary "* Temporal Intellegence Agents constantly review historical documentation looking for historical abnormalities that do not match their [Paranormal Memory]. Any deviations are flagged and a team is assigned to identify the source and extent of the deviation.")
         "Temporal Operative"
-         (unit
+         (base/unit
           :name "Temporal Operative")
         "Temporal Physicist"
-         (unit
+         (base/unit
           :name "Temporal Physicist"
           :summary "* A scientist specializing in [Physics: Temporal]")
         "Temporal Recruiter"
-         (unit
+         (base/unit
           :name "Temporal Recruiter"
           :reference "Millenium Movie"
           :summary "* A psychiatrist/sociologist specializing in recruiting potential Temporal agents from across history. Ideal candidates are those with high skills but little impact on history. The perfect moment of extraction is right before their death to minimize the effect on history, but other methods are possible for people with few ties to others.")
         "Temporal Researcher"
-         (unit
+         (base/unit
           :name "Temporal Researcher"
           :summary "* A scientist/historian who travels back in time to research historical events firsthand.")))
     "Temporal Aliens"
      (section
       :name "Temporal Aliens"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Chronans
-         (unit
+         (base/unit
           :name "Chronans"
           :summary
            "* The beings that captured the Black Hole and built the Temporal Rotor remain a mystery. No record can be found of their cultures or their bodies, and the Temporal Rotor will not travel to any point in their history, presumably as a fail-safe against temporal manipulation. The fact that no trace of their race exists except the Temporal Rotor is disturbing and leads to speculation that they were somehow wiped out by their own device or another time travelling species. Some speculate that the Chronans were eliminated by the Radiance, and that their fate is what the Temporals can expect if the Radiance is victorious, perhaps leading to the erasure of the entire human race from history.
 * The vast, vaulted corridors and rooms of Chronos Station lead one to believe that these creatures were bulky masses about 10-15 feet (3-5m) tall. The lack of stairs implies that the creatures were legless, but that could just be a comfort or aesthetic choice.")
         :Radiance
-         (unit
+         (base/unit
           :name "Radiance"
           :image "DistantFuture/Radiance.png"
           :reference "* The goal of the Radians remains a mystery, but they appear to want everyone throughout time to live as they do in a totally regimented, completely predictable society. This goal is obviously, hopelessly unattainable. To devote the entire resources and enegies of one's race and culture to an unattainable outcome must be called madness. Among humans, it is a common fantasy to 'rule the world', 'rule the galaxy', or 'rule the universe'. These pipedreams are almost always the stuff of fiction and fantasy, 	designed to entertain. Those who have taken them seriously are regarded as madmen. Now imagine even fantasizing about 'ruling every point in time in every dimension'. The very concept is laughable, yet the Radiance takes this seriously and are committed to acheiving it. Despite its insanity, their efforts pose a serious threat to everyone, everywhere, everywhen."
@@ -3330,9 +3330,9 @@ Time Tricks
      (section
       :name "Temporal Vehicles"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Time Rotor"
-         (unit
+         (base/unit
           :name "Time Rotor"
           :image "DistantFuture/TimeRotor.jpg"
           :reference
@@ -3349,7 +3349,7 @@ Time Tricks
           :height "1.5m"
           :width ".2m")
         :Timefighter
-         (unit
+         (base/unit
           :name "Timefighter"))))))
 
 (func chapter_unique_aliens : base/chapter
@@ -3361,18 +3361,18 @@ Time Tricks
      (section
       :name "Alien Life Forms"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Arachnid
-         (unit
+         (base/unit
           :name "Arachnid"
           :reference "Starship Troopers"
           :titles "Bug")
         :Blob
-         (unit
+         (base/unit
           :name "Blob")
         "Puppet Master"
-         (unit
+         (base/unit
           :name "Puppet Master")
         "Thing from another World"
-         (unit
+         (base/unit
           :name "Thing from another World"))))))

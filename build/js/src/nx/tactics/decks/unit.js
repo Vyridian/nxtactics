@@ -131,50 +131,23 @@ export default class nx_tactics_decks_unit {
         "1x0",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitskill},
-            ":skill",
-            nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
-            ":level",
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+            tactics,
+            "Close Combat",
             1,
-            ":unititemmap",
-            nx_tactics_base.f_unititemmap_from_unititemlist(
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unititem},
-                ":item",
-                nx_tactics_base.f_item_from_tactics_key(tactics, "Knife: Dagger")
-              )
-            )
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Knife: Dagger")
           ),
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitskill},
-            ":skill",
-            nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
-            ":level",
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Stealth",
             1,
-            ":unitabilitymap",
-            nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitability},
-                ":ability",
-                nx_tactics_base.f_ability_from_tactics_key(tactics, "Sneak")
-              )
-            )
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sneak")
           ),
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitskill},
-            ":skill",
-            nx_tactics_base.f_skill_from_tactics_key(tactics, "Tradeskills"),
-            ":level",
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Tradeskills",
             1,
-            ":unitabilitymap",
-            nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitability},
-                ":ability",
-                nx_tactics_base.f_ability_from_tactics_key(tactics, "House Painting")
-              )
-            )
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "House Painting")
           )
         )
       ),
@@ -207,14 +180,11 @@ export default class nx_tactics_decks_unit {
         "30cm/1ft",
         ":unitskillmap",
         nx_tactics_base.f_unitskillmap_from_unitskilllist(
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitskill},
-            ":level",
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Stealth",
             1,
-            ":skill",
-            nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
-            ":abilitylist",
-            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Camouflage")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Ambush", "Camoflage")
           )
         ),
         ":unitpowermap",
@@ -229,6 +199,45 @@ export default class nx_tactics_decks_unit {
             nx_tactics_base.f_power_from_tactics_key(tactics, "Toxins"),
             ":abilitylist",
             nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Poison Bite")
+          )
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Zombie: Walker",
+        ":image",
+        "images/cards/unit-zombie-walker.svg",
+        ":body",
+        "8x1",
+        ":mind",
+        "5x-1",
+        ":speed",
+        "4x0",
+        ":speedland",
+        "4kph/2.5mph",
+        ":will",
+        "2x1",
+        ":mass",
+        "80kg/175",
+        ":summary",
+        "[Zombie]",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Close Combat",
+            1,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
+          )
+        ),
+        ":unitpowermap",
+        nx_tactics_base.f_unitpowermap_from_unitpowerlist(
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities(
+            tactics,
+            "Natural Weaponry",
+            1,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Bite")
           )
         )
       )

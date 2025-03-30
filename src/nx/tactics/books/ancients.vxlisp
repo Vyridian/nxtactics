@@ -119,9 +119,9 @@
      (section
       :name "Carthaginian Armies"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Carthaginian Elephant"
-         (unit
+         (base/unit
           :name "Carthaginian Elephant"
           :speedland "40kph"
           :mass "10tons")))
@@ -147,12 +147,12 @@
      (section
       :name "Egyptian Armies"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Egyptian Archer"
-         (unit
+         (base/unit
           :name "Egyptian Archer")
         "Egyptian Charioteer"
-         (unit
+         (base/unit
           :name "Egyptian Charioteer"))))))
 
 (func chapter_germanic_tribes : base/chapter
@@ -164,9 +164,9 @@
      (section
       :name "Germanic Armies"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Free Spears"
-         (unit
+         (base/unit
           :name "Free Spears"
           :image "images/ancients/GermanLevySpearmen.png"
           :summary
@@ -176,13 +176,13 @@ are veterans of the ritualized tribal warfare of German tribes, and fight with a
 their neighbors militia."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Youth Skirmishers"
-         (unit
+         (base/unit
           :name "Youth Skirmishers"
           :image "images/ancients/GermanSkirmishers.png"
           :summary
@@ -193,18 +193,18 @@ throwing spears, a slightly longer spear for melee and a stout ovular shield, bu
 being poor and of low status, but also choosing speed over protection."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Survival
-             (unitskill
+             (base/unitskill
               :name "Survival"
               :level "2"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Forestry
-                 (unitability
+                 (base/unitability
                   :name "Forestry")))))
         "Proven Spearmen"
-         (unit
+         (base/unit
           :name "Proven Spearmen"
           :image "images/ancients/GermanTrustedSpearmen.png"
           :summary
@@ -213,18 +213,18 @@ conflicts.  These men are hardened for battle and unlikely to flee from conflict
 long experience to work in close or open formation, and even the shieldwall."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Shield Wall"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Shield Wall")))))
         "German Slayers"
-         (unit
+         (base/unit
           :name "German Slayers"
           :image "images/ancients/GermanSlayers.png"
           :summary
@@ -235,13 +235,13 @@ armored opponents it is more effective than any other at their disposal.  These 
 were recorded to have taken down units of the feared and notoriously lethal kataphraktoi."
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "German Shooters"
-         (unit
+         (base/unit
           :name "German Shooters"
           :image "images/ancients/GermanShooters.png"
           :summary
@@ -254,18 +254,18 @@ Historically, Germanic bowmen on the battlefield were few in numbers, because we
 and common multipurpose tools, such as the axe or bow were looked down upon."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Skirmish"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Skirmish")))))
         "Sword Possessors"
-         (unit
+         (base/unit
           :name "Sword Possessors"
           :image "images/ancients/GermanSwordPossessors.png"
           :summary
@@ -276,18 +276,18 @@ Historically, swords were not plentiful in Germanic lands because of the cost of
 valiant warriors carried their highly valued swords with pride."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Shield Wall"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Shield Wall")))))
         "Night Walkers"
-         (unit
+         (base/unit
           :name "Night Walkers"
           :image "images/ancients/GermanNightWalkers.png"
           :summary
@@ -297,18 +297,18 @@ battles and when the moment is right, they charge wildly, wide-eyed and screamin
 survive assaults by these maniacal warriors are convinced they are spirits sent from the otherworld."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Intimidation
-             (unitskill
+             (base/unitskill
               :name "Intimidation"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Terrorize
-                 (unitability
+                 (base/unitability
                   :name "Terrorize")))))
         "Pike Fence"
-         (unit
+         (base/unit
           :name "Pike Fence"
           :image "images/ancients/GermanPikeFence.png"
           :summary
@@ -317,18 +317,18 @@ very dense formation, unlike most other Germanic warbands. They are trained in
 the Shield Wall and are universally feared by cavalry."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Shield Wall"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Shield Wall")))))
         "Hearth Companions"
-         (unit
+         (base/unit
           :name "Hearth Companions"
           :image "images/ancients/GermanHearthCompanion.png"
           :summary
@@ -341,21 +341,21 @@ scorn. To defend and protect him, to assign one's own acts of heroism to his
 credit-that's what is truly meant by allegiance."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")
                 :Rally
-                 (unitability
+                 (base/unitability
                   :name "Rally")))))
         "Germanic Riders"
-         (unit
+         (base/unit
           :name "Germanic Riders"
           :image "images/ancients/GermanRiders.png"
           :summary
@@ -371,13 +371,13 @@ exceptional, Germanic horsemen could still maneuver very well and operated as a 
 unorganized band."
           :classification "Lt. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))
         "Germ. Companion Cavalry"
-         (unit
+         (base/unit
           :name "Germ. Companion Cavalry"
           :image "images/ancients/GermanCompanionCavalry.png"
           :summary
@@ -388,18 +388,18 @@ They can be used most effectively as shock troops whose charges can break the en
 flanks, but they are also useful for overrunning heavy infantry and slaughtering lighter cavalry."
           :classification "Hvy. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")
                 :Rally
-                 (unitability
+                 (base/unitability
                   :name "Rally"))))))))))
 
 (func chapter_greek_city_states : base/chapter
@@ -411,28 +411,28 @@ flanks, but they are also useful for overrunning heavy infantry and slaughtering
      (section
       :name "Greek Armies"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Greek Hoplite"
-         (unit
+         (base/unit
           :name "Greek Hoplite"
           :image "images/ancients/GreekHopliteToken.png"
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Phalanx"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Phalanx")
                 "Formation: Shield Wall"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Shield Wall")))))
         "Spartan Hoplite"
-         (unit
+         (base/unit
           :name "Spartan Hoplite"
           :image "images/ancients/GreekSpartanToken.png"
           :reference
@@ -442,37 +442,37 @@ discipline, and almost programmed to forget about their individuality.
 which required high levels of discipline and selflessness."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "2"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")))))
         "Greek General"
-         (unit
+         (base/unit
           :name "Greek General"
           :image "images/ancients/GreekGeneralToken.png"
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")
                 :Rally
-                 (unitability
+                 (base/unitability
                   :name "Rally")))))
         "Thracian Peltast"
-         (unit
+         (base/unit
           :name "Thracian Peltast"
           :reference
            "* When faced by hoplites peltasts operated by throwing javelins at short range.  If the hoplites charged they
@@ -481,50 +481,50 @@ successfully especially in difficult terrain.
 * Peltasts were usually deployed on the flanks of the phalanx providing a link with any cavalry."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Skirmish"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Skirmish")))))
         "Greek Cavalry"
-         (unit
+         (base/unit
           :name "Greek Cavalry"
           :reference "The utility of the Greek Citizen Cavalry was small on account of their heavy armor."
           :classification "Hvy. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3")))
         "Greek Cataphracts"
-         (unit
+         (base/unit
           :name "Greek Cataphracts"
           :classification "Hvy. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")))))
         "Greek Philosopher"
-         (unit
+         (base/unit
           :name "Greek Philosopher")
         "Greek Senator"
-         (unit
+         (base/unit
           :name "Greek Senator")
         "Greek Wrestler"
-         (unit
+         (base/unit
           :name "Greek Wrestler")))
     "Greek Naval Vessels"
      (section
@@ -550,31 +550,31 @@ successfully especially in difficult terrain.
      (section
       :name "Macedonian Armies"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Macedonian Prodromoi Cavalry"
-         (unit
+         (base/unit
           :name "Macedonian Prodromoi Cavalry"
           :reference "The utility of the Greek Citizen Cavalry was small on account of their heavy armor."
           :classification "Lt. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Skirmish"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Skirmish")))))
         "Macedonian Companion Cavalry"
-         (unit
+         (base/unit
           :name "Macedonian Companion Cavalry"
           :classification "Hvy. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4")))))
     "Macedonian Naval Vessels"
@@ -598,22 +598,22 @@ successfully especially in difficult terrain.
      (section
       :name "Viking Armies"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Viking Axeman"
-         (unit
+         (base/unit
           :name "Viking Axeman"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Frenzy
-             (unitskill
+             (base/unitskill
               :name "Frenzy"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 :Berserker
-                 (unitability
+                 (base/unitability
                   :name "Berserker")))))
         "Viking Swordsman"
-         (unit
+         (base/unit
           :name "Viking Swordsman")))
     "Viking Naval Vessels"
      (section
@@ -633,15 +633,15 @@ successfully especially in difficult terrain.
      (section
       :name "Persian Armies"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Persian Lt. Cavalry"
-         (unit
+         (base/unit
           :name "Persian Lt. Cavalry")
         "Persian Horse Archer"
-         (unit
+         (base/unit
           :name "Persian Horse Archer")
         "Persian Scythed Chariot"
-         (unit
+         (base/unit
           :name "Persian Scythed Chariot"))))))
 
 (func chapter_roman_empire : base/chapter
@@ -664,9 +664,9 @@ punished together.  If one member acted dishonorably in battle, that contuberniu
 decimation, whereby the group would be required to draw straws, the soldier unlucky enough to draw the short straw
 then being stoned to death by the others."
       :unitmap
-       (unitmap
+       (base/unitmap
         :Hastati
-         (unit
+         (base/unit
           :name "Hastati"
           :image "images/ancients/RomanLegionaireToken.png"
           :summary
@@ -676,21 +676,21 @@ legion and always met the enemy first in melee combat. If things went badly, or 
 to rest and regroup, the Hastati would roll behind the Princeps."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Shield Wall"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Shield Wall")
                 "Formation: Testudo"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Testudo")))))
         :Princeps
-         (unit
+         (base/unit
           :name "Princeps"
           :image "images/ancients/RomanPrincepToken.png"
           :summary
@@ -701,21 +701,21 @@ wearing down the enemy with good, but not your best forces, than hitting with yo
 the middle of the fight."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Shield Wall"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Shield Wall")
                 "Formation: Testudo"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Testudo")))))
         :Triarii
-         (unit
+         (base/unit
           :name "Triarii"
           :image "images/ancients/RomanLegionaire2Token.png"
           :summary
@@ -729,68 +729,68 @@ Latin expression 'ad triarios redisse', or it has come to the triarii, became a 
 that something was in a desperate situation."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "5"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Phalanx"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Phalanx")
                 "Formation: Shield Wall"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Shield Wall")
                 "Formation: Testudo"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Testudo")))))
         :Centurion
-         (unit
+         (base/unit
           :name "Centurion"
           :image "images/ancients/RomanCenturionToken.png"
           :summary "Each Centurion commanded the 80 men in a single century (Forward Hastati, etc)."
           :classification "Med. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Leadership
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")
                 :Rally
-                 (unitability
+                 (base/unitability
                   :name "Rally")))))
         "Praetorian Guard"
-         (unit
+         (base/unit
           :name "Praetorian Guard"
           :summary
            "Initially, the guard for a general, the title was later used for the Emperor's personal army.  These men were
 handpicked from the legions and represent the best warriors in Rome."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "5"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Phalanx"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Phalanx")
                 "Formation: Shield Wall"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Shield Wall")
                 "Formation: Testudo"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Testudo")))))
         :Velites
-         (unit
+         (base/unit
           :name "Velites"
           :image "images/ancients/RomanVeliteToken.png"
           :summary
@@ -801,18 +801,18 @@ important part of defense against war elephants.  Using their greater mobility, 
 armament, Velites could avoid elephant charges and flank them."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "2"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Skirmish"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Skirmish")))))
         "Equites Legionis"
-         (unit
+         (base/unit
           :name "Equites Legionis"
           :image "images/ancients/RomanHeavyCavalryToken.png"
           :summary
@@ -824,15 +824,15 @@ effectiveness of cavalry in the Roman army didn't come until the inclusion of va
 of the Gauls and Germanics."
           :classification "Hvy. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Riding
-             (unitskill
+             (base/unitskill
               :name "Riding"
               :level "2"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Run Down"
-                 (unitability
+                 (base/unitability
                   :name "Run Down")))))))
     :Auxilia
      (section
@@ -844,97 +844,97 @@ infantry as the legions and in addition provided almost all the Roman army's cav
 Like their legionary counterparts, auxiliary recruits were mostly volunteers, not conscripts, but unlike the legion
 the auxilia accepted non-Romans (which represented 90% of the empire)."
       :unitmap
-       (unitmap
+       (base/unitmap
         "Cohors Peditata"
-         (unit
+         (base/unit
           :name "Cohors Peditata"
           :image "images/ancients/RomanAuxiliaToken.png"
           :summary "Most auxiliary cohortes contained heavy infantry similar to legionaries."
           :classification "Hvy. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "2")))
         "Cohortes Sagittariorum"
-         (unit
+         (base/unit
           :name "Cohortes Sagittariorum"
           :image "images/ancients/RomanArcherAuxiliaToken.png"
           :summary "Most Sagittarii were from Syria."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Skirmish"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Skirmish")))))
         :Funditores
-         (unit
+         (base/unit
           :name "Funditores"
           :summary "Slingers wore no armor."
           :classification "Lt. Infantry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Skirmish"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Skirmish")))))
         "Eques Alaris"
-         (unit
+         (base/unit
           :name "Eques Alaris"
           :image "images/ancients/RomanLightCavalryToken.png"
           :summary "Auxiliary Cavalryman"
           :classification "Lt. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "2")))
         "Alae Sagittariorum"
-         (unit
+         (base/unit
           :name "Alae Sagittariorum"
           :summary "* Mounted Archers"
           :classification "Lt. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Military
-             (unitskill
+             (base/unitskill
               :name "Military"
               :level "3"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Formation: Skirmish"
-                 (unitability
+                 (base/unitability
                   :name "Formation: Skirmish")))))
         :Cataphractarii
-         (unit
+         (base/unit
           :name "Cataphractarii"
           :classification "Hvy. Cavalry"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Command
-             (unitskill
+             (base/unitskill
               :name "Leadership"
               :level "4"
               :unitabilitymap
-               (unitabilitymap
+               (base/unitabilitymap
                 "Chain of Command"
-                 (unitability
+                 (base/unitability
                   :name "Chain of Command")))))
         "Roman Charioteer"
-         (unit
+         (base/unit
           :name "Roman Charioteer"
           :image "images/ancients/RomanCharioteer.png"
           :classification "Hvy. Cavalry")))
@@ -942,30 +942,30 @@ the auxilia accepted non-Romans (which represented 90% of the empire)."
      (section
       :name "Civilians"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Roman Gladiator"
-         (unit
+         (base/unit
           :name "Roman Gladiator"
           :image "images/ancients/RomanGladiatorToken.png"
           :unitskillmap
-           (unitskillmap
+           (base/unitskillmap
             :Armor
-             (unitskill
+             (base/unitskill
               :name "Armored"
               :level "1"
               :unititemmap
-               (unititemmap
+               (base/unititemmap
                 "Round Shield"
-                 (unititem
+                 (base/unititem
                   :name "Round Shield")))))
         "Roman Senator"
-         (unit
+         (base/unit
           :name "Roman Senator")
         "Roman Slave"
-         (unit
+         (base/unit
           :name "Roman Slave")
         "Roman Slaver"
-         (unit
+         (base/unit
           :name "Roman Slaver")))
     "Roman Naval Vessels"
      (section

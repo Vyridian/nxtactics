@@ -9,7 +9,7 @@
    (base/chaptermap
     "Gear Overview" (chapter_gear_overview)
     "Gear Construction" (chapter_gear_construction)
-    "Gear Items" (chapter_gear_items)
+    "Gear Items" (chapter_gear_items tactics)
    )))
 
 (func chapter_gear_overview : base/chapter
@@ -26,6 +26,7 @@
   :name "Gear Construction"))
 
 (func chapter_gear_items : base/chapter
+ [base/tactics : tactics]
  (chapter
   :name "Gear Items"
   :sectionmap
@@ -117,9 +118,7 @@
          (item
           :name "Alkahest"
           :summary
-           "* The universal solvent, having the power to dissolve every substance into its
-constituent elemental parts.  It cannot dissolve anything that is absolutely
-pure."
+           "* The universal solvent, having the power to dissolve every substance into its constituent elemental parts.  It cannot dissolve anything that is absolutely pure."
           :titles "Alchahest, Universal Solvent")
         :Aphrodisiac
          (item
@@ -184,17 +183,16 @@ and platinum."
          (item
           :name "Dream Essence"
           :summary
-           "* The elusive essence from which dreams are made.  It is gathered from a subject and
-then distilled into a liquid.
-* The effects last for 2-8 hours and are very intense.
-* Effects vary by color:
-** Purple - Passion, Romance
-** Blue - Poignancy
-** Red - Violent Emotions
-** Silver - Imagination, Flights of Fancy
-** Gold - Prophetic Visions
-** Rainbow - Unpredictable
-** Black - Nightmares")
+           "* The elusive essence from which dreams are made.  It is gathered from a subject and then distilled into a liquid.
+            * The effects last for 2-8 hours and are very intense.
+            * Effects vary by color:
+            ** Purple - Passion, Romance
+            ** Blue - Poignancy
+            ** Red - Violent Emotions
+            ** Silver - Imagination, Flights of Fancy
+            ** Gold - Prophetic Visions
+            ** Rainbow - Unpredictable
+            ** Black - Nightmares")
         "Elixir of Clarity"
          (item
           :name "Elixir of Clarity"
@@ -210,8 +208,7 @@ then distilled into a liquid.
          (item
           :name "Elixir of Regrowth"
           :summary
-           "* Effect: Drop into a coma and heals damage including repairing/regrowing damaged organs or
-limbs.")
+           "* Effect: Drop into a coma and heals damage including repairing/regrowing damaged organs or limbs.")
         "Elixir of Strength"
          (item
           :name "Elixir of Strength"
@@ -228,8 +225,7 @@ limbs.")
          (item
           :name "Glowball"
           :summary
-           "* A glass ball that will radiate light like a torch for [Level] hours without
-requiring air.")
+           "* A glass ball that will radiate light like a torch for [Level] hours without requiring air.")
         :Homonculyte
          (item
           :name "Homonculyte")
@@ -289,15 +285,8 @@ requiring air.")
          (item
           :name "Philosopher's Stone"
           :summary
-           "* A legendary alchemical substance said to be capable of turning base metals
-such as lead into gold (chrysopoeia) or silver. It was also sometimes believed
-to be an elixir of life, useful for rejuvenation and possibly for achieving
-immortality. For many centuries, it was the most sought-after goal in alchemy.
-The philosophers' stone is the central symbol of alchemy, symbolizing
-perfection at its finest, enlightenment, and heavenly bliss. Efforts to
-discover the philosophers' stone were known as the Magnum Opus ('Great Work').
-* The first component of the philosopher's stone is Prima Materia: 'the first
-matter of the stone is the very same with the first matter of all things.'"
+           "* A legendary alchemical substance said to be capable of turning base metals such as lead into gold (chrysopoeia) or silver. It was also sometimes believed to be an elixir of life, useful for rejuvenation and possibly for achieving immortality. For many centuries, it was the most sought-after goal in alchemy. The philosophers' stone is the central symbol of alchemy, symbolizing perfection at its finest, enlightenment, and heavenly bliss. Efforts to discover the philosophers' stone were known as the Magnum Opus ('Great Work').
+            * The first component of the philosopher's stone is Prima Materia: 'the first matter of the stone is the very same with the first matter of all things.'"
           :titles "Magnum Opus, Great Work, Stone of the Philosopher, Variable Mercury")
         "Philtre of Courage"
          (item
@@ -355,9 +344,7 @@ matter of the stone is the very same with the first matter of all things.'"
          (item
           :name "Potion of Venom"
           :summary
-           "* Effect: Body becomes a deadly storehouse of caustic venoms.  The blood,
-sweat, tears, and spit are all deadly weapons.  User is immune to its own
-effects and is also resistant to all poison, acid, and disease.")
+           "* Effect: Body becomes a deadly storehouse of caustic venoms. The blood, sweat, tears, and spit are all deadly weapons. User is immune to its own effects and is also resistant to all poison, acid, and disease.")
         "Potion of Warmth"
          (item
           :name "Potion of Warmth"
@@ -369,15 +356,13 @@ effects and is also resistant to all poison, acid, and disease.")
          (item
           :name "Prima Materia"
           :summary
-           "* The primitive formless base of all matter, the primal substance that may be
-changed into any other matter."
+           "* The primitive formless base of all matter, the primal substance that may be changed into any other matter."
           :titles "Aether, Akasha, Ether, Proteus, Quintessence")
         "Rare Earths"
          (item
           :name "Rare Earths"
           :summary
-           "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the
-innate powers of other ingredients."
+           "* Rare Earths are the most important of all alchemical ingredients because they are the catalysts that unleash the innate powers of other ingredients."
           :titles "Antimony, Cinnabar, Pitchblend, various salts, and metal oxides")
         "Sleeping Potion"
          (item
@@ -388,8 +373,7 @@ innate powers of other ingredients."
          (item
           :name "Smokestick"
           :summary
-           "* An alchemically treated wooden stick that creates thick, opaque smoke when
-ignited.")
+           "* An alchemically treated wooden stick that creates thick, opaque smoke when ignited.")
         :Soulstone
          (item
           :name "Soulstone")
@@ -404,8 +388,7 @@ ignited.")
          (item
           :name "Thunderstone"
           :summary
-           "* A stone that emits a deafening sound when it is first struck againsts a
-hard surface.")
+           "* A stone that emits a deafening sound when it is first struck againsts a hard surface.")
         :Tindertwig
          (item
           :name "Tindertwig"
@@ -424,8 +407,7 @@ hard surface.")
          (item
           :name "Zuran Orb"
           :reference
-           "* I will go to any length to achieve my goal. Eternal life is worth any sacrifice.
-- Zur the Enchanter, Magic the Gathering"
+           "* I will go to any length to achieve my goal. Eternal life is worth any sacrifice. - Zur the Enchanter, Magic the Gathering"
           :summary "* [Action]: -1 [Spirit] permanently. -2 Damage, -1 Critical, -10 Age.")))
     :Artwork
      (section
@@ -536,8 +518,7 @@ hard surface.")
          (item
           :name "Grimoire"
           :summary
-           "A set of rules for doing something and is a journal kept by practitioners containing
-information and contributions relevant to their specific field of study.")
+           "A set of rules for doing something and is a journal kept by practitioners containing information and contributions relevant to their specific field of study.")
         :Manual
          (item
           :name "Manual")
@@ -590,9 +571,7 @@ information and contributions relevant to their specific field of study.")
           :name "Tabula Rasa"
           :summary
            "* A unique blank stone tablet of unknown origin vaguely connected to the legends of the River Lethe.
-* If a person writes a description of a memory on the tablet, then the text will slowly fade from
-the tablet and as it does the memory will also permanently fade from the user's mind. This item can
-be used to remove trauma as well as reset unwanted skills and abilities.")
+            * If a person writes a description of a memory on the tablet, then the text will slowly fade from the tablet and as it does the memory will also permanently fade from the user's mind. This item can be used to remove trauma as well as reset unwanted skills and abilities.")
         "Wiccan Rede"
          (item
           :name "Wiccan Rede")))
@@ -641,12 +620,7 @@ be used to remove trauma as well as reset unwanted skills and abilities.")
      (section
       :name "Drugs"
       :reference
-       "* We had two bags of grass, seventy-five pellets of mescaline, five sheets of high-powered blotter acid, a saltshaker
-half-full of cocaine, and a whole galaxy of multi-colored uppers, downers, screamers, laughers... Also, a quart of
-tequila, a quart of rum, a case of beer, a pint of raw ether, and two dozen amyls...The only thing that really worried
-me was the ether.  There is nothing in the world more helpless and irresponsible and depraved than a man in the depths
-of an ether binge, and I knew we'd get into that rotten stuff pretty soon. - Raoul Duke, Fear and Loathing in Las
-Vegas"
+       "* We had two bags of grass, seventy-five pellets of mescaline, five sheets of high-powered blotter acid, a saltshaker half-full of cocaine, and a whole galaxy of multi-colored uppers, downers, screamers, laughers... Also, a quart of tequila, a quart of rum, a case of beer, a pint of raw ether, and two dozen amyls...The only thing that really worried me was the ether.  There is nothing in the world more helpless and irresponsible and depraved than a man in the depths of an ether binge, and I knew we'd get into that rotten stuff pretty soon. - Raoul Duke, Fear and Loathing in Las Vegas"
       :itemmap
        (itemmap
         :Amphetamine
@@ -815,7 +789,7 @@ Vegas"
           :name "Valknut"
           :summary
            "* Purpose - The valknut pendant is a magical symbol for warrior types. The Valknut pendant is used by those who swear allegiance to Odin in both life and death and want to fight alongside the gods during Ragnarok. When a valknut is found, Odin is also near. This is true for engravings of the valknut as well as for those who decide to wear Odin’s symbol.
-* Description - Valknut literally translates into 'the knot of the fallen warriors.' This symbol is also strongly connected to the deceased as is apparent in its linguistic meaning. The symbol itself represents the 9 worlds of existence. It is created through the fierce binding of three triangles. The Valknut also has the power over both life and death, as it weaves both into a knot."
+            * Description - Valknut literally translates into 'the knot of the fallen warriors.' This symbol is also strongly connected to the deceased as is apparent in its linguistic meaning. The symbol itself represents the 9 worlds of existence. It is created through the fierce binding of three triangles. The Valknut also has the power over both life and death, as it weaves both into a knot."
           :titles "Knot of the Fallen Warriors")))
     :Materials
      (section
@@ -914,12 +888,10 @@ Vegas"
          (item
           :name "Electrum"
           :reference
-           "* Electrum is a naturally occurring alloy of gold and silver, with trace amounts of
-copper and other metals.
-* The color of electrum is pale yellow or yellowish-white.
-* It is usually a good conductor of electricity.
-* Electrum is much better for coinage than gold, mostly because it is harder and more
-durable."
+           "* Electrum is a naturally occurring alloy of gold and silver, with trace amounts of copper and other metals.
+            * The color of electrum is pale yellow or yellowish-white.
+            * It is usually a good conductor of electricity.
+            * Electrum is much better for coinage than gold, mostly because it is harder and more durable."
           :titles "White Gold")
         :Emerald
          (item
@@ -940,8 +912,7 @@ durable."
          (item
           :name "Rose Gold"
           :reference
-           "* Rose gold is a gold and copper alloy.  The higher the copper content the redder the
-color."
+           "* Rose gold is a gold and copper alloy.  The higher the copper content the redder the color."
           :titles "Red Gold")
         :Ruby
          (item
@@ -954,31 +925,31 @@ color."
           :name "Silver"
           :reference
            "* Silver is a brilliant white metal with a luster that can take a high degree of polish.
-* It is very ductile and malleable (slightly harder than gold).
-* It has the highest electrical conductivity of all metals, even higher than copper
-* Among metals, pure silver has the highest thermal conductivity (only the non-metal
-diamond's is higher), whitest color, and the highest optical reflectivity.
-* Jewellery and silverware are traditionally made from Sterling silver (Standard silver) an
-alloy of 92.5 % silver with 7.5% copper.  Sterling silver is harder than pure silver,
-and has a lower melting point.
-* It has certain antimicrobial activity.  Dilute solutions of silver nitrate can be used
-as disinfectants.  Silver-ions and silver compounds show a toxic effect on some
-bacteria, viruses, algae and fungi.  Its germicidal effects make silver utensils valued,
-and increase its value as jewelry.  The exact process of silver's germicidal effect is
-still not well understood.
-* The name of the United Kingdom monetary unit 'pound' originally had the value of one
-troy pound of sterling silver.
-* The words for 'silver' and 'money' are the same in at least 14 languages.
-* Hippocrates, the father of modern medicine, wrote that silver had beneficial healing
-and anti-disease properties, and the Phoenicians used to store water, wine, and vinegar
-in silver bottles to prevent spoiling.  In the early 1900s people would put silver
-dollars in milk bottles to prolong the milk's freshness.
-* Silver was believed to be a repellent against vampires; also, mirrors were originally
-polished silver, and as such, vampires allegedly cannot be seen in them because they
-have no soul) and it was also believed that a werewolf, in his bestial form, could only
-be killed by a weapon or bullet made of silver.  This has given rise to the term 'silver
-bullet', which is used to describe things that very effectively deal with one specific
-problem.")
+            * It is very ductile and malleable (slightly harder than gold).
+            * It has the highest electrical conductivity of all metals, even higher than copper
+            * Among metals, pure silver has the highest thermal conductivity (only the non-metal
+            diamond's is higher), whitest color, and the highest optical reflectivity.
+            * Jewellery and silverware are traditionally made from Sterling silver (Standard silver) an
+            alloy of 92.5 % silver with 7.5% copper.  Sterling silver is harder than pure silver,
+            and has a lower melting point.
+            * It has certain antimicrobial activity.  Dilute solutions of silver nitrate can be used
+            as disinfectants.  Silver-ions and silver compounds show a toxic effect on some
+            bacteria, viruses, algae and fungi.  Its germicidal effects make silver utensils valued,
+            and increase its value as jewelry.  The exact process of silver's germicidal effect is
+            still not well understood.
+            * The name of the United Kingdom monetary unit 'pound' originally had the value of one
+            troy pound of sterling silver.
+            * The words for 'silver' and 'money' are the same in at least 14 languages.
+            * Hippocrates, the father of modern medicine, wrote that silver had beneficial healing
+            and anti-disease properties, and the Phoenicians used to store water, wine, and vinegar
+            in silver bottles to prevent spoiling.  In the early 1900s people would put silver
+            dollars in milk bottles to prolong the milk's freshness.
+            * Silver was believed to be a repellent against vampires; also, mirrors were originally
+            polished silver, and as such, vampires allegedly cannot be seen in them because they
+            have no soul) and it was also believed that a werewolf, in his bestial form, could only
+            be killed by a weapon or bullet made of silver.  This has given rise to the term 'silver
+            bullet', which is used to describe things that very effectively deal with one specific
+            problem.")
         "Tiger's Eye"
          (item
           :name "Tiger's Eye")))
@@ -991,8 +962,7 @@ problem.")
          (item
           :name "Adamant"
           :summary
-           "* Requires: 10 carats of powdered blue diamonds and 1 pound of silver to create
-1 pound of Adamant.")
+           "* Requires: 10 carats of powdered blue diamonds and 1 pound of silver to create 1 pound of Adamant.")
         "Black Diamond"
          (item
           :name "Black Diamond")
@@ -1000,15 +970,13 @@ problem.")
          (item
           :name "Mithril"
           :summary
-           "* A steel alloy that is as strong as steel with only half the weight.  It is extremely
-difficult to forge even for master smiths, so it is extremely rare and valuable."
+           "* A steel alloy that is as strong as steel with only half the weight.  It is extremely difficult to forge even for master smiths, so it is extremely rare and valuable."
           :titles "Elven Steel, Titanium Steel")
         :Orichalcum
          (item
           :name "Orichalcum"
           :reference
-           "* A legendary metal mentioned in several ancient writings, most notably the
-story of Atlantis.")))
+           "* A legendary metal mentioned in several ancient writings, most notably the story of Atlantis.")))
     "Religious Items"
      (section
       :name "Religious Items"
@@ -1127,8 +1095,7 @@ story of Atlantis.")))
          (item
           :name "Dust of Disappearing Trail"
           :summary
-           "* Resettles an area to make it appear as if no one has been there in a long
-time.")
+           "* Resettles an area to make it appear as if no one has been there in a long time.")
         "Dust of Dryness"
          (item
           :name "Dust of Dryness"
@@ -1154,9 +1121,8 @@ time.")
          (item
           :name "Iocaine Powder"
           :reference
-           "* What you do not smell is called iocane powder. It is odorless, tasteless, dissolves instantly in liquid,
-and is among the more deadlier poisons known to man. - Man in Black
-* Iocane comes from Australia, as everyone knows! And Australia is entirely peopled with criminals. - Vizzini"
+           "* What you do not smell is called iocane powder. It is odorless, tasteless, dissolves instantly in liquid, and is among the more deadlier poisons known to man. - Man in Black
+            * Iocane comes from Australia, as everyone knows! And Australia is entirely peopled with criminals. - Vizzini"
           :titles "Arcenic Trioxide")
         "Irritating Powder"
          (item
@@ -1442,9 +1408,8 @@ rubbed against a jacket or clamp, causing chirping noises."
             * [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
             * [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
             * [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
-        "Healing Salve"
-         (item
-          :name "Healing Salve")
+        "Salve: Healing"
+         (base/item<-tactics-key tactics "Salve: Healing")
         :Lattice
          (item
           :name "Lattice")
