@@ -33,8 +33,6 @@ export default class nx_tactics_decks_scene_murintrail {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const goblinscout = nx_tactics_decks_scene_murintrail.f_unit_goblinscout(tactics)
         const goblinscout_i = nx_tactics_base.f_cardimage_from_card(goblinscout)
-        const horse = nx_tactics_decks_scene_murintrail.f_unit_horse(tactics)
-        const horse_i = nx_tactics_base.f_cardimage_from_card(horse)
         return vx_core.f_new(
           {"any-1": nx_tactics_base.t_deck},
           ":name",
@@ -45,7 +43,11 @@ export default class nx_tactics_decks_scene_murintrail {
               {"any-1": nx_tactics_base.t_cardlist},
               vx_core.f_list_from_list(
                 {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
-                nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)")
+                nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Horse")
+              ),
+              vx_core.f_list_from_list(
+                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_cardimage, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_cardimagelist},
+                nx_tactics_base.f_cardimagelist_from_tactics_unitkeys(tactics, "Flint (Early)", "Horse")
               ),
               nx_tactics_decks_scene_murintrail.f_unit_bandit(tactics),
               nx_tactics_decks_scene_murintrail.f_unit_bruiser(tactics),
@@ -58,8 +60,6 @@ export default class nx_tactics_decks_scene_murintrail {
               nx_tactics_decks_scene_murintrail.f_unit_wilddog(tactics),
               goblinscout,
               goblinscout_i,
-              nx_tactics_decks_scene_murintrail.f_unit_horse(tactics),
-              horse_i,
               nx_tactics_decks_scene_murintrail.f_unit_woodencart(tactics),
               vx_core.f_list_from_list(
                 {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},
@@ -440,49 +440,6 @@ export default class nx_tactics_decks_scene_murintrail {
           "1"
         )
       )
-    )
-    return output
-  }
-
-  /**
-   * @function unit_horse
-   * @param  {tactics} tactics
-   * @return {unit}
-   */
-  static t_unit_horse = {
-    vx_type: vx_core.t_type
-  }
-  static e_unit_horse = {
-    vx_type: nx_tactics_decks_scene_murintrail.t_unit_horse
-  }
-
-  // (func unit-horse)
-  static f_unit_horse(tactics) {
-    let output = nx_tactics_base.e_unit
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_unit},
-      ":name",
-      "Horse",
-      ":image",
-      "images/cards/unit-horse.svg",
-      ":imgmirror",
-      true,
-      ":body",
-      "4x2",
-      ":mind",
-      "5x-1",
-      ":will",
-      "2x1",
-      ":speed",
-      "2x2",
-      ":mass",
-      "450kg/1000lb",
-      ":speedland",
-      "20kph/12mph",
-      ":demeanor",
-      "Aloof",
-      ":nature",
-      "Skitish"
     )
     return output
   }
@@ -1008,7 +965,6 @@ export default class nx_tactics_decks_scene_murintrail {
       "unit-bruiser": nx_tactics_decks_scene_murintrail.e_unit_bruiser,
       "unit-goblinscout": nx_tactics_decks_scene_murintrail.e_unit_goblinscout,
       "unit-guardsman": nx_tactics_decks_scene_murintrail.e_unit_guardsman,
-      "unit-horse": nx_tactics_decks_scene_murintrail.e_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scene_murintrail.e_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scene_murintrail.e_unit_jonaveer,
       "unit-liliducon": nx_tactics_decks_scene_murintrail.e_unit_liliducon,
@@ -1024,7 +980,6 @@ export default class nx_tactics_decks_scene_murintrail {
       "unit-bruiser": nx_tactics_decks_scene_murintrail.t_unit_bruiser,
       "unit-goblinscout": nx_tactics_decks_scene_murintrail.t_unit_goblinscout,
       "unit-guardsman": nx_tactics_decks_scene_murintrail.t_unit_guardsman,
-      "unit-horse": nx_tactics_decks_scene_murintrail.t_unit_horse,
       "unit-jesaveer": nx_tactics_decks_scene_murintrail.t_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scene_murintrail.t_unit_jonaveer,
       "unit-liliducon": nx_tactics_decks_scene_murintrail.t_unit_liliducon,
@@ -1151,24 +1106,6 @@ export default class nx_tactics_decks_scene_murintrail {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scene_murintrail.f_unit_guardsman
-    }
-
-    // (func unit-horse)
-    nx_tactics_decks_scene_murintrail.t_unit_horse['vx_value'] = {
-      name          : "unit-horse",
-      pkgname       : "nx/tactics/decks/scene-murintrail",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scene_murintrail.f_unit_horse
     }
 
     // (func unit-jesaveer)

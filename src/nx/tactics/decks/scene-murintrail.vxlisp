@@ -170,21 +170,6 @@
      :skill (base/skill<-tactics-key tactics "Investigation")
      :level "1"))))
 
-(func unit-horse : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Horse"
-  :image "images/cards/unit-horse.svg"
-  :imgmirror true
-  :body "4x2"
-  :mind "5x-1"
-  :will "2x1"
-  :speed "2x2"
-  :mass "450kg/1000lb"
-  :speedland "20kph/12mph"
-  :demeanor "Aloof"
-  :nature "Skitish"))
-
 (func unit-jesaveer : base/unit
  [tactics : base/tactics]
  (base/unit
@@ -404,9 +389,7 @@
  [tactics : base/tactics]
  (let : base/deck
   [goblinscout   := (unit-goblinscout tactics)
-   goblinscout-i := (base/cardimage<-card goblinscout)
-   horse   := (unit-horse tactics)
-   horse-i := (base/cardimage<-card horse)]
+   goblinscout-i := (base/cardimage<-card goblinscout)]
   (base/deck
    :name "Murin Trail"
    :cardmap
@@ -415,7 +398,13 @@
       (list<-list : base/cardlist
        (base/unitlist<-tactics-keys
         tactics
-        "Flint (Early)"))
+        "Flint (Early)"
+        "Horse"))
+      (list<-list : base/cardlist
+       (base/cardimagelist<-tactics-unitkeys
+        tactics
+        "Flint (Early)"
+        "Horse"))
       (unit-bandit tactics)
       (unit-bruiser tactics)
       (unit-guardsman tactics)
@@ -427,8 +416,6 @@
       (unit-wilddog tactics)
       goblinscout
       goblinscout-i
-      (unit-horse tactics)
-      horse-i
       (unit-woodencart tactics)
       (list<-list : base/cardlist
        (base/skilllist<-tactics-keys

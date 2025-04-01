@@ -1291,9 +1291,7 @@ event such as sunrise or sunset and as a handy reference of celestial positions.
           :name "Nightengail Floor"
           :reference "Nijo Castle - Kyoto, Japan"
           :summary
-           "* Floors designed to make a chirping sound when walked upon assuring that none could sneak through the corridors
-undetected.  Dry boards naturally creak under pressure, but these floors were designed so that the flooring nails
-rubbed against a jacket or clamp, causing chirping noises."
+           "* Floors designed to make a chirping sound when walked upon assuring that none could sneak through the corridors undetected. Dry boards naturally creak under pressure, but these floors were designed so that the flooring nails rubbed against a jacket or clamp, causing chirping noises."
           :titles "Uguisubari")
         "Pressure Plate"
          (item
@@ -1389,42 +1387,4 @@ rubbed against a jacket or clamp, causing chirping noises."
         * [Sleepteacher]
         * [Subliminal Broadcaster]
         * [Surveillance Cameras]
-        * [Telephoto Lens]"
-      :itemmap
-       (itemmap
-        "Beast Claw"
-         (item
-          :name "Beast Claw")
-        :Tooth
-         (item
-          :name "Tooth")
-        "Vampire Blood"
-         (item
-          :name "Vampire Blood"
-          :summary
-           "* Black Token
-            * Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].
-            * [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.
-            * [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
-            * [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
-            * [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
-        "Salve: Healing"
-         (base/item<-tactics-key tactics "Salve: Healing")
-        :Lattice
-         (item
-          :name "Lattice")
-        :Mirror
-         (item
-          :name "Mirror")
-        :Matrix
-         (item
-          :name "Matrix")
-        :Candle
-         (item
-          :name "Candle")
-        :Screen
-         (item
-          :name "Screen")
-        :Array
-         (item
-          :name "Array"))))))
+        * [Telephoto Lens]"))))

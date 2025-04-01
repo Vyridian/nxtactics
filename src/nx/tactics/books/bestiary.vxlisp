@@ -568,10 +568,6 @@
         :Deer
          (base/unit
           :name "Deer")
-        "Draft Horse"
-         (base/unit
-          :name "Draft Horse"
-          :mass "800kg")
         :Elk
          (base/unit
           :name "Elk")
@@ -581,9 +577,13 @@
         :Reindeer
          (base/unit
           :name "Reindeer")
-        :Horse
+        "Horse: Draft"
          (base/unit
-          :name "Horse"
+          :name "Horse: Draft"
+          :mass "800kg")
+        "Horse: War"
+         (base/unit
+          :name "Horse: War"
           :reference
            "* Trot: 10mph / 16kph (Cataphracts)
             * Canter 12mph / 19kph (Heavy Cavalry, Cataphracts Charge)
@@ -924,9 +924,9 @@
         "Sea Serpent"
          (base/unit
           :name "Sea Serpent")
-        "Seahorse, Huge"
+        "Seahorse: Huge"
          (base/unit
-          :name "Seahorse, Huge")
+          :name "Seahorse: Huge")
         "Shark, Megalodon"
          (base/unit
           :name "Shark, Megalodon"))))))

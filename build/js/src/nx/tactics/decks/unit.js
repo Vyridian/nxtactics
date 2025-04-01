@@ -151,11 +151,38 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
-      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hare", ":body", "4x0", ":mind", "2x1", ":will", "3x1", ":speed", "6x1", ":speedland", "60kph/40mph", ":mass", "4kg/8lbs", ":length", "60cm", ":secrets", "* Because of their extremely low fat content, they are a poor choice as a survival food.\n* The blood of a freshly killed hare can be collected for consumption in a stew or casserole in a cooking process known as jugging.\n* Jugged hare, known as civet de lièvre in France, is a whole hare, cut into pieces, marinated, and cooked with red wine and juniper berries in a tall jug that stands in a pan of water."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hare", ":image", "images/cards/unit-hare.svg", ":body", "4x0", ":mind", "2x1", ":will", "3x1", ":speed", "6x1", ":speedland", "60kph/40mph", ":mass", "4kg/8lbs", ":length", "60cm", ":secrets", "* Because of their extremely low fat content, they are a poor choice as a survival food.\n* The blood of a freshly killed hare can be collected for consumption in a stew or casserole in a cooking process known as jugging.\n* Jugged hare, known as civet de lièvre in France, is a whole hare, cut into pieces, marinated, and cooked with red wine and juniper berries in a tall jug that stands in a pan of water."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbear"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellboar"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbull"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hidden", ":image", "images/cards/unit-hidden.svg"),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Horse",
+        ":image",
+        "images/cards/unit-horse.svg",
+        ":summary",
+        "* Double Move Penalties",
+        ":imgmirror",
+        true,
+        ":body",
+        "4x2",
+        ":mind",
+        "5x-1",
+        ":will",
+        "2x1",
+        ":speed",
+        "2x2",
+        ":mass",
+        "450kg/1000lb",
+        ":speedland",
+        "20kph/12mph",
+        ":demeanor",
+        "Aloof",
+        ":nature",
+        "Skitish"
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",
@@ -184,21 +211,17 @@ export default class nx_tactics_decks_unit {
             tactics,
             "Stealth",
             1,
-            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Ambush", "Camoflage")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Ambush", "Camouflage")
           )
         ),
         ":unitpowermap",
         nx_tactics_base.f_unitpowermap_from_unitpowerlist(
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitpower},
-            ":level",
+          nx_tactics_base.f_unitpower_from_tactics_key_lvl_intensity_abilities(
+            tactics,
+            "Toxins",
             2,
-            ":intensity",
             "2x2",
-            ":power",
-            nx_tactics_base.f_power_from_tactics_key(tactics, "Toxins"),
-            ":abilitylist",
-            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Poison Bite")
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Poison Bite")
           )
         )
       ),

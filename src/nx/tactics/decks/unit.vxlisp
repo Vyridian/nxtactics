@@ -68,6 +68,7 @@
   )
   (base/unit
    :name "Hare"
+   :image "images/cards/unit-hare.svg"
    :body "4x0"
    :mind "2x1"
    :will "3x1"
@@ -89,6 +90,20 @@
    :name "Hidden"
    :image "images/cards/unit-hidden.svg")
   (base/unit
+   :name "Horse"
+   :image "images/cards/unit-horse.svg"
+   :summary
+    "* Double Move Penalties"
+   :imgmirror true
+   :body "4x2"
+   :mind "5x-1"
+   :will "2x1"
+   :speed "2x2"
+   :mass "450kg/1000lb"
+   :speedland "20kph/12mph"
+   :demeanor "Aloof"
+   :nature "Skitish")
+  (base/unit
    :name "Snake: Emerald Viper"
    :secrets
     "* Movement - They can swim and climb trees.
@@ -109,19 +124,11 @@
       tactics
       "Stealth"
       1
-      (stringlist "Ambush" "Camoflage")))
+      (stringlist "Ambush" "Camouflage")))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
-     (base/unitpower
-      :level 2
-      :intensity "2x2"
-      :power
-       (base/power<-tactics-key
-        tactics "Toxins")
-      :abilitylist
-       (base/abilitylist<-tactics-keys
-        tactics
-        "Poison Bite"))))
+     (base/unitpower<-tactics-key-lvl-intensity-abilities
+      tactics "Toxins" 2 "2x2" (stringlist "Poison Bite"))))
  (base/unit
   :name "Zombie: Walker"
   :image "images/cards/unit-zombie-walker.svg"

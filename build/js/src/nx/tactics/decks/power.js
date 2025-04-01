@@ -91,6 +91,13 @@ export default class nx_tactics_decks_power {
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Strategic Warp Jump", "Tactical Warp Jump")
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Natural Weaponry",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Bite", "Bull Rush", "Burrowing", "Claw", "Claw Rake", "Constrict", "Death Roll", "Feather Blades", "Feather Knives", "Horns", "Jaw Lock", "Jaws of Death", "Neck Bite", "Overwhelm", "Pounce", "Quill Attack", "Ripping Bite", "Savage Genitalia", "Spines", "Sting", "Swallow Whole", "Tail Sweep", "Tongue Lash", "Trample", "Tusk Gore")
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Copy"),
       vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Disruption"),
       vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Power Drain"),

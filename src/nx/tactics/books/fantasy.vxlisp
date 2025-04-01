@@ -2059,7 +2059,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
           :name "Mandragora"
           :summary
            "* Mandragora is named for the unusual sentient plant-life, the Mandragore, who live here.
-            * Mandragores - About three feet high and vaguely man-like, they are roughly humanoid in form with gnarled root-like limbs and leafy 'hair'. Their eyes are like dark knots and their mouths are like the twisted hollow of a tree. The Mandragore usually stand rooted and immobile during the day as they soak in sunlight. During this time, they are well camoflaged among the other plant-life. At night, they move about tending their chores and looking for trespassers who they attempt to capture with nets of vines and grasses. Their unfortunate victims are bound and buried alive as fertilizer.
+            * Mandragores - About three feet high and vaguely man-like, they are roughly humanoid in form with gnarled root-like limbs and leafy 'hair'. Their eyes are like dark knots and their mouths are like the twisted hollow of a tree. The Mandragore usually stand rooted and immobile during the day as they soak in sunlight. During this time, they are well camouflaged among the other plant-life. At night, they move about tending their chores and looking for trespassers who they attempt to capture with nets of vines and grasses. Their unfortunate victims are bound and buried alive as fertilizer.
             * Abilities - The Mandragore are weak fighters who rely on surprise and numbers to battle large foes."
           :unitmap
            (base/unitmap

@@ -18,6 +18,9 @@
    :name "Cave Mouth"
    :image "images/cards/place-cavemouth.svg")
   (base/place
+   :name "Chasm"
+   :image "images/cards/place-chasm.svg")
+  (base/place
    :name "Cliff"
    :image "images/cards/place-cliff.svg")
   (base/place
@@ -56,6 +59,9 @@
   (base/place
    :name "Mudslide"
    :image "images/cards/place-mudslide.svg")
+  (base/place
+   :name "Pit"
+   :image "images/cards/place-pit.svg")
   (base/place
    :name "Pond"
    :image "images/cards/place-pond.svg")

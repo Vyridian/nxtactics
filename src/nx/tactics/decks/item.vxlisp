@@ -6,7 +6,7 @@
  [tactics : base/tactics]
  (base/itemmap<-itemlist
   (base/item
-   :name "Accesory: Monocle"
+   :name "Accessory: Monocle"
    :image "images/cards/item-accessory-monocle.svg"
    :summary
     "* [Passive]: IF examining small objects THEN [Investigation]:+1"
@@ -68,6 +68,8 @@
     "* [Fight]: [Close Combat] or [Melee]
      * [Arc]: [Arc:Front]
      * [Damage]: [Body] [Bash]")
+  (item
+   :name "Beast Claw")
   (base/item
    :name "Bedroll"
    :summary "")
@@ -122,6 +124,8 @@
    :energy "80J"
    :body "10x-1"
    :mass "1kg/2lb")
+  (item
+   :name "Candle")
   (base/item
    :name "Cloak")
   (base/item
@@ -175,8 +179,6 @@
    :body "10x-2"
    :mass "100g/.2lb")
   (base/item
-   :name "Flint Stone")
-  (base/item
    :name "Grenade: White Phosphorous")
   (base/item
    :name "Hammer"
@@ -214,11 +216,17 @@
    :mass "500g/1lb"
    :energy "50J"
    :length "25cm/10in")
+  (item
+   :name "Lattice")
   (base/item
    :name "Lockpicks"
    :image "images/cards/item-lockpicks.svg"
    :summary
     "* [Success]: IF picking a lock and Succeed with Evade THEN Success:+1")
+  (item
+   :name "Matrix")
+  (item
+   :name "Mirror")
   (base/item
    :name "Mushrooms"
    :classification "Plant"
@@ -226,15 +234,17 @@
    :summary
     "* Nutrition for a day. After eating [Reveal Fate]. IF [Coins] THEN you spend 6 hours tripping or sleeping. IF [Cups] THEN Poison:+1")
   (base/item
+   :name "Onions: Wild"
+   :classification "Plant"
+   :image "images/cards/item-onions-wild.svg"
+   :summary
+    "* Nutrition for a day.")
+  (base/item
    :name "Paper: Lock Combination"
    :image "images/cards/item-paper-lockcombination.svg")
   (base/item
    :name "Pistol: Revolver"
    :image "images/cards/item-pistol-revolver.svg")
-  (base/item
-   :name "Pond Water"
-   :summary
-    "* IF drank [Reveal Fate] THEN IF [Cups] THEN [Diseased]:+1")
   (base/item
    :name "Quiver: Arrows"
    :image "images/cards/item-quiver-arrows.svg"
@@ -249,7 +259,9 @@
    :classification "Plant"
    :image "images/cards/item-raspberries.svg"
    :summary
-    "* Nutrition for a day. [Reveal Fate]. IF [Coins] THEN they are sour. IF [Cups] THEN they are sweet.")
+    "* Nutrition for a day. [Reveal Fate]. IF [Coins] THEN they are sour. IF [Cups] THEN they are sweet."
+   :body "10x-1"
+   :mass "1kg/2lbs")
   (base/item
    :name "Rations"
    :image "images/cards/item-rations.svg"
@@ -274,6 +286,8 @@
      * [Double Action] Use:1: Reduce a Major Wound to a Minor Wound."
    :body "5x-1"
    :mass "500g/1.1lb")
+  (item
+   :name "Screen")
   (base/item
    :name "Shield: Buckler"
    :classification "Shield"
@@ -348,6 +362,9 @@
      * [Armor]: 1x1"
    :body "10x-1"
    :mass "1.5kg/4lb")
+  (base/item
+   :name "Stone: Flint"
+   :image "images/cards/item-stone-flint.svg")
   (base/item
    :name "Sword: Back"
    :classification "Sword"
@@ -466,8 +483,31 @@
    :name "Sword: Wakizashi"
    :classification "Sword"
    :energy "100J")
+  (item
+   :name "Tooth")
   (base/item
-   :name "Torch")
+   :name "Torch"
+   :image "images/cards/item-torch.svg"
+   :summary
+    "* Provides poor light for 30 minutes."
+   :body "10x-1"
+   :mass "1kg/2lbs")
+  (item
+   :name "Vampire Blood"
+   :summary
+    "* Black Token
+     * Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].
+     * [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.
+     * [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.
+     * [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.
+     * [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns.")
+  (base/item
+   :name "Water: Pond"
+   :image "images/cards/item-water-pond.svg"
+   :summary
+    "* IF drank [Reveal Fate] THEN IF [Cups] THEN [Diseased]:+1"
+   :body "2x0"
+   :mass "2kg/4.4lbs")
   (base/item
    :name "Waterskin"
    :image "images/cards/item-waterskin.svg"
@@ -477,18 +517,13 @@
    :body "2x0"
    :mass "2kg/4.4lbs")
   (base/item
-   :name "Wild Onions"
+   :name "Yams: Wild"
    :classification "Plant"
-   :image "images/cards/item-wildonions.svg"
+   :image "images/cards/item-yams-wild.svg"
    :summary
-    "* Nutrition for a day.")
-  (base/item
-   :name "Wild Yams"
-   :classification "Plant"
-   :image "images/cards/item-wildyams.svg"
-   :summary
-    "* Nutrition for a day.")
- )
+    "* Nutrition for a day."
+   :body "10x-1"
+   :mass "1kg/2lbs"))
  :doc "Returns the base itemmap")
 
 (func tactics-itemmap<-tactics : base/tactics

@@ -895,7 +895,7 @@ export default class nx_tactics_books_gear {
             ":Caltrops",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Caltrops"),
             "Nightengail Floor",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Nightengail Floor", ":reference", "Nijo Castle - Kyoto, Japan", ":summary", "* Floors designed to make a chirping sound when walked upon assuring that none could sneak through the corridors\nundetected.  Dry boards naturally creak under pressure, but these floors were designed so that the flooring nails\nrubbed against a jacket or clamp, causing chirping noises.", ":titles", "Uguisubari"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Nightengail Floor", ":reference", "Nijo Castle - Kyoto, Japan", ":summary", "* Floors designed to make a chirping sound when walked upon assuring that none could sneak through the corridors undetected. Dry boards naturally creak under pressure, but these floors were designed so that the flooring nails rubbed against a jacket or clamp, causing chirping noises.", ":titles", "Uguisubari"),
             "Pressure Plate",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pressure Plate"),
             ":Tanglewire",
@@ -935,40 +935,7 @@ export default class nx_tactics_books_gear {
           )
         ),
         "Unfiled Gear",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Unfiled Gear",
-          ":summary",
-          "* Acid\n* Alabaster\n* Barricade\n* Blood\n* Cage\n* Chariot\n* Conch Horn\n* Fireworks\n* Trumpet\n* War Machine\n\n!Symbols\n* Banner\n* Coat of Arms\n* Crest\n* Crown\n* Fasces\n* Helix\n* Rod\n* Scepter\n* Signet\n* Standard\n* Thyrsus\n\n!Arcane Items\n* Airship\n* Armageddon Clock\n* Flying Carpet\n\n!Containers\n* Chest\n* Cauldron\n* Coffer\n* Goblet\n* Jar\n* Puzzle Box\n* Vat\n* Vessel\n\n!Technology\n* [Blinding Bulb]\n* [Phone Tap]]\n* [Shotgun Microphone]\n* [Sleepteacher]\n* [Subliminal Broadcaster]\n* [Surveillance Cameras]\n* [Telephoto Lens]",
-          ":itemmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_itemmap},
-            "Beast Claw",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Beast Claw"),
-            ":Tooth",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Tooth"),
-            "Vampire Blood",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Vampire Blood", ":summary", "* Black Token\n* Drinking Vampire Blood is addictive and creates a psychological dependency on the original Vampire called the [[Blood Bond]].\n* [Move] - Vampiric Healing - Remove a Vampire Blood Token and remove another Token of your choice.\n* [Move] - Vampiric Strength - Remove a Vampire Blood Token and gain +1 Melee for 3 turns.\n* [Move] - Vampiric Speed - Remove a Vampire Blood Token and gain +1 Initiative and +1 Move for 3 turns.\n* [Move] - Vampiric Fortitude - Remove a Vampire Blood Token and gain +1 Physical Armor for 3 turns."),
-            "Salve: Healing",
-            nx_tactics_base.f_item_from_tactics_key(
-              nx_tactics_base.t_tactics,
-              "Salve: Healing"
-            ),
-            ":Lattice",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lattice"),
-            ":Mirror",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Mirror"),
-            ":Matrix",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Matrix"),
-            ":Candle",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Candle"),
-            ":Screen",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Screen"),
-            ":Array",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Array")
-          )
-        )
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Unfiled Gear", ":summary", "* Acid\n* Alabaster\n* Barricade\n* Blood\n* Cage\n* Chariot\n* Conch Horn\n* Fireworks\n* Trumpet\n* War Machine\n\n!Symbols\n* Banner\n* Coat of Arms\n* Crest\n* Crown\n* Fasces\n* Helix\n* Rod\n* Scepter\n* Signet\n* Standard\n* Thyrsus\n\n!Arcane Items\n* Airship\n* Armageddon Clock\n* Flying Carpet\n\n!Containers\n* Chest\n* Cauldron\n* Coffer\n* Goblet\n* Jar\n* Puzzle Box\n* Vat\n* Vessel\n\n!Technology\n* [Blinding Bulb]\n* [Phone Tap]]\n* [Shotgun Microphone]\n* [Sleepteacher]\n* [Subliminal Broadcaster]\n* [Surveillance Cameras]\n* [Telephoto Lens]")
       )
     )
     return output

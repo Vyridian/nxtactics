@@ -69,6 +69,12 @@ export default class nx_tactics_base {
   static e_cardimage = {vx_type: nx_tactics_base.t_cardimage}
 
   /**
+   * type: cardimagelist
+   */
+  static t_cardimagelist = {}
+  static e_cardimagelist = vx_core.vx_new_list(nx_tactics_base.t_cardimagelist, [])
+
+  /**
    * type: cardlist
    */
   static t_cardlist = {}
@@ -1486,6 +1492,86 @@ export default class nx_tactics_base {
         const id = vx_core.f_new({"any-1": vx_core.t_string}, name, "-image")
         return vx_core.f_new({"any-1": nx_tactics_base.t_cardimage}, ":id", id, ":name", name, ":origcard", card, ":image", image, ":imgmirror", imgmirror)
       })
+    )
+    return output
+  }
+
+  /**
+   * @function cardimage_from_tactics_unitkey
+   * Returns a cardimage from a given tactics and unit key.
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @return {cardimage}
+   */
+  static t_cardimage_from_tactics_unitkey = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardimage_from_tactics_unitkey = {
+    vx_type: nx_tactics_base.t_cardimage_from_tactics_unitkey
+  }
+
+  // (func cardimage<-tactics-unitkey)
+  static f_cardimage_from_tactics_unitkey(tactics, key) {
+    let output = nx_tactics_base.e_cardimage
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_cardimage},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const unit = nx_tactics_base.f_unit_from_tactics_key(tactics, key)
+        return nx_tactics_base.f_cardimage_from_card(unit)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function cardimagelist_from_cardlist
+   * Returns a cardimagelist from a given cardlist.
+   * @param  {cardlist} cardlist
+   * @return {cardimagelist}
+   */
+  static t_cardimagelist_from_cardlist = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardimagelist_from_cardlist = {
+    vx_type: nx_tactics_base.t_cardimagelist_from_cardlist
+  }
+
+  // (func cardimagelist<-cardlist)
+  static f_cardimagelist_from_cardlist(cardlist) {
+    let output = nx_tactics_base.e_cardimagelist
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_cardimage, "any-2": nx_tactics_base.t_card, "list-1": nx_tactics_base.t_cardimagelist, "list-2": nx_tactics_base.t_cardlist},
+      cardlist,
+      vx_core.f_new_from_type(vx_core.t_any_from_any, (card) => 
+        nx_tactics_base.f_cardimage_from_card(card))
+    )
+    return output
+  }
+
+  /**
+   * @function cardimagelist_from_tactics_unitkeys
+   * Returns a cardimagelist from a given tactics and unit keys.
+   * @param  {tactics} tactics
+   * @param  {stringlist} ... keys
+   * @return {cardimagelist}
+   */
+  static t_cardimagelist_from_tactics_unitkeys = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardimagelist_from_tactics_unitkeys = {
+    vx_type: nx_tactics_base.t_cardimagelist_from_tactics_unitkeys
+  }
+
+  // (func cardimagelist<-tactics-unitkeys)
+  static f_cardimagelist_from_tactics_unitkeys(tactics, ...keys) {
+    let output = nx_tactics_base.e_cardimagelist
+    keys = vx_core.f_new_from_type(vx_core.t_stringlist, ...keys)
+    output = vx_core.f_list_from_list_1(
+      {"any-1": nx_tactics_base.t_cardimage, "any-2": vx_core.t_string, "list-1": nx_tactics_base.t_cardimagelist, "list-2": vx_core.t_stringlist},
+      keys,
+      vx_core.f_new_from_type(vx_core.t_any_from_any, (key) => 
+        nx_tactics_base.f_unit_from_tactics_key(tactics, key))
     )
     return output
   }
@@ -3814,10 +3900,11 @@ export default class nx_tactics_base {
   // (func unitpower<-tactics-key-lvl-abilities)
   static f_unitpower_from_tactics_key_lvl_abilities(tactics, key, level, abilities) {
     let output = nx_tactics_base.e_unitpower
-    output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities_items(
+    output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_intensity_abilities_items(
       tactics,
       key,
       level,
+      "",
       abilities,
       vx_core.f_empty(
         vx_core.t_stringlist
@@ -3846,6 +3933,73 @@ export default class nx_tactics_base {
   // (func unitpower<-tactics-key-lvl-abilities-items)
   static f_unitpower_from_tactics_key_lvl_abilities_items(tactics, key, level, abilities, items) {
     let output = nx_tactics_base.e_unitpower
+    output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_intensity_abilities_items(
+      tactics,
+      key,
+      level,
+      "",
+      abilities,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unitpower_from_tactics_key_lvl_intensity_abilities
+   * Returns a unitpower from tactics, skill key, level, ability keys, and item keys
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {int} level
+   * @param  {string} intensity
+   * @param  {stringlist} abilities
+   * @return {unitpower}
+   */
+  static t_unitpower_from_tactics_key_lvl_intensity_abilities = {
+    vx_type: vx_core.t_type
+  }
+  static e_unitpower_from_tactics_key_lvl_intensity_abilities = {
+    vx_type: nx_tactics_base.t_unitpower_from_tactics_key_lvl_intensity_abilities
+  }
+
+  // (func unitpower<-tactics-key-lvl-intensity-abilities)
+  static f_unitpower_from_tactics_key_lvl_intensity_abilities(tactics, key, level, intensity, abilities) {
+    let output = nx_tactics_base.e_unitpower
+    output = nx_tactics_base.f_unitpower_from_tactics_key_lvl_intensity_abilities_items(
+      tactics,
+      key,
+      level,
+      intensity,
+      abilities,
+      vx_core.f_empty(
+        vx_core.t_stringlist
+      )
+    )
+    return output
+  }
+
+  /**
+   * @function unitpower_from_tactics_key_lvl_intensity_abilities_items
+   * Returns a unitpower from tactics, skill key, level, ability keys, and item keys
+   * @param  {tactics} tactics
+   * @param  {string} key
+   * @param  {int} level
+   * @param  {string} intensity
+   * @param  {stringlist} abilities
+   * @param  {stringlist} items
+   * @return {unitpower}
+   */
+  static t_unitpower_from_tactics_key_lvl_intensity_abilities_items = {
+    vx_type: vx_core.t_type
+  }
+  static e_unitpower_from_tactics_key_lvl_intensity_abilities_items = {
+    vx_type: nx_tactics_base.t_unitpower_from_tactics_key_lvl_intensity_abilities_items
+  }
+
+  // (func unitpower<-tactics-key-lvl-intensity-abilities-items)
+  static f_unitpower_from_tactics_key_lvl_intensity_abilities_items(tactics, key, level, intensity, abilities, items) {
+    let output = nx_tactics_base.e_unitpower
     output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_unitpower},
       [],
@@ -3867,7 +4021,7 @@ export default class nx_tactics_base {
             vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":item", item))
         )
         const unititemmap = nx_tactics_base.f_unititemmap_from_unititemlist(unititemlist)
-        return vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":power", power, ":level", level, ":unitabilitymap", unitabilitymap, ":unititemmap", unititemmap)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":power", power, ":level", level, ":intensity", intensity, ":unitabilitymap", unitabilitymap, ":unititemmap", unititemmap)
       })
     )
     return output
@@ -4180,6 +4334,7 @@ export default class nx_tactics_base {
       "card": nx_tactics_base.e_card,
       "cardback": nx_tactics_base.e_cardback,
       "cardimage": nx_tactics_base.e_cardimage,
+      "cardimagelist": nx_tactics_base.e_cardimagelist,
       "cardlist": nx_tactics_base.e_cardlist,
       "cardmap": nx_tactics_base.e_cardmap,
       "chapter": nx_tactics_base.e_chapter,
@@ -4279,6 +4434,9 @@ export default class nx_tactics_base {
       "abilitymap<-tactics-keys": nx_tactics_base.e_abilitymap_from_tactics_keys,
       "bookmap<-booklist": nx_tactics_base.e_bookmap_from_booklist,
       "cardimage<-card": nx_tactics_base.e_cardimage_from_card,
+      "cardimage<-tactics-unitkey": nx_tactics_base.e_cardimage_from_tactics_unitkey,
+      "cardimagelist<-cardlist": nx_tactics_base.e_cardimagelist_from_cardlist,
+      "cardimagelist<-tactics-unitkeys": nx_tactics_base.e_cardimagelist_from_tactics_unitkeys,
       "cardlist-copy<-card-num": nx_tactics_base.e_cardlist_copy_from_card_num,
       "cardmap-copy<-card-num": nx_tactics_base.e_cardmap_copy_from_card_num,
       "cardmap<-bookmap": nx_tactics_base.e_cardmap_from_bookmap,
@@ -4361,6 +4519,8 @@ export default class nx_tactics_base {
       "unitmap<-unitlist": nx_tactics_base.e_unitmap_from_unitlist,
       "unitpower<-tactics-key-lvl-abilities": nx_tactics_base.e_unitpower_from_tactics_key_lvl_abilities,
       "unitpower<-tactics-key-lvl-abilities-items": nx_tactics_base.e_unitpower_from_tactics_key_lvl_abilities_items,
+      "unitpower<-tactics-key-lvl-intensity-abilities": nx_tactics_base.e_unitpower_from_tactics_key_lvl_intensity_abilities,
+      "unitpower<-tactics-key-lvl-intensity-abilities-items": nx_tactics_base.e_unitpower_from_tactics_key_lvl_intensity_abilities_items,
       "unitpowermap<-unitpowerlist": nx_tactics_base.e_unitpowermap_from_unitpowerlist,
       "unitskill<-tactics-key-lvl-abilities": nx_tactics_base.e_unitskill_from_tactics_key_lvl_abilities,
       "unitskill<-tactics-key-lvl-abilities-items": nx_tactics_base.e_unitskill_from_tactics_key_lvl_abilities_items,
@@ -4382,6 +4542,9 @@ export default class nx_tactics_base {
       "abilitymap<-tactics-keys": nx_tactics_base.t_abilitymap_from_tactics_keys,
       "bookmap<-booklist": nx_tactics_base.t_bookmap_from_booklist,
       "cardimage<-card": nx_tactics_base.t_cardimage_from_card,
+      "cardimage<-tactics-unitkey": nx_tactics_base.t_cardimage_from_tactics_unitkey,
+      "cardimagelist<-cardlist": nx_tactics_base.t_cardimagelist_from_cardlist,
+      "cardimagelist<-tactics-unitkeys": nx_tactics_base.t_cardimagelist_from_tactics_unitkeys,
       "cardlist-copy<-card-num": nx_tactics_base.t_cardlist_copy_from_card_num,
       "cardmap-copy<-card-num": nx_tactics_base.t_cardmap_copy_from_card_num,
       "cardmap<-bookmap": nx_tactics_base.t_cardmap_from_bookmap,
@@ -4464,6 +4627,8 @@ export default class nx_tactics_base {
       "unitmap<-unitlist": nx_tactics_base.t_unitmap_from_unitlist,
       "unitpower<-tactics-key-lvl-abilities": nx_tactics_base.t_unitpower_from_tactics_key_lvl_abilities,
       "unitpower<-tactics-key-lvl-abilities-items": nx_tactics_base.t_unitpower_from_tactics_key_lvl_abilities_items,
+      "unitpower<-tactics-key-lvl-intensity-abilities": nx_tactics_base.t_unitpower_from_tactics_key_lvl_intensity_abilities,
+      "unitpower<-tactics-key-lvl-intensity-abilities-items": nx_tactics_base.t_unitpower_from_tactics_key_lvl_intensity_abilities_items,
       "unitpowermap<-unitpowerlist": nx_tactics_base.t_unitpowermap_from_unitpowerlist,
       "unitskill<-tactics-key-lvl-abilities": nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities,
       "unitskill<-tactics-key-lvl-abilities-items": nx_tactics_base.t_unitskill_from_tactics_key_lvl_abilities_items,
@@ -4482,6 +4647,7 @@ export default class nx_tactics_base {
       "card": nx_tactics_base.t_card,
       "cardback": nx_tactics_base.t_cardback,
       "cardimage": nx_tactics_base.t_cardimage,
+      "cardimagelist": nx_tactics_base.t_cardimagelist,
       "cardlist": nx_tactics_base.t_cardlist,
       "cardmap": nx_tactics_base.t_cardmap,
       "chapter": nx_tactics_base.t_chapter,
@@ -5074,6 +5240,24 @@ export default class nx_tactics_base {
     }
     nx_tactics_base.e_cardimage['vx_type'] = nx_tactics_base.t_cardimage
     nx_tactics_base.e_cardimage['vx_value'] = {}
+
+    // (type cardimagelist)
+    nx_tactics_base.t_cardimagelist['vx_type'] = vx_core.t_type
+    nx_tactics_base.t_cardimagelist['vx_value'] = {
+      name          : "cardimagelist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":list",
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [nx_tactics_base.t_cardimage],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [],
+      properties    : {},
+      proplast      : {}
+    }
+    nx_tactics_base.e_cardimagelist['vx_type'] = nx_tactics_base.t_cardimagelist
 
     // (type cardlist)
     nx_tactics_base.t_cardlist['vx_type'] = vx_core.t_type
@@ -9664,6 +9848,60 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_cardimage_from_card
     }
 
+    // (func cardimage<-tactics-unitkey)
+    nx_tactics_base.t_cardimage_from_tactics_unitkey['vx_value'] = {
+      name          : "cardimage<-tactics-unitkey",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardimage_from_tactics_unitkey
+    }
+
+    // (func cardimagelist<-cardlist)
+    nx_tactics_base.t_cardimagelist_from_cardlist['vx_value'] = {
+      name          : "cardimagelist<-cardlist",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardimagelist_from_cardlist
+    }
+
+    // (func cardimagelist<-tactics-unitkeys)
+    nx_tactics_base.t_cardimagelist_from_tactics_unitkeys['vx_value'] = {
+      name          : "cardimagelist<-tactics-unitkeys",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardimagelist_from_tactics_unitkeys
+    }
+
     // (func cardlist-copy<-card-num)
     nx_tactics_base.t_cardlist_copy_from_card_num['vx_value'] = {
       name          : "cardlist-copy<-card-num",
@@ -11138,6 +11376,42 @@ export default class nx_tactics_base {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_base.f_unitpower_from_tactics_key_lvl_abilities_items
+    }
+
+    // (func unitpower<-tactics-key-lvl-intensity-abilities)
+    nx_tactics_base.t_unitpower_from_tactics_key_lvl_intensity_abilities['vx_value'] = {
+      name          : "unitpower<-tactics-key-lvl-intensity-abilities",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unitpower_from_tactics_key_lvl_intensity_abilities
+    }
+
+    // (func unitpower<-tactics-key-lvl-intensity-abilities-items)
+    nx_tactics_base.t_unitpower_from_tactics_key_lvl_intensity_abilities_items['vx_value'] = {
+      name          : "unitpower<-tactics-key-lvl-intensity-abilities-items",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_unitpower_from_tactics_key_lvl_intensity_abilities_items
     }
 
     // (func unitpowermap<-unitpowerlist)

@@ -235,6 +235,10 @@
      * Turn: Turn your unit's facing 45 degrees to the left or right.
      * Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing.")
   (base/rule
+   :name "Poisoned"
+   :summary
+    "")
+  (base/rule
    :name "Power"
    :summary
     "")
@@ -332,6 +336,22 @@
    :name "Unskilled"
    :summary
     "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item].")
+  (base/rule
+   :name "Weather: Temperature"
+   :summary
+    "")
+  (base/rule
+   :name "Weather: Clouds"
+   :summary
+    "")
+  (base/rule
+   :name "Weather: Humidity"
+   :summary
+    "")
+  (base/rule
+   :name "Weather: Wind"
+   :summary
+    "")
   (base/rule
    :id "will"
    :name "Will"

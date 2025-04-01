@@ -30,14 +30,14 @@
      (base/itemlist<-tactics-keys
       tactics
       "Bare Handed"
-      "Flint Stone"
       "Knife: Dagger"
       "Mushrooms"
-      "Pond Water"
+      "Onions: Wild"
       "Raspberries"
+      "Stone: Flint"
       "Torch"
-      "Wild Onions"
-      "Wild Yams"))
+      "Water: Pond"
+      "Yams: Wild"))
     (list<-list : base/cardlist
      (base/powerlist<-tactics-keys
       tactics
@@ -45,10 +45,10 @@
     (list<-list : base/cardlist
      (base/rulelist<-tactics-keys
       tactics
-      "Temperature"
-      "Clouds"
-      "Humidity"
-      "Wind"
+      "Weather: Temperature"
+      "Weather: Clouds"
+      "Weather: Humidity"
+      "Weather: Wind"
       "Exposure"
       "Hunger"
       "Thirst"
@@ -57,13 +57,14 @@
      (base/placelist<-tactics-keys
       tactics
       "Brambles"
+      "Chasm"
       "Cliff"
-      "Forest"
-      "Lake"
       "Marsh"
       "Mudslide"
+      "Pit"
       "Pond"
       "River"
+      "Rock"
       "Rockslide"
       "Stream"))
    )

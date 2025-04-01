@@ -46,6 +46,9 @@
  :traits     [card]
  :properties [origcard : card])
 
+(type cardimagelist : list
+ :allowtypes [cardimage])
+
 (type cardlist : list
  :allowtypes [card])
 
@@ -1089,6 +1092,33 @@
    :imgmirror imgmirror))
  :doc "Returns a cardimage from a given card")
 
+(func cardimage<-tactics-unitkey : cardimage
+ [tactics : tactics
+  key     : string]
+ (let : cardimage
+  [unit : unit := (unit<-tactics-key tactics key)]
+  (cardimage<-card unit))
+ :doc "Returns a cardimage from a given tactics and unit key.")
+
+(func cardimagelist<-cardlist : cardimagelist
+ [cardlist : cardlist]
+ (list<-list : cardimagelist
+  cardlist
+  (fn : cardimage
+   [card : card]
+   (cardimage<-card card)))
+ :doc "Returns a cardimagelist from a given cardlist.")
+
+(func cardimagelist<-tactics-unitkeys : cardimagelist
+ [tactics : tactics
+  keys    : stringlist :...]
+ (list<-list : cardimagelist
+  keys
+  (fn : cardimage
+   [key : string]
+   (unit<-tactics-key tactics key)))
+ :doc "Returns a cardimagelist from a given tactics and unit keys.")
+
 (func item<-tactics-key : item
  [tactics : tactics
   key     : string]
@@ -2013,13 +2043,34 @@
   key       : string
   level     : int
   abilities : stringlist]
- (unitpower<-tactics-key-lvl-abilities-items
-  tactics key level abilities (empty stringlist)))
+ (unitpower<-tactics-key-lvl-intensity-abilities-items
+  tactics key level "" abilities (empty stringlist)))
 
 (func unitpower<-tactics-key-lvl-abilities-items : unitpower
  [tactics   : tactics
   key       : string
   level     : int
+  abilities : stringlist
+  items     : stringlist]
+ (unitpower<-tactics-key-lvl-intensity-abilities-items
+  tactics key level "" abilities (empty stringlist))
+ :doc "Returns a unitpower from tactics, skill key, level, ability keys, and item keys")
+
+(func unitpower<-tactics-key-lvl-intensity-abilities : unitpower
+ [tactics   : tactics
+  key       : string
+  level     : int
+  intensity : string
+  abilities : stringlist]
+ (unitpower<-tactics-key-lvl-intensity-abilities-items
+  tactics key level intensity abilities (empty stringlist))
+ :doc "Returns a unitpower from tactics, skill key, level, ability keys, and item keys")
+
+(func unitpower<-tactics-key-lvl-intensity-abilities-items : unitpower
+ [tactics   : tactics
+  key       : string
+  level     : int
+  intensity : string
   abilities : stringlist
   items     : stringlist]
  (let : unitpower
@@ -2050,6 +2101,7 @@
   (unitpower
    :power power
    :level level
+   :intensity intensity
    :unitabilitymap unitabilitymap
    :unititemmap unititemmap))
  :doc "Returns a unitpower from tactics, skill key, level, ability keys, and item keys")

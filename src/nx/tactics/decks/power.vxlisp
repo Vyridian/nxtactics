@@ -124,6 +124,36 @@
      "Strategic Warp Jump"
      "Tactical Warp Jump"))
   (base/power
+   :name "Natural Weaponry"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Bite"
+     "Bull Rush"
+     "Burrowing"
+     "Claw"
+     "Claw Rake"
+     "Constrict"
+     "Death Roll"
+     "Feather Blades"
+     "Feather Knives"
+     "Horns"
+     "Jaw Lock"
+     "Jaws of Death"
+     "Neck Bite"
+     "Overwhelm"
+     "Pounce"
+     "Quill Attack"
+     "Ripping Bite"
+     "Savage Genitalia"
+     "Spines"
+     "Sting"
+     "Swallow Whole"
+     "Tail Sweep"
+     "Tongue Lash"
+     "Trample"
+     "Tusk Gore"))
+  (base/power
    :name "Power Copy")
   (base/power
    :name "Power Disruption")

@@ -200,6 +200,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Mind", ":summary", "* Mind is the measure of a unit's intellect and problem solving ability.\n* A unit with Mind:0 is delirious.\n* It is lossly derived from the IQ-50. E.g. 100IQ = 5x10^1 = 5x1, 140IQ = 9x10^1 = 9x1"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Mitigation", ":summary", "* Obstacles\n* Cover\n* Shields\n* Armor\n* Toughness\n* Body"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Move", ":summary", "* [Action]: Move straight up to your [Speed] stat.\n* Double Move (2 Actions): Move straight your [Speed]x2.\n* Sprint (2 Actions): If you took a Double Move or Sprint last turn, you may move [Speed]x3 straight this turn.\n* Leftover Speed: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Speed left, you may take note of it and carry it over to subsequent turns.\n* Change Facing: During your Move Action, you may Turn or Drift up to 2 times.\n* Turn: Turn your unit's facing 45 degrees to the left or right.\n* Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Poisoned", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Power", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reach", ":summary", "* Can target one additional dot away [Scaled]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Recover", ":summary", "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]\n* Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."),
@@ -217,6 +218,10 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Thirst", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unfamiliar Item", ":summary", "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unskilled", ":summary", "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item]."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Temperature", ":summary", ""),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Clouds", ":summary", ""),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Humidity", ":summary", ""),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Wind", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":id", "will", ":name", "Will", ":summary", "* Will is the measure of a unit's grit, determination and psychological stability.\n* A unit with Will:0 is panicked.\n* It is lossly derived from an average person having a 100 score. E.g. 100 = 5x10^1 = 5x1, 140 = 9x10^1 = 9x1")
     )
     return output

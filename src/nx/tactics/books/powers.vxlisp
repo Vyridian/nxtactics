@@ -850,9 +850,9 @@
                 * [Speed] can used to increase or decrease current speed.
                 * [Speed] can also be used to sideslip left or right by 1 space.
                 * Facing can be changed by one side each space moved, but this does not change speed or direction.")
-            "Active Camoflage"
+            "Active Camouflage"
              (base/ability
-              :name "Active Camoflage")
+              :name "Active Camouflage")
             "Camo Netting"
              (base/ability
               :name "Camo Netting")
@@ -2531,134 +2531,7 @@
               :name "Water Running"
               :summary "* Requires: [Water Walking]")))
         "Natural Weaponry"
-         (base/power
-          :name "Natural Weaponry"
-          :abilitymap
-           (base/abilitymap
-            :Bite
-             (base/ability
-              :name "Bite"
-              :summary
-               "* IF you have a [Hold] on a target
-                * THEN
-                ** [Fight]: [Close Combat]
-                ** [Damage]: [Body] [Pierce] [Slash] [Hack]")
-            "Bull Rush"
-             (base/ability
-              :name "Bull Rush"
-              :titles "Charge")
-            :Burrowing
-             (base/ability
-              :name "Burrowing")
-            :Claw
-             (base/ability
-              :name "Claw"
-              :summary
-               "* The fighter attacks with both claws.
-                * Criticals - [Bleeding]")
-            "Claw Rake"
-             (base/ability
-              :name "Claw Rake"
-              :summary
-               "* A quick raking claw attack with one set of claws.
-                * +2 Initiative
-                * -1 Accuracy
-                * +1 Move
-                * Criticals - [Bleeding]")
-            :Constrict
-             (base/ability
-              :name "Constrict"
-              :titles "Bear Hug")
-            "Death Roll"
-             (base/ability
-              :name "Death Roll")
-            "Feather Blades"
-             (base/ability
-              :name "Feather Blades"
-              :summary "* Feathers become as hard as steel and may be used as swords.")
-            "Feather Knives"
-             (base/ability
-              :name "Feather Knives"
-              :summary "* Feathers become as hard as steel and may be thrown like knives.")
-            :Horns
-             (base/ability
-              :name "Horns"
-              :summary "* Usually they are worn as antlers, but may sprout form anywhere on the body.")
-            "Jaw Lock"
-             (base/ability
-              :name "Jaw Lock"
-              :summary
-               "* The fighter locks his powerful jaws onto the opponent to immobilize.
-                * Damage - [Slow]
-                * Criticals - [Piercing]")
-            "Jaws of Death"
-             (base/ability
-              :name "Jaws of Death"
-              :summary "* Fericiously attack with huge bites.")
-            "Neck Bite"
-             (base/ability
-              :name "Neck Bite"
-              :summary
-               "* After grabbing an opponent, the fighter bites the neck/shoulders of the opponents doing damage each turn.
-                * Requires: [Hold], [Continuous Hold]
-                * +1 Initiative
-                * +1 Accuracy
-                * Critcals - [Bleeding]")
-            :Overwhelm
-             (base/ability
-              :name "Overwhelm")
-            :Pounce
-             (base/ability
-              :name "Pounce"
-              :summary
-               "* The fighter drops into a crouch and then explodes into a mighty leap at his prey attempting to knock down the opponent.
-                * [Aerial]
-                * +1 Accuracy
-                * +1 Move
-                * Criticals - [Knockdown]")
-            "Quill Attack"
-             (base/ability
-              :name "Quill Attack")
-            "Ripping Bite"
-             (base/ability
-              :name "Ripping Bite"
-              :summary
-               "* The fighter strikes a limb with the intention to disable his opponent.
-* -1 Initiative
-* -1 Damage
-* +1 Critical - [Bleeding] or [Weakness]"
-              :titles "Jaws of Death")
-            "Savage Genitalia"
-             (base/ability
-              :name "Savage Genitalia"
-              :summary
-               "* Male variations include excessive length, hardness, spines, and thorns.
-* Female variations include teeth, ripping suction, crushers, and grinders.
-* [Hidden Weapon]
-* -2 Initiative
-* -1 Accuracy
-* +1 Critical")
-            :Spines
-             (base/ability
-              :name "Spines")
-            :Sting
-             (base/ability
-              :name "Sting")
-            "Swallow Whole"
-             (base/ability
-              :name "Swallow Whole")
-            "Tail Sweep"
-             (base/ability
-              :name "Tail Sweep")
-            "Tongue Lash"
-             (base/ability
-              :name "Tongue Lash")
-            :Tusk
-             (base/ability
-              :name "Tusk")
-            :Trample
-             (base/ability
-              :name "Trample")))
+         (base/power<-tactics-key tactics "Natural Weaponry")
         :Quickness
          (base/power
           :name "Quickness"

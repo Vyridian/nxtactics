@@ -2751,16 +2751,16 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Cattle"),
             ":Deer",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Deer"),
-            "Draft Horse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Draft Horse", ":mass", "800kg"),
             ":Elk",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Elk"),
             ":Moose",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Moose"),
             ":Reindeer",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Reindeer"),
-            ":Horse",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Horse", ":reference", "* Trot: 10mph / 16kph (Cataphracts)\n* Canter 12mph / 19kph (Heavy Cavalry, Cataphracts Charge)\n* Gallop 20mph / 32kph (Light Cavalry, Heavy Cavalry Charge)\n* Gallop 25mph / 40kph (1km burst)\n* The U.S. Calvary in 1941 recommended that the collective weight of rider and gear not exceed 20% of the total weight of the horse.", ":titles", "Charger, Courser, Draft, Maverick, Pony, Stallion, War Horse", ":speedland", "32kph", ":mass", "600kg")
+            "Horse: Draft",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Horse: Draft", ":mass", "800kg"),
+            "Horse: War",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Horse: War", ":reference", "* Trot: 10mph / 16kph (Cataphracts)\n* Canter 12mph / 19kph (Heavy Cavalry, Cataphracts Charge)\n* Gallop 20mph / 32kph (Light Cavalry, Heavy Cavalry Charge)\n* Gallop 25mph / 40kph (1km burst)\n* The U.S. Calvary in 1941 recommended that the collective weight of rider and gear not exceed 20% of the total weight of the horse.", ":titles", "Charger, Courser, Draft, Maverick, Pony, Stallion, War Horse", ":speedland", "32kph", ":mass", "600kg")
           )
         ),
         ":Marsupials",
@@ -3099,8 +3099,8 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Red Tide"),
             "Sea Serpent",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Sea Serpent"),
-            "Seahorse, Huge",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Seahorse, Huge"),
+            "Seahorse: Huge",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Seahorse: Huge"),
             "Shark, Megalodon",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shark, Megalodon")
           )

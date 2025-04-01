@@ -25,12 +25,12 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 36, ":tests", 104, ":total", 287), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 101), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 109, ":total", 293), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 106), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 287), 
-      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 96)
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 293), 
+      "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 97)
     )
     return output
   }
@@ -52,6 +52,7 @@ export default class nx_tactics_base_test {
           "card", 0,
           "cardback", 0,
           "cardimage", 0,
+          "cardimagelist", 0,
           "cardlist", 0,
           "cardmap", 0,
           "chapter", 0,
@@ -249,6 +250,9 @@ export default class nx_tactics_base_test {
           "abilitymap<-tactics-keys", 0,
           "bookmap<-booklist", 0,
           "cardimage<-card", 0,
+          "cardimage<-tactics-unitkey", 0,
+          "cardimagelist<-cardlist", 0,
+          "cardimagelist<-tactics-unitkeys", 0,
           "cardlist-copy<-card-num", 0,
           "cardmap-copy<-card-num", 0,
           "cardmap<-bookmap", 0,
@@ -331,6 +335,8 @@ export default class nx_tactics_base_test {
           "unitmap<-unitlist", 0,
           "unitpower<-tactics-key-lvl-abilities", 0,
           "unitpower<-tactics-key-lvl-abilities-items", 0,
+          "unitpower<-tactics-key-lvl-intensity-abilities", 0,
+          "unitpower<-tactics-key-lvl-intensity-abilities-items", 0,
           "unitpowermap<-unitpowerlist", 0,
           "unitskill<-tactics-key-lvl-abilities", 0,
           "unitskill<-tactics-key-lvl-abilities-items", 0,

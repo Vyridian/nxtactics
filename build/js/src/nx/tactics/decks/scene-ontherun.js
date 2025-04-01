@@ -42,7 +42,7 @@ export default class nx_tactics_decks_scene_ontherun {
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
-          nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Flint Stone", "Knife: Dagger", "Mushrooms", "Pond Water", "Raspberries", "Torch", "Wild Onions", "Wild Yams")
+          nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife: Dagger", "Mushrooms", "Onions: Wild", "Raspberries", "Stone: Flint", "Torch", "Water: Pond", "Yams: Wild")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_power, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_powerlist},
@@ -50,11 +50,11 @@ export default class nx_tactics_decks_scene_ontherun {
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Temperature", "Clouds", "Humidity", "Wind", "Exposure", "Hunger", "Thirst", "Poisoned")
+          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Weather: Temperature", "Weather: Clouds", "Weather: Humidity", "Weather: Wind", "Exposure", "Hunger", "Thirst", "Poisoned")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
-          nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Brambles", "Cliff", "Forest", "Lake", "Marsh", "Mudslide", "Pond", "River", "Rockslide", "Stream")
+          nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Brambles", "Chasm", "Cliff", "Marsh", "Mudslide", "Pit", "Pond", "River", "Rock", "Rockslide", "Stream")
         )
       )
     )
