@@ -75,7 +75,7 @@ export default class nx_tactics_decks_scene_murintrail {
               ),
               vx_core.f_list_from_list(
                 {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
-                nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave Mouth", "Dirt Path", "Farmhouse", "Guardpost", "Hall: Wooden", "Horse Stables", "Mill", "Road: Gravel", "Road: Stone", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Tavern Stairs", "Temple", "Trading Post")
+                nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Farmhouse", "Guardpost", "Hall: Wooden", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Stables", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Tavern Stairs", "Temple", "Trading Post")
               )
             )
           )

@@ -15,17 +15,14 @@
    :name "Campsite"
    :image "images/cards/place-campsite.svg")
   (base/place
-   :name "Cave Mouth"
-   :image "images/cards/place-cavemouth.svg")
+   :name "Cave"
+   :image "images/cards/place-cave.svg")
   (base/place
    :name "Chasm"
    :image "images/cards/place-chasm.svg")
   (base/place
    :name "Cliff"
    :image "images/cards/place-cliff.svg")
-  (base/place
-   :name "Dirt Path"
-   :image "images/cards/place-dirtpath.svg")
   (base/place
    :name "Farmhouse"
    :image "images/cards/place-farmhouse.svg")
@@ -42,9 +39,6 @@
    :name "Hall: Wooden"
    :image "images/cards/place-hall-wooden.svg")
   (base/place
-   :name "Horse Stables"
-   :image "images/cards/place-horsestables.svg")
-  (base/place
    :name "Lake"
    :image "images/cards/place-lake.svg")
   (base/place
@@ -59,6 +53,9 @@
   (base/place
    :name "Mudslide"
    :image "images/cards/place-mudslide.svg")
+  (base/place
+   :name "Path: Dirt"
+   :image "images/cards/place-path-dirt.svg")
   (base/place
    :name "Pit"
    :image "images/cards/place-pit.svg")
@@ -80,6 +77,14 @@
   (base/place
    :name "Rockslide"
    :image "images/cards/place-rockslide.svg")
+  (base/place
+   :name "Snow"
+   :image "images/cards/place-snow.svg"
+   :summary
+    "* Depth: Each token on Snow is 5cm/2in of snow. Move:-1/depth")
+  (base/place
+   :name "Stables"
+   :image "images/cards/place-horsestables.svg")
   (base/place
    :name "Stream"
    :image "images/cards/place-stream.svg")

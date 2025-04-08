@@ -190,6 +190,12 @@
    :body "2x0"
    :mass "2kg/4.4lb")
   (base/item
+   :name "Improvised Weapon"
+   :summary
+    "* Any item can be a weapon.
+     * [Melee] or [Close Combat]: vs [Body]
+     * [Damage]: [Body] Damage Types based on item.")
+  (base/item
    :name "Jerry Can"
    :image "images/cards/item-jerrycan.svg")
   (base/item

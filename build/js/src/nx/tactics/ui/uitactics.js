@@ -166,7 +166,15 @@ export default class nx_tactics_ui_uitactics {
               vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
                 const card = vx_core.f_any_from_any({"any-1": nx_tactics_base.t_card, "any-2": vx_core.t_any}, value)
                 const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":summary")
-                return summary
+                const summaryout = vx_core.f_if_2(
+                  {"any-1": vx_core.t_string},
+                  vx_core.f_then(
+                    vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(summary, ":image")}),
+                    vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return ""})
+                  ),
+                  vx_core.f_else(vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return summary}))
+                )
+                return summaryout
               })
             )})
           )
@@ -1952,6 +1960,7 @@ export default class nx_tactics_ui_uitactics {
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
         const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":id")
         const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
+        const summary = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":summary")
         const datatype = vx_core.f_type_from_any(card)
         const style_display = vx_core.f_if_2(
           {"any-1": vx_ui_ui.t_style},
@@ -2019,6 +2028,12 @@ export default class nx_tactics_ui_uitactics {
           ),
           vx_core.f_then(
             vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(name, "Conflict Back")}),
+            vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
+              vx_ui_ui.t_ui
+            )})
+          ),
+          vx_core.f_then(
+            vx_core.f_new_from_type(vx_core.t_boolean_from_func, () => {return vx_core.f_eq(summary, ":image")}),
             vx_core.f_new_from_type(vx_core.t_any_from_func, () => {return vx_core.f_empty(
               vx_ui_ui.t_ui
             )})

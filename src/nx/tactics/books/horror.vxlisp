@@ -9,7 +9,7 @@
   :chaptermap
    (base/chaptermap
     "Horror Overview" (chapter_horror_overview)
-    "Call of Cthulhu" (chapter_call_of_cthulhu)
+    "Call of Cthulhu" (chapter_call_of_cthulhu tactics)
     "Kingdom of the Gods" (chapter_kingdom_of_the_gods)
     "Night of the Living Dead" (chapter_night_of_the_living_dead)
     "Serial Killers" (chapter_serial_killers)
@@ -26,6 +26,7 @@
       :name "Why Tactics: Horror?"))))
 
 (func chapter_call_of_cthulhu : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Call of Cthulhu"
   :reference
@@ -246,19 +247,19 @@
      (section
       :name "Mythos Independent Races"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Colour Out of Space"
-         (unit
+         (base/unit
           :name "Colour Out of Space"
           :image "Cthulhu/ColourOutOfSpace.png"
           :reference
            "In terms of matter I suppose the thing Ammi described would be called a gas, but this gas obeyed the laws that are not of our cosmos ... This was no breath from the skies whose motions and dimensions our astronomers measure or deem too vast to measure. It was just a colour out of space - a frightful messenger from unformed realms of infinity beyond all Nature as we know it. - The Colour Out of Space")
         :Cthonian
-         (unit
+         (base/unit
           :name "Cthonian"
           :image "Cthulhu/Cthonian.png")
         "Elder Thing"
-         (unit
+         (base/unit
           :name "Elder Thing"
           :image "Cthulhu/ElderThing.png"
           :reference
@@ -266,7 +267,7 @@
           :summary
            "* Their metabolism is based on carbon dioxide instead of oxygen; their blood is dark green in color. The nervous system of the Elder Things is quite complex, with five-lobed brains and many ganglial centers. The prismatic cilia on top of the creatures' head suggest that they have senses other than sight, smell, touch, hearing, and taste. Elder Things reproduce through spores. They can derive nourishment from inorganic substances, but prefer to feed on organic life.")
         "Flying Polyp"
-         (unit
+         (base/unit
           :name "Flying Polyp"
           :summary
            "* The flying polyps came to Earth from space as conquerors about 750 million years ago. They built basalt cities with high windowless towers. When they attempted to colonize the oceans, the polyps were driven back by the Elder Things. Thereafter, they restricted their habitats to the surface world.
@@ -275,11 +276,11 @@
            * When the Great Race of Yith came to Earth, they warred with the polyps and soon drove them underground with their advanced technology. The Great Race then sealed the entryways to the polyps' subterranean abode with trapdoors, which afterwards were diligently guarded. The polyps' cities were left abandoned, perhaps as a reminder of the horrors that dwelt below.
            * Eventually, the polyps rose up and almost exterminated the Great Race, afterwards returning to their subterranean haunts. Having no conception of light, the polyps seem content to remain there, annihilating the few intruders that chance upon them. The entrances to their dwellings are mostly deep within ancient ruins where there are great wells sealed over with stone.")
         "Great Race of Yith"
-         (unit
+         (base/unit
           :name "Great Race of Yith"
           :image "Cthulhu/GreatRaceOfYith.png")
         "Hound of Tindalos"
-         (unit
+         (base/unit
           :name "Hound of Tindalos"
           :image "Cthulhu/HoundOfTindalos.png"
           :reference
@@ -290,11 +291,11 @@
            * Though the Hounds are sometimes pictured as canine, it is not likely that they appear as such. Their name refers more to the creatures' habits than their appearance.
            * Because of their relationship with the angles of time, they can materialize through any corner if it is fairly sharp—120 degress or less. When a Hound is about to appear, it materializes first as smoke pouring from the corner, and finally the head emerges followed by the body. It is said that once a human becomes known to one of these creatures, a Hound of Tindalos will pursue the victim through anything to reach its quarry. A person risks attracting their attention by travelling through time.")
         "Hunting Horror"
-         (unit
+         (base/unit
           :name "Hunting Horror"
           :image "Cthulhu/HuntingHorror.png")
         :Mi-Go
-         (unit
+         (base/unit
           :name "Mi-Go"
           :image "Cthulhu/MiGo.png"
           :reference "* Fact: Migoi or Mi-go (pronounced mey-goo) is a Tibetan name for the Yeti and translates as 'wild man'."
@@ -307,7 +308,7 @@
            * The Mi-Go are advanced in the sphere of surgery. With surgical alterations the Mi-Go are able to speak human languages, though their voice is buzzy and irritating. They can also surgically move the brain of other species into metal cylinders for transportation to other worlds through space."
           :titles "Fungi from Yuggoth")
         :Shoggoth
-         (unit
+         (base/unit
           :name "Shoggoth"
           :image "Cthulhu/Shoggoth.png"
           :reference
@@ -316,45 +317,45 @@
      (section
       :name "Mythos Servitor Races"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Dark Young of Shub-Niggurath"
-         (unit
+         (base/unit
           :name "Dark Young of Shub-Niggurath"
           :image "Cthulhu/DarkYoung.png"
           :reference
            "Something black in the road, something that wasn't a tree. Something big and black and ropy, just squatting there, waiting, with ropy arms squirming and reaching ... It came crawling up the hillside ... and it was the black thing of my dreams ... that black, ropy, slime jelly tree-thing out of the woods. It crawled up and it flowed up on its hoofs and mouths and snaky arms.")
         :Nightgaunt
-         (unit
+         (base/unit
           :name "Nightgaunt"
           :image "Cthulhu/Nightgaunt.png"
           :reference
            "Shocking and uncouth black beings with smooth, oily, whale-like surfaces, unpleasant horns that curved inward toward each other, bat-wings whose beating made no sound, ugly prehensile paws, and barbed tails that lashed needlessly and disquietingly. And worst of all, they never spoke or laughed, and never smiled because they had no faces at all to smile with, but only a suggestive blankness where a face ought to be. All they ever did was clutch and fly and tickle; that was the way of night-gaunts. - The Dream-Quest of Unknown Kadath")
         "Seed of Azathoth"
-         (unit
+         (base/unit
           :name "Seed of Azathoth"
           :summary
            "* While the [Spawn of Azathoth] are the size of dwarf stars, the seeds of Azathoth are the size of small comets. They are periodically cast off from Spawns during major upheavals or impacts with other bodies. The Seeds do not direct themselves through space, but if one impacts a planetary body, it slowly burns its way to the core where it grows over millenia. Eventually, it matures to a full [Spawn of Azathoth] and shatters what remains of the planet into rubble.")
         "Spawn of Azathoth"
-         (unit
+         (base/unit
           :name "Spawn of Azathoth"
           :summary
            "* The massive Other God Azathoth mindlessly casts off small parts of itself, the Spawn of Azathoth. Though small compared to Azathoth, these bodies are the size of small, brown dwarf stars. From Azathoth, they hurtle through time and space forever. Sometimes they pass near ordinary stellar systems and wreak havoc, colliding with worlds or suns, causing gravitational catastrophes, or raining its seeds ([Seed of Azathoth]) upon them."
           :titles "Nemesis")
         "Spawn of Cthulhu"
-         (unit
+         (base/unit
           :name "Spawn of Cthulhu"
           :image "Cthulhu/SpawnOfCthulhu.png")))
     "Elder Gods"
      (section
       :name "Elder Gods"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Nodens
-         (unit
+         (base/unit
           :name "Nodens"
           :image "Cthulhu/Nodens.png")
         :Yibb-Tstll
-         (unit
+         (base/unit
           :name "Yibb-Tstll"
           :image "Cthulhu/Yibb-Tstll.jpg"
           :summary
@@ -369,28 +370,28 @@
       :reference
        "Behind the Veil what gulfs of Time and Space? What blinking mowing Shapes to blast the sight? I shrink before a vague colossal Face...Born in the mad immensities of Night. - Robert E. Howard, An Open Window"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Dagon
-         (unit
+         (base/unit
           :name "Dagon"
           :image "Cthulhu/Dagon.png"
           :reference "* I cannot think of the deep sea without shuddering at the nameless things that may at this very moment be crawling and floundering on its slimy bed, worshipping their ancient stone idols and carving their own detestable likenesses on submarine obelisks of water-soaked granite. I dream of a day when they may rise above the billows to drag down in their reeking talons the remnants of puny, war-exhausted mankind—of a day when the land shall sink, and the dark ocean floor shall ascend amidst universal pandemonium. - Dagon")
         "Hastur the Unspeakable"
-         (unit
+         (base/unit
           :name "Hastur the Unspeakable"
           :image "Cthulhu/Hastur.png"
           :titles "The King in Yellow")
         "Ithaqua the Windwalker"
-         (unit
+         (base/unit
           :name "Ithaqua the Windwalker"
           :image "Cthulhu/Ithaqua.png")))
     "Other Gods"
      (section
       :name "Other Gods"
       :unitmap
-       (unitmap
+       (base/unitmap
         :Azathoth
-         (unit
+         (base/unit
           :name "Azathoth"
           :image "Cthulhu/Azathoth.png"
           :reference
@@ -399,12 +400,12 @@
            "* At the center of the universe, deep within a self-created abyss past time and space, dwells the blind idiot god Azathoth."
           :titles "Daemon Sultan, The Blind, Idiot God")
         :Cthulhu
-         (unit
+         (base/unit
           :name "Cthulhu"
           :image "Cthulhu/Cthulhu.png"
           :reference "Cthulhu is eponymous with the mythos. Cthulhu is not oblivious or indifferent to mankind. He isn't even malevolent. He is Lovecraft's simple promise of evanescence. Nothing belongs to man. Not this world, not the home they've built on it, not even the human mind. It is the ultimate destiny of this species to unravel into primal chaos, as all things must. To the sounds of their laughter and exultant shouts, all man has ever built will one day fade away. - Tale Foundry")
         :Nyarlathotep
-         (unit
+         (base/unit
           :name "Nyarlathotep"
           :image "Cthulhu/Nyarlathotep.png"
           :reference
@@ -412,15 +413,11 @@
           :summary
            "* Like the other Other Gods, Nyarlathotep is a primal being of unimaginable power. Unlike the others, however, his power is knowledge and Nyarlathotep may be a creature entirely of the mind. Though he typically appears as a man, he has innumerable other forms and may be able to appear in any form he wishes. He seens to specifically target and toy with humanity by offering dangerous knowledge and observing the results. This is probably an overly simplistic view of his actions. Like the other Other Gods, he is too grand a figure to care about humanity. More likely, he acts like Yog-Sothoth and simply appears as an avatar and provides Knowledge to those who seek him without regard to what we do with it. In this way, Nyarlathotep is like Prometheus providing fire to humanity. It is possible that Nyarlathotep is constantly offering knowledge, but we are generally unable to recognize it. Perhaps Nyarlathotep is the Muse behind all discoveries."
           :titles "The Crawling Chaos")
-        :Shub-Niggurath
-         (unit
-          :name "Shub-Niggurath"
-          :image "Cthulhu/ShubNiggurath.png"
-          :reference
-           "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry"
-          :titles "The Black Goat of the Woods with a Thousand Young")
+        "Shub-Niggurath"
+         (base/unit<-tactics-key
+          tactics "Shub-Niggurath")
         :Yog-Sothoth
-         (unit
+         (base/unit
           :name "Yog-Sothoth"
           :image "Cthulhu/YogSothoth.png"
           :reference
@@ -720,7 +717,7 @@
                  (scene
                   :name "Journey to the Stony Desert"
                   :summary
-                   "* The Underworld - The ghoul tunnel leads to the Underworld. Once in the Underworld, the tunnel leads upward for 3 days through the center of a huge mountain. Many ohter tunnels branch off, but the ghouls seem to know their way. Drinking water oozes down the rock wall. Bloated fungi, pale, foot-long crickets, and eyeless carnivorous rats server as food. Most of the trip is in complete darkness. Occasionally, luminescent fungi provide a tiny amount of light. The tunnels connect the Vaults of Zin where dangerous ghasts, serpent folk, or worse may be encountered. Eventually, the group exits the Underworld at the border of the [Stony Desert].
+                   "* The Underworld - The ghoul tunnel leads to the Underworld. Once in the Underworld, the tunnel leads upward for 3 days through the center of a huge mountain. Many ohter tunnels branch off, but the ghouls seem to know their way. Drinking water oozes down the rock wall. Bloated fungi, pale, foot-long crickets, and eyeless carnivorous rats server as food. Most of the trip is in complete darkness. Occasionally, luminescent fungi provide a tiny amount of light. The tunnels connect the Vaults of Zin where dangerous ghasts, Serpent People, or worse may be encountered. Eventually, the group exits the Underworld at the border of the [Stony Desert].
                    * [Stony Desert] - Grath says the journey eastward across the desert will only take a few days. They seek the sacred mountain [Mt. Hatheg-Kla] where a holy man can tell them where fair Horella can be found.
                    * Walker of the Stony Desert - A few days journey into the desert, the dreamers see, off in the distance, a man leading a horse. They will meet in about an hour. As they draw near, it is clear that the man is enormous, towering over the horse. He is 8 feet tall, 400 lbs, and dressed all in black. His horse seems old and tired and lags behind being pulled by a rope. The horse is an elderly nag with cataract films covering both eyes. The ghouls are terrified of the man and will not approach. He does not stop walking unless he is attacked. This being is the dream-form of Eibon, the Hyperborean wizard who, like the spell he cast to capture Eibon is bound to travel back and forth across the Stony Desert. A legend says that one day he shall find a way out of the desert. On that day, the horse shall be healthy and the man shall then ride the horse. Where he goes then, he does not know for the horse shall be the master. He freely discusses his trip across the desert, Mythos knowledge, Nemesis, and his spell the Web of Eibon that Yibb-Tstl taught him. He now knows that stagnation is worse than destruction by Nemesis. If asked about Nemesis, he produces a large, shining jewel from the air and offers it to the dreamers. He says simply that all brave souls will know what to do when the time comes. Any attempt to attack Eibon results in him disappearing and reappearing far in the distance continuing his endless travels.")
                 "The Man on the Mountain"
@@ -766,20 +763,20 @@
                     * Gateway - The gateway can be reached by a ramp that slopes upward 50 meters. Stars can clearly be seen through the opening, and it is clear that the gate leads directly into outer space. Anyone who has been exposed to the Seed radiance, has an intense desire to go through the gate and join Nemesis. Anyone approaching the gate will need ropes or climbing skill to cling to the reliefs on the floor or be sucked into oblivion. Also, the jewel gains weight as it approaches the gate, as if it is resisting, eventually becoming over 100lbs. If someone can get close or has binoculars, that person will see that the area of space beyond the portal is filled with criss-crossing black lines forming a faint web. Someone may recognize the black substance and The Black associated with Yibb-Tsll. This is Eibon's Web taught to him by Yibb-Tsll. Within the web, an observers intuitively senses that time is slowing to a crawl. Further, the web is creeping through the portal into our world. This is how mad Eibon hoped to save mankind, by freezing us forever in time, so Nemesis can never destroy us.
                     * The End - If the jewel is brought near the gate, in addition to its increased weight, the Black lines start to reach toward the jewel. Simply hurling the jewel through the portal will gather all the webs onto the jewel which breaks the spell of Eibon. If anyone returns to the Stony Desert, they will no longer find Eibon there. The world will no longer be trapped forever in frozen time, but Nemesis will still return some day to end the world, but it will not be today."))))
           :unitmap
-           (unitmap
+           (base/unitmap
             "Julian Baxter"
-             (unit
+             (base/unit
               :name "Julian Baxter"
               :summary
                "* Julian Baxter is a priest and brother of Phillip Baxter. He is confined to a wheelchair and is heavily dependent on his son Matthew. Before becoming a priest, Julian was educated as a psychotherapist. He has traveled the world on missions, but since becoming crippled he has returned to his home town.
                 * Julian has a copy of the Book of Eibon in his library. It has a section where Eibon fortells the end of mankind with the coming of Nemesis. Eibon was obcessed with preventing man's destruction and spent the rest of his life developing a ritual call the Web of Fate that would supposedly save mankind when the time was right. Eibon claims that as Nemesis approaches, the Web of Fate will draw together seemingly unrelated events, defeat Nemesis, and create an eternal golden age for mankind. The reading clearly shows Eibon's progressive descent into madness.")
             "Matthew Baxter"
-             (unit
+             (base/unit
               :name "Matthew Baxter"
               :summary
                "* Matthew is the adopted, grown son of Julian Baxter. He is strong, but he is also mute and aeuteistic. This combination makes him appear simple, but he is actually quite competent. He is an avid dreamer where there is no trace of his aeutism. In dreams he is a city council member in Ultar. He can be a strong ally, but he must be approached in the Dreamlands, as it is impossible to gain his friendship in the real world.")
             "Silas Patterson"
-             (unit
+             (base/unit
               :name "Silas Patterson"
               :summary
                "* Silas is a friend of both Phillip and Julian Baxter, a past professor at Brown University, a former antrhopologist, and a member of the Tuesday Night Academy. He is quite fit considering his age.
@@ -809,9 +806,9 @@
             * Pack - The worms are a colony creature and are aware of nearby worms in infected creatures. They, therefore, do not attack other infecteds and tend to collect together in groups.
             * Intelligence Level - Though they are savagely murderous and largely fearless, they do retain an animalistic survival instinct and take shelter and avoid fire and heat which would kill their worms."))
       :unitmap
-       (unitmap
+       (base/unitmap
         "Kingdom Ghoul"
-         (unit
+         (base/unit
           :name "Kingdom Ghoul"
           :summary
            "* Strengths:
@@ -840,9 +837,9 @@
      (section
       :name "Freaks"
       :unitmap
-       (unitmap
+       (base/unitmap
         "Backwoods Crazies"
-         (unit
+         (base/unit
           :name "Backwoods Crazies"
           :reference "* Deliverance, Hills Have Eyes, Texas Chainsaw Massacre")))
     "Unstoppable Killer"

@@ -1778,6 +1778,7 @@ export default class nx_tactics_books_science_fiction {
 
   /**
    * @function chapter_star_wars
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_star_wars = {
@@ -1788,7 +1789,7 @@ export default class nx_tactics_books_science_fiction {
   }
 
   // (func chapter_star_wars)
-  static f_chapter_star_wars() {
+  static f_chapter_star_wars(tactics) {
     let output = nx_tactics_base.e_chapter
     vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1816,7 +1817,7 @@ export default class nx_tactics_books_science_fiction {
             "Ion Cannon",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Ion Cannon"),
             ":Lightsaber",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lightsaber", ":image", "StarWars/Lightsaber.png", ":reference", "This is the weapon of a Jedi Knight.  Not as clumsy or as random as a blaster.  An elegant weapon for a more\ncivilized age. - Ben Kenobi, Star Wars", ":summary", "It is a blade of pure plasma energy suspended in a force containment field that keeps individuals from feeling\nthe plasma's heat.  Other Electromagnetic energy fields and coherent energy are repelled by lightsabers' arcs.\nThese include most force fields, blaster bolts, and other lightsaber blades."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Lightsaber", ":image", "StarWars/Lightsaber.png", ":reference", "This is the weapon of a Jedi Knight. Not as clumsy or as random as a blaster. An elegant weapon for a more civilized age. - Ben Kenobi, Star Wars", ":summary", "It is a blade of pure plasma energy suspended in a force containment field that keeps individuals from feeling the plasma's heat. Other Electromagnetic energy fields and coherent energy are repelled by lightsabers' arcs. These include most force fields, blaster bolts, and other lightsaber blades."),
             ":Turbolaser",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Turbolaser", ":summary", "1kton TNT", ":energy", "4TJ"),
             "Turbolaser Turret",
@@ -1832,7 +1833,7 @@ export default class nx_tactics_books_science_fiction {
             "Shield Generator",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Shield Generator", ":image", "StarWars/ShieldGenerator.jpg"),
             ":Superlaser",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Superlaser", ":image", "StarWars/DeathStarSuperlaser.jpg", ":reference", "The most basic consideration pointing towards some kind of superphysics is the magnitude of the device's energy\noutput.  The minimum necessary magitude of the blast that shattered Alderaan is roughly ten thousand times what\nwould be released if the entire mass of the battle station's machinery was annihilated with an equivalent\namount of antimatter. - http://www.theforce.net/swtc/ds/index.html", ":energy", "1x10^32J")
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Superlaser", ":image", "StarWars/DeathStarSuperlaser.jpg", ":reference", "The most basic consideration pointing towards some kind of superphysics is the magnitude of the device's energy output. The minimum necessary magitude of the blast that shattered Alderaan is roughly ten thousand times what would be released if the entire mass of the battle station's machinery was annihilated with an equivalent amount of antimatter. - http://www.theforce.net/swtc/ds/index.html", ":energy", "1x10^32J")
           )
         ),
         "Star Wars Droids",
@@ -2329,7 +2330,7 @@ export default class nx_tactics_books_science_fiction {
               ":image",
               "StarWars/Imperial_DeathStar.png",
               ":reference",
-              "* The regional governors now have direct control over their territories.  Fear will keep the local systems in\nline. Fear of this battle station. - Grand Moff Tarkin, Star Wars",
+              "* The regional governors now have direct control over their territories.  Fear will keep the local systems in line. Fear of this battle station. - Grand Moff Tarkin, Star Wars",
               ":classification",
               "Hvy. Spacecraft",
               ":crew",
@@ -2402,7 +2403,7 @@ export default class nx_tactics_books_science_fiction {
               )
             ),
             "Imperial Governor",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Imperial Governor", ":image", "StarWars/Imperial_Governor.png", ":reference", "Governor Tarkin, I should have expected to find you holding Vader's leash.  I recognized your foul stench when\nI was brought on board. - Princess Leia, Star Wars", ":titles", "Grand Moff Tarkin"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Imperial Governor", ":image", "StarWars/Imperial_Governor.png", ":reference", "Governor Tarkin, I should have expected to find you holding Vader's leash.  I recognized your foul stench when I was brought on board. - Princess Leia, Star Wars", ":titles", "Grand Moff Tarkin"),
             "Imperial Stormtrooper",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -2435,15 +2436,7 @@ export default class nx_tactics_books_science_fiction {
           ":name",
           "Star Wars Independents",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Boba Fett",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Boba Fett", ":image", "StarWars/Independent_BobaFett.png", ":reference", "* There will be a substantial reward for the one who finds the Millenium\nFalcon. You are free to use any methods necessary, but I want them alive. No\ndisintegrations... As you wish. - Darth Vader and Boba Fett - Empire Strikes\nBack"),
-            "Jabba the Hutt",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jabba the Hutt", ":image", "StarWars/Independent_JabbaTheHutt.png"),
-            "Slave 1",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slave 1", ":image", "StarWars/Independent_Slave1.png", ":titles", "Firespray-31", ":classification", "Med. Spacecraft")
-          )
+          nx_tactics_base.f_unitmap_from_tactics_keys(tactics, "Boba Fett", "Bossk", "Jabba the Hutt", "Slave 1")
         ),
         "Star Wars Rebel Vehicles",
         vx_core.f_new(
@@ -2969,7 +2962,7 @@ export default class nx_tactics_books_science_fiction {
         "Star Trek",
         nx_tactics_books_science_fiction.f_chapter_star_trek(),
         "Star Wars",
-        nx_tactics_books_science_fiction.f_chapter_star_wars(),
+        nx_tactics_books_science_fiction.f_chapter_star_wars(tactics),
         "Time Travellers",
         nx_tactics_books_science_fiction.f_chapter_time_travellers(),
         "Unique Aliens",

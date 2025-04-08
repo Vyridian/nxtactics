@@ -55,7 +55,7 @@ export default class nx_tactics_decks_unit {
         ":name",
         "American Frigate",
         ":image",
-        "images/age-of-sail/AmericanFrigate.png",
+        "images/ageofsail/american-frigate.png",
         ":titles",
         "USS Constitution, Old Ironsides",
         ":speedwater",
@@ -95,6 +95,8 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Boba Fett", ":image", "images/starwars/unit-bobafett.png", ":reference", "* Vader: There will be a substantial reward for the one who finds the Millenium Falcon. You are free to use any methods necessary, but I want them alive. No disintegrations. Boba:As you wish. - Darth Vader and Boba Fett - Empire Strikes Back"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Bossk", ":image", "images/starwars/unit-bossk.png", ":titles", "Bossk'wassak'Cradossk", ":reference", "* We live and die as the Scorekeeper wills--and I am favored over my enemies by the great goddess. - Bossk", ":summary", "A male Trandoshan bounty hunter and the son of Cradossk who was known for hunting Wookiees. During the Clone Wars, Bossk worked alongside fellow hunters Aurra Sing and Castas to mentor the orphaned Boba Fett. Their scheme to kill Fett's hated enemy, the Jedi Master Mace Windu, resulted in Fett and Bossk's arrest."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Butterfly: Giant"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Caterpillar: Giant"),
       vx_core.f_new(
@@ -148,6 +150,12 @@ export default class nx_tactics_decks_unit {
             "Tradeskills",
             1,
             vx_core.f_new({"any-1": vx_core.t_stringlist}, "House Painting")
+          ),
+          nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+            tactics,
+            "Communications",
+            1,
+            vx_core.f_new({"any-1": vx_core.t_stringlist}, "Elvish")
           )
         )
       ),
@@ -183,6 +191,9 @@ export default class nx_tactics_decks_unit {
         ":nature",
         "Skitish"
       ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jabba the Hutt", ":image", "images/starwars/unit-jabbathehutt.png"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Shub-Niggurath", ":image", "cthulhu/shubniggurath.png", ":reference", "Imagine a roiling, miasmic mass of twisting tendrils and drooling mouths, so tenuous in composition that its limbs vanish as quickly as they materialize, its very form dividing constantly into a surplus of smaller abominations that are either reabsorbed into its great form, or that escape to some hideous life elsewhere. Not the spitting image of a fertility goddess but this is as close as the mythos gets. Shub-Niggurath may well be the most widely revered amoung the other gods, infuence reaching not only to the Greeks, Cretans, Egyptions, and some druids, but to races so far-flung across the cosmos as the Mi-go of Yuggoth, and the Dhole and Nug-Soth of Yaddith. ... Usually the creation of new life, especially intelligent life, is held as a sacred act. Many humans derive joy and self-import from the notion that their kind was toild over by some kind of divine intelligence. Shub-Niggurath with her blind, indifferent, prolific procreation, undermines this idea. ... Shub-Niggurath was Lovecraft's affirmation that life itself is nothing extrodinary. - Tale Foundry", ":titles", "The Black Goat of the Woods with a Thousand Young", ":summary", "* Mother's Gift - The milk of Shub-Niggurath with powerful healing and corrupting properties."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slave 1", ":image", "images/starwars/unit-slave1.png", ":titles", "Firespray-31", ":classification", "Med. Spacecraft"),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_unit},
         ":name",

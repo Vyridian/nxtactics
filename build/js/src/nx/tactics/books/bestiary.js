@@ -8,6 +8,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_amphibians
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_amphibians = {
@@ -18,7 +19,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_amphibians)
-  static f_chapter_amphibians() {
+  static f_chapter_amphibians(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -66,6 +67,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_arthropods
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_arthropods = {
@@ -76,7 +78,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_arthropods)
-  static f_chapter_arthropods() {
+  static f_chapter_arthropods(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -260,6 +262,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_avians
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_avians = {
@@ -270,7 +273,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_avians)
-  static f_chapter_avians() {
+  static f_chapter_avians(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -340,6 +343,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_beastmen
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_beastmen = {
@@ -350,7 +354,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_beastmen)
-  static f_chapter_beastmen() {
+  static f_chapter_beastmen(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -598,7 +602,9 @@ export default class nx_tactics_books_bestiary {
             "Jaka Manhunter",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Jaka Manhunter", ":summary", "* The Jaka are a race of intelligent man-like beings with features resembling a cross between man, wolf, and panther. They are a striking people with sleek black fur and yellow/green eyes.\n* Personality - The Jaka are solitary beings, sullen and introspective in nature. They have been known to become steadfast companions to those they trust, but have also been known to become cold-blooded killers to those who cross them.\n* Lifestyle - They are cunning and have excellent senses, so they make are superb hunters. They typically live off the land but also trade their extra hides and animal parts for useful gear. Some have extended their tracking and hunting skills to become bounty hunters: tracking and capturing fugitives from justice and living off the bounty.")
           )
-        )
+        ),
+        "Valusian",
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Valusian", ":summary", "", ":titles", "Dragon Kings, Serpent People")
       )
     )
     return output
@@ -606,6 +612,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_bestiary_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_bestiary_overview = {
@@ -616,7 +623,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_bestiary_overview)
-  static f_chapter_bestiary_overview() {
+  static f_chapter_bestiary_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -634,6 +641,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_constructs
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_constructs = {
@@ -644,7 +652,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_constructs)
-  static f_chapter_constructs() {
+  static f_chapter_constructs(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -822,6 +830,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_darkling
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_darkling = {
@@ -832,7 +841,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_darkling)
-  static f_chapter_darkling() {
+  static f_chapter_darkling(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1280,7 +1289,7 @@ export default class nx_tactics_books_bestiary {
             "Uruk Raider",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Uruk Raider"),
             "Uruk Shaman",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Uruk Shaman", ":summary", "* Uruk Shamans teach that everything the Uruks once had was stolen by the other races, and urges them on\nto ever-greater acts of violence and revenge."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Uruk Shaman", ":summary", "* Uruk Shamans teach that everything the Uruks once had was stolen by the other races, and urges them on to ever-greater acts of violence and revenge."),
             "Uruk Taskmaster",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Uruk Taskmaster"),
             "Uruk Veteran",
@@ -1310,6 +1319,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_dragons
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_dragons = {
@@ -1320,7 +1330,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_dragons)
-  static f_chapter_dragons() {
+  static f_chapter_dragons(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1444,6 +1454,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_elementals
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_elementals = {
@@ -1454,7 +1465,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_elementals)
-  static f_chapter_elementals() {
+  static f_chapter_elementals(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1628,6 +1639,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_extra_dimensional
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_extra_dimensional = {
@@ -1638,7 +1650,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_extra-dimensional)
-  static f_chapter_extra_dimensional() {
+  static f_chapter_extra_dimensional(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1978,6 +1990,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_giant_races
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_giant_races = {
@@ -1988,7 +2001,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_giant_races)
-  static f_chapter_giant_races() {
+  static f_chapter_giant_races(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2094,6 +2107,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_humanoids
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_humanoids = {
@@ -2104,7 +2118,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_humanoids)
-  static f_chapter_humanoids() {
+  static f_chapter_humanoids(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2134,6 +2148,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_humanoids_fantastic
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_humanoids_fantastic = {
@@ -2144,7 +2159,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_humanoids_fantastic)
-  static f_chapter_humanoids_fantastic() {
+  static f_chapter_humanoids_fantastic(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2536,6 +2551,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_mammals_marsupials
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_mammals_marsupials = {
@@ -2546,7 +2562,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_mammals_marsupials)
-  static f_chapter_mammals_marsupials() {
+  static f_chapter_mammals_marsupials(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2900,6 +2916,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_marine_creatures
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_marine_creatures = {
@@ -2910,7 +2927,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_marine_creatures)
-  static f_chapter_marine_creatures() {
+  static f_chapter_marine_creatures(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3112,6 +3129,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_microorganisms
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_microorganisms = {
@@ -3122,7 +3140,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_microorganisms)
-  static f_chapter_microorganisms() {
+  static f_chapter_microorganisms(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3176,6 +3194,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_mythical_beasts
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_mythical_beasts = {
@@ -3186,7 +3205,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_mythical_beasts)
-  static f_chapter_mythical_beasts() {
+  static f_chapter_mythical_beasts(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3366,6 +3385,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_plants
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_plants = {
@@ -3376,7 +3396,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_plants)
-  static f_chapter_plants() {
+  static f_chapter_plants(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3530,6 +3550,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_reptiles
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_reptiles = {
@@ -3540,7 +3561,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_reptiles)
-  static f_chapter_reptiles() {
+  static f_chapter_reptiles(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3651,14 +3672,14 @@ export default class nx_tactics_books_bestiary {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Crocodile, Giant"),
             "Desert Strider",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Desert Strider", ":summary", "* Striders are large bipedal desert creatures resembling a cross between a lizard and a flightless bird. Striders are perfectly acclimated to desert life. They can go for months without water, have protective lenses over their eyes, and actually process sunlight to supplement the insects and reptiles they normally consume. Conversely, they cannot survive outside a desert environment."),
-            "Lizard, Giant",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lizard, Giant"),
-            "Serpent, Great",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Serpent, Great"),
-            "Snake, Crypt Cobra",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake, Crypt Cobra"),
-            "Snake, Swaying Cobra",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake, Swaying Cobra", ":summary", "* This seemingly normal Cobra has the enhanced ability to hypnotise its victim.\n* Hypnotism - By slowly swaying back and forth and removing all hostile intent from its mind, the Cobra creates the illusion that it is peaceful and harmless. Its victim becomes enthralled and simply watches as the Cobra slowly advances. When the Cobra is face to face with its victim, it attacks with lightning speed to bite the face or throat to deposit its venom near the victim's brain.", ":titles", "Hypnotic Cobra"),
+            "Lizard: Giant",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Lizard: Giant"),
+            "Serpent: Great",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Serpent: Great"),
+            "Snake: Crypt Cobra",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Crypt Cobra"),
+            "Snake: Swaying Cobra",
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Snake: Swaying Cobra", ":summary", "* This seemingly normal Cobra has the enhanced ability to hypnotise its victim.\n* Hypnotism - By slowly swaying back and forth and removing all hostile intent from its mind, the Cobra creates the illusion that it is peaceful and harmless. Its victim becomes enthralled and simply watches as the Cobra slowly advances. When the Cobra is face to face with its victim, it attacks with lightning speed to bite the face or throat to deposit its venom near the victim's brain.", ":titles", "Hypnotic Cobra"),
             "Tortoise, Giant",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Tortoise, Giant")
           )
@@ -3670,6 +3691,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_shapeshifters
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_shapeshifters = {
@@ -3680,7 +3702,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_shapeshifters)
-  static f_chapter_shapeshifters() {
+  static f_chapter_shapeshifters(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3822,6 +3844,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_undead_creatures
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_undead_creatures = {
@@ -3832,7 +3855,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_undead_creatures)
-  static f_chapter_undead_creatures() {
+  static f_chapter_undead_creatures(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -3961,6 +3984,10 @@ export default class nx_tactics_books_bestiary {
               "Lich",
               ":image",
               "images/bestiary/Lich.png",
+              ":titles",
+              "Liche, Lych, Lyche, Lyke",
+              ":reference",
+              "* His eyes turn unshutting, unblinking... Thus have I beheld him for the space of a whole year and a month... And never have I discerned the least movement of his lips, nor any turning or tremor of his body. For these reasons, I deem that Malygris is dead, but by virtue of his supremacy in evil and in art magical, he sits defying the worm, still undecayed an incorrupt. And his monsters and familiars attend him still. - The Death of Malygris, Clark Ashton Smith",
               ":summary",
               "* A lich is a powerful animated corpse created by [Necromancy] through the use of [Lich Form]. The necromaner curses itself to a horrific undead existence in exchange for eternal 'life'. The lich retains most of the abilities of its former life and gains some additional undead powers as well.\n* Because of their solitary nature, a lich cannot gain social skills nor increase their existing skills. Further these skills have a tendency to degrade the longer the lich exists.",
               ":unitpowermap",
@@ -4487,6 +4514,7 @@ export default class nx_tactics_books_bestiary {
 
   /**
    * @function chapter_underground_creatures
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_underground_creatures = {
@@ -4497,7 +4525,7 @@ export default class nx_tactics_books_bestiary {
   }
 
   // (func chapter_underground_creatures)
-  static f_chapter_underground_creatures() {
+  static f_chapter_underground_creatures(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -4584,49 +4612,49 @@ export default class nx_tactics_books_bestiary {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_chaptermap},
         "Bestiary Overview",
-        nx_tactics_books_bestiary.f_chapter_bestiary_overview(),
+        nx_tactics_books_bestiary.f_chapter_bestiary_overview(tactics),
         "Amphibians",
-        nx_tactics_books_bestiary.f_chapter_amphibians(),
+        nx_tactics_books_bestiary.f_chapter_amphibians(tactics),
         "Arthropods",
-        nx_tactics_books_bestiary.f_chapter_arthropods(),
+        nx_tactics_books_bestiary.f_chapter_arthropods(tactics),
         "Avians",
-        nx_tactics_books_bestiary.f_chapter_avians(),
+        nx_tactics_books_bestiary.f_chapter_avians(tactics),
         "Mammals/Marsupials",
-        nx_tactics_books_bestiary.f_chapter_mammals_marsupials(),
+        nx_tactics_books_bestiary.f_chapter_mammals_marsupials(tactics),
         "Marine Creatures",
-        nx_tactics_books_bestiary.f_chapter_marine_creatures(),
+        nx_tactics_books_bestiary.f_chapter_marine_creatures(tactics),
         "Reptiles",
-        nx_tactics_books_bestiary.f_chapter_reptiles(),
+        nx_tactics_books_bestiary.f_chapter_reptiles(tactics),
         "Plants",
-        nx_tactics_books_bestiary.f_chapter_plants(),
+        nx_tactics_books_bestiary.f_chapter_plants(tactics),
         "Microorganisms",
-        nx_tactics_books_bestiary.f_chapter_microorganisms(),
+        nx_tactics_books_bestiary.f_chapter_microorganisms(tactics),
         "Underground Creatures",
-        nx_tactics_books_bestiary.f_chapter_underground_creatures(),
+        nx_tactics_books_bestiary.f_chapter_underground_creatures(tactics),
         "Humanoids",
-        nx_tactics_books_bestiary.f_chapter_humanoids(),
+        nx_tactics_books_bestiary.f_chapter_humanoids(tactics),
         "Humanoids, Fantastic",
-        nx_tactics_books_bestiary.f_chapter_humanoids_fantastic(),
+        nx_tactics_books_bestiary.f_chapter_humanoids_fantastic(tactics),
         "Beastmen",
-        nx_tactics_books_bestiary.f_chapter_beastmen(),
+        nx_tactics_books_bestiary.f_chapter_beastmen(tactics),
         "Constructs",
-        nx_tactics_books_bestiary.f_chapter_constructs(),
+        nx_tactics_books_bestiary.f_chapter_constructs(tactics),
         "Dragons",
-        nx_tactics_books_bestiary.f_chapter_dragons(),
+        nx_tactics_books_bestiary.f_chapter_dragons(tactics),
         "Elementals",
-        nx_tactics_books_bestiary.f_chapter_elementals(),
+        nx_tactics_books_bestiary.f_chapter_elementals(tactics),
         "Extra-Dimensional",
-        nx_tactics_books_bestiary.f_chapter_extra_dimensional(),
+        nx_tactics_books_bestiary.f_chapter_extra_dimensional(tactics),
         "Darkling",
-        nx_tactics_books_bestiary.f_chapter_darkling(),
+        nx_tactics_books_bestiary.f_chapter_darkling(tactics),
         "Giant Races",
-        nx_tactics_books_bestiary.f_chapter_giant_races(),
+        nx_tactics_books_bestiary.f_chapter_giant_races(tactics),
         "Mythical Beasts",
-        nx_tactics_books_bestiary.f_chapter_mythical_beasts(),
+        nx_tactics_books_bestiary.f_chapter_mythical_beasts(tactics),
         "Shapeshifters",
-        nx_tactics_books_bestiary.f_chapter_shapeshifters(),
+        nx_tactics_books_bestiary.f_chapter_shapeshifters(tactics),
         "Undead Creatures",
-        nx_tactics_books_bestiary.f_chapter_undead_creatures()
+        nx_tactics_books_bestiary.f_chapter_undead_creatures(tactics)
       )
     )
     return output

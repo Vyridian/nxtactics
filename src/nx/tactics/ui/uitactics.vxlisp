@@ -221,8 +221,14 @@
          (any<-any : base/card
           value)
         summary : string :=
-         (:summary card)]
-       summary)))]
+         (:summary card)
+        summaryout : string :=
+         (if : string
+          (then
+           (= summary ":image")
+           "")
+          (else summary))]
+       summaryout)))]
   display)
  :doc "Returns display text from any")
 
@@ -482,8 +488,9 @@
  [card   : base/card
   parent : string]
  (let : ui/uilist
-  [id   : string := (:id card)
-   name : string := (:name card)
+  [id      : string := (:id card)
+   name    : string := (:name card)
+   summary : string := (:summary card)
    datatype : any := (type<-any card)
    style-display : ui/style :=
     (if : ui/style
@@ -525,6 +532,8 @@
       (== datatype base/conflict) (empty ui/ui))
      (then
       (= name "Conflict Back") (empty ui/ui))
+     (then
+      (= summary ":image") (empty ui/ui))
      (else
       (ui-title1<-uid-text
        uid name)))

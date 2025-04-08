@@ -22,7 +22,7 @@
      inkscape:document-units="mm"
      inkscape:zoom="1.6783537"
      inkscape:cx="64.944594"
-     inkscape:cy="215.38964"
+     inkscape:cy="214.79382"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -23587,5 +23587,41 @@
        d="m 128.81728,124.00914 c 0.3732,0.5385 0.54513,1.05178 0.73739,1.67045 -0.52706,0.33412 -0.75346,0.59626 -1.40619,0.4808 l -0.4049,-0.11626 -0.28775,-1.59918 c -0.26712,-0.18551 -0.50798,-0.32514 -0.80475,-0.45822 0.34887,-0.13509 0.6821,-0.33712 1.01163,-0.51482 l 0.47271,0.68063 0.27013,5.7e-4 0.12387,-0.92634 0.18948,0.0852 z"
        id="path4084"
        style="stroke-width:0.231895" />
+  </g>
+  <g
+     id="g1-4"
+     inkscape:label="dots"
+     transform="matrix(4.2827427,0,0,3.6897099,-430.41045,-370.22886)"
+     clip-path="none">
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.7366;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="use15790"
+       sodipodi:type="arc"
+       sodipodi:cx="127.5651"
+       sodipodi:cy="127.5651"
+       sodipodi:rx="0.59127611"
+       sodipodi:ry="0.59127611"
+       sodipodi:start="0.027304543"
+       sodipodi:end="6.2831853"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="m 128.15616,127.58124 a 0.59127611,0.59127611 0 0 1 -0.60317,0.57501 0.59127611,0.59127611 0 0 1 -0.57911,-0.59922 0.59127611,0.59127611 0 0 1 0.59526,-0.58319 0.59127611,0.59127611 0 0 1 0.58724,0.59126"
+       inkscape:tile-x0="4.2112036"
+       inkscape:tile-y0="4.2112036" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.7366;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="use15791"
+       sodipodi:type="arc"
+       sodipodi:cx="127.5651"
+       sodipodi:cy="168.48598"
+       sodipodi:rx="0.59127611"
+       sodipodi:ry="0.59127611"
+       sodipodi:start="0.027304543"
+       sodipodi:end="6.2831853"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="m 128.15616,168.50212 a 0.59127611,0.59127611 0 0 1 -0.60317,0.57501 0.59127611,0.59127611 0 0 1 -0.57911,-0.59922 0.59127611,0.59127611 0 0 1 0.59526,-0.5832 0.59127611,0.59127611 0 0 1 0.58724,0.59127"
+       inkscape:tile-x0="4.2112036"
+       inkscape:tile-y0="4.2112036" />
   </g>
 </svg>

@@ -19,7 +19,7 @@
    :id (string "clock-" num)
    :name (string "Clock #" num)
    :summary
-    "* Represents the current time on the Clock.
+    "* Represents the current Clock time.
      * The [scene] determines how many rounds there are and whether they count up or down.
      * scene Start: Stack the cards in order with Round#1 on top or bottom depending on the [scene].
      * Round End: Discard the top Round#.
@@ -48,14 +48,14 @@
   (base/rule
    :name "Advantage"
    :summary
-    "* [Reveal]: Reveal another Conflict. You may use this card instead.")
+    "* Your [Normal] [Block] cards always Succeed against [Normal] [Strong].")
   (base/rule
    :name "Area Effect"
    :image "images/card-areaeffect.svg"
    :summary
-    "* Some powers can attack in a large area.
-     * Reduce your Skill or Intensity by 1 to get an Area Effect Card. Each additional reduction doubles the number of cards.
-     * Place a card next to your unit and arrange the rest in any stable shape. Examples below.")
+    "* Powers can attack in an area.
+     * Reduce Skill or Intensity by 1 to get an Area Effect Card. Each extra reduction doubles the number of cards.
+     * Arrange the cards into a shape starting from the unit.")
   (base/rule
    :name "Beast"
    :summary
@@ -67,6 +67,10 @@
     "* Body is the measure of a unit's mass and durability.
      * A unit with Body:0 is incapacitated.
      * It is derived from the mass in kg. E.g. 300kg = 3x10^2 = 3x2")
+  (base/rule
+   :name "Broken"
+   :summary
+    "* A broken [Item] can only be used as an [Improvised Weapon].")
   (base/rule
    :name "Character")
   (base/rule
@@ -105,7 +109,7 @@
   (base/rule
    :name "Disadvantage"
    :summary
-    "* [Reveal]: Reveal another Conflict. IF it is worse THEN use it instead.")
+    "* Your [Normal] [Block] cards Fail against [Fast].")
   (base/rule
    :name "Effect"
    :summary
@@ -117,13 +121,16 @@
      * [Action]: Give or receive an item from an adjacent willing unit.
      * [Double Action]: Drop an item in one or more hands and equip another that is in an inconvenient spot like a large bag, backpack, on your back, on another person, etc. OR return an item in hand to an inconvenient spot.")
   (base/rule
-   :name "Exposed"
+   :name "Damaged"
    :summary
-    "* Your [Normal] [Block] cards always lose.")
+    "* [Body]:-1
+     * When using a damaged item or body part take [Initiative]:-1/Damaged.
+     * An item with no [Body] remaining is [Broken]."
   (base/rule
    :name "Exposure"
    :summary
-    "")
+    "* Move:-1
+     * Event: IF a Unit has shelter < 6 hours/day THEN Exposure:+1 ELSE Exposure:-1.")
   (base/rule
    :name "Fight"
    :summary
@@ -163,7 +170,8 @@
   (base/rule
    :name "Hunger"
    :summary
-    "")
+    "* Body:-1
+     * Event: IF a Unit eats < 4 days/week THEN Hunger:+1 ELSE Hunger:-1")
   (base/rule
    :name "Initiative"
    :summary
@@ -235,9 +243,16 @@
      * Turn: Turn your unit's facing 45 degrees to the left or right.
      * Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing.")
   (base/rule
+   :name "Off-handed"
+   :reference
+    "I admit it. You are better than I am. Then why are you smiling? Because I know something you don't know...I am not left handed...There's something I ought to tell you...I am not left handed either. - Princess Bride"
+   :summary
+    "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN Initiative:-1.")
+  (base/rule
    :name "Poisoned"
    :summary
-    "")
+    "* Body:-1
+     * Event: Reveal Conflict. IF Ace THEN Poisoned:-1. IF 2 THEN Poisoned:+1.")
   (base/rule
    :name "Power"
    :summary
@@ -307,14 +322,25 @@
      * Extended: The user may continue this test on different turns until a Success or Fail.
      * See Also: [Unskilled] [Unfamiliar Item].")
   (base/rule
+   :name "Sleep Deprived"
+   :summary
+    "* Mind:-1
+     * Event: IF a Unit sleeps < 6 hours/day THEN Sleep Deprived:+1 ELSE Sleep Deprived:-1.")
+  (base/rule
    :name "Speed"
    :summary
     "* Special*: IF Speed over 5 THEN penalty is Speed:-2.")
   (base/rule
+   :name "Suffocation"
+   :summary
+    "* Will:-1
+     * Event: IF a Unit breathes < 1 minute/5 minutes THEN Suffocation:+1 ELSE Suffocation:-1")
+  (base/rule
    :name "Surprise"
    :summary
-    "* IF a unit suddenly appears adjacent or on a unit.
+    "* IF a unit suddenly appears adjacent or upon a unit.
      * THEN
+     ** Lose half of starting [Move].
      ** Reveal [Conflict]. Unit takes temporary damage based on the [Suit].
      ** [Wands] = [Fatigue]
      ** [Coins] = [Stun]
@@ -327,7 +353,8 @@
   (base/rule
    :name "Thirst"
    :summary
-    "")
+    "* Mind:-1
+     * Event: IF a Unit drinks < 1 liter/day THEN Thirst:+1 ELSE Thirst:-1.")
   (base/rule
    :name "Unfamiliar Item"
    :summary
@@ -337,21 +364,25 @@
    :summary
     "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item].")
   (base/rule
-   :name "Weather: Temperature"
-   :summary
-    "")
-  (base/rule
    :name "Weather: Clouds"
+   :image "images/cards/rule-weather-clouds.svg"
    :summary
-    "")
+    ":image")
   (base/rule
    :name "Weather: Humidity"
+   :image "images/cards/rule-weather-humidity.svg"
    :summary
-    "")
+    ":image")
+  (base/rule
+   :name "Weather: Temperature"
+   :image "images/cards/rule-weather-temperature.svg"
+   :summary
+    ":image")
   (base/rule
    :name "Weather: Wind"
+   :image "images/cards/rule-weather-wind.svg"
    :summary
-    "")
+    ":image")
   (base/rule
    :id "will"
    :name "Will"
@@ -415,6 +446,10 @@
        "Surprise"
        "Unskilled"
        "Unfamiliar Item"
+       "Weather: Clouds"
+       "Weather: Humidity"
+       "Weather: Temperature"
+       "Weather: Wind"
       ))
      (base/cardlist
       (card-clock-num 1)

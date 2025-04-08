@@ -103,20 +103,6 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Synergy Dice", ":summary", "* Abilities that work together should be a benefit without breaking game balance.  Synergies allow skills and equipment to work together without unbalancing the game or requiring specific combinations of abilities to be effective.\n* Note: Limited and Synergy dice cancel each other in equals numbers so no roll may have both Synergy and Limited dice.\n* 1, 2, 3 = No Effect\n* 4, 5 = Hit\n* 6 = Hit and roll 2 Critical Dice")
           )
         ),
-        "Advanced Situational Rules",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Advanced Situational Rules",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            "Off Handed",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Off Handed", ":reference", "I admit it.  You are better than I am.  Then why are you smiling?  Because I know something you don't know...I am\nnot left handed...There's something I ought to tell you...I am not left handed either. - Princess Bride", ":summary", "* [Action]: -1 If an ability normally requires 2 hands to perform and only one hand is available."),
-            ":Surprised",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Surprised", ":summary", "If one or more units are Surprised, they lose their [Action] this [Turn] and lose half of their [Speed].")
-          )
-        ),
         "Effect Rules",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -469,28 +455,6 @@ export default class nx_tactics_books_advanced_rules {
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Acid", ":summary", "* May use a [Move] to remove an Acid Token.\n* [End of Turn] - Roll Acid Tokens.  Hits do Damage.  Remove an Acid Token.")
           )
         ),
-        "Green Tokens",
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_section},
-          ":name",
-          "Green Tokens",
-          ":summary",
-          "* Green Tokens represent conditions that generally grow worse over time.",
-          ":rulemap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_rulemap},
-            ":Disease",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Disease", ":image", "Tokens/DiseaseToken.png", ":summary", "Spreading, slow damage over time", ":titles", "Diseased, Infected, Rabid, Sickly"),
-            ":Fatigue",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Fatigue", ":summary", "-1 [Abilities]\n* Removed with rest"),
-            ":Hunger",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hunger", ":summary", "-1 [Abilities] per week without food\n* Removed after eating"),
-            ":Suffocation",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suffocation", ":summary", "-1 [Abilities]\n+1 Suffocation per minute without air\n* Each Suffocation after 2 also add [Damage]\n* Remove 1 Suffocation each 10 minutes of breathing"),
-            ":Thrist",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Thrist", ":summary", "-1 [Abilities]\n+1 Thirst per day without drink\n* Remove 1 Thirst each day with ample drinking")
-          )
-        ),
         "Advanced Purple Tokens",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -499,8 +463,6 @@ export default class nx_tactics_books_advanced_rules {
           ":rulemap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
-            ":Ace",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ace", ":image", "Tokens/AceToken.png", ":summary", "* [Action]: [+1 Skill]\n* [Defense]: [+1 Defense]", ":titles", "Elite", ":classification", "Purple Token"),
             ":Apathy",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Apathy", ":classification", "Purple Token"),
             ":Hidden",

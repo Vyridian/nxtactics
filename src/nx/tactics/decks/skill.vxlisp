@@ -218,12 +218,8 @@ x +1DMG vs. Crouching."
    :stat "Body"
    :abilitymap
     (base/abilitymap
-     :Punch
-      (base/ability
-       :name "Punch"
-       :summary
-        "* [Fight]: [Close Combat]
-         * [Damage]: [Body] [Bash]")
+     "Punch"
+      (base/ability<-tactics-key tactics "Punch")
      "Kick"
       (base/ability<-tactics-key tactics "Kick")
      "Grab"
@@ -1366,6 +1362,176 @@ x +1DMG vs. Crouching."
        :summary "* Includes Pocket Knives, Switchblades, Straight Razors, Small Kitchen Knives, etc."
        :titles "Butcher, Knife Fighter, Murderer")))
   (base/skill
+   :name "Communications"
+   :abilitymap
+    (base/abilitymap
+     :Appearance
+      (base/ability
+       :name "Appearance"
+       :summary "* Expert on personal grooming, cosmetics, and hairstyling.")
+     :Carousing
+      (base/ability
+       :name "Carousing")
+     "Detect Lie"
+      (base/ability
+       :name "Detect Lie")
+     :Drinking
+      (base/ability
+       :name "Drinking")
+     :Drugs
+      (base/ability
+       :name "Drugs")
+     :Etiquette
+      (base/ability
+       :name "Etiquette")
+     :Fashion
+      (base/ability
+       :name "Fashion"
+       :summary "* Knows current fashions and what clothing with make the best impact.")
+     :Fiction
+      (base/ability
+       :name "Fiction"
+       :summary "* Can author, critique, interpret, and detect fiction.")
+     "Go Viral"
+      (base/ability
+       :name "Go Viral"
+       :summary "* Create an interesting message popular enough to be passed around.")
+     :Gossip
+      (base/ability
+       :name "Gossip"
+       :summary "* The single best way to get information, but, given it source, may not be reliable.")
+     :Interview
+      (base/ability
+       :name "Interview"
+       :titles "Interviewer, Reporter")
+     :Journalism
+      (base/ability
+       :name "Journalism"
+       :titles "Journalist, Media, Reporter")
+     :Literacy
+      (base/ability
+       :name "Literacy"
+       :summary
+        "* Can read and write
+         * This ability is assumed in modern characters from 1st and 2nd world nations")
+     "Motivational Speaking"
+      (base/ability
+       :name "Motivational Speaking"
+       :reference
+        "* DO it! Just DO it! - Shia Labeouf
+         * My name is Matt Foley and I am a motivational speaker... First off, I am thirty-five years old, I am divorced, and I live in a van down by the river... Well I'm here to tell you, that you're probably going to find out, as you go out there, that you're not going to amount to jack squat! You're going to end up eating a steady diet of government cheese and living in a van down by the river! - Matt Foley, SNL"
+       :titles "Motivational Speaker")
+     :Negotiation
+      (base/ability
+       :name "Negotiation"
+       :titles "Advisor, Arbiter, Diplomat, Emissary, Envoy, Legate, Negotiator"
+       :reference
+        "I'm not greedy, my friends though. - Yordle Grifter, Runeterra")
+     :Photography
+      (base/ability
+       :name "Photography"
+       :titles "Photographer")
+     :Poetry
+      (base/ability
+       :name "Poetry"
+       :summary "Can author any type of poetry"
+       :titles "Poet")
+     :Politics
+      (base/ability
+       :name "Politics")
+     :Recruiting
+      (base/ability
+       :name "Recruiting"
+       :titles "Casting Director, Hiring Manager, Recruiter")
+     :Scribe
+      (base/ability
+       :name "Scribe"
+       :summary "* Can copy writings exactly")
+     :Sincerity
+      (base/ability
+       :name "Sincerity"
+       :summary
+        "* Helps convince others when you are being truthful.
+         * Helps improve long term relationships by increasing trust.
+         * Limitation - May only be used when you truly believe that your are correct.")
+     "Small Talk"
+      (base/ability
+       :name "Small Talk"
+       :titles "The Gift of Gab")
+     :Streetwise
+      (base/ability
+       :name "Streetwise"
+       :summary
+        "* [Action]: Gain knowledge where a good or service can be found in a city including black market goods or services.")
+     :Translator
+      (base/ability
+       :name "Translator"
+       :summary "* Can translate immediately")
+     "Trash Talk"
+      (base/ability
+       :name "Trash Talk"
+       :reference
+        "* What's the matter Agent Scary Lips? You're Scary Lips tasting my hairy shit? You tasting Doug Wilson's World Famous beef stew? How's it going down, its kinda spicy right? You guys are so fucked right now, all I can think about is your wife and a horse. - Doug Wilson, Weeds"
+       :titles "Put Down")
+     :Videography
+      (base/ability
+       :name "Videography"
+       :titles "Cameraman, Videographer")
+     "Video Production"
+      (base/ability
+       :name "Video Production"
+       :titles "Director, Producer")
+     "Wise Words"
+      (base/ability
+       :name "Wise Words"
+       :summary
+        "* Apply personal life experiences to help others understand themselves.")
+     :Cantonese
+      (base/ability
+       :name "Cantonese")
+     "Elvish"
+      (base/ability<-tactics-key tactics "Elvish")
+     "English"
+      (base/ability<-tactics-key tactics "English")
+     :French
+      (base/ability
+       :name "French")
+     :German
+      (base/ability
+       :name "German")
+     :Greek
+      (base/ability
+       :name "Greek")
+     :Italian
+      (base/ability
+       :name "Italian")
+     :Latin
+      (base/ability
+       :name "Latin")
+     :Mandarin
+      (base/ability
+       :name "Mandarin")
+     "Olde English"
+      (base/ability
+       :name "Olde English")
+     :Portuguese
+      (base/ability
+       :name "Portuguese")
+     :Russian
+      (base/ability
+       :name "Russian")
+     "Sign Language"
+      (base/ability
+       :name "Sign Language")
+     :Spanish
+      (base/ability
+       :name "Spanish"))
+   :specialtymap
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Linguistics"
+     "Writing"))
+  (base/skill
    :name "Defense"
    :titles "Armorer, Defender, Shield Bearer, Shield Warden, Warder"
    :stat "Body"
@@ -1636,6 +1802,8 @@ x +1DMG vs. Crouching."
    :summary
     "* Gunnery skill cannot exceed level 5 - Because advanced weapons are mostly point and shoot, weapon skill has less to do with the gunner and more to do with the weapon and its control system. Further, advanced weapons technologies come in a multitude of variations with constantly changing interfaces therefore it is very difficult to dedicate oneself to a single system to become an expert.
      * See Arms and Armor for weapons"
+   :reference
+    "* It isn't exactly legal, but it is exactly AWESOME! - Funsmith, Runeterra"
    :titles "Artillerist, Field Ops, Gunner"
    :abilitymap
     (base/abilitymap<-tactics-keys

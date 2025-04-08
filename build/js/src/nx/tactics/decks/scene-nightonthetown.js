@@ -60,9 +60,9 @@ export default class nx_tactics_decks_scene_nightonthetown {
                 nx_tactics_decks_scene_nightonthetown.f_unit_zombie_runner(tactics)
               ),
               nx_tactics_decks_scene_nightonthetown.f_place_clinic(),
-              nx_tactics_decks_scene_nightonthetown.f_place_conveniencestore(),
+              nx_tactics_decks_scene_nightonthetown.f_place_store_convenience(),
               nx_tactics_decks_scene_nightonthetown.f_place_gasstation(),
-              nx_tactics_decks_scene_nightonthetown.f_place_gunstore(),
+              nx_tactics_decks_scene_nightonthetown.f_place_store_gun(),
               nx_tactics_decks_scene_nightonthetown.f_place_policestation(),
               nx_tactics_decks_scene_nightonthetown.f_place_street()
             )
@@ -92,24 +92,6 @@ export default class nx_tactics_decks_scene_nightonthetown {
   }
 
   /**
-   * @function place_conveniencestore
-   * @return {place}
-   */
-  static t_place_conveniencestore = {
-    vx_type: vx_core.t_type
-  }
-  static e_place_conveniencestore = {
-    vx_type: nx_tactics_decks_scene_nightonthetown.t_place_conveniencestore
-  }
-
-  // (func place-conveniencestore)
-  static f_place_conveniencestore() {
-    let output = nx_tactics_base.e_place
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Convenience Store", ":image", "images/cards/place-conveniencestore.svg")
-    return output
-  }
-
-  /**
    * @function place_gasstation
    * @return {place}
    */
@@ -128,24 +110,6 @@ export default class nx_tactics_decks_scene_nightonthetown {
   }
 
   /**
-   * @function place_gunstore
-   * @return {place}
-   */
-  static t_place_gunstore = {
-    vx_type: vx_core.t_type
-  }
-  static e_place_gunstore = {
-    vx_type: nx_tactics_decks_scene_nightonthetown.t_place_gunstore
-  }
-
-  // (func place-gunstore)
-  static f_place_gunstore() {
-    let output = nx_tactics_base.e_place
-    output = vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Gun Store", ":image", "images/cards/place-gunstore.svg")
-    return output
-  }
-
-  /**
    * @function place_policestation
    * @return {place}
    */
@@ -160,6 +124,42 @@ export default class nx_tactics_decks_scene_nightonthetown {
   static f_place_policestation() {
     let output = nx_tactics_base.e_place
     output = vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Police Station", ":image", "images/cards/place-policestation.svg")
+    return output
+  }
+
+  /**
+   * @function place_store_convenience
+   * @return {place}
+   */
+  static t_place_store_convenience = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_store_convenience = {
+    vx_type: nx_tactics_decks_scene_nightonthetown.t_place_store_convenience
+  }
+
+  // (func place-store-convenience)
+  static f_place_store_convenience() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Store: Convenience", ":image", "images/cards/place-store-convenience.svg")
+    return output
+  }
+
+  /**
+   * @function place_store_gun
+   * @return {place}
+   */
+  static t_place_store_gun = {
+    vx_type: vx_core.t_type
+  }
+  static e_place_store_gun = {
+    vx_type: nx_tactics_decks_scene_nightonthetown.t_place_store_gun
+  }
+
+  // (func place-store-gun)
+  static f_place_store_gun() {
+    let output = nx_tactics_base.e_place
+    output = vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Store: Gun", ":image", "images/cards/place-store-gun.svg")
     return output
   }
 
@@ -527,10 +527,10 @@ export default class nx_tactics_decks_scene_nightonthetown {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "deck-nightonthetown": nx_tactics_decks_scene_nightonthetown.e_deck_nightonthetown,
       "place-clinic": nx_tactics_decks_scene_nightonthetown.e_place_clinic,
-      "place-conveniencestore": nx_tactics_decks_scene_nightonthetown.e_place_conveniencestore,
       "place-gasstation": nx_tactics_decks_scene_nightonthetown.e_place_gasstation,
-      "place-gunstore": nx_tactics_decks_scene_nightonthetown.e_place_gunstore,
       "place-policestation": nx_tactics_decks_scene_nightonthetown.e_place_policestation,
+      "place-store-convenience": nx_tactics_decks_scene_nightonthetown.e_place_store_convenience,
+      "place-store-gun": nx_tactics_decks_scene_nightonthetown.e_place_store_gun,
       "place-street": nx_tactics_decks_scene_nightonthetown.e_place_street,
       "rule-zombie": nx_tactics_decks_scene_nightonthetown.e_rule_zombie,
       "unit-theprofessor": nx_tactics_decks_scene_nightonthetown.e_unit_theprofessor,
@@ -541,10 +541,10 @@ export default class nx_tactics_decks_scene_nightonthetown {
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "deck-nightonthetown": nx_tactics_decks_scene_nightonthetown.t_deck_nightonthetown,
       "place-clinic": nx_tactics_decks_scene_nightonthetown.t_place_clinic,
-      "place-conveniencestore": nx_tactics_decks_scene_nightonthetown.t_place_conveniencestore,
       "place-gasstation": nx_tactics_decks_scene_nightonthetown.t_place_gasstation,
-      "place-gunstore": nx_tactics_decks_scene_nightonthetown.t_place_gunstore,
       "place-policestation": nx_tactics_decks_scene_nightonthetown.t_place_policestation,
+      "place-store-convenience": nx_tactics_decks_scene_nightonthetown.t_place_store_convenience,
+      "place-store-gun": nx_tactics_decks_scene_nightonthetown.t_place_store_gun,
       "place-street": nx_tactics_decks_scene_nightonthetown.t_place_street,
       "rule-zombie": nx_tactics_decks_scene_nightonthetown.t_rule_zombie,
       "unit-theprofessor": nx_tactics_decks_scene_nightonthetown.t_unit_theprofessor,
@@ -600,24 +600,6 @@ export default class nx_tactics_decks_scene_nightonthetown {
       fn            : nx_tactics_decks_scene_nightonthetown.f_place_clinic
     }
 
-    // (func place-conveniencestore)
-    nx_tactics_decks_scene_nightonthetown.t_place_conveniencestore['vx_value'] = {
-      name          : "place-conveniencestore",
-      pkgname       : "nx/tactics/decks/scene-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scene_nightonthetown.f_place_conveniencestore
-    }
-
     // (func place-gasstation)
     nx_tactics_decks_scene_nightonthetown.t_place_gasstation['vx_value'] = {
       name          : "place-gasstation",
@@ -636,24 +618,6 @@ export default class nx_tactics_decks_scene_nightonthetown {
       fn            : nx_tactics_decks_scene_nightonthetown.f_place_gasstation
     }
 
-    // (func place-gunstore)
-    nx_tactics_decks_scene_nightonthetown.t_place_gunstore['vx_value'] = {
-      name          : "place-gunstore",
-      pkgname       : "nx/tactics/decks/scene-nightonthetown",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scene_nightonthetown.f_place_gunstore
-    }
-
     // (func place-policestation)
     nx_tactics_decks_scene_nightonthetown.t_place_policestation['vx_value'] = {
       name          : "place-policestation",
@@ -670,6 +634,42 @@ export default class nx_tactics_decks_scene_nightonthetown {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scene_nightonthetown.f_place_policestation
+    }
+
+    // (func place-store-convenience)
+    nx_tactics_decks_scene_nightonthetown.t_place_store_convenience['vx_value'] = {
+      name          : "place-store-convenience",
+      pkgname       : "nx/tactics/decks/scene-nightonthetown",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scene_nightonthetown.f_place_store_convenience
+    }
+
+    // (func place-store-gun)
+    nx_tactics_decks_scene_nightonthetown.t_place_store_gun['vx_value'] = {
+      name          : "place-store-gun",
+      pkgname       : "nx/tactics/decks/scene-nightonthetown",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_scene_nightonthetown.f_place_store_gun
     }
 
     // (func place-street)

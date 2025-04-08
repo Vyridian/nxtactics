@@ -8,31 +8,32 @@
   :image "FloraAndFauna.jpg"
   :chaptermap
    (base/chaptermap
-    "Bestiary Overview" (chapter_bestiary_overview)
-    "Amphibians" (chapter_amphibians)
-    "Arthropods" (chapter_arthropods)
-    "Avians" (chapter_avians)
-    "Mammals/Marsupials" (chapter_mammals_marsupials)
-    "Marine Creatures" (chapter_marine_creatures)
-    "Reptiles" (chapter_reptiles)
-    "Plants" (chapter_plants)
-    "Microorganisms" (chapter_microorganisms)
-    "Underground Creatures" (chapter_underground_creatures)
-    "Humanoids" (chapter_humanoids)
-    "Humanoids, Fantastic" (chapter_humanoids_fantastic)
-    "Beastmen" (chapter_beastmen)
-    "Constructs" (chapter_constructs)
-    "Dragons" (chapter_dragons)
-    "Elementals" (chapter_elementals)
-    "Extra-Dimensional" (chapter_extra-dimensional)
-    "Darkling" (chapter_darkling)
-    "Giant Races" (chapter_giant_races)
-    "Mythical Beasts" (chapter_mythical_beasts)
-    "Shapeshifters" (chapter_shapeshifters)
-    "Undead Creatures" (chapter_undead_creatures)
+    "Bestiary Overview" (chapter_bestiary_overview tactics)
+    "Amphibians" (chapter_amphibians tactics)
+    "Arthropods" (chapter_arthropods tactics)
+    "Avians" (chapter_avians tactics)
+    "Mammals/Marsupials" (chapter_mammals_marsupials tactics)
+    "Marine Creatures" (chapter_marine_creatures tactics)
+    "Reptiles" (chapter_reptiles tactics)
+    "Plants" (chapter_plants tactics)
+    "Microorganisms" (chapter_microorganisms tactics)
+    "Underground Creatures" (chapter_underground_creatures tactics)
+    "Humanoids" (chapter_humanoids tactics)
+    "Humanoids, Fantastic" (chapter_humanoids_fantastic tactics)
+    "Beastmen" (chapter_beastmen tactics)
+    "Constructs" (chapter_constructs tactics)
+    "Dragons" (chapter_dragons tactics)
+    "Elementals" (chapter_elementals tactics)
+    "Extra-Dimensional" (chapter_extra-dimensional tactics)
+    "Darkling" (chapter_darkling tactics)
+    "Giant Races" (chapter_giant_races tactics)
+    "Mythical Beasts" (chapter_mythical_beasts tactics)
+    "Shapeshifters" (chapter_shapeshifters tactics)
+    "Undead Creatures" (chapter_undead_creatures tactics)
    )))
 
 (func chapter_bestiary_overview : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Bestiary Overview"
   :sectionmap
@@ -42,6 +43,7 @@
       :name "Why Tactics: Bestiary?"))))
 
 (func chapter_amphibians : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Amphibians"
   :sectionmap
@@ -76,6 +78,7 @@
           :name "Toad, Giant Poisonous"))))))
 
 (func chapter_arthropods : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Arthropods"
   :sectionmap
@@ -281,6 +284,7 @@
           :name "Worm, Giant Sand"))))))
 
 (func chapter_avians : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Avians"
   :sectionmap
@@ -355,6 +359,7 @@
           :summary "* A snake with feathered wings and a mildly poisonous bite. They are generally small but can grow to 10 feet. They feed on small creatures, but will attack larger targets when hungry or disturbed."))))))
 
 (func chapter_mammals_marsupials : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Mammals/Marsupials"
   :sectionmap
@@ -752,6 +757,7 @@
           :name "Wolverine, Huge"))))))
 
 (func chapter_marine_creatures : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Marine Creatures"
   :sectionmap
@@ -932,6 +938,7 @@
           :name "Shark, Megalodon"))))))
 
 (func chapter_reptiles : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Reptiles"
   :sectionmap
@@ -1030,18 +1037,18 @@
          (base/unit
           :name "Desert Strider"
           :summary "* Striders are large bipedal desert creatures resembling a cross between a lizard and a flightless bird. Striders are perfectly acclimated to desert life. They can go for months without water, have protective lenses over their eyes, and actually process sunlight to supplement the insects and reptiles they normally consume. Conversely, they cannot survive outside a desert environment.")
-        "Lizard, Giant"
+        "Lizard: Giant"
          (base/unit
-          :name "Lizard, Giant")
-        "Serpent, Great"
+          :name "Lizard: Giant")
+        "Serpent: Great"
          (base/unit
-          :name "Serpent, Great")
-        "Snake, Crypt Cobra"
+          :name "Serpent: Great")
+        "Snake: Crypt Cobra"
          (base/unit
-          :name "Snake, Crypt Cobra")
-        "Snake, Swaying Cobra"
+          :name "Snake: Crypt Cobra")
+        "Snake: Swaying Cobra"
          (base/unit
-          :name "Snake, Swaying Cobra"
+          :name "Snake: Swaying Cobra"
           :summary
            "* This seemingly normal Cobra has the enhanced ability to hypnotise its victim.
             * Hypnotism - By slowly swaying back and forth and removing all hostile intent from its mind, the Cobra creates the illusion that it is peaceful and harmless. Its victim becomes enthralled and simply watches as the Cobra slowly advances. When the Cobra is face to face with its victim, it attacks with lightning speed to bite the face or throat to deposit its venom near the victim's brain."
@@ -1051,6 +1058,7 @@
           :name "Tortoise, Giant"))))))
 
 (func chapter_plants : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Plants"
   :sectionmap
@@ -1656,6 +1664,7 @@
           :name "Venus Flytrap, Giant"))))))
 
 (func chapter_microorganisms : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Microorganisms"
   :sectionmap
@@ -1703,6 +1712,7 @@
           :summary "* An infectious disease that affects water breathers. The victim's gills slowly become clogged with a sticky, yellow secretion that interferes with breathing can kill if not treated."))))))
 
 (func chapter_underground_creatures : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Underground Creatures"
   :sectionmap
@@ -1756,6 +1766,7 @@
           :name "Sand Worms"))))))
 
 (func chapter_humanoids : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Humanoids"
   :sectionmap
@@ -1782,6 +1793,7 @@
           :mass "80kg"))))))
 
 (func chapter_humanoids_fantastic : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Humanoids, Fantastic"
   :summary
@@ -2447,6 +2459,7 @@
       :titles "Zephyr"))))
 
 (func chapter_beastmen : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Beastmen"
   :sectionmap
@@ -2689,9 +2702,16 @@
           :summary
            "* The Jaka are a race of intelligent man-like beings with features resembling a cross between man, wolf, and panther. They are a striking people with sleek black fur and yellow/green eyes.
             * Personality - The Jaka are solitary beings, sullen and introspective in nature. They have been known to become steadfast companions to those they trust, but have also been known to become cold-blooded killers to those who cross them.
-            * Lifestyle - They are cunning and have excellent senses, so they make are superb hunters. They typically live off the land but also trade their extra hides and animal parts for useful gear. Some have extended their tracking and hunting skills to become bounty hunters: tracking and capturing fugitives from justice and living off the bounty."))))))
+            * Lifestyle - They are cunning and have excellent senses, so they make are superb hunters. They typically live off the land but also trade their extra hides and animal parts for useful gear. Some have extended their tracking and hunting skills to become bounty hunters: tracking and capturing fugitives from justice and living off the bounty.")))
+    "Valusian"
+     (section
+      :name "Valusian"
+      :summary
+       ""
+      :titles "Dragon Kings, Serpent People"))))
 
 (func chapter_constructs : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Constructs"
   :sectionmap
@@ -2905,6 +2925,7 @@
           :name "Phantasm Warrior"))))))
 
 (func chapter_dragons : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Dragons"
   :summary
@@ -3079,6 +3100,7 @@
           :titles "Avatar of Chaos, Avatar of the Wyrm, The Beast, Mother of All Life"))))))
 
 (func chapter_elementals : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Elementals"
   :summary
@@ -3103,7 +3125,8 @@
         "Air Elemental Lord"
          (base/unit
           :name "Air Elemental Lord"
-          :summary "* Greater Air Elementals are enormous creatures that can fill the sky. They appear as cloudbanks or can be completely invisible depending on their mood. They have complete mastery over the Air, can perform any Air Power at maximum ability and can cancel any other being attempting to use Air."
+          :summary
+           "* Greater Air Elementals are enormous creatures that can fill the sky. They appear as cloudbanks or can be completely invisible depending on their mood. They have complete mastery over the Air, can perform any Air Power at maximum ability and can cancel any other being attempting to use Air."
           :unitpowermap
            (base/unitpowermap
             :Air
@@ -3138,7 +3161,8 @@
         "Earth Elemental Lord"
          (base/unit
           :name "Earth Elemental Lord"
-          :summary "* Greater Earth Elementals are enormous creatures that can appear as a mountain or a range of hills. They have complete mastery over the Earth, can perform any Earth Power at maximum ability and can cancel any other being attempting to use Earth."
+          :summary
+           "* Greater Earth Elementals are enormous creatures that can appear as a mountain or a range of hills. They have complete mastery over the Earth, can perform any Earth Power at maximum ability and can cancel any other being attempting to use Earth."
           :unitpowermap
            (base/unitpowermap
             :Earth
@@ -3156,7 +3180,7 @@
           :name "Geo Essence"
           :summary
            "* A mindless, condensed blob of Geo energy.
-* Since slimes store magical energy they are highly sought after by mages and alchemists."
+            * Since slimes store magical energy they are highly sought after by mages and alchemists."
           :titles "Earth Slime, Geo Slime, Geolon")
         :Monolith
          (base/unit
@@ -3264,6 +3288,7 @@
           :name "Water Sprite"))))))
 
 (func chapter_extra-dimensional : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Extra-Dimensional"
   :sectionmap
@@ -3921,6 +3946,7 @@
             * [Action] [Target]: The Mirror Shard becomes the same [Mass] as the target. Then choose one [Skill] or [Power] to copy. The Mirror Shard gains that Skill/Power and loses all other Skills and Powers. It [Body], [Mind], and [Will] are altered accordingly."))))))
 
 (func chapter_darkling : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Darkling"
   :titles "Goblinoid"
@@ -4290,7 +4316,7 @@
           :name "Uruk Butcher"
           :summary
            "* Orc Butchers deal in all things meat. They serve as cooks, surgeons, undertakers, and torturers.
-* They prefer cleavers, hand axes, and knives in combat.")
+            * They prefer cleavers, hand axes, and knives in combat.")
         "Uruk-hai Champion"
          (base/unit
           :name "Uruk-hai Champion"
@@ -4302,8 +4328,7 @@
          (base/unit
           :name "Uruk Shaman"
           :summary
-           "* Uruk Shamans teach that everything the Uruks once had was stolen by the other races, and urges them on
-to ever-greater acts of violence and revenge.")
+           "* Uruk Shamans teach that everything the Uruks once had was stolen by the other races, and urges them on to ever-greater acts of violence and revenge.")
         "Uruk Taskmaster"
          (base/unit
           :name "Uruk Taskmaster")
@@ -4325,6 +4350,7 @@ to ever-greater acts of violence and revenge.")
               :level "3"))))))))
 
 (func chapter_giant_races : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Giant Races"
   :sectionmap
@@ -4457,6 +4483,7 @@ to ever-greater acts of violence and revenge.")
             * A vast grisly monster with a hundred snakelike heads that extends in serpentine coils from the waist down."))))))
 
 (func chapter_mythical_beasts : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Mythical Beasts"
   :sectionmap
@@ -4685,6 +4712,7 @@ to ever-greater acts of violence and revenge.")
             * Scylla is a horribly grotesque sea monster, with six long necks equipped with grisly heads, each of which contained three rows of sharp teeth. Her body consisted of twelve canine legs and a fish's tail."))))))
 
 (func chapter_shapeshifters : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Shapeshifters"
   :sectionmap
@@ -4804,6 +4832,7 @@ to ever-greater acts of violence and revenge.")
           :titles "French/Old English: Loup-garou, Japanese: Ookami otoko"))))))
 
 (func chapter_undead_creatures : base/chapter
+ [tactics : base/tactics]
  (chapter
   :name "Undead Creatures"
   :reference "* Seven Deadly Sins: Envy"
@@ -4943,6 +4972,9 @@ to ever-greater acts of violence and revenge.")
          (base/unit
           :name "Lich"
           :image "images/bestiary/Lich.png"
+          :titles "Liche, Lych, Lyche, Lyke"
+          :reference
+           "* His eyes turn unshutting, unblinking... Thus have I beheld him for the space of a whole year and a month... And never have I discerned the least movement of his lips, nor any turning or tremor of his body. For these reasons, I deem that Malygris is dead, but by virtue of his supremacy in evil and in art magical, he sits defying the worm, still undecayed an incorrupt. And his monsters and familiars attend him still. - The Death of Malygris, Clark Ashton Smith"
           :summary
            "* A lich is a powerful animated corpse created by [Necromancy] through the use of [Lich Form]. The necromaner curses itself to a horrific undead existence in exchange for eternal 'life'. The lich retains most of the abilities of its former life and gains some additional undead powers as well.
             * Because of their solitary nature, a lich cannot gain social skills nor increase their existing skills. Further these skills have a tendency to degrade the longer the lich exists."

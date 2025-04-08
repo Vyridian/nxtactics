@@ -85,7 +85,7 @@
    :summary
     "* IF you have a [Hold] on a target
      * THEN
-     ** [Fight]: [Close Combat]
+     ** [Skill]: [Close Combat]
      ** [Damage]: [Body] [Pierce] [Slash] [Hack]")
   (base/ability
    :name "Blacksmithing"
@@ -386,12 +386,20 @@
    :name "Electrical Resistant"
    :summary "* [Passive] - Armor:+1 vs. Electricity")
   (base/ability
+   :name "Elvish"
+   :summary
+    "Fluent in the Elvish/Alfar language")
+  (base/ability
    :name "Energy Resistant"
    :summary
     "* [Damage]: [+2 Armor] if attack is an [Energy Weapon]
      * Only 1 Hardened vs. ability may be taken")
   (base/ability
    :name "Engineering Genius")
+  (base/ability
+   :name "English"
+   :summary
+    "Fluent in the English language")
   (base/ability
    :name "Environmental Containment"
    :summary "* Suit is sealed against chemical and biological weapons except corrosive ones. It is also water-proof.")
@@ -488,7 +496,7 @@
   (base/ability
    :name "Grab"
    :summary
-    "* [Fight]: [Close Combat]
+    "* [Skill]: [Close Combat]
      * [Damage]: [Body] [Hold] [Lock]
      * Attempt to grab a unit.")
   (base/ability
@@ -584,7 +592,7 @@
    :name "Kick"
    :summary
     "* [Low Attack]
-     * [Fight]: [Close Combat]-1
+     * [Skill]: [Close Combat]-1
      * [Damage]: [Body]+1 [Bash]")
   (base/ability
    :name "Kiss of Death")
@@ -805,6 +813,11 @@
    :name "Psychic Knife"
    :reference
     "Psylocke, X-men")
+  (base/ability
+   :name "Punch"
+   :summary
+    "* [Skill]: [Close Combat]
+     * [Damage]: [Body] [Bash]")
   (base/ability
    :name "Quill Attack")
   (base/ability

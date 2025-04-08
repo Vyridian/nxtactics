@@ -42,6 +42,7 @@ export default class nx_tactics_decks_specialty {
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Handguns"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Heavy Armor"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Light Armor"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Linguistics", ":reference", "* So we put her on the hit list, of a common, cunning linguist: a master of many tongues. - Deep Purple, Knocking at Your Backdoor", ":summary", "* Philosophy - The 'common tongue' concept is boring and unrealistic.\n* Simulate the limitations of language by reducing usable vocabulary. This can be done by limiting a conversation to 2, 3, 4, or 5 letter words depending on the fluency of those involved. Having a conversation using only 2 letter words is going to require a fair amount of hand gesturing or drawing to get a point across. If a person is overhearing a conversation, bleep out the big words and let them guess at the missing words."),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Machineguns"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Mage Hunter", ":reference", "* Templars, Dragon Age"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Medium Armor"),
@@ -60,7 +61,8 @@ export default class nx_tactics_decks_specialty {
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Treasure Hunter", ":reference", "* Indiana Jones\n* Lara Croft", ":summary", "* Treasure Hunting represents experience in the dangerous and profitable world of lost tombs and ancient relics. Rare relics hold high presitge and are usually sold (in the form of a finders fee) to museaums, governments or private collectors. Raiding tombs is a fairly lawless and perilous activity to start with, and such high value items tend to attract disreputable characters of all kinds. As a result, treasure hunters often end their careers in unfortunate accidents.\n* +1 while researching or navigating inside a crypt or tomb.", ":titles", "Tomb Raider, Treasure Seeker"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Vampire Hunter", ":reference", "* Blade\n* BloodRayne\n* Buffy the Vampire Slayer\n* Castlevania\n* Fright Night\n* Lost Boys\n* Vampire Hunter D"),
       vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Werewolf Hunter"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Witch Hunter")
+      vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Witch Hunter"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Writing")
     )
     return output
   }

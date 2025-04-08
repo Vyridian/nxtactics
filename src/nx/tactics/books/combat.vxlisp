@@ -1247,9 +1247,8 @@
         "Hunga Munga"
          (base/item
           :name "Hunga Munga")
-        "Improvised Weapons"
-         (base/item
-          :name "Improvised Weapons")
+        "Improvised Weapon"
+         (base/item<-tactics-key tactics "Improvised Weapon")
         :Shuriken
          (base/item
           :name "Shuriken")

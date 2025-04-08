@@ -490,7 +490,7 @@
    "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.
     Major: Reactionary. Cannot tolerate anything new or modern.
     Critical: Luddite. Destroy anything modern or new.
-    Extreme:Violent Primitivist. Destroy anything that is more advanced than would be on a farm."))
+    Extreme: Violent Primitivist. Destroy anything that is more advanced than would be on a farm."))
 
 (const trauma-4d : base/damage
  (base/damage
@@ -530,6 +530,8 @@
   :name "Rage: Things"
   :ranksuit base/ranksuit-3c
   :image "images/card-trauma-rage.svg"
+  :reference
+   "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra"
   :summary
    "Minor: Graphetti Artist. Make your mark on the world.
     Major: Vandal. Take out your anger by defacing and damaging objects. [Beast]:1
