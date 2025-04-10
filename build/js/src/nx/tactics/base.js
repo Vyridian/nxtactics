@@ -3393,6 +3393,7 @@ export default class nx_tactics_base {
         const abilitylist2 = nx_tactics_base.f_abilitylist_from_powerlist(powerlist)
         const abilitylist3 = vx_core.f_new({"any-1": nx_tactics_base.t_abilitylist}, abilitylist1, abilitylist2)
         const abilitymap = nx_tactics_base.f_abilitymap_from_abilitylist(abilitylist3)
+        const specialtymap = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":specialtymap")
         const unitlist = nx_tactics_base.f_unitlist_from_sectionlist(sectionlist)
         const unitmap = nx_tactics_base.f_unitmap_from_unitlist(unitlist)
         const tacticsbook = vx_core.f_new(
@@ -3411,6 +3412,8 @@ export default class nx_tactics_base {
           nx_tactics_base.t_scenemap,
           ":skillmap",
           skillmap,
+          ":specialtymap",
+          specialtymap,
           ":unitmap",
           unitmap
         )
@@ -3465,10 +3468,13 @@ export default class nx_tactics_base {
         const skillmap1 = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_skillmap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":skillmap")
         const skillmap2 = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_skillmap, "struct-2": nx_tactics_base.t_tactics}, merge, ":skillmap")
         const skillmap3 = vx_core.f_copy(skillmap1, skillmap2)
+        const specialtymap1 = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":specialtymap")
+        const specialtymap2 = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_tactics}, merge, ":specialtymap")
+        const specialtymap3 = vx_core.f_copy(specialtymap1, specialtymap2)
         const unitmap1 = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitmap, "struct-2": nx_tactics_base.t_tactics}, tactics, ":unitmap")
         const unitmap2 = vx_core.f_any_from_struct({"any-1": nx_tactics_base.t_unitmap, "struct-2": nx_tactics_base.t_tactics}, merge, ":unitmap")
         const unitmap3 = vx_core.f_copy(unitmap1, unitmap2)
-        return vx_core.f_new({"any-1": nx_tactics_base.t_tactics}, ":abilitymap", abilitymap3, ":bookmap", bookmap3, ":itemmap", itemmap3, ":placemap", placemap3, ":powermap", powermap3, ":rulemap", rulemap3, ":scenemap", scenemap3, ":skillmap", skillmap3, ":unitmap", unitmap3)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_tactics}, ":abilitymap", abilitymap3, ":bookmap", bookmap3, ":itemmap", itemmap3, ":placemap", placemap3, ":powermap", powermap3, ":rulemap", rulemap3, ":scenemap", scenemap3, ":skillmap", skillmap3, ":specialtymap", specialtymap3, ":unitmap", unitmap3)
       })
     )
     return output

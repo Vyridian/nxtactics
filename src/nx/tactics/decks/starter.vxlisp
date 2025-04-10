@@ -41,12 +41,6 @@
     * Between Games: Rotate this card 90 degrees and place it on top of all rotated card.
     * When Starting a game: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."))
 
-(func card-round-num : base/card
- [num : int]
- (base/card
-  :id (string "card-round-num-" num)
-  :name (string "Round #: " num)))
-
 (func card-skill : base/card
  [color : string
   num : int]
@@ -69,20 +63,6 @@
    "* Used when a [Skill] needs a [Target].
     * Place the Skill# card on the active Skill card and the matching Target# on the target."))
 
-(func card-turn-order : base/card
- [color : string
-  num   : int]
- (base/card
-  :id    (string "turn-order-" num)
-  :name  (string "Turn Order: Unit #" num)
-  :image (string "images/card-" color ".svg")
-  :summary
-   "* Reveal: Flip each card of [Turn Order] deck to form a row.
-    * Action 1: Simultaneously, each unit's controller chooses a target (or none) for this Round and places their Target card on that Turn Order card.
-    * Change 1: In order, each Unit may change their decision.
-    * Resolve 1: All Units act simultaneously. IF a Unit was targeted by a Unit with a lower Turn Order THEN they must wait for the targeting Unit to resolve. Note: lower order Units cannot be blocked by the movement of higher order Units.
-    * Action 2: Each unit's controller simulataneously chooses and resolves their second Action."))
-
 (func card-unit : base/card
  [color : string
   num   : int]
@@ -101,11 +81,6 @@
     (base/cardlist
      (card-player color 1)
      (card-rotated color 1)
-     (card-turn-order color 1)
-     (card-turn-order color 2)
-     (card-turn-order color 3)
-     (card-turn-order color 4)
-     (card-turn-order color 5)
      (card-unit color 1)
      (card-unit color 2)
      (card-unit color 3)
@@ -129,30 +104,3 @@
    :name "Player Deck"
    :image (string "images/card-" color ".svg")
    :cardmap cardmap)))
-
-(func deck-round : base/deck
- (base/deck
-  :id (string "deck-round")
-  :name "Round Deck"
-  :cardmap
-   (base/cardmap<-cardlist
-    (card-round-num 1)
-    (card-round-num 2)
-    (card-round-num 3)
-    (card-round-num 4)
-    (card-round-num 5)
-    (card-round-num 6)
-    (card-round-num 7)
-    (card-round-num 8)
-    (card-round-num 9)
-    (card-round-num 10)
-    (card-round-num 11)
-    (card-round-num 12)
-    (card-round-num 13)
-    (card-round-num 14)
-    (card-round-num 15)
-    (card-round-num 16)
-    (card-round-num 17)
-    (card-round-num 18)
-    (card-round-num 19)
-    (card-round-num 20))))

@@ -52,6 +52,7 @@ export default class nx_tactics_decks_item {
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Coins: Silver", ":image", "images/cards/item-coins-silver.svg", ":summary", "* A few (~5=$50) coins.\n* Spending money.\n* 10 Copper = 1 Silver\n* 10 Silver = 1 Gold\n* 2 nice meals, 3 bottles wine, round of drinks, a private room, week supplies, cheap gear.", ":body", "10x-2", ":mass", "100g/.2lb"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Grenade: White Phosphorous"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Hammer", ":image", "images/cards/item-hammer.svg", ":summary", "* [Combat]: [Melee]\n* [Damage]: [Body]:+3 [Bash]\n* [Location]: [1-hand]", ":body", "2x0", ":mass", "2kg/4.4lb"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Improvised Weapon", ":summary", "* Any item can be a weapon.\n* [Melee] or [Close Combat]: vs [Body]\n* [Damage]: [Body] Damage Types based on item."),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Jerry Can", ":image", "images/cards/item-jerrycan.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Keys", ":image", "images/cards/item-keys.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Knife", ":image", "images/cards/item-knife.svg", ":summary", "* [Combat]: [Close Combat]\n* [Damage]: [Body] [Pierce] [Slash]\n* [Location]: [1-hand]", ":body", "5x-1", ":mass", "500g/1lb", ":length", "25cm/10in"),

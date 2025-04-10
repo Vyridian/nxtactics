@@ -24,6 +24,7 @@
      (base/abilitylist<-tactics-keys
       tactics
       "Ambush"
+      "Camouflage"
       "Poison Bite"
       "Sneak"))
     (list<-list : base/cardlist

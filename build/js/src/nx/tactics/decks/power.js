@@ -23,6 +23,112 @@ export default class nx_tactics_decks_power {
   static f_powermap_tactics(tactics) {
     let output = nx_tactics_base.e_powermap
     output = nx_tactics_base.f_powermap_from_powerlist(
+      vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Aeromancy", ":summary", "* Aero is the magical version of Air.\n* Aero effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Aero reacts with Pyro to produce the [Wildfire] effect.\n* Aero reacts with Cryo to produce the [Chill] effect.\n* Aero reacts with Hydro to produce the [Fog] effect.\n* Aero reacts with Electro to produce the [Ionized] effect.\n* Aero reacts with Geo to produce the [Weightess] effect."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Dreaming",
+        ":reference",
+        "* I don't believe it.  That is why you fail.  Luke and Yoda - Empire Strikes Back",
+        ":summary",
+        "* This is the magical art of the [Fae].\n* Every child has a sense of wonder that comes with being new to the world. Adults must, of necessity, murder that special innocence in order to grow up.\n* When humanity turned its collective back on Dreaming, a terrible scourge of disbelief and negation smote the world. Hope, trust, and imagination were replaced with reason, pessimism, and scrutiny. By dismissing hope and faith, humanity avoids being hurt by its failure. Shutting out mystery and dreams anesthetizes fear, but deadens beauty as well and leads to apathy, callosuness, and close-mindedness. Though Banality is a mindless force, it is feared by the [Fae] more than any monster or villain. It is an enemy unlike anything the [Fae] have ever encountered, and they are largely helpless in its grasp.\n* Dreaming is never the same, so any Dreaming effect must be a uniquely crafted idea or it will automatically fail.",
+        ":titles",
+        "Glamour",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "As if in a Dream", "Concoct Dream Essence", "Create Chimera", "Down the Rabbit Hole", "Dreamcatching", "Dreamreading", "Dreamriding", "Dreamquest", "Dream Effectively", "Dream Riding", "Dream Sight", "Dream Speak", "Dream Weaving", "Epiphany", "Eyes of a Child", "Fond Memories", "Imaginary Friend", "Living Nightmare", "Nightmare Essence", "Pillow Fort", "Rapture", "Ravaging", "Reverie", "Seeming", "Shattered Dreams", "Wall of Wonders")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Electromancy",
+        ":reference",
+        "* Lightning is eternal, the world is but shadow. - Raiden Shogun, the Electro Archon, Genshin Impact",
+        ":summary",
+        "* Electro is the magical version of Electricity.\n* Electro effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Electro reacts with Pyro to produce the [Overload] effect.\n* Electro reacts with Cryo to produce the [Superconduct] effect.\n* Electro reacts with Hydro to produce the [Electrocharged] effect.\n* Electro reacts with Geo to produce the [Grounded] effect.\n* Electro reacts with Aero to produce the [Ionized] effect.\n* Electric Elementalist personalities are influenced by their link to Electricity.\n* Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung\n* Symbol - Yellow Lightning",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Absorb Electricity", "Arc Lightning", "Ball Lightning", "Body Electric", "Call Lightning", "Control Lightning", "Electromagnetic Pulse", "Lightning Charge", "Lightning Lash", "Lightning Pillar", "Lightning Warp", "Resist: Electricity")
+      ),
+      vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Geomancy", ":summary", "* Geo is the magical version of Earth.\n* Geo effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Geo reacts with Pyro to produce the [Overheat] effect.\n* Geo reacts with Cryo to produce the [Brittle] effect.\n* Geo reacts with Hydro to produce the [Quagmire] effect.\n* Geo reacts with Electro to produce the [Grounded] effect.\n* Geo reacts with Aero to produce the [Weightess] effect."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Pyromancy", ":summary", "* Pyro is the magical version of Earth.\n* Pyro effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Pyro reacts with Geo to produce the [Overheat] effect.\n* Pyro reacts with Cryo to produce the [Melt] effect.\n* Pyro reacts with Hydro to produce the [Vaporize] effect.\n* Pyro reacts with Electro to produce the [Overload] effect.\n* Pyro reacts with Aero to produce the [Wildfire] ability."),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Sorcery",
+        ":reference",
+        "* This is forbidden. This is a summoning. I cannot speak this!... There is no light here. You came to the darkness for knowledge... And all the knowledge you seek is here. Surrender. Speak the words. Call her home. By three thay come. By three thy way opens. By the blood of the willing. We call thee home. Hail, daughter of hatred. Hail, Lilith. - Diablo IV",
+        ":titles",
+        "Sorcerer, Sorceress, Sorceress Queen, Summoner",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Daedalus Gateway", "Dimension Door", "Dimensional Gateway", "Gateway", "Soul Pact", "Summon Demon", "Summon Devil", "Summon Familiar", "Summon Item")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Thaumaturgy",
+        ":summary",
+        "* The interface between Magic and Science. Mathematics, Biology, Geology and Chemistry are studied to manifest amazing creations.\n* Thaumaturgy can create permanent artificial life.\n* Thaumaturgy favors crytals and gemstones for power supplies.",
+        ":titles",
+        "The Art Mathematical, Wonder Working",
+        ":abilitymap",
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_abilitymap},
+          "Create Homunculus",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Create Homunculus"),
+          "Prepare Lightning in a Bottle",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prepare Lightning in a Bottle", ":summary", "* Create [Lightning in a Bottle].")
+        )
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Wizardry",
+        ":summary",
+        "* Conventional Wizardry believes that everything in the universe holds massive energy potential waiting to be unleashed.\n* Wizardry is the study of Magic itself. As such it is a sort of meta-Magic, focused on altering magical energies.",
+        ":titles",
+        "Archmagi, Magi, Wizard",
+        ":abilitymap",
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_abilitymap},
+          "Analyze Magic",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Analyze Magic", ":summary", "* Gain understanding of a magical item or effect."),
+          ":Counterspell",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Counterspell", ":summary", "* [Interrupt]: Roll a defense roll against a magical ability. If the defense succeeds, the ability has no effect."),
+          ":Dampen",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dampen", ":summary", "* Magic can easily be reduced since magic already has a tentative hold on reality."),
+          ":Dispel",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dispel", ":summary", "* Attack a placed magical ability.  Each hit weakens its abilities."),
+          ":Fork",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fork", ":summary", "* Duplicate an allied caster's magical ability. The other caster fully controls both abilities but may not aim both at the same target."),
+          ":Magnify",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Magnify", ":summary", "* Magnify draws from the potential energy in all things to increase the power in an existing force.\n* Note: Magic cannot be magnified. Magic only simulates reality and has no hidden reserves to tap.\n!Examples\n* An arrow can hit with devastating force.\n* A bird's weight can be increased so it falls.\n* A fire can be enhanced into an inferno while not burning fuel faster or producing additional smoke. The fuel has near infinite reserves to draw upon."),
+          "Mana Burn",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mana Burn"),
+          "Mana Leak",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mana Leak"),
+          "Mana Shield",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mana Shield", ":summary", "* Forms an transparent crytal shell in front of the caster, but if they moves, the shield will drop.\n* [Defend]: Protected with level Armor from all [Physical] [Damage]."),
+          "Mirror Shield",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mirror Shield", ":summary", "* Forms an transparent crytal shell in front of the caster, but if they moves, the shield will drop.\n* [Defend]: If defender was targetted by an [Energy] attack lower than level, the Attacker also suffers the attack.\n* Wall that reflects attacks back to its source."),
+          "Mirror Wall",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mirror Wall", ":summary", "* Wall that reflects [Energy] attacks lower than level back to their source. Any attack higher than level will destoy the Wall."),
+          "Paradigm Shift",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paradigm Shift", ":summary", "* Change one rule of nature for a moment."),
+          "Power Sink",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Power Sink"),
+          "Power Surge",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Power Surge"),
+          ":Redirect",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Redirect", ":summary", "* [Reaction]: Redirect an Energy or Physical Ranged attack that has a single target to another target."),
+          ":Stasis",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stasis", ":summary", "* Place an equal number of White Stasis Tokens on yourself and your target."),
+          "White Noise",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "White Noise", ":summary", "Sounds are garbled preventing eavesdropping"),
+          "Wizard Armor",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wizard Armor", ":summary", "* Defense against Energy that creates [Feedback]."),
+          "Wizard Lock",
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wizard Lock", ":summary", "* Wizard Lock alters an existing magical effect by freezing it in place. It becomes permanent until dispelled, but it no longer has an active effect. In this way a wall of fire would be a permanent wall that does not move or produce heat. This is often used to make a seal last indefinitely.")
+        )
+      ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
@@ -50,6 +156,17 @@ export default class nx_tactics_decks_power {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
+        "Electricity",
+        ":summary",
+        "* Electric Elementalist personalities are influenced by their link to Electricity.\n* Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung",
+        ":titles",
+        "Lightning",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Absorb Electricity", "Arc Lightning", "Ball Lightning", "Body Electric", "Call Lightning", "Control Lightning", "Electromagnetic Pulse", "Lightning Charge", "Lightning Lash", "Lightning Pillar", "Lightning Warp", "Resist: Electricity")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
         "Genius",
         ":titles",
         "Genius, Prodigy, Savant, Super Genius",
@@ -64,6 +181,13 @@ export default class nx_tactics_decks_power {
         "Ground Movement",
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "2-Legged", "3-Legged", "4-Legged", "6-Legged", "8-Legged", "Hover", "Jump Jets", "Off Roading", "Snowcraft", "Tracked", "Turbo Booster", "Wheeled")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Healing",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Lernaean Regeneration", "Regeneration", "Regrowth")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
@@ -94,6 +218,13 @@ export default class nx_tactics_decks_power {
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},
         ":name",
+        "Movement",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Wall Crawling", "Wall Running", "Water Walking", "Water Running")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
         "Natural Weaponry",
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Bite", "Bull Rush", "Burrowing", "Claw", "Claw Rake", "Constrict", "Death Roll", "Feather Blades", "Feather Knives", "Horns", "Jaw Lock", "Jaws of Death", "Neck Bite", "Overwhelm", "Pounce", "Quill Attack", "Ripping Bite", "Savage Genitalia", "Spines", "Sting", "Swallow Whole", "Tail Sweep", "Tongue Lash", "Trample", "Tusk Gore")
@@ -118,6 +249,24 @@ export default class nx_tactics_decks_power {
         "Will",
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Ego Whip", "Psychic Duel", "Psychic Knife", "Tower of Iron Will")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Shielding",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Shield Modulation", "Shield Redirection")
+      ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_power},
+        ":name",
+        "Strength",
+        ":reference",
+        "* Technique is for lightweights. - Sett, Runeterra",
+        ":stat",
+        "Body",
+        ":abilitymap",
+        nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Power Leap", "Power Lift", "Power Strike", "Power Throw", "Shockwave", "Thunderclap")
       ),
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_power},

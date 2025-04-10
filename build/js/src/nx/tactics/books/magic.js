@@ -8,6 +8,7 @@ export default class nx_tactics_books_magic {
 
   /**
    * @function chapter_magic_items
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_magic_items = {
@@ -18,7 +19,7 @@ export default class nx_tactics_books_magic {
   }
 
   // (func chapter_magic_items)
-  static f_chapter_magic_items() {
+  static f_chapter_magic_items(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -27,7 +28,9 @@ export default class nx_tactics_books_magic {
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        ":Garb",
+        "Magic Items",
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Magic Items", ":summary", "* Magic Weapons ignore armor equal to their + value.\n* Magic Armor ignores damage equal to their + value."),
+        "Garb",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -103,18 +106,19 @@ export default class nx_tactics_books_magic {
   }
 
   /**
-   * @function chapter_magical_skills
+   * @function chapter_magic_skills
+   * @param  {tactics} tactics
    * @return {chapter}
    */
-  static t_chapter_magical_skills = {
+  static t_chapter_magic_skills = {
     vx_type: vx_core.t_type
   }
-  static e_chapter_magical_skills = {
-    vx_type: nx_tactics_books_magic.t_chapter_magical_skills
+  static e_chapter_magic_skills = {
+    vx_type: nx_tactics_books_magic.t_chapter_magic_skills
   }
 
-  // (func chapter_magical_skills)
-  static f_chapter_magical_skills() {
+  // (func chapter_magic_skills)
+  static f_chapter_magic_skills(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -123,8 +127,6 @@ export default class nx_tactics_books_magic {
       ":sectionmap",
       vx_core.f_new(
         {"any-1": nx_tactics_base.t_sectionmap},
-        "Magic Items",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Magic Items", ":summary", "* Magic Weapons ignore armor equal to their + value.\n* Magic Armor ignores damage equal to their + value."),
         "Arcane Magic",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
@@ -440,108 +442,12 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Guards and Wards")
               )
             ),
-            ":Sorcery",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Sorcery",
-              ":reference",
-              "* This is forbidden. This is a summoning. I cannot speak this!... There is no light here. You came to the darkness for knowledge... And all the knowledge you seek is here. Surrender. Speak the words. Call her home. By three thay come. By three thy way opens. By the blood of the willing. We call thee home. Hail, daughter of hatred. Hail, Lilith. - Diablo IV",
-              ":titles",
-              "Sorcerer, Sorceress, Sorceress Queen, Summoner",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Daedalus Gateway",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Daedalus Gateway", ":summary", "* A subtle gate that moves a person to a different Realm without them realizing. Both locations must be nearly identical."),
-                "Dimension Door",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dimension Door", ":summary", "* Cross through a doorway or arch of some sort and appear through another similar arch some distance away."),
-                "Dimensional Gateway",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dimensional Gateway", ":summary", "* Open a portal to another dimension."),
-                ":Gateway",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Gateway", ":summary", "* Open a portal to another location."),
-                "Soul Pact",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Soul Pact", ":summary", "* Death: Enter a specified Demon Realm. This ability is automatic and is not optional."),
-                "Summon Demon",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Summon Demon", ":titles", "Demonic Summoning"),
-                "Summon Devil",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Summon Devil", ":titles", "Diabolic Summoning"),
-                "Summon Familiar",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Summon Familiar", ":reference", "* Animal companions, such as cats, that are either trained to assist in magic, or are used as a mascot.", ":summary", "* Summon an animal shaped familiar spirit to serve as a companion, servant, spy, etc.\n* The Familiar is highly intelligent and must be bargained with before it agrees to serve.\n* Duration: Indefinite.\n* The Familiar will age with its master.\n* The Familiar can gain abilities that its master possesses.\n* Three mystic cords are constructed to link the Familiar to its master.\n** Golden Cord - Connects magical abilities.\n** Silver Cord - Connects the minds.\n** Bronze Cord - Connects the bodies.\n!Familiar Skills\n* Shapechange to Human Form\n* Giant Growth (Self)\n* Communicate with Master\n* Speech"),
-                "Summon Item",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Summon Item", ":summary", "* A single item may be attuned to a summoning. Later that item may be summoned to the owner's hand.")
-              )
-            ),
-            ":Thaumaturgy",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Thaumaturgy",
-              ":summary",
-              "* The interface between Magic and Science. Mathematics, Biology, Geology and Chemistry are studied to manifest amazing creations.\n* Thaumaturgy can create permanent artificial life.\n* Thaumaturgy favors crytals and gemstones for power supplies.",
-              ":titles",
-              "The Art Mathematical, Wonder Working",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Create Homunculus",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Create Homunculus"),
-                "Prepare Lightning in a Bottle",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Prepare Lightning in a Bottle", ":summary", "* Create [Lightning in a Bottle].")
-              )
-            ),
-            ":Wizardry",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Wizardry",
-              ":summary",
-              "* Conventional Wizardry believes that everything in the universe holds massive energy potential waiting to be unleashed.\n* Wizardry is the study of Magic itself. As such it is a sort of meta-Magic, focused on altering magical energies.",
-              ":titles",
-              "Archmagi, Magi, Wizard",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Analyze Magic",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Analyze Magic", ":summary", "* Gain understanding of a magical item or effect."),
-                ":Counterspell",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Counterspell", ":summary", "* [Interrupt]: Roll a defense roll against a magical ability. If the defense succeeds, the ability has no effect."),
-                ":Dampen",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dampen", ":summary", "* Magic can easily be reduced since magic already has a tentative hold on reality."),
-                ":Dispel",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dispel", ":summary", "* Attack a placed magical ability.  Each hit weakens its abilities."),
-                ":Fork",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fork", ":summary", "* Duplicate an allied caster's magical ability. The other caster fully controls both abilities but may not aim both at the same target."),
-                ":Magnify",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Magnify", ":summary", "* Magnify draws from the potential energy in all things to increase the power in an existing force.\n* Note: Magic cannot be magnified. Magic only simulates reality and has no hidden reserves to tap.\n!Examples\n* An arrow can hit with devastating force.\n* A bird's weight can be increased so it falls.\n* A fire can be enhanced into an inferno while not burning fuel faster or producing additional smoke. The fuel has near infinite reserves to draw upon."),
-                "Mana Burn",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mana Burn"),
-                "Mana Leak",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mana Leak"),
-                "Mana Shield",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mana Shield", ":summary", "* Forms an transparent crytal shell in front of the caster, but if they moves, the shield will drop.\n* [Defend]: Protected with level Armor from all [Physical] [Damage]."),
-                "Mirror Shield",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mirror Shield", ":summary", "* Forms an transparent crytal shell in front of the caster, but if they moves, the shield will drop.\n* [Defend]: If defender was targetted by an [Energy] attack lower than level, the Attacker also suffers the attack.\n* Wall that reflects attacks back to its source."),
-                "Mirror Wall",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Mirror Wall", ":summary", "* Wall that reflects [Energy] attacks lower than level back to their source. Any attack higher than level will destoy the Wall."),
-                "Paradigm Shift",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Paradigm Shift", ":summary", "* Change one rule of nature for a moment."),
-                "Power Sink",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Power Sink"),
-                "Power Surge",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Power Surge"),
-                ":Redirect",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Redirect", ":summary", "* [Reaction]: Redirect an Energy or Physical Ranged attack that has a single target to another target."),
-                ":Stasis",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Stasis", ":summary", "* Place an equal number of White Stasis Tokens on yourself and your target."),
-                "White Noise",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "White Noise", ":summary", "Sounds are garbled preventing eavesdropping"),
-                "Wizard Armor",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wizard Armor", ":summary", "* Defense against Energy that creates [Feedback]."),
-                "Wizard Lock",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wizard Lock", ":summary", "* Wizard Lock alters an existing magical effect by freezing it in place. It becomes permanent until dispelled, but it no longer has an active effect. In this way a wall of fire would be a permanent wall that does not move or produce heat. This is often used to make a seal last indefinitely.")
-              )
-            )
+            "Sorcery",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Sorcery"),
+            "Thaumaturgy",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Thaumaturgy"),
+            "Wizardry",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Wizardry")
           )
         ),
         "Black Magic",
@@ -946,11 +852,7 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Blessing against Weapons", ":summary", "* [Focus]: +1 [Defense] and +1 [Armor] vs. melee weapons. Unarmed combat is unaffected.")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                "Enhance Blessing",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Enhance Blessing", ":summary", "* When user activates a Blessing on an item, that Blessing has increased effect.")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Enhance Blessing")
             ),
             ":Divine",
             vx_core.f_new(
@@ -1482,91 +1384,11 @@ export default class nx_tactics_books_magic {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wyrding")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Hepatomancy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Hepatomancy", ":summary", "* The art of divining the future through the examination of a creature's entrails."),
-                ":Numerology",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Numerology", ":summary", "* The art of divining the future through the examination of numbers and dates."),
-                ":Osteomancy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Osteomancy", ":summary", "* The art of divining the future through decaying bones."),
-                "Rune Casting",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Rune Casting", ":summary", "* The art of divining the future through the throwing of small tiles with runes on them."),
-                ":Scrying",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Scrying", ":summary", "* This is the art of divining by gazing into a reflecting surface."),
-                ":Tasseomancy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Tasseomancy", ":summary", "* Reading the patterns of tea leaves or coffee grounds left after the person drink it.")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Hepatomancy", "Numerology", "Osteomancy", "Rune Casting", "Scrying", "Tasseomancy")
             ),
-            ":Dreaming",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Dreaming",
-              ":reference",
-              "* I don't believe it.  That is why you fail.  Luke and Yoda - Empire Strikes Back",
-              ":summary",
-              "* This is the magical art of the [Fae].\n* Every child has a sense of wonder that comes with being new to the world. Adults must, of necessity, murder that special innocence in order to grow up.\n* When humanity turned its collective back on Dreaming, a terrible scourge of disbelief and negation smote the world. Hope, trust, and imagination were replaced with reason, pessimism, and scrutiny. By dismissing hope and faith, humanity avoids being hurt by its failure. Shutting out mystery and dreams anesthetizes fear, but deadens beauty as well and leads to apathy, callosuness, and close-mindedness. Though Banality is a mindless force, it is feared by the [Fae] more than any monster or villain. It is an enemy unlike anything the [Fae] have ever encountered, and they are largely helpless in its grasp.\n* Dreaming is never the same, so any Dreaming effect must be a uniquely crafted idea or it will automatically fail.",
-              ":titles",
-              "Glamour",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "As if in a Dream",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "As if in a Dream", ":summary", "* Confuse a target's senses to perceive a single thing incorrectly."),
-                "Concoct Dream Essence",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Concoct Dream Essence", ":summary", "* Dreams caught with [Dreamcatching] can be contained in a bottle called [Dream Essence]. Opening the bottle releases the experience of the dream to all surrounding it."),
-                "Create Chimera",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Create Chimera", ":summary", "A Chimera is an imaginary creation. It exists only to the user, though those with magical abilities, young children and the mentally impaired may see them. They only can affect those who can see them."),
-                "Down the Rabbit Hole",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Down the Rabbit Hole", ":summary", "* [Requires]: A hole that leads somewhere unknown.\n* [Action]: By entering a hole, the Dreamer may travel to the [Spirit Realm].  If the Dreamer is a native of the [Spirit Realm], he may stay as long as he wants. If not, he will return to the real world after [Skill] hours as if waking from a dream."),
-                ":Dreamcatching",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dreamcatching"),
-                ":Dreamreading",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dreamreading", ":summary", "[Hour]: By sleeping next to a dreamer, you may witness their dreams and interpret them. You may also return to previous dreams."),
-                ":Dreamriding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dreamriding", ":summary", "[Hour]: By sleeping next to a dreamer, you may participate in their dreams."),
-                ":Dreamquest",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dreamquest", ":summary", "* [Requires]: Sleeping\n* [Action]: While asleep, Spirit enters the [Spirit Realm].  The Spirit may travel as long as it wants, but whenever the Body awakens, the Spirit immediately returns.\n* [Death]: Spirit may permanently enter the [Spirit Realm]."),
-                "Dream Effectively",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dream Effectively", ":reference", "* I was just thinking. Wouldn't it be funny if I wasn't the only one who could dream effectively? What if everybody could do it? And reality was being pulled out from under us all the time - and we didn't even know it? - George Orr, The Lathe of Heaven\n* Oh, my God... I just killed six billion people... - George Orr, The Lathe of Heaven"),
-                "Dream Riding",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dream Riding", ":summary", "* Ability to enter another person's dream."),
-                "Dream Sight",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dream Sight"),
-                "Dream Speak",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dream Speak", ":summary", "* Grants the ability to converse with things that cannot normally speak including plants, animals, and inanimate objects. Such beings have knowledge and personalities limited by their natures."),
-                "Dream Weaving",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dream Weaving", ":reference", "* She was shaping a world. She could envision the world, feel the spring of the earth beneath her bare feet, the warmth of the sun, the vibrant green of the grass, the hazy blue of distant mountains. 'Do you feel it?' 'Yes.' 'Then make it real.' She brought all of her will to paint all the details of the dream onto a new reality. She opened her eyes and gazed out upon the land she had already seen in her mind. It was so beautiful it took her breath away ... and failed to return it. She gasped as her lungs emptied and her vision faded to black ... 'A useful lesson. You forgot to breathe in the scents of your world that would indicate air. Remember even the smallest detail is crucial.' - Tales of Magick"),
-                ":Epiphany",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Epiphany", ":summary", "* A moment of ecstasy, delight, and intense revelation. During epiphanies, disparate things suddenly synchronize and make sense. Ephipanies often trigger major changes in personality or goals."),
-                "Eyes of a Child",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Eyes of a Child", ":summary", "* All Chimera become visible to those you chose."),
-                "Fond Memories",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fond Memories", ":reference", "Eternal Sunshine of the Spotless Mind", ":summary", "* This ability makes every childhood dream and ambition real again. Every imaginary friend is remembered clearly and the happiest moments from youth return with the intensity of a first kiss and the excitement of Christmas. Then, suddenly, its over. In their absence, depression can crash down.  Truly fallen beings can become suicidal. The remembrance can be uplifting in the end, allowing one to relive the best moments of life."),
-                "Imaginary Friend",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Imaginary Friend", ":reference", "* As I was walking up the stair, I met a man who wasn't there. He wasn't there again today. If only he would go away. - Children's Nursery Rhyme\n* Mother, do you remember when I was little, I had a friend, he was make-believe? No. Don't you remember? Only I could see him? No, I don't remember Drop Dead Fred at all. - Drop Dead Fred\n* Let's write something on the carpet... I know how about 'Mother SUCKS'. - Drop Dead Fred", ":summary", "Create a character with a distinct personality of your choice that only the target can see."),
-                "Living Nightmare",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Living Nightmare", ":summary", "* A chimerical monster formed from nightmares or madness.", ":titles", "Waking Nightmare"),
-                "Nightmare Essence",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Nightmare Essence", ":summary", "* Nightmares caught with [Dreamcatching] can be contained in a bottle. Opening the bottle releases the experience of the dream to all surrounding it. These can be used as grenades."),
-                "Pillow Fort",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pillow Fort", ":summary", "* By exercising one's imagination, a soft barrier can provide real defense but only for the Dreamer.\n* [Action]: Any material may be chosen to provide [Skill] defense for the user."),
-                ":Rapture",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Rapture", ":summary", "* An extremely difficult and rare ability of self-discovery to create Glamour from oneself. Only at a moment of sudden self-realization can a Rapture be attained.\n* [Passive] - While in a Rapture, all [Critical] results generate [Glamour Token]s."),
-                ":Ravaging",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ravaging", ":summary", "* Drain creativity from a subject. The subject must be well known and a good knowledge of how the subject dreams is required. After that, the subject must simply be touched and he/she will experience a wave of depression and fear as the Glamour is drained from them.\n* [Action]: Touch the subject. Roll [Banality]. Gain +1 [Glamour Token] if any successes. If no [Glamour] is gained, both the user and subject gain +1 [Banality] instead."),
-                ":Reverie",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Reverie", ":summary", "* Say or suggest things that inspire others to wonderful ideas and creations. This is a time-consuming process to discover they subtle things that inspire another to great works.\n* [Extended Action]: Inspire someone while they create.\n* [Action]: View a work of art created during Reverie. Gain +1 [Glamour Token]. A particular work of art may only grant this bonus once a year.", ":titles", "Muse"),
-                ":Seeming",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Seeming", ":summary", "* Take on the appearance of another."),
-                "Shattered Dreams",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Shattered Dreams"),
-                "Wall of Wonders",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wall of Wonders", ":summary", "* A wall of dreams. Causes [Fascination] in those who view it.")
-              )
-            ),
-            ":Enchantment",
+            "Dreaming",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Dreaming"),
+            "Enchantment",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
               ":name",
@@ -1690,9 +1512,9 @@ export default class nx_tactics_books_magic {
         "Magic Overview",
         nx_tactics_books_magic.f_chapter_magic_overview(),
         "Magical Skills",
-        nx_tactics_books_magic.f_chapter_magical_skills(),
+        nx_tactics_books_magic.f_chapter_magic_skills(tactics),
         "Magic Items",
-        nx_tactics_books_magic.f_chapter_magic_items()
+        nx_tactics_books_magic.f_chapter_magic_items(tactics)
       )
     )
     return output
@@ -1707,13 +1529,13 @@ export default class nx_tactics_books_magic {
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
       "chapter_magic_items": nx_tactics_books_magic.e_chapter_magic_items,
       "chapter_magic_overview": nx_tactics_books_magic.e_chapter_magic_overview,
-      "chapter_magical_skills": nx_tactics_books_magic.e_chapter_magical_skills,
+      "chapter_magic_skills": nx_tactics_books_magic.e_chapter_magic_skills,
       "tacticsbook": nx_tactics_books_magic.e_tacticsbook
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "chapter_magic_items": nx_tactics_books_magic.t_chapter_magic_items,
       "chapter_magic_overview": nx_tactics_books_magic.t_chapter_magic_overview,
-      "chapter_magical_skills": nx_tactics_books_magic.t_chapter_magical_skills,
+      "chapter_magic_skills": nx_tactics_books_magic.t_chapter_magic_skills,
       "tacticsbook": nx_tactics_books_magic.t_tacticsbook
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -1764,9 +1586,9 @@ export default class nx_tactics_books_magic {
       fn            : nx_tactics_books_magic.f_chapter_magic_overview
     }
 
-    // (func chapter_magical_skills)
-    nx_tactics_books_magic.t_chapter_magical_skills['vx_value'] = {
-      name          : "chapter_magical_skills",
+    // (func chapter_magic_skills)
+    nx_tactics_books_magic.t_chapter_magic_skills['vx_value'] = {
+      name          : "chapter_magic_skills",
       pkgname       : "nx/tactics/books/magic",
       extends       : ":func",
       idx           : 0,
@@ -1779,7 +1601,7 @@ export default class nx_tactics_books_magic {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_books_magic.f_chapter_magical_skills
+      fn            : nx_tactics_books_magic.f_chapter_magic_skills
     }
 
     // (func tacticsbook)

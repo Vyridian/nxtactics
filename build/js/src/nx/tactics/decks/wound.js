@@ -689,13 +689,13 @@ export default class nx_tactics_decks_wound {
     }
 
     // (const bleeding)
-    Object.assign(nx_tactics_decks_wound.c_bleeding, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "bleeding", ":name", "Bleeding", ":image", "images/card-bleeding.svg", ":summary", "* Turn End: Gain a [Fatigue] for each [Bleeding]. If [Body]:0, then gain a [Blood Loss] instead."))
+    Object.assign(nx_tactics_decks_wound.c_bleeding, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "bleeding", ":name", "Bleeding", ":image", "images/card-bleeding.svg", ":summary", "* Turn End: [Fatigue]:1 for each [Bleeding]. IF [Body]:0 THEN [Blood Loss]:1 instead."))
 
     // (const bloodloss)
-    Object.assign(nx_tactics_decks_wound.c_bloodloss, vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "bloodloss", ":name", "Bloodloss", ":image", "images/card-bloodloss.svg", ":summary", "* Day End: Discard one [Bloodloss]"))
+    Object.assign(nx_tactics_decks_wound.c_bloodloss, vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "bloodloss", ":name", "Blood Loss", ":image", "images/card-bloodloss.svg", ":summary", "* Day End: Discard one [Blood Loss]"))
 
     // (const fatigue)
-    Object.assign(nx_tactics_decks_wound.c_fatigue, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "fatigue", ":name", "Damage: Fatigue", ":titles", "Physical Damage/Fatigue/Weaken/Exertion", ":image", "images/card-wound-fatigue.svg", ":summary", "* Fatigue: temporary weaknesss or exertion.\n* Wound: lasting damage and can be [Bash], [Hack], [Pierce], [Slash].\n* If [Body]:0 then gain [Exhausted].\n* [Exhausted]: Cannot play odd [Attack] cards. Second action may only be [Recover]. Additional [Fatigue] is flipped to Wound."))
+    Object.assign(nx_tactics_decks_wound.c_fatigue, vx_core.f_new({"any-1": nx_tactics_base.t_cardback}, ":id", "fatigue", ":name", "Damage: Fatigue", ":titles", "Physical Damage/Fatigue/Weaken/Exertion", ":image", "images/card-wound-fatigue.svg", ":summary", "* Fatigue: temporary weaknesss or exertion.\n* Wound: lasting damage and can be [Bash], [Hack], [Pierce], [Slash].\n* IF [Body]:0 THEN [Exhausted].\n* [Exhausted]: [Disadvantage]. Must [Recover] once each [Round]. Extra [Fatigue] are Wounds instead."))
 
     // (const poisoned)
     Object.assign(nx_tactics_decks_wound.c_poisoned, vx_core.f_new({"any-1": nx_tactics_base.t_card}, ":id", "poisoned", ":name", "Poisoned", ":image", "images/card-poisoned.svg"))
@@ -1215,8 +1215,10 @@ export default class nx_tactics_decks_wound {
       nx_tactics_base.c_ranksuit_ah,
       ":image",
       "images/card-wound-head.svg",
+      ":reference",
+      "* Not the face!",
       ":summary",
-      "Minor: Head Graze. Stun:1\nMajor: Head Slash. Slow:1 Bleeding:1\nCritical: Neck Fracture. Immobilized. Slow:3 Bleeding:1\nExtreme: Spine Severed. Paralyzed. Stress:3 Bleeding:2"
+      "Minor: Head Graze. Stress:1\nMajor: Head Slash. Slow:1 Bleeding:1\nCritical: Neck Fracture. Immobilized. Slow:3 Bleeding:1\nExtreme: Spine Severed. Paralyzed. Stress:3 Bleeding:2"
     ))
 
     // (const wound-as)
@@ -1274,7 +1276,7 @@ export default class nx_tactics_decks_wound {
       ":image",
       "images/card-wound-abdomen.svg",
       ":summary",
-      "Minor: Glance off Hip. Bleeding:1\nMajor: Stomach Cut. Bleeding:1 Stress: 1\nCritical: Kidney Damage. Slow:1 Bleeding:1 Fatigue:2\nExtreme: Renal Failure: Dying. Fatigue:3 Stress:2"
+      "Minor: Glance off Hip. Bleeding:1\nMajor: Stomach Cut. Bleeding:1 Stress:1\nCritical: Kidney Damage. Slow:1 Bleeding:1 Fatigue:2\nExtreme: Renal Failure: Dying. Fatigue:3 Stress:2"
     ))
 
     // (const wound-js)
@@ -1386,7 +1388,7 @@ export default class nx_tactics_decks_wound {
       ":image",
       "images/card-wound-chest.svg",
       ":summary",
-      "Minor: Chest Cut. Bleeding:1\nMajor: Chest Slash. Bleeding:1 Push:1\nCritical: Collapsed Lung. Hobbled. Slow:2 Push:1\nExtreme: Lungs Collapsed. Dying. Hobbled. Stress: 4"
+      "Minor: Chest Cut. Bleeding:1\nMajor: Chest Slash. Bleeding:1 Push:1\nCritical: Collapsed Lung. Hobbled. Slow:2 Push:1\nExtreme: Lungs Collapsed. Dying. Hobbled. Stress:4"
     ))
 
     // (const wound-qs)
@@ -1401,7 +1403,7 @@ export default class nx_tactics_decks_wound {
       ":image",
       "images/card-wound-chest.svg",
       ":summary",
-      "Minor: Chest Cut. Bleeding:1\nMajor: Chest Slash. Slow:1 Bleeding:1\nCritical: Long Chest Slash. Slow:2 Bleeding:2\nExtreme: Spine Severed. [Paralyzed]. Stress: 4"
+      "Minor: Chest Cut. Bleeding:1\nMajor: Chest Slash. Slow:1 Bleeding:1\nCritical: Long Chest Slash. Slow:2 Bleeding:2\nExtreme: Spine Severed. [Paralyzed]. Stress:4"
     ))
 
     // (const wound-tc)

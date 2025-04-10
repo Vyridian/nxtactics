@@ -1808,6 +1808,8 @@
    abilitymap : abilitymap :=
     (abilitymap<-abilitylist
      abilitylist3)
+   specialtymap : specialtymap :=
+    (:specialtymap tactics)
    unitlist : unitlist :=
     (unitlist<-sectionlist
      sectionlist)
@@ -1816,14 +1818,15 @@
      unitlist)
    tacticsbook : tactics :=
     (tactics
-     :abilitymap  abilitymap
-     :bookmap     bookmap
-     :itemmap     itemmap
-     :placemap    placemap
-     :powermap    powermap
-     :scenemap scenemap
-     :skillmap    skillmap
-     :unitmap     unitmap)]
+     :abilitymap   abilitymap
+     :bookmap      bookmap
+     :itemmap      itemmap
+     :placemap     placemap
+     :powermap     powermap
+     :scenemap     scenemap
+     :skillmap     skillmap
+     :specialtymap specialtymap
+     :unitmap      unitmap)]
   (tactics<-tactics-merge
    tactics
    tacticsbook))
@@ -1857,19 +1860,23 @@
    skillmap1 : skillmap := (:skillmap tactics)
    skillmap2 : skillmap := (:skillmap merge)
    skillmap3 : skillmap := (copy skillmap1 skillmap2)
+   specialtymap1 : specialtymap := (:specialtymap tactics)
+   specialtymap2 : specialtymap := (:specialtymap merge)
+   specialtymap3 : specialtymap := (copy specialtymap1 specialtymap2)
    unitmap1 : unitmap := (:unitmap tactics)
    unitmap2 : unitmap := (:unitmap merge)
    unitmap3 : unitmap := (copy unitmap1 unitmap2)]
   (tactics
-   :abilitymap abilitymap3
-   :bookmap    bookmap3
-   :itemmap    itemmap3
-   :placemap   placemap3
-   :powermap   powermap3
-   :rulemap    rulemap3
-   :scenemap   scenemap3
-   :skillmap   skillmap3
-   :unitmap    unitmap3))
+   :abilitymap   abilitymap3
+   :bookmap      bookmap3
+   :itemmap      itemmap3
+   :placemap     placemap3
+   :powermap     powermap3
+   :rulemap      rulemap3
+   :scenemap     scenemap3
+   :skillmap     skillmap3
+   :specialtymap specialtymap3
+   :unitmap      unitmap3))
  :doc "Returns a tactics with all maps merged with merge.")
 
 (func unit<-tactics-key : unit

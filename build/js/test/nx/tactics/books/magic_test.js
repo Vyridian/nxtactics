@@ -52,7 +52,7 @@ export default class nx_tactics_books_magic_test {
           vx_core.t_intmap,
           "chapter_magic_items", 0,
           "chapter_magic_overview", 0,
-          "chapter_magical_skills", 0,
+          "chapter_magic_skills", 0,
           "tacticsbook", 0
         )
     )

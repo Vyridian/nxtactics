@@ -267,34 +267,10 @@
              (base/ability
               :name "Zero G"))
           :specialtymap
-           (specialtymap
-            :Acrobatics
-             (specialty
-              :name "Acrobatics"
-              :summary
-               "* Balance
-                * Breakfall
-                * Contortion
-                * Escape Artistry
-                * Gymnastics
-                * High Jump
-                * Kippup
-                * Long Jump
-                * Tightrope
-                * Throw
-                * Tumbling
-                * Wall Spring
-                * Zero G"
-              :titles "Acrobat, Contortionist, Escape Artist, Jester")
-            :Climbing
-             (specialty
-              :name "Climbing"
-              :summary
-               "* Ice Climbing
-                * Rappelling
-                * Rock Climbing
-                * Tree Climbing
-                * Wall Climbing")))
+           (base/specialtymap<-tactics-keys
+            tactics
+            "Acrobatics"
+            "Climbing"))
         :Hunting
          (base/skill<-tactics-key tactics "Hunting")
         :Rage
@@ -446,15 +422,15 @@
              (base/ability
               :name "Parallel Parking"))
           :specialtymap
-           (specialtymap
+           (base/specialtymap
             :Motorcycles
-             (specialty
+             (base/specialty
               :name "Motorcycles")
             :Trucks
-             (specialty
+             (base/specialty
               :name "Trucks")
             "Construction Vehicles"
-             (specialty
+             (base/specialty
               :name "Construction Vehicles")))
         :Piloting
          (base/skill
@@ -582,16 +558,11 @@
                "* If the unit has wings, it must have this ability or fly at a penalty.
                 * If the unit grew up with wings, this ability is assumed."))
           :specialtymap
-           (specialtymap
-            "Civilian Airplanes"
-             (specialty
-              :name "Civilian Airplanes")
-            "Commercial Airplanes"
-             (specialty
-              :name "Commercial Airplanes")
-            :Helicopters
-             (specialty
-              :name "Helicopters")))
+           (base/specialtymap<-tactics-keys
+            tactics
+            "Airplanes: Civilian"
+            "Airplanes: Commercial"
+            "Helicopters"))
         :Riding
          (base/skill
           :name "Riding"
@@ -967,13 +938,10 @@
              (base/ability
               :name "World History"))
           :specialtymap
-           (specialtymap
-            :History
-             (specialty
-              :name "History")
-            :Trivia
-             (specialty
-              :name "Trivia")))
+           (base/specialtymap<-tactics-keys
+            tactics
+            "History"
+            "Trivia"))
         :Mechanics
          (base/skill
           :name "Mechanics"
@@ -1655,18 +1623,10 @@
              (base/ability
               :name "Ventriloquism"))
           :specialtymap
-           (specialtymap
-            :Thievery
-             (specialty
-              :name "Thievery"
-              :reference "This is where Forrestall cashed in.  A friend of yours?  A competitor... he was good. He was very good. - Indiana Jones, Raiders of the Lost Ark"
-              :summary "* Burglary, Escape, Fence Goods, Honor Among Thieves, Pick Pockets, Smuggling, Thieves Guild Codes"
-              :titles "Burglar, Cutpurse, Footpad, Nezumi kozo, Pick Pocket, Smuggler, Thief")
-            :Trickery
-             (specialty
-              :name "Trickery"
-              :summary "* Blinding Powder, Confidence Game, Decoy, Distraction, Flash Powder, Gambling, Irritating Powder, Misdirection, Sleight of Hand, Stage Magic, Swindling, Vanish, Ventriloquism"
-              :titles "Blackguard, Caitiff, Charlatan, Con Artist, Delinquent, Gambler, Knave, Ne'er do well, Ninja, Rapscallion, Renegade, Riffraff, Rogue, Scoundrel, Scalawag, Stage Magician, Swashbuckler, Swindler, Trickster")))
+           (base/specialtymap<-tactics-keys
+            tactics
+            "Thievery"
+            "Trickery"))
         :Espionage
          (base/skill
           :name "Espionage"
@@ -1940,15 +1900,10 @@
              (base/ability
               :name "Windfall"))
           :specialtymap
-           (specialtymap
-            :Nobility
-             (specialty
-              :name "Nobility"
-              :titles "Noble Lineage")
-            :Royalty
-             (specialty
-              :name "Royalty"
-              :titles "Royal Lineage")))
+           (base/specialtymap<-tactics-keys
+            tactics
+            "Nobility"
+            "Royalty"))
         :Intimidation
          (base/skill
           :name "Intimidation"
@@ -2239,33 +2194,12 @@
              (base/ability
               :name "Work Song"))
           :specialtymap
-           (specialtymap
-            :Courtesan
-             (specialty
-              :name "Courtesan"
-              :reference "* Madame Kaji: We've been servicing the road-weary crotches of every man here to pay obeisance to your new family. You need service only one, freshly washed. Akemi: You don't understand. Madame Kaji: That he's a beast. He's weak. He's a man. All men are weak. The ones who act beastly are weakest. They penetrate women and think that makes them powerful. Really, their pricks are fragile. Exposed. You saw it yourself. They want to be diapered, spanked, and breastfed, then strut away like they conquered an army. Nurture his weakness. Be his strength, and he'll worship you. Akemi: I, don't know if I can. Madame Kaji: Stop running to and from men, and decide what you want for your fucking self. Akemi: I want to be in control of my life. Madame Kaji: Then take control of his, Princess - Madame Kaji and Akemi, Blue Eye Samurai"
-              :summary "* A prostitute, especially one whose clients are members of a royal court or of high social standing.")
-            :Dance
-             (specialty
-              :name "Dance"
-              :summary "Ballroom Dance, Break Dance, Hip Hop Dance, Pole Dance, Salsa Dance, Tango, Waltz")
-            :Music
-             (specialty
-              :name "Music"
-              :summary
-               "* Song, Musical Instrument
-                * The power of music lies in its ability to tell truths that we willing listen to even if they are unpleasant.
-                * See Equipment for Musical Instruments
-                * Musical Instruments may be used with any performance power to increase any Range or Radius by 1 Space."
-              :titles "Bard, Classical, Drummer, Guitarist, Harpist, Hip-Hop, Jazz, Lyrist, Minstrel, Musician, Piper, Pop, Rap, Rhapsode, Rock, Skald, Troubadour")
-            :Acting
-             (specialty
-              :name "Acting"
-              :reference
-               "* Acting! - Master Thespian, Saturday Night Live
-                * Suffering is the bleeding heart of drama. - Jhin, Runeterra"
-              :titles
-               "Drama Queen, Master Thespian, Theater Brat, Thespian")))
+           (base/specialtymap<-tactics-keys
+            tactics
+            "Acting"
+            "Courtesan"
+            "Dance"
+            "Music"))
         :Persuasion
          (base/skill
           :name "Persuasion"

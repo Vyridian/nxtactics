@@ -104,31 +104,6 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
-   * @function card_round_num
-   * @param  {int} num
-   * @return {card}
-   */
-  static t_card_round_num = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_round_num = {
-    vx_type: nx_tactics_decks_starter.t_card_round_num
-  }
-
-  // (func card-round-num)
-  static f_card_round_num(num) {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "card-round-num-", num),
-      ":name",
-      vx_core.f_new({"any-1": vx_core.t_string}, "Round #: ", num)
-    )
-    return output
-  }
-
-  /**
    * @function card_skill
    * @param  {string} color
    * @param  {int} num
@@ -189,36 +164,6 @@ export default class nx_tactics_decks_starter {
   }
 
   /**
-   * @function card_turn_order
-   * @param  {string} color
-   * @param  {int} num
-   * @return {card}
-   */
-  static t_card_turn_order = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_turn_order = {
-    vx_type: nx_tactics_decks_starter.t_card_turn_order
-  }
-
-  // (func card-turn-order)
-  static f_card_turn_order(color, num) {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "turn-order-", num),
-      ":name",
-      vx_core.f_new({"any-1": vx_core.t_string}, "Turn Order: Unit #", num),
-      ":image",
-      vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
-      ":summary",
-      "* Reveal: Flip each card of [Turn Order] deck to form a row.\n* Action 1: Simultaneously, each unit's controller chooses a target (or none) for this Round and places their Target card on that Turn Order card.\n* Change 1: In order, each Unit may change their decision.\n* Resolve 1: All Units act simultaneously. IF a Unit was targeted by a Unit with a lower Turn Order THEN they must wait for the targeting Unit to resolve. Note: lower order Units cannot be blocked by the movement of higher order Units.\n* Action 2: Each unit's controller simulataneously chooses and resolves their second Action."
-    )
-    return output
-  }
-
-  /**
    * @function card_unit
    * @param  {string} color
    * @param  {int} num
@@ -271,11 +216,6 @@ export default class nx_tactics_decks_starter {
           {"any-1": nx_tactics_base.t_cardlist},
           nx_tactics_decks_starter.f_card_player(color, 1),
           nx_tactics_decks_starter.f_card_rotated(color, 1),
-          nx_tactics_decks_starter.f_card_turn_order(color, 1),
-          nx_tactics_decks_starter.f_card_turn_order(color, 2),
-          nx_tactics_decks_starter.f_card_turn_order(color, 3),
-          nx_tactics_decks_starter.f_card_turn_order(color, 4),
-          nx_tactics_decks_starter.f_card_turn_order(color, 5),
           nx_tactics_decks_starter.f_card_unit(color, 1),
           nx_tactics_decks_starter.f_card_unit(color, 2),
           nx_tactics_decks_starter.f_card_unit(color, 3),
@@ -309,53 +249,6 @@ export default class nx_tactics_decks_starter {
     return output
   }
 
-  /**
-   * @function deck_round
-   * @return {deck}
-   */
-  static t_deck_round = {
-    vx_type: vx_core.t_type
-  }
-  static e_deck_round = {
-    vx_type: nx_tactics_decks_starter.t_deck_round
-  }
-
-  // (func deck-round)
-  static f_deck_round() {
-    let output = nx_tactics_base.e_deck
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_deck},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "deck-round"),
-      ":name",
-      "Round Deck",
-      ":cardmap",
-      nx_tactics_base.f_cardmap_from_cardlist(
-        nx_tactics_decks_starter.f_card_round_num(1),
-        nx_tactics_decks_starter.f_card_round_num(2),
-        nx_tactics_decks_starter.f_card_round_num(3),
-        nx_tactics_decks_starter.f_card_round_num(4),
-        nx_tactics_decks_starter.f_card_round_num(5),
-        nx_tactics_decks_starter.f_card_round_num(6),
-        nx_tactics_decks_starter.f_card_round_num(7),
-        nx_tactics_decks_starter.f_card_round_num(8),
-        nx_tactics_decks_starter.f_card_round_num(9),
-        nx_tactics_decks_starter.f_card_round_num(10),
-        nx_tactics_decks_starter.f_card_round_num(11),
-        nx_tactics_decks_starter.f_card_round_num(12),
-        nx_tactics_decks_starter.f_card_round_num(13),
-        nx_tactics_decks_starter.f_card_round_num(14),
-        nx_tactics_decks_starter.f_card_round_num(15),
-        nx_tactics_decks_starter.f_card_round_num(16),
-        nx_tactics_decks_starter.f_card_round_num(17),
-        nx_tactics_decks_starter.f_card_round_num(18),
-        nx_tactics_decks_starter.f_card_round_num(19),
-        nx_tactics_decks_starter.f_card_round_num(20)
-      )
-    )
-    return output
-  }
-
 
 
   static {
@@ -367,26 +260,20 @@ export default class nx_tactics_decks_starter {
       "card-conflictupper": nx_tactics_decks_starter.e_card_conflictupper,
       "card-player": nx_tactics_decks_starter.e_card_player,
       "card-rotated": nx_tactics_decks_starter.e_card_rotated,
-      "card-round-num": nx_tactics_decks_starter.e_card_round_num,
       "card-skill": nx_tactics_decks_starter.e_card_skill,
       "card-target": nx_tactics_decks_starter.e_card_target,
-      "card-turn-order": nx_tactics_decks_starter.e_card_turn_order,
       "card-unit": nx_tactics_decks_starter.e_card_unit,
-      "deck-player": nx_tactics_decks_starter.e_deck_player,
-      "deck-round": nx_tactics_decks_starter.e_deck_round
+      "deck-player": nx_tactics_decks_starter.e_deck_player
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
       "card-conflictlower": nx_tactics_decks_starter.t_card_conflictlower,
       "card-conflictupper": nx_tactics_decks_starter.t_card_conflictupper,
       "card-player": nx_tactics_decks_starter.t_card_player,
       "card-rotated": nx_tactics_decks_starter.t_card_rotated,
-      "card-round-num": nx_tactics_decks_starter.t_card_round_num,
       "card-skill": nx_tactics_decks_starter.t_card_skill,
       "card-target": nx_tactics_decks_starter.t_card_target,
-      "card-turn-order": nx_tactics_decks_starter.t_card_turn_order,
       "card-unit": nx_tactics_decks_starter.t_card_unit,
-      "deck-player": nx_tactics_decks_starter.t_deck_player,
-      "deck-round": nx_tactics_decks_starter.t_deck_round
+      "deck-player": nx_tactics_decks_starter.t_deck_player
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
       
@@ -472,24 +359,6 @@ export default class nx_tactics_decks_starter {
       fn            : nx_tactics_decks_starter.f_card_rotated
     }
 
-    // (func card-round-num)
-    nx_tactics_decks_starter.t_card_round_num['vx_value'] = {
-      name          : "card-round-num",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_round_num
-    }
-
     // (func card-skill)
     nx_tactics_decks_starter.t_card_skill['vx_value'] = {
       name          : "card-skill",
@@ -526,24 +395,6 @@ export default class nx_tactics_decks_starter {
       fn            : nx_tactics_decks_starter.f_card_target
     }
 
-    // (func card-turn-order)
-    nx_tactics_decks_starter.t_card_turn_order['vx_value'] = {
-      name          : "card-turn-order",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_turn_order
-    }
-
     // (func card-unit)
     nx_tactics_decks_starter.t_card_unit['vx_value'] = {
       name          : "card-unit",
@@ -578,24 +429,6 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_deck_player
-    }
-
-    // (func deck-round)
-    nx_tactics_decks_starter.t_deck_round['vx_value'] = {
-      name          : "deck-round",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_deck_round
     }
 
   }

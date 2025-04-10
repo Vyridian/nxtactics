@@ -33,7 +33,8 @@
       (deck-items)
       (deck-skills)
       (deck-powers)
-      (deck-abilities))))))
+      (deck-abilities)
+      (deck-specialties))))))
 
 (func deck-abilities : base/deck
  (let : base/deck
@@ -113,7 +114,6 @@
      (restraint/deck-restraintback)
      (wound/deck-bleeding)
      (wound/deck-bloodloss)
-     (starter/deck-round)
      (starter/deck-player "blue")
      (starter/deck-player "green")
      (starter/deck-player "red")
@@ -143,6 +143,18 @@
    :name "Skills"
    :cardmap cardmap))
  :doc "Skills Deck")
+
+(func deck-specialties : base/deck
+ (let : base/deck
+  [specialtymap : base/specialtymap :=
+   (:specialtymap data/tactics-all)
+   cardmap : base/cardmap :=
+    (map<-map : base/cardmap
+     specialtymap)]
+  (base/deck
+   :name "Specialties"
+   :cardmap cardmap))
+ :doc "Specialty Deck")
 
 (func deck-units : base/deck
  (let : base/deck

@@ -631,6 +631,8 @@ export default class nx_tactics_decks_trauma {
       nx_tactics_base.c_ranksuit_3c,
       ":image",
       "images/card-trauma-rage.svg",
+      ":reference",
+      "* Rules were made to be broken, like buildings and people. - Jinx, Runeterra",
       ":summary",
       "Minor: Graphetti Artist. Make your mark on the world.\nMajor: Vandal. Take out your anger by defacing and damaging objects. [Beast]:1\nCritical: Arsonist. Kill them with fire. [Beast]:2\nExtreme: Destroyer. The world is too far gone. Burn it all down. [Beast Unleashed]"
     ))
@@ -684,7 +686,7 @@ export default class nx_tactics_decks_trauma {
       ":image",
       "images/card-trauma-rage.svg",
       ":summary",
-      "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.\nMajor: Reactionary. Cannot tolerate anything new or modern.\nCritical: Luddite. Destroy anything modern or new.\nExtreme:Violent Primitivist. Destroy anything that is more advanced than would be on a farm."
+      "Minor: Curmudgeon. Frustrated by new things. Claims the old ways were better.\nMajor: Reactionary. Cannot tolerate anything new or modern.\nCritical: Luddite. Destroy anything modern or new.\nExtreme: Violent Primitivist. Destroy anything that is more advanced than would be on a farm."
     ))
 
     // (const trauma-4d)

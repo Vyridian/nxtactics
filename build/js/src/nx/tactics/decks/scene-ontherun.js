@@ -38,7 +38,7 @@ export default class nx_tactics_decks_scene_ontherun {
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_abilitylist},
-          nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Poison Bite", "Sneak")
+          nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Camouflage", "Poison Bite", "Sneak")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},

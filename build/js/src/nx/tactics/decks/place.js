@@ -47,6 +47,7 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Road: Stone", ":image", "images/cards/place-road-stone.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Rock", ":image", "images/cards/place-rock.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Rockslide", ":image", "images/cards/place-rockslide.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Snow", ":image", "images/cards/place-snow.svg", ":summary", "* Depth: Each token on Snow is 5cm/2in of snow. Move:-1/depth"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Stables", ":image", "images/cards/place-horsestables.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Stream", ":image", "images/cards/place-stream.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Swamp", ":image", "images/cards/place-swamp.svg"),

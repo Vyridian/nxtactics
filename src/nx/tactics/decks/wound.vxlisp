@@ -8,15 +8,15 @@
   :name "Bleeding"
   :image "images/card-bleeding.svg"
   :summary
-   "* Turn End: Gain a [Fatigue] for each [Bleeding]. If [Body]:0, then gain a [Blood Loss] instead."))
+   "* Turn End: [Fatigue]:1 for each [Bleeding]. IF [Body]:0 THEN [Blood Loss]:1 instead."))
 
 (const bloodloss : base/card
  (base/card
   :id "bloodloss"
-  :name "Bloodloss"
+  :name "Blood Loss"
   :image "images/card-bloodloss.svg"
   :summary
-   "* Day End: Discard one [Bloodloss]"))
+   "* Day End: Discard one [Blood Loss]"))
 
 (const poisoned : base/card
  (base/card
@@ -34,8 +34,8 @@
   :summary
    "* Fatigue: temporary weaknesss or exertion.
     * Wound: lasting damage and can be [Bash], [Hack], [Pierce], [Slash].
-    * If [Body]:0 then gain [Exhausted].
-    * [Exhausted]: Cannot play odd [Attack] cards. Second action may only be [Recover]. Additional [Fatigue] is flipped to Wound."))
+    * IF [Body]:0 THEN [Exhausted].
+    * [Exhausted]: [Disadvantage]. Must [Recover] once each [Round]. Extra [Fatigue] are Wounds instead."))
 
 (const wound-wild-black : base/damage
  (base/damage
@@ -80,8 +80,10 @@
   :name "Hack: Head"
   :ranksuit base/ranksuit-ah
   :image "images/card-wound-head.svg"
+  :reference
+   "* Not the face!"
   :summary
-   "Minor: Head Graze. Stun:1
+   "Minor: Head Graze. Stress:1
     Major: Head Slash. Slow:1 Bleeding:1
     Critical: Neck Fracture. Immobilized. Slow:3 Bleeding:1
     Extreme: Spine Severed. Paralyzed. Stress:3 Bleeding:2"))
@@ -181,7 +183,7 @@
    "Minor: Chest Cut. Bleeding:1
     Major: Chest Slash. Bleeding:1 Push:1
     Critical: Collapsed Lung. Hobbled. Slow:2 Push:1
-    Extreme: Lungs Collapsed. Dying. Hobbled. Stress: 4")
+    Extreme: Lungs Collapsed. Dying. Hobbled. Stress:4")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
 (const wound-qs : base/damage
@@ -194,7 +196,7 @@
    "Minor: Chest Cut. Bleeding:1
     Major: Chest Slash. Slow:1 Bleeding:1
     Critical: Long Chest Slash. Slow:2 Bleeding:2
-    Extreme: Spine Severed. [Paralyzed]. Stress: 4")
+    Extreme: Spine Severed. [Paralyzed]. Stress:4")
   :doc "Hack: Upper Chest/Back/Shoulders/Ribs")
 
 (const wound-jc : base/damage
@@ -229,7 +231,7 @@
   :image "images/card-wound-abdomen.svg"
   :summary
    "Minor: Glance off Hip. Bleeding:1
-    Major: Stomach Cut. Bleeding:1 Stress: 1
+    Major: Stomach Cut. Bleeding:1 Stress:1
     Critical: Kidney Damage. Slow:1 Bleeding:1 Fatigue:2
     Extreme: Renal Failure: Dying. Fatigue:3 Stress:2"))
 

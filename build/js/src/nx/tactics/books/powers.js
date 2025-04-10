@@ -1535,12 +1535,6 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wind Wall", ":summary", "* Wall that deflects missles and strikes aerial units."),
                 ":Updraft",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Updraft", ":summary", "* [Action]: Apply [Wind] in a radius around user, lift enemies off the ground with Level weight, and hurl them down, if they strike a surface they take Level damage .")
-              ),
-              ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Aeromancy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Aeromancy", ":summary", "* Aero is the magical version of Air.\n* Aero effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Aero reacts with Pyro to produce the [Wildfire] effect.\n* Aero reacts with Cryo to produce the [Chill] effect.\n* Aero reacts with Hydro to produce the [Fog] effect.\n* Aero reacts with Electro to produce the [Ionized] effect.\n* Aero reacts with Geo to produce the [Weightess] effect.")
               )
             ),
             ":Cold",
@@ -1673,60 +1667,10 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Tremor", ":summary", "* Summons a small living earthquake in broken earth or rock. Earth elementals love nothing more than knocking things over."),
                 "Volcanic Eruption",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Volcanic Eruption")
-              ),
-              ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Geomancy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Geomancy", ":summary", "* Geo is the magical version of Earth.\n* Geo effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Geo reacts with Pyro to produce the [Overheat] effect.\n* Geo reacts with Cryo to produce the [Brittle] effect.\n* Geo reacts with Hydro to produce the [Quagmire] effect.\n* Geo reacts with Electro to produce the [Grounded] effect.\n* Geo reacts with Aero to produce the [Weightess] effect.")
               )
             ),
-            ":Electricity",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Electricity",
-              ":reference",
-              "* Lightning is eternal, the world is but shadow. - Raiden Shogun, the Electro Archon, Genshin Impact",
-              ":summary",
-              "* Electric Elementalist personalities are influenced by their link to Electricity.\n* Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung\n* Symbol - Yellow Lightning",
-              ":titles",
-              "Electro, Lightning",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Arc Lightning",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Arc Lightning", ":summary", "* Lightning leaps from the target to others in range."),
-                "Body Electric",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Body Electric", ":titles", "Electricity Form"),
-                "Absorb Electricity",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Absorb Electricity"),
-                "Ball Lightning",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ball Lightning"),
-                "Call Lightning",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Call Lightning", ":summary", "* Calls a lightning strike from an existing storm cloud."),
-                "Control Lightning",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Control Lightning", ":summary", "* [Reaction]: Redirect a lightning effect to another target."),
-                "Electromagnetic Pulse",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Electromagnetic Pulse"),
-                "Lightning Charge",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lightning Charge", ":summary", "* Imbue an item with electric charge that is discharged on contact."),
-                "Lightning Lash",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lightning Lash", ":titles", "Arc Lash, Lightning Whip"),
-                "Lightning Pillar",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lightning Pillar", ":summary", "* [Action]: Summon a pillar of Electricity within Range. (Removing any others)\n* [Reaction]: IF anything touches the pillar THEN you may make a basic Electricity [Attack].\n* [Reaction]: IF you use an Electricity ability THEN you may arc it to strike from the pillar instead."),
-                "Lightning Warp",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lightning Warp", ":summary", "* Near instantaneous travel in a flash of lightning.\n* Level determines distance travelled."),
-                "Resist Electricity",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Resist Electricity")
-              ),
-              ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Electromancy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Electromancy", ":summary", "* Electro is the magical version of Electricity.\n* Electro effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Electro reacts with Pyro to produce the [Overload] effect.\n* Electro reacts with Cryo to produce the [Superconduct] effect.\n* Electro reacts with Hydro to produce the [Electrocharged] effect.\n* Electro reacts with Geo to produce the [Grounded] effect.\n* Electro reacts with Aero to produce the [Ionized] effect.")
-              )
-            ),
+            "Electricity",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Electricity"),
             ":Fire",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -1797,12 +1741,6 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wall of Fire", ":summary", "* Forms a continuous [Wall] of [Fire].\n* [Requires]: A flammable fuel must exist for the whole length of the wall."),
                 ":Wildfire",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wildfire", ":summary", "* Air in the area becomes bone dry and overheated. +1 [Fire] or [Air] abilities.")
-              ),
-              ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Pyromancy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Pyromancy", ":summary", "* Pyro is the magical version of Earth.\n* Pyro effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Pyro reacts with Geo to produce the [Overheat] effect.\n* Pyro reacts with Cryo to produce the [Melt] effect.\n* Pyro reacts with Hydro to produce the [Vaporize] effect.\n* Pyro reacts with Electro to produce the [Overload] effect.\n* Pyro reacts with Aero to produce the [Wildfire] ability.")
               )
             ),
             ":Water",
@@ -2390,11 +2328,7 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Suggestion", ":summary", "Change")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Hypnotism",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Hypnotism", ":summary", "* [Past Life Regression]\n* [Retrive Memories]\n* [Subconscious Trigger]")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Hypnotism")
             ),
             ":Empathy",
             vx_core.f_new(
@@ -3190,42 +3124,10 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Suspended Animation")
               )
             ),
-            ":Healing",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Healing",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Lernaean Regeneration",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Lernaean Regeneration", ":summary", "* [Activate]: If unit is Damaged, Remove a Damage Token and add a White Close Combat Token."),
-                ":Recover",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Recover", ":summary", "* May roll extra dice when resisting [Disease] or [Poison]."),
-                ":Regeneration",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Regeneration", ":summary", "* [Passive]\n* [Bleeding] and [Damage] Tokens are considered Yellow Tokens."),
-                ":Regrowth",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Regrowth")
-              )
-            ),
-            ":Movement",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Movement",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Wall Crawling",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wall Crawling"),
-                "Wall Running",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wall Running", ":summary", "* Requires: [Wall Crawling]"),
-                "Water Walking",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Water Walking"),
-                "Water Running",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Water Running", ":summary", "* Requires: [Water Walking]")
-              )
-            ),
+            "Healing",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Healing"),
+            "Movement",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Movement"),
             "Natural Weaponry",
             nx_tactics_base.f_power_from_tactics_key(tactics, "Natural Weaponry"),
             ":Quickness",
@@ -3306,44 +3208,10 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "X-Ray Vision", ":reference", "* Superman: Bruce Wayne? Batman: You peeked. - Superman and Batman, Superman: The Animated Series", ":summary", "* See through solid objects. The higher the density the blurrier the vision.")
               )
             ),
-            ":Shielding",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Shielding",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Shield Modulation",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Shield Modulation")
-              )
-            ),
-            ":Strength",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_power},
-              ":name",
-              "Strength",
-              ":reference",
-              "* Technique is for lightweights. - Sett, Runeterra",
-              ":stat",
-              "Body",
-              ":abilitymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_abilitymap},
-                "Power Leap",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Power Leap"),
-                "Power Lift",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Power Lift", ":summary", "* Lift additional kg equal to Power Rating."),
-                "Power Strike",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Power Strike", ":summary", "* Add Power Rating to weapon damage using Melee, or Close Combat."),
-                "Power Throw",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Power Throw", ":summary", "* Add Power Rating to weapon damage when throwing any object or weapon."),
-                ":Shockwave",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Shockwave"),
-                ":Thunderclap",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Thunderclap")
-              )
-            )
+            "Shielding",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Shielding"),
+            "Strength",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Strength")
           )
         )
       )

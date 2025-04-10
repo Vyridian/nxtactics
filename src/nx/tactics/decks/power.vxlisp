@@ -6,6 +6,230 @@
  [tactics : base/tactics]
  (base/powermap<-powerlist
   (base/power
+   :name "Aeromancy"
+   :summary
+    "* Aero is the magical version of Air.
+     * Aero effects can be sustained without a source, but they can also be canceled by counter-magic.
+     * Aero reacts with Pyro to produce the [Wildfire] effect.
+     * Aero reacts with Cryo to produce the [Chill] effect.
+     * Aero reacts with Hydro to produce the [Fog] effect.
+     * Aero reacts with Electro to produce the [Ionized] effect.
+     * Aero reacts with Geo to produce the [Weightess] effect.")
+  (base/power
+   :name "Dreaming"
+   :reference "* I don't believe it.  That is why you fail.  Luke and Yoda - Empire Strikes Back"
+   :summary
+    "* This is the magical art of the [Fae].
+     * Every child has a sense of wonder that comes with being new to the world. Adults must, of necessity, murder that special innocence in order to grow up.
+     * When humanity turned its collective back on Dreaming, a terrible scourge of disbelief and negation smote the world. Hope, trust, and imagination were replaced with reason, pessimism, and scrutiny. By dismissing hope and faith, humanity avoids being hurt by its failure. Shutting out mystery and dreams anesthetizes fear, but deadens beauty as well and leads to apathy, callosuness, and close-mindedness. Though Banality is a mindless force, it is feared by the [Fae] more than any monster or villain. It is an enemy unlike anything the [Fae] have ever encountered, and they are largely helpless in its grasp.
+     * Dreaming is never the same, so any Dreaming effect must be a uniquely crafted idea or it will automatically fail."
+   :titles "Glamour"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "As if in a Dream"
+     "Concoct Dream Essence"
+     "Create Chimera"
+     "Down the Rabbit Hole"
+     "Dreamcatching"
+     "Dreamreading"
+     "Dreamriding"
+     "Dreamquest"
+     "Dream Effectively"
+     "Dream Riding"
+     "Dream Sight"
+     "Dream Speak"
+     "Dream Weaving"
+     "Epiphany"
+     "Eyes of a Child"
+     "Fond Memories"
+     "Imaginary Friend"
+     "Living Nightmare"
+     "Nightmare Essence"
+     "Pillow Fort"
+     "Rapture"
+     "Ravaging"
+     "Reverie"
+     "Seeming"
+     "Shattered Dreams"
+     "Wall of Wonders"))
+  (base/power
+   :name "Electromancy"
+   :reference
+    "* Lightning is eternal, the world is but shadow. - Raiden Shogun, the Electro Archon, Genshin Impact"
+   :summary
+    "* Electro is the magical version of Electricity.
+     * Electro effects can be sustained without a source, but they can also be canceled by counter-magic.
+     * Electro reacts with Pyro to produce the [Overload] effect.
+     * Electro reacts with Cryo to produce the [Superconduct] effect.
+     * Electro reacts with Hydro to produce the [Electrocharged] effect.
+     * Electro reacts with Geo to produce the [Grounded] effect.
+     * Electro reacts with Aero to produce the [Ionized] effect.
+     * Electric Elementalist personalities are influenced by their link to Electricity.
+     * Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung
+     * Symbol - Yellow Lightning"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Absorb Electricity"
+     "Arc Lightning"
+     "Ball Lightning"
+     "Body Electric"
+     "Call Lightning"
+     "Control Lightning"
+     "Electromagnetic Pulse"
+     "Lightning Charge"
+     "Lightning Lash"
+     "Lightning Pillar"
+     "Lightning Warp"
+     "Resist: Electricity"))
+  (base/power
+   :name "Geomancy"
+   :summary
+    "* Geo is the magical version of Earth.
+     * Geo effects can be sustained without a source, but they can also be canceled by counter-magic.
+     * Geo reacts with Pyro to produce the [Overheat] effect.
+     * Geo reacts with Cryo to produce the [Brittle] effect.
+     * Geo reacts with Hydro to produce the [Quagmire] effect.
+     * Geo reacts with Electro to produce the [Grounded] effect.
+     * Geo reacts with Aero to produce the [Weightess] effect.")
+  (base/power
+   :name "Pyromancy"
+   :summary
+    "* Pyro is the magical version of Earth.
+     * Pyro effects can be sustained without a source, but they can also be canceled by counter-magic.
+     * Pyro reacts with Geo to produce the [Overheat] effect.
+     * Pyro reacts with Cryo to produce the [Melt] effect.
+     * Pyro reacts with Hydro to produce the [Vaporize] effect.
+     * Pyro reacts with Electro to produce the [Overload] effect.
+     * Pyro reacts with Aero to produce the [Wildfire] ability.")
+  (base/power
+   :name "Sorcery"
+   :reference
+    "* This is forbidden. This is a summoning. I cannot speak this!... There is no light here. You came to the darkness for knowledge... And all the knowledge you seek is here. Surrender. Speak the words. Call her home. By three thay come. By three thy way opens. By the blood of the willing. We call thee home. Hail, daughter of hatred. Hail, Lilith. - Diablo IV"
+   :titles "Sorcerer, Sorceress, Sorceress Queen, Summoner"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Daedalus Gateway"
+     "Dimension Door"
+     "Dimensional Gateway"
+     "Gateway"
+     "Soul Pact"
+     "Summon Demon"
+     "Summon Devil"
+     "Summon Familiar"
+     "Summon Item"))
+  (base/power
+   :name "Thaumaturgy"
+   :summary
+    "* The interface between Magic and Science. Mathematics, Biology, Geology and Chemistry are studied to manifest amazing creations.
+     * Thaumaturgy can create permanent artificial life.
+     * Thaumaturgy favors crytals and gemstones for power supplies."
+   :titles "The Art Mathematical, Wonder Working"
+   :abilitymap
+    (base/abilitymap
+     "Create Homunculus"
+      (base/ability
+       :name "Create Homunculus")
+     "Prepare Lightning in a Bottle"
+      (base/ability
+       :name "Prepare Lightning in a Bottle"
+       :summary "* Create [Lightning in a Bottle].")))
+  (base/power
+   :name "Wizardry"
+   :summary
+    "* Conventional Wizardry believes that everything in the universe holds massive energy potential waiting to be unleashed.
+     * Wizardry is the study of Magic itself. As such it is a sort of meta-Magic, focused on altering magical energies."
+   :titles "Archmagi, Magi, Wizard"
+   :abilitymap
+    (base/abilitymap
+     "Analyze Magic"
+      (base/ability
+       :name "Analyze Magic"
+       :summary "* Gain understanding of a magical item or effect.")
+     :Counterspell
+      (base/ability
+       :name "Counterspell"
+       :summary "* [Interrupt]: Roll a defense roll against a magical ability. If the defense succeeds, the ability has no effect.")
+     :Dampen
+      (base/ability
+       :name "Dampen"
+       :summary "* Magic can easily be reduced since magic already has a tentative hold on reality.")
+     :Dispel
+      (base/ability
+       :name "Dispel"
+       :summary "* Attack a placed magical ability.  Each hit weakens its abilities.")
+     :Fork
+      (base/ability
+       :name "Fork"
+       :summary
+        "* Duplicate an allied caster's magical ability. The other caster fully controls both abilities but may not aim both at the same target.")
+     :Magnify
+      (base/ability
+       :name "Magnify"
+       :summary
+        "* Magnify draws from the potential energy in all things to increase the power in an existing force.
+         * Note: Magic cannot be magnified. Magic only simulates reality and has no hidden reserves to tap.
+         !Examples
+         * An arrow can hit with devastating force.
+         * A bird's weight can be increased so it falls.
+         * A fire can be enhanced into an inferno while not burning fuel faster or producing additional smoke. The fuel has near infinite reserves to draw upon.")
+     "Mana Burn"
+      (base/ability
+       :name "Mana Burn")
+     "Mana Leak"
+      (base/ability
+       :name "Mana Leak")
+     "Mana Shield"
+      (base/ability
+       :name "Mana Shield"
+       :summary
+        "* Forms an transparent crytal shell in front of the caster, but if they moves, the shield will drop.
+         * [Defend]: Protected with level Armor from all [Physical] [Damage].")
+     "Mirror Shield"
+      (base/ability
+       :name "Mirror Shield"
+       :summary
+        "* Forms an transparent crytal shell in front of the caster, but if they moves, the shield will drop.
+         * [Defend]: If defender was targetted by an [Energy] attack lower than level, the Attacker also suffers the attack.
+         * Wall that reflects attacks back to its source.")
+     "Mirror Wall"
+      (base/ability
+       :name "Mirror Wall"
+       :summary "* Wall that reflects [Energy] attacks lower than level back to their source. Any attack higher than level will destoy the Wall.")
+     "Paradigm Shift"
+      (base/ability
+       :name "Paradigm Shift"
+       :summary "* Change one rule of nature for a moment.")
+     "Power Sink"
+      (base/ability
+       :name "Power Sink")
+     "Power Surge"
+      (base/ability
+       :name "Power Surge")
+     :Redirect
+      (base/ability
+       :name "Redirect"
+       :summary "* [Reaction]: Redirect an Energy or Physical Ranged attack that has a single target to another target.")
+     :Stasis
+      (base/ability
+       :name "Stasis"
+       :summary "* Place an equal number of White Stasis Tokens on yourself and your target.")
+     "White Noise"
+      (base/ability
+       :name "White Noise"
+       :summary "Sounds are garbled preventing eavesdropping")
+     "Wizard Armor"
+      (base/ability
+       :name "Wizard Armor"
+       :summary "* Defense against Energy that creates [Feedback].")
+     "Wizard Lock"
+      (base/ability
+       :name "Wizard Lock"
+       :summary
+        "* Wizard Lock alters an existing magical effect by freezing it in place. It becomes permanent until dispelled, but it no longer has an active effect. In this way a wall of fire would be a permanent wall that does not move or produce heat. This is often used to make a seal last indefinitely.")))
+  (base/power
    :name "Armored"
    :summary
     "* Armor normally alters appearance and may be a permanent alteration or a suit that may be donned.
@@ -57,6 +281,27 @@
   (base/power
    :name "Density Control")
   (base/power
+   :name "Electricity"
+   :summary
+    "* Electric Elementalist personalities are influenced by their link to Electricity.
+     * Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung"
+   :titles "Lightning"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Absorb Electricity"
+     "Arc Lightning"
+     "Ball Lightning"
+     "Body Electric"
+     "Call Lightning"
+     "Control Lightning"
+     "Electromagnetic Pulse"
+     "Lightning Charge"
+     "Lightning Lash"
+     "Lightning Pillar"
+     "Lightning Warp"
+     "Resist: Electricity"))
+  (base/power
    :name "Genius"
    :titles "Genius, Prodigy, Savant, Super Genius"
    :stat "Mind"
@@ -93,6 +338,14 @@
      "Turbo Booster"
      "Wheeled"))
   (base/power
+   :name "Healing"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Lernaean Regeneration"
+     "Regeneration"
+     "Regrowth"))
+  (base/power
    :name "Interstellar Movement"
    :abilitymap
     (base/abilitymap
@@ -123,6 +376,15 @@
      tactics
      "Strategic Warp Jump"
      "Tactical Warp Jump"))
+  (base/power
+   :name "Movement"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Wall Crawling"
+     "Wall Running"
+     "Water Walking"
+     "Water Running"))
   (base/power
    :name "Natural Weaponry"
    :abilitymap
@@ -183,6 +445,26 @@
      "Psychic Duel"
      "Psychic Knife"
      "Tower of Iron Will"))
+  (base/power
+   :name "Shielding"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Shield Modulation"
+     "Shield Redirection"))
+  (base/power
+   :name "Strength"
+   :reference "* Technique is for lightweights. - Sett, Runeterra"
+   :stat "Body"
+   :abilitymap
+    (base/abilitymap<-tactics-keys
+     tactics
+     "Power Leap"
+     "Power Lift"
+     "Power Strike"
+     "Power Throw"
+     "Shockwave"
+     "Thunderclap"))
   (base/power
    :name "Toxins"
    :reference

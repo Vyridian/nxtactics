@@ -1142,9 +1142,9 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 6, ":y", 7),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 8, ":y", 7),
       ":pointsize",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 51)
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 49)
     ))
 
     // (const style-card-display-conflict)
@@ -1198,11 +1198,11 @@ export default class nx_tactics_ui_stylesheet {
       ":layout",
       vx_ui_ui.c_layout_label,
       ":pointpos",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 1, ":y", 71),
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 2, ":y", 72),
       ":pointrotate",
       vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", -90),
       ":pointsize",
-      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 58)
+      vx_core.f_new({"any-1": vx_ui_ui.t_point}, ":x", 57)
     ))
 
     // (const style-card-rank)

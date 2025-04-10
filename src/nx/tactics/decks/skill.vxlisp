@@ -224,12 +224,8 @@ x +1DMG vs. Crouching."
       (base/ability<-tactics-key tactics "Kick")
      "Grab"
       (base/ability<-tactics-key tactics "Grab")
-     :Drag
-      (base/ability
-       :name "Drag"
-       :summary
-        "[Requires]: You must have a [Hold] on the target.
-         [Action]: You may at an additional Move:-1/space while dragging the target behind you.")
+     "Drag"
+      (base/ability<-tactics-key tactics "Drag")
      "Back Fist"
       (base/ability
        :name "Back Fist"
@@ -810,557 +806,47 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Thigh Press"))
    :specialtymap
-    (base/specialtymap
-     :Strikes
-      (base/specialty
-       :name "Strikes")
-     :Kicks
-      (base/specialty
-       :name "Kicks")
-     :Grappling
-      (base/specialty
-       :name "Grappling"
-       :summary
-        "* Atomic Drop
-         * Air Throw
-         * Backbreaker
-         * Backroll Throw
-         * Bear Hug
-         * Choke Hold
-         * Fighting Hold
-         * Grappling Defense
-         * Ground Fighting
-         * Headlock
-         * Hip Throw
-         * Hold
-         * Hook Hold
-         * Iron Claw
-         * Joint Lock
-         * Knee Bash
-         * Neck Break
-         * Nelson
-         * Piledriver
-         * Pin
-         * Reversal
-         * Shoulder Throw
-         * Sleeper Hold
-         * Suplex
-         * Tackle
-         * Take Down
-         * Thigh Press")
-     :Aikido
-      (base/specialty
-       :name "Aikido"
-       :reference "* Water flows and takes any shape or course, yet it is always consistant with its own nature."
-       :summary
-        "* This essentially noncombative Japanese art concentrates on the development of the self, and physical, mental, and spiritual nonresistance.  By moving with and blending with an opponent's attacks, they may be used against him.
-         * Athletics - [Breakfall]
-         * Evasion - [Deflect], [Disengage], [Drunken Monkey Roll], [Evasive Roll], [Iron Horse], [Weapon Block]
-         * Grapples - [Air Throw], [Backroll Throw], [Disengage], [Grab], [Grapple Defense], [Hip Throw], [Joint Lock], [Pin], [Shoulder Throw], [Takedown]
-         * Kicks - [Dragon Tail], [Kick Defense], [Leg Sweep], [Slide Kick]
-         * Strikes - [Nerve Strike], [Strike Defense]
-
-           GRAB:
-           Ugoku Taosu(5)
-           Atemi Torae(4)
-
-           FOCUS:
-           Push(2)
-           Chi Kung Healing(3)
-           Ghost Form(5)
-           Stunning Shout(3)
-           Zen No Mind(3)"
-       :titles "Aikijutsu")
-     :Boxing
-      (base/specialty
-       :name "Boxing"
-       :summary
-        "* Boxing is a fighting style that concentrates exclusively on punches.
-         * Evasion - [Iron Skin]
-         * Strikes - [Dash Attack], [Deflecting Punch], [Feint], [Haymaker], [Head Butt], [Hook], [Hyperfist], [Jab], [Ram], [Spinning Back Fist], [Uppercut]
-         * Grapples - [Grab]")
-     :Brawling
-      (base/specialty
-       :name "Brawling"
-       :summary "* Brawling is no holds bars, no rules hand to hand fighting."
-       :titles "Bruiser, Pit Fighter, Street Fighter, Thug")
-     :Capoeira
-      (base/specialty
-       :name "Capoeira"
-       :summary
-        "* A Brazilian marital art developed by slaves who were brought to South America from Africa. The style was disguised as dance to avoid punishment when caught training. The style is still typically practiced to music. The style developed acrobatic maneuvers that could be used while chained. Capoeiristas will sometimes cross the field doing cartwheels. Knife fighting is also sometimes included in the style.
-         * Athletics - [Backflip], [Breakfall], [Cartwheel], [Jump], [Kippup]
-         * Evasion - [Drunken Monkey Roll]
-         * Grapples - [Backroll Throw]
-         * Kicks - [Backflip Kick], [Dragon Tail], [Handstand Kick], [Kick Defense], [Knee Strike], [Leg Sweep], [Spinning Thrust Kick]
-         * Strikes - [Head Butt], [Strike Defense]")
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Binding"
+     "Brawling"
+     "Grappling"
+     "Kicks"
+     "Knives"
+     "Strikes"
+     "Wrestling"
+     "Aikido"
+     "Boxing"
+     "Capoeira"
      "Commando Training"
-      (base/specialty
-       :name "Commando Training"
-       :summary
-        "* Commando Training is a generic term for the fighting styles taught to armed forces members. It is a practical, sometimes brutal style that borrows from a variety of other styles and combines them into a style that can be taught to recruits quickly.
-         * Evasion - [Disarm], [Kick Defense], [Strike Defense]
-         * Grapples - [Choke Hold], [Grab], [Grapple Defense], [Knee Bash], [Joint Lock], [Pin], [Shoulder Throw], [Tackle]
-         * Kicks - [Knee Strike], [Leg Sweep]
-         * Strikes - [Elbow Strike], [Hook], [Knife Hand], [Spinning Back Fist], [Sword Hand]"
-       :titles "Special Forces Training")
-     :Hapkido
-      (base/specialty
-       :name "Hapkido"
-       :summary
-        "* This Korean Martial Art borrows many techniques successfully from other styles; it is a combination of the Aidido, Jujutsu, and Karate styles of Japan with the Korean systems of hwang Do and Taekyon (percursor to Tae Kwan Do).  It is a style that teaches focus on passivity in opposing force, countering and attacking with circular motions, and the absolute penetration of an opponent's defenses.
-         * A Hapkido practitioner receives a strong attack gently and counters a gentle attack powerfully and a subtle rythym of attacks and counters develops in the combat. This perpetual and fluid rythym, as well as constant mobility, are hallmarks of the style.
-         * Athletics - [Breakfall], [Jump]
-         * Evasion - [Disarm], [Evasive Roll]
-         * Grapples - [Back Roll Throw], [Grappling Defense], [Joint Lock], [Choke Hold], [Pin], [Shoulder Throw], [Takedown]
-         * Strikes - [Deflecting Punch], [Nerve Strike], [Phoenix Strike], [Spinning Back Fist], [Strike Defense]
-         * Kicks - [Axe Kick], [Crescent Kick], [Double Kick], [Flying Kick], [Kick Defense], [Leg Sweep], [Roundhouse Kick], [Spinning Thrust Kick]")
-     :Hsing-I
-      (base/specialty
-       :name "Hsing-I"
-       :summary
-        "* Hsing-I stylists attempt to use the body's internal energy, ch'i, to perform astounding feats. The first set of block-strike manuevers are based on the five elements (fire, water, earth, metal, and wood). The second is a group of animal based forms (including Dragon, Tiger, Horse, Turtle, Chicken, Snake, and Bear). The typical attack is to block a	strike, grab the arm or leg, and strike back with the hand.
-         * Evasion - [Deflect], [Weapon Block]
-         * Brawling - [Haymaker]
-         * Grapples - [Hip Throw], [Joint Lock]
-         * Kicks - [Kick Defense], [Leg Sweep]
-         * Strikes - [Grab Punch], [Nerve Strike], [Phoenix Strike], [Strike Defense]"
-       :titles "Heart and Mind")
-     :Hwarang-Do
-      (base/specialty
-       :name "Hwarang-Do"
-       :summary
-        "* This style concentrates on punches and a wid variety of weapon techniques. Further masters are said to possess mystical powers including telepathy, clairvoyance, and the ability to sense danger.
-         * A Korean style that is said to have grown out of certain healing techniques, and modern masters are often healers as well. Legend has it that a Buddhist mong developed the style and taught it to the Hwarang who were similar the Korean equivalent of knights: fighters, diplomats, and military leaders who lived by a strict code of honor.
-         * Athletics - [Breakfall], [High Jump], [Kippup], [Long Jump]
-         * Evasion - [Deflect], [Disengage]
-         * Grapples - [Choke Hold], [Grapple Defense], [Joint Lock], [Shoulder Throw]
-         * Kicks - [Backflip Kick], [Kick Defense], [Roundhouse Kick], [Slide Kick]
-         * Strikes - [Dash Attack], [Elbow Strike], [Nerve Strike], [Phoenix Strike], [Strike Defense]
-         * Focus Powers - [Blind Fighting], [Spirit Healing], [Zen No Mind]")
+     "Hapkido"
+     "Hsing-I"
+     "Hwarang-Do"
      "Jeet Kune Do"
-      (base/specialty
-       :name "Jeet Kune Do"
-       :reference "* Use whatever works."
-       :summary
-        "* A martial art created by the late Bruce Lee. After studying many differenct martial arts, Lee decided that their reliance on a limited group of maneuvers made them ineffective. Instead, he catalogued all of the ways that the human body could be used to attack or defend and then created a simplified and practical fighting style with no patterns or predefined conceptions.
-         * Grapples - [Choke Hold], [Joint Lock], [Hip Throw]
-         * Kicks - [Foot Stomp], [Kick Defense], [Lightning Leg], [Roundhouse Kick]
-         * Strikes - [Elbow Strike], [Feint], [Nerve Strike], [One Two Punch], [Phoenix Strike], [Spinning Back Fist], [Strike Defense]
-         * Focus Powers - [Zen No Mind]"
-       :titles "The Way of the Intercepting Fist")
-     :Jujutsu/Judo
-      (base/specialty
-       :name "Jujutsu/Judo"
-       :summary
-        "* A Japanese fighting style with roots 1200 years old.
-         * Jujutusu focuses on grapples instead of strikes. The typical maneuver grabs an opponent, forces him to the ground, and finishes him off.
-         * Athletics - [Breakfall], [Kippup]
-         * Evasion - [Disarm], [Disengage], [Iron Horse]
-         * Grapples - [Air Throw], [Backroll Throw], [Choke Hold], [Ground Fighting], [Hip Throw], [Joint Lock], [Pin], [Shoulder Throw], [Takedown]
-         * Kicks - [Dragon Tail], [Leg Sweep]
-         * Strikes - [Disarm], [Nerve Strike]")
-     :Kabaddi
-      (base/specialty
-       :name "Kabaddi"
-       :summary
-        "* [Head Butt]
-           KICK:
-           Slide Kick(2)
-
-           BLOCK:
-           San He(3)
-           Energy Reflection(3)
-
-           GRAB:
-           Head Butt Hold(2)
-           Brain Cracker(1)
-           Dislocate Limb(3)
-           Disengage(1)
-           Air Suplex(1)
-
-           ATHLETICS:
-           Cannon Drill(5)
-           Flying Body Spear(2)
-
-           FOCUS:
-           Chi Kung Healing(3)
-           Extendible Limbs(4)
-           Fireball(3)
-           Improved Fireball(5)
-           Regeneration(1)
-           Yoga Flame(3)
-           Yoga Teleport(5)
-           Cobra Charm(2)
-           Ghost Form(5)
-           Flying Fireball(3)
-           Inferno Strike(5)
-           Mind Reading(3)
-           Telepathy(2)
-           Chi Push(5)
-           Levitation(3)
-           Balance(3)
-           Leech(3)")
-     :Kalaripayattu
-      (base/specialty
-       :name "Kalaripayattu"
-       :summary
-        "* A boxing art from southern India that dates back to 500 AD. Fighters are trained in 4 syltes: unarmed, stick fighting, other weapons, and the 108 vital points of the human body. Masters are also skiled healers.
-         * Athletics - [Breakfall], [Jump]
-         * Grapples - [Joint Lock], [Throw]
-         * Kicks - [Flying Kick], [Roundhouse Kick]
-         * Strikes - [Elbow Strike], [Nerve Strike], [Phoenix Strike], [Strike Defense], [Sword Hand]
-         * Focus Powers - [Spirit Healing]"
-       :titles "Battlefield Practices, Gurus")
-     :Karate
-      (base/specialty
-       :name "Karate"
-       :summary
-        "* Karate focuses on direct strikes and kicks with few grabs or throws.
-         * An extremely popular martial art originating in Okinawa, Japan in 400 AD. It became well developed only after the Japanese invaders forbade the Okinawans to carry weapons.
-         * Athletics - [Jump], [Kippup]
-         * Close Combat - [Hook]
-         * Evasion - [Deflect], [Disarm], [Iron Horse], [Iron Skin]
-         * Grapples - [Backroll Throw], [Hip Throw], [Shoulder Throw]
-         * Kicks - [Axe Kick], [Back Kick], [Cresent Kick], [Dobule Kick], [Dragon Tail], [Flying Kick], [Foot Stomp], [Kick Defense], [Leg Sweep], [Reverse Front Kick], [Roundhouse Kick], [Scissor Kick]
-         * Strikes - [Crouching Strike], [Dash Attack], [Dragon Fist], [Elbow Strike], [Knife Hand], [Nerve Strike], [Palm Strike], [Spinning Back Fist], [Strike Defense], [Sword Hand], [Tiger Claw]"
-       :titles "Empty Hands")
-     :Kickboxing
-      (base/specialty
-       :name "Kickboxing"
-       :summary
-        "* [Backroll Throw]
-         * [Dashing Punch]
-         * [Haymaker]
-         * [Hyperfist]
-         * [Knee Bash]
-         * [Slide Kick]
-         * [Spinning Back Fist]
-           PUNCH:
-           Feint(1)
-           Hook(1)
-           Double Hit Punch(1)
-           Heart Punch(4)
-           Lunge Punch(2)
-           Fist Sweep(2)
-           Dashing Punch(5)
-           Turn Punch(5)
-           Rekka Ken(5)
-           Spinning Back Fist(1)
-           Spinning Knuckle(3)
-
-           KICK:
-           Double Dread Kick(3)
-           Back Roundhouse(1)
-           Ax Kick(3)
-           Reverse Frontal Kick(1)
-           Flying Knee Thrust(1)
-           Stepping Front Kick(3)
-           Slide Kick(2)
-           Double Hit Kick(1)
-           Wounded Knee(2)
-
-           BLOCK:
-           Deflecting Punch(1)
-
-           GRAB:
-           Knee Basher(2)
-           Back Roll Throw(1)
-           Brain Cracker(1)
-
-           ---- Savate ----
-           PUNCH:
-           Spinning Back Fist(1)
-           Palm Heel Punch(1)
-           Ear Pop(2)
-           Spinning Knuckle(3)
-
-           KICK:
-           Ax Kick(2)
-           Double Hit Kick(1)
-           Flash Kick(4)
-           Double Dread Kick(3)
-           Foot Sweep(1)
-           Spinning Foot Sweep(1)
-           Lightning Leg(5)
-           Slide Kick(2)
-           Stepping Front Kick(4)
-           Flying Knee Thrust(1)
-           Double Hit Knee(1)
-
-           BLOCK:
-
-           GRAB:
-           Knee Basher(2)
-           Bear Hug(1)
-           Neck Choke(2)"
-                       :titles "Savate")
-     :Kobujutsu
-      (base/specialty
-       :name "Kobujutsu"
-       :summary
-        "* The martial art specializing in Okinawan weapons.
-         * Melee - [Bash], [Dazing Blow], [Disarm], [Fleche], [Jab], [Parry], [Riposte], [Slash], [Sweep], [Thrust]
-         * Melee Weapons - [Bo Staff], [Eiku], [Jo Staff], [Kama], [Nunchaku], [Sai], [Tonfa]")
-     :Krabi-Krabong
-      (base/specialty
-       :name "Krabi-Krabong")
+     "Jujutsu"
+     "Kabaddi"
+     "Kalaripayattu"
+     "Karate"
+     "Kickboxing"
+     "Kobujutsu"
+     "Krabi-Krabong"
      "Kung Fu, Crane Style"
-      (base/specialty
-       :name "Kung Fu, Crane Style"
-       :summary
-        "* The crane was known for its grace and beauty. Known to stand on one leg for long periods of time, it is no wonder that the crane stylists had excellent balance and were known for their awesome kicking ability and long range techniques.
-         * Crane is very upright, attacking with carefully aimed strikes at long range and defending with redirection and retreat rather than resistance. Working from outside an opponent's effective range, Crane demands extreme technical proficiency and smooth footwork, as well as careful timing and judgment. Crane is high, circular, soft, and distant, working chiefly with progressive indirect attacks.
-         * Athletics -  [Breakfall], [High Jump], [Jump]
-         * Evasion - [Avoid], [Deflect], [Evasive Roll], [Sidestep]
-         * Kicks - [Axe Kick], [Flying Kick], [Kick Off], [Leg Sweep], [Vault Kick]
-         * Strikes - [Dash Attack], [Grab Punch], [Nerve Strike], [Spinning Back Fist]")
      "Kung Fu, Dragon Style"
-      (base/specialty
-       :name "Kung Fu, Dragon Style"
-       :summary
-        "* Shen Lung (Spiritual or Invisible Dragon): While the Dragon is not a formally taught style in Shen Lung it instead represents what emerges when a practitioner can draw freely from all five animals as the situation demands. One who can use the power of Tiger, the mechanics of Mantis, the speed of Snake, the movements of Crane, and the cunning of Monkey.
-         * As the dragon floats through the sky he twists and coils, flipping his tail as he turns. The dragon stylist uses turns and circular motions to throw and strike his opponents.
-         * 'Ride the wind', a phrase which means follow rather than lead. Provide no opening without first letting your opponent open. Unlike Crane, which also relies heavily upon evasion as a tactic, the Dragon evades primarily by rotation of upper or lower torso with little or no stance movements, while the Crane stylist hops frequently to reposition the entire body. Both styles employ pinpoint strikes to vulnerable meridian targets, but dragon also heavily uses tiger-like punches and clawing techniques, snake-like stance shifts, and leopard-like hit and run strikes to weaken a physically superior adversary.  Dragon kung fu also regularly employs low sweeping techniques
-         * Kicks - [Dragon Tail], [Flying Kick]
-         * Strikes - [Dragon Fist], [Nerve Strike]")
      "Kung Fu, Leopard Style"
-      (base/specialty
-       :name "Kung Fu, Leopard Style"
-       :summary
-        "* The leopard was known for its tremendous speed and cunningness. Unlike the tiger that doesn't mind frontal attacks, the leopard stylist prefers to attack only when the odds are in his favor. The only time he shows he is hurt is when he is not. He acts like he is running away in order to come back with an attack on his own ground.
-         * Blocking is wasted in Leopard - the style can be summed up with 'Why block when you can hit?' It does not rely on rooted stances, and would only assume a stance while in attack in order to launch at the opponent. This hit and run technique of the leopard, something especially effective against larger opponents, is unique to the animal.
-         * An interesting technique of the leopard is the ability to simultaneously block and strike. The sheer speed of the leopard is a defining characteristic of the style
-         * Evasion - [Dodge], [Dodge Roll]
-         * Strikes - [Deflecting Punch], [Dash Attack]")
      "Kung Fu, Mantis Style"
-      (base/specialty
-       :name "Kung Fu, Mantis Style"
-       :summary
-        "* Mantis operates in sequences and combinations baffling opponents with multiple simultaneous attacks and blocks, all executed at high speed. Mantis is a quick, high, linear, hard style that attacks by rapidly executed combinations.
-         * [Combination]
-         * Strikes - [Deflecting Punch], [Hyperfist], [Jab], [Knife Hand], [One Two Punch]")
      "Kung Fu, Monkey Style"
-      (base/specialty
-       :name "Kung Fu, Monkey Style"
-       :summary
-        "* Monkey style prefers to go to the ground, integrating throws, locks, grappling and ground-fighting. Monkey is very low, both hard and soft, close-range and favors full body contact.
-         * Evasion - [Drunken Monkey Roll]
-         * Grapples - [Grab], [Joint Lock], [Hold], [Pin], [Takedown]
-         * Strikes - [Monkey Punch]")
      "Kung Fu, Snake Style"
-      (base/specialty
-       :name "Kung Fu, Snake Style"
-       :summary
-        "* The snake is known for its speed once an opponent is in striking range. The snake raises its head and waits patiently until the unsuspecting opponent gets too close. The snake stylist, too, concentrates on waiting until the time is right and with his fingertips, strikes to a vital spot in a blink of an eye. Knowing how to use one's internal energy or chi is a major part of the snake system.
-         * Snake is a soft style using an opponent's energy against them rather than resisting it. Snakes absorb, control and redirect rather than block an attack. Snake stylists are known for circular and whip-like motions flowing around opponents, climbing over their defenses and striking repeatedly in rapid succession. Snake is high, circular, soft and extremely fast, favoring progressive direct attacks that overwhelm a defense.
-         * Snake style is based on whipping power which travels up the spine to the fingers. The ability to sinuously move, essentially by compressing one's stomach/abdominal muscles, is very important.
-
-         * Strikes - [Back Fist], [Knife Hand], [Nerve Strike]
-         * Focus Powers - [Death Touch]")
      "Kung Fu, Tiger Style"
-      (base/specialty
-       :name "Kung Fu, Tiger Style"
-       :summary
-        "* Known for its power and strength, the tiger stylists were known for their ripping and tearing techniques. Hands held like tiger claws, these fighters would strike and claw with tremendous speed and power.
-         * Tiger emphasizes close-range strikes, throws, and a willingness to stay in the danger zone long enough to set up a single fight-ending blow. Tiger commits fully to every motion, and maximizes power at the expense of mobility. Tiger is low, hard-style, and works with single direct attacks.
-         * Strikes - [Crouching Strike], [Dash Attack], [Dragon Fist], [Elbow Strike], [Eye Rake], [Haymaker], [Strike Defense], [Sword Hand], [Tiger Claw]")
      "Kung Fu, Wing Chun"
-      (base/specialty
-       :name "Kung Fu, Wing Chun"
-       :summary
-        "* Wing Chung, literally 'singing spring', is a Southern Chinese kung fu style and a form of self-defense originating in Qing China, which requires quick arm movements and strong legs. Softness (via relaxation) and performance of techniques in a relaxed manner is fundamental to Wing Chun.")
      "Muay Thai"
-      (base/specialty
-       :name "Muay Thai"
-       :reference
-        "* Apachai: The use of knees and elbows is very important in Muay Thai.
-         * Akisame: Which, in fact, is rather rare as most contemporary martial arts have banned the use of knees and elbows in tournament fighting.
-         * Kenichi: Really? How come?
-         * Apachai: If you use them wrong, you can kill your opponent!
-         * Akisame: That's right. However, in Muay Thai, they specifically focus on these moves.
-         * Kenichi: Yeahhh, and why is that?
-         * Apachai: Because if you use them right, you can kill your opponent!
-         - Kenichi: World's Mightiest Disciple"
-       :summary
-        "* A fast, brutal martial art from Thailand.
-         * The style uses close strikes with the knees, elbows, fists, and feet. There are no grabs or throws. Fighters often jump up to add more force to their blows. Fighters are also trained to take damage as much as avoid it.
-         * Evasion - [Iron Skin]
-         * Grapples - [Knee Bash]
-         * Kicks - [Axe Kick], [Double Kick], [Foot Stomp], [Kick Defense], [Knee Drop], [Knee Strike], [Leg Sweep], [Lightning Leg], [Reverse Front Kick], [Roundhouse Kick]
-         * Strikes - [Dash Attack], [Dragon Punch], [Elbow Drop], [Elbow Strike], [Feint], [One Two Punch], [Ram], [Spinning Back Fist], [Strike Defense], [Sword Hand], [Uppercut]"
-       :titles "Thai Kickboxing")
-     :Ninjutsu
-      (base/specialty
-       :name "Ninjutsu"
-       :summary
-        "* Ninjutsu is the art of the Japanese Ninja. Ninjutsu saw greatest use from 1200-1600 AD when warlords employed ninja clans to spy on and assassinate their enemies.
-         * The primary weapons of the ninja are the ninja-to sword and shuriken throwing stars. They were also adept in many types of concealed weapons. They are also known for unusual gadgets to assist them in climbing, crossing water, picking locks, etc. They are assassins, so they are not interested in honorable combat and will use traps or poison instead of combat if possible.
-         * Kunoichi - Female ninja operated as infiltrators, spies and assassins. They spent time in enemy houses, reported secrets and undermined rival houses by any means necessary. Kunoichi could use their gender to their advantage because women were underestimated as warriors. This made it easier for them to get closer to their targets by posing as maids, geisha, servants and priestesses. In some cases, they were taken on as concubines and mistresses, giving them unparalleled access to all their marks.
-         * Athletics - [Backflip], [Breakfall], [Jump], [Wall Spring]
-         * Evasion - [Deflect], [Disarm], [Dirty Fighting], [Disengate], [Distraction], [Dive for Cover], [Dodge], [Dodge Roll], [Weapon Block]
-         * Grapples - [Air Throw], [Backroll Throw], [Choke Hold], [Grapple Defense], [Groundfighting], [Joint Lock], [Suplex], [Takedown], [Tackle]
-         * Kicks - [Backflip Kick], [Handstand Kick], [Leg Sweep], [Roundhouse Kick], [Slide Kick]
-         * Strikes - [Ear Pop], [Grab Punch], [Nerve Strike], [Phoenix Strike]
-         * Melee - [Dazing Blow], [Jab], [Parry], [Riposte], [Thrust]"
-       :titles "Shinobi, Kunoichi")
-     :Pakua
-      (base/specialty
-       :name "Pakua"
-       :summary
-        "* A Chinese 'internal' fighting style derived from I Ching, the Book of Changes which states that the universe is in a state of constant change. Therefore, in Pakua, any change, the placement of the foot, the turning of a hand is important. Pakua is highly circular and emphasizes footwork and constant motion. Pakua masters are said to use palm strikes instead of fist strikes to better control the energy they release.
-         * Evasion - [Deflect], [Sidestep], [Weapon Block]
-         * Grapples - [Grapple Defense], [Joint Lock]
-         * Kicks - [Kick Defense], [Leg Sweep]
-         * Strikes - [Grab Punch], [Palm Strike], [Strike Defense]
-         * Focus Powers - [Zen No Mind]"
-       :titles "Eight Diagrams")
-     :Pentjak-Silat
-      (base/specialty
-       :name "Pentjak-Silat"
-       :summary
-        "* A broad set of Indonsian fighting styles. Fighters are trained to keep their footing on unstable ground because the condition is so common in Indonesia. Silat teaches many weapons especially the kris, a wavy bladed dagger. The mysticism and legends surrounding this weapon equal or exceed the katana.
-         * Athletics - [Breakfall], [Disarm], [Disengage], [Dodge Roll], [Jump], [Kippup]
-         * Evasion - [Deflect], [Hip Throw], [Iron Horse], [Iron Skin]
-         * Grapples - [Choke Hold], [Grab Punch], [Grapple Defense], [Joint Lock], [Pin], [Takedown]
-         * Kicks - [Double Kick], [Dragon Kick], [Flying Kick], [Leg Sweep], [Lightning Leg], [Roundhouse Kick]
-         * Strikes - [Deflecting Punch], [Hyperfist], [Jab], [Nerve Strike], [Phoenix Strike], [Sword Hand]
-         * Melee - [Fleche], [Parry], [Riposte], [Slash], [Thrust]"
-       :titles "Guru, Pandekar, Silat")
-     :Savate
-      (base/specialty
-       :name "Savate"
-       :summary
-        "* French Kickboxing developed in Marseilles in the 1600s from kick brawling French sailors. The style is characterized by a bouncing gait and a unique kick style. When delivering kicks, the fighter leans away from the direction of the kick and stretches one arm back like a fencer to maintain balance. This allows the torso to pivot away from any counterattack. Kicks are landed with the toes or shins instead of the ball or heel and are designed to quickly slip by blocking arms.
-         * Evasion - [Disarm]
-         * Grapples - [Back Roll Throw], [Bear Hug], [Choke Hold], [Knee Bash]
-         * Kicks - [Axe Kick], [Double Kick], [Kick Defense], [Kick Off], [Knee Strike], [Leg Sweep], [Lightning Leg], [Roundhouse Kick], [Slide Kick], [Spinning Thrust Kick]
-         * Strikes - [Dash Punch], [Deflecting Punch], [Ear Pop], [Feint], [Hook], [One Two Punch], [Palm Strike], [Spinning Back Fist], [Strike Defense]"
-       :titles "Savateur, Savateuse")
-     :Sumo
-      (base/specialty
-       :name "Sumo"
-       :summary
-        "* Evasion - [Iron Horse], [Iron Skin]
-         * Grapples - [Air Throw], [Bear Hug], [Grapple Defense], [Knee Bash], [Hip Throw], [Shoulder Throw]
-         * Kicks - [Double Kick], [Dragon Tail], [Leg Sweep]
-         * Strikes - [Ear Pop], [Head Butt], [Hyperfist], [One Two Punch], [Palm Strike], [Sword Hand]"
-       :titles "Cireum")
+     "Ninjutsu"
+     "Pakua"
+     "Pentjak-Silat"
+     "Savate"
+     "Sumo"
      "Tae Kwon Do"
-      (base/specialty
-       :name "Tae Kwon Do"
-       :summary
-        "* A Korean martial art developed in the 1600s AD. It emphasizes kicks over punches.
-         * Athletics - [Breakfall], [Jump], [Wall Spring]
-         * Evasion - [Deflect], [Iron Horse]
-         * Kicks - [Axe Kick], [Double Kick], [Flying Kick], [Hurricane Kick], [Kick Off], [Knee Strike], [Lightning Leg], [Reverse Front Kick], [Roundhouse Kick], [Scissor Kick]
-         * Strikes - [Deflecting Punch], [Haymaker], [Hyperfist], [Spinning Back Fist], [Sword Hand]"
-       :titles "The Way of Kicking and Punching")
      "Tai Ch'i Ch'uan"
-      (base/specialty
-       :name "Tai Ch'i Ch'uan"
-       :summary
-        "* The ultimate internal Chinese martial art. The style is based on the
-         Thirteen Postures (8 actions, 5 directions). It emphasizes blocking
-         a strike and grabbing or striking back.
-         * Athletics - [Balance], [Breakfall]
-         * Evasion - [Deflect], [Disarm], [Disengage], [Iron Horse], [Iron Skin]
-         * Grapples - [Air Throw], [Back Roll Throw], [Grab Punch], [Grappling Defense], [Hip Throw], [Joint Lock], [Pin], [Shoulder Throw]
-         * Kicks - [Dragon Tail], [Kick Defense], [Leg Sweep], [Slide Kick]
-         * Strikes - [Deflecting Punch], [Grab Punch], [Nerve Strike], [Palm Strike], [Phoenix Strike], [Strike Defense]
-         * Focus - [Empty Force], [Spirit Healing], [Zen No Mind]"
-       :titles "Supreme Ultimate Fist, Yin-Yang Boxing")
-     :Wrestling
-      (base/specialty
-       :name "Wrestling"
-       :summary
-        "* Wrestling is one of the earliest martial arts. Virtually every ancient society had some form of wrestling and many have survived largely unchanged.
-         * Atheltics - [Breakfall], [Jump]
-         * Evasion - [Disengage]
-         * Grapples - [Air Throw], [Backbreaker], [Bear Hug], [Choke Hold], [Grapple Defense], [Hip Throw], [Iron Claw], [Joint Lock], [Knee Bash], [Nelson], [Piledriver], [Pin], [Reversal], [Sleeper Hold] [Shoulder Throw], [Suplex], [Tackle], [Take Down], [Thigh Press]
-         * Kicks - [Knee Strike]
-         * Strikes - [Ear Pop], [Haymaker], [Ram]"
-       :titles "Dumog/Greco Roman/Koshti/Naban/Sanbo/Yaghliguresh")
-     "Wu Shu"
-      (base/specialty
-       :name "Wu Shu"
-       :summary
-        "* [Axe Kick]
-         * [Backflip Kick]
-         * [Backroll Throw]
-         * [Drunken Monkey Roll]
-         * [Flying Kick]
-         * [Handstand Kick]
-         * [Hurricane Kick]
-         * [Kick Off]
-         * [Kippup]
-         * [Leg Sweep]
-         * [Lightning Leg]
-         * [Reverse Front Kick]
-         * [Rolling Attack]
-         * [Scissor Kick]
-         * [Slide Kick]
-         * [Spinning Back Fist]
-         * [Spinning Thrust Kick]
-         * [Wall Spring]
-           PUNCH:
-           Rekka Ken(5)
-           Spinning Knuckle(3)
-
-           KICK:
-           Back Flip Kick(2)
-           Forward Back Flip Kick(1)
-           Ax Kick(4)
-           Cartwheel Kick(2)
-           Reverse Frontal Kick(2)
-           Scissor Kick(4)
-           Flying Thrust Kick(4)
-           Forward Flip Knee(2)
-           Handstand Kick(1)
-           Hurricane Kick(1)
-           Air Hurricane Kick(1)
-           Lightning Leg(3)
-           Stepping Front Kick(4)
-           Whirlwind Kick(4)
-           Double Hit Kick(1)
-           Great Wall Of China(5)
-           Descending Wheel Kick(4)
-
-           BLOCK:
-           Maka Wara(4)
-           San He(3)
-
-           GRAB:
-           Air Throw(2)
-           Back Roll Throw(1)
-
-           ATHLETICS:
-           Cannon Drill(5)
-           Displacement(4)
-           Backflip(2)
-           Flying Heel Stomp(3)
-           Rolling Attack(3)
-           Vertical Rolling Attack(3)
-           Wall Spring(1)
-           Evasive Tumble(2)
-
-           FOCUS:
-           Balance(4)
-           Chi Kung Healing(4)
-           Fireball(4)
-           Improved Fireball(5)
-           Flying Fireball(3)")
-     :Binding
-      (base/specialty
-       :name "Binding"
-       :summary "* Includes Garotte, Pianowire, Monofilament, Pillowcase, Towel, Rolled up Shirt, etc."
-       :titles "Strangler")
-     :Knives
-      (base/specialty
-       :name "Knives"
-       :reference "* Do you want to know why I use a knife? Guns are too quick. You can't savor all the little...emotions. You see, in their last moments, people show you who they really are. So, in a way I know your friends better than you ever did. Would you like to know which of them were cowards? - Joker, The Dark Knight"
-       :summary "* Includes Pocket Knives, Switchblades, Straight Razors, Small Kitchen Knives, etc."
-       :titles "Butcher, Knife Fighter, Murderer")))
+     "Wu Shu"))
   (base/skill
    :name "Communications"
    :abilitymap
@@ -1623,7 +1109,10 @@ x +1DMG vs. Crouching."
    :name "Firearms"
    :titles "Crackshot, Marksman, Rifleman, Sharpshooter, Sniper"
    :reference
-    "Captain's orders: Bullet to the face. - Crackshot Corsair, Runeterra"
+    "* Captain's orders: Bullet to the face. - Crackshot Corsair, Runeterra
+     * Smile! It's called gunPLAY. - Jinx, Runeterra"
+   :summary
+    "* Skill in using guns of various types (not including crossbows). IF you shoot in a non-standard way, you have [Disadvantage]."
    :abilitymap
     (base/abilitymap
      :Anti-Personnel
@@ -1647,12 +1136,8 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Chemical Rounds"
        :summary "* [Action]: [-1 Damage], [Critical Hits] are [Acid]")
-     "Fast Draw"
-      (base/ability
-       :name "Fast Draw"
-       :summary
-        "* [Requires]: Hand weapon
-         * Spend 1 Speed to draw a Hand weapon from holster to hip where he can [Shoot From The Hip].")
+     "Quick Draw"
+      (base/ability<-tactics-key tactics "Quick Draw")
      "Gyrojet Rounds"
       (base/ability
        :name "Gyrojet Rounds"
@@ -1663,9 +1148,8 @@ x +1DMG vs. Crouching."
        :name "High Explosive Rounds"
        :summary "* [Action]: Use [Blast] rules for targetting and damage."
        :titles "Explosive Rounds")
-     :Hipshoot
-      (base/ability
-       :name "Hipshoot")
+     "Hip Shoot"
+      (base/ability<-tactics-key tactics "Hip Shoot")
      "Non-Lethal Rounds"
       (base/ability
        :name "Non-Lethal Rounds"
@@ -2093,15 +1577,9 @@ x +1DMG vs. Crouching."
       (base/ability
        :name "Wingsuit Combat"))
    :specialtymap
-    (base/specialtymap
-     :Siegecraft
-      (base/specialty
-       :name "Siegecraft"
-       :summary
-        "* Besiege
-         * Fortifications
-         * Sapping"
-       :titles "Sapper")))
+    (base/specialtymap<-tactics-keys
+     tactics
+     "Siegecraft"))
   (base/skill
    :name "Ranged"
    :reference "* Good. Bad. I'm the guy with the gun. - Ash, Army of Darkness"

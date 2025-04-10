@@ -135,7 +135,8 @@ export default class nx_tactics_decks_deck {
               nx_tactics_decks_deck.f_deck_items(),
               nx_tactics_decks_deck.f_deck_skills(),
               nx_tactics_decks_deck.f_deck_powers(),
-              nx_tactics_decks_deck.f_deck_abilities()
+              nx_tactics_decks_deck.f_deck_abilities(),
+              nx_tactics_decks_deck.f_deck_specialties()
             )
           )
         )
@@ -304,7 +305,6 @@ export default class nx_tactics_decks_deck {
           nx_tactics_decks_restraint.f_deck_restraintback(),
           nx_tactics_decks_wound.f_deck_bleeding(),
           nx_tactics_decks_wound.f_deck_bloodloss(),
-          nx_tactics_decks_starter.f_deck_round(),
           nx_tactics_decks_starter.f_deck_player("blue"),
           nx_tactics_decks_starter.f_deck_player("green"),
           nx_tactics_decks_starter.f_deck_player("red"),
@@ -342,6 +342,37 @@ export default class nx_tactics_decks_deck {
         )
         const cardmap = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_skillmap}, skillmap)
         return vx_core.f_new({"any-1": nx_tactics_base.t_deck}, ":name", "Skills", ":cardmap", cardmap)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function deck_specialties
+   * Specialty Deck
+   * @return {deck}
+   */
+  static t_deck_specialties = {
+    vx_type: vx_core.t_type
+  }
+  static e_deck_specialties = {
+    vx_type: nx_tactics_decks_deck.t_deck_specialties
+  }
+
+  // (func deck-specialties)
+  static f_deck_specialties() {
+    let output = nx_tactics_base.e_deck
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_deck},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const specialtymap = vx_core.f_any_from_struct(
+          {"any-1": nx_tactics_base.t_specialtymap, "struct-2": nx_tactics_base.t_tactics},
+          nx_tactics_decks_data.c_tactics_all,
+          ":specialtymap"
+        )
+        const cardmap = vx_core.f_map_from_map({"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_specialty, "map-1": nx_tactics_base.t_cardmap, "map-2": nx_tactics_base.t_specialtymap}, specialtymap)
+        return vx_core.f_new({"any-1": nx_tactics_base.t_deck}, ":name", "Specialties", ":cardmap", cardmap)
       })
     )
     return output
@@ -395,6 +426,7 @@ export default class nx_tactics_decks_deck {
       "deck-scenes": nx_tactics_decks_deck.e_deck_scenes,
       "deck-setup": nx_tactics_decks_deck.e_deck_setup,
       "deck-skills": nx_tactics_decks_deck.e_deck_skills,
+      "deck-specialties": nx_tactics_decks_deck.e_deck_specialties,
       "deck-units": nx_tactics_decks_deck.e_deck_units
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
@@ -408,6 +440,7 @@ export default class nx_tactics_decks_deck {
       "deck-scenes": nx_tactics_decks_deck.t_deck_scenes,
       "deck-setup": nx_tactics_decks_deck.t_deck_setup,
       "deck-skills": nx_tactics_decks_deck.t_deck_skills,
+      "deck-specialties": nx_tactics_decks_deck.t_deck_specialties,
       "deck-units": nx_tactics_decks_deck.t_deck_units
     })
     const typemap = vx_core.vx_new_map(vx_core.t_typemap, {
@@ -600,6 +633,24 @@ export default class nx_tactics_decks_deck {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_deck.f_deck_skills
+    }
+
+    // (func deck-specialties)
+    nx_tactics_decks_deck.t_deck_specialties['vx_value'] = {
+      name          : "deck-specialties",
+      pkgname       : "nx/tactics/decks/deck",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_decks_deck.f_deck_specialties
     }
 
     // (func deck-units)

@@ -25,6 +25,8 @@
     "* Armor that vaporizes when hit decreasing damage but also damaging the armor.
      * Ignore the first point of [Damage] and reduce [Armor] (on that facing) instead.")
   (base/ability
+   :name "Absorb Electricity")
+  (base/ability
    :name "Administration"
    :titles "Administrator, Secretary")
   (base/ability
@@ -44,6 +46,9 @@
    :name "Anvil Strike"
    :summary "* [+1 Damage] when target is adjacent to solid terrain.")
   (base/ability
+   :name "Arc Lightning"
+   :summary "* Lightning leaps from the target to others in range.")
+  (base/ability
    :name "Architecture"
    :summary
     "* [Extended Action]: Design a structure. The size and quality of the structure are limited by level.
@@ -54,6 +59,9 @@
    :summary
     "* [Requires]: Bow or Javelin
      * May fire over other units that block Line of Sight.")
+  (base/ability
+   :name "As if in a Dream"
+   :summary "* Confuse a target's senses to perceive a single thing incorrectly.")
   (base/ability
    :name "Auto Med System"
    :summary
@@ -69,6 +77,8 @@
    :titles "Back Biter, Back Stabber, Opportunist, Traitor")
   (base/ability
    :name "Balanced for Throwing")
+  (base/ability
+   :name "Ball Lightning")
   (base/ability
    :name "Barbed Javelin"
    :summary
@@ -118,6 +128,11 @@
    :summary
     "* [Requires]: [Melee] or [Close Combat] vs an enemy of larger scale.
      * [Damage]: If the hit location is [Q], [K], or [A], Climb the target's body and do +1 Damage.")
+  (base/ability
+   :name "Body Electric"
+   :titles "Electricity Form"
+   :summary
+    "* Change into pure electricity.")
   (base/ability
    :name "Body Flares"
    :summary
@@ -182,6 +197,9 @@
      Those who dared to fight for their freedom. - Glass Fleet"
    :summary "Gather a war party from the populace")
   (base/ability
+   :name "Call Lightning"
+   :summary "* Calls a lightning strike from an existing storm cloud.")
+  (base/ability
    :name "Camouflage"
    :summary
     "* [Continuous]: While active, unit is hidden.
@@ -228,13 +246,21 @@
   (base/ability
    :name "Commanding Presense")
   (base/ability
+   :name "Concoct Dream Essence"
+   :summary "* Dreams caught with [Dreamcatching] can be contained in a bottle called [Dream Essence]. Opening the bottle releases the experience of the dream to all surrounding it.")
+  (base/ability
    :name "Constrict"
    :titles "Bear Hug")
   (base/ability
    :name "Continuous Cut"
-   :reference "The Flowing Water Cut is used when you are struggling blade to blade with the enemy. When he breaks and quickly withdraws trying to spring with his sword, expand your body and spirit and cut him as slowly as possible with your long sword, following your body like stagnant water. - Miyamoto Mushashi, The Book of Five Rings"
-   :summary "* [Reaction]: [+1 Defense].  If you are not hit, you may immediately attack as a free action at [-1 Attack]."
+   :reference
+    "The Flowing Water Cut is used when you are struggling blade to blade with the enemy. When he breaks and quickly withdraws trying to spring with his sword, expand your body and spirit and cut him as slowly as possible with your long sword, following your body like stagnant water. - Miyamoto Mushashi, The Book of Five Rings"
+   :summary
+    "* [Reaction]: [+1 Defense].  If you are not hit, you may immediately attack as a free action at [-1 Attack]."
    :titles "Flowing Water Cut")
+  (base/ability
+   :name "Control Lightning"
+   :summary "* [Reaction]: Redirect a lightning effect to another target.")
   (base/ability
    :name "Cooking"
    :summary "* Prepare Recipe"
@@ -248,11 +274,18 @@
    :summary
     "* [Passive] - Armor:+1 vs. Corrosive Agents")
   (base/ability
+   :name "Create Chimera"
+   :summary "A Chimera is an imaginary creation. It exists only to the user, though those with magical abilities, young children and the mentally impaired may see them. They only can affect those who can see them.")
+  (base/ability
    :name "Cryo Sleep System"
    :summary
     "* Can freeze the wearer into cryo-sleep and armor runs on minimal power to preserve the wearer from hostile environments or critical wounds for up to a month before power gives out.")
   (base/ability
    :name "Cull the Herd")
+  (base/ability
+   :name "Daedalus Gateway"
+   :summary
+    "* A subtle gate that moves a person to a different Realm without them realizing. Both locations must be nearly identical.")
   (base/ability
    :name "Dash Attack"
    :summary
@@ -314,6 +347,14 @@
    :name "Dialect-Slave"
    :summary "Dialect of slaves")
   (base/ability
+   :name "Dimension Door"
+   :summary
+    "* Cross through a doorway or arch of some sort and appear through another similar arch some distance away.")
+  (base/ability
+   :name "Dimensional Gateway"
+   :summary
+    "* Open a portal to another dimension.")
+  (base/ability
    :name "Dirty Fighting"
    :titles "Bite, Eye Gouge, Ear Pop, Hair Pulling, Low Blow")
   (base/ability
@@ -344,22 +385,67 @@
   (base/ability
    :name "Dodge"
    :summary
-    "+1 Initiative
-     -1 Action
-     +1 Defense")
+    "* [Skill]: [Evasion]")
   (base/ability
-   :name "Dodge Roll")
+   :name "Dodge Roll"
+   :summary
+    "* [Skill]: [Evasion]")
   (base/ability
    :name "Double Shot"
    :summary
-    "* -2 [Attack]
-     * -1 [Piercing]
+    "* [Skill]: [Firearms]-2
+     * [Piercing]:-1
      * May attack two targets in same [Arc]."
    :titles "Double Throw")
+  (base/ability
+   :name "Down the Rabbit Hole"
+   :summary
+    "* [Requires]: A hole that leads somewhere unknown.
+     * [Action]: By entering a hole, the Dreamer may travel to the [Spirit Realm].  If the Dreamer is a native of the [Spirit Realm], he may stay as long as he wants. If not, he will return to the real world after [Skill] hours as if waking from a dream.")
+  (base/ability
+   :name "Drag"
+   :summary
+    "* [Skill]: [Close Combat]
+     * [Requires]: You must have a [Hold] on the target.
+     * [Action]: You may at an additional Move:-1/space while dragging the target behind you.")
+  (base/ability
+   :name "Dream Effectively"
+   :reference
+    "* I was just thinking. Wouldn't it be funny if I wasn't the only one who could dream effectively? What if everybody could do it? And reality was being pulled out from under us all the time - and we didn't even know it? - George Orr, The Lathe of Heaven
+     * Oh, my God... I just killed six billion people... - George Orr, The Lathe of Heaven")
+  (base/ability
+   :name "Dream Riding"
+   :summary "* Ability to enter another person's dream.")
+  (base/ability
+   :name "Dream Sight")
+  (base/ability
+   :name "Dream Speak"
+   :summary
+    "* Grants the ability to converse with things that cannot normally speak including plants, animals, and inanimate objects. Such beings have knowledge and personalities limited by their natures.")
   (base/ability
    :name "Dream Therapy"
    :summary
     "Heal Trauma by exploring the Dream World.")
+  (base/ability
+   :name "Dream Weaving"
+   :reference
+    "* She was shaping a world. She could envision the world, feel the spring of the earth beneath her bare feet, the warmth of the sun, the vibrant green of the grass, the hazy blue of distant mountains. 'Do you feel it?' 'Yes.' 'Then make it real.' She brought all of her will to paint all the details of the dream onto a new reality. She opened her eyes and gazed out upon the land she had already seen in her mind. It was so beautiful it took her breath away ... and failed to return it. She gasped as her lungs emptied and her vision faded to black ... 'A useful lesson. You forgot to breathe in the scents of your world that would indicate air. Remember even the smallest detail is crucial.' - Tales of Magick")
+  (base/ability
+   :name "Dreamcatching")
+  (base/ability
+   :name "Dreamreading"
+   :summary
+    "[Hour]: By sleeping next to a dreamer, you may witness their dreams and interpret them. You may also return to previous dreams.")
+  (base/ability
+   :name "Dreamriding"
+   :summary
+    "[Hour]: By sleeping next to a dreamer, you may participate in their dreams.")
+  (base/ability
+   :name "Dreamquest"
+   :summary
+    "* [Requires]: Sleeping
+     * [Action]: While asleep, Spirit enters the [Spirit Realm].  The Spirit may travel as long as it wants, but whenever the Body awakens, the Spirit immediately returns.
+     * [Death]: Spirit may permanently enter the [Spirit Realm].")
   (base/ability
    :name "Drunken Monkey Roll"
    :summary
@@ -386,6 +472,8 @@
    :name "Electrical Resistant"
    :summary "* [Passive] - Armor:+1 vs. Electricity")
   (base/ability
+   :name "Electromagnetic Pulse")
+  (base/ability
    :name "Elvish"
    :summary
     "Fluent in the Elvish/Alfar language")
@@ -409,12 +497,19 @@
     "* Suit is sealed against most hostile environments including space. Does not include corrosive environments.
      * Requires - [Enviromental Containment]")
   (base/ability
+   :name "Epiphany"
+   :summary
+    "* A moment of ecstasy, delight, and intense revelation. During epiphanies, disparate things suddenly synchronize and make sense. Ephipanies often trigger major changes in personality or goals.")
+  (base/ability
    :name "Existential Riddle"
    :summary
     "Demoralize unwitting rivals by questioning their purpose in life.")
   (base/ability
    :name "Explosive Shot"
    :summary "* [Requires]: Bow or Crossbow")
+  (base/ability
+   :name "Eyes of a Child"
+   :summary "* All Chimera become visible to those you chose.")
   (base/ability
    :name "Face Molding"
    :summary
@@ -485,9 +580,16 @@
    :summary
     "* [Action]: If you hit with this ability, you may immediately turn to the left or right and attack a target in the next adjacent space. This may be repeated any number of times at [-1 Attack] per target after the first though each additional target must be in the same direction.")
   (base/ability
+   :name "Fond Memories"
+   :reference "Eternal Sunshine of the Spotless Mind"
+   :summary "* This ability makes every childhood dream and ambition real again. Every imaginary friend is remembered clearly and the happiest moments from youth return with the intensity of a first kiss and the excitement of Christmas. Then, suddenly, its over. In their absence, depression can crash down.  Truly fallen beings can become suicidal. The remembrance can be uplifting in the end, allowing one to relive the best moments of life.")
+  (base/ability
    :name "Forward Observer"
    :summary
     "* [Action]: When unit has [Line of Sight] on a opponent, any number of units with [Indirect Fire] may attack that unit even if they do not have [Line of Sight].")
+  (base/ability
+   :name "Gateway"
+   :summary "* Open a portal to another location.")
   (base/ability
    :name "Glassblowing"
    :summary
@@ -519,6 +621,11 @@
      * IF You have [Full Cover] AND you don't move AND your opponents are at least your [Body] spaces away.
      * THEN [Action] [Continuous]: You are hidden from view AND Opponents must succeed at [Investigate]/[Seek] to detect you.")
   (base/ability
+   :name "Hip Shoot"
+   :summary
+    "* [Skill]: [Firearms]
+     * Can shoot at Initiative:-1 without disadvantage from the Hip.")
+  (base/ability
    :name "Horns"
    :summary "* Usually they are worn as antlers, but may sprout form anywhere on the body.")
   (base/ability
@@ -533,6 +640,13 @@
    :name "Hunter's Mark"
    :summary
     "* [Continuous]: Place a mark on target. Initiative:+1 vs. marked target.")
+  (base/ability
+   :name "Imaginary Friend"
+   :reference
+    "* As I was walking up the stair, I met a man who wasn't there. He wasn't there again today. If only he would go away. - Children's Nursery Rhyme
+     * Mother, do you remember when I was little, I had a friend, he was make-believe? No. Don't you remember? Only I could see him? No, I don't remember Drop Dead Fred at all. - Drop Dead Fred
+     * Let's write something on the carpet... I know how about 'Mother SUCKS'. - Drop Dead Fred"
+   :summary "Create a character with a distinct personality of your choice that only the target can see.")
   (base/ability
    :name "Impale"
    :summary
@@ -617,7 +731,33 @@
      * Flay Skins"
    :titles "Tanner")
   (base/ability
+   :name "Lernaean Regeneration"
+   :summary
+    "* [Power]: [Healing]
+     * [Activate]: If unit is Damaged, Remove a Damage Token and add a White Close Combat Token.")
+  (base/ability
+   :name "Lightning Charge"
+   :summary "* Imbue an item with electric charge that is discharged on contact.")
+  (base/ability
+   :name "Lightning Lash"
+   :titles "Arc Lash, Lightning Whip")
+  (base/ability
+   :name "Lightning Pillar"
+   :summary
+    "* [Action]: Summon a pillar of Electricity within Range. (Removing any others)
+     * [Reaction]: IF anything touches the pillar THEN you may make a basic Electricity [Attack].
+     * [Reaction]: IF you use an Electricity ability THEN you may arc it to strike from the pillar instead.")
+  (base/ability
+   :name "Lightning Warp"
+   :summary
+    "* Near instantaneous travel in a flash of lightning.
+     * Level determines distance travelled.")
+  (base/ability
    :name "Linguistic Genius")
+  (base/ability
+   :name "Living Nightmare"
+   :summary "* A chimerical monster formed from nightmares or madness."
+   :titles "Waking Nightmare")
   (base/ability
    :name "Lobotomize"
    :reference
@@ -666,6 +806,9 @@
      * +1 Initiative
      * +1 Accuracy
      * Critcals - [Bleeding]")
+  (base/ability
+   :name "Nightmare Essence"
+   :summary "* Nightmares caught with [Dreamcatching] can be contained in a bottle. Opening the bottle releases the experience of the dream to all surrounding it. These can be used as grenades.")
   (base/ability
    :name "Off Roading")
   (base/ability
@@ -723,11 +866,18 @@
   (base/ability
    :name "Piercing Shot"
    :summary
-    "* [Requires]: Bow or Crossbow
-     * [Attack]: [+1 Armor Piercing]")
+    "* [Skill]: [Ranged]
+     * [Requires]: Bow or Crossbow
+     * [Armor Piercing]:1")
   (base/ability
    :name "Piercing Strike"
-   :summary "* [Action]: Trades damage to increase armor penetration.")
+   :summary
+    "* [Action]: Trades damage to increase armor penetration.")
+  (base/ability
+   :name "Pillow Fort"
+   :summary
+    "* By exercising one's imagination, a soft barrier can provide real defense but only for the Dreamer.
+     * [Action]: Any material may be chosen to provide [Skill] defense for the user.")
   (base/ability
    :name "Plasma Resistant"
    :summary
@@ -793,6 +943,17 @@
      * +1 Move
      * Criticals - [Knockdown]")
   (base/ability
+   :name "Power Leap")
+  (base/ability
+   :name "Power Lift"
+   :summary "* Lift additional kg equal to Power Rating.")
+  (base/ability
+   :name "Power Strike"
+   :summary "* Add Power Rating to weapon damage using Melee, or Close Combat.")
+  (base/ability
+   :name "Power Throw"
+   :summary "* Add Power Rating to weapon damage when throwing any object or weapon.")
+  (base/ability
    :name "Prepare Acid")
   (base/ability
    :name "Prepare Anti-Coagulant"
@@ -818,6 +979,11 @@
    :summary
     "* [Skill]: [Close Combat]
      * [Damage]: [Body] [Bash]")
+  (base/ability
+   :name "Quick Draw"
+   :summary
+    "* [Requires]: 1 Handed Firearm
+     * [Free]: Move:-1 to draw a Hand weapon from holster to hip where he can [Hip Shoot].")
   (base/ability
    :name "Quill Attack")
   (base/ability
@@ -846,16 +1012,45 @@
      * [Action]: Speed +1, Attack -1"
    :titles "In One Timing, Lightning Blow")
   (base/ability
+   :name "Rapture"
+   :summary
+    "* An extremely difficult and rare ability of self-discovery to create Glamour from oneself. Only at a moment of sudden self-realization can a Rapture be attained.
+     * [Passive] - While in a Rapture, all [Critical] results generate [Glamour Token]s.")
+  (base/ability
+   :name "Ravaging"
+   :summary
+    "* Drain creativity from a subject. The subject must be well known and a good knowledge of how the subject dreams is required. After that, the subject must simply be touched and he/she will experience a wave of depression and fear as the Glamour is drained from them.
+     * [Action]: Touch the subject. Roll [Banality]. Gain +1 [Glamour Token] if any successes. If no [Glamour] is gained, both the user and subject gain +1 [Banality] instead.")
+  (base/ability
    :name "Reactive Armor"
    :summary
     "* Exterior layer of armor explodes on impact reducing damage of the first hit but reduces armor rating for all subsequent hits.
      * [Passive] - +2 Armor vs. the first hit. -1 Armor for each subsequent hit.")
+  (base/ability
+   :name "Regeneration"
+   :summary
+    "* [Power]: [Healing]
+     * [Passive]
+     * [Bleeding] and [Damage] Tokens are considered Yellow Tokens.")
+  (base/ability
+   :name "Regrowth"
+   :summary
+    "* [Power]: [Healing]")
+  (base/ability
+   :name "Resist: Electricity")
   (base/ability
    :name "Restful Sleep"
    :summary
     "Ensure restful sleep for levelx2 hours.")
   (base/ability
    :name "Returning Throw")
+  (base/ability
+   :name "Reverie"
+   :summary
+    "* Say or suggest things that inspire others to wonderful ideas and creations. This is a time-consuming process to discover they subtle things that inspire another to great works.
+     * [Extended Action]: Inspire someone while they create.
+     * [Action]: View a work of art created during Reverie. Gain +1 [Glamour Token]. A particular work of art may only grant this bonus once a year."
+   :titles "Muse")
   (base/ability
    :name "Richochet"
    :summary "* [Requires]: Thrown Object")
@@ -897,6 +1092,9 @@
    :name "Scouting"
    :titles "Reconnaissance")
   (base/ability
+   :name "Seeming"
+   :summary "* Take on the appearance of another.")
+  (base/ability
    :name "Sensory Deprivation")
   (base/ability
    :name "Sensory Overload")
@@ -915,10 +1113,30 @@
     * Repair Cloth"
    :titles "Dressmaker, Seamstress")
   (base/ability
+   :name "Shattered Dreams")
+  (base/ability
+   :name "Shield Modulation"
+   :summary
+    "* [Skill]: [Shielding]
+     * Alter the Shields to Resist a single [Damage Type] while becoming vulnerable to 2 others.")
+  (base/ability
+   :name "Shield Redirection"
+   :reference
+    "* Switch your deflector shields on -- double front! - Garven Dreis, Star Wars"
+   :summary
+    "* [Skill]: [Shielding]
+     * Alter the Shields to increase Shielding in a single Arc by 1 by decreasing all other Arcs by 1.")
+  (base/ability
    :name "Shield Snare"
    :summary
-    "* [Requires]: Javelin, Target with shield
+    "* [Skill]: [Defense]
+     * [Requires]: Javelin, Target with shield
      * [Attack]: Criticals are [Encumberance] Tokens.")
+  (base/ability
+   :name "Shockwave"
+   :summary
+    "* [Power]: [Strength]
+     * Knockdown everyone in the area.")
   (base/ability
    :name "Sidestep")
   (base/ability
@@ -941,6 +1159,9 @@
    :summary
     "* Ignore Snow Move penalty
      * Off Snow Slow:+1.")
+  (base/ability
+   :name "Soul Pact"
+   :summary "* Death: Enter a specified Demon Realm. This ability is automatic and is not optional.")
   (base/ability
    :name "Soulbind"
    :titles "Soulbond")
@@ -1015,10 +1236,38 @@
     "* [Requires]: Thrown Object
      * Trades lethal damage for stunning damage.")
   (base/ability
+   :name "Summon Demon"
+   :titles "Demonic Summoning")
+  (base/ability
+   :name "Summon Devil"
+   :titles "Diabolic Summoning")
+  (base/ability
+   :name "Summon Familiar"
+   :reference
+    "* Animal companions, such as cats, that are either trained to assist in magic, or are used as a mascot."
+   :summary
+    "* Summon an animal shaped familiar spirit to serve as a companion, servant, spy, etc.
+     * The Familiar is highly intelligent and must be bargained with before it agrees to serve.
+     * Duration: Indefinite.
+     * The Familiar will age with its master.
+     * The Familiar can gain abilities that its master possesses.
+     * Three mystic cords are constructed to link the Familiar to its master.
+     ** Golden Cord - Connects magical abilities.
+     ** Silver Cord - Connects the minds.
+     ** Bronze Cord - Connects the bodies.
+     !Familiar Skills
+     * Shapechange to Human Form
+     * Giant Growth (Self)
+     * Communicate with Master
+     * Speech")
+  (base/ability
    :name "Summon Id Monster"
    :summary "[Call] [Id Monster]"
    :reference
     "Monsters, John, monsters from the Id! - Ostrow, Forbidden Planet")
+  (base/ability
+   :name "Summon Item"
+   :summary "* A single item may be attuned to a summoning. Later that item may be summoned to the owner's hand.")
   (base/ability
    :name "Swallow Whole")
   (base/ability
@@ -1066,6 +1315,11 @@
      +1 Move
      Critcals - [Piercing]")
   (base/ability
+   :name "Thunderclap"
+   :summary
+    "* [Power]: [Strength]
+     * Stun everyone in the area.")
+  (base/ability
    :name "To Apply Stickiness"
    :reference
     "When the enemy attacks and you also attack with the long sword, you should go in with a sticky feeling and fix your long sword against the enemy's as you receive his cut. The spirit of stickiness is not hitting very strongly, but hitting so that the long swords do not separate easily. It is best to approach as calmly as possible when hitting the enemy's long sword with stickiness. The difference between 'Stickiness' and 'Entanglement' is that stickiness is firm and entanglement is weak. - Miyamoto Mushashi, The Book of Five Rings")
@@ -1105,6 +1359,19 @@
     "* Smoke Bomb! - Krieger, Archer"
    :summary
     "* If you can momentarily break line of sight, you can immediately [Hide].")
+  (base/ability
+   :name "Wall Crawling")
+  (base/ability
+   :name "Wall of Wonders"
+   :summary "* A wall of dreams. Causes [Fascination] in those who view it.")
+  (base/ability
+   :name "Wall Running"
+   :summary "* Requires: [Wall Crawling]")
+  (base/ability
+   :name "Water Walking")
+  (base/ability
+   :name "Water Running"
+   :summary "* Requires: [Water Walking]")
   (base/ability
    :name "Weapon Block"
    :summary

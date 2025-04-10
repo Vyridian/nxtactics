@@ -188,13 +188,7 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Zero G")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Acrobatics",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Acrobatics", ":summary", "* Balance\n* Breakfall\n* Contortion\n* Escape Artistry\n* Gymnastics\n* High Jump\n* Kippup\n* Long Jump\n* Tightrope\n* Throw\n* Tumbling\n* Wall Spring\n* Zero G", ":titles", "Acrobat, Contortionist, Escape Artist, Jester"),
-                ":Climbing",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Climbing", ":summary", "* Ice Climbing\n* Rappelling\n* Rock Climbing\n* Tree Climbing\n* Wall Climbing")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Acrobatics", "Climbing")
             ),
             ":Hunting",
             nx_tactics_base.f_skill_from_tactics_key(tactics, "Hunting"),
@@ -374,15 +368,7 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Winged Flight", ":summary", "* If the unit has wings, it must have this ability or fly at a penalty.\n* If the unit grew up with wings, this ability is assumed.")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                "Civilian Airplanes",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Civilian Airplanes"),
-                "Commercial Airplanes",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Commercial Airplanes"),
-                ":Helicopters",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Helicopters")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Airplanes: Civilian", "Airplanes: Commercial", "Helicopters")
             ),
             ":Riding",
             vx_core.f_new(
@@ -638,13 +624,7 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "World History")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":History",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "History"),
-                ":Trivia",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Trivia")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "History", "Trivia")
             ),
             ":Mechanics",
             vx_core.f_new(
@@ -1122,13 +1102,7 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ventriloquism")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Thievery",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Thievery", ":reference", "This is where Forrestall cashed in.  A friend of yours?  A competitor... he was good. He was very good. - Indiana Jones, Raiders of the Lost Ark", ":summary", "* Burglary, Escape, Fence Goods, Honor Among Thieves, Pick Pockets, Smuggling, Thieves Guild Codes", ":titles", "Burglar, Cutpurse, Footpad, Nezumi kozo, Pick Pocket, Smuggler, Thief"),
-                ":Trickery",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Trickery", ":summary", "* Blinding Powder, Confidence Game, Decoy, Distraction, Flash Powder, Gambling, Irritating Powder, Misdirection, Sleight of Hand, Stage Magic, Swindling, Vanish, Ventriloquism", ":titles", "Blackguard, Caitiff, Charlatan, Con Artist, Delinquent, Gambler, Knave, Ne'er do well, Ninja, Rapscallion, Renegade, Riffraff, Rogue, Scoundrel, Scalawag, Stage Magician, Swashbuckler, Swindler, Trickster")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Thievery", "Trickery")
             ),
             ":Espionage",
             vx_core.f_new(
@@ -1287,13 +1261,7 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Windfall")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Nobility",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Nobility", ":titles", "Noble Lineage"),
-                ":Royalty",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Royalty", ":titles", "Royal Lineage")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Nobility", "Royalty")
             ),
             ":Intimidation",
             vx_core.f_new(
@@ -1481,17 +1449,7 @@ export default class nx_tactics_books_skills {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Work Song")
               ),
               ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Courtesan",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Courtesan", ":reference", "* Madame Kaji: We've been servicing the road-weary crotches of every man here to pay obeisance to your new family. You need service only one, freshly washed. Akemi: You don't understand. Madame Kaji: That he's a beast. He's weak. He's a man. All men are weak. The ones who act beastly are weakest. They penetrate women and think that makes them powerful. Really, their pricks are fragile. Exposed. You saw it yourself. They want to be diapered, spanked, and breastfed, then strut away like they conquered an army. Nurture his weakness. Be his strength, and he'll worship you. Akemi: I, don't know if I can. Madame Kaji: Stop running to and from men, and decide what you want for your fucking self. Akemi: I want to be in control of my life. Madame Kaji: Then take control of his, Princess - Madame Kaji and Akemi, Blue Eye Samurai", ":summary", "* A prostitute, especially one whose clients are members of a royal court or of high social standing."),
-                ":Dance",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Dance", ":summary", "Ballroom Dance, Break Dance, Hip Hop Dance, Pole Dance, Salsa Dance, Tango, Waltz"),
-                ":Music",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Music", ":summary", "* Song, Musical Instrument\n* The power of music lies in its ability to tell truths that we willing listen to even if they are unpleasant.\n* See Equipment for Musical Instruments\n* Musical Instruments may be used with any performance power to increase any Range or Radius by 1 Space.", ":titles", "Bard, Classical, Drummer, Guitarist, Harpist, Hip-Hop, Jazz, Lyrist, Minstrel, Musician, Piper, Pop, Rap, Rhapsode, Rock, Skald, Troubadour"),
-                ":Acting",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Acting", ":reference", "* Acting! - Master Thespian, Saturday Night Live\n* Suffering is the bleeding heart of drama. - Jhin, Runeterra", ":titles", "Drama Queen, Master Thespian, Theater Brat, Thespian")
-              )
+              nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Acting", "Courtesan", "Dance", "Music")
             ),
             ":Persuasion",
             vx_core.f_new(

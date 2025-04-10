@@ -125,7 +125,7 @@
    :summary
     "* [Body]:-1
      * When using a damaged item or body part take [Initiative]:-1/Damaged.
-     * An item with no [Body] remaining is [Broken]."
+     * An item with no [Body] remaining is [Broken].")
   (base/rule
    :name "Exposure"
    :summary
@@ -274,7 +274,7 @@
   (base/rule
    :name "Round"
    :summary
-    "* Each [Round], each [Unit] will get a [Turn] based on [Turn Order].
+    "* Each [Round], each [Unit] will get to act.
      * Turn Start: Draw from your [Conflict] deck. [Recover].
      * Take 2 Actions: These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]. You may perform the same Action twice.
      * Turn End: The next unit in Turn Order performs their turn until the Round Ends.")
@@ -442,10 +442,13 @@
        "Reach"
        "Flanking"
        "Surrounded"
-       "Exposed"
        "Surprise"
        "Unskilled"
        "Unfamiliar Item"
+       "Suffocation"
+       "Hunger"
+       "Thirst"
+       "Exposure"
        "Weather: Clouds"
        "Weather: Humidity"
        "Weather: Temperature"

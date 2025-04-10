@@ -1325,14 +1325,9 @@
               :name "Suggestion"
               :summary "Change"))
           :specialtymap
-           (base/specialtymap
-            :Hypnotism
-             (base/specialty
-              :name "Hypnotism"
-              :summary
-               "* [Past Life Regression]
-                * [Retrive Memories]
-                * [Subconscious Trigger]")))
+           (base/specialtymap<-tactics-keys
+            tactics
+            "Hypnotism"))
         :Empathy
          (base/power
           :name "Empathy"
@@ -2281,7 +2276,7 @@
               :name "Vernier Thruster"
               :titles "Apogee Motor")))
         "Interstellar Movement"
-          (base/power<-tactics-key tactics "Interstellar Movement")
+         (base/power<-tactics-key tactics "Interstellar Movement")
         "Jump Drive"
          (base/power<-tactics-key tactics "Jump Drive")
         :Teleportation
@@ -2489,47 +2484,10 @@
             "Suspended Animation"
              (base/ability
               :name "Suspended Animation")))
-        :Healing
-         (base/power
-          :name "Healing"
-          :abilitymap
-           (base/abilitymap
-            "Lernaean Regeneration"
-             (base/ability
-              :name "Lernaean Regeneration"
-              :summary "* [Activate]: If unit is Damaged, Remove a Damage Token and add a White Close Combat Token.")
-            :Recover
-             (base/ability
-              :name "Recover"
-              :summary "* May roll extra dice when resisting [Disease] or [Poison].")
-            :Regeneration
-             (base/ability
-              :name "Regeneration"
-              :summary
-               "* [Passive]
-                * [Bleeding] and [Damage] Tokens are considered Yellow Tokens.")
-            :Regrowth
-             (base/ability
-              :name "Regrowth")))
-        :Movement
-         (base/power
-          :name "Movement"
-          :abilitymap
-           (base/abilitymap
-            "Wall Crawling"
-             (base/ability
-              :name "Wall Crawling")
-            "Wall Running"
-             (base/ability
-              :name "Wall Running"
-              :summary "* Requires: [Wall Crawling]")
-            "Water Walking"
-             (base/ability
-              :name "Water Walking")
-            "Water Running"
-             (base/ability
-              :name "Water Running"
-              :summary "* Requires: [Water Walking]")))
+        "Healing"
+         (base/power<-tactics-key tactics "Healing")
+        "Movement"
+         (base/power<-tactics-key tactics "Movement")
         "Natural Weaponry"
          (base/power<-tactics-key tactics "Natural Weaponry")
         :Quickness
@@ -2648,42 +2606,10 @@
               :name "X-Ray Vision"
               :reference "* Superman: Bruce Wayne? Batman: You peeked. - Superman and Batman, Superman: The Animated Series"
               :summary "* See through solid objects. The higher the density the blurrier the vision.")))
-        :Shielding
-         (base/power
-          :name "Shielding"
-          :abilitymap
-           (base/abilitymap
-            "Shield Modulation"
-             (base/ability
-              :name "Shield Modulation")))
-        :Strength
-         (base/power
-          :name "Strength"
-          :reference "* Technique is for lightweights. - Sett, Runeterra"
-          :stat "Body"
-          :abilitymap
-           (base/abilitymap
-            "Power Leap"
-             (base/ability
-              :name "Power Leap")
-            "Power Lift"
-             (base/ability
-              :name "Power Lift"
-              :summary "* Lift additional kg equal to Power Rating.")
-            "Power Strike"
-             (base/ability
-              :name "Power Strike"
-              :summary "* Add Power Rating to weapon damage using Melee, or Close Combat.")
-            "Power Throw"
-             (base/ability
-              :name "Power Throw"
-              :summary "* Add Power Rating to weapon damage when throwing any object or weapon.")
-            :Shockwave
-             (base/ability
-              :name "Shockwave")
-            :Thunderclap
-             (base/ability
-              :name "Thunderclap"))))))))
+        "Shielding"
+         (base/power<-tactics-key tactics "Shielding")
+        "Strength"
+         (base/power<-tactics-key tactics "Strength"))))))
 
 (func chapter_body_powers : base/chapter
  [tactics : tactics]
@@ -4050,20 +3976,7 @@
             :Updraft
              (base/ability
               :name "Updraft"
-              :summary "* [Action]: Apply [Wind] in a radius around user, lift enemies off the ground with Level weight, and hurl them down, if they strike a surface they take Level damage ."))
-          :specialtymap
-           (base/specialtymap
-            :Aeromancy
-             (base/specialty
-              :name "Aeromancy"
-              :summary
-               "* Aero is the magical version of Air.
-                * Aero effects can be sustained without a source, but they can also be canceled by counter-magic.
-                * Aero reacts with Pyro to produce the [Wildfire] effect.
-                * Aero reacts with Cryo to produce the [Chill] effect.
-                * Aero reacts with Hydro to produce the [Fog] effect.
-                * Aero reacts with Electro to produce the [Ionized] effect.
-                * Aero reacts with Geo to produce the [Weightess] effect.")))
+              :summary "* [Action]: Apply [Wind] in a radius around user, lift enemies off the ground with Level weight, and hurl them down, if they strike a surface they take Level damage .")))
         :Cold
          (base/power
           :name "Cold"
@@ -4278,93 +4191,9 @@
               :summary "* Summons a small living earthquake in broken earth or rock. Earth elementals love nothing more than knocking things over.")
             "Volcanic Eruption"
              (base/ability
-              :name "Volcanic Eruption"))
-          :specialtymap
-           (base/specialtymap
-            :Geomancy
-             (base/specialty
-              :name "Geomancy"
-              :summary
-               "* Geo is the magical version of Earth.
-                * Geo effects can be sustained without a source, but they can also be canceled by counter-magic.
-                * Geo reacts with Pyro to produce the [Overheat] effect.
-                * Geo reacts with Cryo to produce the [Brittle] effect.
-                * Geo reacts with Hydro to produce the [Quagmire] effect.
-                * Geo reacts with Electro to produce the [Grounded] effect.
-                * Geo reacts with Aero to produce the [Weightess] effect.")))
-        :Electricity
-         (base/power
-          :name "Electricity"
-          :reference "* Lightning is eternal, the world is but shadow. - Raiden Shogun, the Electro Archon, Genshin Impact"
-          :summary
-           "* Electric Elementalist personalities are influenced by their link to Electricity.
-            * Energetic, Explosive, Dynamic, Animated, Spark of Life, High Strung
-            * Symbol - Yellow Lightning"
-          :titles "Electro, Lightning"
-          :abilitymap
-           (base/abilitymap
-            "Arc Lightning"
-             (base/ability
-              :name "Arc Lightning"
-              :summary "* Lightning leaps from the target to others in range.")
-            "Body Electric"
-             (base/ability
-              :name "Body Electric"
-              :titles "Electricity Form")
-            "Absorb Electricity"
-             (base/ability
-              :name "Absorb Electricity")
-            "Ball Lightning"
-             (base/ability
-              :name "Ball Lightning")
-            "Call Lightning"
-             (base/ability
-              :name "Call Lightning"
-              :summary "* Calls a lightning strike from an existing storm cloud.")
-            "Control Lightning"
-             (base/ability
-              :name "Control Lightning"
-              :summary "* [Reaction]: Redirect a lightning effect to another target.")
-            "Electromagnetic Pulse"
-             (base/ability
-              :name "Electromagnetic Pulse")
-            "Lightning Charge"
-             (base/ability
-              :name "Lightning Charge"
-              :summary "* Imbue an item with electric charge that is discharged on contact.")
-            "Lightning Lash"
-             (base/ability
-              :name "Lightning Lash"
-              :titles "Arc Lash, Lightning Whip")
-            "Lightning Pillar"
-             (base/ability
-              :name "Lightning Pillar"
-              :summary
-               "* [Action]: Summon a pillar of Electricity within Range. (Removing any others)
-                * [Reaction]: IF anything touches the pillar THEN you may make a basic Electricity [Attack].
-                * [Reaction]: IF you use an Electricity ability THEN you may arc it to strike from the pillar instead.")
-            "Lightning Warp"
-             (base/ability
-              :name "Lightning Warp"
-              :summary
-               "* Near instantaneous travel in a flash of lightning.
-                * Level determines distance travelled.")
-            "Resist Electricity"
-             (base/ability
-              :name "Resist Electricity"))
-          :specialtymap
-           (base/specialtymap
-            :Electromancy
-             (base/specialty
-              :name "Electromancy"
-              :summary
-               "* Electro is the magical version of Electricity.
-                * Electro effects can be sustained without a source, but they can also be canceled by counter-magic.
-                * Electro reacts with Pyro to produce the [Overload] effect.
-                * Electro reacts with Cryo to produce the [Superconduct] effect.
-                * Electro reacts with Hydro to produce the [Electrocharged] effect.
-                * Electro reacts with Geo to produce the [Grounded] effect.
-                * Electro reacts with Aero to produce the [Ionized] effect.")))
+              :name "Volcanic Eruption")))
+        "Electricity"
+         (base/power<-tactics-key tactics "Electricity")
         :Fire
          (base/power
           :name "Fire"
@@ -4496,20 +4325,7 @@
             :Wildfire
              (base/ability
               :name "Wildfire"
-              :summary "* Air in the area becomes bone dry and overheated. +1 [Fire] or [Air] abilities."))
-          :specialtymap
-           (base/specialtymap
-            :Pyromancy
-             (base/specialty
-              :name "Pyromancy"
-              :summary
-               "* Pyro is the magical version of Earth.
-                * Pyro effects can be sustained without a source, but they can also be canceled by counter-magic.
-                * Pyro reacts with Geo to produce the [Overheat] effect.
-                * Pyro reacts with Cryo to produce the [Melt] effect.
-                * Pyro reacts with Hydro to produce the [Vaporize] effect.
-                * Pyro reacts with Electro to produce the [Overload] effect.
-                * Pyro reacts with Aero to produce the [Wildfire] ability.")))
+              :summary "* Air in the area becomes bone dry and overheated. +1 [Fire] or [Air] abilities.")))
         :Water
          (base/power
           :name "Water"
