@@ -116,6 +116,32 @@
     "* Attitude, Mannerism, and Appearance can often allow a stranger to go unnoticed in a crowd.
      * [Continuous]: While active, unit is hidden as long as at least 10 other units are within skill spaces.")
   (base/ability
+   :name "Bless Object"
+   :summary
+    "* Apply a different blessing to object. That object can hold the blessing until triggered.
+     * Duration: Level hours
+     * Only level objects may be blessed at one time. If exceeded the earliest one is erased.")
+  (base/ability
+   :name "Blessing against Cold"
+   :summary
+    "* [Focus]: +1 [Defense] and +1 [Armor] vs. Cold")
+  (base/ability
+   :name "Blessing against Electricity"
+   :summary
+    "* [Focus]: +1 [Defense] and +1 [Armor] vs. Electricity")
+  (base/ability
+   :name "Blessing against Fire"
+   :summary
+    "* [Focus]: +1 [Defense] and +1 [Armor] vs. Fire")
+  (base/ability
+   :name "Blessing against Projectiles"
+   :summary
+    "* [Focus]: +1 [Defense] and +1 [Armor] vs. projectilees.")
+  (base/ability
+   :name "Blessing against Melee"
+   :summary
+    "* [Focus]: +1 [Defense] and +1 [Armor] vs. melee weapons. Unarmed combat is unaffected.")
+  (base/ability
    :name "Blind Fighting")
   (base/ability
    :name "Blinding")

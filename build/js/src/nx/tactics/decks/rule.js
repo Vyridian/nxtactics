@@ -8,87 +8,6 @@ import vx_type from "../../../vx/type.js"
 export default class nx_tactics_decks_rule {
 
   /**
-   * @function card_abilitypoint
-   * @param  {int} num
-   * @return {card}
-   */
-  static t_card_abilitypoint = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_abilitypoint = {
-    vx_type: nx_tactics_decks_rule.t_card_abilitypoint
-  }
-
-  // (func card-abilitypoint)
-  static f_card_abilitypoint(num) {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "abilitypoint-", num),
-      ":name",
-      vx_core.f_new({"any-1": vx_core.t_string}, "Ability Point"),
-      ":summary",
-      "* [Minor Achievment]: Gain an Ability Point. You may also convert 1 of your existing Abilities into an Ability Point.\n* An Ability Point may be exchanged for an Ability, Specialty, or a Power Intensity increase.\n* Ability Points may be saved."
-    )
-    return output
-  }
-
-  /**
-   * @function card_clock_num
-   * @param  {int} num
-   * @return {card}
-   */
-  static t_card_clock_num = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_clock_num = {
-    vx_type: nx_tactics_decks_rule.t_card_clock_num
-  }
-
-  // (func card-clock-num)
-  static f_card_clock_num(num) {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "clock-", num),
-      ":name",
-      vx_core.f_new({"any-1": vx_core.t_string}, "Clock #", num),
-      ":summary",
-      "* Represents the current Clock time.\n* The [scene] determines how many rounds there are and whether they count up or down.\n* scene Start: Stack the cards in order with Round#1 on top or bottom depending on the [scene].\n* Round End: Discard the top Round#.\n** IF one or more [Encounter] cards are revealed THEN resolve them.\n** IF there are no remaining Round# cards THEN the [scene] immediately ends for time."
-    )
-    return output
-  }
-
-  /**
-   * @function card_skillpoint
-   * @param  {int} num
-   * @return {card}
-   */
-  static t_card_skillpoint = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_skillpoint = {
-    vx_type: nx_tactics_decks_rule.t_card_skillpoint
-  }
-
-  // (func card-skillpoint)
-  static f_card_skillpoint(num) {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "skillpoint-", num),
-      ":name",
-      vx_core.f_new({"any-1": vx_core.t_string}, "Skill Point#", num),
-      ":summary",
-      "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.\n* A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.\n* Skill Points may be saved.\n* A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.\n* 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level."
-    )
-    return output
-  }
-
-  /**
    * @function deck_rules
    * @param  {tactics} tactics
    * @return {deck}
@@ -111,40 +30,25 @@ export default class nx_tactics_decks_rule {
           {"any-1": nx_tactics_base.t_cardlist},
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Game", "Setup Guide", "Damage Guide", "Round", "Move", "Action", "Fight", "Skill", "Power", "Interact", "Recover", "Equip", "Reload", "Search", "Free Action", "Line of Sight", "Initiative", "Damage Guide", "Effect", "Crits", "Mitigation", "Cover", "Character", "Body", "Mind", "Will", "Speed", "Beast", "Shadow", "Conscience", "Leveling", "Map: Exploration", "Map: Personal", "Map: Vehicle", "Scale", "Scaled", "Advantage", "Disadvantage", "Area Effect", "Reach", "Flanking", "Surrounded", "Surprise", "Unskilled", "Unfamiliar Item", "Suffocation", "Hunger", "Thirst", "Exposure", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind")
+            nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Game", "Setup Guide", "Damage Guide", "Round", "Move", "Action", "Fight", "Skill", "Power", "Interact", "Recover", "Equip", "Reload", "Search", "Free Action", "Line of Sight", "Initiative", "Damage Guide", "Effect", "Crits", "Mitigation", "Cover", "Task", "Character", "Body", "Mind", "Will", "Speed", "Beast", "Shadow", "Conscience", "Leveling", "Map: Exploration", "Map: Personal", "Map: Vehicle", "Scale", "Scaled", "Advantage", "Disadvantage", "Area Effect", "Reach", "Flanking", "Surrounded", "Surprise", "Unskilled", "Unfamiliar Item", "Suffocation", "Hunger", "Thirst", "Exposure", "Weather: Clouds", "Weather: Humidity", "Weather: Temperature", "Weather: Wind")
           ),
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_cardlist},
-            nx_tactics_decks_rule.f_card_clock_num(1),
-            nx_tactics_decks_rule.f_card_clock_num(2),
-            nx_tactics_decks_rule.f_card_clock_num(3),
-            nx_tactics_decks_rule.f_card_clock_num(4),
-            nx_tactics_decks_rule.f_card_clock_num(5),
-            nx_tactics_decks_rule.f_card_clock_num(6),
-            nx_tactics_decks_rule.f_card_clock_num(7),
-            nx_tactics_decks_rule.f_card_clock_num(8),
-            nx_tactics_decks_rule.f_card_clock_num(9),
-            nx_tactics_decks_rule.f_card_clock_num(10),
-            nx_tactics_decks_rule.f_card_clock_num(11),
-            nx_tactics_decks_rule.f_card_clock_num(12),
-            nx_tactics_decks_rule.f_card_clock_num(13),
-            nx_tactics_decks_rule.f_card_clock_num(14),
-            nx_tactics_decks_rule.f_card_clock_num(15),
-            nx_tactics_decks_rule.f_card_clock_num(16),
-            nx_tactics_decks_rule.f_card_clock_num(17),
-            nx_tactics_decks_rule.f_card_clock_num(18),
-            nx_tactics_decks_rule.f_card_clock_num(19),
-            nx_tactics_decks_rule.f_card_clock_num(20),
-            nx_tactics_decks_rule.f_card_skillpoint(1),
-            nx_tactics_decks_rule.f_card_skillpoint(2),
-            nx_tactics_decks_rule.f_card_skillpoint(3),
-            nx_tactics_decks_rule.f_card_skillpoint(4),
-            nx_tactics_decks_rule.f_card_skillpoint(5),
-            nx_tactics_decks_rule.f_card_abilitypoint(1),
-            nx_tactics_decks_rule.f_card_abilitypoint(2),
-            nx_tactics_decks_rule.f_card_abilitypoint(3),
-            nx_tactics_decks_rule.f_card_abilitypoint(4),
-            nx_tactics_decks_rule.f_card_abilitypoint(5)
+          nx_tactics_base.f_cardlist_copy_from_tactics_rulekey_count_isnum(
+            tactics,
+            "Clock",
+            20,
+            true
+          ),
+          nx_tactics_base.f_cardlist_copy_from_tactics_rulekey_count_isnum(
+            tactics,
+            "Skill Point",
+            5,
+            true
+          ),
+          nx_tactics_base.f_cardlist_copy_from_tactics_rulekey_count_isnum(
+            tactics,
+            "Ability Point",
+            5,
+            true
           )
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
@@ -170,6 +74,7 @@ export default class nx_tactics_decks_rule {
   static f_rulemap_tactics(tactics) {
     let output = nx_tactics_base.e_rulemap
     output = nx_tactics_base.f_rulemap_from_rulelist(
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Ability Point", ":summary", "* [Minor Achievment]: Gain an Ability Point. You may also convert 1 of your existing Abilities into an Ability Point.\n* An Ability Point may be exchanged for an Ability, Specialty, or a Power Intensity increase.\n* Ability Points may be saved."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Action", ":summary", "* Each [Turn] a Unit will get 2 Actions. These are [Move], [Fight], [Skill], [Recover], [Search], [Equip], and [Reload], and [Wait]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Advantage", ":summary", "* Your [Normal] [Block] cards always Succeed against [Normal] [Strong]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Area Effect", ":image", "images/card-areaeffect.svg", ":summary", "* Powers can attack in an area.\n* Reduce Skill or Intensity by 1 to get an Area Effect Card. Each extra reduction doubles the number of cards.\n* Arrange the cards into a shape starting from the unit."),
@@ -177,6 +82,7 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Body", ":summary", "* Body is the measure of a unit's mass and durability.\n* A unit with Body:0 is incapacitated.\n* It is derived from the mass in kg. E.g. 300kg = 3x10^2 = 3x2"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Broken", ":summary", "* A broken [Item] can only be used as an [Improvised Weapon]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Character"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Clock", ":summary", "* Represents the current Clock time.\n* The [scene] determines how many rounds there are and whether they count up or down.\n* scene Start: Stack the cards in order with Round#1 on top or bottom depending on the [scene].\n* Round End: Discard the top Round#.\n** IF one or more [Encounter] cards are revealed THEN resolve them.\n** IF there are no remaining Round# cards THEN the [scene] immediately ends for time."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Conscience", ":summary", "* Conscience"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Cover", ":summary", "* Cover makes it harder to hit a target and can absorb damage if struck. Opponents and Allies can provide cover too. Even smoke provides Cover.\n* If something is between you and your opponent, guess at the amount of Cover provided and resolve with the following penalties:\n** 25% Cover: Initiative:-1.\n** 50% Cover: Initiative:-2.\n** 75% Cover: Initiative:-3.\n** 100% Cover: Initiative:-4.\n* If successful, assign each 25% to whatever is providing cover (this can include fog, smoke, tables, walls, other opponents, allies, etc). Assign each a suit and draw [Shared Conflict]. If an assigned suit is drawn, the Cover is struck first. Resolve below based on the type of Cover.\n** Insubstantial: Resolve damage normally.\n** Item: Damage the item first. If it is destroyed, resolve any remaining damage on the original target.\n** Unit: That unit is the new target. Resolve a new Combat with it instead."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Crits", ":summary", "* Crits are face-up [Damage] cards.\n* 10 [Hits] = 1 Crit"),
@@ -189,12 +95,13 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Fight", ":summary", "* Target a unit with a damaging Skill/Power.\n* Each player chooses a Conflict card from their hand or a random card from Shared Conflict.\n* Conflict Cards are compared like Rock/Paper/Scissors.\n* Fight Speed: Block/Counter > Fast > Evade > Strong > Block/Counter\n* If both play Fast or Strong then compare by rank (lower is faster).\n* Order: AJQK2-10\n* If Tied, there is no result.\n* If one player Wins, then resolve their result and apply Damage. If the target wins, they do no Damage unless they spend an Action.\n* Discard all card used (except Keep)"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Flanking", ":summary", "* Flanks: IF a unit attacks an opponent from anywhere behind THEN [Initiative]:+1\n* Blindspot: IF a unit attacks an opponent and is in a straight line directly behind an opponent THEN the opponent is [Exposed] for this attack."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Free Action", ":summary", "* Free Actions are like normal actions but do not use any of your 2 Actions each turn.\n* Move Out: [Fatigue]:+1 to [Move]:1. You may Turn or Drift once during this Move.\n* Double Down: [Stun]:+1 to reduce a Double Action to an Action.\n* Grit Your Teeth: [Stress]:+1 to ignore the effect of all of your negative statuses this turn.\n* Final Sprint: [Slow]:+1 to [Move].\n* Opportunity Combat: IF a Target moves from one adjacent space of a Unit to another THEN that Unit may take a [Stun] to take a free [Fight] against it."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Game", ":summary", "* Create [Characters] or [Factions] to play [Scenes].\n* Each [Scene] contains various [Threats] and [Goals].\n* Try to complete them using your [Skills] and [Powers] for [Rewards].\n* Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].\n* A Game is broken up into Rounds.\n* Each Round every Player takes a Turn.\n* Each Turn each Player takes 2 Actions."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Game", ":summary", "* Create [Characters] or [Factions] to play [Scenes].\n* Each [Scene] contains various [Threats] and [Goals].\n* Try to complete them using your [Skills] and [Powers] for [Rewards].\n* Some [Rewards] are items, others are [Skill Point]s or [Ability Point]s that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].\n* A Game is broken up into Rounds.\n* Each Round every Player takes a Turn.\n* Each Turn each Player takes 2 Actions."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Hunger", ":summary", "* Body:-1\n* Event: IF a Unit eats < 4 days/week THEN Hunger:+1 ELSE Hunger:-1"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Initiative", ":summary", "* Lower is Better: IF you and your opponent both play [Normal] [Fast] or you both play [Normal] [Strong] THEN the lower [Rank] of the cards wins.\n* Skill Difference: The difference between your and your opponent's [Skill] is a Bonus or Penalty.\n* Bonus (+X): Initiative bonus is SUBTRACTED before comparing.\n* Penalty (-X): Initiative penalty is ADDED before comparing."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Interact", ":summary", ""),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Leveling", ":summary", "* Major Achievement: Completion gains a Skill Point with level equal to your 2nd highest Skill.\n* Minor Achievement: Completion gains an [Ability Point]."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Leveling", ":summary", "* Major Achievement: Completion gains a [Skill Point] with level equal to your 2nd highest Skill.\n* Minor Achievement: Completion gains an [Ability Point]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Line of Sight", ":summary", "* Most distance effects require line of sight to the target.\n* Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).\n* If nothing is between you, then you have full line of sight. Resolve normally."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map: Exploration", ":summary", "* Human Scale\n* Space Size: 1m\n* Turn Length: 2sec\n* Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).\n* Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map: Personal", ":summary", "* Human Scale\n* Space Size: 1m\n* Turn Length: 2sec\n* Human: Max speed 3x1 = 30kph/18mph. Walk speed = 6kph/3.5mph/1.6mps. 2sec move = ~3 spaces (3.2m).\n* Car: Max speed 2x2 = 200kph/125mph. Slow speed = 40kph/25mph/11mps. 2sec move = ~20 spaces.(22m)"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map: Vehicle", ":summary", "* Vehicle Map\n* Space Size: 3m\n* Turn Length: 1sec\n* Note: Car (max speed 2x2 = 200kph/125mph) slow at 40kph/25mph/11mps. 1sec move = 4 spaces (11m)."),
@@ -202,25 +109,33 @@ export default class nx_tactics_decks_rule {
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Mitigation", ":summary", "* Obstacles\n* Cover\n* Shields\n* Armor\n* Toughness\n* Body"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Move", ":summary", "* [Action]: Move straight up to your [Speed] stat.\n* Double Move (2 Actions): Move straight your [Speed]x2.\n* Sprint (2 Actions): If you took a Double Move or Sprint last turn, you may move [Speed]x3 straight this turn.\n* Leftover Speed: After moving, if there is an adjacent space that you cannot afford to enter and you have partial Speed left, you may take note of it and carry it over to subsequent turns.\n* Change Facing: During your Move Action, you may Turn or Drift up to 2 times.\n* Turn: Turn your unit's facing 45 degrees to the left or right.\n* Drift: Instead of moving straight, move diagonally to the left or right while maintaining facing."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Off-handed", ":reference", "I admit it. You are better than I am. Then why are you smiling? Because I know something you don't know...I am not left handed...There's something I ought to tell you...I am not left handed either. - Princess Bride", ":summary", "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN Initiative:-1."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Player"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Poisoned", ":summary", "* Body:-1\n* Event: Reveal Conflict. IF Ace THEN Poisoned:-1. IF 2 THEN Poisoned:+1."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Power", ":summary", ""),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reach", ":summary", "* Can target one additional dot away [Scaled]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Recover", ":summary", "* Action: Discard a [Fatigue], [Stun], [Stress], or [Slow]\n* Bind Wounds (2 Actions): Discard a [Bleeding] from yourself or an adjacent unit."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Reload", ":summary", "* [Double Action]: Change a clip, nock an arrow.\n* 4 Actions: Reload a revolver, a mortar, a machinegun or a crossbow."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Round", ":summary", "* Each [Round], each [Unit] will get to act.\n* Turn Start: Draw from your [Conflict] deck. [Recover].\n* Take 2 Actions: These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]. You may perform the same Action twice.\n* Turn End: The next unit in Turn Order performs their turn until the Round Ends."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rule"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scale", ":summary", "* Each stat/skill/power has a number after the letter 'x'.\n* This is the scale of that ability.\n* The number represents the number of zeroes. E.g. 5x3 translates to 5000.\n* x1 denotes human scale. E.g. 1x1=10kg, 10iq+50, 10will, 10kph"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scaled", ":summary", "* Scaled refers to the comparison between the Scale of a stat/ability/map to another.\n* If the scales are the same, no change is required.\n* If the scales are different, multiple or divide the Level by 10 for each difference in scale.\n* E.g. On an x1 map a Speed:3x2 would move 30 spaces instead of 3."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Search", ":summary", "* [Double Action]: Test [Investigate] vs. [Conflict] to search the [Place] you occupy. If you succeed, you may find something."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Scene"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Skill Point", ":summary", "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.\n* A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.\n* Skill Points may be saved.\n* A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.\n* 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Space"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Setup Guide", ":summary", "* Choose a scene and sort it in numerical order.\n* Each [Player] chooses or creates the [Units] they will use.\n* Each [Player] chooses a colored Starter Deck.\n* All Player [Initiative] cards are shuffled together to create an [Initiative] deck.\n* Reveal the top card in the scene deck and follow its instructions."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Shadow", ":summary", "* The Shadow\n* Shadow Triumphant: The Shadow is now in control of this unit. Set Conscience = Will; set Will = Shadow stat; and set Shadow=blank"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Skill", ":summary", "* Action: Assign your Unit's Target card to the target.\n* Stat: The Skill test has a target Stat.\n* Resolve: Resolve the Skill as if it was Combat.\n* Damage: Any stat reductions are added to the Skill card instead of the target.\n* Success: If the stat is reduced to 0, the Skill succeeds.\n* Fail: If the user abandons the test or has any stat reduced to 0, the Skill fails and the Skill card is returned losing all reductions.\n* Simple: Some Tests only require a single success or failure.\n* Extended: The user may continue this test on different turns until a Success or Fail.\n* See Also: [Unskilled] [Unfamiliar Item]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Sleep Deprived", ":summary", "* Mind:-1\n* Event: IF a Unit sleeps < 6 hours/day THEN Sleep Deprived:+1 ELSE Sleep Deprived:-1."),
-      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Speed", ":summary", "* Special*: IF Speed over 5 THEN penalty is Speed:-2."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Speed", ":summary", "* Special: IF Speed over 5 THEN penalty is Speed:-2."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Suffocation", ":summary", "* Will:-1\n* Event: IF a Unit breathes < 1 minute/5 minutes THEN Suffocation:+1 ELSE Suffocation:-1"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Surprise", ":summary", "* IF a unit suddenly appears adjacent or upon a unit.\n* THEN\n** Lose half of starting [Move].\n** Reveal [Conflict]. Unit takes temporary damage based on the [Suit].\n** [Wands] = [Fatigue]\n** [Coins] = [Stun]\n** [Cups] = [Stress]\n** [Swords] = [Slow]"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Surrounded", ":summary", "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Task", ":summary", "* Tasks are skill test that may take multiple Actions to perform.\n* Place Task Tokens on the upper part of this card and Progress Tokens on the bottom of this card each equal to the [Difficulty].\n* [Success]: Task:-1 for each [Effect]\n* [Fail]: Progress:-1 for each [Effect]\n* [Clock]: Progress:-1"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Team"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Thirst", ":summary", "* Mind:-1\n* Event: IF a Unit drinks < 1 liter/day THEN Thirst:+1 ELSE Thirst:-1."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unfamiliar Item", ":summary", "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled]."),
+      vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unskilled", ":summary", "* If a unit lacks a Skill needed, but wants to perform it anyway, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unfamiliar Item]."),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Clouds", ":image", "images/cards/rule-weather-clouds.svg", ":summary", ":image"),
       vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Weather: Humidity", ":image", "images/cards/rule-weather-humidity.svg", ":summary", ":image"),
@@ -265,17 +180,11 @@ export default class nx_tactics_decks_rule {
       
     })
     const emptymap = vx_core.vx_new_map(vx_core.t_map, {
-      "card-abilitypoint": nx_tactics_decks_rule.e_card_abilitypoint,
-      "card-clock-num": nx_tactics_decks_rule.e_card_clock_num,
-      "card-skillpoint": nx_tactics_decks_rule.e_card_skillpoint,
       "deck-rules": nx_tactics_decks_rule.e_deck_rules,
       "rulemap-tactics": nx_tactics_decks_rule.e_rulemap_tactics,
       "tactics-rulemap<-tactics": nx_tactics_decks_rule.e_tactics_rulemap_from_tactics
     })
     const funcmap = vx_core.vx_new_map(vx_core.t_funcmap, {
-      "card-abilitypoint": nx_tactics_decks_rule.t_card_abilitypoint,
-      "card-clock-num": nx_tactics_decks_rule.t_card_clock_num,
-      "card-skillpoint": nx_tactics_decks_rule.t_card_skillpoint,
       "deck-rules": nx_tactics_decks_rule.t_deck_rules,
       "rulemap-tactics": nx_tactics_decks_rule.t_rulemap_tactics,
       "tactics-rulemap<-tactics": nx_tactics_decks_rule.t_tactics_rulemap_from_tactics
@@ -291,60 +200,6 @@ export default class nx_tactics_decks_rule {
       "typemap": typemap
     })
     vx_core.vx_global_package_set(pkg)
-
-    // (func card-abilitypoint)
-    nx_tactics_decks_rule.t_card_abilitypoint['vx_value'] = {
-      name          : "card-abilitypoint",
-      pkgname       : "nx/tactics/decks/rule",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_rule.f_card_abilitypoint
-    }
-
-    // (func card-clock-num)
-    nx_tactics_decks_rule.t_card_clock_num['vx_value'] = {
-      name          : "card-clock-num",
-      pkgname       : "nx/tactics/decks/rule",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_rule.f_card_clock_num
-    }
-
-    // (func card-skillpoint)
-    nx_tactics_decks_rule.t_card_skillpoint['vx_value'] = {
-      name          : "card-skillpoint",
-      pkgname       : "nx/tactics/decks/rule",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_rule.f_card_skillpoint
-    }
 
     // (func deck-rules)
     nx_tactics_decks_rule.t_deck_rules['vx_value'] = {

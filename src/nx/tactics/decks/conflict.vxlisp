@@ -410,8 +410,6 @@
    :id "deck-conflict-back"
    :name "Conflict Back Deck"
    :cardmap
-    (base/cardmap<-cardlist
-     (base/cardlist-copy<-card-num
-      card
-      54))))
+    (base/cardmap-copy<-card-count-isnum
+     card 54 false)))
  :doc "Conflict Back Deck")

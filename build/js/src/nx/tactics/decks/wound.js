@@ -382,9 +382,10 @@ export default class nx_tactics_decks_wound {
       ":name",
       "Bleeding",
       ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_num(
+      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
         nx_tactics_decks_wound.c_bleeding,
-        54
+        10,
+        true
       )
     )
     return output
@@ -410,9 +411,10 @@ export default class nx_tactics_decks_wound {
       ":name",
       "Bloodloss",
       ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_num(
+      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
         nx_tactics_decks_wound.c_bloodloss,
-        54
+        10,
+        true
       )
     )
     return output
@@ -521,9 +523,10 @@ export default class nx_tactics_decks_wound {
       ":name",
       "Wound Back",
       ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_num(
+      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
         nx_tactics_decks_wound.c_fatigue,
-        54
+        54,
+        true
       )
     )
     return output

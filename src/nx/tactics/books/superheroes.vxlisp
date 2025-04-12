@@ -7,36 +7,35 @@
   :name "Superheroes"
   :image "Superpowers.jpg"
   :chaptermap
-   (base/chaptermap
-    "Superheroes Overview" (chapter_superheroes_overview)
-    "Superhero Characters" (chapter_superhero_characters)
-    "DC Universe" (chapter_dc_universe)
-    "Dragonball Z" (chapter_dragonball_z)
-    "Marvel Universe" (chapter_marvel_universe)
-    "Original Groups" (chapter_original_groups)
+   (base/chaptermap<-chapterlist
+    (chapter_superheroes_overview)
+    (chapter_superhero_characters)
+    (chapter_dc_universe)
+    (chapter_dragonball_z)
+    (chapter_marvel_universe)
+    (chapter_original_groups)
    )))
 
 (func chapter_superheroes_overview : base/chapter
  (chapter
   :name "Superheroes Overview"
   :sectionmap
-   (sectionmap
-    "Why Tactics: Superheroes?"
-     (section
-      :name "Why Tactics: Superheroes?"))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Why Tactics: Superheroes?"))))
 
 (func chapter_superhero_characters : base/chapter
- (chapter
+ (base/chapter
   :name "Superhero Characters"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Superhero Rules"
-     (section
+     (base/section
       :name "Superhero Rules"
       :rulemap
-       (rulemap
+       (base/rulemap
         "Super Powers"
-         (rule
+         (base/rule
           :name "Super Powers"
           :summary
            "* Superhero characters do not have a maximum Body, but their Combat Skills are limited to level 10 since they rely on their powers more than skill.
@@ -45,7 +44,7 @@
          (rule
           :name "Heroes"
           :summary
-           "* Heroes live a life removed from normal men, yet they risk their lives to help others and battle evil.  Their motives vary, but they are united in these common goals.
+           "* Heroes live a life removed from normal men, yet they risk their lives to help others and battle evil. Their motives vary, but they are united in these common goals.
             * Many heroes hold themselves to a high standard, feeling that they must be better than the villians they pursue. Their reward is a greater acceptance and aid from the public, police, and other heroes.
             * Other heroes may use dubious tactics and may therefore be mistaken for villains.
             * Super Hero Teams - The most powerful of these may establish public bases.")
@@ -90,92 +89,88 @@
  (chapter
   :name "DC Universe"
   :sectionmap
-   (sectionmap
-    :Heroes
-     (section
-      :name "Heroes"
-      :unitmap
-       (base/unitmap
-        :Batman
-         (base/unit
-          :name "Batman"
-          :image "Superheroes/Batman.png"
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
-        "Green Lantern"
-         (base/unit
-          :name "Green Lantern"
-          :image "Superheroes/GreenLantern.png")
-        "Martian Manhunter"
-         (base/unit
-          :name "Martian Manhunter"
-          :image "Superheroes/MartianManhunter.png")
-        :Supergirl
-         (base/unit
-          :name "Supergirl"
-          :image "Superheroes/Supergirl.png")
-        :Superman
-         (base/unit
-          :name "Superman"
-          :image "Superheroes/Superman.png"
-          :reference "* Spider-Man is actually Peter Parker. When that character wakes up in the morning, he's Peter Parker. He has to put on a costume to become Spider-Man. And it is in that characteristic Superman stands alone. Superman didn't become Superman. Superman was born Superman. When Superman wakes up in the morning, he's Superman. His alter ego is Clark Kent. His outfit with the big red 'S', that's the blanket he was wrapped in as a baby when the Kents found him. Those are his clothes.  What Kent wears - the glasses, the business suit - that's the costume. That's the costume Superman wears to blend in with us. Clark Kent is how Superman views us. And what are the characteristics of Clark Kent. He's weak... he's unsure of himself... he's a coward. Clark Kent is Superman's critique on the whole human race. - Bill, Kill Bill Vol 2."
-          :unitpowermap
-           (base/unitpowermap
-            :Strength
-             (base/unitpower
-              :name "Strength"
-              :strength "66x10^18tons")))
-        "Wonder Woman"
-         (base/unit
-          :name "Wonder Woman"
-          :image "Superheroes/WonderWoman.png")))
-    :Villains
-     (section
-      :name "Villains"
-      :unitmap
-       (base/unitmap
-        :Brainiac
-         (base/unit
-          :name "Brainiac"
-          :image "Superheroes/Brainiac.png"
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
-        :Catwoman
-         (base/unit
-          :name "Catwoman"
-          :image "Superheroes/Catwoman.png")
-        :Darkseid
-         (base/unit
-          :name "Darkseid"
-          :image "Superheroes/Darkseid.png"
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
-        :Joker
-         (base/unit
-          :name "Joker"
-          :image "Superheroes/Joker.png"
-          :summary
-           "* You won't kill me out of some misplaced sense of self-righteousness,
-and I won't kill you because you're just too much fun. I think you and
-I are destined to do this forever."
-          :unitskillmap
-           (base/unitskillmap
-            :Mastermind
-             (base/unitskill
-              :name "Mastermind")))
-        :Sinestro
-         (base/unit
-          :name "Sinestro"
-          :image "Superheroes/Sinestro.png"))))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "DC Heroes"
+     :unitmap
+      (base/unitmap
+       :Batman
+        (base/unit
+         :name "Batman"
+         :image "Superheroes/Batman.png"
+         :unitskillmap
+          (base/unitskillmap
+           :Mastermind
+            (base/unitskill
+             :name "Mastermind")))
+       "Green Lantern"
+        (base/unit
+         :name "Green Lantern"
+         :image "Superheroes/GreenLantern.png")
+       "Martian Manhunter"
+        (base/unit
+         :name "Martian Manhunter"
+         :image "Superheroes/MartianManhunter.png")
+       :Supergirl
+        (base/unit
+         :name "Supergirl"
+         :image "Superheroes/Supergirl.png")
+       :Superman
+        (base/unit
+         :name "Superman"
+         :image "Superheroes/Superman.png"
+         :reference "* Spider-Man is actually Peter Parker. When that character wakes up in the morning, he's Peter Parker. He has to put on a costume to become Spider-Man. And it is in that characteristic Superman stands alone. Superman didn't become Superman. Superman was born Superman. When Superman wakes up in the morning, he's Superman. His alter ego is Clark Kent. His outfit with the big red 'S', that's the blanket he was wrapped in as a baby when the Kents found him. Those are his clothes.  What Kent wears - the glasses, the business suit - that's the costume. That's the costume Superman wears to blend in with us. Clark Kent is how Superman views us. And what are the characteristics of Clark Kent. He's weak... he's unsure of himself... he's a coward. Clark Kent is Superman's critique on the whole human race. - Bill, Kill Bill Vol 2."
+         :unitpowermap
+          (base/unitpowermap
+           :Strength
+            (base/unitpower
+             :name "Strength"
+             :strength "66x10^18tons")))
+       "Wonder Woman"
+        (base/unit
+         :name "Wonder Woman"
+         :image "Superheroes/WonderWoman.png")))
+    (base/section
+     :name "DC Villains"
+     :unitmap
+      (base/unitmap
+       :Brainiac
+        (base/unit
+         :name "Brainiac"
+         :image "Superheroes/Brainiac.png"
+         :unitskillmap
+          (base/unitskillmap
+           :Mastermind
+            (base/unitskill
+             :name "Mastermind")))
+       :Catwoman
+        (base/unit
+         :name "Catwoman"
+         :image "Superheroes/Catwoman.png")
+       :Darkseid
+        (base/unit
+         :name "Darkseid"
+         :image "Superheroes/Darkseid.png"
+         :unitskillmap
+          (base/unitskillmap
+           :Mastermind
+            (base/unitskill
+             :name "Mastermind")))
+       :Joker
+        (base/unit
+         :name "Joker"
+         :image "Superheroes/Joker.png"
+         :summary
+          "* You won't kill me out of some misplaced sense of self-righteousness, and I won't kill you because you're just too much fun. I think you and I are destined to do this forever."
+         :unitskillmap
+          (base/unitskillmap
+           :Mastermind
+            (base/unitskill
+             :name "Mastermind")))
+       :Sinestro
+        (base/unit
+         :name "Sinestro"
+         :image "Superheroes/Sinestro.png"))))))
 
 (func chapter_dragonball_z : base/chapter
  (chapter

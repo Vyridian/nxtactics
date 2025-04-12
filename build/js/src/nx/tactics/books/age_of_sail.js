@@ -26,13 +26,9 @@ export default class nx_tactics_books_age_of_sail {
       ":name",
       "Age of Sail Overview",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Why Tactics: Age of Sail?",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Age of Sail?", ":reference", "http://www.thepirateking.com/historical/cannon_projectiles.htm", ":summary", "The Age of Sail was the period in which international trade and naval warfare were dominated by sailing ships, lasting from the 16th to the mid 19th century. This is a significant period during which square-rigged sailing ships carried European settlers to many parts of the world in one of the most expansive human migrations in recorded history."),
-        "Age of Sail Land Warfare",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Sail Land Warfare", ":summary", "* Infantry\n* Cavalry\n* Muskets\n* Cannons\n* Artillery\n* High Ground"),
-        "Age of Sail Naval Warfare",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Sail Naval Warfare", ":summary", "* Wind\n* Large Ships\n* Small Ships\n* Solid Shot\n* Burning Shot\n* Chain Shot\n* Fortifications")
       )
     )
@@ -59,9 +55,7 @@ export default class nx_tactics_books_age_of_sail {
       ":name",
       "Age of Sail Weaponry",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Age of Sail Pistols",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -73,7 +67,6 @@ export default class nx_tactics_books_age_of_sail {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "20mm Dragon", ":reference", "The blunderbuss, and especially the shorter dragon, was typically issued to troops such as cavalry, who needed a lightweight, easily handled firearm. The dragon became so associated with cavalry and mounted infantry that the term dragoon became synonymous with mounted infantry.", ":summary", "* A short, muzzle-loading, flintlock, hand shotgun", ":muzzlevelocity", "225m/s")
           )
         ),
-        "Age of Sail Rifles",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -89,7 +82,6 @@ export default class nx_tactics_books_age_of_sail {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "20mm Blunderbuss", ":reference", "A blunderbuss is a muzzle-loading firearm with a flared, trumpet-like barrel and is the predecessor to the shotgun. Most of these weapons are mid-sized, being smaller than most shoulder-fired arms, but larger than a pistol. The muzzle was flared not to increase the spread of the shot, but rather to funnel powder and shot into the weapon, making it easier to reload on horseback or on a moving carriage.", ":muzzlevelocity", "225m/s")
           )
         ),
-        "Age of Sail Cannons",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -188,9 +180,7 @@ export default class nx_tactics_books_age_of_sail {
       ":name",
       "Golden Age of Sail",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Age of Sail Scenes",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -204,9 +194,7 @@ export default class nx_tactics_books_age_of_sail {
             vx_core.f_new({"any-1": nx_tactics_base.t_scene}, ":name", "Swashbucklers")
           )
         ),
-        "Age of Sail Dutch",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Age of Sail Dutch"),
-        "Age of Sail British",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -376,13 +364,11 @@ export default class nx_tactics_books_age_of_sail {
             )
           )
         ),
-        "East India Company",
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "East India Company"),
-        ":French",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "French",
+          "Age of Sail French",
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
@@ -530,7 +516,6 @@ export default class nx_tactics_books_age_of_sail {
             )
           )
         ),
-        ":Pirates",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -676,7 +661,6 @@ export default class nx_tactics_books_age_of_sail {
             )
           )
         ),
-        "Age of Sail Portuguese",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -752,7 +736,6 @@ export default class nx_tactics_books_age_of_sail {
             )
           )
         ),
-        "Age of Sail Spanish",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -983,21 +966,13 @@ export default class nx_tactics_books_age_of_sail {
       ":name",
       "Age Of Sail",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Age of Sail Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_age_of_sail.f_chapter_age_of_sail_overview(tactics),
-        "Age of Sail Weaponry",
         nx_tactics_books_age_of_sail.f_chapter_age_of_sail_weaponry(tactics),
-        "Renaissance",
         nx_tactics_books_age_of_sail.f_chapter_renaissance(tactics),
-        "Golden Age of Sail",
         nx_tactics_books_age_of_sail.f_chapter_golden_age_of_sail(tactics),
-        "American Revolution",
         nx_tactics_books_age_of_sail.f_chapter_american_revolution(tactics),
-        "French Revolution",
         nx_tactics_books_age_of_sail.f_chapter_french_revolution(tactics),
-        "Tokugawa Shogunate",
         nx_tactics_books_age_of_sail.f_chapter_tokugawa_shogunate(tactics)
       )
     )

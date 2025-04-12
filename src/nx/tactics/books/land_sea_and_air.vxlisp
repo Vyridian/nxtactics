@@ -7,12 +7,12 @@
   :name "Land, Sea and Air"
   :image "LandSeaAndAir.jpg"
   :chaptermap
-   (base/chaptermap
-    "Land, Sea and Air Overview" (chapter_land_sea_and_air_overview)
-    "Land Sea and Air Unit Types" (chapter_land_sea_and_air_unit_types)
-    "Land Sea and Air Rules" (chapter_land_sea_and_air_rules)
-    "Land, Sea and Air Terrain" (chapter_land_sea_and_air_terrain)
-    "Maps" (chapter_maps)
+   (base/chaptermap<-chapterlist
+    (chapter_land_sea_and_air_overview)
+    (chapter_land_sea_and_air_unit_types)
+    (chapter_land_sea_and_air_rules)
+    (chapter_land_sea_and_air_terrain)
+    (chapter_maps)
    )))
 
 (func chapter_land_sea_and_air_overview : base/chapter

@@ -7,14 +7,14 @@
   :name "Medieval"
   :image "Medieval-2-Total-War-Kingdoms-642.jpg"
   :chaptermap
-   (base/chaptermap
-    "Medieval Overview" (chapter_medieval_overview)
-    "Medieval Scenes" (chapter_medieval_scenes)
-    "Medieval Items" (chapter_medieval_items)
-    "Medieval English" (chapter_medieval_english)
-    "Medieval French" (chapter_medieval_french)
-    "Medieval German" (chapter_medieval_german)
-    "Medieval Spanish" (chapter_medieval_spanish)
+   (base/chaptermap<-chapterlist
+    (chapter_medieval_overview)
+    (chapter_medieval_scenes)
+    (chapter_medieval_items)
+    (chapter_medieval_english)
+    (chapter_medieval_french)
+    (chapter_medieval_german)
+    (chapter_medieval_spanish)
    )))
 
 (func chapter_medieval_overview : base/chapter

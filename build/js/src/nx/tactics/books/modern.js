@@ -1048,31 +1048,18 @@ export default class nx_tactics_books_modern {
       ":image",
       "Modern.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Modern Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_modern.f_chapter_modern_overview(),
-        "Cold War",
         nx_tactics_books_modern.f_chapter_cold_war(),
-        "Modern Ground Vehicles",
         nx_tactics_books_modern.f_chapter_modern_ground_vehicles(),
-        "The Abyss",
         nx_tactics_books_modern.f_chapter_the_abyss(),
-        "Modern Space",
         nx_tactics_books_modern.f_chapter_modern_space(),
-        "Modern Cops and Robbers",
         nx_tactics_books_modern.f_chapter_modern_cops_and_robbers(),
-        "Modern Mercenaries",
         nx_tactics_books_modern.f_chapter_modern_mercenaries(),
-        "The Prisoner",
         nx_tactics_books_modern.f_chapter_the_prisoner(),
-        "Special Ops",
         nx_tactics_books_modern.f_chapter_special_ops(),
-        "Modern Spies",
         nx_tactics_books_modern.f_chapter_modern_spies(),
-        "Modern Sports",
         nx_tactics_books_modern.f_chapter_modern_sports(),
-        "Modern Warfare",
         nx_tactics_books_modern.f_chapter_modern_warfare()
       )
     )

@@ -979,20 +979,39 @@
    (:name book)))
  :doc "Returns a bookmap of all books.")
 
-(func cardlist-copy<-card-num : cardlist
- [card : card
-  num  : int]
+(func cardlist-copy<-card-count-isnum : cardlist
+ [card  : card
+  count : int
+  isnum : boolean]
  (list<-for-end-loop
   1
-  num
+  count
   (fn : card
    [pos : int]
    (let : card
     [id : string := (:id card)
-     chg : string := (string id "-" pos)]
+     name : string := (:name card)
+     idchg : string := (string id "-" pos)
+     namechg : string :=
+      (if : string
+       isnum
+       (string name "# " pos)
+       name)]
     (copy card
-     :id chg))))
- :doc "Returns a cardlist by copying a card num times")
+     :id idchg
+     :name namechg))))
+ :doc "Returns a cardlist by copying a card count times")
+
+ (func cardlist-copy<-tactics-rulekey-count-isnum : cardlist
+  [tactics : tactics
+   rulekey : string
+   count   : int
+   isnum   : boolean]
+  (let : cardlist
+   [rule : rule := (rule<-tactics-key tactics rulekey)]
+   (cardlist-copy<-card-count-isnum
+    rule count isnum))
+ :doc "Returns a cardlist by copying a rule count times")
 
 (func cardmap<-bookmap : cardmap
  [bookmap : bookmap]
@@ -1019,16 +1038,17 @@
      id
      name)))))
 
-(func cardmap-copy<-card-num : cardmap
- [card : card
-  num  : int]
+(func cardmap-copy<-card-count-isnum : cardmap
+ [card  : card
+  count : int
+  isnum : boolean]
  (let : cardmap
   [cardlist : cardlist :=
-   (cardlist-copy<-card-num
-    card num)]
+   (cardlist-copy<-card-count-isnum
+    card count isnum)]
   (cardmap<-cardlist
    cardlist))
- :doc "Returns a cardmap by copying a card num times")
+ :doc "Returns a cardmap by copying a card count times")
 
 (func chapterlist<-book : chapterlist
  [book : book]
@@ -1069,7 +1089,7 @@
  :doc "Returns a chapterlistlist from a given booklist")
 
 (func chaptermap<-chapterlist : chaptermap
- [chapterlist : chapterlist]
+ [chapterlist : chapterlist :...]
  (map<-list : chaptermap
   chapterlist
   (fn : chapter

@@ -7,15 +7,15 @@
   :name "Fantasy"
   :image "DaveDormanEasternTerritories.jpg"
   :chaptermap
-   (base/chaptermap
-    "Fantasy Overview" (chapter_fantasy_overview)
-    "Genshin Impact" (chapter_genshin_impact)
-    "God of War" (chapter_god_of_war)
-    "Lord of the Rings" (chapter_lord_of_the_rings)
-    "Nexus Fantasy Characters" (chapter_nexus_fantasy_characters)
-    "Material Realm" (chapter_material_realm)
-    "Realms Beyond" (chapter_realms_beyond)
-    "Story Ideas" (chapter_story_ideas)
+   (base/chaptermap<-chapterlist
+    (chapter_fantasy_overview)
+    (chapter_genshin_impact)
+    (chapter_god_of_war)
+    (chapter_lord_of_the_rings)
+    (chapter_nexus_fantasy_characters)
+    (chapter_material_realm)
+    (chapter_realms_beyond)
+    (chapter_story_ideas)
    )))
 
 (func chapter_fantasy_overview : base/chapter
@@ -730,56 +730,63 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
       :name "Atlantia"
       :sectionmap
        (sectionmap
-        :Antilla
+        :Antillia
          (section
-          :name "Antilla"
+          :name "Antillia"
           :reference "* Atlantis"
           :unitmap
            (base/unitmap
             "Antillan Triton"
              (base/unit
               :name "Antillan Triton")))
-        :Brittania
+        :Briton
          (section
-          :name "Brittania"
+          :name "Briton"
+          :titles "Brittania"
           :reference "England"
           :placemap
            (placemap
             :Avalon
-             (place
+             (base/place
               :name "Avalon"
               :summary
                "* Rogue
                 * Serf
                 * Squire")
+            "Fortriu"
+             (place
+              :name "Fortriu"
+              :summary
+               "The Pictish Kingdom")
             :Saxony
              (place
               :name "Saxony"))
           :unitmap
-           (base/unitmap
-            "Avalan Footman"
-             (base/unit
-              :name "Avalan Footman")
-            "Avalon Highwayman"
-             (base/unit
-              :name "Avalon Highwayman"
-              :reference "Robin Hood")
-            "Avalan Knight"
-             (base/unit
-              :name "Avalan Knight")
-            "Avalon Longbowman"
-             (base/unit
-              :name "Avalon Longbowman")
-            "Avalan Shieldbearer"
-             (base/unit
-              :name "Avalan Shieldbearer")))
+           (base/unitmap<-unitlist
+            (base/unit
+             :name "Avalon Footman")
+            (base/unit
+             :name "Avalon Highwayman"
+             :reference "Robin Hood")
+            (base/unit
+             :name "Avalon Knight")
+            (base/unit
+             :name "Avalon Longbowman")
+            (base/unit
+             :name "Avalon Rogue")
+            (base/unit
+             :name "Avalon Serf")
+            (base/unit
+             :name "Avalon Shieldbearer")
+            (base/unit
+             :name "Avalon Squire")))
         :Eire
-         (section
+         (base/section
           :name "Eire"
           :reference "Ireland"
           :titles "Emerald Island")
         :Melnibone
-         (section
+         (base/section
           :name "Melnibone"
           :titles "Dragon Isles"
           :itemmap

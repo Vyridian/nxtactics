@@ -288,21 +288,13 @@ export default class nx_tactics_books_medieval {
       ":image",
       "Medieval-2-Total-War-Kingdoms-642.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Medieval Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_medieval.f_chapter_medieval_overview(),
-        "Medieval Scenes",
         nx_tactics_books_medieval.f_chapter_medieval_scenes(),
-        "Medieval Items",
         nx_tactics_books_medieval.f_chapter_medieval_items(),
-        "Medieval English",
         nx_tactics_books_medieval.f_chapter_medieval_english(),
-        "Medieval French",
         nx_tactics_books_medieval.f_chapter_medieval_french(),
-        "Medieval German",
         nx_tactics_books_medieval.f_chapter_medieval_german(),
-        "Medieval Spanish",
         nx_tactics_books_medieval.f_chapter_medieval_spanish()
       )
     )

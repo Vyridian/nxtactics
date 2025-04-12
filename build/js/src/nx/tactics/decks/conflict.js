@@ -466,8 +466,10 @@ export default class nx_tactics_decks_conflict {
           ":name",
           "Conflict Back Deck",
           ":cardmap",
-          nx_tactics_base.f_cardmap_from_cardlist(
-            nx_tactics_base.f_cardlist_copy_from_card_num(card, 54)
+          nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
+            card,
+            54,
+            false
           )
         )
       })

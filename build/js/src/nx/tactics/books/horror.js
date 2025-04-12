@@ -549,19 +549,12 @@ export default class nx_tactics_books_horror {
       ":image",
       "Cthulhu.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Horror Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_horror.f_chapter_horror_overview(),
-        "Call of Cthulhu",
         nx_tactics_books_horror.f_chapter_call_of_cthulhu(tactics),
-        "Kingdom of the Gods",
         nx_tactics_books_horror.f_chapter_kingdom_of_the_gods(),
-        "Night of the Living Dead",
         nx_tactics_books_horror.f_chapter_night_of_the_living_dead(),
-        "Serial Killers",
         nx_tactics_books_horror.f_chapter_serial_killers(),
-        "Deadly Beasts",
         nx_tactics_books_horror.f_chapter_deadly_beasts()
       )
     )

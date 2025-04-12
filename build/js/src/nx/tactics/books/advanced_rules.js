@@ -528,15 +528,10 @@ export default class nx_tactics_books_advanced_rules {
       ":image",
       "AdvancedRules.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Advanced Rules Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_advanced_rules.f_chapter_advanced_rules_overview(),
-        "Advanced Tokens",
         nx_tactics_books_advanced_rules.f_chapter_advanced_tokens(),
-        "Advanced Rules",
         nx_tactics_books_advanced_rules.f_chapter_advanced_rules(),
-        "Genres",
         nx_tactics_books_advanced_rules.f_chapter_genres()
       )
     )

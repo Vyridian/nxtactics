@@ -1427,21 +1427,13 @@ export default class nx_tactics_books_combat {
       ":image",
       "Warrior.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Combat Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_combat.f_chapter_combat_overview(tactics),
-        "Example of Play",
         nx_tactics_books_combat.f_chapter_example_of_play(tactics),
-        "Rules",
         nx_tactics_books_combat.f_chapter_rules(tactics),
-        "Skills",
         nx_tactics_books_combat.f_chapter_skills(tactics),
-        "Early Weaponry",
         nx_tactics_books_combat.f_chapter_early_weaponry(tactics),
-        "Modern Equipment",
         nx_tactics_books_combat.f_chapter_modern_equipment(tactics),
-        "Advanced Weaponry",
         nx_tactics_books_combat.f_chapter_advanced_weaponry(tactics)
       )
     )

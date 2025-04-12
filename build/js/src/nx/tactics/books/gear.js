@@ -960,9 +960,7 @@ export default class nx_tactics_books_gear {
       ":name",
       "Gear Overview",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Why Tactics: Gear?",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Gear?")
       )
     )
@@ -989,13 +987,9 @@ export default class nx_tactics_books_gear {
       ":name",
       "Gear",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Gear Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_gear.f_chapter_gear_overview(),
-        "Gear Construction",
         nx_tactics_books_gear.f_chapter_gear_construction(),
-        "Gear Items",
         nx_tactics_books_gear.f_chapter_gear_items(tactics)
       )
     )

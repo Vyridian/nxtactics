@@ -632,21 +632,13 @@ export default class nx_tactics_books_characters {
       ":image",
       "Characters.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Characters Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_characters.f_chapter_characters_overview(),
-        "Creating Characters",
         nx_tactics_books_characters.f_chapter_creating_characters(),
-        "Character Archetypes",
         nx_tactics_books_characters.f_chapter_character_archetypes(),
-        "Storytelling",
         nx_tactics_books_characters.f_chapter_storytelling(),
-        "Sets",
         nx_tactics_books_characters.f_chapter_sets(),
-        "Props",
         nx_tactics_books_characters.f_chapter_props(),
-        "Cast",
         nx_tactics_books_characters.f_chapter_cast()
       )
     )

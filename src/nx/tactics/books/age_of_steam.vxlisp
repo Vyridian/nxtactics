@@ -7,14 +7,14 @@
   :name "Age of Steam"
   :image "WildWest.jpg"
   :chaptermap
-   (base/chaptermap
-    "Age of Steam Overview" (chapter_age_of_steam_overview)
-    "Age of Steam Equipment" (chapter_age_of_steam_equipment)
-    "Steam Age Maps" (chapter_steam_age_maps)
-    "Civil War" (chapter_civil_war)
-    "Victorian England" (chapter_victorian_england)
-    "Wild West" (chapter_wild_west)
-    "Examples of Play" (chapter_examples_of_play)
+   (base/chaptermap<-chapterlist
+    (chapter_age_of_steam_overview)
+    (chapter_age_of_steam_equipment)
+    (chapter_steam_age_maps)
+    (chapter_civil_war)
+    (chapter_victorian_england)
+    (chapter_wild_west)
+    (chapter_examples_of_play)
    )))
 
 (func chapter_age_of_steam_overview : base/chapter

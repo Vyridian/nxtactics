@@ -27,60 +27,50 @@ export default class nx_tactics_decks_scene_murintrail {
   // (func deck-murintrail)
   static f_deck_murintrail(tactics) {
     let output = nx_tactics_base.e_deck
-    output = vx_core.f_let(
+    output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_deck},
-      [],
-      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const goblinscout = nx_tactics_decks_scene_murintrail.f_unit_goblinscout(tactics)
-        const goblinscout_i = nx_tactics_base.f_cardimage_from_card(goblinscout)
-        return vx_core.f_new(
-          {"any-1": nx_tactics_base.t_deck},
-          ":name",
-          "Murin Trail",
-          ":cardmap",
-          nx_tactics_base.f_cardmap_from_cardlist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_cardlist},
-              vx_core.f_list_from_list(
-                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
-                nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Horse")
-              ),
-              vx_core.f_list_from_list(
-                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_cardimage, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_cardimagelist},
-                nx_tactics_base.f_cardimagelist_from_tactics_unitkeys(tactics, "Flint (Early)", "Horse")
-              ),
-              nx_tactics_decks_scene_murintrail.f_unit_bandit(tactics),
-              nx_tactics_decks_scene_murintrail.f_unit_bruiser(tactics),
-              nx_tactics_decks_scene_murintrail.f_unit_guardsman(tactics),
-              nx_tactics_decks_scene_murintrail.f_unit_jesaveer(tactics),
-              nx_tactics_decks_scene_murintrail.f_unit_jonaveer(tactics),
-              nx_tactics_decks_scene_murintrail.f_unit_xeibhanower(tactics),
-              nx_tactics_decks_scene_murintrail.f_unit_wilmducon(tactics),
-              nx_tactics_decks_scene_murintrail.f_unit_liliducon(tactics),
-              nx_tactics_decks_scene_murintrail.f_unit_wilddog(tactics),
-              goblinscout,
-              goblinscout_i,
-              nx_tactics_decks_scene_murintrail.f_unit_woodencart(tactics),
-              vx_core.f_list_from_list(
-                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},
-                nx_tactics_base.f_skilllist_from_tactics_keys(tactics, "Close Combat", "Melee", "Stealth", "Business", "Tradeskills")
-              ),
-              vx_core.f_list_from_list(
-                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_abilitylist},
-                nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Bargain", "Sneak")
-              ),
-              vx_core.f_list_from_list(
-                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
-                nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife: Dagger", "Sword: Long", "Sword: Short", "Hammer", "Axe: Hand", "Axe: Wood", "Spear", "Spear: Short", "Bow: Short", "Quiver: Arrows", "Shield: Buckler", "Shield: Heater", "Shield: Round", "Armor: Leather Cuirass", "Coins: Copper", "Coins: Silver", "Coins: Gold", "Coins: Platinum", "Salve: Healing", "Cloak: Fine Woodland", "Rations", "Waterskin")
-              ),
-              vx_core.f_list_from_list(
-                {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
-                nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Farmhouse", "Guardpost", "Hall: Wooden", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Stables", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Tavern Stairs", "Temple", "Trading Post")
-              )
-            )
+      ":name",
+      "Murin Trail",
+      ":cardmap",
+      nx_tactics_base.f_cardmap_from_cardlist(
+        vx_core.f_new(
+          {"any-1": nx_tactics_base.t_cardlist},
+          vx_core.f_list_from_list(
+            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
+            nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Goblin: Scout", "Horse")
+          ),
+          vx_core.f_list_from_list(
+            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_cardimage, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_cardimagelist},
+            nx_tactics_base.f_cardimagelist_from_tactics_unitkeys(tactics, "Flint (Early)", "Goblin: Scout", "Horse")
+          ),
+          nx_tactics_decks_scene_murintrail.f_unit_bandit(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_bruiser(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_guardsman(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_jesaveer(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_jonaveer(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_xeibhanower(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_wilmducon(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_liliducon(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_wilddog(tactics),
+          nx_tactics_decks_scene_murintrail.f_unit_woodencart(tactics),
+          vx_core.f_list_from_list(
+            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},
+            nx_tactics_base.f_skilllist_from_tactics_keys(tactics, "Close Combat", "Melee", "Stealth", "Business", "Tradeskills")
+          ),
+          vx_core.f_list_from_list(
+            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_ability, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_abilitylist},
+            nx_tactics_base.f_abilitylist_from_tactics_keys(tactics, "Ambush", "Bargain", "Sneak")
+          ),
+          vx_core.f_list_from_list(
+            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_item, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_itemlist},
+            nx_tactics_base.f_itemlist_from_tactics_keys(tactics, "Bare Handed", "Knife: Dagger", "Sword: Long", "Sword: Short", "Hammer", "Axe: Hand", "Axe: Wood", "Spear", "Spear: Short", "Bow: Short", "Quiver: Arrows", "Shield: Buckler", "Shield: Heater", "Shield: Round", "Armor: Leather Cuirass", "Coins: Copper", "Coins: Silver", "Coins: Gold", "Coins: Platinum", "Salve: Healing", "Cloak: Fine Woodland", "Rations", "Waterskin")
+          ),
+          vx_core.f_list_from_list(
+            {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
+            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Sandleborg", "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
           )
         )
-      })
+      )
     )
     return output
   }
@@ -270,92 +260,6 @@ export default class nx_tactics_decks_scene_murintrail {
           nx_tactics_base.f_skill_from_tactics_key(tactics, "Intimidation"),
           ":level",
           "1"
-        )
-      )
-    )
-    return output
-  }
-
-  /**
-   * @function unit_goblinscout
-   * @param  {tactics} tactics
-   * @return {unit}
-   */
-  static t_unit_goblinscout = {
-    vx_type: vx_core.t_type
-  }
-  static e_unit_goblinscout = {
-    vx_type: nx_tactics_decks_scene_murintrail.t_unit_goblinscout
-  }
-
-  // (func unit-goblinscout)
-  static f_unit_goblinscout(tactics) {
-    let output = nx_tactics_base.e_unit
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_unit},
-      ":name",
-      "Goblin Scout",
-      ":image",
-      "images/cards/unit-goblin-scout.svg",
-      ":gender",
-      "Male",
-      ":demeanor",
-      "Depraved",
-      ":nature",
-      "Cowardly Envious",
-      ":conscience",
-      "1x1",
-      ":beast",
-      "1x0",
-      ":race",
-      "Goblin",
-      ":body",
-      "2x1",
-      ":mind",
-      "6x1",
-      ":will",
-      "2x1",
-      ":speed",
-      "5x0",
-      ":speedland",
-      "5kph/3mph",
-      ":value",
-      "1x0",
-      ":mass",
-      "22kg/50lb",
-      ":height",
-      "1m/3ft",
-      ":unitskillmap",
-      nx_tactics_base.f_unitskillmap_from_unitskilllist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitskill},
-          ":skill",
-          nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
-          ":level",
-          "1",
-          ":unititemmap",
-          nx_tactics_base.f_unititemmap_from_unititemlist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unititem},
-              ":item",
-              nx_tactics_base.f_item_from_tactics_key(tactics, "Knife: Dagger")
-            )
-          )
-        ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitskill},
-          ":skill",
-          nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
-          ":level",
-          "1",
-          ":unitabilitymap",
-          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unitability},
-              ":ability",
-              nx_tactics_base.f_ability_from_tactics_key(tactics, "Sneak")
-            )
-          )
         )
       )
     )
@@ -963,7 +867,6 @@ export default class nx_tactics_decks_scene_murintrail {
       "scene-murintrail": nx_tactics_decks_scene_murintrail.e_scene_murintrail,
       "unit-bandit": nx_tactics_decks_scene_murintrail.e_unit_bandit,
       "unit-bruiser": nx_tactics_decks_scene_murintrail.e_unit_bruiser,
-      "unit-goblinscout": nx_tactics_decks_scene_murintrail.e_unit_goblinscout,
       "unit-guardsman": nx_tactics_decks_scene_murintrail.e_unit_guardsman,
       "unit-jesaveer": nx_tactics_decks_scene_murintrail.e_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scene_murintrail.e_unit_jonaveer,
@@ -978,7 +881,6 @@ export default class nx_tactics_decks_scene_murintrail {
       "scene-murintrail": nx_tactics_decks_scene_murintrail.t_scene_murintrail,
       "unit-bandit": nx_tactics_decks_scene_murintrail.t_unit_bandit,
       "unit-bruiser": nx_tactics_decks_scene_murintrail.t_unit_bruiser,
-      "unit-goblinscout": nx_tactics_decks_scene_murintrail.t_unit_goblinscout,
       "unit-guardsman": nx_tactics_decks_scene_murintrail.t_unit_guardsman,
       "unit-jesaveer": nx_tactics_decks_scene_murintrail.t_unit_jesaveer,
       "unit-jonaveer": nx_tactics_decks_scene_murintrail.t_unit_jonaveer,
@@ -1070,24 +972,6 @@ export default class nx_tactics_decks_scene_murintrail {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_scene_murintrail.f_unit_bruiser
-    }
-
-    // (func unit-goblinscout)
-    nx_tactics_decks_scene_murintrail.t_unit_goblinscout['vx_value'] = {
-      name          : "unit-goblinscout",
-      pkgname       : "nx/tactics/decks/scene-murintrail",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_scene_murintrail.f_unit_goblinscout
     }
 
     // (func unit-guardsman)

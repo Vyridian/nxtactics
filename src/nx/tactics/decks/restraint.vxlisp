@@ -707,6 +707,6 @@
  (base/deck
   :name "Restraint Back"
   :cardmap
-   (base/cardmap-copy<-card-num
-    slow 54))
+   (base/cardmap-copy<-card-count-isnum
+    slow 54 false))
  :doc "Restraint Back Deck")

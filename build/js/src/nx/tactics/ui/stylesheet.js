@@ -65,6 +65,13 @@ export default class nx_tactics_ui_stylesheet {
   static c_font_title = {vx_type: vx_ui_ui.t_font, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'font-title', type: vx_ui_ui.t_font}}
 
   /**
+   * Constant: fontface-rune
+   * Returns Runic Font Face
+   * {fontface}
+   */
+  static c_fontface_rune = {vx_type: vx_ui_ui.t_fontface, vx_constdef: {pkgname: 'nx/tactics/ui/stylesheet', name: 'fontface-rune', type: vx_ui_ui.t_fontface}}
+
+  /**
    * Constant: fontface1
    * Returns Fontface1
    * {fontface}
@@ -602,6 +609,7 @@ export default class nx_tactics_ui_stylesheet {
       "font-text-2": nx_tactics_ui_stylesheet.c_font_text_2,
       "font-textarea": nx_tactics_ui_stylesheet.c_font_textarea,
       "font-title": nx_tactics_ui_stylesheet.c_font_title,
+      "fontface-rune": nx_tactics_ui_stylesheet.c_fontface_rune,
       "fontface1": nx_tactics_ui_stylesheet.c_fontface1,
       "fontface2": nx_tactics_ui_stylesheet.c_fontface2,
       "fontface3": nx_tactics_ui_stylesheet.c_fontface3,
@@ -791,6 +799,18 @@ export default class nx_tactics_ui_stylesheet {
       nx_tactics_ui_stylesheet.c_fontface1,
       ":fontsize",
       160
+    ))
+
+    // (const fontface-rune)
+    Object.assign(nx_tactics_ui_stylesheet.c_fontface_rune, vx_core.f_new(
+      {"any-1": vx_ui_ui.t_fontface},
+      ":name",
+      "Futhark Plain",
+      ":filelist",
+      vx_core.f_new(
+        {"any-1": vx_data_file.t_filelist},
+        vx_core.f_new({"any-1": vx_data_file.t_file}, ":name", "futhark-plain.ttf", ":path", "https://www.fontsaddict.com/fontface")
+      )
     ))
 
     // (const fontface1)

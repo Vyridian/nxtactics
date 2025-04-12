@@ -159,6 +159,74 @@ export default class nx_tactics_decks_unit {
           )
         )
       ),
+      vx_core.f_new(
+        {"any-1": nx_tactics_base.t_unit},
+        ":name",
+        "Goblin: Scout",
+        ":image",
+        "images/cards/unit-goblin-scout.svg",
+        ":gender",
+        "Male",
+        ":demeanor",
+        "Depraved",
+        ":nature",
+        "Cowardly Envious",
+        ":conscience",
+        "1x1",
+        ":beast",
+        "1x0",
+        ":race",
+        "Goblin",
+        ":body",
+        "2x1",
+        ":mind",
+        "6x1",
+        ":will",
+        "2x1",
+        ":speed",
+        "5x0",
+        ":speedland",
+        "5kph/3mph",
+        ":value",
+        "1x0",
+        ":mass",
+        "22kg/50lb",
+        ":height",
+        "1m/3ft",
+        ":unitskillmap",
+        nx_tactics_base.f_unitskillmap_from_unitskilllist(
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitskill},
+            ":skill",
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
+            ":level",
+            "1",
+            ":unititemmap",
+            nx_tactics_base.f_unititemmap_from_unititemlist(
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_unititem},
+                ":item",
+                nx_tactics_base.f_item_from_tactics_key(tactics, "Knife: Dagger")
+              )
+            )
+          ),
+          vx_core.f_new(
+            {"any-1": nx_tactics_base.t_unitskill},
+            ":skill",
+            nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
+            ":level",
+            "1",
+            ":unitabilitymap",
+            nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
+              vx_core.f_new(
+                {"any-1": nx_tactics_base.t_unitability},
+                ":ability",
+                nx_tactics_base.f_ability_from_tactics_key(tactics, "Sneak")
+              )
+            )
+          )
+        )
+      ),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hare", ":image", "images/cards/unit-hare.svg", ":body", "4x0", ":mind", "2x1", ":will", "3x1", ":speed", "6x1", ":speedland", "60kph/40mph", ":mass", "4kg/8lbs", ":length", "60cm", ":secrets", "* Because of their extremely low fat content, they are a poor choice as a survival food.\n* The blood of a freshly killed hare can be collected for consumption in a stew or casserole in a cooking process known as jugging.\n* Jugged hare, known as civet de lièvre in France, is a whole hare, cut into pieces, marinated, and cooked with red wine and juniper berries in a tall jug that stands in a pan of water."),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellbear"),
       vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Hellboar"),

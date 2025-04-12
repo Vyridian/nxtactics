@@ -674,21 +674,13 @@ export default class nx_tactics_books_age_of_steam {
       ":image",
       "WildWest.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Age of Steam Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_age_of_steam.f_chapter_age_of_steam_overview(),
-        "Age of Steam Equipment",
         nx_tactics_books_age_of_steam.f_chapter_age_of_steam_equipment(),
-        "Steam Age Maps",
         nx_tactics_books_age_of_steam.f_chapter_steam_age_maps(),
-        "Civil War",
         nx_tactics_books_age_of_steam.f_chapter_civil_war(),
-        "Victorian England",
         nx_tactics_books_age_of_steam.f_chapter_victorian_england(),
-        "Wild West",
         nx_tactics_books_age_of_steam.f_chapter_wild_west(),
-        "Examples of Play",
         nx_tactics_books_age_of_steam.f_chapter_examples_of_play()
       )
     )

@@ -688,6 +688,6 @@
  (base/deck
   :name "Trauma Back"
   :cardmap
-   (base/cardmap-copy<-card-num
-    stress 54))
+   (base/cardmap-copy<-card-count-isnum
+    stress 54 false))
  :doc "Trauma Back Deck")

@@ -7,14 +7,14 @@
   :name "Modern Fantasy"
   :image "Vampire_Slayer_by_Prasa.jpg"
   :chaptermap
-   (base/chaptermap
-    "Modern Fantasy Overview" (chapter_modern_fantasy_overview)
-    "Buffy the Vampire Slayer" (chapter_buffy_the_vampire_slayer)
-    "Chronicles of Amber" (chapter_chronicles_of_amber)
-    "Kengan Ashura" (chapter_kengan_ashura)
-    "Matrix, The" (chapter_matrix_the)
-    "Street Fighter" (chapter_street_fighter)
-    "World of Darkness" (chapter_world_of_darkness)
+   (base/chaptermap<-chapterlist
+    (chapter_modern_fantasy_overview)
+    (chapter_buffy_the_vampire_slayer)
+    (chapter_chronicles_of_amber)
+    (chapter_kengan_ashura)
+    (chapter_matrix_the)
+    (chapter_street_fighter)
+    (chapter_world_of_darkness)
    )))
 
 (func chapter_modern_fantasy_overview : base/chapter

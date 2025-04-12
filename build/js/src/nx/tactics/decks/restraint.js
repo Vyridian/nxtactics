@@ -443,9 +443,10 @@ export default class nx_tactics_decks_restraint {
       ":name",
       "Restraint Back",
       ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_num(
+      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
         nx_tactics_decks_restraint.c_slow,
-        54
+        54,
+        false
       )
     )
     return output

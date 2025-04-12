@@ -7,19 +7,19 @@
   :name "Powers"
   :image "Powers.jpg"
   :chaptermap
-   (base/chaptermap
-    "Powers Overview" (chapter_powers_overview tactics)
-    "Special Modifiers" (chapter_special_modifiers tactics)
-    "Equipment Powers" (chapter-equipment-powers tactics)
-    "Strength and Weaknesses" (chapter_strength_and_weaknesses tactics)
-    "Mental Powers and Weaknesses" (chapter_mental_powers_and_weaknesses tactics)
-    "Movement Powers" (chapter_movement_powers tactics)
-    "Physical Powers and Weaknesses" (chapter_physical_powers_and_weaknesses tactics)
-    "Body Powers" (chapter_body_powers tactics)
-    "Energy and Forces" (chapter_energy_and_forces tactics)
-    "Enhancement Powers" (chapter_enhancement_powers tactics)
-    "Alteration Powers" (chapter_alteration_powers tactics)
-    "Godlike Powers" (chapter_godlike_powers tactics)
+   (base/chaptermap<-chapterlist
+    (chapter_powers_overview tactics)
+    (chapter_special_modifiers tactics)
+    (chapter-equipment-powers tactics)
+    (chapter_strength_and_weaknesses tactics)
+    (chapter_mental_powers_and_weaknesses tactics)
+    (chapter_movement_powers tactics)
+    (chapter_physical_powers_and_weaknesses tactics)
+    (chapter_body_powers tactics)
+    (chapter_energy_and_forces tactics)
+    (chapter_enhancement_powers tactics)
+    (chapter_alteration_powers tactics)
+    (chapter_godlike_powers tactics)
    )))
 
 (func chapter_powers_overview : base/chapter
@@ -4438,20 +4438,7 @@
               :name "Whirlpool")
             "Wishing Well"
              (base/ability
-              :name "Wishing Well"))
-          :specialtymap
-           (base/specialtymap
-            :Hydromancy
-             (base/specialty
-              :name "Hydromancy"
-              :summary
-               "* Hydro is the magical version of Water.
-                * Hydro effects can be sustained without a source, but they can also be canceled by counter-magic.
-                * Hydro reacts with Pyro to produce the [Vaporize] effect.
-                * Hydro reacts with Cryo to produce the [Freeze] effect.
-                * Hydro reacts with Geo to produce the [Quagmire] effect.
-                * Hydro reacts with Electro to produce the [Electrocharged] effect.
-                * Hydro reacts with Aero to produce the [Fog] effect.")))))
+              :name "Wishing Well")))))
     "Energy and Forces"
      (base/section
       :name "Energy and Forces"

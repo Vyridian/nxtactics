@@ -3,44 +3,15 @@
        (lib typ  :path vx/type)
  :doc  "Tactics Rules")
 
-(func card-abilitypoint : base/card
- [num : int]
- (base/card
-  :id   (string "abilitypoint-" num)
-  :name (string "Ability Point")
-  :summary
-   "* [Minor Achievment]: Gain an Ability Point. You may also convert 1 of your existing Abilities into an Ability Point.
-    * An Ability Point may be exchanged for an Ability, Specialty, or a Power Intensity increase.
-    * Ability Points may be saved."))
-
- (func card-clock-num : base/card
-  [num : int]
-  (base/card
-   :id (string "clock-" num)
-   :name (string "Clock #" num)
-   :summary
-    "* Represents the current Clock time.
-     * The [scene] determines how many rounds there are and whether they count up or down.
-     * scene Start: Stack the cards in order with Round#1 on top or bottom depending on the [scene].
-     * Round End: Discard the top Round#.
-     ** IF one or more [Encounter] cards are revealed THEN resolve them.
-     ** IF there are no remaining Round# cards THEN the [scene] immediately ends for time."))
-
-(func card-skillpoint : base/card
- [num : int]
- (base/card
-  :id   (string "skillpoint-" num)
-  :name (string "Skill Point#" num)
-  :summary
-   "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.
-    * A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.
-    * Skill Points may be saved.
-    * A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.
-    * 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level."))
-
 (func rulemap-tactics : base/rulemap
  [tactics : base/tactics]
  (base/rulemap<-rulelist
+  (base/rule
+   :name "Ability Point"
+   :summary
+    "* [Minor Achievment]: Gain an Ability Point. You may also convert 1 of your existing Abilities into an Ability Point.
+     * An Ability Point may be exchanged for an Ability, Specialty, or a Power Intensity increase.
+     * Ability Points may be saved.")
   (base/rule
    :name "Action"
    :summary
@@ -73,6 +44,15 @@
     "* A broken [Item] can only be used as an [Improvised Weapon].")
   (base/rule
    :name "Character")
+  (base/rule
+   :name "Clock"
+   :summary
+    "* Represents the current Clock time.
+     * The [scene] determines how many rounds there are and whether they count up or down.
+     * scene Start: Stack the cards in order with Round#1 on top or bottom depending on the [scene].
+     * Round End: Discard the top Round#.
+     ** IF one or more [Encounter] cards are revealed THEN resolve them.
+     ** IF there are no remaining Round# cards THEN the [scene] immediately ends for time.")
   (base/rule
    :name "Conscience"
    :summary
@@ -163,7 +143,7 @@
     "* Create [Characters] or [Factions] to play [Scenes].
      * Each [Scene] contains various [Threats] and [Goals].
      * Try to complete them using your [Skills] and [Powers] for [Rewards].
-     * Some [Rewards] are items, others are Skill Points or Ability Points that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].
+     * Some [Rewards] are items, others are [Skill Point]s or [Ability Point]s that allow you to increase the level of your [Skills], [Powers], [Abilities], or [Specialties].
      * A Game is broken up into Rounds.
      * Each Round every Player takes a Turn.
      * Each Turn each Player takes 2 Actions.")
@@ -186,7 +166,7 @@
   (base/rule
    :name "Leveling"
    :summary
-    "* Major Achievement: Completion gains a Skill Point with level equal to your 2nd highest Skill.
+    "* Major Achievement: Completion gains a [Skill Point] with level equal to your 2nd highest Skill.
      * Minor Achievement: Completion gains an [Ability Point].")
   (base/rule
    :name "Line of Sight"
@@ -194,6 +174,8 @@
     "* Most distance effects require line of sight to the target.
      * Determine Line of Sight: Starting from your location point, use a straight edge to touch every part of the target (in 1 space).
      * If nothing is between you, then you have full line of sight. Resolve normally.")
+  (base/rule
+   :name "Map")
   (base/rule
    :name "Map: Exploration"
    :summary
@@ -249,6 +231,8 @@
    :summary
     "* [Action]: IF an [Ability] is used in the incorrect hand or using fewer hands than normal THEN Initiative:-1.")
   (base/rule
+   :name "Player")
+  (base/rule
    :name "Poisoned"
    :summary
     "* Body:-1
@@ -279,6 +263,8 @@
      * Take 2 Actions: These are [Move], [Fight], [Skill], [Recover], [Search] and [Wait]. You may perform the same Action twice.
      * Turn End: The next unit in Turn Order performs their turn until the Round Ends.")
   (base/rule
+   :name "Rule")
+  (base/rule
    :name "Scale"
    :summary
     "* Each stat/skill/power has a number after the letter 'x'.
@@ -296,6 +282,18 @@
    :name "Search"
    :summary
     "* [Double Action]: Test [Investigate] vs. [Conflict] to search the [Place] you occupy. If you succeed, you may find something.")
+  (base/rule
+   :name "Scene")
+  (base/rule
+   :name "Skill Point"
+   :summary
+    "* [Major Achievement]: Gain a Skill Point equal to your 2nd highest Skill level. You may also reduce 1 of your existing Skill levels by 1 to gain a Skill Point equal to the reduced level.
+     * A Skill Point may be spent on a [Skill] of equal level to raise that skill by 1.
+     * Skill Points may be saved.
+     * A Skill Point may be exchanged for 2 Skill Points of 1 lesser level.
+     * 2 Skill Points of equal level may be exchanged for 1 Skill Point of 1 higher level.")
+  (base/rule
+   :name "Space")
   (base/rule
    :name "Setup Guide"
    :summary
@@ -329,7 +327,7 @@
   (base/rule
    :name "Speed"
    :summary
-    "* Special*: IF Speed over 5 THEN penalty is Speed:-2.")
+    "* Special: IF Speed over 5 THEN penalty is Speed:-2.")
   (base/rule
    :name "Suffocation"
    :summary
@@ -351,6 +349,16 @@
    :summary
     "* IF a unit is adjacent to more than 1 opponent THEN all [Skill]:-1 for each additional opponent.")
   (base/rule
+   :name "Task"
+   :summary
+    "* Tasks are skill test that may take multiple Actions to perform.
+     * Place Task Tokens on the upper part of this card and Progress Tokens on the bottom of this card each equal to the [Difficulty].
+     * [Success]: Task:-1 for each [Effect]
+     * [Fail]: Progress:-1 for each [Effect]
+     * [Clock]: Progress:-1")
+  (base/rule
+   :name "Team")
+  (base/rule
    :name "Thirst"
    :summary
     "* Mind:-1
@@ -359,6 +367,8 @@
    :name "Unfamiliar Item"
    :summary
     "* If a unit attempts to use an Item that is not on its character sheet, they may usually attempt it at Initiative:-2 and [Disadvantage]. Note: This is cumulative with [Unskilled].")
+  (base/rule
+   :name "Unit")
   (base/rule
    :name "Unskilled"
    :summary
@@ -422,6 +432,7 @@
        "Crits"
        "Mitigation"
        "Cover"
+       "Task"
        "Character"
        "Body"
        "Mind"
@@ -454,39 +465,12 @@
        "Weather: Temperature"
        "Weather: Wind"
       ))
-     (base/cardlist
-      (card-clock-num 1)
-      (card-clock-num 2)
-      (card-clock-num 3)
-      (card-clock-num 4)
-      (card-clock-num 5)
-      (card-clock-num 6)
-      (card-clock-num 7)
-      (card-clock-num 8)
-      (card-clock-num 9)
-      (card-clock-num 10)
-      (card-clock-num 11)
-      (card-clock-num 12)
-      (card-clock-num 13)
-      (card-clock-num 14)
-      (card-clock-num 15)
-      (card-clock-num 16)
-      (card-clock-num 17)
-      (card-clock-num 18)
-      (card-clock-num 19)
-      (card-clock-num 20)
-      (card-skillpoint 1)
-      (card-skillpoint 2)
-      (card-skillpoint 3)
-      (card-skillpoint 4)
-      (card-skillpoint 5)
-      (card-abilitypoint 1)
-      (card-abilitypoint 2)
-      (card-abilitypoint 3)
-      (card-abilitypoint 4)
-      (card-abilitypoint 5)
-     )
-    )
+     (base/cardlist-copy<-tactics-rulekey-count-isnum
+      tactics "Clock" 20 true)
+     (base/cardlist-copy<-tactics-rulekey-count-isnum
+      tactics "Skill Point" 5 true)
+     (base/cardlist-copy<-tactics-rulekey-count-isnum
+      tactics "Ability Point" 5 true))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]

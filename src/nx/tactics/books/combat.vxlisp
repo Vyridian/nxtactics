@@ -7,14 +7,14 @@
   :name "Combat"
   :image "Warrior.jpg"
   :chaptermap
-   (base/chaptermap
-    "Combat Overview" (chapter_combat_overview tactics)
-    "Example of Play" (chapter_example_of_play tactics)
-    "Rules" (chapter_rules tactics)
-    "Skills" (chapter_skills tactics)
-    "Early Weaponry" (chapter_early_weaponry tactics)
-    "Modern Equipment" (chapter_modern_equipment tactics)
-    "Advanced Weaponry" (chapter_advanced_weaponry tactics)
+   (base/chaptermap<-chapterlist
+    (chapter_combat_overview tactics)
+    (chapter_example_of_play tactics)
+    (chapter_rules tactics)
+    (chapter_skills tactics)
+    (chapter_early_weaponry tactics)
+    (chapter_modern_equipment tactics)
+    (chapter_advanced_weaponry tactics)
    )))
 
 (func chapter_combat_overview : base/chapter

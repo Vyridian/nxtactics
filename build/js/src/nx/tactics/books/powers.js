@@ -1809,12 +1809,6 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Whirlpool"),
                 "Wishing Well",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wishing Well")
-              ),
-              ":specialtymap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_specialtymap},
-                ":Hydromancy",
-                vx_core.f_new({"any-1": nx_tactics_base.t_specialty}, ":name", "Hydromancy", ":summary", "* Hydro is the magical version of Water.\n* Hydro effects can be sustained without a source, but they can also be canceled by counter-magic.\n* Hydro reacts with Pyro to produce the [Vaporize] effect.\n* Hydro reacts with Cryo to produce the [Freeze] effect.\n* Hydro reacts with Geo to produce the [Quagmire] effect.\n* Hydro reacts with Electro to produce the [Electrocharged] effect.\n* Hydro reacts with Aero to produce the [Fog] effect.")
               )
             )
           )
@@ -3676,31 +3670,18 @@ export default class nx_tactics_books_powers {
       ":image",
       "Powers.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Powers Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_powers.f_chapter_powers_overview(tactics),
-        "Special Modifiers",
         nx_tactics_books_powers.f_chapter_special_modifiers(tactics),
-        "Equipment Powers",
         nx_tactics_books_powers.f_chapter_equipment_powers(tactics),
-        "Strength and Weaknesses",
         nx_tactics_books_powers.f_chapter_strength_and_weaknesses(tactics),
-        "Mental Powers and Weaknesses",
         nx_tactics_books_powers.f_chapter_mental_powers_and_weaknesses(tactics),
-        "Movement Powers",
         nx_tactics_books_powers.f_chapter_movement_powers(tactics),
-        "Physical Powers and Weaknesses",
         nx_tactics_books_powers.f_chapter_physical_powers_and_weaknesses(tactics),
-        "Body Powers",
         nx_tactics_books_powers.f_chapter_body_powers(tactics),
-        "Energy and Forces",
         nx_tactics_books_powers.f_chapter_energy_and_forces(tactics),
-        "Enhancement Powers",
         nx_tactics_books_powers.f_chapter_enhancement_powers(tactics),
-        "Alteration Powers",
         nx_tactics_books_powers.f_chapter_alteration_powers(tactics),
-        "Godlike Powers",
         nx_tactics_books_powers.f_chapter_godlike_powers(tactics)
       )
     )

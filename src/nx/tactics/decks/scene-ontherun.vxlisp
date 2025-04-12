@@ -13,6 +13,7 @@
       tactics
       "Flint (Early)"
       "Hidden"
+      "Goblin: Scout"
       "Hare"
       "Snake: Emerald Viper"))
     (list<-list : base/cardlist
@@ -46,6 +47,7 @@
     (list<-list : base/cardlist
      (base/rulelist<-tactics-keys
       tactics
+      "Task"
       "Weather: Temperature"
       "Weather: Clouds"
       "Weather: Humidity"

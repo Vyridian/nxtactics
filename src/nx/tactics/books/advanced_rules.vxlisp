@@ -7,11 +7,11 @@
   :name "Advanced Rules"
   :image "AdvancedRules.jpg"
   :chaptermap
-   (base/chaptermap
-    "Advanced Rules Overview" (chapter_advanced_rules_overview)
-    "Advanced Tokens" (chapter_advanced_tokens)
-    "Advanced Rules" (chapter_advanced_rules)
-    "Genres" (chapter_genres)
+   (base/chaptermap<-chapterlist
+    (chapter_advanced_rules_overview)
+    (chapter_advanced_tokens)
+    (chapter_advanced_rules)
+    (chapter_genres)
    )))
 
 (func chapter_advanced_rules_overview : base/chapter

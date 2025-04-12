@@ -27,7 +27,8 @@
   :name "Player"
   :image (string "images/card-" color ".svg")
   :summary
-   "* Used as a cover for this player's cards."))
+   "* [Game Start]: Place your Units on the [Status Bar] with a Unit# card. Arrange your other Unit cards in front of you.
+    * [Round End]: [Draw]:1 and [Recover]."))
 
 (func card-rotated : base/card
  [color : string
@@ -37,20 +38,8 @@
   :name "Rotated Cards"
   :image (string "images/card-" color ".svg")
   :summary
-   "* This Card is used to keep the orientation of cards when stored between games.
-    * Between Games: Rotate this card 90 degrees and place it on top of all rotated card.
-    * When Starting a game: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."))
-
-(func card-skill : base/card
- [color : string
-  num : int]
- (base/card
-  :id (string "card-skill-" color "-" num)
-  :name (string "Skill #" num)
-  :image (string "images/card-" color ".svg")
-  :summary
-   "* Used when a [Skill] needs a [Target].
-    * Place the Skill# card on the active Skill card and the matching Target# on the target."))
+   "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.
+    * [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."))
 
 (func card-target : base/card
  [color : string
@@ -60,8 +49,7 @@
   :name (string "Target #" num)
   :image (string "images/card-" color ".svg")
   :summary
-   "* Used when a [Skill] needs a [Target].
-    * Place the Skill# card on the active Skill card and the matching Target# on the target."))
+   "* [Round Start]: Place this card on your [Target] for the [Round]."))
 
 (func card-unit : base/card
  [color : string
@@ -71,8 +59,9 @@
   :name (string "Unit #" num)
   :image (string "images/card-" color ".svg")
   :summary
-   "* Represents a particular unit.
-    * Place this card above the matching Unit. All [Damage] and [Target] cards are placed on this card."))
+   "* Place this card above a Unit.
+    * [Damage] and [Target] cards are placed near this card.
+    * [Round Start]: Set [Move]:[Speed] and [Turn]:2"))
 
 (func deck-player : base/deck
  [color : string]
@@ -90,12 +79,7 @@
      (card-target color 2)
      (card-target color 3)
      (card-target color 4)
-     (card-target color 5)
-     (card-skill color 1)
-     (card-skill color 2)
-     (card-skill color 3)
-     (card-skill color 4)
-     (card-skill color 5))
+     (card-target color 5))
    cardmap : base/cardmap :=
     (base/cardmap<-cardlist
      cardlist)]

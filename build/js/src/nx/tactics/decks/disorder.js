@@ -443,9 +443,10 @@ export default class nx_tactics_decks_disorder {
       ":name",
       "Disorder Back",
       ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_num(
+      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
         nx_tactics_decks_disorder.c_stun,
-        54
+        54,
+        false
       )
     )
     return output

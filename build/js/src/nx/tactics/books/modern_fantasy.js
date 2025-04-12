@@ -942,21 +942,13 @@ export default class nx_tactics_books_modern_fantasy {
       ":image",
       "Vampire_Slayer_by_Prasa.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Modern Fantasy Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_modern_fantasy.f_chapter_modern_fantasy_overview(),
-        "Buffy the Vampire Slayer",
         nx_tactics_books_modern_fantasy.f_chapter_buffy_the_vampire_slayer(),
-        "Chronicles of Amber",
         nx_tactics_books_modern_fantasy.f_chapter_chronicles_of_amber(),
-        "Kengan Ashura",
         nx_tactics_books_modern_fantasy.f_chapter_kengan_ashura(),
-        "Matrix, The",
         nx_tactics_books_modern_fantasy.f_chapter_matrix_the(),
-        "Street Fighter",
         nx_tactics_books_modern_fantasy.f_chapter_street_fighter(),
-        "World of Darkness",
         nx_tactics_books_modern_fantasy.f_chapter_world_of_darkness()
       )
     )

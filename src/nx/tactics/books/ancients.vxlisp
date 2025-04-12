@@ -7,20 +7,20 @@
   :name "Ancients"
   :image "300_phalanx.jpg"
   :chaptermap
-   (base/chaptermap
-    "Ancients Overview" (chapter_ancients_overview)
-    "Ancients Scenes" (chapter_ancients_scenes)
-    "Anglo/Saxons" (chapter_anglo_saxons)
-    "Carthaginians" (chapter_carthaginians)
-    "Chinese Dynasty" (chapter_chinese_dynasty)
-    "Egyptian Dynasty" (chapter_egyptian_dynasty)
-    "Germanic Tribes" (chapter_germanic_tribes)
-    "Greek City States" (chapter_greek_city_states)
-    "Macedon" (chapter_macedon)
-    "Norsemen" (chapter_norsemen)
-    "Persians" (chapter_persians)
-    "Roman Empire" (chapter_roman_empire)
-    "Unfiled Ancient" (chapter_unfiled_ancient)
+   (base/chaptermap<-chapterlist
+    (chapter_ancients_overview)
+    (chapter_ancients_scenes)
+    (chapter_anglo_saxons)
+    (chapter_carthaginians)
+    (chapter_chinese_dynasty)
+    (chapter_egyptian_dynasty)
+    (chapter_germanic_tribes)
+    (chapter_greek_city_states)
+    (chapter_macedon)
+    (chapter_norsemen)
+    (chapter_persians)
+    (chapter_roman_empire)
+    (chapter_unfiled_ancient)
    )))
 
 (func chapter_ancients_overview : base/chapter

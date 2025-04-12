@@ -7,13 +7,13 @@
   :name "Core Rules"
   :image "warrior_msleal_full.jpg"
   :chaptermap
-   (base/chaptermap
-    "Core Overview" (chapter_core_overview)
-    "Let's Play" (chapter_lets_play)
-    "Common Rules" (chapter_common_rules)
-    "Tokens" (chapter_tokens)
-    "Core Scenes" (chapter_core_scenes)
-    "Core Maps" (chapter_core_maps)
+   (base/chaptermap<-chapterlist
+    (chapter_core_overview)
+    (chapter_lets_play)
+    (chapter_common_rules)
+    (chapter_tokens)
+    (chapter_core_scenes)
+    (chapter_core_maps)
    )))
 
 (func chapter_core_overview : base/chapter
@@ -585,8 +585,7 @@ Altitude until the end of the [Turn].
          (rule
           :name "Action"
           :summary
-           "* The [Unit] may spend half of its [Speed] to use any [Ability] on its [Card].  Note: if the [Unit] is only able
-to move 1 space this turn, it may still take an Action.")
+           "* The [Unit] may spend half of its [Speed] to use any [Ability] on its [Card].  Note: if the [Unit] is only able to move 1 space this turn, it may still take an Action.")
         :Card
          (rule
           :name "Card")
@@ -595,52 +594,20 @@ to move 1 space this turn, it may still take an Action.")
           :name "Collision"
           :summary
            "* When 2 units collide, they each Roll [Body]+[Speed] vs. [Armor] against each other.
-* Either, both, or neither may take damage.")
+            * Either, both, or neither may take damage.")
         :Difficulty
          (rule
           :name "Difficulty"
           :summary
            "* Easy - Quick Game with Basic Rules
-* Medium
-* Difficult
-* Epic - Maximum complexity (and detail).  Often long play or part of a [Campaign].")
+            * Medium
+            * Difficult
+            * Epic - Maximum complexity (and detail).  Often long play or part of a [Campaign].")
         :Initiative
          (rule
           :name "Initiative"
           :summary
-           "* Initiative is determined by Spirit.  Unit act in order of initiative from lowest
-to highest.  Before any Action, a unit with higher initiative may interrupt the current
-unit and take its turn.")
-        "Large Unit"
-         (rule
-          :name "Large Unit")
-        :Map
-         (rule
-          :name "Map")
-        "Optional Rules"
-         (rule
-          :name "Optional Rules")
-        :Player
-         (rule
-          :name "Player")
-        :Rule
-         (rule
-          :name "Rule")
-        :scene
-         (rule
-          :name "scene")
-        :Space
-         (rule
-          :name "Space")
-        :Team
-         (rule
-          :name "Team")
-        "Turn Clock"
-         (rule
-          :name "Turn Clock")
-        :Unit
-         (rule
-          :name "Unit"))))))
+           "* Initiative is determined by Spirit. Unit act in order of initiative from lowest to highest. Before any Action, a unit with higher initiative may interrupt the current unit and take its turn."))))))
 
 (func chapter_tokens : base/chapter
  (chapter
@@ -650,9 +617,6 @@ unit and take its turn.")
     "White Tokens"
      (section
       :name "White Tokens"
-      :summary
-       "White Tokens represent temporary conditions that will pass quickly.
-* [Activate]: Remove one White token."
       :rulemap
        (rulemap
         :Duration

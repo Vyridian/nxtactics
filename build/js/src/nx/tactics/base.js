@@ -1577,34 +1577,42 @@ export default class nx_tactics_base {
   }
 
   /**
-   * @function cardlist_copy_from_card_num
-   * Returns a cardlist by copying a card num times
+   * @function cardlist_copy_from_card_count_isnum
+   * Returns a cardlist by copying a card count times
    * @param  {card} card
-   * @param  {int} num
+   * @param  {int} count
+   * @param  {boolean} isnum
    * @return {cardlist}
    */
-  static t_cardlist_copy_from_card_num = {
+  static t_cardlist_copy_from_card_count_isnum = {
     vx_type: vx_core.t_type
   }
-  static e_cardlist_copy_from_card_num = {
-    vx_type: nx_tactics_base.t_cardlist_copy_from_card_num
+  static e_cardlist_copy_from_card_count_isnum = {
+    vx_type: nx_tactics_base.t_cardlist_copy_from_card_count_isnum
   }
 
-  // (func cardlist-copy<-card-num)
-  static f_cardlist_copy_from_card_num(card, num) {
+  // (func cardlist-copy<-card-count-isnum)
+  static f_cardlist_copy_from_card_count_isnum(card, count, isnum) {
     let output = nx_tactics_base.e_cardlist
     output = vx_collection.f_list_from_for_end_loop(
       {"any-1": nx_tactics_base.t_card, "list-1": nx_tactics_base.t_cardlist},
       1,
-      num,
+      count,
       vx_core.f_new_from_type(vx_core.t_any_from_int, (pos) => 
         vx_core.f_let(
           {"any-1": nx_tactics_base.t_card},
           [],
           vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
             const id = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":id")
-            const chg = vx_core.f_new({"any-1": vx_core.t_string}, id, "-", pos)
-            return vx_core.f_copy(card, ":id", chg)
+            const name = vx_core.f_any_from_struct({"any-1": vx_core.t_string, "struct-2": nx_tactics_base.t_card}, card, ":name")
+            const idchg = vx_core.f_new({"any-1": vx_core.t_string}, id, "-", pos)
+            const namechg = vx_core.f_if_1(
+              {"any-1": vx_core.t_string},
+              isnum,
+              vx_core.f_new({"any-1": vx_core.t_string}, name, "# ", pos),
+              name
+            )
+            return vx_core.f_copy(card, ":id", idchg, ":name", namechg)
           })
         ))
     )
@@ -1612,27 +1620,58 @@ export default class nx_tactics_base {
   }
 
   /**
-   * @function cardmap_copy_from_card_num
-   * Returns a cardmap by copying a card num times
-   * @param  {card} card
-   * @param  {int} num
-   * @return {cardmap}
+   * @function cardlist_copy_from_tactics_rulekey_count_isnum
+   * Returns a cardlist by copying a rule count times
+   * @param  {tactics} tactics
+   * @param  {string} rulekey
+   * @param  {int} count
+   * @param  {boolean} isnum
+   * @return {cardlist}
    */
-  static t_cardmap_copy_from_card_num = {
+  static t_cardlist_copy_from_tactics_rulekey_count_isnum = {
     vx_type: vx_core.t_type
   }
-  static e_cardmap_copy_from_card_num = {
-    vx_type: nx_tactics_base.t_cardmap_copy_from_card_num
+  static e_cardlist_copy_from_tactics_rulekey_count_isnum = {
+    vx_type: nx_tactics_base.t_cardlist_copy_from_tactics_rulekey_count_isnum
   }
 
-  // (func cardmap-copy<-card-num)
-  static f_cardmap_copy_from_card_num(card, num) {
+  // (func cardlist-copy<-tactics-rulekey-count-isnum)
+  static f_cardlist_copy_from_tactics_rulekey_count_isnum(tactics, rulekey, count, isnum) {
+    let output = nx_tactics_base.e_cardlist
+    output = vx_core.f_let(
+      {"any-1": nx_tactics_base.t_cardlist},
+      [],
+      vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
+        const rule = nx_tactics_base.f_rule_from_tactics_key(tactics, rulekey)
+        return nx_tactics_base.f_cardlist_copy_from_card_count_isnum(rule, count, isnum)
+      })
+    )
+    return output
+  }
+
+  /**
+   * @function cardmap_copy_from_card_count_isnum
+   * Returns a cardmap by copying a card count times
+   * @param  {card} card
+   * @param  {int} count
+   * @param  {boolean} isnum
+   * @return {cardmap}
+   */
+  static t_cardmap_copy_from_card_count_isnum = {
+    vx_type: vx_core.t_type
+  }
+  static e_cardmap_copy_from_card_count_isnum = {
+    vx_type: nx_tactics_base.t_cardmap_copy_from_card_count_isnum
+  }
+
+  // (func cardmap-copy<-card-count-isnum)
+  static f_cardmap_copy_from_card_count_isnum(card, count, isnum) {
     let output = nx_tactics_base.e_cardmap
     output = vx_core.f_let(
       {"any-1": nx_tactics_base.t_cardmap},
       [],
       vx_core.f_new_from_type(vx_core.t_any_from_func, () => {
-        const cardlist = nx_tactics_base.f_cardlist_copy_from_card_num(card, num)
+        const cardlist = nx_tactics_base.f_cardlist_copy_from_card_count_isnum(card, count, isnum)
         return nx_tactics_base.f_cardmap_from_cardlist(cardlist)
       })
     )
@@ -1808,7 +1847,7 @@ export default class nx_tactics_base {
   /**
    * @function chaptermap_from_chapterlist
    * Returns a chaptermap from a given chapterlist
-   * @param  {chapterlist} chapterlist
+   * @param  {chapterlist} ... chapterlist
    * @return {chaptermap}
    */
   static t_chaptermap_from_chapterlist = {
@@ -1819,8 +1858,9 @@ export default class nx_tactics_base {
   }
 
   // (func chaptermap<-chapterlist)
-  static f_chaptermap_from_chapterlist(chapterlist) {
+  static f_chaptermap_from_chapterlist(...chapterlist) {
     let output = nx_tactics_base.e_chaptermap
+    chapterlist = vx_core.f_new_from_type(nx_tactics_base.t_chapterlist, ...chapterlist)
     output = vx_core.f_map_from_list(
       {"any-1": nx_tactics_base.t_chapter, "any-2": nx_tactics_base.t_chapter, "list-2": nx_tactics_base.t_chapterlist, "map-1": nx_tactics_base.t_chaptermap, "struct-2": nx_tactics_base.t_chapter},
       chapterlist,
@@ -4443,8 +4483,9 @@ export default class nx_tactics_base {
       "cardimage<-tactics-unitkey": nx_tactics_base.e_cardimage_from_tactics_unitkey,
       "cardimagelist<-cardlist": nx_tactics_base.e_cardimagelist_from_cardlist,
       "cardimagelist<-tactics-unitkeys": nx_tactics_base.e_cardimagelist_from_tactics_unitkeys,
-      "cardlist-copy<-card-num": nx_tactics_base.e_cardlist_copy_from_card_num,
-      "cardmap-copy<-card-num": nx_tactics_base.e_cardmap_copy_from_card_num,
+      "cardlist-copy<-card-count-isnum": nx_tactics_base.e_cardlist_copy_from_card_count_isnum,
+      "cardlist-copy<-tactics-rulekey-count-isnum": nx_tactics_base.e_cardlist_copy_from_tactics_rulekey_count_isnum,
+      "cardmap-copy<-card-count-isnum": nx_tactics_base.e_cardmap_copy_from_card_count_isnum,
       "cardmap<-bookmap": nx_tactics_base.e_cardmap_from_bookmap,
       "cardmap<-cardlist": nx_tactics_base.e_cardmap_from_cardlist,
       "chapterlist<-book": nx_tactics_base.e_chapterlist_from_book,
@@ -4551,8 +4592,9 @@ export default class nx_tactics_base {
       "cardimage<-tactics-unitkey": nx_tactics_base.t_cardimage_from_tactics_unitkey,
       "cardimagelist<-cardlist": nx_tactics_base.t_cardimagelist_from_cardlist,
       "cardimagelist<-tactics-unitkeys": nx_tactics_base.t_cardimagelist_from_tactics_unitkeys,
-      "cardlist-copy<-card-num": nx_tactics_base.t_cardlist_copy_from_card_num,
-      "cardmap-copy<-card-num": nx_tactics_base.t_cardmap_copy_from_card_num,
+      "cardlist-copy<-card-count-isnum": nx_tactics_base.t_cardlist_copy_from_card_count_isnum,
+      "cardlist-copy<-tactics-rulekey-count-isnum": nx_tactics_base.t_cardlist_copy_from_tactics_rulekey_count_isnum,
+      "cardmap-copy<-card-count-isnum": nx_tactics_base.t_cardmap_copy_from_card_count_isnum,
       "cardmap<-bookmap": nx_tactics_base.t_cardmap_from_bookmap,
       "cardmap<-cardlist": nx_tactics_base.t_cardmap_from_cardlist,
       "chapterlist<-book": nx_tactics_base.t_chapterlist_from_book,
@@ -9908,9 +9950,9 @@ export default class nx_tactics_base {
       fn            : nx_tactics_base.f_cardimagelist_from_tactics_unitkeys
     }
 
-    // (func cardlist-copy<-card-num)
-    nx_tactics_base.t_cardlist_copy_from_card_num['vx_value'] = {
-      name          : "cardlist-copy<-card-num",
+    // (func cardlist-copy<-card-count-isnum)
+    nx_tactics_base.t_cardlist_copy_from_card_count_isnum['vx_value'] = {
+      name          : "cardlist-copy<-card-count-isnum",
       pkgname       : "nx/tactics/base",
       extends       : ":func",
       idx           : 0,
@@ -9923,12 +9965,12 @@ export default class nx_tactics_base {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_base.f_cardlist_copy_from_card_num
+      fn            : nx_tactics_base.f_cardlist_copy_from_card_count_isnum
     }
 
-    // (func cardmap-copy<-card-num)
-    nx_tactics_base.t_cardmap_copy_from_card_num['vx_value'] = {
-      name          : "cardmap-copy<-card-num",
+    // (func cardlist-copy<-tactics-rulekey-count-isnum)
+    nx_tactics_base.t_cardlist_copy_from_tactics_rulekey_count_isnum['vx_value'] = {
+      name          : "cardlist-copy<-tactics-rulekey-count-isnum",
       pkgname       : "nx/tactics/base",
       extends       : ":func",
       idx           : 0,
@@ -9941,7 +9983,25 @@ export default class nx_tactics_base {
       traits        : [vx_core.t_func],
       properties    : [],
       proplast      : {},
-      fn            : nx_tactics_base.f_cardmap_copy_from_card_num
+      fn            : nx_tactics_base.f_cardlist_copy_from_tactics_rulekey_count_isnum
+    }
+
+    // (func cardmap-copy<-card-count-isnum)
+    nx_tactics_base.t_cardmap_copy_from_card_count_isnum['vx_value'] = {
+      name          : "cardmap-copy<-card-count-isnum",
+      pkgname       : "nx/tactics/base",
+      extends       : ":func",
+      idx           : 0,
+      allowfuncs    : [],
+      disallowfuncs : [],
+      allowtypes    : [],
+      disallowtypes : [],
+      allowvalues   : [],
+      disallowvalues: [],
+      traits        : [vx_core.t_func],
+      properties    : [],
+      proplast      : {},
+      fn            : nx_tactics_base.f_cardmap_copy_from_card_count_isnum
     }
 
     // (func cardmap<-bookmap)

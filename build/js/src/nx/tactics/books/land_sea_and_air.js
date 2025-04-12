@@ -598,17 +598,11 @@ export default class nx_tactics_books_land_sea_and_air {
       ":image",
       "LandSeaAndAir.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Land, Sea and Air Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_overview(),
-        "Land Sea and Air Unit Types",
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_unit_types(),
-        "Land Sea and Air Rules",
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_rules(),
-        "Land, Sea and Air Terrain",
         nx_tactics_books_land_sea_and_air.f_chapter_land_sea_and_air_terrain(),
-        "Maps",
         nx_tactics_books_land_sea_and_air.f_chapter_maps()
       )
     )

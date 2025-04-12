@@ -7,23 +7,22 @@
   :name "Giant Monsters"
   :image "GiantMonsters.jpg"
   :chaptermap
-   (base/chaptermap
-    "Overview" (chapter_overview)
-    "Daikaiju" (chapter_daikaiju)
-    "Giant Robots" (chapter_giant_robots)
+   (base/chaptermap<-chapterlist
+    (chapter_overview)
+    (chapter_daikaiju)
+    (chapter_giant_robots)
    )))
 
 (func chapter_overview : base/chapter
- (chapter
+ (base/chapter
   :name "Overview"
   :sectionmap
-   (sectionmap
-    "Why Tactics:Giant Monsters?"
-     (section
-      :name "Why Tactics:Giant Monsters?"))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Why Tactics:Giant Monsters?"))))
 
 (func chapter_daikaiju : base/chapter
- (chapter
+ (base/chapter
   :name "Daikaiju"
   :sectionmap
    (sectionmap

@@ -683,6 +683,6 @@
  (base/deck
   :name "Disorder Back"
   :cardmap
-   (base/cardmap-copy<-card-num
-    stun 54))
+   (base/cardmap-copy<-card-count-isnum
+    stun 54 false))
  :doc "Disorder Back Deck")

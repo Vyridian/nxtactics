@@ -96,6 +96,16 @@
      :path "https://fonts.gstatic.com/s/carattere/v7")))
  :doc "Returns Fontface3")
 
+(const fontface-rune : ui/fontface
+ (ui/fontface
+  :name "Futhark Plain"
+  :filelist
+   (file/filelist
+    (file/file
+     :name "futhark-plain.ttf"
+     :path "https://www.fontsaddict.com/fontface")))
+ :doc "Returns Runic Font Face")
+
 (const image-jester-black : ui/image
  (ui/image
   :file

@@ -190,7 +190,7 @@ export default class nx_tactics_books_core_rules {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
             ":Action",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Action", ":summary", "* The [Unit] may spend half of its [Speed] to use any [Ability] on its [Card].  Note: if the [Unit] is only able\nto move 1 space this turn, it may still take an Action."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Action", ":summary", "* The [Unit] may spend half of its [Speed] to use any [Ability] on its [Card].  Note: if the [Unit] is only able to move 1 space this turn, it may still take an Action."),
             ":Card",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Card"),
             ":Collision",
@@ -198,27 +198,7 @@ export default class nx_tactics_books_core_rules {
             ":Difficulty",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Difficulty", ":summary", "* Easy - Quick Game with Basic Rules\n* Medium\n* Difficult\n* Epic - Maximum complexity (and detail).  Often long play or part of a [Campaign]."),
             ":Initiative",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Initiative", ":summary", "* Initiative is determined by Spirit.  Unit act in order of initiative from lowest\nto highest.  Before any Action, a unit with higher initiative may interrupt the current\nunit and take its turn."),
-            "Large Unit",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Large Unit"),
-            ":Map",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Map"),
-            "Optional Rules",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Optional Rules"),
-            ":Player",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Player"),
-            ":Rule",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Rule"),
-            ":scene",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "scene"),
-            ":Space",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Space"),
-            ":Team",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Team"),
-            "Turn Clock",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Turn Clock"),
-            ":Unit",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Unit")
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Initiative", ":summary", "* Initiative is determined by Spirit. Unit act in order of initiative from lowest to highest. Before any Action, a unit with higher initiative may interrupt the current unit and take its turn.")
           )
         )
       )
@@ -472,8 +452,6 @@ export default class nx_tactics_books_core_rules {
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "White Tokens",
-          ":summary",
-          "White Tokens represent temporary conditions that will pass quickly.\n* [Activate]: Remove one White token.",
           ":rulemap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_rulemap},
@@ -580,19 +558,12 @@ export default class nx_tactics_books_core_rules {
       ":image",
       "warrior_msleal_full.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Core Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_core_rules.f_chapter_core_overview(),
-        "Let's Play",
         nx_tactics_books_core_rules.f_chapter_lets_play(),
-        "Common Rules",
         nx_tactics_books_core_rules.f_chapter_common_rules(),
-        "Tokens",
         nx_tactics_books_core_rules.f_chapter_tokens(),
-        "Core Scenes",
         nx_tactics_books_core_rules.f_chapter_core_scenes(),
-        "Core Maps",
         nx_tactics_books_core_rules.f_chapter_core_maps()
       )
     )

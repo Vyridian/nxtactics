@@ -68,7 +68,7 @@ export default class nx_tactics_decks_starter {
       ":image",
       vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
       ":summary",
-      "* Used as a cover for this player's cards."
+      "* [Game Start]: Place your Units on the [Status Bar] with a Unit# card. Arrange your other Unit cards in front of you.\n* [Round End]: [Draw]:1 and [Recover]."
     )
     return output
   }
@@ -98,37 +98,7 @@ export default class nx_tactics_decks_starter {
       ":image",
       vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
       ":summary",
-      "* This Card is used to keep the orientation of cards when stored between games.\n* Between Games: Rotate this card 90 degrees and place it on top of all rotated card.\n* When Starting a game: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."
-    )
-    return output
-  }
-
-  /**
-   * @function card_skill
-   * @param  {string} color
-   * @param  {int} num
-   * @return {card}
-   */
-  static t_card_skill = {
-    vx_type: vx_core.t_type
-  }
-  static e_card_skill = {
-    vx_type: nx_tactics_decks_starter.t_card_skill
-  }
-
-  // (func card-skill)
-  static f_card_skill(color, num) {
-    let output = nx_tactics_base.e_card
-    output = vx_core.f_new(
-      {"any-1": nx_tactics_base.t_card},
-      ":id",
-      vx_core.f_new({"any-1": vx_core.t_string}, "card-skill-", color, "-", num),
-      ":name",
-      vx_core.f_new({"any-1": vx_core.t_string}, "Skill #", num),
-      ":image",
-      vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
-      ":summary",
-      "* Used when a [Skill] needs a [Target].\n* Place the Skill# card on the active Skill card and the matching Target# on the target."
+      "* [Between Games]: Rotate this card 90 degrees and place it on top of all rotated card.\n* [Game Start]: Rotate this card 90 degrees with all cards under it and then remove this card to return the rotated cards to their correct orientation."
     )
     return output
   }
@@ -158,7 +128,7 @@ export default class nx_tactics_decks_starter {
       ":image",
       vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
       ":summary",
-      "* Used when a [Skill] needs a [Target].\n* Place the Skill# card on the active Skill card and the matching Target# on the target."
+      "* [Round Start]: Place this card on your [Target] for the [Round]."
     )
     return output
   }
@@ -188,7 +158,7 @@ export default class nx_tactics_decks_starter {
       ":image",
       vx_core.f_new({"any-1": vx_core.t_string}, "images/card-", color, ".svg"),
       ":summary",
-      "* Represents a particular unit.\n* Place this card above the matching Unit. All [Damage] and [Target] cards are placed on this card."
+      "* Place this card above a Unit.\n* [Damage] and [Target] cards are placed near this card.\n* [Round Start]: Set [Move]:[Speed] and [Turn]:2"
     )
     return output
   }
@@ -225,12 +195,7 @@ export default class nx_tactics_decks_starter {
           nx_tactics_decks_starter.f_card_target(color, 2),
           nx_tactics_decks_starter.f_card_target(color, 3),
           nx_tactics_decks_starter.f_card_target(color, 4),
-          nx_tactics_decks_starter.f_card_target(color, 5),
-          nx_tactics_decks_starter.f_card_skill(color, 1),
-          nx_tactics_decks_starter.f_card_skill(color, 2),
-          nx_tactics_decks_starter.f_card_skill(color, 3),
-          nx_tactics_decks_starter.f_card_skill(color, 4),
-          nx_tactics_decks_starter.f_card_skill(color, 5)
+          nx_tactics_decks_starter.f_card_target(color, 5)
         )
         const cardmap = nx_tactics_base.f_cardmap_from_cardlist(cardlist)
         return vx_core.f_new(
@@ -260,7 +225,6 @@ export default class nx_tactics_decks_starter {
       "card-conflictupper": nx_tactics_decks_starter.e_card_conflictupper,
       "card-player": nx_tactics_decks_starter.e_card_player,
       "card-rotated": nx_tactics_decks_starter.e_card_rotated,
-      "card-skill": nx_tactics_decks_starter.e_card_skill,
       "card-target": nx_tactics_decks_starter.e_card_target,
       "card-unit": nx_tactics_decks_starter.e_card_unit,
       "deck-player": nx_tactics_decks_starter.e_deck_player
@@ -270,7 +234,6 @@ export default class nx_tactics_decks_starter {
       "card-conflictupper": nx_tactics_decks_starter.t_card_conflictupper,
       "card-player": nx_tactics_decks_starter.t_card_player,
       "card-rotated": nx_tactics_decks_starter.t_card_rotated,
-      "card-skill": nx_tactics_decks_starter.t_card_skill,
       "card-target": nx_tactics_decks_starter.t_card_target,
       "card-unit": nx_tactics_decks_starter.t_card_unit,
       "deck-player": nx_tactics_decks_starter.t_deck_player
@@ -357,24 +320,6 @@ export default class nx_tactics_decks_starter {
       properties    : [],
       proplast      : {},
       fn            : nx_tactics_decks_starter.f_card_rotated
-    }
-
-    // (func card-skill)
-    nx_tactics_decks_starter.t_card_skill['vx_value'] = {
-      name          : "card-skill",
-      pkgname       : "nx/tactics/decks/starter",
-      extends       : ":func",
-      idx           : 0,
-      allowfuncs    : [],
-      disallowfuncs : [],
-      allowtypes    : [],
-      disallowtypes : [],
-      allowvalues   : [],
-      disallowvalues: [],
-      traits        : [vx_core.t_func],
-      properties    : [],
-      proplast      : {},
-      fn            : nx_tactics_decks_starter.f_card_skill
     }
 
     // (func card-target)

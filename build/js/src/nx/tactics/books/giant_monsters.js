@@ -407,9 +407,7 @@ export default class nx_tactics_books_giant_monsters {
       ":name",
       "Overview",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Why Tactics:Giant Monsters?",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics:Giant Monsters?")
       )
     )
@@ -438,13 +436,9 @@ export default class nx_tactics_books_giant_monsters {
       ":image",
       "GiantMonsters.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_giant_monsters.f_chapter_overview(),
-        "Daikaiju",
         nx_tactics_books_giant_monsters.f_chapter_daikaiju(),
-        "Giant Robots",
         nx_tactics_books_giant_monsters.f_chapter_giant_robots()
       )
     )

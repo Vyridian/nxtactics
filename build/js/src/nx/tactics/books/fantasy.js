@@ -455,11 +455,11 @@ export default class nx_tactics_books_fantasy {
           ":sectionmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_sectionmap},
-            ":Antilla",
+            ":Antillia",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
-              "Antilla",
+              "Antillia",
               ":reference",
               "* Atlantis",
               ":unitmap",
@@ -469,10 +469,12 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Antillan Triton")
               )
             ),
-            ":Brittania",
+            ":Briton",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_section},
               ":name",
+              "Briton",
+              ":titles",
               "Brittania",
               ":reference",
               "England",
@@ -481,22 +483,21 @@ export default class nx_tactics_books_fantasy {
                 {"any-1": nx_tactics_base.t_placemap},
                 ":Avalon",
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Avalon", ":summary", "* Rogue\n* Serf\n* Squire"),
+                "Fortriu",
+                vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Fortriu", ":summary", "The Pictish Kingdom"),
                 ":Saxony",
                 vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Saxony")
               ),
               ":unitmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitmap},
-                "Avalan Footman",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalan Footman"),
-                "Avalon Highwayman",
+              nx_tactics_base.f_unitmap_from_unitlist(
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Footman"),
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Highwayman", ":reference", "Robin Hood"),
-                "Avalan Knight",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalan Knight"),
-                "Avalon Longbowman",
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Knight"),
                 vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Longbowman"),
-                "Avalan Shieldbearer",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalan Shieldbearer")
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Rogue"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Serf"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Shieldbearer"),
+                vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Avalon Squire")
               )
             ),
             ":Eire",
@@ -2445,23 +2446,14 @@ export default class nx_tactics_books_fantasy {
       ":image",
       "DaveDormanEasternTerritories.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Fantasy Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_fantasy.f_chapter_fantasy_overview(),
-        "Genshin Impact",
         nx_tactics_books_fantasy.f_chapter_genshin_impact(),
-        "God of War",
         nx_tactics_books_fantasy.f_chapter_god_of_war(),
-        "Lord of the Rings",
         nx_tactics_books_fantasy.f_chapter_lord_of_the_rings(),
-        "Nexus Fantasy Characters",
         nx_tactics_books_fantasy.f_chapter_nexus_fantasy_characters(),
-        "Material Realm",
         nx_tactics_books_fantasy.f_chapter_material_realm(),
-        "Realms Beyond",
         nx_tactics_books_fantasy.f_chapter_realms_beyond(),
-        "Story Ideas",
         nx_tactics_books_fantasy.f_chapter_story_ideas()
       )
     )

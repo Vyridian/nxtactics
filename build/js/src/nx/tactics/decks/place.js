@@ -29,12 +29,14 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Cave", ":image", "images/cards/place-cave.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Chasm", ":image", "images/cards/place-chasm.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Cliff", ":image", "images/cards/place-cliff.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Farmhouse", ":image", "images/cards/place-farmhouse.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Field", ":image", "images/cards/place-field.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Flames", ":image", "images/cards/place-flames.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Forest", ":image", "images/cards/place-forest.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Guardpost", ":image", "images/cards/place-guardpost.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Hall: Wooden", ":image", "images/cards/place-hall-wooden.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "House: Farm", ":image", "images/cards/place-house-farm.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Lake", ":image", "images/cards/place-lake.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Lava", ":image", "images/cards/place-lava.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Marsh", ":image", "images/cards/place-marsh.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Mill", ":image", "images/cards/place-mill.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Mountain", ":image", "images/cards/place-mountain.svg"),
@@ -47,8 +49,10 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Road: Stone", ":image", "images/cards/place-road-stone.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Rock", ":image", "images/cards/place-rock.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Rockslide", ":image", "images/cards/place-rockslide.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Smoke", ":image", "images/cards/place-smoke.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Snow", ":image", "images/cards/place-snow.svg", ":summary", "* Depth: Each token on Snow is 5cm/2in of snow. Move:-1/depth"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Stables", ":image", "images/cards/place-horsestables.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Stables", ":image", "images/cards/place-stables.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Stairs", ":image", "images/cards/place-stairs.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Stream", ":image", "images/cards/place-stream.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Swamp", ":image", "images/cards/place-swamp.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tavern", ":image", "images/cards/place-tavern.svg"),
@@ -56,10 +60,10 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tavern Bedroom", ":image", "images/cards/place-tavern-bedroom.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tavern Common", ":image", "images/cards/place-tavern-common.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tavern Dining", ":image", "images/cards/place-tavern-dining.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Tavern Stairs", ":image", "images/cards/place-tavern-stairs.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Temple", ":image", "images/cards/place-temple.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Trading Post", ":image", "images/cards/place-tradingpost.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wall: Rock", ":image", "images/cards/place-wall-rock.svg")
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wall: Rock", ":image", "images/cards/place-wall-rock.svg"),
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Sandleborg", ":summary", "* A small settlement nestled near Mt. Murin.\n* It was established for its Sandlewood trees. Transporting the wood is difficult, so the settlement is more focused on wheat farming and breads.")
     )
     return output
   }

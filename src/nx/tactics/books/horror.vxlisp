@@ -7,13 +7,13 @@
   :name "Horror"
   :image "Cthulhu.jpg"
   :chaptermap
-   (base/chaptermap
-    "Horror Overview" (chapter_horror_overview)
-    "Call of Cthulhu" (chapter_call_of_cthulhu tactics)
-    "Kingdom of the Gods" (chapter_kingdom_of_the_gods)
-    "Night of the Living Dead" (chapter_night_of_the_living_dead)
-    "Serial Killers" (chapter_serial_killers)
-    "Deadly Beasts" (chapter_deadly_beasts)
+   (base/chaptermap<-chapterlist
+    (chapter_horror_overview)
+    (chapter_call_of_cthulhu tactics)
+    (chapter_kingdom_of_the_gods)
+    (chapter_night_of_the_living_dead)
+    (chapter_serial_killers)
+    (chapter_deadly_beasts)
    )))
 
 (func chapter_horror_overview : base/chapter

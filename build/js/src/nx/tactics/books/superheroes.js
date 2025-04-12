@@ -25,13 +25,11 @@ export default class nx_tactics_books_superheroes {
       ":name",
       "DC Universe",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        ":Heroes",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Heroes",
+          "DC Heroes",
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
@@ -75,11 +73,10 @@ export default class nx_tactics_books_superheroes {
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wonder Woman", ":image", "Superheroes/WonderWoman.png")
           )
         ),
-        ":Villains",
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
-          "Villains",
+          "DC Villains",
           ":unitmap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_unitmap},
@@ -121,7 +118,7 @@ export default class nx_tactics_books_superheroes {
               ":image",
               "Superheroes/Joker.png",
               ":summary",
-              "* You won't kill me out of some misplaced sense of self-righteousness,\nand I won't kill you because you're just too much fun. I think you and\nI are destined to do this forever.",
+              "* You won't kill me out of some misplaced sense of self-righteousness, and I won't kill you because you're just too much fun. I think you and I are destined to do this forever.",
               ":unitskillmap",
               vx_core.f_new(
                 {"any-1": nx_tactics_base.t_unitskillmap},
@@ -3180,7 +3177,7 @@ export default class nx_tactics_books_superheroes {
             "Super Powers",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Super Powers", ":summary", "* Superhero characters do not have a maximum Body, but their Combat Skills are limited to level 10 since they rely on their powers more than skill.\n* Superpowers include abilities from all other genres.  Particularly relevent sections are: Magic, Martial Arts, Mentalism, Modern, and Ancients."),
             ":Heroes",
-            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Heroes", ":summary", "* Heroes live a life removed from normal men, yet they risk their lives to help others and battle evil.  Their motives vary, but they are united in these common goals.\n* Many heroes hold themselves to a high standard, feeling that they must be better than the villians they pursue. Their reward is a greater acceptance and aid from the public, police, and other heroes.\n* Other heroes may use dubious tactics and may therefore be mistaken for villains.\n* Super Hero Teams - The most powerful of these may establish public bases."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Heroes", ":summary", "* Heroes live a life removed from normal men, yet they risk their lives to help others and battle evil. Their motives vary, but they are united in these common goals.\n* Many heroes hold themselves to a high standard, feeling that they must be better than the villians they pursue. Their reward is a greater acceptance and aid from the public, police, and other heroes.\n* Other heroes may use dubious tactics and may therefore be mistaken for villains.\n* Super Hero Teams - The most powerful of these may establish public bases."),
             ":Villians",
             vx_core.f_new({"any-1": nx_tactics_base.t_rule}, ":name", "Villians", ":summary", "* Villians, like heroes, are driven, but their desires are far different from herores.\n* Power lust, revenge, rage, greed, and insanity are the typical motivations for villians.\n* Super Villian Groups - Fortunately, the most powerful villians usually cannot get along, but many of the weaker villians see strength in numbers."),
             ":Organizations",
@@ -3213,9 +3210,7 @@ export default class nx_tactics_books_superheroes {
       ":name",
       "Superheroes Overview",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Why Tactics: Superheroes?",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Why Tactics: Superheroes?")
       )
     )
@@ -3244,19 +3239,12 @@ export default class nx_tactics_books_superheroes {
       ":image",
       "Superpowers.jpg",
       ":chaptermap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_chaptermap},
-        "Superheroes Overview",
+      nx_tactics_base.f_chaptermap_from_chapterlist(
         nx_tactics_books_superheroes.f_chapter_superheroes_overview(),
-        "Superhero Characters",
         nx_tactics_books_superheroes.f_chapter_superhero_characters(),
-        "DC Universe",
         nx_tactics_books_superheroes.f_chapter_dc_universe(),
-        "Dragonball Z",
         nx_tactics_books_superheroes.f_chapter_dragonball_z(),
-        "Marvel Universe",
         nx_tactics_books_superheroes.f_chapter_marvel_universe(),
-        "Original Groups",
         nx_tactics_books_superheroes.f_chapter_original_groups()
       )
     )

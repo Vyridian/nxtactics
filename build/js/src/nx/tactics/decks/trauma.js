@@ -443,9 +443,10 @@ export default class nx_tactics_decks_trauma {
       ":name",
       "Trauma Back",
       ":cardmap",
-      nx_tactics_base.f_cardmap_copy_from_card_num(
+      nx_tactics_base.f_cardmap_copy_from_card_count_isnum(
         nx_tactics_decks_trauma.c_stress,
-        54
+        54,
+        false
       )
     )
     return output

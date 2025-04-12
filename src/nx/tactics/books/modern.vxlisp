@@ -7,28 +7,28 @@
   :name "Modern"
   :image "Modern.jpg"
   :chaptermap
-   (base/chaptermap
-    "Modern Overview" (chapter_modern_overview)
-    "Cold War" (chapter_cold_war)
-    "Modern Ground Vehicles" (chapter_modern_ground_vehicles)
-    "The Abyss" (chapter_the_abyss)
-    "Modern Space" (chapter_modern_space)
-    "Modern Cops and Robbers" (chapter_modern_cops_and_robbers)
-    "Modern Mercenaries" (chapter_modern_mercenaries)
-    "The Prisoner" (chapter_the_prisoner)
-    "Special Ops" (chapter_special_ops)
-    "Modern Spies" (chapter_modern_spies)
-    "Modern Sports" (chapter_modern_sports)
-    "Modern Warfare" (chapter_modern_warfare)
+   (base/chaptermap<-chapterlist
+    (chapter_modern_overview)
+    (chapter_cold_war)
+    (chapter_modern_ground_vehicles)
+    (chapter_the_abyss)
+    (chapter_modern_space)
+    (chapter_modern_cops_and_robbers)
+    (chapter_modern_mercenaries)
+    (chapter_the_prisoner)
+    (chapter_special_ops)
+    (chapter_modern_spies)
+    (chapter_modern_sports)
+    (chapter_modern_warfare)
    )))
 
 (func chapter_modern_overview : base/chapter
- (chapter
+ (base/chapter
   :name "Modern Overview"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Modern Naval Warfare"
-     (section
+     (base/section
       :name "Modern Naval Warfare"
       :summary
        "* Aircraft Carriers

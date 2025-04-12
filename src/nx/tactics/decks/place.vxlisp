@@ -24,11 +24,11 @@
    :name "Cliff"
    :image "images/cards/place-cliff.svg")
   (base/place
-   :name "Farmhouse"
-   :image "images/cards/place-farmhouse.svg")
-  (base/place
    :name "Field"
    :image "images/cards/place-field.svg")
+  (base/place
+   :name "Flames"
+   :image "images/cards/place-flames.svg")
   (base/place
    :name "Forest"
    :image "images/cards/place-forest.svg")
@@ -39,8 +39,14 @@
    :name "Hall: Wooden"
    :image "images/cards/place-hall-wooden.svg")
   (base/place
+   :name "House: Farm"
+   :image "images/cards/place-house-farm.svg")
+  (base/place
    :name "Lake"
    :image "images/cards/place-lake.svg")
+  (base/place
+   :name "Lava"
+   :image "images/cards/place-lava.svg")
   (base/place
    :name "Marsh"
    :image "images/cards/place-marsh.svg")
@@ -78,13 +84,19 @@
    :name "Rockslide"
    :image "images/cards/place-rockslide.svg")
   (base/place
+   :name "Smoke"
+   :image "images/cards/place-smoke.svg")
+  (base/place
    :name "Snow"
    :image "images/cards/place-snow.svg"
    :summary
     "* Depth: Each token on Snow is 5cm/2in of snow. Move:-1/depth")
   (base/place
    :name "Stables"
-   :image "images/cards/place-horsestables.svg")
+   :image "images/cards/place-stables.svg")
+  (base/place
+   :name "Stairs"
+   :image "images/cards/place-stairs.svg")
   (base/place
    :name "Stream"
    :image "images/cards/place-stream.svg")
@@ -107,9 +119,6 @@
    :name "Tavern Dining"
    :image "images/cards/place-tavern-dining.svg")
   (base/place
-   :name "Tavern Stairs"
-   :image "images/cards/place-tavern-stairs.svg")
-  (base/place
    :name "Temple"
    :image "images/cards/place-temple.svg")
   (base/place
@@ -118,6 +127,11 @@
   (base/place
    :name "Wall: Rock"
    :image "images/cards/place-wall-rock.svg")
+  (base/place
+   :name "Sandleborg"
+   :summary
+    "* A small settlement nestled near Mt. Murin.
+     * It was established for its Sandlewood trees. Transporting the wood is difficult, so the settlement is more focused on wheat farming and breads.")
   )
  :doc "Returns the base placemap")
 

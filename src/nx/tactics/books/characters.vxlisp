@@ -7,14 +7,14 @@
   :name "Characters"
   :image "Characters.jpg"
   :chaptermap
-   (base/chaptermap
-    "Characters Overview" (chapter_characters_overview)
-    "Creating Characters" (chapter_creating_characters)
-    "Character Archetypes" (chapter_character_archetypes)
-    "Storytelling" (chapter_storytelling)
-    "Sets" (chapter_sets)
-    "Props" (chapter_props)
-    "Cast" (chapter_cast)
+   (base/chaptermap<-chapterlist
+    (chapter_characters_overview)
+    (chapter_creating_characters)
+    (chapter_character_archetypes)
+    (chapter_storytelling)
+    (chapter_sets)
+    (chapter_props)
+    (chapter_cast)
    )))
 
 (func chapter_characters_overview : base/chapter

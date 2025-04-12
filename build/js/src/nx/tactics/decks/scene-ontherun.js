@@ -30,7 +30,7 @@ export default class nx_tactics_decks_scene_ontherun {
       nx_tactics_base.f_cardmap_from_cardlist(
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_unit, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_unitlist},
-          nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Hidden", "Hare", "Snake: Emerald Viper")
+          nx_tactics_base.f_unitlist_from_tactics_keys(tactics, "Flint (Early)", "Hidden", "Goblin: Scout", "Hare", "Snake: Emerald Viper")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_skill, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_skilllist},
@@ -50,7 +50,7 @@ export default class nx_tactics_decks_scene_ontherun {
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_rule, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_rulelist},
-          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Weather: Temperature", "Weather: Clouds", "Weather: Humidity", "Weather: Wind", "Exposure", "Hunger", "Thirst", "Poisoned")
+          nx_tactics_base.f_rulelist_from_tactics_keys(tactics, "Task", "Weather: Temperature", "Weather: Clouds", "Weather: Humidity", "Weather: Wind", "Exposure", "Hunger", "Thirst", "Poisoned")
         ),
         vx_core.f_list_from_list(
           {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},

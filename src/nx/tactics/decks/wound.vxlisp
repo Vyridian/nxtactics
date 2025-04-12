@@ -683,16 +683,16 @@
  (base/deck
   :name "Bleeding"
   :cardmap
-   (base/cardmap-copy<-card-num
-    bleeding 54))
+   (base/cardmap-copy<-card-count-isnum
+    bleeding 10 true))
  :doc "Bleeding Deck")
 
 (func deck-bloodloss : base/deck
  (base/deck
   :name "Bloodloss"
   :cardmap
-   (base/cardmap-copy<-card-num
-    bloodloss 54))
+   (base/cardmap-copy<-card-count-isnum
+    bloodloss 10 true))
  :doc "Bloodloss Deck")
 
 (func deck-wound : base/deck
@@ -761,6 +761,6 @@
  (base/deck
   :name "Wound Back"
   :cardmap
-   (base/cardmap-copy<-card-num
-    fatigue 54))
+   (base/cardmap-copy<-card-count-isnum
+    fatigue 54 true))
  :doc "Wound Back Deck")

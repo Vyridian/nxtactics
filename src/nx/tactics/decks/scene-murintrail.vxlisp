@@ -99,42 +99,6 @@
      :skill (base/skill<-tactics-key tactics "Intimidation")
      :level "1"))))
 
-(func unit-goblinscout : base/unit
- [tactics : base/tactics]
- (base/unit
-  :name "Goblin Scout"
-  :image "images/cards/unit-goblin-scout.svg"
-  :gender "Male"
-  :demeanor "Depraved"
-  :nature "Cowardly Envious"
-  :conscience "1x1"
-  :beast "1x0"
-  :race "Goblin"
-  :body "2x1"
-  :mind "6x1"
-  :will "2x1"
-  :speed "5x0"
-  :speedland "5kph/3mph"
-  :value "1x0"
-  :mass "22kg/50lb"
-  :height "1m/3ft"
-  :unitskillmap
-   (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Close Combat")
-     :level "1"
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item (base/item<-tactics-key tactics "Knife: Dagger"))))
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Stealth")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Sneak")))))))
-
 (func unit-guardsman : base/unit
  [tactics : base/tactics]
  (base/unit
@@ -387,100 +351,98 @@
 
 (func deck-murintrail : base/deck
  [tactics : base/tactics]
- (let : base/deck
-  [goblinscout   := (unit-goblinscout tactics)
-   goblinscout-i := (base/cardimage<-card goblinscout)]
-  (base/deck
-   :name "Murin Trail"
-   :cardmap
-    (base/cardmap<-cardlist
-     (base/cardlist
-      (list<-list : base/cardlist
-       (base/unitlist<-tactics-keys
-        tactics
-        "Flint (Early)"
-        "Horse"))
-      (list<-list : base/cardlist
-       (base/cardimagelist<-tactics-unitkeys
-        tactics
-        "Flint (Early)"
-        "Horse"))
-      (unit-bandit tactics)
-      (unit-bruiser tactics)
-      (unit-guardsman tactics)
-      (unit-jesaveer tactics)
-      (unit-jonaveer tactics)
-      (unit-xeibhanower tactics)
-      (unit-wilmducon tactics)
-      (unit-liliducon tactics)
-      (unit-wilddog tactics)
-      goblinscout
-      goblinscout-i
-      (unit-woodencart tactics)
-      (list<-list : base/cardlist
-       (base/skilllist<-tactics-keys
-        tactics
-        "Close Combat"
-        "Melee"
-        "Stealth"
-        "Business"
-        "Tradeskills"))
-      (list<-list : base/cardlist
-       (base/abilitylist<-tactics-keys
-        tactics
-        "Ambush"
-        "Bargain"
-        "Sneak"))
-      (list<-list : base/cardlist
-       (base/itemlist<-tactics-keys
-        tactics
-        "Bare Handed"
-        "Knife: Dagger"
-        "Sword: Long"
-        "Sword: Short"
-        "Hammer"
-        "Axe: Hand"
-        "Axe: Wood"
-        "Spear"
-        "Spear: Short"
-        "Bow: Short"
-        "Quiver: Arrows"
-        "Shield: Buckler"
-        "Shield: Heater"
-        "Shield: Round"
-        "Armor: Leather Cuirass"
-        "Coins: Copper"
-        "Coins: Silver"
-        "Coins: Gold"
-        "Coins: Platinum"
-        "Salve: Healing"
-        "Cloak: Fine Woodland"
-        "Rations"
-        "Waterskin"
-        ))
-      (list<-list : base/cardlist
-       (base/placelist<-tactics-keys
-        tactics
-        "Field"
-        "Forest"
-        "Mountain"
-        "Blacksmith"
-        "Campsite"
-        "Cave"
-        "Farmhouse"
-        "Guardpost"
-        "Hall: Wooden"
-        "Mill"
-        "Path: Dirt"
-        "Road: Gravel"
-        "Road: Stone"
-        "Stables"
-        "Tavern"
-        "Tavern Bar"
-        "Tavern Bedroom"
-        "Tavern Common"
-        "Tavern Dining"
-        "Tavern Stairs"
-        "Temple"
-        "Trading Post"
-      )))))))
+ (base/deck
+  :name "Murin Trail"
+  :cardmap
+   (base/cardmap<-cardlist
+    (base/cardlist
+     (list<-list : base/cardlist
+      (base/unitlist<-tactics-keys
+       tactics
+       "Flint (Early)"
+       "Goblin: Scout"
+       "Horse"))
+     (list<-list : base/cardlist
+      (base/cardimagelist<-tactics-unitkeys
+       tactics
+       "Flint (Early)"
+       "Goblin: Scout"
+       "Horse"))
+     (unit-bandit tactics)
+     (unit-bruiser tactics)
+     (unit-guardsman tactics)
+     (unit-jesaveer tactics)
+     (unit-jonaveer tactics)
+     (unit-xeibhanower tactics)
+     (unit-wilmducon tactics)
+     (unit-liliducon tactics)
+     (unit-wilddog tactics)
+     (unit-woodencart tactics)
+     (list<-list : base/cardlist
+      (base/skilllist<-tactics-keys
+       tactics
+       "Close Combat"
+       "Melee"
+       "Stealth"
+       "Business"
+       "Tradeskills"))
+     (list<-list : base/cardlist
+      (base/abilitylist<-tactics-keys
+       tactics
+       "Ambush"
+       "Bargain"
+       "Sneak"))
+     (list<-list : base/cardlist
+      (base/itemlist<-tactics-keys
+       tactics
+       "Bare Handed"
+       "Knife: Dagger"
+       "Sword: Long"
+       "Sword: Short"
+       "Hammer"
+       "Axe: Hand"
+       "Axe: Wood"
+       "Spear"
+       "Spear: Short"
+       "Bow: Short"
+       "Quiver: Arrows"
+       "Shield: Buckler"
+       "Shield: Heater"
+       "Shield: Round"
+       "Armor: Leather Cuirass"
+       "Coins: Copper"
+       "Coins: Silver"
+       "Coins: Gold"
+       "Coins: Platinum"
+       "Salve: Healing"
+       "Cloak: Fine Woodland"
+       "Rations"
+       "Waterskin"
+       ))
+     (list<-list : base/cardlist
+      (base/placelist<-tactics-keys
+       tactics
+       "Sandleborg"
+       "Field"
+       "Forest"
+       "Mountain"
+       "Blacksmith"
+       "Campsite"
+       "Cave"
+       "Guardpost"
+       "Hall: Wooden"
+       "House: Farm"
+       "Mill"
+       "Path: Dirt"
+       "Road: Gravel"
+       "Road: Stone"
+       "Stables"
+       "Stairs"
+       "Tavern"
+       "Tavern Bar"
+       "Tavern Bedroom"
+       "Tavern Common"
+       "Tavern Dining"
+       "Temple"
+       "Trading Post"
+     ))))))

@@ -6,28 +6,27 @@
  (base/book
   :name "Gear"
   :chaptermap
-   (base/chaptermap
-    "Gear Overview" (chapter_gear_overview)
-    "Gear Construction" (chapter_gear_construction)
-    "Gear Items" (chapter_gear_items tactics)
+   (base/chaptermap<-chapterlist
+    (chapter_gear_overview)
+    (chapter_gear_construction)
+    (chapter_gear_items tactics)
    )))
 
 (func chapter_gear_overview : base/chapter
- (chapter
+ (base/chapter
   :name "Gear Overview"
   :sectionmap
-   (sectionmap
-    "Why Tactics: Gear?"
-     (section
-      :name "Why Tactics: Gear?"))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Why Tactics: Gear?"))))
 
 (func chapter_gear_construction : base/chapter
- (chapter
+ (base/chapter
   :name "Gear Construction"))
 
 (func chapter_gear_items : base/chapter
  [base/tactics : tactics]
- (chapter
+ (base/chapter
   :name "Gear Items"
   :sectionmap
    (sectionmap
