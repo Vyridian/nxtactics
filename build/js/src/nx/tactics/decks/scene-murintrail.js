@@ -67,7 +67,7 @@ export default class nx_tactics_decks_scene_murintrail {
           ),
           vx_core.f_list_from_list(
             {"any-1": nx_tactics_base.t_card, "any-2": nx_tactics_base.t_place, "list-1": nx_tactics_base.t_cardlist, "list-2": nx_tactics_base.t_placelist},
-            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Sandleborg", "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
+            nx_tactics_base.f_placelist_from_tactics_keys(tactics, "Sandalstadt", "Field", "Forest", "Mountain", "Blacksmith", "Campsite", "Cave", "Guardpost", "Hall: Wooden", "House: Farm", "Mill", "Path: Dirt", "Road: Gravel", "Road: Stone", "Stables", "Stairs", "Tavern", "Tavern Bar", "Tavern Bedroom", "Tavern Common", "Tavern Dining", "Temple", "Trading Post")
           )
         )
       )
@@ -151,35 +151,17 @@ export default class nx_tactics_decks_scene_murintrail {
       "1x0",
       ":unitskillmap",
       nx_tactics_base.f_unitskillmap_from_unitskilllist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitskill},
-          ":skill",
-          nx_tactics_base.f_skill_from_tactics_key(tactics, "Melee"),
-          ":level",
-          "3",
-          ":unititemmap",
-          nx_tactics_base.f_unititemmap_from_unititemlist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unititem},
-              ":item",
-              nx_tactics_base.f_item_from_tactics_key(tactics, "Sword: Short")
-            )
-          )
+        nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
+          tactics,
+          "Melee",
+          3,
+          vx_core.f_new({"any-1": vx_core.t_stringlist}, "Sword: Short")
         ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitskill},
-          ":skill",
-          nx_tactics_base.f_skill_from_tactics_key(tactics, "Stealth"),
-          ":level",
-          "1",
-          ":unitabilitymap",
-          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unitability},
-              ":ability",
-              nx_tactics_base.f_ability_from_tactics_key(tactics, "Ambush")
-            )
-          )
+        nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+          tactics,
+          "Stealth",
+          1,
+          vx_core.f_new({"any-1": vx_core.t_stringlist}, "Ambush")
         )
       )
     )
@@ -239,28 +221,13 @@ export default class nx_tactics_decks_scene_murintrail {
       "1x0",
       ":unitskillmap",
       nx_tactics_base.f_unitskillmap_from_unitskilllist(
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitskill},
-          ":skill",
-          nx_tactics_base.f_skill_from_tactics_key(tactics, "Close Combat"),
-          ":level",
-          "2",
-          ":unitabilitymap",
-          nx_tactics_base.f_unitabilitymap_from_unitabilitylist(
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unitability},
-              ":ability",
-              nx_tactics_base.f_ability_from_tactics_key(tactics, "Grab")
-            )
-          )
+        nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+          tactics,
+          "Close Combat",
+          2,
+          vx_core.f_new({"any-1": vx_core.t_stringlist}, "Grab")
         ),
-        vx_core.f_new(
-          {"any-1": nx_tactics_base.t_unitskill},
-          ":skill",
-          nx_tactics_base.f_skill_from_tactics_key(tactics, "Intimidation"),
-          ":level",
-          "1"
-        )
+        nx_tactics_base.f_unitskill_from_tactics_key_lvl(tactics, "Intimidation", 1)
       )
     )
     return output

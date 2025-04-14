@@ -186,14 +186,13 @@
    :unitskillmap
     (base/unitskillmap<-unitskilllist
      (base/unitskill<-tactics-key-lvl-abilities
-      tactics
-      "Stealth"
-      1
+      tactics "Stealth" 1
       (stringlist "Ambush" "Camouflage")))
    :unitpowermap
     (base/unitpowermap<-unitpowerlist
      (base/unitpower<-tactics-key-lvl-intensity-abilities
-      tactics "Toxins" 2 "2x2" (stringlist "Poison Bite"))))
+      tactics "Toxins" 2 "2x2"
+      (stringlist "Poison Bite"))))
  (base/unit
   :name "Zombie: Walker"
   :image "images/cards/unit-zombie-walker.svg"
@@ -208,11 +207,13 @@
   :unitskillmap
    (base/unitskillmap<-unitskilllist
     (base/unitskill<-tactics-key-lvl-abilities
-     tactics "Close Combat" 1 (stringlist "Grab")))
+     tactics "Close Combat" 1
+     (stringlist "Grab")))
   :unitpowermap
    (base/unitpowermap<-unitpowerlist
     (base/unitpower<-tactics-key-lvl-abilities
-     tactics "Natural Weaponry" 1 (stringlist "Bite"))))
+     tactics "Natural Weaponry" 1
+     (stringlist "Bite"))))
  )
  :doc "Returns the base unitmap")
 

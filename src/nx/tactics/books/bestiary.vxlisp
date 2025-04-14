@@ -4791,10 +4791,9 @@
           :name "Wererat"
           :image "images/bestiary/Lycanthrope_Wererat.png"
           :unitskillmap
-           (base/unitskillmap
-            :Stealth
-             (base/unitskill
-              :name "Stealth")))
+           (base/unitskillmap<-tactics-keys
+            tactics
+            "Stealth"))
         :Werespider
          (base/unit
           :name "Werespider"
@@ -5135,7 +5134,7 @@
         :Wendigo
          (base/unit
           :name "Wendigo"
-          :summary "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They are [Resistant] to [Cold] and often appear in the middle of a snowstorm to steal their victims."
+          :summary "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims."
           :titles "Abominable Snowman, Yeti")
         :Wight
          (base/unit
@@ -5344,10 +5343,9 @@
                  (base/unitpower
                   :name "Madness"))
               :unitskillmap
-               (base/unitskillmap
-                :Stealth
-                 (base/unitskill
-                  :name "Stealth")))
+               (base/unitskillmap<-tactics-keys
+                tactics
+                "Stealth"))
             :Nosferatu
              (base/unit
               :name "Nosferatu"
@@ -5361,10 +5359,9 @@
                  (base/unitpower
                   :name "Invisibility"))
               :unitskillmap
-               (base/unitskillmap
-                :Stealth
-                 (base/unitskill
-                  :name "Stealth")))
+               (base/unitskillmap<-tactics-keys
+                tactics
+                "Stealth"))
             :Toreador
              (base/unit
               :name "Toreador"

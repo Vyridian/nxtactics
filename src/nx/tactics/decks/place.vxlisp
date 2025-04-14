@@ -128,10 +128,10 @@
    :name "Wall: Rock"
    :image "images/cards/place-wall-rock.svg")
   (base/place
-   :name "Sandleborg"
+   :name "Sandalstadt"
    :summary
-    "* A small settlement nestled near Mt. Murin.
-     * It was established for its Sandlewood trees. Transporting the wood is difficult, so the settlement is more focused on wheat farming and breads.")
+    "* A small settlement nestled near the Sandal Forest and Mt. Murin.
+     * It was established to harvest Sandalwood trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet.")
   )
  :doc "Returns the base placemap")
 

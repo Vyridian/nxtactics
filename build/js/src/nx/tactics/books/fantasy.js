@@ -8,6 +8,7 @@ export default class nx_tactics_books_fantasy {
 
   /**
    * @function chapter_fantasy_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_fantasy_overview = {
@@ -18,7 +19,7 @@ export default class nx_tactics_books_fantasy {
   }
 
   // (func chapter_fantasy_overview)
-  static f_chapter_fantasy_overview() {
+  static f_chapter_fantasy_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -42,9 +43,7 @@ export default class nx_tactics_books_fantasy {
           )
         ),
         "Fantasy Weapons",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Fantasy Weapons", ":summary", "* Faeblades"),
-        "Elder Tongue",
-        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Elder Tongue", ":summary", "Prefixes\n* Alf - Elf\n* Dverg - Dwarf\n* Hel - Dead\n* Jotun - Giant\n* Man - Human\n* Muspel - Fire\n* Nifl - Mist\n* Svart - Dark\n* Yo - Demonic\nSuffixes\n* Ar - Race\n* Heim - Home\n* Ki - Soul\n* Ma - Creature\n* Traum - Dream\nWords\n* Alfar - Elvish Race\n* Albtraum - Elf Dream (Nightmare)\n* Alfheim - Land of Elves\n* Dvergar - Dwarven Race\n* Helar - Restless Dead\n* Helheim - Land of the dead\n* Manar - Human Race\n* Manheim - Land of Men\n* Muspelheim - Land of Fire\n* Niflheim - Land of Ice\n* Svartalfheim - Land of Dark Elves\n* Yoki - Demon Soul\n* Yoma - Demon")
+        vx_core.f_new({"any-1": nx_tactics_base.t_section}, ":name", "Fantasy Weapons", ":summary", "* Faeblades")
       )
     )
     return output
@@ -52,6 +51,7 @@ export default class nx_tactics_books_fantasy {
 
   /**
    * @function chapter_genshin_impact
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_genshin_impact = {
@@ -62,7 +62,7 @@ export default class nx_tactics_books_fantasy {
   }
 
   // (func chapter_genshin_impact)
-  static f_chapter_genshin_impact() {
+  static f_chapter_genshin_impact(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -98,6 +98,7 @@ export default class nx_tactics_books_fantasy {
 
   /**
    * @function chapter_god_of_war
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_god_of_war = {
@@ -108,7 +109,7 @@ export default class nx_tactics_books_fantasy {
   }
 
   // (func chapter_god_of_war)
-  static f_chapter_god_of_war() {
+  static f_chapter_god_of_war(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -126,7 +127,7 @@ export default class nx_tactics_books_fantasy {
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_itemmap},
             "Pandora's Box",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pandora's Box", ":reference", "* The box was actually mistranslated.  It is actually Pandora's Jar.", ":summary", "* After the great war with the Titans, Zeus gathered the great evils of the war and bid Hephaestus construct a box\nto hold them.  Later Kratos seeks out the box to use the evils inside against Ares.")
+            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Pandora's Box", ":reference", "* The box was actually mistranslated.  It is actually Pandora's Jar.", ":summary", "* After the great war with the Titans, Zeus gathered the great evils of the war and bid Hephaestus construct a box to hold them.  Later Kratos seeks out the box to use the evils inside against Ares.")
           )
         ),
         "God of War Units",
@@ -148,6 +149,7 @@ export default class nx_tactics_books_fantasy {
 
   /**
    * @function chapter_lord_of_the_rings
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_lord_of_the_rings = {
@@ -158,7 +160,7 @@ export default class nx_tactics_books_fantasy {
   }
 
   // (func chapter_lord_of_the_rings)
-  static f_chapter_lord_of_the_rings() {
+  static f_chapter_lord_of_the_rings(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -186,6 +188,7 @@ export default class nx_tactics_books_fantasy {
 
   /**
    * @function chapter_material_realm
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_material_realm = {
@@ -196,7 +199,7 @@ export default class nx_tactics_books_fantasy {
   }
 
   // (func chapter_material_realm)
-  static f_chapter_material_realm() {
+  static f_chapter_material_realm(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1685,6 +1688,7 @@ export default class nx_tactics_books_fantasy {
 
   /**
    * @function chapter_nexus_fantasy_characters
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_nexus_fantasy_characters = {
@@ -1695,7 +1699,7 @@ export default class nx_tactics_books_fantasy {
   }
 
   // (func chapter_nexus_fantasy_characters)
-  static f_chapter_nexus_fantasy_characters() {
+  static f_chapter_nexus_fantasy_characters(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -1710,9 +1714,7 @@ export default class nx_tactics_books_fantasy {
           ":name",
           "Nexus Fantasy Characters",
           ":unitmap",
-          vx_core.f_new(
-            {"any-1": nx_tactics_base.t_unitmap},
-            "Arinni Taybor",
+          nx_tactics_base.f_unitmap_from_unitlist(
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -1740,9 +1742,7 @@ export default class nx_tactics_books_fantasy {
                 )
               )
             ),
-            "Eldruf Grundel",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Eldruf Grundel", ":summary", "Gnome Thief Magician"),
-            ":Flint",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -1752,25 +1752,15 @@ export default class nx_tactics_books_fantasy {
               ":summary",
               "Half-Elven Thief",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Stealth",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+                  tactics,
                   "Stealth",
-                  ":level",
-                  "9",
-                  ":unitabilitymap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitabilitymap},
-                    ":Backstab",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitability}, ":name", "Backstab")
-                  )
+                  9,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Backstab")
                 )
               )
             ),
-            "Galamir Mirlesem",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -1796,7 +1786,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Physical Powers", ":level", "10")
               )
             ),
-            "Hetman Undrig",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -1824,7 +1813,6 @@ export default class nx_tactics_books_fantasy {
                 )
               )
             ),
-            "Jaris Ransun",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -1836,25 +1824,15 @@ export default class nx_tactics_books_fantasy {
               ":titles",
               "Valen the Hunter",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Defense",
-                vx_core.f_new(
-                  {"any-1": nx_tactics_base.t_unitskill},
-                  ":name",
+              nx_tactics_base.f_unitskillmap_from_unitskilllist(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+                  tactics,
                   "Defense",
-                  ":unititemmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unititemmap},
-                    "Chain Mail Armor",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Chain Mail Armor"),
-                    ":Shield",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unititem}, ":name", "Shield")
-                  )
+                  5,
+                  vx_core.f_new({"any-1": vx_core.t_stringlist}, "Armor: Chain Mail", "Shield")
                 )
               )
             ),
-            "Phirax Alganon",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -1910,7 +1888,6 @@ export default class nx_tactics_books_fantasy {
                 )
               )
             ),
-            "Sarak Ishimar",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -1934,7 +1911,6 @@ export default class nx_tactics_books_fantasy {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Physical Powers", ":level", "8")
               )
             ),
-            "Stam Domindor",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
               ":name",
@@ -2055,6 +2031,7 @@ export default class nx_tactics_books_fantasy {
 
   /**
    * @function chapter_realms_beyond
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_realms_beyond = {
@@ -2065,7 +2042,7 @@ export default class nx_tactics_books_fantasy {
   }
 
   // (func chapter_realms_beyond)
-  static f_chapter_realms_beyond() {
+  static f_chapter_realms_beyond(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -2408,6 +2385,7 @@ export default class nx_tactics_books_fantasy {
 
   /**
    * @function chapter_story_ideas
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_story_ideas = {
@@ -2418,7 +2396,7 @@ export default class nx_tactics_books_fantasy {
   }
 
   // (func chapter_story_ideas)
-  static f_chapter_story_ideas() {
+  static f_chapter_story_ideas(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new({"any-1": nx_tactics_base.t_chapter}, ":name", "Story Ideas", ":summary", "* Accompany zealots on a pilgrimage to holy places.\n* Participate in a Witch Hunt in the forests.\n* Protect an individual of status from the assassin's guild.\n* Go on patrol with Knife Fighters\n* Sail to obtain concubines, either legally or illicitly. Be wary of the creatures and brutish males, to say nothing of the subtle charms of the concubines themselves.\n* Join the desert scouts in raids against the Black Mystics.\n* Commission tomb raiders to unearth ancient sarcophagi.\n* Sail the far seas in search of adventure, braving corsairs, cannibals, sea serpents, and the black hulled vessels of the Necromancers.\n* Mine green crystal from the Sea of Glass.\n* Visit Sactuary the safe haven of thieves and scoundels.\n* Prowl the jungles looking for rare herbs and black diamonds.\n* Rescue a captive of the Witchmen who keep shrunken heads as grisly trophies.\n* Visit the Ice Castles of the north and fight side by side against the Ice Giants.\n* Trade with the Sea Nomads of Oceanus, a city that floats freely on the water.\n* Take a windship to the isle of Phantas and visit the Cabal Magicus, home of the Phantasian Dream Merchants.\n* Travel to the Jade Empire and visit the capital Tian called the Golden City for good reason.\n* Hire a guide and search for the buried city of Necron where legend has it an entire city and its populace were once interred.\n* Visit the magical fair, a gala festival attended by magicians, wizards, and charaltans from across the continent. Engage in a duel for wagers with a reknowned spell caster or haggle for potions, powders, and other rare items.\n* Negotiate a deal with a Zuran moneylender to finance an expedition in return for a cut of the profits.\n* Attend the Festival of the Bizarre where individuals display oddities and compete in the contest for the title of 'Most Bizarre'.\n* Accompany a Wizard Hunter on a quest of revenge.\n* Partake in the 'Night of Fools' when all laws are suspended for a single evening.\n* Help locate a suitable applicant for the Battle of Champions or enter the competition yourself.")
     return output
@@ -2447,14 +2425,14 @@ export default class nx_tactics_books_fantasy {
       "DaveDormanEasternTerritories.jpg",
       ":chaptermap",
       nx_tactics_base.f_chaptermap_from_chapterlist(
-        nx_tactics_books_fantasy.f_chapter_fantasy_overview(),
-        nx_tactics_books_fantasy.f_chapter_genshin_impact(),
-        nx_tactics_books_fantasy.f_chapter_god_of_war(),
-        nx_tactics_books_fantasy.f_chapter_lord_of_the_rings(),
-        nx_tactics_books_fantasy.f_chapter_nexus_fantasy_characters(),
-        nx_tactics_books_fantasy.f_chapter_material_realm(),
-        nx_tactics_books_fantasy.f_chapter_realms_beyond(),
-        nx_tactics_books_fantasy.f_chapter_story_ideas()
+        nx_tactics_books_fantasy.f_chapter_fantasy_overview(tactics),
+        nx_tactics_books_fantasy.f_chapter_genshin_impact(tactics),
+        nx_tactics_books_fantasy.f_chapter_god_of_war(tactics),
+        nx_tactics_books_fantasy.f_chapter_lord_of_the_rings(tactics),
+        nx_tactics_books_fantasy.f_chapter_nexus_fantasy_characters(tactics),
+        nx_tactics_books_fantasy.f_chapter_material_realm(tactics),
+        nx_tactics_books_fantasy.f_chapter_realms_beyond(tactics),
+        nx_tactics_books_fantasy.f_chapter_story_ideas(tactics)
       )
     )
     return output

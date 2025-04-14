@@ -609,28 +609,28 @@
 
 (func chapter_skills : base/chapter
  [tactics : base/tactics]
- (chapter
+ (base/chapter
   :name "Skills"
   :sectionmap
-   (sectionmap
-    "Combat Skills"
-     (section
-      :name "Combat Skills"
-      :itemmap
-       (base/itemmap<-tactics-keys
-        tactics
-        "Bare Handed")
-      :skillmap
-       (base/skillmap<-tactics-keys
-        tactics
-        "Close Combat"
-        "Defense"
-        "Evasion"
-        "Melee"
-        "Ranged"
-        "Firearms"
-        "Gunnery"
-        "Military")))))
+   (base/sectionmap<-sectionlist
+    (base/section
+     :name "Combat Skills"
+     :itemmap
+      (base/itemmap<-tactics-keys
+       tactics
+       "Bare Handed")
+     :skillmap
+      (base/skillmap<-tactics-keys
+       tactics
+       "Close Combat"
+       "Defense"
+       "Evasion"
+       "Melee"
+       "Ranged"
+       "Firearms"
+       "Gunnery"
+       "Military"
+       "Leadership")))))
 
 (func chapter_early_weaponry : base/chapter
  [tactics : base/tactics]
@@ -659,23 +659,10 @@
           :name "Bronze Armor"
           :summary "* Bronze Cuirass, Helmet, Greaves"
           :armor "1mm")
-        "Chain Mail Armor"
-         (base/item
-          :name "Chain Mail Armor"
-          :reference
-           "* Shark expert and underwater filmmaker Valerie Taylor was among the first to develop and test shark suits in 1979 while diving with sharks.
-            * Mail is widely used in industrial settings as shrapnel guards and splash guards in metal working operations.
-            * Electrical applications for mail include RF leakage testing and being worn as a Faraday cage suit by tesla coil enthusiasts and high voltage electrical workers."
-          :summary
-           "* Chain mail is a type of armor consisting of small metal rings linked together in a pattern to form a mesh. It was generally in common military use between the 3rd century BC and the 16th century AD in Europe, and longer in Asia and North Africa."
-          :titles "Chainmail, Mail, Byrnie, Hauberk"
-          :armor "1mm")
-        "Chain Mail Shirt"
-         (base/item
-          :name "Chain Mail Shirt"
-          :summary "* [Hit Location]: Shoulders Chest Abdomen Vitals"
-          :titles "Chainmail, Mail"
-          :armor "1mm")
+        "Armor: Chain Mail"
+         (base/item<-tactics-key tactics "Armor: Chain Mail")
+        "Armor: Chain Shirt"
+         (base/item<-tactics-key tactics "Armor: Chain Shirt")
         :Cuirbouilli
          (base/item
           :name "Cuirbouilli")

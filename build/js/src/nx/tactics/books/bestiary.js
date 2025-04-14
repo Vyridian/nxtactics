@@ -3787,11 +3787,7 @@ export default class nx_tactics_books_bestiary {
               ":image",
               "images/bestiary/Lycanthrope_Wererat.png",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Stealth",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Stealth")
-              )
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Stealth")
             ),
             ":Werespider",
             vx_core.f_new(
@@ -4160,7 +4156,7 @@ export default class nx_tactics_books_bestiary {
             "Slayer Dead",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Slayer Dead", ":reference", "* Jason Voorhees\n* Nightmare on Elm Street\n* Vinland Saga", ":summary", "* Slayer Dead are the spirits of those who have lived and died a life of killing. They are completely fixated on killing others in the same way they killed in life. Most were warriors who revelled in slaughter. Some were serial killers. Large numbers of them can appear when battles are fought near Ley Lines.", ":titles", "Murderous Dead, War Dead"),
             ":Wendigo",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wendigo", ":summary", "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They are [Resistant] to [Cold] and often appear in the middle of a snowstorm to steal their victims.", ":titles", "Abominable Snowman, Yeti"),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wendigo", ":summary", "* Wendigoes are the result of cannibalism in the forests of the north. It is a curse that causes the death of the person, and later they return as a huge cunning beast with the desire to consume human flesh. Wendigoes are thin and seven to ten feet tall, their hearts are made of ice and their claws are icicles. They have [Resist: Cold] and often appear in the middle of a snowstorm to steal their victims.", ":titles", "Abominable Snowman, Yeti"),
             ":Wight",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Wight", ":summary", "* A Wight is an animated corpse like a zombie, but its eyes burn fiercely, showing their deep hatred of the living. They continue to pursue their goals in life, but these goals are always twisted into hatred and revenge against the living.\n* Wights are usually highly intelligent or cunning and have the patience to carefully plan their murders. Wights enjoy killing as well as inflicting pain and fear on their victims who they believe deserve what they get.\n* A Wight is created when an extremely driven, evil person is on the verge of death. Before death, it makes a bargain with a demonic force, and returns to unlife as a Wight.\n* Wights retain most of their abilities while living. Powerful Wights can be as powerful as Liches. In fact, the necromantic study of Wights led to the necromantic rituals responsible for Mummies and Liches."),
             ":Zombie",
@@ -4323,11 +4319,7 @@ export default class nx_tactics_books_bestiary {
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Madness")
                   ),
                   ":unitskillmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitskillmap},
-                    ":Stealth",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Stealth")
-                  )
+                  nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Stealth")
                 ),
                 ":Nosferatu",
                 vx_core.f_new(
@@ -4345,11 +4337,7 @@ export default class nx_tactics_books_bestiary {
                     vx_core.f_new({"any-1": nx_tactics_base.t_unitpower}, ":name", "Invisibility")
                   ),
                   ":unitskillmap",
-                  vx_core.f_new(
-                    {"any-1": nx_tactics_base.t_unitskillmap},
-                    ":Stealth",
-                    vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Stealth")
-                  )
+                  nx_tactics_base.f_unitskillmap_from_tactics_keys(tactics, "Stealth")
                 ),
                 ":Toreador",
                 vx_core.f_new(

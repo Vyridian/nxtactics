@@ -465,7 +465,7 @@ export default class nx_tactics_decks_skill {
         ":name",
         "Assassination",
         ":reference",
-        "Was it so easy? Was it so simple? You just pushed and death came? Nothing spiritual about it...They just stopped talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows",
+        "* I am the blade in the darkness. - Zed, Runeterra\n* Was it so easy? Was it so simple? You just pushed and death came? Nothing spiritual about it...They just stopped talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows",
         ":titles",
         "Assassin, Blackguard, Ninja, Shinobi",
         ":stat",
@@ -1982,7 +1982,7 @@ export default class nx_tactics_decks_skill {
         ":stat",
         "Body",
         ":summary",
-        "* This skill includes abilities that let you hide, move silently, and suprise your opponents.",
+        "* This skill includes abilities that let you hide, move silently, and suprise your opponents.\n* Tokens - The number of Tokens on Stealth represents how Hidden you are. Tokens may not be more than 2xStealth.\n* Forced: Maximum Move=Tokens. IF Tokens=0 THEN you Reveal immediately.\n* Reveal - Free: You may place your unit anywhere within Move:Tokens of your Hidden unit, but it must be on or next to a space out of sight of Rivals. Remove Tokens and Hidden Units.\n* Surprise - IF you reveal adjacent to a unit, you may give them Stress:+1.\n* Remain Hidden - Clock: Tokens+1",
         ":abilitymap",
         nx_tactics_base.f_abilitymap_from_tactics_keys(tactics, "Ambush", "Backstab", "Blend into the Crowd", "Camouflage", "Cloak and Dagger", "Hide", "Sneak", "Sneak Attack", "Stalk", "Strike and Fade", "Tailing", "Vanish", "Without a Trace")
       ),

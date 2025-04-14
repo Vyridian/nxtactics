@@ -47,23 +47,12 @@
   :value "1x0"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill
-      (base/skill<-tactics-key tactics "Melee")
-     :level "3"
-     :unititemmap
-      (base/unititemmap<-unititemlist
-        (base/unititem
-         :item
-          (base/item<-tactics-key tactics "Sword: Short"))))
-    (base/unitskill
-     :skill
-      (base/skill<-tactics-key tactics "Stealth")
-     :level "1"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Ambush")))))))
+    (base/unitskill<-tactics-key-lvl-items
+     tactics "Melee" 3
+     (stringlist "Sword: Short"))
+    (base/unitskill<-tactics-key-lvl-abilities
+     tactics "Stealth" 1
+     (stringlist "Ambush")))))
 
 (func unit-bruiser : base/unit
  [tactics : base/tactics]
@@ -88,16 +77,11 @@
   :value "1x0"
   :unitskillmap
    (base/unitskillmap<-unitskilllist
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Close Combat")
-     :level "2"
-     :unitabilitymap
-      (base/unitabilitymap<-unitabilitylist
-       (base/unitability
-        :ability (base/ability<-tactics-key tactics "Grab"))))
-    (base/unitskill
-     :skill (base/skill<-tactics-key tactics "Intimidation")
-     :level "1"))))
+    (base/unitskill<-tactics-key-lvl-abilities
+     tactics "Close Combat" 2
+     (stringlist "Grab"))
+    (base/unitskill<-tactics-key-lvl
+     tactics "Intimidation" 1))))
 
 (func unit-guardsman : base/unit
  [tactics : base/tactics]
@@ -422,7 +406,7 @@
      (list<-list : base/cardlist
       (base/placelist<-tactics-keys
        tactics
-       "Sandleborg"
+       "Sandalstadt"
        "Field"
        "Forest"
        "Mountain"

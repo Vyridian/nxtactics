@@ -2072,12 +2072,11 @@ courier or smuggling as well as heavier armaments."
           :name "Hand Phaser"
           :image "StarTrek/HandPhaser.jpg"
           :summary
-           "The hand phaser is actually a Phaser II with a Phaser I embedded inside.  The Phaser I has the same abilities
-but suffers from reduced range and limited shots.
-* Stun - .3J
-* Kill
-* Heat
-* Disintegrate")
+           "* The hand phaser is actually a Phaser II with a Phaser I embedded inside. The Phaser I has the same abilities but suffers from reduced range and limited shots.
+            * Stun - .3J
+            * Kill
+            * Heat
+            * Disintegrate")
         "Phaser Array"
          (item
           :name "Phaser Array"
@@ -2406,7 +2405,8 @@ Borg."
          (item
           :name "Turbolaser Turret"
           :image "StarWars/TurbolaserTurret.jpg"
-          :energy "30TJ")
+          :energy "30TJ"
+          :range "1200Km")
         "Heavy Turbolaser Turret"
          (item
           :name "Heavy Turbolaser Turret"

@@ -312,10 +312,10 @@ export default class nx_tactics_books_combat {
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Brigandine"),
             "Bronze Armor",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Bronze Armor", ":summary", "* Bronze Cuirass, Helmet, Greaves", ":armor", "1mm"),
-            "Chain Mail Armor",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Chain Mail Armor", ":reference", "* Shark expert and underwater filmmaker Valerie Taylor was among the first to develop and test shark suits in 1979 while diving with sharks.\n* Mail is widely used in industrial settings as shrapnel guards and splash guards in metal working operations.\n* Electrical applications for mail include RF leakage testing and being worn as a Faraday cage suit by tesla coil enthusiasts and high voltage electrical workers.", ":summary", "* Chain mail is a type of armor consisting of small metal rings linked together in a pattern to form a mesh. It was generally in common military use between the 3rd century BC and the 16th century AD in Europe, and longer in Asia and North Africa.", ":titles", "Chainmail, Mail, Byrnie, Hauberk", ":armor", "1mm"),
-            "Chain Mail Shirt",
-            vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Chain Mail Shirt", ":summary", "* [Hit Location]: Shoulders Chest Abdomen Vitals", ":titles", "Chainmail, Mail", ":armor", "1mm"),
+            "Armor: Chain Mail",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Armor: Chain Mail"),
+            "Armor: Chain Shirt",
+            nx_tactics_base.f_item_from_tactics_key(tactics, "Armor: Chain Shirt"),
             ":Cuirbouilli",
             vx_core.f_new({"any-1": nx_tactics_base.t_item}, ":name", "Cuirbouilli"),
             ":Jazeraint",
@@ -1388,9 +1388,7 @@ export default class nx_tactics_books_combat {
       ":name",
       "Skills",
       ":sectionmap",
-      vx_core.f_new(
-        {"any-1": nx_tactics_base.t_sectionmap},
-        "Combat Skills",
+      nx_tactics_base.f_sectionmap_from_sectionlist(
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
@@ -1398,7 +1396,7 @@ export default class nx_tactics_books_combat {
           ":itemmap",
           nx_tactics_base.f_itemmap_from_tactics_keys(tactics, "Bare Handed"),
           ":skillmap",
-          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Close Combat", "Defense", "Evasion", "Melee", "Ranged", "Firearms", "Gunnery", "Military")
+          nx_tactics_base.f_skillmap_from_tactics_keys(tactics, "Close Combat", "Defense", "Evasion", "Melee", "Ranged", "Firearms", "Gunnery", "Military", "Leadership")
         )
       )
     )

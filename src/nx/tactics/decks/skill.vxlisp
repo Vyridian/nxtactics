@@ -1298,7 +1298,8 @@ x +1DMG vs. Crouching."
   (base/skill
    :name "Assassination"
    :reference
-    "Was it so easy? Was it so simple? You just pushed and death came? Nothing spiritual about it...They just stopped talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows"
+    "* I am the blade in the darkness. - Zed, Runeterra
+     * Was it so easy? Was it so simple? You just pushed and death came? Nothing spiritual about it...They just stopped talking, stopped breathing, stopped moving, finally stopped twitching. - Kylar Stern, The Way of Shadows"
    :titles "Assassin, Blackguard, Ninja, Shinobi"
    :stat "Shadow"
    :abilitymap
@@ -3722,7 +3723,12 @@ x +1DMG vs. Crouching."
    :titles "Stalker"
    :stat "Body"
    :summary
-    "* This skill includes abilities that let you hide, move silently, and suprise your opponents."
+    "* This skill includes abilities that let you hide, move silently, and suprise your opponents.
+     * Tokens - The number of Tokens on Stealth represents how Hidden you are. Tokens may not be more than 2xStealth.
+     * Forced: Maximum Move=Tokens. IF Tokens=0 THEN you Reveal immediately.
+     * Reveal - Free: You may place your unit anywhere within Move:Tokens of your Hidden unit, but it must be on or next to a space out of sight of Rivals. Remove Tokens and Hidden Units.
+     * Surprise - IF you reveal adjacent to a unit, you may give them Stress:+1.
+     * Remain Hidden - Clock: Tokens+1"
    :abilitymap
     (base/abilitymap<-tactics-keys
      tactics

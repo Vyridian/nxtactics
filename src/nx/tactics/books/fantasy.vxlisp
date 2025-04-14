@@ -8,81 +8,49 @@
   :image "DaveDormanEasternTerritories.jpg"
   :chaptermap
    (base/chaptermap<-chapterlist
-    (chapter_fantasy_overview)
-    (chapter_genshin_impact)
-    (chapter_god_of_war)
-    (chapter_lord_of_the_rings)
-    (chapter_nexus_fantasy_characters)
-    (chapter_material_realm)
-    (chapter_realms_beyond)
-    (chapter_story_ideas)
+    (chapter_fantasy_overview tactics)
+    (chapter_genshin_impact tactics)
+    (chapter_god_of_war tactics)
+    (chapter_lord_of_the_rings tactics)
+    (chapter_nexus_fantasy_characters tactics)
+    (chapter_material_realm tactics)
+    (chapter_realms_beyond tactics)
+    (chapter_story_ideas tactics)
    )))
 
 (func chapter_fantasy_overview : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Fantasy Overview"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Fantasy Armor"
-     (section
+     (base/section
       :name "Fantasy Armor"
       :summary
        "* Cloth Armor - Increases Magical Regeneration
         * Light Armor - Increases Critical Strike change
         * Heavy Armor - Maximum Defense"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Moon Disc"
-         (item
+         (base/item
           :name "Moon Disc"
           :summary "* A [Silver] Shield."
           :classification "Shield")))
     "Fantasy Weapons"
-     (section
+     (base/section
       :name "Fantasy Weapons"
-      :summary "* Faeblades")
-    "Elder Tongue"
-     (section
-      :name "Elder Tongue"
-      :summary
-       "Prefixes
-* Alf - Elf
-* Dverg - Dwarf
-* Hel - Dead
-* Jotun - Giant
-* Man - Human
-* Muspel - Fire
-* Nifl - Mist
-* Svart - Dark
-* Yo - Demonic
-Suffixes
-* Ar - Race
-* Heim - Home
-* Ki - Soul
-* Ma - Creature
-* Traum - Dream
-Words
-* Alfar - Elvish Race
-* Albtraum - Elf Dream (Nightmare)
-* Alfheim - Land of Elves
-* Dvergar - Dwarven Race
-* Helar - Restless Dead
-* Helheim - Land of the dead
-* Manar - Human Race
-* Manheim - Land of Men
-* Muspelheim - Land of Fire
-* Niflheim - Land of Ice
-* Svartalfheim - Land of Dark Elves
-* Yoki - Demon Soul
-* Yoma - Demon"))))
+      :summary "* Faeblades"))))
 
 (func chapter_genshin_impact : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Genshin Impact"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Archons
-     (section
+     (base/section
       :name "Archons"
       :unitmap
        (base/unitmap
@@ -123,24 +91,24 @@ Words
           :titles "Morax, Rex Lapis"))))))
 
 (func chapter_god_of_war : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "God of War"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "God of War Equipment"
-     (section
+     (base/section
       :name "God of War Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Pandora's Box"
-         (item
+         (base/item
           :name "Pandora's Box"
           :reference "* The box was actually mistranslated.  It is actually Pandora's Jar."
           :summary
-           "* After the great war with the Titans, Zeus gathered the great evils of the war and bid Hephaestus construct a box
-to hold them.  Later Kratos seeks out the box to use the evils inside against Ares.")))
+           "* After the great war with the Titans, Zeus gathered the great evils of the war and bid Hephaestus construct a box to hold them.  Later Kratos seeks out the box to use the evils inside against Ares.")))
     "God of War Units"
-     (section
+     (base/section
       :name "God of War Units"
       :unitmap
        (base/unitmap
@@ -150,12 +118,13 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
           :image "images/fantasy/Kratos.png"))))))
 
 (func chapter_lord_of_the_rings : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Lord of the Rings"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Lord of the Rings Units"
-     (section
+     (base/section
       :name "Lord of the Rings Units"
       :unitmap
        (base/unitmap
@@ -166,195 +135,175 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
            "* If you ask it of me, I will give you the One Ring. You offer it to me freely? I do not deny that my heart has greatly desired this. In the place of a Dark Lord you would have a Queen! Not dark but beautiful and terrible as the Dawn! Treacherous as the Seas! Stronger than the foundations of the Earth! All shall love me and despair! ... I passed the test. I shall diminish, and go to the west, and remain Galadriel. - Frodo and Galadriel - Lord of the Rings"))))))
 
 (func chapter_nexus_fantasy_characters : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Nexus Fantasy Characters"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Nexus Fantasy Characters"
-     (section
+     (base/section
       :name "Nexus Fantasy Characters"
       :unitmap
-       (base/unitmap
-        "Arinni Taybor"
-         (base/unit
-          :name "Arinni Taybor"
-          :summary "* Human Priest/Monk"
-          :titles "Taybor the Red"
-          :unitskillmap
-           (base/unitskillmap
-            :Melee
-             (base/unitskill
-              :name "Melee"
-              :level "5"
-              :unititemmap
-               (base/unititemmap
-                :Quarterstaff
-                 (base/unititem
-                  :name "Quarterstaff")))))
-        "Eldruf Grundel"
-         (base/unit
-          :name "Eldruf Grundel"
-          :summary "Gnome Thief Magician")
-        :Flint
-         (base/unit
-          :name "Flint"
-          :image "images/fantasy/Flint.png"
-          :summary "Half-Elven Thief"
-          :unitskillmap
-           (base/unitskillmap
-            :Stealth
-             (base/unitskill
-              :name "Stealth"
-              :level "9"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Backstab
-                 (base/unitability
-                  :name "Backstab")))))
-        "Galamir Mirlesem"
-         (base/unit
-          :name "Galamir Mirlesem"
-          :image "images/fantasy/GalamirMirlesem.png"
-          :demeanor "Imperious"
-          :nature "Self-Absorbed"
-          :summary
-           "* Human Mage
-            * Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.
-            * History - Galamir was born to Chantry trainers, and as a child he was allowed special access to the arcane academy. As a teen, he became obsessed with magic and its effect on the world. His brilliance and magical aptitude were soon recognized and he was accepted into the academy. For the next 25 years he completed his full wizardry and elemental training and received top honors. He was a logical 	candidate to become a trainer himself, but he was bored of the cloistered life, so he began visiting other Chantries across the world. Along the way he encountered a naive, young half-elf rogue named Phirax living on a simple farm. Galamir recruited Phirax to join him to perform the more dangerous and mundane tasks while Galamir provided the leadership and strategy. Later, he recruited the Warrior Stam and the Cleric Sarak into their party to rounded out their abilities."
-          :unitpowermap
-           (base/unitpowermap
-            :Wizardry
-             (base/unitpower
-              :name "Wizardry"
-              :level "11"))
-          :unitskillmap
-           (base/unitskillmap
-            "Physical Powers"
-             (base/unitskill
-              :name "Physical Powers"
-              :level "10")))
-        "Hetman Undrig"
-         (base/unit
-          :name "Hetman Undrig"
-          :summary
-           "* Orc Assassin
-            * A pragmatic, hardened survivalist who began his career as a lowly militia man in the Orc Army who would later form the infamous mercenary guild, the Blackguard.
-            * Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.
-            * The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote."
-          :unitskillmap
-           (base/unitskillmap
-            :Melee
-             (base/unitskill
-              :name "Melee"
-              :level "5"
-              :unititemmap
-               (base/unititemmap
-                "Sword: Long"
-                 (base/unititem
-                  :name "Sword: Long")
-                "Knife: Dagger"
-                 (base/unititem
-                  :name "Knife: Dagger")))))
-        "Jaris Ransun"
-         (base/unit
-          :name "Jaris Ransun"
-          :image "images/fantasy/Ransun.png"
-          :summary "Human Hunter"
-          :titles "Valen the Hunter"
-          :unitskillmap
-           (base/unitskillmap
-            :Defense
-             (base/unitskill
-              :name "Defense"
-              :unititemmap
-               (base/unititemmap
-                "Chain Mail Armor"
-                 (base/unititem
-                  :name "Chain Mail Armor")
-                :Shield
-                 (base/unititem
-                  :name "Shield")))))
-        "Phirax Alganon"
-         (base/unit
-          :name "Phirax Alganon"
-          :image "images/fantasy/PhiraxAlganon.png"
-          :demeanor "Personable"
-          :nature "Self Righteous"
-          :summary
-           "* Half-Elven Bard
-            * Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.
-            * Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).
-            * History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure."
-          :unitpowermap
-           (base/unitpowermap
-            :Empathy
-             (base/unitpower
-              :name "Empathy"
-              :level "12"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Demoralize
-                 (base/unitability
-                  :name "Demoralize")
-                :Inspiration
-                 (base/unitability
-                  :name "Inspiration"))))
-          :unitskillmap
-           (base/unitskillmap
-            :Stealth
-             (base/unitskill
-              :name "Stealth"
-              :level "9"
-              :unitabilitymap
-               (base/unitabilitymap
-                :Backstab
-                 (base/unitability
-                  :name "Backstab")
-                "Hide in Shadows"
-                 (base/unitability
-                  :name "Hide in Shadows")
-                "Move Silently"
-                 (base/unitability
-                  :name "Move Silently")))))
-        "Sarak Ishimar"
-         (base/unit
-          :name "Sarak Ishimar"
-          :image "images/fantasy/SarakIshimar.png"
-          :summary "Human Cleric"
-          :unitpowermap
-           (base/unitpowermap
-            :Faith
-             (base/unitpower
-              :name "Faith"
-              :level "8")
-            :Invocation
-             (base/unitpower
-              :name "Invocation"
-              :level "10"))
-          :unitskillmap
-           (base/unitskillmap
-            "Physical Powers"
-             (base/unitskill
-              :name "Physical Powers"
-              :level "8")))
-        "Stam Domindor"
-         (base/unit
-          :name "Stam Domindor"
-          :image "images/fantasy/Stam.png"
-          :summary "Dwarven Warrior"
-          :unitskillmap
-           (base/unitskillmap
-            :Ranged
-             (base/unitskill
-              :name "Ranged"
-              :level "7"
-              :unititemmap
-               (base/unititemmap
-                "Bow: Short"
-                 (base/unititem
-                  :name "Bow: Short")))))))
+       (base/unitmap<-unitlist
+        (base/unit
+         :name "Arinni Taybor"
+         :summary "* Human Priest/Monk"
+         :titles "Taybor the Red"
+         :unitskillmap
+          (base/unitskillmap
+           :Melee
+            (base/unitskill
+             :name "Melee"
+             :level "5"
+             :unititemmap
+              (base/unititemmap
+               :Quarterstaff
+                (base/unititem
+                 :name "Quarterstaff")))))
+        (base/unit
+         :name "Eldruf Grundel"
+         :summary "Gnome Thief Magician")
+        (base/unit
+         :name "Flint"
+         :image "images/fantasy/Flint.png"
+         :summary "Half-Elven Thief"
+         :unitskillmap
+          (base/unitskillmap<-unitskilllist
+           (base/unitskill<-tactics-key-lvl-abilities
+            tactics "Stealth" 9
+            (stringlist "Backstab"))))
+        (base/unit
+         :name "Galamir Mirlesem"
+         :image "images/fantasy/GalamirMirlesem.png"
+         :demeanor "Imperious"
+         :nature "Self-Absorbed"
+         :summary
+          "* Human Mage
+           * Personality - Galamir is a brilliant Wizard and strategist, but he is impatient with others and has no respect for politics or idle chit-chat.
+           * History - Galamir was born to Chantry trainers, and as a child he was allowed special access to the arcane academy. As a teen, he became obsessed with magic and its effect on the world. His brilliance and magical aptitude were soon recognized and he was accepted into the academy. For the next 25 years he completed his full wizardry and elemental training and received top honors. He was a logical 	candidate to become a trainer himself, but he was bored of the cloistered life, so he began visiting other Chantries across the world. Along the way he encountered a naive, young half-elf rogue named Phirax living on a simple farm. Galamir recruited Phirax to join him to perform the more dangerous and mundane tasks while Galamir provided the leadership and strategy. Later, he recruited the Warrior Stam and the Cleric Sarak into their party to rounded out their abilities."
+         :unitpowermap
+          (base/unitpowermap
+           :Wizardry
+            (base/unitpower
+             :name "Wizardry"
+             :level "11"))
+         :unitskillmap
+          (base/unitskillmap
+           "Physical Powers"
+            (base/unitskill
+             :name "Physical Powers"
+             :level "10")))
+        (base/unit
+         :name "Hetman Undrig"
+         :summary
+          "* Orc Assassin
+           * A pragmatic, hardened survivalist who began his career as a lowly militia man in the Orc Army who would later form the infamous mercenary guild, the Blackguard.
+           * Personality - Hetman is noteworthy for his lack of personal pride or conscience. He dislikes authority.  He strongly believes the ends justify the means and has no compunction about using any means available.
+           * The Blackguard - When establishing the Blackguard, he insisted that it should never have a central authority and that all decisions were made by popular vote."
+         :unitskillmap
+          (base/unitskillmap
+           :Melee
+            (base/unitskill
+             :name "Melee"
+             :level "5"
+             :unititemmap
+              (base/unititemmap
+               "Sword: Long"
+                (base/unititem
+                 :name "Sword: Long")
+               "Knife: Dagger"
+                (base/unititem
+                 :name "Knife: Dagger")))))
+        (base/unit
+         :name "Jaris Ransun"
+         :image "images/fantasy/Ransun.png"
+         :summary "Human Hunter"
+         :titles "Valen the Hunter"
+         :unitskillmap
+          (base/unitskillmap<-unitskilllist
+           (base/unitskill<-tactics-key-lvl-abilities
+            tactics "Defense" 5
+            (stringlist
+             "Armor: Chain Mail"
+             "Shield"))))
+        (base/unit
+         :name "Phirax Alganon"
+         :image "images/fantasy/PhiraxAlganon.png"
+         :demeanor "Personable"
+         :nature "Self Righteous"
+         :summary
+          "* Half-Elven Bard
+           * Personality - Phirax is an entertaining, friendly, perceptive person who is very focused on 'the now'. He applies all his attention to the current situation and the people around him which gives him a keen eye for detail, deception, and subtle clues of human behavior. He strongly believes he is on the right path in life and has developed very strong emotional confidence which lets him roll with the whatever comes his way. He appreciates plans and planners, but he feels that plans must always be flexible because they rarely predict a situation accurately.
+           * Beliefs - Phirax believes that improving the lives of those around him will also improves his own life. He sees this as selfishness through selflessness, therefore it is always in his own interest to help others. He could easily manipulate those around him, but he abhors the idea of exploiting others and is quick to judge abusers of any kind. He follows the lesser god Seker on his mission to destroy undead, specifically those who feed on or otherwise exploit the living (which is pretty much all of them).
+           * History - Phirax was born into a large family on a farm bordering the Arden Forest. During the day, he learned diverse combat and survival skills with the Elves of the forest. At night he practiced various social skills at the human tavern. He was planning to set out on his own soon when he encountered a rather awkward and self-important Wizard named Galamir. After he confirmed the Wizard's abilities, he agreed to join him as a pair of traveling adventurers. Soon after, the pair teamed up with a Warrior and a Cleric. With the party complete, they set out for danger and treasure."
+         :unitpowermap
+          (base/unitpowermap
+           :Empathy
+            (base/unitpower
+             :name "Empathy"
+             :level "12"
+             :unitabilitymap
+              (base/unitabilitymap
+               :Demoralize
+                (base/unitability
+                 :name "Demoralize")
+               :Inspiration
+                (base/unitability
+                 :name "Inspiration"))))
+         :unitskillmap
+          (base/unitskillmap
+           :Stealth
+            (base/unitskill
+             :name "Stealth"
+             :level "9"
+             :unitabilitymap
+              (base/unitabilitymap
+               :Backstab
+                (base/unitability
+                 :name "Backstab")
+               "Hide in Shadows"
+                (base/unitability
+                 :name "Hide in Shadows")
+               "Move Silently"
+                (base/unitability
+                 :name "Move Silently")))))
+        (base/unit
+         :name "Sarak Ishimar"
+         :image "images/fantasy/SarakIshimar.png"
+         :summary "Human Cleric"
+         :unitpowermap
+          (base/unitpowermap
+           :Faith
+            (base/unitpower
+             :name "Faith"
+             :level "8")
+           :Invocation
+            (base/unitpower
+             :name "Invocation"
+             :level "10"))
+         :unitskillmap
+          (base/unitskillmap
+           "Physical Powers"
+            (base/unitskill
+             :name "Physical Powers"
+             :level "8")))
+        (base/unit
+         :name "Stam Domindor"
+         :image "images/fantasy/Stam.png"
+         :summary "Dwarven Warrior"
+         :unitskillmap
+          (base/unitskillmap
+           :Ranged
+            (base/unitskill
+             :name "Ranged"
+             :level "7"
+             :unititemmap
+              (base/unititemmap
+               "Bow: Short"
+                (base/unititem
+                 :name "Bow: Short")))))))
     "Nexus Fantasy Actors"
-     (section
+     (base/section
       :name "Nexus Fantasy Actors"
       :unitmap
        (base/unitmap
@@ -428,7 +377,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :level "12"))))))))
 
 (func chapter_material_realm : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Material Realm"
   :summary
    "* Those places we can measure and understand.
@@ -441,14 +391,14 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
     * The Primes"
   :titles "Areth, Archea, Gaia, Koltho, Material Realm, Middle Earth, Middle Kingdom, Middle Realm, Midgard, Mortal Realm, Mother Earth"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Africana
-     (section
+     (base/section
       :name "Africana"
       :sectionmap
-       (sectionmap
+       (base/sectionmap
         :Aegyptus
-         (section
+         (base/section
           :name "Aegyptus"
           :reference "Ancient Egypt"
           :summary
@@ -458,30 +408,30 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Sun Spear - Spear with the image of the sun near its point."
           :titles "Aegypta, Helios, Kemet"
           :placemap
-           (placemap
+           (base/placemap
             :Alexandria
-             (place
+             (base/place
               :name "Alexandria"
               :summary
                "* Lighthouse of Alexandria - One of the Seven Wonders of the World
                 * Library of Alexandra - The foremost center of learning in the world.")
             "Great Pyramids"
-             (place
+             (base/place
               :name "Great Pyramids"
               :reference "* The Pyramid of Cheops was originally no less than four hundred and ninety feet high.  Its base covers 31 acres...contains 2,300,000 blocks of stone, each averaging two and a half tons...set with joints measuring one ten-thousandth of an inch wide. - Ancient Egypt, Its Culture and History"
               :summary "* One of the Seven Wonder of the World")
             :Necropolis
-             (place
+             (base/place
               :name "Necropolis"
               :summary
                "* Despite time, the elements, and cataclysmic upheavals, the ruins of the Citystate of Quaran still stands as grim reminders of that dark and nearly forgotten age. Here amidst stark stone towers and nightmarish effigies, once flourished the capital of the most sinister empire in human history.
                 * Over the years, occultists, black magicians, and tomb robbers have come to the ruins in search dark and macabre secrets. Many cursed tomes, diabolical artifacts, and instruments of torture and death have been recovered, often to the great regret of those who discovered them. Countless more lie in tombs, vaults, and underground pits and tunnels, awaiting discovery by those who covet infernal knowledge above all other considerations.")
             "Pyramid of Skulls"
-             (place
+             (base/place
               :name "Pyramid of Skulls"
               :summary "* The Quaran Necromancer-Kings erected a mountain of skulls 1000 feet high, representing untold millions of their victims. The mountain stands to this day and appears to be magically resistent to destruction.")
             :Thebes
-             (place
+             (base/place
               :name "Thebes"))
           :unitmap
            (base/unitmap
@@ -490,7 +440,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :name "Kemet Tomb Robber"
               :summary "* The tomb robbers are nomadic folk who have found a profitable lifestyle by digging in dangerous tombs for untold riches. They can act as guides for expeditions into the desert.")))
         :Batrea
-         (section
+         (base/section
           :name "Batrea"
           :summary
            "* Home of the Batrean people. The Batrean males and females visually appear to be entirely different races. The males are brutish and ugly while the females are graceful and incredibly beautiful. It is the peculiar custom of Batrean males to sell their females as concubines. The females do not seem to mind leaving their brutish husbands and thatch and mud hovels.
@@ -506,7 +456,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :name "Batrean Grunt"
               :summary "* Batrean men are huge, slope shouldered, and remarkably ugly. They are slow and brutish and are constantly arguing and fighting among themselves. They generally ignore the beautiful females except during their week-long mating season.")))
         "Burning Waste"
-         (section
+         (base/section
           :name "Burning Waste"
           :reference "Sahara Desert"
           :summary
@@ -514,7 +464,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Red Iron - The sand of the Burning Wastes has a high iron content in the form of rust dust. With difficulty, the sand can be smelted back into iron. Typically, the red tinge is left in to show its origination.
             * Politics - Many nations claim large sections of the desert, but no one really maintains any ownership over such a harsh realm.")
         :Djaffa
-         (section
+         (base/section
           :name "Djaffa"
           :summary "* Djaffir are a slender, wiry desert people famous for being masterful merchants who always drive a hard bargain. They wear flowing head-dresses, robes, cloaks, and leather masks. They do not remove their masks believing that the face is the mirror to the soul and believe the masks protect them from hostile magic. The more skeptical claim that they were masks to conceal their identities from those they intend to relive of their money."
           :unitmap
@@ -534,21 +484,21 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :name "Djaffir Wizard"
               :summary "* The Wizards are well regarded by their people as seers and mystics. Like the rest of their people they are superstitious and see omens everywhere.")))
         :Dracarta
-         (section
+         (base/section
           :name "Dracarta"
           :summary "* Trade - The Dracatans smelt Red Iron in large quantities, and export it throughout the area. Their prices remain low enough that it is not cost effective to compete with their efficient facilities."
           :placemap
-           (placemap
+           (base/placemap
             "Dracartan Cisterns"
-             (place
+             (base/place
               :name "Dracartan Cisterns"
               :summary "* The water supply of Dracarta is perhaps its most precious commodity. The supply is kept in a series of enormous underground cisterns. Tampering with the water supply in any way is a captial offense and there are numerous signs reinforcing that fact.")
             "Dracata Halls of Infamy"
-             (place
+             (base/place
               :name "Dracata Halls of Infamy"
               :summary "* Here are arrayed the worst and most despicable criminals in Dracartan history. Their statue-like forms standing as warning to future offenders, preserved by immersion in Red Iron.")
             "Dracata Halls of Justice"
-             (place
+             (base/place
               :name "Dracata Halls of Justice"
               :summary "* The Council of Elders, Dracarta's esteemed legisilative/judicial body holds sway in these large halls. The laws of the land are determined here. Serious crimes are also heard here in open court. Punishments include forced labor, banishment to the wilderness, or for truly heinous offenses: the sentence of Retribution (immersion in red iron)."))
           :unitmap
@@ -571,13 +521,13 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * The forward section of the hull can be lowered to allow mounts to enter and exit.
                 * The duneships are expensive to use and maintain, so they are only deployed in special occassions, especially when a show of force is required.")))
         :Carthage
-         (section
+         (base/section
           :name "Carthage"
           :summary
            "* City/State
             * Worship the Devil King [Baal Moloch].")
         "Chana Jungles"
-         (section
+         (base/section
           :name "Chana Jungles"
           :summary
            "* Home of the Chana Wildmen, the jungles are also home numerous dangerous and noisome insects, snakes, leeches, and even plants.
@@ -631,7 +581,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                "* A foot long poisonous viper that can be trained as a pet. Some can be trained to coil around an arm or neck and act as jewelry and as a deadly bodyguard. The Viper cannot be completely domesticated, however, and has been known to turn on their owners when startled."
               :titles "Wrist Viper")))
         :Jhagara
-         (section
+         (base/section
           :name "Jhagara"
           :summary
            "* Jhagara is a hot and humid land seldom travelled by visitors.
@@ -647,18 +597,18 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
              (base/unit
               :name "Jhagaran Outcast")))
         "Serpentine River"
-         (section
+         (base/section
           :name "Serpentine River"
           :summary
            "* The [Serpentine River] is actually more of a slow moving swamp that flows from the south and pours into the ocean. At the mouth of the river, a large set of thick posts have been sunk into the silt, simultaneously providing tradeships with a place to tie up while blocking entrance into the river.  Porters must then be paid to bring goods to [Fiaqua] by barge. This is mostly just another opportunity for corruption. The [Naga] in the area do not allow boat traffic farther upstream from [Fiaqua].")
         "Shadow Isles"
-         (section
+         (base/section
           :name "Shadow Isles"
           :summary "* These islands are inhabited by the Malum, a cabal of Arch-Spectres."
           :placemap
-           (placemap
+           (base/placemap
             "Obsidian Tower"
-             (place
+             (base/place
               :name "Obsidian Tower"
               :summary
                "* The Shadow Wizards live in ancient ruined towers of obscure origin. These dark towers dot the landscape of the Shadow Isles, and it is here that they perform their experiments night and day seemingly without rest. Some have entered the tower without molestation but have fled when they viewed the horrorific activities within."))
@@ -671,7 +621,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                "* Comprised of animate darkness, these spirits of deceased magicians resemble man-like shadows. They cloak themselves inn hooded vestments and bear ebony runestaves studded with black diamonds, and their eyes burn with a fiery incandescense.
                 * They Shadow Wizards consort with beings from the lower planes and perform bizarre magical experiments. The reason for their actions remains unknown, but some fear they are creating an army of monstrosities to unleash upon an unsuspecting world.")))
         "Sinking Land"
-         (section
+         (base/section
           :name "Sinking Land"
           :summary
            "* The Sinking Lands is a vast, fetid swamp of waist-deep water covering a deep layer of loose mud and decomposing vegetation. The entire swamp is basically a quicksand pit that will slowly engulf anything that stands still on the bottom. Numerous creatures that swim, float, or flit across the water have made a home here despite the perils."
@@ -683,14 +633,14 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :summary
                "* The Sludge are a man-sized race of semi-intelligent Slugs that live within the Sinking Land. They swim quickly through the shallow water pushing off of the bottom. The Sludge are very curious and gather around visitors in large numbers. Though intimidating and pushy, they are largely harmless and flee if harmed. The main danger is they have been known to accidentally capsize boats in their enthusiasm. They are knowledgable about the area, but their lack of language makes communication a challenge.")))
         :Tunis
-         (section
+         (base/section
           :name "Tunis"
           :summary
            "* Weather - Tunis is hot and humid all year round. The temperature varies from warm to sweltering. The hot weather encourages the laid back attitude of the locals."
           :placemap
-           (placemap
+           (base/placemap
             :Fiaqua
-             (place
+             (base/place
               :name "Fiaqua"
               :reference "Las Vegas"
               :summary
@@ -710,14 +660,14 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
              (base/unit
               :name "Queen Amelia Tremont")))
         :Shinsenkyo
-         (section
+         (base/section
           :name "Shinsenkyo"
           :reference
            "* Hell's Paradise
             * In Chinese legend, Shinsenkyo is an island on which gods reside, a place of true beauty and nature."
           :summary "* An island of great natural beauty, but it is filled with bizarre, unnatural beings. It is rumored to be the source of the Elixir of Life which is the source of its strange ecology.")
         :Wraeclast
-         (section
+         (base/section
           :name "Wraeclast"
           :reference "* Alba, Madagascar, Australia, Count of Monte Cristo, Mayan civilization, Path of Exile"
           :summary
@@ -726,12 +676,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Settlements - There are a handful of small towns composed of exiles and shipwreck survivors carving out a meager living from the hostile land. Agriculture is difficult, but ironically hunting is good for those who can avoid becoming the hunted themselves.
             * Ruins - Though there are no native people on Wraeclast, there is ample evidence of early advanced cultures, apparently predating the evil influences that currently makes civilization so challenging. Many speculate that this previous civilization was destroyed when they unleashed the curse that still devastates the land.")))
     :Atlantia
-     (section
+     (base/section
       :name "Atlantia"
       :sectionmap
-       (sectionmap
+       (base/sectionmap
         :Antillia
-         (section
+         (base/section
           :name "Antillia"
           :reference "* Atlantis"
           :unitmap
@@ -740,12 +690,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
              (base/unit
               :name "Antillan Triton")))
         :Briton
-         (section
+         (base/section
           :name "Briton"
           :titles "Brittania"
           :reference "England"
           :placemap
-           (placemap
+           (base/placemap
             :Avalon
              (base/place
               :name "Avalon"
@@ -754,12 +704,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * Serf
                 * Squire")
             "Fortriu"
-             (place
+             (base/place
               :name "Fortriu"
               :summary
                "The Pictish Kingdom")
             :Saxony
-             (place
+             (base/place
               :name "Saxony"))
           :unitmap
            (base/unitmap<-unitlist
@@ -790,12 +740,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
           :name "Melnibone"
           :titles "Dragon Isles"
           :itemmap
-           (itemmap
+           (base/itemmap
             :Mournblade
-             (item
+             (base/item
               :name "Mournblade")
             :Stormbringer
-             (item
+             (base/item
               :name "Stormbringer"
               :reference "* Farewell, friend. I was a thousand times more evil than thou! - Stormbringer, Stormbringer"))
           :unitmap
@@ -851,7 +801,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * Though she prefers the form of a beautiful woman, it is possible her true form is more insect-like."
               :titles "Queen of the Swords")))
         "Sargasso Sea"
-         (section
+         (base/section
           :name "Sargasso Sea"
           :summary
            "* The Sargasso Sea is a section of calm water in the center of converging currents. The surrounding current draw seaweed and various debris to accumulate across a vast area. The still air and vast seaweed aspiration accumulates a cloying mist that limits visibility.
@@ -864,47 +814,47 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :name "Sargassos Sea Nomad"
               :summary "* Expert fisherman and salvagers. The sea nomads can be known to be ruthless, since life in the Sargasso can be difficult.")))
         :Y'ha-nthlei
-         (section
+         (base/section
           :name "Y'ha-nthlei"
           :reference "We shall swim out to that brooding reef in the sea and dive down through black abysses to Cyclopean and many-columned Y'ha-nthlei, and in that lair of the Deep Ones we shall dwell amidst wonder and glory forever. - The Shadow Over Innsmouth"
           :summary "* Deep Ones, Human Hybrids, Human Slaves"
           :titles "City of the Deep Ones")))
         :Asiana
-         (section
+         (base/section
           :name "Asiana"
           :sectionmap
-                  (sectionmap
+                  (base/sectionmap
                    "Jade Empire"
-                    (section
+                    (base/section
                      :name "Jade Empire"
                      :titles "Quan Dynasty, Jade Kingdom"
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Tian
-                        (place
+                        (base/place
                          :name "Tian"
                          :summary "* The capital of the Jade Empire is situated on an island within a man-made lake. The metropolis can only be reached by boat. The city was constructed for the Emperor who demanded that the new capital surpass in beauty all of the cities of the world. Gilded towers and domes and the Palace of a thousand fountains are especially noteworthy."
                          :titles "Golden City")
                        "Emperor's Canal"
-                        (place
+                        (base/place
                          :name "Emperor's Canal"
                          :summary "* A man-made waterway connects the River Shan with the lake that surrounds Tian. A system of locks allows traffic on the canal to be strictly monitored, and the canal is not large enough for warships.")
                        "Emperor's Forest"
-                        (place
+                        (base/place
                          :name "Emperor's Forest"
                          :summary "* East of the capital is an artificial forest created for the pleasure of the Emperor and the aristocracy, so they might hunt 'wild' game. The forest is continually restocked with dangerous creatures that have been rendered harmless by declawing and with sedatives.")
                        "Emperor's Road"
-                        (place
+                        (base/place
                          :name "Emperor's Road"
                          :summary "* This highway spans the length and breadth of the Jade Empire. It is extremely well maintained funded by tolls.")
                        "Shoalin Monastery"
-                        (place
+                        (base/place
                          :name "Shoalin Monastery"
                          :summary
                           "* Are you worthy? It is a simple question.
                            * You are a foreigner. Here you will be treated with hatred and disrespect because you are different. We provide aid to no one. If you find this unfair, you are always free to go. Few are strong enough to walk this path. It is up to you whether you are one of them.")
                        "Wudang Monastery"
-                        (place
+                        (base/place
                          :name "Wudang Monastery"))
                      :unitmap
                       (base/unitmap
@@ -931,12 +881,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :name "Wudang Monk"
                          :summary "* A Taoist Monk")))
                    :Nepal
-                    (section
+                    (base/section
                      :name "Nepal"
                      :placemap
-                      (placemap
+                      (base/placemap
                        "Himalaya Mountains"
-                        (place
+                        (base/place
                          :name "Himalaya Mountains"))
                      :unitmap
                       (base/unitmap
@@ -944,13 +894,13 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Nepal Sherpa")))
                    :Nippon
-                    (section
+                    (base/section
                      :name "Nippon"
                      :titles "Land of the Rising Sun"
                      :placemap
-                      (placemap
+                      (base/placemap
                        "Valley of the Mists"
-                        (place
+                        (base/place
                          :name "Valley of the Mists"))
                      :unitmap
                       (base/unitmap
@@ -972,7 +922,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Nippon Sohei")))
                    :Tibet
-                    (section
+                    (base/section
                      :name "Tibet"
                      :unitmap
                       (base/unitmap
@@ -980,12 +930,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Tibetan Monk")))))
                :Caucasia
-                (section
+                (base/section
                  :name "Caucasia"
                  :sectionmap
-                  (sectionmap
+                  (base/sectionmap
                    :Anatolia
-                    (section
+                    (base/section
                      :name "Anatolia"
                      :reference "* The Romani were erroneously believed to originate in Egypt (therefore Gypsy)."
                      :summary
@@ -993,26 +943,26 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                        * Romani - The Romani are a gregarious, nomadic people often travelling in wagons carrying all that they own. They are reknowned as artists, acrobats, fortune tellers, thieves, tricksters, or swindlers depending on your point of view. The Romani religion revolves around two demigods: Fortuna, the lovely but fickle goddess of luck, and the grim entity known as Death. They revere Fortuna but mock Death, whom they strive to cheat at every opportunity.
                        * Carnevale of True Wonders - A large group of Romani and other assorted wanderer/adventurers have banded together to form a semi-organized travelling circus. They show up near a town and rent some unused plaza or farmland and set up their tents and stalls. Their shows are constantly varying including: acrobats, strong men, duelists, wrestlers, theater troupes, musicians, magicians, story tellers, fortune tellers, wonderous creatures, items, foods and drinks. Anyone can join the welcoming troupe. There are a few rules, however: all wonders must be real (per the name) and no theft, fraud, or swindles are allowed on Carnevale grounds."
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Ephesus
-                        (place
+                        (base/place
                          :name "Ephesus"
                          :summary
                           "* Temple of Artemis - One of the Seven Wonders of the World.
                            * The sacred site at Ephesus was far older than the Temple.  An archaic, pre-Hellenic fertility goddess was already passionately venerated, and the Greeks associated her with Artemis.")
                        :Galatia
-                        (place
+                        (base/place
                          :name "Galatia")
                        :Halicarnassus
-                        (place
+                        (base/place
                          :name "Halicarnassus"
                          :reference "* Mausolus built the Mausoleum, and the term mausoleum has come to be used generically for any grand tomb."
                          :summary "* Mausoleum of Halicarnassus - One of the Seven Wonders of the World.")
                        :Phrygia
-                        (place
+                        (base/place
                          :name "Phrygia")
                        :Witchwood
-                        (place
+                        (base/place
                          :name "Witchwood"
                          :summary
                           "* The forest home of the Dhuna.
@@ -1051,24 +1001,24 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :name "Romani Thespian"
                          :titles "Puppeteer")))
                    :Balkan
-                    (section
+                    (base/section
                      :name "Balkan"
                      :placemap
-                      (placemap
+                      (base/placemap
                        "Dragon's Eye"
-                        (place
+                        (base/place
                          :name "Dragon's Eye"
                          :summary "* A small sea surrounded by mountainous, inhospitable terrain. There are many small islands in the Dragon's Eye, and it is rumored that the great dragon Tiamat lives on one of them."
                          :titles "Black Sea, Transylvania")
                        :Carpathia
-                        (place
+                        (base/place
                          :name "Carpathia"
                          :summary
                           "* The region suffered under a widespread magical disaster of unknown origin. Suddenly the dead began to rise in great numbers and overran the land. Small communities are allowed to live and are 'protected' by the Vampires that feed upon them.
                            * Since the disaster, an unnatural fog surrounds the area. The fog seems to spawn undead and other monstrosities."
                          :titles "Deadlands")
                        "Carpathian Mountains"
-                        (place
+                        (base/place
                          :name "Carpathian Mountains"))
                      :unitmap
                       (base/unitmap
@@ -1078,15 +1028,15 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :summary "* Some of the survivors of the Carpathian disaster formed a group to discover the cause of the disaster and to repair it. They seek magical knowledge of all sorts and fund themselves by using their talents as bounty hunters for the more dangerous bounties."
                          :titles "Witcher")))
                    :Byzantium
-                    (section
+                    (base/section
                      :name "Byzantium"
                      :reference "Byzantine Empire"
                      :summary "* Byzantium represents a sizable empire. They are an advanced people with an extensive legal system and extremely complex rules, religion, and politics."
                      :titles "Eastern Empire"
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Constantinople
-                        (place
+                        (base/place
                          :name "Constantinople"))
                      :unitmap
                       (base/unitmap
@@ -1116,7 +1066,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Byzantine Spy")))
                    "Caspian Sea"
-                    (section
+                    (base/section
                      :name "Caspian Sea"
                      :unitmap
                       (base/unitmap
@@ -1132,7 +1082,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Caspian Rogue")))
                    :Hesperia
-                    (section
+                    (base/section
                      :name "Hesperia"
                      :reference "Turkey"
                      :summary
@@ -1166,12 +1116,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Amazon Warrior")))
                    :Scythia
-                    (section
+                    (base/section
                      :name "Scythia"
                      :sectionmap
-                      (sectionmap
+                      (base/sectionmap
                        :Arim
-                        (section
+                        (base/section
                          :name "Arim"
                          :summary
                           "* Arim is a land of rough and irregular hills. The weather is usually overcast and windy. It has substantial mineral wealth, especially iron.
@@ -1187,16 +1137,16 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                             (base/unit
                              :name "Arimite Revenant")))))
                    "Shattered Lands"
-                    (section
+                    (base/section
                      :name "Shattered Lands"
                      :summary
                       "* The Shattered Lands is bleak and desolate. The landscape is nightmarish: jagged spikes of rock jut upward from the cracked and barren earth. The violent upheavals have exposed many mineral deposits. Unfortunately, the residents of this land have used strip mining techniques which have badly polluted the air and rivers. The air is tinged with a fine ash, the waters are foul tasting, and there are many dangerous chemical waste products including bubbling pools of lye. Creatures living in the rivers and lakes are often deformed or mutated.
                        * The Shattered Lands are home to many small, violent clans that violently compete with each other for the scarce resources in this bleak area."
                      :titles "Harak"
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Urag
-                        (place
+                        (base/place
                          :name "Urag"
                          :reference "* A group of scholars entered Urag with the contention that the Ur were not evil but were a product of their harsh environment. They encountered a small band of Ur and offered them gold, fragrant oils and gems. These the savages examined and discarded. Without apparent enmity, they slew the scholars, took their cloths and fed the remains to their hunting dogs. They then killed the scholars' mounts, butchered them for meat, and continued on their way."
                          :summary
@@ -1229,38 +1179,38 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :name "Ur Warrior"
                          :summary "* The Ur Warrior is the typical shocktrooper of the Ur clans. Most adult Ur, male or female are considered warriors.")))
                    "Volcanic Hills"
-                    (section
+                    (base/section
                      :name "Volcanic Hills"
                      :placemap
-                      (placemap
+                      (base/placemap
                        "Dragon Rock Mountain"
-                        (place
+                        (base/place
                          :name "Dragon Rock Mountain"
                          :summary "* Dragon Rock is an active volcano that has blighted the Volcanic Hills with its many eruptions over the centuries. It has not erupted in recent memory and seems to be content pouring out smoke and lava creating the River of Fire. Dragon Rock is also so named because a number of Fire Dragons live in the area, apparently drawing strength from the volcano.")
                        :Firefalls
-                        (place
+                        (base/place
                          :name "Firefalls"
                          :summary "* The River of Fire ends at an enormous, seemingly bottomless chasm, The lava pours off the edge in a spectacular display before dropping into untold depths. The view is particularly impressive at night. Some believe the chasm is actually a portal to the underworld and the large number of fire demons in the area supports that claim.")
                        "River of Fire"
-                        (place
+                        (base/place
                          :name "River of Fire"
                          :summary "* The River of Fire is actually an everflowing torrent of molten lava pouring from Dragon Rock Mountain and finally dropping over Firefalls. Fire Demons and Elementals are said to swim in the river and Fire Dragons have been seen consuming the lava.")))))
                :Northlands
-                (section
+                (base/section
                  :name "Northlands"
                  :titles "Frozen North"
                  :placemap
-                  (placemap
+                  (base/placemap
                    "Plateau of Leng"
-                    (place
+                    (base/place
                      :name "Plateau of Leng")
                    "Unknown Kadath"
-                    (place
+                    (base/place
                      :name "Unknown Kadath"))
                  :sectionmap
-                  (sectionmap
+                  (base/sectionmap
                    :Aurorea
-                    (section
+                    (base/section
                      :name "Aurorea"
                      :reference
                       "* Greenland, Iceland
@@ -1272,9 +1222,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                        * Religion - The Aurorans revere Boreas the god of the North Wind. They do not create temples but instead build altars in the open wilderness where one can truly feel his presense."
                      :titles "Hyperborea"
                      :placemap
-                      (placemap
+                      (base/placemap
                        "Sea of Ice"
-                        (place
+                        (base/place
                          :name "Sea of Ice"
                          :summary "* An expanse of shimmering, perpertually frozen water, the Sea of Ice is traversed by the Aurorans on Ice Schooners and personal Ice Skimmers."))
                      :unitmap
@@ -1308,20 +1258,20 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :name "Auroran Ice Schooner"
                          :titles "Ice Outrigger")))
                    :Jotunheim
-                    (section
+                    (base/section
                      :name "Jotunheim"
                      :summary
                       "* Frost Giants - The Frost Giants wage perpetual war on all creatures especially the Aurorans and Nords. Their lack of tactical ability is made up for by their phenomenal strength, endurance, and determination. Their bodies emminate extreme cold, so as they expand their territory the temperatures drop. Their goal actually seems to be to freeze the world."
                      :placemap
-                      (placemap
+                      (base/placemap
                        "Ymir's Teeth"
-                        (place
+                        (base/place
                          :name "Ymir's Teeth"
                          :summary
                           "* A massive ridge of jagged moutains that the Frost Giants believe are the teeth of an inconceivably large god and that the world lies in its open maw awaiting the day when the being awakes.
                            * Home of the Frost Giants, this is also the main location where blue diamonds can be found. Mining of blue diamonds began the war between the Aurorans and Ice Giants.")))
                    :Khazad
-                    (section
+                    (base/section
                      :name "Khazad"
                      :summary
                       "* A strange and unknown realm, Khazad is located in the furthest reaches of the world. It is practically inaccessible. A line of precipitous 200 foot cliffs runs the length of its eastern coast and a ridge of mountains extends along its eastern borders. To the north lie fields of ice and snow. As a result of these impediments to travel, much of what is known is based on a very few hardy adventurers who have survived journeys to this isolated area. According to accounts, the interior is also less than inviting. Patches of bleached and barren gall oak stand like skeletons silhouetted against a dreary purple-grey sky. Broken and irregular lines of hills are interspersed with moors, quagmires, and stagnant ponds. The air is heavy with the stench of moldering vegetation and exudes an unsettling, ancient quality.
@@ -1329,23 +1279,23 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                        * The eastern cliffs are sheer, 200 foot cliffs that ring the coastline. Giant diabolical visages have been carved into the cliff-sides along portions of the coast. A clan of flying devils makes its home in the mouths and eye-sockets of the immense stone effigies and fly out to attack those who draw too close.
                        * Seas - The seas around Khazad are said to be home to many sea monsters including sea demons. The black ships of the Nefaratus are known to frequent these waters as well."
                      :placemap
-                      (placemap
+                      (base/placemap
                        "Khazad Burial Grounds"
-                        (place
+                        (base/place
                          :name "Khazad Burial Grounds"
                          :summary "* Far to the north are vast burial grounds, denoted by row upon row of age-worn stone markers. The remains of a man-like race have been found in massive sarcophagi of strange design. Some of the more important bodies were buried with gold funerary masks of frightening aspect. These masks are believed to be intended to ward demons or evil spirits from the deceased. Rarely these tombs contain brass urns sealed with paraffin. These artifacts were sometimes used to imprison Bottle Imps or safekeep the corpse-dust of departed wizards. Prized by curio collectors and necromancers, these relics bring high prices. Unfortunately, necrophages haunt the region, craving fresh corpses over the dry bones of the long dead.")
                        :Necron
-                        (place
+                        (base/place
                          :name "Necron"
                          :summary "* There are stories of an entire city and its inhabitants buried beneath the earth. All of its inhabitants supposedly mummified and interred in stone sarcophagi. Very little reliable information is available about this supposed necropolis.")))
                    :Nefaratus
-                    (section
+                    (base/section
                      :name "Nefaratus"
                      :summary "* A bleak island nation, home to the Black Savants. Little is known of their isolated homeland culture or motives. What is known is that they seldom leave their obsidian towers and that they wield powerful magic. Here they stare into their obsidian mirrors and converse with unseen beings. Many believe that the Black Savants are diabolists and receive advice and consel from the giant devils known as Shaitan,"
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Maledictus
-                        (place
+                        (base/place
                          :name "Maledictus"
                          :summary "* The capital city of Nefaratus"))
                      :unitmap
@@ -1361,7 +1311,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :name "Black Ship"
                          :summary "* The Savant's midnight black vessels are said to sail the cursed waters at the edge of the world. It is claimed that they are propelled by demons chained to the oars with silver shackles and driven by giant copper skinned devils. These ships have been known to pull into port cities on moonless nights only to leave again before dawn.")))
                    :Nordland
-                    (section
+                    (base/section
                      :name "Nordland"
                      :reference "Finland, Norse, Sweden"
                      :summary
@@ -1372,9 +1322,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                        * Ma and Fa - Endearing terms for Mother and Father"
                      :titles "Aesir, Aesyr, Frostland"
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Skyrim
-                        (place
+                        (base/place
                          :name "Skyrim"))
                      :unitmap
                       (base/unitmap
@@ -1398,16 +1348,16 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Nord Valkyrie")))
                    "Worlds Edge"
-                    (section
+                    (base/section
                      :name "Worlds Edge"
                      :summary "*")))
                :Mediterranea
-                (section
+                (base/section
                  :name "Mediterranea"
                  :sectionmap
-                  (sectionmap
+                  (base/sectionmap
                    :Aegea
-                    (section
+                    (base/section
                      :name "Aegea"
                      :reference "Aegean Islands, Greece"
                      :summary
@@ -1419,48 +1369,48 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                        * Status - The Aegean navy dominates the Aegean island chain and enables a thriving merchant trade across Mediterranea.
                        * History - The Aegean city states used to be individual monarchies until the Imperium swept in and conquered Hellas, the capital. During the invasion, the Hellenic leadership fled with its navy and united the other city states under the name Aegea. Since then, the Imperium sent it navy to conquer Crete and 	was disasterously routed by the Aegean navy. The Aegeans subsequently attempted to retake Hellas and was easily repelled. Now an uneasy truce exists with the Imperials unable to create the navy it needs for conquest and the Aegeans unable to create the army it needs to drive out the Imperials."
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Crete
-                        (place
+                        (base/place
                          :name "Crete")
                        :Hellas
-                        (place
+                        (base/place
                          :name "Hellas"
                          :summary
                           "* Description - Currently a territory of the Imperium, Hellas is an orderly and socially advanced nation. They have a partial democracy (answerable to the Imperium) and a complex legal system that is surprisingly fair.
                            * Universities - Hellan Universities are famous for acedemia, sciences, and philosophy. They do, however, share their Imperial neighbor's prejudices against Naturalism and the Arcane (except for Alchemy and Artifice which are considered sciences).")
                        :Knossus
-                        (place
+                        (base/place
                          :name "Knossus")
                        :Labyrinth
-                        (place
+                        (base/place
                          :name "Labyrinth"
                          :summary "A natural maze of cracked basalt")
                        "Mount Parnassus"
-                        (place
+                        (base/place
                          :name "Mount Parnassus"
                          :summary "* The Oracle of Delphi is on the slopes of Parnassus.")
                        :Minoa
-                        (place
+                        (base/place
                          :name "Minoa")
                        :Olympia
-                        (place
+                        (base/place
                          :name "Olympia"
                          :summary
                           "* Statue of Zeus - One of the Seven Wonders of the World.
                            * Olympiad - The Olympic games.")
                        :Rhodes
-                        (place
+                        (base/place
                          :name "Rhodes"
                          :summary
                           "* Famous for the Colossus of Rhodes, a 30m tall statue of Helios and one of the Seven Wonders of the World.
                            * It is said that the Colossus can move, though there is no evidence to support this.
                            * The Colossus was constructed to celebrate the failure of an invasion force of 40,000 to take the city. Massive siege towers were necessary to take the walls. The first was mounted on six ships, but these capsized in a storm before they could be used. A larger, land-based tower was defeated when the defenders flooded the land in front of the walls so that the rolling tower could not move. The next year, a relief force arrived and the siege was abandoned. Much of the iron and bronze was reforged from the various weapons left behind, and the abandoned second siege tower was used for scaffolding.")
                        :Sparta
-                        (place
+                        (base/place
                          :name "Sparta")
                        "Swamp of Despair"
-                        (place
+                        (base/place
                          :name "Swamp of Despair"))
                      :unitmap
                       (base/unitmap
@@ -1477,20 +1427,20 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Spartan Warrior")))
                    :Arden
-                    (section
+                    (base/section
                      :name "Arden"
                      :titles "Alfar, Ljossalfar, Elder, Elf, Sidhe, Sidheni, Sylvan, Sylvus"
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Alfheim
-                        (place
+                        (base/place
                          :name "Alfheim")
                        :Ardenwood
-                        (place
+                        (base/place
                          :name "Ardenwood"
                          :reference "* We had entered the Ardenwoods on a scouting mission to probe the Sidhe defenses. We had only been in the woods for half an hour before arrows started raining from the trees. Forms flitted among the leaves and brush all around, but we never saw our attackers. We were forced to flee, and they allowed us to leave. The exact nature and numbers of their defenders remains unknown, but their 	effectiveness was clear. - Imperial Expeditionary Log")
                        :Ashwood
-                        (place
+                        (base/place
                          :name "Ashwood"))
                      :unitmap
                       (base/unitmap
@@ -1540,23 +1490,23 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :reference "* The Moon is our Goddess, the night her kingdom! - Diana, Legends of Runeterra"
                          :summary "* Most Alfar revere the Moon Goddess Selene.")))
                    :Gaul
-                    (section
+                    (base/section
                      :name "Gaul"
                      :reference "France, Gallia"
                      :summary "* Syndicate - The Gaul Syndicate is a sophisticed crime cartel."
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Catacombs
-                        (place
+                        (base/place
                          :name "Catacombs")
                        :Mistridge
-                        (place
+                        (base/place
                          :name "Mistridge"
                          :summary "* A walled town housing the main lodge of the Order of Hermes magical society. Mistridge is loosely affiliated with the Arcanum to the East, but the members of the Mistridge lodge keep a low profile as opposed to the grandiose towers of the Arcanum."))
                      :sectionmap
-                      (sectionmap
+                      (base/sectionmap
                        :Elysia
-                        (section
+                        (base/section
                          :name "Elysia"
                          :reference "Southern France"
                          :summary
@@ -1603,21 +1553,21 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                         (base/unit
                          :name "Gallic Warrior")))
                    :Bavaria
-                    (section
+                    (base/section
                      :name "Bavaria"
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Blackmarsh
-                        (place
+                        (base/place
                          :name "Blackmarsh")))
                    :Iberia
-                    (section
+                    (base/section
                      :name "Iberia"
                      :reference "Portugal, Spain"
                      :sectionmap
-                      (sectionmap
+                      (base/sectionmap
                        "Order, The"
-                        (section
+                        (base/section
                          :name "Order, The"
                          :summary
                           "* The Order is a large, theocratic nation which lies to the west of Elysia. Life in the Order is dominated by religion, the Hierophant, and the Theocracy.
@@ -1629,21 +1579,21 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                            * Clash of Champions - The Imperium has tried to invade the Order twice to no avail. The geography and religious zealots of the Order have proven too difficult to overcome. Since the last battle, the Order and Elysia (backed by the Imperium) have waged a propaganda war culminating in the annual event known as the Clash of Champions. Each year both nations scout for worthy (and expendible) warriors to represent their interests in a duel atop the main gates of the Order capital. The winner receives great rewards from their sponsor. Though not technically, a duel to the death, it is expected that the loser will be thrown or forced  off the gates to fall 20 feet below to the roar of the crowds. It is considered a particular coup to cause a vanquished foe to fall amongst his or her own supporters. Since the Order and Elysia could scarsely be more different in their outlooks on life, the winners consider their victory to be a referendum on the virtues of their philosophies. The Order takes the competition very seriously and, of course, gambling and drinking are not allowed within the city walls. Elyisians consider the Clash to be one of the social events of the season. Though they must travel through the mountain pass and they are not permitted entrance to the city, they still come in large numbers with their wagons, children, merchants, wenches, gamblers, acrobats, and performers. For the Elysians, the party is equally large whether they win or not."
                          :titles "Chantry, The Order, Papal States, Theocracy"
                          :placemap
-                          (placemap
+                          (base/placemap
                            "Halls of Penance"
-                            (place
+                            (base/place
                              :name "Halls of Penance")
                            "Order Catherdral"
-                            (place
+                            (base/place
                              :name "Order Catherdral")
                            "Order Monastery"
-                            (place
+                            (base/place
                              :name "Order Monastery")
                            "Order Nunnery"
-                            (place
+                            (base/place
                              :name "Order Nunnery")
                            "Order Reliquary"
-                            (place
+                            (base/place
                              :name "Order Reliquary"))
                          :unitmap
                           (base/unitmap
@@ -1694,7 +1644,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                              :name "Order Theocrat"
                              :summary "* The Theocracy serves as both a religious and government center. The Theocrats maintains the Library of Revelations which are the great books of religious canon that supposedly answer any question worth knowing. Interpreting these books allow the Theocrats to rule on all matters of daily life: clothing, trade, law enforcement, etc. These interpretations have led to a very rigid, conservative society where many acts are considered heretical.")))))
                    :Imperium
-                    (section
+                    (base/section
                      :name "Imperium"
                      :reference "Rome, United States"
                      :summary
@@ -1704,9 +1654,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                        * Roads - The Imperium maintains excellent cobblestone roads throughout its own and its allies territories. All roads lead to Imperia and have armed forts at regular intervals with Centurions, an inn, and a trading post. The forts charge a toll to pass, prices at these forts are high, and any trade done is taxed, but forts are always professionally defended and are generally worth the price.  The roads benefit trade, but are also a reminder of the influence of the Imperium."
                      :titles "Italia, Sovereign"
                      :placemap
-                      (placemap
+                      (base/placemap
                        :Imperia
-                        (place
+                        (base/place
                          :name "Imperia"
                          :summary "* The capital city of the Imperium."
                          :titles "Empire"
@@ -1715,10 +1665,10 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                            (base/place
                             :name "Panopticon")))
                        "Mount Vesuvius"
-                        (place
+                        (base/place
                          :name "Mount Vesuvius")
                        :Pompeii
-                        (place
+                        (base/place
                          :name "Pompeii"
                          :summary
                           "* The story of the destruction of Pompeii when Mt. Versuvius erupted is widely known. The story is often used as a cautionary tale to obey the will of the gods.
@@ -1745,50 +1695,50 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                          :name "Borderland Legionnaire"
                          :summary "* The far eastern outposts of the empire are manned by the Legion of the Borderlands. This is body of hard-bitten mercenaries, outcasts, and criminals from many lands. Being assigned to the Legion of the Borderlands one way that the Imperium makes use of troublemakers.")))
                    :Teuton
-                    (section
+                    (base/section
                      :name "Teuton"
                      :reference "Germany"
                      :summary
                       "* Description - Currently claimed as a territory of the Imperium.
            * Dwarves"
           :itemmap
-           (itemmap
+           (base/itemmap
             "Dark Forge"
-             (item
+             (base/item
               :name "Dark Forge"
               :summary "* A legendary forge where a man may be forged into the body of an Iron Golem, at the cost of his humanity."))
           :placemap
-           (placemap
+           (base/placemap
             "Iron Mountains"
-             (place
+             (base/place
               :name "Iron Mountains"
               :summary "* The home of a stout race of men who live their lives on the cliffs and in tunnels of the Iron Mountains.")
             "Iron Citadel"
-             (place
+             (base/place
               :name "Iron Citadel"
               :summary "* The capital of the Iron Kingdom. It is an enormous castle built into a cliff-face. Though it is huge outside, the citadel is mostly within the mountain. The mountain face makes the citadel basically impregnible from the outside. The true danger, however, lies undergound...")
             "Deep Roads"
-             (place
+             (base/place
               :name "Deep Roads"
               :summary
                "* A fantastic labyrinth of inter-connected, underground tunnels deep within the earth. The tunnels were mostly created by volcanic activity and underground rivers ages ago. Since then Dholes, Kobolds, and Dwarves have extended and refined the tunnels. They are so extensive that many civilizations live within the Deep Roads."
               :titles "Dark Roads, Underdark, Underlands")))
         :Zura
-         (section
+         (base/section
           :name "Zura"
           :reference "Switzerland"
           :summary "* Zurans are small in stature but very well educated people. They are are highly materialistic and suspiscious of others. They prefer windowless towers to minimize the chance of theft. They typically hide and trap their valuables and carry hidden weapons all the time."
           :titles "Gnomes of Zurich"
           :placemap
-           (placemap
+           (base/placemap
             "Zuran Academy"
-             (place
+             (base/place
               :name "Zuran Academy"
               :summary
                "* The Zuran Academy is large complex of buildings that house schools, libraries, laboratories, and forges. Here can be found worlds most advanced scientific pursuits including: Alchemy, Thaumaturgy, Artifce, Gold/Silversmithing, Timekeeping, Glassblowing, and Tinkering.
                 * Masters take on students as apprentices to dedicate their lives to a craft.")
             :Zurich
-             (place
+             (base/place
               :name "Zurich"))
           :unitmap
            (base/unitmap
@@ -1813,23 +1763,23 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :name "Zuran Thief"
               :summary "* Zuran thieves materialism of course leads many to steal what they want. The skilled thieves in Zuraare precisely why the Zurans are so paranoid of theft. The skilled locksmiths are met with equally skilled lockpickers in a security arms race.")))))
     "Middle East"
-     (section
+     (base/section
       :name "Middle East"
       :sectionmap
-       (sectionmap
+       (base/sectionmap
         :Arabia
-         (section
+         (base/section
           :name "Arabia"
           :reference "Saudi Arabia")
         :Assyria
-         (section
+         (base/section
           :name "Assyria"
           :reference "Babylon, Mesopotamia, Sumeria"
           :summary "* Twin Rivers - Assyria is a verdent valley nestled between the Tigris and Euphrates Rivers."
           :sectionmap
-           (sectionmap
+           (base/sectionmap
             :Magisterium
-             (section
+             (base/section
               :name "Magisterium"
               :summary
                "* Magister
@@ -1839,9 +1789,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * Templar"
               :titles "Magocracy"
               :placemap
-               (placemap
+               (base/placemap
                 :Arcanum
-                 (place
+                 (base/place
                   :name "Arcanum"
                   :reference "Chantry, Ivory Tower, Tower of Babylon"
                   :summary
@@ -1850,39 +1800,39 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                     * The home of the Arcanum Society, a fraterity of wizards, sages, alchemists, and artificers. Though their only stated goal is the pursuit of arcane knowledge, they are widely known as power brokers across the known world (and perhaps some unknown ones).
                     * Arcanum Awards - The Arcanum Society holds an annual dinner to recognize the greatest magical discoveries of the year.")
                 "Great Ziggurat"
-                 (place
+                 (base/place
                   :name "Great Ziggurat")
                 "Hanging Gardens"
-                 (place
+                 (base/place
                   :name "Hanging Gardens"
                   :reference "Hanging Gardens of Babylon"
                   :summary "* One of the Seven Wonders of the World")))))
         :Canaan
-         (section
+         (base/section
           :name "Canaan"
           :reference "Israel"
           :placemap
-           (placemap
+           (base/placemap
             "Mount Zion"
-             (place
+             (base/place
               :name "Mount Zion")
             "Solomon's Temple"
-             (place
+             (base/place
               :name "Solomon's Temple")
             :Zion
-             (place
+             (base/place
               :name "Zion")
             "Dead Sea"
-             (place
+             (base/place
               :name "Dead Sea")))
         :Pars
-         (section
+         (base/section
           :name "Pars"
           :reference "Persia"
           :sectionmap
-           (sectionmap
+           (base/sectionmap
             :Farad
-             (section
+             (base/section
               :name "Farad"
               :summary
                "* Farad is an ancient land.
@@ -1891,9 +1841,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * Justice - Justice is harsh and arbitrary. The militia is highly corrupt, and anything can be gotten for a price.
                 * Economics - Trade caravans and shipping are huge sources of wealth. Spices and exotic dyes and weaves are particularly large industries."
               :placemap
-               (placemap
+               (base/placemap
                 :Faradin
-                 (place
+                 (base/place
                   :name "Faradin"))
               :unitmap
                (base/unitmap
@@ -1910,12 +1860,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                   :name "Faradun Procurer"
                   :summary "* A specialized merchant skilled at obtaining any entertainment or diversion imaginable regardless of its legal status ... for the right price. Procurers are famous for their discretion in this 'no questions asked' business. The Farad legal system does not hold Procurers liable for the actions of their customers, so they act with impunity.")))
             :Phatas
-             (section
+             (base/section
               :name "Phatas"
               :placemap
-               (placemap
+               (base/placemap
                 :Phatasia
-                 (place
+                 (base/place
                   :name "Phatasia"
                   :reference
                    "* Joseph Jacobs, Jack and the Beanstalk
@@ -1925,7 +1875,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                     * Windships - Over time, the town grew and eventually a brilliant wizard discovered a way to construct windships based on his studies of the floating city. He made a fortune by keeping the technique a closely guarded secret. Unfortunately, the secret seems to have died with its creator, and no one has been able create new windships since.
                     * Weather - Phantasia can get chilly and severe weather can be very harrowing.")
                 "Bazaar of the Bizarre"
-                 (place
+                 (base/place
                   :name "Bazaar of the Bizarre"
                   :summary
                    "* Each year for one week, the Phantasias hold an exhibition of oddities and diversions. To gain entrance, you must be attired in costume. Wearers of the most outlandish garb are awarded a silver goblet which allows them to drink for free during the festival.
@@ -1945,7 +1895,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                    "* The windships are wonderous craft which sail upon the winds as sea vessels ply the waters. They are constructed of the lightest possible materials and are therefore somewhat fragile and require constant repair. Extreme weather conditions are a particular concern especially high winds and freezing rain, and lightning.
                     * The sails and rigging are made of gossamer. Flight is maintained by magical devices called levitationals below decks. These levitationals only provide elevational control. Directional control and speed are all subject to the wind.")))))
         :Raja
-         (section
+         (base/section
           :name "Raja"
           :summary
            "* Red Gold - The mines of Raja are rich with very impure gold deposits. Large slave colonies work the mines day and night. Rajans leave the red impurities in the smelting process leaving their gold with a swirled bloody look to it.
@@ -1972,12 +1922,12 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                "* The Black Mystics are necromancer/priest who lead the Rajan cult. They are religious fanatics and believe that they channel the will of their dread gods.
                 * Black Mystic religious ceremonies typically feature ritual executions symbolizing conversion of non-believers to the cult. Demons perform the executions which draw great crowds of worshippers to the temples.")))
         "Desert Wastes"
-         (section
+         (base/section
           :name "Desert Wastes"
           :placemap
-           (placemap
+           (base/placemap
             "City of Brass"
-             (place
+             (base/place
               :name "City of Brass"
               :summary "* The City of Brass is a major city of the [Ifrit]. It is a beautiful place with palaces, libraries, and cathedrals all built to giant scale and all built of brass to withstand the withering desert heat."))
           :unitmap
@@ -1990,43 +1940,43 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                 * They are fond of men whom they regard as fine eating.
                 * They entertain themselves by various games including hurling large rocks long distances to crush various animals. They are also extremely fond of games of chance and wagers, though they are not above using their magical powers to tilt games in their favor.")))))
     :Oceania
-     (section
+     (base/section
       :name "Oceania"
       :titles "Pacific Ocean"
       :sectionmap
-       (sectionmap
+       (base/sectionmap
         "Cresent Isles"
-         (section
+         (base/section
           :name "Cresent Isles"
           :placemap
-           (placemap
+           (base/placemap
             "Nauticus Reef"
-             (place
+             (base/place
               :name "Nauticus Reef"
               :summary "* A great mass of coral filled with beautiful and dangerous sea life. The reef has been the cause of many shipwrecks over the years and is the subject of many perilous salvage operations over the years.")))
         :Lemuria
-         (section
+         (base/section
           :name "Lemuria")))
     "Underground, The"
-     (section
+     (base/section
       :name "Underground, The"
       :titles "Underdark, Underdeep"
       :sectionmap
-       (sectionmap
+       (base/sectionmap
         "Underground Highway"
-         (section
+         (base/section
           :name "Underground Highway"
           :summary
            "* An extensive tunnel system that covers hundreds of miles and travels deep under many countries.
             * Ages ago an underground river flowed through this region carving out the massive tunnels and tributaries. The receding waters developed a vast underground ecosystem. Phosphorescent fungi even allowed sighted beings to thrive in this spectacular and bizarre underground world.")))
     :Wilderlands
-     (section
+     (base/section
       :name "Wilderlands"
       :reference "* Americas"
       :placemap
-       (placemap
+       (base/placemap
         "Aberrant Rainforest"
-         (place
+         (base/place
           :name "Aberrant Rainforest"
           :summary
            "* The Aberrant Rainforest is a weird and grotesque jungle the freakish origins of which are attributed to a magical mishap of unparalleled proportions.
@@ -2034,35 +1984,35 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Murky streams flow uphill, stagnant ponds move slowly across the land, and the ground itself seems to pulse as if it were alive.
             * Because many varieties of unique and valuable herbs grow throughout the forest, visitors are not unknown.")
         "Lost Sea"
-         (place
+         (base/place
           :name "Lost Sea"
           :reference "Salt Flats"
           :summary "* Deep within the Wilderlands is a flat wasteland known as the Lost Sea. This area appears to be a dry seabed littered with the ancient skeletons of giant aquatic monsters. The area gets little rain and is layered in salt from the former sea, so nothing lives here. It is said that the wrecks of ancient ships can be found in isolated places potentially carrying treasures from ancient civilizations.")
         "Lost World"
-         (place
+         (base/place
           :name "Lost World"
           :reference "The Land that Time Forgot"
           :summary
            "* Deep within the Wilderland jungles is a towering ridge of a massive caldera formed by an ancient volcano. Within the caldera is a large expanse of jungle cut off from the outside world for millions of years. Numerous creatures though to be extinct still survive in this safe haven."
           :titles "Pangaea")
         "Salt Flats"
-         (place
+         (base/place
           :name "Salt Flats")
         "Sea of Glass"
-         (place
+         (base/place
           :name "Sea of Glass"
           :summary
            "* The sea of glass is a vast expanse of mostly flat glass. The sea was presumably formed by a massive firestorm detonating over a sandy desert, but no cause had been discovered. Travelling over the glass is similar to travelling over ice though the glass is much harder and the weather is very hot. The glass creates a blinding glare when the Sun is at the right angle, and the surface can seem like a giant frying pan under the noonday Sun."))
       :sectionmap
-       (sectionmap
+       (base/sectionmap
         :Azteka
-         (section
+         (base/section
           :name "Azteka")
         :Maya
-         (section
+         (base/section
           :name "Maya")
         :Mandragora
-         (section
+         (base/section
           :name "Mandragora"
           :summary
            "* Mandragora is named for the unusual sentient plant-life, the Mandragore, who live here.
@@ -2095,7 +2045,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                       :name "Vulnerable to Fire"))))))))))))
 
 (func chapter_realms_beyond : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Realms Beyond"
   :reference "* Reality is just your mind collapsing under what it doesn't understand, silly. - Zoe, Runeterra"
   :summary
@@ -2115,42 +2066,42 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
     ** Temporal Realms +/-x, +/-y, +/-z, +/-t, 0i"
   :titles "Multiverse, Realties, Realms"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     :Universe
-     (section
+     (base/section
       :name "Universe"
       :summary "* Location: +x, +y, +z, +t, 0i"
       :titles "Material Realm, Material Universe, Real World, Space")
     :Antiverse
-     (section
+     (base/section
       :name "Antiverse"
       :summary "* Antispace was created with the Big Bang. In this multiverse a larger amount of anti-matter than matter was created. They are very similar to the Material Realms, but their particles are deadly to beings from the Physical Realms and vis-versa."
       :titles "Antispace, Anti Realm, Negative Zone")
     :Void
-     (section
+     (base/section
       :name "Void"
       :summary "* The Void was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless physical multiverse.")
     :Limbo
-     (section
+     (base/section
       :name "Limbo"
       :summary
        "* The Limbo was created with the Big Bang. In this multiverse a roughly equal amount of matter and anti-matter were created. Almost nothing remains in this desolate lightless spirit multiverse.
         * Beings with Will perceive everything as endless white.")
     "Positive Planes"
-     (section
+     (base/section
       :name "Positive Planes"
       :titles "Higher Realms, Order Realms, Positive Realms, Positive Space"
       :placemap
-       (placemap
+       (base/placemap
         :Celestia
-         (place
+         (base/place
           :name "Celestia")
         :Hyperspace
-         (place
+         (base/place
           :name "Hyperspace"
           :summary "* Hyperspace is not an actual place, it is what one observes while travelling between Positive Planes.")
         :Source
-         (place
+         (base/place
           :name "Source"
           :reference "* I am kindness. I am unity. I am bigotry. I am expansion. I am the end! The DEATH that comes for expansion! For existence! The NULL that comes unto us all. Because I AM the PHOENIX! Life and death INCARNATE! The resurrection and renewal that will never end. Memories reawakened. A life lived and ended, again and again. A perpetual cycle of joy and sorrow. Anger and gratitude. Bliss and grief. All of them, just small parts of what relentlessly perseveres. Infinite, Absolute, Unconditional. - Madelyn Prior, X-men"
           :summary
@@ -2161,37 +2112,37 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Some say all of reality is just shadows cast between the Source and Oblivion."
           :titles "Absolute Order, Positive Infinity, The Beginning, The Fountain, The Source, The White Hole, True Order, White Hot Room")))
     "Negative Space"
-     (section
+     (base/section
       :name "Negative Space"
       :titles "Lower Realms, Negative Realms, Negative Space, Negative Universe, Negaverse"
       :placemap
-       (placemap
+       (base/placemap
         :Abyss
-         (place
+         (base/place
           :name "Abyss"
           :titles "Pandemonium, The Well")
         :Oblivion
-         (place
+         (base/place
           :name "Oblivion"
           :summary "* It is speculated that beyond Oblivion, lies the [Source] in an endless cycle."
           :titles "Absolute Chaos, The End, True Chaos")
         :Umbra
-         (place
+         (base/place
           :name "Umbra"
           :summary "* Hyperspace is not an actual place, it is what one observes while travelling between Positive Planes."
           :titles "Subspace")
         :Wyld
-         (place
+         (base/place
           :name "Wyld"
           :titles "Wildspace, Wylderlands, Wyldspace")))
     "Temporal Realms"
-     (section
+     (base/section
       :name "Temporal Realms"
       :summary "* The Temporal Realms are described by coordinates for +/-x, +/-y, +/-z +/-t (length, height, width, time)"
       :placemap
-       (placemap
+       (base/placemap
         :Vortex
-         (place
+         (base/place
           :name "Vortex"
           :reference
            "* The Christmas tree, which can be traced in its origins back to pre-Christian European beliefs, represents an axis mundi.
@@ -2203,7 +2154,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * The Norns are found here."
           :titles "Axis Mundi, Chronos, Eye of Harmony, Irminsul, Temporal Zero Point, Tree of Life, Tree of Knowledge of Good and Evil, World Pillar, World Tree, Yggdrasil, Yog-Sothoth")))
     "Inner Realms"
-     (section
+     (base/section
       :name "Inner Realms"
       :summary
        "* The Periphery consists of a number of Realms that touch the Material Realm.
@@ -2213,9 +2164,9 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         * Realm Overlay - Sometimes when an area of both realms closely resembles one another, the areas overlap creating a natural Gate of sorts where one may accidentally wander from one Realm to the other without noticing."
       :titles "Periphery, Realms Within"
       :placemap
-       (placemap
+       (base/placemap
         "Ley Line"
-         (place
+         (base/place
           :name "Ley Line"
           :summary
            "* Ley Lines are invisible, spiritual energy lines that pass through the universe and serve as the branches and roots of the World Tree. The Ley Lines influence the areas they pass through. Their existence transcends time. Contacting the Lines boosts spiritual powers and connects the past and future. They can be tapped to raise magical effects and they can spread the effect of tragic or corrupted areas, creating haunted or cursed areas.
@@ -2225,21 +2176,21 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Ley Line Filth - When negative energy builds up over time near a Ley Line, so a Ley Line can sometimes leak solid dark energy that is called Filth or Corruption. This Filth corrupts the area, withering plants and contaminating animals and water. Since it is a spiritual corruption, it can only be repaired with purification magic or by somehow confronting and addressing the cause of the corruption."
           :titles "Dragon Lines, Fate Lines, Lines of Power, Threads of Fate, Time Lines")
         "Digital Realm"
-         (place
+         (base/place
           :name "Digital Realm"
           :titles "Cyberspace, Cyberrealm")
         "Dreaming, The"
-         (place
+         (base/place
           :name "Dreaming, The"
           :titles "Dreamlands, Dreamworld, Fade, Imaginary World, Nod")
         "Fade, The"
-         (place
+         (base/place
           :name "Fade, The"
           :summary
            "* The Fade is a Mirror Realm that is a sort of Dream Realm but is driven by strong emotions.
             * Fade Curse - A Curse is a spirit that has manifested from strong emotions over a long period of time.")
         :Luna
-         (place
+         (base/place
           :name "Luna"
           :summary "* The Spirit Realm of the Moon"
           :unitmap
@@ -2255,18 +2206,18 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                ** Waning - 
                ** New -")))
         "Hollow World"
-         (place
+         (base/place
           :name "Hollow World")
         "Memory Realm"
-         (place
+         (base/place
           :name "Memory Realm"
           :titles "Land of Lost Things, Memory Lane")
         "Micro Realm"
-         (place
+         (base/place
           :name "Micro Realm"
           :titles "Microverse, Quantum Realm")
         "Mirrors Realms"
-         (place
+         (base/place
           :name "Mirrors Realms"
           :reference
            "* Alice in Wonderland
@@ -2277,29 +2228,29 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
           :summary "* Beyond all mirrors lie worlds almost identical to our own but more a reflection of mind than of substance. There are an infinite number of these mirror universes, though each is accessible in a slightly different way."
           :titles "Alternate Dimensions, Mirrorlands, Mirror Universe, Mirror World, Mirrorverse, Mirrors, The Upsidedown, Twilight Zone")
         "Negative Realms"
-         (place
+         (base/place
           :name "Negative Realms"
           :summary
            "* Negative Realms are described by coordinates for -x, -y, -z, t (length, height, width, time)
             * The Negative Realms are particular mirrors of the Material Realms. They were created at the same moment that the Material Realms were, but while the Material Realms were mostly filled with normal matter, the Negative Realms were mostly filled with anti-matter."
           :titles "Anti-matter Universes")
         "Nexus of Realities"
-         (place
+         (base/place
           :name "Nexus of Realities"
           :summary
            "* The Nexus of Realities is a place that touches the [Vortex] and through it all other realities. So near the [Vortex], Time is meaningless here, so anyone entering will feel as if they have been in the Nexus for a very long time and may stay here as long as they want with no wants. When they leave, however, no time will have past and their time spent will be remembered like a dream.
             * Tanelorn - The city Tanelorn has been built at the Nexus and is a sort of waystation for those travelling to other worlds. Tanelorn exists in all inner realms and appears as a simple town native to each reality. One cannot look for Tanelorn for it does not appear on any map, but it can occasionally be stumbled upon by frustrated travellers seeking new horizons. As the existence of Tanelorn can never be proven, it remains a myth throughout the universe."
           :titles "Tanelorn, Waystation")
         :Pangea
-         (place
+         (base/place
           :name "Pangea"
           :titles "Prehistoric Realm")
         :Yuggoth
-         (place
+         (base/place
           :name "Yuggoth"
           :summary "* The Spirit Realm of Pluto")
         :Shadowland
-         (place
+         (base/place
           :name "Shadowland"
           :summary
            "* The Realm of the recently dead.
@@ -2309,16 +2260,16 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * The [Veil] separating the Shadowland from the living world is called the Shroud.
             * Many portals lead from here to the [Underworld], but if a [Wraith] loses his connection to the living world, he may not return to the [Shadowlands].")
         :Veil
-         (place
+         (base/place
           :name "Veil"
           :summary
            "* The Veil is a barrier between the natural world and the supernatural worlds.
             * The Veil is not only a physical barrier but also has an effect on perception and memory. Those without supernatural abilities who encounter supernatural beings will tend to rationalize the supernatural aspects of the encounter, instead interpretting them as natural phenomenon. They will irrationally deny that any supernatural aspect was involved regardless of the evidence. This quality of the Veil applies to recordings and any other evidence and has kept the mythical status of supernatural beings for millenia."
           :titles "Gauntlet, Mists, Shroud"))
       :sectionmap
-       (sectionmap
+       (base/sectionmap
         "Elemental Air Realm"
-         (section
+         (base/section
           :name "Elemental Air Realm"
           :summary
            "* The realm of elemental air is a vast, empty space above the clouds of the world. Here there are no solids or liquids only gases without impurities (e.g. smoke).
@@ -2331,13 +2282,13 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :reference "Elric of Melnibone"
               :summary "* Wind Elemental Lord")))
         "Elemental Cold Realm"
-         (section
+         (base/section
           :name "Elemental Cold Realm"
           :summary
            "* The realm of elemental cold is a vast, barren, snowscape under a sunless sky. Harsh blizzards sweep across the snow that covers the glaciers and frozen seas. There is no heat in this realm.
             * Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family.")
         "Elemental Earth Realm"
-         (section
+         (base/section
           :name "Elemental Earth Realm"
           :summary
            "* The realm of elemental earth is a vast, solid space below the surface of the world. It is mostly solid rock, but cave systems, roots, and underground waterways exist as well.
@@ -2350,19 +2301,19 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :reference "Elric of Melnibone"
               :summary "* Earth Elemental Lord")))
         "Elemental Fire Realm"
-         (section
+         (base/section
           :name "Elemental Fire Realm"
           :summary
            "* The realm of elemental fire is a vast volcanic space seemingly from the dawn of the world. It is all lava, and scorching heat. Here, fire is pure without oxygen or smoke or fuel to burn.
             * Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family.")
         "Elemental Lightning Realm"
-         (section
+         (base/section
           :name "Elemental Lightning Realm"
           :summary
            "* The realm of elemental lightning is a vast lightning storm lighting up the sky, pounding the ground, and electrifying the seas.
             * Elementals are generally highly emotional and of low intelligence. This is natural given that they have no need for intelligence in their harsh realm. They do not have cities or wars but are more divided into pods of friends and family.")
         "Elemental Water Realm"
-         (section
+         (base/section
           :name "Elemental Water Realm"
           :summary
            "* The realm of elemental water is a vast space deep within the ocean depths of the world.
@@ -2382,7 +2333,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
                "* Pyaray is a Chaos Lord who rules the deepest parts of the ocean. He appears as a giant red octopus-like creature, and his soul is kept in a blue crystal on his head. Sailors who drown at sea are taken into his Chaos Fleet. One portent of the end of the world is the ascent of the Chaos Fleet to the surface. Pyaray and Straasha are bitter enemies."
               :titles "Tentacled Whisperer of Impossible Secrets")))
         :Elysium
-         (section
+         (base/section
           :name "Elysium"
           :titles "Faewild, Wyld"
           :summary
@@ -2400,31 +2351,31 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Archfae - 
             * Fae Magic - Though the Fae trade in physical objects like gold or food, these things are actually made of imagination and Fae Magic. For the Fae, magic is the one true currency. Having it and using it is the sign of royalty. Those with no magic have no status and no value."
           :placemap
-           (placemap
+           (base/placemap
             :Arcadia
-             (place
+             (base/place
               :name "Arcadia"
               :summary "* The capital city of the Fae. It is a land partially of Dream and is not normally accessible to mortals.")
             "Elysian Forest"
-             (place
+             (base/place
               :name "Elysian Forest"
               :summary "* The forests of Elysium are filled with living creatures including wild animals, large insects, Sprites, and Pixies.")
             "Elysian Fields"
-             (place
+             (base/place
               :name "Elysian Fields")))))
     "Higher Realms"
-     (section
+     (base/section
       :name "Higher Realms"
       :titles "Over Realms"
       :placemap
-       (placemap
+       (base/placemap
         "Celestial Realm"
-         (place
+         (base/place
           :name "Celestial Realm"
           :summary "* Powerful beings of order inhabit this Realm. They are not overtly hostile, but they unyielding and have a severe approach to justice that makes one wonder if anyone can survive their scrutiny."
           :titles "Afterworld, Angelic Realm, Celestine Realm")
         "Imaginary Space"
-         (place
+         (base/place
           :name "Imaginary Space"
           :reference "* Though the story is fictional, as far as the characters are concerned, their fate is real. Therein lies the rub, are you and I the audience or characters on the stage? Nobody can know for sure. Afterall, nothing is easier to fool than the senses. - Furina, Genshin Impact"
           :summary
@@ -2436,19 +2387,19 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Body - Physical rules barely apply. All resistences use Will instead of Body."
           :titles "Astral Plane, Astral Realm, Complex Space, Ether, Etheral Plane, Etheral Realm, Hyperspace, I-Space, Imaginary Realm, Subjective Reality, Subspace, Superspace, The Pale, Ultraspace")
         "Realm of Light"
-         (place
+         (base/place
           :name "Realm of Light"
           :summary "* This is an area of space near the center of the Universe. It is said to be based upon lines and angles instead of surfaces and curves, and it is known to be a region of intense and deadly energies. The realm appears much like a negative image of the known Universe with dark stars on a backdrop of intense light. Few organic creatures can survive in this region regardless of defenses, but this is the home of such creatures as the [Radiance] and the [Hounds of Tindalos]."
           :titles "Tindalos")
         :Wyver
-         (place
+         (base/place
           :name "Wyver"
           :summary
            "* Wyver is the Creator Being that manifests as a mirror dimension reflecting the world of order.
             * Travel - Creatures of order can enter Wyvr through any reflective surface."
           :titles "Weaver")
         :Wyld
-         (place
+         (base/place
           :name "Wyld"
           :summary
            "* Wyld is the Life Bringer Being that manifests as a mirror dimension reflecting the natural world. It is thought that Wyld is the source of all life.
@@ -2456,19 +2407,19 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Travel - Natural creatures can enter Wyld through any reflective surface."
           :titles "Manitou, Wellspring")
         :Wyrm
-         (place
+         (base/place
           :name "Wyrm"
           :reference "* Sitting in a bunker, here behind my wall. Waiting for the worms to come. In perfect isolation, , here behind my wall. Waiting for the worms to come. Waiting, to cut out the dead wood. Waiting, to clean up the city. Waiting, to follow the worms. Waiting, to put on a black shirt. Waiting, to weed out the weaklings. Waiting, to smash in their windows and kick in their doors. Waiting, for the final solution to strengthen the strain. Waiting, to follow the worms. - Waiting for the Worms, Pink Floyd"
           :summary "* Wyrm is the Time/Destructor Being that manifests as mirror dimension reflecting the world of entropy and  and corruption. Corrupted creatures can enter Wyrm through any reflective surface.")))
     "Lower Realms"
-     (section
+     (base/section
       :name "Lower Realms"
       :summary "* Those places closest to the very beginning and the final end of the universe."
       :titles "Under Realms"
       :placemap
-       (placemap
+       (base/placemap
         :Oblivion
-         (place
+         (base/place
           :name "Oblivion"
           :reference
            "* Leviathan - Hellraiser II
@@ -2481,7 +2432,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Some believe that through Oblivion lies rebirth, but few are willing to personally put that theory to the test, and none who enter has ever returned."
           :titles "Abyss, End of All Things, Heat Death of the Universe, Lakhesis, Order, Pattern, Primal Destroyer, Primal Void, The End")
         "Source, The"
-         (place
+         (base/place
           :name "Source, The"
           :reference "...I started with loathing when told of the monstrous nuclear chaos beyond angled space which the Necronomicon had mercifully cloaked under the name of Azathoth. - The Whisperer in Darkness"
           :summary
@@ -2490,7 +2441,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Sublimating - Nothing physical can survive exposure to the Source, but it is possible to transcend the physical and enter Source. This is called Sublimating. There are many magical, spiritual and technological ways to enter the Sublime and entire civilizations have done so. Any who enter the Sublime begin to expand themselves. Absorbing and evolving with each eternal instant. Almost none who enter ever returns regardless of promises or bonds. The few that have returned are very different and almost always quickly return to the Sublime. After being exposed to the endless possiblities of existence, perhaps they no longer see the our existence or our way of understanding our existence as real or important anymore."
           :titles "Ascension, Azathoth, Atropos, Apep, Apophis, Jormungand (Midgard Serpent), Primal Chaos, The Beginning, The Big Bang, The First Thing, Truth, Sublime")
         "Tempest, The"
-         (place
+         (base/place
           :name "Tempest, The"
           :reference "* The Galactic Barrier - Star Trek"
           :summary
@@ -2504,7 +2455,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Regardless of where one enters, all its twisting maze-like tunnels lead in the same direction: toward the dark heart of [Oblivion]."
           :titles "Event Horizon, The Great Barrier, The Edge of the World")
         :Underworld
-         (place
+         (base/place
           :name "Underworld"
           :summary
            "* The Underworld is a psychic realm of the dead. Similar to the [Dreaming], the Underworld is a Spiritual not a physical place.
@@ -2516,7 +2467,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Time - Time in the Underworld is distinctly different from the living world. Long periods can pass for some while little time has passed for others. Either way, little time passes in the living world compared to the ages that can seem to pass in the Underworld."
           :titles "Netherworld, Netherrealm, Netherverse, Underrealm, Underverse")
         "Void, The"
-         (place
+         (base/place
           :name "Void, The"
           :summary
            "* The Void is an empty Realm between Realms. It is the Spiritual equivalent to outer space.
@@ -2541,7 +2492,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
              :name "Void Whale"
              :titles "Leviathan")))))
     "Outer Realms"
-     (section
+     (base/section
       :name "Outer Realms"
       :reference "Event Horizon"
       :summary
@@ -2549,15 +2500,15 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
         * Physics are often radically different from our own which often is sanity threatening."
       :titles "Abyssal Realms, Chaos Realms, Demon Realms, Hells, Realms Beyond"
       :placemap
-       (placemap
+       (base/placemap
         "Hell of Being Cut to Pieces"
-         (place
+         (base/place
           :name "Hell of Being Cut to Pieces"
           :summary
            "* Souls who arrive here fall into a sea of razor-sharp blades that spin and cut sinners to shreds.
             * Souls - The domain is a place for those who make a living by violence.")
         "Hell of Being Skinned Alive"
-         (place
+         (base/place
           :name "Hell of Being Skinned Alive"
           :summary
            "* If there is a worse place, no one has yet found it. At a glance it appear as a desert world, but it is infinitely worse. The winds have sculpted the rocks and mesas into horrifying shapes. Those who can see through the sandstorms can see demonic forms torturing souls, but their screams are covered by the winds.
@@ -2570,7 +2521,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Silent Stronghold - Her orbiting palace is where her allies stay, but as Tou Mu is paranoid, the crystal of this place renders unguarded thought into sound which echoes throughout the palace.
             * Sinister Fortress - One of the few structures on the surface of this hell, this iron fortress courses with the lightning that constantly strikes it. On the outer walls are lashed the bodies of those that Tou Mu has taken a special interst. Here they are constantly torn by winds and struck by lightning. The Iron Empress has never removed a victim from the wall since the first traitor was lashed there.")
         "Hell of Boiling Oil"
-         (place
+         (base/place
           :name "Hell of Boiling Oil"
           :summary
            "* The name of this hell is a misnomer. The hell is not filled with boiling oil, but rather with rendered human fat. Gobbets of charred and burning fat float atop the ocean of thick, bubbling grease. A dark gray froth of overcooked scum floats to the surface in places.
@@ -2579,7 +2530,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Ruler - This realm is ruled by Hluh, an island-sized, gelatinous, bright red jellyfish with sharp-toothed sucker mouths on each tentacle.
             * Devils - The devils of this have no names, no faces, and no sense of self. They realm resemble chitinous tapeworms or gigantic water striders that skim acoss the surface of the boiling sea.")
         "Hell of Burrowing Maggots"
-         (place
+         (base/place
           :name "Hell of Burrowing Maggots"
           :summary
            "* A quick glance reveals this place to be a vast plain of white sand. There is no sun, but the overcast sky is not dark. The sand, however, is crawling. The stench of decay staggers any so unfortunate as to need to breathe.
@@ -2588,7 +2539,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Demons - Maggots grow larger as they age. The largest of them are the size of a whale.
             * The Great Beast - What appears to be a large white mountain is actually an enormous carcass of an unknown beast. The maggots have been devouring it since the hell was created, and it appears it will take an eternity to complete the job. What the beast is is unknown. Some believe it is tied to creation and the the universe will cease when it is comsumed. A foolish mage once studied it from a distance, but days later he returned screaming gibberish and only said two coherent words before he took his own life: 'It moved.'")
         "Hell of Seven Burning Seas"
-         (place
+         (base/place
           :name "Hell of Seven Burning Seas"
           :summary
            "* If would be hard to chose a worse fate, burning or drowning. Those souls doomed to this hell do both. They may stay above water and have their garments burst into flame or submerge and boil themselves.
@@ -2596,14 +2547,14 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Ruler - No one has seen the Empress of Pearls who is rumored to live at the greatest depths of the Great Trench where no other creature can survive. Some believe she is a great 'devil-fish' that can cause tsunamis.
             * Devils - Devil crabs, devil sharks, and devil squid are some of the horrors that populate the depths.")
         "Hell of Upside-Down Sinners"
-         (place
+         (base/place
           :name "Hell of Upside-Down Sinners"
           :summary
            "* This domain defies description. This is either the cleverest of the Yomi realms or the maddest hell devised by the sickest of minds. Time and space are inverted. Sensation and thought are twisted. Minutes pass like an eternity and millenia rush by in a blink of an eye. In this hell, the strong perish and the weak survive. That which is dull cuts while sharp objects bring comfort.
             * Souls - Recent arrivals are often driven mad as they begin to see odors, smell sounds, and hear sights. Emotions too become jumbled. Souls begin to hate those who helped them and love those who have done them wrong. They fear the helpless and refuse to flee certain destruction. Skills and powers do not work correctly here. The stronger the ability the more ineffectual it is.
             * Ruler - No one knows what inconceivable creature would create such a realm.")
         "Hell: Kakuri, The Night Realm"
-         (place
+         (base/place
           :name "Hell: Kakuri, The Night Realm"
           :summary
            "* There is no end to the darkness in the Night Realm. There is no sun, no stars. The winds are bitterly cold, bearing dagger-sharp ice crystals. Facing into the wind is blinding. Fires flicker and die in the winds, but any light attracts the tormented and Shikome alike. The terrain is rocky and frozen black crystal that leech the energy of those who rest on them. Meadows and tree exist, but they are covered with dark crytal blades that tear at passersby.
@@ -2613,7 +2564,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Kyuden No Kakuri - The Castle of Kakuri is the stronghold of Emma-o.  It is situated at the top of an unassailable peak. The castle has elaborate obsidian walls and are a testament to his vanity and conceit.
             * Cave of Maidens - One of Emma-o's favored traps, the caves appear an oasis from the icy torment and occasionally a way out of Yomi. Edible fungi, shelter, and pretty prisoners can be found in the caves. The prisoners will dote on the visitors, but they will suddenly accuse them of theft, rape, murder, or worse. The visitors are beaten and driven from the caves. The power of the Shikome lets them trick their victims again and again with the lure of false hope. Amazingly, there is actually a chance that a cave is actually an exit from the Hell, the ultimate lure for lost souls.")
         "Hell: Pit of Iron and Salt"
-         (place
+         (base/place
           :name "Hell: Pit of Iron and Salt"
           :summary
            "* The Pit is a vast salt mine with seemingly no bottom. Iron citadels dot the inside of the pit, so the pit resembles a great gaping maw with the citadels resembling teeth. The landscape is unchanging and sterile. It is not a place of shock or disgust, but a hell of quiet oppression.
@@ -2621,7 +2572,7 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Ruler - Yama-king Wu Hua lives at the the bottom of the pit in a great iron city surrounded by six enormous barbed spires on which hundreds of bodies are impaled. Sputtering greenish fires can be seen from a distance that hint at grotesque rituals and obscene torments, but what exactly goes on inside is unknown.
             * Iron Citadels - The citadels are places of decadence and depravity. The souls are intermittently rotated from the mines to the citadel to act as slaves. Most mine workers view the change as desirable, but every soul chosen learns that this is not the case. In reality, the souls are treated worse here than anywhere else in the domain. Their suffering is more valuable to Wu Hua because it is so much more 'personal'.")
         "Hell: Wicked City"
-         (place
+         (base/place
           :name "Hell: Wicked City"
           :summary
            "* Wicked City is a place of endless urban blight stretching to the horizon in all directions. The perpetually overcast air is dark and thick with acrid vapors and burning smog. The stench of urine, vomit, blood, and excrement blows out of every alley. The streets and buildings are packed with the souls who mindlessly slave away in inescapable agonies and the power-mad demons who torment them.
@@ -2631,21 +2582,21 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
             * Feng Shui - The Yama-king Mikaboshi wants all those who see his city to understand his grand vision of a hellish metropolis. He undermines the known and comfortable trapping of the daily world to increase his subjects' feelings of dread and suffering, and his power over them. The feng shui of the Wicked city is beyond negative, bordering on the impossible. The entire landscape assaults the Chi of the city's victims. 'Poison Arrows' point everywhere, spiraling in directions that cause veritgo from the merest glance. Disharmony saps the will and impedes rational thought.
             * Gates - It is possible to travel to Wicked City from many of the worst urban hellholes in the mortal world. In these places of corruption and anguish, the [Veil] is weak. The door also swings both ways and denizens of this hell sometimes travel to the mortal realm in search of new souls."))
       :sectionmap
-       (sectionmap
+       (base/sectionmap
         :Pandemonium
-         (section
+         (base/section
           :name "Pandemonium"
           :reference "* Dante's Inferno"
           :summary "* Pandemonium (literally the Place of All Demons), the capital of Hell, the High Capital, of Satan and his Peers, built by the fallen angels at the suggestion of Mammon. The demons built it in about an hour, but it far surpassed all human palaces or dwellings. It was also reputed to be made of solid gold."
           :titles "Pandaemonium, Place of All Demons"
           :placemap
-           (placemap
+           (base/placemap
             "Council-Chamber of Pandæmonium"
-             (place
+             (base/place
               :name "Council-Chamber of Pandæmonium"
               :summary "* The Stygian Council debates here.")))
         :Phyrexia
-         (section
+         (base/section
           :name "Phyrexia"
           :reference
            "* We must improve! We must evolve! - Victor, Runeterra
@@ -2658,7 +2609,8 @@ to hold them.  Later Kratos seeks out the box to use the evils inside against Ar
               :titles "Father of Machines, Ineffable"))))))))
 
 (func chapter_story_ideas : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Story Ideas"
   :summary
    "* Accompany zealots on a pilgrimage to holy places.

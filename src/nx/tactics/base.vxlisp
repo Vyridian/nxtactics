@@ -2133,6 +2133,19 @@
    :unititemmap unititemmap))
  :doc "Returns a unitpower from tactics, skill key, level, ability keys, and item keys")
 
+(func unitskill<-tactics-key : unitskill
+ [tactics   : tactics
+  key       : string]
+ (unitskill<-tactics-key-lvl-abilities-items
+  tactics key 0 (empty stringlist) (empty stringlist)))
+
+(func unitskill<-tactics-key-lvl : unitskill
+ [tactics   : tactics
+  key       : string
+  lvl       : int]
+ (unitskill<-tactics-key-lvl-abilities-items
+  tactics key lvl (empty stringlist) (empty stringlist)))
+
 (func unitskill<-tactics-key-lvl-abilities : unitskill
  [tactics   : tactics
   key       : string
@@ -2186,6 +2199,23 @@
   items     : stringlist]
  (unitskill<-tactics-key-lvl-abilities-items
   tactics key level (empty stringlist) items))
+
+(func unitskilllist<-tactics-keys : unitskilllist
+ [tactics : tactics
+  keys    : stringlist]
+ (list<-list : unitskilllist
+  keys
+  (fn : unitskill
+   [key : string]
+   (unitskill<-tactics-key tactics key)))
+ :doc "Returns a unitskillmap from tactics and skillkeys")
+
+(func unitskillmap<-tactics-keys : unitskillmap
+ [tactics : tactics
+  keys    : stringlist]
+ (unitskillmap<-unitskilllist
+  (unitskilllist<-tactics-keys tactics keys))
+ :doc "Returns a unitskillmap from tactics and skillkeys")
 
 (func unitskillmap<-unitskilllist : unitskillmap
  [unitskilllist : unitskilllist :...]

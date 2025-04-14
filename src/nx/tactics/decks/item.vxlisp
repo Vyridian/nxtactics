@@ -22,6 +22,21 @@
    :name "Ammo: Shotgun"
    :image "images/cards/item-ammo-shotgun.svg")
   (base/item
+   :name "Armor: Chain Mail"
+   :reference
+    "* Shark expert and underwater filmmaker Valerie Taylor was among the first to develop and test shark suits in 1979 while diving with sharks.
+     * Mail is widely used in industrial settings as shrapnel guards and splash guards in metal working operations.
+     * Electrical applications for mail include RF leakage testing and being worn as a Faraday cage suit by tesla coil enthusiasts and high voltage electrical workers."
+   :summary
+    "* Chain mail is a type of armor consisting of small metal rings linked together in a pattern to form a mesh. It was generally in common military use between the 3rd century BC and the 16th century AD in Europe, and longer in Asia and North Africa."
+   :titles "Chainmail, Mail, Byrnie, Hauberk"
+   :armor "1mm")
+  (base/item
+   :name "Armor: Chain Shirt"
+   :summary "* [Hit Location]: Shoulders Chest Abdomen Vitals"
+   :titles "Chainmail, Mail"
+   :armor "1mm")
+  (base/item
    :name "Armor: Leather Cuirass"
    :titles "Leather Body Armor"
    :image "images/cards/item-armor-leathercuirass.svg"

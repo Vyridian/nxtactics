@@ -25,11 +25,11 @@ export default class nx_tactics_base_test {
       vx_test.t_testcoveragesummary,
       "testpkg",   "nx/tactics/base", 
       "constnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 90), 
-      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 110, ":total", 294), 
-      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 107), 
+      "docnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 37, ":tests", 112, ":total", 298), 
+      "funcnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 1, ":tests", 2, ":total", 111), 
       "bigospacenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
       "bigotimenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 100, ":tests", 0, ":total", 0), 
-      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 294), 
+      "totalnums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 2, ":total", 298), 
       "typenums", vx_core.f_new_from_type(vx_test.t_testcoveragenums, ":pct", 0, ":tests", 0, ":total", 97)
     )
     return output
@@ -339,9 +339,13 @@ export default class nx_tactics_base_test {
           "unitpower<-tactics-key-lvl-intensity-abilities", 0,
           "unitpower<-tactics-key-lvl-intensity-abilities-items", 0,
           "unitpowermap<-unitpowerlist", 0,
+          "unitskill<-tactics-key", 0,
+          "unitskill<-tactics-key-lvl", 0,
           "unitskill<-tactics-key-lvl-abilities", 0,
           "unitskill<-tactics-key-lvl-abilities-items", 0,
           "unitskill<-tactics-key-lvl-items", 0,
+          "unitskilllist<-tactics-keys", 0,
+          "unitskillmap<-tactics-keys", 0,
           "unitskillmap<-unitskilllist", 0,
           "weaknessmap<-weaknesslist", 0
         )

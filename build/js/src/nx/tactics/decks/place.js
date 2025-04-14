@@ -63,7 +63,7 @@ export default class nx_tactics_decks_place {
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Temple", ":image", "images/cards/place-temple.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Trading Post", ":image", "images/cards/place-tradingpost.svg"),
       vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Wall: Rock", ":image", "images/cards/place-wall-rock.svg"),
-      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Sandleborg", ":summary", "* A small settlement nestled near Mt. Murin.\n* It was established for its Sandlewood trees. Transporting the wood is difficult, so the settlement is more focused on wheat farming and breads.")
+      vx_core.f_new({"any-1": nx_tactics_base.t_place}, ":name", "Sandalstadt", ":summary", "* A small settlement nestled near the Sandal Forest and Mt. Murin.\n* It was established to harvest Sandalwood trees and the oils they produces. Transporting the wood is difficult, so the settlement is more focused on trading oils, creams, and perfumes. Local wheat farming, breads, and goat and sheep herding make up the main diet.")
     )
     return output
   }

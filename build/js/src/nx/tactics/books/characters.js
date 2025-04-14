@@ -101,12 +101,11 @@ export default class nx_tactics_books_characters {
               ":name",
               "Bard",
               ":summary",
-              "* There is magic in music, song, and story.  The Bard has learned that a story properly told can make a frightened\nman brave or a starving man strong.  The rhythm of his speech, the cadence of his tone, and the lilt of the melody\nall weave a pattern of the skilled Bard's choosing.\n* Bardic training allows a Bard to remember and recite almost every story or song they have heard.  For this\nreason, Bards are vast storehouses of knowledge, but their information often blurs reality and fiction.\n* Bards are generally wanderers, traveling from town to town spreading ideas (creating dissent or harmony)\nwherever they go.\n* Preferred Skills: [Performance]:Music, [Deception], [Persuasion], [Knowledge], [Stealth]",
+              "* There is magic in music, song, and story. The Bard has learned that a story properly told can make a frightened man brave or a starving man strong. The rhythm of his speech, the cadence of his tone, and the lilt of the melody all weave a pattern of the skilled Bard's choosing.\n* Bardic training allows a Bard to remember and recite almost every story or song they have heard. For this reason, Bards are vast storehouses of knowledge, but their information often blurs reality and fiction.\n* Bards are generally wanderers, traveling from town to town spreading ideas (creating dissent or harmony) wherever they go.\n* Preferred Skills: [Performance]:Music, [Deception], [Persuasion], [Knowledge], [Stealth]",
               ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Stealth",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Stealth")
+              nx_tactics_base.f_unitskillmap_from_tactics_keys(
+                nx_tactics_base.t_tactics,
+                "Stealth"
               )
             ),
             ":Charlatan",

@@ -265,9 +265,6 @@
    :summary "* Make Shoes"
    :titles "Cobbler")
   (base/ability
-   :name "Cold Resistant"
-   :summary "* [Passive] - Armor:+1 vs. Cold")
-  (base/ability
    :name "Combat Sense")
   (base/ability
    :name "Commanding Presense")
@@ -295,10 +292,6 @@
    :name "Cooping"
    :summary "* Make Sealable Barrel"
    :titles "Cooper")
-  (base/ability
-   :name "Corrosion Resistant"
-   :summary
-    "* [Passive] - Armor:+1 vs. Corrosive Agents")
   (base/ability
    :name "Create Chimera"
    :summary "A Chimera is an imaginary creation. It exists only to the user, though those with magical abilities, young children and the mentally impaired may see them. They only can affect those who can see them.")
@@ -495,8 +488,38 @@
     "* [Skill]: [Mental Combat] vs. [Spirit]."
    :titles "Mind Whip")
   (base/ability
-   :name "Electrical Resistant"
-   :summary "* [Passive] - Armor:+1 vs. Electricity")
+   :name "Elder Tongue"
+   :summary
+    "Prefixes
+     * Alf - Elf
+     * Dverg - Dwarf
+     * Hel - Dead
+     * Jotun - Giant
+     * Man - Human
+     * Muspel - Fire
+     * Nifl - Mist
+     * Svart - Dark
+     * Yo - Demonic
+     Suffixes
+     * Ar - Race
+     * Heim - Home
+     * Ki - Soul
+     * Ma - Creature
+     * Traum - Dream
+     Words
+     * Alfar - Elvish Race
+     * Albtraum - Elf Dream (Nightmare)
+     * Alfheim - Land of Elves
+     * Dvergar - Dwarven Race
+     * Helar - Restless Dead
+     * Helheim - Land of the dead
+     * Manar - Human Race
+     * Manheim - Land of Men
+     * Muspelheim - Land of Fire
+     * Niflheim - Land of Ice
+     * Svartalfheim - Land of Dark Elves
+     * Yoki - Demon Soul
+     * Yoma - Demon")
   (base/ability
    :name "Electromagnetic Pulse")
   (base/ability
@@ -504,16 +527,15 @@
    :summary
     "Fluent in the Elvish/Alfar language")
   (base/ability
-   :name "Energy Resistant"
-   :summary
-    "* [Damage]: [+2 Armor] if attack is an [Energy Weapon]
-     * Only 1 Hardened vs. ability may be taken")
-  (base/ability
    :name "Engineering Genius")
   (base/ability
    :name "English"
    :summary
     "Fluent in the English language")
+  (base/ability
+   :name "Entanglement"
+   :summary "Reduces Movement"
+   :titles "Tanglers")
   (base/ability
    :name "Environmental Containment"
    :summary "* Suit is sealed against chemical and biological weapons except corrosive ones. It is also water-proof.")
@@ -574,11 +596,6 @@
    :summary
     "* [Reaction]: [+1 Defense]
      * [Action]: [+1 Attack], if you used this ability to [React] last turn.")
-  (base/ability
-   :name "Fire Resistant"
-   :summary
-    "* [Damage]: [+2 Armor] if attack produces [Fire] tokens
-     * Only 1 Hardened vs. ability may be taken")
   (base/ability
    :name "Fishing"
    :summary
@@ -666,6 +683,20 @@
    :name "Hunter's Mark"
    :summary
     "* [Continuous]: Place a mark on target. Initiative:+1 vs. marked target.")
+  (base/ability
+   :name "Hyperdrive"
+   :image "Units/SpaceAndTime/Hyperspace.jpg"
+   :titles
+    "FTL Drive, Gravity Drive, Gravity Lens, Subspace Drive, T-Drive, Tachyon Drive, Warp Drive"
+   :summary
+    "* Faster than light travel can be accomplished by warping space into a Wormhole/Black hole, dropping out of normal space and travelling through the parallel universe called Hyperspace/Tachyon Space where physical laws are not bound by the relationship between mass and the speed of light, and finally returning to normal space by creating another space warp.
+     * Hyperspace/Tachyon Space - Tachyon Space, like other dimensions is at right angles to our existing 3 dimension. In Hyperspace, time and distance have different meanings, all particles are tachyons, and the speed of light is an absolute minimum speed instead of a maximum. Travelling through Hyperspace is exceptionally hazardous. In fact, any deviation from the calculated route cause the corridor to collapse leaving one stranded in Hyperpace forever with no way to calculate a return.
+     * Calculating a Route - Once a destination is chosen, complex calculations must be performed to calculate a direct route from the current location to the destination through the shifting reality of Hyperspace. A successful route will be a 'straight' line through Hyperspace. Proximity to a gravity well makes these calculations next to impossible. Typically, all ship computer resources are required for this calculation and the larger the ship fewer the available routes and therefore the greater the complexity. Ships may only enter and exit hyperspace at the edge of a solar system and must use conventional sub light drives within the system. A day or more at sub-light speed is therefore required to reach or leave a planet in an inner solar system. Route calculation time is roughly light years x tons / 10secs e.g. 4 light years x 100 tons / 10 = 40sec.
+     * Hyperspace Corridor - Once calculated, the ship must meet the speed defined by the calculation while modulating the Hyperdrive energy signature to match the bridge to Hyperspace. If all goes well, the vast energies in Tachyon Space will form a corridor directly to the destination. Errors in any of the steps usually involve intense gravitional shearing forces that will at best cause damage to the Hyperdrive and leave the traveller stranded in deep space, or worse, Hyperspace.
+     * Travel in Hyperspace - Hyperspace travel is typically a boring affair. The Hyperspace corridor carries the ship to its destination, so no manuevering is needed. The time spent in Hyperspace varies, but is usually proportional to the distance. Transit time is roughly 2 hours per light year travelled (e.g. 4 light years x 2 = 8hours)
+     * Tachyon Doppler Effect - When the Hyperspace Corridor is created, both ends of the corridor will start leaking Tachyons which can be detected by sensitive instruments. The amount of Tachyons increases with the size of the ship, the distance travelled and the closer the time of arrival.
+     * Tachyon Relay Network - Satellites at the edge of stellar systems use Hyperspace Corridors to beam tranmissions through Hyperspace to their opposites in other systesm. Since these communications have negligible mass, the calculations are nearly instantaneous though the same transit times apply.
+     * History - Imaginary Space, I-Space - While studying fusion plant efficiency using various algorithms, a surprising discovery was made: very rarely and seemingly at random, the plant would produce a tiny tachyon burst. After decades of study, a pattern began to emerge along with a shocking discovery: only algorithms using imaginary numbers could trigger a burst and a small amount of particles were actually disappearing during the event. Where the particles were going became the primary focus of astrophysics from then on. Eventually a hypothesis gathered momentum. The particles were leaving real space and traveling along trajectories plotted through so called imaginary space. This implied that the destination of the particles could be predicted. After much trial and error another breakthrough: a second tachyon burst moments after the first and many kilometers away. The particles had returned. Faster than light travel was possible. The implications for communications were immediately obvious, but could something larger make the trip? Research was slow because increased mass meant increased complexity. The power and computational needs were high but not unachievable. Only a decade later the first successful test craft made the trip. A decade later commercial hyperdrives became available. A decade later they were affordable on even modest starships.")
   (base/ability
    :name "Imaginary Friend"
    :reference
@@ -779,6 +810,9 @@
     "* Near instantaneous travel in a flash of lightning.
      * Level determines distance travelled.")
   (base/ability
+   :name "Line Swinging"
+   :titles "Web Swinging")
+  (base/ability
    :name "Linguistic Genius")
   (base/ability
    :name "Living Nightmare"
@@ -795,11 +829,6 @@
   (base/ability
    :name "Lure"
    :reference "Everquest Pulling")
-  (base/ability
-   :name "Magnetic Resistant"
-   :summary
-    "* Reduces the chance that a magnetic attachment can hold on the armor (assuming it is metallic).
-     * [Passive] - Armor:+1 vs. Magnetism")
   (base/ability
    :name "Malleate"
    :summary "* Make target soft and malleable like clay.")
@@ -885,11 +914,6 @@
   (base/ability
    :name "Photographic Memory")
   (base/ability
-   :name "Pierce Resistant"
-   :summary
-    "* [Damage]: [+2 Armor] if attack is a [Projectile]
-     * Only 1 Hardened vs. ability may be taken")
-  (base/ability
    :name "Piercing Shot"
    :summary
     "* [Skill]: [Ranged]
@@ -904,11 +928,6 @@
    :summary
     "* By exercising one's imagination, a soft barrier can provide real defense but only for the Dreamer.
      * [Action]: Any material may be chosen to provide [Skill] defense for the user.")
-  (base/ability
-   :name "Plasma Resistant"
-   :summary
-    "* Detects and disrupts the magnetic bottle surrounding plasma rounds causing them to detonate too early.
-     * [Passive] - Armor:+1 vs. Plasma")
   (base/ability
    :name "Plumbing"
    :titles "Plumber")
@@ -942,10 +961,6 @@
    :summary "* Poisonous to the touch")
   (base/ability
    :name "Poisoning")
-  (base/ability
-   :name "Poison Tolerance"
-   :reference
-    "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an immunity to iocane powder. - Princess Bride")
   (base/ability
    :name "Polymorph"
    :summary
@@ -990,9 +1005,6 @@
   (base/ability
    :name "Prepare Poison")
   (base/ability
-   :name "Pressure Resistant"
-   :summary "* [Passive] - Armor:+1 vs. Pressure and Impact")
-  (base/ability
    :name "Psychic Duel"
    :reference
     "Professor X vs. Shadow King")
@@ -1022,9 +1034,6 @@
    :summary
     "* By activating this system, the armor emits powerful radar white noise.
      * [Continuous Action] - [-Range] Radar sensors detection to any target within range.")
-  (base/ability
-   :name "Radiation Resistant"
-   :summary "* [Passive] - Armor:+1 vs. Radiation")
   (base/ability
    :name "Rally"
    :summary
@@ -1063,7 +1072,50 @@
    :summary
     "* [Power]: [Healing]")
   (base/ability
-   :name "Resist: Electricity")
+   :name "Resist: Cold"
+   :summary "* [Passive] - Armor:+1 vs. Cold")
+  (base/ability
+   :name "Resist: Corrosion"
+   :summary
+    "* [Passive] - Armor:+1 vs. Corrosive Agents")
+  (base/ability
+   :name "Resist: Electricity"
+   :summary "* [Passive] - Armor:+1 vs. Electricity")
+  (base/ability
+   :name "Resist: Energy"
+   :summary
+    "* [Damage]: [+2 Armor] if attack is an [Energy Weapon]
+     * Only 1 Hardened vs. ability may be taken")
+  (base/ability
+   :name "Resist: Fire"
+   :summary
+    "* [Damage]: [+2 Armor] if attack produces [Fire] tokens
+     * Only 1 Hardened vs. ability may be taken")
+  (base/ability
+   :name "Resist: Magnetism"
+   :summary
+    "* Reduces the chance that a magnetic attachment can hold on the armor (assuming it is metallic).
+     * [Passive] - Armor:+1 vs. Magnetism")
+  (base/ability
+   :name "Resist: Piercing"
+   :summary
+    "* [Damage]: [+2 Armor] if attack is a [Projectile]
+     * Only 1 Hardened vs. ability may be taken")
+  (base/ability
+   :name "Resist: Plasma"
+   :summary
+    "* Detects and disrupts the magnetic bottle surrounding plasma rounds causing them to detonate too early.
+     * [Passive] - Armor:+1 vs. Plasma")
+  (base/ability
+   :name "Resist: Poison"
+   :reference
+    "...it was your cup that was poisoned.  They were both poisoned.  I spent the last few years building up an immunity to iocane powder. - Princess Bride")
+  (base/ability
+   :name "Resist: Pressure"
+   :summary "* [Passive] - Armor:+1 vs. Pressure and Impact")
+  (base/ability
+   :name "Resist: Radiation"
+   :summary "* [Passive] - Armor:+1 vs. Radiation")
   (base/ability
    :name "Restful Sleep"
    :summary
