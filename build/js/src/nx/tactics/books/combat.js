@@ -356,7 +356,7 @@ export default class nx_tactics_books_combat {
           ":name",
           "Shields",
           ":itemmap",
-          nx_tactics_base.f_itemmap_from_tactics_keys(tactics, "Shield: Buckler", "Shield: Heater", "Shield: Kite", "Shield: Legionary", "Shield: Round", "Shield: Tower", "Shield: Wicker")
+          nx_tactics_base.f_itemmap_from_tactics_keys(tactics, "Shield", "Shield: Buckler", "Shield: Heater", "Shield: Kite", "Shield: Legionary", "Shield: Tower", "Shield: Wicker")
         ),
         ":Axes",
         vx_core.f_new(

@@ -1872,9 +1872,8 @@ x +1DMG vs. Crouching."
      :Misdirection
       (base/ability
        :name "Misdirection")
-     "Pick Pockets"
-      (base/ability
-       :name "Pick Pockets")
+     "Pick Pocket"
+      (base/ability<-tactics-key tactics "Pick Pocket")
      "Sleight of Hand"
       (base/ability
        :name "Sleight of Hand"
@@ -2975,9 +2974,8 @@ x +1DMG vs. Crouching."
          * The secret to this skill is to pick the most inappropriate sound at the most inappropriate time.
          * The result is extremely distracting and will cancel other effects based on sound including other Communication abilities."
        :titles "Cacaphony")
-     :Disguise
-      (base/ability
-       :name "Disguise")
+     "Disguise"
+      (base/ability<-tactics-key tactics "Disguise")
      :Fanfare
       (base/ability
        :name "Fanfare"
@@ -3247,13 +3245,7 @@ x +1DMG vs. Crouching."
        :name "Wing Over"
        :reference
         "Performed by an experienced flyer, this maneuver can surprise a pursuer by quickly reversing on them. If you have the distance lead in a chase, you can use this to convert from a defensive posture to an offensive one. The trick is not to get shot up when you are reversing."
-       :titles "Immelmann Turn, Retournment")
-     "Winged Flight"
-      (base/ability
-       :name "Winged Flight"
-       :summary
-        "* If the unit has wings, it must have this ability or fly at a penalty.
-         * If the unit grew up with wings, this ability is assumed."))
+       :titles "Immelmann Turn, Retournment"))
    :specialtymap
     (base/specialtymap<-tactics-keys
      tactics

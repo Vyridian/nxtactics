@@ -2053,17 +2053,11 @@
    (:name unit)))
  :doc "Returns a unitmap from a given unitlist")
 
-(func unitpowermap<-unitpowerlist : unitpowermap
- [unitpowerlist : unitpowerlist :...]
- (map<-list : unitpowermap
-  unitpowerlist
-  (fn : string
-   [unitpower : unitpower]
-   (let : string
-    [power : power := (:power unitpower)
-     name : string := (:name power)]
-   name)))
- :doc "Returns a unitpowermap from a unitpowerlist")
+(func unitpower<-tactics-key : unitpower
+ [tactics   : tactics
+  key       : string]
+ (unitpower<-tactics-key-lvl-abilities-items
+  tactics key 0 (empty stringlist) (empty stringlist)))
 
 (func unitpower<-tactics-key-lvl-abilities : unitpower
  [tactics   : tactics
@@ -2132,6 +2126,35 @@
    :unitabilitymap unitabilitymap
    :unititemmap unititemmap))
  :doc "Returns a unitpower from tactics, skill key, level, ability keys, and item keys")
+
+(func unitpowerlist<-tactics-keys : unitpowerlist
+ [tactics : tactics
+  keys    : stringlist :...]
+ (list<-list : unitpowerlist
+  keys
+  (fn : unitpower
+   [key : string]
+   (unitpower<-tactics-key tactics key)))
+ :doc "Returns a unitpowermap from tactics and powerkeys")
+
+(func unitpowermap<-tactics-keys : unitpowermap
+ [tactics : tactics
+  keys    : stringlist :...]
+ (unitpowermap<-unitpowerlist
+  (unitpowerlist<-tactics-keys tactics keys))
+ :doc "Returns a unitpowermap from tactics and powerkeys")
+
+(func unitpowermap<-unitpowerlist : unitpowermap
+ [unitpowerlist : unitpowerlist :...]
+ (map<-list : unitpowermap
+  unitpowerlist
+  (fn : string
+   [unitpower : unitpower]
+   (let : string
+    [power : power := (:power unitpower)
+     name : string := (:name power)]
+   name)))
+ :doc "Returns a unitpowermap from a unitpowerlist")
 
 (func unitskill<-tactics-key : unitskill
  [tactics   : tactics
@@ -2202,17 +2225,17 @@
 
 (func unitskilllist<-tactics-keys : unitskilllist
  [tactics : tactics
-  keys    : stringlist]
+  keys    : stringlist :...]
  (list<-list : unitskilllist
   keys
   (fn : unitskill
    [key : string]
    (unitskill<-tactics-key tactics key)))
- :doc "Returns a unitskillmap from tactics and skillkeys")
+ :doc "Returns a unitskilllist from tactics and skillkeys")
 
 (func unitskillmap<-tactics-keys : unitskillmap
  [tactics : tactics
-  keys    : stringlist]
+  keys    : stringlist :...]
  (unitskillmap<-unitskilllist
   (unitskilllist<-tactics-keys tactics keys))
  :doc "Returns a unitskillmap from tactics and skillkeys")

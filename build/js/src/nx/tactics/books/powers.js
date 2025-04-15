@@ -73,8 +73,10 @@ export default class nx_tactics_books_powers {
           ":powermap",
           vx_core.f_new(
             {"any-1": nx_tactics_base.t_powermap},
-            ":Hanger",
-            vx_core.f_new({"any-1": nx_tactics_base.t_power}, ":name", "Hanger", ":summary", "* A special ability of vehicles to carry other vehicles.\n* A unit may carry 1 small unit (1 space) per space it takes up.\n* Action: Move 1 unit into or out of the hanger. The unit may not Move or take any Action the turn it moves into or out of the hanger.\n* Ship's Boat\n* Air Raft\n* Starfighter\n* Starbomber\n* Repair Drones\n* Mobile Armor", ":titles", "Vehicle Bay"),
+            "Combiner",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Combiner"),
+            "Hanger",
+            nx_tactics_base.f_power_from_tactics_key(tactics, "Hanger"),
             "Mission Section",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_power},
@@ -91,10 +93,6 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Boarding Equipment", ":titles", "Grapple Launchers, Magnetic Mooring Lines"),
                 "Cargo Hold",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cargo Hold"),
-                "Catapult Launcher",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Catapult Launcher", ":summary", "*"),
-                "Catapult Hook Capture",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Catapult Hook Capture"),
                 "Cloaking System",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Cloaking System"),
                 "Cryogenic Chamber",
@@ -105,8 +103,6 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Centrifuge Chamber"),
                 "Climbing Apparatus",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Climbing Apparatus"),
-                "Diving Wings",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Diving Wings", ":summary", "+1 when pulling out of a dive"),
                 "Easy to Modify",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Easy to Modify"),
                 ":ECM",
@@ -117,18 +113,12 @@ export default class nx_tactics_books_powers {
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Ejection System"),
                 "Escape Pods",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Escape Pods"),
-                ":Factory",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Factory"),
                 "Fuel Scoop",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fuel Scoop"),
-                ":Glider",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Glider", ":summary", "* Can glide without using power and may gain altitude when flying over hot air currents."),
                 "Gun Ports",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Gun Ports", ":summary", "Allows crew to use small arms fire without sacrificing armor protection."),
                 "Missile Decoys",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Missile Decoys", ":titles", "Chaff Dispenser, Flares"),
-                "Launch Catapult",
-                vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Launch Catapult", ":summary", "* Launching vehicle may begin move at up to full speed without using fuel."),
                 "Living Quarters",
                 vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Living Quarters", ":summary", "* Long range and luxury vessels offer more than the minimum crew quarters. This includes private rooms, mess, recreation areas, etc.\n* The larger the living space, the higher quality clientele may be brought aboard and the longer the ships range before shore leave is needed.\n* Includes Mess and Lounges"),
                 "Luxury Facilities",
@@ -338,14 +328,14 @@ export default class nx_tactics_books_powers {
           ":name",
           "Elements",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Air", "Cold", "Earth", "Elecricity", "Fire", "Water", "Weather")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Air", "Cold", "Earth", "Electricity", "Fire", "Water", "Weather")
         ),
         vx_core.f_new(
           {"any-1": nx_tactics_base.t_section},
           ":name",
           "Energy and Forces",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Dimensional", "Energy Manipulation", "Explosive", "Forces", "Gravity", "Heat", "Inertia", "Light", "Magnetism", "Radiation", "Sound", "Temporal", "Vibration")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Dimensional", "Energy Manipulation", "Explosive", "Forces", "Gravity", "Heat", "Inertia", "Light", "Magnetism", "Radiation", "Sound", "Time", "Vibration")
         )
       )
     )
@@ -505,7 +495,7 @@ export default class nx_tactics_books_powers {
           ":name",
           "Travel",
           ":powermap",
-          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Movement: Dig", "Movement: Dimensional", "Movement: Flight", "Movement: Ground", "Movement: Interstellar", "Movement: Space", "Movement: Teleportation", "Movement: Time", "Movement: Water")
+          nx_tactics_base.f_powermap_from_tactics_keys(tactics, "Dimensional", "Flight", "Movement: Dig", "Movement: Ground", "Movement: Interstellar", "Movement: Space", "Movement: Water", "Teleportation", "Time Travel")
         )
       )
     )

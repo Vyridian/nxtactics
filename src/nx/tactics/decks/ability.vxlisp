@@ -395,6 +395,12 @@
      0 Damage
      -1 Move")
   (base/ability
+   :name "Disguise"
+   :reference
+    "* I am everyWHERE! I am everyONE! - Leblanc, Runeterra"
+   :summary
+    "* [Skill]: [Performance]")
+  (base/ability
    :name "Disintegrate"
    :summary
     "* Causes wounds that are difficult to heal
@@ -914,6 +920,10 @@
   (base/ability
    :name "Photographic Memory")
   (base/ability
+   :name "Pick Pocket"
+   :summary
+    "* [Skill]: [Deception]")
+  (base/ability
    :name "Piercing Shot"
    :summary
     "* [Skill]: [Ranged]
@@ -945,6 +955,13 @@
    :name "Poison Spray")
   (base/ability
    :name "Poison Sting")
+  (base/ability
+   :name "Poison Tolerance"
+   :reference
+    "* B: To think, all that time it was your cup that was poisoned. M: They were both poisoned. I spent the last few years building up an immunity to Iocane powder. - Buttercup, Man In Black Princess Bride"
+   :summary
+    "* [Skill]: [Assasination]
+     * Become resistant to a particular poison by taking small amounts of it over a long period.")
   (base/ability
    :name "Poison Touch")
   (base/ability

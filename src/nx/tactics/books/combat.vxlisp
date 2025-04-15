@@ -732,11 +732,11 @@
       :itemmap
        (base/itemmap<-tactics-keys
         tactics
+        "Shield"
         "Shield: Buckler"
         "Shield: Heater"
         "Shield: Kite"
         "Shield: Legionary"
-        "Shield: Round"
         "Shield: Tower"
         "Shield: Wicker"))
     :Axes

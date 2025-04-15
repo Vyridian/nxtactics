@@ -8,12 +8,13 @@
   :image "GiantMonsters.jpg"
   :chaptermap
    (base/chaptermap<-chapterlist
-    (chapter_overview)
-    (chapter_daikaiju)
-    (chapter_giant_robots)
+    (chapter_overview tactics)
+    (chapter_daikaiju tactics)
+    (chapter_giant_robots tactics)
    )))
 
 (func chapter_overview : base/chapter
+ [tactics : base/tactics]
  (base/chapter
   :name "Overview"
   :sectionmap
@@ -22,6 +23,7 @@
      :name "Why Tactics:Giant Monsters?"))))
 
 (func chapter_daikaiju : base/chapter
+ [tactics : base/tactics]
  (base/chapter
   :name "Daikaiju"
   :sectionmap
@@ -58,9 +60,7 @@
           :name "Dimension Tide"
           :image "Daikaiju/DimensionTide.png"
           :summary
-           "* Creates a dimensional hole the size of a building.  For the next few seconds, all matter nearby is sucked into
-the hole (presumably never to return).  No one knows where the matter goes, but it is known that after the
-dimension tide passed a dimensional disturbance remained through which a creature passed onto our world.")
+           "* Creates a dimensional hole the size of a building. For the next few seconds, all matter nearby is sucked into the hole (presumably never to return). No one knows where the matter goes, but it is known that after the dimension tide passed a dimensional disturbance remained through which a creature passed onto our world.")
         "Type 66 Maser Cannon"
          (base/unit
           :name "Type 66 Maser Cannon"
@@ -105,15 +105,15 @@ dimension tide passed a dimensional disturbance remained through which a creatur
           :image "Daikaiju/GameraToken.png"
           :summary
            "* Flight at Mach 3.5 using rockets contained in limbs
-* Plasma fireballs
-* Elbow claws
-* Can open plates in his chest and fire a Mana Blast
-* Can swim at 180 knots
-* Burrowing ability
-* Able to absorb and manipulate fire
-* Can draw more power by establishing a link with a human host
-* Orign - Believed to be over 150 million years old and created by an ancient civilization as a guardian of the Earth.
-* Armor - So tough that it survived the shock of a nuclear weapon."
+            * Plasma fireballs
+            * Elbow claws
+            * Can open plates in his chest and fire a Mana Blast
+            * Can swim at 180 knots
+            * Burrowing ability
+            * Able to absorb and manipulate fire
+            * Can draw more power by establishing a link with a human host
+            * Orign - Believed to be over 150 million years old and created by an ancient civilization as a guardian of the Earth.
+            * Armor - So tough that it survived the shock of a nuclear weapon."
           :mass "120tons"
           :height "80m")
         "Mecha King Ghidorah"
@@ -127,14 +127,16 @@ dimension tide passed a dimensional disturbance remained through which a creatur
          (base/unit
           :name "Mechagodzilla"
           :image "Daikaiju/MechaGodzillaToken.png"
-          :summary "Flight at mach 2; Mega-Buster ray from mouth; paralysis missiles; Super Heat Shield NT-20, laser beam eyes; Plasma Grenade that fires energy absorbed by the Super Heat Shield; 'G-Crusher;' shock anchors and cables; dual Garuda shoulder mounted laser cannons"
+          :summary
+           "Flight at mach 2; Mega-Buster ray from mouth; paralysis missiles; Super Heat Shield NT-20, laser beam eyes; Plasma Grenade that fires energy absorbed by the Super Heat Shield; 'G-Crusher;' shock anchors and cables; dual Garuda shoulder mounted laser cannons"
           :mass "150ktons"
           :length "120m")
         :Mogera
          (base/unit
           :name "Mogera"
           :image "Daikaiju/MogeraToken.png"
-          :summary "Flight at mach 1; can travel through space at mach 44; able to fire Plasma Laser Cannons from eyes; equipped with a rotating drill for a nose; able to fire a beam from its chest; can launch Spiral Grenade missiles from its hands; has treads under feet for faster movement on land; able to fire lasers from its two hands; can separate into the Star Falcon and Land Moguera"
+          :summary
+           "Flight at mach 1; can travel through space at mach 44; able to fire Plasma Laser Cannons from eyes; equipped with a rotating drill for a nose; able to fire a beam from its chest; can launch Spiral Grenade missiles from its hands; has treads under feet for faster movement on land; able to fire lasers from its two hands; can separate into the Star Falcon and Land Moguera"
           :mass "160ktons"
           :height "120m")
         :Mothra
@@ -248,12 +250,12 @@ dimension tide passed a dimensional disturbance remained through which a creatur
             * Joints operate by pressurized gas.
             * Communicates via electromagnetic waves
             * Launches seeds into orbit by generating a high oxygen area and then detonating it. Flight at mach 1; sharp horn, which can open to fire a beam; horn generates a tremendous amount of heat after firing; can burrow and travel, underground, at a speed of 50 kilometers an hour; able to produce up to 100 Symbiotic Legion an hour; can create a magnetic force shield to protect the front of its body using the ten smaller legs near its head; if its horn is destroyed Legion can fire off strands of energy that are able to pierce and burn objects
-Eye: Legion can see electro-magnetic activity.
-Voice: The Legion Mother's microwave blast, which eminates from her huge tusks is powerful enough to vaporize a type-90 tank with one blow.
-Ovaries: Legion's ovaries house a hive of countless soldiers that can be ordered to attack instantly. It is estimated that she can reproduce approximately 100 soldiers every hour.
-Appendages: Legion's many appendages are used in both battle and burrowing; while they quickly assist in breaking up even the toughest earth, these deadly arms were seen puncturing Gamera's shell.
-Armored Exoskeleton: Made of a hard silicone-like resin, Legion's exo-skeleton is not only an insulator but protects her body from attacks.
-Interference wave-blast: Generated in the shape of a parabola, it acts as a shield. Legion was seen disabling the automatic targeting system of missles with this abilaity."
+            Eye: Legion can see electro-magnetic activity.
+            Voice: The Legion Mother's microwave blast, which eminates from her huge tusks is powerful enough to vaporize a type-90 tank with one blow.
+            Ovaries: Legion's ovaries house a hive of countless soldiers that can be ordered to attack instantly. It is estimated that she can reproduce approximately 100 soldiers every hour.
+            Appendages: Legion's many appendages are used in both battle and burrowing; while they quickly assist in breaking up even the toughest earth, these deadly arms were seen puncturing Gamera's shell.
+            Armored Exoskeleton: Made of a hard silicone-like resin, Legion's exo-skeleton is not only an insulator but protects her body from attacks.
+            Interference wave-blast: Generated in the shape of a parabola, it acts as a shield. Legion was seen disabling the automatic targeting system of missles with this abilaity."
           :mass "600tons"
           :height "140m")
         :Megaguirus
@@ -266,7 +268,8 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
           :length "50m"))))))
 
 (func chapter_giant_robots : base/chapter
- (chapter
+ [tactics : base/tactics]
+ (base/chapter
   :name "Giant Robots"
   :sectionmap
    (sectionmap
@@ -440,22 +443,8 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 * Reitou Beam - Mazinger unleashes a blast of intense cold; this attack was alternately fired from the mouth grill or the spikes on the sides of Mazinger's head.
                 * Finger Missile - A rarely-used attack where Mazinger fires the last joint of its fingers as miniature missiles."
               :level "5")))
-        :Raideen
-         (base/unit
-          :name "Raideen"
-          :image "Daikaiju/Raideen.png"
-          :summary "Flight: Mach 10 in God Bird form"
-          :mass "350tons"
-          :height "52m"
-          :unitskillmap
-           (base/unitskillmap
-            :Gunnery
-             (base/unitskill
-              :name "Gunnery"
-              :summary
-               "* God Missile
-                * God Arrow"
-              :level "5")))
+        "Raideen"
+         (base/unit<-tactics-key tactics "Raideen")
         :Voltron
          (base/unit
           :name "Voltron"
@@ -480,4 +469,8 @@ Interference wave-blast: Generated in the shape of a parabola, it acts as a shie
                 * Foot Missile - Missiles fired from the mouths of the Blue and Yellow Lions.
                 * Four Lion Attack - The 'Lion Head Attack' 100-Ton Punch.
                 * Grand Fire - A stream of flames fired from the mouths of the Blue and Yellow Lions"
-              :level "5"))))))))
+              :level "5"))
+          :unitpowermap
+           (base/unitpowermap<-tactics-keys
+            tactics
+            "Combiner")))))))

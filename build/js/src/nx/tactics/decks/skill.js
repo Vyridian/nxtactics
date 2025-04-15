@@ -825,8 +825,8 @@ export default class nx_tactics_decks_skill {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Honor Among Thieves"),
           ":Misdirection",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Misdirection"),
-          "Pick Pockets",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Pick Pockets"),
+          "Pick Pocket",
+          nx_tactics_base.f_ability_from_tactics_key(tactics, "Pick Pocket"),
           "Sleight of Hand",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Sleight of Hand", ":summary", "* Hide a small object in hand without being noticed.", ":titles", "Legerdemain"),
           ":Smuggling",
@@ -1522,8 +1522,8 @@ export default class nx_tactics_decks_skill {
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Dirge", ":summary", "* Opponents in Radius are cloaked in despair.\n* [Passive]\n* [Continuous]: [Retreats] are increased by 1 for all opponents within the radius.", ":titles", "Demoralize, Song of Fear"),
           ":Discord",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Discord", ":summary", "* A sudden sound that disrupts the natural flow of existing sounds.\n* The secret to this skill is to pick the most inappropriate sound at the most inappropriate time.\n* The result is extremely distracting and will cancel other effects based on sound including other Communication abilities.", ":titles", "Cacaphony"),
-          ":Disguise",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Disguise"),
+          "Disguise",
+          nx_tactics_base.f_ability_from_tactics_key(tactics, "Disguise"),
           ":Fanfare",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Fanfare", ":summary", "* A cheering audience increases an entertrainer's power."),
           "Gabriel's Horn",
@@ -1673,9 +1673,7 @@ export default class nx_tactics_decks_skill {
           "Torpedo Bomb",
           vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Torpedo Bomb", ":summary", "Fly [Nape of the Earth] and drop a torpedo or other payload."),
           "Wing Over",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wing Over", ":reference", "Performed by an experienced flyer, this maneuver can surprise a pursuer by quickly reversing on them. If you have the distance lead in a chase, you can use this to convert from a defensive posture to an offensive one. The trick is not to get shot up when you are reversing.", ":titles", "Immelmann Turn, Retournment"),
-          "Winged Flight",
-          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Winged Flight", ":summary", "* If the unit has wings, it must have this ability or fly at a penalty.\n* If the unit grew up with wings, this ability is assumed.")
+          vx_core.f_new({"any-1": nx_tactics_base.t_ability}, ":name", "Wing Over", ":reference", "Performed by an experienced flyer, this maneuver can surprise a pursuer by quickly reversing on them. If you have the distance lead in a chase, you can use this to convert from a defensive posture to an offensive one. The trick is not to get shot up when you are reversing.", ":titles", "Immelmann Turn, Retournment")
         ),
         ":specialtymap",
         nx_tactics_base.f_specialtymap_from_tactics_keys(tactics, "Airplanes: Civilian", "Airplanes: Commercial", "Helicopters")

@@ -8,6 +8,7 @@ export default class nx_tactics_books_giant_monsters {
 
   /**
    * @function chapter_daikaiju
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_daikaiju = {
@@ -18,7 +19,7 @@ export default class nx_tactics_books_giant_monsters {
   }
 
   // (func chapter_daikaiju)
-  static f_chapter_daikaiju() {
+  static f_chapter_daikaiju(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -48,7 +49,7 @@ export default class nx_tactics_books_giant_monsters {
             ":Missiles",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Missiles", ":image", "Modern/MissilesToken.png"),
             "Dimension Tide",
-            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dimension Tide", ":image", "Daikaiju/DimensionTide.png", ":summary", "* Creates a dimensional hole the size of a building.  For the next few seconds, all matter nearby is sucked into\nthe hole (presumably never to return).  No one knows where the matter goes, but it is known that after the\ndimension tide passed a dimensional disturbance remained through which a creature passed onto our world."),
+            vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Dimension Tide", ":image", "Daikaiju/DimensionTide.png", ":summary", "* Creates a dimensional hole the size of a building. For the next few seconds, all matter nearby is sucked into the hole (presumably never to return). No one knows where the matter goes, but it is known that after the dimension tide passed a dimensional disturbance remained through which a creature passed onto our world."),
             "Type 66 Maser Cannon",
             vx_core.f_new({"any-1": nx_tactics_base.t_unit}, ":name", "Type 66 Maser Cannon", ":image", "Daikaiju/MaserCannonToken.png", ":mass", "80tons", ":height", "6m", ":length", "15m"),
             "Super X",
@@ -146,6 +147,7 @@ export default class nx_tactics_books_giant_monsters {
 
   /**
    * @function chapter_giant_robots
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_giant_robots = {
@@ -156,7 +158,7 @@ export default class nx_tactics_books_giant_monsters {
   }
 
   // (func chapter_giant_robots)
-  static f_chapter_giant_robots() {
+  static f_chapter_giant_robots(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -343,26 +345,8 @@ export default class nx_tactics_books_giant_monsters {
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Gunnery", ":summary", "* Koushiryoku Beam - Mazinger Z can channel pure Photonic Energy through its eyes, unleashing a pair of powerful lasers, which are said to be equal to 10 tons of explosives. This was originally considered Mazinger Z's weakest attack, however, in Shin Mazinger the power of this attacked is greatly magnified to the point where it can now be considered the strongest.\n* Missile Punch - Mazinger Z mounts a missile launch bay in its belly, which can store several missiles.\n* Rocket Punch - Mazinger Z's eponymous attack; it fires off its forearm like a missile, punching straight through an enemy before returning and docking with the elbow again.\n* Rust Hurricane - The powerful turbines in Mazinger Z's head create gale-force winds, launching them through the mouth grill. The attack includes highly corrosive particles (thought to be ionized hydrogen), almost instantaneously causing an enemy to rust over and fall apart.\n* Breast Fire - The large red fins on Mazinger Z's chest act as heat sinks for its Photonic Energy reactor. Mazinger Z can fire off this stored thermal energy as a powerful, 30,000 degree white-hot beam that melts almost anything. In the Super Robot Wars series, Kouji and Tetsuya Tsurugi can use the Breast Fire and Breast Burn respectively in the Double Burning Fire attack, which they use in the MX version of the Final Dynamic Special (also involving Grendizer and a Getter).\n* Kyoukagata Rocket Punch - Mazinger Z's Rocket Punch was later reinforced with stronger armor, giving it a more powerful punch.\n* Iron Cutter - An improved Rocket Punch in which the forearm sprouts a pair of axe-like blades, allowing it to cut and slash as well as bludgeon. This is the only weapon in Mazinger Z:s arsenal which can damage Super-alloy Z.\n* Drill Missile - A barrage of small, needle-like missiles fired from ports in Mazinger's upper arms. This attack was typically performed after the Rocket Punch but before the forearm had returned.\n* Daisharin Rocket Punch - Mazinger Z spins its arms rapidly, building up momentum before firing off both fists in standard Rocket Punch fashion.\n* Reitou Beam - Mazinger unleashes a blast of intense cold; this attack was alternately fired from the mouth grill or the spikes on the sides of Mazinger's head.\n* Finger Missile - A rarely-used attack where Mazinger fires the last joint of its fingers as miniature missiles.", ":level", "5")
               )
             ),
-            ":Raideen",
-            vx_core.f_new(
-              {"any-1": nx_tactics_base.t_unit},
-              ":name",
-              "Raideen",
-              ":image",
-              "Daikaiju/Raideen.png",
-              ":summary",
-              "Flight: Mach 10 in God Bird form",
-              ":mass",
-              "350tons",
-              ":height",
-              "52m",
-              ":unitskillmap",
-              vx_core.f_new(
-                {"any-1": nx_tactics_base.t_unitskillmap},
-                ":Gunnery",
-                vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Gunnery", ":summary", "* God Missile\n* God Arrow", ":level", "5")
-              )
-            ),
+            "Raideen",
+            nx_tactics_base.f_unit_from_tactics_key(tactics, "Raideen"),
             ":Voltron",
             vx_core.f_new(
               {"any-1": nx_tactics_base.t_unit},
@@ -379,7 +363,9 @@ export default class nx_tactics_books_giant_monsters {
                 {"any-1": nx_tactics_base.t_unitskillmap},
                 ":Gunnery",
                 vx_core.f_new({"any-1": nx_tactics_base.t_unitskill}, ":name", "Gunnery", ":summary", "* Wing Boomerang - Boomerang attack from the wings of GoLion.\n* Space Cutter - Spinning Blades.\n* Eye Flash - Beams fired from the eyes of GoLion.\n* Hurricane Attack - Wind attack similar to Daimos Blizzard, but not as strong.\n* Laser Magnum - Laser-like bullets fired from the mouth of the Green Lion.\n* Fire Tornado - A burst of flame emits from the mouth of the Red Lion.\n* Cross Beam - Cross-shaped boomerang fired from the chest.\n* Gatling Missiles - Small missiles fired from the legs.\n* Electromagnetic Lance - Weapon used as a spear at times.\n* Foot Missile - Missiles fired from the mouths of the Blue and Yellow Lions.\n* Four Lion Attack - The 'Lion Head Attack' 100-Ton Punch.\n* Grand Fire - A stream of flames fired from the mouths of the Blue and Yellow Lions", ":level", "5")
-              )
+              ),
+              ":unitpowermap",
+              nx_tactics_base.f_unitpowermap_from_tactics_keys(tactics, "Combiner")
             )
           )
         )
@@ -390,6 +376,7 @@ export default class nx_tactics_books_giant_monsters {
 
   /**
    * @function chapter_overview
+   * @param  {tactics} tactics
    * @return {chapter}
    */
   static t_chapter_overview = {
@@ -400,7 +387,7 @@ export default class nx_tactics_books_giant_monsters {
   }
 
   // (func chapter_overview)
-  static f_chapter_overview() {
+  static f_chapter_overview(tactics) {
     let output = nx_tactics_base.e_chapter
     output = vx_core.f_new(
       {"any-1": nx_tactics_base.t_chapter},
@@ -437,9 +424,9 @@ export default class nx_tactics_books_giant_monsters {
       "GiantMonsters.jpg",
       ":chaptermap",
       nx_tactics_base.f_chaptermap_from_chapterlist(
-        nx_tactics_books_giant_monsters.f_chapter_overview(),
-        nx_tactics_books_giant_monsters.f_chapter_daikaiju(),
-        nx_tactics_books_giant_monsters.f_chapter_giant_robots()
+        nx_tactics_books_giant_monsters.f_chapter_overview(tactics),
+        nx_tactics_books_giant_monsters.f_chapter_daikaiju(tactics),
+        nx_tactics_books_giant_monsters.f_chapter_giant_robots(tactics)
       )
     )
     return output

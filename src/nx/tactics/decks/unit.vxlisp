@@ -156,6 +156,16 @@
    :name "Jabba the Hutt"
    :image "images/starwars/unit-jabbathehutt.png")
   (base/unit
+   :name "Raideen"
+   :image "images/daikaiju/unit-raideen.png"
+   :summary "Flight: Mach 10 in God Bird form"
+   :mass "350tons"
+   :height "52m"
+   :unitskillmap
+    (base/unitskillmap<-unitskilllist
+     (base/unitskill<-tactics-key-lvl
+      tactics "Gunnery" 5)))
+  (base/unit
    :name "Shub-Niggurath"
    :image "cthulhu/shubniggurath.png"
    :reference

@@ -1825,7 +1825,7 @@ export default class nx_tactics_books_fantasy {
               "Valen the Hunter",
               ":unitskillmap",
               nx_tactics_base.f_unitskillmap_from_unitskilllist(
-                nx_tactics_base.f_unitskill_from_tactics_key_lvl_abilities(
+                nx_tactics_base.f_unitskill_from_tactics_key_lvl_items(
                   tactics,
                   "Defense",
                   5,

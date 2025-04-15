@@ -2989,7 +2989,7 @@
      "Contraceptive Implant"
       (base/ability
        :name "Contraceptive Implant")
-     :Cybersnake
+     "Cybersnake"
       (base/ability
        :name "Cybersnake"
        :summary "* A visious close combat weapon that is implanted in mouth, stomach, or genitals! When in Close Combat range, the Cybersnake may lash out with surprise and land a potentially fatal blow.")
@@ -3333,13 +3333,59 @@
       (base/ability
        :name "Snowblind")))
   (base/power
+   :name "Combiner"
+   :reference
+    "* Voltron
+     * Mobile Suit Gundam ZZ"
+   :summary
+    "* The Unit combines from multiple smaller Units.
+     * This [Power] is similar to [Hanger], but the Units are prechosen at creation and their [Cost] is included in the Combiner Unit Cost.
+     * The Combiner can hold Unit [Cost] up to [Intensity].")
+  (base/power
    :name "Density"
    :summary
     "* Your mass is increased or decreased. This is normally permanent but may be altered. Related Powers: [Phasing], [Size].")
   (base/power
    :name "Dimensional"
+   :reference
+    "* I reject your reality and substitute my own. - Adam Savage, Mythbusters"
    :abilitymap
     (base/abilitymap
+     "Dimension Drop"
+      (base/ability
+       :name "Dimension Drop"
+       :summary "* Send a small object through a dimensional portal and immediately close it again. This is most practical for sending messages or explosives.")
+     "Dimensional Interference"
+      (base/ability
+       :name "Dimensional Interference"
+       :summary "* Create an area that is more difficult to use dimensional or teleporting abilities.")
+     "Dimensional Portal"
+      (base/ability
+       :name "Dimensional Portal"
+       :titles "Gate")
+     "Dimensional Teleport"
+      (base/ability
+       :name "Dimensional Teleport"
+       :summary
+        "* Move rapidly from one location to another by creating a wormhole between the locations.")
+     "Dimension Trace"
+      (base/ability
+       :name "Dimension Trace"
+       :summary "* Detect the origin of a Teleporter, Dimensional Portal, or an [Outsider].")
+     "Dimension Track"
+      (base/ability
+       :name "Dimension Track"
+       :summary
+        "* Track the destination of someone who recently travelled using Teleport or Dimensional Travel. Also can be used to track an [Outsider] as if the user had [Tracking].")
+     "Dimensional Trap"
+      (base/ability
+       :name "Dimensional Trap"
+       :summary
+        "* Open a Dimensional Portal that opens when a target enters the area, draws them through, and then closes behind.")
+     "Dimensional Walk"
+      (base/ability
+       :name "Dimensional Walk"
+       :summary "* Move rapidly over terrain by quickly phasing in and out of the current space.")
      "Faster than Light"
       (base/ability
        :name "Faster than Light")
@@ -3350,10 +3396,6 @@
       (base/ability
        :name "Identify Dimension"
        :summary "* Ability to gain knowledge of the current dimension or the home dimension of an object or being from another dimension.")
-     :Teleport
-      (base/ability
-       :name "Teleport"
-       :titles "Teleportation, Translocation")
      :Warp
       (base/ability
        :name "Warp")
@@ -3929,7 +3971,7 @@
        :name "Flaming Weapon"
        :summary "* Add the [Fire] trait to a weapon or to unarmed attacks."
        :titles "Fire Fist, Flame Tongue, Flamebrand, Flaming Arrow, Flaming Sword")
-     :Inferno
+     "Inferno"
       (base/ability
        :name "Inferno"
        :titles "Pyroclasm"
@@ -3993,7 +4035,7 @@
       (base/ability
        :name "Leg Stretch"
        :summary "* [Action]: May perform known [Kick] ability at range.")
-     :Tentacles
+     "Tentacles"
       (base/ability
        :name "Tentacles")
      "Tentacle Hammer"
@@ -4034,6 +4076,86 @@
       (base/ability
        :name "Pressor Force"
        :summary "* Apply low but steady pressure pushing an object away.")))
+  (base/power
+   :name "Flight"
+   :image "Rules/Images/MoveFlight.png"
+   :abilitymap
+    (base/abilitymap
+     :Afterburner
+      (base/ability
+       :name "Afterburner")
+     "Air Droppable"
+      (base/ability
+       :name "Air Droppable")
+     :Airlift
+      (base/ability
+       :name "Airlift"
+       :summary
+        "* Ability to pick up and drop cargo or [Airlift Ready] vehicles without landing.")
+     :Atmospheric
+      (base/ability
+       :name "Atmospheric")
+     "Diving Attack"
+      (base/ability
+       :name "Diving Attack"
+       :summary
+        "[Power]: [Flight]
+         * This Unit can attack straight down.")
+     "Diving Wings"
+      (base/ability
+       :name "Diving Wings"
+       :summary
+        "+1 when pulling out of a dive")
+     "Glide"
+      (base/ability
+       :name "Glide"
+       :titles "Glider, Parachute"
+       :summary
+        "* Can glide without using power and may gain altitude when flying over hot air currents.")
+     "Levitate"
+      (base/ability
+       :name "Levitate"
+       :summary
+        "* Levitate is a slow form of movement with a maximum speed of just half a normal Move. Levitating is very stable, silent, can move in any direction, and requires no concentration. Levitating causes no noise or movement related penalties and can avoid most terrain penalties as well.")
+     "Lighter Than Air"
+      (base/ability
+       :name "Lighter Than Air")
+     "Nape of Earth Flight"
+      (base/ability
+       :name "Nape of Earth Flight")
+     :Orbital
+      (base/ability
+       :name "Orbital")
+     "Reentry System"
+      (base/ability
+       :name "Reentry System"
+       :summary
+        "* A heat shield (either inflatable or built in) for atmospheric reentry."
+       :titles "Ballute")
+     "Rocket Engine"
+      (base/ability
+       :name "Rocket Engine")
+     "Stratospheric Flight"
+      (base/ability
+       :name "Stratospheric Flight")
+     "Supersonic Flight"
+      (base/ability
+       :name "Supersonic Flight")
+     "Trans-atmospheric Flight"
+      (base/ability
+       :name "Trans-atmospheric Flight")
+     :VTOL
+      (base/ability
+       :name "VTOL"
+       :summary
+        "* Hovering units may [Move] backwards.
+         * Hovering units may use [Vector Movement] rule.")
+     "Winged Flight"
+      (base/ability
+       :name "Winged Flight"
+       :summary
+        "* If the unit has wings, it must have this ability or fly at a penalty.
+         * If the unit grew up with wings, this ability is assumed.")))
   (base/power
    :name "Fortitude"
    :titles "Resistence, Toughness"
@@ -4139,6 +4261,28 @@
      "Gravity Well"
       (base/ability
        :name "Gravity Well")))
+  (base/power
+   :name "Hanger"
+   :summary
+    "* The Unit can carry other Units (especially vehicles).
+     * The Hanger can hold Unit [Cost] up to [Intensity].
+     * A unit may carry 1 small unit (1 space) per space it takes up.
+     * Action: Move 1 unit into or out of the hanger. The unit may not Move or take any Action the turn it moves into or out of the hanger.
+     * Ship's Boat
+     * Air Raft
+     * Starfighter
+     * Starbomber
+     * Repair Drones
+     * Mobile Armor"
+   :titles "Vehicle Bay"
+    (base/abilitymap
+     "Catapult Launcher"
+      (base/ability
+       :name "Catapult Launcher"
+       :summary "* Launching vehicle may begin move at up to full speed without using fuel.")
+     "Catapult Hook Capture"
+      (base/ability
+       :name "Catapult Hook Capture")))
   (base/power
    :name "Healing"
    :abilitymap
@@ -5079,70 +5223,6 @@
      (base/ability
       :name "Tunneling")))
   (base/power
-   :name "Movement: Flight"
-   :image "Rules/Images/MoveFlight.png"
-   :abilitymap
-    (base/abilitymap
-     :Afterburner
-      (base/ability
-       :name "Afterburner")
-     "Air Droppable"
-      (base/ability
-       :name "Air Droppable")
-     :Airlift
-      (base/ability
-       :name "Airlift"
-       :summary
-        "* Ability to pick up and drop cargo or [Airlift Ready] vehicles without landing.")
-     :Atmospheric
-      (base/ability
-       :name "Atmospheric")
-     "Diving Attack"
-      (base/ability
-       :name "Diving Attack")
-     :Glide
-      (base/ability
-       :name "Glide"
-       :titles "Glider, Parachute")
-     :Levitate
-      (base/ability
-       :name "Levitate"
-       :summary
-        "* Levitate is a slow form of movement with a maximum speed of just half a normal Move. Levitating is very stable, silent, can move in any direction, and requires no concentration. Levitating causes no noise or movement related penalties and can avoid most terrain penalties as well.")
-     "Lighter Than Air"
-      (base/ability
-       :name "Lighter Than Air")
-     "Nape of Earth Flight"
-      (base/ability
-       :name "Nape of Earth Flight")
-     :Orbital
-      (base/ability
-       :name "Orbital")
-     "Reentry System"
-      (base/ability
-       :name "Reentry System"
-       :summary
-        "* A heat shield (either inflatable or built in) for atmospheric reentry."
-       :titles "Ballute")
-     "Rocket Engine"
-      (base/ability
-       :name "Rocket Engine")
-     "Stratospheric Flight"
-      (base/ability
-       :name "Stratospheric Flight")
-     "Supersonic Flight"
-      (base/ability
-       :name "Supersonic Flight")
-     "Trans-atmospheric Flight"
-      (base/ability
-       :name "Trans-atmospheric Flight")
-     :VTOL
-      (base/ability
-       :name "VTOL"
-       :summary
-        "* Hovering units may [Move] backwards.
-         * Hovering units may use [Vector Movement] rule.")))
-  (base/power
    :name "Movement: Ground"
    :abilitymap
     (base/abilitymap<-tactics-keys
@@ -5159,46 +5239,6 @@
      "Tracked"
      "Turbo Booster"
      "Wheeled"))
-  (base/power
-   :name "Movement: Dimensional"
-   :reference
-    "* I reject your reality and substitute my own. - Adam Savage, Mythbusters"
-   :abilitymap
-    (base/abilitymap
-     "Dimension Drop"
-      (base/ability
-       :name "Dimension Drop"
-       :summary "* Send a small object through a dimensional portal and immediately close it again. This is most practical for sending messages or explosives.")
-     "Dimensional Interference"
-      (base/ability
-       :name "Dimensional Interference"
-       :summary "* Create an area that is more difficult to use dimensional or teleporting abilities.")
-     "Dimensional Portal"
-      (base/ability
-       :name "Dimensional Portal"
-       :titles "Gate")
-     "Dimensional Teleport"
-      (base/ability
-       :name "Dimensional Teleport"
-       :summary "* Move rapidly from one location to another by creating a wormhole between the locations.")
-     "Dimension Trace"
-      (base/ability
-       :name "Dimension Trace"
-       :summary "* Detect the origin of a Teleporter, Dimensional Portal, or an [Outsider].")
-     "Dimension Track"
-      (base/ability
-       :name "Dimension Track"
-       :summary
-        "* Track the destination of someone who recently travelled using Teleport or Dimensional Travel. Also can be used to track an [Outsider] as if the user had [Tracking].")
-     "Dimensional Trap"
-      (base/ability
-       :name "Dimensional Trap"
-       :summary
-        "* Open a Dimensional Portal that opens when a target enters the area, draws them through, and then closes behind.")
-     "Dimensional Walk"
-      (base/ability
-       :name "Dimensional Walk"
-       :summary "* Move rapidly over terrain by quickly phasing in and out of the current space.")))
   (base/power
    :name "Movement: Interstellar"
    :reference
@@ -5266,55 +5306,6 @@
       (base/ability
        :name "Vernier Thruster"
        :titles "Apogee Motor")))
-  (base/power
-   :name "Movement: Teleport"
-   :titles "Instant Transmission, Teleporter, Transporter"
-   :abilitymap
-    (base/abilitymap
-     "Teleport Away"
-      (base/ability
-       :name "Teleport Away"
-       :summary
-        "* Teleport an object/objects to a precisely known location.
-         * Level determines size of object/objects and distance.
-         * Tricks: Teleporting mines, bombs, fighters, drill missiles."
-       :titles "Smite")
-     "Teleport Self"
-      (base/ability
-       :name "Teleport Self")
-     "Teleport Toward"
-      (base/ability
-       :name "Teleport Toward"
-       :reference "Beam me up Scotty"
-       :summary
-        "* Teleport an object/objects that you know the exact location of to your location.
-         * Level determines size of object/objects and distance.")))
-  (base/power
-   :name "Movement: Time"
-   :image "Units/SpaceAndTime/Vortex.jpg"
-   :summary
-    "* The Vortex is a point of null space-time. It is a tunnel through which one can escape the bounds of space-time.
-     * Here time and distance have no meaning. Travelers through the Vortex have no sense of their own body, but have a strong sense that they have been in the Vortex forever. Some suggest that this may actually be true.
-     * Entering the Vortex is like dying. Leaving is like being born. Some suggest that this birth and death cycle is the reason why only living things may be brought through the Vortex."
-   :titles "Chronos, Eye of Harmony, Yog-Sothoth"
-   :abilitymap
-    (base/abilitymap
-     "Freeze Time"
-      (base/ability
-       :name "Freeze Time")
-     "Reverse Time"
-      (base/ability
-       :name "Reverse Time"
-       :summary "* Rewind recent events within the surrounding area and possibly choose a different [Action].")
-     :Rewind
-      (base/ability
-       :name "Rewind")
-     "Slow Time"
-      (base/ability
-       :name "Slow Time")
-     "Time Shift"
-      (base/ability
-       :name "Time Shift")))
   (base/power
    :name "Movement: Water"
    :abilitymap
@@ -5841,40 +5832,93 @@
      "Shockwave"
      "Thunderclap"))
   (base/power
-   :name "Temporal"
+   :name "Teleportation"
+   :titles "Instant Transmission, Teleporter, Transporter"
+   :abilitymap
+    (base/abilitymap
+     "Teleport Away"
+      (base/ability
+       :name "Teleport Away"
+       :summary
+        "* Teleport an object/objects to a precisely known location.
+         * Level determines size of object/objects and distance.
+         * Tricks: Teleporting mines, bombs, fighters, drill missiles."
+       :titles "Smite")
+     "Teleport Self"
+      (base/ability
+       :name "Teleport Self")
+     "Teleport Toward"
+      (base/ability
+       :name "Teleport Toward"
+       :reference "Beam me up Scotty"
+       :summary
+        "* Teleport an object/objects that you know the exact location of to your location.
+         * Level determines size of object/objects and distance.")))
+  (base/power
+   :name "Time"
    :abilitymap
     (base/abilitymap
      "Age Alteration"
       (base/ability
        :name "Age Alteration")
-     "Control Time"
+     "Freeze Time"
       (base/ability
-       :name "Control Time"
-       :summary "* [Reaction]: Redirect a time effect to another target.")
+       :name "Freeze Time")
      :Postcognition
       (base/ability
        :name "Postcognition")
      :Precognition
       (base/ability
        :name "Precognition")
+     "Redirect Time"
+      (base/ability
+       :name "Redirect Time"
+       :summary "* [Reaction]: Redirect a time effect to another target.")
+     "Slow Time"
+      (base/ability
+       :name "Slow Time")
+     "Time Lapse"
+      (base/ability
+       :name "Time Lapse")
+     "Time Stop"
+      (base/ability
+       :name "Time Stop"
+       :summary
+        "* Ability to briefly exit the normal timestream. This effectively freezes time for a few seconds. The user is can move freely, but nothing but air can be moved or harmed. Note that doors cannot be opened and air is thick to move through or breathe."
+       :titles "Freeze Time, Time Slip")))
+  (base/power
+   :name "Time Travel"
+   :image "Units/SpaceAndTime/Vortex.jpg"
+   :summary
+    "* The Vortex is a point of null space-time. It is a tunnel through which one can escape the bounds of space-time.
+     * Here time and distance have no meaning. Travelers through the Vortex have no sense of their own body, but have a strong sense that they have been in the Vortex forever. Some suggest that this may actually be true.
+     * Entering the Vortex is like dying. Leaving is like being born. Some suggest that this birth and death cycle is the reason why only living things may be brought through the Vortex."
+   :titles "Chronos, Eye of Harmony, Yog-Sothoth"
+   :abilitymap
+    (base/abilitymap
+     "Reverse Time"
+      (base/ability
+       :name "Reverse Time"
+       :summary "* Rewind recent events within the surrounding area and possibly choose a different [Action].")
+     :Rewind
+      (base/ability
+       :name "Rewind")
      "Temporal Tracking"
       (base/ability
        :name "Temporal Tracking"
        :summary "* Ability to track a time traveler to his/her destination.")
-     "Time Lapse"
-      (base/ability
-       :name "Time Lapse")
      "Time Loop"
       (base/ability
        :name "Time Loop")
-     "Time Slow"
+     "Time Shift"
       (base/ability
-       :name "Time Slow")
-     "Time Stop"
+       :name "Time Shift")
+     "Travel to the Future"
       (base/ability
-       :name "Time Stop"
-       :summary "* Ability to briefly exit the normal timestream. This effectively freezes time for a few seconds. The user is can move freely, but nothing but air can be moved or harmed. Note that doors cannot be opened and air is thick to move through or breathe."
-       :titles "Freeze Time, Time Slip")))
+       :name "Travel to the Future")
+     "Travel to the Past"
+      (base/ability
+       :name "Travel to the Past")))
   (base/power
    :name "Toxins"
    :reference

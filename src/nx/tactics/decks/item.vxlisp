@@ -310,6 +310,18 @@
   (item
    :name "Screen")
   (base/item
+   :name "Shield"
+   :image "images/cards/item-shield-round.svg"
+   :titles "Hoplon Round Shield, Round Shield, Target Shield"
+   :classification "Shield"
+   :summary
+    "* [Armor]: 2x1 [Hardened vs Pierce]
+     * [Arc]: [Arc:Front], [Arc:Left] OR [Arc:Right]
+     * [Location]: [1-hand]"
+   :armor "2"
+   :body "5x0"
+   :mass "5kg/11lb")
+  (base/item
    :name "Shield: Buckler"
    :classification "Shield"
    :image "images/cards/item-shield-buckler.svg"
@@ -340,18 +352,6 @@
    :name "Shield: Legionary"
    :classification "Shield"
    :armor "2")
-  (base/item
-   :name "Shield: Round"
-   :image "images/cards/item-shield-round.svg"
-   :titles "Hoplon Round Shield, Target Shield"
-   :classification "Shield"
-   :summary
-    "* [Armor]: 2x1 [Hardened vs Pierce]
-     * [Arc]: [Arc:Front], [Arc:Left] OR [Arc:Right]
-     * [Location]: [1-hand]"
-   :armor "2"
-   :body "5x0"
-   :mass "5kg/11lb")
   (base/item
    :name "Shield: Tower"
    :titles "Hoplite Shield"

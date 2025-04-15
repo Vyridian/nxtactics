@@ -221,7 +221,7 @@
          :titles "Valen the Hunter"
          :unitskillmap
           (base/unitskillmap<-unitskilllist
-           (base/unitskill<-tactics-key-lvl-abilities
+           (base/unitskill<-tactics-key-lvl-items
             tactics "Defense" 5
             (stringlist
              "Armor: Chain Mail"

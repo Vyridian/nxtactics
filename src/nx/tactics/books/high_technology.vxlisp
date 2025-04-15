@@ -36,16 +36,16 @@
  (chapter
   :name "Cyberpunk Campaign"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Cyberpunk Overview"
-     (section
+     (base/section
       :name "Cyberpunk Overview"
       :summary
        "* Events Leading to War
         * Overview of the War
         * Aftermath")
     "Car Wars"
-     (section
+     (base/section
       :name "Car Wars"
       :scenemap
        (scenemap
@@ -131,114 +131,114 @@
  (base/chapter
   :name "High Tech Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Consumer Goods"
-     (section
+     (base/section
       :name "Consumer Goods"
       :itemmap
-       (itemmap
+       (base/itemmap
         :Autobike
-         (item
+         (base/item
           :name "Autobike"
           :summary
            "* Autonomous motorcycle used for most transit. A small fraction of the Autocar fleet is filled by Autobikes. Though slightly cheaper to rent than Autocars and better in tight traffic, most people use Autocars exclusively.")
         :Autocar
-         (item
+         (base/item
           :name "Autocar"
           :summary
            "* Autonomous car used for most transit. Ordinary citizens rarely own their own vehicles, instead they summon an automated rental car with their phone that takes them directly to their destination. Autocars are parked throughout populated areas, so summoning one usually takes seconds. Autocars coordinate with each other and can travel at high speeds in tight traffic without incident.
             * History - Automated cars took over major cities within years of their invention. They solved traffic, parking, accident, and environmental problems all at once while offering cheaper per mile travel than owning your own vehicle. They rapidly made taxi and ridesharing solutions obsolete, and it soon became illegal for a human to drive a vehicle because autocars were so much safer. Soon all mass transit systems reduced down to autocars and some autobikes.")
         :Cyberchip
-         (item
+         (base/item
           :name "Cyberchip"
           :summary
            "* Standard memory/application chip. All media is stored on cyberchips and can be played by simply plugging the chip into any standard interface.
             * Plugging cyberchips directly into one's body is called 'Chipping In'.")
         :Cybercycle
-         (item
+         (base/item
           :name "Cybercycle"
           :summary "* High performance motorcycle that allows direct neural interface.")
         :Cyberdeck
-         (item
+         (base/item
           :name "Cyberdeck")
         :Cyberphone
-         (item
+         (base/item
           :name "Cyberphone")
         "Direct Neural Interface"
-         (item
+         (base/item
           :name "Direct Neural Interface"
           :summary
            "* This implant includes a processor chip and interface plugs that connect directly to the brain. The chip contains an artificial intelligence avatar program that learns from and emulates the user's personality. This AI can then enter cyberspace or control cybernetic equipment at the speed of a computer program while retaining the decision making logic of its user. Further, the AI regularly updates the user with its decisions, and gathers the user's impression, so it can make further decisions. While 'Jacked In' the user is motionless as his mind is overwhelmed with information from the AI. DNI's are powerful tools, but are also risky technology. Since information floods into the mind at incredible speeds, any malfunction in the DNI or the AI can cause sanity threatening sensory overload or sensory deprivation that seem to last for days in mere seconds.
             * Burn Out - losing one's mind to DNI failure.")
         :Flitter
-         (item
+         (base/item
           :name "Flitter"
           :summary "* Light, one-man helicopter"
           :titles "Aerogyro, Gyrocopter")
         "Hover Board"
-         (item
+         (base/item
           :name "Hover Board")
         "Mag Lev Train"
-         (item
+         (base/item
           :name "Mag Lev Train"
           :summary "* Speed: 200mph")
         :Metrocar
-         (item
+         (base/item
           :name "Metrocar"
           :summary "* Ultra-subcompact reverse trike.")
         "Mister Fusion"
-         (item
+         (base/item
           :name "Mister Fusion"
           :image "HighTech/MrFusion.jpg")
         "Quad ATV"
-         (item
+         (base/item
           :name "Quad ATV")
         "Private Quadcopter"
-         (item
+         (base/item
           :name "Private Quadcopter")
         :Skimmer
-         (item
+         (base/item
           :name "Skimmer"
           :summary
            "* The modern hovercraft creates a tightly computer-controlled air pocket beneath it that allows the Skimmer to move quickly over land or sea. The Skimmer manipulates the pocket to change direction. Though fast and all-terrain, they are not as quiet, maneuverable, or energy efficient as Autocars, so their use is limited to lightly populated areas."
           :titles "Ground Effect Vehicle, Hovercraft")))
     "Corporate Equipment"
-     (section
+     (base/section
       :name "Corporate Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         "Cargo Osprey"
-         (item
+         (base/item
           :name "Cargo Osprey")
         "Corporate Limosine"
-         (item
+         (base/item
           :name "Corporate Limosine")
         "Corporate Osprey"
-         (item
+         (base/item
           :name "Corporate Osprey"
           :summary
            "* Speed: 275knots
             * Range: 600miles
             * The Osprey is a tilt-wing propeller plane that is used as a corporate commuter plane. Like a helicopter, it can land on buildings, and it can also fly directly to nearby cities.")
         "Personal Aerodyne"
-         (item
+         (base/item
           :name "Personal Aerodyne"
           :summary
            "* Speed: 250mph
             * Range: 400miles")
         :Transjet
-         (item
+         (base/item
           :name "Transjet"
           :summary
            "* The Transjet is the standard commercial airliner across the world. It flies up beyond the atmosphere where it can travel at extreme speeds and then lands anywhere in the world within an hour."
           :titles "Hopper, Transatmospheric Jet")))
     "Police Equipment"
-     (section
+     (base/section
       :name "Police Equipment"
       :itemmap
-       (itemmap
+       (base/itemmap
         :Aerodyne
-         (item
+         (base/item
           :name "Aerodyne"
           :reference "Blade Runner"
           :summary
@@ -247,7 +247,7 @@
             * Short and bulbous, the Aerodyne has the aerodynamics of a brick.  It relies on its huge jets to fly."
           :titles "Air Car, Pegasus")))
     "Military Equipment"
-     (section
+     (base/section
       :name "Military Equipment"
       :unitmap
        (base/unitmap
@@ -311,7 +311,7 @@
           :summary
            "* Fully Submersible Heavy Carrier loaded with 12 Manta Fighters, 4 Pelican Transports, 6 Sea Lion ATVs, and 8 Barracuda Submarines.")))
     "Body Armor"
-     (section
+     (base/section
       :name "Body Armor"
       :unitmap
        (base/unitmap
@@ -345,9 +345,9 @@
 
     * Safety - Inner ship walls are covered with pillowy-soft panels of 'Space Gel'. This viscous fluid provides a combination of heat insulation, impact padding, radiation shielding, shrapnel absorption, and depressurization protection. Space Gel exposed to freezing temperatures will immediately harden into a very durable solid. If the hull is breached, damaged panels will leak Space Gel. Any gel that touches an area near the breach will instantly freeze, gradually plugging the leak."
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "High Tech Commercial Spacecraft"
-     (section
+     (base/section
       :name "High Tech Commercial Spacecraft"
       :unitmap
        (base/unitmap
@@ -379,7 +379,7 @@
           :summary "Luxury cruise liner for tourism or transport"
           :titles "Starliner")))
     "Fighter Class"
-     (section
+     (base/section
       :name "Fighter Class"
       :unitmap
        (base/unitmap
@@ -397,7 +397,7 @@
          (base/unit
           :name "Star Torpedo Bomber")))
     "High Tech Shuttle Class"
-     (section
+     (base/section
       :name "High Tech Shuttle Class"
       :unitmap
        (base/unitmap
@@ -439,7 +439,7 @@
          (base/unit
           :name "Star Torpedo Boat")))
     "Frigate Class"
-     (section
+     (base/section
       :name "Frigate Class"
       :unitmap
        (base/unitmap
@@ -460,7 +460,7 @@
           :name "System Defense Corvette"
           :summary "Interplanetary Defense")))
     "High Tech Cruisers"
-     (section
+     (base/section
       :name "High Tech Cruisers"
       :unitmap
        (base/unitmap
@@ -474,7 +474,7 @@
          (base/unit
           :name "Star Cruiser")))
     "High Tech Dreadnoughts"
-     (section
+     (base/section
       :name "High Tech Dreadnoughts"
       :unitmap
        (base/unitmap
@@ -485,7 +485,7 @@
          (base/unit
           :name "Super Star Carrier")))
     "High Tech Satellites"
-     (section
+     (base/section
       :name "High Tech Satellites"
       :unitmap
        (base/unitmap
@@ -525,9 +525,9 @@
  (base/chapter
   :name "High Tech Aircraft"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "High Tech Commercial Aircraft"
-     (section
+     (base/section
       :name "High Tech Commercial Aircraft"
       :unitmap
        (base/unitmap
@@ -627,7 +627,7 @@
             * Like most mobile armors, the Panther operates in packs of drones with random human piloted command units. The pilot climbs into the back of the unit and rides in the position of a performance motorcycle.  If desired, the pilot can open the back and sit up as if riding a horse. Piloted units sacrifice a hardpoint to fit the pilot.
             * Payloads such as large caliber cannons and shields are mounted on one of two fixed back mounts. This unit can also stand on 2 legs and slide the cannon up to become a shoulder mount. All 4 legs possess manipulative hands with claws and magnets for climbing and can carry the cannon or a shield as needed. Small wheels in the elbows are used when travelling on roads.")))
     "High Tech Land Vehicles"
-     (section
+     (base/section
       :name "High Tech Land Vehicles"
       :unitmap
        (base/unitmap
@@ -676,7 +676,7 @@
          (base/unit
           :name "L5: Valhalla")))
     "Nomad Colonies"
-     (section
+     (base/section
       :name "Nomad Colonies"
       :summary
        "* Small individual colonies are beginning to dot open space between the planets. These colonies maintain their own solar orbits and can be convenient stop over points between planets.
@@ -685,7 +685,7 @@
         * Politics - Nomad Colonies are each formed for their own reasons and maintain unique governments and social structures. They attempt to remain neutral from other nations and will trade with anyone without regard to political or criminal status. Though the Nomad colonies are each completely unique, they all recognize the other Nomads as allies and treat any threat to one as a threat to all.
         * Military - Nomad Colonies typically maintain little or no defenses as befits their neutral status. They may, however, maintain hidden defenses or pirate ships nearby.")
     "Mars Colonies"
-     (section
+     (base/section
       :name "Mars Colonies"
       :summary
        "* Colonial Mars is much like the American Frontier. Colonists left the overcrowded and impoverished Earth in search of a new life knowing that there was almost no chance to return to the Old World. They and their children would live or die on Mars, and they proudly adopted the name Martian.
@@ -713,7 +713,7 @@
          (base/unit
           :name "Sand Marauder")))
     "Moon Colonies"
-     (section
+     (base/section
       :name "Moon Colonies"
       :summary
        "* The Moon's mineral and ice deposits made it the logical location of the first permanent off-world colony. Robotic solar-powered laser drills cut tunnel complexes into the walls of craters. Human colonists followed soon after. Regular exercise in 1 G training centers is mandatory for all colonists to avoid the dangers of low gravity.
@@ -749,7 +749,7 @@
           :name "Asteroid Miner"
           :titles "Belter")))
     "Jupiter Colonies"
-     (section
+     (base/section
       :name "Jupiter Colonies"
       :summary
        "* Culture - Personal space in Jovian colonies is extremely limited, so people share quarters with multiple people. There are not even enough beds for each person, so most people live with people who work different shifts and use the same beds on off-shifts. Common areas are used for everything except sleeping. The Jovians have adapted to be far more social and reliant on others for day to day life. This communal living has generally made them a tight knit society with a strong sense of group identity.
@@ -788,7 +788,7 @@
           :summary
            "* A small, titanium mining colony is located on Io. Miners work intensely to gain maximum bonuses. Life is dangerous and many miners are hooked on amphetimines to maximize productivity. Victimless crime is largely ignored in this generally lawless outpost. Besides miners and transport workers there are only cooks, bartenders, prostitutes, a single doctor, a sheriff and two deputies.")))
     "Saturn Colonies"
-     (section
+     (base/section
       :name "Saturn Colonies"
       :summary
        "* With the exception of Titan, the outer planets are too remote and unimportant to ever be colonized. Jupiter provides an unlimited supply of gas resources, so Saturn, Uranus, and Neptune have little to offer."
@@ -869,7 +869,7 @@
           :name "Mobile Police"
           :reference "Appleseed")))
     :Military
-     (section
+     (base/section
       :name "Military"
       :unitmap
        (base/unitmap
@@ -890,7 +890,7 @@
            "* Through bioengineering, an elite warrior caste has been created combining strategic genius, leadership skills, and physical perfection. Unfortunately, they also develop incredible egos and megalomania."
           :titles "Master Race, Super Soldier")))
     :MegaCorps
-     (section
+     (base/section
       :name "MegaCorps"
       :summary
        "* After the world stock market crash and subsequent collapse of many economies and governments around the world (including the US), only international corporations were left with the ability to exert power on a global scale.
@@ -939,7 +939,7 @@
          (base/unit
           :name "Scientist")))
     "Offworld Colonies"
-     (section
+     (base/section
       :name "Offworld Colonies"
       :unitmap
        (base/unitmap
@@ -950,7 +950,7 @@
          (base/unit
           :name "Pirate")))
     :Sprawls
-     (section
+     (base/section
       :name "Sprawls"
       :titles "Dirtboys, Dirtgirls"
       :unitmap
@@ -1009,9 +1009,9 @@
  (chapter
   :name "Jovian Chronicles"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Orbital Revolution"
-     (section
+     (base/section
       :name "Orbital Revolution"
       :summary
        "Events Leading to War
@@ -1088,7 +1088,7 @@
             * The defenders must drive off or destroy the superior attackers.
             * Special Rules: For each defender place 2 additional ghost mechs on the battlefield. These represent false image data produced by the cloud. After each attack, the defenders may secretly switch which unit is the real mech among the three identical images. The ghost mechs are obviously immune to all damage.")))
     "Jovian Odyssey"
-     (section
+     (base/section
       :name "Jovian Odyssey"
       :scenemap
        (scenemap
@@ -1225,7 +1225,7 @@
 
             * Epilogue: Mars - The consequences of the Martian Elevator take a long time to show themselves. Initially, neither Martian government accuses the other of the collapse. Evidence is sketchy, and the presence of Jovian and UEA agents on-site makes things even more uneasy.")))
     "Europa Incident"
-     (section
+     (base/section
       :name "Europa Incident"
       :summary
        "* The Flashlight Project - Blocked from what they believed to be their rightful control over the colonies at every turn by the Jovian Confederation, UEA launched several top-secret advanced weapons projects.  One of the less successful efforts was the Flashlight Project, an attempt to develop heavy autonomous drone combat spacecraft. The two Lucifer prototypes, the ultimate end result of the project, were ideal for commerce raiding. They could operate for years without more than cursory communication with their home base; their stealth systems could hide them from the most determined sensors; and their heavy array of particle beam weapons could savage a warship in a single volley.
@@ -1267,7 +1267,7 @@
             * If the Lucifer escapes, it will boost off Europa into a tight slingshot orbit and then use its ECM systems to hide in Jupiters radiation belt. Without its higher brain functions, the Lucifer is more of a killing machine than an assassin, so it is now a question of how much damage it will do before it is taken down.
             * If the Lucifer is destroyed over Europa, it will crash into the ice and be lost in the depths. Without their pickup, the UEA agents will have to negotiate the terms of their surrender. Regardless, they will be tried and interrogated for their actions.")))
     "Jovian History"
-     (section
+     (base/section
       :name "Jovian History"
       :summary
        "* Mercury, Helios Station - A permanent colony of 8 million orbiting Mercury is established. Its orbit puts it constantly in Mercury's shadow protecting it from most of the Sun's deadyly rays. Naturally, it has access to almost limitless solar power. All equipment around Mercury is outfitted with a unique heavy armor that combines hard radiation shielding with solar collection.
@@ -1280,7 +1280,7 @@
 
         * War Aftermath - Some UAE leaders were found guilty of crimes against humanity for their attacks against the Jovian colonies. The other colonies increasingly see Earth as irrelevant to their future. Earth politics is divided on how to proceed. The UAE has gone underground and now covertly funds a paramilitary group of disgruntled combat veterans and pirates in order to further its aims in space.")
     "Jovian Characters"
-     (section
+     (base/section
       :name "Jovian Characters"
       :unitmap
        (base/unitmap
@@ -1370,7 +1370,7 @@
            "* Commander of the 3rd Division of the CEGA 4th fleet, Garand is an ace exo-armor pilot and media darling. Despite his military connections, Garand is a devoted member of Chang’s political faction. While he does believe the military to be a necessary tool, he doesn’t believe that it is the proper one to further UEA’s domination over their wayward colonies. He was one of UEA’s first exo-armor pilots, and taught many of the current generation, passing on both his piloting skills and his philosophy.
             * Garand is a man of honor and discipline, with a spotless service record and excellent reputation. He does not enjoy killing or combat, but his honor demands that he follow orders and defend his people. Despite his iron will, he is prone to fits of irrational rage towards those who have forced him to commit (or involved him in) dishonorable acts.")))
     "Commercial Spacecraft"
-     (section
+     (base/section
       :name "Commercial Spacecraft"
       :unitmap
        (base/unitmap
@@ -1435,7 +1435,7 @@
           :speedspace ".5g"
           :mass "41tons")))
     "Jovian Federation"
-     (section
+     (base/section
       :name "Jovian Federation"
       :summary
        "* Jovian capital ships are built for easy maintainance and reuse. They are composed of 4 sections: engine, cargo, habitat, and mission. All but the mission section can be interchanged with the equivalent sections from other ships. The habitat ring can even be removed for short range missions, or additional cargo modules can be added for greater endurance."
@@ -1623,7 +1623,7 @@
           :length "320m"
           :width "75m")))
     :UEA
-     (section
+     (base/section
       :name "UEA"
       :titles "United Earth Alliance"
       :unitmap
@@ -1895,28 +1895,28 @@
  (chapter
   :name "Mobile Suit Gundam Equipment"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Gundam Equipment"
-     (section
+     (base/section
       :name "Gundam Equipment"
       :summary "* Energy rating for MW weapons assumes a 3 second burst."
       :itemmap
-       (itemmap
+       (base/itemmap
         "Titanium Composite"
-         (item
+         (base/item
           :name "Titanium Composite"
           :summary "This is the state of the art armor plate before the discovery of Gundarium Alpha which completely eclipses it.")
         "Gundarium Alpha"
-         (item
+         (base/item
           :name "Gundarium Alpha"
           :summary
            "Originally called Luna Titanium, it was renamed after the success of the RX-78 Gundam built from it. A super high-tensile alloy originally known as Luna Titanium. Originally intended for use inside thermonuclear reactors, this alloy's superb strength, durability, heat resistance and radiation-absorbing properties make it an ideal material for mobile suit armor."
           :titles "Gundarium, Luna Titanium")
         "Gundarium Gamma"
-         (item
+         (base/item
           :name "Gundarium Gamma")
         "60mm Vulcan Cannon"
-         (item
+         (base/item
           :name "60mm Vulcan Cannon"
           :reference "Stats based on 57mm Bofors Naval Gun"
           :titles "VCU-505EX-Gry/Ver.009 (Titans) / VCU-505EX-V*B/Ver.012 (AEUG)"
@@ -1926,39 +1926,39 @@
           :range "8.5km"
           :rof "220/min")
         "100mm Machine Gun"
-         (item
+         (base/item
           :name "100mm Machine Gun"
           :titles "NF-GMG-Type.37"
           :classification "Cannon"
           :modifiers "Auto"
           :muzzlevelocity "600m/s")
         "120mm Machine Gun"
-         (item
+         (base/item
           :name "120mm Machine Gun"
           :classification "Cannon"
           :modifiers "Auto"
           :muzzlevelocity "600m/s"
           :rounds "100")
         "180mm Recoilless Cannon"
-         (item
+         (base/item
           :name "180mm Recoilless Cannon"
           :titles "NFHI-GMCa-type.09"
           :classification "Cannon"
           :muzzlevelocity "300m/s")
         "240mm Recoilless Cannon"
-         (item
+         (base/item
           :name "240mm Recoilless Cannon"
           :classification "Cannon"
           :muzzlevelocity "300m/s")
         "280mm Bazooka"
-         (item
+         (base/item
           :name "280mm Bazooka"
           :classification "Hvy. Rocket Launcher"
           :modifiers "HE"
           :muzzlevelocity "120m/s"
           :rounds "4")
         "360mm Hyper Bazooka"
-         (item
+         (base/item
           :name "360mm Hyper Bazooka"
           :summary "* Capable of destroying a GM in a single hit."
           :titles "H&amp;L-GB05R (Zeon) / H-Baz-85-Gry/Ver.045 (Titans) / H-Baz-87-A*E/Ver.004 (AEUG)"
@@ -1967,7 +1967,7 @@
           :muzzlevelocity "120m/s"
           :rounds "10")
         "380mm Hyper Bazooka"
-         (item
+         (base/item
           :name "380mm Hyper Bazooka"
           :titles "BLASH-XHB-L-03/N-STD"
           :classification "Hvy. Rocket Launcher"
@@ -1975,39 +1975,39 @@
           :muzzlevelocity "120m/s"
           :rounds "5")
         "Clay Bazooka"
-         (item
+         (base/item
           :name "Clay Bazooka"
           :image "Gundam/ClayBazooka.jpg"
           :classification "Hvy. Rocket Launcher"
           :modifiers "HE"
           :muzzlevelocity "120m/s")
         ".4MW Beam Saber"
-         (item
+         (base/item
           :name ".4MW Beam Saber"
           :titles "XB-G-1048L (Titans) / A*E-Br*G-Sc-L (AEUG)"
           :classification "Hvy. Melee"
           :energy "1.2MJ"
           :modifiers "Energy")
         ".65MW Beam Saber"
-         (item
+         (base/item
           :name ".65MW Beam Saber"
           :classification "Hvy. Melee"
           :energy "1.95MJ"
           :modifiers "Energy")
         "1.3MW Beam Gun"
-         (item
+         (base/item
           :name "1.3MW Beam Gun"
           :classification "Cannon"
           :energy "3.9MJ"
           :modifiers "Energy")
         "1.3MW Funnel"
-         (item
+         (base/item
           :name "1.3MW Funnel"
           :classification "Cannon"
           :energy "3.9MJ"
           :modifiers "Energy")
         "1.9MW Beam Rifle"
-         (item
+         (base/item
           :name "1.9MW Beam Rifle"
           :summary "Powered by rechargeable energy cap"
           :titles "BOWA-BR-S-85-C2"
@@ -2015,20 +2015,20 @@
           :energy "5.7MJ"
           :modifiers "Energy")
         "2.2MW Beam Pistol"
-         (item
+         (base/item
           :name "2.2MW Beam Pistol"
           :summary "Powered by rechargeable energy cap"
           :classification "Cannon"
           :energy "6.6MJ"
           :modifiers "Energy")
         "2.2MW Funnel"
-         (item
+         (base/item
           :name "2.2MW Funnel"
           :classification "Hvy. MG"
           :energy "6.6MJ"
           :modifiers "Energy")
         "2.6MW Beam Rifle"
-         (item
+         (base/item
           :name "2.6MW Beam Rifle"
           :summary "Powered by rechargeable energy cap"
           :titles "BOWA*XBR-M-86-C2 (Titans), A*E-Br*XBR-87-C (AEUG)"
@@ -2036,14 +2036,14 @@
           :energy "7.8MJ"
           :modifiers "Energy")
         "2.8MW Beam Rifle"
-         (item
+         (base/item
           :name "2.8MW Beam Rifle"
           :summary "Powered by rechargeable energy cap"
           :classification "Cannon"
           :energy "8.4MJ"
           :modifiers "Energy")
         "5.7MW Beam Rifle"
-         (item
+         (base/item
           :name "5.7MW Beam Rifle"
           :image "Gundam/ZetaBeamRifle.jpg"
           :summary "Powered by replaceable e-pac, doubles as large beam saber"
@@ -2051,14 +2051,14 @@
           :energy "17.1MJ"
           :modifiers "Energy")
         "8.3MW Hyper Mega Launcher"
-         (item
+         (base/item
           :name "8.3MW Hyper Mega Launcher"
           :summary "Powered by replaceable e-pac, doubles as large beam saber"
           :classification "Cannon"
           :energy "24.9MJ"
           :modifiers "Energy")
         "19.5MW Mega Particle Gun"
-         (item
+         (base/item
           :name "19.5MW Mega Particle Gun"
           :classification "Cannon"
           :energy "58.5MJ"
@@ -2068,9 +2068,9 @@
  (chapter
   :name "Mobile Suit Gundam Units"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Gundam Independents"
-     (section
+     (base/section
       :name "Gundam Independents"
       :unitmap
        (base/unitmap
@@ -2079,7 +2079,7 @@
           :name "Side"
           :length "32km")))
     "Gundam Federation"
-     (section
+     (base/section
       :name "Gundam Federation"
       :unitmap
        (base/unitmap
@@ -2253,7 +2253,7 @@
           :length "341.7m"
           :width "124.1m")))
     :Zeon
-     (section
+     (base/section
       :name "Zeon"
       :unitmap
        (base/unitmap
@@ -2446,7 +2446,7 @@
           :length "255m"
           :width "221.8m")))
     :0083
-     (section
+     (base/section
       :name "0083"
       :unitmap
        (base/unitmap
@@ -2470,7 +2470,7 @@
           :name "Neue Ziel"
           :image "Gundam/NeueZiel.png")))
     :AEUG
-     (section
+     (base/section
       :name "AEUG"
       :unitmap
        (base/unitmap
@@ -2715,7 +2715,7 @@
           :length "317m"
           :width "524m")))
     "Gundam Titans"
-     (section
+     (base/section
       :name "Gundam Titans"
       :unitmap
        (base/unitmap
@@ -3021,7 +3021,7 @@
           :name "Salamis"
           :image "Gundam/Salamis.png")))
     "Federation (New)"
-     (section
+     (base/section
       :name "Federation (New)"
       :unitmap
        (base/unitmap
@@ -3063,7 +3063,7 @@
                  (base/unitability
                   :name "Hardened vs. Projectiles")))))))
     "Neo Zion"
-     (section
+     (base/section
       :name "Neo Zion"
       :unitmap
        (base/unitmap
@@ -3124,9 +3124,9 @@
  (chapter
   :name "Terminator"
   :sectionmap
-   (sectionmap
+   (base/sectionmap
     "Terminator Units"
-     (section
+     (base/section
       :name "Terminator Units"
       :unitmap
        (base/unitmap
